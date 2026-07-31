@@ -15,6 +15,7 @@ type AudioPlayOptions = {
   onEnded?: () => void;
   onError?: () => void;
 };
+type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "advance2" | "advance3" | null;
 
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
 
@@ -600,15 +601,27 @@ function StatCard({ icon, value, label }: { icon: string; value: number; label: 
 function NarrationLine({
   children,
   text,
+  target = null,
+  onSpeakStart,
+  onSpeakEnd,
   className = "",
 }: {
   children: ReactNode;
   text: string;
+  target?: SpeechTarget;
+  onSpeakStart?: (target: SpeechTarget) => void;
+  onSpeakEnd?: (target: SpeechTarget) => void;
   className?: string;
 }) {
+  async function handleSpeak() {
+    onSpeakStart?.(target);
+    await speakGuide(text);
+    onSpeakEnd?.(target);
+  }
+
   return (
     <p className={`narration-line ${className}`.trim()}>
-      <button className="speak-button" type="button" aria-label="播放說明" onClick={() => speakGuide(text)}>
+      <button className="speak-button" type="button" aria-label="播放說明" onClick={handleSpeak}>
         ▶
       </button>
       <span>{children}</span>
@@ -645,6 +658,7 @@ function LessonPanel({
   const [practiceDoneCount, setPracticeDoneCount] = useState(0);
   const [activeStage, setActiveStage] = useState(1);
   const [advancingStage, setAdvancingStage] = useState<number | null>(null);
+  const [speakingTarget, setSpeakingTarget] = useState<SpeechTarget>(null);
   const [resetVersion, setResetVersion] = useState(0);
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
@@ -659,27 +673,43 @@ function LessonPanel({
   }, [lesson]);
 
   useEffect(() => {
-    if (!locked) speakGuide(`${lessonIntro} ${GUIDE_TEXT.blockHear}`);
+    if (!locked) void speakForTarget("stage1", `${lessonIntro} ${GUIDE_TEXT.blockHear}`);
   }, [lesson.id, lessonIntro, locked]);
 
   useEffect(() => {
-    if (soundUnlocked && activeStage === 1) speakGuide(GUIDE_TEXT.toStageTwo);
+    if (soundUnlocked && activeStage === 1) void speakForTarget("advance2", GUIDE_TEXT.toStageTwo);
   }, [soundUnlocked, activeStage]);
 
   useEffect(() => {
-    if (activeStage === 2 && !findUnlocked) speakGuide(GUIDE_TEXT.blockFind);
+    if (activeStage === 2 && !findUnlocked) void speakForTarget("stage2", GUIDE_TEXT.blockFind);
   }, [activeStage, findUnlocked]);
 
   useEffect(() => {
     if (findUnlocked && activeStage === 2) {
       playCelebrateChime();
-      speakGuide(`${GUIDE_TEXT.findComplete} ${GUIDE_TEXT.toStageThree}`);
+      void speakForTarget("advance3", `${GUIDE_TEXT.findComplete} ${GUIDE_TEXT.toStageThree}`);
     }
   }, [findUnlocked, activeStage]);
 
   useEffect(() => {
-    if (activeStage === 3 && practiceDoneCount < requiredPracticeRounds) speakGuide(GUIDE_TEXT.blockPicture);
+    if (activeStage === 3 && practiceDoneCount < requiredPracticeRounds) {
+      void speakForTarget("stage3", GUIDE_TEXT.blockPicture);
+    }
   }, [activeStage, practiceDoneCount, requiredPracticeRounds]);
+
+  async function speakForTarget(target: SpeechTarget, text: string) {
+    setSpeakingTarget(target);
+    await speakGuide(text);
+    setSpeakingTarget((current) => (current === target ? null : current));
+  }
+
+  function activeBlock(stage: number) {
+    return speakingTarget === `stage${stage}` || (!speakingTarget && activeStage === stage);
+  }
+
+  function activeAdvance(stage: number) {
+    return speakingTarget === `advance${stage}` || advancingStage === stage;
+  }
 
   async function handleHearTarget(char: string) {
     if (locked || spotlightChar) return;
@@ -712,11 +742,17 @@ function LessonPanel({
       <h2 id="lesson-title" className="lesson-title">
         來認「{lessonLabel(lesson)}」
       </h2>
-      <NarrationLine text={lessonIntro} className="lesson-copy">
+      <NarrationLine
+        text={lessonIntro}
+        target="lesson"
+        onSpeakStart={setSpeakingTarget}
+        onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
+        className="lesson-copy"
+      >
         {lessonIntro}
       </NarrationLine>
 
-      <LessonBlock index={1} title="聽聽看" done={soundUnlocked} locked={locked}>
+      <LessonBlock index={1} title="聽聽看" done={soundUnlocked} locked={locked} active={activeBlock(1)}>
         <div className="target-grid">
           {newChars.map((char) => (
             <button
@@ -740,7 +776,13 @@ function LessonPanel({
             </div>
           </div>
         )}
-        <NarrationLine text={GUIDE_TEXT.blockHear} className="block-note">
+        <NarrationLine
+          text={GUIDE_TEXT.blockHear}
+          target="stage1"
+          onSpeakStart={setSpeakingTarget}
+          onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
+          className="block-note"
+        >
           {GUIDE_TEXT.blockHear}
         </NarrationLine>
         {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
@@ -751,19 +793,31 @@ function LessonPanel({
           text={GUIDE_TEXT.toStageTwo}
           buttonText="進入第二階段"
           busy={advancingStage === 2}
+          active={activeAdvance(2)}
+          onSpeakStart={setSpeakingTarget}
+          onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
           onAdvance={() => handleAdvanceStage(2)}
         />
       )}
 
-      <LessonBlock index={2} title="找出這個字" done={findUnlocked} locked={locked || activeStage < 2}>
+      <LessonBlock
+        index={2}
+        title="找出這個字"
+        done={findUnlocked}
+        locked={locked || activeStage < 2}
+        active={activeBlock(2)}
+      >
         {activeStage >= 2 ? (
           <FindManyChallenge
             key={`find-${lesson.id}-${resetVersion}`}
             lesson={lesson}
             zhuyinMap={zhuyinMap}
-            disabled={locked || activeStage < 2}
-            onComplete={() => setFindUnlocked(true)}
-          />
+          disabled={locked || activeStage < 2}
+          speakingTarget={speakingTarget}
+          onSpeakStart={setSpeakingTarget}
+          onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
+          onComplete={() => setFindUnlocked(true)}
+        />
         ) : (
           <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
         )}
@@ -774,6 +828,9 @@ function LessonPanel({
           text={`${GUIDE_TEXT.findComplete} ${GUIDE_TEXT.toStageThree}`}
           buttonText="進入第三階段"
           busy={advancingStage === 3}
+          active={activeAdvance(3)}
+          onSpeakStart={setSpeakingTarget}
+          onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
           onAdvance={() => handleAdvanceStage(3)}
         />
       )}
@@ -783,6 +840,7 @@ function LessonPanel({
         title={usesSentenceGames ? "句子遊戲" : "看圖聽句子"}
         done={practiceDoneCount >= requiredPracticeRounds}
         locked={locked || activeStage < 3}
+        active={activeBlock(3)}
       >
         {activeStage < 3 ? (
           <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
@@ -803,6 +861,8 @@ function LessonPanel({
             zhuyinMap={zhuyinMap}
             disabled={locked || activeStage < 3}
             done={practiceDoneCount >= requiredPracticeRounds}
+            onSpeakStart={setSpeakingTarget}
+            onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
             onDone={() => setPracticeDoneCount(1)}
           />
         )}
@@ -850,19 +910,22 @@ function LessonBlock({
   title,
   done,
   locked,
+  active = false,
   children,
 }: {
   index: number;
   title: string;
   done: boolean;
   locked: boolean;
+  active?: boolean;
   children: ReactNode;
 }) {
   return (
-    <section className={`lesson-block${locked ? " locked-block" : ""}`}>
+    <section className={`lesson-block${locked ? " locked-block" : ""}${active ? " active-block" : ""}`}>
       <div className="block-heading">
         <span className="lesson-number">{index}</span>
         <h3>{title}</h3>
+        {active && <span className="active-listening-pill">聽這裡</span>}
         <span className="pill">{done ? "通關" : locked ? "等待前一段" : "進行中"}</span>
       </div>
       {children}
@@ -874,16 +937,28 @@ function StageAdvancePrompt({
   text,
   buttonText,
   busy,
+  active,
+  onSpeakStart,
+  onSpeakEnd,
   onAdvance,
 }: {
   text: string;
   buttonText: string;
   busy: boolean;
+  active: boolean;
+  onSpeakStart: (target: SpeechTarget) => void;
+  onSpeakEnd: (target: SpeechTarget) => void;
   onAdvance: () => void;
 }) {
   return (
-    <section className="stage-advance-panel" aria-label={buttonText}>
-      <NarrationLine text={text} className="stage-advance-copy">
+    <section className={`stage-advance-panel${active ? " active-block" : ""}`} aria-label={buttonText}>
+      <NarrationLine
+        text={text}
+        target={buttonText.includes("第三") ? "advance3" : "advance2"}
+        onSpeakStart={onSpeakStart}
+        onSpeakEnd={onSpeakEnd}
+        className="stage-advance-copy"
+      >
         {text}
       </NarrationLine>
       <button className={`btn stage-advance-button${busy ? " starting" : ""}`} disabled={busy} onClick={onAdvance}>
@@ -897,11 +972,17 @@ function FindManyChallenge({
   lesson,
   zhuyinMap,
   disabled,
+  speakingTarget,
+  onSpeakStart,
+  onSpeakEnd,
   onComplete,
 }: {
   lesson: Lesson;
   zhuyinMap: Map<string, string>;
   disabled: boolean;
+  speakingTarget: SpeechTarget;
+  onSpeakStart: (target: SpeechTarget) => void;
+  onSpeakEnd: (target: SpeechTarget) => void;
   onComplete: () => void;
 }) {
   const items = useMemo(() => makeFindChallenge(lesson), [lesson]);
@@ -922,7 +1003,8 @@ function FindManyChallenge({
     if (!targets.includes(item.char)) {
       setMissId(item.id);
       playMissChime();
-      speakGuide(GUIDE_TEXT.findMiss);
+      onSpeakStart("stage2");
+      void speakGuide(GUIDE_TEXT.findMiss).then(() => onSpeakEnd("stage2"));
       window.setTimeout(() => setMissId((current) => (current === item.id ? null : current)), 560);
       return;
     }
@@ -944,9 +1026,16 @@ function FindManyChallenge({
 
   return (
     <>
-      <NarrationLine text={GUIDE_TEXT.blockFind} className="block-note">
+      <NarrationLine
+        text={GUIDE_TEXT.blockFind}
+        target="stage2"
+        onSpeakStart={onSpeakStart}
+        onSpeakEnd={onSpeakEnd}
+        className="block-note"
+      >
         {GUIDE_TEXT.blockFind}
       </NarrationLine>
+      {speakingTarget === "stage2" && <p className="active-work-note">現在看這一區。</p>}
       <div className="find-grid">
         {visibleItems.map((item) => (
           <button
@@ -1006,12 +1095,16 @@ function PictureSentencePreview({
   zhuyinMap,
   disabled,
   done,
+  onSpeakStart,
+  onSpeakEnd,
   onDone,
 }: {
   lesson: Lesson;
   zhuyinMap: Map<string, string>;
   disabled: boolean;
   done: boolean;
+  onSpeakStart: (target: SpeechTarget) => void;
+  onSpeakEnd: (target: SpeechTarget) => void;
   onDone: () => void;
 }) {
   const [playingSentenceId, setPlayingSentenceId] = useState<string | null>(null);
@@ -1036,7 +1129,13 @@ function PictureSentencePreview({
 
   return (
     <>
-      <NarrationLine text={GUIDE_TEXT.blockPicture} className="block-note">
+      <NarrationLine
+        text={GUIDE_TEXT.blockPicture}
+        target="stage3"
+        onSpeakStart={onSpeakStart}
+        onSpeakEnd={onSpeakEnd}
+        className="block-note"
+      >
         {GUIDE_TEXT.blockPicture}
       </NarrationLine>
       <div className="picture-sentence-list">
@@ -1062,7 +1161,13 @@ function PictureSentencePreview({
           </button>
         ))}
       </div>
-      <NarrationLine text={GUIDE_TEXT.learned} className="block-note">
+      <NarrationLine
+        text={GUIDE_TEXT.learned}
+        target="stage3"
+        onSpeakStart={onSpeakStart}
+        onSpeakEnd={onSpeakEnd}
+        className="block-note"
+      >
         {GUIDE_TEXT.learned}
       </NarrationLine>
       <button className="btn secondary" disabled={disabled || done} onClick={onDone}>
