@@ -2094,6 +2094,34 @@ button.char-token {
   box-shadow: 0 8px 18px rgba(217, 71, 53, 0.2);
 }
 
+.character-page {
+  gap: 14px;
+}
+
+.character-page-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.96);
+  padding: 8px;
+  box-shadow: 0 8px 20px rgba(49, 38, 24, 0.1);
+}
+
+.character-back-button {
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  padding: 8px 13px;
+}
+
 .collection-tab:disabled {
   cursor: not-allowed;
 }
@@ -2607,6 +2635,19 @@ button.char-token {
 
   .collection-gacha-link {
     justify-content: center;
+  }
+
+  .character-page-topbar {
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .character-back-button,
+  .character-page-topbar .collection-gacha-link {
+    width: 100%;
+    justify-content: center;
+    padding-inline: 8px;
   }
 
   .picture-sentence-card {

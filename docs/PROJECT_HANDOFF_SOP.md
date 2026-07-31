@@ -135,7 +135,8 @@ Current page rules:
 - The collection page has a small shortcut button back to gacha.
 - All four realms can be opened. Locked realms show a locked message and unavailable characters, but the child can still see the area.
 - The character list is grouped by species. Each species section shows the animal icon, animal name, collected count, and 9 family-role cards.
-- Character detail, affection hearts, and interactions open only after tapping an owned character.
+- Tapping an owned character switches into a dedicated character personal page, not an inserted panel above the long collection list.
+- The character personal page must have a clear one-tap button back to the collection list and a shortcut to gacha.
 - Character detail is treated as the character's personal page. Keep the character centered and keep interactions inside that page.
 - Current character visuals use species icon plus family-role accessories and affection-based mood badges. Do not generate hundreds of final AI role images until the art style is approved.
 - Realm selection, character selection, heart spending, and interaction opening all need sound feedback.

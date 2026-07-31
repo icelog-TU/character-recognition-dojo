@@ -1411,6 +1411,48 @@ function CollectionPage({
     void speakGuide(interaction.message);
   }
 
+  if (selectedCharacter && selectedOwned) {
+    return (
+      <section className="page-panel collection-page character-page">
+        <div className="character-page-topbar">
+          <button
+            className="btn character-back-button"
+            type="button"
+            onClick={() => {
+              setSelectedCharacterId(null);
+              setInteractionMessage("");
+              playStartChime();
+              void speakGuide(`回到${visibleRealm.label}的角色收藏。`);
+            }}
+          >
+            ← 回角色收藏
+          </button>
+          <button
+            className="btn collection-gacha-link"
+            type="button"
+            onClick={() => {
+              playStartChime();
+              onOpenGacha();
+            }}
+          >
+            <span aria-hidden>🎁</span>
+            去轉蛋
+          </button>
+        </div>
+        <CharacterInteractionPanel
+          character={selectedCharacter}
+          hearts={selectedHearts}
+          stars={stars}
+          seenIndexes={seenCharacterInteractions[selectedCharacter.characterId] ?? []}
+          message={interactionMessage}
+          canAddHeart={stars >= 3 && selectedHearts < 10}
+          onAddHeart={() => onAddHeart(selectedCharacter.characterId)}
+          onInteract={(interaction, index) => handleInteract(selectedCharacter, interaction, index)}
+        />
+      </section>
+    );
+  }
+
   return (
     <section className="page-panel collection-page">
       <div className="page-heading collection-page-heading">
@@ -1470,19 +1512,6 @@ function CollectionPage({
           <strong>這一區還沒解鎖。</strong>
           <span>先把前面的動物朋友收集滿，這裡就會打開。</span>
         </div>
-      )}
-
-      {selectedCharacter && selectedOwned && (
-        <CharacterInteractionPanel
-          character={selectedCharacter}
-          hearts={selectedHearts}
-          stars={stars}
-          seenIndexes={seenCharacterInteractions[selectedCharacter.characterId] ?? []}
-          message={interactionMessage}
-          canAddHeart={stars >= 3 && selectedHearts < 10}
-          onAddHeart={() => onAddHeart(selectedCharacter.characterId)}
-          onInteract={(interaction, index) => handleInteract(selectedCharacter, interaction, index)}
-        />
       )}
 
       {!selectedCharacter && firstOwnedCharacter && (

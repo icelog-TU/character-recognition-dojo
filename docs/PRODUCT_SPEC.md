@@ -78,7 +78,8 @@ The app has a character collection system connected to lesson completion.
 - A gacha result card is clickable and opens that character's personal collection panel.
 - The gacha card uses one central stage: before drawing it shows a large gift; after drawing the same stage changes into the character result.
 - The latest gacha result must stay near the draw button, not below realm progress.
-- The collection page shows realm blocks first and a tappable character list below. A character detail panel opens only after the child taps an owned character.
+- The collection page shows realm blocks first and a tappable character list below. Tapping an owned character switches into a dedicated character personal page.
+- The character personal page must include a one-tap return button back to the collection list.
 - The character list is grouped by species, with each species showing 9 family-role cards.
 - The collection page should include a small shortcut button back to gacha.
 - Character avatars must show role differences. The prototype uses symbolic accessories plus affection mood badges; final AI art can replace them after art direction is approved.

@@ -134,7 +134,9 @@ The collection page also speaks on entry.
 - The character list is grouped by species.
 - Each species section shows the species icon, species name, and collected count out of 9.
 - Each species section shows the 9 family roles in a compact grid.
-- A collected character must be tapped before its affection and interaction panel opens.
+- A collected character must be tapped before its personal page opens.
+- The personal page is a dedicated view, not an inserted panel above the long collection list.
+- The personal page needs a clear one-tap return button back to the collection list.
 - Tapping a character plays a sound and speaks that the child can add hearts or open interactions.
 - Adding a heart spends 3 stars, plays a reward sound, and speaks the new heart total.
 - Opening an interaction speaks the interaction line.
