@@ -764,6 +764,48 @@ button.char-token {
   margin-bottom: 10px;
 }
 
+.picture-sentence-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.picture-sentence-card {
+  display: grid;
+  grid-template-columns: minmax(92px, 0.38fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+}
+
+.picture-sentence-card img,
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--line);
+  background: var(--surface-strong);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 8px;
+}
+
+.picture-sentence-card .sentence-card {
+  margin: 0;
+  box-shadow: none;
+}
+
 .round-title {
   margin: 0 0 10px;
   font-size: 1.15rem;
@@ -858,6 +900,10 @@ button.char-token {
   .record-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .picture-sentence-card {
+    grid-template-columns: 86px minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 420px) {
@@ -894,5 +940,9 @@ button.char-token {
   .lesson-copy,
   .block-note {
     font-size: 0.95rem;
+  }
+
+  .picture-sentence-card {
+    grid-template-columns: 1fr;
   }
 }

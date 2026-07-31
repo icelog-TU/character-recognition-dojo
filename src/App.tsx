@@ -471,10 +471,12 @@ function LessonPanel({
   const [heardChars, setHeardChars] = useState<Set<string>>(new Set());
   const [findUnlocked, setFindUnlocked] = useState(false);
   const [practiceDoneCount, setPracticeDoneCount] = useState(0);
+  const [resetVersion, setResetVersion] = useState(0);
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
-  const requiredPracticeRounds = Math.min(lesson.requiredRounds, lesson.sentences.length);
+  const usesSentenceGames = lesson.order >= 5;
+  const requiredPracticeRounds = usesSentenceGames ? Math.min(lesson.requiredRounds, lesson.sentences.length) : 1;
   const lessonReady = soundUnlocked && findUnlocked && practiceDoneCount >= requiredPracticeRounds;
 
   function handleHearTarget(char: string) {
@@ -496,7 +498,7 @@ function LessonPanel({
       <h2 id="lesson-title" className="lesson-title">
         破解「{lessonLabel(lesson)}」
       </h2>
-      <p className="lesson-copy">三段完成後才算通關：先聽單字，再找出這個字，最後進句子遊戲。</p>
+      <p className="lesson-copy">三段完成後才算通關：先聽單字，再找出這個字，前幾課先看配圖認句。</p>
 
       <LessonBlock index={1} title="聽這個字" done={soundUnlocked} locked={locked}>
         <div className="target-grid">
@@ -520,6 +522,7 @@ function LessonPanel({
 
       <LessonBlock index={2} title="找出這個字" done={findUnlocked} locked={locked || !soundUnlocked}>
         <FindManyChallenge
+          key={`find-${lesson.id}-${resetVersion}`}
           lesson={lesson}
           zhuyinMap={zhuyinMap}
           disabled={locked || !soundUnlocked}
@@ -529,18 +532,30 @@ function LessonPanel({
 
       <LessonBlock
         index={3}
-        title="句子遊戲"
+        title={usesSentenceGames ? "句子遊戲" : "看圖認句"}
         done={practiceDoneCount >= requiredPracticeRounds}
         locked={locked || !soundUnlocked || !findUnlocked}
       >
-        <SentencePracticePreview
-          lesson={lesson}
-          zhuyinMap={zhuyinMap}
-          disabled={locked || !soundUnlocked || !findUnlocked}
-          doneCount={practiceDoneCount}
-          requiredCount={requiredPracticeRounds}
-          onRoundDone={() => setPracticeDoneCount((count) => Math.min(count + 1, requiredPracticeRounds))}
-        />
+        {usesSentenceGames ? (
+          <SentencePracticePreview
+            key={`practice-${lesson.id}-${resetVersion}`}
+            lesson={lesson}
+            zhuyinMap={zhuyinMap}
+            disabled={locked || !soundUnlocked || !findUnlocked}
+            doneCount={practiceDoneCount}
+            requiredCount={requiredPracticeRounds}
+            onRoundDone={() => setPracticeDoneCount((count) => Math.min(count + 1, requiredPracticeRounds))}
+          />
+        ) : (
+          <PictureSentencePreview
+            key={`picture-${lesson.id}-${resetVersion}`}
+            lesson={lesson}
+            zhuyinMap={zhuyinMap}
+            disabled={locked || !soundUnlocked || !findUnlocked}
+            done={practiceDoneCount >= requiredPracticeRounds}
+            onDone={() => setPracticeDoneCount(1)}
+          />
+        )}
       </LessonBlock>
 
       <div className="progress-row">
@@ -567,6 +582,7 @@ function LessonPanel({
             setHeardChars(new Set());
             setFindUnlocked(false);
             setPracticeDoneCount(0);
+            setResetVersion((version) => version + 1);
           }}
         >
           重練本課
@@ -620,6 +636,7 @@ function FindManyChallenge({
     const item = items.find((candidate) => candidate.id === id);
     return item ? targets.includes(item.char) : false;
   }).length;
+  const visibleItems = items.filter((item) => !foundIds.has(item.id));
 
   function handleTap(item: FindItem) {
     if (disabled || !targets.includes(item.char) || foundIds.has(item.id)) return;
@@ -634,12 +651,12 @@ function FindManyChallenge({
 
   return (
     <>
-      <p className="block-note">在字卡裡找到本課新字「{lessonLabel(lesson)}」。按到正確字時會亮起來，也會念出字音。</p>
+      <p className="block-note">在字卡裡找到本課新字「{lessonLabel(lesson)}」。按到正確字時會念出字音，然後字卡會收起來。</p>
       <div className="find-grid">
-        {items.map((item) => (
+        {visibleItems.map((item) => (
           <button
             key={item.id}
-            className={`find-token${foundIds.has(item.id) ? " found" : ""}`}
+            className="find-token"
             disabled={disabled}
             onClick={() => handleTap(item)}
           >
@@ -648,6 +665,7 @@ function FindManyChallenge({
           </button>
         ))}
       </div>
+      {foundTotal === targetTotal && <p className="success">本段完成。</p>}
       <p className="block-note">
         已找到 {foundTotal} / {targetTotal}
       </p>
@@ -669,6 +687,45 @@ function makeFindChallenge(lesson: Lesson): FindItem[] {
   const pool = [...distractors, ...fallback].slice(0, Math.max(2, 6 - targets.length));
   const chars = [...targets, ...pool].slice(0, 6);
   return chars.map((char, index) => ({ id: `${char}-${index}`, char }));
+}
+
+function PictureSentencePreview({
+  lesson,
+  zhuyinMap,
+  disabled,
+  done,
+  onDone,
+}: {
+  lesson: Lesson;
+  zhuyinMap: Map<string, string>;
+  disabled: boolean;
+  done: boolean;
+  onDone: () => void;
+}) {
+  return (
+    <>
+      <p className="block-note">
+        前幾課字量太少，先不進五種句子遊戲。這裡先用配圖和短句讓孩子看懂意思；正式圖片會在句子審核後加入。
+      </p>
+      <div className="picture-sentence-list">
+        {lesson.sentences.map((sentence) => (
+          <div className="picture-sentence-card" key={sentence.id}>
+            {sentence.imageSrc ? (
+              <img src={sentence.imageSrc} alt="" />
+            ) : (
+              <div className="image-placeholder" aria-label="圖片待製作">
+                <span>圖片待製作</span>
+              </div>
+            )}
+            <SentenceCard sentence={sentence} zhuyinMap={zhuyinMap} activeCharIndex={null} />
+          </div>
+        ))}
+      </div>
+      <button className="btn secondary" disabled={disabled || done} onClick={onDone}>
+        看完配圖
+      </button>
+    </>
+  );
 }
 
 function SentencePracticePreview({

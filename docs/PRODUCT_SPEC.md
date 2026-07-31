@@ -9,7 +9,7 @@
 1. A child opens the next locked lesson.
 2. Block 1 introduces the lesson's new character or seed characters. Each character is shown alone, large, with zhuyin. Tapping it plays the character sound; the block clears when all new characters have been heard.
 3. Block 2 asks the child to find the lesson's new character(s) among several character tiles. Correct taps light up and play the character sound.
-4. Block 3 runs reviewed lesson sentences through the sentence games.
+4. Block 3 uses reviewed lesson sentences. Early seed lessons show picture-supported sentence previews; later lessons run sentence games.
 5. Completing all three blocks unlocks the next lesson.
 6. Completed lessons enter manual and random review.
 
@@ -61,6 +61,8 @@ Each lesson has:
 - `sentences`: reviewed practice strings that use only previously learned characters plus the lesson new character(s).
 - `requiredRounds`: how many sentence game rounds are needed to complete block 3.
 - optional `originHint`: pictograph or etymology aid, displayed only when available and safely licensed.
+
+For the first few lessons, there may not be enough characters to support real sentence games. Those lessons should use picture-supported sentence preview first. Sentence games should be introduced only after the curriculum has enough learned characters, currently expected around lesson 5.
 
 The first lesson can be a seed lesson. Current seed draft:
 
