@@ -36,14 +36,14 @@ const RAINBOW_GROUPS = [
   { id: "purple", label: "紫", range: "501-600", start: 501, end: 600, color: "#8156c6" },
 ];
 
-const GUIDE_AUDIO = {
-  homeWelcome: "/assets/ui/audio/home-welcome.m4a",
-  homeNext: "/assets/ui/audio/home-next.m4a",
-  lessonWelcome: "/assets/ui/audio/lesson-welcome.m4a",
-  blockHear: "/assets/ui/audio/block-hear.m4a",
-  blockFind: "/assets/ui/audio/block-find.m4a",
-  blockPicture: "/assets/ui/audio/block-picture.m4a",
-  learned: "/assets/ui/audio/learned.m4a",
+const GUIDE_TEXT = {
+  homeWelcome: "嗨！按下面的大按鈕，我陪你一起認字。",
+  homeNext: "先聽字，再找字，最後看圖片和句子。",
+  lessonWelcome: "我們一步一步來。先按大大的字，聽聽它怎麼念。",
+  blockHear: "每一張字卡都按一次。聽到聲音，就做得很好。",
+  blockFind: "找找看，這些字躲在哪裡。看到一樣的字，就點它。",
+  blockPicture: "點一張圖，聽一句話。亮起來的字，就是現在念到的字。",
+  learned: "都聽完了，就按我聽完了。",
 } as const;
 
 function lessonChars(lesson: Lesson): string[] {
@@ -88,8 +88,8 @@ function App() {
   const streakDays = completedOrders.size > 0 ? 1 : 0;
 
   useEffect(() => {
-    Object.values(GUIDE_AUDIO).forEach(preloadAudioSrc);
-  }, []);
+    if (page === "practice" && !lessonOpen) speakGuide(`${GUIDE_TEXT.homeWelcome} ${GUIDE_TEXT.homeNext}`);
+  }, [page, lessonOpen]);
 
   function completeLesson(order: number) {
     const following = curriculum.lessons.find((lesson) => lesson.order === order + 1);
@@ -209,8 +209,8 @@ function PracticeHome({
       {notice && <div className="completion-banner">{notice}</div>}
       <div className="page-heading">
         <h1>今天來認字</h1>
-        <NarrationLine audioSrc={GUIDE_AUDIO.homeWelcome}>
-          嗨！按下面的大按鈕，我陪你一起認字。
+        <NarrationLine text={GUIDE_TEXT.homeWelcome}>
+          {GUIDE_TEXT.homeWelcome}
         </NarrationLine>
       </div>
 
@@ -218,8 +218,8 @@ function PracticeHome({
         <div>
           <span className="pill">從這裡開始</span>
           <h2>第 {nextLesson.order} 課：{lessonLabel(nextLesson)}</h2>
-          <NarrationLine audioSrc={GUIDE_AUDIO.homeNext}>
-            先聽字，再找字，最後看圖片和句子。
+          <NarrationLine text={GUIDE_TEXT.homeNext}>
+            {GUIDE_TEXT.homeNext}
           </NarrationLine>
         </div>
         <button className="btn primary" onClick={() => onStart(nextLesson.order)}>
@@ -553,16 +553,16 @@ function StatCard({ icon, value, label }: { icon: string; value: number; label: 
 
 function NarrationLine({
   children,
-  audioSrc,
+  text,
   className = "",
 }: {
   children: ReactNode;
-  audioSrc: string;
+  text: string;
   className?: string;
 }) {
   return (
     <p className={`narration-line ${className}`.trim()}>
-      <button className="speak-button" type="button" aria-label="播放說明" onClick={() => playAudioSrc(audioSrc)}>
+      <button className="speak-button" type="button" aria-label="播放說明" onClick={() => speakGuide(text)}>
         ▶
       </button>
       <span>{children}</span>
@@ -608,6 +608,18 @@ function LessonPanel({
     preloadLessonAudio(lesson);
   }, [lesson]);
 
+  useEffect(() => {
+    if (!locked) speakGuide(`${GUIDE_TEXT.lessonWelcome} ${GUIDE_TEXT.blockHear}`);
+  }, [lesson.id, locked]);
+
+  useEffect(() => {
+    if (soundUnlocked && !findUnlocked) speakGuide(GUIDE_TEXT.blockFind);
+  }, [soundUnlocked, findUnlocked]);
+
+  useEffect(() => {
+    if (findUnlocked && practiceDoneCount < requiredPracticeRounds) speakGuide(GUIDE_TEXT.blockPicture);
+  }, [findUnlocked, practiceDoneCount, requiredPracticeRounds]);
+
   function handleHearTarget(char: string) {
     playLessonChar(lesson, char);
     setHeardChars((prev) => {
@@ -627,8 +639,8 @@ function LessonPanel({
       <h2 id="lesson-title" className="lesson-title">
         來認「{lessonLabel(lesson)}」
       </h2>
-      <NarrationLine audioSrc={GUIDE_AUDIO.lessonWelcome} className="lesson-copy">
-        我們一步一步來。先按大大的字，聽聽它怎麼念。
+      <NarrationLine text={GUIDE_TEXT.lessonWelcome} className="lesson-copy">
+        {GUIDE_TEXT.lessonWelcome}
       </NarrationLine>
 
       <LessonBlock index={1} title="聽聽看" done={soundUnlocked} locked={locked}>
@@ -645,8 +657,8 @@ function LessonPanel({
             </button>
           ))}
         </div>
-        <NarrationLine audioSrc={GUIDE_AUDIO.blockHear} className="block-note">
-          每一張字卡都按一次。聽到聲音，就做得很好。
+        <NarrationLine text={GUIDE_TEXT.blockHear} className="block-note">
+          {GUIDE_TEXT.blockHear}
         </NarrationLine>
         {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
       </LessonBlock>
@@ -791,8 +803,8 @@ function FindManyChallenge({
 
   return (
     <>
-      <NarrationLine audioSrc={GUIDE_AUDIO.blockFind} className="block-note">
-        找找看，這些字躲在哪裡。看到一樣的字，就點它。
+      <NarrationLine text={GUIDE_TEXT.blockFind} className="block-note">
+        {GUIDE_TEXT.blockFind}
       </NarrationLine>
       <div className="find-grid">
         {visibleItems.map((item) => (
@@ -881,8 +893,8 @@ function PictureSentencePreview({
 
   return (
     <>
-      <NarrationLine audioSrc={GUIDE_AUDIO.blockPicture} className="block-note">
-        點一張圖，聽一句話。亮起來的字，就是現在念到的字。
+      <NarrationLine text={GUIDE_TEXT.blockPicture} className="block-note">
+        {GUIDE_TEXT.blockPicture}
       </NarrationLine>
       <div className="picture-sentence-list">
         {lesson.sentences.map((sentence) => (
@@ -907,8 +919,8 @@ function PictureSentencePreview({
           </button>
         ))}
       </div>
-      <NarrationLine audioSrc={GUIDE_AUDIO.learned} className="block-note">
-        都聽完了，就按我聽完了。
+      <NarrationLine text={GUIDE_TEXT.learned} className="block-note">
+        {GUIDE_TEXT.learned}
       </NarrationLine>
       <button className="btn secondary" disabled={disabled || done} onClick={onDone}>
         我聽完了
@@ -964,6 +976,7 @@ function stopAudioFrame() {
 
 function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
   const audio = getCachedAudio(src);
+  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
   if (activeAudio && activeAudio !== audio) activeAudio.pause();
   stopAudioFrame();
   activeAudio = audio;
@@ -1127,13 +1140,43 @@ function splitZhuyin(value: string): { base: string[]; tone: string; neutral: bo
 }
 
 function playSpokenText(text: string) {
-  const clean = text.replace(/[，。！？、；：,.!?;:]/g, "");
-  if (!clean || !("speechSynthesis" in window)) return;
+  return playTts(text, { rate: 0.8, pitch: 1 });
+}
+
+function speakGuide(text: string) {
+  return playTts(text, { rate: 0.95, pitch: 1.25 });
+}
+
+function playTts(text: string, { rate, pitch }: { rate: number; pitch: number }) {
+  const clean = text.replace(/[，。！？、；：,.!?;:]/g, " ").replace(/\s+/g, " ").trim();
+  if (!clean || !("speechSynthesis" in window)) return Promise.resolve();
+  if (activeAudio) {
+    activeAudio.pause();
+    activeAudio = null;
+  }
+  stopAudioFrame();
   window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(clean);
-  utterance.lang = "zh-TW";
-  utterance.rate = 0.8;
-  window.speechSynthesis.speak(utterance);
+  return new Promise<void>((resolve) => {
+    const utterance = new SpeechSynthesisUtterance(clean);
+    utterance.lang = "zh-TW";
+    utterance.rate = rate;
+    utterance.pitch = pitch;
+    const voice = pickZhTwVoice();
+    if (voice) utterance.voice = voice;
+    utterance.onend = () => resolve();
+    utterance.onerror = () => resolve();
+    window.speechSynthesis.speak(utterance);
+  });
+}
+
+function pickZhTwVoice() {
+  if (!("speechSynthesis" in window)) return null;
+  const voices = window.speechSynthesis.getVoices();
+  return (
+    voices.find((voice) => voice.lang.toLowerCase() === "zh-tw") ??
+    voices.find((voice) => voice.lang.toLowerCase().startsWith("zh")) ??
+    null
+  );
 }
 
 function isHan(char: string) {
