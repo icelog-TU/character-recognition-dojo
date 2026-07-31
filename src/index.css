@@ -703,6 +703,17 @@ button {
   color: #fff;
 }
 
+.start-lesson-button {
+  min-width: 156px;
+  min-height: 68px;
+  border-radius: 8px;
+  background: #d94735;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0 6px rgba(217, 71, 53, 0.16), 0 14px 26px rgba(217, 71, 53, 0.28);
+  animation: start-button-glow 1.6s ease-in-out infinite;
+}
+
 .btn.secondary {
   background: var(--accent-soft);
   color: #843018;
@@ -954,6 +965,18 @@ button.char-token {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes start-button-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 6px rgba(217, 71, 53, 0.14), 0 14px 26px rgba(217, 71, 53, 0.26);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(217, 71, 53, 0.08), 0 18px 32px rgba(217, 71, 53, 0.34);
+    transform: scale(1.03);
   }
 }
 

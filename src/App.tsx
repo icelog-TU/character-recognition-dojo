@@ -37,7 +37,7 @@ const RAINBOW_GROUPS = [
 ];
 
 const GUIDE_TEXT = {
-  homeWelcome: "你好呀，請按下面的大按鈕。",
+  homeWelcome: "你好呀。請按下面紅色的大按鈕。",
   homeNext: "先聽字，再找字，最後看圖片和句子。",
   lessonWelcome: "我們一步一步來。先按大大的字，聽聽它怎麼念。",
   blockHear: "每一張字卡都按一次。聽到聲音，就做得很好。",
@@ -88,7 +88,7 @@ function App() {
   const streakDays = completedOrders.size > 0 ? 1 : 0;
 
   useEffect(() => {
-    if (page === "practice" && !lessonOpen) speakGuide(`${GUIDE_TEXT.homeWelcome} ${GUIDE_TEXT.homeNext}`);
+    if (page === "practice" && !lessonOpen) speakGuide(GUIDE_TEXT.homeWelcome);
   }, [page, lessonOpen]);
 
   function completeLesson(order: number) {
@@ -222,7 +222,7 @@ function PracticeHome({
             {GUIDE_TEXT.homeNext}
           </NarrationLine>
         </div>
-        <button className="btn primary" onClick={() => onStart(nextLesson.order)}>
+        <button className="btn start-lesson-button" onClick={() => onStart(nextLesson.order)}>
           開始第一課
         </button>
       </div>
@@ -1148,7 +1148,7 @@ function speakGuide(text: string) {
 }
 
 function playTts(text: string, { rate, pitch }: { rate: number; pitch: number }) {
-  const clean = text.replace(/[，。！？、；：,.!?;:]/g, " ").replace(/\s+/g, " ").trim();
+  const clean = text.replace(/\s+/g, " ").trim();
   if (!clean || !("speechSynthesis" in window)) return Promise.resolve();
   if (activeAudio) {
     activeAudio.pause();
