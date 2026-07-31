@@ -1,0 +1,383 @@
+:root {
+  --bg: #f7f3eb;
+  --surface: #fffdf8;
+  --surface-strong: #fff8e8;
+  --ink: #24211d;
+  --muted: #6e665c;
+  --line: #ded4c5;
+  --primary: #1d7874;
+  --primary-strong: #125452;
+  --accent: #c94f2d;
+  --accent-soft: #ffe3d7;
+  --gold: #d79720;
+  --green-soft: #dff0e7;
+  --shadow: 0 12px 26px rgba(49, 38, 24, 0.12);
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 20px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.sidebar,
+.lesson-panel,
+.sentence-card,
+.round-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.sidebar {
+  padding: 16px;
+  align-self: start;
+}
+
+.brand {
+  margin: 0 0 4px;
+  font-size: 1.45rem;
+}
+
+.brand-subtitle {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.lesson-list {
+  display: grid;
+  gap: 8px;
+}
+
+.lesson-tab {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  padding: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.lesson-tab:disabled {
+  color: #9b958d;
+  background: #eee8dd;
+  cursor: not-allowed;
+}
+
+.lesson-tab.active {
+  border-color: var(--primary);
+  background: var(--green-soft);
+}
+
+.lesson-number {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+.lesson-tab:disabled .lesson-number {
+  background: #aaa197;
+}
+
+.lesson-char {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.lesson-status {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.lesson-panel {
+  padding: 20px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: minmax(130px, 190px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.target-card {
+  display: grid;
+  place-items: center;
+  min-height: 190px;
+  border-radius: 8px;
+  background: #fff;
+  border: 2px solid var(--line);
+}
+
+.target-char {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.target-zhuyin {
+  color: var(--primary-strong);
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.lesson-title {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+}
+
+.lesson-copy {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.origin-note {
+  border-left: 4px solid var(--gold);
+  padding: 10px 12px;
+  background: #fff7df;
+  color: #5b4a22;
+  border-radius: 6px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 0;
+  border-radius: 8px;
+  min-height: 42px;
+  padding: 9px 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn.secondary {
+  background: var(--accent-soft);
+  color: #843018;
+}
+
+.btn.ghost {
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.sentence-card {
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.sentence-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 12px;
+  min-height: 84px;
+  padding: 10px;
+  user-select: none;
+}
+
+.char-token {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-width: 52px;
+  min-height: 58px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+}
+
+button.char-token {
+  cursor: pointer;
+}
+
+.char-token.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.char-token.found {
+  background: var(--green-soft);
+  border-color: var(--primary);
+}
+
+.hanzi {
+  font-size: 2.35rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.zhuyin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 12px;
+  color: var(--primary-strong);
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.tone {
+  margin-top: -1px;
+}
+
+.punctuation {
+  font-size: 1.6rem;
+  color: var(--muted);
+}
+
+.round-card {
+  padding: 16px;
+}
+
+.round-title {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+.round-instruction {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.progress-track {
+  flex: 1;
+  height: 12px;
+  border-radius: 999px;
+  background: #e7ded0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.25s ease;
+}
+
+.success {
+  color: var(--primary-strong);
+  font-weight: 800;
+}
+
+@media (max-width: 780px) {
+  .app-shell {
+    padding: 12px;
+  }
+
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .target-card {
+    min-height: 160px;
+  }
+
+  .target-char {
+    font-size: 5rem;
+  }
+}
