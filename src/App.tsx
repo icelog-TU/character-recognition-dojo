@@ -93,6 +93,18 @@ const FAMILY_ROLES: FamilyRole[] = [
   { id: "baby", label: "寶寶", shortLabel: "寶" },
 ];
 
+const FAMILY_ROLE_ACCESSORY: Record<FamilyRoleId, string> = {
+  grandpa: "👓",
+  grandma: "🧶",
+  dad: "🎩",
+  mom: "🌷",
+  olderBrother: "🎒",
+  olderSister: "🎀",
+  youngerBrother: "🧢",
+  youngerSister: "🧸",
+  baby: "🍼",
+};
+
 const CREATURE_SPECIES: CreatureSpecies[] = [
   { id: "cat", realmId: "land", name: "貓", icon: "🐱" },
   { id: "dog", realmId: "land", name: "狗", icon: "🐶" },
@@ -388,6 +400,15 @@ function interactionTemplateIndex(character: CollectibleCharacter, tierIndex: nu
   if (tierIndex === 0) return 0;
   if (tierIndex === 1) return 1;
   return (characterCollectionIndex(character.characterId) + tierIndex * 7) % templateCount;
+}
+
+function characterMood(hearts: number): string {
+  if (hearts >= 10) return "😍";
+  if (hearts >= 7) return "😄";
+  if (hearts >= 4) return "🙂";
+  if (hearts >= 2) return "😊";
+  if (hearts >= 1) return "😐";
+  return "🙂";
 }
 
 function lessonLabel(lesson: Lesson): string {
@@ -716,6 +737,7 @@ function App() {
           <GachaPage
             coins={coins}
             ownedCharacters={ownedCharacters}
+            characterHearts={characterHearts}
             duplicateGachaStreak={duplicateGachaStreak}
             lastResult={lastGachaResult}
             onDraw={handleGachaDraw}
@@ -732,6 +754,7 @@ function App() {
             focus={collectionFocus}
             onAddHeart={handleAddHeart}
             onInteractionSeen={handleCharacterInteractionSeen}
+            onOpenGacha={() => openPage("gacha")}
           />
         )}
         {page === "settings" && <PlaceholderPage icon="⚙️" title="設定" text="之後放音量、資料備份、家長設定。" />}
@@ -1211,6 +1234,7 @@ function PlaceholderPage({ icon, title, text }: { icon: string; title: string; t
 function GachaPage({
   coins,
   ownedCharacters,
+  characterHearts,
   duplicateGachaStreak,
   lastResult,
   onDraw,
@@ -1219,6 +1243,7 @@ function GachaPage({
 }: {
   coins: number;
   ownedCharacters: Record<string, number>;
+  characterHearts: Record<string, number>;
   duplicateGachaStreak: number;
   lastResult: GachaDrawResult | null;
   onDraw: () => void;
@@ -1251,7 +1276,12 @@ function GachaPage({
         <p>每次轉蛋需要十個金幣。先收集地上的生物，再前往海裡、天空和外太空。</p>
       </div>
 
-      <div className="gacha-machine" style={{ "--realm-color": realm.color } as CSSProperties}>
+      <div className="gacha-machine gacha-action-card" style={{ "--realm-color": realm.color } as CSSProperties}>
+        <button className={`btn gacha-draw-button${drawing ? " starting" : ""}`} disabled={!canDraw || drawing} onClick={handleDraw}>
+          <span className="gacha-button-art" aria-hidden>🎁</span>
+          <span>{coins < 10 ? "金幣不夠" : drawing ? "轉動中" : "轉蛋一次"}</span>
+          <small>10 金幣</small>
+        </button>
         <div className={`gacha-orb${drawing ? " drawing" : ""}`} aria-hidden>
           <span>{realm.shortLabel}</span>
         </div>
@@ -1262,12 +1292,32 @@ function GachaPage({
           <small>本區進度 {collected} / {total}</small>
           <small>{nextIsGuaranteed ? "下一抽保證新角色" : `保底進度 ${pityCount} / 5`}</small>
         </div>
-        <button className={`btn gacha-draw-button${drawing ? " starting" : ""}`} disabled={!canDraw || drawing} onClick={handleDraw}>
-          <span className="gacha-button-art" aria-hidden>🎁</span>
-          <span>{coins < 10 ? "金幣不夠" : drawing ? "轉動中" : "轉蛋一次"}</span>
-          <small>10 金幣</small>
-        </button>
       </div>
+
+      {lastResult ? (
+        <button
+          type="button"
+          className={`draw-result draw-result-button${lastResult.isNew ? " new-character" : ""}`}
+          style={{ "--realm-color": realmColor(lastResult.character.realmId) } as CSSProperties}
+          onClick={() => {
+            playStartChime();
+            onOpenCharacter(lastResult.character);
+          }}
+        >
+          <CreatureAvatar character={lastResult.character} owned large hearts={heartCount(characterHearts, lastResult.character.characterId)} />
+          <div>
+            <span>{lastResult.guaranteedNew ? "保底新角色" : lastResult.isNew ? "新角色" : "又遇見了"}</span>
+            <h2>{lastResult.character.name}{lastResult.character.familyRoleLabel}</h2>
+            <p>已遇見 {ownedCount(ownedCharacters, lastResult.character.characterId)} 次</p>
+            <small>點我去看角色</small>
+          </div>
+        </button>
+      ) : (
+        <div className="draw-result empty">
+          <span className="placeholder-icon">金</span>
+          <p>花十個金幣抽一次，就會有新朋友跑出來。</p>
+        </div>
+      )}
 
       <div className="realm-track gacha-progress-track" aria-label="蒐集進度">
         {CREATURE_REALMS.map((candidate) => {
@@ -1293,31 +1343,6 @@ function GachaPage({
           );
         })}
       </div>
-
-      {lastResult ? (
-        <button
-          type="button"
-          className={`draw-result draw-result-button${lastResult.isNew ? " new-character" : ""}`}
-          style={{ "--realm-color": realmColor(lastResult.character.realmId) } as CSSProperties}
-          onClick={() => {
-            playStartChime();
-            onOpenCharacter(lastResult.character);
-          }}
-        >
-          <CreatureAvatar character={lastResult.character} owned large />
-          <div>
-            <span>{lastResult.guaranteedNew ? "保底新角色" : lastResult.isNew ? "新角色" : "又遇見了"}</span>
-            <h2>{lastResult.character.name}{lastResult.character.familyRoleLabel}</h2>
-            <p>已遇見 {ownedCount(ownedCharacters, lastResult.character.characterId)} 次</p>
-            <small>點我去看角色</small>
-          </div>
-        </button>
-      ) : (
-        <div className="draw-result empty">
-          <span className="placeholder-icon">金</span>
-          <p>花十個金幣抽一次，就會有新朋友跑出來。</p>
-        </div>
-      )}
     </section>
   );
 }
@@ -1330,6 +1355,7 @@ function CollectionPage({
   focus,
   onAddHeart,
   onInteractionSeen,
+  onOpenGacha,
 }: {
   stars: number;
   ownedCharacters: Record<string, number>;
@@ -1338,6 +1364,7 @@ function CollectionPage({
   focus: CollectionFocus;
   onAddHeart: (characterId: string) => void;
   onInteractionSeen: (characterId: string, index: number) => void;
+  onOpenGacha: () => void;
 }) {
   const [selectedRealm, setSelectedRealm] = useState<RealmId>(focus.realmId);
   const [selectedCharacterId, setSelectedCharacterId] = useState<string | null>(null);
@@ -1382,9 +1409,22 @@ function CollectionPage({
 
   return (
     <section className="page-panel collection-page">
-      <div className="page-heading">
-        <h1>角色收藏</h1>
-        <p>每一種生物都有九個家人。用星星增加角色好感度，三顆星星可以加一顆愛心。</p>
+      <div className="page-heading collection-page-heading">
+        <div>
+          <h1>角色收藏</h1>
+          <p>每一種生物都有九個家人。用星星增加角色好感度，三顆星星可以加一顆愛心。</p>
+        </div>
+        <button
+          className="btn collection-gacha-link"
+          type="button"
+          onClick={() => {
+            playStartChime();
+            onOpenGacha();
+          }}
+        >
+          <span aria-hidden>🎁</span>
+          去轉蛋
+        </button>
       </div>
 
       <div className="collection-tabs" role="tablist" aria-label="角色區塊">
@@ -1521,7 +1561,7 @@ function CollectibleCard({
       onClick={onSelect}
       disabled={!owned}
     >
-      <CreatureAvatar character={character} owned={owned} />
+      <CreatureAvatar character={character} owned={owned} hearts={hearts} />
       <strong>{owned ? `${character.name}${character.familyRoleLabel}` : "還沒遇見"}</strong>
       <small>{owned && duplicateCount > 1 ? `遇見 ${duplicateCount} 次` : owned ? character.familyRoleLabel : "???"}</small>
       {owned && (
@@ -1577,9 +1617,9 @@ function CharacterInteractionPanel({
   return (
     <section className="character-detail-panel" style={{ "--realm-color": realmColor(character.realmId) } as CSSProperties}>
       <div className="character-detail-main">
-        <CreatureAvatar character={character} owned large />
+        <CreatureAvatar character={character} owned large hearts={hearts} />
         <div>
-          <span className="mini-label">正在互動</span>
+          <span className="mini-label">角色個人頁</span>
           <h2>{character.name}{character.familyRoleLabel}</h2>
           <div className="heart-meter large" aria-label={`好感度 ${hearts} / 10`}>
             {Array.from({ length: 10 }, (_, index) => (
@@ -1628,14 +1668,20 @@ function CreatureAvatar({
   character,
   owned,
   large = false,
+  hearts = 0,
 }: {
   character: CollectibleCharacter;
   owned: boolean;
   large?: boolean;
+  hearts?: number;
 }) {
+  const accessory = FAMILY_ROLE_ACCESSORY[character.familyRoleId];
+  const mood = characterMood(hearts);
   return (
     <div className={`creature-avatar${large ? " large" : ""}${owned ? "" : " silhouette"}`}>
       <span className="creature-icon" aria-hidden>{owned ? character.icon : "?"}</span>
+      {owned && <span className="role-accessory" aria-hidden>{accessory}</span>}
+      {owned && <span className="mood-badge" aria-hidden>{mood}</span>}
       <span className="family-badge">{owned ? character.familyRoleShortLabel : ""}</span>
     </div>
   );

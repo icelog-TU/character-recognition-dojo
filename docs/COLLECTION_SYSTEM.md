@@ -117,6 +117,7 @@ The gacha page is designed as a toddler-facing page, not an adult settings page.
 
 - Entering the page speaks a short guide automatically.
 - The gacha button stays near the top of the page and includes a clear gift graphic.
+- The latest draw result appears directly under the gacha button, before realm progress, so it is visible immediately on phone.
 - Realm collection progress appears below the gacha machine.
 - Each realm progress card is clickable and opens that realm's collection page.
 - Realm cards should use recognizable icons: land, sea, sky, and space must read visually before a child can read the words.
@@ -136,6 +137,8 @@ The collection page also speaks on entry.
 - Tapping a character plays a sound and speaks that the child can add hearts or open interactions.
 - Adding a heart spends 3 stars, plays a reward sound, and speaks the new heart total.
 - Opening an interaction speaks the interaction line.
+- The collection page includes a small gacha shortcut button near the page heading.
+- Until final AI art is approved, character avatars use species icon plus family-role accessories and affection-based mood badges. Final generated art can replace this symbolic layer later.
 
 ## Asset Strategy
 

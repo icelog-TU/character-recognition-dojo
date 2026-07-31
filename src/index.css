@@ -1800,6 +1800,12 @@ button.char-token {
   padding: 18px;
 }
 
+.gacha-action-card {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
 .gacha-orb {
   width: 118px;
   aspect-ratio: 1 / 1;
@@ -1909,6 +1915,11 @@ button.char-token {
   padding: 14px;
 }
 
+.draw-result {
+  justify-content: center;
+  text-align: center;
+}
+
 .draw-result.empty {
   --realm-color: var(--primary);
   justify-content: center;
@@ -1923,9 +1934,10 @@ button.char-token {
 
 .draw-result-button {
   width: 100%;
+  justify-content: center;
   color: var(--ink);
   font: inherit;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -1950,6 +1962,26 @@ button.char-token {
   align-content: center;
   gap: 3px;
   cursor: pointer;
+}
+
+.collection-page-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.collection-gacha-link {
+  min-height: 42px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff7a2f, #e22e8f);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(217, 71, 53, 0.2);
 }
 
 .collection-tab:disabled {
@@ -2108,6 +2140,43 @@ button.char-token {
   font-weight: 950;
 }
 
+.role-accessory,
+.mood-badge {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 2px rgba(49, 38, 24, 0.15));
+}
+
+.role-accessory {
+  right: -8px;
+  top: 16px;
+  font-size: 1.05rem;
+}
+
+.mood-badge {
+  right: -8px;
+  top: -8px;
+  border: 2px solid #fff;
+  background: #fff6d8;
+  font-size: 0.82rem;
+  padding: 2px;
+}
+
+.creature-avatar.large .role-accessory {
+  right: -12px;
+  top: 26px;
+  font-size: 1.45rem;
+}
+
+.creature-avatar.large .mood-badge {
+  right: -11px;
+  top: -8px;
+  font-size: 1.05rem;
+}
+
 .heart-meter {
   display: flex;
   justify-content: center;
@@ -2155,9 +2224,11 @@ button.char-token {
 
 .character-detail-main {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: 1fr;
   align-items: center;
+  justify-items: center;
   gap: 14px;
+  text-align: center;
 }
 
 .character-detail-main h2 {
@@ -2171,7 +2242,7 @@ button.char-token {
 }
 
 .heart-meter.large {
-  justify-content: flex-start;
+  justify-content: center;
   max-width: none;
   font-size: 1.05rem;
 }
@@ -2343,7 +2414,7 @@ button.char-token {
   }
 
   .character-detail-main {
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .character-heart-button {
@@ -2417,6 +2488,15 @@ button.char-token {
   .lesson-copy,
   .block-note {
     font-size: 0.95rem;
+  }
+
+  .collection-page-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .collection-gacha-link {
+    justify-content: center;
   }
 
   .picture-sentence-card {
