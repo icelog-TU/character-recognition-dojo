@@ -621,6 +621,7 @@ function LessonPanel({
   onComplete: () => void;
 }) {
   const [heardChars, setHeardChars] = useState<Set<string>>(new Set());
+  const [spotlightChar, setSpotlightChar] = useState<string | null>(null);
   const [findUnlocked, setFindUnlocked] = useState(false);
   const [practiceDoneCount, setPracticeDoneCount] = useState(0);
   const [resetVersion, setResetVersion] = useState(0);
@@ -648,13 +649,16 @@ function LessonPanel({
     if (findUnlocked && practiceDoneCount < requiredPracticeRounds) speakGuide(GUIDE_TEXT.blockPicture);
   }, [findUnlocked, practiceDoneCount, requiredPracticeRounds]);
 
-  function handleHearTarget(char: string) {
-    playLessonChar(lesson, char);
+  async function handleHearTarget(char: string) {
+    if (locked || spotlightChar) return;
+    setSpotlightChar(char);
+    await Promise.all([playLessonChar(lesson, char), waitMs(720)]);
     setHeardChars((prev) => {
       const next = new Set(prev);
       next.add(char);
       return next;
     });
+    setSpotlightChar(null);
   }
 
   return (
@@ -676,8 +680,10 @@ function LessonPanel({
           {newChars.map((char) => (
             <button
               key={char}
-              className={`target-card target-button${heardChars.has(char) ? " heard" : ""}`}
-              disabled={locked}
+              className={`target-card target-button${heardChars.has(char) ? " heard" : ""}${
+                spotlightChar === char ? " spotlighting" : ""
+              }`}
+              disabled={locked || Boolean(spotlightChar)}
               onClick={() => handleHearTarget(char)}
             >
               <span className="target-char">{char}</span>
@@ -685,6 +691,14 @@ function LessonPanel({
             </button>
           ))}
         </div>
+        {spotlightChar && (
+          <div className="char-spotlight" aria-hidden>
+            <div className="char-spotlight-card">
+              <span className="char-spotlight-hanzi">{spotlightChar}</span>
+              <Zhuyin value={lesson.zhuyin[spotlightChar] ?? ""} size="large" />
+            </div>
+          </div>
+        )}
         <NarrationLine text={GUIDE_TEXT.blockHear} className="block-note">
           {GUIDE_TEXT.blockHear}
         </NarrationLine>
