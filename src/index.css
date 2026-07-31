@@ -485,6 +485,94 @@ button {
   font-size: 4rem;
 }
 
+.practice-home {
+  display: grid;
+  gap: 18px;
+}
+
+.completion-banner {
+  border: 1px solid color-mix(in srgb, var(--primary) 45%, #fff);
+  border-left: 6px solid var(--primary);
+  border-radius: 8px;
+  background: var(--green-soft);
+  color: var(--primary-strong);
+  padding: 12px 14px;
+  font-weight: 900;
+}
+
+.next-lesson-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px;
+}
+
+.next-lesson-panel h2 {
+  margin: 8px 0 6px;
+  font-size: 1.55rem;
+}
+
+.next-lesson-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.home-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.home-section-heading h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.home-section-heading span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.home-char-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.home-char-card {
+  min-height: 78px;
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 8px;
+}
+
+.home-char-card span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.home-char-card strong {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.home-char-card.completed {
+  background: var(--green-soft);
+  border-color: var(--primary);
+}
+
 .top-bar {
   display: flex;
   align-items: center;
@@ -785,19 +873,45 @@ button.char-token {
 }
 
 .found-card {
-  min-width: 112px;
+  min-width: 76px;
   min-height: 58px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 6px;
   border: 2px solid var(--primary);
   border-radius: 8px;
   background: var(--green-soft);
   color: var(--primary-strong);
   padding: 8px 10px;
-  font-size: 0.86rem;
   font-weight: 800;
+  box-shadow: 0 0 0 4px rgba(29, 120, 116, 0.11), 0 8px 18px rgba(29, 120, 116, 0.18);
+  animation: found-glow 0.75s ease-out;
+}
+
+.found-check {
+  width: 22px;
+  height: 22px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+@keyframes found-glow {
+  0% {
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(29, 120, 116, 0.3);
+  }
+  70% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 8px rgba(29, 120, 116, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .practice-meta {
@@ -957,6 +1071,14 @@ button.char-token {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .home-char-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .next-lesson-panel {
+    grid-template-columns: 1fr;
+  }
+
   .picture-sentence-card {
     grid-template-columns: 86px minmax(0, 1fr);
   }
@@ -1000,5 +1122,9 @@ button.char-token {
 
   .picture-sentence-card {
     grid-template-columns: 1fr;
+  }
+
+  .home-char-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

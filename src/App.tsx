@@ -9,6 +9,7 @@ const curriculum = curriculumData as unknown as Curriculum;
 type GameMode = "找字" | "教動物" | "填空" | "排句子" | "誰念對";
 type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
 type LessonCharEntry = { lesson: Lesson; char: string; index: number };
+type AudioWindow = Window & typeof globalThis & { webkitAudioContext?: typeof AudioContext };
 
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
 
@@ -46,10 +47,19 @@ function flattenLessonChars(lessons: Lesson[]): LessonCharEntry[] {
   return lessons.flatMap(lessonCharEntries);
 }
 
+function assetUrl(src: string): string {
+  if (/^(https?:|data:|blob:)/.test(src)) return src;
+  const base = import.meta.env.BASE_URL;
+  if (src.startsWith("/")) return `${base}${src.slice(1)}`;
+  return `${base}${src}`;
+}
+
 function App() {
   const [page, setPage] = useState<AppPage>("practice");
   const [menuOpen, setMenuOpen] = useState(false);
   const [completedOrders, setCompletedOrders] = useState<Set<number>>(new Set());
+  const [lessonOpen, setLessonOpen] = useState(false);
+  const [completionNotice, setCompletionNotice] = useState("");
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
   const [selectedOrder, setSelectedOrder] = useState(nextOrder);
   const selectedLesson =
@@ -59,23 +69,28 @@ function App() {
   const streakDays = completedOrders.size > 0 ? 1 : 0;
 
   function completeLesson(order: number) {
+    const following = curriculum.lessons.find((lesson) => lesson.order === order + 1);
     setCompletedOrders((prev) => {
       const next = new Set(prev);
       next.add(order);
       return next;
     });
-    const following = curriculum.lessons.find((lesson) => lesson.order === order + 1);
     if (following) setSelectedOrder(following.order);
+    setLessonOpen(false);
+    setCompletionNotice(following ? `第 ${order} 課完成，已解鎖第 ${following.order} 課。` : `第 ${order} 課完成。`);
   }
 
   function openPage(nextPage: AppPage) {
     setPage(nextPage);
+    if (nextPage === "practice") setLessonOpen(false);
     setMenuOpen(false);
   }
 
   function openLesson(order: number) {
     setSelectedOrder(order);
     setPage("practice");
+    setLessonOpen(true);
+    setCompletionNotice("");
     setMenuOpen(false);
   }
 
@@ -95,7 +110,16 @@ function App() {
       />
 
       <main className="app-shell">
-        {page === "practice" && (
+        {page === "practice" && !lessonOpen && (
+          <PracticeHome
+            lessons={curriculum.lessons}
+            completedOrders={completedOrders}
+            nextOrder={nextOrder}
+            notice={completionNotice}
+            onStart={openLesson}
+          />
+        )}
+        {page === "practice" && lessonOpen && (
           <div className="practice-layout">
             <PracticeNavigator
               lessons={curriculum.lessons}
@@ -138,6 +162,61 @@ function App() {
         {page === "settings" && <PlaceholderPage icon="⚙️" title="設定" text="之後放音量、資料備份、家長設定。" />}
       </main>
     </div>
+  );
+}
+
+function PracticeHome({
+  lessons,
+  completedOrders,
+  nextOrder,
+  notice,
+  onStart,
+}: {
+  lessons: Lesson[];
+  completedOrders: Set<number>;
+  nextOrder: number;
+  notice: string;
+  onStart: (order: number) => void;
+}) {
+  const nextLesson = lessons.find((lesson) => lesson.order === nextOrder) ?? lessons[lessons.length - 1];
+  const unlockedEntries = flattenLessonChars(lessons.filter((lesson) => lesson.order <= nextOrder)).slice(-12);
+
+  return (
+    <section className="page-panel practice-home">
+      {notice && <div className="completion-banner">{notice}</div>}
+      <div className="page-heading">
+        <h1>練習課文</h1>
+        <p>從下一課開始練，也可以回到已解鎖的字複習。</p>
+      </div>
+
+      <div className="next-lesson-panel">
+        <div>
+          <span className="pill">下一步</span>
+          <h2>第 {nextLesson.order} 課：{lessonLabel(nextLesson)}</h2>
+          <p>先聽字音，再找出字卡，最後看圖認句。</p>
+        </div>
+        <button className="btn primary" onClick={() => onStart(nextLesson.order)}>
+          開始練習
+        </button>
+      </div>
+
+      <div className="home-section-heading">
+        <h2>已解鎖字卡</h2>
+        <span>{completedOrders.size} 課完成</span>
+      </div>
+      <div className="home-char-grid">
+        {unlockedEntries.map((entry) => (
+          <button
+            className={`home-char-card${completedOrders.has(entry.lesson.order) ? " completed" : ""}`}
+            key={`${entry.lesson.id}-${entry.char}-${entry.index}`}
+            onClick={() => onStart(entry.lesson.order)}
+          >
+            <span>第 {entry.lesson.order} 課</span>
+            <strong>{entry.char}</strong>
+          </button>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -642,6 +721,7 @@ function FindManyChallenge({
   function handleTap(item: FindItem) {
     if (disabled || !targets.includes(item.char) || foundIds.has(item.id)) return;
     playLessonChar(lesson, item.char);
+    window.setTimeout(playFoundChime, 180);
     setFoundIds((prev) => {
       const next = new Set(prev);
       next.add(item.id);
@@ -675,7 +755,7 @@ function FindManyChallenge({
             foundItems.map((item) => (
               <span className="found-card" key={`found-${item.id}`}>
                 <span className="hanzi">{item.char}</span>
-                <span>你找到我了</span>
+                <span className="found-check" aria-hidden>✓</span>
               </span>
             ))
           )}
@@ -732,7 +812,7 @@ function PictureSentencePreview({
             onClick={() => playSentence(sentence)}
           >
             {sentence.imageSrc ? (
-              <img src={sentence.imageSrc} alt="" />
+              <img src={assetUrl(sentence.imageSrc)} alt="" />
             ) : (
               <div className="image-placeholder" aria-label="圖片待製作">
                 <span>圖片待製作</span>
@@ -743,7 +823,7 @@ function PictureSentencePreview({
         ))}
       </div>
       <button className="btn secondary" disabled={disabled || done} onClick={onDone}>
-        看完配圖
+        我學會了
       </button>
     </>
   );
@@ -767,8 +847,27 @@ function playLessonChar(lesson: Lesson, char: string) {
 }
 
 function playAudioSrc(src: string) {
-  const audio = new Audio(src);
+  const audio = new Audio(assetUrl(src));
   void audio.play();
+}
+
+function playFoundChime() {
+  const audioWindow = window as AudioWindow;
+  const AudioContextClass = audioWindow.AudioContext || audioWindow.webkitAudioContext;
+  if (!AudioContextClass) return;
+  const context = new AudioContextClass();
+  const gain = context.createGain();
+  const oscillator = context.createOscillator();
+  oscillator.type = "sine";
+  oscillator.frequency.setValueAtTime(660, context.currentTime);
+  oscillator.frequency.exponentialRampToValueAtTime(990, context.currentTime + 0.12);
+  gain.gain.setValueAtTime(0.0001, context.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.06, context.currentTime + 0.02);
+  gain.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.18);
+  oscillator.connect(gain);
+  gain.connect(context.destination);
+  oscillator.start();
+  oscillator.stop(context.currentTime + 0.2);
 }
 
 function SentencePracticePreview({
