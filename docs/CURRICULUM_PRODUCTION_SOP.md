@@ -2,6 +2,8 @@
 
 This app treats AI output as draft material. A lesson enters the shipping curriculum only after teacher review.
 
+For API key setup and AI generation commands, see `docs/AI_GENERATION_SETUP.md`.
+
 ## Lesson Pipeline
 
 1. Create a lesson request in `curriculum-workflow/lesson-requests/`.
