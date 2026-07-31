@@ -1635,6 +1635,33 @@ button.char-token {
 .picture-sentence-card .sentence-card {
   margin: 0;
   box-shadow: none;
+  padding: 12px 8px;
+}
+
+.picture-sentence-card .sentence-line {
+  flex-wrap: nowrap;
+  gap: 6px;
+  min-height: 76px;
+  overflow-x: auto;
+  padding: 8px 4px;
+  scrollbar-width: none;
+}
+
+.picture-sentence-card .sentence-line::-webkit-scrollbar {
+  display: none;
+}
+
+.picture-sentence-card .char-token {
+  flex: 0 0 auto;
+  min-width: 42px;
+}
+
+.picture-sentence-card .hanzi {
+  font-size: clamp(1.95rem, 7.8vw, 2.35rem);
+}
+
+.picture-sentence-card .zhuyin-mark {
+  font-size: clamp(0.56rem, 2.1vw, 0.68rem);
 }
 
 .round-title {
