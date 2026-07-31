@@ -4,19 +4,23 @@ This app treats AI output as draft material. A lesson enters the shipping curric
 
 For API key setup and AI generation commands, see `docs/AI_GENERATION_SETUP.md`.
 
+For the running lesson sequence, taught-character set, and sentence history, update `docs/CURRICULUM_LEDGER.md` before planning the next lesson.
+
 ## Lesson Pipeline
 
 1. Create a lesson request in `curriculum-workflow/lesson-requests/`.
-2. Run `npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L004-example.json`.
-3. Send the generated packet in `curriculum-workflow/generated/` to the AI sentence generator.
-4. Review the sentence candidates manually.
-5. For approved sentences, generate one image prompt and one image per sentence.
-6. Generate one reviewed single-character audio file for every new character.
-7. For approved sentences, generate one natural full-sentence audio file per sentence.
-8. Add character timing metadata for the sentence audio.
-9. Move only reviewed content into `src/curriculum/sample-lessons.json`.
-10. Run `npm run validate:curriculum`, `npm run build`, and `npm run lint`.
-11. Before selling or shipping a finished set, run `npm run validate:production`.
+2. Check `docs/CURRICULUM_LEDGER.md` for the learned character set and recent review pool.
+3. Run `npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L004-example.json`.
+4. Send the generated packet in `curriculum-workflow/generated/` to the AI sentence generator.
+5. Review the sentence candidates manually.
+6. For approved sentences, generate one image prompt and one image per sentence.
+7. Generate one reviewed single-character audio file for every new character.
+8. For approved sentences, generate one natural full-sentence audio file per sentence.
+9. Add character timing metadata for the sentence audio.
+10. Move only reviewed content into `src/curriculum/sample-lessons.json`.
+11. Update `docs/CURRICULUM_LEDGER.md`.
+12. Run `npm run validate:curriculum`, `npm run build`, and `npm run lint`.
+13. Before selling or shipping a finished set, run `npm run validate:production`.
 
 ## Asset Commands
 
