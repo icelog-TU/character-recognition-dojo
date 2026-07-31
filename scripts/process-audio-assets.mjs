@@ -1,13 +1,24 @@
 import { execFileSync, spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
 
 const inboxRoot = path.resolve("curriculum-workflow/audio-inbox");
 const outputRoot = path.resolve("public/assets/lessons");
 const reportPath = path.resolve("curriculum-workflow/audio-duration-report.json");
 const audioExtensions = new Set([".wav", ".mp3", ".m4a", ".aac", ".flac", ".ogg", ".webm"]);
-const ffmpegCommand = process.env.FFMPEG_PATH || "ffmpeg";
-const ffprobeCommand = process.env.FFPROBE_PATH || "ffprobe";
+function packageToolPath(packageName) {
+  try {
+    return require(packageName).path;
+  } catch {
+    return null;
+  }
+}
+
+const ffmpegCommand = process.env.FFMPEG_PATH || packageToolPath("@ffmpeg-installer/ffmpeg") || "ffmpeg";
+const ffprobeCommand = process.env.FFPROBE_PATH || packageToolPath("@ffprobe-installer/ffprobe") || "ffprobe";
 
 function parseArgs(argv) {
   const args = {};

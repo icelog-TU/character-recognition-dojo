@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 7:
+Characters taught after Lesson 8:
 
-`一 二 三 人 個 大 的 小 手 我`
+`一 二 三 人 個 大 的 小 手 我 有`
 
 Recent review pool for the next lesson:
 
-`大 的 小 手 我 人 個`
+`的 小 手 我 有 大 人 個`
 
 ## Lesson Ledger
 
@@ -31,10 +31,11 @@ Recent review pool for the next lesson:
 | L005 | 小 | 一、二、三、人、個、大、的、小 | 大大的人 / 小小的人 / 一個大大的人 / 三個小小的人 / 大大小小的人 | 一、三、人、個、大、的 | Contrasts `大` and `小`; keeps all sentence characters inside the learned set. |
 | L006 | 手 | 一、二、三、人、個、大、的、小、手 | 一個人的手 / 三個人的手 / 大大的手 / 小小的手 / 大大小小的手 | 一、三、個、人、的、大、小 | Introduces a concrete body-part noun and reviews size contrast. |
 | L007 | 我 | 一、二、三、人、個、大、的、小、手、我 | 我一個人 / 我的小手 / 我的手小小的 / 大人的手大大的 / 三個人的大手小手 | 一、三、個、人、的、大、小、手 | Establishes the fixed first-person girl character for `我`. |
+| L008 | 有 | 一、二、三、人、個、大、的、小、手、我、有 | 有一個人 / 我有小小的手 / 大人有大大的手 / 三個人有大手小手 / 有一大二小的手 | 一、二、三、人、個、大、的、小、手、我 | Introduces `有` to unlock simple existential and possession patterns while continuing concrete hand-focused picture sentences. |
 
 ## Planned Lessons
 
-No post-L007 lesson is selected yet.
+No post-L008 lesson is selected yet.
 
 ## Planning Rule For New Lessons
 
@@ -55,7 +56,7 @@ Use this shape when asking AI to draft sentence candidates:
 We are building a Taiwan zhuyin character recognition app for young children.
 
 Already taught characters:
-一 二 三 人 個 大 的 小 手 我
+一 二 三 人 個 大 的 小 手 我 有
 
 New character for this lesson:
 {NEW_CHARACTER}
@@ -66,6 +67,6 @@ Rules:
 - No Hanyu pinyin.
 - No punctuation in spokenText.
 - Prefer concrete, imageable sentences.
-- Reuse characters from the recent review pool when natural: 大 的 小 手 我 人 個.
+- Reuse characters from the recent review pool when natural: 的 小 手 我 有 大 人 個.
 - Keep the sentence set short if the character set cannot support natural variety.
 ```

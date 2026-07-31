@@ -1,11 +1,22 @@
 import { execFileSync, spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
 
 const curriculumPath = path.resolve("src/curriculum/sample-lessons.json");
 const publicRoot = path.resolve("public");
-const ffmpegCommand = process.env.FFMPEG_PATH || "ffmpeg";
-const ffprobeCommand = process.env.FFPROBE_PATH || "ffprobe";
+function packageToolPath(packageName) {
+  try {
+    return require(packageName).path;
+  } catch {
+    return null;
+  }
+}
+
+const ffmpegCommand = process.env.FFMPEG_PATH || packageToolPath("@ffmpeg-installer/ffmpeg") || "ffmpeg";
+const ffprobeCommand = process.env.FFPROBE_PATH || packageToolPath("@ffprobe-installer/ffprobe") || "ffprobe";
 
 function parseArgs(argv) {
   const args = {};
