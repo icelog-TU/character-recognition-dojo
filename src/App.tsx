@@ -37,7 +37,7 @@ const RAINBOW_GROUPS = [
 ];
 
 const GUIDE_TEXT = {
-  homeWelcome: "嗨！按下面的大按鈕，我陪你一起認字。",
+  homeWelcome: "你好呀，請按下面的大按鈕。",
   homeNext: "先聽字，再找字，最後看圖片和句子。",
   lessonWelcome: "我們一步一步來。先按大大的字，聽聽它怎麼念。",
   blockHear: "每一張字卡都按一次。聽到聲音，就做得很好。",
