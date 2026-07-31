@@ -866,11 +866,22 @@ button.char-token {
   background: #fff;
   color: var(--ink);
   cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
 .find-token.found {
   background: var(--green-soft);
   border-color: var(--primary);
+}
+
+.find-token.collecting {
+  position: relative;
+  z-index: 2;
+  background: #ecfaf3;
+  border-color: var(--primary);
+  color: var(--primary-strong);
+  box-shadow: 0 0 0 6px rgba(34, 132, 123, 0.14), 0 14px 24px rgba(29, 120, 116, 0.22);
+  transform: translateY(-8px) scale(1.14);
 }
 
 .find-token:disabled {

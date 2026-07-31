@@ -761,6 +761,7 @@ function FindManyChallenge({
 }) {
   const items = useMemo(() => makeFindChallenge(lesson), [lesson]);
   const [foundIds, setFoundIds] = useState<Set<string>>(new Set());
+  const [collectingId, setCollectingId] = useState<string | null>(null);
   const targets = lessonChars(lesson);
   const targetTotal = items.filter((item) => targets.includes(item.char)).length;
   const foundTotal = [...foundIds].filter((id) => {
@@ -770,16 +771,22 @@ function FindManyChallenge({
   const foundItems = items.filter((item) => foundIds.has(item.id) && targets.includes(item.char));
   const visibleItems = items.filter((item) => !foundIds.has(item.id));
 
-  function handleTap(item: FindItem) {
-    if (disabled || !targets.includes(item.char) || foundIds.has(item.id)) return;
-    playLessonChar(lesson, item.char);
-    window.setTimeout(playFoundChime, 180);
+  async function handleTap(item: FindItem) {
+    if (disabled || collectingId || !targets.includes(item.char) || foundIds.has(item.id)) return;
+    setCollectingId(item.id);
+    playFoundChime();
+    await Promise.all([playLessonChar(lesson, item.char), waitMs(520)]);
     setFoundIds((prev) => {
       const next = new Set(prev);
       next.add(item.id);
-      if (next.size >= targetTotal) onComplete();
+      const completedTotal = [...next].filter((id) => {
+        const candidate = items.find((item) => item.id === id);
+        return candidate ? targets.includes(candidate.char) : false;
+      }).length;
+      if (completedTotal >= targetTotal) onComplete();
       return next;
     });
+    setCollectingId(null);
   }
 
   return (
@@ -791,8 +798,8 @@ function FindManyChallenge({
         {visibleItems.map((item) => (
           <button
             key={item.id}
-            className="find-token"
-            disabled={disabled}
+            className={`find-token${collectingId === item.id ? " collecting" : ""}`}
+            disabled={disabled || Boolean(collectingId)}
             onClick={() => handleTap(item)}
           >
             <span className="hanzi">{item.char}</span>
@@ -912,20 +919,20 @@ function PictureSentencePreview({
 
 function playSentence(sentence: LessonSentence, options?: AudioPlayOptions) {
   if (sentence.audio?.src) {
-    playAudioSrc(sentence.audio.src, options);
-    return;
+    return playAudioSrc(sentence.audio.src, options);
   }
   playSpokenText(sentence.spokenText);
   options?.onEnded?.();
+  return Promise.resolve();
 }
 
 function playLessonChar(lesson: Lesson, char: string) {
   const src = lesson.charAudio?.[char];
   if (src) {
-    playAudioSrc(src);
-    return;
+    return playAudioSrc(src);
   }
   playSpokenText(char);
+  return Promise.resolve();
 }
 
 function getCachedAudio(src: string) {
@@ -962,32 +969,38 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
   activeAudio = audio;
   audio.pause();
   audio.currentTime = 0;
-  audio.onended = () => {
-    stopAudioFrame();
-    if (activeAudio === audio) activeAudio = null;
-    options.onEnded?.();
-  };
-  audio.onerror = () => {
-    stopAudioFrame();
-    if (activeAudio === audio) activeAudio = null;
-    options.onError?.();
-  };
-
-  const tick = () => {
-    options.onTime?.(audio.currentTime * 1000);
-    if (!audio.paused && !audio.ended) activeAudioFrame = window.requestAnimationFrame(tick);
-  };
-
-  options.onTime?.(0);
-  void audio
-    .play()
-    .then(() => {
-      tick();
-    })
-    .catch(() => {
+  return new Promise<void>((resolve) => {
+    let settled = false;
+    const finish = (kind: "ended" | "error") => {
+      if (settled) return;
+      settled = true;
       stopAudioFrame();
-      options.onError?.();
-    });
+      if (activeAudio === audio) activeAudio = null;
+      if (kind === "ended") options.onEnded?.();
+      if (kind === "error") options.onError?.();
+      resolve();
+    };
+
+    audio.onended = () => finish("ended");
+    audio.onerror = () => finish("error");
+
+    const tick = () => {
+      options.onTime?.(audio.currentTime * 1000);
+      if (!audio.paused && !audio.ended) activeAudioFrame = window.requestAnimationFrame(tick);
+    };
+
+    options.onTime?.(0);
+    void audio
+      .play()
+      .then(() => {
+        tick();
+      })
+      .catch(() => finish("error"));
+  });
+}
+
+function waitMs(ms: number) {
+  return new Promise<void>((resolve) => window.setTimeout(resolve, ms));
 }
 
 function activeTimingIndex(sentence: LessonSentence, elapsedMs: number) {
