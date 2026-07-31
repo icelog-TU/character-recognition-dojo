@@ -1,8 +1,8 @@
-import { getEnv, loadLocalEnv } from "./lib/env.mjs";
+import { getEnv, getSecretEnv, loadLocalEnv } from "./lib/env.mjs";
 
 loadLocalEnv();
 
-const apiKey = process.env.OPENAI_API_KEY;
+const apiKey = getSecretEnv("OPENAI_API_KEY");
 const textModel = getEnv("OPENAI_TEXT_MODEL", "gpt-5-mini");
 const ttsModel = getEnv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts");
 const ttsVoice = getEnv("OPENAI_TTS_VOICE", "coral");

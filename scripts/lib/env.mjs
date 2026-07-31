@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 
 const envFiles = [".env.local", ".env"];
 
@@ -34,9 +35,32 @@ export function loadLocalEnv() {
   }
 }
 
-export function requireOpenAIKey() {
+function readWindowsUserEnv(name) {
+  if (process.platform !== "win32") return "";
+  try {
+    const output = execFileSync("reg", ["query", "HKCU\\Environment", "/v", name], {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+    const line = output
+      .split(/\r?\n/)
+      .map((item) => item.trim())
+      .find((item) => item.startsWith(name));
+    if (!line) return "";
+    const parts = line.split(/\s{2,}/);
+    return parts.length >= 3 ? parts.slice(2).join("  ").trim() : "";
+  } catch {
+    return "";
+  }
+}
+
+export function getSecretEnv(name) {
   loadLocalEnv();
-  const apiKey = process.env.OPENAI_API_KEY;
+  return process.env[name] || readWindowsUserEnv(name);
+}
+
+export function requireOpenAIKey() {
+  const apiKey = getSecretEnv("OPENAI_API_KEY");
   if (!apiKey || apiKey === "sk-your-key-here") {
     console.error("OPENAI_API_KEY is not set.");
     console.error("Create an API key later, then set it as a User environment variable or in .env.local.");

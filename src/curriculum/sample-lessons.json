@@ -16,6 +16,12 @@
         "三": "ㄙㄢ",
         "人": "ㄖㄣˊ"
       },
+      "charAudio": {
+        "一": "/assets/lessons/L001/audio/char-一.m4a",
+        "二": "/assets/lessons/L001/audio/char-二.m4a",
+        "三": "/assets/lessons/L001/audio/char-三.m4a",
+        "人": "/assets/lessons/L001/audio/char-人.m4a"
+      },
       "title": "一二三人",
       "requiredRounds": 4,
       "originHint": {
@@ -31,7 +37,17 @@
           "imagePrompt": "A warm simple children's picture book illustration of one person standing alone, friendly expression, clean light background, soft colors, no text, no letters, no numbers.",
           "imageSrc": "/assets/lessons/L001/images/L001-S01.webp",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L001/audio/L001-S01.m4a",
+            "durationMs": 2616,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 2616
+              }
+            ]
+          }
         },
         {
           "id": "L001-S02",
@@ -41,7 +57,22 @@
           "imagePrompt": "A warm simple children's picture book illustration of one person clearly standing in the scene, clean light background, soft colors, no text, no letters, no numbers.",
           "imageSrc": "/assets/lessons/L001/images/L001-S02.webp",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L001/audio/L001-S02.m4a",
+            "durationMs": 2256,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 1128
+              },
+              {
+                "charIndex": 1,
+                "startMs": 1128,
+                "endMs": 2256
+              }
+            ]
+          }
         },
         {
           "id": "L001-S03",
@@ -51,7 +82,22 @@
           "imagePrompt": "A warm simple children's picture book illustration of two people standing together, clean light background, soft colors, no text, no letters, no numbers.",
           "imageSrc": "/assets/lessons/L001/images/L001-S03.webp",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L001/audio/L001-S03.m4a",
+            "durationMs": 1824,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 912
+              },
+              {
+                "charIndex": 1,
+                "startMs": 912,
+                "endMs": 1824
+              }
+            ]
+          }
         },
         {
           "id": "L001-S04",
@@ -61,7 +107,22 @@
           "imagePrompt": "A warm simple children's picture book illustration of three people standing together, clean light background, soft colors, no text, no letters, no numbers.",
           "imageSrc": "/assets/lessons/L001/images/L001-S04.webp",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L001/audio/L001-S04.m4a",
+            "durationMs": 1776,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 888
+              },
+              {
+                "charIndex": 1,
+                "startMs": 888,
+                "endMs": 1776
+              }
+            ]
+          }
         }
       ]
     },
