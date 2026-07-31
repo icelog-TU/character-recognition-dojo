@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 5:
+Characters taught after Lesson 7:
 
-`一 二 三 人 個 大 的 小`
+`一 二 三 人 個 大 的 小 手 我`
 
 Recent review pool for the next lesson:
 
-`人 個 大 的 小 一 二 三`
+`大 的 小 手 我 人 個`
 
 ## Lesson Ledger
 
@@ -29,15 +29,12 @@ Recent review pool for the next lesson:
 | L003 | 大 | 一、二、三、人、個、大 | 大人 / 二人 / 三個人 / 一個大人 | 一、二、三、人、個 | Uses `大人` as a meaningful phrase and repeats counting people. |
 | L004 | 的 | 一、二、三、人、個、大、的 | 一人 / 二人 / 大大的人 / 三個大大的人 | 一、二、三、人、個、大 | First use of possessive/modifier marker `的`; keep syntax concrete and visual. |
 | L005 | 小 | 一、二、三、人、個、大、的、小 | 大大的人 / 小小的人 / 一個大大的人 / 三個小小的人 / 大大小小的人 | 一、三、人、個、大、的 | Contrasts `大` and `小`; keeps all sentence characters inside the learned set. |
+| L006 | 手 | 一、二、三、人、個、大、的、小、手 | 一個人的手 / 三個人的手 / 大大的手 / 小小的手 / 大大小小的手 | 一、三、個、人、的、大、小 | Introduces a concrete body-part noun and reviews size contrast. |
+| L007 | 我 | 一、二、三、人、個、大、的、小、手、我 | 我一個人 / 我的小手 / 我的手小小的 / 大人的手大大的 / 三個人的大手小手 | 一、三、個、人、的、大、小、手 | Establishes the fixed first-person girl character for `我`. |
 
 ## Planned Lessons
 
-These lessons are planned but not yet production-built. They still need reviewed images, AI audio, and `charTimings`.
-
-| Lesson | New Character(s) | Planned Sentences | Notes |
-|---|---|---|---|
-| L006 | 手 | 一個人的手 / 三個人的手 / 大大的手 / 小小的手 / 大大小小的手 | Keeps review focused on `一、三、個、人、的、大、小` while introducing a concrete body-part noun. |
-| L007 | 我 | 我一個人 / 我的小手 / 我的手小小的 / 大人的手大大的 / 三個人的大手小手 | `我` must establish the fixed first-person girl character for all future images involving `我`. |
+No post-L007 lesson is selected yet.
 
 ## Planning Rule For New Lessons
 
@@ -58,7 +55,7 @@ Use this shape when asking AI to draft sentence candidates:
 We are building a Taiwan zhuyin character recognition app for young children.
 
 Already taught characters:
-一 二 三 人 個 大 的 小
+一 二 三 人 個 大 的 小 手 我
 
 New character for this lesson:
 {NEW_CHARACTER}
@@ -69,6 +66,6 @@ Rules:
 - No Hanyu pinyin.
 - No punctuation in spokenText.
 - Prefer concrete, imageable sentences.
-- Reuse characters from the recent review pool when natural: 人 個 大 的 小 一 二 三.
+- Reuse characters from the recent review pool when natural: 大 的 小 手 我 人 個.
 - Keep the sentence set short if the character set cannot support natural variety.
 ```

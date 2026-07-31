@@ -20,11 +20,9 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L005
-- Planned next lessons:
-  - L006: `手`
-  - L007: `我`
-- Sentence games planned start: around L011
+- Current reviewed lessons: L001-L007
+- Next lesson after L007 is not yet chosen.
+- Sentence games planned start: around L011 as Stage 4
 - L001-L010 should stay with the simpler three-block flow: listen, find, picture sentence.
 
 ## App 結構
@@ -97,7 +95,7 @@ For L001-L010, use picture-supported sentence practice:
     - red button: next lesson
     - white button: back to course entrance
 
-From around L011, Stage 3 can start using the old app's five sentence games:
+From around L011, add Stage 4 after the child completes picture-supported sentence listening. Do not replace Stage 3. Stage 4 can start using the old app's five sentence games:
 
 - 找字
 - 教動物
@@ -179,11 +177,11 @@ Rule:
 - She is the app's recurring child self-character.
 - Future image prompts for `我` must explicitly mention this continuity.
 
-Current planned description:
+Approved visual description:
 
-> A friendly young girl, preschool to early elementary age, warm expression, child-friendly picture-book style. She is the fixed visual representation of `我`.
+> A friendly young girl, preschool to early elementary age, shoulder-length dark brown hair, a small pink hair clip, bright curious eyes, yellow top, coral-red pinafore dress, red shoes, warm expression, child-friendly picture-book style. She is the fixed visual representation of `我`.
 
-When L007 assets are generated, update this section with more concrete appearance details based on the approved image.
+Use L007 images as the current visual reference for this character.
 
 ## Curriculum Rules
 
@@ -211,28 +209,24 @@ Reviewed:
 - L003: `大`
 - L004: `的`
 - L005: `小`
+- L006: `手`
+- L007: `我`
 
-Planned L006:
+L006 sentences:
 
-- New character: `手`
-- Sentences:
-  - `一個人的手`
-  - `三個人的手`
-  - `大大的手`
-  - `小小的手`
-  - `大大小小的手`
+- `一個人的手`
+- `三個人的手`
+- `大大的手`
+- `小小的手`
+- `大大小小的手`
 
-Planned L007:
+L007 sentences:
 
-- New character: `我`
-- Sentences:
-  - `我一個人`
-  - `我的小手`
-  - `我的手小小的`
-  - `大人的手大大的`
-  - `三個人的大手小手`
-
-Note for L007: establish and preserve the fixed `我` girl character.
+- `我一個人`
+- `我的小手`
+- `我的手小小的`
+- `大人的手大大的`
+- `三個人的大手小手`
 
 ## File Map
 
@@ -265,6 +259,8 @@ npm run build
 npm run validate:production
 ```
 
+When producing assets, do not run JSON-writing commands in parallel. In particular, run `assets:images` and `assets:align` sequentially per lesson because they rewrite `src/curriculum/sample-lessons.json`.
+
 After pushing, verify GitHub Pages deployment and check the online URL:
 
 `https://icelog-tu.github.io/character-recognition-dojo/`
@@ -288,8 +284,8 @@ Do not use Hanyu pinyin.
 Sentence text is horizontal, with zhuyin vertically on the right of each Han character.
 Curriculum sentence audio must use AI audio files with charTimings.
 Guide narration may use TTS.
-L001-L005 are reviewed and built.
-Next planned lessons are L006 手 and L007 我.
+L001-L007 are reviewed and built.
+The next lesson after L007 is not yet chosen.
 L007 introduces a fixed young girl character for 我.
-Sentence games should start around L011, not before.
+Sentence games should start around L011 as Stage 4, not before, and should not replace picture-supported sentence listening.
 ```

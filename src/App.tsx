@@ -15,7 +15,7 @@ type AudioPlayOptions = {
   onEnded?: () => void;
   onError?: () => void;
 };
-type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "advance2" | "advance3" | null;
+type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "stage4" | "advance2" | "advance3" | "advance4" | null;
 type LessonDestination = "home" | "next";
 type LessonReward = { coins: number; stars: number };
 type PlaybackStatus = { playing: boolean; paused: boolean };
@@ -54,6 +54,7 @@ const GUIDE_TEXT = {
   toStageTwo: "第一階段完成了。請按下面紅色的大按鈕，進入第二階段的練習。",
   findComplete: "好棒啊，你都找到了。",
   toStageThree: "請按下面紅色的大按鈕，進入第三階段的練習。",
+  toStageFour: "句子都聽完了。請按下面紅色的大按鈕，進入第四階段的練習。",
   stageAdvance: "太棒了，我們繼續練功。",
   blockFind: "找找看這一課學的字在哪裡。看到這一課學的字，就點它。",
   findMiss: "這個不是這一課學的字喔，再找找看。",
@@ -811,6 +812,7 @@ function LessonPanel({
   const [spotlightChar, setSpotlightChar] = useState<string | null>(null);
   const [findUnlocked, setFindUnlocked] = useState(false);
   const [practiceDoneCount, setPracticeDoneCount] = useState(0);
+  const [gameDoneCount, setGameDoneCount] = useState(0);
   const [activeStage, setActiveStage] = useState(1);
   const [advancingStage, setAdvancingStage] = useState<number | null>(null);
   const [speakingTarget, setSpeakingTarget] = useState<SpeechTarget>(null);
@@ -821,8 +823,11 @@ function LessonPanel({
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
   const usesSentenceGames = lesson.order >= 11;
-  const requiredPracticeRounds = usesSentenceGames ? Math.min(lesson.requiredRounds, lesson.sentences.length) : 1;
-  const lessonReady = soundUnlocked && findUnlocked && practiceDoneCount >= requiredPracticeRounds;
+  const requiredGameRounds = usesSentenceGames ? Math.min(lesson.requiredRounds, lesson.sentences.length) : 0;
+  const pictureDone = practiceDoneCount >= 1;
+  const gamesDone = !usesSentenceGames || gameDoneCount >= requiredGameRounds;
+  const lessonReady = soundUnlocked && findUnlocked && pictureDone && gamesDone;
+  const progressSteps = [soundUnlocked, findUnlocked, pictureDone, ...(usesSentenceGames ? [gamesDone] : [])];
   const lessonReward = { coins: 30, stars: 12 };
   const hasNextLesson = lessons.some((candidate) => candidate.order === lesson.order + 1);
   const lessonIntro = lessonIntroText(lesson);
@@ -852,17 +857,23 @@ function LessonPanel({
   }, [findUnlocked, activeStage]);
 
   useEffect(() => {
-    if (activeStage === 3 && practiceDoneCount < requiredPracticeRounds) {
+    if (activeStage === 3 && !pictureDone) {
       void speakForTarget("stage3", GUIDE_TEXT.blockPicture);
     }
-  }, [activeStage, practiceDoneCount, requiredPracticeRounds]);
+  }, [activeStage, pictureDone]);
+
+  useEffect(() => {
+    if (pictureDone && usesSentenceGames && activeStage === 3) {
+      void speakForTarget("advance4", GUIDE_TEXT.toStageFour);
+    }
+  }, [pictureDone, usesSentenceGames, activeStage]);
 
   useEffect(() => {
     if (lessonReady && rewardState === "waiting") {
       setRewardState("ready");
-      void speakForTarget("stage3", GUIDE_TEXT.rewardReady);
+      void speakForTarget(usesSentenceGames ? "stage4" : "stage3", GUIDE_TEXT.rewardReady);
     }
-  }, [lessonReady, rewardState]);
+  }, [lessonReady, rewardState, usesSentenceGames]);
 
   async function speakForTarget(target: SpeechTarget, text: string) {
     setSpeakingTarget(target);
@@ -914,7 +925,7 @@ function LessonPanel({
     setRewardState("claiming");
     playRewardChime();
     onReward(lessonReward);
-    void speakForTarget("stage3", GUIDE_TEXT.rewardWon);
+    void speakForTarget(usesSentenceGames ? "stage4" : "stage3", GUIDE_TEXT.rewardWon);
     await waitMs(3600);
     setRewardState("claimed");
   }
@@ -1033,36 +1044,62 @@ function LessonPanel({
 
       <LessonBlock
         index={3}
-        title={usesSentenceGames ? "句子遊戲" : "看圖聽句子"}
-        done={practiceDoneCount >= requiredPracticeRounds}
+        title="看圖聽句子"
+        done={pictureDone}
         locked={locked || activeStage < 3}
         active={activeBlock(3)}
       >
         {activeStage < 3 ? (
           <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
-        ) : usesSentenceGames ? (
-          <SentencePracticePreview
-            key={`practice-${lesson.id}-${resetVersion}`}
-            lesson={lesson}
-            zhuyinMap={zhuyinMap}
-            disabled={locked || activeStage < 3}
-            doneCount={practiceDoneCount}
-            requiredCount={requiredPracticeRounds}
-            onRoundDone={() => setPracticeDoneCount((count) => Math.min(count + 1, requiredPracticeRounds))}
-          />
         ) : (
           <PictureSentencePreview
             key={`picture-${lesson.id}-${resetVersion}`}
             lesson={lesson}
             zhuyinMap={zhuyinMap}
             disabled={locked || activeStage < 3}
-            done={practiceDoneCount >= requiredPracticeRounds}
+            done={pictureDone}
             onSpeakStart={setSpeakingTarget}
             onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
             onDone={() => setPracticeDoneCount(1)}
           />
         )}
       </LessonBlock>
+
+      {pictureDone && usesSentenceGames && activeStage === 3 && (
+        <StageAdvancePrompt
+          text={GUIDE_TEXT.toStageFour}
+          buttonText="進入第四階段"
+          busy={advancingStage === 4}
+          active={activeAdvance(4)}
+          onSpeakStart={setSpeakingTarget}
+          onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
+          onAdvance={() => handleAdvanceStage(4)}
+        />
+      )}
+
+      {usesSentenceGames && (
+        <LessonBlock
+          index={4}
+          title="句子遊戲"
+          done={gamesDone}
+          locked={locked || activeStage < 4}
+          active={activeBlock(4)}
+        >
+          {activeStage < 4 ? (
+            <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
+          ) : (
+            <SentencePracticePreview
+              key={`practice-${lesson.id}-${resetVersion}`}
+              lesson={lesson}
+              zhuyinMap={zhuyinMap}
+              disabled={locked || activeStage < 4}
+              doneCount={gameDoneCount}
+              requiredCount={requiredGameRounds}
+              onRoundDone={() => setGameDoneCount((count) => Math.min(count + 1, requiredGameRounds))}
+            />
+          )}
+        </LessonBlock>
+      )}
 
       {lessonReady && (
         <RewardPanel
@@ -1082,12 +1119,12 @@ function LessonPanel({
           <div
             className="progress-fill"
             style={{
-              width: `${([soundUnlocked, findUnlocked, practiceDoneCount >= requiredPracticeRounds].filter(Boolean).length / 3) * 100}%`,
+              width: `${(progressSteps.filter(Boolean).length / progressSteps.length) * 100}%`,
             }}
           />
         </div>
         <span className="pill">
-          {[soundUnlocked, findUnlocked, practiceDoneCount >= requiredPracticeRounds].filter(Boolean).length} / 3
+          {progressSteps.filter(Boolean).length} / {progressSteps.length}
         </span>
       </div>
 
@@ -1099,6 +1136,7 @@ function LessonPanel({
             setSpotlightChar(null);
             setFindUnlocked(false);
             setPracticeDoneCount(0);
+            setGameDoneCount(0);
             setActiveStage(1);
             setAdvancingStage(null);
             setSpeakingTarget(null);

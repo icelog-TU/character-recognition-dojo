@@ -24,6 +24,8 @@ For the running lesson sequence, taught-character set, and sentence history, upd
 
 ## Asset Commands
 
+Important: asset commands that update `src/curriculum/sample-lessons.json` must run one at a time. Do not run `assets:images` or `assets:align` for different lessons in parallel, because each command reads and rewrites the same curriculum JSON file.
+
 Optimize reviewed lesson images:
 
 ```bash

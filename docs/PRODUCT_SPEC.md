@@ -9,9 +9,10 @@
 1. A child opens the next locked lesson.
 2. Block 1 introduces the lesson's new character or seed characters. Each character is shown alone, large, with zhuyin. Tapping it plays the character sound; the block clears when all new characters have been heard.
 3. Block 2 asks the child to find the lesson's new character(s) among several character tiles. Correct taps light up and play the character sound.
-4. Block 3 uses reviewed lesson sentences. Early seed lessons show picture-supported sentence previews; later lessons run sentence games.
-5. Completing all three blocks unlocks the next lesson.
-6. Completed lessons enter manual and random review.
+4. Block 3 always uses reviewed lesson sentences with picture-supported listening and character highlighting.
+5. From around lesson 11, Block 4 adds sentence games after picture-supported listening.
+6. Completing all required blocks unlocks the next lesson.
+7. Completed lessons enter manual and random review.
 
 ## Hard UX Requirements
 
@@ -62,7 +63,7 @@ Each lesson has:
 - `requiredRounds`: how many sentence game rounds are needed to complete block 3.
 - optional `originHint`: pictograph or etymology aid, displayed only when available and safely licensed.
 
-For the first ten lessons, there may not be enough characters to support real sentence games. Those lessons should use picture-supported sentence preview first. Sentence games are currently planned to start around lesson 11, after the child has enough learned characters for meaningful review.
+For the first ten lessons, there may not be enough characters to support real sentence games. Those lessons should use picture-supported sentence preview first. Sentence games are currently planned to start around lesson 11 as a fourth stage after picture-supported listening, not as a replacement for picture-supported listening.
 
 The first lesson can be a seed lesson. Current seed draft:
 
