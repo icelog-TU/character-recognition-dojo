@@ -261,7 +261,7 @@ function LessonJumpButton({
       aria-label={`第 ${lesson.order} 課 ${lessonLabel(lesson)}`}
     >
       <span>{lesson.order}</span>
-      <strong>{lessonLabel(lesson)}</strong>
+      <LessonCharBadge lesson={lesson} />
     </button>
   );
 }
@@ -385,12 +385,23 @@ function CatalogLessonGrid({
             onClick={() => onSelect(lesson.order)}
           >
             <span>{lesson.order}</span>
-            <strong>{lessonLabel(lesson)}</strong>
+            <LessonCharBadge lesson={lesson} />
             <small>{locked ? "鎖" : completedOrders.has(lesson.order) ? "破" : "練"}</small>
           </button>
         );
       })}
     </div>
+  );
+}
+
+function LessonCharBadge({ lesson }: { lesson: Lesson }) {
+  const chars = lessonChars(lesson);
+  return (
+    <strong className={`lesson-char-badge${chars.length > 1 ? " multi" : ""}`} aria-label={lessonLabel(lesson)}>
+      {chars.map((char) => (
+        <span key={char}>{char}</span>
+      ))}
+    </strong>
   );
 }
 

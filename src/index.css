@@ -196,6 +196,7 @@ button {
 .app-shell {
   min-height: 100vh;
   padding: 24px;
+  overflow-x: hidden;
 }
 
 .practice-layout {
@@ -204,6 +205,7 @@ button {
   gap: 20px;
   width: min(1040px, 100%);
   margin: 0 auto;
+  min-width: 0;
 }
 
 .side-panel,
@@ -215,6 +217,7 @@ button {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .side-panel {
@@ -296,6 +299,7 @@ button {
 }
 
 .lesson-chip {
+  min-width: 0;
   min-height: 64px;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -309,15 +313,10 @@ button {
   padding: 7px 4px;
 }
 
-.lesson-chip span {
+.lesson-chip > span {
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 800;
-}
-
-.lesson-chip strong {
-  font-size: 1.55rem;
-  line-height: 1;
 }
 
 .lesson-chip.active {
@@ -393,6 +392,7 @@ button {
 }
 
 .catalog-char {
+  min-width: 0;
   min-height: 66px;
   display: grid;
   align-content: center;
@@ -416,22 +416,42 @@ button {
   background: var(--green-soft);
 }
 
-.catalog-char span,
-.catalog-char small {
+.catalog-char > span,
+.catalog-char > small {
   color: var(--muted);
   font-size: 0.68rem;
   font-weight: 800;
-}
-
-.catalog-char strong {
-  font-size: 1.45rem;
-  line-height: 1;
 }
 
 .empty-catalog {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.lesson-char-badge {
+  display: inline-grid;
+  grid-auto-flow: column;
+  place-items: center;
+  gap: 1px;
+  font-size: 1.55rem;
+  line-height: 1;
+  font-weight: 850;
+}
+
+.lesson-char-badge.multi {
+  grid-template-columns: repeat(2, 1em);
+  grid-auto-flow: row;
+  font-size: 1.32rem;
+  line-height: 0.95;
+}
+
+.catalog-char .lesson-char-badge {
+  font-size: 1.45rem;
+}
+
+.catalog-char .lesson-char-badge.multi {
+  font-size: 1.12rem;
 }
 
 .record-grid {
@@ -502,21 +522,25 @@ button {
 }
 
 .target-card {
+  min-width: 0;
   width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  aspect-ratio: 1 / 0.82;
   min-height: 180px;
   border-radius: 8px;
   background: #fff;
   border: 2px solid var(--line);
+  overflow: visible;
 }
 
 .target-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
   gap: 10px;
+  min-width: 0;
 }
 
 .target-button {
@@ -726,6 +750,7 @@ button.char-token {
 }
 
 .find-token {
+  min-width: 0;
   min-height: 82px;
   display: inline-flex;
   align-items: center;
@@ -821,11 +846,16 @@ button.char-token {
   }
 
   .target-card {
-    min-height: 160px;
+    min-height: 132px;
+    aspect-ratio: 1 / 0.86;
+  }
+
+  .target-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .target-char {
-    font-size: 5rem;
+    font-size: 4.55rem;
   }
 
   .find-grid {
@@ -842,5 +872,42 @@ button.char-token {
 
   .record-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .app-shell {
+    padding: 8px;
+  }
+
+  .lesson-panel,
+  .page-panel {
+    padding: 14px;
+  }
+
+  .lesson-block {
+    padding: 12px;
+  }
+
+  .target-card {
+    min-height: 112px;
+    gap: 5px;
+  }
+
+  .target-char {
+    font-size: 3.65rem;
+  }
+
+  .zhuyin-large {
+    font-size: 0.9rem;
+  }
+
+  .lesson-title {
+    font-size: 1.55rem;
+  }
+
+  .lesson-copy,
+  .block-note {
+    font-size: 0.95rem;
   }
 }
