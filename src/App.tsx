@@ -17,16 +17,16 @@ type AudioPlayOptions = {
 };
 type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "stage4" | "advance2" | "advance3" | "advance4" | null;
 type LessonDestination = "home" | "next";
-type LessonReward = { coins: number; stars: number; tickets: number };
+type LessonReward = { coins: number; stars: number };
 type PlaybackStatus = { playing: boolean; paused: boolean };
 type StoredProgress = {
   version: 1;
   coins: number;
   stars: number;
-  gachaTickets: number;
   selectedOrder: number;
   completedOrders: number[];
   ownedCharacters: Record<string, number>;
+  characterHearts: Record<string, number>;
 };
 type RealmId = "land" | "sea" | "sky" | "space";
 type FamilyRoleId = "grandpa" | "grandma" | "dad" | "mom" | "olderBrother" | "olderSister" | "youngerBrother" | "youngerSister" | "baby";
@@ -238,6 +238,21 @@ function sanitizeOwnedCharacters(value: unknown): Record<string, number> {
   }, {});
 }
 
+function sanitizeCharacterHearts(value: unknown): Record<string, number> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return Object.entries(value as Record<string, unknown>).reduce<Record<string, number>>((result, [id, count]) => {
+    const numericCount = Number(count);
+    if (COLLECTIBLE_BY_ID.has(id) && Number.isFinite(numericCount) && numericCount > 0) {
+      result[id] = Math.min(10, Math.floor(numericCount));
+    }
+    return result;
+  }, {});
+}
+
+function heartCount(characterHearts: Record<string, number>, characterId: string): number {
+  return Math.min(10, Math.max(0, Math.floor(characterHearts[characterId] ?? 0)));
+}
+
 function lessonLabel(lesson: Lesson): string {
   return lesson.newChars.join("");
 }
@@ -298,17 +313,14 @@ function loadStoredProgress(): StoredProgress | null {
     const completedOrders = Array.isArray(parsed.completedOrders)
       ? parsed.completedOrders.filter((order): order is number => Number.isInteger(order))
       : [];
-    const gachaTickets = Number.isFinite(parsed.gachaTickets)
-      ? Math.max(0, Math.floor(Number(parsed.gachaTickets)))
-      : completedOrders.length * 3;
     return {
       version: 1,
       coins: Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120,
       stars: Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36,
-      gachaTickets,
       selectedOrder: Number.isInteger(parsed.selectedOrder) ? Number(parsed.selectedOrder) : 1,
       completedOrders,
       ownedCharacters: sanitizeOwnedCharacters(parsed.ownedCharacters),
+      characterHearts: sanitizeCharacterHearts(parsed.characterHearts),
     };
   } catch {
     return null;
@@ -338,9 +350,11 @@ function App() {
   const [startingOrder, setStartingOrder] = useState<number | null>(null);
   const [coins, setCoins] = useState(initialProgress?.coins ?? 120);
   const [stars, setStars] = useState(initialProgress?.stars ?? 36);
-  const [gachaTickets, setGachaTickets] = useState(initialProgress?.gachaTickets ?? 0);
   const [ownedCharacters, setOwnedCharacters] = useState<Record<string, number>>(
     () => initialProgress?.ownedCharacters ?? {},
+  );
+  const [characterHearts, setCharacterHearts] = useState<Record<string, number>>(
+    () => initialProgress?.characterHearts ?? {},
   );
   const [lastGachaResult, setLastGachaResult] = useState<CollectibleCharacter | null>(null);
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
@@ -359,18 +373,17 @@ function App() {
       version: 1,
       coins,
       stars,
-      gachaTickets,
       selectedOrder,
       completedOrders: [...completedOrders],
       ownedCharacters,
+      characterHearts,
     });
-  }, [coins, stars, gachaTickets, selectedOrder, completedOrders, ownedCharacters]);
+  }, [coins, stars, selectedOrder, completedOrders, ownedCharacters, characterHearts]);
 
   function grantLessonReward(order: number, rewards: LessonReward) {
     if (completedOrders.has(order)) return;
     setCoins((value) => value + rewards.coins);
     setStars((value) => value + rewards.stars);
-    setGachaTickets((value) => value + rewards.tickets);
     setCompletedOrders((prev) => {
       const next = new Set(prev);
       next.add(order);
@@ -379,10 +392,10 @@ function App() {
   }
 
   function handleGachaDraw() {
-    if (gachaTickets <= 0) return;
+    if (coins < 10) return;
     const realmId = activeGachaRealm(ownedCharacters);
     const character = drawCharacter(realmId, ownedCharacters);
-    setGachaTickets((value) => Math.max(0, value - 1));
+    setCoins((value) => Math.max(0, value - 10));
     setOwnedCharacters((prev) => ({
       ...prev,
       [character.characterId]: ownedCount(prev, character.characterId) + 1,
@@ -390,6 +403,17 @@ function App() {
     setLastGachaResult(character);
     playRewardChime();
     void speakGuide(`你抽到了${character.name}${character.familyRoleLabel}。`);
+  }
+
+  function handleAddHeart(characterId: string) {
+    if (stars < 3 || !COLLECTIBLE_BY_ID.has(characterId)) return;
+    if (heartCount(characterHearts, characterId) >= 10) return;
+    setStars((value) => Math.max(0, value - 3));
+    setCharacterHearts((prev) => ({
+      ...prev,
+      [characterId]: heartCount(prev, characterId) + 1,
+    }));
+    playCelebrateChime();
   }
 
   function finishLesson(order: number, destination: LessonDestination) {
@@ -444,7 +468,6 @@ function App() {
       <AppHeader
         coins={coins}
         stars={stars}
-        tickets={gachaTickets}
         streakDays={streakDays}
         onMenu={() => setMenuOpen(true)}
       />
@@ -500,7 +523,6 @@ function App() {
           <RecordsPage
             coins={coins}
             stars={stars}
-            tickets={gachaTickets}
             streakDays={streakDays}
             completedCount={completedOrders.size}
             collectedCount={CREATURE_REALMS.reduce(
@@ -511,14 +533,19 @@ function App() {
         )}
         {page === "gacha" && (
           <GachaPage
-            tickets={gachaTickets}
+            coins={coins}
             ownedCharacters={ownedCharacters}
             lastResult={lastGachaResult}
             onDraw={handleGachaDraw}
           />
         )}
         {page === "collection" && (
-          <CollectionPage ownedCharacters={ownedCharacters} />
+          <CollectionPage
+            stars={stars}
+            ownedCharacters={ownedCharacters}
+            characterHearts={characterHearts}
+            onAddHeart={handleAddHeart}
+          />
         )}
         {page === "settings" && <PlaceholderPage icon="⚙️" title="設定" text="之後放音量、資料備份、家長設定。" />}
       </main>
@@ -601,19 +628,16 @@ function PracticeHome({
 function AppHeader({
   coins,
   stars,
-  tickets,
   streakDays,
   onMenu,
 }: {
   coins: number;
   stars: number;
-  tickets: number;
   streakDays: number;
   onMenu: () => void;
 }) {
   const coinStat = useAnimatedStat(coins);
   const starStat = useAnimatedStat(stars);
-  const ticketStat = useAnimatedStat(tickets);
   return (
     <header className="app-header">
       <div className="header-inner">
@@ -632,10 +656,6 @@ function AppHeader({
           <span className={`stat-pill${starStat.animating ? " stat-animating star" : ""}`}>
             <span aria-hidden>⭐</span>
             <span className="stat-number">{starStat.value}</span>
-          </span>
-          <span className={`stat-pill${ticketStat.animating ? " stat-animating ticket" : ""}`}>
-            <span aria-hidden>券</span>
-            <span className="stat-number">{ticketStat.value}</span>
           </span>
           <span className="stat-pill">🔥 {streakDays} 天</span>
         </div>
@@ -923,14 +943,12 @@ function CatalogLessonGrid({
 function RecordsPage({
   coins,
   stars,
-  tickets,
   streakDays,
   completedCount,
   collectedCount,
 }: {
   coins: number;
   stars: number;
-  tickets: number;
   streakDays: number;
   completedCount: number;
   collectedCount: number;
@@ -944,7 +962,6 @@ function RecordsPage({
       <div className="record-grid">
         <StatCard icon="🪙" value={coins} label="金幣" />
         <StatCard icon="⭐" value={stars} label="星星" />
-        <StatCard icon="券" value={tickets} label="轉蛋券" />
         <StatCard icon="🔥" value={streakDays} label="連續天數" />
         <StatCard icon="✅" value={completedCount} label="已破解課程" />
         <StatCard icon="字" value={collectedCount} label="已收角色" />
@@ -1005,12 +1022,12 @@ function PlaceholderPage({ icon, title, text }: { icon: string; title: string; t
 }
 
 function GachaPage({
-  tickets,
+  coins,
   ownedCharacters,
   lastResult,
   onDraw,
 }: {
-  tickets: number;
+  coins: number;
   ownedCharacters: Record<string, number>;
   lastResult: CollectibleCharacter | null;
   onDraw: () => void;
@@ -1020,7 +1037,7 @@ function GachaPage({
   const realm = CREATURE_REALMS.find((candidate) => candidate.id === realmId) ?? CREATURE_REALMS[0];
   const collected = realmOwnedCount(realm.id, ownedCharacters);
   const total = realmTotalCount(realm.id);
-  const canDraw = tickets > 0;
+  const canDraw = coins >= 10;
 
   function handleDraw() {
     if (!canDraw || drawing) return;
@@ -1033,7 +1050,7 @@ function GachaPage({
     <section className="page-panel gacha-page">
       <div className="page-heading">
         <h1>轉蛋</h1>
-        <p>每完成一課可以拿三張轉蛋券。先收集地上的生物，再前往海裡、天空和外太空。</p>
+        <p>每次轉蛋需要十個金幣。先收集地上的生物，再前往海裡、天空和外太空。</p>
       </div>
 
       <div className="realm-track">
@@ -1061,11 +1078,11 @@ function GachaPage({
         <div className="gacha-copy">
           <h2>{realm.label}</h2>
           <p>{realm.description}</p>
-          <strong>轉蛋券：{tickets}</strong>
+          <strong>金幣：{coins}</strong>
           <small>本區進度 {collected} / {total}</small>
         </div>
         <button className={`btn gacha-draw-button${drawing ? " starting" : ""}`} disabled={!canDraw || drawing} onClick={handleDraw}>
-          {tickets <= 0 ? "沒有轉蛋券" : drawing ? "轉動中" : "抽一次"}
+          {coins < 10 ? "金幣不夠" : drawing ? "轉動中" : "抽一次"}
         </button>
       </div>
 
@@ -1080,15 +1097,25 @@ function GachaPage({
         </div>
       ) : (
         <div className="draw-result empty">
-          <span className="placeholder-icon">券</span>
-          <p>按下抽一次，就會有新朋友跑出來。</p>
+          <span className="placeholder-icon">金</span>
+          <p>花十個金幣抽一次，就會有新朋友跑出來。</p>
         </div>
       )}
     </section>
   );
 }
 
-function CollectionPage({ ownedCharacters }: { ownedCharacters: Record<string, number> }) {
+function CollectionPage({
+  stars,
+  ownedCharacters,
+  characterHearts,
+  onAddHeart,
+}: {
+  stars: number;
+  ownedCharacters: Record<string, number>;
+  characterHearts: Record<string, number>;
+  onAddHeart: (characterId: string) => void;
+}) {
   const [selectedRealm, setSelectedRealm] = useState<RealmId>("land");
   const realm = CREATURE_REALMS.find((candidate) => candidate.id === selectedRealm) ?? CREATURE_REALMS[0];
   const unlocked = realmUnlocked(realm.id, ownedCharacters);
@@ -1105,7 +1132,7 @@ function CollectionPage({ ownedCharacters }: { ownedCharacters: Record<string, n
     <section className="page-panel collection-page">
       <div className="page-heading">
         <h1>角色收藏</h1>
-        <p>每一種生物都有九個家人。收滿一個區塊，下一個區塊就會打開。</p>
+        <p>每一種生物都有九個家人。用星星增加角色好感度，三顆星星可以加一顆愛心。</p>
       </div>
 
       <div className="collection-tabs" role="tablist" aria-label="角色區塊">
@@ -1132,6 +1159,7 @@ function CollectionPage({ ownedCharacters }: { ownedCharacters: Record<string, n
           <p>{visibleRealm.description}</p>
         </div>
         <strong>{collected} / {total}</strong>
+        <span className="collection-stars">星星：{stars}</span>
       </div>
 
       <div className="collection-grid" aria-label={`${visibleRealm.label}角色`}>
@@ -1143,6 +1171,9 @@ function CollectionPage({ ownedCharacters }: { ownedCharacters: Record<string, n
               character={character}
               owned={count > 0}
               duplicateCount={count}
+              hearts={heartCount(characterHearts, character.characterId)}
+              canAddHeart={stars >= 3 && heartCount(characterHearts, character.characterId) < 10}
+              onAddHeart={() => onAddHeart(character.characterId)}
             />
           );
         })}
@@ -1155,10 +1186,16 @@ function CollectibleCard({
   character,
   owned,
   duplicateCount,
+  hearts,
+  canAddHeart,
+  onAddHeart,
 }: {
   character: CollectibleCharacter;
   owned: boolean;
   duplicateCount: number;
+  hearts: number;
+  canAddHeart: boolean;
+  onAddHeart: () => void;
 }) {
   return (
     <div
@@ -1168,6 +1205,18 @@ function CollectibleCard({
       <CreatureAvatar character={character} owned={owned} />
       <strong>{owned ? `${character.name}${character.familyRoleLabel}` : "還沒遇見"}</strong>
       <small>{owned && duplicateCount > 1 ? `遇見 ${duplicateCount} 次` : owned ? character.familyRoleLabel : "???"}</small>
+      {owned && (
+        <>
+          <div className="heart-meter" aria-label={`好感度 ${hearts} / 10`}>
+            {Array.from({ length: 10 }, (_, index) => (
+              <span key={index} className={index < hearts ? "filled" : ""}>♥</span>
+            ))}
+          </div>
+          <button className="heart-button" disabled={!canAddHeart} onClick={onAddHeart}>
+            {hearts >= 10 ? "愛心滿了" : "加愛心"}
+          </button>
+        </>
+      )}
     </div>
   );
 }
@@ -1226,7 +1275,7 @@ function LessonPanel({
   const gamesDone = !usesSentenceGames || gameDoneCount >= requiredGameRounds;
   const lessonReady = soundUnlocked && findUnlocked && pictureDone && gamesDone;
   const progressSteps = [soundUnlocked, findUnlocked, pictureDone, ...(usesSentenceGames ? [gamesDone] : [])];
-  const lessonReward = { coins: 30, stars: 12, tickets: 3 };
+  const lessonReward = { coins: 30, stars: 12 };
   const hasNextLesson = lessons.some((candidate) => candidate.order === lesson.order + 1);
   const lessonIntro = lessonIntroText(lesson);
   const hearPrompt = hearPromptText(lesson);
@@ -1649,7 +1698,6 @@ function RewardPanel({
       : GUIDE_TEXT.rewardWon;
   const coinCount = useRewardCount(reward.coins, state !== "ready");
   const starCount = useRewardCount(reward.stars, state !== "ready");
-  const ticketCount = useRewardCount(reward.tickets, state !== "ready");
   return (
     <section className={`reward-panel active-block reward-${state}`} aria-label="領取獎勵">
       {!alreadyCompleted && state === "claiming" && (
@@ -1686,13 +1734,6 @@ function RewardPanel({
           </span>
           <strong className="reward-number">+{starCount}</strong>
           <small>星星</small>
-        </div>
-        <div className="reward-badge ticket">
-          <span className="reward-icon" aria-hidden>
-            券
-          </span>
-          <strong className="reward-number">+{ticketCount}</strong>
-          <small>轉蛋券</small>
         </div>
       </div>}
 

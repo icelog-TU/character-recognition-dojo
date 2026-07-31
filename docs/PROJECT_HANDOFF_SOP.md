@@ -35,7 +35,6 @@ The app is not a single long worksheet. It uses a shared app shell:
   - app name
   - coins
   - stars
-  - gacha tickets
   - streak days
 - Left drawer
   - 練習課文
@@ -55,9 +54,12 @@ Important UX principle: this is for young children. Do not write screens as if a
 
 The prototype has a working local collection system:
 
-- Each first-time completed lesson gives 3 gacha tickets.
+- Each first-time completed lesson gives 30 coins and 12 stars.
 - Replaying an already completed lesson does not grant rewards again.
-- Gacha tickets are separate from coins and stars.
+- Gacha draws cost 10 coins each.
+- Stars are used to raise character affection.
+- Spending 3 stars adds 1 affection heart to one owned character.
+- Each character can have up to 10 hearts.
 - The collection has four realms: 地上的生物, 海裡的生物, 天上的生物, 外太空的生物.
 - Realms unlock in order: land, sea, sky, space.
 - Each realm currently has 15 species.

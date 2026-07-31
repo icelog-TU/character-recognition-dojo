@@ -42,7 +42,7 @@
 ## App Shell
 
 - The app uses a shared top header similar to the existing Chinese practice room app.
-- The header shows the app name plus quick reward/status pills: coins, stars, gacha tickets, and streak days.
+- The header shows the app name plus quick reward/status pills: coins, stars, and streak days.
 - The header menu button opens a left drawer.
 - Drawer pages:
   - 練習課文: daily lesson practice and current unlock path.
@@ -57,9 +57,11 @@
 
 The app has a character collection system connected to lesson completion.
 
-- A first-time lesson completion grants 3 gacha tickets.
-- Coins and stars remain achievement counters.
-- Gacha tickets are used on the gacha page.
+- A first-time lesson completion grants 30 coins and 12 stars.
+- Gacha draws cost 10 coins each, so one completed lesson can fund 3 draws.
+- Stars are used to raise collected character affection.
+- Spending 3 stars adds 1 heart to one owned character.
+- Each character can have up to 10 affection hearts.
 - Replaying an already completed lesson does not grant another reward.
 - The collection is split into four realms: 地上的生物, 海裡的生物, 天上的生物, 外太空的生物.
 - Realms unlock in order from land to sea to sky to space.

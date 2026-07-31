@@ -133,10 +133,6 @@ button {
   box-shadow: 0 0 0 5px rgba(255, 245, 145, 0.18), 0 0 18px rgba(255, 245, 145, 0.4);
 }
 
-.stat-pill.stat-animating.ticket {
-  box-shadow: 0 0 0 5px rgba(157, 239, 226, 0.18), 0 0 18px rgba(157, 239, 226, 0.4);
-}
-
 .drawer-backdrop {
   position: fixed;
   inset: 0;
@@ -894,7 +890,7 @@ button {
 .reward-animation {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -946,10 +942,6 @@ button {
 
 .reward-claiming .reward-badge.star {
   animation-delay: 0.14s;
-}
-
-.reward-claiming .reward-badge.ticket {
-  animation-delay: 0.24s;
 }
 
 .reward-claimed .reward-badge {
@@ -1897,6 +1889,16 @@ button.char-token {
   font-size: 1.45rem;
 }
 
+.collection-stars {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--gold);
+  padding: 6px 10px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1985,6 +1987,41 @@ button.char-token {
   color: #fff;
   font-size: 0.72rem;
   font-weight: 950;
+}
+
+.heart-meter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1px;
+  max-width: 92px;
+  color: #d3c8bd;
+  font-size: 0.78rem;
+  line-height: 1;
+}
+
+.heart-meter .filled {
+  color: #e44968;
+  text-shadow: 0 1px 4px rgba(228, 73, 104, 0.22);
+}
+
+.heart-button {
+  min-height: 31px;
+  border: 1px solid rgba(228, 73, 104, 0.35);
+  border-radius: 999px;
+  background: #fff3f5;
+  color: #a52c45;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.heart-button:disabled {
+  border-color: var(--line);
+  background: #eee8dd;
+  color: #8d867d;
+  cursor: not-allowed;
 }
 
 @media (max-width: 780px) {

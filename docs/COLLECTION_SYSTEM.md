@@ -8,13 +8,22 @@ The app will eventually contain about 600 lessons. Each first-time lesson comple
 
 - 30 coins
 - 12 stars
-- 3 gacha tickets
 
-Coins and stars are achievement counters. Gacha tickets control character draws.
+Coins are used for gacha draws. Stars are used to raise character affection.
+
+Each gacha draw costs 10 coins, so one completed lesson gives enough coins for 3 draws.
 
 At 600 lessons, the baseline economy gives at least 1800 draws. Because duplicate draws are allowed, long-term play may involve 3000-4000 draws.
 
 Important rule: replaying an already completed lesson must not grant the reward again. Review is allowed, reward farming is not.
+
+## Affection
+
+Collected characters can gain affection hearts.
+
+- Each character has up to 10 hearts.
+- Spending 3 stars adds 1 heart to an owned character.
+- Stars should therefore feel like relationship or care currency, not gacha currency.
 
 ## Collection Realms
 
@@ -74,6 +83,7 @@ Space:
 The current prototype draw rule:
 
 - Draw from the first unlocked realm that is not yet complete.
+- Spend 10 coins per draw.
 - If there are missing characters in that realm, prefer a missing character most of the time.
 - Duplicates are allowed and counted.
 - Duplicates do not unlock the next realm; only unique collected characters count toward realm completion.
@@ -104,12 +114,11 @@ The current prototype stores progress locally in browser `localStorage`:
 
 - coins
 - stars
-- gachaTickets
 - completedOrders
 - ownedCharacters
+- characterHearts
 - selectedOrder
 
 This is sufficient for solo testing on one device.
 
 Future cloud backup should be added before serious family testing or app-store release, because losing a child's collection would feel bad. Cloud backup should store the same progress shape server-side, keyed to a user account or parent-managed profile.
-
