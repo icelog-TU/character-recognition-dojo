@@ -37,6 +37,7 @@ Rules:
 - `targetChar` should introduce exactly one new Han character.
 - `zhuyin` uses Taiwan zhuyin only.
 - `originHint` is optional.
+- `requiredRounds` controls block 3 sentence-game rounds. Blocks 1 and 2 have fixed completion behavior.
 
 ## Sentence
 
@@ -65,6 +66,7 @@ Rules:
 - `audio` may be `null` during draft curriculum work.
 - Production curriculum should provide audio and timings for every sentence.
 - `charTimings` references Han-character indices in `text`, skipping punctuation.
+- Sentences are not production-ready until reviewed and approved by the parent/teacher.
 
 ## Validation
 

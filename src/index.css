@@ -162,33 +162,31 @@ button {
   font-weight: 700;
 }
 
-.showcase {
-  display: grid;
-  grid-template-columns: minmax(130px, 190px) minmax(0, 1fr);
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 .target-card {
-  display: grid;
-  place-items: center;
-  min-height: 190px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 180px;
   border-radius: 8px;
   background: #fff;
   border: 2px solid var(--line);
+}
+
+.target-button {
+  cursor: pointer;
+}
+
+.target-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
 }
 
 .target-char {
   font-size: 6rem;
   font-weight: 800;
   line-height: 1;
-}
-
-.target-zhuyin {
-  color: var(--primary-strong);
-  font-weight: 800;
-  margin-top: 10px;
 }
 
 .lesson-title {
@@ -265,7 +263,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 4px;
   min-width: 52px;
   min-height: 58px;
   border: 2px solid transparent;
@@ -294,20 +292,42 @@ button.char-token {
   line-height: 1;
 }
 
-.zhuyin {
+.zhuyin-mark {
+  display: inline-grid;
+  grid-template-columns: auto 0.72em;
+  align-items: center;
+  color: var(--primary-strong);
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1;
+  min-width: 1.55em;
+}
+
+.zhuyin-large {
+  font-size: 1.08rem;
+}
+
+.zhuyin-base {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 12px;
-  color: var(--primary-strong);
-  font-size: 0.68rem;
-  font-weight: 800;
-  line-height: 1.05;
+  min-height: 2.8em;
+  position: relative;
 }
 
-.tone {
-  margin-top: -1px;
+.zhuyin-tone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.8em;
+  font-size: 1.1em;
+}
+
+.neutral-dot {
+  font-size: 0.9em;
+  line-height: 0.8;
+  margin-bottom: 0.08em;
 }
 
 .punctuation {
@@ -317,6 +337,71 @@ button.char-token {
 
 .round-card {
   padding: 16px;
+}
+
+.lesson-block {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.locked-block {
+  opacity: 0.62;
+}
+
+.block-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.block-heading h3 {
+  flex: 1;
+  margin: 0;
+  font-size: 1.18rem;
+}
+
+.block-note {
+  margin: 10px 0 12px;
+  color: var(--muted);
+}
+
+.find-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.find-token {
+  min-height: 82px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.find-token.found {
+  background: var(--green-soft);
+  border-color: var(--primary);
+}
+
+.find-token:disabled {
+  cursor: not-allowed;
+}
+
+.practice-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .round-title {
@@ -369,15 +454,15 @@ button.char-token {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .showcase {
-    grid-template-columns: 1fr;
-  }
-
   .target-card {
     min-height: 160px;
   }
 
   .target-char {
     font-size: 5rem;
+  }
+
+  .find-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

@@ -1,10 +1,13 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import curriculumData from "./curriculum/sample-lessons.json";
 import type { Curriculum, Lesson, LessonSentence } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
 import "./index.css";
 
 const curriculum = curriculumData as Curriculum;
+
+type GameMode = "找字" | "教動物" | "填空" | "排句子" | "誰念對";
+const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
 
 function App() {
   const [completedOrders, setCompletedOrders] = useState<Set<number>>(new Set());
@@ -34,6 +37,7 @@ function App() {
           onSelect={setSelectedOrder}
         />
         <LessonPanel
+          key={selectedLesson.id}
           lesson={selectedLesson}
           lessons={curriculum.lessons}
           completed={completedOrders.has(selectedLesson.order)}
@@ -97,16 +101,16 @@ function LessonPanel({
   locked: boolean;
   onComplete: () => void;
 }) {
-  const [roundsDone, setRoundsDone] = useState(0);
-  const [activeSentenceId, setActiveSentenceId] = useState(lesson.sentences[0]?.id);
+  const [soundUnlocked, setSoundUnlocked] = useState(false);
+  const [findUnlocked, setFindUnlocked] = useState(false);
+  const [practiceDoneCount, setPracticeDoneCount] = useState(0);
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
-  const activeSentence =
-    lesson.sentences.find((sentence) => sentence.id === activeSentenceId) ?? lesson.sentences[0];
-  const progress = Math.min(roundsDone, lesson.requiredRounds);
-  const canComplete = progress >= lesson.requiredRounds;
+  const requiredPracticeRounds = Math.min(lesson.requiredRounds, lesson.sentences.length);
+  const lessonReady = soundUnlocked && findUnlocked && practiceDoneCount >= requiredPracticeRounds;
 
-  function markRoundDone() {
-    setRoundsDone((current) => Math.min(current + 1, lesson.requiredRounds));
+  function handleHearTarget() {
+    playSpokenText(lesson.targetChar);
+    setSoundUnlocked(true);
   }
 
   return (
@@ -116,52 +120,83 @@ function LessonPanel({
         <span className="pill">{completed ? "已進入複習池" : locked ? "尚未解鎖" : "練功中"}</span>
       </div>
 
-      <section className="showcase">
-        <div className="target-card" aria-label={`新字 ${lesson.targetChar}`}>
-          <div>
-            <div className="target-char">{lesson.targetChar}</div>
-            <div className="target-zhuyin">{lesson.zhuyin}</div>
-          </div>
-        </div>
-        <div>
-          <h2 id="lesson-title" className="lesson-title">
-            破解「{lesson.targetChar}」
-          </h2>
-          <p className="lesson-copy">
-            先看清楚字形，再直接進句子遊戲。注音只輔助辨認，不把課程變成注音拼讀。
-          </p>
-          {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
-        </div>
-      </section>
+      <h2 id="lesson-title" className="lesson-title">
+        破解「{lesson.targetChar}」
+      </h2>
+      <p className="lesson-copy">三段完成後才算通關：先聽單字，再找出這個字，最後進句子遊戲。</p>
 
-      <SentencePicker
-        sentences={lesson.sentences}
-        activeId={activeSentence.id}
-        onPick={(sentence) => setActiveSentenceId(sentence.id)}
-      />
+      <LessonBlock
+        index={1}
+        title="聽這個字"
+        done={soundUnlocked}
+        locked={locked}
+      >
+        <button className="target-card target-button" disabled={locked} onClick={handleHearTarget}>
+          <span className="target-char">{lesson.targetChar}</span>
+          <Zhuyin value={lesson.zhuyin} size="large" />
+        </button>
+        <p className="block-note">
+          之後這裡會播放預錄好的單字音檔。現在先用瀏覽器語音做暫時示範，按下後本區塊通關。
+        </p>
+        {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
+      </LessonBlock>
 
-      <SentenceCard sentence={activeSentence} zhuyinMap={zhuyinMap} activeCharIndex={null} />
+      <LessonBlock
+        index={2}
+        title="找出這個字"
+        done={findUnlocked}
+        locked={locked || !soundUnlocked}
+      >
+        <FindManyChallenge
+          lesson={lesson}
+          zhuyinMap={zhuyinMap}
+          disabled={locked || !soundUnlocked}
+          onComplete={() => setFindUnlocked(true)}
+        />
+      </LessonBlock>
 
-      <FindCharacterRound
-        sentence={activeSentence}
-        zhuyinMap={zhuyinMap}
-        onRoundDone={markRoundDone}
-      />
+      <LessonBlock
+        index={3}
+        title="句子遊戲"
+        done={practiceDoneCount >= requiredPracticeRounds}
+        locked={locked || !soundUnlocked || !findUnlocked}
+      >
+        <SentencePracticePreview
+          lesson={lesson}
+          zhuyinMap={zhuyinMap}
+          disabled={locked || !soundUnlocked || !findUnlocked}
+          doneCount={practiceDoneCount}
+          requiredCount={requiredPracticeRounds}
+          onRoundDone={() => setPracticeDoneCount((count) => Math.min(count + 1, requiredPracticeRounds))}
+        />
+      </LessonBlock>
 
       <div className="progress-row">
         <div className="progress-track" aria-label="通關進度">
-          <div className="progress-fill" style={{ width: `${(progress / lesson.requiredRounds) * 100}%` }} />
+          <div
+            className="progress-fill"
+            style={{
+              width: `${([soundUnlocked, findUnlocked, practiceDoneCount >= requiredPracticeRounds].filter(Boolean).length / 3) * 100}%`,
+            }}
+          />
         </div>
         <span className="pill">
-          {progress} / {lesson.requiredRounds}
+          {[soundUnlocked, findUnlocked, practiceDoneCount >= requiredPracticeRounds].filter(Boolean).length} / 3
         </span>
       </div>
 
       <div className="actions" style={{ marginTop: 16 }}>
-        <button className="btn primary" disabled={!canComplete || completed || locked} onClick={onComplete}>
+        <button className="btn primary" disabled={!lessonReady || completed || locked} onClick={onComplete}>
           {completed ? "已解鎖下一課" : "完成本課"}
         </button>
-        <button className="btn ghost" onClick={() => setRoundsDone(0)}>
+        <button
+          className="btn ghost"
+          onClick={() => {
+            setSoundUnlocked(false);
+            setFindUnlocked(false);
+            setPracticeDoneCount(0);
+          }}
+        >
           重練本課
         </button>
       </div>
@@ -169,27 +204,130 @@ function LessonPanel({
   );
 }
 
-function SentencePicker({
-  sentences,
-  activeId,
-  onPick,
+function LessonBlock({
+  index,
+  title,
+  done,
+  locked,
+  children,
 }: {
-  sentences: LessonSentence[];
-  activeId: string;
-  onPick: (sentence: LessonSentence) => void;
+  index: number;
+  title: string;
+  done: boolean;
+  locked: boolean;
+  children: ReactNode;
 }) {
   return (
-    <div className="actions" style={{ marginBottom: 12 }}>
-      {sentences.map((sentence, index) => (
-        <button
-          key={sentence.id}
-          className={`btn ${sentence.id === activeId ? "secondary" : "ghost"}`}
-          onClick={() => onPick(sentence)}
-        >
-          句子 {index + 1}
-        </button>
-      ))}
-    </div>
+    <section className={`lesson-block${locked ? " locked-block" : ""}`}>
+      <div className="block-heading">
+        <span className="lesson-number">{index}</span>
+        <h3>{title}</h3>
+        <span className="pill">{done ? "通關" : locked ? "等待前一段" : "進行中"}</span>
+      </div>
+      {children}
+    </section>
+  );
+}
+
+function FindManyChallenge({
+  lesson,
+  zhuyinMap,
+  disabled,
+  onComplete,
+}: {
+  lesson: Lesson;
+  zhuyinMap: Map<string, string>;
+  disabled: boolean;
+  onComplete: () => void;
+}) {
+  const items = useMemo(() => makeFindChallenge(lesson), [lesson]);
+  const [foundIds, setFoundIds] = useState<Set<string>>(new Set());
+  const targetTotal = items.filter((item) => item.char === lesson.targetChar).length;
+  const foundTotal = [...foundIds].filter((id) => items.find((item) => item.id === id)?.char === lesson.targetChar).length;
+
+  function handleTap(item: FindItem) {
+    if (disabled || item.char !== lesson.targetChar || foundIds.has(item.id)) return;
+    playSpokenText(item.char);
+    setFoundIds((prev) => {
+      const next = new Set(prev);
+      next.add(item.id);
+      if (next.size >= targetTotal) onComplete();
+      return next;
+    });
+  }
+
+  return (
+    <>
+      <p className="block-note">在六個字裡找到所有「{lesson.targetChar}」。按到正確字時會亮起來，也會念出字音。</p>
+      <div className="find-grid">
+        {items.map((item) => (
+          <button
+            key={item.id}
+            className={`find-token${foundIds.has(item.id) ? " found" : ""}`}
+            disabled={disabled}
+            onClick={() => handleTap(item)}
+          >
+            <span className="hanzi">{item.char}</span>
+            <Zhuyin value={zhuyinMap.get(item.char) ?? ""} />
+          </button>
+        ))}
+      </div>
+      <p className="block-note">
+        已找到 {foundTotal} / {targetTotal}
+      </p>
+    </>
+  );
+}
+
+interface FindItem {
+  id: string;
+  char: string;
+}
+
+function makeFindChallenge(lesson: Lesson): FindItem[] {
+  const distractors = hanChars(lesson.sentences.map((sentence) => sentence.text).join(""))
+    .filter((char) => char !== lesson.targetChar)
+    .slice(0, 3);
+  const fallback = ["小", "山", "人", "口", "手", "上"].filter((char) => char !== lesson.targetChar);
+  const pool = [...distractors, ...fallback].slice(0, 3);
+  const chars = [lesson.targetChar, pool[0], lesson.targetChar, pool[1], pool[2], lesson.targetChar];
+  return chars.map((char, index) => ({ id: `${char}-${index}`, char }));
+}
+
+function SentencePracticePreview({
+  lesson,
+  zhuyinMap,
+  disabled,
+  doneCount,
+  requiredCount,
+  onRoundDone,
+}: {
+  lesson: Lesson;
+  zhuyinMap: Map<string, string>;
+  disabled: boolean;
+  doneCount: number;
+  requiredCount: number;
+  onRoundDone: () => void;
+}) {
+  const sentence = lesson.sentences[doneCount % lesson.sentences.length];
+  const mode = GAME_MODES[doneCount % GAME_MODES.length];
+
+  return (
+    <>
+      <div className="practice-meta">
+        <span className="pill">{mode}</span>
+        <span className="pill">
+          {doneCount} / {requiredCount}
+        </span>
+      </div>
+      <SentenceCard sentence={sentence} zhuyinMap={zhuyinMap} activeCharIndex={null} />
+      <p className="block-note">
+        這裡會接上舊版五種遊戲並隨機輪替。每一句必須先由你審核後才會進入正式教材。
+      </p>
+      <button className="btn secondary" disabled={disabled || doneCount >= requiredCount} onClick={onRoundDone}>
+        示範完成一個句子遊戲
+      </button>
+    </>
   );
 }
 
@@ -197,14 +335,10 @@ function SentenceCard({
   sentence,
   zhuyinMap,
   activeCharIndex,
-  foundCharIndex,
-  onCharTap,
 }: {
   sentence: LessonSentence;
   zhuyinMap: Map<string, string>;
   activeCharIndex: number | null;
-  foundCharIndex?: number | null;
-  onCharTap?: (hanIndex: number, char: string) => void;
 }) {
   let hanIndex = -1;
   return (
@@ -219,35 +353,10 @@ function SentenceCard({
             );
           }
           hanIndex += 1;
-          const currentHanIndex = hanIndex;
-          const className = [
-            "char-token",
-            currentHanIndex === activeCharIndex ? "active" : "",
-            currentHanIndex === foundCharIndex ? "found" : "",
-          ]
-            .filter(Boolean)
-            .join(" ");
-          const content = (
-            <>
+          return (
+            <span key={`${char}-${index}`} className={`char-token${hanIndex === activeCharIndex ? " active" : ""}`}>
               <span className="hanzi">{char}</span>
               <Zhuyin value={zhuyinMap.get(char) ?? ""} />
-            </>
-          );
-          if (onCharTap) {
-            return (
-              <button
-                key={`${char}-${index}`}
-                type="button"
-                className={className}
-                onClick={() => onCharTap(currentHanIndex, char)}
-              >
-                {content}
-              </button>
-            );
-          }
-          return (
-            <span key={`${char}-${index}`} className={className}>
-              {content}
             </span>
           );
         })}
@@ -256,70 +365,44 @@ function SentenceCard({
   );
 }
 
-function Zhuyin({ value }: { value: string }) {
-  const parts = Array.from(value);
+function Zhuyin({ value, size = "normal" }: { value: string; size?: "normal" | "large" }) {
+  const { base, tone, neutral } = splitZhuyin(value);
   return (
-    <span className="zhuyin" aria-label={value}>
-      {parts.map((part, index) => (
-        <span key={`${part}-${index}`} className={index === parts.length - 1 && isTone(part) ? "tone" : undefined}>
-          {part}
-        </span>
-      ))}
+    <span className={`zhuyin-mark zhuyin-${size}`} aria-label={value}>
+      <span className="zhuyin-base">
+        {neutral && <span className="neutral-dot">˙</span>}
+        {base.map((part, index) => (
+          <span key={`${part}-${index}`}>{part}</span>
+        ))}
+      </span>
+      <span className="zhuyin-tone" aria-hidden>
+        {!neutral ? tone : ""}
+      </span>
     </span>
   );
 }
 
-function FindCharacterRound({
-  sentence,
-  zhuyinMap,
-  onRoundDone,
-}: {
-  sentence: LessonSentence;
-  zhuyinMap: Map<string, string>;
-  onRoundDone: () => void;
-}) {
-  const [foundIndex, setFoundIndex] = useState<number | null>(null);
-  const chars = hanChars(sentence.text);
-  const targetIndex = Math.max(
-    0,
-    chars.findIndex((char) => char === sentence.focusChar),
-  );
+function splitZhuyin(value: string): { base: string[]; tone: string; neutral: boolean } {
+  const chars = Array.from(value);
+  const first = chars[0];
+  const last = chars[chars.length - 1];
+  if (first === "˙") return { base: chars.slice(1), tone: "", neutral: true };
+  if (["ˊ", "ˇ", "ˋ"].includes(last)) return { base: chars.slice(0, -1), tone: last, neutral: false };
+  return { base: chars, tone: "", neutral: false };
+}
 
-  function handleTap(index: number) {
-    if (index !== targetIndex) return;
-    setFoundIndex(index);
-    onRoundDone();
-  }
-
-  return (
-    <section className="round-card">
-      <h3 className="round-title">找出這個字</h3>
-      <p className="round-instruction">
-        先用預錄音檔播放整句；目前範例尚未放入音檔，所以先展示句子與操作目標。
-      </p>
-      <SentenceCard
-        sentence={sentence}
-        zhuyinMap={zhuyinMap}
-        activeCharIndex={null}
-        foundCharIndex={foundIndex}
-        onCharTap={handleTap}
-      />
-      <div className="actions">
-        <button className="btn secondary" onClick={() => setFoundIndex(null)}>
-          再找一次
-        </button>
-        {foundIndex !== null && <span className="success">找到了，可以累積通關進度。</span>}
-      </div>
-    </section>
-  );
+function playSpokenText(text: string) {
+  const clean = text.replace(/[，。！？、；：,.!?;:]/g, "");
+  if (!clean || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(clean);
+  utterance.lang = "zh-TW";
+  utterance.rate = 0.8;
+  window.speechSynthesis.speak(utterance);
 }
 
 function isHan(char: string) {
   return /\p{Script=Han}/u.test(char);
-}
-
-function isTone(char: string) {
-  return ["ˊ", "ˇ", "ˋ", "˙"].includes(char);
 }
 
 export default App;
