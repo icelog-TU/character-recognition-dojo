@@ -1,4 +1,4 @@
-import { useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import curriculumData from "./curriculum/sample-lessons.json";
 import type { Curriculum, Lesson, LessonSentence } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
@@ -10,6 +10,11 @@ type GameMode = "找字" | "教動物" | "填空" | "排句子" | "誰念對";
 type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
 type LessonCharEntry = { lesson: Lesson; char: string; index: number };
 type AudioWindow = Window & typeof globalThis & { webkitAudioContext?: typeof AudioContext };
+type AudioPlayOptions = {
+  onTime?: (elapsedMs: number) => void;
+  onEnded?: () => void;
+  onError?: () => void;
+};
 
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
 
@@ -53,6 +58,10 @@ function assetUrl(src: string): string {
   if (src.startsWith("/")) return `${base}${src.slice(1)}`;
   return `${base}${src}`;
 }
+
+const audioCache = new Map<string, HTMLAudioElement>();
+let activeAudio: HTMLAudioElement | null = null;
+let activeAudioFrame = 0;
 
 function App() {
   const [page, setPage] = useState<AppPage>("practice");
@@ -558,6 +567,10 @@ function LessonPanel({
   const requiredPracticeRounds = usesSentenceGames ? Math.min(lesson.requiredRounds, lesson.sentences.length) : 1;
   const lessonReady = soundUnlocked && findUnlocked && practiceDoneCount >= requiredPracticeRounds;
 
+  useEffect(() => {
+    preloadLessonAudio(lesson);
+  }, [lesson]);
+
   function handleHearTarget(char: string) {
     playLessonChar(lesson, char);
     setHeardChars((prev) => {
@@ -798,6 +811,26 @@ function PictureSentencePreview({
   done: boolean;
   onDone: () => void;
 }) {
+  const [playingSentenceId, setPlayingSentenceId] = useState<string | null>(null);
+  const [activeCharIndex, setActiveCharIndex] = useState<number | null>(null);
+
+  function handleSentenceTap(sentence: LessonSentence) {
+    playSentence(sentence, {
+      onTime: (elapsedMs) => {
+        setPlayingSentenceId(sentence.id);
+        setActiveCharIndex(activeTimingIndex(sentence, elapsedMs));
+      },
+      onEnded: () => {
+        setActiveCharIndex(null);
+        setPlayingSentenceId(null);
+      },
+      onError: () => {
+        setActiveCharIndex(null);
+        setPlayingSentenceId(null);
+      },
+    });
+  }
+
   return (
     <>
       <p className="block-note">
@@ -809,7 +842,7 @@ function PictureSentencePreview({
             className="picture-sentence-card"
             key={sentence.id}
             disabled={disabled}
-            onClick={() => playSentence(sentence)}
+            onClick={() => handleSentenceTap(sentence)}
           >
             {sentence.imageSrc ? (
               <img src={assetUrl(sentence.imageSrc)} alt="" />
@@ -818,7 +851,11 @@ function PictureSentencePreview({
                 <span>圖片待製作</span>
               </div>
             )}
-            <SentenceCard sentence={sentence} zhuyinMap={zhuyinMap} activeCharIndex={null} />
+            <SentenceCard
+              sentence={sentence}
+              zhuyinMap={zhuyinMap}
+              activeCharIndex={playingSentenceId === sentence.id ? activeCharIndex : null}
+            />
           </button>
         ))}
       </div>
@@ -829,12 +866,13 @@ function PictureSentencePreview({
   );
 }
 
-function playSentence(sentence: LessonSentence) {
+function playSentence(sentence: LessonSentence, options?: AudioPlayOptions) {
   if (sentence.audio?.src) {
-    playAudioSrc(sentence.audio.src);
+    playAudioSrc(sentence.audio.src, options);
     return;
   }
   playSpokenText(sentence.spokenText);
+  options?.onEnded?.();
 }
 
 function playLessonChar(lesson: Lesson, char: string) {
@@ -846,9 +884,73 @@ function playLessonChar(lesson: Lesson, char: string) {
   playSpokenText(char);
 }
 
-function playAudioSrc(src: string) {
-  const audio = new Audio(assetUrl(src));
-  void audio.play();
+function getCachedAudio(src: string) {
+  const url = assetUrl(src);
+  const cached = audioCache.get(url);
+  if (cached) return cached;
+  const audio = new Audio(url);
+  audio.preload = "auto";
+  audio.load();
+  audioCache.set(url, audio);
+  return audio;
+}
+
+function preloadAudioSrc(src?: string | null) {
+  if (!src) return;
+  getCachedAudio(src);
+}
+
+function preloadLessonAudio(lesson: Lesson) {
+  for (const char of lesson.newChars) preloadAudioSrc(lesson.charAudio?.[char]);
+  for (const sentence of lesson.sentences) preloadAudioSrc(sentence.audio?.src);
+}
+
+function stopAudioFrame() {
+  if (!activeAudioFrame) return;
+  window.cancelAnimationFrame(activeAudioFrame);
+  activeAudioFrame = 0;
+}
+
+function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
+  const audio = getCachedAudio(src);
+  if (activeAudio && activeAudio !== audio) activeAudio.pause();
+  stopAudioFrame();
+  activeAudio = audio;
+  audio.pause();
+  audio.currentTime = 0;
+  audio.onended = () => {
+    stopAudioFrame();
+    if (activeAudio === audio) activeAudio = null;
+    options.onEnded?.();
+  };
+  audio.onerror = () => {
+    stopAudioFrame();
+    if (activeAudio === audio) activeAudio = null;
+    options.onError?.();
+  };
+
+  const tick = () => {
+    options.onTime?.(audio.currentTime * 1000);
+    if (!audio.paused && !audio.ended) activeAudioFrame = window.requestAnimationFrame(tick);
+  };
+
+  options.onTime?.(0);
+  void audio
+    .play()
+    .then(() => {
+      tick();
+    })
+    .catch(() => {
+      stopAudioFrame();
+      options.onError?.();
+    });
+}
+
+function activeTimingIndex(sentence: LessonSentence, elapsedMs: number) {
+  const timings = sentence.audio?.charTimings ?? [];
+  if (timings.length === 0) return null;
+  const active = timings.find((timing) => elapsedMs >= timing.startMs && elapsedMs <= timing.endMs);
+  return active?.charIndex ?? null;
 }
 
 function playFoundChime() {

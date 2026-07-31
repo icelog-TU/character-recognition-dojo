@@ -726,6 +726,9 @@ button.char-token {
 .char-token.active {
   background: var(--accent-soft);
   border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(34, 132, 123, 0.14);
+  color: var(--primary);
+  transform: scale(1.04);
 }
 
 .char-token.found {

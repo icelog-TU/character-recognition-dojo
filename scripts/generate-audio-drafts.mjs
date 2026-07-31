@@ -22,6 +22,10 @@ function parseArgs(argv) {
   return args;
 }
 
+function flagEnabled(value) {
+  return value !== false && value !== "false" && value !== "0" && value !== "no";
+}
+
 function filenameSafe(text) {
   return text.replace(/[\\/:*?"<>|]/g, "_");
 }
@@ -39,7 +43,8 @@ async function createSpeech({ apiKey, model, voice, input, outputPath }) {
       input,
       response_format: "mp3",
       speed: 0.9,
-      instructions: "自然、清楚、溫柔的台灣華語，適合幼兒認字教材。不要誇張表演，不要逐字停頓。",
+      instructions:
+        "Use natural Taiwan Mandarin pronunciation for young children. Speak clearly, warmly, and gently. Do not read punctuation aloud. For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
     }),
   });
 
@@ -54,8 +59,8 @@ async function createSpeech({ apiKey, model, voice, input, outputPath }) {
 
 const args = parseArgs(process.argv.slice(2));
 const lessonId = String(args.lesson || "L001").toUpperCase();
-const includeSentences = args.sentences !== false;
-const includeChars = args.chars !== false;
+const includeSentences = flagEnabled(args.sentences);
+const includeChars = flagEnabled(args.chars);
 
 const apiKey = requireOpenAIKey();
 const model = getEnv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts");
