@@ -32,7 +32,7 @@ type StoredProgress = {
 };
 type RealmId = "land" | "sea" | "sky" | "space";
 type FamilyRoleId = "grandpa" | "grandma" | "dad" | "mom" | "olderBrother" | "olderSister" | "youngerBrother" | "youngerSister" | "baby";
-type CreatureRealm = { id: RealmId; label: string; shortLabel: string; description: string; color: string };
+type CreatureRealm = { id: RealmId; label: string; shortLabel: string; description: string; color: string; icon: string };
 type FamilyRole = { id: FamilyRoleId; label: string; shortLabel: string };
 type CreatureSpecies = { id: string; realmId: RealmId; name: string; icon: string };
 type CollectibleCharacter = CreatureSpecies & {
@@ -46,6 +46,7 @@ type GachaDrawResult = {
   isNew: boolean;
   guaranteedNew: boolean;
 };
+type CollectionFocus = { realmId: RealmId; characterId: string | null; nonce: number };
 type CharacterInteraction = {
   heart: number;
   icon: string;
@@ -74,10 +75,10 @@ const RAINBOW_GROUPS = [
 ];
 
 const CREATURE_REALMS: CreatureRealm[] = [
-  { id: "land", label: "地上的生物", shortLabel: "地上", description: "先從地上的朋友開始收集。", color: "#4f8f52" },
-  { id: "sea", label: "海裡的生物", shortLabel: "海裡", description: "地上收滿後，海裡的朋友會打開。", color: "#2487b8" },
-  { id: "sky", label: "天上的生物", shortLabel: "天空", description: "海裡收滿後，天空的朋友會打開。", color: "#6f8fd7" },
-  { id: "space", label: "外太空的生物", shortLabel: "太空", description: "天空收滿後，最後前往外太空。", color: "#7957b8" },
+  { id: "land", label: "地上的生物", shortLabel: "地上", description: "先從地上的朋友開始收集。", color: "#4f8f52", icon: "🦌" },
+  { id: "sea", label: "海裡的生物", shortLabel: "海裡", description: "地上收滿後，海裡的朋友會打開。", color: "#2487b8", icon: "🐬" },
+  { id: "sky", label: "天上的生物", shortLabel: "天空", description: "海裡收滿後，天空的朋友會打開。", color: "#6f8fd7", icon: "🐦" },
+  { id: "space", label: "外太空的生物", shortLabel: "太空", description: "天空收滿後，最後前往外太空。", color: "#7957b8", icon: "🪐" },
 ];
 
 const FAMILY_ROLES: FamilyRole[] = [
@@ -501,6 +502,7 @@ function App() {
     () => initialProgress?.seenCharacterInteractions ?? {},
   );
   const [lastGachaResult, setLastGachaResult] = useState<GachaDrawResult | null>(null);
+  const [collectionFocus, setCollectionFocus] = useState<CollectionFocus>({ realmId: "land", characterId: null, nonce: 0 });
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
   const [selectedOrder, setSelectedOrder] = useState(initialProgress?.selectedOrder ?? nextOrder);
   const playbackState = usePlaybackState();
@@ -590,6 +592,22 @@ function App() {
     stopPlayback();
     setPage(nextPage);
     if (nextPage === "practice") setLessonOpen(false);
+    setMenuOpen(false);
+  }
+
+  function openCollectionRealm(realmId: RealmId) {
+    stopPlayback();
+    setCollectionFocus((prev) => ({ realmId, characterId: null, nonce: prev.nonce + 1 }));
+    setPage("collection");
+    setLessonOpen(false);
+    setMenuOpen(false);
+  }
+
+  function openCollectionCharacter(character: CollectibleCharacter) {
+    stopPlayback();
+    setCollectionFocus((prev) => ({ realmId: character.realmId, characterId: character.characterId, nonce: prev.nonce + 1 }));
+    setPage("collection");
+    setLessonOpen(false);
     setMenuOpen(false);
   }
 
@@ -701,6 +719,8 @@ function App() {
             duplicateGachaStreak={duplicateGachaStreak}
             lastResult={lastGachaResult}
             onDraw={handleGachaDraw}
+            onOpenRealm={openCollectionRealm}
+            onOpenCharacter={openCollectionCharacter}
           />
         )}
         {page === "collection" && (
@@ -709,6 +729,7 @@ function App() {
             ownedCharacters={ownedCharacters}
             characterHearts={characterHearts}
             seenCharacterInteractions={seenCharacterInteractions}
+            focus={collectionFocus}
             onAddHeart={handleAddHeart}
             onInteractionSeen={handleCharacterInteractionSeen}
           />
@@ -1193,12 +1214,16 @@ function GachaPage({
   duplicateGachaStreak,
   lastResult,
   onDraw,
+  onOpenRealm,
+  onOpenCharacter,
 }: {
   coins: number;
   ownedCharacters: Record<string, number>;
   duplicateGachaStreak: number;
   lastResult: GachaDrawResult | null;
   onDraw: () => void;
+  onOpenRealm: (realmId: RealmId) => void;
+  onOpenCharacter: (character: CollectibleCharacter) => void;
 }) {
   const [drawing, setDrawing] = useState(false);
   const realmId = activeGachaRealm(ownedCharacters);
@@ -1250,27 +1275,43 @@ function GachaPage({
           const realmCount = realmOwnedCount(candidate.id, ownedCharacters);
           const realmTotal = realmTotalCount(candidate.id);
           return (
-            <div
+            <button
+              type="button"
               key={candidate.id}
               className={`realm-card${candidate.id === realm.id ? " active" : ""}${unlocked ? "" : " locked"}`}
               style={{ "--realm-color": candidate.color } as CSSProperties}
+              onClick={() => {
+                playStartChime();
+                onOpenRealm(candidate.id);
+              }}
             >
+              <span className="realm-icon" aria-hidden>{candidate.icon}</span>
               <strong>{candidate.label}</strong>
               <span>{realmCount} / {realmTotal}</span>
-            </div>
+              {!unlocked && <small>還沒解鎖</small>}
+            </button>
           );
         })}
       </div>
 
       {lastResult ? (
-        <div className={`draw-result${lastResult.isNew ? " new-character" : ""}`} style={{ "--realm-color": realmColor(lastResult.character.realmId) } as CSSProperties}>
+        <button
+          type="button"
+          className={`draw-result draw-result-button${lastResult.isNew ? " new-character" : ""}`}
+          style={{ "--realm-color": realmColor(lastResult.character.realmId) } as CSSProperties}
+          onClick={() => {
+            playStartChime();
+            onOpenCharacter(lastResult.character);
+          }}
+        >
           <CreatureAvatar character={lastResult.character} owned large />
           <div>
             <span>{lastResult.guaranteedNew ? "保底新角色" : lastResult.isNew ? "新角色" : "又遇見了"}</span>
             <h2>{lastResult.character.name}{lastResult.character.familyRoleLabel}</h2>
             <p>已遇見 {ownedCount(ownedCharacters, lastResult.character.characterId)} 次</p>
+            <small>點我去看角色</small>
           </div>
-        </div>
+        </button>
       ) : (
         <div className="draw-result empty">
           <span className="placeholder-icon">金</span>
@@ -1286,6 +1327,7 @@ function CollectionPage({
   ownedCharacters,
   characterHearts,
   seenCharacterInteractions,
+  focus,
   onAddHeart,
   onInteractionSeen,
 }: {
@@ -1293,26 +1335,36 @@ function CollectionPage({
   ownedCharacters: Record<string, number>;
   characterHearts: Record<string, number>;
   seenCharacterInteractions: Record<string, number[]>;
+  focus: CollectionFocus;
   onAddHeart: (characterId: string) => void;
   onInteractionSeen: (characterId: string, index: number) => void;
 }) {
-  const [selectedRealm, setSelectedRealm] = useState<RealmId>("land");
+  const [selectedRealm, setSelectedRealm] = useState<RealmId>(focus.realmId);
   const [selectedCharacterId, setSelectedCharacterId] = useState<string | null>(null);
   const [interactionMessage, setInteractionMessage] = useState("");
   const realm = CREATURE_REALMS.find((candidate) => candidate.id === selectedRealm) ?? CREATURE_REALMS[0];
   const unlocked = realmUnlocked(realm.id, ownedCharacters);
-  const visibleRealm = unlocked ? realm : CREATURE_REALMS.find((candidate) => realmUnlocked(candidate.id, ownedCharacters)) ?? CREATURE_REALMS[0];
-  const characters = charactersForRealm(visibleRealm.id);
+  const visibleRealm = realm;
+  const visibleSpecies = CREATURE_SPECIES.filter((species) => species.realmId === visibleRealm.id);
   const collected = realmOwnedCount(visibleRealm.id, ownedCharacters);
   const total = realmTotalCount(visibleRealm.id);
-  const firstOwnedCharacter = characters.find((character) => ownedCount(ownedCharacters, character.characterId) > 0);
+  const firstOwnedCharacter = charactersForRealm(visibleRealm.id).find((character) => ownedCount(ownedCharacters, character.characterId) > 0);
   const selectedCharacter = selectedCharacterId ? COLLECTIBLE_BY_ID.get(selectedCharacterId) : undefined;
   const selectedOwned = selectedCharacter ? ownedCount(ownedCharacters, selectedCharacter.characterId) > 0 : false;
   const selectedHearts = selectedCharacter ? heartCount(characterHearts, selectedCharacter.characterId) : 0;
 
   useEffect(() => {
-    if (!realmUnlocked(selectedRealm, ownedCharacters)) setSelectedRealm(activeGachaRealm(ownedCharacters));
-  }, [selectedRealm, ownedCharacters]);
+    setSelectedRealm(focus.realmId);
+    setSelectedCharacterId(focus.characterId);
+    setInteractionMessage("");
+    const focusedCharacter = focus.characterId ? COLLECTIBLE_BY_ID.get(focus.characterId) : null;
+    if (focusedCharacter) {
+      void speakGuide(`這是${focusedCharacter.name}${focusedCharacter.familyRoleLabel}。可以加愛心，也可以看下面的角色互動。`);
+    } else {
+      const focusedRealm = CREATURE_REALMS.find((candidate) => candidate.id === focus.realmId);
+      if (focusedRealm) void speakGuide(`這裡是${focusedRealm.label}。請點下面已經收集到的角色。`);
+    }
+  }, [focus]);
 
   useEffect(() => {
     if (selectedCharacter && selectedCharacter.realmId !== visibleRealm.id) {
@@ -1341,8 +1393,7 @@ function CollectionPage({
           return (
             <button
               key={candidate.id}
-              className={`collection-tab${visibleRealm.id === candidate.id ? " active" : ""}`}
-              disabled={!candidateUnlocked}
+              className={`collection-tab${visibleRealm.id === candidate.id ? " active" : ""}${candidateUnlocked ? "" : " locked"}`}
               style={{ "--realm-color": candidate.color } as CSSProperties}
               onClick={() => {
                 setSelectedRealm(candidate.id);
@@ -1352,8 +1403,10 @@ function CollectionPage({
                 void speakGuide(`這裡是${candidate.label}。請點下面已經收集到的角色。`);
               }}
             >
+              <span className="realm-icon" aria-hidden>{candidate.icon}</span>
               <strong>{candidate.shortLabel}</strong>
               <small>{realmOwnedCount(candidate.id, ownedCharacters)} / {realmTotalCount(candidate.id)}</small>
+              {!candidateUnlocked && <small>未解鎖</small>}
             </button>
           );
         })}
@@ -1367,6 +1420,13 @@ function CollectionPage({
         <strong>{collected} / {total}</strong>
         <span className="collection-stars">星星：{stars}</span>
       </div>
+
+      {!unlocked && (
+        <div className="collection-helper locked-note" style={{ "--realm-color": visibleRealm.color } as CSSProperties}>
+          <strong>這一區還沒解鎖。</strong>
+          <span>先把前面的動物朋友收集滿，這裡就會打開。</span>
+        </div>
+      )}
 
       {selectedCharacter && selectedOwned && (
         <CharacterInteractionPanel
@@ -1388,28 +1448,45 @@ function CollectionPage({
         </div>
       )}
 
-      <div className="collection-grid" aria-label={`${visibleRealm.label}角色`}>
-        {characters.map((character) => {
-          const count = ownedCount(ownedCharacters, character.characterId);
+      <div className="species-collection-list" aria-label={`${visibleRealm.label}角色`}>
+        {visibleSpecies.map((species) => {
+          const speciesCharacters = FAMILY_ROLES.map((role) => COLLECTIBLE_BY_ID.get(`${species.realmId}-${species.id}-${role.id}`)).filter(
+            (character): character is CollectibleCharacter => Boolean(character),
+          );
+          const speciesOwnedCount = speciesCharacters.filter((character) => ownedCount(ownedCharacters, character.characterId) > 0).length;
           return (
-            <CollectibleCard
-              key={character.characterId}
-              character={character}
-              owned={count > 0}
-              duplicateCount={count}
-              hearts={heartCount(characterHearts, character.characterId)}
-              canAddHeart={stars >= 3 && heartCount(characterHearts, character.characterId) < 10}
-              onAddHeart={() => onAddHeart(character.characterId)}
-              selected={selectedCharacter?.characterId === character.characterId}
-              onSelect={() => {
-                if (count > 0) {
-                  setSelectedCharacterId(character.characterId);
-                  setInteractionMessage("");
-                  playStartChime();
-                  void speakGuide(`這是${character.name}${character.familyRoleLabel}。可以加愛心，也可以看下面的角色互動。`);
-                }
-              }}
-            />
+            <section key={species.id} className="species-section" style={{ "--realm-color": visibleRealm.color } as CSSProperties}>
+              <div className="species-heading">
+                <span aria-hidden>{species.icon}</span>
+                <strong>{species.name}</strong>
+                <small>{speciesOwnedCount} / {FAMILY_ROLES.length}</small>
+              </div>
+              <div className="species-character-grid">
+                {speciesCharacters.map((character) => {
+                  const count = ownedCount(ownedCharacters, character.characterId);
+                  return (
+                    <CollectibleCard
+                      key={character.characterId}
+                      character={character}
+                      owned={count > 0}
+                      duplicateCount={count}
+                      hearts={heartCount(characterHearts, character.characterId)}
+                      canAddHeart={stars >= 3 && heartCount(characterHearts, character.characterId) < 10}
+                      onAddHeart={() => onAddHeart(character.characterId)}
+                      selected={selectedCharacter?.characterId === character.characterId}
+                      onSelect={() => {
+                        if (count > 0) {
+                          setSelectedCharacterId(character.characterId);
+                          setInteractionMessage("");
+                          playStartChime();
+                          void speakGuide(`這是${character.name}${character.familyRoleLabel}。可以加愛心，也可以看下面的角色互動。`);
+                        }
+                      }}
+                    />
+                  );
+                })}
+              </div>
+            </section>
           );
         })}
       </div>

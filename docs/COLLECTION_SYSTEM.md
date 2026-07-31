@@ -118,14 +118,20 @@ The gacha page is designed as a toddler-facing page, not an adult settings page.
 - Entering the page speaks a short guide automatically.
 - The gacha button stays near the top of the page and includes a clear gift graphic.
 - Realm collection progress appears below the gacha machine.
+- Each realm progress card is clickable and opens that realm's collection page.
+- Realm cards should use recognizable icons: land, sea, sky, and space must read visually before a child can read the words.
 - Pressing the gacha button plays a start sound, speaks that the draw is starting, briefly animates, then reveals the result.
 - The result speaks whether the child met a new character or a duplicate.
+- The draw result card is clickable and opens that character's personal collection panel.
 
 The collection page also speaks on entry.
 
 - Realm tabs are shown first.
 - Choosing a realm plays a sound and speaks which realm the child is viewing.
-- The character list is the main navigation surface.
+- All four realms can be opened from the tabs. Locked realms may be viewed, but their characters remain unavailable until unlocked.
+- The character list is grouped by species.
+- Each species section shows the species icon, species name, and collected count out of 9.
+- Each species section shows the 9 family roles in a compact grid.
 - A collected character must be tapped before its affection and interaction panel opens.
 - Tapping a character plays a sound and speaks that the child can add hearts or open interactions.
 - Adding a heart spends 3 stars, plays a reward sound, and speaks the new heart total.

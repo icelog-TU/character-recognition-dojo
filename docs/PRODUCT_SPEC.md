@@ -74,7 +74,10 @@ The app has a character collection system connected to lesson completion.
 - Each species has 9 family roles: 爺爺, 奶奶, 爸爸, 媽媽, 哥哥, 姐姐, 弟弟, 妹妹, 寶寶.
 - Current planned total is 540 collectible characters.
 - The gacha page puts the gift-style draw button near the top, with realm collection progress below it.
+- The realm progress blocks on the gacha page are clickable and open the matching realm in the collection page.
+- A gacha result card is clickable and opens that character's personal collection panel.
 - The collection page shows realm blocks first and a tappable character list below. A character detail panel opens only after the child taps an owned character.
+- The character list is grouped by species, with each species showing 9 family-role cards.
 - Collection actions should provide sound feedback: page entry, realm selection, character selection, adding hearts, and opening interactions.
 
 Final character images should not be generated all at once. First test one complete 9-role species family, approve the art direction, then generate assets in reviewed batches.

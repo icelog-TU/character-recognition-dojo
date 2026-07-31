@@ -1753,6 +1753,8 @@ button.char-token {
   display: grid;
   align-content: center;
   gap: 4px;
+  font: inherit;
+  cursor: pointer;
 }
 
 .realm-card.active,
@@ -1762,6 +1764,7 @@ button.char-token {
 }
 
 .realm-card.locked,
+.collection-tab.locked,
 .collection-tab:disabled {
   border-color: var(--line);
   border-left-color: #b9b1a8;
@@ -1773,6 +1776,17 @@ button.char-token {
 .collection-tab small {
   color: var(--muted);
   font-weight: 800;
+}
+
+.realm-icon {
+  color: inherit;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.realm-card .realm-icon,
+.collection-tab .realm-icon {
+  color: inherit;
 }
 
 .gacha-machine {
@@ -1907,6 +1921,21 @@ button.char-token {
   font-weight: 800;
 }
 
+.draw-result-button {
+  width: 100%;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.draw-result-button small {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--realm-color);
+  font-weight: 900;
+}
+
 .draw-result h2 {
   margin: 3px 0;
   font-size: 1.5rem;
@@ -1952,9 +1981,43 @@ button.char-token {
   gap: 10px;
 }
 
+.species-collection-list {
+  display: grid;
+  gap: 16px;
+}
+
+.species-section {
+  display: grid;
+  gap: 9px;
+}
+
+.species-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 1.12rem;
+}
+
+.species-heading span {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.species-heading small {
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.species-character-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
 .collectible-card {
   min-width: 0;
-  min-height: 142px;
+  min-height: 118px;
   display: grid;
   justify-items: center;
   align-content: center;
