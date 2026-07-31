@@ -13,6 +13,10 @@ dist-ssr
 *.local
 tmp-mobile-check*.png
 tmp-chrome-profile-*/
+curriculum-workflow/audio-duration-report.json
+curriculum-workflow/audio-inbox/**
+!curriculum-workflow/audio-inbox/
+!curriculum-workflow/audio-inbox/README.md
 
 # Editor directories and files
 .vscode/*

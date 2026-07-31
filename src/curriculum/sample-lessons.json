@@ -4,7 +4,12 @@
     {
       "id": "L001",
       "order": 1,
-      "newChars": ["一", "二", "三", "人"],
+      "newChars": [
+        "一",
+        "二",
+        "三",
+        "人"
+      ],
       "zhuyin": {
         "一": "ㄧ",
         "二": "ㄦˋ",
@@ -24,7 +29,7 @@
           "spokenText": "人",
           "focusChar": "人",
           "imagePrompt": "A warm simple children's picture book illustration of one person standing alone, friendly expression, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": "/assets/lessons/L001/images/L001-S01.png",
+          "imageSrc": "/assets/lessons/L001/images/L001-S01.webp",
           "approved": true,
           "audio": null
         },
@@ -34,7 +39,7 @@
           "spokenText": "一人",
           "focusChar": "一",
           "imagePrompt": "A warm simple children's picture book illustration of one person clearly standing in the scene, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": "/assets/lessons/L001/images/L001-S02.png",
+          "imageSrc": "/assets/lessons/L001/images/L001-S02.webp",
           "approved": true,
           "audio": null
         },
@@ -44,7 +49,7 @@
           "spokenText": "二人",
           "focusChar": "二",
           "imagePrompt": "A warm simple children's picture book illustration of two people standing together, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": "/assets/lessons/L001/images/L001-S03.png",
+          "imageSrc": "/assets/lessons/L001/images/L001-S03.webp",
           "approved": true,
           "audio": null
         },
@@ -54,7 +59,7 @@
           "spokenText": "三人",
           "focusChar": "三",
           "imagePrompt": "A warm simple children's picture book illustration of three people standing together, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": "/assets/lessons/L001/images/L001-S04.png",
+          "imageSrc": "/assets/lessons/L001/images/L001-S04.webp",
           "approved": true,
           "audio": null
         }
@@ -63,7 +68,9 @@
     {
       "id": "L002",
       "order": 2,
-      "newChars": ["個"],
+      "newChars": [
+        "個"
+      ],
       "zhuyin": {
         "個": "ㄍㄜˋ"
       },
@@ -105,7 +112,9 @@
     {
       "id": "L003",
       "order": 3,
-      "newChars": ["大"],
+      "newChars": [
+        "大"
+      ],
       "zhuyin": {
         "大": "ㄉㄚˋ"
       },

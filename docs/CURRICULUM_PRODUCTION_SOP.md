@@ -16,6 +16,26 @@ This app treats AI output as draft material. A lesson enters the shipping curric
 10. Run `npm run validate:curriculum`, `npm run build`, and `npm run lint`.
 11. Before selling or shipping a finished set, run `npm run validate:production`.
 
+## Asset Commands
+
+Optimize reviewed lesson images:
+
+```bash
+npm run assets:images -- --lesson L001 --remove-original
+```
+
+This converts referenced PNG/JPG files to WebP, updates `imageSrc`, and can remove the original PNG/JPG when `--remove-original` is provided.
+If the command cannot find ImageMagick right after installation, reopen the terminal or set `MAGICK_PATH` to the full `magick.exe` path.
+
+Process reviewed AI audio:
+
+```bash
+npm run assets:audio -- --lesson L001
+```
+
+Put source audio files in `curriculum-workflow/audio-inbox/L001/` first. The script writes normalized `.m4a` files to `public/assets/lessons/L001/audio/` and creates `curriculum-workflow/audio-duration-report.json`.
+If the command cannot find FFmpeg right after installation, reopen the terminal or set `FFMPEG_PATH` and `FFPROBE_PATH` to the full executable paths.
+
 ## Request File
 
 Example:
