@@ -57,6 +57,7 @@ Rules:
 {
   "id": "L001-S01",
   "text": "大大",
+  "displayLines": ["大大"],
   "spokenText": "大大",
   "focusChar": "大",
   "imagePrompt": "A warm simple children's picture book illustration...",
@@ -76,6 +77,7 @@ Rules:
 Rules:
 
 - `text` is what appears on screen.
+- `displayLines` is optional. Use it when a sentence needs teacher-approved visual line breaks, such as `["一個", "大大的人"]`. It must contain the same Han characters as `text` in the same order.
 - `spokenText` is what the audio says. Use this to omit punctuation from reading.
 - `focusChar` is the preferred target for games.
 - `imagePrompt` is the reviewed prompt for generating or sourcing a picture for this sentence.

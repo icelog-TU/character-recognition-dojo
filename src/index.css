@@ -1126,14 +1126,21 @@ button {
 }
 
 .sentence-line {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px 12px;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
   min-height: 84px;
   padding: 10px;
   user-select: none;
+}
+
+.sentence-line-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 12px;
+  max-width: 100%;
 }
 
 .char-token {
@@ -1639,16 +1646,13 @@ button.char-token {
 }
 
 .picture-sentence-card .sentence-line {
-  flex-wrap: nowrap;
   gap: 6px;
   min-height: 76px;
-  overflow-x: auto;
   padding: 8px 4px;
-  scrollbar-width: none;
 }
 
-.picture-sentence-card .sentence-line::-webkit-scrollbar {
-  display: none;
+.picture-sentence-card .sentence-line-row {
+  gap: 5px;
 }
 
 .picture-sentence-card .char-token {

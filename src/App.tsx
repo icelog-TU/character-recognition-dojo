@@ -1926,25 +1926,33 @@ function SentenceCard({
   activeCharIndex: number | null;
 }) {
   let hanIndex = -1;
+  const displayLines = sentence.displayLines?.length ? sentence.displayLines : [sentence.text];
   return (
     <div className="sentence-card">
       <div className="sentence-line" aria-label={sentence.text}>
-        {Array.from(sentence.text).map((char, index) => {
-          if (!isHan(char)) {
-            return (
-              <span key={`${char}-${index}`} className="punctuation">
-                {char}
-              </span>
-            );
-          }
-          hanIndex += 1;
-          return (
-            <span key={`${char}-${index}`} className={`char-token${hanIndex === activeCharIndex ? " active" : ""}`}>
-              <span className="hanzi">{char}</span>
-              <Zhuyin value={zhuyinMap.get(char) ?? ""} />
-            </span>
-          );
-        })}
+        {displayLines.map((line, lineIndex) => (
+          <div key={`${sentence.id}-line-${lineIndex}`} className="sentence-line-row">
+            {Array.from(line).map((char, index) => {
+              if (!isHan(char)) {
+                return (
+                  <span key={`${char}-${lineIndex}-${index}`} className="punctuation">
+                    {char}
+                  </span>
+                );
+              }
+              hanIndex += 1;
+              return (
+                <span
+                  key={`${char}-${lineIndex}-${index}`}
+                  className={`char-token${hanIndex === activeCharIndex ? " active" : ""}`}
+                >
+                  <span className="hanzi">{char}</span>
+                  <Zhuyin value={zhuyinMap.get(char) ?? ""} />
+                </span>
+              );
+            })}
+          </div>
+        ))}
       </div>
     </div>
   );

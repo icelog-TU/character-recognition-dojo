@@ -25,6 +25,7 @@ export interface OriginHint {
 export interface LessonSentence {
   id: string;
   text: string;
+  displayLines?: string[];
   spokenText: string;
   focusChar: string;
   imagePrompt: string;

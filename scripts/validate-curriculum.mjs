@@ -57,6 +57,15 @@ for (let i = 0; i < sorted.length; i += 1) {
 
   for (const sentence of lesson.sentences ?? []) {
     const chars = hanChars(sentence.text);
+
+    if (sentence.displayLines) {
+      if (!Array.isArray(sentence.displayLines)) {
+        errors.push(`${sentence.id}: displayLines must be an array when provided.`);
+      } else if (sentence.displayLines.join("") !== sentence.text) {
+        errors.push(`${sentence.id}: displayLines must join back to text.`);
+      }
+    }
+
     for (const char of chars) {
       if (!currentAllowed.has(char)) {
         errors.push(`${sentence.id}: uses locked character ${char}.`);
