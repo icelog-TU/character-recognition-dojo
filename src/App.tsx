@@ -816,6 +816,7 @@ function LessonPanel({
   const [speakingTarget, setSpeakingTarget] = useState<SpeechTarget>(null);
   const [rewardState, setRewardState] = useState<"waiting" | "ready" | "claiming" | "claimed">("waiting");
   const [resetVersion, setResetVersion] = useState(0);
+  const advanceRunRef = useRef(0);
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
@@ -890,10 +891,20 @@ function LessonPanel({
   }
 
   async function handleAdvanceStage(nextStage: number) {
+    if (advancingStage === nextStage) {
+      advanceRunRef.current += 1;
+      stopPlayback();
+      setActiveStage(nextStage);
+      setAdvancingStage(null);
+      return;
+    }
     if (advancingStage !== null) return;
+    const runId = advanceRunRef.current + 1;
+    advanceRunRef.current = runId;
     setAdvancingStage(nextStage);
     playStartChime();
     await Promise.all([speakGuide(`${GUIDE_TEXT.stageAdvance} ${stageLabel(nextStage)}。`), waitMs(820)]);
+    if (advanceRunRef.current !== runId) return;
     setActiveStage(nextStage);
     setAdvancingStage(null);
   }
@@ -1092,6 +1103,8 @@ function LessonPanel({
             setAdvancingStage(null);
             setSpeakingTarget(null);
             setRewardState("waiting");
+            advanceRunRef.current += 1;
+            stopPlayback();
             setResetVersion((version) => version + 1);
           }}
         >
@@ -1158,8 +1171,8 @@ function StageAdvancePrompt({
       >
         {text}
       </NarrationLine>
-      <button className={`btn stage-advance-button${busy ? " starting" : ""}`} disabled={busy} onClick={onAdvance}>
-        {busy ? "走囉" : buttonText}
+      <button className={`btn stage-advance-button${busy ? " starting" : ""}`} onClick={onAdvance}>
+        {busy ? "跳過語音" : buttonText}
       </button>
     </section>
   );
@@ -1676,10 +1689,15 @@ function resumePlayback() {
     });
     changed = true;
   }
-  if ("speechSynthesis" in window && window.speechSynthesis.paused) {
+  if ("speechSynthesis" in window && activeTtsFinish) {
     window.speechSynthesis.resume();
     ttsPausedByApp = false;
     changed = true;
+    window.setTimeout(() => {
+      if (!activeTtsFinish || !("speechSynthesis" in window)) return;
+      window.speechSynthesis.resume();
+      emitPlaybackState();
+    }, 120);
   } else if (ttsPausedByApp) {
     ttsPausedByApp = false;
     changed = true;
