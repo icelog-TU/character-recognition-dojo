@@ -111,6 +111,26 @@ This keeps collection progress moving while still allowing repeated draws.
 
 The draw rate can be tuned later after real playtesting. Do not lock final economy numbers until at least the first 30-50 lessons and the first gacha prototype have been tested by a child.
 
+## Page Flow And Child Guidance
+
+The gacha page is designed as a toddler-facing page, not an adult settings page.
+
+- Entering the page speaks a short guide automatically.
+- The gacha button stays near the top of the page and includes a clear gift graphic.
+- Realm collection progress appears below the gacha machine.
+- Pressing the gacha button plays a start sound, speaks that the draw is starting, briefly animates, then reveals the result.
+- The result speaks whether the child met a new character or a duplicate.
+
+The collection page also speaks on entry.
+
+- Realm tabs are shown first.
+- Choosing a realm plays a sound and speaks which realm the child is viewing.
+- The character list is the main navigation surface.
+- A collected character must be tapped before its affection and interaction panel opens.
+- Tapping a character plays a sound and speaks that the child can add hearts or open interactions.
+- Adding a heart spends 3 stars, plays a reward sound, and speaks the new heart total.
+- Opening an interaction speaks the interaction line.
+
 ## Asset Strategy
 
 Do not generate hundreds of final character images before the art direction is approved.

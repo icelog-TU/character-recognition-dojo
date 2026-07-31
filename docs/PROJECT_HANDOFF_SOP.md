@@ -69,6 +69,16 @@ The prototype has a working local collection system:
 - Each species has 9 family roles: 爺爺, 奶奶, 爸爸, 媽媽, 哥哥, 姐姐, 弟弟, 妹妹, 寶寶.
 - Current total collection size is 540 characters.
 
+Current page rules:
+
+- Entering `轉蛋` speaks a short guide.
+- The gacha draw button is the first major control on the page. It has a gift graphic, costs 10 coins, plays a sound, speaks that the draw is starting, and then reveals the result.
+- Realm progress is shown below the gacha machine.
+- Entering `角色收藏` speaks a short guide.
+- The collection page shows realm tabs first, then a tappable character list.
+- Character detail, affection hearts, and interactions open only after tapping an owned character.
+- Realm selection, character selection, heart spending, and interaction opening all need sound feedback.
+
 Do not batch-generate all final role images yet. First lock one species family's visual style, review it on phone, then generate character art in small approved batches.
 
 See `docs/COLLECTION_SYSTEM.md` for the full economy and asset plan.

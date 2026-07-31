@@ -1834,11 +1834,54 @@ button.char-token {
 }
 
 .gacha-draw-button {
-  min-width: 128px;
-  min-height: 58px;
-  background: #d94735;
+  min-width: 154px;
+  min-height: 82px;
+  display: inline-grid;
+  justify-items: center;
+  align-content: center;
+  gap: 2px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff7a2f 0%, #f0445e 48%, #e22e8f 100%);
   color: #fff;
-  box-shadow: 0 0 0 6px rgba(217, 71, 53, 0.14), 0 12px 24px rgba(217, 71, 53, 0.24);
+  font-size: 1.05rem;
+  box-shadow: 0 0 0 8px rgba(240, 68, 94, 0.14), 0 16px 28px rgba(217, 71, 53, 0.28);
+}
+
+.gacha-draw-button small {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.gacha-button-art {
+  font-size: 1.8rem;
+  line-height: 1;
+  filter: drop-shadow(0 3px 0 rgba(105, 34, 22, 0.2));
+}
+
+.gacha-draw-button.starting {
+  animation: reward-button-pulse 0.5s ease-in-out infinite alternate;
+}
+
+.collection-helper {
+  display: grid;
+  gap: 5px;
+  border: 1px solid color-mix(in srgb, var(--realm-color) 38%, #fff);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--realm-color) 8%, #fff);
+  padding: 14px;
+  color: var(--ink);
+}
+
+.collection-helper strong {
+  color: var(--realm-color);
+  font-size: 1.05rem;
+}
+
+.collection-helper span {
+  color: var(--muted);
+  font-weight: 800;
 }
 
 .draw-result,

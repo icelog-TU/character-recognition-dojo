@@ -52,6 +52,8 @@
   - 角色收藏: collected character page.
   - 設定: account, audio, and data settings.
 - Pages are separate sections. Do not force every feature into one long page.
+- Every top-level page should speak a short child-facing guide when entered.
+- Page guidance may use browser TTS; lesson character and sentence audio should use prepared AI audio.
 
 ## Reward Collection
 
@@ -71,6 +73,9 @@ The app has a character collection system connected to lesson completion.
 - Each realm has 15 species.
 - Each species has 9 family roles: 爺爺, 奶奶, 爸爸, 媽媽, 哥哥, 姐姐, 弟弟, 妹妹, 寶寶.
 - Current planned total is 540 collectible characters.
+- The gacha page puts the gift-style draw button near the top, with realm collection progress below it.
+- The collection page shows realm blocks first and a tappable character list below. A character detail panel opens only after the child taps an owned character.
+- Collection actions should provide sound feedback: page entry, realm selection, character selection, adding hearts, and opening interactions.
 
 Final character images should not be generated all at once. First test one complete 9-role species family, approve the art direction, then generate assets in reviewed batches.
 

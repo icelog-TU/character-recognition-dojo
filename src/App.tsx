@@ -183,6 +183,15 @@ const GUIDE_TEXT = {
   rewardWon: "太棒了！你得到金幣和星星。要下一課，請按紅色按鈕。要回首頁休息，請按白色按鈕。",
 } as const;
 
+const PAGE_GUIDE_TEXT: Record<AppPage, string> = {
+  practice: GUIDE_TEXT.homeWelcome,
+  catalog: "這裡是漢字總覽。你可以找找看已經解鎖的字，點進去重新練習。",
+  records: "這裡是學習記錄。你可以看看自己有多少金幣、星星和完成的課。",
+  gacha: "這裡是轉蛋。請按上面有禮物圖案的大按鈕，用十個金幣抽一個角色。",
+  collection: "這裡是角色收藏。先選動物區塊，再點下面的角色，可以加愛心，也可以看角色互動。",
+  settings: "這裡是設定。之後可以調整聲音和資料。",
+};
+
 const SMALL_ZH_NUMBERS = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 const DISTRACTOR_ZHUYIN: Record<string, string> = {
   小: "ㄒㄧㄠˇ",
@@ -500,7 +509,8 @@ function App() {
   const streakDays = completedOrders.size > 0 ? 1 : 0;
 
   useEffect(() => {
-    if (page === "practice" && !lessonOpen) speakGuide(GUIDE_TEXT.homeWelcome);
+    if (page === "practice" && lessonOpen) return;
+    speakGuide(PAGE_GUIDE_TEXT[page]);
   }, [page, lessonOpen]);
 
   useEffect(() => {
@@ -545,14 +555,17 @@ function App() {
   }
 
   function handleAddHeart(characterId: string) {
-    if (stars < 3 || !COLLECTIBLE_BY_ID.has(characterId)) return;
+    const character = COLLECTIBLE_BY_ID.get(characterId);
+    if (stars < 3 || !character) return;
     if (heartCount(characterHearts, characterId) >= 10) return;
+    const nextHearts = heartCount(characterHearts, characterId) + 1;
     setStars((value) => Math.max(0, value - 3));
     setCharacterHearts((prev) => ({
       ...prev,
       [characterId]: heartCount(prev, characterId) + 1,
     }));
     playCelebrateChime();
+    void speakGuide(`${character.name}${character.familyRoleLabel}得到一顆愛心。現在有${nextHearts}顆愛心。`);
   }
 
   function handleCharacterInteractionSeen(characterId: string, index: number) {
@@ -1200,7 +1213,9 @@ function GachaPage({
   function handleDraw() {
     if (!canDraw || drawing) return;
     setDrawing(true);
-    onDraw();
+    playStartChime();
+    void speakGuide("轉蛋開始，看看是哪一個角色跑出來。");
+    window.setTimeout(() => onDraw(), 520);
     window.setTimeout(() => setDrawing(false), 900);
   }
 
@@ -1211,7 +1226,25 @@ function GachaPage({
         <p>每次轉蛋需要十個金幣。先收集地上的生物，再前往海裡、天空和外太空。</p>
       </div>
 
-      <div className="realm-track">
+      <div className="gacha-machine" style={{ "--realm-color": realm.color } as CSSProperties}>
+        <div className={`gacha-orb${drawing ? " drawing" : ""}`} aria-hidden>
+          <span>{realm.shortLabel}</span>
+        </div>
+        <div className="gacha-copy">
+          <h2>{realm.label}</h2>
+          <p>{realm.description}</p>
+          <strong>金幣：{coins}</strong>
+          <small>本區進度 {collected} / {total}</small>
+          <small>{nextIsGuaranteed ? "下一抽保證新角色" : `保底進度 ${pityCount} / 5`}</small>
+        </div>
+        <button className={`btn gacha-draw-button${drawing ? " starting" : ""}`} disabled={!canDraw || drawing} onClick={handleDraw}>
+          <span className="gacha-button-art" aria-hidden>🎁</span>
+          <span>{coins < 10 ? "金幣不夠" : drawing ? "轉動中" : "轉蛋一次"}</span>
+          <small>10 金幣</small>
+        </button>
+      </div>
+
+      <div className="realm-track gacha-progress-track" aria-label="蒐集進度">
         {CREATURE_REALMS.map((candidate) => {
           const unlocked = realmUnlocked(candidate.id, ownedCharacters);
           const realmCount = realmOwnedCount(candidate.id, ownedCharacters);
@@ -1227,22 +1260,6 @@ function GachaPage({
             </div>
           );
         })}
-      </div>
-
-      <div className="gacha-machine" style={{ "--realm-color": realm.color } as CSSProperties}>
-        <div className={`gacha-orb${drawing ? " drawing" : ""}`} aria-hidden>
-          <span>{realm.shortLabel}</span>
-        </div>
-        <div className="gacha-copy">
-          <h2>{realm.label}</h2>
-          <p>{realm.description}</p>
-          <strong>金幣：{coins}</strong>
-          <small>本區進度 {collected} / {total}</small>
-          <small>{nextIsGuaranteed ? "下一抽保證新角色" : `保底進度 ${pityCount} / 5`}</small>
-        </div>
-        <button className={`btn gacha-draw-button${drawing ? " starting" : ""}`} disabled={!canDraw || drawing} onClick={handleDraw}>
-          {coins < 10 ? "金幣不夠" : drawing ? "轉動中" : "抽一次"}
-        </button>
       </div>
 
       {lastResult ? (
@@ -1289,7 +1306,7 @@ function CollectionPage({
   const collected = realmOwnedCount(visibleRealm.id, ownedCharacters);
   const total = realmTotalCount(visibleRealm.id);
   const firstOwnedCharacter = characters.find((character) => ownedCount(ownedCharacters, character.characterId) > 0);
-  const selectedCharacter = selectedCharacterId ? COLLECTIBLE_BY_ID.get(selectedCharacterId) : firstOwnedCharacter;
+  const selectedCharacter = selectedCharacterId ? COLLECTIBLE_BY_ID.get(selectedCharacterId) : undefined;
   const selectedOwned = selectedCharacter ? ownedCount(ownedCharacters, selectedCharacter.characterId) > 0 : false;
   const selectedHearts = selectedCharacter ? heartCount(characterHearts, selectedCharacter.characterId) : 0;
 
@@ -1299,10 +1316,10 @@ function CollectionPage({
 
   useEffect(() => {
     if (selectedCharacter && selectedCharacter.realmId !== visibleRealm.id) {
-      setSelectedCharacterId(firstOwnedCharacter?.characterId ?? null);
+      setSelectedCharacterId(null);
       setInteractionMessage("");
     }
-  }, [firstOwnedCharacter, selectedCharacter, visibleRealm.id]);
+  }, [selectedCharacter, visibleRealm.id]);
 
   function handleInteract(character: CollectibleCharacter, interaction: CharacterInteraction, index: number) {
     setInteractionMessage(interaction.message);
@@ -1327,7 +1344,13 @@ function CollectionPage({
               className={`collection-tab${visibleRealm.id === candidate.id ? " active" : ""}`}
               disabled={!candidateUnlocked}
               style={{ "--realm-color": candidate.color } as CSSProperties}
-              onClick={() => setSelectedRealm(candidate.id)}
+              onClick={() => {
+                setSelectedRealm(candidate.id);
+                setSelectedCharacterId(null);
+                setInteractionMessage("");
+                playStartChime();
+                void speakGuide(`這裡是${candidate.label}。請點下面已經收集到的角色。`);
+              }}
             >
               <strong>{candidate.shortLabel}</strong>
               <small>{realmOwnedCount(candidate.id, ownedCharacters)} / {realmTotalCount(candidate.id)}</small>
@@ -1358,6 +1381,13 @@ function CollectionPage({
         />
       )}
 
+      {!selectedCharacter && firstOwnedCharacter && (
+        <div className="collection-helper" style={{ "--realm-color": visibleRealm.color } as CSSProperties}>
+          <strong>請點下面有顏色的角色。</strong>
+          <span>點進去以後，可以加愛心，也可以看角色互動。</span>
+        </div>
+      )}
+
       <div className="collection-grid" aria-label={`${visibleRealm.label}角色`}>
         {characters.map((character) => {
           const count = ownedCount(ownedCharacters, character.characterId);
@@ -1375,6 +1405,8 @@ function CollectionPage({
                 if (count > 0) {
                   setSelectedCharacterId(character.characterId);
                   setInteractionMessage("");
+                  playStartChime();
+                  void speakGuide(`這是${character.name}${character.familyRoleLabel}。可以加愛心，也可以看下面的角色互動。`);
                 }
               }}
             />
