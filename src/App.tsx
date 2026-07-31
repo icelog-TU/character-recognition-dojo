@@ -126,10 +126,8 @@ function App() {
   }, [page, lessonOpen]);
 
   function grantLessonReward(order: number, rewards: LessonReward) {
-    if (!completedOrders.has(order)) {
-      setCoins((value) => value + rewards.coins);
-      setStars((value) => value + rewards.stars);
-    }
+    setCoins((value) => value + rewards.coins);
+    setStars((value) => value + rewards.stars);
     setCompletedOrders((prev) => {
       const next = new Set(prev);
       next.add(order);
@@ -1088,6 +1086,8 @@ function RewardPanel({
 }) {
   const claimed = state === "claimed";
   const message = state === "ready" ? GUIDE_TEXT.rewardReady : GUIDE_TEXT.rewardWon;
+  const coinCount = useRewardCount(reward.coins, state !== "ready");
+  const starCount = useRewardCount(reward.stars, state !== "ready");
   return (
     <section className={`reward-panel active-block reward-${state}`} aria-label="領取獎勵">
       {state === "claiming" && (
@@ -1115,14 +1115,14 @@ function RewardPanel({
           <span className="reward-icon" aria-hidden>
             🪙
           </span>
-          <strong>+{reward.coins}</strong>
+          <strong className="reward-number">+{coinCount}</strong>
           <small>金幣</small>
         </div>
         <div className="reward-badge star">
           <span className="reward-icon" aria-hidden>
             ⭐
           </span>
-          <strong>+{reward.stars}</strong>
+          <strong className="reward-number">+{starCount}</strong>
           <small>星星</small>
         </div>
       </div>
@@ -1143,6 +1143,48 @@ function RewardPanel({
       )}
     </section>
   );
+}
+
+function useRewardCount(target: number, active: boolean) {
+  const frameRef = useRef(0);
+  const startedRef = useRef(false);
+  const [displayValue, setDisplayValue] = useState(target);
+
+  useEffect(() => {
+    window.cancelAnimationFrame(frameRef.current);
+    if (!active) {
+      startedRef.current = false;
+      setDisplayValue(target);
+      return;
+    }
+    if (startedRef.current) {
+      setDisplayValue((value) => Math.min(value, target));
+      return;
+    }
+
+    startedRef.current = true;
+    const durationMs = 3200;
+    const startTime = performance.now();
+    setDisplayValue(0);
+
+    function tick(now: number) {
+      const progress = Math.min((now - startTime) / durationMs, 1);
+      const steppedProgress = Math.floor(progress * target) / Math.max(target, 1);
+      const eased = 1 - Math.pow(1 - steppedProgress, 2.4);
+      const nextValue = Math.min(target, Math.max(0, Math.round(target * eased)));
+      setDisplayValue(nextValue);
+      if (progress < 1) {
+        frameRef.current = window.requestAnimationFrame(tick);
+      } else {
+        setDisplayValue(target);
+      }
+    }
+
+    frameRef.current = window.requestAnimationFrame(tick);
+    return () => window.cancelAnimationFrame(frameRef.current);
+  }, [active, target]);
+
+  return displayValue;
 }
 
 function FindManyChallenge({

@@ -900,6 +900,15 @@ button {
   line-height: 1;
 }
 
+.reward-number {
+  min-width: 3ch;
+  font-variant-numeric: tabular-nums;
+}
+
+.reward-claiming .reward-number {
+  animation: reward-number-pop 0.28s ease-in-out infinite;
+}
+
 .reward-badge small {
   color: var(--muted);
   font-weight: 800;
@@ -1393,6 +1402,16 @@ button.char-token {
   100% {
     transform: translateY(0) scale(0.98) rotate(-1deg);
     box-shadow: 0 12px 22px rgba(217, 71, 53, 0.12);
+  }
+}
+
+@keyframes reward-number-pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.16);
   }
 }
 
