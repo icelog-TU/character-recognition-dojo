@@ -51,7 +51,6 @@ const GUIDE_TEXT = {
   homeWelcome: "你好呀，歡迎來到認字練功房。請按下面紅色的大按鈕，我們來學認字吧。",
   homeNext: "先聽字，再找字，最後看圖片和句子。",
   lessonStep: "我們一步一步來。",
-  blockHear: "請按那些大大發光的紅色字，按下去聽它們的聲音。聽見聲音，你就做對了。要記住每個字和它的聲音喔。",
   toStageTwo: "第一階段完成了。請按下面紅色的大按鈕，進入第二階段的練習。",
   findComplete: "好棒啊，你都找到了。",
   toStageThree: "請按下面紅色的大按鈕，進入第三階段的練習。",
@@ -92,7 +91,16 @@ function stageLabel(stage: number): string {
 }
 
 function lessonIntroText(lesson: Lesson): string {
-  return `第${smallZhNumber(lesson.order)}課，我們要學${smallZhNumber(lesson.newChars.length)}個很重要的字，都在下面喔。${GUIDE_TEXT.lessonStep}`;
+  const charCount = lesson.newChars.length;
+  if (charCount === 1) return `第${smallZhNumber(lesson.order)}課，我們要學一個很重要的字，就在下面喔。`;
+  return `第${smallZhNumber(lesson.order)}課，我們要學${smallZhNumber(charCount)}個很重要的字，都在下面喔。${GUIDE_TEXT.lessonStep}`;
+}
+
+function hearPromptText(lesson: Lesson): string {
+  if (lesson.newChars.length === 1) {
+    return "請按那個大大發光的紅色字，按下去聽它的聲音。聽見聲音，你就做對了。要記住這個字和它的聲音喔。";
+  }
+  return "請按那些大大發光的紅色字，按下去聽它們的聲音。聽見聲音，你就做對了。要記住每個字和它的聲音喔。";
 }
 
 function lessonCharEntries(lesson: Lesson): LessonCharEntry[] {
@@ -817,14 +825,15 @@ function LessonPanel({
   const lessonReward = { coins: 30, stars: 12 };
   const hasNextLesson = lessons.some((candidate) => candidate.order === lesson.order + 1);
   const lessonIntro = lessonIntroText(lesson);
+  const hearPrompt = hearPromptText(lesson);
 
   useEffect(() => {
     preloadLessonAudio(lesson);
   }, [lesson]);
 
   useEffect(() => {
-    if (!locked) void speakForTarget("stage1", `${lessonIntro} ${GUIDE_TEXT.blockHear}`);
-  }, [lesson.id, lessonIntro, locked]);
+    if (!locked) void speakForTarget("stage1", `${lessonIntro} ${hearPrompt}`);
+  }, [lesson.id, lessonIntro, hearPrompt, locked]);
 
   useEffect(() => {
     if (soundUnlocked && activeStage === 1) void speakForTarget("advance2", GUIDE_TEXT.toStageTwo);
@@ -953,13 +962,13 @@ function LessonPanel({
           </div>
         )}
         <NarrationLine
-          text={GUIDE_TEXT.blockHear}
+          text={hearPrompt}
           target="stage1"
           onSpeakStart={setSpeakingTarget}
           onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
           className="block-note"
         >
-          {GUIDE_TEXT.blockHear}
+          {hearPrompt}
         </NarrationLine>
         {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
       </LessonBlock>
@@ -1427,12 +1436,13 @@ interface FindItem {
 
 function makeFindChallenge(lesson: Lesson): FindItem[] {
   const targets = lessonChars(lesson);
+  const targetCopies = targets.length === 1 ? [targets[0], targets[0], targets[0]] : targets;
   const distractors = hanChars(lesson.sentences.map((sentence) => sentence.text).join(""))
     .filter((char) => !targets.includes(char))
     .slice(0, 3);
   const fallback = ["小", "山", "口", "手", "上", "下", "水", "火"].filter((char) => !targets.includes(char));
-  const pool = [...distractors, ...fallback].slice(0, Math.max(2, 6 - targets.length));
-  const chars = [...targets, ...pool].slice(0, 6);
+  const pool = [...distractors, ...fallback].slice(0, Math.max(2, 6 - targetCopies.length));
+  const chars = [...targetCopies, ...pool].slice(0, 6);
   return chars.map((char, index) => ({ id: `${char}-${index}`, char }));
 }
 
@@ -1464,7 +1474,9 @@ function PictureSentencePreview({
   }, [allPicturesDone, disabled, done, onDone]);
 
   function handleSentenceTap(sentence: LessonSentence, index: number) {
-    if (disabled || index !== currentSentenceIndex || playingSentenceId) return;
+    const canPlayCompleted = completedSentenceIds.has(sentence.id);
+    const canPlayCurrent = index === currentSentenceIndex;
+    if (disabled || (!canPlayCurrent && !canPlayCompleted) || playingSentenceId) return;
     void playSentence(sentence, {
       onTime: (elapsedMs) => {
         setPlayingSentenceId(sentence.id);
@@ -1478,7 +1490,7 @@ function PictureSentencePreview({
           next.add(sentence.id);
           return next;
         });
-        setCurrentSentenceIndex((current) => Math.min(current + 1, lesson.sentences.length));
+        if (canPlayCurrent) setCurrentSentenceIndex((current) => Math.min(current + 1, lesson.sentences.length));
       },
       onError: () => {
         setActiveCharIndex(null);
@@ -1508,7 +1520,7 @@ function PictureSentencePreview({
               isCompleted ? " completed-picture" : ""
             }`}
             key={sentence.id}
-            disabled={disabled || !isCurrent || Boolean(playingSentenceId)}
+            disabled={disabled || (!isCurrent && !isCompleted) || Boolean(playingSentenceId)}
             onClick={() => handleSentenceTap(sentence, index)}
           >
             {sentence.imageSrc ? (
@@ -1536,9 +1548,18 @@ function playSentence(sentence: LessonSentence, options?: AudioPlayOptions) {
   if (sentence.audio?.src) {
     return playAudioSrc(sentence.audio.src, options);
   }
-  playSpokenText(sentence.spokenText);
-  options?.onEnded?.();
-  return Promise.resolve();
+  let frame = 0;
+  const startTime = performance.now();
+  const tick = () => {
+    options?.onTime?.(performance.now() - startTime);
+    frame = window.requestAnimationFrame(tick);
+  };
+  options?.onTime?.(0);
+  frame = window.requestAnimationFrame(tick);
+  return playSpokenText(sentence.spokenText).then(() => {
+    window.cancelAnimationFrame(frame);
+    options?.onEnded?.();
+  });
 }
 
 function playLessonChar(lesson: Lesson, char: string) {
@@ -1546,8 +1567,7 @@ function playLessonChar(lesson: Lesson, char: string) {
   if (src) {
     return playAudioSrc(src);
   }
-  playSpokenText(char);
-  return Promise.resolve();
+  return playSpokenText(char);
 }
 
 function getCachedAudio(src: string) {
@@ -1713,7 +1733,12 @@ function waitMs(ms: number) {
 
 function activeTimingIndex(sentence: LessonSentence, elapsedMs: number) {
   const timings = sentence.audio?.charTimings ?? [];
-  if (timings.length === 0) return null;
+  if (timings.length === 0) {
+    const hanCount = hanChars(sentence.text).length;
+    if (hanCount === 0) return null;
+    const estimatedDuration = Math.max(900, hanCount * 520);
+    return Math.min(Math.floor((elapsedMs / estimatedDuration) * hanCount), hanCount - 1);
+  }
   const active = timings.find((timing) => elapsedMs >= timing.startMs && elapsedMs <= timing.endMs);
   return active?.charIndex ?? null;
 }
