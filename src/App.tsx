@@ -1437,11 +1437,11 @@ interface FindItem {
 function makeFindChallenge(lesson: Lesson): FindItem[] {
   const targets = lessonChars(lesson);
   const targetCopies = targets.length === 1 ? [targets[0], targets[0], targets[0]] : targets;
-  const distractors = hanChars(lesson.sentences.map((sentence) => sentence.text).join(""))
-    .filter((char) => !targets.includes(char))
-    .slice(0, 3);
+  const distractors = uniqueChars(
+    hanChars(lesson.sentences.map((sentence) => sentence.text).join("")).filter((char) => !targets.includes(char)),
+  ).slice(0, 3);
   const fallback = ["小", "山", "口", "手", "上", "下", "水", "火"].filter((char) => !targets.includes(char));
-  const pool = [...distractors, ...fallback].slice(0, Math.max(2, 6 - targetCopies.length));
+  const pool = uniqueChars([...distractors, ...fallback]).slice(0, Math.max(2, 6 - targetCopies.length));
   const chars =
     targets.length === 1
       ? spreadSingleTargetCards(targetCopies[0], pool)
@@ -1457,11 +1457,15 @@ function spreadSingleTargetCards(target: string, distractors: string[]): string[
     [1, 3, 4],
   ];
   const targetPositions = layouts[Math.floor(Math.random() * layouts.length)];
-  const cards = Array<string>(6);
+  const cards: Array<string | null> = Array.from({ length: 6 }, () => null);
   for (const position of targetPositions) cards[position] = target;
   const shuffledDistractors = shuffleItems(distractors).slice(0, 3);
   let distractorIndex = 0;
   return cards.map((char) => char ?? shuffledDistractors[distractorIndex++]);
+}
+
+function uniqueChars(chars: string[]): string[] {
+  return [...new Set(chars)];
 }
 
 function shuffleItems<T>(items: T[]): T[] {
