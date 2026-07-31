@@ -26,6 +26,58 @@
 - Sentence games planned start: around L011 as Stage 4
 - L001-L010 should stay with the simpler three-block flow: listen, find, picture sentence.
 
+## Multi-Codex Collaboration SOP
+
+This repo may be developed by several Codex/GPT conversation threads at the same time. Each thread may have its own local clone. That is acceptable only if every clone points to the same GitHub repo and synchronizes through Git.
+
+Before starting work, always confirm the operating context:
+
+```bash
+git remote -v
+git fetch origin
+git status --short --branch
+git log -1 --oneline
+```
+
+Rules:
+
+- Treat `https://github.com/icelog-TU/character-recognition-dojo` as the shared source of truth.
+- If local `main` is behind `origin/main` and there are no local changes, run `git pull --ff-only origin main` before editing.
+- Do not start from an old commit when another Codex has already pushed newer work.
+- Prefer one branch per task instead of several Codex threads editing `main` directly.
+- Use clear branch names such as `codex/l008-curriculum`, `codex/collection-ui`, or `codex/audio-pipeline`.
+- Before editing, state which files or subsystem this thread owns for the current task.
+- Avoid two threads editing the same high-conflict files at the same time, especially `src/App.tsx`, `src/index.css`, `src/curriculum/sample-lessons.json`, and curriculum asset folders.
+- If two threads must touch the same file, the later thread must fetch/rebase first and inspect the latest diff before editing.
+- Never overwrite or revert changes made by another thread unless the user explicitly asks.
+
+Recommended work ownership:
+
+- Curriculum planning: `docs/CURRICULUM_LEDGER.md`, `curriculum-workflow/lesson-requests/`, generated lesson packets, and reviewed sentence drafts.
+- Shipping curriculum data: `src/curriculum/sample-lessons.json`; only one thread should edit this at a time.
+- Lesson assets: `public/assets/lessons/L###/` and `curriculum-workflow/audio-inbox/L###/`; only one thread should process a lesson's assets at a time.
+- App shell and lesson UI: `src/App.tsx` and `src/index.css`; coordinate before parallel edits.
+- Scripts and validation: `scripts/*`, `src/types.ts`, and `src/lib/curriculum.ts`.
+- Collection and gacha design: `docs/COLLECTION_SYSTEM.md`, collection-related data in `src/App.tsx`, and related CSS.
+
+Before pushing or asking the user to merge:
+
+```bash
+git fetch origin
+git status --short --branch
+npm run validate:curriculum
+npm run lint
+npm run build
+```
+
+If production assets were touched, also run:
+
+```bash
+npm run validate:production
+```
+
+Asset-writing commands that rewrite `src/curriculum/sample-lessons.json` must not run in parallel across threads. Run `assets:images`, `assets:audio`, and `assets:align` sequentially for one lesson at a time, and fetch/rebase before starting the next asset step if another thread has pushed curriculum changes.
+
 ## App 結構
 
 The app is not a single long worksheet. It uses a shared app shell:
@@ -318,6 +370,7 @@ Please first read:
 - docs/CURRICULUM_PRODUCTION_SOP.md
 - docs/CURRICULUM_SCHEMA.md
 
+Multiple Codex threads may be working on this repo. Before editing, run git fetch/status, confirm the current commit, and state which files or subsystem this thread owns.
 The app is a Taiwan zhuyin character-recognition app for young children.
 Do not use Hanyu pinyin.
 Sentence text is horizontal, with zhuyin vertically on the right of each Han character.
