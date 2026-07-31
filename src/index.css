@@ -647,11 +647,26 @@ button {
 
 .target-button {
   cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.target-button:not(.heard) {
+  background: #fff1ee;
+  border-color: #d94735;
+  box-shadow: 0 0 0 6px rgba(217, 71, 53, 0.13), 0 12px 22px rgba(217, 71, 53, 0.18);
+  color: #9f261a;
+  animation: target-card-glow 1.7s ease-in-out infinite;
+}
+
+.target-button:not(.heard) .zhuyin-mark {
+  color: #9f261a;
 }
 
 .target-button.heard {
   border-color: var(--primary);
   background: var(--green-soft);
+  box-shadow: 0 0 0 4px rgba(34, 132, 123, 0.11);
+  color: var(--primary-strong);
 }
 
 .target-button:disabled {
@@ -988,6 +1003,18 @@ button.char-token {
   50% {
     box-shadow: 0 0 0 10px rgba(217, 71, 53, 0.08), 0 18px 32px rgba(217, 71, 53, 0.34);
     transform: scale(1.03);
+  }
+}
+
+@keyframes target-card-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 6px rgba(217, 71, 53, 0.12), 0 12px 22px rgba(217, 71, 53, 0.17);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(217, 71, 53, 0.07), 0 16px 28px rgba(217, 71, 53, 0.24);
+    transform: scale(1.025);
   }
 }
 

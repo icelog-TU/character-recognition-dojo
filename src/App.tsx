@@ -39,12 +39,14 @@ const RAINBOW_GROUPS = [
 const GUIDE_TEXT = {
   homeWelcome: "你好啊，請按下面紅色的大按鈕，我們來學認字吧。",
   homeNext: "先聽字，再找字，最後看圖片和句子。",
-  lessonWelcome: "我們一步一步來。先按大大的字，聽聽它怎麼念。",
-  blockHear: "每一張字卡都按一次。聽到聲音，就做得很好。",
+  lessonStep: "我們一步一步來。",
+  blockHear: "請按那些大大發光的紅色字，按下去聽它們的聲音。聽見聲音，你就做對了。要記住每個字和它的聲音喔。",
   blockFind: "找找看，這些字躲在哪裡。看到一樣的字，就點它。",
   blockPicture: "點一張圖，聽一句話。亮起來的字，就是現在念到的字。",
   learned: "都聽完了，就按我聽完了。",
 } as const;
+
+const SMALL_ZH_NUMBERS = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 
 function lessonChars(lesson: Lesson): string[] {
   return lesson.newChars;
@@ -52,6 +54,14 @@ function lessonChars(lesson: Lesson): string[] {
 
 function lessonLabel(lesson: Lesson): string {
   return lesson.newChars.join("");
+}
+
+function smallZhNumber(value: number): string {
+  return SMALL_ZH_NUMBERS[value] ?? String(value);
+}
+
+function lessonIntroText(lesson: Lesson): string {
+  return `第${smallZhNumber(lesson.order)}課，我們要學${smallZhNumber(lesson.newChars.length)}個很重要的字，都在下面喔。${GUIDE_TEXT.lessonStep}`;
 }
 
 function lessonCharEntries(lesson: Lesson): LessonCharEntry[] {
@@ -620,14 +630,15 @@ function LessonPanel({
   const usesSentenceGames = lesson.order >= 5;
   const requiredPracticeRounds = usesSentenceGames ? Math.min(lesson.requiredRounds, lesson.sentences.length) : 1;
   const lessonReady = soundUnlocked && findUnlocked && practiceDoneCount >= requiredPracticeRounds;
+  const lessonIntro = lessonIntroText(lesson);
 
   useEffect(() => {
     preloadLessonAudio(lesson);
   }, [lesson]);
 
   useEffect(() => {
-    if (!locked) speakGuide(`${GUIDE_TEXT.lessonWelcome} ${GUIDE_TEXT.blockHear}`);
-  }, [lesson.id, locked]);
+    if (!locked) speakGuide(`${lessonIntro} ${GUIDE_TEXT.blockHear}`);
+  }, [lesson.id, lessonIntro, locked]);
 
   useEffect(() => {
     if (soundUnlocked && !findUnlocked) speakGuide(GUIDE_TEXT.blockFind);
@@ -656,8 +667,8 @@ function LessonPanel({
       <h2 id="lesson-title" className="lesson-title">
         來認「{lessonLabel(lesson)}」
       </h2>
-      <NarrationLine text={GUIDE_TEXT.lessonWelcome} className="lesson-copy">
-        {GUIDE_TEXT.lessonWelcome}
+      <NarrationLine text={lessonIntro} className="lesson-copy">
+        {lessonIntro}
       </NarrationLine>
 
       <LessonBlock index={1} title="聽聽看" done={soundUnlocked} locked={locked}>
