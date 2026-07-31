@@ -48,7 +48,7 @@ const GUIDE_TEXT = {
   stageAdvance: "太棒了，我們繼續練功。",
   blockFind: "找找看剛剛學過的字在哪裡。看到學過的字，就點它。",
   findMiss: "這個不是剛剛學過的字喔，再找找看。",
-  blockPicture: "點一張圖，聽一句話。亮起來的字，就是現在念到的字。",
+  blockPicture: "點發光的圖，聽我念一句話。你也要跟著念喔。",
   learned: "都聽完了，就按我聽完了。",
 } as const;
 
@@ -1109,9 +1109,13 @@ function PictureSentencePreview({
 }) {
   const [playingSentenceId, setPlayingSentenceId] = useState<string | null>(null);
   const [activeCharIndex, setActiveCharIndex] = useState<number | null>(null);
+  const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
+  const [completedSentenceIds, setCompletedSentenceIds] = useState<Set<string>>(new Set());
+  const allPicturesDone = completedSentenceIds.size >= lesson.sentences.length;
 
-  function handleSentenceTap(sentence: LessonSentence) {
-    playSentence(sentence, {
+  function handleSentenceTap(sentence: LessonSentence, index: number) {
+    if (disabled || index !== currentSentenceIndex || playingSentenceId) return;
+    void playSentence(sentence, {
       onTime: (elapsedMs) => {
         setPlayingSentenceId(sentence.id);
         setActiveCharIndex(activeTimingIndex(sentence, elapsedMs));
@@ -1119,6 +1123,12 @@ function PictureSentencePreview({
       onEnded: () => {
         setActiveCharIndex(null);
         setPlayingSentenceId(null);
+        setCompletedSentenceIds((prev) => {
+          const next = new Set(prev);
+          next.add(sentence.id);
+          return next;
+        });
+        setCurrentSentenceIndex((current) => Math.min(current + 1, lesson.sentences.length));
       },
       onError: () => {
         setActiveCharIndex(null);
@@ -1139,12 +1149,17 @@ function PictureSentencePreview({
         {GUIDE_TEXT.blockPicture}
       </NarrationLine>
       <div className="picture-sentence-list">
-        {lesson.sentences.map((sentence) => (
+        {lesson.sentences.map((sentence, index) => {
+          const isCurrent = index === currentSentenceIndex;
+          const isCompleted = completedSentenceIds.has(sentence.id);
+          return (
           <button
-            className="picture-sentence-card"
+            className={`picture-sentence-card${isCurrent ? " current-picture" : ""}${
+              isCompleted ? " completed-picture" : ""
+            }`}
             key={sentence.id}
-            disabled={disabled}
-            onClick={() => handleSentenceTap(sentence)}
+            disabled={disabled || !isCurrent || Boolean(playingSentenceId)}
+            onClick={() => handleSentenceTap(sentence, index)}
           >
             {sentence.imageSrc ? (
               <img src={assetUrl(sentence.imageSrc)} alt="" />
@@ -1159,7 +1174,8 @@ function PictureSentencePreview({
               activeCharIndex={playingSentenceId === sentence.id ? activeCharIndex : null}
             />
           </button>
-        ))}
+          );
+        })}
       </div>
       <NarrationLine
         text={GUIDE_TEXT.learned}
@@ -1170,7 +1186,7 @@ function PictureSentencePreview({
       >
         {GUIDE_TEXT.learned}
       </NarrationLine>
-      <button className="btn secondary" disabled={disabled || done} onClick={onDone}>
+      <button className="btn secondary" disabled={disabled || done || !allPicturesDone} onClick={onDone}>
         我聽完了
       </button>
     </>
