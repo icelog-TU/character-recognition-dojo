@@ -79,6 +79,7 @@ function App() {
   const [completedOrders, setCompletedOrders] = useState<Set<number>>(new Set());
   const [lessonOpen, setLessonOpen] = useState(false);
   const [completionNotice, setCompletionNotice] = useState("");
+  const [startingOrder, setStartingOrder] = useState<number | null>(null);
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
   const [selectedOrder, setSelectedOrder] = useState(nextOrder);
   const selectedLesson =
@@ -110,11 +111,19 @@ function App() {
   }
 
   function openLesson(order: number) {
+    setStartingOrder(null);
     setSelectedOrder(order);
     setPage("practice");
     setLessonOpen(true);
     setCompletionNotice("");
     setMenuOpen(false);
+  }
+
+  function startLessonWithFeedback(order: number) {
+    if (startingOrder !== null) return;
+    setStartingOrder(order);
+    playStartChime();
+    window.setTimeout(() => openLesson(order), 260);
   }
 
   return (
@@ -139,7 +148,8 @@ function App() {
             completedOrders={completedOrders}
             nextOrder={nextOrder}
             notice={completionNotice}
-            onStart={openLesson}
+            startingOrder={startingOrder}
+            onStart={startLessonWithFeedback}
           />
         )}
         {page === "practice" && lessonOpen && (
@@ -193,12 +203,14 @@ function PracticeHome({
   completedOrders,
   nextOrder,
   notice,
+  startingOrder,
   onStart,
 }: {
   lessons: Lesson[];
   completedOrders: Set<number>;
   nextOrder: number;
   notice: string;
+  startingOrder: number | null;
   onStart: (order: number) => void;
 }) {
   const nextLesson = lessons.find((lesson) => lesson.order === nextOrder) ?? lessons[lessons.length - 1];
@@ -222,8 +234,12 @@ function PracticeHome({
             {GUIDE_TEXT.homeNext}
           </NarrationLine>
         </div>
-        <button className="btn start-lesson-button" onClick={() => onStart(nextLesson.order)}>
-          開始第一課
+        <button
+          className={`btn start-lesson-button${startingOrder === nextLesson.order ? " starting" : ""}`}
+          onClick={() => onStart(nextLesson.order)}
+          disabled={startingOrder !== null}
+        >
+          {startingOrder === nextLesson.order ? "走囉" : "開始第一課"}
         </button>
       </div>
 
@@ -1024,22 +1040,40 @@ function activeTimingIndex(sentence: LessonSentence, elapsedMs: number) {
 }
 
 function playFoundChime() {
+  playToneSequence([
+    { frequency: 660, endFrequency: 990, duration: 0.18, gain: 0.06 },
+  ]);
+}
+
+function playStartChime() {
+  playToneSequence([
+    { frequency: 523, endFrequency: 659, duration: 0.11, gain: 0.07 },
+    { frequency: 784, endFrequency: 988, duration: 0.16, gain: 0.08, delay: 0.08 },
+  ]);
+}
+
+function playToneSequence(
+  notes: Array<{ frequency: number; endFrequency: number; duration: number; gain: number; delay?: number }>,
+) {
   const audioWindow = window as AudioWindow;
   const AudioContextClass = audioWindow.AudioContext || audioWindow.webkitAudioContext;
   if (!AudioContextClass) return;
   const context = new AudioContextClass();
-  const gain = context.createGain();
-  const oscillator = context.createOscillator();
-  oscillator.type = "sine";
-  oscillator.frequency.setValueAtTime(660, context.currentTime);
-  oscillator.frequency.exponentialRampToValueAtTime(990, context.currentTime + 0.12);
-  gain.gain.setValueAtTime(0.0001, context.currentTime);
-  gain.gain.exponentialRampToValueAtTime(0.06, context.currentTime + 0.02);
-  gain.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.18);
-  oscillator.connect(gain);
-  gain.connect(context.destination);
-  oscillator.start();
-  oscillator.stop(context.currentTime + 0.2);
+  for (const note of notes) {
+    const startTime = context.currentTime + (note.delay ?? 0);
+    const gain = context.createGain();
+    const oscillator = context.createOscillator();
+    oscillator.type = "sine";
+    oscillator.frequency.setValueAtTime(note.frequency, startTime);
+    oscillator.frequency.exponentialRampToValueAtTime(note.endFrequency, startTime + note.duration * 0.72);
+    gain.gain.setValueAtTime(0.0001, startTime);
+    gain.gain.exponentialRampToValueAtTime(note.gain, startTime + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.0001, startTime + note.duration);
+    oscillator.connect(gain);
+    gain.connect(context.destination);
+    oscillator.start(startTime);
+    oscillator.stop(startTime + note.duration + 0.02);
+  }
 }
 
 function SentencePracticePreview({

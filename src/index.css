@@ -714,6 +714,13 @@ button {
   animation: start-button-glow 1.6s ease-in-out infinite;
 }
 
+.start-lesson-button.starting {
+  background: #ef5a46;
+  transform: scale(0.97);
+  animation: none;
+  box-shadow: 0 0 0 10px rgba(217, 71, 53, 0.14), 0 8px 18px rgba(217, 71, 53, 0.3);
+}
+
 .btn.secondary {
   background: var(--accent-soft);
   color: #843018;
@@ -728,6 +735,10 @@ button {
 .btn:disabled {
   cursor: not-allowed;
   opacity: 0.55;
+}
+
+.start-lesson-button:disabled {
+  opacity: 1;
 }
 
 .sentence-card {
