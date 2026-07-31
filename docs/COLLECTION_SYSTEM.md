@@ -117,7 +117,8 @@ The gacha page is designed as a toddler-facing page, not an adult settings page.
 
 - Entering the page speaks a short guide automatically.
 - The gacha button stays near the top of the page and includes a clear gift graphic.
-- The latest draw result appears directly under the gacha button, before realm progress, so it is visible immediately on phone.
+- The gacha card uses one central stage: before drawing it shows a large gift; after drawing the same stage changes into the character result.
+- The result must stay visible near the draw button on phone. Do not move it below realm progress.
 - Realm collection progress appears below the gacha machine.
 - Each realm progress card is clickable and opens that realm's collection page.
 - Realm cards should use recognizable icons: land, sea, sky, and space must read visually before a child can read the words.

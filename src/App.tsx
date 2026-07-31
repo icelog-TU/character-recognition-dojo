@@ -1277,47 +1277,51 @@ function GachaPage({
       </div>
 
       <div className="gacha-machine gacha-action-card" style={{ "--realm-color": realm.color } as CSSProperties}>
+        <div className="gacha-stats-row" aria-label="轉蛋狀態">
+          <div>
+            <strong>金幣 {coins}</strong>
+            <span>每次 10 枚</span>
+          </div>
+          <div>
+            <strong>{collected} / {total}</strong>
+            <span>{realm.shortLabel}進度</span>
+          </div>
+        </div>
+
+        <div className={`gacha-stage${drawing ? " drawing" : ""}`}>
+          {lastResult ? (
+            <button
+              type="button"
+              className="gacha-stage-result"
+              onClick={() => {
+                playStartChime();
+                onOpenCharacter(lastResult.character);
+              }}
+            >
+              {lastResult.isNew && <span className="new-ribbon">NEW</span>}
+              <CreatureAvatar character={lastResult.character} owned large hearts={heartCount(characterHearts, lastResult.character.characterId)} />
+              <strong>{lastResult.character.name}{lastResult.character.familyRoleLabel}</strong>
+              <small>{lastResult.guaranteedNew ? "保底新角色" : lastResult.isNew ? "新角色" : `已遇見 ${ownedCount(ownedCharacters, lastResult.character.characterId)} 次`}</small>
+              <span className="gacha-stage-link">點我去看角色</span>
+            </button>
+          ) : (
+            <div className="gacha-stage-gift" aria-hidden>
+              <span>🎁</span>
+            </div>
+          )}
+        </div>
+
         <button className={`btn gacha-draw-button${drawing ? " starting" : ""}`} disabled={!canDraw || drawing} onClick={handleDraw}>
-          <span className="gacha-button-art" aria-hidden>🎁</span>
-          <span>{coins < 10 ? "金幣不夠" : drawing ? "轉動中" : "轉蛋一次"}</span>
+          <span>{coins < 10 ? "金幣不夠" : drawing ? "打開中" : "轉蛋一次"}</span>
           <small>10 金幣</small>
         </button>
-        <div className={`gacha-orb${drawing ? " drawing" : ""}`} aria-hidden>
-          <span>{realm.shortLabel}</span>
-        </div>
+
         <div className="gacha-copy">
           <h2>{realm.label}</h2>
           <p>{realm.description}</p>
-          <strong>金幣：{coins}</strong>
-          <small>本區進度 {collected} / {total}</small>
           <small>{nextIsGuaranteed ? "下一抽保證新角色" : `保底進度 ${pityCount} / 5`}</small>
         </div>
       </div>
-
-      {lastResult ? (
-        <button
-          type="button"
-          className={`draw-result draw-result-button${lastResult.isNew ? " new-character" : ""}`}
-          style={{ "--realm-color": realmColor(lastResult.character.realmId) } as CSSProperties}
-          onClick={() => {
-            playStartChime();
-            onOpenCharacter(lastResult.character);
-          }}
-        >
-          <CreatureAvatar character={lastResult.character} owned large hearts={heartCount(characterHearts, lastResult.character.characterId)} />
-          <div>
-            <span>{lastResult.guaranteedNew ? "保底新角色" : lastResult.isNew ? "新角色" : "又遇見了"}</span>
-            <h2>{lastResult.character.name}{lastResult.character.familyRoleLabel}</h2>
-            <p>已遇見 {ownedCount(ownedCharacters, lastResult.character.characterId)} 次</p>
-            <small>點我去看角色</small>
-          </div>
-        </button>
-      ) : (
-        <div className="draw-result empty">
-          <span className="placeholder-icon">金</span>
-          <p>花十個金幣抽一次，就會有新朋友跑出來。</p>
-        </div>
-      )}
 
       <div className="realm-track gacha-progress-track" aria-label="蒐集進度">
         {CREATURE_REALMS.map((candidate) => {

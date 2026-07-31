@@ -125,7 +125,8 @@ Current page rules:
 
 - Entering `轉蛋` speaks a short guide.
 - The gacha draw button is the first major control on the page. It has a gift graphic, costs 10 coins, plays a sound, speaks that the draw is starting, and then reveals the result.
-- The latest draw result must appear directly under the gacha button, before realm progress, so it is visible immediately on phone.
+- The gacha card uses one central stage: before drawing it shows a large gift; after drawing the same stage changes into the character result. Do not put the result below realm progress.
+- Avoid the old separate spinning-orb presentation; the child should see the gift/character in the center of the card.
 - Realm progress is shown below the gacha machine. Each realm card opens that realm in the collection page.
 - Realm cards must use child-readable icons for land, sea, sky, and space.
 - The gacha result card opens the drawn character's personal collection panel.

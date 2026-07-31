@@ -76,7 +76,8 @@ The app has a character collection system connected to lesson completion.
 - The gacha page puts the gift-style draw button near the top, with realm collection progress below it.
 - The realm progress blocks on the gacha page are clickable and open the matching realm in the collection page.
 - A gacha result card is clickable and opens that character's personal collection panel.
-- The latest gacha result should appear directly under the draw button, not below realm progress.
+- The gacha card uses one central stage: before drawing it shows a large gift; after drawing the same stage changes into the character result.
+- The latest gacha result must stay near the draw button, not below realm progress.
 - The collection page shows realm blocks first and a tappable character list below. A character detail panel opens only after the child taps an owned character.
 - The character list is grouped by species, with each species showing 9 family-role cards.
 - The collection page should include a small shortcut button back to gacha.
