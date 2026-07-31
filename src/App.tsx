@@ -820,7 +820,7 @@ function LessonPanel({
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
-  const usesSentenceGames = lesson.order >= 6;
+  const usesSentenceGames = lesson.order >= 11;
   const requiredPracticeRounds = usesSentenceGames ? Math.min(lesson.requiredRounds, lesson.sentences.length) : 1;
   const lessonReady = soundUnlocked && findUnlocked && practiceDoneCount >= requiredPracticeRounds;
   const lessonReward = { coins: 30, stars: 12 };

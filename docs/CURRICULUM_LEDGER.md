@@ -30,6 +30,15 @@ Recent review pool for the next lesson:
 | L004 | 的 | 一、二、三、人、個、大、的 | 一人 / 二人 / 大大的人 / 三個大大的人 | 一、二、三、人、個、大 | First use of possessive/modifier marker `的`; keep syntax concrete and visual. |
 | L005 | 小 | 一、二、三、人、個、大、的、小 | 大大的人 / 小小的人 / 一個大大的人 / 三個小小的人 / 大大小小的人 | 一、三、人、個、大、的 | Contrasts `大` and `小`; keeps all sentence characters inside the learned set. |
 
+## Planned Lessons
+
+These lessons are planned but not yet production-built. They still need reviewed images, AI audio, and `charTimings`.
+
+| Lesson | New Character(s) | Planned Sentences | Notes |
+|---|---|---|---|
+| L006 | 手 | 一個人的手 / 三個人的手 / 大大的手 / 小小的手 / 大大小小的手 | Keeps review focused on `一、三、個、人、的、大、小` while introducing a concrete body-part noun. |
+| L007 | 我 | 我一個人 / 我的小手 / 我的手小小的 / 大人的手大大的 / 三個人的大手小手 | `我` must establish the fixed first-person girl character for all future images involving `我`. |
+
 ## Planning Rule For New Lessons
 
 Before drafting a new lesson:

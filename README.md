@@ -15,6 +15,12 @@
 
 ## Development
 
+Start new work by reading:
+
+- `docs/PROJECT_HANDOFF_SOP.md`
+- `docs/CURRICULUM_LEDGER.md`
+- `docs/CURRICULUM_PRODUCTION_SOP.md`
+
 ```bash
 npm install
 npm run dev

@@ -62,7 +62,7 @@ Each lesson has:
 - `requiredRounds`: how many sentence game rounds are needed to complete block 3.
 - optional `originHint`: pictograph or etymology aid, displayed only when available and safely licensed.
 
-For the first few lessons, there may not be enough characters to support real sentence games. Those lessons should use picture-supported sentence preview first. Sentence games should be introduced only after the curriculum has enough learned characters, currently expected around lesson 5.
+For the first ten lessons, there may not be enough characters to support real sentence games. Those lessons should use picture-supported sentence preview first. Sentence games are currently planned to start around lesson 11, after the child has enough learned characters for meaningful review.
 
 The first lesson can be a seed lesson. Current seed draft:
 
