@@ -75,6 +75,7 @@ function buildDraft(request) {
     order: request.order,
     newChars: request.newChars,
     zhuyin: request.zhuyin,
+    charAudio: Object.fromEntries(request.newChars.map((char) => [char, ""])),
     title: request.title,
     requiredRounds: Math.max(1, request.targetSentenceCount),
     originHint: null,
@@ -85,6 +86,9 @@ function buildDraft(request) {
 function buildPacket({ request, learnedChars, allowedChars, priorSentences }) {
   const id = request.id;
   const assetBase = `/assets/lessons/${id}`;
+  const charAudioMap = Object.fromEntries(
+    request.newChars.map((char) => [char, `${assetBase}/audio/char-${char}.m4a`]),
+  );
   const range = sentenceRange(allowedChars.length, request.targetSentenceCount);
   const priorSentenceLines =
     priorSentences.length > 0 ? priorSentences.map((sentence) => `- ${sentence}`).join("\n") : "- None yet.";
@@ -162,6 +166,8 @@ After the teacher approves a sentence, create one natural full-sentence audio fi
 
 Rules:
 
+- Create one character audio file for each new character in the lesson.
+- Character audio target path pattern: \`${assetBase}/audio/char-字.m4a\`
 - Voice: natural Taiwan Mandarin.
 - Read \`spokenText\`, not display punctuation.
 - Do not synthesize character by character.
@@ -191,6 +197,7 @@ Only after teacher approval, move reviewed content into \`src/curriculum/sample-
   "order": ${request.order},
   "newChars": ${JSON.stringify(request.newChars)},
   "zhuyin": ${JSON.stringify(request.zhuyin)},
+  "charAudio": ${JSON.stringify(charAudioMap)},
   "title": "${request.title}",
   "requiredRounds": ${Math.max(1, request.targetSentenceCount)},
   "sentences": [

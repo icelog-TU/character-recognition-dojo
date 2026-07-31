@@ -81,6 +81,8 @@ After the teacher approves a sentence, create one natural full-sentence audio fi
 
 Rules:
 
+- Create one character audio file for each new character in the lesson.
+- Character audio target path pattern: `/assets/lessons/L004/audio/char-字.m4a`
 - Voice: natural Taiwan Mandarin.
 - Read `spokenText`, not display punctuation.
 - Do not synthesize character by character.
@@ -110,6 +112,7 @@ Only after teacher approval, move reviewed content into `src/curriculum/sample-l
   "order": 4,
   "newChars": ["小"],
   "zhuyin": {"小":"ㄒㄧㄠˇ"},
+  "charAudio": {"小":"/assets/lessons/L004/audio/char-小.m4a"},
   "title": "小",
   "requiredRounds": 4,
   "sentences": [

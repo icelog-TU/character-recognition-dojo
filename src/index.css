@@ -757,6 +757,49 @@ button.char-token {
   cursor: not-allowed;
 }
 
+.found-collection {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  margin-top: 12px;
+  padding: 12px;
+}
+
+.found-collection > strong {
+  font-size: 0.95rem;
+}
+
+.found-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 54px;
+  align-items: center;
+}
+
+.collection-empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.found-card {
+  min-width: 112px;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  background: var(--green-soft);
+  color: var(--primary-strong);
+  padding: 8px 10px;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
 .practice-meta {
   display: flex;
   justify-content: space-between;
@@ -771,6 +814,7 @@ button.char-token {
 }
 
 .picture-sentence-card {
+  width: 100%;
   display: grid;
   grid-template-columns: minmax(92px, 0.38fr) minmax(0, 1fr);
   align-items: center;
@@ -778,7 +822,19 @@ button.char-token {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
+  color: var(--ink);
+  cursor: pointer;
   padding: 10px;
+  text-align: left;
+}
+
+.picture-sentence-card:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.picture-sentence-card:not(:disabled):active {
+  transform: translateY(1px);
 }
 
 .picture-sentence-card img,

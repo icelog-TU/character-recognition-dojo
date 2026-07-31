@@ -85,6 +85,7 @@ The old app's five core interaction types remain the starting point:
 
 Production curriculum sentences use:
 
+- `lesson.charAudio`: pre-recorded AI audio for each newly introduced character.
 - `text`: display text.
 - `spokenText`: what the recorded voice actually reads.
 - `audio.src`: pre-recorded AI audio URL.

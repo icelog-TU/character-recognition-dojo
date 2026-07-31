@@ -480,7 +480,7 @@ function LessonPanel({
   const lessonReady = soundUnlocked && findUnlocked && practiceDoneCount >= requiredPracticeRounds;
 
   function handleHearTarget(char: string) {
-    playSpokenText(char);
+    playLessonChar(lesson, char);
     setHeardChars((prev) => {
       const next = new Set(prev);
       next.add(char);
@@ -636,11 +636,12 @@ function FindManyChallenge({
     const item = items.find((candidate) => candidate.id === id);
     return item ? targets.includes(item.char) : false;
   }).length;
+  const foundItems = items.filter((item) => foundIds.has(item.id) && targets.includes(item.char));
   const visibleItems = items.filter((item) => !foundIds.has(item.id));
 
   function handleTap(item: FindItem) {
     if (disabled || !targets.includes(item.char) || foundIds.has(item.id)) return;
-    playSpokenText(item.char);
+    playLessonChar(lesson, item.char);
     setFoundIds((prev) => {
       const next = new Set(prev);
       next.add(item.id);
@@ -651,7 +652,7 @@ function FindManyChallenge({
 
   return (
     <>
-      <p className="block-note">在字卡裡找到本課新字「{lessonLabel(lesson)}」。按到正確字時會念出字音，然後字卡會收起來。</p>
+      <p className="block-note">在字卡裡找到本課新字「{lessonLabel(lesson)}」。按到正確字時會念出字音，然後字卡會進到收集區。</p>
       <div className="find-grid">
         {visibleItems.map((item) => (
           <button
@@ -664,6 +665,21 @@ function FindManyChallenge({
             <Zhuyin value={zhuyinMap.get(item.char) ?? ""} />
           </button>
         ))}
+      </div>
+      <div className="found-collection" aria-label="找到的字">
+        <strong>字卡收集區</strong>
+        <div className="found-row">
+          {foundItems.length === 0 ? (
+            <span className="collection-empty">找到的字會來這裡。</span>
+          ) : (
+            foundItems.map((item) => (
+              <span className="found-card" key={`found-${item.id}`}>
+                <span className="hanzi">{item.char}</span>
+                <span>你找到我了</span>
+              </span>
+            ))
+          )}
+        </div>
       </div>
       {foundTotal === targetTotal && <p className="success">本段完成。</p>}
       <p className="block-note">
@@ -709,7 +725,12 @@ function PictureSentencePreview({
       </p>
       <div className="picture-sentence-list">
         {lesson.sentences.map((sentence) => (
-          <div className="picture-sentence-card" key={sentence.id}>
+          <button
+            className="picture-sentence-card"
+            key={sentence.id}
+            disabled={disabled}
+            onClick={() => playSentence(sentence)}
+          >
             {sentence.imageSrc ? (
               <img src={sentence.imageSrc} alt="" />
             ) : (
@@ -718,7 +739,7 @@ function PictureSentencePreview({
               </div>
             )}
             <SentenceCard sentence={sentence} zhuyinMap={zhuyinMap} activeCharIndex={null} />
-          </div>
+          </button>
         ))}
       </div>
       <button className="btn secondary" disabled={disabled || done} onClick={onDone}>
@@ -726,6 +747,28 @@ function PictureSentencePreview({
       </button>
     </>
   );
+}
+
+function playSentence(sentence: LessonSentence) {
+  if (sentence.audio?.src) {
+    playAudioSrc(sentence.audio.src);
+    return;
+  }
+  playSpokenText(sentence.spokenText);
+}
+
+function playLessonChar(lesson: Lesson, char: string) {
+  const src = lesson.charAudio?.[char];
+  if (src) {
+    playAudioSrc(src);
+    return;
+  }
+  playSpokenText(char);
+}
+
+function playAudioSrc(src: string) {
+  const audio = new Audio(src);
+  void audio.play();
 }
 
 function SentencePracticePreview({

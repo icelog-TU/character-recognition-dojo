@@ -9,10 +9,12 @@ This app treats AI output as draft material. A lesson enters the shipping curric
 3. Send the generated packet in `curriculum-workflow/generated/` to the AI sentence generator.
 4. Review the sentence candidates manually.
 5. For approved sentences, generate one image prompt and one image per sentence.
-6. For approved sentences, generate one natural full-sentence audio file per sentence.
-7. Add character timing metadata for the audio.
-8. Move only reviewed content into `src/curriculum/sample-lessons.json`.
-9. Run `npm run validate:curriculum`, `npm run build`, and `npm run lint`.
+6. Generate one reviewed single-character audio file for every new character.
+7. For approved sentences, generate one natural full-sentence audio file per sentence.
+8. Add character timing metadata for the sentence audio.
+9. Move only reviewed content into `src/curriculum/sample-lessons.json`.
+10. Run `npm run validate:curriculum`, `npm run build`, and `npm run lint`.
+11. Before selling or shipping a finished set, run `npm run validate:production`.
 
 ## Request File
 
@@ -66,11 +68,14 @@ Images are generated or sourced only after sentence approval.
 
 Audio is generated only after sentence approval.
 
+- One single-character audio file per lesson new character.
 - One natural full-sentence audio file per sentence.
 - Store final assets under `public/assets/lessons/L###/audio/`.
 - Use `.m4a` or `.mp3`; prefer `.m4a` for app delivery.
 - Path example: `public/assets/lessons/L004/audio/L004-S01.m4a`.
+- Character audio path example: `public/assets/lessons/L004/audio/char-小.m4a`.
 - Curriculum `audio.src` example: `/assets/lessons/L004/audio/L004-S01.m4a`.
+- Curriculum `charAudio` example: `"/assets/lessons/L004/audio/char-小.m4a"`.
 - Audio reads `spokenText`, not punctuation.
 - Do not generate one audio file per character for sentence reading.
 

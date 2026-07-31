@@ -8,6 +8,7 @@ export interface Lesson {
   order: number;
   newChars: string[];
   zhuyin: Record<string, string>;
+  charAudio?: Record<string, string>;
   title: string;
   requiredRounds: number;
   originHint?: OriginHint;
