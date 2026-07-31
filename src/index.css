@@ -247,6 +247,35 @@ button {
   color: var(--muted);
 }
 
+.narration-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.narration-line span {
+  min-width: 0;
+}
+
+.speak-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 900;
+  box-shadow: 0 4px 10px rgba(34, 132, 123, 0.22);
+  cursor: pointer;
+}
+
 .brand {
   margin: 0 0 4px;
   font-size: 1.45rem;

@@ -17,10 +17,10 @@
         "人": "ㄖㄣˊ"
       },
       "charAudio": {
-        "一": "/assets/lessons/L001/audio/char-一.m4a",
-        "二": "/assets/lessons/L001/audio/char-二.m4a",
-        "三": "/assets/lessons/L001/audio/char-三.m4a",
-        "人": "/assets/lessons/L001/audio/char-人.m4a"
+        "一": "/assets/lessons/L001/audio/char-u4e00.m4a",
+        "二": "/assets/lessons/L001/audio/char-u4e8c.m4a",
+        "三": "/assets/lessons/L001/audio/char-u4e09.m4a",
+        "人": "/assets/lessons/L001/audio/char-u4eba.m4a"
       },
       "title": "一二三人",
       "requiredRounds": 4,
@@ -39,12 +39,12 @@
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L001/audio/L001-S01.m4a",
-            "durationMs": 1824,
+            "durationMs": 768,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 1824
+                "endMs": 768
               }
             ]
           }
@@ -59,17 +59,17 @@
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L001/audio/L001-S02.m4a",
-            "durationMs": 1992,
+            "durationMs": 1039,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 996
+                "endMs": 390
               },
               {
                 "charIndex": 1,
-                "startMs": 996,
-                "endMs": 1992
+                "startMs": 390,
+                "endMs": 1039
               }
             ]
           }
@@ -84,17 +84,17 @@
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L001/audio/L001-S03.m4a",
-            "durationMs": 2376,
+            "durationMs": 965,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 1188
+                "endMs": 350
               },
               {
                 "charIndex": 1,
-                "startMs": 1188,
-                "endMs": 2376
+                "startMs": 350,
+                "endMs": 965
               }
             ]
           }
@@ -109,17 +109,17 @@
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L001/audio/L001-S04.m4a",
-            "durationMs": 2208,
+            "durationMs": 1220,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 1104
+                "endMs": 615
               },
               {
                 "charIndex": 1,
-                "startMs": 1104,
-                "endMs": 2208
+                "startMs": 615,
+                "endMs": 1220
               }
             ]
           }

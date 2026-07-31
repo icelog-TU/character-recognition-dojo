@@ -108,6 +108,8 @@ for (const sourcePath of files) {
     "-i",
     sourcePath,
     "-vn",
+    "-af",
+    "silenceremove=start_periods=1:start_duration=0.03:start_threshold=-45dB:stop_periods=1:stop_duration=0.18:stop_threshold=-45dB,loudnorm=I=-18:TP=-2:LRA=7",
     "-ac",
     "1",
     "-ar",

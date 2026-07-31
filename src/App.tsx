@@ -36,6 +36,16 @@ const RAINBOW_GROUPS = [
   { id: "purple", label: "紫", range: "501-600", start: 501, end: 600, color: "#8156c6" },
 ];
 
+const GUIDE_AUDIO = {
+  homeWelcome: "/assets/ui/audio/home-welcome.m4a",
+  homeNext: "/assets/ui/audio/home-next.m4a",
+  lessonWelcome: "/assets/ui/audio/lesson-welcome.m4a",
+  blockHear: "/assets/ui/audio/block-hear.m4a",
+  blockFind: "/assets/ui/audio/block-find.m4a",
+  blockPicture: "/assets/ui/audio/block-picture.m4a",
+  learned: "/assets/ui/audio/learned.m4a",
+} as const;
+
 function lessonChars(lesson: Lesson): string[] {
   return lesson.newChars;
 }
@@ -76,6 +86,10 @@ function App() {
   const coins = completedOrders.size * 30 + 120;
   const stars = completedOrders.size * 12 + 36;
   const streakDays = completedOrders.size > 0 ? 1 : 0;
+
+  useEffect(() => {
+    Object.values(GUIDE_AUDIO).forEach(preloadAudioSrc);
+  }, []);
 
   function completeLesson(order: number) {
     const following = curriculum.lessons.find((lesson) => lesson.order === order + 1);
@@ -194,23 +208,27 @@ function PracticeHome({
     <section className="page-panel practice-home">
       {notice && <div className="completion-banner">{notice}</div>}
       <div className="page-heading">
-        <h1>練習課文</h1>
-        <p>從下一課開始練，也可以回到已解鎖的字複習。</p>
+        <h1>今天來認字</h1>
+        <NarrationLine audioSrc={GUIDE_AUDIO.homeWelcome}>
+          嗨！按下面的大按鈕，我陪你一起認字。
+        </NarrationLine>
       </div>
 
       <div className="next-lesson-panel">
         <div>
-          <span className="pill">下一步</span>
+          <span className="pill">從這裡開始</span>
           <h2>第 {nextLesson.order} 課：{lessonLabel(nextLesson)}</h2>
-          <p>先聽字音，再找出字卡，最後看圖認句。</p>
+          <NarrationLine audioSrc={GUIDE_AUDIO.homeNext}>
+            先聽字，再找字，最後看圖片和句子。
+          </NarrationLine>
         </div>
         <button className="btn primary" onClick={() => onStart(nextLesson.order)}>
-          開始練習
+          開始第一課
         </button>
       </div>
 
       <div className="home-section-heading">
-        <h2>已解鎖字卡</h2>
+        <h2>我的字卡</h2>
         <span>{completedOrders.size} 課完成</span>
       </div>
       <div className="home-char-grid">
@@ -533,6 +551,25 @@ function StatCard({ icon, value, label }: { icon: string; value: number; label: 
   );
 }
 
+function NarrationLine({
+  children,
+  audioSrc,
+  className = "",
+}: {
+  children: ReactNode;
+  audioSrc: string;
+  className?: string;
+}) {
+  return (
+    <p className={`narration-line ${className}`.trim()}>
+      <button className="speak-button" type="button" aria-label="播放說明" onClick={() => playAudioSrc(audioSrc)}>
+        ▶
+      </button>
+      <span>{children}</span>
+    </p>
+  );
+}
+
 function PlaceholderPage({ icon, title, text }: { icon: string; title: string; text: string }) {
   return (
     <section className="page-panel placeholder-page">
@@ -588,11 +625,13 @@ function LessonPanel({
       </div>
 
       <h2 id="lesson-title" className="lesson-title">
-        破解「{lessonLabel(lesson)}」
+        來認「{lessonLabel(lesson)}」
       </h2>
-      <p className="lesson-copy">三段完成後才算通關：先聽單字，再找出這個字，前幾課先看配圖認句。</p>
+      <NarrationLine audioSrc={GUIDE_AUDIO.lessonWelcome} className="lesson-copy">
+        我們一步一步來。先按大大的字，聽聽它怎麼念。
+      </NarrationLine>
 
-      <LessonBlock index={1} title="聽這個字" done={soundUnlocked} locked={locked}>
+      <LessonBlock index={1} title="聽聽看" done={soundUnlocked} locked={locked}>
         <div className="target-grid">
           {newChars.map((char) => (
             <button
@@ -606,9 +645,9 @@ function LessonPanel({
             </button>
           ))}
         </div>
-        <p className="block-note">
-          之後這裡會播放預錄好的單字音檔。現在先用瀏覽器語音做暫時示範，本課新字都聽過後通關。
-        </p>
+        <NarrationLine audioSrc={GUIDE_AUDIO.blockHear} className="block-note">
+          每一張字卡都按一次。聽到聲音，就做得很好。
+        </NarrationLine>
         {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
       </LessonBlock>
 
@@ -624,7 +663,7 @@ function LessonPanel({
 
       <LessonBlock
         index={3}
-        title={usesSentenceGames ? "句子遊戲" : "看圖認句"}
+        title={usesSentenceGames ? "句子遊戲" : "看圖聽句子"}
         done={practiceDoneCount >= requiredPracticeRounds}
         locked={locked || !soundUnlocked || !findUnlocked}
       >
@@ -666,7 +705,7 @@ function LessonPanel({
 
       <div className="actions" style={{ marginTop: 16 }}>
         <button className="btn primary" disabled={!lessonReady || completed || locked} onClick={onComplete}>
-          {completed ? "已解鎖下一課" : "完成本課"}
+          {completed ? "下一課開好了" : "我都學會了"}
         </button>
         <button
           className="btn ghost"
@@ -677,7 +716,7 @@ function LessonPanel({
             setResetVersion((version) => version + 1);
           }}
         >
-          重練本課
+          再玩一次
         </button>
       </div>
     </section>
@@ -745,7 +784,9 @@ function FindManyChallenge({
 
   return (
     <>
-      <p className="block-note">在字卡裡找到本課新字「{lessonLabel(lesson)}」。按到正確字時會念出字音，然後字卡會進到收集區。</p>
+      <NarrationLine audioSrc={GUIDE_AUDIO.blockFind} className="block-note">
+        找找看，這些字躲在哪裡。看到一樣的字，就點它。
+      </NarrationLine>
       <div className="find-grid">
         {visibleItems.map((item) => (
           <button
@@ -760,10 +801,10 @@ function FindManyChallenge({
         ))}
       </div>
       <div className="found-collection" aria-label="找到的字">
-        <strong>字卡收集區</strong>
+        <strong>找到的字</strong>
         <div className="found-row">
           {foundItems.length === 0 ? (
-            <span className="collection-empty">找到的字會來這裡。</span>
+            <span className="collection-empty">找到的字會跳到這裡。</span>
           ) : (
             foundItems.map((item) => (
               <span className="found-card" key={`found-${item.id}`}>
@@ -774,7 +815,7 @@ function FindManyChallenge({
           )}
         </div>
       </div>
-      {foundTotal === targetTotal && <p className="success">本段完成。</p>}
+      {foundTotal === targetTotal && <p className="success">全部找到了。</p>}
       <p className="block-note">
         已找到 {foundTotal} / {targetTotal}
       </p>
@@ -833,9 +874,9 @@ function PictureSentencePreview({
 
   return (
     <>
-      <p className="block-note">
-        前幾課字量太少，先不進五種句子遊戲。這裡先用配圖和短句讓孩子看懂意思；正式圖片會在句子審核後加入。
-      </p>
+      <NarrationLine audioSrc={GUIDE_AUDIO.blockPicture} className="block-note">
+        點一張圖，聽一句話。亮起來的字，就是現在念到的字。
+      </NarrationLine>
       <div className="picture-sentence-list">
         {lesson.sentences.map((sentence) => (
           <button
@@ -848,7 +889,7 @@ function PictureSentencePreview({
               <img src={assetUrl(sentence.imageSrc)} alt="" />
             ) : (
               <div className="image-placeholder" aria-label="圖片待製作">
-                <span>圖片待製作</span>
+                <span>圖片快來了</span>
               </div>
             )}
             <SentenceCard
@@ -859,8 +900,11 @@ function PictureSentencePreview({
           </button>
         ))}
       </div>
+      <NarrationLine audioSrc={GUIDE_AUDIO.learned} className="block-note">
+        都聽完了，就按我聽完了。
+      </NarrationLine>
       <button className="btn secondary" disabled={disabled || done} onClick={onDone}>
-        我學會了
+        我聽完了
       </button>
     </>
   );

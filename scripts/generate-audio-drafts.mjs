@@ -27,6 +27,9 @@ function flagEnabled(value) {
 }
 
 function filenameSafe(text) {
+  if (Array.from(text).length === 1 && /\p{Script=Han}/u.test(text)) {
+    return `u${text.codePointAt(0).toString(16)}`;
+  }
   return text.replace(/[\\/:*?"<>|]/g, "_");
 }
 
