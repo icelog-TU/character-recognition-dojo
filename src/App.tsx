@@ -37,10 +37,13 @@ const RAINBOW_GROUPS = [
 ];
 
 const GUIDE_TEXT = {
-  homeWelcome: "你好啊，請按下面紅色的大按鈕，我們來學認字吧。",
+  homeWelcome: "你好呀，歡迎來到認字練功房。請按下面紅色的大按鈕，我們來學認字吧。",
   homeNext: "先聽字，再找字，最後看圖片和句子。",
   lessonStep: "我們一步一步來。",
   blockHear: "請按那些大大發光的紅色字，按下去聽它們的聲音。聽見聲音，你就做對了。要記住每個字和它的聲音喔。",
+  toStageTwo: "第一階段完成了。請按下面紅色的大按鈕，進入第二階段的練習。",
+  toStageThree: "第二階段完成了。請按下面紅色的大按鈕，進入第三階段的練習。",
+  stageAdvance: "太棒了，我們繼續練功。",
   blockFind: "找找看，這些字躲在哪裡。看到一樣的字，就點它。",
   blockPicture: "點一張圖，聽一句話。亮起來的字，就是現在念到的字。",
   learned: "都聽完了，就按我聽完了。",
@@ -58,6 +61,10 @@ function lessonLabel(lesson: Lesson): string {
 
 function smallZhNumber(value: number): string {
   return SMALL_ZH_NUMBERS[value] ?? String(value);
+}
+
+function stageLabel(stage: number): string {
+  return `第${smallZhNumber(stage)}階段`;
 }
 
 function lessonIntroText(lesson: Lesson): string {
@@ -624,6 +631,8 @@ function LessonPanel({
   const [spotlightChar, setSpotlightChar] = useState<string | null>(null);
   const [findUnlocked, setFindUnlocked] = useState(false);
   const [practiceDoneCount, setPracticeDoneCount] = useState(0);
+  const [activeStage, setActiveStage] = useState(1);
+  const [advancingStage, setAdvancingStage] = useState<number | null>(null);
   const [resetVersion, setResetVersion] = useState(0);
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
@@ -642,12 +651,20 @@ function LessonPanel({
   }, [lesson.id, lessonIntro, locked]);
 
   useEffect(() => {
-    if (soundUnlocked && !findUnlocked) speakGuide(GUIDE_TEXT.blockFind);
-  }, [soundUnlocked, findUnlocked]);
+    if (soundUnlocked && activeStage === 1) speakGuide(GUIDE_TEXT.toStageTwo);
+  }, [soundUnlocked, activeStage]);
 
   useEffect(() => {
-    if (findUnlocked && practiceDoneCount < requiredPracticeRounds) speakGuide(GUIDE_TEXT.blockPicture);
-  }, [findUnlocked, practiceDoneCount, requiredPracticeRounds]);
+    if (activeStage === 2 && !findUnlocked) speakGuide(GUIDE_TEXT.blockFind);
+  }, [activeStage, findUnlocked]);
+
+  useEffect(() => {
+    if (findUnlocked && activeStage === 2) speakGuide(GUIDE_TEXT.toStageThree);
+  }, [findUnlocked, activeStage]);
+
+  useEffect(() => {
+    if (activeStage === 3 && practiceDoneCount < requiredPracticeRounds) speakGuide(GUIDE_TEXT.blockPicture);
+  }, [activeStage, practiceDoneCount, requiredPracticeRounds]);
 
   async function handleHearTarget(char: string) {
     if (locked || spotlightChar) return;
@@ -659,6 +676,15 @@ function LessonPanel({
       return next;
     });
     setSpotlightChar(null);
+  }
+
+  async function handleAdvanceStage(nextStage: number) {
+    if (advancingStage !== null) return;
+    setAdvancingStage(nextStage);
+    playStartChime();
+    await Promise.all([speakGuide(`${GUIDE_TEXT.stageAdvance} ${stageLabel(nextStage)}。`), waitMs(820)]);
+    setActiveStage(nextStage);
+    setAdvancingStage(null);
   }
 
   return (
@@ -705,28 +731,52 @@ function LessonPanel({
         {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
       </LessonBlock>
 
-      <LessonBlock index={2} title="找出這個字" done={findUnlocked} locked={locked || !soundUnlocked}>
-        <FindManyChallenge
-          key={`find-${lesson.id}-${resetVersion}`}
-          lesson={lesson}
-          zhuyinMap={zhuyinMap}
-          disabled={locked || !soundUnlocked}
-          onComplete={() => setFindUnlocked(true)}
+      {soundUnlocked && activeStage === 1 && (
+        <StageAdvancePrompt
+          text={GUIDE_TEXT.toStageTwo}
+          buttonText="進入第二階段"
+          busy={advancingStage === 2}
+          onAdvance={() => handleAdvanceStage(2)}
         />
+      )}
+
+      <LessonBlock index={2} title="找出這個字" done={findUnlocked} locked={locked || activeStage < 2}>
+        {activeStage >= 2 ? (
+          <FindManyChallenge
+            key={`find-${lesson.id}-${resetVersion}`}
+            lesson={lesson}
+            zhuyinMap={zhuyinMap}
+            disabled={locked || activeStage < 2}
+            onComplete={() => setFindUnlocked(true)}
+          />
+        ) : (
+          <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
+        )}
       </LessonBlock>
+
+      {findUnlocked && activeStage === 2 && (
+        <StageAdvancePrompt
+          text={GUIDE_TEXT.toStageThree}
+          buttonText="進入第三階段"
+          busy={advancingStage === 3}
+          onAdvance={() => handleAdvanceStage(3)}
+        />
+      )}
 
       <LessonBlock
         index={3}
         title={usesSentenceGames ? "句子遊戲" : "看圖聽句子"}
         done={practiceDoneCount >= requiredPracticeRounds}
-        locked={locked || !soundUnlocked || !findUnlocked}
+        locked={locked || activeStage < 3}
       >
-        {usesSentenceGames ? (
+        {activeStage < 3 ? (
+          <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
+        ) : usesSentenceGames ? (
           <SentencePracticePreview
             key={`practice-${lesson.id}-${resetVersion}`}
             lesson={lesson}
             zhuyinMap={zhuyinMap}
-            disabled={locked || !soundUnlocked || !findUnlocked}
+            disabled={locked || activeStage < 3}
             doneCount={practiceDoneCount}
             requiredCount={requiredPracticeRounds}
             onRoundDone={() => setPracticeDoneCount((count) => Math.min(count + 1, requiredPracticeRounds))}
@@ -736,7 +786,7 @@ function LessonPanel({
             key={`picture-${lesson.id}-${resetVersion}`}
             lesson={lesson}
             zhuyinMap={zhuyinMap}
-            disabled={locked || !soundUnlocked || !findUnlocked}
+            disabled={locked || activeStage < 3}
             done={practiceDoneCount >= requiredPracticeRounds}
             onDone={() => setPracticeDoneCount(1)}
           />
@@ -765,8 +815,11 @@ function LessonPanel({
           className="btn ghost"
           onClick={() => {
             setHeardChars(new Set());
+            setSpotlightChar(null);
             setFindUnlocked(false);
             setPracticeDoneCount(0);
+            setActiveStage(1);
+            setAdvancingStage(null);
             setResetVersion((version) => version + 1);
           }}
         >
@@ -798,6 +851,29 @@ function LessonBlock({
         <span className="pill">{done ? "通關" : locked ? "等待前一段" : "進行中"}</span>
       </div>
       {children}
+    </section>
+  );
+}
+
+function StageAdvancePrompt({
+  text,
+  buttonText,
+  busy,
+  onAdvance,
+}: {
+  text: string;
+  buttonText: string;
+  busy: boolean;
+  onAdvance: () => void;
+}) {
+  return (
+    <section className="stage-advance-panel" aria-label={buttonText}>
+      <NarrationLine text={text} className="stage-advance-copy">
+        {text}
+      </NarrationLine>
+      <button className={`btn stage-advance-button${busy ? " starting" : ""}`} disabled={busy} onClick={onAdvance}>
+        {busy ? "走囉" : buttonText}
+      </button>
     </section>
   );
 }

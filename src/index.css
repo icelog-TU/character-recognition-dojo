@@ -747,6 +747,35 @@ button {
   border-radius: 6px;
 }
 
+.stage-advance-panel {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin: 14px 0;
+  padding: 14px;
+  border: 2px solid rgba(217, 71, 53, 0.28);
+  border-radius: 8px;
+  background: #fff8f6;
+}
+
+.stage-advance-copy {
+  width: 100%;
+  justify-content: center;
+  color: #713327;
+  font-weight: 800;
+}
+
+.stage-advance-button {
+  min-width: 168px;
+  min-height: 58px;
+  border-radius: 8px;
+  background: #d94735;
+  color: #fff;
+  font-size: 1.08rem;
+  box-shadow: 0 0 0 6px rgba(217, 71, 53, 0.14), 0 12px 24px rgba(217, 71, 53, 0.24);
+  animation: start-button-glow 1.6s ease-in-out infinite;
+}
+
 .actions {
   display: flex;
   gap: 10px;
@@ -778,7 +807,8 @@ button {
   animation: start-button-glow 1.6s ease-in-out infinite;
 }
 
-.start-lesson-button.starting {
+.start-lesson-button.starting,
+.stage-advance-button.starting {
   background: #ef5a46;
   transform: scale(0.97);
   animation: none;
@@ -801,7 +831,8 @@ button {
   opacity: 0.55;
 }
 
-.start-lesson-button:disabled {
+.start-lesson-button:disabled,
+.stage-advance-button:disabled {
   opacity: 1;
 }
 
