@@ -249,11 +249,7 @@ function App() {
         coins={coins}
         stars={stars}
         streakDays={streakDays}
-        lessonOpen={lessonOpen}
-        playbackState={playbackState}
         onMenu={() => setMenuOpen(true)}
-        onExitLesson={returnToPracticeHome}
-        onTogglePlayback={togglePlayback}
       />
       <AppDrawer
         open={menuOpen}
@@ -317,6 +313,13 @@ function App() {
         )}
         {page === "settings" && <PlaceholderPage icon="⚙️" title="設定" text="之後放音量、資料備份、家長設定。" />}
       </main>
+
+      <FloatingPlaybackBar
+        lessonOrder={lessonOpen ? selectedLesson.order : null}
+        playbackState={playbackState}
+        onExitLesson={returnToPracticeHome}
+        onTogglePlayback={togglePlayback}
+      />
     </div>
   );
 }
@@ -390,20 +393,12 @@ function AppHeader({
   coins,
   stars,
   streakDays,
-  lessonOpen,
-  playbackState,
   onMenu,
-  onExitLesson,
-  onTogglePlayback,
 }: {
   coins: number;
   stars: number;
   streakDays: number;
-  lessonOpen: boolean;
-  playbackState: PlaybackStatus;
   onMenu: () => void;
-  onExitLesson: () => void;
-  onTogglePlayback: () => void;
 }) {
   const coinStat = useAnimatedStat(coins);
   const starStat = useAnimatedStat(stars);
@@ -416,18 +411,6 @@ function AppHeader({
         <div className="header-title">
           <span>認字</span>
           <strong>練功房</strong>
-        </div>
-        <div className="header-actions">
-          {lessonOpen && (
-            <button className="header-action-button exit" onClick={onExitLesson}>
-              回入口
-            </button>
-          )}
-          {playbackState.playing && (
-            <button className="header-action-button audio" onClick={onTogglePlayback}>
-              {playbackState.paused ? "▶ 繼續" : "⏸ 暫停"}
-            </button>
-          )}
         </div>
         <div className="header-stats" aria-label="學習狀態">
           <span className={`stat-pill${coinStat.animating ? " stat-animating coin" : ""}`}>
@@ -1293,6 +1276,42 @@ function useRewardCount(target: number, active: boolean) {
   }, [active, target]);
 
   return displayValue;
+}
+
+function FloatingPlaybackBar({
+  lessonOrder,
+  playbackState,
+  onExitLesson,
+  onTogglePlayback,
+}: {
+  lessonOrder: number | null;
+  playbackState: PlaybackStatus;
+  onExitLesson: () => void;
+  onTogglePlayback: () => void;
+}) {
+  if (!lessonOrder && !playbackState.playing) return null;
+  return (
+    <div className="floating-playback-wrap" aria-live="polite">
+      <div className={`floating-playback-bar${playbackState.playing ? " playing" : ""}`}>
+        <div className="playback-status">
+          <span className="playback-dot" aria-hidden />
+          <strong>{playbackState.playing ? (playbackState.paused ? "語音暫停中" : "語音播放中") : `第 ${lessonOrder} 課練習中`}</strong>
+        </div>
+        <div className="playback-actions">
+          {playbackState.playing && (
+            <button className="playback-control-button" onClick={onTogglePlayback}>
+              {playbackState.paused ? "▶ 繼續" : "⏸ 暫停"}
+            </button>
+          )}
+          {lessonOrder && (
+            <button className="playback-exit-button" onClick={onExitLesson}>
+              回入口
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function FindManyChallenge({
