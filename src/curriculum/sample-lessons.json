@@ -135,6 +135,9 @@
       "zhuyin": {
         "個": "˙ㄍㄜ"
       },
+      "charAudio": {
+        "個": "/assets/lessons/L002/audio/char-u500b.m4a"
+      },
       "title": "個",
       "requiredRounds": 3,
       "sentences": [
@@ -146,7 +149,17 @@
           "imagePrompt": "A warm simple children's picture book illustration of one person, clean light background, soft colors, no text, no letters, no numbers.",
           "imageSrc": "/assets/lessons/L002/images/L002-S01.png",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L002/audio/L002-S01.m4a",
+            "durationMs": 367,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 367
+              }
+            ]
+          }
         },
         {
           "id": "L002-S02",
@@ -156,7 +169,27 @@
           "imagePrompt": "A warm simple children's picture book illustration of one person as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
           "imageSrc": "/assets/lessons/L002/images/L002-S02.png",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L002/audio/L002-S02.m4a",
+            "durationMs": 737,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 235
+              },
+              {
+                "charIndex": 1,
+                "startMs": 235,
+                "endMs": 480
+              },
+              {
+                "charIndex": 2,
+                "startMs": 480,
+                "endMs": 737
+              }
+            ]
+          }
         },
         {
           "id": "L002-S03",
@@ -166,7 +199,27 @@
           "imagePrompt": "A warm simple children's picture book illustration of three people standing together as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
           "imageSrc": "/assets/lessons/L002/images/L002-S03.png",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L002/audio/L002-S03.m4a",
+            "durationMs": 1020,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 470
+              },
+              {
+                "charIndex": 1,
+                "startMs": 470,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1020
+              }
+            ]
+          }
         }
       ]
     },

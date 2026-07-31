@@ -101,6 +101,9 @@ for (const sourcePath of files) {
   const baseName = path.basename(sourcePath, path.extname(sourcePath));
   const targetDir = path.join(outputRoot, lessonId, "audio");
   const targetPath = path.join(targetDir, `${baseName}.m4a`);
+  const audioFilter = baseName.startsWith("char-")
+    ? "loudnorm=I=-18:TP=-2:LRA=7"
+    : "silenceremove=start_periods=1:start_duration=0.03:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_duration=0.18:start_threshold=-45dB,areverse,loudnorm=I=-18:TP=-2:LRA=7";
   fs.mkdirSync(targetDir, { recursive: true });
 
   execFileSync(ffmpegCommand, [
@@ -109,7 +112,7 @@ for (const sourcePath of files) {
     sourcePath,
     "-vn",
     "-af",
-    "silenceremove=start_periods=1:start_duration=0.03:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_duration=0.18:start_threshold=-45dB,areverse,loudnorm=I=-18:TP=-2:LRA=7",
+    audioFilter,
     "-ac",
     "1",
     "-ar",
