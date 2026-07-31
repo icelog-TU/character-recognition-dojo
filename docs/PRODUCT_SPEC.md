@@ -42,7 +42,7 @@
 ## App Shell
 
 - The app uses a shared top header similar to the existing Chinese practice room app.
-- The header shows the app name plus quick reward/status pills: coins, stars, and streak days.
+- The header shows the app name plus quick reward/status pills: coins, stars, gacha tickets, and streak days.
 - The header menu button opens a left drawer.
 - Drawer pages:
   - 練習課文: daily lesson practice and current unlock path.
@@ -52,6 +52,22 @@
   - 角色收藏: collected character page.
   - 設定: account, audio, and data settings.
 - Pages are separate sections. Do not force every feature into one long page.
+
+## Reward Collection
+
+The app has a character collection system connected to lesson completion.
+
+- A first-time lesson completion grants 3 gacha tickets.
+- Coins and stars remain achievement counters.
+- Gacha tickets are used on the gacha page.
+- Replaying an already completed lesson does not grant another reward.
+- The collection is split into four realms: 地上的生物, 海裡的生物, 天上的生物, 外太空的生物.
+- Realms unlock in order from land to sea to sky to space.
+- Each realm has 15 species.
+- Each species has 9 family roles: 爺爺, 奶奶, 爸爸, 媽媽, 哥哥, 姐姐, 弟弟, 妹妹, 寶寶.
+- Current planned total is 540 collectible characters.
+
+Final character images should not be generated all at once. First test one complete 9-role species family, approve the art direction, then generate assets in reviewed batches.
 
 ## Lesson Structure
 

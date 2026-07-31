@@ -6,6 +6,7 @@
 - `docs/CURRICULUM_PRODUCTION_SOP.md`
 - `docs/CURRICULUM_SCHEMA.md`
 - `docs/AI_GENERATION_SETUP.md`
+- `docs/COLLECTION_SYSTEM.md`
 
 ## 專案定位
 
@@ -34,6 +35,7 @@ The app is not a single long worksheet. It uses a shared app shell:
   - app name
   - coins
   - stars
+  - gacha tickets
   - streak days
 - Left drawer
   - 練習課文
@@ -48,6 +50,23 @@ The app is not a single long worksheet. It uses a shared app shell:
   - provides a quick return to course entrance
 
 Important UX principle: this is for young children. Do not write screens as if adults are reading instructions. Use large visual targets, clear color cues, voice guidance, and visible state changes.
+
+## Reward And Collection System
+
+The prototype has a working local collection system:
+
+- Each first-time completed lesson gives 3 gacha tickets.
+- Replaying an already completed lesson does not grant rewards again.
+- Gacha tickets are separate from coins and stars.
+- The collection has four realms: 地上的生物, 海裡的生物, 天上的生物, 外太空的生物.
+- Realms unlock in order: land, sea, sky, space.
+- Each realm currently has 15 species.
+- Each species has 9 family roles: 爺爺, 奶奶, 爸爸, 媽媽, 哥哥, 姐姐, 弟弟, 妹妹, 寶寶.
+- Current total collection size is 540 characters.
+
+Do not batch-generate all final role images yet. First lock one species family's visual style, review it on phone, then generate character art in small approved batches.
+
+See `docs/COLLECTION_SYSTEM.md` for the full economy and asset plan.
 
 ## Lesson Flow
 
@@ -234,6 +253,7 @@ Important files:
 
 - `src/App.tsx`: app shell, pages, lesson flow, playback behavior.
 - `src/index.css`: visual system, responsive layout, animations.
+- `docs/COLLECTION_SYSTEM.md`: gacha economy, realms, family roles, and future character-art plan.
 - `src/curriculum/sample-lessons.json`: reviewed shipping curriculum used by the app.
 - `src/types.ts`: curriculum data types.
 - `src/lib/curriculum.ts`: curriculum helper functions.

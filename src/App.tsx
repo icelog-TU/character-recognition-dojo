@@ -17,14 +17,27 @@ type AudioPlayOptions = {
 };
 type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "stage4" | "advance2" | "advance3" | "advance4" | null;
 type LessonDestination = "home" | "next";
-type LessonReward = { coins: number; stars: number };
+type LessonReward = { coins: number; stars: number; tickets: number };
 type PlaybackStatus = { playing: boolean; paused: boolean };
 type StoredProgress = {
   version: 1;
   coins: number;
   stars: number;
+  gachaTickets: number;
   selectedOrder: number;
   completedOrders: number[];
+  ownedCharacters: Record<string, number>;
+};
+type RealmId = "land" | "sea" | "sky" | "space";
+type FamilyRoleId = "grandpa" | "grandma" | "dad" | "mom" | "olderBrother" | "olderSister" | "youngerBrother" | "youngerSister" | "baby";
+type CreatureRealm = { id: RealmId; label: string; shortLabel: string; description: string; color: string };
+type FamilyRole = { id: FamilyRoleId; label: string; shortLabel: string };
+type CreatureSpecies = { id: string; realmId: RealmId; name: string; icon: string };
+type CollectibleCharacter = CreatureSpecies & {
+  characterId: string;
+  familyRoleId: FamilyRoleId;
+  familyRoleLabel: string;
+  familyRoleShortLabel: string;
 };
 
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
@@ -46,6 +59,100 @@ const RAINBOW_GROUPS = [
   { id: "blue", label: "藍", range: "401-500", start: 401, end: 500, color: "#2e78d6" },
   { id: "purple", label: "紫", range: "501-600", start: 501, end: 600, color: "#8156c6" },
 ];
+
+const CREATURE_REALMS: CreatureRealm[] = [
+  { id: "land", label: "地上的生物", shortLabel: "地上", description: "先從地上的朋友開始收集。", color: "#4f8f52" },
+  { id: "sea", label: "海裡的生物", shortLabel: "海裡", description: "地上收滿後，海裡的朋友會打開。", color: "#2487b8" },
+  { id: "sky", label: "天上的生物", shortLabel: "天空", description: "海裡收滿後，天空的朋友會打開。", color: "#6f8fd7" },
+  { id: "space", label: "外太空的生物", shortLabel: "太空", description: "天空收滿後，最後前往外太空。", color: "#7957b8" },
+];
+
+const FAMILY_ROLES: FamilyRole[] = [
+  { id: "grandpa", label: "爺爺", shortLabel: "爺" },
+  { id: "grandma", label: "奶奶", shortLabel: "奶" },
+  { id: "dad", label: "爸爸", shortLabel: "爸" },
+  { id: "mom", label: "媽媽", shortLabel: "媽" },
+  { id: "olderBrother", label: "哥哥", shortLabel: "哥" },
+  { id: "olderSister", label: "姐姐", shortLabel: "姐" },
+  { id: "youngerBrother", label: "弟弟", shortLabel: "弟" },
+  { id: "youngerSister", label: "妹妹", shortLabel: "妹" },
+  { id: "baby", label: "寶寶", shortLabel: "寶" },
+];
+
+const CREATURE_SPECIES: CreatureSpecies[] = [
+  { id: "cat", realmId: "land", name: "貓", icon: "🐱" },
+  { id: "dog", realmId: "land", name: "狗", icon: "🐶" },
+  { id: "rabbit", realmId: "land", name: "兔", icon: "🐰" },
+  { id: "bear", realmId: "land", name: "熊", icon: "🐻" },
+  { id: "deer", realmId: "land", name: "鹿", icon: "🦌" },
+  { id: "fox", realmId: "land", name: "狐狸", icon: "🦊" },
+  { id: "squirrel", realmId: "land", name: "松鼠", icon: "🐿️" },
+  { id: "panda", realmId: "land", name: "貓熊", icon: "🐼" },
+  { id: "tiger", realmId: "land", name: "老虎", icon: "🐯" },
+  { id: "lion", realmId: "land", name: "獅子", icon: "🦁" },
+  { id: "elephant", realmId: "land", name: "大象", icon: "🐘" },
+  { id: "koala", realmId: "land", name: "無尾熊", icon: "🐨" },
+  { id: "monkey", realmId: "land", name: "猴子", icon: "🐵" },
+  { id: "hedgehog", realmId: "land", name: "刺蝟", icon: "🦔" },
+  { id: "horse", realmId: "land", name: "馬", icon: "🐴" },
+  { id: "dolphin", realmId: "sea", name: "海豚", icon: "🐬" },
+  { id: "whale", realmId: "sea", name: "鯨魚", icon: "🐋" },
+  { id: "seal", realmId: "sea", name: "海豹", icon: "🦭" },
+  { id: "turtle", realmId: "sea", name: "海龜", icon: "🐢" },
+  { id: "octopus", realmId: "sea", name: "章魚", icon: "🐙" },
+  { id: "squid", realmId: "sea", name: "魷魚", icon: "🦑" },
+  { id: "crab", realmId: "sea", name: "螃蟹", icon: "🦀" },
+  { id: "shrimp", realmId: "sea", name: "蝦", icon: "🦐" },
+  { id: "fish", realmId: "sea", name: "小魚", icon: "🐟" },
+  { id: "tropicalFish", realmId: "sea", name: "彩魚", icon: "🐠" },
+  { id: "blowfish", realmId: "sea", name: "河豚", icon: "🐡" },
+  { id: "jellyfish", realmId: "sea", name: "水母", icon: "🪼" },
+  { id: "starfish", realmId: "sea", name: "海星", icon: "⭐" },
+  { id: "seahorse", realmId: "sea", name: "海馬", icon: "🐴" },
+  { id: "clam", realmId: "sea", name: "貝殼", icon: "🐚" },
+  { id: "bird", realmId: "sky", name: "小鳥", icon: "🐦" },
+  { id: "eagle", realmId: "sky", name: "老鷹", icon: "🦅" },
+  { id: "owl", realmId: "sky", name: "貓頭鷹", icon: "🦉" },
+  { id: "duck", realmId: "sky", name: "鴨", icon: "🦆" },
+  { id: "swan", realmId: "sky", name: "天鵝", icon: "🦢" },
+  { id: "flamingo", realmId: "sky", name: "火鶴", icon: "🦩" },
+  { id: "penguin", realmId: "sky", name: "企鵝", icon: "🐧" },
+  { id: "bat", realmId: "sky", name: "蝙蝠", icon: "🦇" },
+  { id: "butterfly", realmId: "sky", name: "蝴蝶", icon: "🦋" },
+  { id: "bee", realmId: "sky", name: "蜜蜂", icon: "🐝" },
+  { id: "ladybug", realmId: "sky", name: "瓢蟲", icon: "🐞" },
+  { id: "dragonfly", realmId: "sky", name: "蜻蜓", icon: "✨" },
+  { id: "parrot", realmId: "sky", name: "鸚鵡", icon: "🦜" },
+  { id: "peacock", realmId: "sky", name: "孔雀", icon: "🦚" },
+  { id: "crane", realmId: "sky", name: "白鷺", icon: "🪶" },
+  { id: "moonBunny", realmId: "space", name: "月兔", icon: "🌙" },
+  { id: "starCat", realmId: "space", name: "星貓", icon: "✨" },
+  { id: "rocketDog", realmId: "space", name: "火箭狗", icon: "🚀" },
+  { id: "planetBear", realmId: "space", name: "星球熊", icon: "🪐" },
+  { id: "cometFox", realmId: "space", name: "彗星狐", icon: "☄️" },
+  { id: "nebulaWhale", realmId: "space", name: "星雲鯨", icon: "🌌" },
+  { id: "alienPanda", realmId: "space", name: "太空貓熊", icon: "👽" },
+  { id: "meteorLion", realmId: "space", name: "流星獅", icon: "💫" },
+  { id: "satelliteBird", realmId: "space", name: "衛星鳥", icon: "🛰️" },
+  { id: "galaxyDeer", realmId: "space", name: "銀河鹿", icon: "🌠" },
+  { id: "cosmoTurtle", realmId: "space", name: "宇宙龜", icon: "🛸" },
+  { id: "auroraRabbit", realmId: "space", name: "極光兔", icon: "🌈" },
+  { id: "asteroidMonkey", realmId: "space", name: "小行星猴", icon: "☄️" },
+  { id: "solarElephant", realmId: "space", name: "太陽象", icon: "☀️" },
+  { id: "orbitFish", realmId: "space", name: "軌道魚", icon: "🔭" },
+];
+
+const COLLECTIBLE_CHARACTERS: CollectibleCharacter[] = CREATURE_SPECIES.flatMap((species) =>
+  FAMILY_ROLES.map((role) => ({
+    ...species,
+    characterId: `${species.realmId}-${species.id}-${role.id}`,
+    familyRoleId: role.id,
+    familyRoleLabel: role.label,
+    familyRoleShortLabel: role.shortLabel,
+  })),
+);
+
+const COLLECTIBLE_BY_ID = new Map(COLLECTIBLE_CHARACTERS.map((character) => [character.characterId, character]));
 
 const GUIDE_TEXT = {
   homeWelcome: "你好呀，歡迎來到認字練功房。請按下面紅色的大按鈕，我們來學認字吧。",
@@ -77,6 +184,58 @@ const DISTRACTOR_ZHUYIN: Record<string, string> = {
 
 function lessonChars(lesson: Lesson): string[] {
   return lesson.newChars;
+}
+
+function charactersForRealm(realmId: RealmId): CollectibleCharacter[] {
+  return COLLECTIBLE_CHARACTERS.filter((character) => character.realmId === realmId);
+}
+
+function ownedCount(ownedCharacters: Record<string, number>, characterId: string): number {
+  return Math.max(0, Math.floor(ownedCharacters[characterId] ?? 0));
+}
+
+function realmOwnedCount(realmId: RealmId, ownedCharacters: Record<string, number>): number {
+  return charactersForRealm(realmId).filter((character) => ownedCount(ownedCharacters, character.characterId) > 0).length;
+}
+
+function realmTotalCount(realmId: RealmId): number {
+  return charactersForRealm(realmId).length;
+}
+
+function realmColor(realmId: RealmId): string {
+  return CREATURE_REALMS.find((realm) => realm.id === realmId)?.color ?? CREATURE_REALMS[0].color;
+}
+
+function realmComplete(realmId: RealmId, ownedCharacters: Record<string, number>): boolean {
+  return realmOwnedCount(realmId, ownedCharacters) >= realmTotalCount(realmId);
+}
+
+function realmUnlocked(realmId: RealmId, ownedCharacters: Record<string, number>): boolean {
+  const index = CREATURE_REALMS.findIndex((realm) => realm.id === realmId);
+  if (index <= 0) return true;
+  return CREATURE_REALMS.slice(0, index).every((realm) => realmComplete(realm.id, ownedCharacters));
+}
+
+function activeGachaRealm(ownedCharacters: Record<string, number>): RealmId {
+  return CREATURE_REALMS.find((realm) => realmUnlocked(realm.id, ownedCharacters) && !realmComplete(realm.id, ownedCharacters))?.id ?? "space";
+}
+
+function drawCharacter(realmId: RealmId, ownedCharacters: Record<string, number>): CollectibleCharacter {
+  const pool = charactersForRealm(realmId);
+  const missing = pool.filter((character) => ownedCount(ownedCharacters, character.characterId) === 0);
+  const source = missing.length > 0 && Math.random() < 0.68 ? missing : pool;
+  return source[Math.floor(Math.random() * source.length)] ?? pool[0];
+}
+
+function sanitizeOwnedCharacters(value: unknown): Record<string, number> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return Object.entries(value as Record<string, unknown>).reduce<Record<string, number>>((result, [id, count]) => {
+    const numericCount = Number(count);
+    if (COLLECTIBLE_BY_ID.has(id) && Number.isFinite(numericCount) && numericCount > 0) {
+      result[id] = Math.floor(numericCount);
+    }
+    return result;
+  }, {});
 }
 
 function lessonLabel(lesson: Lesson): string {
@@ -139,12 +298,17 @@ function loadStoredProgress(): StoredProgress | null {
     const completedOrders = Array.isArray(parsed.completedOrders)
       ? parsed.completedOrders.filter((order): order is number => Number.isInteger(order))
       : [];
+    const gachaTickets = Number.isFinite(parsed.gachaTickets)
+      ? Math.max(0, Math.floor(Number(parsed.gachaTickets)))
+      : completedOrders.length * 3;
     return {
       version: 1,
       coins: Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120,
       stars: Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36,
+      gachaTickets,
       selectedOrder: Number.isInteger(parsed.selectedOrder) ? Number(parsed.selectedOrder) : 1,
       completedOrders,
+      ownedCharacters: sanitizeOwnedCharacters(parsed.ownedCharacters),
     };
   } catch {
     return null;
@@ -174,6 +338,11 @@ function App() {
   const [startingOrder, setStartingOrder] = useState<number | null>(null);
   const [coins, setCoins] = useState(initialProgress?.coins ?? 120);
   const [stars, setStars] = useState(initialProgress?.stars ?? 36);
+  const [gachaTickets, setGachaTickets] = useState(initialProgress?.gachaTickets ?? 0);
+  const [ownedCharacters, setOwnedCharacters] = useState<Record<string, number>>(
+    () => initialProgress?.ownedCharacters ?? {},
+  );
+  const [lastGachaResult, setLastGachaResult] = useState<CollectibleCharacter | null>(null);
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
   const [selectedOrder, setSelectedOrder] = useState(initialProgress?.selectedOrder ?? nextOrder);
   const playbackState = usePlaybackState();
@@ -190,19 +359,37 @@ function App() {
       version: 1,
       coins,
       stars,
+      gachaTickets,
       selectedOrder,
       completedOrders: [...completedOrders],
+      ownedCharacters,
     });
-  }, [coins, stars, selectedOrder, completedOrders]);
+  }, [coins, stars, gachaTickets, selectedOrder, completedOrders, ownedCharacters]);
 
   function grantLessonReward(order: number, rewards: LessonReward) {
+    if (completedOrders.has(order)) return;
     setCoins((value) => value + rewards.coins);
     setStars((value) => value + rewards.stars);
+    setGachaTickets((value) => value + rewards.tickets);
     setCompletedOrders((prev) => {
       const next = new Set(prev);
       next.add(order);
       return next;
     });
+  }
+
+  function handleGachaDraw() {
+    if (gachaTickets <= 0) return;
+    const realmId = activeGachaRealm(ownedCharacters);
+    const character = drawCharacter(realmId, ownedCharacters);
+    setGachaTickets((value) => Math.max(0, value - 1));
+    setOwnedCharacters((prev) => ({
+      ...prev,
+      [character.characterId]: ownedCount(prev, character.characterId) + 1,
+    }));
+    setLastGachaResult(character);
+    playRewardChime();
+    void speakGuide(`你抽到了${character.name}${character.familyRoleLabel}。`);
   }
 
   function finishLesson(order: number, destination: LessonDestination) {
@@ -257,6 +444,7 @@ function App() {
       <AppHeader
         coins={coins}
         stars={stars}
+        tickets={gachaTickets}
         streakDays={streakDays}
         onMenu={() => setMenuOpen(true)}
       />
@@ -312,13 +500,25 @@ function App() {
           <RecordsPage
             coins={coins}
             stars={stars}
+            tickets={gachaTickets}
             streakDays={streakDays}
             completedCount={completedOrders.size}
+            collectedCount={CREATURE_REALMS.reduce(
+              (total, realm) => total + realmOwnedCount(realm.id, ownedCharacters),
+              0,
+            )}
           />
         )}
-        {page === "gacha" && <PlaceholderPage icon="🎁" title="轉蛋" text="之後用金幣抽角色，會從這裡進入。" />}
+        {page === "gacha" && (
+          <GachaPage
+            tickets={gachaTickets}
+            ownedCharacters={ownedCharacters}
+            lastResult={lastGachaResult}
+            onDraw={handleGachaDraw}
+          />
+        )}
         {page === "collection" && (
-          <PlaceholderPage icon="🎴" title="角色收藏" text="之後所有抽到的角色會放在這裡，也可以做互動。" />
+          <CollectionPage ownedCharacters={ownedCharacters} />
         )}
         {page === "settings" && <PlaceholderPage icon="⚙️" title="設定" text="之後放音量、資料備份、家長設定。" />}
       </main>
@@ -401,16 +601,19 @@ function PracticeHome({
 function AppHeader({
   coins,
   stars,
+  tickets,
   streakDays,
   onMenu,
 }: {
   coins: number;
   stars: number;
+  tickets: number;
   streakDays: number;
   onMenu: () => void;
 }) {
   const coinStat = useAnimatedStat(coins);
   const starStat = useAnimatedStat(stars);
+  const ticketStat = useAnimatedStat(tickets);
   return (
     <header className="app-header">
       <div className="header-inner">
@@ -429,6 +632,10 @@ function AppHeader({
           <span className={`stat-pill${starStat.animating ? " stat-animating star" : ""}`}>
             <span aria-hidden>⭐</span>
             <span className="stat-number">{starStat.value}</span>
+          </span>
+          <span className={`stat-pill${ticketStat.animating ? " stat-animating ticket" : ""}`}>
+            <span aria-hidden>券</span>
+            <span className="stat-number">{ticketStat.value}</span>
           </span>
           <span className="stat-pill">🔥 {streakDays} 天</span>
         </div>
@@ -716,13 +923,17 @@ function CatalogLessonGrid({
 function RecordsPage({
   coins,
   stars,
+  tickets,
   streakDays,
   completedCount,
+  collectedCount,
 }: {
   coins: number;
   stars: number;
+  tickets: number;
   streakDays: number;
   completedCount: number;
+  collectedCount: number;
 }) {
   return (
     <section className="page-panel">
@@ -733,8 +944,10 @@ function RecordsPage({
       <div className="record-grid">
         <StatCard icon="🪙" value={coins} label="金幣" />
         <StatCard icon="⭐" value={stars} label="星星" />
+        <StatCard icon="券" value={tickets} label="轉蛋券" />
         <StatCard icon="🔥" value={streakDays} label="連續天數" />
         <StatCard icon="✅" value={completedCount} label="已破解課程" />
+        <StatCard icon="字" value={collectedCount} label="已收角色" />
       </div>
     </section>
   );
@@ -791,6 +1004,191 @@ function PlaceholderPage({ icon, title, text }: { icon: string; title: string; t
   );
 }
 
+function GachaPage({
+  tickets,
+  ownedCharacters,
+  lastResult,
+  onDraw,
+}: {
+  tickets: number;
+  ownedCharacters: Record<string, number>;
+  lastResult: CollectibleCharacter | null;
+  onDraw: () => void;
+}) {
+  const [drawing, setDrawing] = useState(false);
+  const realmId = activeGachaRealm(ownedCharacters);
+  const realm = CREATURE_REALMS.find((candidate) => candidate.id === realmId) ?? CREATURE_REALMS[0];
+  const collected = realmOwnedCount(realm.id, ownedCharacters);
+  const total = realmTotalCount(realm.id);
+  const canDraw = tickets > 0;
+
+  function handleDraw() {
+    if (!canDraw || drawing) return;
+    setDrawing(true);
+    onDraw();
+    window.setTimeout(() => setDrawing(false), 900);
+  }
+
+  return (
+    <section className="page-panel gacha-page">
+      <div className="page-heading">
+        <h1>轉蛋</h1>
+        <p>每完成一課可以拿三張轉蛋券。先收集地上的生物，再前往海裡、天空和外太空。</p>
+      </div>
+
+      <div className="realm-track">
+        {CREATURE_REALMS.map((candidate) => {
+          const unlocked = realmUnlocked(candidate.id, ownedCharacters);
+          const realmCount = realmOwnedCount(candidate.id, ownedCharacters);
+          const realmTotal = realmTotalCount(candidate.id);
+          return (
+            <div
+              key={candidate.id}
+              className={`realm-card${candidate.id === realm.id ? " active" : ""}${unlocked ? "" : " locked"}`}
+              style={{ "--realm-color": candidate.color } as CSSProperties}
+            >
+              <strong>{candidate.label}</strong>
+              <span>{realmCount} / {realmTotal}</span>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="gacha-machine" style={{ "--realm-color": realm.color } as CSSProperties}>
+        <div className={`gacha-orb${drawing ? " drawing" : ""}`} aria-hidden>
+          <span>{realm.shortLabel}</span>
+        </div>
+        <div className="gacha-copy">
+          <h2>{realm.label}</h2>
+          <p>{realm.description}</p>
+          <strong>轉蛋券：{tickets}</strong>
+          <small>本區進度 {collected} / {total}</small>
+        </div>
+        <button className={`btn gacha-draw-button${drawing ? " starting" : ""}`} disabled={!canDraw || drawing} onClick={handleDraw}>
+          {tickets <= 0 ? "沒有轉蛋券" : drawing ? "轉動中" : "抽一次"}
+        </button>
+      </div>
+
+      {lastResult ? (
+        <div className="draw-result" style={{ "--realm-color": realmColor(lastResult.realmId) } as CSSProperties}>
+          <CreatureAvatar character={lastResult} owned large />
+          <div>
+            <span>這次抽到</span>
+            <h2>{lastResult.name}{lastResult.familyRoleLabel}</h2>
+            <p>已遇見 {ownedCount(ownedCharacters, lastResult.characterId)} 次</p>
+          </div>
+        </div>
+      ) : (
+        <div className="draw-result empty">
+          <span className="placeholder-icon">券</span>
+          <p>按下抽一次，就會有新朋友跑出來。</p>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function CollectionPage({ ownedCharacters }: { ownedCharacters: Record<string, number> }) {
+  const [selectedRealm, setSelectedRealm] = useState<RealmId>("land");
+  const realm = CREATURE_REALMS.find((candidate) => candidate.id === selectedRealm) ?? CREATURE_REALMS[0];
+  const unlocked = realmUnlocked(realm.id, ownedCharacters);
+  const visibleRealm = unlocked ? realm : CREATURE_REALMS.find((candidate) => realmUnlocked(candidate.id, ownedCharacters)) ?? CREATURE_REALMS[0];
+  const characters = charactersForRealm(visibleRealm.id);
+  const collected = realmOwnedCount(visibleRealm.id, ownedCharacters);
+  const total = realmTotalCount(visibleRealm.id);
+
+  useEffect(() => {
+    if (!realmUnlocked(selectedRealm, ownedCharacters)) setSelectedRealm(activeGachaRealm(ownedCharacters));
+  }, [selectedRealm, ownedCharacters]);
+
+  return (
+    <section className="page-panel collection-page">
+      <div className="page-heading">
+        <h1>角色收藏</h1>
+        <p>每一種生物都有九個家人。收滿一個區塊，下一個區塊就會打開。</p>
+      </div>
+
+      <div className="collection-tabs" role="tablist" aria-label="角色區塊">
+        {CREATURE_REALMS.map((candidate) => {
+          const candidateUnlocked = realmUnlocked(candidate.id, ownedCharacters);
+          return (
+            <button
+              key={candidate.id}
+              className={`collection-tab${visibleRealm.id === candidate.id ? " active" : ""}`}
+              disabled={!candidateUnlocked}
+              style={{ "--realm-color": candidate.color } as CSSProperties}
+              onClick={() => setSelectedRealm(candidate.id)}
+            >
+              <strong>{candidate.shortLabel}</strong>
+              <small>{realmOwnedCount(candidate.id, ownedCharacters)} / {realmTotalCount(candidate.id)}</small>
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="collection-summary" style={{ "--realm-color": visibleRealm.color } as CSSProperties}>
+        <div>
+          <h2>{visibleRealm.label}</h2>
+          <p>{visibleRealm.description}</p>
+        </div>
+        <strong>{collected} / {total}</strong>
+      </div>
+
+      <div className="collection-grid" aria-label={`${visibleRealm.label}角色`}>
+        {characters.map((character) => {
+          const count = ownedCount(ownedCharacters, character.characterId);
+          return (
+            <CollectibleCard
+              key={character.characterId}
+              character={character}
+              owned={count > 0}
+              duplicateCount={count}
+            />
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function CollectibleCard({
+  character,
+  owned,
+  duplicateCount,
+}: {
+  character: CollectibleCharacter;
+  owned: boolean;
+  duplicateCount: number;
+}) {
+  return (
+    <div
+      className={`collectible-card${owned ? " owned" : " empty"}`}
+      style={{ "--realm-color": realmColor(character.realmId) } as CSSProperties}
+    >
+      <CreatureAvatar character={character} owned={owned} />
+      <strong>{owned ? `${character.name}${character.familyRoleLabel}` : "還沒遇見"}</strong>
+      <small>{owned && duplicateCount > 1 ? `遇見 ${duplicateCount} 次` : owned ? character.familyRoleLabel : "???"}</small>
+    </div>
+  );
+}
+
+function CreatureAvatar({
+  character,
+  owned,
+  large = false,
+}: {
+  character: CollectibleCharacter;
+  owned: boolean;
+  large?: boolean;
+}) {
+  return (
+    <div className={`creature-avatar${large ? " large" : ""}${owned ? "" : " silhouette"}`}>
+      <span className="creature-icon" aria-hidden>{owned ? character.icon : "?"}</span>
+      <span className="family-badge">{owned ? character.familyRoleShortLabel : ""}</span>
+    </div>
+  );
+}
+
 function LessonPanel({
   lesson,
   lessons,
@@ -828,7 +1226,7 @@ function LessonPanel({
   const gamesDone = !usesSentenceGames || gameDoneCount >= requiredGameRounds;
   const lessonReady = soundUnlocked && findUnlocked && pictureDone && gamesDone;
   const progressSteps = [soundUnlocked, findUnlocked, pictureDone, ...(usesSentenceGames ? [gamesDone] : [])];
-  const lessonReward = { coins: 30, stars: 12 };
+  const lessonReward = { coins: 30, stars: 12, tickets: 3 };
   const hasNextLesson = lessons.some((candidate) => candidate.order === lesson.order + 1);
   const lessonIntro = lessonIntroText(lesson);
   const hearPrompt = hearPromptText(lesson);
@@ -870,10 +1268,15 @@ function LessonPanel({
 
   useEffect(() => {
     if (lessonReady && rewardState === "waiting") {
-      setRewardState("ready");
-      void speakForTarget(usesSentenceGames ? "stage4" : "stage3", GUIDE_TEXT.rewardReady);
+      if (completed) {
+        setRewardState("claimed");
+        void speakForTarget(usesSentenceGames ? "stage4" : "stage3", "這一課已經練完了。要下一課，按紅色按鈕；要回入口，按白色按鈕。");
+      } else {
+        setRewardState("ready");
+        void speakForTarget(usesSentenceGames ? "stage4" : "stage3", GUIDE_TEXT.rewardReady);
+      }
     }
-  }, [lessonReady, rewardState, usesSentenceGames]);
+  }, [completed, lessonReady, rewardState, usesSentenceGames]);
 
   async function speakForTarget(target: SpeechTarget, text: string) {
     setSpeakingTarget(target);
@@ -1105,6 +1508,7 @@ function LessonPanel({
         <RewardPanel
           state={rewardState}
           reward={lessonReward}
+          alreadyCompleted={completed}
           hasNext={hasNextLesson}
           onClaim={handleClaimReward}
           onHome={() => handleRewardDestination("home")}
@@ -1219,6 +1623,7 @@ function StageAdvancePrompt({
 function RewardPanel({
   state,
   reward,
+  alreadyCompleted,
   hasNext,
   onClaim,
   onHome,
@@ -1228,6 +1633,7 @@ function RewardPanel({
 }: {
   state: "waiting" | "ready" | "claiming" | "claimed";
   reward: LessonReward;
+  alreadyCompleted: boolean;
   hasNext: boolean;
   onClaim: () => void;
   onHome: () => void;
@@ -1236,12 +1642,17 @@ function RewardPanel({
   onSpeakEnd: (target: SpeechTarget) => void;
 }) {
   const claimed = state === "claimed";
-  const message = state === "ready" ? GUIDE_TEXT.rewardReady : GUIDE_TEXT.rewardWon;
+  const message = alreadyCompleted
+    ? "這一課已經練完了。要下一課，按紅色按鈕；要回入口，按白色按鈕。"
+    : state === "ready"
+      ? GUIDE_TEXT.rewardReady
+      : GUIDE_TEXT.rewardWon;
   const coinCount = useRewardCount(reward.coins, state !== "ready");
   const starCount = useRewardCount(reward.stars, state !== "ready");
+  const ticketCount = useRewardCount(reward.tickets, state !== "ready");
   return (
     <section className={`reward-panel active-block reward-${state}`} aria-label="領取獎勵">
-      {state === "claiming" && (
+      {!alreadyCompleted && state === "claiming" && (
         <div className="reward-burst" aria-hidden>
           <span>🪙</span>
           <span>⭐</span>
@@ -1261,7 +1672,7 @@ function RewardPanel({
         {message}
       </NarrationLine>
 
-      <div className="reward-animation" aria-label="本課獎勵">
+      {!alreadyCompleted && <div className="reward-animation" aria-label="本課獎勵">
         <div className="reward-badge coin">
           <span className="reward-icon" aria-hidden>
             🪙
@@ -1276,7 +1687,14 @@ function RewardPanel({
           <strong className="reward-number">+{starCount}</strong>
           <small>星星</small>
         </div>
-      </div>
+        <div className="reward-badge ticket">
+          <span className="reward-icon" aria-hidden>
+            券
+          </span>
+          <strong className="reward-number">+{ticketCount}</strong>
+          <small>轉蛋券</small>
+        </div>
+      </div>}
 
       {!claimed ? (
         <button className={`btn reward-claim-button${state === "claiming" ? " starting" : ""}`} disabled={state === "claiming"} onClick={onClaim}>

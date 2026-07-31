@@ -133,6 +133,10 @@ button {
   box-shadow: 0 0 0 5px rgba(255, 245, 145, 0.18), 0 0 18px rgba(255, 245, 145, 0.4);
 }
 
+.stat-pill.stat-animating.ticket {
+  box-shadow: 0 0 0 5px rgba(157, 239, 226, 0.18), 0 0 18px rgba(157, 239, 226, 0.4);
+}
+
 .drawer-backdrop {
   position: fixed;
   inset: 0;
@@ -489,7 +493,7 @@ button {
 
 .record-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -890,7 +894,7 @@ button {
 .reward-animation {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -942,6 +946,10 @@ button {
 
 .reward-claiming .reward-badge.star {
   animation-delay: 0.14s;
+}
+
+.reward-claiming .reward-badge.ticket {
+  animation-delay: 0.24s;
 }
 
 .reward-claimed .reward-badge {
@@ -1486,6 +1494,24 @@ button.char-token {
   }
 }
 
+@keyframes gacha-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  45% {
+    transform: rotate(18deg) scale(1.12);
+  }
+
+  75% {
+    transform: rotate(-12deg) scale(1.08);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
 @keyframes audio-button-pulse {
   0%,
   100% {
@@ -1705,6 +1731,262 @@ button.char-token {
   font-weight: 800;
 }
 
+.gacha-page,
+.collection-page {
+  display: grid;
+  gap: 16px;
+}
+
+.realm-track,
+.collection-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.realm-card,
+.collection-tab {
+  min-width: 0;
+  min-height: 76px;
+  border: 1px solid color-mix(in srgb, var(--realm-color) 46%, #fff);
+  border-left: 7px solid var(--realm-color);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--realm-color) 10%, #fff);
+  color: var(--ink);
+  padding: 10px;
+  text-align: left;
+}
+
+.realm-card {
+  display: grid;
+  align-content: center;
+  gap: 4px;
+}
+
+.realm-card.active,
+.collection-tab.active {
+  outline: 2px solid var(--realm-color);
+  outline-offset: 1px;
+}
+
+.realm-card.locked,
+.collection-tab:disabled {
+  border-color: var(--line);
+  border-left-color: #b9b1a8;
+  background: #eee8dd;
+  color: #918a82;
+}
+
+.realm-card span,
+.collection-tab small {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.gacha-machine {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  border: 2px solid color-mix(in srgb, var(--realm-color) 42%, #fff);
+  border-radius: 8px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--realm-color) 10%, #fff) 0%, #fff 100%);
+  padding: 18px;
+}
+
+.gacha-orb {
+  width: 118px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  border: 7px solid color-mix(in srgb, var(--realm-color) 70%, #fff);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, #fff 0 18%, transparent 19%),
+    linear-gradient(145deg, #fff 0 44%, color-mix(in srgb, var(--realm-color) 24%, #fff) 45% 100%);
+  box-shadow: 0 18px 32px rgba(43, 33, 22, 0.14);
+  color: var(--realm-color);
+  font-weight: 950;
+}
+
+.gacha-orb.drawing {
+  animation: gacha-spin 0.82s ease-in-out;
+}
+
+.gacha-copy {
+  display: grid;
+  gap: 5px;
+}
+
+.gacha-copy h2,
+.collection-summary h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.gacha-copy p,
+.collection-summary p,
+.draw-result p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.gacha-copy strong {
+  color: var(--primary-strong);
+  font-size: 1.15rem;
+}
+
+.gacha-copy small {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.gacha-draw-button {
+  min-width: 128px;
+  min-height: 58px;
+  background: #d94735;
+  color: #fff;
+  box-shadow: 0 0 0 6px rgba(217, 71, 53, 0.14), 0 12px 24px rgba(217, 71, 53, 0.24);
+}
+
+.draw-result,
+.collection-summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid color-mix(in srgb, var(--realm-color) 42%, #fff);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--realm-color) 9%, #fff);
+  padding: 14px;
+}
+
+.draw-result.empty {
+  --realm-color: var(--primary);
+  justify-content: center;
+  min-height: 140px;
+  text-align: center;
+}
+
+.draw-result span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.draw-result h2 {
+  margin: 3px 0;
+  font-size: 1.5rem;
+}
+
+.collection-tab {
+  display: grid;
+  align-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.collection-tab:disabled {
+  cursor: not-allowed;
+}
+
+.collection-summary {
+  justify-content: space-between;
+}
+
+.collection-summary strong {
+  color: var(--realm-color);
+  font-size: 1.45rem;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.collectible-card {
+  min-width: 0;
+  min-height: 142px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  padding: 10px 6px;
+  text-align: center;
+}
+
+.collectible-card.owned {
+  border-color: color-mix(in srgb, var(--realm-color) 42%, #fff);
+  background: color-mix(in srgb, var(--realm-color) 8%, #fff);
+}
+
+.collectible-card.empty {
+  background: #f0ebe3;
+  color: #8d867d;
+}
+
+.collectible-card strong {
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.collectible-card small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.creature-avatar {
+  position: relative;
+  width: 66px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  border: 2px solid color-mix(in srgb, var(--realm-color) 52%, #fff);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(49, 38, 24, 0.12);
+}
+
+.creature-avatar.large {
+  width: 104px;
+}
+
+.creature-avatar.silhouette {
+  border-color: #cfc6bb;
+  background: #ded7cd;
+  box-shadow: none;
+}
+
+.creature-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.creature-avatar.large .creature-icon {
+  font-size: 3.1rem;
+}
+
+.family-badge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--realm-color);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 950;
+}
+
 @media (max-width: 780px) {
   .app-shell {
     padding: 12px;
@@ -1762,6 +2044,25 @@ button.char-token {
 
   .record-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .realm-track,
+  .collection-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gacha-machine {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .gacha-copy {
+    justify-items: center;
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .home-char-grid {
@@ -1836,6 +2137,17 @@ button.char-token {
   .reward-actions,
   .reward-animation {
     grid-template-columns: 1fr;
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .draw-result,
+  .collection-summary {
+    align-items: stretch;
+    flex-direction: column;
+    text-align: center;
   }
 
   .home-char-grid {
