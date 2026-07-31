@@ -16,6 +16,8 @@ type AudioPlayOptions = {
   onError?: () => void;
 };
 type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "advance2" | "advance3" | null;
+type LessonDestination = "home" | "next";
+type LessonReward = { coins: number; stars: number };
 
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
 
@@ -49,7 +51,8 @@ const GUIDE_TEXT = {
   blockFind: "找找看剛剛學過的字在哪裡。看到學過的字，就點它。",
   findMiss: "這個不是剛剛學過的字喔，再找找看。",
   blockPicture: "點發光的圖，聽我念一句話。你也要跟著念喔。",
-  learned: "都聽完了，就按我聽完了。",
+  rewardReady: "好棒，你都念完了。請按紅色大按鈕，領取獎勵。",
+  rewardWon: "太棒了！你得到金幣和星星。要下一課，請按紅色按鈕。要回首頁休息，請按白色按鈕。",
 } as const;
 
 const SMALL_ZH_NUMBERS = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
@@ -110,27 +113,34 @@ function App() {
   const [lessonOpen, setLessonOpen] = useState(false);
   const [completionNotice, setCompletionNotice] = useState("");
   const [startingOrder, setStartingOrder] = useState<number | null>(null);
+  const [coins, setCoins] = useState(120);
+  const [stars, setStars] = useState(36);
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
   const [selectedOrder, setSelectedOrder] = useState(nextOrder);
   const selectedLesson =
     curriculum.lessons.find((lesson) => lesson.order === selectedOrder) ?? curriculum.lessons[0];
-  const coins = completedOrders.size * 30 + 120;
-  const stars = completedOrders.size * 12 + 36;
   const streakDays = completedOrders.size > 0 ? 1 : 0;
 
   useEffect(() => {
     if (page === "practice" && !lessonOpen) speakGuide(GUIDE_TEXT.homeWelcome);
   }, [page, lessonOpen]);
 
-  function completeLesson(order: number) {
-    const following = curriculum.lessons.find((lesson) => lesson.order === order + 1);
+  function grantLessonReward(order: number, rewards: LessonReward) {
+    if (!completedOrders.has(order)) {
+      setCoins((value) => value + rewards.coins);
+      setStars((value) => value + rewards.stars);
+    }
     setCompletedOrders((prev) => {
       const next = new Set(prev);
       next.add(order);
       return next;
     });
+  }
+
+  function finishLesson(order: number, destination: LessonDestination) {
+    const following = curriculum.lessons.find((lesson) => lesson.order === order + 1);
     if (following) setSelectedOrder(following.order);
-    setLessonOpen(false);
+    setLessonOpen(destination === "next" && Boolean(following));
     setCompletionNotice(following ? `第 ${order} 課完成，已解鎖第 ${following.order} 課。` : `第 ${order} 課完成。`);
   }
 
@@ -198,7 +208,8 @@ function App() {
               lessons={curriculum.lessons}
               completed={completedOrders.has(selectedLesson.order)}
               locked={selectedLesson.order > nextOrder}
-              onComplete={() => completeLesson(selectedLesson.order)}
+              onReward={(rewards) => grantLessonReward(selectedLesson.order, rewards)}
+              onComplete={(destination) => finishLesson(selectedLesson.order, destination)}
             />
           </div>
         )}
@@ -644,13 +655,15 @@ function LessonPanel({
   lessons,
   completed,
   locked,
+  onReward,
   onComplete,
 }: {
   lesson: Lesson;
   lessons: Lesson[];
   completed: boolean;
   locked: boolean;
-  onComplete: () => void;
+  onReward: (rewards: LessonReward) => void;
+  onComplete: (destination: LessonDestination) => void;
 }) {
   const [heardChars, setHeardChars] = useState<Set<string>>(new Set());
   const [spotlightChar, setSpotlightChar] = useState<string | null>(null);
@@ -659,6 +672,7 @@ function LessonPanel({
   const [activeStage, setActiveStage] = useState(1);
   const [advancingStage, setAdvancingStage] = useState<number | null>(null);
   const [speakingTarget, setSpeakingTarget] = useState<SpeechTarget>(null);
+  const [rewardState, setRewardState] = useState<"waiting" | "ready" | "claiming" | "claimed">("waiting");
   const [resetVersion, setResetVersion] = useState(0);
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
@@ -666,6 +680,8 @@ function LessonPanel({
   const usesSentenceGames = lesson.order >= 5;
   const requiredPracticeRounds = usesSentenceGames ? Math.min(lesson.requiredRounds, lesson.sentences.length) : 1;
   const lessonReady = soundUnlocked && findUnlocked && practiceDoneCount >= requiredPracticeRounds;
+  const lessonReward = { coins: 30, stars: 12 };
+  const hasNextLesson = lessons.some((candidate) => candidate.order === lesson.order + 1);
   const lessonIntro = lessonIntroText(lesson);
 
   useEffect(() => {
@@ -696,6 +712,13 @@ function LessonPanel({
       void speakForTarget("stage3", GUIDE_TEXT.blockPicture);
     }
   }, [activeStage, practiceDoneCount, requiredPracticeRounds]);
+
+  useEffect(() => {
+    if (lessonReady && rewardState === "waiting") {
+      setRewardState("ready");
+      void speakForTarget("stage3", GUIDE_TEXT.rewardReady);
+    }
+  }, [lessonReady, rewardState]);
 
   async function speakForTarget(target: SpeechTarget, text: string) {
     setSpeakingTarget(target);
@@ -730,6 +753,22 @@ function LessonPanel({
     await Promise.all([speakGuide(`${GUIDE_TEXT.stageAdvance} ${stageLabel(nextStage)}。`), waitMs(820)]);
     setActiveStage(nextStage);
     setAdvancingStage(null);
+  }
+
+  async function handleClaimReward() {
+    if (!lessonReady || rewardState === "claiming" || rewardState === "claimed") return;
+    setRewardState("claiming");
+    playRewardChime();
+    onReward(lessonReward);
+    void speakForTarget("stage3", GUIDE_TEXT.rewardWon);
+    await waitMs(2300);
+    setRewardState("claimed");
+  }
+
+  function handleRewardDestination(destination: LessonDestination) {
+    if (rewardState !== "claimed") return;
+    playStartChime();
+    onComplete(destination);
   }
 
   return (
@@ -868,6 +907,19 @@ function LessonPanel({
         )}
       </LessonBlock>
 
+      {lessonReady && (
+        <RewardPanel
+          state={rewardState}
+          reward={lessonReward}
+          hasNext={hasNextLesson}
+          onClaim={handleClaimReward}
+          onHome={() => handleRewardDestination("home")}
+          onNext={() => handleRewardDestination("next")}
+          onSpeakStart={setSpeakingTarget}
+          onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
+        />
+      )}
+
       <div className="progress-row">
         <div className="progress-track" aria-label="通關進度">
           <div
@@ -883,9 +935,6 @@ function LessonPanel({
       </div>
 
       <div className="actions" style={{ marginTop: 16 }}>
-        <button className="btn primary" disabled={!lessonReady || completed || locked} onClick={onComplete}>
-          {completed ? "下一課開好了" : "我都學會了"}
-        </button>
         <button
           className="btn ghost"
           onClick={() => {
@@ -895,6 +944,8 @@ function LessonPanel({
             setPracticeDoneCount(0);
             setActiveStage(1);
             setAdvancingStage(null);
+            setSpeakingTarget(null);
+            setRewardState("waiting");
             setResetVersion((version) => version + 1);
           }}
         >
@@ -964,6 +1015,74 @@ function StageAdvancePrompt({
       <button className={`btn stage-advance-button${busy ? " starting" : ""}`} disabled={busy} onClick={onAdvance}>
         {busy ? "走囉" : buttonText}
       </button>
+    </section>
+  );
+}
+
+function RewardPanel({
+  state,
+  reward,
+  hasNext,
+  onClaim,
+  onHome,
+  onNext,
+  onSpeakStart,
+  onSpeakEnd,
+}: {
+  state: "waiting" | "ready" | "claiming" | "claimed";
+  reward: LessonReward;
+  hasNext: boolean;
+  onClaim: () => void;
+  onHome: () => void;
+  onNext: () => void;
+  onSpeakStart: (target: SpeechTarget) => void;
+  onSpeakEnd: (target: SpeechTarget) => void;
+}) {
+  const claimed = state === "claimed";
+  const message = state === "ready" ? GUIDE_TEXT.rewardReady : GUIDE_TEXT.rewardWon;
+  return (
+    <section className={`reward-panel active-block reward-${state}`} aria-label="領取獎勵">
+      <NarrationLine
+        text={message}
+        target="stage3"
+        onSpeakStart={onSpeakStart}
+        onSpeakEnd={onSpeakEnd}
+        className="reward-copy"
+      >
+        {message}
+      </NarrationLine>
+
+      <div className="reward-animation" aria-label="本課獎勵">
+        <div className="reward-badge coin">
+          <span className="reward-icon" aria-hidden>
+            🪙
+          </span>
+          <strong>+{reward.coins}</strong>
+          <small>金幣</small>
+        </div>
+        <div className="reward-badge star">
+          <span className="reward-icon" aria-hidden>
+            ⭐
+          </span>
+          <strong>+{reward.stars}</strong>
+          <small>星星</small>
+        </div>
+      </div>
+
+      {!claimed ? (
+        <button className={`btn reward-claim-button${state === "claiming" ? " starting" : ""}`} disabled={state === "claiming"} onClick={onClaim}>
+          {state === "claiming" ? "領獎中" : "領取獎勵"}
+        </button>
+      ) : (
+        <div className="reward-actions">
+          <button className="btn reward-next-button" disabled={!hasNext} onClick={onNext}>
+            {hasNext ? "下一課" : "沒有下一課"}
+          </button>
+          <button className="btn reward-home-button" onClick={onHome}>
+            回首頁休息
+          </button>
+        </div>
+      )}
     </section>
   );
 }
@@ -1113,6 +1232,10 @@ function PictureSentencePreview({
   const [completedSentenceIds, setCompletedSentenceIds] = useState<Set<string>>(new Set());
   const allPicturesDone = completedSentenceIds.size >= lesson.sentences.length;
 
+  useEffect(() => {
+    if (!disabled && !done && allPicturesDone) onDone();
+  }, [allPicturesDone, disabled, done, onDone]);
+
   function handleSentenceTap(sentence: LessonSentence, index: number) {
     if (disabled || index !== currentSentenceIndex || playingSentenceId) return;
     void playSentence(sentence, {
@@ -1177,18 +1300,7 @@ function PictureSentencePreview({
           );
         })}
       </div>
-      <NarrationLine
-        text={GUIDE_TEXT.learned}
-        target="stage3"
-        onSpeakStart={onSpeakStart}
-        onSpeakEnd={onSpeakEnd}
-        className="block-note"
-      >
-        {GUIDE_TEXT.learned}
-      </NarrationLine>
-      <button className="btn secondary" disabled={disabled || done || !allPicturesDone} onClick={onDone}>
-        我聽完了
-      </button>
+      {allPicturesDone && <p className="success">句子都聽完了。</p>}
     </>
   );
 }
@@ -1311,6 +1423,15 @@ function playStartChime() {
   playToneSequence([
     { frequency: 523, endFrequency: 659, duration: 0.11, gain: 0.07 },
     { frequency: 784, endFrequency: 988, duration: 0.16, gain: 0.08, delay: 0.08 },
+  ]);
+}
+
+function playRewardChime() {
+  playToneSequence([
+    { frequency: 659, endFrequency: 880, duration: 0.12, gain: 0.075 },
+    { frequency: 880, endFrequency: 1175, duration: 0.14, gain: 0.08, delay: 0.09 },
+    { frequency: 1046, endFrequency: 1397, duration: 0.18, gain: 0.075, delay: 0.22 },
+    { frequency: 1568, endFrequency: 1760, duration: 0.2, gain: 0.055, delay: 0.36 },
   ]);
 }
 

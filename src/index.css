@@ -836,6 +836,109 @@ button {
   opacity: 1;
 }
 
+.reward-panel {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  margin: 16px 0;
+  padding: 16px;
+  border: 2px solid rgba(217, 71, 53, 0.28);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fff8f6 0%, #fffdf7 100%);
+}
+
+.reward-copy {
+  width: 100%;
+  justify-content: center;
+  color: #713327;
+  font-weight: 900;
+}
+
+.reward-animation {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.reward-badge {
+  min-height: 104px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(79, 59, 34, 0.08);
+  overflow: hidden;
+}
+
+.reward-badge strong {
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.reward-badge small {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.reward-icon {
+  font-size: 2.15rem;
+  line-height: 1;
+  animation: reward-float 1.15s ease-in-out infinite;
+}
+
+.reward-claiming .reward-badge {
+  animation: reward-run 0.88s ease-in-out infinite;
+}
+
+.reward-claiming .reward-badge.coin {
+  animation-delay: 0.04s;
+}
+
+.reward-claiming .reward-badge.star {
+  animation-delay: 0.14s;
+}
+
+.reward-claimed .reward-badge {
+  border-color: rgba(34, 132, 123, 0.38);
+  background: var(--green-soft);
+}
+
+.reward-claim-button,
+.reward-next-button {
+  min-width: 168px;
+  min-height: 58px;
+  border-radius: 8px;
+  background: #d94735;
+  color: #fff;
+  font-size: 1.08rem;
+  box-shadow: 0 0 0 6px rgba(217, 71, 53, 0.14), 0 12px 24px rgba(217, 71, 53, 0.24);
+  animation: start-button-glow 1.6s ease-in-out infinite;
+}
+
+.reward-claim-button.starting {
+  background: #ef5a46;
+  animation: none;
+}
+
+.reward-actions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.reward-home-button {
+  min-height: 58px;
+  border: 2px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font-size: 1.02rem;
+}
+
 .sentence-card {
   padding: 18px;
   margin-bottom: 16px;
@@ -1185,6 +1288,31 @@ button.char-token {
   }
 }
 
+@keyframes reward-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(4deg);
+  }
+}
+
+@keyframes reward-run {
+  0% {
+    transform: translateX(-8px) scale(0.96);
+    box-shadow: 0 10px 20px rgba(217, 71, 53, 0.08);
+  }
+  45% {
+    transform: translateX(8px) scale(1.06);
+    box-shadow: 0 14px 26px rgba(217, 71, 53, 0.2);
+  }
+  100% {
+    transform: translateX(-8px) scale(0.96);
+    box-shadow: 0 10px 20px rgba(217, 71, 53, 0.08);
+  }
+}
+
 .practice-meta {
   display: flex;
   justify-content: space-between;
@@ -1412,6 +1540,11 @@ button.char-token {
   }
 
   .picture-sentence-card {
+    grid-template-columns: 1fr;
+  }
+
+  .reward-actions,
+  .reward-animation {
     grid-template-columns: 1fr;
   }
 
