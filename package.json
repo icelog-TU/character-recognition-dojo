@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "curriculum:packet": "node scripts/create-generation-packet.mjs",
     "validate:curriculum": "node scripts/validate-curriculum.mjs",
     "preview": "vite preview"
   },

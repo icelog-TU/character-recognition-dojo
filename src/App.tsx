@@ -8,6 +8,7 @@ const curriculum = curriculumData as unknown as Curriculum;
 
 type GameMode = "找字" | "教動物" | "填空" | "排句子" | "誰念對";
 type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
+type LessonCharEntry = { lesson: Lesson; char: string; index: number };
 
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
 
@@ -35,6 +36,14 @@ function lessonChars(lesson: Lesson): string[] {
 
 function lessonLabel(lesson: Lesson): string {
   return lesson.newChars.join("");
+}
+
+function lessonCharEntries(lesson: Lesson): LessonCharEntry[] {
+  return lesson.newChars.map((char, index) => ({ lesson, char, index }));
+}
+
+function flattenLessonChars(lessons: Lesson[]): LessonCharEntry[] {
+  return lessons.flatMap(lessonCharEntries);
 }
 
 function App() {
@@ -214,9 +223,11 @@ function PracticeNavigator({
   nextOrder: number;
   onSelect: (order: number) => void;
 }) {
-  const nearbyLessons = lessons
+  const nearbyEntries = lessons
     .filter((lesson) => lesson.order <= selectedOrder && lesson.order <= nextOrder)
-    .slice(-6);
+    .slice(-6)
+    .flatMap(lessonCharEntries)
+    .slice(-12);
 
   return (
     <aside className="side-panel">
@@ -225,13 +236,13 @@ function PracticeNavigator({
         <span className="mini-label">已解鎖</span>
       </div>
       <div className="nearby-row" aria-label="最近可回看的課程">
-        {nearbyLessons.map((lesson) => (
+        {nearbyEntries.map((entry) => (
           <LessonJumpButton
-            key={lesson.id}
-            lesson={lesson}
-            selected={lesson.order === selectedOrder}
+            key={`${entry.lesson.id}-${entry.char}-${entry.index}`}
+            entry={entry}
+            selected={entry.lesson.order === selectedOrder}
             locked={false}
-            completed={completedOrders.has(lesson.order)}
+            completed={completedOrders.has(entry.lesson.order)}
             onSelect={onSelect}
           />
         ))}
@@ -241,27 +252,28 @@ function PracticeNavigator({
 }
 
 function LessonJumpButton({
-  lesson,
+  entry,
   selected,
   locked,
   completed,
   onSelect,
 }: {
-  lesson: Lesson;
+  entry: LessonCharEntry;
   selected: boolean;
   locked: boolean;
   completed: boolean;
   onSelect: (order: number) => void;
 }) {
+  const { lesson, char } = entry;
   return (
     <button
       className={`lesson-chip${selected ? " active" : ""}${completed ? " completed" : ""}`}
       disabled={locked}
       onClick={() => onSelect(lesson.order)}
-      aria-label={`第 ${lesson.order} 課 ${lessonLabel(lesson)}`}
+      aria-label={`第 ${lesson.order} 課 ${char}`}
     >
-      <span>{lesson.order}</span>
-      <LessonCharBadge lesson={lesson} />
+      <span>第 {lesson.order} 課</span>
+      <strong>{char}</strong>
     </button>
   );
 }
@@ -283,17 +295,18 @@ function CatalogPage({
   const [query, setQuery] = useState("");
   const normalizedQuery = query.trim();
   const activeGroup = RAINBOW_GROUPS.find((group) => group.id === activeGroupId) ?? RAINBOW_GROUPS[0];
+  const allEntries = flattenLessonChars(lessons);
   const searchResults =
     normalizedQuery.length > 0
-      ? lessons.filter(
-          (lesson) =>
-            lesson.newChars.some((char) => char.includes(normalizedQuery)) ||
-            lesson.title.includes(normalizedQuery) ||
-            String(lesson.order) === normalizedQuery,
+      ? allEntries.filter(
+          (entry) =>
+            entry.char.includes(normalizedQuery) ||
+            entry.lesson.title.includes(normalizedQuery) ||
+            String(entry.lesson.order) === normalizedQuery,
         )
       : [];
-  const activeGroupLessons = lessons.filter(
-    (lesson) => lesson.order >= activeGroup.start && lesson.order <= activeGroup.end,
+  const activeGroupEntries = allEntries.filter(
+    (entry) => entry.lesson.order >= activeGroup.start && entry.lesson.order <= activeGroup.end,
   );
 
   return (
@@ -312,7 +325,7 @@ function CatalogPage({
 
       {normalizedQuery ? (
         <CatalogLessonGrid
-          lessons={searchResults}
+          entries={searchResults}
           selectedOrder={selectedOrder}
           completedOrders={completedOrders}
           nextOrder={nextOrder}
@@ -323,8 +336,8 @@ function CatalogPage({
         <>
           <div className="rainbow-groups" aria-label="彩虹分區">
             {RAINBOW_GROUPS.map((group) => {
-              const count = lessons.filter(
-                (lesson) => lesson.order >= group.start && lesson.order <= group.end,
+              const count = allEntries.filter(
+                (entry) => entry.lesson.order >= group.start && entry.lesson.order <= group.end,
               ).length;
               return (
                 <button
@@ -342,7 +355,7 @@ function CatalogPage({
           </div>
 
           <CatalogLessonGrid
-            lessons={activeGroupLessons}
+            entries={activeGroupEntries}
             selectedOrder={selectedOrder}
             completedOrders={completedOrders}
             nextOrder={nextOrder}
@@ -356,52 +369,42 @@ function CatalogPage({
 }
 
 function CatalogLessonGrid({
-  lessons,
+  entries,
   selectedOrder,
   completedOrders,
   nextOrder,
   onSelect,
   emptyText,
 }: {
-  lessons: Lesson[];
+  entries: LessonCharEntry[];
   selectedOrder: number;
   completedOrders: Set<number>;
   nextOrder: number;
   onSelect: (order: number) => void;
   emptyText: string;
 }) {
-  if (lessons.length === 0) return <p className="empty-catalog">{emptyText}</p>;
+  if (entries.length === 0) return <p className="empty-catalog">{emptyText}</p>;
   return (
     <div className="catalog-grid" aria-label="課程字目錄">
-      {lessons.map((lesson) => {
+      {entries.map((entry) => {
+        const { lesson, char } = entry;
         const locked = lesson.order > nextOrder;
         return (
           <button
-            key={lesson.id}
+            key={`${lesson.id}-${char}-${entry.index}`}
             className={`catalog-char${lesson.order === selectedOrder ? " active" : ""}${
               completedOrders.has(lesson.order) ? " completed" : ""
             }`}
             disabled={locked}
             onClick={() => onSelect(lesson.order)}
           >
-            <span>{lesson.order}</span>
-            <LessonCharBadge lesson={lesson} />
+            <span>第 {lesson.order} 課</span>
+            <strong>{char}</strong>
             <small>{locked ? "鎖" : completedOrders.has(lesson.order) ? "破" : "練"}</small>
           </button>
         );
       })}
     </div>
-  );
-}
-
-function LessonCharBadge({ lesson }: { lesson: Lesson }) {
-  const chars = lessonChars(lesson);
-  return (
-    <strong className={`lesson-char-badge${chars.length > 1 ? " multi" : ""}`} aria-label={lessonLabel(lesson)}>
-      {chars.map((char) => (
-        <span key={char}>{char}</span>
-      ))}
-    </strong>
   );
 }
 

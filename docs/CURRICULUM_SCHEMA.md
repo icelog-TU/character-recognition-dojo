@@ -85,7 +85,7 @@ The validator checks:
 
 - Lesson order.
 - Duplicate lesson IDs.
-- Duplicate target characters.
+- Duplicate introduced characters.
 - Sentences only use characters already unlocked or introduced in the current lesson.
 - `focusChar` appears in the sentence.
 - Audio timings match the number of Han characters when audio exists.
@@ -95,3 +95,18 @@ Run:
 ```bash
 npm run validate:curriculum
 ```
+
+## Generation Entry
+
+New lessons should start from a lesson request file, not from directly editing production curriculum JSON.
+
+```bash
+npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L004-example.json
+```
+
+This produces:
+
+- `curriculum-workflow/generated/L###-generation-packet.md`: prompt and constraints for AI sentence, image, and audio generation.
+- `curriculum-workflow/drafts/L###-draft.json`: empty lesson draft using the app schema.
+
+See `docs/CURRICULUM_PRODUCTION_SOP.md` for the full review workflow.

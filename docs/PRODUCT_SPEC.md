@@ -32,6 +32,7 @@
 - Do not display all 600 characters as one flat list.
 - The catalog is divided into six color blocks, 100 characters each: red, orange, yellow, green, blue, purple.
 - Each color block opens its own character grid.
+- Multi-character seed lessons still display as separate character cards. For example, lesson 1 has separate cards for `一`, `二`, `三`, and `人`, and each card is labeled 第 1 課.
 - Locked characters are visible as locked items but cannot be opened.
 - Completed or currently unlocked characters can be opened from the catalog for review.
 - The catalog must support search by character and lesson number.
@@ -88,6 +89,16 @@ Production curriculum sentences use:
 - `audio.charTimings`: character-level start/end timings.
 
 The app highlights by comparing audio `currentTime` with `charTimings`; it does not synthesize one character at a time.
+
+## Curriculum Production Pipeline
+
+- Create each new lesson through a request file under `curriculum-workflow/lesson-requests/`.
+- Run `npm run curriculum:packet` to generate the AI work packet.
+- AI sentence generation must receive the already-learned character boundary from the packet.
+- AI sentence output is draft-only and must be reviewed before entering curriculum.
+- Approved sentences then receive image prompts, final image assets, full-sentence audio, and character timing metadata.
+- Final assets live under `public/assets/lessons/L###/images/` and `public/assets/lessons/L###/audio/`.
+- Production curriculum should not depend on live TTS for core sentence reading.
 
 ## MVP Scope
 

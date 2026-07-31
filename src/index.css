@@ -319,6 +319,11 @@ button {
   font-weight: 800;
 }
 
+.lesson-chip strong {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
 .lesson-chip.active {
   border-color: var(--primary);
   background: var(--green-soft);
@@ -423,35 +428,15 @@ button {
   font-weight: 800;
 }
 
+.catalog-char strong {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
 .empty-catalog {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
-}
-
-.lesson-char-badge {
-  display: inline-grid;
-  grid-auto-flow: column;
-  place-items: center;
-  gap: 1px;
-  font-size: 1.55rem;
-  line-height: 1;
-  font-weight: 850;
-}
-
-.lesson-char-badge.multi {
-  grid-template-columns: repeat(2, 1em);
-  grid-auto-flow: row;
-  font-size: 1.32rem;
-  line-height: 0.95;
-}
-
-.catalog-char .lesson-char-badge {
-  font-size: 1.45rem;
-}
-
-.catalog-char .lesson-char-badge.multi {
-  font-size: 1.12rem;
 }
 
 .record-grid {
