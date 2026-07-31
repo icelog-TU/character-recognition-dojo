@@ -4,7 +4,7 @@ import type { Curriculum, Lesson, LessonSentence } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
 import "./index.css";
 
-const curriculum = curriculumData as Curriculum;
+const curriculum = curriculumData as unknown as Curriculum;
 
 type GameMode = "找字" | "教動物" | "填空" | "排句子" | "誰念對";
 type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
@@ -28,6 +28,14 @@ const RAINBOW_GROUPS = [
   { id: "blue", label: "藍", range: "401-500", start: 401, end: 500, color: "#2e78d6" },
   { id: "purple", label: "紫", range: "501-600", start: 501, end: 600, color: "#8156c6" },
 ];
+
+function lessonChars(lesson: Lesson): string[] {
+  return lesson.newChars;
+}
+
+function lessonLabel(lesson: Lesson): string {
+  return lesson.newChars.join("");
+}
 
 function App() {
   const [page, setPage] = useState<AppPage>("practice");
@@ -250,10 +258,10 @@ function LessonJumpButton({
       className={`lesson-chip${selected ? " active" : ""}${completed ? " completed" : ""}`}
       disabled={locked}
       onClick={() => onSelect(lesson.order)}
-      aria-label={`第 ${lesson.order} 課 ${lesson.targetChar}`}
+      aria-label={`第 ${lesson.order} 課 ${lessonLabel(lesson)}`}
     >
       <span>{lesson.order}</span>
-      <strong>{lesson.targetChar}</strong>
+      <strong>{lessonLabel(lesson)}</strong>
     </button>
   );
 }
@@ -279,7 +287,7 @@ function CatalogPage({
     normalizedQuery.length > 0
       ? lessons.filter(
           (lesson) =>
-            lesson.targetChar.includes(normalizedQuery) ||
+            lesson.newChars.some((char) => char.includes(normalizedQuery)) ||
             lesson.title.includes(normalizedQuery) ||
             String(lesson.order) === normalizedQuery,
         )
@@ -377,7 +385,7 @@ function CatalogLessonGrid({
             onClick={() => onSelect(lesson.order)}
           >
             <span>{lesson.order}</span>
-            <strong>{lesson.targetChar}</strong>
+            <strong>{lessonLabel(lesson)}</strong>
             <small>{locked ? "鎖" : completedOrders.has(lesson.order) ? "破" : "練"}</small>
           </button>
         );
@@ -446,16 +454,22 @@ function LessonPanel({
   locked: boolean;
   onComplete: () => void;
 }) {
-  const [soundUnlocked, setSoundUnlocked] = useState(false);
+  const [heardChars, setHeardChars] = useState<Set<string>>(new Set());
   const [findUnlocked, setFindUnlocked] = useState(false);
   const [practiceDoneCount, setPracticeDoneCount] = useState(0);
+  const newChars = lessonChars(lesson);
+  const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
   const requiredPracticeRounds = Math.min(lesson.requiredRounds, lesson.sentences.length);
   const lessonReady = soundUnlocked && findUnlocked && practiceDoneCount >= requiredPracticeRounds;
 
-  function handleHearTarget() {
-    playSpokenText(lesson.targetChar);
-    setSoundUnlocked(true);
+  function handleHearTarget(char: string) {
+    playSpokenText(char);
+    setHeardChars((prev) => {
+      const next = new Set(prev);
+      next.add(char);
+      return next;
+    });
   }
 
   return (
@@ -466,17 +480,26 @@ function LessonPanel({
       </div>
 
       <h2 id="lesson-title" className="lesson-title">
-        破解「{lesson.targetChar}」
+        破解「{lessonLabel(lesson)}」
       </h2>
       <p className="lesson-copy">三段完成後才算通關：先聽單字，再找出這個字，最後進句子遊戲。</p>
 
       <LessonBlock index={1} title="聽這個字" done={soundUnlocked} locked={locked}>
-        <button className="target-card target-button" disabled={locked} onClick={handleHearTarget}>
-          <span className="target-char">{lesson.targetChar}</span>
-          <Zhuyin value={lesson.zhuyin} size="large" />
-        </button>
+        <div className="target-grid">
+          {newChars.map((char) => (
+            <button
+              key={char}
+              className={`target-card target-button${heardChars.has(char) ? " heard" : ""}`}
+              disabled={locked}
+              onClick={() => handleHearTarget(char)}
+            >
+              <span className="target-char">{char}</span>
+              <Zhuyin value={lesson.zhuyin[char] ?? ""} size="large" />
+            </button>
+          ))}
+        </div>
         <p className="block-note">
-          之後這裡會播放預錄好的單字音檔。現在先用瀏覽器語音做暫時示範，按下後本區塊通關。
+          之後這裡會播放預錄好的單字音檔。現在先用瀏覽器語音做暫時示範，本課新字都聽過後通關。
         </p>
         {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
       </LessonBlock>
@@ -527,7 +550,7 @@ function LessonPanel({
         <button
           className="btn ghost"
           onClick={() => {
-            setSoundUnlocked(false);
+            setHeardChars(new Set());
             setFindUnlocked(false);
             setPracticeDoneCount(0);
           }}
@@ -577,11 +600,15 @@ function FindManyChallenge({
 }) {
   const items = useMemo(() => makeFindChallenge(lesson), [lesson]);
   const [foundIds, setFoundIds] = useState<Set<string>>(new Set());
-  const targetTotal = items.filter((item) => item.char === lesson.targetChar).length;
-  const foundTotal = [...foundIds].filter((id) => items.find((item) => item.id === id)?.char === lesson.targetChar).length;
+  const targets = lessonChars(lesson);
+  const targetTotal = items.filter((item) => targets.includes(item.char)).length;
+  const foundTotal = [...foundIds].filter((id) => {
+    const item = items.find((candidate) => candidate.id === id);
+    return item ? targets.includes(item.char) : false;
+  }).length;
 
   function handleTap(item: FindItem) {
-    if (disabled || item.char !== lesson.targetChar || foundIds.has(item.id)) return;
+    if (disabled || !targets.includes(item.char) || foundIds.has(item.id)) return;
     playSpokenText(item.char);
     setFoundIds((prev) => {
       const next = new Set(prev);
@@ -593,7 +620,7 @@ function FindManyChallenge({
 
   return (
     <>
-      <p className="block-note">在六個字裡找到所有「{lesson.targetChar}」。按到正確字時會亮起來，也會念出字音。</p>
+      <p className="block-note">在字卡裡找到本課新字「{lessonLabel(lesson)}」。按到正確字時會亮起來，也會念出字音。</p>
       <div className="find-grid">
         {items.map((item) => (
           <button
@@ -620,12 +647,13 @@ interface FindItem {
 }
 
 function makeFindChallenge(lesson: Lesson): FindItem[] {
+  const targets = lessonChars(lesson);
   const distractors = hanChars(lesson.sentences.map((sentence) => sentence.text).join(""))
-    .filter((char) => char !== lesson.targetChar)
+    .filter((char) => !targets.includes(char))
     .slice(0, 3);
-  const fallback = ["小", "山", "人", "口", "手", "上"].filter((char) => char !== lesson.targetChar);
-  const pool = [...distractors, ...fallback].slice(0, 3);
-  const chars = [lesson.targetChar, pool[0], lesson.targetChar, pool[1], pool[2], lesson.targetChar];
+  const fallback = ["小", "山", "口", "手", "上", "下", "水", "火"].filter((char) => !targets.includes(char));
+  const pool = [...distractors, ...fallback].slice(0, Math.max(2, 6 - targets.length));
+  const chars = [...targets, ...pool].slice(0, 6);
   return chars.map((char, index) => ({ id: `${char}-${index}`, char }));
 }
 

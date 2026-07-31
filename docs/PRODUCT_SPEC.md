@@ -7,8 +7,8 @@
 ## Core Learning Loop
 
 1. A child opens the next locked lesson.
-2. Block 1 introduces one new character. The character is shown alone, large, with zhuyin. Tapping it plays the character sound and clears the block.
-3. Block 2 asks the child to find all copies of the target character among several character tiles. Correct taps light up and play the character sound.
+2. Block 1 introduces the lesson's new character or seed characters. Each character is shown alone, large, with zhuyin. Tapping it plays the character sound; the block clears when all new characters have been heard.
+3. Block 2 asks the child to find the lesson's new character(s) among several character tiles. Correct taps light up and play the character sound.
 4. Block 3 runs reviewed lesson sentences through the sentence games.
 5. Completing all three blocks unlocks the next lesson.
 6. Completed lessons enter manual and random review.
@@ -55,11 +55,18 @@
 
 Each lesson has:
 
-- `targetChar`: the one new character being unlocked.
+- `newChars`: the new character or seed characters being unlocked.
 - `zhuyin`: Taiwan zhuyin only. No Hanyu pinyin in the main product.
-- `sentences`: reviewed practice strings that use only previously learned characters plus the lesson target character.
+- `sentences`: reviewed practice strings that use only previously learned characters plus the lesson new character(s).
 - `requiredRounds`: how many sentence game rounds are needed to complete block 3.
 - optional `originHint`: pictograph or etymology aid, displayed only when available and safely licensed.
+
+The first lesson can be a seed lesson. Current seed draft:
+
+- Lesson 1 introduces `一`, `二`, `三`, `人`.
+- Lesson 1 sentences: `人`, `一人`, `二人`, `三人`.
+- Lesson 2 introduces `個`: `人`, `一個人`, `三個人`.
+- Lesson 3 introduces `大`: `人`, `一個人`, `一個大人`, `三個大人`.
 
 ## Game Modes
 

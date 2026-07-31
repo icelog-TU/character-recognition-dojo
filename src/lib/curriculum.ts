@@ -4,7 +4,9 @@ export function buildZhuyinMap(lessons: Lesson[], upToOrder: number): Map<string
   const map = new Map<string, string>();
   for (const lesson of lessons) {
     if (lesson.order > upToOrder) continue;
-    map.set(lesson.targetChar, lesson.zhuyin);
+    for (const char of lesson.newChars) {
+      map.set(char, lesson.zhuyin[char] ?? "");
+    }
   }
   return map;
 }

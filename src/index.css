@@ -513,8 +513,19 @@ button {
   border: 2px solid var(--line);
 }
 
+.target-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  gap: 10px;
+}
+
 .target-button {
   cursor: pointer;
+}
+
+.target-button.heard {
+  border-color: var(--primary);
+  background: var(--green-soft);
 }
 
 .target-button:disabled {

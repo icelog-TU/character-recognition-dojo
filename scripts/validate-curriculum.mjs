@@ -17,12 +17,13 @@ if (!Array.isArray(curriculum.lessons)) {
 const lessons = Array.isArray(curriculum.lessons) ? curriculum.lessons : [];
 const sorted = [...lessons].sort((a, b) => a.order - b.order);
 const lessonIds = new Set();
-const targetChars = new Set();
+const introducedChars = new Set();
 const unlocked = new Set();
 
 for (let i = 0; i < sorted.length; i += 1) {
   const lesson = sorted[i];
   const expectedOrder = i + 1;
+  const newChars = Array.isArray(lesson.newChars) ? lesson.newChars : [];
 
   if (lesson.order !== expectedOrder) {
     errors.push(`${lesson.id}: expected order ${expectedOrder}, got ${lesson.order}.`);
@@ -31,15 +32,24 @@ for (let i = 0; i < sorted.length; i += 1) {
   if (lessonIds.has(lesson.id)) errors.push(`${lesson.id}: duplicate lesson id.`);
   lessonIds.add(lesson.id);
 
-  if (targetChars.has(lesson.targetChar)) {
-    errors.push(`${lesson.id}: duplicate target character ${lesson.targetChar}.`);
+  if (newChars.length === 0) {
+    errors.push(`${lesson.id}: newChars must include at least one character.`);
   }
-  targetChars.add(lesson.targetChar);
 
-  const currentAllowed = new Set([...unlocked, lesson.targetChar]);
-  if (!lesson.zhuyin || lesson.zhuyin.includes(" ")) {
-    errors.push(`${lesson.id}: zhuyin is required and should not contain spaces.`);
+  for (const char of newChars) {
+    if (!/\p{Script=Han}/u.test(char)) {
+      errors.push(`${lesson.id}: newChars item ${char} is not a Han character.`);
+    }
+    if (introducedChars.has(char)) {
+      errors.push(`${lesson.id}: duplicate introduced character ${char}.`);
+    }
+    introducedChars.add(char);
+    if (!lesson.zhuyin || typeof lesson.zhuyin[char] !== "string" || lesson.zhuyin[char].trim() === "") {
+      errors.push(`${lesson.id}: missing zhuyin for ${char}.`);
+    }
   }
+
+  const currentAllowed = new Set([...unlocked, ...newChars]);
 
   if (!Array.isArray(lesson.sentences) || lesson.sentences.length === 0) {
     errors.push(`${lesson.id}: must include at least one sentence.`);
@@ -57,6 +67,14 @@ for (let i = 0; i < sorted.length; i += 1) {
       errors.push(`${sentence.id}: focusChar ${sentence.focusChar} does not appear in text.`);
     }
 
+    if (sentence.approved !== true) {
+      errors.push(`${sentence.id}: approved must be true before entering curriculum.`);
+    }
+
+    if (!sentence.imagePrompt || typeof sentence.imagePrompt !== "string") {
+      errors.push(`${sentence.id}: imagePrompt is required for picture-book lesson planning.`);
+    }
+
     if (sentence.spokenText && /[，。！？、；：,.!?;:]/u.test(sentence.spokenText)) {
       warnings.push(`${sentence.id}: spokenText includes punctuation; verify this is intentional.`);
     }
@@ -68,7 +86,7 @@ for (let i = 0; i < sorted.length; i += 1) {
     }
   }
 
-  unlocked.add(lesson.targetChar);
+  for (const char of newChars) unlocked.add(char);
 }
 
 for (const warning of warnings) console.warn(`Warning: ${warning}`);

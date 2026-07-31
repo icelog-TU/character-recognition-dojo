@@ -4,95 +4,154 @@
     {
       "id": "L001",
       "order": 1,
-      "targetChar": "大",
-      "zhuyin": "ㄉㄚˋ",
-      "title": "大",
-      "requiredRounds": 8,
+      "newChars": ["一", "二", "三", "人"],
+      "zhuyin": {
+        "一": "ㄧ",
+        "二": "ㄦˋ",
+        "三": "ㄙㄢ",
+        "人": "ㄖㄣˊ"
+      },
+      "title": "一二三人",
+      "requiredRounds": 4,
       "originHint": {
         "kind": "text",
-        "text": "可放公開授權的象形或字源提示；沒有可靠來源時就不顯示。"
+        "text": "第一課是種子課，一次帶入最基本的數字與人。"
       },
       "sentences": [
-        { "id": "L001-S01", "text": "大", "spokenText": "大", "focusChar": "大", "audio": null },
-        { "id": "L001-S02", "text": "大大", "spokenText": "大大", "focusChar": "大", "audio": null },
-        { "id": "L001-S03", "text": "大，大大。", "spokenText": "大大大", "focusChar": "大", "audio": null },
-        { "id": "L001-S04", "text": "大大大", "spokenText": "大大大", "focusChar": "大", "audio": null },
-        { "id": "L001-S05", "text": "大。", "spokenText": "大", "focusChar": "大", "audio": null },
-        { "id": "L001-S06", "text": "大大。", "spokenText": "大大", "focusChar": "大", "audio": null },
-        { "id": "L001-S07", "text": "大，大。", "spokenText": "大大", "focusChar": "大", "audio": null },
-        { "id": "L001-S08", "text": "大大，大。", "spokenText": "大大大", "focusChar": "大", "audio": null }
+        {
+          "id": "L001-S01",
+          "text": "人",
+          "spokenText": "人",
+          "focusChar": "人",
+          "imagePrompt": "A warm simple children's picture book illustration of one person standing alone, friendly expression, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        },
+        {
+          "id": "L001-S02",
+          "text": "一人",
+          "spokenText": "一人",
+          "focusChar": "一",
+          "imagePrompt": "A warm simple children's picture book illustration of one person clearly standing in the scene, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        },
+        {
+          "id": "L001-S03",
+          "text": "二人",
+          "spokenText": "二人",
+          "focusChar": "二",
+          "imagePrompt": "A warm simple children's picture book illustration of two people standing together, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        },
+        {
+          "id": "L001-S04",
+          "text": "三人",
+          "spokenText": "三人",
+          "focusChar": "三",
+          "imagePrompt": "A warm simple children's picture book illustration of three people standing together, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        }
       ]
     },
     {
       "id": "L002",
       "order": 2,
-      "targetChar": "小",
-      "zhuyin": "ㄒㄧㄠˇ",
-      "title": "小",
-      "requiredRounds": 8,
+      "newChars": ["個"],
+      "zhuyin": {
+        "個": "ㄍㄜˋ"
+      },
+      "title": "個",
+      "requiredRounds": 3,
       "sentences": [
-        { "id": "L002-S01", "text": "小", "spokenText": "小", "focusChar": "小", "audio": null },
-        { "id": "L002-S02", "text": "小小", "spokenText": "小小", "focusChar": "小", "audio": null },
-        { "id": "L002-S03", "text": "大大小小", "spokenText": "大大小小", "focusChar": "小", "audio": null },
-        { "id": "L002-S04", "text": "大，小。", "spokenText": "大小", "focusChar": "小", "audio": null },
-        { "id": "L002-S05", "text": "小，大。", "spokenText": "小大", "focusChar": "小", "audio": null },
-        { "id": "L002-S06", "text": "小小大大", "spokenText": "小小大大", "focusChar": "小", "audio": null },
-        { "id": "L002-S07", "text": "大大小", "spokenText": "大大小", "focusChar": "小", "audio": null },
-        { "id": "L002-S08", "text": "小小大", "spokenText": "小小大", "focusChar": "小", "audio": null }
+        {
+          "id": "L002-S01",
+          "text": "人",
+          "spokenText": "人",
+          "focusChar": "人",
+          "imagePrompt": "A warm simple children's picture book illustration of one person, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        },
+        {
+          "id": "L002-S02",
+          "text": "一個人",
+          "spokenText": "一個人",
+          "focusChar": "個",
+          "imagePrompt": "A warm simple children's picture book illustration of one person as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        },
+        {
+          "id": "L002-S03",
+          "text": "三個人",
+          "spokenText": "三個人",
+          "focusChar": "個",
+          "imagePrompt": "A warm simple children's picture book illustration of three people standing together as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        }
       ]
     },
     {
       "id": "L003",
       "order": 3,
-      "targetChar": "山",
-      "zhuyin": "ㄕㄢ",
-      "title": "山",
-      "requiredRounds": 8,
+      "newChars": ["大"],
+      "zhuyin": {
+        "大": "ㄉㄚˋ"
+      },
+      "title": "大",
+      "requiredRounds": 4,
       "sentences": [
-        { "id": "L003-S01", "text": "山", "spokenText": "山", "focusChar": "山", "audio": null },
-        { "id": "L003-S02", "text": "大山", "spokenText": "大山", "focusChar": "山", "audio": null },
-        { "id": "L003-S03", "text": "小山", "spokenText": "小山", "focusChar": "山", "audio": null },
-        { "id": "L003-S04", "text": "大山小山", "spokenText": "大山小山", "focusChar": "山", "audio": null },
-        { "id": "L003-S05", "text": "山大", "spokenText": "山大", "focusChar": "山", "audio": null },
-        { "id": "L003-S06", "text": "山小", "spokenText": "山小", "focusChar": "山", "audio": null },
-        { "id": "L003-S07", "text": "大大山", "spokenText": "大大山", "focusChar": "山", "audio": null },
-        { "id": "L003-S08", "text": "小小山", "spokenText": "小小山", "focusChar": "山", "audio": null }
-      ]
-    },
-    {
-      "id": "L004",
-      "order": 4,
-      "targetChar": "人",
-      "zhuyin": "ㄖㄣˊ",
-      "title": "人",
-      "requiredRounds": 8,
-      "sentences": [
-        { "id": "L004-S01", "text": "人", "spokenText": "人", "focusChar": "人", "audio": null },
-        { "id": "L004-S02", "text": "大人", "spokenText": "大人", "focusChar": "人", "audio": null },
-        { "id": "L004-S03", "text": "小人", "spokenText": "小人", "focusChar": "人", "audio": null },
-        { "id": "L004-S04", "text": "山人", "spokenText": "山人", "focusChar": "人", "audio": null },
-        { "id": "L004-S05", "text": "大人小人", "spokenText": "大人小人", "focusChar": "人", "audio": null },
-        { "id": "L004-S06", "text": "人小", "spokenText": "人小", "focusChar": "人", "audio": null },
-        { "id": "L004-S07", "text": "人大", "spokenText": "人大", "focusChar": "人", "audio": null },
-        { "id": "L004-S08", "text": "人山", "spokenText": "人山", "focusChar": "人", "audio": null }
-      ]
-    },
-    {
-      "id": "L005",
-      "order": 5,
-      "targetChar": "口",
-      "zhuyin": "ㄎㄡˇ",
-      "title": "口",
-      "requiredRounds": 8,
-      "sentences": [
-        { "id": "L005-S01", "text": "口", "spokenText": "口", "focusChar": "口", "audio": null },
-        { "id": "L005-S02", "text": "大口", "spokenText": "大口", "focusChar": "口", "audio": null },
-        { "id": "L005-S03", "text": "小口", "spokenText": "小口", "focusChar": "口", "audio": null },
-        { "id": "L005-S04", "text": "人口", "spokenText": "人口", "focusChar": "口", "audio": null },
-        { "id": "L005-S05", "text": "山口", "spokenText": "山口", "focusChar": "口", "audio": null },
-        { "id": "L005-S06", "text": "口大", "spokenText": "口大", "focusChar": "口", "audio": null },
-        { "id": "L005-S07", "text": "口小", "spokenText": "口小", "focusChar": "口", "audio": null },
-        { "id": "L005-S08", "text": "口口", "spokenText": "口口", "focusChar": "口", "audio": null }
+        {
+          "id": "L003-S01",
+          "text": "人",
+          "spokenText": "人",
+          "focusChar": "人",
+          "imagePrompt": "A warm simple children's picture book illustration of one person, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        },
+        {
+          "id": "L003-S02",
+          "text": "一個人",
+          "spokenText": "一個人",
+          "focusChar": "人",
+          "imagePrompt": "A warm simple children's picture book illustration of one person standing calmly, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        },
+        {
+          "id": "L003-S03",
+          "text": "一個大人",
+          "spokenText": "一個大人",
+          "focusChar": "大",
+          "imagePrompt": "A warm simple children's picture book illustration of one adult person standing clearly taller than a small object nearby, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        },
+        {
+          "id": "L003-S04",
+          "text": "三個大人",
+          "spokenText": "三個大人",
+          "focusChar": "大",
+          "imagePrompt": "A warm simple children's picture book illustration of three adults standing together, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": null,
+          "approved": true,
+          "audio": null
+        }
       ]
     }
   ]

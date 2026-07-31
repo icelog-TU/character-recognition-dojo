@@ -17,9 +17,14 @@ The curriculum is stored as JSON so it can later be generated from a spreadsheet
 {
   "id": "L001",
   "order": 1,
-  "targetChar": "大",
-  "zhuyin": "ㄉㄚˋ",
-  "title": "大",
+  "newChars": ["一", "二", "三", "人"],
+  "zhuyin": {
+    "一": "ㄧ",
+    "二": "ㄦˋ",
+    "三": "ㄙㄢ",
+    "人": "ㄖㄣˊ"
+  },
+  "title": "一二三人",
   "requiredRounds": 3,
   "originHint": {
     "kind": "text",
@@ -34,8 +39,8 @@ The curriculum is stored as JSON so it can later be generated from a spreadsheet
 Rules:
 
 - `order` must be unique and contiguous.
-- `targetChar` should introduce exactly one new Han character.
-- `zhuyin` uses Taiwan zhuyin only.
+- `newChars` lists the character or characters introduced by this lesson. Most lessons introduce one character; seed lessons may introduce several.
+- `zhuyin` uses Taiwan zhuyin only and must include an entry for every `newChars` item.
 - `originHint` is optional.
 - `requiredRounds` controls block 3 sentence-game rounds. Blocks 1 and 2 have fixed completion behavior.
 
@@ -47,6 +52,9 @@ Rules:
   "text": "大大",
   "spokenText": "大大",
   "focusChar": "大",
+  "imagePrompt": "A warm simple children's picture book illustration...",
+  "imageSrc": null,
+  "approved": true,
   "audio": {
     "src": "/audio/L001-S01.mp3",
     "durationMs": 980,
@@ -63,6 +71,9 @@ Rules:
 - `text` is what appears on screen.
 - `spokenText` is what the audio says. Use this to omit punctuation from reading.
 - `focusChar` is the preferred target for games.
+- `imagePrompt` is the reviewed prompt for generating or sourcing a picture for this sentence.
+- `imageSrc` is null until the image asset is approved and added.
+- `approved` must be true before the sentence is allowed into the curriculum file.
 - `audio` may be `null` during draft curriculum work.
 - Production curriculum should provide audio and timings for every sentence.
 - `charTimings` references Han-character indices in `text`, skipping punctuation.

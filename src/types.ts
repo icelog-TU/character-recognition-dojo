@@ -6,8 +6,8 @@ export interface Curriculum {
 export interface Lesson {
   id: string;
   order: number;
-  targetChar: string;
-  zhuyin: string;
+  newChars: string[];
+  zhuyin: Record<string, string>;
   title: string;
   requiredRounds: number;
   originHint?: OriginHint;
@@ -26,6 +26,9 @@ export interface LessonSentence {
   text: string;
   spokenText: string;
   focusChar: string;
+  imagePrompt: string;
+  imageSrc: string | null;
+  approved: boolean;
   audio: SentenceAudio | null;
 }
 
