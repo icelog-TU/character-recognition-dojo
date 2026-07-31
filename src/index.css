@@ -94,6 +94,36 @@ button {
   font-size: 1.25rem;
 }
 
+.header-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.header-action-button {
+  min-height: 32px;
+  border: 0;
+  border-radius: 999px;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 900;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(91, 46, 7, 0.16);
+}
+
+.header-action-button.exit {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.header-action-button.audio {
+  background: #1d7874;
+  animation: audio-button-pulse 1.25s ease-in-out infinite;
+}
+
 .header-stats {
   display: flex;
   justify-content: flex-end;
@@ -627,6 +657,18 @@ button {
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.lesson-exit-button {
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  padding: 6px 12px;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 .pill {
@@ -1380,6 +1422,18 @@ button.char-token {
   }
 }
 
+@keyframes audio-button-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(29, 120, 116, 0.18), 0 4px 10px rgba(91, 46, 7, 0.16);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(29, 120, 116, 0.1), 0 6px 14px rgba(91, 46, 7, 0.22);
+    transform: scale(1.04);
+  }
+}
+
 @keyframes reward-float {
   0%,
   100% {
@@ -1559,10 +1613,21 @@ button.char-token {
   .header-inner {
     min-height: 74px;
     padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+
+  .header-action-button {
+    min-height: 28px;
+    padding: 4px 8px;
+    font-size: 0.74rem;
   }
 
   .header-stats {
-    max-width: 58%;
+    max-width: 46%;
     gap: 5px;
   }
 

@@ -18,6 +18,14 @@ type AudioPlayOptions = {
 type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "advance2" | "advance3" | null;
 type LessonDestination = "home" | "next";
 type LessonReward = { coins: number; stars: number };
+type PlaybackStatus = { playing: boolean; paused: boolean };
+type StoredProgress = {
+  version: 1;
+  coins: number;
+  stars: number;
+  selectedOrder: number;
+  completedOrders: number[];
+};
 
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
 
@@ -105,18 +113,61 @@ function assetUrl(src: string): string {
 const audioCache = new Map<string, HTMLAudioElement>();
 let activeAudio: HTMLAudioElement | null = null;
 let activeAudioFrame = 0;
+let activeAudioTick: (() => void) | null = null;
+let activeAudioFinish: ((kind: "ended" | "error") => void) | null = null;
+let activeTtsFinish: (() => void) | null = null;
+let ttsPausedByApp = false;
+const playbackListeners = new Set<(state: PlaybackStatus) => void>();
+const PROGRESS_STORAGE_KEY = "character-recognition-dojo-progress-v1";
+
+function loadStoredProgress(): StoredProgress | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(PROGRESS_STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as Partial<StoredProgress>;
+    if (parsed.version !== 1) return null;
+    const completedOrders = Array.isArray(parsed.completedOrders)
+      ? parsed.completedOrders.filter((order): order is number => Number.isInteger(order))
+      : [];
+    return {
+      version: 1,
+      coins: Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120,
+      stars: Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36,
+      selectedOrder: Number.isInteger(parsed.selectedOrder) ? Number(parsed.selectedOrder) : 1,
+      completedOrders,
+    };
+  } catch {
+    return null;
+  }
+}
+
+function saveStoredProgress(progress: StoredProgress) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progress));
+  } catch {
+    // Progress still works for the current session if storage is unavailable.
+  }
+}
 
 function App() {
+  const initialProgressRef = useRef<StoredProgress | null>(null);
+  if (initialProgressRef.current === null) initialProgressRef.current = loadStoredProgress();
+  const initialProgress = initialProgressRef.current;
   const [page, setPage] = useState<AppPage>("practice");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [completedOrders, setCompletedOrders] = useState<Set<number>>(new Set());
+  const [completedOrders, setCompletedOrders] = useState<Set<number>>(
+    () => new Set(initialProgress?.completedOrders ?? []),
+  );
   const [lessonOpen, setLessonOpen] = useState(false);
   const [completionNotice, setCompletionNotice] = useState("");
   const [startingOrder, setStartingOrder] = useState<number | null>(null);
-  const [coins, setCoins] = useState(120);
-  const [stars, setStars] = useState(36);
+  const [coins, setCoins] = useState(initialProgress?.coins ?? 120);
+  const [stars, setStars] = useState(initialProgress?.stars ?? 36);
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
-  const [selectedOrder, setSelectedOrder] = useState(nextOrder);
+  const [selectedOrder, setSelectedOrder] = useState(initialProgress?.selectedOrder ?? nextOrder);
+  const playbackState = usePlaybackState();
   const selectedLesson =
     curriculum.lessons.find((lesson) => lesson.order === selectedOrder) ?? curriculum.lessons[0];
   const streakDays = completedOrders.size > 0 ? 1 : 0;
@@ -124,6 +175,16 @@ function App() {
   useEffect(() => {
     if (page === "practice" && !lessonOpen) speakGuide(GUIDE_TEXT.homeWelcome);
   }, [page, lessonOpen]);
+
+  useEffect(() => {
+    saveStoredProgress({
+      version: 1,
+      coins,
+      stars,
+      selectedOrder,
+      completedOrders: [...completedOrders],
+    });
+  }, [coins, stars, selectedOrder, completedOrders]);
 
   function grantLessonReward(order: number, rewards: LessonReward) {
     setCoins((value) => value + rewards.coins);
@@ -143,6 +204,7 @@ function App() {
   }
 
   function openPage(nextPage: AppPage) {
+    stopPlayback();
     setPage(nextPage);
     if (nextPage === "practice") setLessonOpen(false);
     setMenuOpen(false);
@@ -165,13 +227,33 @@ function App() {
     window.setTimeout(() => openLesson(order), 800);
   }
 
+  function returnToPracticeHome() {
+    stopPlayback();
+    setPage("practice");
+    setLessonOpen(false);
+    setMenuOpen(false);
+    setStartingOrder(null);
+  }
+
+  function togglePlayback() {
+    if (playbackState.paused) {
+      resumePlayback();
+    } else {
+      pausePlayback();
+    }
+  }
+
   return (
     <div className="app-root">
       <AppHeader
         coins={coins}
         stars={stars}
         streakDays={streakDays}
+        lessonOpen={lessonOpen}
+        playbackState={playbackState}
         onMenu={() => setMenuOpen(true)}
+        onExitLesson={returnToPracticeHome}
+        onTogglePlayback={togglePlayback}
       />
       <AppDrawer
         open={menuOpen}
@@ -208,6 +290,7 @@ function App() {
               locked={selectedLesson.order > nextOrder}
               onReward={(rewards) => grantLessonReward(selectedLesson.order, rewards)}
               onComplete={(destination) => finishLesson(selectedLesson.order, destination)}
+              onExit={returnToPracticeHome}
             />
           </div>
         )}
@@ -279,7 +362,7 @@ function PracticeHome({
           onClick={() => onStart(nextLesson.order)}
           disabled={startingOrder !== null}
         >
-          {startingOrder === nextLesson.order ? "走囉" : "開始第一課"}
+          {startingOrder === nextLesson.order ? "走囉" : `開始第 ${nextLesson.order} 課`}
         </button>
       </div>
 
@@ -307,12 +390,20 @@ function AppHeader({
   coins,
   stars,
   streakDays,
+  lessonOpen,
+  playbackState,
   onMenu,
+  onExitLesson,
+  onTogglePlayback,
 }: {
   coins: number;
   stars: number;
   streakDays: number;
+  lessonOpen: boolean;
+  playbackState: PlaybackStatus;
   onMenu: () => void;
+  onExitLesson: () => void;
+  onTogglePlayback: () => void;
 }) {
   const coinStat = useAnimatedStat(coins);
   const starStat = useAnimatedStat(stars);
@@ -325,6 +416,18 @@ function AppHeader({
         <div className="header-title">
           <span>認字</span>
           <strong>練功房</strong>
+        </div>
+        <div className="header-actions">
+          {lessonOpen && (
+            <button className="header-action-button exit" onClick={onExitLesson}>
+              回入口
+            </button>
+          )}
+          {playbackState.playing && (
+            <button className="header-action-button audio" onClick={onTogglePlayback}>
+              {playbackState.paused ? "▶ 繼續" : "⏸ 暫停"}
+            </button>
+          )}
         </div>
         <div className="header-stats" aria-label="學習狀態">
           <span className={`stat-pill${coinStat.animating ? " stat-animating coin" : ""}`}>
@@ -703,6 +806,7 @@ function LessonPanel({
   locked,
   onReward,
   onComplete,
+  onExit,
 }: {
   lesson: Lesson;
   lessons: Lesson[];
@@ -710,6 +814,7 @@ function LessonPanel({
   locked: boolean;
   onReward: (rewards: LessonReward) => void;
   onComplete: (destination: LessonDestination) => void;
+  onExit: () => void;
 }) {
   const [heardChars, setHeardChars] = useState<Set<string>>(new Set());
   const [spotlightChar, setSpotlightChar] = useState<string | null>(null);
@@ -822,6 +927,9 @@ function LessonPanel({
       <div className="top-bar">
         <span className="pill">第 {lesson.order} 課</span>
         <span className="pill">{completed ? "已進入複習池" : locked ? "尚未解鎖" : "練功中"}</span>
+        <button className="lesson-exit-button" onClick={onExit}>
+          回課程入口
+        </button>
       </div>
 
       <h2 id="lesson-title" className="lesson-title">
@@ -1444,6 +1552,89 @@ function preloadLessonAudio(lesson: Lesson) {
   for (const sentence of lesson.sentences) preloadAudioSrc(sentence.audio?.src);
 }
 
+function currentPlaybackState(): PlaybackStatus {
+  const hasAudio = Boolean(activeAudio && !activeAudio.ended);
+  const audioPaused = Boolean(activeAudio && activeAudio.paused && !activeAudio.ended);
+  const hasTts = Boolean(activeTtsFinish);
+  const ttsPaused = hasTts && ttsPausedByApp;
+  return {
+    playing: hasAudio || hasTts,
+    paused: audioPaused || ttsPaused || ttsPausedByApp,
+  };
+}
+
+function emitPlaybackState() {
+  const state = currentPlaybackState();
+  playbackListeners.forEach((listener) => listener(state));
+}
+
+function usePlaybackState() {
+  const [state, setState] = useState<PlaybackStatus>(() => currentPlaybackState());
+
+  useEffect(() => {
+    playbackListeners.add(setState);
+    setState(currentPlaybackState());
+    return () => {
+      playbackListeners.delete(setState);
+    };
+  }, []);
+
+  return state;
+}
+
+function pausePlayback() {
+  let changed = false;
+  if (activeAudio && !activeAudio.paused && !activeAudio.ended) {
+    activeAudio.pause();
+    stopAudioFrame();
+    changed = true;
+  }
+  if ("speechSynthesis" in window && window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+    window.speechSynthesis.pause();
+    ttsPausedByApp = true;
+    changed = true;
+  }
+  if (changed) emitPlaybackState();
+}
+
+function resumePlayback() {
+  let changed = false;
+  if (activeAudio && activeAudio.paused && !activeAudio.ended) {
+    void activeAudio.play().then(() => {
+      activeAudioTick?.();
+      emitPlaybackState();
+    });
+    changed = true;
+  }
+  if ("speechSynthesis" in window && window.speechSynthesis.paused) {
+    window.speechSynthesis.resume();
+    ttsPausedByApp = false;
+    changed = true;
+  } else if (ttsPausedByApp) {
+    ttsPausedByApp = false;
+    changed = true;
+  }
+  if (changed) emitPlaybackState();
+}
+
+function stopPlayback() {
+  const finishAudio = activeAudioFinish;
+  if (activeAudio) {
+    activeAudio.pause();
+    activeAudio.currentTime = 0;
+  }
+  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+  activeTtsFinish?.();
+  finishAudio?.("error");
+  ttsPausedByApp = false;
+  activeAudio = null;
+  activeAudioTick = null;
+  activeAudioFinish = null;
+  activeTtsFinish = null;
+  stopAudioFrame();
+  emitPlaybackState();
+}
+
 function stopAudioFrame() {
   if (!activeAudioFrame) return;
   window.cancelAnimationFrame(activeAudioFrame);
@@ -1453,6 +1644,9 @@ function stopAudioFrame() {
 function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
   const audio = getCachedAudio(src);
   if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+  activeTtsFinish?.();
+  activeTtsFinish = null;
+  ttsPausedByApp = false;
   if (activeAudio && activeAudio !== audio) activeAudio.pause();
   stopAudioFrame();
   activeAudio = audio;
@@ -1465,6 +1659,9 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
       settled = true;
       stopAudioFrame();
       if (activeAudio === audio) activeAudio = null;
+      if (activeAudioFinish === finish) activeAudioFinish = null;
+      if (activeAudioTick === tick) activeAudioTick = null;
+      emitPlaybackState();
       if (kind === "ended") options.onEnded?.();
       if (kind === "error") options.onError?.();
       resolve();
@@ -1478,10 +1675,13 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
       if (!audio.paused && !audio.ended) activeAudioFrame = window.requestAnimationFrame(tick);
     };
 
+    activeAudioFinish = finish;
+    activeAudioTick = tick;
     options.onTime?.(0);
     void audio
       .play()
       .then(() => {
+        emitPlaybackState();
         tick();
       })
       .catch(() => finish("error"));
@@ -1695,21 +1895,34 @@ function playTts(text: string, { rate, pitch }: { rate: number; pitch: number })
   const clean = text.replace(/\s+/g, " ").trim();
   if (!clean || !("speechSynthesis" in window)) return Promise.resolve();
   if (activeAudio) {
-    activeAudio.pause();
-    activeAudio = null;
+    activeAudioFinish?.("error");
   }
   stopAudioFrame();
   window.speechSynthesis.cancel();
+  activeTtsFinish?.();
+  activeTtsFinish = null;
   return new Promise<void>((resolve) => {
     const utterance = new SpeechSynthesisUtterance(clean);
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      ttsPausedByApp = false;
+      if (activeTtsFinish === finish) activeTtsFinish = null;
+      emitPlaybackState();
+      resolve();
+    };
     utterance.lang = "zh-TW";
     utterance.rate = rate;
     utterance.pitch = pitch;
     const voice = pickZhTwVoice();
     if (voice) utterance.voice = voice;
-    utterance.onend = () => resolve();
-    utterance.onerror = () => resolve();
+    utterance.onstart = () => emitPlaybackState();
+    utterance.onend = finish;
+    utterance.onerror = finish;
+    activeTtsFinish = finish;
     window.speechSynthesis.speak(utterance);
+    emitPlaybackState();
   });
 }
 
