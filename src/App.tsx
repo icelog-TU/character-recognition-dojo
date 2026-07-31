@@ -42,14 +42,26 @@ const GUIDE_TEXT = {
   lessonStep: "我們一步一步來。",
   blockHear: "請按那些大大發光的紅色字，按下去聽它們的聲音。聽見聲音，你就做對了。要記住每個字和它的聲音喔。",
   toStageTwo: "第一階段完成了。請按下面紅色的大按鈕，進入第二階段的練習。",
-  toStageThree: "第二階段完成了。請按下面紅色的大按鈕，進入第三階段的練習。",
+  findComplete: "好棒啊，你都找到了。",
+  toStageThree: "請按下面紅色的大按鈕，進入第三階段的練習。",
   stageAdvance: "太棒了，我們繼續練功。",
-  blockFind: "找找看，這些字躲在哪裡。看到一樣的字，就點它。",
+  blockFind: "找找看剛剛學過的字在哪裡。看到學過的字，就點它。",
+  findMiss: "這個不是剛剛學過的字喔，再找找看。",
   blockPicture: "點一張圖，聽一句話。亮起來的字，就是現在念到的字。",
   learned: "都聽完了，就按我聽完了。",
 } as const;
 
 const SMALL_ZH_NUMBERS = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+const DISTRACTOR_ZHUYIN: Record<string, string> = {
+  小: "ㄒㄧㄠˇ",
+  山: "ㄕㄢ",
+  口: "ㄎㄡˇ",
+  手: "ㄕㄡˇ",
+  上: "ㄕㄤˋ",
+  下: "ㄒㄧㄚˋ",
+  水: "ㄕㄨㄟˇ",
+  火: "ㄏㄨㄛˇ",
+};
 
 function lessonChars(lesson: Lesson): string[] {
   return lesson.newChars;
@@ -659,7 +671,10 @@ function LessonPanel({
   }, [activeStage, findUnlocked]);
 
   useEffect(() => {
-    if (findUnlocked && activeStage === 2) speakGuide(GUIDE_TEXT.toStageThree);
+    if (findUnlocked && activeStage === 2) {
+      playCelebrateChime();
+      speakGuide(`${GUIDE_TEXT.findComplete} ${GUIDE_TEXT.toStageThree}`);
+    }
   }, [findUnlocked, activeStage]);
 
   useEffect(() => {
@@ -756,7 +771,7 @@ function LessonPanel({
 
       {findUnlocked && activeStage === 2 && (
         <StageAdvancePrompt
-          text={GUIDE_TEXT.toStageThree}
+          text={`${GUIDE_TEXT.findComplete} ${GUIDE_TEXT.toStageThree}`}
           buttonText="進入第三階段"
           busy={advancingStage === 3}
           onAdvance={() => handleAdvanceStage(3)}
@@ -892,6 +907,7 @@ function FindManyChallenge({
   const items = useMemo(() => makeFindChallenge(lesson), [lesson]);
   const [foundIds, setFoundIds] = useState<Set<string>>(new Set());
   const [collectingId, setCollectingId] = useState<string | null>(null);
+  const [missId, setMissId] = useState<string | null>(null);
   const targets = lessonChars(lesson);
   const targetTotal = items.filter((item) => targets.includes(item.char)).length;
   const foundTotal = [...foundIds].filter((id) => {
@@ -902,7 +918,14 @@ function FindManyChallenge({
   const visibleItems = items.filter((item) => !foundIds.has(item.id));
 
   async function handleTap(item: FindItem) {
-    if (disabled || collectingId || !targets.includes(item.char) || foundIds.has(item.id)) return;
+    if (disabled || collectingId || foundIds.has(item.id)) return;
+    if (!targets.includes(item.char)) {
+      setMissId(item.id);
+      playMissChime();
+      speakGuide(GUIDE_TEXT.findMiss);
+      window.setTimeout(() => setMissId((current) => (current === item.id ? null : current)), 560);
+      return;
+    }
     setCollectingId(item.id);
     playFoundChime();
     await Promise.all([playLessonChar(lesson, item.char), waitMs(520)]);
@@ -928,12 +951,14 @@ function FindManyChallenge({
         {visibleItems.map((item) => (
           <button
             key={item.id}
-            className={`find-token${collectingId === item.id ? " collecting" : ""}`}
+            className={`find-token${collectingId === item.id ? " collecting" : ""}${
+              missId === item.id ? " miss" : ""
+            }`}
             disabled={disabled || Boolean(collectingId)}
             onClick={() => handleTap(item)}
           >
             <span className="hanzi">{item.char}</span>
-            <Zhuyin value={zhuyinMap.get(item.char) ?? ""} />
+            <Zhuyin value={zhuyinMap.get(item.char) ?? DISTRACTOR_ZHUYIN[item.char] ?? ""} />
           </button>
         ))}
       </div>
@@ -1144,6 +1169,20 @@ function activeTimingIndex(sentence: LessonSentence, elapsedMs: number) {
 function playFoundChime() {
   playToneSequence([
     { frequency: 660, endFrequency: 990, duration: 0.18, gain: 0.06 },
+  ]);
+}
+
+function playMissChime() {
+  playToneSequence([
+    { frequency: 260, endFrequency: 220, duration: 0.16, gain: 0.045 },
+  ]);
+}
+
+function playCelebrateChime() {
+  playToneSequence([
+    { frequency: 523, endFrequency: 659, duration: 0.1, gain: 0.07 },
+    { frequency: 659, endFrequency: 784, duration: 0.12, gain: 0.075, delay: 0.08 },
+    { frequency: 784, endFrequency: 1046, duration: 0.18, gain: 0.08, delay: 0.18 },
   ]);
 }
 

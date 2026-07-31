@@ -1001,6 +1001,12 @@ button.char-token {
   transform: translateY(-8px) scale(1.14);
 }
 
+.find-token.miss {
+  border-color: #d94735;
+  background: #fff1ee;
+  animation: find-token-miss 420ms ease-in-out;
+}
+
 .find-token:disabled {
   cursor: not-allowed;
 }
@@ -1071,6 +1077,22 @@ button.char-token {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes find-token-miss {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  24% {
+    transform: translateX(-5px);
+  }
+  48% {
+    transform: translateX(5px);
+  }
+  72% {
+    transform: translateX(-3px);
   }
 }
 
