@@ -37,6 +37,20 @@
 - The catalog must support search by character and lesson number.
 - The main lesson screen should only show a compact nearby-course shortcut list, primarily the current lesson and previously unlocked lessons.
 
+## App Shell
+
+- The app uses a shared top header similar to the existing Chinese practice room app.
+- The header shows the app name plus quick reward/status pills: coins, stars, and streak days.
+- The header menu button opens a left drawer.
+- Drawer pages:
+  - 練習課文: daily lesson practice and current unlock path.
+  - 漢字總覽: full rainbow 600-character catalog and search.
+  - 學習記錄: progress, rewards, review history, and weak characters.
+  - 轉蛋: reward draw page.
+  - 角色收藏: collected character page.
+  - 設定: account, audio, and data settings.
+- Pages are separate sections. Do not force every feature into one long page.
+
 ## Lesson Structure
 
 Each lesson has:

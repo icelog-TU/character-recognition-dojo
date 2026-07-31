@@ -41,20 +41,173 @@ button {
   min-height: 100vh;
 }
 
+.app-root {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ff6b00;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(106, 55, 14, 0.22);
+}
+
+.header-inner {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+}
+
+.menu-button {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.header-title {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 0;
+  font-size: 1rem;
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.header-title strong {
+  font-size: 1.25rem;
+}
+
+.header-stats {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 55%;
+}
+
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 4px 10px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  border: 0;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  width: min(78vw, 330px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 16px 0 28px rgba(0, 0, 0, 0.18);
+  transform: translateX(-105%);
+  transition: transform 0.2s ease;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+.drawer-top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee6dd;
+  padding: 0 18px;
+  color: #3c3a36;
+}
+
+.drawer-top button {
+  border: 0;
+  background: transparent;
+  color: #8a837b;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.drawer-nav {
+  display: grid;
+  align-content: start;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.drawer-item {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 0;
+  border-left: 5px solid transparent;
+  background: #fff;
+  color: #4e4b47;
+  cursor: pointer;
+  padding: 0 20px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.drawer-item span {
+  width: 28px;
+  text-align: center;
+  font-size: 1.35rem;
+}
+
+.drawer-item.active {
+  border-left-color: #ff6b00;
+  background: #fff3e8;
+  color: #c94f00;
+}
+
 .app-shell {
   min-height: 100vh;
   padding: 24px;
 }
 
-.app-layout {
+.practice-layout {
   display: grid;
   grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
   gap: 20px;
-  width: min(1180px, 100%);
+  width: min(1040px, 100%);
   margin: 0 auto;
 }
 
-.sidebar,
+.side-panel,
+.page-panel,
 .lesson-panel,
 .sentence-card,
 .round-card {
@@ -64,9 +217,31 @@ button {
   box-shadow: var(--shadow);
 }
 
-.sidebar {
+.side-panel {
   padding: 16px;
   align-self: start;
+}
+
+.page-panel {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-heading {
+  margin-bottom: 18px;
+}
+
+.page-heading h1,
+.placeholder-page h1 {
+  margin: 0 0 6px;
+  font-size: 1.7rem;
+}
+
+.page-heading p,
+.placeholder-page p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .brand {
@@ -94,12 +269,6 @@ button {
 
 .lesson-panel {
   padding: 20px;
-}
-
-.nav-section {
-  border-top: 1px solid var(--line);
-  padding-top: 14px;
-  margin-top: 14px;
 }
 
 .nav-heading {
@@ -160,27 +329,6 @@ button {
   box-shadow: inset 0 -4px 0 rgba(29, 120, 116, 0.25);
 }
 
-.catalog-toggle {
-  width: 100%;
-  min-height: 44px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--ink);
-  cursor: pointer;
-  padding: 9px 12px;
-  font-weight: 800;
-}
-
-.catalog-panel {
-  display: grid;
-  gap: 12px;
-  margin-top: 12px;
-}
-
 .search-input {
   width: 100%;
   min-height: 42px;
@@ -190,6 +338,7 @@ button {
   color: var(--ink);
   padding: 9px 11px;
   font: inherit;
+  margin-bottom: 14px;
 }
 
 .search-input:focus {
@@ -199,8 +348,9 @@ button {
 
 .rainbow-groups {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
+  margin-bottom: 14px;
 }
 
 .rainbow-group {
@@ -235,9 +385,9 @@ button {
 
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 8px;
-  max-height: 320px;
+  max-height: none;
   overflow-y: auto;
   padding-right: 2px;
 }
@@ -282,6 +432,52 @@ button {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.record-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  min-height: 128px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px;
+}
+
+.stat-card span {
+  font-size: 2rem;
+}
+
+.stat-card strong {
+  color: var(--primary-strong);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.stat-card small {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.placeholder-page {
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.placeholder-icon {
+  font-size: 4rem;
 }
 
 .top-bar {
@@ -589,8 +785,28 @@ button.char-token {
     padding: 12px;
   }
 
-  .app-layout {
+  .header-inner {
+    min-height: 74px;
+    padding: 10px 14px;
+  }
+
+  .header-stats {
+    max-width: 58%;
+    gap: 5px;
+  }
+
+  .stat-pill {
+    min-height: 27px;
+    padding: 3px 8px;
+    font-size: 0.78rem;
+  }
+
+  .practice-layout {
     grid-template-columns: 1fr;
+  }
+
+  .side-panel {
+    padding: 14px;
   }
 
   .target-card {
@@ -602,6 +818,18 @@ button.char-token {
   }
 
   .find-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rainbow-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .record-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

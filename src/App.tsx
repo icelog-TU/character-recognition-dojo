@@ -7,7 +7,18 @@ import "./index.css";
 const curriculum = curriculumData as Curriculum;
 
 type GameMode = "找字" | "教動物" | "填空" | "排句子" | "誰念對";
+type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
+
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
+
+const NAV_ITEMS: Array<{ page: AppPage; label: string; icon: string }> = [
+  { page: "practice", label: "練習課文", icon: "📖" },
+  { page: "catalog", label: "漢字總覽", icon: "🌈" },
+  { page: "records", label: "學習記錄", icon: "🏆" },
+  { page: "gacha", label: "轉蛋", icon: "🎁" },
+  { page: "collection", label: "角色收藏", icon: "🎴" },
+  { page: "settings", label: "設定", icon: "⚙️" },
+];
 
 const RAINBOW_GROUPS = [
   { id: "red", label: "紅", range: "1-100", start: 1, end: 100, color: "#d94735" },
@@ -19,11 +30,16 @@ const RAINBOW_GROUPS = [
 ];
 
 function App() {
+  const [page, setPage] = useState<AppPage>("practice");
+  const [menuOpen, setMenuOpen] = useState(false);
   const [completedOrders, setCompletedOrders] = useState<Set<number>>(new Set());
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
   const [selectedOrder, setSelectedOrder] = useState(nextOrder);
   const selectedLesson =
     curriculum.lessons.find((lesson) => lesson.order === selectedOrder) ?? curriculum.lessons[0];
+  const coins = completedOrders.size * 30 + 120;
+  const stars = completedOrders.size * 12 + 36;
+  const streakDays = completedOrders.size > 0 ? 1 : 0;
 
   function completeLesson(order: number) {
     setCompletedOrders((prev) => {
@@ -35,30 +51,149 @@ function App() {
     if (following) setSelectedOrder(following.order);
   }
 
+  function openPage(nextPage: AppPage) {
+    setPage(nextPage);
+    setMenuOpen(false);
+  }
+
+  function openLesson(order: number) {
+    setSelectedOrder(order);
+    setPage("practice");
+    setMenuOpen(false);
+  }
+
   return (
-    <main className="app-shell">
-      <div className="app-layout">
-        <LessonSidebar
-          lessons={curriculum.lessons}
-          selectedOrder={selectedLesson.order}
-          completedOrders={completedOrders}
-          nextOrder={nextOrder}
-          onSelect={setSelectedOrder}
-        />
-        <LessonPanel
-          key={selectedLesson.id}
-          lesson={selectedLesson}
-          lessons={curriculum.lessons}
-          completed={completedOrders.has(selectedLesson.order)}
-          locked={selectedLesson.order > nextOrder}
-          onComplete={() => completeLesson(selectedLesson.order)}
-        />
-      </div>
-    </main>
+    <div className="app-root">
+      <AppHeader
+        coins={coins}
+        stars={stars}
+        streakDays={streakDays}
+        onMenu={() => setMenuOpen(true)}
+      />
+      <AppDrawer
+        open={menuOpen}
+        activePage={page}
+        onClose={() => setMenuOpen(false)}
+        onNavigate={openPage}
+      />
+
+      <main className="app-shell">
+        {page === "practice" && (
+          <div className="practice-layout">
+            <PracticeNavigator
+              lessons={curriculum.lessons}
+              selectedOrder={selectedLesson.order}
+              completedOrders={completedOrders}
+              nextOrder={nextOrder}
+              onSelect={openLesson}
+            />
+            <LessonPanel
+              key={selectedLesson.id}
+              lesson={selectedLesson}
+              lessons={curriculum.lessons}
+              completed={completedOrders.has(selectedLesson.order)}
+              locked={selectedLesson.order > nextOrder}
+              onComplete={() => completeLesson(selectedLesson.order)}
+            />
+          </div>
+        )}
+        {page === "catalog" && (
+          <CatalogPage
+            lessons={curriculum.lessons}
+            selectedOrder={selectedLesson.order}
+            completedOrders={completedOrders}
+            nextOrder={nextOrder}
+            onSelect={openLesson}
+          />
+        )}
+        {page === "records" && (
+          <RecordsPage
+            coins={coins}
+            stars={stars}
+            streakDays={streakDays}
+            completedCount={completedOrders.size}
+          />
+        )}
+        {page === "gacha" && <PlaceholderPage icon="🎁" title="轉蛋" text="之後用金幣抽角色，會從這裡進入。" />}
+        {page === "collection" && (
+          <PlaceholderPage icon="🎴" title="角色收藏" text="之後所有抽到的角色會放在這裡，也可以做互動。" />
+        )}
+        {page === "settings" && <PlaceholderPage icon="⚙️" title="設定" text="之後放音量、資料備份、家長設定。" />}
+      </main>
+    </div>
   );
 }
 
-function LessonSidebar({
+function AppHeader({
+  coins,
+  stars,
+  streakDays,
+  onMenu,
+}: {
+  coins: number;
+  stars: number;
+  streakDays: number;
+  onMenu: () => void;
+}) {
+  return (
+    <header className="app-header">
+      <div className="header-inner">
+        <button className="menu-button" onClick={onMenu} aria-label="開啟選單">
+          ☰
+        </button>
+        <div className="header-title">
+          <span>認字</span>
+          <strong>練功房</strong>
+        </div>
+        <div className="header-stats" aria-label="學習狀態">
+          <span className="stat-pill">🪙 {coins}</span>
+          <span className="stat-pill">⭐ {stars}</span>
+          <span className="stat-pill">🔥 {streakDays} 天</span>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function AppDrawer({
+  open,
+  activePage,
+  onClose,
+  onNavigate,
+}: {
+  open: boolean;
+  activePage: AppPage;
+  onClose: () => void;
+  onNavigate: (page: AppPage) => void;
+}) {
+  return (
+    <>
+      {open && <button className="drawer-backdrop" aria-label="關閉選單" onClick={onClose} />}
+      <aside className={`drawer${open ? " open" : ""}`} aria-hidden={!open}>
+        <div className="drawer-top">
+          <strong>選單</strong>
+          <button onClick={onClose} aria-label="關閉選單">
+            ←
+          </button>
+        </div>
+        <nav className="drawer-nav">
+          {NAV_ITEMS.map((item) => (
+            <button
+              key={item.page}
+              className={`drawer-item${activePage === item.page ? " active" : ""}`}
+              onClick={() => onNavigate(item.page)}
+            >
+              <span>{item.icon}</span>
+              <strong>{item.label}</strong>
+            </button>
+          ))}
+        </nav>
+      </aside>
+    </>
+  );
+}
+
+function PracticeNavigator({
   lessons,
   selectedOrder,
   completedOrders,
@@ -71,111 +206,28 @@ function LessonSidebar({
   nextOrder: number;
   onSelect: (order: number) => void;
 }) {
-  const [catalogOpen, setCatalogOpen] = useState(false);
-  const [activeGroupId, setActiveGroupId] = useState(RAINBOW_GROUPS[0].id);
-  const [query, setQuery] = useState("");
   const nearbyLessons = lessons
     .filter((lesson) => lesson.order <= selectedOrder && lesson.order <= nextOrder)
     .slice(-6);
-  const normalizedQuery = query.trim();
-  const searchResults =
-    normalizedQuery.length > 0
-      ? lessons.filter(
-          (lesson) =>
-            lesson.targetChar.includes(normalizedQuery) ||
-            lesson.title.includes(normalizedQuery) ||
-            String(lesson.order) === normalizedQuery,
-        )
-      : [];
-  const activeGroup = RAINBOW_GROUPS.find((group) => group.id === activeGroupId) ?? RAINBOW_GROUPS[0];
-  const activeGroupLessons = lessons.filter(
-    (lesson) => lesson.order >= activeGroup.start && lesson.order <= activeGroup.end,
-  );
 
   return (
-    <aside className="sidebar">
-      <h1 className="brand">認字練功房</h1>
-      <p className="brand-subtitle">一課一字，破解後解鎖下一關。</p>
-
-      <section className="nav-section">
-        <div className="nav-heading">
-          <h2>最近課程</h2>
-          <span className="mini-label">只列已解鎖</span>
-        </div>
-        <div className="nearby-row" aria-label="最近可回看的課程">
-          {nearbyLessons.map((lesson) => (
-            <LessonJumpButton
-              key={lesson.id}
-              lesson={lesson}
-              selected={lesson.order === selectedOrder}
-              locked={false}
-              completed={completedOrders.has(lesson.order)}
-              onSelect={onSelect}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="nav-section">
-        <button className="catalog-toggle" onClick={() => setCatalogOpen((open) => !open)}>
-          <span>六百字總目錄</span>
-          <span>{catalogOpen ? "收合" : "展開"}</span>
-        </button>
-
-        {catalogOpen && (
-          <div className="catalog-panel">
-            <input
-              className="search-input"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="搜尋字或課號"
-              aria-label="搜尋字或課號"
-            />
-
-            {normalizedQuery ? (
-              <CatalogLessonGrid
-                lessons={searchResults}
-                selectedOrder={selectedOrder}
-                completedOrders={completedOrders}
-                nextOrder={nextOrder}
-                onSelect={onSelect}
-                emptyText="目前教材裡找不到這個字。"
-              />
-            ) : (
-              <>
-                <div className="rainbow-groups" aria-label="彩虹分區">
-                  {RAINBOW_GROUPS.map((group) => {
-                    const count = lessons.filter(
-                      (lesson) => lesson.order >= group.start && lesson.order <= group.end,
-                    ).length;
-                    return (
-                      <button
-                        key={group.id}
-                        className={`rainbow-group${group.id === activeGroupId ? " active" : ""}`}
-                        style={{ "--group-color": group.color } as CSSProperties}
-                        onClick={() => setActiveGroupId(group.id)}
-                      >
-                        <span>{group.label}</span>
-                        <small>{group.range}</small>
-                        <small>{count} 字</small>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <CatalogLessonGrid
-                  lessons={activeGroupLessons}
-                  selectedOrder={selectedOrder}
-                  completedOrders={completedOrders}
-                  nextOrder={nextOrder}
-                  onSelect={onSelect}
-                  emptyText={`${activeGroup.label}區教材尚未建立。`}
-                />
-              </>
-            )}
-          </div>
-        )}
-      </section>
+    <aside className="side-panel">
+      <div className="nav-heading">
+        <h2>最近課程</h2>
+        <span className="mini-label">已解鎖</span>
+      </div>
+      <div className="nearby-row" aria-label="最近可回看的課程">
+        {nearbyLessons.map((lesson) => (
+          <LessonJumpButton
+            key={lesson.id}
+            lesson={lesson}
+            selected={lesson.order === selectedOrder}
+            locked={false}
+            completed={completedOrders.has(lesson.order)}
+            onSelect={onSelect}
+          />
+        ))}
+      </div>
     </aside>
   );
 }
@@ -203,6 +255,95 @@ function LessonJumpButton({
       <span>{lesson.order}</span>
       <strong>{lesson.targetChar}</strong>
     </button>
+  );
+}
+
+function CatalogPage({
+  lessons,
+  selectedOrder,
+  completedOrders,
+  nextOrder,
+  onSelect,
+}: {
+  lessons: Lesson[];
+  selectedOrder: number;
+  completedOrders: Set<number>;
+  nextOrder: number;
+  onSelect: (order: number) => void;
+}) {
+  const [activeGroupId, setActiveGroupId] = useState(RAINBOW_GROUPS[0].id);
+  const [query, setQuery] = useState("");
+  const normalizedQuery = query.trim();
+  const activeGroup = RAINBOW_GROUPS.find((group) => group.id === activeGroupId) ?? RAINBOW_GROUPS[0];
+  const searchResults =
+    normalizedQuery.length > 0
+      ? lessons.filter(
+          (lesson) =>
+            lesson.targetChar.includes(normalizedQuery) ||
+            lesson.title.includes(normalizedQuery) ||
+            String(lesson.order) === normalizedQuery,
+        )
+      : [];
+  const activeGroupLessons = lessons.filter(
+    (lesson) => lesson.order >= activeGroup.start && lesson.order <= activeGroup.end,
+  );
+
+  return (
+    <section className="page-panel">
+      <div className="page-heading">
+        <h1>漢字總覽</h1>
+        <p>六百字分成六個彩虹區塊。破解後可以回來點字複習，也可以直接搜尋。</p>
+      </div>
+      <input
+        className="search-input"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        placeholder="搜尋字或課號"
+        aria-label="搜尋字或課號"
+      />
+
+      {normalizedQuery ? (
+        <CatalogLessonGrid
+          lessons={searchResults}
+          selectedOrder={selectedOrder}
+          completedOrders={completedOrders}
+          nextOrder={nextOrder}
+          onSelect={onSelect}
+          emptyText="目前教材裡找不到這個字。"
+        />
+      ) : (
+        <>
+          <div className="rainbow-groups" aria-label="彩虹分區">
+            {RAINBOW_GROUPS.map((group) => {
+              const count = lessons.filter(
+                (lesson) => lesson.order >= group.start && lesson.order <= group.end,
+              ).length;
+              return (
+                <button
+                  key={group.id}
+                  className={`rainbow-group${group.id === activeGroupId ? " active" : ""}`}
+                  style={{ "--group-color": group.color } as CSSProperties}
+                  onClick={() => setActiveGroupId(group.id)}
+                >
+                  <span>{group.label}</span>
+                  <small>{group.range}</small>
+                  <small>{count} 字</small>
+                </button>
+              );
+            })}
+          </div>
+
+          <CatalogLessonGrid
+            lessons={activeGroupLessons}
+            selectedOrder={selectedOrder}
+            completedOrders={completedOrders}
+            nextOrder={nextOrder}
+            onSelect={onSelect}
+            emptyText={`${activeGroup.label}區教材尚未建立。`}
+          />
+        </>
+      )}
+    </section>
   );
 }
 
@@ -245,6 +386,53 @@ function CatalogLessonGrid({
   );
 }
 
+function RecordsPage({
+  coins,
+  stars,
+  streakDays,
+  completedCount,
+}: {
+  coins: number;
+  stars: number;
+  streakDays: number;
+  completedCount: number;
+}) {
+  return (
+    <section className="page-panel">
+      <div className="page-heading">
+        <h1>學習記錄</h1>
+        <p>這裡之後會列每日練習、弱字、複習紀錄和獎勵明細。</p>
+      </div>
+      <div className="record-grid">
+        <StatCard icon="🪙" value={coins} label="金幣" />
+        <StatCard icon="⭐" value={stars} label="星星" />
+        <StatCard icon="🔥" value={streakDays} label="連續天數" />
+        <StatCard icon="✅" value={completedCount} label="已破解課程" />
+      </div>
+    </section>
+  );
+}
+
+function StatCard({ icon, value, label }: { icon: string; value: number; label: string }) {
+  return (
+    <div className="stat-card">
+      <span>{icon}</span>
+      <strong>{value}</strong>
+      <small>{label}</small>
+    </div>
+  );
+}
+
+function PlaceholderPage({ icon, title, text }: { icon: string; title: string; text: string }) {
+  return (
+    <section className="page-panel placeholder-page">
+      <span className="placeholder-icon">{icon}</span>
+      <h1>{title}</h1>
+      <p>{text}</p>
+    </section>
+  );
+}
+
 function LessonPanel({
   lesson,
   lessons,
@@ -282,12 +470,7 @@ function LessonPanel({
       </h2>
       <p className="lesson-copy">三段完成後才算通關：先聽單字，再找出這個字，最後進句子遊戲。</p>
 
-      <LessonBlock
-        index={1}
-        title="聽這個字"
-        done={soundUnlocked}
-        locked={locked}
-      >
+      <LessonBlock index={1} title="聽這個字" done={soundUnlocked} locked={locked}>
         <button className="target-card target-button" disabled={locked} onClick={handleHearTarget}>
           <span className="target-char">{lesson.targetChar}</span>
           <Zhuyin value={lesson.zhuyin} size="large" />
@@ -298,12 +481,7 @@ function LessonPanel({
         {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
       </LessonBlock>
 
-      <LessonBlock
-        index={2}
-        title="找出這個字"
-        done={findUnlocked}
-        locked={locked || !soundUnlocked}
-      >
+      <LessonBlock index={2} title="找出這個字" done={findUnlocked} locked={locked || !soundUnlocked}>
         <FindManyChallenge
           lesson={lesson}
           zhuyinMap={zhuyinMap}
