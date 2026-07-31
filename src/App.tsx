@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import curriculumData from "./curriculum/sample-lessons.json";
 import type { Curriculum, Lesson, LessonSentence } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
@@ -316,6 +316,8 @@ function AppHeader({
   streakDays: number;
   onMenu: () => void;
 }) {
+  const coinStat = useAnimatedStat(coins);
+  const starStat = useAnimatedStat(stars);
   return (
     <header className="app-header">
       <div className="header-inner">
@@ -327,13 +329,59 @@ function AppHeader({
           <strong>練功房</strong>
         </div>
         <div className="header-stats" aria-label="學習狀態">
-          <span className="stat-pill">🪙 {coins}</span>
-          <span className="stat-pill">⭐ {stars}</span>
+          <span className={`stat-pill${coinStat.animating ? " stat-animating coin" : ""}`}>
+            <span aria-hidden>🪙</span>
+            <span className="stat-number">{coinStat.value}</span>
+          </span>
+          <span className={`stat-pill${starStat.animating ? " stat-animating star" : ""}`}>
+            <span aria-hidden>⭐</span>
+            <span className="stat-number">{starStat.value}</span>
+          </span>
           <span className="stat-pill">🔥 {streakDays} 天</span>
         </div>
       </div>
     </header>
   );
+}
+
+function useAnimatedStat(target: number) {
+  const frameRef = useRef(0);
+  const previousTargetRef = useRef(target);
+  const [displayValue, setDisplayValue] = useState(target);
+  const [animating, setAnimating] = useState(false);
+
+  useEffect(() => {
+    const from = previousTargetRef.current;
+    previousTargetRef.current = target;
+    window.cancelAnimationFrame(frameRef.current);
+    if (from === target) {
+      setDisplayValue(target);
+      setAnimating(false);
+      return;
+    }
+
+    const durationMs = 3200;
+    const startTime = performance.now();
+    setAnimating(true);
+
+    function tick(now: number) {
+      const progress = Math.min((now - startTime) / durationMs, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const nextValue = Math.round(from + (target - from) * eased);
+      setDisplayValue(nextValue);
+      if (progress < 1) {
+        frameRef.current = window.requestAnimationFrame(tick);
+      } else {
+        setDisplayValue(target);
+        setAnimating(false);
+      }
+    }
+
+    frameRef.current = window.requestAnimationFrame(tick);
+    return () => window.cancelAnimationFrame(frameRef.current);
+  }, [target]);
+
+  return { value: displayValue, animating };
 }
 
 function AppDrawer({
@@ -761,7 +809,7 @@ function LessonPanel({
     playRewardChime();
     onReward(lessonReward);
     void speakForTarget("stage3", GUIDE_TEXT.rewardWon);
-    await waitMs(2300);
+    await waitMs(3600);
     setRewardState("claimed");
   }
 
@@ -1042,6 +1090,16 @@ function RewardPanel({
   const message = state === "ready" ? GUIDE_TEXT.rewardReady : GUIDE_TEXT.rewardWon;
   return (
     <section className={`reward-panel active-block reward-${state}`} aria-label="領取獎勵">
+      {state === "claiming" && (
+        <div className="reward-burst" aria-hidden>
+          <span>🪙</span>
+          <span>⭐</span>
+          <span>🪙</span>
+          <span>⭐</span>
+          <span>🪙</span>
+          <span>⭐</span>
+        </div>
+      )}
       <NarrationLine
         text={message}
         target="stage3"
@@ -1428,11 +1486,38 @@ function playStartChime() {
 
 function playRewardChime() {
   playToneSequence([
-    { frequency: 659, endFrequency: 880, duration: 0.12, gain: 0.075 },
-    { frequency: 880, endFrequency: 1175, duration: 0.14, gain: 0.08, delay: 0.09 },
-    { frequency: 1046, endFrequency: 1397, duration: 0.18, gain: 0.075, delay: 0.22 },
-    { frequency: 1568, endFrequency: 1760, duration: 0.2, gain: 0.055, delay: 0.36 },
+    { frequency: 523, endFrequency: 784, duration: 0.11, gain: 0.075 },
+    { frequency: 659, endFrequency: 988, duration: 0.11, gain: 0.075, delay: 0.1 },
+    { frequency: 784, endFrequency: 1175, duration: 0.12, gain: 0.08, delay: 0.2 },
+    { frequency: 988, endFrequency: 1568, duration: 0.16, gain: 0.085, delay: 0.32 },
+    { frequency: 1318, endFrequency: 1760, duration: 0.2, gain: 0.075, delay: 0.5 },
   ]);
+  for (let index = 0; index < 10; index += 1) {
+    window.setTimeout(() => {
+      playToneSequence([
+        {
+          frequency: 1046 + index * 58,
+          endFrequency: 1568 + index * 46,
+          duration: 0.08,
+          gain: 0.045,
+        },
+        {
+          frequency: 784 + index * 34,
+          endFrequency: 1175 + index * 42,
+          duration: 0.1,
+          gain: 0.035,
+          delay: 0.04,
+        },
+      ]);
+    }, 620 + index * 180);
+  }
+  window.setTimeout(() => {
+    playToneSequence([
+      { frequency: 1046, endFrequency: 1568, duration: 0.16, gain: 0.075 },
+      { frequency: 1318, endFrequency: 1975, duration: 0.18, gain: 0.08, delay: 0.12 },
+      { frequency: 1568, endFrequency: 2093, duration: 0.24, gain: 0.075, delay: 0.28 },
+    ]);
+  }, 2600);
 }
 
 function playToneSequence(

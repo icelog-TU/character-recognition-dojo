@@ -105,6 +105,7 @@ button {
 .stat-pill {
   display: inline-flex;
   align-items: center;
+  gap: 4px;
   min-height: 30px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.18);
@@ -112,6 +113,24 @@ button {
   font-size: 0.88rem;
   font-weight: 800;
   white-space: nowrap;
+}
+
+.stat-number {
+  min-width: 2ch;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-pill.stat-animating {
+  background: rgba(255, 255, 255, 0.3);
+  animation: stat-jackpot 0.42s ease-in-out infinite;
+}
+
+.stat-pill.stat-animating.coin {
+  box-shadow: 0 0 0 5px rgba(255, 214, 92, 0.2), 0 0 18px rgba(255, 214, 92, 0.42);
+}
+
+.stat-pill.stat-animating.star {
+  box-shadow: 0 0 0 5px rgba(255, 245, 145, 0.18), 0 0 18px rgba(255, 245, 145, 0.4);
 }
 
 .drawer-backdrop {
@@ -837,6 +856,7 @@ button {
 }
 
 .reward-panel {
+  position: relative;
   display: grid;
   justify-items: center;
   gap: 14px;
@@ -845,6 +865,7 @@ button {
   border: 2px solid rgba(217, 71, 53, 0.28);
   border-radius: 8px;
   background: linear-gradient(180deg, #fff8f6 0%, #fffdf7 100%);
+  overflow: hidden;
 }
 
 .reward-copy {
@@ -862,20 +883,20 @@ button {
 }
 
 .reward-badge {
-  min-height: 104px;
+  min-height: 122px;
   display: grid;
   place-items: center;
   align-content: center;
   gap: 4px;
-  border: 1px solid var(--line);
+  border: 2px solid rgba(217, 151, 32, 0.28);
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 10px 22px rgba(79, 59, 34, 0.08);
+  box-shadow: 0 14px 28px rgba(79, 59, 34, 0.12);
   overflow: hidden;
 }
 
 .reward-badge strong {
-  font-size: 1.55rem;
+  font-size: 2rem;
   line-height: 1;
 }
 
@@ -885,13 +906,13 @@ button {
 }
 
 .reward-icon {
-  font-size: 2.15rem;
+  font-size: 2.75rem;
   line-height: 1;
   animation: reward-float 1.15s ease-in-out infinite;
 }
 
 .reward-claiming .reward-badge {
-  animation: reward-run 0.88s ease-in-out infinite;
+  animation: reward-run 0.72s ease-in-out infinite;
 }
 
 .reward-claiming .reward-badge.coin {
@@ -905,6 +926,58 @@ button {
 .reward-claimed .reward-badge {
   border-color: rgba(34, 132, 123, 0.38);
   background: var(--green-soft);
+}
+
+.reward-burst {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.reward-burst span {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  font-size: 1.9rem;
+  filter: drop-shadow(0 8px 10px rgba(102, 70, 28, 0.22));
+  animation: reward-burst-fly 1.55s ease-out infinite;
+}
+
+.reward-burst span:nth-child(1) {
+  --fly-x: -150px;
+  --fly-rotate: -26deg;
+  animation-delay: 0s;
+}
+
+.reward-burst span:nth-child(2) {
+  --fly-x: -88px;
+  --fly-rotate: 18deg;
+  animation-delay: 0.12s;
+}
+
+.reward-burst span:nth-child(3) {
+  --fly-x: -32px;
+  --fly-rotate: -14deg;
+  animation-delay: 0.24s;
+}
+
+.reward-burst span:nth-child(4) {
+  --fly-x: 44px;
+  --fly-rotate: 24deg;
+  animation-delay: 0.08s;
+}
+
+.reward-burst span:nth-child(5) {
+  --fly-x: 102px;
+  --fly-rotate: -18deg;
+  animation-delay: 0.2s;
+}
+
+.reward-burst span:nth-child(6) {
+  --fly-x: 156px;
+  --fly-rotate: 28deg;
+  animation-delay: 0.32s;
 }
 
 .reward-claim-button,
@@ -1288,6 +1361,16 @@ button.char-token {
   }
 }
 
+@keyframes stat-jackpot {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.08);
+  }
+}
+
 @keyframes reward-float {
   0%,
   100% {
@@ -1300,16 +1383,33 @@ button.char-token {
 
 @keyframes reward-run {
   0% {
-    transform: translateX(-8px) scale(0.96);
-    box-shadow: 0 10px 20px rgba(217, 71, 53, 0.08);
+    transform: translateY(0) scale(0.98) rotate(-1deg);
+    box-shadow: 0 12px 22px rgba(217, 71, 53, 0.12);
   }
   45% {
-    transform: translateX(8px) scale(1.06);
-    box-shadow: 0 14px 26px rgba(217, 71, 53, 0.2);
+    transform: translateY(-12px) scale(1.09) rotate(2deg);
+    box-shadow: 0 22px 36px rgba(217, 71, 53, 0.24);
   }
   100% {
-    transform: translateX(-8px) scale(0.96);
-    box-shadow: 0 10px 20px rgba(217, 71, 53, 0.08);
+    transform: translateY(0) scale(0.98) rotate(-1deg);
+    box-shadow: 0 12px 22px rgba(217, 71, 53, 0.12);
+  }
+}
+
+@keyframes reward-burst-fly {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 18px) scale(0.55) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--fly-x)), -150px) scale(1.25) rotate(var(--fly-rotate));
   }
 }
 
