@@ -26,6 +26,17 @@
 - The app should feel like play, not a quiz worksheet.
 - Every curriculum sentence must be parent/teacher reviewed before shipping. AI-generated sentences are drafts only.
 
+## Curriculum Navigation
+
+- The full curriculum target is 600 characters.
+- Do not display all 600 characters as one flat list.
+- The catalog is divided into six color blocks, 100 characters each: red, orange, yellow, green, blue, purple.
+- Each color block opens its own character grid.
+- Locked characters are visible as locked items but cannot be opened.
+- Completed or currently unlocked characters can be opened from the catalog for review.
+- The catalog must support search by character and lesson number.
+- The main lesson screen should only show a compact nearby-course shortcut list, primarily the current lesson and previously unlocked lessons.
+
 ## Lesson Structure
 
 Each lesson has:

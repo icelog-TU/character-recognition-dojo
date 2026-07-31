@@ -80,37 +80,6 @@ button {
   font-size: 0.92rem;
 }
 
-.lesson-list {
-  display: grid;
-  gap: 8px;
-}
-
-.lesson-tab {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 32px 1fr auto;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--ink);
-  padding: 8px;
-  cursor: pointer;
-  text-align: left;
-}
-
-.lesson-tab:disabled {
-  color: #9b958d;
-  background: #eee8dd;
-  cursor: not-allowed;
-}
-
-.lesson-tab.active {
-  border-color: var(--primary);
-  background: var(--green-soft);
-}
-
 .lesson-number {
   width: 28px;
   height: 28px;
@@ -123,22 +92,196 @@ button {
   font-weight: 700;
 }
 
-.lesson-tab:disabled .lesson-number {
-  background: #aaa197;
+.lesson-panel {
+  padding: 20px;
 }
 
-.lesson-char {
-  font-size: 1.35rem;
+.nav-section {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 14px;
+}
+
+.nav-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.nav-heading h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.mini-label {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.nearby-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.lesson-chip {
+  min-height: 64px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 7px 4px;
+}
+
+.lesson-chip span {
+  color: var(--muted);
+  font-size: 0.72rem;
   font-weight: 800;
 }
 
-.lesson-status {
-  color: var(--muted);
-  font-size: 0.82rem;
+.lesson-chip strong {
+  font-size: 1.55rem;
+  line-height: 1;
 }
 
-.lesson-panel {
-  padding: 20px;
+.lesson-chip.active {
+  border-color: var(--primary);
+  background: var(--green-soft);
+}
+
+.lesson-chip.completed {
+  box-shadow: inset 0 -4px 0 rgba(29, 120, 116, 0.25);
+}
+
+.catalog-toggle {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 9px 12px;
+  font-weight: 800;
+}
+
+.catalog-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.search-input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  padding: 9px 11px;
+  font: inherit;
+}
+
+.search-input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.rainbow-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.rainbow-group {
+  min-height: 72px;
+  display: grid;
+  align-content: center;
+  gap: 3px;
+  border: 1px solid color-mix(in srgb, var(--group-color) 48%, #fff);
+  border-left: 7px solid var(--group-color);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--group-color) 13%, #fff);
+  color: var(--ink);
+  cursor: pointer;
+  padding: 8px;
+  text-align: left;
+}
+
+.rainbow-group span {
+  font-size: 1.12rem;
+  font-weight: 900;
+}
+
+.rainbow-group small {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.rainbow-group.active {
+  outline: 2px solid var(--group-color);
+  outline-offset: 1px;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.catalog-char {
+  min-height: 66px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 6px 3px;
+}
+
+.catalog-char:disabled {
+  background: #eee8dd;
+  color: #9b958d;
+  cursor: not-allowed;
+}
+
+.catalog-char.active {
+  border-color: var(--primary);
+  background: var(--green-soft);
+}
+
+.catalog-char span,
+.catalog-char small {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.catalog-char strong {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.empty-catalog {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .top-bar {
@@ -448,10 +591,6 @@ button.char-token {
 
   .app-layout {
     grid-template-columns: 1fr;
-  }
-
-  .lesson-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .target-card {

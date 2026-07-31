@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from "react";
+import { useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import curriculumData from "./curriculum/sample-lessons.json";
 import type { Curriculum, Lesson, LessonSentence } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
@@ -8,6 +8,15 @@ const curriculum = curriculumData as Curriculum;
 
 type GameMode = "找字" | "教動物" | "填空" | "排句子" | "誰念對";
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
+
+const RAINBOW_GROUPS = [
+  { id: "red", label: "紅", range: "1-100", start: 1, end: 100, color: "#d94735" },
+  { id: "orange", label: "橙", range: "101-200", start: 101, end: 200, color: "#e58b20" },
+  { id: "yellow", label: "黃", range: "201-300", start: 201, end: 300, color: "#d7aa18" },
+  { id: "green", label: "綠", range: "301-400", start: 301, end: 400, color: "#35995b" },
+  { id: "blue", label: "藍", range: "401-500", start: 401, end: 500, color: "#2e78d6" },
+  { id: "purple", label: "紫", range: "501-600", start: 501, end: 600, color: "#8156c6" },
+];
 
 function App() {
   const [completedOrders, setCompletedOrders] = useState<Set<number>>(new Set());
@@ -62,29 +71,177 @@ function LessonSidebar({
   nextOrder: number;
   onSelect: (order: number) => void;
 }) {
+  const [catalogOpen, setCatalogOpen] = useState(false);
+  const [activeGroupId, setActiveGroupId] = useState(RAINBOW_GROUPS[0].id);
+  const [query, setQuery] = useState("");
+  const nearbyLessons = lessons
+    .filter((lesson) => lesson.order <= selectedOrder && lesson.order <= nextOrder)
+    .slice(-6);
+  const normalizedQuery = query.trim();
+  const searchResults =
+    normalizedQuery.length > 0
+      ? lessons.filter(
+          (lesson) =>
+            lesson.targetChar.includes(normalizedQuery) ||
+            lesson.title.includes(normalizedQuery) ||
+            String(lesson.order) === normalizedQuery,
+        )
+      : [];
+  const activeGroup = RAINBOW_GROUPS.find((group) => group.id === activeGroupId) ?? RAINBOW_GROUPS[0];
+  const activeGroupLessons = lessons.filter(
+    (lesson) => lesson.order >= activeGroup.start && lesson.order <= activeGroup.end,
+  );
+
   return (
     <aside className="sidebar">
       <h1 className="brand">認字練功房</h1>
       <p className="brand-subtitle">一課一字，破解後解鎖下一關。</p>
-      <div className="lesson-list" aria-label="課程列表">
-        {lessons.map((lesson) => {
-          const locked = lesson.order > nextOrder;
-          const completed = completedOrders.has(lesson.order);
-          return (
-            <button
+
+      <section className="nav-section">
+        <div className="nav-heading">
+          <h2>最近課程</h2>
+          <span className="mini-label">只列已解鎖</span>
+        </div>
+        <div className="nearby-row" aria-label="最近可回看的課程">
+          {nearbyLessons.map((lesson) => (
+            <LessonJumpButton
               key={lesson.id}
-              className={`lesson-tab${lesson.order === selectedOrder ? " active" : ""}`}
-              disabled={locked}
-              onClick={() => onSelect(lesson.order)}
-            >
-              <span className="lesson-number">{lesson.order}</span>
-              <span className="lesson-char">{lesson.targetChar}</span>
-              <span className="lesson-status">{completed ? "已破關" : locked ? "鎖定" : "可挑戰"}</span>
-            </button>
-          );
-        })}
-      </div>
+              lesson={lesson}
+              selected={lesson.order === selectedOrder}
+              locked={false}
+              completed={completedOrders.has(lesson.order)}
+              onSelect={onSelect}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="nav-section">
+        <button className="catalog-toggle" onClick={() => setCatalogOpen((open) => !open)}>
+          <span>六百字總目錄</span>
+          <span>{catalogOpen ? "收合" : "展開"}</span>
+        </button>
+
+        {catalogOpen && (
+          <div className="catalog-panel">
+            <input
+              className="search-input"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="搜尋字或課號"
+              aria-label="搜尋字或課號"
+            />
+
+            {normalizedQuery ? (
+              <CatalogLessonGrid
+                lessons={searchResults}
+                selectedOrder={selectedOrder}
+                completedOrders={completedOrders}
+                nextOrder={nextOrder}
+                onSelect={onSelect}
+                emptyText="目前教材裡找不到這個字。"
+              />
+            ) : (
+              <>
+                <div className="rainbow-groups" aria-label="彩虹分區">
+                  {RAINBOW_GROUPS.map((group) => {
+                    const count = lessons.filter(
+                      (lesson) => lesson.order >= group.start && lesson.order <= group.end,
+                    ).length;
+                    return (
+                      <button
+                        key={group.id}
+                        className={`rainbow-group${group.id === activeGroupId ? " active" : ""}`}
+                        style={{ "--group-color": group.color } as CSSProperties}
+                        onClick={() => setActiveGroupId(group.id)}
+                      >
+                        <span>{group.label}</span>
+                        <small>{group.range}</small>
+                        <small>{count} 字</small>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <CatalogLessonGrid
+                  lessons={activeGroupLessons}
+                  selectedOrder={selectedOrder}
+                  completedOrders={completedOrders}
+                  nextOrder={nextOrder}
+                  onSelect={onSelect}
+                  emptyText={`${activeGroup.label}區教材尚未建立。`}
+                />
+              </>
+            )}
+          </div>
+        )}
+      </section>
     </aside>
+  );
+}
+
+function LessonJumpButton({
+  lesson,
+  selected,
+  locked,
+  completed,
+  onSelect,
+}: {
+  lesson: Lesson;
+  selected: boolean;
+  locked: boolean;
+  completed: boolean;
+  onSelect: (order: number) => void;
+}) {
+  return (
+    <button
+      className={`lesson-chip${selected ? " active" : ""}${completed ? " completed" : ""}`}
+      disabled={locked}
+      onClick={() => onSelect(lesson.order)}
+      aria-label={`第 ${lesson.order} 課 ${lesson.targetChar}`}
+    >
+      <span>{lesson.order}</span>
+      <strong>{lesson.targetChar}</strong>
+    </button>
+  );
+}
+
+function CatalogLessonGrid({
+  lessons,
+  selectedOrder,
+  completedOrders,
+  nextOrder,
+  onSelect,
+  emptyText,
+}: {
+  lessons: Lesson[];
+  selectedOrder: number;
+  completedOrders: Set<number>;
+  nextOrder: number;
+  onSelect: (order: number) => void;
+  emptyText: string;
+}) {
+  if (lessons.length === 0) return <p className="empty-catalog">{emptyText}</p>;
+  return (
+    <div className="catalog-grid" aria-label="課程字目錄">
+      {lessons.map((lesson) => {
+        const locked = lesson.order > nextOrder;
+        return (
+          <button
+            key={lesson.id}
+            className={`catalog-char${lesson.order === selectedOrder ? " active" : ""}${
+              completedOrders.has(lesson.order) ? " completed" : ""
+            }`}
+            disabled={locked}
+            onClick={() => onSelect(lesson.order)}
+          >
+            <span>{lesson.order}</span>
+            <strong>{lesson.targetChar}</strong>
+            <small>{locked ? "鎖" : completedOrders.has(lesson.order) ? "破" : "練"}</small>
+          </button>
+        );
+      })}
+    </div>
   );
 }
 
