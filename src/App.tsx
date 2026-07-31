@@ -23,10 +23,12 @@ type StoredProgress = {
   version: 1;
   coins: number;
   stars: number;
+  duplicateGachaStreak: number;
   selectedOrder: number;
   completedOrders: number[];
   ownedCharacters: Record<string, number>;
   characterHearts: Record<string, number>;
+  seenCharacterInteractions: Record<string, number[]>;
 };
 type RealmId = "land" | "sea" | "sky" | "space";
 type FamilyRoleId = "grandpa" | "grandma" | "dad" | "mom" | "olderBrother" | "olderSister" | "youngerBrother" | "youngerSister" | "baby";
@@ -38,6 +40,17 @@ type CollectibleCharacter = CreatureSpecies & {
   familyRoleId: FamilyRoleId;
   familyRoleLabel: string;
   familyRoleShortLabel: string;
+};
+type GachaDrawResult = {
+  character: CollectibleCharacter;
+  isNew: boolean;
+  guaranteedNew: boolean;
+};
+type CharacterInteraction = {
+  heart: number;
+  icon: string;
+  label: string;
+  message: string;
 };
 
 const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
@@ -182,6 +195,86 @@ const DISTRACTOR_ZHUYIN: Record<string, string> = {
   火: "ㄏㄨㄛˇ",
 };
 
+const CHARACTER_INTERACTION_TOPICS = {
+  foods: ["小飯糰", "甜甜的水果", "熱熱的湯", "香香的麵包", "脆脆的餅乾", "溫溫的豆漿"],
+  games: ["躲貓貓", "拍拍手", "排積木", "找影子", "轉圈圈", "猜聲音"],
+  places: ["草地", "海邊", "雲朵旁邊", "月亮小屋", "花園", "小山坡"],
+  treasures: ["小鈴鐺", "亮亮星星", "彩色石頭", "小小葉子", "貝殼", "圓圓扣子"],
+  moods: ["開心地跳一下", "害羞地笑一下", "輕輕揮揮手", "把眼睛睜得大大的", "慢慢轉一圈", "偷偷比一個愛心"],
+} as const;
+
+const CHARACTER_INTERACTION_TEMPLATES: Array<{
+  icon: string;
+  label: string;
+  message: (character: CollectibleCharacter, heart: number) => string;
+}> = [
+  {
+    icon: "👋",
+    label: "打招呼",
+    message: (character) => `你好呀，我是${character.name}${character.familyRoleLabel}。很高興見到你。`,
+  },
+  {
+    icon: "💬",
+    label: "聊聊天",
+    message: (character) => `我今天想跟你聊聊天。你最喜歡${character.name}的哪一個地方呢？`,
+  },
+  {
+    icon: "🍪",
+    label: "分享點心",
+    message: (character) => `我想分享${seededPick(CHARACTER_INTERACTION_TOPICS.foods, characterSeed(character, 3))}。我們一起慢慢吃。`,
+  },
+  {
+    icon: "🎲",
+    label: "一起玩",
+    message: (character) => `我想玩${seededPick(CHARACTER_INTERACTION_TOPICS.games, characterSeed(character, 4))}。你先來，還是我先來？`,
+  },
+  {
+    icon: "🧺",
+    label: "出門走走",
+    message: (character) => `我想帶你去${seededPick(CHARACTER_INTERACTION_TOPICS.places, characterSeed(character, 5))}走走。那裡一定很好玩。`,
+  },
+  {
+    icon: "🎁",
+    label: "小禮物",
+    message: (character) => `我把${seededPick(CHARACTER_INTERACTION_TOPICS.treasures, characterSeed(character, 6))}送給你。這是我們的小祕密。`,
+  },
+  {
+    icon: "🎵",
+    label: "唱一唱",
+    message: (character) => `我想唱一首${character.name}的小歌。啦啦啦，今天我們又更好了。`,
+  },
+  {
+    icon: "🌟",
+    label: "誇獎你",
+    message: () => "你今天有認真練習，我有看到喔。慢慢來，也很厲害。",
+  },
+  {
+    icon: "🎭",
+    label: "做表情",
+    message: (character) => `${character.name}${character.familyRoleLabel}${seededPick(CHARACTER_INTERACTION_TOPICS.moods, characterSeed(character, 9))}，想逗你笑。`,
+  },
+  {
+    icon: "💌",
+    label: "特別約定",
+    message: (character) => `等你下次再來，我還會在這裡等你。${character.name}${character.familyRoleLabel}跟你約好了。`,
+  },
+];
+
+function characterInteractions(character: CollectibleCharacter): CharacterInteraction[] {
+  return Array.from({ length: 10 }, (_, index) => {
+    const template = CHARACTER_INTERACTION_TEMPLATES[
+      interactionTemplateIndex(character, index, CHARACTER_INTERACTION_TEMPLATES.length)
+    ];
+    const heart = index + 1;
+    return {
+      heart,
+      icon: template.icon,
+      label: template.label,
+      message: template.message(character, heart),
+    };
+  });
+}
+
 function lessonChars(lesson: Lesson): string[] {
   return lesson.newChars;
 }
@@ -220,11 +313,17 @@ function activeGachaRealm(ownedCharacters: Record<string, number>): RealmId {
   return CREATURE_REALMS.find((realm) => realmUnlocked(realm.id, ownedCharacters) && !realmComplete(realm.id, ownedCharacters))?.id ?? "space";
 }
 
-function drawCharacter(realmId: RealmId, ownedCharacters: Record<string, number>): CollectibleCharacter {
+function drawCharacter(realmId: RealmId, ownedCharacters: Record<string, number>, duplicateGachaStreak: number): GachaDrawResult {
   const pool = charactersForRealm(realmId);
   const missing = pool.filter((character) => ownedCount(ownedCharacters, character.characterId) === 0);
-  const source = missing.length > 0 && Math.random() < 0.68 ? missing : pool;
-  return source[Math.floor(Math.random() * source.length)] ?? pool[0];
+  const guaranteedNew = duplicateGachaStreak >= 5 && missing.length > 0;
+  const source = guaranteedNew || (missing.length > 0 && Math.random() < 0.68) ? missing : pool;
+  const character = source[Math.floor(Math.random() * source.length)] ?? pool[0];
+  return {
+    character,
+    guaranteedNew,
+    isNew: ownedCount(ownedCharacters, character.characterId) === 0,
+  };
 }
 
 function sanitizeOwnedCharacters(value: unknown): Record<string, number> {
@@ -251,6 +350,34 @@ function sanitizeCharacterHearts(value: unknown): Record<string, number> {
 
 function heartCount(characterHearts: Record<string, number>, characterId: string): number {
   return Math.min(10, Math.max(0, Math.floor(characterHearts[characterId] ?? 0)));
+}
+
+function sanitizeSeenCharacterInteractions(value: unknown): Record<string, number[]> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return Object.entries(value as Record<string, unknown>).reduce<Record<string, number[]>>((result, [id, indexes]) => {
+    if (!COLLECTIBLE_BY_ID.has(id) || !Array.isArray(indexes)) return result;
+    const seen = [...new Set(indexes.filter((index): index is number => Number.isInteger(index) && index >= 0 && index < 10))];
+    if (seen.length > 0) result[id] = seen;
+    return result;
+  }, {});
+}
+
+function characterCollectionIndex(characterId: string): number {
+  return Math.max(0, COLLECTIBLE_CHARACTERS.findIndex((character) => character.characterId === characterId));
+}
+
+function seededPick<T>(items: readonly T[], seed: number): T {
+  return items[((seed % items.length) + items.length) % items.length];
+}
+
+function characterSeed(character: CollectibleCharacter, salt: number): number {
+  return characterCollectionIndex(character.characterId) * 997 + FAMILY_ROLES.findIndex((role) => role.id === character.familyRoleId) * 131 + salt * 53;
+}
+
+function interactionTemplateIndex(character: CollectibleCharacter, tierIndex: number, templateCount: number): number {
+  if (tierIndex === 0) return 0;
+  if (tierIndex === 1) return 1;
+  return (characterCollectionIndex(character.characterId) + tierIndex * 7) % templateCount;
 }
 
 function lessonLabel(lesson: Lesson): string {
@@ -317,10 +444,14 @@ function loadStoredProgress(): StoredProgress | null {
       version: 1,
       coins: Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120,
       stars: Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36,
+      duplicateGachaStreak: Number.isFinite(parsed.duplicateGachaStreak)
+        ? Math.max(0, Math.floor(Number(parsed.duplicateGachaStreak)))
+        : 0,
       selectedOrder: Number.isInteger(parsed.selectedOrder) ? Number(parsed.selectedOrder) : 1,
       completedOrders,
       ownedCharacters: sanitizeOwnedCharacters(parsed.ownedCharacters),
       characterHearts: sanitizeCharacterHearts(parsed.characterHearts),
+      seenCharacterInteractions: sanitizeSeenCharacterInteractions(parsed.seenCharacterInteractions),
     };
   } catch {
     return null;
@@ -350,13 +481,17 @@ function App() {
   const [startingOrder, setStartingOrder] = useState<number | null>(null);
   const [coins, setCoins] = useState(initialProgress?.coins ?? 120);
   const [stars, setStars] = useState(initialProgress?.stars ?? 36);
+  const [duplicateGachaStreak, setDuplicateGachaStreak] = useState(initialProgress?.duplicateGachaStreak ?? 0);
   const [ownedCharacters, setOwnedCharacters] = useState<Record<string, number>>(
     () => initialProgress?.ownedCharacters ?? {},
   );
   const [characterHearts, setCharacterHearts] = useState<Record<string, number>>(
     () => initialProgress?.characterHearts ?? {},
   );
-  const [lastGachaResult, setLastGachaResult] = useState<CollectibleCharacter | null>(null);
+  const [seenCharacterInteractions, setSeenCharacterInteractions] = useState<Record<string, number[]>>(
+    () => initialProgress?.seenCharacterInteractions ?? {},
+  );
+  const [lastGachaResult, setLastGachaResult] = useState<GachaDrawResult | null>(null);
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
   const [selectedOrder, setSelectedOrder] = useState(initialProgress?.selectedOrder ?? nextOrder);
   const playbackState = usePlaybackState();
@@ -373,12 +508,14 @@ function App() {
       version: 1,
       coins,
       stars,
+      duplicateGachaStreak,
       selectedOrder,
       completedOrders: [...completedOrders],
       ownedCharacters,
       characterHearts,
+      seenCharacterInteractions,
     });
-  }, [coins, stars, selectedOrder, completedOrders, ownedCharacters, characterHearts]);
+  }, [coins, stars, duplicateGachaStreak, selectedOrder, completedOrders, ownedCharacters, characterHearts, seenCharacterInteractions]);
 
   function grantLessonReward(order: number, rewards: LessonReward) {
     if (completedOrders.has(order)) return;
@@ -394,15 +531,17 @@ function App() {
   function handleGachaDraw() {
     if (coins < 10) return;
     const realmId = activeGachaRealm(ownedCharacters);
-    const character = drawCharacter(realmId, ownedCharacters);
+    const result = drawCharacter(realmId, ownedCharacters, duplicateGachaStreak);
+    const { character } = result;
     setCoins((value) => Math.max(0, value - 10));
     setOwnedCharacters((prev) => ({
       ...prev,
       [character.characterId]: ownedCount(prev, character.characterId) + 1,
     }));
-    setLastGachaResult(character);
+    setDuplicateGachaStreak(result.isNew ? 0 : duplicateGachaStreak + 1);
+    setLastGachaResult(result);
     playRewardChime();
-    void speakGuide(`你抽到了${character.name}${character.familyRoleLabel}。`);
+    void speakGuide(`${result.isNew ? "你抽到了新角色，" : "你又遇到了"}${character.name}${character.familyRoleLabel}。`);
   }
 
   function handleAddHeart(characterId: string) {
@@ -414,6 +553,17 @@ function App() {
       [characterId]: heartCount(prev, characterId) + 1,
     }));
     playCelebrateChime();
+  }
+
+  function handleCharacterInteractionSeen(characterId: string, index: number) {
+    setSeenCharacterInteractions((prev) => {
+      const current = prev[characterId] ?? [];
+      if (current.includes(index)) return prev;
+      return {
+        ...prev,
+        [characterId]: [...current, index],
+      };
+    });
   }
 
   function finishLesson(order: number, destination: LessonDestination) {
@@ -535,6 +685,7 @@ function App() {
           <GachaPage
             coins={coins}
             ownedCharacters={ownedCharacters}
+            duplicateGachaStreak={duplicateGachaStreak}
             lastResult={lastGachaResult}
             onDraw={handleGachaDraw}
           />
@@ -544,7 +695,9 @@ function App() {
             stars={stars}
             ownedCharacters={ownedCharacters}
             characterHearts={characterHearts}
+            seenCharacterInteractions={seenCharacterInteractions}
             onAddHeart={handleAddHeart}
+            onInteractionSeen={handleCharacterInteractionSeen}
           />
         )}
         {page === "settings" && <PlaceholderPage icon="⚙️" title="設定" text="之後放音量、資料備份、家長設定。" />}
@@ -1024,12 +1177,14 @@ function PlaceholderPage({ icon, title, text }: { icon: string; title: string; t
 function GachaPage({
   coins,
   ownedCharacters,
+  duplicateGachaStreak,
   lastResult,
   onDraw,
 }: {
   coins: number;
   ownedCharacters: Record<string, number>;
-  lastResult: CollectibleCharacter | null;
+  duplicateGachaStreak: number;
+  lastResult: GachaDrawResult | null;
   onDraw: () => void;
 }) {
   const [drawing, setDrawing] = useState(false);
@@ -1038,6 +1193,9 @@ function GachaPage({
   const collected = realmOwnedCount(realm.id, ownedCharacters);
   const total = realmTotalCount(realm.id);
   const canDraw = coins >= 10;
+  const missingCount = charactersForRealm(realm.id).filter((character) => ownedCount(ownedCharacters, character.characterId) === 0).length;
+  const pityCount = Math.min(5, duplicateGachaStreak);
+  const nextIsGuaranteed = pityCount >= 5 && missingCount > 0;
 
   function handleDraw() {
     if (!canDraw || drawing) return;
@@ -1080,6 +1238,7 @@ function GachaPage({
           <p>{realm.description}</p>
           <strong>金幣：{coins}</strong>
           <small>本區進度 {collected} / {total}</small>
+          <small>{nextIsGuaranteed ? "下一抽保證新角色" : `保底進度 ${pityCount} / 5`}</small>
         </div>
         <button className={`btn gacha-draw-button${drawing ? " starting" : ""}`} disabled={!canDraw || drawing} onClick={handleDraw}>
           {coins < 10 ? "金幣不夠" : drawing ? "轉動中" : "抽一次"}
@@ -1087,12 +1246,12 @@ function GachaPage({
       </div>
 
       {lastResult ? (
-        <div className="draw-result" style={{ "--realm-color": realmColor(lastResult.realmId) } as CSSProperties}>
-          <CreatureAvatar character={lastResult} owned large />
+        <div className={`draw-result${lastResult.isNew ? " new-character" : ""}`} style={{ "--realm-color": realmColor(lastResult.character.realmId) } as CSSProperties}>
+          <CreatureAvatar character={lastResult.character} owned large />
           <div>
-            <span>這次抽到</span>
-            <h2>{lastResult.name}{lastResult.familyRoleLabel}</h2>
-            <p>已遇見 {ownedCount(ownedCharacters, lastResult.characterId)} 次</p>
+            <span>{lastResult.guaranteedNew ? "保底新角色" : lastResult.isNew ? "新角色" : "又遇見了"}</span>
+            <h2>{lastResult.character.name}{lastResult.character.familyRoleLabel}</h2>
+            <p>已遇見 {ownedCount(ownedCharacters, lastResult.character.characterId)} 次</p>
           </div>
         </div>
       ) : (
@@ -1109,24 +1268,48 @@ function CollectionPage({
   stars,
   ownedCharacters,
   characterHearts,
+  seenCharacterInteractions,
   onAddHeart,
+  onInteractionSeen,
 }: {
   stars: number;
   ownedCharacters: Record<string, number>;
   characterHearts: Record<string, number>;
+  seenCharacterInteractions: Record<string, number[]>;
   onAddHeart: (characterId: string) => void;
+  onInteractionSeen: (characterId: string, index: number) => void;
 }) {
   const [selectedRealm, setSelectedRealm] = useState<RealmId>("land");
+  const [selectedCharacterId, setSelectedCharacterId] = useState<string | null>(null);
+  const [interactionMessage, setInteractionMessage] = useState("");
   const realm = CREATURE_REALMS.find((candidate) => candidate.id === selectedRealm) ?? CREATURE_REALMS[0];
   const unlocked = realmUnlocked(realm.id, ownedCharacters);
   const visibleRealm = unlocked ? realm : CREATURE_REALMS.find((candidate) => realmUnlocked(candidate.id, ownedCharacters)) ?? CREATURE_REALMS[0];
   const characters = charactersForRealm(visibleRealm.id);
   const collected = realmOwnedCount(visibleRealm.id, ownedCharacters);
   const total = realmTotalCount(visibleRealm.id);
+  const firstOwnedCharacter = characters.find((character) => ownedCount(ownedCharacters, character.characterId) > 0);
+  const selectedCharacter = selectedCharacterId ? COLLECTIBLE_BY_ID.get(selectedCharacterId) : firstOwnedCharacter;
+  const selectedOwned = selectedCharacter ? ownedCount(ownedCharacters, selectedCharacter.characterId) > 0 : false;
+  const selectedHearts = selectedCharacter ? heartCount(characterHearts, selectedCharacter.characterId) : 0;
 
   useEffect(() => {
     if (!realmUnlocked(selectedRealm, ownedCharacters)) setSelectedRealm(activeGachaRealm(ownedCharacters));
   }, [selectedRealm, ownedCharacters]);
+
+  useEffect(() => {
+    if (selectedCharacter && selectedCharacter.realmId !== visibleRealm.id) {
+      setSelectedCharacterId(firstOwnedCharacter?.characterId ?? null);
+      setInteractionMessage("");
+    }
+  }, [firstOwnedCharacter, selectedCharacter, visibleRealm.id]);
+
+  function handleInteract(character: CollectibleCharacter, interaction: CharacterInteraction, index: number) {
+    setInteractionMessage(interaction.message);
+    onInteractionSeen(character.characterId, index);
+    playStartChime();
+    void speakGuide(interaction.message);
+  }
 
   return (
     <section className="page-panel collection-page">
@@ -1162,6 +1345,19 @@ function CollectionPage({
         <span className="collection-stars">星星：{stars}</span>
       </div>
 
+      {selectedCharacter && selectedOwned && (
+        <CharacterInteractionPanel
+          character={selectedCharacter}
+          hearts={selectedHearts}
+          stars={stars}
+          seenIndexes={seenCharacterInteractions[selectedCharacter.characterId] ?? []}
+          message={interactionMessage}
+          canAddHeart={stars >= 3 && selectedHearts < 10}
+          onAddHeart={() => onAddHeart(selectedCharacter.characterId)}
+          onInteract={(interaction, index) => handleInteract(selectedCharacter, interaction, index)}
+        />
+      )}
+
       <div className="collection-grid" aria-label={`${visibleRealm.label}角色`}>
         {characters.map((character) => {
           const count = ownedCount(ownedCharacters, character.characterId);
@@ -1174,6 +1370,13 @@ function CollectionPage({
               hearts={heartCount(characterHearts, character.characterId)}
               canAddHeart={stars >= 3 && heartCount(characterHearts, character.characterId) < 10}
               onAddHeart={() => onAddHeart(character.characterId)}
+              selected={selectedCharacter?.characterId === character.characterId}
+              onSelect={() => {
+                if (count > 0) {
+                  setSelectedCharacterId(character.characterId);
+                  setInteractionMessage("");
+                }
+              }}
             />
           );
         })}
@@ -1188,19 +1391,26 @@ function CollectibleCard({
   duplicateCount,
   hearts,
   canAddHeart,
+  selected,
   onAddHeart,
+  onSelect,
 }: {
   character: CollectibleCharacter;
   owned: boolean;
   duplicateCount: number;
   hearts: number;
   canAddHeart: boolean;
+  selected: boolean;
   onAddHeart: () => void;
+  onSelect: () => void;
 }) {
   return (
-    <div
-      className={`collectible-card${owned ? " owned" : " empty"}`}
+    <button
+      type="button"
+      className={`collectible-card${owned ? " owned" : " empty"}${selected ? " selected" : ""}`}
       style={{ "--realm-color": realmColor(character.realmId) } as CSSProperties}
+      onClick={onSelect}
+      disabled={!owned}
     >
       <CreatureAvatar character={character} owned={owned} />
       <strong>{owned ? `${character.name}${character.familyRoleLabel}` : "還沒遇見"}</strong>
@@ -1212,12 +1422,96 @@ function CollectibleCard({
               <span key={index} className={index < hearts ? "filled" : ""}>♥</span>
             ))}
           </div>
-          <button className="heart-button" disabled={!canAddHeart} onClick={onAddHeart}>
+          <span
+            role="button"
+            tabIndex={canAddHeart ? 0 : -1}
+            className={`heart-button${canAddHeart ? "" : " disabled"}`}
+            onClick={(event) => {
+              event.stopPropagation();
+              if (canAddHeart) onAddHeart();
+            }}
+            onKeyDown={(event) => {
+              if (!canAddHeart || (event.key !== "Enter" && event.key !== " ")) return;
+              event.preventDefault();
+              event.stopPropagation();
+              onAddHeart();
+            }}
+          >
             {hearts >= 10 ? "愛心滿了" : "加愛心"}
-          </button>
+          </span>
         </>
       )}
-    </div>
+    </button>
+  );
+}
+
+function CharacterInteractionPanel({
+  character,
+  hearts,
+  stars,
+  seenIndexes,
+  message,
+  canAddHeart,
+  onAddHeart,
+  onInteract,
+}: {
+  character: CollectibleCharacter;
+  hearts: number;
+  stars: number;
+  seenIndexes: number[];
+  message: string;
+  canAddHeart: boolean;
+  onAddHeart: () => void;
+  onInteract: (interaction: CharacterInteraction, index: number) => void;
+}) {
+  const interactions = characterInteractions(character);
+  return (
+    <section className="character-detail-panel" style={{ "--realm-color": realmColor(character.realmId) } as CSSProperties}>
+      <div className="character-detail-main">
+        <CreatureAvatar character={character} owned large />
+        <div>
+          <span className="mini-label">正在互動</span>
+          <h2>{character.name}{character.familyRoleLabel}</h2>
+          <div className="heart-meter large" aria-label={`好感度 ${hearts} / 10`}>
+            {Array.from({ length: 10 }, (_, index) => (
+              <span key={index} className={index < hearts ? "filled" : ""}>♥</span>
+            ))}
+          </div>
+          <p>星星：{stars}。三顆星星可以加一顆愛心。</p>
+        </div>
+        <button className="btn character-heart-button" disabled={!canAddHeart} onClick={onAddHeart}>
+          {hearts >= 10 ? "愛心滿了" : "加一顆愛心"}
+        </button>
+      </div>
+
+      {message && (
+        <div className="character-message">
+          <strong>{character.name}{character.familyRoleLabel}說：</strong>
+          <span>{message}</span>
+        </div>
+      )}
+
+      <div className="interaction-grid">
+        {interactions.map((interaction, index) => {
+          const unlocked = hearts >= interaction.heart;
+          const unseen = unlocked && !seenIndexes.includes(index);
+          return (
+            <button
+              key={`${character.characterId}-${interaction.heart}`}
+              type="button"
+              className={`interaction-card${unlocked ? " unlocked" : " locked"}${unseen ? " unseen" : ""}`}
+              disabled={!unlocked}
+              onClick={() => onInteract(interaction, index)}
+            >
+              {unseen && <span className="unseen-dot">新</span>}
+              <span className="interaction-icon">{unlocked ? interaction.icon : "🔒"}</span>
+              <strong>{interaction.label}</strong>
+              <small>{interaction.heart} 顆愛心</small>
+            </button>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 

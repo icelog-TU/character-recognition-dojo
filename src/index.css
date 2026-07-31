@@ -1869,6 +1869,10 @@ button.char-token {
   font-size: 1.5rem;
 }
 
+.draw-result.new-character {
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--realm-color) 18%, transparent), 0 18px 32px rgba(49, 38, 24, 0.14);
+}
+
 .collection-tab {
   display: grid;
   align-content: center;
@@ -1918,6 +1922,8 @@ button.char-token {
   color: var(--ink);
   padding: 10px 6px;
   text-align: center;
+  font: inherit;
+  cursor: pointer;
 }
 
 .collectible-card.owned {
@@ -1928,6 +1934,13 @@ button.char-token {
 .collectible-card.empty {
   background: #f0ebe3;
   color: #8d867d;
+  cursor: not-allowed;
+}
+
+.collectible-card.selected {
+  outline: 3px solid var(--realm-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 7px color-mix(in srgb, var(--realm-color) 14%, transparent);
 }
 
 .collectible-card strong {
@@ -2017,11 +2030,132 @@ button.char-token {
   cursor: pointer;
 }
 
+.heart-button.disabled,
 .heart-button:disabled {
   border-color: var(--line);
   background: #eee8dd;
   color: #8d867d;
   cursor: not-allowed;
+}
+
+.character-detail-panel {
+  display: grid;
+  gap: 14px;
+  border: 2px solid color-mix(in srgb, var(--realm-color) 42%, #fff);
+  border-radius: 8px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--realm-color) 10%, #fff) 0%, #fff 100%);
+  padding: 14px;
+}
+
+.character-detail-main {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+}
+
+.character-detail-main h2 {
+  margin: 2px 0 6px;
+  font-size: 1.45rem;
+}
+
+.character-detail-main p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.heart-meter.large {
+  justify-content: flex-start;
+  max-width: none;
+  font-size: 1.05rem;
+}
+
+.character-heart-button {
+  min-height: 48px;
+  background: #e44968;
+  color: #fff;
+}
+
+.character-message {
+  display: grid;
+  gap: 5px;
+  border: 1px solid color-mix(in srgb, var(--realm-color) 35%, #fff);
+  border-radius: 8px;
+  background: #fff;
+  padding: 12px;
+}
+
+.character-message strong {
+  color: var(--primary-strong);
+}
+
+.interaction-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.interaction-card {
+  position: relative;
+  min-width: 0;
+  min-height: 86px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 3px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  padding: 8px 4px;
+  font: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+.interaction-card.locked {
+  background: #eee8dd;
+  color: #918a82;
+  cursor: not-allowed;
+}
+
+.interaction-card.unseen {
+  border-color: #e44968;
+  background: #fff3f5;
+  box-shadow: 0 0 0 5px rgba(228, 73, 104, 0.12);
+  animation: target-card-glow 1.7s ease-in-out infinite;
+}
+
+.interaction-icon {
+  font-size: 1.45rem;
+}
+
+.interaction-card strong {
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.interaction-card small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.unseen-dot {
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #e44968;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 950;
 }
 
 @media (max-width: 780px) {
@@ -2102,6 +2236,18 @@ button.char-token {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .character-detail-main {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .character-heart-button {
+    grid-column: 1 / -1;
+  }
+
+  .interaction-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .home-char-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -2177,6 +2323,10 @@ button.char-token {
   }
 
   .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .interaction-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 

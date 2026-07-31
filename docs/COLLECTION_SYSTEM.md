@@ -25,6 +25,23 @@ Collected characters can gain affection hearts.
 - Spending 3 stars adds 1 heart to an owned character.
 - Stars should therefore feel like relationship or care currency, not gacha currency.
 
+## Character Interactions
+
+Character interactions unlock by affection hearts.
+
+- 1 heart: 打招呼
+- 2 hearts: 聊聊天
+- 3-10 hearts: additional deterministic activities such as sharing snacks, playing, going out, giving a small gift, singing, encouragement, expressions, and a final promise.
+
+The interaction content follows the existing Justin app pattern:
+
+- Each character gets deterministic content based on its character ID.
+- The same character should not reshuffle its lines after reload.
+- Different characters should not all repeat the same activity sequence.
+- Seen interaction positions are stored in `seenCharacterInteractions`.
+- Newly unlocked unseen interactions may sparkle or show a new marker.
+- Once an interaction has been opened, it should not keep presenting itself as new after leaving and returning.
+
 ## Collection Realms
 
 The collection is split into four realms. They unlock in order:
@@ -87,6 +104,8 @@ The current prototype draw rule:
 - If there are missing characters in that realm, prefer a missing character most of the time.
 - Duplicates are allowed and counted.
 - Duplicates do not unlock the next realm; only unique collected characters count toward realm completion.
+- If there are 5 duplicate draws in a row and the active realm still has missing characters, the next draw must be a new character.
+- A new character resets the duplicate streak to 0.
 
 This keeps collection progress moving while still allowing repeated draws.
 
@@ -117,6 +136,8 @@ The current prototype stores progress locally in browser `localStorage`:
 - completedOrders
 - ownedCharacters
 - characterHearts
+- duplicateGachaStreak
+- seenCharacterInteractions
 - selectedOrder
 
 This is sufficient for solo testing on one device.

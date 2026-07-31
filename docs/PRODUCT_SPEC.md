@@ -59,9 +59,12 @@ The app has a character collection system connected to lesson completion.
 
 - A first-time lesson completion grants 30 coins and 12 stars.
 - Gacha draws cost 10 coins each, so one completed lesson can fund 3 draws.
+- If five consecutive gacha draws are duplicates and the current realm still has missing characters, the next draw must be a new character.
 - Stars are used to raise collected character affection.
 - Spending 3 stars adds 1 heart to one owned character.
 - Each character can have up to 10 affection hearts.
+- Character interactions unlock by hearts: 1 heart is 打招呼, 2 hearts is 聊聊天, and later hearts unlock additional deterministic role-specific activities.
+- Interaction text should follow the existing Justin app pattern: deterministic per character, varied across characters, and seen interactions should not keep sparkling after they are opened.
 - Replaying an already completed lesson does not grant another reward.
 - The collection is split into four realms: 地上的生物, 海裡的生物, 天上的生物, 外太空的生物.
 - Realms unlock in order from land to sea to sky to space.

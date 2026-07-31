@@ -57,9 +57,12 @@ The prototype has a working local collection system:
 - Each first-time completed lesson gives 30 coins and 12 stars.
 - Replaying an already completed lesson does not grant rewards again.
 - Gacha draws cost 10 coins each.
+- If five gacha draws in a row are duplicates and the active realm still has missing characters, the next draw is guaranteed new.
 - Stars are used to raise character affection.
 - Spending 3 stars adds 1 affection heart to one owned character.
 - Each character can have up to 10 hearts.
+- Character interactions unlock by hearts. Heart 1 is 打招呼; heart 2 is 聊聊天. Later hearts unlock deterministic activities that vary by character.
+- Store opened interaction positions in `seenCharacterInteractions`; new unlocked interactions may sparkle, but opened ones should stop presenting as new.
 - The collection has four realms: 地上的生物, 海裡的生物, 天上的生物, 外太空的生物.
 - Realms unlock in order: land, sea, sky, space.
 - Each realm currently has 15 species.
