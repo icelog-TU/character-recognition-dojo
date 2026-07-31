@@ -232,48 +232,126 @@
       "zhuyin": {
         "大": "ㄉㄚˋ"
       },
+      "charAudio": {
+        "大": "/assets/lessons/L003/audio/char-u5927.m4a"
+      },
       "title": "大",
       "requiredRounds": 4,
       "sentences": [
         {
           "id": "L003-S01",
-          "text": "人",
-          "spokenText": "人",
-          "focusChar": "人",
-          "imagePrompt": "A warm simple children's picture book illustration of one person, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": null,
+          "text": "大人",
+          "spokenText": "大人",
+          "focusChar": "大",
+          "imagePrompt": "A warm simple children's picture book illustration of one adult person as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L003/images/L003-S01.png",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L003/audio/L003-S01.m4a",
+            "durationMs": 526,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 350
+              },
+              {
+                "charIndex": 1,
+                "startMs": 350,
+                "endMs": 526
+              }
+            ]
+          }
         },
         {
           "id": "L003-S02",
-          "text": "一個人",
-          "spokenText": "一個人",
-          "focusChar": "人",
-          "imagePrompt": "A warm simple children's picture book illustration of one person standing calmly, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": null,
+          "text": "二人",
+          "spokenText": "二人",
+          "focusChar": "二",
+          "imagePrompt": "A warm simple children's picture book illustration of two people standing together, relative size does not matter, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L003/images/L003-S02.png",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L003/audio/L003-S02.m4a",
+            "durationMs": 633,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 410
+              },
+              {
+                "charIndex": 1,
+                "startMs": 410,
+                "endMs": 633
+              }
+            ]
+          }
         },
         {
           "id": "L003-S03",
-          "text": "一個大人",
-          "spokenText": "一個大人",
-          "focusChar": "大",
-          "imagePrompt": "A warm simple children's picture book illustration of one adult person standing clearly taller than a small object nearby, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": null,
+          "text": "三個人",
+          "spokenText": "三個人",
+          "focusChar": "個",
+          "imagePrompt": "A warm simple children's picture book illustration of two children and one adult standing together as three people, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L003/images/L003-S03.png",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L003/audio/L003-S03.m4a",
+            "durationMs": 1253,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 285
+              },
+              {
+                "charIndex": 1,
+                "startMs": 285,
+                "endMs": 705
+              },
+              {
+                "charIndex": 2,
+                "startMs": 705,
+                "endMs": 1253
+              }
+            ]
+          }
         },
         {
           "id": "L003-S04",
-          "text": "三個大人",
-          "spokenText": "三個大人",
+          "text": "一個大人",
+          "spokenText": "一個大人",
           "focusChar": "大",
-          "imagePrompt": "A warm simple children's picture book illustration of three adults standing together, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": null,
+          "imagePrompt": "Use the same scene as L003-S03 with two children and one adult, but make the adult glow gently so the adult is clearly highlighted. Warm simple children's picture book illustration, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L003/images/L003-S04.png",
           "approved": true,
-          "audio": null
+          "audio": {
+            "src": "/assets/lessons/L003/audio/L003-S04.m4a",
+            "durationMs": 1517,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 350
+              },
+              {
+                "charIndex": 1,
+                "startMs": 350,
+                "endMs": 815
+              },
+              {
+                "charIndex": 2,
+                "startMs": 815,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1517
+              }
+            ]
+          }
         }
       ]
     }
