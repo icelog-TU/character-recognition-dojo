@@ -235,6 +235,8 @@ Stage 4 planning rules:
 - Do not introduce these games too early. The child needs enough known characters first.
 - Stage 4 is for children who may not read prompts yet. Each game must automatically speak a complete instruction when it becomes active.
 - Stage 4 helper openings must match the game type. Do not reuse "I will read this sentence" for games where the rabbit is not the reader, especially `choose-pronunciation`.
+- Stage 4 guidance must not reveal the answer. For `teach-character`, never say the target character in the hold-to-record prompt. For `choose-pronunciation`, do not read the target sentence in the rabbit's opening; the child should hear it from the friend readers.
+- Keep Stage 4 scripts concise and non-repetitive: one short context line, one short operation line, and one short feedback line.
 - While Stage 4 guidance or feedback is speaking, the Stage 4 block must remain visibly active/glowing.
 - Phone layout QA is required for every Stage 4 lesson. Long sentence rows must wrap inside the card; blank slots, zhuyin, and option buttons must not be clipped.
 - Stage 4 must use helper-role framing, not teacher-test framing. The child is helping a fixed helper character, currently the rabbit, solve a problem.
@@ -246,6 +248,7 @@ Stage 4 planning rules:
 - After a correct Stage 4 response, play the helper feedback first, then stop on the current round. Do not auto-advance. Speak a prompt telling the child to press the red button for the next round or completion.
 - Stage 4 completion state must belong to the current game id. When switching rounds, the previous round's completed state must not fire the new round's completion voice or skip its instruction.
 - For `choose-pronunciation`, present different helper readers, such as frog, fox, and bear. The child is helping the rabbit identify who read correctly.
+- For `choose-pronunciation`, spoken guidance must tell non-readers to press each friend's listen button first, then press the choice button for the friend who read correctly.
 
 ## Typography And Zhuyin Rules
 

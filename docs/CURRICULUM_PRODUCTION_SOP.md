@@ -262,6 +262,8 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 - `choose-pronunciation` should use reviewed AI audio assets for production choices. Do not use browser TTS as the production reading for options.
 - Every Stage 4 game must provide spoken guidance when the game becomes active. Assume the child cannot read the prompt text.
 - Stage 4 helper openings must match the game type. Do not reuse "I will read this sentence" for games where the rabbit is not the reader, especially `choose-pronunciation`.
+- Stage 4 guidance must not reveal the answer. For `teach-character`, do not say the target character in the hold-to-record prompt. For `choose-pronunciation`, do not read the target sentence in the rabbit's opening; the sentence should be heard from the friend readers.
+- Stage 4 scripts should avoid self-repetition. Use one short context line, one short operation line, and one short feedback line.
 - The active Stage 4 block and the active sentence/game surface must glow visibly while guidance or feedback is playing.
 - Before publishing, check Stage 4 on a phone-width viewport. Sentence tokens, missing-character slots, and option buttons must wrap inside the card; no Han character, zhuyin, or question-mark slot may be clipped by the screen edge.
 - Stage 4 interactions must be framed as helping a visible helper character, not as a teacher testing the child. The default helper is the rabbit.
@@ -271,6 +273,7 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 - After a correct Stage 4 response, play the helper feedback first, then stop on the current round. Do not auto-advance. Speak a prompt telling the child to press the red button for the next round or completion.
 - Completion state must be tied to the current game id. When moving to the next Stage 4 round, never let the previous round's completed state trigger the next round's completion prompt.
 - Every Stage 4 round must have a visible replay-instruction button so the child/parent can hear the helper's request again after leaving and returning.
+- `choose-pronunciation` must give spoken operation guidance for non-readers: first press each friend's listen button, then press the choice button for the friend who read correctly.
 
 ## Review Gate
 

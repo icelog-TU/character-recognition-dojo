@@ -3122,7 +3122,7 @@ function SentencePracticePreview({
   const onSpeakEndRef = useRef(onSpeakEnd);
   const han = sentence ? hanChars(sentence.text) : [];
   const targetIndex = game ? Math.max(0, han.findIndex((char) => char === game.targetChar)) : 0;
-  const gameGuide = game && sentence ? gameGuideText(game, sentence, teachPhase) : "";
+  const gameGuide = game && sentence ? gameGuideText(game, teachPhase) : "";
 
   const speakStageFour = useCallback(async (text: string) => {
     onSpeakStartRef.current("stage4");
@@ -3212,7 +3212,7 @@ function SentencePracticePreview({
 
   async function runHelperIntro(runId: number) {
     if (!game || !sentence) return;
-    await speakStageFour(gameIntroText(game, sentence));
+    await speakStageFour(gameIntroText(game));
     if (guideRunRef.current !== runId) return;
     if (game.type === "find-character" || game.type === "missing-character" || game.type === "partial-order") {
       await playSentence(sentence, {
@@ -3223,9 +3223,7 @@ function SentencePracticePreview({
       if (guideRunRef.current !== runId) return;
     }
     setActiveGameCharIndex(null);
-    if (game.type !== "choose-pronunciation") {
-      await speakStageFour(gameGuideText(game, sentence, teachPhase));
-    }
+    await speakStageFour(gameGuideText(game, teachPhase));
   }
 
   async function runTeachCharacterIntro(runId: number) {
@@ -3249,7 +3247,7 @@ function SentencePracticePreview({
     setTeachPhase("asking");
     await speakStageFour("哇！這個字我不會念，請教我念。");
     if (guideRunRef.current !== runId) return;
-    await speakStageFour(`請按住這個字，等叮一聲之後，大聲念出「${game.targetChar}」。`);
+    await speakStageFour("請按住這個字，等叮一聲之後，大聲念出來。");
     if (guideRunRef.current !== runId) return;
     setTeachPhase("ready");
   }
@@ -3257,27 +3255,27 @@ function SentencePracticePreview({
   function replayInstruction() {
     if (disabled) return;
     guideRunRef.current += 1;
-    void speakStageFour(isCurrentRoundComplete ? roundCompletionText(doneAfterThisRound) : gameGuideText(game, sentence, teachPhase));
+    void speakStageFour(isCurrentRoundComplete ? roundCompletionText(doneAfterThisRound) : gameGuideText(game, teachPhase));
   }
 
   async function handleFindChar(index: number) {
     if (index !== targetIndex) {
       playMissChime();
-      void speakStageFour("小兔子還是找不到，再幫小兔子找找看。");
+      void speakStageFour("再找找看。");
       return;
     }
-    await speakStageFour("找到了，謝謝你幫小兔子。");
+    await speakStageFour("找到了。");
     completeRound();
   }
 
   async function handleMissingOption(option: SentenceGameOption) {
     if (!option.correct) {
       playMissChime();
-      void speakStageFour("這個不是不見的字寶寶，再幫小兔子找找看。");
+      void speakStageFour("不是這個，再找找看。");
       return;
     }
     setPickedOptionIds([option.id]);
-    await speakStageFour("謝謝你，字寶寶回家了。");
+    await speakStageFour("找回來了。");
     completeRound();
   }
 
@@ -3287,32 +3285,33 @@ function SentencePracticePreview({
     if (option.text !== expectedText) {
       playMissChime();
       setPickedOptionIds([]);
-      void speakStageFour("小兔子排錯了，請再幫小兔子排一次。");
+      void speakStageFour("順序不對，再排一次。");
       return;
     }
     const nextPicked = [...pickedOptionIds, option.id];
     setPickedOptionIds(nextPicked);
     if (nextPicked.length >= missingIndexes.length) {
-      await speakStageFour("謝謝你，句子排好了。");
+      await speakStageFour("排好了。");
       completeRound();
     }
   }
 
-  async function handleChoiceAudio(option: SentenceGameOption) {
+  async function handleChoiceAudio(option: SentenceGameOption, readerName: string) {
+    await speakStageFour(`${readerName}念。`);
     if (option.audioSrc) {
       await playAudioSrc(option.audioSrc);
     } else {
-      await speakStageFour(option.text);
+      await playSpokenText(option.text);
     }
   }
 
   async function handlePronunciationChoice(option: SentenceGameOption) {
     if (!option.correct) {
       playMissChime();
-      void speakStageFour("這隻好像念錯了，再幫小兔子聽聽看。");
+      void speakStageFour("好像不對，再聽聽看。");
       return;
     }
-    await speakStageFour("對了，這隻念得對。謝謝你幫小兔子。");
+    await speakStageFour("對了。");
     completeRound();
   }
 
@@ -3391,7 +3390,7 @@ function SentencePracticePreview({
     releasedDuringPrimeRef.current = false;
     setTeachPhase("priming");
     setFloatingRecordChar(game.targetChar);
-    await speakStageFour("請按住不要放開。等叮一聲之後，大聲念出這個字。");
+    await speakStageFour("請按住不要放開。等叮一聲之後，大聲念出來。");
     if (releasedDuringPrimeRef.current) {
       setFloatingRecordChar(null);
       setTeachPhase("ready");
@@ -3415,7 +3414,7 @@ function SentencePracticePreview({
     setTeachPhase("reciting");
     setAskingGameCharIndex(null);
     setActiveGameCharIndex(null);
-    await speakStageFour("我聽到了，謝謝你教我。我來試試看，你聽聽看。");
+    await speakStageFour("我聽到了。我來試試看。");
     if (sentence.audio?.src && timing) {
       await playAudioRange(sentence.audio.src, 0, timing.startMs, {
         onTime: (elapsedMs) => setActiveGameCharIndex(activeTimingIndex(sentence, elapsedMs)),
@@ -3435,7 +3434,7 @@ function SentencePracticePreview({
     }
     setActiveGameCharIndex(null);
     setTeachPhase("done");
-    await speakStageFour("小兔子學會了，謝謝你。");
+    await speakStageFour("學會了，謝謝你。");
     completeRound();
   }
 
@@ -3452,7 +3451,7 @@ function SentencePracticePreview({
             foundIndexes={isCurrentRoundComplete ? new Set([targetIndex]) : new Set()}
             onCharClick={handleFindChar}
           />
-          <p className="block-note">小兔子找不到「{game.targetChar}」，請幫牠點出來。</p>
+          <p className="block-note">點一下找到的字。</p>
         </>
       );
     }
@@ -3546,49 +3545,49 @@ function SentencePracticePreview({
   );
 }
 
-function gameIntroText(game: SentenceGame, sentence: LessonSentence) {
+function gameIntroText(game: SentenceGame) {
   if (game.type === "find-character") {
-    return "小兔子說，我想先看一看這句話，等一下請幫我找字。";
+    return "小兔子說，我先聽這一句話。";
   }
   if (game.type === "missing-character") {
-    return "小兔子說，我先念一次這句話，看看哪個字寶寶不見了。";
+    return "小兔子說，我先聽這一句話。";
   }
   if (game.type === "partial-order") {
     return "小兔子說，字卡弄亂了，我不知道怎麼排。請先聽這一句話。";
   }
   if (game.type === "choose-pronunciation") {
-    return `小兔子說，我的朋友都要念「${sentence.spokenText}」，但我分不清楚誰念的是對的。請幫我選出誰念得對。`;
+    return "小兔子說，我的朋友都要念這一句話，我分不清楚誰念得對。";
   }
   return "小兔子說，我要來念念看這句話。";
 }
 
 function roundCompletionText(doneAfterThisRound: boolean) {
   if (doneAfterThisRound) {
-    return "這一關的句子遊戲都完成了。請按下面那個紅色按鈕。";
+    return "要領獎勵，請按紅色按鈕。";
   }
-  return "這一題完成了。要做下一題，請按下面那個紅色按鈕。";
+  return "要做下一題，請按紅色按鈕。";
 }
 
-function gameGuideText(game: SentenceGame, sentence: LessonSentence, teachPhase: TeachCharacterPhase = "reading") {
+function gameGuideText(game: SentenceGame, teachPhase: TeachCharacterPhase = "reading") {
   if (game.type === "find-character") {
-    return `小兔子說，我找不到「${game.targetChar}」。請幫我在句子裡找到它，點它一下。`;
+    return `小兔子找不到「${game.targetChar}」。請點它一下。`;
   }
   if (game.type === "teach-character") {
     if (teachPhase === "ready" || teachPhase === "priming" || teachPhase === "recording") {
-      return `小兔子說，我不會念這個字。請按住「${game.targetChar}」，不要放開。聽到叮一聲之後，大聲念出來。`;
+      return "請按住這個字，不要放開。聽到叮一聲之後，大聲念出來。";
     }
     if (teachPhase === "reciting") {
-      return `小兔子正在用你教的聲音，把句子念完。`;
+      return "小兔子正在把句子念完。";
     }
-    return `小兔子要念念看這句話。牠會卡在不會念的字，請你幫牠。`;
+    return "小兔子會卡在不會念的字，請你幫牠。";
   }
   if (game.type === "missing-character") {
-    return `小兔子說，字寶寶不見了。請幫我把「${game.targetChar}」找回來。`;
+    return "有一個字不見了。請按下面的字卡，把它找回來。";
   }
   if (game.type === "partial-order") {
     return `請照順序點下面的字卡，幫小兔子把字卡放回去。`;
   }
-  return `小兔子說，我的朋友都要念「${sentence.spokenText}」，但我分不清楚誰念的是對的。請幫我選出誰念得對。`;
+  return "先按每個朋友旁邊的上面按鈕，聽牠念。聽完後，按下面按鈕選對的人。";
 }
 
 function StageFourHelper({ text, onReplay }: { text: string; onReplay: () => void }) {
@@ -3729,7 +3728,7 @@ function PronunciationChoiceGrid({
   options: SentenceGameOption[];
   disabled: boolean;
   roundComplete: boolean;
-  onHear: (option: SentenceGameOption) => void | Promise<void>;
+  onHear: (option: SentenceGameOption, readerName: string) => void | Promise<void>;
   onChoose: (option: SentenceGameOption) => void | Promise<void>;
 }) {
   return (
@@ -3740,7 +3739,7 @@ function PronunciationChoiceGrid({
           <div key={option.id} className="pronunciation-choice">
             <div className="reader-avatar" aria-hidden>{reader.emoji}</div>
             <strong>{reader.name}</strong>
-            <button className="btn secondary" disabled={disabled} onClick={() => void onHear(option)}>
+            <button className="btn secondary" disabled={disabled} onClick={() => void onHear(option, reader.name)}>
               聽牠念
             </button>
             <button className="btn ghost" disabled={disabled || roundComplete} onClick={() => void onChoose(option)}>
