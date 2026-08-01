@@ -21,8 +21,8 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L008
-- Next lesson after L008 is not yet chosen.
+- Current reviewed lessons: L001-L009
+- L009 introduces `山`.
 - Sentence games planned start: around L011 as Stage 4
 - L001-L010 should stay with the simpler three-block flow: listen, find, picture sentence.
 
@@ -363,6 +363,7 @@ Reviewed:
 - L006: `手`
 - L007: `我`
 - L008: `有`
+- L009: `山`
 
 L006 sentences:
 
@@ -387,6 +388,14 @@ L008 sentences:
 - `大人有大大的手`
 - `三個人有大手小手`
 - `有一大二小的手`
+
+L009 sentences:
+
+- 有人有山
+- 大大的山小小的山
+- 我一個人的山
+- 三個人的大手小手
+- 我有小小的手
 
 ## File Map
 
@@ -452,8 +461,8 @@ Sentence text is horizontal, with zhuyin vertically on the right of each Han cha
 Curriculum sentence audio must use AI audio files with charTimings.
 Production charTimings must use npm run assets:align:ai, then manual playback review.
 Guide narration may use TTS.
-L001-L008 are reviewed and built.
-The next lesson after L008 is not yet chosen.
+L001-L009 are reviewed and built.
+L009 introduces 山 and uses production AI audio alignment.
 L007 introduces a fixed young girl character for 我.
 Sentence games should start around L011 as Stage 4, not before, and should not replace picture-supported sentence listening.
 ```

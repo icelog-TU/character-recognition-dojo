@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 8:
+Characters taught after Lesson 9:
 
-`一 二 三 人 個 大 的 小 手 我 有`
+`一 二 三 人 個 大 的 小 手 我 有 山`
 
 Recent review pool for the next lesson:
 
-`的 小 手 我 有 大 人 個`
+`山 有 我 小 手 的 大 人 三 個`
 
 ## Visual Continuity Ledger
 
@@ -54,10 +54,11 @@ Image reuse rule:
 | L006 | 手 | 一、二、三、人、個、大、的、小、手 | 一個人的手 / 三個人的手 / 大大的手 / 小小的手 / 大大小小的手 | 一、三、個、人、的、大、小 | Introduces a concrete body-part noun and reviews size contrast. |
 | L007 | 我 | 一、二、三、人、個、大、的、小、手、我 | 我一個人 / 我的小手 / 我的手小小的 / 大人的手大大的 / 三個人的大手小手 | 一、三、個、人、的、大、小、手 | Establishes the fixed first-person girl character for `我`. |
 | L008 | 有 | 一、二、三、人、個、大、的、小、手、我、有 | 有一個人 / 我有小小的手 / 大人有大大的手 / 三個人有大手小手 / 有一大二小的手 | 一、二、三、人、個、大、的、小、手、我 | Introduces `有` to unlock simple existential and possession patterns while continuing concrete hand-focused picture sentences. |
+| L009 | 山 | 一、二、三、人、個、大、的、小、手、我、有、山 | 有人有山 / 大大的山小小的山 / 我一個人的山 / 三個人的大手小手 / 我有小小的手 | 一、三、人、個、大、的、小、手、我、有 | Introduces `山` and reviews existence, size contrast, the fixed `我` character, and hand phrases. |
 
 ## Planned Lessons
 
-No post-L008 lesson is selected yet.
+L009 is selected and built: new character `山`; reviewed sentences are `有人有山`, `大大的山小小的山`, `我一個人的山`, `三個人的大手小手`, and `我有小小的手`.
 
 ## Planning Rule For New Lessons
 
