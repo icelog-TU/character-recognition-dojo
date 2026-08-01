@@ -819,14 +819,29 @@
           });
       }
 
-      function scoreCandidate(entry, learnedChars, recentPool) {
+      function scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars) {
         const learned = new Set(learnedChars);
         const requiredMissing = (entry.requires || []).filter((char) => !learned.has(char));
         if (requiredMissing.length > 0 || learned.has(entry.char)) return null;
         const recent = new Set(recentPool);
-        const sentenceChars = unique((entry.sentenceCandidates || []).flatMap((sentence) => hanChars(sentence.text)));
+        const requiredRecent = new Set(requiredRecentChars || []);
+        const reviewCount = new Set(reviewCountChars || []);
+        const allowedChars = unique([...learnedChars, entry.char]);
+        const validSentences = cleanSentences(entry.sentenceCandidates, allowedChars);
+        const sentenceChars = unique(validSentences.flatMap((sentence) => hanChars(sentence.text)));
         const reviewHits = sentenceChars.filter((char) => recent.has(char)).length;
-        return Number(entry.priority || 1000) - reviewHits * 2;
+        const requiredHits = sentenceChars.filter((char) => requiredRecent.has(char)).length;
+        const reviewCountHits = sentenceChars.filter((char) => reviewCount.has(char)).length;
+        const sentenceDepth = Math.min(validSentences.length, targetGeneratedSentenceCount);
+        const missingSentencePenalty = Math.max(0, 5 - validSentences.length) * 20;
+        return (
+          Number(entry.priority || 1000) -
+          requiredHits * 12 -
+          reviewCountHits * 6 -
+          reviewHits * 2 -
+          sentenceDepth * 2 +
+          missingSentencePenalty
+        );
       }
 
       function clampPlanOffset(value) {
@@ -886,14 +901,14 @@
             char: entry.char,
             zhuyin: entry.zhuyin,
             priority: 5 + index,
-            why: entry.why || "Teacher-added next character.",
+            why: entry.why || "教師自行新增的下一課字。",
             requires: [],
             sentenceCandidates: entry.sentenceCandidates || [],
             source: "manual",
           }));
         const recommendations = [...manualEntries, ...bankEntries]
           .map((entry) => {
-            const score = scoreCandidate(entry, learnedChars, recentPool);
+            const score = scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars);
             if (score === null) return null;
             const allowedChars = unique([...learnedChars, entry.char]);
             return {
@@ -1236,7 +1251,7 @@
             text,
             spokenText: normalizeSpokenText(text),
             focusChar: hanChars(text).includes(char) ? char : resolveFocusChar(text, char, choice),
-            reason: "Generated in the planner for teacher review and editing.",
+            reason: "由規劃工具產生，供教師審核與修改。",
           }))
           .filter((sentence) => {
             const chars = hanChars(sentence.text);
@@ -1277,7 +1292,7 @@
           text,
           spokenText: normalizeSpokenText(spokenText),
           focusChar: String(edit?.focusChar ?? original.focusChar ?? ""),
-          reason: edit ? `Teacher-edited candidate. ${original.reason || ""}`.trim() : String(original.reason || ""),
+          reason: edit ? `教師修改候選句。${original.reason || ""}`.trim() : String(original.reason || ""),
         };
       }
 
@@ -1328,7 +1343,7 @@
                 text: row.text.trim(),
                 spokenText: normalizeSpokenText(row.spokenText.trim() || row.text.trim()),
                 focusChar: resolveFocusChar(row.text.trim(), row.focusChar, choice),
-                reason: "Teacher-added sentence.",
+                reason: "教師新增句。",
               },
               row.imageNotes,
             ),
@@ -1699,23 +1714,23 @@
               missingRequiredCharsInCurrentSelection: missingRequired,
             },
             teacherNotes: [
-              "Generated from the web next-lesson planner.",
-              `Selected choice: ${choice.choiceId}.`,
+              "由網頁下一課規劃工具產生。",
+              `選定候選字：${choice.choiceId}。`,
               dependencies.length
-                ? `Parallel planning dependency: this lesson assumes ${dependencies
-                    .map((plan) => `${lessonId(plan.order)} introduces ${plan.newChars.join("")}`)
-                    .join("; ")}. It may be drafted in parallel, but do not merge or push this lesson to main until the dependency lesson is already merged to main and planner-data has been re-exported.`
+                ? `平行備課依賴：本課假設 ${dependencies
+                    .map((plan) => `${lessonId(plan.order)} 會加入 ${plan.newChars.join("")}`)
+                    .join("；")}。可以先平行草擬，但必須等依賴課程已合併到 main 並重新匯出 planner-data 後，才可以把本課合併或推送到 main。`
                 : "",
               hasApprovedSentences
-                ? `Approved sentences: ${finalSentences.map((sentence) => sentence.text).join("; ")}.`
-                : `No approved sentences yet. First generate ${targetGeneratedSentenceCount} sentence candidates for teacher review; do not build production image/audio assets until the teacher approves sentences.`,
-              `Sentence length target: ${sentenceLengthRange.min}-${sentenceLengthRange.max} Han characters per sentence.`,
-              `Prefer using recent review characters from the previous five lessons: ${model.recentPool.join(" ")}.`,
-              `Across this lesson's sentence set, include each new character from the previous three lessons at least once: ${model.requiredRecentChars.join(" ")}.`,
-              "Use only learned characters plus the new character(s).",
+                ? `核准句子：${finalSentences.map((sentence) => sentence.text).join("；")}。`
+                : `尚未核准句子。請先產生 ${targetGeneratedSentenceCount} 個候選句供教師審核；教師核准句子前，不要製作正式圖片或音訊素材。`,
+              `句長目標：每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字。`,
+              `優先使用最近五課複習字：${model.recentPool.join(" ")}。`,
+              `整課句子中，最近三課新字至少各出現一次：${model.requiredRecentChars.join(" ")}。`,
+              "只能使用已學字加上本課新字。",
               hasApprovedSentences
-                ? "Use each sentence's imageNotes as teacher guidance when writing imagePrompt. Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval."
-                : "When drafting candidates, keep them concrete, imageable, natural in Taiwan Mandarin, and suitable for young children.",
+                ? "撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。"
+                : "草擬候選句時，句子要具體、容易配圖、符合臺灣華語自然語感，並適合幼兒。",
             ]
               .filter(Boolean)
               .join(" "),
@@ -1844,7 +1859,7 @@
             return;
           }
           state.manualChoices = cleanManualChoices(
-            [{ char, zhuyin, why: why || "Teacher-added next character." }, ...state.manualChoices],
+            [{ char, zhuyin, why: why || "教師自行新增的下一課字。" }, ...state.manualChoices],
             model.learnedChars,
           );
           state.previewChoiceId = existingChoiceId;

@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-01T12:37:38.548Z",
+  "exportedAt": "2026-08-01T13:05:38.194Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -7250,7 +7250,7 @@
       "char": "很",
       "zhuyin": "ㄏㄣˇ",
       "priority": 1,
-      "why": "Introduces the common degree word 很 for simple adjective sentences, especially with 高、大、小 and recent location words.",
+      "why": "加入常用程度字，能和大、小、高搭配，練習形容詞句型。",
       "requires": [
         "一",
         "二",
@@ -7276,61 +7276,61 @@
           "text": "很高的山",
           "spokenText": "很高的山",
           "focusChar": "很",
-          "reason": "Reviews high mountain with 很."
+          "reason": "用高山複習高，加入很。"
         },
         {
-          "text": "很高很高的山",
-          "spokenText": "很高很高的山",
+          "text": "很大的手",
+          "spokenText": "很大的手",
           "focusChar": "很",
-          "reason": "Repeats 很 with 高 for a clear tall mountain image."
+          "reason": "用身體部位練習很大。"
         },
         {
-          "text": "你很高很高",
-          "spokenText": "你很高很高",
+          "text": "很小的手",
+          "spokenText": "很小的手",
           "focusChar": "很",
-          "reason": "Simple sentence using fixed 你 with repeated 高."
+          "reason": "用身體部位練習很小。"
         },
         {
-          "text": "我很高很高",
-          "spokenText": "我很高很高",
+          "text": "很高的人在山上",
+          "spokenText": "很高的人在山上",
           "focusChar": "很",
-          "reason": "Simple sentence using fixed 我 with repeated 高."
+          "reason": "複習人、在、山上。"
         },
         {
-          "text": "大人很高",
-          "spokenText": "大人很高",
+          "text": "很大的山下有水",
+          "spokenText": "很大的山下有水",
           "focusChar": "很",
-          "reason": "Concrete adult-height sentence."
-        },
-        {
-          "text": "三個人很高",
-          "spokenText": "三個人很高",
-          "focusChar": "很",
-          "reason": "Reviews count and 人 with 很高."
-        },
-        {
-          "text": "高山很高",
-          "spokenText": "高山很高",
-          "focusChar": "很",
-          "reason": "Short concrete review of 山 and 高."
+          "reason": "複習山下與水。"
         },
         {
           "text": "你的手很小",
           "spokenText": "你的手很小",
           "focusChar": "很",
-          "reason": "Reviews fixed 你 and hand-size words."
+          "reason": "複習你和手。"
         },
         {
-          "text": "我的手很小",
-          "spokenText": "我的手很小",
+          "text": "我的手很大",
+          "spokenText": "我的手很大",
           "focusChar": "很",
-          "reason": "Reviews fixed 我 and hand-size words."
+          "reason": "複習我和手。"
         },
         {
-          "text": "很高的山下有水",
-          "spokenText": "很高的山下有水",
+          "text": "很小的山在手上",
+          "spokenText": "很小的山在手上",
           "focusChar": "很",
-          "reason": "Reviews 山下 and 水 in a longer imageable sentence."
+          "reason": "複習手上與小山玩具。"
+        },
+        {
+          "text": "水在很高的山下",
+          "spokenText": "水在很高的山下",
+          "focusChar": "很",
+          "reason": "複習水、在、高。"
+        },
+        {
+          "text": "三個人很高",
+          "spokenText": "三個人很高",
+          "focusChar": "很",
+          "reason": "複習三個人。"
         }
       ]
     },
@@ -7338,7 +7338,7 @@
       "char": "高",
       "zhuyin": "ㄍㄠ",
       "priority": 8,
-      "why": "Concrete adjective that contrasts with 大、小 and combines naturally with 山上、山下、水、你、我 after 在.",
+      "why": "具體可畫的形容詞，可和山、人、手搭配。",
       "requires": [
         "一",
         "二",
@@ -7360,64 +7360,64 @@
       ],
       "sentenceCandidates": [
         {
-          "text": "高山上有水",
-          "spokenText": "高山上有水",
+          "text": "高高的山上有水",
+          "spokenText": "高高的山上有水",
           "focusChar": "高",
-          "reason": "Reviews 山上、有、水 with the new adjective."
+          "reason": "用山水情境練習高。"
+        },
+        {
+          "text": "你我在高山上",
+          "spokenText": "你我在高山上",
+          "focusChar": "高",
+          "reason": "複習你、我、在。"
+        },
+        {
+          "text": "高高的人有大手",
+          "spokenText": "高高的人有大手",
+          "focusChar": "高",
+          "reason": "複習人和手。"
+        },
+        {
+          "text": "三個高高的人",
+          "spokenText": "三個高高的人",
+          "focusChar": "高",
+          "reason": "複習數量詞。"
+        },
+        {
+          "text": "我的手在高山上",
+          "spokenText": "我的手在高山上",
+          "focusChar": "高",
+          "reason": "複習我、手、山上。"
+        },
+        {
+          "text": "水在高山下",
+          "spokenText": "水在高山下",
+          "focusChar": "高",
+          "reason": "複習水與山下。"
+        },
+        {
+          "text": "有一個高高的人",
+          "spokenText": "有一個高高的人",
+          "focusChar": "高",
+          "reason": "複習有、一個、人。"
         },
         {
           "text": "你在高山上",
           "spokenText": "你在高山上",
           "focusChar": "高",
-          "reason": "Reviews 你、在、山上 with a clear location."
+          "reason": "複習你與位置。"
         },
         {
-          "text": "我在高山下",
-          "spokenText": "我在高山下",
+          "text": "高高的山下有你",
+          "spokenText": "高高的山下有你",
           "focusChar": "高",
-          "reason": "Reviews 我、在、山下 and contrasts with 高山."
+          "reason": "複習你和山下。"
         },
         {
-          "text": "高高的山下有水",
-          "spokenText": "高高的山下有水",
+          "text": "小手在高山上",
+          "spokenText": "小手在高山上",
           "focusChar": "高",
-          "reason": "Uses 的 in a concrete mountain-water scene."
-        },
-        {
-          "text": "你我在高山下",
-          "spokenText": "你我在高山下",
-          "focusChar": "高",
-          "reason": "Reviews fixed 你 and 我 together near a high mountain."
-        },
-        {
-          "text": "高山下有三個人",
-          "spokenText": "高山下有三個人",
-          "focusChar": "高",
-          "reason": "Reviews 三個人 and location under the mountain."
-        },
-        {
-          "text": "水在高高的山上",
-          "spokenText": "水在高高的山上",
-          "focusChar": "高",
-          "reason": "Reviews 水、在、的、山上 in a highly imageable scene."
-        },
-        {
-          "text": "我有高高的山",
-          "spokenText": "我有高高的山",
-          "focusChar": "高",
-          "reason": "Short possession sentence with repeated 高."
-        },
-        {
-          "text": "高山上有一個人",
-          "spokenText": "高山上有一個人",
-          "focusChar": "高",
-          "reason": "Reviews 一個人 and mountain-top location."
-        },
-        {
-          "text": "你在高高的山下",
-          "spokenText": "你在高高的山下",
-          "focusChar": "高",
-          "reason": "Reviews 你、在、的、山下 in a simple location sentence."
+          "reason": "複習小手。"
         }
       ]
     },
@@ -7425,7 +7425,7 @@
       "char": "下",
       "zhuyin": "ㄒㄧㄚˋ",
       "priority": 10,
-      "why": "Pairs naturally with 上 and 山, unlocking mountain up/down location and movement.",
+      "why": "和上成對，建立山上、山下與上下位置概念。",
       "requires": [
         "一",
         "二",
@@ -7443,34 +7443,64 @@
       ],
       "sentenceCandidates": [
         {
-          "text": "我一個人下山",
-          "spokenText": "我一個人下山",
+          "text": "我在山下",
+          "spokenText": "我在山下",
           "focusChar": "下",
-          "reason": "Reviews 我、一個人、山 and contrasts with 上山."
+          "reason": "和山上形成位置對比。"
+        },
+        {
+          "text": "山下有一個人",
+          "spokenText": "山下有一個人",
+          "focusChar": "下",
+          "reason": "複習一個人。"
         },
         {
           "text": "山下有三個人",
           "spokenText": "山下有三個人",
           "focusChar": "下",
-          "reason": "Concrete location sentence with count review."
+          "reason": "複習三個人。"
         },
         {
-          "text": "山上有大人，山下有小人",
-          "spokenText": "山上有大人山下有小人",
+          "text": "手下有小山",
+          "spokenText": "手下有小山",
           "focusChar": "下",
-          "reason": "Contrasts 上 and 下 while reviewing 大人 and 小人."
+          "reason": "延伸手和小山玩具。"
         },
         {
-          "text": "我的手下有一個小人",
-          "spokenText": "我的手下有一個小人",
+          "text": "上山下山",
+          "spokenText": "上山下山",
           "focusChar": "下",
-          "reason": "Reuses the toy-person-on-hand concept with a different spatial relation."
+          "reason": "和上搭配成對練習。"
         },
         {
-          "text": "有大大的山，有小小的山",
-          "spokenText": "有大大的山有小小的山",
-          "focusChar": "山",
-          "reason": "Review sentence that can reuse the approved big/small mountain image."
+          "text": "小山下有手",
+          "spokenText": "小山下有手",
+          "focusChar": "下",
+          "reason": "複習小山與手的位置。"
+        },
+        {
+          "text": "大山下有小人",
+          "spokenText": "大山下有小人",
+          "focusChar": "下",
+          "reason": "複習大山與小人。"
+        },
+        {
+          "text": "手下有三個人",
+          "spokenText": "手下有三個人",
+          "focusChar": "下",
+          "reason": "複習手下與三個人。"
+        },
+        {
+          "text": "一個人在山下",
+          "spokenText": "一個人在山下",
+          "focusChar": "下",
+          "reason": "複習一個人與山下。"
+        },
+        {
+          "text": "小手在大手下",
+          "spokenText": "小手在大手下",
+          "focusChar": "下",
+          "reason": "複習大小手的位置。"
         }
       ]
     },
@@ -7478,7 +7508,7 @@
       "char": "水",
       "zhuyin": "ㄕㄨㄟˇ",
       "priority": 20,
-      "why": "Concrete, imageable noun that combines well with 山、手、有、上.",
+      "why": "具體名詞，可和山、手、上、下形成清楚配圖。",
       "requires": [
         "一",
         "人",
@@ -7494,34 +7524,64 @@
       ],
       "sentenceCandidates": [
         {
+          "text": "山上有水",
+          "spokenText": "山上有水",
+          "focusChar": "水",
+          "reason": "用山上場景導入水。"
+        },
+        {
           "text": "我有水",
           "spokenText": "我有水",
           "focusChar": "水",
-          "reason": "Very short possession sentence."
+          "reason": "簡短所有句。"
         },
         {
           "text": "手上有水",
           "spokenText": "手上有水",
           "focusChar": "水",
-          "reason": "Concrete hand-surface sentence after 上."
+          "reason": "具體可畫的手上有水。"
         },
         {
-          "text": "山上有水",
-          "spokenText": "山上有水",
+          "text": "小山上有水",
+          "spokenText": "小山上有水",
           "focusChar": "水",
-          "reason": "Uses 山上 and 有 with a clear picture."
+          "reason": "複習小山。"
         },
         {
-          "text": "小小的手上有水",
-          "spokenText": "小小的手上有水",
+          "text": "大山上有水",
+          "spokenText": "大山上有水",
           "focusChar": "水",
-          "reason": "Reviews 小小的手 with a new concrete noun."
+          "reason": "複習大山。"
         },
         {
-          "text": "大大的山上有水",
-          "spokenText": "大大的山上有水",
+          "text": "水在山上",
+          "spokenText": "水在山上",
           "focusChar": "水",
-          "reason": "Reviews 大大的山 and adds water."
+          "reason": "複習山上位置。"
+        },
+        {
+          "text": "水在手上",
+          "spokenText": "水在手上",
+          "focusChar": "水",
+          "reason": "複習手上位置。"
+        },
+        {
+          "text": "我手上有水",
+          "spokenText": "我手上有水",
+          "focusChar": "水",
+          "reason": "複習我和手上。"
+        },
+        {
+          "text": "一個人有水",
+          "spokenText": "一個人有水",
+          "focusChar": "水",
+          "reason": "複習一個人。"
+        },
+        {
+          "text": "三個人有水",
+          "spokenText": "三個人有水",
+          "focusChar": "水",
+          "reason": "複習三個人。"
         }
       ]
     },
@@ -7529,7 +7589,7 @@
       "char": "在",
       "zhuyin": "ㄗㄞˋ",
       "priority": 25,
-      "why": "Useful location/existence character that combines naturally with 山上、山下、水、你、我.",
+      "why": "重要位置與存在字，可連接人、山、水、手。",
       "requires": [
         "一",
         "三",
@@ -7549,34 +7609,64 @@
       ],
       "sentenceCandidates": [
         {
-          "text": "你在山上有水",
-          "spokenText": "你在山上有水",
+          "text": "我在山上",
+          "spokenText": "我在山上",
           "focusChar": "在",
-          "reason": "Reviews 你、山上、有、水 with the new location marker."
+          "reason": "用熟悉山上位置練習在。"
         },
         {
-          "text": "我在山下有水",
-          "spokenText": "我在山下有水",
+          "text": "你在山下",
+          "spokenText": "你在山下",
           "focusChar": "在",
-          "reason": "Reviews 我、山下、有、水 and includes 下."
+          "reason": "複習你與山下。"
         },
         {
-          "text": "水在你小小的手上",
-          "spokenText": "水在你小小的手上",
+          "text": "水在手上",
+          "spokenText": "水在手上",
           "focusChar": "在",
-          "reason": "Reviews 水、你、小小的手上 with a concrete image."
+          "reason": "複習水和手上。"
         },
         {
-          "text": "三個大人在水下",
-          "spokenText": "三個大人在水下",
+          "text": "三個人在水下",
+          "spokenText": "三個人在水下",
           "focusChar": "在",
-          "reason": "Reviews 三個大人、水下 and gives a clear swimming scene."
+          "reason": "複習三個人和水下。"
         },
         {
-          "text": "你我在山下",
-          "spokenText": "你我在山下",
+          "text": "小山在大手上",
+          "spokenText": "小山在大手上",
           "focusChar": "在",
-          "reason": "Short peer sentence using the fixed 你 boy and 我 girl."
+          "reason": "複習大小與手上。"
+        },
+        {
+          "text": "你在水上",
+          "spokenText": "你在水上",
+          "focusChar": "在",
+          "reason": "複習你和水上。"
+        },
+        {
+          "text": "我在水下",
+          "spokenText": "我在水下",
+          "focusChar": "在",
+          "reason": "複習我和水下。"
+        },
+        {
+          "text": "一個人在山下",
+          "spokenText": "一個人在山下",
+          "focusChar": "在",
+          "reason": "複習一個人與山下。"
+        },
+        {
+          "text": "水在你手上",
+          "spokenText": "水在你手上",
+          "focusChar": "在",
+          "reason": "複習水、你、手上。"
+        },
+        {
+          "text": "你我在山上",
+          "spokenText": "你我在山上",
+          "focusChar": "在",
+          "reason": "複習你我與山上。"
         }
       ]
     },
@@ -7584,7 +7674,7 @@
       "char": "你",
       "zhuyin": "ㄋㄧˇ",
       "priority": 30,
-      "why": "Adds a second-person child role and starts simple interpersonal sentence patterns.",
+      "why": "加入第二人稱，開啟你我互動句。",
       "requires": [
         "一",
         "人",
@@ -7602,25 +7692,61 @@
           "text": "你一個人",
           "spokenText": "你一個人",
           "focusChar": "你",
-          "reason": "Short identity phrase parallel to 我一個人."
+          "reason": "和我一個人形成對照。"
         },
         {
           "text": "你有小小的手",
           "spokenText": "你有小小的手",
           "focusChar": "你",
-          "reason": "Reviews 有、小小的手."
+          "reason": "複習有與手。"
         },
         {
           "text": "你上山",
           "spokenText": "你上山",
           "focusChar": "你",
-          "reason": "Simple action phrase using 上山."
+          "reason": "練習你和上山。"
         },
         {
           "text": "你手上有小人",
           "spokenText": "你手上有小人",
           "focusChar": "你",
-          "reason": "Reuses hand/toy-person concept with a new person."
+          "reason": "複習手上玩具人。"
+        },
+        {
+          "text": "你有大大的手",
+          "spokenText": "你有大大的手",
+          "focusChar": "你",
+          "reason": "複習大大的手。"
+        },
+        {
+          "text": "你有一個小人",
+          "spokenText": "你有一個小人",
+          "focusChar": "你",
+          "reason": "複習一個小人。"
+        },
+        {
+          "text": "你在山上",
+          "spokenText": "你在山上",
+          "focusChar": "你",
+          "reason": "複習山上位置。"
+        },
+        {
+          "text": "你手上有三個人",
+          "spokenText": "你手上有三個人",
+          "focusChar": "你",
+          "reason": "複習手上與三個人。"
+        },
+        {
+          "text": "你有小山",
+          "spokenText": "你有小山",
+          "focusChar": "你",
+          "reason": "複習小山。"
+        },
+        {
+          "text": "你有大山",
+          "spokenText": "你有大山",
+          "focusChar": "你",
+          "reason": "複習大山。"
         }
       ]
     },
@@ -7628,7 +7754,7 @@
       "char": "去",
       "zhuyin": "ㄑㄩˋ",
       "priority": 40,
-      "why": "Unlocks simple movement/action sentences with 我、人、山上.",
+      "why": "加入動作字，可和你、我、家、山上山下搭配。",
       "requires": [
         "一",
         "三",
@@ -7646,61 +7772,61 @@
           "text": "我去山上",
           "spokenText": "我去山上",
           "focusChar": "去",
-          "reason": "Reviews 我 and 山上 with 去."
+          "reason": "用山上情境練習去。"
         },
         {
-          "text": "你去山上",
-          "spokenText": "你去山上",
+          "text": "你去山下",
+          "spokenText": "你去山下",
           "focusChar": "去",
-          "reason": "Reviews fixed 你 and 山上 with 去."
+          "reason": "複習你與山下。"
         },
         {
           "text": "一個人去山上",
           "spokenText": "一個人去山上",
           "focusChar": "去",
-          "reason": "Reviews 一個人 and mountain movement."
+          "reason": "複習一個人。"
         },
         {
           "text": "三個人去山下",
           "spokenText": "三個人去山下",
           "focusChar": "去",
-          "reason": "Reviews 三個人 and 山下."
+          "reason": "複習三個人。"
+        },
+        {
+          "text": "小孩去家",
+          "spokenText": "小孩去家",
+          "focusChar": "去",
+          "reason": "若孩已學，可用回家畫面。"
+        },
+        {
+          "text": "你和我去山上",
+          "spokenText": "你和我去山上",
+          "focusChar": "去",
+          "reason": "複習你我和。"
         },
         {
           "text": "我去高山上",
           "spokenText": "我去高山上",
           "focusChar": "去",
-          "reason": "Reviews 高山上 with 我."
+          "reason": "複習高山。"
         },
         {
-          "text": "你去高山下",
-          "spokenText": "你去高山下",
+          "text": "鳥去山上",
+          "spokenText": "鳥去山上",
           "focusChar": "去",
-          "reason": "Reviews 高山下 with 你."
+          "reason": "若鳥已學，可加入動物情境。"
         },
         {
-          "text": "去山下有水",
-          "spokenText": "去山下有水",
+          "text": "你去水上",
+          "spokenText": "你去水上",
           "focusChar": "去",
-          "reason": "Concrete mountain-water sentence."
+          "reason": "複習水上。"
         },
         {
-          "text": "人去高高的山上",
-          "spokenText": "人去高高的山上",
+          "text": "我去你家",
+          "spokenText": "我去你家",
           "focusChar": "去",
-          "reason": "Reviews 高高的山上."
-        },
-        {
-          "text": "大人去水下",
-          "spokenText": "大人去水下",
-          "focusChar": "去",
-          "reason": "Concrete but playful water-location sentence."
-        },
-        {
-          "text": "我去你的山下",
-          "spokenText": "我去你的山下",
-          "focusChar": "去",
-          "reason": "Reviews 我、你、山下."
+          "reason": "複習你家。"
         }
       ]
     },
@@ -7708,7 +7834,7 @@
       "char": "家",
       "zhuyin": "ㄐㄧㄚ",
       "priority": 50,
-      "why": "High-value family/home character; useful before later family roles.",
+      "why": "高價值生活字，能承接你我與山上山下情境。",
       "requires": [
         "一",
         "三",
@@ -7724,61 +7850,61 @@
           "text": "我有一個家",
           "spokenText": "我有一個家",
           "focusChar": "家",
-          "reason": "Simple possession sentence with 家."
+          "reason": "簡短所有句。"
         },
         {
           "text": "你的家在山下",
           "spokenText": "你的家在山下",
           "focusChar": "家",
-          "reason": "Reviews 你、在、山下."
+          "reason": "複習你和在。"
         },
         {
           "text": "我的家在山上",
           "spokenText": "我的家在山上",
           "focusChar": "家",
-          "reason": "Reviews 我、在、山上."
-        },
-        {
-          "text": "山下有一個家",
-          "spokenText": "山下有一個家",
-          "focusChar": "家",
-          "reason": "Concrete house at mountain foot."
+          "reason": "符合女孩家在山上的設定。"
         },
         {
           "text": "山上有三個家",
           "spokenText": "山上有三個家",
           "focusChar": "家",
-          "reason": "Reviews 三個 and 山上."
-        },
-        {
-          "text": "家在高山下",
-          "spokenText": "家在高山下",
-          "focusChar": "家",
-          "reason": "Reviews 高山下."
-        },
-        {
-          "text": "你我在家",
-          "spokenText": "你我在家",
-          "focusChar": "家",
-          "reason": "Reviews 你我 together with 在."
-        },
-        {
-          "text": "大大的家在山下",
-          "spokenText": "大大的家在山下",
-          "focusChar": "家",
-          "reason": "Reviews 大大的 and 山下."
+          "reason": "複習三個與山上。"
         },
         {
           "text": "小小的家在水上",
           "spokenText": "小小的家在水上",
           "focusChar": "家",
-          "reason": "Reviews 小小的 and 水上."
+          "reason": "複習小、水上。"
         },
         {
-          "text": "家下有水",
-          "spokenText": "家下有水",
+          "text": "家在高山上",
+          "spokenText": "家在高山上",
           "focusChar": "家",
-          "reason": "Short location sentence with water under a house."
+          "reason": "複習高山上。"
+        },
+        {
+          "text": "你和我在家",
+          "spokenText": "你和我在家",
+          "focusChar": "家",
+          "reason": "複習你我和。"
+        },
+        {
+          "text": "一個很小的家",
+          "spokenText": "一個很小的家",
+          "focusChar": "家",
+          "reason": "複習很小。"
+        },
+        {
+          "text": "大大的家在山上",
+          "spokenText": "大大的家在山上",
+          "focusChar": "家",
+          "reason": "複習大大的。"
+        },
+        {
+          "text": "水上有小家",
+          "spokenText": "水上有小家",
+          "focusChar": "家",
+          "reason": "可畫成玩具房子。"
         }
       ]
     },
@@ -7786,7 +7912,7 @@
       "char": "他",
       "zhuyin": "ㄊㄚ",
       "priority": 60,
-      "why": "Adds third-person reference after 我 and before broader character stories.",
+      "why": "加入第三人稱，延伸你我他的角色句。",
       "requires": [
         "一",
         "人",
@@ -7804,61 +7930,61 @@
           "text": "他在山上",
           "spokenText": "他在山上",
           "focusChar": "他",
-          "reason": "Simple location sentence with 他."
+          "reason": "簡短位置句。"
         },
         {
           "text": "他在山下",
           "spokenText": "他在山下",
           "focusChar": "他",
-          "reason": "Contrasts 山下."
+          "reason": "複習山下。"
         },
         {
-          "text": "他有一個水",
-          "spokenText": "他有一個水",
+          "text": "他有一隻手",
+          "spokenText": "他有一隻手",
           "focusChar": "他",
-          "reason": "Uses 他 with possession and 水."
+          "reason": "複習隻與手。"
         },
         {
-          "text": "他有大大的手",
-          "spokenText": "他有大大的手",
+          "text": "他有很大的手",
+          "spokenText": "他有很大的手",
           "focusChar": "他",
-          "reason": "Reviews 大大的手."
+          "reason": "複習很大。"
         },
         {
-          "text": "他的小手有水",
-          "spokenText": "他的小手有水",
+          "text": "他和你在山上",
+          "spokenText": "他和你在山上",
           "focusChar": "他",
-          "reason": "Reviews 的、小手、水."
+          "reason": "複習你和。"
         },
         {
-          "text": "他你我在山上",
-          "spokenText": "他你我在山上",
+          "text": "他和我在家",
+          "spokenText": "他和我在家",
           "focusChar": "他",
-          "reason": "Reviews 他、你、我 together."
+          "reason": "複習我與家。"
         },
         {
-          "text": "他一個人在山下",
-          "spokenText": "他一個人在山下",
+          "text": "他看小鳥",
+          "spokenText": "他看小鳥",
           "focusChar": "他",
-          "reason": "Reviews 一個人 and 山下."
+          "reason": "若看已學，可複習看鳥。"
         },
         {
-          "text": "他在高山上",
-          "spokenText": "他在高山上",
+          "text": "他家在山下",
+          "spokenText": "他家在山下",
           "focusChar": "他",
-          "reason": "Reviews 高山上."
+          "reason": "複習家和位置。"
         },
         {
-          "text": "他在水下",
-          "spokenText": "他在水下",
+          "text": "他在水上",
+          "spokenText": "他在水上",
           "focusChar": "他",
-          "reason": "Reviews 水下."
+          "reason": "複習水上。"
         },
         {
-          "text": "三個人有他",
-          "spokenText": "三個人有他",
+          "text": "他是一個小孩",
+          "spokenText": "他是一個小孩",
           "focusChar": "他",
-          "reason": "Reviews 三個人 with 他."
+          "reason": "若是已學，可做身分句。"
         }
       ]
     },
@@ -7866,7 +7992,7 @@
       "char": "左",
       "zhuyin": "ㄗㄨㄛˇ",
       "priority": 35,
-      "why": "Useful spatial/body-side character that combines naturally with hand and recent water/location sentences.",
+      "why": "加入左右位置字，可和手、水、家搭配。",
       "requires": [
         "一",
         "二",
@@ -7889,64 +8015,1052 @@
       ],
       "sentenceCandidates": [
         {
-          "text": "我的左手有水",
-          "spokenText": "我的左手有水",
-          "focusChar": "左",
-          "reason": "Reviews 我、手、水 with the new side character."
-        },
-        {
           "text": "你的左手有水",
           "spokenText": "你的左手有水",
           "focusChar": "左",
-          "reason": "Reviews fixed 你 and water on hand."
+          "reason": "複習你、手、水。"
+        },
+        {
+          "text": "我的左手有水",
+          "spokenText": "我的左手有水",
+          "focusChar": "左",
+          "reason": "複習我、手、水。"
         },
         {
           "text": "左手上有水",
           "spokenText": "左手上有水",
           "focusChar": "左",
-          "reason": "Concrete hand-surface sentence."
+          "reason": "具體手上水。"
         },
         {
           "text": "左手下有水",
           "spokenText": "左手下有水",
           "focusChar": "左",
-          "reason": "Concrete below-hand location sentence."
+          "reason": "複習上下。"
         },
         {
           "text": "一個人的左手",
           "spokenText": "一個人的左手",
           "focusChar": "左",
-          "reason": "Reviews count and person with 左手."
+          "reason": "複習一個人。"
         },
         {
           "text": "三個人的左手",
           "spokenText": "三個人的左手",
           "focusChar": "左",
-          "reason": "Reviews 三個人 with 左手."
+          "reason": "複習三個人。"
         },
         {
           "text": "大人的左手",
           "spokenText": "大人的左手",
           "focusChar": "左",
-          "reason": "Short phrase for an adult left hand."
+          "reason": "複習大人。"
         },
         {
-          "text": "小小的左手",
-          "spokenText": "小小的左手",
+          "text": "小孩的左手",
+          "spokenText": "小孩的左手",
           "focusChar": "左",
-          "reason": "Reviews 小小的手 with 左."
+          "reason": "若孩已學，可複習小孩。"
         },
         {
-          "text": "大大的左手",
-          "spokenText": "大大的左手",
+          "text": "左手在水上",
+          "spokenText": "左手在水上",
           "focusChar": "左",
-          "reason": "Reviews 大大的手 with 左."
+          "reason": "複習在與水上。"
         },
         {
-          "text": "左手在水下",
-          "spokenText": "左手在水下",
+          "text": "左手在山下",
+          "spokenText": "左手在山下",
           "focusChar": "左",
-          "reason": "Reviews 在 and 水下 with 左手."
+          "reason": "複習山下。"
+        }
+      ]
+    },
+    {
+      "char": "看",
+      "zhuyin": "ㄎㄢˋ",
+      "priority": 42,
+      "why": "加入視覺動作字，能用孩子、鳥、家與山水做清楚情境。",
+      "requires": [
+        "一",
+        "三",
+        "個",
+        "人",
+        "小",
+        "我",
+        "你",
+        "在",
+        "家",
+        "和",
+        "隻",
+        "鳥",
+        "孩"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "小孩看鳥",
+          "spokenText": "小孩看鳥",
+          "focusChar": "看",
+          "reason": "用小孩與鳥導入看。"
+        },
+        {
+          "text": "我在家看你",
+          "spokenText": "我在家看你",
+          "focusChar": "看",
+          "reason": "複習我、你與在家。"
+        },
+        {
+          "text": "你在家看我",
+          "spokenText": "你在家看我",
+          "focusChar": "看",
+          "reason": "複習你、我與在家。"
+        },
+        {
+          "text": "一個小孩看鳥",
+          "spokenText": "一個小孩看鳥",
+          "focusChar": "看",
+          "reason": "複習一個小孩。"
+        },
+        {
+          "text": "三個人看小鳥",
+          "spokenText": "三個人看小鳥",
+          "focusChar": "看",
+          "reason": "複習三個人與小鳥。"
+        },
+        {
+          "text": "小孩在家看鳥",
+          "spokenText": "小孩在家看鳥",
+          "focusChar": "看",
+          "reason": "複習在家。"
+        },
+        {
+          "text": "你和我看鳥",
+          "spokenText": "你和我看鳥",
+          "focusChar": "看",
+          "reason": "複習你我和。"
+        },
+        {
+          "text": "一隻鳥看小孩",
+          "spokenText": "一隻鳥看小孩",
+          "focusChar": "看",
+          "reason": "反向視角，複習隻鳥孩。"
+        },
+        {
+          "text": "我在家看鳥",
+          "spokenText": "我在家看鳥",
+          "focusChar": "看",
+          "reason": "複習我家與鳥。"
+        },
+        {
+          "text": "看很高的山",
+          "spokenText": "看很高的山",
+          "focusChar": "看",
+          "reason": "複習很高的山。"
+        }
+      ]
+    },
+    {
+      "char": "飛",
+      "zhuyin": "ㄈㄟ",
+      "priority": 44,
+      "why": "適合鳥類情境的動作字，可大量複習鳥、隻、山上山下。",
+      "requires": [
+        "一",
+        "三",
+        "個",
+        "大",
+        "小",
+        "山",
+        "上",
+        "下",
+        "水",
+        "在",
+        "高",
+        "很",
+        "隻",
+        "鳥"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "一隻鳥飛上山",
+          "spokenText": "一隻鳥飛上山",
+          "focusChar": "飛",
+          "reason": "用鳥與上山導入飛。"
+        },
+        {
+          "text": "小鳥飛上高山",
+          "spokenText": "小鳥飛上高山",
+          "focusChar": "飛",
+          "reason": "複習小鳥與高山。"
+        },
+        {
+          "text": "鳥在高山上飛",
+          "spokenText": "鳥在高山上飛",
+          "focusChar": "飛",
+          "reason": "複習在高山上。"
+        },
+        {
+          "text": "三隻小鳥飛上山",
+          "spokenText": "三隻小鳥飛上山",
+          "focusChar": "飛",
+          "reason": "複習三隻小鳥。"
+        },
+        {
+          "text": "一隻鳥飛下山",
+          "spokenText": "一隻鳥飛下山",
+          "focusChar": "飛",
+          "reason": "複習下山。"
+        },
+        {
+          "text": "小鳥在水上飛",
+          "spokenText": "小鳥在水上飛",
+          "focusChar": "飛",
+          "reason": "複習水上。"
+        },
+        {
+          "text": "很大的鳥飛上山",
+          "spokenText": "很大的鳥飛上山",
+          "focusChar": "飛",
+          "reason": "複習很大的鳥。"
+        },
+        {
+          "text": "鳥飛在山上",
+          "spokenText": "鳥飛在山上",
+          "focusChar": "飛",
+          "reason": "簡短位置動作句。"
+        },
+        {
+          "text": "小鳥飛在家上",
+          "spokenText": "小鳥飛在家上",
+          "focusChar": "飛",
+          "reason": "複習家上方概念。"
+        },
+        {
+          "text": "三個小鳥在水上飛",
+          "spokenText": "三個小鳥在水上飛",
+          "focusChar": "飛",
+          "reason": "複習數量與水上。"
+        }
+      ]
+    },
+    {
+      "char": "來",
+      "zhuyin": "ㄌㄞˊ",
+      "priority": 46,
+      "why": "加入移動方向字，適合你我、家、鳥與小孩情境。",
+      "requires": [
+        "一",
+        "個",
+        "小",
+        "我",
+        "你",
+        "在",
+        "家",
+        "和",
+        "隻",
+        "鳥",
+        "孩"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "你來我家",
+          "spokenText": "你來我家",
+          "focusChar": "來",
+          "reason": "用你我家導入來。"
+        },
+        {
+          "text": "我來你家",
+          "spokenText": "我來你家",
+          "focusChar": "來",
+          "reason": "複習你家我家。"
+        },
+        {
+          "text": "小鳥來我家",
+          "spokenText": "小鳥來我家",
+          "focusChar": "來",
+          "reason": "複習小鳥與家。"
+        },
+        {
+          "text": "一隻鳥來家",
+          "spokenText": "一隻鳥來家",
+          "focusChar": "來",
+          "reason": "簡短移動句。"
+        },
+        {
+          "text": "小孩來我家",
+          "spokenText": "小孩來我家",
+          "focusChar": "來",
+          "reason": "複習小孩與我家。"
+        },
+        {
+          "text": "你和我來家",
+          "spokenText": "你和我來家",
+          "focusChar": "來",
+          "reason": "複習你我和。"
+        },
+        {
+          "text": "一個小孩來家",
+          "spokenText": "一個小孩來家",
+          "focusChar": "來",
+          "reason": "複習一個小孩。"
+        },
+        {
+          "text": "鳥來水上",
+          "spokenText": "鳥來水上",
+          "focusChar": "來",
+          "reason": "複習鳥與水上。"
+        },
+        {
+          "text": "你來山上",
+          "spokenText": "你來山上",
+          "focusChar": "來",
+          "reason": "複習你與山上。"
+        },
+        {
+          "text": "我來山下",
+          "spokenText": "我來山下",
+          "focusChar": "來",
+          "reason": "複習我與山下。"
+        }
+      ]
+    },
+    {
+      "char": "男",
+      "zhuyin": "ㄋㄢˊ",
+      "priority": 48,
+      "why": "建立固定小男孩角色，方便後續圖像一致性。",
+      "requires": [
+        "一",
+        "個",
+        "小",
+        "大",
+        "的",
+        "手",
+        "我",
+        "你",
+        "在",
+        "家",
+        "和",
+        "孩"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "一個小男孩",
+          "spokenText": "一個小男孩",
+          "focusChar": "男",
+          "reason": "建立小男孩角色。"
+        },
+        {
+          "text": "小男孩在家",
+          "spokenText": "小男孩在家",
+          "focusChar": "男",
+          "reason": "複習在家。"
+        },
+        {
+          "text": "小男孩和你",
+          "spokenText": "小男孩和你",
+          "focusChar": "男",
+          "reason": "複習你和。"
+        },
+        {
+          "text": "小男孩和我",
+          "spokenText": "小男孩和我",
+          "focusChar": "男",
+          "reason": "複習我和。"
+        },
+        {
+          "text": "小男孩有大手",
+          "spokenText": "小男孩有大手",
+          "focusChar": "男",
+          "reason": "複習有與手。"
+        },
+        {
+          "text": "小男孩的手很小",
+          "spokenText": "小男孩的手很小",
+          "focusChar": "男",
+          "reason": "複習很小。"
+        },
+        {
+          "text": "你和小男孩在家",
+          "spokenText": "你和小男孩在家",
+          "focusChar": "男",
+          "reason": "複習你、和、在家。"
+        },
+        {
+          "text": "我和小男孩在山上",
+          "spokenText": "我和小男孩在山上",
+          "focusChar": "男",
+          "reason": "複習我、山上。"
+        },
+        {
+          "text": "小男孩在水上",
+          "spokenText": "小男孩在水上",
+          "focusChar": "男",
+          "reason": "複習水上。"
+        },
+        {
+          "text": "小男孩在高山下",
+          "spokenText": "小男孩在高山下",
+          "focusChar": "男",
+          "reason": "複習高山下。"
+        }
+      ]
+    },
+    {
+      "char": "女",
+      "zhuyin": "ㄋㄩˇ",
+      "priority": 49,
+      "why": "建立固定小女孩角色，可和你我人物設定連動。",
+      "requires": [
+        "一",
+        "個",
+        "小",
+        "大",
+        "的",
+        "手",
+        "我",
+        "你",
+        "在",
+        "家",
+        "和",
+        "孩"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "一個小女孩",
+          "spokenText": "一個小女孩",
+          "focusChar": "女",
+          "reason": "建立小女孩角色。"
+        },
+        {
+          "text": "小女孩在家",
+          "spokenText": "小女孩在家",
+          "focusChar": "女",
+          "reason": "複習在家。"
+        },
+        {
+          "text": "小女孩和你",
+          "spokenText": "小女孩和你",
+          "focusChar": "女",
+          "reason": "複習你和。"
+        },
+        {
+          "text": "小女孩和我",
+          "spokenText": "小女孩和我",
+          "focusChar": "女",
+          "reason": "複習我和。"
+        },
+        {
+          "text": "小女孩有小手",
+          "spokenText": "小女孩有小手",
+          "focusChar": "女",
+          "reason": "複習小手。"
+        },
+        {
+          "text": "小女孩的家在山上",
+          "spokenText": "小女孩的家在山上",
+          "focusChar": "女",
+          "reason": "符合女孩家在山上的設定。"
+        },
+        {
+          "text": "我和小女孩在家",
+          "spokenText": "我和小女孩在家",
+          "focusChar": "女",
+          "reason": "複習我、和、在家。"
+        },
+        {
+          "text": "你和小女孩在水上",
+          "spokenText": "你和小女孩在水上",
+          "focusChar": "女",
+          "reason": "複習你、水上。"
+        },
+        {
+          "text": "小女孩在高山上",
+          "spokenText": "小女孩在高山上",
+          "focusChar": "女",
+          "reason": "複習高山上。"
+        },
+        {
+          "text": "小女孩看小鳥",
+          "spokenText": "小女孩看小鳥",
+          "focusChar": "女",
+          "reason": "若看已學，可複習小鳥。"
+        }
+      ]
+    },
+    {
+      "char": "門",
+      "zhuyin": "ㄇㄣˊ",
+      "priority": 52,
+      "why": "具體生活物件，能和家、上、下、鳥搭配。",
+      "requires": [
+        "一",
+        "個",
+        "大",
+        "小",
+        "有",
+        "在",
+        "家",
+        "和",
+        "隻",
+        "鳥"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我家有門",
+          "spokenText": "我家有門",
+          "focusChar": "門",
+          "reason": "用家導入門。"
+        },
+        {
+          "text": "你家有大門",
+          "spokenText": "你家有大門",
+          "focusChar": "門",
+          "reason": "複習你家與大。"
+        },
+        {
+          "text": "一個家有門",
+          "spokenText": "一個家有門",
+          "focusChar": "門",
+          "reason": "複習一個家。"
+        },
+        {
+          "text": "小鳥在門上",
+          "spokenText": "小鳥在門上",
+          "focusChar": "門",
+          "reason": "複習小鳥與上。"
+        },
+        {
+          "text": "一隻鳥在門上",
+          "spokenText": "一隻鳥在門上",
+          "focusChar": "門",
+          "reason": "複習一隻鳥。"
+        },
+        {
+          "text": "門下有水",
+          "spokenText": "門下有水",
+          "focusChar": "門",
+          "reason": "複習下與水。"
+        },
+        {
+          "text": "大門在家下",
+          "spokenText": "大門在家下",
+          "focusChar": "門",
+          "reason": "練習位置，但可再由教師修正。"
+        },
+        {
+          "text": "門上有小鳥",
+          "spokenText": "門上有小鳥",
+          "focusChar": "門",
+          "reason": "具體可畫。"
+        },
+        {
+          "text": "小門和大門",
+          "spokenText": "小門和大門",
+          "focusChar": "門",
+          "reason": "複習小大和。"
+        },
+        {
+          "text": "三個家有三個門",
+          "spokenText": "三個家有三個門",
+          "focusChar": "門",
+          "reason": "複習三個。"
+        }
+      ]
+    },
+    {
+      "char": "中",
+      "zhuyin": "ㄓㄨㄥ",
+      "priority": 54,
+      "why": "位置字，可練習水中、家中與手中。",
+      "requires": [
+        "一",
+        "個",
+        "小",
+        "手",
+        "我",
+        "你",
+        "有",
+        "水",
+        "在",
+        "家",
+        "鳥"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "水中有鳥",
+          "spokenText": "水中有鳥",
+          "focusChar": "中",
+          "reason": "用水中導入中。"
+        },
+        {
+          "text": "家中有你和我",
+          "spokenText": "家中有你和我",
+          "focusChar": "中",
+          "reason": "複習家與你我。"
+        },
+        {
+          "text": "我在家中",
+          "spokenText": "我在家中",
+          "focusChar": "中",
+          "reason": "簡短位置句。"
+        },
+        {
+          "text": "你在水中",
+          "spokenText": "你在水中",
+          "focusChar": "中",
+          "reason": "複習你與水。"
+        },
+        {
+          "text": "手中有水",
+          "spokenText": "手中有水",
+          "focusChar": "中",
+          "reason": "具體手中有水。"
+        },
+        {
+          "text": "一個小鳥在家中",
+          "spokenText": "一個小鳥在家中",
+          "focusChar": "中",
+          "reason": "複習小鳥與家。"
+        },
+        {
+          "text": "小孩在家中",
+          "spokenText": "小孩在家中",
+          "focusChar": "中",
+          "reason": "複習小孩。"
+        },
+        {
+          "text": "家中有一隻鳥",
+          "spokenText": "家中有一隻鳥",
+          "focusChar": "中",
+          "reason": "複習一隻鳥。"
+        },
+        {
+          "text": "水中有三個人",
+          "spokenText": "水中有三個人",
+          "focusChar": "中",
+          "reason": "複習三個人。"
+        },
+        {
+          "text": "你手中有水",
+          "spokenText": "你手中有水",
+          "focusChar": "中",
+          "reason": "複習你手與水。"
+        }
+      ]
+    },
+    {
+      "char": "前",
+      "zhuyin": "ㄑㄧㄢˊ",
+      "priority": 56,
+      "why": "加入前後位置概念，可和家、山、水搭配。",
+      "requires": [
+        "一",
+        "個",
+        "人",
+        "小",
+        "我",
+        "你",
+        "有",
+        "山",
+        "水",
+        "在",
+        "家",
+        "鳥",
+        "孩"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我在家前",
+          "spokenText": "我在家前",
+          "focusChar": "前",
+          "reason": "用家前導入前。"
+        },
+        {
+          "text": "你在山前",
+          "spokenText": "你在山前",
+          "focusChar": "前",
+          "reason": "複習你和山。"
+        },
+        {
+          "text": "家前有水",
+          "spokenText": "家前有水",
+          "focusChar": "前",
+          "reason": "複習家與水。"
+        },
+        {
+          "text": "山前有一個人",
+          "spokenText": "山前有一個人",
+          "focusChar": "前",
+          "reason": "複習一個人。"
+        },
+        {
+          "text": "小鳥在家前",
+          "spokenText": "小鳥在家前",
+          "focusChar": "前",
+          "reason": "複習小鳥。"
+        },
+        {
+          "text": "小孩在門前",
+          "spokenText": "小孩在門前",
+          "focusChar": "前",
+          "reason": "若門已學，可複習門前。"
+        },
+        {
+          "text": "你和我在家前",
+          "spokenText": "你和我在家前",
+          "focusChar": "前",
+          "reason": "複習你我和。"
+        },
+        {
+          "text": "水在山前",
+          "spokenText": "水在山前",
+          "focusChar": "前",
+          "reason": "複習水和山。"
+        },
+        {
+          "text": "三個人在山前",
+          "spokenText": "三個人在山前",
+          "focusChar": "前",
+          "reason": "複習三個人。"
+        },
+        {
+          "text": "一隻鳥在山前",
+          "spokenText": "一隻鳥在山前",
+          "focusChar": "前",
+          "reason": "複習一隻鳥。"
+        }
+      ]
+    },
+    {
+      "char": "後",
+      "zhuyin": "ㄏㄡˋ",
+      "priority": 58,
+      "why": "和前成對，建立前後位置概念。",
+      "requires": [
+        "一",
+        "個",
+        "人",
+        "小",
+        "我",
+        "你",
+        "有",
+        "山",
+        "水",
+        "在",
+        "家",
+        "鳥",
+        "孩",
+        "前"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我在家後",
+          "spokenText": "我在家後",
+          "focusChar": "後",
+          "reason": "和家前形成對比。"
+        },
+        {
+          "text": "你在山後",
+          "spokenText": "你在山後",
+          "focusChar": "後",
+          "reason": "複習你和山。"
+        },
+        {
+          "text": "家後有水",
+          "spokenText": "家後有水",
+          "focusChar": "後",
+          "reason": "複習家與水。"
+        },
+        {
+          "text": "山後有一個人",
+          "spokenText": "山後有一個人",
+          "focusChar": "後",
+          "reason": "複習一個人。"
+        },
+        {
+          "text": "小鳥在家後",
+          "spokenText": "小鳥在家後",
+          "focusChar": "後",
+          "reason": "複習小鳥。"
+        },
+        {
+          "text": "小孩在門後",
+          "spokenText": "小孩在門後",
+          "focusChar": "後",
+          "reason": "若門已學，可複習門後。"
+        },
+        {
+          "text": "你和我在家後",
+          "spokenText": "你和我在家後",
+          "focusChar": "後",
+          "reason": "複習你我和。"
+        },
+        {
+          "text": "水在山後",
+          "spokenText": "水在山後",
+          "focusChar": "後",
+          "reason": "複習水和山。"
+        },
+        {
+          "text": "三個人在山後",
+          "spokenText": "三個人在山後",
+          "focusChar": "後",
+          "reason": "複習三個人。"
+        },
+        {
+          "text": "一隻鳥在山後",
+          "spokenText": "一隻鳥在山後",
+          "focusChar": "後",
+          "reason": "複習一隻鳥。"
+        }
+      ]
+    },
+    {
+      "char": "裡",
+      "zhuyin": "ㄌㄧˇ",
+      "priority": 62,
+      "why": "常用位置字，可練習家裡、水裡、手裡。",
+      "requires": [
+        "一",
+        "個",
+        "小",
+        "手",
+        "我",
+        "你",
+        "有",
+        "水",
+        "在",
+        "家",
+        "鳥",
+        "孩"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我在家裡",
+          "spokenText": "我在家裡",
+          "focusChar": "裡",
+          "reason": "用家裡導入裡。"
+        },
+        {
+          "text": "你在家裡",
+          "spokenText": "你在家裡",
+          "focusChar": "裡",
+          "reason": "複習你與家。"
+        },
+        {
+          "text": "水在手裡",
+          "spokenText": "水在手裡",
+          "focusChar": "裡",
+          "reason": "具體手裡有水。"
+        },
+        {
+          "text": "鳥在家裡",
+          "spokenText": "鳥在家裡",
+          "focusChar": "裡",
+          "reason": "複習鳥與家。"
+        },
+        {
+          "text": "小孩在家裡",
+          "spokenText": "小孩在家裡",
+          "focusChar": "裡",
+          "reason": "複習小孩。"
+        },
+        {
+          "text": "家裡有一隻鳥",
+          "spokenText": "家裡有一隻鳥",
+          "focusChar": "裡",
+          "reason": "複習一隻鳥。"
+        },
+        {
+          "text": "水裡有三個人",
+          "spokenText": "水裡有三個人",
+          "focusChar": "裡",
+          "reason": "複習三個人。"
+        },
+        {
+          "text": "你手裡有水",
+          "spokenText": "你手裡有水",
+          "focusChar": "裡",
+          "reason": "複習你手與水。"
+        },
+        {
+          "text": "小鳥在水裡",
+          "spokenText": "小鳥在水裡",
+          "focusChar": "裡",
+          "reason": "複習小鳥與水。"
+        },
+        {
+          "text": "一個家在山裡",
+          "spokenText": "一個家在山裡",
+          "focusChar": "裡",
+          "reason": "複習一個家與山。"
+        }
+      ]
+    },
+    {
+      "char": "走",
+      "zhuyin": "ㄗㄡˇ",
+      "priority": 64,
+      "why": "動作字，可承接去、來與山路情境。",
+      "requires": [
+        "一",
+        "個",
+        "人",
+        "小",
+        "我",
+        "你",
+        "山",
+        "上",
+        "下",
+        "水",
+        "在",
+        "家",
+        "孩"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我走上山",
+          "spokenText": "我走上山",
+          "focusChar": "走",
+          "reason": "用上山導入走。"
+        },
+        {
+          "text": "你走下山",
+          "spokenText": "你走下山",
+          "focusChar": "走",
+          "reason": "複習你與下山。"
+        },
+        {
+          "text": "小孩走上山",
+          "spokenText": "小孩走上山",
+          "focusChar": "走",
+          "reason": "複習小孩。"
+        },
+        {
+          "text": "一個人走下山",
+          "spokenText": "一個人走下山",
+          "focusChar": "走",
+          "reason": "複習一個人。"
+        },
+        {
+          "text": "我走到家",
+          "spokenText": "我走到家",
+          "focusChar": "走",
+          "reason": "若到已學，可練習走到。"
+        },
+        {
+          "text": "你和我走上山",
+          "spokenText": "你和我走上山",
+          "focusChar": "走",
+          "reason": "複習你我和。"
+        },
+        {
+          "text": "小孩在水上走",
+          "spokenText": "小孩在水上走",
+          "focusChar": "走",
+          "reason": "複習水上。"
+        },
+        {
+          "text": "三個人走下山",
+          "spokenText": "三個人走下山",
+          "focusChar": "走",
+          "reason": "複習三個人。"
+        },
+        {
+          "text": "我在家裡走",
+          "spokenText": "我在家裡走",
+          "focusChar": "走",
+          "reason": "若裡已學，可複習家裡。"
+        },
+        {
+          "text": "你走去山上",
+          "spokenText": "你走去山上",
+          "focusChar": "走",
+          "reason": "若去已學，可複習走去。"
+        }
+      ]
+    },
+    {
+      "char": "到",
+      "zhuyin": "ㄉㄠˋ",
+      "priority": 66,
+      "why": "動作結果字，可和去、來、家、山上山下組合。",
+      "requires": [
+        "一",
+        "個",
+        "人",
+        "小",
+        "我",
+        "你",
+        "山",
+        "上",
+        "下",
+        "水",
+        "在",
+        "家",
+        "孩"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我到家",
+          "spokenText": "我到家",
+          "focusChar": "到",
+          "reason": "簡短到達句。"
+        },
+        {
+          "text": "你到我家",
+          "spokenText": "你到我家",
+          "focusChar": "到",
+          "reason": "複習你我家。"
+        },
+        {
+          "text": "小孩到山上",
+          "spokenText": "小孩到山上",
+          "focusChar": "到",
+          "reason": "複習小孩與山上。"
+        },
+        {
+          "text": "一個人到山下",
+          "spokenText": "一個人到山下",
+          "focusChar": "到",
+          "reason": "複習一個人與山下。"
+        },
+        {
+          "text": "小鳥到家裡",
+          "spokenText": "小鳥到家裡",
+          "focusChar": "到",
+          "reason": "若裡已學，可複習家裡。"
+        },
+        {
+          "text": "你和我到山上",
+          "spokenText": "你和我到山上",
+          "focusChar": "到",
+          "reason": "複習你我和。"
+        },
+        {
+          "text": "我走到家",
+          "spokenText": "我走到家",
+          "focusChar": "到",
+          "reason": "若走已學，可練習走到。"
+        },
+        {
+          "text": "鳥飛到水上",
+          "spokenText": "鳥飛到水上",
+          "focusChar": "到",
+          "reason": "若飛已學，可複習飛到。"
+        },
+        {
+          "text": "三個人到家",
+          "spokenText": "三個人到家",
+          "focusChar": "到",
+          "reason": "複習三個人。"
+        },
+        {
+          "text": "小孩到水下",
+          "spokenText": "小孩到水下",
+          "focusChar": "到",
+          "reason": "複習水下。"
         }
       ]
     }

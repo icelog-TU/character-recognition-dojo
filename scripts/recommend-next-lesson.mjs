@@ -81,27 +81,39 @@ function cleanLocalSentences(sentences, allowedChars) {
     });
 }
 
-function scoreCandidate(entry, learnedChars, recentPool) {
+function scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars) {
   const learned = new Set(learnedChars);
   const recent = new Set(recentPool);
+  const requiredRecent = new Set(requiredRecentChars ?? []);
+  const reviewCount = new Set(reviewCountChars ?? []);
   const requiredMissing = (entry.requires ?? []).filter((char) => !learned.has(char));
   if (requiredMissing.length > 0) return null;
 
-  const sentenceChars = unique((entry.sentenceCandidates ?? []).flatMap((sentence) => hanChars(sentence.text ?? "")));
+  const allowedChars = unique([...learnedChars, entry.char]);
+  const validSentences = cleanLocalSentences(entry.sentenceCandidates, allowedChars);
+  const sentenceChars = unique(validSentences.flatMap((sentence) => hanChars(sentence.text ?? "")));
   const reviewHits = sentenceChars.filter((char) => recent.has(char)).length;
+  const requiredHits = sentenceChars.filter((char) => requiredRecent.has(char)).length;
+  const reviewCountHits = sentenceChars.filter((char) => reviewCount.has(char)).length;
+  const sentenceDepth = Math.min(validSentences.length, targetGeneratedSentenceCount);
+  const missingSentencePenalty = Math.max(0, 5 - validSentences.length) * 20;
+  const base = Number(entry.priority ?? 1000);
   return {
-    base: Number(entry.priority ?? 1000),
+    base,
     reviewHits,
-    value: Number(entry.priority ?? 1000) - reviewHits * 2,
+    requiredHits,
+    reviewCountHits,
+    sentenceDepth,
+    value: base - requiredHits * 12 - reviewCountHits * 6 - reviewHits * 2 - sentenceDepth * 2 + missingSentencePenalty,
   };
 }
 
-function buildLocalRecommendations({ bank, learnedChars, recentPool, count }) {
+function buildLocalRecommendations({ bank, learnedChars, recentPool, requiredRecentChars, reviewCountChars, count }) {
   const learned = new Set(learnedChars);
   return bank
     .filter((entry) => !learned.has(entry.char))
     .map((entry) => {
-      const score = scoreCandidate(entry, learnedChars, recentPool);
+      const score = scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars);
       if (!score) return null;
       const allowedChars = unique([...learnedChars, entry.char]);
       return {
@@ -124,46 +136,46 @@ function buildAiPrompt({ lesson, learnedChars, recentPool, requiredRecentChars, 
     .flatMap((item) => item.sentences?.map((sentence) => sentence.text) ?? [])
     .slice(-24);
 
-  return `We are planning the next lesson for a Taiwan zhuyin preschool character-recognition app.
+  return `我們正在為臺灣注音幼兒認字 App 規劃下一課。
 
-Current next lesson:
-- Lesson id: ${lesson.id}
-- Order: ${lesson.order}
+目前要規劃的下一課：
+- 課程 ID：${lesson.id}
+- 順序：${lesson.order}
 
-Already taught characters:
+已學字：
 ${learnedChars.join(" ")}
 
-Recent review pool:
+最近複習字池：
 ${recentPool.join(" ")}
 
-Required previous-three-lesson new characters:
+最近三課必須複習的新字：
 ${requiredRecentChars.join(" ")}
 
-Recent reviewed sentences:
+最近已複習句子：
 ${recentSentences.map((sentence) => `- ${sentence}`).join("\n")}
 
-Candidate new characters from the local planner:
+本機規劃器提供的候選新字：
 ${recommendations
   .map((item) => `- ${item.newChars.join("")}: ${item.rationale}`)
   .join("\n")}
 
-Task:
-For each candidate, improve or replace the sentenceCandidates. Return JSON only.
+任務：
+請為每個候選字改善或替換 sentenceCandidates。只回傳 JSON。
 
-Strict rules:
-- Use Taiwan Mandarin.
-- No Hanyu pinyin.
-- For each candidate, display text may use only already taught characters plus that candidate new character.
-- Do not introduce any other Han character.
-- Each sentence should be ${sentenceLengthRange.min}-${sentenceLengthRange.max} Han characters long, ignoring punctuation.
-- Keep sentences concrete, imageable, and appropriate for young children.
-- Prefer reviewing recent characters naturally, especially characters from the previous five lessons.
-- Across each candidate's sentence set, include every required previous-three-lesson new character at least once.
-- spokenText omits punctuation but must not omit any Han character shown in text.
-- Avoid unnatural phrases such as 二個人.
-- Return exactly ${targetGeneratedSentenceCount} sentence candidates per character if possible.
+嚴格規則：
+- 使用臺灣華語與臺灣繁體字。
+- 不要使用漢語拼音。
+- 每個候選字的顯示句子，只能使用已學字加上該候選新字。
+- 不要加入任何其他漢字。
+- 每句忽略標點後需為 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字。
+- 句子要具體、容易配圖，並適合幼兒。
+- 自然優先複習最近學過的字，特別是最近五課的字。
+- 每個候選字的整組候選句中，最近三課必須複習的新字至少各出現一次。
+- spokenText 可省略標點，但不可省略 text 中出現的任何漢字。
+- 避免不自然用法，例如「二個人」。
+- 可以的話，每個候選字請剛好回傳 ${targetGeneratedSentenceCount} 個候選句。
 
-JSON shape:
+JSON 格式：
 [
   {
     "choiceId": "choice-下",
@@ -256,30 +268,30 @@ async function refineWithAi({ review, lesson, learnedChars, recentPool, required
 
 function markdownForReview(review) {
   const blocks = [];
-  blocks.push(`# ${review.lessonId} Next-Lesson Recommendations`);
+  blocks.push(`# ${review.lessonId} 下一課推薦`);
   blocks.push("");
-  blocks.push(`Generated: ${review.generatedAt}`);
-  blocks.push(`Current learned characters: ${review.learnedChars.join(" ")}`);
-  blocks.push(`Recent review pool: ${review.recentReviewPool.join(" ")}`);
-  blocks.push(`Required previous-three-lesson new characters: ${review.requiredRecentChars.join(" ")}`);
-  blocks.push(`Sentence length target: ${sentenceLengthRange.min}-${sentenceLengthRange.max} Han characters`);
+  blocks.push(`產生時間：${review.generatedAt}`);
+  blocks.push(`目前已學字：${review.learnedChars.join(" ")}`);
+  blocks.push(`最近複習字池：${review.recentReviewPool.join(" ")}`);
+  blocks.push(`最近三課必須複習的新字：${review.requiredRecentChars.join(" ")}`);
+  blocks.push(`句長目標：${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字`);
   blocks.push("");
-  blocks.push("## How To Use");
+  blocks.push("## 使用方式");
   blocks.push("");
-  blocks.push("1. Pick one recommended character.");
-  blocks.push(`2. Review up to ${targetGeneratedSentenceCount} sentence candidates, then edit/add your own approved set.`);
-  blocks.push("3. Put the final choice into the `approval` section of the JSON file.");
-  blocks.push("4. Run `npm run curriculum:request-from-review -- --review <json path>`.");
+  blocks.push("1. 選一個推薦字。");
+  blocks.push(`2. 審核最多 ${targetGeneratedSentenceCount} 個候選句，並修改或新增你最後核准的句子。`);
+  blocks.push("3. 把最後選擇填入 JSON 檔的 `approval` 區段。");
+  blocks.push("4. 執行 `npm run curriculum:request-from-review -- --review <json path>`。");
   blocks.push("");
 
   for (const [index, recommendation] of review.recommendations.entries()) {
     blocks.push(`## ${index + 1}. ${recommendation.newChars.join("")} (${Object.values(recommendation.zhuyin).join(", ")})`);
     blocks.push("");
-    blocks.push(`Choice id: \`${recommendation.choiceId}\``);
+    blocks.push(`候選 ID：\`${recommendation.choiceId}\``);
     blocks.push("");
-    blocks.push(`Why: ${recommendation.rationale}`);
+    blocks.push(`推薦理由：${recommendation.rationale}`);
     blocks.push("");
-    blocks.push("| # | Sentence | Spoken Text | Focus | Reason |");
+    blocks.push("| # | 句子 | spokenText | focus | 理由 |");
     blocks.push("|---:|---|---|---|---|");
     for (const [sentenceIndex, sentence] of recommendation.sentenceCandidates.entries()) {
       blocks.push(
@@ -306,7 +318,8 @@ const previousLessons = lessons.filter((lesson) => lesson.order < order);
 const learnedChars = unique(previousLessons.flatMap((lesson) => lesson.newChars ?? []));
 const recentPool = recentReviewPool(previousLessons);
 const requiredRecentChars = previousLessonNewChars(previousLessons, 3);
-const recommendations = buildLocalRecommendations({ bank, learnedChars, recentPool, count });
+const reviewCountChars = previousLessonNewChars(previousLessons, 5);
+const recommendations = buildLocalRecommendations({ bank, learnedChars, recentPool, requiredRecentChars, reviewCountChars, count });
 
 const review = {
   lessonId: id,

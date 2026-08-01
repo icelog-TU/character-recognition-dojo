@@ -48,7 +48,7 @@ function normalizeSentence(sentence, fallbackFocusChar) {
   const text = String(sentence.text ?? "").trim();
   const spokenText = String(sentence.spokenText ?? text).replace(/[，。！？、,.!?]/g, "");
   const focusChar = String(sentence.focusChar ?? fallbackFocusChar).trim();
-  const reason = String(sentence.reason ?? "Teacher-added sentence.").trim();
+  const reason = String(sentence.reason ?? "教師新增句。").trim();
   return { text, spokenText, focusChar, reason };
 }
 
@@ -114,11 +114,11 @@ const request = {
   title: recommendation.title,
   targetSentenceCount: finalSentences.length,
   teacherNotes: [
-    "Generated from curriculum recommendation review.",
-    `Selected choice: ${selectedChoiceId}.`,
-    `Approved sentences: ${sentenceListText(finalSentences)}.`,
-    review.approval?.notes ? `Teacher notes: ${review.approval.notes}` : "",
-    "Use only learned characters plus the new character(s). Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval.",
+    "由課程推薦審核結果產生。",
+    `選定候選字：${selectedChoiceId}。`,
+    `核准句子：${sentenceListText(finalSentences)}。`,
+    review.approval?.notes ? `教師備註：${review.approval.notes}` : "",
+    "只能使用已學字加上本課新字。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
   ]
     .filter(Boolean)
     .join(" "),
@@ -129,6 +129,6 @@ fs.mkdirSync(requestDir, { recursive: true });
 const outputPath = path.join(requestDir, `${review.lessonId}.json`);
 fs.writeFileSync(outputPath, `${JSON.stringify(request, null, 2)}\n`, "utf8");
 
-console.log(`Wrote ${outputPath}`);
-console.log(`Selected ${selectedChoiceId}: ${recommendation.newChars.join("")}`);
-console.log(`Approved sentences: ${sentenceListText(finalSentences)}`);
+console.log(`已寫入 ${outputPath}`);
+console.log(`已選 ${selectedChoiceId}: ${recommendation.newChars.join("")}`);
+console.log(`核准句子：${sentenceListText(finalSentences)}`);
