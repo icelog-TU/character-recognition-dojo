@@ -458,6 +458,7 @@
           <button class="btn danger" id="submitBtn" type="button">送出給 Codex</button>
           <button class="btn" id="copyBtn" type="button">複製 JSON</button>
           <button class="btn secondary" id="downloadBtn" type="button">下載 JSON</button>
+          <button class="btn secondary" id="clearDraftBtn" type="button">清除本課草稿</button>
         </div>
         <div class="status" id="statusLine"></div>
       </section>
@@ -468,6 +469,7 @@
         data: null,
         recommendations: [],
         selectedChoiceId: "",
+        storageKey: "",
         selectedIndexes: new Map(),
         imageNotesBySentence: new Map(),
         customRowsByChoice: new Map(),
@@ -755,6 +757,109 @@
         });
       }
 
+      function plannerStorageKey(model) {
+        return `character-recognition-dojo:lesson-planner:v1:${model.lessonId}`;
+      }
+
+      function mapToObject(map, valueMapper = (value) => value) {
+        return Object.fromEntries([...map.entries()].map(([key, value]) => [key, valueMapper(value)]));
+      }
+
+      function restoreMapOfArrays(saved, allowedChoiceIds) {
+        return new Map(
+          Object.entries(saved || {})
+            .filter(([choiceId]) => allowedChoiceIds.has(choiceId))
+            .map(([choiceId, indexes]) => [choiceId, new Set((indexes || []).map(Number).filter(Number.isInteger))]),
+        );
+      }
+
+      function restoreMapOfStrings(saved) {
+        return new Map(Object.entries(saved || {}).map(([key, value]) => [key, String(value || "")]));
+      }
+
+      function cleanSavedRows(rows) {
+        return (rows || [])
+          .filter((row) => row && String(row.text || "").trim())
+          .map((row) => ({
+            text: String(row.text || ""),
+            spokenText: String(row.spokenText || ""),
+            focusChar: String(row.focusChar || ""),
+            imageNotes: String(row.imageNotes || ""),
+            editing: Boolean(row.editing),
+          }));
+      }
+
+      function restoreMapOfRows(saved, allowedChoiceIds) {
+        return new Map(
+          Object.entries(saved || {})
+            .filter(([choiceId]) => allowedChoiceIds.has(choiceId))
+            .map(([choiceId, rows]) => [choiceId, cleanSavedRows(rows)]),
+        );
+      }
+
+      function restoreMapOfDrafts(saved, allowedChoiceIds) {
+        return new Map(
+          Object.entries(saved || {})
+            .filter(([choiceId]) => allowedChoiceIds.has(choiceId))
+            .map(([choiceId, draft]) => [
+              choiceId,
+              {
+                text: String(draft?.text || ""),
+                spokenText: String(draft?.spokenText || ""),
+                focusChar: String(draft?.focusChar || ""),
+                imageNotes: String(draft?.imageNotes || ""),
+              },
+            ]),
+        );
+      }
+
+      function loadPlannerMemory(model) {
+        state.storageKey = plannerStorageKey(model);
+        const allowedChoiceIds = new Set(model.recommendations.map((choice) => choice.choiceId));
+        try {
+          const saved = JSON.parse(localStorage.getItem(state.storageKey) || "null");
+          if (!saved) return false;
+          state.selectedChoiceId = allowedChoiceIds.has(saved.selectedChoiceId) ? saved.selectedChoiceId : "";
+          state.selectedIndexes = restoreMapOfArrays(saved.selectedIndexes, allowedChoiceIds);
+          state.imageNotesBySentence = restoreMapOfStrings(saved.imageNotesBySentence);
+          state.customRowsByChoice = restoreMapOfRows(saved.customRowsByChoice, allowedChoiceIds);
+          state.customDraftsByChoice = restoreMapOfDrafts(saved.customDraftsByChoice, allowedChoiceIds);
+          return true;
+        } catch {
+          return false;
+        }
+      }
+
+      function savePlannerMemory(model = currentModel()) {
+        if (!state.storageKey) state.storageKey = plannerStorageKey(model);
+        const payload = {
+          savedAt: new Date().toISOString(),
+          lessonId: model.lessonId,
+          selectedChoiceId: state.selectedChoiceId,
+          selectedIndexes: mapToObject(state.selectedIndexes, (set) => [...set]),
+          imageNotesBySentence: mapToObject(state.imageNotesBySentence),
+          customRowsByChoice: mapToObject(state.customRowsByChoice),
+          customDraftsByChoice: mapToObject(state.customDraftsByChoice),
+        };
+        try {
+          localStorage.setItem(state.storageKey, JSON.stringify(payload));
+        } catch {
+          $("statusLine").textContent = "瀏覽器沒有允許儲存草稿，離開頁面前請先複製 JSON。";
+        }
+      }
+
+      function clearPlannerMemory(model = currentModel()) {
+        const key = state.storageKey || plannerStorageKey(model);
+        localStorage.removeItem(key);
+        state.selectedChoiceId = "";
+        state.selectedIndexes = new Map();
+        state.imageNotesBySentence = new Map();
+        state.customRowsByChoice = new Map();
+        state.customDraftsByChoice = new Map();
+        state.feedbackByChoice = new Map();
+        state.storageKey = key;
+      }
+
       function escapeAttr(value) {
         return String(value || "")
           .replaceAll("&", "&amp;")
@@ -849,7 +954,9 @@
         if (!response.ok) throw new Error(`讀取 planner-data.json 失敗：${response.status}`);
         state.data = await response.json();
         const model = recommend(state.data);
+        const restored = loadPlannerMemory(model);
         render(model);
+        if (restored) $("statusLine").textContent = "已恢復上次留下的本課草稿。";
       }
 
       function currentModel() {
@@ -865,6 +972,7 @@
             state.selectedIndexes.set(state.selectedChoiceId, new Set([0, 1, 2, 3].filter((index) => choice?.sentenceCandidates[index])));
           }
           render(currentModel());
+          savePlannerMemory();
           $("statusLine").textContent = "已選這個字，候選卡已移到上方。";
           scrollSelectedChoiceIntoView();
           return;
@@ -883,6 +991,7 @@
           state.selectedChoiceId = choiceId;
           if (!text) {
             setChoiceFeedback(choiceId, "請先輸入句子。");
+            savePlannerMemory(model);
             render(model);
             return;
           }
@@ -890,11 +999,13 @@
           const missingChars = forbiddenChars({ text }, allowedChars);
           if (missingChars.length > 0) {
             setChoiceFeedback(choiceId, `這句有未學字：${missingChars.join("、")}。`);
+            savePlannerMemory(model);
             render(model);
             return;
           }
           if (focusChar && !hanChars(text).includes(focusChar)) {
             setChoiceFeedback(choiceId, `focus「${focusChar}」沒有出現在句子裡。`);
+            savePlannerMemory(model);
             render(model);
             return;
           }
@@ -903,6 +1014,7 @@
           state.customRowsByChoice.set(choiceId, rows);
           state.customDraftsByChoice.set(choiceId, { text: "", spokenText: "", focusChar: "", imageNotes: "" });
           setChoiceFeedback(choiceId, `已新增：「${text}」。`);
+          savePlannerMemory();
           render(currentModel());
           return;
         }
@@ -915,6 +1027,7 @@
           if (rows[index]) rows[index] = { ...rows[index], editing: !rows[index].editing };
           state.customRowsByChoice.set(choiceId, rows);
           state.selectedChoiceId = choiceId;
+          savePlannerMemory();
           render(currentModel());
           return;
         }
@@ -928,6 +1041,7 @@
           state.customRowsByChoice.set(choiceId, rows);
           state.selectedChoiceId = choiceId;
           setChoiceFeedback(choiceId, removed?.text ? `已移除：「${removed.text}」。` : "已移除一句。");
+          savePlannerMemory();
           render(currentModel());
           return;
         }
@@ -984,6 +1098,13 @@
           return;
         }
 
+        if (event.target.id === "clearDraftBtn") {
+          clearPlannerMemory();
+          render(currentModel());
+          $("statusLine").textContent = "已清除本課保留的草稿。";
+          return;
+        }
+
         if (event.target.id === "refreshBtn") {
           await loadData();
           $("statusLine").textContent = "已重新讀取資料。";
@@ -999,6 +1120,7 @@
           else set.delete(index);
           state.selectedIndexes.set(choiceId, set);
           state.selectedChoiceId = choiceId;
+          savePlannerMemory();
           updateOutput(currentModel());
         }
       });
@@ -1013,6 +1135,7 @@
           rows[index][field] = event.target.value;
           state.customRowsByChoice.set(choiceId, rows);
           state.selectedChoiceId = choiceId;
+          savePlannerMemory();
           updateOutput(currentModel());
         }
         if (event.target.matches("[data-draft-choice][data-field]")) {
@@ -1023,6 +1146,7 @@
           state.customDraftsByChoice.set(choiceId, draft);
           state.selectedChoiceId = choiceId;
           setChoiceFeedback(choiceId, "");
+          savePlannerMemory();
           updateOutput(currentModel());
         }
         if (event.target.matches("[data-image-note-choice][data-index]")) {
@@ -1030,6 +1154,7 @@
           const index = Number(event.target.dataset.index);
           state.imageNotesBySentence.set(sentenceKey(choiceId, index), event.target.value);
           state.selectedChoiceId = choiceId;
+          savePlannerMemory();
           updateOutput(currentModel());
         }
       });
