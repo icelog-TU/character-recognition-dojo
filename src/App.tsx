@@ -368,6 +368,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "sea-starfish-youngerBrother": "/assets/characters/sea/starfish/starfish-younger-brother.webp",
   "sea-starfish-youngerSister": "/assets/characters/sea/starfish/starfish-younger-sister.webp",
   "sea-starfish-baby": "/assets/characters/sea/starfish/starfish-baby.webp",
+  "sea-seahorse-grandpa": "/assets/characters/sea/seahorse/seahorse-grandpa.webp",
+  "sea-seahorse-grandma": "/assets/characters/sea/seahorse/seahorse-grandma.webp",
+  "sea-seahorse-dad": "/assets/characters/sea/seahorse/seahorse-father.webp",
+  "sea-seahorse-mom": "/assets/characters/sea/seahorse/seahorse-mother.webp",
+  "sea-seahorse-olderBrother": "/assets/characters/sea/seahorse/seahorse-older-brother.webp",
+  "sea-seahorse-olderSister": "/assets/characters/sea/seahorse/seahorse-older-sister.webp",
+  "sea-seahorse-youngerBrother": "/assets/characters/sea/seahorse/seahorse-younger-brother.webp",
+  "sea-seahorse-youngerSister": "/assets/characters/sea/seahorse/seahorse-younger-sister.webp",
+  "sea-seahorse-baby": "/assets/characters/sea/seahorse/seahorse-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
