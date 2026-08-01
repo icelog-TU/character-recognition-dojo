@@ -613,6 +613,12 @@
         state.feedbackByChoice.set(choiceId, message);
       }
 
+      function resolveFocusChar(text, requestedFocusChar, choice) {
+        const chars = hanChars(text);
+        if (requestedFocusChar.trim()) return requestedFocusChar.trim();
+        return choice.newChars.find((char) => chars.includes(char)) || chars[0] || "";
+      }
+
       function selectedSentences() {
         const choice = selectedChoice();
         if (!choice) return [];
@@ -622,7 +628,7 @@
         const custom = customRows.filter((row) => row.text.trim()).map((row) => ({
           text: row.text.trim(),
           spokenText: (row.spokenText.trim() || row.text.trim()).replace(/[，。！？、,.!?]/g, ""),
-          focusChar: row.focusChar.trim() || choice.newChars[0],
+          focusChar: resolveFocusChar(row.text.trim(), row.focusChar, choice),
           reason: "Teacher-added sentence.",
         }));
         const seen = new Set();
@@ -756,8 +762,8 @@
           const draft = draftForChoice(choiceId);
           const text = draft.text.trim();
           const spokenText = (draft.spokenText.trim() || text).replace(/[，。！？、,.!?]/g, "");
-          const focusChar = draft.focusChar.trim() || choice?.newChars[0] || "";
           if (!choice) return;
+          const focusChar = resolveFocusChar(text, draft.focusChar, choice);
           state.selectedChoiceId = choiceId;
           if (!text) {
             setChoiceFeedback(choiceId, "請先輸入句子。");
