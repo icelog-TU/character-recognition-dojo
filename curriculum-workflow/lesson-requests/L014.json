@@ -1,0 +1,94 @@
+{
+  "order": 14,
+  "newChars": [
+    "在"
+  ],
+  "zhuyin": {
+    "在": "ㄗㄞˋ"
+  },
+  "title": "在",
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在"
+    ],
+    "preferReviewChars": [
+      "有",
+      "人",
+      "山",
+      "大",
+      "的",
+      "小",
+      "我",
+      "一",
+      "個",
+      "三",
+      "手",
+      "上",
+      "下",
+      "二",
+      "你",
+      "水"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "下",
+      "你",
+      "水"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "Generated from the web next-lesson planner. Selected choice: choice-在. Approved sentences: 水在你小小的手上; 你我二人在水下; 在山下有三個大人; 有山有水，有你有我。; 我在水上，你在水下. Sentence length target: 4-12 Han characters per sentence. Prefer using recent review characters from the previous five lessons: 有 人 山 大 的 小 我 一 個 三 手 上 下 二 你 水. Across this lesson's sentence set, include each new character from the previous three lessons at least once: 下 你 水. Use only learned characters plus the new character(s). Use each sentence's imageNotes as teacher guidance when writing imagePrompt. Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval.",
+  "approvedSentences": [
+    {
+      "text": "水在你小小的手上",
+      "spokenText": "水在你小小的手上",
+      "focusChar": "在",
+      "reason": "Reviews 水、你、小小的手上 with a concrete image."
+    },
+    {
+      "text": "你我二人在水下",
+      "spokenText": "你我二人在水下",
+      "focusChar": "在",
+      "reason": "Teacher-added sentence.",
+      "imageNotes": "在游泳"
+    },
+    {
+      "text": "在山下有三個大人",
+      "spokenText": "在山下有三個大人",
+      "focusChar": "在",
+      "reason": "Teacher-added sentence."
+    },
+    {
+      "text": "有山有水，有你有我。",
+      "spokenText": "有山有水有你有我",
+      "focusChar": "有",
+      "reason": "Teacher-added sentence."
+    },
+    {
+      "text": "我在水上，你在水下",
+      "spokenText": "我在水上你在水下",
+      "focusChar": "在",
+      "reason": "Teacher-added sentence."
+    }
+  ]
+}
