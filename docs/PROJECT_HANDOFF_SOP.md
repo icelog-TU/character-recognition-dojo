@@ -354,6 +354,21 @@ Approved visual description:
 
 Use L007 images as the current visual reference for this character.
 
+Starting L012, `你` introduces a fixed second-person character.
+
+Rule:
+
+- `你` is always represented by the same young boy.
+- He is the same age as the fixed `我` girl and should feel like a peer, not an older child or adult.
+- He should remain visually consistent across all future images involving `你`.
+- Future image prompts for `你` must explicitly mention this continuity.
+
+Approved visual description:
+
+> A friendly young boy, the same age as the fixed `我` girl, preschool to early elementary age, short slightly tousled dark hair, bright friendly eyes, sky-blue shirt, green shorts, blue shoes, small orange backpack, warm curious expression, child-friendly picture-book style. He is the fixed visual representation of `你`.
+
+Use L012-S01, L012-S02, and L012-S03 as the current visual references for this character.
+
 Future recurring family/cast characters:
 
 - When `你`, `他`, `爸爸`, `媽媽`, `哥哥`, `姐姐`, `弟弟`, `妹妹`, or other recurring human roles are introduced, add an approved visual description to `docs/CURRICULUM_LEDGER.md`.
@@ -525,6 +540,6 @@ Guide narration may use TTS.
 L001-L012 are reviewed and built.
 L012 introduces 你 and uses production AI audio alignment.
 L007 introduces a fixed young girl character for 我.
-L012 introduces a fixed second-person child character for 你.
+L012 introduces a fixed second-person young boy character for 你.
 Sentence games should start around L011 as Stage 4, not before, and should not replace picture-supported sentence listening.
 ```

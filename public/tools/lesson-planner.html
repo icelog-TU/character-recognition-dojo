@@ -452,7 +452,7 @@
 
       <section class="request-panel">
         <h2>完整 lesson request 預覽</h2>
-        <p class="help">先選一個候選字，再勾選或新增句子。主要送出按鈕會出現在你正在編輯的候選字下面。</p>
+        <p class="help">先選一個候選字，再勾選或新增句子。主要送出按鈕會出現在你正在編輯的候選字下面。按送出後，看到內容貼進 Codex 對話才算真的送到。</p>
         <textarea id="requestOutput" spellcheck="false"></textarea>
         <div class="request-actions">
           <button class="btn danger" id="submitBtn" type="button">送出給 Codex</button>
@@ -672,7 +672,7 @@
                     selected
                       ? `<div class="nearby-request-panel">
                           <h4>送出這一課</h4>
-                          <p class="help">句子都確認後，從這裡就近送出給 Codex。底部 JSON 預覽會同步更新。</p>
+                          <p class="help">句子都確認後，從這裡就近複製或分享給 Codex。這個網頁不會直接連到 Codex，看到內容貼進對話才算送出。</p>
                           <div class="request-actions">
                             <button class="btn danger" type="button" data-submit-request>送出給 Codex</button>
                             <button class="btn" type="button" data-copy-request>複製 JSON</button>
@@ -955,13 +955,15 @@
           if (navigator.share) {
             try {
               await navigator.share({ title: `${model.lessonId} lesson request`, text: message });
-              $("statusLine").textContent = copied ? "已叫出分享面板，也已複製內容。請分享到 Codex 或貼回對話。" : "已叫出分享面板。若分享目標沒有 Codex，請手動複製下方文字框內容。";
+              $("statusLine").textContent = copied
+                ? "已叫出分享面板，也已複製內容。請分享到 Codex 或貼回對話；看到 JSON 出現在對話裡才算送到。"
+                : "已叫出分享面板。若分享目標沒有 Codex，請手動複製下方文字框內容；看到 JSON 出現在對話裡才算送到。";
               return;
             } catch {
               // The share panel can be canceled; the clipboard copy above is still useful.
             }
           }
-          $("statusLine").textContent = copied ? "已複製可貼給 Codex 的完整內容。請回到 Codex 對話貼上。" : "瀏覽器沒有允許自動複製。請長按下方文字框，手動全選複製後貼回 Codex。";
+          $("statusLine").textContent = copied ? "已複製可貼給 Codex 的完整內容。請回到 Codex 對話貼上；看到 JSON 出現在對話裡才算送到。" : "瀏覽器沒有允許自動複製。請長按下方文字框，手動全選複製後貼回 Codex；看到 JSON 出現在對話裡才算送到。";
           return;
         }
 

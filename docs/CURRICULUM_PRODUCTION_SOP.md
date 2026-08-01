@@ -198,6 +198,7 @@ Generate a new image only when:
 Recurring cast rules:
 
 - `我` already has a fixed young-girl design. Future prompts involving `我` must reuse it.
+- `你` already has a fixed young-boy design from L012. Future prompts involving `你` must reuse the same boy: same age as the fixed `我` girl, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, and small orange backpack.
 - When `你`, `他`, `爸爸`, `媽媽`, `哥哥`, `姐姐`, `弟弟`, `妹妹`, or other stable roles are introduced, add their approved visual description to `docs/CURRICULUM_LEDGER.md`.
 - After a role is added to the visual continuity ledger, every future image prompt must reuse that role description.
 - Do not generate unrelated versions of recurring people from lesson to lesson.
