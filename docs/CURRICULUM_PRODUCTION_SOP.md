@@ -259,6 +259,9 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 - For early lessons, `partial-order` should blank only 2-4 Han characters, not the full sentence.
 - `teach-character` can use local recording/playback first; speech scoring can be added later.
 - `choose-pronunciation` should use reviewed AI audio assets for production choices. Do not use browser TTS as the production reading for options.
+- Every Stage 4 game must provide spoken guidance when the game becomes active. Assume the child cannot read the prompt text.
+- The active Stage 4 block and the active sentence/game surface must glow visibly while guidance or feedback is playing.
+- Before publishing, check Stage 4 on a phone-width viewport. Sentence tokens, missing-character slots, and option buttons must wrap inside the card; no Han character, zhuyin, or question-mark slot may be clipped by the screen edge.
 
 ## Review Gate
 

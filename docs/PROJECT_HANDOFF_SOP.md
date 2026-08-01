@@ -231,6 +231,9 @@ Stage 4 planning rules:
 - If a sentence does not contain the current new character, do not force it to use the current new character as the target.
 - Keep the game plan fixed in curriculum data so QA and phone testing are reproducible.
 - Do not introduce these games too early. The child needs enough known characters first.
+- Stage 4 is for children who may not read prompts yet. Each game must automatically speak a complete instruction when it becomes active.
+- While Stage 4 guidance or feedback is speaking, the Stage 4 block must remain visibly active/glowing.
+- Phone layout QA is required for every Stage 4 lesson. Long sentence rows must wrap inside the card; blank slots, zhuyin, and option buttons must not be clipped.
 
 ## Typography And Zhuyin Rules
 

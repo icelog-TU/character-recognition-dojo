@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import curriculumData from "./curriculum/sample-lessons.json";
-import type { Curriculum, Lesson, LessonSentence, SentenceGameOption, SentenceGameType } from "./types";
+import type { Curriculum, Lesson, LessonSentence, SentenceGame, SentenceGameOption, SentenceGameType } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
 import "./index.css";
 
@@ -2109,6 +2109,8 @@ function LessonPanel({
               disabled={locked || activeStage < 4}
               doneCount={gameDoneCount}
               requiredCount={requiredGameRounds}
+              onSpeakStart={setSpeakingTarget}
+              onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
               onRoundDone={() => setGameDoneCount((count) => Math.min(count + 1, requiredGameRounds))}
             />
           )}
@@ -2951,6 +2953,8 @@ function SentencePracticePreview({
   disabled,
   doneCount,
   requiredCount,
+  onSpeakStart,
+  onSpeakEnd,
   onRoundDone,
 }: {
   lesson: Lesson;
@@ -2958,6 +2962,8 @@ function SentencePracticePreview({
   disabled: boolean;
   doneCount: number;
   requiredCount: number;
+  onSpeakStart: (target: SpeechTarget) => void;
+  onSpeakEnd: (target: SpeechTarget) => void;
   onRoundDone: () => void;
 }) {
   const games = lesson.sentenceGames ?? [];
@@ -2970,6 +2976,20 @@ function SentencePracticePreview({
   const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const recordedChunksRef = useRef<Blob[]>([]);
+  const onSpeakStartRef = useRef(onSpeakStart);
+  const onSpeakEndRef = useRef(onSpeakEnd);
+  const gameGuide = game && sentence ? gameGuideText(game, sentence) : "";
+
+  const speakStageFour = useCallback(async (text: string) => {
+    onSpeakStartRef.current("stage4");
+    await speakGuide(text);
+    onSpeakEndRef.current("stage4");
+  }, []);
+
+  useEffect(() => {
+    onSpeakStartRef.current = onSpeakStart;
+    onSpeakEndRef.current = onSpeakEnd;
+  }, [onSpeakEnd, onSpeakStart]);
 
   useEffect(() => {
     setPickedOptionIds([]);
@@ -2986,6 +3006,11 @@ function SentencePracticePreview({
   useEffect(() => () => {
     if (recordedAudioUrl) URL.revokeObjectURL(recordedAudioUrl);
   }, [recordedAudioUrl]);
+
+  useEffect(() => {
+    if (disabled || !gameGuide || doneCount >= requiredCount) return;
+    void speakStageFour(gameGuide);
+  }, [disabled, doneCount, gameGuide, requiredCount, speakStageFour]);
 
   if (!game || !sentence) {
     return <p className="block-note">這一課還沒有設定句子遊戲。</p>;
@@ -3012,7 +3037,7 @@ function SentencePracticePreview({
   function handleFindChar(index: number) {
     if (index !== targetIndex) {
       playMissChime();
-      void speakGuide("再找找看。");
+      void speakStageFour("再找找看。");
       return;
     }
     completeRound();
@@ -3021,7 +3046,7 @@ function SentencePracticePreview({
   function handleMissingOption(option: SentenceGameOption) {
     if (!option.correct) {
       playMissChime();
-      void speakGuide("這個字不對喔，再找找看。");
+      void speakStageFour("這個字不對喔，再找找看。");
       return;
     }
     setPickedOptionIds([option.id]);
@@ -3034,7 +3059,7 @@ function SentencePracticePreview({
     if (option.text !== expectedText) {
       playMissChime();
       setPickedOptionIds([]);
-      void speakGuide("順序不對，我們再排一次。");
+      void speakStageFour("順序不對，我們再排一次。");
       return;
     }
     const nextPicked = [...pickedOptionIds, option.id];
@@ -3046,14 +3071,14 @@ function SentencePracticePreview({
     if (option.audioSrc) {
       await playAudioSrc(option.audioSrc);
     } else {
-      await speakGuide(option.text);
+      await speakStageFour(option.text);
     }
   }
 
   function handlePronunciationChoice(option: SentenceGameOption) {
     if (!option.correct) {
       playMissChime();
-      void speakGuide("這個念法不對喔，再聽一次。");
+      void speakStageFour("這個念法不對喔，再聽一次。");
       return;
     }
     completeRound();
@@ -3061,7 +3086,7 @@ function SentencePracticePreview({
 
   async function startRecording() {
     if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
-      await speakGuide("這個瀏覽器不能錄音，先當作完成。");
+      await speakStageFour("這個瀏覽器不能錄音，先當作完成。");
       completeRound();
       return;
     }
@@ -3069,7 +3094,7 @@ function SentencePracticePreview({
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     } catch {
-      await speakGuide("沒有打開麥克風，先當作完成。");
+      await speakStageFour("沒有打開麥克風，先當作完成。");
       completeRound();
       return;
     }
@@ -3107,6 +3132,7 @@ function SentencePracticePreview({
           <SentenceGameLine
             sentence={sentence}
             zhuyinMap={zhuyinMap}
+            targetChar={game.targetChar}
             clickable
             foundIndexes={roundComplete ? new Set([targetIndex]) : new Set()}
             onCharClick={handleFindChar}
@@ -3122,6 +3148,7 @@ function SentencePracticePreview({
           <SentenceGameLine
             sentence={sentence}
             zhuyinMap={zhuyinMap}
+            targetChar={game.targetChar}
             foundIndexes={new Set([targetIndex])}
           />
           <div className="teach-character-panel">
@@ -3148,7 +3175,7 @@ function SentencePracticePreview({
     if (game.type === "missing-character") {
       return (
         <>
-          <SentenceGameLine sentence={sentence} zhuyinMap={zhuyinMap} blanks={filledBlanks} />
+          <SentenceGameLine sentence={sentence} zhuyinMap={zhuyinMap} targetChar={game.targetChar} blanks={filledBlanks} />
           <GameOptionGrid options={game.options ?? []} pickedOptionIds={pickedOptionIds} onPick={handleMissingOption} />
         </>
       );
@@ -3157,7 +3184,7 @@ function SentencePracticePreview({
     if (game.type === "partial-order") {
       return (
         <>
-          <SentenceGameLine sentence={sentence} zhuyinMap={zhuyinMap} blanks={filledBlanks} />
+          <SentenceGameLine sentence={sentence} zhuyinMap={zhuyinMap} targetChar={game.targetChar} blanks={filledBlanks} />
           <GameOptionGrid options={game.options ?? []} pickedOptionIds={pickedOptionIds} onPick={handleOrderOption} />
         </>
       );
@@ -3197,9 +3224,26 @@ function SentencePracticePreview({
   );
 }
 
+function gameGuideText(game: SentenceGame, sentence: LessonSentence) {
+  if (game.type === "find-character") {
+    return `句子遊戲，找字。請找到「${game.targetChar}」。看句子，點一下「${game.targetChar}」。`;
+  }
+  if (game.type === "teach-character") {
+    return `句子遊戲，教角色念字。角色說，這個字我不會念，請你幫我。請按開始錄音，念出「${game.targetChar}」。`;
+  }
+  if (game.type === "missing-character") {
+    return `字寶寶不見了。句子裡有一個問號，請把「${game.targetChar}」找回來。看下面的字卡，點正確的字。`;
+  }
+  if (game.type === "partial-order") {
+    return `句子重排。句子裡有幾個字不見了。請照順序點下面的字卡，把字放回句子。`;
+  }
+  return `誰念得對。這一句是「${sentence.spokenText}」。請先聽每一個聲音，再選念得對的那一個。`;
+}
+
 function SentenceGameLine({
   sentence,
   zhuyinMap,
+  targetChar,
   blanks,
   clickable = false,
   foundIndexes = new Set<number>(),
@@ -3207,6 +3251,7 @@ function SentenceGameLine({
 }: {
   sentence: LessonSentence;
   zhuyinMap: Map<string, string>;
+  targetChar?: string;
   blanks?: Map<number, string>;
   clickable?: boolean;
   foundIndexes?: Set<number>;
@@ -3242,7 +3287,9 @@ function SentenceGameLine({
                   <Zhuyin value={zhuyinMap.get(char) ?? ""} />
                 </>
               );
-              const className = `char-token${foundIndexes.has(hanIndex) ? " found" : ""}`;
+              const className = `char-token${foundIndexes.has(hanIndex) ? " found" : ""}${
+                targetChar === char ? " target-game-char" : ""
+              }`;
               if (clickable) {
                 const currentIndex = hanIndex;
                 return (

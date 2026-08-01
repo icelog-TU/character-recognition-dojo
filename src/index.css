@@ -1279,6 +1279,7 @@ button.char-token {
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
+  overflow: hidden;
 }
 
 .active-block {
@@ -1639,6 +1640,7 @@ button.char-token {
 
 .practice-meta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 10px;
@@ -1652,14 +1654,55 @@ button.char-token {
 }
 
 .sentence-game-card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   border-color: rgba(34, 132, 123, 0.28);
   background: linear-gradient(180deg, #ffffff 0%, #f5fbf8 100%);
+  box-shadow: 0 0 0 5px rgba(34, 132, 123, 0.1), 0 14px 28px rgba(34, 132, 123, 0.12);
+  animation: active-block-glow 1.6s ease-in-out infinite;
+}
+
+.sentence-game-card .sentence-line {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 8px 4px;
+}
+
+.sentence-game-card .sentence-line-row {
+  width: 100%;
+  min-width: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
 }
 
 .sentence-game-card button.char-token {
   appearance: none;
   border: 2px solid transparent;
   font: inherit;
+}
+
+.sentence-game-card .char-token {
+  flex: 0 1 clamp(42px, 17vw, 58px);
+  min-width: 0;
+  min-height: clamp(50px, 16vw, 60px);
+  padding: 4px 2px;
+}
+
+.sentence-game-card .target-game-char {
+  border-color: rgba(34, 132, 123, 0.5);
+  background: #eef8f4;
+}
+
+.sentence-game-card .hanzi {
+  font-size: clamp(2rem, 11vw, 2.45rem);
+}
+
+.sentence-game-card .zhuyin-mark {
+  font-size: clamp(0.54rem, 2.7vw, 0.68rem);
+  min-width: 1.35em;
 }
 
 .sentence-game-card button.char-token:not(:disabled):active {
@@ -1669,13 +1712,14 @@ button.char-token {
 .sentence-blank {
   display: inline-grid;
   place-items: center;
-  min-width: 58px;
-  min-height: 58px;
+  flex: 0 1 clamp(48px, 18vw, 64px);
+  min-width: 0;
+  min-height: clamp(52px, 17vw, 64px);
   border: 2px dashed var(--primary);
   border-radius: 8px;
   background: #eef8f4;
   color: var(--primary-strong);
-  font-size: 2.2rem;
+  font-size: clamp(2rem, 11vw, 2.45rem);
   font-weight: 900;
   line-height: 1;
 }
@@ -1688,12 +1732,13 @@ button.char-token {
 
 .game-option-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
   gap: 10px;
   margin-top: 12px;
 }
 
 .game-option {
+  min-width: 0;
   min-height: 62px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1756,6 +1801,24 @@ button.char-token {
   border-radius: 8px;
   background: #ffffff;
   padding: 10px;
+}
+
+@media (max-width: 520px) {
+  .sentence-game-card {
+    padding: 12px 8px;
+  }
+
+  .sentence-game-card .sentence-line-row {
+    gap: 6px;
+  }
+
+  .game-option-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pronunciation-choice {
+    grid-template-columns: 1fr;
+  }
 }
 
 .picture-sentence-list {
