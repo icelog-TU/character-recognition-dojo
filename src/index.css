@@ -1945,6 +1945,19 @@ button.char-token {
   border-radius: 8px;
   background: #ffffff;
   padding: 10px;
+  transition: background 140ms ease, border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.pronunciation-choice.chosen {
+  border-color: rgba(34, 132, 123, 0.72);
+  background: #eef8f4;
+  box-shadow: 0 0 0 5px rgba(34, 132, 123, 0.12);
+}
+
+.pronunciation-choice.wrong {
+  border-color: rgba(217, 71, 53, 0.78);
+  background: #fff1ee;
+  box-shadow: 0 0 0 5px rgba(217, 71, 53, 0.12);
 }
 
 .reader-avatar {
@@ -1995,6 +2008,14 @@ button.char-token {
   border-color: var(--primary);
   background: var(--green-soft);
   box-shadow: 0 0 0 5px rgba(34, 132, 123, 0.14);
+}
+
+.reader-check-button.wrong {
+  border-color: #d94735;
+  background: #fff1ee;
+  color: #b43124;
+  box-shadow: 0 0 0 5px rgba(217, 71, 53, 0.14);
+  animation: target-card-glow 520ms ease-in-out 1;
 }
 
 @media (max-width: 520px) {

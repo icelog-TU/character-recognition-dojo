@@ -246,15 +246,19 @@ Stage 4 planning rules:
 - For `find-character`, the helper must say what character is missing and explicitly tell the child to find that character in the sentence and tap the character. Avoid ambiguous wording such as "tap it" when "it" could mean the helper character.
 - For `find-character`, correct taps must give immediate visual feedback. Circle/highlight the found character as soon as the tap is accepted, before praise or completion voice finishes.
 - For `teach-character`, do not use a separate "start recording" button. The helper reads until the unknown character, asks for help, and the child presses and holds the target character itself. Play a spoken prime, then a clear ding, then start recording. If the child releases too early, keep the round active and ask again.
+- For `teach-character`, speak the hold/ding instruction only when the child presses the target character. Do not also speak that same instruction during the intro.
+- For `teach-character`, the helper's pre-target playback and the stitched replay prefix must stop before the target character audio begins. If the prefix includes the target audio, the result will sound like the target was spoken twice.
 - The `teach-character` recording ding must be reliable on mobile. Resume/unlock Web Audio before playing the ding, also provide an HTMLAudio/media fallback cue, use a clear cue lasting about 0.8-1.1 seconds, and start recording only after the ding window. If mobile microphone mode suppresses cue audio, play the cue before opening the microphone stream.
 - For `teach-character`, do not circle or highlight the unknown character before the helper reaches it and gets stuck. Do not show a separate isolated target-character panel below the sentence unless it has a real interaction.
 - After a valid `teach-character` recording, replay the sentence by stitching together the approved sentence audio before the target character, the child's recorded word, and the approved sentence audio after the target character.
 - For `partial-order`, include a dedicated replay-sentence button in the game area. It should replay the target sentence itself, not just the helper instruction.
+- For `missing-character`, include a dedicated replay-sentence button in the game area. It should replay the target sentence itself, not just the helper instruction.
 - For `partial-order`, shuffle the option cards before display. Do not let the cards appear in the correct sentence order at round start.
 - After a correct Stage 4 response, play one short praise phrase before stopping on the current round. Vary the praise, such as "你好棒", "你好厲害", or "太棒了". Do not auto-advance. Speak a prompt telling the child to press the red button for the next round or completion.
 - Stage 4 completion state must belong to the current game id. When switching rounds, the previous round's completed state must not fire the new round's completion voice or skip its instruction.
 - For `choose-pronunciation`, present different helper readers, such as frog, fox, and bear. The child is helping the rabbit identify who read correctly.
 - For `choose-pronunciation`, use the animal avatar itself as the listen button and a simple checkmark button as the choice. Spoken guidance must tell non-readers to press each animal's head first, then press the checkmark next to the friend who read correctly.
+- For `choose-pronunciation`, checkmark taps must give immediate visual feedback. Correct choices should brighten immediately; wrong choices should visibly mark wrong before spoken feedback finishes.
 - For `choose-pronunciation`, shuffle the reader/options order before display. The correct audio must not be fixed in the first animal position.
 
 ## Typography And Zhuyin Rules

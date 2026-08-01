@@ -2985,7 +2985,7 @@ function playAudioRange(src: string, startMs: number, endMs: number, options: Au
       .then(() => {
         emitPlaybackState();
         tick();
-        fallbackTimer = window.setTimeout(() => finish("ended"), endMs - startMs + 1000);
+        fallbackTimer = window.setTimeout(() => finish("ended"), Math.max(60, endMs - startMs));
       })
       .catch(() => finish("error"));
   });
@@ -3261,6 +3261,7 @@ function SentencePracticePreview({
   const [askingGameCharIndex, setAskingGameCharIndex] = useState<number | null>(null);
   const [recordingGameCharIndex, setRecordingGameCharIndex] = useState<number | null>(null);
   const [foundGameIndexes, setFoundGameIndexes] = useState<Set<number>>(() => new Set());
+  const [selectedPronunciationOptionId, setSelectedPronunciationOptionId] = useState<string | null>(null);
   const [floatingRecordChar, setFloatingRecordChar] = useState<string | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const recordedChunksRef = useRef<Blob[]>([]);
@@ -3303,6 +3304,7 @@ function SentencePracticePreview({
     setAskingGameCharIndex(null);
     setRecordingGameCharIndex(null);
     setFoundGameIndexes(new Set());
+    setSelectedPronunciationOptionId(null);
     setFloatingRecordChar(null);
     setRecordedAudioUrl((current) => {
       if (current) URL.revokeObjectURL(current);
@@ -3406,8 +3408,6 @@ function SentencePracticePreview({
     setTeachPhase("asking");
     await speakStageFour("哇！這個字我不會念，請教我念。");
     if (guideRunRef.current !== runId) return;
-    await speakStageFour("請按住這個字，等叮一聲之後，大聲念出來。");
-    if (guideRunRef.current !== runId) return;
     setTeachPhase("ready");
   }
 
@@ -3493,11 +3493,13 @@ function SentencePracticePreview({
   }
 
   async function handlePronunciationChoice(option: SentenceGameOption) {
+    setSelectedPronunciationOptionId(option.id);
     if (!option.correct) {
       playMissChime();
       void speakStageFour("好像不對，再聽聽看。");
       return;
     }
+    playFoundChime();
     await speakStageFour(stageFourPraise("對了", doneCount));
     completeRound();
   }
@@ -3674,6 +3676,9 @@ function SentencePracticePreview({
             activeIndex={activeGameCharIndex}
             blanks={filledBlanks}
           />
+          <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
+            🔊 重播這一句
+          </button>
           <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleMissingOption} />
         </>
       );
@@ -3704,6 +3709,7 @@ function SentencePracticePreview({
           options={shuffledGameOptions}
           disabled={disabled}
           roundComplete={isCurrentRoundComplete}
+          selectedOptionId={selectedPronunciationOptionId}
           onHear={handleChoiceAudio}
           onChoose={handlePronunciationChoice}
         />
@@ -3943,12 +3949,14 @@ function PronunciationChoiceGrid({
   options,
   disabled,
   roundComplete,
+  selectedOptionId,
   onHear,
   onChoose,
 }: {
   options: SentenceGameOption[];
   disabled: boolean;
   roundComplete: boolean;
+  selectedOptionId: string | null;
   onHear: (option: SentenceGameOption, readerName: string) => void | Promise<void>;
   onChoose: (option: SentenceGameOption) => void | Promise<void>;
 }) {
@@ -3956,8 +3964,10 @@ function PronunciationChoiceGrid({
     <div className="pronunciation-choice-grid">
       {options.map((option, index) => {
         const reader = PRONUNCIATION_READERS[index % PRONUNCIATION_READERS.length];
+        const isSelected = selectedOptionId === option.id || (roundComplete && option.correct);
+        const isWrong = selectedOptionId === option.id && !option.correct;
         return (
-          <div key={option.id} className="pronunciation-choice">
+          <div key={option.id} className={`pronunciation-choice${isSelected ? " chosen" : ""}${isWrong ? " wrong" : ""}`}>
             <button
               type="button"
               className="reader-avatar reader-avatar-button"
@@ -3970,7 +3980,7 @@ function PronunciationChoiceGrid({
             <strong>{reader.name}</strong>
             <button
               type="button"
-              className={`reader-check-button${roundComplete && option.correct ? " selected" : ""}`}
+              className={`reader-check-button${isSelected ? " selected" : ""}${isWrong ? " wrong" : ""}`}
               disabled={disabled || roundComplete}
               aria-label={`選${reader.name}念對了`}
               onClick={() => void onChoose(option)}
