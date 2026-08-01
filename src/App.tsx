@@ -3335,11 +3335,11 @@ function SentencePracticePreview({
   const shuffledGameOptions = useMemo(() => {
     if (!game?.options?.length) return [];
     const shuffled = stableShuffledOptions(game.options, `${lesson.id}:${game.id}:${game.sentenceId}`);
-    if (game.type === "choose-pronunciation" && shuffled[0]?.correct && shuffled.length > 1) {
-      return [...shuffled.slice(1), shuffled[0]];
+    if (game.type === "choose-pronunciation") {
+      return placeCorrectPronunciationOption(shuffled, (lesson.order - 1) % Math.min(shuffled.length, PRONUNCIATION_READERS.length));
     }
     return shuffled;
-  }, [game?.id, game?.options, game?.sentenceId, game?.type, lesson.id]);
+  }, [game?.id, game?.options, game?.sentenceId, game?.type, lesson.id, lesson.order]);
 
   const speakStageFour = useCallback(async (text: string) => {
     onSpeakStartRef.current("stage4");
@@ -3993,6 +3993,15 @@ function stableShuffledOptions(options: SentenceGameOption[], seed: string) {
     return [...shuffled.slice(offset), ...shuffled.slice(0, offset)];
   }
   return shuffled;
+}
+
+function placeCorrectPronunciationOption(options: SentenceGameOption[], correctIndex: number) {
+  const currentCorrectIndex = options.findIndex((option) => option.correct);
+  if (currentCorrectIndex < 0 || currentCorrectIndex === correctIndex) return options;
+  const ordered = [...options];
+  const [correctOption] = ordered.splice(currentCorrectIndex, 1);
+  ordered.splice(Math.min(correctIndex, ordered.length), 0, correctOption);
+  return ordered;
 }
 
 function hashSeed(value: string) {

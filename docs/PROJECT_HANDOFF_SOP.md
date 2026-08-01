@@ -283,6 +283,7 @@ Stage 4 planning rules:
 - For `choose-pronunciation`, present different helper readers, such as frog, fox, and bear. The child is helping the rabbit identify who read correctly.
 - For `choose-pronunciation`, use the animal avatar itself as the listen button and a simple checkmark button as the choice. Spoken guidance must tell non-readers to press each animal's head first, then press the checkmark next to the friend who read correctly.
 - For `choose-pronunciation`, wrong choices should be near misses: same sentence length and only 1-2 Han characters different from the correct sentence. Do not use a completely different reviewed sentence as a wrong audio choice.
+- For `choose-pronunciation`, the correct reader must be distributed across animal positions. Do not let the correct answer repeatedly land on the same animal. The app currently rotates the correct reader by lesson order after shuffling wrong choices.
 - For `choose-pronunciation`, checkmark taps must give immediate visual feedback. Correct choices should brighten immediately; wrong choices should visibly mark wrong before spoken feedback finishes.
 - For `choose-pronunciation`, shuffle the reader/options order before display. The correct audio must not be fixed in the first animal position.
 
