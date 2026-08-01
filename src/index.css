@@ -1696,6 +1696,25 @@ button.char-token {
   font-size: clamp(0.56rem, 2.1vw, 0.68rem);
 }
 
+@media (min-width: 781px) and (max-width: 1180px) {
+  .picture-sentence-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .picture-sentence-card img,
+  .picture-sentence-card .image-placeholder {
+    width: min(100%, 460px);
+    max-height: 460px;
+  }
+
+  .picture-sentence-card .sentence-card {
+    width: min(100%, 560px);
+  }
+}
+
 .round-title {
   margin: 0 0 10px;
   font-size: 1.15rem;
