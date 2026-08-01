@@ -214,6 +214,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "land-elephant-youngerBrother": "/assets/characters/land/elephant/elephant-younger-brother.webp",
   "land-elephant-youngerSister": "/assets/characters/land/elephant/elephant-younger-sister.webp",
   "land-elephant-baby": "/assets/characters/land/elephant/elephant-baby.webp",
+  "land-koala-grandpa": "/assets/characters/land/koala/koala-grandpa.webp",
+  "land-koala-grandma": "/assets/characters/land/koala/koala-grandma.webp",
+  "land-koala-dad": "/assets/characters/land/koala/koala-father.webp",
+  "land-koala-mom": "/assets/characters/land/koala/koala-mother.webp",
+  "land-koala-olderBrother": "/assets/characters/land/koala/koala-older-brother.webp",
+  "land-koala-olderSister": "/assets/characters/land/koala/koala-older-sister.webp",
+  "land-koala-youngerBrother": "/assets/characters/land/koala/koala-younger-brother.webp",
+  "land-koala-youngerSister": "/assets/characters/land/koala/koala-younger-sister.webp",
+  "land-koala-baby": "/assets/characters/land/koala/koala-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
