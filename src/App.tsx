@@ -200,7 +200,7 @@ const PAGE_GUIDE_TEXT: Record<AppPage, string> = {
   practice: GUIDE_TEXT.homeWelcome,
   catalog: "這裡是漢字總覽。你可以找找看已經解鎖的字，點進去重新練習。",
   records: "這裡是學習記錄。你可以看看自己有多少金幣、星星和完成的課。",
-  gacha: "這裡是轉蛋。請按上面有禮物圖案的大按鈕，用十個金幣抽一個角色。",
+  gacha: "這裡是轉蛋。請按紅色大按鈕，用十個金幣抽一個角色。",
   collection: "這裡是角色收藏。先選動物區塊，再點下面的角色，可以加愛心，也可以看角色互動。",
   settings: "這裡是設定。之後可以調整聲音和資料。",
 };
@@ -333,6 +333,14 @@ function realmUnlocked(realmId: RealmId, ownedCharacters: Record<string, number>
 
 function activeGachaRealm(ownedCharacters: Record<string, number>): RealmId {
   return CREATURE_REALMS.find((realm) => realmUnlocked(realm.id, ownedCharacters) && !realmComplete(realm.id, ownedCharacters))?.id ?? "space";
+}
+
+function realmGuideText(realmId: RealmId, ownedCharacters: Record<string, number>): string {
+  const realmIndex = CREATURE_REALMS.findIndex((candidate) => candidate.id === realmId);
+  const realm = CREATURE_REALMS[realmIndex] ?? CREATURE_REALMS[0];
+  if (realmUnlocked(realm.id, ownedCharacters)) return `這裡是${realm.label}。請點下面已經收集到的角色。`;
+  const previousRealm = CREATURE_REALMS[Math.max(0, realmIndex - 1)];
+  return `${realm.label}還沒解鎖。${previousRealm.label}都收集完畢，才會解鎖。`;
 }
 
 function drawCharacter(realmId: RealmId, ownedCharacters: Record<string, number>, duplicateGachaStreak: number): GachaDrawResult {
@@ -588,7 +596,8 @@ function App() {
       [characterId]: heartCount(prev, characterId) + 1,
     }));
     playCelebrateChime();
-    void speakGuide(`${character.name}${character.familyRoleLabel}得到一顆愛心。現在有${nextHearts}顆愛心。`);
+    const unlockedInteraction = characterInteractions(character).find((interaction) => interaction.heart === nextHearts);
+    void speakGuide(`${character.name}${character.familyRoleLabel}得到一顆愛心。解鎖了${unlockedInteraction?.label ?? "新的互動"}。`);
   }
 
   function handleCharacterInteractionSeen(characterId: string, index: number) {
@@ -1392,10 +1401,9 @@ function CollectionPage({
     if (focusedCharacter) {
       void speakGuide(`這是${focusedCharacter.name}${focusedCharacter.familyRoleLabel}。可以加愛心，也可以看下面的角色互動。`);
     } else {
-      const focusedRealm = CREATURE_REALMS.find((candidate) => candidate.id === focus.realmId);
-      if (focusedRealm) void speakGuide(`這裡是${focusedRealm.label}。請點下面已經收集到的角色。`);
+      void speakGuide(realmGuideText(focus.realmId, ownedCharacters));
     }
-  }, [focus]);
+  }, [focus, ownedCharacters]);
 
   useEffect(() => {
     if (selectedCharacter && selectedCharacter.realmId !== visibleRealm.id) {
@@ -1408,7 +1416,7 @@ function CollectionPage({
     setInteractionMessage(interaction.message);
     onInteractionSeen(character.characterId, index);
     playStartChime();
-    void speakGuide(interaction.message);
+    void speakGuide(`${character.name}${character.familyRoleLabel}說，${interaction.message}`);
   }
 
   if (selectedCharacter && selectedOwned) {
@@ -1486,7 +1494,7 @@ function CollectionPage({
                 setSelectedCharacterId(null);
                 setInteractionMessage("");
                 playStartChime();
-                void speakGuide(`這裡是${candidate.label}。請點下面已經收集到的角色。`);
+                void speakGuide(realmGuideText(candidate.id, ownedCharacters));
               }}
             >
               <span className="realm-icon" aria-hidden>{candidate.icon}</span>
@@ -1510,7 +1518,7 @@ function CollectionPage({
       {!unlocked && (
         <div className="collection-helper locked-note" style={{ "--realm-color": visibleRealm.color } as CSSProperties}>
           <strong>這一區還沒解鎖。</strong>
-          <span>先把前面的動物朋友收集滿，這裡就會打開。</span>
+          <span>{realmGuideText(visibleRealm.id, ownedCharacters)}</span>
         </div>
       )}
 

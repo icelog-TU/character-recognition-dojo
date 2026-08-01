@@ -119,6 +119,7 @@ The gacha page is designed as a toddler-facing page, not an adult settings page.
 - The gacha button stays near the top of the page and includes a clear gift graphic.
 - The gacha card uses one central stage: before drawing it shows a large gift; after drawing the same stage changes into the character result.
 - The result must stay visible near the draw button on phone. Do not move it below realm progress.
+- The page guide should tell the child to press the red big button, not the gift button.
 - Realm collection progress appears below the gacha machine.
 - Each realm progress card is clickable and opens that realm's collection page.
 - Realm cards should use recognizable icons: land, sea, sky, and space must read visually before a child can read the words.
@@ -131,6 +132,7 @@ The collection page also speaks on entry.
 - Realm tabs are shown first.
 - Choosing a realm plays a sound and speaks which realm the child is viewing.
 - All four realms can be opened from the tabs. Locked realms may be viewed, but their characters remain unavailable until unlocked.
+- Locked realm narration should explain the exact prerequisite realm that must be completed first.
 - The character list is grouped by species.
 - Each species section shows the species icon, species name, and collected count out of 9.
 - Each species section shows the 9 family roles in a compact grid.
@@ -138,8 +140,8 @@ The collection page also speaks on entry.
 - The personal page is a dedicated view, not an inserted panel above the long collection list.
 - The personal page needs a clear one-tap return button back to the collection list.
 - Tapping a character plays a sound and speaks that the child can add hearts or open interactions.
-- Adding a heart spends 3 stars, plays a reward sound, and speaks the new heart total.
-- Opening an interaction speaks the interaction line.
+- Adding a heart spends 3 stars, plays a reward sound, and speaks which interaction was unlocked.
+- Opening an interaction should speak the character name plus the line, e.g. `貓奶奶說...`.
 - The collection page includes a small gacha shortcut button near the page heading.
 - Until final AI art is approved, character avatars use species icon plus family-role accessories and affection-based mood badges. Final generated art can replace this symbolic layer later.
 

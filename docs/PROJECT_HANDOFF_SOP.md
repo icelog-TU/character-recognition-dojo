@@ -127,6 +127,7 @@ Current page rules:
 - The gacha draw button is the first major control on the page. It has a gift graphic, costs 10 coins, plays a sound, speaks that the draw is starting, and then reveals the result.
 - The gacha card uses one central stage: before drawing it shows a large gift; after drawing the same stage changes into the character result. Do not put the result below realm progress.
 - Avoid the old separate spinning-orb presentation; the child should see the gift/character in the center of the card.
+- The gacha page guide should say to press the red big button, not the gift button, because the gift is no longer inside the button.
 - Realm progress is shown below the gacha machine. Each realm card opens that realm in the collection page.
 - Realm cards must use child-readable icons for land, sea, sky, and space.
 - The gacha result card opens the drawn character's personal collection panel.
@@ -134,12 +135,15 @@ Current page rules:
 - The collection page shows realm tabs first, then a tappable character list.
 - The collection page has a small shortcut button back to gacha.
 - All four realms can be opened. Locked realms show a locked message and unavailable characters, but the child can still see the area.
+- Locked realm narration must name the unlock requirement, e.g. `海裡的生物還沒解鎖。地上的生物都收集完畢，才會解鎖。`
 - The character list is grouped by species. Each species section shows the animal icon, animal name, collected count, and 9 family-role cards.
 - Tapping an owned character switches into a dedicated character personal page, not an inserted panel above the long collection list.
 - The character personal page must have a clear one-tap button back to the collection list and a shortcut to gacha.
 - Character detail is treated as the character's personal page. Keep the character centered and keep interactions inside that page.
 - Current character visuals use species icon plus family-role accessories and affection-based mood badges. Do not generate hundreds of final AI role images until the art style is approved.
 - Realm selection, character selection, heart spending, and interaction opening all need sound feedback.
+- When a character gains a heart, narration should announce the newly unlocked interaction rather than only reporting the heart count.
+- When a character interaction is opened, narration must include the character name, e.g. `鹿姐姐說...`, because the child may not be able to read the text.
 
 Do not batch-generate all final role images yet. First lock one species family's visual style, review it on phone, then generate character art in small approved batches.
 
