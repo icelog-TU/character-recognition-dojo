@@ -261,6 +261,14 @@ Do not build sentence reading by stitching one audio file per character. That cr
 
 Sentence audio must read `spokenText`, not punctuation. If sentence audio is regenerated, `charTimings` must be regenerated.
 
+Production timing rule:
+
+- After `npm run assets:audio -- --lesson L###`, run `npm run assets:align:ai -- --lesson L###` for final sentence highlighting.
+- `assets:align:ai` transcribes the final `.m4a`, checks it against `spokenText`, and writes `charTimings`.
+- Do not use the older `assets:align` as final production timing; it is only a rough energy-based fallback and can drift on connected speech and neutral-tone endings.
+- Do not accept sentence audio where the last Han character is missing, swallowed, or clipped. This is especially important for final `的` and final nouns such as `手`.
+- Before pushing a new lesson, manually play each Stage 3 sentence and check the last 2-4 highlighted characters against the heard audio.
+
 ### Guide Narration
 
 TTS is acceptable for UI guidance, e.g. entrance instructions and stage instructions.
@@ -370,6 +378,7 @@ Important files:
 - `scripts/generate-audio-drafts.mjs`: AI audio draft generation.
 - `scripts/process-audio-assets.mjs`: audio normalization.
 - `scripts/align-audio-timings.mjs`: character timing generation.
+- `scripts/align-audio-timings-ai.mjs`: production AI transcription timing generation.
 - `scripts/optimize-images.mjs`: image conversion/compression.
 - `docs/CURRICULUM_LEDGER.md`: lesson history and character map.
 - `docs/CURRICULUM_PRODUCTION_SOP.md`: production workflow.
@@ -416,6 +425,7 @@ The app is a Taiwan zhuyin character-recognition app for young children.
 Do not use Hanyu pinyin.
 Sentence text is horizontal, with zhuyin vertically on the right of each Han character.
 Curriculum sentence audio must use AI audio files with charTimings.
+Production charTimings must use npm run assets:align:ai, then manual playback review.
 Guide narration may use TTS.
 L001-L008 are reviewed and built.
 The next lesson after L008 is not yet chosen.

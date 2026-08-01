@@ -91,6 +91,16 @@ The normalized `.m4a` files go to:
 public/assets/lessons/L001/audio/
 ```
 
+Then generate production character timings from the final `.m4a` files:
+
+```bash
+npm run assets:align:ai -- --lesson L001
+```
+
+This step uses AI transcription timestamps, verifies the transcript matches `spokenText`, and writes `audio.durationMs` plus `audio.charTimings` back into `src/curriculum/sample-lessons.json`.
+
 ## Important
 
 The audio script creates natural whole-sentence audio. It does not create one audio file per sentence character. Character-by-character timing still needs to be produced from the final sentence audio before production release.
+
+Do not accept a sentence audio file until transcription confirms every Han character in `spokenText` was actually spoken. Pay special attention to final neutral-tone `的` and final syllables, which can be too light or clipped if the audio processing trims the ending.
