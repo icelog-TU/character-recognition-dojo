@@ -34,6 +34,8 @@ https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-planner.html
 
 The web entry is separate from the child-facing app. It is a static teacher tool for previewing recommendations, selecting sentences, adding custom sentences, and copying/downloading a lesson request JSON.
 
+The planner stores drafts in the browser's local storage by target lesson id, such as `L022`, so a GitHub Pages refresh after `L021` is merged should not erase the `L022` draft. This is still device-local draft storage, not a submitted lesson request. For important work, press `送出給 Codex`, `複製 JSON`, or `下載 JSON` before leaving the page.
+
 After curriculum data or the candidate bank changes, refresh the web entry data:
 
 ```bash

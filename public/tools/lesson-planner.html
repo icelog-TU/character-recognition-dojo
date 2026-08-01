@@ -709,7 +709,7 @@
 
       <section class="request-panel" id="requestPanel" hidden>
         <h2>完整 lesson request 預覽</h2>
-        <p class="help">先選一個候選字，再勾選或新增句子。主要送出按鈕會出現在你正在編輯的候選字下面。按送出後，看到內容貼進 Codex 對話才算真的送到。</p>
+        <p class="help">先選一個候選字，再勾選或新增句子。草稿會依課號保存在這台裝置；按送出後，看到內容貼進 Codex 對話才算真的送到。</p>
         <textarea id="requestOutput" spellcheck="false"></textarea>
         <div class="request-actions">
           <button class="btn danger" id="submitBtn" type="button">送出給 Codex</button>
@@ -744,6 +744,8 @@
       const sentenceLengthRange = { min: 4, max: 12 };
       const targetApprovedSentenceCount = 5;
       const targetGeneratedSentenceCount = 10;
+      const plannerStoragePrefix = "character-recognition-dojo:lesson-planner:v2:";
+      const activePlannerStorageKey = `${plannerStoragePrefix}active`;
       const fallbackZhuyinByChar = {
         和: "ㄏㄢˋ",
         很: "ㄏㄣˇ",
@@ -760,6 +762,11 @@
 
       function lessonId(order) {
         return `L${String(order).padStart(3, "0")}`;
+      }
+
+      function lessonOrderFromId(id) {
+        const match = String(id || "").match(/^L(\d+)$/i);
+        return match ? Number(match[1]) : 0;
       }
 
       function lastLessons(lessons, count) {
@@ -1368,7 +1375,55 @@
       }
 
       function plannerStorageKey(model) {
-        return `character-recognition-dojo:lesson-planner:v2:after-${lessonId(model.latestOrder)}`;
+        return `${plannerStoragePrefix}lesson-${model.lessonId}`;
+      }
+
+      function legacyPlannerStorageKey(model) {
+        return `${plannerStoragePrefix}after-${lessonId(model.latestOrder)}`;
+      }
+
+      function savedLessonOrder(saved) {
+        return Number(saved?.order) || lessonOrderFromId(saved?.lessonId);
+      }
+
+      function isNearbySavedPlanner(saved, model) {
+        const order = savedLessonOrder(saved);
+        return order === model.latestOrder + 1 || order === model.latestOrder + 2;
+      }
+
+      function readPlannerMemory(key) {
+        try {
+          return JSON.parse(localStorage.getItem(key) || "null");
+        } catch {
+          return null;
+        }
+      }
+
+      function findPlannerMemory(model) {
+        const active = readPlannerMemory(activePlannerStorageKey);
+        if (active?.storageKey) {
+          const activeSaved = readPlannerMemory(active.storageKey);
+          if (activeSaved && isNearbySavedPlanner(activeSaved, model)) return activeSaved;
+        }
+
+        const direct = readPlannerMemory(plannerStorageKey(model));
+        if (direct && isNearbySavedPlanner(direct, model)) return direct;
+
+        const legacy = readPlannerMemory(legacyPlannerStorageKey(model));
+        if (legacy && isNearbySavedPlanner(legacy, model)) return legacy;
+
+        const nearby = [];
+        try {
+          for (let index = 0; index < localStorage.length; index += 1) {
+            const key = localStorage.key(index);
+            if (!key?.startsWith(plannerStoragePrefix) || key === activePlannerStorageKey) continue;
+            const saved = readPlannerMemory(key);
+            if (saved && isNearbySavedPlanner(saved, model)) nearby.push(saved);
+          }
+        } catch {
+          return null;
+        }
+        return nearby.sort((a, b) => String(b.savedAt || "").localeCompare(String(a.savedAt || "")))[0] || null;
       }
 
       function cleanPlannedLessons(value, latestOrder) {
@@ -1510,11 +1565,14 @@
       }
 
       function loadPlannerMemory(model) {
-        state.storageKey = plannerStorageKey(model);
         try {
-          const saved = JSON.parse(localStorage.getItem(state.storageKey) || "null");
+          const saved = findPlannerMemory(model);
           if (!saved) return false;
-          state.planOffset = clampPlanOffset(saved.planOffset);
+          const order = savedLessonOrder(saved);
+          const restoredOffset = order - model.latestOrder;
+          state.planOffset = restoredOffset === 1 || restoredOffset === 2 ? restoredOffset : clampPlanOffset(saved.planOffset);
+          const activeModel = recommend(state.data);
+          state.storageKey = plannerStorageKey(activeModel);
           state.plannedLessons = cleanPlannedLessons(saved.plannedLessons, model.latestOrder);
           const restoredModel = recommend(state.data);
           state.manualChoices = cleanManualChoices(saved.manualChoices, restoredModel.learnedChars);
@@ -1530,6 +1588,7 @@
           state.imageNotesBySentence = restoreMapOfStrings(saved.imageNotesBySentence);
           state.customRowsByChoice = restoreMapOfRows(saved.customRowsByChoice, allowedChoiceIds);
           state.customDraftsByChoice = restoreMapOfDrafts(saved.customDraftsByChoice, allowedChoiceIds);
+          savePlannerMemory(restoredModel);
           return true;
         } catch {
           return false;
@@ -1537,9 +1596,10 @@
       }
 
       function savePlannerMemory(model = currentModel()) {
-        if (!state.storageKey) state.storageKey = plannerStorageKey(model);
+        state.storageKey = plannerStorageKey(model);
         const payload = {
           savedAt: new Date().toISOString(),
+          order: model.order,
           lessonId: model.lessonId,
           planOffset: state.planOffset,
           plannedLessons: state.plannedLessons,
@@ -1555,14 +1615,20 @@
         };
         try {
           localStorage.setItem(state.storageKey, JSON.stringify(payload));
+          localStorage.setItem(
+            activePlannerStorageKey,
+            JSON.stringify({ storageKey: state.storageKey, lessonId: model.lessonId, savedAt: payload.savedAt }),
+          );
         } catch {
           $("statusLine").textContent = "瀏覽器沒有允許儲存草稿，離開頁面前請先複製 JSON。";
         }
       }
 
       function clearPlannerMemory(model = currentModel()) {
-        const key = state.storageKey || plannerStorageKey(model);
+        const key = plannerStorageKey(model);
         localStorage.removeItem(key);
+        const active = readPlannerMemory(activePlannerStorageKey);
+        if (active?.storageKey === key) localStorage.removeItem(activePlannerStorageKey);
         state.selectedChoiceId = "";
         state.previewChoiceId = "";
         state.planOffset = 1;
