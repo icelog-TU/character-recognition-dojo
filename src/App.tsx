@@ -187,6 +187,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "land-panda-youngerBrother": "/assets/characters/land/panda/panda-younger-brother.webp",
   "land-panda-youngerSister": "/assets/characters/land/panda/panda-younger-sister.webp",
   "land-panda-baby": "/assets/characters/land/panda/panda-baby.webp",
+  "land-tiger-grandpa": "/assets/characters/land/tiger/tiger-grandpa.webp",
+  "land-tiger-grandma": "/assets/characters/land/tiger/tiger-grandma.webp",
+  "land-tiger-dad": "/assets/characters/land/tiger/tiger-father.webp",
+  "land-tiger-mom": "/assets/characters/land/tiger/tiger-mother.webp",
+  "land-tiger-olderBrother": "/assets/characters/land/tiger/tiger-older-brother.webp",
+  "land-tiger-olderSister": "/assets/characters/land/tiger/tiger-older-sister.webp",
+  "land-tiger-youngerBrother": "/assets/characters/land/tiger/tiger-younger-brother.webp",
+  "land-tiger-youngerSister": "/assets/characters/land/tiger/tiger-younger-sister.webp",
+  "land-tiger-baby": "/assets/characters/land/tiger/tiger-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
