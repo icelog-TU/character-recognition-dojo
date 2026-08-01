@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-01T02:48:19.826Z",
+  "exportedAt": "2026-08-01T05:07:58.549Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -2331,6 +2331,507 @@
           "displayLines": [
             "有一大",
             "二小的手"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L011-G01",
+          "type": "find-character",
+          "sentenceId": "L011-S01",
+          "targetChar": "上",
+          "prompt": "找到「上」。"
+        },
+        {
+          "id": "L011-G02",
+          "type": "teach-character",
+          "sentenceId": "L011-S02",
+          "targetChar": "下",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            4
+          ]
+        },
+        {
+          "id": "L011-G03",
+          "type": "missing-character",
+          "sentenceId": "L011-S03",
+          "targetChar": "下",
+          "prompt": "字寶寶不見了，把「下」找回來。",
+          "missingIndexes": [
+            3
+          ],
+          "options": [
+            {
+              "id": "down",
+              "text": "下",
+              "correct": true
+            },
+            {
+              "id": "up",
+              "text": "上",
+              "correct": false
+            },
+            {
+              "id": "mountain",
+              "text": "山",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L011-G04",
+          "type": "partial-order",
+          "sentenceId": "L011-S04",
+          "targetChar": "下",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "mountain",
+              "text": "山",
+              "correct": true
+            },
+            {
+              "id": "down",
+              "text": "下",
+              "correct": true
+            },
+            {
+              "id": "have",
+              "text": "有",
+              "correct": true
+            },
+            {
+              "id": "one",
+              "text": "一",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L011-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L011-S05",
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "有一大二小的手",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L008/audio/L008-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "有一大一小的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L011/audio/L011-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "有二大二小的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L011/audio/L011-G05-wrong2.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L012",
+      "order": 12,
+      "newChars": [
+        "你"
+      ],
+      "zhuyin": {
+        "你": "ㄋㄧˇ"
+      },
+      "charAudio": {
+        "你": "/assets/lessons/L012/audio/char-u4f60.m4a"
+      },
+      "title": "你",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "「你」用來指正在聽話或被說話的人，讓孩子開始練習你我之間的句子。"
+      },
+      "sentences": [
+        {
+          "id": "L012-S01",
+          "text": "你一個人上山",
+          "spokenText": "你一個人上山",
+          "focusChar": "你",
+          "imagePrompt": "A warm child-friendly picture-book illustration of the fixed second-person child character walking upward on a simple cute mountain path alone. The child is preschool to early elementary age, short dark hair, bright friendly eyes, sky-blue shirt, green shorts, small orange backpack, warm curious expression. The mountain path should clearly show going up the mountain. Exactly one child, no other people. Clean light background, soft watercolor texture, gentle colored pencil linework, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L012/images/L012-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L012/audio/L012-S01.m4a",
+            "durationMs": 3296,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 590
+              },
+              {
+                "charIndex": 2,
+                "startMs": 590,
+                "endMs": 760
+              },
+              {
+                "charIndex": 3,
+                "startMs": 760,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1540,
+                "endMs": 1800
+              }
+            ]
+          },
+          "displayLines": [
+            "你一個人",
+            "上山"
+          ]
+        },
+        {
+          "id": "L012-S02",
+          "text": "你一個人下山",
+          "spokenText": "你一個人下山",
+          "focusChar": "你",
+          "imagePrompt": "A warm child-friendly picture-book illustration of the fixed second-person child character walking down a simple cute mountain path alone, coming from higher ground toward the lower foreground. Use the same child design as L012-S01: preschool to early elementary age, short dark hair, bright friendly eyes, sky-blue shirt, green shorts, small orange backpack, warm curious expression. Make the downward direction visually obvious. Exactly one child, no other people. Clean light background, soft watercolor texture, gentle colored pencil linework, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L012/images/L012-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L012/audio/L012-S02.m4a",
+            "durationMs": 4421,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 640
+              },
+              {
+                "charIndex": 1,
+                "startMs": 640,
+                "endMs": 950
+              },
+              {
+                "charIndex": 2,
+                "startMs": 950,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1900,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2400,
+                "endMs": 2620
+              }
+            ]
+          },
+          "displayLines": [
+            "你一個人",
+            "下山"
+          ]
+        },
+        {
+          "id": "L012-S03",
+          "text": "你手上有三個小山",
+          "spokenText": "你手上有三個小山",
+          "focusChar": "你",
+          "imagePrompt": "A warm child-friendly picture-book illustration showing the fixed second-person child character holding one open hand palm upward. On the palm are exactly three small interlocking toy-brick mountains, clearly toy mountains and not real mountains. Use the same child design as L012-S01: short dark hair, sky-blue shirt, green shorts, small orange backpack if visible. Make the hand and all three toy mountains large and countable on a phone screen. No text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L012/images/L012-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L012/audio/L012-S03.m4a",
+            "durationMs": 3912,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1200,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2400,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2740,
+                "endMs": 2960
+              }
+            ]
+          },
+          "displayLines": [
+            "你手上",
+            "有三個小山"
+          ]
+        },
+        {
+          "id": "L012-S04",
+          "text": "我手下有一個大山",
+          "spokenText": "我手下有一個大山",
+          "focusChar": "我",
+          "imagePrompt": "A warm child-friendly picture-book illustration of the fixed first-person young girl character presenting one large interlocking toy-brick mountain on a tabletop. Her hand is palm facing downward above or beside the toy, as if introducing and showing the one big mountain toy below her hand. Use the established first-person girl design: shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes if visible. The toy mountain must be large, clearly one object, and obviously a toy rather than a real mountain. No text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L012/images/L012-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L012/audio/L012-S04.m4a",
+            "durationMs": 5039,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1180,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1500,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2120,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2360,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2600,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3160,
+                "endMs": 3340
+              }
+            ]
+          },
+          "displayLines": [
+            "我手下",
+            "有一個大山"
+          ]
+        },
+        {
+          "id": "L012-S05",
+          "text": "有二大一小的手",
+          "spokenText": "有二大一小的手",
+          "focusChar": "有",
+          "imagePrompt": "A warm child-friendly picture-book illustration showing hands only, no full people: exactly two large open hands and exactly one small open hand grouped together. The two big hands and one small hand must be easy to count and compare on a phone screen. Clean light background, soft watercolor texture, gentle colored pencil linework, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L012/images/L012-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L012/audio/L012-S05.m4a",
+            "durationMs": 3982,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 680
+              },
+              {
+                "charIndex": 1,
+                "startMs": 680,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1100,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1560,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2380,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2660,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2980,
+                "endMs": 3340
+              }
+            ]
+          },
+          "displayLines": [
+            "有二大",
+            "一小的手"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L012-G01",
+          "type": "find-character",
+          "sentenceId": "L012-S01",
+          "targetChar": "你",
+          "prompt": "找到「你」。"
+        },
+        {
+          "id": "L012-G02",
+          "type": "teach-character",
+          "sentenceId": "L012-S02",
+          "targetChar": "你",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            0
+          ]
+        },
+        {
+          "id": "L012-G03",
+          "type": "missing-character",
+          "sentenceId": "L012-S03",
+          "targetChar": "你",
+          "prompt": "字寶寶不見了，把「你」找回來。",
+          "missingIndexes": [
+            0
+          ],
+          "options": [
+            {
+              "id": "you",
+              "text": "你",
+              "correct": true
+            },
+            {
+              "id": "me",
+              "text": "我",
+              "correct": false
+            },
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L012-G04",
+          "type": "partial-order",
+          "sentenceId": "L012-S04",
+          "targetChar": "我",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2
+          ],
+          "options": [
+            {
+              "id": "me",
+              "text": "我",
+              "correct": true
+            },
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": true
+            },
+            {
+              "id": "down",
+              "text": "下",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L012-G05",
+          "type": "missing-character",
+          "sentenceId": "L012-S05",
+          "targetChar": "有",
+          "prompt": "少了一個字，把「有」放回句子。",
+          "missingIndexes": [
+            0
+          ],
+          "options": [
+            {
+              "id": "have",
+              "text": "有",
+              "correct": true
+            },
+            {
+              "id": "one",
+              "text": "一",
+              "correct": false
+            },
+            {
+              "id": "two",
+              "text": "二",
+              "correct": false
+            }
           ]
         }
       ]

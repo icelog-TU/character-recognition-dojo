@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 11:
+Characters taught after Lesson 12:
 
-`一 二 三 人 個 大 的 小 手 我 有 山 上 下`
+`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你`
 
 Recent review pool for the next lesson:
 
-`下 上 山 有 我 小 手 的 大 人 三`
+`你 下 上 山 有 我 手 小 大 一 二`
 
 ## Visual Continuity Ledger
 
@@ -27,7 +27,7 @@ Use this section before writing image prompts. Once a recurring person or family
 | Role / Character | First Lesson | Approved Visual Description | Reuse Rule |
 |---|---:|---|---|
 | 我 | L007 | Friendly young girl, preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, bright curious eyes, yellow top, coral-red pinafore dress, red shoes, warm expression, child-friendly picture-book style. | Always use this same girl whenever `我` appears. Use L007 images as the current reference. |
-| 你 | TBD | TBD after the character/role is introduced and reviewed. | Do not invent a new design until approved. |
+| 你 | L012 | Friendly young child, preschool to early elementary age, short dark hair, bright friendly eyes, sky-blue shirt, green shorts, small orange backpack, warm curious expression, child-friendly picture-book style. | Always use this same child whenever `你` appears. |
 | 他 | TBD | TBD after the character/role is introduced and reviewed. | Do not invent a new design until approved. |
 | 爸爸 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same father design in all future images. |
 | 媽媽 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same mother design in all future images. |
@@ -57,10 +57,11 @@ Image reuse rule:
 | L009 | 山 | 一、二、三、人、個、大、的、小、手、我、有、山 | 有人有山 / 大大的山小小的山 / 我一個人的山 / 三個人的大手小手 / 我有小小的手 | 一、三、人、個、大、的、小、手、我、有 | Introduces `山` and reviews existence, size contrast, the fixed `我` character, and hand phrases. |
 | L010 | 上 | 一、二、三、人、個、大、的、小、手、我、有、山、上 | 我一個人上山 / 山上有三個大人 / 我的手小小的 / 我的手上有一個小人 / 有大大的山，有小小的山 | 一、三、個、人、的、大、小、手、我、有、山 | Introduces `上` through mountain location/action and hand-surface use. Reuses L007-S03 for `我的手小小的` and L009-S02 for the big/small mountain picture. |
 | L011 | 下 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下 | 有三個人上山 / 有一個人下山 / 我的手下有三個小山 / 山下有一個大人 / 有一大二小的手 | 一、二、三、人、個、大、的、小、手、我、有、山、上 | Introduces `下` through mountain direction/location and hand-under-object phrasing. Reuses L008-S05 image/audio for `有一大二小的手`. |
+| L012 | 你 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下、你 | 你一個人上山 / 你一個人下山 / 你手上有三個小山 / 我手下有一個大山 / 有二大一小的手 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下 | Introduces `你` as a fixed second-person child character and reviews up/down mountain, hand position, toy mountains, and big/small hand contrast. |
 
 ## Planned Lessons
 
-L011 is selected and built: new character `下`; reviewed sentences are `有三個人上山`, `有一個人下山`, `我的手下有三個小山`, `山下有一個大人`, and `有一大二小的手`.
+L012 is selected and built: new character `你`; reviewed sentences are `你一個人上山`, `你一個人下山`, `你手上有三個小山`, `我手下有一個大山`, and `有二大一小的手`.
 
 ## Planning Rule For New Lessons
 
@@ -81,7 +82,7 @@ Use this shape when asking AI to draft sentence candidates:
 We are building a Taiwan zhuyin character recognition app for young children.
 
 Already taught characters:
-一 二 三 人 個 大 的 小 手 我 有 山 上 下
+一 二 三 人 個 大 的 小 手 我 有 山 上 下 你
 
 New character for this lesson:
 {NEW_CHARACTER}
@@ -92,6 +93,6 @@ Rules:
 - No Hanyu pinyin.
 - No punctuation in spokenText.
 - Prefer concrete, imageable sentences.
-- Reuse characters from the recent review pool when natural: 下 上 山 有 我 小 手 的 大 人 三.
+- Reuse characters from the recent review pool when natural: 你 下 上 山 有 我 手 小 大 一 二.
 - Keep the sentence set short if the character set cannot support natural variety.
 ```
