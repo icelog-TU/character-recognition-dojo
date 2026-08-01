@@ -379,6 +379,31 @@
         font-size: 1.12rem;
       }
 
+      .optimizer-summary {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .optimizer-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        border: 1px solid rgba(25, 121, 111, 0.22);
+        border-radius: 999px;
+        background: #eefaf5;
+        color: var(--primary);
+        padding: 4px 10px;
+        font-weight: 850;
+      }
+
+      .optimizer-pill.warning {
+        border-color: rgba(240, 85, 69, 0.32);
+        background: var(--accent-soft);
+        color: #a43c31;
+      }
+
       .custom-section {
         margin-top: 14px;
         border-top: 1px solid var(--line);
@@ -756,6 +781,7 @@
       const sentenceLengthRange = { min: 4, max: 12 };
       const targetApprovedSentenceCount = 5;
       const targetGeneratedSentenceCount = 10;
+      const targetNewCharCountInLesson = 3;
       const plannerStoragePrefix = "character-recognition-dojo:lesson-planner:v2:";
       const activePlannerStorageKey = `${plannerStoragePrefix}active`;
       const fallbackZhuyinByChar = {
@@ -831,7 +857,271 @@
           });
       }
 
-      function scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars) {
+      function charCountInText(text, char) {
+        return hanChars(text).filter((candidate) => candidate === char).length;
+      }
+
+      function sentenceAllowed(text, allowedChars) {
+        const allowed = new Set(allowedChars);
+        const chars = hanChars(text);
+        const length = chars.length;
+        return length >= sentenceLengthRange.min && length <= sentenceLengthRange.max && chars.every((char) => allowed.has(char));
+      }
+
+      function phraseAllowed(text, allowedChars) {
+        const allowed = new Set(allowedChars);
+        return hanChars(text).every((char) => allowed.has(char));
+      }
+
+      function addPhrase(list, text, allowedChars) {
+        if (text && phraseAllowed(text, allowedChars) && !list.includes(text)) list.push(text);
+      }
+
+      function phraseBank(allowedChars, targetChar) {
+        const subjects = [];
+        const places = [];
+        const things = [];
+        const targetPhrases = [];
+        const nonObjectChars = new Set(["在", "上", "下", "很", "高", "和", "看", "去", "來", "飛", "中", "前", "後", "裡", "左", "右"]);
+        const zhiMeasureTargets = new Set(["鳥", "手", "指"]);
+        const geMeasureTargets = new Set(["家", "門", "山", "人"]);
+        const objectLike = !nonObjectChars.has(targetChar);
+
+        [
+          "我",
+          "你",
+          "你和我",
+          "我和你",
+          "大人",
+          "小孩",
+          "一個人",
+          "一個小孩",
+          "三個人",
+          "大人和小孩",
+        ].forEach((phrase) => addPhrase(subjects, phrase, allowedChars));
+
+        [
+          "家",
+          "我家",
+          "你家",
+          "山上",
+          "山下",
+          "高山上",
+          "高山下",
+          "水上",
+          "水下",
+          "家中",
+          "水中",
+          "家裡",
+          "水裡",
+          "家前",
+          "家後",
+          "山前",
+          "山後",
+          "門前",
+          "門後",
+        ].forEach((phrase) => addPhrase(places, phrase, allowedChars));
+
+        [
+          "手",
+          "大手",
+          "小手",
+          "手指",
+          "一隻手",
+          "一隻小手",
+          "一隻大手",
+          "鳥",
+          "小鳥",
+          "一隻鳥",
+          "一隻小鳥",
+          "三隻小鳥",
+          "家",
+          "小家",
+          "水",
+          "山",
+          "高山",
+        ].forEach((phrase) => addPhrase(things, phrase, allowedChars));
+
+        if (objectLike) {
+          addPhrase(targetPhrases, targetChar, allowedChars);
+          [`小${targetChar}`, `大${targetChar}`, `很大的${targetChar}`, `很小的${targetChar}`, `很高的${targetChar}`].forEach((phrase) =>
+            addPhrase(targetPhrases, phrase, allowedChars),
+          );
+          if (geMeasureTargets.has(targetChar)) [`一個${targetChar}`, `三個${targetChar}`].forEach((phrase) => addPhrase(targetPhrases, phrase, allowedChars));
+          if (zhiMeasureTargets.has(targetChar)) [`一隻${targetChar}`, `三隻${targetChar}`].forEach((phrase) => addPhrase(targetPhrases, phrase, allowedChars));
+        }
+
+        return {
+          subjects: subjects.length ? subjects : ["我"].filter((phrase) => phraseAllowed(phrase, allowedChars)),
+          places,
+          things,
+          targetPhrases: unique(targetPhrases.filter((phrase) => phraseAllowed(phrase, allowedChars))),
+        };
+      }
+
+      function addSentenceCandidate(pool, seen, text, choice, allowedChars, reason, focusChar = "") {
+        const normalized = normalizeSpokenText(text);
+        if (!sentenceAllowed(text, allowedChars) || seen.has(text)) return;
+        seen.add(text);
+        pool.push({
+          text,
+          spokenText: normalized,
+          focusChar: focusChar || (hanChars(text).includes(choice.newChars[0]) ? choice.newChars[0] : resolveFocusChar(text, "", choice)),
+          reason,
+        });
+      }
+
+      function generatedPatternPool(choice, model, allowedChars, includeTargetPatterns = true) {
+        const targetChar = choice.newChars[0];
+        const bank = phraseBank(allowedChars, targetChar);
+        const pool = [];
+        const seen = new Set();
+        const add = (text, reason, focusChar = targetChar) => addSentenceCandidate(pool, seen, text, choice, allowedChars, reason, focusChar);
+
+        if (includeTargetPatterns) {
+          for (const targetPhrase of bank.targetPhrases) {
+            for (const place of bank.places) {
+              add(`${targetPhrase}在${place}`, "最佳化器依已核准課程的「物／人在位置」句型產生。");
+              add(`${place}有${targetPhrase}`, "最佳化器依已核准課程的「位置有物」句型產生。");
+            }
+            for (const subject of bank.subjects) {
+              add(`${subject}有${targetPhrase}`, "最佳化器依已核准課程的「人物有物」句型產生。");
+              if (phraseAllowed("和", allowedChars)) add(`${subject}和${targetPhrase}在家`, "最佳化器依已核准課程的互動句型產生。");
+              if (phraseAllowed("看", allowedChars)) add(`${subject}看${targetPhrase}`, "最佳化器依已核准課程的看圖動作句型產生。");
+            }
+            for (const thing of bank.things) {
+              if (phraseAllowed("和", allowedChars)) add(`${targetPhrase}和${thing}`, "最佳化器依已核准課程的並列句型產生。");
+              if (phraseAllowed("上", allowedChars)) add(`${targetPhrase}在${thing}上`, "最佳化器依已核准課程的位置句型產生。");
+              if (phraseAllowed("下", allowedChars)) add(`${targetPhrase}在${thing}下`, "最佳化器依已核准課程的位置句型產生。");
+            }
+            if (phraseAllowed(`很大`, allowedChars)) add(`${targetPhrase}很大`, "最佳化器依已核准課程的形容句型產生。");
+            if (phraseAllowed(`很小`, allowedChars)) add(`${targetPhrase}很小`, "最佳化器依已核准課程的形容句型產生。");
+            if (phraseAllowed(`很高`, allowedChars)) add(`${targetPhrase}很高`, "最佳化器依已核准課程的形容句型產生。");
+          }
+        }
+
+        const recentReviewSentences = lastLessons(model.lessons, 5)
+          .flatMap((lesson) => lesson.sentences || [])
+          .map((sentence) => sentence.text)
+          .filter((text) => sentenceAllowed(text, allowedChars));
+        for (const text of recentReviewSentences) {
+          add(text, "直接取自近五課已核准句，作為複習候選。", resolveFocusChar(text, "", choice));
+        }
+
+        return pool;
+      }
+
+      function badSentencePenalty(text) {
+        const badPatterns = ["二個", "來家", "去家", "飛在家上", "大門在家下", "小鳥飛在家上"];
+        return badPatterns.some((pattern) => text.includes(pattern)) ? 80 : 0;
+      }
+
+      function sentenceQuality(sentence, context) {
+        const chars = hanChars(sentence.text);
+        const uniqueChars = unique(chars);
+        const targetHits = chars.filter((char) => char === context.targetChar).length;
+        const reviewHits = uniqueChars.filter((char) => context.reviewCountChars.includes(char)).length;
+        const requiredHits = uniqueChars.filter((char) => context.requiredRecentChars.includes(char)).length;
+        const length = chars.length;
+        const lengthBonus = length >= 6 && length <= 10 ? 16 : length >= 4 && length <= 12 ? 8 : -40;
+        const sourceBonus = sentence.reason.includes("已核准") || sentence.reason.includes("近五課") ? 9 : 0;
+        return targetHits * 34 + reviewHits * 9 + requiredHits * 13 + lengthBonus + sourceBonus - badSentencePenalty(sentence.text);
+      }
+
+      function planMetrics(sentences, context) {
+        const firstFive = sentences.slice(0, targetApprovedSentenceCount);
+        const allText = firstFive.map((sentence) => sentence.text).join("");
+        const targetCount = charCountInText(allText, context.targetChar);
+        const reviewCovered = context.reviewCountChars.filter((char) => allText.includes(char));
+        const requiredCovered = context.requiredRecentChars.filter((char) => allText.includes(char));
+        return {
+          targetCount,
+          reviewCovered,
+          missingReviewChars: context.reviewCountChars.filter((char) => !reviewCovered.includes(char)),
+          requiredCovered,
+          missingRequiredChars: context.requiredRecentChars.filter((char) => !requiredCovered.includes(char)),
+        };
+      }
+
+      function optimizeSentencePool(pool, context) {
+        const selected = [];
+        const remaining = [...pool]
+          .map((sentence) => ({ sentence, baseScore: sentenceQuality(sentence, context) }))
+          .sort((a, b) => b.baseScore - a.baseScore);
+
+        for (let slot = 0; slot < targetGeneratedSentenceCount && remaining.length > 0; slot += 1) {
+          const currentText = selected.map((sentence) => sentence.text).join("");
+          const missingReview = context.reviewCountChars.filter((char) => !currentText.includes(char));
+          const missingRequired = context.requiredRecentChars.filter((char) => !currentText.includes(char));
+          const currentTargetCount = charCountInText(currentText, context.targetChar);
+          let bestIndex = 0;
+          let bestValue = -Infinity;
+
+          for (let index = 0; index < remaining.length; index += 1) {
+            const { sentence, baseScore } = remaining[index];
+            const chars = hanChars(sentence.text);
+            const targetHits = chars.filter((char) => char === context.targetChar).length;
+            const reviewGain = missingReview.filter((char) => chars.includes(char)).length;
+            const requiredGain = missingRequired.filter((char) => chars.includes(char)).length;
+            const needsTarget = slot < 3 || currentTargetCount < targetNewCharCountInLesson;
+            const targetBonus = needsTarget ? targetHits * 55 : targetHits * 8;
+            const noTargetPenalty = needsTarget && targetHits === 0 ? 120 : 0;
+            const coverageBonus = slot >= 3 ? reviewGain * 28 + requiredGain * 40 : reviewGain * 12 + requiredGain * 18;
+            const value = baseScore + targetBonus + coverageBonus - noTargetPenalty - selected.length * 0.2;
+            if (value > bestValue) {
+              bestValue = value;
+              bestIndex = index;
+            }
+          }
+
+          selected.push(remaining.splice(bestIndex, 1)[0].sentence);
+        }
+
+        return selected;
+      }
+
+      function optimizeChoiceSentencesFromEntry(entry, context) {
+        const choice = {
+          choiceId: `choice-${entry.char}`,
+          newChars: [entry.char],
+          zhuyin: { [entry.char]: entry.zhuyin },
+        };
+        const allowedChars = unique([...context.learnedChars, entry.char]);
+        const seen = new Set();
+        const pool = [];
+        const localSentences = cleanSentences(entry.sentenceCandidates, allowedChars);
+        for (const sentence of localSentences) {
+          addSentenceCandidate(pool, seen, sentence.text, choice, allowedChars, sentence.reason || "候選字資料庫句，經最佳化器重新排序。", sentence.focusChar);
+        }
+        const includeTargetPatterns = localSentences.length < Math.min(6, targetGeneratedSentenceCount);
+        for (const sentence of generatedPatternPool(choice, { lessons: context.lessons }, allowedChars, includeTargetPatterns)) {
+          addSentenceCandidate(pool, seen, sentence.text, choice, allowedChars, sentence.reason, sentence.focusChar);
+        }
+        const optimized = optimizeSentencePool(pool, { ...context, targetChar: entry.char });
+        return {
+          candidates: optimized,
+          metrics: planMetrics(optimized, { ...context, targetChar: entry.char }),
+          poolSize: pool.length,
+        };
+      }
+
+      function optimizeChoiceSentences(choice, model) {
+        return optimizeChoiceSentencesFromEntry(
+          {
+            char: choice.newChars[0],
+            zhuyin: choice.zhuyin?.[choice.newChars[0]] || "",
+            sentenceCandidates: choice.sentenceCandidates || [],
+          },
+          {
+            lessons: model.lessons,
+            learnedChars: model.learnedChars,
+            requiredRecentChars: model.requiredRecentChars,
+            reviewCountChars: model.reviewCountChars,
+          },
+        );
+      }
+
+      function scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars, optimization, lessons = []) {
         const learned = new Set(learnedChars);
         const requiredMissing = (entry.requires || []).filter((char) => !learned.has(char));
         if (requiredMissing.length > 0 || learned.has(entry.char)) return null;
@@ -839,20 +1129,37 @@
         const requiredRecent = new Set(requiredRecentChars || []);
         const reviewCount = new Set(reviewCountChars || []);
         const allowedChars = unique([...learnedChars, entry.char]);
-        const validSentences = cleanSentences(entry.sentenceCandidates, allowedChars);
+        const optimized =
+          optimization ||
+          optimizeChoiceSentencesFromEntry(entry, {
+            lessons,
+            learnedChars,
+            requiredRecentChars,
+            reviewCountChars,
+          });
+        const validSentences = optimized.candidates.length ? optimized.candidates : cleanSentences(entry.sentenceCandidates, allowedChars);
         const sentenceChars = unique(validSentences.flatMap((sentence) => hanChars(sentence.text)));
         const reviewHits = sentenceChars.filter((char) => recent.has(char)).length;
         const requiredHits = sentenceChars.filter((char) => requiredRecent.has(char)).length;
         const reviewCountHits = sentenceChars.filter((char) => reviewCount.has(char)).length;
         const sentenceDepth = Math.min(validSentences.length, targetGeneratedSentenceCount);
         const missingSentencePenalty = Math.max(0, 5 - validSentences.length) * 20;
+        const firstFive = validSentences.slice(0, targetApprovedSentenceCount);
+        const firstFiveText = firstFive.map((sentence) => sentence.text).join("");
+        const targetHitsInPlan = charCountInText(firstFiveText, entry.char);
+        const missingTargetPenalty = Math.max(0, targetNewCharCountInLesson - targetHitsInPlan) * 42;
+        const missingReviewPenalty = Math.max(0, reviewCountChars.length - (optimized.metrics?.reviewCovered.length || 0)) * 7;
         return (
           Number(entry.priority || 1000) -
+          targetHitsInPlan * 18 -
           requiredHits * 12 -
           reviewCountHits * 6 -
           reviewHits * 2 -
           sentenceDepth * 2 +
-          missingSentencePenalty
+          missingSentencePenalty +
+          missingTargetPenalty +
+          missingReviewPenalty -
+          Math.min(optimized.poolSize || 0, 80) * 0.15
         );
       }
 
@@ -920,9 +1227,14 @@
           }));
         const recommendations = [...manualEntries, ...bankEntries]
           .map((entry) => {
-            const score = scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars);
+            const optimization = optimizeChoiceSentencesFromEntry(entry, {
+              lessons,
+              learnedChars,
+              requiredRecentChars,
+              reviewCountChars,
+            });
+            const score = scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars, optimization, lessons);
             if (score === null) return null;
-            const allowedChars = unique([...learnedChars, entry.char]);
             return {
               choiceId: `choice-${entry.char}`,
               newChars: [entry.char],
@@ -931,7 +1243,8 @@
               rationale: entry.why,
               score: manualChoiceChars.has(entry.char) ? score - 10000 : score,
               source: entry.source || "bank",
-              sentenceCandidates: cleanSentences(entry.sentenceCandidates, allowedChars),
+              optimization,
+              sentenceCandidates: optimization.candidates,
             };
           })
           .filter(Boolean)
@@ -961,7 +1274,7 @@
             <div class="metric"><strong>${model.recommendations.length}</strong><span>候選字</span></div>
           </div>
           <p class="help">資料匯出時間：${state.data.exportedAt || "未知"}</p>
-          <p class="help">造句規則：每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字；優先使用近 5 課字；近 3 課新字 ${model.requiredRecentChars.join("、")} 在整課句子中至少各出現一次。</p>
+          <p class="help">課程最佳化：前 3 句優先讓本課新字至少出現 ${targetNewCharCountInLesson} 次；後 2 句優先補近 5 課新字；每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字；近 3 課新字 ${model.requiredRecentChars.join("、")} 在整課句子中至少各出現一次。</p>
           <div class="learned">${model.learnedChars.map((char) => `<span>${char}</span>`).join("")}</div>
         `;
       }
@@ -1110,6 +1423,7 @@
                   <div>
                     <h2>${selected ? "已選" : `${originalRanks.get(choice.choiceId) || choiceIndex + 1}.`} ${choice.newChars.join("")} ${Object.values(choice.zhuyin).join(" ")}</h2>
                     <p>${choice.rationale}</p>
+                    ${optimizerSummaryHtml(choice, model)}
                   </div>
                   <div class="choice-actions">
                     <button class="btn secondary" type="button" ${selected ? "disabled" : `data-preview="${choice.choiceId}"`}>
@@ -1261,31 +1575,7 @@
       }
 
       function generatedSentenceCandidates(choice, model) {
-        const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
-        const allowed = new Set(allowedChars);
-        const char = choice.newChars[0];
-        const candidates = templateSentencesForChar(char)
-          .map((text) => ({
-            text,
-            spokenText: normalizeSpokenText(text),
-            focusChar: hanChars(text).includes(char) ? char : resolveFocusChar(text, char, choice),
-            reason: "由規劃工具產生，供教師審核與修改。",
-          }))
-          .filter((sentence) => {
-            const chars = hanChars(sentence.text);
-            return (
-              chars.length >= sentenceLengthRange.min &&
-              chars.length <= sentenceLengthRange.max &&
-              chars.every((candidateChar) => allowed.has(candidateChar)) &&
-              chars.includes(char)
-            );
-          });
-        const seen = new Set();
-        return candidates.filter((sentence) => {
-          if (seen.has(sentence.text)) return false;
-          seen.add(sentence.text);
-          return true;
-        }).slice(0, targetGeneratedSentenceCount);
+        return optimizeChoiceSentences(choice, model).candidates.slice(0, targetGeneratedSentenceCount);
       }
 
       function replaceManualChoiceCandidates(choice, candidates) {
@@ -1397,6 +1687,25 @@
               .map((char) => `<div class="review-count ${counts[char] ? "" : "zero"}">${char}<span>${counts[char] || 0}</span>次</div>`)
               .join("")}
           </div>
+        </div>`;
+      }
+
+      function optimizerSummaryHtml(choice, model) {
+        const metrics = choice.optimization?.metrics;
+        if (!metrics) return "";
+        const targetChar = choice.newChars[0];
+        const missingReview = metrics.missingReviewChars || [];
+        const missingRequired = metrics.missingRequiredChars || [];
+        const targetOk = metrics.targetCount >= targetNewCharCountInLesson;
+        const reviewOk = missingReview.length === 0;
+        const requiredOk = missingRequired.length === 0;
+        return `<div class="optimizer-summary" aria-label="課程最佳化摘要">
+          <span class="optimizer-pill ${targetOk ? "" : "warning"}">${targetChar} ${metrics.targetCount}/${targetNewCharCountInLesson} 次</span>
+          <span class="optimizer-pill ${reviewOk ? "" : "warning"}">近五課 ${metrics.reviewCovered.length}/${model.reviewCountChars.length}</span>
+          <span class="optimizer-pill ${requiredOk ? "" : "warning"}">近三課 ${metrics.requiredCovered.length}/${model.requiredRecentChars.length}</span>
+          <span class="optimizer-pill">候選池 ${choice.optimization.poolSize || choice.sentenceCandidates.length} 句</span>
+          ${missingReview.length ? `<span class="optimizer-pill warning">缺：${missingReview.join("、")}</span>` : ""}
+          ${missingRequired.length ? `<span class="optimizer-pill warning">近三課缺：${missingRequired.join("、")}</span>` : ""}
         </div>`;
       }
 
