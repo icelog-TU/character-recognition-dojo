@@ -71,10 +71,11 @@ Image reuse rule:
 | L023 | 看 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看 | 大人和小孩看三隻小鳥 / 小孩看手指上的一隻小鳥 / 手指山和三隻小鳥 / 小孩的手指和大人的手指 / 我和大家在山上看鳥 | 大人和小孩三隻鳥手指山我家在上 | 加入「看」作為觀察動作字，複習近課的「鳥」、「孩」、「指」。第三句重用 L022-S02 手指山圖片，其餘句子產生新圖。 |
 | L024 | 女 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女 | 小女孩在看一隻小鳥 / 女孩看女人的手指 / 有一隻手指在指女孩 / 大家在山上看鳥 / 你和我的三隻小鳥 | 小孩看一隻鳥人在手指有大家山上你和我的三 | Introduces `女` through girl and woman scenes. Reviews recent `孩`, `指`, and `看`; reuses approved L023-S05 image for `大家在山上看鳥` and approved L020-S03 image/audio for `你和我的三隻小鳥`. |
 | L025 | 飛 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛 | 女孩在看鳥飛 / 一隻小鳥在女孩的手指上 / 大家在看女孩 / 你看！小鳥飛很高 / 女孩的手在指一隻飛鳥 | 女孩在看鳥一隻小的手指上大家你很高 | Introduces `飛` through flying-bird scenes. Reviews recent `指`, `看`, and `女`; all five sentence images use newly generated reviewed picture-book assets. |
+| L026 | 男 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男 | 小男孩在看男人飛 / 小男孩的手指很小 / 男孩和女孩在看鳥飛 / 女孩看女人的手指 / 女孩的手在指一隻飛鳥 | 小孩在看人飛的手指很和女鳥一隻 | Introduces `男` through the fixed boy and adult man scenes. Reviews recent `看`, `女`, and `飛`; creates new images for the first three sentences and reuses approved L024-S02 and L025-S05 images for review sentences. |
 
 ## Planned Lessons
 
-L025 已選定並完成：新字 `飛`；審核句子為 `女孩在看鳥飛`、`一隻小鳥在女孩的手指上`、`大家在看女孩`、`你看！小鳥飛很高`、`女孩的手在指一隻飛鳥`。
+L026 已選定並完成：新字 `男`；審核句子為 `小男孩在看男人飛`、`小男孩的手指很小`、`男孩和女孩在看鳥飛`、`女孩看女人的手指`、`女孩的手在指一隻飛鳥`。
 
 ## Planning Rule For New Lessons
 
