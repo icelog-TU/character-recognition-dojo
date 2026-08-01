@@ -14,6 +14,7 @@
     "ai:audio": "node scripts/generate-audio-drafts.mjs",
     "ai:check": "node scripts/check-ai-setup.mjs",
     "ai:sentences": "node scripts/generate-sentence-candidates.mjs",
+    "curriculum:export-planner": "node scripts/export-planner-data.mjs",
     "curriculum:packet": "node scripts/create-generation-packet.mjs",
     "curriculum:recommend": "node scripts/recommend-next-lesson.mjs",
     "curriculum:request-from-review": "node scripts/create-request-from-review.mjs",

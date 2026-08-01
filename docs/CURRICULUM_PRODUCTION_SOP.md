@@ -26,6 +26,22 @@ For the running lesson sequence, taught-character set, and sentence history, upd
 
 Use the planner when the teacher has not already chosen the next character.
 
+Teacher web entry:
+
+```text
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-planner.html
+```
+
+The web entry is separate from the child-facing app. It is a static teacher tool for previewing recommendations, selecting sentences, adding custom sentences, and copying/downloading a lesson request JSON.
+
+After curriculum data or the candidate bank changes, refresh the web entry data:
+
+```bash
+npm run curriculum:export-planner
+```
+
+This writes `public/tools/planner-data.json`, which the web page reads on GitHub Pages.
+
 ```bash
 npm run curriculum:recommend
 ```

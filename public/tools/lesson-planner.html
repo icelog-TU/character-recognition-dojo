@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>認字練功房｜下一課規劃工具</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #25211d;
+        --muted: #6f6861;
+        --line: #ddd5ca;
+        --paper: #fffaf1;
+        --panel: #fffdf8;
+        --soft: #f5ead9;
+        --primary: #19796f;
+        --primary-soft: #e3f3ef;
+        --accent: #f05545;
+        --accent-soft: #ffe4df;
+        --gold: #e8a926;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.55;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px clamp(14px, 4vw, 28px);
+        background: #ff6506;
+        color: #fff;
+        box-shadow: 0 8px 24px rgba(117, 65, 12, 0.18);
+      }
+
+      .brand {
+        display: grid;
+        gap: 2px;
+      }
+
+      .brand strong {
+        font-size: clamp(1.1rem, 4vw, 1.55rem);
+        line-height: 1.1;
+      }
+
+      .brand span {
+        font-size: 0.86rem;
+        opacity: 0.9;
+      }
+
+      .header-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .page {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+        padding: clamp(14px, 4vw, 28px);
+      }
+
+      .panel,
+      .choice-card,
+      .request-panel {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--panel);
+        box-shadow: 0 12px 28px rgba(74, 55, 32, 0.08);
+      }
+
+      .panel {
+        padding: clamp(16px, 4vw, 24px);
+        margin-bottom: 16px;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 12px;
+        background: #fff;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: clamp(1.3rem, 5vw, 2rem);
+        line-height: 1.1;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .learned {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .learned span {
+        min-width: 34px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        padding: 4px 8px;
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .choice-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .choice-card {
+        padding: clamp(14px, 3vw, 20px);
+      }
+
+      .choice-card.selected {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 5px rgba(25, 121, 111, 0.12), 0 12px 28px rgba(25, 121, 111, 0.14);
+      }
+
+      .choice-head {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .char-badge {
+        display: grid;
+        place-items: center;
+        width: 58px;
+        height: 58px;
+        border-radius: 12px;
+        background: var(--primary-soft);
+        color: var(--primary);
+        font-size: 2.2rem;
+        font-weight: 900;
+      }
+
+      .choice-head h2 {
+        margin: 0;
+        font-size: 1.25rem;
+      }
+
+      .choice-head p,
+      .sentence-row p,
+      .help {
+        margin: 4px 0 0;
+        color: var(--muted);
+      }
+
+      .sentence-list {
+        display: grid;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .sentence-row {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        align-items: start;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        padding: 10px;
+      }
+
+      .sentence-row input {
+        width: 22px;
+        height: 22px;
+        margin-top: 4px;
+        accent-color: var(--primary);
+      }
+
+      .sentence-text {
+        font-size: 1.22rem;
+        font-weight: 850;
+      }
+
+      .sentence-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .pill {
+        border-radius: 999px;
+        background: var(--soft);
+        padding: 2px 8px;
+      }
+
+      .custom-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.4fr;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .custom-grid input,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--ink);
+        padding: 10px;
+      }
+
+      .request-panel {
+        margin-top: 16px;
+        padding: clamp(14px, 3vw, 20px);
+      }
+
+      textarea {
+        min-height: 240px;
+        resize: vertical;
+        font-family: Consolas, "SFMono-Regular", monospace;
+        font-size: 0.88rem;
+      }
+
+      .btn {
+        min-height: 42px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--primary);
+        color: #fff;
+        padding: 9px 14px;
+        font-weight: 850;
+        cursor: pointer;
+      }
+
+      .btn.secondary {
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--ink);
+      }
+
+      .btn.danger {
+        background: var(--accent);
+      }
+
+      .btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      .status {
+        margin-top: 10px;
+        color: var(--primary);
+        font-weight: 800;
+      }
+
+      @media (max-width: 760px) {
+        .summary-grid,
+        .custom-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .choice-head {
+          grid-template-columns: auto 1fr;
+        }
+
+        .choice-head .btn {
+          grid-column: 1 / -1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>下一課規劃工具</strong>
+        <span>認字練功房｜教師用入口</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn secondary" id="refreshBtn" type="button">重新整理推薦</button>
+        <a class="btn secondary" href="../">回幼兒 APP</a>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="panel" id="summaryPanel">
+        <p class="help">正在讀取教材資料。</p>
+      </section>
+
+      <section class="choice-list" id="choiceList"></section>
+
+      <section class="request-panel">
+        <h2>已選 lesson request</h2>
+        <p class="help">這裡產生的是給 Codex 建課用的審核後資料。你可以複製，或下載成 JSON。</p>
+        <textarea id="requestOutput" spellcheck="false"></textarea>
+        <div class="header-actions" style="justify-content: flex-start; margin-top: 10px">
+          <button class="btn" id="copyBtn" type="button">複製 JSON</button>
+          <button class="btn secondary" id="downloadBtn" type="button">下載 JSON</button>
+        </div>
+        <div class="status" id="statusLine"></div>
+      </section>
+    </main>
+
+    <script>
+      const state = {
+        data: null,
+        recommendations: [],
+        selectedChoiceId: "",
+        selectedIndexes: new Map(),
+        customRows: [],
+      };
+
+      const $ = (id) => document.getElementById(id);
+
+      function hanChars(text) {
+        return Array.from(text || "").filter((char) => /\p{Script=Han}/u.test(char));
+      }
+
+      function unique(items) {
+        return [...new Set(items)];
+      }
+
+      function lessonId(order) {
+        return `L${String(order).padStart(3, "0")}`;
+      }
+
+      function lastLessons(lessons, count) {
+        return [...lessons].sort((a, b) => a.order - b.order).slice(-count);
+      }
+
+      function recentReviewPool(lessons) {
+        return unique(
+          lastLessons(lessons, 5).flatMap((lesson) =>
+            (lesson.sentences || []).flatMap((sentence) => hanChars(sentence.text)),
+          ),
+        );
+      }
+
+      function forbiddenChars(sentence, allowedChars) {
+        const allowed = new Set(allowedChars);
+        return unique(hanChars(sentence.text).filter((char) => !allowed.has(char)));
+      }
+
+      function cleanSentences(sentences, allowedChars) {
+        return (sentences || [])
+          .map((sentence) => ({
+            text: String(sentence.text || ""),
+            spokenText: String(sentence.spokenText || sentence.text || "").replace(/[，。！？、,.!?]/g, ""),
+            focusChar: String(sentence.focusChar || ""),
+            reason: String(sentence.reason || ""),
+          }))
+          .filter((sentence) => sentence.text && forbiddenChars(sentence, allowedChars).length === 0);
+      }
+
+      function scoreCandidate(entry, learnedChars, recentPool) {
+        const learned = new Set(learnedChars);
+        const requiredMissing = (entry.requires || []).filter((char) => !learned.has(char));
+        if (requiredMissing.length > 0 || learned.has(entry.char)) return null;
+        const recent = new Set(recentPool);
+        const sentenceChars = unique((entry.sentenceCandidates || []).flatMap((sentence) => hanChars(sentence.text)));
+        const reviewHits = sentenceChars.filter((char) => recent.has(char)).length;
+        return Number(entry.priority || 1000) - reviewHits * 2;
+      }
+
+      function recommend(data) {
+        const lessons = [...(data.lessons || [])].sort((a, b) => a.order - b.order);
+        const latestOrder = Math.max(...lessons.map((lesson) => lesson.order));
+        const order = latestOrder + 1;
+        const learnedChars = unique(lessons.flatMap((lesson) => lesson.newChars || []));
+        const recentPool = recentReviewPool(lessons);
+        const recommendations = (data.nextCharacterBank || [])
+          .map((entry) => {
+            const score = scoreCandidate(entry, learnedChars, recentPool);
+            if (score === null) return null;
+            const allowedChars = unique([...learnedChars, entry.char]);
+            return {
+              choiceId: `choice-${entry.char}`,
+              newChars: [entry.char],
+              zhuyin: { [entry.char]: entry.zhuyin },
+              title: entry.char,
+              rationale: entry.why,
+              score,
+              sentenceCandidates: cleanSentences(entry.sentenceCandidates, allowedChars),
+            };
+          })
+          .filter(Boolean)
+          .sort((a, b) => a.score - b.score)
+          .slice(0, 6);
+        return { lessons, latestOrder, order, lessonId: lessonId(order), learnedChars, recentPool, recommendations };
+      }
+
+      function renderSummary(model) {
+        $("summaryPanel").innerHTML = `
+          <div class="summary-grid">
+            <div class="metric"><strong>${model.lessonId}</strong><span>下一課</span></div>
+            <div class="metric"><strong>${model.learnedChars.length}</strong><span>已學漢字</span></div>
+            <div class="metric"><strong>${model.latestOrder}</strong><span>目前課數</span></div>
+            <div class="metric"><strong>${model.recommendations.length}</strong><span>候選字</span></div>
+          </div>
+          <p class="help">資料匯出時間：${state.data.exportedAt || "未知"}</p>
+          <div class="learned">${model.learnedChars.map((char) => `<span>${char}</span>`).join("")}</div>
+        `;
+      }
+
+      function renderChoices(model) {
+        $("choiceList").innerHTML = model.recommendations
+          .map((choice, choiceIndex) => {
+            const selected = choice.choiceId === state.selectedChoiceId;
+            return `
+              <article class="choice-card ${selected ? "selected" : ""}">
+                <div class="choice-head">
+                  <div class="char-badge">${choice.newChars.join("")}</div>
+                  <div>
+                    <h2>${choiceIndex + 1}. ${choice.newChars.join("")} ${Object.values(choice.zhuyin).join(" ")}</h2>
+                    <p>${choice.rationale}</p>
+                  </div>
+                  <button class="btn ${selected ? "secondary" : ""}" type="button" data-select="${choice.choiceId}">
+                    ${selected ? "已選這個字" : "選這個字"}
+                  </button>
+                </div>
+                <div class="sentence-list">
+                  ${choice.sentenceCandidates
+                    .map((sentence, sentenceIndex) => {
+                      const checked = state.selectedIndexes.get(choice.choiceId)?.has(sentenceIndex) || false;
+                      return `
+                        <label class="sentence-row">
+                          <input type="checkbox" data-choice="${choice.choiceId}" data-index="${sentenceIndex}" ${checked ? "checked" : ""} />
+                          <div>
+                            <div class="sentence-text">${sentence.text}</div>
+                            <div class="sentence-meta">
+                              <span class="pill">spoken: ${sentence.spokenText}</span>
+                              <span class="pill">focus: ${sentence.focusChar}</span>
+                            </div>
+                            <p>${sentence.reason}</p>
+                          </div>
+                        </label>
+                      `;
+                    })
+                    .join("")}
+                </div>
+              </article>
+            `;
+          })
+          .join("");
+      }
+
+      function selectedChoice() {
+        return state.recommendations.find((choice) => choice.choiceId === state.selectedChoiceId);
+      }
+
+      function selectedSentences() {
+        const choice = selectedChoice();
+        if (!choice) return [];
+        const indexes = [...(state.selectedIndexes.get(choice.choiceId) || new Set())].sort((a, b) => a - b);
+        const selected = indexes.map((index) => choice.sentenceCandidates[index]).filter(Boolean);
+        const custom = state.customRows.filter((row) => row.text.trim()).map((row) => ({
+          text: row.text.trim(),
+          spokenText: (row.spokenText.trim() || row.text.trim()).replace(/[，。！？、,.!?]/g, ""),
+          focusChar: row.focusChar.trim() || choice.newChars[0],
+          reason: "Teacher-added sentence.",
+        }));
+        const seen = new Set();
+        return [...selected, ...custom].filter((sentence) => {
+          const key = `${sentence.text}\n${sentence.spokenText}`;
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+      }
+
+      function renderCustomInputs() {
+        const holder = document.createElement("div");
+        holder.innerHTML = `
+          <section class="choice-card">
+            <h2>自己新增句子</h2>
+            <p class="help">你可以補上你覺得更好的句子。spokenText 會自動去掉標點；focus 可留空。</p>
+            <div id="customRows">
+              ${state.customRows
+                .map((row, index) => `
+                  <div class="custom-grid">
+                    <input placeholder="句子" value="${escapeAttr(row.text)}" data-custom="${index}" data-field="text" />
+                    <input placeholder="spokenText，可留空" value="${escapeAttr(row.spokenText)}" data-custom="${index}" data-field="spokenText" />
+                    <input placeholder="focus" value="${escapeAttr(row.focusChar)}" data-custom="${index}" data-field="focusChar" />
+                  </div>
+                `)
+                .join("")}
+            </div>
+            <button class="btn secondary" type="button" id="addCustomBtn" style="margin-top: 10px">新增一句</button>
+          </section>
+        `;
+        $("choiceList").appendChild(holder.firstElementChild);
+      }
+
+      function escapeAttr(value) {
+        return String(value || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+
+      function buildRequest(model) {
+        const choice = selectedChoice();
+        const finalSentences = selectedSentences();
+        if (!choice) return "";
+        return JSON.stringify(
+          {
+            order: model.order,
+            newChars: choice.newChars,
+            zhuyin: choice.zhuyin,
+            title: choice.title,
+            targetSentenceCount: finalSentences.length,
+            teacherNotes: [
+              "Generated from the web next-lesson planner.",
+              `Selected choice: ${choice.choiceId}.`,
+              `Approved sentences: ${finalSentences.map((sentence) => sentence.text).join("; ")}.`,
+              "Use only learned characters plus the new character(s). Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval.",
+            ].join(" "),
+            approvedSentences: finalSentences,
+          },
+          null,
+          2,
+        );
+      }
+
+      function updateOutput(model) {
+        $("requestOutput").value = buildRequest(model);
+      }
+
+      function render(model) {
+        state.recommendations = model.recommendations;
+        if (!state.selectedChoiceId && model.recommendations[0]) {
+          state.selectedChoiceId = model.recommendations[0].choiceId;
+          state.selectedIndexes.set(state.selectedChoiceId, new Set([0, 1, 2, 3].filter((index) => model.recommendations[0].sentenceCandidates[index])));
+        }
+        renderSummary(model);
+        renderChoices(model);
+        renderCustomInputs();
+        updateOutput(model);
+      }
+
+      async function loadData() {
+        const response = await fetch(new URL("planner-data.json", window.location.href), { cache: "no-store" });
+        if (!response.ok) throw new Error(`讀取 planner-data.json 失敗：${response.status}`);
+        state.data = await response.json();
+        const model = recommend(state.data);
+        render(model);
+      }
+
+      function currentModel() {
+        return recommend(state.data);
+      }
+
+      document.addEventListener("click", async (event) => {
+        const selectButton = event.target.closest("[data-select]");
+        if (selectButton) {
+          state.selectedChoiceId = selectButton.dataset.select;
+          if (!state.selectedIndexes.has(state.selectedChoiceId)) {
+            const choice = selectedChoice();
+            state.selectedIndexes.set(state.selectedChoiceId, new Set([0, 1, 2, 3].filter((index) => choice?.sentenceCandidates[index])));
+          }
+          render(currentModel());
+          return;
+        }
+
+        if (event.target.id === "addCustomBtn") {
+          state.customRows.push({ text: "", spokenText: "", focusChar: "" });
+          render(currentModel());
+          return;
+        }
+
+        if (event.target.id === "copyBtn") {
+          await navigator.clipboard.writeText($("requestOutput").value);
+          $("statusLine").textContent = "已複製 JSON。";
+          return;
+        }
+
+        if (event.target.id === "downloadBtn") {
+          const model = currentModel();
+          const blob = new Blob([$("requestOutput").value + "\n"], { type: "application/json" });
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = `${model.lessonId}.json`;
+          link.click();
+          URL.revokeObjectURL(link.href);
+          $("statusLine").textContent = "已下載 JSON。";
+          return;
+        }
+
+        if (event.target.id === "refreshBtn") {
+          await loadData();
+          $("statusLine").textContent = "已重新讀取資料。";
+        }
+      });
+
+      document.addEventListener("change", (event) => {
+        if (event.target.matches("[data-choice][data-index]")) {
+          const choiceId = event.target.dataset.choice;
+          const index = Number(event.target.dataset.index);
+          const set = state.selectedIndexes.get(choiceId) || new Set();
+          if (event.target.checked) set.add(index);
+          else set.delete(index);
+          state.selectedIndexes.set(choiceId, set);
+          updateOutput(currentModel());
+        }
+      });
+
+      document.addEventListener("input", (event) => {
+        if (event.target.matches("[data-custom][data-field]")) {
+          const index = Number(event.target.dataset.custom);
+          const field = event.target.dataset.field;
+          state.customRows[index][field] = event.target.value;
+          updateOutput(currentModel());
+        }
+      });
+
+      loadData().catch((error) => {
+        $("summaryPanel").innerHTML = `<p class="help">${error.message}</p>`;
+      });
+    </script>
+  </body>
+</html>

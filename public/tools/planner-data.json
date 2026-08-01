@@ -1,0 +1,2613 @@
+{
+  "exportedAt": "2026-08-01T02:48:19.826Z",
+  "curriculumVersion": 1,
+  "lessons": [
+    {
+      "id": "L001",
+      "order": 1,
+      "newChars": [
+        "一",
+        "二",
+        "三",
+        "人"
+      ],
+      "zhuyin": {
+        "一": "ㄧ",
+        "二": "ㄦˋ",
+        "三": "ㄙㄢ",
+        "人": "ㄖㄣˊ"
+      },
+      "charAudio": {
+        "一": "/assets/lessons/L001/audio/char-u4e00.m4a",
+        "二": "/assets/lessons/L001/audio/char-u4e8c.m4a",
+        "三": "/assets/lessons/L001/audio/char-u4e09.m4a",
+        "人": "/assets/lessons/L001/audio/char-u4eba.m4a"
+      },
+      "title": "一二三人",
+      "requiredRounds": 4,
+      "originHint": {
+        "kind": "text",
+        "text": "第一課是種子課，一次帶入最基本的數字與人。"
+      },
+      "sentences": [
+        {
+          "id": "L001-S01",
+          "text": "人",
+          "spokenText": "人",
+          "focusChar": "人",
+          "imagePrompt": "A warm simple children's picture book illustration of one person standing alone, friendly expression, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L001/images/L001-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L001/audio/L001-S01.m4a",
+            "durationMs": 768,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 768
+              }
+            ]
+          }
+        },
+        {
+          "id": "L001-S02",
+          "text": "一人",
+          "spokenText": "一人",
+          "focusChar": "一",
+          "imagePrompt": "A warm simple children's picture book illustration of one person clearly standing in the scene, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L001/images/L001-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L001/audio/L001-S02.m4a",
+            "durationMs": 1039,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 390
+              },
+              {
+                "charIndex": 1,
+                "startMs": 390,
+                "endMs": 1039
+              }
+            ]
+          }
+        },
+        {
+          "id": "L001-S03",
+          "text": "二人",
+          "spokenText": "二人",
+          "focusChar": "二",
+          "imagePrompt": "A warm simple children's picture book illustration of two people standing together, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L001/images/L001-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L001/audio/L001-S03.m4a",
+            "durationMs": 965,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 350
+              },
+              {
+                "charIndex": 1,
+                "startMs": 350,
+                "endMs": 965
+              }
+            ]
+          }
+        },
+        {
+          "id": "L001-S04",
+          "text": "三人",
+          "spokenText": "三人",
+          "focusChar": "三",
+          "imagePrompt": "A warm simple children's picture book illustration of three people standing together, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L001/images/L001-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L001/audio/L001-S04.m4a",
+            "durationMs": 1220,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 615
+              },
+              {
+                "charIndex": 1,
+                "startMs": 615,
+                "endMs": 1220
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "L002",
+      "order": 2,
+      "newChars": [
+        "個"
+      ],
+      "zhuyin": {
+        "個": "˙ㄍㄜ"
+      },
+      "charAudio": {
+        "個": "/assets/lessons/L002/audio/char-u500b.m4a"
+      },
+      "title": "個",
+      "requiredRounds": 3,
+      "sentences": [
+        {
+          "id": "L002-S01",
+          "text": "人",
+          "spokenText": "人",
+          "focusChar": "人",
+          "imagePrompt": "A warm simple children's picture book illustration of one person, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L002/images/L002-S01.png",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L002/audio/L002-S01.m4a",
+            "durationMs": 367,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 367
+              }
+            ]
+          }
+        },
+        {
+          "id": "L002-S02",
+          "text": "一個人",
+          "spokenText": "一個人",
+          "focusChar": "個",
+          "imagePrompt": "A warm simple children's picture book illustration of one person as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L002/images/L002-S02.png",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L002/audio/L002-S02.m4a",
+            "durationMs": 737,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 235
+              },
+              {
+                "charIndex": 1,
+                "startMs": 235,
+                "endMs": 480
+              },
+              {
+                "charIndex": 2,
+                "startMs": 480,
+                "endMs": 737
+              }
+            ]
+          }
+        },
+        {
+          "id": "L002-S03",
+          "text": "三個人",
+          "spokenText": "三個人",
+          "focusChar": "個",
+          "imagePrompt": "A warm simple children's picture book illustration of three people standing together as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L002/images/L002-S03.png",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L002/audio/L002-S03.m4a",
+            "durationMs": 1020,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 470
+              },
+              {
+                "charIndex": 1,
+                "startMs": 470,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1020
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "L003",
+      "order": 3,
+      "newChars": [
+        "大"
+      ],
+      "zhuyin": {
+        "大": "ㄉㄚˋ"
+      },
+      "charAudio": {
+        "大": "/assets/lessons/L003/audio/char-u5927.m4a"
+      },
+      "title": "大",
+      "requiredRounds": 4,
+      "sentences": [
+        {
+          "id": "L003-S01",
+          "text": "大人",
+          "spokenText": "大人",
+          "focusChar": "大",
+          "imagePrompt": "A warm simple children's picture book illustration of one adult person as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L003/images/L003-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L003/audio/L003-S01.m4a",
+            "durationMs": 526,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 350
+              },
+              {
+                "charIndex": 1,
+                "startMs": 350,
+                "endMs": 526
+              }
+            ]
+          }
+        },
+        {
+          "id": "L003-S02",
+          "text": "二人",
+          "spokenText": "二人",
+          "focusChar": "二",
+          "imagePrompt": "A warm simple children's picture book illustration of two people standing together, relative size does not matter, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L003/images/L003-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L003/audio/L003-S02.m4a",
+            "durationMs": 633,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 410
+              },
+              {
+                "charIndex": 1,
+                "startMs": 410,
+                "endMs": 633
+              }
+            ]
+          }
+        },
+        {
+          "id": "L003-S03",
+          "text": "三個人",
+          "spokenText": "三個人",
+          "focusChar": "個",
+          "imagePrompt": "A warm simple children's picture book illustration of two children and one adult standing together as three people, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L003/images/L003-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L003/audio/L003-S03.m4a",
+            "durationMs": 1253,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 285
+              },
+              {
+                "charIndex": 1,
+                "startMs": 285,
+                "endMs": 705
+              },
+              {
+                "charIndex": 2,
+                "startMs": 705,
+                "endMs": 1253
+              }
+            ]
+          }
+        },
+        {
+          "id": "L003-S04",
+          "text": "一個大人",
+          "spokenText": "一個大人",
+          "focusChar": "大",
+          "imagePrompt": "Use the same scene as L003-S03 with two children and one adult, but make the adult glow gently so the adult is clearly highlighted. Warm simple children's picture book illustration, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L003/images/L003-S04-highlighted.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L003/audio/L003-S04.m4a",
+            "durationMs": 1517,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 350
+              },
+              {
+                "charIndex": 1,
+                "startMs": 350,
+                "endMs": 815
+              },
+              {
+                "charIndex": 2,
+                "startMs": 815,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1517
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "L004",
+      "order": 4,
+      "newChars": [
+        "的"
+      ],
+      "zhuyin": {
+        "的": "˙ㄉㄜ"
+      },
+      "charAudio": {
+        "的": "/assets/lessons/L004/audio/char-u7684.m4a"
+      },
+      "title": "的",
+      "requiredRounds": 4,
+      "sentences": [
+        {
+          "id": "L004-S01",
+          "text": "一人",
+          "spokenText": "一人",
+          "focusChar": "一",
+          "imagePrompt": "A warm simple children's picture book illustration of one person standing alone, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L004/images/L004-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L004/audio/L004-S01.m4a",
+            "durationMs": 981,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 535
+              },
+              {
+                "charIndex": 1,
+                "startMs": 535,
+                "endMs": 981
+              }
+            ]
+          }
+        },
+        {
+          "id": "L004-S02",
+          "text": "二人",
+          "spokenText": "二人",
+          "focusChar": "二",
+          "imagePrompt": "A warm simple children's picture book illustration of two people standing together, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L004/images/L004-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L004/audio/L004-S02.m4a",
+            "durationMs": 464,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 275
+              },
+              {
+                "charIndex": 1,
+                "startMs": 275,
+                "endMs": 464
+              }
+            ]
+          }
+        },
+        {
+          "id": "L004-S03",
+          "text": "大大的人",
+          "spokenText": "大大的人",
+          "focusChar": "的",
+          "imagePrompt": "A warm simple children's picture book illustration of one very tall adult person, clearly big/tall, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L004/images/L004-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L004/audio/L004-S03.m4a",
+            "durationMs": 1410,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 450
+              },
+              {
+                "charIndex": 1,
+                "startMs": 450,
+                "endMs": 865
+              },
+              {
+                "charIndex": 2,
+                "startMs": 865,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1410
+              }
+            ]
+          }
+        },
+        {
+          "id": "L004-S04",
+          "text": "三個大大的人",
+          "spokenText": "三個大大的人",
+          "focusChar": "的",
+          "imagePrompt": "A warm simple children's picture book illustration of three very tall adult people standing together, clearly big/tall, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L004/images/L004-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L004/audio/L004-S04.m4a",
+            "durationMs": 2294,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 535
+              },
+              {
+                "charIndex": 1,
+                "startMs": 535,
+                "endMs": 910
+              },
+              {
+                "charIndex": 2,
+                "startMs": 910,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1220,
+                "endMs": 1670
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1670,
+                "endMs": 1965
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1965,
+                "endMs": 2294
+              }
+            ]
+          },
+          "displayLines": [
+            "三個",
+            "大大的人"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L005",
+      "order": 5,
+      "newChars": [
+        "小"
+      ],
+      "zhuyin": {
+        "小": "ㄒㄧㄠˇ"
+      },
+      "charAudio": {
+        "小": "/assets/lessons/L005/audio/char-u5c0f.m4a"
+      },
+      "title": "小",
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L005-S01",
+          "text": "大大的人",
+          "spokenText": "大大的人",
+          "focusChar": "大",
+          "imagePrompt": "A warm simple children's picture book illustration of one very tall adult person, clearly big/tall, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L005/images/L005-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L005/audio/L005-S01.m4a",
+            "durationMs": 873,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 530
+              },
+              {
+                "charIndex": 2,
+                "startMs": 530,
+                "endMs": 705
+              },
+              {
+                "charIndex": 3,
+                "startMs": 705,
+                "endMs": 873
+              }
+            ]
+          }
+        },
+        {
+          "id": "L005-S02",
+          "text": "小小的人",
+          "spokenText": "小小的人",
+          "focusChar": "小",
+          "imagePrompt": "A warm simple children's picture book illustration of one very small person, clearly small, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L005/images/L005-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L005/audio/L005-S02.m4a",
+            "durationMs": 972,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 135
+              },
+              {
+                "charIndex": 1,
+                "startMs": 135,
+                "endMs": 460
+              },
+              {
+                "charIndex": 2,
+                "startMs": 460,
+                "endMs": 665
+              },
+              {
+                "charIndex": 3,
+                "startMs": 665,
+                "endMs": 972
+              }
+            ]
+          }
+        },
+        {
+          "id": "L005-S03",
+          "text": "一個大大的人",
+          "spokenText": "一個大大的人",
+          "focusChar": "大",
+          "imagePrompt": "A warm simple children's picture book illustration of one very tall adult person standing alone, clearly big/tall, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L005/images/L005-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L005/audio/L005-S03.m4a",
+            "durationMs": 1688,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 245
+              },
+              {
+                "charIndex": 1,
+                "startMs": 245,
+                "endMs": 645
+              },
+              {
+                "charIndex": 2,
+                "startMs": 645,
+                "endMs": 745
+              },
+              {
+                "charIndex": 3,
+                "startMs": 745,
+                "endMs": 1145
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1145,
+                "endMs": 1410
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1410,
+                "endMs": 1688
+              }
+            ]
+          },
+          "displayLines": [
+            "一個",
+            "大大的人"
+          ]
+        },
+        {
+          "id": "L005-S04",
+          "text": "三個小小的人",
+          "spokenText": "三個小小的人",
+          "focusChar": "小",
+          "imagePrompt": "A warm simple children's picture book illustration of three very small people standing together, clearly small, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L005/images/L005-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L005/audio/L005-S04.m4a",
+            "durationMs": 1891,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 175
+              },
+              {
+                "charIndex": 1,
+                "startMs": 175,
+                "endMs": 770
+              },
+              {
+                "charIndex": 2,
+                "startMs": 770,
+                "endMs": 805
+              },
+              {
+                "charIndex": 3,
+                "startMs": 805,
+                "endMs": 1245
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1245,
+                "endMs": 1585
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1585,
+                "endMs": 1891
+              }
+            ]
+          },
+          "displayLines": [
+            "三個",
+            "小小的人"
+          ]
+        },
+        {
+          "id": "L005-S05",
+          "text": "大大小小的人",
+          "spokenText": "大大小小的人",
+          "focusChar": "小",
+          "imagePrompt": "A warm simple children's picture book illustration of a mixed group of people with some very tall adults and some very small children, clearly showing big and small people together, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L005/images/L005-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L005/audio/L005-S05.m4a",
+            "durationMs": 1369,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 230
+              },
+              {
+                "charIndex": 1,
+                "startMs": 230,
+                "endMs": 470
+              },
+              {
+                "charIndex": 2,
+                "startMs": 470,
+                "endMs": 585
+              },
+              {
+                "charIndex": 3,
+                "startMs": 585,
+                "endMs": 1015
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1015,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1080,
+                "endMs": 1369
+              }
+            ]
+          },
+          "displayLines": [
+            "大大",
+            "小小的人"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L006",
+      "order": 6,
+      "newChars": [
+        "手"
+      ],
+      "zhuyin": {
+        "手": "ㄕㄡˇ"
+      },
+      "charAudio": {
+        "手": "/assets/lessons/L006/audio/char-u624b.m4a"
+      },
+      "title": "手",
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L006-S01",
+          "text": "一個人的手",
+          "spokenText": "一個人的手",
+          "focusChar": "手",
+          "imagePrompt": "A warm simple children's picture book illustration of one person showing one hand clearly as the focus, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L006/images/L006-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L006/audio/L006-S01.m4a",
+            "durationMs": 1109,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 170
+              },
+              {
+                "charIndex": 1,
+                "startMs": 170,
+                "endMs": 340
+              },
+              {
+                "charIndex": 2,
+                "startMs": 340,
+                "endMs": 535
+              },
+              {
+                "charIndex": 3,
+                "startMs": 535,
+                "endMs": 650
+              },
+              {
+                "charIndex": 4,
+                "startMs": 650,
+                "endMs": 1109
+              }
+            ]
+          }
+        },
+        {
+          "id": "L006-S02",
+          "text": "三個人的手",
+          "spokenText": "三個人的手",
+          "focusChar": "手",
+          "imagePrompt": "A warm simple children's picture book illustration of three people standing together, each showing a hand clearly, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L006/images/L006-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L006/audio/L006-S02.m4a",
+            "durationMs": 1363,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 380
+              },
+              {
+                "charIndex": 2,
+                "startMs": 380,
+                "endMs": 590
+              },
+              {
+                "charIndex": 3,
+                "startMs": 590,
+                "endMs": 720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 720,
+                "endMs": 1363
+              }
+            ]
+          }
+        },
+        {
+          "id": "L006-S03",
+          "text": "大大的手",
+          "spokenText": "大大的手",
+          "focusChar": "手",
+          "imagePrompt": "A warm simple children's picture book illustration of one very large hand shown clearly as the focus, friendly and non-scary, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L006/images/L006-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L006/audio/L006-S03.m4a",
+            "durationMs": 1367,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 535
+              },
+              {
+                "charIndex": 2,
+                "startMs": 535,
+                "endMs": 670
+              },
+              {
+                "charIndex": 3,
+                "startMs": 670,
+                "endMs": 1367
+              }
+            ]
+          }
+        },
+        {
+          "id": "L006-S04",
+          "text": "小小的手",
+          "spokenText": "小小的手",
+          "focusChar": "手",
+          "imagePrompt": "A warm simple children's picture book illustration of one very small child hand shown clearly as the focus, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L006/images/L006-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L006/audio/L006-S04.m4a",
+            "durationMs": 1353,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 535
+              },
+              {
+                "charIndex": 2,
+                "startMs": 535,
+                "endMs": 670
+              },
+              {
+                "charIndex": 3,
+                "startMs": 670,
+                "endMs": 1353
+              }
+            ]
+          }
+        },
+        {
+          "id": "L006-S05",
+          "text": "大大小小的手",
+          "spokenText": "大大小小的手",
+          "focusChar": "手",
+          "imagePrompt": "A warm simple children's picture book illustration showing at least four open hands together, with a clear mix of big adult hands and small child hands, so it communicates many big and small hands rather than one big and one small hand. Clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L006/images/L006-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L006/audio/L006-S05.m4a",
+            "durationMs": 1657,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 230
+              },
+              {
+                "charIndex": 1,
+                "startMs": 230,
+                "endMs": 460
+              },
+              {
+                "charIndex": 2,
+                "startMs": 460,
+                "endMs": 690
+              },
+              {
+                "charIndex": 3,
+                "startMs": 690,
+                "endMs": 930
+              },
+              {
+                "charIndex": 4,
+                "startMs": 930,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1060,
+                "endMs": 1657
+              }
+            ]
+          },
+          "displayLines": [
+            "大大",
+            "小小的手"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L007",
+      "order": 7,
+      "newChars": [
+        "我"
+      ],
+      "zhuyin": {
+        "我": "ㄨㄛˇ"
+      },
+      "charAudio": {
+        "我": "/assets/lessons/L007/audio/char-u6211.m4a"
+      },
+      "title": "我",
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L007-S01",
+          "text": "我一個人",
+          "spokenText": "我一個人",
+          "focusChar": "我",
+          "imagePrompt": "A warm simple children's picture book illustration of the fixed first-person character: a friendly young girl standing alone, preschool to early elementary age, warm expression, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L007/images/L007-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L007/audio/L007-S01.m4a",
+            "durationMs": 3129,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 720
+              },
+              {
+                "charIndex": 1,
+                "startMs": 720,
+                "endMs": 1090
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1090,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1460,
+                "endMs": 1900
+              }
+            ]
+          }
+        },
+        {
+          "id": "L007-S02",
+          "text": "我的小手",
+          "spokenText": "我的小手",
+          "focusChar": "我",
+          "imagePrompt": "A warm simple children's picture book illustration of the same fixed young girl holding up her small hand clearly, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L007/images/L007-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L007/audio/L007-S02.m4a",
+            "durationMs": 2429,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 290
+              },
+              {
+                "charIndex": 1,
+                "startMs": 290,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1440
+              }
+            ]
+          }
+        },
+        {
+          "id": "L007-S03",
+          "text": "我的手小小的",
+          "spokenText": "我的手小小的",
+          "focusChar": "我",
+          "imagePrompt": "A warm simple children's picture book illustration of the same fixed young girl showing that her hand is small, with her small hand clearly highlighted, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L007/images/L007-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L007/audio/L007-S03.m4a",
+            "durationMs": 3469,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 350
+              },
+              {
+                "charIndex": 1,
+                "startMs": 350,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2180
+              }
+            ]
+          },
+          "displayLines": [
+            "我的手",
+            "小小的"
+          ]
+        },
+        {
+          "id": "L007-S04",
+          "text": "大人的手大大的",
+          "spokenText": "大人的手大大的",
+          "focusChar": "手",
+          "imagePrompt": "A warm simple children's picture book illustration of an adult showing a very large hand clearly, friendly and non-scary, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L007/images/L007-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L007/audio/L007-S04.m4a",
+            "durationMs": 3556,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 520
+              },
+              {
+                "charIndex": 2,
+                "startMs": 520,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1060,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2040,
+                "endMs": 2220
+              }
+            ]
+          },
+          "displayLines": [
+            "大人的手",
+            "大大的"
+          ]
+        },
+        {
+          "id": "L007-S05",
+          "text": "三個人的大手小手",
+          "spokenText": "三個人的大手小手",
+          "focusChar": "手",
+          "imagePrompt": "A warm simple children's picture book illustration of three people showing hands: one adult with a big hand and two children with small hands, clean light background, soft colors, no text, no letters, no numbers.",
+          "imageSrc": "/assets/lessons/L007/images/L007-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L007/audio/L007-S05.m4a",
+            "durationMs": 3161,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 710
+              },
+              {
+                "charIndex": 2,
+                "startMs": 710,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1160,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1660,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1840,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2740
+              }
+            ]
+          },
+          "displayLines": [
+            "三個人的",
+            "大手小手"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L008",
+      "order": 8,
+      "newChars": [
+        "有"
+      ],
+      "zhuyin": {
+        "有": "ㄧㄡˇ"
+      },
+      "charAudio": {
+        "有": "/assets/lessons/L008/audio/char-u6709.m4a"
+      },
+      "title": "有",
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L008-S01",
+          "text": "有一個人",
+          "spokenText": "有一個人",
+          "focusChar": "有",
+          "imagePrompt": "A warm simple children's picture book illustration of one friendly person standing clearly in the scene, with a gentle visual emphasis that there is one person present. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no watermark.",
+          "imageSrc": "/assets/lessons/L008/images/L008-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L008/audio/L008-S01.m4a",
+            "durationMs": 1183,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 610
+              },
+              {
+                "charIndex": 2,
+                "startMs": 610,
+                "endMs": 760
+              },
+              {
+                "charIndex": 3,
+                "startMs": 760,
+                "endMs": 1080
+              }
+            ]
+          }
+        },
+        {
+          "id": "L008-S02",
+          "text": "我有小小的手",
+          "spokenText": "我有小小的手",
+          "focusChar": "有",
+          "imagePrompt": "A warm simple children's picture book illustration of the fixed first-person character from lesson 7: a friendly young girl, preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, bright curious eyes, yellow top, coral-red pinafore dress, red shoes, warm expression. She holds up her small hand clearly as the focus. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no watermark.",
+          "imageSrc": "/assets/lessons/L008/images/L008-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L008/audio/L008-S02.m4a",
+            "durationMs": 2138,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 310
+              },
+              {
+                "charIndex": 1,
+                "startMs": 310,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1560,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 2120
+              }
+            ]
+          },
+          "displayLines": [
+            "我有",
+            "小小的手"
+          ]
+        },
+        {
+          "id": "L008-S03",
+          "text": "大人有大大的手",
+          "spokenText": "大人有大大的手",
+          "focusChar": "有",
+          "imagePrompt": "A warm simple children's picture book illustration of one friendly adult showing a very large hand clearly as the focus. The adult should look kind and non-scary, with the big hand easy to notice on a phone screen. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no watermark.",
+          "imageSrc": "/assets/lessons/L008/images/L008-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L008/audio/L008-S03.m4a",
+            "durationMs": 2422,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1600,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2320
+              }
+            ]
+          },
+          "displayLines": [
+            "大人有",
+            "大大的手"
+          ]
+        },
+        {
+          "id": "L008-S04",
+          "text": "三個人有大手小手",
+          "spokenText": "三個人有大手小手",
+          "focusChar": "有",
+          "imagePrompt": "A warm simple children's picture book illustration of three people showing hands together: one adult with a big hand and two children with small hands. The big hand and small hands should be clearly contrasted and easy to see on a phone screen. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no watermark.",
+          "imageSrc": "/assets/lessons/L008/images/L008-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L008/audio/L008-S04.m4a",
+            "durationMs": 3819,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 600
+              },
+              {
+                "charIndex": 1,
+                "startMs": 600,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 860,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1220,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1960,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2460,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3200,
+                "endMs": 3620
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3620,
+                "endMs": 3800
+              }
+            ]
+          },
+          "displayLines": [
+            "三個人有",
+            "大手小手"
+          ]
+        },
+        {
+          "id": "L008-S05",
+          "text": "有一大二小的手",
+          "spokenText": "有一大二小的手",
+          "focusChar": "有",
+          "imagePrompt": "A warm simple children's picture book illustration showing hands only, no full people: one large open hand and two small open hands grouped together, clearly communicating one big hand and two small hands. Use a clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no watermark.",
+          "imageSrc": "/assets/lessons/L008/images/L008-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L008/audio/L008-S05.m4a",
+            "durationMs": 2553,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 370
+              },
+              {
+                "charIndex": 1,
+                "startMs": 370,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2440
+              }
+            ]
+          },
+          "displayLines": [
+            "有一大",
+            "二小的手"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L009",
+      "order": 9,
+      "newChars": [
+        "山"
+      ],
+      "zhuyin": {
+        "山": "ㄕㄢ"
+      },
+      "charAudio": {
+        "山": "/assets/lessons/L009/audio/char-u5c71.m4a"
+      },
+      "title": "山",
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L009-S01",
+          "text": "有人有山",
+          "spokenText": "有人有山",
+          "focusChar": "山",
+          "imagePrompt": "A warm child-friendly picture-book illustration of a cute simple mountain scene with one clear mountain in the background and several people standing near the foot of the mountain. The mountain should be obviously recognizable as a mountain but cute and not realistic. The people must be large enough to see clearly on a phone screen, not tiny silhouettes. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L009/images/L009-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L009/audio/L009-S01.m4a",
+            "durationMs": 2301,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 920
+              },
+              {
+                "charIndex": 2,
+                "startMs": 920,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1360,
+                "endMs": 1660
+              }
+            ]
+          },
+          "displayLines": [
+            "有人",
+            "有山"
+          ]
+        },
+        {
+          "id": "L009-S02",
+          "text": "大大的山小小的山",
+          "spokenText": "大大的山小小的山",
+          "focusChar": "山",
+          "imagePrompt": "A warm child-friendly picture-book illustration showing one very large cute rounded cartoon mountain and one very small cute rounded cartoon mountain side by side. The size contrast must be obvious and easy to understand on a phone screen. Clean light background, soft colors, no people required, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L009/images/L009-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L009/audio/L009-S02.m4a",
+            "durationMs": 3610,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 820
+              },
+              {
+                "charIndex": 3,
+                "startMs": 820,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2480,
+                "endMs": 2660
+              }
+            ]
+          },
+          "displayLines": [
+            "大大的山",
+            "小小的山"
+          ]
+        },
+        {
+          "id": "L009-S03",
+          "text": "我一個人的山",
+          "spokenText": "我一個人的山",
+          "focusChar": "山",
+          "imagePrompt": "A warm child-friendly picture-book illustration of the fixed first-person young girl character on a cute simple mountain, enjoying the mountain peacefully. The girl is preschool to early elementary age with shoulder-length dark brown hair, a small pink hair clip, bright curious eyes, yellow top, coral-red pinafore dress, red shoes, and a warm happy expression. One girl only, clearly visible and not tiny. The mountain should be obviously recognizable but cute and not realistic. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L009/images/L009-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L009/audio/L009-S03.m4a",
+            "durationMs": 2868,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 530
+              },
+              {
+                "charIndex": 2,
+                "startMs": 530,
+                "endMs": 720
+              },
+              {
+                "charIndex": 3,
+                "startMs": 720,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1000,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1340,
+                "endMs": 1940
+              }
+            ]
+          },
+          "displayLines": [
+            "我一個人的",
+            "山"
+          ]
+        },
+        {
+          "id": "L009-S04",
+          "text": "三個人的大手小手",
+          "spokenText": "三個人的大手小手",
+          "focusChar": "手",
+          "imagePrompt": "A warm simple children's picture book illustration of three people showing hands: one adult with a big hand and two children with small hands, clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L009/images/L009-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L009/audio/L009-S04.m4a",
+            "durationMs": 4305,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 640
+              },
+              {
+                "charIndex": 1,
+                "startMs": 640,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 860,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1420,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2080,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3060,
+                "endMs": 3280
+              }
+            ]
+          },
+          "displayLines": [
+            "三個人的",
+            "大手小手"
+          ]
+        },
+        {
+          "id": "L009-S05",
+          "text": "我有小小的手",
+          "spokenText": "我有小小的手",
+          "focusChar": "有",
+          "imagePrompt": "A warm simple children's picture book illustration of the fixed first-person young girl character holding up her small hand clearly as the focus. She has shoulder-length dark brown hair, a small pink hair clip, bright curious eyes, yellow top, coral-red pinafore dress, red shoes, and a warm expression. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L009/images/L009-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L009/audio/L009-S05.m4a",
+            "durationMs": 3472,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 350
+              },
+              {
+                "charIndex": 1,
+                "startMs": 350,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1320,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1520,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 1960
+              }
+            ]
+          },
+          "displayLines": [
+            "我有",
+            "小小的手"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L010",
+      "order": 10,
+      "newChars": [
+        "上"
+      ],
+      "zhuyin": {
+        "上": "ㄕㄤˋ"
+      },
+      "charAudio": {
+        "上": "/assets/lessons/L010/audio/char-u4e0a.m4a"
+      },
+      "title": "上",
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L010-S01",
+          "text": "我一個人上山",
+          "spokenText": "我一個人上山",
+          "focusChar": "上",
+          "imagePrompt": "A warm child-friendly picture-book illustration of the fixed first-person young girl character walking upward on a simple cute mountain path by herself. She is preschool to early elementary age with shoulder-length dark brown hair, a small pink hair clip, bright curious eyes, yellow top, coral-red pinafore dress, red shoes, and a warm happy expression. The mountain path should clearly show going up the mountain. Exactly one child, no other people. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L010/images/L010-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L010/audio/L010-S01.m4a",
+            "durationMs": 3400,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1420,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2160,
+                "endMs": 2460
+              }
+            ]
+          },
+          "displayLines": [
+            "我一個人",
+            "上山"
+          ]
+        },
+        {
+          "id": "L010-S02",
+          "text": "山上有三個大人",
+          "spokenText": "山上有三個大人",
+          "focusChar": "上",
+          "imagePrompt": "A warm child-friendly picture-book illustration showing exactly three adult people standing on top of or high up on a simple rounded mountain. The three adults must be large enough to count clearly on a phone screen and must clearly look like adults, not children. Make it visually obvious they are on the mountain, not at the bottom. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L010/images/L010-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L010/audio/L010-S02.m4a",
+            "durationMs": 2854,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1700,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2120
+              }
+            ]
+          },
+          "displayLines": [
+            "山上有",
+            "三個大人"
+          ]
+        },
+        {
+          "id": "L010-S03",
+          "text": "我的手小小的",
+          "spokenText": "我的手小小的",
+          "focusChar": "手",
+          "imagePrompt": "Reuse approved L007-S03 image for the same reviewed sentence. It shows the fixed first-person young girl character and her small hand clearly. Do not regenerate unless the user requests replacement.",
+          "imageSrc": "/assets/lessons/L007/images/L007-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L007/audio/L007-S03.m4a",
+            "durationMs": 3469,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 350
+              },
+              {
+                "charIndex": 1,
+                "startMs": 350,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2180
+              }
+            ]
+          },
+          "displayLines": [
+            "我的手",
+            "小小的"
+          ]
+        },
+        {
+          "id": "L010-S04",
+          "text": "我的手上有一個小人",
+          "spokenText": "我的手上有一個小人",
+          "focusChar": "上",
+          "imagePrompt": "A warm child-friendly picture-book illustration of the fixed first-person young girl character holding one small toy person figure on the palm of her hand. The toy must obviously look like a small doll or toy figurine, not a real tiny human. The hand and toy figure must be large enough to understand on a phone screen. Exactly one toy person figure on the hand. Clean light background, soft colors, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L010/images/L010-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L010/audio/L010-S04.m4a",
+            "durationMs": 5100,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1340,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1880,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2600,
+                "endMs": 2850
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2850,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3100,
+                "endMs": 3920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3920,
+                "endMs": 4180
+              }
+            ]
+          },
+          "displayLines": [
+            "我的手上",
+            "有一個小人"
+          ]
+        },
+        {
+          "id": "L010-S05",
+          "text": "有大大的山，有小小的山",
+          "spokenText": "有大大的山有小小的山",
+          "focusChar": "山",
+          "imagePrompt": "Reuse approved L009-S02 big/small mountain image. It already shows one very large cute rounded mountain and one very small cute rounded mountain side by side, clearly matching this sentence. Do not regenerate unless the user requests replacement.",
+          "imageSrc": "/assets/lessons/L009/images/L009-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L010/audio/L010-S05.m4a",
+            "durationMs": 4200,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2700,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3100,
+                "endMs": 3280
+              }
+            ]
+          },
+          "displayLines": [
+            "有大大的山，",
+            "有小小的山"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L011",
+      "order": 11,
+      "newChars": [
+        "下"
+      ],
+      "zhuyin": {
+        "下": "ㄒㄧㄚˋ"
+      },
+      "charAudio": {
+        "下": "/assets/lessons/L011/audio/char-u4e0b.m4a"
+      },
+      "title": "下",
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L011-S01",
+          "text": "有三個人上山",
+          "spokenText": "有三個人上山",
+          "focusChar": "上",
+          "imagePrompt": "A warm child-friendly picture-book illustration of exactly three people walking up a cute simple mountain path. The upward path should be visually obvious, and all three people should be large enough to count clearly on a phone screen. No text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L011/images/L011-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L011/audio/L011-S01.m4a",
+            "durationMs": 2889,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2420
+              }
+            ]
+          },
+          "displayLines": [
+            "有三個人",
+            "上山"
+          ]
+        },
+        {
+          "id": "L011-S02",
+          "text": "有一個人下山",
+          "spokenText": "有一個人下山",
+          "focusChar": "下",
+          "imagePrompt": "A warm child-friendly picture-book illustration of exactly one person walking down a cute mountain path, coming from higher ground toward the lower foreground. Make the downward direction visually obvious. No extra people, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L011/images/L011-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L011/audio/L011-S02.m4a",
+            "durationMs": 3479,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 920
+              },
+              {
+                "charIndex": 3,
+                "startMs": 920,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2280,
+                "endMs": 2560
+              }
+            ]
+          },
+          "displayLines": [
+            "有一個人",
+            "下山"
+          ]
+        },
+        {
+          "id": "L011-S03",
+          "text": "我的手下有三個小山",
+          "spokenText": "我的手下有三個小山",
+          "focusChar": "下",
+          "imagePrompt": "A warm child-friendly picture-book illustration showing one child hand palm facing downward above a tabletop. Under the hand shadow are exactly three small LEGO-style toy mountains. The toy mountains must look like toys, not real mountains. This is the fixed first-person girl character hand; use a childlike hand with a hint of her warm clothing colors if visible. No text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L011/images/L011-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L011/audio/L011-S03.m4a",
+            "durationMs": 4252,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 230
+              },
+              {
+                "charIndex": 1,
+                "startMs": 230,
+                "endMs": 460
+              },
+              {
+                "charIndex": 2,
+                "startMs": 460,
+                "endMs": 820
+              },
+              {
+                "charIndex": 3,
+                "startMs": 820,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1400,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2060,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2380,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2980,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3420,
+                "endMs": 3660
+              }
+            ]
+          },
+          "displayLines": [
+            "我的手下",
+            "有三個小山"
+          ]
+        },
+        {
+          "id": "L011-S04",
+          "text": "山下有一個大人",
+          "spokenText": "山下有一個大人",
+          "focusChar": "下",
+          "imagePrompt": "A warm child-friendly picture-book illustration showing exactly one adult person standing at the foot of a cute simple mountain. The adult should be clearly below the mountain, large enough to see on a phone screen, kind and non-scary. No children, no extra people, no text, no letters, no numbers, no signs, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L011/images/L011-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L011/audio/L011-S04.m4a",
+            "durationMs": 4363,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 620
+              },
+              {
+                "charIndex": 1,
+                "startMs": 620,
+                "endMs": 920
+              },
+              {
+                "charIndex": 2,
+                "startMs": 920,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1500,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1700,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2460,
+                "endMs": 2620
+              }
+            ]
+          },
+          "displayLines": [
+            "山下有",
+            "一個大人"
+          ]
+        },
+        {
+          "id": "L011-S05",
+          "text": "有一大二小的手",
+          "spokenText": "有一大二小的手",
+          "focusChar": "手",
+          "imagePrompt": "Reuse approved L008-S05 hands-only image. It shows one large open hand and two small open hands grouped together, clearly matching one big and two small hands. Do not regenerate unless the user requests replacement.",
+          "imageSrc": "/assets/lessons/L008/images/L008-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L008/audio/L008-S05.m4a",
+            "durationMs": 2553,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 370
+              },
+              {
+                "charIndex": 1,
+                "startMs": 370,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2440
+              }
+            ]
+          },
+          "displayLines": [
+            "有一大",
+            "二小的手"
+          ]
+        }
+      ]
+    }
+  ],
+  "nextCharacterBank": [
+    {
+      "char": "下",
+      "zhuyin": "ㄒㄧㄚˋ",
+      "priority": 10,
+      "why": "Pairs naturally with 上 and 山, unlocking mountain up/down location and movement.",
+      "requires": [
+        "一",
+        "二",
+        "三",
+        "人",
+        "個",
+        "大",
+        "的",
+        "小",
+        "手",
+        "我",
+        "有",
+        "山",
+        "上"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我一個人下山",
+          "spokenText": "我一個人下山",
+          "focusChar": "下",
+          "reason": "Reviews 我、一個人、山 and contrasts with 上山."
+        },
+        {
+          "text": "山下有三個人",
+          "spokenText": "山下有三個人",
+          "focusChar": "下",
+          "reason": "Concrete location sentence with count review."
+        },
+        {
+          "text": "山上有大人，山下有小人",
+          "spokenText": "山上有大人山下有小人",
+          "focusChar": "下",
+          "reason": "Contrasts 上 and 下 while reviewing 大人 and 小人."
+        },
+        {
+          "text": "我的手下有一個小人",
+          "spokenText": "我的手下有一個小人",
+          "focusChar": "下",
+          "reason": "Reuses the toy-person-on-hand concept with a different spatial relation."
+        },
+        {
+          "text": "有大大的山，有小小的山",
+          "spokenText": "有大大的山有小小的山",
+          "focusChar": "山",
+          "reason": "Review sentence that can reuse the approved big/small mountain image."
+        }
+      ]
+    },
+    {
+      "char": "水",
+      "zhuyin": "ㄕㄨㄟˇ",
+      "priority": 20,
+      "why": "Concrete, imageable noun that combines well with 山、手、有、上.",
+      "requires": [
+        "一",
+        "人",
+        "個",
+        "大",
+        "的",
+        "小",
+        "手",
+        "我",
+        "有",
+        "山",
+        "上"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我有水",
+          "spokenText": "我有水",
+          "focusChar": "水",
+          "reason": "Very short possession sentence."
+        },
+        {
+          "text": "手上有水",
+          "spokenText": "手上有水",
+          "focusChar": "水",
+          "reason": "Concrete hand-surface sentence after 上."
+        },
+        {
+          "text": "山上有水",
+          "spokenText": "山上有水",
+          "focusChar": "水",
+          "reason": "Uses 山上 and 有 with a clear picture."
+        },
+        {
+          "text": "小小的手上有水",
+          "spokenText": "小小的手上有水",
+          "focusChar": "水",
+          "reason": "Reviews 小小的手 with a new concrete noun."
+        },
+        {
+          "text": "大大的山上有水",
+          "spokenText": "大大的山上有水",
+          "focusChar": "水",
+          "reason": "Reviews 大大的山 and adds water."
+        }
+      ]
+    },
+    {
+      "char": "你",
+      "zhuyin": "ㄋㄧˇ",
+      "priority": 30,
+      "why": "Adds a second-person child role and starts simple interpersonal sentence patterns.",
+      "requires": [
+        "一",
+        "人",
+        "個",
+        "大",
+        "的",
+        "小",
+        "手",
+        "有",
+        "山",
+        "上"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "你一個人",
+          "spokenText": "你一個人",
+          "focusChar": "你",
+          "reason": "Short identity phrase parallel to 我一個人."
+        },
+        {
+          "text": "你有小小的手",
+          "spokenText": "你有小小的手",
+          "focusChar": "你",
+          "reason": "Reviews 有、小小的手."
+        },
+        {
+          "text": "你上山",
+          "spokenText": "你上山",
+          "focusChar": "你",
+          "reason": "Simple action phrase using 上山."
+        },
+        {
+          "text": "你手上有小人",
+          "spokenText": "你手上有小人",
+          "focusChar": "你",
+          "reason": "Reuses hand/toy-person concept with a new person."
+        }
+      ]
+    },
+    {
+      "char": "去",
+      "zhuyin": "ㄑㄩˋ",
+      "priority": 40,
+      "why": "Unlocks simple movement/action sentences with 我、人、山上.",
+      "requires": [
+        "一",
+        "三",
+        "人",
+        "個",
+        "大",
+        "小",
+        "我",
+        "有",
+        "山",
+        "上"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我去山上",
+          "spokenText": "我去山上",
+          "focusChar": "去",
+          "reason": "Simple movement sentence using the fixed 我 character."
+        },
+        {
+          "text": "一個人去山上",
+          "spokenText": "一個人去山上",
+          "focusChar": "去",
+          "reason": "Reviews 一個人 and 山上."
+        },
+        {
+          "text": "三個人去山上",
+          "spokenText": "三個人去山上",
+          "focusChar": "去",
+          "reason": "Reviews count phrase with an action."
+        },
+        {
+          "text": "大人去山上",
+          "spokenText": "大人去山上",
+          "focusChar": "去",
+          "reason": "Concrete adult action sentence."
+        }
+      ]
+    },
+    {
+      "char": "家",
+      "zhuyin": "ㄐㄧㄚ",
+      "priority": 50,
+      "why": "High-value family/home character; useful before later family roles.",
+      "requires": [
+        "一",
+        "三",
+        "人",
+        "個",
+        "大",
+        "小",
+        "我",
+        "有"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "我家有三個人",
+          "spokenText": "我家有三個人",
+          "focusChar": "家",
+          "reason": "Natural Taiwan Mandarin and very imageable."
+        },
+        {
+          "text": "我家有大人",
+          "spokenText": "我家有大人",
+          "focusChar": "家",
+          "reason": "Short home sentence with 大人."
+        },
+        {
+          "text": "我家有小人",
+          "spokenText": "我家有小人",
+          "focusChar": "家",
+          "reason": "Possible if 小人 is represented as toy figures or small people; teacher should review."
+        }
+      ]
+    },
+    {
+      "char": "他",
+      "zhuyin": "ㄊㄚ",
+      "priority": 60,
+      "why": "Adds third-person reference after 我 and before broader character stories.",
+      "requires": [
+        "一",
+        "人",
+        "個",
+        "大",
+        "的",
+        "小",
+        "手",
+        "有",
+        "山",
+        "上"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "他一個人",
+          "spokenText": "他一個人",
+          "focusChar": "他",
+          "reason": "Short identity phrase parallel to 我一個人."
+        },
+        {
+          "text": "他有小小的手",
+          "spokenText": "他有小小的手",
+          "focusChar": "他",
+          "reason": "Reviews 有 and 小小的手."
+        },
+        {
+          "text": "他上山",
+          "spokenText": "他上山",
+          "focusChar": "他",
+          "reason": "Simple action phrase using 上山."
+        },
+        {
+          "text": "他手上有小人",
+          "spokenText": "他手上有小人",
+          "focusChar": "他",
+          "reason": "Reuses hand/toy-person concept with a new person."
+        }
+      ]
+    }
+  ]
+}
