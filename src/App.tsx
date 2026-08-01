@@ -3157,11 +3157,11 @@ function SentencePracticePreview({
     filledBlanks.set(index, currentPickedOptions[slotIndex]?.text ?? "");
   });
 
-  function completeRound() {
+  function completeRound(delayMs = 650) {
     if (roundComplete || disabled || doneCount >= requiredCount) return;
     setRoundComplete(true);
     playCelebrateChime();
-    window.setTimeout(onRoundDone, 650);
+    window.setTimeout(onRoundDone, delayMs);
   }
 
   async function runHelperIntro(runId: number) {
@@ -3215,7 +3215,7 @@ function SentencePracticePreview({
       return;
     }
     void speakStageFour("找到了，謝謝你幫小兔子。");
-    completeRound();
+    completeRound(1200);
   }
 
   function handleMissingOption(option: SentenceGameOption) {
@@ -3384,7 +3384,7 @@ function SentencePracticePreview({
           <SentenceGameLine
             sentence={sentence}
             zhuyinMap={zhuyinMap}
-            targetChar={game.targetChar}
+            targetChar={roundComplete ? game.targetChar : undefined}
             activeIndex={activeGameCharIndex}
             clickable
             foundIndexes={roundComplete ? new Set([targetIndex]) : new Set()}

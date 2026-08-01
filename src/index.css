@@ -1220,6 +1220,15 @@ button.char-token {
   border-color: var(--primary);
 }
 
+.sentence-game-card .char-token.found {
+  border-color: #d94735;
+  border-radius: 50%;
+  background: #fff8f6;
+  color: #b43124;
+  box-shadow: 0 0 0 6px rgba(217, 71, 53, 0.18), 0 10px 24px rgba(217, 71, 53, 0.2);
+  transform: scale(1.12);
+}
+
 .hanzi {
   font-size: 2.35rem;
   font-weight: 850;
