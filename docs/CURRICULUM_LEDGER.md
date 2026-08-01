@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 16:
+Characters taught after Lesson 17:
 
-`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很`
+`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家`
 
 Recent review pool for the next lesson:
 
-`三 個 人 很 高 在 山 上 水 有 大 小 手 你 我 二 一 的 下`
+`大 的 山 上 有 水 你 我 下 三 個 人 一 小 手 在 二 高 很 家`
 
 ## Visual Continuity Ledger
 
@@ -62,6 +62,7 @@ Image reuse rule:
 | L014 | 在 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下、你、水、在 | 水在你小小的手上 / 你我二人在水下 / 在山下有三個大人 / 有山有水，有你有我。 / 我在水上，你在水下 | 二、三、人、個、大、的、小、手、我、有、山、上、下、你、水 | Introduces `在` for location/existence phrasing and reviews the previous three new characters `下`、`你`、`水`. Reuses approved L013-S05 image for `水在你小小的手上`. |
 | L015 | 高 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下、你、水、在、高 | 在高高的山下有水 / 你我二人在高山上 / 高高的人有大大的手 / 三個高高的人在水下 / 在你的手上有水 | 二、三、人、個、大、的、手、我、有、山、上、下、你、水、在 | Introduces `高` for height and high-mountain scenes. Reviews the previous three new characters `你`、`水`、`在`; reuses approved L013-S05 image for `在你的手上有水`. |
 | L016 | 很 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下、你、水、在、高、很 | 在高山上有很大的水 / 有一個很高的人在水下 / 大人的手很大 / 你我二人的手很小 / 有三個很高的人在山上 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下、你、水、在、高 | Introduces `很` as a degree word for size/height. Reviews recent `水`、`在`、`高`; reuses approved L008-S03 image for `大人的手很大` and creates new images for the four new visual meanings. |
+| L017 | 家 | 一二三人個大的小手我有山上下你水在高很家 | 你的家在高山下 / 我的家在高山上 / 山上有三個很大的家 / 你我二人在家 / 有一個很小的家在水上 | 你的在高山下我上有三個很大二人一小水 | Introduces `家` through home scenes on/under mountains, at home with the fixed children, and one small house on water. Reviews recent `在`, `高`, and `很`. |
 
 ## Planned Lessons
 
@@ -100,7 +101,7 @@ Rules:
 - No Hanyu pinyin.
 - No punctuation in spokenText.
 - Prefer concrete, imageable sentences.
-- Reuse characters from the recent review pool when natural: 三 個 人 很 高 在 山 上 水 有 大 小 手 你 我 二 一 的 下.
+- Reuse characters from the recent review pool when natural: 大 的 山 上 有 水 你 我 下 三 個 人 一 小 手 在 二 高 很 家
 - Keep each sentence 4-12 Han characters long, ignoring punctuation.
 - Across the sentence set, include the previous 3 lesson new characters at least once.
 - Keep the sentence set short if the character set cannot support natural variety.

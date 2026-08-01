@@ -339,6 +339,46 @@
         background: var(--accent-soft);
       }
 
+      .review-coverage {
+        display: grid;
+        gap: 8px;
+        margin-top: 10px;
+        border: 2px solid rgba(232, 169, 38, 0.35);
+        border-radius: 12px;
+        background: #fff8e6;
+        padding: 10px 12px;
+      }
+
+      .review-coverage strong {
+        font-size: 1rem;
+      }
+
+      .review-count-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .review-count {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 4px;
+        border: 1px solid rgba(232, 169, 38, 0.42);
+        border-radius: 999px;
+        background: #fffdf8;
+        padding: 4px 10px;
+        font-weight: 850;
+      }
+
+      .review-count.zero {
+        color: var(--muted);
+      }
+
+      .review-count span {
+        color: var(--primary);
+        font-size: 1.12rem;
+      }
+
       .custom-section {
         margin-top: 14px;
         border-top: 1px solid var(--line);
@@ -813,6 +853,12 @@
         return unique([...completed, ...provisional].sort((a, b) => a.order - b.order).slice(-count).flatMap((lesson) => lesson.newChars));
       }
 
+      function recentLessonNewChars(lessons, planned, count) {
+        const completed = lessons.map((lesson) => ({ order: lesson.order, newChars: lesson.newChars || [] }));
+        const provisional = planned.map((plan) => ({ order: plan.order, newChars: plan.newChars || [] }));
+        return unique([...completed, ...provisional].sort((a, b) => a.order - b.order).slice(-count).flatMap((lesson) => lesson.newChars));
+      }
+
       function recommend(data) {
         const lessons = [...(data.lessons || [])].sort((a, b) => a.order - b.order);
         const latestOrder = Math.max(...lessons.map((lesson) => lesson.order));
@@ -822,6 +868,7 @@
         const learnedChars = unique([...lessons.flatMap((lesson) => lesson.newChars || []), ...planned.flatMap((plan) => plan.newChars || [])]);
         const recentPool = chooseRecentPool(lessons, planned);
         const requiredRecentChars = previousRequiredChars(lessons, planned, 3);
+        const reviewCountChars = recentLessonNewChars(lessons, planned, 5);
         const bankEntries = data.nextCharacterBank || [];
         const bankChars = new Set(bankEntries.map((entry) => entry.char));
         const manualChoiceChars = new Set(state.manualChoices.map((entry) => entry.char));
@@ -865,6 +912,7 @@
           learnedChars,
           recentPool,
           requiredRecentChars,
+          reviewCountChars,
           recommendations,
         };
       }
@@ -980,6 +1028,7 @@
                       </div>`
                     : ""
                 }
+                ${selected ? reviewCoverageHtml(model, choice) : ""}
                 <div class="sentence-list">
                   ${
                     choice.sentenceCandidates.length
@@ -1177,6 +1226,10 @@
 
       function selectedSentences() {
         const choice = selectedChoice();
+        return choice ? selectedSentencesForChoice(choice) : [];
+      }
+
+      function selectedSentencesForChoice(choice) {
         if (!choice) return [];
         const indexes = [...(state.selectedIndexes.get(choice.choiceId) || new Set())].sort((a, b) => a - b);
         const selected = indexes
@@ -1207,6 +1260,38 @@
           seen.add(key);
           return true;
         });
+      }
+
+      function reviewCharCounts(sentences, chars) {
+        const counts = Object.fromEntries(chars.map((char) => [char, 0]));
+        const tracked = new Set(chars);
+        sentences.forEach((sentence) => {
+          hanChars(sentence.text).forEach((char) => {
+            if (tracked.has(char)) counts[char] += 1;
+          });
+        });
+        return counts;
+      }
+
+      function reviewCoverageHtml(model, choice = selectedChoice()) {
+        const chars = model.reviewCountChars || [];
+        if (!choice || chars.length === 0) return "";
+        const counts = reviewCharCounts(selectedSentencesForChoice(choice), chars);
+        return `<div class="review-coverage" data-review-coverage aria-live="polite">
+          <strong>近五課新字出現次數</strong>
+          <div class="review-count-list">
+            ${chars
+              .map((char) => `<div class="review-count ${counts[char] ? "" : "zero"}">${char}<span>${counts[char] || 0}</span>次</div>`)
+              .join("")}
+          </div>
+        </div>`;
+      }
+
+      function refreshReviewCoverage(model = currentModel()) {
+        const coverage = document.querySelector("[data-review-coverage]");
+        if (!coverage) return;
+        const choice = selectedChoice();
+        coverage.outerHTML = reviewCoverageHtml(model, choice);
       }
 
       function plannerStorageKey(model) {
@@ -1933,6 +2018,7 @@
           state.selectedChoiceId = choiceId;
           savePlannerMemory();
           updateOutput(currentModel());
+          refreshReviewCoverage();
         }
         if (event.target.matches("[data-candidate-edit-choice][data-index][data-field]")) {
           const choiceId = event.target.dataset.candidateEditChoice;

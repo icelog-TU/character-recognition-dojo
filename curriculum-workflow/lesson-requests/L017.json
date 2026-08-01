@@ -1,0 +1,101 @@
+{
+  "order": 17,
+  "newChars": [
+    "家"
+  ],
+  "zhuyin": {
+    "家": "ㄐㄧㄚ"
+  },
+  "title": "家",
+  "dependsOnLessons": [],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家"
+    ],
+    "provisionalLearnedChars": [],
+    "preferReviewChars": [
+      "你",
+      "一",
+      "個",
+      "人",
+      "上",
+      "山",
+      "下",
+      "手",
+      "有",
+      "三",
+      "小",
+      "我",
+      "大",
+      "二",
+      "的",
+      "水",
+      "在",
+      "高",
+      "很"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "在",
+      "高",
+      "很"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "Generated from the web next-lesson planner. Selected choice: choice-家. Approved sentences: 你的家在高山下; 我的家在高山上; 山上有三個很大的家; 你我二人在家; 有一個很小的家在水上. Sentence length target: 4-12 Han characters per sentence. Prefer using recent review characters from the previous five lessons: 你 一 個 人 上 山 下 手 有 三 小 我 大 二 的 水 在 高 很. Across this lesson's sentence set, include each new character from the previous three lessons at least once: 在 高 很. Use only learned characters plus the new character(s). Use each sentence's imageNotes as teacher guidance when writing imagePrompt. Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval. spokenText has been production-normalized by Codex to match the visible Han text with punctuation removed.",
+  "approvedSentences": [
+    {
+      "text": "你的家在高山下",
+      "spokenText": "你的家在高山下",
+      "focusChar": "家",
+      "reason": "Teacher-edited candidate. Reviews 你、在、高、山下."
+    },
+    {
+      "text": "我的家在高山上",
+      "spokenText": "我的家在高山上",
+      "focusChar": "家",
+      "reason": "Teacher-edited candidate. Reviews 我、在、高、山上."
+    },
+    {
+      "text": "山上有三個很大的家",
+      "spokenText": "山上有三個很大的家",
+      "focusChar": "家",
+      "reason": "Teacher-edited candidate. Reviews 三個、很大 and 山上."
+    },
+    {
+      "text": "你我二人在家",
+      "spokenText": "你我二人在家",
+      "focusChar": "家",
+      "reason": "Teacher-edited candidate. Reviews 你我、二人 and 在."
+    },
+    {
+      "text": "有一個很小的家在水上",
+      "spokenText": "有一個很小的家在水上",
+      "focusChar": "家",
+      "reason": "Teacher-edited candidate. Reviews 很小的 and 水上."
+    }
+  ]
+}

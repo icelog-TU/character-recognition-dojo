@@ -21,10 +21,10 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L016
-- L016 introduces `很`.
+- Current reviewed lessons: L001-L017
+- L017 introduces `家`.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
-- L006-L016 include Stage 4 fixed sentence games after picture-supported listening.
+- L006-L017 include Stage 4 fixed sentence games after picture-supported listening.
 
 ## Multi-Codex Collaboration SOP
 
@@ -586,9 +586,9 @@ Sentence text is horizontal, with zhuyin vertically on the right of each Han cha
 Curriculum sentence audio must use AI audio files with charTimings.
 Production charTimings must use npm run assets:align:ai, then manual playback review.
 Guide narration may use TTS.
-L001-L016 are reviewed and built.
-L016 introduces 很 and uses production AI audio alignment.
+L001-L017 are reviewed and built.
+L017 introduces `家`.
 L007 introduces a fixed young girl character for 我.
 L012 introduces a fixed second-person young boy character for 你.
-L006-L016 include Stage 4 sentence games after picture-supported sentence listening.
+L006-L017 include Stage 4 sentence games after picture-supported sentence listening.
 ```
