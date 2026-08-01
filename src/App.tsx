@@ -286,6 +286,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "sea-turtle-youngerBrother": "/assets/characters/sea/turtle/turtle-younger-brother.webp",
   "sea-turtle-youngerSister": "/assets/characters/sea/turtle/turtle-younger-sister.webp",
   "sea-turtle-baby": "/assets/characters/sea/turtle/turtle-baby.webp",
+  "sea-octopus-grandpa": "/assets/characters/sea/octopus/octopus-grandpa.webp",
+  "sea-octopus-grandma": "/assets/characters/sea/octopus/octopus-grandma.webp",
+  "sea-octopus-dad": "/assets/characters/sea/octopus/octopus-father.webp",
+  "sea-octopus-mom": "/assets/characters/sea/octopus/octopus-mother.webp",
+  "sea-octopus-olderBrother": "/assets/characters/sea/octopus/octopus-older-brother.webp",
+  "sea-octopus-olderSister": "/assets/characters/sea/octopus/octopus-older-sister.webp",
+  "sea-octopus-youngerBrother": "/assets/characters/sea/octopus/octopus-younger-brother.webp",
+  "sea-octopus-youngerSister": "/assets/characters/sea/octopus/octopus-younger-sister.webp",
+  "sea-octopus-baby": "/assets/characters/sea/octopus/octopus-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
