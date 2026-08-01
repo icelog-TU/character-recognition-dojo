@@ -122,6 +122,33 @@ Suggested role cues:
 
 Use accessories sparingly. The animal species must remain recognizable even if the accessory is hidden by a small card crop.
 
+### Accessory Rotation
+
+Do not lock a family role to one fixed accessory across every species. Keep the role readable, but rotate 1 simple prop or outfit cue per species so the collection feels richer.
+
+Use this as the default accessory pool:
+
+| Role | Rotating options |
+|---|---|
+| Grandpa | cane, folded newspaper, small book, teacup, walking hat, small shoulder pouch |
+| Grandma | shawl, small basket, teacup, flower, knitting pouch, small book |
+| Father | lunch bag, folded map, small toolbox, mug, book, simple satchel |
+| Mother | apron, small basket, watering can, book, teacup, small tote bag |
+| Older brother | backpack, outdoor cap, sporty outfit, ball, small camera, adventure vest |
+| Older sister | bow, shoulder bag, small doll, book, flower clip, small basket |
+| Younger brother | toy car, robot toy, ball, blocks, small train, toy plane |
+| Younger sister | small backpack, small doll, bow, picture book, flower clip, small purse |
+| Baby | bib, bottle, rattle, teether, soft toy, small blanket |
+
+Rules:
+
+- Use only 1 or 2 readable cues per character.
+- Do not force every old character to hold a cane or wear a shawl.
+- Do not force every parent to only stand with empty hands.
+- Do not repeat the exact same accessory/color pairing for the same role in adjacent species.
+- Props must be small, friendly, and safe-looking.
+- Props must stay fully inside the image safe margin.
+
 ## Token-Saving Prompt Structure
 
 Do not write a full custom prompt from scratch for every image. Use one stable style anchor and only swap species, role, and role cue.
@@ -146,6 +173,7 @@ Create one collectible character image for a children's Chinese character recogn
 Character: {SPECIES}{ROLE}
 Design: the character is a cute {SPECIES} itself, not a human in a costume. It belongs to a 9-member {SPECIES} family.
 Role cue: {ROLE_CUE}
+Accessory cue: {ACCESSORY_CUE}. Choose from the role accessory pool and rotate from previous species; keep it simple and phone-readable.
 Color cue: {COLOR_CUE}. Use the approved warm, gentle palette, but vary clothing and accessory colors across species so the same family role does not always repeat the same colors.
 Style: Warm children's picture-book illustration matching the existing 認字練功房 lesson images: soft watercolor texture, gentle colored pencil linework, rounded cute character shapes, friendly expressive eyes, warm cream background, bright but gentle colors, clear centered full-body subject, generous empty space, phone-readable details.
 Composition: square image, one complete full-body character, centered, occupying about 68-78% of the image height. Keep generous blank warm-cream background around the whole character. Ears, tail, raised hands, paws, feet, clothing, toy, and accessories must all be fully visible and must not touch any image edge. No crop damage.
