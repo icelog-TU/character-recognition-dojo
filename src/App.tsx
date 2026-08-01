@@ -160,6 +160,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "land-deer-youngerBrother": "/assets/characters/land/deer/deer-younger-brother.webp",
   "land-deer-youngerSister": "/assets/characters/land/deer/deer-younger-sister.webp",
   "land-deer-baby": "/assets/characters/land/deer/deer-baby.webp",
+  "land-fox-grandpa": "/assets/characters/land/fox/fox-grandpa.webp",
+  "land-fox-grandma": "/assets/characters/land/fox/fox-grandma.webp",
+  "land-fox-dad": "/assets/characters/land/fox/fox-father.webp",
+  "land-fox-mom": "/assets/characters/land/fox/fox-mother.webp",
+  "land-fox-olderBrother": "/assets/characters/land/fox/fox-older-brother.webp",
+  "land-fox-olderSister": "/assets/characters/land/fox/fox-older-sister.webp",
+  "land-fox-youngerBrother": "/assets/characters/land/fox/fox-younger-brother.webp",
+  "land-fox-youngerSister": "/assets/characters/land/fox/fox-younger-sister.webp",
+  "land-fox-baby": "/assets/characters/land/fox/fox-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
