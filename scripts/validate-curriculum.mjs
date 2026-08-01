@@ -124,7 +124,7 @@ for (let i = 0; i < sorted.length; i += 1) {
 
   const sentencesById = new Map((lesson.sentences ?? []).map((sentence) => [sentence.id, sentence]));
   const sentenceGames = lesson.sentenceGames ?? [];
-  if (lesson.order >= 11 && sentenceGames.length === stageFourCycleGameTypes.length) {
+  if (sentenceGames.length === stageFourCycleGameTypes.length) {
     const gameTypes = new Set(sentenceGames.map((game) => game.type));
     for (const expectedType of stageFourCycleGameTypes) {
       if (!gameTypes.has(expectedType)) {

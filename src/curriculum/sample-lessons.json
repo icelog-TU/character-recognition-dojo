@@ -954,6 +954,114 @@
             "小小的手"
           ]
         }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L006-G01",
+          "type": "find-character",
+          "sentenceId": "L006-S01",
+          "targetChar": "手",
+          "prompt": "找到「手」。"
+        },
+        {
+          "id": "L006-G02",
+          "type": "teach-character",
+          "sentenceId": "L006-S02",
+          "targetChar": "手",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            4
+          ]
+        },
+        {
+          "id": "L006-G03",
+          "type": "missing-character",
+          "sentenceId": "L006-S03",
+          "targetChar": "手",
+          "prompt": "字寶寶不見了，把「手」找回來。",
+          "missingIndexes": [
+            3
+          ],
+          "options": [
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": true
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": false
+            },
+            {
+              "id": "big",
+              "text": "大",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L006-G04",
+          "type": "partial-order",
+          "sentenceId": "L006-S05",
+          "targetChar": "手",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "big-one",
+              "text": "大",
+              "correct": true
+            },
+            {
+              "id": "big-two",
+              "text": "大",
+              "correct": true
+            },
+            {
+              "id": "small-one",
+              "text": "小",
+              "correct": true
+            },
+            {
+              "id": "small-two",
+              "text": "小",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L006-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L006-S04",
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "小小的手",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L006/audio/L006-S04.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "大大的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L006/audio/L006-S03.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "小小的人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L005/audio/L005-S02.m4a"
+            }
+          ]
+        }
       ]
     },
     {
@@ -1201,6 +1309,114 @@
           "displayLines": [
             "三個人的",
             "大手小手"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L007-G01",
+          "type": "find-character",
+          "sentenceId": "L007-S01",
+          "targetChar": "我",
+          "prompt": "找到「我」。"
+        },
+        {
+          "id": "L007-G02",
+          "type": "teach-character",
+          "sentenceId": "L007-S03",
+          "targetChar": "手",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            2
+          ]
+        },
+        {
+          "id": "L007-G03",
+          "type": "missing-character",
+          "sentenceId": "L007-S02",
+          "targetChar": "我",
+          "prompt": "字寶寶不見了，把「我」找回來。",
+          "missingIndexes": [
+            0
+          ],
+          "options": [
+            {
+              "id": "me",
+              "text": "我",
+              "correct": true
+            },
+            {
+              "id": "small",
+              "text": "小",
+              "correct": false
+            },
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L007-G04",
+          "type": "partial-order",
+          "sentenceId": "L007-S05",
+          "targetChar": "手",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "three",
+              "text": "三",
+              "correct": true
+            },
+            {
+              "id": "count",
+              "text": "個",
+              "correct": true
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": true
+            },
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L007-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L007-S04",
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "大人的手大大的",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L007/audio/L007-S04.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "大人的手小小的",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L007/audio/L007-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "小人的手大大的",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L007/audio/L007-G05-wrong2.m4a"
+            }
           ]
         }
       ]
@@ -1469,6 +1685,114 @@
           "displayLines": [
             "有一大",
             "二小的手"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L008-G01",
+          "type": "find-character",
+          "sentenceId": "L008-S01",
+          "targetChar": "有",
+          "prompt": "找到「有」。"
+        },
+        {
+          "id": "L008-G02",
+          "type": "teach-character",
+          "sentenceId": "L008-S02",
+          "targetChar": "有",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L008-G03",
+          "type": "missing-character",
+          "sentenceId": "L008-S03",
+          "targetChar": "有",
+          "prompt": "字寶寶不見了，把「有」找回來。",
+          "missingIndexes": [
+            2
+          ],
+          "options": [
+            {
+              "id": "have",
+              "text": "有",
+              "correct": true
+            },
+            {
+              "id": "big",
+              "text": "大",
+              "correct": false
+            },
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L008-G04",
+          "type": "partial-order",
+          "sentenceId": "L008-S04",
+          "targetChar": "有",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "three",
+              "text": "三",
+              "correct": true
+            },
+            {
+              "id": "count",
+              "text": "個",
+              "correct": true
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": true
+            },
+            {
+              "id": "have",
+              "text": "有",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L008-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L008-S05",
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "有一大二小的手",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L008/audio/L008-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "有一大一小的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L008/audio/L008-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "有二大二小的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L008/audio/L008-G05-wrong2.m4a"
+            }
           ]
         }
       ]
@@ -1741,6 +2065,114 @@
           "displayLines": [
             "我有",
             "小小的手"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L009-G01",
+          "type": "find-character",
+          "sentenceId": "L009-S01",
+          "targetChar": "山",
+          "prompt": "找到「山」。"
+        },
+        {
+          "id": "L009-G02",
+          "type": "teach-character",
+          "sentenceId": "L009-S02",
+          "targetChar": "山",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            3
+          ]
+        },
+        {
+          "id": "L009-G03",
+          "type": "missing-character",
+          "sentenceId": "L009-S03",
+          "targetChar": "山",
+          "prompt": "字寶寶不見了，把「山」找回來。",
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "mountain",
+              "text": "山",
+              "correct": true
+            },
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": false
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L009-G04",
+          "type": "partial-order",
+          "sentenceId": "L009-S04",
+          "targetChar": "手",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "three",
+              "text": "三",
+              "correct": true
+            },
+            {
+              "id": "count",
+              "text": "個",
+              "correct": true
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": true
+            },
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L009-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L009-S05",
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我有小小的手",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L009/audio/L009-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "我有大大的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L009/audio/L009-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "我有小小的人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L009/audio/L009-G05-wrong2.m4a"
+            }
           ]
         }
       ]
@@ -2043,6 +2475,114 @@
           "displayLines": [
             "有大大的山，",
             "有小小的山"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L010-G01",
+          "type": "find-character",
+          "sentenceId": "L010-S04",
+          "targetChar": "上",
+          "prompt": "找到「上」。"
+        },
+        {
+          "id": "L010-G02",
+          "type": "teach-character",
+          "sentenceId": "L010-S01",
+          "targetChar": "上",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            4
+          ]
+        },
+        {
+          "id": "L010-G03",
+          "type": "missing-character",
+          "sentenceId": "L010-S03",
+          "targetChar": "手",
+          "prompt": "字寶寶不見了，把「手」找回來。",
+          "missingIndexes": [
+            2
+          ],
+          "options": [
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": true
+            },
+            {
+              "id": "mountain",
+              "text": "山",
+              "correct": false
+            },
+            {
+              "id": "up",
+              "text": "上",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L010-G04",
+          "type": "partial-order",
+          "sentenceId": "L010-S05",
+          "targetChar": "山",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "have",
+              "text": "有",
+              "correct": true
+            },
+            {
+              "id": "big-one",
+              "text": "大",
+              "correct": true
+            },
+            {
+              "id": "big-two",
+              "text": "大",
+              "correct": true
+            },
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L010-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L010-S02",
+          "targetChar": "上",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "山上有三個大人",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L010/audio/L010-S02.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "山上有一個大人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L010/audio/L010-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "山上有三個小人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L010/audio/L010-G05-wrong2.m4a"
+            }
           ]
         }
       ]

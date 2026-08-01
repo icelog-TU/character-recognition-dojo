@@ -21,11 +21,10 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L013
-- L013 introduces `水`.
-- Sentence games planned start: around L011 as Stage 4
-- L001-L010 currently use the simpler three-block flow: listen, find, picture sentence.
-- L011-L013 include Stage 4 fixed sentence games after picture-supported listening.
+- Current reviewed lessons: L001-L014
+- L014 introduces `在`.
+- L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
+- L006-L014 include Stage 4 fixed sentence games after picture-supported listening.
 
 ## Multi-Codex Collaboration SOP
 
