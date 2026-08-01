@@ -1,5 +1,93 @@
 [
   {
+    "char": "很",
+    "zhuyin": "ㄏㄣˇ",
+    "priority": 1,
+    "why": "Introduces the common degree word 很 for simple adjective sentences, especially with 高、大、小 and recent location words.",
+    "requires": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高"
+    ],
+    "sentenceCandidates": [
+      {
+        "text": "很高的山",
+        "spokenText": "很高的山",
+        "focusChar": "很",
+        "reason": "Reviews high mountain with 很."
+      },
+      {
+        "text": "很高很高的山",
+        "spokenText": "很高很高的山",
+        "focusChar": "很",
+        "reason": "Repeats 很 with 高 for a clear tall mountain image."
+      },
+      {
+        "text": "你很高很高",
+        "spokenText": "你很高很高",
+        "focusChar": "很",
+        "reason": "Simple sentence using fixed 你 with repeated 高."
+      },
+      {
+        "text": "我很高很高",
+        "spokenText": "我很高很高",
+        "focusChar": "很",
+        "reason": "Simple sentence using fixed 我 with repeated 高."
+      },
+      {
+        "text": "大人很高",
+        "spokenText": "大人很高",
+        "focusChar": "很",
+        "reason": "Concrete adult-height sentence."
+      },
+      {
+        "text": "三個人很高",
+        "spokenText": "三個人很高",
+        "focusChar": "很",
+        "reason": "Reviews count and 人 with 很高."
+      },
+      {
+        "text": "高山很高",
+        "spokenText": "高山很高",
+        "focusChar": "很",
+        "reason": "Short concrete review of 山 and 高."
+      },
+      {
+        "text": "你的手很小",
+        "spokenText": "你的手很小",
+        "focusChar": "很",
+        "reason": "Reviews fixed 你 and hand-size words."
+      },
+      {
+        "text": "我的手很小",
+        "spokenText": "我的手很小",
+        "focusChar": "很",
+        "reason": "Reviews fixed 我 and hand-size words."
+      },
+      {
+        "text": "很高的山下有水",
+        "spokenText": "很高的山下有水",
+        "focusChar": "很",
+        "reason": "Reviews 山下 and 水 in a longer imageable sentence."
+      }
+    ]
+  },
+  {
     "char": "高",
     "zhuyin": "ㄍㄠ",
     "priority": 8,
@@ -311,25 +399,61 @@
         "text": "我去山上",
         "spokenText": "我去山上",
         "focusChar": "去",
-        "reason": "Simple movement sentence using the fixed 我 character."
+        "reason": "Reviews 我 and 山上 with 去."
+      },
+      {
+        "text": "你去山上",
+        "spokenText": "你去山上",
+        "focusChar": "去",
+        "reason": "Reviews fixed 你 and 山上 with 去."
       },
       {
         "text": "一個人去山上",
         "spokenText": "一個人去山上",
         "focusChar": "去",
-        "reason": "Reviews 一個人 and 山上."
+        "reason": "Reviews 一個人 and mountain movement."
       },
       {
-        "text": "三個人去山上",
-        "spokenText": "三個人去山上",
+        "text": "三個人去山下",
+        "spokenText": "三個人去山下",
         "focusChar": "去",
-        "reason": "Reviews count phrase with an action."
+        "reason": "Reviews 三個人 and 山下."
       },
       {
-        "text": "大人去山上",
-        "spokenText": "大人去山上",
+        "text": "我去高山上",
+        "spokenText": "我去高山上",
         "focusChar": "去",
-        "reason": "Concrete adult action sentence."
+        "reason": "Reviews 高山上 with 我."
+      },
+      {
+        "text": "你去高山下",
+        "spokenText": "你去高山下",
+        "focusChar": "去",
+        "reason": "Reviews 高山下 with 你."
+      },
+      {
+        "text": "去山下有水",
+        "spokenText": "去山下有水",
+        "focusChar": "去",
+        "reason": "Concrete mountain-water sentence."
+      },
+      {
+        "text": "人去高高的山上",
+        "spokenText": "人去高高的山上",
+        "focusChar": "去",
+        "reason": "Reviews 高高的山上."
+      },
+      {
+        "text": "大人去水下",
+        "spokenText": "大人去水下",
+        "focusChar": "去",
+        "reason": "Concrete but playful water-location sentence."
+      },
+      {
+        "text": "我去你的山下",
+        "spokenText": "我去你的山下",
+        "focusChar": "去",
+        "reason": "Reviews 我、你、山下."
       }
     ]
   },
@@ -350,22 +474,64 @@
     ],
     "sentenceCandidates": [
       {
-        "text": "我家有三個人",
-        "spokenText": "我家有三個人",
+        "text": "我有一個家",
+        "spokenText": "我有一個家",
         "focusChar": "家",
-        "reason": "Natural Taiwan Mandarin and very imageable."
+        "reason": "Simple possession sentence with 家."
       },
       {
-        "text": "我家有大人",
-        "spokenText": "我家有大人",
+        "text": "你的家在山下",
+        "spokenText": "你的家在山下",
         "focusChar": "家",
-        "reason": "Short home sentence with 大人."
+        "reason": "Reviews 你、在、山下."
       },
       {
-        "text": "我家有小人",
-        "spokenText": "我家有小人",
+        "text": "我的家在山上",
+        "spokenText": "我的家在山上",
         "focusChar": "家",
-        "reason": "Possible if 小人 is represented as toy figures or small people; teacher should review."
+        "reason": "Reviews 我、在、山上."
+      },
+      {
+        "text": "山下有一個家",
+        "spokenText": "山下有一個家",
+        "focusChar": "家",
+        "reason": "Concrete house at mountain foot."
+      },
+      {
+        "text": "山上有三個家",
+        "spokenText": "山上有三個家",
+        "focusChar": "家",
+        "reason": "Reviews 三個 and 山上."
+      },
+      {
+        "text": "家在高山下",
+        "spokenText": "家在高山下",
+        "focusChar": "家",
+        "reason": "Reviews 高山下."
+      },
+      {
+        "text": "你我在家",
+        "spokenText": "你我在家",
+        "focusChar": "家",
+        "reason": "Reviews 你我 together with 在."
+      },
+      {
+        "text": "大大的家在山下",
+        "spokenText": "大大的家在山下",
+        "focusChar": "家",
+        "reason": "Reviews 大大的 and 山下."
+      },
+      {
+        "text": "小小的家在水上",
+        "spokenText": "小小的家在水上",
+        "focusChar": "家",
+        "reason": "Reviews 小小的 and 水上."
+      },
+      {
+        "text": "家下有水",
+        "spokenText": "家下有水",
+        "focusChar": "家",
+        "reason": "Short location sentence with water under a house."
       }
     ]
   },
@@ -388,28 +554,152 @@
     ],
     "sentenceCandidates": [
       {
-        "text": "他一個人",
-        "spokenText": "他一個人",
+        "text": "他在山上",
+        "spokenText": "他在山上",
         "focusChar": "他",
-        "reason": "Short identity phrase parallel to 我一個人."
+        "reason": "Simple location sentence with 他."
       },
       {
-        "text": "他有小小的手",
-        "spokenText": "他有小小的手",
+        "text": "他在山下",
+        "spokenText": "他在山下",
         "focusChar": "他",
-        "reason": "Reviews 有 and 小小的手."
+        "reason": "Contrasts 山下."
       },
       {
-        "text": "他上山",
-        "spokenText": "他上山",
+        "text": "他有一個水",
+        "spokenText": "他有一個水",
         "focusChar": "他",
-        "reason": "Simple action phrase using 上山."
+        "reason": "Uses 他 with possession and 水."
       },
       {
-        "text": "他手上有小人",
-        "spokenText": "他手上有小人",
+        "text": "他有大大的手",
+        "spokenText": "他有大大的手",
         "focusChar": "他",
-        "reason": "Reuses hand/toy-person concept with a new person."
+        "reason": "Reviews 大大的手."
+      },
+      {
+        "text": "他的小手有水",
+        "spokenText": "他的小手有水",
+        "focusChar": "他",
+        "reason": "Reviews 的、小手、水."
+      },
+      {
+        "text": "他你我在山上",
+        "spokenText": "他你我在山上",
+        "focusChar": "他",
+        "reason": "Reviews 他、你、我 together."
+      },
+      {
+        "text": "他一個人在山下",
+        "spokenText": "他一個人在山下",
+        "focusChar": "他",
+        "reason": "Reviews 一個人 and 山下."
+      },
+      {
+        "text": "他在高山上",
+        "spokenText": "他在高山上",
+        "focusChar": "他",
+        "reason": "Reviews 高山上."
+      },
+      {
+        "text": "他在水下",
+        "spokenText": "他在水下",
+        "focusChar": "他",
+        "reason": "Reviews 水下."
+      },
+      {
+        "text": "三個人有他",
+        "spokenText": "三個人有他",
+        "focusChar": "他",
+        "reason": "Reviews 三個人 with 他."
+      }
+    ]
+  },
+  {
+    "char": "左",
+    "zhuyin": "ㄗㄨㄛˇ",
+    "priority": 35,
+    "why": "Useful spatial/body-side character that combines naturally with hand and recent water/location sentences.",
+    "requires": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高"
+    ],
+    "sentenceCandidates": [
+      {
+        "text": "我的左手有水",
+        "spokenText": "我的左手有水",
+        "focusChar": "左",
+        "reason": "Reviews 我、手、水 with the new side character."
+      },
+      {
+        "text": "你的左手有水",
+        "spokenText": "你的左手有水",
+        "focusChar": "左",
+        "reason": "Reviews fixed 你 and water on hand."
+      },
+      {
+        "text": "左手上有水",
+        "spokenText": "左手上有水",
+        "focusChar": "左",
+        "reason": "Concrete hand-surface sentence."
+      },
+      {
+        "text": "左手下有水",
+        "spokenText": "左手下有水",
+        "focusChar": "左",
+        "reason": "Concrete below-hand location sentence."
+      },
+      {
+        "text": "一個人的左手",
+        "spokenText": "一個人的左手",
+        "focusChar": "左",
+        "reason": "Reviews count and person with 左手."
+      },
+      {
+        "text": "三個人的左手",
+        "spokenText": "三個人的左手",
+        "focusChar": "左",
+        "reason": "Reviews 三個人 with 左手."
+      },
+      {
+        "text": "大人的左手",
+        "spokenText": "大人的左手",
+        "focusChar": "左",
+        "reason": "Short phrase for an adult left hand."
+      },
+      {
+        "text": "小小的左手",
+        "spokenText": "小小的左手",
+        "focusChar": "左",
+        "reason": "Reviews 小小的手 with 左."
+      },
+      {
+        "text": "大大的左手",
+        "spokenText": "大大的左手",
+        "focusChar": "左",
+        "reason": "Reviews 大大的手 with 左."
+      },
+      {
+        "text": "左手在水下",
+        "spokenText": "左手在水下",
+        "focusChar": "左",
+        "reason": "Reviews 在 and 水下 with 左手."
       }
     ]
   }

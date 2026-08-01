@@ -190,6 +190,12 @@
         scroll-margin-top: 116px;
       }
 
+      .choice-card.previewing {
+        border-color: rgba(25, 121, 111, 0.48);
+        box-shadow: 0 0 0 4px rgba(25, 121, 111, 0.08), 0 12px 28px rgba(74, 55, 32, 0.08);
+        scroll-margin-top: 116px;
+      }
+
       .choice-card.selected::before {
         content: "目前正在編輯這個候選字";
         display: inline-flex;
@@ -202,11 +208,31 @@
         font-weight: 850;
       }
 
+      .choice-card.compact .sentence-list,
+      .choice-card.compact .custom-section,
+      .choice-card.previewing:not(.selected) .custom-section,
+      .choice-card.previewing:not(.selected) .sentence-row > input[type="checkbox"],
+      .choice-card.previewing:not(.selected) .candidate-tools,
+      .choice-card.previewing:not(.selected) .note-input {
+        display: none;
+      }
+
+      .choice-card.previewing:not(.selected) .sentence-row {
+        grid-template-columns: 1fr;
+      }
+
       .choice-head {
         display: grid;
         grid-template-columns: auto 1fr auto;
         align-items: center;
         gap: 12px;
+      }
+
+      .choice-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
       }
 
       .char-badge {
@@ -305,6 +331,10 @@
       .sentence-row.checked {
         border-color: rgba(25, 121, 111, 0.42);
         background: #f0fbf6;
+      }
+
+      .sentence-row.preview-only {
+        grid-template-columns: 1fr;
       }
 
       .sentence-row > input[type="checkbox"] {
@@ -535,8 +565,13 @@
           grid-template-columns: auto 1fr;
         }
 
-        .choice-head .btn {
+        .choice-actions {
           grid-column: 1 / -1;
+          justify-content: stretch;
+        }
+
+        .choice-actions .btn {
+          flex: 1 1 0;
         }
       }
     </style>
@@ -564,11 +599,11 @@
         <div class="manual-grid">
           <div class="manual-field">
             <label for="manualChar">新字</label>
-            <input id="manualChar" maxlength="2" inputmode="text" placeholder="在" />
+            <input id="manualChar" maxlength="2" inputmode="text" placeholder="輸入一個字" />
           </div>
           <div class="manual-field">
             <label for="manualZhuyin">注音</label>
-            <input id="manualZhuyin" inputmode="text" placeholder="ㄗㄞˋ" />
+            <input id="manualZhuyin" inputmode="text" placeholder="會自動帶入，可手動改" />
           </div>
           <div class="manual-field">
             <label for="manualWhy">理由</label>
@@ -578,9 +613,11 @@
         </div>
       </section>
 
+      <div class="status" id="statusLine"></div>
+
       <section class="choice-list" id="choiceList"></section>
 
-      <section class="request-panel">
+      <section class="request-panel" id="requestPanel" hidden>
         <h2>完整 lesson request 預覽</h2>
         <p class="help">先選一個候選字，再勾選或新增句子。主要送出按鈕會出現在你正在編輯的候選字下面。按送出後，看到內容貼進 Codex 對話才算真的送到。</p>
         <textarea id="requestOutput" spellcheck="false"></textarea>
@@ -590,7 +627,6 @@
           <button class="btn secondary" id="downloadBtn" type="button">下載 JSON</button>
           <button class="btn secondary" id="clearDraftBtn" type="button">清除本課草稿</button>
         </div>
-        <div class="status" id="statusLine"></div>
       </section>
     </main>
 
@@ -599,6 +635,7 @@
         data: null,
         recommendations: [],
         selectedChoiceId: "",
+        previewChoiceId: "",
         storageKey: "",
         selectedIndexes: new Map(),
         candidateEditsBySentence: new Map(),
@@ -615,6 +652,9 @@
       const sentenceLengthRange = { min: 4, max: 12 };
       const targetApprovedSentenceCount = 5;
       const targetGeneratedSentenceCount = 10;
+      const fallbackZhuyinByChar = {
+        很: "ㄏㄣˇ",
+      };
       const $ = (id) => document.getElementById(id);
 
       function hanChars(text) {
@@ -654,11 +694,17 @@
         return unique(hanChars(sentence.text).filter((char) => !allowed.has(char)));
       }
 
+      function normalizeSpokenText(text) {
+        return String(text || "")
+          .replace(/[，。！？、；：,.!?;:]/g, "")
+          .trim();
+      }
+
       function cleanSentences(sentences, allowedChars) {
         return (sentences || [])
           .map((sentence) => ({
             text: String(sentence.text || ""),
-            spokenText: String(sentence.spokenText || sentence.text || "").replace(/[，。！？、,.!?]/g, ""),
+            spokenText: normalizeSpokenText(sentence.spokenText || sentence.text || ""),
             focusChar: String(sentence.focusChar || ""),
             reason: String(sentence.reason || ""),
           }))
@@ -722,7 +768,7 @@
           })
           .filter(Boolean)
           .sort((a, b) => a.score - b.score)
-          .slice(0, 6);
+          .slice(0, 5);
         return { lessons, latestOrder, order, lessonId: lessonId(order), learnedChars, recentPool, requiredRecentChars, recommendations };
       }
 
@@ -751,11 +797,14 @@
         const orderedRecommendations = [...model.recommendations].sort((a, b) => {
           if (a.choiceId === state.selectedChoiceId) return -1;
           if (b.choiceId === state.selectedChoiceId) return 1;
+          if (a.choiceId === state.previewChoiceId) return -1;
+          if (b.choiceId === state.previewChoiceId) return 1;
           return (originalRanks.get(a.choiceId) || 0) - (originalRanks.get(b.choiceId) || 0);
         });
         $("choiceList").innerHTML = orderedRecommendations
           .map((choice, choiceIndex) => {
             const selected = choice.choiceId === state.selectedChoiceId;
+            const previewing = selected || choice.choiceId === state.previewChoiceId;
             const customRows = state.customRowsByChoice.get(choice.choiceId) || [];
             const selectedIndexes = state.selectedIndexes.get(choice.choiceId) || new Set();
             const completedCustomCount = customRows.filter((row) => row.text.trim()).length;
@@ -771,16 +820,23 @@
             const draft = state.customDraftsByChoice.get(choice.choiceId) || { text: "", spokenText: "", focusChar: "", imageNotes: "" };
             const feedback = state.feedbackByChoice.get(choice.choiceId) || "";
             return `
-              <article class="choice-card ${selected ? "selected" : ""}" data-choice-card="${choice.choiceId}">
+              <article class="choice-card ${selected ? "selected" : ""} ${previewing && !selected ? "previewing" : ""} ${previewing ? "" : "compact"}" data-choice-card="${choice.choiceId}">
                 <div class="choice-head">
                   <div class="char-badge">${choice.newChars.join("")}</div>
                   <div>
                     <h2>${selected ? "已選" : `${originalRanks.get(choice.choiceId) || choiceIndex + 1}.`} ${choice.newChars.join("")} ${Object.values(choice.zhuyin).join(" ")}</h2>
                     <p>${choice.rationale}</p>
                   </div>
-                  <button class="btn ${selected ? "secondary" : ""}" type="button" data-select="${choice.choiceId}">
-                    ${selected ? "已選這個字" : "選這個字"}
-                  </button>
+                  <div class="choice-actions">
+                    <button class="btn secondary" type="button" ${selected ? "disabled" : `data-preview="${choice.choiceId}"`}>
+                      ${selected ? "正在編輯" : previewing ? "收起句子" : "看句子"}
+                    </button>
+                    ${
+                      previewing && !selected
+                        ? `<button class="btn" type="button" data-select="${choice.choiceId}">確定選這個字</button>`
+                        : ""
+                    }
+                  </div>
                 </div>
                 ${
                   selected
@@ -962,7 +1018,7 @@
         const spokenText = edit ? String(edit.spokenText || text) : String(original.spokenText || text);
         return {
           text,
-          spokenText: spokenText.replace(/[，。！？、,.!?]/g, ""),
+          spokenText: normalizeSpokenText(spokenText),
           focusChar: String(edit?.focusChar ?? original.focusChar ?? ""),
           reason: edit ? `Teacher-edited candidate. ${original.reason || ""}`.trim() : String(original.reason || ""),
         };
@@ -1009,7 +1065,7 @@
             withOptionalImageNotes(
               {
                 text: row.text.trim(),
-                spokenText: (row.spokenText.trim() || row.text.trim()).replace(/[，。！？、,.!?]/g, ""),
+                spokenText: normalizeSpokenText(row.spokenText.trim() || row.text.trim()),
                 focusChar: resolveFocusChar(row.text.trim(), row.focusChar, choice),
                 reason: "Teacher-added sentence.",
               },
@@ -1132,6 +1188,7 @@
             ...state.manualChoices.map((choice) => `choice-${choice.char}`),
           ]);
           state.selectedChoiceId = allowedChoiceIds.has(saved.selectedChoiceId) ? saved.selectedChoiceId : "";
+          state.previewChoiceId = allowedChoiceIds.has(saved.previewChoiceId) ? saved.previewChoiceId : "";
           state.selectedIndexes = restoreMapOfArrays(saved.selectedIndexes, allowedChoiceIds);
           state.candidateEditsBySentence = restoreMapOfCandidateEdits(saved.candidateEditsBySentence, allowedChoiceIds);
           state.imageNotesBySentence = restoreMapOfStrings(saved.imageNotesBySentence);
@@ -1149,6 +1206,7 @@
           savedAt: new Date().toISOString(),
           lessonId: model.lessonId,
           selectedChoiceId: state.selectedChoiceId,
+          previewChoiceId: state.previewChoiceId,
           selectedIndexes: mapToObject(state.selectedIndexes, (set) => [...set]),
           candidateEditsBySentence: mapToObject(state.candidateEditsBySentence),
           imageNotesBySentence: mapToObject(state.imageNotesBySentence),
@@ -1168,6 +1226,7 @@
         const key = state.storageKey || plannerStorageKey(model);
         localStorage.removeItem(key);
         state.selectedChoiceId = "";
+        state.previewChoiceId = "";
         state.selectedIndexes = new Map();
         state.candidateEditsBySentence = new Map();
         state.imageNotesBySentence = new Map();
@@ -1247,6 +1306,7 @@
 
       function updateOutput(model) {
         const request = buildRequest(model);
+        $("requestPanel").hidden = !selectedChoice();
         $("requestOutput").value = request;
         $("requestOutput").placeholder = request
           ? ""
@@ -1255,7 +1315,9 @@
 
       function scrollSelectedChoiceIntoView() {
         window.setTimeout(() => {
-          document.querySelector(`[data-choice-card="${state.selectedChoiceId}"]`)?.scrollIntoView({
+          const choiceId = state.selectedChoiceId || state.previewChoiceId;
+          if (!choiceId) return;
+          document.querySelector(`[data-choice-card="${choiceId}"]`)?.scrollIntoView({
             behavior: "smooth",
             block: "start",
           });
@@ -1326,11 +1388,15 @@
         return (state.data?.nextCharacterBank || []).find((entry) => entry.char === char) || null;
       }
 
+      function zhuyinForChar(char) {
+        return bankEntryForChar(char)?.zhuyin || fallbackZhuyinByChar[char] || "";
+      }
+
       document.addEventListener("click", async (event) => {
         if (event.target.id === "addManualChoiceBtn") {
           const model = currentModel();
           const char = hanChars(state.manualDraft.char).join("").slice(0, 1);
-          const zhuyin = state.manualDraft.zhuyin.trim();
+          const zhuyin = state.manualDraft.zhuyin.trim() || zhuyinForChar(char);
           const why = state.manualDraft.why.trim();
           if (!char) {
             $("statusLine").textContent = "請先輸入一個新字。";
@@ -1346,11 +1412,11 @@
           }
           const existingChoiceId = `choice-${char}`;
           if (model.recommendations.some((choice) => choice.choiceId === existingChoiceId)) {
-            state.selectedChoiceId = existingChoiceId;
+            state.previewChoiceId = existingChoiceId;
             state.manualDraft = { char: "", zhuyin: "", why: "" };
             savePlannerMemory(model);
             render(model);
-            $("statusLine").textContent = `「${char}」已經在候選清單，已移到上方。`;
+            $("statusLine").textContent = `「${char}」已經在候選清單，已展開句子。`;
             scrollSelectedChoiceIntoView();
             return;
           }
@@ -1358,12 +1424,23 @@
             [{ char, zhuyin, why: why || "Teacher-added next character." }, ...state.manualChoices],
             model.learnedChars,
           );
-          state.selectedChoiceId = existingChoiceId;
+          state.previewChoiceId = existingChoiceId;
           state.manualDraft = { char: "", zhuyin: "", why: "" };
           const nextModel = currentModel();
           savePlannerMemory(nextModel);
           render(nextModel);
-          $("statusLine").textContent = `已加入自選字「${char}」，可以新增句子或先請 Codex 造候選句。`;
+          $("statusLine").textContent = `已加入自選字「${char}」，已移到上方。`;
+          scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        const previewButton = event.target.closest("[data-preview]");
+        if (previewButton) {
+          const choiceId = previewButton.dataset.preview;
+          state.previewChoiceId = state.previewChoiceId === choiceId ? "" : choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          $("statusLine").textContent = state.previewChoiceId === choiceId ? "已展開候選句，確認後再進入編輯。" : "已收起候選句。";
           scrollSelectedChoiceIntoView();
           return;
         }
@@ -1371,12 +1448,13 @@
         const selectButton = event.target.closest("[data-select]");
         if (selectButton) {
           state.selectedChoiceId = selectButton.dataset.select;
+          state.previewChoiceId = state.selectedChoiceId;
           if (!state.selectedIndexes.has(state.selectedChoiceId)) {
             state.selectedIndexes.set(state.selectedChoiceId, new Set());
           }
           render(currentModel());
           savePlannerMemory();
-          $("statusLine").textContent = "已選這個字，候選卡已移到上方。";
+          $("statusLine").textContent = "已確定選這個字，現在可以勾選、修改或新增句子。";
           scrollSelectedChoiceIntoView();
           return;
         }
@@ -1409,7 +1487,7 @@
           const draft = state.candidateDraftsBySentence.get(key);
           if (!choice || !draft) return;
           const text = draft.text.trim();
-          const spokenText = (draft.spokenText.trim() || text).replace(/[，。！？、,.!?]/g, "");
+          const spokenText = normalizeSpokenText(draft.spokenText.trim() || text);
           const focusChar = resolveFocusChar(text, draft.focusChar, choice);
           if (!text) {
             $("statusLine").textContent = "請先輸入修改後的句子。";
@@ -1464,7 +1542,7 @@
           const model = currentModel();
           const draft = draftForChoice(choiceId);
           const text = draft.text.trim();
-          const spokenText = (draft.spokenText.trim() || text).replace(/[，。！？、,.!?]/g, "");
+          const spokenText = normalizeSpokenText(draft.spokenText.trim() || text);
           if (!choice) return;
           const focusChar = resolveFocusChar(text, draft.focusChar, choice);
           state.selectedChoiceId = choiceId;
@@ -1615,7 +1693,9 @@
           if (event.target.id === "manualChar") {
             const char = hanChars(next.char).join("").slice(0, 1);
             const bankEntry = bankEntryForChar(char);
-            if (bankEntry?.zhuyin) next.zhuyin = bankEntry.zhuyin;
+            const knownZhuyin = zhuyinForChar(char);
+            if (knownZhuyin) next.zhuyin = knownZhuyin;
+            else if (char !== hanChars(previous.char).join("").slice(0, 1) && next.zhuyin === previous.zhuyin) next.zhuyin = "";
             if (bankEntry?.why && (!previous.why.trim() || previous.why === $("manualWhy").value)) next.why = bankEntry.why;
             state.manualDraft = next;
             renderManualChoiceForm();
