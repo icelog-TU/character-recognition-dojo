@@ -3437,7 +3437,7 @@ function SentencePracticePreview({
     setActiveGameCharIndex(null);
     setAskingGameCharIndex(targetIndex);
     setTeachPhase("asking");
-    await speakStageFour("哇！這個字我不會念，請教我念。");
+    await speakStageFour("哇！這個字我不會念，請教我念。請按住紅框的字不放。");
     if (guideRunRef.current !== runId) return;
     setTeachPhase("ready");
   }
@@ -3545,7 +3545,7 @@ function SentencePracticePreview({
     if (releasedDuringPrimeRef.current) {
       setFloatingRecordChar(null);
       setTeachPhase("ready");
-      await speakStageFour("還沒開始錄音喔。要按住等叮一聲，再大聲念給小兔子聽。");
+      await speakStageFour("還沒開始錄音喔。請按住紅框的字不放。");
       return;
     }
     let stream: MediaStream;
@@ -3608,11 +3608,11 @@ function SentencePracticePreview({
     releasedDuringPrimeRef.current = false;
     setTeachPhase("priming");
     setFloatingRecordChar(game.targetChar);
-    await speakStageFour("請按住不要放開。等叮一聲之後，大聲念出來。");
+    await speakStageFour("聽到鈴聲，就大聲念出來。");
     if (releasedDuringPrimeRef.current) {
       setFloatingRecordChar(null);
       setTeachPhase("ready");
-      await speakStageFour("還沒叮喔。要按住等叮一聲，再念給小兔子聽。");
+      await speakStageFour("還沒聽到鈴聲喔。請按住紅框的字不放。");
       return;
     }
     await startRecordingAfterDing();
@@ -3804,7 +3804,7 @@ function gameGuideText(game: SentenceGame, teachPhase: TeachCharacterPhase = "re
   }
   if (game.type === "teach-character") {
     if (teachPhase === "ready" || teachPhase === "priming" || teachPhase === "recording") {
-      return "請按住這個字，不要放開。聽到叮一聲之後，大聲念出來。";
+      return "請按住紅框的字不放。聽到鈴聲，就大聲念出來。";
     }
     if (teachPhase === "reciting") {
       return "小兔子正在把句子念完。";
