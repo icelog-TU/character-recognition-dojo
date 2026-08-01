@@ -404,6 +404,12 @@
         color: #a43c31;
       }
 
+      .optimizer-pill.pending {
+        border-color: rgba(232, 169, 38, 0.42);
+        background: #fff8ec;
+        color: #8a5b10;
+      }
+
       .custom-section {
         margin-top: 14px;
         border-top: 1px solid var(--line);
@@ -1207,7 +1213,8 @@
         const planOffset = clampPlanOffset(state.planOffset);
         const order = latestOrder + planOffset;
         const planned = upstreamPlans(latestOrder, planOffset);
-        const learnedChars = unique([...lessons.flatMap((lesson) => lesson.newChars || []), ...planned.flatMap((plan) => plan.newChars || [])]);
+        const provisionalLearnedChars = unique(planned.flatMap((plan) => plan.newChars || []));
+        const learnedChars = unique([...lessons.flatMap((lesson) => lesson.newChars || []), ...provisionalLearnedChars]);
         const recentPool = chooseRecentPool(lessons, planned);
         const requiredRecentChars = previousRequiredChars(lessons, planned, 3);
         const reviewCountChars = recentLessonNewChars(lessons, planned, 5);
@@ -1257,6 +1264,9 @@
           lessonId: lessonId(order),
           planOffset,
           dependencyPlans: planned,
+          provisionalLearnedChars,
+          provisionalReviewChars: reviewCountChars.filter((char) => provisionalLearnedChars.includes(char)),
+          provisionalRequiredRecentChars: requiredRecentChars.filter((char) => provisionalLearnedChars.includes(char)),
           learnedChars,
           recentPool,
           requiredRecentChars,
@@ -1696,16 +1706,26 @@
         const targetChar = choice.newChars[0];
         const missingReview = metrics.missingReviewChars || [];
         const missingRequired = metrics.missingRequiredChars || [];
+        const provisionalChars = new Set([
+          ...(model.provisionalReviewChars || []),
+          ...(model.provisionalRequiredRecentChars || []),
+        ]);
+        const hardMissingReview = missingReview.filter((char) => !provisionalChars.has(char));
+        const hardMissingRequired = missingRequired.filter((char) => !provisionalChars.has(char));
+        const provisionalMissing = unique([...missingReview, ...missingRequired].filter((char) => provisionalChars.has(char)));
         const targetOk = metrics.targetCount >= targetNewCharCountInLesson;
-        const reviewOk = missingReview.length === 0;
-        const requiredOk = missingRequired.length === 0;
+        const reviewOk = hardMissingReview.length === 0;
+        const requiredOk = hardMissingRequired.length === 0;
+        const reviewPending = reviewOk && missingReview.length > 0;
+        const requiredPending = requiredOk && missingRequired.length > 0;
         return `<div class="optimizer-summary" aria-label="課程最佳化摘要">
           <span class="optimizer-pill ${targetOk ? "" : "warning"}">${targetChar} ${metrics.targetCount}/${targetNewCharCountInLesson} 次</span>
-          <span class="optimizer-pill ${reviewOk ? "" : "warning"}">近五課 ${metrics.reviewCovered.length}/${model.reviewCountChars.length}</span>
-          <span class="optimizer-pill ${requiredOk ? "" : "warning"}">近三課 ${metrics.requiredCovered.length}/${model.requiredRecentChars.length}</span>
+          <span class="optimizer-pill ${reviewOk ? (reviewPending ? "pending" : "") : "warning"}">近五課 ${metrics.reviewCovered.length}/${model.reviewCountChars.length}</span>
+          <span class="optimizer-pill ${requiredOk ? (requiredPending ? "pending" : "") : "warning"}">近三課 ${metrics.requiredCovered.length}/${model.requiredRecentChars.length}</span>
           <span class="optimizer-pill">候選池 ${choice.optimization.poolSize || choice.sentenceCandidates.length} 句</span>
-          ${missingReview.length ? `<span class="optimizer-pill warning">缺：${missingReview.join("、")}</span>` : ""}
-          ${missingRequired.length ? `<span class="optimizer-pill warning">近三課缺：${missingRequired.join("、")}</span>` : ""}
+          ${hardMissingReview.length ? `<span class="optimizer-pill warning">缺：${hardMissingReview.join("、")}</span>` : ""}
+          ${hardMissingRequired.length ? `<span class="optimizer-pill warning">近三課缺：${hardMissingRequired.join("、")}</span>` : ""}
+          ${provisionalMissing.length ? `<span class="optimizer-pill pending">暫定字待補：${provisionalMissing.join("、")}</span>` : ""}
         </div>`;
       }
 
