@@ -73,6 +73,8 @@ const RAINBOW_GROUPS = [
   { id: "blue", label: "藍", range: "401-500", start: 401, end: 500, color: "#2e78d6" },
   { id: "purple", label: "紫", range: "501-600", start: 501, end: 600, color: "#8156c6" },
 ];
+type RainbowGroup = (typeof RAINBOW_GROUPS)[number];
+type CatalogSlot = { slotNumber: number; group: RainbowGroup; entry: LessonCharEntry | null };
 
 const CREATURE_REALMS: CreatureRealm[] = [
   { id: "land", label: "地上的生物", shortLabel: "地上", description: "先從地上的朋友開始收集。", color: "#4f8f52", icon: "🦌" },
@@ -450,6 +452,24 @@ function lessonCharEntries(lesson: Lesson): LessonCharEntry[] {
 
 function flattenLessonChars(lessons: Lesson[]): LessonCharEntry[] {
   return lessons.flatMap(lessonCharEntries);
+}
+
+function catalogGroupForSlot(slotNumber: number): RainbowGroup {
+  return RAINBOW_GROUPS.find((group) => slotNumber >= group.start && slotNumber <= group.end) ?? RAINBOW_GROUPS[0];
+}
+
+function catalogSlotsFromEntries(entries: LessonCharEntry[]): CatalogSlot[] {
+  const entriesBySlot = new Map<number, LessonCharEntry>();
+  entries.forEach((entry, index) => entriesBySlot.set(index + 1, entry));
+
+  return Array.from({ length: 600 }, (_, index) => {
+    const slotNumber = index + 1;
+    return {
+      slotNumber,
+      group: catalogGroupForSlot(slotNumber),
+      entry: entriesBySlot.get(slotNumber) ?? null,
+    };
+  });
 }
 
 function assetUrl(src: string): string {
@@ -1046,37 +1066,40 @@ function CatalogPage({
   const [query, setQuery] = useState("");
   const normalizedQuery = query.trim();
   const activeGroup = RAINBOW_GROUPS.find((group) => group.id === activeGroupId) ?? RAINBOW_GROUPS[0];
-  const allEntries = flattenLessonChars(lessons);
+  const allEntries = useMemo(() => flattenLessonChars(lessons), [lessons]);
+  const allSlots = useMemo(() => catalogSlotsFromEntries(allEntries), [allEntries]);
   const searchResults =
     normalizedQuery.length > 0
-      ? allEntries.filter(
-          (entry) =>
-            entry.char.includes(normalizedQuery) ||
-            entry.lesson.title.includes(normalizedQuery) ||
-            String(entry.lesson.order) === normalizedQuery,
+      ? allSlots.filter(
+          (slot) =>
+            slot.entry &&
+            (slot.entry.char.includes(normalizedQuery) ||
+              slot.entry.lesson.title.includes(normalizedQuery) ||
+              String(slot.entry.lesson.order) === normalizedQuery ||
+              String(slot.slotNumber) === normalizedQuery),
         )
       : [];
-  const activeGroupEntries = allEntries.filter(
-    (entry) => entry.lesson.order >= activeGroup.start && entry.lesson.order <= activeGroup.end,
+  const activeGroupSlots = allSlots.filter(
+    (slot) => slot.slotNumber >= activeGroup.start && slot.slotNumber <= activeGroup.end,
   );
 
   return (
-    <section className="page-panel">
+    <section className="page-panel catalog-page">
       <div className="page-heading">
         <h1>漢字總覽</h1>
-        <p>六百字分成六個彩虹區塊。破解後可以回來點字複習，也可以直接搜尋。</p>
+        <p>六百字分成六個彩虹區塊。每個顏色都有一百格，還沒解鎖的字先用問號佔位。</p>
       </div>
       <input
         className="search-input"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="搜尋字或課號"
-        aria-label="搜尋字或課號"
+        placeholder="搜尋字、課號或編號"
+        aria-label="搜尋字、課號或編號"
       />
 
       {normalizedQuery ? (
-        <CatalogLessonGrid
-          entries={searchResults}
+        <CatalogSlotGrid
+          slots={searchResults}
           selectedOrder={selectedOrder}
           completedOrders={completedOrders}
           nextOrder={nextOrder}
@@ -1087,8 +1110,12 @@ function CatalogPage({
         <>
           <div className="rainbow-groups" aria-label="彩虹分區">
             {RAINBOW_GROUPS.map((group) => {
-              const count = allEntries.filter(
-                (entry) => entry.lesson.order >= group.start && entry.lesson.order <= group.end,
+              const count = allSlots.filter(
+                (slot) =>
+                  slot.slotNumber >= group.start &&
+                  slot.slotNumber <= group.end &&
+                  slot.entry &&
+                  slot.entry.lesson.order <= nextOrder,
               ).length;
               return (
                 <button
@@ -1097,16 +1124,21 @@ function CatalogPage({
                   style={{ "--group-color": group.color } as CSSProperties}
                   onClick={() => setActiveGroupId(group.id)}
                 >
-                  <span>{group.label}</span>
+                  <span>{group.label}色字</span>
                   <small>{group.range}</small>
-                  <small>{count} 字</small>
+                  <small>{count} / 100 字</small>
                 </button>
               );
             })}
           </div>
 
-          <CatalogLessonGrid
-            entries={activeGroupEntries}
+          <div className="catalog-band-title" style={{ "--group-color": activeGroup.color } as CSSProperties}>
+            <strong>{activeGroup.label}色區</strong>
+            <span>{activeGroup.range}</span>
+          </div>
+
+          <CatalogSlotGrid
+            slots={activeGroupSlots}
             selectedOrder={selectedOrder}
             completedOrders={completedOrders}
             nextOrder={nextOrder}
@@ -1119,39 +1151,46 @@ function CatalogPage({
   );
 }
 
-function CatalogLessonGrid({
-  entries,
+function CatalogSlotGrid({
+  slots,
   selectedOrder,
   completedOrders,
   nextOrder,
   onSelect,
   emptyText,
 }: {
-  entries: LessonCharEntry[];
+  slots: CatalogSlot[];
   selectedOrder: number;
   completedOrders: Set<number>;
   nextOrder: number;
   onSelect: (order: number) => void;
   emptyText: string;
 }) {
-  if (entries.length === 0) return <p className="empty-catalog">{emptyText}</p>;
+  if (slots.length === 0) return <p className="empty-catalog">{emptyText}</p>;
   return (
     <div className="catalog-grid" aria-label="課程字目錄">
-      {entries.map((entry) => {
-        const { lesson, char } = entry;
-        const locked = lesson.order > nextOrder;
+      {slots.map((slot) => {
+        const entry = slot.entry;
+        const lesson = entry?.lesson ?? null;
+        const locked = !lesson || lesson.order > nextOrder;
+        const completed = Boolean(lesson && completedOrders.has(lesson.order));
+        const active = Boolean(lesson && lesson.order === selectedOrder);
+        const revealed = Boolean(entry && !locked);
+        const slotCode = String(slot.slotNumber).padStart(3, "0");
         return (
           <button
-            key={`${lesson.id}-${char}-${entry.index}`}
-            className={`catalog-char${lesson.order === selectedOrder ? " active" : ""}${
-              completedOrders.has(lesson.order) ? " completed" : ""
+            key={`catalog-${slot.slotNumber}`}
+            className={`catalog-char${active ? " active" : ""}${completed ? " completed" : ""}${
+              locked ? " locked" : " revealed"
             }`}
+            style={{ "--slot-color": slot.group.color } as CSSProperties}
             disabled={locked}
-            onClick={() => onSelect(lesson.order)}
+            onClick={() => lesson && onSelect(lesson.order)}
+            aria-label={revealed && lesson && entry ? `第 ${slot.slotNumber} 字，第 ${lesson.order} 課，${entry.char}` : `第 ${slot.slotNumber} 字，未解鎖`}
           >
-            <span>第 {lesson.order} 課</span>
-            <strong>{char}</strong>
-            <small>{locked ? "鎖" : completedOrders.has(lesson.order) ? "破" : "練"}</small>
+            <span>#{slotCode}</span>
+            <strong>{revealed && entry ? entry.char : "?"}</strong>
+            <small>{revealed && lesson ? `第 ${lesson.order} 課` : "未解鎖"}</small>
           </button>
         );
       })}

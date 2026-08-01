@@ -401,44 +401,73 @@ button {
 .rainbow-groups {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .rainbow-group {
-  min-height: 72px;
+  min-height: 86px;
   display: grid;
   align-content: center;
-  gap: 3px;
-  border: 1px solid color-mix(in srgb, var(--group-color) 48%, #fff);
-  border-left: 7px solid var(--group-color);
+  gap: 4px;
+  border: 2px solid color-mix(in srgb, var(--group-color) 52%, #fff);
   border-radius: 8px;
-  background: color-mix(in srgb, var(--group-color) 13%, #fff);
+  background:
+    linear-gradient(90deg, var(--group-color) 0 10px, transparent 10px),
+    linear-gradient(135deg, color-mix(in srgb, var(--group-color) 20%, #fff) 0%, #fff 72%);
   color: var(--ink);
   cursor: pointer;
-  padding: 8px;
+  padding: 10px 10px 10px 18px;
   text-align: left;
+  box-shadow: 0 8px 18px rgba(49, 38, 24, 0.07);
 }
 
 .rainbow-group span {
-  font-size: 1.12rem;
-  font-weight: 900;
+  color: color-mix(in srgb, var(--group-color) 82%, #231b14);
+  font-size: 1.16rem;
+  font-weight: 950;
 }
 
 .rainbow-group small {
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 850;
 }
 
 .rainbow-group.active {
-  outline: 2px solid var(--group-color);
-  outline-offset: 1px;
+  border-color: var(--group-color);
+  background:
+    linear-gradient(90deg, var(--group-color) 0 12px, transparent 12px),
+    linear-gradient(135deg, color-mix(in srgb, var(--group-color) 28%, #fff) 0%, #fff 70%);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--group-color) 16%, transparent), 0 12px 24px rgba(49, 38, 24, 0.1);
+}
+
+.catalog-band-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 2px solid color-mix(in srgb, var(--group-color) 48%, #fff);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--group-color) 12%, #fff);
+  margin: 4px 0 10px;
+  padding: 10px 12px;
+}
+
+.catalog-band-title strong {
+  color: color-mix(in srgb, var(--group-color) 86%, #241a13);
+  font-size: 1.1rem;
+  font-weight: 950;
+}
+
+.catalog-band-title span {
+  color: var(--muted);
+  font-weight: 850;
 }
 
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 9px;
   max-height: none;
   overflow-y: auto;
   padding-right: 2px;
@@ -446,39 +475,57 @@ button {
 
 .catalog-char {
   min-width: 0;
-  min-height: 66px;
+  min-height: 78px;
   display: grid;
   align-content: center;
   justify-items: center;
-  border: 1px solid var(--line);
+  gap: 4px;
+  border: 1px solid color-mix(in srgb, var(--slot-color) 34%, #fff);
   border-radius: 8px;
-  background: #fff;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--slot-color) 10%, #fff) 0%, #fff 80%);
   color: var(--ink);
   cursor: pointer;
-  padding: 6px 3px;
+  padding: 7px 4px;
+  box-shadow: 0 6px 14px rgba(49, 38, 24, 0.055);
 }
 
-.catalog-char:disabled {
-  background: #eee8dd;
-  color: #9b958d;
+.catalog-char.locked {
+  border-color: color-mix(in srgb, var(--slot-color) 22%, #fff);
+  background: color-mix(in srgb, var(--slot-color) 6%, #fff);
+  color: color-mix(in srgb, var(--slot-color) 62%, #887f75);
   cursor: not-allowed;
 }
 
 .catalog-char.active {
-  border-color: var(--primary);
-  background: var(--green-soft);
+  border-color: var(--slot-color);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--slot-color) 18%, #fff) 0%, #fff 76%);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--slot-color) 18%, transparent), 0 8px 18px rgba(49, 38, 24, 0.08);
 }
 
 .catalog-char > span,
 .catalog-char > small {
   color: var(--muted);
-  font-size: 0.68rem;
-  font-weight: 800;
+  font-size: 0.66rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.catalog-char.locked > span,
+.catalog-char.locked > small {
+  color: color-mix(in srgb, var(--slot-color) 44%, #9b958d);
 }
 
 .catalog-char strong {
-  font-size: 1.45rem;
+  color: var(--slot-color);
+  font-size: 1.75rem;
+  font-weight: 950;
   line-height: 1;
+}
+
+.catalog-char.locked strong {
+  color: color-mix(in srgb, var(--slot-color) 52%, #aaa39b);
 }
 
 .empty-catalog {
@@ -2556,7 +2603,7 @@ button.char-token {
   }
 
   .catalog-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
   }
 
   .record-grid {
@@ -2665,6 +2712,15 @@ button.char-token {
 
   .lesson-block {
     padding: 12px;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+    gap: 7px;
+  }
+
+  .catalog-char {
+    min-height: 72px;
   }
 
   .target-card {
