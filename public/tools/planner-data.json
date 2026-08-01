@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-01T06:16:30.153Z",
+  "exportedAt": "2026-08-01T06:57:49.792Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -3332,6 +3332,61 @@
           "spokenText": "大大的山上有水",
           "focusChar": "水",
           "reason": "Reviews 大大的山 and adds water."
+        }
+      ]
+    },
+    {
+      "char": "在",
+      "zhuyin": "ㄗㄞˋ",
+      "priority": 25,
+      "why": "Useful location/existence character that combines naturally with 山上、山下、水、你、我.",
+      "requires": [
+        "一",
+        "三",
+        "人",
+        "個",
+        "大",
+        "的",
+        "小",
+        "手",
+        "我",
+        "有",
+        "山",
+        "上",
+        "下",
+        "你",
+        "水"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "你在山上有水",
+          "spokenText": "你在山上有水",
+          "focusChar": "在",
+          "reason": "Reviews 你、山上、有、水 with the new location marker."
+        },
+        {
+          "text": "我在山下有水",
+          "spokenText": "我在山下有水",
+          "focusChar": "在",
+          "reason": "Reviews 我、山下、有、水 and includes 下."
+        },
+        {
+          "text": "水在你小小的手上",
+          "spokenText": "水在你小小的手上",
+          "focusChar": "在",
+          "reason": "Reviews 水、你、小小的手上 with a concrete image."
+        },
+        {
+          "text": "三個大人在水下",
+          "spokenText": "三個大人在水下",
+          "focusChar": "在",
+          "reason": "Reviews 三個大人、水下 and gives a clear swimming scene."
+        },
+        {
+          "text": "你我在山下",
+          "spokenText": "你我在山下",
+          "focusChar": "在",
+          "reason": "Short peer sentence using the fixed 你 boy and 我 girl."
         }
       ]
     },

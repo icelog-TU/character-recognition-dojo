@@ -397,7 +397,10 @@ Before planning any new lesson:
 9. Avoid forced combinations that sound strange.
 10. Check whether new sentences can reuse approved images or recurring cast members.
 11. Decide if `displayLines` is needed for phone layout.
-12. Do not generate final image/audio before parent/teacher approval.
+12. For planner/AI-generated candidates, target 4-12 Han characters per sentence, ignoring punctuation.
+13. Prefer reusing characters from the previous 5 lessons when natural.
+14. Across each lesson's sentence set, include every new character from the previous 3 lessons at least once.
+15. Do not generate final image/audio before parent/teacher approval.
 
 AI-generated sentences are always drafts. The parent/teacher must approve every sentence before it enters `src/curriculum/sample-lessons.json`.
 

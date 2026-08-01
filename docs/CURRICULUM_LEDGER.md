@@ -72,8 +72,11 @@ Before drafting a new lesson:
 2. Sentence text may use only cumulative learned characters.
 3. Try to include several characters from the recent review pool.
 4. Prefer natural Taiwan usage over mechanically combining characters.
-5. Keep early lessons short; do not force 6-8 sentences until the learned set can support them.
-6. After teacher approval, generate image prompts, image files, AI audio, and `charTimings`.
+5. Keep each sentence around 4-12 Han characters, ignoring punctuation.
+6. Prefer characters from the previous 5 lessons when they can fit naturally.
+7. Across the lesson's sentence set, include each new character from the previous 3 lessons at least once.
+8. Keep early lessons short; do not force 6-8 sentences until the learned set can support them.
+9. After teacher approval, generate image prompts, image files, AI audio, and `charTimings`.
 
 ## Suggested Next-Lesson Prompt Shape
 
@@ -95,5 +98,7 @@ Rules:
 - No punctuation in spokenText.
 - Prefer concrete, imageable sentences.
 - Reuse characters from the recent review pool when natural: 水 你 下 上 山 有 我 手 小 大 一 二 三 個 人 的.
+- Keep each sentence 4-12 Han characters long, ignoring punctuation.
+- Across the sentence set, include the previous 3 lesson new characters at least once.
 - Keep the sentence set short if the character set cannot support natural variety.
 ```

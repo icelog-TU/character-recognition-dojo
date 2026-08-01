@@ -141,6 +141,40 @@
         font-weight: 800;
       }
 
+      .manual-choice-panel {
+        margin-top: 14px;
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+
+      .manual-grid {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr 2fr auto;
+        gap: 8px;
+        align-items: end;
+        margin-top: 10px;
+      }
+
+      .manual-field {
+        display: grid;
+        gap: 4px;
+      }
+
+      .manual-field label {
+        color: var(--muted);
+        font-size: 0.86rem;
+        font-weight: 800;
+      }
+
+      .manual-field input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--ink);
+        padding: 10px;
+      }
+
       .choice-list {
         display: grid;
         gap: 14px;
@@ -417,7 +451,8 @@
 
       @media (max-width: 760px) {
         .summary-grid,
-        .custom-grid {
+        .custom-grid,
+        .manual-grid {
           grid-template-columns: 1fr;
         }
 
@@ -448,6 +483,26 @@
         <p class="help">正在讀取教材資料。</p>
       </section>
 
+      <section class="panel manual-choice-panel" aria-labelledby="manualChoiceTitle">
+        <h2 id="manualChoiceTitle">自選下一課字</h2>
+        <p class="help">候選清單沒有你想教的字時，可以自己加入。若先不填句子，送出後會請 Codex 依規則產生候選句。</p>
+        <div class="manual-grid">
+          <div class="manual-field">
+            <label for="manualChar">新字</label>
+            <input id="manualChar" maxlength="2" inputmode="text" placeholder="在" />
+          </div>
+          <div class="manual-field">
+            <label for="manualZhuyin">注音</label>
+            <input id="manualZhuyin" inputmode="text" placeholder="ㄗㄞˋ" />
+          </div>
+          <div class="manual-field">
+            <label for="manualWhy">理由</label>
+            <input id="manualWhy" inputmode="text" placeholder="想練習位置和存在句。" />
+          </div>
+          <button class="btn" id="addManualChoiceBtn" type="button">加入候選字</button>
+        </div>
+      </section>
+
       <section class="choice-list" id="choiceList"></section>
 
       <section class="request-panel">
@@ -475,8 +530,11 @@
         customRowsByChoice: new Map(),
         customDraftsByChoice: new Map(),
         feedbackByChoice: new Map(),
+        manualChoices: [],
+        manualDraft: { char: "", zhuyin: "", why: "" },
       };
 
+      const sentenceLengthRange = { min: 4, max: 12 };
       const $ = (id) => document.getElementById(id);
 
       function hanChars(text) {
@@ -503,6 +561,14 @@
         );
       }
 
+      function previousLessonNewChars(lessons, count) {
+        return unique(lastLessons(lessons, count).flatMap((lesson) => lesson.newChars || []));
+      }
+
+      function sentenceHanLength(sentence) {
+        return hanChars(sentence.text).length;
+      }
+
       function forbiddenChars(sentence, allowedChars) {
         const allowed = new Set(allowedChars);
         return unique(hanChars(sentence.text).filter((char) => !allowed.has(char)));
@@ -516,7 +582,15 @@
             focusChar: String(sentence.focusChar || ""),
             reason: String(sentence.reason || ""),
           }))
-          .filter((sentence) => sentence.text && forbiddenChars(sentence, allowedChars).length === 0);
+          .filter((sentence) => {
+            const length = sentenceHanLength(sentence);
+            return (
+              sentence.text &&
+              forbiddenChars(sentence, allowedChars).length === 0 &&
+              length >= sentenceLengthRange.min &&
+              length <= sentenceLengthRange.max
+            );
+          });
       }
 
       function scoreCandidate(entry, learnedChars, recentPool) {
@@ -535,7 +609,21 @@
         const order = latestOrder + 1;
         const learnedChars = unique(lessons.flatMap((lesson) => lesson.newChars || []));
         const recentPool = recentReviewPool(lessons);
-        const recommendations = (data.nextCharacterBank || [])
+        const requiredRecentChars = previousLessonNewChars(lessons, 3);
+        const bankEntries = data.nextCharacterBank || [];
+        const bankChars = new Set(bankEntries.map((entry) => entry.char));
+        const manualEntries = state.manualChoices
+          .filter((entry) => entry.char && !bankChars.has(entry.char))
+          .map((entry, index) => ({
+            char: entry.char,
+            zhuyin: entry.zhuyin,
+            priority: 5 + index,
+            why: entry.why || "Teacher-added next character.",
+            requires: [],
+            sentenceCandidates: [],
+            source: "manual",
+          }));
+        const recommendations = [...manualEntries, ...bankEntries]
           .map((entry) => {
             const score = scoreCandidate(entry, learnedChars, recentPool);
             if (score === null) return null;
@@ -547,13 +635,14 @@
               title: entry.char,
               rationale: entry.why,
               score,
+              source: entry.source || "bank",
               sentenceCandidates: cleanSentences(entry.sentenceCandidates, allowedChars),
             };
           })
           .filter(Boolean)
           .sort((a, b) => a.score - b.score)
           .slice(0, 6);
-        return { lessons, latestOrder, order, lessonId: lessonId(order), learnedChars, recentPool, recommendations };
+        return { lessons, latestOrder, order, lessonId: lessonId(order), learnedChars, recentPool, requiredRecentChars, recommendations };
       }
 
       function renderSummary(model) {
@@ -565,8 +654,15 @@
             <div class="metric"><strong>${model.recommendations.length}</strong><span>候選字</span></div>
           </div>
           <p class="help">資料匯出時間：${state.data.exportedAt || "未知"}</p>
+          <p class="help">造句規則：每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字；優先使用近 5 課字；近 3 課新字 ${model.requiredRecentChars.join("、")} 在整課句子中至少各出現一次。</p>
           <div class="learned">${model.learnedChars.map((char) => `<span>${char}</span>`).join("")}</div>
         `;
+      }
+
+      function renderManualChoiceForm() {
+        $("manualChar").value = state.manualDraft.char;
+        $("manualZhuyin").value = state.manualDraft.zhuyin;
+        $("manualWhy").value = state.manualDraft.why;
       }
 
       function renderChoices(model) {
@@ -595,26 +691,36 @@
                   </button>
                 </div>
                 <div class="sentence-list">
-                  ${choice.sentenceCandidates
-                    .map((sentence, sentenceIndex) => {
-                      const checked = state.selectedIndexes.get(choice.choiceId)?.has(sentenceIndex) || false;
-                      const imageNotes = state.imageNotesBySentence.get(sentenceKey(choice.choiceId, sentenceIndex)) || "";
-                      return `
-                        <label class="sentence-row">
-                          <input type="checkbox" data-choice="${choice.choiceId}" data-index="${sentenceIndex}" ${checked ? "checked" : ""} />
+                  ${
+                    choice.sentenceCandidates.length
+                      ? choice.sentenceCandidates
+                          .map((sentence, sentenceIndex) => {
+                            const checked = state.selectedIndexes.get(choice.choiceId)?.has(sentenceIndex) || false;
+                            const imageNotes = state.imageNotesBySentence.get(sentenceKey(choice.choiceId, sentenceIndex)) || "";
+                            return `
+                              <label class="sentence-row">
+                                <input type="checkbox" data-choice="${choice.choiceId}" data-index="${sentenceIndex}" ${checked ? "checked" : ""} />
+                                <div>
+                                  <div class="sentence-text">${sentence.text}</div>
+                                  <div class="sentence-meta">
+                                    <span class="pill">spoken: ${sentence.spokenText}</span>
+                                    <span class="pill">focus: ${sentence.focusChar}</span>
+                                  </div>
+                                  <p>${sentence.reason}</p>
+                                  <textarea class="note-input" aria-label="候選句配圖要求" placeholder="配圖要求，可留空。例如：畫面要清楚看出二大一小，不要有文字。" data-image-note-choice="${choice.choiceId}" data-index="${sentenceIndex}">${escapeHtml(imageNotes)}</textarea>
+                                </div>
+                              </label>
+                            `;
+                          })
+                          .join("")
+                      : `<div class="sentence-row">
+                          <div></div>
                           <div>
-                            <div class="sentence-text">${sentence.text}</div>
-                            <div class="sentence-meta">
-                              <span class="pill">spoken: ${sentence.spokenText}</span>
-                              <span class="pill">focus: ${sentence.focusChar}</span>
-                            </div>
-                            <p>${sentence.reason}</p>
-                            <textarea class="note-input" aria-label="候選句配圖要求" placeholder="配圖要求，可留空。例如：畫面要清楚看出二大一小，不要有文字。" data-image-note-choice="${choice.choiceId}" data-index="${sentenceIndex}">${escapeHtml(imageNotes)}</textarea>
+                            <div class="sentence-text">還沒有候選句</div>
+                            <p>可以自己新增句子；也可以先送出給 Codex，請 Codex 依 4-12 字、近 5 課優先、近 3 課必用的規則產生候選句。</p>
                           </div>
-                        </label>
-                      `;
-                    })
-                    .join("")}
+                        </div>`
+                  }
                 </div>
                 <section class="custom-section">
                   <h3>新增給「${choice.newChars.join("")}」的句子</h3>
@@ -813,12 +919,41 @@
         );
       }
 
+      function cleanManualChoices(items, learnedChars = []) {
+        const learned = new Set(learnedChars);
+        const seen = new Set();
+        return (items || [])
+          .map((item) => ({
+            char: hanChars(String(item?.char || "")).join("").slice(0, 1),
+            zhuyin: String(item?.zhuyin || "").trim(),
+            why: String(item?.why || "").trim(),
+          }))
+          .filter((item) => {
+            if (!item.char || !item.zhuyin || learned.has(item.char) || seen.has(item.char)) return false;
+            seen.add(item.char);
+            return true;
+          });
+      }
+
+      function cleanManualDraft(draft) {
+        return {
+          char: String(draft?.char || ""),
+          zhuyin: String(draft?.zhuyin || ""),
+          why: String(draft?.why || ""),
+        };
+      }
+
       function loadPlannerMemory(model) {
         state.storageKey = plannerStorageKey(model);
-        const allowedChoiceIds = new Set(model.recommendations.map((choice) => choice.choiceId));
         try {
           const saved = JSON.parse(localStorage.getItem(state.storageKey) || "null");
           if (!saved) return false;
+          state.manualChoices = cleanManualChoices(saved.manualChoices, model.learnedChars);
+          state.manualDraft = cleanManualDraft(saved.manualDraft);
+          const allowedChoiceIds = new Set([
+            ...model.recommendations.map((choice) => choice.choiceId),
+            ...state.manualChoices.map((choice) => `choice-${choice.char}`),
+          ]);
           state.selectedChoiceId = allowedChoiceIds.has(saved.selectedChoiceId) ? saved.selectedChoiceId : "";
           state.selectedIndexes = restoreMapOfArrays(saved.selectedIndexes, allowedChoiceIds);
           state.imageNotesBySentence = restoreMapOfStrings(saved.imageNotesBySentence);
@@ -840,6 +975,8 @@
           imageNotesBySentence: mapToObject(state.imageNotesBySentence),
           customRowsByChoice: mapToObject(state.customRowsByChoice),
           customDraftsByChoice: mapToObject(state.customDraftsByChoice),
+          manualChoices: state.manualChoices,
+          manualDraft: state.manualDraft,
         };
         try {
           localStorage.setItem(state.storageKey, JSON.stringify(payload));
@@ -857,6 +994,8 @@
         state.customRowsByChoice = new Map();
         state.customDraftsByChoice = new Map();
         state.feedbackByChoice = new Map();
+        state.manualChoices = [];
+        state.manualDraft = { char: "", zhuyin: "", why: "" };
         state.storageKey = key;
       }
 
@@ -875,23 +1014,49 @@
           .replaceAll(">", "&gt;");
       }
 
+      function sentenceSetChars(sentences) {
+        return new Set(sentences.flatMap((sentence) => hanChars(sentence.text)));
+      }
+
+      function missingRequiredRecentChars(model, sentences) {
+        const used = sentenceSetChars(sentences);
+        return model.requiredRecentChars.filter((char) => !used.has(char));
+      }
+
       function buildRequest(model) {
         const choice = selectedChoice();
         const finalSentences = selectedSentences();
         if (!choice) return "";
+        const hasApprovedSentences = finalSentences.length > 0;
+        const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
+        const missingRequired = hasApprovedSentences ? missingRequiredRecentChars(model, finalSentences) : model.requiredRecentChars;
         return JSON.stringify(
           {
             order: model.order,
             newChars: choice.newChars,
             zhuyin: choice.zhuyin,
             title: choice.title,
-            targetSentenceCount: finalSentences.length,
+            targetSentenceCount: hasApprovedSentences ? finalSentences.length : 5,
+            generationConstraints: {
+              sentenceHanCharLength: sentenceLengthRange,
+              allowedChars,
+              preferReviewChars: model.recentPool,
+              mustIncludeCharsAcrossLesson: model.requiredRecentChars,
+              missingRequiredCharsInCurrentSelection: missingRequired,
+            },
             teacherNotes: [
               "Generated from the web next-lesson planner.",
               `Selected choice: ${choice.choiceId}.`,
-              `Approved sentences: ${finalSentences.map((sentence) => sentence.text).join("; ")}.`,
-              "Use each sentence's imageNotes as teacher guidance when writing imagePrompt.",
-              "Use only learned characters plus the new character(s). Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval.",
+              hasApprovedSentences
+                ? `Approved sentences: ${finalSentences.map((sentence) => sentence.text).join("; ")}.`
+                : "No approved sentences yet. First generate sentence candidates for teacher review; do not build production image/audio assets until the teacher approves sentences.",
+              `Sentence length target: ${sentenceLengthRange.min}-${sentenceLengthRange.max} Han characters per sentence.`,
+              `Prefer using recent review characters from the previous five lessons: ${model.recentPool.join(" ")}.`,
+              `Across this lesson's sentence set, include each new character from the previous three lessons at least once: ${model.requiredRecentChars.join(" ")}.`,
+              "Use only learned characters plus the new character(s).",
+              hasApprovedSentences
+                ? "Use each sentence's imageNotes as teacher guidance when writing imagePrompt. Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval."
+                : "When drafting candidates, keep them concrete, imageable, natural in Taiwan Mandarin, and suitable for young children.",
             ].join(" "),
             approvedSentences: finalSentences,
           },
@@ -918,14 +1083,26 @@
       }
 
       function requestReadinessError() {
+        const model = currentModel();
         if (!selectedChoice()) return "請先選一個候選字。";
-        if (selectedSentences().length === 0) return "請至少勾選或新增一句。";
+        const sentences = selectedSentences();
+        if (sentences.length === 0) return "";
+        const badLength = sentences.find((sentence) => {
+          const length = sentenceHanLength(sentence);
+          return length < sentenceLengthRange.min || length > sentenceLengthRange.max;
+        });
+        if (badLength) return `「${badLength.text}」不是 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字，請調整句長。`;
+        const missing = missingRequiredRecentChars(model, sentences);
+        if (missing.length > 0) return `近三課新字還沒都出現：${missing.join("、")}。請至少各放進一句。`;
         return "";
       }
 
       function codexMessage(model) {
+        const intro = selectedSentences().length
+          ? `請依照下面 lesson request 幫我核對並製作第 ${model.order} 課。`
+          : `請依照下面 lesson request 先幫我產生第 ${model.order} 課候選句，讓我審核後再製作課程。`;
         return [
-          `請依照下面 lesson request 幫我核對並製作第 ${model.order} 課。`,
+          intro,
           "",
           "```json",
           buildRequest(model),
@@ -945,6 +1122,7 @@
       function render(model) {
         state.recommendations = model.recommendations;
         renderSummary(model);
+        renderManualChoiceForm();
         renderChoices(model);
         updateOutput(model);
       }
@@ -953,8 +1131,9 @@
         const response = await fetch(new URL("planner-data.json", window.location.href), { cache: "no-store" });
         if (!response.ok) throw new Error(`讀取 planner-data.json 失敗：${response.status}`);
         state.data = await response.json();
+        const baseModel = recommend(state.data);
+        const restored = loadPlannerMemory(baseModel);
         const model = recommend(state.data);
-        const restored = loadPlannerMemory(model);
         render(model);
         if (restored) $("statusLine").textContent = "已恢復上次留下的本課草稿。";
       }
@@ -964,6 +1143,47 @@
       }
 
       document.addEventListener("click", async (event) => {
+        if (event.target.id === "addManualChoiceBtn") {
+          const model = currentModel();
+          const char = hanChars(state.manualDraft.char).join("").slice(0, 1);
+          const zhuyin = state.manualDraft.zhuyin.trim();
+          const why = state.manualDraft.why.trim();
+          if (!char) {
+            $("statusLine").textContent = "請先輸入一個新字。";
+            return;
+          }
+          if (!zhuyin) {
+            $("statusLine").textContent = `請幫「${char}」輸入注音。`;
+            return;
+          }
+          if (model.learnedChars.includes(char)) {
+            $("statusLine").textContent = `「${char}」已經學過了，不能當下一課新字。`;
+            return;
+          }
+          const existingChoiceId = `choice-${char}`;
+          if (model.recommendations.some((choice) => choice.choiceId === existingChoiceId)) {
+            state.selectedChoiceId = existingChoiceId;
+            state.manualDraft = { char: "", zhuyin: "", why: "" };
+            savePlannerMemory(model);
+            render(model);
+            $("statusLine").textContent = `「${char}」已經在候選清單，已移到上方。`;
+            scrollSelectedChoiceIntoView();
+            return;
+          }
+          state.manualChoices = cleanManualChoices(
+            [{ char, zhuyin, why: why || "Teacher-added next character." }, ...state.manualChoices],
+            model.learnedChars,
+          );
+          state.selectedChoiceId = existingChoiceId;
+          state.manualDraft = { char: "", zhuyin: "", why: "" };
+          const nextModel = currentModel();
+          savePlannerMemory(nextModel);
+          render(nextModel);
+          $("statusLine").textContent = `已加入自選字「${char}」，可以新增句子或先請 Codex 造候選句。`;
+          scrollSelectedChoiceIntoView();
+          return;
+        }
+
         const selectButton = event.target.closest("[data-select]");
         if (selectButton) {
           state.selectedChoiceId = selectButton.dataset.select;
@@ -1126,6 +1346,16 @@
       });
 
       document.addEventListener("input", (event) => {
+        if (event.target.id === "manualChar" || event.target.id === "manualZhuyin" || event.target.id === "manualWhy") {
+          state.manualDraft = {
+            char: $("manualChar").value,
+            zhuyin: $("manualZhuyin").value,
+            why: $("manualWhy").value,
+          };
+          savePlannerMemory();
+          return;
+        }
+
         if (event.target.matches("[data-custom-choice][data-custom][data-field]")) {
           const choiceId = event.target.dataset.customChoice;
           const index = Number(event.target.dataset.custom);
