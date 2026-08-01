@@ -295,6 +295,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "sea-octopus-youngerBrother": "/assets/characters/sea/octopus/octopus-younger-brother.webp",
   "sea-octopus-youngerSister": "/assets/characters/sea/octopus/octopus-younger-sister.webp",
   "sea-octopus-baby": "/assets/characters/sea/octopus/octopus-baby.webp",
+  "sea-squid-grandpa": "/assets/characters/sea/squid/squid-grandpa.webp",
+  "sea-squid-grandma": "/assets/characters/sea/squid/squid-grandma.webp",
+  "sea-squid-dad": "/assets/characters/sea/squid/squid-father.webp",
+  "sea-squid-mom": "/assets/characters/sea/squid/squid-mother.webp",
+  "sea-squid-olderBrother": "/assets/characters/sea/squid/squid-older-brother.webp",
+  "sea-squid-olderSister": "/assets/characters/sea/squid/squid-older-sister.webp",
+  "sea-squid-youngerBrother": "/assets/characters/sea/squid/squid-younger-brother.webp",
+  "sea-squid-youngerSister": "/assets/characters/sea/squid/squid-younger-sister.webp",
+  "sea-squid-baby": "/assets/characters/sea/squid/squid-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
