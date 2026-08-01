@@ -179,6 +179,8 @@ Each lesson has three stages.
 - Each card has the Han character and Taiwan zhuyin on the right side.
 - The current target card glows.
 - When tapped, the card enlarges/floats to the center and plays AI character audio.
+- Stage 1 taps must synchronously stop any guide narration and start the character audio in the same user gesture. Do not delay the `audio.play()` call with `setTimeout`/`waitMs`, because mobile browsers may then block the sound.
+- If the AI character audio cannot start, immediately fall back to spoken browser TTS for that character instead of leaving the enlarged card silent.
 - Stage clears only after all new character cards have been heard.
 - After completion, do not auto-jump. Show a red button to enter the next stage.
 

@@ -1924,9 +1924,7 @@ function LessonPanel({
     setSpeakingTarget(null);
     setSpotlightChar(char);
     try {
-      await waitMs(40);
-      if (hearRunRef.current !== runId) return;
-      await Promise.all([playLessonChar(lesson, char), waitMs(720)]);
+      await Promise.all([playLessonCharForTap(lesson, char), waitMs(720)]);
       if (hearRunRef.current !== runId) return;
       setHeardChars((prev) => {
         const next = new Set(prev);
@@ -2698,6 +2696,15 @@ function playLessonChar(lesson: Lesson, char: string) {
   return playSpokenText(char);
 }
 
+async function playLessonCharForTap(lesson: Lesson, char: string) {
+  const src = lesson.charAudio?.[char];
+  if (!src) return playSpokenText(char);
+  const result = await playAudioSrc(src);
+  if (result === "error") {
+    await playSpokenText(char);
+  }
+}
+
 function getCachedAudio(src: string) {
   const url = assetUrl(src);
   const cached = audioCache.get(url);
@@ -2792,21 +2799,30 @@ function resumePlayback() {
   if (changed) emitPlaybackState();
 }
 
-function stopPlayback() {
+function finishActiveAudio(kind: "ended" | "error" = "error") {
+  const audio = activeAudio;
   const finishAudio = activeAudioFinish;
-  if (activeAudio) {
-    activeAudio.pause();
-    activeAudio.currentTime = 0;
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
   }
-  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
-  activeTtsFinish?.();
-  finishAudio?.("error");
-  ttsPausedByApp = false;
+  finishAudio?.(kind);
   activeAudio = null;
   activeAudioTick = null;
   activeAudioFinish = null;
-  activeTtsFinish = null;
   stopAudioFrame();
+}
+
+function finishActiveTts() {
+  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+  activeTtsFinish?.();
+  activeTtsFinish = null;
+  ttsPausedByApp = false;
+}
+
+function stopPlayback() {
+  finishActiveAudio("error");
+  finishActiveTts();
   emitPlaybackState();
 }
 
@@ -2818,16 +2834,13 @@ function stopAudioFrame() {
 
 function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
   const audio = getCachedAudio(src);
-  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
-  activeTtsFinish?.();
-  activeTtsFinish = null;
-  ttsPausedByApp = false;
-  if (activeAudio && activeAudio !== audio) activeAudio.pause();
+  finishActiveTts();
+  if (activeAudio) finishActiveAudio("error");
   stopAudioFrame();
   activeAudio = audio;
   audio.pause();
   audio.currentTime = 0;
-  return new Promise<void>((resolve) => {
+  return new Promise<"ended" | "error">((resolve) => {
     let settled = false;
     let fallbackTimer = 0;
     const finish = (kind: "ended" | "error") => {
@@ -2841,7 +2854,7 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
       emitPlaybackState();
       if (kind === "ended") options.onEnded?.();
       if (kind === "error") options.onError?.();
-      resolve();
+      resolve(kind);
     };
 
     audio.onended = () => finish("ended");
@@ -2880,11 +2893,8 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
 function playAudioRange(src: string, startMs: number, endMs: number, options: AudioPlayOptions = {}) {
   if (endMs <= startMs + 30) return Promise.resolve();
   const audio = getCachedAudio(src);
-  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
-  activeTtsFinish?.();
-  activeTtsFinish = null;
-  ttsPausedByApp = false;
-  if (activeAudio && activeAudio !== audio) activeAudio.pause();
+  finishActiveTts();
+  if (activeAudio) finishActiveAudio("error");
   stopAudioFrame();
   activeAudio = audio;
   audio.pause();
@@ -3848,13 +3858,9 @@ function speakGuide(text: string) {
 function playTts(text: string, { rate, pitch }: { rate: number; pitch: number }) {
   const clean = text.replace(/\s+/g, " ").trim();
   if (!clean || !("speechSynthesis" in window)) return Promise.resolve();
-  if (activeAudio) {
-    activeAudioFinish?.("error");
-  }
+  if (activeAudio) finishActiveAudio("error");
   stopAudioFrame();
-  window.speechSynthesis.cancel();
-  activeTtsFinish?.();
-  activeTtsFinish = null;
+  finishActiveTts();
   return new Promise<void>((resolve) => {
     const utterance = new SpeechSynthesisUtterance(clean);
     let settled = false;

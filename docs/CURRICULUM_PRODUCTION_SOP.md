@@ -222,6 +222,7 @@ Audio is generated only after sentence approval.
 - The audio processing step must not trim sentence endings. It may remove leading silence, but it must preserve trailing breath and final syllable decay.
 - After processing audio, transcribe the final `.m4a` and compare it to `spokenText` before accepting the lesson.
 - If transcription misses a Han character, especially final `的` or final body-part nouns like `手`, regenerate the audio before writing timings.
+- Stage 1 character-card taps must cancel guide narration and start the character audio in the same user gesture. Do not insert `setTimeout`/`waitMs` before `audio.play()` on mobile. If the AI character audio fails to start, fall back to browser TTS for that character.
 
 ## Character Timing Rules
 
