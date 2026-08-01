@@ -1,0 +1,115 @@
+{
+  "order": 24,
+  "newChars": [
+    "女"
+  ],
+  "zhuyin": {
+    "女": "ㄋㄩˇ"
+  },
+  "title": "女",
+  "dependsOnLessons": [],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女"
+    ],
+    "provisionalLearnedChars": [],
+    "preferReviewChars": [
+      "一",
+      "隻",
+      "很",
+      "大",
+      "的",
+      "手",
+      "在",
+      "水",
+      "下",
+      "和",
+      "小",
+      "高",
+      "人",
+      "家",
+      "有",
+      "三",
+      "個",
+      "上",
+      "你",
+      "我",
+      "鳥",
+      "山",
+      "孩",
+      "指",
+      "看"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "孩",
+      "指",
+      "看"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-女。 核准句子：小女孩在看一隻小鳥；女孩看女人的手指；有一隻手指在指女孩；大家在山上看鳥；你和我的三隻小鳥。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：一 隻 很 大 的 手 在 水 下 和 小 高 人 家 有 三 個 上 你 我 鳥 山 孩 指 看。 整課句子中，最近三課新字至少各出現一次：孩 指 看。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "approvedSentences": [
+    {
+      "text": "小女孩在看一隻小鳥",
+      "spokenText": "小女孩在看一隻小鳥",
+      "focusChar": "女",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "女孩看女人的手指",
+      "spokenText": "女孩看女人的手指",
+      "focusChar": "女",
+      "reason": "教師新增句。",
+      "imageNotes": "女人的手指上有很漂亮的指甲油或彩繪。"
+    },
+    {
+      "text": "有一隻手指在指女孩",
+      "spokenText": "有一隻手指在指女孩",
+      "focusChar": "女",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "大家在山上看鳥",
+      "spokenText": "大家在山上看鳥",
+      "focusChar": "大",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "你和我的三隻小鳥",
+      "spokenText": "你和我的三隻小鳥",
+      "focusChar": "你",
+      "reason": "教師新增句。"
+    }
+  ]
+}
