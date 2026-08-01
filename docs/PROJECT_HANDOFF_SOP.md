@@ -82,7 +82,10 @@ Self-check gate before uploading to GitHub:
 - If production assets or curriculum data changed, `npm run validate:production` must pass.
 - If any check fails, if unrelated files are modified, or if another thread has pushed conflicting work, do not push. Fix, rebase, or ask the user first.
 - If the self-check passes and the diff is safe, Codex may commit and push the task branch to GitHub without asking again.
-- Pushing a task branch is not the same as merging to `main`. Merge to `main` only when the user explicitly asks or approves it.
+- Standing user approval for this project: after a task is complete, self-checks pass, and the diff is safe, merge the task branch into `main` and push `main` so the user can see it from a phone on GitHub Pages.
+- Do not stop at only pushing a task branch for normal completed work; the user cannot review branch-only work from the phone workflow.
+- Do not merge to `main` if checks fail, if there are merge conflicts, if unrelated files are modified, if another thread pushed conflicting work, or if the user explicitly says not to merge. Fix/rebase first or ask.
+- If Codex wants the user to review before merging, it must provide a phone-accessible preview URL. A local desktop-only URL such as `127.0.0.1` is not enough for phone review.
 
 Minimum required checks:
 
@@ -432,7 +435,11 @@ git diff --stat
 git diff --name-only
 ```
 
-Only commit and push when the checks pass and the diff matches the current task scope. If safe, push the task branch to GitHub. Do not merge to `main` unless the user explicitly asks or approves it.
+Only commit and push when the checks pass and the diff matches the current task scope. The user has given standing approval to merge completed, checked, safe work into `main` so it is visible on GitHub Pages from a phone. Use a task branch while working, then fast-forward or cleanly merge into `main`, push `main`, and verify the online URL.
+
+Do not merge if checks fail, conflicts appear, unrelated files are present, or a newer `origin/main` needs inspection. In that case, rebase/fix first or report the blocker.
+
+For pre-merge phone review, provide an actually phone-accessible URL. Options include a LAN dev server bound to `0.0.0.0` with the computer's LAN IP, or another deployed preview. If no such preview URL is provided, finish by merging to `main`.
 
 When producing assets, do not run JSON-writing commands in parallel. In particular, run `assets:images` and `assets:align` sequentially per lesson because they rewrite `src/curriculum/sample-lessons.json`.
 
