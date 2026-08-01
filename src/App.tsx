@@ -377,6 +377,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "sea-seahorse-youngerBrother": "/assets/characters/sea/seahorse/seahorse-younger-brother.webp",
   "sea-seahorse-youngerSister": "/assets/characters/sea/seahorse/seahorse-younger-sister.webp",
   "sea-seahorse-baby": "/assets/characters/sea/seahorse/seahorse-baby.webp",
+  "sea-clam-grandpa": "/assets/characters/sea/clam/clam-grandpa.webp",
+  "sea-clam-grandma": "/assets/characters/sea/clam/clam-grandma.webp",
+  "sea-clam-dad": "/assets/characters/sea/clam/clam-father.webp",
+  "sea-clam-mom": "/assets/characters/sea/clam/clam-mother.webp",
+  "sea-clam-olderBrother": "/assets/characters/sea/clam/clam-older-brother.webp",
+  "sea-clam-olderSister": "/assets/characters/sea/clam/clam-older-sister.webp",
+  "sea-clam-youngerBrother": "/assets/characters/sea/clam/clam-younger-brother.webp",
+  "sea-clam-youngerSister": "/assets/characters/sea/clam/clam-younger-sister.webp",
+  "sea-clam-baby": "/assets/characters/sea/clam/clam-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
