@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 12:
+Characters taught after Lesson 13:
 
-`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你`
+`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水`
 
 Recent review pool for the next lesson:
 
-`你 下 上 山 有 我 手 小 大 一 二`
+`水 你 下 上 山 有 我 手 小 大 一 二 三 個 人 的`
 
 ## Visual Continuity Ledger
 
@@ -58,10 +58,11 @@ Image reuse rule:
 | L010 | 上 | 一、二、三、人、個、大、的、小、手、我、有、山、上 | 我一個人上山 / 山上有三個大人 / 我的手小小的 / 我的手上有一個小人 / 有大大的山，有小小的山 | 一、三、個、人、的、大、小、手、我、有、山 | Introduces `上` through mountain location/action and hand-surface use. Reuses L007-S03 for `我的手小小的` and L009-S02 for the big/small mountain picture. |
 | L011 | 下 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下 | 有三個人上山 / 有一個人下山 / 我的手下有三個小山 / 山下有一個大人 / 有一大二小的手 | 一、二、三、人、個、大、的、小、手、我、有、山、上 | Introduces `下` through mountain direction/location and hand-under-object phrasing. Reuses L008-S05 image/audio for `有一大二小的手`. |
 | L012 | 你 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下、你 | 你一個人上山 / 你一個人下山 / 你手上有三個小山 / 我手下有一個大山 / 有二大一小的手 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下 | Introduces `你` as a fixed second-person young boy character and reviews up/down mountain, hand position, toy mountains, and big/small hand contrast. |
+| L013 | 水 | 一、二、三、人、個、大、的、小、手、我、有、山、上、下、你、水 | 大大的山上有水 / 你的水，我的水。 / 水下有三個大人 / 山下有一個大人 / 你小小的手上有水 | 一、三、人、個、大、的、小、手、我、有、山、上、下、你 | Introduces `水` through mountain water, each child having water, swimming under water, and the fixed `你` boy's wet hand. Reuses the approved L011-S04 image for `山下有一個大人`. |
 
 ## Planned Lessons
 
-L012 is selected and built: new character `你`; reviewed sentences are `你一個人上山`, `你一個人下山`, `你手上有三個小山`, `我手下有一個大山`, and `有二大一小的手`.
+L013 is selected and built: new character `水`; reviewed sentences are `大大的山上有水`, `你的水，我的水。`, `水下有三個大人`, `山下有一個大人`, and `你小小的手上有水`.
 
 ## Planning Rule For New Lessons
 
@@ -82,7 +83,7 @@ Use this shape when asking AI to draft sentence candidates:
 We are building a Taiwan zhuyin character recognition app for young children.
 
 Already taught characters:
-一 二 三 人 個 大 的 小 手 我 有 山 上 下 你
+一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水
 
 New character for this lesson:
 {NEW_CHARACTER}
@@ -93,6 +94,6 @@ Rules:
 - No Hanyu pinyin.
 - No punctuation in spokenText.
 - Prefer concrete, imageable sentences.
-- Reuse characters from the recent review pool when natural: 你 下 上 山 有 我 手 小 大 一 二.
+- Reuse characters from the recent review pool when natural: 水 你 下 上 山 有 我 手 小 大 一 二 三 個 人 的.
 - Keep the sentence set short if the character set cannot support natural variety.
 ```

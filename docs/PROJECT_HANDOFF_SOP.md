@@ -21,11 +21,11 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L012
-- L012 introduces `你`.
+- Current reviewed lessons: L001-L013
+- L013 introduces `水`.
 - Sentence games planned start: around L011 as Stage 4
 - L001-L010 currently use the simpler three-block flow: listen, find, picture sentence.
-- L011-L012 include Stage 4 fixed sentence games after picture-supported listening.
+- L011-L013 include Stage 4 fixed sentence games after picture-supported listening.
 
 ## Multi-Codex Collaboration SOP
 
@@ -416,6 +416,7 @@ Reviewed:
 - L010: `上`
 - L011: `下`
 - L012: `你`
+- L013: `水`
 
 L006 sentences:
 
@@ -472,6 +473,14 @@ L012 sentences:
 - 你手上有三個小山
 - 我手下有一個大山
 - 有二大一小的手
+
+L013 sentences:
+
+- 大大的山上有水
+- 你的水，我的水。
+- 水下有三個大人
+- 山下有一個大人
+- 你小小的手上有水
 
 ## File Map
 
@@ -541,8 +550,8 @@ Sentence text is horizontal, with zhuyin vertically on the right of each Han cha
 Curriculum sentence audio must use AI audio files with charTimings.
 Production charTimings must use npm run assets:align:ai, then manual playback review.
 Guide narration may use TTS.
-L001-L012 are reviewed and built.
-L012 introduces 你 and uses production AI audio alignment.
+L001-L013 are reviewed and built.
+L013 introduces 水 and uses production AI audio alignment.
 L007 introduces a fixed young girl character for 我.
 L012 introduces a fixed second-person young boy character for 你.
 Sentence games should start around L011 as Stage 4, not before, and should not replace picture-supported sentence listening.
