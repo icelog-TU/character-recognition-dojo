@@ -2999,13 +2999,6 @@ function playMissChime() {
   ]);
 }
 
-function playDingChime() {
-  playToneSequence([
-    { frequency: 1568, endFrequency: 1568, duration: 0.24, gain: 0.12 },
-    { frequency: 3136, endFrequency: 3136, duration: 0.3, gain: 0.06 },
-  ]);
-}
-
 async function playRecordingReadyDing() {
   const context = ensureToneAudioContext();
   if (context?.state === "suspended") {
@@ -3015,8 +3008,13 @@ async function playRecordingReadyDing() {
       // Keep recording usable even if the browser refuses the Web Audio cue.
     }
   }
-  playDingChime();
-  await waitMs(440);
+  if (navigator.vibrate) navigator.vibrate([70, 35, 110]);
+  playToneSequence([
+    { frequency: 784, endFrequency: 988, duration: 0.36, gain: 0.2 },
+    { frequency: 988, endFrequency: 1318, duration: 0.46, gain: 0.22, delay: 0.38 },
+    { frequency: 1568, endFrequency: 1568, duration: 0.34, gain: 0.12, delay: 0.48 },
+  ]);
+  await waitMs(980);
 }
 
 function playCelebrateChime() {
