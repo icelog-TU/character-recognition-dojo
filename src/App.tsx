@@ -2997,6 +2997,19 @@ function playDingChime() {
   ]);
 }
 
+async function playRecordingReadyDing() {
+  const context = ensureToneAudioContext();
+  if (context?.state === "suspended") {
+    try {
+      await context.resume();
+    } catch {
+      // Keep recording usable even if the browser refuses the Web Audio cue.
+    }
+  }
+  playDingChime();
+  await waitMs(440);
+}
+
 function playCelebrateChime() {
   playToneSequence([
     { frequency: 523, endFrequency: 659, duration: 0.1, gain: 0.07 },
@@ -3264,7 +3277,7 @@ function SentencePracticePreview({
       void speakStageFour("再找找看。");
       return;
     }
-    await speakStageFour("找到了。");
+    await speakStageFour(stageFourPraise("找到了", doneCount));
     completeRound();
   }
 
@@ -3275,7 +3288,7 @@ function SentencePracticePreview({
       return;
     }
     setPickedOptionIds([option.id]);
-    await speakStageFour("找回來了。");
+    await speakStageFour(stageFourPraise("找回來了", doneCount));
     completeRound();
   }
 
@@ -3291,7 +3304,7 @@ function SentencePracticePreview({
     const nextPicked = [...pickedOptionIds, option.id];
     setPickedOptionIds(nextPicked);
     if (nextPicked.length >= missingIndexes.length) {
-      await speakStageFour("排好了。");
+      await speakStageFour(stageFourPraise("排好了", doneCount));
       completeRound();
     }
   }
@@ -3311,7 +3324,7 @@ function SentencePracticePreview({
       void speakStageFour("好像不對，再聽聽看。");
       return;
     }
-    await speakStageFour("對了。");
+    await speakStageFour(stageFourPraise("對了", doneCount));
     completeRound();
   }
 
@@ -3359,8 +3372,7 @@ function SentencePracticePreview({
       }
       void handleTeachRecordingDone(url);
     };
-    playDingChime();
-    await waitMs(320);
+    await playRecordingReadyDing();
     if (releasedDuringPrimeRef.current) {
       stream.getTracks().forEach((track) => track.stop());
       recordingStreamRef.current = null;
@@ -3434,7 +3446,7 @@ function SentencePracticePreview({
     }
     setActiveGameCharIndex(null);
     setTeachPhase("done");
-    await speakStageFour("學會了，謝謝你。");
+    await speakStageFour(stageFourPraise("學會了", doneCount));
     completeRound();
   }
 
@@ -3568,9 +3580,14 @@ function roundCompletionText(doneAfterThisRound: boolean) {
   return "要做下一題，請按紅色按鈕。";
 }
 
+function stageFourPraise(base: string, doneCount: number) {
+  const praises = ["你好棒", "你好厲害", "太棒了", "做得很好", "很會幫忙"];
+  return `${base}，${praises[doneCount % praises.length]}。`;
+}
+
 function gameGuideText(game: SentenceGame, teachPhase: TeachCharacterPhase = "reading") {
   if (game.type === "find-character") {
-    return `小兔子找不到「${game.targetChar}」。請點它一下。`;
+    return `小兔子找不到「${game.targetChar}」。請幫小兔子找到「${game.targetChar}」這個字，然後點一下。`;
   }
   if (game.type === "teach-character") {
     if (teachPhase === "ready" || teachPhase === "priming" || teachPhase === "recording") {
@@ -3587,7 +3604,7 @@ function gameGuideText(game: SentenceGame, teachPhase: TeachCharacterPhase = "re
   if (game.type === "partial-order") {
     return `請照順序點下面的字卡，幫小兔子把字卡放回去。`;
   }
-  return "先按每個朋友旁邊的上面按鈕，聽牠念。聽完後，按下面按鈕選對的人。";
+  return "請按每個小動物的頭像，聽牠念。誰念對了，就按旁邊的勾勾。";
 }
 
 function StageFourHelper({ text, onReplay }: { text: string; onReplay: () => void }) {
@@ -3737,13 +3754,24 @@ function PronunciationChoiceGrid({
         const reader = PRONUNCIATION_READERS[index % PRONUNCIATION_READERS.length];
         return (
           <div key={option.id} className="pronunciation-choice">
-            <div className="reader-avatar" aria-hidden>{reader.emoji}</div>
-            <strong>{reader.name}</strong>
-            <button className="btn secondary" disabled={disabled} onClick={() => void onHear(option, reader.name)}>
-              聽牠念
+            <button
+              type="button"
+              className="reader-avatar reader-avatar-button"
+              disabled={disabled}
+              aria-label={`聽${reader.name}念`}
+              onClick={() => void onHear(option, reader.name)}
+            >
+              <span aria-hidden>{reader.emoji}</span>
             </button>
-            <button className="btn ghost" disabled={disabled || roundComplete} onClick={() => void onChoose(option)}>
-              牠念對了
+            <strong>{reader.name}</strong>
+            <button
+              type="button"
+              className={`reader-check-button${roundComplete && option.correct ? " selected" : ""}`}
+              disabled={disabled || roundComplete}
+              aria-label={`選${reader.name}念對了`}
+              onClick={() => void onChoose(option)}
+            >
+              ✓
             </button>
           </div>
         );

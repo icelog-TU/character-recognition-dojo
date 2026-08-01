@@ -1911,7 +1911,7 @@ button.char-token {
 
 .pronunciation-choice {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 10px;
   align-items: center;
   border: 1px solid var(--line);
@@ -1920,20 +1920,54 @@ button.char-token {
   padding: 10px;
 }
 
-.pronunciation-choice .btn {
-  width: 100%;
-}
-
 .reader-avatar {
-  grid-row: span 3;
   display: grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   border: 2px solid var(--line);
   border-radius: 50%;
   background: #fffaf2;
   font-size: 2.1rem;
+}
+
+.reader-avatar-button {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.reader-avatar-button:not(:disabled):active {
+  transform: scale(0.96);
+}
+
+.reader-avatar-button:disabled {
+  opacity: 0.62;
+}
+
+.reader-check-button {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 2px solid rgba(34, 132, 123, 0.38);
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--primary-strong);
+  font-size: 2rem;
+  font-weight: 950;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.reader-check-button:not(:disabled):active {
+  transform: scale(0.94);
+}
+
+.reader-check-button.selected {
+  border-color: var(--primary);
+  background: var(--green-soft);
+  box-shadow: 0 0 0 5px rgba(34, 132, 123, 0.14);
 }
 
 @media (max-width: 520px) {
@@ -1960,7 +1994,7 @@ button.char-token {
   }
 
   .pronunciation-choice {
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: auto minmax(0, 1fr) auto;
   }
 }
 
