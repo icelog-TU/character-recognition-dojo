@@ -1,0 +1,132 @@
+{
+  "order": 28,
+  "newChars": [
+    "前"
+  ],
+  "zhuyin": {
+    "前": "ㄑㄧㄢˊ"
+  },
+  "title": "前",
+  "dependsOnLessons": [
+    {
+      "order": 27,
+      "lessonId": "L027",
+      "newChars": [
+        "門"
+      ],
+      "title": "門",
+      "status": "merged-in-main"
+    }
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前"
+    ],
+    "provisionalLearnedChars": [],
+    "preferReviewChars": [
+      "小",
+      "孩",
+      "的",
+      "一",
+      "隻",
+      "手",
+      "指",
+      "三",
+      "鳥",
+      "和",
+      "山",
+      "很",
+      "大",
+      "上",
+      "有",
+      "在",
+      "家",
+      "水",
+      "人",
+      "看",
+      "我",
+      "女",
+      "你",
+      "飛",
+      "高",
+      "男",
+      "門"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "飛",
+      "男",
+      "門"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-前。 L027 門已合併 main，因此本課可正式製作。 核准句子：男孩和女孩在門前。；我在看門前的飛鳥；女孩飛在男孩前；男孩和女孩在看大人飛；女孩在看門上的鳥。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：小 孩 的 一 隻 手 指 三 鳥 和 山 很 大 上 有 在 家 水 人 看 我 女 你 飛 高 男 門。 整課句子中，最近三課新字至少各出現一次：飛 男 門。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "approvedSentences": [
+    {
+      "text": "男孩和女孩在門前。",
+      "spokenText": "男孩和女孩在門前",
+      "focusChar": "前",
+      "reason": "教師修改候選句。若門已學，可複習門前。"
+    },
+    {
+      "text": "我在看門前的飛鳥",
+      "spokenText": "我在看門前的飛鳥",
+      "focusChar": "前",
+      "reason": "教師修改候選句。複習一個人。"
+    },
+    {
+      "text": "女孩飛在男孩前",
+      "spokenText": "女孩飛在男孩前",
+      "focusChar": "前",
+      "reason": "教師修改候選句。複習你我和。",
+      "imageNotes": "用滑翔翼：小女孩飛在小男孩前面。"
+    },
+    {
+      "text": "男孩和女孩在看大人飛",
+      "spokenText": "男孩和女孩在看大人飛",
+      "focusChar": "男",
+      "reason": "教師修改候選句。直接取自近五課已核准句，作為複習候選。",
+      "imageNotes": "就是男孩、女孩看大人滑翔翼表演。"
+    },
+    {
+      "text": "女孩在看門上的鳥",
+      "spokenText": "女孩在看門上的鳥",
+      "focusChar": "女",
+      "reason": "教師修改候選句。直接取自近五課已核准句，作為複習候選。"
+    }
+  ]
+}
