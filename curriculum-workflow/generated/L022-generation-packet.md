@@ -121,7 +121,7 @@ Use these only as style references. Do not copy a commercial book sequence.
 - 很大的手和很小的手
 - 我家在很高的山上
 - 一個小孩和一隻小鳥在家
-- 一個小孩的手
+- 一隻小孩的手
 - 小孩和一隻很大的鳥
 - 一隻小鳥和很小的家
 - 一隻很大的手上有三個小家
