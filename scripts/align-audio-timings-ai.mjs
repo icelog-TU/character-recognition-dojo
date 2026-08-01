@@ -43,6 +43,7 @@ function normalizeTranscribedHanChar(char) {
   const map = new Map([
     ["个", "個"],
     ["只", "隻"],
+    ["鸟", "鳥"],
   ]);
   return map.get(char) ?? char;
 }

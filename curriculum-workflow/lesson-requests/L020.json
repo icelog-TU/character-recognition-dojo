@@ -1,0 +1,107 @@
+{
+  "order": 20,
+  "newChars": [
+    "鳥"
+  ],
+  "zhuyin": {
+    "鳥": "ㄋㄧㄠˇ"
+  },
+  "title": "鳥",
+  "dependsOnLessons": [],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥"
+    ],
+    "provisionalLearnedChars": [],
+    "preferReviewChars": [
+      "在",
+      "高",
+      "的",
+      "山",
+      "下",
+      "有",
+      "水",
+      "你",
+      "我",
+      "二",
+      "人",
+      "上",
+      "大",
+      "手",
+      "三",
+      "個",
+      "很",
+      "一",
+      "小",
+      "家",
+      "和",
+      "隻"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "家",
+      "和",
+      "隻"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "Generated from the web next-lesson planner. Selected choice: choice-鳥. Approved sentences: 一隻鳥在很高的山上; 一隻鳥和鳥的小家; 你和我的三隻小鳥; 很大的手和很小的手; 我家在很高的山上. Sentence length target: 4-12 Han characters per sentence. Prefer using recent review characters from the previous five lessons: 在 高 的 山 下 有 水 你 我 二 人 上 大 手 三 個 很 一 小 家 和 隻. Across this lesson's sentence set, include each new character from the previous three lessons at least once: 家 和 隻. Use only learned characters plus the new character(s). Use each sentence's imageNotes as teacher guidance when writing imagePrompt. Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval. Sentence 5 was corrected after teacher noticed the fixed girl's house is on the mountain.",
+  "approvedSentences": [
+    {
+      "text": "一隻鳥在很高的山上",
+      "spokenText": "一隻鳥在很高的山上",
+      "focusChar": "鳥",
+      "reason": "Teacher-edited candidate. Generated in the planner for teacher review and editing."
+    },
+    {
+      "text": "一隻鳥和鳥的小家",
+      "spokenText": "一隻鳥和鳥的小家",
+      "focusChar": "鳥",
+      "reason": "Teacher-edited candidate. Generated in the planner for teacher review and editing."
+    },
+    {
+      "text": "你和我的三隻小鳥",
+      "spokenText": "你和我的三隻小鳥",
+      "focusChar": "鳥",
+      "reason": "Teacher-edited candidate. Generated in the planner for teacher review and editing."
+    },
+    {
+      "text": "很大的手和很小的手",
+      "spokenText": "很大的手和很小的手",
+      "focusChar": "很",
+      "reason": "Teacher-added sentence."
+    },
+    {
+      "text": "我家在很高的山上",
+      "spokenText": "我家在很高的山上",
+      "focusChar": "我",
+      "reason": "Teacher-added sentence."
+    }
+  ]
+}
