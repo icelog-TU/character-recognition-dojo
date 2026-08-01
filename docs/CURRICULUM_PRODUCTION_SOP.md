@@ -260,10 +260,12 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 - `teach-character` can use local recording/playback first; speech scoring can be added later.
 - `choose-pronunciation` should use reviewed AI audio assets for production choices. Do not use browser TTS as the production reading for options.
 - Every Stage 4 game must provide spoken guidance when the game becomes active. Assume the child cannot read the prompt text.
+- Stage 4 helper openings must match the game type. Do not reuse "I will read this sentence" for games where the rabbit is not the reader, especially `choose-pronunciation`.
 - The active Stage 4 block and the active sentence/game surface must glow visibly while guidance or feedback is playing.
 - Before publishing, check Stage 4 on a phone-width viewport. Sentence tokens, missing-character slots, and option buttons must wrap inside the card; no Han character, zhuyin, or question-mark slot may be clipped by the screen edge.
 - Stage 4 interactions must be framed as helping a visible helper character, not as a teacher testing the child. The default helper is the rabbit.
 - `teach-character` requires the old helper flow: helper reads the sentence up to the unknown character, cries/asks for help, the child presses and holds the target character itself, the app speaks a prime, plays a ding, records, and then replays the full sentence with the child's recording stitched into the target-character slot.
+- After a correct Stage 4 response, play the helper feedback first, then stop on the current round. Do not auto-advance. Speak a prompt telling the child to press the red button for the next round or completion.
 - Every Stage 4 round must have a visible replay-instruction button so the child/parent can hear the helper's request again after leaving and returning.
 
 ## Review Gate

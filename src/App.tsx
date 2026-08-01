@@ -3161,6 +3161,13 @@ function SentencePracticePreview({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [disabled, doneCount, game, requiredCount, sentence]);
 
+  const doneAfterThisRound = doneCount + 1 >= requiredCount;
+
+  useEffect(() => {
+    if (!roundComplete || disabled) return;
+    void speakStageFour(roundCompletionText(doneAfterThisRound));
+  }, [disabled, doneAfterThisRound, roundComplete, speakStageFour]);
+
   if (!game || !sentence) {
     return <p className="block-note">這一課還沒有設定句子遊戲。</p>;
   }
@@ -3174,18 +3181,17 @@ function SentencePracticePreview({
     filledBlanks.set(index, currentPickedOptions[slotIndex]?.text ?? "");
   });
 
-  function completeRound(delayMs = 650) {
+  function completeRound() {
     if (roundComplete || disabled || doneCount >= requiredCount) return;
     setRoundComplete(true);
     playCelebrateChime();
-    window.setTimeout(onRoundDone, delayMs);
   }
 
   async function runHelperIntro(runId: number) {
     if (!game || !sentence) return;
-    await speakStageFour(`我是小兔子。我要先念一次這個句子。`);
+    await speakStageFour(gameIntroText(game, sentence));
     if (guideRunRef.current !== runId) return;
-    if (game.type !== "choose-pronunciation") {
+    if (game.type === "find-character" || game.type === "missing-character" || game.type === "partial-order") {
       await playSentence(sentence, {
         onTime: (elapsedMs) => setActiveGameCharIndex(activeTimingIndex(sentence, elapsedMs)),
         onEnded: () => setActiveGameCharIndex(null),
@@ -3194,7 +3200,9 @@ function SentencePracticePreview({
       if (guideRunRef.current !== runId) return;
     }
     setActiveGameCharIndex(null);
-    await speakStageFour(gameGuideText(game, sentence, teachPhase));
+    if (game.type !== "choose-pronunciation") {
+      await speakStageFour(gameGuideText(game, sentence, teachPhase));
+    }
   }
 
   async function runTeachCharacterIntro(runId: number) {
@@ -3224,33 +3232,33 @@ function SentencePracticePreview({
   }
 
   function replayInstruction() {
-    if (disabled || roundComplete) return;
+    if (disabled) return;
     guideRunRef.current += 1;
-    void speakStageFour(gameGuideText(game, sentence, teachPhase));
+    void speakStageFour(roundComplete ? roundCompletionText(doneAfterThisRound) : gameGuideText(game, sentence, teachPhase));
   }
 
-  function handleFindChar(index: number) {
+  async function handleFindChar(index: number) {
     if (index !== targetIndex) {
       playMissChime();
       void speakStageFour("小兔子還是找不到，再幫小兔子找找看。");
       return;
     }
-    void speakStageFour("找到了，謝謝你幫小兔子。");
-    completeRound(1200);
+    await speakStageFour("找到了，謝謝你幫小兔子。");
+    completeRound();
   }
 
-  function handleMissingOption(option: SentenceGameOption) {
+  async function handleMissingOption(option: SentenceGameOption) {
     if (!option.correct) {
       playMissChime();
       void speakStageFour("這個不是不見的字寶寶，再幫小兔子找找看。");
       return;
     }
     setPickedOptionIds([option.id]);
-    void speakStageFour("謝謝你，字寶寶回家了。");
+    await speakStageFour("謝謝你，字寶寶回家了。");
     completeRound();
   }
 
-  function handleOrderOption(option: SentenceGameOption) {
+  async function handleOrderOption(option: SentenceGameOption) {
     if (pickedOptionIds.includes(option.id)) return;
     const expectedText = han[missingIndexes[pickedOptionIds.length]];
     if (option.text !== expectedText) {
@@ -3262,7 +3270,7 @@ function SentencePracticePreview({
     const nextPicked = [...pickedOptionIds, option.id];
     setPickedOptionIds(nextPicked);
     if (nextPicked.length >= missingIndexes.length) {
-      void speakStageFour("謝謝你，句子排好了。");
+      await speakStageFour("謝謝你，句子排好了。");
       completeRound();
     }
   }
@@ -3275,13 +3283,13 @@ function SentencePracticePreview({
     }
   }
 
-  function handlePronunciationChoice(option: SentenceGameOption) {
+  async function handlePronunciationChoice(option: SentenceGameOption) {
     if (!option.correct) {
       playMissChime();
       void speakStageFour("這隻好像念錯了，再幫小兔子聽聽看。");
       return;
     }
-    void speakStageFour("對了，這隻念得對。謝謝你幫小兔子。");
+    await speakStageFour("對了，這隻念得對。謝謝你幫小兔子。");
     completeRound();
   }
 
@@ -3507,9 +3515,39 @@ function SentencePracticePreview({
       </div>
       <StageFourHelper text={gameGuide} onReplay={replayInstruction} />
       {gameBody}
-      {roundComplete && <p className="success">完成這一題。</p>}
+      {roundComplete && (
+        <div className="sentence-game-complete">
+          <p className="success">完成這一題。</p>
+          <button type="button" className="btn next-game-button" onClick={onRoundDone}>
+            {doneAfterThisRound ? "完成句子遊戲" : "下一題"}
+          </button>
+        </div>
+      )}
     </>
   );
+}
+
+function gameIntroText(game: SentenceGame, sentence: LessonSentence) {
+  if (game.type === "find-character") {
+    return "小兔子說，我想先看一看這句話，等一下請幫我找字。";
+  }
+  if (game.type === "missing-character") {
+    return "小兔子說，我先念一次這句話，看看哪個字寶寶不見了。";
+  }
+  if (game.type === "partial-order") {
+    return "小兔子說，我先念一次這句話，可是等一下我會把句子弄亂。";
+  }
+  if (game.type === "choose-pronunciation") {
+    return `小兔子說，我的朋友都要念「${sentence.spokenText}」，但我分不清楚誰念的是對的。請幫我選出誰念得對。`;
+  }
+  return "小兔子說，我要來念念看這句話。";
+}
+
+function roundCompletionText(doneAfterThisRound: boolean) {
+  if (doneAfterThisRound) {
+    return "這一關的句子遊戲都完成了。請按下面那個紅色按鈕。";
+  }
+  return "這一題完成了。要做下一題，請按下面那個紅色按鈕。";
 }
 
 function gameGuideText(game: SentenceGame, sentence: LessonSentence, teachPhase: TeachCharacterPhase = "reading") {
@@ -3531,7 +3569,7 @@ function gameGuideText(game: SentenceGame, sentence: LessonSentence, teachPhase:
   if (game.type === "partial-order") {
     return `小兔子說，我把句子弄亂了。請照順序點下面的字卡，幫我把句子排回來。`;
   }
-  return `小兔子說，下面幾個朋友都想幫我念「${sentence.spokenText}」。請聽聽看，誰念得對。`;
+  return `小兔子說，我的朋友都要念「${sentence.spokenText}」，但我分不清楚誰念的是對的。請幫我選出誰念得對。`;
 }
 
 function teachPhaseText(phase: TeachCharacterPhase, char: string) {
@@ -3581,7 +3619,7 @@ function SentenceGameLine({
   blanks?: Map<number, string>;
   clickable?: boolean;
   foundIndexes?: Set<number>;
-  onCharClick?: (hanIndex: number) => void;
+  onCharClick?: (hanIndex: number) => void | Promise<void>;
   onCharPressStart?: (hanIndex: number) => void;
   onCharPressEnd?: (hanIndex: number) => void;
 }) {
@@ -3627,7 +3665,7 @@ function SentenceGameLine({
                     type="button"
                     key={`${char}-${lineIndex}-${index}`}
                     className={className}
-                    onClick={clickable ? () => onCharClick?.(currentIndex) : undefined}
+                    onClick={clickable ? () => void onCharClick?.(currentIndex) : undefined}
                     onContextMenu={(event) => event.preventDefault()}
                     onPointerDown={
                       onCharPressStart
@@ -3683,7 +3721,7 @@ function PronunciationChoiceGrid({
   disabled: boolean;
   roundComplete: boolean;
   onHear: (option: SentenceGameOption) => void | Promise<void>;
-  onChoose: (option: SentenceGameOption) => void;
+  onChoose: (option: SentenceGameOption) => void | Promise<void>;
 }) {
   return (
     <div className="pronunciation-choice-grid">
@@ -3696,7 +3734,7 @@ function PronunciationChoiceGrid({
             <button className="btn secondary" disabled={disabled} onClick={() => void onHear(option)}>
               聽牠念
             </button>
-            <button className="btn ghost" disabled={disabled || roundComplete} onClick={() => onChoose(option)}>
+            <button className="btn ghost" disabled={disabled || roundComplete} onClick={() => void onChoose(option)}>
               牠念對了
             </button>
           </div>
@@ -3713,7 +3751,7 @@ function GameOptionGrid({
 }: {
   options: SentenceGameOption[];
   pickedOptionIds: string[];
-  onPick: (option: SentenceGameOption) => void;
+  onPick: (option: SentenceGameOption) => void | Promise<void>;
 }) {
   return (
     <div className="game-option-grid">
@@ -3722,7 +3760,7 @@ function GameOptionGrid({
           key={option.id}
           className={`game-option${pickedOptionIds.includes(option.id) ? " picked" : ""}`}
           disabled={pickedOptionIds.includes(option.id)}
-          onClick={() => onPick(option)}
+          onClick={() => void onPick(option)}
         >
           {option.text}
         </button>

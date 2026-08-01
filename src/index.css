@@ -1922,6 +1922,31 @@ button.char-token {
   gap: 10px;
 }
 
+.sentence-game-complete {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.sentence-game-complete .success {
+  margin: 0;
+  text-align: center;
+}
+
+.next-game-button {
+  width: 100%;
+  min-height: 56px;
+  border-color: #b43124;
+  background: #d94735;
+  color: #ffffff;
+  font-size: 1.12rem;
+  box-shadow: 0 10px 24px rgba(217, 71, 53, 0.24);
+}
+
+.next-game-button:hover {
+  background: #c73d2d;
+}
+
 .pronunciation-choice-grid {
   display: grid;
   gap: 10px;

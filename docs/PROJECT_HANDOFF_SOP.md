@@ -232,12 +232,14 @@ Stage 4 planning rules:
 - Keep the game plan fixed in curriculum data so QA and phone testing are reproducible.
 - Do not introduce these games too early. The child needs enough known characters first.
 - Stage 4 is for children who may not read prompts yet. Each game must automatically speak a complete instruction when it becomes active.
+- Stage 4 helper openings must match the game type. Do not reuse "I will read this sentence" for games where the rabbit is not the reader, especially `choose-pronunciation`.
 - While Stage 4 guidance or feedback is speaking, the Stage 4 block must remain visibly active/glowing.
 - Phone layout QA is required for every Stage 4 lesson. Long sentence rows must wrap inside the card; blank slots, zhuyin, and option buttons must not be clipped.
 - Stage 4 must use helper-role framing, not teacher-test framing. The child is helping a fixed helper character, currently the rabbit, solve a problem.
 - The helper character should be visible with a speech bubble and a replay-instruction control in every Stage 4 round.
 - For `teach-character`, do not use a separate "start recording" button. The helper reads until the unknown character, asks for help, and the child presses and holds the target character itself. Play a spoken prime, then a clear ding, then start recording. If the child releases too early, keep the round active and ask again.
 - After a valid `teach-character` recording, replay the sentence by stitching together the approved sentence audio before the target character, the child's recorded word, and the approved sentence audio after the target character.
+- After a correct Stage 4 response, play the helper feedback first, then stop on the current round. Do not auto-advance. Speak a prompt telling the child to press the red button for the next round or completion.
 - For `choose-pronunciation`, present different helper readers, such as frog, fox, and bear. The child is helping the rabbit identify who read correctly.
 
 ## Typography And Zhuyin Rules
