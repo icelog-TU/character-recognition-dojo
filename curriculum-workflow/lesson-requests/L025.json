@@ -1,0 +1,115 @@
+{
+  "order": 25,
+  "newChars": [
+    "飛"
+  ],
+  "zhuyin": {
+    "飛": "ㄈㄟ"
+  },
+  "title": "飛",
+  "dependsOnLessons": [],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛"
+    ],
+    "provisionalLearnedChars": [],
+    "preferReviewChars": [
+      "一",
+      "隻",
+      "鳥",
+      "在",
+      "很",
+      "高",
+      "的",
+      "山",
+      "上",
+      "和",
+      "小",
+      "家",
+      "你",
+      "我",
+      "三",
+      "大",
+      "手",
+      "個",
+      "孩",
+      "有",
+      "指",
+      "水",
+      "人",
+      "看",
+      "女"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "指",
+      "看",
+      "女"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-飛。 核准句子：女孩在看鳥飛；一隻小鳥在女孩的手指上；大家在看女孩；你看！小鳥飛很高；女孩的手在指一隻飛鳥。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：一 隻 鳥 在 很 高 的 山 上 和 小 家 你 我 三 大 手 個 孩 有 指 水 人 看 女。 整課句子中，最近三課新字至少各出現一次：指 看 女。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "approvedSentences": [
+    {
+      "text": "女孩在看鳥飛",
+      "spokenText": "女孩在看鳥飛",
+      "focusChar": "飛",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "一隻小鳥在女孩的手指上",
+      "spokenText": "一隻小鳥在女孩的手指上",
+      "focusChar": "一",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "大家在看女孩",
+      "spokenText": "大家在看女孩",
+      "focusChar": "大",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "你看！小鳥飛很高",
+      "spokenText": "你看小鳥飛很高",
+      "focusChar": "飛",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "女孩的手在指一隻飛鳥",
+      "spokenText": "女孩的手在指一隻飛鳥",
+      "focusChar": "飛",
+      "reason": "教師新增句。"
+    }
+  ]
+}
