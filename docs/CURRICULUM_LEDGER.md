@@ -68,10 +68,11 @@ Image reuse rule:
 | L020 | 鳥 | 一二三人個大的小手我有山上下你水在高很家和隻鳥 | 一隻鳥在很高的山上 / 一隻鳥和鳥的小家 / 你和我的三隻小鳥 / 很大的手和很小的手 / 我家在很高的山上 | 一隻在很高的山上和小家你我三大手 | Introduces `鳥` with one-bird and three-bird scenes. Reviews recent `家`, `和`, and `隻`; reuses approved L018-S03 and L017-S02 images. Sentence 5 was corrected to stay consistent with the fixed girl's home on the mountain. |
 | L021 | 孩 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩 | 一個小孩和一隻小鳥在家 / 一個小孩的手 / 小孩和一隻很大的鳥 / 一隻小鳥和很小的家 / 一隻很大的手上有三個小家 | 一個小和隻鳥在家很大的手上有三 | Introduces `孩` through child, hand, and child-bird scenes. Reviews recent `和`, `隻`, and `鳥`; reuses approved L020-S02 and L019-S04 images. Request was corrected before production: `spokenText` must match display text, `小孩` uses measure word `個`, and `focusChar` must appear in the sentence. |
 | L022 | 指 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指 | 小孩的一隻手指 / 三隻小鳥和手指山 / 很大的手指上有一隻小鳥 / 小孩和小鳥在家 / 小孩和在水上的家 | 小孩的一隻手三鳥和山很大上有在家水 | Introduces `指` through child finger, finger-shaped mountain, and bird-on-finger scenes. Reviews recent `隻`, `鳥`, and `孩`; reuses approved L021-S01 image for `小孩和小鳥在家`. |
+| L023 | 看 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看 | 大人和小孩看三隻小鳥 / 小孩看手指上的一隻小鳥 / 手指山和三隻小鳥 / 小孩的手指和大人的手指 / 我和大家在山上看鳥 | 大人和小孩三隻鳥手指山我家在上 | 加入「看」作為觀察動作字，複習近課的「鳥」、「孩」、「指」。第三句重用 L022-S02 手指山圖片，其餘句子產生新圖。 |
 
 ## Planned Lessons
 
-L022 is selected and built: new character `指`; reviewed sentences are `小孩的一隻手指`, `三隻小鳥和手指山`, `很大的手指上有一隻小鳥`, `小孩和小鳥在家`, and `小孩和在水上的家`.
+L023 已選定並完成：新字 `看`；審核句子為 `大人和小孩看三隻小鳥`、`小孩看手指上的一隻小鳥`、`手指山和三隻小鳥`、`小孩的手指和大人的手指`、`我和大家在山上看鳥`。
 
 ## Planning Rule For New Lessons
 

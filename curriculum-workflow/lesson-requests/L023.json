@@ -1,0 +1,112 @@
+{
+  "order": 23,
+  "newChars": [
+    "看"
+  ],
+  "zhuyin": {
+    "看": "ㄎㄢˋ"
+  },
+  "title": "看",
+  "dependsOnLessons": [],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看"
+    ],
+    "provisionalLearnedChars": [],
+    "preferReviewChars": [
+      "很",
+      "高",
+      "的",
+      "山",
+      "和",
+      "大",
+      "水",
+      "你",
+      "我",
+      "在",
+      "家",
+      "小",
+      "手",
+      "上",
+      "下",
+      "人",
+      "一",
+      "隻",
+      "有",
+      "三",
+      "個",
+      "鳥",
+      "孩",
+      "指"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "鳥",
+      "孩",
+      "指"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "由網頁下一課規劃工具產生。選定候選字：choice-看。核准句子：大人和小孩看三隻小鳥；小孩看手指上的一隻小鳥；手指山和三隻小鳥；小孩的手指和大人的手指；我和大家在山上看鳥。句長目標：每句 4-12 個漢字。優先使用最近五課複習字：很 高 的 山 和 大 水 你 我 在 家 小 手 上 下 人 一 隻 有 三 個 鳥 孩 指。整課句子中，最近三課新字至少各出現一次：鳥 孩 指。只能使用已學字加上本課新字。撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "approvedSentences": [
+    {
+      "text": "大人和小孩看三隻小鳥",
+      "spokenText": "大人和小孩看三隻小鳥",
+      "focusChar": "看",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "小孩看手指上的一隻小鳥",
+      "spokenText": "小孩看手指上的一隻小鳥",
+      "focusChar": "看",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "手指山和三隻小鳥",
+      "spokenText": "手指山和三隻小鳥",
+      "focusChar": "手",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "小孩的手指和大人的手指",
+      "spokenText": "小孩的手指和大人的手指",
+      "focusChar": "小",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "我和大家在山上看鳥",
+      "spokenText": "我和大家在山上看鳥",
+      "focusChar": "看",
+      "reason": "教師新增句。"
+    }
+  ]
+}

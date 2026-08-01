@@ -51,22 +51,29 @@ function normalizeRequest(raw) {
 
 function validateRequest(request, existingLessons) {
   const errors = [];
-  if (!Number.isInteger(request.order) || request.order < 1) errors.push("`order` must be a positive integer.");
-  if (request.newChars.length === 0) errors.push("`newChars` must include at least one Han character.");
+  if (!Number.isInteger(request.order) || request.order < 1) errors.push("`order` 必須是正整數。");
+  if (request.newChars.length === 0) errors.push("`newChars` 至少要包含一個漢字。");
 
-  const introduced = new Set(existingLessons.flatMap((lesson) => lesson.newChars ?? []));
+  const sameLesson = existingLessons.find((lesson) => lesson.id === request.id || lesson.order === request.order);
+  const introduced = new Set(
+    existingLessons
+      .filter((lesson) => lesson.id !== sameLesson?.id)
+      .flatMap((lesson) => lesson.newChars ?? []),
+  );
   for (const char of request.newChars) {
-    if (!/\p{Script=Han}/u.test(char)) errors.push(`${char}: newChars item must be a Han character.`);
-    if (introduced.has(char)) errors.push(`${char}: this character already exists in the curriculum.`);
-    if (!request.zhuyin[char]) errors.push(`${char}: zhuyin is required.`);
+    if (!/\p{Script=Han}/u.test(char)) errors.push(`${char}: newChars 項目必須是漢字。`);
+    if (introduced.has(char)) errors.push(`${char}: 這個字已經存在於 curriculum。`);
+    if (!request.zhuyin[char]) errors.push(`${char}: 必須提供注音。`);
   }
   return errors;
 }
 
 function sentenceRange(allowedCharCount, requestedCount) {
-  if (allowedCharCount <= 4) return "3 to 4 very short strings";
-  if (allowedCharCount <= 8) return "4 to 6 short strings";
-  return `${Math.max(6, requestedCount - 1)} to ${Math.max(6, requestedCount + 1)} strings`;
+  if (allowedCharCount <= 4) return "3 到 4 句很短的句子";
+  if (allowedCharCount <= 8) return "4 到 6 句短句";
+  const min = Math.max(6, requestedCount - 1);
+  const max = Math.max(6, requestedCount + 1);
+  return min === max ? `約 ${min} 句` : `${min} 到 ${max} 句`;
 }
 
 function buildDraft(request) {
@@ -91,91 +98,92 @@ function buildPacket({ request, learnedChars, allowedChars, priorSentences }) {
   );
   const range = sentenceRange(allowedChars.length, request.targetSentenceCount);
   const priorSentenceLines =
-    priorSentences.length > 0 ? priorSentences.map((sentence) => `- ${sentence}`).join("\n") : "- None yet.";
+    priorSentences.length > 0 ? priorSentences.map((sentence) => `- ${sentence}`).join("\n") : "- 尚無。";
 
-  return `# ${id} Generation Packet
+  return `# ${id} 生成資料包
 
-## Lesson Request
+## 課程需求
 
-- Lesson: ${id}
-- Order: ${request.order}
-- New character(s): ${request.newChars.join(" ")}
-- Zhuyin: ${request.newChars.map((char) => `${char}=${request.zhuyin[char]}`).join(", ")}
-- Target sentence count: ${request.targetSentenceCount}
-- Teacher notes: ${request.teacherNotes || "None"}
+- 課程：${id}
+- 順序：${request.order}
+- 新字：${request.newChars.join(" ")}
+- 注音：${request.newChars.map((char) => `${char}=${request.zhuyin[char]}`).join("，")}
+- 目標句數：${request.targetSentenceCount}
+- 教師備註：${request.teacherNotes || "無"}
 
-## Learned Character Boundary
+## 已學字邊界
 
-The AI must treat this as a locked curriculum sequence.
+AI 必須把這份課程序列視為鎖定邊界。
 
-- Previously learned characters: ${learnedChars.join(" ") || "None"}
-- Current lesson new characters: ${request.newChars.join(" ")}
-- Allowed Han characters for display text: ${allowedChars.join(" ")}
-- Forbidden: any Han character not listed above.
-- Taiwan usage only. Do not use Hanyu pinyin.
-- Do not generate worksheet-style questions or test prompts.
-- Do not use unnatural Taiwan Mandarin such as "二個人"; wait until "兩" is taught before using "兩個人".
+- 前面已學字：${learnedChars.join(" ") || "無"}
+- 本課新字：${request.newChars.join(" ")}
+- 顯示句子可用漢字：${allowedChars.join(" ")}
+- 禁止：任何未列在上方的漢字。
+- 只能使用臺灣華語與臺灣繁體字。
+- 不要使用漢語拼音。
+- 不要產生學習單式問答或測驗題。
+- 避免不自然的臺灣華語用法；自然語感優先於機械組字。
 
-## Existing Sentence Style
+## 既有句型風格
 
-Use these only as style references. Do not copy a commercial book sequence.
+以下只作為風格參考，不要照抄任何商業書籍序列。
 
 ${priorSentenceLines}
 
-## Sentence Generation Prompt
+## 造句提示
 
-Generate ${range} for a preschool Chinese character recognition app.
+請為幼兒認字 App 產生${range}。
 
-Rules:
+規則：
 
-1. Display text must use only allowed Han characters.
-2. The first one or two items may review previous lesson strings.
-3. At least half of the items should naturally include the current lesson new character(s).
-4. Keep strings concrete and pictureable.
-5. Prefer child-friendly Taiwan Mandarin.
-6. Keep punctuation out unless it genuinely helps display. If display text has punctuation, spokenText must omit it.
-7. Return candidates as JSON only, using this shape:
+1. 顯示句子只能使用上方允許的漢字。
+2. 前一兩句可以複習前面課程的句型。
+3. 至少一半候選句要自然包含本課新字。
+4. 句子要具體、容易配圖。
+5. 優先使用幼兒容易理解的臺灣華語。
+6. 除非真的有助於顯示，否則不要加標點；若 display text 有標點，spokenText 必須省略標點。
+7. 只回傳 JSON 候選句，格式如下：
 
 \`\`\`json
 [
   {
-    "text": "一個人",
-    "spokenText": "一個人",
-    "focusChar": "個",
-    "reason": "Uses only learned characters and practices the new classifier."
+    "text": "一個人看鳥",
+    "spokenText": "一個人看鳥",
+    "focusChar": "看",
+    "reason": "只使用已學字，並練習本課新字。"
   }
 ]
 \`\`\`
 
-## Image Generation Prompt Rules
+## 圖片生成提示規則
 
-After the teacher approves a sentence, create one image prompt per sentence.
+教師核准句子後，每一句都要撰寫一個圖片提示。
 
-Rules:
+規則：
 
-- Use a warm, simple children's picture-book style.
-- Show the meaning clearly with one main idea.
-- No visible text, letters, numbers, zhuyin, UI, labels, watermarks, or signs.
-- If the sentence has a count, the image must clearly show that count.
-- Prefer light backgrounds and clear subjects.
-- Image target path pattern: \`${assetBase}/images/${id}-S01.webp\`
+- 使用溫暖、簡潔、適合幼兒的繪本風格。
+- 每張圖只呈現一個清楚主意，讓句意容易看懂。
+- 不可出現文字、字母、數字、注音、UI、標籤、浮水印或招牌。
+- 如果句子有數量，圖片必須清楚符合該數量。
+- 優先使用明亮背景與清楚主體。
+- 圖片目標路徑格式：\`${assetBase}/images/${id}-S01.webp\`
 
-## Audio Generation Rules
+## 音訊生成規則
 
-After the teacher approves a sentence, create one natural full-sentence audio file per sentence.
+教師核准句子後，每一句都要建立一個自然的完整句音訊。
 
-Rules:
+規則：
 
-- Create one character audio file for each new character in the lesson.
-- Character audio target path pattern: \`${assetBase}/audio/char-字.m4a\`
-- Voice: natural Taiwan Mandarin.
-- Read \`spokenText\`, not display punctuation.
-- Do not synthesize character by character.
-- Audio target path pattern: \`${assetBase}/audio/${id}-S01.m4a\`
-- Produce character timing metadata in milliseconds after the audio exists.
-- \`charTimings\` count must match Han characters in display \`text\`, skipping punctuation.
+- 本課每個新字都要建立一個單字音訊。
+- 單字音訊目標路徑格式：\`${assetBase}/audio/char-字.m4a\`
+- 聲音：自然、清楚、適合幼兒的臺灣華語。
+- 讀 \`spokenText\`，不要讀顯示標點。
+- 不要把句音訊做成逐字拼接。
+- 句音訊目標路徑格式：\`${assetBase}/audio/${id}-S01.m4a\`
+- 音訊存在後，產生毫秒單位的字級 timing metadata。
+- \`charTimings\` 數量必須符合 display \`text\` 中的漢字數，標點不計。
 
-Audio metadata shape:
+音訊 metadata 格式：
 
 \`\`\`json
 {
@@ -187,9 +195,9 @@ Audio metadata shape:
 }
 \`\`\`
 
-## Final Curriculum JSON Shape
+## 最終 Curriculum JSON 格式
 
-Only after teacher approval, move reviewed content into \`src/curriculum/sample-lessons.json\`.
+只有教師核准後，才可以把審核完成的內容移入 \`src/curriculum/sample-lessons.json\`。
 
 \`\`\`json
 {
@@ -215,15 +223,15 @@ Only after teacher approval, move reviewed content into \`src/curriculum/sample-
 }
 \`\`\`
 
-## Review Checklist
+## 審核清單
 
-- Every display Han character is in the allowed list.
-- Sentence sounds natural in Taiwan usage.
-- Sentence is easy to picture.
-- The new character is meaningfully practiced.
-- Image prompt has no text/letter/number request.
-- Audio reads smoothly as a whole sentence.
-- Character timing metadata is present before production release.
+- 每個顯示漢字都在允許清單中。
+- 句子符合自然臺灣華語。
+- 句子容易配圖。
+- 本課新字有被有意義地練習。
+- 圖片提示不可要求文字、字母或數字。
+- 音訊要像完整句子一樣自然朗讀。
+- 正式發布前必須有字級 timing metadata。
 `;
 }
 
@@ -233,8 +241,8 @@ const outputDir = path.resolve(args.out || "curriculum-workflow/generated");
 const draftDir = path.resolve("curriculum-workflow/drafts");
 
 if (!fs.existsSync(requestPath)) {
-  console.error(`Request file not found: ${requestPath}`);
-  console.error("Create a request JSON or run with --request path/to/request.json.");
+  console.error(`找不到 request 檔：${requestPath}`);
+  console.error("請建立 request JSON，或用 --request path/to/request.json 指定。");
   process.exit(1);
 }
 
@@ -244,7 +252,7 @@ const existingLessons = Array.isArray(curriculum.lessons) ? curriculum.lessons :
 const errors = validateRequest(request, existingLessons);
 
 if (errors.length > 0) {
-  for (const error of errors) console.error(`Error: ${error}`);
+  for (const error of errors) console.error(`錯誤：${error}`);
   process.exit(1);
 }
 
@@ -262,7 +270,7 @@ const packetPath = path.join(outputDir, `${request.id}-generation-packet.md`);
 const draftPath = path.join(draftDir, `${request.id}-draft.json`);
 
 fs.writeFileSync(packetPath, packet, "utf8");
-fs.writeFileSync(`${draftPath}`, `${JSON.stringify(draft, null, 2)}\n`, "utf8");
+fs.writeFileSync(draftPath, `${JSON.stringify(draft, null, 2)}\n`, "utf8");
 
-console.log(`Wrote ${packetPath}`);
-console.log(`Wrote ${draftPath}`);
+console.log(`已寫入 ${packetPath}`);
+console.log(`已寫入 ${draftPath}`);
