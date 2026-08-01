@@ -77,6 +77,12 @@ for (let i = 0; i < sorted.length; i += 1) {
         errors.push(`${sentence.id}: displayLines must be an array when provided.`);
       } else if (sentence.displayLines.join("") !== sentence.text) {
         errors.push(`${sentence.id}: displayLines must join back to text.`);
+      } else {
+        for (const line of sentence.displayLines) {
+          if (hanChars(line).length > 5) {
+            errors.push(`${sentence.id}: displayLines line "${line}" is too long for phone layout; use shorter lines.`);
+          }
+        }
       }
     }
 

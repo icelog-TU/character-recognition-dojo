@@ -279,6 +279,8 @@ For sentence layout, avoid ugly line breaks. If a sentence is too long for one p
 
 `displayLines` only controls visual line breaks. It must join back to `text`, and the app still uses `text` for audio timing and character highlighting.
 
+For phone layout, keep each `displayLines` line to at most 5 Han characters when zhuyin is shown. Split longer sentences into more lines before shipping so the last character cannot be clipped.
+
 ## Audio Rules
 
 There are two audio categories.

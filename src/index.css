@@ -3120,6 +3120,35 @@ button.char-token {
   }
 }
 
+@media (max-width: 780px) {
+  .picture-sentence-card .sentence-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px 5px;
+    overflow: visible;
+  }
+
+  .picture-sentence-card .sentence-line-row {
+    display: contents;
+  }
+
+  .picture-sentence-card .char-token {
+    flex: 0 1 auto;
+    min-width: 38px;
+  }
+
+  .picture-sentence-card .hanzi {
+    font-size: clamp(1.72rem, 7vw, 2.18rem);
+  }
+
+  .picture-sentence-card .zhuyin-mark {
+    font-size: clamp(0.5rem, 2vw, 0.62rem);
+    min-width: 1.35em;
+  }
+}
+
 @media (max-width: 420px) {
   .app-shell {
     padding: 8px;
