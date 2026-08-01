@@ -13,6 +13,7 @@ export interface Lesson {
   requiredRounds: number;
   originHint?: OriginHint;
   sentences: LessonSentence[];
+  sentenceGames?: SentenceGame[];
 }
 
 export interface OriginHint {
@@ -44,4 +45,28 @@ export interface CharTiming {
   charIndex: number;
   startMs: number;
   endMs: number;
+}
+
+export type SentenceGameType =
+  | "find-character"
+  | "teach-character"
+  | "missing-character"
+  | "partial-order"
+  | "choose-pronunciation";
+
+export interface SentenceGame {
+  id: string;
+  type: SentenceGameType;
+  sentenceId: string;
+  targetChar: string;
+  prompt: string;
+  missingIndexes?: number[];
+  options?: SentenceGameOption[];
+}
+
+export interface SentenceGameOption {
+  id: string;
+  text: string;
+  correct: boolean;
+  audioSrc?: string;
 }

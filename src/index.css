@@ -1644,6 +1644,120 @@ button.char-token {
   margin-bottom: 10px;
 }
 
+.sentence-game-prompt {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.sentence-game-card {
+  border-color: rgba(34, 132, 123, 0.28);
+  background: linear-gradient(180deg, #ffffff 0%, #f5fbf8 100%);
+}
+
+.sentence-game-card button.char-token {
+  appearance: none;
+  border: 2px solid transparent;
+  font: inherit;
+}
+
+.sentence-game-card button.char-token:not(:disabled):active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.sentence-blank {
+  display: inline-grid;
+  place-items: center;
+  min-width: 58px;
+  min-height: 58px;
+  border: 2px dashed var(--primary);
+  border-radius: 8px;
+  background: #eef8f4;
+  color: var(--primary-strong);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.sentence-blank.filled {
+  border-style: solid;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(34, 132, 123, 0.12);
+}
+
+.game-option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.game-option {
+  min-height: 62px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 2rem;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  cursor: pointer;
+}
+
+.game-option.picked {
+  border-color: var(--primary);
+  background: var(--green-soft);
+  color: var(--primary-strong);
+}
+
+.teach-character-panel {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  border: 1px solid rgba(34, 132, 123, 0.24);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.teach-target-char {
+  display: grid;
+  place-items: center;
+  width: 86px;
+  height: 86px;
+  border: 3px solid var(--primary);
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--primary-strong);
+  font-size: 3.6rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.sentence-game-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pronunciation-choice-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.pronunciation-choice {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px;
+}
+
 .picture-sentence-list {
   display: grid;
   gap: 12px;

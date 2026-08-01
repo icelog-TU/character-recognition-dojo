@@ -54,6 +54,14 @@ for (const lesson of curriculum.lessons ?? []) {
       errors.push(`${sentence.id}: audio.durationMs must be a positive number.`);
     }
   }
+
+  for (const game of lesson.sentenceGames ?? []) {
+    for (const option of game.options ?? []) {
+      if (option.audioSrc) {
+        requirePublicAsset(`${game.id} option ${option.id} audioSrc`, option.audioSrc);
+      }
+    }
+  }
 }
 
 if (errors.length > 0) {

@@ -216,15 +216,21 @@ For L001-L010, use picture-supported sentence practice:
     - red button: next lesson
     - white button: back to course entrance
 
-From around L011, add Stage 4 after the child completes picture-supported sentence listening. Do not replace Stage 3. Stage 4 can start using the old app's five sentence games:
+From around L011, add Stage 4 after the child completes picture-supported sentence listening. Do not replace Stage 3. Stage 4 uses fixed, reviewed sentence games stored in lesson data. Do not choose the game type randomly at runtime.
 
-- 找字
-- 教動物
-- 填空
-- 排句子
-- 誰念對
+- 找字: the child taps a target character inside the sentence.
+- 教角色念字: the sentence pauses conceptually on a target character; the character asks the child to help, and the child records the target word locally.
+- 字寶寶不見了: one or more characters are blanked out and the child restores the correct character.
+- 局部句子重排: for early lessons, blank only 2-4 Han characters and let the child return those pieces in order; do not ask preschool children to reorder the whole sentence.
+- 誰念得對: the child chooses the correct prerecorded AI reading. Audio choices should be reviewed assets, not browser TTS.
 
-Do not introduce these games too early. The child needs enough known characters first.
+Stage 4 planning rules:
+
+- Each game has an explicit `targetChar`; it may be the current new character or a review character.
+- A lesson should usually give the current new character at least three interactions, while allowing 1-2 review-focused games.
+- If a sentence does not contain the current new character, do not force it to use the current new character as the target.
+- Keep the game plan fixed in curriculum data so QA and phone testing are reproducible.
+- Do not introduce these games too early. The child needs enough known characters first.
 
 ## Typography And Zhuyin Rules
 

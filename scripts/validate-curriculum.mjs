@@ -5,6 +5,13 @@ const curriculumPath = path.resolve("src/curriculum/sample-lessons.json");
 const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
 const errors = [];
 const warnings = [];
+const supportedSentenceGameTypes = new Set([
+  "find-character",
+  "teach-character",
+  "missing-character",
+  "partial-order",
+  "choose-pronunciation",
+]);
 
 function hanChars(text) {
   return Array.from(text).filter((char) => /\p{Script=Han}/u.test(char));
@@ -92,6 +99,68 @@ for (let i = 0; i < sorted.length; i += 1) {
       warnings.push(`${sentence.id}: audio is missing; acceptable for draft samples, not for production.`);
     } else if (sentence.audio.charTimings.length !== chars.length) {
       errors.push(`${sentence.id}: audio timings count does not match Han character count.`);
+    }
+  }
+
+  const sentencesById = new Map((lesson.sentences ?? []).map((sentence) => [sentence.id, sentence]));
+  for (const game of lesson.sentenceGames ?? []) {
+    const label = game.id || `${lesson.id} sentenceGame`;
+    const sentence = sentencesById.get(game.sentenceId);
+
+    if (!supportedSentenceGameTypes.has(game.type)) {
+      errors.push(`${label}: unsupported sentence game type ${game.type}.`);
+    }
+
+    if (!sentence) {
+      errors.push(`${label}: sentenceId ${game.sentenceId} does not exist in ${lesson.id}.`);
+      continue;
+    }
+
+    const chars = hanChars(sentence.text);
+    if (!chars.includes(game.targetChar)) {
+      errors.push(`${label}: targetChar ${game.targetChar} does not appear in ${game.sentenceId}.`);
+    }
+
+    for (const char of hanChars(game.targetChar)) {
+      if (!currentAllowed.has(char)) {
+        errors.push(`${label}: targetChar uses locked character ${char}.`);
+      }
+    }
+
+    if (game.missingIndexes) {
+      if (!Array.isArray(game.missingIndexes)) {
+        errors.push(`${label}: missingIndexes must be an array when provided.`);
+      } else {
+        for (const index of game.missingIndexes) {
+          if (!Number.isInteger(index) || index < 0 || index >= chars.length) {
+            errors.push(`${label}: missing index ${index} is outside ${game.sentenceId}.`);
+          }
+        }
+      }
+    }
+
+    for (const option of game.options ?? []) {
+      if (!option.id || typeof option.id !== "string") {
+        errors.push(`${label}: every option needs a string id.`);
+      }
+      if (!option.text || typeof option.text !== "string") {
+        errors.push(`${label}: every option needs text.`);
+      }
+      if (typeof option.correct !== "boolean") {
+        errors.push(`${label}: option ${option.id} needs boolean correct.`);
+      }
+      for (const char of hanChars(option.text ?? "")) {
+        if (!currentAllowed.has(char)) {
+          errors.push(`${label}: option ${option.id} uses locked character ${char}.`);
+        }
+      }
+    }
+
+    if (game.type === "missing-character" || game.type === "choose-pronunciation") {
+      const correctCount = (game.options ?? []).filter((option) => option.correct === true).length;
+      if (correctCount !== 1) {
+        errors.push(`${label}: ${game.type} must have exactly one correct option.`);
+      }
     }
   }
 

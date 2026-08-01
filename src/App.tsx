@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import curriculumData from "./curriculum/sample-lessons.json";
-import type { Curriculum, Lesson, LessonSentence } from "./types";
+import type { Curriculum, Lesson, LessonSentence, SentenceGameOption, SentenceGameType } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
 import "./index.css";
 
 const curriculum = curriculumData as unknown as Curriculum;
 
-type GameMode = "找字" | "教動物" | "填空" | "排句子" | "誰念對";
 type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
 type LessonCharEntry = { lesson: Lesson; char: string; index: number };
 type AudioWindow = Window & typeof globalThis & { webkitAudioContext?: typeof AudioContext };
@@ -55,7 +54,13 @@ type CharacterInteraction = {
   message: string;
 };
 
-const GAME_MODES: GameMode[] = ["找字", "教動物", "填空", "排句子", "誰念對"];
+const SENTENCE_GAME_LABELS: Record<SentenceGameType, string> = {
+  "find-character": "找字",
+  "teach-character": "教角色念字",
+  "missing-character": "字寶寶不見了",
+  "partial-order": "句子重排",
+  "choose-pronunciation": "誰念得對",
+};
 
 const NAV_ITEMS: Array<{ page: AppPage; label: string; icon: string }> = [
   { page: "practice", label: "練習課文", icon: "📖" },
@@ -1820,8 +1825,10 @@ function LessonPanel({
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
-  const usesSentenceGames = lesson.order >= 11;
-  const requiredGameRounds = usesSentenceGames ? Math.min(lesson.requiredRounds, lesson.sentences.length) : 0;
+  const usesSentenceGames = Boolean(lesson.sentenceGames?.length);
+  const requiredGameRounds = usesSentenceGames
+    ? Math.min(lesson.requiredRounds, lesson.sentenceGames?.length ?? 0)
+    : 0;
   const pictureDone = practiceDoneCount >= 1;
   const gamesDone = !usesSentenceGames || gameDoneCount >= requiredGameRounds;
   const lessonReady = soundUnlocked && findUnlocked && pictureDone && gamesDone;
@@ -2685,6 +2692,9 @@ function preloadAudioSrc(src?: string | null) {
 function preloadLessonAudio(lesson: Lesson) {
   for (const char of lesson.newChars) preloadAudioSrc(lesson.charAudio?.[char]);
   for (const sentence of lesson.sentences) preloadAudioSrc(sentence.audio?.src);
+  for (const game of lesson.sentenceGames ?? []) {
+    for (const option of game.options ?? []) preloadAudioSrc(option.audioSrc);
+  }
 }
 
 function currentPlaybackState(): PlaybackStatus {
@@ -2950,25 +2960,336 @@ function SentencePracticePreview({
   requiredCount: number;
   onRoundDone: () => void;
 }) {
-  const sentence = lesson.sentences[doneCount % lesson.sentences.length];
-  const mode = GAME_MODES[doneCount % GAME_MODES.length];
+  const games = lesson.sentenceGames ?? [];
+  const gameIndex = Math.min(doneCount, Math.max(0, requiredCount - 1));
+  const game = games[gameIndex] ?? games[0];
+  const sentence = game ? lesson.sentences.find((candidate) => candidate.id === game.sentenceId) ?? lesson.sentences[0] : lesson.sentences[0];
+  const [pickedOptionIds, setPickedOptionIds] = useState<string[]>([]);
+  const [roundComplete, setRoundComplete] = useState(false);
+  const [recording, setRecording] = useState(false);
+  const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const recordedChunksRef = useRef<Blob[]>([]);
+
+  useEffect(() => {
+    setPickedOptionIds([]);
+    setRoundComplete(false);
+    setRecording(false);
+    setRecordedAudioUrl((current) => {
+      if (current) URL.revokeObjectURL(current);
+      return null;
+    });
+    mediaRecorderRef.current = null;
+    recordedChunksRef.current = [];
+  }, [game?.id]);
+
+  useEffect(() => () => {
+    if (recordedAudioUrl) URL.revokeObjectURL(recordedAudioUrl);
+  }, [recordedAudioUrl]);
+
+  if (!game || !sentence) {
+    return <p className="block-note">這一課還沒有設定句子遊戲。</p>;
+  }
+
+  const han = hanChars(sentence.text);
+  const targetIndex = Math.max(0, han.findIndex((char) => char === game.targetChar));
+  const missingIndexes = game.missingIndexes?.length ? game.missingIndexes : [targetIndex];
+  const currentPickedOptions = pickedOptionIds
+    .map((id) => game.options?.find((option) => option.id === id))
+    .filter((option): option is SentenceGameOption => Boolean(option));
+  const filledBlanks = new Map<number, string>();
+  missingIndexes.forEach((index, slotIndex) => {
+    filledBlanks.set(index, currentPickedOptions[slotIndex]?.text ?? "");
+  });
+
+  function completeRound() {
+    if (roundComplete || disabled || doneCount >= requiredCount) return;
+    setRoundComplete(true);
+    playCelebrateChime();
+    window.setTimeout(onRoundDone, 650);
+  }
+
+  function handleFindChar(index: number) {
+    if (index !== targetIndex) {
+      playMissChime();
+      void speakGuide("再找找看。");
+      return;
+    }
+    completeRound();
+  }
+
+  function handleMissingOption(option: SentenceGameOption) {
+    if (!option.correct) {
+      playMissChime();
+      void speakGuide("這個字不對喔，再找找看。");
+      return;
+    }
+    setPickedOptionIds([option.id]);
+    completeRound();
+  }
+
+  function handleOrderOption(option: SentenceGameOption) {
+    if (pickedOptionIds.includes(option.id)) return;
+    const expectedText = han[missingIndexes[pickedOptionIds.length]];
+    if (option.text !== expectedText) {
+      playMissChime();
+      setPickedOptionIds([]);
+      void speakGuide("順序不對，我們再排一次。");
+      return;
+    }
+    const nextPicked = [...pickedOptionIds, option.id];
+    setPickedOptionIds(nextPicked);
+    if (nextPicked.length >= missingIndexes.length) completeRound();
+  }
+
+  async function handleChoiceAudio(option: SentenceGameOption) {
+    if (option.audioSrc) {
+      await playAudioSrc(option.audioSrc);
+    } else {
+      await speakGuide(option.text);
+    }
+  }
+
+  function handlePronunciationChoice(option: SentenceGameOption) {
+    if (!option.correct) {
+      playMissChime();
+      void speakGuide("這個念法不對喔，再聽一次。");
+      return;
+    }
+    completeRound();
+  }
+
+  async function startRecording() {
+    if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
+      await speakGuide("這個瀏覽器不能錄音，先當作完成。");
+      completeRound();
+      return;
+    }
+    let stream: MediaStream;
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch {
+      await speakGuide("沒有打開麥克風，先當作完成。");
+      completeRound();
+      return;
+    }
+    recordedChunksRef.current = [];
+    const recorder = new MediaRecorder(stream);
+    mediaRecorderRef.current = recorder;
+    recorder.ondataavailable = (event) => {
+      if (event.data.size > 0) recordedChunksRef.current.push(event.data);
+    };
+    recorder.onstop = () => {
+      stream.getTracks().forEach((track) => track.stop());
+      const blob = new Blob(recordedChunksRef.current, { type: recorder.mimeType || "audio/webm" });
+      const url = URL.createObjectURL(blob);
+      setRecordedAudioUrl((current) => {
+        if (current) URL.revokeObjectURL(current);
+        return url;
+      });
+      setRecording(false);
+      completeRound();
+    };
+    setRecording(true);
+    recorder.start();
+  }
+
+  function stopRecording() {
+    const recorder = mediaRecorderRef.current;
+    if (!recorder || recorder.state === "inactive") return;
+    recorder.stop();
+  }
+
+  const gameBody = (() => {
+    if (game.type === "find-character") {
+      return (
+        <>
+          <SentenceGameLine
+            sentence={sentence}
+            zhuyinMap={zhuyinMap}
+            clickable
+            foundIndexes={roundComplete ? new Set([targetIndex]) : new Set()}
+            onCharClick={handleFindChar}
+          />
+          <p className="block-note">請點句子裡的「{game.targetChar}」。</p>
+        </>
+      );
+    }
+
+    if (game.type === "teach-character") {
+      return (
+        <>
+          <SentenceGameLine
+            sentence={sentence}
+            zhuyinMap={zhuyinMap}
+            foundIndexes={new Set([targetIndex])}
+          />
+          <div className="teach-character-panel">
+            <strong>這個字我不會念，請你幫我。</strong>
+            <span className="teach-target-char">{game.targetChar}</span>
+            <div className="sentence-game-actions">
+              <button className="btn secondary" disabled={disabled || recording || roundComplete} onClick={() => void playSentence(sentence)}>
+                先聽一次
+              </button>
+              <button className="btn" disabled={disabled || roundComplete} onClick={recording ? stopRecording : () => void startRecording()}>
+                {recording ? "錄好了" : "開始錄音"}
+              </button>
+              {recordedAudioUrl && (
+                <button className="btn ghost" onClick={() => void new Audio(recordedAudioUrl).play()}>
+                  聽我的聲音
+                </button>
+              )}
+            </div>
+          </div>
+        </>
+      );
+    }
+
+    if (game.type === "missing-character") {
+      return (
+        <>
+          <SentenceGameLine sentence={sentence} zhuyinMap={zhuyinMap} blanks={filledBlanks} />
+          <GameOptionGrid options={game.options ?? []} pickedOptionIds={pickedOptionIds} onPick={handleMissingOption} />
+        </>
+      );
+    }
+
+    if (game.type === "partial-order") {
+      return (
+        <>
+          <SentenceGameLine sentence={sentence} zhuyinMap={zhuyinMap} blanks={filledBlanks} />
+          <GameOptionGrid options={game.options ?? []} pickedOptionIds={pickedOptionIds} onPick={handleOrderOption} />
+        </>
+      );
+    }
+
+    return (
+      <>
+        <SentenceCard sentence={sentence} zhuyinMap={zhuyinMap} activeCharIndex={null} />
+        <div className="pronunciation-choice-grid">
+          {(game.options ?? []).map((option, index) => (
+            <div key={option.id} className="pronunciation-choice">
+              <button className="btn secondary" disabled={disabled} onClick={() => void handleChoiceAudio(option)}>
+                聽第 {index + 1} 個
+              </button>
+              <button className="btn ghost" disabled={disabled || roundComplete} onClick={() => handlePronunciationChoice(option)}>
+                選這個
+              </button>
+            </div>
+          ))}
+        </div>
+      </>
+    );
+  })();
 
   return (
     <>
       <div className="practice-meta">
-        <span className="pill">{mode}</span>
+        <span className="pill">{SENTENCE_GAME_LABELS[game.type]}</span>
         <span className="pill">
           {doneCount} / {requiredCount}
         </span>
       </div>
-      <SentenceCard sentence={sentence} zhuyinMap={zhuyinMap} activeCharIndex={null} />
-      <p className="block-note">
-        這裡會接上舊版五種遊戲並隨機輪替。每一句必須先由你審核後才會進入正式教材。
-      </p>
-      <button className="btn secondary" disabled={disabled || doneCount >= requiredCount} onClick={onRoundDone}>
-        示範完成一個句子遊戲
-      </button>
+      <p className="sentence-game-prompt">{game.prompt}</p>
+      {gameBody}
+      {roundComplete && <p className="success">完成這一題。</p>}
     </>
+  );
+}
+
+function SentenceGameLine({
+  sentence,
+  zhuyinMap,
+  blanks,
+  clickable = false,
+  foundIndexes = new Set<number>(),
+  onCharClick,
+}: {
+  sentence: LessonSentence;
+  zhuyinMap: Map<string, string>;
+  blanks?: Map<number, string>;
+  clickable?: boolean;
+  foundIndexes?: Set<number>;
+  onCharClick?: (hanIndex: number) => void;
+}) {
+  let hanIndex = -1;
+  const displayLines = sentence.displayLines?.length ? sentence.displayLines : [sentence.text];
+  return (
+    <div className="sentence-card sentence-game-card">
+      <div className="sentence-line" aria-label={sentence.text}>
+        {displayLines.map((line, lineIndex) => (
+          <div key={`${sentence.id}-game-line-${lineIndex}`} className="sentence-line-row">
+            {Array.from(line).map((char, index) => {
+              if (!isHan(char)) {
+                return (
+                  <span key={`${char}-${lineIndex}-${index}`} className="punctuation">
+                    {char}
+                  </span>
+                );
+              }
+              hanIndex += 1;
+              const blankValue = blanks?.get(hanIndex);
+              if (blankValue !== undefined) {
+                return (
+                  <span key={`${char}-${lineIndex}-${index}`} className={`sentence-blank${blankValue ? " filled" : ""}`}>
+                    {blankValue || "？"}
+                  </span>
+                );
+              }
+              const token = (
+                <>
+                  <span className="hanzi">{char}</span>
+                  <Zhuyin value={zhuyinMap.get(char) ?? ""} />
+                </>
+              );
+              const className = `char-token${foundIndexes.has(hanIndex) ? " found" : ""}`;
+              if (clickable) {
+                const currentIndex = hanIndex;
+                return (
+                  <button
+                    key={`${char}-${lineIndex}-${index}`}
+                    className={className}
+                    onClick={() => onCharClick?.(currentIndex)}
+                  >
+                    {token}
+                  </button>
+                );
+              }
+              return (
+                <span key={`${char}-${lineIndex}-${index}`} className={className}>
+                  {token}
+                </span>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function GameOptionGrid({
+  options,
+  pickedOptionIds,
+  onPick,
+}: {
+  options: SentenceGameOption[];
+  pickedOptionIds: string[];
+  onPick: (option: SentenceGameOption) => void;
+}) {
+  return (
+    <div className="game-option-grid">
+      {options.map((option) => (
+        <button
+          key={option.id}
+          className={`game-option${pickedOptionIds.includes(option.id) ? " picked" : ""}`}
+          disabled={pickedOptionIds.includes(option.id)}
+          onClick={() => onPick(option)}
+        >
+          {option.text}
+        </button>
+      ))}
+    </div>
   );
 }
 

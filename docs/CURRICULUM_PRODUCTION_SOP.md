@@ -248,6 +248,18 @@ Rules:
 - Do not let the final character highlight continue through a long silent tail. The last `endMs` should mark the end of the spoken syllable, not the end of the audio file if the file includes trailing silence.
 - Before approval, play each Stage 3 sentence in the app and check that the active character changes on the heard syllable. Pay special attention to the last 2-4 characters.
 
+## Stage 4 Sentence Game Rules
+
+Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesson data. These games are reviewed curriculum, not runtime random events.
+
+- Use fixed game types per sentence/game. Do not randomly assign game modes at runtime for production lessons.
+- Supported first-pass game types: `find-character`, `teach-character`, `missing-character`, `partial-order`, and `choose-pronunciation`.
+- `targetChar` must appear in the referenced sentence. It may be the current lesson's new character or a review character.
+- A lesson should usually include at least three interactions involving the current new character, while allowing 1-2 interactions focused on review characters.
+- For early lessons, `partial-order` should blank only 2-4 Han characters, not the full sentence.
+- `teach-character` can use local recording/playback first; speech scoring can be added later.
+- `choose-pronunciation` should use reviewed AI audio assets for production choices. Do not use browser TTS as the production reading for options.
+
 ## Review Gate
 
 A sentence can move into the curriculum only when:
