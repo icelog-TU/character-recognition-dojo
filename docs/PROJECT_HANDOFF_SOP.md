@@ -97,6 +97,31 @@ npm run lint
 npm run build
 ```
 
+## Lesson Asset Preload SOP
+
+When a child enters a lesson, the app must start preloading that lesson's required assets immediately:
+
+- new-character audio
+- sentence audio
+- Stage 4 option audio
+- all sentence images for that lesson
+
+Preload only the active lesson by default. Do not preload the entire 600-character course on app start, because that would waste bandwidth, slow first launch, and make mobile testing feel worse. If later lessons need extra speed, preload the next lesson only after the current lesson is stable and the user has enough idle time in the app.
+
+For production assets, keep each lesson small enough for phone use:
+
+- Use `.webp` for sentence pictures unless there is a strong reason not to.
+- Keep sentence images at phone/tablet display resolution; do not ship unnecessarily large source images.
+- Use normalized `.m4a` audio for final lesson audio.
+- Reuse approved pictures when the meaning, count, cast, and visual focus still fit.
+
+Before shipping a lesson-heavy change, check asset size with:
+
+```bash
+Get-ChildItem public/assets -Recurse -File | Measure-Object Length -Sum
+Get-ChildItem public/assets/lessons/L### -Recurse -File | Measure-Object Length -Sum
+```
+
 Asset-writing commands that rewrite `src/curriculum/sample-lessons.json` must not run in parallel across threads. Run `assets:images`, `assets:audio`, and `assets:align` sequentially for one lesson at a time, and fetch/rebase before starting the next asset step if another thread has pushed curriculum changes.
 
 ## App 結構

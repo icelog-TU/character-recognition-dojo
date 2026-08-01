@@ -98,6 +98,8 @@ npm run assets:images -- --lesson L001 --remove-original
 This converts referenced PNG/JPG files to WebP, updates `imageSrc`, and can remove the original PNG/JPG when `--remove-original` is provided.
 If the command cannot find ImageMagick right after installation, reopen the terminal or set `MAGICK_PATH` to the full `magick.exe` path.
 
+The app preloads the active lesson's required images and audio when the lesson opens, so production assets must be optimized before merging. Do not rely on late loading inside Stage 3 or Stage 4 to hide oversized images.
+
 Process reviewed AI audio:
 
 ```bash
@@ -173,6 +175,8 @@ Images are generated or sourced only after sentence approval.
 - Curriculum `imageSrc` example: `/assets/lessons/L004/images/L004-S01.webp`.
 - Images must not contain visible text, letters, numbers, zhuyin, labels, signs, or watermarks.
 - If the sentence expresses a count, the image must clearly match the count.
+- Keep final lesson images phone/tablet sized and optimized as `.webp`; do not ship large source-resolution images in `public/assets`.
+- Check the final lesson asset folder size before push. A single lesson growing unusually large must be reviewed and compressed before merging.
 
 ## Image Reuse And Cast Continuity
 

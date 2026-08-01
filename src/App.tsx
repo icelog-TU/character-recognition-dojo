@@ -557,6 +557,7 @@ function assetUrl(src: string): string {
 }
 
 const audioCache = new Map<string, HTMLAudioElement>();
+const imageCache = new Map<string, HTMLImageElement>();
 let activeAudio: HTMLAudioElement | null = null;
 let activeAudioFrame = 0;
 let activeAudioTick: (() => void) | null = null;
@@ -1899,7 +1900,7 @@ function LessonPanel({
   const hearPrompt = hearPromptText(lesson);
 
   useEffect(() => {
-    preloadLessonAudio(lesson);
+    preloadLessonAssets(lesson);
   }, [lesson]);
 
   useEffect(() => {
@@ -2697,7 +2698,7 @@ function PictureSentencePreview({
             onClick={() => handleSentenceTap(sentence, index)}
           >
             {sentence.imageSrc ? (
-              <img src={assetUrl(sentence.imageSrc)} alt="" />
+              <img src={assetUrl(sentence.imageSrc)} alt="" loading="eager" decoding="async" />
             ) : (
               <div className="image-placeholder" aria-label="圖片待製作">
                 <span>圖片快來了</span>
@@ -2774,6 +2775,26 @@ function preloadLessonAudio(lesson: Lesson) {
   for (const game of lesson.sentenceGames ?? []) {
     for (const option of game.options ?? []) preloadAudioSrc(option.audioSrc);
   }
+}
+
+function preloadImageSrc(src?: string | null) {
+  if (!src || typeof window === "undefined") return;
+  const url = assetUrl(src);
+  if (imageCache.has(url)) return;
+  const image = new Image();
+  image.decoding = "async";
+  image.loading = "eager";
+  image.src = url;
+  imageCache.set(url, image);
+}
+
+function preloadLessonImages(lesson: Lesson) {
+  for (const sentence of lesson.sentences) preloadImageSrc(sentence.imageSrc);
+}
+
+function preloadLessonAssets(lesson: Lesson) {
+  preloadLessonAudio(lesson);
+  preloadLessonImages(lesson);
 }
 
 function currentPlaybackState(): PlaybackStatus {
