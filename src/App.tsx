@@ -3143,6 +3143,14 @@ function SentencePracticePreview({
   const han = sentence ? hanChars(sentence.text) : [];
   const targetIndex = game ? Math.max(0, han.findIndex((char) => char === game.targetChar)) : 0;
   const gameGuide = game && sentence ? gameGuideText(game, teachPhase) : "";
+  const shuffledGameOptions = useMemo(() => {
+    if (!game?.options?.length) return [];
+    const shuffled = stableShuffledOptions(game.options, `${lesson.id}:${game.id}:${game.sentenceId}`);
+    if (game.type === "choose-pronunciation" && shuffled[0]?.correct && shuffled.length > 1) {
+      return [...shuffled.slice(1), shuffled[0]];
+    }
+    return shuffled;
+  }, [game?.id, game?.options, game?.sentenceId, game?.type, lesson.id]);
 
   const speakStageFour = useCallback(async (text: string) => {
     onSpeakStartRef.current("stage4");
@@ -3276,6 +3284,32 @@ function SentencePracticePreview({
     if (disabled) return;
     guideRunRef.current += 1;
     void speakStageFour(isCurrentRoundComplete ? roundCompletionText(doneAfterThisRound) : gameGuideText(game, teachPhase));
+  }
+
+  async function replayCurrentSentence() {
+    if (disabled || !sentence) return;
+    const runId = guideRunRef.current + 1;
+    guideRunRef.current = runId;
+    setActiveGameCharIndex(null);
+    onSpeakStartRef.current("stage4");
+    try {
+      await playSentence(sentence, {
+        onTime: (elapsedMs) => {
+          if (guideRunRef.current === runId) setActiveGameCharIndex(activeTimingIndex(sentence, elapsedMs));
+        },
+        onEnded: () => {
+          if (guideRunRef.current === runId) setActiveGameCharIndex(null);
+        },
+        onError: () => {
+          if (guideRunRef.current === runId) setActiveGameCharIndex(null);
+        },
+      });
+    } finally {
+      if (guideRunRef.current === runId) {
+        setActiveGameCharIndex(null);
+        onSpeakEndRef.current("stage4");
+      }
+    }
   }
 
   async function handleFindChar(index: number) {
@@ -3508,7 +3542,7 @@ function SentencePracticePreview({
             activeIndex={activeGameCharIndex}
             blanks={filledBlanks}
           />
-          <GameOptionGrid options={game.options ?? []} pickedOptionIds={pickedOptionIds} onPick={handleMissingOption} />
+          <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleMissingOption} />
         </>
       );
     }
@@ -3523,7 +3557,10 @@ function SentencePracticePreview({
             activeIndex={activeGameCharIndex}
             blanks={filledBlanks}
           />
-          <GameOptionGrid options={game.options ?? []} pickedOptionIds={pickedOptionIds} onPick={handleOrderOption} />
+          <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
+            🔊 重播這一句
+          </button>
+          <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleOrderOption} />
         </>
       );
     }
@@ -3532,7 +3569,7 @@ function SentencePracticePreview({
       <>
         <SentenceCard sentence={sentence} zhuyinMap={zhuyinMap} activeCharIndex={null} />
         <PronunciationChoiceGrid
-          options={game.options ?? []}
+          options={shuffledGameOptions}
           disabled={disabled}
           roundComplete={isCurrentRoundComplete}
           onHear={handleChoiceAudio}
@@ -3741,6 +3778,34 @@ const PRONUNCIATION_READERS = [
   { emoji: "🐻", name: "小熊" },
   { emoji: "🐷", name: "小豬" },
 ];
+
+function stableShuffledOptions(options: SentenceGameOption[], seed: string) {
+  const shuffled = [...options];
+  let state = hashSeed(seed);
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    state = nextShuffleState(state);
+    const swapIndex = state % (index + 1);
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  if (shuffled.length > 1 && shuffled.every((option, index) => option.id === options[index].id)) {
+    const offset = (hashSeed(`${seed}:rotate`) % (shuffled.length - 1)) + 1;
+    return [...shuffled.slice(offset), ...shuffled.slice(0, offset)];
+  }
+  return shuffled;
+}
+
+function hashSeed(value: string) {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function nextShuffleState(state: number) {
+  return (Math.imul(state, 1664525) + 1013904223) >>> 0;
+}
 
 function PronunciationChoiceGrid({
   options,

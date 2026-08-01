@@ -272,10 +272,13 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 - `teach-character` requires the old helper flow: helper reads the sentence up to the unknown character, cries/asks for help, the child presses and holds the target character itself, the app speaks a prime, plays a ding, records, and then replays the full sentence with the child's recording stitched into the target-character slot.
 - The `teach-character` recording ding must be reliable on mobile. Resume/unlock Web Audio before playing the ding, use a clear lower-frequency cue lasting about 0.8-1.0 seconds, then start recording only after the ding window.
 - In `teach-character`, do not circle or highlight the unknown target before the helper reaches that character and gets stuck. Do not render a separate isolated target-character panel below the sentence unless it has an actual interaction.
+- `partial-order` must show a dedicated replay-sentence button in the game area so the child/parent can hear the target sentence again without replaying the full helper instruction.
+- `partial-order` option cards must be shuffled before display. They must not appear in the correct sentence order on entry, even if the lesson JSON is written in sentence order.
 - After a correct Stage 4 response, play one short praise phrase before stopping on the current round. Vary the praise, such as "你好棒", "你好厲害", or "太棒了". Do not auto-advance. Speak a prompt telling the child to press the red button for the next round or completion.
 - Completion state must be tied to the current game id. When moving to the next Stage 4 round, never let the previous round's completed state trigger the next round's completion prompt.
 - Every Stage 4 round must have a visible replay-instruction button so the child/parent can hear the helper's request again after leaving and returning.
 - `choose-pronunciation` must use the animal avatar itself as the listen button and a simple checkmark button as the choice. Spoken guidance for non-readers must say to press each animal's head first, then press the checkmark next to the friend who read correctly.
+- `choose-pronunciation` reader/options order must be shuffled before display. The correct option must not be fixed in the first reader position.
 
 ## Review Gate
 
