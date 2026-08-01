@@ -39,6 +39,18 @@ git status --short --branch
 git log -1 --oneline
 ```
 
+## Markdown Encoding Read Rule
+
+Markdown files in this repo are UTF-8. On Windows, PowerShell terminal output may display Chinese text as mojibake if the console encoding and file decoding path do not match. Do not report that repo Markdown is corrupted based only on garbled `Get-Content` output.
+
+When reading Chinese Markdown, prefer an explicit UTF-8 read path. To verify a file before raising an encoding concern, use a check like:
+
+```bash
+node -e "const fs=require('fs'); const b=fs.readFileSync('README.md'); new TextDecoder('utf-8',{fatal:true}).decode(b); console.log('valid UTF-8')"
+```
+
+Only treat Markdown text as actually corrupted if explicit UTF-8 decoding fails, replacement characters are present in the decoded file, or the same wrong text appears in a UTF-8-aware editor/browser/GitHub view.
+
 Rules:
 
 - Treat `https://github.com/icelog-TU/character-recognition-dojo` as the shared source of truth.
