@@ -555,6 +555,8 @@ let activeAudioFinish: ((kind: "ended" | "error") => void) | null = null;
 let activeTtsFinish: (() => void) | null = null;
 let ttsPausedByApp = false;
 let toneAudioContext: AudioContext | null = null;
+let recordingDingAudioUrl: string | null = null;
+let primedRecordingDingAudio: HTMLAudioElement | null = null;
 const playbackListeners = new Set<(state: PlaybackStatus) => void>();
 const PROGRESS_STORAGE_KEY = "character-recognition-dojo-progress-v1";
 
@@ -3017,6 +3019,105 @@ function playMissChime() {
   ]);
 }
 
+function getRecordingDingAudioUrl() {
+  if (recordingDingAudioUrl) return recordingDingAudioUrl;
+  const sampleRate = 44100;
+  const durationSeconds = 1.08;
+  const sampleCount = Math.floor(sampleRate * durationSeconds);
+  const headerBytes = 44;
+  const buffer = new ArrayBuffer(headerBytes + sampleCount * 2);
+  const view = new DataView(buffer);
+  writeAscii(view, 0, "RIFF");
+  view.setUint32(4, 36 + sampleCount * 2, true);
+  writeAscii(view, 8, "WAVE");
+  writeAscii(view, 12, "fmt ");
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true);
+  view.setUint16(22, 1, true);
+  view.setUint32(24, sampleRate, true);
+  view.setUint32(28, sampleRate * 2, true);
+  view.setUint16(32, 2, true);
+  view.setUint16(34, 16, true);
+  writeAscii(view, 36, "data");
+  view.setUint32(40, sampleCount * 2, true);
+
+  for (let index = 0; index < sampleCount; index += 1) {
+    const t = index / sampleRate;
+    const firstTone = Math.sin(2 * Math.PI * 880 * t);
+    const secondTone = Math.sin(2 * Math.PI * 1320 * t);
+    const upperTone = Math.sin(2 * Math.PI * 1760 * t);
+    const envelope = Math.min(1, t / 0.035) * Math.min(1, (durationSeconds - t) / 0.16);
+    const gap = t > 0.34 && t < 0.4 ? 0.18 : 1;
+    const value = (firstTone * 0.52 + secondTone * 0.34 + upperTone * 0.14) * envelope * gap * 0.82;
+    view.setInt16(headerBytes + index * 2, Math.max(-1, Math.min(1, value)) * 0x7fff, true);
+  }
+
+  recordingDingAudioUrl = URL.createObjectURL(new Blob([buffer], { type: "audio/wav" }));
+  return recordingDingAudioUrl;
+}
+
+function writeAscii(view: DataView, offset: number, value: string) {
+  for (let index = 0; index < value.length; index += 1) {
+    view.setUint8(offset + index, value.charCodeAt(index));
+  }
+}
+
+function createRecordingDingAudio() {
+  const audio = new Audio(getRecordingDingAudioUrl());
+  audio.preload = "auto";
+  audio.volume = 1;
+  return audio;
+}
+
+function primeRecordingDingAudio() {
+  const audio = createRecordingDingAudio();
+  primedRecordingDingAudio = audio;
+  audio.muted = true;
+  audio.volume = 0;
+  void audio.play().then(() => {
+    audio.pause();
+    audio.currentTime = 0;
+    audio.muted = false;
+    audio.volume = 1;
+  }).catch(() => {
+    audio.muted = false;
+    audio.volume = 1;
+  });
+}
+
+function playRecordingDingAudio() {
+  const audio = primedRecordingDingAudio ?? createRecordingDingAudio();
+  primedRecordingDingAudio = null;
+  audio.muted = false;
+  audio.volume = 1;
+  audio.currentTime = 0;
+  return new Promise<boolean>((resolve) => {
+    let settled = false;
+    const finish = (played: boolean) => {
+      if (settled) return;
+      settled = true;
+      audio.onended = null;
+      audio.onerror = null;
+      resolve(played);
+    };
+    const fallbackTimer = window.setTimeout(() => finish(false), 1250);
+    audio.onended = () => {
+      window.clearTimeout(fallbackTimer);
+      finish(true);
+    };
+    audio.onerror = () => {
+      window.clearTimeout(fallbackTimer);
+      finish(false);
+    };
+    void audio.play().then(() => {
+      window.setTimeout(() => finish(true), 1080);
+    }).catch(() => {
+      window.clearTimeout(fallbackTimer);
+      finish(false);
+    });
+  });
+}
+
 async function playRecordingReadyDing() {
   const context = ensureToneAudioContext();
   if (context?.state === "suspended") {
@@ -3032,7 +3133,8 @@ async function playRecordingReadyDing() {
     { frequency: 988, endFrequency: 1318, duration: 0.46, gain: 0.22, delay: 0.38 },
     { frequency: 1568, endFrequency: 1568, duration: 0.34, gain: 0.12, delay: 0.48 },
   ]);
-  await waitMs(980);
+  const mediaDingPlayed = await playRecordingDingAudio();
+  if (!mediaDingPlayed) await waitMs(1080);
 }
 
 function playCelebrateChime() {
@@ -3149,6 +3251,7 @@ function SentencePracticePreview({
   const [activeGameCharIndex, setActiveGameCharIndex] = useState<number | null>(null);
   const [askingGameCharIndex, setAskingGameCharIndex] = useState<number | null>(null);
   const [recordingGameCharIndex, setRecordingGameCharIndex] = useState<number | null>(null);
+  const [foundGameIndexes, setFoundGameIndexes] = useState<Set<number>>(() => new Set());
   const [floatingRecordChar, setFloatingRecordChar] = useState<string | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const recordedChunksRef = useRef<Blob[]>([]);
@@ -3190,6 +3293,7 @@ function SentencePracticePreview({
     setActiveGameCharIndex(null);
     setAskingGameCharIndex(null);
     setRecordingGameCharIndex(null);
+    setFoundGameIndexes(new Set());
     setFloatingRecordChar(null);
     setRecordedAudioUrl((current) => {
       if (current) URL.revokeObjectURL(current);
@@ -3336,6 +3440,8 @@ function SentencePracticePreview({
       void speakStageFour("再找找看。");
       return;
     }
+    setFoundGameIndexes(new Set([index]));
+    playFoundChime();
     await speakStageFour(stageFourPraise("找到了", doneCount));
     completeRound();
   }
@@ -3393,6 +3499,13 @@ function SentencePracticePreview({
       completeRound();
       return;
     }
+    await playRecordingReadyDing();
+    if (releasedDuringPrimeRef.current) {
+      setFloatingRecordChar(null);
+      setTeachPhase("ready");
+      await speakStageFour("還沒開始錄音喔。要按住等叮一聲，再大聲念給小兔子聽。");
+      return;
+    }
     let stream: MediaStream;
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -3431,15 +3544,6 @@ function SentencePracticePreview({
       }
       void handleTeachRecordingDone(url);
     };
-    await playRecordingReadyDing();
-    if (releasedDuringPrimeRef.current) {
-      stream.getTracks().forEach((track) => track.stop());
-      recordingStreamRef.current = null;
-      setFloatingRecordChar(null);
-      setTeachPhase("ready");
-      await speakStageFour("還沒開始錄音喔。要按住等叮一聲，再大聲念給小兔子聽。");
-      return;
-    }
     setRecording(true);
     setTeachPhase("recording");
     setRecordingGameCharIndex(targetIndex);
@@ -3458,6 +3562,7 @@ function SentencePracticePreview({
     if (disabled || isCurrentRoundComplete || game.type !== "teach-character") return;
     if (index !== targetIndex || teachPhase !== "ready" || recording || mediaRecorderRef.current?.state === "recording") return;
     ensureToneAudioContext();
+    primeRecordingDingAudio();
     releasedDuringPrimeRef.current = false;
     setTeachPhase("priming");
     setFloatingRecordChar(game.targetChar);
@@ -3519,7 +3624,7 @@ function SentencePracticePreview({
             targetChar={isCurrentRoundComplete ? game.targetChar : undefined}
             activeIndex={activeGameCharIndex}
             clickable
-            foundIndexes={isCurrentRoundComplete ? new Set([targetIndex]) : new Set()}
+            foundIndexes={isCurrentRoundComplete ? new Set([targetIndex]) : foundGameIndexes}
             onCharClick={handleFindChar}
           />
           <p className="block-note">點一下找到的字。</p>
