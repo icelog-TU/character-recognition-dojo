@@ -1444,6 +1444,11 @@
                         ? `<button class="btn" type="button" data-select="${choice.choiceId}">確定選這個字</button>`
                         : ""
                     }
+                    ${
+                      selected
+                        ? `<button class="btn secondary" type="button" data-unselect="${choice.choiceId}">取消選字</button>`
+                        : ""
+                    }
                   </div>
                 </div>
                 ${
@@ -1827,6 +1832,13 @@
             delete state.plannedLessons[secondKey];
           }
         }
+      }
+
+      function clearSelectedChoice(model = currentModel()) {
+        const previousChoiceId = state.selectedChoiceId;
+        delete state.plannedLessons[plannedLessonKey(model.order)];
+        state.selectedChoiceId = "";
+        if (state.previewChoiceId === previousChoiceId) state.previewChoiceId = "";
       }
 
       function mapToObject(map, valueMapper = (value) => value) {
@@ -2248,6 +2260,16 @@
           render(currentModel());
           $("statusLine").textContent = state.previewChoiceId === choiceId ? "已展開候選句，確認後再進入編輯。" : "已收起候選句。";
           scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        const unselectButton = event.target.closest("[data-unselect]");
+        if (unselectButton) {
+          const model = currentModel();
+          clearSelectedChoice(model);
+          savePlannerMemory(model);
+          render(model);
+          $("statusLine").textContent = "已取消選字，可以重新選別的候選字。已寫好的句子草稿會保留。";
           return;
         }
 
