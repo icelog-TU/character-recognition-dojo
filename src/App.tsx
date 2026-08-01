@@ -341,6 +341,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "sea-tropicalFish-youngerBrother": "/assets/characters/sea/tropical-fish/tropical-fish-younger-brother.webp",
   "sea-tropicalFish-youngerSister": "/assets/characters/sea/tropical-fish/tropical-fish-younger-sister.webp",
   "sea-tropicalFish-baby": "/assets/characters/sea/tropical-fish/tropical-fish-baby.webp",
+  "sea-blowfish-grandpa": "/assets/characters/sea/blowfish/blowfish-grandpa.webp",
+  "sea-blowfish-grandma": "/assets/characters/sea/blowfish/blowfish-grandma.webp",
+  "sea-blowfish-dad": "/assets/characters/sea/blowfish/blowfish-father.webp",
+  "sea-blowfish-mom": "/assets/characters/sea/blowfish/blowfish-mother.webp",
+  "sea-blowfish-olderBrother": "/assets/characters/sea/blowfish/blowfish-older-brother.webp",
+  "sea-blowfish-olderSister": "/assets/characters/sea/blowfish/blowfish-older-sister.webp",
+  "sea-blowfish-youngerBrother": "/assets/characters/sea/blowfish/blowfish-younger-brother.webp",
+  "sea-blowfish-youngerSister": "/assets/characters/sea/blowfish/blowfish-younger-sister.webp",
+  "sea-blowfish-baby": "/assets/characters/sea/blowfish/blowfish-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
