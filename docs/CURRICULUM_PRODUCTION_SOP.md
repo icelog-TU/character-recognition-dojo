@@ -232,6 +232,10 @@ Audio is generated only after sentence approval.
 - After processing audio, transcribe the final `.m4a` and compare it to `spokenText` before accepting the lesson.
 - If transcription misses a Han character, especially final `的` or final body-part nouns like `手`, regenerate the audio before writing timings.
 - Stage 1 character-card taps must cancel guide narration and start the character audio in the same user gesture. Do not insert `setTimeout`/`waitMs` before `audio.play()` on mobile. If the AI character audio fails to start, fall back to browser TTS for that character.
+- Character audio must be audibly normalized, not merely present. `npm run validate:production` measures each new-character `charAudio` with FFmpeg `volumedetect` and fails if `max_volume` is below `-35 dB`.
+- If a character card appears to play but the user cannot hear it on mobile, first check the actual file volume. A file can exist and be valid M4A while still being effectively silent.
+- If the standalone character-audio source is missing or unusably quiet, a safe repair is to cut the target character from an already approved sentence audio that contains the same character, using reviewed `charTimings`, then normalize and re-run validation.
+- Do not ship a lesson after only confirming that the character audio path exists. Confirm it is audible, short, and clearly says the target character.
 
 ## Character Timing Rules
 
@@ -305,6 +309,7 @@ A sentence can move into the curriculum only when:
 - `imagePrompt` is reviewed.
 - `approved` is true.
 - Final sentence audio transcribes back to `spokenText` with every Han character present.
+- New-character `charAudio` exists and passes the production audibility check.
 - `charTimings` come from the final processed audio and match the Han character count.
 - Manual playback review confirms the last character is audible and the highlight does not drift.
 - Audio may be null during prototype work, but production lessons need audio and timings.

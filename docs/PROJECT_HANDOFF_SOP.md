@@ -96,6 +96,8 @@ npm run lint
 npm run build
 ```
 
+`npm run validate:production` is not just an existence check. It also measures new-character audio volume and rejects near-silent `charAudio` files. If a mobile tester reports "the character has no sound" but the file exists, inspect the file's `max_volume` before changing UI playback logic.
+
 ## Lesson Asset Preload SOP
 
 When a child enters a lesson, the app must start preloading that lesson's required assets immediately:
@@ -565,6 +567,13 @@ After pushing, verify GitHub Pages deployment and check the online URL:
 
 `https://icelog-tu.github.io/character-recognition-dojo/`
 
+Mobile/GitHub Pages cache note:
+
+- If the deployed workflow is green but the user still sees an old UI string, old asset name, or removed text on the phone, suspect browser/PWA cache before assuming the latest code failed.
+- First compare the screenshot against the latest commit and built asset names.
+- Ask the user to refresh the page or close/reopen the tab only after confirming the GitHub Pages deployment for the current commit succeeded.
+- Still fix the underlying issue if stale text also exists in source data, even if it is no longer rendered in the child-facing app.
+
 ## Handoff Prompt For A New Chat
 
 Use this when starting a new Codex/GPT thread:
@@ -591,4 +600,5 @@ L017 introduces `家`.
 L007 introduces a fixed young girl character for 我.
 L012 introduces a fixed second-person young boy character for 你.
 L006-L017 include Stage 4 sentence games after picture-supported sentence listening.
+Production checks include an audibility gate for new-character `charAudio`; near-silent files must be regenerated or repaired before pushing.
 ```
