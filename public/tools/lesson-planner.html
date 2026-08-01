@@ -216,6 +216,20 @@
         font-size: 1.05rem;
       }
 
+      .draft-box {
+        margin-top: 12px;
+        border: 2px dashed #c9bca9;
+        border-radius: 12px;
+        background: #fff8ec;
+        padding: 12px;
+      }
+
+      .draft-box h4,
+      .added-list h4 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
+
       .sentence-row {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -303,10 +317,10 @@
       }
 
       .added-row {
-        border: 1px solid var(--line);
+        border: 2px solid rgba(25, 121, 111, 0.26);
         border-radius: 10px;
-        background: #fff;
-        padding: 10px;
+        background: #f0fbf6;
+        padding: 12px;
       }
 
       .added-row-head {
@@ -315,6 +329,25 @@
         justify-content: space-between;
         gap: 8px;
         margin-bottom: 8px;
+      }
+
+      .added-sentence {
+        font-size: 1.28rem;
+        font-weight: 900;
+      }
+
+      .added-notes {
+        margin-top: 8px;
+        color: var(--muted);
+      }
+
+      .edit-fields {
+        display: none;
+        margin-top: 10px;
+      }
+
+      .added-row.editing .edit-fields {
+        display: grid;
       }
 
       .request-actions {
@@ -574,15 +607,29 @@
                   ${
                     customRows.length
                       ? `<div class="added-list">
+                          <h4>已新增成功的句子</h4>
                           ${customRows
                             .map(
                               (row, index) => `
-                                <div class="added-row">
+                                <div class="added-row ${row.editing ? "editing" : ""}">
                                   <div class="added-row-head">
-                                    <span class="pill">已新增第 ${index + 1} 句</span>
-                                    <button class="btn secondary" type="button" data-remove-custom="${choice.choiceId}" data-custom="${index}">移除</button>
+                                    <span class="pill">完成第 ${index + 1} 句</span>
+                                    <div class="header-actions">
+                                      <button class="btn secondary" type="button" data-edit-custom="${choice.choiceId}" data-custom="${index}">${row.editing ? "收起編輯" : "編輯"}</button>
+                                      <button class="btn secondary" type="button" data-remove-custom="${choice.choiceId}" data-custom="${index}">移除</button>
+                                    </div>
                                   </div>
-                                  <div class="custom-grid">
+                                  <div class="added-sentence">${escapeHtml(row.text)}</div>
+                                  <div class="sentence-meta">
+                                    <span class="pill">spoken: ${escapeHtml(row.spokenText || row.text)}</span>
+                                    <span class="pill">focus: ${escapeHtml(row.focusChar || resolveFocusChar(row.text, "", choice))}</span>
+                                  </div>
+                                  ${
+                                    row.imageNotes
+                                      ? `<div class="added-notes"><strong>配圖要求：</strong>${escapeHtml(row.imageNotes)}</div>`
+                                      : ""
+                                  }
+                                  <div class="custom-grid edit-fields">
                                     <input aria-label="已新增句子" placeholder="句子" value="${escapeAttr(row.text)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="text" />
                                     <input aria-label="已新增 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(row.spokenText)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="spokenText" />
                                     <input aria-label="已新增 focus" placeholder="focus" value="${escapeAttr(row.focusChar)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="focusChar" />
@@ -595,15 +642,18 @@
                         </div>`
                       : ""
                   }
-                  <div class="custom-grid">
-                    <input aria-label="新句子" placeholder="句子，例如：你有小小的手" value="${escapeAttr(draft.text)}" data-draft-choice="${choice.choiceId}" data-field="text" />
-                    <input aria-label="新句子 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(draft.spokenText)}" data-draft-choice="${choice.choiceId}" data-field="spokenText" />
-                    <input aria-label="新句子 focus" placeholder="focus" value="${escapeAttr(draft.focusChar)}" data-draft-choice="${choice.choiceId}" data-field="focusChar" />
-                    <textarea class="note-input" aria-label="新句子配圖要求" placeholder="配圖要求，可留空。例如：山要有三座，角色不要太小。" data-draft-choice="${choice.choiceId}" data-field="imageNotes">${escapeHtml(draft.imageNotes)}</textarea>
-                  </div>
-                  <div class="custom-tools">
-                    <button class="btn secondary" type="button" data-add-custom="${choice.choiceId}">新增這句</button>
-                    <span class="custom-feedback">${escapeHtml(feedback)}</span>
+                  <div class="draft-box">
+                    <h4>輸入新句子</h4>
+                    <div class="custom-grid">
+                      <input aria-label="新句子" placeholder="句子，例如：你有小小的手" value="${escapeAttr(draft.text)}" data-draft-choice="${choice.choiceId}" data-field="text" />
+                      <input aria-label="新句子 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(draft.spokenText)}" data-draft-choice="${choice.choiceId}" data-field="spokenText" />
+                      <input aria-label="新句子 focus" placeholder="focus，可留空" value="${escapeAttr(draft.focusChar)}" data-draft-choice="${choice.choiceId}" data-field="focusChar" />
+                      <textarea class="note-input" aria-label="新句子配圖要求" placeholder="配圖要求，可留空。例如：山要有三座，角色不要太小。" data-draft-choice="${choice.choiceId}" data-field="imageNotes">${escapeHtml(draft.imageNotes)}</textarea>
+                    </div>
+                    <div class="custom-tools">
+                      <button class="btn secondary" type="button" data-add-custom="${choice.choiceId}">新增這句</button>
+                      <span class="custom-feedback">${escapeHtml(feedback)}</span>
+                    </div>
                   </div>
                 </section>
               </article>
@@ -808,7 +858,6 @@
           if (!text) {
             setChoiceFeedback(choiceId, "請先輸入句子。");
             render(model);
-            scrollSelectedChoiceIntoView();
             return;
           }
           const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
@@ -816,13 +865,11 @@
           if (missingChars.length > 0) {
             setChoiceFeedback(choiceId, `這句有未學字：${missingChars.join("、")}。`);
             render(model);
-            scrollSelectedChoiceIntoView();
             return;
           }
           if (focusChar && !hanChars(text).includes(focusChar)) {
             setChoiceFeedback(choiceId, `focus「${focusChar}」沒有出現在句子裡。`);
             render(model);
-            scrollSelectedChoiceIntoView();
             return;
           }
           const rows = state.customRowsByChoice.get(choiceId) || [];
@@ -831,7 +878,18 @@
           state.customDraftsByChoice.set(choiceId, { text: "", spokenText: "", focusChar: "", imageNotes: "" });
           setChoiceFeedback(choiceId, `已新增：「${text}」。`);
           render(currentModel());
-          scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        const editCustomButton = event.target.closest("[data-edit-custom]");
+        if (editCustomButton) {
+          const choiceId = editCustomButton.dataset.editCustom;
+          const index = Number(editCustomButton.dataset.custom);
+          const rows = [...(state.customRowsByChoice.get(choiceId) || [])];
+          if (rows[index]) rows[index] = { ...rows[index], editing: !rows[index].editing };
+          state.customRowsByChoice.set(choiceId, rows);
+          state.selectedChoiceId = choiceId;
+          render(currentModel());
           return;
         }
 
@@ -845,7 +903,6 @@
           state.selectedChoiceId = choiceId;
           setChoiceFeedback(choiceId, removed?.text ? `已移除：「${removed.text}」。` : "已移除一句。");
           render(currentModel());
-          scrollSelectedChoiceIntoView();
           return;
         }
 
@@ -909,8 +966,7 @@
           else set.delete(index);
           state.selectedIndexes.set(choiceId, set);
           state.selectedChoiceId = choiceId;
-          render(currentModel());
-          scrollSelectedChoiceIntoView();
+          updateOutput(currentModel());
         }
       });
 
