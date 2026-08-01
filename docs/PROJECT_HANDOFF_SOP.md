@@ -208,6 +208,7 @@ For L001-L010, use picture-supported sentence practice:
   - show a reward prompt
   - the red button claims rewards
   - coins and stars animate long enough to feel rewarding
+  - do not mark the lesson completed or write the reward until the claim animation finishes, otherwise the reward animation may disappear immediately
   - after reward, offer:
     - red button: next lesson
     - white button: back to course entrance

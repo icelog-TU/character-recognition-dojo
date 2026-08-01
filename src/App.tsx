@@ -1866,9 +1866,9 @@ function LessonPanel({
     if (!lessonReady || rewardState === "claiming" || rewardState === "claimed") return;
     setRewardState("claiming");
     playRewardChime();
-    onReward(lessonReward);
     void speakForTarget(usesSentenceGames ? "stage4" : "stage3", GUIDE_TEXT.rewardWon);
     await waitMs(3600);
+    onReward(lessonReward);
     setRewardState("claimed");
   }
 
