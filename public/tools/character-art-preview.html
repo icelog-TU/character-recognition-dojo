@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>角色圖片預覽｜認字練功房</title>
+    <style>
+      :root {
+        color: #3b2d22;
+        background: #fff6dd;
+        font-family:
+          "Noto Sans TC",
+          "Microsoft JhengHei",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(180deg, rgba(255, 246, 221, 0.94), rgba(255, 250, 235, 0.98)),
+          #fff6dd;
+      }
+
+      main {
+        width: min(100%, 1120px);
+        margin: 0 auto;
+        padding: 22px clamp(14px, 3vw, 28px) 40px;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0;
+        color: #9d3e28;
+        font-size: clamp(1.7rem, 5vw, 2.5rem);
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+        color: #705746;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        margin: 18px 0;
+      }
+
+      .pill {
+        border: 1px solid #f0c98b;
+        border-radius: 999px;
+        background: #fff;
+        color: #775035;
+        padding: 8px 12px;
+        font-weight: 800;
+      }
+
+      .preview-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+        gap: 18px;
+        align-items: start;
+      }
+
+      .character-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .character-card,
+      .detail-panel {
+        border: 1px solid #f0cf9b;
+        border-radius: 8px;
+        background: #fffaf0;
+        box-shadow: 0 10px 24px rgba(93, 64, 37, 0.1);
+      }
+
+      .character-card {
+        display: grid;
+        gap: 8px;
+        padding: 10px;
+        color: inherit;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .character-card.active {
+        outline: 3px solid #df5b41;
+      }
+
+      .character-card img,
+      .detail-panel img {
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+        background: #fbefd0;
+      }
+
+      .character-card strong {
+        color: #5f3925;
+        font-size: 1rem;
+      }
+
+      .character-card small {
+        color: #8a6a53;
+        font-weight: 700;
+      }
+
+      .detail-panel {
+        position: sticky;
+        top: 14px;
+        padding: 14px;
+      }
+
+      .detail-panel h2 {
+        margin: 12px 0 4px;
+        color: #9d3e28;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+      }
+
+      .detail-panel dl {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 8px 10px;
+        margin: 14px 0 0;
+        color: #705746;
+      }
+
+      .detail-panel dt {
+        font-weight: 900;
+      }
+
+      .detail-panel dd {
+        margin: 0;
+      }
+
+      @media (max-width: 780px) {
+        .preview-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .detail-panel {
+          position: static;
+          order: -1;
+        }
+      }
+
+      @media (max-width: 520px) {
+        main {
+          padding-inline: 10px;
+        }
+
+        .character-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 10px;
+        }
+
+        .character-card {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>貓家族角色圖片預覽</h1>
+        <p>這裡是美術審核用頁面，不會改變正式 app 的轉蛋、金幣、星星或收藏進度。</p>
+      </header>
+
+      <div class="toolbar" aria-label="預覽資訊">
+        <span class="pill">地上的生物</span>
+        <span class="pill">貓家族</span>
+        <span class="pill">9 個角色</span>
+      </div>
+
+      <section class="preview-layout">
+        <div class="character-grid" id="characterGrid" aria-label="貓家族角色列表"></div>
+        <aside class="detail-panel" aria-live="polite">
+          <img id="detailImage" alt="" />
+          <h2 id="detailTitle"></h2>
+          <p id="detailDescription"></p>
+          <dl>
+            <dt>物種</dt>
+            <dd>貓</dd>
+            <dt>用途</dt>
+            <dd>角色收藏、轉蛋結果、角色個人頁</dd>
+            <dt>狀態</dt>
+            <dd>第一批通過風格測試的 prototype 資產</dd>
+          </dl>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const pageBase = window.location.pathname.includes("/character-recognition-dojo/")
+        ? "/character-recognition-dojo/"
+        : "/";
+      const basePath = `${pageBase}assets/characters/land/cat/`;
+      const characters = [
+        ["cat-grandpa.webp", "貓爺爺", "溫和的貓爺爺，有圍巾、背心和小拐杖。"],
+        ["cat-grandma.webp", "貓奶奶", "溫柔的貓奶奶，有小眼鏡和披肩。"],
+        ["cat-father.webp", "貓爸爸", "穩重的貓爸爸，穿藍色襯衫。"],
+        ["cat-mother.webp", "貓媽媽", "親切的貓媽媽，有圍裙和柔和外套。"],
+        ["cat-older-brother.webp", "貓哥哥", "活潑的貓哥哥，有帽子和背包。"],
+        ["cat-older-sister.webp", "貓姐姐", "開朗的貓姐姐，有蝴蝶結和小包包。"],
+        ["cat-younger-brother.webp", "貓弟弟", "小小的貓弟弟，穿吊帶褲，拿著玩具。"],
+        ["cat-younger-sister.webp", "貓妹妹", "可愛的貓妹妹，穿粉色裙子。"],
+        ["cat-baby.webp", "貓寶寶", "最小的貓寶寶，坐著穿小圍兜。"],
+      ];
+
+      const grid = document.querySelector("#characterGrid");
+      const detailImage = document.querySelector("#detailImage");
+      const detailTitle = document.querySelector("#detailTitle");
+      const detailDescription = document.querySelector("#detailDescription");
+
+      function selectCharacter(index) {
+        const [fileName, title, description] = characters[index];
+        detailImage.src = `${basePath}${fileName}`;
+        detailTitle.textContent = title;
+        detailDescription.textContent = description;
+        document.querySelectorAll(".character-card").forEach((button, buttonIndex) => {
+          button.classList.toggle("active", buttonIndex === index);
+        });
+      }
+
+      characters.forEach(([fileName, title, description], index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "character-card";
+        button.addEventListener("click", () => selectCharacter(index));
+
+        const image = document.createElement("img");
+        image.src = `${basePath}${fileName}`;
+        image.alt = "";
+
+        const name = document.createElement("strong");
+        name.textContent = title;
+
+        const note = document.createElement("small");
+        note.textContent = description;
+
+        button.append(image, name, note);
+        grid.append(button);
+      });
+
+      selectCharacter(0);
+    </script>
+  </body>
+</html>
