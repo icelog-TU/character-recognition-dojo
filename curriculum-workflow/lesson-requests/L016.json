@@ -1,0 +1,91 @@
+{
+  "order": 16,
+  "newChars": [
+    "很"
+  ],
+  "zhuyin": {
+    "很": "ㄏㄣˇ"
+  },
+  "title": "很",
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很"
+    ],
+    "preferReviewChars": [
+      "你",
+      "水",
+      "在",
+      "高",
+      "山",
+      "上",
+      "下",
+      "大",
+      "小",
+      "手",
+      "我",
+      "有"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "水",
+      "在",
+      "高"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "Teacher-directed lesson. New character: 很. Approved sentences: 在高山上有很大的水; 有一個很高的人在水下; 大人的手很大; 你我二人的手很小; 有三個很高的人在山上. Use only learned characters plus 很. Production normalization: spokenText includes every displayed Han character. Generate reviewed image prompts, AI sentence audio, production AI charTimings, and all five Stage 4 game types.",
+  "approvedSentences": [
+    {
+      "text": "在高山上有很大的水",
+      "spokenText": "在高山上有很大的水",
+      "focusChar": "很",
+      "reason": "Introduces 很 in a concrete high-mountain water scene."
+    },
+    {
+      "text": "有一個很高的人在水下",
+      "spokenText": "有一個很高的人在水下",
+      "focusChar": "很",
+      "reason": "Pairs 很 with 高 while reviewing one person, water, and 下."
+    },
+    {
+      "text": "大人的手很大",
+      "spokenText": "大人的手很大",
+      "focusChar": "很",
+      "reason": "Uses 很 with 大 in a simple body-part sentence."
+    },
+    {
+      "text": "你我二人的手很小",
+      "spokenText": "你我二人的手很小",
+      "focusChar": "很",
+      "reason": "Reviews fixed 你 and 我 characters and contrasts small hands."
+    },
+    {
+      "text": "有三個很高的人在山上",
+      "spokenText": "有三個很高的人在山上",
+      "focusChar": "很",
+      "reason": "Reviews counting, 高, 在, 山, and 上 with the new degree word 很."
+    }
+  ]
+}
