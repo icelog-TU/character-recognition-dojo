@@ -153,6 +153,19 @@
       .choice-card.selected {
         border-color: var(--primary);
         box-shadow: 0 0 0 5px rgba(25, 121, 111, 0.12), 0 12px 28px rgba(25, 121, 111, 0.14);
+        scroll-margin-top: 116px;
+      }
+
+      .choice-card.selected::before {
+        content: "目前正在編輯這個候選字";
+        display: inline-flex;
+        margin-bottom: 10px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: var(--primary);
+        padding: 4px 10px;
+        font-size: 0.88rem;
+        font-weight: 850;
       }
 
       .choice-head {
@@ -258,6 +271,48 @@
         padding: 10px;
       }
 
+      .custom-tools {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .custom-feedback {
+        color: var(--primary);
+        font-weight: 850;
+      }
+
+      .added-list {
+        display: grid;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .added-row {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        padding: 10px;
+      }
+
+      .added-row-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .request-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
       .request-panel {
         margin-top: 16px;
         padding: clamp(14px, 3vw, 20px);
@@ -341,7 +396,8 @@
         <h2>已選 lesson request</h2>
         <p class="help">這裡產生的是給 Codex 建課用的審核後資料。你可以複製，或下載成 JSON。</p>
         <textarea id="requestOutput" spellcheck="false"></textarea>
-        <div class="header-actions" style="justify-content: flex-start; margin-top: 10px">
+        <div class="request-actions">
+          <button class="btn danger" id="submitBtn" type="button">送出給 Codex</button>
           <button class="btn" id="copyBtn" type="button">複製 JSON</button>
           <button class="btn secondary" id="downloadBtn" type="button">下載 JSON</button>
         </div>
@@ -356,6 +412,8 @@
         selectedChoiceId: "",
         selectedIndexes: new Map(),
         customRowsByChoice: new Map(),
+        customDraftsByChoice: new Map(),
+        feedbackByChoice: new Map(),
       };
 
       const $ = (id) => document.getElementById(id);
@@ -451,16 +509,24 @@
       }
 
       function renderChoices(model) {
-        $("choiceList").innerHTML = model.recommendations
+        const originalRanks = new Map(model.recommendations.map((choice, index) => [choice.choiceId, index + 1]));
+        const orderedRecommendations = [...model.recommendations].sort((a, b) => {
+          if (a.choiceId === state.selectedChoiceId) return -1;
+          if (b.choiceId === state.selectedChoiceId) return 1;
+          return (originalRanks.get(a.choiceId) || 0) - (originalRanks.get(b.choiceId) || 0);
+        });
+        $("choiceList").innerHTML = orderedRecommendations
           .map((choice, choiceIndex) => {
             const selected = choice.choiceId === state.selectedChoiceId;
             const customRows = state.customRowsByChoice.get(choice.choiceId) || [];
+            const draft = state.customDraftsByChoice.get(choice.choiceId) || { text: "", spokenText: "", focusChar: "" };
+            const feedback = state.feedbackByChoice.get(choice.choiceId) || "";
             return `
-              <article class="choice-card ${selected ? "selected" : ""}">
+              <article class="choice-card ${selected ? "selected" : ""}" data-choice-card="${choice.choiceId}">
                 <div class="choice-head">
                   <div class="char-badge">${choice.newChars.join("")}</div>
                   <div>
-                    <h2>${choiceIndex + 1}. ${choice.newChars.join("")} ${Object.values(choice.zhuyin).join(" ")}</h2>
+                    <h2>${selected ? "已選" : `${originalRanks.get(choice.choiceId) || choiceIndex + 1}.`} ${choice.newChars.join("")} ${Object.values(choice.zhuyin).join(" ")}</h2>
                     <p>${choice.rationale}</p>
                   </div>
                   <button class="btn ${selected ? "secondary" : ""}" type="button" data-select="${choice.choiceId}">
@@ -489,19 +555,39 @@
                 </div>
                 <section class="custom-section">
                   <h3>新增給「${choice.newChars.join("")}」的句子</h3>
-                  <p class="help">這裡新增的句子只會黏在這個候選字底下。先選這個字，再勾句子或新增句子。</p>
-                  <div>
-                    ${customRows
-                      .map((row, index) => `
-                        <div class="custom-grid">
-                          <input placeholder="句子" value="${escapeAttr(row.text)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="text" />
-                          <input placeholder="spokenText，可留空" value="${escapeAttr(row.spokenText)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="spokenText" />
-                          <input placeholder="focus" value="${escapeAttr(row.focusChar)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="focusChar" />
-                        </div>
-                      `)
-                      .join("")}
+                  <p class="help">先在下面輸入一句，再按「新增這句」。新增後會出現在已新增清單，也會同步進入最下面的 lesson request。</p>
+                  ${
+                    customRows.length
+                      ? `<div class="added-list">
+                          ${customRows
+                            .map(
+                              (row, index) => `
+                                <div class="added-row">
+                                  <div class="added-row-head">
+                                    <span class="pill">已新增第 ${index + 1} 句</span>
+                                    <button class="btn secondary" type="button" data-remove-custom="${choice.choiceId}" data-custom="${index}">移除</button>
+                                  </div>
+                                  <div class="custom-grid">
+                                    <input aria-label="已新增句子" placeholder="句子" value="${escapeAttr(row.text)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="text" />
+                                    <input aria-label="已新增 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(row.spokenText)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="spokenText" />
+                                    <input aria-label="已新增 focus" placeholder="focus" value="${escapeAttr(row.focusChar)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="focusChar" />
+                                  </div>
+                                </div>
+                              `,
+                            )
+                            .join("")}
+                        </div>`
+                      : ""
+                  }
+                  <div class="custom-grid">
+                    <input aria-label="新句子" placeholder="句子，例如：你有小小的手" value="${escapeAttr(draft.text)}" data-draft-choice="${choice.choiceId}" data-field="text" />
+                    <input aria-label="新句子 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(draft.spokenText)}" data-draft-choice="${choice.choiceId}" data-field="spokenText" />
+                    <input aria-label="新句子 focus" placeholder="focus" value="${escapeAttr(draft.focusChar)}" data-draft-choice="${choice.choiceId}" data-field="focusChar" />
                   </div>
-                  <button class="btn secondary" type="button" data-add-custom="${choice.choiceId}" style="margin-top: 10px">幫「${choice.newChars.join("")}」新增一句</button>
+                  <div class="custom-tools">
+                    <button class="btn secondary" type="button" data-add-custom="${choice.choiceId}">新增這句</button>
+                    <span class="custom-feedback">${escapeHtml(feedback)}</span>
+                  </div>
                 </section>
               </article>
             `;
@@ -511,6 +597,20 @@
 
       function selectedChoice() {
         return state.recommendations.find((choice) => choice.choiceId === state.selectedChoiceId);
+      }
+
+      function choiceById(choiceId) {
+        return state.recommendations.find((choice) => choice.choiceId === choiceId);
+      }
+
+      function draftForChoice(choiceId) {
+        const draft = state.customDraftsByChoice.get(choiceId) || { text: "", spokenText: "", focusChar: "" };
+        state.customDraftsByChoice.set(choiceId, draft);
+        return draft;
+      }
+
+      function setChoiceFeedback(choiceId, message) {
+        state.feedbackByChoice.set(choiceId, message);
       }
 
       function selectedSentences() {
@@ -542,6 +642,13 @@
           .replaceAll(">", "&gt;");
       }
 
+      function escapeHtml(value) {
+        return String(value || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+
       function buildRequest(model) {
         const choice = selectedChoice();
         const finalSentences = selectedSentences();
@@ -568,6 +675,40 @@
 
       function updateOutput(model) {
         $("requestOutput").value = buildRequest(model);
+      }
+
+      function scrollSelectedChoiceIntoView() {
+        window.setTimeout(() => {
+          document.querySelector(`[data-choice-card="${state.selectedChoiceId}"]`)?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 0);
+      }
+
+      function requestReadinessError() {
+        if (!selectedChoice()) return "請先選一個候選字。";
+        if (selectedSentences().length === 0) return "請至少勾選或新增一句。";
+        return "";
+      }
+
+      function codexMessage(model) {
+        return [
+          "請依照下面 lesson request 幫我核對並製作第 12 課。",
+          "",
+          "```json",
+          buildRequest(model),
+          "```",
+        ].join("\n");
+      }
+
+      async function copyText(text) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } catch {
+          return false;
+        }
       }
 
       function render(model) {
@@ -602,23 +743,96 @@
             state.selectedIndexes.set(state.selectedChoiceId, new Set([0, 1, 2, 3].filter((index) => choice?.sentenceCandidates[index])));
           }
           render(currentModel());
+          $("statusLine").textContent = "已選這個字，候選卡已移到上方。";
+          scrollSelectedChoiceIntoView();
           return;
         }
 
         const addCustomButton = event.target.closest("[data-add-custom]");
         if (addCustomButton) {
           const choiceId = addCustomButton.dataset.addCustom;
+          const choice = choiceById(choiceId);
+          const model = currentModel();
+          const draft = draftForChoice(choiceId);
+          const text = draft.text.trim();
+          const spokenText = (draft.spokenText.trim() || text).replace(/[，。！？、,.!?]/g, "");
+          const focusChar = draft.focusChar.trim() || choice?.newChars[0] || "";
+          if (!choice) return;
+          state.selectedChoiceId = choiceId;
+          if (!text) {
+            setChoiceFeedback(choiceId, "請先輸入句子。");
+            render(model);
+            scrollSelectedChoiceIntoView();
+            return;
+          }
+          const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
+          const missingChars = forbiddenChars({ text }, allowedChars);
+          if (missingChars.length > 0) {
+            setChoiceFeedback(choiceId, `這句有未學字：${missingChars.join("、")}。`);
+            render(model);
+            scrollSelectedChoiceIntoView();
+            return;
+          }
+          if (focusChar && !hanChars(text).includes(focusChar)) {
+            setChoiceFeedback(choiceId, `focus「${focusChar}」沒有出現在句子裡。`);
+            render(model);
+            scrollSelectedChoiceIntoView();
+            return;
+          }
           const rows = state.customRowsByChoice.get(choiceId) || [];
-          rows.push({ text: "", spokenText: "", focusChar: "" });
+          rows.push({ text, spokenText, focusChar });
+          state.customRowsByChoice.set(choiceId, rows);
+          state.customDraftsByChoice.set(choiceId, { text: "", spokenText: "", focusChar: "" });
+          setChoiceFeedback(choiceId, `已新增：「${text}」。`);
+          render(currentModel());
+          scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        const removeCustomButton = event.target.closest("[data-remove-custom]");
+        if (removeCustomButton) {
+          const choiceId = removeCustomButton.dataset.removeCustom;
+          const index = Number(removeCustomButton.dataset.custom);
+          const rows = [...(state.customRowsByChoice.get(choiceId) || [])];
+          const removed = rows.splice(index, 1)[0];
           state.customRowsByChoice.set(choiceId, rows);
           state.selectedChoiceId = choiceId;
+          setChoiceFeedback(choiceId, removed?.text ? `已移除：「${removed.text}」。` : "已移除一句。");
           render(currentModel());
+          scrollSelectedChoiceIntoView();
           return;
         }
 
         if (event.target.id === "copyBtn") {
-          await navigator.clipboard.writeText($("requestOutput").value);
-          $("statusLine").textContent = "已複製 JSON。";
+          const error = requestReadinessError();
+          if (error) {
+            $("statusLine").textContent = error;
+            return;
+          }
+          const copied = await copyText($("requestOutput").value);
+          $("statusLine").textContent = copied ? "已複製 JSON，請貼到 Codex 對話。" : "瀏覽器沒有允許剪貼簿。請長按文字框，手動全選複製。";
+          return;
+        }
+
+        if (event.target.id === "submitBtn") {
+          const model = currentModel();
+          const error = requestReadinessError();
+          if (error) {
+            $("statusLine").textContent = error;
+            return;
+          }
+          const message = codexMessage(model);
+          const copied = await copyText(message);
+          if (navigator.share) {
+            try {
+              await navigator.share({ title: `${model.lessonId} lesson request`, text: message });
+              $("statusLine").textContent = copied ? "已叫出分享面板，也已複製內容。請分享到 Codex 或貼回對話。" : "已叫出分享面板。若分享目標沒有 Codex，請手動複製下方文字框內容。";
+              return;
+            } catch {
+              // The share panel can be canceled; the clipboard copy above is still useful.
+            }
+          }
+          $("statusLine").textContent = copied ? "已複製可貼給 Codex 的完整內容。請回到 Codex 對話貼上。" : "瀏覽器沒有允許自動複製。請長按下方文字框，手動全選複製後貼回 Codex。";
           return;
         }
 
@@ -648,7 +862,9 @@
           if (event.target.checked) set.add(index);
           else set.delete(index);
           state.selectedIndexes.set(choiceId, set);
-          updateOutput(currentModel());
+          state.selectedChoiceId = choiceId;
+          render(currentModel());
+          scrollSelectedChoiceIntoView();
         }
       });
 
@@ -661,6 +877,17 @@
           if (!rows[index]) rows[index] = { text: "", spokenText: "", focusChar: "" };
           rows[index][field] = event.target.value;
           state.customRowsByChoice.set(choiceId, rows);
+          state.selectedChoiceId = choiceId;
+          updateOutput(currentModel());
+        }
+        if (event.target.matches("[data-draft-choice][data-field]")) {
+          const choiceId = event.target.dataset.draftChoice;
+          const field = event.target.dataset.field;
+          const draft = draftForChoice(choiceId);
+          draft[field] = event.target.value;
+          state.customDraftsByChoice.set(choiceId, draft);
+          state.selectedChoiceId = choiceId;
+          setChoiceFeedback(choiceId, "");
           updateOutput(currentModel());
         }
       });
