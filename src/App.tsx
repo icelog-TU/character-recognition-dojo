@@ -875,7 +875,7 @@ function App() {
   }
 
   return (
-    <div className="app-root">
+    <div className={`app-root${page === "practice" && lessonOpen ? " lesson-mode" : ""}`}>
       <AppHeader
         coins={coins}
         stars={stars}
@@ -901,13 +901,11 @@ function App() {
           />
         )}
         {page === "practice" && lessonOpen && (
-          <div className="practice-layout">
+          <div className="practice-layout lesson-practice-layout">
             <PracticeNavigator
               lessons={curriculum.lessons}
               selectedOrder={selectedLesson.order}
               completedOrders={completedOrders}
-              nextOrder={nextOrder}
-              onSelect={openLesson}
             />
             <LessonPanel
               key={selectedLesson.id}
@@ -1165,36 +1163,27 @@ function PracticeNavigator({
   lessons,
   selectedOrder,
   completedOrders,
-  nextOrder,
-  onSelect,
 }: {
   lessons: Lesson[];
   selectedOrder: number;
   completedOrders: Set<number>;
-  nextOrder: number;
-  onSelect: (order: number) => void;
 }) {
-  const nearbyEntries = lessons
-    .filter((lesson) => lesson.order <= selectedOrder && lesson.order <= nextOrder)
-    .slice(-6)
-    .flatMap(lessonCharEntries)
-    .slice(-12);
+  const currentEntries = lessons.filter((lesson) => lesson.order === selectedOrder).flatMap(lessonCharEntries).slice(0, 3);
 
   return (
     <aside className="side-panel">
       <div className="nav-heading">
-        <h2>最近課程</h2>
-        <span className="mini-label">已解鎖</span>
+        <h2>現在這課</h2>
+        <span className="mini-label">練習中</span>
       </div>
-      <div className="nearby-row" aria-label="最近可回看的課程">
-        {nearbyEntries.map((entry) => (
+      <div className="nearby-row current-lesson-row" aria-label="目前練習課程">
+        {currentEntries.map((entry) => (
           <LessonJumpButton
             key={`${entry.lesson.id}-${entry.char}-${entry.index}`}
             entry={entry}
             selected={entry.lesson.order === selectedOrder}
             locked={false}
             completed={completedOrders.has(entry.lesson.order)}
-            onSelect={onSelect}
           />
         ))}
       </div>
@@ -1207,25 +1196,24 @@ function LessonJumpButton({
   selected,
   locked,
   completed,
-  onSelect,
 }: {
   entry: LessonCharEntry;
   selected: boolean;
   locked: boolean;
   completed: boolean;
-  onSelect: (order: number) => void;
 }) {
   const { lesson, char } = entry;
   return (
-    <button
-      className={`lesson-chip${selected ? " active" : ""}${completed ? " completed" : ""}`}
-      disabled={locked}
-      onClick={() => onSelect(lesson.order)}
+    <div
+      className={`lesson-chip lesson-chip-readonly${selected ? " active" : ""}${completed ? " completed" : ""}${
+        locked ? " locked-chip" : ""
+      }`}
+      aria-current={selected ? "true" : undefined}
       aria-label={`第 ${lesson.order} 課 ${char}`}
     >
       <span>第 {lesson.order} 課</span>
       <strong>{char}</strong>
-    </button>
+    </div>
   );
 }
 
@@ -1982,6 +1970,7 @@ function LessonPanel({
   const advanceRunRef = useRef(0);
   const speechRunRef = useRef(0);
   const hearRunRef = useRef(0);
+  const panelRef = useRef<HTMLElement | null>(null);
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
@@ -2005,6 +1994,10 @@ function LessonPanel({
   useEffect(() => {
     if (!locked) void speakForTarget("stage1", `${lessonIntro} ${hearPrompt}`);
   }, [lesson.id, lessonIntro, hearPrompt, locked]);
+
+  useEffect(() => {
+    panelRef.current?.scrollIntoView({ block: "start" });
+  }, [lesson.id, activeStage]);
 
   useEffect(() => {
     if (soundUnlocked && activeStage === 1) void speakForTarget("advance2", GUIDE_TEXT.toStageTwo);
@@ -2119,7 +2112,7 @@ function LessonPanel({
   }
 
   return (
-    <section className="lesson-panel" aria-labelledby="lesson-title">
+    <section ref={panelRef} className="lesson-panel" aria-labelledby="lesson-title">
       <div className="top-bar">
         <span className="pill">第 {lesson.order} 課</span>
         <span className="pill">{completed ? "已進入複習池" : locked ? "尚未解鎖" : "練功中"}</span>
@@ -2141,7 +2134,14 @@ function LessonPanel({
         {lessonIntro}
       </NarrationLine>
 
-      <LessonBlock index={1} title="聽聽看" done={soundUnlocked} locked={locked} active={activeBlock(1)}>
+      <LessonBlock
+        index={1}
+        title="聽聽看"
+        done={soundUnlocked}
+        locked={locked}
+        active={activeBlock(1)}
+        visible={activeStage === 1}
+      >
         <div className="target-grid">
           {newChars.map((char) => (
             <button
@@ -2194,6 +2194,7 @@ function LessonPanel({
         done={findUnlocked}
         locked={locked || activeStage < 2}
         active={activeBlock(2)}
+        visible={activeStage === 2}
       >
         {activeStage >= 2 ? (
           <FindManyChallenge
@@ -2229,6 +2230,7 @@ function LessonPanel({
         done={pictureDone}
         locked={locked || activeStage < 3}
         active={activeBlock(3)}
+        visible={activeStage === 3}
       >
         {activeStage < 3 ? (
           <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
@@ -2265,6 +2267,7 @@ function LessonPanel({
           done={gamesDone}
           locked={locked || activeStage < 4}
           active={activeBlock(4)}
+          visible={activeStage === 4}
         >
           {activeStage < 4 ? (
             <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
@@ -2343,6 +2346,7 @@ function LessonBlock({
   done,
   locked,
   active = false,
+  visible = true,
   children,
 }: {
   index: number;
@@ -2350,8 +2354,21 @@ function LessonBlock({
   done: boolean;
   locked: boolean;
   active?: boolean;
+  visible?: boolean;
   children: ReactNode;
 }) {
+  if (!visible) {
+    return (
+      <section className={`lesson-block lesson-block-summary${done ? " done-block" : ""}${locked ? " locked-block" : ""}`}>
+        <div className="block-heading">
+          <span className="lesson-number">{index}</span>
+          <h3>{title}</h3>
+          <span className="pill">{done ? "通關" : locked ? "等待" : "進行中"}</span>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className={`lesson-block${locked ? " locked-block" : ""}${active ? " active-block" : ""}`}>
       <div className="block-heading">
