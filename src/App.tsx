@@ -313,6 +313,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "sea-crab-youngerBrother": "/assets/characters/sea/crab/crab-younger-brother.webp",
   "sea-crab-youngerSister": "/assets/characters/sea/crab/crab-younger-sister.webp",
   "sea-crab-baby": "/assets/characters/sea/crab/crab-baby.webp",
+  "sea-shrimp-grandpa": "/assets/characters/sea/shrimp/shrimp-grandpa.webp",
+  "sea-shrimp-grandma": "/assets/characters/sea/shrimp/shrimp-grandma.webp",
+  "sea-shrimp-dad": "/assets/characters/sea/shrimp/shrimp-father.webp",
+  "sea-shrimp-mom": "/assets/characters/sea/shrimp/shrimp-mother.webp",
+  "sea-shrimp-olderBrother": "/assets/characters/sea/shrimp/shrimp-older-brother.webp",
+  "sea-shrimp-olderSister": "/assets/characters/sea/shrimp/shrimp-older-sister.webp",
+  "sea-shrimp-youngerBrother": "/assets/characters/sea/shrimp/shrimp-younger-brother.webp",
+  "sea-shrimp-youngerSister": "/assets/characters/sea/shrimp/shrimp-younger-sister.webp",
+  "sea-shrimp-baby": "/assets/characters/sea/shrimp/shrimp-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
