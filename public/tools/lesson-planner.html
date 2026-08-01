@@ -262,6 +262,7 @@
       }
 
       .custom-grid input,
+      .note-input,
       textarea {
         width: 100%;
         border: 1px solid var(--line);
@@ -269,6 +270,17 @@
         background: #fff;
         color: var(--ink);
         padding: 10px;
+      }
+
+      .note-input {
+        min-height: 64px;
+        resize: vertical;
+        font-family: inherit;
+        font-size: 1rem;
+      }
+
+      .custom-grid .note-input {
+        grid-column: 1 / -1;
       }
 
       .custom-tools {
@@ -411,6 +423,7 @@
         recommendations: [],
         selectedChoiceId: "",
         selectedIndexes: new Map(),
+        imageNotesBySentence: new Map(),
         customRowsByChoice: new Map(),
         customDraftsByChoice: new Map(),
         feedbackByChoice: new Map(),
@@ -519,7 +532,7 @@
           .map((choice, choiceIndex) => {
             const selected = choice.choiceId === state.selectedChoiceId;
             const customRows = state.customRowsByChoice.get(choice.choiceId) || [];
-            const draft = state.customDraftsByChoice.get(choice.choiceId) || { text: "", spokenText: "", focusChar: "" };
+            const draft = state.customDraftsByChoice.get(choice.choiceId) || { text: "", spokenText: "", focusChar: "", imageNotes: "" };
             const feedback = state.feedbackByChoice.get(choice.choiceId) || "";
             return `
               <article class="choice-card ${selected ? "selected" : ""}" data-choice-card="${choice.choiceId}">
@@ -537,6 +550,7 @@
                   ${choice.sentenceCandidates
                     .map((sentence, sentenceIndex) => {
                       const checked = state.selectedIndexes.get(choice.choiceId)?.has(sentenceIndex) || false;
+                      const imageNotes = state.imageNotesBySentence.get(sentenceKey(choice.choiceId, sentenceIndex)) || "";
                       return `
                         <label class="sentence-row">
                           <input type="checkbox" data-choice="${choice.choiceId}" data-index="${sentenceIndex}" ${checked ? "checked" : ""} />
@@ -547,6 +561,7 @@
                               <span class="pill">focus: ${sentence.focusChar}</span>
                             </div>
                             <p>${sentence.reason}</p>
+                            <textarea class="note-input" aria-label="候選句配圖要求" placeholder="配圖要求，可留空。例如：畫面要清楚看出二大一小，不要有文字。" data-image-note-choice="${choice.choiceId}" data-index="${sentenceIndex}">${escapeHtml(imageNotes)}</textarea>
                           </div>
                         </label>
                       `;
@@ -571,6 +586,7 @@
                                     <input aria-label="已新增句子" placeholder="句子" value="${escapeAttr(row.text)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="text" />
                                     <input aria-label="已新增 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(row.spokenText)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="spokenText" />
                                     <input aria-label="已新增 focus" placeholder="focus" value="${escapeAttr(row.focusChar)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="focusChar" />
+                                    <textarea class="note-input" aria-label="已新增配圖要求" placeholder="配圖要求，可留空" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="imageNotes">${escapeHtml(row.imageNotes)}</textarea>
                                   </div>
                                 </div>
                               `,
@@ -583,6 +599,7 @@
                     <input aria-label="新句子" placeholder="句子，例如：你有小小的手" value="${escapeAttr(draft.text)}" data-draft-choice="${choice.choiceId}" data-field="text" />
                     <input aria-label="新句子 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(draft.spokenText)}" data-draft-choice="${choice.choiceId}" data-field="spokenText" />
                     <input aria-label="新句子 focus" placeholder="focus" value="${escapeAttr(draft.focusChar)}" data-draft-choice="${choice.choiceId}" data-field="focusChar" />
+                    <textarea class="note-input" aria-label="新句子配圖要求" placeholder="配圖要求，可留空。例如：山要有三座，角色不要太小。" data-draft-choice="${choice.choiceId}" data-field="imageNotes">${escapeHtml(draft.imageNotes)}</textarea>
                   </div>
                   <div class="custom-tools">
                     <button class="btn secondary" type="button" data-add-custom="${choice.choiceId}">新增這句</button>
@@ -604,7 +621,7 @@
       }
 
       function draftForChoice(choiceId) {
-        const draft = state.customDraftsByChoice.get(choiceId) || { text: "", spokenText: "", focusChar: "" };
+        const draft = state.customDraftsByChoice.get(choiceId) || { text: "", spokenText: "", focusChar: "", imageNotes: "" };
         state.customDraftsByChoice.set(choiceId, draft);
         return draft;
       }
@@ -613,24 +630,46 @@
         state.feedbackByChoice.set(choiceId, message);
       }
 
+      function sentenceKey(choiceId, sentenceIndex) {
+        return `${choiceId}:${sentenceIndex}`;
+      }
+
       function resolveFocusChar(text, requestedFocusChar, choice) {
         const chars = hanChars(text);
         if (requestedFocusChar.trim()) return requestedFocusChar.trim();
         return choice.newChars.find((char) => chars.includes(char)) || chars[0] || "";
       }
 
+      function withOptionalImageNotes(sentence, imageNotes) {
+        const notes = String(imageNotes || "").trim();
+        return notes ? { ...sentence, imageNotes: notes } : sentence;
+      }
+
       function selectedSentences() {
         const choice = selectedChoice();
         if (!choice) return [];
         const indexes = [...(state.selectedIndexes.get(choice.choiceId) || new Set())].sort((a, b) => a - b);
-        const selected = indexes.map((index) => choice.sentenceCandidates[index]).filter(Boolean);
+        const selected = indexes
+          .map((index) => {
+            const sentence = choice.sentenceCandidates[index];
+            if (!sentence) return null;
+            return withOptionalImageNotes(sentence, state.imageNotesBySentence.get(sentenceKey(choice.choiceId, index)));
+          })
+          .filter(Boolean);
         const customRows = state.customRowsByChoice.get(choice.choiceId) || [];
-        const custom = customRows.filter((row) => row.text.trim()).map((row) => ({
-          text: row.text.trim(),
-          spokenText: (row.spokenText.trim() || row.text.trim()).replace(/[，。！？、,.!?]/g, ""),
-          focusChar: resolveFocusChar(row.text.trim(), row.focusChar, choice),
-          reason: "Teacher-added sentence.",
-        }));
+        const custom = customRows
+          .filter((row) => row.text.trim())
+          .map((row) =>
+            withOptionalImageNotes(
+              {
+                text: row.text.trim(),
+                spokenText: (row.spokenText.trim() || row.text.trim()).replace(/[，。！？、,.!?]/g, ""),
+                focusChar: resolveFocusChar(row.text.trim(), row.focusChar, choice),
+                reason: "Teacher-added sentence.",
+              },
+              row.imageNotes,
+            ),
+          );
         const seen = new Set();
         return [...selected, ...custom].filter((sentence) => {
           const key = `${sentence.text}\n${sentence.spokenText}`;
@@ -670,6 +709,7 @@
               "Generated from the web next-lesson planner.",
               `Selected choice: ${choice.choiceId}.`,
               `Approved sentences: ${finalSentences.map((sentence) => sentence.text).join("; ")}.`,
+              "Use each sentence's imageNotes as teacher guidance when writing imagePrompt.",
               "Use only learned characters plus the new character(s). Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval.",
             ].join(" "),
             approvedSentences: finalSentences,
@@ -786,9 +826,9 @@
             return;
           }
           const rows = state.customRowsByChoice.get(choiceId) || [];
-          rows.push({ text, spokenText, focusChar });
+          rows.push({ text, spokenText, focusChar, imageNotes: draft.imageNotes.trim() });
           state.customRowsByChoice.set(choiceId, rows);
-          state.customDraftsByChoice.set(choiceId, { text: "", spokenText: "", focusChar: "" });
+          state.customDraftsByChoice.set(choiceId, { text: "", spokenText: "", focusChar: "", imageNotes: "" });
           setChoiceFeedback(choiceId, `已新增：「${text}」。`);
           render(currentModel());
           scrollSelectedChoiceIntoView();
@@ -880,7 +920,7 @@
           const index = Number(event.target.dataset.custom);
           const field = event.target.dataset.field;
           const rows = state.customRowsByChoice.get(choiceId) || [];
-          if (!rows[index]) rows[index] = { text: "", spokenText: "", focusChar: "" };
+          if (!rows[index]) rows[index] = { text: "", spokenText: "", focusChar: "", imageNotes: "" };
           rows[index][field] = event.target.value;
           state.customRowsByChoice.set(choiceId, rows);
           state.selectedChoiceId = choiceId;
@@ -894,6 +934,13 @@
           state.customDraftsByChoice.set(choiceId, draft);
           state.selectedChoiceId = choiceId;
           setChoiceFeedback(choiceId, "");
+          updateOutput(currentModel());
+        }
+        if (event.target.matches("[data-image-note-choice][data-index]")) {
+          const choiceId = event.target.dataset.imageNoteChoice;
+          const index = Number(event.target.dataset.index);
+          state.imageNotesBySentence.set(sentenceKey(choiceId, index), event.target.value);
+          state.selectedChoiceId = choiceId;
           updateOutput(currentModel());
         }
       });
