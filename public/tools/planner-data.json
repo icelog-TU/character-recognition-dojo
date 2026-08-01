@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-01T11:32:05.037Z",
+  "exportedAt": "2026-08-01T11:50:05.272Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -5911,6 +5911,439 @@
               "text": "你和我在水",
               "correct": false,
               "audioSrc": "/assets/lessons/L018/audio/L018-G05-wrong2.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L019",
+      "order": 19,
+      "newChars": [
+        "隻"
+      ],
+      "zhuyin": {
+        "隻": "ㄓ"
+      },
+      "charAudio": {
+        "隻": "/assets/lessons/L019/audio/char-u96bb.m4a"
+      },
+      "title": "隻",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "量詞，用在一隻手、一隻動物等可數名詞；本課先用具體可見的手來練習。"
+      },
+      "sentences": [
+        {
+          "id": "L019-S01",
+          "text": "一隻很大的手在水下",
+          "displayLines": [
+            "一隻很大的",
+            "手在水下"
+          ],
+          "spokenText": "一隻很大的手在水下",
+          "focusChar": "隻",
+          "imagePrompt": "A warm child-friendly picture-book watercolor illustration showing exactly one very large friendly human hand under clear shallow blue water. The hand is open and relaxed, visible through water ripples, anatomically plausible, and not scary. If the palm faces upward, the thumb is on the outside edge, not pointing inward. Exactly one hand, no extra hands, no people, no faces, no animals, no text, no letters, no numbers, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L019/images/L019-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L019/audio/L019-S01.m4a",
+            "durationMs": 4083,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1320,
+                "endMs": 1470
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1470,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1620,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2020,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2640,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3120,
+                "endMs": 3380
+              }
+            ]
+          }
+        },
+        {
+          "id": "L019-S02",
+          "text": "一隻大手和一隻小手",
+          "displayLines": [
+            "一隻大手和",
+            "一隻小手"
+          ],
+          "spokenText": "一隻大手和一隻小手",
+          "focusChar": "隻",
+          "imagePrompt": "Reuse approved L018-S03 image. It clearly shows exactly one very large hand and exactly one very small hand together, matching the sentence about one big hand and one small hand. The thumb direction is anatomically plausible. Do not regenerate unless replacement is requested.",
+          "imageSrc": "/assets/lessons/L018/images/L018-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L019/audio/L019-S02.m4a",
+            "durationMs": 4439,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2280,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2600,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2920,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3360,
+                "endMs": 3620
+              }
+            ]
+          }
+        },
+        {
+          "id": "L019-S03",
+          "text": "很高的人和很高的家",
+          "displayLines": [
+            "很高的人和",
+            "很高的家"
+          ],
+          "spokenText": "很高的人和很高的家",
+          "focusChar": "很",
+          "imagePrompt": "Reuse approved L018-S05 image. It already shows exactly one very tall friendly adult person next to exactly one very tall cozy house, matching this review sentence. Do not regenerate unless replacement is requested.",
+          "imageSrc": "/assets/lessons/L018/images/L018-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L019/audio/L019-S03.m4a",
+            "durationMs": 5352,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 860
+              },
+              {
+                "charIndex": 1,
+                "startMs": 860,
+                "endMs": 940
+              },
+              {
+                "charIndex": 2,
+                "startMs": 940,
+                "endMs": 1250
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1250,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1840,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2780,
+                "endMs": 3540
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3540,
+                "endMs": 3620
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3620,
+                "endMs": 3940
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3940,
+                "endMs": 4160
+              }
+            ]
+          }
+        },
+        {
+          "id": "L019-S04",
+          "text": "有三個小家在一隻手上",
+          "displayLines": [
+            "有三個小家",
+            "在一隻手上"
+          ],
+          "spokenText": "有三個小家在一隻手上",
+          "focusChar": "隻",
+          "imagePrompt": "A warm child-friendly picture-book watercolor close-up showing exactly one open adult hand, palm up, holding exactly three tiny toy houses. The toy houses clearly look like small building-block homes and are all on the palm. The hand is anatomically plausible; because the palm faces upward, the thumb must be on the outside edge, not pointing inward. Exactly one hand, exactly three toy houses, no extra houses, no extra hands, no people, no faces, no text, no letters, no numbers, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L019/images/L019-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L019/audio/L019-S04.m4a",
+            "durationMs": 4339,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1620,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2420,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2940,
+                "endMs": 3280
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3280,
+                "endMs": 3540
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3540,
+                "endMs": 3860
+              }
+            ]
+          }
+        },
+        {
+          "id": "L019-S05",
+          "text": "你和我在家",
+          "displayLines": [
+            "你和我在家"
+          ],
+          "spokenText": "你和我在家",
+          "focusChar": "你",
+          "imagePrompt": "Reuse approved L017-S04 image. It already shows exactly the fixed second-person boy and fixed first-person girl together inside a cozy home, matching this review sentence. Do not regenerate unless replacement is requested.",
+          "imageSrc": "/assets/lessons/L017/images/L017-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L019/audio/L019-S05.m4a",
+            "durationMs": 3899,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 740
+              },
+              {
+                "charIndex": 1,
+                "startMs": 740,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1120,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1600,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2080,
+                "endMs": 2620
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L019-G01",
+          "type": "find-character",
+          "sentenceId": "L019-S01",
+          "targetChar": "隻",
+          "prompt": "找到「隻」。"
+        },
+        {
+          "id": "L019-G02",
+          "type": "teach-character",
+          "sentenceId": "L019-S02",
+          "targetChar": "隻",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L019-G03",
+          "type": "missing-character",
+          "sentenceId": "L019-S04",
+          "targetChar": "隻",
+          "prompt": "字寶寶不見了，把「隻」找回來。",
+          "missingIndexes": [
+            7
+          ],
+          "options": [
+            {
+              "id": "measure",
+              "text": "隻",
+              "correct": true
+            },
+            {
+              "id": "piece",
+              "text": "個",
+              "correct": false
+            },
+            {
+              "id": "and",
+              "text": "和",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L019-G04",
+          "type": "partial-order",
+          "sentenceId": "L019-S02",
+          "targetChar": "隻",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "options": [
+            {
+              "id": "one",
+              "text": "一",
+              "correct": true
+            },
+            {
+              "id": "measure",
+              "text": "隻",
+              "correct": true
+            },
+            {
+              "id": "small",
+              "text": "小",
+              "correct": true
+            },
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L019-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L019-S01",
+          "targetChar": "隻",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "一隻很大的手在水下",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L019/audio/L019-S01.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "一隻很大的手在水上",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L019/audio/L019-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "一隻很小的手在水下",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L019/audio/L019-G05-wrong2.m4a"
             }
           ]
         }

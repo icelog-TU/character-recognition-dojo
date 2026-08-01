@@ -39,8 +39,16 @@ function hanChars(text) {
   return Array.from(text).filter((char) => /\p{Script=Han}/u.test(char));
 }
 
+function normalizeTranscribedHanChar(char) {
+  const map = new Map([
+    ["个", "個"],
+    ["只", "隻"],
+  ]);
+  return map.get(char) ?? char;
+}
+
 function normalizedHanText(text) {
-  return hanChars(text).map((char) => (char === "个" ? "個" : char)).join("");
+  return hanChars(text).map(normalizeTranscribedHanChar).join("");
 }
 
 function assetPath(src) {
