@@ -150,6 +150,7 @@ The collection page also speaks on entry.
 Do not generate hundreds of final character images before the art direction is approved.
 
 Use `docs/CHARACTER_ART_STYLE_SPEC.md` as the source of truth for collection character image style, prompt templates, review steps, and rejection criteria.
+Contact sheets are for style review only; final role assets should be generated one character per image so hands, feet, tails, ears, and accessories are not clipped.
 
 Recommended workflow:
 

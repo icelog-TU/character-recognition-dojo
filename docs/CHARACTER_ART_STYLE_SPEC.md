@@ -50,10 +50,38 @@ Preferred production target:
 - Minimum source size: 1024 x 1024.
 - Final app asset: WebP.
 - Background: pale warm cream or very light simple wash.
-- Subject: full body or nearly full body, centered, occupying about 70-85% of the image height.
-- Leave margin around ears, tail, accessories, and feet so the UI can crop safely.
+- Subject: complete full body, centered, occupying about 68-78% of the image height.
+- Leave visible safe margin around ears, tail, accessories, raised hands, and feet.
+- No body part, accessory, tail, toy, or shadow may touch the image edge.
+- The closest body part should stay at least 10% of the image width away from the left and right edges when possible.
+- The closest body part should stay at least 8% of the image height away from the top and bottom edges when possible.
 
 Do not use transparent background for the first style review. The existing lesson images use softly painted backgrounds, so the first review should check compatibility with that world. Transparent cutouts can be tested later only if UI cards need them.
+
+## Crop Safety Rule
+
+Do not use a 9-character contact sheet as the source for final individual assets.
+
+The contact sheet is useful for checking style, role differences, and family consistency, but it is not reliable for cutting production images. Image generation models do not guarantee exact grid geometry, centered subjects, equal gutters, or clean crop boundaries. Characters may drift toward an edge, overlap an invisible cell boundary, or leave artifacts from neighboring roles.
+
+Final character assets must be generated as one role per image after the contact sheet is approved.
+
+Allowed use of a contact sheet:
+
+- style approval
+- family consistency approval
+- role cue comparison
+- early phone readability review
+
+Not allowed:
+
+- cutting the contact sheet into final role assets
+- accepting a crop where ears, hands, feet, tail, accessory, toy, or clothing is clipped
+- manually patching a bad crop as the normal workflow
+
+Exception:
+
+- A contact-sheet crop may be used only as a temporary internal mockup, and must be labeled as prototype-only. It should not be treated as the standard workflow for future species.
 
 ## Family Role System
 
@@ -118,13 +146,13 @@ Character: {SPECIES}{ROLE}
 Design: the character is a cute {SPECIES} itself, not a human in a costume. It belongs to a 9-member {SPECIES} family.
 Role cue: {ROLE_CUE}
 Style: Warm children's picture-book illustration matching the existing 認字練功房 lesson images: soft watercolor texture, gentle colored pencil linework, rounded cute character shapes, friendly expressive eyes, warm cream background, bright but gentle colors, clear centered full-body subject, generous empty space, phone-readable details.
-Composition: square image, centered full-body character, simple pose, safe margin around ears, tail, hands, and feet.
+Composition: square image, one complete full-body character, centered, occupying about 68-78% of the image height. Keep generous blank warm-cream background around the whole character. Ears, tail, raised hands, paws, feet, clothing, toy, and accessories must all be fully visible and must not touch any image edge. No crop damage.
 Restrictions: No text, letters, numbers, zhuyin, signs, labels, UI, watermark. Not 3D, not plastic toy, not sticker, not flat vector icon, not realistic, not anime, no thick black outline, no cluttered background.
 ```
 
 ### Contact Sheet Prompt Template
 
-Use contact sheets only for review. Do not treat the contact sheet as final app art unless the individual crops are clean enough.
+Use contact sheets only for review. Never treat the contact sheet as final app art.
 
 ```text
 Create a 3x3 review contact sheet of one cute {SPECIES} family for a children's Chinese character recognition app.
@@ -133,6 +161,7 @@ Show these 9 family roles in order: 爺爺, 奶奶, 爸爸, 媽媽, 哥哥, 姐�
 Each character should be a cute {SPECIES} itself, not a human in a costume.
 The family must share the same species design, color family, eye style, muzzle style, and soft watercolor picture-book style.
 Each role must be visually distinguishable by age, size, expression, and one simple accessory.
+Important: this is a review contact sheet only, not a source for cropping final assets. Keep every character fully visible inside its own grid area with generous spacing, but final individual images will be generated separately.
 
 Style: Warm children's picture-book illustration matching the existing 認字練功房 lesson images: soft watercolor texture, gentle colored pencil linework, rounded cute character shapes, friendly expressive eyes, warm cream background, bright but gentle colors, clear centered full-body subjects, generous empty space, phone-readable details.
 Restrictions: No text, letters, numbers, zhuyin, signs, labels, UI, watermark. Not 3D, not plastic toy, not sticker, not flat vector icon, not realistic, not anime, no thick black outline, no cluttered background.
@@ -180,6 +209,17 @@ Review on a phone:
 
 Only after the contact sheet is approved, generate final individual images for the 9 `貓` roles.
 
+Generate one role per image. Use the approved contact sheet only as a style and family reference, not as a crop source.
+
+Each individual image must pass crop safety:
+
+- complete full body visible
+- character centered
+- ears, paws, raised hands, feet, tail, accessories, and toys fully inside the image
+- no neighboring-character artifacts
+- enough blank warm background for circular avatar cropping and rectangular preview cards
+- readable on the phone preview page
+
 Store final approved assets later under:
 
 ```text
@@ -206,8 +246,29 @@ After the `貓` family is approved in-app on a phone, generate future species in
 
 - 1 to 3 species at a time.
 - Use the same style anchor.
-- Keep a contact sheet for review before individual final images.
+- Keep a contact sheet for style review before individual final images.
+- Generate final assets as separate one-character images.
+- Review final assets on the character-art preview page before wiring them into the app.
 - Stop and revise immediately if the model drifts.
+
+## Phone Review Gate
+
+Before any character image is considered accepted, check it on a phone in the character-art preview page.
+
+Review each role in:
+
+- the large preview panel
+- the small grid card
+- the app's circular avatar display if the image is wired into the app
+
+Reject and regenerate the individual role image if:
+
+- any body part or accessory is clipped
+- the character is visibly off-center
+- the character is too small to read at grid size
+- the character is too large for safe circular avatar cropping
+- a contact-sheet artifact or neighboring role is visible
+- the role cue is unclear at phone size
 
 ## Rejection Criteria
 
@@ -219,6 +280,8 @@ Reject and regenerate if any image:
 - Uses a dark, muddy, or high-contrast palette.
 - Has a busy background that competes with the character.
 - Crops off important ears, tail, feet, or accessories.
+- Places the character so close to an edge that future card or avatar cropping may cut it off.
+- Contains any contact-sheet crop artifact or part of another character.
 - Makes the animal species hard to identify.
 - Makes family roles indistinguishable.
 - Looks scary, sharp, aggressive, or too adult.
@@ -255,6 +318,8 @@ public/assets/characters/land/cat/cat-baby.webp
 
 Production note:
 
-- The approved contact sheet was used for the family style and most prototype assets.
+- The approved contact sheet was used for family style review.
+- Some prototype assets were initially cut from the contact sheet, which exposed crop-safety problems on phone review.
 - `cat-younger-brother.webp` was regenerated as an individual image because the contact-sheet crop had edge artifacts.
-- Future species should use the approved cat family as the style reference, but should still be generated and reviewed in small batches.
+- The contact-sheet-cropping method is retired. Future species must use contact sheets only for review, then generate final assets as separate one-character images.
+- Future species should use the approved cat family as the style reference, generate one role per final image, and review in small batches.
