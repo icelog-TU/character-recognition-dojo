@@ -106,6 +106,39 @@ Images are generated or sourced only after sentence approval.
 - Images must not contain visible text, letters, numbers, zhuyin, labels, signs, or watermarks.
 - If the sentence expresses a count, the image must clearly match the count.
 
+## Image Reuse And Cast Continuity
+
+Image generation is the largest long-term asset cost. A 600-lesson course with 5-6 sentences per lesson may need about 3,000-3,600 sentence pictures, so the production workflow must actively avoid unnecessary regeneration.
+
+Before generating any new sentence image:
+
+1. Check the current lesson and earlier approved lesson assets for a reusable scene.
+2. Check `docs/CURRICULUM_LEDGER.md` for recurring cast descriptions.
+3. Decide whether the sentence needs a new scene, a reused scene, or a reused scene with a highlight/circle/spotlight.
+4. Write the decision into `imagePrompt` or lesson notes before generating assets.
+
+Reuse is preferred when:
+
+- The same people, object, count, and meaning are shown.
+- The later sentence only changes which part of the scene should receive attention.
+- A previous image already clearly represents the sentence.
+- A fixed recurring character appears and an approved visual reference already exists.
+
+Generate a new image only when:
+
+- No existing image shows the required meaning.
+- The count, size contrast, body part, or target object would be inaccurate.
+- A recurring character would look inconsistent if reused.
+- The approved image is unclear on phone/tablet.
+
+Recurring cast rules:
+
+- `我` already has a fixed young-girl design. Future prompts involving `我` must reuse it.
+- When `你`, `他`, `爸爸`, `媽媽`, `哥哥`, `姐姐`, `弟弟`, `妹妹`, or other stable roles are introduced, add their approved visual description to `docs/CURRICULUM_LEDGER.md`.
+- After a role is added to the visual continuity ledger, every future image prompt must reuse that role description.
+- Do not generate unrelated versions of recurring people from lesson to lesson.
+- Do not batch-generate many final character or family images until a small sample is reviewed and approved.
+
 ## Audio Rules
 
 Audio is generated only after sentence approval.

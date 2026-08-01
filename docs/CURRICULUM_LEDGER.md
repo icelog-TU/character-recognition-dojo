@@ -20,6 +20,28 @@ Recent review pool for the next lesson:
 
 `的 小 手 我 有 大 人 個`
 
+## Visual Continuity Ledger
+
+Use this section before writing image prompts. Once a recurring person or family role is introduced, keep the same visual identity in every future image. This reduces image-regeneration cost and makes the app feel like one coherent world.
+
+| Role / Character | First Lesson | Approved Visual Description | Reuse Rule |
+|---|---:|---|---|
+| 我 | L007 | Friendly young girl, preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, bright curious eyes, yellow top, coral-red pinafore dress, red shoes, warm expression, child-friendly picture-book style. | Always use this same girl whenever `我` appears. Use L007 images as the current reference. |
+| 你 | TBD | TBD after the character/role is introduced and reviewed. | Do not invent a new design until approved. |
+| 他 | TBD | TBD after the character/role is introduced and reviewed. | Do not invent a new design until approved. |
+| 爸爸 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same father design in all future images. |
+| 媽媽 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same mother design in all future images. |
+| 哥哥 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same older-brother design in all future images. |
+| 姐姐 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same older-sister design in all future images. |
+| 弟弟 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same younger-brother design in all future images. |
+| 妹妹 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same younger-sister design in all future images. |
+
+Image reuse rule:
+
+- If a new sentence can use an existing approved image without changing the meaning, reuse it.
+- If the same scene needs a different focus, prefer adding a clear circle, glow, or spotlight to the existing scene instead of creating an unrelated new scene.
+- Generate a new image only when the count, role, object, or meaning would be wrong with the existing asset.
+
 ## Lesson Ledger
 
 | Lesson | New Character(s) | Cumulative Learned Characters | Reviewed Sentences | Old Characters Reviewed | Notes |

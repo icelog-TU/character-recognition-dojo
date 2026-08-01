@@ -292,6 +292,22 @@ Every reviewed sentence should have one picture.
 - If a target object/person needs attention, use clear visual highlight such as a circle, strong glow, or spotlight. Subtle glow alone may disappear on a phone screen.
 - Final images should be stored as WebP under `public/assets/lessons/L###/images/`.
 
+### Image Budget And Reuse Rules
+
+The full course will likely need 600 lessons and about 3,000-3,600 sentence pictures. Image generation is the largest asset cost, so do not treat images as disposable.
+
+Rules:
+
+- Generate one reviewed picture per approved sentence by default. Do not generate 5-6 candidate images for every sentence unless the user explicitly asks.
+- Before generating a new image, check whether an existing approved image can be reused.
+- Reuse an image when the scene is semantically the same and only the target phrase changes.
+- Prefer editing or highlighting an existing scene over regenerating a new one when the lesson needs attention on one person/object.
+- If two sentences intentionally share a scene, document that relationship in the lesson notes or `imagePrompt`.
+- Generate replacement images only when the existing image is factually wrong, visually unclear, inconsistent with fixed characters, or too low quality.
+- For batches, lock the visual direction with a small reviewed sample before generating many final assets.
+- Common characters such as `我`, `你`, `他`, `爸爸`, `媽媽`, `弟弟`, and `妹妹` should be treated as recurring cast members once introduced. Do not redesign them in every image.
+- When a recurring cast member appears, the image prompt must reference the approved visual description from `docs/CURRICULUM_LEDGER.md` or this SOP.
+
 ## Character And Visual Continuity
 
 Starting L007, `我` introduces a fixed first-person character.
@@ -309,6 +325,14 @@ Approved visual description:
 
 Use L007 images as the current visual reference for this character.
 
+Future recurring family/cast characters:
+
+- When `你`, `他`, `爸爸`, `媽媽`, `哥哥`, `姐姐`, `弟弟`, `妹妹`, or other recurring human roles are introduced, add an approved visual description to `docs/CURRICULUM_LEDGER.md`.
+- Once added, every future image prompt involving that role must reuse the approved description.
+- If a sentence includes several recurring characters, the prompt should name each one and preserve their established appearance.
+- Do not let AI image generation invent a new father/mother/sibling design each time.
+- The app should feel like it has a stable cast, not a new unrelated picture book on every sentence.
+
 ## Curriculum Rules
 
 Before planning any new lesson:
@@ -321,8 +345,9 @@ Before planning any new lesson:
 6. Prefer natural Taiwan usage.
 7. Prefer concrete, imageable sentences.
 8. Avoid forced combinations that sound strange.
-9. Decide if `displayLines` is needed for phone layout.
-10. Do not generate final image/audio before parent/teacher approval.
+9. Check whether new sentences can reuse approved images or recurring cast members.
+10. Decide if `displayLines` is needed for phone layout.
+11. Do not generate final image/audio before parent/teacher approval.
 
 AI-generated sentences are always drafts. The parent/teacher must approve every sentence before it enters `src/curriculum/sample-lessons.json`.
 
