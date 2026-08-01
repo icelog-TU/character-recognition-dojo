@@ -1823,6 +1823,8 @@ function LessonPanel({
   const [rewardState, setRewardState] = useState<"waiting" | "ready" | "claiming" | "claimed">("waiting");
   const [resetVersion, setResetVersion] = useState(0);
   const advanceRunRef = useRef(0);
+  const speechRunRef = useRef(0);
+  const hearRunRef = useRef(0);
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
@@ -1887,8 +1889,11 @@ function LessonPanel({
   }, [completed, lessonReady, rewardState, usesSentenceGames]);
 
   async function speakForTarget(target: SpeechTarget, text: string) {
+    const runId = speechRunRef.current + 1;
+    speechRunRef.current = runId;
     setSpeakingTarget(target);
     await speakGuide(text);
+    if (speechRunRef.current !== runId) return;
     setSpeakingTarget((current) => (current === target ? null : current));
   }
 
@@ -1902,17 +1907,24 @@ function LessonPanel({
 
   async function handleHearTarget(char: string) {
     if (locked || spotlightChar) return;
+    const runId = hearRunRef.current + 1;
+    hearRunRef.current = runId;
+    speechRunRef.current += 1;
     stopPlayback();
+    setSpeakingTarget(null);
     setSpotlightChar(char);
     try {
+      await waitMs(40);
+      if (hearRunRef.current !== runId) return;
       await Promise.all([playLessonChar(lesson, char), waitMs(720)]);
+      if (hearRunRef.current !== runId) return;
       setHeardChars((prev) => {
         const next = new Set(prev);
         next.add(char);
         return next;
       });
     } finally {
-      setSpotlightChar(null);
+      if (hearRunRef.current === runId) setSpotlightChar(null);
     }
   }
 
@@ -2833,15 +2845,25 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
     activeAudioFinish = finish;
     activeAudioTick = tick;
     options.onTime?.(0);
-    void audio
-      .play()
-      .then(() => {
+    const start = (retried = false) => {
+      void audio.play().then(() => {
         emitPlaybackState();
         tick();
         const durationMs = Number.isFinite(audio.duration) && audio.duration > 0 ? audio.duration * 1000 : 5000;
         fallbackTimer = window.setTimeout(() => finish("ended"), durationMs + 1000);
-      })
-      .catch(() => finish("error"));
+      }).catch(() => {
+        if (!retried && activeAudio === audio) {
+          window.setTimeout(() => {
+            if (activeAudio !== audio || settled) return;
+            audio.currentTime = 0;
+            start(true);
+          }, 120);
+          return;
+        }
+        finish("error");
+      });
+    };
+    start();
   });
 }
 
