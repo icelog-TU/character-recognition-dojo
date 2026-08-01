@@ -141,6 +141,53 @@
         font-weight: 800;
       }
 
+      .plan-slot-controls {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .plan-slot {
+        display: grid;
+        gap: 4px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        padding: 12px;
+        cursor: pointer;
+      }
+
+      .plan-slot input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .plan-slot:has(input:checked) {
+        border-color: var(--primary);
+        background: var(--primary-soft);
+        box-shadow: 0 0 0 4px rgba(25, 121, 111, 0.1);
+      }
+
+      .plan-slot strong {
+        font-size: 1.05rem;
+      }
+
+      .plan-slot span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .dependency-note {
+        margin-top: 10px;
+        border: 1px solid rgba(25, 121, 111, 0.22);
+        border-radius: 10px;
+        background: #eefaf5;
+        padding: 10px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
       .manual-choice-panel {
         margin-top: 14px;
         border-top: 1px solid var(--line);
@@ -557,7 +604,8 @@
         .summary-grid,
         .custom-grid,
         .candidate-edit-grid,
-        .manual-grid {
+        .manual-grid,
+        .plan-slot-controls {
           grid-template-columns: 1fr;
         }
 
@@ -592,6 +640,8 @@
       <section class="panel" id="summaryPanel">
         <p class="help">正在讀取教材資料。</p>
       </section>
+
+      <section class="panel" id="planSlotPanel"></section>
 
       <section class="panel manual-choice-panel" aria-labelledby="manualChoiceTitle">
         <h2 id="manualChoiceTitle">自選下一課字</h2>
@@ -636,6 +686,8 @@
         recommendations: [],
         selectedChoiceId: "",
         previewChoiceId: "",
+        planOffset: 1,
+        plannedLessons: {},
         storageKey: "",
         selectedIndexes: new Map(),
         candidateEditsBySentence: new Map(),
@@ -729,13 +781,47 @@
         return Number(entry.priority || 1000) - reviewHits * 2;
       }
 
+      function clampPlanOffset(value) {
+        return value === 2 || value === "2" ? 2 : 1;
+      }
+
+      function plannedLessonKey(order) {
+        return lessonId(order);
+      }
+
+      function plannedLessonForOrder(order) {
+        const plan = state.plannedLessons?.[plannedLessonKey(order)];
+        return plan?.newChars?.length ? plan : null;
+      }
+
+      function upstreamPlans(latestOrder, planOffset = state.planOffset) {
+        const plans = [];
+        for (let offset = 1; offset < clampPlanOffset(planOffset); offset += 1) {
+          const plan = plannedLessonForOrder(latestOrder + offset);
+          if (plan) plans.push(plan);
+        }
+        return plans;
+      }
+
+      function chooseRecentPool(lessons, planned) {
+        return unique([...recentReviewPool(lessons), ...planned.flatMap((plan) => plan.newChars || [])]);
+      }
+
+      function previousRequiredChars(lessons, planned, count) {
+        const completed = lessons.map((lesson) => ({ order: lesson.order, newChars: lesson.newChars || [] }));
+        const provisional = planned.map((plan) => ({ order: plan.order, newChars: plan.newChars || [] }));
+        return unique([...completed, ...provisional].sort((a, b) => a.order - b.order).slice(-count).flatMap((lesson) => lesson.newChars));
+      }
+
       function recommend(data) {
         const lessons = [...(data.lessons || [])].sort((a, b) => a.order - b.order);
         const latestOrder = Math.max(...lessons.map((lesson) => lesson.order));
-        const order = latestOrder + 1;
-        const learnedChars = unique(lessons.flatMap((lesson) => lesson.newChars || []));
-        const recentPool = recentReviewPool(lessons);
-        const requiredRecentChars = previousLessonNewChars(lessons, 3);
+        const planOffset = clampPlanOffset(state.planOffset);
+        const order = latestOrder + planOffset;
+        const planned = upstreamPlans(latestOrder, planOffset);
+        const learnedChars = unique([...lessons.flatMap((lesson) => lesson.newChars || []), ...planned.flatMap((plan) => plan.newChars || [])]);
+        const recentPool = chooseRecentPool(lessons, planned);
+        const requiredRecentChars = previousRequiredChars(lessons, planned, 3);
         const bankEntries = data.nextCharacterBank || [];
         const bankChars = new Set(bankEntries.map((entry) => entry.char));
         const manualChoiceChars = new Set(state.manualChoices.map((entry) => entry.char));
@@ -769,13 +855,24 @@
           .filter(Boolean)
           .sort((a, b) => a.score - b.score)
           .slice(0, 5);
-        return { lessons, latestOrder, order, lessonId: lessonId(order), learnedChars, recentPool, requiredRecentChars, recommendations };
+        return {
+          lessons,
+          latestOrder,
+          order,
+          lessonId: lessonId(order),
+          planOffset,
+          dependencyPlans: planned,
+          learnedChars,
+          recentPool,
+          requiredRecentChars,
+          recommendations,
+        };
       }
 
       function renderSummary(model) {
         $("summaryPanel").innerHTML = `
           <div class="summary-grid">
-            <div class="metric"><strong>${model.lessonId}</strong><span>下一課</span></div>
+            <div class="metric"><strong>${model.lessonId}</strong><span>${model.planOffset === 2 ? "下下一課" : "下一課"}</span></div>
             <div class="metric"><strong>${model.learnedChars.length}</strong><span>已學漢字</span></div>
             <div class="metric"><strong>${model.latestOrder}</strong><span>目前課數</span></div>
             <div class="metric"><strong>${model.recommendations.length}</strong><span>候選字</span></div>
@@ -783,6 +880,37 @@
           <p class="help">資料匯出時間：${state.data.exportedAt || "未知"}</p>
           <p class="help">造句規則：每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字；優先使用近 5 課字；近 3 課新字 ${model.requiredRecentChars.join("、")} 在整課句子中至少各出現一次。</p>
           <div class="learned">${model.learnedChars.map((char) => `<span>${char}</span>`).join("")}</div>
+        `;
+      }
+
+      function renderPlanSlotPanel(model) {
+        const firstOrder = model.latestOrder + 1;
+        const secondOrder = model.latestOrder + 2;
+        const firstPlan = plannedLessonForOrder(firstOrder);
+        const secondPlan = plannedLessonForOrder(secondOrder);
+        const dependencies = model.dependencyPlans || [];
+        $("planSlotPanel").innerHTML = `
+          <h2>規劃第幾課</h2>
+          <div class="plan-slot-controls" role="radiogroup" aria-label="規劃課程槽位">
+            <label class="plan-slot">
+              <input type="radio" name="planOffset" value="1" ${model.planOffset === 1 ? "checked" : ""} />
+              <strong>${lessonId(firstOrder)} 下一課</strong>
+              <span>${firstPlan ? `暫定：${firstPlan.newChars.join("")}` : "先規劃這一課的新字。"}</span>
+            </label>
+            <label class="plan-slot">
+              <input type="radio" name="planOffset" value="2" ${model.planOffset === 2 ? "checked" : ""} />
+              <strong>${lessonId(secondOrder)} 下下一課</strong>
+              <span>${firstPlan ? `會先把 ${firstPlan.newChars.join("")} 當作已學字。` : `可先規劃，但最好先在 ${lessonId(firstOrder)} 確定新字。`}</span>
+            </label>
+          </div>
+          ${
+            dependencies.length
+              ? `<div class="dependency-note">這個 request 會標註依賴：先讓 ${dependencies
+                  .map((plan) => `${lessonId(plan.order)}「${plan.newChars.join("")}」`)
+                  .join("、")} 合併進 main，再合併本課。</div>`
+              : ""
+          }
+          ${secondPlan ? `<div class="dependency-note">已暫存 ${lessonId(secondOrder)}：${secondPlan.newChars.join("")}</div>` : ""}
         `;
       }
 
@@ -1082,7 +1210,48 @@
       }
 
       function plannerStorageKey(model) {
-        return `character-recognition-dojo:lesson-planner:v1:${model.lessonId}`;
+        return `character-recognition-dojo:lesson-planner:v2:after-${lessonId(model.latestOrder)}`;
+      }
+
+      function cleanPlannedLessons(value, latestOrder) {
+        const cleaned = {};
+        for (const [key, plan] of Object.entries(value || {})) {
+          const order = Number(plan?.order);
+          if (![latestOrder + 1, latestOrder + 2].includes(order)) continue;
+          const rawChars = Array.isArray(plan?.newChars) ? plan.newChars.join("") : String(plan?.newChars || "");
+          const newChars = unique(hanChars(rawChars));
+          if (!newChars.length) continue;
+          cleaned[key] = {
+            order,
+            lessonId: lessonId(order),
+            newChars,
+            zhuyin: Object.fromEntries(newChars.map((char) => [char, String(plan?.zhuyin?.[char] || "")])),
+            title: String(plan?.title || newChars.join("")),
+          };
+        }
+        return cleaned;
+      }
+
+      function rememberPlannedChoice(model, choice) {
+        if (!choice) return;
+        const key = plannedLessonKey(model.order);
+        state.plannedLessons = {
+          ...state.plannedLessons,
+          [key]: {
+            order: model.order,
+            lessonId: model.lessonId,
+            newChars: choice.newChars,
+            zhuyin: choice.zhuyin,
+            title: choice.title,
+          },
+        };
+        if (model.planOffset === 1) {
+          const secondKey = plannedLessonKey(model.latestOrder + 2);
+          const secondPlan = state.plannedLessons[secondKey];
+          if (secondPlan && secondPlan.newChars?.some((char) => choice.newChars.includes(char))) {
+            delete state.plannedLessons[secondKey];
+          }
+        }
       }
 
       function mapToObject(map, valueMapper = (value) => value) {
@@ -1181,10 +1350,13 @@
         try {
           const saved = JSON.parse(localStorage.getItem(state.storageKey) || "null");
           if (!saved) return false;
-          state.manualChoices = cleanManualChoices(saved.manualChoices, model.learnedChars);
+          state.planOffset = clampPlanOffset(saved.planOffset);
+          state.plannedLessons = cleanPlannedLessons(saved.plannedLessons, model.latestOrder);
+          const restoredModel = recommend(state.data);
+          state.manualChoices = cleanManualChoices(saved.manualChoices, restoredModel.learnedChars);
           state.manualDraft = cleanManualDraft(saved.manualDraft);
           const allowedChoiceIds = new Set([
-            ...model.recommendations.map((choice) => choice.choiceId),
+            ...restoredModel.recommendations.map((choice) => choice.choiceId),
             ...state.manualChoices.map((choice) => `choice-${choice.char}`),
           ]);
           state.selectedChoiceId = allowedChoiceIds.has(saved.selectedChoiceId) ? saved.selectedChoiceId : "";
@@ -1205,6 +1377,8 @@
         const payload = {
           savedAt: new Date().toISOString(),
           lessonId: model.lessonId,
+          planOffset: state.planOffset,
+          plannedLessons: state.plannedLessons,
           selectedChoiceId: state.selectedChoiceId,
           previewChoiceId: state.previewChoiceId,
           selectedIndexes: mapToObject(state.selectedIndexes, (set) => [...set]),
@@ -1227,6 +1401,8 @@
         localStorage.removeItem(key);
         state.selectedChoiceId = "";
         state.previewChoiceId = "";
+        state.planOffset = 1;
+        state.plannedLessons = {};
         state.selectedIndexes = new Map();
         state.candidateEditsBySentence = new Map();
         state.imageNotesBySentence = new Map();
@@ -1269,16 +1445,25 @@
         const hasApprovedSentences = finalSentences.length > 0;
         const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
         const missingRequired = hasApprovedSentences ? missingRequiredRecentChars(model, finalSentences) : model.requiredRecentChars;
+        const dependencies = model.dependencyPlans || [];
         return JSON.stringify(
           {
             order: model.order,
             newChars: choice.newChars,
             zhuyin: choice.zhuyin,
             title: choice.title,
+            dependsOnLessons: dependencies.map((plan) => ({
+              order: plan.order,
+              lessonId: lessonId(plan.order),
+              newChars: plan.newChars,
+              title: plan.title,
+              status: "planned-not-yet-merged",
+            })),
             targetSentenceCount: hasApprovedSentences ? finalSentences.length : targetGeneratedSentenceCount,
             generationConstraints: {
               sentenceHanCharLength: sentenceLengthRange,
               allowedChars,
+              provisionalLearnedChars: dependencies.flatMap((plan) => plan.newChars || []),
               preferReviewChars: model.recentPool,
               mustIncludeCharsAcrossLesson: model.requiredRecentChars,
               missingRequiredCharsInCurrentSelection: missingRequired,
@@ -1286,6 +1471,11 @@
             teacherNotes: [
               "Generated from the web next-lesson planner.",
               `Selected choice: ${choice.choiceId}.`,
+              dependencies.length
+                ? `Parallel planning dependency: this lesson assumes ${dependencies
+                    .map((plan) => `${lessonId(plan.order)} introduces ${plan.newChars.join("")}`)
+                    .join("; ")}. It may be drafted in parallel, but do not merge or push this lesson to main until the dependency lesson is already merged to main and planner-data has been re-exported.`
+                : "",
               hasApprovedSentences
                 ? `Approved sentences: ${finalSentences.map((sentence) => sentence.text).join("; ")}.`
                 : `No approved sentences yet. First generate ${targetGeneratedSentenceCount} sentence candidates for teacher review; do not build production image/audio assets until the teacher approves sentences.`,
@@ -1296,7 +1486,9 @@
               hasApprovedSentences
                 ? "Use each sentence's imageNotes as teacher guidance when writing imagePrompt. Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval."
                 : "When drafting candidates, keep them concrete, imageable, natural in Taiwan Mandarin, and suitable for young children.",
-            ].join(" "),
+            ]
+              .filter(Boolean)
+              .join(" "),
             approvedSentences: finalSentences,
           },
           null,
@@ -1364,6 +1556,7 @@
       function render(model) {
         state.recommendations = model.recommendations;
         renderSummary(model);
+        renderPlanSlotPanel(model);
         renderManualChoiceForm();
         renderChoices(model);
         updateOutput(model);
@@ -1452,8 +1645,10 @@
           if (!state.selectedIndexes.has(state.selectedChoiceId)) {
             state.selectedIndexes.set(state.selectedChoiceId, new Set());
           }
+          const model = currentModel();
+          rememberPlannedChoice(model, selectedChoice());
           render(currentModel());
-          savePlannerMemory();
+          savePlannerMemory(currentModel());
           $("statusLine").textContent = "已確定選這個字，現在可以勾選、修改或新增句子。";
           scrollSelectedChoiceIntoView();
           return;
@@ -1669,6 +1864,27 @@
       });
 
       document.addEventListener("change", (event) => {
+        if (event.target.matches('input[name="planOffset"]')) {
+          state.planOffset = clampPlanOffset(event.target.value);
+          const model = currentModel();
+          const plan = plannedLessonForOrder(model.order);
+          const plannedChoiceId = plan ? `choice-${plan.newChars[0]}` : "";
+          if (plannedChoiceId && model.recommendations.some((choice) => choice.choiceId === plannedChoiceId)) {
+            state.selectedChoiceId = plannedChoiceId;
+            state.previewChoiceId = plannedChoiceId;
+          } else {
+            state.selectedChoiceId = "";
+            state.previewChoiceId = "";
+          }
+          savePlannerMemory(model);
+          render(model);
+          $("statusLine").textContent =
+            state.planOffset === 2
+              ? "正在規劃下下一課；會把前一槽已確定的新字當作暫定已學字。"
+              : "正在規劃下一課。";
+          return;
+        }
+
         if (event.target.matches("[data-choice][data-index]")) {
           const choiceId = event.target.dataset.choice;
           const index = Number(event.target.dataset.index);
