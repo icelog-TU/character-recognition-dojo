@@ -359,6 +359,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "sea-jellyfish-youngerBrother": "/assets/characters/sea/jellyfish/jellyfish-younger-brother.webp",
   "sea-jellyfish-youngerSister": "/assets/characters/sea/jellyfish/jellyfish-younger-sister.webp",
   "sea-jellyfish-baby": "/assets/characters/sea/jellyfish/jellyfish-baby.webp",
+  "sea-starfish-grandpa": "/assets/characters/sea/starfish/starfish-grandpa.webp",
+  "sea-starfish-grandma": "/assets/characters/sea/starfish/starfish-grandma.webp",
+  "sea-starfish-dad": "/assets/characters/sea/starfish/starfish-father.webp",
+  "sea-starfish-mom": "/assets/characters/sea/starfish/starfish-mother.webp",
+  "sea-starfish-olderBrother": "/assets/characters/sea/starfish/starfish-older-brother.webp",
+  "sea-starfish-olderSister": "/assets/characters/sea/starfish/starfish-older-sister.webp",
+  "sea-starfish-youngerBrother": "/assets/characters/sea/starfish/starfish-younger-brother.webp",
+  "sea-starfish-youngerSister": "/assets/characters/sea/starfish/starfish-younger-sister.webp",
+  "sea-starfish-baby": "/assets/characters/sea/starfish/starfish-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
