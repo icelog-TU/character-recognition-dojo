@@ -265,8 +265,11 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 - The active Stage 4 block and the active sentence/game surface must glow visibly while guidance or feedback is playing.
 - Before publishing, check Stage 4 on a phone-width viewport. Sentence tokens, missing-character slots, and option buttons must wrap inside the card; no Han character, zhuyin, or question-mark slot may be clipped by the screen edge.
 - Stage 4 interactions must be framed as helping a visible helper character, not as a teacher testing the child. The default helper is the rabbit.
+- `find-character` spoken guidance must tell the child both what to find and that they should tap it.
 - `teach-character` requires the old helper flow: helper reads the sentence up to the unknown character, cries/asks for help, the child presses and holds the target character itself, the app speaks a prime, plays a ding, records, and then replays the full sentence with the child's recording stitched into the target-character slot.
+- In `teach-character`, do not circle or highlight the unknown target before the helper reaches that character and gets stuck. Do not render a separate isolated target-character panel below the sentence unless it has an actual interaction.
 - After a correct Stage 4 response, play the helper feedback first, then stop on the current round. Do not auto-advance. Speak a prompt telling the child to press the red button for the next round or completion.
+- Completion state must be tied to the current game id. When moving to the next Stage 4 round, never let the previous round's completed state trigger the next round's completion prompt.
 - Every Stage 4 round must have a visible replay-instruction button so the child/parent can hear the helper's request again after leaving and returning.
 
 ## Review Gate

@@ -1847,49 +1847,6 @@ button.char-token {
   color: var(--primary-strong);
 }
 
-.teach-character-panel {
-  display: grid;
-  justify-items: center;
-  gap: 12px;
-  border: 1px solid rgba(34, 132, 123, 0.24);
-  border-radius: 8px;
-  background: #ffffff;
-  padding: 16px;
-}
-
-.teach-character-panel strong {
-  text-align: center;
-}
-
-.teach-character-panel.teach-priming {
-  border-color: var(--primary);
-  background: #f2fbf8;
-}
-
-.teach-character-panel.teach-recording {
-  border-color: #d94735;
-  background: #fff1ee;
-  box-shadow: 0 0 0 5px rgba(217, 71, 53, 0.14);
-}
-
-.teach-character-panel.teach-recording strong {
-  color: #b43124;
-}
-
-.teach-target-char {
-  display: grid;
-  place-items: center;
-  width: 86px;
-  height: 86px;
-  border: 3px solid var(--primary);
-  border-radius: 50%;
-  background: var(--green-soft);
-  color: var(--primary-strong);
-  font-size: 3.6rem;
-  font-weight: 950;
-  line-height: 1;
-}
-
 .floating-record-char {
   position: fixed;
   top: 12%;
