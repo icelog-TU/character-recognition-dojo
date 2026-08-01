@@ -256,6 +256,7 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 
 - Use fixed game types per sentence/game. Do not randomly assign game modes at runtime for production lessons.
 - Supported first-pass game types: `find-character`, `teach-character`, `missing-character`, `partial-order`, and `choose-pronunciation`.
+- When a lesson has five Stage 4 sentence games, use all five supported game types exactly once. Do not repeat one type and omit another.
 - `targetChar` must appear in the referenced sentence. It may be the current lesson's new character or a review character.
 - A lesson should usually include at least three interactions involving the current new character, while allowing 1-2 interactions focused on review characters.
 - For early lessons, `partial-order` should blank only 2-4 Han characters, not the full sentence.

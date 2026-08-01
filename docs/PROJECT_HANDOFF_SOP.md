@@ -233,6 +233,7 @@ Stage 4 planning rules:
 - A lesson should usually give the current new character at least three interactions, while allowing 1-2 review-focused games.
 - If a sentence does not contain the current new character, do not force it to use the current new character as the target.
 - Keep the game plan fixed in curriculum data so QA and phone testing are reproducible.
+- When a lesson has five Stage 4 sentence games, use all five supported game types exactly once: `find-character`, `teach-character`, `missing-character`, `partial-order`, and `choose-pronunciation`.
 - Do not introduce these games too early. The child needs enough known characters first.
 - Stage 4 is for children who may not read prompts yet. Each game must automatically speak a complete instruction when it becomes active.
 - Stage 4 helper openings must match the game type. Do not reuse "I will read this sentence" for games where the rabbit is not the reader, especially `choose-pronunciation`.

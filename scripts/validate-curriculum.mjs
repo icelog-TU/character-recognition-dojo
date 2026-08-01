@@ -12,6 +12,13 @@ const supportedSentenceGameTypes = new Set([
   "partial-order",
   "choose-pronunciation",
 ]);
+const stageFourCycleGameTypes = [
+  "find-character",
+  "teach-character",
+  "missing-character",
+  "partial-order",
+  "choose-pronunciation",
+];
 
 function hanChars(text) {
   return Array.from(text).filter((char) => /\p{Script=Han}/u.test(char));
@@ -103,7 +110,19 @@ for (let i = 0; i < sorted.length; i += 1) {
   }
 
   const sentencesById = new Map((lesson.sentences ?? []).map((sentence) => [sentence.id, sentence]));
-  for (const game of lesson.sentenceGames ?? []) {
+  const sentenceGames = lesson.sentenceGames ?? [];
+  if (lesson.order >= 11 && sentenceGames.length === stageFourCycleGameTypes.length) {
+    const gameTypes = new Set(sentenceGames.map((game) => game.type));
+    for (const expectedType of stageFourCycleGameTypes) {
+      if (!gameTypes.has(expectedType)) {
+        errors.push(`${lesson.id}: five-game Stage 4 lessons must include ${expectedType} exactly once.`);
+      }
+    }
+    if (gameTypes.size !== stageFourCycleGameTypes.length) {
+      errors.push(`${lesson.id}: five-game Stage 4 lessons must not repeat a game type.`);
+    }
+  }
+  for (const game of sentenceGames) {
     const label = game.id || `${lesson.id} sentenceGame`;
     const sentence = sentencesById.get(game.sentenceId);
 

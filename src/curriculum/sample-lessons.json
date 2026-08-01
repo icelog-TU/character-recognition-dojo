@@ -2808,28 +2808,28 @@
         },
         {
           "id": "L012-G05",
-          "type": "missing-character",
+          "type": "choose-pronunciation",
           "sentenceId": "L012-S05",
-          "targetChar": "有",
-          "prompt": "少了一個字，把「有」放回句子。",
-          "missingIndexes": [
-            0
-          ],
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
           "options": [
             {
-              "id": "have",
-              "text": "有",
-              "correct": true
+              "id": "correct",
+              "text": "有二大一小的手",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L012/audio/L012-S05.m4a"
             },
             {
-              "id": "one",
-              "text": "一",
-              "correct": false
+              "id": "wrong-one",
+              "text": "有一大二小的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L008/audio/L008-S05.m4a"
             },
             {
-              "id": "two",
-              "text": "二",
-              "correct": false
+              "id": "wrong-two",
+              "text": "有二大二小的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L011/audio/L011-G05-wrong2.m4a"
             }
           ]
         }
