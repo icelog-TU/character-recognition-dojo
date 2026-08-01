@@ -275,7 +275,7 @@
         padding: 10px;
       }
 
-      .sentence-row input {
+      .sentence-row > input[type="checkbox"] {
         width: 22px;
         height: 22px;
         margin-top: 4px;
@@ -307,6 +307,22 @@
         grid-template-columns: 1fr 1fr 0.4fr;
         gap: 8px;
         margin-top: 12px;
+      }
+
+      .candidate-edit-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.4fr;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .candidate-edit-grid input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--ink);
+        padding: 10px;
       }
 
       .custom-grid input,
@@ -452,6 +468,7 @@
       @media (max-width: 760px) {
         .summary-grid,
         .custom-grid,
+        .candidate-edit-grid,
         .manual-grid {
           grid-template-columns: 1fr;
         }
@@ -526,6 +543,7 @@
         selectedChoiceId: "",
         storageKey: "",
         selectedIndexes: new Map(),
+        candidateEditsBySentence: new Map(),
         imageNotesBySentence: new Map(),
         customRowsByChoice: new Map(),
         customDraftsByChoice: new Map(),
@@ -535,6 +553,7 @@
       };
 
       const sentenceLengthRange = { min: 4, max: 12 };
+      const targetGeneratedSentenceCount = 10;
       const $ = (id) => document.getElementById(id);
 
       function hanChars(text) {
@@ -696,20 +715,26 @@
                       ? choice.sentenceCandidates
                           .map((sentence, sentenceIndex) => {
                             const checked = state.selectedIndexes.get(choice.choiceId)?.has(sentenceIndex) || false;
+                            const editedSentence = candidateSentence(choice, sentenceIndex);
                             const imageNotes = state.imageNotesBySentence.get(sentenceKey(choice.choiceId, sentenceIndex)) || "";
                             return `
-                              <label class="sentence-row">
+                              <div class="sentence-row">
                                 <input type="checkbox" data-choice="${choice.choiceId}" data-index="${sentenceIndex}" ${checked ? "checked" : ""} />
                                 <div>
-                                  <div class="sentence-text">${sentence.text}</div>
+                                  <div class="sentence-text">${escapeHtml(editedSentence.text)}</div>
                                   <div class="sentence-meta">
-                                    <span class="pill">spoken: ${sentence.spokenText}</span>
-                                    <span class="pill">focus: ${sentence.focusChar}</span>
+                                    <span class="pill">spoken: ${escapeHtml(editedSentence.spokenText)}</span>
+                                    <span class="pill">focus: ${escapeHtml(editedSentence.focusChar)}</span>
                                   </div>
                                   <p>${sentence.reason}</p>
+                                  <div class="candidate-edit-grid">
+                                    <input aria-label="候選句文字" placeholder="句子" value="${escapeAttr(editedSentence.text)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="text" />
+                                    <input aria-label="候選句 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(editedSentence.spokenText)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="spokenText" />
+                                    <input aria-label="候選句 focus" placeholder="focus" value="${escapeAttr(editedSentence.focusChar)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="focusChar" />
+                                  </div>
                                   <textarea class="note-input" aria-label="候選句配圖要求" placeholder="配圖要求，可留空。例如：畫面要清楚看出二大一小，不要有文字。" data-image-note-choice="${choice.choiceId}" data-index="${sentenceIndex}">${escapeHtml(imageNotes)}</textarea>
                                 </div>
-                              </label>
+                              </div>
                             `;
                           })
                           .join("")
@@ -818,6 +843,20 @@
         return `${choiceId}:${sentenceIndex}`;
       }
 
+      function candidateSentence(choice, sentenceIndex) {
+        const original = choice.sentenceCandidates[sentenceIndex];
+        const edit = state.candidateEditsBySentence.get(sentenceKey(choice.choiceId, sentenceIndex));
+        if (!original) return null;
+        const text = String(edit?.text ?? original.text ?? "");
+        const spokenText = edit ? String(edit.spokenText || text) : String(original.spokenText || text);
+        return {
+          text,
+          spokenText: spokenText.replace(/[，。！？、,.!?]/g, ""),
+          focusChar: String(edit?.focusChar ?? original.focusChar ?? ""),
+          reason: edit ? `Teacher-edited candidate. ${original.reason || ""}`.trim() : String(original.reason || ""),
+        };
+      }
+
       function resolveFocusChar(text, requestedFocusChar, choice) {
         const chars = hanChars(text);
         if (requestedFocusChar.trim()) return requestedFocusChar.trim();
@@ -835,7 +874,7 @@
         const indexes = [...(state.selectedIndexes.get(choice.choiceId) || new Set())].sort((a, b) => a - b);
         const selected = indexes
           .map((index) => {
-            const sentence = choice.sentenceCandidates[index];
+            const sentence = candidateSentence(choice, index);
             if (!sentence) return null;
             return withOptionalImageNotes(sentence, state.imageNotesBySentence.get(sentenceKey(choice.choiceId, index)));
           })
@@ -881,6 +920,21 @@
 
       function restoreMapOfStrings(saved) {
         return new Map(Object.entries(saved || {}).map(([key, value]) => [key, String(value || "")]));
+      }
+
+      function restoreMapOfCandidateEdits(saved, allowedChoiceIds) {
+        return new Map(
+          Object.entries(saved || {})
+            .filter(([key]) => allowedChoiceIds.has(key.split(":")[0]))
+            .map(([key, edit]) => [
+              key,
+              {
+                text: String(edit?.text || ""),
+                spokenText: String(edit?.spokenText || ""),
+                focusChar: String(edit?.focusChar || ""),
+              },
+            ]),
+        );
       }
 
       function cleanSavedRows(rows) {
@@ -956,6 +1010,7 @@
           ]);
           state.selectedChoiceId = allowedChoiceIds.has(saved.selectedChoiceId) ? saved.selectedChoiceId : "";
           state.selectedIndexes = restoreMapOfArrays(saved.selectedIndexes, allowedChoiceIds);
+          state.candidateEditsBySentence = restoreMapOfCandidateEdits(saved.candidateEditsBySentence, allowedChoiceIds);
           state.imageNotesBySentence = restoreMapOfStrings(saved.imageNotesBySentence);
           state.customRowsByChoice = restoreMapOfRows(saved.customRowsByChoice, allowedChoiceIds);
           state.customDraftsByChoice = restoreMapOfDrafts(saved.customDraftsByChoice, allowedChoiceIds);
@@ -972,6 +1027,7 @@
           lessonId: model.lessonId,
           selectedChoiceId: state.selectedChoiceId,
           selectedIndexes: mapToObject(state.selectedIndexes, (set) => [...set]),
+          candidateEditsBySentence: mapToObject(state.candidateEditsBySentence),
           imageNotesBySentence: mapToObject(state.imageNotesBySentence),
           customRowsByChoice: mapToObject(state.customRowsByChoice),
           customDraftsByChoice: mapToObject(state.customDraftsByChoice),
@@ -990,6 +1046,7 @@
         localStorage.removeItem(key);
         state.selectedChoiceId = "";
         state.selectedIndexes = new Map();
+        state.candidateEditsBySentence = new Map();
         state.imageNotesBySentence = new Map();
         state.customRowsByChoice = new Map();
         state.customDraftsByChoice = new Map();
@@ -1036,7 +1093,7 @@
             newChars: choice.newChars,
             zhuyin: choice.zhuyin,
             title: choice.title,
-            targetSentenceCount: hasApprovedSentences ? finalSentences.length : 5,
+            targetSentenceCount: hasApprovedSentences ? finalSentences.length : targetGeneratedSentenceCount,
             generationConstraints: {
               sentenceHanCharLength: sentenceLengthRange,
               allowedChars,
@@ -1049,7 +1106,7 @@
               `Selected choice: ${choice.choiceId}.`,
               hasApprovedSentences
                 ? `Approved sentences: ${finalSentences.map((sentence) => sentence.text).join("; ")}.`
-                : "No approved sentences yet. First generate sentence candidates for teacher review; do not build production image/audio assets until the teacher approves sentences.",
+                : `No approved sentences yet. First generate ${targetGeneratedSentenceCount} sentence candidates for teacher review; do not build production image/audio assets until the teacher approves sentences.`,
               `Sentence length target: ${sentenceLengthRange.min}-${sentenceLengthRange.max} Han characters per sentence.`,
               `Prefer using recent review characters from the previous five lessons: ${model.recentPool.join(" ")}.`,
               `Across this lesson's sentence set, include each new character from the previous three lessons at least once: ${model.requiredRecentChars.join(" ")}.`,
@@ -1188,8 +1245,7 @@
         if (selectButton) {
           state.selectedChoiceId = selectButton.dataset.select;
           if (!state.selectedIndexes.has(state.selectedChoiceId)) {
-            const choice = selectedChoice();
-            state.selectedIndexes.set(state.selectedChoiceId, new Set([0, 1, 2, 3].filter((index) => choice?.sentenceCandidates[index])));
+            state.selectedIndexes.set(state.selectedChoiceId, new Set());
           }
           render(currentModel());
           savePlannerMemory();
@@ -1367,6 +1423,34 @@
           state.selectedChoiceId = choiceId;
           savePlannerMemory();
           updateOutput(currentModel());
+        }
+        if (event.target.matches("[data-candidate-edit-choice][data-index][data-field]")) {
+          const choiceId = event.target.dataset.candidateEditChoice;
+          const index = Number(event.target.dataset.index);
+          const field = event.target.dataset.field;
+          const model = currentModel();
+          const choice = choiceById(choiceId);
+          const key = sentenceKey(choiceId, index);
+          const original = choice?.sentenceCandidates[index];
+          const edit = state.candidateEditsBySentence.get(key) || {
+            text: String(original?.text || ""),
+            spokenText: String(original?.spokenText || original?.text || ""),
+            focusChar: String(original?.focusChar || ""),
+          };
+          edit[field] = event.target.value;
+          state.candidateEditsBySentence.set(key, edit);
+          state.selectedChoiceId = choiceId;
+          const editedSentence = choice ? candidateSentence(choice, index) : null;
+          const row = event.target.closest(".sentence-row");
+          if (editedSentence && row) {
+            const textNode = row.querySelector(".sentence-text");
+            const pills = row.querySelectorAll(".sentence-meta .pill");
+            if (textNode) textNode.textContent = editedSentence.text;
+            if (pills[0]) pills[0].textContent = `spoken: ${editedSentence.spokenText}`;
+            if (pills[1]) pills[1].textContent = `focus: ${editedSentence.focusChar}`;
+          }
+          savePlannerMemory(model);
+          updateOutput(model);
         }
         if (event.target.matches("[data-draft-choice][data-field]")) {
           const choiceId = event.target.dataset.draftChoice;

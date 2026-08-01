@@ -6,6 +6,7 @@ const curriculumPath = path.resolve("src/curriculum/sample-lessons.json");
 const bankPath = path.resolve("curriculum-workflow/next-character-bank.json");
 const defaultOutputDir = path.resolve("curriculum-workflow/recommendations");
 const sentenceLengthRange = { min: 4, max: 12 };
+const targetGeneratedSentenceCount = 10;
 
 function parseArgs(argv) {
   const args = {};
@@ -160,7 +161,7 @@ Strict rules:
 - Across each candidate's sentence set, include every required previous-three-lesson new character at least once.
 - spokenText omits punctuation but must not omit any Han character shown in text.
 - Avoid unnatural phrases such as 二個人.
-- Return 4 to 6 sentence candidates per character if possible.
+- Return exactly ${targetGeneratedSentenceCount} sentence candidates per character if possible.
 
 JSON shape:
 [
@@ -266,7 +267,7 @@ function markdownForReview(review) {
   blocks.push("## How To Use");
   blocks.push("");
   blocks.push("1. Pick one recommended character.");
-  blocks.push("2. Choose 4-6 sentences, or edit/add your own.");
+  blocks.push(`2. Review up to ${targetGeneratedSentenceCount} sentence candidates, then edit/add your own approved set.`);
   blocks.push("3. Put the final choice into the `approval` section of the JSON file.");
   blocks.push("4. Run `npm run curriculum:request-from-review -- --review <json path>`.");
   blocks.push("");
