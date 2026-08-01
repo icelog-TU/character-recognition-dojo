@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-01T07:50:18.066Z",
+  "exportedAt": "2026-08-01T08:26:10.954Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -3651,6 +3651,93 @@
     }
   ],
   "nextCharacterBank": [
+    {
+      "char": "高",
+      "zhuyin": "ㄍㄠ",
+      "priority": 8,
+      "why": "Concrete adjective that contrasts with 大、小 and combines naturally with 山上、山下、水、你、我 after 在.",
+      "requires": [
+        "一",
+        "二",
+        "三",
+        "人",
+        "個",
+        "大",
+        "的",
+        "小",
+        "手",
+        "我",
+        "有",
+        "山",
+        "上",
+        "下",
+        "你",
+        "水",
+        "在"
+      ],
+      "sentenceCandidates": [
+        {
+          "text": "高山上有水",
+          "spokenText": "高山上有水",
+          "focusChar": "高",
+          "reason": "Reviews 山上、有、水 with the new adjective."
+        },
+        {
+          "text": "你在高山上",
+          "spokenText": "你在高山上",
+          "focusChar": "高",
+          "reason": "Reviews 你、在、山上 with a clear location."
+        },
+        {
+          "text": "我在高山下",
+          "spokenText": "我在高山下",
+          "focusChar": "高",
+          "reason": "Reviews 我、在、山下 and contrasts with 高山."
+        },
+        {
+          "text": "高高的山下有水",
+          "spokenText": "高高的山下有水",
+          "focusChar": "高",
+          "reason": "Uses 的 in a concrete mountain-water scene."
+        },
+        {
+          "text": "你我在高山下",
+          "spokenText": "你我在高山下",
+          "focusChar": "高",
+          "reason": "Reviews fixed 你 and 我 together near a high mountain."
+        },
+        {
+          "text": "高山下有三個人",
+          "spokenText": "高山下有三個人",
+          "focusChar": "高",
+          "reason": "Reviews 三個人 and location under the mountain."
+        },
+        {
+          "text": "水在高高的山上",
+          "spokenText": "水在高高的山上",
+          "focusChar": "高",
+          "reason": "Reviews 水、在、的、山上 in a highly imageable scene."
+        },
+        {
+          "text": "我有高高的山",
+          "spokenText": "我有高高的山",
+          "focusChar": "高",
+          "reason": "Short possession sentence with repeated 高."
+        },
+        {
+          "text": "高山上有一個人",
+          "spokenText": "高山上有一個人",
+          "focusChar": "高",
+          "reason": "Reviews 一個人 and mountain-top location."
+        },
+        {
+          "text": "你在高高的山下",
+          "spokenText": "你在高高的山下",
+          "focusChar": "高",
+          "reason": "Reviews 你、在、的、山下 in a simple location sentence."
+        }
+      ]
+    },
     {
       "char": "下",
       "zhuyin": "ㄒㄧㄚˋ",

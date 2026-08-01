@@ -287,6 +287,32 @@
         font-weight: 850;
       }
 
+      .sentence-row.edited {
+        border-color: rgba(25, 121, 111, 0.32);
+        background: #f0fbf6;
+      }
+
+      .candidate-tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .candidate-original {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .candidate-edit-panel {
+        margin-top: 10px;
+        border: 2px dashed #b7d9d2;
+        border-radius: 10px;
+        background: #f8fffc;
+        padding: 10px;
+      }
+
       .sentence-meta {
         display: flex;
         flex-wrap: wrap;
@@ -544,6 +570,8 @@
         storageKey: "",
         selectedIndexes: new Map(),
         candidateEditsBySentence: new Map(),
+        candidateDraftsBySentence: new Map(),
+        candidateEditingKeys: new Set(),
         imageNotesBySentence: new Map(),
         customRowsByChoice: new Map(),
         customDraftsByChoice: new Map(),
@@ -631,6 +659,7 @@
         const requiredRecentChars = previousLessonNewChars(lessons, 3);
         const bankEntries = data.nextCharacterBank || [];
         const bankChars = new Set(bankEntries.map((entry) => entry.char));
+        const manualChoiceChars = new Set(state.manualChoices.map((entry) => entry.char));
         const manualEntries = state.manualChoices
           .filter((entry) => entry.char && !bankChars.has(entry.char))
           .map((entry, index) => ({
@@ -653,7 +682,7 @@
               zhuyin: { [entry.char]: entry.zhuyin },
               title: entry.char,
               rationale: entry.why,
-              score,
+              score: manualChoiceChars.has(entry.char) ? score - 10000 : score,
               source: entry.source || "bank",
               sentenceCandidates: cleanSentences(entry.sentenceCandidates, allowedChars),
             };
@@ -715,23 +744,43 @@
                       ? choice.sentenceCandidates
                           .map((sentence, sentenceIndex) => {
                             const checked = state.selectedIndexes.get(choice.choiceId)?.has(sentenceIndex) || false;
+                            const key = sentenceKey(choice.choiceId, sentenceIndex);
                             const editedSentence = candidateSentence(choice, sentenceIndex);
+                            const draftSentence = candidateDraft(choice, sentenceIndex);
+                            const hasEdit = state.candidateEditsBySentence.has(key);
+                            const editing = state.candidateEditingKeys.has(key);
                             const imageNotes = state.imageNotesBySentence.get(sentenceKey(choice.choiceId, sentenceIndex)) || "";
                             return `
-                              <div class="sentence-row">
+                              <div class="sentence-row ${hasEdit ? "edited" : ""}">
                                 <input type="checkbox" data-choice="${choice.choiceId}" data-index="${sentenceIndex}" ${checked ? "checked" : ""} />
                                 <div>
                                   <div class="sentence-text">${escapeHtml(editedSentence.text)}</div>
                                   <div class="sentence-meta">
+                                    ${hasEdit ? `<span class="pill">已修改</span>` : ""}
                                     <span class="pill">spoken: ${escapeHtml(editedSentence.spokenText)}</span>
                                     <span class="pill">focus: ${escapeHtml(editedSentence.focusChar)}</span>
                                   </div>
+                                  ${hasEdit ? `<div class="candidate-original">原 AI：${escapeHtml(sentence.text)}</div>` : ""}
                                   <p>${sentence.reason}</p>
-                                  <div class="candidate-edit-grid">
-                                    <input aria-label="候選句文字" placeholder="句子" value="${escapeAttr(editedSentence.text)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="text" />
-                                    <input aria-label="候選句 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(editedSentence.spokenText)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="spokenText" />
-                                    <input aria-label="候選句 focus" placeholder="focus" value="${escapeAttr(editedSentence.focusChar)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="focusChar" />
+                                  <div class="candidate-tools">
+                                    <button class="btn secondary" type="button" data-edit-candidate="${choice.choiceId}" data-index="${sentenceIndex}">${editing ? "收起修改" : "修改"}</button>
+                                    ${hasEdit ? `<button class="btn secondary" type="button" data-reset-candidate="${choice.choiceId}" data-index="${sentenceIndex}">還原 AI 句子</button>` : ""}
                                   </div>
+                                  ${
+                                    editing
+                                      ? `<div class="candidate-edit-panel">
+                                          <div class="candidate-edit-grid">
+                                            <input aria-label="候選句文字" placeholder="句子" value="${escapeAttr(draftSentence.text)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="text" />
+                                            <input aria-label="候選句 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(draftSentence.spokenText)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="spokenText" />
+                                            <input aria-label="候選句 focus" placeholder="focus" value="${escapeAttr(draftSentence.focusChar)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="focusChar" />
+                                          </div>
+                                          <div class="candidate-tools">
+                                            <button class="btn" type="button" data-apply-candidate="${choice.choiceId}" data-index="${sentenceIndex}">套用修改</button>
+                                            <button class="btn secondary" type="button" data-cancel-candidate="${choice.choiceId}" data-index="${sentenceIndex}">取消</button>
+                                          </div>
+                                        </div>`
+                                      : ""
+                                  }
                                   <textarea class="note-input" aria-label="候選句配圖要求" placeholder="配圖要求，可留空。例如：畫面要清楚看出二大一小，不要有文字。" data-image-note-choice="${choice.choiceId}" data-index="${sentenceIndex}">${escapeHtml(imageNotes)}</textarea>
                                 </div>
                               </div>
@@ -843,8 +892,12 @@
         return `${choiceId}:${sentenceIndex}`;
       }
 
+      function rawCandidateSentence(choice, sentenceIndex) {
+        return choice.sentenceCandidates[sentenceIndex] || null;
+      }
+
       function candidateSentence(choice, sentenceIndex) {
-        const original = choice.sentenceCandidates[sentenceIndex];
+        const original = rawCandidateSentence(choice, sentenceIndex);
         const edit = state.candidateEditsBySentence.get(sentenceKey(choice.choiceId, sentenceIndex));
         if (!original) return null;
         const text = String(edit?.text ?? original.text ?? "");
@@ -854,6 +907,18 @@
           spokenText: spokenText.replace(/[，。！？、,.!?]/g, ""),
           focusChar: String(edit?.focusChar ?? original.focusChar ?? ""),
           reason: edit ? `Teacher-edited candidate. ${original.reason || ""}`.trim() : String(original.reason || ""),
+        };
+      }
+
+      function candidateDraft(choice, sentenceIndex) {
+        const key = sentenceKey(choice.choiceId, sentenceIndex);
+        const draft = state.candidateDraftsBySentence.get(key);
+        if (draft) return draft;
+        const sentence = candidateSentence(choice, sentenceIndex);
+        return {
+          text: String(sentence?.text || ""),
+          spokenText: String(sentence?.spokenText || sentence?.text || ""),
+          focusChar: String(sentence?.focusChar || ""),
         };
       }
 
@@ -1199,6 +1264,10 @@
         return recommend(state.data);
       }
 
+      function bankEntryForChar(char) {
+        return (state.data?.nextCharacterBank || []).find((entry) => entry.char === char) || null;
+      }
+
       document.addEventListener("click", async (event) => {
         if (event.target.id === "addManualChoiceBtn") {
           const model = currentModel();
@@ -1251,6 +1320,82 @@
           savePlannerMemory();
           $("statusLine").textContent = "已選這個字，候選卡已移到上方。";
           scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        const editCandidateButton = event.target.closest("[data-edit-candidate]");
+        if (editCandidateButton) {
+          const choiceId = editCandidateButton.dataset.editCandidate;
+          const index = Number(editCandidateButton.dataset.index);
+          const choice = choiceById(choiceId);
+          const key = sentenceKey(choiceId, index);
+          if (!choice) return;
+          if (state.candidateEditingKeys.has(key)) {
+            state.candidateEditingKeys.delete(key);
+          } else {
+            state.candidateDraftsBySentence.set(key, candidateDraft(choice, index));
+            state.candidateEditingKeys.add(key);
+          }
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          return;
+        }
+
+        const applyCandidateButton = event.target.closest("[data-apply-candidate]");
+        if (applyCandidateButton) {
+          const choiceId = applyCandidateButton.dataset.applyCandidate;
+          const index = Number(applyCandidateButton.dataset.index);
+          const choice = choiceById(choiceId);
+          const key = sentenceKey(choiceId, index);
+          const draft = state.candidateDraftsBySentence.get(key);
+          if (!choice || !draft) return;
+          const text = draft.text.trim();
+          const spokenText = (draft.spokenText.trim() || text).replace(/[，。！？、,.!?]/g, "");
+          const focusChar = resolveFocusChar(text, draft.focusChar, choice);
+          if (!text) {
+            $("statusLine").textContent = "請先輸入修改後的句子。";
+            return;
+          }
+          if (focusChar && !hanChars(text).includes(focusChar)) {
+            $("statusLine").textContent = `focus「${focusChar}」沒有出現在句子裡。`;
+            return;
+          }
+          state.candidateEditsBySentence.set(key, { text, spokenText, focusChar });
+          state.candidateDraftsBySentence.delete(key);
+          state.candidateEditingKeys.delete(key);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          $("statusLine").textContent = `已套用修改：「${text}」。`;
+          return;
+        }
+
+        const cancelCandidateButton = event.target.closest("[data-cancel-candidate]");
+        if (cancelCandidateButton) {
+          const choiceId = cancelCandidateButton.dataset.cancelCandidate;
+          const index = Number(cancelCandidateButton.dataset.index);
+          const key = sentenceKey(choiceId, index);
+          state.candidateDraftsBySentence.delete(key);
+          state.candidateEditingKeys.delete(key);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          return;
+        }
+
+        const resetCandidateButton = event.target.closest("[data-reset-candidate]");
+        if (resetCandidateButton) {
+          const choiceId = resetCandidateButton.dataset.resetCandidate;
+          const index = Number(resetCandidateButton.dataset.index);
+          const key = sentenceKey(choiceId, index);
+          state.candidateEditsBySentence.delete(key);
+          state.candidateDraftsBySentence.delete(key);
+          state.candidateEditingKeys.delete(key);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          $("statusLine").textContent = "已還原成原本的 AI 候選句。";
           return;
         }
 
@@ -1403,11 +1548,22 @@
 
       document.addEventListener("input", (event) => {
         if (event.target.id === "manualChar" || event.target.id === "manualZhuyin" || event.target.id === "manualWhy") {
-          state.manualDraft = {
+          const previous = state.manualDraft;
+          const next = {
             char: $("manualChar").value,
             zhuyin: $("manualZhuyin").value,
             why: $("manualWhy").value,
           };
+          if (event.target.id === "manualChar") {
+            const char = hanChars(next.char).join("").slice(0, 1);
+            const bankEntry = bankEntryForChar(char);
+            if (bankEntry?.zhuyin) next.zhuyin = bankEntry.zhuyin;
+            if (bankEntry?.why && (!previous.why.trim() || previous.why === $("manualWhy").value)) next.why = bankEntry.why;
+            state.manualDraft = next;
+            renderManualChoiceForm();
+          } else {
+            state.manualDraft = next;
+          }
           savePlannerMemory();
           return;
         }
@@ -1428,29 +1584,13 @@
           const choiceId = event.target.dataset.candidateEditChoice;
           const index = Number(event.target.dataset.index);
           const field = event.target.dataset.field;
-          const model = currentModel();
           const choice = choiceById(choiceId);
           const key = sentenceKey(choiceId, index);
-          const original = choice?.sentenceCandidates[index];
-          const edit = state.candidateEditsBySentence.get(key) || {
-            text: String(original?.text || ""),
-            spokenText: String(original?.spokenText || original?.text || ""),
-            focusChar: String(original?.focusChar || ""),
-          };
-          edit[field] = event.target.value;
-          state.candidateEditsBySentence.set(key, edit);
+          const draft = state.candidateDraftsBySentence.get(key) || candidateDraft(choice, index);
+          draft[field] = event.target.value;
+          state.candidateDraftsBySentence.set(key, draft);
           state.selectedChoiceId = choiceId;
-          const editedSentence = choice ? candidateSentence(choice, index) : null;
-          const row = event.target.closest(".sentence-row");
-          if (editedSentence && row) {
-            const textNode = row.querySelector(".sentence-text");
-            const pills = row.querySelectorAll(".sentence-meta .pill");
-            if (textNode) textNode.textContent = editedSentence.text;
-            if (pills[0]) pills[0].textContent = `spoken: ${editedSentence.spokenText}`;
-            if (pills[1]) pills[1].textContent = `focus: ${editedSentence.focusChar}`;
-          }
-          savePlannerMemory(model);
-          updateOutput(model);
+          savePlannerMemory();
         }
         if (event.target.matches("[data-draft-choice][data-field]")) {
           const choiceId = event.target.dataset.draftChoice;

@@ -1,10 +1,111 @@
 [
   {
+    "char": "高",
+    "zhuyin": "ㄍㄠ",
+    "priority": 8,
+    "why": "Concrete adjective that contrasts with 大、小 and combines naturally with 山上、山下、水、你、我 after 在.",
+    "requires": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在"
+    ],
+    "sentenceCandidates": [
+      {
+        "text": "高山上有水",
+        "spokenText": "高山上有水",
+        "focusChar": "高",
+        "reason": "Reviews 山上、有、水 with the new adjective."
+      },
+      {
+        "text": "你在高山上",
+        "spokenText": "你在高山上",
+        "focusChar": "高",
+        "reason": "Reviews 你、在、山上 with a clear location."
+      },
+      {
+        "text": "我在高山下",
+        "spokenText": "我在高山下",
+        "focusChar": "高",
+        "reason": "Reviews 我、在、山下 and contrasts with 高山."
+      },
+      {
+        "text": "高高的山下有水",
+        "spokenText": "高高的山下有水",
+        "focusChar": "高",
+        "reason": "Uses 的 in a concrete mountain-water scene."
+      },
+      {
+        "text": "你我在高山下",
+        "spokenText": "你我在高山下",
+        "focusChar": "高",
+        "reason": "Reviews fixed 你 and 我 together near a high mountain."
+      },
+      {
+        "text": "高山下有三個人",
+        "spokenText": "高山下有三個人",
+        "focusChar": "高",
+        "reason": "Reviews 三個人 and location under the mountain."
+      },
+      {
+        "text": "水在高高的山上",
+        "spokenText": "水在高高的山上",
+        "focusChar": "高",
+        "reason": "Reviews 水、在、的、山上 in a highly imageable scene."
+      },
+      {
+        "text": "我有高高的山",
+        "spokenText": "我有高高的山",
+        "focusChar": "高",
+        "reason": "Short possession sentence with repeated 高."
+      },
+      {
+        "text": "高山上有一個人",
+        "spokenText": "高山上有一個人",
+        "focusChar": "高",
+        "reason": "Reviews 一個人 and mountain-top location."
+      },
+      {
+        "text": "你在高高的山下",
+        "spokenText": "你在高高的山下",
+        "focusChar": "高",
+        "reason": "Reviews 你、在、的、山下 in a simple location sentence."
+      }
+    ]
+  },
+  {
     "char": "下",
     "zhuyin": "ㄒㄧㄚˋ",
     "priority": 10,
     "why": "Pairs naturally with 上 and 山, unlocking mountain up/down location and movement.",
-    "requires": ["一", "二", "三", "人", "個", "大", "的", "小", "手", "我", "有", "山", "上"],
+    "requires": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上"
+    ],
     "sentenceCandidates": [
       {
         "text": "我一個人下山",
@@ -43,7 +144,19 @@
     "zhuyin": "ㄕㄨㄟˇ",
     "priority": 20,
     "why": "Concrete, imageable noun that combines well with 山、手、有、上.",
-    "requires": ["一", "人", "個", "大", "的", "小", "手", "我", "有", "山", "上"],
+    "requires": [
+      "一",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上"
+    ],
     "sentenceCandidates": [
       {
         "text": "我有水",
@@ -82,7 +195,23 @@
     "zhuyin": "ㄗㄞˋ",
     "priority": 25,
     "why": "Useful location/existence character that combines naturally with 山上、山下、水、你、我.",
-    "requires": ["一", "三", "人", "個", "大", "的", "小", "手", "我", "有", "山", "上", "下", "你", "水"],
+    "requires": [
+      "一",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水"
+    ],
     "sentenceCandidates": [
       {
         "text": "你在山上有水",
@@ -121,7 +250,18 @@
     "zhuyin": "ㄋㄧˇ",
     "priority": 30,
     "why": "Adds a second-person child role and starts simple interpersonal sentence patterns.",
-    "requires": ["一", "人", "個", "大", "的", "小", "手", "有", "山", "上"],
+    "requires": [
+      "一",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "有",
+      "山",
+      "上"
+    ],
     "sentenceCandidates": [
       {
         "text": "你一個人",
@@ -154,7 +294,18 @@
     "zhuyin": "ㄑㄩˋ",
     "priority": 40,
     "why": "Unlocks simple movement/action sentences with 我、人、山上.",
-    "requires": ["一", "三", "人", "個", "大", "小", "我", "有", "山", "上"],
+    "requires": [
+      "一",
+      "三",
+      "人",
+      "個",
+      "大",
+      "小",
+      "我",
+      "有",
+      "山",
+      "上"
+    ],
     "sentenceCandidates": [
       {
         "text": "我去山上",
@@ -187,7 +338,16 @@
     "zhuyin": "ㄐㄧㄚ",
     "priority": 50,
     "why": "High-value family/home character; useful before later family roles.",
-    "requires": ["一", "三", "人", "個", "大", "小", "我", "有"],
+    "requires": [
+      "一",
+      "三",
+      "人",
+      "個",
+      "大",
+      "小",
+      "我",
+      "有"
+    ],
     "sentenceCandidates": [
       {
         "text": "我家有三個人",
@@ -214,7 +374,18 @@
     "zhuyin": "ㄊㄚ",
     "priority": 60,
     "why": "Adds third-person reference after 我 and before broader character stories.",
-    "requires": ["一", "人", "個", "大", "的", "小", "手", "有", "山", "上"],
+    "requires": [
+      "一",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "有",
+      "山",
+      "上"
+    ],
     "sentenceCandidates": [
       {
         "text": "他一個人",
