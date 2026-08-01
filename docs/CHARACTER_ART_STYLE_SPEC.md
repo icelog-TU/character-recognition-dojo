@@ -321,5 +321,6 @@ Production note:
 - The approved contact sheet was used for family style review.
 - Some prototype assets were initially cut from the contact sheet, which exposed crop-safety problems on phone review.
 - `cat-younger-brother.webp` was regenerated as an individual image because the contact-sheet crop had edge artifacts.
+- The first cat-family prototype crops have now been replaced by 9 separately generated individual character images.
 - The contact-sheet-cropping method is retired. Future species must use contact sheets only for review, then generate final assets as separate one-character images.
 - Future species should use the approved cat family as the style reference, generate one role per final image, and review in small batches.
