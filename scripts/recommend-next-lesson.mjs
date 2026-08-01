@@ -5,6 +5,7 @@ import { getEnv, getSecretEnv } from "./lib/env.mjs";
 const curriculumPath = path.resolve("src/curriculum/sample-lessons.json");
 const bankPath = path.resolve("curriculum-workflow/next-character-bank.json");
 const defaultOutputDir = path.resolve("curriculum-workflow/recommendations");
+const sentenceLengthRange = { min: 4, max: 12 };
 
 function parseArgs(argv) {
   const args = {};
@@ -51,6 +52,10 @@ function recentReviewPool(lessons) {
   );
 }
 
+function previousLessonNewChars(lessons, count) {
+  return unique(lastLessons(lessons, count).flatMap((lesson) => lesson.newChars ?? []));
+}
+
 function forbiddenChars(candidate, allowedChars) {
   const allowed = new Set(allowedChars);
   return unique(hanChars(candidate.text).filter((char) => !allowed.has(char)));
@@ -64,7 +69,15 @@ function cleanLocalSentences(sentences, allowedChars) {
       focusChar: String(sentence.focusChar ?? ""),
       reason: String(sentence.reason ?? ""),
     }))
-    .filter((sentence) => sentence.text && forbiddenChars(sentence, allowedChars).length === 0);
+    .filter((sentence) => {
+      const length = hanChars(sentence.text).length;
+      return (
+        sentence.text &&
+        forbiddenChars(sentence, allowedChars).length === 0 &&
+        length >= sentenceLengthRange.min &&
+        length <= sentenceLengthRange.max
+      );
+    });
 }
 
 function scoreCandidate(entry, learnedChars, recentPool) {
@@ -105,7 +118,7 @@ function buildLocalRecommendations({ bank, learnedChars, recentPool, count }) {
     .slice(0, count);
 }
 
-function buildAiPrompt({ lesson, learnedChars, recentPool, recommendations }) {
+function buildAiPrompt({ lesson, learnedChars, recentPool, requiredRecentChars, recommendations }) {
   const recentSentences = lastLessons(lesson.previousLessons, 5)
     .flatMap((item) => item.sentences?.map((sentence) => sentence.text) ?? [])
     .slice(-24);
@@ -121,6 +134,9 @@ ${learnedChars.join(" ")}
 
 Recent review pool:
 ${recentPool.join(" ")}
+
+Required previous-three-lesson new characters:
+${requiredRecentChars.join(" ")}
 
 Recent reviewed sentences:
 ${recentSentences.map((sentence) => `- ${sentence}`).join("\n")}
@@ -138,8 +154,10 @@ Strict rules:
 - No Hanyu pinyin.
 - For each candidate, display text may use only already taught characters plus that candidate new character.
 - Do not introduce any other Han character.
+- Each sentence should be ${sentenceLengthRange.min}-${sentenceLengthRange.max} Han characters long, ignoring punctuation.
 - Keep sentences concrete, imageable, and appropriate for young children.
-- Prefer reviewing recent characters naturally.
+- Prefer reviewing recent characters naturally, especially characters from the previous five lessons.
+- Across each candidate's sentence set, include every required previous-three-lesson new character at least once.
 - spokenText omits punctuation but must not omit any Han character shown in text.
 - Avoid unnatural phrases such as 二個人.
 - Return 4 to 6 sentence candidates per character if possible.
@@ -182,7 +200,7 @@ function parseJsonText(text) {
   }
 }
 
-async function refineWithAi({ review, lesson, learnedChars, recentPool }) {
+async function refineWithAi({ review, lesson, learnedChars, recentPool, requiredRecentChars }) {
   const apiKey = getSecretEnv("OPENAI_API_KEY");
   if (!apiKey) return { used: false, reason: "OPENAI_API_KEY is not set." };
 
@@ -207,6 +225,7 @@ async function refineWithAi({ review, lesson, learnedChars, recentPool }) {
             lesson,
             learnedChars,
             recentPool,
+            requiredRecentChars,
             recommendations: review.recommendations,
           }),
         },
@@ -241,6 +260,8 @@ function markdownForReview(review) {
   blocks.push(`Generated: ${review.generatedAt}`);
   blocks.push(`Current learned characters: ${review.learnedChars.join(" ")}`);
   blocks.push(`Recent review pool: ${review.recentReviewPool.join(" ")}`);
+  blocks.push(`Required previous-three-lesson new characters: ${review.requiredRecentChars.join(" ")}`);
+  blocks.push(`Sentence length target: ${sentenceLengthRange.min}-${sentenceLengthRange.max} Han characters`);
   blocks.push("");
   blocks.push("## How To Use");
   blocks.push("");
@@ -283,6 +304,7 @@ const id = lessonId(order);
 const previousLessons = lessons.filter((lesson) => lesson.order < order);
 const learnedChars = unique(previousLessons.flatMap((lesson) => lesson.newChars ?? []));
 const recentPool = recentReviewPool(previousLessons);
+const requiredRecentChars = previousLessonNewChars(previousLessons, 3);
 const recommendations = buildLocalRecommendations({ bank, learnedChars, recentPool, count });
 
 const review = {
@@ -291,6 +313,8 @@ const review = {
   generatedAt: new Date().toISOString(),
   learnedChars,
   recentReviewPool: recentPool,
+  requiredRecentChars,
+  sentenceLengthRange,
   ai: { used: false, reason: noAi ? "Disabled with --no-ai." : "Not run yet." },
   recommendations,
   approval: {
@@ -308,6 +332,7 @@ if (!noAi && recommendations.length > 0) {
       lesson: { id, order, previousLessons },
       learnedChars,
       recentPool,
+      requiredRecentChars,
     });
   } catch (error) {
     review.ai = { used: false, reason: error.message };
