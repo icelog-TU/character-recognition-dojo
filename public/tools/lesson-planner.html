@@ -745,6 +745,7 @@
       const targetApprovedSentenceCount = 5;
       const targetGeneratedSentenceCount = 10;
       const fallbackZhuyinByChar = {
+        和: "ㄏㄜˊ",
         很: "ㄏㄣˇ",
       };
       const $ = (id) => document.getElementById(id);
@@ -880,7 +881,7 @@
             priority: 5 + index,
             why: entry.why || "Teacher-added next character.",
             requires: [],
-            sentenceCandidates: [],
+            sentenceCandidates: entry.sentenceCandidates || [],
             source: "manual",
           }));
         const recommendations = [...manualEntries, ...bankEntries]
@@ -1082,7 +1083,10 @@
                           <div></div>
                           <div>
                             <div class="sentence-text">還沒有候選句</div>
-                            <p>可以自己新增句子；也可以先送出給 Codex，請 Codex 依 4-12 字、近 5 課優先、近 3 課必用的規則產生候選句。</p>
+                            <p>可以按下面按鈕立刻產生 10 句候選句，再逐句修改；也可以自己新增句子。</p>
+                            <div class="candidate-tools">
+                              <button class="btn" type="button" data-generate-candidates="${choice.choiceId}">生成 10 句候選句</button>
+                            </div>
                           </div>
                         </div>`
                   }
@@ -1185,6 +1189,75 @@
 
       function rawCandidateSentence(choice, sentenceIndex) {
         return choice.sentenceCandidates[sentenceIndex] || null;
+      }
+
+      function templateSentencesForChar(char) {
+        if (char === "和") {
+          return [
+            "你和我在家",
+            "我和你在家",
+            "你和我在山上",
+            "我和你在山下",
+            "你和我在水上",
+            "我和你在水下",
+            "我的家和你的家",
+            "大人和小人在山下",
+            "三個人和你在家",
+            "你和我有一個家",
+          ];
+        }
+        return [
+          `${char}在家`,
+          `我有${char}`,
+          `你有${char}`,
+          `${char}在山上`,
+          `${char}在山下`,
+          `${char}在水上`,
+          `大大的${char}`,
+          `小小的${char}`,
+          `你和我有${char}`,
+          `有一個${char}在家`,
+        ];
+      }
+
+      function generatedSentenceCandidates(choice, model) {
+        const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
+        const allowed = new Set(allowedChars);
+        const char = choice.newChars[0];
+        const candidates = templateSentencesForChar(char)
+          .map((text) => ({
+            text,
+            spokenText: normalizeSpokenText(text),
+            focusChar: hanChars(text).includes(char) ? char : resolveFocusChar(text, char, choice),
+            reason: "Generated in the planner for teacher review and editing.",
+          }))
+          .filter((sentence) => {
+            const chars = hanChars(sentence.text);
+            return (
+              chars.length >= sentenceLengthRange.min &&
+              chars.length <= sentenceLengthRange.max &&
+              chars.every((candidateChar) => allowed.has(candidateChar)) &&
+              chars.includes(char)
+            );
+          });
+        const seen = new Set();
+        return candidates.filter((sentence) => {
+          if (seen.has(sentence.text)) return false;
+          seen.add(sentence.text);
+          return true;
+        }).slice(0, targetGeneratedSentenceCount);
+      }
+
+      function replaceManualChoiceCandidates(choice, candidates) {
+        const char = choice.newChars[0];
+        state.manualChoices = state.manualChoices.map((entry) =>
+          entry.char === char ? { ...entry, sentenceCandidates: candidates } : entry,
+        );
+        state.selectedIndexes.set(choice.choiceId, new Set());
+        state.candidateEditingKeys = new Set([...state.candidateEditingKeys].filter((key) => !key.startsWith(`${choice.choiceId}:`)));
+        state.candidateDraftsBySentence = new Map([...state.candidateDraftsBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
+        state.candidateEditsBySentence = new Map([...state.candidateEditsBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
+        state.imageNotesBySentence = new Map([...state.imageNotesBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
       }
 
       function candidateSentence(choice, sentenceIndex) {
@@ -1414,6 +1487,12 @@
             char: hanChars(String(item?.char || "")).join("").slice(0, 1),
             zhuyin: String(item?.zhuyin || "").trim(),
             why: String(item?.why || "").trim(),
+            sentenceCandidates: (item?.sentenceCandidates || []).map((sentence) => ({
+              text: String(sentence?.text || ""),
+              spokenText: normalizeSpokenText(sentence?.spokenText || sentence?.text || ""),
+              focusChar: String(sentence?.focusChar || ""),
+              reason: String(sentence?.reason || ""),
+            })),
           }))
           .filter((item) => {
             if (!item.char || !item.zhuyin || learned.has(item.char) || seen.has(item.char)) return false;
@@ -1708,6 +1787,27 @@
           savePlannerMemory(nextModel);
           render(nextModel);
           $("statusLine").textContent = `已加入自選字「${char}」，已移到上方。`;
+          scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        const generateCandidatesButton = event.target.closest("[data-generate-candidates]");
+        if (generateCandidatesButton) {
+          const choiceId = generateCandidatesButton.dataset.generateCandidates;
+          const model = currentModel();
+          const choice = choiceById(choiceId);
+          if (!choice) return;
+          const candidates = generatedSentenceCandidates(choice, model);
+          if (candidates.length === 0) {
+            $("statusLine").textContent = `目前已學字還不夠，無法替「${choice.newChars.join("")}」產生可用候選句。`;
+            return;
+          }
+          replaceManualChoiceCandidates(choice, candidates);
+          state.selectedChoiceId = choiceId;
+          state.previewChoiceId = choiceId;
+          savePlannerMemory(currentModel());
+          render(currentModel());
+          $("statusLine").textContent = `已替「${choice.newChars.join("")}」生成 ${candidates.length} 句候選句，可以逐句修改。`;
           scrollSelectedChoiceIntoView();
           return;
         }
