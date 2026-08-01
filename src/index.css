@@ -1711,7 +1711,19 @@ button.char-token {
   }
 
   .picture-sentence-card .sentence-card {
-    width: min(100%, 560px);
+    width: min(100%, 720px);
+  }
+
+  .picture-sentence-card .sentence-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px 5px;
+  }
+
+  .picture-sentence-card .sentence-line-row {
+    display: contents;
   }
 }
 
@@ -2620,6 +2632,24 @@ button.char-token {
     min-height: 38px;
     padding: 7px 10px;
     font-size: 0.86rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 780px) {
+  .picture-sentence-card .sentence-card {
+    width: min(100%, 720px);
+  }
+
+  .picture-sentence-card .sentence-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px 5px;
+  }
+
+  .picture-sentence-card .sentence-line-row {
+    display: contents;
   }
 }
 
