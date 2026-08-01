@@ -3031,7 +3031,7 @@ function playMissChime() {
 function getRecordingDingAudioUrl() {
   if (recordingDingAudioUrl) return recordingDingAudioUrl;
   const sampleRate = 44100;
-  const durationSeconds = 1.08;
+  const durationSeconds = 0.82;
   const sampleCount = Math.floor(sampleRate * durationSeconds);
   const headerBytes = 44;
   const buffer = new ArrayBuffer(headerBytes + sampleCount * 2);
@@ -3052,12 +3052,13 @@ function getRecordingDingAudioUrl() {
 
   for (let index = 0; index < sampleCount; index += 1) {
     const t = index / sampleRate;
-    const firstTone = Math.sin(2 * Math.PI * 880 * t);
-    const secondTone = Math.sin(2 * Math.PI * 1320 * t);
-    const upperTone = Math.sin(2 * Math.PI * 1760 * t);
-    const envelope = Math.min(1, t / 0.035) * Math.min(1, (durationSeconds - t) / 0.16);
-    const gap = t > 0.34 && t < 0.4 ? 0.18 : 1;
-    const value = (firstTone * 0.52 + secondTone * 0.34 + upperTone * 0.14) * envelope * gap * 0.82;
+    const firstBell = Math.sin(2 * Math.PI * 659.25 * t) * Math.exp(-4.1 * t);
+    const secondBellStart = Math.max(0, t - 0.18);
+    const secondBell = Math.sin(2 * Math.PI * 987.77 * secondBellStart) * Math.exp(-5.2 * secondBellStart);
+    const shimmer = Math.sin(2 * Math.PI * 1318.51 * t) * Math.exp(-6.4 * t);
+    const attack = Math.min(1, t / 0.028);
+    const release = Math.min(1, (durationSeconds - t) / 0.14);
+    const value = (firstBell * 0.52 + secondBell * 0.38 + shimmer * 0.1) * attack * release * 0.46;
     view.setInt16(headerBytes + index * 2, Math.max(-1, Math.min(1, value)) * 0x7fff, true);
   }
 
@@ -3119,7 +3120,7 @@ function playRecordingDingAudio() {
       finish(false);
     };
     void audio.play().then(() => {
-      window.setTimeout(() => finish(true), 1080);
+      window.setTimeout(() => finish(true), 820);
     }).catch(() => {
       window.clearTimeout(fallbackTimer);
       finish(false);
@@ -3136,14 +3137,14 @@ async function playRecordingReadyDing() {
       // Keep recording usable even if the browser refuses the Web Audio cue.
     }
   }
-  if (navigator.vibrate) navigator.vibrate([70, 35, 110]);
+  if (navigator.vibrate) navigator.vibrate(35);
   playToneSequence([
-    { frequency: 784, endFrequency: 988, duration: 0.36, gain: 0.2 },
-    { frequency: 988, endFrequency: 1318, duration: 0.46, gain: 0.22, delay: 0.38 },
-    { frequency: 1568, endFrequency: 1568, duration: 0.34, gain: 0.12, delay: 0.48 },
+    { frequency: 659, endFrequency: 784, duration: 0.22, gain: 0.08 },
+    { frequency: 988, endFrequency: 1175, duration: 0.26, gain: 0.075, delay: 0.16 },
+    { frequency: 1318, endFrequency: 1318, duration: 0.28, gain: 0.035, delay: 0.34 },
   ]);
   const mediaDingPlayed = await playRecordingDingAudio();
-  if (!mediaDingPlayed) await waitMs(1080);
+  if (!mediaDingPlayed) await waitMs(820);
 }
 
 function playCelebrateChime() {
