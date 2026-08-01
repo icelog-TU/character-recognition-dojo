@@ -104,6 +104,7 @@ The nine characters in a species must clearly feel like one family:
 - Consistent eye style, muzzle style, ear shape, and body proportions.
 - Role differences shown by age, size, expression, and small accessories.
 - Accessories should be readable on a phone but not visually noisy.
+- Clothing and accessory colors should rotate across species. Keep role cues recognizable, but do not lock every role to the same colors in every species. For example, grandma should not always use a purple shawl, older brother should not always use a blue cap/green top, and younger sister should not always use a pink dress. Stay within the approved warm, gentle app palette while changing the color assignments from species to species.
 
 Suggested role cues:
 
@@ -145,6 +146,7 @@ Create one collectible character image for a children's Chinese character recogn
 Character: {SPECIES}{ROLE}
 Design: the character is a cute {SPECIES} itself, not a human in a costume. It belongs to a 9-member {SPECIES} family.
 Role cue: {ROLE_CUE}
+Color cue: {COLOR_CUE}. Use the approved warm, gentle palette, but vary clothing and accessory colors across species so the same family role does not always repeat the same colors.
 Style: Warm children's picture-book illustration matching the existing 認字練功房 lesson images: soft watercolor texture, gentle colored pencil linework, rounded cute character shapes, friendly expressive eyes, warm cream background, bright but gentle colors, clear centered full-body subject, generous empty space, phone-readable details.
 Composition: square image, one complete full-body character, centered, occupying about 68-78% of the image height. Keep generous blank warm-cream background around the whole character. Ears, tail, raised hands, paws, feet, clothing, toy, and accessories must all be fully visible and must not touch any image edge. No crop damage.
 Restrictions: No text, letters, numbers, zhuyin, signs, labels, UI, watermark. Not 3D, not plastic toy, not sticker, not flat vector icon, not realistic, not anime, no thick black outline, no cluttered background.
@@ -161,6 +163,7 @@ Show these 9 family roles in order: 爺爺, 奶奶, 爸爸, 媽媽, 哥哥, 姐�
 Each character should be a cute {SPECIES} itself, not a human in a costume.
 The family must share the same species design, color family, eye style, muzzle style, and soft watercolor picture-book style.
 Each role must be visually distinguishable by age, size, expression, and one simple accessory.
+Vary clothing and accessory colors from previous species while staying in the same warm, gentle app palette. Do not repeat the exact same role color assignments across every species.
 Important: this is a review contact sheet only, not a source for cropping final assets. Keep every character fully visible inside its own grid area with generous spacing, but final individual images will be generated separately.
 
 Style: Warm children's picture-book illustration matching the existing 認字練功房 lesson images: soft watercolor texture, gentle colored pencil linework, rounded cute character shapes, friendly expressive eyes, warm cream background, bright but gentle colors, clear centered full-body subjects, generous empty space, phone-readable details.

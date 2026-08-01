@@ -124,6 +124,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "land-cat-youngerBrother": "/assets/characters/land/cat/cat-younger-brother.webp",
   "land-cat-youngerSister": "/assets/characters/land/cat/cat-younger-sister.webp",
   "land-cat-baby": "/assets/characters/land/cat/cat-baby.webp",
+  "land-dog-grandpa": "/assets/characters/land/dog/dog-grandpa.webp",
+  "land-dog-grandma": "/assets/characters/land/dog/dog-grandma.webp",
+  "land-dog-dad": "/assets/characters/land/dog/dog-father.webp",
+  "land-dog-mom": "/assets/characters/land/dog/dog-mother.webp",
+  "land-dog-olderBrother": "/assets/characters/land/dog/dog-older-brother.webp",
+  "land-dog-olderSister": "/assets/characters/land/dog/dog-older-sister.webp",
+  "land-dog-youngerBrother": "/assets/characters/land/dog/dog-younger-brother.webp",
+  "land-dog-youngerSister": "/assets/characters/land/dog/dog-younger-sister.webp",
+  "land-dog-baby": "/assets/characters/land/dog/dog-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [

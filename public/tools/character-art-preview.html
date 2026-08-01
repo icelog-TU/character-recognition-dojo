@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>角色圖片預覽｜認字練功房</title>
+    <title>角色圖片預覽</title>
     <style>
       :root {
         color: #3b2d22;
@@ -37,7 +37,6 @@
 
       header {
         display: grid;
-        grid-template-columns: minmax(0, 1fr);
         gap: 10px;
         margin-bottom: 18px;
       }
@@ -57,7 +56,8 @@
         line-height: 1.6;
       }
 
-      .toolbar {
+      .toolbar,
+      .species-tabs {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -65,13 +65,24 @@
         margin: 18px 0;
       }
 
-      .pill {
+      .pill,
+      .species-tab {
         border: 1px solid #f0c98b;
         border-radius: 999px;
         background: #fff;
         color: #775035;
         padding: 8px 12px;
         font-weight: 800;
+      }
+
+      .species-tab {
+        cursor: pointer;
+      }
+
+      .species-tab.active {
+        border-color: #df5b41;
+        color: #9d3e28;
+        box-shadow: 0 0 0 2px rgba(223, 91, 65, 0.16);
       }
 
       .preview-layout {
@@ -124,6 +135,7 @@
       .character-card small {
         color: #8a6a53;
         font-weight: 700;
+        line-height: 1.35;
       }
 
       .detail-panel {
@@ -185,29 +197,31 @@
   <body>
     <main>
       <header>
-        <h1>貓家族角色圖片預覽</h1>
+        <h1>收藏角色圖片預覽</h1>
         <p>這裡是美術審核用頁面，不會改變正式 app 的轉蛋、金幣、星星或收藏進度。</p>
       </header>
 
-      <div class="toolbar" aria-label="預覽資訊">
+      <div class="toolbar" aria-label="角色資訊">
         <span class="pill">地上的生物</span>
-        <span class="pill">貓家族</span>
+        <span class="pill" id="speciesNamePill">貓家族</span>
         <span class="pill">9 個角色</span>
       </div>
 
+      <div class="species-tabs" id="speciesTabs" aria-label="切換家族"></div>
+
       <section class="preview-layout">
-        <div class="character-grid" id="characterGrid" aria-label="貓家族角色列表"></div>
+        <div class="character-grid" id="characterGrid" aria-label="角色圖片預覽"></div>
         <aside class="detail-panel" aria-live="polite">
           <img id="detailImage" alt="" />
           <h2 id="detailTitle"></h2>
           <p id="detailDescription"></p>
           <dl>
             <dt>物種</dt>
-            <dd>貓</dd>
+            <dd id="detailSpecies"></dd>
             <dt>用途</dt>
             <dd>角色收藏、轉蛋結果、角色個人頁</dd>
             <dt>狀態</dt>
-            <dd>第一批通過風格測試的 prototype 資產</dd>
+            <dd>已接入正式收藏角色資產</dd>
           </dl>
         </aside>
       </section>
@@ -217,55 +231,107 @@
       const pageBase = window.location.pathname.includes("/character-recognition-dojo/")
         ? "/character-recognition-dojo/"
         : "/";
-      const basePath = `${pageBase}assets/characters/land/cat/`;
-      const characters = [
-        ["cat-grandpa.webp", "貓爺爺", "溫和的貓爺爺，有圍巾、背心和小拐杖。"],
-        ["cat-grandma.webp", "貓奶奶", "溫柔的貓奶奶，有小眼鏡和披肩。"],
-        ["cat-father.webp", "貓爸爸", "穩重的貓爸爸，穿藍色襯衫。"],
-        ["cat-mother.webp", "貓媽媽", "親切的貓媽媽，有圍裙和柔和外套。"],
-        ["cat-older-brother.webp", "貓哥哥", "活潑的貓哥哥，有帽子和背包。"],
-        ["cat-older-sister.webp", "貓姐姐", "開朗的貓姐姐，有蝴蝶結和小包包。"],
-        ["cat-younger-brother.webp", "貓弟弟", "小小的貓弟弟，穿吊帶褲，拿著玩具。"],
-        ["cat-younger-sister.webp", "貓妹妹", "可愛的貓妹妹，穿粉色裙子。"],
-        ["cat-baby.webp", "貓寶寶", "最小的貓寶寶，坐著穿小圍兜。"],
-      ];
 
+      const speciesData = {
+        cat: {
+          label: "貓家族",
+          species: "貓",
+          basePath: `${pageBase}assets/characters/land/cat/`,
+          characters: [
+            ["cat-grandpa.webp", "貓爺爺", "溫和的貓爺爺，有圍巾、背心和小拐杖。"],
+            ["cat-grandma.webp", "貓奶奶", "溫柔的貓奶奶，有小眼鏡和披肩。"],
+            ["cat-father.webp", "貓爸爸", "穩重的貓爸爸，穿藍色襯衫。"],
+            ["cat-mother.webp", "貓媽媽", "親切的貓媽媽，有圍裙和柔和外套。"],
+            ["cat-older-brother.webp", "貓哥哥", "活潑的貓哥哥，有帽子和背包。"],
+            ["cat-older-sister.webp", "貓姐姐", "開朗的貓姐姐，有蝴蝶結和小包包。"],
+            ["cat-younger-brother.webp", "貓弟弟", "小小的貓弟弟，穿吊帶褲，拿著玩具。"],
+            ["cat-younger-sister.webp", "貓妹妹", "可愛的貓妹妹，穿粉色裙子。"],
+            ["cat-baby.webp", "貓寶寶", "最小的貓寶寶，坐著穿小圍兜。"],
+          ],
+        },
+        dog: {
+          label: "狗家族",
+          species: "狗",
+          basePath: `${pageBase}assets/characters/land/dog/`,
+          characters: [
+            ["dog-grandpa.webp", "狗爺爺", "溫和的狗爺爺，有橄欖綠圍巾、棕色背心和小拐杖。"],
+            ["dog-grandma.webp", "狗奶奶", "溫柔的狗奶奶，有小眼鏡、青綠披肩和蜜桃色衣服。"],
+            ["dog-father.webp", "狗爸爸", "穩重的狗爸爸，穿柔和綠襯衫和棕色褲子。"],
+            ["dog-mother.webp", "狗媽媽", "親切的狗媽媽，有薰衣草外套和溫暖圍裙。"],
+            ["dog-older-brother.webp", "狗哥哥", "活潑的狗哥哥，有珊瑚色帽子、藍色上衣和背包。"],
+            ["dog-older-sister.webp", "狗姐姐", "開朗的狗姐姐，有薄荷色蝴蝶結和小包包。"],
+            ["dog-younger-brother.webp", "狗弟弟", "小小的狗弟弟，穿綠色吊帶褲，拿著玩具車。"],
+            ["dog-younger-sister.webp", "狗妹妹", "可愛的狗妹妹，穿藍色裙子和黃色蝴蝶結。"],
+            ["dog-baby.webp", "狗寶寶", "最小的狗寶寶，坐著穿薄荷色小圍兜。"],
+          ],
+        },
+      };
+
+      const speciesTabs = document.querySelector("#speciesTabs");
+      const speciesNamePill = document.querySelector("#speciesNamePill");
       const grid = document.querySelector("#characterGrid");
       const detailImage = document.querySelector("#detailImage");
       const detailTitle = document.querySelector("#detailTitle");
       const detailDescription = document.querySelector("#detailDescription");
+      const detailSpecies = document.querySelector("#detailSpecies");
+      let activeSpeciesId = new URLSearchParams(window.location.search).get("species") || "cat";
+      let activeCharacterIndex = 0;
 
       function selectCharacter(index) {
-        const [fileName, title, description] = characters[index];
-        detailImage.src = `${basePath}${fileName}`;
+        const data = speciesData[activeSpeciesId];
+        const [fileName, title, description] = data.characters[index];
+        activeCharacterIndex = index;
+        detailImage.src = `${data.basePath}${fileName}`;
         detailTitle.textContent = title;
         detailDescription.textContent = description;
+        detailSpecies.textContent = data.species;
         document.querySelectorAll(".character-card").forEach((button, buttonIndex) => {
           button.classList.toggle("active", buttonIndex === index);
         });
       }
 
-      characters.forEach(([fileName, title, description], index) => {
+      function renderSpecies(speciesId) {
+        activeSpeciesId = speciesData[speciesId] ? speciesId : "cat";
+        activeCharacterIndex = 0;
+        const data = speciesData[activeSpeciesId];
+        speciesNamePill.textContent = data.label;
+        grid.replaceChildren();
+        data.characters.forEach(([fileName, title, description], index) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "character-card";
+          button.addEventListener("click", () => selectCharacter(index));
+
+          const image = document.createElement("img");
+          image.src = `${data.basePath}${fileName}`;
+          image.alt = "";
+
+          const name = document.createElement("strong");
+          name.textContent = title;
+
+          const note = document.createElement("small");
+          note.textContent = description;
+
+          button.append(image, name, note);
+          grid.append(button);
+        });
+        document.querySelectorAll(".species-tab").forEach((button) => {
+          button.classList.toggle("active", button.dataset.speciesId === activeSpeciesId);
+        });
+        selectCharacter(activeCharacterIndex);
+      }
+
+      Object.entries(speciesData).forEach(([speciesId, data]) => {
         const button = document.createElement("button");
         button.type = "button";
-        button.className = "character-card";
-        button.addEventListener("click", () => selectCharacter(index));
-
-        const image = document.createElement("img");
-        image.src = `${basePath}${fileName}`;
-        image.alt = "";
-
-        const name = document.createElement("strong");
-        name.textContent = title;
-
-        const note = document.createElement("small");
-        note.textContent = description;
-
-        button.append(image, name, note);
-        grid.append(button);
+        button.className = "species-tab";
+        button.dataset.speciesId = speciesId;
+        button.textContent = data.label;
+        button.addEventListener("click", () => renderSpecies(speciesId));
+        speciesTabs.append(button);
       });
 
-      selectCharacter(0);
+      renderSpecies(activeSpeciesId);
     </script>
   </body>
 </html>
