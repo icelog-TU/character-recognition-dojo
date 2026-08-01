@@ -350,6 +350,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "sea-blowfish-youngerBrother": "/assets/characters/sea/blowfish/blowfish-younger-brother.webp",
   "sea-blowfish-youngerSister": "/assets/characters/sea/blowfish/blowfish-younger-sister.webp",
   "sea-blowfish-baby": "/assets/characters/sea/blowfish/blowfish-baby.webp",
+  "sea-jellyfish-grandpa": "/assets/characters/sea/jellyfish/jellyfish-grandpa.webp",
+  "sea-jellyfish-grandma": "/assets/characters/sea/jellyfish/jellyfish-grandma.webp",
+  "sea-jellyfish-dad": "/assets/characters/sea/jellyfish/jellyfish-father.webp",
+  "sea-jellyfish-mom": "/assets/characters/sea/jellyfish/jellyfish-mother.webp",
+  "sea-jellyfish-olderBrother": "/assets/characters/sea/jellyfish/jellyfish-older-brother.webp",
+  "sea-jellyfish-olderSister": "/assets/characters/sea/jellyfish/jellyfish-older-sister.webp",
+  "sea-jellyfish-youngerBrother": "/assets/characters/sea/jellyfish/jellyfish-younger-brother.webp",
+  "sea-jellyfish-youngerSister": "/assets/characters/sea/jellyfish/jellyfish-younger-sister.webp",
+  "sea-jellyfish-baby": "/assets/characters/sea/jellyfish/jellyfish-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
