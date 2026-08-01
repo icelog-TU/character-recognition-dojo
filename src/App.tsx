@@ -232,6 +232,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "land-monkey-youngerBrother": "/assets/characters/land/monkey/monkey-younger-brother.webp",
   "land-monkey-youngerSister": "/assets/characters/land/monkey/monkey-younger-sister.webp",
   "land-monkey-baby": "/assets/characters/land/monkey/monkey-baby.webp",
+  "land-hedgehog-grandpa": "/assets/characters/land/hedgehog/hedgehog-grandpa.webp",
+  "land-hedgehog-grandma": "/assets/characters/land/hedgehog/hedgehog-grandma.webp",
+  "land-hedgehog-dad": "/assets/characters/land/hedgehog/hedgehog-father.webp",
+  "land-hedgehog-mom": "/assets/characters/land/hedgehog/hedgehog-mother.webp",
+  "land-hedgehog-olderBrother": "/assets/characters/land/hedgehog/hedgehog-older-brother.webp",
+  "land-hedgehog-olderSister": "/assets/characters/land/hedgehog/hedgehog-older-sister.webp",
+  "land-hedgehog-youngerBrother": "/assets/characters/land/hedgehog/hedgehog-younger-brother.webp",
+  "land-hedgehog-youngerSister": "/assets/characters/land/hedgehog/hedgehog-younger-sister.webp",
+  "land-hedgehog-baby": "/assets/characters/land/hedgehog/hedgehog-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
