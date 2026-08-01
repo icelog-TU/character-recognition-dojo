@@ -178,6 +178,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "land-squirrel-youngerBrother": "/assets/characters/land/squirrel/squirrel-younger-brother.webp",
   "land-squirrel-youngerSister": "/assets/characters/land/squirrel/squirrel-younger-sister.webp",
   "land-squirrel-baby": "/assets/characters/land/squirrel/squirrel-baby.webp",
+  "land-panda-grandpa": "/assets/characters/land/panda/panda-grandpa.webp",
+  "land-panda-grandma": "/assets/characters/land/panda/panda-grandma.webp",
+  "land-panda-dad": "/assets/characters/land/panda/panda-father.webp",
+  "land-panda-mom": "/assets/characters/land/panda/panda-mother.webp",
+  "land-panda-olderBrother": "/assets/characters/land/panda/panda-older-brother.webp",
+  "land-panda-olderSister": "/assets/characters/land/panda/panda-older-sister.webp",
+  "land-panda-youngerBrother": "/assets/characters/land/panda/panda-younger-brother.webp",
+  "land-panda-youngerSister": "/assets/characters/land/panda/panda-younger-sister.webp",
+  "land-panda-baby": "/assets/characters/land/panda/panda-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
