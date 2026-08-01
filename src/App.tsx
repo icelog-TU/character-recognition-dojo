@@ -1363,11 +1363,11 @@ function CatalogSlotGrid({
             style={{ "--slot-color": slot.group.color } as CSSProperties}
             disabled={locked}
             onClick={() => lesson && onSelect(lesson.order)}
-            aria-label={revealed && lesson && entry ? `第 ${slot.slotNumber} 字，第 ${lesson.order} 課，${entry.char}` : `第 ${slot.slotNumber} 字，未解鎖`}
+            aria-label={revealed && lesson && entry ? `字序第 ${slot.slotNumber} 字，課程第 ${lesson.order} 課，${entry.char}` : `字序第 ${slot.slotNumber} 字，未解鎖`}
           >
-            <span>#{slotCode}</span>
+            <span>字序 #{slotCode}</span>
             <strong>{revealed && entry ? entry.char : "?"}</strong>
-            <small>{revealed && lesson ? `第 ${lesson.order} 課` : "未解鎖"}</small>
+            <small>{revealed && lesson ? `課程第${lesson.order}課` : "未解鎖"}</small>
           </button>
         );
       })}
