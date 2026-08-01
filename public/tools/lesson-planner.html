@@ -728,7 +728,7 @@
 
       <section class="panel manual-choice-panel" aria-labelledby="manualChoiceTitle">
         <h2 id="manualChoiceTitle">自選下一課字</h2>
-        <p class="help">候選清單沒有你想教的字時，可以自己加入。若先不填句子，送出後會請 Codex 依規則產生候選句。</p>
+        <p class="help">候選清單沒有你想教的字時，可以自己加入。按下後會先依近五課與句長規則自我審核，再把 10 句候選句放到上面讓你修改。</p>
         <div class="manual-grid">
           <div class="manual-field">
             <label for="manualChar">新字</label>
@@ -742,7 +742,7 @@
             <label for="manualWhy">理由</label>
             <input id="manualWhy" inputmode="text" placeholder="想練習位置和存在句。" />
           </div>
-          <button class="btn" id="addManualChoiceBtn" type="button">加入候選字</button>
+          <button class="btn" id="addManualChoiceBtn" type="button">加入並自審 10 句</button>
         </div>
       </section>
 
@@ -793,6 +793,7 @@
       const fallbackZhuyinByChar = {
         和: "ㄏㄜˊ",
         很: "ㄏㄣˇ",
+        是: "ㄕˋ",
       };
       const $ = (id) => document.getElementById(id);
 
@@ -888,7 +889,7 @@
         const places = [];
         const things = [];
         const targetPhrases = [];
-        const nonObjectChars = new Set(["在", "上", "下", "很", "高", "和", "看", "去", "來", "飛", "中", "前", "後", "裡", "左", "右"]);
+        const nonObjectChars = new Set(["在", "上", "下", "很", "高", "和", "看", "去", "來", "飛", "是", "中", "前", "後", "裡", "左", "右"]);
         const zhiMeasureTargets = new Set(["鳥", "手", "指"]);
         const geMeasureTargets = new Set(["家", "門", "山", "人"]);
         const objectLike = !nonObjectChars.has(targetChar);
@@ -965,6 +966,49 @@
         };
       }
 
+      function generatedSpecificPatternPool(choice, allowedChars) {
+        const targetChar = choice.newChars[0];
+        const pool = [];
+        const seen = new Set();
+        const add = (text, reason = "自我審核通過：功能字句型，語意具體，容易配圖。", focusChar = targetChar) =>
+          addSentenceCandidate(pool, seen, text, choice, allowedChars, reason, focusChar);
+
+        if (targetChar === "是") {
+          [
+            "門前的是男孩",
+            "門後的是女孩",
+            "飛的是一隻鳥",
+            "山上的是小鳥",
+            "水上的是小鳥",
+            "我看的是小鳥",
+            "你看的是男孩",
+            "我家是高山上的家",
+            "我是女孩",
+            "你是男孩",
+            "男孩是小孩",
+            "女孩是小孩",
+            "男人是大人",
+            "女人是大人",
+            "大人是人",
+            "小孩是人",
+            "小鳥是鳥",
+            "飛鳥是鳥",
+            "一隻飛鳥是鳥",
+            "高山是山",
+            "小家是家",
+            "我家是小家",
+            "前門是門",
+            "後門是門",
+            "門前是高山",
+            "門後是水",
+            "男孩和女孩是小孩",
+            "你和我是小孩",
+          ].forEach((text) => add(text));
+        }
+
+        return pool;
+      }
+
       function addSentenceCandidate(pool, seen, text, choice, allowedChars, reason, focusChar = "") {
         const normalized = normalizeSpokenText(text);
         if (!sentenceAllowed(text, allowedChars) || seen.has(text)) return;
@@ -983,6 +1027,10 @@
         const pool = [];
         const seen = new Set();
         const add = (text, reason, focusChar = targetChar) => addSentenceCandidate(pool, seen, text, choice, allowedChars, reason, focusChar);
+
+        for (const sentence of generatedSpecificPatternPool(choice, allowedChars)) {
+          add(sentence.text, sentence.reason, sentence.focusChar);
+        }
 
         if (includeTargetPatterns) {
           for (const targetPhrase of bank.targetPhrases) {
@@ -1006,20 +1054,25 @@
           }
         }
 
-        const recentReviewSentences = lastLessons(model.lessons, 5)
-          .flatMap((lesson) => lesson.sentences || [])
-          .map((sentence) => sentence.text)
-          .filter((text) => sentenceAllowed(text, allowedChars));
-        for (const text of recentReviewSentences) {
-          add(text, "直接取自近五課已核准句，作為複習候選。", resolveFocusChar(text, "", choice));
+        const targetBearingCount = pool.filter((sentence) => hanChars(sentence.text).includes(targetChar)).length;
+        if (targetBearingCount < targetGeneratedSentenceCount) {
+          const recentReviewSentences = lastLessons(model.lessons, 5)
+            .flatMap((lesson) => lesson.sentences || [])
+            .map((sentence) => sentence.text)
+            .filter((text) => sentenceAllowed(text, allowedChars));
+          for (const text of recentReviewSentences) {
+            add(text, "直接取自近五課已核准句，作為複習候選。", resolveFocusChar(text, "", choice));
+          }
         }
 
         return pool;
       }
 
       function badSentencePenalty(text) {
-        const badPatterns = ["二個", "來家", "去家", "飛在家上", "大門在家下", "小鳥飛在家上"];
-        return badPatterns.some((pattern) => text.includes(pattern)) ? 80 : 0;
+        const badPatterns = ["二個", "來家", "去家", "飛在家上", "大門在家下", "小鳥飛在家上", "有是", "是有", "和是", "是和", "在是"];
+        const weakButAllowedPatterns = ["前門是門", "後門是門", "小鳥是鳥", "飛鳥是鳥", "高山是山", "小家是家"];
+        if (badPatterns.some((pattern) => text.includes(pattern))) return 80;
+        return weakButAllowedPatterns.some((pattern) => text.includes(pattern)) ? 90 : 0;
       }
 
       function sentenceQuality(sentence, context) {
@@ -1219,20 +1272,23 @@
         const requiredRecentChars = previousRequiredChars(lessons, planned, 3);
         const reviewCountChars = recentLessonNewChars(lessons, planned, 5);
         const bankEntries = data.nextCharacterBank || [];
-        const bankChars = new Set(bankEntries.map((entry) => entry.char));
         const manualChoiceChars = new Set(state.manualChoices.map((entry) => entry.char));
         const manualEntries = state.manualChoices
-          .filter((entry) => entry.char && !bankChars.has(entry.char))
+          .filter((entry) => entry.char)
           .map((entry, index) => ({
-            char: entry.char,
-            zhuyin: entry.zhuyin,
+            ...(bankEntries.find((bankEntry) => bankEntry.char === entry.char) || {}),
+            ...entry,
+            zhuyin: entry.zhuyin || bankEntries.find((bankEntry) => bankEntry.char === entry.char)?.zhuyin || "",
             priority: 5 + index,
-            why: entry.why || "教師自行新增的下一課字。",
+            why: entry.why || bankEntries.find((bankEntry) => bankEntry.char === entry.char)?.why || "教師自行新增的下一課字。",
             requires: [],
-            sentenceCandidates: entry.sentenceCandidates || [],
+            sentenceCandidates:
+              entry.sentenceCandidates?.length
+                ? entry.sentenceCandidates
+                : bankEntries.find((bankEntry) => bankEntry.char === entry.char)?.sentenceCandidates || [],
             source: "manual",
           }));
-        const recommendations = [...manualEntries, ...bankEntries]
+        const recommendations = [...manualEntries, ...bankEntries.filter((entry) => !manualChoiceChars.has(entry.char))]
           .map((entry) => {
             const optimization = optimizeChoiceSentencesFromEntry(entry, {
               lessons,
@@ -1251,7 +1307,15 @@
               score: manualChoiceChars.has(entry.char) ? score - 10000 : score,
               source: entry.source || "bank",
               optimization,
-              sentenceCandidates: optimization.candidates,
+              sentenceCandidates:
+                entry.source === "manual"
+                  ? optimization.candidates.map((sentence) => ({
+                      ...sentence,
+                      reason: sentence.reason.startsWith("自我審核通過")
+                        ? sentence.reason
+                        : `自我審核通過：${sentence.reason}`,
+                    }))
+                  : optimization.candidates,
             };
           })
           .filter(Boolean)
@@ -1727,6 +1791,7 @@
           <span class="optimizer-pill ${targetOk ? "" : "warning"}">${targetChar} ${metrics.targetCount}/${targetNewCharCountInLesson} 次</span>
           <span class="optimizer-pill ${reviewOk ? (reviewPending ? "pending" : "") : "warning"}">近五課 ${metrics.reviewCovered.length}/${model.reviewCountChars.length}</span>
           <span class="optimizer-pill ${requiredOk ? (requiredPending ? "pending" : "") : "warning"}">近三課 ${metrics.requiredCovered.length}/${model.requiredRecentChars.length}</span>
+          ${choice.source === "manual" ? `<span class="optimizer-pill">已自審排序</span>` : ""}
           <span class="optimizer-pill">候選池 ${choice.optimization.poolSize || choice.sentenceCandidates.length} 句</span>
           ${hardMissingReview.length ? `<span class="optimizer-pill warning">缺：${hardMissingReview.join("、")}</span>` : ""}
           ${hardMissingRequired.length ? `<span class="optimizer-pill warning">近三課缺：${hardMissingRequired.join("、")}</span>` : ""}
@@ -2208,12 +2273,13 @@
             return;
           }
           const existingChoiceId = `choice-${char}`;
-          if (model.recommendations.some((choice) => choice.choiceId === existingChoiceId)) {
+          const alreadyManual = state.manualChoices.some((entry) => entry.char === char);
+          if (alreadyManual && model.recommendations.some((choice) => choice.choiceId === existingChoiceId)) {
             state.previewChoiceId = existingChoiceId;
             state.manualDraft = { char: "", zhuyin: "", why: "" };
             savePlannerMemory(model);
             render(model);
-            $("statusLine").textContent = `「${char}」已經在候選清單，已展開句子。`;
+            $("statusLine").textContent = `「${char}」已經在自選清單，已展開自審句子。`;
             scrollSelectedChoiceIntoView();
             return;
           }
@@ -2224,9 +2290,12 @@
           state.previewChoiceId = existingChoiceId;
           state.manualDraft = { char: "", zhuyin: "", why: "" };
           const nextModel = currentModel();
+          const newChoice = nextModel.recommendations.find((choice) => choice.choiceId === existingChoiceId);
           savePlannerMemory(nextModel);
           render(nextModel);
-          $("statusLine").textContent = `已加入自選字「${char}」，已移到上方。`;
+          $("statusLine").textContent = newChoice?.sentenceCandidates?.length
+            ? `已加入自選字「${char}」，並從候選池 ${newChoice.optimization?.poolSize || newChoice.sentenceCandidates.length} 句自審出 ${newChoice.sentenceCandidates.length} 句。`
+            : `已加入自選字「${char}」，但目前已學字還不足，暫時沒有可用候選句。`;
           scrollSelectedChoiceIntoView();
           return;
         }
