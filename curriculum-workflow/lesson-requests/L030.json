@@ -1,0 +1,133 @@
+{
+  "order": 30,
+  "newChars": [
+    "也"
+  ],
+  "zhuyin": {
+    "也": "ㄧㄝˇ"
+  },
+  "title": "也",
+  "dependsOnLessons": [
+    {
+      "order": 29,
+      "lessonId": "L029",
+      "newChars": [
+        "後"
+      ],
+      "title": "後",
+      "status": "merged-to-main-before-l030-production"
+    }
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也"
+    ],
+    "provisionalLearnedChars": [],
+    "preferReviewChars": [
+      "小",
+      "女",
+      "孩",
+      "在",
+      "看",
+      "一",
+      "隻",
+      "鳥",
+      "人",
+      "的",
+      "手",
+      "指",
+      "有",
+      "大",
+      "家",
+      "山",
+      "上",
+      "你",
+      "和",
+      "我",
+      "三",
+      "飛",
+      "很",
+      "高",
+      "男",
+      "門",
+      "前",
+      "後"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "門",
+      "前",
+      "後"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-也。 L029 後已合併 main，因此本課可正式製作。 核准句子：我在門後，你也在門後；男孩在看門前的飛鳥；門前有男也有女；小鳥在飛，男人也在飛；人前有鳥，人後也有鳥。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：小 女 孩 在 看 一 隻 鳥 人 的 手 指 有 大 家 山 上 你 和 我 三 飛 很 高 男 門 前 後。 整課句子中，最近三課新字至少各出現一次：門 前 後。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "approvedSentences": [
+    {
+      "text": "我在門後，你也在門後",
+      "spokenText": "我在門後你也在門後",
+      "focusChar": "也",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "男孩在看門前的飛鳥",
+      "spokenText": "男孩在看門前的飛鳥",
+      "focusChar": "男",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "門前有男也有女",
+      "spokenText": "門前有男也有女",
+      "focusChar": "也",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "小鳥在飛，男人也在飛",
+      "spokenText": "小鳥在飛男人也在飛",
+      "focusChar": "也",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "人前有鳥，人後也有鳥",
+      "spokenText": "人前有鳥人後也有鳥",
+      "focusChar": "也",
+      "reason": "教師新增句。"
+    }
+  ]
+}
