@@ -3762,7 +3762,12 @@ function SentencePracticePreview({
 
     return (
       <>
-        <SentenceCard sentence={sentence} zhuyinMap={zhuyinMap} activeCharIndex={null} />
+        <SentenceCard
+          sentence={sentence}
+          zhuyinMap={zhuyinMap}
+          activeCharIndex={null}
+          className="stage-four-sentence-card"
+        />
         <PronunciationChoiceGrid
           options={shuffledGameOptions}
           disabled={disabled}
@@ -4081,15 +4086,17 @@ function SentenceCard({
   sentence,
   zhuyinMap,
   activeCharIndex,
+  className,
 }: {
   sentence: LessonSentence;
   zhuyinMap: Map<string, string>;
   activeCharIndex: number | null;
+  className?: string;
 }) {
   let hanIndex = -1;
   const displayLines = sentence.displayLines?.length ? sentence.displayLines : [sentence.text];
   return (
-    <div className="sentence-card">
+    <div className={`sentence-card${className ? ` ${className}` : ""}`}>
       <div className="sentence-line" aria-label={sentence.text}>
         {displayLines.map((line, lineIndex) => (
           <div key={`${sentence.id}-line-${lineIndex}`} className="sentence-line-row">
