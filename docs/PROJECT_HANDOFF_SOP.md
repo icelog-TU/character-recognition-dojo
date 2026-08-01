@@ -21,10 +21,10 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L009
-- L009 introduces `山`.
+- Current reviewed lessons: L001-L011
+- L011 introduces `下`.
 - Sentence games planned start: around L011 as Stage 4
-- L001-L010 should stay with the simpler three-block flow: listen, find, picture sentence.
+- L001-L011 currently use the simpler three-block flow: listen, find, picture sentence.
 
 ## Multi-Codex Collaboration SOP
 
@@ -345,12 +345,13 @@ Before planning any new lesson:
 3. Confirm recent review pool from the previous 4-5 lessons.
 4. Add only the current new character(s).
 5. Draft sentences using only already taught characters plus current new character(s).
-6. Prefer natural Taiwan usage.
-7. Prefer concrete, imageable sentences.
-8. Avoid forced combinations that sound strange.
-9. Check whether new sentences can reuse approved images or recurring cast members.
-10. Decide if `displayLines` is needed for phone layout.
-11. Do not generate final image/audio before parent/teacher approval.
+6. If the user proposes a sentence with a Han character that has not been taught and is not the current new character, stop and identify the unlearned character before generating assets or editing production curriculum.
+7. Prefer natural Taiwan usage.
+8. Prefer concrete, imageable sentences.
+9. Avoid forced combinations that sound strange.
+10. Check whether new sentences can reuse approved images or recurring cast members.
+11. Decide if `displayLines` is needed for phone layout.
+12. Do not generate final image/audio before parent/teacher approval.
 
 AI-generated sentences are always drafts. The parent/teacher must approve every sentence before it enters `src/curriculum/sample-lessons.json`.
 
@@ -367,6 +368,8 @@ Reviewed:
 - L007: `我`
 - L008: `有`
 - L009: `山`
+- L010: `上`
+- L011: `下`
 
 L006 sentences:
 
@@ -399,6 +402,22 @@ L009 sentences:
 - 我一個人的山
 - 三個人的大手小手
 - 我有小小的手
+
+L010 sentences:
+
+- 我一個人上山
+- 山上有三個大人
+- 我的手小小的
+- 我的手上有一個小人
+- 有大大的山，有小小的山
+
+L011 sentences:
+
+- 有三個人上山
+- 有一個人下山
+- 我的手下有三個小山
+- 山下有一個大人
+- 有一大二小的手
 
 ## File Map
 
@@ -468,8 +487,8 @@ Sentence text is horizontal, with zhuyin vertically on the right of each Han cha
 Curriculum sentence audio must use AI audio files with charTimings.
 Production charTimings must use npm run assets:align:ai, then manual playback review.
 Guide narration may use TTS.
-L001-L009 are reviewed and built.
-L009 introduces 山 and uses production AI audio alignment.
+L001-L011 are reviewed and built.
+L011 introduces 下 and uses production AI audio alignment.
 L007 introduces a fixed young girl character for 我.
 Sentence games should start around L011 as Stage 4, not before, and should not replace picture-supported sentence listening.
 ```
