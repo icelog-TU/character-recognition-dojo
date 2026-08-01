@@ -48,7 +48,7 @@ Rules:
 - `newChars` lists the character or characters introduced by this lesson. Most lessons introduce one character; seed lessons may introduce several.
 - `zhuyin` uses Taiwan zhuyin only and must include an entry for every `newChars` item.
 - `charAudio` maps each new character to its reviewed single-character AI audio file. During prototype work this may be omitted and the app will use a TTS fallback.
-- `originHint` is optional.
+- `originHint` is optional internal curriculum metadata. It must not appear in the child-facing lesson practice UI unless a separate reviewed child-safe design is explicitly built.
 - `requiredRounds` controls block 3 sentence-game rounds. Blocks 1 and 2 have fixed completion behavior.
 
 ## Sentence

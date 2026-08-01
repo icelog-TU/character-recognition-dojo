@@ -99,7 +99,7 @@ Each lesson has:
 - `zhuyin`: Taiwan zhuyin only. No Hanyu pinyin in the main product.
 - `sentences`: reviewed practice strings that use only previously learned characters plus the lesson new character(s).
 - `requiredRounds`: how many sentence game rounds are needed to complete block 3.
-- optional `originHint`: pictograph or etymology aid, displayed only when available and safely licensed.
+- optional `originHint`: internal curriculum metadata for planning/handoff. Do not display it in the child-facing lesson practice UI unless a separate reviewed child-safe design is explicitly built.
 
 For the first ten lessons, there may not be enough characters to support real sentence games. Those lessons should use picture-supported sentence preview first. Sentence games are currently planned to start around lesson 11 as a fourth stage after picture-supported listening, not as a replacement for picture-supported listening.
 

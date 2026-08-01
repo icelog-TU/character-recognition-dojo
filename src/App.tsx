@@ -2120,7 +2120,6 @@ function LessonPanel({
         >
           {hearPrompt}
         </NarrationLine>
-        {lesson.originHint && <div className="origin-note">{lesson.originHint.text}</div>}
       </LessonBlock>
 
       {soundUnlocked && activeStage === 1 && (
