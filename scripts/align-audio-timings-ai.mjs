@@ -45,6 +45,7 @@ function normalizeTranscribedHanChar(char) {
     ["只", "隻"],
     ["鸟", "鳥"],
     ["飞", "飛"],
+    ["门", "門"],
   ]);
   return map.get(char) ?? char;
 }

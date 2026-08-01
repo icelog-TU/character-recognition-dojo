@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 25:
+Characters taught after Lesson 27:
 
-`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛`
+`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門`
 
 Recent review pool for the next lesson:
 
-`飛 女 看 鳥 指 孩 一 隻 小 在 高 手 大 家 你 的 上 很`
+`大 人 和 小 孩 看 三 隻 鳥 手 指 上 的 一 山 我 家 在 女 有 你 飛 很 高 男 門`
 
 ## Visual Continuity Ledger
 
@@ -72,10 +72,11 @@ Image reuse rule:
 | L024 | 女 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女 | 小女孩在看一隻小鳥 / 女孩看女人的手指 / 有一隻手指在指女孩 / 大家在山上看鳥 / 你和我的三隻小鳥 | 小孩看一隻鳥人在手指有大家山上你和我的三 | Introduces `女` through girl and woman scenes. Reviews recent `孩`, `指`, and `看`; reuses approved L023-S05 image for `大家在山上看鳥` and approved L020-S03 image/audio for `你和我的三隻小鳥`. |
 | L025 | 飛 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛 | 女孩在看鳥飛 / 一隻小鳥在女孩的手指上 / 大家在看女孩 / 你看！小鳥飛很高 / 女孩的手在指一隻飛鳥 | 女孩在看鳥一隻小的手指上大家你很高 | Introduces `飛` through flying-bird scenes. Reviews recent `指`, `看`, and `女`; all five sentence images use newly generated reviewed picture-book assets. |
 | L026 | 男 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男 | 小男孩在看男人飛 / 小男孩的手指很小 / 男孩和女孩在看鳥飛 / 女孩看女人的手指 / 女孩的手在指一隻飛鳥 | 小孩在看人飛的手指很和女鳥一隻 | Introduces `男` through the fixed boy and adult man scenes. Reviews recent `看`, `女`, and `飛`; creates new images for the first three sentences and reuses approved L024-S02 and L025-S05 images for review sentences. |
+| L027 | 門 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門 | 女人的門和男人的門 / 你看！一隻小鳥飛上門 / 男孩手指有飛鳥的門 / 女孩在看鳥飛 / 男孩看女人的手指 | 女人男人和你看一隻小鳥飛上男孩手指有的 | Introduces `門` through doors, door-top placement, and a flying-bird door decoration. Reviews recent `女`, `飛`, and `男`; reuses approved L025-S01 image for `女孩在看鳥飛` and creates new images for the other four sentences. |
 
 ## Planned Lessons
 
-L026 已選定並完成：新字 `男`；審核句子為 `小男孩在看男人飛`、`小男孩的手指很小`、`男孩和女孩在看鳥飛`、`女孩看女人的手指`、`女孩的手在指一隻飛鳥`。
+L027 已選定並完成：新字 `門`；審核句子為 `女人的門和男人的門`、`你看！一隻小鳥飛上門`、`男孩手指有飛鳥的門`、`女孩在看鳥飛`、`男孩看女人的手指`。
 
 ## Planning Rule For New Lessons
 
@@ -99,7 +100,7 @@ Use this shape when asking AI to draft sentence candidates:
 We are building a Taiwan zhuyin character recognition app for young children.
 
 Already taught characters:
-一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛
+一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門
 
 New character for this lesson:
 {NEW_CHARACTER}
@@ -110,7 +111,7 @@ Rules:
 - No Hanyu pinyin.
 - No punctuation in spokenText.
 - Prefer concrete, imageable sentences.
-- Reuse characters from the recent review pool when natural: 飛 女 看 鳥 指 孩 一 隻 小 在 高 手 大 家 你 的 上 很
+- Reuse characters from the recent review pool when natural: 大 人 和 小 孩 看 三 隻 鳥 手 指 上 的 一 山 我 家 在 女 有 你 飛 很 高 男 門
 - Keep each sentence 4-12 Han characters long, ignoring punctuation.
 - Across the sentence set, include the previous 3 lesson new characters at least once.
 - Keep the sentence set short if the character set cannot support natural variety.

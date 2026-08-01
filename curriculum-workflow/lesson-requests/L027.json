@@ -1,0 +1,133 @@
+{
+  "order": 27,
+  "newChars": [
+    "門"
+  ],
+  "zhuyin": {
+    "門": "ㄇㄣˊ"
+  },
+  "title": "門",
+  "dependsOnLessons": [
+    {
+      "order": 26,
+      "lessonId": "L026",
+      "newChars": [
+        "男"
+      ],
+      "title": "男",
+      "status": "merged-to-main-before-l027-production"
+    }
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門"
+    ],
+    "provisionalLearnedChars": [
+      "男"
+    ],
+    "preferReviewChars": [
+      "一",
+      "個",
+      "小",
+      "孩",
+      "和",
+      "隻",
+      "鳥",
+      "在",
+      "家",
+      "的",
+      "手",
+      "很",
+      "大",
+      "上",
+      "有",
+      "三",
+      "指",
+      "山",
+      "水",
+      "人",
+      "看",
+      "我",
+      "女",
+      "你",
+      "飛",
+      "高",
+      "男"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "女",
+      "飛",
+      "男"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-門。 平行備課依賴：本課假設 L026 會加入 男；製作 L027 時已確認 L026 已合併到 main，且已重新匯出 planner-data。 核准句子：女人的門和男人的門；你看！一隻小鳥飛上門；男孩手指有飛鳥的門；女孩在看鳥飛；男孩看女人的手指。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：一 個 小 孩 和 隻 鳥 在 家 的 手 很 大 上 有 三 指 山 水 人 看 我 女 你 飛 高 男。 整課句子中，最近三課新字至少各出現一次：女 飛 男。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "approvedSentences": [
+    {
+      "text": "女人的門和男人的門",
+      "spokenText": "女人的門和男人的門",
+      "focusChar": "門",
+      "reason": "教師修改候選句。複習小大和。",
+      "imageNotes": "廁所的門口顯示的是女人的門和男人的門。"
+    },
+    {
+      "text": "你看！一隻小鳥飛上門",
+      "spokenText": "你看一隻小鳥飛上門",
+      "focusChar": "門",
+      "reason": "教師修改候選句。複習一隻鳥。"
+    },
+    {
+      "text": "男孩手指有飛鳥的門",
+      "spokenText": "男孩手指有飛鳥的門",
+      "focusChar": "門",
+      "reason": "教師修改候選句。複習三個。",
+      "imageNotes": "男孩用手指着一扇門，門上有飛鳥的圖案。"
+    },
+    {
+      "text": "女孩在看鳥飛",
+      "spokenText": "女孩在看鳥飛",
+      "focusChar": "女",
+      "reason": "直接取自近五課已核准句，作為複習候選。"
+    },
+    {
+      "text": "男孩看女人的手指",
+      "spokenText": "男孩看女人的手指",
+      "focusChar": "男",
+      "reason": "教師修改候選句。直接取自近五課已核准句，作為複習候選。"
+    }
+  ]
+}
