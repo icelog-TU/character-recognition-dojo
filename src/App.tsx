@@ -250,6 +250,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "land-horse-youngerBrother": "/assets/characters/land/horse/horse-younger-brother.webp",
   "land-horse-youngerSister": "/assets/characters/land/horse/horse-younger-sister.webp",
   "land-horse-baby": "/assets/characters/land/horse/horse-baby.webp",
+  "sea-dolphin-grandpa": "/assets/characters/sea/dolphin/dolphin-grandpa.webp",
+  "sea-dolphin-grandma": "/assets/characters/sea/dolphin/dolphin-grandma.webp",
+  "sea-dolphin-dad": "/assets/characters/sea/dolphin/dolphin-father.webp",
+  "sea-dolphin-mom": "/assets/characters/sea/dolphin/dolphin-mother.webp",
+  "sea-dolphin-olderBrother": "/assets/characters/sea/dolphin/dolphin-older-brother.webp",
+  "sea-dolphin-olderSister": "/assets/characters/sea/dolphin/dolphin-older-sister.webp",
+  "sea-dolphin-youngerBrother": "/assets/characters/sea/dolphin/dolphin-younger-brother.webp",
+  "sea-dolphin-youngerSister": "/assets/characters/sea/dolphin/dolphin-younger-sister.webp",
+  "sea-dolphin-baby": "/assets/characters/sea/dolphin/dolphin-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
