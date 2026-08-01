@@ -2813,6 +2813,33 @@ button.char-token {
   text-align: center;
 }
 
+.character-detail-main .creature-avatar.large {
+  width: clamp(190px, 58vw, 280px);
+  border-width: 3px;
+  box-shadow: 0 14px 28px rgba(49, 38, 24, 0.14);
+}
+
+.character-detail-main .creature-avatar.large .creature-icon {
+  font-size: clamp(5rem, 20vw, 8rem);
+}
+
+.character-detail-main .creature-avatar.large .family-badge {
+  right: 8px;
+  bottom: 8px;
+  min-width: 36px;
+  min-height: 36px;
+  border-width: 3px;
+  font-size: 0.95rem;
+}
+
+.character-detail-main .creature-avatar.large .mood-badge {
+  right: 14px;
+  top: 8px;
+  border-width: 3px;
+  padding: 5px;
+  font-size: 1.15rem;
+}
+
 .character-detail-main h2 {
   margin: 2px 0 6px;
   font-size: 1.45rem;
