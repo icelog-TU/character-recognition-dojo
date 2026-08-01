@@ -1861,6 +1861,21 @@ button.char-token {
   text-align: center;
 }
 
+.teach-character-panel.teach-priming {
+  border-color: var(--primary);
+  background: #f2fbf8;
+}
+
+.teach-character-panel.teach-recording {
+  border-color: #d94735;
+  background: #fff1ee;
+  box-shadow: 0 0 0 5px rgba(217, 71, 53, 0.14);
+}
+
+.teach-character-panel.teach-recording strong {
+  color: #b43124;
+}
+
 .teach-target-char {
   display: grid;
   place-items: center;

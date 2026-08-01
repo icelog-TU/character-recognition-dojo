@@ -518,6 +518,7 @@ let activeAudioTick: (() => void) | null = null;
 let activeAudioFinish: ((kind: "ended" | "error") => void) | null = null;
 let activeTtsFinish: (() => void) | null = null;
 let ttsPausedByApp = false;
+let toneAudioContext: AudioContext | null = null;
 const playbackListeners = new Set<(state: PlaybackStatus) => void>();
 const PROGRESS_STORAGE_KEY = "character-recognition-dojo-progress-v1";
 
@@ -2972,8 +2973,8 @@ function playMissChime() {
 
 function playDingChime() {
   playToneSequence([
-    { frequency: 1568, endFrequency: 1568, duration: 0.45, gain: 0.09 },
-    { frequency: 3136, endFrequency: 3136, duration: 0.55, gain: 0.045 },
+    { frequency: 1568, endFrequency: 1568, duration: 0.24, gain: 0.12 },
+    { frequency: 3136, endFrequency: 3136, duration: 0.3, gain: 0.06 },
   ]);
 }
 
@@ -3031,10 +3032,8 @@ function playRewardChime() {
 function playToneSequence(
   notes: Array<{ frequency: number; endFrequency: number; duration: number; gain: number; delay?: number }>,
 ) {
-  const audioWindow = window as AudioWindow;
-  const AudioContextClass = audioWindow.AudioContext || audioWindow.webkitAudioContext;
-  if (!AudioContextClass) return;
-  const context = new AudioContextClass();
+  const context = ensureToneAudioContext();
+  if (!context) return;
   for (const note of notes) {
     const startTime = context.currentTime + (note.delay ?? 0);
     const gain = context.createGain();
@@ -3050,6 +3049,15 @@ function playToneSequence(
     oscillator.start(startTime);
     oscillator.stop(startTime + note.duration + 0.02);
   }
+}
+
+function ensureToneAudioContext() {
+  const audioWindow = window as AudioWindow;
+  const AudioContextClass = audioWindow.AudioContext || audioWindow.webkitAudioContext;
+  if (!AudioContextClass) return null;
+  toneAudioContext ??= new AudioContextClass();
+  if (toneAudioContext.state === "suspended") void toneAudioContext.resume();
+  return toneAudioContext;
 }
 
 function SentencePracticePreview({
@@ -3193,7 +3201,7 @@ function SentencePracticePreview({
     if (!game || !sentence) return;
     const timing = sentence.audio?.charTimings.find((item) => item.charIndex === targetIndex);
     setTeachPhase("reading");
-    await speakStageFour(`我是小兔子。我要來念這個句子囉。`);
+    await speakStageFour("小兔子說，我要來念念看這句話。");
     if (guideRunRef.current !== runId) return;
     if (sentence.audio?.src && timing) {
       await playAudioRange(sentence.audio.src, 0, timing.startMs, {
@@ -3203,10 +3211,14 @@ function SentencePracticePreview({
       await playSpokenText(han.slice(0, targetIndex).join(""));
     }
     if (guideRunRef.current !== runId) return;
+    await waitMs(520);
+    if (guideRunRef.current !== runId) return;
     setActiveGameCharIndex(null);
     setAskingGameCharIndex(targetIndex);
     setTeachPhase("asking");
-    await speakStageFour("嗚嗚嗚，這個字我不會念。你可以教我嗎？請按住這個字，念給我聽。");
+    await speakStageFour("哇！這個字我不會念，請教我念。");
+    if (guideRunRef.current !== runId) return;
+    await speakStageFour(`請按住這個字，等叮一聲之後，大聲念出「${game.targetChar}」。`);
     if (guideRunRef.current !== runId) return;
     setTeachPhase("ready");
   }
@@ -3317,6 +3329,16 @@ function SentencePracticePreview({
       }
       void handleTeachRecordingDone(url);
     };
+    playDingChime();
+    await waitMs(320);
+    if (releasedDuringPrimeRef.current) {
+      stream.getTracks().forEach((track) => track.stop());
+      recordingStreamRef.current = null;
+      setFloatingRecordChar(null);
+      setTeachPhase("ready");
+      await speakStageFour("還沒開始錄音喔。要按住等叮一聲，再大聲念給小兔子聽。");
+      return;
+    }
     setRecording(true);
     setTeachPhase("recording");
     setRecordingGameCharIndex(targetIndex);
@@ -3334,17 +3356,17 @@ function SentencePracticePreview({
   async function handleTeachPressStart(index: number) {
     if (disabled || roundComplete || game.type !== "teach-character") return;
     if (index !== targetIndex || teachPhase !== "ready" || recording || mediaRecorderRef.current?.state === "recording") return;
+    ensureToneAudioContext();
     releasedDuringPrimeRef.current = false;
     setTeachPhase("priming");
     setFloatingRecordChar(game.targetChar);
-    await speakStageFour(`聽到叮一聲後，請念出這個字。`);
+    await speakStageFour("請按住不要放開。等叮一聲之後，大聲念出這個字。");
     if (releasedDuringPrimeRef.current) {
       setFloatingRecordChar(null);
       setTeachPhase("ready");
-      await speakStageFour("要按住等到叮一聲，再念給小兔子聽。");
+      await speakStageFour("還沒叮喔。要按住等叮一聲，再念給小兔子聽。");
       return;
     }
-    playDingChime();
     await startRecordingAfterDing();
   }
 
@@ -3362,7 +3384,7 @@ function SentencePracticePreview({
     setTeachPhase("reciting");
     setAskingGameCharIndex(null);
     setActiveGameCharIndex(null);
-    await speakStageFour("謝謝你教我。我來試試看，你聽聽看。");
+    await speakStageFour("我聽到了，謝謝你教我。我來試試看，你聽聽看。");
     if (sentence.audio?.src && timing) {
       await playAudioRange(sentence.audio.src, 0, timing.startMs, {
         onTime: (elapsedMs) => setActiveGameCharIndex(activeTimingIndex(sentence, elapsedMs)),
@@ -3418,7 +3440,7 @@ function SentencePracticePreview({
             onCharPressStart={handleTeachPressStart}
             onCharPressEnd={handleTeachPressEnd}
           />
-          <div className="teach-character-panel">
+          <div className={`teach-character-panel teach-${teachPhase}`}>
             <strong>{teachPhaseText(teachPhase, game.targetChar)}</strong>
             <span className="teach-target-char">{game.targetChar}</span>
           </div>
@@ -3496,12 +3518,12 @@ function gameGuideText(game: SentenceGame, sentence: LessonSentence, teachPhase:
   }
   if (game.type === "teach-character") {
     if (teachPhase === "ready" || teachPhase === "priming" || teachPhase === "recording") {
-      return `小兔子說，我不會念這個字。請按住「${game.targetChar}」，等叮一聲，再念給我聽。`;
+      return `小兔子說，我不會念這個字。請按住「${game.targetChar}」，不要放開。聽到叮一聲之後，大聲念出來。`;
     }
     if (teachPhase === "reciting") {
       return `小兔子正在用你教的聲音，把句子念完。`;
     }
-    return `小兔子要念句子，牠會卡在不會念的字，請你幫牠。`;
+    return `小兔子要念念看這句話。牠會卡在不會念的字，請你幫牠。`;
   }
   if (game.type === "missing-character") {
     return `小兔子說，字寶寶不見了。請幫我把「${game.targetChar}」找回來。`;
@@ -3515,11 +3537,11 @@ function gameGuideText(game: SentenceGame, sentence: LessonSentence, teachPhase:
 function teachPhaseText(phase: TeachCharacterPhase, char: string) {
   if (phase === "reading") return "小兔子正在念句子。";
   if (phase === "asking") return "小兔子卡住了。";
-  if (phase === "priming") return "請按住，等叮一聲。";
-  if (phase === "recording") return "錄音中，念出這個字，念完放開。";
+  if (phase === "priming") return "請按住不要放開，等叮一聲。";
+  if (phase === "recording") return `錄音中！大聲念「${char}」，念完放開。`;
   if (phase === "reciting") return "小兔子正在試著念完整句。";
   if (phase === "done") return "小兔子學會了。";
-  return `按住「${char}」，教小兔子念。`;
+  return `按住「${char}」，等叮一聲後再念。`;
 }
 
 function StageFourHelper({ text, onReplay }: { text: string; onReplay: () => void }) {
