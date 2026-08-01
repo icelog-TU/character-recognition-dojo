@@ -1833,14 +1833,18 @@ function LessonPanel({
 
   async function handleHearTarget(char: string) {
     if (locked || spotlightChar) return;
+    stopPlayback();
     setSpotlightChar(char);
-    await Promise.all([playLessonChar(lesson, char), waitMs(720)]);
-    setHeardChars((prev) => {
-      const next = new Set(prev);
-      next.add(char);
-      return next;
-    });
-    setSpotlightChar(null);
+    try {
+      await Promise.all([playLessonChar(lesson, char), waitMs(720)]);
+      setHeardChars((prev) => {
+        const next = new Set(prev);
+        next.add(char);
+        return next;
+      });
+    } finally {
+      setSpotlightChar(null);
+    }
   }
 
   async function handleAdvanceStage(nextStage: number) {
@@ -2729,9 +2733,11 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
   audio.currentTime = 0;
   return new Promise<void>((resolve) => {
     let settled = false;
+    let fallbackTimer = 0;
     const finish = (kind: "ended" | "error") => {
       if (settled) return;
       settled = true;
+      if (fallbackTimer) window.clearTimeout(fallbackTimer);
       stopAudioFrame();
       if (activeAudio === audio) activeAudio = null;
       if (activeAudioFinish === finish) activeAudioFinish = null;
@@ -2758,6 +2764,8 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
       .then(() => {
         emitPlaybackState();
         tick();
+        const durationMs = Number.isFinite(audio.duration) && audio.duration > 0 ? audio.duration * 1000 : 5000;
+        fallbackTimer = window.setTimeout(() => finish("ended"), durationMs + 1000);
       })
       .catch(() => finish("error"));
   });
