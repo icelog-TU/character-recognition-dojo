@@ -5470,6 +5470,450 @@
           ]
         }
       ]
+    },
+    {
+      "id": "L018",
+      "order": 18,
+      "newChars": [
+        "和"
+      ],
+      "zhuyin": {
+        "和": "ㄏㄢˋ"
+      },
+      "charAudio": {
+        "和": "/assets/lessons/L018/audio/char-u548c.m4a"
+      },
+      "title": "和",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "連接兩個人物、地方或物件的口語連詞；本課讀作 ㄏㄢˋ。"
+      },
+      "sentences": [
+        {
+          "id": "L018-S01",
+          "text": "很高的山和很大的水",
+          "displayLines": [
+            "很高的山和",
+            "很大的水"
+          ],
+          "spokenText": "很高的山和很大的水",
+          "focusChar": "和",
+          "imagePrompt": "Reuse approved L016-S01 image. It already shows a very high green mountain with a large bright blue lake or water area, matching the sentence about a very high mountain and very big water. Do not regenerate unless replacement is requested.",
+          "imageSrc": "/assets/lessons/L016/images/L016-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L018/audio/L018-S01.m4a",
+            "durationMs": 5354,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1380,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2460,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3060,
+                "endMs": 3250
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3250,
+                "endMs": 3440
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3440,
+                "endMs": 3920
+              }
+            ]
+          }
+        },
+        {
+          "id": "L018-S02",
+          "text": "你和我在家",
+          "displayLines": [
+            "你和我在家"
+          ],
+          "spokenText": "你和我在家",
+          "focusChar": "和",
+          "imagePrompt": "Reuse approved L017-S04 image. It already shows exactly two recurring children, the fixed second-person boy and fixed first-person girl, together inside a cozy home. Do not regenerate unless replacement is requested.",
+          "imageSrc": "/assets/lessons/L017/images/L017-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L018/audio/L018-S02.m4a",
+            "durationMs": 3094,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1030
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1030,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1660
+              }
+            ]
+          }
+        },
+        {
+          "id": "L018-S03",
+          "text": "很小的手在很大的手上",
+          "displayLines": [
+            "很小的手在",
+            "很大的手上"
+          ],
+          "spokenText": "很小的手在很大的手上",
+          "focusChar": "很",
+          "imagePrompt": "A warm child-friendly picture-book watercolor close-up showing exactly one very small child hand resting clearly on top of one very large adult hand. The size contrast is obvious and friendly. Show only hands, no faces or full bodies. Hands are anatomically plausible; if a palm faces upward, the thumb is on the outside edge, not pointing inward. No extra hands, no text, no letters, no numbers, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L018/images/L018-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L018/audio/L018-S03.m4a",
+            "durationMs": 3983,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1160,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2460,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2640,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2960,
+                "endMs": 3220
+              }
+            ]
+          }
+        },
+        {
+          "id": "L018-S04",
+          "text": "在山下的家和在水上的家",
+          "displayLines": [
+            "在山下的家",
+            "和在水上",
+            "的家"
+          ],
+          "spokenText": "在山下的家和在水上的家",
+          "focusChar": "和",
+          "imagePrompt": "A warm child-friendly picture-book watercolor illustration showing exactly two cozy homes in one landscape: one home clearly at the foot of a green mountain, and one home clearly on calm blue water, such as a small house on short stilts or a floating house. The two homes are easy to compare and count. No people, no extra buildings, no text, no letters, no numbers, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L018/images/L018-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L018/audio/L018-S04.m4a",
+            "durationMs": 4219,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1400,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2620,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2900,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3240,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3420,
+                "endMs": 3580
+              }
+            ]
+          }
+        },
+        {
+          "id": "L018-S05",
+          "text": "很高的人和很高的家",
+          "displayLines": [
+            "很高的人和",
+            "很高的家"
+          ],
+          "spokenText": "很高的人和很高的家",
+          "focusChar": "很",
+          "imagePrompt": "A warm child-friendly picture-book watercolor illustration showing exactly one very tall friendly adult person standing next to exactly one very tall cozy house. Both the person and the house look clearly high/tall. The adult is kind and non-scary. No extra people, no extra buildings, no text, no letters, no numbers, no labels, no zhuyin, no watermark.",
+          "imageSrc": "/assets/lessons/L018/images/L018-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L018/audio/L018-S05.m4a",
+            "durationMs": 4365,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1050
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1050,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2660,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2760,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3260
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L018-G01",
+          "type": "find-character",
+          "sentenceId": "L018-S01",
+          "targetChar": "和",
+          "prompt": "找到「和」。"
+        },
+        {
+          "id": "L018-G02",
+          "type": "teach-character",
+          "sentenceId": "L018-S02",
+          "targetChar": "和",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L018-G03",
+          "type": "missing-character",
+          "sentenceId": "L018-S04",
+          "targetChar": "和",
+          "prompt": "字寶寶不見了，把「和」找回來。",
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "and",
+              "text": "和",
+              "correct": true
+            },
+            {
+              "id": "at",
+              "text": "在",
+              "correct": false
+            },
+            {
+              "id": "have",
+              "text": "有",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L018-G04",
+          "type": "partial-order",
+          "sentenceId": "L018-S05",
+          "targetChar": "和",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "options": [
+            {
+              "id": "person",
+              "text": "人",
+              "correct": true
+            },
+            {
+              "id": "and",
+              "text": "和",
+              "correct": true
+            },
+            {
+              "id": "very",
+              "text": "很",
+              "correct": true
+            },
+            {
+              "id": "high",
+              "text": "高",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L018-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L018-S02",
+          "targetChar": "和",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "你和我在家",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L018/audio/L018-S02.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "你和我在山",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L018/audio/L018-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "你和我在水",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L018/audio/L018-G05-wrong2.m4a"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
