@@ -266,6 +266,7 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 - For early lessons, `partial-order` should blank only 2-4 Han characters, not the full sentence.
 - `teach-character` can use local recording/playback first; speech scoring can be added later.
 - `choose-pronunciation` should use reviewed AI audio assets for production choices. Do not use browser TTS as the production reading for options.
+- `choose-pronunciation` wrong choices should be near misses: same sentence length and only 1-2 Han characters different from the correct sentence. Do not use a completely different reviewed sentence as a wrong audio choice.
 - Every Stage 4 game must provide spoken guidance when the game becomes active. Assume the child cannot read the prompt text.
 - Stage 4 helper openings must match the game type. Do not reuse "I will read this sentence" for games where the rabbit is not the reader, especially `choose-pronunciation`.
 - Stage 4 guidance must not reveal the answer. For `teach-character`, do not say the target character in the hold-to-record prompt. For `choose-pronunciation`, do not read the target sentence in the rabbit's opening; the sentence should be heard from the friend readers.

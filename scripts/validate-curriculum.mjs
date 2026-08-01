@@ -24,6 +24,13 @@ function hanChars(text) {
   return Array.from(text).filter((char) => /\p{Script=Han}/u.test(char));
 }
 
+function hanDistance(left, right) {
+  const leftChars = hanChars(left);
+  const rightChars = hanChars(right);
+  if (leftChars.length !== rightChars.length) return Number.POSITIVE_INFINITY;
+  return leftChars.reduce((count, char, index) => count + (char === rightChars[index] ? 0 : 1), 0);
+}
+
 if (!Array.isArray(curriculum.lessons)) {
   errors.push("`lessons` must be an array.");
 }
@@ -185,6 +192,19 @@ for (let i = 0; i < sorted.length; i += 1) {
       const correctCount = (game.options ?? []).filter((option) => option.correct === true).length;
       if (correctCount !== 1) {
         errors.push(`${label}: ${game.type} must have exactly one correct option.`);
+      }
+    }
+
+    if (game.type === "choose-pronunciation") {
+      const correctOption = (game.options ?? []).find((option) => option.correct === true);
+      if (correctOption) {
+        for (const option of game.options ?? []) {
+          if (option.correct) continue;
+          const distance = hanDistance(correctOption.text, option.text);
+          if (distance < 1 || distance > 2) {
+            errors.push(`${label}: wrong option ${option.id} should differ from the correct sentence by 1-2 Han characters.`);
+          }
+        }
       }
     }
   }
