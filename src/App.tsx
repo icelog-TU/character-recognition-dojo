@@ -169,6 +169,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "land-fox-youngerBrother": "/assets/characters/land/fox/fox-younger-brother.webp",
   "land-fox-youngerSister": "/assets/characters/land/fox/fox-younger-sister.webp",
   "land-fox-baby": "/assets/characters/land/fox/fox-baby.webp",
+  "land-squirrel-grandpa": "/assets/characters/land/squirrel/squirrel-grandpa.webp",
+  "land-squirrel-grandma": "/assets/characters/land/squirrel/squirrel-grandma.webp",
+  "land-squirrel-dad": "/assets/characters/land/squirrel/squirrel-father.webp",
+  "land-squirrel-mom": "/assets/characters/land/squirrel/squirrel-mother.webp",
+  "land-squirrel-olderBrother": "/assets/characters/land/squirrel/squirrel-older-brother.webp",
+  "land-squirrel-olderSister": "/assets/characters/land/squirrel/squirrel-older-sister.webp",
+  "land-squirrel-youngerBrother": "/assets/characters/land/squirrel/squirrel-younger-brother.webp",
+  "land-squirrel-youngerSister": "/assets/characters/land/squirrel/squirrel-younger-sister.webp",
+  "land-squirrel-baby": "/assets/characters/land/squirrel/squirrel-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
