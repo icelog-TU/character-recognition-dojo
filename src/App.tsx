@@ -142,6 +142,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "land-rabbit-youngerBrother": "/assets/characters/land/rabbit/rabbit-younger-brother.webp",
   "land-rabbit-youngerSister": "/assets/characters/land/rabbit/rabbit-younger-sister.webp",
   "land-rabbit-baby": "/assets/characters/land/rabbit/rabbit-baby.webp",
+  "land-bear-grandpa": "/assets/characters/land/bear/bear-grandpa.webp",
+  "land-bear-grandma": "/assets/characters/land/bear/bear-grandma.webp",
+  "land-bear-dad": "/assets/characters/land/bear/bear-father.webp",
+  "land-bear-mom": "/assets/characters/land/bear/bear-mother.webp",
+  "land-bear-olderBrother": "/assets/characters/land/bear/bear-older-brother.webp",
+  "land-bear-olderSister": "/assets/characters/land/bear/bear-older-sister.webp",
+  "land-bear-youngerBrother": "/assets/characters/land/bear/bear-younger-brother.webp",
+  "land-bear-youngerSister": "/assets/characters/land/bear/bear-younger-sister.webp",
+  "land-bear-baby": "/assets/characters/land/bear/bear-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
