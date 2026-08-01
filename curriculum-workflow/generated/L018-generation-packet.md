@@ -5,9 +5,9 @@
 - Lesson: L018
 - Order: 18
 - New character(s): 和
-- Zhuyin: 和=ㄏㄢˋ
+- Zhuyin: 和=ㄏㄜˊ
 - Target sentence count: 5
-- Teacher notes: Generated from the web next-lesson planner. Selected choice: choice-和. Approved sentences: 很高的山和很大的水; 你和我在家; 很小的手在很大的手上; 在山下的家和在水上的家; 很高的人和很高的家. Sentence length target: 4-12 Han characters per sentence. Prefer using recent review characters from the previous five lessons: 大 的 山 上 有 水 你 我 下 三 個 人 一 小 手 在 二 高 很 家. Across this lesson's sentence set, include each new character from the previous three lessons at least once: 高 很 家. Use only learned characters plus the new character(s). Use each sentence's imageNotes as teacher guidance when writing imagePrompt. Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval. In this lesson, 和 is the conjunction and should be pronounced ㄏㄢˋ in character and sentence audio.
+- Teacher notes: Generated from the web next-lesson planner. Selected choice: choice-和. Approved sentences: 很高的山和很大的水; 你和我在家; 很小的手在很大的手上; 在山下的家和在水上的家; 很高的人和很高的家. Sentence length target: 4-12 Han characters per sentence. Prefer using recent review characters from the previous five lessons: 大 的 山 上 有 水 你 我 下 三 個 人 一 小 手 在 二 高 很 家. Across this lesson's sentence set, include each new character from the previous three lessons at least once: 高 很 家. Use only learned characters plus the new character(s). Use each sentence's imageNotes as teacher guidance when writing imagePrompt. Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval. In this lesson, 和 is the conjunction and should be pronounced ㄏㄜˊ in character and sentence audio.
 
 ## Learned Character Boundary
 
@@ -180,7 +180,7 @@ Only after teacher approval, move reviewed content into `src/curriculum/sample-l
   "id": "L018",
   "order": 18,
   "newChars": ["和"],
-  "zhuyin": {"和":"ㄏㄢˋ"},
+  "zhuyin": {"和":"ㄏㄜˊ"},
   "charAudio": {"和":"/assets/lessons/L018/audio/char-和.m4a"},
   "title": "和",
   "requiredRounds": 5,
