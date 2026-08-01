@@ -1,0 +1,96 @@
+{
+  "order": 15,
+  "newChars": [
+    "高"
+  ],
+  "zhuyin": {
+    "高": "ㄍㄠ"
+  },
+  "title": "高",
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高"
+    ],
+    "preferReviewChars": [
+      "我",
+      "一",
+      "個",
+      "人",
+      "上",
+      "山",
+      "有",
+      "三",
+      "大",
+      "的",
+      "手",
+      "小",
+      "下",
+      "二",
+      "你",
+      "水",
+      "在"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "你",
+      "水",
+      "在"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "Generated from the web next-lesson planner. Selected choice: choice-高. Approved sentences: 在高高的山下有水; 你我二人在高山上; 高高的人有大大的手; 三個高高的人在水下; 在你的手上有水. Sentence length target: 4-12 Han characters per sentence. Prefer using recent review characters from the previous five lessons: 我 一 個 人 上 山 有 三 大 的 手 小 下 二 你 水 在. Across this lesson's sentence set, include each new character from the previous three lessons at least once: 你 水 在. Use only learned characters plus the new character(s). Use each sentence's imageNotes as teacher guidance when writing imagePrompt. Production normalization: spokenText includes every displayed Han character. Generate reviewed image prompts, AI sentence audio, and production AI charTimings after teacher approval.",
+  "approvedSentences": [
+    {
+      "text": "在高高的山下有水",
+      "spokenText": "在高高的山下有水",
+      "focusChar": "高",
+      "reason": "Teacher-edited candidate. Uses 的 in a concrete mountain-water scene."
+    },
+    {
+      "text": "你我二人在高山上",
+      "spokenText": "你我二人在高山上",
+      "focusChar": "高",
+      "reason": "Teacher-edited candidate. Reviews fixed 你 and 我 together near a high mountain.",
+      "imageNotes": "你我在高山上"
+    },
+    {
+      "text": "高高的人有大大的手",
+      "spokenText": "高高的人有大大的手",
+      "focusChar": "高",
+      "reason": "Teacher-added sentence."
+    },
+    {
+      "text": "三個高高的人在水下",
+      "spokenText": "三個高高的人在水下",
+      "focusChar": "高",
+      "reason": "Teacher-added sentence."
+    },
+    {
+      "text": "在你的手上有水",
+      "spokenText": "在你的手上有水",
+      "focusChar": "在",
+      "reason": "Teacher-added sentence."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-01T08:26:10.954Z",
+  "exportedAt": "2026-08-01T09:08:09.902Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -955,6 +955,114 @@
             "小小的手"
           ]
         }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L006-G01",
+          "type": "find-character",
+          "sentenceId": "L006-S01",
+          "targetChar": "手",
+          "prompt": "找到「手」。"
+        },
+        {
+          "id": "L006-G02",
+          "type": "teach-character",
+          "sentenceId": "L006-S02",
+          "targetChar": "手",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            4
+          ]
+        },
+        {
+          "id": "L006-G03",
+          "type": "missing-character",
+          "sentenceId": "L006-S03",
+          "targetChar": "手",
+          "prompt": "字寶寶不見了，把「手」找回來。",
+          "missingIndexes": [
+            3
+          ],
+          "options": [
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": true
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": false
+            },
+            {
+              "id": "big",
+              "text": "大",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L006-G04",
+          "type": "partial-order",
+          "sentenceId": "L006-S05",
+          "targetChar": "手",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "big-one",
+              "text": "大",
+              "correct": true
+            },
+            {
+              "id": "big-two",
+              "text": "大",
+              "correct": true
+            },
+            {
+              "id": "small-one",
+              "text": "小",
+              "correct": true
+            },
+            {
+              "id": "small-two",
+              "text": "小",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L006-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L006-S04",
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "小小的手",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L006/audio/L006-S04.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "大大的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L006/audio/L006-S03.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "小小的人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L005/audio/L005-S02.m4a"
+            }
+          ]
+        }
       ]
     },
     {
@@ -1202,6 +1310,114 @@
           "displayLines": [
             "三個人的",
             "大手小手"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L007-G01",
+          "type": "find-character",
+          "sentenceId": "L007-S01",
+          "targetChar": "我",
+          "prompt": "找到「我」。"
+        },
+        {
+          "id": "L007-G02",
+          "type": "teach-character",
+          "sentenceId": "L007-S03",
+          "targetChar": "手",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            2
+          ]
+        },
+        {
+          "id": "L007-G03",
+          "type": "missing-character",
+          "sentenceId": "L007-S02",
+          "targetChar": "我",
+          "prompt": "字寶寶不見了，把「我」找回來。",
+          "missingIndexes": [
+            0
+          ],
+          "options": [
+            {
+              "id": "me",
+              "text": "我",
+              "correct": true
+            },
+            {
+              "id": "small",
+              "text": "小",
+              "correct": false
+            },
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L007-G04",
+          "type": "partial-order",
+          "sentenceId": "L007-S05",
+          "targetChar": "手",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "three",
+              "text": "三",
+              "correct": true
+            },
+            {
+              "id": "count",
+              "text": "個",
+              "correct": true
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": true
+            },
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L007-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L007-S04",
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "大人的手大大的",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L007/audio/L007-S04.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "大人的手小小的",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L007/audio/L007-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "小人的手大大的",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L007/audio/L007-G05-wrong2.m4a"
+            }
           ]
         }
       ]
@@ -1470,6 +1686,114 @@
           "displayLines": [
             "有一大",
             "二小的手"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L008-G01",
+          "type": "find-character",
+          "sentenceId": "L008-S01",
+          "targetChar": "有",
+          "prompt": "找到「有」。"
+        },
+        {
+          "id": "L008-G02",
+          "type": "teach-character",
+          "sentenceId": "L008-S02",
+          "targetChar": "有",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L008-G03",
+          "type": "missing-character",
+          "sentenceId": "L008-S03",
+          "targetChar": "有",
+          "prompt": "字寶寶不見了，把「有」找回來。",
+          "missingIndexes": [
+            2
+          ],
+          "options": [
+            {
+              "id": "have",
+              "text": "有",
+              "correct": true
+            },
+            {
+              "id": "big",
+              "text": "大",
+              "correct": false
+            },
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L008-G04",
+          "type": "partial-order",
+          "sentenceId": "L008-S04",
+          "targetChar": "有",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "three",
+              "text": "三",
+              "correct": true
+            },
+            {
+              "id": "count",
+              "text": "個",
+              "correct": true
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": true
+            },
+            {
+              "id": "have",
+              "text": "有",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L008-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L008-S05",
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "有一大二小的手",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L008/audio/L008-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "有一大一小的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L008/audio/L008-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "有二大二小的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L008/audio/L008-G05-wrong2.m4a"
+            }
           ]
         }
       ]
@@ -1742,6 +2066,114 @@
           "displayLines": [
             "我有",
             "小小的手"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L009-G01",
+          "type": "find-character",
+          "sentenceId": "L009-S01",
+          "targetChar": "山",
+          "prompt": "找到「山」。"
+        },
+        {
+          "id": "L009-G02",
+          "type": "teach-character",
+          "sentenceId": "L009-S02",
+          "targetChar": "山",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            3
+          ]
+        },
+        {
+          "id": "L009-G03",
+          "type": "missing-character",
+          "sentenceId": "L009-S03",
+          "targetChar": "山",
+          "prompt": "字寶寶不見了，把「山」找回來。",
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "mountain",
+              "text": "山",
+              "correct": true
+            },
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": false
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L009-G04",
+          "type": "partial-order",
+          "sentenceId": "L009-S04",
+          "targetChar": "手",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "three",
+              "text": "三",
+              "correct": true
+            },
+            {
+              "id": "count",
+              "text": "個",
+              "correct": true
+            },
+            {
+              "id": "person",
+              "text": "人",
+              "correct": true
+            },
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L009-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L009-S05",
+          "targetChar": "手",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我有小小的手",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L009/audio/L009-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "我有大大的手",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L009/audio/L009-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "我有小小的人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L009/audio/L009-G05-wrong2.m4a"
+            }
           ]
         }
       ]
@@ -2044,6 +2476,114 @@
           "displayLines": [
             "有大大的山，",
             "有小小的山"
+          ]
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L010-G01",
+          "type": "find-character",
+          "sentenceId": "L010-S04",
+          "targetChar": "上",
+          "prompt": "找到「上」。"
+        },
+        {
+          "id": "L010-G02",
+          "type": "teach-character",
+          "sentenceId": "L010-S01",
+          "targetChar": "上",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            4
+          ]
+        },
+        {
+          "id": "L010-G03",
+          "type": "missing-character",
+          "sentenceId": "L010-S03",
+          "targetChar": "手",
+          "prompt": "字寶寶不見了，把「手」找回來。",
+          "missingIndexes": [
+            2
+          ],
+          "options": [
+            {
+              "id": "hand",
+              "text": "手",
+              "correct": true
+            },
+            {
+              "id": "mountain",
+              "text": "山",
+              "correct": false
+            },
+            {
+              "id": "up",
+              "text": "上",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L010-G04",
+          "type": "partial-order",
+          "sentenceId": "L010-S05",
+          "targetChar": "山",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "have",
+              "text": "有",
+              "correct": true
+            },
+            {
+              "id": "big-one",
+              "text": "大",
+              "correct": true
+            },
+            {
+              "id": "big-two",
+              "text": "大",
+              "correct": true
+            },
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L010-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L010-S02",
+          "targetChar": "上",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "山上有三個大人",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L010/audio/L010-S02.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "山上有一個大人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L010/audio/L010-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "山上有三個小人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L010/audio/L010-G05-wrong2.m4a"
+            }
           ]
         }
       ]
@@ -3644,6 +4184,429 @@
               "text": "我在水上，你在水上",
               "correct": false,
               "audioSrc": "/assets/lessons/L014/audio/L014-G05-wrong2.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L015",
+      "order": 15,
+      "newChars": [
+        "高"
+      ],
+      "zhuyin": {
+        "高": "ㄍㄠ"
+      },
+      "charAudio": {
+        "高": "/assets/lessons/L015/audio/char-u9ad8.m4a"
+      },
+      "title": "高",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Lesson 15 was teacher-approved in the next-lesson planner. It introduces the height character and reviews the previous three lesson characters."
+      },
+      "sentences": [
+        {
+          "id": "L015-S01",
+          "text": "在高高的山下有水",
+          "displayLines": [
+            "在高高的",
+            "山下有水"
+          ],
+          "spokenText": "在高高的山下有水",
+          "focusChar": "高",
+          "imagePrompt": "A warm child-friendly picture-book watercolor illustration showing one clearly very tall green mountain and clean blue water at the foot of the mountain. The high mountain should take most of the vertical space, and the water must be visibly below/at the bottom of the mountain. No people. Simple phone-readable composition, soft watercolor texture, gentle colored-pencil outlines, bright natural daylight. No text, letters, numbers, signs, labels, zhuyin, or watermark.",
+          "imageSrc": "/assets/lessons/L015/images/L015-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L015/audio/L015-S01.m4a",
+            "durationMs": 4043,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1420,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1780,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2420,
+                "endMs": 2900
+              }
+            ]
+          }
+        },
+        {
+          "id": "L015-S02",
+          "text": "你我二人在高山上",
+          "displayLines": [
+            "你我二人",
+            "在高山上"
+          ],
+          "spokenText": "你我二人在高山上",
+          "focusChar": "高",
+          "imagePrompt": "A warm child-friendly picture-book watercolor illustration showing exactly two recurring children together on the top or upper ridge of a clearly very high green mountain. Preserve the fixed girl for the first-person child: shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress/red accents, red shoes, warm expression. Preserve the fixed boy for the second-person child: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, warm expression. Show sky and distant view below them so the high-mountain-top idea is obvious. No other people. No text, letters, numbers, signs, labels, zhuyin, or watermark.",
+          "imageSrc": "/assets/lessons/L015/images/L015-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L015/audio/L015-S02.m4a",
+            "durationMs": 3459,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2080,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2300,
+                "endMs": 2560
+              }
+            ]
+          }
+        },
+        {
+          "id": "L015-S03",
+          "text": "高高的人有大大的手",
+          "displayLines": [
+            "高高的人",
+            "有大大的手"
+          ],
+          "spokenText": "高高的人有大大的手",
+          "focusChar": "高",
+          "imagePrompt": "A warm child-friendly picture-book watercolor illustration showing exactly one friendly tall adult person standing upright, clearly taller than nearby simple objects such as a low table or small plant, and holding both large hands open toward the viewer so the hands look visibly big but anatomically plausible and friendly. The person should look adult, not a child. If a palm faces upward, the thumb must be on the outside edge of the hand, never pointing inward. Simple phone-readable composition. No text, letters, numbers, signs, labels, zhuyin, or watermark.",
+          "imageSrc": "/assets/lessons/L015/images/L015-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L015/audio/L015-S03.m4a",
+            "durationMs": 3373,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 770
+              },
+              {
+                "charIndex": 3,
+                "startMs": 770,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1000,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1680,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2060,
+                "endMs": 2210
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2210,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2360,
+                "endMs": 2760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L015-S04",
+          "text": "三個高高的人在水下",
+          "displayLines": [
+            "三個高高",
+            "的人在水下"
+          ],
+          "spokenText": "三個高高的人在水下",
+          "focusChar": "高",
+          "imagePrompt": "A warm child-friendly picture-book watercolor illustration showing exactly three tall adult people underwater below the water surface, swimming calmly and safely in clear blue water. They should visibly look like adults and have tall, long bodies; make them easy to count as three. Use bubbles and light rays to make the underwater location clear, but no danger, no fear, no drowning. No children and no extra people. No text, letters, numbers, signs, labels, zhuyin, or watermark.",
+          "imageSrc": "/assets/lessons/L015/images/L015-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L015/audio/L015-S04.m4a",
+            "durationMs": 4986,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 940
+              },
+              {
+                "charIndex": 2,
+                "startMs": 940,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1520,
+                "endMs": 1730
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1730,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3240,
+                "endMs": 3640
+              }
+            ]
+          }
+        },
+        {
+          "id": "L015-S05",
+          "text": "在你的手上有水",
+          "displayLines": [
+            "在你的",
+            "手上有水"
+          ],
+          "spokenText": "在你的手上有水",
+          "focusChar": "在",
+          "imagePrompt": "Reuse approved L013-S05 image. It already shows the fixed second-person young boy with short slightly tousled dark hair, sky-blue shirt, green shorts, orange backpack, and a wet hand with clear water on the palm. The palm is anatomically plausible; if the palm faces upward, the thumb is on the outside edge of the hand, not pointing inward. Do not regenerate unless replacement is requested.",
+          "imageSrc": "/assets/lessons/L013/images/L013-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L015/audio/L015-S05.m4a",
+            "durationMs": 3326,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 610
+              },
+              {
+                "charIndex": 2,
+                "startMs": 610,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 2920
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L015-G01",
+          "type": "find-character",
+          "sentenceId": "L015-S01",
+          "targetChar": "高",
+          "prompt": "找到「高」。"
+        },
+        {
+          "id": "L015-G02",
+          "type": "teach-character",
+          "sentenceId": "L015-S02",
+          "targetChar": "高",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            5
+          ]
+        },
+        {
+          "id": "L015-G03",
+          "type": "missing-character",
+          "sentenceId": "L015-S03",
+          "targetChar": "高",
+          "prompt": "字寶寶不見了，把「高」找回來。",
+          "missingIndexes": [
+            0
+          ],
+          "options": [
+            {
+              "id": "gao",
+              "text": "高",
+              "correct": true
+            },
+            {
+              "id": "da",
+              "text": "大",
+              "correct": false
+            },
+            {
+              "id": "xiao",
+              "text": "小",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L015-G04",
+          "type": "partial-order",
+          "sentenceId": "L015-S05",
+          "targetChar": "在",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2
+          ],
+          "options": [
+            {
+              "id": "zai",
+              "text": "在",
+              "correct": true
+            },
+            {
+              "id": "ni",
+              "text": "你",
+              "correct": true
+            },
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L015-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L015-S01",
+          "targetChar": "高",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "在高高的山下有水",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L015/audio/L015-S01.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "在高高的山上有水",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L015/audio/L015-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "在高高的手下有水",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L015/audio/L015-G05-wrong2.m4a"
             }
           ]
         }

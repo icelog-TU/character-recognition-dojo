@@ -239,6 +239,33 @@
         margin-top: 14px;
       }
 
+      .selection-meter {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin-top: 14px;
+        border: 2px solid rgba(25, 121, 111, 0.22);
+        border-radius: 12px;
+        background: #eefaf5;
+        padding: 10px 12px;
+      }
+
+      .selection-meter strong {
+        color: var(--primary);
+        font-size: 1.18rem;
+      }
+
+      .selection-meter span {
+        color: var(--muted);
+        font-weight: 750;
+      }
+
+      .selection-meter.warning {
+        border-color: rgba(240, 85, 69, 0.35);
+        background: var(--accent-soft);
+      }
+
       .custom-section {
         margin-top: 14px;
         border-top: 1px solid var(--line);
@@ -273,6 +300,11 @@
         border-radius: 10px;
         background: #fff;
         padding: 10px;
+      }
+
+      .sentence-row.checked {
+        border-color: rgba(25, 121, 111, 0.42);
+        background: #f0fbf6;
       }
 
       .sentence-row > input[type="checkbox"] {
@@ -581,6 +613,7 @@
       };
 
       const sentenceLengthRange = { min: 4, max: 12 };
+      const targetApprovedSentenceCount = 5;
       const targetGeneratedSentenceCount = 10;
       const $ = (id) => document.getElementById(id);
 
@@ -724,6 +757,17 @@
           .map((choice, choiceIndex) => {
             const selected = choice.choiceId === state.selectedChoiceId;
             const customRows = state.customRowsByChoice.get(choice.choiceId) || [];
+            const selectedIndexes = state.selectedIndexes.get(choice.choiceId) || new Set();
+            const completedCustomCount = customRows.filter((row) => row.text.trim()).length;
+            const selectedSentenceCount = selectedIndexes.size + completedCustomCount;
+            const remainingSentenceCount = Math.max(targetApprovedSentenceCount - selectedSentenceCount, 0);
+            const overSentenceCount = Math.max(selectedSentenceCount - targetApprovedSentenceCount, 0);
+            const sortedSentenceCandidates = choice.sentenceCandidates
+              .map((sentence, sentenceIndex) => ({ sentence, sentenceIndex }))
+              .sort((a, b) => {
+                const selectedDelta = Number(selectedIndexes.has(b.sentenceIndex)) - Number(selectedIndexes.has(a.sentenceIndex));
+                return selectedDelta || a.sentenceIndex - b.sentenceIndex;
+              });
             const draft = state.customDraftsByChoice.get(choice.choiceId) || { text: "", spokenText: "", focusChar: "", imageNotes: "" };
             const feedback = state.feedbackByChoice.get(choice.choiceId) || "";
             return `
@@ -738,12 +782,26 @@
                     ${selected ? "已選這個字" : "選這個字"}
                   </button>
                 </div>
+                ${
+                  selected
+                    ? `<div class="selection-meter ${overSentenceCount ? "warning" : ""}" aria-live="polite">
+                        <strong>${selectedSentenceCount}/${targetApprovedSentenceCount} 句</strong>
+                        <span>${
+                          overSentenceCount
+                            ? `多了 ${overSentenceCount} 句，可以再精簡。`
+                            : remainingSentenceCount
+                              ? `還差 ${remainingSentenceCount} 句。`
+                              : "剛好 5 句，可以送出。"
+                        }</span>
+                      </div>`
+                    : ""
+                }
                 <div class="sentence-list">
                   ${
                     choice.sentenceCandidates.length
-                      ? choice.sentenceCandidates
-                          .map((sentence, sentenceIndex) => {
-                            const checked = state.selectedIndexes.get(choice.choiceId)?.has(sentenceIndex) || false;
+                      ? sortedSentenceCandidates
+                          .map(({ sentence, sentenceIndex }) => {
+                            const checked = selectedIndexes.has(sentenceIndex);
                             const key = sentenceKey(choice.choiceId, sentenceIndex);
                             const editedSentence = candidateSentence(choice, sentenceIndex);
                             const draftSentence = candidateDraft(choice, sentenceIndex);
@@ -751,7 +809,7 @@
                             const editing = state.candidateEditingKeys.has(key);
                             const imageNotes = state.imageNotesBySentence.get(sentenceKey(choice.choiceId, sentenceIndex)) || "";
                             return `
-                              <div class="sentence-row ${hasEdit ? "edited" : ""}">
+                              <div class="sentence-row ${checked ? "checked" : ""} ${hasEdit ? "edited" : ""}">
                                 <input type="checkbox" data-choice="${choice.choiceId}" data-index="${sentenceIndex}" ${checked ? "checked" : ""} />
                                 <div>
                                   <div class="sentence-text">${escapeHtml(editedSentence.text)}</div>
@@ -1542,7 +1600,7 @@
           state.selectedIndexes.set(choiceId, set);
           state.selectedChoiceId = choiceId;
           savePlannerMemory();
-          updateOutput(currentModel());
+          render(currentModel());
         }
       });
 
