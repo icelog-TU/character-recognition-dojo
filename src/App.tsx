@@ -2140,13 +2140,13 @@ function LessonPanel({
     setAdvancingStage(null);
   }
 
-  async function handleClaimReward() {
-    if (!lessonReady || rewardState === "claiming" || rewardState === "claimed") return;
+  async function handleClaimReward(force = false) {
+    if ((!force && !lessonReady) || rewardState === "claiming" || rewardState === "claimed") return;
     setRewardState("claiming");
     playRewardChime();
     void speakForTarget(usesSentenceGames ? "stage4" : "stage3", GUIDE_TEXT.rewardWon);
-    await waitMs(3600);
     onReward(lessonReward);
+    await waitMs(3600);
     setRewardState("claimed");
   }
 
@@ -2326,7 +2326,10 @@ function LessonPanel({
               requiredCount={requiredGameRounds}
               onSpeakStart={setSpeakingTarget}
               onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
-              onRoundDone={() => setGameDoneCount((count) => Math.min(count + 1, requiredGameRounds))}
+              onRoundDone={(doneAfterThisRound) => {
+                setGameDoneCount((count) => Math.min(count + 1, requiredGameRounds));
+                if (doneAfterThisRound && !completed) void handleClaimReward(true);
+              }}
             />
           )}
         </LessonBlock>
@@ -2336,7 +2339,7 @@ function LessonPanel({
         <RewardPanel
           state={rewardState}
           reward={lessonReward}
-          alreadyCompleted={completed}
+          alreadyCompleted={completed && rewardState !== "claiming"}
           hasNext={hasNextLesson}
           onClaim={handleClaimReward}
           onHome={() => handleRewardDestination("home")}
@@ -3427,7 +3430,7 @@ function SentencePracticePreview({
   requiredCount: number;
   onSpeakStart: (target: SpeechTarget) => void;
   onSpeakEnd: (target: SpeechTarget) => void;
-  onRoundDone: () => void;
+  onRoundDone: (doneAfterThisRound: boolean) => void;
 }) {
   const games = lesson.sentenceGames ?? [];
   const gameIndex = Math.min(doneCount, Math.max(0, requiredCount - 1));
@@ -3917,8 +3920,8 @@ function SentencePracticePreview({
       {isCurrentRoundComplete && (
         <div className="sentence-game-complete">
           <p className="success">完成這一題。</p>
-          <button type="button" className="btn next-game-button" onClick={onRoundDone}>
-            {doneAfterThisRound ? "完成句子遊戲" : "下一題"}
+          <button type="button" className="btn next-game-button" onClick={() => onRoundDone(doneAfterThisRound)}>
+            {doneAfterThisRound ? "領取獎勵" : "下一題"}
           </button>
         </div>
       )}
