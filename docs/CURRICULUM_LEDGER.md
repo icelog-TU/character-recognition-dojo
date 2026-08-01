@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 21:
+Characters taught after Lesson 22:
 
-`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩`
+`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指`
 
 Recent review pool for the next lesson:
 
-`一 個 小 孩 和 隻 鳥 在 家 很 大 的 手 上 有 三 高 山 水`
+`很 高 的 山 和 大 水 你 我 在 家 小 手 上 下 人 一 隻 有 三 個 鳥 孩 指`
 
 ## Visual Continuity Ledger
 
@@ -67,10 +67,11 @@ Image reuse rule:
 | L019 | 隻 | 一二三人個大的小手我有山上下你水在高很家和隻 | 一隻很大的手在水下 / 一隻大手和一隻小手 / 很高的人和很高的家 / 有三個小家在一隻手上 / 你和我在家 | 一很大的手在水下和小高人家有三個上你我 | Introduces `隻` as the measure word read `ㄓ`. Reviews recent `很`, `家`, and `和`; reuses approved L018-S03, L018-S05, and L017-S04 images. |
 | L020 | 鳥 | 一二三人個大的小手我有山上下你水在高很家和隻鳥 | 一隻鳥在很高的山上 / 一隻鳥和鳥的小家 / 你和我的三隻小鳥 / 很大的手和很小的手 / 我家在很高的山上 | 一隻在很高的山上和小家你我三大手 | Introduces `鳥` with one-bird and three-bird scenes. Reviews recent `家`, `和`, and `隻`; reuses approved L018-S03 and L017-S02 images. Sentence 5 was corrected to stay consistent with the fixed girl's home on the mountain. |
 | L021 | 孩 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩 | 一個小孩和一隻小鳥在家 / 一個小孩的手 / 小孩和一隻很大的鳥 / 一隻小鳥和很小的家 / 一隻很大的手上有三個小家 | 一個小和隻鳥在家很大的手上有三 | Introduces `孩` through child, hand, and child-bird scenes. Reviews recent `和`, `隻`, and `鳥`; reuses approved L020-S02 and L019-S04 images. Request was corrected before production: `spokenText` must match display text, `小孩` uses measure word `個`, and `focusChar` must appear in the sentence. |
+| L022 | 指 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指 | 小孩的一隻手指 / 三隻小鳥和手指山 / 很大的手指上有一隻小鳥 / 小孩和小鳥在家 / 小孩和在水上的家 | 小孩的一隻手三鳥和山很大上有在家水 | Introduces `指` through child finger, finger-shaped mountain, and bird-on-finger scenes. Reviews recent `隻`, `鳥`, and `孩`; reuses approved L021-S01 image for `小孩和小鳥在家`. |
 
 ## Planned Lessons
 
-L021 is selected and built: new character `孩`; reviewed sentences are `一個小孩和一隻小鳥在家`, `一個小孩的手`, `小孩和一隻很大的鳥`, `一隻小鳥和很小的家`, and `一隻很大的手上有三個小家`.
+L022 is selected and built: new character `指`; reviewed sentences are `小孩的一隻手指`, `三隻小鳥和手指山`, `很大的手指上有一隻小鳥`, `小孩和小鳥在家`, and `小孩和在水上的家`.
 
 ## Planning Rule For New Lessons
 
@@ -94,7 +95,7 @@ Use this shape when asking AI to draft sentence candidates:
 We are building a Taiwan zhuyin character recognition app for young children.
 
 Already taught characters:
-一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩
+一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指
 
 New character for this lesson:
 {NEW_CHARACTER}
@@ -105,7 +106,7 @@ Rules:
 - No Hanyu pinyin.
 - No punctuation in spokenText.
 - Prefer concrete, imageable sentences.
-- Reuse characters from the recent review pool when natural: 一 個 小 孩 和 隻 鳥 在 家 很 大 的 手 上 有 三 高 山 水
+- Reuse characters from the recent review pool when natural: 很 高 的 山 和 大 水 你 我 在 家 小 手 上 下 人 一 隻 有 三 個 鳥 孩 指
 - Keep each sentence 4-12 Han characters long, ignoring punctuation.
 - Across the sentence set, include the previous 3 lesson new characters at least once.
 - Keep the sentence set short if the character set cannot support natural variety.
