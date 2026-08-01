@@ -1,9 +1,23 @@
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
+import { createRequire } from "node:module";
 
 const curriculumPath = path.resolve("src/curriculum/sample-lessons.json");
 const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
 const errors = [];
+const require = createRequire(import.meta.url);
+const charAudioMaxVolumeFloorDb = -35;
+
+function packageToolPath(packageName) {
+  try {
+    return require(packageName).path;
+  } catch {
+    return null;
+  }
+}
+
+const ffmpegCommand = process.env.FFMPEG_PATH || packageToolPath("@ffmpeg-installer/ffmpeg") || "ffmpeg";
 
 function hanChars(text) {
   return Array.from(text).filter((char) => /\p{Script=Han}/u.test(char));
@@ -19,16 +33,48 @@ function requirePublicAsset(label, src) {
   const filePath = publicPathFromSrc(src);
   if (!filePath) {
     errors.push(`${label}: missing asset src.`);
-    return;
+    return null;
   }
   if (!fs.existsSync(filePath)) {
     errors.push(`${label}: asset file not found at ${filePath}.`);
+    return null;
+  }
+  return filePath;
+}
+
+function getMaxVolumeDb(filePath) {
+  const result = spawnSync(ffmpegCommand, [
+    "-hide_banner",
+    "-i",
+    filePath,
+    "-af",
+    "volumedetect",
+    "-f",
+    "null",
+    "-",
+  ], { encoding: "utf8" });
+  if (result.error || result.status !== 0) return null;
+  const match = result.stderr.match(/max_volume:\s*([-0-9.]+)\s*dB/);
+  if (!match) return null;
+  return Number(match[1]);
+}
+
+function requireAudibleCharAudio(label, src) {
+  const filePath = requirePublicAsset(label, src);
+  if (!filePath) return;
+  const maxVolumeDb = getMaxVolumeDb(filePath);
+  if (!Number.isFinite(maxVolumeDb)) {
+    errors.push(`${label}: could not measure audio volume.`);
+    return;
+  }
+  if (maxVolumeDb < charAudioMaxVolumeFloorDb) {
+    errors.push(`${label}: max volume ${maxVolumeDb} dB is too quiet; regenerate or normalize the character audio.`);
   }
 }
 
 for (const lesson of curriculum.lessons ?? []) {
   for (const char of lesson.newChars ?? []) {
-    requirePublicAsset(`${lesson.id} ${char} charAudio`, lesson.charAudio?.[char]);
+    requireAudibleCharAudio(`${lesson.id} ${char} charAudio`, lesson.charAudio?.[char]);
   }
 
   for (const sentence of lesson.sentences ?? []) {
