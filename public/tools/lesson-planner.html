@@ -192,6 +192,17 @@
         margin-top: 14px;
       }
 
+      .custom-section {
+        margin-top: 14px;
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+
+      .custom-section h3 {
+        margin: 0;
+        font-size: 1.05rem;
+      }
+
       .sentence-row {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -344,7 +355,7 @@
         recommendations: [],
         selectedChoiceId: "",
         selectedIndexes: new Map(),
-        customRows: [],
+        customRowsByChoice: new Map(),
       };
 
       const $ = (id) => document.getElementById(id);
@@ -443,6 +454,7 @@
         $("choiceList").innerHTML = model.recommendations
           .map((choice, choiceIndex) => {
             const selected = choice.choiceId === state.selectedChoiceId;
+            const customRows = state.customRowsByChoice.get(choice.choiceId) || [];
             return `
               <article class="choice-card ${selected ? "selected" : ""}">
                 <div class="choice-head">
@@ -475,6 +487,22 @@
                     })
                     .join("")}
                 </div>
+                <section class="custom-section">
+                  <h3>新增給「${choice.newChars.join("")}」的句子</h3>
+                  <p class="help">這裡新增的句子只會黏在這個候選字底下。先選這個字，再勾句子或新增句子。</p>
+                  <div>
+                    ${customRows
+                      .map((row, index) => `
+                        <div class="custom-grid">
+                          <input placeholder="句子" value="${escapeAttr(row.text)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="text" />
+                          <input placeholder="spokenText，可留空" value="${escapeAttr(row.spokenText)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="spokenText" />
+                          <input placeholder="focus" value="${escapeAttr(row.focusChar)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="focusChar" />
+                        </div>
+                      `)
+                      .join("")}
+                  </div>
+                  <button class="btn secondary" type="button" data-add-custom="${choice.choiceId}" style="margin-top: 10px">幫「${choice.newChars.join("")}」新增一句</button>
+                </section>
               </article>
             `;
           })
@@ -490,7 +518,8 @@
         if (!choice) return [];
         const indexes = [...(state.selectedIndexes.get(choice.choiceId) || new Set())].sort((a, b) => a - b);
         const selected = indexes.map((index) => choice.sentenceCandidates[index]).filter(Boolean);
-        const custom = state.customRows.filter((row) => row.text.trim()).map((row) => ({
+        const customRows = state.customRowsByChoice.get(choice.choiceId) || [];
+        const custom = customRows.filter((row) => row.text.trim()).map((row) => ({
           text: row.text.trim(),
           spokenText: (row.spokenText.trim() || row.text.trim()).replace(/[，。！？、,.!?]/g, ""),
           focusChar: row.focusChar.trim() || choice.newChars[0],
@@ -503,29 +532,6 @@
           seen.add(key);
           return true;
         });
-      }
-
-      function renderCustomInputs() {
-        const holder = document.createElement("div");
-        holder.innerHTML = `
-          <section class="choice-card">
-            <h2>自己新增句子</h2>
-            <p class="help">你可以補上你覺得更好的句子。spokenText 會自動去掉標點；focus 可留空。</p>
-            <div id="customRows">
-              ${state.customRows
-                .map((row, index) => `
-                  <div class="custom-grid">
-                    <input placeholder="句子" value="${escapeAttr(row.text)}" data-custom="${index}" data-field="text" />
-                    <input placeholder="spokenText，可留空" value="${escapeAttr(row.spokenText)}" data-custom="${index}" data-field="spokenText" />
-                    <input placeholder="focus" value="${escapeAttr(row.focusChar)}" data-custom="${index}" data-field="focusChar" />
-                  </div>
-                `)
-                .join("")}
-            </div>
-            <button class="btn secondary" type="button" id="addCustomBtn" style="margin-top: 10px">新增一句</button>
-          </section>
-        `;
-        $("choiceList").appendChild(holder.firstElementChild);
       }
 
       function escapeAttr(value) {
@@ -572,7 +578,6 @@
         }
         renderSummary(model);
         renderChoices(model);
-        renderCustomInputs();
         updateOutput(model);
       }
 
@@ -600,8 +605,13 @@
           return;
         }
 
-        if (event.target.id === "addCustomBtn") {
-          state.customRows.push({ text: "", spokenText: "", focusChar: "" });
+        const addCustomButton = event.target.closest("[data-add-custom]");
+        if (addCustomButton) {
+          const choiceId = addCustomButton.dataset.addCustom;
+          const rows = state.customRowsByChoice.get(choiceId) || [];
+          rows.push({ text: "", spokenText: "", focusChar: "" });
+          state.customRowsByChoice.set(choiceId, rows);
+          state.selectedChoiceId = choiceId;
           render(currentModel());
           return;
         }
@@ -643,10 +653,14 @@
       });
 
       document.addEventListener("input", (event) => {
-        if (event.target.matches("[data-custom][data-field]")) {
+        if (event.target.matches("[data-custom-choice][data-custom][data-field]")) {
+          const choiceId = event.target.dataset.customChoice;
           const index = Number(event.target.dataset.custom);
           const field = event.target.dataset.field;
-          state.customRows[index][field] = event.target.value;
+          const rows = state.customRowsByChoice.get(choiceId) || [];
+          if (!rows[index]) rows[index] = { text: "", spokenText: "", focusChar: "" };
+          rows[index][field] = event.target.value;
+          state.customRowsByChoice.set(choiceId, rows);
           updateOutput(currentModel());
         }
       });
