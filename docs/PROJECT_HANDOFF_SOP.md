@@ -66,14 +66,31 @@ Before pushing or asking the user to merge:
 git fetch origin
 git status --short --branch
 npm run validate:curriculum
+npm run validate:production
 npm run lint
 npm run build
+git diff --stat
+git diff --name-only
 ```
 
-If production assets were touched, also run:
+Self-check gate before uploading to GitHub:
+
+- Confirm the branch is the intended task branch, or confirm the user explicitly asked to push `main`.
+- Confirm `git status --short --branch` shows no surprise unrelated changes.
+- Review `git diff --stat` and `git diff --name-only`; the changed files must match the task scope stated before editing.
+- Confirm all required checks pass locally.
+- If production assets or curriculum data changed, `npm run validate:production` must pass.
+- If any check fails, if unrelated files are modified, or if another thread has pushed conflicting work, do not push. Fix, rebase, or ask the user first.
+- If the self-check passes and the diff is safe, Codex may commit and push the task branch to GitHub without asking again.
+- Pushing a task branch is not the same as merging to `main`. Merge to `main` only when the user explicitly asks or approves it.
+
+Minimum required checks:
 
 ```bash
+npm run validate:curriculum
 npm run validate:production
+npm run lint
+npm run build
 ```
 
 Asset-writing commands that rewrite `src/curriculum/sample-lessons.json` must not run in parallel across threads. Run `assets:images`, `assets:audio`, and `assets:align` sequentially for one lesson at a time, and fetch/rebase before starting the next asset step if another thread has pushed curriculum changes.
@@ -356,14 +373,18 @@ Important files:
 
 ## Required Checks Before Push
 
-Run these before committing:
+Before committing and pushing, run the self-check gate above. At minimum, run:
 
 ```bash
 npm run validate:curriculum
+npm run validate:production
 npm run lint
 npm run build
-npm run validate:production
+git diff --stat
+git diff --name-only
 ```
+
+Only commit and push when the checks pass and the diff matches the current task scope. If safe, push the task branch to GitHub. Do not merge to `main` unless the user explicitly asks or approves it.
 
 When producing assets, do not run JSON-writing commands in parallel. In particular, run `assets:images` and `assets:align` sequentially per lesson because they rewrite `src/curriculum/sample-lessons.json`.
 
