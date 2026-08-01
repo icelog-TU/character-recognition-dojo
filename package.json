@@ -15,6 +15,8 @@
     "ai:check": "node scripts/check-ai-setup.mjs",
     "ai:sentences": "node scripts/generate-sentence-candidates.mjs",
     "curriculum:packet": "node scripts/create-generation-packet.mjs",
+    "curriculum:recommend": "node scripts/recommend-next-lesson.mjs",
+    "curriculum:request-from-review": "node scripts/create-request-from-review.mjs",
     "validate:curriculum": "node scripts/validate-curriculum.mjs",
     "validate:production": "node scripts/validate-production-assets.mjs",
     "preview": "vite preview"

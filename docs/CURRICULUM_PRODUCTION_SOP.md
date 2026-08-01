@@ -22,6 +22,53 @@ For the running lesson sequence, taught-character set, and sentence history, upd
 12. Update `docs/CURRICULUM_LEDGER.md`.
 13. Run `npm run validate:curriculum`, `npm run validate:production`, `npm run build`, and `npm run lint`.
 
+## Next-Lesson Planner Tool
+
+Use the planner when the teacher has not already chosen the next character.
+
+```bash
+npm run curriculum:recommend
+```
+
+This reads `src/curriculum/sample-lessons.json`, computes:
+
+- the next lesson id and order
+- all learned characters
+- the recent review pool from the previous 4-5 lessons
+- candidate next characters from `curriculum-workflow/next-character-bank.json`
+
+It writes:
+
+```text
+curriculum-workflow/recommendations/L###-next-lesson-review.json
+curriculum-workflow/recommendations/L###-next-lesson-review.md
+```
+
+The recommendation files are teacher-review drafts. They are not approved curriculum.
+
+Review workflow:
+
+1. Open the Markdown file for a readable overview.
+2. Pick one `choiceId`.
+3. In the JSON file, set `approval.selectedChoiceId`.
+4. Add the chosen sentence indexes to `approval.approvedSentenceIndexes`.
+5. Add better teacher-written sentences to `approval.customSentences` if needed.
+6. Run:
+
+```bash
+npm run curriculum:request-from-review -- --review curriculum-workflow/recommendations/L###-next-lesson-review.json
+```
+
+This creates `curriculum-workflow/lesson-requests/L###.json` with the selected character and approved sentence list in `teacherNotes`.
+
+Rules:
+
+- AI-generated recommendations may include unnatural sentences. The teacher must reject or rewrite them.
+- Do not move recommendation candidates directly into `src/curriculum/sample-lessons.json`.
+- Before building the lesson, verify every chosen sentence uses only already learned characters plus the new character.
+- The planner may use `OPENAI_TEXT_MODEL` for sentence refinement. Use `--no-ai` to generate local-template recommendations only.
+- Update `curriculum-workflow/next-character-bank.json` when a good future character or sentence pattern is discovered.
+
 ## Asset Commands
 
 Important: asset commands that update `src/curriculum/sample-lessons.json` must run one at a time. Do not run `assets:images`, `assets:align`, or `assets:align:ai` for different lessons in parallel, because each command reads and rewrites the same curriculum JSON file.

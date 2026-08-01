@@ -1,0 +1,206 @@
+[
+  {
+    "char": "下",
+    "zhuyin": "ㄒㄧㄚˋ",
+    "priority": 10,
+    "why": "Pairs naturally with 上 and 山, unlocking mountain up/down location and movement.",
+    "requires": ["一", "二", "三", "人", "個", "大", "的", "小", "手", "我", "有", "山", "上"],
+    "sentenceCandidates": [
+      {
+        "text": "我一個人下山",
+        "spokenText": "我一個人下山",
+        "focusChar": "下",
+        "reason": "Reviews 我、一個人、山 and contrasts with 上山."
+      },
+      {
+        "text": "山下有三個人",
+        "spokenText": "山下有三個人",
+        "focusChar": "下",
+        "reason": "Concrete location sentence with count review."
+      },
+      {
+        "text": "山上有大人，山下有小人",
+        "spokenText": "山上有大人山下有小人",
+        "focusChar": "下",
+        "reason": "Contrasts 上 and 下 while reviewing 大人 and 小人."
+      },
+      {
+        "text": "我的手下有一個小人",
+        "spokenText": "我的手下有一個小人",
+        "focusChar": "下",
+        "reason": "Reuses the toy-person-on-hand concept with a different spatial relation."
+      },
+      {
+        "text": "有大大的山，有小小的山",
+        "spokenText": "有大大的山有小小的山",
+        "focusChar": "山",
+        "reason": "Review sentence that can reuse the approved big/small mountain image."
+      }
+    ]
+  },
+  {
+    "char": "水",
+    "zhuyin": "ㄕㄨㄟˇ",
+    "priority": 20,
+    "why": "Concrete, imageable noun that combines well with 山、手、有、上.",
+    "requires": ["一", "人", "個", "大", "的", "小", "手", "我", "有", "山", "上"],
+    "sentenceCandidates": [
+      {
+        "text": "我有水",
+        "spokenText": "我有水",
+        "focusChar": "水",
+        "reason": "Very short possession sentence."
+      },
+      {
+        "text": "手上有水",
+        "spokenText": "手上有水",
+        "focusChar": "水",
+        "reason": "Concrete hand-surface sentence after 上."
+      },
+      {
+        "text": "山上有水",
+        "spokenText": "山上有水",
+        "focusChar": "水",
+        "reason": "Uses 山上 and 有 with a clear picture."
+      },
+      {
+        "text": "小小的手上有水",
+        "spokenText": "小小的手上有水",
+        "focusChar": "水",
+        "reason": "Reviews 小小的手 with a new concrete noun."
+      },
+      {
+        "text": "大大的山上有水",
+        "spokenText": "大大的山上有水",
+        "focusChar": "水",
+        "reason": "Reviews 大大的山 and adds water."
+      }
+    ]
+  },
+  {
+    "char": "你",
+    "zhuyin": "ㄋㄧˇ",
+    "priority": 30,
+    "why": "Adds a second-person child role and starts simple interpersonal sentence patterns.",
+    "requires": ["一", "人", "個", "大", "的", "小", "手", "有", "山", "上"],
+    "sentenceCandidates": [
+      {
+        "text": "你一個人",
+        "spokenText": "你一個人",
+        "focusChar": "你",
+        "reason": "Short identity phrase parallel to 我一個人."
+      },
+      {
+        "text": "你有小小的手",
+        "spokenText": "你有小小的手",
+        "focusChar": "你",
+        "reason": "Reviews 有、小小的手."
+      },
+      {
+        "text": "你上山",
+        "spokenText": "你上山",
+        "focusChar": "你",
+        "reason": "Simple action phrase using 上山."
+      },
+      {
+        "text": "你手上有小人",
+        "spokenText": "你手上有小人",
+        "focusChar": "你",
+        "reason": "Reuses hand/toy-person concept with a new person."
+      }
+    ]
+  },
+  {
+    "char": "去",
+    "zhuyin": "ㄑㄩˋ",
+    "priority": 40,
+    "why": "Unlocks simple movement/action sentences with 我、人、山上.",
+    "requires": ["一", "三", "人", "個", "大", "小", "我", "有", "山", "上"],
+    "sentenceCandidates": [
+      {
+        "text": "我去山上",
+        "spokenText": "我去山上",
+        "focusChar": "去",
+        "reason": "Simple movement sentence using the fixed 我 character."
+      },
+      {
+        "text": "一個人去山上",
+        "spokenText": "一個人去山上",
+        "focusChar": "去",
+        "reason": "Reviews 一個人 and 山上."
+      },
+      {
+        "text": "三個人去山上",
+        "spokenText": "三個人去山上",
+        "focusChar": "去",
+        "reason": "Reviews count phrase with an action."
+      },
+      {
+        "text": "大人去山上",
+        "spokenText": "大人去山上",
+        "focusChar": "去",
+        "reason": "Concrete adult action sentence."
+      }
+    ]
+  },
+  {
+    "char": "家",
+    "zhuyin": "ㄐㄧㄚ",
+    "priority": 50,
+    "why": "High-value family/home character; useful before later family roles.",
+    "requires": ["一", "三", "人", "個", "大", "小", "我", "有"],
+    "sentenceCandidates": [
+      {
+        "text": "我家有三個人",
+        "spokenText": "我家有三個人",
+        "focusChar": "家",
+        "reason": "Natural Taiwan Mandarin and very imageable."
+      },
+      {
+        "text": "我家有大人",
+        "spokenText": "我家有大人",
+        "focusChar": "家",
+        "reason": "Short home sentence with 大人."
+      },
+      {
+        "text": "我家有小人",
+        "spokenText": "我家有小人",
+        "focusChar": "家",
+        "reason": "Possible if 小人 is represented as toy figures or small people; teacher should review."
+      }
+    ]
+  },
+  {
+    "char": "他",
+    "zhuyin": "ㄊㄚ",
+    "priority": 60,
+    "why": "Adds third-person reference after 我 and before broader character stories.",
+    "requires": ["一", "人", "個", "大", "的", "小", "手", "有", "山", "上"],
+    "sentenceCandidates": [
+      {
+        "text": "他一個人",
+        "spokenText": "他一個人",
+        "focusChar": "他",
+        "reason": "Short identity phrase parallel to 我一個人."
+      },
+      {
+        "text": "他有小小的手",
+        "spokenText": "他有小小的手",
+        "focusChar": "他",
+        "reason": "Reviews 有 and 小小的手."
+      },
+      {
+        "text": "他上山",
+        "spokenText": "他上山",
+        "focusChar": "他",
+        "reason": "Simple action phrase using 上山."
+      },
+      {
+        "text": "他手上有小人",
+        "spokenText": "他手上有小人",
+        "focusChar": "他",
+        "reason": "Reuses hand/toy-person concept with a new person."
+      }
+    ]
+  }
+]
