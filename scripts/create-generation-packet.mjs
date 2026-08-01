@@ -37,6 +37,7 @@ function normalizeRequest(raw) {
   const order = Number(raw.order);
   const newChars = Array.isArray(raw.newChars) ? raw.newChars : [];
   const zhuyin = raw.zhuyin && typeof raw.zhuyin === "object" ? raw.zhuyin : {};
+  const constraints = raw.generationConstraints && typeof raw.generationConstraints === "object" ? raw.generationConstraints : {};
   const id = raw.id ?? lessonId(order);
   return {
     id,
@@ -46,6 +47,8 @@ function normalizeRequest(raw) {
     title: raw.title ?? newChars.join(""),
     targetSentenceCount: Number(raw.targetSentenceCount ?? 6),
     teacherNotes: raw.teacherNotes ?? "",
+    provisionalLearnedChars: Array.isArray(constraints.provisionalLearnedChars) ? constraints.provisionalLearnedChars : [],
+    requestedAllowedChars: Array.isArray(constraints.allowedChars) ? constraints.allowedChars : [],
   };
 }
 
@@ -90,7 +93,7 @@ function buildDraft(request) {
   };
 }
 
-function buildPacket({ request, learnedChars, allowedChars, priorSentences }) {
+function buildPacket({ request, learnedChars, provisionalLearnedChars, allowedChars, priorSentences }) {
   const id = request.id;
   const assetBase = `/assets/lessons/${id}`;
   const charAudioMap = Object.fromEntries(
@@ -116,7 +119,7 @@ function buildPacket({ request, learnedChars, allowedChars, priorSentences }) {
 AI 必須把這份課程序列視為鎖定邊界。
 
 - 前面已學字：${learnedChars.join(" ") || "無"}
-- 本課新字：${request.newChars.join(" ")}
+${provisionalLearnedChars.length ? `- 平行備課暫定已學字：${provisionalLearnedChars.join(" ")}\n` : ""}- 本課新字：${request.newChars.join(" ")}
 - 顯示句子可用漢字：${allowedChars.join(" ")}
 - 禁止：任何未列在上方的漢字。
 - 只能使用臺灣華語與臺灣繁體字。
@@ -258,9 +261,12 @@ if (errors.length > 0) {
 
 const previousLessons = existingLessons.filter((lesson) => lesson.order < request.order);
 const learnedChars = unique(previousLessons.flatMap((lesson) => lesson.newChars ?? []));
-const allowedChars = unique([...learnedChars, ...request.newChars]);
+const provisionalLearnedChars = unique(request.provisionalLearnedChars.filter((char) => !learnedChars.includes(char)));
+const allowedChars = request.requestedAllowedChars.length
+  ? unique(request.requestedAllowedChars)
+  : unique([...learnedChars, ...provisionalLearnedChars, ...request.newChars]);
 const priorSentences = previousLessons.flatMap((lesson) => lesson.sentences?.map((sentence) => sentence.text) ?? []);
-const packet = buildPacket({ request, learnedChars, allowedChars, priorSentences });
+const packet = buildPacket({ request, learnedChars, provisionalLearnedChars, allowedChars, priorSentences });
 const draft = buildDraft(request);
 
 fs.mkdirSync(outputDir, { recursive: true });
