@@ -5,6 +5,7 @@ import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculu
 import "./index.css";
 
 const curriculum = curriculumData as unknown as Curriculum;
+const TEACH_TARGET_AUDIO_GUARD_MS = 170;
 
 type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
 type LessonCharEntry = { lesson: Lesson; char: string; index: number };
@@ -331,6 +332,15 @@ const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
   "sea-fish-youngerBrother": "/assets/characters/sea/fish/fish-younger-brother.webp",
   "sea-fish-youngerSister": "/assets/characters/sea/fish/fish-younger-sister.webp",
   "sea-fish-baby": "/assets/characters/sea/fish/fish-baby.webp",
+  "sea-tropicalFish-grandpa": "/assets/characters/sea/tropical-fish/tropical-fish-grandpa.webp",
+  "sea-tropicalFish-grandma": "/assets/characters/sea/tropical-fish/tropical-fish-grandma.webp",
+  "sea-tropicalFish-dad": "/assets/characters/sea/tropical-fish/tropical-fish-father.webp",
+  "sea-tropicalFish-mom": "/assets/characters/sea/tropical-fish/tropical-fish-mother.webp",
+  "sea-tropicalFish-olderBrother": "/assets/characters/sea/tropical-fish/tropical-fish-older-brother.webp",
+  "sea-tropicalFish-olderSister": "/assets/characters/sea/tropical-fish/tropical-fish-older-sister.webp",
+  "sea-tropicalFish-youngerBrother": "/assets/characters/sea/tropical-fish/tropical-fish-younger-brother.webp",
+  "sea-tropicalFish-youngerSister": "/assets/characters/sea/tropical-fish/tropical-fish-younger-sister.webp",
+  "sea-tropicalFish-baby": "/assets/characters/sea/tropical-fish/tropical-fish-baby.webp",
 };
 
 const CREATURE_SPECIES: CreatureSpecies[] = [
@@ -3229,6 +3239,12 @@ function activeTimingIndex(sentence: LessonSentence, elapsedMs: number) {
   return active?.charIndex ?? null;
 }
 
+function teachPrefixEndMs(sentence: LessonSentence, targetIndex: number) {
+  const timing = sentence.audio?.charTimings.find((item) => item.charIndex === targetIndex);
+  if (!timing) return null;
+  return Math.max(0, timing.startMs - TEACH_TARGET_AUDIO_GUARD_MS);
+}
+
 function playFoundChime() {
   playToneSequence([
     { frequency: 660, endFrequency: 990, duration: 0.18, gain: 0.06 },
@@ -3608,8 +3624,9 @@ function SentencePracticePreview({
     await speakStageFour("小兔子說，我要來念念看這句話。");
     if (guideRunRef.current !== runId) return;
     if (sentence.audio?.src && timing) {
-      await playAudioRange(sentence.audio.src, 0, timing.startMs, {
-        onTime: (elapsedMs) => setActiveGameCharIndex(activeTimingIndex(sentence, Math.min(elapsedMs, timing.startMs - 1))),
+      const prefixEndMs = teachPrefixEndMs(sentence, targetIndex) ?? timing.startMs;
+      await playAudioRange(sentence.audio.src, 0, prefixEndMs, {
+        onTime: (elapsedMs) => setActiveGameCharIndex(activeTimingIndex(sentence, Math.min(elapsedMs, prefixEndMs))),
       });
     } else {
       await playSpokenText(han.slice(0, targetIndex).join(""));
@@ -3817,8 +3834,9 @@ function SentencePracticePreview({
     setActiveGameCharIndex(null);
     await speakStageFour("我聽到了。我來試試看。");
     if (sentence.audio?.src && timing) {
-      await playAudioRange(sentence.audio.src, 0, timing.startMs, {
-        onTime: (elapsedMs) => setActiveGameCharIndex(activeTimingIndex(sentence, elapsedMs)),
+      const prefixEndMs = teachPrefixEndMs(sentence, targetIndex) ?? timing.startMs;
+      await playAudioRange(sentence.audio.src, 0, prefixEndMs, {
+        onTime: (elapsedMs) => setActiveGameCharIndex(activeTimingIndex(sentence, Math.min(elapsedMs, prefixEndMs))),
       });
       setActiveGameCharIndex(targetIndex);
       await playRecordedAudioUrl(url);
