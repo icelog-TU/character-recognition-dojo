@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
 import curriculumData from "./curriculum/sample-lessons.json";
 import type { Curriculum, Lesson, LessonSentence, SentenceGame, SentenceGameOption, SentenceGameType } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
@@ -2025,6 +2025,7 @@ function LessonPanel({
   const speechRunRef = useRef(0);
   const hearRunRef = useRef(0);
   const panelRef = useRef<HTMLElement | null>(null);
+  const rewardPanelRef = useRef<HTMLElement | null>(null);
   const newChars = lessonChars(lesson);
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
@@ -2052,6 +2053,22 @@ function LessonPanel({
   useEffect(() => {
     panelRef.current?.scrollIntoView({ block: "start" });
   }, [lesson.id, activeStage]);
+
+  useEffect(() => {
+    if (rewardState !== "claiming" || !lessonReady) return;
+    let firstFrame = 0;
+    let secondFrame = 0;
+    firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        const target = rewardPanelRef.current?.querySelector<HTMLElement>(".reward-animation") ?? rewardPanelRef.current;
+        target?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+      });
+    });
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      window.cancelAnimationFrame(secondFrame);
+    };
+  }, [lessonReady, rewardState]);
 
   useEffect(() => {
     if (soundUnlocked && activeStage === 1) void speakForTarget("advance2", GUIDE_TEXT.toStageTwo);
@@ -2346,6 +2363,7 @@ function LessonPanel({
 
       {lessonReady && (
         <RewardPanel
+          panelRef={rewardPanelRef}
           state={rewardState}
           reward={lessonReward}
           alreadyCompleted={completed && rewardState !== "claiming"}
@@ -2475,6 +2493,7 @@ function StageAdvancePrompt({
 }
 
 function RewardPanel({
+  panelRef,
   state,
   reward,
   alreadyCompleted,
@@ -2485,6 +2504,7 @@ function RewardPanel({
   onSpeakStart,
   onSpeakEnd,
 }: {
+  panelRef: RefObject<HTMLElement | null>;
   state: "waiting" | "ready" | "claiming" | "claimed";
   reward: LessonReward;
   alreadyCompleted: boolean;
@@ -2504,7 +2524,7 @@ function RewardPanel({
   const coinCount = useRewardCount(reward.coins, state !== "ready");
   const starCount = useRewardCount(reward.stars, state !== "ready");
   return (
-    <section className={`reward-panel active-block reward-${state}`} aria-label="領取獎勵">
+    <section ref={panelRef} className={`reward-panel active-block reward-${state}`} aria-label="領取獎勵">
       {!alreadyCompleted && state === "claiming" && (
         <div className="reward-burst" aria-hidden>
           <span>🪙</span>
