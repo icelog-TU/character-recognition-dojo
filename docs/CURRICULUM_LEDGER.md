@@ -74,10 +74,11 @@ Image reuse rule:
 | L026 | 男 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男 | 小男孩在看男人飛 / 小男孩的手指很小 / 男孩和女孩在看鳥飛 / 女孩看女人的手指 / 女孩的手在指一隻飛鳥 | 小孩在看人飛的手指很和女鳥一隻 | Introduces `男` through the fixed boy and adult man scenes. Reviews recent `看`, `女`, and `飛`; creates new images for the first three sentences and reuses approved L024-S02 and L025-S05 images for review sentences. |
 | L027 | 門 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門 | 女人的門和男人的門 / 你看！一隻小鳥飛上門 / 男孩手指有飛鳥的門 / 女孩在看鳥飛 / 男孩看女人的手指 | 女人男人和你看一隻小鳥飛上男孩手指有的 | Introduces `門` through doors, door-top placement, and a flying-bird door decoration. Reviews recent `女`, `飛`, and `男`; reuses approved L025-S01 image for `女孩在看鳥飛` and creates new images for the other four sentences. |
 | L028 | 前 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前 | 男孩和女孩在門前。 / 我在看門前的飛鳥 / 女孩飛在男孩前 / 男孩和女孩在看大人飛 / 女孩在看門上的鳥 | 男孩和女孩在門前我看的飛鳥大人 | Introduces `前` through in-front-of-door and in-front-of-boy scenes. Reviews recent `飛`, `男`, and `門`; all five sentence images use newly generated reviewed picture-book assets. |
+| L029 | 後 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後 | 男孩在門前，女孩在門後 / 男孩和女孩在門前。 / 女孩飛在前，男孩飛在後 / 男孩和女孩在看大人飛 / 前門有山，後門有水。 | 男孩在門前女孩後和飛大人有山水 | Introduces `後` through behind-door and behind/in-back flying scenes. Reviews recent `男`, `門`, and `前`; reuses approved L028-S01 and L028-S04 images, and creates new images for the other three sentences. |
 
 ## Planned Lessons
 
-L028 已選定並完成：新字 `前`；審核句子為 `男孩和女孩在門前。`、`我在看門前的飛鳥`、`女孩飛在男孩前`、`男孩和女孩在看大人飛`、`女孩在看門上的鳥`。
+L029 已選定並完成：新字 `後`；審核句子為 `男孩在門前，女孩在門後`、`男孩和女孩在門前。`、`女孩飛在前，男孩飛在後`、`男孩和女孩在看大人飛`、`前門有山，後門有水。`。
 
 ## Planning Rule For New Lessons
 
