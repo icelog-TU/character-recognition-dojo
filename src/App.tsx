@@ -40,6 +40,7 @@ type CollectibleCharacter = CreatureSpecies & {
   familyRoleId: FamilyRoleId;
   familyRoleLabel: string;
   familyRoleShortLabel: string;
+  imageSrc?: string;
 };
 type GachaDrawResult = {
   character: CollectibleCharacter;
@@ -107,6 +108,18 @@ const FAMILY_ROLE_ACCESSORY: Record<FamilyRoleId, string> = {
   baby: "🍼",
 };
 
+const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
+  "land-cat-grandpa": "/assets/characters/land/cat/cat-grandpa.webp",
+  "land-cat-grandma": "/assets/characters/land/cat/cat-grandma.webp",
+  "land-cat-dad": "/assets/characters/land/cat/cat-father.webp",
+  "land-cat-mom": "/assets/characters/land/cat/cat-mother.webp",
+  "land-cat-olderBrother": "/assets/characters/land/cat/cat-older-brother.webp",
+  "land-cat-olderSister": "/assets/characters/land/cat/cat-older-sister.webp",
+  "land-cat-youngerBrother": "/assets/characters/land/cat/cat-younger-brother.webp",
+  "land-cat-youngerSister": "/assets/characters/land/cat/cat-younger-sister.webp",
+  "land-cat-baby": "/assets/characters/land/cat/cat-baby.webp",
+};
+
 const CREATURE_SPECIES: CreatureSpecies[] = [
   { id: "cat", realmId: "land", name: "貓", icon: "🐱" },
   { id: "dog", realmId: "land", name: "狗", icon: "🐶" },
@@ -171,13 +184,17 @@ const CREATURE_SPECIES: CreatureSpecies[] = [
 ];
 
 const COLLECTIBLE_CHARACTERS: CollectibleCharacter[] = CREATURE_SPECIES.flatMap((species) =>
-  FAMILY_ROLES.map((role) => ({
-    ...species,
-    characterId: `${species.realmId}-${species.id}-${role.id}`,
-    familyRoleId: role.id,
-    familyRoleLabel: role.label,
-    familyRoleShortLabel: role.shortLabel,
-  })),
+  FAMILY_ROLES.map((role) => {
+    const characterId = `${species.realmId}-${species.id}-${role.id}`;
+    return {
+      ...species,
+      characterId,
+      familyRoleId: role.id,
+      familyRoleLabel: role.label,
+      familyRoleShortLabel: role.shortLabel,
+      imageSrc: COLLECTION_CHARACTER_IMAGE_SRC[characterId],
+    };
+  }),
 );
 
 const COLLECTIBLE_BY_ID = new Map(COLLECTIBLE_CHARACTERS.map((character) => [character.characterId, character]));
@@ -1757,10 +1774,15 @@ function CreatureAvatar({
 }) {
   const accessory = FAMILY_ROLE_ACCESSORY[character.familyRoleId];
   const mood = characterMood(hearts);
+  const imageSrc = owned ? character.imageSrc : undefined;
   return (
-    <div className={`creature-avatar${large ? " large" : ""}${owned ? "" : " silhouette"}`}>
-      <span className="creature-icon" aria-hidden>{owned ? character.icon : "?"}</span>
-      {owned && <span className="role-accessory" aria-hidden>{accessory}</span>}
+    <div className={`creature-avatar${large ? " large" : ""}${owned ? "" : " silhouette"}${imageSrc ? " illustrated" : ""}`}>
+      {imageSrc ? (
+        <img className="creature-image" src={assetUrl(imageSrc)} alt="" />
+      ) : (
+        <span className="creature-icon" aria-hidden>{owned ? character.icon : "?"}</span>
+      )}
+      {owned && !imageSrc && <span className="role-accessory" aria-hidden>{accessory}</span>}
       {owned && <span className="mood-badge" aria-hidden>{mood}</span>}
       <span className="family-badge">{owned ? character.familyRoleShortLabel : ""}</span>
     </div>

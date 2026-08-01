@@ -149,6 +149,8 @@ The collection page also speaks on entry.
 
 Do not generate hundreds of final character images before the art direction is approved.
 
+Use `docs/CHARACTER_ART_STYLE_SPEC.md` as the source of truth for collection character image style, prompt templates, review steps, and rejection criteria.
+
 Recommended workflow:
 
 1. Keep the current prototype using clear symbolic avatars.
