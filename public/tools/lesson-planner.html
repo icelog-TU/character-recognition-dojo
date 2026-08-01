@@ -358,6 +358,19 @@
         margin-top: 10px;
       }
 
+      .nearby-request-panel {
+        margin-top: 14px;
+        border: 2px solid rgba(25, 121, 111, 0.22);
+        border-radius: 12px;
+        background: #eefaf5;
+        padding: 12px;
+      }
+
+      .nearby-request-panel h4 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
       .request-panel {
         margin-top: 16px;
         padding: clamp(14px, 3vw, 20px);
@@ -438,8 +451,8 @@
       <section class="choice-list" id="choiceList"></section>
 
       <section class="request-panel">
-        <h2>已選 lesson request</h2>
-        <p class="help">這裡產生的是給 Codex 建課用的審核後資料。你可以複製，或下載成 JSON。</p>
+        <h2>完整 lesson request 預覽</h2>
+        <p class="help">先選一個候選字，再勾選或新增句子。主要送出按鈕會出現在你正在編輯的候選字下面。</p>
         <textarea id="requestOutput" spellcheck="false"></textarea>
         <div class="request-actions">
           <button class="btn danger" id="submitBtn" type="button">送出給 Codex</button>
@@ -655,6 +668,19 @@
                       <span class="custom-feedback">${escapeHtml(feedback)}</span>
                     </div>
                   </div>
+                  ${
+                    selected
+                      ? `<div class="nearby-request-panel">
+                          <h4>送出這一課</h4>
+                          <p class="help">句子都確認後，從這裡就近送出給 Codex。底部 JSON 預覽會同步更新。</p>
+                          <div class="request-actions">
+                            <button class="btn danger" type="button" data-submit-request>送出給 Codex</button>
+                            <button class="btn" type="button" data-copy-request>複製 JSON</button>
+                            <button class="btn secondary" type="button" data-download-request>下載 JSON</button>
+                          </div>
+                        </div>`
+                      : ""
+                  }
                 </section>
               </article>
             `;
@@ -770,7 +796,11 @@
       }
 
       function updateOutput(model) {
-        $("requestOutput").value = buildRequest(model);
+        const request = buildRequest(model);
+        $("requestOutput").value = request;
+        $("requestOutput").placeholder = request
+          ? ""
+          : "請先選一個候選字。選好後，勾選候選句或新增自己的句子，這裡才會產生 lesson request。";
       }
 
       function scrollSelectedChoiceIntoView() {
@@ -790,7 +820,7 @@
 
       function codexMessage(model) {
         return [
-          "請依照下面 lesson request 幫我核對並製作第 12 課。",
+          `請依照下面 lesson request 幫我核對並製作第 ${model.order} 課。`,
           "",
           "```json",
           buildRequest(model),
@@ -809,10 +839,6 @@
 
       function render(model) {
         state.recommendations = model.recommendations;
-        if (!state.selectedChoiceId && model.recommendations[0]) {
-          state.selectedChoiceId = model.recommendations[0].choiceId;
-          state.selectedIndexes.set(state.selectedChoiceId, new Set([0, 1, 2, 3].filter((index) => model.recommendations[0].sentenceCandidates[index])));
-        }
         renderSummary(model);
         renderChoices(model);
         updateOutput(model);
@@ -906,7 +932,7 @@
           return;
         }
 
-        if (event.target.id === "copyBtn") {
+        if (event.target.id === "copyBtn" || event.target.closest("[data-copy-request]")) {
           const error = requestReadinessError();
           if (error) {
             $("statusLine").textContent = error;
@@ -917,7 +943,7 @@
           return;
         }
 
-        if (event.target.id === "submitBtn") {
+        if (event.target.id === "submitBtn" || event.target.closest("[data-submit-request]")) {
           const model = currentModel();
           const error = requestReadinessError();
           if (error) {
@@ -939,8 +965,13 @@
           return;
         }
 
-        if (event.target.id === "downloadBtn") {
+        if (event.target.id === "downloadBtn" || event.target.closest("[data-download-request]")) {
           const model = currentModel();
+          const error = requestReadinessError();
+          if (error) {
+            $("statusLine").textContent = error;
+            return;
+          }
           const blob = new Blob([$("requestOutput").value + "\n"], { type: "application/json" });
           const link = document.createElement("a");
           link.href = URL.createObjectURL(blob);
