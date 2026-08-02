@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 37:
+Characters taught after Lesson 38:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩`
 
 Recent review pool for the next lesson:
 
-`到 不 他 我 孩 走 也 看 是 家 門 山 男 沒 鳥 人 在 女 有 上 前 你 小 後 裡 大 水 飛 手 很 高`
+`到 他 走 我 不 看 沒 孩 也 是 山 家 人 男 鳥 有 裡 上 女 在 小 兩 你 門 後 飛 手 隻 大 很 高 的 下`
 
 ## Visual Continuity Ledger
 
@@ -93,10 +93,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L035 | 他 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他 | 他是男孩，不是女孩 / 他看到我，我看不到他 / 他走到山上，我也走到山上 / 女孩不走，男孩也不走 / 他是男孩，你也是男孩 | 他是男孩不女看到我走山上也你 | Introduces `他` through a new fixed sporty boy character. Reviews recent `不`, `到`, and `走`; S02 uses the refreshed hide-and-seek image, S04 reuses the refreshed L034-S02 haunted-house image, and Stage 4 requires all five sentence games. |
 | L036 | 沒 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒 | 他沒走，我也沒走 / 他是男孩，不是女孩 / 我看到鳥，他沒看到 / 鳥在門上，沒有飛走 / 我到他家，他不在家 | 他沒走我也是男孩不女看到鳥在門上有飛家 | Introduces `沒` through not-leaving, not-seeing, and not-flying-away scenes. Reviews recent `到`, `走`, and `他`; S01 now clearly shows other children leaving while the two main children stay cleaning, and Stage 4 requires all five sentence games. |
 | L037 | 裡 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡 | 他走到家裡，沒看到人 / 他手裡有小山，沒有小鳥 / 他不在家裡，沒人看到他 / 他看到我，我看不到他 / 山很高，我走不到山上 | 他走到家裡沒看人手有小山鳥不在我很高上 | Introduces `裡` through inside-the-home and in-the-hand spatial scenes. Reviews recent `走`, `他`, and `沒`; reuses approved L035-S02 image for the hide-and-seek review sentence. |
+| L038 | 兩 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩 | 他沒走，我也沒走 / 兩人走到家裡，沒看到人 / 他的兩隻手裡有小人 / 我看到兩隻鳥飛到山裡 / 他沒看到我走下山 | 他沒走我也兩人到家裡看的隻手有小鳥飛山下 | Introduces `兩` through two people, two hands, and two birds. Reviews recent `他`, `沒`, and `裡`; reuses approved L036-S01 image for the not-leaving review sentence. |
 
 ## Planned Lessons
 
-None yet. L037 已完成，下一課請從 planner 重新規劃。
+None yet. L038 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 
