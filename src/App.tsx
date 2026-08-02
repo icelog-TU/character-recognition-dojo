@@ -718,7 +718,10 @@ function stageLabel(stage: number): string {
   return `第${smallZhNumber(stage)}階段`;
 }
 
-function scrollActiveLessonWorkIntoView(target: HTMLElement, options: { extraBottomInset?: number } = {}) {
+function scrollActiveLessonWorkIntoView(
+  target: HTMLElement,
+  options: { align?: "center" | "top"; extraBottomInset?: number } = {},
+) {
   const header = document.querySelector<HTMLElement>(".app-header");
   const playbackBar = document.querySelector<HTMLElement>(".floating-playback-bar");
   const headerHeight = header?.getBoundingClientRect().height ?? 0;
@@ -728,7 +731,7 @@ function scrollActiveLessonWorkIntoView(target: HTMLElement, options: { extraBot
   const availableHeight = Math.max(180, window.innerHeight - topInset - bottomInset);
   const rect = target.getBoundingClientRect();
   const targetTop = window.scrollY + rect.top;
-  const centerOffset = rect.height < availableHeight ? (availableHeight - rect.height) / 2 : 0;
+  const centerOffset = options.align === "top" ? 0 : rect.height < availableHeight ? (availableHeight - rect.height) / 2 : 0;
   const scrollTop = Math.max(0, targetTop - topInset - centerOffset);
   window.scrollTo({ top: scrollTop, behavior: "smooth" });
 }
@@ -3618,7 +3621,7 @@ function SentencePracticePreview({
   const releasedDuringPrimeRef = useRef(false);
   const recordingStreamRef = useRef<MediaStream | null>(null);
   const roundCompleteActionRef = useRef<HTMLDivElement | null>(null);
-  const gameOptionAreaRef = useRef<HTMLDivElement | null>(null);
+  const gameSentenceRef = useRef<HTMLDivElement | null>(null);
   const onSpeakStartRef = useRef(onSpeakStart);
   const onSpeakEndRef = useRef(onSpeakEnd);
   const han = sentence ? hanChars(sentence.text) : [];
@@ -3697,7 +3700,6 @@ function SentencePracticePreview({
   const doneAfterThisRound = doneCount + 1 >= requiredCount;
   const isCurrentRoundComplete = Boolean(game && roundComplete && completedGameId === game.id);
   const gameId = game?.id;
-  const gameType = game?.type;
 
   useEffect(() => {
     if (!isCurrentRoundComplete || disabled) return;
@@ -3720,20 +3722,19 @@ function SentencePracticePreview({
   }, [disabled, gameId, isCurrentRoundComplete]);
 
   useEffect(() => {
-    if (disabled || isCurrentRoundComplete || !gameType) return;
-    if (!["missing-character", "partial-order", "choose-pronunciation"].includes(gameType)) return;
+    if (disabled || isCurrentRoundComplete || !gameId) return;
     let firstFrame = 0;
     let secondFrame = 0;
     firstFrame = window.requestAnimationFrame(() => {
       secondFrame = window.requestAnimationFrame(() => {
-        if (gameOptionAreaRef.current) scrollActiveLessonWorkIntoView(gameOptionAreaRef.current);
+        if (gameSentenceRef.current) scrollActiveLessonWorkIntoView(gameSentenceRef.current, { align: "top" });
       });
     });
     return () => {
       window.cancelAnimationFrame(firstFrame);
       window.cancelAnimationFrame(secondFrame);
     };
-  }, [disabled, gameId, gameType, isCurrentRoundComplete]);
+  }, [disabled, gameId, isCurrentRoundComplete]);
 
   if (!game || !sentence) {
     return <p className="block-note">這一課還沒有設定句子遊戲。</p>;
@@ -4036,15 +4037,17 @@ function SentencePracticePreview({
     if (game.type === "find-character") {
       return (
         <>
-          <SentenceGameLine
-            sentence={sentence}
-            zhuyinMap={zhuyinMap}
-            targetChar={isCurrentRoundComplete ? game.targetChar : undefined}
-            activeIndex={activeGameCharIndex}
-            clickable
-            foundIndexes={isCurrentRoundComplete ? new Set([targetIndex]) : foundGameIndexes}
-            onCharClick={handleFindChar}
-          />
+          <div ref={gameSentenceRef}>
+            <SentenceGameLine
+              sentence={sentence}
+              zhuyinMap={zhuyinMap}
+              targetChar={isCurrentRoundComplete ? game.targetChar : undefined}
+              activeIndex={activeGameCharIndex}
+              clickable
+              foundIndexes={isCurrentRoundComplete ? new Set([targetIndex]) : foundGameIndexes}
+              onCharClick={handleFindChar}
+            />
+          </div>
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
             🔊 重播這一句
           </button>
@@ -4056,17 +4059,19 @@ function SentencePracticePreview({
     if (game.type === "teach-character") {
       return (
         <>
-          <SentenceGameLine
-            sentence={sentence}
-            zhuyinMap={zhuyinMap}
-            targetChar={teachPhase === "reading" ? undefined : game.targetChar}
-            activeIndex={activeGameCharIndex}
-            askingIndex={askingGameCharIndex}
-            recordingIndex={recordingGameCharIndex}
-            foundIndexes={teachPhase === "done" || isCurrentRoundComplete ? new Set([targetIndex]) : new Set()}
-            onCharPressStart={handleTeachPressStart}
-            onCharPressEnd={handleTeachPressEnd}
-          />
+          <div ref={gameSentenceRef}>
+            <SentenceGameLine
+              sentence={sentence}
+              zhuyinMap={zhuyinMap}
+              targetChar={teachPhase === "reading" ? undefined : game.targetChar}
+              activeIndex={activeGameCharIndex}
+              askingIndex={askingGameCharIndex}
+              recordingIndex={recordingGameCharIndex}
+              foundIndexes={teachPhase === "done" || isCurrentRoundComplete ? new Set([targetIndex]) : new Set()}
+              onCharPressStart={handleTeachPressStart}
+              onCharPressEnd={handleTeachPressEnd}
+            />
+          </div>
           {floatingRecordChar && (
             <div className={`floating-record-char${recording ? " recording" : ""}`} aria-hidden>
               {floatingRecordChar}
@@ -4082,17 +4087,19 @@ function SentencePracticePreview({
     if (game.type === "missing-character") {
       return (
         <>
-          <SentenceGameLine
-            sentence={sentence}
-            zhuyinMap={zhuyinMap}
-            targetChar={game.targetChar}
-            activeIndex={activeGameCharIndex}
-            blanks={filledBlanks}
-          />
+          <div ref={gameSentenceRef}>
+            <SentenceGameLine
+              sentence={sentence}
+              zhuyinMap={zhuyinMap}
+              targetChar={game.targetChar}
+              activeIndex={activeGameCharIndex}
+              blanks={filledBlanks}
+            />
+          </div>
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
             🔊 重播這一句
           </button>
-          <div ref={gameOptionAreaRef} className="sentence-game-action-area">
+          <div className="sentence-game-action-area">
             <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleMissingOption} />
           </div>
         </>
@@ -4102,17 +4109,19 @@ function SentencePracticePreview({
     if (game.type === "partial-order") {
       return (
         <>
-          <SentenceGameLine
-            sentence={sentence}
-            zhuyinMap={zhuyinMap}
-            targetChar={game.targetChar}
-            activeIndex={activeGameCharIndex}
-            blanks={filledBlanks}
-          />
+          <div ref={gameSentenceRef}>
+            <SentenceGameLine
+              sentence={sentence}
+              zhuyinMap={zhuyinMap}
+              targetChar={game.targetChar}
+              activeIndex={activeGameCharIndex}
+              blanks={filledBlanks}
+            />
+          </div>
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
             🔊 重播這一句
           </button>
-          <div ref={gameOptionAreaRef} className="sentence-game-action-area">
+          <div className="sentence-game-action-area">
             <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleOrderOption} />
           </div>
         </>
@@ -4121,16 +4130,18 @@ function SentencePracticePreview({
 
     return (
       <>
-        <SentenceCard
-          sentence={sentence}
-          zhuyinMap={zhuyinMap}
-          activeCharIndex={null}
-          className="stage-four-sentence-card"
-        />
+        <div ref={gameSentenceRef}>
+          <SentenceCard
+            sentence={sentence}
+            zhuyinMap={zhuyinMap}
+            activeCharIndex={null}
+            className="stage-four-sentence-card"
+          />
+        </div>
         <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
           🔊 重播這一句
         </button>
-        <div ref={gameOptionAreaRef} className="sentence-game-action-area">
+        <div className="sentence-game-action-area">
           <PronunciationChoiceGrid
             options={shuffledGameOptions}
             disabled={disabled}
