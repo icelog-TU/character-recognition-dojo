@@ -47,12 +47,12 @@
       .topbar {
         position: sticky;
         top: 0;
-        z-index: 5;
+        z-index: 20;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 12px;
-        padding: 14px clamp(14px, 4vw, 28px);
+        padding: 10px clamp(12px, 4vw, 24px);
         background: #ff6506;
         color: #fff;
         box-shadow: 0 8px 24px rgba(117, 65, 12, 0.18);
@@ -64,12 +64,12 @@
       }
 
       .brand strong {
-        font-size: clamp(1.1rem, 4vw, 1.55rem);
+        font-size: clamp(1rem, 3.5vw, 1.35rem);
         line-height: 1.1;
       }
 
       .brand span {
-        font-size: 0.86rem;
+        font-size: 0.78rem;
         opacity: 0.9;
       }
 
@@ -78,6 +78,12 @@
         flex-wrap: wrap;
         justify-content: flex-end;
         gap: 8px;
+      }
+
+      .topbar .btn {
+        min-height: 36px;
+        padding: 7px 12px;
+        font-size: 0.92rem;
       }
 
       .page {
@@ -139,6 +145,55 @@
         padding: 4px 8px;
         text-align: center;
         font-weight: 800;
+      }
+
+      .learned-lookup {
+        margin-top: 12px;
+        border: 1px solid rgba(25, 121, 111, 0.22);
+        border-radius: 12px;
+        background: #eefaf5;
+        padding: 12px;
+      }
+
+      .learned-lookup h3 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
+
+      .lookup-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .lookup-row input {
+        min-width: 0;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--ink);
+        padding: 10px;
+      }
+
+      .lookup-result {
+        margin-top: 8px;
+        color: var(--primary);
+        font-weight: 850;
+      }
+
+      .lookup-result.missing {
+        color: #a43c31;
+      }
+
+      .learned-details {
+        margin-top: 10px;
+      }
+
+      .learned-details summary,
+      .settings-panel summary {
+        cursor: pointer;
+        font-weight: 850;
       }
 
       .plan-slot-controls {
@@ -340,6 +395,9 @@
       }
 
       .review-coverage {
+        position: sticky;
+        top: 74px;
+        z-index: 12;
         display: grid;
         gap: 8px;
         margin-top: 10px;
@@ -347,6 +405,7 @@
         border-radius: 12px;
         background: #fff8e6;
         padding: 10px 12px;
+        box-shadow: 0 10px 22px rgba(74, 55, 32, 0.14);
       }
 
       .review-coverage strong {
@@ -424,6 +483,37 @@
       .ai-settings-panel .help,
       .manual-choice-panel .help {
         margin-bottom: 12px;
+      }
+
+      .settings-panel {
+        margin-bottom: 16px;
+      }
+
+      .settings-panel > summary {
+        list-style: none;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--panel);
+        box-shadow: 0 12px 28px rgba(74, 55, 32, 0.08);
+        padding: 12px clamp(14px, 3vw, 18px);
+      }
+
+      .settings-panel > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .settings-panel > summary::after {
+        content: "展開";
+        float: right;
+        color: var(--primary);
+      }
+
+      .settings-panel[open] > summary::after {
+        content: "收起";
+      }
+
+      .settings-panel .ai-settings-panel {
+        margin-top: 8px;
       }
 
       .ai-grid {
@@ -721,6 +811,42 @@
       }
 
       @media (max-width: 760px) {
+        .topbar {
+          align-items: flex-start;
+          gap: 8px;
+          padding: 8px 10px;
+        }
+
+        .brand strong {
+          font-size: 1rem;
+        }
+
+        .brand span {
+          font-size: 0.74rem;
+        }
+
+        .header-actions {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 6px;
+          width: min(58vw, 340px);
+        }
+
+        .topbar .btn {
+          min-height: 32px;
+          padding: 5px 8px;
+          font-size: 0.78rem;
+          text-align: center;
+        }
+
+        .review-coverage {
+          top: 86px;
+        }
+
+        .lookup-row {
+          grid-template-columns: 1fr;
+        }
+
         .summary-grid,
         .custom-grid,
         .candidate-edit-grid,
@@ -752,9 +878,9 @@
         <span>認字練功房｜教師用入口</span>
       </div>
       <div class="header-actions">
-        <button class="btn secondary" id="refreshBtn" type="button">重新整理推薦</button>
-        <button class="btn secondary" id="aiRecommendBtn" type="button">AI 重新推薦新字</button>
-        <a class="btn secondary" href="../">回幼兒 APP</a>
+        <button class="btn secondary" id="refreshBtn" type="button">整理推薦</button>
+        <button class="btn secondary" id="aiRecommendBtn" type="button">AI 推薦新字</button>
+        <a class="btn secondary" href="../">回 APP</a>
       </div>
     </header>
 
@@ -785,22 +911,25 @@
         </div>
       </section>
 
-      <section class="panel ai-settings-panel" aria-labelledby="aiSettingsTitle">
-        <h2 id="aiSettingsTitle">AI 句子服務</h2>
-        <p class="help">填入 Cloudflare Worker URL 和老師 token 後，Planner 可以請 OpenAI 產生候選句。這裡不需要、也不能填 OpenAI API key。</p>
-        <div class="ai-grid">
-          <div class="ai-field">
-            <label for="aiEndpoint">Worker URL</label>
-            <input id="aiEndpoint" inputmode="url" placeholder="https://你的-worker.workers.dev" />
+      <details class="settings-panel">
+        <summary>AI 設定</summary>
+        <section class="panel ai-settings-panel" aria-labelledby="aiSettingsTitle">
+          <h2 id="aiSettingsTitle">AI 句子服務</h2>
+          <p class="help">填入 Cloudflare Worker URL 和老師 token 後，Planner 可以請 OpenAI 產生候選句。這裡不需要、也不能填 OpenAI API key。</p>
+          <div class="ai-grid">
+            <div class="ai-field">
+              <label for="aiEndpoint">Worker URL</label>
+              <input id="aiEndpoint" inputmode="url" placeholder="https://你的-worker.workers.dev" />
+            </div>
+            <div class="ai-field">
+              <label for="aiToken">老師 token</label>
+              <input id="aiToken" type="password" autocomplete="off" placeholder="TEACHER_TOKEN" />
+            </div>
+            <button class="btn secondary" id="saveAiSettingsBtn" type="button">儲存 AI 設定</button>
           </div>
-          <div class="ai-field">
-            <label for="aiToken">老師 token</label>
-            <input id="aiToken" type="password" autocomplete="off" placeholder="TEACHER_TOKEN" />
-          </div>
-          <button class="btn secondary" id="saveAiSettingsBtn" type="button">儲存 AI 設定</button>
-        </div>
-        <div class="ai-status" id="aiStatusLine"></div>
-      </section>
+          <div class="ai-status" id="aiStatusLine"></div>
+        </section>
+      </details>
 
       <div class="status" id="statusLine"></div>
 
@@ -838,6 +967,7 @@
         feedbackByChoice: new Map(),
         manualChoices: [],
         manualDraft: { char: "", zhuyin: "", why: "" },
+        learnedLookup: "",
         aiSettings: { endpoint: "", token: "" },
         aiGeneratingChoiceId: "",
         aiRecommending: false,
@@ -1412,6 +1542,37 @@
         };
       }
 
+      function firstLessonForChar(model, char) {
+        return model.lessons.find((lesson) => (lesson.newChars || []).includes(char)) || null;
+      }
+
+      function learnedLookupResult(model, rawText) {
+        const char = hanChars(rawText).join("").slice(0, 1);
+        if (!char) return null;
+        const lesson = firstLessonForChar(model, char);
+        if (!lesson) {
+          return {
+            learned: false,
+            message: `「${char}」還沒有學過，可以考慮排進未來課程。`,
+          };
+        }
+        return {
+          learned: true,
+          message: `「${char}」已學過：${lesson.id} 第 ${lesson.order} 課「${lesson.title || char}」。`,
+        };
+      }
+
+      function learnedLookupResultHtml(model, rawText) {
+        const lookup = learnedLookupResult(model, rawText);
+        if (!lookup) return `<p class="help">輸入一個字，就會顯示它是否已經在課程裡出現。</p>`;
+        return `<div class="lookup-result ${lookup.learned ? "" : "missing"}">${lookup.message}</div>`;
+      }
+
+      function updateLearnedLookup(model = currentModel()) {
+        const result = $("learnedLookupResult");
+        if (result) result.innerHTML = learnedLookupResultHtml(model, state.learnedLookup);
+      }
+
       function renderSummary(model) {
         $("summaryPanel").innerHTML = `
           <div class="summary-grid">
@@ -1422,7 +1583,18 @@
           </div>
           <p class="help">資料匯出時間：${state.data.exportedAt || "未知"}</p>
           <p class="help">課程最佳化：前 3 句優先讓本課新字至少出現 ${targetNewCharCountInLesson} 次；後 2 句優先補近 5 課新字；每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字；近 3 課新字 ${model.requiredRecentChars.join("、")} 在整課句子中至少各出現一次。</p>
-          <div class="learned">${model.learnedChars.map((char) => `<span>${char}</span>`).join("")}</div>
+          <div class="learned-lookup">
+            <h3>查這個字學過沒</h3>
+            <div class="lookup-row">
+              <input id="learnedLookupInput" maxlength="4" inputmode="text" placeholder="輸入一個字，例如：都" value="${escapeAttr(state.learnedLookup)}" />
+              <button class="btn secondary" type="button" data-clear-learned-lookup>清空</button>
+            </div>
+            <div id="learnedLookupResult">${learnedLookupResultHtml(model, state.learnedLookup)}</div>
+          </div>
+          <details class="learned-details">
+            <summary>展開全部已學字</summary>
+            <div class="learned">${model.learnedChars.map((char) => `<span>${char}</span>`).join("")}</div>
+          </details>
         `;
       }
 
@@ -2557,7 +2729,7 @@
         } finally {
           state.aiRecommending = false;
           $("aiRecommendBtn").disabled = false;
-          $("aiRecommendBtn").textContent = "AI 重新推薦新字";
+          $("aiRecommendBtn").textContent = "AI 推薦新字";
         }
       }
 
@@ -2923,6 +3095,14 @@
           await loadData();
           $("statusLine").textContent = "已重新讀取資料。";
         }
+
+        if (event.target.closest("[data-clear-learned-lookup]")) {
+          state.learnedLookup = "";
+          const input = $("learnedLookupInput");
+          if (input) input.value = "";
+          updateLearnedLookup();
+          return;
+        }
       });
 
       document.addEventListener("change", (event) => {
@@ -2961,6 +3141,12 @@
       });
 
       document.addEventListener("input", (event) => {
+        if (event.target.id === "learnedLookupInput") {
+          state.learnedLookup = event.target.value;
+          updateLearnedLookup();
+          return;
+        }
+
         if (event.target.id === "manualChar" || event.target.id === "manualZhuyin" || event.target.id === "manualWhy") {
           const previous = state.manualDraft;
           const next = {
