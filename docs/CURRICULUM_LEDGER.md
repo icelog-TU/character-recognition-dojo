@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 38:
+Characters taught after Lesson 39:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗`
 
 Recent review pool for the next lesson:
 
-`到 他 走 我 不 看 沒 孩 也 是 山 家 人 男 鳥 有 裡 上 女 在 小 兩 你 門 後 飛 手 隻 大 很 高 的 下`
+`他 到 走 沒 我 看 裡 不 孩 家 山 有 是 人 兩 男 也 鳥 小 隻 上 女 在 手 狗 飛 你 門 很 高 的 下 水`
 
 ## Visual Continuity Ledger
 
@@ -94,10 +94,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L036 | 沒 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒 | 他沒走，我也沒走 / 他是男孩，不是女孩 / 我看到鳥，他沒看到 / 鳥在門上，沒有飛走 / 我到他家，他不在家 | 他沒走我也是男孩不女看到鳥在門上有飛家 | Introduces `沒` through not-leaving, not-seeing, and not-flying-away scenes. Reviews recent `到`, `走`, and `他`; S01 now clearly shows other children leaving while the two main children stay cleaning, and Stage 4 requires all five sentence games. |
 | L037 | 裡 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡 | 他走到家裡，沒看到人 / 他手裡有小山，沒有小鳥 / 他不在家裡，沒人看到他 / 他看到我，我看不到他 / 山很高，我走不到山上 | 他走到家裡沒看人手有小山鳥不在我很高上 | Introduces `裡` through inside-the-home and in-the-hand spatial scenes. Reviews recent `走`, `他`, and `沒`; reuses approved L035-S02 image for the hide-and-seek review sentence. |
 | L038 | 兩 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩 | 他沒走，我也沒走 / 兩人走到家裡，沒看到人 / 他的兩隻手裡有小人 / 我看到兩隻鳥飛到山裡 / 他沒看到我走下山 | 他沒走我也兩人到家裡看的隻手有小鳥飛山下 | Introduces `兩` through two people, two hands, and two birds. Reviews recent `他`, `沒`, and `裡`; reuses approved L036-S01 image for the not-leaving review sentence. |
+| L039 | 狗 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗 | 他家裡有兩隻狗 / 我家裡沒有狗 / 他走到家裡，沒看到人 / 兩隻小狗走到水裡 / 小鳥沒有兩隻手 | 他家裡有兩隻狗我沒走到看人小水鳥手 | Introduces `狗` through dogs at home, no dog at home, and two small dogs in shallow water. Reviews recent `沒`, `裡`, and `兩`; reuses approved L037-S01 image for the home-with-no-people review sentence. |
 
 ## Planned Lessons
 
-None yet. L038 已完成，下一課請從 planner 重新規劃。
+None yet. L039 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 
