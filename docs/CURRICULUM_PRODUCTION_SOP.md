@@ -146,7 +146,7 @@ Example:
 Rules:
 
 - `order` must be the intended lesson order.
-- `newChars` may contain several seed characters, but most lessons should introduce one character.
+- `newChars` may contain several seed characters, but most lessons should introduce one character. A lesson may introduce two characters together when the natural teaching unit is a fixed word or near-fixed phrase, such as `朋友`, where teaching only `朋` or only `友` would force unnatural sentences.
 - `zhuyin` must use Taiwan zhuyin only.
 - `teacherNotes` should include Taiwan usage constraints, semantic goals, or forbidden phrasing.
 

@@ -45,7 +45,7 @@ The curriculum is stored as JSON so it can later be generated from a spreadsheet
 Rules:
 
 - `order` must be unique and contiguous.
-- `newChars` lists the character or characters introduced by this lesson. Most lessons introduce one character; seed lessons may introduce several.
+- `newChars` lists the character or characters introduced by this lesson. Most lessons introduce one character; seed lessons may introduce several. A regular lesson may introduce two characters together when the natural learning unit should not be split, such as `朋友`.
 - `zhuyin` uses Taiwan zhuyin only and must include an entry for every `newChars` item.
 - `charAudio` maps each new character to its reviewed single-character AI audio file. During prototype work this may be omitted and the app will use a TTS fallback.
 - `originHint` is optional internal curriculum metadata. It must not appear in the child-facing lesson practice UI unless a separate reviewed child-safe design is explicitly built.

@@ -315,6 +315,7 @@ This app is for Taiwan users.
 
 - Never use Hanyu pinyin in the product UI or curriculum.
 - Use Taiwan zhuyin.
+- Most lessons introduce one new character, but two-character lessons are allowed when the natural teaching unit should not be split, such as `朋友`. In that case `newChars` must be `["朋", "友"]`, the lesson needs character audio for both characters, and candidate sentences should normally practice the two characters together rather than only one half of the word.
 - Sentence text is horizontal, left to right.
 - Zhuyin sits vertically on the right side of each Han character.
 - Tone marks sit to the right of the zhuyin symbols.

@@ -922,15 +922,15 @@
 
       <section class="panel manual-choice-panel" aria-labelledby="manualChoiceTitle">
         <h2 id="manualChoiceTitle">自選下一課字</h2>
-        <p class="help">候選清單沒有你想教的字時，可以自己加入。加入後到候選字卡片按「AI 生成 10 句」，再在 Planner 裡審核、修改和查看複習字統計。</p>
+        <p class="help">候選清單沒有你想教的字時，可以自己加入；也可以輸入「朋友」這種必須一起學的兩字詞。加入後到候選字卡片按「AI 生成 10 句」，再在 Planner 裡審核、修改和查看複習字統計。</p>
         <div class="manual-grid">
           <div class="manual-field">
             <label for="manualChar">新字</label>
-            <input id="manualChar" maxlength="2" inputmode="text" placeholder="輸入一個字" />
+            <input id="manualChar" maxlength="4" inputmode="text" placeholder="輸入一個字，或兩字詞如：朋友" />
           </div>
           <div class="manual-field">
             <label for="manualZhuyin">注音</label>
-            <input id="manualZhuyin" inputmode="text" placeholder="會自動帶入，可手動改" />
+            <input id="manualZhuyin" inputmode="text" placeholder="單字填注音；兩字可填：朋=ㄆㄥˊ 友=ㄧㄡˇ" />
           </div>
           <div class="manual-field">
             <label for="manualWhy">理由</label>
@@ -1024,6 +1024,65 @@
 
       function unique(items) {
         return [...new Set(items)];
+      }
+
+      function newCharsFromText(text) {
+        return unique(hanChars(text));
+      }
+
+      function choiceLabelFromChars(chars) {
+        return newCharsFromText(Array.isArray(chars) ? chars.join("") : chars).join("");
+      }
+
+      function choiceIdFromChars(chars) {
+        return `choice-${choiceLabelFromChars(chars)}`;
+      }
+
+      function entryNewChars(entry) {
+        return newCharsFromText(Array.isArray(entry?.newChars) ? entry.newChars.join("") : entry?.char || "");
+      }
+
+      function primaryChoiceChar(choice) {
+        return choice?.newChars?.[0] || "";
+      }
+
+      function targetHitCount(text, targetChars) {
+        const chars = hanChars(text);
+        return (targetChars || []).reduce((total, char) => total + chars.filter((candidate) => candidate === char).length, 0);
+      }
+
+      function targetCountsInText(text, targetChars) {
+        return Object.fromEntries((targetChars || []).map((char) => [char, charCountInText(text, char)]));
+      }
+
+      function targetCountForLesson(text, targetChars) {
+        const counts = Object.values(targetCountsInText(text, targetChars));
+        return counts.length ? Math.min(...counts) : 0;
+      }
+
+      function zhuyinMapForChars(chars, rawZhuyin = "") {
+        const map = {};
+        const raw = String(rawZhuyin || "").trim();
+        const explicitPairs = [...raw.matchAll(/(\p{Script=Han})\s*[=:：]\s*([^\s,，;；]+)/gu)];
+        explicitPairs.forEach((match) => {
+          if (chars.includes(match[1])) map[match[1]] = match[2].trim();
+        });
+        if (explicitPairs.length === 0 && raw) {
+          if (chars.length === 1) {
+            map[chars[0]] = raw;
+          } else {
+            const parts = raw.split(/[\s,，;；]+/).filter(Boolean);
+            if (parts.length === chars.length) chars.forEach((char, index) => (map[char] = parts[index]));
+          }
+        }
+        chars.forEach((char) => {
+          if (!map[char]) map[char] = zhuyinForChar(char);
+        });
+        return map;
+      }
+
+      function zhuyinTextFromMap(chars, zhuyin) {
+        return chars.map((char) => zhuyin?.[char] || "").filter(Boolean).join(" ");
       }
 
       function lessonId(order) {
@@ -1188,7 +1247,7 @@
       }
 
       function generatedSpecificPatternPool(choice, allowedChars) {
-        const targetChar = choice.newChars[0];
+        const targetChar = primaryChoiceChar(choice);
         const pool = [];
         const seen = new Set();
         const add = (text, reason = "自我審核通過：功能字句型，語意具體，容易配圖。", focusChar = targetChar) =>
@@ -1237,13 +1296,13 @@
         pool.push({
           text,
           spokenText: normalized,
-          focusChar: focusChar || (hanChars(text).includes(choice.newChars[0]) ? choice.newChars[0] : resolveFocusChar(text, "", choice)),
+          focusChar: focusChar || (hanChars(text).includes(primaryChoiceChar(choice)) ? primaryChoiceChar(choice) : resolveFocusChar(text, "", choice)),
           reason,
         });
       }
 
       function generatedPatternPool(choice, model, allowedChars, includeTargetPatterns = true) {
-        const targetChar = choice.newChars[0];
+        const targetChar = primaryChoiceChar(choice);
         const bank = phraseBank(allowedChars, targetChar);
         const pool = [];
         const seen = new Set();
@@ -1275,7 +1334,7 @@
           }
         }
 
-        const targetBearingCount = pool.filter((sentence) => hanChars(sentence.text).includes(targetChar)).length;
+        const targetBearingCount = pool.filter((sentence) => choice.newChars.some((char) => hanChars(sentence.text).includes(char))).length;
         if (targetBearingCount < targetGeneratedSentenceCount) {
           const recentReviewSentences = lastLessons(model.lessons, 5)
             .flatMap((lesson) => lesson.sentences || [])
@@ -1299,7 +1358,7 @@
       function sentenceQuality(sentence, context) {
         const chars = hanChars(sentence.text);
         const uniqueChars = unique(chars);
-        const targetHits = chars.filter((char) => char === context.targetChar).length;
+        const targetHits = targetHitCount(sentence.text, context.targetChars || [context.targetChar]);
         const reviewHits = uniqueChars.filter((char) => context.reviewCountChars.includes(char)).length;
         const requiredHits = uniqueChars.filter((char) => context.requiredRecentChars.includes(char)).length;
         const length = chars.length;
@@ -1311,11 +1370,14 @@
       function planMetrics(sentences, context) {
         const firstFive = sentences.slice(0, targetApprovedSentenceCount);
         const allText = firstFive.map((sentence) => sentence.text).join("");
-        const targetCount = charCountInText(allText, context.targetChar);
+        const targetChars = context.targetChars || [context.targetChar].filter(Boolean);
+        const targetCounts = targetCountsInText(allText, targetChars);
+        const targetCount = targetCountForLesson(allText, targetChars);
         const reviewCovered = context.reviewCountChars.filter((char) => allText.includes(char));
         const requiredCovered = context.requiredRecentChars.filter((char) => allText.includes(char));
         return {
           targetCount,
+          targetCounts,
           reviewCovered,
           missingReviewChars: context.reviewCountChars.filter((char) => !reviewCovered.includes(char)),
           requiredCovered,
@@ -1333,14 +1395,15 @@
           const currentText = selected.map((sentence) => sentence.text).join("");
           const missingReview = context.reviewCountChars.filter((char) => !currentText.includes(char));
           const missingRequired = context.requiredRecentChars.filter((char) => !currentText.includes(char));
-          const currentTargetCount = charCountInText(currentText, context.targetChar);
+          const targetChars = context.targetChars || [context.targetChar].filter(Boolean);
+          const currentTargetCount = targetCountForLesson(currentText, targetChars);
           let bestIndex = 0;
           let bestValue = -Infinity;
 
           for (let index = 0; index < remaining.length; index += 1) {
             const { sentence, baseScore } = remaining[index];
             const chars = hanChars(sentence.text);
-            const targetHits = chars.filter((char) => char === context.targetChar).length;
+            const targetHits = targetHitCount(sentence.text, targetChars);
             const reviewGain = missingReview.filter((char) => chars.includes(char)).length;
             const requiredGain = missingRequired.filter((char) => chars.includes(char)).length;
             const needsTarget = slot < 3 || currentTargetCount < targetNewCharCountInLesson;
@@ -1361,32 +1424,36 @@
       }
 
       function optimizeChoiceSentencesFromEntry(entry, context) {
+        const newChars = entryNewChars(entry);
+        const zhuyin = entry.zhuyinMap || zhuyinMapForChars(newChars, entry.zhuyin);
+        const primaryChar = newChars[0];
         const choice = {
-          choiceId: `choice-${entry.char}`,
-          newChars: [entry.char],
-          zhuyin: { [entry.char]: entry.zhuyin },
+          choiceId: choiceIdFromChars(newChars),
+          newChars,
+          zhuyin,
         };
-        const allowedChars = unique([...context.learnedChars, entry.char]);
+        const allowedChars = unique([...context.learnedChars, ...newChars]);
         const seen = new Set();
         const pool = [];
         const localSentences = cleanSentences(entry.sentenceCandidates, allowedChars);
         for (const sentence of localSentences) {
           addSentenceCandidate(pool, seen, sentence.text, choice, allowedChars, sentence.reason || "候選字資料庫句，經最佳化器重新排序。", sentence.focusChar);
         }
-        const includeTargetPatterns = localSentences.length < Math.min(6, targetGeneratedSentenceCount);
+        const includeTargetPatterns = newChars.length === 1 && localSentences.length < Math.min(6, targetGeneratedSentenceCount);
         for (const sentence of generatedPatternPool(choice, { lessons: context.lessons }, allowedChars, includeTargetPatterns)) {
           addSentenceCandidate(pool, seen, sentence.text, choice, allowedChars, sentence.reason, sentence.focusChar);
         }
-        const optimized = optimizeSentencePool(pool, { ...context, targetChar: entry.char });
+        const optimized = optimizeSentencePool(pool, { ...context, targetChar: primaryChar, targetChars: newChars });
         return {
           candidates: optimized,
-          metrics: planMetrics(optimized, { ...context, targetChar: entry.char }),
+          metrics: planMetrics(optimized, { ...context, targetChar: primaryChar, targetChars: newChars }),
           poolSize: pool.length,
         };
       }
 
       function emptyOptimization(context, targetChar) {
-        const emptyContext = { ...context, targetChar };
+        const targetChars = Array.isArray(targetChar) ? targetChar : [targetChar].filter(Boolean);
+        const emptyContext = { ...context, targetChar: targetChars[0] || "", targetChars };
         return {
           candidates: [],
           metrics: planMetrics([], emptyContext),
@@ -1397,8 +1464,10 @@
       function optimizeChoiceSentences(choice, model) {
         return optimizeChoiceSentencesFromEntry(
           {
-            char: choice.newChars[0],
-            zhuyin: choice.zhuyin?.[choice.newChars[0]] || "",
+            char: choice.newChars.join(""),
+            newChars: choice.newChars,
+            zhuyinMap: choice.zhuyin,
+            zhuyin: zhuyinTextFromMap(choice.newChars, choice.zhuyin),
             sentenceCandidates: choice.sentenceCandidates || [],
           },
           {
@@ -1412,12 +1481,13 @@
 
       function scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars, optimization, lessons = []) {
         const learned = new Set(learnedChars);
+        const newChars = entryNewChars(entry);
         const requiredMissing = (entry.requires || []).filter((char) => !learned.has(char));
-        if (requiredMissing.length > 0 || learned.has(entry.char)) return null;
+        if (requiredMissing.length > 0 || newChars.some((char) => learned.has(char))) return null;
         const recent = new Set(recentPool);
         const requiredRecent = new Set(requiredRecentChars || []);
         const reviewCount = new Set(reviewCountChars || []);
-        const allowedChars = unique([...learnedChars, entry.char]);
+        const allowedChars = unique([...learnedChars, ...newChars]);
         const optimized =
           optimization ||
           optimizeChoiceSentencesFromEntry(entry, {
@@ -1435,7 +1505,7 @@
         const missingSentencePenalty = Math.max(0, 5 - validSentences.length) * 20;
         const firstFive = validSentences.slice(0, targetApprovedSentenceCount);
         const firstFiveText = firstFive.map((sentence) => sentence.text).join("");
-        const targetHitsInPlan = charCountInText(firstFiveText, entry.char);
+        const targetHitsInPlan = targetCountForLesson(firstFiveText, newChars);
         const missingTargetPenalty = Math.max(0, targetNewCharCountInLesson - targetHitsInPlan) * 42;
         const missingReviewPenalty = Math.max(0, reviewCountChars.length - (optimized.metrics?.reviewCovered.length || 0)) * 7;
         return (
@@ -1502,26 +1572,34 @@
         const requiredRecentChars = previousRequiredChars(lessons, planned, 3);
         const reviewCountChars = recentLessonNewChars(lessons, planned, 5);
         const bankEntries = data.nextCharacterBank || [];
-        const manualChoiceChars = new Set(state.manualChoices.map((entry) => entry.char));
+        const manualChoiceLabels = new Set(state.manualChoices.map((entry) => choiceLabelFromChars(entryNewChars(entry))));
         const manualEntries = state.manualChoices
-          .filter((entry) => entry.char)
+          .filter((entry) => entryNewChars(entry).length)
           .map((entry, index) => ({
-            ...(bankEntries.find((bankEntry) => bankEntry.char === entry.char) || {}),
+            ...(entryNewChars(entry).length === 1 ? bankEntries.find((bankEntry) => bankEntry.char === entryNewChars(entry)[0]) || {} : {}),
             ...entry,
-            zhuyin: entry.zhuyin || bankEntries.find((bankEntry) => bankEntry.char === entry.char)?.zhuyin || "",
+            char: choiceLabelFromChars(entryNewChars(entry)),
+            newChars: entryNewChars(entry),
+            zhuyinMap: entry.zhuyinMap || zhuyinMapForChars(entryNewChars(entry), entry.zhuyin),
+            zhuyin: entry.zhuyin || zhuyinTextFromMap(entryNewChars(entry), entry.zhuyinMap) || "",
             priority: 5 + index,
-            why: entry.why || bankEntries.find((bankEntry) => bankEntry.char === entry.char)?.why || "教師自行新增的下一課字。",
+            why: entry.why || (entryNewChars(entry).length === 1 ? bankEntries.find((bankEntry) => bankEntry.char === entryNewChars(entry)[0])?.why : "") || "教師自行新增的下一課字。",
             requires: [],
             sentenceCandidates:
               entry.sentenceCandidates?.length
                 ? entry.sentenceCandidates
-                : bankEntries.find((bankEntry) => bankEntry.char === entry.char)?.sentenceCandidates || [],
+                : entryNewChars(entry).length === 1
+                  ? bankEntries.find((bankEntry) => bankEntry.char === entryNewChars(entry)[0])?.sentenceCandidates || []
+                  : [],
             source: "manual",
           }));
         const toRecommendation = (entry) => {
+          const newChars = entryNewChars(entry);
+          const choiceId = choiceIdFromChars(newChars);
+          const zhuyin = entry.zhuyinMap || zhuyinMapForChars(newChars, entry.zhuyin);
           const shouldSkipLocalManualGeneration = entry.source === "manual" && !(entry.sentenceCandidates || []).length;
           const optimization = shouldSkipLocalManualGeneration
-            ? emptyOptimization({ lessons, learnedChars, requiredRecentChars, reviewCountChars }, entry.char)
+            ? emptyOptimization({ lessons, learnedChars, requiredRecentChars, reviewCountChars }, newChars)
             : optimizeChoiceSentencesFromEntry(entry, {
                 lessons,
                 learnedChars,
@@ -1531,10 +1609,10 @@
           const score = scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars, optimization, lessons);
           if (score === null && entry.source !== "manual") return null;
           return {
-            choiceId: `choice-${entry.char}`,
-            newChars: [entry.char],
-            zhuyin: { [entry.char]: entry.zhuyin },
-            title: entry.char,
+            choiceId,
+            newChars,
+            zhuyin,
+            title: choiceLabelFromChars(newChars),
             rationale: entry.why,
             score: entry.source === "manual" ? Number(score ?? entry.priority ?? 1000) - 10000 : score,
             source: entry.source || "bank",
@@ -1554,8 +1632,9 @@
           .map(toRecommendation)
           .filter(Boolean)
           .sort((a, b) => a.score - b.score);
+        const manualChoiceCharSet = new Set(manualEntries.flatMap((entry) => entry.newChars || entryNewChars(entry)));
         const bankRecommendations = bankEntries
-          .filter((entry) => !manualChoiceChars.has(entry.char))
+          .filter((entry) => !manualChoiceLabels.has(entry.char) && !manualChoiceCharSet.has(entry.char))
           .map((entry) => {
             return toRecommendation(entry);
           })
@@ -1975,17 +2054,20 @@
       }
 
       function replaceManualChoiceCandidates(choice, candidates) {
-        const char = choice.newChars[0];
-        const bankEntry = bankEntryForChar(char);
+        const chars = choice.newChars;
+        const label = choiceLabelFromChars(chars);
+        const bankEntry = chars.length === 1 ? bankEntryForChar(chars[0]) : null;
         const reviewFill = recentReviewSentenceCandidates(choice, candidates, targetReviewCandidateCount);
         const sentenceCandidates = [...candidates, ...reviewFill];
         const replacement = {
-          char,
-          zhuyin: choice.zhuyin?.[char] || bankEntry?.zhuyin || "",
+          char: label,
+          newChars: chars,
+          zhuyin: zhuyinTextFromMap(chars, choice.zhuyin) || bankEntry?.zhuyin || "",
+          zhuyinMap: choice.zhuyin,
           why: choice.rationale || bankEntry?.why || "教師用 AI 重新產生候選句。",
           sentenceCandidates,
         };
-        state.manualChoices = [replacement, ...state.manualChoices.filter((entry) => entry.char !== char)];
+        state.manualChoices = [replacement, ...state.manualChoices.filter((entry) => choiceLabelFromChars(entryNewChars(entry)) !== label)];
         state.selectedIndexes.set(choice.choiceId, new Set());
         state.candidateEditingKeys = new Set([...state.candidateEditingKeys].filter((key) => !key.startsWith(`${choice.choiceId}:`)));
         state.candidateDraftsBySentence = new Map([...state.candidateDraftsBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
@@ -2119,7 +2201,9 @@
       function optimizerSummaryHtml(choice, model) {
         const metrics = choice.optimization?.metrics;
         if (!metrics) return "";
-        const targetChar = choice.newChars[0];
+        const targetText = choice.newChars
+          .map((char) => `${char} ${metrics.targetCounts?.[char] || 0}/${targetNewCharCountInLesson}`)
+          .join("、");
         const missingReview = metrics.missingReviewChars || [];
         const missingRequired = metrics.missingRequiredChars || [];
         const provisionalChars = new Set([
@@ -2135,7 +2219,7 @@
         const reviewPending = reviewOk && missingReview.length > 0;
         const requiredPending = requiredOk && missingRequired.length > 0;
         return `<div class="optimizer-summary" aria-label="課程最佳化摘要">
-          <span class="optimizer-pill ${targetOk ? "" : "warning"}">${targetChar} ${metrics.targetCount}/${targetNewCharCountInLesson} 次</span>
+          <span class="optimizer-pill ${targetOk ? "" : "warning"}">${targetText} 次</span>
           <span class="optimizer-pill ${reviewOk ? (reviewPending ? "pending" : "") : "warning"}">近五課 ${metrics.reviewCovered.length}/${model.reviewCountChars.length}</span>
           <span class="optimizer-pill ${requiredOk ? (requiredPending ? "pending" : "") : "warning"}">近三課 ${metrics.requiredCovered.length}/${model.requiredRecentChars.length}</span>
           ${choice.source === "manual" ? `<span class="optimizer-pill">已自審排序</span>` : ""}
@@ -2324,21 +2408,36 @@
         const learned = new Set(learnedChars);
         const seen = new Set();
         return (items || [])
-          .map((item) => ({
-            char: hanChars(String(item?.char || "")).join("").slice(0, 1),
-            zhuyin: String(item?.zhuyin || "").trim(),
-            why: String(item?.why || "").trim(),
-            source: String(item?.source || ""),
-            sentenceCandidates: (item?.sentenceCandidates || []).map((sentence) => ({
-              text: String(sentence?.text || ""),
-              spokenText: normalizeSpokenText(sentence?.spokenText || sentence?.text || ""),
-              focusChar: String(sentence?.focusChar || ""),
-              reason: String(sentence?.reason || ""),
-            })),
-          }))
+          .map((item) => {
+            const newChars = entryNewChars(item);
+            const zhuyinMap =
+              item?.zhuyinMap && typeof item.zhuyinMap === "object"
+                ? Object.fromEntries(newChars.map((char) => [char, String(item.zhuyinMap[char] || "")]))
+                : zhuyinMapForChars(newChars, item?.zhuyin);
+            return {
+              char: choiceLabelFromChars(newChars),
+              newChars,
+              zhuyin: zhuyinTextFromMap(newChars, zhuyinMap),
+              zhuyinMap,
+              why: String(item?.why || "").trim(),
+              source: String(item?.source || ""),
+              sentenceCandidates: (item?.sentenceCandidates || []).map((sentence) => ({
+                text: String(sentence?.text || ""),
+                spokenText: normalizeSpokenText(sentence?.spokenText || sentence?.text || ""),
+                focusChar: String(sentence?.focusChar || ""),
+                reason: String(sentence?.reason || ""),
+              })),
+            };
+          })
           .filter((item) => {
-            if (!item.char || !item.zhuyin || learned.has(item.char) || seen.has(item.char)) return false;
-            seen.add(item.char);
+            const label = choiceLabelFromChars(item.newChars);
+            if (
+              !label ||
+              item.newChars.some((char) => !item.zhuyinMap[char] || learned.has(char)) ||
+              seen.has(label)
+            )
+              return false;
+            seen.add(label);
             return true;
           });
       }
@@ -2366,7 +2465,7 @@
           state.manualDraft = cleanManualDraft(saved.manualDraft);
           const allowedChoiceIds = new Set([
             ...restoredModel.recommendations.map((choice) => choice.choiceId),
-            ...state.manualChoices.map((choice) => `choice-${choice.char}`),
+            ...state.manualChoices.map((choice) => choiceIdFromChars(entryNewChars(choice))),
           ]);
           state.selectedChoiceId = allowedChoiceIds.has(saved.selectedChoiceId) ? saved.selectedChoiceId : "";
           state.previewChoiceId = allowedChoiceIds.has(saved.previewChoiceId) ? saved.previewChoiceId : "";
@@ -2491,6 +2590,9 @@
           teacherNotes: [
             "由網頁下一課規劃工具產生。",
             `選定候選字：${choice.choiceId}。`,
+            choice.newChars.length > 1
+              ? `本課一次引入 ${choice.newChars.join("、")}，因為「${choice.newChars.join("")}」屬於需要一起學才自然的詞語；造句時請優先讓這些新字一起出現，不要只練其中一個字。`
+              : "",
             dependencies.length
               ? `平行備課依賴：本課假設 ${dependencies
                   .map((plan) => `${lessonId(plan.order)} 會加入 ${plan.newChars.join("")}`)
@@ -2535,7 +2637,8 @@
 
       function requestReadinessError() {
         const model = currentModel();
-        if (!selectedChoice()) return "請先選一個候選字。";
+        const choice = selectedChoice();
+        if (!choice) return "請先選一個候選字。";
         const sentences = selectedSentences();
         if (sentences.length === 0) return "";
         const badLength = sentences.find((sentence) => {
@@ -2543,6 +2646,9 @@
           return length < sentenceLengthRange.min || length > sentenceLengthRange.max;
         });
         if (badLength) return `「${badLength.text}」不是 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字，請調整句長。`;
+        const selectedText = sentences.map((sentence) => sentence.text).join("");
+        const missingNewChars = choice.newChars.filter((char) => !selectedText.includes(char));
+        if (missingNewChars.length > 0) return `本課新字還沒都出現：${missingNewChars.join("、")}。多字詞課要一起練。`;
         const missing = missingRequiredRecentChars(model, sentences);
         if (missing.length > 0) return `近三課新字還沒都出現：${missing.join("、")}。請至少各放進一句。`;
         return "";
@@ -2604,13 +2710,13 @@
       }
 
       function normalizeAiSentenceCandidates(choice, allowedChars, items) {
-        const targetChar = choice.newChars[0];
+        const targetChars = choice.newChars;
         const seen = new Set();
         const pool = [];
         for (const item of items || []) {
           const text = String(item?.text || "").trim();
           const chars = hanChars(text);
-          if (!chars.includes(targetChar)) continue;
+          if (!targetChars.every((char) => chars.includes(char))) continue;
           if (!chars.every((char) => allowedChars.includes(char))) continue;
           if (chars.length < sentenceLengthRange.min || chars.length > sentenceLengthRange.max) continue;
           addSentenceCandidate(
@@ -2620,7 +2726,7 @@
             choice,
             allowedChars,
             String(item?.reason || "AI 生成後通過 Planner 規則檢查。"),
-            String(item?.focusChar || targetChar),
+            String(item?.focusChar || targetChars.find((char) => chars.includes(char)) || ""),
           );
         }
         return pool.slice(0, targetGeneratedSentenceCount);
@@ -2715,29 +2821,36 @@
       function applyAiRecommendations(items) {
         const recommendations = (items || [])
           .map((item) => {
-            const char = hanChars(item?.char).join("").slice(0, 1);
-            if (!char) return null;
+            const newChars = newCharsFromText(Array.isArray(item?.newChars) ? item.newChars.join("") : item?.char);
+            if (!newChars.length) return null;
+            const char = choiceLabelFromChars(newChars);
+            const zhuyinMap =
+              item?.zhuyin && typeof item.zhuyin === "object"
+                ? Object.fromEntries(newChars.map((target) => [target, String(item.zhuyin[target] || zhuyinForChar(target) || "")]))
+                : zhuyinMapForChars(newChars, item?.zhuyin);
             return {
               char,
-              zhuyin: String(item?.zhuyin || zhuyinForChar(char) || ""),
+              newChars,
+              zhuyin: zhuyinTextFromMap(newChars, zhuyinMap),
+              zhuyinMap,
               why: String(item?.why || "AI 根據目前已學字重新推薦。"),
               source: "ai-recommendation",
               sentenceCandidates: (item?.sentenceCandidates || []).map((sentence) => ({
                 text: String(sentence?.text || ""),
                 spokenText: normalizeSpokenText(sentence?.spokenText || sentence?.text || ""),
-                focusChar: String(sentence?.focusChar || char),
+                focusChar: String(sentence?.focusChar || newChars[0]),
                 reason: String(sentence?.reason || "AI 推薦字候選句。"),
               })),
             };
           })
           .filter(Boolean);
-        const recommendedChars = new Set(recommendations.map((item) => item.char));
+        const recommendedLabels = new Set(recommendations.map((item) => choiceLabelFromChars(entryNewChars(item))));
         state.manualChoices = [
           ...recommendations,
-          ...state.manualChoices.filter((entry) => entry.source !== "ai-recommendation" && !recommendedChars.has(entry.char)),
+          ...state.manualChoices.filter((entry) => entry.source !== "ai-recommendation" && !recommendedLabels.has(choiceLabelFromChars(entryNewChars(entry)))),
         ];
         state.selectedChoiceId = "";
-        state.previewChoiceId = recommendations[0] ? `choice-${recommendations[0].char}` : "";
+        state.previewChoiceId = recommendations[0] ? choiceIdFromChars(entryNewChars(recommendations[0])) : "";
       }
 
       async function recommendAiCharacters() {
@@ -2821,23 +2934,31 @@
       document.addEventListener("click", async (event) => {
         if (event.target.id === "addManualChoiceBtn") {
           const model = currentModel();
-          const char = hanChars(state.manualDraft.char).join("").slice(0, 1);
-          const zhuyin = state.manualDraft.zhuyin.trim() || zhuyinForChar(char);
+          const newChars = newCharsFromText(state.manualDraft.char);
+          const char = choiceLabelFromChars(newChars);
+          const zhuyinMap = zhuyinMapForChars(newChars, state.manualDraft.zhuyin);
+          const missingZhuyin = newChars.filter((target) => !zhuyinMap[target]);
+          const zhuyin = zhuyinTextFromMap(newChars, zhuyinMap);
           const why = state.manualDraft.why.trim();
           if (!char) {
-            $("statusLine").textContent = "請先輸入一個新字。";
+            $("statusLine").textContent = "請先輸入新字；可以是一個字，也可以是兩個必須一起學的字。";
             return;
           }
-          if (!zhuyin) {
-            $("statusLine").textContent = `請幫「${char}」輸入注音。`;
+          if (newChars.length > 2) {
+            $("statusLine").textContent = "一課最多先支援兩個新字。";
             return;
           }
-          if (model.learnedChars.includes(char)) {
-            $("statusLine").textContent = `「${char}」已經學過了，不能當下一課新字。`;
+          if (missingZhuyin.length) {
+            $("statusLine").textContent = `請幫「${missingZhuyin.join("、")}」輸入注音。兩字詞可以填：朋=ㄆㄥˊ 友=ㄧㄡˇ。`;
             return;
           }
-          const existingChoiceId = `choice-${char}`;
-          const alreadyManual = state.manualChoices.some((entry) => entry.char === char);
+          const learnedNewChars = newChars.filter((target) => model.learnedChars.includes(target));
+          if (learnedNewChars.length) {
+            $("statusLine").textContent = `「${learnedNewChars.join("、")}」已經學過了，不能當下一課新字。`;
+            return;
+          }
+          const existingChoiceId = choiceIdFromChars(newChars);
+          const alreadyManual = state.manualChoices.some((entry) => choiceLabelFromChars(entryNewChars(entry)) === char);
           if (alreadyManual && model.recommendations.some((choice) => choice.choiceId === existingChoiceId)) {
             state.previewChoiceId = existingChoiceId;
             state.manualDraft = { char: "", zhuyin: "", why: "" };
@@ -2848,7 +2969,7 @@
             return;
           }
           state.manualChoices = cleanManualChoices(
-            [{ char, zhuyin, why: why || "教師自行新增的下一課字。" }, ...state.manualChoices],
+            [{ char, newChars, zhuyin, zhuyinMap, why: why || "教師自行新增的下一課字。" }, ...state.manualChoices],
             model.learnedChars,
           );
           state.previewChoiceId = existingChoiceId;
@@ -3161,7 +3282,7 @@
           state.planOffset = clampPlanOffset(event.target.value);
           const model = currentModel();
           const plan = plannedLessonForOrder(model.order);
-          const plannedChoiceId = plan ? `choice-${plan.newChars[0]}` : "";
+          const plannedChoiceId = plan ? choiceIdFromChars(plan.newChars) : "";
           if (plannedChoiceId && model.recommendations.some((choice) => choice.choiceId === plannedChoiceId)) {
             state.selectedChoiceId = plannedChoiceId;
             state.previewChoiceId = plannedChoiceId;
@@ -3206,11 +3327,13 @@
             why: $("manualWhy").value,
           };
           if (event.target.id === "manualChar") {
-            const char = hanChars(next.char).join("").slice(0, 1);
-            const bankEntry = bankEntryForChar(char);
-            const knownZhuyin = zhuyinForChar(char);
-            if (knownZhuyin) next.zhuyin = knownZhuyin;
-            else if (char !== hanChars(previous.char).join("").slice(0, 1) && next.zhuyin === previous.zhuyin) next.zhuyin = "";
+            const chars = newCharsFromText(next.char);
+            const previousChars = newCharsFromText(previous.char);
+            const knownZhuyin = chars.map((char) => zhuyinForChar(char));
+            const allKnown = knownZhuyin.length === chars.length && knownZhuyin.every(Boolean);
+            if (allKnown) next.zhuyin = knownZhuyin.join(" ");
+            else if (chars.join("") !== previousChars.join("") && next.zhuyin === previous.zhuyin) next.zhuyin = "";
+            const bankEntry = chars.length === 1 ? bankEntryForChar(chars[0]) : null;
             if (bankEntry?.why && (!previous.why.trim() || previous.why === $("manualWhy").value)) next.why = bankEntry.why;
             state.manualDraft = next;
             renderManualChoiceForm();

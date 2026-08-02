@@ -52,6 +52,11 @@ function normalizeSentence(sentence, fallbackFocusChar) {
   return { text, spokenText, focusChar, reason };
 }
 
+function fallbackFocusChar(sentence, newChars = []) {
+  const text = String(sentence?.text ?? "");
+  return newChars.find((char) => text.includes(char)) || newChars[0] || "";
+}
+
 function sentenceListText(sentences) {
   return sentences.map((sentence) => sentence.text).join("; ");
 }
@@ -86,11 +91,11 @@ if (indexes.length === 0) {
 const approvedSentences = indexes.map((index) => {
   const sentence = recommendation.sentenceCandidates?.[index];
   if (!sentence) throw new Error(`Sentence index ${index} does not exist for ${selectedChoiceId}.`);
-  return normalizeSentence(sentence, recommendation.newChars[0]);
+  return normalizeSentence(sentence, fallbackFocusChar(sentence, recommendation.newChars));
 });
 
 const customSentences = (review.approval?.customSentences ?? []).map((sentence) =>
-  normalizeSentence(sentence, recommendation.newChars[0]),
+  normalizeSentence(sentence, fallbackFocusChar(sentence, recommendation.newChars)),
 );
 
 const finalSentences = [];
