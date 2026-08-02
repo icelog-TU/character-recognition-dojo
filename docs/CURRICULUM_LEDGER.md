@@ -30,7 +30,7 @@ Use this section before writing image prompts. Once a recurring person or family
 | 你 | L012 | Friendly young boy, the same age as the fixed `我` girl, preschool to early elementary age, short slightly tousled dark hair, bright friendly eyes, sky-blue shirt, green shorts, blue shoes, small orange backpack, warm curious expression, child-friendly picture-book style. | Always use this same boy whenever `你` appears. Use L012-S01/L012-S02/L012-S03 as the current references. |
 | 他 | L035 | Friendly sporty young boy, the same age as the fixed `我` girl and fixed `你` boy, short energetic slightly spiky black hair, bright open expression, plain orange athletic T-shirt, navy shorts, red sneakers, green wristband, no backpack. | Always use this same sporty boy whenever `他` appears. Keep him visually distinct from the fixed `你` boy, who wears a sky-blue shirt, green shorts, blue shoes, and an orange backpack. Use L035-S01/L035-S02/L035-S03/L035-S05 as the current references. |
 | 爸爸 | L041 | Three fixed father designs are introduced. `我爸爸`: friendly tall adult father with the fixed girl's palette, yellow top with coral-red accents. `你爸爸`: friendly tall adult father with the fixed `你` boy palette, sky-blue top with green accents and blue shoes. `他爸爸`: sporty adult father matching the fixed `他` boy palette, short dark hair, orange athletic shirt, deep navy pants or shorts, red athletic shoes, green wristband. | Whenever a father appears, match the father to the related child by color palette and family role. Use L041-S01 for `我爸爸` and `你爸爸`; use L041-S02 for `他爸爸`. Do not merge the three fathers into one generic dad. |
-| 媽媽 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same mother design in all future images. |
+| 媽媽 | L042 | Fixed mother designs are introduced. `我媽媽`: friendly adult mother using the fixed girl's yellow and coral-red palette. `他媽媽`: sporty adult mother matching the fixed `他` boy palette with orange, dark blue, red shoes, and green accents. | Whenever a mother appears, match the mother to the related child by color palette and family role. Use L042-S01 for `我媽媽`; use L042-S02 for `他媽媽`. Do not merge the mothers into one generic mom. |
 | 哥哥 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same older-brother design in all future images. |
 | 姐姐 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same older-sister design in all future images. |
 | 弟弟 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same younger-brother design in all future images. |
@@ -97,10 +97,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L039 | 狗 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗 | 他家裡有兩隻狗 / 我家裡沒有狗 / 他走到家裡，沒看到人 / 兩隻小狗走到水裡 / 我有兩隻手，小鳥沒有手 | 他家裡有兩隻狗我沒走到看人小水鳥手 | Introduces `狗` through dogs at home, no dog at home, and two small dogs in shallow water. Reviews recent `沒`, `裡`, and `兩`; reuses approved L037-S01 image for the home-with-no-people review sentence. |
 | L040 | 都 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都 | 他的兩隻狗都在家裡 / 兩隻狗都很小 / 兩隻小狗都走到水裡 / 大人都沒在水裡 / 他沒看到家裡的狗 | 他的兩隻狗都在家裡很小走到水大人沒看 | Introduces `都` through all-at-home, both-small, both-entering-water, and all-not-in-water scenes. Reviews recent `裡`, `兩`, and `狗`; S02 was corrected from the request's mismatched display text to match the approved spokenText/reason. |
 | L041 | 爸 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸 | 我爸爸和你爸爸都很高 / 他的爸爸和兩隻狗都在家裡 / 我的爸爸沒有在家裡 / 兩隻小狗都走到門前 / 大人都沒在水裡 | 我和你都很高他的兩隻狗在家裡沒有小走到門前大人水 | Introduces `爸` and establishes fixed father designs for `我爸爸`, `你爸爸`, and `他爸爸`, each color-matched to the related child. Reviews recent `沒`, `裡`, `兩`, `狗`, and `都`; S05 reuses approved L040-S04 beach image. |
+| L042 | 媽 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽 | 爸媽兩人都在家裡 / 他的爸媽和兩隻小狗在山裡 / 狗爸爸和狗媽媽有兩隻小狗 / 小孩和狗都在家裡 / 爸爸的兩隻手都很大 | 爸媽兩人都在家裡他的和隻小狗山有孩手很大 | Introduces `媽` through parents-at-home, mountain-family, dog-family, home-with-children-and-dogs, and father-hand review scenes. Reviews recent `狗`, `都`, and `爸`; establishes mother palette rules for `我媽媽` and `他媽媽`. |
 
 ## Planned Lessons
 
-None yet. L041 已完成，下一課請從 planner 重新規劃。
+None yet. L042 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 

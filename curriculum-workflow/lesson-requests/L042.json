@@ -1,0 +1,156 @@
+{
+  "order": 42,
+  "newChars": [
+    "媽"
+  ],
+  "zhuyin": {
+    "媽": "ㄇㄚ"
+  },
+  "title": "媽",
+  "dependsOnLessons": [
+    {
+      "order": 41,
+      "lessonId": "L041",
+      "newChars": [
+        "爸"
+      ],
+      "title": "爸",
+      "status": "merged"
+    }
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽"
+    ],
+    "provisionalLearnedChars": [],
+    "preferReviewChars": [
+      "他",
+      "沒",
+      "走",
+      "我",
+      "也",
+      "是",
+      "男",
+      "孩",
+      "不",
+      "女",
+      "看",
+      "到",
+      "鳥",
+      "在",
+      "門",
+      "上",
+      "有",
+      "飛",
+      "家",
+      "裡",
+      "人",
+      "手",
+      "小",
+      "山",
+      "很",
+      "高",
+      "兩",
+      "的",
+      "隻",
+      "下",
+      "狗",
+      "水",
+      "都",
+      "大",
+      "爸"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "狗",
+      "都",
+      "爸"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "L041 dependency has been checked as merged. Approved L042 sentences are teacher supplied. Generate reviewed images, AI sentence audio, and production charTimings. Use only learned characters plus the new character.",
+  "approvedSentences": [
+    {
+      "text": "爸媽兩人都在家裡",
+      "spokenText": "爸媽兩人都在家裡",
+      "focusChar": "媽",
+      "reason": "Teacher-approved sentence.",
+      "imageNotes": "Girl home scene. Parents clothing should match the fixed girl colors."
+    },
+    {
+      "text": "他的爸媽和兩隻小狗在山裡",
+      "spokenText": "他的爸媽和兩隻小狗在山裡",
+      "focusChar": "媽",
+      "reason": "Teacher-approved sentence.",
+      "imageNotes": "Parents should match the fixed sporty boy style and colors. Include exactly two small dogs on the mountain."
+    },
+    {
+      "text": "狗爸爸和狗媽媽有兩隻小狗",
+      "spokenText": "狗爸爸和狗媽媽有兩隻小狗",
+      "focusChar": "媽",
+      "reason": "Teacher-approved sentence.",
+      "imageNotes": "All dogs are inside a birdhouse-like dog home."
+    },
+    {
+      "text": "小孩和狗都在家裡",
+      "spokenText": "小孩和狗都在家裡",
+      "focusChar": "小",
+      "reason": "Teacher-approved sentence.",
+      "imageNotes": "You, me, and he are all in his home with exactly two small dogs."
+    },
+    {
+      "text": "爸爸的兩隻手都很大",
+      "spokenText": "爸爸的兩隻手都很大",
+      "focusChar": "爸",
+      "reason": "Teacher-approved sentence."
+    }
+  ]
+}
