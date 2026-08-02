@@ -12,9 +12,9 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 45:
+Characters taught after Lesson 47:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這`
 
 Recent review pool for the next lesson:
 
@@ -102,9 +102,13 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L044 | 書 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書 | 爸爸媽媽都愛看書 / 我的家裡都是書 / 我也很愛看書 / 他和爸媽在看狗的書 / 他家的狗都愛上山 | 爸媽都愛看書我的家裡是也很他和狗上山 | Introduces `書` through family reading, a home full of books, independent reading, and a dog encyclopedia scene. Reviews recent `爸`, `媽`, and `愛`; reinforces fixed sporty boy family and two fixed dogs on the mountain. |
 | L045 | 可 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可 | 男孩女孩都很可愛 / 書裡有可愛的小孩 / 我是可愛的小女孩 / 我和爸媽都愛看書 / 可是小鳥不愛看書 | 男孩女孩都很可愛書裡有小我爸媽看不鳥 | Introduces `可` with `可愛` and `可是`, using the corrected Taiwan zhuyin `ㄎㄜˇ`. Reviews recent `媽`, `愛`, and `書`; keeps the fixed three-child cast together and adds the fixed girl's home reading scene with her pet bird and cat. |
 
+| L046 | 會 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會 | 小鳥會飛，可是我不會飛 / 我愛看書，可是他不愛看書 / 很可愛的小孩，他不會走 / 我的爸媽很愛看書 / 小小孩不會看書 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可 | Introduces `會` through can/able sentences and reviews love, book, and cute/can. |
+
+| L047 | 這 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這 | 這是媽媽的愛書 / 這個小小孩很可愛 / 他會走，可是不會看書 / 這隻小鳥會不會飛？ / 這是我的兩隻手 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會 | Introduces `這` through this/identity sentences, a toddler continuity pair, a baby-bird question, and a two-hands review. |
+
 ## Planned Lessons
 
-None yet. L046 已完成，下一課請從 planner 重新規劃。
+None yet. L047 completed; plan the next lesson from the planner.
 
 ## Planning Rule For New Lessons
 
