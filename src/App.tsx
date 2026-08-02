@@ -3950,8 +3950,7 @@ function SentencePracticePreview({
     if (disabled || isCurrentRoundComplete || game.type !== "teach-character") return;
     const canStartRecording = teachPhase === "ready" || teachPhase === "asking";
     if (index !== targetIndex || !canStartRecording || recording || mediaRecorderRef.current?.state === "recording") return;
-    const skipPrimingGuide = teachPhase === "asking";
-    if (skipPrimingGuide) {
+    if (teachPhase === "asking") {
       guideRunRef.current += 1;
       stopPlayback();
       setActiveGameCharIndex(null);
@@ -3963,14 +3962,12 @@ function SentencePracticePreview({
     primingPressActiveRef.current = true;
     setTeachPhase("priming");
     setFloatingRecordChar(game.targetChar);
-    if (!skipPrimingGuide) {
-      await speakStageFour("聽到鈴聲，就大聲念出來。");
-      if (releasedDuringPrimeRef.current) {
-        setFloatingRecordChar(null);
-        setTeachPhase("ready");
-        await speakStageFour("還沒聽到鈴聲喔。請按住紅框的字不放。");
-        return;
-      }
+    await speakStageFour("聽到鈴聲，就大聲念出來。");
+    if (releasedDuringPrimeRef.current) {
+      setFloatingRecordChar(null);
+      setTeachPhase("ready");
+      await speakStageFour("還沒聽到鈴聲喔。請按住紅框的字不放。");
+      return;
     }
     await startRecordingAfterDing();
   }
