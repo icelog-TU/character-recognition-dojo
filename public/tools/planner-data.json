@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-02T06:28:56.693Z",
+  "exportedAt": "2026-08-02T07:01:34.996Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -13070,7 +13070,8 @@
           "text": "他走到山上，我也走到山上",
           "displayLines": [
             "他走到山上，",
-            "我也走到山上"
+            "我也走到",
+            "山上"
           ],
           "spokenText": "他走到山上我也走到山上",
           "focusChar": "他",
@@ -13372,6 +13373,422 @@
               "text": "他是女孩，你也是男孩",
               "correct": false,
               "audioSrc": "/assets/lessons/L035/audio/L035-G05-wrong2.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L036",
+      "order": 36,
+      "newChars": [
+        "沒"
+      ],
+      "zhuyin": {
+        "沒": "ㄇㄟˊ"
+      },
+      "charAudio": {
+        "沒": "/assets/lessons/L036/audio/char-u6c92.m4a"
+      },
+      "title": "沒",
+      "requiredRounds": 1,
+      "originHint": "用「沒」練習沒走、沒看到、沒有飛走，並複習到、走、他。",
+      "sentences": [
+        {
+          "id": "L036-S01",
+          "text": "他沒走，我也沒走",
+          "displayLines": [
+            "他沒走，",
+            "我也沒走"
+          ],
+          "spokenText": "他沒走我也沒走",
+          "focusChar": "沒",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。黑板或紙張若出現必須完全空白。畫面是明亮安全的幼兒教室放學後場景，固定「他」小男孩和固定小女孩留在教室裡一起整理東西、收玩具或擦桌子，像值日生。教室門外或走廊遠處可以看到其他小朋友已經走出教室，只留這兩個孩子在教室裡。固定「他」小男孩：同樣是幼兒到小學低年級年紀，短短有精神的微刺深黑髮，活潑運動型，橘色素面運動 T 恤、深藍短褲、紅色運動鞋、綠色手環，不背背包，表情開朗。固定小女孩：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋。重點是「他沒走，我也沒走」：兩個主角都還在教室整理，不要讓他們走向門口，不要出現任何可讀文字。",
+          "imageSrc": "/assets/lessons/L036/images/L036-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L036/audio/L036-S01.m4a",
+            "durationMs": 2820,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1380,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1700,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2300
+              }
+            ]
+          }
+        },
+        {
+          "id": "L036-S02",
+          "text": "他是男孩，不是女孩",
+          "displayLines": [
+            "他是男孩，",
+            "不是女孩"
+          ],
+          "spokenText": "他是男孩不是女孩",
+          "focusChar": "他",
+          "imagePrompt": "重用已審核的 L035-S01 圖片。該圖建立固定「他」小男孩，並以固定小女孩作對照，完全符合「他是男孩，不是女孩」的複習句。除非要求替換，否則不重新生成。",
+          "imageSrc": "/assets/lessons/L035/images/L035-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L036/audio/L036-S02.m4a",
+            "durationMs": 3694,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1920,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2180,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2440,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2900,
+                "endMs": 3200
+              }
+            ]
+          }
+        },
+        {
+          "id": "L036-S03",
+          "text": "我看到鳥，他沒看到",
+          "displayLines": [
+            "我看到鳥，",
+            "他沒看到"
+          ],
+          "spokenText": "我看到鳥他沒看到",
+          "focusChar": "沒",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。畫面是在明亮公園庭院裡，固定小女孩站在左側，抬頭清楚看到一隻小鳥停在她前方上方的樹枝或門框上，她開心指著小鳥。固定「他」小男孩站在右側但背對小鳥，低頭看自己的鞋帶或地上的小石頭，完全沒有抬頭，所以沒有看到小鳥。固定小女孩：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋。固定「他」小男孩：同樣是幼兒到小學低年級年紀，短短有精神的微刺深黑髮，活潑運動型，橘色素面運動 T 恤、深藍短褲、紅色運動鞋、綠色手環，不背背包，表情開朗。重點是「我看到鳥，他沒看到」：女孩看著鳥，男孩背對鳥且低頭，視線不能指向鳥；只畫一隻鳥，不要出現其他人物或任何文字。",
+          "imageSrc": "/assets/lessons/L036/images/L036-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L036/audio/L036-S03.m4a",
+            "durationMs": 3484,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 550
+              },
+              {
+                "charIndex": 2,
+                "startMs": 550,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1620,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2150
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2150,
+                "endMs": 2360
+              }
+            ]
+          }
+        },
+        {
+          "id": "L036-S04",
+          "text": "鳥在門上，沒有飛走",
+          "displayLines": [
+            "鳥在門上，",
+            "沒有飛走"
+          ],
+          "spokenText": "鳥在門上沒有飛走",
+          "focusChar": "沒",
+          "imagePrompt": "重用已審核的 L032-S04 圖片。該圖清楚呈現一隻小鳥停在半開門的門框上，沒有飛走，完全符合這句複習句。除非要求替換，否則不重新生成。",
+          "imageSrc": "/assets/lessons/L032/images/L032-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L036/audio/L036-S04.m4a",
+            "durationMs": 3312,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1600,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1840,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2220,
+                "endMs": 2420
+              }
+            ]
+          }
+        },
+        {
+          "id": "L036-S05",
+          "text": "我到他家，他不在家",
+          "displayLines": [
+            "我到他家，",
+            "他不在家"
+          ],
+          "spokenText": "我到他家他不在家",
+          "focusChar": "我",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。畫面建立固定「他家」外觀：奶油色小屋、藍灰色屋頂、圓拱橘色前門、門旁有一顆球和小運動水壺、低矮白色籬笆、乾淨小花園，整體活潑運動感但溫暖。固定小女孩走到他家門前，站在門口或敲門，表情像發現沒有人在家；屋內或門口看起來空空的。固定小女孩：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋。重點是「我到他家，他不在家」：只出現女孩，不要畫固定「他」小男孩，也不要出現其他人；門可以半開或窗戶可見空房間，但不要陰暗，不要出現文字或門牌。",
+          "imageSrc": "/assets/lessons/L036/images/L036-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L036/audio/L036-S05.m4a",
+            "durationMs": 4446,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2080,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2960,
+                "endMs": 3180
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L036-G01",
+          "type": "find-character",
+          "sentenceId": "L036-S01",
+          "targetChar": "沒",
+          "prompt": "找到「沒」。"
+        },
+        {
+          "id": "L036-G02",
+          "type": "teach-character",
+          "sentenceId": "L036-S03",
+          "targetChar": "沒",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            5
+          ]
+        },
+        {
+          "id": "L036-G03",
+          "type": "missing-character",
+          "sentenceId": "L036-S04",
+          "targetChar": "沒",
+          "prompt": "字寶寶不見了，把「沒」找回來。",
+          "missingIndexes": [
+            4
+          ],
+          "options": [
+            {
+              "id": "not-have",
+              "text": "沒",
+              "correct": true
+            },
+            {
+              "id": "not",
+              "text": "不",
+              "correct": false
+            },
+            {
+              "id": "have",
+              "text": "有",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L036-G04",
+          "type": "partial-order",
+          "sentenceId": "L036-S05",
+          "targetChar": "到",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "me",
+              "text": "我",
+              "correct": true
+            },
+            {
+              "id": "arrive",
+              "text": "到",
+              "correct": true
+            },
+            {
+              "id": "he",
+              "text": "他",
+              "correct": true
+            },
+            {
+              "id": "home",
+              "text": "家",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L036-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L036-S02",
+          "targetChar": "他",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "他是男孩，不是女孩",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L036/audio/L036-S02.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "他是女孩，不是男孩",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L036/audio/L036-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "你是男孩，不是女孩",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L036/audio/L036-G05-wrong2.m4a"
             }
           ]
         }

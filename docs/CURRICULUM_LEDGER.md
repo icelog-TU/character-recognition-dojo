@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 35:
+Characters taught after Lesson 36:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒`
 
 Recent review pool for the next lesson:
 
-`我 是 女 孩 你 男 門 前 水 後 也 小 鳥 飛 很 高 人 在 山 不 大 有 看 的 到 家 走 上 他`
+`我 不 是 鳥 也 大 人 門 前 有 山 後 你 男 孩 女 在 看 的 到 家 小 水 走 上 他 沒 飛`
 
 ## Visual Continuity Ledger
 
@@ -41,6 +41,16 @@ Image reuse rule:
 - If a new sentence can use an existing approved image without changing the meaning, reuse it.
 - If the same scene needs a different focus, prefer adding a clear circle, glow, or spotlight to the existing scene instead of creating an unrelated new scene.
 - Generate a new image only when the count, role, object, or meaning would be wrong with the existing asset.
+
+## Place Continuity Ledger
+
+Use this section before writing image prompts for homes or recurring places. Keep houses visually distinct so `我家`, `你家`, and `他家` do not blur together.
+
+| Place | First Clear Lesson | Approved Visual Description | Reuse Rule |
+|---|---:|---|---|
+| 我家 | L017 / L034 | 山上的溫馨奶油色小屋，紅橘色瓦屋頂，圓拱木門，門前有花園與安全山路；整體像固定小女孩的山上家。 | Whenever `我家` appears, use the fixed girl's mountain home. Use L017-S02, L034-S01, and L034-S05 as references. |
+| 你家 | L017 | 高山下的溫馨小屋，和固定 `你` 小男孩連結；保持山下位置，避免畫成固定小女孩的山上家。 | Whenever `你家` appears, use the fixed second-person boy's home at the foot of the mountain. Use L017-S01 as the current reference. |
+| 他家 | L036 | 奶油色小屋，藍灰色屋頂，圓拱橘色前門，門邊有球或小運動水壺，低矮白色籬笆與乾淨小花園；整體呼應固定 `他` 小男孩的活潑運動型角色。 | Whenever `他家` appears, use this sporty boy's home and keep it visually distinct from `我家` and `你家`. Use L036-S05 as the current reference. |
 
 ## Lesson Ledger
 
@@ -81,10 +91,11 @@ Image reuse rule:
 | L033 | 到 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到 | 我到門前，你也到門前 / 大人到家，小孩也到家 / 我到門前看山也看水 / 鳥不在門前，也不在門後 / 你是男孩，不是女孩 | 我到門前你也大人家小孩看山水鳥不在後是男女 | Introduces `到` through arrival-at-door and arrival-home scenes. Reviews recent `也`, `是`, and `不`; the last two review sentences reuse approved L032 image meanings while using L033 audio. |
 | L034 | 走 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走 | 你走到我家 / 女孩不走，男孩也不走 / 我不是鳥，也不是大人 / 我看到門後有鳥也有人 / 我上山後，走到家 | 你走到我家女孩不男也我是鳥大人看門後有上山 | Introduces `走` through walking-to-home and not-walking scenes. Reviews recent `是`, `不`, and `到`; reuses approved L032-S01 image for the identity review sentence. |
 | L035 | 他 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他 | 他是男孩，不是女孩 / 他看到我，我看不到他 / 他走到山上，我也走到山上 / 女孩不走，男孩也不走 / 他是男孩，你也是男孩 | 他是男孩不女看到我走山上也你 | Introduces `他` through a new fixed sporty boy character. Reviews recent `不`, `到`, and `走`; reuses approved L034-S02 image for the not-walking review sentence. |
+| L036 | 沒 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒 | 他沒走，我也沒走 / 他是男孩，不是女孩 / 我看到鳥，他沒看到 / 鳥在門上，沒有飛走 / 我到他家，他不在家 | 他沒走我也是男孩不女看到鳥在門上有飛家 | Introduces `沒` through not-leaving, not-seeing, and not-flying-away scenes. Reviews recent `到`, `走`, and `他`; establishes fixed `他家` as the sporty boy's home. |
 
 ## Planned Lessons
 
-None yet. L035 已完成，下一課請從 planner 重新規劃。
+None yet. L036 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 
