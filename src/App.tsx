@@ -2103,8 +2103,11 @@ function LessonPanel({
   const soundUnlocked = newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
   const usesSentenceGames = Boolean(lesson.sentenceGames?.length);
+  const configuredRequiredRounds = Number.isFinite(lesson.requiredRounds)
+    ? lesson.requiredRounds
+    : lesson.sentenceGames?.length ?? 0;
   const requiredGameRounds = usesSentenceGames
-    ? Math.min(lesson.requiredRounds, lesson.sentenceGames?.length ?? 0)
+    ? Math.min(configuredRequiredRounds, lesson.sentenceGames?.length ?? 0)
     : 0;
   const pictureDone = practiceDoneCount >= 1;
   const gamesDone = !usesSentenceGames || gameDoneCount >= requiredGameRounds;

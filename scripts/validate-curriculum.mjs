@@ -124,6 +124,13 @@ for (let i = 0; i < sorted.length; i += 1) {
 
   const sentencesById = new Map((lesson.sentences ?? []).map((sentence) => [sentence.id, sentence]));
   const sentenceGames = lesson.sentenceGames ?? [];
+  if (sentenceGames.length > 0) {
+    if (!Number.isInteger(lesson.requiredRounds) || lesson.requiredRounds < 0) {
+      errors.push(`${lesson.id}: requiredRounds must be a non-negative integer when sentenceGames are present.`);
+    } else if (lesson.requiredRounds > sentenceGames.length) {
+      errors.push(`${lesson.id}: requiredRounds cannot exceed sentenceGames length.`);
+    }
+  }
   if (sentenceGames.length === stageFourCycleGameTypes.length) {
     const gameTypes = new Set(sentenceGames.map((game) => game.type));
     const gameSentenceIds = sentenceGames.map((game) => game.sentenceId);
