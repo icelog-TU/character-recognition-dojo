@@ -104,7 +104,7 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 ## Planned Lessons
 
-None yet. L045 已完成，下一課請從 planner 重新規劃。
+None yet. L046 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 
