@@ -718,13 +718,13 @@ function stageLabel(stage: number): string {
   return `第${smallZhNumber(stage)}階段`;
 }
 
-function scrollActiveLessonWorkIntoView(target: HTMLElement) {
+function scrollActiveLessonWorkIntoView(target: HTMLElement, options: { extraBottomInset?: number } = {}) {
   const header = document.querySelector<HTMLElement>(".app-header");
   const playbackBar = document.querySelector<HTMLElement>(".floating-playback-bar");
   const headerHeight = header?.getBoundingClientRect().height ?? 0;
   const playbackHeight = playbackBar?.getBoundingClientRect().height ?? 0;
   const topInset = headerHeight + 14;
-  const bottomInset = playbackHeight + 34;
+  const bottomInset = playbackHeight + 34 + (options.extraBottomInset ?? 0);
   const availableHeight = Math.max(180, window.innerHeight - topInset - bottomInset);
   const rect = target.getBoundingClientRect();
   const targetTop = window.scrollY + rect.top;
@@ -3690,7 +3690,7 @@ function SentencePracticePreview({
     let secondFrame = 0;
     firstFrame = window.requestAnimationFrame(() => {
       secondFrame = window.requestAnimationFrame(() => {
-        if (roundCompleteActionRef.current) scrollActiveLessonWorkIntoView(roundCompleteActionRef.current);
+        if (roundCompleteActionRef.current) scrollActiveLessonWorkIntoView(roundCompleteActionRef.current, { extraBottomInset: 280 });
       });
     });
     return () => {
