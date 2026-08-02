@@ -408,8 +408,26 @@
         box-shadow: 0 10px 22px rgba(74, 55, 32, 0.14);
       }
 
+      .review-coverage .selection-meter {
+        margin-top: 0;
+        padding: 8px 10px;
+      }
+
       .review-coverage strong {
         font-size: 1rem;
+      }
+
+      .sticky-request-actions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .sticky-request-actions .btn {
+        min-height: 38px;
+        padding: 7px 10px;
+        white-space: normal;
+        line-height: 1.2;
       }
 
       .review-count-list {
@@ -841,6 +859,17 @@
 
         .review-coverage {
           top: 86px;
+          max-height: calc(100vh - 96px);
+          overflow: auto;
+        }
+
+        .sticky-request-actions {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .sticky-request-actions .btn {
+          min-height: 34px;
+          font-size: 0.86rem;
         }
 
         .lookup-row {
@@ -1790,19 +1819,13 @@
                 </div>
                 ${
                   selected
-                    ? `<div class="selection-meter ${overSentenceCount ? "warning" : ""}" aria-live="polite">
-                        <strong>${selectedSentenceCount}/${targetApprovedSentenceCount} 句</strong>
-                        <span>${
-                          overSentenceCount
-                            ? `多了 ${overSentenceCount} 句，可以再精簡。`
-                            : remainingSentenceCount
-                              ? `還差 ${remainingSentenceCount} 句。`
-                              : "剛好 5 句，可以送出。"
-                        }</span>
-                      </div>`
+                    ? reviewCoverageHtml(model, choice, {
+                        selectedSentenceCount,
+                        remainingSentenceCount,
+                        overSentenceCount,
+                      })
                     : ""
                 }
-                ${selected ? reviewCoverageHtml(model, choice) : ""}
                 ${renderCustomSection(choice, selected, customRows, draft, feedback)}
                 <div class="sentence-list">
                   ${
@@ -2061,16 +2084,34 @@
         return counts;
       }
 
-      function reviewCoverageHtml(model, choice = selectedChoice()) {
+      function reviewCoverageHtml(model, choice = selectedChoice(), meter = null) {
         const chars = model.reviewCountChars || [];
         if (!choice || chars.length === 0) return "";
         const counts = reviewCharCounts(selectedSentencesForChoice(choice), chars);
+        const selectedSentenceCount = meter?.selectedSentenceCount ?? selectedSentencesForChoice(choice).length;
+        const remainingSentenceCount = meter?.remainingSentenceCount ?? Math.max(targetApprovedSentenceCount - selectedSentenceCount, 0);
+        const overSentenceCount = meter?.overSentenceCount ?? Math.max(selectedSentenceCount - targetApprovedSentenceCount, 0);
         return `<div class="review-coverage" data-review-coverage aria-live="polite">
+          <div class="selection-meter ${overSentenceCount ? "warning" : ""}">
+            <strong>${selectedSentenceCount}/${targetApprovedSentenceCount} 句</strong>
+            <span>${
+              overSentenceCount
+                ? `多了 ${overSentenceCount} 句，可以再精簡。`
+                : remainingSentenceCount
+                  ? `還差 ${remainingSentenceCount} 句。`
+                  : "剛好 5 句，可以送出。"
+            }</span>
+          </div>
           <strong>近五課新字出現次數</strong>
           <div class="review-count-list">
             ${chars
               .map((char) => `<div class="review-count ${counts[char] ? "" : "zero"}">${char}<span>${counts[char] || 0}</span>次</div>`)
               .join("")}
+          </div>
+          <div class="sticky-request-actions" aria-label="送出這一課">
+            <button class="btn danger" type="button" data-submit-request>送出給 Codex</button>
+            <button class="btn" type="button" data-copy-request>複製 JSON</button>
+            <button class="btn secondary" type="button" data-download-request>下載 JSON</button>
           </div>
         </div>`;
       }
