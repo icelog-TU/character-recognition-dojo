@@ -769,7 +769,7 @@ function drawCharacter(realmId: RealmId, ownedCharacters: Record<string, number>
   const pool = charactersForRealm(realmId);
   const missing = pool.filter((character) => ownedCount(ownedCharacters, character.characterId) === 0);
   const guaranteedNew = duplicateGachaStreak >= 5 && missing.length > 0;
-  const source = guaranteedNew || (missing.length > 0 && Math.random() < 0.68) ? missing : pool;
+  const source = guaranteedNew ? missing : pool;
   const character = source[Math.floor(Math.random() * source.length)] ?? pool[0];
   return {
     character,
