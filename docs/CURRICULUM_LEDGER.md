@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 40:
+Characters taught after Lesson 41:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸`
 
 Recent review pool for the next lesson:
 
-`到 他 沒 裡 走 看 我 家 兩 隻 有 小 狗 鳥 人 不 在 山 都 手 的 水 也 是 孩 上 飛 很 男 女 門 高 下 大`
+`他 走 到 家 裡 沒 看 人 手 有 小 山 鳥 不 在 我 很 高 上 也 兩 的 隻 飛 下 狗 水 都 大 爸 和 你 門 前`
 
 ## Visual Continuity Ledger
 
@@ -29,7 +29,7 @@ Use this section before writing image prompts. Once a recurring person or family
 | 我 | L007 | Friendly young girl, preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, bright curious eyes, yellow top, coral-red pinafore dress, red shoes, warm expression, child-friendly picture-book style. | Always use this same girl whenever `我` appears. Use L007 images as the current reference. |
 | 你 | L012 | Friendly young boy, the same age as the fixed `我` girl, preschool to early elementary age, short slightly tousled dark hair, bright friendly eyes, sky-blue shirt, green shorts, blue shoes, small orange backpack, warm curious expression, child-friendly picture-book style. | Always use this same boy whenever `你` appears. Use L012-S01/L012-S02/L012-S03 as the current references. |
 | 他 | L035 | Friendly sporty young boy, the same age as the fixed `我` girl and fixed `你` boy, short energetic slightly spiky black hair, bright open expression, plain orange athletic T-shirt, navy shorts, red sneakers, green wristband, no backpack. | Always use this same sporty boy whenever `他` appears. Keep him visually distinct from the fixed `你` boy, who wears a sky-blue shirt, green shorts, blue shoes, and an orange backpack. Use L035-S01/L035-S02/L035-S03/L035-S05 as the current references. |
-| 爸爸 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same father design in all future images. |
+| 爸爸 | L041 | Three fixed father designs are introduced. `我爸爸`: friendly tall adult father with the fixed girl's palette, yellow top with coral-red accents. `你爸爸`: friendly tall adult father with the fixed `你` boy palette, sky-blue top with green accents and blue shoes. `他爸爸`: sporty adult father matching the fixed `他` boy palette, short dark hair, orange athletic shirt, deep navy pants or shorts, red athletic shoes, green wristband. | Whenever a father appears, match the father to the related child by color palette and family role. Use L041-S01 for `我爸爸` and `你爸爸`; use L041-S02 for `他爸爸`. Do not merge the three fathers into one generic dad. |
 | 媽媽 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same mother design in all future images. |
 | 哥哥 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same older-brother design in all future images. |
 | 姐姐 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same older-sister design in all future images. |
@@ -96,10 +96,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L038 | 兩 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩 | 他沒走，我也沒走 / 兩人走到家裡，沒看到人 / 他的手裡有兩隻小鳥 / 我看到兩隻鳥飛到山裡 / 他沒看到我走下山 | 他沒走我也兩人到家裡看的隻手有小鳥飛山下 | Introduces `兩` through two people and toy-bird counting scenes. Reviews recent `他`, `沒`, and `裡`; reuses approved L036-S01 image for the not-leaving review sentence. |
 | L039 | 狗 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗 | 他家裡有兩隻狗 / 我家裡沒有狗 / 他走到家裡，沒看到人 / 兩隻小狗走到水裡 / 我有兩隻手，小鳥沒有手 | 他家裡有兩隻狗我沒走到看人小水鳥手 | Introduces `狗` through dogs at home, no dog at home, and two small dogs in shallow water. Reviews recent `沒`, `裡`, and `兩`; reuses approved L037-S01 image for the home-with-no-people review sentence. |
 | L040 | 都 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都 | 他的兩隻狗都在家裡 / 兩隻狗都很小 / 兩隻小狗都走到水裡 / 大人都沒在水裡 / 他沒看到家裡的狗 | 他的兩隻狗都在家裡很小走到水大人沒看 | Introduces `都` through all-at-home, both-small, both-entering-water, and all-not-in-water scenes. Reviews recent `裡`, `兩`, and `狗`; S02 was corrected from the request's mismatched display text to match the approved spokenText/reason. |
+| L041 | 爸 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸 | 我爸爸和你爸爸都很高 / 他的爸爸和兩隻狗都在家裡 / 我的爸爸沒有在家裡 / 兩隻小狗都走到門前 / 大人都沒在水裡 | 我和你都很高他的兩隻狗在家裡沒有小走到門前大人水 | Introduces `爸` and establishes fixed father designs for `我爸爸`, `你爸爸`, and `他爸爸`, each color-matched to the related child. Reviews recent `沒`, `裡`, `兩`, `狗`, and `都`; S05 reuses approved L040-S04 beach image. |
 
 ## Planned Lessons
 
-None yet. L040 已完成，下一課請從 planner 重新規劃。
+None yet. L041 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 
