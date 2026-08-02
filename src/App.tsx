@@ -2130,7 +2130,10 @@ function LessonPanel({
           panel?.querySelector<HTMLElement>(".stage-advance-panel.active-block") ??
           panel?.querySelector<HTMLElement>(".lesson-block.active-block") ??
           panel;
-        if (target) scrollActiveLessonWorkIntoView(target);
+        if (target) {
+          const extraBottomInset = target.classList.contains("stage-advance-panel") ? 240 : 0;
+          scrollActiveLessonWorkIntoView(target, { extraBottomInset });
+        }
       });
     });
     return () => {
@@ -2561,11 +2564,28 @@ function StageAdvancePrompt({
   onSpeakEnd: (target: SpeechTarget) => void;
   onAdvance: () => void;
 }) {
+  const promptRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!active) return;
+    let firstFrame = 0;
+    let secondFrame = 0;
+    firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        if (promptRef.current) scrollActiveLessonWorkIntoView(promptRef.current, { extraBottomInset: 240 });
+      });
+    });
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      window.cancelAnimationFrame(secondFrame);
+    };
+  }, [active, buttonText]);
+
   return (
-    <section className={`stage-advance-panel${active ? " active-block" : ""}`} aria-label={buttonText}>
+    <section ref={promptRef} className={`stage-advance-panel${active ? " active-block" : ""}`} aria-label={buttonText}>
       <NarrationLine
         text={text}
-        target={buttonText.includes("第三") ? "advance3" : "advance2"}
+        target={buttonText.includes("第四") ? "advance4" : buttonText.includes("第三") ? "advance3" : "advance2"}
         onSpeakStart={onSpeakStart}
         onSpeakEnd={onSpeakEnd}
         className="stage-advance-copy"
