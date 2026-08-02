@@ -718,6 +718,21 @@ function stageLabel(stage: number): string {
   return `第${smallZhNumber(stage)}階段`;
 }
 
+function scrollActiveLessonWorkIntoView(target: HTMLElement) {
+  const header = document.querySelector<HTMLElement>(".app-header");
+  const playbackBar = document.querySelector<HTMLElement>(".floating-playback-bar");
+  const headerHeight = header?.getBoundingClientRect().height ?? 0;
+  const playbackHeight = playbackBar?.getBoundingClientRect().height ?? 0;
+  const topInset = headerHeight + 14;
+  const bottomInset = playbackHeight + 34;
+  const availableHeight = Math.max(180, window.innerHeight - topInset - bottomInset);
+  const rect = target.getBoundingClientRect();
+  const targetTop = window.scrollY + rect.top;
+  const centerOffset = rect.height < availableHeight ? (availableHeight - rect.height) / 2 : 0;
+  const scrollTop = Math.max(0, targetTop - topInset - centerOffset);
+  window.scrollTo({ top: scrollTop, behavior: "smooth" });
+}
+
 function lessonIntroText(lesson: Lesson): string {
   const charCount = lesson.newChars.length;
   if (charCount === 1) return `第${smallZhNumber(lesson.order)}課，我們要學一個很重要的字，就在下面喔。`;
@@ -2106,8 +2121,23 @@ function LessonPanel({
   }, [lesson.id, lessonIntro, hearPrompt, locked]);
 
   useEffect(() => {
-    panelRef.current?.scrollIntoView({ block: "start" });
-  }, [lesson.id, activeStage]);
+    let firstFrame = 0;
+    let secondFrame = 0;
+    firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        const panel = panelRef.current;
+        const target =
+          panel?.querySelector<HTMLElement>(".stage-advance-panel.active-block") ??
+          panel?.querySelector<HTMLElement>(".lesson-block.active-block") ??
+          panel;
+        if (target) scrollActiveLessonWorkIntoView(target);
+      });
+    });
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      window.cancelAnimationFrame(secondFrame);
+    };
+  }, [lesson.id, activeStage, advancingStage, findUnlocked, practiceDoneCount, gameDoneCount, rewardState, speakingTarget]);
 
   useEffect(() => {
     if (rewardState !== "claiming" || !lessonReady) return;

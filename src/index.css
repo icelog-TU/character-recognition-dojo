@@ -219,7 +219,7 @@ button {
 }
 
 .app-root.lesson-mode .app-shell {
-  padding-bottom: 96px;
+  padding-bottom: calc(168px + env(safe-area-inset-bottom));
 }
 
 .practice-layout {
