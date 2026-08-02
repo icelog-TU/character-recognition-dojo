@@ -3544,6 +3544,7 @@ function SentencePracticePreview({
   const recordedChunksRef = useRef<Blob[]>([]);
   const guideRunRef = useRef(0);
   const pressStartRef = useRef<number | null>(null);
+  const primingPressActiveRef = useRef(false);
   const releasedDuringPrimeRef = useRef(false);
   const recordingStreamRef = useRef<MediaStream | null>(null);
   const onSpeakStartRef = useRef(onSpeakStart);
@@ -3593,6 +3594,7 @@ function SentencePracticePreview({
     recordingStreamRef.current = null;
     guideRunRef.current += 1;
     pressStartRef.current = null;
+    primingPressActiveRef.current = false;
     releasedDuringPrimeRef.current = false;
   }, [game?.id]);
 
@@ -3784,12 +3786,14 @@ function SentencePracticePreview({
 
   async function startRecordingAfterDing() {
     if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
+      primingPressActiveRef.current = false;
       await speakStageFour("這個瀏覽器不能錄音，小兔子先謝謝你。");
       completeRound();
       return;
     }
     await playRecordingReadyDing();
     if (releasedDuringPrimeRef.current) {
+      primingPressActiveRef.current = false;
       setFloatingRecordChar(null);
       setTeachPhase("ready");
       await speakStageFour("還沒開始錄音喔。請按住紅框的字不放。");
@@ -3799,8 +3803,17 @@ function SentencePracticePreview({
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     } catch {
+      primingPressActiveRef.current = false;
       await speakStageFour("小兔子聽不到麥克風。請打開麥克風，再幫小兔子一次。");
       completeRound();
+      return;
+    }
+    if (releasedDuringPrimeRef.current) {
+      primingPressActiveRef.current = false;
+      stream.getTracks().forEach((track) => track.stop());
+      setFloatingRecordChar(null);
+      setTeachPhase("ready");
+      await speakStageFour("還沒開始錄音喔。請按住紅框的字不放。");
       return;
     }
     recordedChunksRef.current = [];
@@ -3838,6 +3851,7 @@ function SentencePracticePreview({
     setRecordingGameCharIndex(targetIndex);
     setFloatingRecordChar(game.targetChar);
     pressStartRef.current = Date.now();
+    primingPressActiveRef.current = false;
     recorder.start();
   }
 
@@ -3849,29 +3863,41 @@ function SentencePracticePreview({
 
   async function handleTeachPressStart(index: number) {
     if (disabled || isCurrentRoundComplete || game.type !== "teach-character") return;
-    if (index !== targetIndex || teachPhase !== "ready" || recording || mediaRecorderRef.current?.state === "recording") return;
+    const canStartRecording = teachPhase === "ready" || teachPhase === "asking";
+    if (index !== targetIndex || !canStartRecording || recording || mediaRecorderRef.current?.state === "recording") return;
+    const skipPrimingGuide = teachPhase === "asking";
+    if (skipPrimingGuide) {
+      guideRunRef.current += 1;
+      stopPlayback();
+      setActiveGameCharIndex(null);
+      setAskingGameCharIndex(targetIndex);
+    }
     ensureToneAudioContext();
     primeRecordingDingAudio();
     releasedDuringPrimeRef.current = false;
+    primingPressActiveRef.current = true;
     setTeachPhase("priming");
     setFloatingRecordChar(game.targetChar);
-    await speakStageFour("聽到鈴聲，就大聲念出來。");
-    if (releasedDuringPrimeRef.current) {
-      setFloatingRecordChar(null);
-      setTeachPhase("ready");
-      await speakStageFour("還沒聽到鈴聲喔。請按住紅框的字不放。");
-      return;
+    if (!skipPrimingGuide) {
+      await speakStageFour("聽到鈴聲，就大聲念出來。");
+      if (releasedDuringPrimeRef.current) {
+        setFloatingRecordChar(null);
+        setTeachPhase("ready");
+        await speakStageFour("還沒聽到鈴聲喔。請按住紅框的字不放。");
+        return;
+      }
     }
     await startRecordingAfterDing();
   }
 
   function handleTeachPressEnd(index: number) {
     if (index !== targetIndex || game.type !== "teach-character") return;
-    if (teachPhase === "priming") {
+    if (primingPressActiveRef.current || teachPhase === "priming") {
       releasedDuringPrimeRef.current = true;
+      primingPressActiveRef.current = false;
       return;
     }
-    if (recording) stopRecording();
+    if (recording || mediaRecorderRef.current?.state === "recording") stopRecording();
   }
 
   async function handleTeachRecordingDone(url: string) {
