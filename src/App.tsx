@@ -2920,11 +2920,28 @@ function PictureSentencePreview({
   const [activeCharIndex, setActiveCharIndex] = useState<number | null>(null);
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
   const [completedSentenceIds, setCompletedSentenceIds] = useState<Set<string>>(new Set());
+  const sentenceButtonRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const allPicturesDone = completedSentenceIds.size >= lesson.sentences.length;
 
   useEffect(() => {
     if (!disabled && !done && allPicturesDone) onDone();
   }, [allPicturesDone, disabled, done, onDone]);
+
+  useEffect(() => {
+    if (disabled || done || currentSentenceIndex >= lesson.sentences.length) return;
+    let firstFrame = 0;
+    let secondFrame = 0;
+    firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        const target = sentenceButtonRefs.current[currentSentenceIndex];
+        if (target) scrollActiveLessonWorkIntoView(target);
+      });
+    });
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      window.cancelAnimationFrame(secondFrame);
+    };
+  }, [currentSentenceIndex, disabled, done, lesson.id, lesson.sentences.length]);
 
   function handleSentenceTap(sentence: LessonSentence, index: number) {
     const canPlayCompleted = completedSentenceIds.has(sentence.id);
@@ -2973,6 +2990,9 @@ function PictureSentencePreview({
               isCompleted ? " completed-picture" : ""
             }`}
             key={sentence.id}
+            ref={(element) => {
+              sentenceButtonRefs.current[index] = element;
+            }}
             disabled={disabled || (!isCurrent && !isCompleted) || Boolean(playingSentenceId)}
             onClick={() => handleSentenceTap(sentence, index)}
           >
