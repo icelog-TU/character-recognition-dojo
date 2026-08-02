@@ -96,6 +96,8 @@ This must be the default path for lesson audio when `npm run ai:check` succeeds.
 - `OPENAI_TTS_VOICE`, default `coral`
 - `OPENAI_API_KEY` from the repo env helper
 
+Production lesson audio must be OpenAI-generated Taiwan Mandarin when `ai:check` succeeds. Do not use Beijing/Mainland China accent, erhua, curled-r endings, or other r-colored final sounds. If a final syllable sounds rhotic, regenerate that sentence audio and rerun AI alignment before shipping.
+
 This creates raw MP3 drafts in:
 
 ```text
@@ -129,3 +131,5 @@ If AI transcription returns simplified Chinese for a traditional sentence, updat
 The audio script creates natural whole-sentence audio. It does not create one audio file per sentence character. Character-by-character timing still needs to be produced from the final sentence audio before production release.
 
 Do not accept a sentence audio file until transcription confirms every Han character in `spokenText` was actually spoken. Pay special attention to final neutral-tone `的` and final syllables, which can be too light or clipped if the audio processing trims the ending.
+
+When generating one-off audio fixes from PowerShell, avoid embedding Chinese text directly in an inline script unless the encoding is verified. Prefer reading `spokenText` from `src/curriculum/sample-lessons.json` or using Unicode-safe source files, then transcribe the generated MP3 before overwriting production audio.

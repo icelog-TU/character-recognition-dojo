@@ -47,7 +47,7 @@ async function createSpeech({ apiKey, model, voice, input, outputPath }) {
       response_format: "mp3",
       speed: 0.9,
       instructions:
-        "Use natural Taiwan Mandarin pronunciation for young children. Speak clearly, warmly, and gently. Keep the final syllable audible with a short natural ending. Do not read punctuation aloud. For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
+        "Use natural Taiwan Mandarin pronunciation for young children. Speak clearly, warmly, and gently. Use Taiwan Mandarin, not a Beijing or Mainland China accent. Do not add erhua or r-colored curled endings. Keep the final syllable clean, plain, and audible, with no extra r sound. Do not read punctuation aloud. For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
     }),
   });
 

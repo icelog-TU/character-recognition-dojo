@@ -116,6 +116,8 @@ Do not check only `process.env.OPENAI_API_KEY` and conclude the key is missing. 
 
 If `OPENAI_API_KEY` is truly unavailable after `npm run ai:check`, do not describe generated lesson audio or timings as AI-reviewed. A local OS TTS voice plus `npm run assets:align` may be used only as an explicit fallback, and the final handoff must name the affected lesson(s) so they can be regenerated with AI audio and `assets:align:ai` later if needed.
 
+All production lesson audio should sound like natural Taiwan Mandarin. Do not ship Beijing/Mainland China accent, erhua, curled-r endings, or r-colored final syllables. If a sentence has accent drift, regenerate that sentence with OpenAI audio, then rerun `npm run assets:align:ai -- --lesson L###`.
+
 ## Lesson Asset Preload SOP
 
 When a child enters a lesson, the app must start preloading that lesson's required assets immediately:

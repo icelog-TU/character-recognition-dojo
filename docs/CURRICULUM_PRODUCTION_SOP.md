@@ -124,6 +124,8 @@ This transcribes each final sentence audio file, verifies the transcript matches
 Do not use `npm run assets:align` as the final production timing source. It is a fallback energy-based estimate and can drift on connected speech, neutral-tone `的`, and final syllables. Use it only for a rough local draft when the OpenAI API is unavailable.
 Before declaring the OpenAI API unavailable, run `npm run ai:check`. Do not rely only on `process.env.OPENAI_API_KEY`, because the repo helper also reads `.env.local`, `.env`, and Windows user environment values from `HKCU\Environment`. If the OpenAI API is truly unavailable and a lesson must be shipped with local OS TTS plus `assets:align`, record that exception in `docs/PROJECT_HANDOFF_SOP.md` or the final handoff. Do not call those timings AI-reviewed, and prefer regenerating with AI audio plus `assets:align:ai` when credentials are available.
 
+When OpenAI audio is available, production lesson audio must use natural Taiwan Mandarin. Reject and regenerate any sentence that sounds like Beijing/Mainland China pronunciation, uses erhua, or adds curled-r/r-colored endings. Final syllables should stay audible but clean; do not accept a rhotic final `孩`, `兒化音`, or similar accent drift.
+
 ## Request File
 
 Example:
