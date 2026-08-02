@@ -421,6 +421,43 @@
         font-size: 1.05rem;
       }
 
+      .ai-settings-panel .help,
+      .manual-choice-panel .help {
+        margin-bottom: 12px;
+      }
+
+      .ai-grid {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr auto;
+        gap: 10px;
+        align-items: end;
+      }
+
+      .ai-field {
+        display: grid;
+        gap: 6px;
+      }
+
+      .ai-field label {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 800;
+      }
+
+      .ai-field input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px;
+        font: inherit;
+      }
+
+      .ai-status {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
       .draft-box {
         margin-top: 12px;
         border: 2px dashed #c9bca9;
@@ -688,6 +725,7 @@
         .custom-grid,
         .candidate-edit-grid,
         .manual-grid,
+        .ai-grid,
         .plan-slot-controls {
           grid-template-columns: 1fr;
         }
@@ -728,7 +766,7 @@
 
       <section class="panel manual-choice-panel" aria-labelledby="manualChoiceTitle">
         <h2 id="manualChoiceTitle">自選下一課字</h2>
-        <p class="help">候選清單沒有你想教的字時，可以自己加入。按下後會先依近五課與句長規則自我審核，再把 10 句候選句放到上面讓你修改。</p>
+        <p class="help">候選清單沒有你想教的字時，可以自己加入。加入後到候選字卡片按「AI 生成 10 句」，再在 Planner 裡審核、修改和查看複習字統計。</p>
         <div class="manual-grid">
           <div class="manual-field">
             <label for="manualChar">新字</label>
@@ -742,8 +780,25 @@
             <label for="manualWhy">理由</label>
             <input id="manualWhy" inputmode="text" placeholder="想練習位置和存在句。" />
           </div>
-          <button class="btn" id="addManualChoiceBtn" type="button">加入並自審 10 句</button>
+          <button class="btn" id="addManualChoiceBtn" type="button">加入自選字</button>
         </div>
+      </section>
+
+      <section class="panel ai-settings-panel" aria-labelledby="aiSettingsTitle">
+        <h2 id="aiSettingsTitle">AI 句子服務</h2>
+        <p class="help">填入 Cloudflare Worker URL 和老師 token 後，Planner 可以請 OpenAI 產生候選句。這裡不需要、也不能填 OpenAI API key。</p>
+        <div class="ai-grid">
+          <div class="ai-field">
+            <label for="aiEndpoint">Worker URL</label>
+            <input id="aiEndpoint" inputmode="url" placeholder="https://你的-worker.workers.dev" />
+          </div>
+          <div class="ai-field">
+            <label for="aiToken">老師 token</label>
+            <input id="aiToken" type="password" autocomplete="off" placeholder="TEACHER_TOKEN" />
+          </div>
+          <button class="btn secondary" id="saveAiSettingsBtn" type="button">儲存 AI 設定</button>
+        </div>
+        <div class="ai-status" id="aiStatusLine"></div>
       </section>
 
       <div class="status" id="statusLine"></div>
@@ -782,6 +837,8 @@
         feedbackByChoice: new Map(),
         manualChoices: [],
         manualDraft: { char: "", zhuyin: "", why: "" },
+        aiSettings: { endpoint: "", token: "" },
+        aiGeneratingChoiceId: "",
       };
 
       const sentenceLengthRange = { min: 4, max: 12 };
@@ -790,6 +847,7 @@
       const targetNewCharCountInLesson = 3;
       const plannerStoragePrefix = "character-recognition-dojo:lesson-planner:v2:";
       const activePlannerStorageKey = `${plannerStoragePrefix}active`;
+      const aiSettingsStorageKey = "character-recognition-dojo:lesson-planner:ai-settings:v1";
       const fallbackZhuyinByChar = {
         和: "ㄏㄜˊ",
         很: "ㄏㄣˇ",
@@ -1164,6 +1222,15 @@
         };
       }
 
+      function emptyOptimization(context, targetChar) {
+        const emptyContext = { ...context, targetChar };
+        return {
+          candidates: [],
+          metrics: planMetrics([], emptyContext),
+          poolSize: 0,
+        };
+      }
+
       function optimizeChoiceSentences(choice, model) {
         return optimizeChoiceSentencesFromEntry(
           {
@@ -1290,12 +1357,15 @@
           }));
         const recommendations = [...manualEntries, ...bankEntries.filter((entry) => !manualChoiceChars.has(entry.char))]
           .map((entry) => {
-            const optimization = optimizeChoiceSentencesFromEntry(entry, {
-              lessons,
-              learnedChars,
-              requiredRecentChars,
-              reviewCountChars,
-            });
+            const shouldSkipLocalManualGeneration = entry.source === "manual" && !(entry.sentenceCandidates || []).length;
+            const optimization = shouldSkipLocalManualGeneration
+              ? emptyOptimization({ lessons, learnedChars, requiredRecentChars, reviewCountChars }, entry.char)
+              : optimizeChoiceSentencesFromEntry(entry, {
+                  lessons,
+                  learnedChars,
+                  requiredRecentChars,
+                  reviewCountChars,
+                });
             const score = scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars, optimization, lessons);
             if (score === null) return null;
             return {
@@ -1388,6 +1458,14 @@
         $("manualChar").value = state.manualDraft.char;
         $("manualZhuyin").value = state.manualDraft.zhuyin;
         $("manualWhy").value = state.manualDraft.why;
+      }
+
+      function renderAiSettingsForm() {
+        $("aiEndpoint").value = state.aiSettings.endpoint;
+        $("aiToken").value = state.aiSettings.token;
+        $("aiStatusLine").textContent = state.aiSettings.endpoint
+          ? "AI 服務已設定。按候選字卡片裡的「AI 生成 10 句」即可使用。"
+          : "尚未設定 AI 服務；可以先加入自選字，再把 request 貼給 Codex，或完成 Worker 設定後直接在這裡生成。";
       }
 
       function renderCustomSection(choice, selected, customRows, draft, feedback) {
@@ -1513,6 +1591,11 @@
                         ? `<button class="btn secondary" type="button" data-unselect="${choice.choiceId}">取消選字</button>`
                         : ""
                     }
+                    ${
+                      previewing
+                        ? `<button class="btn secondary" type="button" data-ai-generate="${choice.choiceId}" ${state.aiGeneratingChoiceId ? "disabled" : ""}>${state.aiGeneratingChoiceId === choice.choiceId ? "AI 生成中" : "AI 生成 10 句"}</button>`
+                        : ""
+                    }
                   </div>
                 </div>
                 ${
@@ -1584,10 +1667,11 @@
                           <div></div>
                           <div>
                             <div class="sentence-text">還沒有候選句</div>
-                            <p>可以按下面按鈕立刻產生 10 句候選句，再逐句修改；也可以自己新增句子。</p>
-                            <div class="candidate-tools">
-                              <button class="btn" type="button" data-generate-candidates="${choice.choiceId}">生成 10 句候選句</button>
-                            </div>
+                             <p>可以按下面按鈕立刻產生 10 句候選句，再逐句修改；也可以自己新增句子。</p>
+                             <div class="candidate-tools">
+                               <button class="btn" type="button" data-ai-generate="${choice.choiceId}" ${state.aiGeneratingChoiceId ? "disabled" : ""}>AI 生成 10 句</button>
+                               <button class="btn secondary" type="button" data-generate-candidates="${choice.choiceId}">本機草稿 10 句</button>
+                             </div>
                           </div>
                         </div>`
                   }
@@ -2111,58 +2195,58 @@
         const choice = selectedChoice();
         const finalSentences = selectedSentences();
         if (!choice) return "";
+        return JSON.stringify(buildLessonRequest(model, choice, finalSentences), null, 2);
+      }
+
+      function buildLessonRequest(model, choice, finalSentences = []) {
         const hasApprovedSentences = finalSentences.length > 0;
         const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
         const missingRequired = hasApprovedSentences ? missingRequiredRecentChars(model, finalSentences) : model.requiredRecentChars;
         const dependencies = model.dependencyPlans || [];
-        return JSON.stringify(
-          {
-            order: model.order,
-            newChars: choice.newChars,
-            zhuyin: choice.zhuyin,
-            title: choice.title,
-            dependsOnLessons: dependencies.map((plan) => ({
-              order: plan.order,
-              lessonId: lessonId(plan.order),
-              newChars: plan.newChars,
-              title: plan.title,
-              status: "planned-not-yet-merged",
-            })),
-            targetSentenceCount: hasApprovedSentences ? finalSentences.length : targetGeneratedSentenceCount,
-            generationConstraints: {
-              sentenceHanCharLength: sentenceLengthRange,
-              allowedChars,
-              provisionalLearnedChars: dependencies.flatMap((plan) => plan.newChars || []),
-              preferReviewChars: model.recentPool,
-              mustIncludeCharsAcrossLesson: model.requiredRecentChars,
-              missingRequiredCharsInCurrentSelection: missingRequired,
-            },
-            teacherNotes: [
-              "由網頁下一課規劃工具產生。",
-              `選定候選字：${choice.choiceId}。`,
-              dependencies.length
-                ? `平行備課依賴：本課假設 ${dependencies
-                    .map((plan) => `${lessonId(plan.order)} 會加入 ${plan.newChars.join("")}`)
-                    .join("；")}。可以先平行草擬，但必須等依賴課程已合併到 main 並重新匯出 planner-data 後，才可以把本課合併或推送到 main。`
-                : "",
-              hasApprovedSentences
-                ? `核准句子：${finalSentences.map((sentence) => sentence.text).join("；")}。`
-                : `尚未核准句子。請先產生 ${targetGeneratedSentenceCount} 個候選句供教師審核；教師核准句子前，不要製作正式圖片或音訊素材。`,
-              `句長目標：每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字。`,
-              `優先使用最近五課複習字：${model.recentPool.join(" ")}。`,
-              `整課句子中，最近三課新字至少各出現一次：${model.requiredRecentChars.join(" ")}。`,
-              "只能使用已學字加上本課新字。",
-              hasApprovedSentences
-                ? "撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。"
-                : "草擬候選句時，句子要具體、容易配圖、符合臺灣華語自然語感，並適合幼兒。",
-            ]
-              .filter(Boolean)
-              .join(" "),
-            approvedSentences: finalSentences,
+        return {
+          order: model.order,
+          newChars: choice.newChars,
+          zhuyin: choice.zhuyin,
+          title: choice.title,
+          dependsOnLessons: dependencies.map((plan) => ({
+            order: plan.order,
+            lessonId: lessonId(plan.order),
+            newChars: plan.newChars,
+            title: plan.title,
+            status: "planned-not-yet-merged",
+          })),
+          targetSentenceCount: hasApprovedSentences ? finalSentences.length : targetGeneratedSentenceCount,
+          generationConstraints: {
+            sentenceHanCharLength: sentenceLengthRange,
+            allowedChars,
+            provisionalLearnedChars: dependencies.flatMap((plan) => plan.newChars || []),
+            preferReviewChars: model.recentPool,
+            mustIncludeCharsAcrossLesson: model.requiredRecentChars,
+            missingRequiredCharsInCurrentSelection: missingRequired,
           },
-          null,
-          2,
-        );
+          teacherNotes: [
+            "由網頁下一課規劃工具產生。",
+            `選定候選字：${choice.choiceId}。`,
+            dependencies.length
+              ? `平行備課依賴：本課假設 ${dependencies
+                  .map((plan) => `${lessonId(plan.order)} 會加入 ${plan.newChars.join("")}`)
+                  .join("；")}。可以先平行草擬，但必須等依賴課程已合併到 main 並重新匯出 planner-data 後，才可以把本課合併或推送到 main。`
+              : "",
+            hasApprovedSentences
+              ? `核准句子：${finalSentences.map((sentence) => sentence.text).join("；")}。`
+              : `尚未核准句子。請先產生 ${targetGeneratedSentenceCount} 個候選句供教師審核；教師核准句子前，不要製作正式圖片或音訊素材。`,
+            `句長目標：每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字。`,
+            `優先使用最近五課複習字：${model.recentPool.join(" ")}。`,
+            `整課句子中，最近三課新字至少各出現一次：${model.requiredRecentChars.join(" ")}。`,
+            "只能使用已學字加上本課新字。",
+            hasApprovedSentences
+              ? "撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。"
+              : "草擬候選句時，句子要具體、容易配圖、符合臺灣華語自然語感，並適合幼兒。",
+          ]
+            .filter(Boolean)
+            .join(" "),
+          approvedSentences: finalSentences,
+        };
       }
 
       function updateOutput(model) {
@@ -2222,16 +2306,121 @@
         }
       }
 
+      function loadAiSettings() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(aiSettingsStorageKey) || "{}");
+          state.aiSettings = {
+            endpoint: String(saved.endpoint || "").trim(),
+            token: String(saved.token || ""),
+          };
+        } catch {
+          state.aiSettings = { endpoint: "", token: "" };
+        }
+      }
+
+      function saveAiSettings() {
+        state.aiSettings = {
+          endpoint: $("aiEndpoint").value.trim().replace(/\/+$/, ""),
+          token: $("aiToken").value,
+        };
+        localStorage.setItem(aiSettingsStorageKey, JSON.stringify(state.aiSettings));
+        renderAiSettingsForm();
+      }
+
+      function aiServiceUrl() {
+        const endpoint = state.aiSettings.endpoint.replace(/\/+$/, "");
+        return endpoint.endsWith("/generate-sentences") ? endpoint : `${endpoint}/generate-sentences`;
+      }
+
+      function normalizeAiSentenceCandidates(choice, allowedChars, items) {
+        const targetChar = choice.newChars[0];
+        const seen = new Set();
+        const pool = [];
+        for (const item of items || []) {
+          const text = String(item?.text || "").trim();
+          const chars = hanChars(text);
+          if (!chars.includes(targetChar)) continue;
+          if (!chars.every((char) => allowedChars.includes(char))) continue;
+          if (chars.length < sentenceLengthRange.min || chars.length > sentenceLengthRange.max) continue;
+          addSentenceCandidate(
+            pool,
+            seen,
+            text,
+            choice,
+            allowedChars,
+            String(item?.reason || "AI 生成後通過 Planner 規則檢查。"),
+            String(item?.focusChar || targetChar),
+          );
+        }
+        return pool.slice(0, targetGeneratedSentenceCount);
+      }
+
+      async function generateAiCandidates(choiceId) {
+        const model = currentModel();
+        const choice = choiceById(choiceId);
+        if (!choice) return;
+        if (!state.aiSettings.endpoint) {
+          $("statusLine").textContent = "請先在 AI 句子服務填入 Cloudflare Worker URL。";
+          $("aiEndpoint").focus();
+          return;
+        }
+        if (!state.aiSettings.token) {
+          $("statusLine").textContent = "請先在 AI 句子服務填入老師 token。";
+          $("aiToken").focus();
+          return;
+        }
+
+        state.aiGeneratingChoiceId = choiceId;
+        render(model);
+        $("statusLine").textContent = `正在請 AI 替「${choice.newChars.join("")}」產生候選句。`;
+
+        try {
+          const lessonRequest = buildLessonRequest(model, choice, []);
+          const response = await fetch(aiServiceUrl(), {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${state.aiSettings.token}`,
+            },
+            body: JSON.stringify({ lessonRequest }),
+          });
+          const payload = await response.json().catch(() => ({}));
+          if (!response.ok) {
+            throw new Error(payload.error || `AI 服務失敗：${response.status}`);
+          }
+          const allowedChars = lessonRequest.generationConstraints.allowedChars;
+          const rawCandidates = payload.sentenceCandidates || payload.candidates || [];
+          const candidates = normalizeAiSentenceCandidates(choice, allowedChars, rawCandidates);
+          if (!candidates.length) {
+            throw new Error("AI 回傳的句子沒有通過 Planner 規則檢查，請再按一次或改字。");
+          }
+          replaceManualChoiceCandidates(choice, candidates);
+          state.selectedChoiceId = choiceId;
+          state.previewChoiceId = choiceId;
+          savePlannerMemory(currentModel());
+          render(currentModel());
+          $("statusLine").textContent = `AI 已替「${choice.newChars.join("")}」產生 ${candidates.length} 句候選句，可以直接審核和修改。`;
+          scrollSelectedChoiceIntoView();
+        } catch (error) {
+          $("statusLine").textContent = `AI 生成失敗：${error.message}`;
+        } finally {
+          state.aiGeneratingChoiceId = "";
+          render(currentModel());
+        }
+      }
+
       function render(model) {
         state.recommendations = model.recommendations;
         renderSummary(model);
         renderPlanSlotPanel(model);
         renderManualChoiceForm();
+        renderAiSettingsForm();
         renderChoices(model);
         updateOutput(model);
       }
 
       async function loadData() {
+        loadAiSettings();
         const response = await fetch(new URL("planner-data.json", window.location.href), { cache: "no-store" });
         if (!response.ok) throw new Error(`讀取 planner-data.json 失敗：${response.status}`);
         state.data = await response.json();
@@ -2294,9 +2483,21 @@
           savePlannerMemory(nextModel);
           render(nextModel);
           $("statusLine").textContent = newChoice?.sentenceCandidates?.length
-            ? `已加入自選字「${char}」，並從候選池 ${newChoice.optimization?.poolSize || newChoice.sentenceCandidates.length} 句自審出 ${newChoice.sentenceCandidates.length} 句。`
-            : `已加入自選字「${char}」，但目前已學字還不足，暫時沒有可用候選句。`;
+            ? `已加入自選字「${char}」，可使用既有候選句，也可以按 AI 生成 10 句。`
+            : `已加入自選字「${char}」。請在候選字卡片按 AI 生成 10 句，或手動新增句子。`;
           scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        if (event.target.id === "saveAiSettingsBtn") {
+          saveAiSettings();
+          $("statusLine").textContent = "AI 句子服務設定已儲存在這台裝置。";
+          return;
+        }
+
+        const aiGenerateButton = event.target.closest("[data-ai-generate]");
+        if (aiGenerateButton) {
+          await generateAiCandidates(aiGenerateButton.dataset.aiGenerate);
           return;
         }
 

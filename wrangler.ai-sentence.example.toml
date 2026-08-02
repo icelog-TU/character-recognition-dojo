@@ -1,0 +1,7 @@
+name = "character-recognition-dojo-ai-sentences"
+main = "workers/ai-sentence-worker.js"
+compatibility_date = "2026-08-01"
+
+[vars]
+OPENAI_TEXT_MODEL = "gpt-5-mini"
+PLANNER_ALLOWED_ORIGINS = "https://icelog-tu.github.io"

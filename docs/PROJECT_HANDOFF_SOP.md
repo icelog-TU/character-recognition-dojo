@@ -7,6 +7,7 @@
 - `docs/CURRICULUM_SCHEMA.md`
 - `docs/AI_GENERATION_SETUP.md`
 - `docs/COLLECTION_SYSTEM.md`
+- `docs/AI_PLANNER_WORKER_SETUP.md`
 
 ## 專案定位
 
@@ -553,6 +554,7 @@ Important files:
 - `docs/CURRICULUM_PRODUCTION_SOP.md`: production workflow.
 - `docs/CURRICULUM_SCHEMA.md`: curriculum JSON shape.
 - `docs/AI_GENERATION_SETUP.md`: local OpenAI API setup.
+- `docs/AI_PLANNER_WORKER_SETUP.md`: Cloudflare Worker setup for Planner AI sentence generation. Never put `OPENAI_API_KEY` in GitHub Pages or `public/tools/lesson-planner.html`; it must stay in Worker secrets.
 
 ## Required Checks Before Push
 
