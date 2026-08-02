@@ -1,0 +1,139 @@
+{
+  "order": 31,
+  "newChars": [
+    "是"
+  ],
+  "zhuyin": {
+    "是": "ㄕˋ"
+  },
+  "title": "是",
+  "dependsOnLessons": [
+    {
+      "order": 30,
+      "lessonId": "L030",
+      "newChars": [
+        "也"
+      ],
+      "title": "也",
+      "status": "planned-not-yet-merged"
+    }
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是"
+    ],
+    "provisionalLearnedChars": [
+      "也"
+    ],
+    "preferReviewChars": [
+      "女",
+      "孩",
+      "在",
+      "看",
+      "鳥",
+      "飛",
+      "一",
+      "隻",
+      "小",
+      "的",
+      "手",
+      "指",
+      "上",
+      "大",
+      "家",
+      "你",
+      "很",
+      "高",
+      "男",
+      "人",
+      "和",
+      "門",
+      "有",
+      "前",
+      "我",
+      "後",
+      "山",
+      "水",
+      "也"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "前",
+      "後",
+      "也"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-是。 平行備課依賴：本課假設 L030 會加入 也。可以先平行草擬，但必須等依賴課程已合併到 main 並重新匯出 planner-data 後，才可以把本課合併或推送到 main。 核准句子：我是女孩，你是男孩；門前是水，門後也是水；我是小孩，你也是小孩；鳥飛很高，男人也飛很高；你在山前，我在山後。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：女 孩 在 看 鳥 飛 一 隻 小 的 手 指 上 大 家 你 很 高 男 人 和 門 有 前 我 後 山 水 也。 整課句子中，最近三課新字至少各出現一次：前 後 也。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "approvedSentences": [
+    {
+      "text": "我是女孩，你是男孩",
+      "spokenText": "我是女孩你是男孩",
+      "focusChar": "是",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "門前是水，門後也是水",
+      "spokenText": "門前是水門後也是水",
+      "focusChar": "是",
+      "reason": "教師新增句。",
+      "imageNotes": "門前門後都有湖水"
+    },
+    {
+      "text": "我是小孩，你也是小孩",
+      "spokenText": "我是小孩你也是小孩",
+      "focusChar": "是",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "鳥飛很高，男人也飛很高",
+      "spokenText": "鳥飛很高男人也飛很高",
+      "focusChar": "鳥",
+      "reason": "教師新增句。",
+      "imageNotes": "男人用滑翔翼飛"
+    },
+    {
+      "text": "你在山前，我在山後",
+      "spokenText": "你在山前我在山後",
+      "focusChar": "你",
+      "reason": "教師新增句。"
+    }
+  ]
+}

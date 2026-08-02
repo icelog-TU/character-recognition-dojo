@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 30:
+Characters taught after Lesson 31:
 
-`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也`
+`一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是`
 
 Recent review pool for the next lesson:
 
-`小 男 孩 在 看 人 飛 的 手 指 很 和 女 鳥 一 隻 門 你 上 有 前 我 大 後 山 水 也`
+`女 人 的 門 和 男 你 看 一 隻 小 鳥 飛 上 孩 手 指 有 在 前 我 大 後 山 水 也 是 很 高`
 
 ## Visual Continuity Ledger
 
@@ -76,10 +76,11 @@ Image reuse rule:
 | L028 | 前 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前 | 男孩和女孩在門前。 / 我在看門前的飛鳥 / 女孩飛在男孩前 / 男孩和女孩在看大人飛 / 女孩在看門上的鳥 | 男孩和女孩在門前我看的飛鳥大人 | Introduces `前` through in-front-of-door and in-front-of-boy scenes. Reviews recent `飛`, `男`, and `門`; all five sentence images use newly generated reviewed picture-book assets. |
 | L029 | 後 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後 | 男孩在門前，女孩在門後 / 男孩和女孩在門前。 / 女孩飛在前，男孩飛在後 / 男孩和女孩在看大人飛 / 前門有山，後門有水。 | 男孩在門前女孩後和飛大人有山水 | Introduces `後` through behind-door and behind/in-back flying scenes. Reviews recent `男`, `門`, and `前`; reuses approved L028-S01 and L028-S04 images, and creates new images for the other three sentences. |
 | L030 | 也 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也 | 我在門後，你也在門後 / 男孩在看門前的飛鳥 / 門前有男也有女 / 小鳥在飛，男人也在飛 / 人前有鳥，人後也有鳥 | 我門後你在男孩看前的飛鳥有男女小人 | Introduces `也` through shared-position and shared-action scenes. Reviews recent `門`, `前`, and `後`; all five sentence images use newly generated reviewed picture-book assets. |
+| L031 | 是 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是 | 我是女孩，你是男孩 / 門前是水，門後也是水 / 我是小孩，你也是小孩 / 鳥飛很高，男人也飛很高 / 你在山前，我在山後 | 我女孩你男門前水後也小鳥飛很高人在山 | Introduces `是` through identity and judgment sentences. Reviews recent `前`, `後`, and `也`; all five sentence images use newly generated reviewed picture-book assets. |
 
 ## Planned Lessons
 
-None yet. L030 已完成，下一課請從 planner 重新規劃。
+None yet. L031 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 
