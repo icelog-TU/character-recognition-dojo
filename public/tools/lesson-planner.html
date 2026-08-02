@@ -1743,9 +1743,14 @@
 
       function replaceManualChoiceCandidates(choice, candidates) {
         const char = choice.newChars[0];
-        state.manualChoices = state.manualChoices.map((entry) =>
-          entry.char === char ? { ...entry, sentenceCandidates: candidates } : entry,
-        );
+        const bankEntry = bankEntryForChar(char);
+        const replacement = {
+          char,
+          zhuyin: choice.zhuyin?.[char] || bankEntry?.zhuyin || "",
+          why: choice.rationale || bankEntry?.why || "教師用 AI 重新產生候選句。",
+          sentenceCandidates: candidates,
+        };
+        state.manualChoices = [replacement, ...state.manualChoices.filter((entry) => entry.char !== char)];
         state.selectedIndexes.set(choice.choiceId, new Set());
         state.candidateEditingKeys = new Set([...state.candidateEditingKeys].filter((key) => !key.startsWith(`${choice.choiceId}:`)));
         state.candidateDraftsBySentence = new Map([...state.candidateDraftsBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
