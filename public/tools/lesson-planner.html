@@ -753,6 +753,7 @@
       </div>
       <div class="header-actions">
         <button class="btn secondary" id="refreshBtn" type="button">重新整理推薦</button>
+        <button class="btn secondary" id="aiRecommendBtn" type="button">AI 重新推薦新字</button>
         <a class="btn secondary" href="../">回幼兒 APP</a>
       </div>
     </header>
@@ -839,6 +840,7 @@
         manualDraft: { char: "", zhuyin: "", why: "" },
         aiSettings: { endpoint: "", token: "" },
         aiGeneratingChoiceId: "",
+        aiRecommending: false,
       };
 
       const sentenceLengthRange = { min: 4, max: 12 };
@@ -1746,14 +1748,35 @@
         return optimizeChoiceSentences(choice, model).candidates.slice(0, targetGeneratedSentenceCount);
       }
 
+      function recentReviewSentenceCandidates(choice, existingCandidates, limit) {
+        if (limit <= 0) return [];
+        const model = currentModel();
+        const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
+        const seen = new Set(existingCandidates.map((sentence) => sentence.text));
+        const candidates = [];
+        for (const sentence of lastLessons(model.lessons, 5).flatMap((lesson) => lesson.sentences || [])) {
+          if (seen.has(sentence.text) || !sentenceAllowed(sentence.text, allowedChars)) continue;
+          seen.add(sentence.text);
+          candidates.push({
+            text: sentence.text,
+            spokenText: normalizeSpokenText(sentence.spokenText || sentence.text),
+            focusChar: resolveFocusChar(sentence.text, "", choice),
+            reason: "直接取自近五課已核准句，作為複習候選。",
+          });
+          if (candidates.length >= limit) break;
+        }
+        return candidates;
+      }
+
       function replaceManualChoiceCandidates(choice, candidates) {
         const char = choice.newChars[0];
         const bankEntry = bankEntryForChar(char);
+        const reviewFill = recentReviewSentenceCandidates(choice, candidates, targetGeneratedSentenceCount - candidates.length);
         const replacement = {
           char,
           zhuyin: choice.zhuyin?.[char] || bankEntry?.zhuyin || "",
           why: choice.rationale || bankEntry?.why || "教師用 AI 重新產生候選句。",
-          sentenceCandidates: candidates,
+          sentenceCandidates: [...candidates, ...reviewFill],
         };
         state.manualChoices = [replacement, ...state.manualChoices.filter((entry) => entry.char !== char)];
         state.selectedIndexes.set(choice.choiceId, new Set());
@@ -2075,6 +2098,7 @@
             char: hanChars(String(item?.char || "")).join("").slice(0, 1),
             zhuyin: String(item?.zhuyin || "").trim(),
             why: String(item?.why || "").trim(),
+            source: String(item?.source || ""),
             sentenceCandidates: (item?.sentenceCandidates || []).map((sentence) => ({
               text: String(sentence?.text || ""),
               spokenText: normalizeSpokenText(sentence?.spokenText || sentence?.text || ""),
@@ -2342,6 +2366,13 @@
         return endpoint.endsWith("/generate-sentences") ? endpoint : `${endpoint}/generate-sentences`;
       }
 
+      function aiRecommendationUrl() {
+        const endpoint = state.aiSettings.endpoint.replace(/\/+$/, "");
+        if (endpoint.endsWith("/generate-sentences")) return endpoint.replace(/\/generate-sentences$/, "/recommend-characters");
+        if (endpoint.endsWith("/recommend-characters")) return endpoint;
+        return `${endpoint}/recommend-characters`;
+      }
+
       function normalizeAiSentenceCandidates(choice, allowedChars, items) {
         const targetChar = choice.newChars[0];
         const seen = new Set();
@@ -2417,6 +2448,97 @@
         } finally {
           state.aiGeneratingChoiceId = "";
           render(currentModel());
+        }
+      }
+
+      function buildRecommendationContext(model) {
+        const previousSentences = lastLessons(model.lessons, 5).flatMap((lesson) =>
+          (lesson.sentences || []).map((sentence) => sentence.text),
+        );
+        return {
+          order: model.order,
+          lessonId: model.lessonId,
+          learnedChars: model.learnedChars,
+          recentPool: model.recentPool,
+          reviewCountChars: model.reviewCountChars,
+          requiredRecentChars: model.requiredRecentChars,
+          previousSentences,
+          nextCharacterBank: state.data?.nextCharacterBank || [],
+          count: 5,
+          targetSentenceCount: targetGeneratedSentenceCount,
+          sentenceHanCharLength: sentenceLengthRange,
+        };
+      }
+
+      function applyAiRecommendations(items) {
+        const recommendations = (items || [])
+          .map((item) => {
+            const char = hanChars(item?.char).join("").slice(0, 1);
+            if (!char) return null;
+            return {
+              char,
+              zhuyin: String(item?.zhuyin || zhuyinForChar(char) || ""),
+              why: String(item?.why || "AI 根據目前已學字重新推薦。"),
+              source: "ai-recommendation",
+              sentenceCandidates: (item?.sentenceCandidates || []).map((sentence) => ({
+                text: String(sentence?.text || ""),
+                spokenText: normalizeSpokenText(sentence?.spokenText || sentence?.text || ""),
+                focusChar: String(sentence?.focusChar || char),
+                reason: String(sentence?.reason || "AI 推薦字候選句。"),
+              })),
+            };
+          })
+          .filter(Boolean);
+        const recommendedChars = new Set(recommendations.map((item) => item.char));
+        state.manualChoices = [
+          ...recommendations,
+          ...state.manualChoices.filter((entry) => entry.source !== "ai-recommendation" && !recommendedChars.has(entry.char)),
+        ];
+        state.selectedChoiceId = "";
+        state.previewChoiceId = recommendations[0] ? `choice-${recommendations[0].char}` : "";
+      }
+
+      async function recommendAiCharacters() {
+        const model = currentModel();
+        if (!state.aiSettings.endpoint) {
+          $("statusLine").textContent = "請先在 AI 句子服務填入 Cloudflare Worker URL。";
+          $("aiEndpoint").focus();
+          return;
+        }
+        if (!state.aiSettings.token) {
+          $("statusLine").textContent = "請先在 AI 句子服務填入老師 token。";
+          $("aiToken").focus();
+          return;
+        }
+        state.aiRecommending = true;
+        $("aiRecommendBtn").disabled = true;
+        $("aiRecommendBtn").textContent = "AI 推薦中";
+        $("statusLine").textContent = `正在請 AI 根據最新 ${model.learnedChars.length} 個已學字重新推薦新字。`;
+        try {
+          const response = await fetch(aiRecommendationUrl(), {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${state.aiSettings.token}`,
+            },
+            body: JSON.stringify({ plannerContext: buildRecommendationContext(model) }),
+          });
+          const payload = await response.json().catch(() => ({}));
+          if (!response.ok) {
+            throw new Error(payload.error || `AI 推薦失敗：${response.status}`);
+          }
+          applyAiRecommendations(payload.recommendations || []);
+          const nextModel = currentModel();
+          savePlannerMemory(nextModel);
+          render(nextModel);
+          $("statusLine").textContent = `AI 已根據最新課程推薦 ${payload.recommendations?.length || 0} 個新字；可展開候選句審核。`;
+          scrollSelectedChoiceIntoView();
+        } catch (error) {
+          $("statusLine").textContent = `AI 推薦失敗：${error.message}`;
+        } finally {
+          state.aiRecommending = false;
+          $("aiRecommendBtn").disabled = false;
+          $("aiRecommendBtn").textContent = "AI 重新推薦新字";
         }
       }
 
@@ -2503,6 +2625,11 @@
         if (event.target.id === "saveAiSettingsBtn") {
           saveAiSettings();
           $("statusLine").textContent = "AI 句子服務設定已儲存在這台裝置。";
+          return;
+        }
+
+        if (event.target.id === "aiRecommendBtn") {
+          await recommendAiCharacters();
           return;
         }
 

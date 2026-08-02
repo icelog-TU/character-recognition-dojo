@@ -75,8 +75,43 @@ function parseJsonText(text) {
   }
 }
 
+async function callOpenAIJson(env, systemPrompt, userPrompt) {
+  const model = env.OPENAI_TEXT_MODEL || DEFAULT_MODEL;
+  const response = await fetch("https://api.openai.com/v1/responses", {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${env.OPENAI_API_KEY}`,
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      model,
+      input: [
+        {
+          role: "system",
+          content: systemPrompt,
+        },
+        {
+          role: "user",
+          content: userPrompt,
+        },
+      ],
+    }),
+  });
+  if (!response.ok) {
+    throw new Error(`OpenAI API failed: ${response.status} ${response.statusText} ${await response.text()}`);
+  }
+  return {
+    model,
+    json: parseJsonText(extractOutputText(await response.json())),
+  };
+}
+
 function targetSpecificBanReason(text, targetChar) {
   const compact = normalizeSpokenText(text);
+  const chars = hanChars(compact);
+  const targetHits = chars.filter((char) => char === targetChar).length;
+  if (targetHits > 2) return `單句「${targetChar}」重複太多次`;
+  if (/(\p{Script=Han}{2,4})\1/u.test(compact)) return "句子有重複片段，像押字而不是自然句";
   const bannedByChar = {
     不: [
       "很大的不",
@@ -194,33 +229,13 @@ ${rejectedLines}
 }
 
 async function callOpenAI(env, request, previousRejections) {
-  const model = env.OPENAI_TEXT_MODEL || DEFAULT_MODEL;
-  const response = await fetch("https://api.openai.com/v1/responses", {
-    method: "POST",
-    headers: {
-      authorization: `Bearer ${env.OPENAI_API_KEY}`,
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      model,
-      input: [
-        {
-          role: "system",
-          content:
-            "You write Traditional Chinese sentence candidates for a Taiwan preschool character-recognition curriculum. Return valid JSON only.",
-        },
-        {
-          role: "user",
-          content: buildPrompt(request, previousRejections),
-        },
-      ],
-    }),
-  });
-  if (!response.ok) {
-    throw new Error(`OpenAI API failed: ${response.status} ${response.statusText} ${await response.text()}`);
-  }
-  const data = await response.json();
-  return parseJsonText(extractOutputText(data));
+  return (
+    await callOpenAIJson(
+      env,
+      "You write Traditional Chinese sentence candidates for a Taiwan preschool character-recognition curriculum. Return valid JSON only.",
+      buildPrompt(request, previousRejections),
+    )
+  ).json;
 }
 
 function normalizeLessonRequest(raw) {
@@ -285,13 +300,157 @@ async function generateSentences(request, env) {
   );
 }
 
+function normalizeRecommendationRequest(raw) {
+  const request = raw?.plannerContext || raw;
+  const learnedChars = unique((request.learnedChars || []).map(String));
+  if (!learnedChars.length) throw new Error("plannerContext.learnedChars is required.");
+  const bank = (request.nextCharacterBank || [])
+    .map((entry) => ({
+      char: hanChars(entry?.char).join("").slice(0, 1),
+      zhuyin: String(entry?.zhuyin || ""),
+      why: String(entry?.why || ""),
+      priority: Number(entry?.priority || 1000),
+      requires: unique((entry?.requires || []).map(String)),
+      sentenceCandidates: entry?.sentenceCandidates || [],
+    }))
+    .filter((entry) => entry.char && !learnedChars.includes(entry.char));
+  return {
+    order: Number(request.order || 0),
+    lessonId: String(request.lessonId || ""),
+    learnedChars,
+    recentPool: unique((request.recentPool || []).map(String)),
+    reviewCountChars: unique((request.reviewCountChars || []).map(String)),
+    requiredRecentChars: unique((request.requiredRecentChars || []).map(String)),
+    previousSentences: (request.previousSentences || []).map(String).slice(-30),
+    nextCharacterBank: bank,
+    count: Math.max(1, Math.min(8, Number(request.count || 5))),
+    targetSentenceCount: Math.max(5, Math.min(12, Number(request.targetSentenceCount || 10))),
+    sentenceHanCharLength: {
+      min: Number(request.sentenceHanCharLength?.min || 4),
+      max: Number(request.sentenceHanCharLength?.max || 12),
+    },
+  };
+}
+
+function buildRecommendationPrompt(context) {
+  const eligibleBank = context.nextCharacterBank
+    .filter((entry) => entry.requires.every((char) => context.learnedChars.includes(char)))
+    .sort((a, b) => a.priority - b.priority)
+    .slice(0, 40);
+  const bankLines = eligibleBank
+    .map(
+      (entry) =>
+        `- ${entry.char} (${entry.zhuyin || "注音待補"}): ${entry.why || "候選字庫字"}；priority=${entry.priority}`,
+    )
+    .join("\n");
+  return `你是台灣幼兒認字 App 的課程規劃老師。請根據最新已學字，重新推薦第 ${context.order} 課可以教的新字。
+
+已學字：
+${context.learnedChars.join(" ")}
+
+近五課優先複習字：
+${context.recentPool.join(" ")}
+
+最近五課新字：
+${context.reviewCountChars.join(" ")}
+
+整課至少要複習到的近三課新字：
+${context.requiredRecentChars.join(" ")}
+
+近期句子參考：
+${context.previousSentences.map((sentence) => `- ${sentence}`).join("\n")}
+
+可優先考慮的候選字庫：
+${bankLines || "- 候選字庫不足時，可以自己推薦一個常用繁體字，但必須很適合下一課。"}
+
+推薦規則：
+- 推薦 ${context.count} 個候選新字。
+- 不可推薦已學字。
+- 每個推薦字要有台灣注音。
+- 推薦理由要說明它為什麼適合下一課、能接哪些已學字、是否容易配圖。
+- 每個推薦字請給 ${context.targetSentenceCount} 句候選句。
+- 每句只能使用「已學字 + 該推薦新字」。
+- 每句忽略標點後必須是 ${context.sentenceHanCharLength.min}-${context.sentenceHanCharLength.max} 個漢字。
+- 每個推薦字的大多數候選句都要包含該推薦新字；整組至少 8 句包含新字。
+- 不要為了湊次數重複同一片語。每句新字通常只出現 1 次，最多 2 次。
+- 整組候選句要自然、具體、容易配圖、適合幼兒，不要塞字。
+- 可以保留 1-2 句近五課複習句，但大部分句子要能練到推薦新字。
+- spokenText 必須移除標點。
+
+只回傳 JSON，不要 markdown：
+{
+  "recommendations": [
+    {
+      "char": "...",
+      "zhuyin": "...",
+      "why": "...",
+      "sentenceCandidates": [
+        {
+          "text": "...",
+          "spokenText": "...",
+          "focusChar": "...",
+          "reason": "..."
+        }
+      ]
+    }
+  ]
+}`;
+}
+
+function validateRecommendationItem(item, context) {
+  const char = hanChars(item?.char).join("").slice(0, 1);
+  if (!char || context.learnedChars.includes(char)) return null;
+  const request = {
+    newChars: [char],
+    generationConstraints: {
+      sentenceHanCharLength: context.sentenceHanCharLength,
+      allowedChars: unique([...context.learnedChars, char]),
+    },
+  };
+  const { valid } = validateCandidates(item?.sentenceCandidates || [], request);
+  const minimumTargetBearingSentences = Math.min(
+    context.targetSentenceCount,
+    Math.max(5, context.targetSentenceCount - REVIEW_SENTENCE_BUFFER),
+  );
+  if (valid.length < minimumTargetBearingSentences) return null;
+  const bankEntry = context.nextCharacterBank.find((entry) => entry.char === char);
+  return {
+    char,
+    zhuyin: String(item?.zhuyin || bankEntry?.zhuyin || ""),
+    why: String(item?.why || bankEntry?.why || "AI 根據目前課程重新推薦。"),
+    sentenceCandidates: valid.slice(0, context.targetSentenceCount),
+  };
+}
+
+async function recommendCharacters(context, env) {
+  const { model, json } = await callOpenAIJson(
+    env,
+    "You recommend Traditional Chinese curriculum characters and draft valid sentence candidates. Return valid JSON only.",
+    buildRecommendationPrompt(context),
+  );
+  const rawItems = Array.isArray(json) ? json : json.recommendations || json.choices || [];
+  const seen = new Set();
+  const recommendations = [];
+  for (const item of rawItems) {
+    const normalized = validateRecommendationItem(item, context);
+    if (!normalized || seen.has(normalized.char)) continue;
+    seen.add(normalized.char);
+    recommendations.push(normalized);
+    if (recommendations.length >= context.count) break;
+  }
+  if (!recommendations.length) {
+    throw new Error("AI did not return any recommendation with enough valid sentence candidates.");
+  }
+  return { recommendations, model };
+}
+
 export default {
   async fetch(request, env) {
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: corsHeaders(request, env) });
     }
     const url = new URL(request.url);
-    if (url.pathname !== "/generate-sentences") {
+    if (url.pathname !== "/generate-sentences" && url.pathname !== "/recommend-characters") {
       return jsonResponse(request, env, { error: "Not found." }, 404);
     }
     if (request.method !== "POST") {
@@ -305,6 +464,11 @@ export default {
     }
     try {
       const raw = await request.json();
+      if (url.pathname === "/recommend-characters") {
+        const plannerContext = normalizeRecommendationRequest(raw);
+        const result = await recommendCharacters(plannerContext, env);
+        return jsonResponse(request, env, result);
+      }
       const lessonRequest = normalizeLessonRequest(raw);
       const result = await generateSentences(lessonRequest, env);
       return jsonResponse(request, env, result);

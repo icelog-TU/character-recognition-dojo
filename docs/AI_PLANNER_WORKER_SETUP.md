@@ -38,8 +38,9 @@ In `public/tools/lesson-planner.html` on the live site:
 1. Paste the Worker URL into `AI 句子服務`.
 2. Paste the same `TEACHER_TOKEN`.
 3. Press `儲存 AI 設定`.
-4. Add a self-selected character.
-5. Press `AI 生成 10 句` on that character card.
+4. Press `AI 重新推薦新字` to ask AI for next-character recommendations from the latest learned characters.
+5. Add a self-selected character when needed.
+6. Press `AI 生成 10 句` or `AI 再生成 10 句` on a character card.
 
 The Planner stores only the Worker URL and teacher token in browser localStorage. The OpenAI key stays in Cloudflare Worker secrets.
 
@@ -63,5 +64,11 @@ The Worker rejects AI candidates that:
 - use Han characters outside `allowedChars`
 - are shorter or longer than the lesson length range
 - misuse known function characters such as `不`, `也`, or `是` in blocked mechanical patterns
+- repeat the target character or the same phrase unnaturally, such as `我來我來我來`
 
 The Planner validates the returned sentences again before showing them.
+
+## Endpoints
+
+- `POST /recommend-characters`: recommends next characters from the latest planner context and returns sentence candidates.
+- `POST /generate-sentences`: regenerates sentence candidates for one chosen character.
