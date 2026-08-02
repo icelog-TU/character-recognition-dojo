@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-02T07:46:24.443Z",
+  "exportedAt": "2026-08-02T08:00:00.814Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -1325,10 +1325,10 @@
           "id": "L007-G02",
           "type": "teach-character",
           "sentenceId": "L007-S03",
-          "targetChar": "手",
+          "targetChar": "我",
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
-            2
+            0
           ]
         },
         {
@@ -2500,26 +2500,26 @@
         {
           "id": "L010-G03",
           "type": "missing-character",
-          "sentenceId": "L010-S03",
-          "targetChar": "手",
-          "prompt": "字寶寶不見了，把「手」找回來。",
+          "sentenceId": "L010-S04",
+          "targetChar": "上",
+          "prompt": "字寶寶不見了，把「上」找回來。",
           "missingIndexes": [
-            2
+            3
           ],
           "options": [
             {
+              "id": "up",
+              "text": "上",
+              "correct": true
+            },
+            {
               "id": "hand",
               "text": "手",
-              "correct": true
+              "correct": false
             },
             {
               "id": "mountain",
               "text": "山",
-              "correct": false
-            },
-            {
-              "id": "up",
-              "text": "上",
               "correct": false
             }
           ]
@@ -2878,9 +2878,9 @@
         {
           "id": "L011-G01",
           "type": "find-character",
-          "sentenceId": "L011-S01",
-          "targetChar": "上",
-          "prompt": "找到「上」。"
+          "sentenceId": "L011-S02",
+          "targetChar": "下",
+          "prompt": "找到「下」。"
         },
         {
           "id": "L011-G02",
@@ -13789,6 +13789,671 @@
               "text": "你是男孩，不是女孩",
               "correct": false,
               "audioSrc": "/assets/lessons/L036/audio/L036-G05-wrong2.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L037",
+      "order": 37,
+      "title": "裡",
+      "newChars": [
+        "裡"
+      ],
+      "zhuyin": {
+        "裡": "ㄌㄧˇ"
+      },
+      "charAudio": {
+        "裡": "/assets/lessons/L037/audio/char-u88e1.m4a"
+      },
+      "originHint": "用「裡」練習家裡、手裡的空間概念，並複習走、他、沒。",
+      "sentences": [
+        {
+          "id": "L037-S01",
+          "text": "他走到家裡，沒看到人",
+          "spokenText": "他走到家裡沒看到人",
+          "focusChar": "裡",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。固定「他」小男孩：同樣是幼兒到小學低年級年紀，短短有精神的微刺深黑髮，活潑運動型，橘色素面運動 T 恤、深藍短褲、紅色運動鞋、綠色手環，不背背包，表情開朗。固定「他家」外觀與室內：奶油色小屋，藍灰色屋頂，圓拱橘色前門，門邊有球或小運動水壺，低矮白色籬笆與乾淨小花園；室內有簡單木地板、收納櫃、運動用品或水壺，整體明亮乾淨，和「我家」「你家」不同。畫面在「他家」室內，固定「他」小男孩剛走進家裡，站在客廳或玄關附近四處張望，家裡安靜、看不到任何人。重點是「走到家裡」與「沒看到人」：要清楚是室內空間，不要畫其他人物，不要出現文字。",
+          "imageSrc": "/assets/lessons/L037/images/L037-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L037/audio/L037-S01.m4a",
+            "duration": 0,
+            "durationMs": 3637,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 560
+              },
+              {
+                "charIndex": 2,
+                "startMs": 560,
+                "endMs": 820
+              },
+              {
+                "charIndex": 3,
+                "startMs": 820,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1700,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2380,
+                "endMs": 2700
+              }
+            ]
+          },
+          "chars": [
+            {
+              "char": "他",
+              "zhuyin": "ㄊㄚ"
+            },
+            {
+              "char": "走",
+              "zhuyin": "ㄗㄡˇ"
+            },
+            {
+              "char": "到",
+              "zhuyin": "ㄉㄠˋ"
+            },
+            {
+              "char": "家",
+              "zhuyin": "ㄐㄧㄚ"
+            },
+            {
+              "char": "裡",
+              "zhuyin": "ㄌㄧˇ"
+            },
+            {
+              "char": "沒",
+              "zhuyin": "ㄇㄟˊ"
+            },
+            {
+              "char": "看",
+              "zhuyin": "ㄎㄢˋ"
+            },
+            {
+              "char": "到",
+              "zhuyin": "ㄉㄠˋ"
+            },
+            {
+              "char": "人",
+              "zhuyin": "ㄖㄣˊ"
+            }
+          ],
+          "displayLines": [
+            "他走到家裡，",
+            "沒看到人"
+          ],
+          "charTimings": []
+        },
+        {
+          "id": "L037-S02",
+          "text": "他手裡有小山，沒有小鳥",
+          "spokenText": "他手裡有小山沒有小鳥",
+          "focusChar": "裡",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。固定「他」小男孩：同樣是幼兒到小學低年級年紀，短短有精神的微刺深黑髮，活潑運動型，橘色素面運動 T 恤、深藍短褲、紅色運動鞋、綠色手環，不背背包，表情開朗。固定「他」小男孩在桌邊，雙手自然伸出，手裡放著一個樂高積木風格的玩具小山，玩具山小小的、顏色像積木，有綠色山坡與白色山頂。畫面中不要出現任何鳥，也不要出現文字。重點是「手裡有小山，沒有小鳥」。",
+          "imageSrc": "/assets/lessons/L037/images/L037-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L037/audio/L037-S02.m4a",
+            "duration": 0,
+            "durationMs": 4948,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1680,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2640,
+                "endMs": 2930
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2930,
+                "endMs": 3220
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3220,
+                "endMs": 3780
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3780,
+                "endMs": 3920
+              }
+            ]
+          },
+          "chars": [
+            {
+              "char": "他",
+              "zhuyin": "ㄊㄚ"
+            },
+            {
+              "char": "手",
+              "zhuyin": "ㄕㄡˇ"
+            },
+            {
+              "char": "裡",
+              "zhuyin": "ㄌㄧˇ"
+            },
+            {
+              "char": "有",
+              "zhuyin": "ㄧㄡˇ"
+            },
+            {
+              "char": "小",
+              "zhuyin": "ㄒㄧㄠˇ"
+            },
+            {
+              "char": "山",
+              "zhuyin": "ㄕㄢ"
+            },
+            {
+              "char": "沒",
+              "zhuyin": "ㄇㄟˊ"
+            },
+            {
+              "char": "有",
+              "zhuyin": "ㄧㄡˇ"
+            },
+            {
+              "char": "小",
+              "zhuyin": "ㄒㄧㄠˇ"
+            },
+            {
+              "char": "鳥",
+              "zhuyin": "ㄋㄧㄠˇ"
+            }
+          ],
+          "displayLines": [
+            "他手裡有",
+            "小山，",
+            "沒有小鳥"
+          ],
+          "charTimings": []
+        },
+        {
+          "id": "L037-S03",
+          "text": "他不在家裡，沒人看到他",
+          "spokenText": "他不在家裡沒人看到他",
+          "focusChar": "裡",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。固定「他」小男孩：同樣是幼兒到小學低年級年紀，短短有精神的微刺深黑髮，活潑運動型，橘色素面運動 T 恤、深藍短褲、紅色運動鞋、綠色手環，不背背包，表情開朗。固定「他家」外觀與室內：奶油色小屋，藍灰色屋頂，圓拱橘色前門，門邊有球或小運動水壺，低矮白色籬笆與乾淨小花園；室內有簡單木地板、收納櫃、運動用品或水壺，整體明亮乾淨，和「我家」「你家」不同。畫面在「他家」室內，但固定「他」小男孩不在畫面裡。家裡有家人或小朋友在客廳、門邊或桌邊四處找他，表情像在尋找人，沒有任何人看到他。不要把固定「他」小男孩畫出來，不要出現文字。",
+          "imageSrc": "/assets/lessons/L037/images/L037-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L037/audio/L037-S03.m4a",
+            "duration": 0,
+            "durationMs": 3467,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 560
+              },
+              {
+                "charIndex": 2,
+                "startMs": 560,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1100,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1700,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2220,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2400,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2580,
+                "endMs": 2920
+              }
+            ]
+          },
+          "chars": [
+            {
+              "char": "他",
+              "zhuyin": "ㄊㄚ"
+            },
+            {
+              "char": "不",
+              "zhuyin": "ㄅㄨˋ"
+            },
+            {
+              "char": "在",
+              "zhuyin": "ㄗㄞˋ"
+            },
+            {
+              "char": "家",
+              "zhuyin": "ㄐㄧㄚ"
+            },
+            {
+              "char": "裡",
+              "zhuyin": "ㄌㄧˇ"
+            },
+            {
+              "char": "沒",
+              "zhuyin": "ㄇㄟˊ"
+            },
+            {
+              "char": "人",
+              "zhuyin": "ㄖㄣˊ"
+            },
+            {
+              "char": "看",
+              "zhuyin": "ㄎㄢˋ"
+            },
+            {
+              "char": "到",
+              "zhuyin": "ㄉㄠˋ"
+            },
+            {
+              "char": "他",
+              "zhuyin": "ㄊㄚ"
+            }
+          ],
+          "displayLines": [
+            "他不在家裡，",
+            "沒人看到他"
+          ],
+          "charTimings": []
+        },
+        {
+          "id": "L037-S04",
+          "text": "他看到我，我看不到他",
+          "spokenText": "他看到我我看不到他",
+          "focusChar": "他",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。固定「他」小男孩：同樣是幼兒到小學低年級年紀，短短有精神的微刺深黑髮，活潑運動型，橘色素面運動 T 恤、深藍短褲、紅色運動鞋、綠色手環，不背背包，表情開朗。固定小女孩：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋。沿用 L035-S02 躲貓貓場景：固定「他」小男孩躲在某個地方看得到固定小女孩，固定小女孩正在找人但看不到他。不要出現文字。",
+          "imageSrc": "/assets/lessons/L035/images/L035-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L037/audio/L037-S04.m4a",
+            "duration": 0,
+            "durationMs": 3947,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2040,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2320,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2700,
+                "endMs": 2860
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2860,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3020,
+                "endMs": 3420
+              }
+            ]
+          },
+          "chars": [
+            {
+              "char": "他",
+              "zhuyin": "ㄊㄚ"
+            },
+            {
+              "char": "看",
+              "zhuyin": "ㄎㄢˋ"
+            },
+            {
+              "char": "到",
+              "zhuyin": "ㄉㄠˋ"
+            },
+            {
+              "char": "我",
+              "zhuyin": "ㄨㄛˇ"
+            },
+            {
+              "char": "我",
+              "zhuyin": "ㄨㄛˇ"
+            },
+            {
+              "char": "看",
+              "zhuyin": "ㄎㄢˋ"
+            },
+            {
+              "char": "不",
+              "zhuyin": "ㄅㄨˋ"
+            },
+            {
+              "char": "到",
+              "zhuyin": "ㄉㄠˋ"
+            },
+            {
+              "char": "他",
+              "zhuyin": "ㄊㄚ"
+            }
+          ],
+          "displayLines": [
+            "他看到我，",
+            "我看不到他"
+          ],
+          "charTimings": []
+        },
+        {
+          "id": "L037-S05",
+          "text": "山很高，我走不到山上",
+          "spokenText": "山很高我走不到山上",
+          "focusChar": "山",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。固定小女孩：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋。畫面是在高高的山腳下，山很高、路很長，固定小女孩站在山下的小路起點，仰頭看著高山，表情有點努力但還走不到山上。山路要安全、有木欄或平緩起點，不要危險峭壁；山頂遠在上方，讓人明白還沒有到山上。不要出現其他人物或文字。",
+          "imageSrc": "/assets/lessons/L037/images/L037-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L037/audio/L037-S05.m4a",
+            "duration": 0,
+            "durationMs": 4992,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 540
+              },
+              {
+                "charIndex": 1,
+                "startMs": 540,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1240,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 3,
+                "startMs": 2120,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2420,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2660,
+                "endMs": 2850
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2850,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3040,
+                "endMs": 3460
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3460,
+                "endMs": 3740
+              }
+            ]
+          },
+          "chars": [
+            {
+              "char": "山",
+              "zhuyin": "ㄕㄢ"
+            },
+            {
+              "char": "很",
+              "zhuyin": "ㄏㄣˇ"
+            },
+            {
+              "char": "高",
+              "zhuyin": "ㄍㄠ"
+            },
+            {
+              "char": "我",
+              "zhuyin": "ㄨㄛˇ"
+            },
+            {
+              "char": "走",
+              "zhuyin": "ㄗㄡˇ"
+            },
+            {
+              "char": "不",
+              "zhuyin": "ㄅㄨˋ"
+            },
+            {
+              "char": "到",
+              "zhuyin": "ㄉㄠˋ"
+            },
+            {
+              "char": "山",
+              "zhuyin": "ㄕㄢ"
+            },
+            {
+              "char": "上",
+              "zhuyin": "ㄕㄤˋ"
+            }
+          ],
+          "displayLines": [
+            "山很高，",
+            "我走不到",
+            "山上"
+          ],
+          "charTimings": []
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L037-G01",
+          "type": "find-character",
+          "sentenceId": "L037-S01",
+          "targetChar": "裡",
+          "prompt": "找到「裡」。"
+        },
+        {
+          "id": "L037-G02",
+          "type": "teach-character",
+          "sentenceId": "L037-S02",
+          "targetChar": "裡",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            2
+          ]
+        },
+        {
+          "id": "L037-G03",
+          "type": "missing-character",
+          "sentenceId": "L037-S03",
+          "targetChar": "裡",
+          "prompt": "字寶寶不見了，把「裡」找回來。",
+          "missingIndexes": [
+            4
+          ],
+          "options": [
+            {
+              "id": "inside",
+              "text": "裡",
+              "correct": true
+            },
+            {
+              "id": "above",
+              "text": "上",
+              "correct": false
+            },
+            {
+              "id": "behind",
+              "text": "後",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L037-G04",
+          "type": "partial-order",
+          "sentenceId": "L037-S05",
+          "targetChar": "走",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "mountain",
+              "text": "山",
+              "correct": true
+            },
+            {
+              "id": "very",
+              "text": "很",
+              "correct": true
+            },
+            {
+              "id": "high",
+              "text": "高",
+              "correct": true
+            },
+            {
+              "id": "me",
+              "text": "我",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L037-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L037-S04",
+          "targetChar": "他",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "他看到我，我看不到他",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L037/audio/L037-S04.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "他看到你，我看不到他",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L037/audio/L037-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "他看到我，我看不到你",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L037/audio/L037-G05-wrong2.m4a"
             }
           ]
         }
