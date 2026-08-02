@@ -26,7 +26,7 @@
 - L045 introduces `可` read `ㄎㄜˇ`.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
 - L006-L045 include Stage 4 fixed sentence games after picture-supported listening.
-- L045 was produced in an environment without `OPENAI_API_KEY`; its audio uses the local Windows `Microsoft Hanhan Desktop` zh-TW voice and `assets:align` fallback timing. It passes validation, but if strict AI-audio review is required later, regenerate L045 audio and rerun `assets:align:ai`.
+- L045 audio has been regenerated with OpenAI TTS and aligned with `assets:align:ai`.
 
 ## Multi-Codex Collaboration SOP
 
@@ -112,7 +112,9 @@ npm run build
 
 `npm run validate:production` is not just an existence check. It also measures new-character audio volume and rejects near-silent `charAudio` files. If a mobile tester reports "the character has no sound" but the file exists, inspect the file's `max_volume` before changing UI playback logic.
 
-If `OPENAI_API_KEY` is unavailable, do not describe generated lesson audio or timings as AI-reviewed. A local OS TTS voice plus `npm run assets:align` may be used only as an explicit fallback, and the final handoff must name the affected lesson(s) so they can be regenerated with AI audio and `assets:align:ai` later if needed.
+Do not check only `process.env.OPENAI_API_KEY` and conclude the key is missing. The repo's AI scripts use `scripts/lib/env.mjs`, which reads `.env.local`, `.env`, and on Windows the user environment from `HKCU\Environment`. Always run `npm run ai:check` before saying the OpenAI key is unavailable.
+
+If `OPENAI_API_KEY` is truly unavailable after `npm run ai:check`, do not describe generated lesson audio or timings as AI-reviewed. A local OS TTS voice plus `npm run assets:align` may be used only as an explicit fallback, and the final handoff must name the affected lesson(s) so they can be regenerated with AI audio and `assets:align:ai` later if needed.
 
 ## Lesson Asset Preload SOP
 

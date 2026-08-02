@@ -111,6 +111,7 @@ npm run assets:audio -- --lesson L001
 
 Put source audio files in `curriculum-workflow/audio-inbox/L001/` first. The script writes normalized `.m4a` files to `public/assets/lessons/L001/audio/` and creates `curriculum-workflow/audio-duration-report.json`.
 If the command cannot find FFmpeg right after installation, reopen the terminal or set `FFMPEG_PATH` and `FFPROBE_PATH` to the full executable paths.
+Important: this repo includes FFmpeg and FFprobe via npm packages (`@ffmpeg-installer/ffmpeg` and `@ffprobe-installer/ffprobe`). On Windows, `ffmpeg` may fail from the shell PATH while the repo scripts still work because they resolve the package binaries directly. Before saying FFmpeg is missing, run the actual repo command or inspect the package paths.
 
 For production sentence highlighting, run AI timestamp alignment after audio processing:
 
@@ -121,7 +122,7 @@ npm run assets:align:ai -- --lesson L001
 This transcribes each final sentence audio file, verifies the transcript matches `spokenText`, and writes `audio.durationMs` plus `audio.charTimings` into `src/curriculum/sample-lessons.json`.
 
 Do not use `npm run assets:align` as the final production timing source. It is a fallback energy-based estimate and can drift on connected speech, neutral-tone `的`, and final syllables. Use it only for a rough local draft when the OpenAI API is unavailable.
-If the OpenAI API is unavailable and a lesson must be shipped with local OS TTS plus `assets:align`, record that exception in `docs/PROJECT_HANDOFF_SOP.md` or the final handoff. Do not call those timings AI-reviewed, and prefer regenerating with AI audio plus `assets:align:ai` when credentials are available.
+Before declaring the OpenAI API unavailable, run `npm run ai:check`. Do not rely only on `process.env.OPENAI_API_KEY`, because the repo helper also reads `.env.local`, `.env`, and Windows user environment values from `HKCU\Environment`. If the OpenAI API is truly unavailable and a lesson must be shipped with local OS TTS plus `assets:align`, record that exception in `docs/PROJECT_HANDOFF_SOP.md` or the final handoff. Do not call those timings AI-reviewed, and prefer regenerating with AI audio plus `assets:align:ai` when credentials are available.
 
 ## Request File
 

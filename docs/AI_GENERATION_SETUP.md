@@ -20,6 +20,21 @@ npm run ai:check
 
 It should say `OPENAI_API_KEY is not set yet`. That is expected.
 
+Important for Codex/GPT agents: do not test only `process.env.OPENAI_API_KEY`.
+The project scripts call `scripts/lib/env.mjs`, which reads keys from:
+
+1. `.env.local`
+2. `.env`
+3. Windows user environment variable in `HKCU\Environment`
+
+On Windows, a key set with `[Environment]::SetEnvironmentVariable(..., "User")` may be readable by the repo helper even when the current process does not show `process.env.OPENAI_API_KEY`. The authoritative local check is:
+
+```bash
+npm run ai:check
+```
+
+If `ai:check` prints a masked key and says setup is ready, use the OpenAI scripts. Do not fall back to browser or OS TTS.
+
 ## After You Have an API Key
 
 Use one of these local-only options.
@@ -31,6 +46,8 @@ Option A: Windows user environment variable:
 ```
 
 Then close PowerShell and open it again.
+
+If the current Codex shell was already running before the variable was set, the direct process environment may still look empty. Run `npm run ai:check`; the repo helper also reads the Windows user environment directly.
 
 Option B: `.env.local` in this repo:
 
@@ -73,6 +90,12 @@ After sentences are reviewed in the curriculum file:
 npm run ai:audio -- --lesson L001
 ```
 
+This must be the default path for lesson audio when `npm run ai:check` succeeds. The script uses:
+
+- `OPENAI_TTS_MODEL`, default `gpt-4o-mini-tts`
+- `OPENAI_TTS_VOICE`, default `coral`
+- `OPENAI_API_KEY` from the repo env helper
+
 This creates raw MP3 drafts in:
 
 ```text
@@ -98,6 +121,8 @@ npm run assets:align:ai -- --lesson L001
 ```
 
 This step uses AI transcription timestamps, verifies the transcript matches `spokenText`, and writes `audio.durationMs` plus `audio.charTimings` back into `src/curriculum/sample-lessons.json`.
+
+If AI transcription returns simplified Chinese for a traditional sentence, update `scripts/align-audio-timings-ai.mjs` normalization only for equivalent characters, then rerun `assets:align:ai`. Do not treat equivalent simplified transcript characters such as `爱` for `愛` as an audio failure.
 
 ## Important
 
