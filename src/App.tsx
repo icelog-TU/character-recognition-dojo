@@ -2137,7 +2137,7 @@ function LessonPanel({
       window.cancelAnimationFrame(firstFrame);
       window.cancelAnimationFrame(secondFrame);
     };
-  }, [lesson.id, activeStage, advancingStage, findUnlocked, practiceDoneCount, gameDoneCount, rewardState, speakingTarget]);
+  }, [lesson.id, activeStage, advancingStage]);
 
   useEffect(() => {
     if (rewardState !== "claiming" || !lessonReady) return;
@@ -3598,6 +3598,7 @@ function SentencePracticePreview({
   const releasedDuringPrimeRef = useRef(false);
   const recordingStreamRef = useRef<MediaStream | null>(null);
   const roundCompleteActionRef = useRef<HTMLDivElement | null>(null);
+  const gameOptionAreaRef = useRef<HTMLDivElement | null>(null);
   const onSpeakStartRef = useRef(onSpeakStart);
   const onSpeakEndRef = useRef(onSpeakEnd);
   const han = sentence ? hanChars(sentence.text) : [];
@@ -3675,6 +3676,8 @@ function SentencePracticePreview({
 
   const doneAfterThisRound = doneCount + 1 >= requiredCount;
   const isCurrentRoundComplete = Boolean(game && roundComplete && completedGameId === game.id);
+  const gameId = game?.id;
+  const gameType = game?.type;
 
   useEffect(() => {
     if (!isCurrentRoundComplete || disabled) return;
@@ -3694,7 +3697,23 @@ function SentencePracticePreview({
       window.cancelAnimationFrame(firstFrame);
       window.cancelAnimationFrame(secondFrame);
     };
-  }, [disabled, game?.id, isCurrentRoundComplete]);
+  }, [disabled, gameId, isCurrentRoundComplete]);
+
+  useEffect(() => {
+    if (disabled || isCurrentRoundComplete || !gameType) return;
+    if (!["missing-character", "partial-order", "choose-pronunciation"].includes(gameType)) return;
+    let firstFrame = 0;
+    let secondFrame = 0;
+    firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        if (gameOptionAreaRef.current) scrollActiveLessonWorkIntoView(gameOptionAreaRef.current);
+      });
+    });
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      window.cancelAnimationFrame(secondFrame);
+    };
+  }, [disabled, gameId, gameType, isCurrentRoundComplete]);
 
   if (!game || !sentence) {
     return <p className="block-note">這一課還沒有設定句子遊戲。</p>;
@@ -4056,7 +4075,9 @@ function SentencePracticePreview({
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
             🔊 重播這一句
           </button>
-          <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleMissingOption} />
+          <div ref={gameOptionAreaRef} className="sentence-game-action-area">
+            <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleMissingOption} />
+          </div>
         </>
       );
     }
@@ -4074,7 +4095,9 @@ function SentencePracticePreview({
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
             🔊 重播這一句
           </button>
-          <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleOrderOption} />
+          <div ref={gameOptionAreaRef} className="sentence-game-action-area">
+            <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleOrderOption} />
+          </div>
         </>
       );
     }
@@ -4090,14 +4113,16 @@ function SentencePracticePreview({
         <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
           🔊 重播這一句
         </button>
-        <PronunciationChoiceGrid
-          options={shuffledGameOptions}
-          disabled={disabled}
-          roundComplete={isCurrentRoundComplete}
-          selectedOptionId={selectedPronunciationOptionId}
-          onHear={handleChoiceAudio}
-          onChoose={handlePronunciationChoice}
-        />
+        <div ref={gameOptionAreaRef} className="sentence-game-action-area">
+          <PronunciationChoiceGrid
+            options={shuffledGameOptions}
+            disabled={disabled}
+            roundComplete={isCurrentRoundComplete}
+            selectedOptionId={selectedPronunciationOptionId}
+            onHear={handleChoiceAudio}
+            onChoose={handlePronunciationChoice}
+          />
+        </div>
       </>
     );
   })();
