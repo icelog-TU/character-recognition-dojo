@@ -99,6 +99,7 @@ npm run assets:images -- --lesson L001 --remove-original
 
 This converts referenced PNG/JPG files to WebP, updates `imageSrc`, and can remove the original PNG/JPG when `--remove-original` is provided.
 If the command cannot find ImageMagick right after installation, reopen the terminal or set `MAGICK_PATH` to the full `magick.exe` path.
+If ImageMagick is unavailable but FFmpeg is available, FFmpeg may be used as a manual fallback for PNG/JPG to WebP conversion. When doing this, update every affected `imageSrc` to `.webp`, remove the oversized source PNG/JPG from `public/assets`, and rerun `npm run validate:production`.
 
 The app preloads the active lesson's required images and audio when the lesson opens, so production assets must be optimized before merging. Do not rely on late loading inside Stage 3 or Stage 4 to hide oversized images.
 
@@ -120,6 +121,7 @@ npm run assets:align:ai -- --lesson L001
 This transcribes each final sentence audio file, verifies the transcript matches `spokenText`, and writes `audio.durationMs` plus `audio.charTimings` into `src/curriculum/sample-lessons.json`.
 
 Do not use `npm run assets:align` as the final production timing source. It is a fallback energy-based estimate and can drift on connected speech, neutral-tone `的`, and final syllables. Use it only for a rough local draft when the OpenAI API is unavailable.
+If the OpenAI API is unavailable and a lesson must be shipped with local OS TTS plus `assets:align`, record that exception in `docs/PROJECT_HANDOFF_SOP.md` or the final handoff. Do not call those timings AI-reviewed, and prefer regenerating with AI audio plus `assets:align:ai` when credentials are available.
 
 ## Request File
 

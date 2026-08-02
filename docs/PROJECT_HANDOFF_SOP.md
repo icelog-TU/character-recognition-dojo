@@ -22,10 +22,11 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L022
-- L022 introduces `指` read `ㄓˇ`.
+- Current reviewed lessons: L001-L045
+- L045 introduces `可` read `ㄎㄜˇ`.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
-- L006-L022 include Stage 4 fixed sentence games after picture-supported listening.
+- L006-L045 include Stage 4 fixed sentence games after picture-supported listening.
+- L045 was produced in an environment without `OPENAI_API_KEY`; its audio uses the local Windows `Microsoft Hanhan Desktop` zh-TW voice and `assets:align` fallback timing. It passes validation, but if strict AI-audio review is required later, regenerate L045 audio and rerun `assets:align:ai`.
 
 ## Multi-Codex Collaboration SOP
 
@@ -110,6 +111,8 @@ npm run build
 ```
 
 `npm run validate:production` is not just an existence check. It also measures new-character audio volume and rejects near-silent `charAudio` files. If a mobile tester reports "the character has no sound" but the file exists, inspect the file's `max_volume` before changing UI playback logic.
+
+If `OPENAI_API_KEY` is unavailable, do not describe generated lesson audio or timings as AI-reviewed. A local OS TTS voice plus `npm run assets:align` may be used only as an explicit fallback, and the final handoff must name the affected lesson(s) so they can be regenerated with AI audio and `assets:align:ai` later if needed.
 
 ## Lesson Asset Preload SOP
 
