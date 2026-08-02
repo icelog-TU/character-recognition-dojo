@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 32:
+Characters taught after Lesson 33:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到`
 
 Recent review pool for the next lesson:
 
-`男 孩 和 女 在 門 前 我 看 的 飛 鳥 大 人 上 後 有 山 水 你 也 小 是 很 高 不`
+`男 孩 在 門 前 女 後 和 飛 看 大 人 有 山 水 我 你 也 的 鳥 小 是 很 高 不 到 家`
 
 ## Visual Continuity Ledger
 
@@ -78,10 +78,11 @@ Image reuse rule:
 | L030 | 也 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也 | 我在門後，你也在門後 / 男孩在看門前的飛鳥 / 門前有男也有女 / 小鳥在飛，男人也在飛 / 人前有鳥，人後也有鳥 | 我門後你在男孩看前的飛鳥有男女小人 | Introduces `也` through shared-position and shared-action scenes. Reviews recent `門`, `前`, and `後`; all five sentence images use newly generated reviewed picture-book assets. |
 | L031 | 是 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是 | 我是女孩，你是男孩 / 門前是水，門後也是水 / 我是小孩，你也是小孩 / 鳥飛很高，男人也飛很高 / 你在山前，我在山後 | 我女孩你男門前水後也小鳥飛很高人在山 | Introduces `是` through identity and judgment sentences. Reviews recent `前`, `後`, and `也`; all five sentence images use newly generated reviewed picture-book assets. |
 | L032 | 不 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不 | 我不是鳥，也不是大人 / 門前有山，門後也有山 / 你是男孩，不是女孩 / 鳥不在門前，也不在門後 / 我在門後看門前的人 | 我不是鳥也大人門前有山後你男孩女孩在看的 | Introduces `不` through concrete negation and front/behind door scenes. Reviews recent `後`, `也`, and `是`; all five sentence images use newly generated reviewed picture-book assets. |
+| L033 | 到 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到 | 我到門前，你也到門前 / 大人到家，小孩也到家 / 我到門前看山也看水 / 鳥不在門前，也不在門後 / 你是男孩，不是女孩 | 我到門前你也大人家小孩看山水鳥不在後是男女 | Introduces `到` through arrival-at-door and arrival-home scenes. Reviews recent `也`, `是`, and `不`; the last two review sentences reuse approved L032 image meanings while using L033 audio. |
 
 ## Planned Lessons
 
-None yet. L032 已完成，下一課請從 planner 重新規劃。
+None yet. L033 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 
