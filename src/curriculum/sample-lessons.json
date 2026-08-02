@@ -15205,7 +15205,7 @@
           "text": "我家裡沒有狗",
           "spokenText": "我家裡沒有狗",
           "focusChar": "狗",
-          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。固定小女孩：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋。固定「我家」外觀與室內：山上的溫暖小屋，窗外看得到綠色高山，室內有木地板、溫馨沙發、植物與柔和日光，和「他家」不同。固定小女孩在我家裡，看著空空的狗床或空狗碗，家裡沒有任何狗。她表情平靜、好奇，不要傷心。畫面中絕對不要出現狗、貓、鳥、其他人物或文字。",
+          "imagePrompt": "Warm child-friendly watercolor storybook illustration for a Traditional Chinese character-learning app. Sentence: wo jia li mei you gou. A young girl in a cozy mountain home looks at a pet bed. Inside the pet bed is exactly one friendly cat, clearly showing there is no dog at home; the family pet is a cat. No dogs anywhere. No text, letters, numbers, labels, zhuyin, or watermark.",
           "imageSrc": "/assets/lessons/L039/images/L039-S02.webp",
           "approved": true,
           "audio": {
@@ -15478,55 +15478,90 @@
         },
         {
           "id": "L039-S05",
-          "text": "小鳥沒有兩隻手",
-          "spokenText": "小鳥沒有兩隻手",
+          "text": "我有兩隻手，小鳥沒有手",
+          "spokenText": "我有兩隻手小鳥沒有手",
           "focusChar": "兩",
-          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。固定小女孩：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋。晴朗草地上，正好一隻小鳥在天空展開兩隻翅膀飛翔，固定小女孩在地上伸出自己的兩隻手模仿飛翔。重點是對比：小鳥有翅膀，不是手；小孩有兩隻手。不要在鳥身上畫手，不要出現狗、其他人或文字。",
+          "imagePrompt": "Warm child-friendly watercolor storybook illustration for a Traditional Chinese character-learning app. Sentence: wo you liang zhi shou, xiao niao mei you shou. A young girl clearly holds up both hands while one small bird flies above with wings. The bird is fully visible with generous padding and has wings, not hands. Keep all important subjects inside the square safe area. No dogs, no extra people, no extra birds, no text, letters, numbers, labels, zhuyin, or watermark.",
           "imageSrc": "/assets/lessons/L039/images/L039-S05.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L039/audio/L039-S05.m4a",
             "duration": 0,
-            "durationMs": 3127,
+            "durationMs": 5004,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 540
+                "endMs": 340
               },
               {
                 "charIndex": 1,
-                "startMs": 540,
-                "endMs": 700
+                "startMs": 340,
+                "endMs": 680
               },
               {
                 "charIndex": 2,
-                "startMs": 700,
-                "endMs": 940
+                "startMs": 680,
+                "endMs": 1400
               },
               {
                 "charIndex": 3,
-                "startMs": 940,
-                "endMs": 1180
+                "startMs": 1400,
+                "endMs": 1780
               },
               {
                 "charIndex": 4,
-                "startMs": 1180,
-                "endMs": 1520
+                "startMs": 1780,
+                "endMs": 2100
               },
               {
                 "charIndex": 5,
-                "startMs": 1520,
-                "endMs": 1800
+                "startMs": 2700,
+                "endMs": 2940
               },
               {
                 "charIndex": 6,
-                "startMs": 1800,
-                "endMs": 2060
+                "startMs": 2940,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3140,
+                "endMs": 3630
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3630,
+                "endMs": 4120
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4120,
+                "endMs": 4460
               }
             ]
           },
           "chars": [
+            {
+              "char": "我",
+              "zhuyin": "ㄨㄛˇ"
+            },
+            {
+              "char": "有",
+              "zhuyin": "ㄧㄡˇ"
+            },
+            {
+              "char": "兩",
+              "zhuyin": "ㄌㄧㄤˇ"
+            },
+            {
+              "char": "隻",
+              "zhuyin": "ㄓ"
+            },
+            {
+              "char": "手",
+              "zhuyin": "ㄕㄡˇ"
+            },
             {
               "char": "小",
               "zhuyin": "ㄒㄧㄠˇ"
@@ -15544,21 +15579,13 @@
               "zhuyin": "ㄧㄡˇ"
             },
             {
-              "char": "兩",
-              "zhuyin": "ㄌㄧㄤˇ"
-            },
-            {
-              "char": "隻",
-              "zhuyin": "ㄓ"
-            },
-            {
               "char": "手",
               "zhuyin": "ㄕㄡˇ"
             }
           ],
           "displayLines": [
-            "小鳥沒有",
-            "兩隻手"
+            "我有兩隻手，",
+            "小鳥沒有手"
           ],
           "charTimings": []
         }
@@ -15652,19 +15679,19 @@
           "options": [
             {
               "id": "correct",
-              "text": "小鳥沒有兩隻手",
+              "text": "我有兩隻手，小鳥沒有手",
               "correct": true,
               "audioSrc": "/assets/lessons/L039/audio/L039-S05.m4a"
             },
             {
               "id": "wrong-one",
-              "text": "小鳥沒有一隻手",
+              "text": "我有一隻手，小鳥沒有手",
               "correct": false,
               "audioSrc": "/assets/lessons/L039/audio/L039-G05-wrong1.m4a"
             },
             {
               "id": "wrong-two",
-              "text": "小狗沒有兩隻手",
+              "text": "我有兩隻手，小狗沒有手",
               "correct": false,
               "audioSrc": "/assets/lessons/L039/audio/L039-G05-wrong2.m4a"
             }
