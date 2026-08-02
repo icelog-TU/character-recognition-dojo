@@ -115,7 +115,65 @@ const FAMILY_ROLE_ACCESSORY: Record<FamilyRoleId, string> = {
   baby: "🍼",
 };
 
+const SPACE_CREATURE_SPECIES: CreatureSpecies[] = [
+  { id: "star", realmId: "space", name: "星星", icon: "✨" },
+  { id: "moon", realmId: "space", name: "月亮", icon: "🌙" },
+  { id: "sun", realmId: "space", name: "太陽", icon: "☀️" },
+  { id: "comet", realmId: "space", name: "彗星", icon: "☄️" },
+  { id: "planet", realmId: "space", name: "行星", icon: "🪐" },
+  { id: "saturnRing", realmId: "space", name: "土星環", icon: "🪐" },
+  { id: "meteor", realmId: "space", name: "流星", icon: "💫" },
+  { id: "nebula", realmId: "space", name: "星雲", icon: "🌌" },
+  { id: "blackHole", realmId: "space", name: "黑洞", icon: "🕳️" },
+  { id: "martian", realmId: "space", name: "火星人", icon: "👽" },
+  { id: "crystalAlien", realmId: "space", name: "水晶星人", icon: "💎" },
+  { id: "robotAlien", realmId: "space", name: "機器星人", icon: "🤖" },
+  { id: "lightAlien", realmId: "space", name: "光能星人", icon: "🔆" },
+  { id: "ufo", realmId: "space", name: "小幽浮族", icon: "🛸" },
+  { id: "starBeast", realmId: "space", name: "異世界星獸", icon: "🌠" },
+];
+
+const SPACE_CHARACTER_ASSET_FAMILIES = [
+  { speciesId: "star", folder: "star", filePrefix: "star" },
+  { speciesId: "moon", folder: "moon", filePrefix: "moon" },
+  { speciesId: "sun", folder: "sun", filePrefix: "sun" },
+  { speciesId: "comet", folder: "comet", filePrefix: "comet" },
+  { speciesId: "planet", folder: "planet", filePrefix: "planet" },
+  { speciesId: "saturnRing", folder: "saturn-ring", filePrefix: "saturn-ring" },
+  { speciesId: "meteor", folder: "meteor", filePrefix: "meteor" },
+  { speciesId: "nebula", folder: "nebula", filePrefix: "nebula" },
+  { speciesId: "blackHole", folder: "black-hole", filePrefix: "black-hole" },
+  { speciesId: "martian", folder: "martian", filePrefix: "martian" },
+  { speciesId: "crystalAlien", folder: "crystal-alien", filePrefix: "crystal-alien" },
+  { speciesId: "robotAlien", folder: "robot-alien", filePrefix: "robot-alien" },
+  { speciesId: "lightAlien", folder: "light-alien", filePrefix: "light-alien" },
+  { speciesId: "ufo", folder: "ufo", filePrefix: "ufo" },
+  { speciesId: "starBeast", folder: "star-beast", filePrefix: "star-beast" },
+] as const;
+
+const ROLE_ASSET_FILE_SUFFIX: Record<FamilyRoleId, string> = {
+  grandpa: "grandpa",
+  grandma: "grandma",
+  dad: "father",
+  mom: "mother",
+  olderBrother: "older-brother",
+  olderSister: "older-sister",
+  youngerBrother: "younger-brother",
+  youngerSister: "younger-sister",
+  baby: "baby",
+};
+
+const SPACE_CHARACTER_IMAGE_SRC = Object.fromEntries(
+  SPACE_CHARACTER_ASSET_FAMILIES.flatMap((family) =>
+    FAMILY_ROLES.map((role) => [
+      `space-${family.speciesId}-${role.id}`,
+      `/assets/characters/space/${family.folder}/${family.filePrefix}-${ROLE_ASSET_FILE_SUFFIX[role.id]}.webp`,
+    ]),
+  ),
+) as Partial<Record<string, string>>;
+
 const COLLECTION_CHARACTER_IMAGE_SRC: Partial<Record<string, string>> = {
+  ...SPACE_CHARACTER_IMAGE_SRC,
   "land-cat-grandpa": "/assets/characters/land/cat/cat-grandpa.webp",
   "land-cat-grandma": "/assets/characters/land/cat/cat-grandma.webp",
   "land-cat-dad": "/assets/characters/land/cat/cat-father.webp",
@@ -569,21 +627,7 @@ const CREATURE_SPECIES: CreatureSpecies[] = [
   { id: "firefly", realmId: "sky", name: "螢火蟲", icon: "✨" },
   { id: "moth", realmId: "sky", name: "飛蛾", icon: "🦋" },
   { id: "cicada", realmId: "sky", name: "蟬", icon: "🪲" },
-  { id: "moonBunny", realmId: "space", name: "月兔", icon: "🌙" },
-  { id: "starCat", realmId: "space", name: "星貓", icon: "✨" },
-  { id: "rocketDog", realmId: "space", name: "火箭狗", icon: "🚀" },
-  { id: "planetBear", realmId: "space", name: "星球熊", icon: "🪐" },
-  { id: "cometFox", realmId: "space", name: "彗星狐", icon: "☄️" },
-  { id: "nebulaWhale", realmId: "space", name: "星雲鯨", icon: "🌌" },
-  { id: "alienPanda", realmId: "space", name: "太空貓熊", icon: "👽" },
-  { id: "meteorLion", realmId: "space", name: "流星獅", icon: "💫" },
-  { id: "satelliteBird", realmId: "space", name: "衛星鳥", icon: "🛰️" },
-  { id: "galaxyDeer", realmId: "space", name: "銀河鹿", icon: "🌠" },
-  { id: "cosmoTurtle", realmId: "space", name: "宇宙龜", icon: "🛸" },
-  { id: "auroraRabbit", realmId: "space", name: "極光兔", icon: "🌈" },
-  { id: "asteroidMonkey", realmId: "space", name: "小行星猴", icon: "☄️" },
-  { id: "solarElephant", realmId: "space", name: "太陽象", icon: "☀️" },
-  { id: "orbitFish", realmId: "space", name: "軌道魚", icon: "🔭" },
+  ...SPACE_CREATURE_SPECIES,
 ];
 
 const COLLECTIBLE_CHARACTERS: CollectibleCharacter[] = CREATURE_SPECIES.flatMap((species) =>

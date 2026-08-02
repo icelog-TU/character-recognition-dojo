@@ -955,6 +955,55 @@
         },
       };
 
+      const spaceRoles = [
+        ["grandpa", "爺爺", "溫和的"],
+        ["grandma", "奶奶", "親切的"],
+        ["father", "爸爸", "穩重的"],
+        ["mother", "媽媽", "可靠的"],
+        ["older-brother", "哥哥", "活潑的"],
+        ["older-sister", "姐姐", "開朗的"],
+        ["younger-brother", "弟弟", "小小的"],
+        ["younger-sister", "妹妹", "可愛的"],
+        ["baby", "寶寶", "最小的"],
+      ];
+
+      const spaceFamilies = [
+        ["star", "星星家族", "星星", "夢幻睡衣與星光魔法風"],
+        ["moon", "月亮家族", "月亮", "夜晚宮廷與童話守夜人風"],
+        ["sun", "太陽家族", "太陽", "太陽祭典與金色神話風"],
+        ["comet", "彗星家族", "彗星", "高速旅行者與太空郵差風"],
+        ["planet", "行星家族", "行星", "環球旅人與星球探險風"],
+        ["saturn-ring", "土星環家族", "土星環", "優雅舞會與軌道芭蕾風"],
+        ["meteor", "流星家族", "流星", "運動競賽與太空賽跑風"],
+        ["nebula", "星雲家族", "星雲", "雲霧藝術家與夢幻畫室風"],
+        ["black-hole", "黑洞家族", "黑洞", "神祕學者與深空圖書館風"],
+        ["martian", "火星人家族", "火星人", "復古科幻與火星小鎮風"],
+        ["crystal-alien", "水晶星人家族", "水晶星人", "水晶王國與礦石工匠風"],
+        ["robot-alien", "機器星人家族", "機器星人", "機器城市與未來工程師風"],
+        ["light-alien", "光能星人家族", "光能星人", "發光精靈與能量花園風"],
+        ["ufo", "小幽浮族家族", "小幽浮族", "飛行學校與太空交通員風"],
+        ["star-beast", "異世界星獸家族", "異世界星獸", "奇幻星球與冒險旅團風"],
+      ];
+
+      Object.assign(
+        speciesData,
+        Object.fromEntries(
+          spaceFamilies.map(([folder, label, species, style]) => [
+            folder,
+            {
+              label,
+              species,
+              basePath: `${pageBase}assets/characters/space/${folder}/`,
+              characters: spaceRoles.map(([fileRole, roleLabel, tone]) => [
+                `${folder}-${fileRole}.webp`,
+                `${species}${roleLabel}`,
+                `${tone}${species}${roleLabel}，採用${style}。`,
+              ]),
+            },
+          ]),
+        ),
+      );
+
       const speciesTabs = document.querySelector("#speciesTabs");
       const speciesNamePill = document.querySelector("#speciesNamePill");
       const grid = document.querySelector("#characterGrid");
