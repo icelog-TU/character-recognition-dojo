@@ -112,6 +112,8 @@ Rules:
 - `sentenceId` must point to a reviewed sentence in the same lesson.
 - `targetChar` must appear in that sentence. It may be the current lesson's new character or a review character.
 - Early lessons should use fixed, teacher-reviewed game plans. Do not randomize game type at runtime.
+- In a normal five-sentence production lesson, the five Stage 4 games should use all five reviewed sentences exactly once.
+- In that same pattern, `find-character`, `teach-character`, and `missing-character` should usually target the current lesson's new character; `partial-order` and `choose-pronunciation` may focus on review characters.
 - `missingIndexes` uses Han-character indexes in the sentence, skipping punctuation.
 - `options` is used for missing-character, partial-order, and choose-pronunciation games.
 - `choose-pronunciation` options should use reviewed AI audio when audio choices are provided. Do not rely on browser TTS as the production voice for these choices.

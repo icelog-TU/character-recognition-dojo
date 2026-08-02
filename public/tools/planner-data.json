@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-02T02:39:28.170Z",
+  "exportedAt": "2026-08-02T03:20:30.418Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -10570,7 +10570,7 @@
           ],
           "spokenText": "前門有山後門有水",
           "focusChar": "後",
-          "imagePrompt": "溫暖、適合幼兒的水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音或浮水印。畫面是一間溫馨的小房子，用清楚的繪本構圖同時呈現前門和後門：前門外面有一座可愛的山，後門外面有一片安全平靜的水。可以使用略微俯視或剖面式構圖，讓前門與後門都容易辨認，山在前門方向，水在後門方向。房子、門、山、水都要清楚，不要有人物。不可出現文字、箭頭、標籤、門牌或危險感。",
+          "imagePrompt": "溫暖、適合幼兒的水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌、箭頭或浮水印。畫面是一間完整可愛的小房子，必須有清楚完整的斜屋頂或紅瓦屋頂，不可以像沒有屋頂的剖面模型。用稍微俯視但不是切開屋頂的構圖，同時看見前門和後門：前門外有一座圓潤友善的小山，後門外有一片安全平靜的水或小湖。房子、前門、後門、山、水都要清楚，不要有人物。",
           "imageSrc": "/assets/lessons/L029/images/L029-S05.webp",
           "approved": true,
           "audio": {
@@ -10632,7 +10632,7 @@
         {
           "id": "L029-G02",
           "type": "teach-character",
-          "sentenceId": "L029-S01",
+          "sentenceId": "L029-S03",
           "targetChar": "後",
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
@@ -10642,11 +10642,11 @@
         {
           "id": "L029-G03",
           "type": "missing-character",
-          "sentenceId": "L029-S03",
+          "sentenceId": "L029-S05",
           "targetChar": "後",
           "prompt": "字寶寶不見了，把「後」找回來。",
           "missingIndexes": [
-            9
+            4
           ],
           "options": [
             {
@@ -10669,34 +10669,34 @@
         {
           "id": "L029-G04",
           "type": "partial-order",
-          "sentenceId": "L029-S05",
-          "targetChar": "後",
+          "sentenceId": "L029-S02",
+          "targetChar": "男",
           "prompt": "把不見的字照順序放回句子。",
           "missingIndexes": [
             0,
             1,
-            4,
-            5
+            2,
+            3
           ],
           "options": [
             {
-              "id": "front",
-              "text": "前",
+              "id": "boy",
+              "text": "男",
               "correct": true
             },
             {
-              "id": "front-door",
-              "text": "門",
+              "id": "child",
+              "text": "孩",
               "correct": true
             },
             {
-              "id": "back",
-              "text": "後",
+              "id": "and",
+              "text": "和",
               "correct": true
             },
             {
-              "id": "back-door",
-              "text": "門",
+              "id": "girl",
+              "text": "女",
               "correct": true
             }
           ]
@@ -10704,25 +10704,25 @@
         {
           "id": "L029-G05",
           "type": "choose-pronunciation",
-          "sentenceId": "L029-S01",
-          "targetChar": "後",
+          "sentenceId": "L029-S04",
+          "targetChar": "飛",
           "prompt": "聽一聽，誰念得對？",
           "options": [
             {
               "id": "correct",
-              "text": "男孩在門前，女孩在門後",
+              "text": "男孩和女孩在看大人飛",
               "correct": true,
-              "audioSrc": "/assets/lessons/L029/audio/L029-S01.m4a"
+              "audioSrc": "/assets/lessons/L029/audio/L029-S04.m4a"
             },
             {
               "id": "wrong-one",
-              "text": "男孩在門後，女孩在門前",
+              "text": "男孩和女孩在看小鳥飛",
               "correct": false,
               "audioSrc": "/assets/lessons/L029/audio/L029-G05-wrong1.m4a"
             },
             {
               "id": "wrong-two",
-              "text": "男孩在門前，女孩在門前",
+              "text": "女孩和男孩在看大人飛",
               "correct": false,
               "audioSrc": "/assets/lessons/L029/audio/L029-G05-wrong2.m4a"
             }
@@ -10758,7 +10758,7 @@
           ],
           "spokenText": "我在門後你也在門後",
           "focusChar": "也",
-          "imagePrompt": "溫暖、適合幼兒的水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面中央是一扇清楚的門，固定小女孩和固定小男孩都在門後，兩人從門後或半開的門後可愛地探出頭或站在門後同一側，讓孩子看出兩個人都在門後。固定小女孩外觀延續既有設定：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋、溫暖表情。固定小男孩外觀延續既有設定：短短微亂深色頭髮、天藍色上衣、綠色短褲、藍鞋、小橘色背包、溫暖好奇表情。不可出現文字、字母、數字、標籤、注音、招牌或浮水印。",
+          "imagePrompt": "溫暖、適合幼兒的水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音、門牌或浮水印。畫面是在明亮安全的室內門口，一扇木門打開；固定小女孩和固定小男孩必須從同一邊、同一側的門後探頭或探出半個身體，兩人都在門的後面，像玩躲貓貓。固定小女孩：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋。固定小男孩：短短微亂深色頭髮、天藍色上衣、綠色短褲、藍鞋、小橘色背包。不要讓兩個小孩分站門的兩邊，不要畫成一個在門前、一個在門後，不要出現其他人物。",
           "imageSrc": "/assets/lessons/L030/images/L030-S01.webp",
           "approved": true,
           "audio": {
@@ -11609,6 +11609,452 @@
               "text": "我看女孩，你看男孩",
               "correct": false,
               "audioSrc": "/assets/lessons/L031/audio/L031-G05-wrong2.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L032",
+      "order": 32,
+      "newChars": [
+        "不"
+      ],
+      "zhuyin": {
+        "不": "ㄅㄨˋ"
+      },
+      "charAudio": {
+        "不": "/assets/lessons/L032/audio/char-u4e0d.m4a"
+      },
+      "title": "不",
+      "requiredRounds": 5,
+      "originHint": "用「不」建立否定句，並複習最近的「後」「也」「是」。",
+      "sentences": [
+        {
+          "id": "L032-S01",
+          "text": "我不是鳥，也不是大人",
+          "displayLines": [
+            "我不是鳥，",
+            "也不是大人"
+          ],
+          "spokenText": "我不是鳥也不是大人",
+          "focusChar": "不",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音或浮水印。畫面中正好一個固定小女孩站在中央，旁邊有正好一隻小鳥和正好一位友善成年大人作為對照。固定小女孩外觀：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋、溫暖表情。小女孩明顯是小孩，不是鳥，也不是大人；不要用叉叉、禁止符號、文字或箭頭表達否定。",
+          "imageSrc": "/assets/lessons/L032/images/L032-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L032/audio/L032-S01.m4a",
+            "durationMs": 5269,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 910
+              },
+              {
+                "charIndex": 2,
+                "startMs": 910,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2480,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2940,
+                "endMs": 3270
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3270,
+                "endMs": 3600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3600,
+                "endMs": 4140
+              },
+              {
+                "charIndex": 8,
+                "startMs": 4140,
+                "endMs": 4400
+              }
+            ]
+          }
+        },
+        {
+          "id": "L032-S02",
+          "text": "門前有山，門後也有山",
+          "displayLines": [
+            "門前有山，",
+            "門後也有山"
+          ],
+          "spokenText": "門前有山門後也有山",
+          "focusChar": "也",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音或浮水印。畫面是一扇半開但安全的門作為中央主體，用略微俯視或剖面式構圖同時看見門前和門後：門前有一座圓潤友善的小山，門後也有一座圓潤友善的小山。前後兩邊的山都要清楚，門的位置要清楚，不要有人物、箭頭或標籤。",
+          "imageSrc": "/assets/lessons/L032/images/L032-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L032/audio/L032-S02.m4a",
+            "durationMs": 4362,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 840
+              },
+              {
+                "charIndex": 2,
+                "startMs": 840,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2080,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2420,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2740,
+                "endMs": 3400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3400,
+                "endMs": 3680
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3680,
+                "endMs": 3900
+              }
+            ]
+          }
+        },
+        {
+          "id": "L032-S03",
+          "text": "你是男孩，不是女孩",
+          "displayLines": [
+            "你是男孩，",
+            "不是女孩"
+          ],
+          "spokenText": "你是男孩不是女孩",
+          "focusChar": "不",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音或浮水印。畫面中正好一個固定小男孩站在主要位置，旁邊有正好一個固定小女孩作為對照。固定小男孩外觀：短短微亂深色頭髮、天藍色上衣、綠色短褲、藍鞋、小橘色背包、溫暖好奇表情。固定小女孩外觀：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋。要清楚看出主角是男孩，不是女孩；不要用叉叉、禁止符號、文字或箭頭表達否定，不可出現其他孩子或大人。",
+          "imageSrc": "/assets/lessons/L032/images/L032-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L032/audio/L032-S03.m4a",
+            "durationMs": 3344,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1620,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1840,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2060,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2540,
+                "endMs": 2840
+              }
+            ]
+          }
+        },
+        {
+          "id": "L032-S04",
+          "text": "鳥不在門前，也不在門後",
+          "displayLines": [
+            "鳥不在門前，",
+            "也不在門後"
+          ],
+          "spokenText": "鳥不在門前也不在門後",
+          "focusChar": "不",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音或浮水印。教師指示：一隻鳥停在半開的門的上面，鳥不是在門前，也不在門的後面。畫面中正好一扇半開的門，正好一隻小鳥安穩停在門的上緣或門框上方，門前地面和門後空間都清楚可見而且沒有鳥。不要用叉叉、禁止符號、文字或箭頭表達否定，不要出現第二隻鳥或人物。",
+          "imageSrc": "/assets/lessons/L032/images/L032-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L032/audio/L032-S04.m4a",
+            "durationMs": 3983,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 880
+              },
+              {
+                "charIndex": 2,
+                "startMs": 880,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1200,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2240,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2440,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2740,
+                "endMs": 3000
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3000,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3180,
+                "endMs": 3460
+              }
+            ]
+          }
+        },
+        {
+          "id": "L032-S05",
+          "text": "我在門後看門前的人",
+          "displayLines": [
+            "我在門後",
+            "看門前的人"
+          ],
+          "spokenText": "我在門後看門前的人",
+          "focusChar": "我",
+          "imagePrompt": "溫暖、適合幼兒的臺灣繁體中文認字 APP 水彩繪本風格，柔和乾淨的色彩，彩色鉛筆般的細緻線條。畫面不可出現文字、字母、數字、標籤、注音或浮水印。教師指示：小孩躲在門的後面，看門前面的人。畫面中正好一個固定小女孩在半開的門後方探出頭或側身看，門前方有正好一位友善成人。固定小女孩外觀：肩長深棕色頭髮、小粉紅髮夾、黃色上衣、珊瑚紅吊帶裙、紅鞋、溫暖表情。成人站在門前，前後位置要清楚；情境要像玩躲貓貓或好奇觀看，不要恐怖、不要危險、不要出現其他人。",
+          "imageSrc": "/assets/lessons/L032/images/L032-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L032/audio/L032-S05.m4a",
+            "durationMs": 4981,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1240,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2080,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2460,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3020,
+                "endMs": 3280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3280,
+                "endMs": 3510
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3510,
+                "endMs": 3740
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L032-G01",
+          "type": "find-character",
+          "sentenceId": "L032-S01",
+          "targetChar": "不",
+          "prompt": "找到「不」。"
+        },
+        {
+          "id": "L032-G02",
+          "type": "teach-character",
+          "sentenceId": "L032-S03",
+          "targetChar": "不",
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            4
+          ]
+        },
+        {
+          "id": "L032-G03",
+          "type": "missing-character",
+          "sentenceId": "L032-S04",
+          "targetChar": "不",
+          "prompt": "字寶寶不見了，把「不」找回來。",
+          "missingIndexes": [
+            6
+          ],
+          "options": [
+            {
+              "id": "not",
+              "text": "不",
+              "correct": true
+            },
+            {
+              "id": "also",
+              "text": "也",
+              "correct": false
+            },
+            {
+              "id": "at",
+              "text": "在",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L032-G04",
+          "type": "partial-order",
+          "sentenceId": "L032-S02",
+          "targetChar": "也",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "options": [
+            {
+              "id": "door",
+              "text": "門",
+              "correct": true
+            },
+            {
+              "id": "behind",
+              "text": "後",
+              "correct": true
+            },
+            {
+              "id": "also",
+              "text": "也",
+              "correct": true
+            },
+            {
+              "id": "have",
+              "text": "有",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L032-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L032-S05",
+          "targetChar": "我",
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我在門後看門前的人",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L032/audio/L032-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "我在門前看門後的人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L032/audio/L032-G05-wrong1.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "你在門後看門前的人",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L032/audio/L032-G05-wrong2.m4a"
             }
           ]
         }

@@ -1,0 +1,139 @@
+{
+  "order": 32,
+  "newChars": [
+    "不"
+  ],
+  "zhuyin": {
+    "不": "ㄅㄨˋ"
+  },
+  "title": "不",
+  "dependsOnLessons": [
+    {
+      "order": 31,
+      "lessonId": "L031",
+      "newChars": [
+        "是"
+      ],
+      "title": "是",
+      "status": "planned-not-yet-merged"
+    }
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不"
+    ],
+    "provisionalLearnedChars": [
+      "是"
+    ],
+    "preferReviewChars": [
+      "小",
+      "男",
+      "孩",
+      "在",
+      "看",
+      "人",
+      "飛",
+      "的",
+      "手",
+      "指",
+      "很",
+      "和",
+      "女",
+      "鳥",
+      "一",
+      "隻",
+      "門",
+      "你",
+      "上",
+      "有",
+      "前",
+      "我",
+      "大",
+      "後",
+      "山",
+      "水",
+      "也",
+      "是"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "後",
+      "也",
+      "是"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-不。 平行備課依賴：本課假設 L031 會加入 是。可以先平行草擬，但必須等依賴課程已合併到 main 並重新匯出 planner-data 後，才可以把本課合併或推送到 main。 核准句子：我不是鳥，也不是大人；門前有山，門後也有山；你是男孩，不是女孩；鳥不在門前，也不在門後；我在門後看門前的人。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：小 男 孩 在 看 人 飛 的 手 指 很 和 女 鳥 一 隻 門 你 上 有 前 我 大 後 山 水 也 是。 整課句子中，最近三課新字至少各出現一次：後 也 是。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "approvedSentences": [
+    {
+      "text": "我不是鳥，也不是大人",
+      "spokenText": "我不是鳥也不是大人",
+      "focusChar": "不",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "門前有山，門後也有山",
+      "spokenText": "門前有山門後也有山",
+      "focusChar": "也",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "你是男孩，不是女孩",
+      "spokenText": "你是男孩不是女孩",
+      "focusChar": "不",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "鳥不在門前，也不在門後",
+      "spokenText": "鳥不在門前也不在門後",
+      "focusChar": "不",
+      "reason": "教師新增句。",
+      "imageNotes": "一隻鳥停在半開的門的上面，\n鳥不是在門前，也不在門的後面。"
+    },
+    {
+      "text": "我在門後看門前的人",
+      "spokenText": "我在門後看門前的人",
+      "focusChar": "我",
+      "reason": "教師新增句。",
+      "imageNotes": "小孩躲在門的後面，看門前面的人"
+    }
+  ]
+}

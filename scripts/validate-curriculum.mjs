@@ -126,6 +126,9 @@ for (let i = 0; i < sorted.length; i += 1) {
   const sentenceGames = lesson.sentenceGames ?? [];
   if (sentenceGames.length === stageFourCycleGameTypes.length) {
     const gameTypes = new Set(sentenceGames.map((game) => game.type));
+    const gameSentenceIds = sentenceGames.map((game) => game.sentenceId);
+    const uniqueGameSentenceIds = new Set(gameSentenceIds);
+    const enforceUniqueStageFourSentences = lesson.order >= 32;
     for (const expectedType of stageFourCycleGameTypes) {
       if (!gameTypes.has(expectedType)) {
         errors.push(`${lesson.id}: five-game Stage 4 lessons must include ${expectedType} exactly once.`);
@@ -133,6 +136,25 @@ for (let i = 0; i < sorted.length; i += 1) {
     }
     if (gameTypes.size !== stageFourCycleGameTypes.length) {
       errors.push(`${lesson.id}: five-game Stage 4 lessons must not repeat a game type.`);
+    }
+    if (enforceUniqueStageFourSentences && (lesson.sentences ?? []).length === stageFourCycleGameTypes.length) {
+      if (uniqueGameSentenceIds.size !== stageFourCycleGameTypes.length) {
+        errors.push(`${lesson.id}: five-game Stage 4 lessons must use each reviewed sentence exactly once.`);
+      }
+      for (const sentence of lesson.sentences ?? []) {
+        if (!uniqueGameSentenceIds.has(sentence.id)) {
+          errors.push(`${lesson.id}: Stage 4 does not include reviewed sentence ${sentence.id}.`);
+        }
+      }
+    }
+    if ((lesson.newChars ?? []).length === 1) {
+      const newChar = lesson.newChars[0];
+      for (const coreType of ["find-character", "teach-character", "missing-character"]) {
+        const coreGame = sentenceGames.find((game) => game.type === coreType);
+        if (coreGame && coreGame.targetChar !== newChar) {
+          warnings.push(`${lesson.id}: ${coreType} should usually target the new character ${newChar}.`);
+        }
+      }
     }
   }
   for (const game of sentenceGames) {

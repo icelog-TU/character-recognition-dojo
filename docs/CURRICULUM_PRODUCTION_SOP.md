@@ -271,6 +271,9 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 - Use fixed game types per sentence/game. Do not randomly assign game modes at runtime for production lessons.
 - Supported first-pass game types: `find-character`, `teach-character`, `missing-character`, `partial-order`, and `choose-pronunciation`.
 - When a lesson has five Stage 4 sentence games, use all five supported game types exactly once. Do not repeat one type and omit another.
+- When a lesson has five reviewed sentences and five Stage 4 sentence games, every reviewed sentence must appear in Stage 4 exactly once. Do not let `find-character` and `teach-character` reuse the same sentence while another sentence receives no interaction.
+- For the normal five-sentence lesson pattern, design the first three Stage 4 games as the new-character practice set: `find-character`, `teach-character`, and `missing-character` should each target the current lesson's new character when the approved sentences make that possible.
+- Use the last two Stage 4 games, usually `partial-order` and `choose-pronunciation`, more flexibly for review characters or sentence-level listening discrimination.
 - `targetChar` must appear in the referenced sentence. It may be the current lesson's new character or a review character.
 - A lesson should usually include at least three interactions involving the current new character, while allowing 1-2 interactions focused on review characters.
 - For early lessons, `partial-order` should blank only 2-4 Han characters, not the full sentence.
@@ -291,8 +294,7 @@ Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesso
 - In `teach-character`, the helper must stop before the target character audio starts. The pre-target audio range and the stitched replay prefix must not include any part of the target character, or the child's recording will sound duplicated.
 - The `teach-character` recording ding must be reliable on mobile. Resume/unlock Web Audio before playing the ding, also provide an HTMLAudio/media fallback cue, use a clear pleasant bell cue lasting about 0.7-0.9 seconds, and start recording only after the ding window. The cue must not sound like an alarm or emergency warning. If mobile microphone mode suppresses cue audio, play the cue before opening the microphone stream.
 - In `teach-character`, do not circle or highlight the unknown target before the helper reaches that character and gets stuck. Do not render a separate isolated target-character panel below the sentence unless it has an actual interaction.
-- `missing-character` should provide a dedicated replay-sentence button in the game area. This replays the sentence itself, not just the helper instruction.
-- `partial-order` must show a dedicated replay-sentence button in the game area so the child/parent can hear the target sentence again without replaying the full helper instruction.
+- Every Stage 4 game type must provide a dedicated replay-sentence button in the game area. This replays only the current sentence, not the helper instruction and not the whole lesson.
 - `partial-order` option cards must be shuffled before display. They must not appear in the correct sentence order on entry, even if the lesson JSON is written in sentence order.
 - After a correct Stage 4 response, play one short praise phrase before stopping on the current round. Vary the praise, such as "你好棒", "你好厲害", or "太棒了". Do not auto-advance. Speak a prompt telling the child to press the red button for the next round or completion.
 - Completion state must be tied to the current game id. When moving to the next Stage 4 round, never let the previous round's completed state trigger the next round's completion prompt.

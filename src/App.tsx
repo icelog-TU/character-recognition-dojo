@@ -2445,27 +2445,29 @@ function LessonPanel({
         </span>
       </div>
 
-      <div className="actions" style={{ marginTop: 16 }}>
-        <button
-          className="btn ghost"
-          onClick={() => {
-            setHeardChars(new Set());
-            setSpotlightChar(null);
-            setFindUnlocked(false);
-            setPracticeDoneCount(0);
-            setGameDoneCount(0);
-            setActiveStage(1);
-            setAdvancingStage(null);
-            setSpeakingTarget(null);
-            setRewardState("waiting");
-            advanceRunRef.current += 1;
-            stopPlayback();
-            setResetVersion((version) => version + 1);
-          }}
-        >
-          再玩一次
-        </button>
-      </div>
+      {rewardState === "claimed" && (
+        <div className="actions" style={{ marginTop: 16 }}>
+          <button
+            className="btn ghost"
+            onClick={() => {
+              setHeardChars(new Set());
+              setSpotlightChar(null);
+              setFindUnlocked(false);
+              setPracticeDoneCount(0);
+              setGameDoneCount(0);
+              setActiveStage(1);
+              setAdvancingStage(null);
+              setSpeakingTarget(null);
+              setRewardState("waiting");
+              advanceRunRef.current += 1;
+              stopPlayback();
+              setResetVersion((version) => version + 1);
+            }}
+          >
+            重玩整課
+          </button>
+        </div>
+      )}
     </section>
   );
 }
@@ -3915,6 +3917,9 @@ function SentencePracticePreview({
             foundIndexes={isCurrentRoundComplete ? new Set([targetIndex]) : foundGameIndexes}
             onCharClick={handleFindChar}
           />
+          <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
+            🔊 重播這一句
+          </button>
           <p className="block-note">點一下找到的字。</p>
         </>
       );
@@ -3939,6 +3944,9 @@ function SentencePracticePreview({
               {floatingRecordChar}
             </div>
           )}
+          <button type="button" className="sentence-replay-button" disabled={disabled || recording} onClick={() => void replayCurrentSentence()}>
+            🔊 重播這一句
+          </button>
         </>
       );
     }
@@ -3987,6 +3995,9 @@ function SentencePracticePreview({
           activeCharIndex={null}
           className="stage-four-sentence-card"
         />
+        <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
+          🔊 重播這一句
+        </button>
         <PronunciationChoiceGrid
           options={shuffledGameOptions}
           disabled={disabled}
