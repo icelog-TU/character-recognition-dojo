@@ -12,9 +12,9 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 47:
+Characters taught after Lesson 48:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃`
 
 Recent review pool for the next lesson:
 
@@ -106,9 +106,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 | L047 | 這 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這 | 這是媽媽的愛書 / 這個小小孩很可愛 / 他會走，可是不會看書 / 這隻小鳥會不會飛？ / 這是我的兩隻手 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會 | Introduces `這` through this/identity sentences, a toddler continuity pair, a baby-bird question, and a two-hands review. |
 
+| L048 | 吃 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃 | 這個人很愛吃，也很會吃 / 小小孩不會看書，可是會吃書 / 書是不可吃的 / 這是我媽媽的愛書 / 這兩隻小狗很可愛 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這 | Introduces `吃` through eating, books-not-for-eating, and reviews `?`, `?`, and `?`. |
+
 ## Planned Lessons
 
-None yet. L047 completed; plan the next lesson from the planner.
+None yet. L048 completed; plan the next lesson from the planner.
 
 ## Planning Rule For New Lessons
 
