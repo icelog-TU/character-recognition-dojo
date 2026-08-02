@@ -34,7 +34,7 @@ Use this section before writing image prompts. Once a recurring person or family
 | 哥哥 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same older-brother design in all future images. |
 | 姐姐 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same older-sister design in all future images. |
 | 弟弟 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same younger-brother design in all future images. |
-| 妹妹 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same younger-sister design in all future images. |
+| 妹妹 | L043 | Younger sister of the fixed `我` girl, smaller preschool child with twin pigtails, warm expression, matching yellow and coral-red family palette. | Use this same younger sister whenever the fixed girl's younger sister appears. Use L043-S01 and L043-S02 as the current references. |
 
 Image reuse rule:
 
@@ -98,10 +98,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L040 | 都 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都 | 他的兩隻狗都在家裡 / 兩隻狗都很小 / 兩隻小狗都走到水裡 / 大人都沒在水裡 / 他沒看到家裡的狗 | 他的兩隻狗都在家裡很小走到水大人沒看 | Introduces `都` through all-at-home, both-small, both-entering-water, and all-not-in-water scenes. Reviews recent `裡`, `兩`, and `狗`; S02 was corrected from the request's mismatched display text to match the approved spokenText/reason. |
 | L041 | 爸 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸 | 我爸爸和你爸爸都很高 / 他的爸爸和兩隻狗都在家裡 / 我的爸爸沒有在家裡 / 兩隻小狗都走到門前 / 大人都沒在水裡 | 我和你都很高他的兩隻狗在家裡沒有小走到門前大人水 | Introduces `爸` and establishes fixed father designs for `我爸爸`, `你爸爸`, and `他爸爸`, each color-matched to the related child. Reviews recent `沒`, `裡`, `兩`, `狗`, and `都`; S05 reuses approved L040-S04 beach image. |
 | L042 | 媽 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽 | 爸媽兩人都在家裡 / 他的爸媽和兩隻小狗在山裡 / 狗爸爸和狗媽媽有兩隻小狗 / 小孩和狗都在家裡 / 爸爸的兩隻手都很大 | 爸媽兩人都在家裡他的和隻小狗山有孩手很大 | Introduces `媽` through parents-at-home, mountain-family, dog-family, home-with-children-and-dogs, and father-hand review scenes. Reviews recent `狗`, `都`, and `爸`; establishes mother palette rules for `我媽媽` and `他媽媽`. |
+| L043 | 愛 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛 | 爸爸媽媽都愛小孩 / 兩個小孩也愛爸爸和媽媽 / 他的爸媽和兩隻狗都在家裡 / 兩隻狗都在看小鳥飛 / 我愛看大人飛很高 | 爸媽都愛小孩兩個也和他的隻狗在家裡看鳥飛我大人很高 | Introduces `愛` through family affection and enjoying hang-glider watching. Reviews recent `都`, `爸`, and `媽`; visually establishes the fixed younger sister with twin pigtails for future family scenes. |
 
 ## Planned Lessons
 
-None yet. L042 已完成，下一課請從 planner 重新規劃。
+None yet. L043 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 
