@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 34:
+Characters taught after Lesson 35:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他`
 
 Recent review pool for the next lesson:
 
-`我 在 門 後 你 也 男 孩 看 前 的 飛 鳥 有 女 小 人 是 水 很 高 山 不 大 到 家 走 上`
+`我 是 女 孩 你 男 門 前 水 後 也 小 鳥 飛 很 高 人 在 山 不 大 有 看 的 到 家 走 上 他`
 
 ## Visual Continuity Ledger
 
@@ -28,7 +28,7 @@ Use this section before writing image prompts. Once a recurring person or family
 |---|---:|---|---|
 | 我 | L007 | Friendly young girl, preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, bright curious eyes, yellow top, coral-red pinafore dress, red shoes, warm expression, child-friendly picture-book style. | Always use this same girl whenever `我` appears. Use L007 images as the current reference. |
 | 你 | L012 | Friendly young boy, the same age as the fixed `我` girl, preschool to early elementary age, short slightly tousled dark hair, bright friendly eyes, sky-blue shirt, green shorts, blue shoes, small orange backpack, warm curious expression, child-friendly picture-book style. | Always use this same boy whenever `你` appears. Use L012-S01/L012-S02/L012-S03 as the current references. |
-| 他 | TBD | TBD after the character/role is introduced and reviewed. | Do not invent a new design until approved. |
+| 他 | L035 | Friendly sporty young boy, the same age as the fixed `我` girl and fixed `你` boy, short energetic slightly spiky black hair, bright open expression, plain orange athletic T-shirt, navy shorts, red sneakers, green wristband, no backpack. | Always use this same sporty boy whenever `他` appears. Keep him visually distinct from the fixed `你` boy, who wears a sky-blue shirt, green shorts, blue shoes, and an orange backpack. Use L035-S01/L035-S02/L035-S03/L035-S05 as the current references. |
 | 爸爸 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same father design in all future images. |
 | 媽媽 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same mother design in all future images. |
 | 哥哥 | TBD | TBD after the role is introduced and reviewed. | After approval, reuse the same older-brother design in all future images. |
@@ -80,10 +80,11 @@ Image reuse rule:
 | L032 | 不 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不 | 我不是鳥，也不是大人 / 門前有山，門後也有山 / 你是男孩，不是女孩 / 鳥不在門前，也不在門後 / 我在門後看門前的人 | 我不是鳥也大人門前有山後你男孩女孩在看的 | Introduces `不` through concrete negation and front/behind door scenes. Reviews recent `後`, `也`, and `是`; all five sentence images use newly generated reviewed picture-book assets. |
 | L033 | 到 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到 | 我到門前，你也到門前 / 大人到家，小孩也到家 / 我到門前看山也看水 / 鳥不在門前，也不在門後 / 你是男孩，不是女孩 | 我到門前你也大人家小孩看山水鳥不在後是男女 | Introduces `到` through arrival-at-door and arrival-home scenes. Reviews recent `也`, `是`, and `不`; the last two review sentences reuse approved L032 image meanings while using L033 audio. |
 | L034 | 走 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走 | 你走到我家 / 女孩不走，男孩也不走 / 我不是鳥，也不是大人 / 我看到門後有鳥也有人 / 我上山後，走到家 | 你走到我家女孩不男也我是鳥大人看門後有上山 | Introduces `走` through walking-to-home and not-walking scenes. Reviews recent `是`, `不`, and `到`; reuses approved L032-S01 image for the identity review sentence. |
+| L035 | 他 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他 | 他是男孩，不是女孩 / 他看到我，我看不到他 / 他走到山上，我也走到山上 / 女孩不走，男孩也不走 / 他是男孩，你也是男孩 | 他是男孩不女看到我走山上也你 | Introduces `他` through a new fixed sporty boy character. Reviews recent `不`, `到`, and `走`; reuses approved L034-S02 image for the not-walking review sentence. |
 
 ## Planned Lessons
 
-None yet. L034 已完成，下一課請從 planner 重新規劃。
+None yet. L035 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 

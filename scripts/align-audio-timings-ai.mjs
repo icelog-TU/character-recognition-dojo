@@ -48,6 +48,8 @@ function normalizeTranscribedHanChar(char) {
     ["门", "門"],
     ["后", "後"],
     ["廟", "鳥"],
+    ["它", "他"],
+    ["她", "他"],
   ]);
   return map.get(char) ?? char;
 }
