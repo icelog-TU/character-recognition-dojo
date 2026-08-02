@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 41:
+Characters taught after Lesson 45:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可`
 
 Recent review pool for the next lesson:
 
-`他 走 到 家 裡 沒 看 人 手 有 小 山 鳥 不 在 我 很 高 上 也 兩 的 隻 飛 下 狗 水 都 大 爸 和 你 門 前`
+`爸 媽 愛 書 可 我 和 都 看 小 鳥 不 男 女 孩 很 裡 有 他 家 兩 隻 狗 山 上 你 高 門 前`
 
 ## Visual Continuity Ledger
 
@@ -100,10 +100,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L042 | 媽 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽 | 爸媽兩人都在家裡 / 他的爸媽和兩隻小狗在山裡 / 狗爸爸和狗媽媽有兩隻小狗 / 小孩和狗都在家裡 / 爸爸的兩隻手都很大 | 爸媽兩人都在家裡他的和隻小狗山有孩手很大 | Introduces `媽` through parents-at-home, mountain-family, dog-family, home-with-children-and-dogs, and father-hand review scenes. Reviews recent `狗`, `都`, and `爸`; establishes mother palette rules for `我媽媽` and `他媽媽`. |
 | L043 | 愛 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛 | 爸爸媽媽都愛小孩 / 兩個小孩也愛爸爸和媽媽 / 他的爸媽和兩隻狗都在家裡 / 兩隻狗都在看小鳥飛 / 我愛看大人飛很高 | 爸媽都愛小孩兩個也和他的隻狗在家裡看鳥飛我大人很高 | Introduces `愛` through family affection and enjoying hang-glider watching. Reviews recent `都`, `爸`, and `媽`; visually establishes the fixed younger sister with twin pigtails for future family scenes. |
 | L044 | 書 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書 | 爸爸媽媽都愛看書 / 我的家裡都是書 / 我也很愛看書 / 他和爸媽在看狗的書 / 他家的狗都愛上山 | 爸媽都愛看書我的家裡是也很他和狗上山 | Introduces `書` through family reading, a home full of books, independent reading, and a dog encyclopedia scene. Reviews recent `爸`, `媽`, and `愛`; reinforces fixed sporty boy family and two fixed dogs on the mountain. |
+| L045 | 可 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可 | 男孩女孩都很可愛 / 書裡有可愛的小孩 / 我是可愛的小女孩 / 我和爸媽都愛看書 / 可是小鳥不愛看書 | 男孩女孩都很可愛書裡有小我爸媽看不鳥 | Introduces `可` with `可愛` and `可是`, using the corrected Taiwan zhuyin `ㄎㄜˇ`. Reviews recent `媽`, `愛`, and `書`; keeps the fixed three-child cast together and adds the fixed girl's home reading scene with her pet bird and cat. |
 
 ## Planned Lessons
 
-None yet. L044 已完成，下一課請從 planner 重新規劃。
+None yet. L045 已完成，下一課請從 planner 重新規劃。
 
 ## Planning Rule For New Lessons
 

@@ -7,17 +7,7 @@
     "可": "ㄎㄜˇ"
   },
   "title": "可",
-  "dependsOnLessons": [
-    {
-      "order": 44,
-      "lessonId": "L044",
-      "newChars": [
-        "書"
-      ],
-      "title": "書",
-      "status": "planned-not-yet-merged"
-    }
-  ],
+  "dependsOnLessons": [],
   "targetSentenceCount": 5,
   "generationConstraints": {
     "sentenceHanCharLength": {
@@ -74,9 +64,7 @@
       "書",
       "可"
     ],
-    "provisionalLearnedChars": [
-      "書"
-    ],
+    "provisionalLearnedChars": [],
     "preferReviewChars": [
       "他",
       "家",
@@ -122,7 +110,7 @@
     ],
     "missingRequiredCharsInCurrentSelection": []
   },
-  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-可。 平行備課依賴：本課假設 L044 會加入 書。可以先平行草擬，但必須等依賴課程已合併到 main 並重新匯出 planner-data 後，才可以把本課合併或推送到 main。 注音核對：request 原本寫 ㄎㄞˋ，但本課句子中的「可」都是「可愛／可是」的 ㄎㄜˇ，因此已修正為臺灣注音 ㄎㄜˇ。 核准句子：男孩女孩都很可愛；書裡有可愛的小孩；我是可愛的小女孩；我和爸媽都愛看書；可是小鳥不愛看書。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：他 家 裡 有 兩 隻 狗 我 沒 走 到 看 人 小 水 手 鳥 的 都 在 很 大 爸 和 你 高 門 前 媽 山 孩 愛 個 也 飛 書。 整課句子中，最近三課新字至少各出現一次：媽 愛 書。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-可。 L044 書已合併 main，因此本課可正式製作。 注音核對：可在本課讀 ㄎㄜˇ（可愛、可是）。 核准句子：男孩女孩都很可愛；書裡有可愛的小孩；我是可愛的小女孩；我和爸媽都愛看書；可是小鳥不愛看書。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：他 家 裡 有 兩 隻 狗 我 沒 走 到 看 人 小 水 手 鳥 的 都 在 很 大 爸 和 你 高 門 前 媽 山 孩 愛 個 也 飛 書。 整課句子中，最近三課新字至少各出現一次：媽 愛 書。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
   "approvedSentences": [
     {
       "text": "男孩女孩都很可愛",
