@@ -1324,10 +1324,10 @@
           "id": "L007-G02",
           "type": "teach-character",
           "sentenceId": "L007-S03",
-          "targetChar": "手",
+          "targetChar": "我",
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
-            2
+            0
           ]
         },
         {
@@ -2499,26 +2499,26 @@
         {
           "id": "L010-G03",
           "type": "missing-character",
-          "sentenceId": "L010-S03",
-          "targetChar": "手",
-          "prompt": "字寶寶不見了，把「手」找回來。",
+          "sentenceId": "L010-S04",
+          "targetChar": "上",
+          "prompt": "字寶寶不見了，把「上」找回來。",
           "missingIndexes": [
-            2
+            3
           ],
           "options": [
             {
+              "id": "up",
+              "text": "上",
+              "correct": true
+            },
+            {
               "id": "hand",
               "text": "手",
-              "correct": true
+              "correct": false
             },
             {
               "id": "mountain",
               "text": "山",
-              "correct": false
-            },
-            {
-              "id": "up",
-              "text": "上",
               "correct": false
             }
           ]
@@ -2877,9 +2877,9 @@
         {
           "id": "L011-G01",
           "type": "find-character",
-          "sentenceId": "L011-S01",
-          "targetChar": "上",
-          "prompt": "找到「上」。"
+          "sentenceId": "L011-S02",
+          "targetChar": "下",
+          "prompt": "找到「下」。"
         },
         {
           "id": "L011-G02",
