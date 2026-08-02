@@ -985,6 +985,7 @@
         和: "ㄏㄜˊ",
         很: "ㄏㄣˇ",
         是: "ㄕˋ",
+        爸: "ㄅㄚˋ",
       };
       const $ = (id) => document.getElementById(id);
 
@@ -1488,42 +1489,51 @@
                 : bankEntries.find((bankEntry) => bankEntry.char === entry.char)?.sentenceCandidates || [],
             source: "manual",
           }));
-        const recommendations = [...manualEntries, ...bankEntries.filter((entry) => !manualChoiceChars.has(entry.char))]
+        const toRecommendation = (entry) => {
+          const shouldSkipLocalManualGeneration = entry.source === "manual" && !(entry.sentenceCandidates || []).length;
+          const optimization = shouldSkipLocalManualGeneration
+            ? emptyOptimization({ lessons, learnedChars, requiredRecentChars, reviewCountChars }, entry.char)
+            : optimizeChoiceSentencesFromEntry(entry, {
+                lessons,
+                learnedChars,
+                requiredRecentChars,
+                reviewCountChars,
+              });
+          const score = scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars, optimization, lessons);
+          if (score === null && entry.source !== "manual") return null;
+          return {
+            choiceId: `choice-${entry.char}`,
+            newChars: [entry.char],
+            zhuyin: { [entry.char]: entry.zhuyin },
+            title: entry.char,
+            rationale: entry.why,
+            score: entry.source === "manual" ? Number(score ?? entry.priority ?? 1000) - 10000 : score,
+            source: entry.source || "bank",
+            optimization,
+            sentenceCandidates:
+              entry.source === "manual"
+                ? optimization.candidates.map((sentence) => ({
+                    ...sentence,
+                    reason: sentence.reason.startsWith("自我審核通過")
+                      ? sentence.reason
+                      : `自我審核通過：${sentence.reason}`,
+                  }))
+                : optimization.candidates,
+          };
+        };
+        const manualRecommendations = manualEntries
+          .map(toRecommendation)
+          .filter(Boolean)
+          .sort((a, b) => a.score - b.score);
+        const bankRecommendations = bankEntries
+          .filter((entry) => !manualChoiceChars.has(entry.char))
           .map((entry) => {
-            const shouldSkipLocalManualGeneration = entry.source === "manual" && !(entry.sentenceCandidates || []).length;
-            const optimization = shouldSkipLocalManualGeneration
-              ? emptyOptimization({ lessons, learnedChars, requiredRecentChars, reviewCountChars }, entry.char)
-              : optimizeChoiceSentencesFromEntry(entry, {
-                  lessons,
-                  learnedChars,
-                  requiredRecentChars,
-                  reviewCountChars,
-                });
-            const score = scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars, optimization, lessons);
-            if (score === null) return null;
-            return {
-              choiceId: `choice-${entry.char}`,
-              newChars: [entry.char],
-              zhuyin: { [entry.char]: entry.zhuyin },
-              title: entry.char,
-              rationale: entry.why,
-              score: manualChoiceChars.has(entry.char) ? score - 10000 : score,
-              source: entry.source || "bank",
-              optimization,
-              sentenceCandidates:
-                entry.source === "manual"
-                  ? optimization.candidates.map((sentence) => ({
-                      ...sentence,
-                      reason: sentence.reason.startsWith("自我審核通過")
-                        ? sentence.reason
-                        : `自我審核通過：${sentence.reason}`,
-                    }))
-                  : optimization.candidates,
-            };
+            return toRecommendation(entry);
           })
           .filter(Boolean)
           .sort((a, b) => a.score - b.score)
           .slice(0, 5);
+        const recommendations = [...manualRecommendations, ...bankRecommendations].slice(0, Math.max(5, manualRecommendations.length));
         return {
           lessons,
           latestOrder,
