@@ -3597,6 +3597,7 @@ function SentencePracticePreview({
   const primingPressActiveRef = useRef(false);
   const releasedDuringPrimeRef = useRef(false);
   const recordingStreamRef = useRef<MediaStream | null>(null);
+  const roundCompleteActionRef = useRef<HTMLDivElement | null>(null);
   const onSpeakStartRef = useRef(onSpeakStart);
   const onSpeakEndRef = useRef(onSpeakEnd);
   const han = sentence ? hanChars(sentence.text) : [];
@@ -3679,6 +3680,21 @@ function SentencePracticePreview({
     if (!isCurrentRoundComplete || disabled) return;
     void speakStageFour(roundCompletionText(doneAfterThisRound));
   }, [disabled, doneAfterThisRound, isCurrentRoundComplete, speakStageFour]);
+
+  useEffect(() => {
+    if (!isCurrentRoundComplete || disabled) return;
+    let firstFrame = 0;
+    let secondFrame = 0;
+    firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        if (roundCompleteActionRef.current) scrollActiveLessonWorkIntoView(roundCompleteActionRef.current);
+      });
+    });
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      window.cancelAnimationFrame(secondFrame);
+    };
+  }, [disabled, game?.id, isCurrentRoundComplete]);
 
   if (!game || !sentence) {
     return <p className="block-note">這一課還沒有設定句子遊戲。</p>;
@@ -4097,7 +4113,7 @@ function SentencePracticePreview({
       <StageFourHelper text={gameGuide} onReplay={replayInstruction} />
       {gameBody}
       {isCurrentRoundComplete && (
-        <div className="sentence-game-complete">
+        <div ref={roundCompleteActionRef} className="sentence-game-complete">
           <p className="success">完成這一題。</p>
           <button type="button" className="btn next-game-button" onClick={() => onRoundDone(doneAfterThisRound)}>
             {doneAfterThisRound ? "領取獎勵" : "下一題"}
