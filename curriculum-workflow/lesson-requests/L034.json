@@ -1,0 +1,137 @@
+{
+  "order": 34,
+  "newChars": [
+    "走"
+  ],
+  "zhuyin": {
+    "走": "ㄗㄡˇ"
+  },
+  "title": "走",
+  "dependsOnLessons": [
+    {
+      "order": 33,
+      "lessonId": "L033",
+      "newChars": [
+        "到"
+      ],
+      "title": "到",
+      "status": "merged"
+    }
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走"
+    ],
+    "provisionalLearnedChars": [],
+    "preferReviewChars": [
+      "男",
+      "孩",
+      "和",
+      "女",
+      "在",
+      "門",
+      "前",
+      "我",
+      "看",
+      "的",
+      "飛",
+      "鳥",
+      "大",
+      "人",
+      "上",
+      "後",
+      "有",
+      "山",
+      "水",
+      "你",
+      "也",
+      "小",
+      "是",
+      "很",
+      "高",
+      "不",
+      "到"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "是",
+      "不",
+      "到"
+    ],
+    "missingRequiredCharsInCurrentSelection": []
+  },
+  "teacherNotes": "由網頁下一課規劃工具產生。 選定候選字：choice-走。 L033「到」已合併到 main，本課可以製作並推送。 核准句子：你走到我家；女孩不走，男孩也不走；我不是鳥，也不是大人；我看到門後有鳥也有人；我上山後，走到家。 句長目標：每句 4-12 個漢字。 優先使用最近五課複習字：男 孩 和 女 在 門 前 我 看 的 飛 鳥 大 人 上 後 有 山 水 你 也 小 是 很 高 不 到。 整課句子中，最近三課新字至少各出現一次：是 不 到。 只能使用已學字加上本課新字。 撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
+  "approvedSentences": [
+    {
+      "text": "你走到我家",
+      "spokenText": "你走到我家",
+      "focusChar": "走",
+      "reason": "教師修改候選句。自我審核通過：練習走到家的動作與方向。"
+    },
+    {
+      "text": "女孩不走，男孩也不走",
+      "spokenText": "女孩不走男孩也不走",
+      "focusChar": "走",
+      "reason": "教師修改候選句。自我審核通過：用不來練習否定與走的對比。",
+      "imageNotes": "兩個人在遊樂場的鬼屋前面都很害怕，誰也不敢走進去。"
+    },
+    {
+      "text": "我不是鳥，也不是大人",
+      "spokenText": "我不是鳥也不是大人",
+      "focusChar": "我",
+      "reason": "自我審核通過：直接取自近五課已核准句，作為複習候選。"
+    },
+    {
+      "text": "我看到門後有鳥也有人",
+      "spokenText": "我看到門後有鳥也有人",
+      "focusChar": "我",
+      "reason": "教師新增句。"
+    },
+    {
+      "text": "我上山後，走到家",
+      "spokenText": "我上山後走到家",
+      "focusChar": "走",
+      "reason": "教師新增句。"
+    }
+  ]
+}
