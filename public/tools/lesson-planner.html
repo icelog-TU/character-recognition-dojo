@@ -846,6 +846,7 @@
       const sentenceLengthRange = { min: 4, max: 12 };
       const targetApprovedSentenceCount = 5;
       const targetGeneratedSentenceCount = 10;
+      const targetReviewCandidateCount = 8;
       const targetNewCharCountInLesson = 3;
       const plannerStoragePrefix = "character-recognition-dojo:lesson-planner:v2:";
       const activePlannerStorageKey = `${plannerStoragePrefix}active`;
@@ -1771,12 +1772,13 @@
       function replaceManualChoiceCandidates(choice, candidates) {
         const char = choice.newChars[0];
         const bankEntry = bankEntryForChar(char);
-        const reviewFill = recentReviewSentenceCandidates(choice, candidates, targetGeneratedSentenceCount - candidates.length);
+        const reviewFill = recentReviewSentenceCandidates(choice, candidates, targetReviewCandidateCount);
+        const sentenceCandidates = [...candidates, ...reviewFill];
         const replacement = {
           char,
           zhuyin: choice.zhuyin?.[char] || bankEntry?.zhuyin || "",
           why: choice.rationale || bankEntry?.why || "教師用 AI 重新產生候選句。",
-          sentenceCandidates: [...candidates, ...reviewFill],
+          sentenceCandidates,
         };
         state.manualChoices = [replacement, ...state.manualChoices.filter((entry) => entry.char !== char)];
         state.selectedIndexes.set(choice.choiceId, new Set());
@@ -1784,6 +1786,11 @@
         state.candidateDraftsBySentence = new Map([...state.candidateDraftsBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
         state.candidateEditsBySentence = new Map([...state.candidateEditsBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
         state.imageNotesBySentence = new Map([...state.imageNotesBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
+        return {
+          aiCount: candidates.length,
+          reviewCount: reviewFill.length,
+          totalCount: sentenceCandidates.length,
+        };
       }
 
       function candidateSentence(choice, sentenceIndex) {
@@ -2415,6 +2422,8 @@
         render(model);
         $("statusLine").textContent = `正在請 AI 替「${choice.newChars.join("")}」產生候選句。`;
 
+        let finalStatus = "";
+        let shouldScrollToChoice = false;
         try {
           const lessonRequest = buildLessonRequest(model, choice, []);
           const response = await fetch(aiServiceUrl(), {
@@ -2435,19 +2444,29 @@
           if (!candidates.length) {
             throw new Error("AI 回傳的句子沒有通過 Planner 規則檢查，請再按一次或改字。");
           }
-          replaceManualChoiceCandidates(choice, candidates);
+          const replacement = replaceManualChoiceCandidates(choice, candidates);
           state.selectedChoiceId = choiceId;
           state.previewChoiceId = choiceId;
           savePlannerMemory(currentModel());
-          render(currentModel());
           const warningText = (payload.warnings || []).length ? ` ${payload.warnings.join(" ")}` : "";
-          $("statusLine").textContent = `AI 已替「${choice.newChars.join("")}」產生 ${candidates.length} 句候選句，可以直接審核和修改。${warningText}`;
-          scrollSelectedChoiceIntoView();
+          finalStatus = `AI 已替「${choice.newChars.join("")}」產生 ${replacement.aiCount} 句新候選，並保留 ${replacement.reviewCount} 句近五課複習候選。${warningText}`;
+          shouldScrollToChoice = true;
         } catch (error) {
-          $("statusLine").textContent = `AI 生成失敗：${error.message}`;
+          const replacement = replaceManualChoiceCandidates(choice, []);
+          if (replacement.reviewCount) {
+            state.selectedChoiceId = choiceId;
+            state.previewChoiceId = choiceId;
+            savePlannerMemory(currentModel());
+            finalStatus = `AI 生成失敗：${error.message} 已先保留 ${replacement.reviewCount} 句近五課複習候選，避免候選池空白。`;
+            shouldScrollToChoice = true;
+          } else {
+            finalStatus = `AI 生成失敗：${error.message}`;
+          }
         } finally {
           state.aiGeneratingChoiceId = "";
           render(currentModel());
+          if (finalStatus) $("statusLine").textContent = finalStatus;
+          if (shouldScrollToChoice) scrollSelectedChoiceIntoView();
         }
       }
 
@@ -2650,12 +2669,12 @@
             $("statusLine").textContent = `目前已學字還不夠，無法替「${choice.newChars.join("")}」產生可用候選句。`;
             return;
           }
-          replaceManualChoiceCandidates(choice, candidates);
+          const replacement = replaceManualChoiceCandidates(choice, candidates);
           state.selectedChoiceId = choiceId;
           state.previewChoiceId = choiceId;
           savePlannerMemory(currentModel());
           render(currentModel());
-          $("statusLine").textContent = `已替「${choice.newChars.join("")}」生成 ${candidates.length} 句候選句，可以逐句修改。`;
+          $("statusLine").textContent = `已替「${choice.newChars.join("")}」生成 ${replacement.aiCount} 句候選，並保留 ${replacement.reviewCount} 句近五課複習候選。`;
           scrollSelectedChoiceIntoView();
           return;
         }

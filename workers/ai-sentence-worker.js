@@ -2,6 +2,7 @@ const DEFAULT_MODEL = "gpt-5-mini";
 const MAX_ATTEMPTS = 3;
 const REVIEW_SENTENCE_BUFFER = 2;
 const EXTRA_AI_CANDIDATE_BUFFER = 4;
+const MIN_AI_SENTENCE_SUCCESS_COUNT = 1;
 
 function jsonResponse(request, env, body, status = 200) {
   return new Response(JSON.stringify(body, null, 2), {
@@ -186,6 +187,7 @@ function functionCharGuidance(targetChar) {
     的: "「的」用來連接修飾語和名詞，句子要自然，不要只有破碎片語。",
     在: "「在」表示位置或正在做事，適合用在人在門前、鳥在山上、正在看等自然句型。",
     有: "「有」表示擁有或存在，適合用在我有、門前有、山上有等自然句型。",
+    見: "「見」可以和已學字「看」組成「看見」。優先用看見小鳥、看見你、看見門前的人等自然句；不要使用未學字如到、聽、遇、面。",
   };
   return guidance[targetChar] || "請依照這個新字的自然詞性造句，不要把功能字硬塞成名詞。";
 }
@@ -267,7 +269,7 @@ function normalizeLessonRequest(raw) {
 async function generateSentences(request, env) {
   const targetCount = Math.max(1, Math.min(20, request.targetSentenceCount || 10));
   const requestedAiCount = Math.min(20, targetCount + EXTRA_AI_CANDIDATE_BUFFER);
-  const minimumAcceptedCount = Math.max(1, targetCount - REVIEW_SENTENCE_BUFFER);
+  const preferredMinimumCount = Math.max(1, targetCount - REVIEW_SENTENCE_BUFFER);
   let best = [];
   let rejections = [];
   let model = env.OPENAI_TEXT_MODEL || DEFAULT_MODEL;
@@ -286,17 +288,23 @@ async function generateSentences(request, env) {
       };
     }
   }
-  if (best.length >= minimumAcceptedCount) {
+  if (best.length >= MIN_AI_SENTENCE_SUCCESS_COUNT) {
+    const warnings =
+      best.length >= preferredMinimumCount
+        ? [`Only ${best.length}/${targetCount} AI candidates passed validation; the Planner may add review sentences.`]
+        : [
+            `Only ${best.length}/${targetCount} AI candidates passed validation; the Planner should keep these and add recent review sentences.`,
+          ];
     return {
       sentenceCandidates: best.slice(0, targetCount),
       model,
       attempts: MAX_ATTEMPTS,
-      warnings: [`Only ${best.length}/${targetCount} AI candidates passed validation; the Planner may add review sentences.`],
+      warnings,
     };
   }
   const details = rejections.slice(0, 8).map((item) => `${item.text || "空句"}: ${item.reason}`);
   throw new Error(
-    `Only ${best.length}/${targetCount} AI candidates passed validation; at least ${minimumAcceptedCount} are required. ${details.join("; ")}`,
+    `No AI candidates passed validation. ${details.join("; ")}`,
   );
 }
 
