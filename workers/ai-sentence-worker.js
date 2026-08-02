@@ -1,5 +1,7 @@
 const DEFAULT_MODEL = "gpt-5-mini";
 const MAX_ATTEMPTS = 3;
+const REVIEW_SENTENCE_BUFFER = 2;
+const EXTRA_AI_CANDIDATE_BUFFER = 4;
 
 function jsonResponse(request, env, body, status = 200) {
   return new Response(JSON.stringify(body, null, 2), {
@@ -249,11 +251,13 @@ function normalizeLessonRequest(raw) {
 
 async function generateSentences(request, env) {
   const targetCount = Math.max(1, Math.min(20, request.targetSentenceCount || 10));
+  const requestedAiCount = Math.min(20, targetCount + EXTRA_AI_CANDIDATE_BUFFER);
+  const minimumAcceptedCount = Math.max(1, targetCount - REVIEW_SENTENCE_BUFFER);
   let best = [];
   let rejections = [];
   let model = env.OPENAI_TEXT_MODEL || DEFAULT_MODEL;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
-    const aiJson = await callOpenAI(env, { ...request, targetSentenceCount: targetCount }, rejections);
+    const aiJson = await callOpenAI(env, { ...request, targetSentenceCount: requestedAiCount }, rejections);
     const items = Array.isArray(aiJson) ? aiJson : aiJson.sentenceCandidates || aiJson.candidates || [];
     const { valid, rejected } = validateCandidates(items, request);
     if (valid.length > best.length) best = valid;
@@ -267,16 +271,18 @@ async function generateSentences(request, env) {
       };
     }
   }
-  if (best.length > 0) {
+  if (best.length >= minimumAcceptedCount) {
     return {
       sentenceCandidates: best.slice(0, targetCount),
       model,
       attempts: MAX_ATTEMPTS,
-      warnings: [`Only ${best.length}/${targetCount} candidates passed validation.`],
+      warnings: [`Only ${best.length}/${targetCount} AI candidates passed validation; the Planner may add review sentences.`],
     };
   }
   const details = rejections.slice(0, 8).map((item) => `${item.text || "空句"}: ${item.reason}`);
-  throw new Error(`No AI candidates passed validation. ${details.join("; ")}`);
+  throw new Error(
+    `Only ${best.length}/${targetCount} AI candidates passed validation; at least ${minimumAcceptedCount} are required. ${details.join("; ")}`,
+  );
 }
 
 export default {

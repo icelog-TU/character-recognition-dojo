@@ -1541,6 +1541,11 @@
         `;
       }
 
+      function aiGenerateButtonText(choice) {
+        if (state.aiGeneratingChoiceId === choice.choiceId) return "AI 生成中";
+        return choice.sentenceCandidates.length ? "AI 再生成 10 句" : "AI 生成 10 句";
+      }
+
       function renderChoices(model) {
         const originalRanks = new Map(model.recommendations.map((choice, index) => [choice.choiceId, index + 1]));
         const orderedRecommendations = [...model.recommendations].sort((a, b) => {
@@ -1593,7 +1598,7 @@
                     }
                     ${
                       previewing
-                        ? `<button class="btn secondary" type="button" data-ai-generate="${choice.choiceId}" ${state.aiGeneratingChoiceId ? "disabled" : ""}>${state.aiGeneratingChoiceId === choice.choiceId ? "AI 生成中" : "AI 生成 10 句"}</button>`
+                        ? `<button class="btn secondary" type="button" data-ai-generate="${choice.choiceId}" ${state.aiGeneratingChoiceId ? "disabled" : ""}>${aiGenerateButtonText(choice)}</button>`
                         : ""
                     }
                   </div>
@@ -1669,7 +1674,7 @@
                             <div class="sentence-text">還沒有候選句</div>
                              <p>可以按下面按鈕立刻產生 10 句候選句，再逐句修改；也可以自己新增句子。</p>
                              <div class="candidate-tools">
-                               <button class="btn" type="button" data-ai-generate="${choice.choiceId}" ${state.aiGeneratingChoiceId ? "disabled" : ""}>AI 生成 10 句</button>
+                               <button class="btn" type="button" data-ai-generate="${choice.choiceId}" ${state.aiGeneratingChoiceId ? "disabled" : ""}>${aiGenerateButtonText(choice)}</button>
                                <button class="btn secondary" type="button" data-generate-candidates="${choice.choiceId}">本機草稿 10 句</button>
                              </div>
                           </div>
@@ -2404,7 +2409,8 @@
           state.previewChoiceId = choiceId;
           savePlannerMemory(currentModel());
           render(currentModel());
-          $("statusLine").textContent = `AI 已替「${choice.newChars.join("")}」產生 ${candidates.length} 句候選句，可以直接審核和修改。`;
+          const warningText = (payload.warnings || []).length ? ` ${payload.warnings.join(" ")}` : "";
+          $("statusLine").textContent = `AI 已替「${choice.newChars.join("")}」產生 ${candidates.length} 句候選句，可以直接審核和修改。${warningText}`;
           scrollSelectedChoiceIntoView();
         } catch (error) {
           $("statusLine").textContent = `AI 生成失敗：${error.message}`;
