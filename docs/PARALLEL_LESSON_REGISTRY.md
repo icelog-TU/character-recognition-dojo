@@ -7,7 +7,7 @@ Use this file only for **not-yet-merged** lesson work. The source of truth for m
 - `src/curriculum/sample-lessons.json`
 - `docs/CURRICULUM_LEDGER.md`
 
-When the teacher wants to prepare 2-3 lessons at the same time, register each active lesson here before generating assets.
+When the teacher wants to prepare 2-3 lessons at the same time, register each active lesson here before any real work starts. This registry is mandatory coordination state, not optional notes.
 
 ## Active Parallel Lessons
 
@@ -30,18 +30,38 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 ## How To Register Work
 
 1. Run `git fetch origin` and inspect latest `origin/main`.
-2. Add or update exactly one row for the lesson this thread owns.
+2. Before creating request files, generating packets, images, audio, or editing lesson JSON, add or update exactly one row for the lesson this thread owns.
 3. Fill `New Character(s)` as soon as the teacher chooses the character.
-4. If a prior lesson is not merged, list it in `Depends On`, for example `L050:來`.
+4. If a prior lesson is not merged, list it in `Depends On`, for example `L051:樣`.
 5. Put those not-yet-merged characters in `Provisional Learned Chars`.
-6. Commit and push the registry update before starting large image/audio work when possible.
+6. Commit and push the registry update before starting large image/audio work. If a quick local claim is needed first, update and push the registry as the first commit before any asset generation.
+
+## Required Registry Checkpoints
+
+Every parallel lesson thread must update this registry at these checkpoints:
+
+1. **Start / claim:** before lesson request, packet, image, audio, or curriculum JSON work starts.
+   - Status should be `claimed`, `request-ready`, or `drafting`.
+   - `Owner / Thread`, `Branch / Commit`, `Depends On`, and owned file paths must be filled.
+2. **Assets prepared:** after reviewed images, audio, and timings are prepared but before the lesson can merge.
+   - Status should be `ready-blocked-by-dependency` if an earlier lesson is not merged yet.
+   - Status should be `merge-ready` only if dependencies are already merged and full checks pass.
+   - `Assets` must list `public/assets/lessons/L###/` and any audio inbox or draft locations used.
+3. **Uploaded / pushed branch:** after pushing a task branch or any remote work for that lesson.
+   - Update `Branch / Commit` to the pushed branch and short commit hash.
+   - `Notes` must say whether it is only a branch/draft push or ready to merge.
+4. **Merged to main:** after the lesson enters `main` and `docs/CURRICULUM_LEDGER.md` is updated.
+   - Remove the row or change it to `merged` only in the same commit that clears/archive it.
+   - The registry must not keep stale active rows for lessons already merged into `src/curriculum/sample-lessons.json`.
+
+If a thread cannot push the registry update, it must say so in chat and must not start large image/audio work as invisible parallel work.
 
 Each parallel lesson thread must also state ownership in chat, for example:
 
 ```text
-I am claiming L051「到」.
+I am claiming L051:樣.
 I own curriculum-workflow/lesson-requests/L051.json, curriculum-workflow/generated/L051-generation-packet.md, curriculum-workflow/audio-inbox/L051/, and public/assets/lessons/L051/.
-I depend on L050「來」.
+I depend on L050:好 being merged first.
 ```
 
 ## Dependency Rules

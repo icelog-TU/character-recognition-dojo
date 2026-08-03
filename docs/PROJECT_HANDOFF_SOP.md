@@ -87,13 +87,16 @@ The user may ask several Codex threads to prepare consecutive lessons at the sam
 Rules for this workflow:
 
 - Parallel work is limited to drafting and asset preparation until dependencies are merged.
-- The shared provisional sequence is recorded in `docs/PARALLEL_LESSON_REGISTRY.md`; update it before starting large image/audio work.
+- The shared provisional sequence is recorded in `docs/PARALLEL_LESSON_REGISTRY.md`.
+- Registry updates are mandatory, not optional: update it before starting any parallel lesson work, after assets/checks are prepared, after pushing a branch or draft, and after the lesson merges.
+- Do not do invisible parallel lesson work. If a thread is preparing L051, L052, or later, that lesson must be visible in the registry before request, packet, image, audio, or curriculum JSON work starts.
 - A later lesson request must clearly list not-yet-merged prior lessons in `dependsOnLessons` and those characters in `provisionalLearnedChars`.
 - Each thread must announce the exact lesson and asset folder it owns, such as `L050` and `public/assets/lessons/L050/`.
 - Raw image/audio generation may happen in parallel by lesson folder, but JSON-writing asset commands must still run one at a time and rebase on latest `origin/main`.
 - Do not merge a later lesson into `main` until all earlier dependency lessons are present on latest `origin/main`.
 - Before merging the later lesson, fetch/rebase, confirm the dependencies are now real curriculum, re-check allowed characters, update `docs/CURRICULUM_LEDGER.md`, and run the full production checks.
 - If an earlier lesson's chosen character changes, every later parallel lesson that depended on it must be rechecked before merge.
+- After a lesson enters `main`, clear its active registry row or mark it `merged` in the same cleanup commit. The registry should never show already-merged lessons as active work.
 
 This project optimizes for fast curriculum throughput, but `main` must remain a valid sequential curriculum at all times.
 

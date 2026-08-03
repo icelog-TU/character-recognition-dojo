@@ -9,7 +9,7 @@ For merged lessons, use `docs/CURRICULUM_LEDGER.md` as the running lesson sequen
 ## Lesson Pipeline
 
 0. Run `git fetch origin`, check `docs/CURRICULUM_LEDGER.md`, and check `docs/PARALLEL_LESSON_REGISTRY.md`.
-1. Create or claim a lesson row in `docs/PARALLEL_LESSON_REGISTRY.md` if this lesson is being prepared in parallel before its dependencies are merged.
+1. Create or claim a lesson row in `docs/PARALLEL_LESSON_REGISTRY.md` before starting any parallel lesson work. This is required before creating request files, generating packets, images, audio, or lesson JSON for a not-yet-merged lesson.
 2. Create a lesson request in `curriculum-workflow/lesson-requests/`.
 3. Check `docs/CURRICULUM_LEDGER.md` for the merged learned character set and recent review pool. If this is a parallel-prepared later lesson, also check registered provisional dependencies.
 4. Run `npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L004-example.json`.
@@ -33,6 +33,7 @@ Parallel production means **parallel drafting and asset preparation**, not unord
 Allowed parallel work:
 
 - The provisional sequence must be registered in `docs/PARALLEL_LESSON_REGISTRY.md`.
+- Registration is not optional. A parallel lesson must appear in the registry before work starts, must be updated after assets/checks are prepared, and must be updated again after any branch push or merge.
 - A later lesson may be drafted before the immediately previous lesson is merged if the teacher has explicitly chosen the previous lesson's new character(s).
 - The later lesson request must include `dependsOnLessons` for any not-yet-merged prior lesson and must list those prior new characters in `provisionalLearnedChars`.
 - The AI must treat the lesson request's `allowedChars` as the temporary locked boundary for drafting, image prompts, sentence audio, and char timings.
@@ -42,6 +43,7 @@ Allowed parallel work:
 
 Not allowed in parallel work:
 
+- Do not do invisible parallel work. If a thread has started L051, L052, or later work, that lesson must be visible in `docs/PARALLEL_LESSON_REGISTRY.md`.
 - Do not merge or push a later lesson to `main` before all `dependsOnLessons` are merged into `main`.
 - Do not let two threads edit `src/curriculum/sample-lessons.json` for different lessons at the same time without rebasing on latest `origin/main`.
 - Do not regenerate or overwrite another thread's lesson assets.
@@ -59,6 +61,17 @@ Before merging a parallel-prepared later lesson:
 8. Run the full production checks before push.
 
 If a dependency lesson changed its new character, sentence set, or review-character requirements after the later lesson was drafted, stop and reconcile before merging. The later lesson may need new sentences, images, audio, or timings.
+
+## Parallel Registry Update Points
+
+For every parallel-prepared lesson, update `docs/PARALLEL_LESSON_REGISTRY.md` at these moments:
+
+1. **Start / claim:** before request, packet, image, audio, or curriculum JSON work starts.
+2. **Assets prepared:** after reviewed images, audio, and timings are prepared, even if the lesson is still blocked by a dependency.
+3. **Uploaded / branch pushed:** after pushing the lesson branch or any remote draft work; record the branch and short commit.
+4. **Merged:** after the lesson enters `main`; clear the active row or mark it `merged` in the same cleanup commit.
+
+If the registry cannot be pushed, the thread must say so in chat and must not continue with large invisible asset work.
 
 ## Next-Lesson Planner Tool
 
