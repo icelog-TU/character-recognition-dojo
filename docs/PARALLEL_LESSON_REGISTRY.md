@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L061 | 坐 | claimed | Codex L061 production thread | codex/l061-zuo @ 6a9f906 | none | none | `curriculum-workflow/lesson-requests/L061.json`; `curriculum-workflow/generated/L061-generation-packet.md`; `curriculum-workflow/drafts/L061-draft.json` | `public/assets/lessons/L061/`; `curriculum-workflow/audio-inbox/L061/` | Start / claim checkpoint. Teacher request supplied; L060 is already in production, so `去` is a real learned character for this lesson. |
 
 ## Status Values
 
