@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L060 | 去 | assets | Codex thread L060 去 | codex/l060-qu @ rebased | none | none | `curriculum-workflow/lesson-requests/L060.json`; `curriculum-workflow/generated/L060-generation-packet.md`; `curriculum-workflow/drafts/L060-draft.json` | `public/assets/lessons/L060/`; `curriculum-workflow/audio-inbox/L060/` | Images, AI audio, and AI charTimings prepared; curriculum and production asset validations passed. Full verify pending after rebase. |
 | L061 | review lesson 1 | claimed | Codex L061-L062 review thread | pending | L060:去 | 去 | curriculum-workflow/lesson-requests/L061.json / curriculum-workflow/generated/L061-generation-packet.md | public/assets/lessons/L061/ | First review pair after L060; covers L001-L030 together with L062. Do not merge until L060 is merged and review lesson flow is production-ready. |
 | L062 | review lesson 2 | claimed | Codex L061-L062 review thread | pending | L060:去 L061:review | 去 | curriculum-workflow/lesson-requests/L062.json / curriculum-workflow/generated/L062-generation-packet.md | public/assets/lessons/L062/ | Second review lesson in the first pair; pair-level coverage must be checked before either lesson ships. |
 
@@ -86,3 +85,4 @@ npm run curriculum:audit-state
 ```
 
 If another thread changed the registry, rebase first and preserve both threads' rows. Do not delete another active row unless that lesson is already merged or the user explicitly cancels it.
+
