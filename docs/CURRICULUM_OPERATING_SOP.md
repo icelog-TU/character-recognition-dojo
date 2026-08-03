@@ -136,6 +136,34 @@ npm run curriculum:export-planner
 npm run verify
 ```
 
+## Review Lesson Cycle
+
+Starting after L060, the course inserts two review lessons after every 30-lesson milestone.
+
+The review cycle is delayed by one 30-lesson block so the review targets older material:
+
+- After L060, add two review lessons for L001-L030.
+- After L090, add two review lessons for L031-L060.
+- After L120, add two review lessons for L061-L090.
+- Continue the same pattern every 30 lessons.
+
+Formula:
+
+- Milestone `M` starts at 60 and increases by 30.
+- The two review lessons after milestone `M` cover lesson range `M - 59` through `M - 30`.
+- Each review lesson has exactly 5 reviewed sentences.
+- The pair therefore has 10 reviewed sentences total.
+- Across those 10 sentences, every new character introduced in the covered 30-lesson range must appear at least once.
+
+Rules:
+
+- Review lessons introduce no new characters.
+- Review sentence text may use characters learned by the milestone, but the required coverage target is the older 30-lesson range.
+- The two review lessons should be planned as one pair so coverage can be checked across all 10 sentences before either lesson ships.
+- Do not add placeholder review lessons to `src/curriculum/sample-lessons.json`. Only add them after sentences, images, audio, timings, and review coverage are production-ready.
+- Until the review lesson flow is fully implemented as playable curriculum, use website placeholder cards to reserve the pair.
+- The first reserved pair is after L060: two 5-sentence review lessons covering all new characters from L001-L030.
+
 ## Dependency Recheck Before Merge
 
 Before merging a parallel-prepared lesson:

@@ -30,6 +30,7 @@
 - L054 introduces `邊`.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
 - L006-L054 include Stage 4 fixed sentence games after picture-supported listening.
+- Review lesson rhythm is reserved: after L060 add two 5-sentence review lessons covering all new characters from L001-L030; after L090 cover L031-L060; continue every 30 lessons.
 - Check `docs/CURRICULUM_LEDGER.md` for the latest merged lesson sequence.
 - Check `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson work.
 

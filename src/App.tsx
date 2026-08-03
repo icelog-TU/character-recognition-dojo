@@ -18,6 +18,14 @@ type AudioPlayOptions = {
 type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "stage4" | "advance2" | "advance3" | "advance4" | null;
 type LessonDestination = "home" | "next";
 type LessonReward = { coins: number; stars: number };
+type ReviewLessonSlot = {
+  id: string;
+  milestone: number;
+  sequence: 1 | 2;
+  reviewStart: number;
+  reviewEnd: number;
+  sentenceCount: number;
+};
 type RecordDetailKind = "coins" | "stars" | "streak";
 type PlaybackStatus = { playing: boolean; paused: boolean };
 type TeachCharacterPhase = "reading" | "asking" | "ready" | "priming" | "recording" | "reciting" | "done";
@@ -93,6 +101,11 @@ const RAINBOW_GROUPS = [
 ];
 type RainbowGroup = (typeof RAINBOW_GROUPS)[number];
 type CatalogSlot = { slotNumber: number; group: RainbowGroup; entry: LessonCharEntry | null };
+const REVIEW_FIRST_MILESTONE = 60;
+const REVIEW_MILESTONE_INTERVAL = 30;
+const REVIEW_LOOKBACK_LESSON_COUNT = 30;
+const REVIEW_SLOT_COUNT = 2;
+const REVIEW_SENTENCES_PER_SLOT = 5;
 
 const CREATURE_REALMS: CreatureRealm[] = [
   { id: "land", label: "地上的生物", shortLabel: "地上", description: "先從地上的朋友開始收集。", color: "#4f8f52", icon: "🦌" },
@@ -918,6 +931,28 @@ function lessonLabel(lesson: Lesson): string {
   return lesson.newChars.join("");
 }
 
+function nextReviewMilestone(lessons: Lesson[]): number {
+  const lastOrder = Math.max(...lessons.map((lesson) => lesson.order));
+  if (lastOrder <= REVIEW_FIRST_MILESTONE) return REVIEW_FIRST_MILESTONE;
+  return Math.ceil(lastOrder / REVIEW_MILESTONE_INTERVAL) * REVIEW_MILESTONE_INTERVAL;
+}
+
+function reviewSlotsForMilestone(milestone: number): ReviewLessonSlot[] {
+  const reviewStart = milestone - REVIEW_LOOKBACK_LESSON_COUNT * 2 + 1;
+  const reviewEnd = milestone - REVIEW_LOOKBACK_LESSON_COUNT;
+  return Array.from({ length: REVIEW_SLOT_COUNT }, (_, index) => {
+    const sequence = (index + 1) as 1 | 2;
+    return {
+      id: `R${String(milestone).padStart(3, "0")}-${sequence}`,
+      milestone,
+      sequence,
+      reviewStart,
+      reviewEnd,
+      sentenceCount: REVIEW_SENTENCES_PER_SLOT,
+    };
+  });
+}
+
 function smallZhNumber(value: number): string {
   return SMALL_ZH_NUMBERS[value] ?? String(value);
 }
@@ -1437,6 +1472,7 @@ function PracticeHome({
 }) {
   const nextLesson = lessons.find((lesson) => lesson.order === nextOrder) ?? lessons[lessons.length - 1];
   const unlockedEntries = flattenLessonChars(lessons.filter((lesson) => lesson.order <= nextOrder)).slice(-12);
+  const reviewSlots = reviewSlotsForMilestone(nextReviewMilestone(lessons));
 
   return (
     <section className="page-panel practice-home">
@@ -1479,6 +1515,22 @@ function PracticeHome({
             <span>第 {entry.lesson.order} 課</span>
             <strong>{entry.char}</strong>
           </button>
+        ))}
+      </div>
+
+      <div className="home-section-heading">
+        <h2>複習課預留</h2>
+        <span>每 30 課整理一次</span>
+      </div>
+      <div className="review-slot-grid" aria-label="複習課預留">
+        {reviewSlots.map((slot) => (
+          <article className="review-slot-card" key={slot.id}>
+            <span>第 {slot.milestone} 課後</span>
+            <strong>第 {slot.sequence} 回</strong>
+            <small>
+              每回 {slot.sentenceCount} 句，複習第 {slot.reviewStart}-{slot.reviewEnd} 課
+            </small>
+          </article>
         ))}
       </div>
     </section>

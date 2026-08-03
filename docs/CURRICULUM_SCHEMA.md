@@ -51,6 +51,13 @@ Rules:
 - `originHint` is optional internal curriculum metadata. It must not appear in the child-facing lesson practice UI unless a separate reviewed child-safe design is explicitly built.
 - `requiredRounds` controls Stage 4 sentence-game rounds when `sentenceGames` is present. Stages 1-3 have fixed completion behavior.
 
+Review lesson note:
+
+- Review lessons are planned after every 30-lesson milestone starting after L060.
+- The first pair after L060 covers L001-L030; the second pair after L090 covers L031-L060.
+- Each review lesson has 5 sentences, and each two-lesson pair must cover every new character from its target 30-lesson range at least once.
+- Do not add empty placeholder review lessons to this JSON. Add review lessons only after the review lesson flow, sentences, images, audio, timings, and pair-level coverage checklist are production-ready.
+
 ## Sentence
 
 ```json
