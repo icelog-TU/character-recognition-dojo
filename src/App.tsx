@@ -1039,6 +1039,8 @@ let recordingDingAudioUrl: string | null = null;
 let primedRecordingDingAudio: HTMLAudioElement | null = null;
 const playbackListeners = new Set<(state: PlaybackStatus) => void>();
 const PROGRESS_STORAGE_KEY = "character-recognition-dojo-progress-v1";
+const AUDIO_PLAY_START_TIMEOUT_MS = 3200;
+const CHAR_TAP_PLAYBACK_TIMEOUT_MS = 5200;
 
 function todayKey(): string {
   const now = new Date();
@@ -2740,7 +2742,16 @@ function LessonPanel({
     setSpeakingTarget(null);
     setSpotlightChar(char);
     try {
-      await Promise.all([playLessonCharForTap(lesson, char), waitMs(720)]);
+      let playbackSettled = false;
+      const playbackDone = playLessonCharForTap(lesson, char)
+        .catch(() => undefined)
+        .finally(() => {
+          playbackSettled = true;
+        });
+      const playbackGuard = waitMs(CHAR_TAP_PLAYBACK_TIMEOUT_MS).then(() => {
+        if (!playbackSettled && hearRunRef.current === runId) stopPlayback();
+      });
+      await Promise.all([Promise.race([playbackDone, playbackGuard]), waitMs(720)]);
       if (hearRunRef.current !== runId) return;
       setHeardChars((prev) => {
         const next = new Set(prev);
@@ -3747,10 +3758,16 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
   return new Promise<"ended" | "error">((resolve) => {
     let settled = false;
     let fallbackTimer = 0;
+    let startTimer = 0;
     const finish = (kind: "ended" | "error") => {
       if (settled) return;
       settled = true;
       if (fallbackTimer) window.clearTimeout(fallbackTimer);
+      if (startTimer) window.clearTimeout(startTimer);
+      if (kind === "error") {
+        audio.pause();
+        audio.currentTime = 0;
+      }
       stopAudioFrame();
       if (activeAudio === audio) activeAudio = null;
       if (activeAudioFinish === finish) activeAudioFinish = null;
@@ -3773,12 +3790,23 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
     activeAudioTick = tick;
     options.onTime?.(0);
     const start = (retried = false) => {
+      if (startTimer) window.clearTimeout(startTimer);
+      startTimer = window.setTimeout(() => {
+        if (settled || activeAudio !== audio) return;
+        finish("error");
+      }, AUDIO_PLAY_START_TIMEOUT_MS);
       void audio.play().then(() => {
+        if (settled || activeAudio !== audio) return;
+        if (startTimer) window.clearTimeout(startTimer);
+        startTimer = 0;
         emitPlaybackState();
         tick();
         const durationMs = Number.isFinite(audio.duration) && audio.duration > 0 ? audio.duration * 1000 : 5000;
         fallbackTimer = window.setTimeout(() => finish("ended"), durationMs + 1000);
       }).catch(() => {
+        if (settled) return;
+        if (startTimer) window.clearTimeout(startTimer);
+        startTimer = 0;
         if (!retried && activeAudio === audio) {
           window.setTimeout(() => {
             if (activeAudio !== audio || settled) return;
@@ -3806,11 +3834,18 @@ function playAudioRange(src: string, startMs: number, endMs: number, options: Au
   return new Promise<void>((resolve) => {
     let settled = false;
     let fallbackTimer = 0;
+    let startTimer = 0;
     const finish = (kind: "ended" | "error") => {
       if (settled) return;
       settled = true;
       if (fallbackTimer) window.clearTimeout(fallbackTimer);
-      audio.pause();
+      if (startTimer) window.clearTimeout(startTimer);
+      if (kind === "error") {
+        audio.pause();
+        audio.currentTime = 0;
+      } else {
+        audio.pause();
+      }
       stopAudioFrame();
       if (activeAudio === audio) activeAudio = null;
       if (activeAudioFinish === finish) activeAudioFinish = null;
@@ -3837,14 +3872,26 @@ function playAudioRange(src: string, startMs: number, endMs: number, options: Au
     activeAudioFinish = finish;
     activeAudioTick = tick;
     options.onTime?.(startMs);
+    startTimer = window.setTimeout(() => {
+      if (settled || activeAudio !== audio) return;
+      finish("error");
+    }, AUDIO_PLAY_START_TIMEOUT_MS);
     void audio
       .play()
       .then(() => {
+        if (settled || activeAudio !== audio) return;
+        if (startTimer) window.clearTimeout(startTimer);
+        startTimer = 0;
         emitPlaybackState();
         tick();
         fallbackTimer = window.setTimeout(() => finish("ended"), Math.max(60, endMs - startMs));
       })
-      .catch(() => finish("error"));
+      .catch(() => {
+        if (settled) return;
+        if (startTimer) window.clearTimeout(startTimer);
+        startTimer = 0;
+        finish("error");
+      });
   });
 }
 
