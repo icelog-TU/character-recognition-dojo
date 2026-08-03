@@ -1041,6 +1041,10 @@ const playbackListeners = new Set<(state: PlaybackStatus) => void>();
 const PROGRESS_STORAGE_KEY = "character-recognition-dojo-progress-v1";
 const AUDIO_PLAY_START_TIMEOUT_MS = 3200;
 const CHAR_TAP_PLAYBACK_TIMEOUT_MS = 5200;
+const LESSON_PRELOAD_SENTENCE_DELAY_MS = 240;
+const LESSON_PRELOAD_IMAGE_DELAY_MS = 900;
+const LESSON_PRELOAD_GAME_DELAY_MS = 1600;
+const LESSON_PRELOAD_STEP_MS = 180;
 
 function todayKey(): string {
   const now = new Date();
@@ -2632,8 +2636,9 @@ function LessonPanel({
   const hearPrompt = hearPromptText(lesson);
 
   useEffect(() => {
-    preloadLessonAssets(lesson);
-  }, [lesson]);
+    if (locked) return;
+    return startLessonAssetPreload(lesson);
+  }, [lesson, locked]);
 
   useEffect(() => {
     if (!locked) void speakForTarget("stage1", `${lessonIntro} ${hearPrompt}`);
@@ -3545,7 +3550,12 @@ function PictureSentencePreview({
             onClick={() => handleSentenceTap(sentence, index)}
           >
             {sentence.imageSrc ? (
-              <img src={assetUrl(sentence.imageSrc)} alt="" loading="eager" decoding="async" />
+              <img
+                src={assetUrl(sentence.imageSrc)}
+                alt=""
+                loading={index <= currentSentenceIndex + 1 ? "eager" : "lazy"}
+                decoding="async"
+              />
             ) : (
               <div className="image-placeholder" aria-label="圖片待製作">
                 <span>圖片快來了</span>
@@ -3616,14 +3626,6 @@ function preloadAudioSrc(src?: string | null) {
   getCachedAudio(src);
 }
 
-function preloadLessonAudio(lesson: Lesson) {
-  for (const char of lesson.newChars) preloadAudioSrc(lesson.charAudio?.[char]);
-  for (const sentence of lesson.sentences) preloadAudioSrc(sentence.audio?.src);
-  for (const game of lesson.sentenceGames ?? []) {
-    for (const option of game.options ?? []) preloadAudioSrc(option.audioSrc);
-  }
-}
-
 function preloadImageSrc(src?: string | null) {
   if (!src || typeof window === "undefined") return;
   const url = assetUrl(src);
@@ -3635,13 +3637,44 @@ function preloadImageSrc(src?: string | null) {
   imageCache.set(url, image);
 }
 
-function preloadLessonImages(lesson: Lesson) {
-  for (const sentence of lesson.sentences) preloadImageSrc(sentence.imageSrc);
+function uniqueAssetSources(sources: Array<string | null | undefined>): string[] {
+  const seen = new Set<string>();
+  return sources.filter((source): source is string => {
+    if (!source || seen.has(source)) return false;
+    seen.add(source);
+    return true;
+  });
 }
 
-function preloadLessonAssets(lesson: Lesson) {
-  preloadLessonAudio(lesson);
-  preloadLessonImages(lesson);
+function schedulePreloadBatch(
+  sources: string[],
+  preload: (src: string) => void,
+  timers: number[],
+  initialDelayMs: number,
+) {
+  sources.forEach((source, index) => {
+    const timer = window.setTimeout(() => preload(source), initialDelayMs + index * LESSON_PRELOAD_STEP_MS);
+    timers.push(timer);
+  });
+}
+
+function startLessonAssetPreload(lesson: Lesson) {
+  const timers: number[] = [];
+  const charAudioSources = uniqueAssetSources(lesson.newChars.map((char) => lesson.charAudio?.[char]));
+  const sentenceAudioSources = uniqueAssetSources(lesson.sentences.map((sentence) => sentence.audio?.src));
+  const imageSources = uniqueAssetSources(lesson.sentences.map((sentence) => sentence.imageSrc));
+  const gameAudioSources = uniqueAssetSources(
+    (lesson.sentenceGames ?? []).flatMap((game) => (game.options ?? []).map((option) => option.audioSrc)),
+  );
+
+  charAudioSources.forEach(preloadAudioSrc);
+  schedulePreloadBatch(sentenceAudioSources, preloadAudioSrc, timers, LESSON_PRELOAD_SENTENCE_DELAY_MS);
+  schedulePreloadBatch(imageSources, preloadImageSrc, timers, LESSON_PRELOAD_IMAGE_DELAY_MS);
+  schedulePreloadBatch(gameAudioSources, preloadAudioSrc, timers, LESSON_PRELOAD_GAME_DELAY_MS);
+
+  return () => {
+    timers.forEach((timer) => window.clearTimeout(timer));
+  };
 }
 
 function currentPlaybackState(): PlaybackStatus {
