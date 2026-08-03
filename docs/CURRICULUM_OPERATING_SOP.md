@@ -109,29 +109,37 @@ npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L###.
 
 6. Treat AI sentences as drafts only. The parent/teacher must approve sentences before production.
 7. Generate or reuse one reviewed image per approved sentence.
-8. Generate reviewed AI audio for every new character and every approved full sentence.
-9. Normalize audio:
+8. Convert/compress final images and remove oversized public source images:
+
+```bash
+npm run assets:images -- --lesson L### --remove-original
+```
+
+9. Check the lesson/review asset folder size and largest files. New or touched production images must be WebP, longest edge `<= 1024px`, target `<= 250 KB`, hard maximum `<= 400 KB`; the lesson/review folder target is `<= 2.0 MB`, hard maximum `<= 2.5 MB`.
+10. Generate reviewed AI audio for every new character and every approved full sentence.
+11. Normalize audio:
 
 ```bash
 npm run assets:audio -- --lesson L###
 ```
 
-10. Generate production timings:
+12. Generate production timings:
 
 ```bash
 npm run assets:align:ai -- --lesson L###
 ```
 
-11. Add reviewed lesson data to `src/curriculum/sample-lessons.json` only when its dependencies are already in `origin/main`.
-12. Update `docs/CURRICULUM_LEDGER.md`.
-13. Regenerate planner data:
+13. Manually play every Stage 3 sentence and Stage 4 option audio on a phone-width viewport. Confirm audio starts on tap, final syllables are audible, `charTimings` follow the heard syllables, and `teach-character` cut points do not duplicate or clip the target character.
+14. Add reviewed lesson data to `src/curriculum/sample-lessons.json` only when its dependencies are already in `origin/main`.
+15. Update `docs/CURRICULUM_LEDGER.md`.
+16. Regenerate planner data:
 
 ```bash
 npm run curriculum:export-planner
 ```
 
-14. Clear or update the registry row.
-15. Run the full gate:
+17. Clear or update the registry row.
+18. Run the full gate:
 
 ```bash
 npm run verify
@@ -192,7 +200,12 @@ A lesson is done only when all of these are true:
 - Every sentence uses only previously learned characters plus current new character(s).
 - `charAudio`, sentence audio, images, and Stage 4 option audio exist where referenced.
 - Character audio passes the production audibility check.
+- New or touched sentence images satisfy the production hard limits: WebP, longest edge `<= 1024px`, target `<= 250 KB`, hard maximum `<= 400 KB`, and no oversized public PNG/JPG source files.
+- New or touched normal lesson/review asset folder size is checked: target `<= 2.0 MB`, hard maximum `<= 2.5 MB`.
+- Sentence and option audio are normalized `.m4a` files and are audibly clear on first tap.
 - Sentence `charTimings` match final processed audio.
+- Stage 3 sentence playback and Stage 4 option playback were manually checked on a phone-width viewport.
+- `teach-character` pre-target and stitched replay cut points were manually checked if the lesson uses that game type.
 - `docs/CURRICULUM_LEDGER.md` includes the merged lesson.
 - `public/tools/planner-data.json` has been refreshed.
 - `docs/PARALLEL_LESSON_REGISTRY.md` has no stale active row for the merged lesson.

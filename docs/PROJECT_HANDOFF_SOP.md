@@ -164,8 +164,11 @@ Preload only the active lesson by default. Do not preload the entire 600-charact
 
 For production assets, keep each lesson small enough for phone use:
 
-- Use `.webp` for sentence pictures unless there is a strong reason not to.
-- Keep sentence images at phone/tablet display resolution; do not ship unnecessarily large source images.
+- Use `.webp` for final referenced sentence pictures. Referenced PNG/JPG/JPEG images are not production-ready.
+- Keep sentence images at phone/tablet display resolution. Longest edge must be `<= 1024px`.
+- Target each sentence image at `<= 250 KB`; hard maximum is `<= 400 KB` for every new or touched image.
+- Target each normal lesson or review module folder at `<= 2.0 MB`; hard maximum is `<= 2.5 MB`.
+- Do not ship large source images under `public/assets/lessons/` or `public/assets/reviews/`.
 - Use normalized `.m4a` audio for final lesson audio.
 - Reuse approved pictures when the meaning, count, cast, and visual focus still fit.
 
@@ -174,6 +177,7 @@ Before shipping a lesson-heavy change, check asset size with:
 ```bash
 Get-ChildItem public/assets -Recurse -File | Measure-Object Length -Sum
 Get-ChildItem public/assets/lessons/L### -Recurse -File | Measure-Object Length -Sum
+Get-ChildItem public/assets/lessons/L### -Recurse -File | Sort-Object Length -Descending | Select-Object @{Name='KB';Expression={[math]::Round($_.Length/1KB,1)}}, FullName
 ```
 
 Asset-writing commands that rewrite `src/curriculum/sample-lessons.json` or shared reports must not run in parallel across threads. Run `assets:images`, `assets:audio`, `assets:align`, and `assets:align:ai` sequentially for one lesson at a time, and fetch/rebase before starting the next asset step if another thread has pushed curriculum changes.
@@ -390,6 +394,9 @@ Production timing rule:
 - Do not use the older `assets:align` as final production timing; it is only a rough energy-based fallback and can drift on connected speech and neutral-tone endings.
 - Do not accept sentence audio where the last Han character is missing, swallowed, or clipped. This is especially important for final `的` and final nouns such as `手`.
 - Before pushing a new lesson, manually play each Stage 3 sentence and check the last 2-4 highlighted characters against the heard audio.
+- `charTimings` must be ordered, nonnegative, inside `durationMs`, and must not contain missing or duplicate Han-character indexes.
+- Any timing shorter than `80 ms`, longer than `900 ms`, overlapping the next timing by more than `40 ms`, or leaving a long silent tail after the last Han character requires repair or explicit manual approval.
+- For `teach-character`, manually confirm the pre-target prefix stops before the unknown character and that the stitched replay does not duplicate or clip the target slot.
 
 ### Guide Narration
 
@@ -413,6 +420,7 @@ Every reviewed sentence should have one picture.
 - If the sentence contrasts size, the image must make the contrast obvious.
 - If a target object/person needs attention, use clear visual highlight such as a circle, strong glow, or spotlight. Subtle glow alone may disappear on a phone screen.
 - Final images should be stored as WebP under `public/assets/lessons/L###/images/`.
+- Final images must also satisfy the hard size and dimension limits in the Lesson Asset Preload SOP above.
 
 ### Image Budget And Reuse Rules
 

@@ -156,6 +156,27 @@ If ImageMagick is unavailable but FFmpeg is available, FFmpeg may be used as a m
 
 The app preloads the active lesson's required images and audio when the lesson opens, so production assets must be optimized before merging. Do not rely on late loading inside Stage 3 or Stage 4 to hide oversized images.
 
+Production asset hard limits for every new or touched lesson/review module:
+
+- Final referenced sentence images must be `.webp`. Do not ship referenced `.png`, `.jpg`, or `.jpeg` files in `src/curriculum/sample-lessons.json`.
+- Longest image edge must be no more than `1024px`.
+- Target sentence image size is `<= 250 KB`.
+- Hard maximum sentence image size is `<= 400 KB`. If an image exceeds this, re-compress or regenerate before merge.
+- Target normal lesson folder size is `<= 2.0 MB`; hard maximum is `<= 2.5 MB`.
+- Target review module folder size is `<= 2.0 MB`; hard maximum is `<= 2.5 MB`.
+- Do not leave oversized source PNG/JPG files under `public/assets/lessons/` or `public/assets/reviews/`. Keep raw sources outside shipping assets if they must be preserved.
+
+Before merging any lesson/review that adds or changes assets, inspect sizes:
+
+```bash
+Get-ChildItem public/assets/lessons/L### -Recurse -File | Sort-Object Length -Descending | Select-Object @{Name='KB';Expression={[math]::Round($_.Length/1KB,1)}}, FullName
+Get-ChildItem public/assets/lessons/L### -Recurse -File | Measure-Object Length -Sum
+```
+
+For review modules, use `public/assets/reviews/R###` in the same commands.
+
+Until these hard limits are enforced in `npm run validate:production`, the thread shipping the lesson must paste or summarize the size check in its final handoff. Do not describe a lesson as production-ready if the size check was skipped.
+
 Process reviewed AI audio:
 
 ```bash
@@ -178,6 +199,17 @@ Do not use `npm run assets:align` as the final production timing source. It is a
 Before declaring the OpenAI API unavailable, run `npm run ai:check`. Do not rely only on `process.env.OPENAI_API_KEY`, because the repo helper also reads `.env.local`, `.env`, and Windows user environment values from `HKCU\Environment`. If the OpenAI API is truly unavailable and a lesson must be shipped with local OS TTS plus `assets:align`, record that exception in `docs/PROJECT_HANDOFF_SOP.md` or the final handoff. Do not call those timings AI-reviewed, and prefer regenerating with AI audio plus `assets:align:ai` when credentials are available.
 
 When OpenAI audio is available, production lesson audio must use natural Taiwan Mandarin. Reject and regenerate any sentence that sounds like Beijing/Mainland China pronunciation, uses erhua, or adds curled-r/r-colored endings. Final syllables should stay audible but clean; do not accept a rhotic final `孩`, `兒化音`, or similar accent drift.
+
+Production audio hard limits for every new or touched lesson/review module:
+
+- Final curriculum audio must be `.m4a` unless there is an explicit exception in the handoff.
+- Processed output must be mono AAC at `44100 Hz` and about `96k` bitrate, matching `scripts/process-audio-assets.mjs`.
+- Character audio target duration is `300-1400 ms`; anything shorter than `200 ms` or longer than `1800 ms` must be manually justified or repaired.
+- Sentence audio should end within `300 ms` after the last spoken Han character. Long silent tails must be trimmed or timing must be repaired.
+- Sentence audio and Stage 4 option audio must be audibly normalized, not merely present. If a phone tester reports no sound, inspect actual file volume before changing UI playback logic.
+- New-character `charAudio` must pass the existing `validate:production` audibility floor of `max_volume >= -35 dB`.
+- Sentence and option audio should target `max_volume >= -35 dB`; if quieter, regenerate or normalize before merge even if the current validator does not yet fail it.
+- Do not use browser TTS as production curriculum audio for `charAudio`, sentence audio, or `choose-pronunciation` options unless the exception is recorded and the lesson is explicitly marked for later AI-audio replacement.
 
 ## Request File
 
@@ -239,6 +271,7 @@ Starting after L060, every 30-lesson milestone gets two review modules. These ar
 - Review sentences may use any character learned by the milestone, but the coverage checklist must be based on the older target range.
 - Do not add empty review placeholders to `src/curriculum/sample-lessons.json`; placeholders belong in the website UI only until the reviewed sentences and production assets are ready.
 - Do not create L061/L062 as review lessons. After L060, L061 is reserved for the next new-character lesson.
+- Review modules must satisfy the same production asset hard limits as normal lessons: WebP images, normalized `.m4a` sentence/option audio, AI-generated `charTimings`, manual playback QA, and review folder size `<= 2.5 MB`.
 
 ## Image Rules
 
@@ -335,8 +368,24 @@ Rules:
 - If the audio is regenerated, timings must be regenerated too.
 - Production timing must be generated from the final `.m4a` using `npm run assets:align:ai -- --lesson L###`.
 - The AI alignment command must verify that the transcript matches `spokenText`; if it fails, fix the audio or sentence before shipping.
+- `charTimings` must be strictly ordered by `charIndex`, with no missing or duplicate Han-character indexes.
+- Every timing must have `0 <= startMs < endMs <= durationMs`.
+- Adjacent timings should not overlap. If overlap is unavoidable because of transcription granularity, it must be under `40 ms` and manually reviewed.
+- No individual Han-character timing should be shorter than `80 ms` or longer than `900 ms` without manual review. Very short spans usually mean the alignment is not usable for child-facing highlighting.
+- The first spoken Han character should normally start within the first `500 ms` of the audio.
 - Do not let the final character highlight continue through a long silent tail. The last `endMs` should mark the end of the spoken syllable, not the end of the audio file if the file includes trailing silence.
 - Before approval, play each Stage 3 sentence in the app and check that the active character changes on the heard syllable. Pay special attention to the last 2-4 characters.
+
+Manual timing QA is mandatory for each new/touched lesson:
+
+1. Open the lesson in the app on a phone-width viewport.
+2. Play every Stage 3 sentence from the sentence card.
+3. Confirm highlighting follows the heard syllables, especially the final `的`, final nouns, and any fast two-character phrase.
+4. For `teach-character`, confirm the helper stops before the target character and the replay prefix does not include any part of the target character.
+5. For `teach-character`, confirm the post-recording stitched replay does not duplicate the target syllable or cut off the child recording.
+6. For `choose-pronunciation`, tap every animal/reader audio and confirm all option files play on the first tap.
+
+Do not ship a lesson if `charTimings` only satisfy the JSON length check but have not been heard against the final processed audio.
 
 ## Stage 4 Sentence Game Rules
 
