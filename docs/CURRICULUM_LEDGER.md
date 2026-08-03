@@ -112,11 +112,12 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L051 | 樣 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣 | 我也會做好吃的 / 我做的和媽媽一樣好吃 / 爸爸，這樣做不好吃 / 你這樣做我不吃 / 我會做到一樣好 | 我也會做好吃的做和媽媽一好爸爸這不你 | Introduces `樣` through same-way/same-quality sentences, cooking comparison, and reviews `吃`, `做`, and `好`. |
 | L052 | 要 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要 | 我要和媽媽吃一樣的 / 你不要這樣做 / 這樣做很不好 / 小狗也要吃好吃的 / 你這樣做很好看 | 我要和媽媽吃一樣的你不這做很小狗也好看 | Introduces `要` through wanting, asking someone not to do something, and wanting good food. Reviews recent `做`, `好`, and `樣`; S01 reuses the approved L051-S02 family meal image, and S02-S03 form a continuous park no-stepping scene. |
 
-| L053 | 更 | 一?二?三?人?個?大?的?小?手?我?有?山?上?下?你?水?在?高?很?家?和?隻?鳥?孩?指?看?女?飛?男?門?前?後?也?是?不?到?走?他?沒?裡?兩?狗?都?爸?媽?愛?書?可?會?這?吃?做?好?樣?要?更 | 我不要一樣的，我要更好的 / 我做的好吃，媽媽做的更好吃 / 兩隻不一樣的狗，一隻更大 / 這樣做不好吃，我不要吃 / 大人的手指更大 | ??????????? | Introduces `更` through better/to-better comparisons, better food, bigger dogs, refusing bad food, and adult/child finger size comparison. Reviews recent `?`, `?`, and `?`; prepared after L052 entered production and includes reviewed images, AI audio, and AI-aligned timings. |
+| L053 | 更 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更 | 我不要一樣的，我要更好的 / 我做的好吃，媽媽做的更好吃 / 兩隻不一樣的狗，一隻更大 / 這樣做不好吃，我不要吃 / 大人的手指更大 | 我不要一樣更好做吃媽媽兩隻狗大人手指 | Introduces `更` through better/to-better comparisons, better food, bigger dogs, refusing bad food, and adult/child finger size comparison. Reviews recent `樣`, `要`, and `做`; prepared after L052 entered production and includes reviewed images, AI audio, and AI-aligned timings. |
+| L054 | 邊 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊 | 大家在水邊做吃的 / 我更愛在門邊看書 / 你不要這樣做 / 兩邊不一樣，這邊更好 / 我要看更好看的書 | 大家水邊做吃我更愛門看書你不要這樣兩不一好 | Introduces `邊` through waterside cooking, reading by a door, choosing a side, and wanting a better-looking book. Reviews recent `樣`, `要`, and `更`; S03 reuses the approved L052 no-stepping image, and the other four reviewed images use new picture-book assets. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L053. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L054. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
