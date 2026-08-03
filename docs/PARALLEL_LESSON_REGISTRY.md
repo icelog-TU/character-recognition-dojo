@@ -17,6 +17,7 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 | L053 | 更 | claimed | Codex L053 parallel thread | codex/l053-production @ pending | L052:要 | 要 | `curriculum-workflow/lesson-requests/L053.json`; `curriculum-workflow/generated/L053-generation-packet.md` | `curriculum-workflow/audio-inbox/L053/`; `public/assets/lessons/L053/` | Start / claim checkpoint. Teacher supplied approved lesson request. Prepare assets only; do not merge until L052 is merged and dependency recheck passes. |
+| L054 | 邊 | claimed | Codex current thread | codex/l054-bian @ pending | L053:更 | 更 | `curriculum-workflow/lesson-requests/L054.json`; `curriculum-workflow/generated/L054-generation-packet.md` | `curriculum-workflow/audio-inbox/L054/`; `public/assets/lessons/L054/` | Start / claim checkpoint. Teacher supplied approved lesson request. Prepare assets only; do not merge until L053 is merged and dependency recheck passes. |
 
 ## Status Values
 
