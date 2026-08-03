@@ -31,6 +31,8 @@ type StoredProgress = {
   version: 1;
   coins: number;
   stars: number;
+  totalCoinsEarned: number;
+  totalStarsEarned: number;
   dailyRecords: Record<string, DailyRecord>;
   duplicateGachaStreak: number;
   selectedOrder: number;
@@ -1056,10 +1058,20 @@ function loadStoredProgress(): StoredProgress | null {
     const completedOrders = Array.isArray(parsed.completedOrders)
       ? parsed.completedOrders.filter((order): order is number => Number.isInteger(order))
       : [];
+    const coins = Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120;
+    const stars = Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36;
+    const estimatedCoinsEarned = Math.max(coins, completedOrders.length * 30);
+    const estimatedStarsEarned = Math.max(stars, completedOrders.length * 12);
     return {
       version: 1,
-      coins: Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120,
-      stars: Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36,
+      coins,
+      stars,
+      totalCoinsEarned: Number.isFinite(parsed.totalCoinsEarned)
+        ? Math.max(coins, Number(parsed.totalCoinsEarned))
+        : estimatedCoinsEarned,
+      totalStarsEarned: Number.isFinite(parsed.totalStarsEarned)
+        ? Math.max(stars, Number(parsed.totalStarsEarned))
+        : estimatedStarsEarned,
       dailyRecords: sanitizeDailyRecords(parsed.dailyRecords),
       duplicateGachaStreak: Number.isFinite(parsed.duplicateGachaStreak)
         ? Math.max(0, Math.floor(Number(parsed.duplicateGachaStreak)))
@@ -1099,6 +1111,8 @@ function App() {
   const [startingOrder, setStartingOrder] = useState<number | null>(null);
   const [coins, setCoins] = useState(initialProgress?.coins ?? 120);
   const [stars, setStars] = useState(initialProgress?.stars ?? 36);
+  const [totalCoinsEarned, setTotalCoinsEarned] = useState(initialProgress?.totalCoinsEarned ?? Math.max(120, completedOrders.size * 30));
+  const [totalStarsEarned, setTotalStarsEarned] = useState(initialProgress?.totalStarsEarned ?? Math.max(36, completedOrders.size * 12));
   const [dailyRecords, setDailyRecords] = useState<Record<string, DailyRecord>>(
     () => initialProgress?.dailyRecords ?? {},
   );
@@ -1131,6 +1145,8 @@ function App() {
       version: 1,
       coins,
       stars,
+      totalCoinsEarned,
+      totalStarsEarned,
       dailyRecords,
       duplicateGachaStreak,
       selectedOrder,
@@ -1142,6 +1158,8 @@ function App() {
   }, [
     coins,
     stars,
+    totalCoinsEarned,
+    totalStarsEarned,
     dailyRecords,
     duplicateGachaStreak,
     selectedOrder,
@@ -1155,6 +1173,8 @@ function App() {
     if (completedOrders.has(order)) return;
     setCoins((value) => value + rewards.coins);
     setStars((value) => value + rewards.stars);
+    setTotalCoinsEarned((value) => value + rewards.coins);
+    setTotalStarsEarned((value) => value + rewards.stars);
     setDailyRecords((prev) => {
       const date = todayKey();
       const current = prev[date] ?? { date, coinsEarned: 0, starsEarned: 0, lessonOrders: [] };
@@ -1350,6 +1370,8 @@ function App() {
           <RecordsPage
             coins={coins}
             stars={stars}
+            totalCoinsEarned={totalCoinsEarned}
+            totalStarsEarned={totalStarsEarned}
             streakDays={streakDays}
             dailyRecords={dailyRecords}
             activeDetail={recordDetail}
@@ -1806,6 +1828,8 @@ function CatalogSlotGrid({
 function RecordsPage({
   coins,
   stars,
+  totalCoinsEarned,
+  totalStarsEarned,
   streakDays,
   dailyRecords,
   activeDetail,
@@ -1815,6 +1839,8 @@ function RecordsPage({
 }: {
   coins: number;
   stars: number;
+  totalCoinsEarned: number;
+  totalStarsEarned: number;
   streakDays: number;
   dailyRecords: Record<string, DailyRecord>;
   activeDetail: RecordDetailKind | null;
@@ -1850,8 +1876,10 @@ function RecordsPage({
         panelRef={detailPanelRef}
         detail={detail}
         records={records}
-        totalCoins={coins}
-        totalStars={stars}
+        coins={coins}
+        stars={stars}
+        totalCoinsEarned={totalCoinsEarned}
+        totalStarsEarned={totalStarsEarned}
         streakDays={streakDays}
       />
     </section>
@@ -1890,15 +1918,19 @@ function RecordDetailPanel({
   panelRef,
   detail,
   records,
-  totalCoins,
-  totalStars,
+  coins,
+  stars,
+  totalCoinsEarned,
+  totalStarsEarned,
   streakDays,
 }: {
   panelRef: RefObject<HTMLElement | null>;
   detail: RecordDetailKind;
   records: DailyRecord[];
-  totalCoins: number;
-  totalStars: number;
+  coins: number;
+  stars: number;
+  totalCoinsEarned: number;
+  totalStarsEarned: number;
   streakDays: number;
 }) {
   const title =
@@ -1913,11 +1945,24 @@ function RecordDetailPanel({
       <div className="record-detail-heading">
         <h2>{title}</h2>
         <p>
-          {detail === "coins" && `目前共有 ${totalCoins} 個金幣。`}
-          {detail === "stars" && `目前共有 ${totalStars} 顆星星。`}
+          {detail === "coins" && `曾經賺過 ${totalCoinsEarned} 個金幣，現在剩下 ${coins} 個。`}
+          {detail === "stars" && `曾經賺過 ${totalStarsEarned} 顆星星，現在有 ${stars} 顆。`}
           {detail === "streak" && `目前連續學習 ${streakDays} 天。`}
         </p>
       </div>
+
+      {detail !== "streak" && (
+        <div className="record-summary-grid">
+          <div className="record-summary-card">
+            <small>曾經賺過</small>
+            <strong>{detail === "coins" ? totalCoinsEarned : totalStarsEarned}</strong>
+          </div>
+          <div className="record-summary-card">
+            <small>{detail === "coins" ? "現在剩下" : "現在有"}</small>
+            <strong>{detail === "coins" ? coins : stars}</strong>
+          </div>
+        </div>
+      )}
 
       {records.length === 0 ? (
         <p className="record-empty">{emptyText}</p>
