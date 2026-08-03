@@ -62,6 +62,8 @@ Do not edit `.env.example` with a real key.
 
 ## Generate Sentence Candidates
 
+If this is a parallel-prepared lesson, confirm its row in `docs/PARALLEL_LESSON_REGISTRY.md` before generating the packet.
+
 First create or refresh a lesson packet:
 
 ```bash

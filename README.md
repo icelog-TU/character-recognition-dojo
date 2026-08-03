@@ -19,6 +19,7 @@ Start new work by reading:
 
 - `docs/PROJECT_HANDOFF_SOP.md`
 - `docs/CURRICULUM_LEDGER.md`
+- `docs/PARALLEL_LESSON_REGISTRY.md`
 - `docs/CURRICULUM_PRODUCTION_SOP.md`
 - `docs/COLLECTION_SYSTEM.md`
 

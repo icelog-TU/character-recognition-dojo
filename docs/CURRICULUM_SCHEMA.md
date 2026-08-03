@@ -147,6 +147,8 @@ npm run validate:curriculum
 
 New lessons should start from a lesson request file, not from directly editing production curriculum JSON.
 
+If the lesson is being prepared before previous lessons are merged, first register the provisional dependency in `docs/PARALLEL_LESSON_REGISTRY.md`, then include the same dependency in the lesson request's `dependsOnLessons` and `provisionalLearnedChars`.
+
 ```bash
 npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L004-example.json
 ```

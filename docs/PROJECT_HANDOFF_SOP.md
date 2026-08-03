@@ -3,6 +3,7 @@
 這份文件是給新的 Codex/GPT 對話串接手用的總控文件。開始任何新工作前，先讀這份，再讀：
 
 - `docs/CURRICULUM_LEDGER.md`
+- `docs/PARALLEL_LESSON_REGISTRY.md`
 - `docs/CURRICULUM_PRODUCTION_SOP.md`
 - `docs/CURRICULUM_SCHEMA.md`
 - `docs/AI_GENERATION_SETUP.md`
@@ -22,11 +23,12 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L045
-- L045 introduces `可` read `ㄎㄜˇ`.
+- Current reviewed lessons: L001-L049
+- L049 introduces `做`.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
-- L006-L045 include Stage 4 fixed sentence games after picture-supported listening.
-- L045 audio has been regenerated with OpenAI TTS and aligned with `assets:align:ai`.
+- L006-L049 include Stage 4 fixed sentence games after picture-supported listening.
+- Check `docs/CURRICULUM_LEDGER.md` for the latest merged lesson sequence.
+- Check `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson work.
 
 ## Multi-Codex Collaboration SOP
 
@@ -78,15 +80,17 @@ Recommended work ownership:
 
 The user may ask several Codex threads to prepare consecutive lessons at the same time. Accept this workflow when the teacher has already chosen the next-character sequence. For example:
 
-- Thread A prepares and ships L049.
-- Thread B prepares L050 using L049's chosen new character as a provisional dependency.
-- Thread C prepares L051 using L049/L050's chosen new characters as provisional dependencies.
+- Thread A prepares and ships L050.
+- Thread B prepares L051 using L050's chosen new character as a provisional dependency.
+- Thread C prepares L052 using L050/L051's chosen new characters as provisional dependencies.
 
 Rules for this workflow:
 
 - Parallel work is limited to drafting and asset preparation until dependencies are merged.
+- The shared provisional sequence is recorded in `docs/PARALLEL_LESSON_REGISTRY.md`; update it before starting large image/audio work.
 - A later lesson request must clearly list not-yet-merged prior lessons in `dependsOnLessons` and those characters in `provisionalLearnedChars`.
 - Each thread must announce the exact lesson and asset folder it owns, such as `L050` and `public/assets/lessons/L050/`.
+- Raw image/audio generation may happen in parallel by lesson folder, but JSON-writing asset commands must still run one at a time and rebase on latest `origin/main`.
 - Do not merge a later lesson into `main` until all earlier dependency lessons are present on latest `origin/main`.
 - Before merging the later lesson, fetch/rebase, confirm the dependencies are now real curriculum, re-check allowed characters, update `docs/CURRICULUM_LEDGER.md`, and run the full production checks.
 - If an earlier lesson's chosen character changes, every later parallel lesson that depended on it must be rechecked before merge.
@@ -162,7 +166,7 @@ Get-ChildItem public/assets -Recurse -File | Measure-Object Length -Sum
 Get-ChildItem public/assets/lessons/L### -Recurse -File | Measure-Object Length -Sum
 ```
 
-Asset-writing commands that rewrite `src/curriculum/sample-lessons.json` must not run in parallel across threads. Run `assets:images`, `assets:audio`, and `assets:align` sequentially for one lesson at a time, and fetch/rebase before starting the next asset step if another thread has pushed curriculum changes.
+Asset-writing commands that rewrite `src/curriculum/sample-lessons.json` or shared reports must not run in parallel across threads. Run `assets:images`, `assets:audio`, `assets:align`, and `assets:align:ai` sequentially for one lesson at a time, and fetch/rebase before starting the next asset step if another thread has pushed curriculum changes.
 
 ## App 結構
 
@@ -480,85 +484,13 @@ AI-generated sentences are always drafts. The parent/teacher must approve every 
 
 ## Current Curriculum Plan
 
-Reviewed:
+Do not hand-maintain a duplicate lesson list in this handoff file.
 
-- L001: `一 二 三 人`
-- L002: `個`
-- L003: `大`
-- L004: `的`
-- L005: `小`
-- L006: `手`
-- L007: `我`
-- L008: `有`
-- L009: `山`
-- L010: `上`
-- L011: `下`
-- L012: `你`
-- L013: `水`
+- Merged reviewed curriculum: read `docs/CURRICULUM_LEDGER.md`.
+- Shipping app curriculum: read `src/curriculum/sample-lessons.json`.
+- Not-yet-merged parallel work: read `docs/PARALLEL_LESSON_REGISTRY.md`.
 
-L006 sentences:
-
-- `一個人的手`
-- `三個人的手`
-- `大大的手`
-- `小小的手`
-- `大大小小的手`
-
-L007 sentences:
-
-- `我一個人`
-- `我的小手`
-- `我的手小小的`
-- `大人的手大大的`
-- `三個人的大手小手`
-
-L008 sentences:
-
-- `有一個人`
-- `我有小小的手`
-- `大人有大大的手`
-- `三個人有大手小手`
-- `有一大二小的手`
-
-L009 sentences:
-
-- 有人有山
-- 大大的山小小的山
-- 我一個人的山
-- 三個人的大手小手
-- 我有小小的手
-
-L010 sentences:
-
-- 我一個人上山
-- 山上有三個大人
-- 我的手小小的
-- 我的手上有一個小人
-- 有大大的山，有小小的山
-
-L011 sentences:
-
-- 有三個人上山
-- 有一個人下山
-- 我的手下有三個小山
-- 山下有一個大人
-- 有一大二小的手
-
-L012 sentences:
-
-- 你一個人上山
-- 你一個人下山
-- 你手上有三個小山
-- 我手下有一個大山
-- 有二大一小的手
-
-L013 sentences:
-
-- 大大的山上有水
-- 你的水，我的水。
-- 水下有三個大人
-- 山下有一個大人
-- 你小小的手上有水
+If these disagree, treat `src/curriculum/sample-lessons.json` and latest `origin/main` as the production truth, then update the ledger or registry to match the intended workflow state.
 
 ## File Map
 
@@ -578,6 +510,7 @@ Important files:
 - `scripts/align-audio-timings-ai.mjs`: production AI transcription timing generation.
 - `scripts/optimize-images.mjs`: image conversion/compression.
 - `docs/CURRICULUM_LEDGER.md`: lesson history and character map.
+- `docs/PARALLEL_LESSON_REGISTRY.md`: active not-yet-merged parallel lesson claims and provisional dependencies.
 - `docs/CURRICULUM_PRODUCTION_SOP.md`: production workflow.
 - `docs/CURRICULUM_SCHEMA.md`: curriculum JSON shape.
 - `docs/AI_GENERATION_SETUP.md`: local OpenAI API setup.
@@ -602,7 +535,7 @@ Do not merge if checks fail, conflicts appear, unrelated files are present, or a
 
 For pre-merge phone review, provide an actually phone-accessible URL. Options include a LAN dev server bound to `0.0.0.0` with the computer's LAN IP, or another deployed preview. If no such preview URL is provided, finish by merging to `main`.
 
-When producing assets, do not run JSON-writing commands in parallel. In particular, run `assets:images` and `assets:align` sequentially per lesson because they rewrite `src/curriculum/sample-lessons.json`.
+When producing assets, do not run JSON-writing commands in parallel. In particular, run `assets:images`, `assets:audio`, `assets:align`, and `assets:align:ai` sequentially per lesson because they rewrite shared curriculum data or shared reports.
 
 After pushing, verify GitHub Pages deployment and check the online URL:
 
@@ -626,20 +559,21 @@ https://github.com/icelog-TU/character-recognition-dojo
 Please first read:
 - docs/PROJECT_HANDOFF_SOP.md
 - docs/CURRICULUM_LEDGER.md
+- docs/PARALLEL_LESSON_REGISTRY.md
 - docs/CURRICULUM_PRODUCTION_SOP.md
 - docs/CURRICULUM_SCHEMA.md
 
-Multiple Codex threads may be working on this repo. Before editing, run git fetch/status, confirm the current commit, and state which files or subsystem this thread owns.
+Multiple Codex threads may be working on this repo. Before editing, run git fetch/status, confirm the current commit, read the parallel lesson registry, and state which files or subsystem this thread owns.
 The app is a Taiwan zhuyin character-recognition app for young children.
 Do not use Hanyu pinyin.
 Sentence text is horizontal, with zhuyin vertically on the right of each Han character.
 Curriculum sentence audio must use AI audio files with charTimings.
 Production charTimings must use npm run assets:align:ai, then manual playback review.
 Guide narration may use TTS.
-L001-L022 are reviewed and built.
-L022 introduces `指` read `ㄓˇ`.
+L001-L049 are reviewed and built.
+L049 introduces `做`.
 L007 introduces a fixed young girl character for 我.
 L012 introduces a fixed second-person young boy character for 你.
-L006-L022 include Stage 4 sentence games after picture-supported sentence listening.
+L006-L049 include Stage 4 sentence games after picture-supported sentence listening.
 Production checks include an audibility gate for new-character `charAudio`; near-silent files must be regenerated or repaired before pushing.
 ```

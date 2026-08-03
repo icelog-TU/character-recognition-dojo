@@ -111,7 +111,9 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 ## Planned Lessons
 
-None yet. L049 completed; plan the next lesson from the planner.
+Merged curriculum is complete through L049. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+
+Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
 ## Planning Rule For New Lessons
 
@@ -129,25 +131,33 @@ Before drafting a new lesson:
 
 ## Suggested Next-Lesson Prompt Shape
 
-Use this shape when asking AI to draft sentence candidates:
+Prefer sending the full lesson request JSON or generated packet to the AI sentence drafter. Do not hand-copy the learned character list from this section; it will go stale.
+
+Use this shape only as a compact fallback, filling every bracketed field from the current lesson request:
 
 ```text
 We are building a Taiwan zhuyin character recognition app for young children.
 
-Already taught characters:
-一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也
+Allowed display characters for this lesson:
+{ALLOWED_CHARS_FROM_LESSON_REQUEST}
 
 New character for this lesson:
-{NEW_CHARACTER}
+{NEW_CHARS_FROM_LESSON_REQUEST}
+
+Recent review pool:
+{PREFER_REVIEW_CHARS_FROM_LESSON_REQUEST}
+
+Must include across this lesson:
+{MUST_INCLUDE_CHARS_ACROSS_LESSON}
 
 Rules:
-- Sentence display text may use only already taught characters plus the new character.
+- Sentence display text may use only the allowed display characters above.
 - Use Taiwan usage.
 - No Hanyu pinyin.
 - No punctuation in spokenText.
 - Prefer concrete, imageable sentences.
-- Reuse characters from the recent review pool when natural: 小 男 孩 在 看 人 飛 的 手 指 很 和 女 鳥 一 隻 門 你 上 有 前 我 大 後 山 水 也
+- Reuse characters from the recent review pool when natural.
 - Keep each sentence 4-12 Han characters long, ignoring punctuation.
-- Across the sentence set, include the previous 3 lesson new characters at least once.
+- Across the sentence set, include the required review characters listed above at least once.
 - Keep the sentence set short if the character set cannot support natural variety.
 ```

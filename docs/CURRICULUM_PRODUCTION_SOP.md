@@ -4,37 +4,41 @@ This app treats AI output as draft material. A lesson enters the shipping curric
 
 For API key setup and AI generation commands, see `docs/AI_GENERATION_SETUP.md`.
 
-For the running lesson sequence, taught-character set, and sentence history, update `docs/CURRICULUM_LEDGER.md` before planning the next lesson.
+For merged lessons, use `docs/CURRICULUM_LEDGER.md` as the running lesson sequence, taught-character set, and sentence history. For not-yet-merged parallel lessons, use `docs/PARALLEL_LESSON_REGISTRY.md` as the provisional coordination board.
 
 ## Lesson Pipeline
 
-1. Create a lesson request in `curriculum-workflow/lesson-requests/`.
-2. Check `docs/CURRICULUM_LEDGER.md` for the learned character set and recent review pool.
-3. Run `npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L004-example.json`.
-4. Send the generated packet in `curriculum-workflow/generated/` to the AI sentence generator.
-5. Review the sentence candidates manually.
-6. For approved sentences, generate one image prompt and one image per sentence.
-7. Generate one reviewed single-character audio file for every new character.
-8. For approved sentences, generate one natural full-sentence audio file per sentence.
-9. Process audio without trimming sentence endings.
-10. Use AI transcription timestamps to verify the spoken sentence and write character timing metadata.
-11. Move only reviewed content into `src/curriculum/sample-lessons.json`.
-12. Update `docs/CURRICULUM_LEDGER.md`.
-13. Run `npm run validate:curriculum`, `npm run validate:production`, `npm run build`, and `npm run lint`.
+0. Run `git fetch origin`, check `docs/CURRICULUM_LEDGER.md`, and check `docs/PARALLEL_LESSON_REGISTRY.md`.
+1. Create or claim a lesson row in `docs/PARALLEL_LESSON_REGISTRY.md` if this lesson is being prepared in parallel before its dependencies are merged.
+2. Create a lesson request in `curriculum-workflow/lesson-requests/`.
+3. Check `docs/CURRICULUM_LEDGER.md` for the merged learned character set and recent review pool. If this is a parallel-prepared later lesson, also check registered provisional dependencies.
+4. Run `npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L004-example.json`.
+5. Send the generated packet in `curriculum-workflow/generated/` to the AI sentence generator.
+6. Review the sentence candidates manually.
+7. For approved sentences, generate one image prompt and one image per sentence.
+8. Generate one reviewed single-character audio file for every new character.
+9. For approved sentences, generate one natural full-sentence audio file per sentence.
+10. Process audio without trimming sentence endings.
+11. Use AI transcription timestamps to verify the spoken sentence and write character timing metadata.
+12. Move only reviewed content into `src/curriculum/sample-lessons.json`.
+13. Update `docs/CURRICULUM_LEDGER.md`; update or clear the registry row if the lesson was parallel-prepared.
+14. Run `npm run validate:curriculum`, `npm run validate:production`, `npm run build`, and `npm run lint`.
 
 ## Parallel Lesson Production SOP
 
-The teacher may intentionally run 2-3 lesson-production threads at the same time to keep curriculum creation moving. This is allowed when the next-character sequence is already chosen, for example one Codex thread prepares L049 while another prepares L050 and a third prepares L051.
+The teacher may intentionally run 2-3 lesson-production threads at the same time to keep curriculum creation moving. This is allowed when the next-character sequence is already chosen, for example one Codex thread prepares L050 while another prepares L051 and a third prepares L052.
 
 Parallel production means **parallel drafting and asset preparation**, not unordered shipping. Lessons must still be merged into `main` in lesson order.
 
 Allowed parallel work:
 
+- The provisional sequence must be registered in `docs/PARALLEL_LESSON_REGISTRY.md`.
 - A later lesson may be drafted before the immediately previous lesson is merged if the teacher has explicitly chosen the previous lesson's new character(s).
 - The later lesson request must include `dependsOnLessons` for any not-yet-merged prior lesson and must list those prior new characters in `provisionalLearnedChars`.
 - The AI must treat the lesson request's `allowedChars` as the temporary locked boundary for drafting, image prompts, sentence audio, and char timings.
 - Each Codex thread must own only one lesson's request, generated packet, audio inbox, final images, and `public/assets/lessons/L###/` folder.
-- Sentence drafting, image generation, audio generation, and timing alignment may proceed for the later lesson while the dependency lesson is still in another branch/thread.
+- Sentence drafting, image prompt writing, final image creation, and raw AI audio generation may proceed for the later lesson while the dependency lesson is still in another branch/thread.
+- JSON-writing commands such as `assets:images`, `assets:audio`, and `assets:align:ai` must still be serialized and rebased on latest `origin/main` because they update shared curriculum data or shared reports.
 
 Not allowed in parallel work:
 
@@ -123,7 +127,7 @@ Rules:
 
 ## Asset Commands
 
-Important: asset commands that update `src/curriculum/sample-lessons.json` must run one at a time. Do not run `assets:images`, `assets:align`, or `assets:align:ai` for different lessons in parallel, because each command reads and rewrites the same curriculum JSON file.
+Important: asset commands that update `src/curriculum/sample-lessons.json` or shared reports must run one at a time. Do not run `assets:images`, `assets:audio`, `assets:align`, or `assets:align:ai` for different lessons in parallel, because each command reads and rewrites shared files.
 
 Optimize reviewed lesson images:
 

@@ -135,6 +135,7 @@ The app highlights by comparing audio `currentTime` with `charTimings`; it does 
 ## Curriculum Production Pipeline
 
 - Create each new lesson through a request file under `curriculum-workflow/lesson-requests/`.
+- For parallel lesson preparation, register not-yet-merged work in `docs/PARALLEL_LESSON_REGISTRY.md`; merge finished lessons into `main` only in lesson order.
 - Run `npm run curriculum:packet` to generate the AI work packet.
 - AI sentence generation must receive the already-learned character boundary from the packet.
 - AI sentence output is draft-only and must be reviewed before entering curriculum.
