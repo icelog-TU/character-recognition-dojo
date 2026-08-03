@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L059 | 起 | merge-ready | Codex L059 production thread | codex/l059-production @ local-assets | none | none | `curriculum-workflow/lesson-requests/L059.json`; `curriculum-workflow/generated/L059-generation-packet.md`; `curriculum-workflow/drafts/L059-draft.json` | `public/assets/lessons/L059/`; `curriculum-workflow/audio-inbox/L059/` | Assets prepared checkpoint. Reviewed images, AI audio, wrong-option audio, AI charTimings, production JSON, ledger, and planner export are prepared. S03 focusChar corrected from 起 to 比 because the sentence does not contain 起. |
+| L059 | 起 | merge-ready | Codex L059 production thread | codex/l059-production @ f84b60b | none | none | `curriculum-workflow/lesson-requests/L059.json`; `curriculum-workflow/generated/L059-generation-packet.md`; `curriculum-workflow/drafts/L059-draft.json` | `public/assets/lessons/L059/`; `curriculum-workflow/audio-inbox/L059/` | Uploaded / pushed branch checkpoint. Branch push contains reviewed images, AI audio, wrong-option audio, AI charTimings, production JSON, ledger, and planner export. S03 focusChar corrected from 起 to 比 because the sentence does not contain 起. |
 
 ## Status Values
 
