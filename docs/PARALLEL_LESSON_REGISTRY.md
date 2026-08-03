@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L063 | 開 | ready-blocked-by-dependency | Codex thread L063 開 | codex/l063-kai @ pending-final | L062:站 | 站 | `curriculum-workflow/lesson-requests/L063.json`; `curriculum-workflow/generated/L063-generation-packet.md`; `curriculum-workflow/drafts/L063-draft.json` | `public/assets/lessons/L063/`; `curriculum-workflow/audio-inbox/L063/` | Draft images, sentence audio, option audio, char audio, and AI-reviewed draft charTimings are prepared. Parallel prep only: do not merge until L062 站 is merged into latest `origin/main`, then rebase and recheck before writing L063 to production curriculum. |
+| L063 | 開 | ready-blocked-by-dependency | Codex thread L063 開 | codex/l063-kai @ a5bedd8 | L062:站 | 站 | `curriculum-workflow/lesson-requests/L063.json`; `curriculum-workflow/generated/L063-generation-packet.md`; `curriculum-workflow/drafts/L063-draft.json` | `public/assets/lessons/L063/`; `curriculum-workflow/audio-inbox/L063/` | Branch pushed with draft assets. Parallel prep only: do not merge until L062 站 is merged into latest `origin/main`, then rebase and recheck before writing L063 to production curriculum. |
 
 ## Status Values
 
