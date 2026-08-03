@@ -4685,12 +4685,18 @@ function SentencePracticePreview({
     }
   }
 
-  async function handleChoiceAudio(option: SentenceGameOption, readerName: string) {
-    await speakStageFour(`${readerName}念。`);
-    if (option.audioSrc) {
-      await playAudioSrc(option.audioSrc);
-    } else {
-      await playSpokenText(option.text);
+  async function handleChoiceAudio(option: SentenceGameOption, _readerName: string) {
+    const runId = guideRunRef.current + 1;
+    guideRunRef.current = runId;
+    onSpeakStartRef.current("stage4");
+    try {
+      if (option.audioSrc) {
+        const result = await playAudioSrc(option.audioSrc);
+        if (result === "ended" || guideRunRef.current !== runId) return;
+      }
+      if (guideRunRef.current === runId) await playSpokenText(option.text);
+    } finally {
+      if (guideRunRef.current === runId) onSpeakEndRef.current("stage4");
     }
   }
 
