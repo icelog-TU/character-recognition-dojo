@@ -16,8 +16,6 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R001 | review module 1 | claimed | Codex review-module thread | pending | L060:去 | none | curriculum-workflow/review-requests/R001.json / curriculum-workflow/generated/R001-generation-packet.md | public/assets/reviews/R001/ | First review module after L060; displays as 複習一, covers L001-L030 together with R002, and does not occupy L061. |
-| R002 | review module 2 | claimed | Codex review-module thread | pending | L060:去 R001:review | none | curriculum-workflow/review-requests/R002.json / curriculum-workflow/generated/R002-generation-packet.md | public/assets/reviews/R002/ | Second review module after L060; displays as 複習二. Next new-character lesson remains L061. |
 
 ## Status Values
 

@@ -28,9 +28,10 @@
 - App name: `認字練功房`
 - Current reviewed lessons: L001-L060
 - L060 introduces `去`.
+- Production review modules: R001-R002 after L060, covering L001-L030.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
 - L006-L060 include Stage 4 fixed sentence games after picture-supported listening.
-- Review module rhythm is reserved: after L060 add R001/R002, two 5-sentence review modules covering all new characters from L001-L030; after L090 add R003/R004 covering L031-L060; continue every 30 lessons. Review modules do not occupy L### lesson numbers, so after L060 the next new-character lesson is L061.
+- Review module rhythm has started: R001/R002 are the first two 5-sentence review modules and cover all new characters from L001-L030; after L090 add R003/R004 covering L031-L060; continue every 30 lessons. Review modules do not occupy L### lesson numbers, so after L060 the next new-character lesson is L061.
 - Check `docs/CURRICULUM_LEDGER.md` for the latest merged lesson sequence.
 - Check `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson work.
 
@@ -580,6 +581,7 @@ Production charTimings must use npm run assets:align:ai, then manual playback re
 Guide narration may use TTS.
 L001-L060 are reviewed and built.
 L060 introduces `去`.
+R001-R002 are reviewed and built as production review modules after L060, covering L001-L030.
 L007 introduces a fixed young girl character for 我.
 L012 introduces a fixed second-person young boy character for 你.
 L006-L060 include Stage 4 sentence games after picture-supported sentence listening.
