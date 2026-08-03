@@ -46,6 +46,7 @@ if (lessons.length === 0) {
   const lastLesson = lessons.at(-1);
   const lastId = lastLesson.id;
   const lastChars = (lastLesson.newChars ?? []).join("");
+  const lastIsReviewLesson = lastLesson.kind === "review" || lastChars === "";
 
   const handoff = readText("docs/PROJECT_HANDOFF_SOP.md");
   assertIncludes(
@@ -53,11 +54,19 @@ if (lessons.length === 0) {
     `Current reviewed lessons: L001-${lastId}`,
     `docs/PROJECT_HANDOFF_SOP.md current reviewed lesson range is not synced to ${lastId}.`,
   );
-  assertIncludes(
-    handoff,
-    `${lastId} introduces \`${lastChars}\`.`,
-    `docs/PROJECT_HANDOFF_SOP.md latest introduced character is not synced to ${lastId}:${lastChars}.`,
-  );
+  if (lastIsReviewLesson) {
+    assertIncludes(
+      handoff,
+      `${lastId} is a review lesson and introduces no new characters.`,
+      `docs/PROJECT_HANDOFF_SOP.md latest review lesson note is not synced to ${lastId}.`,
+    );
+  } else {
+    assertIncludes(
+      handoff,
+      `${lastId} introduces \`${lastChars}\`.`,
+      `docs/PROJECT_HANDOFF_SOP.md latest introduced character is not synced to ${lastId}:${lastChars}.`,
+    );
+  }
 
   const ledger = readText("docs/CURRICULUM_LEDGER.md");
   const ledgerCompleteMatch = ledger.match(/Merged curriculum is complete through (L\d{3})\./);
@@ -72,8 +81,9 @@ if (lessons.length === 0) {
   if (!lastLedgerRow.startsWith(`| ${lastId} |`)) {
     errors.push(`docs/CURRICULUM_LEDGER.md last lesson row is not ${lastId}.`);
   }
-  if (!lastLedgerRow.includes(`| ${lastChars} |`)) {
-    errors.push(`docs/CURRICULUM_LEDGER.md last lesson row does not list ${lastChars} for ${lastId}.`);
+  const expectedLastLedgerCharCell = lastIsReviewLesson ? "review" : lastChars;
+  if (!lastLedgerRow.includes(`| ${expectedLastLedgerCharCell} |`)) {
+    errors.push(`docs/CURRICULUM_LEDGER.md last lesson row does not list ${expectedLastLedgerCharCell} for ${lastId}.`);
   }
 
   const registry = readText("docs/PARALLEL_LESSON_REGISTRY.md");
@@ -132,7 +142,11 @@ if (lessons.length === 0) {
     );
   }
 
-  console.log(`Production curriculum: L001-${lastId}, latest new character(s): ${lastChars}.`);
+  console.log(
+    lastIsReviewLesson
+      ? `Production curriculum: L001-${lastId}, latest lesson is a review lesson.`
+      : `Production curriculum: L001-${lastId}, latest new character(s): ${lastChars}.`,
+  );
 }
 
 for (const warning of warnings) console.warn(`Warning: ${warning}`);

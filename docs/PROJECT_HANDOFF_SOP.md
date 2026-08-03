@@ -26,11 +26,11 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L060
-- L060 introduces `去`.
+- Current reviewed lessons: L001-L062
+- L062 is a review lesson and introduces no new characters.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
-- L006-L060 include Stage 4 fixed sentence games after picture-supported listening.
-- Review lesson rhythm is reserved: after L060 add two 5-sentence review lessons covering all new characters from L001-L030; after L090 cover L031-L060; continue every 30 lessons.
+- L006-L062 include Stage 4 fixed sentence games after picture-supported listening.
+- Review lesson rhythm has started: L061-L062 are the first two 5-sentence review lessons and cover all new characters from L001-L030; after L090 cover L031-L060; continue every 30 lessons.
 - Check `docs/CURRICULUM_LEDGER.md` for the latest merged lesson sequence.
 - Check `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson work.
 
@@ -578,10 +578,10 @@ Sentence text is horizontal, with zhuyin vertically on the right of each Han cha
 Curriculum sentence audio must use AI audio files with charTimings.
 Production charTimings must use npm run assets:align:ai, then manual playback review.
 Guide narration may use TTS.
-L001-L060 are reviewed and built.
-L060 introduces `去`.
+L001-L062 are reviewed and built.
+L062 is a review lesson and introduces no new characters.
 L007 introduces a fixed young girl character for 我.
 L012 introduces a fixed second-person young boy character for 你.
-L006-L060 include Stage 4 sentence games after picture-supported sentence listening.
+L006-L062 include Stage 4 sentence games after picture-supported sentence listening.
 Production checks include an audibility gate for new-character `charAudio`; near-silent files must be regenerated or repaired before pushing.
 ```

@@ -121,10 +121,12 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 | L059 | 起 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起 | 我這邊的看起來比他少 / 他吃的比看起來少 / 人多比人少好 / 這個比看起來好吃很多 / 我不要起來 | 我這邊的看來比他少吃人多好個很不要 | Introduces `起` through look-like comparisons and getting up. Reviews recent `少`, `比`, and `來`; S03 focusChar is `比` because that approved review sentence does not contain `起`. |
 | L060 | 去 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去 | 他看起來也要去山上 / 大家一起去看鳥 / 你去人少的一邊 / 不要來人多的這邊 / 你家裡的人比我家少 | 他看起來也要山上大家一鳥你人少的邊不多這裡比我 | Introduces `去` through going to the mountain, bird-watching, choosing the less crowded side, avoiding the crowded side, and comparing family size. Reviews recent `比`, `來`, and `起`; includes reviewed images, AI audio, and AI-aligned timings. |
+| L061 | review | same as L060 | 一二三，大家一起看鳥飛 / 一個小孩在門前看小鳥 / 女孩和男孩去山下看水 / 大人的手指很大 / 你看，門後也有書 | 一 二 三 人 個 大 的 小 手 有 山 下 水 在 很 家 和 鳥 孩 指 看 女 飛 男 門 前 後 也 | First review lesson after L060. Introduces no new characters. L061-L062 together cover every new character from L001-L030. Includes reviewed images, AI audio, AI-aligned/manual-reviewed timings, and fixed Stage 4 review games. |
+| L062 | review | same as L060 | 我在水邊看山上的鳥 / 一隻小鳥飛到高山上 / 人少的山邊比水邊好 / 你和我一起去門前 / 男孩女孩也來看書 | 一 人 的 小 我 山 上 你 水 在 高 和 隻 鳥 孩 看 女 飛 男 門 前 也 | Second review lesson after L060. Introduces no new characters. Completes the first review pair covering L001-L030. Includes reviewed images, AI audio, AI-aligned timings, and fixed Stage 4 review games. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L060. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L062. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

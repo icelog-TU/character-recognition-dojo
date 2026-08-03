@@ -16,8 +16,6 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L061 | review lesson 1 | ready-blocked-by-dependency | Codex L061-L062 review thread | codex/l061-l062-review @ 31ffe40 | L060:去 | 去 | curriculum-workflow/lesson-requests/L061.json / curriculum-workflow/generated/L061-generation-packet.md / curriculum-workflow/drafts/L061-draft.json | public/assets/lessons/L061/; curriculum-workflow/audio-inbox/L061/ | First review pair after L060; covers L001-L030 together with L062. Assets and draft timings prepared. Do not merge until L060 is merged. |
-| L062 | review lesson 2 | ready-blocked-by-dependency | Codex L061-L062 review thread | codex/l061-l062-review @ 31ffe40 | L060:去; L061:review | 去 | curriculum-workflow/lesson-requests/L062.json / curriculum-workflow/generated/L062-generation-packet.md / curriculum-workflow/drafts/L062-draft.json | public/assets/lessons/L062/; curriculum-workflow/audio-inbox/L062/ | Second review lesson in the first pair; pair-level coverage checked complete. Assets and draft timings prepared. Do not merge until L060 is merged. |
 
 ## Status Values
 
