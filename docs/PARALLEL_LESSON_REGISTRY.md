@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L061 | 坐 | merge-ready | Codex L061 production thread | codex/l061-zuo @ 41406cd | none | none | `curriculum-workflow/lesson-requests/L061.json`; `curriculum-workflow/generated/L061-generation-packet.md`; `curriculum-workflow/drafts/L061-draft.json` | `public/assets/lessons/L061/`; `curriculum-workflow/audio-inbox/L061/` | Uploaded / pushed branch checkpoint. Branch push contains reviewed images, AI sentence audio, wrong-option audio, AI charTimings, production JSON, ledger, and planner export; curriculum and production asset validation pass. |
 
 ## Status Values
 
