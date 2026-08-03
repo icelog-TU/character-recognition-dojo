@@ -76,7 +76,7 @@
       "id": "L062-S02",
       "text": "不要坐這邊，要站起來",
       "displayLines": [
-        "不要坐這邊",
+        "不要坐這邊，",
         "要站起來"
       ],
       "spokenText": "不要坐這邊要站起來",
@@ -199,8 +199,9 @@
       "id": "L062-S04",
       "text": "坐下不好，站起來走一走",
       "displayLines": [
-        "坐下不好",
-        "站起來走一走"
+        "坐下不好，",
+        "站起來",
+        "走一走"
       ],
       "spokenText": "坐下不好站起來走一走",
       "focusChar": "站",
@@ -424,9 +425,10 @@
         },
         {
           "id": "wrong-one",
-          "text": "去山上比去水邊更好",
+          "text": "去水邊比去山上很好",
           "correct": false,
-          "audioSrc": "/assets/lessons/L062/audio/L062-G05-wrong-one.m4a"
+          "audioSrc": "/assets/lessons/L062/audio/L062-G05-wrong-one.m4a",
+          "spokenText": "去水邊比去山上很好"
         },
         {
           "id": "wrong-two",
