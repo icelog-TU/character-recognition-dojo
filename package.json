@@ -18,8 +18,10 @@
     "curriculum:packet": "node scripts/create-generation-packet.mjs",
     "curriculum:recommend": "node scripts/recommend-next-lesson.mjs",
     "curriculum:request-from-review": "node scripts/create-request-from-review.mjs",
+    "curriculum:audit-state": "node scripts/audit-curriculum-state.mjs",
     "validate:curriculum": "node scripts/validate-curriculum.mjs",
     "validate:production": "node scripts/validate-production-assets.mjs",
+    "verify": "npm run curriculum:audit-state && npm run validate:curriculum && npm run validate:production && npm run lint && npm run build",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -4,11 +4,13 @@ This app treats AI output as draft material. A lesson enters the shipping curric
 
 For API key setup and AI generation commands, see `docs/AI_GENERATION_SETUP.md`.
 
-For merged lessons, use `docs/CURRICULUM_LEDGER.md` as the running lesson sequence, taught-character set, and sentence history. For not-yet-merged parallel lessons, use `docs/PARALLEL_LESSON_REGISTRY.md` as the provisional coordination board.
+For multi-thread source-of-truth rules, required startup checks, and merge gates, see `docs/CURRICULUM_OPERATING_SOP.md`.
+
+For merged lessons, use latest `origin/main` and `src/curriculum/sample-lessons.json` as the shipping truth. `docs/CURRICULUM_LEDGER.md` is the human-readable merged summary. For not-yet-merged parallel lessons, use `docs/PARALLEL_LESSON_REGISTRY.md` as the provisional coordination board.
 
 ## Lesson Pipeline
 
-0. Run `git fetch origin`, check `docs/CURRICULUM_LEDGER.md`, and check `docs/PARALLEL_LESSON_REGISTRY.md`.
+0. Run `git fetch origin`, `git status --short --branch`, and `npm run curriculum:audit-state`, then check `docs/CURRICULUM_LEDGER.md` and `docs/PARALLEL_LESSON_REGISTRY.md`.
 1. Create or claim a lesson row in `docs/PARALLEL_LESSON_REGISTRY.md` before starting any parallel lesson work. This is required before creating request files, generating packets, images, audio, or lesson JSON for a not-yet-merged lesson.
 2. Create a lesson request in `curriculum-workflow/lesson-requests/`.
 3. Check `docs/CURRICULUM_LEDGER.md` for the merged learned character set and recent review pool. If this is a parallel-prepared later lesson, also check registered provisional dependencies.
@@ -21,8 +23,8 @@ For merged lessons, use `docs/CURRICULUM_LEDGER.md` as the running lesson sequen
 10. Process audio without trimming sentence endings.
 11. Use AI transcription timestamps to verify the spoken sentence and write character timing metadata.
 12. Move only reviewed content into `src/curriculum/sample-lessons.json`.
-13. Update `docs/CURRICULUM_LEDGER.md`; update or clear the registry row if the lesson was parallel-prepared.
-14. Run `npm run validate:curriculum`, `npm run validate:production`, `npm run build`, and `npm run lint`.
+13. Update `docs/CURRICULUM_LEDGER.md`; run `npm run curriculum:export-planner`; update or clear the registry row if the lesson was parallel-prepared.
+14. Run `npm run verify`.
 
 ## Parallel Lesson Production SOP
 
@@ -58,7 +60,7 @@ Before merging a parallel-prepared later lesson:
 5. Rebase the lesson branch on latest `origin/main`.
 6. Add the lesson to `src/curriculum/sample-lessons.json` in order.
 7. Update `docs/CURRICULUM_LEDGER.md`.
-8. Run the full production checks before push.
+8. Run `npm run verify` before push.
 
 If a dependency lesson changed its new character, sentence set, or review-character requirements after the later lesson was drafted, stop and reconcile before merging. The later lesson may need new sentences, images, audio, or timings.
 
@@ -322,7 +324,7 @@ Rules:
 
 ## Stage 4 Sentence Game Rules
 
-Starting around L011, Stage 4 may use a fixed `sentenceGames` array in the lesson data. These games are reviewed curriculum, not runtime random events.
+Current production data starts Stage 4 at L006. Stage 4 uses a fixed `sentenceGames` array in the lesson data. These games are reviewed curriculum, not runtime random events.
 
 - Use fixed game types per sentence/game. Do not randomly assign game modes at runtime for production lessons.
 - Supported first-pass game types: `find-character`, `teach-character`, `missing-character`, `partial-order`, and `choose-pronunciation`.

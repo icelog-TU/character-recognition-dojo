@@ -2,10 +2,13 @@
 
 This file is the shared coordination board for parallel lesson production.
 
-Use this file only for **not-yet-merged** lesson work. The source of truth for merged curriculum remains:
+Use this file only for **not-yet-merged** lesson work. The source of truth for merged shipping curriculum is:
 
 - `src/curriculum/sample-lessons.json`
-- `docs/CURRICULUM_LEDGER.md`
+
+`docs/CURRICULUM_LEDGER.md` is the required human-readable merged summary and must be kept synced, but it does not override production JSON.
+
+See `docs/CURRICULUM_OPERATING_SOP.md` for the complete multi-thread workflow. In short: this registry coordinates provisional work, but production shipping still happens through one ordered release lane.
 
 When the teacher wants to prepare 2-3 lessons at the same time, register each active lesson here before any real work starts. This registry is mandatory coordination state, not optional notes.
 
@@ -30,11 +33,12 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 ## How To Register Work
 
 1. Run `git fetch origin` and inspect latest `origin/main`.
-2. Before creating request files, generating packets, images, audio, or editing lesson JSON, add or update exactly one row for the lesson this thread owns.
-3. Fill `New Character(s)` as soon as the teacher chooses the character.
-4. If a prior lesson is not merged, list it in `Depends On`, for example `L051:樣`.
-5. Put those not-yet-merged characters in `Provisional Learned Chars`.
-6. Commit and push the registry update before starting large image/audio work. If a quick local claim is needed first, update and push the registry as the first commit before any asset generation.
+2. Run `npm run curriculum:audit-state` to confirm main, ledger, registry, planner data, and lesson asset folders agree before claiming new work.
+3. Before creating request files, generating packets, images, audio, or editing lesson JSON, add or update exactly one row for the lesson this thread owns.
+4. Fill `New Character(s)` as soon as the teacher chooses the character.
+5. If a prior lesson is not merged, list it in `Depends On`, for example `L051:樣`.
+6. Put those not-yet-merged characters in `Provisional Learned Chars`.
+7. Commit and push the registry update before starting large image/audio work. If a quick local claim is needed first, update and push the registry as the first commit before any asset generation.
 
 ## Required Registry Checkpoints
 
@@ -76,6 +80,7 @@ This file is intentionally small and may be touched by several Codex threads. Be
 ```bash
 git fetch origin
 git status --short --branch
+npm run curriculum:audit-state
 ```
 
 If another thread changed the registry, rebase first and preserve both threads' rows. Do not delete another active row unless that lesson is already merged or the user explicitly cancels it.

@@ -49,7 +49,7 @@ Rules:
 - `zhuyin` uses Taiwan zhuyin only and must include an entry for every `newChars` item.
 - `charAudio` maps each new character to its reviewed single-character AI audio file. During prototype work this may be omitted and the app will use a TTS fallback.
 - `originHint` is optional internal curriculum metadata. It must not appear in the child-facing lesson practice UI unless a separate reviewed child-safe design is explicitly built.
-- `requiredRounds` controls block 3 sentence-game rounds. Blocks 1 and 2 have fixed completion behavior.
+- `requiredRounds` controls Stage 4 sentence-game rounds when `sentenceGames` is present. Stages 1-3 have fixed completion behavior.
 
 ## Sentence
 
@@ -90,7 +90,7 @@ Rules:
 
 ## Sentence Game
 
-Starting around L011, a lesson may include a fixed `sentenceGames` array. Do not choose the game type randomly at runtime; each reviewed game is part of the lesson design.
+Current production data starts Stage 4 at L006. A lesson may include a fixed `sentenceGames` array. Do not choose the game type randomly at runtime; each reviewed game is part of the lesson design.
 
 ```json
 {

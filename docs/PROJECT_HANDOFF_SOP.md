@@ -2,6 +2,7 @@
 
 這份文件是給新的 Codex/GPT 對話串接手用的總控文件。開始任何新工作前，先讀這份，再讀：
 
+- `docs/CURRICULUM_OPERATING_SOP.md`
 - `docs/CURRICULUM_LEDGER.md`
 - `docs/PARALLEL_LESSON_REGISTRY.md`
 - `docs/CURRICULUM_PRODUCTION_SOP.md`
@@ -9,6 +10,8 @@
 - `docs/AI_GENERATION_SETUP.md`
 - `docs/COLLECTION_SYSTEM.md`
 - `docs/AI_PLANNER_WORKER_SETUP.md`
+
+`docs/CURRICULUM_OPERATING_SOP.md` is the authority for multi-thread curriculum work. If another SOP appears to disagree with it, use the operating SOP and latest `origin/main`.
 
 ## 專案定位
 
@@ -41,6 +44,8 @@ git remote -v
 git fetch origin
 git status --short --branch
 git log -1 --oneline
+npm ci
+npm run curriculum:audit-state
 ```
 
 ## Markdown Encoding Read Rule
@@ -57,7 +62,9 @@ Only treat Markdown text as actually corrupted if explicit UTF-8 decoding fails,
 
 Rules:
 
-- Treat `https://github.com/icelog-TU/character-recognition-dojo` as the shared source of truth.
+- Treat latest `origin/main` and `src/curriculum/sample-lessons.json` as the shared shipping curriculum truth.
+- Treat `docs/CURRICULUM_LEDGER.md` and `public/tools/planner-data.json` as derived records that must be updated after production curriculum changes.
+- Treat `docs/PARALLEL_LESSON_REGISTRY.md` as the not-yet-merged coordination board, not a permanent progress ledger.
 - If local `main` is behind `origin/main` and there are no local changes, run `git pull --ff-only origin main` before editing.
 - Do not start from an old commit when another Codex has already pushed newer work.
 - Prefer one branch per task instead of several Codex threads editing `main` directly.
@@ -105,6 +112,7 @@ Before pushing or asking the user to merge:
 ```bash
 git fetch origin
 git status --short --branch
+npm run curriculum:audit-state
 npm run validate:curriculum
 npm run validate:production
 npm run lint
@@ -130,10 +138,7 @@ Self-check gate before uploading to GitHub:
 Minimum required checks:
 
 ```bash
-npm run validate:curriculum
-npm run validate:production
-npm run lint
-npm run build
+npm run verify
 ```
 
 `npm run validate:production` is not just an existence check. It also measures new-character audio volume and rejects near-silent `charAudio` files. If a mobile tester reports "the character has no sound" but the file exists, inspect the file's `max_volume` before changing UI playback logic.
@@ -244,7 +249,7 @@ See `docs/COLLECTION_SYSTEM.md` for the full economy and asset plan.
 
 ## Lesson Flow
 
-Each lesson has three stages.
+Lessons use a staged flow. L001-L005 use Stage 1-3. Current production lessons L006-L051 add Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
 
 ### Stage 1: 聽聽看
 
@@ -291,7 +296,7 @@ For L001-L010, use picture-supported sentence practice:
     - red button: next lesson
     - white button: back to course entrance
 
-From around L011, add Stage 4 after the child completes picture-supported sentence listening. Do not replace Stage 3. Stage 4 uses fixed, reviewed sentence games stored in lesson data. Do not choose the game type randomly at runtime.
+Current production data starts Stage 4 at L006. Add Stage 4 after the child completes picture-supported sentence listening. Do not replace Stage 3. Stage 4 uses fixed, reviewed sentence games stored in lesson data. Do not choose the game type randomly at runtime.
 
 - 找字: the child taps a target character inside the sentence.
 - 教角色念字: the sentence pauses conceptually on a target character; the character asks the child to help, and the child records the target word locally.
@@ -513,6 +518,7 @@ Important files:
 - `scripts/align-audio-timings-ai.mjs`: production AI transcription timing generation.
 - `scripts/optimize-images.mjs`: image conversion/compression.
 - `docs/CURRICULUM_LEDGER.md`: lesson history and character map.
+- `docs/CURRICULUM_OPERATING_SOP.md`: source-of-truth order, parallel work lanes, dependency gates, and required start/finish checks.
 - `docs/PARALLEL_LESSON_REGISTRY.md`: active not-yet-merged parallel lesson claims and provisional dependencies.
 - `docs/CURRICULUM_PRODUCTION_SOP.md`: production workflow.
 - `docs/CURRICULUM_SCHEMA.md`: curriculum JSON shape.
@@ -524,10 +530,7 @@ Important files:
 Before committing and pushing, run the self-check gate above. At minimum, run:
 
 ```bash
-npm run validate:curriculum
-npm run validate:production
-npm run lint
-npm run build
+npm run verify
 git diff --stat
 git diff --name-only
 ```
@@ -561,6 +564,7 @@ https://github.com/icelog-TU/character-recognition-dojo
 
 Please first read:
 - docs/PROJECT_HANDOFF_SOP.md
+- docs/CURRICULUM_OPERATING_SOP.md
 - docs/CURRICULUM_LEDGER.md
 - docs/PARALLEL_LESSON_REGISTRY.md
 - docs/CURRICULUM_PRODUCTION_SOP.md

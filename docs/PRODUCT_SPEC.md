@@ -10,7 +10,7 @@
 2. Block 1 introduces the lesson's new character or seed characters. Each character is shown alone, large, with zhuyin. Tapping it plays the character sound; the block clears when all new characters have been heard.
 3. Block 2 asks the child to find the lesson's new character(s) among several character tiles. Correct taps light up and play the character sound.
 4. Block 3 always uses reviewed lesson sentences with picture-supported listening and character highlighting.
-5. From around lesson 11, Block 4 adds sentence games after picture-supported listening.
+5. Current production lessons add Block 4 from L006 onward, after picture-supported listening.
 6. Completing all required blocks unlocks the next lesson.
 7. Completed lessons enter manual and random review.
 
@@ -98,10 +98,10 @@ Each lesson has:
 - `newChars`: the new character or seed characters being unlocked.
 - `zhuyin`: Taiwan zhuyin only. No Hanyu pinyin in the main product.
 - `sentences`: reviewed practice strings that use only previously learned characters plus the lesson new character(s).
-- `requiredRounds`: how many sentence game rounds are needed to complete block 3.
+- `requiredRounds`: how many Stage 4 sentence game rounds are needed when `sentenceGames` is present.
 - optional `originHint`: internal curriculum metadata for planning/handoff. Do not display it in the child-facing lesson practice UI unless a separate reviewed child-safe design is explicitly built.
 
-For the first ten lessons, there may not be enough characters to support real sentence games. Those lessons should use picture-supported sentence preview first. Sentence games are currently planned to start around lesson 11 as a fourth stage after picture-supported listening, not as a replacement for picture-supported listening.
+L001-L005 use picture-supported sentence listening without Stage 4. Current production lessons L006 and later include Stage 4 sentence games after picture-supported listening, not as a replacement for picture-supported listening.
 
 The first lesson can be a seed lesson. Current seed draft:
 

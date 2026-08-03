@@ -8,7 +8,7 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 - See which sentences each lesson uses.
 - Prefer reusing characters from the previous 4-5 lessons when writing new sentences.
 - Prevent accidental new characters from entering a lesson before they are taught.
-- Give AI sentence generation a compact source of truth before drafting new lessons.
+- Give AI sentence generation a compact merged-curriculum summary before drafting new lessons. If this summary disagrees with `src/curriculum/sample-lessons.json`, the production JSON and latest `origin/main` win.
 
 ## Current Character State
 

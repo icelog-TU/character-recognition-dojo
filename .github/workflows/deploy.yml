@@ -30,8 +30,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Audit curriculum state
+        run: npm run curriculum:audit-state
+
       - name: Validate curriculum
         run: npm run validate:curriculum
+
+      - name: Validate production assets
+        run: npm run validate:production
+
+      - name: Lint
+        run: npm run lint
 
       - name: Build
         run: npm run build

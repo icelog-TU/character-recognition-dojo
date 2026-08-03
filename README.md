@@ -18,6 +18,7 @@
 Start new work by reading:
 
 - `docs/PROJECT_HANDOFF_SOP.md`
+- `docs/CURRICULUM_OPERATING_SOP.md`
 - `docs/CURRICULUM_LEDGER.md`
 - `docs/PARALLEL_LESSON_REGISTRY.md`
 - `docs/CURRICULUM_PRODUCTION_SOP.md`
@@ -34,8 +35,20 @@ Validate the sample curriculum:
 npm run validate:curriculum
 ```
 
+Audit cross-file curriculum state:
+
+```bash
+npm run curriculum:audit-state
+```
+
 Build:
 
 ```bash
 npm run build
+```
+
+Full pre-push gate:
+
+```bash
+npm run verify
 ```
