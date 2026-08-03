@@ -114,10 +114,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 | L053 | 更 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更 | 我不要一樣的，我要更好的 / 我做的好吃，媽媽做的更好吃 / 兩隻不一樣的狗，一隻更大 / 這樣做不好吃，我不要吃 / 大人的手指更大 | 我不要一樣更好做吃媽媽兩隻狗大人手指 | Introduces `更` through better/to-better comparisons, better food, bigger dogs, refusing bad food, and adult/child finger size comparison. Reviews recent `樣`, `要`, and `做`; prepared after L052 entered production and includes reviewed images, AI audio, and AI-aligned timings. |
 | L054 | 邊 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊 | 大家在水邊做吃的 / 我更愛在門邊看書 / 你不要這樣做 / 兩邊不一樣，這邊更好 / 我要看更好看的書 | 大家水邊做吃我更愛門看書你不要這樣兩不一好 | Introduces `邊` through waterside cooking, reading by a door, choosing a side, and wanting a better-looking book. Reviews recent `樣`, `要`, and `更`; S03 reuses the approved L052 no-stepping image, and the other four reviewed images use new picture-book assets. |
+| L055 | 多 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多 | 這邊的人更多 / 人更多的這邊，更好吃 / 不要一邊吃，一邊看書 / 不要這樣，這樣不好 / 我要看更多的書 | 這邊人更的好吃不要一看書樣我 | Introduces `多` through more-people and more-books scenes, plus eating/reading review. Reviews recent `要`, `更`, and `邊`; S01-S02 form a continuous restaurant-choice scene and S03-S04 form a continuous dirty-book correction scene. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L054. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L055. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

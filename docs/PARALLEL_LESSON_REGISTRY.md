@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L055 | 多 | claimed | Codex L055 parallel thread | codex/l055-duo @ pending | L054:邊 | 邊 | `curriculum-workflow/lesson-requests/L055.json`; `curriculum-workflow/generated/L055-generation-packet.md` | `curriculum-workflow/audio-inbox/L055/`; `public/assets/lessons/L055/` | Start / claim checkpoint. Teacher supplied approved lesson request. Prepare assets only; do not merge until L054 is merged and dependency recheck passes. |
 
 ## Status Values
 
