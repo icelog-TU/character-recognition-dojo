@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L063 | 開 | claimed | Codex thread L063 開 | codex/l063-kai @ pending | L062:站 | 站 | `curriculum-workflow/lesson-requests/L063.json`; `curriculum-workflow/generated/L063-generation-packet.md`; `curriculum-workflow/drafts/L063-draft.json` | `public/assets/lessons/L063/`; `curriculum-workflow/audio-inbox/L063/` | Parallel prep only: do not merge until L062 站 is merged into latest `origin/main`, then rebase and recheck before writing L063 to production curriculum. |
+| L063 | 開 | request-ready | Codex thread L063 開 | codex/l063-kai @ pending | L062:站 | 站 | `curriculum-workflow/lesson-requests/L063.json`; `curriculum-workflow/generated/L063-generation-packet.md`; `curriculum-workflow/drafts/L063-draft.json` | `public/assets/lessons/L063/`; `curriculum-workflow/audio-inbox/L063/` | Request, packet, and draft are prepared. Parallel prep only: do not merge until L062 站 is merged into latest `origin/main`, then rebase and recheck before writing L063 to production curriculum. |
 
 ## Status Values
 
