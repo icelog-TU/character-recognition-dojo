@@ -414,9 +414,10 @@ Guide narration should:
 
 Every reviewed sentence should have one picture.
 
-- Current approved sentence-image style reference is the polished L058 library set, especially `public/assets/lessons/L058/images/L058-S02.webp` and `public/assets/lessons/L058/images/L058-S03.webp`. Use this as the baseline for replacement images unless the teacher explicitly approves a new visual direction.
-- Use warm, child-friendly picture-book style.
-- Spell out the style traits in prompts: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, and bright warm palette. Do not use only a generic `warm watercolor` phrase.
+- Current approved sentence-image style reference is the polished L058 library set. Mandatory baseline reference images are `public/assets/lessons/L058/images/L058-S01.webp`, `public/assets/lessons/L058/images/L058-S02.webp`, and `public/assets/lessons/L058/images/L058-S03.webp`. Use these as the baseline for all new or replacement sentence images unless the teacher explicitly approves a new visual direction.
+- When generating images, attach or otherwise provide the L058 reference images whenever the image tool supports reference images. If references cannot be attached, say so in the work notes and write the prompt with the exact reference paths plus the style traits below.
+- Spell out the style traits in prompts: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Do not use only a generic `warm watercolor` phrase.
+- Before accepting final images, compare them against the L058 baseline set. Reject images that look like a different app style: flat cartoon, simple watercolor wash, anime, 3D render, plastic toy, heavy outline, realistic photo, dark/muted palette, or inconsistent preschool proportions.
 - No text, letters, numbers, signs, labels, watermarks, or zhuyin inside the image.
 - If the sentence expresses count, the image must clearly match the count.
 - If the sentence contrasts size, the image must make the contrast obvious.

@@ -192,6 +192,10 @@ ${priorSentenceLines}
 
 ## 圖片與音訊規則
 
+- 圖片風格必須以已核准的 L058 圖書館基準圖為固定參考：\`public/assets/lessons/L058/images/L058-S01.webp\`、\`public/assets/lessons/L058/images/L058-S02.webp\`、\`public/assets/lessons/L058/images/L058-S03.webp\`。
+- 如果圖片工具可以附參考圖，產生新圖或替換圖時必須附上這三張參考圖；如果不能附圖，必須在工作紀錄說明限制，並在 prompt 寫出這三個路徑與具體風格特徵。
+- prompt 必須明寫：modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition。
+- 不可只寫「warm watercolor children picture-book style」這種泛稱；這會讓畫風跑掉。
 - 圖片目標路徑格式：\`${assetBase}/images/${id}-S01.webp\`
 - 句音訊目標路徑格式：\`${assetBase}/audio/${id}-S01.m4a\`
 - 複習模組沒有單字音訊。
@@ -275,7 +279,10 @@ ${priorSentenceLines}
 
 規則：
 
-- 使用溫暖、簡潔、適合幼兒的繪本風格。
+- 圖片風格必須以已核准的 L058 圖書館基準圖為固定參考：\`public/assets/lessons/L058/images/L058-S01.webp\`、\`public/assets/lessons/L058/images/L058-S02.webp\`、\`public/assets/lessons/L058/images/L058-S03.webp\`。
+- 如果圖片工具可以附參考圖，產生新圖或替換圖時必須附上這三張參考圖；如果不能附圖，必須在工作紀錄說明限制，並在 prompt 寫出這三個路徑與具體風格特徵。
+- prompt 必須明寫：modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition。
+- 不可只寫「warm watercolor children picture-book style」這種泛稱；這會讓畫風跑掉。
 - 每張圖只呈現一個清楚主意，讓句意容易看懂。
 - 不可出現文字、字母、數字、注音、UI、標籤、浮水印或招牌。
 - 如果句子有數量，圖片必須清楚符合該數量。
