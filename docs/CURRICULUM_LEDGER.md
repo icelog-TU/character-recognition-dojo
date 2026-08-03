@@ -14,11 +14,11 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 Characters taught after Lesson 51:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣`
 
 Recent review pool for the next lesson:
 
-`好 做 吃 這 會 可 是 小 不 愛 書 的 我 媽 很 看 孩 個 他 飛 爸 隻 人 鳥 走 兩 都 手 也 狗`
+`樣 好 做 吃 這 會 可 是 小 不 愛 書 的 我 媽 很 看 孩 個 他 飛 爸 隻 人 鳥 走 兩 都 手 也 狗`
 
 ## Visual Continuity Ledger
 
@@ -109,6 +109,7 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L048 | 吃 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃 | 這個人很愛吃，也很會吃 / 小小孩不會看書，可是會吃書 / 書是不可吃的 / 這是我媽媽的愛書 / 這兩隻小狗很可愛 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這 | Introduces `吃` through eating, books-not-for-eating, and reviews `可`, `會`, and `這`. |
 | L049 | 做 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做 | 這是媽媽做的，我很愛吃 / 媽媽會做吃的，我不會做 / 這個人很會吃，可是他不會做 / 這個是我看書做的 / 書裡有可愛的小孩 | 這是媽的，我很愛吃會不個人可他看書裡有小孩 | Introduces `做` through making food, cooking/not-cooking, making from a book, and reviews `會`, `這`, and `吃`. |
 | L050 | 好 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好 | 這是媽媽做的，都很好吃 / 這個好可愛，可是我不會做 / 這個人好會吃 / 我和你都是好小孩 / 我爸爸不會做吃的 | 這是媽做的都很吃個可愛我不會人和你小孩爸 | Introduces `好` through good-tasting food, cute-but-hard-to-make craftwork, eating well, good children, and reviews `這`, `吃`, and `做`. |
+| L051 | 樣 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣 | 我也會做好吃的 / 我做的和媽媽一樣好吃 / 爸爸，這樣做不好吃 / 你這樣做我不吃 / 我會做到一樣好 | 我也會做好吃的做和媽媽一好爸爸這不你 | Introduces `樣` through same-way/same-quality sentences, cooking comparison, and reviews `吃`, `做`, and `好`. |
 
 ## Planned Lessons
 

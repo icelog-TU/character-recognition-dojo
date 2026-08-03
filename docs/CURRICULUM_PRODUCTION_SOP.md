@@ -33,7 +33,7 @@ Parallel production means **parallel drafting and asset preparation**, not unord
 Allowed parallel work:
 
 - The provisional sequence must be registered in `docs/PARALLEL_LESSON_REGISTRY.md`.
-- Registration is not optional. A parallel lesson must appear in the registry before work starts, must be updated after assets/checks are prepared, and must be updated again after any branch push or merge.
+- Registration is not optional. A parallel lesson must appear in the registry before work starts, must be updated after assets/checks are prepared, and must be updated again after any branch or draft push. Merge cleanup is a separate final registry cleanup step.
 - A later lesson may be drafted before the immediately previous lesson is merged if the teacher has explicitly chosen the previous lesson's new character(s).
 - The later lesson request must include `dependsOnLessons` for any not-yet-merged prior lesson and must list those prior new characters in `provisionalLearnedChars`.
 - The AI must treat the lesson request's `allowedChars` as the temporary locked boundary for drafting, image prompts, sentence audio, and char timings.
@@ -64,12 +64,12 @@ If a dependency lesson changed its new character, sentence set, or review-charac
 
 ## Parallel Registry Update Points
 
-For every parallel-prepared lesson, update `docs/PARALLEL_LESSON_REGISTRY.md` at these moments:
+For every parallel-prepared lesson, update `docs/PARALLEL_LESSON_REGISTRY.md` at these three moments:
 
 1. **Start / claim:** before request, packet, image, audio, or curriculum JSON work starts.
 2. **Assets prepared:** after reviewed images, audio, and timings are prepared, even if the lesson is still blocked by a dependency.
 3. **Uploaded / branch pushed:** after pushing the lesson branch or any remote draft work; record the branch and short commit.
-4. **Merged:** after the lesson enters `main`; clear the active row or mark it `merged` in the same cleanup commit.
+After the lesson enters `main`, clear the active row or mark it `merged` in the same cleanup commit. This merge cleanup is required, but it is separate from the three parallel-prep recording points.
 
 If the registry cannot be pushed, the thread must say so in chat and must not continue with large invisible asset work.
 

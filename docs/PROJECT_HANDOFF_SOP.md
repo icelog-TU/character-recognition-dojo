@@ -23,10 +23,10 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L049
-- L049 introduces `做`.
+- Current reviewed lessons: L001-L051
+- L051 introduces `樣`.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
-- L006-L049 include Stage 4 fixed sentence games after picture-supported listening.
+- L006-L051 include Stage 4 fixed sentence games after picture-supported listening.
 - Check `docs/CURRICULUM_LEDGER.md` for the latest merged lesson sequence.
 - Check `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson work.
 
@@ -88,7 +88,7 @@ Rules for this workflow:
 
 - Parallel work is limited to drafting and asset preparation until dependencies are merged.
 - The shared provisional sequence is recorded in `docs/PARALLEL_LESSON_REGISTRY.md`.
-- Registry updates are mandatory, not optional: update it before starting any parallel lesson work, after assets/checks are prepared, after pushing a branch or draft, and after the lesson merges.
+- Registry updates are mandatory, not optional: during parallel prep, update it at three recording points: before starting any parallel lesson work, after assets/checks are prepared, and after pushing a branch or draft. After the lesson merges, clear or mark the row in the same cleanup commit.
 - Do not do invisible parallel lesson work. If a thread is preparing L051, L052, or later, that lesson must be visible in the registry before request, packet, image, audio, or curriculum JSON work starts.
 - A later lesson request must clearly list not-yet-merged prior lessons in `dependsOnLessons` and those characters in `provisionalLearnedChars`.
 - Each thread must announce the exact lesson and asset folder it owns, such as `L050` and `public/assets/lessons/L050/`.
@@ -573,10 +573,10 @@ Sentence text is horizontal, with zhuyin vertically on the right of each Han cha
 Curriculum sentence audio must use AI audio files with charTimings.
 Production charTimings must use npm run assets:align:ai, then manual playback review.
 Guide narration may use TTS.
-L001-L049 are reviewed and built.
-L049 introduces `做`.
+L001-L051 are reviewed and built.
+L051 introduces `樣`.
 L007 introduces a fixed young girl character for 我.
 L012 introduces a fixed second-person young boy character for 你.
-L006-L049 include Stage 4 sentence games after picture-supported sentence listening.
+L006-L051 include Stage 4 sentence games after picture-supported sentence listening.
 Production checks include an audibility gate for new-character `charAudio`; near-silent files must be regenerated or repaired before pushing.
 ```

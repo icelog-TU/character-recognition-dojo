@@ -38,7 +38,7 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 ## Required Registry Checkpoints
 
-Every parallel lesson thread must update this registry at these checkpoints:
+Every parallel lesson thread must update this registry at these three checkpoints:
 
 1. **Start / claim:** before lesson request, packet, image, audio, or curriculum JSON work starts.
    - Status should be `claimed`, `request-ready`, or `drafting`.
@@ -50,9 +50,7 @@ Every parallel lesson thread must update this registry at these checkpoints:
 3. **Uploaded / pushed branch:** after pushing a task branch or any remote work for that lesson.
    - Update `Branch / Commit` to the pushed branch and short commit hash.
    - `Notes` must say whether it is only a branch/draft push or ready to merge.
-4. **Merged to main:** after the lesson enters `main` and `docs/CURRICULUM_LEDGER.md` is updated.
-   - Remove the row or change it to `merged` only in the same commit that clears/archive it.
-   - The registry must not keep stale active rows for lessons already merged into `src/curriculum/sample-lessons.json`.
+Merge cleanup is separate from the three parallel-prep checkpoints. After the lesson enters `main` and `docs/CURRICULUM_LEDGER.md` is updated, remove the active row or change it to `merged` in the same cleanup commit. The registry must not keep stale active rows for lessons already merged into `src/curriculum/sample-lessons.json`.
 
 If a thread cannot push the registry update, it must say so in chat and must not start large image/audio work as invisible parallel work.
 
