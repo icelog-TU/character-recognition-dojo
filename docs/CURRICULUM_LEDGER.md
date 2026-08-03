@@ -117,10 +117,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L055 | 多 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多 | 這邊的人更多 / 人更多的這邊，更好吃 / 不要一邊吃，一邊看書 / 不要這樣，這樣不好 / 我要看更多的書 | 這邊人更的好吃不要一看書樣我 | Introduces `多` through more-people and more-books scenes, plus eating/reading review. Reviews recent `要`, `更`, and `邊`; S01-S02 form a continuous restaurant-choice scene and S03-S04 form a continuous dirty-book correction scene. |
 | L056 | 少 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少 | 一邊多一邊少，兩邊不一樣。 / 你要多少？這樣好不好？ / 這樣很少，我要吃更多 / 要這樣做，會更好看 / 水邊鳥更多，山邊鳥很少 | 一邊多少兩不樣你要這好很我吃更做會水鳥山 | Introduces `少` through more/less comparison, asking how much, wanting more food, making something look better, and water-side versus mountain-side bird counts. Reviews recent `更`, `邊`, and `多`; S02-S03 form a continuous rice-serving scene. |
 | L057 | 比 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比 | 你很少看書，要多看書。 / 我比你更愛看書 / 這邊的書比我家更多 / 水邊的人比山上的更多 / 我要到人少的這邊 | 你很少看書要多我比更愛這邊的家水人山上到 | Introduces `比` through reading preference, library/home book quantity, and water-side versus mountain-side crowd comparisons. Reviews recent `邊`, `多`, and `少`; S04-S05 form a continuous crowd-choice scene. |
+| L058 | 來 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來 | 我很少來這邊 / 這邊的書比家裡更多 / 我要多來這邊看書 / 你來和我比一比 / 我吃的比你更少 | 我很少這邊的書比家裡更多要看你和一吃 | Introduces `來` through coming to the library, wanting to come more often, and inviting someone to compare. Reviews recent `多`, `少`, and `比`; S01-S03 form a continuous library scene, S04 compares book stacks, and S05 compares eating amounts. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L057. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L058. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

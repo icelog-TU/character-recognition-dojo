@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L058 | 來 | claimed | Codex L058 production thread | codex/l058-lai @ pending | none; L057:比 already merged | none | `curriculum-workflow/lesson-requests/L058.json`; `curriculum-workflow/generated/L058-generation-packet.md` | `curriculum-workflow/drafts/L058-draft.json`; `public/assets/lessons/L058/` | Start / claim checkpoint. Teacher supplied approved lesson request. L057 dependency is already merged in latest main, so this can proceed to production after checks pass. |
 
 ## Status Values
 
