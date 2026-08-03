@@ -6,6 +6,7 @@ import "./index.css";
 
 const curriculum = curriculumData as unknown as Curriculum;
 const TEACH_TARGET_AUDIO_GUARD_MS = 170;
+const TEACH_TAP_RECORDING_MS = 1300;
 
 type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
 type LessonCharEntry = { lesson: Lesson; char: string; index: number };
@@ -4132,6 +4133,7 @@ function SentencePracticePreview({
   const pressStartRef = useRef<number | null>(null);
   const primingPressActiveRef = useRef(false);
   const releasedDuringPrimeRef = useRef(false);
+  const autoStopRecordingTimerRef = useRef<number | null>(null);
   const recordingStreamRef = useRef<MediaStream | null>(null);
   const roundCompleteActionRef = useRef<HTMLDivElement | null>(null);
   const gameSentenceRef = useRef<HTMLDivElement | null>(null);
@@ -4184,11 +4186,19 @@ function SentencePracticePreview({
     pressStartRef.current = null;
     primingPressActiveRef.current = false;
     releasedDuringPrimeRef.current = false;
+    clearAutoStopRecordingTimer();
   }, [game?.id]);
 
   useEffect(() => () => {
     if (recordedAudioUrl) URL.revokeObjectURL(recordedAudioUrl);
   }, [recordedAudioUrl]);
+
+  useEffect(() => () => {
+    if (autoStopRecordingTimerRef.current !== null) {
+      window.clearTimeout(autoStopRecordingTimerRef.current);
+    }
+    recordingStreamRef.current?.getTracks().forEach((track) => track.stop());
+  }, []);
 
   useEffect(() => {
     if (disabled || !game || !sentence || doneCount >= requiredCount) return;
@@ -4269,6 +4279,20 @@ function SentencePracticePreview({
     playCelebrateChime();
   }
 
+  function clearAutoStopRecordingTimer() {
+    if (autoStopRecordingTimerRef.current === null) return;
+    window.clearTimeout(autoStopRecordingTimerRef.current);
+    autoStopRecordingTimerRef.current = null;
+  }
+
+  function scheduleTapRecordingStop() {
+    clearAutoStopRecordingTimer();
+    autoStopRecordingTimerRef.current = window.setTimeout(() => {
+      autoStopRecordingTimerRef.current = null;
+      stopRecording();
+    }, TEACH_TAP_RECORDING_MS);
+  }
+
   async function runHelperIntro(runId: number) {
     if (!game || !sentence) return;
     await speakStageFour(gameIntroText(game));
@@ -4305,7 +4329,7 @@ function SentencePracticePreview({
     setActiveGameCharIndex(null);
     setAskingGameCharIndex(targetIndex);
     setTeachPhase("asking");
-    await speakStageFour("哇！這個字我不會念，請教我念。請按住紅框的字不放。");
+    await speakStageFour("哇！這個字我不會念，請教我念。請按一下紅框的字。");
     if (guideRunRef.current !== runId) return;
     setTeachPhase("ready");
   }
@@ -4411,13 +4435,6 @@ function SentencePracticePreview({
       return;
     }
     await playRecordingReadyDing();
-    if (releasedDuringPrimeRef.current) {
-      primingPressActiveRef.current = false;
-      setFloatingRecordChar(null);
-      setTeachPhase("ready");
-      await speakStageFour("還沒開始錄音喔。請按住紅框的字不放。");
-      return;
-    }
     let stream: MediaStream;
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -4427,14 +4444,7 @@ function SentencePracticePreview({
       completeRound();
       return;
     }
-    if (releasedDuringPrimeRef.current) {
-      primingPressActiveRef.current = false;
-      stream.getTracks().forEach((track) => track.stop());
-      setFloatingRecordChar(null);
-      setTeachPhase("ready");
-      await speakStageFour("還沒開始錄音喔。請按住紅框的字不放。");
-      return;
-    }
+    const autoStopAfterStart = releasedDuringPrimeRef.current;
     recordedChunksRef.current = [];
     recordingStreamRef.current = stream;
     const recorder = new MediaRecorder(stream);
@@ -4443,6 +4453,7 @@ function SentencePracticePreview({
       if (event.data.size > 0) recordedChunksRef.current.push(event.data);
     };
     recorder.onstop = () => {
+      clearAutoStopRecordingTimer();
       stream.getTracks().forEach((track) => track.stop());
       recordingStreamRef.current = null;
       const blob = new Blob(recordedChunksRef.current, { type: recorder.mimeType || "audio/webm" });
@@ -4472,6 +4483,7 @@ function SentencePracticePreview({
     pressStartRef.current = Date.now();
     primingPressActiveRef.current = false;
     recorder.start();
+    if (autoStopAfterStart) scheduleTapRecordingStop();
   }
 
   function stopRecording() {
@@ -4497,12 +4509,6 @@ function SentencePracticePreview({
     setTeachPhase("priming");
     setFloatingRecordChar(game.targetChar);
     await speakStageFour("聽到鈴聲，就大聲念出來。");
-    if (releasedDuringPrimeRef.current) {
-      setFloatingRecordChar(null);
-      setTeachPhase("ready");
-      await speakStageFour("還沒聽到鈴聲喔。請按住紅框的字不放。");
-      return;
-    }
     await startRecordingAfterDing();
   }
 
@@ -4724,7 +4730,7 @@ function gameGuideText(game: SentenceGame, teachPhase: TeachCharacterPhase = "re
   }
   if (game.type === "teach-character") {
     if (teachPhase === "ready" || teachPhase === "priming" || teachPhase === "recording") {
-      return "請按住紅框的字不放。聽到鈴聲，就大聲念出來。";
+      return "請按一下紅框的字。聽到鈴聲，就大聲念出來。";
     }
     if (teachPhase === "reciting") {
       return "小兔子正在把句子念完。";
