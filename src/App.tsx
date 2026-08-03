@@ -2,6 +2,14 @@ import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, 
 import curriculumData from "./curriculum/sample-lessons.json";
 import type { Curriculum, Lesson, LessonSentence, SentenceGame, SentenceGameOption, SentenceGameType } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
+import {
+  loadCloudProgress,
+  normalizeDeviceCode,
+  saveCloudProgress,
+  validDeviceCode,
+  type CloudDailyRecord,
+  type CloudProgressSnapshot,
+} from "./lib/cloudProgress";
 import "./index.css";
 
 const curriculum = curriculumData as unknown as Curriculum;
@@ -30,25 +38,12 @@ type ReviewLessonSlot = {
 type RecordDetailKind = "coins" | "stars" | "streak";
 type PlaybackStatus = { playing: boolean; paused: boolean };
 type TeachCharacterPhase = "reading" | "asking" | "ready" | "priming" | "recording" | "reciting" | "done";
-type DailyRecord = {
-  date: string;
-  coinsEarned: number;
-  starsEarned: number;
-  lessonOrders: number[];
-};
-type StoredProgress = {
-  version: 1;
-  coins: number;
-  stars: number;
-  totalCoinsEarned: number;
-  totalStarsEarned: number;
-  dailyRecords: Record<string, DailyRecord>;
-  duplicateGachaStreak: number;
-  selectedOrder: number;
-  completedOrders: number[];
-  ownedCharacters: Record<string, number>;
-  characterHearts: Record<string, number>;
-  seenCharacterInteractions: Record<string, number[]>;
+type DailyRecord = CloudDailyRecord;
+type StoredProgress = CloudProgressSnapshot;
+type CloudSyncStatus = "idle" | "loading" | "saving" | "synced" | "error";
+type CloudProgressSettings = {
+  deviceCode: string;
+  freeBrowse: boolean;
 };
 type RealmId = "land" | "sea" | "sky" | "space";
 type FamilyRoleId = "grandpa" | "grandma" | "dad" | "mom" | "olderBrother" | "olderSister" | "youngerBrother" | "youngerSister" | "baby";
@@ -1039,6 +1034,7 @@ let recordingDingAudioUrl: string | null = null;
 let primedRecordingDingAudio: HTMLAudioElement | null = null;
 const playbackListeners = new Set<(state: PlaybackStatus) => void>();
 const PROGRESS_STORAGE_KEY = "character-recognition-dojo-progress-v1";
+const CLOUD_PROGRESS_SETTINGS_KEY = "character-recognition-dojo-cloud-settings-v1";
 const AUDIO_PLAY_START_TIMEOUT_MS = 3200;
 const CHAR_TAP_PLAYBACK_TIMEOUT_MS = 5200;
 const LESSON_PRELOAD_SENTENCE_DELAY_MS = 240;
@@ -1095,38 +1091,41 @@ function loadStoredProgress(): StoredProgress | null {
   try {
     const raw = window.localStorage.getItem(PROGRESS_STORAGE_KEY);
     if (!raw) return null;
-    const parsed = JSON.parse(raw) as Partial<StoredProgress>;
-    if (parsed.version !== 1) return null;
-    const completedOrders = Array.isArray(parsed.completedOrders)
-      ? parsed.completedOrders.filter((order): order is number => Number.isInteger(order))
-      : [];
-    const coins = Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120;
-    const stars = Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36;
-    const estimatedCoinsEarned = Math.max(coins, completedOrders.length * 30);
-    const estimatedStarsEarned = Math.max(stars, completedOrders.length * 12);
-    return {
-      version: 1,
-      coins,
-      stars,
-      totalCoinsEarned: Number.isFinite(parsed.totalCoinsEarned)
-        ? Math.max(coins, Number(parsed.totalCoinsEarned))
-        : estimatedCoinsEarned,
-      totalStarsEarned: Number.isFinite(parsed.totalStarsEarned)
-        ? Math.max(stars, Number(parsed.totalStarsEarned))
-        : estimatedStarsEarned,
-      dailyRecords: sanitizeDailyRecords(parsed.dailyRecords),
-      duplicateGachaStreak: Number.isFinite(parsed.duplicateGachaStreak)
-        ? Math.max(0, Math.floor(Number(parsed.duplicateGachaStreak)))
-        : 0,
-      selectedOrder: Number.isInteger(parsed.selectedOrder) ? Number(parsed.selectedOrder) : 1,
-      completedOrders,
-      ownedCharacters: sanitizeOwnedCharacters(parsed.ownedCharacters),
-      characterHearts: sanitizeCharacterHearts(parsed.characterHearts),
-      seenCharacterInteractions: sanitizeSeenCharacterInteractions(parsed.seenCharacterInteractions),
-    };
+    return normalizeStoredProgress(JSON.parse(raw) as Partial<StoredProgress>);
   } catch {
     return null;
   }
+}
+
+function normalizeStoredProgress(parsed: Partial<StoredProgress> | null | undefined): StoredProgress | null {
+  if (!parsed || parsed.version !== 1) return null;
+  const completedOrders = Array.isArray(parsed.completedOrders)
+    ? parsed.completedOrders.filter((order): order is number => Number.isInteger(order))
+    : [];
+  const coins = Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120;
+  const stars = Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36;
+  const estimatedCoinsEarned = Math.max(coins, completedOrders.length * 30);
+  const estimatedStarsEarned = Math.max(stars, completedOrders.length * 12);
+  return {
+    version: 1,
+    coins,
+    stars,
+    totalCoinsEarned: Number.isFinite(parsed.totalCoinsEarned)
+      ? Math.max(coins, Number(parsed.totalCoinsEarned))
+      : estimatedCoinsEarned,
+    totalStarsEarned: Number.isFinite(parsed.totalStarsEarned)
+      ? Math.max(stars, Number(parsed.totalStarsEarned))
+      : estimatedStarsEarned,
+    dailyRecords: sanitizeDailyRecords(parsed.dailyRecords),
+    duplicateGachaStreak: Number.isFinite(parsed.duplicateGachaStreak)
+      ? Math.max(0, Math.floor(Number(parsed.duplicateGachaStreak)))
+      : 0,
+    selectedOrder: Number.isInteger(parsed.selectedOrder) ? Number(parsed.selectedOrder) : 1,
+    completedOrders,
+    ownedCharacters: sanitizeOwnedCharacters(parsed.ownedCharacters),
+    characterHearts: sanitizeCharacterHearts(parsed.characterHearts),
+    seenCharacterInteractions: sanitizeSeenCharacterInteractions(parsed.seenCharacterInteractions),
+  };
 }
 
 function saveStoredProgress(progress: StoredProgress) {
@@ -1138,10 +1137,37 @@ function saveStoredProgress(progress: StoredProgress) {
   }
 }
 
+function loadCloudProgressSettings(): CloudProgressSettings {
+  if (typeof window === "undefined") return { deviceCode: "", freeBrowse: true };
+  try {
+    const raw = window.localStorage.getItem(CLOUD_PROGRESS_SETTINGS_KEY);
+    if (!raw) return { deviceCode: "", freeBrowse: true };
+    const parsed = JSON.parse(raw) as Partial<CloudProgressSettings>;
+    return {
+      deviceCode: normalizeDeviceCode(String(parsed.deviceCode ?? "")),
+      freeBrowse: parsed.freeBrowse !== false,
+    };
+  } catch {
+    return { deviceCode: "", freeBrowse: true };
+  }
+}
+
+function saveCloudProgressSettings(settings: CloudProgressSettings) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(CLOUD_PROGRESS_SETTINGS_KEY, JSON.stringify(settings));
+  } catch {
+    // The current session still keeps these settings in React state.
+  }
+}
+
 function App() {
   const initialProgressRef = useRef<StoredProgress | null>(null);
   if (initialProgressRef.current === null) initialProgressRef.current = loadStoredProgress();
+  const initialCloudSettingsRef = useRef<CloudProgressSettings | null>(null);
+  if (initialCloudSettingsRef.current === null) initialCloudSettingsRef.current = loadCloudProgressSettings();
   const initialProgress = initialProgressRef.current;
+  const initialCloudSettings = initialCloudSettingsRef.current;
   const [page, setPage] = useState<AppPage>("practice");
   const [menuOpen, setMenuOpen] = useState(false);
   const [recordDetail, setRecordDetail] = useState<RecordDetailKind | null>(null);
@@ -1168,22 +1194,25 @@ function App() {
   const [seenCharacterInteractions, setSeenCharacterInteractions] = useState<Record<string, number[]>>(
     () => initialProgress?.seenCharacterInteractions ?? {},
   );
+  const [deviceCode, setDeviceCode] = useState(initialCloudSettings.deviceCode);
+  const [freeBrowse, setFreeBrowse] = useState(initialCloudSettings.freeBrowse);
+  const [cloudReadyForSave, setCloudReadyForSave] = useState(false);
+  const [cloudSyncStatus, setCloudSyncStatus] = useState<CloudSyncStatus>(deviceCode ? "loading" : "idle");
+  const [cloudSyncMessage, setCloudSyncMessage] = useState(deviceCode ? "正在讀取雲端進度" : "尚未設定裝置代號");
   const [lastGachaResult, setLastGachaResult] = useState<GachaDrawResult | null>(null);
   const [collectionFocus, setCollectionFocus] = useState<CollectionFocus>({ realmId: "land", characterId: null, nonce: 0 });
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
+  const latestLessonOrder = curriculum.lessons[curriculum.lessons.length - 1]?.order ?? nextOrder;
+  const cloudDeviceCode = normalizeDeviceCode(deviceCode);
+  const cloudSyncEnabled = validDeviceCode(cloudDeviceCode);
+  const unlockOrder = freeBrowse ? latestLessonOrder : nextOrder;
   const [selectedOrder, setSelectedOrder] = useState(initialProgress?.selectedOrder ?? nextOrder);
   const playbackState = usePlaybackState();
   const selectedLesson =
     curriculum.lessons.find((lesson) => lesson.order === selectedOrder) ?? curriculum.lessons[0];
   const streakDays = currentStreakDays(dailyRecords, completedOrders);
-
-  useEffect(() => {
-    if (page === "practice" && lessonOpen) return;
-    speakGuide(PAGE_GUIDE_TEXT[page]);
-  }, [page, lessonOpen]);
-
-  useEffect(() => {
-    saveStoredProgress({
+  const progressSnapshot = useMemo<StoredProgress>(
+    () => ({
       version: 1,
       coins,
       stars,
@@ -1196,20 +1225,114 @@ function App() {
       ownedCharacters,
       characterHearts,
       seenCharacterInteractions,
-    });
+    }),
+    [
+      coins,
+      stars,
+      totalCoinsEarned,
+      totalStarsEarned,
+      dailyRecords,
+      duplicateGachaStreak,
+      selectedOrder,
+      completedOrders,
+      ownedCharacters,
+      characterHearts,
+      seenCharacterInteractions,
+    ],
+  );
+
+  useEffect(() => {
+    if (page === "practice" && lessonOpen) return;
+    speakGuide(PAGE_GUIDE_TEXT[page]);
+  }, [page, lessonOpen]);
+
+  useEffect(() => {
+    saveCloudProgressSettings({ deviceCode: cloudDeviceCode, freeBrowse });
   }, [
-    coins,
-    stars,
-    totalCoinsEarned,
-    totalStarsEarned,
-    dailyRecords,
-    duplicateGachaStreak,
-    selectedOrder,
-    completedOrders,
-    ownedCharacters,
-    characterHearts,
-    seenCharacterInteractions,
+    cloudDeviceCode,
+    freeBrowse,
   ]);
+
+  useEffect(() => {
+    if (!deviceCode) {
+      setCloudReadyForSave(false);
+      setCloudSyncStatus("idle");
+      setCloudSyncMessage("尚未設定裝置代號");
+      return;
+    }
+    if (!cloudSyncEnabled) {
+      setCloudReadyForSave(false);
+      setCloudSyncStatus("error");
+      setCloudSyncMessage("裝置代號需要 3-32 個英數字或 -");
+      return;
+    }
+
+    let active = true;
+    setCloudReadyForSave(false);
+    setCloudSyncStatus("loading");
+    setCloudSyncMessage("正在讀取雲端進度");
+    loadCloudProgress(cloudDeviceCode)
+      .then((remoteProgress) => {
+        if (!active) return;
+        const normalizedProgress = normalizeStoredProgress(remoteProgress);
+        if (normalizedProgress) {
+          applyStoredProgress(normalizedProgress);
+          setCloudSyncMessage("已載入雲端進度");
+        } else {
+          setCloudSyncMessage("新的裝置代號，將建立雲端進度");
+        }
+        setCloudReadyForSave(true);
+        setCloudSyncStatus("synced");
+      })
+      .catch(() => {
+        if (!active) return;
+        setCloudReadyForSave(false);
+        setCloudSyncStatus("error");
+        setCloudSyncMessage("雲端讀取失敗，暫時使用本機進度");
+      });
+
+    return () => {
+      active = false;
+    };
+  }, [cloudDeviceCode, cloudSyncEnabled, deviceCode]);
+
+  useEffect(() => {
+    saveStoredProgress(progressSnapshot);
+    if (!cloudSyncEnabled || !cloudReadyForSave) return;
+    setCloudSyncStatus("saving");
+    const timeout = window.setTimeout(() => {
+      saveCloudProgress(cloudDeviceCode, progressSnapshot)
+        .then(() => {
+          setCloudSyncStatus("synced");
+          setCloudSyncMessage("已同步到雲端");
+        })
+        .catch(() => {
+          setCloudSyncStatus("error");
+          setCloudSyncMessage("雲端同步失敗，本機進度已保留");
+        });
+    }, 500);
+
+    return () => window.clearTimeout(timeout);
+  }, [
+    progressSnapshot,
+    cloudDeviceCode,
+    cloudSyncEnabled,
+    cloudReadyForSave,
+  ]);
+
+  function applyStoredProgress(progress: StoredProgress) {
+    setCoins(progress.coins);
+    setStars(progress.stars);
+    setTotalCoinsEarned(progress.totalCoinsEarned);
+    setTotalStarsEarned(progress.totalStarsEarned);
+    setDailyRecords(progress.dailyRecords);
+    setDuplicateGachaStreak(progress.duplicateGachaStreak);
+    setSelectedOrder(progress.selectedOrder);
+    setCompletedOrders(new Set(progress.completedOrders));
+    setOwnedCharacters(progress.ownedCharacters);
+    setCharacterHearts(progress.characterHearts);
+    setSeenCharacterInteractions(progress.seenCharacterInteractions);
+  }
 
   function grantLessonReward(order: number, rewards: LessonReward) {
     if (completedOrders.has(order)) return;
@@ -1375,6 +1498,7 @@ function App() {
             lessons={curriculum.lessons}
             completedOrders={completedOrders}
             nextOrder={nextOrder}
+            unlockOrder={unlockOrder}
             notice={completionNotice}
             startingOrder={startingOrder}
             onStart={startLessonWithFeedback}
@@ -1392,7 +1516,7 @@ function App() {
               lesson={selectedLesson}
               lessons={curriculum.lessons}
               completed={completedOrders.has(selectedLesson.order)}
-              locked={selectedLesson.order > nextOrder}
+              locked={selectedLesson.order > unlockOrder}
               onReward={(rewards) => grantLessonReward(selectedLesson.order, rewards)}
               onComplete={(destination) => finishLesson(selectedLesson.order, destination)}
               onExit={returnToPracticeHome}
@@ -1404,7 +1528,7 @@ function App() {
             lessons={curriculum.lessons}
             selectedOrder={selectedLesson.order}
             completedOrders={completedOrders}
-            nextOrder={nextOrder}
+            nextOrder={unlockOrder}
             onSelect={openLesson}
           />
         )}
@@ -1449,7 +1573,16 @@ function App() {
             onOpenGacha={() => openPage("gacha")}
           />
         )}
-        {page === "settings" && <PlaceholderPage icon="⚙️" title="設定" text="之後放音量、資料備份、家長設定。" />}
+        {page === "settings" && (
+          <SettingsPage
+            deviceCode={deviceCode}
+            freeBrowse={freeBrowse}
+            cloudSyncStatus={cloudSyncStatus}
+            cloudSyncMessage={cloudSyncMessage}
+            onDeviceCodeChange={(value) => setDeviceCode(normalizeDeviceCode(value))}
+            onFreeBrowseChange={setFreeBrowse}
+          />
+        )}
       </main>
 
       <FloatingPlaybackBar
@@ -1466,6 +1599,7 @@ function PracticeHome({
   lessons,
   completedOrders,
   nextOrder,
+  unlockOrder,
   notice,
   startingOrder,
   onStart,
@@ -1473,12 +1607,13 @@ function PracticeHome({
   lessons: Lesson[];
   completedOrders: Set<number>;
   nextOrder: number;
+  unlockOrder: number;
   notice: string;
   startingOrder: number | null;
   onStart: (order: number) => void;
 }) {
   const nextLesson = lessons.find((lesson) => lesson.order === nextOrder) ?? lessons[lessons.length - 1];
-  const unlockedEntries = flattenLessonChars(lessons.filter((lesson) => lesson.order <= nextOrder)).slice(-12);
+  const unlockedEntries = flattenLessonChars(lessons.filter((lesson) => lesson.order <= unlockOrder)).slice(-12);
   const reviewSlots = reviewSlotsForMilestone(nextReviewMilestone(lessons));
 
   return (
@@ -2081,12 +2216,67 @@ function NarrationLine({
   );
 }
 
-function PlaceholderPage({ icon, title, text }: { icon: string; title: string; text: string }) {
+function SettingsPage({
+  deviceCode,
+  freeBrowse,
+  cloudSyncStatus,
+  cloudSyncMessage,
+  onDeviceCodeChange,
+  onFreeBrowseChange,
+}: {
+  deviceCode: string;
+  freeBrowse: boolean;
+  cloudSyncStatus: CloudSyncStatus;
+  cloudSyncMessage: string;
+  onDeviceCodeChange: (value: string) => void;
+  onFreeBrowseChange: (value: boolean) => void;
+}) {
+  const statusLabel: Record<CloudSyncStatus, string> = {
+    idle: "未連線",
+    loading: "讀取中",
+    saving: "同步中",
+    synced: "已同步",
+    error: "需處理",
+  };
+
   return (
-    <section className="page-panel placeholder-page">
-      <span className="placeholder-icon">{icon}</span>
-      <h1>{title}</h1>
-      <p>{text}</p>
+    <section className="page-panel settings-page">
+      <div className="page-heading">
+        <h1>設定</h1>
+      </div>
+
+      <div className="settings-grid">
+        <div className="settings-block">
+          <label className="settings-label" htmlFor="device-code">
+            裝置代號
+          </label>
+          <input
+            id="device-code"
+            className="settings-input"
+            value={deviceCode}
+            onChange={(event) => onDeviceCodeChange(event.target.value)}
+            placeholder="例如 PHONE-1"
+            inputMode="text"
+            autoCapitalize="characters"
+          />
+          <div className={`sync-status sync-status-${cloudSyncStatus}`}>
+            <strong>{statusLabel[cloudSyncStatus]}</strong>
+            <span>{cloudSyncMessage}</span>
+          </div>
+        </div>
+
+        <label className="settings-toggle">
+          <input
+            type="checkbox"
+            checked={freeBrowse}
+            onChange={(event) => onFreeBrowseChange(event.target.checked)}
+          />
+          <span>
+            <strong>自由閱覽所有課程</strong>
+            <small>進度仍依照這台裝置代號分開保存</small>
+          </span>
+        </label>
+      </div>
     </section>
   );
 }
