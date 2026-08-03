@@ -13,7 +13,7 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L050 | 中 | request-ready | Codex lesson-planning thread | main @ a296480 | none | none | `curriculum-workflow/lesson-requests/L050.json`; `curriculum-workflow/generated/L050-generation-packet.md` | not started | L050 request/packet are ready. Later parallel L051 work may depend on provisional `L050:中` until L050 is merged. |
+| _none_ |  |  |  |  |  |  |  |  | Add a row before starting parallel lesson work. |
 
 ## Status Values
 
