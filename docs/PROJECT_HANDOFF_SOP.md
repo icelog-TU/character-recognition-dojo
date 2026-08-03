@@ -414,7 +414,9 @@ Guide narration should:
 
 Every reviewed sentence should have one picture.
 
+- Current approved sentence-image style reference is the polished L058 library set, especially `public/assets/lessons/L058/images/L058-S02.webp` and `public/assets/lessons/L058/images/L058-S03.webp`. Use this as the baseline for replacement images unless the teacher explicitly approves a new visual direction.
 - Use warm, child-friendly picture-book style.
+- Spell out the style traits in prompts: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, and bright warm palette. Do not use only a generic `warm watercolor` phrase.
 - No text, letters, numbers, signs, labels, watermarks, or zhuyin inside the image.
 - If the sentence expresses count, the image must clearly match the count.
 - If the sentence contrasts size, the image must make the contrast obvious.

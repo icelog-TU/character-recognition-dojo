@@ -278,6 +278,8 @@ Starting after L060, every 30-lesson milestone gets two review modules. These ar
 Images are generated or sourced only after sentence approval.
 
 - One image per sentence.
+- Current approved sentence-image style reference is the polished L058 library set, especially `public/assets/lessons/L058/images/L058-S02.webp` and `public/assets/lessons/L058/images/L058-S03.webp`: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean interiors, consistent expressive preschool proportions, soft cheeks, and bright warm palette.
+- Do not rely on generic style phrases such as only `warm watercolor children picture-book style`; that has produced inconsistent simpler watercolor images. Prompts for new/replacement sentence images must name the approved style reference and list the concrete style traits above.
 - Store final assets under `public/assets/lessons/L###/images/`.
 - Use `.webp` by default.
 - Path example: `public/assets/lessons/L004/images/L004-S01.webp`.
