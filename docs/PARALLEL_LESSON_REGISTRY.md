@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L056 | 少 | claimed | Codex thread L056 少 | codex/l056-shao @ local | none | none | `curriculum-workflow/lesson-requests/L056.json`; `curriculum-workflow/generated/L056-generation-packet.md`; `curriculum-workflow/drafts/L056-draft.json` | `public/assets/lessons/L056/` | Start checkpoint. L055 is already merged on origin/main, so L056 is not dependency-blocked. |
+| L056 | 少 | merge-ready | Codex thread L056 少 | codex/l056-shao @ local | none | none | `curriculum-workflow/lesson-requests/L056.json`; `curriculum-workflow/generated/L056-generation-packet.md`; `curriculum-workflow/drafts/L056-draft.json` | `public/assets/lessons/L056/images/`; `public/assets/lessons/L056/audio/`; `curriculum-workflow/audio-inbox/L056/` | Assets-prepared checkpoint. L055 is already merged on origin/main; production JSON, reviewed images, AI audio, and AI-aligned timings are prepared pending full verify and push. |
 
 ## Status Values
 
