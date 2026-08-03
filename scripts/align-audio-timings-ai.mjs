@@ -119,6 +119,7 @@ async function transcribeWithWords({ apiKey, filePath, fileName }) {
   const form = new FormData();
   form.append("model", "whisper-1");
   form.append("file", new Blob([fs.readFileSync(filePath)], { type: "audio/mp4" }), fileName);
+  form.append("language", "zh");
   form.append("response_format", "verbose_json");
   form.append("timestamp_granularities[]", "word");
 

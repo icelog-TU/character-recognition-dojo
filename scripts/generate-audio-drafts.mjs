@@ -47,7 +47,7 @@ async function createSpeech({ apiKey, model, voice, input, outputPath }) {
       response_format: "mp3",
       speed: 0.9,
       instructions:
-        "Use natural Taiwan Mandarin pronunciation for young children. Speak clearly, warmly, and gently. Use Taiwan Mandarin, not a Beijing or Mainland China accent. Do not add erhua or r-colored curled endings. Keep the final syllable clean, plain, and audible, with no extra r sound. Do not read punctuation aloud. For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
+        "Use natural Taiwan Mandarin pronunciation for young children. Speak clearly, warmly, and gently. Use Taiwan Mandarin, not a Beijing or Mainland China accent. Do not add erhua, retroflex-r, r-colored curled endings, or any Beijing-style final r sound. Keep final syllables clean, plain, and audible. Pronunciation guardrails: 小孩 is ㄒㄧㄠˇ ㄏㄞˊ, never ㄒㄧㄠˇ ㄏㄞˊㄦ or any r-colored form; 孩 always ends cleanly as ㄏㄞˊ. Do not read punctuation aloud. For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
     }),
   });
 
@@ -62,6 +62,7 @@ async function createSpeech({ apiKey, model, voice, input, outputPath }) {
 
 const args = parseArgs(process.argv.slice(2));
 const lessonId = String(args.lesson || "L001").toUpperCase();
+const sentenceFilter = args.sentence ? String(args.sentence).toUpperCase() : null;
 const includeSentences = flagEnabled(args.sentences);
 const includeChars = flagEnabled(args.chars);
 
@@ -92,6 +93,7 @@ if (includeChars) {
 if (includeSentences) {
   for (const sentence of lesson.sentences ?? []) {
     if (sentence.approved !== true) continue;
+    if (sentenceFilter && sentence.id.toUpperCase() !== sentenceFilter) continue;
     jobs.push({
       input: sentence.spokenText,
       outputPath: path.join(outputDir, `${sentence.id}.mp3`),
