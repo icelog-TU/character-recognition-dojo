@@ -4271,6 +4271,13 @@ function SentencePracticePreview({
   missingIndexes.forEach((index, slotIndex) => {
     filledBlanks.set(index, currentPickedOptions[slotIndex]?.text ?? "");
   });
+  const optionPickLimits = new Map<string, number>();
+  if (game.type === "missing-character" || game.type === "partial-order") {
+    shuffledGameOptions.forEach((option) => {
+      const requiredUses = missingIndexes.reduce((count, index) => count + (han[index] === option.text ? 1 : 0), 0);
+      if (requiredUses > 1) optionPickLimits.set(option.id, requiredUses);
+    });
+  }
 
   function completeRound() {
     if (isCurrentRoundComplete || disabled || doneCount >= requiredCount) return;
@@ -4384,13 +4391,15 @@ function SentencePracticePreview({
       void speakStageFour("不是這個，再找找看。");
       return;
     }
-    setPickedOptionIds([option.id]);
+    const matchingBlankCount = missingIndexes.filter((index) => han[index] === option.text).length;
+    setPickedOptionIds(Array.from({ length: Math.max(1, matchingBlankCount) }, () => option.id));
     await speakStageFour(stageFourPraise("找回來了", doneCount));
     completeRound();
   }
 
   async function handleOrderOption(option: SentenceGameOption) {
-    if (pickedOptionIds.includes(option.id)) return;
+    const pickedCount = pickedOptionIds.filter((id) => id === option.id).length;
+    if (pickedCount >= (optionPickLimits.get(option.id) ?? 1)) return;
     const expectedText = han[missingIndexes[pickedOptionIds.length]];
     if (option.text !== expectedText) {
       playMissChime();
@@ -4619,7 +4628,12 @@ function SentencePracticePreview({
             🔊 重播這一句
           </button>
           <div className="sentence-game-action-area">
-            <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleMissingOption} />
+            <GameOptionGrid
+              options={shuffledGameOptions}
+              pickedOptionIds={pickedOptionIds}
+              optionPickLimits={optionPickLimits}
+              onPick={handleMissingOption}
+            />
           </div>
         </>
       );
@@ -4641,7 +4655,12 @@ function SentencePracticePreview({
             🔊 重播這一句
           </button>
           <div className="sentence-game-action-area">
-            <GameOptionGrid options={shuffledGameOptions} pickedOptionIds={pickedOptionIds} onPick={handleOrderOption} />
+            <GameOptionGrid
+              options={shuffledGameOptions}
+              pickedOptionIds={pickedOptionIds}
+              optionPickLimits={optionPickLimits}
+              onPick={handleOrderOption}
+            />
           </div>
         </>
       );
@@ -4963,24 +4982,30 @@ function PronunciationChoiceGrid({
 function GameOptionGrid({
   options,
   pickedOptionIds,
+  optionPickLimits,
   onPick,
 }: {
   options: SentenceGameOption[];
   pickedOptionIds: string[];
+  optionPickLimits?: ReadonlyMap<string, number>;
   onPick: (option: SentenceGameOption) => void | Promise<void>;
 }) {
   return (
     <div className="game-option-grid">
-      {options.map((option) => (
-        <button
-          key={option.id}
-          className={`game-option${pickedOptionIds.includes(option.id) ? " picked" : ""}`}
-          disabled={pickedOptionIds.includes(option.id)}
-          onClick={() => void onPick(option)}
-        >
-          {option.text}
-        </button>
-      ))}
+      {options.map((option) => {
+        const pickedCount = pickedOptionIds.filter((id) => id === option.id).length;
+        const disabled = pickedCount >= (optionPickLimits?.get(option.id) ?? 1);
+        return (
+          <button
+            key={option.id}
+            className={`game-option${pickedCount > 0 ? " picked" : ""}`}
+            disabled={disabled}
+            onClick={() => void onPick(option)}
+          >
+            {option.text}
+          </button>
+        );
+      })}
     </div>
   );
 }
