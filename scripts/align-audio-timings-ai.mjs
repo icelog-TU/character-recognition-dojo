@@ -48,6 +48,7 @@ function normalizeTranscribedHanChar(char) {
     ["鸟", "鳥"],
     ["飞", "飛"],
     ["门", "門"],
+    ["边", "邊"],
     ["后", "後"],
     ["没", "沒"],
     ["里", "裡"],
