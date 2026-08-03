@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| _none_ |  |  |  |  |  |  |  |  | Add a row before starting parallel lesson work. |
+| L052 | 要 | claimed | Codex current thread | lesson-42-mom @ 05534b4 | none | none | `curriculum-workflow/lesson-requests/L052.json`; `curriculum-workflow/generated/L052-generation-packet.md` | `curriculum-workflow/audio-inbox/L052/`; `public/assets/lessons/L052/` | Start / claim checkpoint. Teacher supplied approved lesson request; no provisional dependency. |
 
 ## Status Values
 
