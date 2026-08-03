@@ -119,9 +119,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L057 | 比 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比 | 你很少看書，要多看書。 / 我比你更愛看書 / 這邊的書比我家更多 / 水邊的人比山上的更多 / 我要到人少的這邊 | 你很少看書要多我比更愛這邊的家水人山上到 | Introduces `比` through reading preference, library/home book quantity, and water-side versus mountain-side crowd comparisons. Reviews recent `邊`, `多`, and `少`; S04-S05 form a continuous crowd-choice scene. |
 | L058 | 來 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來 | 我很少來這邊 / 這邊的書比家裡更多 / 我要多來這邊看書 / 你來和我比一比 / 我吃的比你更少 | 我很少這邊的書比家裡更多要看你和一吃 | Introduces `來` through coming to the library, wanting to come more often, and inviting someone to compare. Reviews recent `多`, `少`, and `比`; S01-S03 form a continuous library scene, S04 compares book stacks, and S05 compares eating amounts. |
 
+| L059 | 起 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起 | 我這邊的看起來比他少 / 他吃的比看起來少 / 人多比人少好 / 這個比看起來好吃很多 / 我不要起來 | 我這邊的看來比他少吃人多好個很不要 | Introduces `起` through look-like comparisons and getting up. Reviews recent `少`, `比`, and `來`; S03 focusChar is `比` because that approved review sentence does not contain `起`. |
+
 ## Planned Lessons
 
-Merged curriculum is complete through L058. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L059. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
