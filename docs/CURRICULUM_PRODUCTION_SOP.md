@@ -22,6 +22,40 @@ For the running lesson sequence, taught-character set, and sentence history, upd
 12. Update `docs/CURRICULUM_LEDGER.md`.
 13. Run `npm run validate:curriculum`, `npm run validate:production`, `npm run build`, and `npm run lint`.
 
+## Parallel Lesson Production SOP
+
+The teacher may intentionally run 2-3 lesson-production threads at the same time to keep curriculum creation moving. This is allowed when the next-character sequence is already chosen, for example one Codex thread prepares L049 while another prepares L050 and a third prepares L051.
+
+Parallel production means **parallel drafting and asset preparation**, not unordered shipping. Lessons must still be merged into `main` in lesson order.
+
+Allowed parallel work:
+
+- A later lesson may be drafted before the immediately previous lesson is merged if the teacher has explicitly chosen the previous lesson's new character(s).
+- The later lesson request must include `dependsOnLessons` for any not-yet-merged prior lesson and must list those prior new characters in `provisionalLearnedChars`.
+- The AI must treat the lesson request's `allowedChars` as the temporary locked boundary for drafting, image prompts, sentence audio, and char timings.
+- Each Codex thread must own only one lesson's request, generated packet, audio inbox, final images, and `public/assets/lessons/L###/` folder.
+- Sentence drafting, image generation, audio generation, and timing alignment may proceed for the later lesson while the dependency lesson is still in another branch/thread.
+
+Not allowed in parallel work:
+
+- Do not merge or push a later lesson to `main` before all `dependsOnLessons` are merged into `main`.
+- Do not let two threads edit `src/curriculum/sample-lessons.json` for different lessons at the same time without rebasing on latest `origin/main`.
+- Do not regenerate or overwrite another thread's lesson assets.
+- Do not silently change the previous lesson's chosen new character after a later lesson has already used it as `provisionalLearnedChars`; announce the change and re-check affected later lessons.
+
+Before merging a parallel-prepared later lesson:
+
+1. Fetch latest `origin/main`.
+2. Confirm every dependency lesson in `dependsOnLessons` is now present in `src/curriculum/sample-lessons.json`.
+3. Re-run `npm run curriculum:export-planner` if curriculum data changed.
+4. Re-check the lesson request against the now-real learned-character set. Remove or update `provisionalLearnedChars` notes if they are no longer provisional.
+5. Rebase the lesson branch on latest `origin/main`.
+6. Add the lesson to `src/curriculum/sample-lessons.json` in order.
+7. Update `docs/CURRICULUM_LEDGER.md`.
+8. Run the full production checks before push.
+
+If a dependency lesson changed its new character, sentence set, or review-character requirements after the later lesson was drafted, stop and reconcile before merging. The later lesson may need new sentences, images, audio, or timings.
+
 ## Next-Lesson Planner Tool
 
 Use the planner when the teacher has not already chosen the next character.

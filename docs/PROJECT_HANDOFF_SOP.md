@@ -74,6 +74,25 @@ Recommended work ownership:
 - Scripts and validation: `scripts/*`, `src/types.ts`, and `src/lib/curriculum.ts`.
 - Collection and gacha design: `docs/COLLECTION_SYSTEM.md`, collection-related data in `src/App.tsx`, and related CSS.
 
+### Parallel Lesson Production
+
+The user may ask several Codex threads to prepare consecutive lessons at the same time. Accept this workflow when the teacher has already chosen the next-character sequence. For example:
+
+- Thread A prepares and ships L049.
+- Thread B prepares L050 using L049's chosen new character as a provisional dependency.
+- Thread C prepares L051 using L049/L050's chosen new characters as provisional dependencies.
+
+Rules for this workflow:
+
+- Parallel work is limited to drafting and asset preparation until dependencies are merged.
+- A later lesson request must clearly list not-yet-merged prior lessons in `dependsOnLessons` and those characters in `provisionalLearnedChars`.
+- Each thread must announce the exact lesson and asset folder it owns, such as `L050` and `public/assets/lessons/L050/`.
+- Do not merge a later lesson into `main` until all earlier dependency lessons are present on latest `origin/main`.
+- Before merging the later lesson, fetch/rebase, confirm the dependencies are now real curriculum, re-check allowed characters, update `docs/CURRICULUM_LEDGER.md`, and run the full production checks.
+- If an earlier lesson's chosen character changes, every later parallel lesson that depended on it must be rechecked before merge.
+
+This project optimizes for fast curriculum throughput, but `main` must remain a valid sequential curriculum at all times.
+
 Before pushing or asking the user to merge:
 
 ```bash
