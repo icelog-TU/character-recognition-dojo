@@ -72,12 +72,8 @@ function requireAudibleCharAudio(label, src) {
   }
 }
 
-for (const lesson of curriculum.lessons ?? []) {
-  for (const char of lesson.newChars ?? []) {
-    requireAudibleCharAudio(`${lesson.id} ${char} charAudio`, lesson.charAudio?.[char]);
-  }
-
-  for (const sentence of lesson.sentences ?? []) {
+function validateSentenceAssets(unit) {
+  for (const sentence of unit.sentences ?? []) {
     if (sentence.approved !== true) {
       errors.push(`${sentence.id}: production curriculum requires approved=true.`);
     }
@@ -101,13 +97,25 @@ for (const lesson of curriculum.lessons ?? []) {
     }
   }
 
-  for (const game of lesson.sentenceGames ?? []) {
+  for (const game of unit.sentenceGames ?? []) {
     for (const option of game.options ?? []) {
       if (option.audioSrc) {
         requirePublicAsset(`${game.id} option ${option.id} audioSrc`, option.audioSrc);
       }
     }
   }
+}
+
+for (const lesson of curriculum.lessons ?? []) {
+  for (const char of lesson.newChars ?? []) {
+    requireAudibleCharAudio(`${lesson.id} ${char} charAudio`, lesson.charAudio?.[char]);
+  }
+
+  validateSentenceAssets(lesson);
+}
+
+for (const review of curriculum.reviewLessons ?? []) {
+  validateSentenceAssets(review);
 }
 
 if (errors.length > 0) {

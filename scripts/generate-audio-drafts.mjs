@@ -70,7 +70,9 @@ const apiKey = requireOpenAIKey();
 const model = getEnv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts");
 const voice = getEnv("OPENAI_TTS_VOICE", "coral");
 const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
-const lesson = curriculum.lessons?.find((candidate) => candidate.id === lessonId);
+const lesson =
+  curriculum.lessons?.find((candidate) => candidate.id === lessonId) ??
+  curriculum.reviewLessons?.find((candidate) => candidate.id === lessonId);
 
 if (!lesson) {
   console.error(`Lesson not found: ${lessonId}`);

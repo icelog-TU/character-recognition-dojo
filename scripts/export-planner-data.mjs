@@ -16,6 +16,7 @@ const data = {
   exportedAt: new Date().toISOString(),
   curriculumVersion: curriculum.version,
   lessons: curriculum.lessons,
+  reviewLessons: curriculum.reviewLessons ?? [],
   nextCharacterBank,
 };
 

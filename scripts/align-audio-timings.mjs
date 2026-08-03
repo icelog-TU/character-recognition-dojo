@@ -160,9 +160,10 @@ ensureTool(ffmpegCommand, ["-version"]);
 ensureTool(ffprobeCommand, ["-version"]);
 
 const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
+const units = [...(curriculum.lessons ?? []), ...(curriculum.reviewLessons ?? [])];
 let changed = 0;
 
-for (const lesson of curriculum.lessons ?? []) {
+for (const lesson of units) {
   if (lessonFilter && lesson.id !== lessonFilter) continue;
   for (const sentence of lesson.sentences ?? []) {
     if (!sentence.audio?.src) continue;

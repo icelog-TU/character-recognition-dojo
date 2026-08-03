@@ -7,7 +7,8 @@ The curriculum is stored as JSON so it can later be generated from a spreadsheet
 ```json
 {
   "version": 1,
-  "lessons": []
+  "lessons": [],
+  "reviewLessons": []
 }
 ```
 
@@ -51,12 +52,43 @@ Rules:
 - `originHint` is optional internal curriculum metadata. It must not appear in the child-facing lesson practice UI unless a separate reviewed child-safe design is explicitly built.
 - `requiredRounds` controls Stage 4 sentence-game rounds when `sentenceGames` is present. Stages 1-3 have fixed completion behavior.
 
-Review lesson note:
+Review module note:
 
-- Review lessons are planned after every 30-lesson milestone starting after L060.
-- The first pair after L060 covers L001-L030; the second pair after L090 covers L031-L060.
-- Each review lesson has 5 sentences, and each two-lesson pair must cover every new character from its target 30-lesson range at least once.
-- Do not add empty placeholder review lessons to this JSON. Add review lessons only after the review lesson flow, sentences, images, audio, timings, and pair-level coverage checklist are production-ready.
+- Review modules are planned after every 30-lesson milestone starting after L060.
+- Review modules are not lessons. They use `R###` ids, display as `複習一`, `複習二`, and live in top-level `reviewLessons`.
+- The first pair after L060 is R001/R002 and covers L001-L030; the second pair after L090 is R003/R004 and covers L031-L060.
+- Each review module has 5 sentences, and each two-module pair must cover every new character from its target 30-lesson range at least once.
+- Do not add empty placeholder review modules to this JSON. Add review modules only after the review module flow, sentences, images, audio, timings, and pair-level coverage checklist are production-ready.
+- Do not create L061/L062 as review modules; after L060, L061 remains the next new-character lesson.
+
+## Review Module
+
+```json
+{
+  "id": "R001",
+  "reviewNumber": 1,
+  "title": "複習一",
+  "afterLessonOrder": 60,
+  "targetLessonRange": {
+    "startOrder": 1,
+    "endOrder": 30
+  },
+  "requiredCoverageChars": ["一", "二", "三"],
+  "requiredRounds": 5,
+  "sentences": []
+}
+```
+
+Rules:
+
+- `id` must use `R###`. Review modules must not use `L###`.
+- `reviewNumber` controls the display label: R001 is `複習一`, R002 is `複習二`.
+- `afterLessonOrder` is the milestone lesson after which this module appears.
+- `targetLessonRange` is the older 30-lesson block that must be covered by the pair.
+- `requiredCoverageChars` must exactly list the new characters introduced in `targetLessonRange`.
+- Review modules introduce no new characters and must not contain `newChars`, `zhuyin`, or `charAudio`.
+- Review module sentence text may use any Han character learned by `afterLessonOrder`.
+- Review module assets live under `public/assets/reviews/R###/`.
 
 ## Sentence
 

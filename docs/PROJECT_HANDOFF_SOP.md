@@ -30,7 +30,7 @@
 - L060 introduces `去`.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
 - L006-L060 include Stage 4 fixed sentence games after picture-supported listening.
-- Review lesson rhythm is reserved: after L060 add two 5-sentence review lessons covering all new characters from L001-L030; after L090 cover L031-L060; continue every 30 lessons.
+- Review module rhythm is reserved: after L060 add R001/R002, two 5-sentence review modules covering all new characters from L001-L030; after L090 add R003/R004 covering L031-L060; continue every 30 lessons. Review modules do not occupy L### lesson numbers, so after L060 the next new-character lesson is L061.
 - Check `docs/CURRICULUM_LEDGER.md` for the latest merged lesson sequence.
 - Check `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson work.
 

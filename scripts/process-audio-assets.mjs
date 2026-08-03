@@ -6,7 +6,8 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 
 const inboxRoot = path.resolve("curriculum-workflow/audio-inbox");
-const outputRoot = path.resolve("public/assets/lessons");
+const lessonOutputRoot = path.resolve("public/assets/lessons");
+const reviewOutputRoot = path.resolve("public/assets/reviews");
 const reportPath = path.resolve("curriculum-workflow/audio-duration-report.json");
 const audioExtensions = new Set([".wav", ".mp3", ".m4a", ".aac", ".flac", ".ogg", ".webm"]);
 function packageToolPath(packageName) {
@@ -103,13 +104,14 @@ for (const sourcePath of files) {
   const relative = path.relative(inboxRoot, sourcePath);
   const parts = relative.split(path.sep);
   const lessonId = parts[0]?.toUpperCase();
-  if (!/^L\d{3}$/.test(lessonId)) {
-    console.warn(`Skipping ${sourcePath}; expected path curriculum-workflow/audio-inbox/L###/file.ext`);
+  if (!/^[LR]\d{3}$/.test(lessonId)) {
+    console.warn(`Skipping ${sourcePath}; expected path curriculum-workflow/audio-inbox/L###/file.ext or R###/file.ext`);
     continue;
   }
   if (lessonFilter && lessonId !== lessonFilter) continue;
 
   const baseName = path.basename(sourcePath, path.extname(sourcePath));
+  const outputRoot = lessonId.startsWith("R") ? reviewOutputRoot : lessonOutputRoot;
   const targetDir = path.join(outputRoot, lessonId, "audio");
   const targetPath = path.join(targetDir, `${baseName}.m4a`);
   const audioFilter = baseName.startsWith("char-")

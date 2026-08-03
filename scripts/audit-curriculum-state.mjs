@@ -17,6 +17,11 @@ function lessonNumber(id) {
   return match ? Number(match[1]) : Number.NaN;
 }
 
+function reviewNumber(id) {
+  const match = /^R(\d{3})$/.exec(id);
+  return match ? Number(match[1]) : Number.NaN;
+}
+
 function expectedLessonId(order) {
   return `L${String(order).padStart(3, "0")}`;
 }
@@ -27,6 +32,7 @@ function assertIncludes(file, text, label) {
 
 const curriculum = readJson("src/curriculum/sample-lessons.json");
 const lessons = Array.isArray(curriculum.lessons) ? curriculum.lessons : [];
+const reviewLessons = Array.isArray(curriculum.reviewLessons) ? curriculum.reviewLessons : [];
 
 if (lessons.length === 0) {
   errors.push("src/curriculum/sample-lessons.json has no lessons.");
@@ -79,16 +85,20 @@ if (lessons.length === 0) {
   const registry = readText("docs/PARALLEL_LESSON_REGISTRY.md");
   const registryRows = registry
     .split(/\r?\n/)
-    .filter((line) => /^\| L\d{3} \|/.test(line))
+    .filter((line) => /^\| [LR]\d{3} \|/.test(line))
     .map((line) => line.split("|").slice(1, -1).map((cell) => cell.trim()));
   for (const row of registryRows) {
-    const [lessonId, , status] = row;
-    const number = lessonNumber(lessonId);
+    const [unitId, , status] = row;
+    const number = lessonNumber(unitId);
     if (Number.isFinite(number) && number <= lessonNumber(lastId) && status !== "merged") {
-      errors.push(`docs/PARALLEL_LESSON_REGISTRY.md has active row ${lessonId}, but ${lessonId} is already in production curriculum.`);
+      errors.push(`docs/PARALLEL_LESSON_REGISTRY.md has active row ${unitId}, but ${unitId} is already in production curriculum.`);
+    }
+    const review = reviewNumber(unitId);
+    if (Number.isFinite(review) && reviewLessons.some((candidate) => candidate.id === unitId) && status !== "merged") {
+      errors.push(`docs/PARALLEL_LESSON_REGISTRY.md has active row ${unitId}, but ${unitId} is already in production reviewLessons.`);
     }
     if (status === "merged") {
-      warnings.push(`docs/PARALLEL_LESSON_REGISTRY.md still contains merged row ${lessonId}; cleanup is recommended.`);
+      warnings.push(`docs/PARALLEL_LESSON_REGISTRY.md still contains merged row ${unitId}; cleanup is recommended.`);
     }
   }
 
@@ -108,11 +118,32 @@ if (lessons.length === 0) {
     }
   }
 
+  const reviewAssetDir = path.resolve("public/assets/reviews");
+  const assetReviews = fs.existsSync(reviewAssetDir)
+    ? fs.readdirSync(reviewAssetDir).filter((name) => /^R\d{3}$/.test(name))
+    : [];
+  const assetReviewSet = new Set(assetReviews);
+  for (const review of reviewLessons) {
+    if (!assetReviewSet.has(review.id)) {
+      errors.push(`${review.id}: missing public/assets/reviews/${review.id}/ folder.`);
+    }
+  }
+  for (const reviewId of assetReviews) {
+    if (!reviewLessons.some((review) => review.id === reviewId)) {
+      warnings.push(`public/assets/reviews/${reviewId}/ exists but is not in production reviewLessons.`);
+    }
+  }
+
   if (fs.existsSync(path.resolve("public/tools/planner-data.json"))) {
     const plannerData = readJson("public/tools/planner-data.json");
     const plannerLessons = Array.isArray(plannerData.lessons) ? plannerData.lessons : [];
+    const plannerReviewLessons = Array.isArray(plannerData.reviewLessons) ? plannerData.reviewLessons : [];
     const plannerLast = plannerLessons.at(-1);
-    if (plannerLessons.length !== lessons.length || plannerLast?.id !== lastId) {
+    if (
+      plannerLessons.length !== lessons.length ||
+      plannerLast?.id !== lastId ||
+      plannerReviewLessons.length !== reviewLessons.length
+    ) {
       errors.push("public/tools/planner-data.json is stale; run npm run curriculum:export-planner.");
     }
   }

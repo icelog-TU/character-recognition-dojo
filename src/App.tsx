@@ -1520,14 +1520,14 @@ function PracticeHome({
       </div>
 
       <div className="home-section-heading">
-        <h2>複習課預留</h2>
+        <h2>複習預留</h2>
         <span>每 30 課整理一次</span>
       </div>
-      <div className="review-slot-grid" aria-label="複習課預留">
+      <div className="review-slot-grid" aria-label="複習預留">
         {reviewSlots.map((slot) => (
           <article className="review-slot-card" key={slot.id}>
             <span>第 {slot.milestone} 課後</span>
-            <strong>第 {slot.sequence} 回</strong>
+            <strong>複習{smallZhNumber(slot.sequence)}</strong>
             <small>
               每回 {slot.sentenceCount} 句，複習第 {slot.reviewStart}-{slot.reviewEnd} 課
             </small>

@@ -13,7 +13,7 @@
 5. Current production lessons add Block 4 from L006 onward, after picture-supported listening.
 6. Completing all required blocks unlocks the next lesson.
 7. Completed lessons enter manual and random review.
-8. Starting after L060, every 30-lesson milestone reserves two 5-sentence review lessons for the older 30-lesson block.
+8. Starting after L060, every 30-lesson milestone reserves two 5-sentence review modules for the older 30-lesson block. Review modules do not occupy `L###` lesson numbers.
 
 ## Hard UX Requirements
 
@@ -104,13 +104,13 @@ Each lesson has:
 
 L001-L005 use picture-supported sentence listening without Stage 4. Current production lessons L006 and later include Stage 4 sentence games after picture-supported listening, not as a replacement for picture-supported listening.
 
-## Review Lesson Rhythm
+## Review Module Rhythm
 
-The curriculum adds two review lessons after every 30-lesson milestone starting after L060.
+The curriculum adds two review modules after every 30-lesson milestone starting after L060. These are separate review units, not numbered lessons.
 
-- After L060: two 5-sentence review lessons cover all new characters from L001-L030.
-- After L090: two 5-sentence review lessons cover all new characters from L031-L060.
-- After L120: two 5-sentence review lessons cover all new characters from L061-L090.
+- After L060: R001/R002 cover all new characters from L001-L030. The next new-character lesson is L061.
+- After L090: R003/R004 cover all new characters from L031-L060. The next new-character lesson is L091.
+- After L120: R005/R006 cover all new characters from L061-L090.
 - Continue the same pattern.
 
 Each review pair has 10 sentences total, and every character introduced in the target 30-lesson range must appear at least once across those 10 sentences.

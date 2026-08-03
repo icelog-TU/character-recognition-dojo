@@ -38,8 +38,10 @@ function normalizeRequest(raw) {
   const newChars = Array.isArray(raw.newChars) ? raw.newChars : [];
   const zhuyin = raw.zhuyin && typeof raw.zhuyin === "object" ? raw.zhuyin : {};
   const constraints = raw.generationConstraints && typeof raw.generationConstraints === "object" ? raw.generationConstraints : {};
-  const id = raw.id ?? lessonId(order);
+  const id = raw.id ?? (Number.isInteger(order) ? lessonId(order) : "");
+  const kind = raw.kind === "review" || /^R\d{3}$/.test(id) ? "review" : "lesson";
   return {
+    kind,
     id,
     order,
     newChars,
@@ -47,6 +49,14 @@ function normalizeRequest(raw) {
     title: raw.title ?? newChars.join(""),
     targetSentenceCount: Number(raw.targetSentenceCount ?? 6),
     teacherNotes: raw.teacherNotes ?? "",
+    reviewNumber: Number(raw.reviewNumber ?? 0),
+    afterLessonOrder: Number(raw.afterLessonOrder ?? 0),
+    targetLessonRange: raw.targetLessonRange && typeof raw.targetLessonRange === "object" ? raw.targetLessonRange : null,
+    requiredCoverageChars: Array.isArray(constraints.requiredCoverageChars)
+      ? constraints.requiredCoverageChars
+      : Array.isArray(raw.requiredCoverageChars)
+        ? raw.requiredCoverageChars
+        : [],
     provisionalLearnedChars: Array.isArray(constraints.provisionalLearnedChars) ? constraints.provisionalLearnedChars : [],
     requestedAllowedChars: Array.isArray(constraints.allowedChars) ? constraints.allowedChars : [],
   };
@@ -54,6 +64,17 @@ function normalizeRequest(raw) {
 
 function validateRequest(request, existingLessons) {
   const errors = [];
+  if (request.kind === "review") {
+    if (!/^R\d{3}$/.test(request.id)) errors.push("複習模組 `id` 必須使用 R###，例如 R001。");
+    if (request.newChars.length > 0) errors.push("複習模組不可包含 `newChars`；請使用 `requiredCoverageChars`。");
+    if (!Number.isInteger(request.reviewNumber) || request.reviewNumber < 1) errors.push("複習模組 `reviewNumber` 必須是正整數。");
+    if (!Number.isInteger(request.afterLessonOrder) || request.afterLessonOrder < 1) errors.push("複習模組 `afterLessonOrder` 必須是正整數。");
+    if (!request.targetLessonRange) {
+      errors.push("複習模組必須包含 `targetLessonRange`。");
+    }
+    return errors;
+  }
+
   if (!Number.isInteger(request.order) || request.order < 1) errors.push("`order` 必須是正整數。");
   if (request.newChars.length === 0) errors.push("`newChars` 至少要包含一個漢字。");
 
@@ -80,6 +101,19 @@ function sentenceRange(allowedCharCount, requestedCount) {
 }
 
 function buildDraft(request) {
+  if (request.kind === "review") {
+    return {
+      id: request.id,
+      reviewNumber: request.reviewNumber,
+      title: request.title,
+      afterLessonOrder: request.afterLessonOrder,
+      targetLessonRange: request.targetLessonRange,
+      requiredCoverageChars: request.requiredCoverageChars,
+      requiredRounds: Math.max(1, request.targetSentenceCount),
+      sentences: [],
+    };
+  }
+
   return {
     id: request.id,
     order: request.order,
@@ -95,13 +129,90 @@ function buildDraft(request) {
 
 function buildPacket({ request, learnedChars, provisionalLearnedChars, allowedChars, priorSentences }) {
   const id = request.id;
-  const assetBase = `/assets/lessons/${id}`;
+  const assetBase = request.kind === "review" ? `/assets/reviews/${id}` : `/assets/lessons/${id}`;
   const charAudioMap = Object.fromEntries(
     request.newChars.map((char) => [char, `${assetBase}/audio/char-${char}.m4a`]),
   );
   const range = sentenceRange(allowedChars.length, request.targetSentenceCount);
   const priorSentenceLines =
     priorSentences.length > 0 ? priorSentences.map((sentence) => `- ${sentence}`).join("\n") : "- 尚無。";
+
+  if (request.kind === "review") {
+    const targetRange = request.targetLessonRange;
+    return `# ${id} 複習模組生成資料包
+
+## 複習需求
+
+- 複習模組：${id}
+- 顯示名稱：${request.title || `複習${request.reviewNumber}`}
+- 複習序號：${request.reviewNumber}
+- 接在課程：L${String(request.afterLessonOrder).padStart(3, "0")} 後，不佔 L 課程序號。
+- 覆蓋目標：L${String(targetRange.startOrder).padStart(3, "0")}-L${String(targetRange.endOrder).padStart(3, "0")}
+- 目標句數：${request.targetSentenceCount}
+- 本模組必選覆蓋字：${request.requiredCoverageChars.join(" ")}
+- 教師備註：${request.teacherNotes || "無"}
+
+## 已學字邊界
+
+- 可用漢字：${allowedChars.join(" ")}
+- 禁止：任何未列在上方的漢字。
+- 複習模組不引入新字，不可建立 \`newChars\` 或單字 \`charAudio\`。
+- 只能使用臺灣華語與臺灣繁體字。
+- 不要使用漢語拼音。
+- 不要產生學習單式問答或測驗題。
+
+## 既有句型風格
+
+以下只作為風格參考，不要照抄任何商業書籍序列。
+
+${priorSentenceLines}
+
+## 造句提示
+
+請為幼兒認字 App 產生${range}。句子必須自然、具體、容易配圖，並協助覆蓋上方必選字。
+
+規則：
+
+1. 顯示句子只能使用上方允許的漢字。
+2. 本模組不教新字；每一句的 focusChar 必須是句中已學字。
+3. 這一對複習模組共有 10 句，必須合計覆蓋目標 30 課的所有新字。
+4. 除非真的有助於顯示，否則不要加標點；若 display text 有標點，spokenText 必須省略標點。
+5. 只回傳 JSON 候選句，格式如下：
+
+\`\`\`json
+[
+  {
+    "text": "一個人看鳥",
+    "spokenText": "一個人看鳥",
+    "focusChar": "鳥",
+    "reason": "只使用已學字，並複習目標覆蓋字。"
+  }
+]
+\`\`\`
+
+## 圖片與音訊規則
+
+- 圖片目標路徑格式：\`${assetBase}/images/${id}-S01.webp\`
+- 句音訊目標路徑格式：\`${assetBase}/audio/${id}-S01.m4a\`
+- 複習模組沒有單字音訊。
+- 每句仍需要 reviewed imagePrompt、AI 句子音訊、正式 charTimings。
+
+## 最終 ReviewLesson JSON 格式
+
+\`\`\`json
+{
+  "id": "${id}",
+  "reviewNumber": ${request.reviewNumber},
+  "title": "${request.title || `複習${request.reviewNumber}`}",
+  "afterLessonOrder": ${request.afterLessonOrder},
+  "targetLessonRange": ${JSON.stringify(request.targetLessonRange)},
+  "requiredCoverageChars": ${JSON.stringify(request.requiredCoverageChars)},
+  "requiredRounds": ${Math.max(1, request.targetSentenceCount)},
+  "sentences": []
+}
+\`\`\`
+`;
+  }
 
   return `# ${id} 生成資料包
 
@@ -259,7 +370,8 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-const previousLessons = existingLessons.filter((lesson) => lesson.order < request.order);
+const boundaryOrder = request.kind === "review" ? request.afterLessonOrder : request.order - 1;
+const previousLessons = existingLessons.filter((lesson) => lesson.order <= boundaryOrder);
 const learnedChars = unique(previousLessons.flatMap((lesson) => lesson.newChars ?? []));
 const provisionalLearnedChars = unique(request.provisionalLearnedChars.filter((char) => !learnedChars.includes(char)));
 const allowedChars = request.requestedAllowedChars.length

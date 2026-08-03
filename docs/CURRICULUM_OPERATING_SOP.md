@@ -10,10 +10,11 @@ Use this order whenever files disagree:
 
 1. Latest `origin/main` plus `src/curriculum/sample-lessons.json` is the shipping curriculum truth.
 2. `public/assets/lessons/L###/` is the shipping asset truth for lessons already in `sample-lessons.json`.
-3. `docs/CURRICULUM_LEDGER.md` is a derived human-readable summary of merged curriculum. It must be updated when a lesson enters production, but it does not override production JSON.
-4. `public/tools/planner-data.json` is a derived planner export. Regenerate it after production curriculum changes.
-5. `docs/PARALLEL_LESSON_REGISTRY.md` is only for not-yet-merged parallel work. It is not a permanent progress ledger.
-6. `curriculum-workflow/lesson-requests/`, `curriculum-workflow/drafts/`, and `curriculum-workflow/generated/` are work artifacts. They can explain how a lesson was prepared, but they are not proof that the lesson is shipped.
+3. `public/assets/reviews/R###/` is the shipping asset truth for review modules already in top-level `reviewLessons`.
+4. `docs/CURRICULUM_LEDGER.md` is a derived human-readable summary of merged curriculum. It must be updated when a lesson or review module enters production, but it does not override production JSON.
+5. `public/tools/planner-data.json` is a derived planner export. Regenerate it after production curriculum changes.
+6. `docs/PARALLEL_LESSON_REGISTRY.md` is only for not-yet-merged parallel work. It is not a permanent progress ledger.
+7. `curriculum-workflow/lesson-requests/`, `curriculum-workflow/review-requests/`, `curriculum-workflow/drafts/`, and `curriculum-workflow/generated/` are work artifacts. They can explain how a unit was prepared, but they are not proof that it is shipped.
 
 If Markdown and production JSON disagree, update Markdown or generated planner data to match `origin/main` unless the user explicitly asks to change production curriculum.
 
@@ -136,33 +137,37 @@ npm run curriculum:export-planner
 npm run verify
 ```
 
-## Review Lesson Cycle
+## Review Module Cycle
 
-Starting after L060, the course inserts two review lessons after every 30-lesson milestone.
+Starting after L060, the course inserts two review modules after every 30-lesson milestone. Review modules are not numbered lessons and must not occupy `L###` lesson ids.
 
 The review cycle is delayed by one 30-lesson block so the review targets older material:
 
-- After L060, add two review lessons for L001-L030.
-- After L090, add two review lessons for L031-L060.
-- After L120, add two review lessons for L061-L090.
+- After L060, add R001 and R002 for L001-L030. The next new-character lesson remains L061.
+- After L090, add R003 and R004 for L031-L060. The next new-character lesson remains L091.
+- After L120, add R005 and R006 for L061-L090.
 - Continue the same pattern every 30 lessons.
 
 Formula:
 
 - Milestone `M` starts at 60 and increases by 30.
-- The two review lessons after milestone `M` cover lesson range `M - 59` through `M - 30`.
-- Each review lesson has exactly 5 reviewed sentences.
+- The two review modules after milestone `M` cover lesson range `M - 59` through `M - 30`.
+- Each review module has exactly 5 reviewed sentences.
 - The pair therefore has 10 reviewed sentences total.
 - Across those 10 sentences, every new character introduced in the covered 30-lesson range must appear at least once.
 
 Rules:
 
-- Review lessons introduce no new characters.
+- Review modules introduce no new characters.
+- Review modules use `R###` ids, display as `複習一`, `複習二`, and live in top-level `reviewLessons`, not `lessons`.
+- Review module assets live under `public/assets/reviews/R###/`, not `public/assets/lessons/L###/`.
+- Review request files live under `curriculum-workflow/review-requests/R###.json`, not `curriculum-workflow/lesson-requests/L###.json`.
+- Do not create `L061` or `L062` as review placeholders. After L060, `L061` is the next new-character lesson.
 - Review sentence text may use characters learned by the milestone, but the required coverage target is the older 30-lesson range.
-- The two review lessons should be planned as one pair so coverage can be checked across all 10 sentences before either lesson ships.
-- Do not add placeholder review lessons to `src/curriculum/sample-lessons.json`. Only add them after sentences, images, audio, timings, and review coverage are production-ready.
-- Until the review lesson flow is fully implemented as playable curriculum, use website placeholder cards to reserve the pair.
-- The first reserved pair is after L060: two 5-sentence review lessons covering all new characters from L001-L030.
+- The two review modules should be planned as one pair so coverage can be checked across all 10 sentences before either module ships.
+- Do not add placeholder review modules to `src/curriculum/sample-lessons.json`. Only add them to top-level `reviewLessons` after sentences, images, audio, timings, and review coverage are production-ready.
+- Until the review module flow is fully implemented as playable curriculum, use website placeholder cards to reserve the pair.
+- The first reserved pair is after L060: R001/R002, two 5-sentence review modules covering all new characters from L001-L030.
 
 ## Dependency Recheck Before Merge
 

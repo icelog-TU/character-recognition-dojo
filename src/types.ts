@@ -1,6 +1,7 @@
 export interface Curriculum {
   version: number;
   lessons: Lesson[];
+  reviewLessons?: ReviewLesson[];
 }
 
 export interface Lesson {
@@ -12,6 +13,21 @@ export interface Lesson {
   title: string;
   requiredRounds: number;
   originHint?: OriginHint;
+  sentences: LessonSentence[];
+  sentenceGames?: SentenceGame[];
+}
+
+export interface ReviewLesson {
+  id: string;
+  reviewNumber: number;
+  title: string;
+  afterLessonOrder: number;
+  targetLessonRange: {
+    startOrder: number;
+    endOrder: number;
+  };
+  requiredCoverageChars: string[];
+  requiredRounds: number;
   sentences: LessonSentence[];
   sentenceGames?: SentenceGame[];
 }

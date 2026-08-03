@@ -1,6 +1,6 @@
 # Parallel Lesson Registry
 
-This file is the shared coordination board for parallel lesson production.
+This file is the shared coordination board for parallel lesson and review-module production.
 
 Use this file only for **not-yet-merged** lesson work. The source of truth for merged shipping curriculum is:
 
@@ -10,14 +10,14 @@ Use this file only for **not-yet-merged** lesson work. The source of truth for m
 
 See `docs/CURRICULUM_OPERATING_SOP.md` for the complete multi-thread workflow. In short: this registry coordinates provisional work, but production shipping still happens through one ordered release lane.
 
-When the teacher wants to prepare 2-3 lessons at the same time, register each active lesson here before any real work starts. This registry is mandatory coordination state, not optional notes.
+When the teacher wants to prepare 2-3 lessons or review modules at the same time, register each active unit here before any real work starts. This registry is mandatory coordination state, not optional notes.
 
 ## Active Parallel Lessons
 
-| Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
+| Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L061 | review lesson 1 | claimed | Codex L061-L062 review thread | pending | L060:去 | 去 | curriculum-workflow/lesson-requests/L061.json / curriculum-workflow/generated/L061-generation-packet.md | public/assets/lessons/L061/ | First review pair after L060; covers L001-L030 together with L062. Do not merge until L060 is merged and review lesson flow is production-ready. |
-| L062 | review lesson 2 | claimed | Codex L061-L062 review thread | pending | L060:去 L061:review | 去 | curriculum-workflow/lesson-requests/L062.json / curriculum-workflow/generated/L062-generation-packet.md | public/assets/lessons/L062/ | Second review lesson in the first pair; pair-level coverage must be checked before either lesson ships. |
+| R001 | review module 1 | claimed | Codex review-module thread | pending | L060:去 | none | curriculum-workflow/review-requests/R001.json / curriculum-workflow/generated/R001-generation-packet.md | public/assets/reviews/R001/ | First review module after L060; displays as 複習一, covers L001-L030 together with R002, and does not occupy L061. |
+| R002 | review module 2 | claimed | Codex review-module thread | pending | L060:去 R001:review | none | curriculum-workflow/review-requests/R002.json / curriculum-workflow/generated/R002-generation-packet.md | public/assets/reviews/R002/ | Second review module after L060; displays as 複習二. Next new-character lesson remains L061. |
 
 ## Status Values
 
@@ -35,8 +35,8 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 1. Run `git fetch origin` and inspect latest `origin/main`.
 2. Run `npm run curriculum:audit-state` to confirm main, ledger, registry, planner data, and lesson asset folders agree before claiming new work.
-3. Before creating request files, generating packets, images, audio, or editing lesson JSON, add or update exactly one row for the lesson this thread owns.
-4. Fill `New Character(s)` as soon as the teacher chooses the character.
+3. Before creating request files, generating packets, images, audio, or editing JSON, add or update exactly one row for the unit this thread owns.
+4. Fill `New Character(s) / Kind` as soon as the teacher chooses the character or review module.
 5. If a prior lesson is not merged, list it in `Depends On`, for example `L051:樣`.
 6. Put those not-yet-merged characters in `Provisional Learned Chars`.
 7. Commit and push the registry update before starting large image/audio work. If a quick local claim is needed first, update and push the registry as the first commit before any asset generation.
@@ -70,6 +70,8 @@ I depend on L050:好 being merged first.
 ## Dependency Rules
 
 - A later lesson may draft against provisional previous characters only when those characters are registered here or explicitly included in the user's lesson request.
+- Review modules must use R### ids, not L### ids. They do not introduce new characters, do not use `newChars`, and do not advance the next new-character lesson number.
+- After L060, the two review modules are R001 and R002. The next new-character lesson remains L061.
 - Do not merge a later lesson while any `Depends On` row is not merged.
 - If a dependency lesson changes its new character(s), every later row that listed it must move to `needs-rework` until rechecked.
 - After each dependency merges, the later lesson thread must fetch/rebase and re-check `allowedChars`, `mustIncludeCharsAcrossLesson`, sentence text, image prompts, audio, and timings.

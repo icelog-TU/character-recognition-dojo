@@ -142,9 +142,10 @@ const args = parseArgs(process.argv.slice(2));
 const lessonFilter = args.lesson ? String(args.lesson).toUpperCase() : null;
 const apiKey = requireOpenAIKey();
 const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
+const units = [...(curriculum.lessons ?? []), ...(curriculum.reviewLessons ?? [])];
 let changed = 0;
 
-for (const lesson of curriculum.lessons ?? []) {
+for (const lesson of units) {
   if (lessonFilter && lesson.id !== lessonFilter) continue;
 
   for (const sentence of lesson.sentences ?? []) {
