@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 48:
+Characters taught after Lesson 49:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做`
 
 Recent review pool for the next lesson:
 
-`爸 媽 愛 書 可 我 和 都 看 小 鳥 不 男 女 孩 很 裡 有 他 家 兩 隻 狗 山 上 你 高 門 前`
+`做 吃 這 會 可 書 媽 我 的 愛 很 個 人 是 他 不 看 裡 有 小 孩 狗 兩 隻`
 
 ## Visual Continuity Ledger
 
@@ -106,11 +106,12 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 | L047 | 這 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這 | 這是媽媽的愛書 / 這個小小孩很可愛 / 他會走，可是不會看書 / 這隻小鳥會不會飛？ / 這是我的兩隻手 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會 | Introduces `這` through this/identity sentences, a toddler continuity pair, a baby-bird question, and a two-hands review. |
 
-| L048 | 吃 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃 | 這個人很愛吃，也很會吃 / 小小孩不會看書，可是會吃書 / 書是不可吃的 / 這是我媽媽的愛書 / 這兩隻小狗很可愛 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這 | Introduces `吃` through eating, books-not-for-eating, and reviews `?`, `?`, and `?`. |
+| L048 | 吃 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃 | 這個人很愛吃，也很會吃 / 小小孩不會看書，可是會吃書 / 書是不可吃的 / 這是我媽媽的愛書 / 這兩隻小狗很可愛 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這 | Introduces `吃` through eating, books-not-for-eating, and reviews `可`, `會`, and `這`. |
+| L049 | 做 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做 | 這是媽媽做的，我很愛吃 / 媽媽會做吃的，我不會做 / 這個人很會吃，可是他不會做 / 這個是我看書做的 / 書裡有可愛的小孩 | 這是媽的，我很愛吃會不個人可他看書裡有小孩 | Introduces `做` through making food, cooking/not-cooking, making from a book, and reviews `會`, `這`, and `吃`. |
 
 ## Planned Lessons
 
-None yet. L048 completed; plan the next lesson from the planner.
+None yet. L049 completed; plan the next lesson from the planner.
 
 ## Planning Rule For New Lessons
 

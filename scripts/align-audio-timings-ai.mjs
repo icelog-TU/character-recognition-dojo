@@ -42,6 +42,7 @@ function hanChars(text) {
 function normalizeTranscribedHanChar(char) {
   const map = new Map([
     ["个", "個"],
+    ["这", "這"],
     ["只", "隻"],
     ["鸟", "鳥"],
     ["飞", "飛"],
