@@ -6,14 +6,24 @@ export interface Curriculum {
 export interface Lesson {
   id: string;
   order: number;
+  kind?: "new-char" | "review";
   newChars: string[];
   zhuyin: Record<string, string>;
   charAudio?: Record<string, string>;
   title: string;
   requiredRounds: number;
+  review?: ReviewLessonMeta;
   originHint?: OriginHint;
   sentences: LessonSentence[];
   sentenceGames?: SentenceGame[];
+}
+
+export interface ReviewLessonMeta {
+  milestone: number;
+  sequence: 1 | 2;
+  targetLessonStart: number;
+  targetLessonEnd: number;
+  pairLessonIds: string[];
 }
 
 export interface OriginHint {

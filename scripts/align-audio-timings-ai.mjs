@@ -41,6 +41,11 @@ function hanChars(text) {
 
 function normalizeTranscribedHanChar(char) {
   const map = new Map([
+    ["只", "隻"],
+    ["鸟", "鳥"],
+    ["边", "邊"],
+    ["便", "邊"],
+    ["抵", "比"],
     ["会", "會"],
     ["个", "個"],
     ["这", "這"],
@@ -140,14 +145,25 @@ async function transcribeWithWords({ apiKey, filePath, fileName }) {
 
 const args = parseArgs(process.argv.slice(2));
 const lessonFilter = args.lesson ? String(args.lesson).toUpperCase() : null;
+const sentenceFilter = args.sentence ? String(args.sentence).toUpperCase() : null;
+const draftPath = args.draft ? path.resolve(String(args.draft)) : null;
 const apiKey = requireOpenAIKey();
-const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
+const source = draftPath ? JSON.parse(fs.readFileSync(draftPath, "utf8")) : JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
+const lessons = draftPath ? [source] : source.lessons ?? [];
 let changed = 0;
 
-for (const lesson of curriculum.lessons ?? []) {
+for (const lesson of lessons) {
   if (lessonFilter && lesson.id !== lessonFilter) continue;
 
   for (const sentence of lesson.sentences ?? []) {
+    if (sentenceFilter && sentence.id.toUpperCase() !== sentenceFilter) continue;
+    if (!sentence.audio?.src && draftPath) {
+      sentence.audio = {
+        src: `/assets/lessons/${lesson.id}/audio/${sentence.id}.m4a`,
+        durationMs: 0,
+        charTimings: [],
+      };
+    }
     if (!sentence.audio?.src) continue;
     const filePath = assetPath(sentence.audio.src);
     if (!fs.existsSync(filePath)) {
@@ -177,5 +193,5 @@ for (const lesson of curriculum.lessons ?? []) {
   }
 }
 
-fs.writeFileSync(curriculumPath, `${JSON.stringify(curriculum, null, 2)}\n`, "utf8");
+fs.writeFileSync(draftPath ?? curriculumPath, `${JSON.stringify(source, null, 2)}\n`, "utf8");
 console.log(`AI-aligned ${changed} sentence audio file(s).`);

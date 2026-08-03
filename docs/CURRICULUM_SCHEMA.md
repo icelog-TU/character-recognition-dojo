@@ -57,6 +57,7 @@ Review lesson note:
 - The first pair after L060 covers L001-L030; the second pair after L090 covers L031-L060.
 - Each review lesson has 5 sentences, and each two-lesson pair must cover every new character from its target 30-lesson range at least once.
 - Do not add empty placeholder review lessons to this JSON. Add review lessons only after the review lesson flow, sentences, images, audio, timings, and pair-level coverage checklist are production-ready.
+- Production review lessons use `"kind": "review"`, `newChars: []`, empty `zhuyin` / `charAudio`, and a `review` metadata object with `milestone`, `sequence`, `targetLessonStart`, `targetLessonEnd`, and `pairLessonIds`.
 
 ## Sentence
 

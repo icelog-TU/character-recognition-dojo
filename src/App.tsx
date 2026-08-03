@@ -791,6 +791,10 @@ function lessonChars(lesson: Lesson): string[] {
   return lesson.newChars;
 }
 
+function isReviewLesson(lesson: Lesson): boolean {
+  return lesson.kind === "review" || lesson.newChars.length === 0;
+}
+
 function charactersForRealm(realmId: RealmId): CollectibleCharacter[] {
   return COLLECTIBLE_CHARACTERS.filter((character) => character.realmId === realmId);
 }
@@ -929,6 +933,7 @@ function characterMood(hearts: number): string {
 }
 
 function lessonLabel(lesson: Lesson): string {
+  if (isReviewLesson(lesson)) return lesson.title;
   return lesson.newChars.join("");
 }
 
@@ -981,12 +986,18 @@ function scrollActiveLessonWorkIntoView(
 }
 
 function lessonIntroText(lesson: Lesson): string {
+  if (isReviewLesson(lesson)) {
+    return `第 ${lesson.order} 課是複習課，聽句子、看圖片，再把學過的字認出來。`;
+  }
   const charCount = lesson.newChars.length;
   if (charCount === 1) return `第${smallZhNumber(lesson.order)}課，我們要學一個很重要的字，就在下面喔。`;
   return `第${smallZhNumber(lesson.order)}課，我們要學${smallZhNumber(charCount)}個很重要的字，都在下面喔。${GUIDE_TEXT.lessonStep}`;
 }
 
 function hearPromptText(lesson: Lesson): string {
+  if (isReviewLesson(lesson)) {
+    return "這一課沒有新字，直接複習句子。";
+  }
   if (lesson.newChars.length === 1) {
     return "請按那個大大發光的紅色字，按下去聽它的聲音。聽見聲音，你就做對了。要記住這個字和它的聲音喔。";
   }
@@ -2595,12 +2606,13 @@ function LessonPanel({
   onComplete: (destination: LessonDestination) => void;
   onExit: () => void;
 }) {
+  const isReview = isReviewLesson(lesson);
   const [heardChars, setHeardChars] = useState<Set<string>>(new Set());
   const [spotlightChar, setSpotlightChar] = useState<string | null>(null);
-  const [findUnlocked, setFindUnlocked] = useState(false);
+  const [findUnlocked, setFindUnlocked] = useState(isReview);
   const [practiceDoneCount, setPracticeDoneCount] = useState(0);
   const [gameDoneCount, setGameDoneCount] = useState(0);
-  const [activeStage, setActiveStage] = useState(1);
+  const [activeStage, setActiveStage] = useState(isReview ? 3 : 1);
   const [advancingStage, setAdvancingStage] = useState<number | null>(null);
   const [speakingTarget, setSpeakingTarget] = useState<SpeechTarget>(null);
   const [rewardState, setRewardState] = useState<"waiting" | "ready" | "claiming" | "claimed">("waiting");
@@ -2611,7 +2623,7 @@ function LessonPanel({
   const panelRef = useRef<HTMLElement | null>(null);
   const rewardPanelRef = useRef<HTMLElement | null>(null);
   const newChars = lessonChars(lesson);
-  const soundUnlocked = newChars.every((char) => heardChars.has(char));
+  const soundUnlocked = isReview || newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
   const usesSentenceGames = Boolean(lesson.sentenceGames?.length);
   const configuredRequiredRounds = Number.isFinite(lesson.requiredRounds)
@@ -2634,8 +2646,8 @@ function LessonPanel({
   }, [lesson]);
 
   useEffect(() => {
-    if (!locked) void speakForTarget("stage1", `${lessonIntro} ${hearPrompt}`);
-  }, [lesson.id, lessonIntro, hearPrompt, locked]);
+    if (!locked) void speakForTarget(isReview ? "stage3" : "stage1", isReview ? lessonIntro : `${lessonIntro} ${hearPrompt}`);
+  }, [isReview, lesson.id, lessonIntro, hearPrompt, locked]);
 
   useEffect(() => {
     let firstFrame = 0;
@@ -2691,10 +2703,10 @@ function LessonPanel({
   }, [findUnlocked, activeStage]);
 
   useEffect(() => {
-    if (activeStage === 3 && !pictureDone) {
+    if (activeStage === 3 && !pictureDone && !isReview) {
       void speakForTarget("stage3", GUIDE_TEXT.blockPicture);
     }
-  }, [activeStage, pictureDone]);
+  }, [activeStage, pictureDone, isReview]);
 
   useEffect(() => {
     if (pictureDone && usesSentenceGames && activeStage === 3) {
@@ -3002,10 +3014,10 @@ function LessonPanel({
             onClick={() => {
               setHeardChars(new Set());
               setSpotlightChar(null);
-              setFindUnlocked(false);
+              setFindUnlocked(isReview);
               setPracticeDoneCount(0);
               setGameDoneCount(0);
-              setActiveStage(1);
+              setActiveStage(isReview ? 3 : 1);
               setAdvancingStage(null);
               setSpeakingTarget(null);
               setRewardState("waiting");

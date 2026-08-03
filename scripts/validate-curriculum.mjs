@@ -40,11 +40,13 @@ const sorted = [...lessons].sort((a, b) => a.order - b.order);
 const lessonIds = new Set();
 const introducedChars = new Set();
 const unlocked = new Set();
+const reviewLessons = [];
 
 for (let i = 0; i < sorted.length; i += 1) {
   const lesson = sorted[i];
   const expectedOrder = i + 1;
   const newChars = Array.isArray(lesson.newChars) ? lesson.newChars : [];
+  const isReviewLesson = lesson.kind === "review";
 
   if (lesson.order !== expectedOrder) {
     errors.push(`${lesson.id}: expected order ${expectedOrder}, got ${lesson.order}.`);
@@ -53,7 +55,22 @@ for (let i = 0; i < sorted.length; i += 1) {
   if (lessonIds.has(lesson.id)) errors.push(`${lesson.id}: duplicate lesson id.`);
   lessonIds.add(lesson.id);
 
-  if (newChars.length === 0) {
+  if (lesson.kind && !["new-char", "review"].includes(lesson.kind)) {
+    errors.push(`${lesson.id}: unsupported lesson kind ${lesson.kind}.`);
+  }
+
+  if (isReviewLesson) {
+    reviewLessons.push(lesson);
+    if (newChars.length > 0) {
+      errors.push(`${lesson.id}: review lessons must not introduce newChars.`);
+    }
+    if (!lesson.review || typeof lesson.review !== "object") {
+      errors.push(`${lesson.id}: review lessons must include review metadata.`);
+    }
+    if ((lesson.sentences ?? []).length !== 5) {
+      errors.push(`${lesson.id}: review lessons must include exactly 5 sentences.`);
+    }
+  } else if (newChars.length === 0) {
     errors.push(`${lesson.id}: newChars must include at least one character.`);
   }
 
@@ -239,6 +256,60 @@ for (let i = 0; i < sorted.length; i += 1) {
   }
 
   for (const char of newChars) unlocked.add(char);
+}
+
+const reviewPairs = new Map();
+for (const lesson of reviewLessons) {
+  const review = lesson.review ?? {};
+  const sequence = review.sequence;
+  const milestone = review.milestone;
+  const targetStart = review.targetLessonStart;
+  const targetEnd = review.targetLessonEnd;
+  const pairLessonIds = review.pairLessonIds;
+  if (!Number.isInteger(milestone) || milestone <= 0) {
+    errors.push(`${lesson.id}: review.milestone must be a positive integer.`);
+  }
+  if (sequence !== 1 && sequence !== 2) {
+    errors.push(`${lesson.id}: review.sequence must be 1 or 2.`);
+  }
+  if (!Number.isInteger(targetStart) || !Number.isInteger(targetEnd) || targetStart <= 0 || targetEnd < targetStart) {
+    errors.push(`${lesson.id}: review target lesson range is invalid.`);
+  }
+  if (!Array.isArray(pairLessonIds) || pairLessonIds.length !== 2 || !pairLessonIds.includes(lesson.id)) {
+    errors.push(`${lesson.id}: review.pairLessonIds must list both review lesson ids.`);
+  }
+  if (Number.isInteger(milestone) && (sequence === 1 || sequence === 2) && lesson.order !== milestone + sequence) {
+    errors.push(`${lesson.id}: review lesson order should be milestone + sequence.`);
+  }
+  const pairKey = `${milestone}:${targetStart}-${targetEnd}`;
+  const pair = reviewPairs.get(pairKey) ?? [];
+  pair.push(lesson);
+  reviewPairs.set(pairKey, pair);
+}
+
+for (const [pairKey, pair] of reviewPairs) {
+  if (pair.length !== 2) {
+    errors.push(`review pair ${pairKey}: must include exactly two lessons before production.`);
+    continue;
+  }
+  if (!pair[0].review || !pair[1].review) continue;
+  const sequences = pair.map((lesson) => lesson.review?.sequence).sort();
+  if (sequences[0] !== 1 || sequences[1] !== 2) {
+    errors.push(`review pair ${pairKey}: must include sequence 1 and sequence 2.`);
+  }
+  const targetStart = pair[0].review.targetLessonStart;
+  const targetEnd = pair[0].review.targetLessonEnd;
+  const targetLessons = sorted.filter((lesson) => lesson.order >= targetStart && lesson.order <= targetEnd);
+  if (targetLessons.length !== targetEnd - targetStart + 1) {
+    errors.push(`review pair ${pairKey}: target lesson range is not complete in curriculum.`);
+    continue;
+  }
+  const targetChars = targetLessons.flatMap((lesson) => lesson.newChars ?? []);
+  const pairText = pair.flatMap((lesson) => lesson.sentences ?? []).map((sentence) => sentence.text).join("");
+  const missing = targetChars.filter((char) => !hanChars(pairText).includes(char));
+  if (missing.length > 0) {
+    errors.push(`review pair ${pairKey}: missing target character coverage ${missing.join(" ")}.`);
+  }
 }
 
 for (const warning of warnings) console.warn(`Warning: ${warning}`);

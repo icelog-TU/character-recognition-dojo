@@ -62,15 +62,18 @@ async function createSpeech({ apiKey, model, voice, input, outputPath }) {
 
 const args = parseArgs(process.argv.slice(2));
 const lessonId = String(args.lesson || "L001").toUpperCase();
+const draftPath = args.draft ? path.resolve(String(args.draft)) : null;
 const sentenceFilter = args.sentence ? String(args.sentence).toUpperCase() : null;
 const includeSentences = flagEnabled(args.sentences);
 const includeChars = flagEnabled(args.chars);
+const includeGameOptions = args["game-options"] ? flagEnabled(args["game-options"]) : false;
 
 const apiKey = requireOpenAIKey();
 const model = getEnv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts");
 const voice = getEnv("OPENAI_TTS_VOICE", "coral");
-const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
-const lesson = curriculum.lessons?.find((candidate) => candidate.id === lessonId);
+const lesson = draftPath
+  ? JSON.parse(fs.readFileSync(draftPath, "utf8"))
+  : JSON.parse(fs.readFileSync(curriculumPath, "utf8")).lessons?.find((candidate) => candidate.id === lessonId);
 
 if (!lesson) {
   console.error(`Lesson not found: ${lessonId}`);
@@ -98,6 +101,18 @@ if (includeSentences) {
       input: sentence.spokenText,
       outputPath: path.join(outputDir, `${sentence.id}.mp3`),
     });
+  }
+}
+
+if (includeGameOptions) {
+  for (const game of lesson.sentenceGames ?? []) {
+    for (const option of game.options ?? []) {
+      if (option.correct || !option.audioSrc) continue;
+      jobs.push({
+        input: option.text,
+        outputPath: path.join(outputDir, `${path.basename(option.audioSrc, path.extname(option.audioSrc))}.mp3`),
+      });
+    }
   }
 }
 
