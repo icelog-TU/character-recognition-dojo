@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons at the same time, register each ac
 
 | Lesson | New Character(s) | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L052 | 要 | claimed | Codex current thread | lesson-42-mom @ 05534b4 | none | none | `curriculum-workflow/lesson-requests/L052.json`; `curriculum-workflow/generated/L052-generation-packet.md` | `curriculum-workflow/audio-inbox/L052/`; `public/assets/lessons/L052/` | Start / claim checkpoint. Teacher supplied approved lesson request; no provisional dependency. |
+| L052 | 要 | merge-ready | Codex current thread | lesson-42-mom @ local assets prepared | none | none | `curriculum-workflow/lesson-requests/L052.json`; `curriculum-workflow/generated/L052-generation-packet.md` | `curriculum-workflow/audio-inbox/L052/`; `public/assets/lessons/L052/` | Assets prepared checkpoint. Full curriculum and production asset validation pass; no dependency blocks merge. |
 | L053 | 更 | claimed | Codex L053 parallel thread | codex/l053-production @ pending | L052:要 | 要 | `curriculum-workflow/lesson-requests/L053.json`; `curriculum-workflow/generated/L053-generation-packet.md` | `curriculum-workflow/audio-inbox/L053/`; `public/assets/lessons/L053/` | Start / claim checkpoint. Teacher supplied approved lesson request. Prepare assets only; do not merge until L052 is merged and dependency recheck passes. |
 
 ## Status Values
