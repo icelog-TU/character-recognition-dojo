@@ -26,10 +26,10 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L051
-- L051 introduces `樣`.
+- Current reviewed lessons: L001-L052
+- L052 introduces `要`.
 - L001-L005 currently use the simpler three-block flow: listen, find, picture sentence.
-- L006-L051 include Stage 4 fixed sentence games after picture-supported listening.
+- L006-L052 include Stage 4 fixed sentence games after picture-supported listening.
 - Check `docs/CURRICULUM_LEDGER.md` for the latest merged lesson sequence.
 - Check `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson work.
 
@@ -249,7 +249,7 @@ See `docs/COLLECTION_SYSTEM.md` for the full economy and asset plan.
 
 ## Lesson Flow
 
-Lessons use a staged flow. L001-L005 use Stage 1-3. Current production lessons L006-L051 add Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+Lessons use a staged flow. L001-L005 use Stage 1-3. Current production lessons L006-L052 add Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
 
 ### Stage 1: 聽聽看
 
@@ -577,10 +577,10 @@ Sentence text is horizontal, with zhuyin vertically on the right of each Han cha
 Curriculum sentence audio must use AI audio files with charTimings.
 Production charTimings must use npm run assets:align:ai, then manual playback review.
 Guide narration may use TTS.
-L001-L051 are reviewed and built.
-L051 introduces `樣`.
+L001-L052 are reviewed and built.
+L052 introduces `要`.
 L007 introduces a fixed young girl character for 我.
 L012 introduces a fixed second-person young boy character for 你.
-L006-L051 include Stage 4 sentence games after picture-supported sentence listening.
+L006-L052 include Stage 4 sentence games after picture-supported sentence listening.
 Production checks include an audibility gate for new-character `charAudio`; near-silent files must be regenerated or repaired before pushing.
 ```
