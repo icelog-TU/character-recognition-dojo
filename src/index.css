@@ -87,13 +87,26 @@ button {
   min-width: 0;
   display: grid;
   gap: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  text-align: left;
   font-size: 1rem;
   line-height: 1.08;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .header-title strong {
   font-size: 1.25rem;
+}
+
+.header-title:focus-visible,
+.stat-pill:focus-visible,
+.stat-card-button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.88);
+  outline-offset: 3px;
 }
 
 .header-stats {
@@ -109,12 +122,15 @@ button {
   align-items: center;
   gap: 4px;
   min-height: 30px;
+  border: 0;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.18);
+  color: inherit;
   padding: 4px 10px;
   font-size: 0.88rem;
   font-weight: 800;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .stat-number {
@@ -572,7 +588,22 @@ button {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
+  color: inherit;
   padding: 16px;
+}
+
+.stat-card-button {
+  cursor: pointer;
+}
+
+.stat-card-button.active {
+  border-color: var(--primary);
+  background: var(--green-soft);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--primary) 32%, transparent);
+}
+
+.stat-card-button:focus-visible {
+  outline-color: var(--primary);
 }
 
 .stat-card span {
@@ -588,6 +619,81 @@ button {
 .stat-card small {
   color: var(--muted);
   font-weight: 700;
+}
+
+.record-detail-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  scroll-margin-top: 92px;
+  border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--line));
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px;
+}
+
+.record-detail-heading {
+  display: grid;
+  gap: 4px;
+}
+
+.record-detail-heading h2,
+.record-detail-heading p,
+.record-empty {
+  margin: 0;
+}
+
+.record-detail-heading h2 {
+  font-size: 1.25rem;
+}
+
+.record-detail-heading p,
+.record-empty {
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.record-detail-list {
+  display: grid;
+  gap: 8px;
+}
+
+.record-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+  padding: 12px;
+}
+
+.record-detail-row div:first-child {
+  display: grid;
+  gap: 3px;
+}
+
+.record-detail-row small {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.record-detail-values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.record-detail-values span {
+  border-radius: 999px;
+  background: var(--surface-strong);
+  padding: 5px 8px;
+  color: var(--primary-strong);
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .placeholder-page {
@@ -3158,6 +3264,15 @@ button.char-token {
 
   .record-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .record-detail-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .record-detail-values {
+    justify-content: flex-start;
   }
 
   .realm-track,

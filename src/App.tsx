@@ -18,12 +18,20 @@ type AudioPlayOptions = {
 type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "stage4" | "advance2" | "advance3" | "advance4" | null;
 type LessonDestination = "home" | "next";
 type LessonReward = { coins: number; stars: number };
+type RecordDetailKind = "coins" | "stars" | "streak";
 type PlaybackStatus = { playing: boolean; paused: boolean };
 type TeachCharacterPhase = "reading" | "asking" | "ready" | "priming" | "recording" | "reciting" | "done";
+type DailyRecord = {
+  date: string;
+  coinsEarned: number;
+  starsEarned: number;
+  lessonOrders: number[];
+};
 type StoredProgress = {
   version: 1;
   coins: number;
   stars: number;
+  dailyRecords: Record<string, DailyRecord>;
   duplicateGachaStreak: number;
   selectedOrder: number;
   completedOrders: number[];
@@ -844,6 +852,25 @@ function sanitizeCharacterHearts(value: unknown): Record<string, number> {
   }, {});
 }
 
+function sanitizeDailyRecords(value: unknown): Record<string, DailyRecord> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return Object.entries(value as Record<string, unknown>).reduce<Record<string, DailyRecord>>((result, [date, entry]) => {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !entry || typeof entry !== "object" || Array.isArray(entry)) return result;
+    const rawRecord = entry as Partial<DailyRecord>;
+    const coinsEarned = Math.max(0, Math.floor(Number(rawRecord.coinsEarned) || 0));
+    const starsEarned = Math.max(0, Math.floor(Number(rawRecord.starsEarned) || 0));
+    const lessonOrders = Array.isArray(rawRecord.lessonOrders)
+      ? [...new Set(rawRecord.lessonOrders.filter((order): order is number => Number.isInteger(order) && order > 0))].sort(
+          (a, b) => a - b,
+        )
+      : [];
+    if (coinsEarned > 0 || starsEarned > 0 || lessonOrders.length > 0) {
+      result[date] = { date, coinsEarned, starsEarned, lessonOrders };
+    }
+    return result;
+  }, {});
+}
+
 function heartCount(characterHearts: Record<string, number>, characterId: string): number {
   return Math.min(10, Math.max(0, Math.floor(characterHearts[characterId] ?? 0)));
 }
@@ -975,6 +1002,50 @@ let primedRecordingDingAudio: HTMLAudioElement | null = null;
 const playbackListeners = new Set<(state: PlaybackStatus) => void>();
 const PROGRESS_STORAGE_KEY = "character-recognition-dojo-progress-v1";
 
+function todayKey(): string {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function formatRecordDate(date: string): string {
+  const [, month, day] = date.split("-");
+  return `${Number(month)}月${Number(day)}日`;
+}
+
+function sortedDailyRecords(records: Record<string, DailyRecord>): DailyRecord[] {
+  return Object.values(records).sort((a, b) => b.date.localeCompare(a.date));
+}
+
+function currentStreakDays(records: Record<string, DailyRecord>, completedOrders: Set<number>): number {
+  if (completedOrders.size === 0) return 0;
+  const activeDates = new Set(
+    Object.values(records)
+      .filter((record) => record.lessonOrders.length > 0 || record.coinsEarned > 0 || record.starsEarned > 0)
+      .map((record) => record.date),
+  );
+  if (activeDates.size === 0) return 1;
+
+  let cursor = new Date();
+  if (!activeDates.has(todayKeyFromDate(cursor))) cursor.setDate(cursor.getDate() - 1);
+
+  let streak = 0;
+  while (activeDates.has(todayKeyFromDate(cursor))) {
+    streak += 1;
+    cursor.setDate(cursor.getDate() - 1);
+  }
+  return streak;
+}
+
+function todayKeyFromDate(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 function loadStoredProgress(): StoredProgress | null {
   if (typeof window === "undefined") return null;
   try {
@@ -989,6 +1060,7 @@ function loadStoredProgress(): StoredProgress | null {
       version: 1,
       coins: Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120,
       stars: Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36,
+      dailyRecords: sanitizeDailyRecords(parsed.dailyRecords),
       duplicateGachaStreak: Number.isFinite(parsed.duplicateGachaStreak)
         ? Math.max(0, Math.floor(Number(parsed.duplicateGachaStreak)))
         : 0,
@@ -1018,6 +1090,7 @@ function App() {
   const initialProgress = initialProgressRef.current;
   const [page, setPage] = useState<AppPage>("practice");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [recordDetail, setRecordDetail] = useState<RecordDetailKind | null>(null);
   const [completedOrders, setCompletedOrders] = useState<Set<number>>(
     () => new Set(initialProgress?.completedOrders ?? []),
   );
@@ -1026,6 +1099,9 @@ function App() {
   const [startingOrder, setStartingOrder] = useState<number | null>(null);
   const [coins, setCoins] = useState(initialProgress?.coins ?? 120);
   const [stars, setStars] = useState(initialProgress?.stars ?? 36);
+  const [dailyRecords, setDailyRecords] = useState<Record<string, DailyRecord>>(
+    () => initialProgress?.dailyRecords ?? {},
+  );
   const [duplicateGachaStreak, setDuplicateGachaStreak] = useState(initialProgress?.duplicateGachaStreak ?? 0);
   const [ownedCharacters, setOwnedCharacters] = useState<Record<string, number>>(
     () => initialProgress?.ownedCharacters ?? {},
@@ -1043,7 +1119,7 @@ function App() {
   const playbackState = usePlaybackState();
   const selectedLesson =
     curriculum.lessons.find((lesson) => lesson.order === selectedOrder) ?? curriculum.lessons[0];
-  const streakDays = completedOrders.size > 0 ? 1 : 0;
+  const streakDays = currentStreakDays(dailyRecords, completedOrders);
 
   useEffect(() => {
     if (page === "practice" && lessonOpen) return;
@@ -1055,6 +1131,7 @@ function App() {
       version: 1,
       coins,
       stars,
+      dailyRecords,
       duplicateGachaStreak,
       selectedOrder,
       completedOrders: [...completedOrders],
@@ -1062,12 +1139,37 @@ function App() {
       characterHearts,
       seenCharacterInteractions,
     });
-  }, [coins, stars, duplicateGachaStreak, selectedOrder, completedOrders, ownedCharacters, characterHearts, seenCharacterInteractions]);
+  }, [
+    coins,
+    stars,
+    dailyRecords,
+    duplicateGachaStreak,
+    selectedOrder,
+    completedOrders,
+    ownedCharacters,
+    characterHearts,
+    seenCharacterInteractions,
+  ]);
 
   function grantLessonReward(order: number, rewards: LessonReward) {
     if (completedOrders.has(order)) return;
     setCoins((value) => value + rewards.coins);
     setStars((value) => value + rewards.stars);
+    setDailyRecords((prev) => {
+      const date = todayKey();
+      const current = prev[date] ?? { date, coinsEarned: 0, starsEarned: 0, lessonOrders: [] };
+      return {
+        ...prev,
+        [date]: {
+          date,
+          coinsEarned: current.coinsEarned + rewards.coins,
+          starsEarned: current.starsEarned + rewards.stars,
+          lessonOrders: current.lessonOrders.includes(order)
+            ? current.lessonOrders
+            : [...current.lessonOrders, order].sort((a, b) => a - b),
+        },
+      };
+    });
     setCompletedOrders((prev) => {
       const next = new Set(prev);
       next.add(order);
@@ -1131,6 +1233,14 @@ function App() {
     setMenuOpen(false);
   }
 
+  function openRecordDetail(detail: RecordDetailKind) {
+    stopPlayback();
+    setRecordDetail(detail);
+    setPage("records");
+    setLessonOpen(false);
+    setMenuOpen(false);
+  }
+
   function openCollectionRealm(realmId: RealmId) {
     stopPlayback();
     setCollectionFocus((prev) => ({ realmId, characterId: null, nonce: prev.nonce + 1 }));
@@ -1187,6 +1297,8 @@ function App() {
         stars={stars}
         streakDays={streakDays}
         onMenu={() => setMenuOpen(true)}
+        onHome={returnToPracticeHome}
+        onOpenRecordDetail={openRecordDetail}
       />
       <AppDrawer
         open={menuOpen}
@@ -1239,6 +1351,9 @@ function App() {
             coins={coins}
             stars={stars}
             streakDays={streakDays}
+            dailyRecords={dailyRecords}
+            activeDetail={recordDetail}
+            onDetailChange={setRecordDetail}
             completedCount={completedOrders.size}
             collectedCount={CREATURE_REALMS.reduce(
               (total, realm) => total + realmOwnedCount(realm.id, ownedCharacters),
@@ -1353,11 +1468,15 @@ function AppHeader({
   stars,
   streakDays,
   onMenu,
+  onHome,
+  onOpenRecordDetail,
 }: {
   coins: number;
   stars: number;
   streakDays: number;
   onMenu: () => void;
+  onHome: () => void;
+  onOpenRecordDetail: (detail: RecordDetailKind) => void;
 }) {
   const coinStat = useAnimatedStat(coins);
   const starStat = useAnimatedStat(stars);
@@ -1367,20 +1486,32 @@ function AppHeader({
         <button className="menu-button" onClick={onMenu} aria-label="開啟選單">
           ☰
         </button>
-        <div className="header-title">
+        <button className="header-title" type="button" onClick={onHome} aria-label="回課程首頁">
           <span>認字</span>
           <strong>練功房</strong>
-        </div>
+        </button>
         <div className="header-stats" aria-label="學習狀態">
-          <span className={`stat-pill${coinStat.animating ? " stat-animating coin" : ""}`}>
+          <button
+            className={`stat-pill${coinStat.animating ? " stat-animating coin" : ""}`}
+            type="button"
+            onClick={() => onOpenRecordDetail("coins")}
+            aria-label="查看金幣明細"
+          >
             <span aria-hidden>🪙</span>
             <span className="stat-number">{coinStat.value}</span>
-          </span>
-          <span className={`stat-pill${starStat.animating ? " stat-animating star" : ""}`}>
+          </button>
+          <button
+            className={`stat-pill${starStat.animating ? " stat-animating star" : ""}`}
+            type="button"
+            onClick={() => onOpenRecordDetail("stars")}
+            aria-label="查看星星明細"
+          >
             <span aria-hidden>⭐</span>
             <span className="stat-number">{starStat.value}</span>
-          </span>
-          <span className="stat-pill">🔥 {streakDays} 天</span>
+          </button>
+          <button className="stat-pill" type="button" onClick={() => onOpenRecordDetail("streak")} aria-label="查看連續學習日">
+            🔥 {streakDays} 天
+          </button>
         </div>
       </div>
     </header>
@@ -1676,39 +1807,142 @@ function RecordsPage({
   coins,
   stars,
   streakDays,
+  dailyRecords,
+  activeDetail,
+  onDetailChange,
   completedCount,
   collectedCount,
 }: {
   coins: number;
   stars: number;
   streakDays: number;
+  dailyRecords: Record<string, DailyRecord>;
+  activeDetail: RecordDetailKind | null;
+  onDetailChange: (detail: RecordDetailKind) => void;
   completedCount: number;
   collectedCount: number;
 }) {
+  const detail = activeDetail ?? "coins";
+  const records = sortedDailyRecords(dailyRecords);
+  const detailPanelRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!activeDetail) return;
+    window.setTimeout(() => {
+      detailPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 80);
+  }, [activeDetail]);
+
   return (
     <section className="page-panel">
       <div className="page-heading">
         <h1>學習記錄</h1>
-        <p>這裡之後會列每日練習、弱字、複習紀錄和獎勵明細。</p>
+        <p>這裡會列每日練習、金幣、星星和連續學習日明細。</p>
       </div>
       <div className="record-grid">
-        <StatCard icon="🪙" value={coins} label="金幣" />
-        <StatCard icon="⭐" value={stars} label="星星" />
-        <StatCard icon="🔥" value={streakDays} label="連續天數" />
+        <StatCard icon="🪙" value={coins} label="金幣" active={detail === "coins"} onClick={() => onDetailChange("coins")} />
+        <StatCard icon="⭐" value={stars} label="星星" active={detail === "stars"} onClick={() => onDetailChange("stars")} />
+        <StatCard icon="🔥" value={streakDays} label="連續天數" active={detail === "streak"} onClick={() => onDetailChange("streak")} />
         <StatCard icon="✅" value={completedCount} label="已破解課程" />
         <StatCard icon="字" value={collectedCount} label="已收角色" />
       </div>
+      <RecordDetailPanel
+        panelRef={detailPanelRef}
+        detail={detail}
+        records={records}
+        totalCoins={coins}
+        totalStars={stars}
+        streakDays={streakDays}
+      />
     </section>
   );
 }
 
-function StatCard({ icon, value, label }: { icon: string; value: number; label: string }) {
-  return (
-    <div className="stat-card">
+function StatCard({
+  icon,
+  value,
+  label,
+  active = false,
+  onClick,
+}: {
+  icon: string;
+  value: number;
+  label: string;
+  active?: boolean;
+  onClick?: () => void;
+}) {
+  const contents = (
+    <>
       <span>{icon}</span>
       <strong>{value}</strong>
       <small>{label}</small>
-    </div>
+    </>
+  );
+  if (!onClick) return <div className="stat-card">{contents}</div>;
+  return (
+    <button className={`stat-card stat-card-button${active ? " active" : ""}`} type="button" onClick={onClick}>
+      {contents}
+    </button>
+  );
+}
+
+function RecordDetailPanel({
+  panelRef,
+  detail,
+  records,
+  totalCoins,
+  totalStars,
+  streakDays,
+}: {
+  panelRef: RefObject<HTMLElement | null>;
+  detail: RecordDetailKind;
+  records: DailyRecord[];
+  totalCoins: number;
+  totalStars: number;
+  streakDays: number;
+}) {
+  const title =
+    detail === "coins" ? "金幣每日明細" : detail === "stars" ? "星星每日明細" : "連續學習日";
+  const emptyText =
+    detail === "streak"
+      ? "目前只有總連續天數。從今天開始完成課程後，這裡會列出每天的練習日。"
+      : "目前只有總數。從今天開始完成課程後，這裡會列出每天賺到多少。";
+
+  return (
+    <section ref={panelRef} className="record-detail-panel" aria-live="polite">
+      <div className="record-detail-heading">
+        <h2>{title}</h2>
+        <p>
+          {detail === "coins" && `目前共有 ${totalCoins} 個金幣。`}
+          {detail === "stars" && `目前共有 ${totalStars} 顆星星。`}
+          {detail === "streak" && `目前連續學習 ${streakDays} 天。`}
+        </p>
+      </div>
+
+      {records.length === 0 ? (
+        <p className="record-empty">{emptyText}</p>
+      ) : (
+        <div className="record-detail-list">
+          {records.map((record) => (
+            <article key={record.date} className="record-detail-row">
+              <div>
+                <strong>{formatRecordDate(record.date)}</strong>
+                <small>
+                  {record.lessonOrders.length > 0
+                    ? `完成第 ${record.lessonOrders.join("、")} 課`
+                    : "有學習紀錄"}
+                </small>
+              </div>
+              <div className="record-detail-values">
+                {detail !== "stars" && <span>🪙 +{record.coinsEarned}</span>}
+                {detail !== "coins" && <span>⭐ +{record.starsEarned}</span>}
+                {detail === "streak" && <span>🔥 有練習</span>}
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
   );
 }
 
