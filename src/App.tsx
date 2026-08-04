@@ -3417,14 +3417,28 @@ function LessonPanel({
 }) {
   const initialDefaultStage = isReview ? 3 : 1;
   const initialMaxStage = lesson.sentenceGames?.length ? 4 : 3;
-  const [heardChars, setHeardChars] = useState<Set<string>>(() => new Set(session?.heardChars ?? []));
+  const newChars = useMemo(() => lessonChars(lesson), [lesson]);
+  const replaySessionForStage = useCallback((stage: number): CloudLessonSessionSnapshot => {
+    return {
+      activeStage: stage,
+      heardChars: stage > 1 ? newChars : [],
+      findUnlocked: isReview || stage > 2,
+      practiceDoneCount: stage > 3 ? 1 : 0,
+      gameDoneCount: 0,
+      pictureCurrentIndex: 0,
+      pictureCompletedSentenceIds: stage > 3 ? lesson.sentences.map((sentence) => sentence.id) : [],
+    };
+  }, [isReview, lesson.sentences, newChars]);
+
+  const initialSession = completed && !locked ? replaySessionForStage(initialDefaultStage) : session;
+  const [heardChars, setHeardChars] = useState<Set<string>>(() => new Set(initialSession?.heardChars ?? []));
   const [spotlightChar, setSpotlightChar] = useState<string | null>(null);
-  const [findUnlocked, setFindUnlocked] = useState(isReview || session?.findUnlocked || false);
-  const [practiceDoneCount, setPracticeDoneCount] = useState(session?.practiceDoneCount ?? 0);
-  const [gameDoneCount, setGameDoneCount] = useState(session?.gameDoneCount ?? 0);
-  const [pictureCurrentIndex, setPictureCurrentIndex] = useState(session?.pictureCurrentIndex ?? 0);
-  const [pictureCompletedSentenceIds, setPictureCompletedSentenceIds] = useState<string[]>(session?.pictureCompletedSentenceIds ?? []);
-  const [activeStage, setActiveStage] = useState(clampInteger(session?.activeStage, initialDefaultStage, initialMaxStage, initialDefaultStage));
+  const [findUnlocked, setFindUnlocked] = useState(isReview || initialSession?.findUnlocked || false);
+  const [practiceDoneCount, setPracticeDoneCount] = useState(initialSession?.practiceDoneCount ?? 0);
+  const [gameDoneCount, setGameDoneCount] = useState(initialSession?.gameDoneCount ?? 0);
+  const [pictureCurrentIndex, setPictureCurrentIndex] = useState(initialSession?.pictureCurrentIndex ?? 0);
+  const [pictureCompletedSentenceIds, setPictureCompletedSentenceIds] = useState<string[]>(initialSession?.pictureCompletedSentenceIds ?? []);
+  const [activeStage, setActiveStage] = useState(clampInteger(initialSession?.activeStage, initialDefaultStage, initialMaxStage, initialDefaultStage));
   const [advancingStage, setAdvancingStage] = useState<number | null>(null);
   const [speakingTarget, setSpeakingTarget] = useState<SpeechTarget>(null);
   const [rewardState, setRewardState] = useState<"waiting" | "ready" | "claiming" | "claimed">("waiting");
@@ -3436,7 +3450,6 @@ function LessonPanel({
   const hearRunRef = useRef(0);
   const panelRef = useRef<HTMLElement | null>(null);
   const rewardPanelRef = useRef<HTMLElement | null>(null);
-  const newChars = lessonChars(lesson);
   const soundUnlocked = isReview || newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
   const usesSentenceGames = Boolean(lesson.sentenceGames?.length);
@@ -3461,15 +3474,18 @@ function LessonPanel({
   }, [lesson, locked]);
 
   useEffect(() => {
-    const normalizedSession: CloudLessonSessionSnapshot = {
-      activeStage: clampInteger(session?.activeStage, initialDefaultStage, usesSentenceGames ? 4 : 3, initialDefaultStage),
-      heardChars: session?.heardChars ?? [],
-      findUnlocked: isReview || session?.findUnlocked || false,
-      practiceDoneCount: session?.practiceDoneCount ?? 0,
-      gameDoneCount: session?.gameDoneCount ?? 0,
-      pictureCurrentIndex: session?.pictureCurrentIndex ?? 0,
-      pictureCompletedSentenceIds: session?.pictureCompletedSentenceIds ?? [],
-    };
+    const normalizedSession: CloudLessonSessionSnapshot =
+      completed && !locked && appliedSessionKeyRef.current === ""
+        ? replaySessionForStage(initialDefaultStage)
+        : {
+            activeStage: clampInteger(session?.activeStage, initialDefaultStage, usesSentenceGames ? 4 : 3, initialDefaultStage),
+            heardChars: session?.heardChars ?? [],
+            findUnlocked: isReview || session?.findUnlocked || false,
+            practiceDoneCount: session?.practiceDoneCount ?? 0,
+            gameDoneCount: session?.gameDoneCount ?? 0,
+            pictureCurrentIndex: session?.pictureCurrentIndex ?? 0,
+            pictureCompletedSentenceIds: session?.pictureCompletedSentenceIds ?? [],
+          };
     const sessionKey = JSON.stringify([lesson.id, normalizedSession]);
     if (appliedSessionKeyRef.current === sessionKey) return;
     appliedSessionKeyRef.current = sessionKey;
@@ -3483,7 +3499,7 @@ function LessonPanel({
     setActiveStage(clampInteger(normalizedSession.activeStage, initialDefaultStage, usesSentenceGames ? 4 : 3, initialDefaultStage));
     setAdvancingStage(null);
     setSpeakingTarget(null);
-  }, [initialDefaultStage, isReview, lesson.id, session, usesSentenceGames]);
+  }, [completed, initialDefaultStage, isReview, lesson.id, locked, replaySessionForStage, session, usesSentenceGames]);
 
   useEffect(() => {
     if (locked) return;
@@ -3614,15 +3630,24 @@ function LessonPanel({
   }
 
   function resetCompletedLessonStage(stage: number) {
-    const heardPrerequisites = stage > 1 ? new Set(newChars) : new Set<string>();
-    setHeardChars(heardPrerequisites);
-    setFindUnlocked(stage > 2);
-    setPracticeDoneCount(stage > 3 ? 1 : 0);
-    setGameDoneCount(0);
-    setPictureCurrentIndex(0);
-    setPictureCompletedSentenceIds(stage > 3 ? lesson.sentences.map((sentence) => sentence.id) : []);
+    const replaySession = replaySessionForStage(stage);
+    setHeardChars(new Set(replaySession.heardChars));
+    setFindUnlocked(replaySession.findUnlocked);
+    setPracticeDoneCount(replaySession.practiceDoneCount);
+    setGameDoneCount(replaySession.gameDoneCount);
+    setPictureCurrentIndex(replaySession.pictureCurrentIndex);
+    setPictureCompletedSentenceIds(replaySession.pictureCompletedSentenceIds);
     setRewardState("waiting");
     setResetVersion((version) => version + 1);
+  }
+
+  function restartCompletedLesson() {
+    advanceRunRef.current += 1;
+    stopPlayback();
+    resetCompletedLessonStage(initialDefaultStage);
+    setActiveStage(initialDefaultStage);
+    setAdvancingStage(null);
+    setSpeakingTarget(null);
   }
 
   function handleStageJump(stage: number) {
@@ -3910,6 +3935,7 @@ function LessonPanel({
           onClaim={handleClaimReward}
           onHome={() => handleRewardDestination("home")}
           onNext={() => handleRewardDestination("next")}
+          onReplay={restartCompletedLesson}
           onSpeakStart={setSpeakingTarget}
           onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
         />
@@ -3929,31 +3955,6 @@ function LessonPanel({
         </span>
       </div>
 
-      {rewardState === "claimed" && (
-        <div className="actions" style={{ marginTop: 16 }}>
-          <button
-            className="btn ghost"
-            onClick={() => {
-              setHeardChars(new Set());
-              setSpotlightChar(null);
-              setFindUnlocked(false);
-              setPracticeDoneCount(0);
-              setGameDoneCount(0);
-              setActiveStage(1);
-              setPictureCurrentIndex(0);
-              setPictureCompletedSentenceIds([]);
-              setAdvancingStage(null);
-              setSpeakingTarget(null);
-              setRewardState("waiting");
-              advanceRunRef.current += 1;
-              stopPlayback();
-              setResetVersion((version) => version + 1);
-            }}
-          >
-            重玩整課
-          </button>
-        </div>
-      )}
     </section>
   );
 }
@@ -4061,6 +4062,7 @@ function RewardPanel({
   onClaim,
   onHome,
   onNext,
+  onReplay,
   onSpeakStart,
   onSpeakEnd,
 }: {
@@ -4072,12 +4074,13 @@ function RewardPanel({
   onClaim: () => void;
   onHome: () => void;
   onNext: () => void;
+  onReplay: () => void;
   onSpeakStart: (target: SpeechTarget) => void;
   onSpeakEnd: (target: SpeechTarget) => void;
 }) {
   const claimed = state === "claimed";
   const message = alreadyCompleted
-    ? "這一課已經練完了。要下一課，按紅色按鈕；要回入口，按白色按鈕。"
+    ? "這一課已經練完了。要再練一次，按再次練習；要下一課，按紅色按鈕；要回入口，按白色按鈕。"
     : state === "ready"
       ? GUIDE_TEXT.rewardReady
       : GUIDE_TEXT.rewardWon;
@@ -4128,6 +4131,11 @@ function RewardPanel({
         </button>
       ) : (
         <div className="reward-actions">
+          {alreadyCompleted && (
+            <button className="btn reward-replay-button" onClick={onReplay}>
+              再次練習本課
+            </button>
+          )}
           <button className="btn reward-next-button" disabled={!hasNext} onClick={onNext}>
             {hasNext ? "下一課" : "沒有下一課"}
           </button>

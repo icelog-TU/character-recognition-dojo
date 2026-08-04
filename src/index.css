@@ -1525,7 +1525,8 @@ button {
 }
 
 .reward-claim-button,
-.reward-next-button {
+.reward-next-button,
+.reward-replay-button {
   min-width: 168px;
   min-height: 58px;
   border-radius: 8px;
@@ -1554,6 +1555,12 @@ button {
   background: #fff;
   color: var(--ink);
   font-size: 1.02rem;
+}
+
+.reward-replay-button {
+  grid-column: 1 / -1;
+  background: var(--primary);
+  box-shadow: 0 0 0 6px rgba(34, 132, 123, 0.14), 0 12px 24px rgba(34, 132, 123, 0.2);
 }
 
 .floating-playback-wrap {
