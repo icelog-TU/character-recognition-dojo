@@ -155,6 +155,17 @@ The app highlights by comparing audio `currentTime` with `charTimings`; it does 
 - Final assets live under `public/assets/lessons/L###/images/` and `public/assets/lessons/L###/audio/`.
 - Production curriculum should not depend on live TTS for core sentence reading.
 
+## Cloud Device Access
+
+Cloud sync is device-scoped and parent-managed. Free browsing all lessons is not a general user setting.
+
+- The teacher/parent assigns each approved device a device code.
+- Each device keeps its own progress under that device code.
+- Only teacher/parent devices explicitly approved in Firestore may freely browse all lessons.
+- Child or ordinary devices must follow the normal lesson unlock path, even when cloud sync is enabled.
+- The app must not expose a local checkbox, query parameter, or localStorage flag that lets any user turn on free browsing.
+- Firestore device records may include `freeBrowse: true` only for approved teacher devices such as the teacher phone and tablet.
+
 ## MVP Scope
 
 The first working prototype should include:

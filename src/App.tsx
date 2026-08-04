@@ -43,7 +43,6 @@ type StoredProgress = CloudProgressSnapshot;
 type CloudSyncStatus = "idle" | "loading" | "saving" | "synced" | "error";
 type CloudProgressSettings = {
   deviceCode: string;
-  freeBrowse: boolean;
 };
 type RealmId = "land" | "sea" | "sky" | "space";
 type FamilyRoleId = "grandpa" | "grandma" | "dad" | "mom" | "olderBrother" | "olderSister" | "youngerBrother" | "youngerSister" | "baby";
@@ -1138,17 +1137,16 @@ function saveStoredProgress(progress: StoredProgress) {
 }
 
 function loadCloudProgressSettings(): CloudProgressSettings {
-  if (typeof window === "undefined") return { deviceCode: "", freeBrowse: true };
+  if (typeof window === "undefined") return { deviceCode: "" };
   try {
     const raw = window.localStorage.getItem(CLOUD_PROGRESS_SETTINGS_KEY);
-    if (!raw) return { deviceCode: "", freeBrowse: true };
+    if (!raw) return { deviceCode: "" };
     const parsed = JSON.parse(raw) as Partial<CloudProgressSettings>;
     return {
       deviceCode: normalizeDeviceCode(String(parsed.deviceCode ?? "")),
-      freeBrowse: parsed.freeBrowse !== false,
     };
   } catch {
-    return { deviceCode: "", freeBrowse: true };
+    return { deviceCode: "" };
   }
 }
 
@@ -1195,7 +1193,7 @@ function App() {
     () => initialProgress?.seenCharacterInteractions ?? {},
   );
   const [deviceCode, setDeviceCode] = useState(initialCloudSettings.deviceCode);
-  const [freeBrowse, setFreeBrowse] = useState(initialCloudSettings.freeBrowse);
+  const [freeBrowse, setFreeBrowse] = useState(false);
   const [cloudReadyForSave, setCloudReadyForSave] = useState(false);
   const [cloudSyncStatus, setCloudSyncStatus] = useState<CloudSyncStatus>(deviceCode ? "loading" : "idle");
   const [cloudSyncMessage, setCloudSyncMessage] = useState(deviceCode ? "正在讀取雲端進度" : "尚未設定裝置代號");
@@ -1247,21 +1245,20 @@ function App() {
   }, [page, lessonOpen]);
 
   useEffect(() => {
-    saveCloudProgressSettings({ deviceCode: cloudDeviceCode, freeBrowse });
-  }, [
-    cloudDeviceCode,
-    freeBrowse,
-  ]);
+    saveCloudProgressSettings({ deviceCode: cloudDeviceCode });
+  }, [cloudDeviceCode]);
 
   useEffect(() => {
     if (!deviceCode) {
       setCloudReadyForSave(false);
+      setFreeBrowse(false);
       setCloudSyncStatus("idle");
       setCloudSyncMessage("尚未設定裝置代號");
       return;
     }
     if (!cloudSyncEnabled) {
       setCloudReadyForSave(false);
+      setFreeBrowse(false);
       setCloudSyncStatus("error");
       setCloudSyncMessage("裝置代號需要 3-32 個英數字或 -");
       return;
@@ -1274,6 +1271,7 @@ function App() {
     loadCloudProgress(cloudDeviceCode)
       .then((remoteProgress) => {
         if (!active) return;
+        setFreeBrowse(remoteProgress?.freeBrowse === true);
         const normalizedProgress = normalizeStoredProgress(remoteProgress);
         if (normalizedProgress) {
           applyStoredProgress(normalizedProgress);
@@ -1287,6 +1285,7 @@ function App() {
       .catch(() => {
         if (!active) return;
         setCloudReadyForSave(false);
+        setFreeBrowse(false);
         setCloudSyncStatus("error");
         setCloudSyncMessage("雲端讀取失敗，暫時使用本機進度");
       });
@@ -1580,7 +1579,6 @@ function App() {
             cloudSyncStatus={cloudSyncStatus}
             cloudSyncMessage={cloudSyncMessage}
             onDeviceCodeChange={(value) => setDeviceCode(normalizeDeviceCode(value))}
-            onFreeBrowseChange={setFreeBrowse}
           />
         )}
       </main>
@@ -2222,14 +2220,12 @@ function SettingsPage({
   cloudSyncStatus,
   cloudSyncMessage,
   onDeviceCodeChange,
-  onFreeBrowseChange,
 }: {
   deviceCode: string;
   freeBrowse: boolean;
   cloudSyncStatus: CloudSyncStatus;
   cloudSyncMessage: string;
   onDeviceCodeChange: (value: string) => void;
-  onFreeBrowseChange: (value: boolean) => void;
 }) {
   const statusLabel: Record<CloudSyncStatus, string> = {
     idle: "未連線",
@@ -2265,17 +2261,12 @@ function SettingsPage({
           </div>
         </div>
 
-        <label className="settings-toggle">
-          <input
-            type="checkbox"
-            checked={freeBrowse}
-            onChange={(event) => onFreeBrowseChange(event.target.checked)}
-          />
+        <div className={`settings-toggle${freeBrowse ? " active" : ""}`} aria-live="polite">
           <span>
-            <strong>自由閱覽所有課程</strong>
-            <small>進度仍依照這台裝置代號分開保存</small>
+            <strong>{freeBrowse ? "已授權自由閱覽" : "一般課程模式"}</strong>
+            <small>{freeBrowse ? "這台裝置由雲端授權，可自由瀏覽所有課程" : "自由閱覽只開放給老師指定的手機和平板"}</small>
           </span>
-        </label>
+        </div>
       </div>
     </section>
   );

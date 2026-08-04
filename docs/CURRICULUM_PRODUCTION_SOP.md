@@ -65,6 +65,18 @@ Only treat text as actually damaged if UTF-8 decoding fails, decoded text contai
 13. Update `docs/CURRICULUM_LEDGER.md`; run `npm run curriculum:export-planner`; update or clear the registry row if the lesson was parallel-prepared.
 14. Run `npm run verify`.
 
+## Cloud Device Authorization
+
+Do not treat free browsing as a universal app mode. The teacher wants only designated teacher/parent devices, such as the teacher phone and tablet, to freely browse every lesson. All other devices must use normal unlock progression.
+
+Current app-level rule:
+
+- A device may freely browse all lessons only when its Firestore device record has `freeBrowse: true`.
+- `freeBrowse` must not be stored as a local user-toggleable setting.
+- The settings UI may display whether the current device is authorized, but it must not let the user grant that authorization locally.
+- Progress sync must preserve server-side authorization fields when saving progress.
+- If stronger content security is required later, move lesson data/assets behind authenticated access; GitHub Pages static lesson assets cannot be truly hidden from someone who knows the URLs.
+
 ## Parallel Lesson Production SOP
 
 The teacher may intentionally run 2-3 lesson-production threads at the same time to keep curriculum creation moving. This is allowed when the next-character sequence is already chosen, for example one Codex thread prepares L050 while another prepares L051 and a third prepares L052.

@@ -33,6 +33,12 @@ export type CloudProgressSnapshot = {
   seenCharacterInteractions: Record<string, number[]>;
 };
 
+export type CloudDeviceRecord = Partial<CloudProgressSnapshot> & {
+  freeBrowse?: boolean;
+  label?: string;
+  role?: string;
+};
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
@@ -54,11 +60,11 @@ async function ensureSignedIn() {
   return (await signInAnonymously(auth)).user;
 }
 
-export async function loadCloudProgress(deviceCode: string): Promise<Partial<CloudProgressSnapshot> | null> {
+export async function loadCloudProgress(deviceCode: string): Promise<CloudDeviceRecord | null> {
   await ensureSignedIn();
   const snapshot = await getDoc(doc(db, "devices", deviceCode));
   if (!snapshot.exists()) return null;
-  return snapshot.data() as Partial<CloudProgressSnapshot>;
+  return snapshot.data() as CloudDeviceRecord;
 }
 
 export async function saveCloudProgress(deviceCode: string, progress: CloudProgressSnapshot): Promise<void> {

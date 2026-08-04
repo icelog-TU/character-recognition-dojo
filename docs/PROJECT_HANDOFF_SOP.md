@@ -291,6 +291,14 @@ See `docs/COLLECTION_SYSTEM.md` for the full economy and asset plan.
 
 Lessons use a staged flow. L001-L005 use Stage 1-3. Current production lessons L006-L056 add Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
 
+Cloud device access rule:
+
+- Free browsing all lessons is only for teacher/parent devices explicitly authorized in Firestore, such as the teacher phone and tablet.
+- Do not implement free browsing as a user-controlled setting, query-string switch, or localStorage flag.
+- Ordinary child/guest devices may sync their own progress, but they must keep the normal lesson unlock path.
+- The current app reads `devices/{deviceCode}.freeBrowse === true` as the authorization signal. Saving progress must preserve that server-side field and must not let the client grant it locally.
+- Static GitHub Pages assets are public, so this is an app-level permission for the lesson UI. If the product later requires hiding lesson content or media URLs from unauthorized users, curriculum data/assets must move behind authenticated storage or an API rather than staying fully static.
+
 ### Stage 1: 聽聽看
 
 - Show the new character or seed characters as large cards.
