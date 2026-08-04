@@ -9,7 +9,6 @@ import {
   loadAccountProfile,
   loadAccountProfiles,
   registerAccountDevice,
-  renameAccountDevice,
   renameAccountProfile,
   saveAccountProfileProgress,
   setAccountDeviceActiveProfile,
@@ -116,6 +115,8 @@ const REVIEW_MILESTONE_INTERVAL = 30;
 const REVIEW_LOOKBACK_LESSON_COUNT = 30;
 const REVIEW_SLOT_COUNT = 2;
 const REVIEW_SENTENCES_PER_SLOT = 5;
+const DEFAULT_PROFILE_LABELS = ["學習檔案一", "學習檔案二", "學習檔案三"];
+const LEGACY_PRIVATE_PROFILE_LABEL = String.fromCharCode(0x57f9, 0x5609);
 
 const CREATURE_REALMS: CreatureRealm[] = [
   { id: "land", label: "地上的生物", shortLabel: "地上", description: "先從地上的朋友開始收集。", color: "#4f8f52", icon: "🦌" },
@@ -1212,18 +1213,18 @@ function normalizeAccountDeviceLabel(value: string): string {
 
 function normalizeProfileLabel(value: string): string {
   const label = value.trim().slice(0, 24);
-  if (label.includes("培嘉")) return "媽媽";
-  return label || "媽媽";
+  if (label.includes(LEGACY_PRIVATE_PROFILE_LABEL)) return DEFAULT_PROFILE_LABELS[0];
+  return label || DEFAULT_PROFILE_LABELS[0];
 }
 
 function loadCloudProgressSettings(): CloudProgressSettings {
   if (typeof window === "undefined") {
-    return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
+    return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "這台裝置" };
   }
   try {
     const raw = window.localStorage.getItem(CLOUD_PROGRESS_SETTINGS_KEY);
     if (!raw) {
-      return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
+      return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "這台裝置" };
     }
     const parsed = JSON.parse(raw) as Partial<CloudProgressSettings>;
     return {
@@ -1231,10 +1232,10 @@ function loadCloudProgressSettings(): CloudProgressSettings {
         typeof parsed.accountDeviceId === "string" && parsed.accountDeviceId.startsWith("dev_")
           ? parsed.accountDeviceId
           : createAccountDeviceId(),
-      accountDeviceLabel: normalizeAccountDeviceLabel(String(parsed.accountDeviceLabel ?? "目前這支手機")),
+      accountDeviceLabel: normalizeAccountDeviceLabel(String(parsed.accountDeviceLabel ?? "這台裝置")),
     };
   } catch {
-    return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
+    return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "這台裝置" };
   }
 }
 
@@ -1302,7 +1303,6 @@ function App() {
     () => initialProgress?.lessonSessions ?? {},
   );
   const [accountDeviceId] = useState(initialCloudSettings.accountDeviceId);
-  const [accountDeviceLabel, setAccountDeviceLabel] = useState(initialCloudSettings.accountDeviceLabel);
   const accountDeviceLabelRef = useRef(initialCloudSettings.accountDeviceLabel);
   const [accountUser, setAccountUser] = useState<CloudAccountUser | null>(null);
   const [accountAuthChecked, setAccountAuthChecked] = useState(false);
@@ -1366,10 +1366,9 @@ function App() {
   useEffect(() => {
     saveCloudProgressSettings({
       accountDeviceId,
-      accountDeviceLabel,
+      accountDeviceLabel: accountDeviceLabelRef.current,
     });
-    accountDeviceLabelRef.current = accountDeviceLabel;
-  }, [accountDeviceId, accountDeviceLabel]);
+  }, [accountDeviceId]);
 
   useEffect(() => {
     return subscribeCloudAccount((user) => {
@@ -1391,7 +1390,7 @@ function App() {
     let active = true;
     setAccountReadyForSave(false);
     setAccountSyncStatus("loading");
-    setAccountSyncMessage("正在登記目前這台手機或平板");
+    setAccountSyncMessage("正在同步帳號資料");
     registerAccountDevice(accountUser, accountDeviceId, accountDeviceLabelRef.current)
       .then(async (result) => {
         if (!active) return;
@@ -1408,9 +1407,15 @@ function App() {
         if (!active) return;
         if (profiles.length === 0) {
           const migratedProgress = normalizeStoredProgress(result.device) ?? initialProfileSeedRef.current ?? createStarterProgressSnapshot();
-          const createdProfile = await createAccountProfile(accountUser.uid, "媽媽", migratedProgress, "child");
+          const createdProfile = await createAccountProfile(accountUser.uid, DEFAULT_PROFILE_LABELS[0], migratedProgress, "child");
           await setAccountDeviceActiveProfile(accountUser.uid, accountDeviceId, createdProfile.profileId);
           profiles = [createdProfile];
+        }
+        while (profiles.filter((profile) => profile.active).length < MAX_ACCOUNT_PROFILES) {
+          const nextIndex = profiles.filter((profile) => profile.active).length;
+          await createAccountProfile(accountUser.uid, DEFAULT_PROFILE_LABELS[nextIndex] ?? `學習檔案${nextIndex + 1}`, createStarterProgressSnapshot(1), "child");
+          profiles = await loadAccountProfiles(accountUser.uid);
+          if (!active) return;
         }
         const preferredProfileId =
           result.device.activeProfileId && profiles.some((profile) => profile.profileId === result.device.activeProfileId)
@@ -1429,7 +1434,7 @@ function App() {
           applyStoredProgress(normalizedProgress);
           setAccountSyncMessage("已載入目前學習檔案的進度");
         } else {
-          setAccountSyncMessage("已建立媽媽的學習檔案");
+          setAccountSyncMessage("已建立三個學習檔案");
         }
         setAccountReadyForSave(true);
         setAccountSyncStatus("synced");
@@ -1445,17 +1450,6 @@ function App() {
       active = false;
     };
   }, [accountAuthChecked, accountDeviceId, accountUser]);
-
-  useEffect(() => {
-    if (!accountUser || !accountReadyForSave) return;
-    const timeout = window.setTimeout(() => {
-      renameAccountDevice(accountUser.uid, accountDeviceId, accountDeviceLabel)
-        .then(() => loadAccountDevices(accountUser.uid))
-        .then(setAccountDevices)
-        .catch(() => undefined);
-    }, 700);
-    return () => window.clearTimeout(timeout);
-  }, [accountDeviceId, accountDeviceLabel, accountReadyForSave, accountUser]);
 
   useEffect(() => {
     saveStoredProgress(progressSnapshot);
@@ -1562,37 +1556,6 @@ function App() {
     }
   }
 
-  async function handleCreateProfile(label: string) {
-    if (!accountUser) return;
-    if (accountProfiles.filter((profile) => profile.active).length >= MAX_ACCOUNT_PROFILES) {
-      setAccountSyncStatus("error");
-      setAccountSyncMessage(`一個帳號最多可以有 ${MAX_ACCOUNT_PROFILES} 個學習檔案`);
-      return;
-    }
-    const profileLabel = normalizeProfileLabel(label);
-    setAccountReadyForSave(false);
-    setAccountSyncStatus("saving");
-    setAccountSyncMessage("正在新增學習檔案");
-    try {
-      await saveActiveProfileNow();
-      const starterProgress = createStarterProgressSnapshot(1);
-      const profile = await createAccountProfile(accountUser.uid, profileLabel, starterProgress, "child");
-      await setAccountDeviceActiveProfile(accountUser.uid, accountDeviceId, profile.profileId);
-      skipNextAccountSaveRef.current = true;
-      applyStoredProgress(starterProgress);
-      setActiveProfileId(profile.profileId);
-      setAccountProfiles(await loadAccountProfiles(accountUser.uid));
-      setAccountDevices(await loadAccountDevices(accountUser.uid));
-      setAccountReadyForSave(true);
-      setAccountSyncStatus("synced");
-      setAccountSyncMessage("已新增並切換學習檔案");
-    } catch (error) {
-      setAccountReadyForSave(Boolean(activeProfileId));
-      setAccountSyncStatus("error");
-      setAccountSyncMessage(error instanceof Error ? error.message : "新增學習檔案失敗");
-    }
-  }
-
   async function handleRenameProfile(profileId: string, label: string) {
     if (!accountUser || !profileId) return;
     try {
@@ -1610,7 +1573,7 @@ function App() {
     setAccountSyncMessage("正在停用舊裝置");
     try {
       await deactivateAccountDevice(accountUser.uid, deviceId);
-      const registration = await registerAccountDevice(accountUser, accountDeviceId, accountDeviceLabel);
+      const registration = await registerAccountDevice(accountUser, accountDeviceId, accountDeviceLabelRef.current);
       setAccountDevices(registration.devices);
       if (registration.ok) {
         setFreeBrowse(registration.device.freeBrowse === true);
@@ -1776,9 +1739,18 @@ function App() {
         coins={coins}
         stars={stars}
         streakDays={streakDays}
+        accountUser={accountUser}
+        accountAuthChecked={accountAuthChecked}
+        accountSyncStatus={accountSyncStatus}
+        accountProfiles={accountProfiles}
+        activeProfileId={activeProfileId}
         onMenu={() => setMenuOpen(true)}
         onHome={returnToPracticeHome}
         onOpenRecordDetail={openRecordDetail}
+        onProfileChange={handleProfileChange}
+        onAccountSignIn={handleAccountSignIn}
+        onAccountSignOut={handleAccountSignOut}
+        onOpenSettings={() => openPage("settings")}
       />
       <AppDrawer
         open={menuOpen}
@@ -1877,13 +1849,10 @@ function App() {
             accountSyncStatus={accountSyncStatus}
             accountSyncMessage={accountSyncMessage}
             accountDeviceId={accountDeviceId}
-            accountDeviceLabel={accountDeviceLabel}
             accountDevices={accountDevices}
             accountProfiles={accountProfiles}
             activeProfileId={activeProfileId}
-            onAccountDeviceLabelChange={(value) => setAccountDeviceLabel(value.slice(0, 24))}
             onProfileChange={handleProfileChange}
-            onCreateProfile={handleCreateProfile}
             onRenameProfile={handleRenameProfile}
             onAccountSignIn={handleAccountSignIn}
             onAccountSignOut={handleAccountSignOut}
@@ -1990,19 +1959,46 @@ function AppHeader({
   coins,
   stars,
   streakDays,
+  accountUser,
+  accountAuthChecked,
+  accountSyncStatus,
+  accountProfiles,
+  activeProfileId,
   onMenu,
   onHome,
   onOpenRecordDetail,
+  onProfileChange,
+  onAccountSignIn,
+  onAccountSignOut,
+  onOpenSettings,
 }: {
   coins: number;
   stars: number;
   streakDays: number;
+  accountUser: CloudAccountUser | null;
+  accountAuthChecked: boolean;
+  accountSyncStatus: CloudSyncStatus;
+  accountProfiles: CloudProfileRecord[];
+  activeProfileId: string;
   onMenu: () => void;
   onHome: () => void;
   onOpenRecordDetail: (detail: RecordDetailKind) => void;
+  onProfileChange: (profileId: string) => void;
+  onAccountSignIn: () => void;
+  onAccountSignOut: () => void;
+  onOpenSettings: () => void;
 }) {
   const coinStat = useAnimatedStat(coins);
   const starStat = useAnimatedStat(stars);
+  const [accountMenuOpen, setAccountMenuOpen] = useState(false);
+  const activeProfile = accountProfiles.find((profile) => profile.profileId === activeProfileId);
+  const accountButtonLabel = accountUser ? activeProfile?.label ?? "學習檔案" : "登入";
+
+  function closeAndOpenSettings() {
+    setAccountMenuOpen(false);
+    onOpenSettings();
+  }
+
   return (
     <header className="app-header">
       <div className="header-inner">
@@ -2035,6 +2031,87 @@ function AppHeader({
           <button className="stat-pill" type="button" onClick={() => onOpenRecordDetail("streak")} aria-label="查看連續學習日">
             🔥 {streakDays} 天
           </button>
+        </div>
+        <div className="header-account">
+          <button
+            className="account-menu-button"
+            type="button"
+            onClick={() => setAccountMenuOpen((open) => !open)}
+            aria-expanded={accountMenuOpen}
+            aria-label={accountUser ? "開啟帳號與學習檔案" : "登入帳號"}
+          >
+            <span aria-hidden>{accountUser ? "👤" : "＋"}</span>
+            <strong>{accountButtonLabel}</strong>
+          </button>
+          {accountMenuOpen && (
+            <div className="account-menu-panel">
+              <div className="account-menu-section">
+                <span className="account-menu-label">目前登入帳號</span>
+                {accountUser ? (
+                  <>
+                    <strong>Google 帳號</strong>
+                    <small>{accountUser.email}</small>
+                  </>
+                ) : (
+                  <>
+                    <strong>尚未登入</strong>
+                    <small>登入後可同步三個學習檔案</small>
+                  </>
+                )}
+              </div>
+              {accountUser ? (
+                <>
+                  <div className="account-menu-section">
+                    <span className="account-menu-label">學習檔案</span>
+                    <div className="account-profile-menu-list">
+                      {accountProfiles.map((profile, index) => {
+                        const selected = profile.profileId === activeProfileId;
+                        return (
+                          <button
+                            className={`account-profile-menu-item${selected ? " selected" : ""}`}
+                            type="button"
+                            key={profile.profileId}
+                            onClick={() => {
+                              if (!selected) onProfileChange(profile.profileId);
+                              setAccountMenuOpen(false);
+                            }}
+                          >
+                            <span>{profile.label || DEFAULT_PROFILE_LABELS[index] || `學習檔案${index + 1}`}</span>
+                            <small>{selected ? "目前使用" : "切換到這份進度"}</small>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                  <button className="account-menu-action" type="button" onClick={closeAndOpenSettings}>
+                    管理學習檔案
+                  </button>
+                  <button
+                    className="account-menu-action quiet"
+                    type="button"
+                    onClick={() => {
+                      setAccountMenuOpen(false);
+                      onAccountSignOut();
+                    }}
+                  >
+                    登出
+                  </button>
+                </>
+              ) : (
+                <button
+                  className="account-menu-action"
+                  type="button"
+                  disabled={!accountAuthChecked || accountSyncStatus === "loading"}
+                  onClick={() => {
+                    setAccountMenuOpen(false);
+                    onAccountSignIn();
+                  }}
+                >
+                  {accountAuthChecked ? "用 Google 登入" : "讀取登入狀態"}
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </header>
@@ -2529,13 +2606,10 @@ function SettingsPage({
   accountSyncStatus,
   accountSyncMessage,
   accountDeviceId,
-  accountDeviceLabel,
   accountDevices,
   accountProfiles,
   activeProfileId,
-  onAccountDeviceLabelChange,
   onProfileChange,
-  onCreateProfile,
   onRenameProfile,
   onAccountSignIn,
   onAccountSignOut,
@@ -2546,13 +2620,10 @@ function SettingsPage({
   accountSyncStatus: CloudSyncStatus;
   accountSyncMessage: string;
   accountDeviceId: string;
-  accountDeviceLabel: string;
   accountDevices: CloudAccountDeviceRecord[];
   accountProfiles: CloudProfileRecord[];
   activeProfileId: string;
-  onAccountDeviceLabelChange: (value: string) => void;
   onProfileChange: (profileId: string) => void;
-  onCreateProfile: (label: string) => void;
   onRenameProfile: (profileId: string, label: string) => void;
   onAccountSignIn: () => void;
   onAccountSignOut: () => void;
@@ -2565,10 +2636,7 @@ function SettingsPage({
     synced: "已同步",
     error: "需處理",
   };
-  const [newProfileLabel, setNewProfileLabel] = useState("");
-  const activeProfile = accountProfiles.find((profile) => profile.profileId === activeProfileId);
   const activeProfileCount = accountProfiles.filter((profile) => profile.active).length;
-  const profileLimitReached = activeProfileCount >= MAX_ACCOUNT_PROFILES;
 
   return (
     <section className="page-panel settings-page">
@@ -2582,79 +2650,68 @@ function SettingsPage({
             <h2>帳號同步</h2>
             {accountUser && <button className="settings-link-button" onClick={onAccountSignOut}>登出</button>}
           </div>
-          <p className="settings-help">一個帳號最多可以有三個學習檔案，例如媽媽、哥哥、妹妹。手機和平板只要登入同一個帳號，就會看到同一份清單，可以切換現在要使用誰的進度。</p>
+          <p className="settings-help">第一個是目前登入帳號。下面三個學習檔案都屬於這個帳號；任何手機或平板登入同一個帳號後，都可以切換這三份進度。</p>
           {accountUser ? (
             <>
               <div className="account-card">
-                <strong>已登入 Google 帳號</strong>
+                <span>目前登入帳號</span>
+                <strong>Google 帳號</strong>
                 <span>{accountUser.email}</span>
               </div>
               {accountProfiles.length > 0 && (
                 <>
-                  <label className="settings-label" htmlFor="active-profile">
-                    這台裝置現在使用
-                  </label>
-                  <select
-                    id="active-profile"
-                    className="settings-input plain"
-                    value={activeProfileId}
-                    onChange={(event) => onProfileChange(event.target.value)}
-                  >
-                    {accountProfiles.map((profile) => (
-                      <option key={profile.profileId} value={profile.profileId}>
-                        {profile.label}
-                      </option>
+                  <div className="profile-list-heading">
+                    <strong>這個帳號的學習檔案</strong>
+                    <span>{activeProfileCount} / {MAX_ACCOUNT_PROFILES}</span>
+                  </div>
+                  <div className="profile-manage-list">
+                    {accountProfiles.map((profile, index) => {
+                      const selected = profile.profileId === activeProfileId;
+                      return (
+                        <div className={`profile-manage-row${selected ? " selected" : ""}`} key={profile.profileId}>
+                          <span className="profile-row-index">{DEFAULT_PROFILE_LABELS[index] ?? `學習檔案${index + 1}`}</span>
+                          <input
+                            className="settings-input plain"
+                            defaultValue={profile.label || DEFAULT_PROFILE_LABELS[index] || `學習檔案${index + 1}`}
+                            onBlur={(event) => onRenameProfile(profile.profileId, event.target.value)}
+                            aria-label={`修改${DEFAULT_PROFILE_LABELS[index] ?? `學習檔案${index + 1}`}名稱`}
+                          />
+                          <button
+                            className="settings-link-button"
+                            type="button"
+                            disabled={selected}
+                            onClick={() => onProfileChange(profile.profileId)}
+                          >
+                            {selected ? "目前使用" : "使用這個"}
+                          </button>
+                        </div>
+                      );
+                    })}
+                    {Array.from({ length: Math.max(0, MAX_ACCOUNT_PROFILES - accountProfiles.length) }).map((_, index) => (
+                      <div className="profile-manage-row pending" key={`pending-profile-${index}`}>
+                        <span className="profile-row-index">
+                          {DEFAULT_PROFILE_LABELS[accountProfiles.length + index] ?? `學習檔案${accountProfiles.length + index + 1}`}
+                        </span>
+                        <input
+                          className="settings-input plain"
+                          value="正在建立"
+                          readOnly
+                          disabled
+                          aria-label="正在建立學習檔案"
+                        />
+                        <button className="settings-link-button" type="button" disabled>
+                          等待中
+                        </button>
+                      </div>
                     ))}
-                  </select>
-                  <p className="settings-help">切換後，這台裝置會改用所選學習檔案的金幣、星星、課程進度和收藏。其他裝置選同一個學習檔案時，也會同步同一份進度。</p>
-                  {activeProfile && (
-                    <div className="profile-rename-row">
-                      <input
-                        key={activeProfile.profileId}
-                        className="settings-input plain"
-                        defaultValue={activeProfile.label}
-                        onBlur={(event) => onRenameProfile(activeProfile.profileId, event.target.value)}
-                        aria-label="修改這個學習檔案名稱"
-                      />
-                    </div>
-                  )}
+                  </div>
+                  <p className="settings-help">點學習檔案名稱就可以直接改名。切換後，這台裝置會改用該檔案的金幣、星星、課程進度和收藏。</p>
                 </>
               )}
-              <div className="profile-create-row">
-                <input
-                  className="settings-input plain"
-                  value={newProfileLabel}
-                  onChange={(event) => setNewProfileLabel(event.target.value)}
-                  disabled={profileLimitReached}
-                  placeholder={profileLimitReached ? "已達三個學習檔案上限" : "新增學習檔案，例如 哥哥"}
-                />
-                <button
-                  className="settings-link-button"
-                  disabled={profileLimitReached || !newProfileLabel.trim()}
-                  onClick={() => {
-                    onCreateProfile(newProfileLabel);
-                    setNewProfileLabel("");
-                  }}
-                >
-                  新增
-                </button>
-              </div>
-              <p className="settings-help">目前有 {activeProfileCount} / {MAX_ACCOUNT_PROFILES} 個學習檔案。</p>
-              <label className="settings-label" htmlFor="account-device-label">
-                這台手機或平板的名稱
-              </label>
-              <input
-                id="account-device-label"
-                className="settings-input plain"
-                value={accountDeviceLabel}
-                onChange={(event) => onAccountDeviceLabelChange(event.target.value)}
-                placeholder="例如 媽媽手機、家裡平板"
-              />
-              <p className="settings-help">這只是給家長辨認裝置用，可以自己改。學習進度跟著上面的學習檔案走，不跟著裝置名稱走。</p>
               <div className="device-id-row">
                 <span>系統裝置 ID</span>
                 <code>{accountDeviceId}</code>
-                <small>系統自動產生，用來分辨同一個帳號底下的不同手機和平板。</small>
+                <small>一般使用者不需要命名裝置。系統只用這個 ID 判斷同一個帳號登入了哪些手機或平板。</small>
               </div>
               <div className={`sync-status sync-status-${accountSyncStatus}`}>
                 <strong>{statusLabel[accountSyncStatus]}</strong>
@@ -2667,7 +2724,7 @@ function SettingsPage({
                     return (
                       <div className={`account-device-row${device.active ? "" : " inactive"}`} key={device.deviceId}>
                         <span>
-                          <strong>{device.label}</strong>
+                          <strong>{isCurrent ? "這台裝置" : "其他裝置"}</strong>
                           <small>{isCurrent ? "目前正在使用" : device.active ? "已啟用" : "已停用"}</small>
                         </span>
                         {!isCurrent && device.active && (

@@ -161,18 +161,19 @@ Cloud sync is device-scoped and parent-managed. Free browsing all lessons is not
 
 - Production account mode stores learning profiles under `accounts/{uid}/profiles/{profileId}` and device metadata under `accounts/{uid}/devices/{deviceId}`.
 - The parent signs in with an account, and the app generates a stable device ID for each browser/device.
-- A family account may have at most three active learning profiles, such as `媽媽`, `哥哥`, and `妹妹`.
+- A family account always exposes up to three active learning profiles. The default labels are `學習檔案一`, `學習檔案二`, and `學習檔案三`; users may rename those profile labels to names such as `媽媽`, `哥哥`, or `妹妹`.
 - Progress belongs to profiles, not devices. Devices remember `activeProfileId`.
 - Two devices can share the same profile to sync the same progress, while sibling profiles stay separate.
-- A parent device may switch between child profiles.
+- The app header must show the current account/profile entry. Tapping it opens an account menu: first the currently signed-in Google account, then the three learning profiles, with direct profile switching and a link into Settings for renaming profiles.
+- A parent device may switch between child profiles. If a profile is selected on multiple devices, those devices sync the same profile progress.
 - A family account may have at most three active devices.
-- Device names are user-editable labels only; they are not the stable identifier and may be duplicated or changed.
+- Device naming is not part of the normal user workflow. Devices are tracked by generated system device IDs only.
 - Only teacher/parent devices explicitly approved in Firestore may freely browse all lessons.
 - Child or ordinary devices must follow the normal lesson unlock path, even when cloud sync is enabled.
 - The app must not expose a local checkbox, query parameter, or localStorage flag that lets any user turn on free browsing.
 - Firestore account-device records may include `freeBrowse: true` only for approved teacher devices such as the teacher phone and tablet.
 - Settings must not show free-browse/general-mode labels to normal users. This authorization is internal device policy.
-- Settings must not show a legacy/manual device-code field. Normal users should only see account sign-in, profile selection, editable learning-profile/device labels, and system-generated device ID.
+- Settings must not show a legacy/manual device-code field or editable device-name field. Normal users should only see account sign-in, profile selection/renaming, and the system-generated device ID for support/admin diagnosis.
 - Before paid public release, enforce the three-device limit with a trusted backend such as Cloud Functions; app-side checks are not sufficient payment-grade enforcement.
 - Before paid public release, enforce the three-profile limit with the same trusted backend; app-side checks are not sufficient payment-grade enforcement.
 

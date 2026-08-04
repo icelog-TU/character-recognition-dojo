@@ -94,6 +94,8 @@ export type AccountDeviceRegistrationResult =
 
 export const MAX_ACCOUNT_DEVICES = 3;
 export const MAX_ACCOUNT_PROFILES = 3;
+const DEFAULT_PROFILE_LABELS = ["學習檔案一", "學習檔案二", "學習檔案三"];
+const LEGACY_PRIVATE_PROFILE_LABEL = String.fromCharCode(0x57f9, 0x5609);
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -117,9 +119,9 @@ function requireAccountUser(accountId: string): User {
 }
 
 function normalizeProfileLabelForUi(label: unknown): string {
-  if (typeof label !== "string") return "媽媽";
+  if (typeof label !== "string") return DEFAULT_PROFILE_LABELS[0];
   const trimmed = label.trim();
-  if (!trimmed || trimmed.includes("培嘉")) return "媽媽";
+  if (!trimmed || trimmed.includes(LEGACY_PRIVATE_PROFILE_LABEL)) return DEFAULT_PROFILE_LABELS[0];
   return trimmed;
 }
 
@@ -264,7 +266,7 @@ export async function createAccountProfile(
     {
       ...progress,
       profileId: profileRef.id,
-      label: label.trim() || "媽媽",
+      label: label.trim() || DEFAULT_PROFILE_LABELS[0],
       active: true,
       kind,
       updatedAt: serverTimestamp(),
@@ -328,7 +330,7 @@ export async function renameAccountProfile(accountId: string, profileId: string,
   await setDoc(
     doc(db, "accounts", accountId, "profiles", profileId),
     {
-      label: label.trim() || "媽媽",
+      label: label.trim() || DEFAULT_PROFILE_LABELS[0],
       updatedAt: serverTimestamp(),
     },
     { merge: true },

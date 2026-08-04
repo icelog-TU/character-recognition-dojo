@@ -92,8 +92,9 @@ Before editing, state the exact ownership in chat, including lesson id and owned
   - `public/assets/lessons/L058/images/L058-S03.webp`
 - Final sentence images must be WebP, phone-sized, and compressed according to `docs/CURRICULUM_PRODUCTION_SOP.md`.
 - Review modules use `R###`, live in top-level `reviewLessons`, introduce no new characters, and do not consume `L###` lesson numbers.
-- Account progress belongs to profiles under `accounts/{uid}/profiles/{profileId}`. Device records under `accounts/{uid}/devices/{deviceId}` identify phones/tablets and store `activeProfileId`.
-- A family account may have at most three active learning profiles, such as `媽媽`, `哥哥`, and `妹妹`.
+- Account progress belongs to profiles under `accounts/{uid}/profiles/{profileId}`. Device records under `accounts/{uid}/devices/{deviceId}` identify phones/tablets by generated system ID and store `activeProfileId`.
+- A family account has up to three active learning profiles. Default labels are `學習檔案一`, `學習檔案二`, and `學習檔案三`; users may rename profile labels to names such as `媽媽`, `哥哥`, and `妹妹`.
+- The app header account/profile button is the primary switching surface. It must show the signed-in account first, then the three learning profiles, and link into Settings for profile renaming.
 - Free browsing is an internal Firestore device authorization for approved teacher/parent devices only; it must not appear as a user-facing mode or toggle.
 - Unlocked lessons must allow direct entry to any stage. Do not force Stage 1 -> Stage 2 -> Stage 3 -> Stage 4 during review.
 - Preserve user/other-thread changes. Never revert unrelated work unless explicitly requested.

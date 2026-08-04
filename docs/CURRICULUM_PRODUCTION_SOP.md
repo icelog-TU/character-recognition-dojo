@@ -75,15 +75,16 @@ Do not treat free browsing as a universal app mode. The teacher wants only desig
 
 Current app-level rule:
 
-- Production account sync stores progress in `accounts/{uid}/profiles/{profileId}` and device metadata in `accounts/{uid}/devices/{deviceId}`. The app generates `deviceId`; users may edit human-readable labels only.
-- A family/customer account may have at most three active learning profiles, such as `媽媽`, `哥哥`, and `妹妹`.
+- Production account sync stores progress in `accounts/{uid}/profiles/{profileId}` and device metadata in `accounts/{uid}/devices/{deviceId}`. The app generates `deviceId`; normal users do not name devices.
+- A family/customer account has up to three active learning profiles. Default labels are `學習檔案一`, `學習檔案二`, and `學習檔案三`; users may rename profile labels to names such as `媽媽`, `哥哥`, or `妹妹`.
+- The app header must show the current account/profile entry. Tapping it opens an account/profile menu: currently signed-in account first, then the three learning profiles, with direct switching and an entry into Settings for profile renaming.
 - Devices store `activeProfileId`. Two devices using the same profile sync the same progress; sibling profiles stay separate.
 - A family/customer account may have at most three active devices.
 - A device may freely browse all lessons only when its Firestore account-device record has `freeBrowse: true`.
 - `freeBrowse` must not be stored as a local user-toggleable setting.
 - The settings UI must not display whether the current device is authorized for free browsing. Normal users do not need to know this internal policy exists.
 - Progress sync must preserve server-side authorization fields when saving progress.
-- The settings UI must not include a legacy/manual device-code field.
+- The settings UI must not include a legacy/manual device-code field or editable device-name field.
 - Before paid public release, enforce the three-device and three-profile limits in a trusted backend such as Cloud Functions. Firestore rules cannot reliably count active sibling records by themselves.
 - If stronger content security is required later, move lesson data/assets behind authenticated access; GitHub Pages static lesson assets cannot be truly hidden from someone who knows the URLs.
 

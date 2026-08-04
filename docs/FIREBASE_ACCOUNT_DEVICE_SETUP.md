@@ -134,4 +134,4 @@ service cloud.firestore {
 }
 ```
 
-Do not add a user-facing legacy device-code field back to Settings. Normal users should only see account sign-in, profile selection, editable profile/device labels, and the system-generated device ID.
+Do not add a user-facing legacy device-code field or editable device-name field back to Settings. Normal users should see account sign-in, the three learning profiles under that account, editable learning-profile names, and the system-generated device ID only as support/admin diagnostic information.
