@@ -60,6 +60,21 @@ This repo includes FFmpeg and FFprobe through npm packages. A bare shell command
 
 Do not run `npm ci` as a routine startup step in the shared working copy. It removes `node_modules` before reinstalling, so it can fail with Windows `EPERM unlink` if another Codex thread, Vite dev server, or Node process is using a native package file such as a Rolldown binding. If existing npm scripts run, continue without `npm ci`. If dependencies are actually missing or stale, stop, identify the blocking Node process or active thread, and ask before reinstalling.
 
+## GitHub CLI Rule
+
+GitHub CLI is installed and authenticated on this Windows machine for account `icelog-TU`.
+
+Use the full path when checking Actions, PRs, issues, or deployment status:
+
+```powershell
+C:\Users\User\.local\bin\gh.cmd auth status
+C:\Users\User\.local\bin\gh.cmd run list --branch main --limit 5
+C:\Users\User\.local\bin\gh.cmd pr list
+C:\Users\User\.local\bin\gh.cmd issue list
+```
+
+If a thread says `gh` is not found, use `C:\Users\User\.local\bin\gh.cmd` before falling back to GitHub REST API. Do not claim GitHub CLI is unavailable until the full-path command fails and the exact error is reported.
+
 ## Markdown Encoding Read Rule
 
 Markdown files in this repo are UTF-8. On Windows, PowerShell terminal output may display Chinese text as mojibake if the console encoding and file decoding path do not match. Do not report that repo Markdown is corrupted based only on garbled `Get-Content` output.

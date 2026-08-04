@@ -27,6 +27,8 @@ Rules:
 - Do not use online converters, browser recordings, OS TTS export, unrelated local encoders, or hand-written ad hoc transcoding for production lesson audio unless the teacher explicitly approves that exception.
 - If an exception is approved, record the affected lesson/review id, command used, reason, and replacement plan in the final handoff. Do not call that audio standard production audio until it has gone through the normal `assets:audio` plus `assets:align:ai` flow.
 
+For GitHub Actions, PR, issue, or deployment checks, use the authenticated GitHub CLI at `C:\Users\User\.local\bin\gh.cmd`. If bare `gh` is not on PATH, use the full path before falling back to REST API.
+
 ## Windows UTF-8 Reading Rule
 
 Repo Markdown and JSON files are UTF-8. On Windows, garbled Chinese in PowerShell output usually means the terminal output encoding or `Get-Content` decoding path is wrong; it does not by itself prove the file is corrupted.

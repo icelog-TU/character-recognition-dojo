@@ -39,6 +39,14 @@ npm run tools:check
 npm run curriculum:audit-state
 ```
 
+GitHub CLI is installed and logged in on this Windows machine. Check it at startup when the task may need GitHub Actions, PR, issue, or deployment status:
+
+```powershell
+C:\Users\User\.local\bin\gh.cmd auth status
+```
+
+If bare `gh` is not found in PowerShell, use the full path above. Do not report GitHub CLI as unavailable until the full-path command fails.
+
 Do not run `npm ci` as a routine start command in the shared working copy. `npm ci` deletes and recreates `node_modules`, and concurrent Codex threads, dev servers, or Node tools can lock native package files on Windows and cause `EPERM unlink` failures. Run `npm ci` only when dependencies are missing or known stale, and only after confirming no other thread or dev server is using this working copy.
 
 Then read:
