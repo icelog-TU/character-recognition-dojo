@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
 import curriculumData from "./curriculum/sample-lessons.json";
-import type { Curriculum, Lesson, LessonSentence, SentenceGame, SentenceGameOption, SentenceGameType } from "./types";
+import type { Curriculum, Lesson, LessonSentence, ReviewLesson, SentenceGame, SentenceGameOption, SentenceGameType } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
 import {
   createAccountProfile,
@@ -31,6 +31,7 @@ const TEACH_TAP_RECORDING_MS = 1300;
 
 type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
 type LessonCharEntry = { lesson: Lesson; char: string; index: number };
+type PracticeUnit = Lesson & { reviewNumber?: number; targetLessonRange?: ReviewLesson["targetLessonRange"] };
 type AudioWindow = Window & typeof globalThis & { webkitAudioContext?: typeof AudioContext };
 type AudioPlayOptions = {
   onTime?: (elapsedMs: number) => void;
@@ -942,6 +943,25 @@ function lessonLabel(lesson: Lesson): string {
   return lesson.newChars.join("");
 }
 
+function reviewLessonLabel(review: ReviewLesson): string {
+  return `複習${smallZhNumber(review.reviewNumber)}`;
+}
+
+function reviewLessonAsPracticeUnit(review: ReviewLesson): PracticeUnit {
+  return {
+    id: review.id,
+    order: review.afterLessonOrder,
+    newChars: [],
+    zhuyin: {},
+    title: review.title || reviewLessonLabel(review),
+    requiredRounds: review.requiredRounds,
+    sentences: review.sentences,
+    sentenceGames: review.sentenceGames,
+    reviewNumber: review.reviewNumber,
+    targetLessonRange: review.targetLessonRange,
+  };
+}
+
 function nextReviewMilestone(lessons: Lesson[]): number {
   const lastOrder = Math.max(...lessons.map((lesson) => lesson.order));
   if (lastOrder <= REVIEW_FIRST_MILESTONE) return REVIEW_FIRST_MILESTONE;
@@ -1280,6 +1300,7 @@ function App() {
     () => new Set(initialProgress?.completedOrders ?? []),
   );
   const [lessonOpen, setLessonOpen] = useState(false);
+  const [activeReviewId, setActiveReviewId] = useState<string | null>(null);
   const [completionNotice, setCompletionNotice] = useState("");
   const [startingOrder, setStartingOrder] = useState<number | null>(null);
   const [coins, setCoins] = useState(initialProgress?.coins ?? 120);
@@ -1323,6 +1344,8 @@ function App() {
   const playbackState = usePlaybackState();
   const selectedLesson =
     curriculum.lessons.find((lesson) => lesson.order === selectedOrder) ?? curriculum.lessons[0];
+  const activeReviewLesson = (curriculum.reviewLessons ?? []).find((review) => review.id === activeReviewId) ?? null;
+  const activePracticeUnit = activeReviewLesson ? reviewLessonAsPracticeUnit(activeReviewLesson) : selectedLesson;
   const streakDays = currentStreakDays(dailyRecords, completedOrders);
   const progressSnapshot = useMemo<StoredProgress>(
     () => ({
@@ -1665,14 +1688,29 @@ function App() {
   function finishLesson(order: number, destination: LessonDestination) {
     const following = curriculum.lessons.find((lesson) => lesson.order === order + 1);
     if (following) setSelectedOrder(following.order);
+    setActiveReviewId(null);
     setLessonOpen(destination === "next" && Boolean(following));
     setCompletionNotice(following ? `第 ${order} 課完成，已解鎖第 ${following.order} 課。` : `第 ${order} 課完成。`);
+  }
+
+  function finishReview(review: ReviewLesson, destination: LessonDestination) {
+    const following = curriculum.lessons.find((lesson) => lesson.order === review.afterLessonOrder + 1);
+    setActiveReviewId(null);
+    if (destination === "next" && following) {
+      setSelectedOrder(following.order);
+      setLessonOpen(true);
+      setCompletionNotice(`${reviewLessonLabel(review)}完成，接著可以練第 ${following.order} 課。`);
+      return;
+    }
+    setLessonOpen(false);
+    setCompletionNotice(`${reviewLessonLabel(review)}完成。`);
   }
 
   function openPage(nextPage: AppPage) {
     stopPlayback();
     setPage(nextPage);
     if (nextPage === "practice") setLessonOpen(false);
+    setActiveReviewId(null);
     setMenuOpen(false);
   }
 
@@ -1681,6 +1719,7 @@ function App() {
     setRecordDetail(detail);
     setPage("records");
     setLessonOpen(false);
+    setActiveReviewId(null);
     setMenuOpen(false);
   }
 
@@ -1689,6 +1728,7 @@ function App() {
     setCollectionFocus((prev) => ({ realmId, characterId: null, nonce: prev.nonce + 1 }));
     setPage("collection");
     setLessonOpen(false);
+    setActiveReviewId(null);
     setMenuOpen(false);
   }
 
@@ -1697,12 +1737,25 @@ function App() {
     setCollectionFocus((prev) => ({ realmId: character.realmId, characterId: character.characterId, nonce: prev.nonce + 1 }));
     setPage("collection");
     setLessonOpen(false);
+    setActiveReviewId(null);
     setMenuOpen(false);
   }
 
   function openLesson(order: number) {
     setStartingOrder(null);
+    setActiveReviewId(null);
     setSelectedOrder(order);
+    setPage("practice");
+    setLessonOpen(true);
+    setCompletionNotice("");
+    setMenuOpen(false);
+  }
+
+  function openReview(reviewId: string) {
+    const review = (curriculum.reviewLessons ?? []).find((candidate) => candidate.id === reviewId);
+    if (!review) return;
+    setStartingOrder(null);
+    setActiveReviewId(review.id);
     setPage("practice");
     setLessonOpen(true);
     setCompletionNotice("");
@@ -1721,6 +1774,7 @@ function App() {
     stopPlayback();
     setPage("practice");
     setLessonOpen(false);
+    setActiveReviewId(null);
     setMenuOpen(false);
     setStartingOrder(null);
   }
@@ -1763,31 +1817,45 @@ function App() {
         {page === "practice" && !lessonOpen && (
           <PracticeHome
             lessons={curriculum.lessons}
+            reviewLessons={curriculum.reviewLessons ?? []}
             completedOrders={completedOrders}
             nextOrder={nextOrder}
             unlockOrder={unlockOrder}
             notice={completionNotice}
             startingOrder={startingOrder}
             onStart={startLessonWithFeedback}
+            onStartReview={openReview}
           />
         )}
         {page === "practice" && lessonOpen && (
           <div className="practice-layout lesson-practice-layout">
-            <PracticeNavigator
-              lessons={curriculum.lessons}
-              selectedOrder={selectedLesson.order}
-              completedOrders={completedOrders}
-            />
+            {!activeReviewLesson && (
+              <PracticeNavigator
+                lessons={curriculum.lessons}
+                selectedOrder={selectedLesson.order}
+                completedOrders={completedOrders}
+              />
+            )}
             <LessonPanel
-              key={selectedLesson.id}
-              lesson={selectedLesson}
+              key={activePracticeUnit.id}
+              lesson={activePracticeUnit}
               lessons={curriculum.lessons}
-              completed={completedOrders.has(selectedLesson.order)}
-              locked={selectedLesson.order > unlockOrder}
-              session={lessonSessions[selectedLesson.id]}
+              completed={activeReviewLesson ? true : completedOrders.has(selectedLesson.order)}
+              locked={activeReviewLesson ? activeReviewLesson.afterLessonOrder > unlockOrder : selectedLesson.order > unlockOrder}
+              session={lessonSessions[activePracticeUnit.id]}
+              unitBadge={activeReviewLesson ? `第 ${activeReviewLesson.afterLessonOrder} 課後` : undefined}
+              unitTitle={activeReviewLesson ? reviewLessonLabel(activeReviewLesson) : undefined}
+              unitIntro={activeReviewLesson ? `${reviewLessonLabel(activeReviewLesson)}，我們來複習第 ${activeReviewLesson.targetLessonRange.startOrder} 到 ${activeReviewLesson.targetLessonRange.endOrder} 課。` : undefined}
+              completedPillLabel={activeReviewLesson ? "複習課" : undefined}
+              isReview={Boolean(activeReviewLesson)}
               onSessionChange={saveLessonSession}
-              onReward={(rewards) => grantLessonReward(selectedLesson.order, rewards)}
-              onComplete={(destination) => finishLesson(selectedLesson.order, destination)}
+              onReward={(rewards) => {
+                if (!activeReviewLesson) grantLessonReward(selectedLesson.order, rewards);
+              }}
+              onComplete={(destination) => {
+                if (activeReviewLesson) finishReview(activeReviewLesson, destination);
+                else finishLesson(selectedLesson.order, destination);
+              }}
               onExit={returnToPracticeHome}
             />
           </div>
@@ -1862,7 +1930,7 @@ function App() {
       </main>
 
       <FloatingPlaybackBar
-        lessonOrder={lessonOpen ? selectedLesson.order : null}
+        lessonLabel={lessonOpen ? (activeReviewLesson ? reviewLessonLabel(activeReviewLesson) : `第 ${selectedLesson.order} 課`) : null}
         playbackState={playbackState}
         onExitLesson={returnToPracticeHome}
         onTogglePlayback={togglePlayback}
@@ -1873,23 +1941,30 @@ function App() {
 
 function PracticeHome({
   lessons,
+  reviewLessons,
   completedOrders,
   nextOrder,
   unlockOrder,
   notice,
   startingOrder,
   onStart,
+  onStartReview,
 }: {
   lessons: Lesson[];
+  reviewLessons: ReviewLesson[];
   completedOrders: Set<number>;
   nextOrder: number;
   unlockOrder: number;
   notice: string;
   startingOrder: number | null;
   onStart: (order: number) => void;
+  onStartReview: (reviewId: string) => void;
 }) {
   const nextLesson = lessons.find((lesson) => lesson.order === nextOrder) ?? lessons[lessons.length - 1];
   const unlockedEntries = flattenLessonChars(lessons.filter((lesson) => lesson.order <= unlockOrder)).slice(-12);
+  const availableReviewLessons = reviewLessons
+    .filter((review) => review.afterLessonOrder <= unlockOrder || completedOrders.has(review.afterLessonOrder))
+    .sort((a, b) => a.reviewNumber - b.reviewNumber);
   const reviewSlots = reviewSlotsForMilestone(nextReviewMilestone(lessons));
 
   return (
@@ -1935,6 +2010,26 @@ function PracticeHome({
           </button>
         ))}
       </div>
+
+      {availableReviewLessons.length > 0 && (
+        <>
+          <div className="home-section-heading">
+            <h2>複習課程</h2>
+            <span>已開放</span>
+          </div>
+          <div className="review-slot-grid" aria-label="複習課程">
+            {availableReviewLessons.map((review) => (
+              <button className="review-slot-card review-lesson-card" key={review.id} type="button" onClick={() => onStartReview(review.id)}>
+                <span>第 {review.afterLessonOrder} 課後</span>
+                <strong>{reviewLessonLabel(review)}</strong>
+                <small>
+                  每回 {review.sentences.length} 句，複習第 {review.targetLessonRange.startOrder}-{review.targetLessonRange.endOrder} 課
+                </small>
+              </button>
+            ))}
+          </div>
+        </>
+      )}
 
       <div className="home-section-heading">
         <h2>複習預留</h2>
@@ -3254,6 +3349,11 @@ function LessonPanel({
   completed,
   locked,
   session,
+  unitBadge,
+  unitTitle,
+  unitIntro,
+  completedPillLabel,
+  isReview = false,
   onSessionChange,
   onReward,
   onComplete,
@@ -3264,19 +3364,26 @@ function LessonPanel({
   completed: boolean;
   locked: boolean;
   session?: CloudLessonSessionSnapshot;
+  unitBadge?: string;
+  unitTitle?: string;
+  unitIntro?: string;
+  completedPillLabel?: string;
+  isReview?: boolean;
   onSessionChange: (lessonId: string, session: CloudLessonSessionSnapshot) => void;
   onReward: (rewards: LessonReward) => void;
   onComplete: (destination: LessonDestination) => void;
   onExit: () => void;
 }) {
+  const initialDefaultStage = isReview ? 3 : 1;
+  const initialMaxStage = lesson.sentenceGames?.length ? 4 : 3;
   const [heardChars, setHeardChars] = useState<Set<string>>(() => new Set(session?.heardChars ?? []));
   const [spotlightChar, setSpotlightChar] = useState<string | null>(null);
-  const [findUnlocked, setFindUnlocked] = useState(session?.findUnlocked ?? false);
+  const [findUnlocked, setFindUnlocked] = useState(isReview || session?.findUnlocked || false);
   const [practiceDoneCount, setPracticeDoneCount] = useState(session?.practiceDoneCount ?? 0);
   const [gameDoneCount, setGameDoneCount] = useState(session?.gameDoneCount ?? 0);
   const [pictureCurrentIndex, setPictureCurrentIndex] = useState(session?.pictureCurrentIndex ?? 0);
   const [pictureCompletedSentenceIds, setPictureCompletedSentenceIds] = useState<string[]>(session?.pictureCompletedSentenceIds ?? []);
-  const [activeStage, setActiveStage] = useState(clampInteger(session?.activeStage, 1, 4, 1));
+  const [activeStage, setActiveStage] = useState(clampInteger(session?.activeStage, initialDefaultStage, initialMaxStage, initialDefaultStage));
   const [advancingStage, setAdvancingStage] = useState<number | null>(null);
   const [speakingTarget, setSpeakingTarget] = useState<SpeechTarget>(null);
   const [rewardState, setRewardState] = useState<"waiting" | "ready" | "claiming" | "claimed">("waiting");
@@ -3289,7 +3396,7 @@ function LessonPanel({
   const panelRef = useRef<HTMLElement | null>(null);
   const rewardPanelRef = useRef<HTMLElement | null>(null);
   const newChars = lessonChars(lesson);
-  const soundUnlocked = newChars.every((char) => heardChars.has(char));
+  const soundUnlocked = isReview || newChars.every((char) => heardChars.has(char));
   const zhuyinMap = useMemo(() => buildZhuyinMap(lessons, lesson.order), [lessons, lesson.order]);
   const usesSentenceGames = Boolean(lesson.sentenceGames?.length);
   const configuredRequiredRounds = Number.isFinite(lesson.requiredRounds)
@@ -3301,11 +3408,11 @@ function LessonPanel({
   const pictureDone = practiceDoneCount >= 1;
   const gamesDone = !usesSentenceGames || gameDoneCount >= requiredGameRounds;
   const lessonReady = soundUnlocked && findUnlocked && pictureDone && gamesDone;
-  const progressSteps = [soundUnlocked, findUnlocked, pictureDone, ...(usesSentenceGames ? [gamesDone] : [])];
-  const availableStages = usesSentenceGames ? [1, 2, 3, 4] : [1, 2, 3];
-  const lessonReward = { coins: 30, stars: 12 };
+  const progressSteps = isReview ? [pictureDone, ...(usesSentenceGames ? [gamesDone] : [])] : [soundUnlocked, findUnlocked, pictureDone, ...(usesSentenceGames ? [gamesDone] : [])];
+  const availableStages = isReview ? (usesSentenceGames ? [3, 4] : [3]) : usesSentenceGames ? [1, 2, 3, 4] : [1, 2, 3];
+  const lessonReward = isReview ? { coins: 0, stars: 0 } : { coins: 30, stars: 12 };
   const hasNextLesson = lessons.some((candidate) => candidate.order === lesson.order + 1);
-  const lessonIntro = lessonIntroText(lesson);
+  const lessonIntro = unitIntro ?? lessonIntroText(lesson);
   const hearPrompt = hearPromptText(lesson);
 
   useEffect(() => {
@@ -3315,9 +3422,9 @@ function LessonPanel({
 
   useEffect(() => {
     const normalizedSession: CloudLessonSessionSnapshot = {
-      activeStage: clampInteger(session?.activeStage, 1, usesSentenceGames ? 4 : 3, 1),
+      activeStage: clampInteger(session?.activeStage, initialDefaultStage, usesSentenceGames ? 4 : 3, initialDefaultStage),
       heardChars: session?.heardChars ?? [],
-      findUnlocked: session?.findUnlocked ?? false,
+      findUnlocked: isReview || session?.findUnlocked || false,
       practiceDoneCount: session?.practiceDoneCount ?? 0,
       gameDoneCount: session?.gameDoneCount ?? 0,
       pictureCurrentIndex: session?.pictureCurrentIndex ?? 0,
@@ -3333,10 +3440,10 @@ function LessonPanel({
     setGameDoneCount(normalizedSession.gameDoneCount);
     setPictureCurrentIndex(normalizedSession.pictureCurrentIndex);
     setPictureCompletedSentenceIds(normalizedSession.pictureCompletedSentenceIds);
-    setActiveStage(normalizedSession.activeStage);
+    setActiveStage(clampInteger(normalizedSession.activeStage, initialDefaultStage, usesSentenceGames ? 4 : 3, initialDefaultStage));
     setAdvancingStage(null);
     setSpeakingTarget(null);
-  }, [lesson.id, session, usesSentenceGames]);
+  }, [initialDefaultStage, isReview, lesson.id, session, usesSentenceGames]);
 
   useEffect(() => {
     if (locked) return;
@@ -3557,15 +3664,15 @@ function LessonPanel({
   return (
     <section ref={panelRef} className="lesson-panel" aria-labelledby="lesson-title">
       <div className="top-bar">
-        <span className="pill">第 {lesson.order} 課</span>
-        <span className="pill">{completed ? "已進入複習池" : locked ? "尚未解鎖" : "練功中"}</span>
+        <span className="pill">{unitBadge ?? `第 ${lesson.order} 課`}</span>
+        <span className="pill">{completedPillLabel ?? (completed ? "已進入複習池" : locked ? "尚未解鎖" : "練功中")}</span>
         <button className="lesson-exit-button" onClick={onExit}>
           回課程入口
         </button>
       </div>
 
       <h2 id="lesson-title" className="lesson-title">
-        來認「{lessonLabel(lesson)}」
+        {unitTitle ?? `來認「${lessonLabel(lesson)}」`}
       </h2>
       <NarrationLine
         text={lessonIntro}
@@ -4036,23 +4143,23 @@ function useRewardCount(target: number, active: boolean) {
 }
 
 function FloatingPlaybackBar({
-  lessonOrder,
+  lessonLabel,
   playbackState,
   onExitLesson,
   onTogglePlayback,
 }: {
-  lessonOrder: number | null;
+  lessonLabel: string | null;
   playbackState: PlaybackStatus;
   onExitLesson: () => void;
   onTogglePlayback: () => void;
 }) {
-  if (!lessonOrder && !playbackState.playing) return null;
+  if (!lessonLabel && !playbackState.playing) return null;
   return (
     <div className="floating-playback-wrap" aria-live="polite">
       <div className={`floating-playback-bar${playbackState.playing ? " playing" : ""}`}>
         <div className="playback-status">
           <span className="playback-dot" aria-hidden />
-          <strong>{playbackState.playing ? (playbackState.paused ? "語音暫停中" : "語音播放中") : `第 ${lessonOrder} 課練習中`}</strong>
+          <strong>{playbackState.playing ? (playbackState.paused ? "語音暫停中" : "語音播放中") : `${lessonLabel}練習中`}</strong>
         </div>
         <div className="playback-actions">
           {playbackState.playing && (
@@ -4060,7 +4167,7 @@ function FloatingPlaybackBar({
               {playbackState.paused ? "▶ 繼續" : "⏸ 暫停"}
             </button>
           )}
-          {lessonOrder && (
+          {lessonLabel && (
             <button className="playback-exit-button" onClick={onExitLesson}>
               回入口
             </button>

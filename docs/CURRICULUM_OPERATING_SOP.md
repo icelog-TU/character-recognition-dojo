@@ -219,9 +219,9 @@ Rules:
 - Do not create `L061` or `L062` as review placeholders. After L060, `L061` is the next new-character lesson.
 - Review sentence text may use characters learned by the milestone, but the required coverage target is the older 30-lesson range.
 - The two review modules should be planned as one pair so coverage can be checked across all 10 sentences before either module ships.
-- Do not add placeholder review modules to `src/curriculum/sample-lessons.json`. Only add them to top-level `reviewLessons` after sentences, images, audio, timings, and review coverage are production-ready.
-- Until the review module flow is fully implemented as playable curriculum, use website placeholder cards to reserve the pair.
-- The first reserved pair is after L060: R001/R002, two 5-sentence review modules covering all new characters from L001-L030.
+- Do not add placeholder review modules to `src/curriculum/sample-lessons.json`. Only add production-ready review modules to top-level `reviewLessons` after sentences, images, audio, timings, Stage 4 games, and review coverage are complete.
+- Production-ready review modules in `reviewLessons` must appear as playable review cards on the practice home. Future review pairs that are not production-ready may appear only as non-playable reservation cards.
+- The first playable pair is after L060: R001/R002, two 5-sentence review modules covering all new characters from L001-L030.
 
 ## Dependency Recheck Before Merge
 

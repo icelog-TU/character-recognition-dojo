@@ -1159,6 +1159,21 @@ button {
   padding: 12px;
 }
 
+.review-lesson-card {
+  border-style: solid;
+  cursor: pointer;
+  text-align: left;
+}
+
+.review-lesson-card:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary) 60%, #fff);
+  outline-offset: 3px;
+}
+
+.review-lesson-card:active {
+  transform: translateY(1px);
+}
+
 .review-slot-card span,
 .review-slot-card small {
   color: var(--muted);

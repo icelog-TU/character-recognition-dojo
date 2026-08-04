@@ -111,6 +111,7 @@ The curriculum adds two review modules after every 30-lesson milestone starting 
 - After L060: R001/R002 cover all new characters from L001-L030. The next new-character lesson is L061.
 - After L090: R003/R004 cover all new characters from L031-L060. The next new-character lesson is L091.
 - After L120: R005/R006 cover all new characters from L061-L090.
+- Production-ready review modules must render as playable cards on the practice home. Future review slots that are not built yet may render only as reservation cards.
 - Continue the same pattern.
 
 Each review pair has 10 sentences total, and every character introduced in the target 30-lesson range must appear at least once across those 10 sentences.
