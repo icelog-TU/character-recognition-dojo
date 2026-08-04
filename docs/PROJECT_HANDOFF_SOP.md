@@ -601,11 +601,24 @@ Mobile/GitHub Pages cache note:
 
 ## Handoff Prompt For A New Chat
 
-Use this when starting a new Codex/GPT thread:
+Use this when starting a new Codex/GPT thread. Copy the whole block into the new chat before asking for lesson or asset work:
 
 ```text
 We are continuing the `認字練功房` repo:
 https://github.com/icelog-TU/character-recognition-dojo
+
+Use this existing local working copy. Do not create a new clone:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo
+
+If your current working directory is not exactly that repo path, stop and tell me before editing. Do not work from any older clone.
+
+Before editing, run:
+git remote -v
+git fetch origin
+git status --short --branch
+git log -1 --oneline
+npm ci
+npm run curriculum:audit-state
 
 Please first read:
 - docs/PROJECT_HANDOFF_SOP.md
@@ -614,6 +627,7 @@ Please first read:
 - docs/PARALLEL_LESSON_REGISTRY.md
 - docs/CURRICULUM_PRODUCTION_SOP.md
 - docs/CURRICULUM_SCHEMA.md
+- docs/AI_GENERATION_SETUP.md
 
 Multiple Codex threads may be working on this repo. Before editing, run git fetch/status, confirm the current commit, read the parallel lesson registry, and state which files or subsystem this thread owns.
 The app is a Taiwan zhuyin character-recognition app for young children.
@@ -629,4 +643,18 @@ L007 introduces a fixed young girl character for 我.
 L012 introduces a fixed second-person young boy character for 你.
 L006-L063 include Stage 4 sentence games after picture-supported sentence listening.
 Production checks include an audibility gate for new-character `charAudio`; near-silent files must be regenerated or repaired before pushing.
+
+Before saying FFmpeg is unavailable, run:
+npm run tools:check
+
+Before saying OpenAI credentials are unavailable, run:
+npm run ai:check
+
+For whole-repo asset diagnostics, run:
+npm run assets:audit
+
+For new or replacement sentence images, use the L058 style anchors:
+public/assets/lessons/L058/images/L058-S01.webp
+public/assets/lessons/L058/images/L058-S02.webp
+public/assets/lessons/L058/images/L058-S03.webp
 ```

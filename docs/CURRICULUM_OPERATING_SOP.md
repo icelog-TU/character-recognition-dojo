@@ -20,6 +20,14 @@ If Markdown and production JSON disagree, update Markdown or generated planner d
 
 ## Required Start Sequence
 
+On this Windows machine, the preferred shared local working copy is:
+
+```text
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo
+```
+
+Do not create a new clone unless the user explicitly asks for one. If the current shell is not in this path, stop and tell the user before editing. Do not continue work from an older clone such as another `character-recognition-dojo` folder unless the user explicitly selects that clone for the task.
+
 Every new conversation thread must start with:
 
 ```bash
