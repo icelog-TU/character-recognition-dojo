@@ -1,5 +1,7 @@
 import { spawnSync } from "node:child_process";
 import { createRequire } from "node:module";
+import fs from "node:fs";
+import path from "node:path";
 
 const require = createRequire(import.meta.url);
 
@@ -38,9 +40,28 @@ function checkOptionalTool(label, command, versionArgs = ["-version"]) {
   console.log(`  ${firstLine(result.stdout || result.stderr)}`);
 }
 
+function findImageMagickCommand() {
+  if (process.env.MAGICK_PATH) return process.env.MAGICK_PATH;
+
+  const roots = [process.env.ProgramFiles, process.env["ProgramFiles(x86)"]].filter(Boolean);
+  for (const root of roots) {
+    if (!fs.existsSync(root)) continue;
+    const matches = fs
+      .readdirSync(root, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory() && entry.name.startsWith("ImageMagick"))
+      .map((entry) => path.join(root, entry.name, "magick.exe"))
+      .filter((candidate) => fs.existsSync(candidate))
+      .sort()
+      .reverse();
+    if (matches[0]) return matches[0];
+  }
+
+  return "magick";
+}
+
 const ffmpegCommand = process.env.FFMPEG_PATH || packageToolPath("@ffmpeg-installer/ffmpeg") || "ffmpeg";
 const ffprobeCommand = process.env.FFPROBE_PATH || packageToolPath("@ffprobe-installer/ffprobe") || "ffprobe";
-const magickCommand = process.env.MAGICK_PATH || "magick";
+const magickCommand = findImageMagickCommand();
 
 checkRequiredTool("FFmpeg", ffmpegCommand);
 checkRequiredTool("FFprobe", ffprobeCommand);

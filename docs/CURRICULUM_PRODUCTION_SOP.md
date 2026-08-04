@@ -19,6 +19,8 @@ npm run ai:check
 
 This repo installs FFmpeg and FFprobe as npm dependencies (`@ffmpeg-installer/ffmpeg` and `@ffprobe-installer/ffprobe`). On Windows, the shell command `ffmpeg -version` may fail even when `npm run assets:audio` works correctly because the repo scripts resolve the package binaries directly. A missing shell PATH entry is not a valid reason to bypass the standard audio pipeline.
 
+`npm run tools:check` also searches standard Windows `Program Files\ImageMagick-*` install folders for `magick.exe`, so ImageMagick can be used even if the current PowerShell session has not picked up PATH changes yet.
+
 Rules:
 
 - Do not say "there is no FFmpeg" unless `npm run tools:check` or the actual repo audio command fails and the exact failure is reported.

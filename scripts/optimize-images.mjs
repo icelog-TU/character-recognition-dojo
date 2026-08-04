@@ -5,7 +5,27 @@ import path from "node:path";
 const curriculumPath = path.resolve("src/curriculum/sample-lessons.json");
 const defaultMaxSize = "1024x1024";
 const defaultQuality = "82";
-const magickCommand = process.env.MAGICK_PATH || "magick";
+
+function findImageMagickCommand() {
+  if (process.env.MAGICK_PATH) return process.env.MAGICK_PATH;
+
+  const roots = [process.env.ProgramFiles, process.env["ProgramFiles(x86)"]].filter(Boolean);
+  for (const root of roots) {
+    if (!fs.existsSync(root)) continue;
+    const matches = fs
+      .readdirSync(root, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory() && entry.name.startsWith("ImageMagick"))
+      .map((entry) => path.join(root, entry.name, "magick.exe"))
+      .filter((candidate) => fs.existsSync(candidate))
+      .sort()
+      .reverse();
+    if (matches[0]) return matches[0];
+  }
+
+  return "magick";
+}
+
+const magickCommand = findImageMagickCommand();
 
 function parseArgs(argv) {
   const args = {};
