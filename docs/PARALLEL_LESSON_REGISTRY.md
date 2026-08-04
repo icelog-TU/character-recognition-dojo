@@ -1,4 +1,4 @@
-# Parallel Lesson Registry
+﻿# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
