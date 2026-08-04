@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L069 | 朵 | request-ready | Codex thread 2026-08-04 L069-duo | codex/l069-duo @ local 09c4f95 | L068:花 | 花 | `curriculum-workflow/lesson-requests/L069.json`; `curriculum-workflow/generated/L069-generation-packet.md`; `curriculum-workflow/drafts/L069-draft.json` | planned `curriculum-workflow/audio-inbox/L069/`; `public/assets/lessons/L069/` | Teacher explicitly approved L069 new character `朵` and five final sentences in chat. L069 must not merge to production main until L068 `花` enters latest origin/main. |
 
 ## Status Values
 
