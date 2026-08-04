@@ -2,6 +2,8 @@
 
 This project can generate sentence candidates and audio drafts locally, but API keys must never be committed.
 
+This file is only for AI key setup and command entry points. Production acceptance rules for audio format, loudness, wrong-choice audio, timings, and manual QA live in `docs/CURRICULUM_PRODUCTION_SOP.md`.
+
 ## Current Safety Rules
 
 - `.env`, `.env.local`, and `.env.*` are ignored by Git.
@@ -98,7 +100,7 @@ This must be the default path for lesson audio when `npm run ai:check` succeeds.
 - `OPENAI_TTS_VOICE`, default `coral`
 - `OPENAI_API_KEY` from the repo env helper
 
-Production lesson audio must be OpenAI-generated Taiwan Mandarin when `ai:check` succeeds. Do not use Beijing/Mainland China accent, erhua, curled-r endings, or other r-colored final sounds. If a final syllable sounds rhotic, regenerate that sentence audio and rerun AI alignment before shipping.
+Production lesson audio must be OpenAI-generated Taiwan Mandarin when `ai:check` succeeds. Accent, loudness, trimming, Stage 4 option audio, and manual playback acceptance rules are defined in `docs/CURRICULUM_PRODUCTION_SOP.md`.
 
 This creates raw MP3 drafts in:
 

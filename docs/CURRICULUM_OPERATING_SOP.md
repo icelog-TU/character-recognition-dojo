@@ -4,6 +4,19 @@ This is the operating SOP for building curriculum in `認字練功房` when seve
 
 The goal is to allow parallel lesson preparation without letting `main`, Markdown notes, generated packets, images, audio, and GitHub Pages drift apart.
 
+## SOP Authority Map
+
+Do not duplicate detailed rules across SOP files. Use this authority order when updating docs:
+
+- This file is the authority for source-of-truth order, shared working copy, new-thread startup, parallel lesson ownership, dependency gates, merge order, and done-state checks.
+- `docs/CURRICULUM_PRODUCTION_SOP.md` is the authority for lesson/review production assets, image/audio/timing processing, Stage 4 QA, and asset hard limits.
+- `docs/SENTENCE_GENERATION_SOP.md` is the authority for AI sentence drafting prompts, target/review coverage, word-first drafting, sentence quality, `spokenText`, `focusChar`, and display-line checks.
+- `docs/CURRICULUM_SCHEMA.md` is the authority for JSON shape and validation expectations.
+- `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md` is the authority for Firebase console setup, Firestore data model, and Firestore rules.
+- `docs/PROJECT_HANDOFF_SOP.md` is only the handoff entry point and must stay concise.
+
+When adding a new rule, update the one authority file above and replace duplicates elsewhere with links.
+
 ## Source Of Truth Order
 
 Use this order whenever files disagree:
@@ -49,11 +62,23 @@ If bare `gh` is not found in PowerShell, use the full path above. Do not report 
 
 Do not run `npm ci` as a routine start command in the shared working copy. `npm ci` deletes and recreates `node_modules`, and concurrent Codex threads, dev servers, or Node tools can lock native package files on Windows and cause `EPERM unlink` failures. Run `npm ci` only when dependencies are missing or known stale, and only after confirming no other thread or dev server is using this working copy.
 
+GitHub CLI is available on this Windows machine. Use it for GitHub status, PRs, issues, and Actions when helpful. If bare `gh` is not on PATH, use the known logged-in wrapper:
+
+```powershell
+C:\Users\User\.local\bin\gh.cmd auth status
+C:\Users\User\.local\bin\gh.cmd run list --branch main --limit 5
+C:\Users\User\.local\bin\gh.cmd pr list
+C:\Users\User\.local\bin\gh.cmd issue list
+```
+
+Current expected auth status is account `icelog-TU` with `repo` scope. If this fails, report the exact failure instead of assuming GitHub CLI is unavailable.
+
 Then read:
 
 - `docs/PROJECT_HANDOFF_SOP.md`
 - `docs/CURRICULUM_OPERATING_SOP.md`
 - `docs/CURRICULUM_PRODUCTION_SOP.md`
+- `docs/SENTENCE_GENERATION_SOP.md`
 - `docs/PARALLEL_LESSON_REGISTRY.md`
 - `docs/CURRICULUM_LEDGER.md`
 - `docs/CURRICULUM_SCHEMA.md`
@@ -245,6 +270,6 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L063, and L063 introduces `開`.
+As of latest `origin/main`, production curriculum is complete through L064, and L064 introduces `左`.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L063 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L064 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.

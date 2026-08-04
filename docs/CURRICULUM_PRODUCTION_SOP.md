@@ -4,6 +4,8 @@ This app treats AI output as draft material. A lesson enters the shipping curric
 
 For API key setup and AI generation commands, see `docs/AI_GENERATION_SETUP.md`.
 
+For sentence drafting coverage rules and sentence-quality checks, see `docs/SENTENCE_GENERATION_SOP.md`.
+
 For multi-thread source-of-truth rules, required startup checks, and merge gates, see `docs/CURRICULUM_OPERATING_SOP.md`.
 
 For merged lessons, use latest `origin/main` and `src/curriculum/sample-lessons.json` as the shipping truth. `docs/CURRICULUM_LEDGER.md` is the human-readable merged summary. For not-yet-merged parallel lessons, use `docs/PARALLEL_LESSON_REGISTRY.md` as the provisional coordination board.
@@ -90,54 +92,16 @@ Lesson session rule:
 - The app must persist per-lesson session state in `lessonSessions[L###]`, including `activeStage`, Stage 1 heard characters, Stage 2 completion, Stage 3 sentence progress, and Stage 4 completed round count.
 - Returning from another tab/window or after cloud sync loads should restore the same lesson position instead of resetting to Stage 1.
 
-## Parallel Lesson Production SOP
+## Parallel Production Reference
 
-The teacher may intentionally run 2-3 lesson-production threads at the same time to keep curriculum creation moving. This is allowed when the next-character sequence is already chosen, for example one Codex thread prepares L050 while another prepares L051 and a third prepares L052.
+Parallel lesson ownership, registry checkpoints, dependency rechecks, and merge order are defined in `docs/CURRICULUM_OPERATING_SOP.md` and `docs/PARALLEL_LESSON_REGISTRY.md`.
 
-Parallel production means **parallel drafting and asset preparation**, not unordered shipping. Lessons must still be merged into `main` in lesson order.
+Production-specific constraints still apply during parallel work:
 
-Allowed parallel work:
-
-- The provisional sequence must be registered in `docs/PARALLEL_LESSON_REGISTRY.md`.
-- Registration is not optional. A parallel lesson must appear in the registry before work starts, must be updated after assets/checks are prepared, and must be updated again after any branch or draft push. Merge cleanup is a separate final registry cleanup step.
-- A later lesson may be drafted before the immediately previous lesson is merged if the teacher has explicitly chosen the previous lesson's new character(s).
-- The later lesson request must include `dependsOnLessons` for any not-yet-merged prior lesson and must list those prior new characters in `provisionalLearnedChars`.
-- The AI must treat the lesson request's `allowedChars` as the temporary locked boundary for drafting, image prompts, sentence audio, and char timings.
-- Each Codex thread must own only one lesson's request, generated packet, audio inbox, final images, and `public/assets/lessons/L###/` folder.
-- Sentence drafting, image prompt writing, final image creation, and raw AI audio generation may proceed for the later lesson while the dependency lesson is still in another branch/thread.
-- JSON-writing commands such as `assets:images`, `assets:audio`, and `assets:align:ai` must still be serialized and rebased on latest `origin/main` because they update shared curriculum data or shared reports.
-
-Not allowed in parallel work:
-
-- Do not do invisible parallel work. If a thread has started L051, L052, or later work, that lesson must be visible in `docs/PARALLEL_LESSON_REGISTRY.md`.
-- Do not merge or push a later lesson to `main` before all `dependsOnLessons` are merged into `main`.
-- Do not let two threads edit `src/curriculum/sample-lessons.json` for different lessons at the same time without rebasing on latest `origin/main`.
-- Do not regenerate or overwrite another thread's lesson assets.
-- Do not silently change the previous lesson's chosen new character after a later lesson has already used it as `provisionalLearnedChars`; announce the change and re-check affected later lessons.
-
-Before merging a parallel-prepared later lesson:
-
-1. Fetch latest `origin/main`.
-2. Confirm every dependency lesson in `dependsOnLessons` is now present in `src/curriculum/sample-lessons.json`.
-3. Re-run `npm run curriculum:export-planner` if curriculum data changed.
-4. Re-check the lesson request against the now-real learned-character set. Remove or update `provisionalLearnedChars` notes if they are no longer provisional.
-5. Rebase the lesson branch on latest `origin/main`.
-6. Add the lesson to `src/curriculum/sample-lessons.json` in order.
-7. Update `docs/CURRICULUM_LEDGER.md`.
-8. Run `npm run verify` before push.
-
-If a dependency lesson changed its new character, sentence set, or review-character requirements after the later lesson was drafted, stop and reconcile before merging. The later lesson may need new sentences, images, audio, or timings.
-
-## Parallel Registry Update Points
-
-For every parallel-prepared lesson, update `docs/PARALLEL_LESSON_REGISTRY.md` at these three moments:
-
-1. **Start / claim:** before request, packet, image, audio, or curriculum JSON work starts.
-2. **Assets prepared:** after reviewed images, audio, and timings are prepared, even if the lesson is still blocked by a dependency.
-3. **Uploaded / branch pushed:** after pushing the lesson branch or any remote draft work; record the branch and short commit.
-After the lesson enters `main`, clear the active row or mark it `merged` in the same cleanup commit. This merge cleanup is required, but it is separate from the three parallel-prep recording points.
-
-If the registry cannot be pushed, the thread must say so in chat and must not continue with large invisible asset work.
+- Each thread may prepare only its owned lesson/review request, packet, raw audio inbox, and final asset folder.
+- Image prompt writing, image generation, and raw AI audio generation may happen in parallel by owned lesson/review folder.
+- JSON-writing commands must run one at a time: `assets:images`, `assets:audio`, `assets:align`, `assets:align:ai`, and any script that rewrites `src/curriculum/sample-lessons.json` or shared reports.
+- Before any later lesson is merged, re-check every sentence, image prompt, audio file, Stage 4 option, and timing against the now-real learned-character set from latest `origin/main`.
 
 ## Next-Lesson Planner Tool
 
@@ -316,6 +280,7 @@ Rules:
 
 The packet generated by `curriculum:packet` contains the allowed character boundary. The AI must obey it.
 
+- Sentence drafting must follow `docs/SENTENCE_GENERATION_SOP.md`. That file is the authority for word-first drafting, target/review coverage minimums, phrase diversity, sentence quality, `spokenText`, `focusChar`, and review checklist.
 - Display text may use only previously learned characters plus the current new character(s).
 - AI must not introduce new Han characters.
 - AI must not use Hanyu pinyin.
@@ -323,11 +288,6 @@ The packet generated by `curriculum:packet` contains the allowed character bound
 - AI output is a draft, never automatically approved.
 - Early lessons can have very few sentences.
 - Later lessons can gradually move toward 6 to 8 sentences.
-- `spokenText` omits punctuation and is what the audio reads.
-- For early lessons, prefer short, concrete, imageable sentences where every spoken Han character is visually meaningful.
-- For planner/AI-generated candidates, target 4-12 Han characters per sentence, ignoring punctuation.
-- Prefer reusing characters from the previous 5 lessons when natural.
-- Across each lesson's sentence set, include every new character from the previous 3 lessons at least once.
 - Keep `text` and `spokenText` aligned: `spokenText` may omit punctuation, but it must not omit any Han character shown in `text`.
 - If `displayLines` is used, it must join exactly back to `text`; it is only a visual line break plan.
 - For phone layout, each `displayLines` line should contain at most 5 Han characters when zhuyin is shown. Split longer sentences into more lines before shipping.
