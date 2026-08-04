@@ -31,6 +31,17 @@ export type CloudProgressSnapshot = {
   ownedCharacters: Record<string, number>;
   characterHearts: Record<string, number>;
   seenCharacterInteractions: Record<string, number[]>;
+  lessonSessions?: Record<string, CloudLessonSessionSnapshot>;
+};
+
+export type CloudLessonSessionSnapshot = {
+  activeStage: number;
+  heardChars: string[];
+  findUnlocked: boolean;
+  practiceDoneCount: number;
+  gameDoneCount: number;
+  pictureCurrentIndex: number;
+  pictureCompletedSentenceIds: string[];
 };
 
 export type CloudDeviceRecord = Partial<CloudProgressSnapshot> & {

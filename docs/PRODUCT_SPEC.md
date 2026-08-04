@@ -166,6 +166,13 @@ Cloud sync is device-scoped and parent-managed. Free browsing all lessons is not
 - The app must not expose a local checkbox, query parameter, or localStorage flag that lets any user turn on free browsing.
 - Firestore device records may include `freeBrowse: true` only for approved teacher devices such as the teacher phone and tablet.
 
+## Lesson Session Resume
+
+- A lesson that is already unlocked must expose direct entrance buttons for every stage available in that lesson.
+- Internal stage order is guidance for first-time play, not a hard gate for review or teacher use.
+- The app must remember per-lesson in-progress state locally and in cloud sync under `lessonSessions`, including the active stage, completed Stage 1/2 flags, Stage 3 sentence position, and Stage 4 completed round count.
+- Returning from another browser tab/window should restore the child to the same lesson stage instead of restarting the lesson at Stage 1.
+
 ## MVP Scope
 
 The first working prototype should include:

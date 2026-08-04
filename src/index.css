@@ -1591,6 +1591,42 @@ button.char-token {
   font-size: 1rem;
 }
 
+.stage-jump-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+
+.stage-jump-button {
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdfa;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 8px 6px;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.stage-jump-button.active {
+  border-color: var(--primary);
+  background: var(--green-soft);
+  color: var(--primary-dark);
+  box-shadow: 0 0 0 4px rgba(34, 132, 123, 0.12);
+}
+
+.stage-jump-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+
+.stage-jump-button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
 .active-block {
   border-color: var(--primary);
   box-shadow: 0 0 0 5px rgba(34, 132, 123, 0.13), 0 14px 28px rgba(34, 132, 123, 0.14);

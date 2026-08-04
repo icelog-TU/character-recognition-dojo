@@ -8,6 +8,7 @@ import {
   saveCloudProgress,
   validDeviceCode,
   type CloudDailyRecord,
+  type CloudLessonSessionSnapshot,
   type CloudProgressSnapshot,
 } from "./lib/cloudProgress";
 import "./index.css";
@@ -1124,7 +1125,53 @@ function normalizeStoredProgress(parsed: Partial<StoredProgress> | null | undefi
     ownedCharacters: sanitizeOwnedCharacters(parsed.ownedCharacters),
     characterHearts: sanitizeCharacterHearts(parsed.characterHearts),
     seenCharacterInteractions: sanitizeSeenCharacterInteractions(parsed.seenCharacterInteractions),
+    lessonSessions: sanitizeLessonSessions(parsed.lessonSessions),
   };
+}
+
+function sanitizeLessonSessions(
+  sessions: Record<string, CloudLessonSessionSnapshot> | undefined,
+): Record<string, CloudLessonSessionSnapshot> {
+  if (!sessions || typeof sessions !== "object") return {};
+  return Object.fromEntries(
+    Object.entries(sessions)
+      .filter(([lessonId]) => /^L\d{3}$/.test(lessonId))
+      .map(([lessonId, session]) => [
+        lessonId,
+        {
+          activeStage: clampInteger(session.activeStage, 1, 4, 1),
+          heardChars: Array.isArray(session.heardChars) ? uniqueChars(session.heardChars.filter((char) => Array.from(String(char)).length === 1)) : [],
+          findUnlocked: session.findUnlocked === true,
+          practiceDoneCount: clampInteger(session.practiceDoneCount, 0, 99, 0),
+          gameDoneCount: clampInteger(session.gameDoneCount, 0, 99, 0),
+          pictureCurrentIndex: clampInteger(session.pictureCurrentIndex, 0, 99, 0),
+          pictureCompletedSentenceIds: Array.isArray(session.pictureCompletedSentenceIds)
+            ? session.pictureCompletedSentenceIds.filter((id) => typeof id === "string")
+            : [],
+        },
+      ]),
+  );
+}
+
+function clampInteger(value: unknown, min: number, max: number, fallback: number): number {
+  if (!Number.isInteger(value)) return fallback;
+  return Math.min(max, Math.max(min, Number(value)));
+}
+
+function lessonSessionEquals(a: CloudLessonSessionSnapshot, b: CloudLessonSessionSnapshot): boolean {
+  return (
+    a.activeStage === b.activeStage &&
+    a.findUnlocked === b.findUnlocked &&
+    a.practiceDoneCount === b.practiceDoneCount &&
+    a.gameDoneCount === b.gameDoneCount &&
+    a.pictureCurrentIndex === b.pictureCurrentIndex &&
+    arraysEqual(a.heardChars, b.heardChars) &&
+    arraysEqual(a.pictureCompletedSentenceIds, b.pictureCompletedSentenceIds)
+  );
+}
+
+function arraysEqual(a: string[], b: string[]): boolean {
+  return a.length === b.length && a.every((value, index) => value === b[index]);
 }
 
 function saveStoredProgress(progress: StoredProgress) {
@@ -1192,6 +1239,9 @@ function App() {
   const [seenCharacterInteractions, setSeenCharacterInteractions] = useState<Record<string, number[]>>(
     () => initialProgress?.seenCharacterInteractions ?? {},
   );
+  const [lessonSessions, setLessonSessions] = useState<Record<string, CloudLessonSessionSnapshot>>(
+    () => initialProgress?.lessonSessions ?? {},
+  );
   const [deviceCode, setDeviceCode] = useState(initialCloudSettings.deviceCode);
   const [freeBrowse, setFreeBrowse] = useState(false);
   const [cloudReadyForSave, setCloudReadyForSave] = useState(false);
@@ -1223,6 +1273,7 @@ function App() {
       ownedCharacters,
       characterHearts,
       seenCharacterInteractions,
+      lessonSessions,
     }),
     [
       coins,
@@ -1236,6 +1287,7 @@ function App() {
       ownedCharacters,
       characterHearts,
       seenCharacterInteractions,
+      lessonSessions,
     ],
   );
 
@@ -1331,7 +1383,16 @@ function App() {
     setOwnedCharacters(progress.ownedCharacters);
     setCharacterHearts(progress.characterHearts);
     setSeenCharacterInteractions(progress.seenCharacterInteractions);
+    setLessonSessions(progress.lessonSessions ?? {});
   }
+
+  const saveLessonSession = useCallback((lessonId: string, session: CloudLessonSessionSnapshot) => {
+    setLessonSessions((prev) => {
+      const current = prev[lessonId];
+      if (current && lessonSessionEquals(current, session)) return prev;
+      return { ...prev, [lessonId]: session };
+    });
+  }, []);
 
   function grantLessonReward(order: number, rewards: LessonReward) {
     if (completedOrders.has(order)) return;
@@ -1516,6 +1577,8 @@ function App() {
               lessons={curriculum.lessons}
               completed={completedOrders.has(selectedLesson.order)}
               locked={selectedLesson.order > unlockOrder}
+              session={lessonSessions[selectedLesson.id]}
+              onSessionChange={saveLessonSession}
               onReward={(rewards) => grantLessonReward(selectedLesson.order, rewards)}
               onComplete={(destination) => finishLesson(selectedLesson.order, destination)}
               onExit={returnToPracticeHome}
@@ -2770,6 +2833,8 @@ function LessonPanel({
   lessons,
   completed,
   locked,
+  session,
+  onSessionChange,
   onReward,
   onComplete,
   onExit,
@@ -2778,20 +2843,26 @@ function LessonPanel({
   lessons: Lesson[];
   completed: boolean;
   locked: boolean;
+  session?: CloudLessonSessionSnapshot;
+  onSessionChange: (lessonId: string, session: CloudLessonSessionSnapshot) => void;
   onReward: (rewards: LessonReward) => void;
   onComplete: (destination: LessonDestination) => void;
   onExit: () => void;
 }) {
-  const [heardChars, setHeardChars] = useState<Set<string>>(new Set());
+  const [heardChars, setHeardChars] = useState<Set<string>>(() => new Set(session?.heardChars ?? []));
   const [spotlightChar, setSpotlightChar] = useState<string | null>(null);
-  const [findUnlocked, setFindUnlocked] = useState(false);
-  const [practiceDoneCount, setPracticeDoneCount] = useState(0);
-  const [gameDoneCount, setGameDoneCount] = useState(0);
-  const [activeStage, setActiveStage] = useState(1);
+  const [findUnlocked, setFindUnlocked] = useState(session?.findUnlocked ?? false);
+  const [practiceDoneCount, setPracticeDoneCount] = useState(session?.practiceDoneCount ?? 0);
+  const [gameDoneCount, setGameDoneCount] = useState(session?.gameDoneCount ?? 0);
+  const [pictureCurrentIndex, setPictureCurrentIndex] = useState(session?.pictureCurrentIndex ?? 0);
+  const [pictureCompletedSentenceIds, setPictureCompletedSentenceIds] = useState<string[]>(session?.pictureCompletedSentenceIds ?? []);
+  const [activeStage, setActiveStage] = useState(clampInteger(session?.activeStage, 1, 4, 1));
   const [advancingStage, setAdvancingStage] = useState<number | null>(null);
   const [speakingTarget, setSpeakingTarget] = useState<SpeechTarget>(null);
   const [rewardState, setRewardState] = useState<"waiting" | "ready" | "claiming" | "claimed">("waiting");
   const [resetVersion, setResetVersion] = useState(0);
+  const appliedSessionKeyRef = useRef("");
+  const skipNextSessionSaveRef = useRef(false);
   const advanceRunRef = useRef(0);
   const speechRunRef = useRef(0);
   const hearRunRef = useRef(0);
@@ -2811,6 +2882,7 @@ function LessonPanel({
   const gamesDone = !usesSentenceGames || gameDoneCount >= requiredGameRounds;
   const lessonReady = soundUnlocked && findUnlocked && pictureDone && gamesDone;
   const progressSteps = [soundUnlocked, findUnlocked, pictureDone, ...(usesSentenceGames ? [gamesDone] : [])];
+  const availableStages = usesSentenceGames ? [1, 2, 3, 4] : [1, 2, 3];
   const lessonReward = { coins: 30, stars: 12 };
   const hasNextLesson = lessons.some((candidate) => candidate.order === lesson.order + 1);
   const lessonIntro = lessonIntroText(lesson);
@@ -2820,6 +2892,61 @@ function LessonPanel({
     if (locked) return;
     return startLessonAssetPreload(lesson);
   }, [lesson, locked]);
+
+  useEffect(() => {
+    const normalizedSession: CloudLessonSessionSnapshot = {
+      activeStage: clampInteger(session?.activeStage, 1, usesSentenceGames ? 4 : 3, 1),
+      heardChars: session?.heardChars ?? [],
+      findUnlocked: session?.findUnlocked ?? false,
+      practiceDoneCount: session?.practiceDoneCount ?? 0,
+      gameDoneCount: session?.gameDoneCount ?? 0,
+      pictureCurrentIndex: session?.pictureCurrentIndex ?? 0,
+      pictureCompletedSentenceIds: session?.pictureCompletedSentenceIds ?? [],
+    };
+    const sessionKey = JSON.stringify([lesson.id, normalizedSession]);
+    if (appliedSessionKeyRef.current === sessionKey) return;
+    appliedSessionKeyRef.current = sessionKey;
+    skipNextSessionSaveRef.current = true;
+    setHeardChars(new Set(normalizedSession.heardChars));
+    setFindUnlocked(normalizedSession.findUnlocked);
+    setPracticeDoneCount(normalizedSession.practiceDoneCount);
+    setGameDoneCount(normalizedSession.gameDoneCount);
+    setPictureCurrentIndex(normalizedSession.pictureCurrentIndex);
+    setPictureCompletedSentenceIds(normalizedSession.pictureCompletedSentenceIds);
+    setActiveStage(normalizedSession.activeStage);
+    setAdvancingStage(null);
+    setSpeakingTarget(null);
+  }, [lesson.id, session, usesSentenceGames]);
+
+  useEffect(() => {
+    if (locked) return;
+    const nextSession = {
+      activeStage,
+      heardChars: [...heardChars],
+      findUnlocked,
+      practiceDoneCount,
+      gameDoneCount,
+      pictureCurrentIndex,
+      pictureCompletedSentenceIds,
+    };
+    if (skipNextSessionSaveRef.current) {
+      skipNextSessionSaveRef.current = false;
+      return;
+    }
+    appliedSessionKeyRef.current = JSON.stringify([lesson.id, nextSession]);
+    onSessionChange(lesson.id, nextSession);
+  }, [
+    activeStage,
+    findUnlocked,
+    gameDoneCount,
+    heardChars,
+    lesson.id,
+    locked,
+    onSessionChange,
+    pictureCompletedSentenceIds,
+    pictureCurrentIndex,
+    practiceDoneCount,
+  ]);
 
   useEffect(() => {
     if (!locked) void speakForTarget("stage1", `${lessonIntro} ${hearPrompt}`);
@@ -2919,6 +3046,15 @@ function LessonPanel({
     return speakingTarget === `advance${stage}` || advancingStage === stage;
   }
 
+  function handleStageJump(stage: number) {
+    if (locked || activeStage === stage || !availableStages.includes(stage)) return;
+    advanceRunRef.current += 1;
+    stopPlayback();
+    setAdvancingStage(null);
+    setSpeakingTarget(null);
+    setActiveStage(stage);
+  }
+
   async function handleHearTarget(char: string) {
     if (locked || spotlightChar) return;
     const runId = hearRunRef.current + 1;
@@ -3007,6 +3143,20 @@ function LessonPanel({
         {lessonIntro}
       </NarrationLine>
 
+      <div className="stage-jump-row" aria-label="階段入口">
+        {availableStages.map((stage) => (
+          <button
+            key={stage}
+            type="button"
+            className={`stage-jump-button${activeStage === stage ? " active" : ""}`}
+            disabled={locked}
+            onClick={() => handleStageJump(stage)}
+          >
+            {stageLabel(stage)}
+          </button>
+        ))}
+      </div>
+
       <LessonBlock
         index={1}
         title="聽聽看"
@@ -3065,7 +3215,7 @@ function LessonPanel({
         index={2}
         title="找出這個字"
         done={findUnlocked}
-        locked={locked || activeStage < 2}
+        locked={locked}
         active={activeBlock(2)}
         visible={activeStage === 2}
       >
@@ -3074,14 +3224,14 @@ function LessonPanel({
             key={`find-${lesson.id}-${resetVersion}`}
             lesson={lesson}
             zhuyinMap={zhuyinMap}
-          disabled={locked || activeStage < 2}
-          speakingTarget={speakingTarget}
-          onSpeakStart={setSpeakingTarget}
-          onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
-          onComplete={() => setFindUnlocked(true)}
-        />
+            disabled={locked}
+            speakingTarget={speakingTarget}
+            onSpeakStart={setSpeakingTarget}
+            onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
+            onComplete={() => setFindUnlocked(true)}
+          />
         ) : (
-          <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
+          <p className="block-note">從上方階段入口打開這一段。</p>
         )}
       </LessonBlock>
 
@@ -3101,19 +3251,25 @@ function LessonPanel({
         index={3}
         title="看圖聽句子"
         done={pictureDone}
-        locked={locked || activeStage < 3}
+        locked={locked}
         active={activeBlock(3)}
         visible={activeStage === 3}
       >
         {activeStage < 3 ? (
-          <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
+          <p className="block-note">從上方階段入口打開這一段。</p>
         ) : (
           <PictureSentencePreview
             key={`picture-${lesson.id}-${resetVersion}`}
             lesson={lesson}
             zhuyinMap={zhuyinMap}
-            disabled={locked || activeStage < 3}
+            disabled={locked}
             done={pictureDone}
+            currentIndex={pictureCurrentIndex}
+            completedSentenceIds={pictureCompletedSentenceIds}
+            onProgress={(currentIndex, completedSentenceIds) => {
+              setPictureCurrentIndex(currentIndex);
+              setPictureCompletedSentenceIds(completedSentenceIds);
+            }}
             onSpeakStart={setSpeakingTarget}
             onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
             onDone={() => setPracticeDoneCount(1)}
@@ -3138,18 +3294,18 @@ function LessonPanel({
           index={4}
           title="句子遊戲"
           done={gamesDone}
-          locked={locked || activeStage < 4}
+          locked={locked}
           active={activeBlock(4)}
           visible={activeStage === 4}
         >
           {activeStage < 4 ? (
-            <p className="block-note">按紅色按鈕後，這裡才會開始。</p>
+            <p className="block-note">從上方階段入口打開這一段。</p>
           ) : (
             <SentencePracticePreview
               key={`practice-${lesson.id}-${resetVersion}`}
               lesson={lesson}
               zhuyinMap={zhuyinMap}
-              disabled={locked || activeStage < 4}
+              disabled={locked}
               doneCount={gameDoneCount}
               requiredCount={requiredGameRounds}
               onSpeakStart={setSpeakingTarget}
@@ -3203,6 +3359,8 @@ function LessonPanel({
               setPracticeDoneCount(0);
               setGameDoneCount(0);
               setActiveStage(1);
+              setPictureCurrentIndex(0);
+              setPictureCompletedSentenceIds([]);
               setAdvancingStage(null);
               setSpeakingTarget(null);
               setRewardState("waiting");
@@ -3638,6 +3796,9 @@ function PictureSentencePreview({
   zhuyinMap,
   disabled,
   done,
+  currentIndex,
+  completedSentenceIds,
+  onProgress,
   onSpeakStart,
   onSpeakEnd,
   onDone,
@@ -3646,16 +3807,19 @@ function PictureSentencePreview({
   zhuyinMap: Map<string, string>;
   disabled: boolean;
   done: boolean;
+  currentIndex: number;
+  completedSentenceIds: string[];
+  onProgress: (currentIndex: number, completedSentenceIds: string[]) => void;
   onSpeakStart: (target: SpeechTarget) => void;
   onSpeakEnd: (target: SpeechTarget) => void;
   onDone: () => void;
 }) {
   const [playingSentenceId, setPlayingSentenceId] = useState<string | null>(null);
   const [activeCharIndex, setActiveCharIndex] = useState<number | null>(null);
-  const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
-  const [completedSentenceIds, setCompletedSentenceIds] = useState<Set<string>>(new Set());
+  const currentSentenceIndex = Math.min(currentIndex, lesson.sentences.length);
+  const completedSentenceIdSet = useMemo(() => new Set(completedSentenceIds), [completedSentenceIds]);
   const sentenceButtonRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const allPicturesDone = completedSentenceIds.size >= lesson.sentences.length;
+  const allPicturesDone = completedSentenceIdSet.size >= lesson.sentences.length;
 
   useEffect(() => {
     if (!disabled && !done && allPicturesDone) onDone();
@@ -3678,9 +3842,7 @@ function PictureSentencePreview({
   }, [currentSentenceIndex, disabled, done, lesson.id, lesson.sentences.length]);
 
   function handleSentenceTap(sentence: LessonSentence, index: number) {
-    const canPlayCompleted = completedSentenceIds.has(sentence.id);
-    const canPlayCurrent = index === currentSentenceIndex;
-    if (disabled || (!canPlayCurrent && !canPlayCompleted) || playingSentenceId) return;
+    if (disabled || playingSentenceId) return;
     void playSentence(sentence, {
       onTime: (elapsedMs) => {
         setPlayingSentenceId(sentence.id);
@@ -3689,12 +3851,9 @@ function PictureSentencePreview({
       onEnded: () => {
         setActiveCharIndex(null);
         setPlayingSentenceId(null);
-        setCompletedSentenceIds((prev) => {
-          const next = new Set(prev);
-          next.add(sentence.id);
-          return next;
-        });
-        if (canPlayCurrent) setCurrentSentenceIndex((current) => Math.min(current + 1, lesson.sentences.length));
+        const nextCompleted = Array.from(new Set([...completedSentenceIds, sentence.id]));
+        const nextIndex = Math.max(currentSentenceIndex, Math.min(index + 1, lesson.sentences.length));
+        onProgress(nextIndex, nextCompleted);
       },
       onError: () => {
         setActiveCharIndex(null);
@@ -3717,7 +3876,7 @@ function PictureSentencePreview({
       <div className="picture-sentence-list">
         {lesson.sentences.map((sentence, index) => {
           const isCurrent = index === currentSentenceIndex;
-          const isCompleted = completedSentenceIds.has(sentence.id);
+          const isCompleted = completedSentenceIdSet.has(sentence.id);
           return (
           <button
             className={`picture-sentence-card${isCurrent ? " current-picture" : ""}${
@@ -3727,7 +3886,7 @@ function PictureSentencePreview({
             ref={(element) => {
               sentenceButtonRefs.current[index] = element;
             }}
-            disabled={disabled || (!isCurrent && !isCompleted) || Boolean(playingSentenceId)}
+            disabled={disabled || Boolean(playingSentenceId)}
             onClick={() => handleSentenceTap(sentence, index)}
           >
             {sentence.imageSrc ? (

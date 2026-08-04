@@ -77,6 +77,12 @@ Current app-level rule:
 - Progress sync must preserve server-side authorization fields when saving progress.
 - If stronger content security is required later, move lesson data/assets behind authenticated access; GitHub Pages static lesson assets cannot be truly hidden from someone who knows the URLs.
 
+Lesson session rule:
+
+- When a lesson is unlocked, all stages in that lesson must be directly enterable from the stage entrance controls. Do not require Stage 1 -> Stage 2 -> Stage 3 -> Stage 4 during review.
+- The app must persist per-lesson session state in `lessonSessions[L###]`, including `activeStage`, Stage 1 heard characters, Stage 2 completion, Stage 3 sentence progress, and Stage 4 completed round count.
+- Returning from another tab/window or after cloud sync loads should restore the same lesson position instead of resetting to Stage 1.
+
 ## Parallel Lesson Production SOP
 
 The teacher may intentionally run 2-3 lesson-production threads at the same time to keep curriculum creation moving. This is allowed when the next-character sequence is already chosen, for example one Codex thread prepares L050 while another prepares L051 and a third prepares L052.

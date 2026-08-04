@@ -289,7 +289,7 @@ See `docs/COLLECTION_SYSTEM.md` for the full economy and asset plan.
 
 ## Lesson Flow
 
-Lessons use a staged flow. L001-L005 use Stage 1-3. Current production lessons L006-L056 add Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+Lessons use a staged flow. L001-L005 use Stage 1-3. Current production lessons L006-L063 add Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
 
 Cloud device access rule:
 
@@ -298,6 +298,13 @@ Cloud device access rule:
 - Ordinary child/guest devices may sync their own progress, but they must keep the normal lesson unlock path.
 - The current app reads `devices/{deviceCode}.freeBrowse === true` as the authorization signal. Saving progress must preserve that server-side field and must not let the client grant it locally.
 - Static GitHub Pages assets are public, so this is an app-level permission for the lesson UI. If the product later requires hiding lesson content or media URLs from unauthorized users, curriculum data/assets must move behind authenticated storage or an API rather than staying fully static.
+
+Unlocked lesson navigation rule:
+
+- Once a lesson itself is unlocked, its internal stages must be directly accessible from the lesson's stage entrance controls. Do not force the child/teacher to redo Stage 1 and Stage 2 before entering Stage 3 or Stage 4.
+- The red "enter next stage" prompts remain useful guidance for first-time play, but they are not the only way to enter later stages.
+- Store and sync per-lesson session state so leaving the page, switching windows, or reopening the app can return to the same lesson position. The current state shape is `lessonSessions[L###]`: `activeStage`, `heardChars`, `findUnlocked`, `practiceDoneCount`, `gameDoneCount`, `pictureCurrentIndex`, and `pictureCompletedSentenceIds`.
+- Stage 3 sentence cards in an unlocked lesson may be tapped directly for review. Playback still marks the tapped sentence as completed and advances the stored Stage 3 position when appropriate.
 
 ### Stage 1: 聽聽看
 
