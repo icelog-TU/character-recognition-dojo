@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L073 | 出 | ready-blocked-by-dependency | Codex L073 出 thread | codex/l073-chu @ 0f847cb | L072:畫 | 畫 | `curriculum-workflow/lesson-requests/L073.json`; `curriculum-workflow/generated/L073-generation-packet.md`; `curriculum-workflow/drafts/L073-draft.json` | `public/assets/lessons/L073/images/`; `public/assets/lessons/L073/audio/` | Teacher approved L073 new char `出` and five final sentences in chat. Images, AI sentence audio, AI-aligned draft charTimings, Stage 4 option audio, and sentence-derived `出` char audio are prepared and pushed. Merge is blocked until L072 enters latest `origin/main`, then rebase and recheck against the real learned-character set. |
 
 ## Status Values
 
