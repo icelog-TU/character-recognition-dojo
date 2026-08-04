@@ -32,6 +32,9 @@ const TEACH_TAP_RECORDING_MS = 1300;
 type AppPage = "practice" | "catalog" | "records" | "gacha" | "collection" | "settings";
 type LessonCharEntry = { lesson: Lesson; char: string; index: number };
 type PracticeUnit = Lesson & { reviewNumber?: number; targetLessonRange?: ReviewLesson["targetLessonRange"] };
+type PracticeSequenceEntry =
+  | { kind: "lesson"; id: string; lesson: Lesson }
+  | { kind: "review"; id: string; review: ReviewLesson };
 type AudioWindow = Window & typeof globalThis & { webkitAudioContext?: typeof AudioContext };
 type AudioPlayOptions = {
   onTime?: (elapsedMs: number) => void;
@@ -41,14 +44,6 @@ type AudioPlayOptions = {
 type SpeechTarget = "lesson" | "stage1" | "stage2" | "stage3" | "stage4" | "advance2" | "advance3" | "advance4" | null;
 type LessonDestination = "home" | "next";
 type LessonReward = { coins: number; stars: number };
-type ReviewLessonSlot = {
-  id: string;
-  milestone: number;
-  sequence: 1 | 2;
-  reviewStart: number;
-  reviewEnd: number;
-  sentenceCount: number;
-};
 type RecordDetailKind = "coins" | "stars" | "streak";
 type PlaybackStatus = { playing: boolean; paused: boolean };
 type TeachCharacterPhase = "reading" | "asking" | "ready" | "priming" | "recording" | "reciting" | "done";
@@ -111,11 +106,6 @@ const RAINBOW_GROUPS = [
 ];
 type RainbowGroup = (typeof RAINBOW_GROUPS)[number];
 type CatalogSlot = { slotNumber: number; group: RainbowGroup; entry: LessonCharEntry | null };
-const REVIEW_FIRST_MILESTONE = 60;
-const REVIEW_MILESTONE_INTERVAL = 30;
-const REVIEW_LOOKBACK_LESSON_COUNT = 30;
-const REVIEW_SLOT_COUNT = 2;
-const REVIEW_SENTENCES_PER_SLOT = 5;
 const DEFAULT_PROFILE_LABELS = ["學習檔案一", "學習檔案二", "學習檔案三"];
 const LEGACY_PRIVATE_PROFILE_LABEL = String.fromCharCode(0x57f9, 0x5609);
 
@@ -962,26 +952,35 @@ function reviewLessonAsPracticeUnit(review: ReviewLesson): PracticeUnit {
   };
 }
 
-function nextReviewMilestone(lessons: Lesson[]): number {
-  const lastOrder = Math.max(...lessons.map((lesson) => lesson.order));
-  if (lastOrder <= REVIEW_FIRST_MILESTONE) return REVIEW_FIRST_MILESTONE;
-  return Math.ceil(lastOrder / REVIEW_MILESTONE_INTERVAL) * REVIEW_MILESTONE_INTERVAL;
+function practiceSequence(lessons: Lesson[], reviewLessons: ReviewLesson[]): PracticeSequenceEntry[] {
+  const reviewsByAfterOrder = new Map<number, ReviewLesson[]>();
+  for (const review of reviewLessons) {
+    const reviews = reviewsByAfterOrder.get(review.afterLessonOrder) ?? [];
+    reviews.push(review);
+    reviewsByAfterOrder.set(review.afterLessonOrder, reviews);
+  }
+  return lessons.flatMap((lesson) => [
+    { kind: "lesson" as const, id: lesson.id, lesson },
+    ...(reviewsByAfterOrder.get(lesson.order) ?? [])
+      .sort((a, b) => a.reviewNumber - b.reviewNumber)
+      .map((review) => ({ kind: "review" as const, id: review.id, review })),
+  ]);
 }
 
-function reviewSlotsForMilestone(milestone: number): ReviewLessonSlot[] {
-  const reviewStart = milestone - REVIEW_LOOKBACK_LESSON_COUNT * 2 + 1;
-  const reviewEnd = milestone - REVIEW_LOOKBACK_LESSON_COUNT;
-  return Array.from({ length: REVIEW_SLOT_COUNT }, (_, index) => {
-    const sequence = (index + 1) as 1 | 2;
-    return {
-      id: `R${String(milestone).padStart(3, "0")}-${sequence}`,
-      milestone,
-      sequence,
-      reviewStart,
-      reviewEnd,
-      sentenceCount: REVIEW_SENTENCES_PER_SLOT,
-    };
-  });
+function practiceEntryLabel(entry: PracticeSequenceEntry): string {
+  return entry.kind === "lesson" ? lessonLabel(entry.lesson) : reviewLessonLabel(entry.review);
+}
+
+function practiceEntryBadge(entry: PracticeSequenceEntry): string {
+  return entry.kind === "lesson" ? `第 ${entry.lesson.order} 課` : `第 ${entry.review.afterLessonOrder} 課後`;
+}
+
+function practiceEntryComplete(entry: PracticeSequenceEntry, completedOrders: Set<number>, completedReviewIds: Set<string>): boolean {
+  return entry.kind === "lesson" ? completedOrders.has(entry.lesson.order) : completedReviewIds.has(entry.review.id);
+}
+
+function nextPracticeEntry(entries: PracticeSequenceEntry[], completedOrders: Set<number>, completedReviewIds: Set<string>): PracticeSequenceEntry {
+  return entries.find((entry) => !practiceEntryComplete(entry, completedOrders, completedReviewIds)) ?? entries[entries.length - 1];
 }
 
 function smallZhNumber(value: number): string {
@@ -1137,10 +1136,13 @@ function normalizeStoredProgress(parsed: Partial<StoredProgress> | null | undefi
   const completedOrders = Array.isArray(parsed.completedOrders)
     ? parsed.completedOrders.filter((order): order is number => Number.isInteger(order))
     : [];
+  const completedReviewIds = Array.isArray(parsed.completedReviewIds)
+    ? parsed.completedReviewIds.filter((id): id is string => /^R\d{3}$/.test(String(id)))
+    : [];
   const coins = Number.isFinite(parsed.coins) ? Number(parsed.coins) : 120;
   const stars = Number.isFinite(parsed.stars) ? Number(parsed.stars) : 36;
-  const estimatedCoinsEarned = Math.max(coins, completedOrders.length * 30);
-  const estimatedStarsEarned = Math.max(stars, completedOrders.length * 12);
+  const estimatedCoinsEarned = Math.max(coins, (completedOrders.length + completedReviewIds.length) * 30);
+  const estimatedStarsEarned = Math.max(stars, (completedOrders.length + completedReviewIds.length) * 12);
   return {
     version: 1,
     coins,
@@ -1157,6 +1159,7 @@ function normalizeStoredProgress(parsed: Partial<StoredProgress> | null | undefi
       : 0,
     selectedOrder: Number.isInteger(parsed.selectedOrder) ? Number(parsed.selectedOrder) : 1,
     completedOrders,
+    completedReviewIds,
     ownedCharacters: sanitizeOwnedCharacters(parsed.ownedCharacters),
     characterHearts: sanitizeCharacterHearts(parsed.characterHearts),
     seenCharacterInteractions: sanitizeSeenCharacterInteractions(parsed.seenCharacterInteractions),
@@ -1170,7 +1173,7 @@ function sanitizeLessonSessions(
   if (!sessions || typeof sessions !== "object") return {};
   return Object.fromEntries(
     Object.entries(sessions)
-      .filter(([lessonId]) => /^L\d{3}$/.test(lessonId))
+      .filter(([lessonId]) => /^[LR]\d{3}$/.test(lessonId))
       .map(([lessonId, session]) => [
         lessonId,
         {
@@ -1279,6 +1282,7 @@ function createStarterProgressSnapshot(selectedOrder = 1): StoredProgress {
     duplicateGachaStreak: 0,
     selectedOrder,
     completedOrders: [],
+    completedReviewIds: [],
     ownedCharacters: {},
     characterHearts: {},
     seenCharacterInteractions: {},
@@ -1298,6 +1302,9 @@ function App() {
   const [recordDetail, setRecordDetail] = useState<RecordDetailKind | null>(null);
   const [completedOrders, setCompletedOrders] = useState<Set<number>>(
     () => new Set(initialProgress?.completedOrders ?? []),
+  );
+  const [completedReviewIds, setCompletedReviewIds] = useState<Set<string>>(
+    () => new Set(initialProgress?.completedReviewIds ?? []),
   );
   const [lessonOpen, setLessonOpen] = useState(false);
   const [activeReviewId, setActiveReviewId] = useState<string | null>(null);
@@ -1337,15 +1344,29 @@ function App() {
   const [freeBrowse, setFreeBrowse] = useState(false);
   const [lastGachaResult, setLastGachaResult] = useState<GachaDrawResult | null>(null);
   const [collectionFocus, setCollectionFocus] = useState<CollectionFocus>({ realmId: "land", characterId: null, nonce: 0 });
+  const practiceEntries = useMemo(() => practiceSequence(curriculum.lessons, curriculum.reviewLessons ?? []), []);
+  const currentPracticeEntry = nextPracticeEntry(practiceEntries, completedOrders, completedReviewIds);
+  const currentPracticeIndex = Math.max(0, practiceEntries.findIndex((entry) => entry.id === currentPracticeEntry.id));
+  const unlockedPracticeEntries = freeBrowse
+    ? practiceEntries
+    : practiceEntries.filter((entry, index) => index <= currentPracticeIndex || practiceEntryComplete(entry, completedOrders, completedReviewIds));
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
   const latestLessonOrder = curriculum.lessons[curriculum.lessons.length - 1]?.order ?? nextOrder;
-  const unlockOrder = freeBrowse ? latestLessonOrder : nextOrder;
+  const unlockOrder = freeBrowse
+    ? latestLessonOrder
+    : Math.max(
+        1,
+        ...unlockedPracticeEntries
+          .filter((entry): entry is Extract<PracticeSequenceEntry, { kind: "lesson" }> => entry.kind === "lesson")
+          .map((entry) => entry.lesson.order),
+      );
   const [selectedOrder, setSelectedOrder] = useState(initialProgress?.selectedOrder ?? nextOrder);
   const playbackState = usePlaybackState();
   const selectedLesson =
     curriculum.lessons.find((lesson) => lesson.order === selectedOrder) ?? curriculum.lessons[0];
   const activeReviewLesson = (curriculum.reviewLessons ?? []).find((review) => review.id === activeReviewId) ?? null;
   const activePracticeUnit = activeReviewLesson ? reviewLessonAsPracticeUnit(activeReviewLesson) : selectedLesson;
+  const hasNextPracticeEntry = practiceEntries.some((entry, index) => entry.id === activePracticeUnit.id && index < practiceEntries.length - 1);
   const streakDays = currentStreakDays(dailyRecords, completedOrders);
   const progressSnapshot = useMemo<StoredProgress>(
     () => ({
@@ -1358,6 +1379,7 @@ function App() {
       duplicateGachaStreak,
       selectedOrder,
       completedOrders: [...completedOrders],
+      completedReviewIds: [...completedReviewIds],
       ownedCharacters,
       characterHearts,
       seenCharacterInteractions,
@@ -1372,6 +1394,7 @@ function App() {
       duplicateGachaStreak,
       selectedOrder,
       completedOrders,
+      completedReviewIds,
       ownedCharacters,
       characterHearts,
       seenCharacterInteractions,
@@ -1514,6 +1537,7 @@ function App() {
     setDuplicateGachaStreak(progress.duplicateGachaStreak);
     setSelectedOrder(progress.selectedOrder);
     setCompletedOrders(new Set(progress.completedOrders));
+    setCompletedReviewIds(new Set(progress.completedReviewIds ?? []));
     setOwnedCharacters(progress.ownedCharacters);
     setCharacterHearts(progress.characterHearts);
     setSeenCharacterInteractions(progress.seenCharacterInteractions);
@@ -1643,6 +1667,32 @@ function App() {
     });
   }
 
+  function grantReviewReward(reviewId: string, rewards: LessonReward) {
+    if (completedReviewIds.has(reviewId)) return;
+    setCoins((value) => value + rewards.coins);
+    setStars((value) => value + rewards.stars);
+    setTotalCoinsEarned((value) => value + rewards.coins);
+    setTotalStarsEarned((value) => value + rewards.stars);
+    setDailyRecords((prev) => {
+      const date = todayKey();
+      const current = prev[date] ?? { date, coinsEarned: 0, starsEarned: 0, lessonOrders: [] };
+      return {
+        ...prev,
+        [date]: {
+          date,
+          coinsEarned: current.coinsEarned + rewards.coins,
+          starsEarned: current.starsEarned + rewards.stars,
+          lessonOrders: current.lessonOrders,
+        },
+      };
+    });
+    setCompletedReviewIds((prev) => {
+      const next = new Set(prev);
+      next.add(reviewId);
+      return next;
+    });
+  }
+
   function handleGachaDraw() {
     if (coins < 10) return;
     const realmId = activeGachaRealm(ownedCharacters);
@@ -1686,20 +1736,39 @@ function App() {
   }
 
   function finishLesson(order: number, destination: LessonDestination) {
-    const following = curriculum.lessons.find((lesson) => lesson.order === order + 1);
-    if (following) setSelectedOrder(following.order);
+    const currentIndex = practiceEntries.findIndex((entry) => entry.kind === "lesson" && entry.lesson.order === order);
+    const following = currentIndex >= 0 ? practiceEntries[currentIndex + 1] : null;
     setActiveReviewId(null);
-    setLessonOpen(destination === "next" && Boolean(following));
-    setCompletionNotice(following ? `第 ${order} 課完成，已解鎖第 ${following.order} 課。` : `第 ${order} 課完成。`);
+    if (destination === "next" && following) {
+      if (following.kind === "lesson") {
+        setSelectedOrder(following.lesson.order);
+        setLessonOpen(true);
+        setCompletionNotice(`第 ${order} 課完成，接著可以練第 ${following.lesson.order} 課。`);
+        return;
+      }
+      setActiveReviewId(following.review.id);
+      setLessonOpen(true);
+      setCompletionNotice(`第 ${order} 課完成，接著可以練${reviewLessonLabel(following.review)}。`);
+      return;
+    }
+    setLessonOpen(false);
+    setCompletionNotice(`第 ${order} 課完成。`);
   }
 
   function finishReview(review: ReviewLesson, destination: LessonDestination) {
-    const following = curriculum.lessons.find((lesson) => lesson.order === review.afterLessonOrder + 1);
+    const currentIndex = practiceEntries.findIndex((entry) => entry.kind === "review" && entry.review.id === review.id);
+    const following = currentIndex >= 0 ? practiceEntries[currentIndex + 1] : null;
     setActiveReviewId(null);
     if (destination === "next" && following) {
-      setSelectedOrder(following.order);
+      if (following.kind === "lesson") {
+        setSelectedOrder(following.lesson.order);
+        setLessonOpen(true);
+        setCompletionNotice(`${reviewLessonLabel(review)}完成，接著可以練第 ${following.lesson.order} 課。`);
+        return;
+      }
+      setActiveReviewId(following.review.id);
       setLessonOpen(true);
-      setCompletionNotice(`${reviewLessonLabel(review)}完成，接著可以練第 ${following.order} 課。`);
+      setCompletionNotice(`${reviewLessonLabel(review)}完成，接著可以練${reviewLessonLabel(following.review)}。`);
       return;
     }
     setLessonOpen(false);
@@ -1816,11 +1885,10 @@ function App() {
       <main className="app-shell">
         {page === "practice" && !lessonOpen && (
           <PracticeHome
-            lessons={curriculum.lessons}
-            reviewLessons={curriculum.reviewLessons ?? []}
+            unlockedEntries={unlockedPracticeEntries}
+            currentEntry={currentPracticeEntry}
             completedOrders={completedOrders}
-            nextOrder={nextOrder}
-            unlockOrder={unlockOrder}
+            completedReviewIds={completedReviewIds}
             notice={completionNotice}
             startingOrder={startingOrder}
             onStart={startLessonWithFeedback}
@@ -1840,8 +1908,9 @@ function App() {
               key={activePracticeUnit.id}
               lesson={activePracticeUnit}
               lessons={curriculum.lessons}
-              completed={activeReviewLesson ? true : completedOrders.has(selectedLesson.order)}
+              completed={activeReviewLesson ? completedReviewIds.has(activeReviewLesson.id) : completedOrders.has(selectedLesson.order)}
               locked={activeReviewLesson ? activeReviewLesson.afterLessonOrder > unlockOrder : selectedLesson.order > unlockOrder}
+              hasNext={hasNextPracticeEntry}
               session={lessonSessions[activePracticeUnit.id]}
               unitBadge={activeReviewLesson ? `第 ${activeReviewLesson.afterLessonOrder} 課後` : undefined}
               unitTitle={activeReviewLesson ? reviewLessonLabel(activeReviewLesson) : undefined}
@@ -1850,7 +1919,8 @@ function App() {
               isReview={Boolean(activeReviewLesson)}
               onSessionChange={saveLessonSession}
               onReward={(rewards) => {
-                if (!activeReviewLesson) grantLessonReward(selectedLesson.order, rewards);
+                if (activeReviewLesson) grantReviewReward(activeReviewLesson.id, rewards);
+                else grantLessonReward(selectedLesson.order, rewards);
               }}
               onComplete={(destination) => {
                 if (activeReviewLesson) finishReview(activeReviewLesson, destination);
@@ -1940,32 +2010,28 @@ function App() {
 }
 
 function PracticeHome({
-  lessons,
-  reviewLessons,
+  unlockedEntries,
+  currentEntry,
   completedOrders,
-  nextOrder,
-  unlockOrder,
+  completedReviewIds,
   notice,
   startingOrder,
   onStart,
   onStartReview,
 }: {
-  lessons: Lesson[];
-  reviewLessons: ReviewLesson[];
+  unlockedEntries: PracticeSequenceEntry[];
+  currentEntry: PracticeSequenceEntry;
   completedOrders: Set<number>;
-  nextOrder: number;
-  unlockOrder: number;
+  completedReviewIds: Set<string>;
   notice: string;
   startingOrder: number | null;
   onStart: (order: number) => void;
   onStartReview: (reviewId: string) => void;
 }) {
-  const nextLesson = lessons.find((lesson) => lesson.order === nextOrder) ?? lessons[lessons.length - 1];
-  const unlockedEntries = flattenLessonChars(lessons.filter((lesson) => lesson.order <= unlockOrder)).slice(-12);
-  const availableReviewLessons = reviewLessons
-    .filter((review) => review.afterLessonOrder <= unlockOrder || completedOrders.has(review.afterLessonOrder))
-    .sort((a, b) => a.reviewNumber - b.reviewNumber);
-  const reviewSlots = reviewSlotsForMilestone(nextReviewMilestone(lessons));
+  const visibleEntries = unlockedEntries.slice(-12);
+  const currentIsLesson = currentEntry.kind === "lesson";
+  const currentStarting = currentIsLesson && startingOrder === currentEntry.lesson.order;
+  const completedUnitCount = completedOrders.size + completedReviewIds.size;
 
   return (
     <section className="page-panel practice-home">
@@ -1980,71 +2046,44 @@ function PracticeHome({
       <div className="next-lesson-panel">
         <div>
           <span className="pill">從這裡開始</span>
-          <h2>第 {nextLesson.order} 課：{lessonLabel(nextLesson)}</h2>
+          <h2>{practiceEntryBadge(currentEntry)}：{practiceEntryLabel(currentEntry)}</h2>
           <NarrationLine text={GUIDE_TEXT.homeNext}>
             {GUIDE_TEXT.homeNext}
           </NarrationLine>
         </div>
         <button
-          className={`btn start-lesson-button${startingOrder === nextLesson.order ? " starting" : ""}`}
-          onClick={() => onStart(nextLesson.order)}
+          className={`btn start-lesson-button${currentStarting ? " starting" : ""}`}
+          onClick={() => {
+            if (currentEntry.kind === "lesson") onStart(currentEntry.lesson.order);
+            else onStartReview(currentEntry.review.id);
+          }}
           disabled={startingOrder !== null}
         >
-          {startingOrder === nextLesson.order ? "走囉" : `開始第 ${nextLesson.order} 課`}
+          {currentStarting ? "走囉" : currentEntry.kind === "lesson" ? `開始第 ${currentEntry.lesson.order} 課` : `開始${reviewLessonLabel(currentEntry.review)}`}
         </button>
       </div>
 
       <div className="home-section-heading">
-        <h2>我的字卡</h2>
-        <span>{completedOrders.size} 課完成</span>
+        <h2>我的課程</h2>
+        <span>{completedUnitCount} 個完成</span>
       </div>
       <div className="home-char-grid">
-        {unlockedEntries.map((entry) => (
-          <button
-            className={`home-char-card${completedOrders.has(entry.lesson.order) ? " completed" : ""}`}
-            key={`${entry.lesson.id}-${entry.char}-${entry.index}`}
-            onClick={() => onStart(entry.lesson.order)}
-          >
-            <span>第 {entry.lesson.order} 課</span>
-            <strong>{entry.char}</strong>
-          </button>
-        ))}
-      </div>
-
-      {availableReviewLessons.length > 0 && (
-        <>
-          <div className="home-section-heading">
-            <h2>複習課程</h2>
-            <span>已開放</span>
-          </div>
-          <div className="review-slot-grid" aria-label="複習課程">
-            {availableReviewLessons.map((review) => (
-              <button className="review-slot-card review-lesson-card" key={review.id} type="button" onClick={() => onStartReview(review.id)}>
-                <span>第 {review.afterLessonOrder} 課後</span>
-                <strong>{reviewLessonLabel(review)}</strong>
-                <small>
-                  每回 {review.sentences.length} 句，複習第 {review.targetLessonRange.startOrder}-{review.targetLessonRange.endOrder} 課
-                </small>
-              </button>
-            ))}
-          </div>
-        </>
-      )}
-
-      <div className="home-section-heading">
-        <h2>複習預留</h2>
-        <span>每 30 課整理一次</span>
-      </div>
-      <div className="review-slot-grid" aria-label="複習預留">
-        {reviewSlots.map((slot) => (
-          <article className="review-slot-card" key={slot.id}>
-            <span>第 {slot.milestone} 課後</span>
-            <strong>複習{smallZhNumber(slot.sequence)}</strong>
-            <small>
-              每回 {slot.sentenceCount} 句，複習第 {slot.reviewStart}-{slot.reviewEnd} 課
-            </small>
-          </article>
-        ))}
+        {visibleEntries.map((entry) => {
+          const completed = practiceEntryComplete(entry, completedOrders, completedReviewIds);
+          return (
+            <button
+              className={`home-char-card${entry.kind === "review" ? " review-card" : ""}${completed ? " completed" : ""}`}
+              key={entry.id}
+              onClick={() => {
+                if (entry.kind === "lesson") onStart(entry.lesson.order);
+                else onStartReview(entry.review.id);
+              }}
+            >
+              <span>{practiceEntryBadge(entry)}</span>
+              <strong>{practiceEntryLabel(entry)}</strong>
+            </button>
+          );
+        })}
       </div>
     </section>
   );
@@ -3348,6 +3387,7 @@ function LessonPanel({
   lessons,
   completed,
   locked,
+  hasNext,
   session,
   unitBadge,
   unitTitle,
@@ -3363,6 +3403,7 @@ function LessonPanel({
   lessons: Lesson[];
   completed: boolean;
   locked: boolean;
+  hasNext: boolean;
   session?: CloudLessonSessionSnapshot;
   unitBadge?: string;
   unitTitle?: string;
@@ -3410,8 +3451,7 @@ function LessonPanel({
   const lessonReady = soundUnlocked && findUnlocked && pictureDone && gamesDone;
   const progressSteps = isReview ? [pictureDone, ...(usesSentenceGames ? [gamesDone] : [])] : [soundUnlocked, findUnlocked, pictureDone, ...(usesSentenceGames ? [gamesDone] : [])];
   const availableStages = isReview ? (usesSentenceGames ? [3, 4] : [3]) : usesSentenceGames ? [1, 2, 3, 4] : [1, 2, 3];
-  const lessonReward = isReview ? { coins: 0, stars: 0 } : { coins: 30, stars: 12 };
-  const hasNextLesson = lessons.some((candidate) => candidate.order === lesson.order + 1);
+  const lessonReward = { coins: 30, stars: 12 };
   const lessonIntro = unitIntro ?? lessonIntroText(lesson);
   const hearPrompt = hearPromptText(lesson);
 
@@ -3866,7 +3906,7 @@ function LessonPanel({
           state={rewardState}
           reward={lessonReward}
           alreadyCompleted={completed && rewardState !== "claiming"}
-          hasNext={hasNextLesson}
+          hasNext={hasNext}
           onClaim={handleClaimReward}
           onHome={() => handleRewardDestination("home")}
           onNext={() => handleRewardDestination("next")}

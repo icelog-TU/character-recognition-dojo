@@ -60,15 +60,15 @@
 
 The app has a character collection system connected to lesson completion.
 
-- A first-time lesson completion grants 30 coins and 12 stars.
-- Gacha draws cost 10 coins each, so one completed lesson can fund 3 draws.
+- A first-time lesson or review-module completion grants 30 coins and 12 stars.
+- Gacha draws cost 10 coins each, so one completed lesson or review module can fund 3 draws.
 - If five consecutive gacha draws are duplicates and the current realm still has missing characters, the next draw must be a new character.
 - Stars are used to raise collected character affection.
 - Spending 3 stars adds 1 heart to one owned character.
 - Each character can have up to 10 affection hearts.
 - Character interactions unlock by hearts: 1 heart is 打招呼, 2 hearts is 聊聊天, and later hearts unlock additional deterministic role-specific activities.
 - Interaction text should follow the existing Justin app pattern: deterministic per character, varied across characters, and seen interactions should not keep sparkling after they are opened.
-- Replaying an already completed lesson does not grant another reward.
+- Replaying an already completed lesson or review module does not grant another reward.
 - The collection is split into four realms: 地上的生物, 海裡的生物, 天上的生物, 外太空的生物.
 - Realms unlock in order from land to sea to sky to space.
 - Each realm has 15 species.
@@ -108,10 +108,11 @@ L001-L005 use picture-supported sentence listening without Stage 4. Current prod
 
 The curriculum adds two review modules after every 30-lesson milestone starting after L060. These are separate review units, not numbered lessons.
 
-- After L060: R001/R002 cover all new characters from L001-L030. The next new-character lesson is L061.
+- After L060: R001/R002 cover all new characters from L001-L030. The playable path is `L060` -> `R001` -> `R002` -> `L061`; the next new-character lesson id is still L061.
 - After L090: R003/R004 cover all new characters from L031-L060. The next new-character lesson is L091.
 - After L120: R005/R006 cover all new characters from L061-L090.
-- Production-ready review modules must render as playable cards on the practice home. Future review slots that are not built yet may render only as reservation cards.
+- Production-ready review modules must render as playable square cards in the same course-card grid as numbered lessons. Future review slots that are not built yet must not appear as playable or reservation cards on the practice home.
+- Review modules must grant the same one-time reward as lessons, and their `下一課` button must advance to the next review module or numbered lesson in the playable path.
 - Continue the same pattern.
 
 Each review pair has 10 sentences total, and every character introduced in the target 30-lesson range must appear at least once across those 10 sentences.

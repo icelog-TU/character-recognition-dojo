@@ -4,18 +4,18 @@ This document records the reward collection design for `認字練功房`.
 
 ## Current Direction
 
-The app will eventually contain about 600 lessons. Each first-time lesson completion grants:
+The app will eventually contain about 600 lessons, plus review modules after every 30-lesson milestone. Each first-time lesson or review-module completion grants:
 
 - 30 coins
 - 12 stars
 
 Coins are used for gacha draws. Stars are used to raise character affection.
 
-Each gacha draw costs 10 coins, so one completed lesson gives enough coins for 3 draws.
+Each gacha draw costs 10 coins, so one completed lesson or review module gives enough coins for 3 draws.
 
 At 600 lessons, the baseline economy gives at least 1800 draws. Because duplicate draws are allowed, long-term play may involve 3000-4000 draws.
 
-Important rule: replaying an already completed lesson must not grant the reward again. Review is allowed, reward farming is not.
+Important rule: replaying an already completed lesson or review module must not grant the reward again. Review is allowed, reward farming is not.
 
 ## Affection
 

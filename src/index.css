@@ -1141,49 +1141,13 @@ button {
   border-color: var(--primary);
 }
 
-.review-slot-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+.home-char-card.review-card {
+  background: color-mix(in srgb, var(--accent-soft) 52%, #fff);
+  border-color: color-mix(in srgb, var(--accent) 34%, var(--line));
 }
 
-.review-slot-card {
-  min-height: 106px;
-  display: grid;
-  gap: 6px;
-  align-content: center;
-  border: 1px dashed color-mix(in srgb, var(--primary) 48%, var(--line));
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--green-soft) 58%, #fff);
-  color: var(--ink);
-  padding: 12px;
-}
-
-.review-lesson-card {
-  border-style: solid;
-  cursor: pointer;
-  text-align: left;
-}
-
-.review-lesson-card:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--primary) 60%, #fff);
-  outline-offset: 3px;
-}
-
-.review-lesson-card:active {
-  transform: translateY(1px);
-}
-
-.review-slot-card span,
-.review-slot-card small {
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.review-slot-card strong {
-  font-size: 1.25rem;
-  line-height: 1.1;
+.home-char-card.review-card strong {
+  font-size: 1.45rem;
 }
 
 .top-bar {
@@ -3925,10 +3889,6 @@ button.char-token {
 
   .home-char-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .review-slot-grid {
-    grid-template-columns: 1fr;
   }
 
   .header-title strong {

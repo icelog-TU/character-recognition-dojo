@@ -35,6 +35,7 @@ export type CloudProgressSnapshot = {
   duplicateGachaStreak: number;
   selectedOrder: number;
   completedOrders: number[];
+  completedReviewIds?: string[];
   ownedCharacters: Record<string, number>;
   characterHearts: Record<string, number>;
   seenCharacterInteractions: Record<string, number[]>;

@@ -56,10 +56,12 @@ Review module note:
 
 - Review modules are planned after every 30-lesson milestone starting after L060.
 - Review modules are not lessons. They use `R###` ids, display as `複習一`, `複習二`, and live in top-level `reviewLessons`.
+- Production-ready review modules in `reviewLessons` are inserted into the playable course sequence and square course-card grid after their `afterLessonOrder`. Example: `L060` -> `R001` -> `R002` -> `L061`.
+- Review modules grant the same one-time completion reward as lessons. Replays must not grant another reward.
 - The first pair after L060 is R001/R002 and covers L001-L030; the second pair after L090 is R003/R004 and covers L031-L060.
 - Each review module has 5 sentences, and each two-module pair must cover every new character from its target 30-lesson range at least once.
 - Do not add empty placeholder review modules to this JSON. Add review modules only after the review module flow, sentences, images, audio, timings, and pair-level coverage checklist are production-ready.
-- Do not create L061/L062 as review modules; after L060, L061 remains the next new-character lesson.
+- Do not create L061/L062 as review modules; after L060, L061 remains the next new-character lesson id, but the playable path must pass through R001/R002 first.
 
 ## Review Module
 

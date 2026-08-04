@@ -216,11 +216,13 @@ Rules:
 - Review modules use `R###` ids, display as `複習一`, `複習二`, and live in top-level `reviewLessons`, not `lessons`.
 - Review module assets live under `public/assets/reviews/R###/`, not `public/assets/lessons/L###/`.
 - Review request files live under `curriculum-workflow/review-requests/R###.json`, not `curriculum-workflow/lesson-requests/L###.json`.
-- Do not create `L061` or `L062` as review placeholders. After L060, `L061` is the next new-character lesson.
+- Do not create `L061` or `L062` as review placeholders. `L061` is the next new-character lesson id, but the playable path after L060 is `R001` -> `R002` -> `L061`.
 - Review sentence text may use characters learned by the milestone, but the required coverage target is the older 30-lesson range.
 - The two review modules should be planned as one pair so coverage can be checked across all 10 sentences before either module ships.
 - Do not add placeholder review modules to `src/curriculum/sample-lessons.json`. Only add production-ready review modules to top-level `reviewLessons` after sentences, images, audio, timings, Stage 4 games, and review coverage are complete.
-- Production-ready review modules in `reviewLessons` must appear as playable review cards on the practice home. Future review pairs that are not production-ready may appear only as non-playable reservation cards.
+- Production-ready review modules in `reviewLessons` must be inserted into the same playable sequence and square course-card grid as numbered lessons. They are not a separate reservation section.
+- Review modules grant the same one-time completion reward as lessons. Replaying an already completed review module must not grant another reward.
+- The review module `下一課` button must follow the playable sequence. Example: `L060` -> `R001` -> `R002` -> `L061`.
 - The first playable pair is after L060: R001/R002, two 5-sentence review modules covering all new characters from L001-L030.
 
 ## Dependency Recheck Before Merge

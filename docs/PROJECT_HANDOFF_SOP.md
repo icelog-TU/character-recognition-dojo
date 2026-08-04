@@ -93,6 +93,8 @@ Before editing, state the exact ownership in chat, including lesson id and owned
   - `public/assets/lessons/L058/images/L058-S03.webp`
 - Final sentence images must be WebP, phone-sized, and compressed according to `docs/CURRICULUM_PRODUCTION_SOP.md`.
 - Review modules use `R###`, live in top-level `reviewLessons`, introduce no new characters, and do not consume `L###` lesson numbers.
+- Production-ready review modules must be inserted into the normal playable course sequence and square course-card grid. Example path: `L060` -> `R001` -> `R002` -> `L061`.
+- Review modules grant the same one-time reward as lessons. Replaying a completed review module must not grant another reward.
 - Account progress belongs to profiles under `accounts/{uid}/profiles/{profileId}`. Device records under `accounts/{uid}/devices/{deviceId}` identify phones/tablets by generated system ID and store `activeProfileId`.
 - A family account has up to three active learning profiles. Default labels are `學習檔案一`, `學習檔案二`, and `學習檔案三`; users may rename profile labels to names such as `媽媽`, `哥哥`, and `妹妹`.
 - The app header account/profile button is the primary switching surface. It must show the signed-in account first, then the three learning profiles, and link into Settings for profile renaming.
