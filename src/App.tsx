@@ -3466,12 +3466,26 @@ function LessonPanel({
     return speakingTarget === `advance${stage}` || advancingStage === stage;
   }
 
+  function resetCompletedLessonStage(stage: number) {
+    const heardPrerequisites = stage > 1 ? new Set(newChars) : new Set<string>();
+    setHeardChars(heardPrerequisites);
+    setFindUnlocked(stage > 2);
+    setPracticeDoneCount(stage > 3 ? 1 : 0);
+    setGameDoneCount(0);
+    setPictureCurrentIndex(0);
+    setPictureCompletedSentenceIds(stage > 3 ? lesson.sentences.map((sentence) => sentence.id) : []);
+    setRewardState("waiting");
+    setResetVersion((version) => version + 1);
+  }
+
   function handleStageJump(stage: number) {
-    if (locked || activeStage === stage || !availableStages.includes(stage)) return;
+    if (locked || !availableStages.includes(stage)) return;
+    if (activeStage === stage && !completed) return;
     advanceRunRef.current += 1;
     stopPlayback();
     setAdvancingStage(null);
     setSpeakingTarget(null);
+    if (completed) resetCompletedLessonStage(stage);
     setActiveStage(stage);
   }
 

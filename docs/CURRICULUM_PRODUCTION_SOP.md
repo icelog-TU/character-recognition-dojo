@@ -91,6 +91,7 @@ Current app-level rule:
 Lesson session rule:
 
 - When a lesson is unlocked, all stages in that lesson must be directly enterable from the stage entrance controls. Do not require Stage 1 -> Stage 2 -> Stage 3 -> Stage 4 during review.
+- When a completed lesson is reopened from a stage entrance, that selected stage must restart from that stage's beginning instead of showing the previously completed advance/reward prompt.
 - The app must persist per-lesson session state in `lessonSessions[L###]`, including `activeStage`, Stage 1 heard characters, Stage 2 completion, Stage 3 sentence progress, and Stage 4 completed round count.
 - Returning from another tab/window or after cloud sync loads should restore the same lesson position instead of resetting to Stage 1.
 

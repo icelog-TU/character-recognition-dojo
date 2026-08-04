@@ -98,6 +98,7 @@ Before editing, state the exact ownership in chat, including lesson id and owned
 - The app header account/profile button is the primary switching surface. It must show the signed-in account first, then the three learning profiles, and link into Settings for profile renaming.
 - Free browsing is an internal Firestore device authorization for approved teacher/parent devices only; it must not appear as a user-facing mode or toggle.
 - Unlocked lessons must allow direct entry to any stage. Do not force Stage 1 -> Stage 2 -> Stage 3 -> Stage 4 during review.
+- In completed lessons, direct stage entry is replay mode: the selected stage must start at that stage's beginning instead of showing the old completed-stage advance prompt.
 - Preserve user/other-thread changes. Never revert unrelated work unless explicitly requested.
 
 ## Windows UTF-8
