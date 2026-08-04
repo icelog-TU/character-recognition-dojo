@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L074 | 路 | claimed | Codex thread 2026-08-04 L074 路 | codex/prepare-l074-lu / local | L073:學 | 學 | `curriculum-workflow/lesson-requests/L074.json`; `curriculum-workflow/generated/L074-generation-packet.md` | `curriculum-workflow/audio-inbox/L074/`; `public/assets/lessons/L074/` | Teacher approved new character `路` and five final sentences in chat. Prepare request, packet, images, and audio only; do not merge production JSON until L073 `學` is merged and L074 is rechecked. |
 
 ## Status Values
 
