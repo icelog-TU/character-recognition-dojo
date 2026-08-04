@@ -82,6 +82,7 @@ Before editing, state the exact ownership in chat, including lesson id and owned
 
 - Use Taiwan zhuyin only. Do not use Hanyu pinyin.
 - AI sentences are drafts until teacher approved.
+- AI recommended next characters are also drafts. Do not treat a recommendation file, `approval.selectedChoiceId`, or an unmerged lesson request as a reserved lesson choice unless the teacher explicitly approved that character and final sentence set.
 - Sentence drafting must follow `docs/SENTENCE_GENERATION_SOP.md`.
 - Production audio must use the standard AI audio -> `assets:audio` -> `assets:align:ai` pipeline unless the teacher explicitly approves an exception.
 - Before saying FFmpeg, FFprobe, ImageMagick, or OpenAI setup is unavailable, run `npm run tools:check` and/or `npm run ai:check`.

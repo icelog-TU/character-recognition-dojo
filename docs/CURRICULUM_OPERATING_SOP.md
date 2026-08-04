@@ -27,9 +27,12 @@ Use this order whenever files disagree:
 4. `docs/CURRICULUM_LEDGER.md` is a derived human-readable summary of merged curriculum. It must be updated when a lesson or review module enters production, but it does not override production JSON.
 5. `public/tools/planner-data.json` is a derived planner export. Regenerate it after production curriculum changes.
 6. `docs/PARALLEL_LESSON_REGISTRY.md` is only for not-yet-merged parallel work. It is not a permanent progress ledger.
-7. `curriculum-workflow/lesson-requests/`, `curriculum-workflow/review-requests/`, `curriculum-workflow/drafts/`, and `curriculum-workflow/generated/` are work artifacts. They can explain how a unit was prepared, but they are not proof that it is shipped.
+7. `curriculum-workflow/recommendations/` contains AI recommendation drafts only. A recommended character is not reserved, approved, or blocking.
+8. `curriculum-workflow/lesson-requests/`, `curriculum-workflow/review-requests/`, `curriculum-workflow/drafts/`, and `curriculum-workflow/generated/` are work artifacts. They can explain how a unit was prepared, but they are not proof that it is shipped.
 
 If Markdown and production JSON disagree, update Markdown or generated planner data to match `origin/main` unless the user explicitly asks to change production curriculum.
+
+If an AI recommendation draft or unmerged lesson request disagrees with the teacher's latest explicit selected character/sentences, the teacher's latest request wins. Do not reject the work because an old recommendation or stale draft says a different character was planned.
 
 ## Required Start Sequence
 

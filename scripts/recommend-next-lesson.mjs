@@ -336,6 +336,7 @@ const review = {
   ai: { used: false, reason: noAi ? "Disabled with --no-ai." : "Not run yet." },
   recommendations,
   approval: {
+    teacherApproved: false,
     selectedChoiceId: "",
     approvedSentenceIndexes: [],
     customSentences: [],

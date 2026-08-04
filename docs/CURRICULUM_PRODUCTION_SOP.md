@@ -145,16 +145,24 @@ curriculum-workflow/recommendations/L###-next-lesson-review.json
 curriculum-workflow/recommendations/L###-next-lesson-review.md
 ```
 
-The recommendation files are teacher-review drafts. They are not approved curriculum.
+The recommendation files are teacher-review drafts. They are not approved curriculum, they are not a reserved lesson choice, and they must never block a later teacher-selected character.
+
+Approval boundary:
+
+- Asking AI to recommend next characters is only exploration.
+- Do not write a recommended character into `curriculum-workflow/lesson-requests/L###.json`, `docs/PARALLEL_LESSON_REGISTRY.md`, `docs/CURRICULUM_LEDGER.md`, or production JSON unless the teacher explicitly says that character is the lesson's approved new character.
+- If a recommendation draft or unmerged work artifact disagrees with the teacher's latest explicit lesson request, the teacher request wins. Replace or ignore the stale draft; do not stop the lesson because "a recommended character already exists."
+- A lesson request is authoritative only when it contains the teacher-approved `newChars` and the approved/final sentences for that lesson.
 
 Review workflow:
 
 1. Open the Markdown file for a readable overview.
 2. Pick one `choiceId`.
-3. In the JSON file, set `approval.selectedChoiceId`.
-4. Add the chosen sentence indexes to `approval.approvedSentenceIndexes`.
-5. Add better teacher-written sentences to `approval.customSentences` if needed.
-6. Run:
+3. In the JSON file, set `approval.teacherApproved` to `true` only after the teacher explicitly approves this exact new character and final sentence set.
+4. Set `approval.selectedChoiceId`.
+5. Add the chosen sentence indexes to `approval.approvedSentenceIndexes`.
+6. Add better teacher-written sentences to `approval.customSentences` if needed.
+7. Run:
 
 ```bash
 npm run curriculum:request-from-review -- --review curriculum-workflow/recommendations/L###-next-lesson-review.json
@@ -162,10 +170,13 @@ npm run curriculum:request-from-review -- --review curriculum-workflow/recommend
 
 This creates `curriculum-workflow/lesson-requests/L###.json` with the selected character and approved sentence list in `teacherNotes`.
 
+The request conversion script refuses recommendation files unless `approval.teacherApproved` is true or the command includes `--teacher-approved`. Existing `lesson-requests/L###.json` files are not overwritten unless `--force` is provided after checking the teacher's latest approval.
+
 Rules:
 
 - AI-generated recommendations may include unnatural sentences. The teacher must reject or rewrite them.
 - Do not move recommendation candidates directly into `src/curriculum/sample-lessons.json`.
+- Do not treat `approval.selectedChoiceId` alone as teacher approval. It may be a stale UI scratch value from an earlier recommendation pass.
 - Before building the lesson, verify every chosen sentence uses only already learned characters plus the new character.
 - The planner may use `OPENAI_TEXT_MODEL` for sentence refinement. Use `--no-ai` to generate local-template recommendations only.
 - Update `curriculum-workflow/next-character-bank.json` when a good future character or sentence pattern is discovered.

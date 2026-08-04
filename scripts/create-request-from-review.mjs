@@ -70,7 +70,16 @@ if (!reviewPath || !fs.existsSync(reviewPath)) {
 }
 
 const review = readJson(reviewPath);
-const selectedChoiceId = String(args.choice || review.approval?.selectedChoiceId || "").trim();
+const approval = review.approval ?? {};
+const teacherApproved = approval.teacherApproved === true || args["teacher-approved"] === true || args["teacher-approved"] === "true";
+if (!teacherApproved) {
+  console.error(
+    "Recommendation review is not teacher-approved. AI recommendations are drafts only. Set approval.teacherApproved to true only after the teacher explicitly chooses this character and final sentences, or pass --teacher-approved for that approved conversion.",
+  );
+  process.exit(1);
+}
+
+const selectedChoiceId = String(args.choice || approval.selectedChoiceId || "").trim();
 if (!selectedChoiceId) {
   console.error("No selected choice. Set approval.selectedChoiceId in the review JSON, or pass --choice choice-字.");
   process.exit(1);
@@ -82,7 +91,7 @@ if (!recommendation) {
   process.exit(1);
 }
 
-const indexes = parseIndexes(args.sentences ?? review.approval?.approvedSentenceIndexes);
+const indexes = parseIndexes(args.sentences ?? approval.approvedSentenceIndexes);
 if (indexes.length === 0) {
   console.error("No approved sentence indexes. Set approval.approvedSentenceIndexes or pass --sentences 0,1,2.");
   process.exit(1);
@@ -94,7 +103,7 @@ const approvedSentences = indexes.map((index) => {
   return normalizeSentence(sentence, fallbackFocusChar(sentence, recommendation.newChars));
 });
 
-const customSentences = (review.approval?.customSentences ?? []).map((sentence) =>
+const customSentences = (approval.customSentences ?? []).map((sentence) =>
   normalizeSentence(sentence, fallbackFocusChar(sentence, recommendation.newChars)),
 );
 
@@ -122,7 +131,7 @@ const request = {
     "由課程推薦審核結果產生。",
     `選定候選字：${selectedChoiceId}。`,
     `核准句子：${sentenceListText(finalSentences)}。`,
-    review.approval?.notes ? `教師備註：${review.approval.notes}` : "",
+    approval.notes ? `教師備註：${approval.notes}` : "",
     "只能使用已學字加上本課新字。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。",
   ]
     .filter(Boolean)
@@ -132,6 +141,13 @@ const request = {
 
 fs.mkdirSync(requestDir, { recursive: true });
 const outputPath = path.join(requestDir, `${review.lessonId}.json`);
+const force = args.force === true || args.force === "true";
+if (fs.existsSync(outputPath) && !force) {
+  console.error(
+    `Lesson request already exists: ${outputPath}. Do not overwrite a teacher-approved request with a recommendation draft. Use --force only after checking the teacher's latest approved character and sentences.`,
+  );
+  process.exit(1);
+}
 fs.writeFileSync(outputPath, `${JSON.stringify(request, null, 2)}\n`, "utf8");
 
 console.log(`已寫入 ${outputPath}`);
