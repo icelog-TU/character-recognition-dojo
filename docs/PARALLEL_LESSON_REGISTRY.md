@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L069 | 朵 | request-ready | Codex thread 2026-08-04 L069-duo | codex/l069-duo @ local 09c4f95 | L068:花 | 花 | `curriculum-workflow/lesson-requests/L069.json`; `curriculum-workflow/generated/L069-generation-packet.md`; `curriculum-workflow/drafts/L069-draft.json` | planned `curriculum-workflow/audio-inbox/L069/`; `public/assets/lessons/L069/` | Teacher explicitly approved L069 new character `朵` and five final sentences in chat. L069 must not merge to production main until L068 `花` enters latest origin/main. |
+| L069 | 朵 | ready-blocked-by-dependency | Codex thread 2026-08-04 L069-duo | codex/l069-duo @ assets-ready | L068:花 | 花 | `curriculum-workflow/lesson-requests/L069.json`; `curriculum-workflow/generated/L069-generation-packet.md`; `curriculum-workflow/drafts/L069-draft.json` | `curriculum-workflow/audio-inbox/L069/`; `public/assets/lessons/L069/` | Teacher explicitly approved L069 new character `朵` and five final sentences in chat. Images, AI audio drafts, processed `.m4a` audio, and draft charTimings are prepared. L069 must not merge to production main until L068 `花` enters latest origin/main. |
 
 ## Status Values
 
