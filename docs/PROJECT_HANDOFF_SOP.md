@@ -46,7 +46,7 @@ git remote -v
 git fetch origin
 git status --short --branch
 git log -1 --oneline
-npm ci
+npm run tools:check
 npm run curriculum:audit-state
 ```
 
@@ -57,6 +57,8 @@ npm run tools:check
 ```
 
 This repo includes FFmpeg and FFprobe through npm packages. A bare shell command such as `ffmpeg -version` may fail on Windows even when the repo scripts can still process audio correctly through the package-resolved binaries. Do not say "FFmpeg is not installed" and do not switch to an alternate audio workflow unless `npm run tools:check` or the actual repo command fails with a specific error.
+
+Do not run `npm ci` as a routine startup step in the shared working copy. It removes `node_modules` before reinstalling, so it can fail with Windows `EPERM unlink` if another Codex thread, Vite dev server, or Node process is using a native package file such as a Rolldown binding. If existing npm scripts run, continue without `npm ci`. If dependencies are actually missing or stale, stop, identify the blocking Node process or active thread, and ask before reinstalling.
 
 ## Markdown Encoding Read Rule
 
@@ -617,7 +619,7 @@ git remote -v
 git fetch origin
 git status --short --branch
 git log -1 --oneline
-npm ci
+npm run tools:check
 npm run curriculum:audit-state
 
 Please first read:

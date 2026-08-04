@@ -35,9 +35,11 @@ git remote -v
 git fetch origin
 git status --short --branch
 git log -1 --oneline
-npm ci
+npm run tools:check
 npm run curriculum:audit-state
 ```
+
+Do not run `npm ci` as a routine start command in the shared working copy. `npm ci` deletes and recreates `node_modules`, and concurrent Codex threads, dev servers, or Node tools can lock native package files on Windows and cause `EPERM unlink` failures. Run `npm ci` only when dependencies are missing or known stale, and only after confirming no other thread or dev server is using this working copy.
 
 Then read:
 
