@@ -8,6 +8,23 @@ For multi-thread source-of-truth rules, required startup checks, and merge gates
 
 For merged lessons, use latest `origin/main` and `src/curriculum/sample-lessons.json` as the shipping truth. `docs/CURRICULUM_LEDGER.md` is the human-readable merged summary. For not-yet-merged parallel lessons, use `docs/PARALLEL_LESSON_REGISTRY.md` as the provisional coordination board.
 
+## Local Tool Availability Rule
+
+Before claiming FFmpeg, FFprobe, ImageMagick, or OpenAI setup is unavailable, run the repo's own checks:
+
+```bash
+npm run tools:check
+npm run ai:check
+```
+
+This repo installs FFmpeg and FFprobe as npm dependencies (`@ffmpeg-installer/ffmpeg` and `@ffprobe-installer/ffprobe`). On Windows, the shell command `ffmpeg -version` may fail even when `npm run assets:audio` works correctly because the repo scripts resolve the package binaries directly. A missing shell PATH entry is not a valid reason to bypass the standard audio pipeline.
+
+Rules:
+
+- Do not say "there is no FFmpeg" unless `npm run tools:check` or the actual repo audio command fails and the exact failure is reported.
+- Do not use online converters, browser recordings, OS TTS export, unrelated local encoders, or hand-written ad hoc transcoding for production lesson audio unless the teacher explicitly approves that exception.
+- If an exception is approved, record the affected lesson/review id, command used, reason, and replacement plan in the final handoff. Do not call that audio standard production audio until it has gone through the normal `assets:audio` plus `assets:align:ai` flow.
+
 ## Windows UTF-8 Reading Rule
 
 Repo Markdown and JSON files are UTF-8. On Windows, garbled Chinese in PowerShell output usually means the terminal output encoding or `Get-Content` decoding path is wrong; it does not by itself prove the file is corrupted.
@@ -217,7 +234,7 @@ npm run assets:audio -- --lesson L001
 
 Put source audio files in `curriculum-workflow/audio-inbox/L001/` first. The script writes normalized `.m4a` files to `public/assets/lessons/L001/audio/` and creates `curriculum-workflow/audio-duration-report.json`.
 If the command cannot find FFmpeg right after installation, reopen the terminal or set `FFMPEG_PATH` and `FFPROBE_PATH` to the full executable paths.
-Important: this repo includes FFmpeg and FFprobe via npm packages (`@ffmpeg-installer/ffmpeg` and `@ffprobe-installer/ffprobe`). On Windows, `ffmpeg` may fail from the shell PATH while the repo scripts still work because they resolve the package binaries directly. Before saying FFmpeg is missing, run the actual repo command or inspect the package paths.
+Important: this repo includes FFmpeg and FFprobe via npm packages (`@ffmpeg-installer/ffmpeg` and `@ffprobe-installer/ffprobe`). On Windows, `ffmpeg` may fail from the shell PATH while the repo scripts still work because they resolve the package binaries directly. Before saying FFmpeg is missing, run `npm run tools:check` and the actual repo command. Do not switch to a nonstandard audio-generation or conversion method just because a bare shell `ffmpeg` command failed.
 
 For production sentence highlighting, run AI timestamp alignment after audio processing:
 

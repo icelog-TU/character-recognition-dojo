@@ -112,6 +112,14 @@ Then normalize them for the app:
 npm run assets:audio -- --lesson L001
 ```
 
+Before saying FFmpeg or FFprobe is unavailable, run:
+
+```bash
+npm run tools:check
+```
+
+The repo installs FFmpeg and FFprobe through npm packages, so Windows shell PATH failures are not enough evidence that audio processing is unavailable. Do not use browser recording, OS TTS export, online converters, or unrelated transcoding as a production replacement for `npm run assets:audio` unless the teacher explicitly approves that exception and the final handoff records it.
+
 The normalized `.m4a` files go to:
 
 ```text

@@ -23,7 +23,8 @@
     "validate:curriculum": "node scripts/validate-curriculum.mjs",
     "validate:production": "node scripts/validate-production-assets.mjs",
     "verify": "npm run curriculum:audit-state && npm run validate:curriculum && npm run validate:production && npm run lint && npm run build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tools:check": "node scripts/check-local-tools.mjs"
   },
   "dependencies": {
     "firebase": "^12.17.0",

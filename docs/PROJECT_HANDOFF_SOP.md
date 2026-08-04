@@ -50,6 +50,14 @@ npm ci
 npm run curriculum:audit-state
 ```
 
+Before claiming that local media tools are missing, run:
+
+```bash
+npm run tools:check
+```
+
+This repo includes FFmpeg and FFprobe through npm packages. A bare shell command such as `ffmpeg -version` may fail on Windows even when the repo scripts can still process audio correctly through the package-resolved binaries. Do not say "FFmpeg is not installed" and do not switch to an alternate audio workflow unless `npm run tools:check` or the actual repo command fails with a specific error.
+
 ## Markdown Encoding Read Rule
 
 Markdown files in this repo are UTF-8. On Windows, PowerShell terminal output may display Chinese text as mojibake if the console encoding and file decoding path do not match. Do not report that repo Markdown is corrupted based only on garbled `Get-Content` output.
@@ -162,6 +170,8 @@ npm run verify
 Do not check only `process.env.OPENAI_API_KEY` and conclude the key is missing. The repo's AI scripts use `scripts/lib/env.mjs`, which reads `.env.local`, `.env`, and on Windows the user environment from `HKCU\Environment`. Always run `npm run ai:check` before saying the OpenAI key is unavailable.
 
 If `OPENAI_API_KEY` is truly unavailable after `npm run ai:check`, do not describe generated lesson audio or timings as AI-reviewed. A local OS TTS voice plus `npm run assets:align` may be used only as an explicit fallback, and the final handoff must name the affected lesson(s) so they can be regenerated with AI audio and `assets:align:ai` later if needed.
+
+Do not bypass the standard FFmpeg audio processing path. Production lesson audio must go through `npm run assets:audio -- --lesson L###` or `npm run assets:audio -- --lesson R###`. If that command fails, inspect the exact error and run `npm run tools:check`; do not generate replacement `.m4a` files with unrelated tools, browser recording, OS TTS export, online converters, or hand-written transcoding unless the teacher explicitly approves the exception first.
 
 All production lesson audio should sound like natural Taiwan Mandarin. Do not ship Beijing/Mainland China accent, erhua, curled-r endings, or r-colored final syllables. If a sentence has accent drift, regenerate that sentence with OpenAI audio, then rerun `npm run assets:align:ai -- --lesson L###`.
 
