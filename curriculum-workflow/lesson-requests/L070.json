@@ -1,0 +1,75 @@
+{
+  "id": "L070",
+  "order": 70,
+  "newChars": [
+    "了"
+  ],
+  "zhuyin": {
+    "了": "˙ㄌㄜ"
+  },
+  "title": "了",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L069"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "朵"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "了",
+      "朵",
+      "花",
+      "包",
+      "拿",
+      "著"
+    ],
+    "targetCharMinimumCount": {
+      "了": 3
+    },
+    "recentTargetMinimumCounts": {
+      "朵": 2,
+      "花": 2,
+      "包": 2,
+      "拿": 1,
+      "著": 1
+    }
+  },
+  "teacherNotes": "Teacher approved L070 new character `了` as the light/aspect particle read `˙ㄌㄜ`. L068 is `花`; L069 is teacher-specified provisional `朵` and must be merged before L070 enters production. Use only learned characters through L068, provisional `朵`, and new `了`. Approved sentences are final unless teacher changes them. Keep `了` pronunciation as neutral-tone `˙ㄌㄜ`, not `ㄌㄧㄠˇ`.",
+  "approvedSentences": [
+    {
+      "text": "他拿起書包看了看",
+      "spokenText": "他拿起書包看了看",
+      "focusChar": "了",
+      "reason": "Practices `了` in `看了看`, reviews `拿` and `包`, and shows a clear child checking a school bag."
+    },
+    {
+      "text": "書包上有很好看的花朵",
+      "spokenText": "書包上有很好看的花朵",
+      "focusChar": "朵",
+      "reason": "Reviews `包`, `花`, and provisional `朵` with a visible decorated school bag."
+    },
+    {
+      "text": "小狗吃了一朵我做的花",
+      "spokenText": "小狗吃了一朵我做的花",
+      "focusChar": "了",
+      "reason": "Practices completed action with `吃了`, reviews `朵` and `花`, and has a concrete humorous scene."
+    },
+    {
+      "text": "不要站著吃，要坐著吃",
+      "spokenText": "不要站著吃要坐著吃",
+      "focusChar": "著",
+      "reason": "Reviews `著` twice with a clear standing-versus-sitting eating contrast."
+    },
+    {
+      "text": "水邊的花開了",
+      "spokenText": "水邊的花開了",
+      "focusChar": "了",
+      "reason": "Practices state change with `開了`, reviews `花`, and gives a clear waterside flower scene."
+    }
+  ]
+}
