@@ -156,6 +156,8 @@ Rules:
 - `missingIndexes` uses Han-character indexes in the sentence, skipping punctuation.
 - `options` is used for missing-character, partial-order, and choose-pronunciation games.
 - `choose-pronunciation` options should use reviewed AI audio when audio choices are provided. Do not rely on browser TTS as the production voice for these choices.
+- `choose-pronunciation` wrong options must have final `text` first, then full wrong-sentence AI audio generated from that exact text. Do not create wrong-option audio by editing or splicing the correct sentence audio.
+- Normal fifth-round wrong audio file names should use `L###-G05-wrong-one.m4a` and `L###-G05-wrong-two.m4a` unless an older lesson already has a documented legacy filename.
 
 ## Validation
 

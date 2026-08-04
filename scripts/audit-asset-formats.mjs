@@ -215,6 +215,15 @@ for (const unit of units) {
     for (const option of game.options ?? []) {
       if (option.audioSrc) {
         auditAudio(`${game.id} option ${option.id}`, option.audioSrc);
+        if (
+          game.type === "choose-pronunciation" &&
+          option.correct !== true &&
+          !option.audioSrc.includes(`${unit.id}-G`)
+        ) {
+          reportWarning(
+            `${game.id} option ${option.id}: wrong-choice audio should be generated from its full option text and usually live under this unit as ${unit.id}-G##-wrong-*.m4a: ${option.audioSrc}`,
+          );
+        }
       }
     }
   }
