@@ -33,7 +33,27 @@ function filenameSafe(text) {
   return text.replace(/[\\/:*?"<>|]/g, "_");
 }
 
-async function createSpeech({ apiKey, model, voice, input, outputPath }) {
+function hanChars(text) {
+  return Array.from(text.matchAll(/\p{Script=Han}/gu), (match) => match[0]);
+}
+
+function draftNameFromAudioSrc(audioSrc) {
+  const base = path.basename(audioSrc);
+  return base.replace(/\.(m4a|mp3|wav)$/i, ".mp3");
+}
+
+const baseSpeechInstructions = [
+  "Use natural Taiwan Mandarin pronunciation for young children.",
+  "Speak clearly, warmly, and gently.",
+  "Use Taiwan Mandarin, not a Beijing or Mainland China accent.",
+  "Do not add erhua, retroflex-r, r-colored curled endings, or any Beijing-style final r sound.",
+  "Keep final syllables clean, plain, and audible.",
+  "Pronunciation guardrails: 小孩 is ㄒㄧㄠˇ ㄏㄞˊ, never ㄒㄧㄠˇ ㄏㄞˊㄦ or any r-colored form; 孩 always ends cleanly as ㄏㄞˊ. 更 is ㄍㄥˋ and, when generated as a single character, must be spoken exactly once.",
+  "Do not read punctuation aloud.",
+  "For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
+].join(" ");
+
+async function createSpeech({ apiKey, model, voice, input, outputPath, instructionsExtra = "" }) {
   const response = await fetch("https://api.openai.com/v1/audio/speech", {
     method: "POST",
     headers: {
@@ -46,8 +66,7 @@ async function createSpeech({ apiKey, model, voice, input, outputPath }) {
       input,
       response_format: "mp3",
       speed: 0.9,
-      instructions:
-        "Use natural Taiwan Mandarin pronunciation for young children. Speak clearly, warmly, and gently. Use Taiwan Mandarin, not a Beijing or Mainland China accent. Do not add erhua, retroflex-r, r-colored curled endings, or any Beijing-style final r sound. Keep final syllables clean, plain, and audible. Pronunciation guardrails: 小孩 is ㄒㄧㄠˇ ㄏㄞˊ, never ㄒㄧㄠˇ ㄏㄞˊㄦ or any r-colored form; 孩 always ends cleanly as ㄏㄞˊ. 更 is ㄍㄥˋ and, when generated as a single character, must be spoken exactly once. Do not read punctuation aloud. For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
+      instructions: [baseSpeechInstructions, instructionsExtra].filter(Boolean).join(" "),
     }),
   });
 
@@ -65,6 +84,7 @@ const lessonId = String(args.lesson || "L001").toUpperCase();
 const sentenceFilter = args.sentence ? String(args.sentence).toUpperCase() : null;
 const includeSentences = flagEnabled(args.sentences);
 const includeChars = flagEnabled(args.chars);
+const includeGameAudio = includeSentences && flagEnabled(args.gameAudio ?? args["game-audio"]);
 
 const apiKey = requireOpenAIKey();
 const model = getEnv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts");
@@ -83,12 +103,24 @@ const outputDir = path.join(inboxRoot, lessonId);
 fs.mkdirSync(outputDir, { recursive: true });
 
 const jobs = [];
+const jobPaths = new Set();
+function addJob(input, outputPath, instructionsExtra = "") {
+  if (!input || !outputPath) return;
+  if (jobPaths.has(outputPath)) return;
+  jobPaths.add(outputPath);
+  jobs.push({ input, outputPath, instructionsExtra });
+}
+
 if (includeChars) {
   for (const char of lesson.newChars ?? []) {
-    jobs.push({
-      input: char,
-      outputPath: path.join(outputDir, `char-${filenameSafe(char)}.mp3`),
-    });
+    const zhuyin = lesson.zhuyin?.[char];
+    addJob(
+      char,
+      path.join(outputDir, `char-${filenameSafe(char)}.mp3`),
+      zhuyin
+        ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once.`
+        : "",
+    );
   }
 }
 
@@ -96,16 +128,48 @@ if (includeSentences) {
   for (const sentence of lesson.sentences ?? []) {
     if (sentence.approved !== true) continue;
     if (sentenceFilter && sentence.id.toUpperCase() !== sentenceFilter) continue;
-    jobs.push({
-      input: sentence.spokenText,
-      outputPath: path.join(outputDir, `${sentence.id}.mp3`),
-    });
+    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`));
+  }
+}
+
+if (includeGameAudio) {
+  const sentencesById = new Map((lesson.sentences ?? []).map((sentence) => [sentence.id, sentence]));
+  for (const game of lesson.sentenceGames ?? []) {
+    if (sentenceFilter && game.sentenceId?.toUpperCase() !== sentenceFilter) continue;
+
+    if (game.type === "teach-character") {
+      const sentence = sentencesById.get(game.sentenceId);
+      if (!sentence || !Number.isInteger(game.targetCharIndex)) continue;
+      const chars = hanChars(sentence.text);
+      const prefixText = chars.slice(0, game.targetCharIndex).join("");
+      const suffixText = chars.slice(game.targetCharIndex + 1).join("");
+      if (game.teachAudio?.prefixSrc) {
+        addJob(prefixText, path.join(outputDir, draftNameFromAudioSrc(game.teachAudio.prefixSrc)));
+      }
+      if (game.teachAudio?.suffixSrc) {
+        addJob(suffixText, path.join(outputDir, draftNameFromAudioSrc(game.teachAudio.suffixSrc)));
+      }
+    }
+
+    if (game.type === "choose-pronunciation") {
+      for (const option of game.options ?? []) {
+        if (option.correct === true || !option.audioSrc) continue;
+        addJob(option.text, path.join(outputDir, draftNameFromAudioSrc(option.audioSrc)));
+      }
+    }
   }
 }
 
 for (const job of jobs) {
   console.log(`Generating ${path.basename(job.outputPath)}: ${job.input}`);
-  await createSpeech({ apiKey, model, voice, input: job.input, outputPath: job.outputPath });
+  await createSpeech({
+    apiKey,
+    model,
+    voice,
+    input: job.input,
+    outputPath: job.outputPath,
+    instructionsExtra: job.instructionsExtra,
+  });
 }
 
 console.log(`Wrote ${jobs.length} audio draft file(s) to ${outputDir}`);

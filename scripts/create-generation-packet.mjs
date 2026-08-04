@@ -57,6 +57,7 @@ function normalizeRequest(raw) {
       : Array.isArray(raw.requiredCoverageChars)
         ? raw.requiredCoverageChars
         : [],
+    generationConstraints: constraints,
     provisionalLearnedChars: Array.isArray(constraints.provisionalLearnedChars) ? constraints.provisionalLearnedChars : [],
     requestedAllowedChars: Array.isArray(constraints.allowedChars) ? constraints.allowedChars : [],
   };
@@ -125,6 +126,54 @@ function buildDraft(request) {
     originHint: null,
     sentences: [],
   };
+}
+
+function buildSentenceGenerationRules(request) {
+  const constraints = request.generationConstraints ?? {};
+  const targetMinimums =
+    constraints.targetCharMinimumCount && typeof constraints.targetCharMinimumCount === "object"
+      ? constraints.targetCharMinimumCount
+      : {};
+  const recentMinimums =
+    constraints.recentTargetMinimumCounts && typeof constraints.recentTargetMinimumCounts === "object"
+      ? constraints.recentTargetMinimumCounts
+      : {};
+  const targetLines = Object.entries(targetMinimums).map(([char, count]) => `- 本課目標字 \`${char}\` 至少出現 ${count} 次。`);
+  const recentLines = Object.entries(recentMinimums).map(([char, count]) => `- 複習目標字 \`${char}\` 至少出現 ${count} 次。`);
+
+  const minimumLines =
+    targetLines.length || recentLines.length
+      ? [...targetLines, ...recentLines].join("\n")
+      : [
+          "- 本課目標字至少出現 3 次。",
+          "- 前三課目標字每字至少出現 2 次。",
+          "- 往前第四課、第五課目標字每字至少出現 1 次。",
+        ].join("\n");
+
+  return `## 句子生成 SOP
+
+生成候選句前必須遵守 \`docs/SENTENCE_GENERATION_SOP.md\`。
+
+覆蓋規則：
+
+${minimumLines}
+
+詞組優先規則：
+
+- 生成句子前，先列出本課目標字和完整已學字集合可以組成的自然詞或短語。
+- 再列出本課目標字和前五課較不熟複習字可以組成的自然詞或短語。
+- 以用詞多樣性作為寫作目標；覆蓋次數只是最低檢查門檻。
+- 優先使用孩子聽得懂、畫面看得出來的詞組，例如 \`坐起來\`、\`坐下\`、\`坐著\`、\`坐到\`、\`不可坐\` 這類自然組合。
+- 不要只在最近五課字裡打轉；如果完整已學字集合能和目標字形成更好的詞，優先使用那些詞。
+
+品質規則：
+
+- 每句 4-12 個漢字，不含標點，除非教師另有明確核准。
+- 覆蓋次數是最低門檻，不是寫作目標；不要為了湊字讓五句都長得一樣。
+- 句意要清楚、自然、有畫面，且適合幼兒理解。
+- 位置字必須有清楚參照物，例如 \`門左邊\`、\`我左邊\`、\`門前\`、\`家裡\`。
+- 如果句子只是在機械湊字，即使覆蓋數達標也要重寫。
+`;
 }
 
 function buildPacket({ request, learnedChars, provisionalLearnedChars, allowedChars, priorSentences }) {
@@ -252,15 +301,18 @@ ${priorSentenceLines}
 
 請為幼兒認字 App 產生${range}。
 
+${buildSentenceGenerationRules(request)}
+
 規則：
 
 1. 顯示句子只能使用上方允許的漢字。
-2. 前一兩句可以複習前面課程的句型。
-3. 至少一半候選句要自然包含本課新字；如果本課有兩個新字，代表它們是需要一起學的詞語或教學單位，候選句要優先讓兩個新字一起出現，不要只練其中一個字。
-4. 句子要具體、容易配圖。
-5. 優先使用幼兒容易理解的臺灣華語。
-6. 除非真的有助於顯示，否則不要加標點；若 display text 有標點，spokenText 必須省略標點。
-7. 只回傳 JSON 候選句，格式如下：
+2. 先做詞組發想，再寫句子；不要直接用字數覆蓋表硬湊句子。
+3. 前一兩句可以複習前面課程的句型。
+4. 依照上方句子生成 SOP 的最低出現次數練習本課新字；如果本課有兩個新字，代表它們是需要一起學的詞語或教學單位，候選句要優先讓兩個新字一起出現，不要只練其中一個字。
+5. 句子要具體、容易配圖。
+6. 優先使用幼兒容易理解的臺灣華語。
+7. 除非真的有助於顯示，否則不要加標點；若 display text 有標點，spokenText 必須省略標點。
+8. 只回傳 JSON 候選句，格式如下：
 
 \`\`\`json
 [

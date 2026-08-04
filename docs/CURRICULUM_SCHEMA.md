@@ -191,6 +191,10 @@ npm run validate:curriculum
 
 New lessons should start from a lesson request file, not from directly editing production curriculum JSON.
 
+Sentence drafting must follow `docs/SENTENCE_GENERATION_SOP.md`. That file is the authority for word-first drafting, phrase diversity, target/review coverage minimums, sentence quality, and the approval checklist.
+
+When possible, encode the intended minimums in `generationConstraints` so `curriculum:packet` can carry them into the generated packet. Do not redefine the coverage formula here; update `docs/SENTENCE_GENERATION_SOP.md` first if the rule changes.
+
 If the lesson is being prepared before previous lessons are merged, first register the provisional dependency in `docs/PARALLEL_LESSON_REGISTRY.md`, then include the same dependency in the lesson request's `dependsOnLessons` and `provisionalLearnedChars`.
 
 ```bash

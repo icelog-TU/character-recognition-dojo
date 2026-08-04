@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-03T23:45:36.417Z",
+  "exportedAt": "2026-08-04T04:15:56.720Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -148,7 +148,7 @@
           "spokenText": "人",
           "focusChar": "人",
           "imagePrompt": "A warm simple children's picture book illustration of one person, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": "/assets/lessons/L002/images/L002-S01.png",
+          "imageSrc": "/assets/lessons/L002/images/L002-S01.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L002/audio/L002-S01.m4a",
@@ -168,7 +168,7 @@
           "spokenText": "一個人",
           "focusChar": "個",
           "imagePrompt": "A warm simple children's picture book illustration of one person as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": "/assets/lessons/L002/images/L002-S02.png",
+          "imageSrc": "/assets/lessons/L002/images/L002-S02.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L002/audio/L002-S02.m4a",
@@ -198,7 +198,7 @@
           "spokenText": "三個人",
           "focusChar": "個",
           "imagePrompt": "A warm simple children's picture book illustration of three people standing together as the clear subject, clean light background, soft colors, no text, no letters, no numbers.",
-          "imageSrc": "/assets/lessons/L002/images/L002-S03.png",
+          "imageSrc": "/assets/lessons/L002/images/L002-S03.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L002/audio/L002-S03.m4a",
@@ -972,7 +972,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L006/audio/L006-G02-prefix.m4a"
+          }
         },
         {
           "id": "L006-G03",
@@ -1047,19 +1051,19 @@
               "id": "correct",
               "text": "小小的手",
               "correct": true,
-              "audioSrc": "/assets/lessons/L006/audio/L006-S04.m4a"
+              "audioSrc": "/assets/lessons/L006/audio/L006-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
               "text": "大大的手",
               "correct": false,
-              "audioSrc": "/assets/lessons/L006/audio/L006-S03.m4a"
+              "audioSrc": "/assets/lessons/L006/audio/L006-G05-wrong1.m4a"
             },
             {
               "id": "wrong-two",
               "text": "小小的人",
               "correct": false,
-              "audioSrc": "/assets/lessons/L005/audio/L005-S02.m4a"
+              "audioSrc": "/assets/lessons/L006/audio/L006-G05-wrong2.m4a"
             }
           ]
         }
@@ -1329,7 +1333,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             0
-          ]
+          ],
+          "targetCharIndex": 0,
+          "teachAudio": {
+            "suffixSrc": "/assets/lessons/L007/audio/L007-G02-suffix.m4a"
+          }
         },
         {
           "id": "L007-G03",
@@ -1705,7 +1713,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             1
-          ]
+          ],
+          "targetCharIndex": 1,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L008/audio/L008-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L008/audio/L008-G02-suffix.m4a"
+          }
         },
         {
           "id": "L008-G03",
@@ -2085,7 +2098,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L009/audio/L009-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L009/audio/L009-G02-suffix.m4a"
+          }
         },
         {
           "id": "L009-G03",
@@ -2160,7 +2178,7 @@
               "id": "correct",
               "text": "我有小小的手",
               "correct": true,
-              "audioSrc": "/assets/lessons/L009/audio/L009-S05.m4a"
+              "audioSrc": "/assets/lessons/L009/audio/L009-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
@@ -2495,7 +2513,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L010/audio/L010-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L010/audio/L010-G02-suffix.m4a"
+          }
         },
         {
           "id": "L010-G03",
@@ -2890,7 +2913,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L011/audio/L011-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L011/audio/L011-G02-suffix.m4a"
+          }
         },
         {
           "id": "L011-G03",
@@ -2965,7 +2993,7 @@
               "id": "correct",
               "text": "有一大二小的手",
               "correct": true,
-              "audioSrc": "/assets/lessons/L008/audio/L008-S05.m4a"
+              "audioSrc": "/assets/lessons/L011/audio/L011-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
@@ -3289,7 +3317,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             0
-          ]
+          ],
+          "targetCharIndex": 0,
+          "teachAudio": {
+            "suffixSrc": "/assets/lessons/L012/audio/L012-G02-suffix.m4a"
+          }
         },
         {
           "id": "L012-G03",
@@ -3358,19 +3390,19 @@
               "id": "correct",
               "text": "有二大一小的手",
               "correct": true,
-              "audioSrc": "/assets/lessons/L012/audio/L012-S05.m4a"
+              "audioSrc": "/assets/lessons/L012/audio/L012-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
               "text": "有一大二小的手",
               "correct": false,
-              "audioSrc": "/assets/lessons/L008/audio/L008-S05.m4a"
+              "audioSrc": "/assets/lessons/L012/audio/L012-G05-wrong1.m4a"
             },
             {
               "id": "wrong-two",
               "text": "有二大二小的手",
               "correct": false,
-              "audioSrc": "/assets/lessons/L011/audio/L011-G05-wrong2.m4a"
+              "audioSrc": "/assets/lessons/L012/audio/L012-G05-wrong2.m4a"
             }
           ]
         }
@@ -3683,7 +3715,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L013/audio/L013-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L013/audio/L013-G02-suffix.m4a"
+          }
         },
         {
           "id": "L013-G03",
@@ -4096,7 +4133,12 @@
           "prompt": "兔兔讀到一個新字會停下來，請你幫牠念。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L014/audio/L014-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L014/audio/L014-G02-suffix.m4a"
+          }
         },
         {
           "id": "L014-G03",
@@ -4525,7 +4567,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             5
-          ]
+          ],
+          "targetCharIndex": 5,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L015/audio/L015-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L015/audio/L015-G02-suffix.m4a"
+          }
         },
         {
           "id": "L015-G03",
@@ -4960,7 +5007,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L016/audio/L016-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L016/audio/L016-G02-suffix.m4a"
+          }
         },
         {
           "id": "L016-G03",
@@ -5035,7 +5087,7 @@
               "id": "correct",
               "text": "有三個很高的人在山上",
               "correct": true,
-              "audioSrc": "/assets/lessons/L016/audio/L016-S05.m4a"
+              "audioSrc": "/assets/lessons/L016/audio/L016-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
@@ -5379,7 +5431,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L017/audio/L017-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L017/audio/L017-G02-suffix.m4a"
+          }
         },
         {
           "id": "L017-G03",
@@ -5823,7 +5880,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             1
-          ]
+          ],
+          "targetCharIndex": 1,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L018/audio/L018-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L018/audio/L018-G02-suffix.m4a"
+          }
         },
         {
           "id": "L018-G03",
@@ -6256,7 +6318,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             1
-          ]
+          ],
+          "targetCharIndex": 1,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L019/audio/L019-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L019/audio/L019-G02-suffix.m4a"
+          }
         },
         {
           "id": "L019-G03",
@@ -6690,7 +6757,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L020/audio/L020-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L020/audio/L020-G02-suffix.m4a"
+          }
         },
         {
           "id": "L020-G03",
@@ -6765,7 +6837,7 @@
               "id": "correct",
               "text": "你和我的三隻小鳥",
               "correct": true,
-              "audioSrc": "/assets/lessons/L020/audio/L020-S03.m4a"
+              "audioSrc": "/assets/lessons/L020/audio/L020-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
@@ -7151,7 +7223,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L021/audio/L021-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L021/audio/L021-G02-suffix.m4a"
+          }
         },
         {
           "id": "L021-G03",
@@ -7226,7 +7303,7 @@
               "id": "correct",
               "text": "小孩和一隻很大的鳥",
               "correct": true,
-              "audioSrc": "/assets/lessons/L021/audio/L021-S03-v2.m4a"
+              "audioSrc": "/assets/lessons/L021/audio/L021-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
@@ -7581,7 +7658,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             6
-          ]
+          ],
+          "targetCharIndex": 6,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L022/audio/L022-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L022/audio/L022-G02-suffix.m4a"
+          }
         },
         {
           "id": "L022-G03",
@@ -7656,7 +7738,7 @@
               "id": "correct",
               "text": "很大的手指上有一隻小鳥",
               "correct": true,
-              "audioSrc": "/assets/lessons/L022/audio/L022-S03.m4a"
+              "audioSrc": "/assets/lessons/L022/audio/L022-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
@@ -8053,7 +8135,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L023/audio/L023-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L023/audio/L023-G02-suffix.m4a"
+          }
         },
         {
           "id": "L023-G03",
@@ -8476,7 +8563,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             0
-          ]
+          ],
+          "targetCharIndex": 0,
+          "teachAudio": {
+            "suffixSrc": "/assets/lessons/L024/audio/L024-G02-suffix.m4a"
+          }
         },
         {
           "id": "L024-G03",
@@ -8890,7 +8981,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L025/audio/L025-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L025/audio/L025-G02-suffix.m4a"
+          }
         },
         {
           "id": "L025-G03",
@@ -9330,7 +9426,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             1
-          ]
+          ],
+          "targetCharIndex": 1,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L026/audio/L026-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L026/audio/L026-G02-suffix.m4a"
+          }
         },
         {
           "id": "L026-G03",
@@ -9760,7 +9861,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             8
-          ]
+          ],
+          "targetCharIndex": 8,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L027/audio/L027-G02-prefix.m4a"
+          }
         },
         {
           "id": "L027-G03",
@@ -10183,7 +10288,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L028/audio/L028-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L028/audio/L028-G02-suffix.m4a"
+          }
         },
         {
           "id": "L028-G03",
@@ -10637,7 +10747,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             9
-          ]
+          ],
+          "targetCharIndex": 9,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L029/audio/L029-G02-prefix.m4a"
+          }
         },
         {
           "id": "L029-G03",
@@ -11076,7 +11190,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L030/audio/L030-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L030/audio/L030-G02-suffix.m4a"
+          }
         },
         {
           "id": "L030-G03",
@@ -11521,7 +11640,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L031/audio/L031-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L031/audio/L031-G02-suffix.m4a"
+          }
         },
         {
           "id": "L031-G03",
@@ -11967,7 +12091,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L032/audio/L032-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L032/audio/L032-G02-suffix.m4a"
+          }
         },
         {
           "id": "L032-G03",
@@ -12413,7 +12542,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L033/audio/L033-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L033/audio/L033-G02-suffix.m4a"
+          }
         },
         {
           "id": "L033-G03",
@@ -12833,7 +12967,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L034/audio/L034-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L034/audio/L034-G02-suffix.m4a"
+          }
         },
         {
           "id": "L034-G03",
@@ -12908,7 +13047,7 @@
               "id": "correct",
               "text": "我不是鳥，也不是大人",
               "correct": true,
-              "audioSrc": "/assets/lessons/L034/audio/L034-S03.m4a"
+              "audioSrc": "/assets/lessons/L034/audio/L034-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
@@ -13285,7 +13424,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             0
-          ]
+          ],
+          "targetCharIndex": 0,
+          "teachAudio": {
+            "suffixSrc": "/assets/lessons/L035/audio/L035-G02-suffix.m4a"
+          }
         },
         {
           "id": "L035-G03",
@@ -13701,7 +13844,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             5
-          ]
+          ],
+          "targetCharIndex": 5,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L036/audio/L036-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L036/audio/L036-G02-suffix.m4a"
+          }
         },
         {
           "id": "L036-G03",
@@ -14366,7 +14514,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L037/audio/L037-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L037/audio/L037-G02-suffix.m4a"
+          }
         },
         {
           "id": "L037-G03",
@@ -15005,7 +15158,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             5
-          ]
+          ],
+          "targetCharIndex": 5,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L038/audio/L038-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L038/audio/L038-G02-suffix.m4a"
+          }
         },
         {
           "id": "L038-G03",
@@ -15607,7 +15765,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             5
-          ]
+          ],
+          "targetCharIndex": 5,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L039/audio/L039-G02-prefix.m4a"
+          }
         },
         {
           "id": "L039-G03",
@@ -16199,7 +16361,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L040/audio/L040-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L040/audio/L040-G02-suffix.m4a"
+          }
         },
         {
           "id": "L040-G03",
@@ -16864,7 +17031,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L041/audio/L041-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L041/audio/L041-G02-suffix.m4a"
+          }
         },
         {
           "id": "L041-G03",
@@ -17555,7 +17727,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L042/audio/L042-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L042/audio/L042-G02-suffix.m4a"
+          }
         },
         {
           "id": "L042-G03",
@@ -18236,7 +18413,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             5
-          ]
+          ],
+          "targetCharIndex": 5,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L043/audio/L043-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L043/audio/L043-G02-suffix.m4a"
+          }
         },
         {
           "id": "L043-G03",
@@ -18826,7 +19008,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             6
-          ]
+          ],
+          "targetCharIndex": 6,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L044/audio/L044-G02-prefix.m4a"
+          }
         },
         {
           "id": "L044-G03",
@@ -19433,7 +19619,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L045/audio/L045-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L045/audio/L045-G02-suffix.m4a"
+          }
         },
         {
           "id": "L045-G03",
@@ -20091,7 +20282,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             8
-          ]
+          ],
+          "targetCharIndex": 8,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L046/audio/L046-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L046/audio/L046-G02-suffix.m4a"
+          }
         },
         {
           "id": "L046-G03",
@@ -20684,7 +20880,11 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             0
-          ]
+          ],
+          "targetCharIndex": 0,
+          "teachAudio": {
+            "suffixSrc": "/assets/lessons/L047/audio/L047-G02-suffix.m4a"
+          }
         },
         {
           "id": "L047-G03",
@@ -21323,7 +21523,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             10
-          ]
+          ],
+          "targetCharIndex": 10,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L048/audio/L048-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L048/audio/L048-G02-suffix.m4a"
+          }
         },
         {
           "id": "L048-G03",
@@ -21778,7 +21983,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L049/audio/L049-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L049/audio/L049-G02-suffix.m4a"
+          }
         },
         {
           "id": "L049-G03",
@@ -21853,19 +22063,19 @@
               "id": "correct",
               "text": "書裡有可愛的小孩",
               "correct": true,
-              "audioSrc": "/assets/lessons/L049/audio/L049-S05.m4a"
+              "audioSrc": "/assets/lessons/L049/audio/L049-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
               "text": "書裡有可愛的小狗",
               "correct": false,
-              "audioSrc": "/assets/lessons/L049/audio/L049-G05-wrong-one.m4a"
+              "audioSrc": "/assets/lessons/L049/audio/L049-G05-wrong1.m4a"
             },
             {
               "id": "wrong-two",
               "text": "書裡有可愛的小鳥",
               "correct": false,
-              "audioSrc": "/assets/lessons/L049/audio/L049-G05-wrong-two.m4a"
+              "audioSrc": "/assets/lessons/L049/audio/L049-G05-wrong2.m4a"
             }
           ]
         }
@@ -22215,7 +22425,12 @@
           "prompt": "這個字我不會念，請你幫我。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L050/audio/L050-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L050/audio/L050-G02-suffix.m4a"
+          }
         },
         {
           "id": "L050-G03",
@@ -22632,7 +22847,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L051/audio/L051-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L051/audio/L051-G02-suffix.m4a"
+          }
         },
         {
           "id": "L051-G03",
@@ -23033,7 +23253,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L052/audio/L052-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L052/audio/L052-G02-suffix.m4a"
+          }
         },
         {
           "id": "L052-G03",
@@ -23507,7 +23732,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             9
-          ]
+          ],
+          "targetCharIndex": 9,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L053/audio/L053-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L053/audio/L053-G02-suffix.m4a"
+          }
         },
         {
           "id": "L053-G03",
@@ -23925,7 +24155,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫它。",
           "missingIndexes": [
             5
-          ]
+          ],
+          "targetCharIndex": 5,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L054/audio/L054-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L054/audio/L054-G02-suffix.m4a"
+          }
         },
         {
           "id": "L054-G03",
@@ -24345,7 +24580,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L055/audio/L055-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L055/audio/L055-G02-suffix.m4a"
+          }
         },
         {
           "id": "L055-G03",
@@ -24414,19 +24654,19 @@
               "id": "correct",
               "text": "不要這樣，這樣不好",
               "correct": true,
-              "audioSrc": "/assets/lessons/L055/audio/L055-S04.m4a"
+              "audioSrc": "/assets/lessons/L055/audio/L055-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
               "text": "不要這樣這樣很好",
               "correct": false,
-              "audioSrc": "/assets/lessons/L055/audio/L055-G05-wrong-one.m4a"
+              "audioSrc": "/assets/lessons/L055/audio/L055-G05-wrong1.m4a"
             },
             {
               "id": "wrong-two",
               "text": "不要一樣這樣不好",
               "correct": false,
-              "audioSrc": "/assets/lessons/L055/audio/L055-G05-wrong-two.m4a"
+              "audioSrc": "/assets/lessons/L055/audio/L055-G05-wrong2.m4a"
             }
           ]
         }
@@ -24796,7 +25036,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L056/audio/L056-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L056/audio/L056-G02-suffix.m4a"
+          }
         },
         {
           "id": "L056-G03",
@@ -25234,7 +25479,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L057/audio/L057-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L057/audio/L057-G02-suffix.m4a"
+          }
         },
         {
           "id": "L057-G03",
@@ -25640,7 +25890,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L058/audio/L058-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L058/audio/L058-G02-suffix.m4a"
+          }
         },
         {
           "id": "L058-G03",
@@ -26063,7 +26318,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             5
-          ]
+          ],
+          "targetCharIndex": 5,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L059/audio/L059-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L059/audio/L059-G02-suffix.m4a"
+          }
         },
         {
           "id": "L059-G03",
@@ -26138,19 +26398,19 @@
               "id": "correct",
               "text": "我不要起來",
               "correct": true,
-              "audioSrc": "/assets/lessons/L059/audio/L059-S05.m4a"
+              "audioSrc": "/assets/lessons/L059/audio/L059-G05-correct.m4a"
             },
             {
               "id": "wrong-one",
               "text": "你不要起來",
               "correct": false,
-              "audioSrc": "/assets/lessons/L059/audio/L059-G05-wrong-one.m4a"
+              "audioSrc": "/assets/lessons/L059/audio/L059-G05-wrong1.m4a"
             },
             {
               "id": "wrong-two",
               "text": "他不要起來",
               "correct": false,
-              "audioSrc": "/assets/lessons/L059/audio/L059-G05-wrong-two.m4a"
+              "audioSrc": "/assets/lessons/L059/audio/L059-G05-wrong2.m4a"
             }
           ]
         }
@@ -26483,7 +26743,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             4
-          ]
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L060/audio/L060-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L060/audio/L060-G02-suffix.m4a"
+          }
         },
         {
           "id": "L060-G03",
@@ -26920,7 +27185,11 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             0
-          ]
+          ],
+          "targetCharIndex": 0,
+          "teachAudio": {
+            "suffixSrc": "/assets/lessons/L061/audio/L061-G02-suffix.m4a"
+          }
         },
         {
           "id": "L061-G03",
@@ -27361,7 +27630,12 @@
           "prompt": "小兔子會卡在不會念的字，請你幫牠。",
           "missingIndexes": [
             6
-          ]
+          ],
+          "targetCharIndex": 6,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L062/audio/L062-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L062/audio/L062-G02-suffix.m4a"
+          }
         },
         {
           "id": "L062-G03",
@@ -27776,7 +28050,12 @@
           "prompt": "小兔子讀到一個不會念的字。請按住紅框的字教牠念。",
           "missingIndexes": [
             3
-          ]
+          ],
+          "targetCharIndex": 3,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L063/audio/L063-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L063/audio/L063-G02-suffix.m4a"
+          }
         },
         {
           "id": "L063-G03",
@@ -27859,6 +28138,413 @@
               "text": "你來這邊一起走",
               "correct": false,
               "audioSrc": "/assets/lessons/L063/audio/L063-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L064",
+      "order": 64,
+      "newChars": [
+        "左"
+      ],
+      "zhuyin": {
+        "左": "ㄗㄨㄛˇ"
+      },
+      "charAudio": {
+        "左": "/assets/lessons/L064/audio/char-u5de6.m4a"
+      },
+      "title": "左",
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L064-S01",
+          "text": "我站起來去門左邊",
+          "displayLines": [
+            "我站起來",
+            "去門左邊"
+          ],
+          "spokenText": "我站起來去門左邊",
+          "focusChar": "左",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home doorway environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person young girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm expression. She has just stood up from a small chair and is now standing beside the door on the left side of the door from the viewer/child's perspective. Make the centered door the concrete reference point for left side.",
+          "imageSrc": "/assets/lessons/L064/images/L064-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L064/audio/L064-S01.m4a",
+            "durationMs": 2925,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 560
+              },
+              {
+                "charIndex": 2,
+                "startMs": 560,
+                "endMs": 760
+              },
+              {
+                "charIndex": 3,
+                "startMs": 760,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1040,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1300,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1560,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1840,
+                "endMs": 2120
+              }
+            ]
+          }
+        },
+        {
+          "id": "L064-S02",
+          "text": "你坐在我左邊看書",
+          "displayLines": [
+            "你坐在我",
+            "左邊看書"
+          ],
+          "spokenText": "你坐在我左邊看書",
+          "focusChar": "左",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean reading corner, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person young girl in yellow top and coral-red pinafore sitting with a picture book. Use the fixed second-person young boy, same age, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack. The boy sits on the girl's left side and looks at a book. Make the girl the reference point for left side and keep the left-side relationship visually clear.",
+          "imageSrc": "/assets/lessons/L064/images/L064-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L064/audio/L064-S02.m4a",
+            "durationMs": 3524,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1420,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2700,
+                "endMs": 3000
+              }
+            ]
+          }
+        },
+        {
+          "id": "L064-S03",
+          "text": "他站在門前開門",
+          "displayLines": [
+            "他站在",
+            "門前開門"
+          ],
+          "spokenText": "他站在門前開門",
+          "focusChar": "開",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home entryway, consistent expressive preschool proportions, soft cheeks, gentle facial expression, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. A friendly young boy stands directly in front of a clear wooden door and opens it with one hand. The door is partly open, and the standing posture plus front-of-door position are easy to see on a phone.",
+          "imageSrc": "/assets/lessons/L064/images/L064-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L064/audio/L064-S03.m4a",
+            "durationMs": 4077,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1060,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1500,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1740,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2260,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3060,
+                "endMs": 3400
+              }
+            ]
+          }
+        },
+        {
+          "id": "L064-S04",
+          "text": "小狗坐在門左邊",
+          "displayLines": [
+            "小狗坐在",
+            "門左邊"
+          ],
+          "spokenText": "小狗坐在門左邊",
+          "focusChar": "左",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home doorway environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. A small friendly dog sits on the left side of a clearly visible door. Make the door the concrete reference point for left side. The dog should be calm and seated, not blocking the doorway.",
+          "imageSrc": "/assets/lessons/L064/images/L064-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L064/audio/L064-S04.m4a",
+            "durationMs": 4263,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1080,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1460,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1860,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2460,
+                "endMs": 2760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L064-S05",
+          "text": "我去開門，你坐下",
+          "displayLines": [
+            "我去開門，",
+            "你坐下"
+          ],
+          "spokenText": "我去開門你坐下",
+          "focusChar": "開",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home or classroom doorway environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person young girl walking to open a door, and the fixed second-person young boy sitting down nearby on a cushion or small chair. Show both actions clearly in one friendly scene: the girl goes to open the door, and the boy sits down.",
+          "imageSrc": "/assets/lessons/L064/images/L064-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L064/audio/L064-S05.m4a",
+            "durationMs": 3929,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1780,
+                "endMs": 2020
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L064-G01",
+          "type": "find-character",
+          "sentenceId": "L064-S01",
+          "targetChar": "左",
+          "prompt": "小兔子找不到左。請在句子裡找到左，按一下。",
+          "missingIndexes": [
+            6
+          ]
+        },
+        {
+          "id": "L064-G02",
+          "type": "teach-character",
+          "sentenceId": "L064-S02",
+          "targetChar": "左",
+          "targetCharIndex": 4,
+          "prompt": "小兔子讀到一個不會念的字。請按住紅框的字教牠念。",
+          "missingIndexes": [
+            4
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L064/audio/L064-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L064/audio/L064-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L064-G03",
+          "type": "missing-character",
+          "sentenceId": "L064-S04",
+          "targetChar": "左",
+          "prompt": "有一個字不見了。請按下面的字卡，把它找回來。",
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "left",
+              "text": "左",
+              "correct": true
+            },
+            {
+              "id": "front",
+              "text": "前",
+              "correct": false
+            },
+            {
+              "id": "back",
+              "text": "後",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L064-G04",
+          "type": "partial-order",
+          "sentenceId": "L064-S03",
+          "targetChar": "站",
+          "prompt": "請照聽到的順序，把字放回句子裡。",
+          "missingIndexes": [
+            1,
+            4,
+            6
+          ],
+          "options": [
+            {
+              "id": "stand",
+              "text": "站",
+              "correct": true
+            },
+            {
+              "id": "front",
+              "text": "前",
+              "correct": true
+            },
+            {
+              "id": "door",
+              "text": "門",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L064-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L064-S05",
+          "targetChar": "開",
+          "prompt": "小兔子請三個朋友念。先按朋友的頭聽，再按念對的朋友旁邊的勾勾。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我去開門你坐下",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L064/audio/L064-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "我去開門你坐好",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L064/audio/L064-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "我去開門你站好",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L064/audio/L064-G05-wrong-two.m4a"
             }
           ]
         }
@@ -28247,7 +28933,12 @@
           "prompt": "看一看「小」在句子裡的位置。",
           "missingIndexes": [
             2
-          ]
+          ],
+          "targetCharIndex": 2,
+          "teachAudio": {
+            "prefixSrc": "/assets/reviews/R001/audio/R001-G02-prefix.m4a",
+            "suffixSrc": "/assets/reviews/R001/audio/R001-G02-suffix.m4a"
+          }
         },
         {
           "id": "R001-G03",
@@ -28713,7 +29404,12 @@
           "prompt": "看一看「高」在句子裡的位置。",
           "missingIndexes": [
             6
-          ]
+          ],
+          "targetCharIndex": 6,
+          "teachAudio": {
+            "prefixSrc": "/assets/reviews/R002/audio/R002-G02-prefix.m4a",
+            "suffixSrc": "/assets/reviews/R002/audio/R002-G02-suffix.m4a"
+          }
         },
         {
           "id": "R002-G03",
