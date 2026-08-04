@@ -62,7 +62,7 @@ const response = await fetch("https://api.openai.com/v1/responses", {
       {
         role: "system",
         content:
-          "You generate draft curriculum sentences for a Taiwan preschool Chinese character recognition app. Return JSON only. Never introduce forbidden Han characters.",
+          "You generate draft curriculum sentences for a Taiwan preschool Chinese character recognition app. Return JSON only. Never introduce forbidden Han characters. Before returning, self-audit every Han character in text, spokenText, and focusChar against the packet's allowed character list; reject or rewrite any candidate that contains an unlisted Han character.",
       },
       {
         role: "user",

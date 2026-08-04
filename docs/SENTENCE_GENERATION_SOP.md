@@ -27,6 +27,18 @@ If a proposed sentence contains any other Han character, stop and identify the u
 
 Use Taiwan zhuyin only. Do not use Hanyu pinyin in curriculum, prompts, or UI text.
 
+### Mandatory Allowed-Character Audit
+
+This is a hard gate, not a style preference.
+
+After AI drafts sentence candidates, after the teacher adds custom sentences, and after any Codex/GPT rewrite, audit every Han character in `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text against the lesson request's `allowedChars`.
+
+If any Han character is not in `allowedChars`, the sentence is rejected. Do not "fix it later" during image prompts, audio generation, or JSON entry. Report the exact sentence, the illegal character(s), and whether the sentence should be rewritten with learned characters or the lesson's `newChars` plan should be changed by the teacher.
+
+For review modules, `allowedChars` means the characters learned by `afterLessonOrder`; review modules do not introduce new characters.
+
+For parallel-prepared lessons, provisional learned characters are allowed only when they are explicitly listed in the lesson request and still match latest `origin/main` before merge. Before merging, re-run the audit against the real merged learned-character set.
+
 ## Required Coverage
 
 For a normal five-sentence new-character lesson:
@@ -185,6 +197,7 @@ For recurring people and places, use `docs/CURRICULUM_LEDGER.md` visual continui
 Before sending sentences to image/audio production, verify:
 
 - all display Han characters are allowed
+- `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text have been checked against `allowedChars`; any sentence with an unlearned Han character has been rejected or rewritten
 - the draft first explored natural target-character words and short phrases from the full learned set
 - the sentence set uses varied target-character phrases rather than one repeated frame
 - the current target count meets the lesson minimum
