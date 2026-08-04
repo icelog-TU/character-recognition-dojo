@@ -2437,6 +2437,13 @@ button.char-token {
   color: var(--primary-strong);
 }
 
+.game-option.answer {
+  border-color: #d94735;
+  background: #fff1ee;
+  color: #b43124;
+  box-shadow: 0 0 0 5px rgba(217, 71, 53, 0.13), 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
 .floating-record-char {
   position: fixed;
   top: 12%;
@@ -2478,6 +2485,47 @@ button.char-token {
   display: grid;
   gap: 10px;
   margin-top: 14px;
+}
+
+.answer-rescue-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf2;
+}
+
+.answer-rescue-panel.revealed {
+  border-color: rgba(217, 71, 53, 0.36);
+  background: #fff8f6;
+}
+
+.answer-copy {
+  margin: 0;
+  color: #7d2a20;
+  font-size: 1.04rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.answer-reveal-button,
+.answer-retry-button {
+  width: 100%;
+  min-height: 52px;
+}
+
+.answer-reveal-button {
+  border-color: rgba(34, 132, 123, 0.42);
+  background: #ffffff;
+  color: var(--primary-strong);
+}
+
+.answer-retry-button {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #ffffff;
 }
 
 .sentence-game-complete .success {

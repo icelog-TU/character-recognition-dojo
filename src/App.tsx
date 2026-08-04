@@ -5136,6 +5136,7 @@ function SentencePracticePreview({
   const [recordingGameCharIndex, setRecordingGameCharIndex] = useState<number | null>(null);
   const [foundGameIndexes, setFoundGameIndexes] = useState<Set<number>>(() => new Set());
   const [selectedPronunciationOptionId, setSelectedPronunciationOptionId] = useState<string | null>(null);
+  const [answerRevealed, setAnswerRevealed] = useState(false);
   const [floatingRecordChar, setFloatingRecordChar] = useState<string | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const recordedChunksRef = useRef<Blob[]>([]);
@@ -5183,6 +5184,7 @@ function SentencePracticePreview({
     setRecordingGameCharIndex(null);
     setFoundGameIndexes(new Set());
     setSelectedPronunciationOptionId(null);
+    setAnswerRevealed(false);
     setFloatingRecordChar(null);
     setRecordedAudioUrl((current) => {
       if (current) URL.revokeObjectURL(current);
@@ -5281,6 +5283,10 @@ function SentencePracticePreview({
   missingIndexes.forEach((index, slotIndex) => {
     filledBlanks.set(index, currentPickedOptions[slotIndex]?.text ?? "");
   });
+  const answerFilledBlanks = new Map<number, string>();
+  missingIndexes.forEach((index) => {
+    answerFilledBlanks.set(index, han[index] ?? "");
+  });
   const optionPickLimits = new Map<string, number>();
   if (game.type === "missing-character" || game.type === "partial-order") {
     shuffledGameOptions.forEach((option) => {
@@ -5291,9 +5297,69 @@ function SentencePracticePreview({
 
   function completeRound() {
     if (isCurrentRoundComplete || disabled || doneCount >= requiredCount) return;
+    setAnswerRevealed(false);
     setCompletedGameId(game.id);
     setRoundComplete(true);
     playCelebrateChime();
+  }
+
+  function resetCurrentRound() {
+    guideRunRef.current += 1;
+    stopPlayback();
+    clearAutoStopRecordingTimer();
+    const recorder = mediaRecorderRef.current;
+    if (recorder && recorder.state !== "inactive") {
+      recorder.ondataavailable = null;
+      recorder.onstop = null;
+      recorder.stop();
+    }
+    recordingStreamRef.current?.getTracks().forEach((track) => track.stop());
+    recordingStreamRef.current = null;
+    mediaRecorderRef.current = null;
+    recordedChunksRef.current = [];
+    setPickedOptionIds([]);
+    setRoundComplete(false);
+    setCompletedGameId(null);
+    setRecording(false);
+    setRecordedAudioUrl((current) => {
+      if (current) URL.revokeObjectURL(current);
+      return null;
+    });
+    setTeachPhase("reading");
+    setActiveGameCharIndex(null);
+    setAskingGameCharIndex(null);
+    setRecordingGameCharIndex(null);
+    setFoundGameIndexes(new Set());
+    setSelectedPronunciationOptionId(null);
+    setAnswerRevealed(false);
+    setFloatingRecordChar(null);
+    pressStartRef.current = null;
+    primingPressActiveRef.current = false;
+    releasedDuringPrimeRef.current = false;
+    void speakStageFour(gameGuideText(game, "reading"));
+  }
+
+  function revealAnswer() {
+    if (disabled || isCurrentRoundComplete) return;
+    guideRunRef.current += 1;
+    stopPlayback();
+    clearAutoStopRecordingTimer();
+    const recorder = mediaRecorderRef.current;
+    if (recorder && recorder.state !== "inactive") {
+      recorder.ondataavailable = null;
+      recorder.onstop = null;
+      recorder.stop();
+    }
+    recordingStreamRef.current?.getTracks().forEach((track) => track.stop());
+    recordingStreamRef.current = null;
+    setRecording(false);
+    setRecordingGameCharIndex(null);
+    setFloatingRecordChar(null);
+    setTeachPhase("reading");
+    setActiveGameCharIndex(null);
+    setAskingGameCharIndex(null);
+    setAnswerRevealed(true);
+    void speakStageFour(answerRevealText(game, sentence, zhuyinMap, shuffledGameOptions));
   }
 
   function clearAutoStopRecordingTimer() {
@@ -5356,7 +5422,13 @@ function SentencePracticePreview({
   function replayInstruction() {
     if (disabled) return;
     guideRunRef.current += 1;
-    void speakStageFour(isCurrentRoundComplete ? roundCompletionText(doneAfterThisRound) : gameGuideText(game, teachPhase));
+    void speakStageFour(
+      answerRevealed
+        ? answerRevealText(game, sentence, zhuyinMap, shuffledGameOptions)
+        : isCurrentRoundComplete
+          ? roundCompletionText(doneAfterThisRound)
+          : gameGuideText(game, teachPhase),
+    );
   }
 
   async function replayCurrentSentence() {
@@ -5386,6 +5458,7 @@ function SentencePracticePreview({
   }
 
   async function handleFindChar(index: number) {
+    if (answerRevealed) return;
     if (index !== targetIndex) {
       playMissChime();
       void speakStageFour("再找找看。");
@@ -5398,6 +5471,7 @@ function SentencePracticePreview({
   }
 
   async function handleMissingOption(option: SentenceGameOption) {
+    if (answerRevealed) return;
     if (!option.correct) {
       playMissChime();
       void speakStageFour("不是這個，再找找看。");
@@ -5410,6 +5484,7 @@ function SentencePracticePreview({
   }
 
   async function handleOrderOption(option: SentenceGameOption) {
+    if (answerRevealed) return;
     const pickedCount = pickedOptionIds.filter((id) => id === option.id).length;
     if (pickedCount >= (optionPickLimits.get(option.id) ?? 1)) return;
     const expectedText = han[missingIndexes[pickedOptionIds.length]];
@@ -5443,6 +5518,7 @@ function SentencePracticePreview({
   }
 
   async function handlePronunciationChoice(option: SentenceGameOption) {
+    if (answerRevealed) return;
     setSelectedPronunciationOptionId(option.id);
     if (!option.correct) {
       playMissChime();
@@ -5520,7 +5596,7 @@ function SentencePracticePreview({
   }
 
   async function handleTeachPressStart(index: number) {
-    if (disabled || isCurrentRoundComplete || game.type !== "teach-character") return;
+    if (disabled || answerRevealed || isCurrentRoundComplete || game.type !== "teach-character") return;
     const canStartRecording = teachPhase === "ready" || teachPhase === "asking";
     if (index !== targetIndex || !canStartRecording || recording || mediaRecorderRef.current?.state === "recording") return;
     if (teachPhase === "asking") {
@@ -5593,10 +5669,10 @@ function SentencePracticePreview({
             <SentenceGameLine
               sentence={sentence}
               zhuyinMap={zhuyinMap}
-              targetChar={isCurrentRoundComplete ? game.targetChar : undefined}
+              targetChar={isCurrentRoundComplete || answerRevealed ? game.targetChar : undefined}
               activeIndex={activeGameCharIndex}
               clickable
-              foundIndexes={isCurrentRoundComplete ? new Set([targetIndex]) : foundGameIndexes}
+              foundIndexes={isCurrentRoundComplete || answerRevealed ? new Set([targetIndex]) : foundGameIndexes}
               onCharClick={handleFindChar}
             />
           </div>
@@ -5615,11 +5691,11 @@ function SentencePracticePreview({
             <SentenceGameLine
               sentence={sentence}
               zhuyinMap={zhuyinMap}
-              targetChar={teachPhase === "reading" ? undefined : game.targetChar}
+              targetChar={answerRevealed || teachPhase !== "reading" ? game.targetChar : undefined}
               activeIndex={activeGameCharIndex}
-              askingIndex={askingGameCharIndex}
+              askingIndex={answerRevealed ? targetIndex : askingGameCharIndex}
               recordingIndex={recordingGameCharIndex}
-              foundIndexes={teachPhase === "done" || isCurrentRoundComplete ? new Set([targetIndex]) : new Set()}
+              foundIndexes={teachPhase === "done" || isCurrentRoundComplete || answerRevealed ? new Set([targetIndex]) : new Set()}
               onCharPressStart={handleTeachPressStart}
               onCharPressEnd={handleTeachPressEnd}
             />
@@ -5645,7 +5721,7 @@ function SentencePracticePreview({
               zhuyinMap={zhuyinMap}
               targetChar={game.targetChar}
               activeIndex={activeGameCharIndex}
-              blanks={filledBlanks}
+              blanks={answerRevealed ? answerFilledBlanks : filledBlanks}
             />
           </div>
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
@@ -5656,6 +5732,8 @@ function SentencePracticePreview({
               options={shuffledGameOptions}
               pickedOptionIds={pickedOptionIds}
               optionPickLimits={optionPickLimits}
+              disabled={answerRevealed}
+              showAnswer={answerRevealed}
               onPick={handleMissingOption}
             />
           </div>
@@ -5672,7 +5750,7 @@ function SentencePracticePreview({
               zhuyinMap={zhuyinMap}
               targetChar={game.targetChar}
               activeIndex={activeGameCharIndex}
-              blanks={filledBlanks}
+              blanks={answerRevealed ? answerFilledBlanks : filledBlanks}
             />
           </div>
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
@@ -5683,6 +5761,8 @@ function SentencePracticePreview({
               options={shuffledGameOptions}
               pickedOptionIds={pickedOptionIds}
               optionPickLimits={optionPickLimits}
+              disabled={answerRevealed}
+              showAnswer={answerRevealed}
               onPick={handleOrderOption}
             />
           </div>
@@ -5706,8 +5786,8 @@ function SentencePracticePreview({
         <div className="sentence-game-action-area">
           <PronunciationChoiceGrid
             options={shuffledGameOptions}
-            disabled={disabled}
-            roundComplete={isCurrentRoundComplete}
+            disabled={disabled || answerRevealed}
+            roundComplete={isCurrentRoundComplete || answerRevealed}
             selectedOptionId={selectedPronunciationOptionId}
             onHear={handleChoiceAudio}
             onChoose={handlePronunciationChoice}
@@ -5727,6 +5807,22 @@ function SentencePracticePreview({
       </div>
       <StageFourHelper text={gameGuide} onReplay={replayInstruction} />
       {gameBody}
+      {!isCurrentRoundComplete && (
+        <div className={`answer-rescue-panel${answerRevealed ? " revealed" : ""}`}>
+          {!answerRevealed ? (
+            <button type="button" className="btn answer-reveal-button" disabled={disabled} onClick={revealAnswer}>
+              按我看解答
+            </button>
+          ) : (
+            <>
+              <p className="answer-copy">{answerRevealText(game, sentence, zhuyinMap, shuffledGameOptions)}</p>
+              <button type="button" className="btn answer-retry-button" onClick={resetCurrentRound}>
+                重新挑戰這一題
+              </button>
+            </>
+          )}
+        </div>
+      )}
       {isCurrentRoundComplete && (
         <div ref={roundCompleteActionRef} className="sentence-game-complete">
           <p className="success">完成這一題。</p>
@@ -5787,6 +5883,35 @@ function gameGuideText(game: SentenceGame, teachPhase: TeachCharacterPhase = "re
     return `請照順序點下面的字卡，幫小兔子把字卡放回去。`;
   }
   return "請按每個小動物的頭像，聽牠念。誰念對了，就按旁邊的勾勾。";
+}
+
+function answerRevealText(
+  game: SentenceGame,
+  sentence: LessonSentence,
+  zhuyinMap: Map<string, string>,
+  displayOptions: SentenceGameOption[] = game.options ?? [],
+) {
+  const han = hanChars(sentence.text);
+  const targetIndex = teachTargetIndex(game, sentence);
+  if (game.type === "find-character") {
+    return `解答是「${game.targetChar}」。`;
+  }
+  if (game.type === "teach-character") {
+    const zhuyin = zhuyinMap.get(game.targetChar);
+    return zhuyin ? `解答是「${game.targetChar}」，念作${zhuyin}。` : `解答是「${game.targetChar}」。`;
+  }
+  if (game.type === "missing-character") {
+    const missingIndexes = game.missingIndexes?.length ? game.missingIndexes : [targetIndex];
+    return `解答是「${missingIndexes.map((index) => han[index] ?? "").join("")}」。`;
+  }
+  if (game.type === "partial-order") {
+    const missingIndexes = game.missingIndexes?.length ? game.missingIndexes : [targetIndex];
+    return `正確順序是「${missingIndexes.map((index) => han[index] ?? "").join("")}」。`;
+  }
+  const correctOption = displayOptions.find((option) => option.correct);
+  const correctIndex = correctOption ? displayOptions.findIndex((option) => option.id === correctOption.id) : -1;
+  const reader = correctIndex >= 0 ? PRONUNCIATION_READERS[correctIndex % PRONUNCIATION_READERS.length] : null;
+  return reader ? `解答是${reader.name}念得對。` : "解答已經標出來了。";
 }
 
 function StageFourHelper({ text, onReplay }: { text: string; onReplay: () => void }) {
@@ -6007,23 +6132,27 @@ function GameOptionGrid({
   options,
   pickedOptionIds,
   optionPickLimits,
+  disabled = false,
+  showAnswer = false,
   onPick,
 }: {
   options: SentenceGameOption[];
   pickedOptionIds: string[];
   optionPickLimits?: ReadonlyMap<string, number>;
+  disabled?: boolean;
+  showAnswer?: boolean;
   onPick: (option: SentenceGameOption) => void | Promise<void>;
 }) {
   return (
     <div className="game-option-grid">
       {options.map((option) => {
         const pickedCount = pickedOptionIds.filter((id) => id === option.id).length;
-        const disabled = pickedCount >= (optionPickLimits?.get(option.id) ?? 1);
+        const pickedDisabled = pickedCount >= (optionPickLimits?.get(option.id) ?? 1);
         return (
           <button
             key={option.id}
-            className={`game-option${pickedCount > 0 ? " picked" : ""}`}
-            disabled={disabled}
+            className={`game-option${pickedCount > 0 ? " picked" : ""}${showAnswer && option.correct ? " answer" : ""}`}
+            disabled={disabled || pickedDisabled}
             onClick={() => void onPick(option)}
           >
             {option.text}

@@ -101,6 +101,7 @@ Before editing, state the exact ownership in chat, including lesson id and owned
 - Free browsing is an internal Firestore device authorization for approved teacher/parent devices only; it must not appear as a user-facing mode or toggle.
 - Unlocked lessons must allow direct entry to any stage. Do not force Stage 1 -> Stage 2 -> Stage 3 -> Stage 4 during review.
 - In completed lessons, direct stage entry is replay mode: the selected stage must start at that stage's beginning instead of showing the old completed-stage advance prompt.
+- Every Stage 4 round must have `按我看解答`; revealing the answer must not count as completion, and the revealed state must offer `重新挑戰這一題`.
 - Preserve user/other-thread changes. Never revert unrelated work unless explicitly requested.
 
 ## Windows UTF-8
