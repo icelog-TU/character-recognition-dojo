@@ -3,12 +3,11 @@ import {
   GoogleAuthProvider,
   getAuth,
   onAuthStateChanged,
-  signInAnonymously,
   signInWithPopup,
   signOut,
   type User,
 } from "firebase/auth";
-import { collection, doc, getDoc, getDocs, getFirestore, serverTimestamp, setDoc } from "firebase/firestore";
+import { collection, doc, getDocs, getFirestore, serverTimestamp, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB79G4vRFLaRIPh1waBpJ99AS2BOt-ZzGk",
@@ -52,12 +51,6 @@ export type CloudLessonSessionSnapshot = {
   pictureCompletedSentenceIds: string[];
 };
 
-export type CloudDeviceRecord = Partial<CloudProgressSnapshot> & {
-  freeBrowse?: boolean;
-  label?: string;
-  role?: string;
-};
-
 export type CloudAccountUser = {
   uid: string;
   email: string;
@@ -94,23 +87,6 @@ export const MAX_ACCOUNT_DEVICES = 3;
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-
-export function normalizeDeviceCode(value: string): string {
-  return value
-    .trim()
-    .toUpperCase()
-    .replace(/[^A-Z0-9-]/g, "")
-    .slice(0, 32);
-}
-
-export function validDeviceCode(value: string): boolean {
-  return /^[A-Z0-9-]{3,32}$/.test(value);
-}
-
-async function ensureSignedIn() {
-  if (auth.currentUser) return auth.currentUser;
-  return (await signInAnonymously(auth)).user;
-}
 
 function toCloudAccountUser(user: User): CloudAccountUser | null {
   if (user.isAnonymous) return null;
@@ -260,26 +236,6 @@ export async function deactivateAccountDevice(accountId: string, deviceId: strin
     doc(db, "accounts", accountId, "devices", deviceId),
     {
       active: false,
-      updatedAt: serverTimestamp(),
-    },
-    { merge: true },
-  );
-}
-
-export async function loadCloudProgress(deviceCode: string): Promise<CloudDeviceRecord | null> {
-  await ensureSignedIn();
-  const snapshot = await getDoc(doc(db, "devices", deviceCode));
-  if (!snapshot.exists()) return null;
-  return snapshot.data() as CloudDeviceRecord;
-}
-
-export async function saveCloudProgress(deviceCode: string, progress: CloudProgressSnapshot): Promise<void> {
-  await ensureSignedIn();
-  await setDoc(
-    doc(db, "devices", deviceCode),
-    {
-      ...progress,
-      deviceCode,
       updatedAt: serverTimestamp(),
     },
     { merge: true },

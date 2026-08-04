@@ -5,16 +5,12 @@ import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculu
 import {
   deactivateAccountDevice,
   loadAccountDevices,
-  loadCloudProgress,
-  normalizeDeviceCode,
   registerAccountDevice,
   renameAccountDevice,
   saveAccountDeviceProgress,
-  saveCloudProgress,
   signInWithGoogleAccount,
   signOutCloudAccount,
   subscribeCloudAccount,
-  validDeviceCode,
   type CloudAccountDeviceRecord,
   type CloudAccountUser,
   type CloudDailyRecord,
@@ -53,7 +49,6 @@ type DailyRecord = CloudDailyRecord;
 type StoredProgress = CloudProgressSnapshot;
 type CloudSyncStatus = "idle" | "loading" | "saving" | "synced" | "error";
 type CloudProgressSettings = {
-  deviceCode: string;
   accountDeviceId: string;
   accountDeviceLabel: string;
 };
@@ -1210,16 +1205,15 @@ function normalizeAccountDeviceLabel(value: string): string {
 
 function loadCloudProgressSettings(): CloudProgressSettings {
   if (typeof window === "undefined") {
-    return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
+    return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
   }
   try {
     const raw = window.localStorage.getItem(CLOUD_PROGRESS_SETTINGS_KEY);
     if (!raw) {
-      return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
+      return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
     }
     const parsed = JSON.parse(raw) as Partial<CloudProgressSettings>;
     return {
-      deviceCode: normalizeDeviceCode(String(parsed.deviceCode ?? "")),
       accountDeviceId:
         typeof parsed.accountDeviceId === "string" && parsed.accountDeviceId.startsWith("dev_")
           ? parsed.accountDeviceId
@@ -1227,7 +1221,7 @@ function loadCloudProgressSettings(): CloudProgressSettings {
       accountDeviceLabel: normalizeAccountDeviceLabel(String(parsed.accountDeviceLabel ?? "目前這支手機")),
     };
   } catch {
-    return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
+    return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
   }
 }
 
@@ -1276,7 +1270,6 @@ function App() {
   const [lessonSessions, setLessonSessions] = useState<Record<string, CloudLessonSessionSnapshot>>(
     () => initialProgress?.lessonSessions ?? {},
   );
-  const [deviceCode, setDeviceCode] = useState(initialCloudSettings.deviceCode);
   const [accountDeviceId] = useState(initialCloudSettings.accountDeviceId);
   const [accountDeviceLabel, setAccountDeviceLabel] = useState(initialCloudSettings.accountDeviceLabel);
   const accountDeviceLabelRef = useRef(initialCloudSettings.accountDeviceLabel);
@@ -1287,15 +1280,10 @@ function App() {
   const [accountSyncStatus, setAccountSyncStatus] = useState<CloudSyncStatus>("idle");
   const [accountSyncMessage, setAccountSyncMessage] = useState("尚未登入帳號");
   const [freeBrowse, setFreeBrowse] = useState(false);
-  const [cloudReadyForSave, setCloudReadyForSave] = useState(false);
-  const [cloudSyncStatus, setCloudSyncStatus] = useState<CloudSyncStatus>(deviceCode ? "loading" : "idle");
-  const [cloudSyncMessage, setCloudSyncMessage] = useState(deviceCode ? "正在讀取雲端進度" : "尚未設定裝置代號");
   const [lastGachaResult, setLastGachaResult] = useState<GachaDrawResult | null>(null);
   const [collectionFocus, setCollectionFocus] = useState<CollectionFocus>({ realmId: "land", characterId: null, nonce: 0 });
   const nextOrder = nextLockedLessonOrder(curriculum.lessons, completedOrders);
   const latestLessonOrder = curriculum.lessons[curriculum.lessons.length - 1]?.order ?? nextOrder;
-  const cloudDeviceCode = normalizeDeviceCode(deviceCode);
-  const cloudSyncEnabled = validDeviceCode(cloudDeviceCode);
   const unlockOrder = freeBrowse ? latestLessonOrder : nextOrder;
   const [selectedOrder, setSelectedOrder] = useState(initialProgress?.selectedOrder ?? nextOrder);
   const playbackState = usePlaybackState();
@@ -1341,12 +1329,11 @@ function App() {
 
   useEffect(() => {
     saveCloudProgressSettings({
-      deviceCode: cloudDeviceCode,
       accountDeviceId,
       accountDeviceLabel,
     });
     accountDeviceLabelRef.current = accountDeviceLabel;
-  }, [accountDeviceId, accountDeviceLabel, cloudDeviceCode]);
+  }, [accountDeviceId, accountDeviceLabel]);
 
   useEffect(() => {
     return subscribeCloudAccount((user) => {
@@ -1360,54 +1347,6 @@ function App() {
       }
     });
   }, []);
-
-  useEffect(() => {
-    if (accountUser) return;
-    if (!deviceCode) {
-      setCloudReadyForSave(false);
-      setFreeBrowse(false);
-      setCloudSyncStatus("idle");
-      setCloudSyncMessage("尚未設定裝置代號");
-      return;
-    }
-    if (!cloudSyncEnabled) {
-      setCloudReadyForSave(false);
-      setFreeBrowse(false);
-      setCloudSyncStatus("error");
-      setCloudSyncMessage("裝置代號需要 3-32 個英數字或 -");
-      return;
-    }
-
-    let active = true;
-    setCloudReadyForSave(false);
-    setCloudSyncStatus("loading");
-    setCloudSyncMessage("正在讀取雲端進度");
-    loadCloudProgress(cloudDeviceCode)
-      .then((remoteProgress) => {
-        if (!active) return;
-        setFreeBrowse(remoteProgress?.freeBrowse === true);
-        const normalizedProgress = normalizeStoredProgress(remoteProgress);
-        if (normalizedProgress) {
-          applyStoredProgress(normalizedProgress);
-          setCloudSyncMessage("已載入雲端進度");
-        } else {
-          setCloudSyncMessage("新的裝置代號，將建立雲端進度");
-        }
-        setCloudReadyForSave(true);
-        setCloudSyncStatus("synced");
-      })
-      .catch(() => {
-        if (!active) return;
-        setCloudReadyForSave(false);
-        setFreeBrowse(false);
-        setCloudSyncStatus("error");
-        setCloudSyncMessage("雲端讀取失敗，暫時使用本機進度");
-      });
-
-    return () => {
-      active = false;
-    };
-  }, [accountUser, cloudDeviceCode, cloudSyncEnabled, deviceCode]);
 
   useEffect(() => {
     if (!accountAuthChecked || !accountUser) return;
@@ -1479,30 +1418,13 @@ function App() {
       return () => window.clearTimeout(timeout);
     }
 
-    if (accountUser || !cloudSyncEnabled || !cloudReadyForSave) return;
-    setCloudSyncStatus("saving");
-    const timeout = window.setTimeout(() => {
-      saveCloudProgress(cloudDeviceCode, progressSnapshot)
-        .then(() => {
-          setCloudSyncStatus("synced");
-          setCloudSyncMessage("已同步到雲端");
-        })
-        .catch(() => {
-          setCloudSyncStatus("error");
-          setCloudSyncMessage("雲端同步失敗，本機進度已保留");
-        });
-    }, 500);
-
-    return () => window.clearTimeout(timeout);
+    return undefined;
   }, [
     accountDeviceId,
     accountDeviceLabel,
     accountReadyForSave,
     accountUser,
     progressSnapshot,
-    cloudDeviceCode,
-    cloudSyncEnabled,
-    cloudReadyForSave,
   ]);
 
   function applyStoredProgress(progress: StoredProgress) {
@@ -1814,10 +1736,6 @@ function App() {
         )}
         {page === "settings" && (
           <SettingsPage
-            deviceCode={deviceCode}
-            freeBrowse={freeBrowse}
-            cloudSyncStatus={cloudSyncStatus}
-            cloudSyncMessage={cloudSyncMessage}
             accountUser={accountUser}
             accountAuthChecked={accountAuthChecked}
             accountSyncStatus={accountSyncStatus}
@@ -1825,7 +1743,6 @@ function App() {
             accountDeviceId={accountDeviceId}
             accountDeviceLabel={accountDeviceLabel}
             accountDevices={accountDevices}
-            onDeviceCodeChange={(value) => setDeviceCode(normalizeDeviceCode(value))}
             onAccountDeviceLabelChange={(value) => setAccountDeviceLabel(value.slice(0, 24))}
             onAccountSignIn={handleAccountSignIn}
             onAccountSignOut={handleAccountSignOut}
@@ -2466,10 +2383,6 @@ function NarrationLine({
 }
 
 function SettingsPage({
-  deviceCode,
-  freeBrowse,
-  cloudSyncStatus,
-  cloudSyncMessage,
   accountUser,
   accountAuthChecked,
   accountSyncStatus,
@@ -2477,16 +2390,11 @@ function SettingsPage({
   accountDeviceId,
   accountDeviceLabel,
   accountDevices,
-  onDeviceCodeChange,
   onAccountDeviceLabelChange,
   onAccountSignIn,
   onAccountSignOut,
   onDeactivateAccountDevice,
 }: {
-  deviceCode: string;
-  freeBrowse: boolean;
-  cloudSyncStatus: CloudSyncStatus;
-  cloudSyncMessage: string;
   accountUser: CloudAccountUser | null;
   accountAuthChecked: boolean;
   accountSyncStatus: CloudSyncStatus;
@@ -2494,7 +2402,6 @@ function SettingsPage({
   accountDeviceId: string;
   accountDeviceLabel: string;
   accountDevices: CloudAccountDeviceRecord[];
-  onDeviceCodeChange: (value: string) => void;
   onAccountDeviceLabelChange: (value: string) => void;
   onAccountSignIn: () => void;
   onAccountSignOut: () => void;
@@ -2579,36 +2486,6 @@ function SettingsPage({
               </div>
             </>
           )}
-        </div>
-
-        <div className="settings-block legacy-sync-block">
-          <div className="settings-block-heading">
-            <h2>測試裝置代號</h2>
-          </div>
-          <p className="settings-help">這是舊版測試用同步方式。一般家長帳號請用上面的 Google 帳號同步。</p>
-          <label className="settings-label" htmlFor="device-code">
-            舊版裝置代號
-          </label>
-          <input
-            id="device-code"
-            className="settings-input"
-            value={deviceCode}
-            onChange={(event) => onDeviceCodeChange(event.target.value)}
-            placeholder="例如 PHONE-1"
-            inputMode="text"
-            autoCapitalize="characters"
-          />
-          <div className={`sync-status sync-status-${cloudSyncStatus}`}>
-            <strong>{statusLabel[cloudSyncStatus]}</strong>
-            <span>{cloudSyncMessage}</span>
-          </div>
-        </div>
-
-        <div className={`settings-toggle${freeBrowse ? " active" : ""}`} aria-live="polite">
-          <span>
-            <strong>{freeBrowse ? "已授權自由閱覽" : "一般課程模式"}</strong>
-            <small>{freeBrowse ? "這台裝置由雲端授權，可自由瀏覽所有課程" : "自由閱覽只開放給老師指定的手機和平板"}</small>
-          </span>
         </div>
       </div>
     </section>

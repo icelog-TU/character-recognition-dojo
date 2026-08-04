@@ -168,7 +168,8 @@ Cloud sync is device-scoped and parent-managed. Free browsing all lessons is not
 - Child or ordinary devices must follow the normal lesson unlock path, even when cloud sync is enabled.
 - The app must not expose a local checkbox, query parameter, or localStorage flag that lets any user turn on free browsing.
 - Firestore account-device records may include `freeBrowse: true` only for approved teacher devices such as the teacher phone and tablet.
-- The legacy `devices/{deviceCode}` path is temporary teacher/test infrastructure. Do not use it as the customer account system.
+- Settings must not show free-browse/general-mode labels to normal users. This authorization is internal device policy.
+- Settings must not show a legacy/manual device-code field. Normal users should only see account sign-in, editable device label, and system-generated device ID.
 - Before paid public release, enforce the three-device limit with a trusted backend such as Cloud Functions; app-side checks are not sufficient payment-grade enforcement.
 
 See `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md` for Firebase Console setup, data paths, and rule templates.
