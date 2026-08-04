@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L066 | 拿 | request-ready | Codex thread 2026-08-04 L066-na | local main @ 27d8054 | L065:著 | none | `curriculum-workflow/lesson-requests/L066.json`; `curriculum-workflow/generated/L066-generation-packet.md`; `curriculum-workflow/drafts/L066-draft.json` | `public/assets/lessons/L066/` pending | Teacher explicitly approved L066 new character `拿` and five final sentences in chat. This supersedes any AI recommendation draft for L066. L067 may list `L066:拿` as a provisional dependency until L066 enters main. |
 
 ## Status Values
 
