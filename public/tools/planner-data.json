@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-04T13:55:31.046Z",
+  "exportedAt": "2026-08-04T15:43:03.799Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -32182,6 +32182,456 @@
               "text": "這個包包上的花朵不可愛",
               "correct": false,
               "audioSrc": "/assets/lessons/L072/audio/L072-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L073",
+      "order": 73,
+      "newChars": [
+        "學"
+      ],
+      "zhuyin": {
+        "學": "ㄒㄩㄝˊ"
+      },
+      "charAudio": {
+        "學": "/assets/lessons/L073/audio/char-u5b78.m4a"
+      },
+      "title": "學",
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L073-S01",
+          "text": "我學畫畫，畫出了三朵花",
+          "displayLines": [
+            "我學畫畫，",
+            "畫出了",
+            "三朵花"
+          ],
+          "spokenText": "我學畫畫畫出了三朵花",
+          "focusChar": "學",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. She is learning to draw at a low table with crayons and paper. On the paper are exactly three clear flower drawings or painted flowers, simple enough to read on a phone but not text. Make the learning-to-draw action and the count of three flowers obvious.",
+          "imageSrc": "/assets/lessons/L073/images/L073-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L073/audio/L073-S01.m4a",
+            "durationMs": 4635,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1860,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2040,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2960,
+                "endMs": 3220
+              }
+            ]
+          }
+        },
+        {
+          "id": "L073-S02",
+          "text": "我不是鳥，學不會飛",
+          "displayLines": [
+            "我不是鳥，",
+            "學不會飛"
+          ],
+          "spokenText": "我不是鳥學不會飛",
+          "focusChar": "學",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. A small bird flutters nearby while the girl stays safely on the ground, gently trying to flap her arms like wings and smiling with a little puzzled expression. Make it clear she is not a bird and cannot fly; no falling, no jumping from heights, no danger.",
+          "imageSrc": "/assets/lessons/L073/images/L073-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L073/audio/L073-S02.m4a",
+            "durationMs": 3579,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 630
+              },
+              {
+                "charIndex": 2,
+                "startMs": 630,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1400,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1600,
+                "endMs": 1830
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1830,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2060,
+                "endMs": 2280
+              }
+            ]
+          }
+        },
+        {
+          "id": "L073-S03",
+          "text": "我要出門上學了",
+          "displayLines": [
+            "我要出門",
+            "上學了"
+          ],
+          "spokenText": "我要出門上學了",
+          "focusChar": "學",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. She is at her warm home doorway, wearing or picking up a school bag and stepping toward the open front door to go to school. Show the doorway, the bag, and the eager leaving-for-school action clearly, with no written school sign.",
+          "imageSrc": "/assets/lessons/L073/images/L073-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L073/audio/L073-S03.m4a",
+            "durationMs": 3171,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 400
+              },
+              {
+                "charIndex": 2,
+                "startMs": 400,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1160,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1500,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1740,
+                "endMs": 1920
+              }
+            ]
+          }
+        },
+        {
+          "id": "L073-S04",
+          "text": "我學會做吃的了，很好吃",
+          "displayLines": [
+            "我學會做",
+            "吃的了，",
+            "很好吃"
+          ],
+          "spokenText": "我學會做吃的了很好吃",
+          "focusChar": "學",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. In a clean family kitchen or table scene, the girl proudly shows a simple child-made snack or small rice balls she has learned to make. She tastes one happily because it is delicious. Keep the food clear and appetizing, no packaging labels or text.",
+          "imageSrc": "/assets/lessons/L073/images/L073-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L073/audio/L073-S04.m4a",
+            "durationMs": 3474,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1160,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1480,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1660,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2370
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2370,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2540,
+                "endMs": 2940
+              }
+            ]
+          }
+        },
+        {
+          "id": "L073-S05",
+          "text": "開學了，大家一起上學去",
+          "displayLines": [
+            "開學了，",
+            "大家一起",
+            "上學去"
+          ],
+          "spokenText": "開學了大家一起上學去",
+          "focusChar": "學",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. Use the fixed second-person boy: preschool to early elementary age, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, warm curious expression. Use the fixed third-person sporty young boy: preschool to early elementary age, short energetic slightly spiky black hair, orange athletic T-shirt, navy shorts, red sneakers, green wristband. A cheerful group of children including the fixed girl, the fixed second-person boy, and the sporty boy walk together with small school bags on a safe path toward a friendly school-like building. It is the first day back to school. Do not show readable signs, letters, or numbers on the building or bags.",
+          "imageSrc": "/assets/lessons/L073/images/L073-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L073/audio/L073-S05.m4a",
+            "durationMs": 4177,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1540,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1980,
+                "endMs": 2210
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2210,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2820,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3020,
+                "endMs": 3280
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L073-G01",
+          "type": "find-character",
+          "sentenceId": "L073-S01",
+          "targetChar": "學",
+          "prompt": "小兔子找不到學。請在句子裡找到學，按一下。",
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L073-G02",
+          "type": "teach-character",
+          "sentenceId": "L073-S02",
+          "targetChar": "學",
+          "targetCharIndex": 4,
+          "prompt": "小兔子讀到一個不會念的字。請按住紅框的字教牠念。",
+          "missingIndexes": [
+            4
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L073/audio/L073-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L073/audio/L073-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L073-G03",
+          "type": "missing-character",
+          "sentenceId": "L073-S03",
+          "targetChar": "學",
+          "prompt": "有一個字不見了。請按下面的字卡，把它找回來。",
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "xue",
+              "text": "學",
+              "correct": true
+            },
+            {
+              "id": "hua",
+              "text": "畫",
+              "correct": false
+            },
+            {
+              "id": "chu",
+              "text": "出",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L073-G04",
+          "type": "partial-order",
+          "sentenceId": "L073-S04",
+          "targetChar": "學",
+          "prompt": "請照聽到的順序，把字放回句子裡。",
+          "missingIndexes": [
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "xue",
+              "text": "學",
+              "correct": true
+            },
+            {
+              "id": "hui",
+              "text": "會",
+              "correct": true
+            },
+            {
+              "id": "zuo",
+              "text": "做",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L073-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L073-S05",
+          "targetChar": "學",
+          "prompt": "小兔子請三個朋友念。先按朋友的頭聽，再按念對的朋友旁邊的勾勾。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "開學了大家一起上學去",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L073/audio/L073-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "開花了大家一起上學去",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L073/audio/L073-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "開學了大家一起上山去",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L073/audio/L073-G05-wrong-two.m4a"
             }
           ]
         }

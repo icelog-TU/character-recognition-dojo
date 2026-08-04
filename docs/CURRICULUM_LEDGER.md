@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 68:
+Characters taught after Lesson 73:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學`
 
 Recent review pool for the next lesson:
 
-`他 左 手 拿 著 花 站 在 門 邊 媽 包 裡 有 很 多 女 孩 愛 男 也 後 開 不 少 這 是 我 做 的 好 看 書 坐 爸 要 去 大 家 都`
+`我 學 畫 出 了 三 朵 花 不 是 鳥 會 飛 要 門 上 做 吃 的 很 好 開 大 家 一 起 去 他 拿 書 包 裡 看 女 男 可 愛`
 
 ## Visual Continuity Ledger
 
@@ -133,12 +133,13 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L070 | 了 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了 | 他拿起書包看了看 / 書包上有很好看的花朵 / 小狗吃了一朵我做的花 / 不要站著吃，要坐著吃 / 水邊的花開了 | 他拿起書包看看書包上有很好看的花朵小狗吃一朵我做的花不要站著吃要坐著吃水邊的花開 | Introduces `了` as neutral-tone `˙ㄌㄜ` through completed or changed states in looking, eating, and flowers opening. Reviews recent `朵`, `花`, `包`, `拿`, and `著`; includes generated images, AI audio, AI-aligned timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L071 | 畫 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫 | 我在書包上畫了三朵花 / 媽媽拿走了我的畫 / 書上畫著花朵和鳥 / 這樣不好看，我不要畫了 / 這樣看起來很好吃 | 我在書包上了三朵花媽媽拿走了我的書上著花朵和鳥這樣不好看我不要了這樣看起來很好吃 | Introduces `畫` through drawing on a book bag, a mother taking a drawing, drawings in a book, stopping drawing, and a good-looking snack. Reviews recent `了`, `朵`, `花`, `包`, and `拿`; includes generated images, AI audio, AI-aligned timings, dedicated teach-character prefix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L072 | 出 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出 | 他拿出書包裡的花朵 / 我畫不出來，我不要畫了 / 爸爸出門了，我也要出門 / 我看不出他是男是女 / 這個包包上的花朵好可愛 | 他拿書包裡的花朵我畫不來我不要畫了爸爸門了我也要門我看不他是男是女這個包包上的花朵好可愛 | Introduces `出` through taking flowers out of a bag, being unable to draw, going out the door, being unable to tell boy or girl, and a cute flower-pattern bag. Reviews recent `畫`, `了`, `朵`, `花`, and `包`; this was corrected from a mistaken lesson number per teacher instruction. Includes generated images, AI audio, AI-aligned timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L073 | 學 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學 | 我學畫畫，畫出了三朵花 / 我不是鳥，學不會飛 / 我要出門上學了 / 我學會做吃的了，很好吃 / 開學了，大家一起上學去 | 我畫出了三朵花不是鳥不會飛要出門上了會做吃的很開大家一起去 | Introduces `學` through learning to draw, learning to fly, going to school, learning to make food, and school starting. Reviews recent `出`, `畫`, `了`, `朵`, and `花`; includes L058-style generated images, AI audio, AI-aligned/manual-corrected timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | R001 | review module | same as L060 | 一二三，大家一起看鳥飛 / 一個小孩在門前看小鳥 / 女孩和男孩去山下看水 / 大人的手指很大 / 你看，門後也有書 | 一 二 三 人 個 大 的 小 手 有 山 下 水 在 很 家 和 鳥 孩 指 看 女 飛 男 門 前 後 也 | First review module after L060. Introduces no new characters. R001-R002 together cover every new character from L001-L030. Includes reviewed images, AI audio, AI-aligned/manual-reviewed timings, and fixed Stage 4 review games. |
 | R002 | review module | same as L060 | 我在水邊看山上的鳥 / 一隻小鳥飛到高山上 / 人少的山邊比水邊好 / 你和我一起去門前 / 男孩女孩也來看書 | 一 人 的 小 我 山 上 你 水 在 高 和 隻 鳥 孩 看 女 飛 男 門 前 也 | Second review module after L060. Introduces no new characters. Completes the first review pair covering L001-L030. Includes reviewed images, AI audio, AI-aligned timings, and fixed Stage 4 review games. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L072. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L073. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
