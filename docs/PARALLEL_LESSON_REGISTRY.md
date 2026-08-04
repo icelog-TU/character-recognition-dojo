@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L073 | 學 | request-ready | Codex L073 學 thread | main @ local request | none; L001-L072 merged | none | `curriculum-workflow/lesson-requests/L073.json`; `curriculum-workflow/generated/L073-generation-packet.md`; `curriculum-workflow/drafts/L073-draft.json` | `curriculum-workflow/audio-inbox/L073/`; `public/assets/lessons/L073/` | Teacher approved L073 new char `學` and five final sentences in chat. Build production images/audio/timings, then merge in order after L072 production truth. |
 
 ## Status Values
 
