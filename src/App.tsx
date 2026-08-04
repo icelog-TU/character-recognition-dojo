@@ -5305,6 +5305,7 @@ function SentencePracticePreview({
 
   function resetCurrentRound() {
     guideRunRef.current += 1;
+    const resetRunId = guideRunRef.current;
     stopPlayback();
     clearAutoStopRecordingTimer();
     const recorder = mediaRecorderRef.current;
@@ -5336,6 +5337,10 @@ function SentencePracticePreview({
     pressStartRef.current = null;
     primingPressActiveRef.current = false;
     releasedDuringPrimeRef.current = false;
+    if (game.type === "teach-character") {
+      void runTeachCharacterIntro(resetRunId);
+      return;
+    }
     void speakStageFour(gameGuideText(game, "reading"));
   }
 
@@ -5422,6 +5427,14 @@ function SentencePracticePreview({
   function replayInstruction() {
     if (disabled) return;
     guideRunRef.current += 1;
+    if (game.type === "teach-character" && !answerRevealed && !isCurrentRoundComplete && teachPhase === "reading") {
+      stopPlayback();
+      setActiveGameCharIndex(null);
+      setAskingGameCharIndex(targetIndex);
+      setTeachPhase("ready");
+      void speakStageFour(gameGuideText(game, "ready"));
+      return;
+    }
     void speakStageFour(
       answerRevealed
         ? answerRevealText(game, sentence, zhuyinMap, shuffledGameOptions)
@@ -5434,6 +5447,8 @@ function SentencePracticePreview({
   async function replayCurrentSentence() {
     if (disabled || !sentence) return;
     const runId = guideRunRef.current + 1;
+    const shouldRestoreTeachReady =
+      game.type === "teach-character" && !answerRevealed && !isCurrentRoundComplete && teachPhase === "reading";
     guideRunRef.current = runId;
     setActiveGameCharIndex(null);
     onSpeakStartRef.current("stage4");
@@ -5452,6 +5467,10 @@ function SentencePracticePreview({
     } finally {
       if (guideRunRef.current === runId) {
         setActiveGameCharIndex(null);
+        if (shouldRestoreTeachReady) {
+          setAskingGameCharIndex(targetIndex);
+          setTeachPhase("ready");
+        }
         onSpeakEndRef.current("stage4");
       }
     }
