@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 62:
+Characters taught after Lesson 65:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著`
 
 Recent review pool for the next lesson:
 
-`來 起 去 坐 站 比 邊 我 少 的 這 看 要 人 好 多 一 他 走 家 更 你 不 下 門 書 吃 山 上 很 裡 和 在 水 前 個 也 大 鳥 後 小 狗 高`
+`在 水 邊 坐 比 去 山 上 好 下 看 書 走 來 門 前 的 人 後 少 他 起 我 和 小 狗 一 站 不 要 這 更 高 開 你 大 沒 有 左 著 手 指 鳥 飛 到`
 
 ## Visual Continuity Ledger
 
@@ -125,12 +125,13 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L062 | 站 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站 | 他站起來走去門邊 / 不要坐這邊，要站起來 / 站起來比坐下更高 / 坐下不好，站起來走一走 / 去水邊比去山上更好 | 他起來走去門邊不要坐這比下更高好一水山上 | Introduces `站` through standing up, standing versus sitting, and walking to the door. Reviews recent `起`, `去`, and `坐`; includes reviewed images, AI audio, AI-aligned timings, and five fixed Stage 4 games. |
 | L063 | 開 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開 | 我站起來去開門 / 你來這邊一起坐 / 小狗走開，不要坐在門前 / 大門沒開，我去開 / 沒有人站在這邊 | 我站起來去門你這邊一坐小狗走不要在前大沒人 | Introduces `開` through opening a door, asking a dog to move away from the doorway, and a closed big door that the fixed girl goes to open. Reviews recent `去`, `坐`, and `站`; includes reviewed images, AI audio, AI-aligned timings, and five fixed Stage 4 games. |
 | L064 | 左 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左 | 我站起來去門左邊 / 你坐在我左邊看書 / 他站在門前開門 / 小狗坐在門左邊 / 我去開門，你坐下 | 我站起來去門邊你坐在看書他前開小狗下 | Introduces `左` through concrete left-side positions anchored to a door or the fixed girl. Reviews recent `開`, `站`, `坐`, `去`, and `起`; includes reviewed L058-style images, AI audio, AI-aligned timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L065 | 著 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著 | 你不要坐著，站起來去開門 / 他坐在門的左邊，看著山 / 我的左手指著前門 / 書開著，你站在我左邊一起看 / 小狗看著鳥飛到山上 | 你不要坐站起來去開門他在的左邊看山我手指前書一小狗鳥飛到上 | Introduces `著` as the light aspect marker through varied concrete phrases: sitting, looking, pointing, and an open book. Reviews recent `左`, `開`, `站`, `坐`, and `去`; includes restored reviewed L058-style images, AI audio, AI-aligned timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | R001 | review module | same as L060 | 一二三，大家一起看鳥飛 / 一個小孩在門前看小鳥 / 女孩和男孩去山下看水 / 大人的手指很大 / 你看，門後也有書 | 一 二 三 人 個 大 的 小 手 有 山 下 水 在 很 家 和 鳥 孩 指 看 女 飛 男 門 前 後 也 | First review module after L060. Introduces no new characters. R001-R002 together cover every new character from L001-L030. Includes reviewed images, AI audio, AI-aligned/manual-reviewed timings, and fixed Stage 4 review games. |
 | R002 | review module | same as L060 | 我在水邊看山上的鳥 / 一隻小鳥飛到高山上 / 人少的山邊比水邊好 / 你和我一起去門前 / 男孩女孩也來看書 | 一 人 的 小 我 山 上 你 水 在 高 和 隻 鳥 孩 看 女 飛 男 門 前 也 | Second review module after L060. Introduces no new characters. Completes the first review pair covering L001-L030. Includes reviewed images, AI audio, AI-aligned timings, and fixed Stage 4 review games. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L064. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L065. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
