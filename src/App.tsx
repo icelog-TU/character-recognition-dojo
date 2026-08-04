@@ -1205,17 +1205,17 @@ function createAccountDeviceId(): string {
 
 function normalizeAccountDeviceLabel(value: string): string {
   const label = value.trim().slice(0, 24);
-  return label || "這台裝置";
+  return label || "目前這支手機";
 }
 
 function loadCloudProgressSettings(): CloudProgressSettings {
   if (typeof window === "undefined") {
-    return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "這台裝置" };
+    return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
   }
   try {
     const raw = window.localStorage.getItem(CLOUD_PROGRESS_SETTINGS_KEY);
     if (!raw) {
-      return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "這台裝置" };
+      return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
     }
     const parsed = JSON.parse(raw) as Partial<CloudProgressSettings>;
     return {
@@ -1224,10 +1224,10 @@ function loadCloudProgressSettings(): CloudProgressSettings {
         typeof parsed.accountDeviceId === "string" && parsed.accountDeviceId.startsWith("dev_")
           ? parsed.accountDeviceId
           : createAccountDeviceId(),
-      accountDeviceLabel: normalizeAccountDeviceLabel(String(parsed.accountDeviceLabel ?? "這台裝置")),
+      accountDeviceLabel: normalizeAccountDeviceLabel(String(parsed.accountDeviceLabel ?? "目前這支手機")),
     };
   } catch {
-    return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "這台裝置" };
+    return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
   }
 }
 
@@ -1414,7 +1414,7 @@ function App() {
     let active = true;
     setAccountReadyForSave(false);
     setAccountSyncStatus("loading");
-    setAccountSyncMessage("正在註冊這台裝置");
+    setAccountSyncMessage("正在登記目前這台手機或平板");
     registerAccountDevice(accountUser, accountDeviceId, accountDeviceLabelRef.current)
       .then((result) => {
         if (!active) return;
@@ -1430,9 +1430,9 @@ function App() {
         const normalizedProgress = normalizeStoredProgress(result.device);
         if (normalizedProgress) {
           applyStoredProgress(normalizedProgress);
-          setAccountSyncMessage("已載入這台裝置的帳號進度");
+          setAccountSyncMessage("已載入目前這台手機或平板的進度");
         } else {
-          setAccountSyncMessage("已建立這台裝置的帳號進度");
+          setAccountSyncMessage("已建立目前這台手機或平板的進度");
         }
         setAccountReadyForSave(true);
         setAccountSyncStatus("synced");
@@ -1468,7 +1468,7 @@ function App() {
         saveAccountDeviceProgress(accountUser.uid, accountDeviceId, accountDeviceLabel, progressSnapshot)
           .then(() => {
             setAccountSyncStatus("synced");
-            setAccountSyncMessage("已同步到這台裝置的帳號進度");
+            setAccountSyncMessage("已同步目前這台手機或平板的進度");
           })
           .catch(() => {
             setAccountSyncStatus("error");
@@ -2520,6 +2520,7 @@ function SettingsPage({
             <h2>帳號同步</h2>
             {accountUser && <button className="settings-link-button" onClick={onAccountSignOut}>登出</button>}
           </div>
+          <p className="settings-help">這裡管理目前這支手機或平板的雲端進度。每個帳號最多保留三台啟用中的裝置。</p>
           {accountUser ? (
             <>
               <div className="account-card">
@@ -2527,18 +2528,20 @@ function SettingsPage({
                 <span>{accountUser.email}</span>
               </div>
               <label className="settings-label" htmlFor="account-device-label">
-                這台裝置名稱
+                目前裝置名稱
               </label>
               <input
                 id="account-device-label"
                 className="settings-input plain"
                 value={accountDeviceLabel}
                 onChange={(event) => onAccountDeviceLabelChange(event.target.value)}
-                placeholder="例如 媽媽手機"
+                placeholder="例如 媽媽手機、家裡平板"
               />
+              <p className="settings-help">這是給家長辨認用的名稱，可以自己改；真正追蹤用的是下面的系統裝置 ID。</p>
               <div className="device-id-row">
                 <span>系統裝置 ID</span>
                 <code>{accountDeviceId}</code>
+                <small>系統自動產生，用來分辨同一個帳號底下的不同手機和平板。</small>
               </div>
               <div className={`sync-status sync-status-${accountSyncStatus}`}>
                 <strong>{statusLabel[accountSyncStatus]}</strong>
@@ -2552,7 +2555,7 @@ function SettingsPage({
                       <div className={`account-device-row${device.active ? "" : " inactive"}`} key={device.deviceId}>
                         <span>
                           <strong>{device.label}</strong>
-                          <small>{isCurrent ? "這台裝置" : device.active ? "已啟用" : "已停用"}</small>
+                          <small>{isCurrent ? "目前正在使用" : device.active ? "已啟用" : "已停用"}</small>
                         </span>
                         {!isCurrent && device.active && (
                           <button className="settings-link-button danger" onClick={() => onDeactivateAccountDevice(device.deviceId)}>
@@ -2582,8 +2585,9 @@ function SettingsPage({
           <div className="settings-block-heading">
             <h2>測試裝置代號</h2>
           </div>
+          <p className="settings-help">這是舊版測試用同步方式。一般家長帳號請用上面的 Google 帳號同步。</p>
           <label className="settings-label" htmlFor="device-code">
-            裝置代號
+            舊版裝置代號
           </label>
           <input
             id="device-code"
