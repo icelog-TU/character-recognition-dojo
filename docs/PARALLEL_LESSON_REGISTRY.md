@@ -1,4 +1,4 @@
-# Parallel Lesson Registry
+﻿# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L068 | 花 | claimed | Codex L068 花 thread | codex/l068-hua @ 081f162 | none | none | `curriculum-workflow/lesson-requests/L068.json`; `curriculum-workflow/generated/L068-generation-packet.md`; `curriculum-workflow/drafts/L068-draft.json` | planned `curriculum-workflow/audio-inbox/L068/`; `public/assets/lessons/L068/` | Teacher approved new char 花 and five final sentences in chat. L067 包 is merged in latest main. |
 
 ## Status Values
 

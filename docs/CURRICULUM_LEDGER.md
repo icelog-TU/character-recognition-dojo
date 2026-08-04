@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 66:
+Characters taught after Lesson 68:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花`
 
 Recent review pool for the next lesson:
 
-`他 站 起 來 走 去 門 邊 不 要 坐 這 比 下 更 高 好 一 水 山 上 我 開 你 小 狗 在 前 大 沒 有 人 左 看 書 著 的 手 指 鳥 飛 到 拿`
+`他 左 手 拿 著 花 站 在 門 邊 媽 包 裡 有 很 多 女 孩 愛 男 也 後 開 不 少 這 是 我 做 的 好 看 書 坐 爸 要 去 大 家 都`
 
 ## Visual Continuity Ledger
 
@@ -128,12 +128,13 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L065 | 著 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著 | 你不要坐著，站起來去開門 / 他坐在門的左邊，看著山 / 我的左手指著前門 / 書開著，你站在我左邊一起看 / 小狗看著鳥飛到山上 | 你不要坐站起來去開門他在的左邊看山我手指前書一小狗鳥飛到上 | Introduces `著` as the light aspect marker through varied concrete phrases: sitting, looking, pointing, and an open book. Reviews recent `左`, `開`, `站`, `坐`, and `去`; includes restored reviewed L058-style images, AI audio, AI-aligned timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L066 | 拿 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿 | 你拿著書站起來 / 我拿著書去開門 / 他拿開左邊的書 / 我坐著拿起書看 / 小狗站在門左邊看你拿書 | 你著書站起來我去開門他左邊的坐看小狗在 | Introduces `拿` through holding a book, taking a book away, picking up a book, and holding a book near the door. Reviews recent `著`, `左`, `開`, `站`, and `坐`; includes L058-style generated images, AI audio, AI-aligned/manual-corrected timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L067 | 包 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包 | 你拿著書包站起來 / 書包開著，看來包裡沒有書 / 他左手拿著包包站在門邊 / 你要去坐在爸爸的左邊 / 沒有人坐著，大家都站著 | 你拿著書站起來開看裡沒有他左手在門邊要去坐爸爸的大都 | Introduces `包` through book bags, holding a bag, an open empty bag, and `包包`. Reviews recent `拿`, `著`, `左`, `開`, and `站`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L068 | 花 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花 | 他左手拿著花，站在門邊 / 媽媽拿著包包，包裡有很多花 / 女孩愛花，男孩也愛花 / 後門左邊開著不少花 / 這是我做的花，好不好看？ | 他左手拿著站在門邊媽媽包裡有很多女孩愛男孩也後開不少這是我做的好不好看 | Introduces `花` through holding flowers, many flowers inside a bag, children loving flowers, flowers blooming by a back door, and a handmade flower. Reviews recent `包`, `拿`, `著`, `左`, and `開`; includes L058-style generated images, AI audio, AI-aligned/manual-corrected timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | R001 | review module | same as L060 | 一二三，大家一起看鳥飛 / 一個小孩在門前看小鳥 / 女孩和男孩去山下看水 / 大人的手指很大 / 你看，門後也有書 | 一 二 三 人 個 大 的 小 手 有 山 下 水 在 很 家 和 鳥 孩 指 看 女 飛 男 門 前 後 也 | First review module after L060. Introduces no new characters. R001-R002 together cover every new character from L001-L030. Includes reviewed images, AI audio, AI-aligned/manual-reviewed timings, and fixed Stage 4 review games. |
 | R002 | review module | same as L060 | 我在水邊看山上的鳥 / 一隻小鳥飛到高山上 / 人少的山邊比水邊好 / 你和我一起去門前 / 男孩女孩也來看書 | 一 人 的 小 我 山 上 你 水 在 高 和 隻 鳥 孩 看 女 飛 男 門 前 也 | Second review module after L060. Introduces no new characters. Completes the first review pair covering L001-L030. Includes reviewed images, AI audio, AI-aligned timings, and fixed Stage 4 review games. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L067. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L068. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
