@@ -559,6 +559,22 @@ button {
   border-radius: 8px;
 }
 
+.profile-create-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.profile-create-row .settings-link-button {
+  min-height: 46px;
+}
+
+.profile-rename-row {
+  display: grid;
+  gap: 6px;
+}
+
 .sync-status {
   display: grid;
   gap: 3px;

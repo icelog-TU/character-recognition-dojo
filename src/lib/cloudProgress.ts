@@ -7,7 +7,7 @@ import {
   signOut,
   type User,
 } from "firebase/auth";
-import { collection, doc, getDocs, getFirestore, serverTimestamp, setDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, getFirestore, serverTimestamp, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB79G4vRFLaRIPh1waBpJ99AS2BOt-ZzGk",
@@ -61,9 +61,19 @@ export type CloudAccountDeviceRecord = Partial<CloudProgressSnapshot> & {
   deviceId: string;
   label: string;
   active: boolean;
+  activeProfileId?: string;
   freeBrowse?: boolean;
   userAgent?: string;
   lastSeenAt?: unknown;
+  createdAt?: unknown;
+  updatedAt?: unknown;
+};
+
+export type CloudProfileRecord = Partial<CloudProgressSnapshot> & {
+  profileId: string;
+  label: string;
+  active: boolean;
+  kind?: "child" | "teacher" | "test";
   createdAt?: unknown;
   updatedAt?: unknown;
 };
@@ -111,9 +121,25 @@ function accountDeviceFromSnapshot(deviceId: string, data: Record<string, unknow
     deviceId,
     label: typeof data.label === "string" && data.label.trim() ? data.label.trim() : "這台裝置",
     active: data.active !== false,
+    activeProfileId: typeof data.activeProfileId === "string" ? data.activeProfileId : undefined,
     freeBrowse: data.freeBrowse === true,
     userAgent: typeof data.userAgent === "string" ? data.userAgent : undefined,
     lastSeenAt: data.lastSeenAt,
+    createdAt: data.createdAt,
+    updatedAt: data.updatedAt,
+  };
+}
+
+function profileFromSnapshot(profileId: string, data: Record<string, unknown>): CloudProfileRecord {
+  return {
+    ...(data as Partial<CloudProgressSnapshot>),
+    profileId,
+    label: typeof data.label === "string" && data.label.trim() ? data.label.trim() : "主要進度",
+    active: data.active !== false,
+    kind:
+      data.kind === "child" || data.kind === "teacher" || data.kind === "test"
+        ? data.kind
+        : undefined,
     createdAt: data.createdAt,
     updatedAt: data.updatedAt,
   };
@@ -142,6 +168,21 @@ export async function loadAccountDevices(accountId: string): Promise<CloudAccoun
   return snapshots.docs
     .map((snapshot) => accountDeviceFromSnapshot(snapshot.id, snapshot.data()))
     .sort((a, b) => String(b.lastSeenAt ?? "").localeCompare(String(a.lastSeenAt ?? "")));
+}
+
+export async function loadAccountProfiles(accountId: string): Promise<CloudProfileRecord[]> {
+  requireAccountUser(accountId);
+  const snapshots = await getDocs(collection(db, "accounts", accountId, "profiles"));
+  return snapshots.docs
+    .map((snapshot) => profileFromSnapshot(snapshot.id, snapshot.data()))
+    .sort((a, b) => String(a.createdAt ?? "").localeCompare(String(b.createdAt ?? "")));
+}
+
+export async function loadAccountProfile(accountId: string, profileId: string): Promise<CloudProfileRecord | null> {
+  requireAccountUser(accountId);
+  const snapshot = await getDoc(doc(db, "accounts", accountId, "profiles", profileId));
+  if (!snapshot.exists()) return null;
+  return profileFromSnapshot(snapshot.id, snapshot.data());
 }
 
 export async function registerAccountDevice(
@@ -197,21 +238,43 @@ export async function registerAccountDevice(
   return { ok: true, maxDevices: MAX_ACCOUNT_DEVICES, device, devices: refreshedDevices };
 }
 
-export async function saveAccountDeviceProgress(
+export async function createAccountProfile(
   accountId: string,
-  deviceId: string,
   label: string,
+  progress: CloudProgressSnapshot,
+  kind: CloudProfileRecord["kind"] = "child",
+): Promise<CloudProfileRecord> {
+  requireAccountUser(accountId);
+  const profileRef = doc(collection(db, "accounts", accountId, "profiles"));
+  await setDoc(
+    profileRef,
+    {
+      ...progress,
+      profileId: profileRef.id,
+      label: label.trim() || "主要進度",
+      active: true,
+      kind,
+      updatedAt: serverTimestamp(),
+      createdAt: serverTimestamp(),
+    },
+  );
+  const profile = await loadAccountProfile(accountId, profileRef.id);
+  if (!profile) throw new Error("Created profile could not be loaded.");
+  return profile;
+}
+
+export async function saveAccountProfileProgress(
+  accountId: string,
+  profileId: string,
   progress: CloudProgressSnapshot,
 ): Promise<void> {
   requireAccountUser(accountId);
   await setDoc(
-    doc(db, "accounts", accountId, "devices", deviceId),
+    doc(db, "accounts", accountId, "profiles", profileId),
     {
       ...progress,
-      deviceId,
-      label: label.trim() || "這台裝置",
+      profileId,
       active: true,
-      lastSeenAt: serverTimestamp(),
       updatedAt: serverTimestamp(),
     },
     { merge: true },
@@ -224,6 +287,35 @@ export async function renameAccountDevice(accountId: string, deviceId: string, l
     doc(db, "accounts", accountId, "devices", deviceId),
     {
       label: label.trim() || "這台裝置",
+      updatedAt: serverTimestamp(),
+    },
+    { merge: true },
+  );
+}
+
+export async function setAccountDeviceActiveProfile(
+  accountId: string,
+  deviceId: string,
+  profileId: string,
+): Promise<void> {
+  requireAccountUser(accountId);
+  await setDoc(
+    doc(db, "accounts", accountId, "devices", deviceId),
+    {
+      activeProfileId: profileId,
+      lastSeenAt: serverTimestamp(),
+      updatedAt: serverTimestamp(),
+    },
+    { merge: true },
+  );
+}
+
+export async function renameAccountProfile(accountId: string, profileId: string, label: string): Promise<void> {
+  requireAccountUser(accountId);
+  await setDoc(
+    doc(db, "accounts", accountId, "profiles", profileId),
+    {
+      label: label.trim() || "主要進度",
       updatedAt: serverTimestamp(),
     },
     { merge: true },

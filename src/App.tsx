@@ -3,15 +3,21 @@ import curriculumData from "./curriculum/sample-lessons.json";
 import type { Curriculum, Lesson, LessonSentence, SentenceGame, SentenceGameOption, SentenceGameType } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
 import {
+  createAccountProfile,
   deactivateAccountDevice,
   loadAccountDevices,
+  loadAccountProfile,
+  loadAccountProfiles,
   registerAccountDevice,
   renameAccountDevice,
-  saveAccountDeviceProgress,
+  renameAccountProfile,
+  saveAccountProfileProgress,
+  setAccountDeviceActiveProfile,
   signInWithGoogleAccount,
   signOutCloudAccount,
   subscribeCloudAccount,
   type CloudAccountDeviceRecord,
+  type CloudProfileRecord,
   type CloudAccountUser,
   type CloudDailyRecord,
   type CloudLessonSessionSnapshot,
@@ -1203,6 +1209,11 @@ function normalizeAccountDeviceLabel(value: string): string {
   return label || "目前這支手機";
 }
 
+function normalizeProfileLabel(value: string): string {
+  const label = value.trim().slice(0, 24);
+  return label || "主要進度";
+}
+
 function loadCloudProgressSettings(): CloudProgressSettings {
   if (typeof window === "undefined") {
     return { accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "目前這支手機" };
@@ -1232,6 +1243,24 @@ function saveCloudProgressSettings(settings: CloudProgressSettings) {
   } catch {
     // The current session still keeps these settings in React state.
   }
+}
+
+function createStarterProgressSnapshot(selectedOrder = 1): StoredProgress {
+  return {
+    version: 1,
+    coins: 120,
+    stars: 36,
+    totalCoinsEarned: 120,
+    totalStarsEarned: 36,
+    dailyRecords: {},
+    duplicateGachaStreak: 0,
+    selectedOrder,
+    completedOrders: [],
+    ownedCharacters: {},
+    characterHearts: {},
+    seenCharacterInteractions: {},
+    lessonSessions: {},
+  };
 }
 
 function App() {
@@ -1276,7 +1305,10 @@ function App() {
   const [accountUser, setAccountUser] = useState<CloudAccountUser | null>(null);
   const [accountAuthChecked, setAccountAuthChecked] = useState(false);
   const [accountDevices, setAccountDevices] = useState<CloudAccountDeviceRecord[]>([]);
+  const [accountProfiles, setAccountProfiles] = useState<CloudProfileRecord[]>([]);
+  const [activeProfileId, setActiveProfileId] = useState("");
   const [accountReadyForSave, setAccountReadyForSave] = useState(false);
+  const skipNextAccountSaveRef = useRef(false);
   const [accountSyncStatus, setAccountSyncStatus] = useState<CloudSyncStatus>("idle");
   const [accountSyncMessage, setAccountSyncMessage] = useState("尚未登入帳號");
   const [freeBrowse, setFreeBrowse] = useState(false);
@@ -1321,6 +1353,8 @@ function App() {
       lessonSessions,
     ],
   );
+  const initialProfileSeedRef = useRef<StoredProgress | null>(null);
+  if (initialProfileSeedRef.current === null) initialProfileSeedRef.current = progressSnapshot;
 
   useEffect(() => {
     if (page === "practice" && lessonOpen) return;
@@ -1342,6 +1376,8 @@ function App() {
       if (!user) {
         setAccountReadyForSave(false);
         setAccountDevices([]);
+        setAccountProfiles([]);
+        setActiveProfileId("");
         setAccountSyncStatus("idle");
         setAccountSyncMessage("尚未登入帳號");
       }
@@ -1355,7 +1391,7 @@ function App() {
     setAccountSyncStatus("loading");
     setAccountSyncMessage("正在登記目前這台手機或平板");
     registerAccountDevice(accountUser, accountDeviceId, accountDeviceLabelRef.current)
-      .then((result) => {
+      .then(async (result) => {
         if (!active) return;
         setAccountDevices(result.devices);
         if (!result.ok) {
@@ -1366,12 +1402,32 @@ function App() {
           return;
         }
         setFreeBrowse(result.device.freeBrowse === true);
-        const normalizedProgress = normalizeStoredProgress(result.device);
+        let profiles = await loadAccountProfiles(accountUser.uid);
+        if (!active) return;
+        if (profiles.length === 0) {
+          const migratedProgress = normalizeStoredProgress(result.device) ?? initialProfileSeedRef.current ?? createStarterProgressSnapshot();
+          const createdProfile = await createAccountProfile(accountUser.uid, "主要進度", migratedProgress, "test");
+          await setAccountDeviceActiveProfile(accountUser.uid, accountDeviceId, createdProfile.profileId);
+          profiles = [createdProfile];
+        }
+        const preferredProfileId =
+          result.device.activeProfileId && profiles.some((profile) => profile.profileId === result.device.activeProfileId)
+            ? result.device.activeProfileId
+            : profiles[0]?.profileId ?? "";
+        const activeProfile = preferredProfileId
+          ? (await loadAccountProfile(accountUser.uid, preferredProfileId)) ?? profiles.find((profile) => profile.profileId === preferredProfileId)
+          : null;
+        if (preferredProfileId) await setAccountDeviceActiveProfile(accountUser.uid, accountDeviceId, preferredProfileId);
+        if (!active) return;
+        setAccountProfiles(profiles);
+        setActiveProfileId(preferredProfileId);
+        const normalizedProgress = normalizeStoredProgress(activeProfile);
         if (normalizedProgress) {
+          skipNextAccountSaveRef.current = true;
           applyStoredProgress(normalizedProgress);
-          setAccountSyncMessage("已載入目前這台手機或平板的進度");
+          setAccountSyncMessage("已載入目前學習檔案的進度");
         } else {
-          setAccountSyncMessage("已建立目前這台手機或平板的進度");
+          setAccountSyncMessage("已建立主要學習檔案");
         }
         setAccountReadyForSave(true);
         setAccountSyncStatus("synced");
@@ -1401,13 +1457,17 @@ function App() {
 
   useEffect(() => {
     saveStoredProgress(progressSnapshot);
-    if (accountUser && accountReadyForSave) {
+    if (accountUser && accountReadyForSave && activeProfileId) {
+      if (skipNextAccountSaveRef.current) {
+        skipNextAccountSaveRef.current = false;
+        return undefined;
+      }
       setAccountSyncStatus("saving");
       const timeout = window.setTimeout(() => {
-        saveAccountDeviceProgress(accountUser.uid, accountDeviceId, accountDeviceLabel, progressSnapshot)
+        saveAccountProfileProgress(accountUser.uid, activeProfileId, progressSnapshot)
           .then(() => {
             setAccountSyncStatus("synced");
-            setAccountSyncMessage("已同步目前這台手機或平板的進度");
+            setAccountSyncMessage("已同步目前學習檔案的進度");
           })
           .catch(() => {
             setAccountSyncStatus("error");
@@ -1420,10 +1480,9 @@ function App() {
 
     return undefined;
   }, [
-    accountDeviceId,
-    accountDeviceLabel,
     accountReadyForSave,
     accountUser,
+    activeProfileId,
     progressSnapshot,
   ]);
 
@@ -1464,9 +1523,78 @@ function App() {
   async function handleAccountSignOut() {
     setAccountReadyForSave(false);
     setFreeBrowse(false);
+    setAccountProfiles([]);
+    setActiveProfileId("");
     setAccountSyncStatus("idle");
     setAccountSyncMessage("尚未登入帳號");
     await signOutCloudAccount();
+  }
+
+  async function saveActiveProfileNow() {
+    if (!accountUser || !activeProfileId || !accountReadyForSave) return;
+    await saveAccountProfileProgress(accountUser.uid, activeProfileId, progressSnapshot);
+  }
+
+  async function handleProfileChange(profileId: string) {
+    if (!accountUser || !profileId || profileId === activeProfileId) return;
+    setAccountReadyForSave(false);
+    setAccountSyncStatus("loading");
+    setAccountSyncMessage("正在切換學習檔案");
+    try {
+      await saveActiveProfileNow();
+      await setAccountDeviceActiveProfile(accountUser.uid, accountDeviceId, profileId);
+      const profile = await loadAccountProfile(accountUser.uid, profileId);
+      const normalizedProgress = normalizeStoredProgress(profile) ?? createStarterProgressSnapshot();
+      skipNextAccountSaveRef.current = true;
+      applyStoredProgress(normalizedProgress);
+      setActiveProfileId(profileId);
+      setAccountDevices(await loadAccountDevices(accountUser.uid));
+      setAccountProfiles(await loadAccountProfiles(accountUser.uid));
+      setAccountReadyForSave(true);
+      setAccountSyncStatus("synced");
+      setAccountSyncMessage("已切換學習檔案");
+    } catch (error) {
+      setAccountReadyForSave(Boolean(activeProfileId));
+      setAccountSyncStatus("error");
+      setAccountSyncMessage(error instanceof Error ? error.message : "切換學習檔案失敗");
+    }
+  }
+
+  async function handleCreateProfile(label: string) {
+    if (!accountUser) return;
+    const profileLabel = normalizeProfileLabel(label);
+    setAccountReadyForSave(false);
+    setAccountSyncStatus("saving");
+    setAccountSyncMessage("正在新增學習檔案");
+    try {
+      await saveActiveProfileNow();
+      const starterProgress = createStarterProgressSnapshot(1);
+      const profile = await createAccountProfile(accountUser.uid, profileLabel, starterProgress, "child");
+      await setAccountDeviceActiveProfile(accountUser.uid, accountDeviceId, profile.profileId);
+      skipNextAccountSaveRef.current = true;
+      applyStoredProgress(starterProgress);
+      setActiveProfileId(profile.profileId);
+      setAccountProfiles(await loadAccountProfiles(accountUser.uid));
+      setAccountDevices(await loadAccountDevices(accountUser.uid));
+      setAccountReadyForSave(true);
+      setAccountSyncStatus("synced");
+      setAccountSyncMessage("已新增並切換學習檔案");
+    } catch (error) {
+      setAccountReadyForSave(Boolean(activeProfileId));
+      setAccountSyncStatus("error");
+      setAccountSyncMessage(error instanceof Error ? error.message : "新增學習檔案失敗");
+    }
+  }
+
+  async function handleRenameProfile(profileId: string, label: string) {
+    if (!accountUser || !profileId) return;
+    try {
+      await renameAccountProfile(accountUser.uid, profileId, normalizeProfileLabel(label));
+      setAccountProfiles(await loadAccountProfiles(accountUser.uid));
+    } catch {
+      setAccountSyncStatus("error");
+      setAccountSyncMessage("學習檔案改名失敗");
+    }
   }
 
   async function handleDeactivateAccountDevice(deviceId: string) {
@@ -1480,6 +1608,7 @@ function App() {
       if (registration.ok) {
         setFreeBrowse(registration.device.freeBrowse === true);
         setAccountReadyForSave(true);
+        setAccountDevices(registration.devices);
         setAccountSyncStatus("synced");
         setAccountSyncMessage("已更新帳號裝置清單");
       } else {
@@ -1743,7 +1872,12 @@ function App() {
             accountDeviceId={accountDeviceId}
             accountDeviceLabel={accountDeviceLabel}
             accountDevices={accountDevices}
+            accountProfiles={accountProfiles}
+            activeProfileId={activeProfileId}
             onAccountDeviceLabelChange={(value) => setAccountDeviceLabel(value.slice(0, 24))}
+            onProfileChange={handleProfileChange}
+            onCreateProfile={handleCreateProfile}
+            onRenameProfile={handleRenameProfile}
             onAccountSignIn={handleAccountSignIn}
             onAccountSignOut={handleAccountSignOut}
             onDeactivateAccountDevice={handleDeactivateAccountDevice}
@@ -2390,7 +2524,12 @@ function SettingsPage({
   accountDeviceId,
   accountDeviceLabel,
   accountDevices,
+  accountProfiles,
+  activeProfileId,
   onAccountDeviceLabelChange,
+  onProfileChange,
+  onCreateProfile,
+  onRenameProfile,
   onAccountSignIn,
   onAccountSignOut,
   onDeactivateAccountDevice,
@@ -2402,7 +2541,12 @@ function SettingsPage({
   accountDeviceId: string;
   accountDeviceLabel: string;
   accountDevices: CloudAccountDeviceRecord[];
+  accountProfiles: CloudProfileRecord[];
+  activeProfileId: string;
   onAccountDeviceLabelChange: (value: string) => void;
+  onProfileChange: (profileId: string) => void;
+  onCreateProfile: (label: string) => void;
+  onRenameProfile: (profileId: string, label: string) => void;
   onAccountSignIn: () => void;
   onAccountSignOut: () => void;
   onDeactivateAccountDevice: (deviceId: string) => void;
@@ -2414,6 +2558,8 @@ function SettingsPage({
     synced: "已同步",
     error: "需處理",
   };
+  const [newProfileLabel, setNewProfileLabel] = useState("");
+  const activeProfile = accountProfiles.find((profile) => profile.profileId === activeProfileId);
 
   return (
     <section className="page-panel settings-page">
@@ -2427,12 +2573,61 @@ function SettingsPage({
             <h2>帳號同步</h2>
             {accountUser && <button className="settings-link-button" onClick={onAccountSignOut}>登出</button>}
           </div>
-          <p className="settings-help">這裡管理目前這支手機或平板的雲端進度。每個帳號最多保留三台啟用中的裝置。</p>
+          <p className="settings-help">這裡管理帳號、學習檔案和目前這支手機或平板。多台裝置選同一個學習檔案，就會同步同一份進度。</p>
           {accountUser ? (
             <>
               <div className="account-card">
                 <strong>{accountUser.displayName}</strong>
                 <span>{accountUser.email}</span>
+              </div>
+              {accountProfiles.length > 0 && (
+                <>
+                  <label className="settings-label" htmlFor="active-profile">
+                    目前使用的學習檔案
+                  </label>
+                  <select
+                    id="active-profile"
+                    className="settings-input plain"
+                    value={activeProfileId}
+                    onChange={(event) => onProfileChange(event.target.value)}
+                  >
+                    {accountProfiles.map((profile) => (
+                      <option key={profile.profileId} value={profile.profileId}>
+                        {profile.label}
+                      </option>
+                    ))}
+                  </select>
+                  <p className="settings-help">例如「培嘉測試」、「哥哥」、「妹妹」。切換後，這台裝置會改用該學習檔案的金幣、星星、課程進度和收藏。</p>
+                  {activeProfile && (
+                    <div className="profile-rename-row">
+                      <input
+                        key={activeProfile.profileId}
+                        className="settings-input plain"
+                        defaultValue={activeProfile.label}
+                        onBlur={(event) => onRenameProfile(activeProfile.profileId, event.target.value)}
+                        aria-label="修改目前學習檔案名稱"
+                      />
+                    </div>
+                  )}
+                </>
+              )}
+              <div className="profile-create-row">
+                <input
+                  className="settings-input plain"
+                  value={newProfileLabel}
+                  onChange={(event) => setNewProfileLabel(event.target.value)}
+                  placeholder="新增學習檔案，例如 哥哥"
+                />
+                <button
+                  className="settings-link-button"
+                  disabled={!newProfileLabel.trim()}
+                  onClick={() => {
+                    onCreateProfile(newProfileLabel);
+                    setNewProfileLabel("");
+                  }}
+                >
+                  新增
+                </button>
               </div>
               <label className="settings-label" htmlFor="account-device-label">
                 目前裝置名稱

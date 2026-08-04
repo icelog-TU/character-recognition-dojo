@@ -71,7 +71,8 @@ Do not treat free browsing as a universal app mode. The teacher wants only desig
 
 Current app-level rule:
 
-- Production account sync uses `accounts/{uid}/devices/{deviceId}`. The app generates `deviceId`; users may edit the human-readable device label only.
+- Production account sync stores progress in `accounts/{uid}/profiles/{profileId}` and device metadata in `accounts/{uid}/devices/{deviceId}`. The app generates `deviceId`; users may edit human-readable labels only.
+- Devices store `activeProfileId`. Two devices using the same profile sync the same progress; sibling profiles stay separate.
 - A family/customer account may have at most three active devices.
 - A device may freely browse all lessons only when its Firestore account-device record has `freeBrowse: true`.
 - `freeBrowse` must not be stored as a local user-toggleable setting.
