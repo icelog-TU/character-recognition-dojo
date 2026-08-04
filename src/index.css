@@ -867,6 +867,8 @@ button {
   font-size: 0.66rem;
   font-weight: 850;
   line-height: 1;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .catalog-char.locked > span,
