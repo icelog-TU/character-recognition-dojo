@@ -8,6 +8,26 @@ For multi-thread source-of-truth rules, required startup checks, and merge gates
 
 For merged lessons, use latest `origin/main` and `src/curriculum/sample-lessons.json` as the shipping truth. `docs/CURRICULUM_LEDGER.md` is the human-readable merged summary. For not-yet-merged parallel lessons, use `docs/PARALLEL_LESSON_REGISTRY.md` as the provisional coordination board.
 
+## Windows UTF-8 Reading Rule
+
+Repo Markdown and JSON files are UTF-8. On Windows, garbled Chinese in PowerShell output usually means the terminal output encoding or `Get-Content` decoding path is wrong; it does not by itself prove the file is corrupted.
+
+Before reporting corrupted Chinese text, verify with an explicit UTF-8 read:
+
+```powershell
+[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
+$OutputEncoding = [System.Text.UTF8Encoding]::new()
+Get-Content -Encoding UTF8 docs/CURRICULUM_PRODUCTION_SOP.md
+```
+
+For agent-side reads, prefer Node when exact Chinese text matters:
+
+```powershell
+node -e "process.stdout.write(require('fs').readFileSync('docs/CURRICULUM_PRODUCTION_SOP.md','utf8'))"
+```
+
+Only treat text as actually damaged if UTF-8 decoding fails, decoded text contains replacement characters, or GitHub/a UTF-8-aware editor shows the same corrupted text.
+
 ## Lesson Pipeline
 
 0. Run `git fetch origin`, `git status --short --branch`, and `npm run curriculum:audit-state`, then check `docs/CURRICULUM_LEDGER.md` and `docs/PARALLEL_LESSON_REGISTRY.md`.
@@ -176,6 +196,18 @@ Get-ChildItem public/assets/lessons/L### -Recurse -File | Measure-Object Length 
 For review modules, use `public/assets/reviews/R###` in the same commands.
 
 Until these hard limits are enforced in `npm run validate:production`, the thread shipping the lesson must paste or summarize the size check in its final handoff. Do not describe a lesson as production-ready if the size check was skipped.
+
+For whole-repo asset diagnostics, run:
+
+```bash
+npm run assets:audit
+```
+
+This inspects every referenced production lesson/review image and audio file. It checks WebP image references, image dimensions, image size, public PNG/JPG leftovers, `.m4a` audio references, AAC codec, `44100 Hz`, mono audio, valid duration, and measured max volume for character audio, sentence audio, and Stage 4 option audio. The default command reports findings without blocking so old-course debt can be triaged. Use strict mode only when the task is to enforce all findings:
+
+```bash
+npm run assets:audit -- --strict
+```
 
 Process reviewed AI audio:
 

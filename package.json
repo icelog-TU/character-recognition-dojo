@@ -9,6 +9,7 @@
     "lint": "oxlint",
     "assets:align": "node scripts/align-audio-timings.mjs",
     "assets:align:ai": "node scripts/align-audio-timings-ai.mjs",
+    "assets:audit": "node scripts/audit-asset-formats.mjs",
     "assets:audio": "node scripts/process-audio-assets.mjs",
     "assets:images": "node scripts/optimize-images.mjs",
     "ai:audio": "node scripts/generate-audio-drafts.mjs",

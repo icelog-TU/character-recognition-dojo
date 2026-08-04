@@ -60,6 +60,20 @@ When reading Chinese Markdown, prefer an explicit UTF-8 read path. To verify a f
 node -e "const fs=require('fs'); const b=fs.readFileSync('README.md'); new TextDecoder('utf-8',{fatal:true}).decode(b); console.log('valid UTF-8')"
 ```
 
+For readable terminal output on Windows PowerShell, set UTF-8 output and request UTF-8 decoding explicitly before inspecting Chinese text:
+
+```powershell
+[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
+$OutputEncoding = [System.Text.UTF8Encoding]::new()
+Get-Content -Encoding UTF8 docs/PROJECT_HANDOFF_SOP.md
+```
+
+For the most reliable agent-side read, use Node instead of relying on console code pages:
+
+```powershell
+node -e "process.stdout.write(require('fs').readFileSync('docs/PROJECT_HANDOFF_SOP.md','utf8'))"
+```
+
 Only treat Markdown text as actually corrupted if explicit UTF-8 decoding fails, replacement characters are present in the decoded file, or the same wrong text appears in a UTF-8-aware editor/browser/GitHub view.
 
 Rules:
@@ -179,6 +193,14 @@ Get-ChildItem public/assets -Recurse -File | Measure-Object Length -Sum
 Get-ChildItem public/assets/lessons/L### -Recurse -File | Measure-Object Length -Sum
 Get-ChildItem public/assets/lessons/L### -Recurse -File | Sort-Object Length -Descending | Select-Object @{Name='KB';Expression={[math]::Round($_.Length/1KB,1)}}, FullName
 ```
+
+For whole-repo asset diagnostics, run:
+
+```bash
+npm run assets:audit
+```
+
+This checks referenced lesson/review images and audio for production format risk: WebP image references, image size, image dimensions, public PNG/JPG leftovers, `.m4a` audio references, AAC codec, `44100 Hz`, mono audio, valid duration, and measured max volume for character, sentence, and Stage 4 option audio. Use `npm run assets:audit -- --strict` when intentionally failing the task on every finding.
 
 Asset-writing commands that rewrite `src/curriculum/sample-lessons.json` or shared reports must not run in parallel across threads. Run `assets:images`, `assets:audio`, `assets:align`, and `assets:align:ai` sequentially for one lesson at a time, and fetch/rebase before starting the next asset step if another thread has pushed curriculum changes.
 
