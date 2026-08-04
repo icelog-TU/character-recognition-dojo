@@ -212,7 +212,7 @@ For whole-repo asset diagnostics, run:
 npm run assets:audit
 ```
 
-This checks referenced lesson/review images and audio for production format risk: WebP image references, image size, image dimensions, public PNG/JPG leftovers, `.m4a` audio references, AAC codec, `44100 Hz`, mono audio, valid duration, and measured max volume for character, sentence, and Stage 4 option audio. Use `npm run assets:audit -- --strict` when intentionally failing the task on every finding.
+This checks referenced lesson/review images and audio for production format risk: WebP image references, image size, image dimensions, public PNG/JPG leftovers, `.m4a` audio references, AAC codec, `44100 Hz`, mono audio, valid duration, measured max/mean volume for character, sentence, `teachAudio`, and Stage 4 option audio, plus relative loudness spread across `choose-pronunciation` options. Use `npm run assets:audit -- --strict` when intentionally failing the task on every finding.
 
 Asset-writing commands that rewrite `src/curriculum/sample-lessons.json` or shared reports must not run in parallel across threads. Run `assets:images`, `assets:audio`, `assets:align`, and `assets:align:ai` sequentially for one lesson at a time, and fetch/rebase before starting the next asset step if another thread has pushed curriculum changes.
 
@@ -401,7 +401,7 @@ Stage 4 planning rules:
 - For `choose-pronunciation`, wrong choices should be near misses: same sentence length and only 1-2 Han characters different from the correct sentence. Do not use a completely different reviewed sentence as a wrong audio choice.
 - For `choose-pronunciation`, wrong-choice audio must be whole-sentence AI audio generated from the final wrong-choice text. Do not make wrong choices by cutting the correct audio and replacing only one or two characters; do not splice, stitch, overdub, or patch correct sentence audio. The result sounds unnatural and usually has obvious loudness or rhythm changes.
 - For the normal fifth Stage 4 round, write the complete option texts first, then generate `L###-G05-wrong-one.m4a` and `L###-G05-wrong-two.m4a` from those exact texts. The correct option may reuse the reviewed sentence audio file.
-- After processing wrong-choice audio through `npm run assets:audio -- --lesson L###`, manually tap every animal reader on a phone-width viewport and reject files with clipped endings, uneven volume, robotic inserts, or audible edit seams.
+- After processing wrong-choice audio through `npm run assets:audio -- --lesson L###`, run `npm run assets:audit`, then manually tap every animal reader on a phone-width viewport and reject files with clipped endings, uneven volume, robotic inserts, or audible edit seams. All three option audio files in the same `choose-pronunciation` round must have `mean_volume` within `3 dB`; mismatched option volume is a production defect even if every file exists and uses the correct format.
 - For `choose-pronunciation`, the correct reader must be distributed across animal positions. Do not let the correct answer repeatedly land on the same animal. The app currently rotates the correct reader by lesson order after shuffling wrong choices.
 - For `choose-pronunciation`, checkmark taps must give immediate visual feedback. Correct choices should brighten immediately; wrong choices should visibly mark wrong before spoken feedback finishes.
 - For `choose-pronunciation`, shuffle the reader/options order before display. The correct audio must not be fixed in the first animal position.

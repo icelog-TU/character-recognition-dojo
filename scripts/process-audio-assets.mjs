@@ -73,6 +73,56 @@ function getDurationMs(filePath) {
   return Math.round(Number(output) * 1000);
 }
 
+function volumeStatsDb(filePath) {
+  const result = spawnSync(
+    ffmpegCommand,
+    ["-hide_banner", "-nostats", "-i", filePath, "-af", "volumedetect", "-f", "null", "-"],
+    { encoding: "utf8" },
+  );
+  const output = `${result.stdout}\n${result.stderr}`;
+  const maxMatch = output.match(/max_volume:\s*(-?\d+(?:\.\d+)?) dB/);
+  const meanMatch = output.match(/mean_volume:\s*(-?\d+(?:\.\d+)?) dB/);
+  return {
+    max: maxMatch ? Number(maxMatch[1]) : null,
+    mean: meanMatch ? Number(meanMatch[1]) : null,
+  };
+}
+
+function reinforceQuietAudio(filePath) {
+  const stats = volumeStatsDb(filePath);
+  if (!Number.isFinite(stats.max) || !Number.isFinite(stats.mean)) return { before: stats, gainDb: 0, after: stats };
+  if (stats.mean >= -28 && stats.max >= -12) return { before: stats, gainDb: 0, after: stats };
+
+  const gainDb = Math.max(0, -19 - stats.mean);
+  if (gainDb < 0.5) return { before: stats, gainDb: 0, after: stats };
+
+  const tempPath = `${filePath}.loudness-tmp.m4a`;
+  fs.rmSync(tempPath, { force: true });
+  execFileSync(ffmpegCommand, [
+    "-y",
+    "-i",
+    filePath,
+    "-vn",
+    "-af",
+    `volume=${gainDb.toFixed(1)}dB,alimiter=limit=0.794:level=false`,
+    "-ac",
+    "1",
+    "-ar",
+    "44100",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "96k",
+    "-movflags",
+    "+faststart",
+    tempPath,
+  ], { stdio: "ignore" });
+  fs.copyFileSync(tempPath, filePath);
+  fs.rmSync(tempPath, { force: true });
+
+  return { before: stats, gainDb: Number(gainDb.toFixed(1)), after: volumeStatsDb(filePath) };
+}
+
 function publicSrc(filePath) {
   const relative = path.relative(path.resolve("public"), filePath).replaceAll(path.sep, "/");
   return `/${relative}`;
@@ -139,6 +189,7 @@ for (const sourcePath of files) {
     targetPath,
   ], { stdio: "ignore" });
 
+  const loudness = reinforceQuietAudio(targetPath);
   const durationMs = getDurationMs(targetPath);
   report.push({
     lessonId,
@@ -146,9 +197,11 @@ for (const sourcePath of files) {
     output: targetPath.replaceAll(path.sep, "/"),
     src: publicSrc(targetPath),
     durationMs,
+    loudness,
   });
 
-  console.log(`${lessonId}: ${path.basename(sourcePath)} -> ${path.basename(targetPath)} (${durationMs} ms)`);
+  const loudnessNote = loudness.gainDb ? `, +${loudness.gainDb} dB safety gain` : "";
+  console.log(`${lessonId}: ${path.basename(sourcePath)} -> ${path.basename(targetPath)} (${durationMs} ms${loudnessNote})`);
 }
 
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });

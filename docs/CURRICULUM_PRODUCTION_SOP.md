@@ -244,7 +244,7 @@ For whole-repo asset diagnostics, run:
 npm run assets:audit
 ```
 
-This inspects every referenced production lesson/review image and audio file. It checks WebP image references, image dimensions, image size, public PNG/JPG leftovers, `.m4a` audio references, AAC codec, `44100 Hz`, mono audio, valid duration, and measured max volume for character audio, sentence audio, and Stage 4 option audio. The default command reports findings without blocking so old-course debt can be triaged. Use strict mode only when the task is to enforce all findings:
+This inspects every referenced production lesson/review image and audio file. It checks WebP image references, image dimensions, image size, public PNG/JPG leftovers, `.m4a` audio references, AAC codec, `44100 Hz`, mono audio, valid duration, measured max/mean volume for character audio, sentence audio, `teachAudio`, and Stage 4 option audio, plus relative loudness spread across `choose-pronunciation` options. The default command reports findings without blocking so old-course debt can be triaged. Use strict mode only when the task is to enforce all findings:
 
 ```bash
 npm run assets:audit -- --strict
@@ -279,9 +279,10 @@ Production audio hard limits for every new or touched lesson/review module:
 - Processed output must be mono AAC at `44100 Hz` and about `96k` bitrate, matching `scripts/process-audio-assets.mjs`.
 - Character audio target duration is `300-1400 ms`; anything shorter than `200 ms` or longer than `1800 ms` must be manually justified or repaired.
 - Sentence audio should end within `300 ms` after the last spoken Han character. Long silent tails must be trimmed or timing must be repaired.
-- Sentence audio and Stage 4 option audio must be audibly normalized, not merely present. If a phone tester reports no sound, inspect actual file volume before changing UI playback logic.
+- Sentence audio, Stage 4 option audio, and `teachAudio` must be audibly normalized, not merely present. If a phone tester reports no sound, inspect actual file volume before changing UI playback logic.
 - New-character `charAudio` must pass the existing `validate:production` audibility floor of `max_volume >= -35 dB`.
-- Sentence and option audio should target `max_volume >= -35 dB`; if quieter, regenerate or normalize before merge even if the current validator does not yet fail it.
+- Referenced production audio should pass `max_volume >= -12 dB` and `mean_volume >= -28 dB` after `volumedetect`. If quieter, regenerate or normalize before merge.
+- In each `choose-pronunciation` round, the three option audio files must have `mean_volume` within `3 dB` of each other. A correct file at normal volume with two quiet wrong-choice files is a production defect because children may not hear the wrong options clearly.
 - Do not use browser TTS as production curriculum audio for `charAudio`, sentence audio, or `choose-pronunciation` options unless the exception is recorded and the lesson is explicitly marked for later AI-audio replacement.
 
 ## Request File
@@ -483,7 +484,7 @@ Current production data starts Stage 4 at L006. Stage 4 uses a fixed `sentenceGa
 - `choose-pronunciation` wrong choices should be near misses: same sentence length and only 1-2 Han characters different from the correct sentence. Do not use a completely different reviewed sentence as a wrong audio choice.
 - `choose-pronunciation` wrong-choice audio must be generated from the complete wrong-choice text as a whole sentence. Do not splice, stitch, patch, overdub, or replace one or two syllables inside the correct sentence audio to create a wrong option. This produces unnatural rhythm and obvious volume/tone discontinuities.
 - For a normal lesson's fifth Stage 4 round, first write the final `options[].text` values for `correct`, `wrong-one`, and `wrong-two`; then generate or regenerate `L###-G05-wrong-one.m4a` and `L###-G05-wrong-two.m4a` from those exact complete texts. The correct option may reuse the reviewed sentence audio, usually `L###-S05.m4a`.
-- After generating wrong-choice audio, process it through `npm run assets:audio -- --lesson L###` and manually tap every `choose-pronunciation` reader on a phone-width viewport. Reject wrong-choice files with mismatched loudness, clipped final syllables, robotic inserts, or audible edit seams.
+- After generating wrong-choice audio, process it through `npm run assets:audio -- --lesson L###`, run `npm run assets:audit`, and manually tap every `choose-pronunciation` reader on a phone-width viewport. Reject wrong-choice files with mismatched loudness, clipped final syllables, robotic inserts, or audible edit seams. All three option files in the same round must pass the `3 dB` mean-volume spread check.
 - Every Stage 4 game must provide spoken guidance when the game becomes active. Assume the child cannot read the prompt text.
 - Stage 4 helper openings must match the game type. Do not reuse "I will read this sentence" for games where the rabbit is not the reader, especially `choose-pronunciation`.
 - Stage 4 guidance must not reveal the answer. For `teach-character`, do not say the target character in the hold-to-record prompt. For `choose-pronunciation`, do not read the target sentence in the rabbit's opening; the sentence should be heard from the friend readers.

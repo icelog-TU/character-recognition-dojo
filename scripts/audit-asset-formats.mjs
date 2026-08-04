@@ -24,6 +24,7 @@ const ffprobeCommand = process.env.FFPROBE_PATH || packageToolPath("@ffprobe-ins
 const errors = [];
 const warnings = [];
 const seen = new Set();
+const audioStatsBySrc = new Map();
 
 function reportError(message) {
   errors.push(message);
@@ -58,15 +59,19 @@ function runFfprobe(filePath) {
   return JSON.parse(output);
 }
 
-function maxVolumeDb(filePath) {
+function volumeStatsDb(filePath) {
   const result = spawnSync(
     ffmpegCommand,
     ["-hide_banner", "-nostats", "-i", filePath, "-af", "volumedetect", "-f", "null", "-"],
     { encoding: "utf8" },
   );
   const output = `${result.stdout}\n${result.stderr}`;
-  const match = output.match(/max_volume:\s*(-?\d+(?:\.\d+)?) dB/);
-  return match ? Number(match[1]) : null;
+  const maxMatch = output.match(/max_volume:\s*(-?\d+(?:\.\d+)?) dB/);
+  const meanMatch = output.match(/mean_volume:\s*(-?\d+(?:\.\d+)?) dB/);
+  return {
+    max: maxMatch ? Number(maxMatch[1]) : null,
+    mean: meanMatch ? Number(meanMatch[1]) : null,
+  };
 }
 
 function auditImage(label, src) {
@@ -115,15 +120,15 @@ function auditImage(label, src) {
 function auditAudio(label, src) {
   if (!src) {
     reportError(`${label}: missing audio src`);
-    return;
+    return null;
   }
-  if (seen.has(`audio:${src}`)) return;
+  if (seen.has(`audio:${src}`)) return audioStatsBySrc.get(src) ?? null;
   seen.add(`audio:${src}`);
 
   const filePath = publicFileFromSrc(src);
   if (!fs.existsSync(filePath)) {
     reportError(`${label}: missing audio file ${src}`);
-    return;
+    return null;
   }
 
   if (path.extname(filePath).toLowerCase() !== ".m4a") {
@@ -135,7 +140,7 @@ function auditAudio(label, src) {
     const stream = probe.streams?.find((candidate) => candidate.codec_type === "audio");
     if (!stream) {
       reportError(`${label}: no audio stream found: ${src}`);
-      return;
+      return null;
     }
     if (stream.codec_name !== "aac") {
       reportError(`${label}: audio codec is ${stream.codec_name}, expected aac: ${src}`);
@@ -154,12 +159,20 @@ function auditAudio(label, src) {
     reportError(`${label}: ffprobe could not inspect audio ${src}: ${error.message}`);
   }
 
-  const maxVolume = maxVolumeDb(filePath);
-  if (!Number.isFinite(maxVolume)) {
-    reportWarning(`${label}: could not measure max volume: ${src}`);
-  } else if (maxVolume < -35) {
-    reportError(`${label}: max volume ${maxVolume} dB is too quiet: ${src}`);
+  const stats = volumeStatsDb(filePath);
+  audioStatsBySrc.set(src, stats);
+  if (!Number.isFinite(stats.max) || !Number.isFinite(stats.mean)) {
+    reportWarning(`${label}: could not measure audio volume: ${src}`);
+  } else {
+    if (stats.max < -12) {
+      reportError(`${label}: max volume ${stats.max} dB is too quiet: ${src}`);
+    }
+    if (stats.mean < -28) {
+      reportError(`${label}: mean volume ${stats.mean} dB is too quiet: ${src}`);
+    }
   }
+
+  return stats;
 }
 
 function folderSizeBytes(folderPath) {
@@ -218,9 +231,17 @@ for (const unit of units) {
     if (game.teachAudio?.suffixSrc) {
       auditAudio(`${game.id} teachAudio.suffixSrc`, game.teachAudio.suffixSrc);
     }
+    const choosePronunciationOptionStats = [];
     for (const option of game.options ?? []) {
       if (option.audioSrc) {
-        auditAudio(`${game.id} option ${option.id}`, option.audioSrc);
+        const stats = auditAudio(`${game.id} option ${option.id}`, option.audioSrc);
+        if (game.type === "choose-pronunciation" && stats) {
+          choosePronunciationOptionStats.push({
+            id: option.id,
+            src: option.audioSrc,
+            stats,
+          });
+        }
         if (
           game.type === "choose-pronunciation" &&
           option.correct !== true &&
@@ -228,6 +249,19 @@ for (const unit of units) {
         ) {
           reportWarning(
             `${game.id} option ${option.id}: wrong-choice audio should be generated from its full option text and usually live under this unit as ${unit.id}-G##-wrong-*.m4a: ${option.audioSrc}`,
+          );
+        }
+      }
+    }
+    if (choosePronunciationOptionStats.length >= 2) {
+      const means = choosePronunciationOptionStats
+        .map((option) => option.stats.mean)
+        .filter((mean) => Number.isFinite(mean));
+      if (means.length >= 2) {
+        const spread = Math.max(...means) - Math.min(...means);
+        if (spread > 3) {
+          reportError(
+            `${game.id}: choose-pronunciation option mean volume spread is ${spread.toFixed(1)} dB, over max 3 dB. Normalize all option audio together.`,
           );
         }
       }
