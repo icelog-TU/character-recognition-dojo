@@ -41,6 +41,7 @@ function hanChars(text) {
 
 function normalizeTranscribedHanChar(char) {
   const map = new Map([
+    ["\u753b", "\u756b"],
     ["会", "會"],
     ["个", "個"],
     ["这", "這"],
