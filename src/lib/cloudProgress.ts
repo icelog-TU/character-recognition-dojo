@@ -116,6 +116,13 @@ function requireAccountUser(accountId: string): User {
   return user;
 }
 
+function normalizeProfileLabelForUi(label: unknown): string {
+  if (typeof label !== "string") return "媽媽";
+  const trimmed = label.trim();
+  if (!trimmed || trimmed.includes("培嘉")) return "媽媽";
+  return trimmed;
+}
+
 function accountDeviceFromSnapshot(deviceId: string, data: Record<string, unknown>): CloudAccountDeviceRecord {
   return {
     ...(data as Partial<CloudProgressSnapshot>),
@@ -135,7 +142,7 @@ function profileFromSnapshot(profileId: string, data: Record<string, unknown>): 
   return {
     ...(data as Partial<CloudProgressSnapshot>),
     profileId,
-    label: typeof data.label === "string" && data.label.trim() ? data.label.trim() : "媽媽",
+    label: normalizeProfileLabelForUi(data.label),
     active: data.active !== false,
     kind:
       data.kind === "child" || data.kind === "teacher" || data.kind === "test"

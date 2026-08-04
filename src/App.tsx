@@ -1212,6 +1212,7 @@ function normalizeAccountDeviceLabel(value: string): string {
 
 function normalizeProfileLabel(value: string): string {
   const label = value.trim().slice(0, 24);
+  if (label.includes("培嘉")) return "媽媽";
   return label || "媽媽";
 }
 
