@@ -107,6 +107,8 @@ For position words such as `左`, `右`, `上`, `下`, `前`, `後`, `裡`, and 
 - Good: `門左邊`, `我左邊`, `你左邊`, `門前`, `家裡`
 - Weak: `左邊` by itself when the picture has no clear anchor
 
+For a person's `左邊` or `右邊`, judge by that person's own body, not by the viewer's screen direction. `我左邊` means beside `我`'s left hand. If the character faces the viewer, that may appear on the viewer's right side. Image prompts must state the reference person and anatomical side clearly.
+
 When a sentence has a motion or state change, make the purpose or visual outcome clear when possible:
 
 - Weak: `我站起來去左邊`

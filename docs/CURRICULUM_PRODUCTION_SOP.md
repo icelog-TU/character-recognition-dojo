@@ -328,6 +328,7 @@ Images are generated or sourced only after sentence approval.
 - Curriculum `imageSrc` example: `/assets/lessons/L004/images/L004-S01.webp`.
 - Images must not contain visible text, letters, numbers, zhuyin, labels, signs, or watermarks.
 - If the sentence expresses a count, the image must clearly match the count.
+- If a sentence uses a person's `左邊` or `右邊`, the image must use that person's own left/right side, based on their hands and body orientation, not the viewer's screen left/right. When prompting, explicitly name the reference person and anatomical side.
 - Keep final lesson images phone/tablet sized and optimized as `.webp`; do not ship large source-resolution images in `public/assets`.
 - Check the final lesson asset folder size before push. A single lesson growing unusually large must be reviewed and compressed before merging.
 
