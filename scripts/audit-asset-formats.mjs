@@ -212,6 +212,12 @@ for (const unit of units) {
   }
 
   for (const game of unit.sentenceGames ?? []) {
+    if (game.teachAudio?.prefixSrc) {
+      auditAudio(`${game.id} teachAudio.prefixSrc`, game.teachAudio.prefixSrc);
+    }
+    if (game.teachAudio?.suffixSrc) {
+      auditAudio(`${game.id} teachAudio.suffixSrc`, game.teachAudio.suffixSrc);
+    }
     for (const option of game.options ?? []) {
       if (option.audioSrc) {
         auditAudio(`${game.id} option ${option.id}`, option.audioSrc);

@@ -98,6 +98,12 @@ function validateSentenceAssets(unit) {
   }
 
   for (const game of unit.sentenceGames ?? []) {
+    if (game.teachAudio?.prefixSrc) {
+      requirePublicAsset(`${game.id} teachAudio.prefixSrc`, game.teachAudio.prefixSrc);
+    }
+    if (game.teachAudio?.suffixSrc) {
+      requirePublicAsset(`${game.id} teachAudio.suffixSrc`, game.teachAudio.suffixSrc);
+    }
     for (const option of game.options ?? []) {
       if (option.audioSrc) {
         requirePublicAsset(`${game.id} option ${option.id} audioSrc`, option.audioSrc);

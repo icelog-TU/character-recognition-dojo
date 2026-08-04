@@ -133,15 +133,16 @@ Current production data starts Stage 4 at L006. A lesson may include a fixed `se
 
 ```json
 {
-  "id": "L011-G01",
-  "type": "find-character",
-  "sentenceId": "L011-S01",
-  "targetChar": "上",
-  "prompt": "找到「上」。",
-  "missingIndexes": [4],
-  "options": [
-    { "id": "correct", "text": "有一大二小的手", "correct": true, "audioSrc": "/assets/lessons/L008/audio/L008-S05.m4a" }
-  ]
+  "id": "L011-G02",
+  "type": "teach-character",
+  "sentenceId": "L011-S02",
+  "targetChar": "下",
+  "targetCharIndex": 4,
+  "prompt": "教小兔子念這個字。",
+  "teachAudio": {
+    "prefixSrc": "/assets/lessons/L011/audio/L011-G02-prefix.m4a",
+    "suffixSrc": "/assets/lessons/L011/audio/L011-G02-suffix.m4a"
+  }
 }
 ```
 
@@ -150,6 +151,8 @@ Rules:
 - `type` is one of `find-character`, `teach-character`, `missing-character`, `partial-order`, or `choose-pronunciation`.
 - `sentenceId` must point to a reviewed sentence in the same lesson.
 - `targetChar` must appear in that sentence. It may be the current lesson's new character or a review character.
+- `targetCharIndex` is required for `teach-character`. It is the Han-character index in `sentence.text`, skipping punctuation, and must point to `targetChar`. This makes repeated characters such as `爸爸` unambiguous.
+- `teachAudio` is required for production `teach-character` when there is text before or after the target character. Generate `prefixSrc` from exactly the Han text before `targetCharIndex`, and `suffixSrc` from exactly the Han text after `targetCharIndex`. Do not create these files by cutting the full sentence audio.
 - Early lessons should use fixed, teacher-reviewed game plans. Do not randomize game type at runtime.
 - In a normal five-sentence production lesson, the five Stage 4 games should use all five reviewed sentences exactly once.
 - In that same pattern, `find-character`, `teach-character`, and `missing-character` should usually target the current lesson's new character; `partial-order` and `choose-pronunciation` may focus on review characters.

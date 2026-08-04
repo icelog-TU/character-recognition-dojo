@@ -75,9 +75,16 @@ export interface SentenceGame {
   type: SentenceGameType;
   sentenceId: string;
   targetChar: string;
+  targetCharIndex?: number;
   prompt: string;
+  teachAudio?: TeachCharacterAudio;
   missingIndexes?: number[];
   options?: SentenceGameOption[];
+}
+
+export interface TeachCharacterAudio {
+  prefixSrc?: string;
+  suffixSrc?: string;
 }
 
 export interface SentenceGameOption {

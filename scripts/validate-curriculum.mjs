@@ -149,6 +149,29 @@ function validateSentenceGames({ unit, currentAllowed, enforceUniqueStageFourSen
     if (!chars.includes(game.targetChar)) {
       errors.push(`${label}: targetChar ${game.targetChar} does not appear in ${game.sentenceId}.`);
     }
+    if (game.targetCharIndex !== undefined) {
+      if (!Number.isInteger(game.targetCharIndex) || game.targetCharIndex < 0 || game.targetCharIndex >= chars.length) {
+        errors.push(`${label}: targetCharIndex ${game.targetCharIndex} is outside ${game.sentenceId}.`);
+      } else if (chars[game.targetCharIndex] !== game.targetChar) {
+        errors.push(
+          `${label}: targetCharIndex ${game.targetCharIndex} points to ${chars[game.targetCharIndex]}, not targetChar ${game.targetChar}.`,
+        );
+      }
+    }
+    if (game.type === "teach-character") {
+      if (!Number.isInteger(game.targetCharIndex)) {
+        errors.push(`${label}: teach-character must set targetCharIndex so repeated target characters are unambiguous.`);
+      } else if (chars[game.targetCharIndex] === game.targetChar) {
+        const prefixText = chars.slice(0, game.targetCharIndex).join("");
+        const suffixText = chars.slice(game.targetCharIndex + 1).join("");
+        if (prefixText && !game.teachAudio?.prefixSrc) {
+          errors.push(`${label}: teach-character prefix text ${prefixText} requires teachAudio.prefixSrc.`);
+        }
+        if (suffixText && !game.teachAudio?.suffixSrc) {
+          errors.push(`${label}: teach-character suffix text ${suffixText} requires teachAudio.suffixSrc.`);
+        }
+      }
+    }
 
     for (const char of hanChars(game.targetChar)) {
       if (!currentAllowed.has(char)) {

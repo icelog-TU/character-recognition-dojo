@@ -4299,6 +4299,15 @@ function teachPrefixEndMs(sentence: LessonSentence, targetIndex: number) {
   return Math.max(0, timing.startMs - TEACH_TARGET_AUDIO_GUARD_MS);
 }
 
+function teachTargetIndex(game: SentenceGame, sentence: LessonSentence) {
+  const han = hanChars(sentence.text);
+  if (Number.isInteger(game.targetCharIndex)) {
+    const index = Number(game.targetCharIndex);
+    if (index >= 0 && index < han.length && han[index] === game.targetChar) return index;
+  }
+  return Math.max(0, han.findIndex((char) => char === game.targetChar));
+}
+
 function playFoundChime() {
   playToneSequence([
     { frequency: 660, endFrequency: 990, duration: 0.18, gain: 0.06 },
@@ -4560,7 +4569,7 @@ function SentencePracticePreview({
   const onSpeakStartRef = useRef(onSpeakStart);
   const onSpeakEndRef = useRef(onSpeakEnd);
   const han = sentence ? hanChars(sentence.text) : [];
-  const targetIndex = game ? Math.max(0, han.findIndex((char) => char === game.targetChar)) : 0;
+  const targetIndex = game && sentence ? teachTargetIndex(game, sentence) : 0;
   const gameGuide = game && sentence ? gameGuideText(game, teachPhase) : "";
   const shuffledGameOptions = useMemo(() => {
     if (!game?.options?.length) return [];
@@ -4742,7 +4751,9 @@ function SentencePracticePreview({
     setTeachPhase("reading");
     await speakStageFour("小兔子說，我要來念念看這句話。");
     if (guideRunRef.current !== runId) return;
-    if (sentence.audio?.src && timing) {
+    if (game.teachAudio?.prefixSrc) {
+      await playAudioSrc(game.teachAudio.prefixSrc);
+    } else if (sentence.audio?.src && timing) {
       const prefixEndMs = teachPrefixEndMs(sentence, targetIndex) ?? timing.startMs;
       await playAudioRange(sentence.audio.src, 0, prefixEndMs, {
         onTime: (elapsedMs) => setActiveGameCharIndex(activeTimingIndex(sentence, Math.min(elapsedMs, prefixEndMs))),
@@ -4963,7 +4974,13 @@ function SentencePracticePreview({
     setAskingGameCharIndex(null);
     setActiveGameCharIndex(null);
     await speakStageFour("我聽到了。我來試試看。");
-    if (sentence.audio?.src && timing) {
+    if (game.teachAudio?.prefixSrc || game.teachAudio?.suffixSrc) {
+      if (game.teachAudio.prefixSrc) await playAudioSrc(game.teachAudio.prefixSrc);
+      setActiveGameCharIndex(targetIndex);
+      await playRecordedAudioUrl(url);
+      setActiveGameCharIndex(null);
+      if (game.teachAudio.suffixSrc) await playAudioSrc(game.teachAudio.suffixSrc);
+    } else if (sentence.audio?.src && timing) {
       const prefixEndMs = teachPrefixEndMs(sentence, targetIndex) ?? timing.startMs;
       await playAudioRange(sentence.audio.src, 0, prefixEndMs, {
         onTime: (elapsedMs) => setActiveGameCharIndex(activeTimingIndex(sentence, Math.min(elapsedMs, prefixEndMs))),
