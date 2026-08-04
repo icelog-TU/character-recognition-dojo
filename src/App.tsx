@@ -16,6 +16,7 @@ import {
   signInWithGoogleAccount,
   signOutCloudAccount,
   subscribeCloudAccount,
+  MAX_ACCOUNT_PROFILES,
   type CloudAccountDeviceRecord,
   type CloudProfileRecord,
   type CloudAccountUser,
@@ -1211,7 +1212,7 @@ function normalizeAccountDeviceLabel(value: string): string {
 
 function normalizeProfileLabel(value: string): string {
   const label = value.trim().slice(0, 24);
-  return label || "主要進度";
+  return label || "媽媽";
 }
 
 function loadCloudProgressSettings(): CloudProgressSettings {
@@ -1406,7 +1407,7 @@ function App() {
         if (!active) return;
         if (profiles.length === 0) {
           const migratedProgress = normalizeStoredProgress(result.device) ?? initialProfileSeedRef.current ?? createStarterProgressSnapshot();
-          const createdProfile = await createAccountProfile(accountUser.uid, "主要進度", migratedProgress, "test");
+          const createdProfile = await createAccountProfile(accountUser.uid, "媽媽", migratedProgress, "child");
           await setAccountDeviceActiveProfile(accountUser.uid, accountDeviceId, createdProfile.profileId);
           profiles = [createdProfile];
         }
@@ -1427,7 +1428,7 @@ function App() {
           applyStoredProgress(normalizedProgress);
           setAccountSyncMessage("已載入目前學習檔案的進度");
         } else {
-          setAccountSyncMessage("已建立主要學習檔案");
+          setAccountSyncMessage("已建立媽媽的學習檔案");
         }
         setAccountReadyForSave(true);
         setAccountSyncStatus("synced");
@@ -1562,6 +1563,11 @@ function App() {
 
   async function handleCreateProfile(label: string) {
     if (!accountUser) return;
+    if (accountProfiles.filter((profile) => profile.active).length >= MAX_ACCOUNT_PROFILES) {
+      setAccountSyncStatus("error");
+      setAccountSyncMessage(`一個帳號最多可以有 ${MAX_ACCOUNT_PROFILES} 個學習檔案`);
+      return;
+    }
     const profileLabel = normalizeProfileLabel(label);
     setAccountReadyForSave(false);
     setAccountSyncStatus("saving");
@@ -2560,6 +2566,8 @@ function SettingsPage({
   };
   const [newProfileLabel, setNewProfileLabel] = useState("");
   const activeProfile = accountProfiles.find((profile) => profile.profileId === activeProfileId);
+  const activeProfileCount = accountProfiles.filter((profile) => profile.active).length;
+  const profileLimitReached = activeProfileCount >= MAX_ACCOUNT_PROFILES;
 
   return (
     <section className="page-panel settings-page">
@@ -2573,17 +2581,17 @@ function SettingsPage({
             <h2>帳號同步</h2>
             {accountUser && <button className="settings-link-button" onClick={onAccountSignOut}>登出</button>}
           </div>
-          <p className="settings-help">這裡管理帳號、學習檔案和目前這支手機或平板。多台裝置選同一個學習檔案，就會同步同一份進度。</p>
+          <p className="settings-help">一個帳號最多可以有三個學習檔案，例如媽媽、哥哥、妹妹。手機和平板只要登入同一個帳號，就會看到同一份清單，可以切換現在要使用誰的進度。</p>
           {accountUser ? (
             <>
               <div className="account-card">
-                <strong>{accountUser.displayName}</strong>
+                <strong>已登入 Google 帳號</strong>
                 <span>{accountUser.email}</span>
               </div>
               {accountProfiles.length > 0 && (
                 <>
                   <label className="settings-label" htmlFor="active-profile">
-                    目前使用的學習檔案
+                    這台裝置現在使用
                   </label>
                   <select
                     id="active-profile"
@@ -2597,7 +2605,7 @@ function SettingsPage({
                       </option>
                     ))}
                   </select>
-                  <p className="settings-help">例如「培嘉測試」、「哥哥」、「妹妹」。切換後，這台裝置會改用該學習檔案的金幣、星星、課程進度和收藏。</p>
+                  <p className="settings-help">切換後，這台裝置會改用所選學習檔案的金幣、星星、課程進度和收藏。其他裝置選同一個學習檔案時，也會同步同一份進度。</p>
                   {activeProfile && (
                     <div className="profile-rename-row">
                       <input
@@ -2605,7 +2613,7 @@ function SettingsPage({
                         className="settings-input plain"
                         defaultValue={activeProfile.label}
                         onBlur={(event) => onRenameProfile(activeProfile.profileId, event.target.value)}
-                        aria-label="修改目前學習檔案名稱"
+                        aria-label="修改這個學習檔案名稱"
                       />
                     </div>
                   )}
@@ -2616,11 +2624,12 @@ function SettingsPage({
                   className="settings-input plain"
                   value={newProfileLabel}
                   onChange={(event) => setNewProfileLabel(event.target.value)}
-                  placeholder="新增學習檔案，例如 哥哥"
+                  disabled={profileLimitReached}
+                  placeholder={profileLimitReached ? "已達三個學習檔案上限" : "新增學習檔案，例如 哥哥"}
                 />
                 <button
                   className="settings-link-button"
-                  disabled={!newProfileLabel.trim()}
+                  disabled={profileLimitReached || !newProfileLabel.trim()}
                   onClick={() => {
                     onCreateProfile(newProfileLabel);
                     setNewProfileLabel("");
@@ -2629,8 +2638,9 @@ function SettingsPage({
                   新增
                 </button>
               </div>
+              <p className="settings-help">目前有 {activeProfileCount} / {MAX_ACCOUNT_PROFILES} 個學習檔案。</p>
               <label className="settings-label" htmlFor="account-device-label">
-                目前裝置名稱
+                這台手機或平板的名稱
               </label>
               <input
                 id="account-device-label"
@@ -2639,7 +2649,7 @@ function SettingsPage({
                 onChange={(event) => onAccountDeviceLabelChange(event.target.value)}
                 placeholder="例如 媽媽手機、家裡平板"
               />
-              <p className="settings-help">這是給家長辨認用的名稱，可以自己改；真正追蹤用的是下面的系統裝置 ID。</p>
+              <p className="settings-help">這只是給家長辨認裝置用，可以自己改。學習進度跟著上面的學習檔案走，不跟著裝置名稱走。</p>
               <div className="device-id-row">
                 <span>系統裝置 ID</span>
                 <code>{accountDeviceId}</code>

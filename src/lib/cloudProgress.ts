@@ -93,6 +93,7 @@ export type AccountDeviceRegistrationResult =
     };
 
 export const MAX_ACCOUNT_DEVICES = 3;
+export const MAX_ACCOUNT_PROFILES = 3;
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -134,7 +135,7 @@ function profileFromSnapshot(profileId: string, data: Record<string, unknown>): 
   return {
     ...(data as Partial<CloudProgressSnapshot>),
     profileId,
-    label: typeof data.label === "string" && data.label.trim() ? data.label.trim() : "主要進度",
+    label: typeof data.label === "string" && data.label.trim() ? data.label.trim() : "媽媽",
     active: data.active !== false,
     kind:
       data.kind === "child" || data.kind === "teacher" || data.kind === "test"
@@ -200,6 +201,7 @@ export async function registerAccountDevice(
       displayName: user.displayName,
       plan: "family",
       maxDevices: MAX_ACCOUNT_DEVICES,
+      maxProfiles: MAX_ACCOUNT_PROFILES,
       status: "active",
       updatedAt: serverTimestamp(),
     },
@@ -245,13 +247,17 @@ export async function createAccountProfile(
   kind: CloudProfileRecord["kind"] = "child",
 ): Promise<CloudProfileRecord> {
   requireAccountUser(accountId);
+  const profiles = await loadAccountProfiles(accountId);
+  if (profiles.filter((profile) => profile.active).length >= MAX_ACCOUNT_PROFILES) {
+    throw new Error(`一個帳號最多可以有 ${MAX_ACCOUNT_PROFILES} 個學習檔案`);
+  }
   const profileRef = doc(collection(db, "accounts", accountId, "profiles"));
   await setDoc(
     profileRef,
     {
       ...progress,
       profileId: profileRef.id,
-      label: label.trim() || "主要進度",
+      label: label.trim() || "媽媽",
       active: true,
       kind,
       updatedAt: serverTimestamp(),
@@ -315,7 +321,7 @@ export async function renameAccountProfile(accountId: string, profileId: string,
   await setDoc(
     doc(db, "accounts", accountId, "profiles", profileId),
     {
-      label: label.trim() || "主要進度",
+      label: label.trim() || "媽媽",
       updatedAt: serverTimestamp(),
     },
     { merge: true },

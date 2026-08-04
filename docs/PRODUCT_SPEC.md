@@ -161,6 +161,7 @@ Cloud sync is device-scoped and parent-managed. Free browsing all lessons is not
 
 - Production account mode stores learning profiles under `accounts/{uid}/profiles/{profileId}` and device metadata under `accounts/{uid}/devices/{deviceId}`.
 - The parent signs in with an account, and the app generates a stable device ID for each browser/device.
+- A family account may have at most three active learning profiles, such as `媽媽`, `哥哥`, and `妹妹`.
 - Progress belongs to profiles, not devices. Devices remember `activeProfileId`.
 - Two devices can share the same profile to sync the same progress, while sibling profiles stay separate.
 - A parent device may switch between child profiles.
@@ -171,8 +172,9 @@ Cloud sync is device-scoped and parent-managed. Free browsing all lessons is not
 - The app must not expose a local checkbox, query parameter, or localStorage flag that lets any user turn on free browsing.
 - Firestore account-device records may include `freeBrowse: true` only for approved teacher devices such as the teacher phone and tablet.
 - Settings must not show free-browse/general-mode labels to normal users. This authorization is internal device policy.
-- Settings must not show a legacy/manual device-code field. Normal users should only see account sign-in, profile selection, editable labels, and system-generated device ID.
+- Settings must not show a legacy/manual device-code field. Normal users should only see account sign-in, profile selection, editable learning-profile/device labels, and system-generated device ID.
 - Before paid public release, enforce the three-device limit with a trusted backend such as Cloud Functions; app-side checks are not sufficient payment-grade enforcement.
+- Before paid public release, enforce the three-profile limit with the same trusted backend; app-side checks are not sufficient payment-grade enforcement.
 
 See `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md` for Firebase Console setup, data paths, and rule templates.
 
