@@ -71,10 +71,14 @@ Do not treat free browsing as a universal app mode. The teacher wants only desig
 
 Current app-level rule:
 
-- A device may freely browse all lessons only when its Firestore device record has `freeBrowse: true`.
+- Production account sync uses `accounts/{uid}/devices/{deviceId}`. The app generates `deviceId`; users may edit the human-readable device label only.
+- A family/customer account may have at most three active devices.
+- A device may freely browse all lessons only when its Firestore account-device record has `freeBrowse: true`.
 - `freeBrowse` must not be stored as a local user-toggleable setting.
 - The settings UI may display whether the current device is authorized, but it must not let the user grant that authorization locally.
 - Progress sync must preserve server-side authorization fields when saving progress.
+- The legacy `devices/{deviceCode}` path is teacher/test transition infrastructure, not the customer account system.
+- Before paid public release, enforce the three-device limit in a trusted backend such as Cloud Functions. Firestore rules cannot reliably count active sibling device records by themselves.
 - If stronger content security is required later, move lesson data/assets behind authenticated access; GitHub Pages static lesson assets cannot be truly hidden from someone who knows the URLs.
 
 Lesson session rule:

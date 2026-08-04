@@ -293,11 +293,17 @@ Lessons use a staged flow. L001-L005 use Stage 1-3. Current production lessons L
 
 Cloud device access rule:
 
+- Production account sync uses Firebase Auth accounts plus generated device IDs under `accounts/{uid}/devices/{deviceId}`.
+- A customer/family account may have at most three active devices.
+- Device names are editable labels for humans only. Do not use the label as an ID, authorization key, or merge key.
 - Free browsing all lessons is only for teacher/parent devices explicitly authorized in Firestore, such as the teacher phone and tablet.
 - Do not implement free browsing as a user-controlled setting, query-string switch, or localStorage flag.
 - Ordinary child/guest devices may sync their own progress, but they must keep the normal lesson unlock path.
-- The current app reads `devices/{deviceCode}.freeBrowse === true` as the authorization signal. Saving progress must preserve that server-side field and must not let the client grant it locally.
+- The app reads `accounts/{uid}/devices/{deviceId}.freeBrowse === true` in account mode. The legacy `devices/{deviceCode}` path remains only for teacher/test transition work.
+- Saving progress must preserve server-side authorization fields and must not let the client grant `freeBrowse` locally.
+- Firestore alone cannot reliably enforce a three-active-device limit across sibling device documents. Before paid public release, add a trusted backend/Cloud Function for device registration enforcement.
 - Static GitHub Pages assets are public, so this is an app-level permission for the lesson UI. If the product later requires hiding lesson content or media URLs from unauthorized users, curriculum data/assets must move behind authenticated storage or an API rather than staying fully static.
+- Firebase setup details live in `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md`.
 
 Unlocked lesson navigation rule:
 

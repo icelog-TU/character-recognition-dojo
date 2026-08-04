@@ -452,6 +452,18 @@ button {
   gap: 8px;
 }
 
+.settings-block-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.settings-block-heading h2 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
 .settings-label {
   color: var(--ink);
   font-weight: 900;
@@ -474,6 +486,74 @@ button {
 .settings-input:focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
+}
+
+.settings-input.plain {
+  text-transform: none;
+}
+
+.account-card,
+.device-id-row,
+.account-device-row {
+  display: grid;
+  gap: 3px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px 12px;
+}
+
+.account-card span,
+.device-id-row span,
+.account-device-row small {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.device-id-row code {
+  color: var(--ink);
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.account-device-list {
+  display: grid;
+  gap: 8px;
+}
+
+.account-device-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.account-device-row.inactive {
+  opacity: 0.58;
+}
+
+.settings-link-button {
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-weight: 900;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.settings-link-button.danger {
+  color: #b73a2b;
+}
+
+.account-sign-in-button {
+  min-height: 48px;
+  border-radius: 8px;
+}
+
+.legacy-sync-block {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
 }
 
 .sync-status {

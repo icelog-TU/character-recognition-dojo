@@ -3,10 +3,20 @@ import curriculumData from "./curriculum/sample-lessons.json";
 import type { Curriculum, Lesson, LessonSentence, SentenceGame, SentenceGameOption, SentenceGameType } from "./types";
 import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculum";
 import {
+  deactivateAccountDevice,
+  loadAccountDevices,
   loadCloudProgress,
   normalizeDeviceCode,
+  registerAccountDevice,
+  renameAccountDevice,
+  saveAccountDeviceProgress,
   saveCloudProgress,
+  signInWithGoogleAccount,
+  signOutCloudAccount,
+  subscribeCloudAccount,
   validDeviceCode,
+  type CloudAccountDeviceRecord,
+  type CloudAccountUser,
   type CloudDailyRecord,
   type CloudLessonSessionSnapshot,
   type CloudProgressSnapshot,
@@ -44,6 +54,8 @@ type StoredProgress = CloudProgressSnapshot;
 type CloudSyncStatus = "idle" | "loading" | "saving" | "synced" | "error";
 type CloudProgressSettings = {
   deviceCode: string;
+  accountDeviceId: string;
+  accountDeviceLabel: string;
 };
 type RealmId = "land" | "sea" | "sky" | "space";
 type FamilyRoleId = "grandpa" | "grandma" | "dad" | "mom" | "olderBrother" | "olderSister" | "youngerBrother" | "youngerSister" | "baby";
@@ -1183,17 +1195,39 @@ function saveStoredProgress(progress: StoredProgress) {
   }
 }
 
+function createAccountDeviceId(): string {
+  const randomId =
+    typeof crypto !== "undefined" && "randomUUID" in crypto
+      ? crypto.randomUUID()
+      : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+  return `dev_${randomId.replace(/[^a-zA-Z0-9-]/g, "").slice(0, 28)}`;
+}
+
+function normalizeAccountDeviceLabel(value: string): string {
+  const label = value.trim().slice(0, 24);
+  return label || "這台裝置";
+}
+
 function loadCloudProgressSettings(): CloudProgressSettings {
-  if (typeof window === "undefined") return { deviceCode: "" };
+  if (typeof window === "undefined") {
+    return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "這台裝置" };
+  }
   try {
     const raw = window.localStorage.getItem(CLOUD_PROGRESS_SETTINGS_KEY);
-    if (!raw) return { deviceCode: "" };
+    if (!raw) {
+      return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "這台裝置" };
+    }
     const parsed = JSON.parse(raw) as Partial<CloudProgressSettings>;
     return {
       deviceCode: normalizeDeviceCode(String(parsed.deviceCode ?? "")),
+      accountDeviceId:
+        typeof parsed.accountDeviceId === "string" && parsed.accountDeviceId.startsWith("dev_")
+          ? parsed.accountDeviceId
+          : createAccountDeviceId(),
+      accountDeviceLabel: normalizeAccountDeviceLabel(String(parsed.accountDeviceLabel ?? "這台裝置")),
     };
   } catch {
-    return { deviceCode: "" };
+    return { deviceCode: "", accountDeviceId: createAccountDeviceId(), accountDeviceLabel: "這台裝置" };
   }
 }
 
@@ -1243,6 +1277,15 @@ function App() {
     () => initialProgress?.lessonSessions ?? {},
   );
   const [deviceCode, setDeviceCode] = useState(initialCloudSettings.deviceCode);
+  const [accountDeviceId] = useState(initialCloudSettings.accountDeviceId);
+  const [accountDeviceLabel, setAccountDeviceLabel] = useState(initialCloudSettings.accountDeviceLabel);
+  const accountDeviceLabelRef = useRef(initialCloudSettings.accountDeviceLabel);
+  const [accountUser, setAccountUser] = useState<CloudAccountUser | null>(null);
+  const [accountAuthChecked, setAccountAuthChecked] = useState(false);
+  const [accountDevices, setAccountDevices] = useState<CloudAccountDeviceRecord[]>([]);
+  const [accountReadyForSave, setAccountReadyForSave] = useState(false);
+  const [accountSyncStatus, setAccountSyncStatus] = useState<CloudSyncStatus>("idle");
+  const [accountSyncMessage, setAccountSyncMessage] = useState("尚未登入帳號");
   const [freeBrowse, setFreeBrowse] = useState(false);
   const [cloudReadyForSave, setCloudReadyForSave] = useState(false);
   const [cloudSyncStatus, setCloudSyncStatus] = useState<CloudSyncStatus>(deviceCode ? "loading" : "idle");
@@ -1297,10 +1340,29 @@ function App() {
   }, [page, lessonOpen]);
 
   useEffect(() => {
-    saveCloudProgressSettings({ deviceCode: cloudDeviceCode });
-  }, [cloudDeviceCode]);
+    saveCloudProgressSettings({
+      deviceCode: cloudDeviceCode,
+      accountDeviceId,
+      accountDeviceLabel,
+    });
+    accountDeviceLabelRef.current = accountDeviceLabel;
+  }, [accountDeviceId, accountDeviceLabel, cloudDeviceCode]);
 
   useEffect(() => {
+    return subscribeCloudAccount((user) => {
+      setAccountUser(user);
+      setAccountAuthChecked(true);
+      if (!user) {
+        setAccountReadyForSave(false);
+        setAccountDevices([]);
+        setAccountSyncStatus("idle");
+        setAccountSyncMessage("尚未登入帳號");
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    if (accountUser) return;
     if (!deviceCode) {
       setCloudReadyForSave(false);
       setFreeBrowse(false);
@@ -1345,11 +1407,79 @@ function App() {
     return () => {
       active = false;
     };
-  }, [cloudDeviceCode, cloudSyncEnabled, deviceCode]);
+  }, [accountUser, cloudDeviceCode, cloudSyncEnabled, deviceCode]);
+
+  useEffect(() => {
+    if (!accountAuthChecked || !accountUser) return;
+    let active = true;
+    setAccountReadyForSave(false);
+    setAccountSyncStatus("loading");
+    setAccountSyncMessage("正在註冊這台裝置");
+    registerAccountDevice(accountUser, accountDeviceId, accountDeviceLabelRef.current)
+      .then((result) => {
+        if (!active) return;
+        setAccountDevices(result.devices);
+        if (!result.ok) {
+          setFreeBrowse(false);
+          setAccountReadyForSave(false);
+          setAccountSyncStatus("error");
+          setAccountSyncMessage(`這個帳號已使用 ${result.maxDevices} 台裝置，請先停用一台舊裝置`);
+          return;
+        }
+        setFreeBrowse(result.device.freeBrowse === true);
+        const normalizedProgress = normalizeStoredProgress(result.device);
+        if (normalizedProgress) {
+          applyStoredProgress(normalizedProgress);
+          setAccountSyncMessage("已載入這台裝置的帳號進度");
+        } else {
+          setAccountSyncMessage("已建立這台裝置的帳號進度");
+        }
+        setAccountReadyForSave(true);
+        setAccountSyncStatus("synced");
+      })
+      .catch((error: unknown) => {
+        if (!active) return;
+        setAccountReadyForSave(false);
+        setFreeBrowse(false);
+        setAccountSyncStatus("error");
+        setAccountSyncMessage(error instanceof Error ? error.message : "帳號裝置同步失敗");
+      });
+    return () => {
+      active = false;
+    };
+  }, [accountAuthChecked, accountDeviceId, accountUser]);
+
+  useEffect(() => {
+    if (!accountUser || !accountReadyForSave) return;
+    const timeout = window.setTimeout(() => {
+      renameAccountDevice(accountUser.uid, accountDeviceId, accountDeviceLabel)
+        .then(() => loadAccountDevices(accountUser.uid))
+        .then(setAccountDevices)
+        .catch(() => undefined);
+    }, 700);
+    return () => window.clearTimeout(timeout);
+  }, [accountDeviceId, accountDeviceLabel, accountReadyForSave, accountUser]);
 
   useEffect(() => {
     saveStoredProgress(progressSnapshot);
-    if (!cloudSyncEnabled || !cloudReadyForSave) return;
+    if (accountUser && accountReadyForSave) {
+      setAccountSyncStatus("saving");
+      const timeout = window.setTimeout(() => {
+        saveAccountDeviceProgress(accountUser.uid, accountDeviceId, accountDeviceLabel, progressSnapshot)
+          .then(() => {
+            setAccountSyncStatus("synced");
+            setAccountSyncMessage("已同步到這台裝置的帳號進度");
+          })
+          .catch(() => {
+            setAccountSyncStatus("error");
+            setAccountSyncMessage("帳號同步失敗，本機進度已保留");
+          });
+      }, 500);
+
+      return () => window.clearTimeout(timeout);
+    }
+
+    if (accountUser || !cloudSyncEnabled || !cloudReadyForSave) return;
     setCloudSyncStatus("saving");
     const timeout = window.setTimeout(() => {
       saveCloudProgress(cloudDeviceCode, progressSnapshot)
@@ -1365,6 +1495,10 @@ function App() {
 
     return () => window.clearTimeout(timeout);
   }, [
+    accountDeviceId,
+    accountDeviceLabel,
+    accountReadyForSave,
+    accountUser,
     progressSnapshot,
     cloudDeviceCode,
     cloudSyncEnabled,
@@ -1393,6 +1527,49 @@ function App() {
       return { ...prev, [lessonId]: session };
     });
   }, []);
+
+  async function handleAccountSignIn() {
+    setAccountSyncStatus("loading");
+    setAccountSyncMessage("正在開啟 Google 登入");
+    try {
+      await signInWithGoogleAccount();
+    } catch (error) {
+      setAccountSyncStatus("error");
+      setAccountSyncMessage(error instanceof Error ? error.message : "Google 登入失敗");
+    }
+  }
+
+  async function handleAccountSignOut() {
+    setAccountReadyForSave(false);
+    setFreeBrowse(false);
+    setAccountSyncStatus("idle");
+    setAccountSyncMessage("尚未登入帳號");
+    await signOutCloudAccount();
+  }
+
+  async function handleDeactivateAccountDevice(deviceId: string) {
+    if (!accountUser) return;
+    setAccountSyncStatus("saving");
+    setAccountSyncMessage("正在停用舊裝置");
+    try {
+      await deactivateAccountDevice(accountUser.uid, deviceId);
+      const registration = await registerAccountDevice(accountUser, accountDeviceId, accountDeviceLabel);
+      setAccountDevices(registration.devices);
+      if (registration.ok) {
+        setFreeBrowse(registration.device.freeBrowse === true);
+        setAccountReadyForSave(true);
+        setAccountSyncStatus("synced");
+        setAccountSyncMessage("已更新帳號裝置清單");
+      } else {
+        setAccountReadyForSave(false);
+        setAccountSyncStatus("error");
+        setAccountSyncMessage(`這個帳號已使用 ${registration.maxDevices} 台裝置，請先停用一台舊裝置`);
+      }
+    } catch (error) {
+      setAccountSyncStatus("error");
+      setAccountSyncMessage(error instanceof Error ? error.message : "停用裝置失敗");
+    }
+  }
 
   function grantLessonReward(order: number, rewards: LessonReward) {
     if (completedOrders.has(order)) return;
@@ -1641,7 +1818,18 @@ function App() {
             freeBrowse={freeBrowse}
             cloudSyncStatus={cloudSyncStatus}
             cloudSyncMessage={cloudSyncMessage}
+            accountUser={accountUser}
+            accountAuthChecked={accountAuthChecked}
+            accountSyncStatus={accountSyncStatus}
+            accountSyncMessage={accountSyncMessage}
+            accountDeviceId={accountDeviceId}
+            accountDeviceLabel={accountDeviceLabel}
+            accountDevices={accountDevices}
             onDeviceCodeChange={(value) => setDeviceCode(normalizeDeviceCode(value))}
+            onAccountDeviceLabelChange={(value) => setAccountDeviceLabel(value.slice(0, 24))}
+            onAccountSignIn={handleAccountSignIn}
+            onAccountSignOut={handleAccountSignOut}
+            onDeactivateAccountDevice={handleDeactivateAccountDevice}
           />
         )}
       </main>
@@ -2282,13 +2470,35 @@ function SettingsPage({
   freeBrowse,
   cloudSyncStatus,
   cloudSyncMessage,
+  accountUser,
+  accountAuthChecked,
+  accountSyncStatus,
+  accountSyncMessage,
+  accountDeviceId,
+  accountDeviceLabel,
+  accountDevices,
   onDeviceCodeChange,
+  onAccountDeviceLabelChange,
+  onAccountSignIn,
+  onAccountSignOut,
+  onDeactivateAccountDevice,
 }: {
   deviceCode: string;
   freeBrowse: boolean;
   cloudSyncStatus: CloudSyncStatus;
   cloudSyncMessage: string;
+  accountUser: CloudAccountUser | null;
+  accountAuthChecked: boolean;
+  accountSyncStatus: CloudSyncStatus;
+  accountSyncMessage: string;
+  accountDeviceId: string;
+  accountDeviceLabel: string;
+  accountDevices: CloudAccountDeviceRecord[];
   onDeviceCodeChange: (value: string) => void;
+  onAccountDeviceLabelChange: (value: string) => void;
+  onAccountSignIn: () => void;
+  onAccountSignOut: () => void;
+  onDeactivateAccountDevice: (deviceId: string) => void;
 }) {
   const statusLabel: Record<CloudSyncStatus, string> = {
     idle: "未連線",
@@ -2306,6 +2516,72 @@ function SettingsPage({
 
       <div className="settings-grid">
         <div className="settings-block">
+          <div className="settings-block-heading">
+            <h2>帳號同步</h2>
+            {accountUser && <button className="settings-link-button" onClick={onAccountSignOut}>登出</button>}
+          </div>
+          {accountUser ? (
+            <>
+              <div className="account-card">
+                <strong>{accountUser.displayName}</strong>
+                <span>{accountUser.email}</span>
+              </div>
+              <label className="settings-label" htmlFor="account-device-label">
+                這台裝置名稱
+              </label>
+              <input
+                id="account-device-label"
+                className="settings-input plain"
+                value={accountDeviceLabel}
+                onChange={(event) => onAccountDeviceLabelChange(event.target.value)}
+                placeholder="例如 媽媽手機"
+              />
+              <div className="device-id-row">
+                <span>系統裝置 ID</span>
+                <code>{accountDeviceId}</code>
+              </div>
+              <div className={`sync-status sync-status-${accountSyncStatus}`}>
+                <strong>{statusLabel[accountSyncStatus]}</strong>
+                <span>{accountSyncMessage}</span>
+              </div>
+              {accountDevices.length > 0 && (
+                <div className="account-device-list" aria-label="帳號裝置清單">
+                  {accountDevices.map((device) => {
+                    const isCurrent = device.deviceId === accountDeviceId;
+                    return (
+                      <div className={`account-device-row${device.active ? "" : " inactive"}`} key={device.deviceId}>
+                        <span>
+                          <strong>{device.label}</strong>
+                          <small>{isCurrent ? "這台裝置" : device.active ? "已啟用" : "已停用"}</small>
+                        </span>
+                        {!isCurrent && device.active && (
+                          <button className="settings-link-button danger" onClick={() => onDeactivateAccountDevice(device.deviceId)}>
+                            停用
+                          </button>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </>
+          ) : (
+            <>
+              <button className="btn account-sign-in-button" disabled={!accountAuthChecked || accountSyncStatus === "loading"} onClick={onAccountSignIn}>
+                {accountAuthChecked ? "用 Google 登入" : "讀取登入狀態"}
+              </button>
+              <div className={`sync-status sync-status-${accountSyncStatus}`}>
+                <strong>{statusLabel[accountSyncStatus]}</strong>
+                <span>{accountSyncMessage}</span>
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className="settings-block legacy-sync-block">
+          <div className="settings-block-heading">
+            <h2>測試裝置代號</h2>
+          </div>
           <label className="settings-label" htmlFor="device-code">
             裝置代號
           </label>

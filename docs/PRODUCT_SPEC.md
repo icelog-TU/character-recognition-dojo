@@ -159,12 +159,19 @@ The app highlights by comparing audio `currentTime` with `charTimings`; it does 
 
 Cloud sync is device-scoped and parent-managed. Free browsing all lessons is not a general user setting.
 
-- The teacher/parent assigns each approved device a device code.
-- Each device keeps its own progress under that device code.
+- Production account mode stores devices under `accounts/{uid}/devices/{deviceId}`.
+- The parent signs in with an account, and the app generates a stable device ID for each browser/device.
+- Each device keeps its own progress under that generated device ID.
+- A family account may have at most three active devices.
+- Device names are user-editable labels only; they are not the stable identifier and may be duplicated or changed.
 - Only teacher/parent devices explicitly approved in Firestore may freely browse all lessons.
 - Child or ordinary devices must follow the normal lesson unlock path, even when cloud sync is enabled.
 - The app must not expose a local checkbox, query parameter, or localStorage flag that lets any user turn on free browsing.
-- Firestore device records may include `freeBrowse: true` only for approved teacher devices such as the teacher phone and tablet.
+- Firestore account-device records may include `freeBrowse: true` only for approved teacher devices such as the teacher phone and tablet.
+- The legacy `devices/{deviceCode}` path is temporary teacher/test infrastructure. Do not use it as the customer account system.
+- Before paid public release, enforce the three-device limit with a trusted backend such as Cloud Functions; app-side checks are not sufficient payment-grade enforcement.
+
+See `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md` for Firebase Console setup, data paths, and rule templates.
 
 ## Lesson Session Resume
 
