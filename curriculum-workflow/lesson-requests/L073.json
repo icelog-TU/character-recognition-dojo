@@ -1,0 +1,76 @@
+{
+  "id": "L073",
+  "order": 73,
+  "newChars": [
+    "出"
+  ],
+  "zhuyin": {
+    "出": "ㄔㄨ"
+  },
+  "title": "出",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L070",
+    "L071",
+    "L072"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "了",
+      "畫"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "出",
+      "畫",
+      "了",
+      "花",
+      "朵"
+    ],
+    "targetCharMinimumCount": {
+      "出": 3
+    },
+    "recentTargetMinimumCounts": {
+      "畫": 2,
+      "了": 2,
+      "花": 2,
+      "朵": 1
+    }
+  },
+  "teacherNotes": "Teacher approved L073 new character `出` and the five final sentences in chat. Current latest origin/main is L069 `朵`; L070 `了`, L071/L072 including `畫` are not all production truth yet, so prepare L073 assets only and do not merge to production until L070-L072 are merged and rechecked. `出` should be read ㄔㄨ. Keep `畫` as the traditional character and use Taiwan zhuyin only.",
+  "approvedSentences": [
+    {
+      "text": "他拿出書包裡的花朵",
+      "spokenText": "他拿出書包裡的花朵",
+      "focusChar": "出",
+      "reason": "Practices `出` in `拿出`, reviews `包`, `花`, and `朵`, and has a clear bag-and-flowers picture."
+    },
+    {
+      "text": "我畫不出來，我不要畫了",
+      "spokenText": "我畫不出來我不要畫了",
+      "focusChar": "出",
+      "reason": "Practices `不出來`, reviews `畫` and `了`, and shows a child stopping a difficult drawing."
+    },
+    {
+      "text": "爸爸出門了，我也要出門",
+      "spokenText": "爸爸出門了我也要出門",
+      "focusChar": "出",
+      "reason": "Practices `出門`, reviews `了`, and creates a concrete family doorway scene."
+    },
+    {
+      "text": "我看不出他是男是女",
+      "spokenText": "我看不出他是男是女",
+      "focusChar": "出",
+      "reason": "Practices `看不出` with learned identity words; teacher explicitly approved keeping this sentence."
+    },
+    {
+      "text": "這個包包上的花朵好可愛",
+      "spokenText": "這個包包上的花朵好可愛",
+      "focusChar": "花",
+      "reason": "Reviews `包`, `花`, `朵`, `好`, and `可愛`; provides a clear visual review sentence without `出`."
+    }
+  ]
+}
