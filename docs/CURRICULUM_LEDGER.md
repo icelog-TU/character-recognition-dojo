@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 77:
+Characters taught after Lesson 78:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找`
 
 Recent review pool for the next lesson:
 
-`問 校 誰 路 學 出 我 他 你 家 有 多 少 隻 狗 誰 要 和 一 起 上 學 校 門 前 人 在 路 走 山 去 的 看 不 出 這 是 小 孩`
+`找 問 校 誰 路 學 我 人 他 不 到 你 要 是 門 前 有 走 山 上 去 的 和 一 起 問路`
 
 ## Visual Continuity Ledger
 
@@ -138,12 +138,13 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L075 | 誰 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰 | 誰和你一起走路上學？ / 有誰要來學畫畫？ / 誰要和爸爸一起出門？ / 路邊這是誰的家？ / 我畫不出好看的花 | 誰和你一起走路上學有要來畫爸爸出門邊這是的家我不出好看的花 | Introduces `誰` through child-friendly who-questions about walking to school, learning to draw, going out with dad, and identifying a roadside home. Reviews recent `路`, `學`, `出`, `畫`, and `花`; includes L058-style generated images, AI audio, AI-aligned/manual-corrected timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L076 | 校 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校 | 誰和你一起走路去學校？ / 在校門前畫畫的人是誰？ / 去山上的學校，要走山路。 / 我要做出好看的花朵 / 媽媽拿著書坐在門前。 | 誰和你一起走路去學在門前畫的人是山上的要我做出好看的花朵媽媽拿著書坐 | Introduces `校` through walking to school, school gate, and a mountain school. Reviews recent `誰`, `路`, `學`, `出`, and `畫`; includes L058-style generated images, AI audio, AI-aligned/manual-corrected timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L077 | 問 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問 | 我問他：「你家有多少隻狗？」 / 我問：「誰要和我一起上學？」 / 校門前有人在問路 / 我要走山路去山上的學校 / 我看不出這是誰家的小孩。 | 我他你家有多少隻狗誰要和一起上學校門前人在路走山去的看不出這是小孩 | Introduces `問` through asking questions, asking who will go to school, and asking directions at a school gate. Reviews recent `校`, `誰`, `路`, `學`, and `出`; includes L058-style generated images, AI audio, AI-aligned/manual-corrected timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L078 | 找 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找 | 我找人問路 / 他找不到學校 / 你要找誰？ / 是誰找我？ / 校門前有人找我問路 | 我人問路他不到學校你要誰是門前有 | Introduces `找` through asking directions, looking for a school, looking for someone, and being found at a school gate. Reviews recent `問`, `校`, `誰`, `路`, and `學`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | R001 | review module | same as L060 | 一二三，大家一起看鳥飛 / 一個小孩在門前看小鳥 / 女孩和男孩去山下看水 / 大人的手指很大 / 你看，門後也有書 | 一 二 三 人 個 大 的 小 手 有 山 下 水 在 很 家 和 鳥 孩 指 看 女 飛 男 門 前 後 也 | First review module after L060. Introduces no new characters. R001-R002 together cover every new character from L001-L030. Includes reviewed images, AI audio, AI-aligned/manual-reviewed timings, and fixed Stage 4 review games. |
 | R002 | review module | same as L060 | 我在水邊看山上的鳥 / 一隻小鳥飛到高山上 / 人少的山邊比水邊好 / 你和我一起去門前 / 男孩女孩也來看書 | 一 人 的 小 我 山 上 你 水 在 高 和 隻 鳥 孩 看 女 飛 男 門 前 也 | Second review module after L060. Introduces no new characters. Completes the first review pair covering L001-L030. Includes reviewed images, AI audio, AI-aligned timings, and fixed Stage 4 review games. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L077. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L078. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

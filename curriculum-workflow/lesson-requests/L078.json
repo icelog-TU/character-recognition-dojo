@@ -1,0 +1,78 @@
+{
+  "id": "L078",
+  "order": 78,
+  "newChars": [
+    "找"
+  ],
+  "zhuyin": {
+    "找": "ㄓㄠˇ"
+  },
+  "title": "找",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L074",
+    "L075",
+    "L076",
+    "L077"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "問"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "找",
+      "問",
+      "校",
+      "誰",
+      "路",
+      "學"
+    ],
+    "targetCharMinimumCount": {
+      "找": 5
+    },
+    "recentTargetMinimumCounts": {
+      "問": 2,
+      "校": 2,
+      "誰": 2,
+      "路": 1,
+      "學": 1
+    }
+  },
+  "teacherNotes": "教師核准 L078 新字：找，注音 ㄓㄠˇ。教師核准五句：我找人問路；他找不到學校；你要找誰？；是誰找我？；校門前有人找我問路。spokenText 等於 text 去掉標點。L078 依賴 L074「路」、L075「誰」、L076「校」、L077「問」；目前 origin/main 尚未到 L077，因此本課只做平行準備，不可合併 production main。只能使用已學字、provisional L077「問」、與本課新字「找」。台灣用字與台灣注音，不要用漢語拼音。圖片使用 L058 風格參考。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。",
+  "approvedSentences": [
+    {
+      "text": "我找人問路",
+      "spokenText": "我找人問路",
+      "focusChar": "找",
+      "reason": "教師核准句。練習本課新字「找」，並複習「問」和「路」。"
+    },
+    {
+      "text": "他找不到學校",
+      "spokenText": "他找不到學校",
+      "focusChar": "找",
+      "reason": "教師核准句。練習「找不到」，複習「學校」。"
+    },
+    {
+      "text": "你要找誰？",
+      "spokenText": "你要找誰",
+      "focusChar": "找",
+      "reason": "教師核准句。練習「找」，複習「誰」。"
+    },
+    {
+      "text": "是誰找我？",
+      "spokenText": "是誰找我",
+      "focusChar": "找",
+      "reason": "教師核准句。練習「找」，複習「誰」和「我」。"
+    },
+    {
+      "text": "校門前有人找我問路",
+      "spokenText": "校門前有人找我問路",
+      "focusChar": "找",
+      "reason": "教師核准句。練習「找」，複習「校」、「問」、「路」。"
+    }
+  ]
+}
