@@ -1,0 +1,92 @@
+{
+  "id": "L096",
+  "order": 96,
+  "newChars": [
+    "用"
+  ],
+  "zhuyin": {
+    "用": "ㄩㄥˋ"
+  },
+  "title": "用",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L091",
+    "L092",
+    "L093",
+    "L094",
+    "L095"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "壞",
+      "眼"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "用",
+      "眼",
+      "壞",
+      "掉",
+      "盒",
+      "子"
+    ],
+    "targetCharMinimumCount": {
+      "用": 3
+    },
+    "recentTargetMinimumCounts": {
+      "眼": 2,
+      "壞": 2,
+      "掉": 2,
+      "盒": 1,
+      "子": 1
+    },
+    "disallowedChars": [
+      "張",
+      "從",
+      "能",
+      "進",
+      "弄",
+      "睛"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L096 課程，目標新字是「用」，注音為台灣注音 ㄩㄥˋ，不使用漢語拼音。老師已核准五句句子。只能使用已學字與 L096 新字「用」；因 L094「壞」與 L095「眼」尚未確認存在於 latest origin/main，本課只可把「壞」「眼」視為明確註冊的 provisional learned chars 做平行準備。不要使用未學字：張、從、能、進、弄、睛。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。L096 依賴 L091「子」、L092「盒」、L093「掉」、L094「壞」、L095「眼」，且 R003/R004 review modules 必須已依 SOP 插入 L090 後；目前 latest origin/main 已包含 L091-L093 與 R003/R004，但尚未包含 L094/L095，因此此課只做 branch-only 平行準備，不合併 production JSON。第 2 句製圖必須畫角色自己的左手拿筆，不是觀眾畫面左邊；若角色面向觀眾，角色自己的左手會在觀眾看到的右側。第 5 句製圖是老師或大人覺得牆面或佈告欄花太多、不好看，所以把一些花拿掉；佈告欄或牆面不能有文字、數字、標籤或任何可讀符號。",
+  "approvedSentences": [
+    {
+      "text": "我用兩眼看書",
+      "spokenText": "我用兩眼看書",
+      "focusChar": "用",
+      "reason": "畫面：孩子用兩隻眼睛專心看書，書本清楚但不能有文字，表情自然。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我用左手拿筆",
+      "spokenText": "我用左手拿筆",
+      "focusChar": "用",
+      "reason": "畫面：孩子用自己的左手拿筆，左手判定以孩子本人的身體左右為準，不是觀眾螢幕左右。若孩子面向觀眾，孩子自己的左手會在觀眾看到的右側。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "這個盒子壞掉了，不好用",
+      "spokenText": "這個盒子壞掉了不好用",
+      "focusChar": "用",
+      "reason": "畫面：一個盒子壞掉了，例如蓋子歪掉或盒身破損，孩子覺得不好用；盒子不能有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我一眼看出他是壞人",
+      "spokenText": "我一眼看出他是壞人",
+      "focusChar": "眼",
+      "reason": "畫面：孩子看著一個明顯在做不當事情的人，例如偷偷拿走別人的東西，孩子一眼看出他不是好人；避免恐怖、暴力或創傷畫面。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "這樣不好看，把花拿掉",
+      "spokenText": "這樣不好看把花拿掉",
+      "focusChar": "掉",
+      "reason": "畫面：老師或大人看著一面裝飾太多花的牆面或佈告欄，覺得不好看，正在把一些花拿掉。佈告欄或牆面不能有文字、數字、標籤或任何可讀符號。不要有文字、數字、招牌。"
+    }
+  ]
+}
