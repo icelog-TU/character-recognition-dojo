@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L100 | 紅 | claimed | Codex / L100 production assets thread | `codex/l100-hong-assets` / pending | L095:眼, L096:用, L097:鏡, L098:鼻, L099:臉 | 鼻 臉 | `curriculum-workflow/lesson-requests/L100.json`; `curriculum-workflow/generated/L100-generation-packet.md` | `curriculum-workflow/audio-inbox/L100/`; `public/assets/lessons/L100/` | Parallel prep only until L098/L099 are merged into latest `origin/main`; do not merge production JSON yet. Teacher-approved target is 紅 ㄏㄨㄥˊ. |
+| L100 | 紅 | request-ready | Codex / L100 production assets thread | `codex/l100-hong-assets` / `a5230f2` | L095:眼, L096:用, L097:鏡, L098:鼻, L099:臉 | 鼻 臉 | `curriculum-workflow/lesson-requests/L100.json`; `curriculum-workflow/generated/L100-generation-packet.md` | `curriculum-workflow/audio-inbox/L100/`; `public/assets/lessons/L100/` | Request and packet prepared branch-only; blocked until L098/L099 are merged into latest `origin/main`; do not merge production JSON yet. Teacher-approved target is 紅 ㄏㄨㄥˊ. |
 
 ## Status Values
 
