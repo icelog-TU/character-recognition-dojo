@@ -65,6 +65,7 @@ function normalizeTranscribedHanChar(char) {
     ["爱", "愛"],
     ["妈", "媽"],
     ["样", "樣"],
+    ["带", "帶"],
     ["廟", "鳥"],
     ["它", "他"],
     ["她", "他"],

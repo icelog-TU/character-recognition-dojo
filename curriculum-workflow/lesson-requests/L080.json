@@ -1,0 +1,79 @@
+{
+  "id": "L080",
+  "order": 80,
+  "newChars": [
+    "帶"
+  ],
+  "zhuyin": {
+    "帶": "ㄉㄞˋ"
+  },
+  "title": "帶",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L075",
+    "L076",
+    "L077",
+    "L078",
+    "L079"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "同"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "帶",
+      "同",
+      "找",
+      "問",
+      "校",
+      "誰"
+    ],
+    "targetCharMinimumCount": {
+      "帶": 3
+    },
+    "recentTargetMinimumCounts": {
+      "同": 3,
+      "找": 2,
+      "問": 2,
+      "校": 1,
+      "誰": 1
+    }
+  },
+  "teacherNotes": "教師核准 L080 新字：帶，注音 ㄉㄞˋ。教師核准五句：同學帶我走山路；爸爸問：誰沒帶書去學校？；我找不到同學的家；我問路人，他帶我去找路；我要和他同樣的書包。spokenText 等於 text 去掉標點。L080 依賴 L075「誰」、L076「校」、L077「問」、L078「找」、L079「同」；目前 origin/main 尚未到 L079，因此本課只做平行準備，不可合併 production main，且不可留下 L080 production JSON。只能使用已學字、provisional L079「同」、與本課新字「帶」。台灣用字與台灣注音，不使用漢語拼音。圖片使用 L058 風格參考，避免文字、數字、招牌。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。",
+  "approvedSentences": [
+    {
+      "text": "同學帶我走山路",
+      "spokenText": "同學帶我走山路",
+      "focusChar": "帶",
+      "reason": "教師核准句。畫面：固定小女孩或固定小男孩和同學一起走在安全山路上，同學在前方帶路，表現「同學帶我走山路」。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "爸爸問：誰沒帶書去學校？",
+      "spokenText": "爸爸問誰沒帶書去學校",
+      "focusChar": "帶",
+      "reason": "教師核准句。畫面：爸爸在家門前或學校入口旁問孩子們誰沒有帶書，一個孩子的書或課本留在家裡，孩子露出忘記帶書的表情。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我找不到同學的家",
+      "spokenText": "我找不到同學的家",
+      "focusChar": "找",
+      "reason": "教師核准句。畫面：固定小女孩或固定小男孩站在住宅或山路附近，表情困惑，正在找同學的家但找不到。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我問路人，他帶我去找路",
+      "spokenText": "我問路人他帶我去找路",
+      "focusChar": "帶",
+      "reason": "教師核准句。畫面：孩子向路人問路，路人溫和地帶著孩子往道路方向走，表現「問路人」「帶我去找路」。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我要和他同樣的書包",
+      "spokenText": "我要和他同樣的書包",
+      "focusChar": "同",
+      "reason": "教師核准句。畫面：兩個孩子站在一起，一個孩子看著另一個孩子的書包，想要一個同樣的書包；兩個書包外觀相同或很相似。不要有文字、數字、招牌。"
+    }
+  ]
+}
