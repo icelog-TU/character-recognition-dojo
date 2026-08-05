@@ -66,7 +66,7 @@ Only treat text as actually damaged if UTF-8 decoding fails, decoded text contai
 10. Process audio without trimming sentence endings.
 11. Use AI transcription timestamps to verify the spoken sentence and write character timing metadata.
 12. Move only reviewed content into `src/curriculum/sample-lessons.json`.
-13. Update `docs/CURRICULUM_LEDGER.md`; run `npm run curriculum:export-planner`; update or clear the registry row if the lesson was parallel-prepared.
+13. Update `docs/CURRICULUM_LEDGER.md`, including `Current Character State`; run `npm run curriculum:export-planner`; update or clear the registry row if the lesson was parallel-prepared.
 14. Run `npm run verify`.
 
 ## Cloud Device Authorization

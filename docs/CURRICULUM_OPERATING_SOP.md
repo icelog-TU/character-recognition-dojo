@@ -30,7 +30,7 @@ Use this order whenever files disagree:
 7. `curriculum-workflow/recommendations/` contains AI recommendation drafts only. A recommended character is not reserved, approved, or blocking.
 8. `curriculum-workflow/lesson-requests/`, `curriculum-workflow/review-requests/`, `curriculum-workflow/drafts/`, and `curriculum-workflow/generated/` are work artifacts. They can explain how a unit was prepared, but they are not proof that it is shipped.
 
-If Markdown and production JSON disagree, update Markdown or generated planner data to match `origin/main` unless the user explicitly asks to change production curriculum.
+If Markdown and production JSON disagree, update Markdown or generated planner data to match `origin/main` unless the user explicitly asks to change production curriculum. In particular, `docs/CURRICULUM_LEDGER.md` `Current Character State` must match the final lesson order and cumulative `newChars` from `src/curriculum/sample-lessons.json`; `npm run curriculum:audit-state` must fail if that summary is stale.
 
 If an AI recommendation draft or unmerged lesson request disagrees with the teacher's latest explicit selected character/sentences, the teacher's latest request wins. Do not reject the work because an old recommendation or stale draft says a different character was planned.
 
@@ -177,7 +177,7 @@ npm run assets:align:ai -- --lesson L###
 
 13. Manually play every Stage 3 sentence and Stage 4 option audio on a phone-width viewport. Confirm audio starts on tap, final syllables are audible, `charTimings` follow the heard syllables, and `teach-character` playback boundaries do not duplicate or clip the target character.
 14. Add reviewed lesson data to `src/curriculum/sample-lessons.json` only when its dependencies are already in `origin/main`.
-15. Update `docs/CURRICULUM_LEDGER.md`.
+15. Update `docs/CURRICULUM_LEDGER.md`, including the lesson row, merged-through line, review-module status, and the `Current Character State` lesson number plus cumulative learned-character string.
 16. Regenerate planner data:
 
 ```bash

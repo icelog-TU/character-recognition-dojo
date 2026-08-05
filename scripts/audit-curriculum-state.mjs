@@ -66,6 +66,27 @@ if (lessons.length === 0) {
   );
 
   const ledger = readText("docs/CURRICULUM_LEDGER.md");
+  const expectedLearnedChars = lessons.flatMap((lesson) => lesson.newChars ?? []).join("");
+  const currentStateMatch = ledger.match(
+    /## Current Character State\s+Characters taught after Lesson (\d+):\s+`([^`]+)`/m,
+  );
+  if (!currentStateMatch) {
+    errors.push("docs/CURRICULUM_LEDGER.md is missing the Current Character State learned-character summary.");
+  } else {
+    const [, ledgerCurrentOrderText, ledgerLearnedChars] = currentStateMatch;
+    const ledgerCurrentOrder = Number(ledgerCurrentOrderText);
+    if (ledgerCurrentOrder !== lastLesson.order) {
+      errors.push(
+        `docs/CURRICULUM_LEDGER.md Current Character State says Lesson ${ledgerCurrentOrder}, but production curriculum ends at ${lastId}.`,
+      );
+    }
+    if (ledgerLearnedChars !== expectedLearnedChars) {
+      errors.push(
+        "docs/CURRICULUM_LEDGER.md Current Character State learned-character string is stale; update it from src/curriculum/sample-lessons.json.",
+      );
+    }
+  }
+
   const ledgerCompleteMatch = ledger.match(/Merged curriculum is complete through (L\d{3})\./);
   if (!ledgerCompleteMatch) {
     errors.push("docs/CURRICULUM_LEDGER.md is missing the merged-through line.");

@@ -31,7 +31,7 @@
 - L006-L091 include Stage 4 fixed sentence games.
 - Review modules do not occupy `L###` lesson numbers. After L060, the next new-character lesson is L061.
 
-Always verify current state with `git fetch origin`, `npm run curriculum:audit-state`, and `docs/CURRICULUM_LEDGER.md`; do not trust an older chat transcript as current progress.
+Always verify current state with `git fetch origin`, `npm run curriculum:audit-state`, and `docs/CURRICULUM_LEDGER.md`; do not trust an older chat transcript as current progress. If ledger Markdown disagrees with production JSON, production JSON wins and the Markdown summary must be corrected, not used to block the current lesson.
 
 ## 新對話串起手
 
