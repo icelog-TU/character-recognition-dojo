@@ -175,7 +175,7 @@ npm run assets:audio -- --lesson L###
 npm run assets:align:ai -- --lesson L###
 ```
 
-13. Manually play every Stage 3 sentence and Stage 4 option audio on a phone-width viewport. Confirm audio starts on tap, final syllables are audible, `charTimings` follow the heard syllables, and `teach-character` cut points do not duplicate or clip the target character.
+13. Manually play every Stage 3 sentence and Stage 4 option audio on a phone-width viewport. Confirm audio starts on tap, final syllables are audible, `charTimings` follow the heard syllables, and `teach-character` playback boundaries do not duplicate or clip the target character.
 14. Add reviewed lesson data to `src/curriculum/sample-lessons.json` only when its dependencies are already in `origin/main`.
 15. Update `docs/CURRICULUM_LEDGER.md`.
 16. Regenerate planner data:
@@ -253,7 +253,7 @@ A lesson is done only when all of these are true:
 - Sentence and option audio are normalized `.m4a` files and are audibly clear on first tap.
 - Sentence `charTimings` match final processed audio.
 - Stage 3 sentence playback and Stage 4 option playback were manually checked on a phone-width viewport.
-- `teach-character` pre-target and stitched replay cut points were manually checked if the lesson uses that game type.
+- `teach-character` pre-target and stitched replay playback boundaries were manually checked if the lesson uses that game type.
 - `docs/CURRICULUM_LEDGER.md` includes the merged lesson.
 - `public/tools/planner-data.json` has been refreshed.
 - `docs/PARALLEL_LESSON_REGISTRY.md` has no stale active row for the merged lesson.

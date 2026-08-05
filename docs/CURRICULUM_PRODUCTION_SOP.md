@@ -258,10 +258,10 @@ Production audio hard limits for every new or touched lesson/review module:
 
 - Final curriculum audio must be `.m4a` unless there is an explicit exception in the handoff.
 - Processed output must be mono AAC at `44100 Hz` and about `96k` bitrate, matching `scripts/process-audio-assets.mjs`.
-- Character audio target duration is `300-1400 ms`; anything shorter than `200 ms` or longer than `1800 ms` must be manually justified or repaired.
+- Character-card `charAudio` target duration is `700-3500 ms`, and production validation fails outside that range. Regenerate standalone OpenAI single-character audio if it is too short, too long, too quiet, clipped, or contaminated.
 - Sentence audio should end within `300 ms` after the last spoken Han character. Long silent tails must be trimmed or timing must be repaired.
 - Sentence audio, Stage 4 option audio, and `teachAudio` must be audibly normalized, not merely present. If a phone tester reports no sound, inspect actual file volume before changing UI playback logic.
-- New-character `charAudio` must pass the existing `validate:production` audibility floor of `max_volume >= -35 dB`.
+- New-character `charAudio` must pass `validate:production` duration and audibility checks: `700-3500 ms` and `max_volume >= -35 dB`.
 - Referenced production audio should pass `max_volume >= -12 dB` and `mean_volume >= -28 dB` after `volumedetect`. If quieter, regenerate or normalize before merge.
 - In each `choose-pronunciation` round, the three option audio files must have `mean_volume` within `3 dB` of each other. A correct file at normal volume with two quiet wrong-choice files is a production defect because children may not hear the wrong options clearly.
 - Do not use browser TTS as production curriculum audio for `charAudio`, sentence audio, or `choose-pronunciation` options unless the exception is recorded and the lesson is explicitly marked for later AI-audio replacement.
@@ -402,9 +402,10 @@ Audio is generated only after sentence approval.
 - After processing audio, transcribe the final `.m4a` and compare it to `spokenText` before accepting the lesson.
 - If transcription misses a Han character, especially final `的` or final body-part nouns like `手`, regenerate the audio before writing timings.
 - Stage 1 character-card taps must cancel guide narration and start the character audio in the same user gesture. Do not insert `setTimeout`/`waitMs` before `audio.play()` on mobile. If the AI character audio fails to start, fall back to browser TTS for that character.
-- Character audio must be audibly normalized, not merely present. `npm run validate:production` measures each new-character `charAudio` with FFmpeg `volumedetect` and fails if `max_volume` is below `-35 dB`.
+- Character audio must be audibly normalized, not merely present. `npm run validate:production` measures each new-character `charAudio` duration and volume; it fails if duration is outside `700-3500 ms` or `max_volume` is below `-35 dB`.
 - If a character card appears to play but the user cannot hear it on mobile, first check the actual file volume. A file can exist and be valid M4A while still being effectively silent.
-- If the standalone character-audio source is missing or unusably quiet, a safe repair is to cut the target character from an already approved sentence audio that contains the same character, using reviewed `charTimings`, then normalize and re-run validation.
+- `charAudio` for character cards must be generated from the single target character as standalone OpenAI TTS input. Do not create, repair, or replace character-card audio by cutting, trimming, slicing, copying, or extracting a character from sentence audio, even if the cut sounds clean.
+- If standalone character-card audio is missing, clipped, too quiet, too short, too long, or contaminated by nearby syllables, regenerate that single character with OpenAI TTS and process it through `npm run assets:audio -- --lesson L###`. Do not repair it from sentence audio.
 - Do not ship a lesson after only confirming that the character audio path exists. Confirm it is audible, short, and clearly says the target character.
 
 ## Character Timing Rules

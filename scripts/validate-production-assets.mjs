@@ -8,6 +8,8 @@ const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
 const errors = [];
 const require = createRequire(import.meta.url);
 const charAudioMaxVolumeFloorDb = -35;
+const charAudioMinDurationMs = 700;
+const charAudioMaxDurationMs = 3500;
 
 function packageToolPath(packageName) {
   try {
@@ -18,6 +20,7 @@ function packageToolPath(packageName) {
 }
 
 const ffmpegCommand = process.env.FFMPEG_PATH || packageToolPath("@ffmpeg-installer/ffmpeg") || "ffmpeg";
+const ffprobeCommand = process.env.FFPROBE_PATH || packageToolPath("@ffprobe-installer/ffprobe") || "ffprobe";
 
 function hanChars(text) {
   return Array.from(text).filter((char) => /\p{Script=Han}/u.test(char));
@@ -59,9 +62,32 @@ function getMaxVolumeDb(filePath) {
   return Number(match[1]);
 }
 
+function getDurationMs(filePath) {
+  const result = spawnSync(ffprobeCommand, [
+    "-v",
+    "error",
+    "-show_entries",
+    "format=duration",
+    "-of",
+    "default=noprint_wrappers=1:nokey=1",
+    filePath,
+  ], { encoding: "utf8" });
+  if (result.error || result.status !== 0) return null;
+  const seconds = Number(result.stdout.trim());
+  return Number.isFinite(seconds) ? Math.round(seconds * 1000) : null;
+}
+
 function requireAudibleCharAudio(label, src) {
   const filePath = requirePublicAsset(label, src);
   if (!filePath) return;
+  const durationMs = getDurationMs(filePath);
+  if (!Number.isFinite(durationMs)) {
+    errors.push(`${label}: could not measure audio duration.`);
+    return;
+  }
+  if (durationMs < charAudioMinDurationMs || durationMs > charAudioMaxDurationMs) {
+    errors.push(`${label}: duration ${durationMs} ms is outside the ${charAudioMinDurationMs}-${charAudioMaxDurationMs} ms character-card range; regenerate standalone OpenAI character audio.`);
+  }
   const maxVolumeDb = getMaxVolumeDb(filePath);
   if (!Number.isFinite(maxVolumeDb)) {
     errors.push(`${label}: could not measure audio volume.`);

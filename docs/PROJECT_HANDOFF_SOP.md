@@ -86,6 +86,7 @@ Before editing, state the exact ownership in chat, including lesson id and owned
 - Sentence drafting must follow `docs/SENTENCE_GENERATION_SOP.md`.
 - Production audio must use the standard AI audio -> `assets:audio` -> `assets:align:ai` pipeline unless the teacher explicitly approves an exception.
 - Before saying FFmpeg, FFprobe, ImageMagick, or OpenAI setup is unavailable, run `npm run tools:check` and/or `npm run ai:check`.
+- Character-card `charAudio` must be standalone OpenAI TTS generated from the single target character. Never cut, trim, slice, copy, or extract character-card audio from sentence audio.
 - Do not create production wrong-choice audio by cutting or patching the correct sentence audio. Generate each wrong option as whole-sentence AI audio from its final text.
 - New or replacement sentence images must use the L058 style anchors unless the teacher approves a new style direction:
   - `public/assets/lessons/L058/images/L058-S01.webp`

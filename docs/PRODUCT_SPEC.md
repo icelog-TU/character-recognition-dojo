@@ -144,6 +144,8 @@ Production curriculum sentences use:
 - `audio.src`: pre-recorded AI audio URL.
 - `audio.charTimings`: character-level start/end timings.
 
+Character-card `lesson.charAudio` must be standalone OpenAI TTS generated from the single target character. It must not be cut, trimmed, sliced, copied, or extracted from sentence audio.
+
 The app highlights by comparing audio `currentTime` with `charTimings`; it does not synthesize one character at a time.
 
 ## Curriculum Production Pipeline
