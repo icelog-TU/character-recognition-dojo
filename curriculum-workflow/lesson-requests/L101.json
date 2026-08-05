@@ -1,0 +1,94 @@
+{
+  "id": "L101",
+  "order": 101,
+  "newChars": [
+    "圓"
+  ],
+  "zhuyin": {
+    "圓": "ㄩㄢˊ"
+  },
+  "title": "圓",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L096",
+    "L097",
+    "L098",
+    "L099",
+    "L100"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "臉",
+      "紅"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "圓",
+      "紅",
+      "臉",
+      "鼻",
+      "鏡",
+      "用"
+    ],
+    "targetCharMinimumCount": {
+      "圓": 3
+    },
+    "recentTargetMinimumCounts": {
+      "紅": 2,
+      "臉": 2,
+      "鼻": 2,
+      "鏡": 1,
+      "用": 1
+    },
+    "disallowedChars": [
+      "張",
+      "從",
+      "能",
+      "進",
+      "弄",
+      "睛",
+      "笑",
+      "杯"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L101 課程，目標新字是「圓」，注音為台灣注音 ㄩㄢˊ，不使用漢語拼音。老師已核准五句句子。只能使用已學字與 L101 新字「圓」；latest origin/main 目前已包含 L096「用」、L097「鏡」、L098「鼻」與 R003/R004，但尚未包含 L099「臉」和 L100「紅」，因此本課只可把「臉」「紅」視為明確註冊的 provisional learned chars 做平行準備，不合併 production JSON。不要使用未學字：張、從、能、進、弄、睛、笑、杯。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。Stage 4 choose-pronunciation 的錯誤選項音檔必須用完整錯誤句子獨立生成，不可拼接或裁切。",
+  "approvedSentences": [
+    {
+      "text": "圓圓的紅臉很好看",
+      "spokenText": "圓圓的紅臉很好看",
+      "focusChar": "圓",
+      "reason": "畫面：孩子或可愛角色有圓圓的紅臉，表情溫和可愛，臉部清楚但不要誇張恐怖。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "圓桌上放著眼鏡",
+      "spokenText": "圓桌上放著眼鏡",
+      "focusChar": "圓",
+      "reason": "畫面：一張圓桌上放著一副眼鏡，圓桌形狀清楚，眼鏡清楚可見。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "這個盒子是圓的",
+      "spokenText": "這個盒子是圓的",
+      "focusChar": "圓",
+      "reason": "畫面：一個圓形盒子放在桌上或孩子手中，盒子形狀明顯是圓的，盒子不能有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我用紅筆畫鼻子",
+      "spokenText": "我用紅筆畫鼻子",
+      "focusChar": "用",
+      "reason": "畫面：孩子用紅色筆在紙上畫鼻子，紙上只能有圖像鼻子，不能有文字、數字或標籤。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "他的鼻子和臉一樣圓",
+      "spokenText": "他的鼻子和臉一樣圓",
+      "focusChar": "圓",
+      "reason": "畫面：一個可愛角色或孩子的臉是圓的，鼻子也畫得圓圓的，表現鼻子和臉一樣圓；不要醜化真人外貌。不要有文字、數字、招牌。"
+    }
+  ]
+}
