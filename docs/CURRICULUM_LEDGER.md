@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 93:
+Characters taught after Lesson 94:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞`
 
 Recent review pool for the next lesson:
 
-`掉 盒 子 桌 把 放 心 紙 給 本 那 借 筆`
+`壞 掉 盒 子 桌 把 放 心 紙 給 本 那 借 筆`
 
 ## Visual Continuity Ledger
 
@@ -158,10 +158,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L091 | 子 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子 | 桌上放著一個小本子 / 誰把筆拿走了？ / 那孩子很開心的樣子 / 媽媽把水放在桌上 / 我要更多的紙 | 紙桌把 | Introduces `子` through a small notebook, a child's appearance, and `樣子`. Reviews recent `紙`, `桌`, and `把`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L092 | 盒 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒 | 我把筆放到筆盒裡 / 誰把這個紙盒放在桌上？ / 不要坐在桌子上 / 盒子裡有很多愛心 / 我沒帶筆，同學借我 | 子借 | Introduces `盒` through a pencil box, a paper box, and things inside a box. Reviews recent `子` and `借`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L093 | 掉 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉 | 我的書掉到桌下了 / 有小孩子掉到水裡了 / 誰把盒子放在桌上 / 我的筆盒掉了，找不到了 / 他一個人走掉了 | 盒 | Introduces `掉` through dropped books, a dropped pencil box, and walking away. Reviews recent `盒`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L094 | 壞 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞 | 他是好人，不是壞人 / 這個桌子壞掉了 / 把壞掉的盒子拿走 / 我把筆盒放到書包裡 / 他開門走掉了 | 盒掉 | Introduces `壞` through good/bad contrast and broken table/box scenes. Reviews recent `盒` and `掉`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L093. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L094. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
