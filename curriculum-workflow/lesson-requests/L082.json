@@ -1,0 +1,80 @@
+{
+  "id": "L082",
+  "order": 82,
+  "newChars": [
+    "借"
+  ],
+  "zhuyin": {
+    "借": "ㄐㄧㄝˋ"
+  },
+  "title": "借",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L077",
+    "L078",
+    "L079",
+    "L080",
+    "L081"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "帶",
+      "筆"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "借",
+      "筆",
+      "帶",
+      "同",
+      "找",
+      "問"
+    ],
+    "targetCharMinimumCount": {
+      "借": 5
+    },
+    "recentTargetMinimumCounts": {
+      "筆": 2,
+      "帶": 2,
+      "同": 2,
+      "找": 1,
+      "問": 1
+    }
+  },
+  "teacherNotes": "教師核准 L082 新字：借，注音 ㄐㄧㄝˋ。教師核准五句：借來的書很好看；我沒帶筆，問同學借筆；他找不到書包；同學帶我去借書；他沒帶書，要我借他。spokenText 等於 text 去掉標點。L082 依賴 L077「問」、L078「找」、L079「同」、L080「帶」、L081「筆」；目前 origin/main 尚未到 L080/L081，因此本課只做平行準備，不可合併 production main，且不可留下 L082 production JSON。只能使用已學字、provisional L080「帶」、provisional L081「筆」、與本課新字「借」。台灣用字與台灣注音，不使用漢語拼音。圖片使用 L058 風格參考，避免文字、數字、招牌。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。",
+  "approvedSentences": [
+    {
+      "text": "借來的書很好看",
+      "spokenText": "借來的書很好看",
+      "focusChar": "借",
+      "reason": "教師核准句。畫面：孩子坐著看一本借來的書，表情開心，書本很漂亮但不要有任何文字。可以是家中或學校閱讀角落。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我沒帶筆，問同學借筆",
+      "spokenText": "我沒帶筆問同學借筆",
+      "focusChar": "借",
+      "reason": "教師核准句。畫面：學校或教室場景，一個孩子發現自己沒有帶筆，正在問同學借筆；同學手上拿著筆準備借給他。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "他找不到書包",
+      "spokenText": "他找不到書包",
+      "focusChar": "找",
+      "reason": "教師核准句。畫面：固定小男孩在學校或家門前找不到自己的書包，表情困惑，旁邊可有桌椅或書本但沒有書包。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "同學帶我去借書",
+      "spokenText": "同學帶我去借書",
+      "focusChar": "借",
+      "reason": "教師核准句。畫面：同學帶著孩子到圖書館或學校閱讀區借書，兩人走向書架或拿著書。要像借書情境，但不要出現任何文字標示、借書卡文字、數字或招牌。"
+    },
+    {
+      "text": "他沒帶書，要我借他",
+      "spokenText": "他沒帶書要我借他",
+      "focusChar": "借",
+      "reason": "教師核准句。畫面：一個孩子沒有帶書，向另一個孩子借書；另一個孩子手上拿著書準備借給他。表情友善，情境清楚。不要有文字、數字、招牌。"
+    }
+  ]
+}
