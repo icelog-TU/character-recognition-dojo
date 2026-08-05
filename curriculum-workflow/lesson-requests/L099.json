@@ -1,0 +1,97 @@
+{
+  "id": "L099",
+  "order": 99,
+  "newChars": [
+    "臉"
+  ],
+  "zhuyin": {
+    "臉": "ㄌㄧㄢˇ"
+  },
+  "title": "臉",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L094",
+    "L095",
+    "L096",
+    "L097",
+    "L098"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "鏡",
+      "鼻"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉"
+    ],
+    "targetCharMinimumCount": {
+      "臉": 3
+    },
+    "recentTargetMinimumCounts": {
+      "鼻": 2,
+      "鏡": 2,
+      "用": 2,
+      "眼": 2,
+      "壞": 1
+    },
+    "disallowedChars": [
+      "張",
+      "從",
+      "能",
+      "進",
+      "弄",
+      "睛",
+      "自",
+      "己",
+      "得"
+    ]
+  },
+  "teacherNotes": "認字練功房 L099 課程。目標新字是「臉」，注音「ㄌㄧㄢˇ」。L099 依賴 L094「壞」、L095「眼」、L096「用」、L097「鏡」、L098「鼻」以及 R003/R004 review modules；目前 production main 只到 L096，因此本課只做平行準備，不可合併 production JSON，且不可更新 ledger 或 planner production 輸出。只能使用已學字、provisional L097「鏡」、provisional L098「鼻」、與本課新字「臉」。不要使用未學字：張、從、能、進、弄、睛、自、己、得。台灣用字與台灣注音，不使用漢語拼音。spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，不要有文字、數字、注音、招牌或標籤。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字字卡音檔 charAudio 必須直接用 OpenAI TTS 輸入單一目標字「臉」生成，不可從句子音檔裁切或抽出。教師核准五句：鏡子裡有我的臉；臉上有眼也有鼻；我用不到眼鏡；紙人的臉壞掉了；鼻子很有用。",
+  "approvedSentences": [
+    {
+      "text": "鏡子裡有我的臉",
+      "spokenText": "鏡子裡有我的臉",
+      "focusChar": "臉",
+      "reason": "教師核准句。自我審核通過：包含 L097 鏡與 L099 臉，句意清楚，全部漢字在已學字、provisional 字或本課新字內。"
+    },
+    {
+      "text": "臉上有眼也有鼻",
+      "spokenText": "臉上有眼也有鼻",
+      "focusChar": "臉",
+      "reason": "教師核准句。自我審核通過：包含 L099 臉、L095 眼、L098 鼻，畫面清楚。"
+    },
+    {
+      "text": "我用不到眼鏡",
+      "spokenText": "我用不到眼鏡",
+      "focusChar": "用",
+      "reason": "教師核准句。自我審核通過：包含 L096 用、L095 眼、L097 鏡；意思是我不需要眼鏡。",
+      "imageNotes": "這句意思是「我不需要眼鏡」。請畫一個人眼睛很好，旁邊或手上有眼鏡但他不用眼鏡，不要畫成眼鏡壞掉。"
+    },
+    {
+      "text": "紙人的臉壞掉了",
+      "spokenText": "紙人的臉壞掉了",
+      "focusChar": "臉",
+      "reason": "教師核准句。自我審核通過：包含 L099 臉、L094 壞、L093 掉、L087 紙，且符合安全製圖要求。",
+      "imageNotes": "請畫紙做的人偶或紙人，紙人的臉壞掉，不要畫真人的臉壞掉，不要恐怖。"
+    },
+    {
+      "text": "鼻子很有用",
+      "spokenText": "鼻子很有用",
+      "focusChar": "用",
+      "reason": "教師核准句。自我審核通過：包含 L098 鼻與 L096 用，句長短而自然。"
+    }
+  ]
+}
