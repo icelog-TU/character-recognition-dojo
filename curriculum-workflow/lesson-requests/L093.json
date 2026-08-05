@@ -1,0 +1,100 @@
+{
+  "id": "L093",
+  "order": 93,
+  "newChars": [
+    "掉"
+  ],
+  "zhuyin": {
+    "掉": "ㄉㄧㄠˋ"
+  },
+  "title": "掉",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L088",
+    "L089",
+    "L090",
+    "L091",
+    "L092"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "掉",
+      "盒",
+      "子",
+      "桌",
+      "把",
+      "放"
+    ],
+    "targetCharMinimumCount": {
+      "掉": 3
+    },
+    "recentTargetMinimumCounts": {
+      "盒": 2,
+      "子": 2,
+      "桌": 2,
+      "把": 1,
+      "放": 1
+    },
+    "disallowedChars": [
+      "用",
+      "張",
+      "從",
+      "能",
+      "進",
+      "壞"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L093 課程，目標新字是「掉」，注音為台灣注音 ㄉㄧㄠˋ，不使用漢語拼音。只能使用已學字與 L093 新字「掉」，並額外依平行準備納入 provisional learned chars：放、把、桌、子、盒。不要使用未學字：用、張、從、能、進、壞。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。choose-pronunciation 錯誤選項必須整句生成，不可拼接。L093 依賴 L088-L092，且 R003/R004 review modules 必須已依 SOP 插入 L090 後；目前 latest origin/main 實際 production 只到 L086，因此此課只做 branch-only 平行準備，不合併 production JSON。安全製圖提醒：第 2 句是水邊危險安全教育情境，可以呈現孩子掉到水裡且大人在旁立即救援或焦急靠近，但不得恐怖、血腥、創傷或呈現溺斃。注意：老師提供的覆蓋統計中「盒」標為 3 次，但五句實際為 2 次，仍達前 3 課複習目標。",
+  "approvedSentences": [
+    {
+      "text": "我的書掉到桌下了",
+      "spokenText": "我的書掉到桌下了",
+      "focusChar": "掉",
+      "reason": "核准句 1；練習「掉」，並複習「桌」。",
+      "imageNotes": "一本書掉到桌子下面，孩子蹲下或指著桌下找書；書本不能有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "有小孩子掉到水裡了",
+      "spokenText": "有小孩子掉到水裡了",
+      "focusChar": "掉",
+      "reason": "核准句 2；練習「掉」，並複習「子」。",
+      "imageNotes": "水邊危險安全教育情境，一個小孩子不慎掉到水裡，大人在岸邊立刻伸手救援或焦急靠近，清楚表現危險與需要注意安全。不要畫血腥、恐怖、創傷或溺斃；不要有文字、數字、招牌。"
+    },
+    {
+      "text": "誰把盒子放在桌上",
+      "spokenText": "誰把盒子放在桌上",
+      "focusChar": "盒",
+      "reason": "核准句 3；複習「盒、子、桌、把、放」。",
+      "imageNotes": "桌上有一個盒子，孩子疑惑地看著或指著盒子，像是在問誰把盒子放在桌上；盒子不能有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我的筆盒掉了，找不到了",
+      "spokenText": "我的筆盒掉了找不到了",
+      "focusChar": "掉",
+      "reason": "核准句 4；練習「掉」，並複習「盒」。",
+      "imageNotes": "孩子在桌邊或書包旁找不到筆盒，地上或角落可暗示筆盒掉到看不見的位置；孩子表情困惑。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "他一個人走掉了",
+      "spokenText": "他一個人走掉了",
+      "focusChar": "掉",
+      "reason": "核准句 5；練習「走掉了」中的「掉」。",
+      "imageNotes": "一個孩子獨自往遠處走開，其他人留在原地看著，表現「一個人走掉了」；情緒可以是輕微擔心或疑惑，不要恐怖。不要有文字、數字、招牌。"
+    }
+  ]
+}
