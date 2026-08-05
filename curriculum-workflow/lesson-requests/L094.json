@@ -1,0 +1,92 @@
+{
+  "id": "L094",
+  "order": 94,
+  "newChars": [
+    "壞"
+  ],
+  "zhuyin": {
+    "壞": "ㄏㄨㄞˋ"
+  },
+  "title": "壞",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L089",
+    "L090",
+    "L091",
+    "L092",
+    "L093"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "盒",
+      "掉"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "壞",
+      "掉",
+      "盒",
+      "子",
+      "桌",
+      "把"
+    ],
+    "targetCharMinimumCount": {
+      "壞": 3
+    },
+    "recentTargetMinimumCounts": {
+      "掉": 2,
+      "盒": 2,
+      "子": 2,
+      "桌": 1,
+      "把": 1
+    },
+    "disallowedChars": [
+      "用",
+      "張",
+      "從",
+      "能",
+      "進",
+      "弄"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L094 課程，目標新字是「壞」，注音為台灣注音 ㄏㄨㄞˋ，不使用漢語拼音。老師已核准五句句子。只能使用已學字與 L094 新字「壞」；因 L092「盒」與 L093「掉」尚未確認存在於 latest origin/main，本課只可把「盒」「掉」視為明確註冊的 provisional learned chars 做平行準備。不要使用未學字：用、張、從、能、進、弄。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。L094 依賴 L089「把」、L090「桌」、L091「子」、L092「盒」、L093「掉」，且 R003/R004 review modules 必須已依 SOP 插入 L090 後；目前 latest origin/main 已包含 L089-L091 與 R003/R004，但尚未包含 L092/L093，因此此課只做 branch-only 平行準備，不合併 production JSON。",
+  "approvedSentences": [
+    {
+      "text": "他是好人，不是壞人",
+      "spokenText": "他是好人不是壞人",
+      "focusChar": "壞",
+      "reason": "畫面：一位友善的人正在幫助孩子，例如把書或紙愛心交給孩子；孩子表情安心，呈現「好人，不是壞人」。不要做恐怖壞人形象。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "這個桌子壞掉了",
+      "spokenText": "這個桌子壞掉了",
+      "focusChar": "壞",
+      "reason": "畫面：一張小桌子壞掉了，例如桌腳歪斜或桌面裂開，孩子站在旁邊看著，清楚但不危險。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "把壞掉的盒子拿走",
+      "spokenText": "把壞掉的盒子拿走",
+      "focusChar": "壞",
+      "reason": "畫面：孩子或大人把一個壞掉的盒子拿走，盒子破損明顯但安全，動作清楚。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我把筆盒放到書包裡",
+      "spokenText": "我把筆盒放到書包裡",
+      "focusChar": "盒",
+      "reason": "畫面：孩子把筆盒放進書包裡，筆盒和書包清楚可見，筆盒上不要有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "他開門走掉了",
+      "spokenText": "他開門走掉了",
+      "focusChar": "掉",
+      "reason": "畫面：一個孩子或男孩開門後走出去，門打開，人物正離開，表現「走掉了」。不要有文字、數字、招牌。"
+    }
+  ]
+}
