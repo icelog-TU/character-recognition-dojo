@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L096 | 用 | claimed | Codex / L096 production assets thread | `codex/l096-yong-assets` / pending | L091:子, L092:盒, L093:掉, L094:壞, L095:眼 | 壞 眼 | `curriculum-workflow/lesson-requests/L096.json`; `curriculum-workflow/generated/L096-generation-packet.md` | `curriculum-workflow/audio-inbox/L096/`; `public/assets/lessons/L096/` | Parallel prep only until L094/L095 are merged into latest `origin/main`; do not merge production JSON yet. Teacher-approved target is 用 ㄩㄥˋ. |
+| L096 | 用 | request-ready | Codex / L096 production assets thread | `codex/l096-yong-assets` / `bf838bd` | L091:子, L092:盒, L093:掉, L094:壞, L095:眼 | 壞 眼 | `curriculum-workflow/lesson-requests/L096.json`; `curriculum-workflow/generated/L096-generation-packet.md` | `curriculum-workflow/audio-inbox/L096/`; `public/assets/lessons/L096/` | Request and packet prepared branch-only; blocked until L094/L095 are merged into latest `origin/main`; do not merge production JSON yet. Teacher-approved target is 用 ㄩㄥˋ. |
 
 ## Status Values
 
