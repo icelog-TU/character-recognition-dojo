@@ -275,6 +275,6 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L076, and L076 introduces `校`.
+As of latest `origin/main`, production curriculum is complete through L077, and L077 introduces `問`.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L076 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L077 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
