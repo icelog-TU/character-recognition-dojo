@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L094 | 壞 | request-ready | Codex / L094 production assets thread | `codex/l094-huai-assets` / `3059e4a` | L089:把, L090:桌, L091:子, L092:盒, L093:掉 | 把 桌 子 盒 掉 | `curriculum-workflow/lesson-requests/L094.json`; `curriculum-workflow/generated/L094-generation-packet.md` | `curriculum-workflow/audio-inbox/L094/`; `public/assets/lessons/L094/` | Request and packet prepared branch-only; blocked until L092/L093 are merged into latest `origin/main`; do not merge production JSON yet. Teacher-approved target is 壞 ㄏㄨㄞˋ. |
+| L094 | 壞 | ready-blocked-by-dependency | Codex / L094 production assets thread | `codex/l094-huai-assets` / `5e7bb5d` | L089:把, L090:桌, L091:子, L092:盒, L093:掉 | 把 桌 子 盒 掉 | `curriculum-workflow/lesson-requests/L094.json`; `curriculum-workflow/generated/L094-generation-packet.md` | `curriculum-workflow/audio-inbox/L094/`; `public/assets/lessons/L094/` | Assets prepared branch-only; blocked until L092/L093 are merged into latest `origin/main`; do not merge production JSON yet. R003/R004 are already present after L090 on latest `origin/main`. |
 
 ## Status Values
 
