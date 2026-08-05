@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L095 | 眼 | claimed | Codex / L095 production assets thread | `codex/l095-yan-assets` / pending | L093:掉, L094:壞 | 掉 壞 | `curriculum-workflow/lesson-requests/L095.json`; `curriculum-workflow/generated/L095-generation-packet.md` | `curriculum-workflow/audio-inbox/L095/`; `public/assets/lessons/L095/` | Parallel prep only until L093 and L094 are merged into latest `origin/main`; do not merge production JSON yet. Latest `origin/main` already contains L090-L092 and R003/R004. |
 
 ## Status Values
 
