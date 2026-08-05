@@ -1,0 +1,84 @@
+{
+  "id": "L084",
+  "order": 84,
+  "newChars": [
+    "本"
+  ],
+  "zhuyin": {
+    "本": "ㄅㄣˇ"
+  },
+  "title": "本",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L079",
+    "L080",
+    "L081",
+    "L082",
+    "L083"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "校",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "本",
+      "那",
+      "借",
+      "筆",
+      "帶",
+      "同"
+    ],
+    "targetCharMinimumCount": {
+      "本": 3
+    },
+    "recentTargetMinimumCounts": {
+      "那": 3,
+      "借": 2,
+      "筆": 2,
+      "帶": 3,
+      "同": 1
+    }
+  },
+  "teacherNotes": "認字練功房 L084，目標新字：本，注音：ㄅㄣˇ。老師已核准五句句子，台灣用字與台灣注音，不使用漢語拼音。spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤或注音。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。單字發音必須是獨立 AI 生成的單字音檔，不可從句子裁切。因最新 origin/main 尚未合併到 L083，L084 只做平行準備，不可把 L084 留在 production JSON；合併前需重新依最新 main 審核 allowedChars、Stage 4、圖檔、音檔與 alignment。",
+  "approvedSentences": [
+    {
+      "text": "那本書是借來的",
+      "spokenText": "那本書是借來的",
+      "focusChar": "本",
+      "reason": "孩子拿著或看著一本借來的書，書本清楚可見但不能有文字；可以放在學校閱讀角或家裡。"
+    },
+    {
+      "text": "我要帶三本書和筆去學校",
+      "spokenText": "我要帶三本書和筆去學校",
+      "focusChar": "本",
+      "reason": "孩子準備去學校，書包旁有三本書和一支筆，孩子正在把書和筆放進書包或拿著它們。"
+    },
+    {
+      "text": "我和你帶到同樣的書",
+      "spokenText": "我和你帶到同樣的書",
+      "focusChar": "同",
+      "reason": "固定小女孩和固定小男孩各自帶著外觀相同的書，兩人發現書一樣，表情驚喜。"
+    },
+    {
+      "text": "那人沒帶筆，來和我借",
+      "spokenText": "那人沒帶筆來和我借",
+      "focusChar": "借",
+      "reason": "一個人或同學沒有帶筆，走來向孩子借筆；孩子手上有筆準備借給他。"
+    },
+    {
+      "text": "那裡本來有花，後來沒有了",
+      "spokenText": "那裡本來有花後來沒有了",
+      "focusChar": "本",
+      "reason": "同一個地方用清楚的前後對比呈現：原本那裡有花，後來花不見了。可以用同一場景中孩子看著空花盆或空地，旁邊暗示原本有花；不要用文字或標籤說明。"
+    }
+  ]
+}
