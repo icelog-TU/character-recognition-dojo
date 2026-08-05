@@ -1,0 +1,80 @@
+{
+  "id": "L085",
+  "order": 85,
+  "newChars": [
+    "給"
+  ],
+  "zhuyin": {
+    "給": "ㄍㄟˇ"
+  },
+  "title": "給",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L080",
+    "L081",
+    "L082",
+    "L083",
+    "L084"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "那",
+      "本"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "給",
+      "本",
+      "那",
+      "借",
+      "筆",
+      "帶"
+    ],
+    "targetCharMinimumCount": {
+      "給": 5
+    },
+    "recentTargetMinimumCounts": {
+      "本": 2,
+      "那": 2,
+      "借": 3,
+      "筆": 1,
+      "帶": 1
+    }
+  },
+  "teacherNotes": "教師核准 L085 新字：給，注音 ㄍㄟˇ。這是認字練功房課程。L085 依賴 L080「帶」、L081「筆」、L082「借」、L083「那」、L084「本」；latest origin/main 目前只到 L082，因此本課只做平行準備，不可合併 production JSON，且不可更新 ledger 或 planner production 輸出。只能使用已學字、provisional L083「那」、provisional L084「本」、與本課新字「給」。不要使用未學字：紙、張、用、把。台灣用字與台灣注音，不使用漢語拼音。spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，不要有文字、數字、注音、招牌或標籤。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字字卡音檔 charAudio 必須直接用 OpenAI TTS 輸入單一目標字「給」生成，不可從句子音檔裁切或抽出。",
+  "approvedSentences": [
+    {
+      "text": "這本書借給你看",
+      "spokenText": "這本書借給你看",
+      "focusChar": "給",
+      "reason": "教師核准句。畫面：孩子把一本書借給另一個孩子看，書本清楚可見但不能有文字，兩人表情友善。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "媽媽給你吃好吃的",
+      "spokenText": "媽媽給你吃好吃的",
+      "focusChar": "給",
+      "reason": "教師核准句。畫面：媽媽把好吃的食物給孩子吃，家庭或餐桌場景，食物看起來可口。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "同學沒帶筆，我借給他",
+      "spokenText": "同學沒帶筆我借給他",
+      "focusChar": "給",
+      "reason": "教師核准句。畫面：同學沒有帶筆，固定小女孩或固定小男孩把自己的筆借給他，學校或教室場景。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "那本書是同學借給我的",
+      "spokenText": "那本書是同學借給我的",
+      "focusChar": "給",
+      "reason": "教師核准句。畫面：孩子拿著一本同學借給他的書，旁邊的同學友善地看著，書本外觀明顯但不能有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "這朵花拿給那個人",
+      "spokenText": "這朵花拿給那個人",
+      "focusChar": "給",
+      "reason": "教師核准句。畫面：孩子拿著一朵花要交給另一個人，兩人之間有清楚的遞送動作。不要有文字、數字、招牌。"
+    }
+  ]
+}
