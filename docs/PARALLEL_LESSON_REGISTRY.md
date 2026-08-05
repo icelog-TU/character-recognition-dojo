@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L077 | 問 | merged | Codex L077 thread | codex/l077-wen-assets / c5e3ebc | L074:路, L075:誰, L076:校 | 校 | `curriculum-workflow/lesson-requests/L077.json`; `curriculum-workflow/generated/L077-generation-packet.md` | `curriculum-workflow/audio-inbox/L077/`; `public/assets/lessons/L077/` | Branch-only production prep is complete on this branch. Do not merge to `main` until latest `origin/main` includes L076 and L077 is rebased/rechecked. |
+| L078 | 找 | claimed | Codex asset lane | codex/l078-zhao-assets | L077:問 branch prep; latest `origin/main` currently only includes L076 | 問 | `curriculum-workflow/lesson-requests/L078.json`; `curriculum-workflow/generated/L078-generation-packet.md` | `curriculum-workflow/audio-inbox/L078/`; `public/assets/lessons/L078/` | Teacher approved five sentences. Prepare branch-only assets, Stage 4 audio, AI alignment, and JSON/ledger/planner updates on top of L077; do not merge to `main` until L077 is merged and L078 is rebased/rechecked. |
 
 ## Status Values
 
