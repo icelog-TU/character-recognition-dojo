@@ -1,0 +1,98 @@
+{
+  "id": "L095",
+  "order": 95,
+  "newChars": [
+    "眼"
+  ],
+  "zhuyin": {
+    "眼": "ㄧㄢˇ"
+  },
+  "title": "眼",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L090",
+    "L091",
+    "L092",
+    "L093",
+    "L094"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "掉",
+      "壞"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "眼",
+      "壞",
+      "掉",
+      "盒",
+      "子",
+      "桌"
+    ],
+    "targetCharMinimumCount": {
+      "眼": 3
+    },
+    "recentTargetMinimumCounts": {
+      "壞": 2,
+      "掉": 2,
+      "盒": 2,
+      "子": 1,
+      "桌": 1
+    },
+    "disallowedChars": [
+      "用",
+      "張",
+      "從",
+      "能",
+      "進",
+      "弄",
+      "睛"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L095 課程，目標新字是「眼」，注音為台灣注音 ㄧㄢˇ，不使用漢語拼音。只能使用已學字與 L095 新字「眼」，並額外依平行準備納入 provisional learned chars：掉、壞。不要使用未學字：用、張、從、能、進、弄、睛。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。choose-pronunciation 錯誤選項必須整句生成，不可拼接。L095 依賴 L090-L094，且 R003/R004 review modules 必須已依 SOP 插入 L090 後；latest origin/main 已包含 L090-L092 與 R003/R004，但尚未包含 L093、L094，因此此課只做 branch-only 平行準備，不合併 production JSON。注意：老師提供的覆蓋統計中「壞」標為 3 次、「盒」標為 3 次，但五句實際各為 2 次，仍達前 3 課複習目標。",
+  "approvedSentences": [
+    {
+      "text": "人在眼前，可是沒看到",
+      "spokenText": "人在眼前可是沒看到",
+      "focusChar": "眼",
+      "reason": "核准句 1；練習「眼前」中的「眼」。",
+      "imageNotes": "孩子正看著別處，前方其實有人站在眼前，但孩子沒有注意到；要表現「人在眼前可是沒看到」。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "大眼看著小眼",
+      "spokenText": "大眼看著小眼",
+      "focusChar": "眼",
+      "reason": "核准句 2；練習兩次「眼」。",
+      "imageNotes": "一位大人和一位小孩面對面，互相看著對方並微笑，溫暖親子互動；不要畫成單獨漂浮的眼部物件。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "媽媽的眼裡有愛心",
+      "spokenText": "媽媽的眼裡有愛心",
+      "focusChar": "眼",
+      "reason": "核准句 3；練習「眼裡」中的「眼」。",
+      "imageNotes": "媽媽用充滿愛的目光看著孩子，可用小愛心元素表現愛意，但不要有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "桌上的盒子壞掉了",
+      "spokenText": "桌上的盒子壞掉了",
+      "focusChar": "盒",
+      "reason": "核准句 4；複習「桌、盒、子、壞、掉」。",
+      "imageNotes": "桌上有一個壞掉的盒子，盒子破損清楚但安全，孩子在旁邊看著。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "把壞掉的盒子拿走",
+      "spokenText": "把壞掉的盒子拿走",
+      "focusChar": "壞",
+      "reason": "核准句 5；複習「把、壞、掉、盒、子、拿、走」。",
+      "imageNotes": "孩子或大人把壞掉的盒子拿走，盒子破損明顯，動作清楚。不要有文字、數字、招牌。"
+    }
+  ]
+}
