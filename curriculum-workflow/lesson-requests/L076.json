@@ -1,0 +1,73 @@
+{
+  "id": "L076",
+  "order": 76,
+  "newChars": [
+    "校"
+  ],
+  "zhuyin": {
+    "校": "ㄒㄧㄠˋ"
+  },
+  "title": "校",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L074",
+    "L075"
+  ],
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "校",
+      "誰",
+      "路",
+      "學",
+      "出",
+      "畫"
+    ],
+    "targetCharMinimumCount": {
+      "校": 3
+    },
+    "recentTargetMinimumCounts": {
+      "誰": 2,
+      "路": 2,
+      "學": 2,
+      "出": 1,
+      "畫": 1
+    }
+  },
+  "teacherNotes": "教師核准 L076 新字：校，注音 ㄒㄧㄠˋ。教師核准五句：誰和你一起走路去學校？；在校門前畫畫的人是誰？；去山上的學校，要走山路。；我要做出好看的花朵；媽媽拿著書坐在門前。台灣用字：使用「著」，不要用「着」。spokenText 等於 text 去掉標點。L076 依賴 L074「路」與 L075「誰」已合併到 latest main 後才可進 production JSON；目前 latest main 已到 L075。只能使用已學字加上本課新字「校」。圖片使用 L058 風格參考。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。",
+  "approvedSentences": [
+    {
+      "text": "誰和你一起走路去學校？",
+      "spokenText": "誰和你一起走路去學校",
+      "focusChar": "校",
+      "reason": "教師核准句。練習本課新字「校」，並複習「誰」、「路」、「學」。畫面是固定小女孩和固定小男孩一起走路去學校。"
+    },
+    {
+      "text": "在校門前畫畫的人是誰？",
+      "spokenText": "在校門前畫畫的人是誰",
+      "focusChar": "校",
+      "reason": "教師核准句。練習「校門」，複習「畫」和「誰」，畫面是校門前畫畫的人。"
+    },
+    {
+      "text": "去山上的學校，要走山路。",
+      "spokenText": "去山上的學校要走山路",
+      "focusChar": "校",
+      "reason": "教師核准句。練習「學校」，複習「路」、「學」、「去」、「山上」。畫面是安全山路通往山上學校。"
+    },
+    {
+      "text": "我要做出好看的花朵",
+      "spokenText": "我要做出好看的花朵",
+      "focusChar": "出",
+      "reason": "教師核准句。複習「出」、「花」、「朵」，畫面是孩子做出好看的花朵。"
+    },
+    {
+      "text": "媽媽拿著書坐在門前。",
+      "spokenText": "媽媽拿著書坐在門前",
+      "focusChar": "著",
+      "reason": "教師核准句。複習「著」、「坐」、「門前」與固定媽媽角色，畫面是媽媽拿著書坐在家門前。"
+    }
+  ]
+}

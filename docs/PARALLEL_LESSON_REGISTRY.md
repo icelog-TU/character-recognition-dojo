@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L076 | 校 | claimed | Codex asset lane | codex/l076-xiao-assets | L074:路 and L075:誰 merged in latest main | none | `curriculum-workflow/lesson-requests/L076.json`; `curriculum-workflow/generated/L076-generation-packet.md` | `curriculum-workflow/audio-inbox/L076/`; `public/assets/lessons/L076/` | Teacher approved five sentences. This branch prepares production assets, Stage 4 audio, AI alignment, and branch-ready JSON/ledger/planner updates; do not merge to main from this asset lane. |
 
 ## Status Values
 
