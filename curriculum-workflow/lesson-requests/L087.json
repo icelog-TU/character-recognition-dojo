@@ -1,0 +1,79 @@
+{
+  "id": "L087",
+  "order": 87,
+  "newChars": [
+    "心"
+  ],
+  "zhuyin": {
+    "心": "ㄒㄧㄣ"
+  },
+  "title": "心",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L082",
+    "L083",
+    "L084",
+    "L085",
+    "L086"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "紙"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "心",
+      "紙",
+      "給",
+      "本",
+      "那",
+      "借"
+    ],
+    "targetCharMinimumCount": {
+      "心": 3
+    },
+    "recentTargetMinimumCounts": {
+      "紙": 2,
+      "給": 2,
+      "本": 2,
+      "那": 1,
+      "借": 1
+    }
+  },
+  "teacherNotes": "教師核准 L087 新字：心，注音 ㄒㄧㄣ。這是認字練功房課程。L087 依賴 L082「借」、L083「那」、L084「本」、L085「給」、L086「紙」；latest origin/main 目前只到 L085，因此本課只做平行準備，不可合併 production JSON，且不可更新 ledger 或 planner production 輸出。只能使用已學字、provisional L086「紙」、與本課新字「心」。不要使用未學字：用、張、把、從。台灣用字與台灣注音，不使用漢語拼音。spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，不要有文字、數字、注音、招牌或標籤。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字字卡音檔 charAudio 必須直接用 OpenAI TTS 輸入單一目標字「心」生成，不可從句子音檔裁切或抽出。",
+  "approvedSentences": [
+    {
+      "text": "這是紙做的愛心",
+      "spokenText": "這是紙做的愛心",
+      "focusChar": "心",
+      "reason": "教師核准句。畫面：孩子拿著或桌上放著一個紙做成的愛心，紙愛心清楚可見，溫暖手作情境。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "同學很好心，借筆給我",
+      "spokenText": "同學很好心借筆給我",
+      "focusChar": "心",
+      "reason": "教師核准句。畫面：學校或教室場景，一位同學友善地將筆借給孩子，孩子表情感謝，呈現「好心借筆」。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我要畫畫，媽媽拿紙給我",
+      "spokenText": "我要畫畫媽媽拿紙給我",
+      "focusChar": "給",
+      "reason": "教師核准句。畫面：孩子準備畫畫，媽媽拿紙給孩子，桌上可有筆和畫畫材料，但不要有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "那裡本來沒有路",
+      "spokenText": "那裡本來沒有路",
+      "focusChar": "那",
+      "reason": "教師核准句。畫面：孩子看著一片原本沒有路的地方，例如草地、山坡或家旁空地，清楚表現「那裡沒有路」的情境，但不要有文字標示。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "找到一本好書，很開心",
+      "spokenText": "找到一本好書很開心",
+      "focusChar": "心",
+      "reason": "教師核准句。畫面：孩子找到一本好看的書，開心地抱著或翻看書，表情很開心。書本不可有文字、數字、標籤。不要有文字、數字、招牌。"
+    }
+  ]
+}
