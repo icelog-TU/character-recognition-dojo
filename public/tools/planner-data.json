@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-05T02:24:46.013Z",
+  "exportedAt": "2026-08-05T03:06:27.204Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -33980,6 +33980,459 @@
               "text": "媽媽拿著書站在門前",
               "correct": false,
               "audioSrc": "/assets/lessons/L076/audio/L076-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L077",
+      "order": 77,
+      "newChars": [
+        "問"
+      ],
+      "zhuyin": {
+        "問": "ㄨㄣˋ"
+      },
+      "charAudio": {
+        "問": "/assets/lessons/L077/audio/char-u554f.m4a"
+      },
+      "title": "問",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L077-S01",
+          "text": "我問他：「你家有多少隻狗？」",
+          "spokenText": "我問他你家有多少隻狗",
+          "focusChar": "問",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, zhuyin, signs, labels, UI, or watermark. Scene: the fixed young girl from L007 asks the fixed sporty boy from L035 a question near a home doorway. Several friendly dogs stand beside the boy or near the doorway, and the boy looks like he is answering. Show the idea of asking and asking how many dogs through eye contact, open questioning gesture, and the visible group of dogs. Do not include speech bubbles or written marks.",
+          "imageSrc": "/assets/lessons/L077/images/L077-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L077/audio/L077-S01.m4a",
+            "durationMs": 5118,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 980
+              },
+              {
+                "charIndex": 2,
+                "startMs": 980,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1840,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2080,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2320,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2700,
+                "endMs": 2950
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2950,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3200,
+                "endMs": 3580
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3580,
+                "endMs": 3840
+              }
+            ]
+          }
+        },
+        {
+          "id": "L077-S02",
+          "text": "我問：「誰要和我一起上學？」",
+          "spokenText": "我問誰要和我一起上學",
+          "focusChar": "問",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, zhuyin, signs, labels, UI, or watermark. Scene: the fixed young girl from L007 wears a school bag and asks a few children who wants to go to school together. They are near a home doorway or on a safe morning school path, ready to leave. Show the asking gesture and the group responding, with a clear school-going mood. Do not include speech bubbles or written marks.",
+          "imageSrc": "/assets/lessons/L077/images/L077-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L077/audio/L077-S02.m4a",
+            "durationMs": 4345,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1180,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1380,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1680,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1920,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2300,
+                "endMs": 2410
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2410,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2520,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2880,
+                "endMs": 3140
+              }
+            ]
+          }
+        },
+        {
+          "id": "L077-S03",
+          "text": "校門前有人在問路",
+          "spokenText": "校門前有人在問路",
+          "focusChar": "問",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, zhuyin, signs, labels, UI, or watermark. Scene: in front of a school gate with no readable signage, one person asks another person for directions. A safe road and a clear school entrance are visible; use body language such as one person pointing along the road and the other listening. Do not include arrows with text, signs, numbers, or labels.",
+          "imageSrc": "/assets/lessons/L077/images/L077-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L077/audio/L077-S03.m4a",
+            "durationMs": 3667,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1470
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1470,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2320,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2540,
+                "endMs": 2700
+              }
+            ]
+          }
+        },
+        {
+          "id": "L077-S04",
+          "text": "我要走山路去山上的學校",
+          "spokenText": "我要走山路去山上的學校",
+          "focusChar": "校",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, zhuyin, signs, labels, UI, or watermark. Scene: the fixed young girl from L007 walks on a safe winding mountain road toward a small school building on the mountain. Clearly show the mountain road, uphill setting, and school building, without any readable school sign. Keep the child large enough for phone readability and the route visually clear.",
+          "imageSrc": "/assets/lessons/L077/images/L077-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L077/audio/L077-S04.m4a",
+            "durationMs": 4129,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1680,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2320,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2960,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3200,
+                "endMs": 3400
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3400,
+                "endMs": 3620
+              }
+            ]
+          }
+        },
+        {
+          "id": "L077-S05",
+          "text": "我看不出這是誰家的小孩。",
+          "spokenText": "我看不出這是誰家的小孩",
+          "focusChar": "出",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, zhuyin, signs, labels, UI, or watermark. Scene: the fixed young girl from L007 looks thoughtfully at a child she does not recognize, with two or three different family doorways or family groups nearby to make the uncertainty visible. Show a gentle puzzled expression and no written labels, signs, speech bubbles, numbers, or text.",
+          "imageSrc": "/assets/lessons/L077/images/L077-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L077/audio/L077-S05.m4a",
+            "durationMs": 5450,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1100,
+                "endMs": 1410
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1410,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1720,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2460,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2680,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2900,
+                "endMs": 3160
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L077-G01",
+          "type": "find-character",
+          "sentenceId": "L077-S01",
+          "targetChar": "問",
+          "prompt": "小兔子找不到問。請在句子裡找到問，按一下。",
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L077-G02",
+          "type": "teach-character",
+          "sentenceId": "L077-S02",
+          "targetChar": "問",
+          "targetCharIndex": 1,
+          "prompt": "小兔子讀到一個不會念的字。請按住紅框的字教牠念。",
+          "missingIndexes": [
+            1
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L077/audio/L077-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L077/audio/L077-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L077-G03",
+          "type": "missing-character",
+          "sentenceId": "L077-S03",
+          "targetChar": "問",
+          "prompt": "有一個字不見了。請按下面的字卡，把它找回來。",
+          "missingIndexes": [
+            6
+          ],
+          "options": [
+            {
+              "id": "wen",
+              "text": "問",
+              "correct": true
+            },
+            {
+              "id": "xiao",
+              "text": "校",
+              "correct": false
+            },
+            {
+              "id": "lu",
+              "text": "路",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L077-G04",
+          "type": "partial-order",
+          "sentenceId": "L077-S04",
+          "targetChar": "路",
+          "prompt": "請照聽到的順序，把字放回句子裡。",
+          "missingIndexes": [
+            3,
+            4,
+            5
+          ],
+          "options": [
+            {
+              "id": "char-3",
+              "text": "山",
+              "correct": true
+            },
+            {
+              "id": "char-4",
+              "text": "路",
+              "correct": true
+            },
+            {
+              "id": "char-5",
+              "text": "去",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L077-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L077-S05",
+          "targetChar": "出",
+          "prompt": "小兔子請三個朋友念。先按朋友的頭聽，再按念對的朋友旁邊的勾勾。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我看不出這是誰家的小孩",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L077/audio/L077-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "我看不出這是誰家的小狗",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L077/audio/L077-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "我看不出這是誰家的小鳥",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L077/audio/L077-G05-wrong-two.m4a"
             }
           ]
         }

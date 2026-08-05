@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L077 | 問 | claimed | Codex L077 thread | codex/l077-wen-assets / local | L074:路, L075:誰, L076:校 | 校 | `curriculum-workflow/lesson-requests/L077.json`; `curriculum-workflow/generated/L077-generation-packet.md` | `curriculum-workflow/audio-inbox/L077/`; `public/assets/lessons/L077/` | Parallel prep only because latest `origin/main` is not yet at L076. Do not merge L077 production JSON to `main` until dependencies are in latest `origin/main` and rechecked. |
+| L077 | 問 | merged | Codex L077 thread | codex/l077-wen-assets / local | L074:路, L075:誰, L076:校 | 校 | `curriculum-workflow/lesson-requests/L077.json`; `curriculum-workflow/generated/L077-generation-packet.md` | `curriculum-workflow/audio-inbox/L077/`; `public/assets/lessons/L077/` | Branch-only production prep is complete on this branch. Do not merge to `main` until latest `origin/main` includes L076 and L077 is rebased/rechecked. |
 
 ## Status Values
 
