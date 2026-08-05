@@ -1,0 +1,87 @@
+{
+  "id": "L086",
+  "order": 86,
+  "newChars": [
+    "紙"
+  ],
+  "zhuyin": {
+    "紙": "ㄓˇ"
+  },
+  "title": "紙",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L081",
+    "L082",
+    "L083",
+    "L084",
+    "L085"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "那",
+      "本",
+      "給"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "紙",
+      "給",
+      "本",
+      "那",
+      "借",
+      "筆"
+    ],
+    "targetCharMinimumCount": {
+      "紙": 3
+    },
+    "recentTargetMinimumCounts": {
+      "給": 2,
+      "本": 2,
+      "那": 3,
+      "借": 1,
+      "筆": 1
+    },
+    "disallowedChars": [
+      "用",
+      "張",
+      "把",
+      "從"
+    ]
+  },
+  "teacherNotes": "認字練功房 L086，目標新字：紙，注音：ㄓˇ。老師已核准五句句子。只能使用已學字加 L086 新字「紙」，不得使用未學字：用、張、把、從。台灣用字與台灣注音，不使用漢語拼音。spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤或注音。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。單字發音必須是獨立 AI 生成的單字音檔，不可從句子裁切。因最新 origin/main 尚未合併到 L085，L086 只做平行準備，不可把 L086 留在 production JSON；合併前需重新依最新 main 審核 allowedChars、Stage 4、圖檔、音檔與 alignment。",
+  "approvedSentences": [
+    {
+      "text": "這是紙做的花",
+      "spokenText": "這是紙做的花",
+      "focusChar": "紙",
+      "reason": "孩子拿著或桌上放著一朵紙做的花，紙花清楚可見，旁邊可有彩色紙片但不要有文字。"
+    },
+    {
+      "text": "那是紙做的狗",
+      "spokenText": "那是紙做的狗",
+      "focusChar": "紙",
+      "reason": "孩子指著一隻紙做的小狗，紙狗清楚可見，像手作作品。"
+    },
+    {
+      "text": "這本書拿給那個人",
+      "spokenText": "這本書拿給那個人",
+      "focusChar": "給",
+      "reason": "孩子拿著一本書，正要交給另一個人；書本外觀清楚但不能有文字。"
+    },
+    {
+      "text": "我沒帶紙和筆，同學借給我",
+      "spokenText": "我沒帶紙和筆同學借給我",
+      "focusChar": "紙",
+      "reason": "學校或教室場景，一個孩子發現自己沒有帶紙和筆，同學友善地把紙和筆借給他。"
+    },
+    {
+      "text": "那一家本來有狗，後來沒有了",
+      "spokenText": "那一家本來有狗後來沒有了",
+      "focusChar": "本",
+      "reason": "同一戶人家門前，孩子看著家門口，表現原本有狗、後來狗不在了的情境；可用空狗窩或空地暗示狗不見，但不要用文字或標籤。"
+    }
+  ]
+}
