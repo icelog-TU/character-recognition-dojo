@@ -17,6 +17,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 | L089 | 把 | claimed | Codex / L089 production assets thread | `codex/l089-ba-assets` / pending | L087:心, L088:放 | 心 放 | `curriculum-workflow/lesson-requests/L089.json`; `curriculum-workflow/generated/L089-generation-packet.md` | `curriculum-workflow/audio-inbox/L089/`; `public/assets/lessons/L089/` | Parallel prep only until L087 and L088 are merged into latest `origin/main`; do not merge production JSON yet. |
+| L090 | 桌 | claimed | Codex / L090 production assets thread | `codex/l090-zhuo-assets` / pending | L086:紙, L087:心, L088:放, L089:把 | 紙 心 放 把 | `curriculum-workflow/lesson-requests/L090.json`; `curriculum-workflow/generated/L090-generation-packet.md` | `curriculum-workflow/audio-inbox/L090/`; `public/assets/lessons/L090/` | Parallel prep only until L086-L089 are merged into latest `origin/main`; do not merge production JSON yet. After L090 production, R003 and R004 must follow before L091. |
 
 ## Status Values
 
