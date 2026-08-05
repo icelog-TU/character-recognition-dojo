@@ -153,10 +153,12 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L090 | 桌 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌 | 我把筆和紙放在桌上 / 桌上放著很多愛心 / 把書桌上的紙給同學 / 和爸媽一起出門，好開心 / 路邊那是誰的家 | 把放心紙給 | Introduces `桌` through putting paper and a pen on a table, hearts on the table, and giving paper from a desk to a classmate. Reviews recent `把`, `放`, `心`, `紙`, and `給`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | R001 | review module | same as L060 | 一二三，大家一起看鳥飛 / 一個小孩在門前看小鳥 / 女孩和男孩去山下看水 / 大人的手指很大 / 你看，門後也有書 | 一 二 三 人 個 大 的 小 手 有 山 下 水 在 很 家 和 鳥 孩 指 看 女 飛 男 門 前 後 也 | First review module after L060. Introduces no new characters. R001-R002 together cover every new character from L001-L030. Includes reviewed images, AI audio, AI-aligned/manual-reviewed timings, and fixed Stage 4 review games. |
 | R002 | review module | same as L060 | 我在水邊看山上的鳥 / 一隻小鳥飛到高山上 / 人少的山邊比水邊好 / 你和我一起去門前 / 男孩女孩也來看書 | 一 人 的 小 我 山 上 你 水 在 高 和 隻 鳥 孩 看 女 飛 男 門 前 也 | Second review module after L060. Introduces no new characters. Completes the first review pair covering L001-L030. Includes reviewed images, AI audio, AI-aligned timings, and fixed Stage 4 review games. |
+| R003 | review module | same as L090 | 這本書是爸爸借來的 / 媽媽做的愛心很好看 / 他沒看到路邊的人 / 兩隻小狗都在家裡 / 不要把水放在書上 | 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 | Third review module after L090. Introduces no new characters. R003-R004 together cover every new character from L031-L060. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R004 | review module | same as L090 | 這個比那個更好吃 / 男孩女孩一樣可愛 / 那邊人多，這邊人少 / 同學一起走去上學 / 媽媽很會做好吃的 | 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 | Fourth review module after L090. Introduces no new characters. Completes the second review pair covering L031-L060. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L090. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L090. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

@@ -80,7 +80,9 @@ let skipped = 0;
 let missing = 0;
 let removed = 0;
 
-for (const lesson of curriculum.lessons ?? []) {
+const units = [...(curriculum.lessons ?? []), ...(curriculum.reviewLessons ?? [])];
+
+for (const lesson of units) {
   if (lessonFilter && lesson.id !== lessonFilter) continue;
 
   for (const sentence of lesson.sentences ?? []) {

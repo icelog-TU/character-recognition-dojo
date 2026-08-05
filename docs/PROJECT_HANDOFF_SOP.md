@@ -26,7 +26,7 @@
 - App name: `認字練功房`
 - Current reviewed lessons: L001-L090
 - L090 introduces `桌`.
-- Production review modules: R001-R002 after L060, covering L001-L030.
+- Production review modules: R001-R004 after L090, covering L001-L060.
 - L001-L005 use Stage 1-3.
 - L006-L090 include Stage 4 fixed sentence games.
 - Review modules do not occupy `L###` lesson numbers. After L060, the next new-character lesson is L061.
