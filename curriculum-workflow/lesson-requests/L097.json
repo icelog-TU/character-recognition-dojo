@@ -1,0 +1,92 @@
+{
+  "id": "L097",
+  "order": 97,
+  "newChars": [
+    "鏡"
+  ],
+  "zhuyin": {
+    "鏡": "ㄐㄧㄥˋ"
+  },
+  "title": "鏡",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L092",
+    "L093",
+    "L094",
+    "L095",
+    "L096"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "眼",
+      "用"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "鏡",
+      "用",
+      "眼",
+      "壞",
+      "掉",
+      "盒"
+    ],
+    "targetCharMinimumCount": {
+      "鏡": 3
+    },
+    "recentTargetMinimumCounts": {
+      "用": 2,
+      "眼": 2,
+      "壞": 2,
+      "掉": 1,
+      "盒": 1
+    },
+    "disallowedChars": [
+      "張",
+      "從",
+      "能",
+      "進",
+      "弄",
+      "睛"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L097 課程，目標新字是「鏡」，注音為台灣注音 ㄐㄧㄥˋ，不使用漢語拼音。老師已核准五句句子。只能使用已學字與 L097 新字「鏡」；latest origin/main 目前已包含 L092「盒」、L093「掉」、L094「壞」與 R003/R004，但尚未包含 L095「眼」和 L096「用」，因此本課只可把「眼」「用」視為明確註冊的 provisional learned chars 做平行準備，不合併 production JSON。不要使用未學字：張、從、能、進、弄、睛。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。Stage 4 choose-pronunciation 的錯誤選項音檔必須用完整錯誤句子獨立生成，不可拼接或裁切。",
+  "approvedSentences": [
+    {
+      "text": "爸爸的眼鏡壞掉了",
+      "spokenText": "爸爸的眼鏡壞掉了",
+      "focusChar": "鏡",
+      "reason": "畫面：爸爸的眼鏡壞掉了，爸爸拿著或戴著破損但安全的眼鏡，鏡框或鏡片損壞清楚，孩子在旁邊看著。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我把鏡子放在盒子裡",
+      "spokenText": "我把鏡子放在盒子裡",
+      "focusChar": "鏡",
+      "reason": "畫面：孩子把一面鏡子放在盒子裡，鏡子和盒子都清楚可見，鏡子安全不破裂。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "那個人用放大鏡看書",
+      "spokenText": "那個人用放大鏡看書",
+      "focusChar": "鏡",
+      "reason": "畫面：那個人拿著放大鏡看書，放大鏡和書本清楚可見，書頁不能有任何文字或數字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "小孩看不出好人和壞人",
+      "spokenText": "小孩看不出好人和壞人",
+      "focusChar": "壞",
+      "reason": "畫面：小孩正在看一本圖畫書，書裡的圖畫呈現一個好人和一個壞人，但小孩看不懂、分不出誰是好人誰是壞人。書本裡可以有圖像角色，但不能出現任何文字、數字或標籤。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "沒有眼鏡可用，我看不到",
+      "spokenText": "沒有眼鏡可用我看不到",
+      "focusChar": "鏡",
+      "reason": "畫面：這個「我」不是固定小女孩，可以畫成需要眼鏡的大人或另一個孩子；他或她沒有眼鏡，所以看不到或看不清楚。不要有文字、數字、招牌。"
+    }
+  ]
+}
