@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-05T05:53:52.573Z",
+  "exportedAt": "2026-08-05T06:36:14.343Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -36546,6 +36546,440 @@
               "text": "他沒帶筆要我借他",
               "correct": false,
               "audioSrc": "/assets/lessons/L082/audio/L082-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L083",
+      "order": 83,
+      "newChars": [
+        "那"
+      ],
+      "zhuyin": {
+        "那": "ㄋㄚˋ"
+      },
+      "charAudio": {
+        "那": "/assets/lessons/L083/audio/char-u90a3.m4a"
+      },
+      "title": "那",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L083-S01",
+          "text": "那個同學帶我去借書",
+          "displayLines": [
+            "那個同學",
+            "帶我去借書"
+          ],
+          "spokenText": "那個同學帶我去借書",
+          "focusChar": "那",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school, classroom, library, and home environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. In a school library or reading corner, one classmate leads the fixed child toward bookshelves to borrow books. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. The classmate gestures kindly and walks with her as they move toward shelves or hold books. Make it clear that that classmate is taking the child to borrow books, without written marks.",
+          "imageSrc": "/assets/lessons/L083/images/L083-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L083/audio/L083-S01.m4a",
+            "durationMs": 3851,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 400
+              },
+              {
+                "charIndex": 2,
+                "startMs": 400,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1240,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1660,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2220,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2540,
+                "endMs": 2780
+              }
+            ]
+          }
+        },
+        {
+          "id": "L083-S02",
+          "text": "他沒帶筆，我的筆借他",
+          "displayLines": [
+            "他沒帶筆，",
+            "我的筆借他"
+          ],
+          "spokenText": "他沒帶筆我的筆借他",
+          "focusChar": "借",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school, classroom, library, and home environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. In a classroom, one child has no pen and looks worried at an empty desktop. Another child kindly lends their own simple pen to him, hand-to-hand, with a friendly expression. Make the borrowing/lending action clear. No notebooks or objects should show any written text.",
+          "imageSrc": "/assets/lessons/L083/images/L083-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L083/audio/L083-S02.m4a",
+            "durationMs": 3787,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1780,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1850,
+                "endMs": 1970
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1920,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2620,
+                "endMs": 2940
+              }
+            ]
+          }
+        },
+        {
+          "id": "L083-S03",
+          "text": "這個好吃，那個更好吃",
+          "displayLines": [
+            "這個好吃，",
+            "那個更好吃"
+          ],
+          "spokenText": "這個好吃那個更好吃",
+          "focusChar": "那",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school, classroom, library, and home environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. At a child-friendly table, two plates or bowls of simple snacks sit apart from each other. A child compares the nearer food and the farther food with gestures and facial expression, clearly showing that the farther one tastes even better. Use contrast in expression and pointing to show this one versus that one, without labels or text.",
+          "imageSrc": "/assets/lessons/L083/images/L083-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L083/audio/L083-S03.m4a",
+            "durationMs": 4279,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 210
+              },
+              {
+                "charIndex": 1,
+                "startMs": 210,
+                "endMs": 420
+              },
+              {
+                "charIndex": 2,
+                "startMs": 420,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2060,
+                "endMs": 2150
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2150,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 3080
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3080,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3380,
+                "endMs": 3680
+              }
+            ]
+          }
+        },
+        {
+          "id": "L083-S04",
+          "text": "我找不到書包",
+          "displayLines": [
+            "我找不到",
+            "書包"
+          ],
+          "spokenText": "我找不到書包",
+          "focusChar": "找",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school, classroom, library, and home environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. She is at school or near the home entrance looking confused because she cannot find her backpack. Nearby are a chair, table, or books without text, but her backpack is missing from the expected place. Make searching for a missing backpack clear.",
+          "imageSrc": "/assets/lessons/L083/images/L083-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L083/audio/L083-S04.m4a",
+            "durationMs": 2577,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 840
+              },
+              {
+                "charIndex": 2,
+                "startMs": 840,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1280,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1640,
+                "endMs": 1860
+              }
+            ]
+          }
+        },
+        {
+          "id": "L083-S05",
+          "text": "我問媽媽：「那個人是誰？」",
+          "displayLines": [
+            "我問媽媽：",
+            "「那個人",
+            "是誰？」"
+          ],
+          "spokenText": "我問媽媽那個人是誰",
+          "focusChar": "那",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school, classroom, library, and home environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. The girl stands beside her mother and points toward a person in the distance. She is asking her mother who that person is; the mother responds gently and looks in the same direction. Make the far-away person and the asking gesture clear without speech bubbles or text.",
+          "imageSrc": "/assets/lessons/L083/images/L083-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L083/audio/L083-S05.m4a",
+            "durationMs": 4127,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1900,
+                "endMs": 2050
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2050,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2660,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3100,
+                "endMs": 3380
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L083-G01",
+          "type": "find-character",
+          "sentenceId": "L083-S01",
+          "targetChar": "那",
+          "prompt": "小兔子找不到那。請在句子裡找到那，按一下。",
+          "missingIndexes": [
+            0
+          ]
+        },
+        {
+          "id": "L083-G02",
+          "type": "teach-character",
+          "sentenceId": "L083-S03",
+          "targetChar": "那",
+          "targetCharIndex": 4,
+          "prompt": "小兔子讀到一個不會念的字。請按住紅框的字教牠念。",
+          "missingIndexes": [
+            4
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L083/audio/L083-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L083/audio/L083-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L083-G03",
+          "type": "missing-character",
+          "sentenceId": "L083-S05",
+          "targetChar": "那",
+          "prompt": "有一個字不見了。請按下面的字卡，把它找回來。",
+          "missingIndexes": [
+            4
+          ],
+          "options": [
+            {
+              "id": "na",
+              "text": "那",
+              "correct": true
+            },
+            {
+              "id": "jie",
+              "text": "借",
+              "correct": false
+            },
+            {
+              "id": "dai",
+              "text": "帶",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L083-G04",
+          "type": "partial-order",
+          "sentenceId": "L083-S04",
+          "targetChar": "找",
+          "prompt": "請照聽到的順序，把字放回句子裡。",
+          "missingIndexes": [
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "zhao",
+              "text": "找",
+              "correct": true
+            },
+            {
+              "id": "bu",
+              "text": "不",
+              "correct": true
+            },
+            {
+              "id": "dao",
+              "text": "到",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L083-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L083-S02",
+          "targetChar": "借",
+          "prompt": "小兔子請三個朋友念。先按朋友的頭聽，再按念對的朋友旁邊的勾勾。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "他沒帶筆我的筆借他",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L083/audio/L083-S02.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "他沒帶筆你的筆借他",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L083/audio/L083-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "他沒帶筆我的筆帶他",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L083/audio/L083-G05-wrong-two.m4a"
             }
           ]
         }

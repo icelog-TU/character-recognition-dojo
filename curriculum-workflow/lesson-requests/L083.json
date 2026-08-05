@@ -1,0 +1,80 @@
+{
+  "id": "L083",
+  "order": 83,
+  "newChars": [
+    "那"
+  ],
+  "zhuyin": {
+    "那": "ㄋㄚˋ"
+  },
+  "title": "那",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L078",
+    "L079",
+    "L080",
+    "L081",
+    "L082"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "筆",
+      "借"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "那",
+      "借",
+      "筆",
+      "帶",
+      "同",
+      "找"
+    ],
+    "targetCharMinimumCount": {
+      "那": 3
+    },
+    "recentTargetMinimumCounts": {
+      "借": 2,
+      "筆": 2,
+      "帶": 2,
+      "同": 1,
+      "找": 1
+    }
+  },
+  "teacherNotes": "認字練功房 L083 課程。目標新字是「那」，注音「ㄋㄚˋ」。只能使用已學字，加上本課新字「那」；因 latest origin/main 尚未到 L082，本課只可把 L081「筆」與 L082「借」視為明確註冊的 provisional learned chars 做平行準備。台灣用字與台灣注音，不要漢語拼音。spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，不要有文字、數字、注音、招牌或標籤。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。",
+  "approvedSentences": [
+    {
+      "text": "那個同學帶我去借書",
+      "spokenText": "那個同學帶我去借書",
+      "focusChar": "那",
+      "reason": "學校圖書館或閱讀區，一位同學帶著固定孩子去借書，呈現「那個同學」和「借書」。"
+    },
+    {
+      "text": "他沒帶筆，我的筆借他",
+      "spokenText": "他沒帶筆我的筆借他",
+      "focusChar": "借",
+      "reason": "教室場景中，一個孩子沒有筆，另一個孩子友善地把自己的筆借給他。"
+    },
+    {
+      "text": "這個好吃，那個更好吃",
+      "spokenText": "這個好吃那個更好吃",
+      "focusChar": "那",
+      "reason": "桌上有兩份食物，孩子用表情和動作比較這個與那個，其中一個更好吃。"
+    },
+    {
+      "text": "我找不到書包",
+      "spokenText": "我找不到書包",
+      "focusChar": "找",
+      "reason": "固定孩子在學校或家門前找不到書包，複習「找」與「書包」。"
+    },
+    {
+      "text": "我問媽媽：「那個人是誰？」",
+      "spokenText": "我問媽媽那個人是誰",
+      "focusChar": "那",
+      "reason": "固定孩子指向遠處一個人，問媽媽那個人是誰，呈現遠指用法「那個」。"
+    }
+  ]
+}
