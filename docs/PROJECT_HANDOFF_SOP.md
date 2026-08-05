@@ -24,11 +24,11 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L090
-- L090 introduces `桌`.
+- Current reviewed lessons: L001-L091
+- L091 introduces `子`.
 - Production review modules: R001-R004 after L090, covering L001-L060.
 - L001-L005 use Stage 1-3.
-- L006-L090 include Stage 4 fixed sentence games.
+- L006-L091 include Stage 4 fixed sentence games.
 - Review modules do not occupy `L###` lesson numbers. After L060, the next new-character lesson is L061.
 
 Always verify current state with `git fetch origin`, `npm run curriculum:audit-state`, and `docs/CURRICULUM_LEDGER.md`; do not trust an older chat transcript as current progress.
