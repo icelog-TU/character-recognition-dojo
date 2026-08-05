@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L079 | 同 | merged | Codex L079 thread | codex/l079-tong-assets / local | L074:路, L075:誰, L076:校, L077:問, L078:找 | 找 | `curriculum-workflow/lesson-requests/L079.json`; `curriculum-workflow/generated/L079-generation-packet.md` | `curriculum-workflow/audio-inbox/L079/`; `public/assets/lessons/L079/` | Branch-only local production prep is complete; do not merge L079 to `main` until latest `origin/main` includes L078 and L079 is rebased and rechecked. |
+| L079 | 同 | merged | Codex L079 thread | codex/l079-tong-assets / 65df96a | L074:路, L075:誰, L076:校, L077:問, L078:找 | 找 | `curriculum-workflow/lesson-requests/L079.json`; `curriculum-workflow/generated/L079-generation-packet.md` | `curriculum-workflow/audio-inbox/L079/`; `public/assets/lessons/L079/` | Branch-only local production prep is complete; do not merge L079 to `main` until latest `origin/main` includes L078 and L079 is rebased and rechecked. |
 
 ## Status Values
 
