@@ -277,6 +277,6 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L089, and L089 introduces `把`.
+As of latest `origin/main`, production curriculum is complete through L090, and L090 introduces `桌`.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L089 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L090 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
