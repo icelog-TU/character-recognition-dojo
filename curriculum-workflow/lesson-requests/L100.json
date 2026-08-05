@@ -1,0 +1,93 @@
+{
+  "id": "L100",
+  "order": 100,
+  "newChars": [
+    "紅"
+  ],
+  "zhuyin": {
+    "紅": "ㄏㄨㄥˊ"
+  },
+  "title": "紅",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L095",
+    "L096",
+    "L097",
+    "L098",
+    "L099"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "鼻",
+      "臉"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "紅",
+      "臉",
+      "鼻",
+      "鏡",
+      "用",
+      "眼"
+    ],
+    "targetCharMinimumCount": {
+      "紅": 3
+    },
+    "recentTargetMinimumCounts": {
+      "臉": 2,
+      "鼻": 2,
+      "鏡": 2,
+      "用": 1,
+      "眼": 1
+    },
+    "disallowedChars": [
+      "張",
+      "從",
+      "能",
+      "進",
+      "弄",
+      "睛",
+      "笑"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L100 課程，目標新字是「紅」，注音為台灣注音 ㄏㄨㄥˊ，不使用漢語拼音。老師已核准五句句子。只能使用已學字與 L100 新字「紅」；因 L098「鼻」與 L099「臉」尚未存在於 latest origin/main，本課只可把「鼻」「臉」視為老師明確指定的 provisional learned chars 做平行準備。不要使用未學字：張、從、能、進、弄、睛、笑。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。L100 依賴 L095「眼」、L096「用」、L097「鏡」、L098「鼻」、L099「臉」，且 R003/R004 review modules 必須已依 SOP 插入 L090 後；目前 latest origin/main 已包含 L095-L097 與 R003/R004，但尚未包含 L098/L099，因此此課只做 branch-only 平行準備，不合併 production JSON。第 1 句製圖必須畫友善的小丑或表演者臉上戴著大紅鼻子道具，不是真人鼻子異常。第 2 句製圖必須畫紅鼻子道具掉了，不是真人鼻子掉落。第 5 句製圖是孩子用紅色筆在紙上畫眼鏡，紙上只能有圖像眼鏡，不能有文字、數字或標籤。",
+  "approvedSentences": [
+    {
+      "text": "他臉上有個大紅鼻子",
+      "spokenText": "他臉上有個大紅鼻子",
+      "focusChar": "紅",
+      "reason": "畫面：友善的小丑或表演者臉上戴著一個大紅鼻子，孩子在旁邊看著，畫面溫和不恐怖。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "他的紅鼻子掉了",
+      "spokenText": "他的紅鼻子掉了",
+      "focusChar": "紅",
+      "reason": "畫面：小丑或表演者的紅鼻子道具掉在地上，他正摸著臉或看著掉下的紅鼻子，表情驚訝但可愛；不要畫真人鼻子掉落。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "水邊開著很多紅花",
+      "spokenText": "水邊開著很多紅花",
+      "focusChar": "紅",
+      "reason": "畫面：水邊開著很多紅花，紅花清楚，水邊安全溫和，孩子可在旁邊看花。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "女孩紅著臉看鏡子",
+      "spokenText": "女孩紅著臉看鏡子",
+      "focusChar": "紅",
+      "reason": "畫面：女孩臉紅紅地看著鏡子，鏡中可見她紅著臉，情緒可以是害羞或不好意思。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我用紅筆畫眼鏡",
+      "spokenText": "我用紅筆畫眼鏡",
+      "focusChar": "紅",
+      "reason": "畫面：孩子用紅色筆在紙上畫眼鏡，紙上只能有圖像眼鏡，不能有文字、數字或標籤。不要有文字、數字、招牌。"
+    }
+  ]
+}
