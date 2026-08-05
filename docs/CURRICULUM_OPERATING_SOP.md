@@ -275,6 +275,6 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of this branch, production curriculum is complete through L078, and L078 introduces `找`. Latest `origin/main` may lag behind this branch while parallel lesson dependencies are being merged in order.
+As of latest `origin/main`, production curriculum is complete through L079, and L079 introduces `同`.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L078 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L079 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.

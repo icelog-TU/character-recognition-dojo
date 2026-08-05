@@ -24,7 +24,7 @@
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L079 on this branch
+- Current reviewed lessons: L001-L079
 - L079 introduces `同`.
 - Production review modules: R001-R002 after L060, covering L001-L030.
 - L001-L005 use Stage 1-3.
