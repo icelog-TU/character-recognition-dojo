@@ -45,6 +45,8 @@ function normalizeTranscribedHanChar(char) {
     ["\u5b66", "\u5b78"],
     ["\u8c01", "\u8ab0"],
     ["\u95ee", "\u554f"],
+    ["\u5e26", "\u5e36"],
+    ["\u7b14", "\u7b46"],
     ["会", "會"],
     ["个", "個"],
     ["这", "這"],

@@ -1,0 +1,79 @@
+{
+  "id": "L081",
+  "order": 81,
+  "newChars": [
+    "筆"
+  ],
+  "zhuyin": {
+    "筆": "ㄅㄧˇ"
+  },
+  "title": "筆",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L076",
+    "L077",
+    "L078",
+    "L079",
+    "L080"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "帶"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "筆",
+      "帶",
+      "同",
+      "找",
+      "問",
+      "校"
+    ],
+    "targetCharMinimumCount": {
+      "筆": 3
+    },
+    "recentTargetMinimumCounts": {
+      "帶": 2,
+      "同": 2,
+      "找": 2,
+      "問": 1,
+      "校": 1
+    }
+  },
+  "teacherNotes": "認字練功房 L081 課程。目標新字是「筆」，注音「ㄅㄧˇ」。只能使用已學字，加上本課新字「筆」；因 L080 尚未確認存在於 latest origin/main，本課只可把「帶」視為明確註冊的 provisional learned char 做平行準備。台灣用字與台灣注音，不要漢語拼音。spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，不要有文字、數字、注音、招牌或標籤。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。",
+  "approvedSentences": [
+    {
+      "text": "我帶了書包，也帶了筆",
+      "spokenText": "我帶了書包也帶了筆",
+      "focusChar": "筆",
+      "reason": "固定孩子準備上學，背著書包且清楚帶著一支筆，直接呈現「帶了書包，也帶了筆」。"
+    },
+    {
+      "text": "同學問：誰沒帶筆？",
+      "spokenText": "同學問誰沒帶筆",
+      "focusChar": "筆",
+      "reason": "教室或學校場景中，同學詢問誰沒有帶筆，桌面缺筆的孩子讓「沒帶筆」可視化。"
+    },
+    {
+      "text": "爸爸找不到我的學校",
+      "spokenText": "爸爸找不到我的學校",
+      "focusChar": "找",
+      "reason": "爸爸在路邊或校門附近尋找孩子的學校，複習 L078「找」與 L076「校」。"
+    },
+    {
+      "text": "他在書包裡找筆",
+      "spokenText": "他在書包裡找筆",
+      "focusChar": "筆",
+      "reason": "固定小男孩打開書包，在裡面翻找筆，清楚呈現「找筆」。"
+    },
+    {
+      "text": "我和他同路上學",
+      "spokenText": "我和他同路上學",
+      "focusChar": "同",
+      "reason": "固定小女孩和固定小男孩背著書包走同一條上學路，複習 L079「同」與 L074「路」。"
+    }
+  ]
+}

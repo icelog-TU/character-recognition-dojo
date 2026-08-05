@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-05T04:50:33.469Z",
+  "exportedAt": "2026-08-05T04:59:29.846Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -35720,6 +35720,423 @@
               "text": "我要和你同樣的書包",
               "correct": false,
               "audioSrc": "/assets/lessons/L080/audio/L080-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L081",
+      "order": 81,
+      "newChars": [
+        "筆"
+      ],
+      "zhuyin": {
+        "筆": "ㄅㄧˇ"
+      },
+      "charAudio": {
+        "筆": "/assets/lessons/L081/audio/char-u7b46.m4a"
+      },
+      "title": "筆",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L081-S01",
+          "text": "我帶了書包，也帶了筆",
+          "displayLines": [
+            "我帶了書包，",
+            "也帶了筆"
+          ],
+          "spokenText": "我帶了書包也帶了筆",
+          "focusChar": "筆",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school and neighborhood environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. She is preparing to go to school, wearing or holding a school backpack, and there is one clearly visible simple pen in her hand or next to the open backpack. Make it clear she brought both a backpack and a pen, without written marks.",
+          "imageSrc": "/assets/lessons/L081/images/L081-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L081/audio/L081-S01.m4a",
+            "durationMs": 4014,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1220,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 2940
+              }
+            ]
+          }
+        },
+        {
+          "id": "L081-S02",
+          "text": "同學問：誰沒帶筆？",
+          "displayLines": [
+            "同學問：",
+            "誰沒帶筆？"
+          ],
+          "spokenText": "同學問誰沒帶筆",
+          "focusChar": "筆",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school and neighborhood environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. In a bright classroom or school setting, one classmate holds a pen or points to an empty desktop while asking who did not bring a pen. One child notices their desk has no pen and looks mildly surprised. Make the question and missing pen clear without speech bubbles or text.",
+          "imageSrc": "/assets/lessons/L081/images/L081-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L081/audio/L081-S02.m4a",
+            "durationMs": 3067,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1440,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1980,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 2440
+              }
+            ]
+          }
+        },
+        {
+          "id": "L081-S03",
+          "text": "爸爸找不到我的學校",
+          "displayLines": [
+            "爸爸找不到",
+            "我的學校"
+          ],
+          "spokenText": "爸爸找不到我的學校",
+          "focusChar": "找",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school and neighborhood environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. A father stands beside a safe road or near a school entrance, looking confused while trying to find the child's school. A child with a backpack stands nearby and looks around with him. Show searching and not finding the school clearly, without signs or text.",
+          "imageSrc": "/assets/lessons/L081/images/L081-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L081/audio/L081-S03.m4a",
+            "durationMs": 3581,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 230
+              },
+              {
+                "charIndex": 1,
+                "startMs": 230,
+                "endMs": 460
+              },
+              {
+                "charIndex": 2,
+                "startMs": 460,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1360,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1560,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 2030
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2030,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2300,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2660,
+                "endMs": 2920
+              }
+            ]
+          }
+        },
+        {
+          "id": "L081-S04",
+          "text": "他在書包裡找筆",
+          "displayLines": [
+            "他在書包",
+            "裡找筆"
+          ],
+          "spokenText": "他在書包裡找筆",
+          "focusChar": "筆",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school and neighborhood environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed second-person boy: preschool to early elementary age, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, warm friendly expression. He sits or kneels with his school backpack open and searches inside for a pen. The pen may be partly visible inside the backpack or among school supplies, but no notebooks or objects have text. Make the action of searching in the backpack for a pen clear.",
+          "imageSrc": "/assets/lessons/L081/images/L081-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L081/audio/L081-S04.m4a",
+            "durationMs": 3244,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1160,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2340
+              }
+            ]
+          }
+        },
+        {
+          "id": "L081-S05",
+          "text": "我和他同路上學",
+          "displayLines": [
+            "我和他同",
+            "路上學"
+          ],
+          "spokenText": "我和他同路上學",
+          "focusChar": "同",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school and neighborhood environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Use the fixed first-person girl: preschool to early elementary age, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. Use the fixed second-person boy: preschool to early elementary age, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, warm friendly expression. The girl and boy walk together on the same safe school route with backpacks, moving toward a school-like building in the distance. Make it clear they share the same road to school, without signs or arrows.",
+          "imageSrc": "/assets/lessons/L081/images/L081-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L081/audio/L081-S05.m4a",
+            "durationMs": 3143,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2540
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L081-G01",
+          "type": "find-character",
+          "sentenceId": "L081-S01",
+          "targetChar": "筆",
+          "prompt": "小兔子找不到筆。請在句子裡找到筆，按一下。",
+          "missingIndexes": [
+            8
+          ]
+        },
+        {
+          "id": "L081-G02",
+          "type": "teach-character",
+          "sentenceId": "L081-S02",
+          "targetChar": "筆",
+          "targetCharIndex": 6,
+          "prompt": "小兔子讀到一個不會念的字。請按住紅框的字教牠念。",
+          "missingIndexes": [
+            6
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L081/audio/L081-G02-prefix.m4a"
+          }
+        },
+        {
+          "id": "L081-G03",
+          "type": "missing-character",
+          "sentenceId": "L081-S04",
+          "targetChar": "筆",
+          "prompt": "有一個字不見了。請按下面的字卡，把它找回來。",
+          "missingIndexes": [
+            6
+          ],
+          "options": [
+            {
+              "id": "bi",
+              "text": "筆",
+              "correct": true
+            },
+            {
+              "id": "dai",
+              "text": "帶",
+              "correct": false
+            },
+            {
+              "id": "wen",
+              "text": "問",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L081-G04",
+          "type": "partial-order",
+          "sentenceId": "L081-S03",
+          "targetChar": "找",
+          "prompt": "請照聽到的順序，把字放回句子裡。",
+          "missingIndexes": [
+            2,
+            3,
+            4
+          ],
+          "options": [
+            {
+              "id": "zhao",
+              "text": "找",
+              "correct": true
+            },
+            {
+              "id": "bu",
+              "text": "不",
+              "correct": true
+            },
+            {
+              "id": "dao",
+              "text": "到",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L081-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L081-S05",
+          "targetChar": "同",
+          "prompt": "小兔子請三個朋友念。先按朋友的頭聽，再按念對的朋友旁邊的勾勾。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我和他同路上學",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L081/audio/L081-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "我和你同路上學",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L081/audio/L081-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "我和他同路去學",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L081/audio/L081-G05-wrong-two.m4a"
             }
           ]
         }
