@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L079 | 同 | claimed | Codex L079 thread | codex/l079-tong-assets / local | L074:路, L075:誰, L076:校, L077:問, L078:找 | 找 | `curriculum-workflow/lesson-requests/L079.json`; `curriculum-workflow/generated/L079-generation-packet.md` | `curriculum-workflow/audio-inbox/L079/`; `public/assets/lessons/L079/` | Parallel prep only because latest `origin/main` is not yet at L078. Do not merge L079 production JSON to `main` until dependencies are in latest `origin/main` and rechecked. |
 
 ## Status Values
 
