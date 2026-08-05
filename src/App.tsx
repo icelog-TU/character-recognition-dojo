@@ -103,9 +103,14 @@ const RAINBOW_GROUPS = [
   { id: "green", label: "綠", range: "301-400", start: 301, end: 400, color: "#35995b" },
   { id: "blue", label: "藍", range: "401-500", start: 401, end: 500, color: "#2e78d6" },
   { id: "purple", label: "紫", range: "501-600", start: 501, end: 600, color: "#8156c6" },
-];
+] as const;
+const REVIEW_CATALOG_GROUP = { id: "review", label: "複習", range: "R001-R040", color: "#1d7874" } as const;
+const CATALOG_GROUPS = [...RAINBOW_GROUPS, REVIEW_CATALOG_GROUP] as const;
+const REVIEW_CATALOG_SLOT_COUNT = 40;
 type RainbowGroup = (typeof RAINBOW_GROUPS)[number];
-type CatalogSlot = { slotNumber: number; group: RainbowGroup; entry: LessonCharEntry | null };
+type CatalogGroup = (typeof CATALOG_GROUPS)[number];
+type CatalogSlot = { slotNumber: number; group: CatalogGroup; entry: LessonCharEntry | null };
+type ReviewCatalogSlot = { reviewNumber: number; review: ReviewLesson | null };
 const DEFAULT_PROFILE_LABELS = ["學習檔案一", "學習檔案二", "學習檔案三"];
 const LEGACY_PRIVATE_PROFILE_LABEL = String.fromCharCode(0x57f9, 0x5609);
 
@@ -1048,6 +1053,21 @@ function catalogSlotsFromEntries(entries: LessonCharEntry[]): CatalogSlot[] {
   });
 }
 
+function reviewCatalogSlots(reviewLessons: ReviewLesson[]): ReviewCatalogSlot[] {
+  const reviewsByNumber = new Map(reviewLessons.map((review) => [review.reviewNumber, review]));
+  return Array.from({ length: REVIEW_CATALOG_SLOT_COUNT }, (_, index) => {
+    const reviewNumber = index + 1;
+    return {
+      reviewNumber,
+      review: reviewsByNumber.get(reviewNumber) ?? null,
+    };
+  });
+}
+
+function reviewSlotId(reviewNumber: number): string {
+  return `R${String(reviewNumber).padStart(3, "0")}`;
+}
+
 function assetUrl(src: string): string {
   if (/^(https?:|data:|blob:)/.test(src)) return src;
   const base = import.meta.env.BASE_URL;
@@ -1933,10 +1953,13 @@ function App() {
         {page === "catalog" && (
           <CatalogPage
             lessons={curriculum.lessons}
+            reviewLessons={curriculum.reviewLessons ?? []}
             selectedOrder={selectedLesson.order}
             completedOrders={completedOrders}
+            completedReviewIds={completedReviewIds}
             nextOrder={unlockOrder}
             onSelect={openLesson}
+            onSelectReview={openReview}
           />
         )}
         {page === "records" && (
@@ -2390,23 +2413,30 @@ function LessonJumpButton({
 
 function CatalogPage({
   lessons,
+  reviewLessons,
   selectedOrder,
   completedOrders,
+  completedReviewIds,
   nextOrder,
   onSelect,
+  onSelectReview,
 }: {
   lessons: Lesson[];
+  reviewLessons: ReviewLesson[];
   selectedOrder: number;
   completedOrders: Set<number>;
+  completedReviewIds: Set<string>;
   nextOrder: number;
   onSelect: (order: number) => void;
+  onSelectReview: (reviewId: string) => void;
 }) {
-  const [activeGroupId, setActiveGroupId] = useState(RAINBOW_GROUPS[0].id);
+  const [activeGroupId, setActiveGroupId] = useState<CatalogGroup["id"]>(RAINBOW_GROUPS[0].id);
   const [query, setQuery] = useState("");
   const normalizedQuery = query.trim();
-  const activeGroup = RAINBOW_GROUPS.find((group) => group.id === activeGroupId) ?? RAINBOW_GROUPS[0];
+  const activeGroup = CATALOG_GROUPS.find((group) => group.id === activeGroupId) ?? RAINBOW_GROUPS[0];
   const allEntries = useMemo(() => flattenLessonChars(lessons), [lessons]);
   const allSlots = useMemo(() => catalogSlotsFromEntries(allEntries), [allEntries]);
+  const reviewSlots = useMemo(() => reviewCatalogSlots(reviewLessons), [reviewLessons]);
   const searchResults =
     normalizedQuery.length > 0
       ? allSlots.filter(
@@ -2418,44 +2448,82 @@ function CatalogPage({
               String(slot.slotNumber) === normalizedQuery),
         )
       : [];
+  const reviewSearchResults =
+    normalizedQuery.length > 0
+      ? reviewSlots.filter((slot) => {
+          const id = reviewSlotId(slot.reviewNumber);
+          const label = slot.review ? reviewLessonLabel(slot.review) : `複習${smallZhNumber(slot.reviewNumber)}`;
+          return (
+            id.toLowerCase().includes(normalizedQuery.toLowerCase()) ||
+            label.includes(normalizedQuery) ||
+            String(slot.reviewNumber) === normalizedQuery ||
+            slot.review?.title.includes(normalizedQuery)
+          );
+        })
+      : [];
   const activeGroupSlots = allSlots.filter(
-    (slot) => slot.slotNumber >= activeGroup.start && slot.slotNumber <= activeGroup.end,
+    (slot) => "start" in activeGroup && slot.slotNumber >= activeGroup.start && slot.slotNumber <= activeGroup.end,
   );
+  const activeReviewSlots = activeGroup.id === REVIEW_CATALOG_GROUP.id ? reviewSlots : [];
 
   return (
     <section className="page-panel catalog-page">
       <div className="page-heading">
         <h1>漢字總覽</h1>
-        <p>六百字分成六個彩虹區塊。每個顏色都有一百格，還沒解鎖的字先用問號佔位。</p>
+        <p>六百字分成六個彩虹區塊，複習課放在獨立複習區。還沒解鎖或還沒建好的格子會先保留。</p>
       </div>
       <input
         className="search-input"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="搜尋字、課號或編號"
-        aria-label="搜尋字、課號或編號"
+        placeholder="搜尋字、課號、字序或 R001"
+        aria-label="搜尋字、課號、字序或複習編號"
       />
 
       {normalizedQuery ? (
-        <CatalogSlotGrid
-          slots={searchResults}
-          selectedOrder={selectedOrder}
-          completedOrders={completedOrders}
-          nextOrder={nextOrder}
-          onSelect={onSelect}
-          emptyText="目前教材裡找不到這個字。"
-        />
+        <>
+          {searchResults.length > 0 && (
+            <CatalogSlotGrid
+              slots={searchResults}
+              selectedOrder={selectedOrder}
+              completedOrders={completedOrders}
+              nextOrder={nextOrder}
+              onSelect={onSelect}
+              emptyText="目前教材裡找不到這個字。"
+            />
+          )}
+          {reviewSearchResults.length > 0 && (
+            <>
+              <div className="catalog-band-title review-band-title" style={{ "--group-color": REVIEW_CATALOG_GROUP.color } as CSSProperties}>
+                <strong>複習區</strong>
+                <span>{REVIEW_CATALOG_GROUP.range}</span>
+              </div>
+              <ReviewCatalogGrid
+                slots={reviewSearchResults}
+                completedReviewIds={completedReviewIds}
+                nextOrder={nextOrder}
+                onSelectReview={onSelectReview}
+              />
+            </>
+          )}
+          {searchResults.length === 0 && reviewSearchResults.length === 0 && (
+            <p className="empty-catalog">目前教材裡找不到這個字或複習課。</p>
+          )}
+        </>
       ) : (
         <>
           <div className="rainbow-groups" aria-label="彩虹分區">
-            {RAINBOW_GROUPS.map((group) => {
-              const count = allSlots.filter(
-                (slot) =>
-                  slot.slotNumber >= group.start &&
-                  slot.slotNumber <= group.end &&
-                  slot.entry &&
-                  slot.entry.lesson.order <= nextOrder,
-              ).length;
+            {CATALOG_GROUPS.map((group) => {
+              const count =
+                group.id === REVIEW_CATALOG_GROUP.id
+                  ? reviewSlots.filter((slot) => slot.review && slot.review.afterLessonOrder <= nextOrder).length
+                  : allSlots.filter(
+                      (slot) =>
+                        slot.slotNumber >= group.start &&
+                        slot.slotNumber <= group.end &&
+                        slot.entry &&
+                        slot.entry.lesson.order <= nextOrder,
+                    ).length;
               return (
                 <button
                   key={group.id}
@@ -2463,27 +2531,36 @@ function CatalogPage({
                   style={{ "--group-color": group.color } as CSSProperties}
                   onClick={() => setActiveGroupId(group.id)}
                 >
-                  <span>{group.label}色字</span>
+                  <span>{group.id === REVIEW_CATALOG_GROUP.id ? "複習區" : `${group.label}色字`}</span>
                   <small>{group.range}</small>
-                  <small>{count} / 100 字</small>
+                  <small>{count} / {group.id === REVIEW_CATALOG_GROUP.id ? REVIEW_CATALOG_SLOT_COUNT : 100} {group.id === REVIEW_CATALOG_GROUP.id ? "課" : "字"}</small>
                 </button>
               );
             })}
           </div>
 
           <div className="catalog-band-title" style={{ "--group-color": activeGroup.color } as CSSProperties}>
-            <strong>{activeGroup.label}色區</strong>
+            <strong>{activeGroup.id === REVIEW_CATALOG_GROUP.id ? "複習區" : `${activeGroup.label}色區`}</strong>
             <span>{activeGroup.range}</span>
           </div>
 
-          <CatalogSlotGrid
-            slots={activeGroupSlots}
-            selectedOrder={selectedOrder}
-            completedOrders={completedOrders}
-            nextOrder={nextOrder}
-            onSelect={onSelect}
-            emptyText={`${activeGroup.label}區教材尚未建立。`}
-          />
+          {activeGroup.id === REVIEW_CATALOG_GROUP.id ? (
+            <ReviewCatalogGrid
+              slots={activeReviewSlots}
+              completedReviewIds={completedReviewIds}
+              nextOrder={nextOrder}
+              onSelectReview={onSelectReview}
+            />
+          ) : (
+            <CatalogSlotGrid
+              slots={activeGroupSlots}
+              selectedOrder={selectedOrder}
+              completedOrders={completedOrders}
+              nextOrder={nextOrder}
+              onSelect={onSelect}
+              emptyText={`${activeGroup.label}區教材尚未建立。`}
+            />
+          )}
         </>
       )}
     </section>
@@ -2530,6 +2607,45 @@ function CatalogSlotGrid({
             <span>字序 #{slotCode}</span>
             <strong>{revealed && entry ? entry.char : "?"}</strong>
             <small>{revealed && lesson ? `第${lesson.order}課` : "未解鎖"}</small>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function ReviewCatalogGrid({
+  slots,
+  completedReviewIds,
+  nextOrder,
+  onSelectReview,
+}: {
+  slots: ReviewCatalogSlot[];
+  completedReviewIds: Set<string>;
+  nextOrder: number;
+  onSelectReview: (reviewId: string) => void;
+}) {
+  return (
+    <div className="catalog-grid review-catalog-grid" aria-label="複習課目錄">
+      {slots.map((slot) => {
+        const review = slot.review;
+        const id = review?.id ?? reviewSlotId(slot.reviewNumber);
+        const locked = !review || review.afterLessonOrder > nextOrder;
+        const completed = Boolean(review && completedReviewIds.has(review.id));
+        const label = review ? reviewLessonLabel(review) : `複習${smallZhNumber(slot.reviewNumber)}`;
+        const status = review ? (locked ? "未解鎖" : completed ? "已完成" : "可練習") : "預留";
+        return (
+          <button
+            key={`review-catalog-${id}`}
+            className={`catalog-char review-catalog-card${completed ? " completed" : ""}${locked ? " locked" : " revealed"}`}
+            style={{ "--slot-color": REVIEW_CATALOG_GROUP.color } as CSSProperties}
+            disabled={locked}
+            onClick={() => review && onSelectReview(review.id)}
+            aria-label={`${id}，${label}，${status}`}
+          >
+            <span>{id}</span>
+            <strong>{label}</strong>
+            <small>{status}</small>
           </button>
         );
       })}

@@ -887,6 +887,22 @@ button {
   color: color-mix(in srgb, var(--slot-color) 52%, #aaa39b);
 }
 
+.review-catalog-grid {
+  grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+}
+
+.review-catalog-card strong {
+  color: color-mix(in srgb, var(--slot-color) 88%, #231b14);
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+.review-catalog-card.completed {
+  border-color: color-mix(in srgb, var(--slot-color) 62%, #fff);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--slot-color) 18%, #fff) 0%, #fff 78%);
+}
+
 .empty-catalog {
   margin: 0;
   color: var(--muted);
@@ -3874,6 +3890,14 @@ button.char-token {
 
   .catalog-char {
     min-height: 72px;
+  }
+
+  .review-catalog-grid {
+    grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+  }
+
+  .review-catalog-card strong {
+    font-size: 1.08rem;
   }
 
   .target-card {

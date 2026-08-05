@@ -220,7 +220,9 @@ Rules:
 - Review sentence text may use characters learned by the milestone, but the required coverage target is the older 30-lesson range.
 - The two review modules should be planned as one pair so coverage can be checked across all 10 sentences before either module ships.
 - Do not add placeholder review modules to `src/curriculum/sample-lessons.json`. Only add production-ready review modules to top-level `reviewLessons` after sentences, images, audio, timings, Stage 4 games, and review coverage are complete.
-- Production-ready review modules in `reviewLessons` must be inserted into the same playable sequence and square course-card grid as numbered lessons. They are not a separate reservation section.
+- Production-ready review modules in `reviewLessons` must be inserted into the same playable sequence and square course-card grid as numbered lessons. They must not be reachable only through a temporary reservation section.
+- The child-facing `漢字總覽` page must also provide a permanent `複習區` after the six color groups. This review area reserves `R001` through `R040` so completed review modules stay findable even after many later lessons are unlocked.
+- In the `漢字總覽` review area, production-ready and unlocked review modules are clickable. Locked or not-yet-built review modules may appear only as UI placeholders; do not add empty placeholder review modules to `src/curriculum/sample-lessons.json`.
 - Review modules grant the same one-time completion reward as lessons. Replaying an already completed review module must not grant another reward.
 - The review module `下一課` button must follow the playable sequence. Example: `L060` -> `R001` -> `R002` -> `L061`.
 - The first playable pair is after L060: R001/R002, two 5-sentence review modules covering all new characters from L001-L030.
