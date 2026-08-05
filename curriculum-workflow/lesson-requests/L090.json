@@ -1,0 +1,90 @@
+{
+  "id": "L090",
+  "order": 90,
+  "newChars": [
+    "桌"
+  ],
+  "zhuyin": {
+    "桌": "ㄓㄨㄛ"
+  },
+  "title": "桌",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L085",
+    "L086",
+    "L087",
+    "L088",
+    "L089"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "紙",
+      "心",
+      "放",
+      "把"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "桌",
+      "把",
+      "放",
+      "心",
+      "紙",
+      "給"
+    ],
+    "targetCharMinimumCount": {
+      "桌": 3
+    },
+    "recentTargetMinimumCounts": {
+      "把": 2,
+      "放": 2,
+      "心": 2,
+      "紙": 2,
+      "給": 1
+    },
+    "disallowedChars": [
+      "用",
+      "張",
+      "從",
+      "能",
+      "子",
+      "盒"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L090 課程，目標新字是「桌」，注音為台灣注音 ㄓㄨㄛ，不使用漢語拼音。只能使用已學字與 L090 新字「桌」，並額外依平行準備納入 provisional learned chars：紙、心、放、把。不要使用未學字：用、張、從、能、子、盒。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。L090 依賴 L085-L089；目前 latest origin/main 尚未包含 L086-L089，因此此課只做 branch-only 平行準備，不合併 production JSON。L090 是 30 課 milestone；L090 進 production 後，下一個 production sequence 應接 R003、R004 review modules，然後才是 L091。",
+  "approvedSentences": [
+    {
+      "text": "我把筆和紙放在桌上",
+      "spokenText": "我把筆和紙放在桌上",
+      "focusChar": "桌",
+      "reason": "畫面：孩子把筆和紙放在桌上，桌子、筆、紙都清楚可見，紙上不要有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "桌上放著很多愛心",
+      "spokenText": "桌上放著很多愛心",
+      "focusChar": "桌",
+      "reason": "畫面：桌上放著很多紙做或畫出的愛心，孩子在旁邊看著或整理，桌面清楚。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "把書桌上的紙給同學",
+      "spokenText": "把書桌上的紙給同學",
+      "focusChar": "桌",
+      "reason": "畫面：孩子從書桌上拿起紙，正要給同學；書桌、紙、同學都清楚可見，紙上不要有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "和爸媽一起出門，好開心",
+      "spokenText": "和爸媽一起出門好開心",
+      "focusChar": "心",
+      "reason": "畫面：孩子和爸爸媽媽一起出門，孩子表情開心，家庭出門情境溫暖清楚。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "路邊那是誰的家",
+      "spokenText": "路邊那是誰的家",
+      "focusChar": "那",
+      "reason": "畫面：孩子在路邊看見一戶人家，好奇地指著房子像是在問那是誰的家；房子和路邊位置清楚。不要有文字、數字、招牌。"
+    }
+  ]
+}
