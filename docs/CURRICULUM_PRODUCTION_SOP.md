@@ -323,6 +323,7 @@ Starting after L060, every 30-lesson milestone gets two review modules. These ar
 - Production-ready review modules must render in the normal playable square course-card grid after their `afterLessonOrder`, and must not be reachable only through a temporary reservation section.
 - The `漢字總覽` page must include a permanent `複習區` after the six color groups. It reserves `R001` through `R040`; shipped and unlocked review modules are clickable there, while future modules may appear only as UI placeholders.
 - Review modules grant the same one-time completion reward as lessons. Their `下一課` button must advance to the next review module or numbered lesson in the playable path.
+- Review modules are child-facing two-stage units: Stage 1 is `看圖聽句子`, Stage 2 is `句子遊戲`. Do not show `第三階段` or `第四階段` labels in review modules just because the internal implementation reuses normal lesson Stage 3/4 components.
 - Plan each two-module review pair together. Do not approve the first review module if the pair as a whole does not yet cover the required 30-lesson character set.
 - Review sentences may use any character learned by the milestone, but the coverage checklist must be based on the older target range.
 - Do not add empty review placeholders to `src/curriculum/sample-lessons.json`; placeholders belong in the website UI only until the reviewed sentences and production assets are ready.

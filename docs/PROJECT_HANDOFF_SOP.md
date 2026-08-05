@@ -97,6 +97,7 @@ Before editing, state the exact ownership in chat, including lesson id and owned
 - Production-ready review modules must be inserted into the normal playable course sequence and square course-card grid. Example path: `L060` -> `R001` -> `R002` -> `L061`.
 - The child-facing `漢字總覽` page must keep a permanent `複習區` after the six color groups, reserving `R001` through `R040`. Future review slots may appear there only as locked placeholders, not as JSON curriculum records.
 - Review modules grant the same one-time reward as lessons. Replaying a completed review module must not grant another reward.
+- Review modules are two-stage units in the UI: `看圖聽句子` then `句子遊戲`. Do not show normal-lesson Stage 1/2 rows or `第三階段`/`第四階段` labels for review modules.
 - Account progress belongs to profiles under `accounts/{uid}/profiles/{profileId}`. Device records under `accounts/{uid}/devices/{deviceId}` identify phones/tablets by generated system ID and store `activeProfileId`.
 - A family account has up to three active learning profiles. Default labels are `學習檔案一`, `學習檔案二`, and `學習檔案三`; users may rename profile labels to names such as `媽媽`, `哥哥`, and `妹妹`.
 - The app header account/profile button is the primary switching surface. It must show the signed-in account first, then the three learning profiles, and link into Settings for profile renaming.

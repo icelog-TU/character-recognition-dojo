@@ -3583,6 +3583,13 @@ function LessonPanel({
   const lessonReward = { coins: 30, stars: 12 };
   const lessonIntro = unitIntro ?? lessonIntroText(lesson);
   const hearPrompt = hearPromptText(lesson);
+  const reviewToGameText = "句子都聽完了。請按下面紅色的大按鈕，進入第二階段的練習。";
+
+  function visibleStageLabel(stage: number): string {
+    if (!isReview) return stageLabel(stage);
+    const visibleStage = stage === 4 ? 2 : 1;
+    return stageLabel(visibleStage);
+  }
 
   useEffect(() => {
     if (locked) return;
@@ -3648,8 +3655,9 @@ function LessonPanel({
   ]);
 
   useEffect(() => {
-    if (!locked) void speakForTarget("stage1", `${lessonIntro} ${hearPrompt}`);
-  }, [lesson.id, lessonIntro, hearPrompt, locked]);
+    if (locked) return;
+    void speakForTarget(isReview ? "lesson" : "stage1", isReview ? lessonIntro : `${lessonIntro} ${hearPrompt}`);
+  }, [isReview, lesson.id, lessonIntro, hearPrompt, locked]);
 
   useEffect(() => {
     let firstFrame = 0;
@@ -3712,9 +3720,9 @@ function LessonPanel({
 
   useEffect(() => {
     if (pictureDone && usesSentenceGames && activeStage === 3) {
-      void speakForTarget("advance4", GUIDE_TEXT.toStageFour);
+      void speakForTarget("advance4", isReview ? reviewToGameText : GUIDE_TEXT.toStageFour);
     }
-  }, [pictureDone, usesSentenceGames, activeStage]);
+  }, [isReview, pictureDone, reviewToGameText, usesSentenceGames, activeStage]);
 
   useEffect(() => {
     if (lessonReady && rewardState === "waiting") {
@@ -3820,7 +3828,7 @@ function LessonPanel({
     advanceRunRef.current = runId;
     setAdvancingStage(nextStage);
     playStartChime();
-    await Promise.all([speakGuide(`${GUIDE_TEXT.stageAdvance} ${stageLabel(nextStage)}。`), waitMs(820)]);
+    await Promise.all([speakGuide(`${GUIDE_TEXT.stageAdvance} ${visibleStageLabel(nextStage)}。`), waitMs(820)]);
     if (advanceRunRef.current !== runId) return;
     setActiveStage(nextStage);
     setAdvancingStage(null);
@@ -3874,54 +3882,56 @@ function LessonPanel({
             disabled={locked}
             onClick={() => handleStageJump(stage)}
           >
-            {stageLabel(stage)}
+            {visibleStageLabel(stage)}
           </button>
         ))}
       </div>
 
-      <LessonBlock
-        index={1}
-        title="聽聽看"
-        done={soundUnlocked}
-        locked={locked}
-        active={activeBlock(1)}
-        visible={activeStage === 1}
-      >
-        <div className="target-grid">
-          {newChars.map((char) => (
-            <button
-              key={char}
-              className={`target-card target-button${heardChars.has(char) ? " heard" : ""}${
-                spotlightChar === char ? " spotlighting" : ""
-              }`}
-              disabled={locked || Boolean(spotlightChar)}
-              onClick={() => handleHearTarget(char)}
-            >
-              <span className="target-char">{char}</span>
-              <Zhuyin value={lesson.zhuyin[char] ?? ""} size="large" />
-            </button>
-          ))}
-        </div>
-        {spotlightChar && (
-          <div className="char-spotlight" aria-hidden>
-            <div className="char-spotlight-card">
-              <span className="char-spotlight-hanzi">{spotlightChar}</span>
-              <Zhuyin value={lesson.zhuyin[spotlightChar] ?? ""} size="large" />
-            </div>
-          </div>
-        )}
-        <NarrationLine
-          text={hearPrompt}
-          target="stage1"
-          onSpeakStart={setSpeakingTarget}
-          onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
-          className="block-note"
+      {!isReview && (
+        <LessonBlock
+          index={1}
+          title="聽聽看"
+          done={soundUnlocked}
+          locked={locked}
+          active={activeBlock(1)}
+          visible={activeStage === 1}
         >
-          {hearPrompt}
-        </NarrationLine>
-      </LessonBlock>
+          <div className="target-grid">
+            {newChars.map((char) => (
+              <button
+                key={char}
+                className={`target-card target-button${heardChars.has(char) ? " heard" : ""}${
+                  spotlightChar === char ? " spotlighting" : ""
+                }`}
+                disabled={locked || Boolean(spotlightChar)}
+                onClick={() => handleHearTarget(char)}
+              >
+                <span className="target-char">{char}</span>
+                <Zhuyin value={lesson.zhuyin[char] ?? ""} size="large" />
+              </button>
+            ))}
+          </div>
+          {spotlightChar && (
+            <div className="char-spotlight" aria-hidden>
+              <div className="char-spotlight-card">
+                <span className="char-spotlight-hanzi">{spotlightChar}</span>
+                <Zhuyin value={lesson.zhuyin[spotlightChar] ?? ""} size="large" />
+              </div>
+            </div>
+          )}
+          <NarrationLine
+            text={hearPrompt}
+            target="stage1"
+            onSpeakStart={setSpeakingTarget}
+            onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
+            className="block-note"
+          >
+            {hearPrompt}
+          </NarrationLine>
+        </LessonBlock>
+      )}
 
-      {soundUnlocked && activeStage === 1 && (
+      {!isReview && soundUnlocked && activeStage === 1 && (
         <StageAdvancePrompt
           text={GUIDE_TEXT.toStageTwo}
           buttonText="進入第二階段"
@@ -3933,31 +3943,33 @@ function LessonPanel({
         />
       )}
 
-      <LessonBlock
-        index={2}
-        title="找出這個字"
-        done={findUnlocked}
-        locked={locked}
-        active={activeBlock(2)}
-        visible={activeStage === 2}
-      >
-        {activeStage >= 2 ? (
-          <FindManyChallenge
-            key={`find-${lesson.id}-${resetVersion}`}
-            lesson={lesson}
-            zhuyinMap={zhuyinMap}
-            disabled={locked}
-            speakingTarget={speakingTarget}
-            onSpeakStart={setSpeakingTarget}
-            onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
-            onComplete={() => setFindUnlocked(true)}
-          />
-        ) : (
-          <p className="block-note">從上方階段入口打開這一段。</p>
-        )}
-      </LessonBlock>
+      {!isReview && (
+        <LessonBlock
+          index={2}
+          title="找出這個字"
+          done={findUnlocked}
+          locked={locked}
+          active={activeBlock(2)}
+          visible={activeStage === 2}
+        >
+          {activeStage >= 2 ? (
+            <FindManyChallenge
+              key={`find-${lesson.id}-${resetVersion}`}
+              lesson={lesson}
+              zhuyinMap={zhuyinMap}
+              disabled={locked}
+              speakingTarget={speakingTarget}
+              onSpeakStart={setSpeakingTarget}
+              onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
+              onComplete={() => setFindUnlocked(true)}
+            />
+          ) : (
+            <p className="block-note">從上方階段入口打開這一段。</p>
+          )}
+        </LessonBlock>
+      )}
 
-      {findUnlocked && activeStage === 2 && (
+      {!isReview && findUnlocked && activeStage === 2 && (
         <StageAdvancePrompt
           text={`${GUIDE_TEXT.findComplete} ${GUIDE_TEXT.toStageThree}`}
           buttonText="進入第三階段"
@@ -3970,7 +3982,7 @@ function LessonPanel({
       )}
 
       <LessonBlock
-        index={3}
+        index={isReview ? 1 : 3}
         title="看圖聽句子"
         done={pictureDone}
         locked={locked}
@@ -4001,8 +4013,8 @@ function LessonPanel({
 
       {pictureDone && usesSentenceGames && activeStage === 3 && (
         <StageAdvancePrompt
-          text={GUIDE_TEXT.toStageFour}
-          buttonText="進入第四階段"
+          text={isReview ? reviewToGameText : GUIDE_TEXT.toStageFour}
+          buttonText={isReview ? "進入第二階段" : "進入第四階段"}
           busy={advancingStage === 4}
           active={activeAdvance(4)}
           onSpeakStart={setSpeakingTarget}
@@ -4013,7 +4025,7 @@ function LessonPanel({
 
       {usesSentenceGames && (
         <LessonBlock
-          index={4}
+          index={isReview ? 2 : 4}
           title="句子遊戲"
           done={gamesDone}
           locked={locked}

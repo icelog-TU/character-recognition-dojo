@@ -113,6 +113,7 @@ The curriculum adds two review modules after every 30-lesson milestone starting 
 - After L120: R005/R006 cover all new characters from L061-L090.
 - Production-ready review modules must render as playable square cards in the same course-card grid as numbered lessons. Future review slots that are not built yet must not appear as playable or reservation cards on the practice home.
 - The `漢字總覽` page has a separate permanent `複習區` after the six color groups. It reserves `R001` through `R040`; shipped and unlocked review modules are clickable there, while future modules appear only as non-playable placeholders.
+- Review modules show only two child-facing stages: `看圖聽句子` and `句子遊戲`. They must not display skipped Stage 1/2 rows or labels like `第三階段` and `第四階段`.
 - Review modules must grant the same one-time reward as lessons, and their `下一課` button must advance to the next review module or numbered lesson in the playable path.
 - Continue the same pattern.
 

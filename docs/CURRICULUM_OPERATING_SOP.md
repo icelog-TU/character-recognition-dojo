@@ -224,6 +224,7 @@ Rules:
 - The child-facing `漢字總覽` page must also provide a permanent `複習區` after the six color groups. This review area reserves `R001` through `R040` so completed review modules stay findable even after many later lessons are unlocked.
 - In the `漢字總覽` review area, production-ready and unlocked review modules are clickable. Locked or not-yet-built review modules may appear only as UI placeholders; do not add empty placeholder review modules to `src/curriculum/sample-lessons.json`.
 - Review modules grant the same one-time completion reward as lessons. Replaying an already completed review module must not grant another reward.
+- Review modules are displayed as two-stage units only: first `看圖聽句子`, then `句子遊戲`. The UI must not show skipped normal-lesson Stage 1/2 rows, and must not label the review stages as `第三階段` or `第四階段`.
 - The review module `下一課` button must follow the playable sequence. Example: `L060` -> `R001` -> `R002` -> `L061`.
 - The first playable pair is after L060: R001/R002, two 5-sentence review modules covering all new characters from L001-L030.
 
