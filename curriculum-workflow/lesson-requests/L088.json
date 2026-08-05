@@ -1,0 +1,89 @@
+{
+  "id": "L088",
+  "order": 88,
+  "newChars": [
+    "放"
+  ],
+  "zhuyin": {
+    "放": "ㄈㄤˋ"
+  },
+  "title": "放",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L083",
+    "L084",
+    "L085",
+    "L086",
+    "L087"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "本",
+      "給",
+      "紙",
+      "心"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "放",
+      "心",
+      "紙",
+      "給",
+      "本",
+      "那"
+    ],
+    "targetCharMinimumCount": {
+      "放": 3
+    },
+    "recentTargetMinimumCounts": {
+      "心": 2,
+      "紙": 2,
+      "給": 2,
+      "本": 1,
+      "那": 1
+    },
+    "disallowedChars": [
+      "用",
+      "張",
+      "把",
+      "從",
+      "能"
+    ]
+  },
+  "teacherNotes": "認字練功房 L088，目標新字：放，注音：ㄈㄤˋ。老師已核准五句句子。只能使用已學字加 L088 新字「放」，不得使用未學字：用、張、把、從、能。台灣用字與台灣注音，不使用漢語拼音。spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤或注音。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。單字發音必須是獨立 AI 生成的單字音檔，不可從句子裁切。因最新 origin/main 尚未合併到 L087，L088 只做平行準備，不可把 L088 留在 production JSON；合併前需重新依最新 main 審核 allowedChars、Stage 4、圖檔、音檔與 alignment。核准句子實際統計為心 2 次，仍符合前一課複習最小門檻。",
+  "approvedSentences": [
+    {
+      "text": "我在書包裡放了很多紙",
+      "spokenText": "我在書包裡放了很多紙",
+      "focusChar": "放",
+      "reason": "孩子把很多紙放進書包裡，書包打開，紙清楚可見但不要有任何文字。"
+    },
+    {
+      "text": "他給我一個紙做的愛心",
+      "spokenText": "他給我一個紙做的愛心",
+      "focusChar": "給",
+      "reason": "一個孩子把紙做的愛心送給另一個孩子，紙愛心清楚可見，兩人表情友善。"
+    },
+    {
+      "text": "這是要給媽媽吃的",
+      "spokenText": "這是要給媽媽吃的",
+      "focusChar": "給",
+      "reason": "孩子拿著一份好吃的食物，準備拿給媽媽吃，媽媽在旁邊或前方。"
+    },
+    {
+      "text": "放手，那本書不是吃的",
+      "spokenText": "放手那本書不是吃的",
+      "focusChar": "放",
+      "reason": "幼兒正抓著一本書想放進嘴邊，旁邊的大人溫和地提醒他放手；書本清楚可見但不能有文字，語氣是照顧幼兒，不要恐嚇。"
+    },
+    {
+      "text": "放心，他是好人",
+      "spokenText": "放心他是好人",
+      "focusChar": "放",
+      "reason": "孩子有點擔心，旁邊的大人溫和安撫，遠處或旁邊有一位友善的人，表現「放心，他是好人」。"
+    }
+  ]
+}

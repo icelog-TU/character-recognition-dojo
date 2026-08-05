@@ -38467,10 +38467,10 @@
         {
           "id": "L087-S03",
           "text": "我要畫畫，媽媽拿紙給我",
-      "displayLines": [
-        "我要畫畫，",
-        "媽媽拿紙",
-        "給我"
+          "displayLines": [
+            "我要畫畫，",
+            "媽媽拿紙",
+            "給我"
           ],
           "spokenText": "我要畫畫媽媽拿紙給我",
           "focusChar": "給",
@@ -38666,11 +38666,11 @@
           ]
         },
         {
-      "id": "L087-G02",
-      "type": "teach-character",
-      "sentenceId": "L087-S02",
-      "targetChar": "心",
-      "targetCharIndex": 4,
+          "id": "L087-G02",
+          "type": "teach-character",
+          "sentenceId": "L087-S02",
+          "targetChar": "心",
+          "targetCharIndex": 4,
           "prompt": "小兔子讀到一個不會念的字。請按住紅框的字教牠念。",
           "missingIndexes": [
             4
@@ -38708,65 +38708,510 @@
           ]
         },
         {
-      "id": "L087-G04",
-      "type": "partial-order",
-      "sentenceId": "L087-S04",
-      "targetChar": "那",
-      "prompt": "請照聽到的順序，讓字回到句子裡。",
-      "missingIndexes": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "options": [
-        {
-          "id": "na",
-          "text": "那",
-          "correct": true
+          "id": "L087-G04",
+          "type": "partial-order",
+          "sentenceId": "L087-S04",
+          "targetChar": "那",
+          "prompt": "請照聽到的順序，讓字回到句子裡。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "na",
+              "text": "那",
+              "correct": true
+            },
+            {
+              "id": "li",
+              "text": "裡",
+              "correct": true
+            },
+            {
+              "id": "ben",
+              "text": "本",
+              "correct": true
+            },
+            {
+              "id": "lai",
+              "text": "來",
+              "correct": true
+            }
+          ]
         },
         {
-          "id": "li",
-          "text": "裡",
-          "correct": true
-        },
-        {
-          "id": "ben",
-          "text": "本",
-          "correct": true
-        },
-        {
-          "id": "lai",
-          "text": "來",
-          "correct": true
+          "id": "L087-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L087-S03",
+          "targetChar": "給",
+          "prompt": "小兔子請三個朋友念。先按朋友的頭聽，再按念對的朋友旁邊的勾勾。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我要畫畫媽媽拿紙給我",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L087/audio/L087-S03.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "我要畫畫媽媽拿書給我",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L087/audio/L087-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "我要畫畫媽媽拿筆給我",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L087/audio/L087-G05-wrong-two.m4a"
+            }
+          ]
         }
       ]
+    },
+    {
+      "id": "L088",
+      "order": 88,
+      "newChars": [
+        "放"
+      ],
+      "zhuyin": {
+        "放": "ㄈㄤˋ"
+      },
+      "charAudio": {
+        "放": "/assets/lessons/L088/audio/char-u653e.m4a"
+      },
+      "title": "放",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L088-S01",
+          "text": "我在書包裡放了很多紙",
+          "displayLines": [
+            "我在書包裡",
+            "放了很多紙"
+          ],
+          "spokenText": "我在書包裡放了很多紙",
+          "focusChar": "放",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home entry or classroom preparation setting, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. A child places many blank sheets of paper into an open school bag. The open bag and the stack of papers are clear and central. Every sheet is completely blank with no writing or marks.",
+          "imageSrc": "/assets/lessons/L088/images/L088-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L088/audio/L088-S01.m4a",
+            "durationMs": 4740,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 510
+              },
+              {
+                "charIndex": 1,
+                "startMs": 510,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1020,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1560,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2260,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2880,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3340,
+                "endMs": 3700
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3700,
+                "endMs": 4060
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4060,
+                "endMs": 4440
+              }
+            ]
+          }
         },
         {
-      "id": "L087-G05",
-      "type": "choose-pronunciation",
-      "sentenceId": "L087-S03",
-      "targetChar": "給",
-      "prompt": "小兔子請三個朋友念。先按朋友的頭聽，再按念對的朋友旁邊的勾勾。",
-      "options": [
-        {
-          "id": "correct",
-          "text": "我要畫畫媽媽拿紙給我",
-          "correct": true,
-          "audioSrc": "/assets/lessons/L087/audio/L087-S03.m4a"
+          "id": "L088-S02",
+          "text": "他給我一個紙做的愛心",
+          "displayLines": [
+            "他給我一個",
+            "紙做的愛心"
+          ],
+          "spokenText": "他給我一個紙做的愛心",
+          "focusChar": "給",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean classroom or home craft setting, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. One child kindly gives another child a heart made from folded or cut paper. The paper heart is clear and central, handmade, and completely blank with no writing or symbols. Both children look friendly and warm.",
+          "imageSrc": "/assets/lessons/L088/images/L088-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L088/audio/L088-S02.m4a",
+            "durationMs": 3120,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1340,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1860,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2100,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2320,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2560,
+                "endMs": 2820
+              }
+            ]
+          }
         },
         {
-          "id": "wrong-one",
-          "text": "我要畫畫媽媽拿書給我",
-          "correct": false,
-          "audioSrc": "/assets/lessons/L087/audio/L087-G05-wrong-one.m4a"
+          "id": "L088-S03",
+          "text": "這是要給媽媽吃的",
+          "displayLines": [
+            "這是要給",
+            "媽媽吃的"
+          ],
+          "spokenText": "這是要給媽媽吃的",
+          "focusChar": "給",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home kitchen or dining setting, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. A child holds a tasty prepared snack or small dish and is bringing it to mom to eat. Mom is nearby or in front of the child, smiling gently and ready to receive the food. No packaging, plates, or background objects should have writing.",
+          "imageSrc": "/assets/lessons/L088/images/L088-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L088/audio/L088-S03.m4a",
+            "durationMs": 2400,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 160
+              },
+              {
+                "charIndex": 1,
+                "startMs": 160,
+                "endMs": 320
+              },
+              {
+                "charIndex": 2,
+                "startMs": 320,
+                "endMs": 760
+              },
+              {
+                "charIndex": 3,
+                "startMs": 760,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1100,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1420,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1680,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1900,
+                "endMs": 2100
+              }
+            ]
+          }
         },
         {
-          "id": "wrong-two",
-          "text": "我要畫畫媽媽拿筆給我",
-          "correct": false,
-          "audioSrc": "/assets/lessons/L087/audio/L087-G05-wrong-two.m4a"
+          "id": "L088-S04",
+          "text": "放手，那本書不是吃的",
+          "displayLines": [
+            "放手，",
+            "那本書不是",
+            "吃的"
+          ],
+          "spokenText": "放手那本書不是吃的",
+          "focusChar": "放",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home reading corner or living room setting, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. A toddler is holding a blank book near their mouth as if about to bite or chew it. A caring adult gently reaches out and calmly encourages the toddler to let go. The mood is warm caregiving, not scary or harsh. The book is clear and completely blank with no writing.",
+          "imageSrc": "/assets/lessons/L088/images/L088-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L088/audio/L088-S04.m4a",
+            "durationMs": 4520,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 660
+              },
+              {
+                "charIndex": 1,
+                "startMs": 660,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1640,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1840,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2120,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2460,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3040,
+                "endMs": 3620
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3620,
+                "endMs": 4020
+              },
+              {
+                "charIndex": 8,
+                "startMs": 4020,
+                "endMs": 4220
+              }
+            ]
+          }
+        },
+        {
+          "id": "L088-S05",
+          "text": "放心，他是好人",
+          "displayLines": [
+            "放心，",
+            "他是好人"
+          ],
+          "spokenText": "放心他是好人",
+          "focusChar": "放",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home entry, school hallway, or neighborhood setting, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. A child looks a little worried. A caring adult gently comforts the child with a hand on the shoulder. Nearby or in the background stands a friendly person with a kind expression, making it clear the person is good and safe. Keep the scene calm and reassuring.",
+          "imageSrc": "/assets/lessons/L088/images/L088-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L088/audio/L088-S05.m4a",
+            "durationMs": 2360,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1000,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1820,
+                "endMs": 2060
+              }
+            ]
+          }
         }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L088-G01",
+          "type": "find-character",
+          "sentenceId": "L088-S05",
+          "targetChar": "放",
+          "prompt": "小兔想找到「放」。請在句子裡點一下放。",
+          "missingIndexes": [
+            0
+          ]
+        },
+        {
+          "id": "L088-G02",
+          "type": "teach-character",
+          "sentenceId": "L088-S01",
+          "targetChar": "放",
+          "targetCharIndex": 5,
+          "prompt": "小兔讀到一個字停住了。請按住紅框幫小兔說。",
+          "missingIndexes": [
+            5
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L088/audio/L088-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L088/audio/L088-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L088-G03",
+          "type": "missing-character",
+          "sentenceId": "L088-S04",
+          "targetChar": "放",
+          "prompt": "小兔少了一個字。請選出放，放回句子裡。",
+          "missingIndexes": [
+            0
+          ],
+          "options": [
+            {
+              "id": "fang",
+              "text": "放",
+              "correct": true
+            },
+            {
+              "id": "gei",
+              "text": "給",
+              "correct": false
+            },
+            {
+              "id": "na",
+              "text": "那",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L088-G04",
+          "type": "partial-order",
+          "sentenceId": "L088-S02",
+          "targetChar": "心",
+          "prompt": "小兔把後面幾個字弄亂了。請排回正確順序。",
+          "missingIndexes": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "options": [
+            {
+              "id": "zuo",
+              "text": "做",
+              "correct": true
+            },
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            },
+            {
+              "id": "ai",
+              "text": "愛",
+              "correct": true
+            },
+            {
+              "id": "xin",
+              "text": "心",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L088-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L088-S03",
+          "targetChar": "給",
+          "prompt": "小兔請朋友讀這句。先按每個朋友的頭，再按讀對的朋友旁邊的勾。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "這是要給媽媽吃的",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L088/audio/L088-S03.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "那是要給媽媽吃的",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L088/audio/L088-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "這是要給爸爸吃的",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L088/audio/L088-G05-wrong-two.m4a"
+            }
           ]
         }
       ]
