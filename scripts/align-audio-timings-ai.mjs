@@ -49,6 +49,9 @@ function normalizeTranscribedHanChar(char) {
     ["\u7b14", "\u7b46"],
     ["\u7eb8", "\u7d19"],
     ["\u7ed9", "\u7d66"],
+    ["\u574f", "\u58de"],
+    ["\u955c", "\u93e1"],
+    ["\u8138", "\u81c9"],
     ["会", "會"],
     ["个", "個"],
     ["这", "這"],
@@ -131,13 +134,14 @@ function timingsFromWords(words, sentence) {
   return timings;
 }
 
-async function transcribeWithWords({ apiKey, filePath, fileName }) {
+async function transcribeWithWords({ apiKey, filePath, fileName, prompt = "" }) {
   const form = new FormData();
   form.append("model", "whisper-1");
   form.append("file", new Blob([fs.readFileSync(filePath)], { type: "audio/mp4" }), fileName);
   form.append("language", "zh");
   form.append("response_format", "verbose_json");
   form.append("timestamp_granularities[]", "word");
+  if (prompt) form.append("prompt", prompt);
 
   const response = await fetch("https://api.openai.com/v1/audio/transcriptions", {
     method: "POST",
@@ -174,6 +178,7 @@ for (const lesson of units) {
       apiKey,
       filePath,
       fileName: path.basename(filePath),
+      prompt: sentence.spokenText || sentence.text,
     });
 
     const expected = normalizedHanText(sentence.spokenText || sentence.text);

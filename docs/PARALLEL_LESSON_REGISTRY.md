@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L099 | 臉 | request-ready | Codex L099 course production thread | codex/l099-lian-parallel-prep / local | L097:鏡, L098:鼻 | 鏡, 鼻 | `curriculum-workflow/lesson-requests/L099.json`, `curriculum-workflow/generated/L099-generation-packet.md` | `curriculum-workflow/audio-inbox/L099/`, `public/assets/lessons/L099/` | Parallel prep only until L097 and L098 are merged into production. Do not update `src/curriculum/sample-lessons.json`, `docs/CURRICULUM_LEDGER.md`, or `public/tools/planner-data.json` for L099 before dependencies merge. |
+| L099 | 臉 | ready-blocked-by-dependency | Codex L099 course production thread | codex/l099-lian-parallel-prep / 08b1d6f | L097:鏡, L098:鼻 | 鏡, 鼻 | `curriculum-workflow/lesson-requests/L099.json`, `curriculum-workflow/generated/L099-generation-packet.md`, `curriculum-workflow/drafts/L099-draft.json` | `curriculum-workflow/audio-inbox/L099/`, `public/assets/lessons/L099/` | Parallel prep complete: request, packet, reviewed draft, L058-style WebP images, OpenAI audio, and AI charTimings are prepared. Blocked from production until L097 and L098 are merged. Do not update `src/curriculum/sample-lessons.json`, `docs/CURRICULUM_LEDGER.md`, or `public/tools/planner-data.json` for L099 before dependencies merge. |
 
 ## Status Values
 
@@ -86,3 +86,4 @@ npm run curriculum:audit-state
 ```
 
 If another thread changed the registry, rebase first and preserve both threads' rows. Do not delete another active row unless that lesson is already merged or the user explicitly cancels it.
+

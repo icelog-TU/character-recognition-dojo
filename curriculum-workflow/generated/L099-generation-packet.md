@@ -646,3 +646,42 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+
+## Final Parallel-Prepared Draft
+
+This L099 unit has been prepared as a blocked parallel lesson because production `origin/main` is currently complete only through L096. Do not merge this draft into `src/curriculum/sample-lessons.json` until L097「鏡」and L098「鼻」are merged and the lesson is rebased/rechecked.
+
+Prepared files:
+
+- Request: `curriculum-workflow/lesson-requests/L099.json`
+- Draft: `curriculum-workflow/drafts/L099-draft.json`
+- Audio inbox: `curriculum-workflow/audio-inbox/L099/`
+- Final assets: `public/assets/lessons/L099/`
+
+Final reviewed sentences:
+
+| ID | Text | Spoken Text | Focus | Image | Audio |
+|---|---|---|---|---|---|
+| L099-S01 | 鏡子裡有我的臉 | 鏡子裡有我的臉 | 臉 | `/assets/lessons/L099/images/L099-S01.webp` | `/assets/lessons/L099/audio/L099-S01.m4a` |
+| L099-S02 | 臉上有眼也有鼻 | 臉上有眼也有鼻 | 臉 | `/assets/lessons/L099/images/L099-S02.webp` | `/assets/lessons/L099/audio/L099-S02.m4a` |
+| L099-S03 | 我用不到眼鏡 | 我用不到眼鏡 | 用 | `/assets/lessons/L099/images/L099-S03.webp` | `/assets/lessons/L099/audio/L099-S03.m4a` |
+| L099-S04 | 紙人的臉壞掉了 | 紙人的臉壞掉了 | 臉 | `/assets/lessons/L099/images/L099-S04.webp` | `/assets/lessons/L099/audio/L099-S04.m4a` |
+| L099-S05 | 鼻子很有用 | 鼻子很有用 | 用 | `/assets/lessons/L099/images/L099-S05.webp` | `/assets/lessons/L099/audio/L099-S05.m4a` |
+
+Stage 4 fixed games:
+
+- L099-G01 `find-character`: L099-S01, target `臉`
+- L099-G02 `teach-character`: L099-S02, target `臉`, suffix audio `/assets/lessons/L099/audio/L099-G02-suffix.m4a`
+- L099-G03 `missing-character`: L099-S04, target `臉`, options `臉` / `眼` / `鼻`
+- L099-G04 `partial-order`: L099-S03, ordered span `用不到眼鏡`
+- L099-G05 `choose-pronunciation`: L099-S05, correct full sentence plus two full wrong-sentence AI audio files:
+  - `/assets/lessons/L099/audio/L099-G05-wrong-one.m4a`: `鼻子很有眼`
+  - `/assets/lessons/L099/audio/L099-G05-wrong-two.m4a`: `鏡子很有用`
+
+Asset verification performed:
+
+- `npm run tools:check`: passed.
+- `npm run ai:check`: passed.
+- Temporary L099 asset audit with L099 mounted locally: passed with 0 warnings.
+- Temporary L099 `validate:production` with L099 mounted locally: passed.
+- Final production `npm run verify` after restoring production JSON: passed. It warns that `public/assets/lessons/L099/` exists while L099 is not yet in production, which is expected for this blocked parallel lesson.
