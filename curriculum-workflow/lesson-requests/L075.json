@@ -1,0 +1,77 @@
+{
+  "id": "L075",
+  "order": 75,
+  "newChars": [
+    "誰"
+  ],
+  "zhuyin": {
+    "誰": "ㄕㄟˊ"
+  },
+  "title": "誰",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L073",
+    "L074"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "學",
+      "路"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "誰",
+      "路",
+      "學",
+      "出",
+      "畫",
+      "花"
+    ],
+    "targetCharMinimumCount": {
+      "誰": 3
+    },
+    "recentTargetMinimumCounts": {
+      "路": 2,
+      "學": 2,
+      "出": 2,
+      "畫": 1,
+      "花": 1
+    }
+  },
+  "teacherNotes": "Teacher approved L075 new character `誰` and the five final sentences in chat. L073 `學` and L074 `路` are now merged in production; L075 was rechecked after L074 entered latest origin/main. `誰` should be read ㄕㄟˊ in Taiwan Mandarin. Use Taiwan zhuyin only.",
+  "approvedSentences": [
+    {
+      "text": "誰和你一起走路上學？",
+      "spokenText": "誰和你一起走路上學",
+      "focusChar": "誰",
+      "reason": "Practices `誰` in a concrete school-walking question and reviews `路` and `學`."
+    },
+    {
+      "text": "有誰要來學畫畫？",
+      "spokenText": "有誰要來學畫畫",
+      "focusChar": "誰",
+      "reason": "Practices `誰`, reviews `學` and `畫`, and gives a clear art-learning scene."
+    },
+    {
+      "text": "誰要和爸爸一起出門？",
+      "spokenText": "誰要和爸爸一起出門",
+      "focusChar": "誰",
+      "reason": "Practices `誰`, reviews `出`, and creates a family doorway scene."
+    },
+    {
+      "text": "路邊這是誰的家？",
+      "spokenText": "路邊這是誰的家",
+      "focusChar": "誰",
+      "reason": "Practices `誰` while reviewing `路` in a concrete roadside-home scene."
+    },
+    {
+      "text": "我畫不出好看的花",
+      "spokenText": "我畫不出好看的花",
+      "focusChar": "畫",
+      "reason": "Reviews `畫`, `出`, and `花` with a clear drawing scene."
+    }
+  ]
+}

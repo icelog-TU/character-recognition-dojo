@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 74:
+Characters taught after Lesson 75:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰`
 
 Recent review pool for the next lesson:
 
-`路 學 出 畫 了 朵 花 爸 拿 著 包 門 去 大 家 一 起 走 上 我 看 不 來 這 是 山 有 好 多 隻 狗 他 坐 在 邊 沒 和 你 要 書 可 愛`
+`誰 路 學 出 畫 花 和 你 一起 走 上 有 要 來 爸爸 門 邊 家 我 不 好 看 的 這 是 開 大家 去 書 包 裡 可 愛`
 
 ## Visual Continuity Ledger
 
@@ -135,12 +135,13 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L072 | 出 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出 | 他拿出書包裡的花朵 / 我畫不出來，我不要畫了 / 爸爸出門了，我也要出門 / 我看不出他是男是女 / 這個包包上的花朵好可愛 | 他拿書包裡的花朵我畫不來我不要畫了爸爸門了我也要門我看不他是男是女這個包包上的花朵好可愛 | Introduces `出` through taking flowers out of a bag, being unable to draw, going out the door, being unable to tell boy or girl, and a cute flower-pattern bag. Reviews recent `畫`, `了`, `朵`, `花`, and `包`; this was corrected from a mistaken lesson number per teacher instruction. Includes generated images, AI audio, AI-aligned timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L073 | 學 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學 | 我學畫畫，畫出了三朵花 / 我不是鳥，學不會飛 / 我要出門上學了 / 我學會做吃的了，很好吃 / 開學了，大家一起上學去 | 我畫出了三朵花不是鳥不會飛要出門上了會做吃的很開大家一起去 | Introduces `學` through learning to draw, learning to fly, going to school, learning to make food, and school starting. Reviews recent `出`, `畫`, `了`, `朵`, and `花`; includes L058-style generated images, AI audio, AI-aligned/manual-corrected timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L074 | 路 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路 | 爸爸拿著包包出門去了 / 大家一起走路上學 / 我看不出來這是一朵花 / 山路上有好多隻狗 / 他坐在路邊畫畫，沒去上學 | 爸爸拿著包出門去了大家一起走上學我看不來這是一朵花山有好多隻狗他坐在邊畫沒 | Introduces `路` through walking to school, mountain-road, and roadside scenes. Reviews recent `學`, `出`, `畫`, `了`, and `朵`; includes L058-style generated images, AI audio, AI-aligned/manual-corrected timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L075 | 誰 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰 | 誰和你一起走路上學？ / 有誰要來學畫畫？ / 誰要和爸爸一起出門？ / 路邊這是誰的家？ / 我畫不出好看的花 | 誰和你一起走路上學有要來畫爸爸出門邊這是的家我不出好看的花 | Introduces `誰` through child-friendly who-questions about walking to school, learning to draw, going out with dad, and identifying a roadside home. Reviews recent `路`, `學`, `出`, `畫`, and `花`; includes L058-style generated images, AI audio, AI-aligned/manual-corrected timings, dedicated teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | R001 | review module | same as L060 | 一二三，大家一起看鳥飛 / 一個小孩在門前看小鳥 / 女孩和男孩去山下看水 / 大人的手指很大 / 你看，門後也有書 | 一 二 三 人 個 大 的 小 手 有 山 下 水 在 很 家 和 鳥 孩 指 看 女 飛 男 門 前 後 也 | First review module after L060. Introduces no new characters. R001-R002 together cover every new character from L001-L030. Includes reviewed images, AI audio, AI-aligned/manual-reviewed timings, and fixed Stage 4 review games. |
 | R002 | review module | same as L060 | 我在水邊看山上的鳥 / 一隻小鳥飛到高山上 / 人少的山邊比水邊好 / 你和我一起去門前 / 男孩女孩也來看書 | 一 人 的 小 我 山 上 你 水 在 高 和 隻 鳥 孩 看 女 飛 男 門 前 也 | Second review module after L060. Introduces no new characters. Completes the first review pair covering L001-L030. Includes reviewed images, AI audio, AI-aligned timings, and fixed Stage 4 review games. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L074. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L075. Review modules are complete through R002. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
