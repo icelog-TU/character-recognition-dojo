@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L102 | 太 | claimed | Codex / L102 production assets thread | `codex/l102-tai-assets` / pending | L097:鏡, L098:鼻, L099:臉, L100:紅, L101:圓 | 紅 圓 | `curriculum-workflow/lesson-requests/L102.json`; `curriculum-workflow/generated/L102-generation-packet.md` | `curriculum-workflow/audio-inbox/L102/`; `public/assets/lessons/L102/` | Parallel prep only until L100/L101 are merged into latest `origin/main`; do not merge production JSON yet. Teacher-approved target is 太 ㄊㄞˋ. |
+| L102 | 太 | request-ready | Codex / L102 production assets thread | `codex/l102-tai-assets` / `89036d0` | L097:鏡, L098:鼻, L099:臉, L100:紅, L101:圓 | 紅 圓 | `curriculum-workflow/lesson-requests/L102.json`; `curriculum-workflow/generated/L102-generation-packet.md` | `curriculum-workflow/audio-inbox/L102/`; `public/assets/lessons/L102/` | Request and packet prepared branch-only; blocked until L100/L101 are merged into latest `origin/main`; do not merge production JSON yet. Teacher-approved target is 太 ㄊㄞˋ. |
 
 ## Status Values
 
