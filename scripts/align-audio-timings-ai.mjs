@@ -73,6 +73,7 @@ function normalizeTranscribedHanChar(char) {
     ["笔", "筆"],
     ["给", "給"],
     ["纸", "紙"],
+    ["坏", "壞"],
     ["廟", "鳥"],
     ["它", "他"],
     ["她", "他"],
