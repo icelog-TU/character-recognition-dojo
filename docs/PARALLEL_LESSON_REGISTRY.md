@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L101 | 圓 | ready-blocked-by-dependency | Codex / L101 production assets thread | `codex/l101-yuan-assets` / pending | L099:臉, L100:紅 | 臉 紅 | `curriculum-workflow/lesson-requests/L101.json`; `curriculum-workflow/generated/L101-generation-packet.md` | `curriculum-workflow/audio-inbox/L101/`; `public/assets/lessons/L101/` | Assets prepared branch-only; blocked until L099 and L100 are merged into latest `origin/main`; do not merge production JSON yet. Latest `origin/main` already contains L096-L098 and R003/R004. |
+| L101 | 圓 | ready-blocked-by-dependency | Codex / L101 production assets thread | `codex/l101-yuan-assets` / `50a3db3` | L099:臉, L100:紅 | 臉 紅 | `curriculum-workflow/lesson-requests/L101.json`; `curriculum-workflow/generated/L101-generation-packet.md` | `curriculum-workflow/audio-inbox/L101/`; `public/assets/lessons/L101/` | Assets prepared branch-only; blocked until L099 and L100 are merged into latest `origin/main`; do not merge production JSON yet. Latest `origin/main` already contains L096-L098 and R003/R004. |
 
 ## Status Values
 
