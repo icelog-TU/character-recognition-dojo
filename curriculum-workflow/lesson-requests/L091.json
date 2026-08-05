@@ -1,0 +1,90 @@
+{
+  "id": "L091",
+  "order": 91,
+  "newChars": [
+    "子"
+  ],
+  "zhuyin": {
+    "子": "ㄗ˙"
+  },
+  "title": "子",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L086",
+    "L087",
+    "L088",
+    "L089",
+    "L090"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "桌"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "子",
+      "桌",
+      "把",
+      "放",
+      "心",
+      "紙"
+    ],
+    "targetCharMinimumCount": {
+      "子": 3
+    },
+    "recentTargetMinimumCounts": {
+      "桌": 2,
+      "把": 2,
+      "放": 2,
+      "心": 1,
+      "紙": 1
+    },
+    "disallowedChars": [
+      "用",
+      "張",
+      "從",
+      "能",
+      "盒"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L091 課程，目標新字是「子」，注音為台灣注音 ㄗ˙，不使用漢語拼音。重要音檔提醒：「子」在本課作為詞尾輕聲，例如「本子、孩子、樣子」中的「子」，單字音檔也請讀成台灣華語輕聲 ㄗ˙，不要讀成第三聲 ㄗˇ。句子音檔也要確認「本子、孩子、樣子」的「子」讀輕聲。只能使用已學字與 L091 新字「子」，並額外依平行準備納入 provisional learned char：桌。不要使用未學字：用、張、從、能、盒。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。L091 依賴 L086-L090，且 R003/R004 review modules 必須已依 SOP 插入 L090 後；目前 latest origin/main 尚未包含 L090 與 R003/R004，因此此課只做 branch-only 平行準備，不合併 production JSON。",
+  "approvedSentences": [
+    {
+      "text": "桌上放著一個小本子",
+      "spokenText": "桌上放著一個小本子",
+      "focusChar": "子",
+      "reason": "畫面：桌上放著一個小本子，本子清楚可見但不能有文字，旁邊可有筆和紙。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "誰把筆拿走了？",
+      "spokenText": "誰把筆拿走了",
+      "focusChar": "把",
+      "reason": "畫面：孩子在桌邊發現筆不見了，另一個人手上拿著筆或剛把筆拿走，孩子表情疑惑。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "那孩子很開心的樣子",
+      "spokenText": "那孩子很開心的樣子",
+      "focusChar": "子",
+      "reason": "畫面：一個孩子露出很開心的樣子，可能拿著紙愛心或好看的書，表情要清楚呈現開心。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "媽媽把水放在桌上",
+      "spokenText": "媽媽把水放在桌上",
+      "focusChar": "桌",
+      "reason": "畫面：媽媽把水杯或水放在桌上，桌子和水清楚可見，溫暖家庭場景。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "我要更多的紙",
+      "spokenText": "我要更多的紙",
+      "focusChar": "紙",
+      "reason": "畫面：孩子需要更多紙，桌上或手上已有一些紙，孩子向大人表示還想要更多紙。紙張不要有文字。不要有文字、數字、招牌。"
+    }
+  ]
+}
