@@ -1,0 +1,92 @@
+{
+  "id": "L098",
+  "order": 98,
+  "newChars": [
+    "鼻"
+  ],
+  "zhuyin": {
+    "鼻": "ㄅㄧˊ"
+  },
+  "title": "鼻",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L093",
+    "L094",
+    "L095",
+    "L096",
+    "L097"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "用",
+      "鏡"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "鼻",
+      "鏡",
+      "用",
+      "眼",
+      "壞",
+      "掉"
+    ],
+    "targetCharMinimumCount": {
+      "鼻": 3
+    },
+    "recentTargetMinimumCounts": {
+      "鏡": 2,
+      "用": 2,
+      "眼": 2,
+      "壞": 1,
+      "掉": 1
+    },
+    "disallowedChars": [
+      "張",
+      "從",
+      "能",
+      "進",
+      "弄",
+      "睛"
+    ]
+  },
+  "teacherNotes": "這是認字練功房 L098 課程，目標新字是「鼻」，注音為台灣注音 ㄅㄧˊ，不使用漢語拼音。老師已核准五句句子。只能使用已學字與 L098 新字「鼻」；因 L096「用」與 L097「鏡」尚未存在於 latest origin/main，本課只可把「用」「鏡」視為老師明確指定的 provisional learned chars 做平行準備。不要使用未學字：張、從、能、進、弄、睛。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。L098 依賴 L093「掉」、L094「壞」、L095「眼」、L096「用」、L097「鏡」，且 R003/R004 review modules 必須已依 SOP 插入 L090 後；目前 latest origin/main 已包含 L093-L095 與 R003/R004，但尚未包含 L096/L097，因此此課只做 branch-only 平行準備，不合併 production JSON。第 3 句製圖必須畫紙做的人偶或紙人，紙人的鼻子壞掉或脫落，不要畫真人鼻子壞掉。第 5 句製圖是圖畫中的鼻子畫太大，所以不好看；不要畫真人鼻子變大。老師提供的覆蓋統計寫「鼻：5 次」，但五句核准句子實際為 4 次；保留核准句子，以實際可達的至少 3 次作為 request gate。",
+  "approvedSentences": [
+    {
+      "text": "鏡子裡有眼也有鼻",
+      "spokenText": "鏡子裡有眼也有鼻",
+      "focusChar": "鼻",
+      "reason": "畫面：孩子看著鏡子，鏡子裡清楚映出臉上的眼和鼻，鏡子不能有文字或裝飾文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "眼鏡在鼻子上",
+      "spokenText": "眼鏡在鼻子上",
+      "focusChar": "鼻",
+      "reason": "畫面：一個人戴著眼鏡，眼鏡清楚架在鼻子上，臉部溫和自然。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "紙人的鼻子壞掉了",
+      "spokenText": "紙人的鼻子壞掉了",
+      "focusChar": "鼻",
+      "reason": "畫面：一個紙做的人偶或紙人，鼻子部分壞掉或脫落，孩子在旁邊看著；不要畫真人鼻子壞掉。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "用眼看書，用手拿筆",
+      "spokenText": "用眼看書用手拿筆",
+      "focusChar": "用",
+      "reason": "畫面：孩子用眼睛看書，同時用手拿筆，書本和筆清楚可見，書本不能有文字。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "鼻子畫大了，不好看",
+      "spokenText": "鼻子畫大了不好看",
+      "focusChar": "鼻",
+      "reason": "畫面：孩子正在看一張自己畫的人臉圖，圖中的鼻子畫得太大，所以看起來不好看；不要畫真人鼻子變大。圖畫紙上只能有圖像，不能有文字、數字或標籤。"
+    }
+  ]
+}
