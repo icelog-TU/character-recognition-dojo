@@ -1,0 +1,80 @@
+{
+  "id": "L105",
+  "order": 105,
+  "newChars": [
+    "過"
+  ],
+  "zhuyin": {
+    "過": "ㄍㄨㄛˋ"
+  },
+  "title": "過",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L100",
+    "L101",
+    "L102",
+    "L103",
+    "L104"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "難",
+      "得"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "過",
+      "得",
+      "難",
+      "太",
+      "圓",
+      "紅"
+    ],
+    "targetCharMinimumCount": {
+      "過": 3
+    },
+    "recentTargetMinimumCounts": {
+      "得": 2,
+      "難": 2,
+      "太": 2,
+      "圓": 1,
+      "紅": 1
+    }
+  },
+  "teacherNotes": "這是認字練功房 L105 課程，目標新字是「過」，注音為台灣注音 ㄍㄨㄛˋ，不使用漢語拼音。老師已核准五句句子。只能使用已學字、L105 新字「過」，以及老師明確指定的 provisional learned chars：L103「難」、L104「得」。latest origin/main 目前只到 L102「太」，所以 L105 只做 branch-only 平行 production assets，不合併 production JSON，直到 L103/L104 已合併。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是 OpenAI TTS 直接用單一目標字「過」生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。",
+  "approvedSentences": [
+    {
+      "text": "我把紅花做壞了，好難過",
+      "spokenText": "我把紅花做壞了好難過",
+      "focusChar": "過",
+      "reason": "畫面：固定小女孩在桌上做紅色紙花或手作花，不小心把紅花弄壞了，表情難過。紅花要清楚，但不要出現文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "這個我沒吃過，太難吃了",
+      "spokenText": "這個我沒吃過太難吃了",
+      "focusChar": "過",
+      "reason": "畫面：孩子第一次吃一樣新食物，吃了一口後露出驚訝又覺得不好吃的表情。食物要安全、普通、不噁心；不要把畫面做得恐怖或誇張。不要有文字、數字、標籤。"
+    },
+    {
+      "text": "大家難得一起出門",
+      "spokenText": "大家難得一起出門",
+      "focusChar": "得",
+      "reason": "畫面：一家人或幾個固定角色難得一起從家門口出門，大家開心同行。畫面重點是「大家一起出門」和溫暖日常感。不要有文字、門牌、路標、數字或標籤。"
+    },
+    {
+      "text": "這個圓畫得不太圓",
+      "spokenText": "這個圓畫得不太圓",
+      "focusChar": "得",
+      "reason": "畫面：孩子在紙上畫一個圓，但圓形歪歪的、不太圓；孩子看著紙上的圓。紙上只能有圖形，不可有文字、注音、字母、數字或可讀符號。"
+    },
+    {
+      "text": "過來和我一起做吃的",
+      "spokenText": "過來和我一起做吃的",
+      "focusChar": "過",
+      "reason": "畫面：媽媽在廚房溫和叫孩子過來一起做吃的，孩子正走向廚房幫忙。畫面要安全、溫暖，呈現親子一起準備食物。不要有文字、數字、標籤。"
+    }
+  ]
+}
