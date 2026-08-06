@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-06T14:27:29.686Z",
+  "exportedAt": "2026-08-06T14:28:58.859Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -53959,6 +53959,433 @@
               "text": "不要走到學校外面",
               "correct": false,
               "audioSrc": "/assets/lessons/L122/audio/L122-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L123",
+      "order": 123,
+      "newChars": [
+        "黑"
+      ],
+      "zhuyin": {
+        "黑": "ㄏㄟ"
+      },
+      "charAudio": {
+        "黑": "/assets/lessons/L123/audio/char-u9ed1.m4a"
+      },
+      "title": "黑",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Branch-only L123 draft. Depends on L112:棒 through L122:雲 being merged before production release."
+      },
+      "sentences": [
+        {
+          "id": "L123-S01",
+          "text": "雲很黑，要下雨了",
+          "displayLines": [
+            "雲很黑，",
+            "要下雨了"
+          ],
+          "spokenText": "雲很黑要下雨了",
+          "focusChar": "黑",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly outdoor weather scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette even with dark clouds, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, road signs, door plates, UI, watermark, speech bubbles, arrows, or logos. The sky has clouds that have become very dark, clearly suggesting rain will come soon. Show dark rain clouds and near-rain weather clearly, but keep the scene safe and calm. Do not show disaster, scary lightning, frightening storm, dangerous flooding, panic, horror, or a threatening mood.",
+          "imageSrc": "/assets/lessons/L123/images/L123-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L123/audio/L123-S01.m4a",
+            "durationMs": 3618,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 980
+              },
+              {
+                "charIndex": 2,
+                "startMs": 980,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1740,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1980,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2340,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2780
+              }
+            ]
+          }
+        },
+        {
+          "id": "L123-S02",
+          "text": "天黑了，不要出去玩",
+          "displayLines": [
+            "天黑了，",
+            "不要出去玩"
+          ],
+          "spokenText": "天黑了不要出去玩",
+          "focusChar": "黑",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly home scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, warm interior palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, road signs, door plates, UI, watermark, speech bubbles, arrows, or logos. Outside the window or doorway, the sky has turned dark, while inside the home an adult gently reminds a child not to go outside to play. Emphasize a safe warm indoor feeling and calm guidance. Do not show horror, fear, a dangerous street, severe scolding, or threatening darkness.",
+          "imageSrc": "/assets/lessons/L123/images/L123-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L123/audio/L123-S02.m4a",
+            "durationMs": 2856,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1220,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 1710
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1710,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1960,
+                "endMs": 2280
+              }
+            ]
+          }
+        },
+        {
+          "id": "L123-S03",
+          "text": "外面很黑，看不到路",
+          "displayLines": [
+            "外面很黑，",
+            "看不到路"
+          ],
+          "spokenText": "外面很黑看不到路",
+          "focusChar": "黑",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly doorway or window scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, warm interior palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, road signs, door plates, UI, watermark, speech bubbles, arrows, or logos. From inside a safe warm home, the view outside the door or window is very dark, and the path or road outside is hard to see. Keep the image gentle and safe, not scary. Do not show danger, horror, threatening figures, dangerous traffic, cliffs, or fear.",
+          "imageSrc": "/assets/lessons/L123/images/L123-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L123/audio/L123-S03.m4a",
+            "durationMs": 3870,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1980,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2460,
+                "endMs": 2680
+              }
+            ]
+          }
+        },
+        {
+          "id": "L123-S04",
+          "text": "我用黑筆畫雨天的雲",
+          "displayLines": [
+            "我用黑筆",
+            "畫雨天的雲"
+          ],
+          "spokenText": "我用黑筆畫雨天的雲",
+          "focusChar": "黑",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly drawing-at-table scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. The fixed first-person little girl is using a clearly black pen to draw rainy-day clouds on paper. The paper may show only simple pictures of dark clouds and rain, with no text, no numbers, no zhuyin, no letters, and no readable symbols. Make the black pen and cloud drawing clear.",
+          "imageSrc": "/assets/lessons/L123/images/L123-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L123/audio/L123-S04.m4a",
+            "durationMs": 4690,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2040,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2240,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2520,
+                "endMs": 2680
+              }
+            ]
+          }
+        },
+        {
+          "id": "L123-S05",
+          "text": "黑帽子在空地上",
+          "displayLines": [
+            "黑帽子",
+            "在空地上"
+          ],
+          "spokenText": "黑帽子在空地上",
+          "focusChar": "黑",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly open-ground scene, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, road signs, door plates, UI, watermark, speech bubbles, arrows, or logos. A clearly black hat is lying on a safe bright open ground area. Make the hat and the open ground easy to see, with no people required and no dangerous or messy objects.",
+          "imageSrc": "/assets/lessons/L123/images/L123-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L123/audio/L123-S05.m4a",
+            "durationMs": 2763,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1700,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1900,
+                "endMs": 2200
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L123-G01",
+          "type": "find-character",
+          "sentenceId": "L123-S01",
+          "targetChar": "黑",
+          "prompt": "幫小兔子找出這句裡的「黑」。",
+          "missingIndexes": [
+            2
+          ]
+        },
+        {
+          "id": "L123-G02",
+          "type": "teach-character",
+          "sentenceId": "L123-S02",
+          "targetChar": "黑",
+          "targetCharIndex": 1,
+          "prompt": "教小兔子念這個字。",
+          "missingIndexes": [
+            1
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L123/audio/L123-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L123/audio/L123-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L123-G03",
+          "type": "missing-character",
+          "sentenceId": "L123-S03",
+          "targetChar": "黑",
+          "prompt": "幫小兔子選出空格裡少掉的字。",
+          "missingIndexes": [
+            3
+          ],
+          "options": [
+            {
+              "id": "hei",
+              "text": "黑",
+              "correct": true
+            },
+            {
+              "id": "yun",
+              "text": "雲",
+              "correct": false
+            },
+            {
+              "id": "yu",
+              "text": "雨",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L123-G04",
+          "type": "partial-order",
+          "sentenceId": "L123-S04",
+          "targetChar": "雨",
+          "prompt": "幫小兔子把少掉的字排回句子裡。",
+          "missingIndexes": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "options": [
+            {
+              "id": "yu",
+              "text": "雨",
+              "correct": true
+            },
+            {
+              "id": "tian",
+              "text": "天",
+              "correct": true
+            },
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            },
+            {
+              "id": "yun",
+              "text": "雲",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L123-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L123-S05",
+          "targetChar": "黑",
+          "prompt": "請先聽每個朋友念，再幫小兔子選出念對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "黑帽子在空地上",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L123/audio/L123-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "黑帽子在草地上",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L123/audio/L123-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "黑盒子在空地上",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L123/audio/L123-G05-wrong-two.m4a"
             }
           ]
         }

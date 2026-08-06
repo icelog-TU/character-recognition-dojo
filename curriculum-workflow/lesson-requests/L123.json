@@ -1,0 +1,105 @@
+{
+  "id": "L123",
+  "order": 123,
+  "newChars": [
+    "黑"
+  ],
+  "zhuyin": {
+    "黑": "ㄏㄟ"
+  },
+  "title": "黑",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L112",
+    "L113",
+    "L114",
+    "L115",
+    "L116",
+    "L117",
+    "L118",
+    "L119",
+    "L120",
+    "L121",
+    "L122"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "黑",
+      "雲",
+      "雨",
+      "天",
+      "空",
+      "外"
+    ],
+    "targetCharMinimumCount": {
+      "黑": 3
+    },
+    "recentTargetMinimumCounts": {
+      "雲": 2,
+      "雨": 2,
+      "天": 2,
+      "空": 1,
+      "外": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-approved L123 sentence set for 黑. Branch-only provisional work depends on L112:棒 through L122:雲 before production merge; teacher-provided direct dependency focus is L118-L122. Use Taiwan zhuyin and Taiwan wording. Do not use Hanyu pinyin. SpokenText must equal text with punctuation removed. Sentence images must use the L058 style anchors and must not contain readable text, numbers, labels, zhuyin, letters, signs, door plates, road signs, school names, or UI. Dark-weather scenes must stay safe, warm, and non-scary: no disaster, no threatening darkness, no horror, no dangerous streets, no frightening lightning. Production audio must use AI audio -> assets:audio -> assets:align:ai. Character audio char-u9ed1.m4a must be standalone AI TTS for 黑, not cut from sentence audio. G05 wrong-choice audio must be generated as complete wrong sentences, not spliced.",
+  "approvedSentences": [
+    {
+      "text": "雲很黑，要下雨了",
+      "spokenText": "雲很黑要下雨了",
+      "focusChar": "黑",
+      "hanCharCount": 7,
+      "imageContext": "天空中的雲變得很黑，看起來快要下雨。畫面要清楚呈現黑雲和將要下雨的天氣，但不要有災害、閃電恐怖感或危險場景。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "天黑了，不要出去玩",
+      "spokenText": "天黑了不要出去玩",
+      "focusChar": "黑",
+      "hanCharCount": 8,
+      "imageContext": "外面天色變黑，家中大人溫和提醒孩子不要出去玩。畫面要表現天黑和室內安全感，不要恐怖、不要危險街景。不要有文字、數字、門牌、標籤、注音或字母。"
+    },
+    {
+      "text": "外面很黑，看不到路",
+      "spokenText": "外面很黑看不到路",
+      "focusChar": "黑",
+      "hanCharCount": 8,
+      "imageContext": "門外或窗外很黑，路看不清楚。畫面要安全、溫和，不要恐怖或危險；可從室內看向外面的黑暗路面。不要有文字、數字、路牌、門牌、標籤、注音或字母。"
+    },
+    {
+      "text": "我用黑筆畫雨天的雲",
+      "spokenText": "我用黑筆畫雨天的雲",
+      "focusChar": "黑",
+      "hanCharCount": 9,
+      "imageContext": "固定小女孩在紙上用黑筆畫雨天的雲。紙上只能有圖像，不能有文字、數字、注音、字母或可讀符號；黑筆和雲的圖像要清楚。"
+    },
+    {
+      "text": "黑帽子在空地上",
+      "spokenText": "黑帽子在空地上",
+      "focusChar": "黑",
+      "hanCharCount": 7,
+      "imageContext": "一頂黑帽子放在安全明亮的空地上，帽子和空地要清楚可見。不要有文字、數字、標籤、注音或字母。"
+    }
+  ]
+}
