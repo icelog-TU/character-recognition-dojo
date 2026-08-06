@@ -1,0 +1,93 @@
+{
+  "id": "L110",
+  "order": 110,
+  "newChars": [
+    "打"
+  ],
+  "zhuyin": {
+    "打": "ㄉㄚˇ"
+  },
+  "title": "打",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L105",
+    "L106",
+    "L107",
+    "L108",
+    "L109"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "打",
+      "玩",
+      "點",
+      "幾",
+      "分",
+      "過"
+    ],
+    "targetCharMinimumCount": {
+      "打": 3
+    },
+    "recentTargetMinimumCounts": {
+      "玩": 2,
+      "點": 2,
+      "幾": 2,
+      "分": 1,
+      "過": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-approved L110 sentence set for 打. Branch-only provisional work depends on L105:過, L106:分, L107:幾, L108:點, and L109:玩 before production merge. Use Taiwan zhuyin and Taiwan wording. Do not use Hanyu pinyin. SpokenText must equal text with punctuation removed. Sentence images must use the L058 style anchors and must not contain readable text, numbers, labels, zhuyin, letters, signs, door plates, or UI. Images involving 打 must be gentle and safe, not violent, scary, injured, or severely crying. Production audio must use AI audio -> assets:audio -> assets:align:ai. Character audio char-u6253.m4a must be standalone AI TTS for 打, not cut from sentence audio. G05 wrong-choice audio must be generated as complete wrong sentences, not spliced.",
+  "approvedSentences": [
+    {
+      "text": "一起玩，不要打人。",
+      "spokenText": "一起玩不要打人",
+      "focusChar": "打",
+      "hanCharCount": 7,
+      "imageContext": "幾個孩子一起玩，其中一個大人或孩子溫和提醒不要打人。畫面要呈現友善提醒與安全遊戲，不要畫成暴力、受傷、哭鬧或恐怖場景；不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "後門有點難打開。",
+      "spokenText": "後門有點難打開",
+      "focusChar": "打",
+      "hanCharCount": 7,
+      "imageContext": "孩子或大人站在後門旁，試著把後門打開，但門有點卡住、難打開。畫面要安全、日常，不要有危險感。不要有門牌、文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "多分給我一點",
+      "spokenText": "多分給我一點",
+      "focusChar": "點",
+      "hanCharCount": 6,
+      "imageContext": "孩子在分點心或食物時，另一個孩子希望多分給他一點。畫面要溫和、分享情境，不要畫成爭搶或吵架。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "他打我，我不要玩了",
+      "spokenText": "他打我我不要玩了",
+      "focusChar": "打",
+      "hanCharCount": 8,
+      "imageContext": "孩子在遊戲中被另一個孩子打到，表情不開心，表示不想玩了。畫面要處理得溫和，不要有暴力衝擊、受傷、哭得很嚴重或恐怖感；可以畫成孩子退開、舉手保護自己，旁邊有大人準備協助。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "你幾點幾分過來？",
+      "spokenText": "你幾點幾分過來",
+      "focusChar": "幾",
+      "hanCharCount": 7,
+      "imageContext": "固定小女孩在家裡打電話問固定小男孩幾點幾分過來；小男孩不在女孩家門口，可在另一端家中或電話分隔構圖呈現。不要有時鐘數字、電話螢幕文字、門牌、標籤、注音、字母或任何可讀文字。"
+    }
+  ]
+}
