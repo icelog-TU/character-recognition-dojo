@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L121 | 雨 | claimed | Codex / L121 production assets thread | `codex/l121-yu-assets` / pending | L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面, L118:外, L119:空, L120:天 | 棒 頭 帽 草 地 面 外 空 天 | `curriculum-workflow/lesson-requests/L121.json`; `curriculum-workflow/generated/L121-generation-packet.md`; `curriculum-workflow/drafts/L121-draft.json` | `curriculum-workflow/audio-inbox/L121/`; `public/assets/lessons/L121/` | Parallel prep only until L112-L120 are merged into latest `origin/main`; do not merge production JSON yet. Teacher-approved target is 雨 ㄩˇ. |
 
 ## Status Values
 
