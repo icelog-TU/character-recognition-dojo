@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 100:
+Characters taught after Lesson 101:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓`
 
 Recent review pool for the next lesson:
 
-`紅 臉 鼻 鏡 用 眼 壞 掉 盒 子 桌 把 放 心 紙 給`
+`圓 紅 臉 鼻 鏡 用 眼 壞 掉 盒 子 桌 把 放 心 紙`
 
 ## Visual Continuity Ledger
 
@@ -165,10 +165,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L098 | 鼻 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻 | 鏡子裡有眼也有鼻 / 眼鏡在鼻子上 / 紙人的鼻子壞掉了 / 用眼看書，用手拿筆 / 鼻子畫大了，不好看 | 鏡用 | Introduces `鼻` through mirror reflections, glasses resting on a nose, and a paper doll nose. Reviews recent `鏡` and `用`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L099 | 臉 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉 | 鏡子裡有我的臉 / 臉上有眼也有鼻 / 我用不到眼鏡 / 紙人的臉壞掉了 / 鼻子很有用 | 鼻用 | Introduces `臉` through mirror reflection, facial features, and a paper doll face. Reviews recent `鼻` and `用`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L100 | 紅 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅 | 他臉上有個大紅鼻子 / 他的紅鼻子掉了 / 水邊開著很多紅花 / 女孩紅著臉看鏡子 / 我用紅筆畫眼鏡 | 臉鼻 | Introduces `紅` through a red nose prop, many red flowers, red cheeks, and drawing glasses with a red pen. Reviews recent `臉` and `鼻`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L101 | 圓 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓 | 圓圓的紅臉很好看 / 圓桌上放著眼鏡 / 這個盒子是圓的 / 我用紅筆畫鼻子 / 他的鼻子和臉一樣圓 | 紅臉鼻鏡用 | Introduces `圓` through round red cheeks, a round table, a round box, and round face/nose comparison. Reviews recent `紅`, `臉`, `鼻`, `鏡`, `用`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L100. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L101. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
