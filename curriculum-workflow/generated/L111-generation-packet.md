@@ -7,7 +7,7 @@
 - 新字：球
 - 注音：球=ㄑㄧㄡˊ
 - 目標句數：5
-- 教師備註：Use the teacher-approved L111 sentences exactly. L111 is branch-only until L105-L110 dependencies enter production. L111 sentence 3 uses 過, so L105 is recorded as an indirect provisional dependency even though the main five preceding provisional lessons are L106-L110. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Image assets should follow the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, or letters. Generate standalone AI audio for 球 as public/assets/lessons/L111/audio/char-u7403.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.
+- 教師備註：Use the teacher-approved L111 sentences exactly. L111 is branch-only until L106-L110 dependencies enter production. L111 sentence 3 uses 過, which is already production in L105 on latest main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Image assets should follow the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, or letters. Generate standalone AI audio for 球 as public/assets/lessons/L111/audio/char-u7403.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.
 
 ## 已學字邊界
 
