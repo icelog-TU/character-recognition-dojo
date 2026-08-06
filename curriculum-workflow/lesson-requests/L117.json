@@ -1,0 +1,96 @@
+{
+  "id": "L117",
+  "order": 117,
+  "newChars": [
+    "面"
+  ],
+  "zhuyin": {
+    "面": "ㄇㄧㄢˋ"
+  },
+  "title": "面",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L110",
+    "L111",
+    "L112",
+    "L113",
+    "L114",
+    "L115",
+    "L116"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "面",
+      "地",
+      "草",
+      "帽",
+      "頭",
+      "棒"
+    ],
+    "targetCharMinimumCount": {
+      "面": 3
+    },
+    "recentTargetMinimumCounts": {
+      "地": 2,
+      "草": 2,
+      "帽": 2,
+      "頭": 1,
+      "棒": 1
+    }
+  },
+  "teacherNotes": "這是認字練功房 L117 課程，目標新字是「面」，注音為台灣注音 ㄇㄧㄢˋ，不使用漢語拼音。老師已核准五句句子。只能使用 latest origin/main 已學字、L117 新字「面」，以及 provisional dependency chars：L110「打」、L111「球」、L112「棒」、L113「頭」、L114「帽」、L115「草」、L116「地」。老師列出的直接前五課依賴是 L112-L116；因定稿句子使用「球」，L111 也是實際文字依賴，L110 則為 ordered release lane 前置。L117 只做 branch-only production assets，不合併 production JSON，直到 L110-L116 已合併並重新審核。台灣用字，spokenText 必須等於 text 去掉標點。第 5 句 text 含問號，spokenText 必須去掉問號。圖片使用 L058 風格參考，且不得出現文字、數字、門牌、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是 OpenAI TTS 直接用單一目標字「面」生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。Stage 4 choose-pronunciation 的錯誤選項音檔必須用完整錯誤句子獨立生成，不可拼接或裁切。",
+  "approvedSentences": [
+    {
+      "text": "水面下有水草",
+      "spokenText": "水面下有水草",
+      "focusChar": "面",
+      "hanCharCount": 6,
+      "reason": "清澈安全的水面下可以看見水草。畫面要清楚表現水面和水面下的水草，可用池塘、淺水或透明水景，但不要有危險深水感。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "草地上面有一隻鳥",
+      "spokenText": "草地上面有一隻鳥",
+      "focusChar": "面",
+      "hanCharCount": 8,
+      "reason": "安全明亮的草地上面停著一隻小鳥。草地和小鳥要清楚，畫面溫和自然。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "球棒在盒子裡頭",
+      "spokenText": "球棒在盒子裡頭",
+      "focusChar": "頭",
+      "hanCharCount": 7,
+      "reason": "一支安全兒童球棒放在打開的盒子裡頭。盒子和球棒要清楚，球棒不要像武器。盒子不可有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "帽子裡面有球",
+      "spokenText": "帽子裡面有球",
+      "focusChar": "面",
+      "hanCharCount": 6,
+      "reason": "一頂帽子放在桌上或地上，帽子裡面有一顆球。帽子和球都要清楚可見，畫面簡單明亮。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "地上的帽子是誰的？",
+      "spokenText": "地上的帽子是誰的",
+      "focusChar": "地",
+      "hanCharCount": 8,
+      "reason": "地上有一頂帽子，固定小女孩或孩子看著帽子，好奇這頂帽子是誰的。畫面要清楚呈現帽子在地上；不要有文字、數字、標籤、注音或字母。"
+    }
+  ]
+}

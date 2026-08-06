@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 116:
+Characters taught after Lesson 117:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面`
 
 Recent review pool for the next lesson:
 
-`地 草 帽 頭 棒 球 打 玩 點 幾 分 過 得 難 太 圓`
+`面 地 草 帽 頭 棒 球 打 玩 點 幾 分 過 得 難 太`
 
 ## Visual Continuity Ledger
 
@@ -181,10 +181,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L114 | 帽 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽 | 你頭上的花帽很好看 / 我要和他一樣的棒球帽 / 帽子和球棒分開放 / 小心不要打到頭 / 不要拿鏡子去玩 | 頭棒球打玩點 | Introduces `帽` through approved sentence contexts. Reviews recent `頭`, `棒`, `球`, `打`, `玩`, and `點`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L115 | 草 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草 | 水邊的花草很好看 / 媽媽頭上的草帽很好看 / 鳥飛到草裡，看不到了 / 這裡頭好棒，好大！ / 找不到棒球帽，我不去打球了 | 帽頭棒球打玩 | Introduces `草` through approved sentence contexts. Reviews recent `帽`, `頭`, `棒`, `球`, `打`, and `玩`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L116 | 地 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地 | 好幾個人在草地上玩球 / 草帽掉到地上了 / 這裡是打棒球的好地點 / 紙人頭上的花帽是我做的 / 我在紙人的頭上放一朵花 | 草帽頭棒球打 | Introduces `地` through approved sentence contexts. Reviews recent `草`, `帽`, `頭`, `棒`, `球`, and `打`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L117 | 面 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面 | 水面下有水草 / 草地上面有一隻鳥 / 球棒在盒子裡頭 / 帽子裡面有球 / 地上的帽子是誰的？ | 地草帽頭棒球 | Introduces `面` through approved sentence contexts. Reviews recent `地`, `草`, `帽`, `頭`, `棒`, and `球`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L116. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L117. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
