@@ -1,0 +1,95 @@
+{
+  "id": "L111",
+  "order": 111,
+  "newChars": [
+    "球"
+  ],
+  "zhuyin": {
+    "球": "ㄑㄧㄡˊ"
+  },
+  "title": "球",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L105",
+    "L106",
+    "L107",
+    "L108",
+    "L109",
+    "L110"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "球",
+      "打",
+      "玩",
+      "點",
+      "幾",
+      "分"
+    ],
+    "targetCharMinimumCount": {
+      "球": 3
+    },
+    "recentTargetMinimumCounts": {
+      "打": 2,
+      "玩": 2,
+      "點": 2,
+      "幾": 1,
+      "分": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Use the teacher-approved L111 sentences exactly. L111 is branch-only until L105-L110 dependencies enter production. L111 sentence 3 uses 過, so L105 is recorded as an indirect provisional dependency even though the main five preceding provisional lessons are L106-L110. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Image assets should follow the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, or letters. Generate standalone AI audio for 球 as public/assets/lessons/L111/audio/char-u7403.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.",
+  "approvedSentences": [
+    {
+      "text": "我和你一起玩球",
+      "spokenText": "我和你一起玩球",
+      "focusChar": "球",
+      "hanCharCount": 7,
+      "scene": "固定小女孩和固定小男孩一起在安全明亮的草地、教室遊戲區或家中空地玩球。球要清楚可見，畫面溫暖友善。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "有好幾個人在打球",
+      "spokenText": "有好幾個人在打球",
+      "focusChar": "球",
+      "hanCharCount": 8,
+      "scene": "安全明亮的遊戲場或草地上，有好幾個人在打球。人數可用多人畫面呈現，但不要用文字或數字標示。球要清楚，動作要安全，不要激烈碰撞。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "他三點會過來玩",
+      "spokenText": "他三點會過來玩",
+      "focusChar": "點",
+      "hanCharCount": 7,
+      "scene": "固定小女孩在家裡和大人或朋友說，固定「他」小男孩三點會過來玩；也可畫固定小女孩看著無數字時鐘或準備玩具等朋友。不要出現可讀時鐘數字、文字、門牌、標籤、注音或字母。"
+    },
+    {
+      "text": "是誰把點心盒子打開的？",
+      "spokenText": "是誰把點心盒子打開的",
+      "focusChar": "打",
+      "hanCharCount": 10,
+      "scene": "桌上的點心盒子被打開了，孩子或媽媽疑惑地看著打開的盒子，正在問是誰打開的。盒子和點心要清楚，情境溫和不要像責罵。盒子上不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "大球、小球分開放",
+      "spokenText": "大球小球分開放",
+      "focusChar": "球",
+      "hanCharCount": 7,
+      "scene": "桌上、地墊上或收納區有大球和小球，孩子把大球放一邊、小球放另一邊，清楚呈現分開放。不要有文字、數字、標籤、注音或字母。"
+    }
+  ]
+}
