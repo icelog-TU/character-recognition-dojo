@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-06T14:21:54.715Z",
+  "exportedAt": "2026-08-06T14:24:04.836Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -52620,6 +52620,452 @@
               "text": "出去外面要拿著帽子",
               "correct": false,
               "audioSrc": "/assets/lessons/L119/audio/L119-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L120",
+      "order": 120,
+      "newChars": [
+        "天"
+      ],
+      "zhuyin": {
+        "天": "ㄊㄧㄢ"
+      },
+      "charAudio": {
+        "天": "/assets/lessons/L120/audio/char-u5929.m4a"
+      },
+      "title": "天",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Branch-only L120 draft. Depends on L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面, L118:外, and L119:空 being merged before production release."
+      },
+      "sentences": [
+        {
+          "id": "L120-S01",
+          "text": "鳥在天空飛，人在地面走。",
+          "displayLines": [
+            "鳥在天空飛，",
+            "人在地面走。"
+          ],
+          "spokenText": "鳥在天空飛人在地面走",
+          "focusChar": "天",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly outdoor scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, door plates, school names, UI, watermark, speech bubbles, arrows, or logos. A bird is flying in the open bright sky while one person walks safely on the ground below. Compose the picture to clearly contrast the sky above and the ground below. Keep it safe and calm with no dangerous height, falling feeling, cliffs, fear, or emergency.",
+          "imageSrc": "/assets/lessons/L120/images/L120-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L120/audio/L120-S01.m4a",
+            "durationMs": 6863,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 540
+              },
+              {
+                "charIndex": 1,
+                "startMs": 540,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1340,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1800,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2020,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 5,
+                "startMs": 3600,
+                "endMs": 3700
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3700,
+                "endMs": 4380
+              },
+              {
+                "charIndex": 7,
+                "startMs": 4380,
+                "endMs": 4700
+              },
+              {
+                "charIndex": 8,
+                "startMs": 4700,
+                "endMs": 5020
+              },
+              {
+                "charIndex": 9,
+                "startMs": 5020,
+                "endMs": 5680
+              }
+            ]
+          }
+        },
+        {
+          "id": "L120-S02",
+          "text": "我不要天天上學。",
+          "displayLines": [
+            "我不要",
+            "天天上學。"
+          ],
+          "spokenText": "我不要天天上學",
+          "focusChar": "天",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly home or school-entry scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, door plates, school names, UI, watermark, speech bubbles, arrows, or logos. The fixed first-person little girl is at home or near a school entrance with her school bag or school things nearby, gently showing that she does not want to go to school every day. Her expression is mildly unwilling, not exaggerated. Keep the mood warm and calm, with no severe crying, tantrum, scolding, or distress.",
+          "imageSrc": "/assets/lessons/L120/images/L120-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L120/audio/L120-S02.m4a",
+            "durationMs": 3586,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 650
+              },
+              {
+                "charIndex": 2,
+                "startMs": 650,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2340
+              }
+            ]
+          }
+        },
+        {
+          "id": "L120-S03",
+          "text": "外面的天空很好看。",
+          "displayLines": [
+            "外面的天空",
+            "很好看。"
+          ],
+          "spokenText": "外面的天空很好看",
+          "focusChar": "天",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly doorway or window scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, door plates, school names, UI, watermark, speech bubbles, arrows, or logos. The fixed first-person little girl looks out from a doorway, window, or from outside at a beautiful bright sky. Make the sky clearly lovely, open, and visually important while keeping the child and setting warm and natural.",
+          "imageSrc": "/assets/lessons/L120/images/L120-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L120/audio/L120-S03.m4a",
+            "durationMs": 3460,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1060,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1340,
+                "endMs": 1830
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1830,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 2660
+              }
+            ]
+          }
+        },
+        {
+          "id": "L120-S04",
+          "text": "小鳥飛過門前的空地",
+          "displayLines": [
+            "小鳥飛過",
+            "門前的空地"
+          ],
+          "spokenText": "小鳥飛過門前的空地",
+          "focusChar": "空",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly home-front outdoor scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, door plates, school names, UI, watermark, speech bubbles, arrows, or logos. A small bird flies across a safe bright open space in front of a home door. The empty open ground in front of the door should be clearly visible and child-safe, with no hazards or clutter.",
+          "imageSrc": "/assets/lessons/L120/images/L120-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L120/audio/L120-S04.m4a",
+            "durationMs": 4026,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1780,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2240,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2420,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2740,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2960,
+                "endMs": 3120
+              }
+            ]
+          }
+        },
+        {
+          "id": "L120-S05",
+          "text": "門外有小狗在草地上玩。",
+          "displayLines": [
+            "門外有小狗",
+            "在草地上玩。"
+          ],
+          "spokenText": "門外有小狗在草地上玩",
+          "focusChar": "外",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly home-front outdoor scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, door plates, school names, UI, watermark, speech bubbles, arrows, or logos. Outside the door, a cute small dog is playing on the grass. Make the outside-door location, grassy ground, and playful dog clear, warm, safe, and friendly.",
+          "imageSrc": "/assets/lessons/L120/images/L120-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L120/audio/L120-S05.m4a",
+            "durationMs": 4277,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1240,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1520,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2480,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2700,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3020,
+                "endMs": 3220
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L120-G01",
+          "type": "find-character",
+          "sentenceId": "L120-S01",
+          "targetChar": "天",
+          "prompt": "幫小兔子找出這句裡的「天」。",
+          "missingIndexes": [
+            2
+          ]
+        },
+        {
+          "id": "L120-G02",
+          "type": "teach-character",
+          "sentenceId": "L120-S02",
+          "targetChar": "天",
+          "targetCharIndex": 3,
+          "prompt": "教小兔子念這個字。",
+          "missingIndexes": [
+            3
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L120/audio/L120-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L120/audio/L120-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L120-G03",
+          "type": "missing-character",
+          "sentenceId": "L120-S03",
+          "targetChar": "天",
+          "prompt": "幫小兔子選出空格裡少掉的字。",
+          "missingIndexes": [
+            3
+          ],
+          "options": [
+            {
+              "id": "tian",
+              "text": "天",
+              "correct": true
+            },
+            {
+              "id": "kong",
+              "text": "空",
+              "correct": false
+            },
+            {
+              "id": "wai",
+              "text": "外",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L120-G04",
+          "type": "partial-order",
+          "sentenceId": "L120-S04",
+          "targetChar": "空",
+          "prompt": "幫小兔子把少掉的字排回句子裡。",
+          "missingIndexes": [
+            6,
+            7,
+            8
+          ],
+          "options": [
+            {
+              "id": "de",
+              "text": "的",
+              "correct": true
+            },
+            {
+              "id": "kong",
+              "text": "空",
+              "correct": true
+            },
+            {
+              "id": "di",
+              "text": "地",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L120-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L120-S05",
+          "targetChar": "外",
+          "prompt": "請先聽每個朋友念，再幫小兔子選出念對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "門外有小狗在草地上玩",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L120/audio/L120-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "門前有小狗在草地上玩",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L120/audio/L120-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "門外有小鳥在草地上玩",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L120/audio/L120-G05-wrong-two.m4a"
             }
           ]
         }

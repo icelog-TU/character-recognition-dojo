@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 119:
+Characters taught after Lesson 120:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天`
 
 Recent review pool for the next lesson:
 
-`空 外 面 地 草 帽 頭 棒 球 打 玩 點 幾 分 過 得`
+`天 空 外 面 地 草 帽 頭 棒 球 打 玩 點 幾 分 過`
 
 ## Visual Continuity Ledger
 
@@ -184,10 +184,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L117 | 面 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面 | 水面下有水草 / 草地上面有一隻鳥 / 球棒在盒子裡頭 / 帽子裡面有球 / 地上的帽子是誰的？ | 地草帽頭棒球 | Introduces `面` through approved sentence contexts. Reviews recent `地`, `草`, `帽`, `頭`, `棒`, and `球`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L118 | 外 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外 | 門外站著一個沒看過的人 / 他帶著草帽去外面玩 / 地面上有很多小草 / 學校外頭是山，裡頭是草地 / 那本書是同學借給我的 | 面地草帽頭棒 | Introduces `外` through approved sentence contexts. Reviews recent `面`, `地`, `草`, `帽`, `頭`, and `棒`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L119 | 空 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空 | 門外有一個空地 / 空地上有很多草。 / 盒子裡面是空的。 / 不要兩手空空地出門 / 出去外面要帶著帽子 | 外面地草帽頭 | Introduces `空` through approved sentence contexts. Reviews recent `外`, `面`, `地`, `草`, `帽`, and `頭`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L120 | 天 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天 | 鳥在天空飛，人在地面走。 / 我不要天天上學。 / 外面的天空很好看。 / 小鳥飛過門前的空地 / 門外有小狗在草地上玩。 | 空外面地草帽 | Introduces `天` through approved sentence contexts. Reviews recent `空`, `外`, `面`, `地`, `草`, and `帽`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L119. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L120. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
