@@ -1,0 +1,103 @@
+{
+  "id": "L122",
+  "order": 122,
+  "newChars": [
+    "雲"
+  ],
+  "zhuyin": {
+    "雲": "ㄩㄣˊ"
+  },
+  "title": "雲",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L112",
+    "L113",
+    "L114",
+    "L115",
+    "L116",
+    "L117",
+    "L118",
+    "L119",
+    "L120",
+    "L121"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "雲",
+      "雨",
+      "天",
+      "空",
+      "外",
+      "面"
+    ],
+    "targetCharMinimumCount": {
+      "雲": 3
+    },
+    "recentTargetMinimumCounts": {
+      "雨": 2,
+      "天": 2,
+      "空": 2,
+      "外": 1,
+      "面": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Use the teacher-approved L122 sentences exactly. L122 is branch-only until L112-L121 dependencies enter production. User direct dependencies are L117:面, L118:外, L119:空, L120:天, and L121:雨; L112-L116 are listed for ordered release. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, door plates, license plates, UI, or watermarks. Rain scenes must be safe and gentle, not storm, flood, lightning, disaster, horror, or dangerous scenes. Image notes may include an umbrella or rain gear for sentence 4, but 傘 must not enter text or spokenText. Generate standalone AI audio for 雲 as public/assets/lessons/L122/audio/char-u96f2.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.",
+  "approvedSentences": [
+    {
+      "text": "雨天，天上有很多雲",
+      "spokenText": "雨天天上有很多雲",
+      "focusChar": "雲",
+      "hanCharCount": 8,
+      "scene": "雨天的天空中有很多雲，畫面要清楚呈現天上有多朵雲和下雨天的感覺。雨勢溫和，不要有災害、閃電恐怖感或危險場景。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "我用紙做一朵雲",
+      "spokenText": "我用紙做一朵雲",
+      "focusChar": "雲",
+      "hanCharCount": 7,
+      "scene": "固定小女孩在桌上用紙做一朵雲形狀的手作品。紙雲要清楚，桌上可有紙和手作材料，但紙張上不可有文字、數字、注音、字母或可讀符號。"
+    },
+    {
+      "text": "水面上有天空的雲",
+      "spokenText": "水面上有天空的雲",
+      "focusChar": "雲",
+      "hanCharCount": 8,
+      "scene": "平靜清澈的水面上倒映著天空中的雲。畫面要讓孩子看出水面和天空的雲影，不要畫成雲真的掉進水裡。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "下雨天不要空手出門",
+      "spokenText": "下雨天不要空手出門",
+      "focusChar": "雨",
+      "hanCharCount": 9,
+      "scene": "下雨天，大人拿著雨傘或雨具，溫和提醒孩子不要空手出門。注意：「傘」不可出現在 text/spokenText，只能在圖像中呈現。畫面要溫和、安全，不要有暴雨災害感。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "不要走去學校外面",
+      "spokenText": "不要走去學校外面",
+      "focusChar": "外",
+      "hanCharCount": 8,
+      "scene": "孩子在學校裡，大人或老師溫和提醒不要自己走去學校外面。畫面要清楚區分學校裡和學校外面，但不可有校名、招牌、文字、門牌、數字、標籤、注音或字母。情境要安全，不要有恐怖或危險感。"
+    }
+  ]
+}

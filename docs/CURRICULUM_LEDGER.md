@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 121:
+Characters taught after Lesson 122:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲`
 
 Recent review pool for the next lesson:
 
-`雨 天 空 外 面 地 草 帽 頭 棒 球 打 玩 點 幾 分`
+`雲 雨 天 空 外 面 地 草 帽 頭 棒 球 打 玩 點 幾`
 
 ## Visual Continuity Ledger
 
@@ -186,10 +186,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L119 | 空 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空 | 門外有一個空地 / 空地上有很多草。 / 盒子裡面是空的。 / 不要兩手空空地出門 / 出去外面要帶著帽子 | 外面地草帽頭 | Introduces `空` through approved sentence contexts. Reviews recent `外`, `面`, `地`, `草`, `帽`, and `頭`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L120 | 天 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天 | 鳥在天空飛，人在地面走。 / 我不要天天上學。 / 外面的天空很好看。 / 小鳥飛過門前的空地 / 門外有小狗在草地上玩。 | 空外面地草帽 | Introduces `天` through approved sentence contexts. Reviews recent `空`, `外`, `面`, `地`, `草`, and `帽`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L121 | 雨 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨 | 外面下雨了，不要出去玩。 / 下雨天，路上空空都沒人。 / 天天下雨，我不開心。 / 門外的地面都是水。 / 有一個圓臉紅鼻子的人 | 天空外面地草 | Introduces `雨` through approved sentence contexts. Reviews recent `天`, `空`, `外`, `面`, `地`, and `草`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L122 | 雲 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲 | 雨天，天上有很多雲 / 我用紙做一朵雲 / 水面上有天空的雲 / 下雨天不要空手出門 / 不要走去學校外面 | 雨天空外面地 | Introduces `雲` through approved sentence contexts. Reviews recent `雨`, `天`, `空`, `外`, `面`, and `地`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L121. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L122. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

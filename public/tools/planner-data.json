@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-06T14:25:24.876Z",
+  "exportedAt": "2026-08-06T14:27:29.686Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -53527,6 +53527,438 @@
               "text": "有一個圓臉大鼻子的人",
               "audioSrc": "/assets/lessons/L121/audio/L121-G05-wrong-two.m4a",
               "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L122",
+      "order": 122,
+      "newChars": [
+        "雲"
+      ],
+      "zhuyin": {
+        "雲": "ㄩㄣˊ"
+      },
+      "charAudio": {
+        "雲": "/assets/lessons/L122/audio/char-u96f2.m4a"
+      },
+      "title": "雲",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Branch-only production asset preparation for L122:雲. User direct dependencies are L117:面, L118:外, L119:空, L120:天, and L121:雨. L112-L116 are also listed for ordered release. Do not merge production JSON until L112-L121 exist in latest origin/main and the allowed-character audit is rerun."
+      },
+      "sentences": [
+        {
+          "id": "L122-S01",
+          "text": "雨天，天上有很多雲",
+          "displayLines": [
+            "雨天，天上",
+            "有很多雲"
+          ],
+          "spokenText": "雨天天上有很多雲",
+          "focusChar": "雲",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwanese traditional Chinese literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, door plates, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show a rainy day sky with many clearly visible clouds overhead and gentle rain falling. The clouds should be the main visual focus, with a safe calm rainy-day feeling. No disaster, flooding, lightning, scary storm, danger, or horror mood.",
+          "imageSrc": "/assets/lessons/L122/images/L122-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L122/audio/L122-S01.m4a",
+            "durationMs": 4331,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 600
+              },
+              {
+                "charIndex": 1,
+                "startMs": 600,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1860,
+                "endMs": 2170
+              },
+              {
+                "charIndex": 3,
+                "startMs": 2170,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2480,
+                "endMs": 2790
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2790,
+                "endMs": 3105
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3105,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3420,
+                "endMs": 3740
+              }
+            ]
+          }
+        },
+        {
+          "id": "L122-S02",
+          "text": "我用紙做一朵雲",
+          "displayLines": [
+            "我用紙做",
+            "一朵雲"
+          ],
+          "spokenText": "我用紙做一朵雲",
+          "focusChar": "雲",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwanese traditional Chinese literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show the fixed young girl at a table making a clearly recognizable cloud-shaped craft from paper. The paper cloud should be easy to see. The table may include plain paper, child-safe scissors, glue, or simple craft materials, but every paper sheet and object must be blank with no readable symbols.",
+          "imageSrc": "/assets/lessons/L122/images/L122-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L122/audio/L122-S02.m4a",
+            "durationMs": 4899,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1820,
+                "endMs": 2010
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2010,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2390
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2390,
+                "endMs": 2580
+              }
+            ]
+          }
+        },
+        {
+          "id": "L122-S03",
+          "text": "水面上有天空的雲",
+          "displayLines": [
+            "水面上",
+            "有天空的雲"
+          ],
+          "spokenText": "水面上有天空的雲",
+          "focusChar": "雲",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwanese traditional Chinese literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show a calm clear water surface reflecting clouds in the sky above. The picture must make it clear that the clouds are reflections on the water, not clouds physically fallen into the water. The water should feel shallow, safe, peaceful, and bright, not dangerous deep water.",
+          "imageSrc": "/assets/lessons/L122/images/L122-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L122/audio/L122-S03.m4a",
+            "durationMs": 4348,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1440,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1880,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2260,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2860
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2860,
+                "endMs": 2980
+              }
+            ]
+          }
+        },
+        {
+          "id": "L122-S04",
+          "text": "下雨天不要空手出門",
+          "displayLines": [
+            "下雨天",
+            "不要空手",
+            "出門"
+          ],
+          "spokenText": "下雨天不要空手出門",
+          "focusChar": "雨",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwanese traditional Chinese literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, door plates, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show a gentle rainy day at a home doorway. A kind adult holds rain gear such as an umbrella and gently reminds a child not to go out empty-handed. The child is near the door with empty hands visible. The mood is warm and safe, not scolding. No heavy storm, flood, lightning, disaster, danger, or fear.",
+          "imageSrc": "/assets/lessons/L122/images/L122-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L122/audio/L122-S04.m4a",
+            "durationMs": 4194,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1420,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2480,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 3000
+              }
+            ]
+          }
+        },
+        {
+          "id": "L122-S05",
+          "text": "不要走去學校外面",
+          "displayLines": [
+            "不要走去",
+            "學校外面"
+          ],
+          "spokenText": "不要走去學校外面",
+          "focusChar": "外",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwanese traditional Chinese literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, school name, signs, door plates, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show a child inside a safe bright school area while an adult or teacher gently reminds the child not to walk outside the school area alone. Make the inside school area and the outside beyond the gate or doorway visually distinct, but do not use any written school name, sign, label, number, or doorplate. Safe calm mood, no danger or fear.",
+          "imageSrc": "/assets/lessons/L122/images/L122-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L122/audio/L122-S05.m4a",
+            "durationMs": 3038,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 250
+              },
+              {
+                "charIndex": 1,
+                "startMs": 250,
+                "endMs": 500
+              },
+              {
+                "charIndex": 2,
+                "startMs": 500,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1400,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2000,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2340,
+                "endMs": 2600
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L122-G01",
+          "type": "find-character",
+          "sentenceId": "L122-S01",
+          "targetChar": "雲",
+          "prompt": "小兔想找到「雲」。請在句子裡點一下雲。",
+          "missingIndexes": [
+            7
+          ]
+        },
+        {
+          "id": "L122-G02",
+          "type": "teach-character",
+          "sentenceId": "L122-S02",
+          "targetChar": "雲",
+          "targetCharIndex": 6,
+          "prompt": "小兔讀到一個字停住了。請按住紅框幫小兔說。",
+          "missingIndexes": [
+            6
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L122/audio/L122-G02-prefix.m4a"
+          }
+        },
+        {
+          "id": "L122-G03",
+          "type": "missing-character",
+          "sentenceId": "L122-S03",
+          "targetChar": "雲",
+          "prompt": "小兔少了一個字。請選出雲放回句子裡。",
+          "missingIndexes": [
+            7
+          ],
+          "options": [
+            {
+              "id": "yun",
+              "text": "雲",
+              "correct": true
+            },
+            {
+              "id": "yu",
+              "text": "雨",
+              "correct": false
+            },
+            {
+              "id": "tian",
+              "text": "天",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L122-G04",
+          "type": "partial-order",
+          "sentenceId": "L122-S04",
+          "targetChar": "空",
+          "prompt": "小兔把幾個字弄亂了。請排回正確順序。",
+          "missingIndexes": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "options": [
+            {
+              "id": "kong",
+              "text": "空",
+              "correct": true
+            },
+            {
+              "id": "shou",
+              "text": "手",
+              "correct": true
+            },
+            {
+              "id": "chu",
+              "text": "出",
+              "correct": true
+            },
+            {
+              "id": "men",
+              "text": "門",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L122-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L122-S05",
+          "targetChar": "外",
+          "prompt": "小兔請朋友讀這句。先按每個朋友的頭，再按讀對的朋友旁邊的勾。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "不要走去學校外面",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L122/audio/L122-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "不要走去學校裡面",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L122/audio/L122-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "不要走到學校外面",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L122/audio/L122-G05-wrong-two.m4a"
             }
           ]
         }
