@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L114 | 帽 | claimed | Codex / L114 production assets thread | `codex/l114-mao-assets` / pending | L108:點, L109:玩, L110:打, L111:球, L112:棒, L113:頭 | 點 玩 打 球 棒 頭 | `curriculum-workflow/lesson-requests/L114.json`; `curriculum-workflow/generated/L114-generation-packet.md`; `curriculum-workflow/drafts/L114-draft.json` | `curriculum-workflow/audio-inbox/L114/`; `public/assets/lessons/L114/` | Parallel prep only until L108-L113 are merged into latest `origin/main`; do not merge production JSON yet. Teacher-approved target is 帽 ㄇㄠˋ. |
 
 ## Status Values
 
