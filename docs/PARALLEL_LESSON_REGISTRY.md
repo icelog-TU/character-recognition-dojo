@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L104 | 得 | request-ready | Codex / L104 production assets thread | `codex/l104-de-assets` / `ee08368` | L103:難 | 難 | `curriculum-workflow/lesson-requests/L104.json`; `curriculum-workflow/generated/L104-generation-packet.md`; `curriculum-workflow/drafts/L104-draft.json` | `curriculum-workflow/audio-inbox/L104/`; `public/assets/lessons/L104/` | Request and packet prepared branch-only; blocked until L103 is merged into latest `origin/main`; do not merge production JSON yet. Target 得 uses light-tone ˙ㄉㄜ in this lesson. |
+| L104 | 得 | ready-blocked-by-dependency | Codex / L104 production assets thread | `codex/l104-de-assets` / `b01cd24` | L103:難 | 難 | `curriculum-workflow/lesson-requests/L104.json`; `curriculum-workflow/generated/L104-generation-packet.md`; `curriculum-workflow/drafts/L104-draft.json` | `curriculum-workflow/audio-inbox/L104/`; `public/assets/lessons/L104/` | Request, packet, draft, images, final audio, Stage 4, and AI alignment are prepared branch-only. Blocked until L103 is merged into latest `origin/main`; do not merge production JSON yet. Target 得 uses light-tone ˙ㄉㄜ in this lesson. |
 
 ## Status Values
 
