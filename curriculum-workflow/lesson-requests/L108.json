@@ -1,0 +1,91 @@
+{
+  "id": "L108",
+  "order": 108,
+  "newChars": [
+    "點"
+  ],
+  "zhuyin": {
+    "點": "ㄉㄧㄢˇ"
+  },
+  "title": "點",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L103",
+    "L104",
+    "L105",
+    "L106",
+    "L107"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "過",
+      "分",
+      "幾"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "點",
+      "幾",
+      "分",
+      "過",
+      "得",
+      "難"
+    ],
+    "targetCharMinimumCount": {
+      "點": 3
+    },
+    "recentTargetMinimumCounts": {
+      "幾": 2,
+      "分": 2,
+      "過": 2,
+      "得": 1,
+      "難": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-approved L108 sentence set for 點. Branch-only provisional work depends on L105:過, L106:分, and L107:幾 before production merge. Use Taiwan zhuyin and Taiwan wording. Do not use Hanyu pinyin. SpokenText must equal text with punctuation removed. Sentence images must use the L058 style anchors and must not contain readable text, numbers, labels, zhuyin, letters, signs, door plates, or UI. Production audio must use AI audio -> assets:audio -> assets:align:ai. Character audio char-u9ede.m4a must be standalone AI TTS for 點, not cut from sentence audio. G05 wrong-choice audio must be generated as complete wrong sentences, not spliced.",
+  "approvedSentences": [
+    {
+      "text": "你幾點要過來？",
+      "spokenText": "你幾點要過來",
+      "focusChar": "點",
+      "hanCharCount": 6,
+      "imageContext": "固定小女孩在家裡打電話問固定小男孩幾點要過來；小男孩不在女孩家門口，可在另一端的家中或電話畫面以分隔構圖呈現。重點是打電話詢問幾點要來。不要有時鐘數字、電話螢幕文字、門牌、標籤、注音、字母或任何可讀文字。"
+    },
+    {
+      "text": "點心要分給幾個人？",
+      "spokenText": "點心要分給幾個人",
+      "focusChar": "點",
+      "hanCharCount": 8,
+      "imageContext": "桌上有點心，孩子或媽媽準備把點心分給幾個人。畫面要清楚有點心和幾個等待分點心的人，但不要用文字或數字標示人數。不要有標籤、注音或字母。"
+    },
+    {
+      "text": "這個有點難做",
+      "spokenText": "這個有點難做",
+      "focusChar": "點",
+      "hanCharCount": 6,
+      "imageContext": "孩子正在做手作、紙花或小作品，覺得有點難做，但仍在努力。作品要具體可見，表情可有一點努力感，不要誇張挫敗。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "你得到幾分？",
+      "spokenText": "你得到幾分",
+      "focusChar": "幾",
+      "hanCharCount": 5,
+      "imageContext": "兩個孩子玩安全簡單的遊戲後，固定小女孩問固定小男孩得到幾分。不要出現文字、數字、計分板或可讀標籤；可用小圓點、小花或小標記表現分數，但不能排成可讀數字。"
+    },
+    {
+      "text": "我沒來過這裡",
+      "spokenText": "我沒來過這裡",
+      "focusChar": "過",
+      "hanCharCount": 6,
+      "imageContext": "孩子第一次來到一個新地方，例如同學家、學校角落或安全明亮的小花園，表情好奇。重點是沒來過這裡。不要有文字、門牌、路標、數字、標籤、注音或字母。"
+    }
+  ]
+}
