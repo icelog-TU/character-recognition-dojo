@@ -1,4 +1,4 @@
-ï»¿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,13 +16,13 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L106 | åˆ† | ready-blocked-by-dependency | Codex | `codex/l106-fen-assets` / `ebae623` | none | none | `curriculum-workflow/lesson-requests/L106.json`; `curriculum-workflow/generated/L106-generation-packet.md`; `curriculum-workflow/drafts/L106-draft.json` | `public/assets/lessons/L106/` | Branch-only assets; blocked until it enters the ordered release lane after L105. |
-| L107 | å¹¾ | ready-blocked-by-dependency | Codex | `codex/l107-ji-assets` / `a151865` | L106:åˆ† | åˆ† | `curriculum-workflow/lesson-requests/L107.json`; `curriculum-workflow/generated/L107-generation-packet.md`; `curriculum-workflow/drafts/L107-draft.json` | `public/assets/lessons/L107/` | Branch-only assets; blocked until dependencies enter production. |
-| L108 | é» | ready-blocked-by-dependency | Codex | `codex/l108-dian-assets` / `4f8ea1f` | L106:åˆ†, L107:å¹¾ | åˆ†, å¹¾ | `curriculum-workflow/lesson-requests/L108.json`; `curriculum-workflow/generated/L108-generation-packet.md`; `curriculum-workflow/drafts/L108-draft.json` | `public/assets/lessons/L108/` | Branch-only assets; blocked until dependencies enter production. |
-| L109 | ç© | claimed | Codex | `codex/l109-wan-assets` / `2cd6c6e` | L106:åˆ†, L107:å¹¾, L108:é» | åˆ†, å¹¾, é» | pending | pending | Branch-only claim; assets not yet prepared. |
-| L110 | æ‰“ | ready-blocked-by-dependency | Codex | `codex/l110-da-assets` / `cab414d` | L106:åˆ†, L107:å¹¾, L108:é», L109:ç© | åˆ†, å¹¾, é», ç© | `curriculum-workflow/lesson-requests/L110.json`; `curriculum-workflow/generated/L110-generation-packet.md`; `curriculum-workflow/drafts/L110-draft.json` | `public/assets/lessons/L110/` | Branch-only assets; blocked until dependencies enter production. |
-| L111 | çƒ | ready-blocked-by-dependency | Codex | `codex/l111-qiu-assets` / `fd7b4ff` | L106:åˆ†, L107:å¹¾, L108:é», L109:ç©, L110:æ‰“ | åˆ†, å¹¾, é», ç©, æ‰“ | `curriculum-workflow/lesson-requests/L111.json`; `curriculum-workflow/generated/L111-generation-packet.md`; `curriculum-workflow/drafts/L111-draft.json` | `curriculum-workflow/audio-inbox/L111/`; `public/assets/lessons/L111/` | Production assets prepared; L105:é is already production on latest main; branch-only until L106-L110 enter production. |
-| L112 | æ£’ | claimed | Codex | `codex/l112-bang-assets` / local claim pending | L106:åˆ†, L107:å¹¾, L108:é», L109:ç©, L110:æ‰“, L111:çƒ | åˆ†, å¹¾, é», ç©, æ‰“, çƒ | `curriculum-workflow/lesson-requests/L112.json`; `curriculum-workflow/generated/L112-generation-packet.md`; `curriculum-workflow/drafts/L112-draft.json` | `curriculum-workflow/audio-inbox/L112/`; `public/assets/lessons/L112/` | L112 sentence 2 uses åˆ†, so L106 is recorded as an indirect provisional dependency; branch-only until L106-L111 enter production. |
+| L106 | ¤À | ready-blocked-by-dependency | Codex | `codex/l106-fen-assets` / `ebae623` | none | none | `curriculum-workflow/lesson-requests/L106.json`; `curriculum-workflow/generated/L106-generation-packet.md`; `curriculum-workflow/drafts/L106-draft.json` | `public/assets/lessons/L106/` | Branch-only assets; blocked until it enters the ordered release lane after L105. |
+| L107 | ´X | ready-blocked-by-dependency | Codex | `codex/l107-ji-assets` / `a151865` | L106:¤À | ¤À | `curriculum-workflow/lesson-requests/L107.json`; `curriculum-workflow/generated/L107-generation-packet.md`; `curriculum-workflow/drafts/L107-draft.json` | `public/assets/lessons/L107/` | Branch-only assets; blocked until dependencies enter production. |
+| L108 | ÂI | ready-blocked-by-dependency | Codex | `codex/l108-dian-assets` / `4f8ea1f` | L106:¤À, L107:´X | ¤À, ´X | `curriculum-workflow/lesson-requests/L108.json`; `curriculum-workflow/generated/L108-generation-packet.md`; `curriculum-workflow/drafts/L108-draft.json` | `public/assets/lessons/L108/` | Branch-only assets; blocked until dependencies enter production. |
+| L109 | ª± | claimed | Codex | `codex/l109-wan-assets` / `2cd6c6e` | L106:¤À, L107:´X, L108:ÂI | ¤À, ´X, ÂI | pending | pending | Branch-only claim; assets not yet prepared. |
+| L110 | ¥´ | ready-blocked-by-dependency | Codex | `codex/l110-da-assets` / `cab414d` | L106:¤À, L107:´X, L108:ÂI, L109:ª± | ¤À, ´X, ÂI, ª± | `curriculum-workflow/lesson-requests/L110.json`; `curriculum-workflow/generated/L110-generation-packet.md`; `curriculum-workflow/drafts/L110-draft.json` | `public/assets/lessons/L110/` | Branch-only assets; blocked until dependencies enter production. |
+| L111 | ²y | ready-blocked-by-dependency | Codex | `codex/l111-qiu-assets` / `fd7b4ff` | L106:¤À, L107:´X, L108:ÂI, L109:ª±, L110:¥´ | ¤À, ´X, ÂI, ª±, ¥´ | `curriculum-workflow/lesson-requests/L111.json`; `curriculum-workflow/generated/L111-generation-packet.md`; `curriculum-workflow/drafts/L111-draft.json` | `curriculum-workflow/audio-inbox/L111/`; `public/assets/lessons/L111/` | Production assets prepared; L105:¹L is already production on latest main; branch-only until L106-L110 enter production. |
+| L112 | ´Î | claimed | Codex | `codex/l112-bang-assets` / ae4718a | L106:¤À, L107:´X, L108:ÂI, L109:ª±, L110:¥´, L111:²y | ¤À, ´X, ÂI, ª±, ¥´, ²y | `curriculum-workflow/lesson-requests/L112.json`; `curriculum-workflow/generated/L112-generation-packet.md`; `curriculum-workflow/drafts/L112-draft.json` | `curriculum-workflow/audio-inbox/L112/`; `public/assets/lessons/L112/` | L112 sentence 2 uses ¤À, so L106 is recorded as an indirect provisional dependency; branch-only until L106-L111 enter production. |
 
 ## Status Values
 
@@ -42,7 +42,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 2. Run `npm run curriculum:audit-state` to confirm main, ledger, registry, planner data, and lesson asset folders agree before claiming new work.
 3. Before creating request files, generating packets, images, audio, or editing JSON, add or update exactly one row for the unit this thread owns.
 4. Fill `New Character(s) / Kind` as soon as the teacher chooses the character or review module.
-5. If a prior lesson is not merged, list it in `Depends On`, for example `L051:æ¨£`.
+5. If a prior lesson is not merged, list it in `Depends On`, for example `L051:¼Ë`.
 6. Put those not-yet-merged characters in `Provisional Learned Chars`.
 7. Commit and push the registry update before starting large image/audio work. If a quick local claim is needed first, update and push the registry as the first commit before any asset generation.
 
@@ -67,9 +67,9 @@ If a thread cannot push the registry update, it must say so in chat and must not
 Each parallel lesson thread must also state ownership in chat, for example:
 
 ```text
-I am claiming L051:æ¨£.
+I am claiming L051:¼Ë.
 I own curriculum-workflow/lesson-requests/L051.json, curriculum-workflow/generated/L051-generation-packet.md, curriculum-workflow/audio-inbox/L051/, and public/assets/lessons/L051/.
-I depend on L050:å¥½ being merged first.
+I depend on L050:¦n being merged first.
 ```
 
 ## Dependency Rules
