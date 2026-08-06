@@ -1,0 +1,83 @@
+{
+  "id": "L113",
+  "order": 113,
+  "newChars": [
+    "頭"
+  ],
+  "zhuyin": {
+    "頭": "ㄊㄡˊ"
+  },
+  "title": "頭",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L108",
+    "L109",
+    "L110",
+    "L111",
+    "L112"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "頭",
+      "棒",
+      "球",
+      "打",
+      "玩",
+      "點"
+    ],
+    "targetCharMinimumCount": {
+      "頭": 3
+    },
+    "recentTargetMinimumCounts": {
+      "棒": 2,
+      "球": 2,
+      "打": 2,
+      "玩": 1,
+      "點": 1
+    }
+  },
+  "teacherNotes": "這是認字練功房 L113 課程，目標新字是「頭」，注音為台灣注音 ㄊㄡˊ，不使用漢語拼音。老師已核准五句句子。latest origin/main 目前只到 L105「過」，所以 L113 只做 branch-only 平行 production assets，不合併 production JSON，直到 L106-L112 已依序合併。L113 句子可使用老師明確指定的 provisional learned chars：L108「點」、L109「玩」、L110「打」、L111「球」、L112「棒」。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是 OpenAI TTS 直接用單一目標字「頭」生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。choose-pronunciation wrong option 音檔必須用完整錯誤句獨立生成，不可拼接。",
+  "approvedSentences": [
+    {
+      "text": "他用球棒打到我的頭",
+      "spokenText": "他用球棒打到我的頭",
+      "focusChar": "頭",
+      "reason": "情境設想：固定「他」小男孩在安全遊戲場或草地打棒球時，不小心用兒童球棒輕輕碰到固定小女孩的頭。畫面要明確是意外，不是故意攻擊；不可有受傷、流血、哭得很嚴重、暴力或恐怖感。球棒要像安全兒童球棒，不要像武器。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "球在盒子裡頭",
+      "spokenText": "球在盒子裡頭",
+      "focusChar": "頭",
+      "reason": "情境設想：一個打開的盒子裡頭有一顆球，球和盒子都要清楚可見。畫面簡單明亮，重點是「盒子裡頭」。盒子不可有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "媽媽點頭：「你做得很棒。」",
+      "spokenText": "媽媽點頭你做得很棒",
+      "focusChar": "頭",
+      "reason": "情境設想：媽媽看著孩子完成手作、畫圖或整理，溫和點頭稱讚孩子做得很棒。畫面要正向、溫暖，呈現媽媽點頭和孩子被肯定。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "大家一起去打棒球",
+      "spokenText": "大家一起去打棒球",
+      "focusChar": "棒",
+      "reason": "情境設想：幾個孩子和家人一起去安全明亮的草地或遊戲場打棒球。球和兒童球棒要清楚，動作安全、不激烈。不要有文字、數字、計分板、隊名、標籤、注音或字母。"
+    },
+    {
+      "text": "不要在家裡玩球，出去玩",
+      "spokenText": "不要在家裡玩球出去玩",
+      "focusChar": "玩",
+      "reason": "情境設想：媽媽或大人溫和提醒孩子不要在家裡玩球，請孩子出去到安全草地或遊戲區玩。畫面可呈現室內有球、門外有安全戶外空間；不要有責罵感、危險動作、文字、數字、門牌、標籤、注音或字母。"
+    }
+  ]
+}
