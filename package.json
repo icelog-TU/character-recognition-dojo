@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:firebase": "tsc -b && vite build --base /",
+    "deploy:firebase": "npm run build:firebase && npx firebase-tools deploy --only hosting",
     "lint": "oxlint",
     "assets:align": "node scripts/align-audio-timings.mjs",
     "assets:align:ai": "node scripts/align-audio-timings-ai.mjs",
