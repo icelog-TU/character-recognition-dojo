@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L113 | 頭 | claimed | Codex / L113 production assets thread | `codex/l113-tou-assets` / local | L108:點, L109:玩, L110:打, L111:球, L112:棒 | 點 玩 打 球 棒 | `curriculum-workflow/lesson-requests/L113.json`; `curriculum-workflow/generated/L113-generation-packet.md`; `curriculum-workflow/drafts/L113-draft.json` | `curriculum-workflow/audio-inbox/L113/`; `public/assets/lessons/L113/` | Teacher-approved sentence set supplied. Prepare branch-only assets; blocked until L106-L112 are merged into latest `origin/main`; do not merge production JSON yet. |
 
 ## Status Values
 
