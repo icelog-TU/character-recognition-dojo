@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L122 | 雲 | ready-blocked-by-dependency | Codex / L122 assets thread | `codex/l122-yun-assets` / pending asset commit | L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面, L118:外, L119:空, L120:天, L121:雨 | 棒, 頭, 帽, 草, 地, 面, 外, 空, 天, 雨 | `curriculum-workflow/lesson-requests/L122.json`; `curriculum-workflow/generated/L122-generation-packet.md` | `curriculum-workflow/drafts/L122-draft.json`; `public/assets/lessons/L122/` | Production assets prepared on branch; blocked until L112-L121 are merged and rechecked. User direct dependencies are L117-L121; L112-L116 are listed for ordered release. |
+| L122 | 雲 | ready-blocked-by-dependency | Codex / L122 assets thread | `codex/l122-yun-assets` / `fdb4247` | L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面, L118:外, L119:空, L120:天, L121:雨 | 棒, 頭, 帽, 草, 地, 面, 外, 空, 天, 雨 | `curriculum-workflow/lesson-requests/L122.json`; `curriculum-workflow/generated/L122-generation-packet.md` | `curriculum-workflow/drafts/L122-draft.json`; `public/assets/lessons/L122/` | Production assets prepared on branch; blocked until L112-L121 are merged and rechecked. User direct dependencies are L117-L121; L112-L116 are listed for ordered release. |
 
 ## Status Values
 
