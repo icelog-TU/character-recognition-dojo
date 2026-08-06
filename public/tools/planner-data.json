@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-06T14:24:04.836Z",
+  "exportedAt": "2026-08-06T14:25:24.876Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -53066,6 +53066,467 @@
               "text": "門外有小鳥在草地上玩",
               "correct": false,
               "audioSrc": "/assets/lessons/L120/audio/L120-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L121",
+      "order": 121,
+      "newChars": [
+        "雨"
+      ],
+      "zhuyin": {
+        "雨": "ㄩˇ"
+      },
+      "charAudio": {
+        "雨": "/assets/lessons/L121/audio/char-u96e8.m4a"
+      },
+      "title": "雨",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L121-S01",
+          "text": "外面下雨了，不要出去玩。",
+          "displayLines": [
+            "外面下雨了，",
+            "不要出去玩。"
+          ],
+          "spokenText": "外面下雨了不要出去玩",
+          "focusChar": "雨",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home entryway or window scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Show the fixed young girl indoors near a door or window while gentle rain is clearly falling outside. A kind adult gently reminds her not to go outside to play. The child stays safely inside; the mood is calm guidance. No storm, flood, lightning, disaster, danger, fear, or harsh scolding. No visible text, letters, numbers, door plates, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable symbols.",
+          "imageSrc": "/assets/lessons/L121/images/L121-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L121/audio/L121-S01.m4a",
+            "durationMs": 4257,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1240,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2820,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3060,
+                "endMs": 3400
+              }
+            ]
+          }
+        },
+        {
+          "id": "L121-S02",
+          "text": "下雨天，路上空空都沒人。",
+          "displayLines": [
+            "下雨天，",
+            "路上空空",
+            "都沒人。"
+          ],
+          "spokenText": "下雨天路上空空都沒人",
+          "focusChar": "雨",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school-side path or quiet neighborhood road, consistent expressive preschool proportions, soft rounded forms, gentle mood, bright warm palette even in rainy weather, phone-readable composition. Show a safe empty road or path on a rainy day. The road is clearly empty with no people, and rain is visible. Keep the scene calm and safe, not a disaster or dangerous storm. Do not include vehicles close-up. No visible text, letters, numbers, road signs, license plates, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable symbols.",
+          "imageSrc": "/assets/lessons/L121/images/L121-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L121/audio/L121-S02.m4a",
+            "durationMs": 3931,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1700,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2460,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2880,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3140,
+                "endMs": 3400
+              }
+            ]
+          }
+        },
+        {
+          "id": "L121-S03",
+          "text": "天天下雨，我不開心。",
+          "displayLines": [
+            "天天下雨，",
+            "我不開心。"
+          ],
+          "spokenText": "天天下雨我不開心",
+          "focusChar": "雨",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean cozy home interior, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, warm palette, phone-readable composition. Preserve the fixed first-person young girl: shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes if visible. She stands or sits by a window looking at rain outside, looking a little unhappy but not exaggerated. The room feels warm and safe while the outside clearly shows ongoing gentle rain. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable symbols.",
+          "imageSrc": "/assets/lessons/L121/images/L121-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L121/audio/L121-S03.m4a",
+            "durationMs": 3108,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1560,
+                "endMs": 1710
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1710,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1860,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2100,
+                "endMs": 2340
+              }
+            ]
+          }
+        },
+        {
+          "id": "L121-S04",
+          "text": "門外的地面都是水。",
+          "displayLines": [
+            "門外的",
+            "地面都是水。"
+          ],
+          "spokenText": "門外的地面都是水",
+          "focusChar": "地",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home doorway scene, consistent expressive preschool proportions, soft rounded forms, calm safe mood, bright warm palette, phone-readable composition. Show the ground just outside a home door wet from rain, with safe small puddles or a shiny wet surface. Make it clear this is outside the door and the ground is covered with rainwater, but not dangerous flooding or disaster. Keep the door plain with no door plate. No visible text, letters, numbers, door plates, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable symbols.",
+          "imageSrc": "/assets/lessons/L121/images/L121-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L121/audio/L121-S04.m4a",
+            "durationMs": 3720,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1160,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 1770
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1770,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2080,
+                "endMs": 2520
+              }
+            ]
+          }
+        },
+        {
+          "id": "L121-S05",
+          "text": "有一個圓臉紅鼻子的人",
+          "displayLines": [
+            "有一個",
+            "圓臉紅鼻子",
+            "的人"
+          ],
+          "spokenText": "有一個圓臉紅鼻子的人",
+          "focusChar": "臉",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean friendly performance setting, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Show one friendly performer-like person with a round face and a red nose prop, looking gentle and cute. The red nose is a harmless costume prop, not an injury or abnormal real nose. Avoid horror, fear, sharp makeup, dark stage lighting, or exaggerated scary features. Do not include the word for clown in any visible image text. No visible text, letters, numbers, signs, labels, zhuyin, UI, watermark, speech bubbles, arrows, logos, or readable symbols.",
+          "imageSrc": "/assets/lessons/L121/images/L121-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L121/audio/L121-S05.m4a",
+            "durationMs": 4229,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1840,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2240,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2640,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2980,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3140,
+                "endMs": 3320
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3320,
+                "endMs": 3500
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L121-G01",
+          "type": "find-character",
+          "sentenceId": "L121-S01",
+          "targetChar": "雨",
+          "missingIndexes": [
+            3
+          ],
+          "prompt": "找出「雨」。"
+        },
+        {
+          "id": "L121-G02",
+          "type": "teach-character",
+          "sentenceId": "L121-S02",
+          "targetChar": "雨",
+          "targetCharIndex": 1,
+          "missingIndexes": [
+            1
+          ],
+          "prompt": "聽一聽，放進「雨」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L121/audio/L121-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L121/audio/L121-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L121-G03",
+          "type": "missing-character",
+          "sentenceId": "L121-S03",
+          "targetChar": "雨",
+          "missingIndexes": [
+            3
+          ],
+          "prompt": "選出少掉的字。",
+          "options": [
+            {
+              "id": "rain",
+              "text": "雨",
+              "correct": true
+            },
+            {
+              "id": "day",
+              "text": "天",
+              "correct": false
+            },
+            {
+              "id": "empty",
+              "text": "空",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L121-G04",
+          "type": "partial-order",
+          "sentenceId": "L121-S04",
+          "targetChar": "地",
+          "missingIndexes": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "地",
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "面",
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "都",
+              "correct": true
+            },
+            {
+              "id": "slot-4",
+              "text": "是",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L121-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L121-S05",
+          "targetChar": "臉",
+          "prompt": "聽一聽，選出正確的句子。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "有一個圓臉紅鼻子的人",
+              "audioSrc": "/assets/lessons/L121/audio/L121-S05.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "有一個紅臉圓鼻子的人",
+              "audioSrc": "/assets/lessons/L121/audio/L121-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "有一個圓臉大鼻子的人",
+              "audioSrc": "/assets/lessons/L121/audio/L121-G05-wrong-two.m4a",
+              "correct": false
             }
           ]
         }

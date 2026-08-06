@@ -1,0 +1,101 @@
+{
+  "id": "L121",
+  "order": 121,
+  "newChars": [
+    "雨"
+  ],
+  "zhuyin": {
+    "雨": "ㄩˇ"
+  },
+  "title": "雨",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L112",
+    "L113",
+    "L114",
+    "L115",
+    "L116",
+    "L117",
+    "L118",
+    "L119",
+    "L120"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "雨",
+      "天",
+      "空",
+      "外",
+      "面",
+      "地"
+    ],
+    "targetCharMinimumCount": {
+      "雨": 3
+    },
+    "recentTargetMinimumCounts": {
+      "天": 2,
+      "空": 2,
+      "外": 2,
+      "面": 1,
+      "地": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Use the teacher-approved L121 sentences exactly. L121 is branch-only until L112-L120 dependencies enter production. The teacher supplied sentence 4 as 門外的地面都是水 with no 雨; to satisfy the SOP rule that focusChar must appear in the sentence, this request uses 地 as sentence 4 focusChar and may use 地 as its Stage 4 target. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Image assets should follow the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, door plates, signs, license plates, UI, or watermarks. Rain scenes must be safe and gentle, not storm, flood, lightning, disaster, horror, or dangerous scenes. Generate standalone AI audio for 雨 as public/assets/lessons/L121/audio/char-u96e8.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.",
+  "approvedSentences": [
+    {
+      "text": "外面下雨了，不要出去玩。",
+      "spokenText": "外面下雨了不要出去玩",
+      "focusChar": "雨",
+      "hanCharCount": 10,
+      "scene": "家裡門口或窗邊，外面正在下雨，大人溫和提醒孩子不要出去玩。畫面要清楚呈現外面下雨和孩子在室內，不要有危險暴雨、淹水、閃電恐怖感。不要有文字、數字、門牌、標籤、注音或字母。"
+    },
+    {
+      "text": "下雨天，路上空空都沒人。",
+      "spokenText": "下雨天路上空空都沒人",
+      "focusChar": "雨",
+      "hanCharCount": 10,
+      "scene": "下雨天的安全街道或學校旁小路，路上空空的、沒有人。雨要清楚，但不要畫成災害或危險場景；路上不可有文字、路牌、車牌、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "天天下雨，我不開心。",
+      "spokenText": "天天下雨我不開心",
+      "focusChar": "雨",
+      "hanCharCount": 8,
+      "scene": "固定小女孩在窗邊看著連日下雨，表情有點不開心但不誇張。可呈現窗外雨景和室內溫暖環境。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "門外的地面都是水。",
+      "spokenText": "門外的地面都是水",
+      "focusChar": "地",
+      "hanCharCount": 8,
+      "scene": "家門外的地面因下雨而都是水，像安全的小水窪或濕地面。畫面要清楚是門外地面有雨水，不要畫成危險淹水或災害。不要有門牌、文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "有一個圓臉紅鼻子的人",
+      "spokenText": "有一個圓臉紅鼻子的人",
+      "focusChar": "臉",
+      "hanCharCount": 10,
+      "scene": "一個友善表演者造型的人，有圓臉和紅鼻子，表情溫和可愛。不要在 sentence text 或圖中文字中出現小丑；畫面也不要有文字、數字、招牌、標籤、注音、字母或恐怖感。"
+    }
+  ]
+}
