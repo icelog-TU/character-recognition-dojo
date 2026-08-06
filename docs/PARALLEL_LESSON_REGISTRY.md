@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L105 | 過 | claimed | Codex / L105 production assets thread | `codex/l105-guo-assets` / pending | L103:難, L104:得 | 難 得 | `curriculum-workflow/lesson-requests/L105.json`; `curriculum-workflow/generated/L105-generation-packet.md` | `curriculum-workflow/audio-inbox/L105/`; `public/assets/lessons/L105/` | Parallel prep only until L103 and L104 are merged into latest `origin/main`; do not merge production JSON yet. |
+| L105 | 過 | ready-blocked-by-dependency | Codex / L105 production assets thread | `codex/l105-guo-assets` / pending | L103:難, L104:得 | 難 得 | `curriculum-workflow/lesson-requests/L105.json`; `curriculum-workflow/generated/L105-generation-packet.md`; `curriculum-workflow/drafts/L105-draft.json` | `curriculum-workflow/audio-inbox/L105/`; `public/assets/lessons/L105/` | Production-ready parallel prep is complete; blocked until L103 and L104 are merged into latest `origin/main`; do not merge production JSON yet. |
 
 ## Status Values
 
