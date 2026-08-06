@@ -1,0 +1,96 @@
+{
+  "id": "L115",
+  "order": 115,
+  "newChars": [
+    "草"
+  ],
+  "zhuyin": {
+    "草": "ㄘㄠˇ"
+  },
+  "title": "草",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L108",
+    "L109",
+    "L110",
+    "L111",
+    "L112",
+    "L113",
+    "L114"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "草",
+      "帽",
+      "頭",
+      "棒",
+      "球",
+      "打"
+    ],
+    "targetCharMinimumCount": {
+      "草": 3
+    },
+    "recentTargetMinimumCounts": {
+      "帽": 2,
+      "頭": 2,
+      "棒": 2,
+      "球": 1,
+      "打": 1
+    }
+  },
+  "teacherNotes": "這是認字練功房 L115 課程，目標新字是「草」，注音為台灣注音 ㄘㄠˇ，不使用漢語拼音。老師已核准五句句子。只能使用 latest origin/main 已學字、L115 新字「草」，以及老師明確指定的 provisional dependency chars：L110「打」、L111「球」、L112「棒」、L113「頭」、L114「帽」。registry 另列 L108「點」與 L109「玩」為 ordered release lane 的間接依賴，因為 L110-L114 尚未全數合併到 main。L115 只做 branch-only production assets，不合併 production JSON，直到 L108-L114 已合併並重新審核。台灣用字，spokenText 必須等於 text 去掉標點。第 3 句 text 含逗號，spokenText 必須去掉逗號。第 4 句 text 含逗號與驚嘆號，spokenText 必須去掉標點。第 5 句 text 含逗號，spokenText 必須去掉逗號。圖片使用 L058 風格參考，且不得出現文字、數字、門牌、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是 OpenAI TTS 直接用單一目標字「草」生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。Stage 4 choose-pronunciation 的錯誤選項音檔必須用完整錯誤句子獨立生成，不可拼接或裁切。",
+  "approvedSentences": [
+    {
+      "text": "水邊的花草很好看",
+      "spokenText": "水邊的花草很好看",
+      "focusChar": "草",
+      "hanCharCount": 8,
+      "reason": "安全明亮的水邊，有漂亮的花草，固定小女孩或孩子在旁邊看著，覺得很好看。水邊要安全、平靜，不要有危險水域感。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "媽媽頭上的草帽很好看",
+      "spokenText": "媽媽頭上的草帽很好看",
+      "focusChar": "草",
+      "hanCharCount": 10,
+      "reason": "媽媽頭上戴著一頂草帽，孩子看著覺得很好看。草帽要清楚是草編帽或自然材質帽子，但不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "鳥飛到草裡，看不到了",
+      "spokenText": "鳥飛到草裡看不到了",
+      "focusChar": "草",
+      "hanCharCount": 9,
+      "reason": "一隻小鳥飛進高一點的草叢裡，孩子看不到牠了。畫面要溫和可愛，不要讓小鳥受傷或困住；草叢要清楚遮住小鳥的一部分。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "這裡頭好棒，好大！",
+      "spokenText": "這裡頭好棒好大",
+      "focusChar": "頭",
+      "hanCharCount": 7,
+      "reason": "孩子走進一個安全明亮的大房間、活動場地或室內遊戲空間，看到裡頭很大、很好，開心讚嘆。畫面重點是「這裡頭」空間寬敞且令人喜歡。不要有文字、數字、門牌、標籤、注音或字母。"
+    },
+    {
+      "text": "找不到棒球帽，我不去打球了",
+      "spokenText": "找不到棒球帽我不去打球了",
+      "focusChar": "帽",
+      "hanCharCount": 12,
+      "reason": "孩子準備去打球，但找不到棒球帽，所以不想出門打球了。畫面可呈現孩子在家裡找帽子、旁邊有球或球棒，表情有點困擾但不誇張。不要有文字、數字、標籤、注音或字母。"
+    }
+  ]
+}
