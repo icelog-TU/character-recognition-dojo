@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L118 | 外 | ready-blocked-by-dependency | Codex L118 asset thread | `codex/l118-wai-assets` | L111:球, L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面 | 球 棒 頭 帽 草 地 面 | `curriculum-workflow/lesson-requests/L118.json` / `curriculum-workflow/generated/L118-generation-packet.md` | `curriculum-workflow/drafts/L118-draft.json`; `curriculum-workflow/audio-inbox/L118/`; `public/assets/lessons/L118/` | Branch-only assets prepared; waiting for L111-L117 to merge before production JSON. Teacher-provided direct dependencies are L113-L117; L111-L112 are ordered release-lane dependencies before L113-L117. Temporary production insertion was removed. |
+| L118 | 外 | ready-blocked-by-dependency | Codex L118 asset thread | `codex/l118-wai-assets` @ `dd0009e` | L111:球, L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面 | 球 棒 頭 帽 草 地 面 | `curriculum-workflow/lesson-requests/L118.json` / `curriculum-workflow/generated/L118-generation-packet.md` | `curriculum-workflow/drafts/L118-draft.json`; `curriculum-workflow/audio-inbox/L118/`; `public/assets/lessons/L118/` | Branch-only assets prepared; waiting for L111-L117 to merge before production JSON. Teacher-provided direct dependencies are L113-L117; L111-L112 are ordered release-lane dependencies before L113-L117. Temporary production insertion was removed. |
 
 ## Status Values
 
