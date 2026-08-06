@@ -1,0 +1,96 @@
+{
+  "id": "L119",
+  "order": 119,
+  "newChars": [
+    "空"
+  ],
+  "zhuyin": {
+    "空": "ㄎㄨㄥ"
+  },
+  "title": "空",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L112",
+    "L113",
+    "L114",
+    "L115",
+    "L116",
+    "L117",
+    "L118"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "空",
+      "外",
+      "面",
+      "地",
+      "草",
+      "帽"
+    ],
+    "targetCharMinimumCount": {
+      "空": 3
+    },
+    "recentTargetMinimumCounts": {
+      "外": 2,
+      "面": 2,
+      "地": 2,
+      "草": 1,
+      "帽": 1
+    }
+  },
+  "teacherNotes": "這是認字練功房 L119 課程，目標新字是「空」，注音為台灣注音 ㄎㄨㄥ，不使用漢語拼音。老師已核准五句句子。只能使用 latest origin/main 已學字、L119 新字「空」，以及 provisional dependency chars：L112「棒」、L113「頭」、L114「帽」、L115「草」、L116「地」、L117「面」、L118「外」。老師列出的直接前五課依賴是 L114-L118；L112-L113 另列為 ordered release lane 前置。L119 只做 branch-only production assets，不合併 production JSON，直到 L112-L118 已合併並重新審核。台灣用字，spokenText 必須等於 text 去掉標點。第 2、3 句 text 含句號，spokenText 必須去掉句號。圖片使用 L058 風格參考，且不得出現文字、數字、門牌、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是 OpenAI TTS 直接用單一目標字「空」生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。Stage 4 choose-pronunciation 的錯誤選項音檔必須用完整錯誤句子獨立生成，不可拼接或裁切。",
+  "approvedSentences": [
+    {
+      "text": "門外有一個空地",
+      "spokenText": "門外有一個空地",
+      "focusChar": "空",
+      "hanCharCount": 7,
+      "reason": "家門外有一個安全、開闊、明亮的空地。可以看到門和門外空地，但不要有門牌、文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "空地上有很多草。",
+      "spokenText": "空地上有很多草",
+      "focusChar": "空",
+      "hanCharCount": 7,
+      "reason": "一個安全明亮的空地上長著很多草，畫面要清楚呈現空地與草。空地不要像荒廢危險場地。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "盒子裡面是空的。",
+      "spokenText": "盒子裡面是空的",
+      "focusChar": "空",
+      "hanCharCount": 7,
+      "reason": "一個打開的盒子，盒子裡面是空的，沒有東西。盒子內部要清楚可見，不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "不要兩手空空地出門",
+      "spokenText": "不要兩手空空地出門",
+      "focusChar": "空",
+      "hanCharCount": 9,
+      "reason": "孩子要出門，大人站在門邊，手上拿著包包跟水壺，溫和提醒小孩不要兩手空空直接出門。孩子可以空著兩手站在門邊，表情自然。不要有責罵感，不要有文字、數字、門牌、標籤、注音或字母。"
+    },
+    {
+      "text": "出去外面要帶著帽子",
+      "spokenText": "出去外面要帶著帽子",
+      "focusChar": "外",
+      "hanCharCount": 9,
+      "reason": "大人手上拿著帽子，溫和提醒小孩出門要戴帽子。孩子正準備出門，帽子要清楚可見；重點是「出門前要帶著帽子」。不要有文字、數字、門牌、標籤、注音或字母。"
+    }
+  ]
+}
