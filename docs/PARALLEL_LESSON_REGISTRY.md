@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L124 | 白 | claimed | Codex / L124 assets thread | `codex/l124-bai-assets` | L123:黑 | 黑 | `curriculum-workflow/lesson-requests/L124.json`; `curriculum-workflow/generated/L124-generation-packet.md` | `curriculum-workflow/drafts/L124-draft.json`; `curriculum-workflow/audio-inbox/L124/`; `public/assets/lessons/L124/` | Claiming L124 branch-only production assets. L119-L122 are already merged in latest `origin/main`; L123 remains provisional. Do not merge production JSON until L123 is merged and L124 is rebased/rechecked. |
+| L124 | 白 | ready-blocked-by-dependency | Codex / L124 assets thread | `codex/l124-bai-assets` | L123:黑 | 黑 | `curriculum-workflow/lesson-requests/L124.json`; `curriculum-workflow/generated/L124-generation-packet.md` | `curriculum-workflow/drafts/L124-draft.json`; `curriculum-workflow/audio-inbox/L124/`; `public/assets/lessons/L124/` | L124 branch-only assets prepared; temporary production JSON insertion removed. L119-L122 are already merged in latest `origin/main`; L123 remains provisional. Do not merge production JSON until L123 is merged and L124 is rebased/rechecked. |
 
 ## Status Values
 

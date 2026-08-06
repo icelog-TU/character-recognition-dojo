@@ -1,0 +1,85 @@
+{
+  "id": "L124",
+  "order": 124,
+  "newChars": [
+    "白"
+  ],
+  "zhuyin": {
+    "白": "ㄅㄞˊ"
+  },
+  "title": "白",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L123"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "黑"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "白",
+      "黑",
+      "雲",
+      "雨",
+      "天",
+      "空"
+    ],
+    "targetCharMinimumCount": {
+      "白": 3
+    },
+    "recentTargetMinimumCounts": {
+      "黑": 2,
+      "雲": 2,
+      "雨": 2,
+      "天": 1,
+      "空": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Use the teacher-approved L124 sentences exactly. L119-L122 are already merged in latest origin/main; L123:黑 is provisional and must be merged before L124 can enter production. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, door plates, road signs, UI, or watermarks. Black/dark-sky and rain scenes must stay safe, warm, and non-scary: no disaster, no threatening darkness, no horror, no dangerous streets, no frightening lightning. Generate standalone AI audio for 白 as public/assets/lessons/L124/audio/char-u767d.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.",
+  "approvedSentences": [
+    {
+      "text": "我在黑紙上面畫白點。",
+      "spokenText": "我在黑紙上面畫白點",
+      "focusChar": "白",
+      "hanCharCount": 9,
+      "scene": "固定小女孩在黑色紙上面用筆畫白點。黑紙和白點要清楚，紙上只能有點或圖案，不能有文字、數字、注音、字母或可讀符號。"
+    },
+    {
+      "text": "外面天空好黑，要下雨了。",
+      "spokenText": "外面天空好黑要下雨了",
+      "focusChar": "黑",
+      "hanCharCount": 10,
+      "scene": "外面的天空變得很黑，看起來快要下雨。畫面要清楚呈現黑暗天空和將要下雨的天氣，但不要有災害、閃電恐怖感或危險場景。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "把白球和黑球拿去空地玩。",
+      "spokenText": "把白球和黑球拿去空地玩",
+      "focusChar": "白",
+      "hanCharCount": 11,
+      "scene": "孩子拿著一顆白球和一顆黑球，準備去安全明亮的空地玩。白球、黑球和空地要清楚，動作安全友善。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "天上沒有白雲，都是黑雲。",
+      "spokenText": "天上沒有白雲都是黑雲",
+      "focusChar": "白",
+      "hanCharCount": 10,
+      "scene": "天上看不到白雲，都是黑雲，像快下雨前的天空。黑雲要清楚，但不要畫成恐怖災害場景。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "雨是雲上掉下來的水。",
+      "spokenText": "雨是雲上掉下來的水",
+      "focusChar": "雨",
+      "hanCharCount": 9,
+      "scene": "用童趣簡化的方式表現雨從雲上掉下來，變成水落下。可以畫天上的雲下方有雨水往下落，孩子在安全位置觀察。不要有災害、閃電恐怖感、文字、數字、標籤、注音或字母。"
+    }
+  ]
+}
