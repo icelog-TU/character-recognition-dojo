@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L109 | 玩 | ready-blocked-by-dependency | Codex / L109 production assets thread | `codex/l109-wan-assets` / local | L104:得, L105:過, L106:分, L107:幾, L108:點 | 過 分 幾 點 | `curriculum-workflow/lesson-requests/L109.json`; `curriculum-workflow/generated/L109-generation-packet.md`; `curriculum-workflow/drafts/L109-draft.json` | `curriculum-workflow/audio-inbox/L109/`; `public/assets/lessons/L109/` | Request, packet, draft, images, final audio, Stage 4, and AI alignment are prepared branch-only. Latest `origin/main` contains L104; blocked until L105-L108 are merged into latest `origin/main`; do not merge production JSON yet. |
+| L109 | 玩 | ready-blocked-by-dependency | Codex / L109 production assets thread | `codex/l109-wan-assets` / `a7c0f7e` | L104:得, L105:過, L106:分, L107:幾, L108:點 | 過 分 幾 點 | `curriculum-workflow/lesson-requests/L109.json`; `curriculum-workflow/generated/L109-generation-packet.md`; `curriculum-workflow/drafts/L109-draft.json` | `curriculum-workflow/audio-inbox/L109/`; `public/assets/lessons/L109/` | Request, packet, draft, images, final audio, Stage 4, and AI alignment are prepared branch-only. Latest `origin/main` contains L104; blocked until L105-L108 are merged into latest `origin/main`; do not merge production JSON yet. |
 
 ## Status Values
 
