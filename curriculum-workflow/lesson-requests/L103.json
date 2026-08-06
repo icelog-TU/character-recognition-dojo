@@ -1,0 +1,83 @@
+{
+  "id": "L103",
+  "order": 103,
+  "newChars": [
+    "難"
+  ],
+  "zhuyin": {
+    "難": "ㄋㄢˊ"
+  },
+  "title": "難",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L098",
+    "L099",
+    "L100",
+    "L101",
+    "L102"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "太"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "難",
+      "太",
+      "圓",
+      "紅",
+      "臉",
+      "鼻"
+    ],
+    "targetCharMinimumCount": {
+      "難": 3
+    },
+    "recentTargetMinimumCounts": {
+      "太": 2,
+      "圓": 2,
+      "紅": 2,
+      "臉": 1,
+      "鼻": 1
+    }
+  },
+  "teacherNotes": "這是認字練功房 L103 課程，目標新字是「難」，注音為台灣注音 ㄋㄢˊ，不使用漢語拼音。老師已核准五句句子。只能使用已學字與 L103 新字「難」；latest origin/main 目前已包含 L098「鼻」、L099「臉」、L100「紅」、L101「圓」與 R003/R004，但尚未包含 L102「太」，因此本課只可把「太」視為明確註冊的 provisional learned char 做平行準備。台灣用字，spokenText 必須等於 text 去掉標點。第 3 句 text 含標點「紅盒子圓圓的，很難開」，spokenText 必須去掉標點為「紅盒子圓圓的很難開」。第 1 句沒有「難」，focusChar 不可設「難」，已核准 focusChar 設「圓」。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是獨立 AI 生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。Stage 4 choose-pronunciation 的錯誤選項音檔必須用完整錯誤句子獨立生成，不可拼接或裁切。L103 依賴 L102「太」，在 L102 合併到 latest origin/main 前只做 branch-only 平行準備，不合併 production JSON。",
+  "approvedSentences": [
+    {
+      "text": "小孩的圓臉太可愛了",
+      "spokenText": "小孩的圓臉太可愛了",
+      "focusChar": "圓",
+      "reason": "畫面：一個可愛小孩有圓圓的臉，表情溫和可愛，呈現圓臉太可愛了；不要誇張或醜化真人外貌。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "紅鼻子很難畫好",
+      "spokenText": "紅鼻子很難畫好",
+      "focusChar": "難",
+      "reason": "畫面：孩子在紙上努力畫紅鼻子，表情專注，紙上的紅鼻子圖像清楚但畫得不容易；紙上不能有文字、數字或標籤。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "紅盒子圓圓的，很難開",
+      "spokenText": "紅盒子圓圓的很難開",
+      "focusChar": "難",
+      "reason": "畫面：一個紅色圓盒子在桌上或孩子手中，孩子試著打開但有點困難，盒子圓圓的形狀清楚。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "山路很難走",
+      "spokenText": "山路很難走",
+      "focusChar": "難",
+      "reason": "畫面：孩子或家人走在彎曲不平但安全的山路上，表現山路不好走但不危險恐怖。不要有文字、數字、招牌。"
+    },
+    {
+      "text": "這個太難吃了",
+      "spokenText": "這個太難吃了",
+      "focusChar": "難",
+      "reason": "畫面：孩子嚐了一口食物，表情覺得不好吃但溫和不誇張，旁邊可有小盤子或食物；不要有文字、數字、招牌。"
+    }
+  ]
+}
