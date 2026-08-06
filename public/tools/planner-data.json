@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-06T08:47:56.598Z",
+  "exportedAt": "2026-08-06T09:08:25.196Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -47788,6 +47788,459 @@
               "text": "我沒走過這裡",
               "correct": false,
               "audioSrc": "/assets/lessons/L108/audio/L108-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L109",
+      "order": 109,
+      "newChars": [
+        "玩"
+      ],
+      "zhuyin": {
+        "玩": "ㄨㄢˊ"
+      },
+      "charAudio": {
+        "玩": "/assets/lessons/L109/audio/char-u73a9.m4a"
+      },
+      "title": "玩",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Branch-only L109 draft. Depends on L105「過」, L106「分」, L107「幾」, and L108「點」 being merged before production release."
+      },
+      "sentences": [
+        {
+          "id": "L109-S01",
+          "text": "你幾點要過來玩",
+          "displayLines": [
+            "你幾點要",
+            "過來玩"
+          ],
+          "spokenText": "你幾點要過來玩",
+          "focusChar": "玩",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly home scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, doorplates, scoreboards, clock numbers, phone-screen text, or readable symbols. Split composition showing two separate homes connected by a phone call: the fixed first-person girl at her warm mountain home smiles while holding a simple phone, and the fixed second-person boy in his own home happily listens on a phone. The boy is not at the girl's doorway.",
+          "imageSrc": "/assets/lessons/L109/images/L109-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L109/audio/L109-S01.m4a",
+            "durationMs": 3269,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 900
+              },
+              {
+                "charIndex": 2,
+                "startMs": 900,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1520,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2080,
+                "endMs": 2340
+              }
+            ]
+          }
+        },
+        {
+          "id": "L109-S02",
+          "text": "有好幾個人在那邊玩",
+          "displayLines": [
+            "有好幾個人",
+            "在那邊玩"
+          ],
+          "spokenText": "有好幾個人在那邊玩",
+          "focusChar": "玩",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly outdoor scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, scoreboards, or readable symbols. The fixed first-person girl stands in the foreground or side of a bright safe park, looking toward a nearby play area where several children are playing safely with a soft ball, hoop, or simple playground equipment.",
+          "imageSrc": "/assets/lessons/L109/images/L109-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L109/audio/L109-S02.m4a",
+            "durationMs": 3940,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 920
+              },
+              {
+                "charIndex": 2,
+                "startMs": 920,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2000,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2240,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2440,
+                "endMs": 2720
+              }
+            ]
+          }
+        },
+        {
+          "id": "L109-S03",
+          "text": "這個很難得分，可是很好玩",
+          "displayLines": [
+            "這個很難",
+            "得分，可是",
+            "很好玩"
+          ],
+          "spokenText": "這個很難得分可是很好玩",
+          "focusChar": "玩",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly play scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, scoreboards, or readable symbols. Children play a safe simple ring-toss or soft ball toss game. It is visibly hard to score because rings or soft balls miss the targets or land nearby, but the children are smiling and clearly having fun. Any markers must be blank shapes only.",
+          "imageSrc": "/assets/lessons/L109/images/L109-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L109/audio/L109-S03.m4a",
+            "durationMs": 3746,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 400
+              },
+              {
+                "charIndex": 2,
+                "startMs": 400,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1060,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1340,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2040,
+                "endMs": 2190
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2190,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2340,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2640,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2940,
+                "endMs": 3200
+              }
+            ]
+          }
+        },
+        {
+          "id": "L109-S04",
+          "text": "這個好吃，大家多吃一點",
+          "displayLines": [
+            "這個好吃，",
+            "大家多吃",
+            "一點"
+          ],
+          "spokenText": "這個好吃大家多吃一點",
+          "focusChar": "點",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly table scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, packaging text, or readable symbols. A warm family or classroom snack table with safe everyday tasty food. A child or adult gently invites everyone to eat a little more; people smile and take small portions. Food looks good and warm but not excessive.",
+          "imageSrc": "/assets/lessons/L109/images/L109-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L109/audio/L109-S04.m4a",
+            "durationMs": 4929,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 400
+              },
+              {
+                "charIndex": 2,
+                "startMs": 400,
+                "endMs": 760
+              },
+              {
+                "charIndex": 3,
+                "startMs": 760,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1580,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2140,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2880,
+                "endMs": 3020
+              }
+            ]
+          }
+        },
+        {
+          "id": "L109-S05",
+          "text": "紙和筆要分開放",
+          "displayLines": [
+            "紙和筆要",
+            "分開放"
+          ],
+          "spokenText": "紙和筆要分開放",
+          "focusChar": "分",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly table scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, ruler marks, tick marks, or readable symbols. A child organizes a tabletop by putting completely blank white paper sheets on one side and plain colored pens or pencils on the other side. The separation is visually clear, with the child actively sorting them. Do not include rulers, measuring marks, scissors, stamps, stickers, icons, scribbles, or patterned symbols.",
+          "imageSrc": "/assets/lessons/L109/images/L109-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L109/audio/L109-S05.m4a",
+            "durationMs": 3728,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1960,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2240,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2620,
+                "endMs": 2860
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L109-G01",
+          "type": "find-character",
+          "sentenceId": "L109-S01",
+          "targetChar": "玩",
+          "prompt": "小兔想找到「玩」。請在句子裡點一下玩。",
+          "missingIndexes": [
+            6
+          ]
+        },
+        {
+          "id": "L109-G02",
+          "type": "teach-character",
+          "sentenceId": "L109-S02",
+          "targetChar": "玩",
+          "targetCharIndex": 8,
+          "prompt": "小兔讀到一個字停住了。請按住紅框幫小兔說。",
+          "missingIndexes": [
+            8
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L109/audio/L109-G02-prefix.m4a"
+          }
+        },
+        {
+          "id": "L109-G03",
+          "type": "missing-character",
+          "sentenceId": "L109-S03",
+          "targetChar": "玩",
+          "prompt": "小兔少了一個字。請選出玩放回句子裡。",
+          "missingIndexes": [
+            10
+          ],
+          "options": [
+            {
+              "id": "wan",
+              "text": "玩",
+              "correct": true
+            },
+            {
+              "id": "fen",
+              "text": "分",
+              "correct": false
+            },
+            {
+              "id": "dian",
+              "text": "點",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L109-G04",
+          "type": "partial-order",
+          "sentenceId": "L109-S04",
+          "targetChar": "點",
+          "prompt": "小兔把幾個字弄亂了。請排回正確順序。",
+          "missingIndexes": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "options": [
+            {
+              "id": "duo",
+              "text": "多",
+              "correct": true
+            },
+            {
+              "id": "chi",
+              "text": "吃",
+              "correct": true
+            },
+            {
+              "id": "yi",
+              "text": "一",
+              "correct": true
+            },
+            {
+              "id": "dian",
+              "text": "點",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L109-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L109-S05",
+          "targetChar": "分",
+          "prompt": "小兔請朋友讀這句。先按每個朋友的頭，再按讀對的朋友旁邊的勾。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "紙和筆要分開放",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L109/audio/L109-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "紙和筆要分開畫",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L109/audio/L109-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "紙和筆要分開拿",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L109/audio/L109-G05-wrong-two.m4a"
             }
           ]
         }

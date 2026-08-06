@@ -1,0 +1,86 @@
+{
+  "id": "L109",
+  "order": 109,
+  "newChars": [
+    "玩"
+  ],
+  "zhuyin": {
+    "玩": "ㄨㄢˊ"
+  },
+  "title": "玩",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L104",
+    "L105",
+    "L106",
+    "L107",
+    "L108"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "過",
+      "分",
+      "幾",
+      "點"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "玩",
+      "點",
+      "幾",
+      "分",
+      "過",
+      "得"
+    ],
+    "targetCharMinimumCount": {
+      "玩": 3
+    },
+    "recentTargetMinimumCounts": {
+      "點": 2,
+      "幾": 2,
+      "分": 2,
+      "過": 1,
+      "得": 1
+    }
+  },
+  "teacherNotes": "這是認字練功房 L109 課程，目標新字是「玩」，注音為台灣注音 ㄨㄢˊ，不使用漢語拼音。老師已核准五句句子。只能使用 latest origin/main 已學字、L109 新字「玩」，以及老師明確指定的 provisional learned chars：L105「過」、L106「分」、L107「幾」、L108「點」。latest origin/main 目前已到 L104「得」；L109 只做 branch-only production assets，不合併 production JSON，直到 L105-L108 已合併。台灣用字，spokenText 必須等於 text 去掉標點。第 4 句與第 5 句沒有「玩」，依 schema focusChar 必須出現在 sentence text，保留老師指定 focusChar「點」與「分」。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是 OpenAI TTS 直接用單一目標字「玩」生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。Stage 4 choose-pronunciation 的錯誤選項音檔必須用完整錯誤句子獨立生成，不可拼接或裁切。",
+  "approvedSentences": [
+    {
+      "text": "你幾點要過來玩",
+      "spokenText": "你幾點要過來玩",
+      "focusChar": "玩",
+      "reason": "固定小女孩在家裡打電話問固定小男孩幾點要過來玩；小男孩不在女孩家門口，可在另一端家中或電話分隔構圖呈現。不要有時鐘數字、電話螢幕文字、門牌、標籤、注音、字母或任何可讀文字。"
+    },
+    {
+      "text": "有好幾個人在那邊玩",
+      "spokenText": "有好幾個人在那邊玩",
+      "focusChar": "玩",
+      "reason": "固定小女孩看向那邊，有好幾個人在安全明亮的遊戲區或草地玩。畫面要清楚有多人在玩，但不要用文字、數字、標籤或可讀符號標示人數。"
+    },
+    {
+      "text": "這個很難得分，可是很好玩",
+      "spokenText": "這個很難得分可是很好玩",
+      "focusChar": "玩",
+      "reason": "孩子玩一個安全簡單的投擲或套圈遊戲，雖然很難得分，但孩子覺得很好玩。不要出現文字、數字、計分板或可讀標籤；可用空白小標記或非數字圖案暗示得分。"
+    },
+    {
+      "text": "這個好吃，大家多吃一點",
+      "spokenText": "這個好吃大家多吃一點",
+      "focusChar": "點",
+      "reason": "桌上有好吃的點心或食物，孩子或大人溫和請大家多吃一點。食物要安全、日常、溫暖，不要誇張堆滿，也不要有文字、數字、標籤。"
+    },
+    {
+      "text": "紙和筆要分開放",
+      "spokenText": "紙和筆要分開放",
+      "focusChar": "分",
+      "reason": "桌上有紙和筆，孩子正在把紙放一邊、筆放另一邊，整理成分開放的樣子。紙張上不可有文字、注音、字母、數字或可讀符號。"
+    }
+  ]
+}
