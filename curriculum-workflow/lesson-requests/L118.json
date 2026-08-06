@@ -1,0 +1,97 @@
+{
+  "id": "L118",
+  "order": 118,
+  "newChars": [
+    "外"
+  ],
+  "zhuyin": {
+    "外": "ㄨㄞˋ"
+  },
+  "title": "外",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L111",
+    "L112",
+    "L113",
+    "L114",
+    "L115",
+    "L116",
+    "L117"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "外",
+      "面",
+      "地",
+      "草",
+      "帽",
+      "頭"
+    ],
+    "targetCharMinimumCount": {
+      "外": 3
+    },
+    "recentTargetMinimumCounts": {
+      "面": 2,
+      "地": 2,
+      "草": 2,
+      "帽": 1,
+      "頭": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-approved L118 sentence set for 外. Branch-only provisional work depends on L111:球, L112:棒, L113:頭, L114:帽, L115:草, L116:地, and L117:面 before production merge; teacher-provided direct dependency focus is L113-L117. Use Taiwan zhuyin and Taiwan wording. Do not use Hanyu pinyin. SpokenText must equal text with punctuation removed. Sentence images must use the L058 style anchors and must not contain readable text, numbers, labels, zhuyin, letters, signs, door plates, school names, book text, or UI. Scenes with an unfamiliar person outside the door must feel friendly, safe, and non-threatening. Production audio must use AI audio -> assets:audio -> assets:align:ai. Character audio char-u5916.m4a must be standalone AI TTS for 外, not cut from sentence audio. G05 wrong-choice audio must be generated as complete wrong sentences, not spliced.",
+  "approvedSentences": [
+    {
+      "text": "門外站著一個沒看過的人",
+      "spokenText": "門外站著一個沒看過的人",
+      "focusChar": "外",
+      "hanCharCount": 11,
+      "imageContext": "家門外站著一位友善、陌生但不嚇人的人，固定小女孩或家人從門內看見他。畫面要溫和安全，不能有恐怖、威脅、壞人感；不要有文字、門牌、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "他帶著草帽去外面玩",
+      "spokenText": "他帶著草帽去外面玩",
+      "focusChar": "外",
+      "hanCharCount": 9,
+      "imageContext": "固定「他」小男孩手上拿著草帽，準備去外面玩；草帽是拿在手上，不是戴在頭上。畫面要清楚呈現他往外面去玩的動作。不要有文字、門牌、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "地面上有很多小草",
+      "spokenText": "地面上有很多小草",
+      "focusChar": "面",
+      "hanCharCount": 8,
+      "imageContext": "地面上長著很多小草，畫面清楚表現地面和小草。可以是安全明亮的戶外地面或小路邊，不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "學校外頭是山，裡頭是草地",
+      "spokenText": "學校外頭是山裡頭是草地",
+      "focusChar": "外",
+      "hanCharCount": 11,
+      "imageContext": "一所沒有文字招牌的學校建築，外頭可以看到山，裡頭或校園內有草地。畫面要清楚區分學校外頭的山和裡頭的草地；不要有學校名稱、文字、門牌、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "那本書是同學借給我的",
+      "spokenText": "那本書是同學借給我的",
+      "focusChar": "那",
+      "hanCharCount": 10,
+      "imageContext": "同學把一本書借給固定小女孩，或固定小女孩拿著那本同學借給她的書。書本封面和內頁不可有文字、數字、注音、字母或可讀符號。畫面要溫暖、清楚呈現借書情境。"
+    }
+  ]
+}
