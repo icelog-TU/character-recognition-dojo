@@ -1,0 +1,86 @@
+{
+  "id": "L104",
+  "order": 104,
+  "newChars": [
+    "得"
+  ],
+  "zhuyin": {
+    "得": "˙ㄉㄜ"
+  },
+  "title": "得",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L100",
+    "L101",
+    "L102",
+    "L103"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "難"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "得",
+      "難",
+      "太",
+      "圓",
+      "紅",
+      "臉"
+    ],
+    "targetCharMinimumCount": {
+      "得": 3
+    },
+    "recentTargetMinimumCounts": {
+      "難": 2,
+      "太": 2,
+      "圓": 2,
+      "紅": 1,
+      "臉": 1
+    },
+    "disallowedChars": [
+      "扯",
+      "鈴"
+    ]
+  },
+  "teacherNotes": "教師核准 L104 新字：得。本課是認字練功房課程。得在本課句子中皆作補語結構輕聲 ˙ㄉㄜ，如吃得下、學得會、畫得很好看。L104 依賴 L100 紅、L101 圓、L102 太、L103 難；latest origin/main 已含 L100-L102，但 L103 尚未合併時只能做平行準備，不可合併 production JSON。只能使用已學字、provisional 難，加上本課新字得。spokenText 要等於 text 去掉標點。圖片使用 L058 風格參考，且不可有文字、數字、標籤、注音、字母或可讀符號。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程。配圖可描述扯鈴情境，但扯、鈴不可進入 sentence text 或 spokenText。原句「拿紅筆在紙上話圓」已按明顯錯字修正為「拿紅筆在紙上畫圓」。",
+  "approvedSentences": [
+    {
+      "text": "這樣不會太多，我吃得下",
+      "spokenText": "這樣不會太多我吃得下",
+      "focusChar": "得",
+      "reason": "教師核准句。固定小女孩坐在餐桌前，面前是一小份剛好的食物，不是太多，她表情放鬆，準備吃下去。畫面不要有文字、數字、標籤。"
+    },
+    {
+      "text": "這不會很難，你也學得會",
+      "spokenText": "這不會很難你也學得會",
+      "focusChar": "得",
+      "reason": "教師核准句。一個孩子正在玩扯鈴，旁邊另一個孩子看著學；玩的人溫和鼓勵對方，畫面要呈現不太難、也學得會。不要出現文字、數字、標籤。扯、鈴只可出現在配圖備註，不可進入 sentence text 或 spokenText。"
+    },
+    {
+      "text": "圓臉畫得很好看",
+      "spokenText": "圓臉畫得很好看",
+      "focusChar": "得",
+      "reason": "教師核准句。孩子在紙上畫一張圓圓的臉，畫得漂亮可愛；紙上只能有圖像，不能有文字、注音、字母、數字或可讀符號。"
+    },
+    {
+      "text": "這個書包太難用了",
+      "spokenText": "這個書包太難用了",
+      "focusChar": "難",
+      "reason": "教師核准句。孩子拿著一個書包，拉鍊、背帶或開口讓他覺得不好用，有點困擾但不危險。重點是書包太難用。不要有文字、數字、標籤。"
+    },
+    {
+      "text": "拿紅筆在紙上畫圓",
+      "spokenText": "拿紅筆在紙上畫圓",
+      "focusChar": "圓",
+      "reason": "教師核准句。孩子拿著紅色筆，在白紙上畫一個清楚的圓形。紙上只可有圓形圖案，不可有文字、注音、字母、數字或標籤。"
+    }
+  ]
+}
