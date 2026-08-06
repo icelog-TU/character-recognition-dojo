@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-06T14:28:58.859Z",
+  "exportedAt": "2026-08-06T19:00:20.222Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -54386,6 +54386,486 @@
               "text": "黑盒子在空地上",
               "correct": false,
               "audioSrc": "/assets/lessons/L123/audio/L123-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L124",
+      "order": 124,
+      "newChars": [
+        "白"
+      ],
+      "zhuyin": {
+        "白": "ㄅㄞˊ"
+      },
+      "charAudio": {
+        "白": "/assets/lessons/L124/audio/char-u767d.m4a"
+      },
+      "title": "白",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Production asset preparation for L124:白 after L119-L123 were merged in latest origin/main."
+      },
+      "sentences": [
+        {
+          "id": "L124-S01",
+          "text": "我在黑紙上面畫白點。",
+          "displayLines": [
+            "我在黑紙",
+            "上面畫白點。"
+          ],
+          "spokenText": "我在黑紙上面畫白點",
+          "focusChar": "白",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show the fixed young girl sitting at a table drawing white dots on top of a sheet of black paper with a pen. The black paper and white dots must be very clear. The paper may contain only dots or simple non-readable patterns, never characters, writing, numerals, letters, zhuyin, or readable symbols.",
+          "imageSrc": "/assets/lessons/L124/images/L124-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L124/audio/L124-S01.m4a",
+            "durationMs": 4086,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 210
+              },
+              {
+                "charIndex": 1,
+                "startMs": 210,
+                "endMs": 420
+              },
+              {
+                "charIndex": 2,
+                "startMs": 420,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1000,
+                "endMs": 1250
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1250,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1500,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1740,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2040,
+                "endMs": 2220
+              }
+            ]
+          }
+        },
+        {
+          "id": "L124-S02",
+          "text": "外面天空好黑，要下雨了。",
+          "displayLines": [
+            "外面天空",
+            "好黑，要",
+            "下雨了。"
+          ],
+          "spokenText": "外面天空好黑要下雨了",
+          "focusChar": "黑",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette even with a dark sky, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, door plates, road signs, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show the sky outside becoming very dark and looking like rain will come soon. The dark sky and near-rain weather should be clear, but the scene must stay safe, calm, and non-scary. No disaster, flooding, frightening lightning, horror mood, dangerous streets, or threatening darkness.",
+          "imageSrc": "/assets/lessons/L124/images/L124-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L124/audio/L124-S02.m4a",
+            "durationMs": 5587,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2600,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2800,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3140,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3240,
+                "endMs": 3520
+              }
+            ]
+          }
+        },
+        {
+          "id": "L124-S03",
+          "text": "把白球和黑球拿去空地玩。",
+          "displayLines": [
+            "把白球和",
+            "黑球拿去",
+            "空地玩。"
+          ],
+          "spokenText": "把白球和黑球拿去空地玩",
+          "focusChar": "白",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, road signs, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show a child carrying one white ball and one black ball, getting ready to go play in a safe bright open field. The white ball, black ball, and open ground must be easy to identify. Keep the action friendly, safe, and not intense.",
+          "imageSrc": "/assets/lessons/L124/images/L124-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L124/audio/L124-S03.m4a",
+            "durationMs": 5272,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1000,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1680,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2400,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3100,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3500,
+                "endMs": 3860
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3860,
+                "endMs": 4060
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4060,
+                "endMs": 4360
+              }
+            ]
+          }
+        },
+        {
+          "id": "L124-S04",
+          "text": "天上沒有白雲，都是黑雲。",
+          "displayLines": [
+            "天上沒有",
+            "白雲，都是",
+            "黑雲。"
+          ],
+          "spokenText": "天上沒有白雲都是黑雲",
+          "focusChar": "白",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette even with dark clouds, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show a sky with no white clouds visible; all visible clouds are dark black rain clouds, like the sky before rain. Make the black clouds clear, but do not make the image scary or disastrous. No frightening lightning, flood, disaster, horror, panic, or dangerous scene.",
+          "imageSrc": "/assets/lessons/L124/images/L124-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L124/audio/L124-S04.m4a",
+            "durationMs": 5304,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 960
+              },
+              {
+                "charIndex": 2,
+                "startMs": 960,
+                "endMs": 1310
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1310,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1660,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2980,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3240,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3500,
+                "endMs": 4080
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4080,
+                "endMs": 4340
+              }
+            ]
+          }
+        },
+        {
+          "id": "L124-S05",
+          "text": "雨是雲上掉下來的水。",
+          "displayLines": [
+            "雨是雲上",
+            "掉下來的水。"
+          ],
+          "spokenText": "雨是雲上掉下來的水",
+          "focusChar": "雨",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, clean rounded shapes, bright warm palette, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show a child-friendly simplified explanation of rain: rain drops fall down from clouds above and become water below, with a child watching safely from a protected place. Keep it gentle and educational, not a disaster scene. No scary lightning, flooding, danger, or horror mood.",
+          "imageSrc": "/assets/lessons/L124/images/L124-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L124/audio/L124-S05.m4a",
+            "durationMs": 3498,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 900
+              },
+              {
+                "charIndex": 2,
+                "startMs": 900,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1700,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2560,
+                "endMs": 2800
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L124-G01",
+          "type": "find-character",
+          "sentenceId": "L124-S01",
+          "targetChar": "白",
+          "prompt": "幫小兔子找出這句裡的「白」。",
+          "missingIndexes": [
+            7
+          ]
+        },
+        {
+          "id": "L124-G02",
+          "type": "teach-character",
+          "sentenceId": "L124-S03",
+          "targetChar": "白",
+          "targetCharIndex": 1,
+          "prompt": "教小兔子念這個字。",
+          "missingIndexes": [
+            1
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L124/audio/L124-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L124/audio/L124-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L124-G03",
+          "type": "missing-character",
+          "sentenceId": "L124-S04",
+          "targetChar": "白",
+          "prompt": "幫小兔子選出空格裡少掉的字。",
+          "missingIndexes": [
+            4
+          ],
+          "options": [
+            {
+              "id": "bai",
+              "text": "白",
+              "correct": true
+            },
+            {
+              "id": "hei",
+              "text": "黑",
+              "correct": false
+            },
+            {
+              "id": "yu",
+              "text": "雨",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L124-G04",
+          "type": "partial-order",
+          "sentenceId": "L124-S02",
+          "targetChar": "黑",
+          "prompt": "幫小兔子把少掉的字排回句子裡。",
+          "missingIndexes": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "options": [
+            {
+              "id": "tian",
+              "text": "天",
+              "correct": true
+            },
+            {
+              "id": "kong",
+              "text": "空",
+              "correct": true
+            },
+            {
+              "id": "hao",
+              "text": "好",
+              "correct": true
+            },
+            {
+              "id": "hei",
+              "text": "黑",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L124-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L124-S05",
+          "targetChar": "雨",
+          "prompt": "請先聽每個朋友念，再幫小兔子選出念對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "雨是雲上掉下來的水",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L124/audio/L124-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "雨是天上掉下來的水",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L124/audio/L124-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "雨是雲上掉下來的雲",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L124/audio/L124-G05-wrong-two.m4a"
             }
           ]
         }

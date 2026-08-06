@@ -10,6 +10,10 @@
   "title": "白",
   "targetSentenceCount": 5,
   "dependsOnLessons": [
+    "L119",
+    "L120",
+    "L121",
+    "L122",
     "L123"
   ],
   "dependsOnReviewModules": [
@@ -17,9 +21,7 @@
     "R004"
   ],
   "generationConstraints": {
-    "provisionalLearnedChars": [
-      "黑"
-    ],
+    "provisionalLearnedChars": [],
     "sentenceHanCharLength": {
       "min": 4,
       "max": 12
@@ -44,7 +46,7 @@
     },
     "disallowedChars": []
   },
-  "teacherNotes": "Use the teacher-approved L124 sentences exactly. L119-L122 are already merged in latest origin/main; L123:黑 is provisional and must be merged before L124 can enter production. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, door plates, road signs, UI, or watermarks. Black/dark-sky and rain scenes must stay safe, warm, and non-scary: no disaster, no threatening darkness, no horror, no dangerous streets, no frightening lightning. Generate standalone AI audio for 白 as public/assets/lessons/L124/audio/char-u767d.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.",
+  "teacherNotes": "Use the teacher-approved L124 sentences exactly. L119-L123 are already merged in latest origin/main, so L124 can enter production after the final asset and curriculum checks pass. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, door plates, road signs, UI, or watermarks. Black/dark-sky and rain scenes must stay safe, warm, and non-scary: no disaster, no threatening darkness, no horror, no dangerous streets, no frightening lightning. Generate standalone AI audio for 白 as public/assets/lessons/L124/audio/char-u767d.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.",
   "approvedSentences": [
     {
       "text": "我在黑紙上面畫白點。",

@@ -7,14 +7,13 @@
 - 新字：白
 - 注音：白=ㄅㄞˊ
 - 目標句數：5
-- 教師備註：Use the teacher-approved L124 sentences exactly. L119-L122 are already merged in latest origin/main; L123:黑 is provisional and must be merged before L124 can enter production. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, door plates, road signs, UI, or watermarks. Black/dark-sky and rain scenes must stay safe, warm, and non-scary: no disaster, no threatening darkness, no horror, no dangerous streets, no frightening lightning. Generate standalone AI audio for 白 as public/assets/lessons/L124/audio/char-u767d.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.
+- 教師備註：Use the teacher-approved L124 sentences exactly. L119-L123 are already merged in latest origin/main, so L124 can enter production after the final asset and curriculum checks pass. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, door plates, road signs, UI, or watermarks. Black/dark-sky and rain scenes must stay safe, warm, and non-scary: no disaster, no threatening darkness, no horror, no dangerous streets, no frightening lightning. Generate standalone AI audio for 白 as public/assets/lessons/L124/audio/char-u767d.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.
 
 ## 已學字邊界
 
 AI 必須把這份課程序列視為鎖定邊界。
 
-- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲
-- 平行備課暫定已學字：黑
+- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑
 - 本課新字：白
 - 顯示句子可用漢字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白
 - 禁止：任何未列在上方的漢字。
@@ -632,6 +631,11 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 水面上有天空的雲
 - 下雨天不要空手出門
 - 不要走去學校外面
+- 雲很黑，要下雨了
+- 天黑了，不要出去玩
+- 外面很黑，看不到路
+- 我用黑筆畫雨天的雲
+- 黑帽子在空地上
 
 ## 造句提示
 
