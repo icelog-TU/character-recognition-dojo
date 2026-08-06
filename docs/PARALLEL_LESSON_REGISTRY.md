@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L106 | 分 | claimed | Codex / L106 production assets thread | `codex/l106-fen-assets` / local | L101:圓, L102:太, L103:難, L104:得, L105:過 | 得 過 | `curriculum-workflow/lesson-requests/L106.json`; `curriculum-workflow/generated/L106-generation-packet.md`; `curriculum-workflow/drafts/L106-draft.json` | `curriculum-workflow/audio-inbox/L106/`; `public/assets/lessons/L106/` | Teacher-approved sentence set supplied. Prepare branch-only assets; blocked until L104 and L105 are merged into latest `origin/main`; do not merge production JSON yet. |
+| L106 | 分 | ready-blocked-by-dependency | Codex / L106 production assets thread | `codex/l106-fen-assets` / `2768064` | L101:圓, L102:太, L103:難, L104:得, L105:過 | 得 過 | `curriculum-workflow/lesson-requests/L106.json`; `curriculum-workflow/generated/L106-generation-packet.md`; `curriculum-workflow/drafts/L106-draft.json` | `curriculum-workflow/audio-inbox/L106/`; `public/assets/lessons/L106/` | Request, packet, draft, images, final audio, Stage 4, and AI alignment are prepared branch-only. Latest `origin/main` contains L103; blocked until L104 and L105 are merged into latest `origin/main`; do not merge production JSON yet. |
 
 ## Status Values
 
