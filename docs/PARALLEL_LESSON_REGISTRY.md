@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L122 | 雲 | claimed | Codex / L122 assets thread | `codex/l122-yun-assets` / pending claim commit | L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面, L118:外, L119:空, L120:天, L121:雨 | 棒, 頭, 帽, 草, 地, 面, 外, 空, 天, 雨 | pending | pending | Claiming L122 branch-only production assets. User direct dependencies are L117-L121; L112-L116 are listed for ordered release. |
+| L122 | 雲 | claimed | Codex / L122 assets thread | `codex/l122-yun-assets` / `a17fadf` | L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面, L118:外, L119:空, L120:天, L121:雨 | 棒, 頭, 帽, 草, 地, 面, 外, 空, 天, 雨 | pending | pending | Claiming L122 branch-only production assets. User direct dependencies are L117-L121; L112-L116 are listed for ordered release. |
 
 ## Status Values
 
