@@ -1,0 +1,95 @@
+{
+  "id": "L112",
+  "order": 112,
+  "newChars": [
+    "棒"
+  ],
+  "zhuyin": {
+    "棒": "ㄅㄤˋ"
+  },
+  "title": "棒",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L106",
+    "L107",
+    "L108",
+    "L109",
+    "L110",
+    "L111"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "棒",
+      "球",
+      "打",
+      "玩",
+      "點",
+      "幾"
+    ],
+    "targetCharMinimumCount": {
+      "棒": 3
+    },
+    "recentTargetMinimumCounts": {
+      "球": 2,
+      "打": 2,
+      "玩": 2,
+      "點": 1,
+      "幾": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Use the teacher-approved L112 sentences exactly. L112 is branch-only until L106-L111 dependencies enter production. L112 sentence 2 uses 分, so L106 is recorded as an indirect provisional dependency even though the main five preceding provisional lessons are L107-L111. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Image assets should follow the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, or letters. Generate standalone AI audio for 棒 as public/assets/lessons/L112/audio/char-u68d2.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.",
+  "approvedSentences": [
+    {
+      "text": "棒球很好玩，一起來打棒球",
+      "spokenText": "棒球很好玩一起來打棒球",
+      "focusChar": "棒",
+      "hanCharCount": 11,
+      "scene": "固定小女孩和固定小男孩在安全明亮的草地或遊戲場準備一起打棒球，棒球和球棒要清楚可見，動作安全、不激烈。不要有文字、數字、標籤、注音、字母、計分板或隊名。"
+    },
+    {
+      "text": "球和棒子要分開放",
+      "spokenText": "球和棒子要分開放",
+      "focusChar": "棒",
+      "hanCharCount": 8,
+      "scene": "孩子整理運動用品，把球放一邊、棒子放另一邊，清楚呈現分開放。棒子要像安全兒童球棒或玩具棒，不要像武器。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "有幾個人要來吃點心？",
+      "spokenText": "有幾個人要來吃點心",
+      "focusChar": "幾",
+      "hanCharCount": 9,
+      "scene": "桌上準備了點心，媽媽或孩子在問有幾個人要來吃點心。畫面可有桌上點心和準備座位的家庭/教室場景，但不要用文字或數字標示人數。不要有標籤、注音或字母。"
+    },
+    {
+      "text": "好多人在玩球",
+      "spokenText": "好多人在玩球",
+      "focusChar": "球",
+      "hanCharCount": 6,
+      "scene": "安全明亮的草地、教室遊戲區或遊戲場，好多人一起玩球。球要清楚，人物互動友善，不要有碰撞、危險動作、文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "你沒有打人，好棒",
+      "spokenText": "你沒有打人好棒",
+      "focusChar": "棒",
+      "hanCharCount": 7,
+      "scene": "小孩生氣或不開心時選擇沒有打人，大人或媽媽溫和肯定他「好棒」。畫面要呈現情緒被接住和正向鼓勵，不要畫成暴力、受傷、哭鬧嚴重或恐怖場景。不要有文字、數字、標籤、注音或字母。"
+    }
+  ]
+}

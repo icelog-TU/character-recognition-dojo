@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 111:
+Characters taught after Lesson 112:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒`
 
 Recent review pool for the next lesson:
 
-`球 打 玩 點 幾 分 過 得 難 太 圓 紅 臉 鼻 鏡 用`
+`棒 球 打 玩 點 幾 分 過 得 難 太 圓 紅 臉 鼻 鏡`
 
 ## Visual Continuity Ledger
 
@@ -176,10 +176,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L109 | 玩 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩 | 你幾點要過來玩 / 有好幾個人在那邊玩 / 這個很難得分，可是很好玩 / 這個好吃，大家多吃一點 / 紙和筆要分開放 | 點幾分過得 | Introduces `玩` through play invitations, groups playing, and a hard-but-fun game. Reviews recent `點`, `幾`, `分`, `過`, `得`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L110 | 打 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打 | 一起玩，不要打人。 / 後門有點難打開。 / 多分給我一點 / 他打我，我不要玩了 / 你幾點幾分過來？ | 玩點幾分過 | Introduces `打` through safe play reminders, opening a stuck door, and a gentle conflict scene. Reviews recent `玩`, `點`, `幾`, `分`, `過`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L111 | 球 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球 | 我和你一起玩球 / 有好幾個人在打球 / 他三點會過來玩 / 是誰把點心盒子打開的？ / 大球、小球分開放 | 打玩點幾分 | Introduces `球` through playing ball, several people playing ball, and sorting large/small balls. Reviews recent `打`, `玩`, `點`, `幾`, `分`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L112 | 棒 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒 | 棒球很好玩，一起來打棒球 / 球和棒子要分開放 / 有幾個人要來吃點心？ / 好多人在玩球 / 你沒有打人，好棒 | 球打玩點幾分 | Introduces `棒` through baseball, sorting bats and balls, and positive encouragement. Reviews recent `球`, `打`, `玩`, `點`, `幾`, and `分`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L111. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L112. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
