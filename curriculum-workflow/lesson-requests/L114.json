@@ -1,0 +1,90 @@
+{
+  "id": "L114",
+  "order": 114,
+  "newChars": [
+    "帽"
+  ],
+  "zhuyin": {
+    "帽": "ㄇㄠˋ"
+  },
+  "title": "帽",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L108",
+    "L109",
+    "L110",
+    "L111",
+    "L112",
+    "L113"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "帽",
+      "頭",
+      "棒",
+      "球",
+      "打",
+      "玩"
+    ],
+    "targetCharMinimumCount": {
+      "帽": 3
+    },
+    "recentTargetMinimumCounts": {
+      "頭": 2,
+      "棒": 2,
+      "球": 2,
+      "打": 1,
+      "玩": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "這是認字練功房 L114 課程，目標新字是「帽」，注音為台灣注音 ㄇㄠˋ，不使用漢語拼音。老師已核准五句句子。只能使用 latest origin/main 已學字、L114 新字「帽」，以及前序 provisional learned chars：L108「點」、L109「玩」、L110「打」、L111「球」、L112「棒」、L113「頭」。latest origin/main 目前已到 L107「幾」；L114 只做 branch-only production assets，不合併 production JSON，直到 L108-L113 已合併。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母、球隊標誌或浮水印。棒球帽不得有文字、數字或隊徽。球棒要像安全兒童球棒，不要像武器。第 4 句是安全提醒，不可畫成受傷、流血、哭鬧嚴重、暴力或恐怖場景。第 5 句鏡子不可破裂或危險，提醒語氣溫和。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是 OpenAI TTS 直接用單一目標字「帽」生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。Stage 4 choose-pronunciation 的錯誤選項音檔必須用完整錯誤句子獨立生成，不可拼接或裁切。",
+  "approvedSentences": [
+    {
+      "text": "你頭上的花帽很好看",
+      "spokenText": "你頭上的花帽很好看",
+      "focusChar": "帽",
+      "reason": "固定小女孩頭上戴著一頂有花裝飾的帽子，固定小男孩看著她的花帽，覺得很好看。帽子上的花要清楚是裝飾，不要出現文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "我要和他一樣的棒球帽",
+      "spokenText": "我要和他一樣的棒球帽",
+      "focusChar": "帽",
+      "reason": "固定小女孩看到固定「他」小男孩戴著棒球帽，也想要一頂一樣的棒球帽。兩頂帽子款式要明顯相同，但不要有文字、球隊標誌、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "帽子和球棒分開放",
+      "spokenText": "帽子和球棒分開放",
+      "focusChar": "帽",
+      "reason": "孩子整理運動用品，把帽子放一邊、球棒放另一邊，清楚呈現分開放。球棒要像安全兒童球棒，不要像武器。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "小心不要打到頭",
+      "spokenText": "小心不要打到頭",
+      "focusChar": "頭",
+      "reason": "孩子在玩球或拿球棒時，大人溫和提醒要小心，不要打到頭。畫面要安全提醒，不要畫成真的受傷、流血、哭鬧嚴重、暴力或恐怖場景。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "不要拿鏡子去玩",
+      "spokenText": "不要拿鏡子去玩",
+      "focusChar": "玩",
+      "reason": "孩子伸手想拿鏡子去玩，大人溫和提醒不要拿鏡子去玩。鏡子可在桌上或盒子裡，畫面要安全，不要破裂、危險或責罵感。不要有文字、數字、標籤、注音或字母。"
+    }
+  ]
+}

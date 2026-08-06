@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 113:
+Characters taught after Lesson 114:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽`
 
 Recent review pool for the next lesson:
 
-`頭 棒 球 打 玩 點 幾 分 過 得 難 太 圓 紅 臉 鼻`
+`帽 頭 棒 球 打 玩 點 幾 分 過 得 難 太 圓 紅 臉`
 
 ## Visual Continuity Ledger
 
@@ -178,10 +178,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L111 | 球 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球 | 我和你一起玩球 / 有好幾個人在打球 / 他三點會過來玩 / 是誰把點心盒子打開的？ / 大球、小球分開放 | 打玩點幾分 | Introduces `球` through playing ball, several people playing ball, and sorting large/small balls. Reviews recent `打`, `玩`, `點`, `幾`, `分`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L112 | 棒 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒 | 棒球很好玩，一起來打棒球 / 球和棒子要分開放 / 有幾個人要來吃點心？ / 好多人在玩球 / 你沒有打人，好棒 | 球打玩點幾分 | Introduces `棒` through baseball, sorting bats and balls, and positive encouragement. Reviews recent `球`, `打`, `玩`, `點`, `幾`, and `分`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L113 | 頭 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭 | 他用球棒打到我的頭 / 球在盒子裡頭 / 媽媽點頭：「你做得很棒。」 / 大家一起去打棒球 / 不要在家裡玩球，出去玩 | 棒球打玩點幾 | Introduces `頭` through approved sentence contexts. Reviews recent `棒`, `球`, `打`, `玩`, `點`, and `幾`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L114 | 帽 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽 | 你頭上的花帽很好看 / 我要和他一樣的棒球帽 / 帽子和球棒分開放 / 小心不要打到頭 / 不要拿鏡子去玩 | 頭棒球打玩點 | Introduces `帽` through approved sentence contexts. Reviews recent `頭`, `棒`, `球`, `打`, `玩`, and `點`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L113. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L114. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
