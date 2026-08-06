@@ -1,0 +1,99 @@
+{
+  "id": "L120",
+  "order": 120,
+  "newChars": [
+    "天"
+  ],
+  "zhuyin": {
+    "天": "ㄊㄧㄢ"
+  },
+  "title": "天",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L112",
+    "L113",
+    "L114",
+    "L115",
+    "L116",
+    "L117",
+    "L118",
+    "L119"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "天",
+      "空",
+      "外",
+      "面",
+      "地",
+      "草"
+    ],
+    "targetCharMinimumCount": {
+      "天": 3
+    },
+    "recentTargetMinimumCounts": {
+      "空": 2,
+      "外": 2,
+      "面": 2,
+      "地": 1,
+      "草": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-approved L120 sentence set for 天. Branch-only provisional work depends on L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面, L118:外, and L119:空 before production merge; teacher-provided direct dependency focus is L115-L119. Use Taiwan zhuyin and Taiwan wording. Do not use Hanyu pinyin. SpokenText must equal text with punctuation removed. Sentence images must use the L058 style anchors and must not contain readable text, numbers, labels, zhuyin, letters, signs, door plates, school names, or UI. Production audio must use AI audio -> assets:audio -> assets:align:ai. Character audio char-u5929.m4a must be standalone AI TTS for 天, not cut from sentence audio. G05 wrong-choice audio must be generated as complete wrong sentences, not spliced.",
+  "approvedSentences": [
+    {
+      "text": "鳥在天空飛，人在地面走。",
+      "spokenText": "鳥在天空飛人在地面走",
+      "focusChar": "天",
+      "hanCharCount": 10,
+      "imageContext": "天空中有一隻鳥在飛，地面上有一個人在走，畫面要清楚對比天空和地面。情境安全明亮，不要有危險高度或跌落感。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "我不要天天上學。",
+      "spokenText": "我不要天天上學",
+      "focusChar": "天",
+      "hanCharCount": 7,
+      "imageContext": "固定小女孩在家中或學校門口表達不想天天上學，表情有點不願意但不誇張；旁邊可以有書包或上學物品。畫面要溫和，不要哭鬧嚴重，不要有文字、數字、校名、標籤、注音或字母。"
+    },
+    {
+      "text": "外面的天空很好看。",
+      "spokenText": "外面的天空很好看",
+      "focusChar": "天",
+      "hanCharCount": 8,
+      "imageContext": "固定小女孩從門口、窗邊或外面看著漂亮的天空，天空明亮好看。不要出現文字、數字、門牌、招牌、標籤、注音或字母。"
+    },
+    {
+      "text": "小鳥飛過門前的空地",
+      "spokenText": "小鳥飛過門前的空地",
+      "focusChar": "空",
+      "hanCharCount": 9,
+      "imageContext": "一隻小鳥飛過家門前安全明亮的空地。空地要清楚可見，家門前不要有門牌、文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "門外有小狗在草地上玩。",
+      "spokenText": "門外有小狗在草地上玩",
+      "focusChar": "外",
+      "hanCharCount": 10,
+      "imageContext": "門外的草地上有一隻小狗在玩，畫面溫暖、安全、可愛。草地、門外位置和小狗玩耍要清楚，不要有文字、門牌、數字、標籤、注音或字母。"
+    }
+  ]
+}
