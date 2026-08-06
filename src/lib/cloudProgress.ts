@@ -101,6 +101,75 @@ const LEGACY_PRIVATE_PROFILE_LABEL = String.fromCharCode(0x57f9, 0x5609);
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const FIRESTORE_RETRY_DELAYS_MS = [300, 800, 1600, 3200, 5000];
+
+function getErrorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : String(error ?? "");
+}
+
+function getErrorCode(error: unknown): string {
+  if (!error || typeof error !== "object" || !("code" in error)) return "";
+  const code = (error as { code?: unknown }).code;
+  return typeof code === "string" ? code : "";
+}
+
+function isTransientFirestoreError(error: unknown): boolean {
+  const code = getErrorCode(error);
+  const message = getErrorMessage(error);
+  return (
+    code === "unavailable" ||
+    code === "deadline-exceeded" ||
+    message.includes("Database is closing") ||
+    message.includes("closing/hidden") ||
+    message.includes("client is offline") ||
+    message.includes("client has already been terminated")
+  );
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => window.setTimeout(resolve, ms));
+}
+
+function waitForVisible(): Promise<void> {
+  if (typeof document === "undefined" || document.visibilityState === "visible") return Promise.resolve();
+  return new Promise((resolve) => {
+    const timeout = window.setTimeout(done, 5000);
+    function done() {
+      window.clearTimeout(timeout);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      resolve();
+    }
+    function handleVisibilityChange() {
+      if (document.visibilityState === "visible") done();
+    }
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+  });
+}
+
+async function withFirestoreRetry<T>(operation: () => Promise<T>): Promise<T> {
+  let lastError: unknown;
+  for (let attempt = 0; attempt <= FIRESTORE_RETRY_DELAYS_MS.length; attempt += 1) {
+    try {
+      await waitForVisible();
+      return await operation();
+    } catch (error) {
+      lastError = error;
+      if (!isTransientFirestoreError(error) || attempt === FIRESTORE_RETRY_DELAYS_MS.length) {
+        throw error;
+      }
+      await sleep(FIRESTORE_RETRY_DELAYS_MS[attempt]);
+    }
+  }
+  throw lastError;
+}
+
+export function getAccountSyncErrorMessage(error: unknown, fallback: string): string {
+  if (isTransientFirestoreError(error)) {
+    return "登入後瀏覽器暫時停止同步資料，請保持這個分頁開啟並再試一次。";
+  }
+  const message = getErrorMessage(error);
+  return message || fallback;
+}
 
 function toCloudAccountUser(user: User): CloudAccountUser | null {
   if (user.isAnonymous) return null;
@@ -175,7 +244,7 @@ export async function signOutCloudAccount(): Promise<void> {
 
 export async function loadAccountDevices(accountId: string): Promise<CloudAccountDeviceRecord[]> {
   requireAccountUser(accountId);
-  const snapshots = await getDocs(collection(db, "accounts", accountId, "devices"));
+  const snapshots = await withFirestoreRetry(() => getDocs(collection(db, "accounts", accountId, "devices")));
   return snapshots.docs
     .map((snapshot) => accountDeviceFromSnapshot(snapshot.id, snapshot.data()))
     .sort((a, b) => String(b.lastSeenAt ?? "").localeCompare(String(a.lastSeenAt ?? "")));
@@ -183,7 +252,7 @@ export async function loadAccountDevices(accountId: string): Promise<CloudAccoun
 
 export async function loadAccountProfiles(accountId: string): Promise<CloudProfileRecord[]> {
   requireAccountUser(accountId);
-  const snapshots = await getDocs(collection(db, "accounts", accountId, "profiles"));
+  const snapshots = await withFirestoreRetry(() => getDocs(collection(db, "accounts", accountId, "profiles")));
   return snapshots.docs
     .map((snapshot) => profileFromSnapshot(snapshot.id, snapshot.data()))
     .sort((a, b) => String(a.createdAt ?? "").localeCompare(String(b.createdAt ?? "")));
@@ -191,7 +260,7 @@ export async function loadAccountProfiles(accountId: string): Promise<CloudProfi
 
 export async function loadAccountProfile(accountId: string, profileId: string): Promise<CloudProfileRecord | null> {
   requireAccountUser(accountId);
-  const snapshot = await getDoc(doc(db, "accounts", accountId, "profiles", profileId));
+  const snapshot = await withFirestoreRetry(() => getDoc(doc(db, "accounts", accountId, "profiles", profileId)));
   if (!snapshot.exists()) return null;
   return profileFromSnapshot(snapshot.id, snapshot.data());
 }
@@ -203,19 +272,21 @@ export async function registerAccountDevice(
 ): Promise<AccountDeviceRegistrationResult> {
   const firebaseUser = requireAccountUser(user.uid);
   const normalizedLabel = label.trim() || "這台裝置";
-  await setDoc(
-    doc(db, "accounts", user.uid),
-    {
-      accountId: user.uid,
-      email: user.email,
-      displayName: user.displayName,
-      plan: "family",
-      maxDevices: MAX_ACCOUNT_DEVICES,
-      maxProfiles: MAX_ACCOUNT_PROFILES,
-      status: "active",
-      updatedAt: serverTimestamp(),
-    },
-    { merge: true },
+  await withFirestoreRetry(() =>
+    setDoc(
+      doc(db, "accounts", user.uid),
+      {
+        accountId: user.uid,
+        email: user.email,
+        displayName: user.displayName,
+        plan: "family",
+        maxDevices: MAX_ACCOUNT_DEVICES,
+        maxProfiles: MAX_ACCOUNT_PROFILES,
+        status: "active",
+        updatedAt: serverTimestamp(),
+      },
+      { merge: true },
+    ),
   );
 
   const devices = await loadAccountDevices(user.uid);
@@ -226,19 +297,21 @@ export async function registerAccountDevice(
     return { ok: false, reason: "device-limit", maxDevices: MAX_ACCOUNT_DEVICES, devices };
   }
 
-  await setDoc(
-    doc(db, "accounts", user.uid, "devices", deviceId),
-    {
-      deviceId,
-      label: normalizedLabel,
-      active: true,
-      userAgent: typeof navigator === "undefined" ? "" : navigator.userAgent,
-      ownerUid: firebaseUser.uid,
-      lastSeenAt: serverTimestamp(),
-      updatedAt: serverTimestamp(),
-      ...(!existing ? { createdAt: serverTimestamp() } : {}),
-    },
-    { merge: true },
+  await withFirestoreRetry(() =>
+    setDoc(
+      doc(db, "accounts", user.uid, "devices", deviceId),
+      {
+        deviceId,
+        label: normalizedLabel,
+        active: true,
+        userAgent: typeof navigator === "undefined" ? "" : navigator.userAgent,
+        ownerUid: firebaseUser.uid,
+        lastSeenAt: serverTimestamp(),
+        updatedAt: serverTimestamp(),
+        ...(!existing ? { createdAt: serverTimestamp() } : {}),
+      },
+      { merge: true },
+    ),
   );
 
   const refreshedDevices = await loadAccountDevices(user.uid);
@@ -262,17 +335,19 @@ export async function createAccountProfile(
     throw new Error(`一個帳號最多可以有 ${MAX_ACCOUNT_PROFILES} 個學習檔案`);
   }
   const profileRef = doc(collection(db, "accounts", accountId, "profiles"));
-  await setDoc(
-    profileRef,
-    {
-      ...progress,
-      profileId: profileRef.id,
-      label: label.trim() || DEFAULT_PROFILE_LABELS[0],
-      active: true,
-      kind,
-      updatedAt: serverTimestamp(),
-      createdAt: serverTimestamp(),
-    },
+  await withFirestoreRetry(() =>
+    setDoc(
+      profileRef,
+      {
+        ...progress,
+        profileId: profileRef.id,
+        label: label.trim() || DEFAULT_PROFILE_LABELS[0],
+        active: true,
+        kind,
+        updatedAt: serverTimestamp(),
+        createdAt: serverTimestamp(),
+      },
+    ),
   );
   const profile = await loadAccountProfile(accountId, profileRef.id);
   if (!profile) throw new Error("Created profile could not be loaded.");
@@ -285,27 +360,31 @@ export async function saveAccountProfileProgress(
   progress: CloudProgressSnapshot,
 ): Promise<void> {
   requireAccountUser(accountId);
-  await setDoc(
-    doc(db, "accounts", accountId, "profiles", profileId),
-    {
-      ...progress,
-      profileId,
-      active: true,
-      updatedAt: serverTimestamp(),
-    },
-    { merge: true },
+  await withFirestoreRetry(() =>
+    setDoc(
+      doc(db, "accounts", accountId, "profiles", profileId),
+      {
+        ...progress,
+        profileId,
+        active: true,
+        updatedAt: serverTimestamp(),
+      },
+      { merge: true },
+    ),
   );
 }
 
 export async function renameAccountDevice(accountId: string, deviceId: string, label: string): Promise<void> {
   requireAccountUser(accountId);
-  await setDoc(
-    doc(db, "accounts", accountId, "devices", deviceId),
-    {
-      label: label.trim() || "這台裝置",
-      updatedAt: serverTimestamp(),
-    },
-    { merge: true },
+  await withFirestoreRetry(() =>
+    setDoc(
+      doc(db, "accounts", accountId, "devices", deviceId),
+      {
+        label: label.trim() || "這台裝置",
+        updatedAt: serverTimestamp(),
+      },
+      { merge: true },
+    ),
   );
 }
 
@@ -315,37 +394,43 @@ export async function setAccountDeviceActiveProfile(
   profileId: string,
 ): Promise<void> {
   requireAccountUser(accountId);
-  await setDoc(
-    doc(db, "accounts", accountId, "devices", deviceId),
-    {
-      activeProfileId: profileId,
-      lastSeenAt: serverTimestamp(),
-      updatedAt: serverTimestamp(),
-    },
-    { merge: true },
+  await withFirestoreRetry(() =>
+    setDoc(
+      doc(db, "accounts", accountId, "devices", deviceId),
+      {
+        activeProfileId: profileId,
+        lastSeenAt: serverTimestamp(),
+        updatedAt: serverTimestamp(),
+      },
+      { merge: true },
+    ),
   );
 }
 
 export async function renameAccountProfile(accountId: string, profileId: string, label: string): Promise<void> {
   requireAccountUser(accountId);
-  await setDoc(
-    doc(db, "accounts", accountId, "profiles", profileId),
-    {
-      label: label.trim() || DEFAULT_PROFILE_LABELS[0],
-      updatedAt: serverTimestamp(),
-    },
-    { merge: true },
+  await withFirestoreRetry(() =>
+    setDoc(
+      doc(db, "accounts", accountId, "profiles", profileId),
+      {
+        label: label.trim() || DEFAULT_PROFILE_LABELS[0],
+        updatedAt: serverTimestamp(),
+      },
+      { merge: true },
+    ),
   );
 }
 
 export async function deactivateAccountDevice(accountId: string, deviceId: string): Promise<void> {
   requireAccountUser(accountId);
-  await setDoc(
-    doc(db, "accounts", accountId, "devices", deviceId),
-    {
-      active: false,
-      updatedAt: serverTimestamp(),
-    },
-    { merge: true },
+  await withFirestoreRetry(() =>
+    setDoc(
+      doc(db, "accounts", accountId, "devices", deviceId),
+      {
+        active: false,
+        updatedAt: serverTimestamp(),
+      },
+      { merge: true },
+    ),
   );
 }

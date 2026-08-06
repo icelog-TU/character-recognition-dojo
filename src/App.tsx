@@ -5,6 +5,7 @@ import { buildZhuyinMap, hanChars, nextLockedLessonOrder } from "./lib/curriculu
 import {
   createAccountProfile,
   deactivateAccountDevice,
+  getAccountSyncErrorMessage,
   loadAccountDevices,
   loadAccountProfile,
   loadAccountProfiles,
@@ -1510,7 +1511,7 @@ function App() {
         setAccountReadyForSave(false);
         setFreeBrowse(false);
         setAccountSyncStatus("error");
-        setAccountSyncMessage(error instanceof Error ? error.message : "帳號裝置同步失敗");
+        setAccountSyncMessage(getAccountSyncErrorMessage(error, "帳號裝置同步失敗"));
       });
     return () => {
       active = false;
@@ -1579,7 +1580,7 @@ function App() {
       await signInWithGoogleAccount();
     } catch (error) {
       setAccountSyncStatus("error");
-      setAccountSyncMessage(error instanceof Error ? error.message : "Google 登入失敗");
+      setAccountSyncMessage(getAccountSyncErrorMessage(error, "Google 登入失敗"));
     }
   }
 
@@ -1619,7 +1620,7 @@ function App() {
     } catch (error) {
       setAccountReadyForSave(Boolean(activeProfileId));
       setAccountSyncStatus("error");
-      setAccountSyncMessage(error instanceof Error ? error.message : "切換學習檔案失敗");
+      setAccountSyncMessage(getAccountSyncErrorMessage(error, "切換學習檔案失敗"));
     }
   }
 
@@ -1655,7 +1656,7 @@ function App() {
       }
     } catch (error) {
       setAccountSyncStatus("error");
-      setAccountSyncMessage(error instanceof Error ? error.message : "停用裝置失敗");
+      setAccountSyncMessage(getAccountSyncErrorMessage(error, "停用裝置失敗"));
     }
   }
 
