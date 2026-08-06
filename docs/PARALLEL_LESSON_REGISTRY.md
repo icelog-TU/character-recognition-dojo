@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L116 | 地 | claimed | Codex / L116 production assets thread | `codex/l116-di-assets` / local | L109:玩, L110:打, L111:球, L112:棒, L113:頭, L114:帽, L115:草 | 玩 打 球 棒 頭 帽 草 | `curriculum-workflow/lesson-requests/L116.json`; `curriculum-workflow/generated/L116-generation-packet.md`; `curriculum-workflow/drafts/L116-draft.json` | `curriculum-workflow/audio-inbox/L116/`; `public/assets/lessons/L116/` | Teacher-approved sentence set supplied. Latest `origin/main` contains L108; prepare branch-only assets and do not merge production JSON until L109-L115 are merged and rechecked. |
+| L116 | 地 | ready-blocked-by-dependency | Codex / L116 production assets thread | `codex/l116-di-assets` / local | L109:玩, L110:打, L111:球, L112:棒, L113:頭, L114:帽, L115:草 | 玩 打 球 棒 頭 帽 草 | `curriculum-workflow/lesson-requests/L116.json`; `curriculum-workflow/generated/L116-generation-packet.md`; `curriculum-workflow/drafts/L116-draft.json` | `curriculum-workflow/audio-inbox/L116/`; `public/assets/lessons/L116/` | Request, packet, draft, images, final audio, Stage 4, and AI alignment are prepared branch-only. Latest `origin/main` contains L108; blocked until L109-L115 are merged into latest `origin/main`; do not merge production JSON yet. |
 
 ## Status Values
 

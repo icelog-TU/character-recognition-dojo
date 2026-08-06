@@ -1,0 +1,87 @@
+{
+  "id": "L116",
+  "order": 116,
+  "newChars": [
+    "地"
+  ],
+  "zhuyin": {
+    "地": "ㄉㄧˋ"
+  },
+  "title": "地",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L109",
+    "L110",
+    "L111",
+    "L112",
+    "L113",
+    "L114",
+    "L115"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "地",
+      "草",
+      "帽",
+      "頭",
+      "棒",
+      "球"
+    ],
+    "targetCharMinimumCount": {
+      "地": 3
+    },
+    "recentTargetMinimumCounts": {
+      "草": 2,
+      "帽": 2,
+      "頭": 2,
+      "棒": 1,
+      "球": 1
+    }
+  },
+  "teacherNotes": "這是認字練功房 L116 課程，目標新字是「地」，注音為台灣注音 ㄉㄧˋ，不使用漢語拼音。老師已核准五句句子。latest origin/main 目前只到 L108「點」，所以 L116 只做 branch-only 平行 production assets，不合併 production JSON，直到 L109-L115 已依序合併。老師直接指定 L116 依賴 L111「球」、L112「棒」、L113「頭」、L114「帽」、L115「草」；句子也使用 L109「玩」與 L110「打」，因此 request 另列為 provisional learned chars 與 ordered release dependency。台灣用字，spokenText 必須等於 text 去掉標點。圖片使用 L058 風格參考，且不得出現文字、數字、招牌、標籤、注音、英文字母或浮水印。音檔使用 AI audio -> assets:audio -> assets:align:ai 標準流程；單字發音必須是 OpenAI TTS 直接用單一目標字「地」生成，不可從句子裁切。teachAudio prefix/suffix 也必須用精確片段獨立生成，不可從整句裁切。choose-pronunciation wrong option 音檔必須用完整錯誤句獨立生成，不可拼接。",
+  "approvedSentences": [
+    {
+      "text": "好幾個人在草地上玩球",
+      "spokenText": "好幾個人在草地上玩球",
+      "focusChar": "地",
+      "reason": "情境設想：安全明亮的草地上，好幾個人在玩球。草地、球和多人一起玩的情境要清楚，動作友善不激烈。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "草帽掉到地上了",
+      "spokenText": "草帽掉到地上了",
+      "focusChar": "地",
+      "reason": "情境設想：一頂草帽掉在地上，旁邊可以有孩子剛發現帽子掉了。草帽和地面要清楚可見，不要有危險感。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "這裡是打棒球的好地點",
+      "spokenText": "這裡是打棒球的好地點",
+      "focusChar": "地",
+      "reason": "情境設想：一片安全、開闊、明亮的草地或空地，孩子們準備在這裡打棒球，表現這裡是適合打棒球的好地點。不要有文字、數字、告示牌、標籤、注音或字母。"
+    },
+    {
+      "text": "紙人頭上的花帽是我做的",
+      "spokenText": "紙人頭上的花帽是我做的",
+      "focusChar": "頭",
+      "reason": "情境設想：固定小女孩展示自己做的紙人，紙人頭上有一頂花帽。花帽要清楚是紙人身上的手作品；紙人和花帽都不要有文字、數字、注音、字母或可讀符號。"
+    },
+    {
+      "text": "我在紙人的頭上放一朵花",
+      "spokenText": "我在紙人的頭上放一朵花",
+      "focusChar": "頭",
+      "reason": "情境設想：固定小女孩把一朵花放在紙人的頭上，像在裝飾紙人。紙人、花、孩子的手部動作要清楚；紙人和紙張上不可有文字、數字、注音、字母或可讀符號。"
+    }
+  ]
+}
