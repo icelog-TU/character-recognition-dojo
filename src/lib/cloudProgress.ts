@@ -1,13 +1,24 @@
 import { initializeApp } from "firebase/app";
 import {
+  browserLocalPersistence,
+  browserPopupRedirectResolver,
   GoogleAuthProvider,
-  getAuth,
+  initializeAuth,
   onAuthStateChanged,
   signInWithPopup,
   signOut,
   type User,
 } from "firebase/auth";
-import { collection, doc, getDoc, getDocs, getFirestore, serverTimestamp, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  initializeFirestore,
+  memoryLocalCache,
+  serverTimestamp,
+  setDoc,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB79G4vRFLaRIPh1waBpJ99AS2BOt-ZzGk",
@@ -99,8 +110,11 @@ const DEFAULT_PROFILE_LABELS = ["學習檔案一", "學習檔案二", "學習檔
 const LEGACY_PRIVATE_PROFILE_LABEL = String.fromCharCode(0x57f9, 0x5609);
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+const auth = initializeAuth(app, {
+  persistence: browserLocalPersistence,
+  popupRedirectResolver: browserPopupRedirectResolver,
+});
+const db = initializeFirestore(app, { localCache: memoryLocalCache() });
 const FIRESTORE_RETRY_DELAYS_MS = [300, 800, 1600, 3200, 5000];
 
 function getErrorMessage(error: unknown): string {
