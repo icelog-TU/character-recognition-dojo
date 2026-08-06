@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 107:
+Characters taught after Lesson 108:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點`
 
 Recent review pool for the next lesson:
 
-`幾 分 過 得 難 太 圓 紅 臉 鼻 鏡 用 眼 壞 掉 盒`
+`點 幾 分 過 得 難 太 圓 紅 臉 鼻 鏡 用 眼 壞 掉`
 
 ## Visual Continuity Ledger
 
@@ -172,10 +172,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L105 | 過 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過 | 我把紅花做壞了，好難過 / 這個我沒吃過，太難吃了 / 大家難得一起出門 / 這個圓畫得不太圓 / 過來和我一起做吃的 | 得難太圓紅 | Introduces `過` through feeling sad, having tried food before, and coming over to do something together. Reviews recent `得`, `難`, `太`, `圓`, `紅`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L106 | 分 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分 | 難得有同學來我家 / 我得一分，他得三分 / 我做得不太好，很難過 / 我去把吃的分給大家 / 把圓盒子拿過來 | 過得難太圓 | Introduces `分` through scoring points and sharing food. Reviews recent `過`, `得`, `難`, `太`, `圓`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L107 | 幾 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾 | 媽媽問：「有幾個同學要過來？」 / 這邊的書你看過幾本？ / 要把紅花分給幾個人？ / 沒有得分，我很難過 / 不要一下子吃得太多 | 分過得難太 | Introduces `幾` through asking quantities of classmates, books, and people receiving flowers. Reviews recent `分`, `過`, `得`, `難`, `太`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L108 | 點 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點 | 你幾點要過來？ / 點心要分給幾個人？ / 這個有點難做 / 你得到幾分？ / 我沒來過這裡 | 幾分過得難 | Introduces `點` through time, snacks, and "a little" difficulty scenes. Reviews recent `幾`, `分`, `過`, `得`, `難`; includes L058-style generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character prefix/suffix audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L107. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L108. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

@@ -278,6 +278,6 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L107, L100 introduces `紅`, and review modules are complete through R004.
+As of latest `origin/main`, production curriculum is complete through L108, L108 introduces `點`, and review modules are complete through R004.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L107 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L108 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
