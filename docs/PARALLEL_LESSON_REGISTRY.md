@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L120 | 天 | claimed | Codex / L120 assets thread | `codex/l120-tian-assets` | L112:棒, L113:頭, L114:帽, L115:草, L116:地, L117:面, L118:外, L119:空 | 棒, 頭, 帽, 草, 地, 面, 外, 空 | `curriculum-workflow/lesson-requests/L120.json`; `curriculum-workflow/generated/L120-generation-packet.md` | `curriculum-workflow/drafts/L120-draft.json`; `curriculum-workflow/audio-inbox/L120/`; `public/assets/lessons/L120/` | Claiming L120 branch-only production assets. User direct dependencies are L115-L119; L112-L114 are listed for ordered release before those dependencies. Do not merge production JSON until L112-L119 are merged and rechecked. |
 
 ## Status Values
 
