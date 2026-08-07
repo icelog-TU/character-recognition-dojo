@@ -35,13 +35,28 @@ Always verify current state with `git fetch origin`, `npm run curriculum:audit-s
 
 ## 新對話串起手
 
-Preferred shared local working copy:
+Coordination/release working copy:
 
 ```text
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo-profile-sync
 ```
 
-Do not create a new clone unless the user explicitly asks for one. If the current shell is not in this path, stop and tell the user before editing.
+Keep this path clean for release, SOP, and cross-thread coordination. Do not use it for ordinary parallel lesson production unless the user explicitly assigns release or SOP work.
+
+Parallel production threads must use one of the fixed worktree slots:
+
+```text
+Production thread A:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-a
+
+Production thread B:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b
+
+Production thread C:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
+```
+
+Do not create a new clone unless the user explicitly asks for one. If the current shell is not in the assigned path, stop and tell the user before editing.
 
 Run:
 
@@ -54,7 +69,7 @@ npm run tools:check
 npm run curriculum:audit-state
 ```
 
-Do not run `npm ci` as a routine start command in the shared working copy. On Windows it can fail with `EPERM unlink` when another Codex thread, dev server, or Node process locks native package files. Use it only when dependencies are actually missing or stale, and only after confirming the shared working copy is not actively being used.
+Do not run `npm ci` as a routine start command in any active worktree. On Windows it can fail with `EPERM unlink` when another Codex thread, dev server, or Node process locks native package files. Use it only when dependencies are actually missing or stale, and only after confirming that assigned worktree is not actively being used.
 
 GitHub CLI is available on this machine. If bare `gh` is not found, use:
 
@@ -156,10 +171,19 @@ The user has standing approval for safe, checked, completed work to be merged to
 We are continuing the `認字練功房` repo:
 https://github.com/icelog-TU/character-recognition-dojo
 
-Use this existing local working copy. Do not create a new clone:
+Use the working copy assigned for your thread. Do not create a new clone.
+
+For release / SOP / coordination work only:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo-profile-sync
 
-If your current working directory is not exactly that repo path, stop and tell me before editing. Do not work from any older clone.
+For normal parallel lesson production, use one assigned worktree slot:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-a
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
+
+If your current working directory is not exactly the assigned path, stop and tell me before editing. Do not work from any older clone.
+
+If your assigned production worktree is dirty, stop and report the dirty files. Do not stash, revert, or overwrite another thread's unfinished work. A dirty state in another worktree does not block your assigned clean worktree.
 
 Before editing, run:
 git remote -v

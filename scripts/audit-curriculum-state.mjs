@@ -30,6 +30,14 @@ function assertIncludes(file, text, label) {
   if (!file.includes(text)) errors.push(label);
 }
 
+function expectedRecentReviewPool(lessonList, count = 16) {
+  return lessonList
+    .slice(-count)
+    .flatMap((lesson) => lesson.newChars ?? [])
+    .reverse()
+    .join(" ");
+}
+
 const curriculum = readJson("src/curriculum/sample-lessons.json");
 const lessons = Array.isArray(curriculum.lessons) ? curriculum.lessons : [];
 const reviewLessons = Array.isArray(curriculum.reviewLessons) ? curriculum.reviewLessons : [];
@@ -67,6 +75,7 @@ if (lessons.length === 0) {
 
   const ledger = readText("docs/CURRICULUM_LEDGER.md");
   const expectedLearnedChars = lessons.flatMap((lesson) => lesson.newChars ?? []).join("");
+  const expectedRecentPool = expectedRecentReviewPool(lessons);
   const currentStateMatch = ledger.match(
     /## Current Character State\s+Characters taught after Lesson (\d+):\s+`([^`]+)`/m,
   );
@@ -85,6 +94,15 @@ if (lessons.length === 0) {
         "docs/CURRICULUM_LEDGER.md Current Character State learned-character string is stale; update it from src/curriculum/sample-lessons.json.",
       );
     }
+  }
+
+  const recentPoolMatch = ledger.match(/Recent review pool for the next lesson:\s+`([^`]+)`/m);
+  if (!recentPoolMatch) {
+    errors.push("docs/CURRICULUM_LEDGER.md is missing the Recent review pool summary.");
+  } else if (recentPoolMatch[1] !== expectedRecentPool) {
+    errors.push(
+      `docs/CURRICULUM_LEDGER.md Recent review pool is stale; expected \`${expectedRecentPool}\` from the latest production lessons.`,
+    );
   }
 
   const ledgerCompleteMatch = ledger.match(/Merged curriculum is complete through (L\d{3})\./);

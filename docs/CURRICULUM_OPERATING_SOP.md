@@ -8,7 +8,7 @@ The goal is to allow parallel lesson preparation without letting `main`, Markdow
 
 Do not duplicate detailed rules across SOP files. Use this authority order when updating docs:
 
-- This file is the authority for source-of-truth order, shared working copy, new-thread startup, parallel lesson ownership, dependency gates, merge order, and done-state checks.
+- This file is the authority for source-of-truth order, assigned worktree roles, new-thread startup, parallel lesson ownership, dependency gates, merge order, and done-state checks.
 - `docs/CURRICULUM_PRODUCTION_SOP.md` is the authority for lesson/review production assets, image/audio/timing processing, Stage 4 QA, and asset hard limits.
 - `docs/SENTENCE_GENERATION_SOP.md` is the authority for AI sentence drafting prompts, target/review coverage, word-first drafting, sentence quality, `spokenText`, `focusChar`, and display-line checks.
 - `docs/CURRICULUM_SCHEMA.md` is the authority for JSON shape and validation expectations.
@@ -32,19 +32,47 @@ Use this order whenever files disagree:
 
 Chat transcripts, pasted messages, and branch names are never source-of-truth. Final teacher-approved lesson text must be captured in the repo as a lesson/review request, generated packet, draft JSON, and eventually production JSON. A release thread must reject any unit whose final sentence set exists only in chat.
 
-If Markdown and production JSON disagree, update Markdown or generated planner data to match `origin/main` unless the user explicitly asks to change production curriculum. In particular, `docs/CURRICULUM_LEDGER.md` `Current Character State` must match the final lesson order and cumulative `newChars` from `src/curriculum/sample-lessons.json`; `npm run curriculum:audit-state` must fail if that summary is stale.
+If Markdown and production JSON disagree, update Markdown or generated planner data to match `origin/main` unless the user explicitly asks to change production curriculum. In particular, `docs/CURRICULUM_LEDGER.md` `Current Character State` must match the final lesson order and cumulative `newChars` from `src/curriculum/sample-lessons.json`, and `Recent review pool for the next lesson` must match the latest production lesson `newChars` list; `npm run curriculum:audit-state` must fail if those summaries are stale.
 
 If an AI recommendation draft or unmerged lesson request disagrees with the teacher's latest explicit selected character/sentences, the teacher's latest request wins. Do not reject the work because an old recommendation or stale draft says a different character was planned.
 
-## Required Start Sequence
+## Worktree Roles And Required Start Sequence
 
-On this Windows machine, the preferred shared local working copy is:
+On this Windows machine, the coordination/release working copy is:
 
 ```text
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo-profile-sync
 ```
 
-Do not create a new clone unless the user explicitly asks for one. If the current shell is not in this path, stop and tell the user before editing. Do not continue work from an older clone such as another `character-recognition-dojo` folder unless the user explicitly selects that clone for the task.
+This path must stay clean for cross-thread coordination, SOP maintenance, release merging, GitHub Pages checks, and emergency diagnostics. Do not assign normal parallel lesson production threads to this path unless the user explicitly says that thread owns release or SOP work.
+
+Normal parallel production threads must use one of these fixed git worktree slots:
+
+```text
+Production thread A:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-a
+
+Production thread B:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b
+
+Production thread C:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
+```
+
+These are git worktrees of the same repo, not new clones. A dirty state in one slot means only that slot is occupied; it must not block the other production slots. A dirty state in `character-recognition-dojo-profile-sync` means the coordination/release workspace is occupied and must not be reused for new lesson production.
+
+Do not create a new clone unless the user explicitly asks for one. If the current shell is not in the assigned path, stop and tell the user before editing. Do not continue work from an older clone such as another `character-recognition-dojo` folder unless the user explicitly selects that clone for the task.
+
+When a production slot receives an assigned lesson, start from that slot and create a lesson-named branch from latest `origin/main`, for example:
+
+```powershell
+cd C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-a
+git fetch origin
+git status --short --branch
+git switch -c codex/l135-complete-package origin/main
+```
+
+If `git status --short` is not clean in the assigned slot, that slot is still occupied. Stop and report the dirty files instead of stashing, reverting, or overwriting another thread's work. The coordinator must either wait for that slot to finish or assign a different clean slot.
 
 Every new conversation thread must start with:
 
@@ -65,7 +93,7 @@ C:\Users\User\.local\bin\gh.cmd auth status
 
 If bare `gh` is not found in PowerShell, use the full path above. Do not report GitHub CLI as unavailable until the full-path command fails.
 
-Do not run `npm ci` as a routine start command in the shared working copy. `npm ci` deletes and recreates `node_modules`, and concurrent Codex threads, dev servers, or Node tools can lock native package files on Windows and cause `EPERM unlink` failures. Run `npm ci` only when dependencies are missing or known stale, and only after confirming no other thread or dev server is using this working copy.
+Do not run `npm ci` as a routine start command in any active worktree. `npm ci` deletes and recreates `node_modules`, and concurrent Codex threads, dev servers, or Node tools can lock native package files on Windows and cause `EPERM unlink` failures. Run it only when dependencies are missing or known stale, and only after confirming no other thread or dev server is using that worktree.
 
 GitHub CLI is available on this Windows machine. Use it for GitHub status, PRs, issues, and Actions when helpful. If bare `gh` is not on PATH, use the known logged-in wrapper:
 
@@ -114,16 +142,16 @@ Production release is a single lane:
 - Lessons must enter `main` in lesson order.
 - A later lesson may be prepared before an earlier lesson is merged, but it must not be merged into `main` until every dependency lesson exists in latest `origin/main`.
 
-This means three conversations can prepare L052, L053, and L054 at the same time, but `main` still receives L052 first, then L053, then L054.
+This means three conversations can prepare L052, L053, and L054 at the same time only if they are in separate worktree slots. `main` still receives L052 first, then L053, then L054.
 
 ## Five-Thread Curriculum Workflow
 
 The standard parallel curriculum workflow uses five conversation threads:
 
 1. **Sentence editor thread:** drafts with the teacher, performs the allowed-character and coverage audits, and records the teacher-approved final sentence set.
-2. **Production thread A:** builds one assigned lesson/review unit from a complete handoff.
-3. **Production thread B:** builds one assigned lesson/review unit from a complete handoff.
-4. **Production thread C:** builds one assigned lesson/review unit from a complete handoff.
+2. **Production thread A:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-a`.
+3. **Production thread B:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-b`.
+4. **Production thread C:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-c`.
 5. **Release thread:** receives completed units, rebases on latest `origin/main`, merges in playable order, runs gates, pushes, and checks deployment.
 
 The sentence editor thread is not allowed to send only "make images and audio" instructions. After the teacher approves sentences, it must output a complete production handoff for each unit and either create or explicitly require the receiving production thread to create all source files listed below.
@@ -238,7 +266,7 @@ npm run assets:align:ai -- --lesson L###
 
 13. Manually play every Stage 3 sentence and Stage 4 option audio on a phone-width viewport. Confirm audio starts on tap, final syllables are audible, `charTimings` follow the heard syllables, and `teach-character` playback boundaries do not duplicate or clip the target character.
 14. Add reviewed lesson data to `src/curriculum/sample-lessons.json` only when its dependencies are already in `origin/main`.
-15. Update `docs/CURRICULUM_LEDGER.md`, including the lesson row, merged-through line, review-module status, and the `Current Character State` lesson number plus cumulative learned-character string.
+15. Update `docs/CURRICULUM_LEDGER.md`, including the lesson row, merged-through line, review-module status, `Current Character State`, and `Recent review pool for the next lesson`. Do not derive the recent pool from sentence text; it must come from the latest production lesson `newChars` list.
 16. Regenerate planner data:
 
 ```bash
