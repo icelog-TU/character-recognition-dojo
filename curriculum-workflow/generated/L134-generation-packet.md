@@ -769,7 +769,7 @@ AI 必須把這份課程序列視為鎖定邊界。
   "order": 134,
   "newChars": ["冷"],
   "zhuyin": {"冷":"ㄌㄥˇ"},
-  "charAudio": {"冷":"/assets/lessons/L134/audio/char-冷.m4a"},
+  "charAudio": {"冷":"/assets/lessons/L134/audio/char-u51b7.m4a"},
   "title": "冷",
   "requiredRounds": 5,
   "sentences": [
@@ -796,3 +796,54 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+
+## L134 固定 Stage 4 計畫
+
+這是教師核准的正式 Stage 4 設計。L134 目前只能平行準備，不可進 production JSON，因為 latest `origin/main` 尚未依序合併 L127-L133。
+
+1. `L134-G01` `find-character`
+   - `sentenceId`: `L134-S03`
+   - `targetChar`: `冷`
+   - 說明：找出句子中的「冷」。
+
+2. `L134-G02` `teach-character`
+   - `sentenceId`: `L134-S04`
+   - `targetChar`: `冷`
+   - `targetCharIndex`: `0`
+   - prefix text：無
+   - suffix text：`水太冷熱水太熱`
+   - 必須獨立 AI TTS 生成：`/assets/lessons/L134/audio/L134-G02-suffix.m4a`
+   - 不可從 S04 音檔裁切、拼接、替換。
+
+3. `L134-G03` `missing-character`
+   - `sentenceId`: `L134-S05`
+   - `targetChar`: `冷`
+   - `missingIndexes`: `[7]`
+   - `options`: `冷`、`熱`、`氣`
+
+4. `L134-G04` `partial-order`
+   - `sentenceId`: `L134-S02`
+   - `targetChar`: `套`
+   - `options`: `用套子`、`把大衣`、`套起來`
+   - 遊戲進入時選項必須 shuffle，不可固定正確順序。
+
+5. `L134-G05` `choose-pronunciation`
+   - `sentenceId`: `L134-S01`
+   - `targetChar`: `熱`
+   - correct：`天氣太熱，我要脫掉外套。`
+   - wrong-one：`天氣太冷，我要脫掉外套。`
+   - wrong-two：`天氣太熱，我要穿上外套。`
+   - wrong option 必須獨立 AI TTS 整句生成：
+     - `/assets/lessons/L134/audio/L134-G05-wrong-one.m4a`
+     - `/assets/lessons/L134/audio/L134-G05-wrong-two.m4a`
+   - 不可裁切、拼接、替換正確句子音檔。
+
+## L134 平行包狀態
+
+- request：`curriculum-workflow/lesson-requests/L134.json`
+- packet：`curriculum-workflow/generated/L134-generation-packet.md`
+- draft：`curriculum-workflow/drafts/L134-draft.json`
+- final images：`public/assets/lessons/L134/images/`
+- final audio：`public/assets/lessons/L134/audio/`
+- raw audio inbox：`curriculum-workflow/audio-inbox/L134/`
+- production JSON：不可寫入，直到 L127-L133 已合併到 latest `origin/main`
