@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 134:
+Characters taught after Lesson 135:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝`
 
 Recent review pool for the next lesson:
 
-`冷 熱 套 氣 脫 衣 戴 穿 鞋 棋 白 黑 雲 雨 天 空`
+`喝 冷 熱 套 氣 脫 衣 戴 穿 鞋 棋 白 黑 雲 雨 天`
 
 ## Visual Continuity Ledger
 
@@ -199,10 +199,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L132 | 套 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套 | 這一套有鞋子和大衣。 / 天氣不好，要穿外套，戴手套。 / 這裡空氣不好，不要脫掉。 / 好的大衣會有套子。 / 小小孩不會穿鞋和脫鞋。 | 氣脫衣戴穿 | Repair package built from teacher-audited authoritative final sentences. Includes L058-style images, AI audio, standalone character audio, Stage 4 teachAudio and choose-pronunciation wrong-option audio, and AI-aligned timings. |
 | L133 | 熱 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱 | 天氣太熱，我要脫外套。 / 好熱，我不要戴手套。 / 熱氣球飛到天空去。 / 爸爸把大衣脫掉放門邊。 / 這隻鞋子有點小，很難穿。 | 套氣脫衣戴 | Introduces `熱` through approved sentence contexts. Reviews recent `套`, `氣`, `脫`, `衣`, and `戴`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L134 | 冷 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷 | 天氣太熱，我要脫掉外套。 / 用套子把大衣套起來。 / 空氣好冷，眼鏡都白掉了。 / 冷水太冷，熱水太熱。 / 沒帶外套出門，冷得不得了。 | 熱套氣脫衣 | Introduces `冷` through approved sentence contexts. Reviews recent `熱`, `套`, `氣`, `脫`, and `衣`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L135 | 喝 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝 | 小鳥在水邊喝水。 / 天氣熱，孩子喝冷水。 / 天氣冷，爸爸喝熱水。 / 脫掉手套和外套。 / 草帽掉到水裡了。 | 冷熱套氣脫 | Introduces `喝` through approved sentence contexts. Reviews recent `冷熱套氣脫`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L134. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L135. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
