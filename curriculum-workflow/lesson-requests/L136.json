@@ -1,0 +1,207 @@
+{
+  "id": "L136",
+  "order": 136,
+  "newChars": [
+    "飯"
+  ],
+  "zhuyin": {
+    "飯": "ㄈㄢˋ"
+  },
+  "title": "飯",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L135"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯",
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "喝"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "飯",
+      "喝",
+      "冷",
+      "熱",
+      "套",
+      "氣"
+    ],
+    "targetCharMinimumCount": {
+      "飯": 3
+    },
+    "recentTargetMinimumCounts": {
+      "喝": 2,
+      "冷": 2,
+      "熱": 2,
+      "套": 1,
+      "氣": 1
+    },
+    "disallowedChars": [
+      "菜",
+      "碗",
+      "杯",
+      "湯",
+      "飽",
+      "餓",
+      "口",
+      "渴",
+      "冰",
+      "餐"
+    ]
+  },
+  "teacherNotes": "This is a complete production lesson handoff for 認字練功房 L136. Build the full parallel package, not assets-only. Latest origin/main is merged through L134:冷, so L135:喝 is a provisional dependency. Do not merge L136 production JSON until L135:喝 is merged in order. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. No Han characters outside allowedChars may appear in text, spokenText, displayLines, focusChar, or Stage 4 option text. Images must use L058 style anchors and must not contain text, numbers, zhuyin, letters, signs, labels, or watermarks. Generate standalone AI audio for 飯 as public/assets/lessons/L136/audio/char-u98ef.m4a. Generate sentence audio, teachAudio prefix/suffix, and choose-pronunciation wrong-option audio as independent OpenAI TTS whole utterances; do not cut, splice, patch, or extract from other audio.",
+  "approvedSentences": [
+    {
+      "id": "L136-S01",
+      "text": "我吃太多飯了，要喝一點水。",
+      "spokenText": "我吃太多飯了要喝一點水",
+      "focusChar": "飯",
+      "displayLines": [
+        "我吃太多飯了，",
+        "要喝一點水。"
+      ],
+      "hanCharCount": 11,
+      "scene": "孩子吃了很多飯，覺得需要喝一點水；桌上可有白飯和水，但圖片不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L136-S02",
+      "text": "天氣冷，桌上的飯都冷了。",
+      "spokenText": "天氣冷桌上的飯都冷了",
+      "focusChar": "飯",
+      "displayLines": [
+        "天氣冷，",
+        "桌上的飯",
+        "都冷了。"
+      ],
+      "hanCharCount": 10,
+      "scene": "天氣很冷，桌上的飯也變冷了；可畫桌上放著飯，旁邊有冷天情境。"
+    },
+    {
+      "id": "L136-S03",
+      "text": "熱熱的白飯，看起來好好吃。",
+      "spokenText": "熱熱的白飯看起來好好吃",
+      "focusChar": "飯",
+      "displayLines": [
+        "熱熱的白飯，",
+        "看起來",
+        "好好吃。"
+      ],
+      "hanCharCount": 11,
+      "scene": "熱熱的白飯冒著熱氣，看起來很好吃；畫面要清楚呈現白飯與熱氣，不可有文字。"
+    },
+    {
+      "id": "L136-S04",
+      "text": "白飯掉到外套上了。",
+      "spokenText": "白飯掉到外套上了",
+      "focusChar": "套",
+      "displayLines": [
+        "白飯掉到",
+        "外套上了。"
+      ],
+      "hanCharCount": 8,
+      "scene": "白飯不小心掉到外套上；外套與飯粒要清楚可見，這句複習「套」。"
+    },
+    {
+      "id": "L136-S05",
+      "text": "我不愛喝熱水，給我冷水。",
+      "spokenText": "我不愛喝熱水給我冷水",
+      "focusChar": "喝",
+      "displayLines": [
+        "我不愛喝熱水，",
+        "給我冷水。"
+      ],
+      "hanCharCount": 10,
+      "scene": "孩子不喜歡喝熱水，想要冷水；畫面可有一杯冒熱氣的水和一杯冷水，但圖片不可出現文字、標籤或符號。"
+    }
+  ],
+  "coverageStats": {
+    "飯": 4,
+    "喝": 2,
+    "冷": 3,
+    "熱": 3,
+    "套": 1,
+    "氣": 1
+  },
+  "stage4Plan": [
+    {
+      "id": "L136-G01",
+      "type": "find-character",
+      "sentenceId": "L136-S01",
+      "targetChar": "飯"
+    },
+    {
+      "id": "L136-G02",
+      "type": "teach-character",
+      "sentenceId": "L136-S02",
+      "targetChar": "飯",
+      "targetCharIndex": 6,
+      "prefixText": "天氣冷桌上的",
+      "suffixText": "都冷了",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L136/audio/L136-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L136/audio/L136-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L136-G03",
+      "type": "missing-character",
+      "sentenceId": "L136-S03",
+      "targetChar": "飯",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "飯",
+        "水",
+        "熱"
+      ]
+    },
+    {
+      "id": "L136-G04",
+      "type": "partial-order",
+      "sentenceId": "L136-S04",
+      "targetChar": "套",
+      "chunks": [
+        "白飯",
+        "掉到",
+        "外套上了"
+      ]
+    },
+    {
+      "id": "L136-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L136-S05",
+      "targetChar": "喝",
+      "options": [
+        {
+          "id": "correct",
+          "text": "我不愛喝熱水，給我冷水。",
+          "spokenText": "我不愛喝熱水給我冷水",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L136/audio/L136-S05.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "我不愛喝冷水，給我熱水。",
+          "spokenText": "我不愛喝冷水給我熱水",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L136/audio/L136-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我不愛喝熱水，給我熱水。",
+          "spokenText": "我不愛喝熱水給我熱水",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L136/audio/L136-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

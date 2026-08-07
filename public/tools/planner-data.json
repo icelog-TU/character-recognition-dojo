@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-07T09:37:57.360Z",
+  "exportedAt": "2026-08-07T09:40:34.582Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -59847,6 +59847,509 @@
               "spokenText": "白帽掉到水裡了",
               "audioSrc": "/assets/lessons/L135/audio/L135-G05-wrong-two.m4a",
               "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L136",
+      "order": 136,
+      "newChars": [
+        "飯"
+      ],
+      "zhuyin": {
+        "飯": "ㄈㄢˋ"
+      },
+      "charAudio": {
+        "飯": "/assets/lessons/L136/audio/char-u98ef.m4a"
+      },
+      "title": "飯",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Teacher-approved L136 handoff; prepared in parallel because L135 is not yet merged."
+      },
+      "sentences": [
+        {
+          "id": "L136-S01",
+          "text": "我吃太多飯了，要喝一點水。",
+          "displayLines": [
+            "我吃太多飯",
+            "了，要喝一點",
+            "水。"
+          ],
+          "spokenText": "我吃太多飯了要喝一點水",
+          "focusChar": "飯",
+          "imagePrompt": "L058 style anchor: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home dining room, consistent expressive preschool proportions, soft cheeks, gentle facial expression, bright warm palette, phone-readable composition. A young child has eaten a lot of plain white rice and gently reaches for a clear cup of water. The table shows a bowl or plate with little rice left and water clearly visible. No visible text, numbers, zhuyin, letters, labels, signs, logos, or watermarks.",
+          "imageSrc": "/assets/lessons/L136/images/L136-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L136/audio/L136-S01.m4a",
+            "durationMs": 4658,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1620,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2320,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2560,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2800,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2980,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3160,
+                "endMs": 3580
+              }
+            ]
+          }
+        },
+        {
+          "id": "L136-S02",
+          "text": "天氣冷，桌上的飯都冷了。",
+          "displayLines": [
+            "天氣冷，",
+            "桌上的飯",
+            "都冷了。"
+          ],
+          "spokenText": "天氣冷桌上的飯都冷了",
+          "focusChar": "飯",
+          "imagePrompt": "L058 style anchor: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home dining area, consistent expressive preschool proportions, soft cheeks, gentle facial expression, bright warm palette with cool outdoor contrast, phone-readable composition. Cold weather is visible outside the window, and a bowl of plain white rice sits on the table with no steam, showing the rice has become cold. A bundled child looks at it calmly. No visible text, numbers, zhuyin, letters, labels, signs, logos, or watermarks.",
+          "imageSrc": "/assets/lessons/L136/images/L136-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L136/audio/L136-S02.m4a",
+            "durationMs": 4828,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1820,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2040,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2260,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2960,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3140,
+                "endMs": 3460
+              }
+            ]
+          }
+        },
+        {
+          "id": "L136-S03",
+          "text": "熱熱的白飯，看起來好好吃。",
+          "displayLines": [
+            "熱熱的白飯，",
+            "看起來",
+            "好好吃。"
+          ],
+          "spokenText": "熱熱的白飯看起來好好吃",
+          "focusChar": "飯",
+          "imagePrompt": "L058 style anchor: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean kitchen or dining table, consistent expressive preschool proportions, soft cheeks, gentle facial expression, bright warm palette, phone-readable composition. A bowl of freshly served plain white rice is central and clearly steaming, looking delicious, while a child looks happy and ready to eat. No visible text, numbers, zhuyin, letters, labels, signs, logos, or watermarks.",
+          "imageSrc": "/assets/lessons/L136/images/L136-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L136/audio/L136-S03.m4a",
+            "durationMs": 3797,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 880
+              },
+              {
+                "charIndex": 3,
+                "startMs": 880,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1840,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2120,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2280,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2580,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2880,
+                "endMs": 3220
+              }
+            ]
+          }
+        },
+        {
+          "id": "L136-S04",
+          "text": "白飯掉到外套上了。",
+          "displayLines": [
+            "白飯掉到",
+            "外套上了。"
+          ],
+          "spokenText": "白飯掉到外套上了",
+          "focusChar": "套",
+          "imagePrompt": "L058 style anchor: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home setting, consistent expressive preschool proportions, soft cheeks, gentle facial expression, bright warm palette, phone-readable composition. Plain white rice grains and small clumps have accidentally fallen onto a visible outer coat or jacket on a chair or bench, with a child mildly surprised nearby. The coat and rice must be clear. No visible text, numbers, zhuyin, letters, labels, signs, logos, or watermarks.",
+          "imageSrc": "/assets/lessons/L136/images/L136-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L136/audio/L136-S04.m4a",
+            "durationMs": 2683,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1240,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1520,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1740,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2060,
+                "endMs": 2240
+              }
+            ]
+          }
+        },
+        {
+          "id": "L136-S05",
+          "text": "我不愛喝熱水，給我冷水。",
+          "displayLines": [
+            "我不愛喝熱",
+            "水，給我冷水。"
+          ],
+          "spokenText": "我不愛喝熱水給我冷水",
+          "focusChar": "喝",
+          "imagePrompt": "L058 style anchor: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean kitchen or dining table, consistent expressive preschool proportions, soft cheeks, gentle facial expression, bright warm palette, phone-readable composition. A child gently rejects a steaming cup of hot water and points toward a separate clear cup of cold water with condensation, while an adult offers the cold water. No written hot/cold symbols, no visible text, numbers, zhuyin, letters, labels, signs, logos, or watermarks.",
+          "imageSrc": "/assets/lessons/L136/images/L136-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L136/audio/L136-S05.m4a",
+            "durationMs": 3820,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 190
+              },
+              {
+                "charIndex": 1,
+                "startMs": 190,
+                "endMs": 380
+              },
+              {
+                "charIndex": 2,
+                "startMs": 380,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1480,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2320,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2480,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2640,
+                "endMs": 2860
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2860,
+                "endMs": 3160
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L136-G01",
+          "type": "find-character",
+          "sentenceId": "L136-S01",
+          "targetChar": "飯",
+          "prompt": "找出句子裡的飯。"
+        },
+        {
+          "id": "L136-G02",
+          "type": "teach-character",
+          "sentenceId": "L136-S02",
+          "targetChar": "飯",
+          "targetCharIndex": 6,
+          "prompt": "教小兔子念這個字。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L136/audio/L136-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L136/audio/L136-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L136-G03",
+          "type": "missing-character",
+          "sentenceId": "L136-S03",
+          "targetChar": "飯",
+          "missingIndexes": [
+            4
+          ],
+          "prompt": "幫小兔子補上少掉的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "飯",
+              "correct": true
+            },
+            {
+              "id": "wrong-1",
+              "text": "水",
+              "correct": false
+            },
+            {
+              "id": "wrong-2",
+              "text": "熱",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L136-G04",
+          "type": "partial-order",
+          "sentenceId": "L136-S04",
+          "targetChar": "套",
+          "prompt": "幫小兔子排好句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "白",
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "飯",
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "掉",
+              "correct": true
+            },
+            {
+              "id": "slot-4",
+              "text": "到",
+              "correct": true
+            },
+            {
+              "id": "slot-5",
+              "text": "外",
+              "correct": true
+            },
+            {
+              "id": "slot-6",
+              "text": "套",
+              "correct": true
+            },
+            {
+              "id": "slot-7",
+              "text": "上",
+              "correct": true
+            },
+            {
+              "id": "slot-8",
+              "text": "了",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L136-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L136-S05",
+          "targetChar": "喝",
+          "prompt": "聽聽看誰念對了。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我不愛喝熱水，給我冷水。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L136/audio/L136-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "我不愛喝冷水，給我熱水。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L136/audio/L136-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "我不愛喝熱水，給我熱水。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L136/audio/L136-G05-wrong-two.m4a"
             }
           ]
         }
