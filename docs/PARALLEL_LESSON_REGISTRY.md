@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L137 | 菜 / normal lesson | claimed | Codex production thread | `codex/l137-complete-package` / pending | L135:喝; L136:飯 | 喝; 飯 | `curriculum-workflow/lesson-requests/L137.json`; `curriculum-workflow/generated/L137-generation-packet.md`; `curriculum-workflow/drafts/L137-draft.json` | `curriculum-workflow/audio-inbox/L137/`; `public/assets/lessons/L137/` | Complete parallel package requested; do not merge production JSON until L135-L136 are merged in latest `origin/main`. |
+| L137 | 菜 / normal lesson | request-ready | Codex production thread | `codex/l137-complete-package` / pending | L135:喝; L136:飯 | 喝; 飯 | `curriculum-workflow/lesson-requests/L137.json`; `curriculum-workflow/generated/L137-generation-packet.md`; `curriculum-workflow/drafts/L137-draft.json` | `curriculum-workflow/audio-inbox/L137/`; `public/assets/lessons/L137/` | Request and packet created on latest L134 main; do not merge production JSON until L135-L136 are merged in latest `origin/main`. |
 
 ## Status Values
 
