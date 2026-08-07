@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-06T19:00:20.222Z",
+  "exportedAt": "2026-08-07T00:29:32.398Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -54866,6 +54866,460 @@
               "text": "雨是雲上掉下來的雲",
               "correct": false,
               "audioSrc": "/assets/lessons/L124/audio/L124-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L125",
+      "order": 125,
+      "newChars": [
+        "棋"
+      ],
+      "zhuyin": {
+        "棋": "ㄑㄧˊ"
+      },
+      "charAudio": {
+        "棋": "/assets/lessons/L125/audio/char-u68cb.m4a"
+      },
+      "title": "棋",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Teacher-approved L125 production lesson. Built on latest origin/main after L124:白."
+      },
+      "sentences": [
+        {
+          "id": "L125-S01",
+          "text": "我拿黑棋，你拿白棋。",
+          "displayLines": [
+            "我拿黑棋，",
+            "你拿白棋。"
+          ],
+          "spokenText": "我拿黑棋你拿白棋",
+          "focusChar": "棋",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, detailed but clean interior, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show two children at a table getting ready to play a board game with plain black and white game pieces. One child holds black pieces and the other child holds white pieces. The black pieces and white pieces must be clearly distinguishable. The board and pieces must be completely plain with no characters, markings, numbers, letters, or labels.",
+          "imageSrc": "/assets/lessons/L125/images/L125-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L125/audio/L125-S01.m4a",
+            "durationMs": 3567,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1920,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2540,
+                "endMs": 2820
+              }
+            ]
+          }
+        },
+        {
+          "id": "L125-S02",
+          "text": "黑棋、白棋分開放在棋盒裡。",
+          "displayLines": [
+            "黑棋、白棋",
+            "分開放在",
+            "棋盒裡。"
+          ],
+          "spokenText": "黑棋白棋分開放在棋盒裡",
+          "focusChar": "棋",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, detailed but clean tabletop scene, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show an open game-piece box divided into two compartments. Plain black pieces are neatly separated on one side and plain white pieces are neatly separated on the other side. The open box, inner divider, black pieces, and white pieces must be clear. No characters, marks, numbers, letters, or labels on any box, board, or piece.",
+          "imageSrc": "/assets/lessons/L125/images/L125-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L125/audio/L125-S02.m4a",
+            "durationMs": 3470,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 480
+              },
+              {
+                "charIndex": 2,
+                "startMs": 480,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1520,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1860,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2100,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2440,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2680,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2900,
+                "endMs": 3120
+              }
+            ]
+          }
+        },
+        {
+          "id": "L125-S03",
+          "text": "雨天，我在家下棋。",
+          "displayLines": [
+            "雨天，我",
+            "在家下棋。"
+          ],
+          "spokenText": "雨天我在家下棋",
+          "focusChar": "棋",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, cozy interior, consistent fixed young girl design, soft cheeks, gentle expression, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show a rainy day outside the window while the fixed young girl quietly plays a board game at home. The room is warm and bright; the rain outside is visible but gentle. The board and game pieces are plain with no text, characters, numbers, letters, or labels.",
+          "imageSrc": "/assets/lessons/L125/images/L125-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L125/audio/L125-S03.m4a",
+            "durationMs": 3418,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1020,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1360,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1680,
+                "endMs": 1840
+              }
+            ]
+          }
+        },
+        {
+          "id": "L125-S04",
+          "text": "小小孩愛在雨天玩水。",
+          "displayLines": [
+            "小小孩愛",
+            "在雨天玩水。"
+          ],
+          "spokenText": "小小孩愛在雨天玩水",
+          "focusChar": "雨",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, child-friendly rainy outdoor scene, bright warm palette, gentle expressions, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show a two- or three-year-old toddler safely playing with shallow rainwater on a rainy day, wearing child rain gear such as a raincoat and rain boots. The water must be very shallow and safe, like a small puddle. No dangerous water, flooding, deep water, street danger, storm disaster, or scary lightning.",
+          "imageSrc": "/assets/lessons/L125/images/L125-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L125/audio/L125-S04.m4a",
+            "durationMs": 4147,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 560
+              },
+              {
+                "charIndex": 2,
+                "startMs": 560,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1460,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2260,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2520,
+                "endMs": 2760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L125-S05",
+          "text": "天上有雲，水裡也有雲。",
+          "displayLines": [
+            "天上有雲，",
+            "水裡也有雲。"
+          ],
+          "spokenText": "天上有雲水裡也有雲",
+          "focusChar": "雲",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration for a Taiwan zhuyin literacy app, warm natural light, fine pencil-and-watercolor linework, detailed but clean outdoor water scene, bright warm palette, gentle mood, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable markings. Show clouds in the sky and the same clouds reflected on a calm water surface below. The water reflection must be clear, and it must be obvious that the clouds are reflected in the water, not physically falling into the water.",
+          "imageSrc": "/assets/lessons/L125/images/L125-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L125/audio/L125-S05.m4a",
+            "durationMs": 5269,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 960
+              },
+              {
+                "charIndex": 2,
+                "startMs": 960,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1700,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2640,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 5,
+                "startMs": 3040,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3340,
+                "endMs": 4080
+              },
+              {
+                "charIndex": 7,
+                "startMs": 4080,
+                "endMs": 4420
+              },
+              {
+                "charIndex": 8,
+                "startMs": 4420,
+                "endMs": 4620
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L125-G01",
+          "type": "find-character",
+          "sentenceId": "L125-S01",
+          "targetChar": "棋",
+          "prompt": "幫小兔子找出這句裡的「棋」。",
+          "missingIndexes": [
+            3,
+            7
+          ]
+        },
+        {
+          "id": "L125-G02",
+          "type": "teach-character",
+          "sentenceId": "L125-S02",
+          "targetChar": "棋",
+          "targetCharIndex": 1,
+          "prompt": "教小兔子念這個字。",
+          "missingIndexes": [
+            1
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L125/audio/L125-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L125/audio/L125-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L125-G03",
+          "type": "missing-character",
+          "sentenceId": "L125-S03",
+          "targetChar": "棋",
+          "prompt": "幫小兔子選出空格裡少掉的字。",
+          "missingIndexes": [
+            6
+          ],
+          "options": [
+            {
+              "id": "qi",
+              "text": "棋",
+              "correct": true
+            },
+            {
+              "id": "yun",
+              "text": "雲",
+              "correct": false
+            },
+            {
+              "id": "yu",
+              "text": "雨",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L125-G04",
+          "type": "partial-order",
+          "sentenceId": "L125-S04",
+          "targetChar": "雨",
+          "prompt": "幫小兔子把少掉的字排回句子裡。",
+          "missingIndexes": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "options": [
+            {
+              "id": "yu",
+              "text": "雨",
+              "correct": true
+            },
+            {
+              "id": "tian",
+              "text": "天",
+              "correct": true
+            },
+            {
+              "id": "wan",
+              "text": "玩",
+              "correct": true
+            },
+            {
+              "id": "shui",
+              "text": "水",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L125-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L125-S05",
+          "targetChar": "雲",
+          "prompt": "請先聽每個朋友念，再幫小兔子選出念對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "天上有雲水裡也有雲",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L125/audio/L125-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "天上有雲水裡也有雨",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L125/audio/L125-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "天上有雨水裡也有雲",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L125/audio/L125-G05-wrong-two.m4a"
             }
           ]
         }

@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L125 | 棋 | claimed | Codex / L125 assets thread | `codex/l125-qi-assets` | L120:天, L121:雨, L122:雲, L123:黑, L124:白 | none; all dependencies are merged in latest `origin/main` | `curriculum-workflow/lesson-requests/L125.json`; `curriculum-workflow/generated/L125-generation-packet.md` | `curriculum-workflow/drafts/L125-draft.json`; `curriculum-workflow/audio-inbox/L125/`; `public/assets/lessons/L125/` | Claiming L125 production work on latest `origin/main` after L124. Remove this row when L125 is merged to production JSON. |
 
 ## Status Values
 

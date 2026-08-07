@@ -1,0 +1,87 @@
+{
+  "id": "L125",
+  "order": 125,
+  "newChars": [
+    "棋"
+  ],
+  "zhuyin": {
+    "棋": "ㄑㄧˊ"
+  },
+  "title": "棋",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L120",
+    "L121",
+    "L122",
+    "L123",
+    "L124"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "棋",
+      "白",
+      "黑",
+      "雲",
+      "雨",
+      "天"
+    ],
+    "targetCharMinimumCount": {
+      "棋": 3
+    },
+    "recentTargetMinimumCounts": {
+      "白": 2,
+      "黑": 2,
+      "雲": 2,
+      "雨": 1,
+      "天": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Use the teacher-approved L125 sentences exactly. Latest origin/main is merged through L124:白, so L120-L124 dependencies are real production dependencies, not provisional. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. The teacher has explicitly corrected 裏 to the already-learned course form 裡; use 裡 only. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, scoreboards, UI, or watermarks. Chess pieces and board must have no written characters, numbers, letters, labels, or readable markings. Rain scenes must stay safe and gentle. Generate standalone AI audio for 棋 as public/assets/lessons/L125/audio/char-u68cb.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.",
+  "approvedSentences": [
+    {
+      "text": "我拿黑棋，你拿白棋。",
+      "spokenText": "我拿黑棋你拿白棋",
+      "focusChar": "棋",
+      "hanCharCount": 8,
+      "scene": "兩個孩子在桌邊準備下棋，一個拿黑棋，一個拿白棋。黑棋和白棋要清楚分辨；棋盤和棋子不可有文字、數字、注音或字母。"
+    },
+    {
+      "text": "黑棋、白棋分開放在棋盒裡。",
+      "spokenText": "黑棋白棋分開放在棋盒裡",
+      "focusChar": "棋",
+      "hanCharCount": 11,
+      "scene": "黑棋和白棋被分開放在棋盒裡，棋盒打開，裡面分成兩邊。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "雨天，我在家下棋。",
+      "spokenText": "雨天我在家下棋",
+      "focusChar": "棋",
+      "hanCharCount": 7,
+      "scene": "下雨天，孩子在家裡安靜下棋。窗外可看到雨，室內溫暖明亮。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "小小孩愛在雨天玩水。",
+      "spokenText": "小小孩愛在雨天玩水",
+      "focusChar": "雨",
+      "hanCharCount": 9,
+      "scene": "兩三歲的小小孩在雨天安全地玩水，可畫穿雨衣雨鞋踩淺淺的水。注意「雨衣、雨鞋、踩」只作配圖，不可進 text/spokenText。不要有危險水域、文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "天上有雲，水裡也有雲。",
+      "spokenText": "天上有雲水裡也有雲",
+      "focusChar": "雲",
+      "hanCharCount": 9,
+      "scene": "天上有雲，水裡也映出雲的倒影。要清楚表現水面倒影，不要畫成雲真的掉進水裡。不要有文字、數字、標籤、注音或字母。"
+    }
+  ]
+}
