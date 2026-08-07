@@ -1,0 +1,87 @@
+{
+  "id": "L126",
+  "order": 126,
+  "newChars": [
+    "鞋"
+  ],
+  "zhuyin": {
+    "鞋": "ㄒㄧㄝˊ"
+  },
+  "title": "鞋",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L121",
+    "L122",
+    "L123",
+    "L124",
+    "L125"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "鞋",
+      "棋",
+      "白",
+      "黑",
+      "雲",
+      "雨"
+    ],
+    "targetCharMinimumCount": {
+      "鞋": 3
+    },
+    "recentTargetMinimumCounts": {
+      "棋": 2,
+      "白": 2,
+      "黑": 2,
+      "雲": 1,
+      "雨": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Use the teacher-approved L126 sentences exactly. Latest origin/main is merged through L125:棋, so L121-L125 dependencies are real production dependencies, not provisional. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. The teacher has explicitly corrected 裏 to the already-learned course form 裡; use 裡 only. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, scoreboards, UI, or watermarks. Shoes, rain boots, chess pieces, chess boxes, and school entry scenes must have no written characters, numbers, letters, labels, logos, or readable markings. Generate standalone AI audio for 鞋 as public/assets/lessons/L126/audio/char-u978b.m4a; do not cut it from sentence audio. Generate Stage 4 teachAudio and G05 wrong-option audio as independent whole utterances, not splices.",
+  "approvedSentences": [
+    {
+      "text": "門前有黑鞋，也有白鞋。",
+      "spokenText": "門前有黑鞋也有白鞋",
+      "focusChar": "鞋",
+      "hanCharCount": 9,
+      "scene": "家門前或玄關前面的鞋櫃旁，有黑鞋也有白鞋。鞋子要清楚分成黑鞋和白鞋；不要出現文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "雨鞋太大了，不好走路",
+      "spokenText": "雨鞋太大了不好走路",
+      "focusChar": "鞋",
+      "hanCharCount": 9,
+      "scene": "孩子拿著或穿著一雙明顯太大的雨鞋，覺得不好走路。雖然 text 沒有「穿」，圖像可以呈現雨鞋套在腳上或孩子扶著大雨鞋準備走；畫面安全、不要跌倒受傷。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "黑棋、白棋放在棋盒裡",
+      "spokenText": "黑棋白棋放在棋盒裡",
+      "focusChar": "棋",
+      "hanCharCount": 9,
+      "scene": "黑棋和白棋放在棋盒裡，棋盒打開，黑棋和白棋清楚可見。棋盒、棋子不可有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "我找不到學校的白鞋",
+      "spokenText": "我找不到學校的白鞋",
+      "focusChar": "鞋",
+      "hanCharCount": 9,
+      "scene": "孩子在家裡或學校玄關找學校用的白鞋，但找不到。可以有鞋櫃或書包，重點是孩子找不到白鞋。不要有校名、文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "天上有黑雲，要下雨了。",
+      "spokenText": "天上有黑雲要下雨了",
+      "focusChar": "雲",
+      "hanCharCount": 9,
+      "scene": "天上有黑雲，看起來快要下雨。畫面要清楚呈現黑雲和將要下雨的天氣，但不要有災害、閃電恐怖感或危險場景。不要有文字、數字、標籤、注音或字母。"
+    }
+  ]
+}
