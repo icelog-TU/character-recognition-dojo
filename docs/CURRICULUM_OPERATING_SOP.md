@@ -367,6 +367,6 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L138, L138 introduces `老`, and review modules are complete through R004.
+As of latest `origin/main`, production curriculum is complete through L139, L139 introduces `卻`, and review modules are complete through R004.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L138 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L139 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.

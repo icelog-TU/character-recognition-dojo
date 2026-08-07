@@ -1,0 +1,356 @@
+{
+  "id": "L139",
+  "order": 139,
+  "newChars": [
+    "卻"
+  ],
+  "zhuyin": {
+    "卻": "ㄑㄩㄝˋ"
+  },
+  "title": "卻",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L135",
+    "L136",
+    "L137",
+    "L138"
+  ],
+  "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻",
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "喝",
+      "飯",
+      "菜",
+      "老"
+    ],
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "卻",
+      "老",
+      "菜",
+      "飯",
+      "喝",
+      "冷"
+    ],
+    "targetCharMinimumCount": {
+      "卻": 3
+    },
+    "recentTargetMinimumCounts": {
+      "老": 2,
+      "菜": 2,
+      "飯": 2,
+      "喝": 1,
+      "冷": 1
+    },
+    "disallowedChars": [
+      "想",
+      "忘",
+      "跑",
+      "嗎",
+      "麼",
+      "什",
+      "師",
+      "碗",
+      "杯",
+      "青",
+      "香",
+      "飽",
+      "却"
+    ]
+  },
+  "teacherNotes": "Production handoff for 認字練功房 L139. Build the full lesson package for new character 卻 (ㄑㄩㄝˋ), not assets-only. Latest origin/main at handoff is merged through L134:冷; L135:喝, L136:飯, L137:菜, and L138:老 are provisional dependencies. Do not merge L139 production JSON until L135-L138 are merged in order. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Do not change 卻 to simplified/variant 却. spokenText must equal text with punctuation removed. No Han characters outside allowedChars may appear in text, spokenText, displayLines, focusChar, or Stage 4 option text. Images must use L058 style anchors and must not contain text, numbers, zhuyin, letters, signs, labels, classroom labels, name tags, school signs, or watermarks. Generate standalone AI audio for 卻 as public/assets/lessons/L139/audio/char-u537b.m4a. Generate sentence audio, teachAudio prefix/suffix, and choose-pronunciation wrong-option audio as independent OpenAI TTS utterances; do not cut, splice, patch, or extract from other audio.",
+  "approvedSentences": [
+    {
+      "id": "L139-S01",
+      "text": "飯是熱的，菜卻冷了。",
+      "spokenText": "飯是熱的菜卻冷了",
+      "focusChar": "卻",
+      "displayLines": [
+        "飯是熱的，",
+        "菜卻冷了。"
+      ],
+      "hanCharCount": 8,
+      "scene": "桌上有熱飯和冷掉的菜，形成明顯對比；飯可冒熱氣，菜看起來冷了。圖片不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L139-S02",
+      "text": "老人要喝水，卻找不到水。",
+      "spokenText": "老人要喝水卻找不到水",
+      "focusChar": "卻",
+      "displayLines": [
+        "老人要喝水，",
+        "卻找不到水。"
+      ],
+      "hanCharCount": 10,
+      "scene": "老人想喝水，正在找水但找不到；可畫桌上沒有水、老人四處尋找的情境。不要加文字或符號。"
+    },
+    {
+      "id": "L139-S03",
+      "text": "老太太愛吃菜，卻不吃飯。",
+      "spokenText": "老太太愛吃菜卻不吃飯",
+      "focusChar": "卻",
+      "displayLines": [
+        "老太太",
+        "愛吃菜，",
+        "卻不吃飯。"
+      ],
+      "hanCharCount": 10,
+      "scene": "老太太開心吃菜，但飯放在旁邊沒有吃；菜和飯的差異要清楚。"
+    },
+    {
+      "id": "L139-S04",
+      "text": "出門去打棒球，卻下雨了。",
+      "spokenText": "出門去打棒球卻下雨了",
+      "focusChar": "卻",
+      "displayLines": [
+        "出門去",
+        "打棒球，",
+        "卻下雨了。"
+      ],
+      "hanCharCount": 10,
+      "scene": "孩子或家人拿著棒球裝備準備出門打棒球，卻遇到下雨；畫面要清楚看到棒球與雨天，不可有文字。"
+    },
+    {
+      "id": "L139-S05",
+      "text": "到了學校，卻沒帶書包。",
+      "spokenText": "到了學校卻沒帶書包",
+      "focusChar": "卻",
+      "displayLines": [
+        "到了學校，",
+        "卻沒帶書包。"
+      ],
+      "hanCharCount": 9,
+      "scene": "孩子到了學校門口或教室旁，才發現沒有帶書包；表情可以驚訝，書包不在身邊。圖片不可有學校招牌文字、班牌文字、姓名牌文字。"
+    }
+  ],
+  "coverageStats": {
+    "卻": 5,
+    "老": 2,
+    "菜": 2,
+    "飯": 2,
+    "喝": 1,
+    "冷": 1
+  },
+  "stage4Plan": [
+    {
+      "id": "L139-G01",
+      "type": "find-character",
+      "sentenceId": "L139-S01",
+      "targetChar": "卻"
+    },
+    {
+      "id": "L139-G02",
+      "type": "teach-character",
+      "sentenceId": "L139-S02",
+      "targetChar": "卻",
+      "targetCharIndex": 5,
+      "prefixText": "老人要喝水",
+      "suffixText": "找不到水",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L139/audio/L139-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L139/audio/L139-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L139-G03",
+      "type": "missing-character",
+      "sentenceId": "L139-S03",
+      "targetChar": "卻",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "卻",
+        "老",
+        "菜"
+      ]
+    },
+    {
+      "id": "L139-G04",
+      "type": "partial-order",
+      "sentenceId": "L139-S04",
+      "targetChar": "卻",
+      "chunks": [
+        "出門去打棒球",
+        "卻",
+        "下雨了"
+      ]
+    },
+    {
+      "id": "L139-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L139-S05",
+      "targetChar": "卻",
+      "options": [
+        {
+          "id": "correct",
+          "text": "到了學校，卻沒帶書包。",
+          "spokenText": "到了學校卻沒帶書包",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L139/audio/L139-S05.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "到了學校，卻有帶書包。",
+          "spokenText": "到了學校卻有帶書包",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L139/audio/L139-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "到了學校，卻沒帶筆盒。",
+          "spokenText": "到了學校卻沒帶筆盒",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L139/audio/L139-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
