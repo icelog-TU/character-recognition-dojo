@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L143 | 以 / normal lesson | claimed | Production thread B | `codex/l143-complete-package` / pending | L142:為 | none; L142 is merged in `origin/main` | `curriculum-workflow/lesson-requests/L143.json`; `curriculum-workflow/generated/L143-generation-packet.md`; `curriculum-workflow/drafts/L143-draft.json` | `curriculum-workflow/audio-inbox/L143/`; `public/assets/lessons/L143/` | Preparing complete package from teacher-approved handoff; production entry allowed because L142 is merged. |
 
 ## Status Values
 
