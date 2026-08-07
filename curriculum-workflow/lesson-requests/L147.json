@@ -1,0 +1,338 @@
+{
+  "id": "L147",
+  "order": 147,
+  "newChars": [
+    "間"
+  ],
+  "zhuyin": {
+    "間": "ㄐㄧㄢ"
+  },
+  "title": "房間山間",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L143",
+    "L144",
+    "L145",
+    "L146"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間"
+    ],
+    "provisionalLearnedChars": [
+      "以",
+      "怎",
+      "所",
+      "房"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "間",
+      "房",
+      "所",
+      "怎",
+      "以",
+      "為"
+    ],
+    "targetCharMinimumCount": {
+      "間": 3
+    },
+    "recentTargetMinimumCounts": {
+      "房": 2,
+      "所": 2,
+      "怎": 2,
+      "以": 1,
+      "為": 1
+    },
+    "disallowedChars": [
+      "中",
+      "床",
+      "燈",
+      "電",
+      "企",
+      "鵝",
+      "爲",
+      "裏"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L147 間. Use these sentences exactly; spokenText equals text with punctuation removed. Latest origin/main now includes L142 為, so L147 still depends on unmerged L143 以, L144 怎, L145 所, and L146 房; do not merge production JSON until L143-L146 are present in latest origin/main. Provisional learned chars are 以, 怎, 所, 房. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Use 為, not 爲; use 裡, not 裏. Do not use 中間 because 中 is not learned. Do not add unlearned display characters such as 床, 燈, 電, 花苞, 企, 鵝. Images must use L058 style anchors and contain no text, numbers, zhuyin, labels, signs, letters, logos, or watermarks. G02 teach-character is assigned to S02 instead of the handoff's one-character S01 prefix so the teachAudio prefix is not a too-short single-character clip; the approved sentences are unchanged. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned before production release.",
+  "approvedSentences": [
+    {
+      "text": "山間小路怎麼沒有人？",
+      "spokenText": "山間小路怎麼沒有人",
+      "focusChar": "間",
+      "displayLines": [
+        "山間小路",
+        "怎麼沒有人？"
+      ],
+      "hanCharCount": 10,
+      "scene": "A quiet small path between mountains with no people visible. Make the mountain path clear and empty. No signs, words, numbers, labels, or road markers."
+    },
+    {
+      "text": "這裡有幾間房子？",
+      "spokenText": "這裡有幾間房子",
+      "focusChar": "間",
+      "displayLines": [
+        "這裡有幾間",
+        "房子？"
+      ],
+      "hanCharCount": 7,
+      "scene": "A child looks at several houses and is counting or wondering how many houses there are. Do not show written numbers, house numbers, signs, or labels."
+    },
+    {
+      "text": "這間書房裡有黑白棋。",
+      "spokenText": "這間書房裡有黑白棋",
+      "focusChar": "間",
+      "displayLines": [
+        "這間書房裡",
+        "有黑白棋。"
+      ],
+      "hanCharCount": 10,
+      "scene": "A study room with a table holding black and white chess or go pieces. The room should feel like a study or reading room, but books and papers must have no readable text."
+    },
+    {
+      "text": "我以為所有花都會開。",
+      "spokenText": "我以為所有花都會開",
+      "focusChar": "所",
+      "displayLines": [
+        "我以為所有花",
+        "都會開。"
+      ],
+      "hanCharCount": 9,
+      "scene": "A child looks at flowers and realizes not all flowers are blooming. Show some flowers fully open and some still closed as buds, so the meaning is visual without text. Do not use written explanations, labels, or symbols."
+    },
+    {
+      "text": "怎麼所有帽子都在地上？",
+      "spokenText": "怎麼所有帽子都在地上",
+      "focusChar": "所",
+      "displayLines": [
+        "怎麼所有帽子",
+        "都在地上？"
+      ],
+      "hanCharCount": 11,
+      "scene": "Many hats are scattered on the ground, and a child looks surprised. Make the hats clearly visible and varied enough to see there are many. No text, logos, labels, or numbers."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L147-G01",
+      "type": "find-character",
+      "sentenceId": "L147-S01",
+      "targetChar": "間",
+      "reason": "Target-character recognition round using 山間 in a clear mountain-path scene."
+    },
+    {
+      "id": "L147-G02",
+      "type": "teach-character",
+      "sentenceId": "L147-S02",
+      "targetChar": "間",
+      "targetCharIndex": 4,
+      "prefixText": "這裡有幾",
+      "suffixText": "房子",
+      "requiredAudio": [
+        "public/assets/lessons/L147/audio/L147-G02-prefix.m4a",
+        "public/assets/lessons/L147/audio/L147-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L147-G03",
+      "type": "missing-character",
+      "sentenceId": "L147-S03",
+      "targetChar": "間",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "間",
+        "房",
+        "書"
+      ]
+    },
+    {
+      "id": "L147-G04",
+      "type": "partial-order",
+      "sentenceId": "L147-S04",
+      "targetChar": "所",
+      "chunks": [
+        "我以為",
+        "所有花",
+        "都會開"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L147-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L147-S05",
+      "targetChar": "所",
+      "correctText": "怎麼所有帽子都在地上？",
+      "correctSpokenText": "怎麼所有帽子都在地上",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "怎麼所有書都在地上？",
+          "spokenText": "怎麼所有書都在地上",
+          "audioSrc": "/assets/lessons/L147/audio/L147-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "怎麼所有帽子都在桌上？",
+          "spokenText": "怎麼所有帽子都在桌上",
+          "audioSrc": "/assets/lessons/L147/audio/L147-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
