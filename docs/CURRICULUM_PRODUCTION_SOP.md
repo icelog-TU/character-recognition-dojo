@@ -69,6 +69,30 @@ Only treat text as actually damaged if UTF-8 decoding fails, decoded text contai
 13. Update `docs/CURRICULUM_LEDGER.md`, including `Current Character State`; run `npm run curriculum:export-planner`; update or clear the registry row if the lesson was parallel-prepared.
 14. Run `npm run verify`.
 
+## Production-Ready Lesson Package
+
+A production thread may prepare one assigned normal lesson or review module in parallel, but it must leave a complete repo package. Media files alone are not a lesson.
+
+For a normal lesson, the minimum complete package is:
+
+- `curriculum-workflow/lesson-requests/L###.json` with teacher-approved `newChars`, zhuyin, `allowedChars`, teacher notes, and final `approvedSentences`
+- `curriculum-workflow/generated/L###-generation-packet.md`
+- `curriculum-workflow/drafts/L###-draft.json` with final image prompts, audio refs, `charTimings`, and `sentenceGames`
+- final compressed images under `public/assets/lessons/L###/images/`
+- final processed audio under `public/assets/lessons/L###/audio/`, including sentence audio, standalone `charAudio`, and any `G02`/`G05` Stage 4 audio referenced by the lesson
+- a production entry in `src/curriculum/sample-lessons.json` only when all dependency lessons are already merged
+- refreshed `public/tools/planner-data.json` and updated `docs/CURRICULUM_LEDGER.md` when the unit enters production
+- an accurate `docs/PARALLEL_LESSON_REGISTRY.md` row until merge cleanup
+
+For a review module, use `curriculum-workflow/review-requests/R###.json` and `public/assets/reviews/R###/`; review modules have no `newChars`, zhuyin, or standalone character audio.
+
+Hard release gate:
+
+- A branch with only `public/assets/lessons/L###/images/`, `S01-S05` audio, and `charAudio` is `assets-only`. It must not be called `merge-ready`, and the release thread must not infer final lesson JSON from chat.
+- A draft that has `durationMs` but missing/empty `charTimings` is not aligned.
+- A normal L006+ lesson with missing `sentenceGames`, missing `teachAudio` files, or missing `choose-pronunciation` wrong-option audio is not production-ready.
+- A lesson using provisional characters can be prepared, but it cannot enter production until those characters are real in latest `origin/main` or the teacher changes the sentence set.
+
 ## Cloud Device Authorization
 
 Do not treat free browsing as a universal app mode. The teacher wants only designated teacher/parent devices, such as the teacher phone and tablet, to freely browse every lesson. All other devices must use normal unlock progression.
@@ -393,9 +417,9 @@ Audio is generated only after sentence approval.
 - Store final assets under `public/assets/lessons/L###/audio/`.
 - Use `.m4a` or `.mp3`; prefer `.m4a` for app delivery.
 - Path example: `public/assets/lessons/L004/audio/L004-S01.m4a`.
-- Character audio path example: `public/assets/lessons/L004/audio/char-小.m4a`.
+- Character audio path example: `public/assets/lessons/L004/audio/char-u5c0f.m4a`.
 - Curriculum `audio.src` example: `/assets/lessons/L004/audio/L004-S01.m4a`.
-- Curriculum `charAudio` example: `"/assets/lessons/L004/audio/char-小.m4a"`.
+- Curriculum `charAudio` example: `"/assets/lessons/L004/audio/char-u5c0f.m4a"`.
 - Audio reads `spokenText`, not punctuation.
 - Do not generate one audio file per character for sentence reading.
 - Generate and review whole-sentence audio, not stitched character audio.

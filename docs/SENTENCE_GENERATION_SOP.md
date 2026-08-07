@@ -212,3 +212,20 @@ Before sending sentences to image/audio production, verify:
 - the teacher has approved the sentence set
 
 Only after this checklist passes should the lesson proceed to image prompts, AI audio, `teachAudio`, Stage 4 option audio, and AI-aligned `charTimings`.
+
+## Sentence Editor Handoff
+
+When a thread is acting as the sentence editor, its job does not end with five good sentences. After the teacher approves the sentence set, the thread must output a complete production handoff following `docs/CURRICULUM_OPERATING_SOP.md` `Five-Thread Curriculum Workflow`.
+
+The handoff must tell the receiving production thread to build the whole course package, not only media assets. It must include:
+
+- target unit id and kind, such as `L127` normal lesson or `R005` review module
+- current merged boundary and dependency lessons
+- approved new character(s), Taiwan zhuyin, and title, or review coverage range
+- locked `allowedChars`, provisional learned characters, and forbidden/unlearned characters
+- final approved sentences with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
+- coverage counts for the current target and previous-five review targets
+- Stage 4 plan and required `G02`/`G05` audio work
+- required repo paths for request, packet, draft, images, audio inbox, final assets, production JSON, planner export, ledger, and registry
+
+The sentence editor must not leave final sentences only in chat. If it cannot write repo files itself, it must explicitly instruct the production thread to create `curriculum-workflow/lesson-requests/L###.json`, `curriculum-workflow/generated/L###-generation-packet.md`, and `curriculum-workflow/drafts/L###-draft.json` before generating or merging assets.

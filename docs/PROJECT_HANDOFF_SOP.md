@@ -38,7 +38,7 @@ Always verify current state with `git fetch origin`, `npm run curriculum:audit-s
 Preferred shared local working copy:
 
 ```text
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo-profile-sync
 ```
 
 Do not create a new clone unless the user explicitly asks for one. If the current shell is not in this path, stop and tell the user before editing.
@@ -84,6 +84,9 @@ Before editing, state the exact ownership in chat, including lesson id and owned
 - AI sentences are drafts until teacher approved.
 - AI recommended next characters are also drafts. Do not treat a recommendation file, `approval.selectedChoiceId`, or an unmerged lesson request as a reserved lesson choice unless the teacher explicitly approved that character and final sentence set.
 - Sentence drafting must follow `docs/SENTENCE_GENERATION_SOP.md`.
+- The standard curriculum workflow uses five threads: one sentence editor, three lesson/review production threads, and one ordered release thread. The sentence editor must output a complete production handoff, not just "make images and audio."
+- A normal lesson is not merge-ready unless request, packet, draft, final images, final sentence audio, standalone `charAudio`, Stage 4 `G02`/`G05` audio where referenced, production JSON, planner export, ledger update, registry cleanup/update, and checks are complete.
+- A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a course. The release thread must reject it instead of reconstructing final lesson text from chat.
 - Production audio must use the standard AI audio -> `assets:audio` -> `assets:align:ai` pipeline unless the teacher explicitly approves an exception.
 - Before saying FFmpeg, FFprobe, ImageMagick, or OpenAI setup is unavailable, run `npm run tools:check` and/or `npm run ai:check`.
 - Character-card `charAudio` must be standalone OpenAI TTS generated from the single target character. Never cut, trim, slice, copy, or extract character-card audio from sentence audio.
@@ -154,7 +157,7 @@ We are continuing the `認字練功房` repo:
 https://github.com/icelog-TU/character-recognition-dojo
 
 Use this existing local working copy. Do not create a new clone:
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo-profile-sync
 
 If your current working directory is not exactly that repo path, stop and tell me before editing. Do not work from any older clone.
 
@@ -180,6 +183,21 @@ Please read:
 - docs/AI_GENERATION_SETUP.md
 
 Multiple Codex threads may be working on this repo. Before editing, fetch/status, confirm the current commit, read the parallel lesson registry, and state which files or subsystem this thread owns.
+
+The standard lesson workflow has five threads: one sentence editor, three production threads for assigned lessons/reviews, and one release thread. If you receive a sentence-editor handoff, build the complete course package. Do not produce only image/audio assets unless the handoff explicitly says this is `assets-only` exploratory work.
+
+For a normal lesson, complete means:
+curriculum-workflow/lesson-requests/L###.json
+curriculum-workflow/generated/L###-generation-packet.md
+curriculum-workflow/drafts/L###-draft.json
+public/assets/lessons/L###/images/
+public/assets/lessons/L###/audio/ with S01-S05, standalone char-uXXXX, and required G02/G05 audio
+src/curriculum/sample-lessons.json when dependencies are merged
+public/tools/planner-data.json
+docs/CURRICULUM_LEDGER.md
+docs/PARALLEL_LESSON_REGISTRY.md
+
+A branch with only images, S01-S05 audio, and charAudio is `assets-only`, not merge-ready. Final sentence text must be in repo request/draft/generated files, not only in chat.
 
 The app is a Taiwan zhuyin character-recognition app for young children. Do not use Hanyu pinyin.
 AI sentence drafting must follow docs/SENTENCE_GENERATION_SOP.md.

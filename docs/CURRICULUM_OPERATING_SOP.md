@@ -30,6 +30,8 @@ Use this order whenever files disagree:
 7. `curriculum-workflow/recommendations/` contains AI recommendation drafts only. A recommended character is not reserved, approved, or blocking.
 8. `curriculum-workflow/lesson-requests/`, `curriculum-workflow/review-requests/`, `curriculum-workflow/drafts/`, and `curriculum-workflow/generated/` are work artifacts. They can explain how a unit was prepared, but they are not proof that it is shipped.
 
+Chat transcripts, pasted messages, and branch names are never source-of-truth. Final teacher-approved lesson text must be captured in the repo as a lesson/review request, generated packet, draft JSON, and eventually production JSON. A release thread must reject any unit whose final sentence set exists only in chat.
+
 If Markdown and production JSON disagree, update Markdown or generated planner data to match `origin/main` unless the user explicitly asks to change production curriculum. In particular, `docs/CURRICULUM_LEDGER.md` `Current Character State` must match the final lesson order and cumulative `newChars` from `src/curriculum/sample-lessons.json`; `npm run curriculum:audit-state` must fail if that summary is stale.
 
 If an AI recommendation draft or unmerged lesson request disagrees with the teacher's latest explicit selected character/sentences, the teacher's latest request wins. Do not reject the work because an old recommendation or stale draft says a different character was planned.
@@ -39,7 +41,7 @@ If an AI recommendation draft or unmerged lesson request disagrees with the teac
 On this Windows machine, the preferred shared local working copy is:
 
 ```text
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo-profile-sync
 ```
 
 Do not create a new clone unless the user explicitly asks for one. If the current shell is not in this path, stop and tell the user before editing. Do not continue work from an older clone such as another `character-recognition-dojo` folder unless the user explicitly selects that clone for the task.
@@ -113,6 +115,65 @@ Production release is a single lane:
 - A later lesson may be prepared before an earlier lesson is merged, but it must not be merged into `main` until every dependency lesson exists in latest `origin/main`.
 
 This means three conversations can prepare L052, L053, and L054 at the same time, but `main` still receives L052 first, then L053, then L054.
+
+## Five-Thread Curriculum Workflow
+
+The standard parallel curriculum workflow uses five conversation threads:
+
+1. **Sentence editor thread:** drafts with the teacher, performs the allowed-character and coverage audits, and records the teacher-approved final sentence set.
+2. **Production thread A:** builds one assigned lesson/review unit from a complete handoff.
+3. **Production thread B:** builds one assigned lesson/review unit from a complete handoff.
+4. **Production thread C:** builds one assigned lesson/review unit from a complete handoff.
+5. **Release thread:** receives completed units, rebases on latest `origin/main`, merges in playable order, runs gates, pushes, and checks deployment.
+
+The sentence editor thread is not allowed to send only "make images and audio" instructions. After the teacher approves sentences, it must output a complete production handoff for each unit and either create or explicitly require the receiving production thread to create all source files listed below.
+
+Required production handoff fields:
+
+- repo URL and required local working copy path
+- unit id, such as `L127` or `R005`
+- unit kind: normal lesson or review module
+- approved new character(s), Taiwan zhuyin, title, and dependency lessons, or review `afterLessonOrder` and coverage range
+- latest known merged boundary from `origin/main`, plus any provisional learned characters
+- exact `allowedChars` boundary and forbidden/unlearned characters noted by the teacher
+- five approved sentences, each with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
+- coverage counts for current target and previous-five review targets, or review-pair coverage counts
+- Stage 4 plan: one fixed game per sentence for normal lessons, or two-stage review-module plan
+- required image style anchor: L058 reference assets unless the teacher approves another style
+- audio rule: standalone OpenAI character audio, whole-sentence AI audio, whole wrong-option AI audio, `assets:audio`, then `assets:align:ai`
+- complete required file list and final status expectation
+
+For a normal lesson, the complete required file list is:
+
+```text
+curriculum-workflow/lesson-requests/L###.json
+curriculum-workflow/generated/L###-generation-packet.md
+curriculum-workflow/drafts/L###-draft.json
+curriculum-workflow/audio-inbox/L###/
+public/assets/lessons/L###/images/L###-S01.webp ... L###-S05.webp
+public/assets/lessons/L###/audio/L###-S01.m4a ... L###-S05.m4a
+public/assets/lessons/L###/audio/char-uXXXX.m4a
+public/assets/lessons/L###/audio/L###-G02-prefix.m4a and/or L###-G02-suffix.m4a when `teach-character` needs them
+public/assets/lessons/L###/audio/L###-G05-wrong-one.m4a
+public/assets/lessons/L###/audio/L###-G05-wrong-two.m4a
+src/curriculum/sample-lessons.json, only when dependencies are merged and the unit is entering production
+public/tools/planner-data.json, after production curriculum changes
+docs/CURRICULUM_LEDGER.md, after production curriculum changes
+docs/PARALLEL_LESSON_REGISTRY.md, while the unit is not yet merged
+```
+
+For a review module, replace lesson request/assets paths with `curriculum-workflow/review-requests/R###.json` and `public/assets/reviews/R###/`. Review modules have no `newChars`, `zhuyin`, or `charAudio`.
+
+Production threads must not call a unit complete or merge-ready unless the repo contains the request/packet/draft, final images, final sentence audio, Stage 4 option or teach audio where referenced, production JSON entry when allowed, planner export, ledger update, registry cleanup/update, and passing checks. A branch that contains only images plus `S01-S05` sentence audio plus `charAudio` is `assets-only`, not a course.
+
+The release thread must merge only in playable order and must reject:
+
+- missing request, packet, or draft source files
+- final sentences that exist only in chat
+- missing Stage 4 `G02` or `G05` audio referenced by production JSON
+- `durationMs` without production `charTimings`
+- unresolved provisional learned characters
+- stale branches not rebased on latest `origin/main`
 
 ## Parallel Registry Rules
 
@@ -278,6 +339,6 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L125, L125 introduces `棋`, and review modules are complete through R004.
+As of latest `origin/main`, production curriculum is complete through L126, L126 introduces `鞋`, and review modules are complete through R004.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L125 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L126 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.

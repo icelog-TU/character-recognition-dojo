@@ -23,11 +23,29 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 - `claimed`: A Codex thread has announced ownership, but lesson request work has not started.
 - `request-ready`: The lesson request exists and has been checked against the intended provisional boundary.
 - `drafting`: Sentences, image prompts, or teacher review are in progress.
-- `assets`: Images, audio, or char timings are being generated.
-- `ready-blocked-by-dependency`: Lesson assets are prepared, but earlier dependency lessons are not merged yet.
-- `merge-ready`: Dependencies are merged, the lesson has been rebased and rechecked, and full production checks pass.
+- `assets`: Images, audio, Stage 4 audio, or char timings are being generated. This is not mergeable.
+- `assets-only`: A branch contains media files but is missing the complete request, packet, draft, Stage 4 audio, alignment, or production JSON work. This is not mergeable and must be repaired before release.
+- `ready-blocked-by-dependency`: The complete production package exists and passes local checks, but earlier dependency lessons are not merged yet. This status is not for media-only branches.
+- `merge-ready`: Dependencies are merged, the complete production package exists, the lesson has been rebased and rechecked, and full production checks pass.
 - `merged`: The lesson has entered `main`; remove or archive the row after `docs/CURRICULUM_LEDGER.md` is updated.
 - `needs-rework`: A dependency changed or teacher feedback requires sentence/image/audio changes before merge.
+
+## Complete Package Rule
+
+The registry must not hide missing source files. A normal lesson is not complete unless the repo contains:
+
+- `curriculum-workflow/lesson-requests/L###.json`
+- `curriculum-workflow/generated/L###-generation-packet.md`
+- `curriculum-workflow/drafts/L###-draft.json`
+- final image assets
+- final sentence audio
+- standalone character audio
+- every referenced Stage 4 `G02` teach-audio fragment and `G05` wrong-choice audio file
+- production JSON, planner export, ledger update, and passing checks when the unit is entering production
+
+For review modules, use the equivalent `review-requests` and `public/assets/reviews` paths; review modules have no `charAudio`.
+
+Do not store final sentence text only in chat, a branch note, or the `Notes` column. The registry may summarize status, but the authoritative final content must be in the request/draft/generated files before any production or release thread can continue.
 
 ## How To Register Work
 
@@ -47,7 +65,8 @@ Every parallel lesson thread must update this registry at these three checkpoint
    - Status should be `claimed`, `request-ready`, or `drafting`.
    - `Owner / Thread`, `Branch / Commit`, `Depends On`, and owned file paths must be filled.
 2. **Assets prepared:** after reviewed images, audio, and timings are prepared but before the lesson can merge.
-   - Status should be `ready-blocked-by-dependency` if an earlier lesson is not merged yet.
+   - Status should be `assets-only` if the branch has media files but is missing request/packet/draft, Stage 4 audio, alignment, or production JSON work.
+   - Status should be `ready-blocked-by-dependency` if a complete package exists but an earlier lesson is not merged yet.
    - Status should be `merge-ready` only if dependencies are already merged and full checks pass.
    - `Assets` must list `public/assets/lessons/L###/` and any audio inbox or draft locations used.
 3. **Uploaded / pushed branch:** after pushing a task branch or any remote work for that lesson.
