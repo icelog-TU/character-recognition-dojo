@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L144 | 怎 / normal lesson | ready-blocked-by-dependency | Production thread C | codex/l144-complete-package / local | L142:為, L143:以 | 為, 以 | curriculum-workflow/lesson-requests/L144.json; curriculum-workflow/generated/L144-generation-packet.md; curriculum-workflow/drafts/L144-draft.json | curriculum-workflow/audio-inbox/L144/; public/assets/lessons/L144/ | Complete draft/assets package prepared and local checks pass. Production JSON/planner/ledger intentionally not updated because L142-L143 are not in latest origin/main. |
 
 ## Status Values
 

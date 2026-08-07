@@ -52,6 +52,8 @@ function normalizeTranscribedHanChar(char) {
     ["会", "會"],
     ["个", "個"],
     ["这", "這"],
+    ["为", "為"],
+    ["么", "麼"],
     ["只", "隻"],
     ["鸟", "鳥"],
     ["飞", "飛"],
@@ -158,7 +160,21 @@ const args = parseArgs(process.argv.slice(2));
 const lessonFilter = args.lesson ? String(args.lesson).toUpperCase() : null;
 const apiKey = requireOpenAIKey();
 const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
-const units = [...(curriculum.lessons ?? []), ...(curriculum.reviewLessons ?? [])];
+let units = [...(curriculum.lessons ?? []), ...(curriculum.reviewLessons ?? [])];
+let outputPath = curriculumPath;
+let outputData = curriculum;
+
+if (lessonFilter && !units.some((lesson) => lesson.id === lessonFilter)) {
+  const draftPath = path.resolve("curriculum-workflow/drafts", `${lessonFilter}-draft.json`);
+  if (fs.existsSync(draftPath)) {
+    const draft = JSON.parse(fs.readFileSync(draftPath, "utf8"));
+    units = [draft];
+    outputPath = draftPath;
+    outputData = draft;
+    console.log(`Using draft lesson data: ${draftPath}`);
+  }
+}
+
 let changed = 0;
 
 for (const lesson of units) {
@@ -194,5 +210,5 @@ for (const lesson of units) {
   }
 }
 
-fs.writeFileSync(curriculumPath, `${JSON.stringify(curriculum, null, 2)}\n`, "utf8");
+fs.writeFileSync(outputPath, `${JSON.stringify(outputData, null, 2)}\n`, "utf8");
 console.log(`AI-aligned ${changed} sentence audio file(s).`);
