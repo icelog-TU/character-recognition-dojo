@@ -1,0 +1,344 @@
+{
+  "id": "L146",
+  "order": 146,
+  "newChars": [
+    "房"
+  ],
+  "zhuyin": {
+    "房": "ㄈㄤˊ"
+  },
+  "title": "房子書房房門",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L142",
+    "L143",
+    "L144",
+    "L145"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房"
+    ],
+    "provisionalLearnedChars": [
+      "為",
+      "以",
+      "怎",
+      "所"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "房",
+      "所",
+      "怎",
+      "以",
+      "為",
+      "什"
+    ],
+    "targetCharMinimumCount": {
+      "房": 3
+    },
+    "recentTargetMinimumCounts": {
+      "所": 2,
+      "怎": 2,
+      "以": 2,
+      "為": 2,
+      "什": 1
+    },
+    "disallowedChars": [
+      "間",
+      "床",
+      "燈",
+      "電",
+      "旅",
+      "行",
+      "視",
+      "企",
+      "鵝",
+      "爲",
+      "裏",
+      "能",
+      "嗎",
+      "錯",
+      "咬",
+      "具",
+      "聲",
+      "音"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L146 房. Use these sentences exactly; spokenText equals text with punctuation removed. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Use 為, not 爲; use 裡, not 裏. L146 depends on L142 為, L143 以, L144 怎, and L145 所; do not merge production JSON until L142-L145 are present in latest origin/main. Provisional learned chars are 為, 以, 怎, 所. Image notes may describe a penguin, travel, a book, or a screen, but those unlearned words must not appear in displayed lesson text. Images must use L058 style anchors and contain no text, numbers, zhuyin, labels, signs, letters, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned before production release.",
+  "approvedSentences": [
+    {
+      "text": "爸爸在書房裡看書。",
+      "spokenText": "爸爸在書房裡看書",
+      "focusChar": "房",
+      "displayLines": [
+        "爸爸在書房裡",
+        "看書。"
+      ],
+      "hanCharCount": 8,
+      "scene": "Dad is reading in a study room. Show bookshelves or a quiet reading room, but no visible readable words on books or papers."
+    },
+    {
+      "text": "房門怎麼開了？",
+      "spokenText": "房門怎麼開了",
+      "focusChar": "房",
+      "displayLines": [
+        "房門",
+        "怎麼開了？"
+      ],
+      "hanCharCount": 6,
+      "scene": "A room door is unexpectedly open. A child or adult looks surprised at the open door. No signs or labels."
+    },
+    {
+      "text": "怎麼所有的紅筆都壞掉了？",
+      "spokenText": "怎麼所有的紅筆都壞掉了",
+      "focusChar": "所",
+      "displayLines": [
+        "怎麼所有的紅筆",
+        "都壞掉了？"
+      ],
+      "hanCharCount": 12,
+      "scene": "Someone has taken out several red pens from a box. The red pens are all broken or out of ink, clearly unusable. Show the box and red pens visually; no writing, labels, numbers, or brand marks."
+    },
+    {
+      "text": "我以為所有鳥都可以飛。",
+      "spokenText": "我以為所有鳥都可以飛",
+      "focusChar": "以",
+      "displayLines": [
+        "我以為所有鳥",
+        "都可以飛。"
+      ],
+      "hanCharCount": 10,
+      "scene": "A child sees a penguin and realizes that this bird cannot fly. Show the child looking surprised at a penguin; do not use written explanation, signs, labels, or text."
+    },
+    {
+      "text": "為什麼房子會在水上？",
+      "spokenText": "為什麼房子會在水上",
+      "focusChar": "房",
+      "displayLines": [
+        "為什麼房子",
+        "會在水上？"
+      ],
+      "hanCharCount": 10,
+      "scene": "A child sees a house on water, either while traveling or by looking at a picture book or TV-like screen. The child is puzzled. If using a book or screen, it must contain only the image of a house on water, with no text, numbers, labels, or icons."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L146-G01",
+      "type": "find-character",
+      "sentenceId": "L146-S01",
+      "targetChar": "房",
+      "reason": "Clear 房 in the concrete word 書房."
+    },
+    {
+      "id": "L146-G02",
+      "type": "teach-character",
+      "sentenceId": "L146-S05",
+      "targetChar": "房",
+      "targetCharIndex": 3,
+      "prefixText": "為什麼",
+      "suffixText": "子會在水上",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L146/audio/L146-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L146/audio/L146-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L146-G03",
+      "type": "missing-character",
+      "sentenceId": "L146-S02",
+      "targetChar": "房",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "房",
+        "門",
+        "怎"
+      ]
+    },
+    {
+      "id": "L146-G04",
+      "type": "partial-order",
+      "sentenceId": "L146-S04",
+      "targetChar": "所",
+      "chunks": [
+        "我以為",
+        "所有鳥",
+        "都可以飛"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L146-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L146-S03",
+      "targetChar": "所",
+      "correctText": "怎麼所有的紅筆都壞掉了",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "怎麼所有的紅鞋都壞掉了",
+          "audioSrc": "/assets/lessons/L146/audio/L146-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "怎麼所有的紅帽都壞掉了",
+          "audioSrc": "/assets/lessons/L146/audio/L146-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
