@@ -779,7 +779,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 規則：
 
 - 本課每個新字都要建立一個單字音訊。
-- 單字音訊目標路徑格式：`/assets/lessons/L136/audio/char-字.m4a`
+- 單字音訊目標路徑：`/assets/lessons/L136/audio/char-u98ef.m4a`
 - 聲音：自然、清楚、適合幼兒的臺灣華語。
 - 讀 `spokenText`，不要讀顯示標點。
 - 不要把句音訊做成逐字拼接。
@@ -809,7 +809,7 @@ AI 必須把這份課程序列視為鎖定邊界。
   "order": 136,
   "newChars": ["飯"],
   "zhuyin": {"飯":"ㄈㄢˋ"},
-  "charAudio": {"飯":"/assets/lessons/L136/audio/char-飯.m4a"},
+  "charAudio": {"飯":"/assets/lessons/L136/audio/char-u98ef.m4a"},
   "title": "飯",
   "requiredRounds": 5,
   "sentences": [
@@ -836,3 +836,53 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
+
+## L136 固定 Stage 4 計畫
+
+此課為 L006+ 正式新字課，Stage 4 必須有 `sentenceGames`，五種題型各一次，五個 reviewed sentences 各使用一次。
+
+1. `L136-G01` `find-character`
+   - `sentenceId`: `L136-S01`
+   - `targetChar`: `飯`
+   - 找出句子中的「飯」。
+
+2. `L136-G02` `teach-character`
+   - `sentenceId`: `L136-S02`
+   - `targetChar`: `飯`
+   - `targetCharIndex`: `6`
+   - prefix text: `天氣冷桌上的`
+   - suffix text: `都冷了`
+   - 必須獨立 AI TTS 生成：
+     - `/assets/lessons/L136/audio/L136-G02-prefix.m4a`
+     - `/assets/lessons/L136/audio/L136-G02-suffix.m4a`
+   - 不可從 S02 音檔裁切、拼接、替換。
+
+3. `L136-G03` `missing-character`
+   - `sentenceId`: `L136-S03`
+   - `targetChar`: `飯`
+   - `missingIndexes`: `[4]`
+   - options: `飯`、`水`、`熱`
+
+4. `L136-G04` `partial-order`
+   - `sentenceId`: `L136-S04`
+   - `targetChar`: `套`
+   - teacher chunk plan: `白飯` / `掉到` / `外套上了`
+   - production runtime currently uses Han-character slots, so draft JSON encodes `missingIndexes` `[0,1,2,3,4,5,6,7]` with options `白`、`飯`、`掉`、`到`、`外`、`套`、`上`、`了` and relies on runtime shuffle.
+
+5. `L136-G05` `choose-pronunciation`
+   - `sentenceId`: `L136-S05`
+   - `targetChar`: `喝`
+   - correct: `我不愛喝熱水，給我冷水。`
+   - wrong-one: `我不愛喝冷水，給我熱水。`
+   - wrong-two: `我不愛喝熱水，給我熱水。`
+   - 必須獨立 AI TTS 整句生成：
+     - `/assets/lessons/L136/audio/L136-G05-wrong-one.m4a`
+     - `/assets/lessons/L136/audio/L136-G05-wrong-two.m4a`
+   - 不可裁切、拼接、替換正確句子音檔。
+
+## L136 平行包狀態
+
+- L136 依賴 L135「喝」。
+- Latest `origin/main` 目前只到 L134「冷」，因此 L136 不得合併 production JSON。
+- 本分支只準備完整平行課程包：request、packet、draft、final images、final audio、Stage 4 audio、AI alignment timings。
+- 等 L135 進 main 後，release thread 需要 fetch/rebase、重新審核 allowedChars 與 coverage，再把 L136 寫入 production JSON、planner data、ledger。
