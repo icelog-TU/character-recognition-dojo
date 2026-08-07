@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L141 | 什 / normal lesson | request-ready | Production thread C | codex/l141-complete-package / pending | L139:卻, L140:麼 | 卻, 麼 | curriculum-workflow/lesson-requests/L141.json; curriculum-workflow/generated/L141-generation-packet.md; curriculum-workflow/drafts/L141-draft.json | curriculum-workflow/audio-inbox/L141/; public/assets/lessons/L141/ | Source artifacts created and audited; production JSON blocked until L139-L140 merge. |
+| L141 | 什 / normal lesson | needs-rework | Production thread C | codex/l141-complete-package / pending | L139:卻, L140:麼 | 卻, 麼 | curriculum-workflow/lesson-requests/L141.json; curriculum-workflow/generated/L141-generation-packet.md; curriculum-workflow/drafts/L141-draft.json | curriculum-workflow/audio-inbox/L141/; public/assets/lessons/L141/ | Images, sentence audio, charAudio, draft alignment, G02 prefix, and G05 wrong audio prepared. Blocking defect: exact-fragment G02 suffix `麼書` repeatedly generated/verified as wrong audio; valid `L141-G02-suffix.m4a` is missing. Production JSON also blocked until L139-L140 merge. |
 
 ## Status Values
 
