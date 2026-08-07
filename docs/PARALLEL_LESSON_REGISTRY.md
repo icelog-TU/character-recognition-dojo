@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L128 | 戴 | ready-blocked-by-dependency | Codex L128 docs/media thread | codex/l128-dai-doc-assets / pending | L127:穿; unresolved source for 能 | 穿; 能 (unresolved boundary from teacher-locked sentence 4) | `curriculum-workflow/lesson-requests/L128.json`; `curriculum-workflow/generated/L128-generation-packet.md`; `curriculum-workflow/drafts/L128-draft.json` | `public/assets/lessons/L128/` | Docs/images/audio prepared only per teacher request; production JSON intentionally unchanged. Sentence text is locked. Production merge is blocked until L127 and the learned-character source for `能` are resolved. |
+| L128 | 戴 | ready-blocked-by-dependency | Codex L128 docs/media thread | codex/l128-dai-doc-assets / 7c4980d | L127:穿; unresolved source for 能 | 穿; 能 (unresolved boundary from teacher-locked sentence 4) | `curriculum-workflow/lesson-requests/L128.json`; `curriculum-workflow/generated/L128-generation-packet.md`; `curriculum-workflow/drafts/L128-draft.json` | `public/assets/lessons/L128/` | Docs/images/audio prepared only per teacher request; production JSON intentionally unchanged. Sentence text is locked. Production merge is blocked until L127 and the learned-character source for `能` are resolved. |
 
 ## Status Values
 
