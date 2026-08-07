@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 132:
+Characters taught after Lesson 133:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱`
 
 Recent review pool for the next lesson:
 
-`套 氣 脫 衣 戴 穿 鞋 棋 白 黑 雲 雨 天 空 外 面`
+`出門要穿戴好下雨天衣和鞋爸沒眼鏡找不到大白棋掉在子裡面桌上放著學校的前脫坐家後他這樣看我太了氣帽個球很難玩一套有外手空會小孩熱飛去把邊隻點`
 
 ## Visual Continuity Ledger
 
@@ -197,10 +197,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L130 | 脫 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫 | 下棋前，要脫鞋坐好。 / 到家後，要脫雨鞋和脫雨衣。 / 他戴著眼鏡，找不到眼鏡。 / 這樣穿戴不好看。 / 我穿上爸爸的大衣，太大了。 | 衣戴穿鞋棋 | Repair package built from teacher-audited authoritative final sentences. Includes L058-style images, AI audio, standalone character audio, Stage 4 teachAudio and choose-pronunciation wrong-option audio, and AI-aligned timings. |
 | L131 | 氣 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣 | 天氣好了，脫雨衣和雨鞋。 / 天氣不好，要穿大衣和戴帽子。 / 這個氣球沒氣了。 / 戴眼鏡很難玩球。 / 脫掉的大衣要放好。 | 脫衣戴穿鞋 | Repair package built from teacher-audited authoritative final sentences. Includes L058-style images, AI audio, standalone character audio, Stage 4 teachAudio and choose-pronunciation wrong-option audio, and AI-aligned timings. |
 | L132 | 套 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套 | 這一套有鞋子和大衣。 / 天氣不好，要穿外套，戴手套。 / 這裡空氣不好，不要脫掉。 / 好的大衣會有套子。 / 小小孩不會穿鞋和脫鞋。 | 氣脫衣戴穿 | Repair package built from teacher-audited authoritative final sentences. Includes L058-style images, AI audio, standalone character audio, Stage 4 teachAudio and choose-pronunciation wrong-option audio, and AI-aligned timings. |
+| L133 | 熱 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱 | 天氣太熱，我要脫外套。 / 好熱，我不要戴手套。 / 熱氣球飛到天空去。 / 爸爸把大衣脫掉放門邊。 / 這隻鞋子有點小，很難穿。 | 門邊這隻鞋子有點小很難穿 | Introduces `熱` through approved sentence contexts. Reviews recent sentence characters; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L132. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L133. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

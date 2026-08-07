@@ -1,0 +1,338 @@
+{
+  "id": "L133",
+  "order": 133,
+  "newChars": [
+    "熱"
+  ],
+  "zhuyin": {
+    "熱": "ㄖㄜˋ"
+  },
+  "title": "熱",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L127",
+    "L128",
+    "L129",
+    "L130",
+    "L131",
+    "L132"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套"
+    ],
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "熱",
+      "套",
+      "氣",
+      "脫",
+      "衣",
+      "戴"
+    ],
+    "targetCharMinimumCount": {
+      "熱": 3
+    },
+    "recentTargetMinimumCounts": {
+      "套": 2,
+      "氣": 2,
+      "脫": 2,
+      "衣": 1,
+      "戴": 1
+    },
+    "disallowedChars": [
+      "冷",
+      "喝",
+      "件",
+      "口",
+      "罩",
+      "廢",
+      "工",
+      "廠",
+      "排"
+    ]
+  },
+  "teacherNotes": "Use the teacher-approved L133 sentences exactly. This is a normal production lesson package for new character 熱 (ㄖㄜˋ), but latest origin/main is currently merged only through L126:鞋. L127:穿, L128:戴, L129:衣, L130:脫, L131:氣, and L132:套 are provisional dependencies; do not merge L133 production JSON before those lessons exist in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. Do not use any Han character outside generationConstraints.allowedChars in text, spokenText, displayLines, focusChar, or Stage 4 option text. This lesson must include Stage 4 sentenceGames with the five standard game types exactly once. Generate standalone AI character audio from single character 熱 as char-u71b1.m4a; do not cut it from sentence audio. Generate all sentence audio from complete spokenText. Generate L133-G02-prefix.m4a from exactly 好 and L133-G02-suffix.m4a from exactly 我不要戴手套 as independent AI TTS. Generate L133-G05-wrong-one.m4a and L133-G05-wrong-two.m4a from their complete wrong spokenText as independent AI TTS; do not splice or patch the correct sentence. Images must use L058 style anchors and must not include visible text, numbers, labels, zhuyin, letters, signs, scoreboards, UI, or watermarks.",
+  "approvedSentences": [
+    {
+      "id": "L133-S01",
+      "text": "天氣太熱，我要脫外套。",
+      "displayLines": [
+        "天氣太熱，",
+        "我要脫外套。"
+      ],
+      "spokenText": "天氣太熱我要脫外套",
+      "focusChar": "熱",
+      "hanCharCount": 9,
+      "scene": "天氣很熱，孩子覺得太熱，正在脫外套；畫面要清楚看到外套和熱天情境。"
+    },
+    {
+      "id": "L133-S02",
+      "text": "好熱，我不要戴手套。",
+      "displayLines": [
+        "好熱，",
+        "我不要戴",
+        "手套。"
+      ],
+      "spokenText": "好熱我不要戴手套",
+      "focusChar": "熱",
+      "hanCharCount": 8,
+      "scene": "孩子覺得很熱，不想戴手套；手套可拿在手上或放在旁邊。"
+    },
+    {
+      "id": "L133-S03",
+      "text": "熱氣球飛到天空去。",
+      "displayLines": [
+        "熱氣球",
+        "飛到天空去。"
+      ],
+      "spokenText": "熱氣球飛到天空去",
+      "focusChar": "熱",
+      "hanCharCount": 8,
+      "scene": "熱氣球在天空中飛，天空清楚、明亮，不要有文字或數字。"
+    },
+    {
+      "id": "L133-S04",
+      "text": "爸爸把大衣脫掉放門邊。",
+      "displayLines": [
+        "爸爸把大衣",
+        "脫掉放門邊。"
+      ],
+      "spokenText": "爸爸把大衣脫掉放門邊",
+      "focusChar": "脫",
+      "hanCharCount": 10,
+      "scene": "爸爸把大衣脫下來，放在門邊；動作和門邊位置要清楚。"
+    },
+    {
+      "id": "L133-S05",
+      "text": "這隻鞋子有點小，很難穿。",
+      "displayLines": [
+        "這隻鞋子",
+        "有點小，",
+        "很難穿。"
+      ],
+      "spokenText": "這隻鞋子有點小很難穿",
+      "focusChar": "穿",
+      "hanCharCount": 10,
+      "scene": "一隻鞋子太小，孩子覺得很難穿；可以畫孩子坐著努力穿鞋。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L133-G01",
+      "type": "find-character",
+      "sentenceId": "L133-S01",
+      "targetChar": "熱"
+    },
+    {
+      "id": "L133-G02",
+      "type": "teach-character",
+      "sentenceId": "L133-S02",
+      "targetChar": "熱",
+      "targetCharIndex": 1,
+      "prefixText": "好",
+      "suffixText": "我不要戴手套",
+      "requiredAudio": [
+        "public/assets/lessons/L133/audio/L133-G02-prefix.m4a",
+        "public/assets/lessons/L133/audio/L133-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L133-G03",
+      "type": "missing-character",
+      "sentenceId": "L133-S03",
+      "targetChar": "熱",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "熱",
+        "氣",
+        "球"
+      ]
+    },
+    {
+      "id": "L133-G04",
+      "type": "partial-order",
+      "sentenceId": "L133-S04",
+      "targetChar": "脫",
+      "chunks": [
+        "爸爸把大衣",
+        "脫掉",
+        "放門邊"
+      ]
+    },
+    {
+      "id": "L133-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L133-S05",
+      "targetChar": "穿",
+      "correctText": "這隻鞋子有點小，很難穿。",
+      "correctSpokenText": "這隻鞋子有點小很難穿",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "這隻鞋子有點大，很難穿。",
+          "spokenText": "這隻鞋子有點大很難穿",
+          "audio": "public/assets/lessons/L133/audio/L133-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "這隻鞋子有點小，很好穿。",
+          "spokenText": "這隻鞋子有點小很好穿",
+          "audio": "public/assets/lessons/L133/audio/L133-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
