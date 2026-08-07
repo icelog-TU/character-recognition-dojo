@@ -8,10 +8,448 @@
     "鞋": "ㄒㄧㄝˊ"
   },
   "charAudio": {
-    "鞋": ""
+    "鞋": "/assets/lessons/L126/audio/char-u978b.m4a"
   },
   "title": "鞋",
   "requiredRounds": 5,
   "originHint": null,
-  "sentences": []
+  "sentences": [
+    {
+      "id": "L126-S01",
+      "text": "門前有黑鞋，也有白鞋。",
+      "displayLines": [
+        "門前有黑鞋，",
+        "也有白鞋。"
+      ],
+      "spokenText": "門前有黑鞋也有白鞋",
+      "focusChar": "鞋",
+      "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home entryway scene, consistent expressive preschool proportions, soft rounded forms, bright warm palette, phone-readable composition. Show a plain home doorway or entryway with a shoe cabinet near the front of the door. There are clearly black shoes and clearly white shoes, separated enough for a child to notice both kinds. Shoes are simple and child-safe. No visible text, letters, numbers, labels, logos, zhuyin, signage, door plates, UI, watermark, speech bubbles, arrows, or readable symbols.",
+      "imageSrc": "/assets/lessons/L126/images/L126-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L126/audio/L126-S01.m4a",
+        "durationMs": 3729,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1560
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1980,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2160,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2400,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2720,
+            "endMs": 2940
+          }
+        ]
+      }
+    },
+    {
+      "id": "L126-S02",
+      "text": "雨鞋太大了，不好走路",
+      "displayLines": [
+        "雨鞋太大了，",
+        "不好走路"
+      ],
+      "spokenText": "雨鞋太大了不好走路",
+      "focusChar": "鞋",
+      "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home entryway or covered porch scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Show a child holding or wearing a pair of rain boots that are obviously too large. The child finds them hard to walk in, but remains safe and balanced, perhaps holding the big boots or carefully stepping while an adult is nearby. The boots should look oversized and clearly be rain boots. No falling, injury, danger, fear, scolding, or broken objects. No visible text, letters, numbers, labels, logos, zhuyin, signage, UI, watermark, speech bubbles, arrows, or readable symbols.",
+      "imageSrc": "/assets/lessons/L126/images/L126-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L126/audio/L126-S02.m4a",
+        "durationMs": 4052,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 940
+          },
+          {
+            "charIndex": 2,
+            "startMs": 940,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1420,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1760,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2580,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2740,
+            "endMs": 2900
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2900,
+            "endMs": 3260
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3260,
+            "endMs": 3440
+          }
+        ]
+      }
+    },
+    {
+      "id": "L126-S03",
+      "text": "黑棋、白棋放在棋盒裡",
+      "displayLines": [
+        "黑棋、白棋",
+        "放在棋盒裡"
+      ],
+      "spokenText": "黑棋白棋放在棋盒裡",
+      "focusChar": "棋",
+      "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean tabletop scene, consistent soft rounded forms, bright warm palette, phone-readable composition. Show an open plain chess-piece box on a table with black game pieces and white game pieces clearly visible inside. The pieces are simple round child-safe game pieces without any characters, numbers, letters, labels, or markings. The box is plain and open, with both black and white pieces easy to see. No visible text, letters, numbers, labels, logos, zhuyin, signage, scoreboards, UI, watermark, speech bubbles, arrows, or readable symbols.",
+      "imageSrc": "/assets/lessons/L126/images/L126-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L126/audio/L126-S03.m4a",
+        "durationMs": 3611,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 520
+          },
+          {
+            "charIndex": 2,
+            "startMs": 520,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1320,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1880,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2260,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2600,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2720,
+            "endMs": 3040
+          }
+        ]
+      }
+    },
+    {
+      "id": "L126-S04",
+      "text": "我找不到學校的白鞋",
+      "displayLines": [
+        "我找不到",
+        "學校的白鞋"
+      ],
+      "spokenText": "我找不到學校的白鞋",
+      "focusChar": "鞋",
+      "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home or school entryway scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Preserve the fixed first-person young girl: shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes if visible. She is searching near a shoe cabinet, cubby, or school bag and cannot find her plain white school shoes. Show other safe entryway items, but make the missing white shoes idea clear by her searching pose and a visible empty shoe space. No school name, readable signs, text, letters, numbers, labels, logos, zhuyin, UI, watermark, speech bubbles, arrows, or readable symbols.",
+      "imageSrc": "/assets/lessons/L126/images/L126-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L126/audio/L126-S04.m4a",
+        "durationMs": 5179,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1080,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1280,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1880,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2300,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2540,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3040,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3480,
+            "endMs": 3660
+          }
+        ]
+      }
+    },
+    {
+      "id": "L126-S05",
+      "text": "天上有黑雲，要下雨了。",
+      "displayLines": [
+        "天上有黑雲，",
+        "要下雨了。"
+      ],
+      "spokenText": "天上有黑雲要下雨了",
+      "focusChar": "雲",
+      "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean outdoor sky scene, consistent soft rounded forms, bright but cloudy palette, phone-readable composition. Show the sky with clear dark clouds overhead, suggesting it is about to rain. The scene can include a safe yard, path, or window view below, but the black clouds and coming rain should be the focus. Mood is calm weather observation, not danger. No disaster, lightning, frightening storm, flood, dangerous scene, visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable symbols.",
+      "imageSrc": "/assets/lessons/L126/images/L126-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L126/audio/L126-S05.m4a",
+        "durationMs": 3104,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1360,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1780,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1980,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2260,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2380,
+            "endMs": 2660
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L126-G01",
+      "type": "find-character",
+      "sentenceId": "L126-S01",
+      "targetChar": "鞋",
+      "missingIndexes": [
+        4,
+        8
+      ],
+      "prompt": "找出「鞋」。"
+    },
+    {
+      "id": "L126-G02",
+      "type": "teach-character",
+      "sentenceId": "L126-S02",
+      "targetChar": "鞋",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "prompt": "聽一聽，放進「鞋」。",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L126/audio/L126-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L126/audio/L126-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L126-G03",
+      "type": "missing-character",
+      "sentenceId": "L126-S04",
+      "targetChar": "鞋",
+      "missingIndexes": [
+        8
+      ],
+      "prompt": "選出少掉的字。",
+      "options": [
+        {
+          "id": "shoe",
+          "text": "鞋",
+          "correct": true
+        },
+        {
+          "id": "棋",
+          "text": "棋",
+          "correct": false
+        },
+        {
+          "id": "cloud",
+          "text": "雲",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L126-G04",
+      "type": "partial-order",
+      "sentenceId": "L126-S03",
+      "targetChar": "棋",
+      "missingIndexes": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "prompt": "排出正確的句子。",
+      "options": [
+        {
+          "id": "slot-1",
+          "text": "在",
+          "correct": true
+        },
+        {
+          "id": "slot-2",
+          "text": "棋",
+          "correct": true
+        },
+        {
+          "id": "slot-3",
+          "text": "盒",
+          "correct": true
+        },
+        {
+          "id": "slot-4",
+          "text": "裡",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "L126-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L126-S05",
+      "targetChar": "雲",
+      "prompt": "聽一聽，選出正確的句子。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "天上有黑雲要下雨了",
+          "audioSrc": "/assets/lessons/L126/audio/L126-S05.m4a",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "天上有白雲要下雨了",
+          "audioSrc": "/assets/lessons/L126/audio/L126-G05-wrong-one.m4a",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "山上有黑雲要下雨了",
+          "audioSrc": "/assets/lessons/L126/audio/L126-G05-wrong-two.m4a",
+          "correct": false
+        }
+      ]
+    }
+  ]
 }
