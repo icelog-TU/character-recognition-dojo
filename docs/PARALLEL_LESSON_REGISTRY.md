@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L133 | 熱 / normal lesson | claimed | Codex production thread | `codex/l133-re-complete-package` / pending | L127:穿, L128:戴, L129:衣, L130:脫, L131:氣, L132:套 | 穿, 戴, 衣, 脫, 氣, 套 | `curriculum-workflow/lesson-requests/L133.json`; `curriculum-workflow/generated/L133-generation-packet.md`; `curriculum-workflow/drafts/L133-draft.json` | `curriculum-workflow/audio-inbox/L133/`; `public/assets/lessons/L133/` | Complete parallel package requested; do not merge production JSON until L127-L132 are merged in latest `origin/main`. |
 
 ## Status Values
 
