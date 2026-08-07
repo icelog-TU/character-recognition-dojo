@@ -1,0 +1,90 @@
+{
+  "id": "L128",
+  "order": 128,
+  "newChars": [
+    "戴"
+  ],
+  "zhuyin": {
+    "戴": "ㄉㄞˋ"
+  },
+  "title": "戴",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L123",
+    "L124",
+    "L125",
+    "L126",
+    "L127"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "穿",
+      "能"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "戴",
+      "穿",
+      "鞋",
+      "棋",
+      "白",
+      "黑"
+    ],
+    "targetCharMinimumCount": {
+      "戴": 3
+    },
+    "recentTargetMinimumCounts": {
+      "穿": 2,
+      "鞋": 2,
+      "棋": 2,
+      "白": 1,
+      "黑": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Use the teacher-approved L128 sentences exactly; do not rewrite sentence text. This task is docs/images/audio only and must not leave changes in src/curriculum/sample-lessons.json. spokenText must equal text with punctuation removed. Latest origin/main is merged through L126:鞋. Treat L127:穿 as provisional. Sentence 4 contains 能, which is not in L001-L126 production and is not L127:穿 or L128:戴; it is recorded here as an unresolved provisional boundary because the teacher locked the sentence text. Do not merge L128 into production until the learned-character source for 能 is resolved. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, scoreboards, UI, or watermarks. Generate standalone AI audio for 戴 as public/assets/lessons/L128/audio/char-u6234.m4a; do not cut it from sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "我穿白鞋，戴白帽子。",
+      "spokenText": "我穿白鞋戴白帽子",
+      "focusChar": "戴",
+      "hanCharCount": 8,
+      "scene": "小孩準備出門，腳上穿白鞋，頭上戴白帽子。畫面要清楚呈現「穿鞋」和「戴帽子」。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "爸爸戴著黑眼鏡看書。",
+      "spokenText": "爸爸戴著黑眼鏡看書",
+      "focusChar": "戴",
+      "hanCharCount": 9,
+      "scene": "爸爸坐在桌邊或沙發上，戴著黑色眼鏡看書。眼鏡要清楚是黑色。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "媽媽很會穿戴。",
+      "spokenText": "媽媽很會穿戴",
+      "focusChar": "戴",
+      "hanCharCount": 6,
+      "scene": "媽媽站在鏡子前整理自己，衣服、帽子、鞋子搭配得很好看。畫面重點是媽媽很會打扮、穿戴整齊。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "黑棋少了很多，這樣不能下棋。",
+      "spokenText": "黑棋少了很多這樣不能下棋",
+      "focusChar": "棋",
+      "hanCharCount": 12,
+      "scene": "桌上或棋盒裡白棋很多，但黑棋明顯少很多，一個小孩或大人看著棋子，表現出因為黑棋不夠所以不能下棋。棋子與棋盒不可有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "text": "媽媽把紅鞋放在盒子裡。",
+      "spokenText": "媽媽把紅鞋放在盒子裡",
+      "focusChar": "鞋",
+      "hanCharCount": 10,
+      "scene": "媽媽把一雙紅鞋放進盒子裡，盒子和紅鞋都要清楚可見。不要有文字、數字、標籤、注音或字母。"
+    }
+  ]
+}
