@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L132 | 套 | assets | Codex L132 assets thread | `codex/l132-tao-assets` / pending | L127-L131 not merged in `origin/main` | L127 穿, L128 戴, L129 衣, L130 脫, L131 氣, L132 套 | none; teacher supplied final sentence text in chat | `public/assets/lessons/L132/`, `curriculum-workflow/audio-inbox/L132/` | Assets-only preparation. Do not edit or merge production JSON until dependencies are merged in order. |
+| L132 | 套 | ready-blocked-by-dependency | Codex L132 assets thread | `codex/l132-tao-assets` / asset commit pending | L127-L131 not merged in `origin/main` | L127 穿, L128 戴, L129 衣, L130 脫, L131 氣, L132 套 | none; teacher supplied final sentence text in chat | `public/assets/lessons/L132/`, `curriculum-workflow/audio-inbox/L132/` | Images and sentence/character audio prepared only. Production JSON intentionally unchanged until dependencies are merged in order. |
 
 ## Status Values
 
