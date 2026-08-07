@@ -1,0 +1,207 @@
+{
+  "id": "L145",
+  "order": 145,
+  "newChars": [
+    "所"
+  ],
+  "zhuyin": {
+    "所": "ㄙㄨㄛˇ"
+  },
+  "title": "所以所有",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L142",
+    "L143",
+    "L144"
+  ],
+  "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所",
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "為",
+      "以",
+      "怎"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "所",
+      "怎",
+      "以",
+      "為",
+      "什",
+      "麼"
+    ],
+    "targetCharMinimumCount": {
+      "所": 3
+    },
+    "recentTargetMinimumCounts": {
+      "怎": 2,
+      "以": 2,
+      "為": 2,
+      "什": 1,
+      "麼": 1
+    },
+    "disallowedChars": [
+      "爲",
+      "裏",
+      "能",
+      "嗎",
+      "錯",
+      "咬",
+      "具",
+      "聲",
+      "音"
+    ]
+  },
+  "teacherNotes": "Production handoff for 認字練功房 L145. Build the full lesson package for new character 所 (ㄙㄨㄛˇ), title 所以所有, not assets-only. Latest origin/main at handoff is merged through L141:什; L142:為, L143:以, and L144:怎 are provisional dependencies. Do not merge L145 production JSON until L142-L144 are merged in order. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Use 為, not variant 爲; use 裡, not 裏. spokenText must equal text with punctuation removed. No Han characters outside allowedChars may appear in text, spokenText, displayLines, focusChar, or Stage 4 option text. Images must use L058 style anchors and must not contain text, numbers, zhuyin, English, signs, labels, or watermarks. Generate standalone AI audio for 所 as public/assets/lessons/L145/audio/char-u6240.m4a. Generate sentence audio, teachAudio prefix/suffix, and choose-pronunciation wrong-option audio as independent OpenAI TTS utterances; do not cut, splice, patch, or extract from other audio.",
+  "approvedSentences": [
+    {
+      "id": "L145-S01",
+      "text": "怎麼所有的鞋子都壞掉了？",
+      "spokenText": "怎麼所有的鞋子都壞掉了",
+      "focusChar": "所",
+      "displayLines": [
+        "怎麼所有",
+        "的鞋子",
+        "都壞掉了？"
+      ],
+      "hanCharCount": 11,
+      "scene": "Several shoes are damaged, with a dog nearby looking guilty or chewing near the shoes. Do not show any written labels or words. The dog-biting cause is visual only; do not add text."
+    },
+    {
+      "id": "L145-S02",
+      "text": "你怎麼會以為這個可以吃？",
+      "spokenText": "你怎麼會以為這個可以吃",
+      "focusChar": "以",
+      "displayLines": [
+        "你怎麼會",
+        "以為這個",
+        "可以吃？"
+      ],
+      "hanCharCount": 11,
+      "scene": "A child is about to put a clearly non-food object or toy-like object near their mouth, and an adult stops them in surprise. No written words, labels, numbers, or brand marks."
+    },
+    {
+      "id": "L145-S03",
+      "text": "這太難了，所以可以問大人。",
+      "spokenText": "這太難了所以可以問大人",
+      "focusChar": "所",
+      "displayLines": [
+        "這太難了，",
+        "所以可以",
+        "問大人。"
+      ],
+      "hanCharCount": 11,
+      "scene": "A child faces a difficult task, such as hard homework, a difficult puzzle, or a hard book, and asks an adult for help. Any paper or book must be blank with no visible writing, numbers, or symbols."
+    },
+    {
+      "id": "L145-S04",
+      "text": "為什麼沒人在家？",
+      "spokenText": "為什麼沒人在家",
+      "focusChar": "什",
+      "displayLines": [
+        "為什麼",
+        "沒人在家？"
+      ],
+      "hanCharCount": 7,
+      "scene": "A child stands at home or at the door looking around because nobody is there. Show an empty home scene clearly, without text, signs, labels, or numbers."
+    },
+    {
+      "id": "L145-S05",
+      "text": "怎麼所有人都穿紅衣？",
+      "spokenText": "怎麼所有人都穿紅衣",
+      "focusChar": "所",
+      "displayLines": [
+        "怎麼所有人",
+        "都穿紅衣？"
+      ],
+      "hanCharCount": 9,
+      "scene": "A group of people are all wearing red clothes, and a child looks surprised. Make the red clothing visually clear. No uniforms with letters, numbers, logos, or labels."
+    }
+  ],
+  "coverageStats": {
+    "所": 3,
+    "怎": 3,
+    "以": 4,
+    "為": 2,
+    "什": 1,
+    "麼": 4
+  },
+  "stage4Plan": [
+    {
+      "id": "L145-G01",
+      "type": "find-character",
+      "sentenceId": "L145-S05",
+      "targetChar": "所"
+    },
+    {
+      "id": "L145-G02",
+      "type": "teach-character",
+      "sentenceId": "L145-S01",
+      "targetChar": "所",
+      "targetCharIndex": 2,
+      "prefixText": "怎麼",
+      "suffixText": "有的鞋子都壞掉了",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L145/audio/L145-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L145/audio/L145-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L145-G03",
+      "type": "missing-character",
+      "sentenceId": "L145-S03",
+      "targetChar": "所",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "所",
+        "以",
+        "為"
+      ]
+    },
+    {
+      "id": "L145-G04",
+      "type": "partial-order",
+      "sentenceId": "L145-S01",
+      "targetChar": "所",
+      "chunks": [
+        "怎麼所有的鞋子",
+        "都壞",
+        "掉了"
+      ]
+    },
+    {
+      "id": "L145-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L145-S02",
+      "targetChar": "以",
+      "options": [
+        {
+          "id": "correct",
+          "text": "你怎麼會以為這個可以吃？",
+          "spokenText": "你怎麼會以為這個可以吃",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L145/audio/L145-S02.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "你怎麼會以為這個可以玩？",
+          "spokenText": "你怎麼會以為這個可以玩",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L145/audio/L145-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "你怎麼會以為這個可以戴？",
+          "spokenText": "你怎麼會以為這個可以戴",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L145/audio/L145-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
