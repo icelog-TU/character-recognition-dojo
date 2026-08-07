@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L129 | 衣 | assets | Codex L129 assets thread | `codex/l129-yi-assets` / pending | L127-L128 not merged in `origin/main` | L127-L128 provisional, L129 衣 | none; teacher supplied final sentence text in chat | `public/assets/lessons/L129/`, `curriculum-workflow/audio-inbox/L129/` | Assets-only preparation. Do not edit or merge production JSON until dependencies are merged. |
+| L129 | 衣 | ready-blocked-by-dependency | Codex L129 assets thread | `codex/l129-yi-assets` / asset commit pending | L127-L128 not merged in `origin/main` | L127-L128 provisional, L129 衣 | none; teacher supplied final sentence text in chat | `public/assets/lessons/L129/`, `curriculum-workflow/audio-inbox/L129/` | Images and sentence/character audio prepared only. Production JSON intentionally unchanged until dependencies are merged. |
 
 ## Status Values
 
