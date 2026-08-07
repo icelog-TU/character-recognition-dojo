@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L151 | 關 / normal lesson | ready-blocked-by-dependency | Production thread C | codex/l151-complete-package / local | L143:以, L144:怎, L145:所, L146:房, L147:間, L148:時, L149:還, L150:燈 | 以, 怎, 所, 房, 間, 時, 還, 燈 | curriculum-workflow/lesson-requests/L151.json; curriculum-workflow/generated/L151-generation-packet.md; curriculum-workflow/drafts/L151-draft.json | curriculum-workflow/audio-inbox/L151/; public/assets/lessons/L151/ | Complete draft package and assets prepared; production JSON/planner/ledger intentionally not updated until L143-L150 are merged in latest origin/main. |
+| L151 | 關 / normal lesson | ready-blocked-by-dependency | Production thread C | codex/l151-complete-package / 7f17dc7 | L143:以, L144:怎, L145:所, L146:房, L147:間, L148:時, L149:還, L150:燈 | 以, 怎, 所, 房, 間, 時, 還, 燈 | curriculum-workflow/lesson-requests/L151.json; curriculum-workflow/generated/L151-generation-packet.md; curriculum-workflow/drafts/L151-draft.json | curriculum-workflow/audio-inbox/L151/; public/assets/lessons/L151/ | Complete draft package and assets prepared; production JSON/planner/ledger intentionally not updated until L143-L150 are merged in latest origin/main. |
 
 ## Status Values
 
