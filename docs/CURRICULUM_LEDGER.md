@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 128:
+Characters taught after Lesson 129:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣`
 
 Recent review pool for the next lesson:
 
-`我在黑紙上面畫白點外天空好要下雨了把球和拿去地玩沒有雲都是掉來的水棋你分開放盒裡家小孩愛也門前鞋太大不走路找到學校穿兩隻狗過一樣多朵飛戴帽子爸著眼鏡看書媽很會少這紅`
+`我拿黑棋你白分開放在盒裡雨天家下小孩愛玩水上有雲也門前鞋太大了不好走路找到學校的要穿去兩隻狗過空地和一樣多朵飛戴帽子爸著眼鏡看書媽很會少這把紅出衣沒掉面桌`
 
 ## Visual Continuity Ledger
 
@@ -193,10 +193,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L126 | 鞋 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋 | 門前有黑鞋，也有白鞋。 / 雨鞋太大了，不好走路 / 黑棋、白棋放在棋盒裡 / 我找不到學校的白鞋 / 天上有黑雲，要下雨了。 | 棋白黑雲雨 | Introduces `鞋` through black and white shoes, oversized rain boots, and searching for school shoes. Reviews recent `棋`, `白`, `黑`, `雲`, and `雨`; includes generated L058-style images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L127 | 穿 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿 | 我穿白鞋去學校。 / 下雨天要穿雨鞋。 / 兩隻小狗穿過空地。 / 黑棋和白棋一樣多。 / 白雲朵朵天上飛。 | 鞋棋白黑雲雨 | Introduces `穿` through approved sentence contexts. Reviews recent `鞋`, `棋`, `白`, `黑`, `雲`, and `雨`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L128 | 戴 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴 | 我穿白鞋，戴白帽子。 / 爸爸戴著黑眼鏡看書。 / 媽媽很會穿戴。 / 黑棋少了很多，這樣不好下棋。 / 媽媽把紅鞋放在盒子裡。 | 多這樣不好下把紅放在盒裡 | Introduces `戴` through approved sentence contexts. Reviews recent sentence characters; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L129 | 衣 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣 | 出門要穿戴好。 / 下雨天要穿雨衣和雨鞋。 / 爸爸沒戴眼鏡，找不到大衣。 / 白棋掉在鞋子裡面。 / 桌上放著學校的白上衣。 | 掉在子裡面桌上放著學校的 | Introduces `衣` through approved sentence contexts. Reviews recent sentence characters; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L128. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L129. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

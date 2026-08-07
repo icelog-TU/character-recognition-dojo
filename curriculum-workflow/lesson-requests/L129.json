@@ -1,0 +1,91 @@
+{
+  "id": "L129",
+  "order": 129,
+  "newChars": [
+    "衣"
+  ],
+  "zhuyin": {
+    "衣": "ㄧ"
+  },
+  "title": "衣",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L124",
+    "L125",
+    "L126",
+    "L127",
+    "L128"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣",
+    "provisionalLearnedChars": [
+      "穿",
+      "戴"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "衣",
+      "戴",
+      "穿",
+      "鞋",
+      "棋",
+      "白"
+    ],
+    "targetCharMinimumCount": {
+      "衣": 3
+    },
+    "recentTargetMinimumCounts": {
+      "戴": 2,
+      "穿": 2,
+      "鞋": 2,
+      "棋": 1,
+      "白": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-audited authoritative final sentence source for L127-L132 repair. Use these sentences exactly. spokenText equals text with punctuation removed. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Images use L058 style anchors and must not contain text, zhuyin, letters, numbers, labels, signs, or watermarks. Audio must be standalone OpenAI single-character charAudio, whole-sentence AI audio, independent G02 teachAudio fragments, independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned with assets:align:ai.",
+  "approvedSentences": [
+    {
+      "text": "出門要穿戴好。",
+      "spokenText": "出門要穿戴好",
+      "focusChar": "戴",
+      "hanCharCount": 6,
+      "scene": "A child near a doorway is neatly dressed and ready to go out, with clothes, shoes, and hat arranged well."
+    },
+    {
+      "text": "下雨天要穿雨衣和雨鞋。",
+      "spokenText": "下雨天要穿雨衣和雨鞋",
+      "focusChar": "衣",
+      "hanCharCount": 10,
+      "scene": "Rainy-day home entryway: a child wears or puts on a raincoat and rain boots. Both raincoat and rain boots are clear."
+    },
+    {
+      "text": "爸爸沒戴眼鏡，找不到大衣。",
+      "spokenText": "爸爸沒戴眼鏡找不到大衣",
+      "focusChar": "衣",
+      "hanCharCount": 11,
+      "scene": "A friendly father without eyeglasses searches for a big coat in a tidy room or entryway; his eyeglasses are set aside and the coat is hard to find."
+    },
+    {
+      "text": "白棋掉在鞋子裡面。",
+      "spokenText": "白棋掉在鞋子裡面",
+      "focusChar": "鞋",
+      "hanCharCount": 8,
+      "scene": "A plain white game piece has fallen inside a shoe; shoe and piece are clearly visible, with no markings on the game piece."
+    },
+    {
+      "text": "桌上放著學校的白上衣。",
+      "spokenText": "桌上放著學校的白上衣",
+      "focusChar": "衣",
+      "hanCharCount": 10,
+      "scene": "A plain white school shirt neatly placed on a table with school items nearby, but no readable school name or writing."
+    }
+  ]
+}
