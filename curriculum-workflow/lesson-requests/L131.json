@@ -1,0 +1,93 @@
+{
+  "id": "L131",
+  "order": 131,
+  "newChars": [
+    "氣"
+  ],
+  "zhuyin": {
+    "氣": "ㄑㄧˋ"
+  },
+  "title": "氣",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L126",
+    "L127",
+    "L128",
+    "L129",
+    "L130"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣",
+    "provisionalLearnedChars": [
+      "穿",
+      "戴",
+      "衣",
+      "脫"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "氣",
+      "脫",
+      "衣",
+      "戴",
+      "穿",
+      "鞋"
+    ],
+    "targetCharMinimumCount": {
+      "氣": 3
+    },
+    "recentTargetMinimumCounts": {
+      "脫": 2,
+      "衣": 2,
+      "戴": 2,
+      "穿": 1,
+      "鞋": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-audited authoritative final sentence source for L127-L132 repair. Use these sentences exactly. spokenText equals text with punctuation removed. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Images use L058 style anchors and must not contain text, zhuyin, letters, numbers, labels, signs, or watermarks. Audio must be standalone OpenAI single-character charAudio, whole-sentence AI audio, independent G02 teachAudio fragments, independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned with assets:align:ai.",
+  "approvedSentences": [
+    {
+      "text": "天氣好了，脫雨衣和雨鞋。",
+      "spokenText": "天氣好了脫雨衣和雨鞋",
+      "focusChar": "氣",
+      "hanCharCount": 10,
+      "scene": "Rain has stopped and weather is better; a child at a doorway or inside home takes off raincoat and rain boots."
+    },
+    {
+      "text": "天氣不好，要穿大衣和戴帽子。",
+      "spokenText": "天氣不好要穿大衣和戴帽子",
+      "focusChar": "氣",
+      "hanCharCount": 12,
+      "scene": "Bad weather outside; a child prepares to go out by wearing a big coat and hat."
+    },
+    {
+      "text": "這個氣球沒氣了。",
+      "spokenText": "這個氣球沒氣了",
+      "focusChar": "氣",
+      "hanCharCount": 7,
+      "scene": "One balloon is floppy and deflated on a table or floor, clearly out of air; safe ordinary scene."
+    },
+    {
+      "text": "戴眼鏡很難玩球。",
+      "spokenText": "戴眼鏡很難玩球",
+      "focusChar": "戴",
+      "hanCharCount": 7,
+      "scene": "A child wearing eyeglasses tries to play ball and finds it difficult, safely and gently."
+    },
+    {
+      "text": "脫掉的大衣要放好。",
+      "spokenText": "脫掉的大衣要放好",
+      "focusChar": "脫",
+      "hanCharCount": 8,
+      "scene": "A big coat that has been taken off is being put away neatly on a chair, near a table, or by a plain box, not thrown around."
+    }
+  ]
+}

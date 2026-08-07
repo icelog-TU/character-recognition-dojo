@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 130:
+Characters taught after Lesson 131:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣`
 
 Recent review pool for the next lesson:
 
-`門前有黑鞋也白雨太大了不好走路棋放在盒裡我找到學校的天上雲要下穿去兩隻小狗過空地和一樣多朵飛戴帽子爸著眼鏡看書媽很會少這把紅出衣沒掉面桌脫坐家後他`
+`我穿白鞋去學校下雨天要兩隻小狗過空地黑棋和一樣多雲朵上飛戴帽子爸著眼鏡看書媽很會少了這不好把紅放在盒裡出門衣沒找到大掉面桌的前脫坐家後他太氣個球難玩`
 
 ## Visual Continuity Ledger
 
@@ -195,10 +195,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L128 | 戴 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴 | 我穿白鞋，戴白帽子。 / 爸爸戴著黑眼鏡看書。 / 媽媽很會穿戴。 / 黑棋少了很多，這樣不好下棋。 / 媽媽把紅鞋放在盒子裡。 | 多這樣不好下把紅放在盒裡 | Introduces `戴` through approved sentence contexts. Reviews recent sentence characters; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L129 | 衣 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣 | 出門要穿戴好。 / 下雨天要穿雨衣和雨鞋。 / 爸爸沒戴眼鏡，找不到大衣。 / 白棋掉在鞋子裡面。 / 桌上放著學校的白上衣。 | 掉在子裡面桌上放著學校的 | Introduces `衣` through approved sentence contexts. Reviews recent sentence characters; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L130 | 脫 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫 | 下棋前，要脫鞋坐好。 / 到家後，要脫雨鞋和脫雨衣。 / 他戴著眼鏡，找不到眼鏡。 / 這樣穿戴不好看。 / 我穿上爸爸的大衣，太大了。 | 不這樣穿看我上爸的大太了 | Introduces `脫` through approved sentence contexts. Reviews recent sentence characters; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L131 | 氣 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣 | 天氣好了，脫雨衣和雨鞋。 / 天氣不好，要穿大衣和戴帽子。 / 這個氣球沒氣了。 / 戴眼鏡很難玩球。 / 脫掉的大衣要放好。 | 這個球沒眼鏡很難玩掉的放 | Introduces `氣` through approved sentence contexts. Reviews recent sentence characters; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L130. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L131. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
