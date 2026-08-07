@@ -1,0 +1,327 @@
+{
+  "id": "L143",
+  "order": 143,
+  "newChars": [
+    "以"
+  ],
+  "zhuyin": {
+    "以": "ㄧˇ"
+  },
+  "title": "以為可以",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L142"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以"
+    ],
+    "provisionalLearnedChars": [],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "以",
+      "為",
+      "什",
+      "麼",
+      "卻",
+      "老"
+    ],
+    "targetCharMinimumCount": {
+      "以": 3
+    },
+    "recentTargetMinimumCounts": {
+      "為": 3,
+      "什": 2,
+      "麼": 2,
+      "卻": 1,
+      "老": 1
+    },
+    "disallowedChars": [
+      "爲",
+      "裏",
+      "怎",
+      "所",
+      "錯",
+      "能",
+      "嗎"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L143. Use approved sentences exactly; spokenText equals text with punctuation removed. Latest origin/main includes L142, so production entry is allowed if checks pass. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Stage 4 assignment is adjusted from the handoff to satisfy five unique sentence games and avoid a one-character teachAudio prefix; approved sentence text is unchanged. Images must use L058 style anchors and contain no text, numbers, zhuyin, labels, signs, letters, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "為什麼不可以在這裡玩水？",
+      "spokenText": "為什麼不可以在這裡玩水",
+      "focusChar": "以",
+      "displayLines": [
+        "為什麼",
+        "不可以",
+        "在這裡玩水？"
+      ],
+      "hanCharCount": 11,
+      "scene": "A child wants to play with water indoors in a living room area, with water or a basin on the floor. An adult stops the child and clearly indicates no. No speech bubbles, text, labels, or signs."
+    },
+    {
+      "text": "我以為這是我的書包。",
+      "spokenText": "我以為這是我的書包",
+      "focusChar": "以",
+      "displayLines": [
+        "我以為這是",
+        "我的書包。"
+      ],
+      "hanCharCount": 9,
+      "scene": "A child has picked up the wrong school bag by mistake, thinking it is their own. Show two similar school bags and the child looking surprised or unsure. No names, labels, letters, or numbers on the bags."
+    },
+    {
+      "text": "我問媽媽這是什麼菜。",
+      "spokenText": "我問媽媽這是什麼菜",
+      "focusChar": "什",
+      "displayLines": [
+        "我問媽媽",
+        "這是什麼菜。"
+      ],
+      "hanCharCount": 9,
+      "scene": "A child points at a dish of vegetables on the table and asks mom what vegetable or dish it is. Mom is nearby answering or looking at the dish. No text or labels."
+    },
+    {
+      "text": "老人要看書，卻找不到眼鏡。",
+      "spokenText": "老人要看書卻找不到眼鏡",
+      "focusChar": "卻",
+      "displayLines": [
+        "老人要看書，",
+        "卻找不到",
+        "眼鏡。"
+      ],
+      "hanCharCount": 12,
+      "scene": "An elderly person wants to read a book but cannot find their glasses. Show a book open or ready, and the person searching around for glasses. No written words visible in the book."
+    },
+    {
+      "text": "我以為可以穿紅鞋上學。",
+      "spokenText": "我以為可以穿紅鞋上學",
+      "focusChar": "以",
+      "displayLines": [
+        "我以為可以",
+        "穿紅鞋上學。"
+      ],
+      "hanCharCount": 10,
+      "scene": "A child is wearing or holding red shoes and thinks they can wear them to school. Show a school-going context with school bag or doorway, but no school name, text, numbers, or signs."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L143-G01",
+      "type": "find-character",
+      "sentenceId": "L143-S01",
+      "targetChar": "以",
+      "reason": "Target-character recognition round using the target in the water-play sentence."
+    },
+    {
+      "id": "L143-G02",
+      "type": "teach-character",
+      "sentenceId": "L143-S05",
+      "targetChar": "以",
+      "targetCharIndex": 4,
+      "prefixText": "我以為可",
+      "suffixText": "穿紅鞋上學",
+      "requiredAudio": [
+        "public/assets/lessons/L143/audio/L143-G02-prefix.m4a",
+        "public/assets/lessons/L143/audio/L143-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L143-G03",
+      "type": "missing-character",
+      "sentenceId": "L143-S02",
+      "targetChar": "以",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "以",
+        "為",
+        "可"
+      ]
+    },
+    {
+      "id": "L143-G04",
+      "type": "partial-order",
+      "sentenceId": "L143-S04",
+      "targetChar": "卻",
+      "chunks": [
+        "老人要看書",
+        "卻找不到",
+        "眼鏡"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L143-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L143-S03",
+      "targetChar": "什",
+      "correctText": "我問媽媽這是什麼菜。",
+      "correctSpokenText": "我問媽媽這是什麼菜",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我問爸爸這是什麼菜。",
+          "spokenText": "我問爸爸這是什麼菜",
+          "audioSrc": "/assets/lessons/L143/audio/L143-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我問媽媽這是什麼飯。",
+          "spokenText": "我問媽媽這是什麼飯",
+          "audioSrc": "/assets/lessons/L143/audio/L143-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

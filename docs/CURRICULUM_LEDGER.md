@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 142:
+Characters taught after Lesson 143:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以`
 
 Recent review pool for the next lesson:
 
-`為 什 麼 卻 老 菜 飯 喝 冷 熱 套 氣 脫 衣 戴 穿`
+`以 為 什 麼 卻 老 菜 飯 喝 冷 熱 套 氣 脫 衣 戴`
 
 ## Visual Continuity Ledger
 
@@ -208,9 +208,10 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L141 | 什 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什 | 這菜太老了，不好吃。 / 我做了飯，你卻什麼也不吃。 / 外面大雨，老太太卻要出門。 / 你在看什麼書？ / 門外那是什麼人？ | 麼卻老菜飯 | Introduces `什` through approved sentence contexts. Reviews recent `麼卻老菜飯`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L142 | 為 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為 | 你為什麼都不吃菜？ / 爸爸為什麼老是找不到眼鏡？ / 雲那麼黑，卻沒有下雨。 / 書包裡有紙，卻沒有筆。 / 為了孩子，爸媽什麼都做。 | 什麼卻老菜 | Introduces `為` through approved sentence contexts. Reviews recent `什麼卻老菜`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
+| L143 | 以 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以 | 為什麼不可以在這裡玩水？ / 我以為這是我的書包。 / 我問媽媽這是什麼菜。 / 老人要看書，卻找不到眼鏡。 / 我以為可以穿紅鞋上學。 | 為什麼卻老 | Introduces `以` through approved sentence contexts. Reviews recent `為什麼卻老`; includes generated L058-style images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 ## Planned Lessons
 
-Merged curriculum is complete through L142. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L143. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

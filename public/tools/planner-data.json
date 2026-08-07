@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-07T13:46:56.103Z",
+  "exportedAt": "2026-08-07T14:41:01.336Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -63193,6 +63193,489 @@
               "text": "書包裡有紙，卻沒有書。",
               "correct": false,
               "audioSrc": "/assets/lessons/L142/audio/L142-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L143",
+      "order": 143,
+      "newChars": [
+        "以"
+      ],
+      "zhuyin": {
+        "以": "ㄧˇ"
+      },
+      "charAudio": {
+        "以": "/assets/lessons/L143/audio/char-u4ee5.m4a"
+      },
+      "title": "以為可以",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L143-S01",
+          "text": "為什麼不可以在這裡玩水？",
+          "displayLines": [
+            "為什麼",
+            "不可以",
+            "在這裡玩水？"
+          ],
+          "spokenText": "為什麼不可以在這裡玩水",
+          "focusChar": "以",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, school names, UI, watermark, speech bubbles, arrows, or readable symbols. A child wants to play with water indoors in a living room area, with a small basin or water on the floor. An adult gently stops the child and clearly indicates no with body language, not with a sign. Keep the scene warm and safe; no text or symbols.",
+          "imageSrc": "/assets/lessons/L143/images/L143-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L143/audio/L143-S01.m4a",
+            "durationMs": 3703,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 167
+              },
+              {
+                "charIndex": 1,
+                "startMs": 167,
+                "endMs": 333
+              },
+              {
+                "charIndex": 2,
+                "startMs": 333,
+                "endMs": 500
+              },
+              {
+                "charIndex": 3,
+                "startMs": 500,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1080,
+                "endMs": 1290
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1290,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1500,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1700,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 8,
+                "startMs": 1900,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2100,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2500,
+                "endMs": 2760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L143-S02",
+          "text": "我以為這是我的書包。",
+          "displayLines": [
+            "我以為這是",
+            "我的書包。"
+          ],
+          "spokenText": "我以為這是我的書包",
+          "focusChar": "以",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, school names, UI, watermark, speech bubbles, arrows, or readable symbols. A child has picked up the wrong school bag by mistake, thinking it is their own. Show two similar plain school bags and the child looking surprised or unsure. No names, labels, letters, or numbers on the bags.",
+          "imageSrc": "/assets/lessons/L143/images/L143-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L143/audio/L143-S02.m4a",
+            "durationMs": 3849,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1200,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1520,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1920,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2180,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2960
+              }
+            ]
+          }
+        },
+        {
+          "id": "L143-S03",
+          "text": "我問媽媽這是什麼菜。",
+          "displayLines": [
+            "我問媽媽",
+            "這是什麼菜。"
+          ],
+          "spokenText": "我問媽媽這是什麼菜",
+          "focusChar": "什",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, school names, UI, watermark, speech bubbles, arrows, or readable symbols. A child points at a dish of vegetables on the table and asks mom what dish it is. Mom is nearby answering or looking at the dish. The vegetables are clear; no text or labels anywhere.",
+          "imageSrc": "/assets/lessons/L143/images/L143-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L143/audio/L143-S03.m4a",
+            "durationMs": 3443,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1890
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1890,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2060,
+                "endMs": 2330
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2330,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2600,
+                "endMs": 2860
+              }
+            ]
+          }
+        },
+        {
+          "id": "L143-S04",
+          "text": "老人要看書，卻找不到眼鏡。",
+          "displayLines": [
+            "老人要看書，",
+            "卻找不到",
+            "眼鏡。"
+          ],
+          "spokenText": "老人要看書卻找不到眼鏡",
+          "focusChar": "卻",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, school names, UI, watermark, speech bubbles, arrows, or readable symbols. An elderly person wants to read a book but cannot find their glasses. Show an open or ready book with blank pages and the elderly person searching around for glasses. No written words visible in the book.",
+          "imageSrc": "/assets/lessons/L143/images/L143-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L143/audio/L143-S04.m4a",
+            "durationMs": 5590,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1740,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2200,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 3180,
+                "endMs": 3400
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3400,
+                "endMs": 3740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3740,
+                "endMs": 3940
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3940,
+                "endMs": 4140
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4140,
+                "endMs": 4600
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4600,
+                "endMs": 4760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L143-S05",
+          "text": "我以為可以穿紅鞋上學。",
+          "displayLines": [
+            "我以為可以",
+            "穿紅鞋上學。"
+          ],
+          "spokenText": "我以為可以穿紅鞋上學",
+          "focusChar": "以",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, school names, UI, watermark, speech bubbles, arrows, or readable symbols. A child is wearing or holding red shoes and thinks they can wear them to school. Show a school-going context with school bag or doorway, but no school name, text, numbers, signs, logos, or labels.",
+          "imageSrc": "/assets/lessons/L143/images/L143-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L143/audio/L143-S05.m4a",
+            "durationMs": 3491,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1140,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1440,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1820,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2420,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2720,
+                "endMs": 2940
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L143-G01",
+          "type": "find-character",
+          "sentenceId": "L143-S01",
+          "targetChar": "以",
+          "prompt": "找出「以」。"
+        },
+        {
+          "id": "L143-G02",
+          "type": "teach-character",
+          "sentenceId": "L143-S05",
+          "targetChar": "以",
+          "targetCharIndex": 4,
+          "missingIndexes": [
+            4
+          ],
+          "prompt": "聽一聽，放進「以」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L143/audio/L143-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L143/audio/L143-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L143-G03",
+          "type": "missing-character",
+          "sentenceId": "L143-S02",
+          "targetChar": "以",
+          "missingIndexes": [
+            1
+          ],
+          "prompt": "選出少掉的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "以",
+              "correct": true
+            },
+            {
+              "id": "wrong-為",
+              "text": "為",
+              "correct": false
+            },
+            {
+              "id": "wrong-可",
+              "text": "可",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L143-G04",
+          "type": "partial-order",
+          "sentenceId": "L143-S04",
+          "targetChar": "卻",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "老人要看書",
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "卻找不到",
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "眼鏡",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L143-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L143-S03",
+          "targetChar": "什",
+          "prompt": "聽一聽，選出正確的句子。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我問媽媽這是什麼菜。",
+              "spokenText": "我問媽媽這是什麼菜",
+              "audioSrc": "/assets/lessons/L143/audio/L143-S03.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "我問爸爸這是什麼菜。",
+              "spokenText": "我問爸爸這是什麼菜",
+              "audioSrc": "/assets/lessons/L143/audio/L143-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "我問媽媽這是什麼飯。",
+              "spokenText": "我問媽媽這是什麼飯",
+              "audioSrc": "/assets/lessons/L143/audio/L143-G05-wrong-two.m4a",
+              "correct": false
             }
           ]
         }
