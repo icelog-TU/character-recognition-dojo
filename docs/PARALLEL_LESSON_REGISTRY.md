@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L141 | 什 / normal lesson | claimed | Production thread C | codex/l141-complete-package / pending | L139:卻, L140:麼 | 卻, 麼 | curriculum-workflow/lesson-requests/L141.json; curriculum-workflow/generated/L141-generation-packet.md; curriculum-workflow/drafts/L141-draft.json | curriculum-workflow/audio-inbox/L141/; public/assets/lessons/L141/ | Complete package in progress; production JSON blocked until L139-L140 merge. |
+| L141 | 什 / normal lesson | request-ready | Production thread C | codex/l141-complete-package / pending | L139:卻, L140:麼 | 卻, 麼 | curriculum-workflow/lesson-requests/L141.json; curriculum-workflow/generated/L141-generation-packet.md; curriculum-workflow/drafts/L141-draft.json | curriculum-workflow/audio-inbox/L141/; public/assets/lessons/L141/ | Source artifacts created and audited; production JSON blocked until L139-L140 merge. |
 
 ## Status Values
 

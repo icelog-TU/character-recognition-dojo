@@ -1,0 +1,334 @@
+{
+  "id": "L141",
+  "order": 141,
+  "newChars": [
+    "什"
+  ],
+  "zhuyin": {
+    "什": "ㄕㄣˊ"
+  },
+  "title": "什",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L139",
+    "L140"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什"
+    ],
+    "provisionalLearnedChars": [
+      "卻",
+      "麼"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "什",
+      "麼",
+      "卻",
+      "老",
+      "菜",
+      "飯"
+    ],
+    "targetCharMinimumCount": {
+      "什": 3
+    },
+    "recentTargetMinimumCounts": {
+      "麼": 3,
+      "卻": 2,
+      "老": 2,
+      "菜": 1,
+      "飯": 1
+    },
+    "disallowedChars": [
+      "嗎",
+      "想",
+      "忘",
+      "跑",
+      "河",
+      "杯",
+      "碗",
+      "青",
+      "香",
+      "飽",
+      "口",
+      "為"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L141 什. Use these sentences exactly; spokenText equals text with punctuation removed. L141 depends on L139 卻 and L140 麼; do not merge production JSON until L139-L140 are present in latest origin/main. Provisional learned chars are 卻 and 麼. Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. 什麼 is allowed; 為什麼 is forbidden because 為 is not learned. S02 uses 我 as the mother speaking to the child, not the fixed first-person girl character. Images must use L058 style anchors and contain no text, numbers, zhuyin, labels, signs, letters, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned before production release.",
+  "approvedSentences": [
+    {
+      "text": "這菜太老了，不好吃。",
+      "spokenText": "這菜太老了不好吃",
+      "focusChar": "老",
+      "displayLines": [
+        "這菜太老了，",
+        "不好吃。"
+      ],
+      "hanCharCount": 8,
+      "scene": "A plate of vegetables looks too old and unpleasant to eat, with coarse fibers and less-fresh color, but not gross or scary. The visual focus is that the vegetables are too old."
+    },
+    {
+      "text": "我做了飯，你卻什麼也不吃。",
+      "spokenText": "我做了飯你卻什麼也不吃",
+      "focusChar": "什",
+      "displayLines": [
+        "我做了飯，",
+        "你卻什麼",
+        "也不吃。"
+      ],
+      "hanCharCount": 11,
+      "scene": "A mother has prepared rice for a child, but the child refuses to eat anything. In this sentence, 我 means the mother speaking to the child, not the fixed first-person girl. Show the mother's cooked rice and the child's refusing or not-eating body language. No dialogue text."
+    },
+    {
+      "text": "外面大雨，老太太卻要出門。",
+      "spokenText": "外面大雨老太太卻要出門",
+      "focusChar": "卻",
+      "displayLines": [
+        "外面大雨，",
+        "老太太卻",
+        "要出門。"
+      ],
+      "hanCharCount": 11,
+      "scene": "Outside it is raining heavily, yet an elderly woman is getting ready to go out. Show a doorway, rainy weather, and the elderly woman preparing to step outside, making the contrast clear."
+    },
+    {
+      "text": "你在看什麼書？",
+      "spokenText": "你在看什麼書",
+      "focusChar": "什",
+      "displayLines": [
+        "你在看",
+        "什麼書？"
+      ],
+      "hanCharCount": 6,
+      "scene": "A child is reading a book while someone nearby is curious about what book the child is reading. The book must not show readable text, title, letters, labels, or symbols."
+    },
+    {
+      "text": "門外那是什麼人？",
+      "spokenText": "門外那是什麼人",
+      "focusChar": "什",
+      "displayLines": [
+        "門外那是",
+        "什麼人？"
+      ],
+      "hanCharCount": 7,
+      "scene": "Seen from inside a doorway toward outside, a person is standing outside the door while someone indoors is curious about who that person is. Make it clear there is a person outside the door. No house number, sign, label, or text."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L141-G01",
+      "type": "find-character",
+      "sentenceId": "L141-S02",
+      "targetChar": "什",
+      "missingIndexes": [
+        7
+      ],
+      "reason": "First target-character recognition round; sentence contains the current target in the high-frequency word 什麼."
+    },
+    {
+      "id": "L141-G02",
+      "type": "teach-character",
+      "sentenceId": "L141-S04",
+      "targetChar": "什",
+      "targetCharIndex": 3,
+      "prefixText": "你在看",
+      "suffixText": "麼書",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L141/audio/L141-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L141/audio/L141-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L141-G03",
+      "type": "missing-character",
+      "sentenceId": "L141-S05",
+      "targetChar": "什",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "什",
+        "麼",
+        "卻"
+      ]
+    },
+    {
+      "id": "L141-G04",
+      "type": "partial-order",
+      "sentenceId": "L141-S03",
+      "targetChar": "卻",
+      "chunks": [
+        "外面大雨",
+        "老太太卻",
+        "要出門"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L141-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L141-S01",
+      "targetChar": "老",
+      "correctText": "這菜太老了不好吃",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "這菜太冷了不好吃",
+          "audioSrc": "/assets/lessons/L141/audio/L141-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "這飯太老了不好吃",
+          "audioSrc": "/assets/lessons/L141/audio/L141-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
