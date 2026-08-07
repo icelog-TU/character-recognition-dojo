@@ -1,0 +1,92 @@
+{
+  "id": "L130",
+  "order": 130,
+  "newChars": [
+    "脫"
+  ],
+  "zhuyin": {
+    "脫": "ㄊㄨㄛ"
+  },
+  "title": "脫",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L125",
+    "L126",
+    "L127",
+    "L128",
+    "L129"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫",
+    "provisionalLearnedChars": [
+      "穿",
+      "戴",
+      "衣"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "脫",
+      "衣",
+      "戴",
+      "穿",
+      "鞋",
+      "棋"
+    ],
+    "targetCharMinimumCount": {
+      "脫": 3
+    },
+    "recentTargetMinimumCounts": {
+      "衣": 2,
+      "戴": 2,
+      "穿": 2,
+      "鞋": 1,
+      "棋": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-audited authoritative final sentence source for L127-L132 repair. Use these sentences exactly. spokenText equals text with punctuation removed. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Images use L058 style anchors and must not contain text, zhuyin, letters, numbers, labels, signs, or watermarks. Audio must be standalone OpenAI single-character charAudio, whole-sentence AI audio, independent G02 teachAudio fragments, independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned with assets:align:ai.",
+  "approvedSentences": [
+    {
+      "text": "下棋前，要脫鞋坐好。",
+      "spokenText": "下棋前要脫鞋坐好",
+      "focusChar": "脫",
+      "hanCharCount": 8,
+      "scene": "Before a board game, a child has taken off shoes and sits properly near a low table with plain game pieces. Keep the sitting posture and removed shoes clear."
+    },
+    {
+      "text": "到家後，要脫雨鞋和脫雨衣。",
+      "spokenText": "到家後要脫雨鞋和脫雨衣",
+      "focusChar": "脫",
+      "hanCharCount": 11,
+      "scene": "At home after arriving, a child takes off rain boots and a raincoat in a safe entryway. Rain boots and raincoat are clear."
+    },
+    {
+      "text": "他戴著眼鏡，找不到眼鏡。",
+      "spokenText": "他戴著眼鏡找不到眼鏡",
+      "focusChar": "戴",
+      "hanCharCount": 10,
+      "scene": "The fixed sporty boy is already wearing eyeglasses but is searching for eyeglasses, with a mildly puzzled expression; no readable text."
+    },
+    {
+      "text": "這樣穿戴不好看。",
+      "spokenText": "這樣穿戴不好看",
+      "focusChar": "戴",
+      "hanCharCount": 7,
+      "scene": "A child dressed in mismatched clothes or accessories, gently showing the outfit does not look good, without ridicule or scolding."
+    },
+    {
+      "text": "我穿上爸爸的大衣，太大了。",
+      "spokenText": "我穿上爸爸的大衣太大了",
+      "focusChar": "衣",
+      "hanCharCount": 11,
+      "scene": "The fixed first-person young girl wears her father's big coat, which is obviously too large but safe and playful."
+    }
+  ]
+}
