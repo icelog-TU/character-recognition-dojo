@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 126:
+Characters taught after Lesson 127:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿`
 
 Recent review pool for the next lesson:
 
-`鞋 棋 白 黑 雲 雨 天 空 外 面 地 草 帽 頭 棒 球`
+`穿 鞋 棋 白 黑 雲 雨 天 空 外 面 地 草 帽 頭 棒`
 
 ## Visual Continuity Ledger
 
@@ -191,10 +191,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L124 | 白 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白 | 我在黑紙上面畫白點。 / 外面天空好黑，要下雨了。 / 把白球和黑球拿去空地玩。 / 天上沒有白雲，都是黑雲。 / 雨是雲上掉下來的水。 | 黑雲雨天空外面 | Introduces `白` through approved sentence contexts. Reviews recent `黑`, `雲`, `雨`, `天`, `空`, `外`, and `面`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L125 | 棋 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋 | 我拿黑棋，你拿白棋。 / 黑棋、白棋分開放在棋盒裡。 / 雨天，我在家下棋。 / 小小孩愛在雨天玩水。 / 天上有雲，水裡也有雲。 | 白黑雲雨天 | Introduces `棋` through board-game pieces, separated black/white pieces, and rainy-day play at home. Reviews recent `白`, `黑`, `雲`, `雨`, and `天`; includes generated L058-style images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L126 | 鞋 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋 | 門前有黑鞋，也有白鞋。 / 雨鞋太大了，不好走路 / 黑棋、白棋放在棋盒裡 / 我找不到學校的白鞋 / 天上有黑雲，要下雨了。 | 棋白黑雲雨 | Introduces `鞋` through black and white shoes, oversized rain boots, and searching for school shoes. Reviews recent `棋`, `白`, `黑`, `雲`, and `雨`; includes generated L058-style images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L127 | 穿 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿 | 我穿白鞋去學校。 / 下雨天要穿雨鞋。 / 兩隻小狗穿過空地。 / 黑棋和白棋一樣多。 / 白雲朵朵天上飛。 | 鞋棋白黑雲雨 | Introduces `穿` through approved sentence contexts. Reviews recent `鞋`, `棋`, `白`, `黑`, `雲`, and `雨`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L126. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L127. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

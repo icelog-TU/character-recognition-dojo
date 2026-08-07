@@ -1,0 +1,88 @@
+{
+  "id": "L127",
+  "order": 127,
+  "newChars": [
+    "穿"
+  ],
+  "zhuyin": {
+    "穿": "ㄔㄨㄢ"
+  },
+  "title": "穿",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L122",
+    "L123",
+    "L124",
+    "L125",
+    "L126"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿",
+    "provisionalLearnedChars": [],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "穿",
+      "鞋",
+      "棋",
+      "白",
+      "黑",
+      "雲"
+    ],
+    "targetCharMinimumCount": {
+      "穿": 3
+    },
+    "recentTargetMinimumCounts": {
+      "鞋": 2,
+      "棋": 2,
+      "白": 2,
+      "黑": 1,
+      "雲": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-audited authoritative final sentence source for L127-L132 repair. Use these sentences exactly. spokenText equals text with punctuation removed. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Images use L058 style anchors and must not contain text, zhuyin, letters, numbers, labels, signs, or watermarks. Audio must be standalone OpenAI single-character charAudio, whole-sentence AI audio, independent G02 teachAudio fragments, independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned with assets:align:ai.",
+  "approvedSentences": [
+    {
+      "text": "我穿白鞋去學校。",
+      "spokenText": "我穿白鞋去學校",
+      "focusChar": "穿",
+      "hanCharCount": 7,
+      "scene": "Preserve the fixed first-person young girl walking to a school entrance, wearing clearly white shoes. The school building has no readable school name or signs."
+    },
+    {
+      "text": "下雨天要穿雨鞋。",
+      "spokenText": "下雨天要穿雨鞋",
+      "focusChar": "穿",
+      "hanCharCount": 7,
+      "scene": "A child at a home entryway on a rainy day, putting on or wearing rain boots. Rain boots and rainy weather are clear, safe, and calm."
+    },
+    {
+      "text": "兩隻小狗穿過空地。",
+      "spokenText": "兩隻小狗穿過空地",
+      "focusChar": "穿",
+      "hanCharCount": 8,
+      "scene": "Exactly two small friendly dogs cross a safe open lot or empty grass area. The empty space and crossing motion are clear."
+    },
+    {
+      "text": "黑棋和白棋一樣多。",
+      "spokenText": "黑棋和白棋一樣多",
+      "focusChar": "棋",
+      "hanCharCount": 8,
+      "scene": "A tabletop with black game pieces and white game pieces in equal quantities, clearly balanced for a child to compare. Pieces are plain with no markings."
+    },
+    {
+      "text": "白雲朵朵天上飛。",
+      "spokenText": "白雲朵朵天上飛",
+      "focusChar": "雲",
+      "hanCharCount": 7,
+      "scene": "Bright sky with several fluffy white clouds drifting, optionally small birds far away; focus on many white cloud puffs in the sky."
+    }
+  ]
+}
