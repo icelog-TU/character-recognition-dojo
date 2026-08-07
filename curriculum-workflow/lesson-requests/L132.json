@@ -1,0 +1,94 @@
+{
+  "id": "L132",
+  "order": 132,
+  "newChars": [
+    "套"
+  ],
+  "zhuyin": {
+    "套": "ㄊㄠˋ"
+  },
+  "title": "套",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L127",
+    "L128",
+    "L129",
+    "L130",
+    "L131"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套",
+    "provisionalLearnedChars": [
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "套",
+      "氣",
+      "脫",
+      "衣",
+      "戴",
+      "穿"
+    ],
+    "targetCharMinimumCount": {
+      "套": 3
+    },
+    "recentTargetMinimumCounts": {
+      "氣": 2,
+      "脫": 2,
+      "衣": 2,
+      "戴": 1,
+      "穿": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-audited authoritative final sentence source for L127-L132 repair. Use these sentences exactly. spokenText equals text with punctuation removed. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Images use L058 style anchors and must not contain text, zhuyin, letters, numbers, labels, signs, or watermarks. Audio must be standalone OpenAI single-character charAudio, whole-sentence AI audio, independent G02 teachAudio fragments, independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned with assets:align:ai.",
+  "approvedSentences": [
+    {
+      "text": "這一套有鞋子和大衣。",
+      "spokenText": "這一套有鞋子和大衣",
+      "focusChar": "套",
+      "hanCharCount": 9,
+      "scene": "A neatly matched set with shoes and a big coat together, clearly belonging as one set. No labels or numbers."
+    },
+    {
+      "text": "天氣不好，要穿外套，戴手套。",
+      "spokenText": "天氣不好要穿外套戴手套",
+      "focusChar": "套",
+      "hanCharCount": 11,
+      "scene": "Bad weather outside; a child wears an outer coat and gloves. Coat and gloves are clear."
+    },
+    {
+      "text": "這裡空氣不好，不要脫掉。",
+      "spokenText": "這裡空氣不好不要脫掉",
+      "focusChar": "氣",
+      "hanCharCount": 10,
+      "scene": "Air outside looks bad or smoky through a door or window; an adult gently reminds the child not to take off protective outerwear or mask. Keep it calm and safe."
+    },
+    {
+      "text": "好的大衣會有套子。",
+      "spokenText": "好的大衣會有套子",
+      "focusChar": "套",
+      "hanCharCount": 8,
+      "scene": "A good big coat hanging neatly with a protective cover or garment bag. Coat and cover are clear, no labels."
+    },
+    {
+      "text": "小小孩不會穿鞋和脫鞋。",
+      "spokenText": "小小孩不會穿鞋和脫鞋",
+      "focusChar": "脫",
+      "hanCharCount": 10,
+      "scene": "A very young child struggles gently with putting on and taking off shoes, with a caring adult nearby. Safe and warm."
+    }
+  ]
+}
