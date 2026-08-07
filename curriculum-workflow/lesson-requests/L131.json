@@ -1,0 +1,92 @@
+{
+  "id": "L131",
+  "order": 131,
+  "newChars": [
+    "氣"
+  ],
+  "zhuyin": {
+    "氣": "ㄑㄧˋ"
+  },
+  "title": "氣",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L126",
+    "L127",
+    "L128",
+    "L129",
+    "L130"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "穿",
+      "戴",
+      "衣",
+      "脫"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "氣",
+      "脫",
+      "衣",
+      "戴",
+      "穿",
+      "鞋"
+    ],
+    "targetCharMinimumCount": {
+      "氣": 3
+    },
+    "recentTargetMinimumCounts": {
+      "脫": 2,
+      "衣": 2,
+      "戴": 2,
+      "穿": 1,
+      "鞋": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Use the teacher-approved L131 sentences exactly; do not rewrite sentence text. This task is image/audio only and must not leave changes in src/curriculum/sample-lessons.json unless L127-L130 are confirmed merged in order. Latest origin/main is currently merged through L126:鞋, so L127:穿, L128:戴, L129:衣, and L130:脫 are provisional learned characters. spokenText must equal text with punctuation removed. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Sentence images must use the established L058 visual style anchors and must not include readable text, numbers, labels, zhuyin, letters, signs, scoreboards, UI, or watermarks. Generate standalone AI audio for 氣 as public/assets/lessons/L131/audio/char-u6c23.m4a; do not cut it from sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "天氣好了，脫雨衣和雨鞋。",
+      "spokenText": "天氣好了脫雨衣和雨鞋",
+      "focusChar": "氣",
+      "hanCharCount": 10,
+      "scene": "雨停天氣變好，孩子在門口或家裡脫下雨衣和雨鞋。不要有文字、注音、數字、招牌、水印。"
+    },
+    {
+      "text": "天氣不好，要穿大衣和戴帽子。",
+      "spokenText": "天氣不好要穿大衣和戴帽子",
+      "focusChar": "氣",
+      "hanCharCount": 12,
+      "scene": "天氣不好，孩子穿大衣、戴帽子準備出門。不要有文字、注音、數字、招牌、水印。"
+    },
+    {
+      "text": "這個氣球沒氣了。",
+      "spokenText": "這個氣球沒氣了",
+      "focusChar": "氣",
+      "hanCharCount": 7,
+      "scene": "一個氣球扁掉、沒氣了。不要有文字、注音、數字、招牌、水印。"
+    },
+    {
+      "text": "戴眼鏡很難玩球。",
+      "spokenText": "戴眼鏡很難玩球",
+      "focusChar": "戴",
+      "hanCharCount": 7,
+      "scene": "戴眼鏡的小孩在玩球，覺得很難玩。不要有文字、注音、數字、招牌、水印。"
+    },
+    {
+      "text": "脫掉的大衣要放好。",
+      "spokenText": "脫掉的大衣要放好",
+      "focusChar": "脫",
+      "hanCharCount": 8,
+      "scene": "脫下的大衣要好好放在椅子、桌邊或盒子旁，不要亂丟。不要有文字、注音、數字、招牌、水印。"
+    }
+  ]
+}
