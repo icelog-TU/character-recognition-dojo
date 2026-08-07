@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L126 | 鞋 | claimed | Codex / L126 production assets thread | `codex/l126-xie-assets` / pending | L121:雨, L122:雲, L123:黑, L124:白, L125:棋 | none; dependencies are merged in latest `origin/main` | `curriculum-workflow/lesson-requests/L126.json`; `curriculum-workflow/generated/L126-generation-packet.md`; `curriculum-workflow/drafts/L126-draft.json` | `curriculum-workflow/audio-inbox/L126/`; `public/assets/lessons/L126/` | Teacher-approved target is 鞋 ㄒㄧㄝˊ. Production merge is allowed after assets, JSON, ledger, planner, and verify pass. |
+| L126 | 鞋 | request-ready | Codex / L126 production assets thread | `codex/l126-xie-assets` / `f253fff` | L121:雨, L122:雲, L123:黑, L124:白, L125:棋 | none; dependencies are merged in latest `origin/main` | `curriculum-workflow/lesson-requests/L126.json`; `curriculum-workflow/generated/L126-generation-packet.md`; `curriculum-workflow/drafts/L126-draft.json` | `curriculum-workflow/audio-inbox/L126/`; `public/assets/lessons/L126/` | Request and packet prepared. Teacher-approved target is 鞋 ㄒㄧㄝˊ. Production merge is allowed after assets, JSON, ledger, planner, and verify pass. |
 
 ## Status Values
 
