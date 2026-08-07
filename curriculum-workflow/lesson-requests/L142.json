@@ -1,0 +1,204 @@
+{
+  "id": "L142",
+  "order": 142,
+  "newChars": [
+    "為"
+  ],
+  "zhuyin": {
+    "為": "ㄨㄟˋ"
+  },
+  "title": "為什麼",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L139",
+    "L140",
+    "L141"
+  ],
+  "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為",
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "卻",
+      "麼",
+      "什"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "為",
+      "什",
+      "麼",
+      "卻",
+      "老",
+      "菜"
+    ],
+    "targetCharMinimumCount": {
+      "為": 3
+    },
+    "recentTargetMinimumCounts": {
+      "什": 2,
+      "麼": 2,
+      "卻": 2,
+      "老": 1,
+      "菜": 1
+    },
+    "disallowedChars": [
+      "爲",
+      "裏",
+      "怎",
+      "以",
+      "嗎",
+      "進",
+      "溫"
+    ]
+  },
+  "teacherNotes": "Production handoff for 認字練功房 L142. Build the full lesson package for new character 為 (ㄨㄟˋ), title 為什麼, not assets-only. Latest origin/main at handoff is merged through L138:老; L139:卻, L140:麼, and L141:什 are provisional dependencies. Do not merge L142 production JSON until L139-L141 are merged in order. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Use 為, not variant 爲; use 裡, not 裏. spokenText must equal text with punctuation removed. No Han characters outside allowedChars may appear in text, spokenText, displayLines, focusChar, or Stage 4 option text. Images must use L058 style anchors and must not contain text, numbers, zhuyin, English, signs, labels, or watermarks. Generate standalone AI audio for 為 as public/assets/lessons/L142/audio/char-u70ba.m4a. Generate sentence audio, teachAudio prefix/suffix, and choose-pronunciation wrong-option audio as independent OpenAI TTS utterances; do not cut, splice, patch, or extract from other audio.",
+  "approvedSentences": [
+    {
+      "id": "L142-S01",
+      "text": "你為什麼都不吃菜？",
+      "spokenText": "你為什麼都不吃菜",
+      "focusChar": "為",
+      "displayLines": [
+        "你為什麼",
+        "都不吃菜？"
+      ],
+      "hanCharCount": 8,
+      "scene": "A parent at a dining table asks a child why they are not eating vegetables. Show a plate of vegetables and the child refusing or looking away. No text or labels."
+    },
+    {
+      "id": "L142-S02",
+      "text": "爸爸為什麼老是找不到眼鏡？",
+      "spokenText": "爸爸為什麼老是找不到眼鏡",
+      "focusChar": "為",
+      "displayLines": [
+        "爸爸為什麼",
+        "老是找不到",
+        "眼鏡？"
+      ],
+      "hanCharCount": 12,
+      "scene": "Dad searches around for his glasses in a room. The image can imply the glasses are on his head or nearby, but no written clues or labels."
+    },
+    {
+      "id": "L142-S03",
+      "text": "雲那麼黑，卻沒有下雨。",
+      "spokenText": "雲那麼黑卻沒有下雨",
+      "focusChar": "卻",
+      "displayLines": [
+        "雲那麼黑，",
+        "卻沒有下雨。"
+      ],
+      "hanCharCount": 9,
+      "scene": "Dark clouds fill the sky, but the ground and people remain dry with no rain falling. No text or weather symbols."
+    },
+    {
+      "id": "L142-S04",
+      "text": "書包裡有紙，卻沒有筆。",
+      "spokenText": "書包裡有紙卻沒有筆",
+      "focusChar": "卻",
+      "displayLines": [
+        "書包裡有紙，",
+        "卻沒有筆。"
+      ],
+      "hanCharCount": 9,
+      "scene": "An open school bag contains paper, but no pencil or pen is visible. A child looks puzzled while checking the bag. No written words on the paper."
+    },
+    {
+      "id": "L142-S05",
+      "text": "為了孩子，爸媽什麼都做。",
+      "spokenText": "為了孩子爸媽什麼都做",
+      "focusChar": "為",
+      "displayLines": [
+        "為了孩子，",
+        "爸媽什麼",
+        "都做。"
+      ],
+      "hanCharCount": 10,
+      "scene": "Mom and dad are busy caring for a child in concrete visible ways, such as preparing food, packing a school bag, and helping with shoes. Keep it warm and specific, not abstract. No text or labels."
+    }
+  ],
+  "coverageStats": {
+    "為": 3,
+    "什": 3,
+    "麼": 4,
+    "卻": 2,
+    "老": 1,
+    "菜": 1
+  },
+  "stage4Plan": [
+    {
+      "id": "L142-G01",
+      "type": "find-character",
+      "sentenceId": "L142-S01",
+      "targetChar": "為"
+    },
+    {
+      "id": "L142-G02",
+      "type": "teach-character",
+      "sentenceId": "L142-S02",
+      "targetChar": "為",
+      "targetCharIndex": 2,
+      "prefixText": "爸爸",
+      "suffixText": "什麼老是找不到眼鏡",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L142/audio/L142-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L142/audio/L142-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L142-G03",
+      "type": "missing-character",
+      "sentenceId": "L142-S05",
+      "targetChar": "為",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "為",
+        "什",
+        "麼"
+      ]
+    },
+    {
+      "id": "L142-G04",
+      "type": "partial-order",
+      "sentenceId": "L142-S03",
+      "targetChar": "卻",
+      "chunks": [
+        "雲那麼黑",
+        "卻沒有",
+        "下雨"
+      ]
+    },
+    {
+      "id": "L142-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L142-S04",
+      "targetChar": "卻",
+      "options": [
+        {
+          "id": "correct",
+          "text": "書包裡有紙，卻沒有筆。",
+          "spokenText": "書包裡有紙卻沒有筆",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L142/audio/L142-S04.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "書包裡有書，卻沒有筆。",
+          "spokenText": "書包裡有書卻沒有筆",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L142/audio/L142-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "書包裡有紙，卻沒有書。",
+          "spokenText": "書包裡有紙卻沒有書",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L142/audio/L142-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
