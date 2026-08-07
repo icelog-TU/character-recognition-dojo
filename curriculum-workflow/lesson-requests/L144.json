@@ -1,0 +1,327 @@
+{
+  "id": "L144",
+  "order": 144,
+  "newChars": [
+    "怎"
+  ],
+  "zhuyin": {
+    "怎": "ㄗㄣˇ"
+  },
+  "title": "怎麼",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L142",
+    "L143"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎"
+    ],
+    "provisionalLearnedChars": [
+      "為",
+      "以"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "怎",
+      "以",
+      "為",
+      "什",
+      "麼",
+      "卻"
+    ],
+    "targetCharMinimumCount": {
+      "怎": 3
+    },
+    "recentTargetMinimumCounts": {
+      "以": 2,
+      "為": 2,
+      "什": 2,
+      "麼": 3,
+      "卻": 1
+    },
+    "disallowedChars": [
+      "所",
+      "能",
+      "嗎",
+      "錯",
+      "進",
+      "爲",
+      "裏"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L144 怎. Use these sentences exactly; spokenText equals text with punctuation removed. L144 depends on L142 為 and L143 以; do not merge production JSON until L142-L143 are present in latest origin/main. Provisional learned chars are 為 and 以. Use 為, not 爲. Use 裡, not 裏. Do not add unlearned characters such as 所, 能, 嗎, 錯, 進. Images must use L058 style anchors and contain no text, numbers, zhuyin, labels, signs, letters, or watermarks. Audio must be standalone OpenAI charAudio for 怎, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "這是什麼學校？怎麼人那麼多？",
+      "spokenText": "這是什麼學校怎麼人那麼多",
+      "focusChar": "怎",
+      "displayLines": [
+        "這是什麼學校？",
+        "怎麼人那麼多？"
+      ],
+      "hanCharCount": 12,
+      "scene": "A child is looking at a very crowded school entrance or schoolyard and wondering why there are so many people. Show a school-like setting without any written signs, school names, numbers, labels, or letters."
+    },
+    {
+      "text": "你出門怎麼沒穿鞋？",
+      "spokenText": "你出門怎麼沒穿鞋",
+      "focusChar": "怎",
+      "displayLines": [
+        "你出門",
+        "怎麼沒穿鞋？"
+      ],
+      "hanCharCount": 8,
+      "scene": "A child is about to go out the door without shoes. An adult notices and asks. Show bare feet near the doorway and shoes nearby. No text or labels."
+    },
+    {
+      "text": "我以為可以打球，怎麼下雨了？",
+      "spokenText": "我以為可以打球怎麼下雨了",
+      "focusChar": "怎",
+      "displayLines": [
+        "我以為可以打球，",
+        "怎麼下雨了？"
+      ],
+      "hanCharCount": 12,
+      "scene": "A child prepared to play ball outdoors, holding or standing near a ball, but rain has started. Show the child's surprised reaction. No text, numbers, signs, or labels."
+    },
+    {
+      "text": "你為什麼把紙放在帽子裡？",
+      "spokenText": "你為什麼把紙放在帽子裡",
+      "focusChar": "為",
+      "displayLines": [
+        "你為什麼",
+        "把紙放在帽子裡？"
+      ],
+      "hanCharCount": 11,
+      "scene": "A child has put sheets of paper inside a hat. An adult looks puzzled and asks why. The paper must be blank with no visible writing, letters, numbers, or symbols."
+    },
+    {
+      "text": "小狗要玩球，球卻掉到水裡。",
+      "spokenText": "小狗要玩球球卻掉到水裡",
+      "focusChar": "卻",
+      "displayLines": [
+        "小狗要玩球，",
+        "球卻掉到水裡。"
+      ],
+      "hanCharCount": 11,
+      "scene": "A small dog wants to play with a ball, but the ball has fallen into water. Show the dog looking at the ball in water. No text or labels."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L144-G01",
+      "type": "find-character",
+      "sentenceId": "L144-S02",
+      "targetChar": "怎",
+      "reason": "Short, concrete sentence with clear use of 怎麼."
+    },
+    {
+      "id": "L144-G02",
+      "type": "teach-character",
+      "sentenceId": "L144-S01",
+      "targetChar": "怎",
+      "targetCharIndex": 6,
+      "prefixText": "這是什麼學校",
+      "suffixText": "麼人那麼多",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L144/audio/L144-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L144/audio/L144-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L144-G03",
+      "type": "missing-character",
+      "sentenceId": "L144-S03",
+      "targetChar": "怎",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "怎",
+        "麼",
+        "以"
+      ]
+    },
+    {
+      "id": "L144-G04",
+      "type": "partial-order",
+      "sentenceId": "L144-S05",
+      "targetChar": "卻",
+      "chunks": [
+        "小狗要玩球",
+        "球卻",
+        "掉到水裡"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L144-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L144-S04",
+      "targetChar": "紙",
+      "correctText": "你為什麼把紙放在帽子裡",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "你為什麼把書放在帽子裡",
+          "audioSrc": "/assets/lessons/L144/audio/L144-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "你為什麼把紙放在書包裡",
+          "audioSrc": "/assets/lessons/L144/audio/L144-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
