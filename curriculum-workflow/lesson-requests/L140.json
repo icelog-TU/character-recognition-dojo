@@ -1,0 +1,364 @@
+{
+  "id": "L140",
+  "order": 140,
+  "newChars": [
+    "麼"
+  ],
+  "zhuyin": {
+    "麼": "ㄇㄜ˙"
+  },
+  "title": "麼",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L138",
+    "L139"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "卻"
+    ],
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "麼",
+      "卻",
+      "老",
+      "菜",
+      "飯",
+      "喝"
+    ],
+    "targetCharMinimumCount": {
+      "麼": 3
+    },
+    "recentTargetMinimumCounts": {
+      "卻": 2,
+      "老": 2,
+      "菜": 2,
+      "飯": 1,
+      "喝": 1
+    },
+    "disallowedChars": [
+      "什",
+      "嗎",
+      "想",
+      "忘",
+      "跑",
+      "河",
+      "杯",
+      "碗",
+      "青",
+      "香",
+      "飽",
+      "麽"
+    ]
+  },
+  "teacherNotes": "Use the teacher-approved L140 sentences exactly. Latest origin/main is merged through L138:老, so only L139:卻 remains a provisional dependency. Do not merge L140 production JSON, planner data, or ledger until L139 exists in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Use the Taiwan form 麼, not 麽. spokenText must equal text with punctuation removed. Do not use any Han character outside generationConstraints.allowedChars in text, spokenText, displayLines, focusChar, teachAudio text, or Stage 4 option text. This lesson must include Stage 4 sentenceGames with the five standard game types exactly once. Generate standalone AI character audio from single character 麼 as char-u9ebc.m4a; do not cut it from sentence audio. Generate all sentence audio from complete spokenText. Generate L140-G02-prefix.m4a from exactly 這 and L140-G02-suffix.m4a from exactly 老的人卻吃那麼多的菜 as independent AI TTS. Generate L140-G05-wrong-one.m4a and L140-G05-wrong-two.m4a from their complete wrong spokenText as independent AI TTS; do not splice or patch the correct sentence. Images must use L058 style anchors and must not include visible text, numbers, labels, zhuyin, letters, signs, UI, or watermarks. For S04, show many dishes on the table while nearby people are distracted by phones, games, or chatting and nobody is focused on eating.",
+  "approvedSentences": [
+    {
+      "id": "L140-S01",
+      "text": "這麼小的狗，卻玩那麼大的球。",
+      "displayLines": [
+        "這麼小的狗，",
+        "卻玩那麼",
+        "大的球。"
+      ],
+      "spokenText": "這麼小的狗卻玩那麼大的球",
+      "focusChar": "麼",
+      "hanCharCount": 12,
+      "scene": "一隻很小的狗卻在玩一顆很大的球；小狗和大球的大小差異要明顯，畫面表現這麼小和那麼大的對比。"
+    },
+    {
+      "id": "L140-S02",
+      "text": "這麼老的人，卻吃那麼多的菜。",
+      "displayLines": [
+        "這麼老的人，",
+        "卻吃那麼",
+        "多的菜。"
+      ],
+      "spokenText": "這麼老的人卻吃那麼多的菜",
+      "focusChar": "麼",
+      "hanCharCount": 12,
+      "scene": "一位很老的人面前有很多菜，正在吃很多菜；要表現老人和很多菜，但畫面保持溫暖自然，不要嘲笑老人。"
+    },
+    {
+      "id": "L140-S03",
+      "text": "這隻狗老愛喝地上的水。",
+      "displayLines": [
+        "這隻狗",
+        "老愛喝",
+        "地上的水。"
+      ],
+      "spokenText": "這隻狗老愛喝地上的水",
+      "focusChar": "老",
+      "hanCharCount": 10,
+      "scene": "一隻狗老是愛喝地上的水，這是不衛生的情境，帶一點抱怨語氣。畫面呈現地上一小灘水或水漬，狗低頭要喝，旁邊孩子或大人露出擔心或不贊成的表情。不要畫成乾淨水碗喝水。"
+    },
+    {
+      "id": "L140-S04",
+      "text": "飯菜這麼多，卻沒人吃。",
+      "displayLines": [
+        "飯菜這麼多，",
+        "卻沒人吃。"
+      ],
+      "spokenText": "飯菜這麼多卻沒人吃",
+      "focusChar": "麼",
+      "hanCharCount": 9,
+      "scene": "桌上有很多飯菜，但旁邊的人都在滑手機、玩遊戲或聊天，沒有人專心吃飯，形成很多卻沒人吃的反差；手機和遊戲機螢幕不可有文字、數字或圖示。"
+    },
+    {
+      "id": "L140-S05",
+      "text": "多麼可愛的小女孩。",
+      "displayLines": [
+        "多麼可愛的",
+        "小女孩。"
+      ],
+      "spokenText": "多麼可愛的小女孩",
+      "focusChar": "麼",
+      "hanCharCount": 8,
+      "scene": "一位可愛的小女孩，表情自然溫暖；使用課程固定我女孩視覺設定：學齡前到低年級小女孩，深棕色及肩頭髮，小粉紅髮夾，黃色上衣，珊瑚紅吊帶裙，紅鞋，保持角色連續性。不要加入文字、標籤或裝飾字。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L140-G01",
+      "type": "find-character",
+      "sentenceId": "L140-S01",
+      "targetChar": "麼"
+    },
+    {
+      "id": "L140-G02",
+      "type": "teach-character",
+      "sentenceId": "L140-S02",
+      "targetChar": "麼",
+      "targetCharIndex": 1,
+      "prefixText": "這",
+      "suffixText": "老的人卻吃那麼多的菜",
+      "requiredAudio": [
+        "public/assets/lessons/L140/audio/L140-G02-prefix.m4a",
+        "public/assets/lessons/L140/audio/L140-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L140-G03",
+      "type": "missing-character",
+      "sentenceId": "L140-S04",
+      "targetChar": "麼",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "麼",
+        "卻",
+        "老"
+      ]
+    },
+    {
+      "id": "L140-G04",
+      "type": "partial-order",
+      "sentenceId": "L140-S03",
+      "targetChar": "老",
+      "chunkPlan": [
+        "這隻狗",
+        "老愛喝",
+        "地上的水"
+      ],
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "options": [
+        "這",
+        "隻",
+        "狗",
+        "老",
+        "愛",
+        "喝",
+        "地",
+        "上",
+        "的",
+        "水"
+      ]
+    },
+    {
+      "id": "L140-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L140-S05",
+      "targetChar": "麼",
+      "correctText": "多麼可愛的小女孩。",
+      "correctSpokenText": "多麼可愛的小女孩",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "多麼可愛的小男孩。",
+          "spokenText": "多麼可愛的小男孩",
+          "audio": "public/assets/lessons/L140/audio/L140-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "多麼可愛的小狗。",
+          "spokenText": "多麼可愛的小狗",
+          "audio": "public/assets/lessons/L140/audio/L140-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

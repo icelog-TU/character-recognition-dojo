@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 139:
+Characters taught after Lesson 140:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼`
 
 Recent review pool for the next lesson:
 
-`卻 老 菜 飯 喝 冷 熱 套 氣 脫 衣 戴 穿 鞋 棋 白`
+`麼 卻 老 菜 飯 喝 冷 熱 套 氣 脫 衣 戴 穿 鞋 棋`
 
 ## Visual Continuity Ledger
 
@@ -204,10 +204,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L137 | 菜 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜 | 飯菜冷掉了，要熱一下。 / 太冷了，出門要穿外套。 / 門前空地有很多白菜。 / 媽媽做的飯菜，都是我愛吃的。 / 打球後要喝水，多喝一點。 | 飯喝冷熱套 | Introduces `菜` through approved sentence contexts. Reviews recent `飯喝冷熱套`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L138 | 老 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老 | 老人一邊喝水，一邊下棋。 / 老太太愛吃熱菜和熱飯。 / 老是喝冷水不好。 / 天氣太冷，老人不出門。 / 我和媽媽做了一大桌飯菜。 | 菜飯喝冷熱 | Introduces `老` through approved sentence contexts. Reviews recent `菜飯喝冷熱`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 | L139 | 卻 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻 | 飯是熱的，菜卻冷了。 / 老人要喝水，卻找不到水。 / 老太太愛吃菜，卻不吃飯。 / 出門去打棒球，卻下雨了。 / 到了學校，卻沒帶書包。 | 老菜飯喝冷 | Introduces `卻` through approved sentence contexts. Reviews recent `老菜飯喝冷`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L140 | 麼 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼 | 這麼小的狗，卻玩那麼大的球。 / 這麼老的人，卻吃那麼多的菜。 / 這隻狗老愛喝地上的水。 / 飯菜這麼多，卻沒人吃。 / 多麼可愛的小女孩。 | 卻老菜飯喝 | Introduces `麼` through approved sentence contexts. Reviews recent `卻老菜飯喝`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L139. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L140. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
