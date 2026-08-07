@@ -1,0 +1,217 @@
+{
+  "id": "L134",
+  "order": 134,
+  "newChars": [
+    "冷"
+  ],
+  "zhuyin": {
+    "冷": "ㄌㄥˇ"
+  },
+  "title": "冷",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L127",
+    "L128",
+    "L129",
+    "L130",
+    "L131",
+    "L132",
+    "L133"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷",
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "冷",
+      "熱",
+      "套",
+      "氣",
+      "脫",
+      "衣"
+    ],
+    "targetCharMinimumCount": {
+      "冷": 3
+    },
+    "recentTargetMinimumCounts": {
+      "熱": 2,
+      "套": 2,
+      "氣": 2,
+      "脫": 1,
+      "衣": 1
+    },
+    "disallowedChars": [
+      "進",
+      "受",
+      "喝",
+      "洗",
+      "澡",
+      "龍",
+      "頭",
+      "口",
+      "罩"
+    ]
+  },
+  "teacherNotes": "This is a complete production lesson handoff for 認字練功房 L134. Build the full parallel package, not assets-only. Latest origin/main is currently merged only through L126:鞋, so L127-L133 are provisional dependencies. Do not merge L134 production JSON until L127:穿, L128:戴, L129:衣, L130:脫, L131:氣, L132:套, and L133:熱 are all merged in order. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. spokenText must equal text with punctuation removed. No Han characters outside allowedChars may appear in text, spokenText, displayLines, focusChar, or Stage 4 option text. Images must use L058 style anchors and must not contain text, numbers, zhuyin, letters, signs, labels, or watermarks. Generate standalone AI audio for 冷 as public/assets/lessons/L134/audio/char-u51b7.m4a. Generate sentence, teachAudio suffix, and choose-pronunciation wrong-option audio as independent OpenAI TTS whole utterances; do not cut, splice, patch, or extract from other audio.",
+  "approvedSentences": [
+    {
+      "id": "L134-S01",
+      "text": "天氣太熱，我要脫掉外套。",
+      "spokenText": "天氣太熱我要脫掉外套",
+      "focusChar": "熱",
+      "displayLines": [
+        "天氣太熱，",
+        "我要脫掉外套。"
+      ],
+      "hanCharCount": 10,
+      "scene": "天氣很熱，孩子覺得太熱，正在脫掉外套；畫面要清楚看到外套和炎熱天氣情境。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "id": "L134-S02",
+      "text": "用套子把大衣套起來。",
+      "spokenText": "用套子把大衣套起來",
+      "focusChar": "套",
+      "displayLines": [
+        "用套子",
+        "把大衣",
+        "套起來。"
+      ],
+      "hanCharCount": 9,
+      "scene": "用衣物防塵套或收納套把大衣套起來；大衣、套子、套起來的動作要清楚。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "id": "L134-S03",
+      "text": "空氣好冷，眼鏡都白掉了。",
+      "spokenText": "空氣好冷眼鏡都白掉了",
+      "focusChar": "冷",
+      "displayLines": [
+        "空氣好冷，",
+        "眼鏡都",
+        "白掉了。"
+      ],
+      "hanCharCount": 10,
+      "scene": "很冷的地方，一個戴眼鏡的孩子對著自己的手哈氣取暖，因為天氣很冷，眼鏡起霧變白。畫面要清楚看到孩子戴眼鏡、對手哈氣、眼鏡白白霧霧的狀態。不要把眼鏡畫成眼睛變白。不要有文字、數字、標籤、注音或字母。"
+    },
+    {
+      "id": "L134-S04",
+      "text": "冷水太冷，熱水太熱。",
+      "spokenText": "冷水太冷熱水太熱",
+      "focusChar": "冷",
+      "displayLines": [
+        "冷水太冷，",
+        "熱水太熱。"
+      ],
+      "hanCharCount": 8,
+      "scene": "一個人在洗澡或準備洗澡，水龍頭溫度控制不好：冷水出來太冷，熱水出來又太熱。這是常見浴室情境。畫面需兒童安全、不得裸露；可用浴缸泡泡、浴巾、背影或遮擋方式呈現。不要在圖片中放任何文字、符號、數字或標籤。"
+    },
+    {
+      "id": "L134-S05",
+      "text": "沒帶外套出門，冷得不得了。",
+      "spokenText": "沒帶外套出門冷得不得了",
+      "focusChar": "冷",
+      "displayLines": [
+        "沒帶外套",
+        "出門，",
+        "冷得不得了。"
+      ],
+      "hanCharCount": 11,
+      "scene": "孩子出門忘了帶外套，在外面覺得很冷，縮著身體、雙手抱住自己；旁邊可有門或戶外冷天背景。不要有文字、數字、標籤、注音或字母。"
+    }
+  ],
+  "coverageStats": {
+    "冷": 4,
+    "熱": 3,
+    "套": 4,
+    "氣": 2,
+    "脫": 1,
+    "衣": 1
+  },
+  "stage4Plan": [
+    {
+      "id": "L134-G01",
+      "type": "find-character",
+      "sentenceId": "L134-S03",
+      "targetChar": "冷"
+    },
+    {
+      "id": "L134-G02",
+      "type": "teach-character",
+      "sentenceId": "L134-S04",
+      "targetChar": "冷",
+      "targetCharIndex": 0,
+      "suffixText": "水太冷熱水太熱",
+      "teachAudio": {
+        "suffixSrc": "/assets/lessons/L134/audio/L134-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L134-G03",
+      "type": "missing-character",
+      "sentenceId": "L134-S05",
+      "targetChar": "冷",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "冷",
+        "熱",
+        "氣"
+      ]
+    },
+    {
+      "id": "L134-G04",
+      "type": "partial-order",
+      "sentenceId": "L134-S02",
+      "targetChar": "套",
+      "chunks": [
+        "用套子",
+        "把大衣",
+        "套起來"
+      ]
+    },
+    {
+      "id": "L134-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L134-S01",
+      "targetChar": "熱",
+      "options": [
+        {
+          "id": "correct",
+          "text": "天氣太熱，我要脫掉外套。",
+          "spokenText": "天氣太熱我要脫掉外套",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L134/audio/L134-S01.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "天氣太冷，我要脫掉外套。",
+          "spokenText": "天氣太冷我要脫掉外套",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L134/audio/L134-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "天氣太熱，我要穿上外套。",
+          "spokenText": "天氣太熱我要穿上外套",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L134/audio/L134-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
