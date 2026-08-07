@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-07T09:40:34.582Z",
+  "exportedAt": "2026-08-07T09:42:53.510Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -60350,6 +60350,494 @@
               "text": "我不愛喝熱水，給我熱水。",
               "correct": false,
               "audioSrc": "/assets/lessons/L136/audio/L136-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L137",
+      "order": 137,
+      "newChars": [
+        "菜"
+      ],
+      "zhuyin": {
+        "菜": "ㄘㄞˋ"
+      },
+      "charAudio": {
+        "菜": "/assets/lessons/L137/audio/char-u83dc.m4a"
+      },
+      "title": "菜",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Teacher-approved production handoff for L137."
+      },
+      "sentences": [
+        {
+          "id": "L137-S01",
+          "text": "飯菜冷掉了，要熱一下。",
+          "displayLines": [
+            "飯菜冷掉了，",
+            "要熱一下。"
+          ],
+          "spokenText": "飯菜冷掉了要熱一下",
+          "focusChar": "菜",
+          "imagePrompt": "Use the approved L058 style anchors: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Scene: 桌上的飯菜已經冷掉，家人準備把飯菜熱一下；畫面要清楚看到飯菜和變冷的情境，不可有文字、數字或標籤。 No visible text, Chinese characters, zhuyin, letters, numbers, labels, signs, scoreboards, UI, watermarks, or readable markings anywhere.",
+          "imageSrc": "/assets/lessons/L137/images/L137-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L137/audio/L137-S01.m4a",
+            "durationMs": 3467,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1460,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2750
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2750,
+                "endMs": 2980
+              }
+            ]
+          }
+        },
+        {
+          "id": "L137-S02",
+          "text": "太冷了，出門要穿外套。",
+          "displayLines": [
+            "太冷了，",
+            "出門要穿",
+            "外套。"
+          ],
+          "spokenText": "太冷了出門要穿外套",
+          "focusChar": "套",
+          "imagePrompt": "Use the approved L058 style anchors: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Scene: 天氣很冷，孩子準備出門，正在穿外套；外套與冷天情境要清楚。 No visible text, Chinese characters, zhuyin, letters, numbers, labels, signs, scoreboards, UI, watermarks, or readable markings anywhere.",
+          "imageSrc": "/assets/lessons/L137/images/L137-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L137/audio/L137-S02.m4a",
+            "durationMs": 4350,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1580,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1660,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1820,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2080,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2620,
+                "endMs": 2820
+              }
+            ]
+          }
+        },
+        {
+          "id": "L137-S03",
+          "text": "門前空地有很多白菜。",
+          "displayLines": [
+            "門前空地",
+            "有很多白菜。"
+          ],
+          "spokenText": "門前空地有很多白菜",
+          "focusChar": "菜",
+          "imagePrompt": "Use the approved L058 style anchors: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Scene: 門前的空地上有很多白菜，是小菜園裡的白菜；要清楚看到門前、空地、很多白菜。 No visible text, Chinese characters, zhuyin, letters, numbers, labels, signs, scoreboards, UI, watermarks, or readable markings anywhere.",
+          "imageSrc": "/assets/lessons/L137/images/L137-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L137/audio/L137-S03.m4a",
+            "durationMs": 5041,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1180,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1840,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2080,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2800,
+                "endMs": 3190
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3190,
+                "endMs": 3580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3580,
+                "endMs": 3980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3980,
+                "endMs": 4220
+              }
+            ]
+          }
+        },
+        {
+          "id": "L137-S04",
+          "text": "媽媽做的飯菜，都是我愛吃的。",
+          "displayLines": [
+            "媽媽做的",
+            "飯菜，都是",
+            "我愛吃的。"
+          ],
+          "spokenText": "媽媽做的飯菜都是我愛吃的",
+          "focusChar": "菜",
+          "imagePrompt": "Use the approved L058 style anchors: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Scene: 媽媽做好飯菜，孩子很喜歡吃；畫面可呈現餐桌上的飯菜和孩子開心看著媽媽做的菜。 No visible text, Chinese characters, zhuyin, letters, numbers, labels, signs, scoreboards, UI, watermarks, or readable markings anywhere.",
+          "imageSrc": "/assets/lessons/L137/images/L137-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L137/audio/L137-S04.m4a",
+            "durationMs": 4161,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1400,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1500,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1780,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2140,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2500,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2900,
+                "endMs": 3080
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3080,
+                "endMs": 3300
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3300,
+                "endMs": 3480
+              }
+            ]
+          }
+        },
+        {
+          "id": "L137-S05",
+          "text": "打球後要喝水，多喝一點。",
+          "displayLines": [
+            "打球後",
+            "要喝水，",
+            "多喝一點。"
+          ],
+          "spokenText": "打球後要喝水多喝一點",
+          "focusChar": "喝",
+          "imagePrompt": "Use the approved L058 style anchors: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Scene: 孩子打球後在休息喝水，提醒要多喝一點水；畫面要和飯菜情境不同，可在空地或草地旁。 No visible text, Chinese characters, zhuyin, letters, numbers, labels, signs, scoreboards, UI, watermarks, or readable markings anywhere.",
+          "imageSrc": "/assets/lessons/L137/images/L137-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L137/audio/L137-S05.m4a",
+            "durationMs": 5174,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1880,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1900,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2300,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3040,
+                "endMs": 3400
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3400,
+                "endMs": 3590
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3590,
+                "endMs": 3780
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L137-G01",
+          "type": "find-character",
+          "sentenceId": "L137-S01",
+          "targetChar": "菜",
+          "prompt": "找出「菜」。"
+        },
+        {
+          "id": "L137-G02",
+          "type": "teach-character",
+          "sentenceId": "L137-S03",
+          "targetChar": "菜",
+          "targetCharIndex": 8,
+          "prompt": "聽一聽，放進「菜」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L137/audio/L137-G02-prefix.m4a"
+          }
+        },
+        {
+          "id": "L137-G03",
+          "type": "missing-character",
+          "sentenceId": "L137-S04",
+          "targetChar": "菜",
+          "missingIndexes": [
+            5
+          ],
+          "prompt": "選出少掉的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "菜",
+              "correct": true
+            },
+            {
+              "id": "wrong-1",
+              "text": "飯",
+              "correct": false
+            },
+            {
+              "id": "wrong-2",
+              "text": "水",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L137-G04",
+          "type": "partial-order",
+          "sentenceId": "L137-S02",
+          "targetChar": "套",
+          "missingIndexes": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prompt": "幫小兔子排好句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "出",
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "門",
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "要",
+              "correct": true
+            },
+            {
+              "id": "slot-4",
+              "text": "穿",
+              "correct": true
+            },
+            {
+              "id": "slot-5",
+              "text": "外",
+              "correct": true
+            },
+            {
+              "id": "slot-6",
+              "text": "套",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L137-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L137-S05",
+          "targetChar": "喝",
+          "prompt": "聽一聽，選出正確的句子。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "打球後要喝水，多喝一點。",
+              "spokenText": "打球後要喝水多喝一點",
+              "audioSrc": "/assets/lessons/L137/audio/L137-S05.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "打球前要喝水，多喝一點。",
+              "spokenText": "打球前要喝水多喝一點",
+              "audioSrc": "/assets/lessons/L137/audio/L137-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "打球後要喝水，少喝一點。",
+              "spokenText": "打球後要喝水少喝一點",
+              "audioSrc": "/assets/lessons/L137/audio/L137-G05-wrong-two.m4a",
+              "correct": false
             }
           ]
         }
