@@ -1,0 +1,90 @@
+{
+  "id": "L128",
+  "order": 128,
+  "newChars": [
+    "戴"
+  ],
+  "zhuyin": {
+    "戴": "ㄉㄞˋ"
+  },
+  "title": "戴",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L123",
+    "L124",
+    "L125",
+    "L126",
+    "L127"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴",
+    "provisionalLearnedChars": [
+      "穿"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "戴",
+      "穿",
+      "鞋",
+      "棋",
+      "白",
+      "黑"
+    ],
+    "targetCharMinimumCount": {
+      "戴": 3
+    },
+    "recentTargetMinimumCounts": {
+      "穿": 2,
+      "鞋": 2,
+      "棋": 2,
+      "白": 1,
+      "黑": 1
+    },
+    "disallowedChars": []
+  },
+  "teacherNotes": "Teacher-audited authoritative final sentence source for L127-L132 repair. Use these sentences exactly. spokenText equals text with punctuation removed. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Images use L058 style anchors and must not contain text, zhuyin, letters, numbers, labels, signs, or watermarks. Audio must be standalone OpenAI single-character charAudio, whole-sentence AI audio, independent G02 teachAudio fragments, independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned with assets:align:ai.",
+  "approvedSentences": [
+    {
+      "text": "我穿白鞋，戴白帽子。",
+      "spokenText": "我穿白鞋戴白帽子",
+      "focusChar": "戴",
+      "hanCharCount": 8,
+      "scene": "Preserve the fixed first-person young girl getting ready to go out, with white shoes clearly on her feet and a white hat clearly worn on her head."
+    },
+    {
+      "text": "爸爸戴著黑眼鏡看書。",
+      "spokenText": "爸爸戴著黑眼鏡看書",
+      "focusChar": "戴",
+      "hanCharCount": 9,
+      "scene": "A friendly father sits at a table or sofa, clearly wearing black eyeglasses while reading a plain blank book."
+    },
+    {
+      "text": "媽媽很會穿戴。",
+      "spokenText": "媽媽很會穿戴",
+      "focusChar": "戴",
+      "hanCharCount": 6,
+      "scene": "A friendly mother in front of a mirror, neatly arranging coordinated clothes, hat, and shoes; tidy and well dressed."
+    },
+    {
+      "text": "黑棋少了很多，這樣不好下棋。",
+      "spokenText": "黑棋少了很多這樣不好下棋",
+      "focusChar": "棋",
+      "hanCharCount": 12,
+      "scene": "An open plain game-piece box or table setup with many white game pieces and clearly far fewer black pieces; a child or adult notices it is hard to play this way."
+    },
+    {
+      "text": "媽媽把紅鞋放在盒子裡。",
+      "spokenText": "媽媽把紅鞋放在盒子裡",
+      "focusChar": "鞋",
+      "hanCharCount": 10,
+      "scene": "A friendly mother gently puts a pair of red shoes into an open plain box. The red shoes and box are clearly visible."
+    }
+  ]
+}

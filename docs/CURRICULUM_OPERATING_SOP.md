@@ -339,6 +339,6 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L127, L127 introduces `穿`, and review modules are complete through R004.
+As of latest `origin/main`, production curriculum is complete through L128, L128 introduces `戴`, and review modules are complete through R004.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L127 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L128 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
