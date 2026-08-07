@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L131 | 氣 | ready-blocked-by-dependency | Codex L131 media thread | codex/l131-qi-media / pending | L127:穿; L128:戴; L129:衣; L130:脫 | 穿; 戴; 衣; 脫 | `curriculum-workflow/lesson-requests/L131.json`; `curriculum-workflow/generated/L131-generation-packet.md`; `curriculum-workflow/drafts/L131-draft.json` | `public/assets/lessons/L131/` | Image/audio prepared only per teacher request; production JSON intentionally unchanged because latest origin/main is only through L126. Sentence text is locked. |
+| L131 | 氣 | ready-blocked-by-dependency | Codex L131 media thread | codex/l131-qi-media / 551119d | L127:穿; L128:戴; L129:衣; L130:脫 | 穿; 戴; 衣; 脫 | `curriculum-workflow/lesson-requests/L131.json`; `curriculum-workflow/generated/L131-generation-packet.md`; `curriculum-workflow/drafts/L131-draft.json` | `public/assets/lessons/L131/` | Image/audio prepared only per teacher request; production JSON intentionally unchanged because latest origin/main is only through L126. Sentence text is locked. |
 
 ## Status Values
 
