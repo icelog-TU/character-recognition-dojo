@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L147 | 間 / normal lesson | claimed | Production thread B | `codex/l147-complete-package` / pending | L142:為, L143:以, L144:怎, L145:所, L146:房 | 為, 以, 怎, 所, 房 | `curriculum-workflow/lesson-requests/L147.json`; `curriculum-workflow/generated/L147-generation-packet.md`; `curriculum-workflow/drafts/L147-draft.json` | `curriculum-workflow/audio-inbox/L147/`; `public/assets/lessons/L147/` | Preparing complete package from teacher-approved handoff; production JSON blocked until dependencies enter `origin/main`. |
 
 ## Status Values
 
