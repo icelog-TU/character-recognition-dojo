@@ -90,13 +90,19 @@ const apiKey = requireOpenAIKey();
 const model = getEnv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts");
 const voice = getEnv("OPENAI_TTS_VOICE", "coral");
 const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
-const lesson =
+let lesson =
   curriculum.lessons?.find((candidate) => candidate.id === lessonId) ??
   curriculum.reviewLessons?.find((candidate) => candidate.id === lessonId);
 
 if (!lesson) {
-  console.error(`Lesson not found: ${lessonId}`);
-  process.exit(1);
+  const draftPath = path.resolve("curriculum-workflow/drafts", `${lessonId}-draft.json`);
+  if (fs.existsSync(draftPath)) {
+    lesson = JSON.parse(fs.readFileSync(draftPath, "utf8"));
+    console.log(`Using draft lesson data: ${draftPath}`);
+  } else {
+    console.error(`Lesson not found: ${lessonId}`);
+    process.exit(1);
+  }
 }
 
 const outputDir = path.join(inboxRoot, lessonId);
