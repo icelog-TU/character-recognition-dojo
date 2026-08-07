@@ -1,0 +1,203 @@
+{
+  "id": "L138",
+  "order": 138,
+  "newChars": [
+    "老"
+  ],
+  "zhuyin": {
+    "老": "ㄌㄠˇ"
+  },
+  "title": "老",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L133",
+    "L134",
+    "L135",
+    "L136",
+    "L137"
+  ],
+  "dependsOnReviewModules": [
+    "R003",
+    "R004"
+  ],
+  "generationConstraints": {
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老",
+    "provisionalLearnedChars": [
+      "喝",
+      "飯",
+      "菜"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "老",
+      "菜",
+      "飯",
+      "喝",
+      "冷",
+      "熱"
+    ],
+    "targetCharMinimumCount": {
+      "老": 3
+    },
+    "recentTargetMinimumCounts": {
+      "菜": 2,
+      "飯": 2,
+      "喝": 2,
+      "冷": 1,
+      "熱": 1
+    },
+    "disallowedChars": [
+      "師",
+      "婆",
+      "爺",
+      "奶",
+      "皺",
+      "髮",
+      "牙",
+      "歲",
+      "麼",
+      "什"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L138 老. Use these sentences exactly; spokenText equals text with punctuation removed. Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. This is a complete parallel production package. After rebase, latest origin/main includes L133 熱 and L134 冷, but L135 喝, L136 飯, and L137 菜 are still provisional dependencies. Do not merge production JSON until L135-L137 are present in latest origin/main. Images must use L058 style anchors and contain no text, numbers, zhuyin, labels, signs, letters, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 suffix, and independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned with assets:align:ai.",
+  "approvedSentences": [
+    {
+      "text": "老人一邊喝水，一邊下棋。",
+      "spokenText": "老人一邊喝水一邊下棋",
+      "focusChar": "老",
+      "displayLines": [
+        "老人一邊",
+        "喝水，",
+        "一邊下棋。"
+      ],
+      "hanCharCount": 10,
+      "scene": "一位老人坐著，一邊喝水，一邊下棋；棋盤、水和老人動作都要清楚。"
+    },
+    {
+      "text": "老太太愛吃熱菜和熱飯。",
+      "spokenText": "老太太愛吃熱菜和熱飯",
+      "focusChar": "老",
+      "displayLines": [
+        "老太太愛吃",
+        "熱菜和熱飯。"
+      ],
+      "hanCharCount": 10,
+      "scene": "老太太開心地吃熱菜和熱飯，飯菜可冒熱氣；畫面溫暖、生活化。"
+    },
+    {
+      "text": "老是喝冷水不好。",
+      "spokenText": "老是喝冷水不好",
+      "focusChar": "老",
+      "displayLines": [
+        "老是喝",
+        "冷水不好。"
+      ],
+      "hanCharCount": 7,
+      "scene": "孩子一直拿冷水喝，旁邊大人提醒不太好；用畫面表現「老是」的重複感，不要加文字。"
+    },
+    {
+      "text": "天氣太冷，老人不出門。",
+      "spokenText": "天氣太冷老人不出門",
+      "focusChar": "老",
+      "displayLines": [
+        "天氣太冷，",
+        "老人不出門。"
+      ],
+      "hanCharCount": 9,
+      "scene": "外面天氣很冷，老人待在門裡或窗邊，不出門；冷天情境清楚。"
+    },
+    {
+      "text": "我和媽媽做了一大桌飯菜。",
+      "spokenText": "我和媽媽做了一大桌飯菜",
+      "focusChar": "菜",
+      "displayLines": [
+        "我和媽媽",
+        "做了一大桌",
+        "飯菜。"
+      ],
+      "hanCharCount": 11,
+      "scene": "固定「我」女孩和媽媽一起做了一大桌飯菜；餐桌上有多樣飯菜，但圖片不可有文字、數字或標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L138-G01",
+      "type": "find-character",
+      "sentenceId": "L138-S01",
+      "targetChar": "老",
+      "missingIndexes": [
+        0
+      ]
+    },
+    {
+      "id": "L138-G02",
+      "type": "teach-character",
+      "sentenceId": "L138-S02",
+      "targetChar": "老",
+      "targetCharIndex": 0,
+      "suffixText": "太太愛吃熱菜和熱飯",
+      "teachAudio": {
+        "suffixSrc": "/assets/lessons/L138/audio/L138-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L138-G03",
+      "type": "missing-character",
+      "sentenceId": "L138-S03",
+      "targetChar": "老",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "老",
+        "冷",
+        "喝"
+      ]
+    },
+    {
+      "id": "L138-G04",
+      "type": "partial-order",
+      "sentenceId": "L138-S04",
+      "targetChar": "老",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "chunks": [
+        "天氣太冷",
+        "老人",
+        "不出門"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L138-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L138-S05",
+      "targetChar": "菜",
+      "correctText": "我和媽媽做了一大桌飯菜",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我和媽媽做了一小桌飯菜",
+          "audioSrc": "/assets/lessons/L138/audio/L138-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我和媽媽做了一大桌熱菜",
+          "audioSrc": "/assets/lessons/L138/audio/L138-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
