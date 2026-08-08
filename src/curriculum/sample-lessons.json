@@ -68433,6 +68433,458 @@
         "G02 teachAudio prefix text is 去; suffix text is 站時一路上都是紅燈.",
         "G05 wrong-choice audio must be generated from the full wrong texts, not spliced from the correct sentence."
       ]
+    },
+    {
+      "id": "L154",
+      "order": 154,
+      "newChars": [
+        "等"
+      ],
+      "zhuyin": {
+        "等": "ㄉㄥˇ"
+      },
+      "charAudio": {
+        "等": "/assets/lessons/L154/audio/char-u7b49.m4a"
+      },
+      "title": "等車等紅燈",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L154-S01",
+          "text": "我和媽媽一起等紅燈。",
+          "displayLines": [
+            "我和媽媽",
+            "一起等紅燈。"
+          ],
+          "spokenText": "我和媽媽一起等紅燈",
+          "focusChar": "等",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean street-crossing environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, route numbers, station names, license plates, walk-symbol writing, watermark, speech bubbles, arrows, or readable symbols. The fixed young girl and her mother wait together at a simple red circular traffic light before crossing. Make the red light clear without any writing or numbers.",
+          "imageSrc": "/assets/lessons/L154/images/L154-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L154/audio/L154-S01.m4a",
+            "durationMs": 5115,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1630
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1630,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2000,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2360,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2900
+              }
+            ]
+          }
+        },
+        {
+          "id": "L154-S02",
+          "text": "車還沒來，還要等一下。",
+          "displayLines": [
+            "車還沒來，",
+            "還要等一下。"
+          ],
+          "spokenText": "車還沒來還要等一下",
+          "focusChar": "等",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean roadside waiting environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, route numbers, station names, license plates, written schedules, watermark, speech bubbles, arrows, or readable symbols. A child waits with an adult for a vehicle that has not arrived yet. It may imply waiting for a bus, but no readable route signs, station names, numbers, labels, or the word for bus.",
+          "imageSrc": "/assets/lessons/L154/images/L154-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L154/audio/L154-S02.m4a",
+            "durationMs": 3476,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 640
+              },
+              {
+                "charIndex": 1,
+                "startMs": 640,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1100,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1360,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2100,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2180,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2360,
+                "endMs": 2507
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2507,
+                "endMs": 2653
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2653,
+                "endMs": 2800
+              }
+            ]
+          }
+        },
+        {
+          "id": "L154-S03",
+          "text": "你看！車窗車燈可以開和關。",
+          "displayLines": [
+            "你看！",
+            "車窗車燈",
+            "可以開和關。"
+          ],
+          "spokenText": "你看車窗車燈可以開和關",
+          "focusChar": "車",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home playroom environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, packaging, brand names, written UI, watermark, speech bubbles, arrows, or readable symbols. The fixed second-person boy proudly demonstrates a small toy-like car. Show its windows opening/closing and its lights turning on/off visually, without packaging or labels.",
+          "imageSrc": "/assets/lessons/L154/images/L154-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L154/audio/L154-S03.m4a",
+            "durationMs": 5421,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1220,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2220,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2400,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3040,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3500,
+                "endMs": 3960
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3960,
+                "endMs": 4440
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4440,
+                "endMs": 4680
+              }
+            ]
+          }
+        },
+        {
+          "id": "L154-S04",
+          "text": "小狗在窗邊等家人。",
+          "displayLines": [
+            "小狗在窗邊",
+            "等家人。"
+          ],
+          "spokenText": "小狗在窗邊等家人",
+          "focusChar": "等",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean cozy home interior, consistent expressive preschool proportions, soft cheeks if people appear, gentle mood, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, license plates, watermark, speech bubbles, arrows, or readable symbols. A small dog waits patiently by a window for family members to come home. Make the dog, window, and waiting posture clear.",
+          "imageSrc": "/assets/lessons/L154/images/L154-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L154/audio/L154-S04.m4a",
+            "durationMs": 4403,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 840
+              },
+              {
+                "charIndex": 2,
+                "startMs": 840,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1700,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1940,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2300,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2640,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2960,
+                "endMs": 3180
+              }
+            ]
+          }
+        },
+        {
+          "id": "L154-S05",
+          "text": "這個窗子很難關。",
+          "displayLines": [
+            "這個窗子",
+            "很難關。"
+          ],
+          "spokenText": "這個窗子很難關",
+          "focusChar": "關",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home interior, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, warning text, symbols, signs, watermark, speech bubbles, arrows, or readable symbols. A child or adult tries to close a difficult stuck window. Show effort and the stuck window clearly without any labels or warning marks.",
+          "imageSrc": "/assets/lessons/L154/images/L154-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L154/audio/L154-S05.m4a",
+            "durationMs": 2763,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 210
+              },
+              {
+                "charIndex": 1,
+                "startMs": 210,
+                "endMs": 420
+              },
+              {
+                "charIndex": 2,
+                "startMs": 420,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1140,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1660,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2200
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L154-G01",
+          "type": "find-character",
+          "sentenceId": "L154-S01",
+          "targetChar": "等",
+          "prompt": "找出「等」。"
+        },
+        {
+          "id": "L154-G02",
+          "type": "teach-character",
+          "sentenceId": "L154-S04",
+          "targetChar": "等",
+          "targetCharIndex": 5,
+          "missingIndexes": [
+            5
+          ],
+          "prompt": "聽一聽，放進「等」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L154/audio/L154-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L154/audio/L154-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L154-G03",
+          "type": "missing-character",
+          "sentenceId": "L154-S02",
+          "targetChar": "等",
+          "missingIndexes": [
+            6
+          ],
+          "prompt": "選出少掉的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "等",
+              "correct": true
+            },
+            {
+              "id": "wrong-車",
+              "text": "車",
+              "correct": false
+            },
+            {
+              "id": "wrong-還",
+              "text": "還",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L154-G04",
+          "type": "partial-order",
+          "sentenceId": "L154-S03",
+          "targetChar": "車",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "你看",
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "車窗車燈",
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "可以開和關",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L154-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L154-S05",
+          "targetChar": "關",
+          "prompt": "聽一聽，選出正確的句子。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "這個窗子很難關。",
+              "spokenText": "這個窗子很難關",
+              "audioSrc": "/assets/lessons/L154/audio/L154-S05.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "這個房門很難關。",
+              "spokenText": "這個房門很難關",
+              "audioSrc": "/assets/lessons/L154/audio/L154-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "這個窗子很難開。",
+              "spokenText": "這個窗子很難開",
+              "audioSrc": "/assets/lessons/L154/audio/L154-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "reviewLessons": [
