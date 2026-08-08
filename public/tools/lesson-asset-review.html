@@ -108,6 +108,19 @@
         gap: 8px;
       }
 
+      .panel-heading {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .panel-heading h2 {
+        margin: 0;
+      }
+
       .lesson-nav {
         display: flex;
         flex-wrap: wrap;
@@ -399,7 +412,10 @@
       </section>
 
       <section class="panel">
-        <h2>摘要</h2>
+        <div class="panel-heading">
+          <h2>摘要</h2>
+          <button id="copySummaryInlineButton" type="button" disabled>複製摘要</button>
+        </div>
         <textarea id="summaryBox" readonly></textarea>
       </section>
 
@@ -768,6 +784,10 @@
         return lines.join("\n");
       }
 
+      function copySummary() {
+        return navigator.clipboard.writeText(summaryText());
+      }
+
       function repairCommand() {
         return `npm run asset:review-status -- --unit ${state.unit} --ref ${reviewScope() === "main" ? "main" : state.sha}`;
       }
@@ -809,6 +829,7 @@
         $("copyFrozenLinkButton").disabled = !state.sha;
         $("copyRepairCommandButton").disabled = !state.sha;
         $("copySummaryButton").disabled = !state.sha;
+        $("copySummaryInlineButton").disabled = !state.sha;
         updateLessonNav();
 
         $("sentenceList").innerHTML = state.sentences
@@ -1009,7 +1030,8 @@
       $("signOutButton").addEventListener("click", () => signOut(auth));
       $("copyFrozenLinkButton").addEventListener("click", () => navigator.clipboard.writeText(frozenLink()));
       $("copyRepairCommandButton").addEventListener("click", () => navigator.clipboard.writeText(repairCommand()));
-      $("copySummaryButton").addEventListener("click", () => navigator.clipboard.writeText(summaryText()));
+      $("copySummaryButton").addEventListener("click", copySummary);
+      $("copySummaryInlineButton").addEventListener("click", copySummary);
       $("overviewButton").addEventListener("click", () => {
         void goToOverview();
       });
