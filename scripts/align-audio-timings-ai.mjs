@@ -61,6 +61,7 @@ function normalizeTranscribedHanChar(char) {
     ["着", "著"],
     ["来", "來"],
     ["后", "後"],
+    ["头", "頭"],
     ["没", "沒"],
     ["里", "裡"],
     ["裏", "裡"],

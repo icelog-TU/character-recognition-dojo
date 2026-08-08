@@ -1,0 +1,199 @@
+{
+  "id": "L171",
+  "order": 171,
+  "newChars": [
+    "就"
+  ],
+  "zhuyin": {
+    "就": "ㄐㄧㄡˋ"
+  },
+  "title": "就",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L166",
+    "L167",
+    "L168",
+    "L169",
+    "L170"
+  ],
+  "provisionalLearnedChars": [
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "就",
+      "回",
+      "亂",
+      "髒",
+      "又",
+      "洗"
+    ],
+    "targetCharMinimumCount": {
+      "就": 3
+    },
+    "recentTargetMinimumCounts": {
+      "回": 2,
+      "亂": 2,
+      "髒": 2,
+      "又": 1,
+      "洗": 1
+    },
+    "disallowedChars": [
+      "快",
+      "見",
+      "剛",
+      "完",
+      "整",
+      "理",
+      "收",
+      "拾",
+      "迷",
+      "丟",
+      "跑",
+      "丑"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L171 就. Latest origin/main at production start is complete through L165 先; L171 depends on L166 洗, L167 又, L168 髒, L169 亂, and L170 回. Do not merge production JSON, planner-data, or ledger until L166-L170 are present in latest origin/main. Provisional learned chars are 洗, 又, 髒, 亂, 回. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 快, 見, 剛, 完, 整, 理, 收, 拾, 迷, 丟, 跑, or 丑. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "一下子就又髒又亂了。",
+      "spokenText": "一下子就又髒又亂了",
+      "focusChar": "就",
+      "displayLines": [
+        "一下子就",
+        "又髒又亂了。"
+      ],
+      "scene": "Square image / 1:1 composition. A room that had just been cleaned or tidied is suddenly dirty and messy again. Make the dirty, messy room state clear, with safe margins for all important objects. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "手髒了，洗一洗就好。",
+      "spokenText": "手髒了洗一洗就好",
+      "focusChar": "就",
+      "displayLines": [
+        "手髒了，",
+        "洗一洗就好。"
+      ],
+      "scene": "Square image / 1:1 composition. A child's hands are dirty, and the child is washing or about to wash hands, showing that washing will make things better. Center the dirty hands and washing action. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "都放回盒子裡，桌上就不亂了。",
+      "spokenText": "都放回盒子裡桌上就不亂了",
+      "focusChar": "就",
+      "displayLines": [
+        "都放回盒子裡，",
+        "桌上就不亂了。"
+      ],
+      "scene": "Square image / 1:1 composition. A stationery table scene: pens, paper, or small school supplies have all been put back into a box, and the tabletop is no longer messy. Emphasize supplies returning into the box and the tidier tabletop. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, brands, or readable marks.",
+      "hanCharCount": 12
+    },
+    {
+      "text": "一回頭，小狗就在門外。",
+      "spokenText": "一回頭小狗就在門外",
+      "focusChar": "就",
+      "displayLines": [
+        "一回頭，",
+        "小狗就在門外。"
+      ],
+      "scene": "Square image / 1:1 composition. A child or adult turns their head and sees a small dog right outside the door. Make the turning-head action, dog, door, and outside position clear. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "頭一回打棒球，就打得那麼好。",
+      "spokenText": "頭一回打棒球就打得那麼好",
+      "focusChar": "就",
+      "displayLines": [
+        "頭一回打棒球，",
+        "就打得那麼好。"
+      ],
+      "scene": "Square image / 1:1 composition. A child is playing baseball for the first time and hits the ball very well, while nearby people look surprised or happy. Include a baseball bat and ball clearly, with safe margins for the hit action. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, team names, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 12
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L171-G01",
+      "type": "find-character",
+      "sentenceId": "L171-S05",
+      "targetChar": "就",
+      "reason": "頭一回...就... is a clear functional use of the current target character."
+    },
+    {
+      "id": "L171-G02",
+      "type": "teach-character",
+      "sentenceId": "L171-S01",
+      "targetChar": "就",
+      "targetCharIndex": 3,
+      "prefixText": "一下子",
+      "suffixText": "又髒又亂了",
+      "requiredAudio": [
+        "public/assets/lessons/L171/audio/L171-G02-prefix.m4a",
+        "public/assets/lessons/L171/audio/L171-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L171-G03",
+      "type": "missing-character",
+      "sentenceId": "L171-S03",
+      "targetChar": "就",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "就",
+        "回",
+        "亂"
+      ]
+    },
+    {
+      "id": "L171-G04",
+      "type": "partial-order",
+      "sentenceId": "L171-S04",
+      "targetChar": "就",
+      "chunks": [
+        "一回頭",
+        "小狗就",
+        "在門外"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L171-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L171-S02",
+      "targetChar": "就",
+      "correctText": "手髒了，洗一洗就好。",
+      "correctSpokenText": "手髒了洗一洗就好",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "手髒了，擦一擦就好。",
+          "spokenText": "手髒了擦一擦就好",
+          "audioSrc": "/assets/lessons/L171/audio/L171-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "手髒了，洗一洗不好。",
+          "spokenText": "手髒了洗一洗不好",
+          "audioSrc": "/assets/lessons/L171/audio/L171-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
