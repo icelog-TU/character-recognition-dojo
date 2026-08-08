@@ -1,0 +1,349 @@
+{
+  "id": "L153",
+  "order": 153,
+  "newChars": [
+    "車"
+  ],
+  "zhuyin": {
+    "車": "ㄔㄜ"
+  },
+  "title": "車站車窗",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L148",
+    "L149",
+    "L150",
+    "L151",
+    "L152"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車"
+    ],
+    "provisionalLearnedChars": [
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "車",
+      "窗",
+      "關",
+      "燈",
+      "還",
+      "時"
+    ],
+    "targetCharMinimumCount": {
+      "車": 3
+    },
+    "recentTargetMinimumCounts": {
+      "窗": 2,
+      "關": 2,
+      "燈": 2,
+      "還": 1,
+      "時": 1
+    },
+    "disallowedChars": [
+      "電",
+      "動",
+      "停",
+      "牌",
+      "排",
+      "等",
+      "司",
+      "機"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L153. Latest origin/main is L147, so this package depends on unmerged L148 時, L149 還, L150 燈, L151 關, and L152 窗; do not merge production JSON until L148-L152 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 為 not 爲 and 裡 not 裏. Do not add unlearned display characters such as 電, 動, 停, 牌, 排, 等, 司, 機. Images must use L058 style anchors and contain no text, numbers, signs, route numbers, station names, license plates, zhuyin, labels, English, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "去車站時，一路上都是紅燈。",
+      "spokenText": "去車站時一路上都是紅燈",
+      "focusChar": "車",
+      "displayLines": [
+        "去車站時，",
+        "一路上",
+        "都是紅燈。"
+      ],
+      "scene": "A family or child is on the way to a station and sees many red traffic lights along the road. Show the road/travel mood and red circular lights, but no road signs, route numbers, station names, text, or license plates.",
+      "hanCharCount": 12
+    },
+    {
+      "text": "拿小車車去和小小孩玩。",
+      "spokenText": "拿小車車去和小小孩玩",
+      "focusChar": "車",
+      "displayLines": [
+        "拿小車車去",
+        "和小小孩玩。"
+      ],
+      "scene": "A child brings a toy car to play with a younger child. The toy car should be clearly visible. No packaging, brand marks, text, numbers, or labels.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "車窗和車燈還沒關。",
+      "spokenText": "車窗和車燈還沒關",
+      "focusChar": "車",
+      "displayLines": [
+        "車窗和車燈",
+        "還沒關。"
+      ],
+      "scene": "A parked car is about to be left, but the car window is still open and the car lights are still on. Show the problem clearly without any dashboard text, license plate numbers, labels, or written warnings.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "小狗在窗邊看車子。",
+      "spokenText": "小狗在窗邊看車子",
+      "focusChar": "車",
+      "displayLines": [
+        "小狗在窗邊",
+        "看車子。"
+      ],
+      "scene": "A small dog is by a window looking outside at a car. Make the window, dog, and car clear. No signs, license plates, text, labels, or numbers.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "媽媽關心我有沒有到車站。",
+      "spokenText": "媽媽關心我有沒有到車站",
+      "focusChar": "車",
+      "displayLines": [
+        "媽媽關心我",
+        "有沒有到",
+        "車站。"
+      ],
+      "scene": "Mom is concerned whether the child has arrived at the station. Show mom caring about the child, with a station-like setting or travel context visible. No station names, signs, schedules, text, numbers, or speech bubbles.",
+      "hanCharCount": 11
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L153-G01",
+      "type": "find-character",
+      "sentenceId": "L153-S02",
+      "targetChar": "車",
+      "reason": "Short sentence with repeated, visually clear 車 in 小車車."
+    },
+    {
+      "id": "L153-G02",
+      "type": "teach-character",
+      "sentenceId": "L153-S01",
+      "targetChar": "車",
+      "targetCharIndex": 1,
+      "prefixText": "去",
+      "suffixText": "站時一路上都是紅燈",
+      "requiredAudio": [
+        "public/assets/lessons/L153/audio/L153-G02-prefix.m4a",
+        "public/assets/lessons/L153/audio/L153-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L153-G03",
+      "type": "missing-character",
+      "sentenceId": "L153-S03",
+      "targetChar": "車",
+      "missingIndexes": [
+        0,
+        3
+      ],
+      "options": [
+        "車",
+        "窗",
+        "燈"
+      ]
+    },
+    {
+      "id": "L153-G04",
+      "type": "partial-order",
+      "sentenceId": "L153-S04",
+      "targetChar": "車",
+      "chunks": [
+        "小狗在窗邊",
+        "看",
+        "車子"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L153-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L153-S05",
+      "targetChar": "車",
+      "correctText": "媽媽關心我有沒有到車站。",
+      "correctSpokenText": "媽媽關心我有沒有到車站",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "媽媽關心我有沒有到學校。",
+          "spokenText": "媽媽關心我有沒有到學校",
+          "audioSrc": "/assets/lessons/L153/audio/L153-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "媽媽關心我有沒有到家。",
+          "spokenText": "媽媽關心我有沒有到家",
+          "audioSrc": "/assets/lessons/L153/audio/L153-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
