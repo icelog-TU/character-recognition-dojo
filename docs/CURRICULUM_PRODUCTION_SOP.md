@@ -388,7 +388,7 @@ Single-unit URL format:
 https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=main
 ```
 
-Production or release final handoff must include the index URL and, when useful, the direct single-unit asset-review URL. The single-unit page displays each sentence with its text, `spokenText`, image, and sentence audio, plus the other formal audio files such as `charAudio`, `G02` prefix/suffix, and `G05` options. The teacher marks only items that need repair and writes notes. Unmarked items are not blockers.
+Production or release final handoff must include the index URL and, when useful, the direct single-unit asset-review URL. The single-unit page displays each sentence with its text, `spokenText`, sentence audio, and two image previews: the app's square `object-fit: cover` crop preview and the complete original image. The square crop preview is part of the review standard; if the app view cuts off a required person, object, action, count, or other meaning-bearing detail, mark the image as needing repair even when the complete original image looks acceptable. The page also lists the other formal audio files such as `charAudio`, `G02` prefix/suffix, and `G05` options. The teacher marks only items that need repair and writes notes. Unmarked items are not blockers.
 
 For post-merge review on `main`, the repair queue is keyed by unit plus stable `main`, not by the latest commit SHA. This keeps L### review status findable after later lessons are pushed. Commit SHA remains visible for diagnosis, but `ref=main` is the normal 600-lesson review workflow.
 

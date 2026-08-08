@@ -203,13 +203,39 @@
         gap: 8px;
       }
 
-      .image-wrap img {
+      .image-previews {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .preview-panel {
+        display: grid;
+        gap: 6px;
+      }
+
+      .preview-label {
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 750;
+      }
+
+      .preview-panel img {
         width: 100%;
-        aspect-ratio: 4 / 3;
-        object-fit: contain;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: #f1eee8;
+      }
+
+      .app-crop-preview img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .full-image-preview img {
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
       }
 
       .detail {
@@ -284,6 +310,7 @@
         .topbar,
         .status-grid,
         .sentence-card,
+        .image-previews,
         .repair-grid {
           grid-template-columns: 1fr;
         }
@@ -721,7 +748,16 @@
             return `
               <article class="sentence-card ${flagged ? "needs-repair" : ""}">
                 <div class="image-wrap">
-                  <img src="${html(sentence.imageUrl)}" alt="${html(sentence.id)} image" loading="lazy" />
+                  <div class="image-previews">
+                    <div class="preview-panel app-crop-preview">
+                      <div class="preview-label">APP 方形裁切預覽</div>
+                      <img src="${html(sentence.imageUrl)}" alt="${html(sentence.id)} app crop preview" loading="lazy" />
+                    </div>
+                    <div class="preview-panel full-image-preview">
+                      <div class="preview-label">完整原圖</div>
+                      <img src="${html(sentence.imageUrl)}" alt="${html(sentence.id)} full image preview" loading="lazy" />
+                    </div>
+                  </div>
                   <div class="mono muted">${html(sentence.imageSrc)}</div>
                 </div>
                 <div class="detail">
