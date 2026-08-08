@@ -409,6 +409,18 @@
           本版本我已看完，除了上面標記項目外沒有其他問題
         </label>
       </section>
+
+      <section class="panel lesson-nav">
+        <div>
+          <strong id="bottomNavCurrentUnit">-</strong>
+          <span class="muted">課程審核導覽</span>
+        </div>
+        <div class="button-row">
+          <button id="bottomOverviewButton" type="button">回總覽</button>
+          <button id="bottomPrevLessonButton" type="button">上一課</button>
+          <button id="bottomNextLessonButton" type="button">下一課</button>
+        </div>
+      </section>
     </main>
 
     <script type="module">
@@ -490,8 +502,11 @@
       function updateLessonNav() {
         const number = currentLessonNumber();
         $("navCurrentUnit").textContent = state.unit || "-";
+        $("bottomNavCurrentUnit").textContent = state.unit || "-";
         $("prevLessonButton").disabled = number <= 1;
         $("nextLessonButton").disabled = number <= 0 || number >= 600;
+        $("bottomPrevLessonButton").disabled = number <= 1;
+        $("bottomNextLessonButton").disabled = number <= 0 || number >= 600;
       }
 
       async function goToLesson(offset) {
@@ -501,6 +516,12 @@
         window.clearTimeout(state.saveTimer);
         if (state.user && state.sha) await saveCloud();
         window.location.href = lessonUrl(nextNumber);
+      }
+
+      async function goToOverview() {
+        window.clearTimeout(state.saveTimer);
+        if (state.user && state.sha) await saveCloud();
+        window.location.href = `asset-review-index.html?repo=${encodeURIComponent(state.repo)}&ref=${encodeURIComponent(state.ref || "main")}`;
       }
 
       function html(value) {
@@ -990,12 +1011,21 @@
       $("copyRepairCommandButton").addEventListener("click", () => navigator.clipboard.writeText(repairCommand()));
       $("copySummaryButton").addEventListener("click", () => navigator.clipboard.writeText(summaryText()));
       $("overviewButton").addEventListener("click", () => {
-        window.location.href = `asset-review-index.html?repo=${encodeURIComponent(state.repo)}&ref=${encodeURIComponent(state.ref || "main")}`;
+        void goToOverview();
       });
       $("prevLessonButton").addEventListener("click", () => {
         void goToLesson(-1);
       });
       $("nextLessonButton").addEventListener("click", () => {
+        void goToLesson(1);
+      });
+      $("bottomOverviewButton").addEventListener("click", () => {
+        void goToOverview();
+      });
+      $("bottomPrevLessonButton").addEventListener("click", () => {
+        void goToLesson(-1);
+      });
+      $("bottomNextLessonButton").addEventListener("click", () => {
         void goToLesson(1);
       });
 
