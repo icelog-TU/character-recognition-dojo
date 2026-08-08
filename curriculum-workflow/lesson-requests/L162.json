@@ -1,0 +1,196 @@
+{
+  "id": "L162",
+  "order": 162,
+  "newChars": [
+    "滿"
+  ],
+  "zhuyin": {
+    "滿": "ㄇㄢˇ"
+  },
+  "title": "滿",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L159",
+    "L160",
+    "L161"
+  ],
+  "provisionalLearnedChars": [
+    "動",
+    "葉",
+    "綠"
+  ],
+  "generationConstraints": {
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿",
+    "provisionalLearnedChars": [
+      "動",
+      "葉",
+      "綠"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "滿",
+      "綠",
+      "葉",
+      "動",
+      "樹",
+      "吹"
+    ],
+    "targetCharMinimumCount": {
+      "滿": 3
+    },
+    "recentTargetMinimumCounts": {
+      "綠": 2,
+      "葉": 2,
+      "動": 2,
+      "樹": 1,
+      "吹": 1
+    },
+    "disallowedChars": [
+      "蠻",
+      "圓",
+      "客",
+      "廳",
+      "破",
+      "瓶",
+      "歉",
+      "道",
+      "搖",
+      "落",
+      "片",
+      "秋",
+      "黃",
+      "被"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L162. Latest origin/main is L158, so this package depends on unmerged L159 動, L160 葉, and L161 綠; do not merge production JSON until L159-L161 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not use 滿 for 蠻好的. Do not add unlearned display characters such as 蠻, 圓, 客, 廳, 破, 瓶, 歉, 道, 搖, 落, 片, 秋, 黃, or 被. Images must use L058 style anchors, square 1:1 composition, centered subjects with safe margins, and contain no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "風一吹，樹葉掉滿地。",
+      "spokenText": "風一吹樹葉掉滿地",
+      "focusChar": "滿",
+      "displayLines": [
+        "風一吹，",
+        "樹葉掉滿地。"
+      ],
+      "scene": "戶外一陣風吹過，樹葉從樹上掉下來，地上到處都是樹葉，清楚呈現「滿地」。不可有文字或標籤。",
+      "hanCharCount": 8
+    },
+    {
+      "text": "窗外滿樹紅花綠葉。",
+      "spokenText": "窗外滿樹紅花綠葉",
+      "focusChar": "滿",
+      "displayLines": [
+        "窗外滿樹",
+        "紅花綠葉。"
+      ],
+      "scene": "從室內窗邊看出去，窗外一棵樹長滿紅花和綠葉。畫面要有窗框、樹、紅花、綠葉；不可有任何文字。",
+      "hanCharCount": 8
+    },
+    {
+      "text": "房間裡滿是書和紙。",
+      "spokenText": "房間裡滿是書和紙",
+      "focusChar": "滿",
+      "displayLines": [
+        "房間裡滿是",
+        "書和紙。"
+      ],
+      "scene": "房間裡到處都是書和紙，桌上、地上、床邊都有，但要整潔可辨識，不要雜亂到看不懂。不可有文字、數字或標籤。",
+      "hanCharCount": 8
+    },
+    {
+      "text": "一家人把大桌坐滿了。",
+      "spokenText": "一家人把大桌坐滿了",
+      "focusChar": "滿",
+      "displayLines": [
+        "一家人把大桌",
+        "坐滿了。"
+      ],
+      "scene": "一家人圍著大桌坐，桌邊的位置都坐滿了。畫面溫暖清楚，重點是很多家人把大桌坐滿；不可有文字。",
+      "hanCharCount": 9
+    },
+    {
+      "text": "綠葉不動，水面也不動。",
+      "spokenText": "綠葉不動水面也不動",
+      "focusChar": "動",
+      "displayLines": [
+        "綠葉不動，",
+        "水面也不動。"
+      ],
+      "scene": "安靜的水面上有綠葉，沒有風，水面平靜，葉子也不動。畫面要清楚表現靜止，不可有文字。",
+      "hanCharCount": 9
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L162-G01",
+      "type": "find-character",
+      "sentenceId": "L162-S01",
+      "targetChar": "滿",
+      "reason": "掉滿地是本課核心用法，畫面和語意清楚。"
+    },
+    {
+      "id": "L162-G02",
+      "type": "teach-character",
+      "sentenceId": "L162-S04",
+      "targetChar": "滿",
+      "targetCharIndex": 7,
+      "prefixText": "一家人把大桌坐",
+      "suffixText": "了",
+      "requiredAudio": [
+        "public/assets/lessons/L162/audio/L162-G02-prefix.m4a",
+        "public/assets/lessons/L162/audio/L162-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L162-G03",
+      "type": "missing-character",
+      "sentenceId": "L162-S02",
+      "targetChar": "滿",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        "滿",
+        "綠",
+        "紅"
+      ]
+    },
+    {
+      "id": "L162-G04",
+      "type": "partial-order",
+      "sentenceId": "L162-S05",
+      "targetChar": "動",
+      "chunks": [
+        "綠葉不動",
+        "水面也",
+        "不動"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L162-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L162-S03",
+      "targetChar": "滿",
+      "correctText": "房間裡滿是書和紙。",
+      "correctSpokenText": "房間裡滿是書和紙",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "房間裡滿是書和筆。",
+          "spokenText": "房間裡滿是書和筆",
+          "audioSrc": "/assets/lessons/L162/audio/L162-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "房間裡都是書和紙。",
+          "spokenText": "房間裡都是書和紙",
+          "audioSrc": "/assets/lessons/L162/audio/L162-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
