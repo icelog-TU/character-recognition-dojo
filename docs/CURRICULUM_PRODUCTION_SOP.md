@@ -369,24 +369,34 @@ Teacher subjective review is a repair queue, not a release gate:
 - sentence/image mismatch noticed after release
 - teacher preference for regenerating an otherwise technically valid asset
 
-The permanent post-merge review page is:
+The permanent post-merge review tools are:
 
 ```text
+public/tools/asset-review-index.html
 public/tools/lesson-asset-review.html
 ```
 
-GitHub Pages URL format:
+Use the index page as the long-term entry point for hundreds of lessons. It loads the production curriculum list without loading every image/audio file, shows review status, supports search and filters, and links into single-unit review pages:
 
 ```text
-https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=<commit-sha-or-main>
+https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main
 ```
 
-Production or release final handoff must include this asset-review URL. The page displays each sentence with its text, `spokenText`, image, and sentence audio, plus the other formal audio files such as `charAudio`, `G02` prefix/suffix, and `G05` options. The teacher marks only items that need repair and writes notes. Unmarked items are not blockers.
+Single-unit URL format:
+
+```text
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=main
+```
+
+Production or release final handoff must include the index URL and, when useful, the direct single-unit asset-review URL. The single-unit page displays each sentence with its text, `spokenText`, image, and sentence audio, plus the other formal audio files such as `charAudio`, `G02` prefix/suffix, and `G05` options. The teacher marks only items that need repair and writes notes. Unmarked items are not blockers.
+
+For post-merge review on `main`, the repair queue is keyed by unit plus stable `main`, not by the latest commit SHA. This keeps L### review status findable after later lessons are pushed. Commit SHA remains visible for diagnosis, but `ref=main` is the normal 600-lesson review workflow.
 
 Repair threads must query the queue instead of asking the teacher to restate problems:
 
 ```bash
 npm run asset:review-status -- --unit L### --ref <commit-sha-or-main>
+npm run asset:review-status -- --list --ref main
 ```
 
 The default command reports repair items without failing, because post-merge teacher review must not block release automation. Use `--fail-on-repair` only in an asset-repair workflow that intentionally wants a nonzero exit when repair work exists.

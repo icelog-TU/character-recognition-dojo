@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>圖音檔審查總覽</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f5ef;
+        --panel: #fffdf9;
+        --ink: #22201b;
+        --muted: #6f675c;
+        --line: #ddd5c8;
+        --accent: #0f766e;
+        --accent-soft: #dff5ef;
+        --danger: #b42318;
+        --danger-soft: #fee4df;
+        --warn: #946200;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+
+      main {
+        width: min(1180px, calc(100vw - 28px));
+        margin: 0 auto;
+        padding: 22px 0 52px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(1.55rem, 4vw, 2.4rem);
+        line-height: 1.12;
+      }
+
+      h2,
+      p {
+        margin: 0;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      .panel,
+      .topbar,
+      .unit-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr) auto;
+        gap: 10px;
+        align-items: end;
+        padding: 14px;
+        margin: 18px 0;
+      }
+
+      label {
+        display: grid;
+        gap: 5px;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 9px 10px;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      button {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 9px 12px;
+        color: var(--ink);
+        background: #fff;
+        cursor: pointer;
+      }
+
+      button.primary,
+      button.active {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #fff;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
+      .panel {
+        padding: 14px;
+        margin: 12px 0;
+      }
+
+      .status-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        background: #fbfaf7;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.35rem;
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .mono {
+        overflow-wrap: anywhere;
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Consolas,
+          monospace;
+        font-size: 0.82rem;
+      }
+
+      .bad {
+        color: var(--danger);
+      }
+
+      .ok {
+        color: var(--accent);
+      }
+
+      .warn {
+        color: var(--warn);
+      }
+
+      .unit-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .unit-card {
+        display: grid;
+        gap: 8px;
+        min-height: 142px;
+        padding: 12px;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .unit-card.repair {
+        border-color: #f0a199;
+        background: var(--danger-soft);
+      }
+
+      .unit-card.complete {
+        border-color: #9bd0c4;
+        background: #f3fffb;
+      }
+
+      .head {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: baseline;
+      }
+
+      .unit-id {
+        font-size: 1.1rem;
+        font-weight: 800;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 3px 7px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: #0b5d56;
+        font-size: 0.78rem;
+      }
+
+      .tag.repair {
+        background: #ffe1dc;
+        color: var(--danger);
+      }
+
+      .tag.pending {
+        background: #fff1cf;
+        color: var(--warn);
+      }
+
+      @media (max-width: 860px) {
+        .topbar,
+        .status-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>圖音檔審查總覽</h1>
+        <p class="muted">支援長期 600 課。總覽不載入圖片與音檔，點進單課才載入完整圖文音。</p>
+      </header>
+
+      <section class="topbar">
+        <label>
+          Git ref
+          <input id="refInput" type="text" value="main" autocomplete="off" />
+        </label>
+        <label>
+          Repo owner/name
+          <input id="repoInput" type="text" value="icelog-TU/character-recognition-dojo" autocomplete="off" />
+        </label>
+        <label>
+          搜尋
+          <input id="searchInput" type="text" placeholder="課號、新字、標題、句子" autocomplete="off" />
+        </label>
+        <div class="button-row">
+          <button id="loadButton" class="primary" type="button">載入總覽</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="button-row">
+          <button type="button" class="active" data-filter="all">全部</button>
+          <button type="button" data-filter="repair">需要修</button>
+          <button type="button" data-filter="complete">已看完</button>
+          <button type="button" data-filter="unreviewed">未審</button>
+          <button type="button" data-filter="recent">最新 60 課</button>
+          <button id="copyAllRepairCommandButton" type="button" disabled>複製全部 repair 查詢</button>
+        </div>
+        <p id="statusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
+      </section>
+
+      <section class="panel">
+        <div class="status-grid">
+          <div class="metric">
+            <span class="muted">課程數</span>
+            <strong id="totalCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">需要修</span>
+            <strong id="repairUnitCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">已看完</span>
+            <strong id="completeCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">未審</span>
+            <strong id="unreviewedCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">版本</span>
+            <strong id="shortSha">-</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>課程列表</h2>
+        <div id="unitGrid" class="unit-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
+      import { collection, getDocs, getFirestore } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB79G4vRFLaRIPh1waBpJ99AS2BOt-ZzGk",
+        authDomain: "character-recognition-dojo.firebaseapp.com",
+        projectId: "character-recognition-dojo",
+        storageBucket: "character-recognition-dojo.firebasestorage.app",
+        messagingSenderId: "602707345296",
+        appId: "1:602707345296:web:4ef123812e6425ba18fd15",
+      };
+
+      const $ = (id) => document.getElementById(id);
+      const params = new URLSearchParams(window.location.search);
+      const state = {
+        repo: params.get("repo") || "icelog-TU/character-recognition-dojo",
+        ref: params.get("ref") || "main",
+        sha: "",
+        units: [],
+        reviewByUnit: new Map(),
+        filter: params.get("filter") || "all",
+        search: "",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      $("repoInput").value = state.repo;
+      $("refInput").value = state.ref;
+      $("searchInput").value = state.search;
+
+      function html(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
+
+      function setStatus(message, tone = "") {
+        $("statusLine").className = `muted ${tone}`.trim();
+        $("statusLine").textContent = message;
+      }
+
+      function rawUrl(path) {
+        return `https://raw.githubusercontent.com/${state.repo}/${state.sha}/${path}`;
+      }
+
+      async function fetchJson(url, label) {
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) throw new Error(`${label} HTTP ${response.status}`);
+        return response.json();
+      }
+
+      async function resolveRef() {
+        const data = await fetchJson(
+          `https://api.github.com/repos/${state.repo}/commits/${encodeURIComponent(state.ref)}`,
+          "Git ref",
+        );
+        state.sha = data.sha;
+      }
+
+      function unitSearchText(unit) {
+        return [
+          unit.id,
+          unit.title,
+          ...(unit.newChars || []),
+          ...(unit.sentences || []).map((sentence) => sentence.text || sentence.spokenText || ""),
+        ]
+          .join(" ")
+          .toLowerCase();
+      }
+
+      async function loadCurriculum() {
+        const curriculum = await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum");
+        const lessons = (curriculum.lessons || []).map((unit) => ({ ...unit, kind: "lesson" }));
+        const reviews = (curriculum.reviewLessons || []).map((unit) => ({ ...unit, kind: "review" }));
+        state.units = [...lessons, ...reviews].sort((a, b) => {
+          if (a.kind !== b.kind) return a.kind === "lesson" ? -1 : 1;
+          return (a.order || Number(a.id?.replace(/\D/g, "") || 0)) - (b.order || Number(b.id?.replace(/\D/g, "") || 0));
+        });
+      }
+
+      async function loadReviewDocs() {
+        state.reviewByUnit = new Map();
+        try {
+          const snapshots = await getDocs(collection(db, "assetReviews"));
+          snapshots.forEach((snapshot) => {
+            const data = snapshot.data();
+            if (data.repo !== state.repo || !data.unit) return;
+            if (data.ref !== state.ref && !(state.ref === "main" && data.ref === "main")) return;
+            const previous = state.reviewByUnit.get(data.unit);
+            const previousMs = previous?.updatedAt?.toMillis?.() || 0;
+            const nextMs = data.updatedAt?.toMillis?.() || 0;
+            if (!previous || nextMs >= previousMs) state.reviewByUnit.set(data.unit, data);
+          });
+        } catch (error) {
+          setStatus(`已載入課程，但 Firestore review 狀態讀取失敗：${error.message}`, "bad");
+        }
+      }
+
+      function reviewStatus(unit) {
+        const review = state.reviewByUnit.get(unit.id);
+        if (!review) return { kind: "unreviewed", label: "未審", repairCount: 0 };
+        if ((review.repairCount || 0) > 0) return { kind: "repair", label: `需要修 ${review.repairCount}`, repairCount: review.repairCount || 0 };
+        if (review.reviewComplete === true) return { kind: "complete", label: "已看完", repairCount: 0 };
+        return { kind: "started", label: "已開始", repairCount: 0 };
+      }
+
+      function filteredUnits() {
+        const query = state.search.trim().toLowerCase();
+        let units = state.units;
+        if (query) units = units.filter((unit) => unitSearchText(unit).includes(query));
+        if (state.filter === "repair") units = units.filter((unit) => reviewStatus(unit).kind === "repair");
+        if (state.filter === "complete") units = units.filter((unit) => reviewStatus(unit).kind === "complete");
+        if (state.filter === "unreviewed") units = units.filter((unit) => reviewStatus(unit).kind === "unreviewed");
+        if (state.filter === "recent") units = units.filter((unit) => unit.kind === "lesson").slice(-60);
+        return units;
+      }
+
+      function lessonLink(unit) {
+        return `lesson-asset-review.html?repo=${encodeURIComponent(state.repo)}&unit=${encodeURIComponent(unit.id)}&ref=${encodeURIComponent(state.ref)}`;
+      }
+
+      function render() {
+        const repairUnits = state.units.filter((unit) => reviewStatus(unit).kind === "repair");
+        const completeUnits = state.units.filter((unit) => reviewStatus(unit).kind === "complete");
+        const unreviewedUnits = state.units.filter((unit) => reviewStatus(unit).kind === "unreviewed");
+        $("totalCount").textContent = String(state.units.length);
+        $("repairUnitCount").textContent = String(repairUnits.length);
+        $("completeCount").textContent = String(completeUnits.length);
+        $("unreviewedCount").textContent = String(unreviewedUnits.length);
+        $("shortSha").textContent = state.sha ? state.sha.slice(0, 7) : "-";
+        $("copyAllRepairCommandButton").disabled = !state.sha;
+
+        $("unitGrid").innerHTML = filteredUnits()
+          .map((unit) => {
+            const status = reviewStatus(unit);
+            const title = unit.title || (unit.newChars || []).join("");
+            const chars = (unit.newChars || []).join("、") || unit.kind;
+            return `
+              <a class="unit-card ${status.kind === "repair" ? "repair" : status.kind === "complete" ? "complete" : ""}" href="${html(lessonLink(unit))}">
+                <div class="head">
+                  <span class="unit-id">${html(unit.id)}</span>
+                  <span class="tag ${status.kind === "repair" ? "repair" : status.kind === "unreviewed" ? "pending" : ""}">${html(status.label)}</span>
+                </div>
+                <div>${html(title)}</div>
+                <div class="muted">${html(chars)}</div>
+                <div class="muted">${html((unit.sentences || []).slice(0, 2).map((sentence) => sentence.text || sentence.spokenText || "").join(" / "))}</div>
+              </a>
+            `;
+          })
+          .join("");
+      }
+
+      async function load() {
+        state.repo = $("repoInput").value.trim();
+        state.ref = $("refInput").value.trim() || "main";
+        state.search = $("searchInput").value;
+        $("loadButton").disabled = true;
+        setStatus("載入課程總覽...");
+        try {
+          await resolveRef();
+          await loadCurriculum();
+          await loadReviewDocs();
+          render();
+          setStatus(`已載入 ${state.units.length} 個課程/複習單元，commit ${state.sha.slice(0, 12)}。`, "ok");
+        } catch (error) {
+          state.units = [];
+          render();
+          setStatus(error.message, "bad");
+        } finally {
+          $("loadButton").disabled = false;
+        }
+      }
+
+      $("loadButton").addEventListener("click", load);
+      $("searchInput").addEventListener("input", () => {
+        state.search = $("searchInput").value;
+        render();
+      });
+      document.querySelectorAll("[data-filter]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.filter = button.dataset.filter;
+          document.querySelectorAll("[data-filter]").forEach((candidate) => candidate.classList.toggle("active", candidate === button));
+          render();
+        });
+      });
+      $("copyAllRepairCommandButton").addEventListener("click", () => {
+        navigator.clipboard.writeText(`npm run asset:review-status -- --list --ref ${state.ref}`);
+      });
+
+      load();
+    </script>
+  </body>
+</html>

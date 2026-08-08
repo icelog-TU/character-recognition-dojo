@@ -311,6 +311,7 @@
           <input id="repoInput" type="text" value="icelog-TU/character-recognition-dojo" autocomplete="off" />
         </label>
         <div class="button-row">
+          <button id="overviewButton" type="button">回總覽</button>
           <button id="loadButton" class="primary" type="button">載入</button>
         </div>
       </section>
@@ -448,11 +449,19 @@
       }
 
       function reviewId() {
+        return base64Url(`${state.repo}|${state.unit}|${reviewScope()}`);
+      }
+
+      function legacyShaReviewId() {
         return base64Url(`${state.repo}|${state.unit}|${state.sha}`);
       }
 
+      function reviewScope() {
+        return state.ref.trim().toLowerCase() === "main" ? "main" : state.sha;
+      }
+
       function storageKey() {
-        return `asset-review:${state.repo}:${state.unit}:${state.sha}`;
+        return `asset-review:${state.repo}:${state.unit}:${reviewScope()}`;
       }
 
       function rawUrl(path) {
@@ -653,6 +662,7 @@
           `Repo: ${state.repo}`,
           `Ref: ${state.ref}`,
           `Commit: ${state.sha}`,
+          `Review scope: ${reviewScope()}`,
           `Source: ${state.sourcePath}`,
           `Review complete: ${state.reviewComplete ? "yes" : "no"}`,
           `Needs repair: ${repairCount()}`,
@@ -666,14 +676,14 @@
       }
 
       function repairCommand() {
-        return `npm run asset:review-status -- --unit ${state.unit} --ref ${state.sha}`;
+        return `npm run asset:review-status -- --unit ${state.unit} --ref ${reviewScope() === "main" ? "main" : state.sha}`;
       }
 
       function frozenLink() {
         const url = new URL(window.location.href);
         url.searchParams.set("repo", state.repo);
         url.searchParams.set("unit", state.unit);
-        url.searchParams.set("ref", state.sha);
+        url.searchParams.set("ref", reviewScope() === "main" ? "main" : state.sha);
         return url.toString();
       }
 
@@ -803,6 +813,14 @@
         try {
           const snapshot = await getDoc(ref);
           if (snapshot.exists()) mergeCloud(snapshot.data());
+          else if (reviewScope() === "main") {
+            const legacySnapshot = await getDoc(doc(db, "assetReviews", legacyShaReviewId()));
+            if (legacySnapshot.exists()) {
+              mergeCloud(legacySnapshot.data());
+              setCloud("已讀取舊版 commit-key 審查紀錄；下一次同步會搬到 main queue。");
+              await saveCloud();
+            }
+          }
           state.unsubscribeReview = onSnapshot(
             ref,
             (next) => {
@@ -891,6 +909,9 @@
       $("copyFrozenLinkButton").addEventListener("click", () => navigator.clipboard.writeText(frozenLink()));
       $("copyRepairCommandButton").addEventListener("click", () => navigator.clipboard.writeText(repairCommand()));
       $("copySummaryButton").addEventListener("click", () => navigator.clipboard.writeText(summaryText()));
+      $("overviewButton").addEventListener("click", () => {
+        window.location.href = `asset-review-index.html?repo=${encodeURIComponent(state.repo)}&ref=${encodeURIComponent(state.ref || "main")}`;
+      });
 
       onAuthStateChanged(auth, async (user) => {
         state.user = user;

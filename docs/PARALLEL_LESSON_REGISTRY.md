@@ -76,7 +76,7 @@ Every parallel lesson thread must update this registry at these three checkpoint
    - Update `Branch / Commit` to the pushed branch and short commit hash.
    - `Notes` must say whether it is only a branch/draft push or ready to merge.
    - If teacher pre-merge audio approval is explicitly required, `Notes` must include the permanent audio-review URL and say either `audio-review pending teacher OK` or `audio-review OK` with the reviewed commit SHA.
-   - For normal post-merge teacher review, `Notes` or the final handoff should include the permanent asset-review URL and `asset:review-status` command. This is a repair queue, not a merge blocker.
+   - For normal post-merge teacher review, `Notes` or the final handoff should include the permanent asset-review index URL, direct unit URL, and `asset:review-status` command. This is a repair queue, not a merge blocker.
 Merge cleanup is separate from the three parallel-prep checkpoints. After the lesson enters `main` and `docs/CURRICULUM_LEDGER.md` is updated, remove the active row or change it to `merged` in the same cleanup commit. The registry must not keep stale active rows for lessons already merged into `src/curriculum/sample-lessons.json`.
 
 If a thread cannot push the registry update, it must say so in chat and must not start large image/audio work as invisible parallel work.
