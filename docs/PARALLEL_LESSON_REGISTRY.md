@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L157 | 吹 / normal lesson | claimed | Production thread C | codex/l157-complete-package / local | L154:等, L155:再, L156:風 | 等, 再, 風 | `curriculum-workflow/lesson-requests/L157.json`; `curriculum-workflow/generated/L157-generation-packet.md`; `curriculum-workflow/drafts/L157-draft.json` | `curriculum-workflow/audio-inbox/L157/`; `public/assets/lessons/L157/` | accepted handoff and starting complete package; dependencies not in latest `origin/main`, so production JSON/planner/ledger will not be updated |
+| L157 | 吹 / normal lesson | ready-blocked-by-dependency | Production thread C | codex/l157-complete-package / final SHA in handoff | L154:等, L155:再, L156:風 | 等, 再, 風 | `curriculum-workflow/lesson-requests/L157.json`; `curriculum-workflow/generated/L157-generation-packet.md`; `curriculum-workflow/drafts/L157-draft.json` | `curriculum-workflow/audio-inbox/L157/`; `public/assets/lessons/L157/` | complete package prepared; audio-review pending teacher OK; L154-L156 are not in latest `origin/main`, so production JSON/planner/ledger are intentionally not updated |
 
 ## Status Values
 
