@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L164 | 擦 / normal lesson | claimed | Production C | codex/l164-complete-package / 3b85d49 | L159:動, L160:葉, L161:綠, L162:滿, L163:掃 | 動, 葉, 綠, 滿, 掃 | `curriculum-workflow/lesson-requests/L164.json`; `curriculum-workflow/generated/L164-generation-packet.md` | `public/assets/lessons/L164/images/`; `public/assets/lessons/L164/audio/` | accepted handoff and starting complete package |
+| L164 | 擦 / normal lesson | ready-blocked-by-dependency | Production C | codex/l164-complete-package / final commit in handoff | L159:動, L160:葉, L161:綠, L162:滿, L163:掃 | 動, 葉, 綠, 滿, 掃 | `curriculum-workflow/lesson-requests/L164.json`; `curriculum-workflow/generated/L164-generation-packet.md`; `curriculum-workflow/drafts/L164-draft.json` | `public/assets/lessons/L164/images/`; `public/assets/lessons/L164/audio/` | Complete package prepared with final images, OpenAI sentence audio, standalone charAudio, G02/G05 audio, and aligned timings. Production JSON/planner/ledger intentionally not updated until L159-L163 merge. Post-merge asset review via permanent lesson asset review URL. |
 
 ## Status Values
 
