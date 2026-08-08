@@ -1,0 +1,339 @@
+{
+  "id": "L148",
+  "order": 148,
+  "newChars": [
+    "時"
+  ],
+  "zhuyin": {
+    "時": "ㄕˊ"
+  },
+  "title": "時間有時同時",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L143",
+    "L144",
+    "L145",
+    "L146",
+    "L147"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時"
+    ],
+    "provisionalLearnedChars": [],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "時",
+      "間",
+      "房",
+      "所",
+      "怎",
+      "以"
+    ],
+    "targetCharMinimumCount": {
+      "時": 3
+    },
+    "recentTargetMinimumCounts": {
+      "間": 2,
+      "房": 2,
+      "所": 2,
+      "怎": 1,
+      "以": 1
+    },
+    "disallowedChars": [
+      "電",
+      "動",
+      "遊",
+      "戲",
+      "鐘",
+      "錶",
+      "聲",
+      "音",
+      "爲",
+      "裏"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L148 時. Use these sentences exactly; spokenText equals text with punctuation removed. Latest origin/main includes L143-L147, so L148 may enter production JSON after assets, timings, planner export, ledger update, and verification pass. Use Taiwan Traditional Chinese and Taiwan zhuyin only; do not use Hanyu pinyin. Use 為, not 爲; use 裡, not 裏. Do not add unlearned display characters such as 電、動、遊、戲、鐘、錶、聲、音. Image notes may describe an electronic game scene, but those words must not appear in lesson display text or images. Images must use L058 style anchors and contain no text, numbers, signs, letters, zhuyin, labels, logos, icons with writing, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned before production release.",
+  "approvedSentences": [
+    {
+      "text": "爸爸有時在書房下棋。",
+      "spokenText": "爸爸有時在書房下棋",
+      "focusChar": "時",
+      "displayLines": [
+        "爸爸有時",
+        "在書房下棋。"
+      ],
+      "hanCharCount": 9,
+      "scene": "Dad is playing chess or go in a study room. Show a study-like room and a board with pieces, but no readable text on books, papers, or objects."
+    },
+    {
+      "text": "爸媽同時來房間找我。",
+      "spokenText": "爸媽同時來房間找我",
+      "focusChar": "時",
+      "displayLines": [
+        "爸媽同時",
+        "來房間找我。"
+      ],
+      "hanCharCount": 9,
+      "scene": "Mom and dad enter or arrive at a room at the same time to look for the child. Show the child in the room, with both parents arriving together. No text or labels."
+    },
+    {
+      "text": "時間到了，所有人一起出門。",
+      "spokenText": "時間到了所有人一起出門",
+      "focusChar": "時",
+      "displayLines": [
+        "時間到了，",
+        "所有人",
+        "一起出門。"
+      ],
+      "hanCharCount": 11,
+      "scene": "A family or group leaves home together because it is time to go. Do not show clock numbers, written schedules, signs, or labels."
+    },
+    {
+      "text": "你的臉怎麼這麼紅？",
+      "spokenText": "你的臉怎麼這麼紅",
+      "focusChar": "怎",
+      "displayLines": [
+        "你的臉",
+        "怎麼這麼紅？"
+      ],
+      "hanCharCount": 8,
+      "scene": "A child has a very red face, and another person looks concerned or surprised. The reason can be heat, running, or embarrassment, but keep it visual and child-friendly. No text."
+    },
+    {
+      "text": "這個太難得分，所以我不玩了。",
+      "spokenText": "這個太難得分所以我不玩了",
+      "focusChar": "所",
+      "displayLines": [
+        "這個太難",
+        "得分，所以",
+        "我不玩了。"
+      ],
+      "hanCharCount": 12,
+      "scene": "A child is frustrated because an electronic game or handheld game is too hard to score points in, so the child stops playing. The screen must not contain text, numbers, icons with letters, scores, labels, or UI text."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L148-G01",
+      "type": "find-character",
+      "sentenceId": "L148-S03",
+      "targetChar": "時",
+      "reason": "Clear use of 時 in 時間 at the start of the sentence."
+    },
+    {
+      "id": "L148-G02",
+      "type": "teach-character",
+      "sentenceId": "L148-S01",
+      "targetChar": "時",
+      "targetCharIndex": 3,
+      "prefixText": "爸爸有",
+      "suffixText": "在書房下棋",
+      "requiredAudio": [
+        "public/assets/lessons/L148/audio/L148-G02-prefix.m4a",
+        "public/assets/lessons/L148/audio/L148-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L148-G03",
+      "type": "missing-character",
+      "sentenceId": "L148-S02",
+      "targetChar": "時",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "時",
+        "間",
+        "房"
+      ]
+    },
+    {
+      "id": "L148-G04",
+      "type": "partial-order",
+      "sentenceId": "L148-S04",
+      "targetChar": "怎",
+      "chunks": [
+        "你的臉",
+        "怎麼",
+        "這麼紅"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L148-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L148-S05",
+      "targetChar": "所",
+      "correctText": "這個太難得分，所以我不玩了。",
+      "correctSpokenText": "這個太難得分所以我不玩了",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "這個太難得分，所以我不看了。",
+          "spokenText": "這個太難得分所以我不看了",
+          "audioSrc": "/assets/lessons/L148/audio/L148-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "這個太難得分，所以我不吃了。",
+          "spokenText": "這個太難得分所以我不吃了",
+          "audioSrc": "/assets/lessons/L148/audio/L148-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

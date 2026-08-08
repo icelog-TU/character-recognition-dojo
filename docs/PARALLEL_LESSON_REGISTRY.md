@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L148 | 時 / normal lesson | claimed | Production thread C | codex/l148-complete-package / local | L143:以, L144:怎, L145:所, L146:房, L147:間 | none; dependencies merged in origin/main | curriculum-workflow/lesson-requests/L148.json; curriculum-workflow/generated/L148-generation-packet.md; curriculum-workflow/drafts/L148-draft.json | curriculum-workflow/audio-inbox/L148/; public/assets/lessons/L148/ | Teacher-approved production handoff received. Dependencies exist in latest origin/main, so production JSON/planner/ledger may be updated after assets and checks. |
 
 ## Status Values
 
