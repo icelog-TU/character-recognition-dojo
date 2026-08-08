@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 169:
+Characters taught after Lesson 170:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回`
 
 Recent review pool for the next lesson:
 
-`亂 髒 又 洗 先 擦 掃 滿 綠 葉 動 樹 吹 風 再 等`
+`回 亂 髒 又 洗 先 擦 掃 滿 綠 葉 動 樹 吹 風 再`
 
 ## Visual Continuity Ledger
 
@@ -262,9 +262,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 | L169 | 亂 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂 | 房間又髒又亂。 / 髒衣髒帽不要亂放。 / 誰在桌上亂畫？去擦掉。 / 媽媽洗菜做飯，我擦桌子。 / 先脫衣，再洗頭。 | 髒又洗先擦 | Introduces `亂` through approved sentence contexts. Reviews recent `髒又洗先擦`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
+| L170 | 回 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回 | 書包好髒，先拿去洗。 / 小孩亂走，找不到回家的路。 / 眼鏡不要亂放，放回盒子裡。 / 又大又圓的紅鼻子。 / 小狗髒了，回家洗一洗。 | 亂髒又洗先 | Introduces `回` through approved sentence contexts. Reviews recent `亂髒又洗先`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+
 ## Planned Lessons
 
-Merged curriculum is complete through L169. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L170. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
