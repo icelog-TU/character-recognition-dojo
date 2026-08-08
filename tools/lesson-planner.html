@@ -1,0 +1,3398 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>認字練功房｜下一課規劃工具</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #25211d;
+        --muted: #6f6861;
+        --line: #ddd5ca;
+        --paper: #fffaf1;
+        --panel: #fffdf8;
+        --soft: #f5ead9;
+        --primary: #19796f;
+        --primary-soft: #e3f3ef;
+        --accent: #f05545;
+        --accent-soft: #ffe4df;
+        --gold: #e8a926;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.55;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px clamp(12px, 4vw, 24px);
+        background: #ff6506;
+        color: #fff;
+        box-shadow: 0 8px 24px rgba(117, 65, 12, 0.18);
+      }
+
+      .brand {
+        display: grid;
+        gap: 2px;
+      }
+
+      .brand strong {
+        font-size: clamp(1rem, 3.5vw, 1.35rem);
+        line-height: 1.1;
+      }
+
+      .brand span {
+        font-size: 0.78rem;
+        opacity: 0.9;
+      }
+
+      .header-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .topbar .btn {
+        min-height: 36px;
+        padding: 7px 12px;
+        font-size: 0.92rem;
+      }
+
+      .page {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+        padding: clamp(14px, 4vw, 28px);
+      }
+
+      .panel,
+      .choice-card,
+      .request-panel {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--panel);
+        box-shadow: 0 12px 28px rgba(74, 55, 32, 0.08);
+      }
+
+      .panel {
+        padding: clamp(16px, 4vw, 24px);
+        margin-bottom: 16px;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 12px;
+        background: #fff;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: clamp(1.3rem, 5vw, 2rem);
+        line-height: 1.1;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .learned {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .learned span {
+        min-width: 34px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        padding: 4px 8px;
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .learned-lookup {
+        margin-top: 12px;
+        border: 1px solid rgba(25, 121, 111, 0.22);
+        border-radius: 12px;
+        background: #eefaf5;
+        padding: 12px;
+      }
+
+      .learned-lookup h3 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
+
+      .lookup-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .lookup-row input {
+        min-width: 0;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--ink);
+        padding: 10px;
+      }
+
+      .lookup-result {
+        margin-top: 8px;
+        color: var(--primary);
+        font-weight: 850;
+      }
+
+      .lookup-result.missing {
+        color: #a43c31;
+      }
+
+      .learned-details {
+        margin-top: 10px;
+      }
+
+      .learned-details summary,
+      .settings-panel summary {
+        cursor: pointer;
+        font-weight: 850;
+      }
+
+      .plan-slot-controls {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .plan-slot {
+        display: grid;
+        gap: 4px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        padding: 12px;
+        cursor: pointer;
+      }
+
+      .plan-slot input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .plan-slot:has(input:checked) {
+        border-color: var(--primary);
+        background: var(--primary-soft);
+        box-shadow: 0 0 0 4px rgba(25, 121, 111, 0.1);
+      }
+
+      .plan-slot strong {
+        font-size: 1.05rem;
+      }
+
+      .plan-slot span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .dependency-note {
+        margin-top: 10px;
+        border: 1px solid rgba(25, 121, 111, 0.22);
+        border-radius: 10px;
+        background: #eefaf5;
+        padding: 10px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .manual-choice-panel {
+        margin-top: 14px;
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+
+      .manual-grid {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr 2fr auto;
+        gap: 8px;
+        align-items: end;
+        margin-top: 10px;
+      }
+
+      .manual-field {
+        display: grid;
+        gap: 4px;
+      }
+
+      .manual-field label {
+        color: var(--muted);
+        font-size: 0.86rem;
+        font-weight: 800;
+      }
+
+      .manual-field input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--ink);
+        padding: 10px;
+      }
+
+      .choice-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .choice-card {
+        padding: clamp(14px, 3vw, 20px);
+      }
+
+      .choice-card.selected {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 5px rgba(25, 121, 111, 0.12), 0 12px 28px rgba(25, 121, 111, 0.14);
+        scroll-margin-top: 116px;
+      }
+
+      .choice-card.previewing {
+        border-color: rgba(25, 121, 111, 0.48);
+        box-shadow: 0 0 0 4px rgba(25, 121, 111, 0.08), 0 12px 28px rgba(74, 55, 32, 0.08);
+        scroll-margin-top: 116px;
+      }
+
+      .choice-card.selected::before {
+        content: "目前正在編輯這個候選字";
+        display: inline-flex;
+        margin-bottom: 10px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: var(--primary);
+        padding: 4px 10px;
+        font-size: 0.88rem;
+        font-weight: 850;
+      }
+
+      .choice-card.compact .sentence-list,
+      .choice-card.compact .custom-section,
+      .choice-card.previewing:not(.selected) .custom-section,
+      .choice-card.previewing:not(.selected) .sentence-row > input[type="checkbox"],
+      .choice-card.previewing:not(.selected) .candidate-tools,
+      .choice-card.previewing:not(.selected) .note-input {
+        display: none;
+      }
+
+      .choice-card.previewing:not(.selected) .sentence-row {
+        grid-template-columns: 1fr;
+      }
+
+      .choice-head {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .choice-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .char-badge {
+        display: grid;
+        place-items: center;
+        width: 58px;
+        height: 58px;
+        border-radius: 12px;
+        background: var(--primary-soft);
+        color: var(--primary);
+        font-size: 2.2rem;
+        font-weight: 900;
+      }
+
+      .choice-head h2 {
+        margin: 0;
+        font-size: 1.25rem;
+      }
+
+      .choice-head p,
+      .sentence-row p,
+      .help {
+        margin: 4px 0 0;
+        color: var(--muted);
+      }
+
+      .sentence-list {
+        display: grid;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .selection-meter {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin-top: 14px;
+        border: 2px solid rgba(25, 121, 111, 0.22);
+        border-radius: 12px;
+        background: #eefaf5;
+        padding: 10px 12px;
+      }
+
+      .selection-meter strong {
+        color: var(--primary);
+        font-size: 1.18rem;
+      }
+
+      .selection-meter span {
+        color: var(--muted);
+        font-weight: 750;
+      }
+
+      .selection-meter.warning {
+        border-color: rgba(240, 85, 69, 0.35);
+        background: var(--accent-soft);
+      }
+
+      .review-coverage {
+        position: sticky;
+        top: 74px;
+        z-index: 12;
+        display: grid;
+        gap: 8px;
+        margin-top: 10px;
+        border: 2px solid rgba(232, 169, 38, 0.35);
+        border-radius: 12px;
+        background: #fff8e6;
+        padding: 10px 12px;
+        box-shadow: 0 10px 22px rgba(74, 55, 32, 0.14);
+      }
+
+      .review-coverage .selection-meter {
+        margin-top: 0;
+        padding: 8px 10px;
+      }
+
+      .review-coverage strong {
+        font-size: 1rem;
+      }
+
+      .sticky-request-actions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .sticky-request-actions .btn {
+        min-height: 38px;
+        padding: 7px 10px;
+        white-space: normal;
+        line-height: 1.2;
+      }
+
+      .review-count-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .review-count {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 4px;
+        border: 1px solid rgba(232, 169, 38, 0.42);
+        border-radius: 999px;
+        background: #fffdf8;
+        padding: 4px 10px;
+        font-weight: 850;
+      }
+
+      .review-count.zero {
+        color: var(--muted);
+      }
+
+      .review-count span {
+        color: var(--primary);
+        font-size: 1.12rem;
+      }
+
+      .optimizer-summary {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .optimizer-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        border: 1px solid rgba(25, 121, 111, 0.22);
+        border-radius: 999px;
+        background: #eefaf5;
+        color: var(--primary);
+        padding: 4px 10px;
+        font-weight: 850;
+      }
+
+      .optimizer-pill.warning {
+        border-color: rgba(240, 85, 69, 0.32);
+        background: var(--accent-soft);
+        color: #a43c31;
+      }
+
+      .optimizer-pill.pending {
+        border-color: rgba(232, 169, 38, 0.42);
+        background: #fff8ec;
+        color: #8a5b10;
+      }
+
+      .custom-section {
+        margin-top: 14px;
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+
+      .custom-section h3 {
+        margin: 0;
+        font-size: 1.05rem;
+      }
+
+      .ai-settings-panel .help,
+      .manual-choice-panel .help {
+        margin-bottom: 12px;
+      }
+
+      .settings-panel {
+        margin-bottom: 16px;
+      }
+
+      .settings-panel > summary {
+        list-style: none;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--panel);
+        box-shadow: 0 12px 28px rgba(74, 55, 32, 0.08);
+        padding: 12px clamp(14px, 3vw, 18px);
+      }
+
+      .settings-panel > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .settings-panel > summary::after {
+        content: "展開";
+        float: right;
+        color: var(--primary);
+      }
+
+      .settings-panel[open] > summary::after {
+        content: "收起";
+      }
+
+      .settings-panel .ai-settings-panel {
+        margin-top: 8px;
+      }
+
+      .ai-grid {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr auto;
+        gap: 10px;
+        align-items: end;
+      }
+
+      .ai-field {
+        display: grid;
+        gap: 6px;
+      }
+
+      .ai-field label {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 800;
+      }
+
+      .ai-field input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px;
+        font: inherit;
+      }
+
+      .ai-status {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .draft-box {
+        margin-top: 12px;
+        border: 2px dashed #c9bca9;
+        border-radius: 12px;
+        background: #fff8ec;
+        padding: 12px;
+      }
+
+      .draft-box h4,
+      .added-list h4 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
+
+      .sentence-row {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        align-items: start;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        padding: 10px;
+      }
+
+      .sentence-row.checked {
+        border-color: rgba(25, 121, 111, 0.42);
+        background: #f0fbf6;
+      }
+
+      .sentence-row.preview-only {
+        grid-template-columns: 1fr;
+      }
+
+      .sentence-row > input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        margin-top: 4px;
+        accent-color: var(--primary);
+      }
+
+      .sentence-text {
+        font-size: 1.22rem;
+        font-weight: 850;
+      }
+
+      .sentence-row.edited {
+        border-color: rgba(25, 121, 111, 0.32);
+        background: #f0fbf6;
+      }
+
+      .candidate-tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .candidate-original {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .candidate-edit-panel {
+        margin-top: 10px;
+        border: 2px dashed #b7d9d2;
+        border-radius: 10px;
+        background: #f8fffc;
+        padding: 10px;
+      }
+
+      .sentence-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .pill {
+        border-radius: 999px;
+        background: var(--soft);
+        padding: 2px 8px;
+      }
+
+      .custom-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.4fr;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .custom-section {
+        margin-top: 12px;
+      }
+
+      .custom-section h3 {
+        margin-bottom: 6px;
+      }
+
+      .custom-section + .sentence-list {
+        margin-top: 14px;
+      }
+
+      .candidate-edit-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.4fr;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .candidate-edit-grid input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--ink);
+        padding: 10px;
+      }
+
+      .custom-grid input,
+      .note-input,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--ink);
+        padding: 10px;
+      }
+
+      .note-input {
+        min-height: 64px;
+        resize: vertical;
+        font-family: inherit;
+        font-size: 1rem;
+      }
+
+      .custom-grid .note-input {
+        grid-column: 1 / -1;
+      }
+
+      .custom-tools {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .custom-feedback {
+        color: var(--primary);
+        font-weight: 850;
+      }
+
+      .added-list {
+        display: grid;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .added-row {
+        border: 2px solid rgba(25, 121, 111, 0.26);
+        border-radius: 10px;
+        background: #f0fbf6;
+        padding: 12px;
+      }
+
+      .added-row-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .added-sentence {
+        font-size: 1.28rem;
+        font-weight: 900;
+      }
+
+      .added-notes {
+        margin-top: 8px;
+        color: var(--muted);
+      }
+
+      .edit-fields {
+        display: none;
+        margin-top: 10px;
+      }
+
+      .added-row.editing .edit-fields {
+        display: grid;
+      }
+
+      .request-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .nearby-request-panel {
+        margin-top: 14px;
+        border: 2px solid rgba(25, 121, 111, 0.22);
+        border-radius: 12px;
+        background: #eefaf5;
+        padding: 12px;
+      }
+
+      .nearby-request-panel h4 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .request-panel {
+        margin-top: 16px;
+        padding: clamp(14px, 3vw, 20px);
+      }
+
+      textarea {
+        min-height: 240px;
+        resize: vertical;
+        font-family: Consolas, "SFMono-Regular", monospace;
+        font-size: 0.88rem;
+      }
+
+      .btn {
+        min-height: 42px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--primary);
+        color: #fff;
+        padding: 9px 14px;
+        font-weight: 850;
+        cursor: pointer;
+      }
+
+      .btn.secondary {
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--ink);
+      }
+
+      .btn.danger {
+        background: var(--accent);
+      }
+
+      .btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      .status {
+        margin-top: 10px;
+        color: var(--primary);
+        font-weight: 800;
+      }
+
+      @media (max-width: 760px) {
+        .topbar {
+          align-items: flex-start;
+          gap: 8px;
+          padding: 8px 10px;
+        }
+
+        .brand strong {
+          font-size: 1rem;
+        }
+
+        .brand span {
+          font-size: 0.74rem;
+        }
+
+        .header-actions {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 6px;
+          width: min(58vw, 340px);
+        }
+
+        .topbar .btn {
+          min-height: 32px;
+          padding: 5px 8px;
+          font-size: 0.78rem;
+          text-align: center;
+        }
+
+        .review-coverage {
+          top: 86px;
+          max-height: calc(100vh - 96px);
+          overflow: auto;
+        }
+
+        .sticky-request-actions {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .sticky-request-actions .btn {
+          min-height: 34px;
+          font-size: 0.86rem;
+        }
+
+        .lookup-row {
+          grid-template-columns: 1fr;
+        }
+
+        .summary-grid,
+        .custom-grid,
+        .candidate-edit-grid,
+        .manual-grid,
+        .ai-grid,
+        .plan-slot-controls {
+          grid-template-columns: 1fr;
+        }
+
+        .choice-head {
+          grid-template-columns: auto 1fr;
+        }
+
+        .choice-actions {
+          grid-column: 1 / -1;
+          justify-content: stretch;
+        }
+
+        .choice-actions .btn {
+          flex: 1 1 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>下一課規劃工具</strong>
+        <span>認字練功房｜教師用入口</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn secondary" id="refreshBtn" type="button">整理推薦</button>
+        <button class="btn secondary" id="aiRecommendBtn" type="button">AI 推薦新字</button>
+        <a class="btn secondary" href="../">回 APP</a>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="panel" id="summaryPanel">
+        <p class="help">正在讀取教材資料。</p>
+      </section>
+
+      <section class="panel" id="planSlotPanel"></section>
+
+      <section class="panel manual-choice-panel" aria-labelledby="manualChoiceTitle">
+        <h2 id="manualChoiceTitle">自選下一課字</h2>
+        <p class="help">候選清單沒有你想教的字時，可以自己加入；也可以輸入「朋友」這種必須一起學的兩字詞。加入後到候選字卡片按「AI 生成 10 句」，再在 Planner 裡審核、修改和查看複習字統計。</p>
+        <div class="manual-grid">
+          <div class="manual-field">
+            <label for="manualChar">新字</label>
+            <input id="manualChar" maxlength="4" inputmode="text" placeholder="輸入一個字，或兩字詞如：朋友" />
+          </div>
+          <div class="manual-field">
+            <label for="manualZhuyin">注音</label>
+            <input id="manualZhuyin" inputmode="text" placeholder="單字填注音；兩字可填：朋=ㄆㄥˊ 友=ㄧㄡˇ" />
+          </div>
+          <div class="manual-field">
+            <label for="manualWhy">理由</label>
+            <input id="manualWhy" inputmode="text" placeholder="想練習位置和存在句。" />
+          </div>
+          <button class="btn" id="addManualChoiceBtn" type="button">加入自選字</button>
+        </div>
+      </section>
+
+      <details class="settings-panel">
+        <summary>AI 設定</summary>
+        <section class="panel ai-settings-panel" aria-labelledby="aiSettingsTitle">
+          <h2 id="aiSettingsTitle">AI 句子服務</h2>
+          <p class="help">填入 Cloudflare Worker URL 和老師 token 後，Planner 可以請 OpenAI 產生候選句。這裡不需要、也不能填 OpenAI API key。</p>
+          <div class="ai-grid">
+            <div class="ai-field">
+              <label for="aiEndpoint">Worker URL</label>
+              <input id="aiEndpoint" inputmode="url" placeholder="https://你的-worker.workers.dev" />
+            </div>
+            <div class="ai-field">
+              <label for="aiToken">老師 token</label>
+              <input id="aiToken" type="password" autocomplete="off" placeholder="TEACHER_TOKEN" />
+            </div>
+            <button class="btn secondary" id="saveAiSettingsBtn" type="button">儲存 AI 設定</button>
+          </div>
+          <div class="ai-status" id="aiStatusLine"></div>
+        </section>
+      </details>
+
+      <div class="status" id="statusLine"></div>
+
+      <section class="choice-list" id="choiceList"></section>
+
+      <section class="request-panel" id="requestPanel" hidden>
+        <h2>完整 lesson request 預覽</h2>
+        <p class="help">先選一個候選字，再勾選或新增句子。草稿會依課號保存在這台裝置；按送出後，看到內容貼進 Codex 對話才算真的送到。</p>
+        <textarea id="requestOutput" spellcheck="false"></textarea>
+        <div class="request-actions">
+          <button class="btn danger" id="submitBtn" type="button">送出給 Codex</button>
+          <button class="btn" id="copyBtn" type="button">複製 JSON</button>
+          <button class="btn secondary" id="downloadBtn" type="button">下載 JSON</button>
+          <button class="btn secondary" id="clearDraftBtn" type="button">清除本課草稿</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const state = {
+        data: null,
+        recommendations: [],
+        selectedChoiceId: "",
+        previewChoiceId: "",
+        planOffset: 1,
+        plannedLessons: {},
+        storageKey: "",
+        selectedIndexes: new Map(),
+        candidateEditsBySentence: new Map(),
+        candidateDraftsBySentence: new Map(),
+        candidateEditingKeys: new Set(),
+        imageNotesBySentence: new Map(),
+        customRowsByChoice: new Map(),
+        customDraftsByChoice: new Map(),
+        feedbackByChoice: new Map(),
+        manualChoices: [],
+        manualDraft: { char: "", zhuyin: "", why: "" },
+        learnedLookup: "",
+        aiSettings: { endpoint: "", token: "" },
+        aiGeneratingChoiceId: "",
+        aiRecommending: false,
+      };
+
+      const sentenceLengthRange = { min: 4, max: 12 };
+      const targetApprovedSentenceCount = 5;
+      const targetGeneratedSentenceCount = 10;
+      const targetReviewCandidateCount = 8;
+      const targetNewCharCountInLesson = 3;
+      const plannerStoragePrefix = "character-recognition-dojo:lesson-planner:v2:";
+      const activePlannerStorageKey = `${plannerStoragePrefix}active`;
+      const aiSettingsStorageKey = "character-recognition-dojo:lesson-planner:ai-settings:v1";
+      const fallbackZhuyinByChar = {
+        和: "ㄏㄜˊ",
+        很: "ㄏㄣˇ",
+        是: "ㄕˋ",
+        爸: "ㄅㄚˋ",
+      };
+      const $ = (id) => document.getElementById(id);
+
+      function hanChars(text) {
+        return Array.from(text || "").filter((char) => /\p{Script=Han}/u.test(char));
+      }
+
+      function unique(items) {
+        return [...new Set(items)];
+      }
+
+      function newCharsFromText(text) {
+        return unique(hanChars(text));
+      }
+
+      function choiceLabelFromChars(chars) {
+        return newCharsFromText(Array.isArray(chars) ? chars.join("") : chars).join("");
+      }
+
+      function choiceIdFromChars(chars) {
+        return `choice-${choiceLabelFromChars(chars)}`;
+      }
+
+      function entryNewChars(entry) {
+        return newCharsFromText(Array.isArray(entry?.newChars) ? entry.newChars.join("") : entry?.char || "");
+      }
+
+      function primaryChoiceChar(choice) {
+        return choice?.newChars?.[0] || "";
+      }
+
+      function targetHitCount(text, targetChars) {
+        const chars = hanChars(text);
+        return (targetChars || []).reduce((total, char) => total + chars.filter((candidate) => candidate === char).length, 0);
+      }
+
+      function targetCountsInText(text, targetChars) {
+        return Object.fromEntries((targetChars || []).map((char) => [char, charCountInText(text, char)]));
+      }
+
+      function targetCountForLesson(text, targetChars) {
+        const counts = Object.values(targetCountsInText(text, targetChars));
+        return counts.length ? Math.min(...counts) : 0;
+      }
+
+      function zhuyinMapForChars(chars, rawZhuyin = "") {
+        const map = {};
+        const raw = String(rawZhuyin || "").trim();
+        const explicitPairs = [...raw.matchAll(/(\p{Script=Han})\s*[=:：]\s*([^\s,，;；]+)/gu)];
+        explicitPairs.forEach((match) => {
+          if (chars.includes(match[1])) map[match[1]] = match[2].trim();
+        });
+        if (explicitPairs.length === 0 && raw) {
+          if (chars.length === 1) {
+            map[chars[0]] = raw;
+          } else {
+            const parts = raw.split(/[\s,，;；]+/).filter(Boolean);
+            if (parts.length === chars.length) chars.forEach((char, index) => (map[char] = parts[index]));
+          }
+        }
+        chars.forEach((char) => {
+          if (!map[char]) map[char] = zhuyinForChar(char);
+        });
+        return map;
+      }
+
+      function zhuyinTextFromMap(chars, zhuyin) {
+        return chars.map((char) => zhuyin?.[char] || "").filter(Boolean).join(" ");
+      }
+
+      function lessonId(order) {
+        return `L${String(order).padStart(3, "0")}`;
+      }
+
+      function lessonOrderFromId(id) {
+        const match = String(id || "").match(/^L(\d+)$/i);
+        return match ? Number(match[1]) : 0;
+      }
+
+      function lastLessons(lessons, count) {
+        return [...lessons].sort((a, b) => a.order - b.order).slice(-count);
+      }
+
+      function recentReviewPool(lessons) {
+        return unique(
+          lastLessons(lessons, 5).flatMap((lesson) =>
+            (lesson.sentences || []).flatMap((sentence) => hanChars(sentence.text)),
+          ),
+        );
+      }
+
+      function previousLessonNewChars(lessons, count) {
+        return unique(lastLessons(lessons, count).flatMap((lesson) => lesson.newChars || []));
+      }
+
+      function sentenceHanLength(sentence) {
+        return hanChars(sentence.text).length;
+      }
+
+      function forbiddenChars(sentence, allowedChars) {
+        const allowed = new Set(allowedChars);
+        return unique(hanChars(sentence.text).filter((char) => !allowed.has(char)));
+      }
+
+      function normalizeSpokenText(text) {
+        return String(text || "")
+          .replace(/[，。！？、；：,.!?;:]/g, "")
+          .trim();
+      }
+
+      function cleanSentences(sentences, allowedChars) {
+        return (sentences || [])
+          .map((sentence) => ({
+            text: String(sentence.text || ""),
+            spokenText: normalizeSpokenText(sentence.spokenText || sentence.text || ""),
+            focusChar: String(sentence.focusChar || ""),
+            reason: String(sentence.reason || ""),
+          }))
+          .filter((sentence) => {
+            const length = sentenceHanLength(sentence);
+            return (
+              sentence.text &&
+              forbiddenChars(sentence, allowedChars).length === 0 &&
+              length >= sentenceLengthRange.min &&
+              length <= sentenceLengthRange.max
+            );
+          });
+      }
+
+      function charCountInText(text, char) {
+        return hanChars(text).filter((candidate) => candidate === char).length;
+      }
+
+      function sentenceAllowed(text, allowedChars) {
+        const allowed = new Set(allowedChars);
+        const chars = hanChars(text);
+        const length = chars.length;
+        return length >= sentenceLengthRange.min && length <= sentenceLengthRange.max && chars.every((char) => allowed.has(char));
+      }
+
+      function phraseAllowed(text, allowedChars) {
+        const allowed = new Set(allowedChars);
+        return hanChars(text).every((char) => allowed.has(char));
+      }
+
+      function addPhrase(list, text, allowedChars) {
+        if (text && phraseAllowed(text, allowedChars) && !list.includes(text)) list.push(text);
+      }
+
+      function phraseBank(allowedChars, targetChar) {
+        const subjects = [];
+        const places = [];
+        const things = [];
+        const targetPhrases = [];
+        const nonObjectChars = new Set(["在", "上", "下", "很", "高", "和", "看", "去", "來", "飛", "是", "中", "前", "後", "裡", "左", "右"]);
+        const zhiMeasureTargets = new Set(["鳥", "手", "指"]);
+        const geMeasureTargets = new Set(["家", "門", "山", "人"]);
+        const objectLike = !nonObjectChars.has(targetChar);
+
+        [
+          "我",
+          "你",
+          "你和我",
+          "我和你",
+          "大人",
+          "小孩",
+          "一個人",
+          "一個小孩",
+          "三個人",
+          "大人和小孩",
+        ].forEach((phrase) => addPhrase(subjects, phrase, allowedChars));
+
+        [
+          "家",
+          "我家",
+          "你家",
+          "山上",
+          "山下",
+          "高山上",
+          "高山下",
+          "水上",
+          "水下",
+          "家中",
+          "水中",
+          "家裡",
+          "水裡",
+          "家前",
+          "家後",
+          "山前",
+          "山後",
+          "門前",
+          "門後",
+        ].forEach((phrase) => addPhrase(places, phrase, allowedChars));
+
+        [
+          "手",
+          "大手",
+          "小手",
+          "手指",
+          "一隻手",
+          "一隻小手",
+          "一隻大手",
+          "鳥",
+          "小鳥",
+          "一隻鳥",
+          "一隻小鳥",
+          "三隻小鳥",
+          "家",
+          "小家",
+          "水",
+          "山",
+          "高山",
+        ].forEach((phrase) => addPhrase(things, phrase, allowedChars));
+
+        if (objectLike) {
+          addPhrase(targetPhrases, targetChar, allowedChars);
+          [`小${targetChar}`, `大${targetChar}`, `很大的${targetChar}`, `很小的${targetChar}`, `很高的${targetChar}`].forEach((phrase) =>
+            addPhrase(targetPhrases, phrase, allowedChars),
+          );
+          if (geMeasureTargets.has(targetChar)) [`一個${targetChar}`, `三個${targetChar}`].forEach((phrase) => addPhrase(targetPhrases, phrase, allowedChars));
+          if (zhiMeasureTargets.has(targetChar)) [`一隻${targetChar}`, `三隻${targetChar}`].forEach((phrase) => addPhrase(targetPhrases, phrase, allowedChars));
+        }
+
+        return {
+          subjects: subjects.length ? subjects : ["我"].filter((phrase) => phraseAllowed(phrase, allowedChars)),
+          places,
+          things,
+          targetPhrases: unique(targetPhrases.filter((phrase) => phraseAllowed(phrase, allowedChars))),
+        };
+      }
+
+      function generatedSpecificPatternPool(choice, allowedChars) {
+        const targetChar = primaryChoiceChar(choice);
+        const pool = [];
+        const seen = new Set();
+        const add = (text, reason = "自我審核通過：功能字句型，語意具體，容易配圖。", focusChar = targetChar) =>
+          addSentenceCandidate(pool, seen, text, choice, allowedChars, reason, focusChar);
+
+        if (targetChar === "是") {
+          [
+            "門前的是男孩",
+            "門後的是女孩",
+            "飛的是一隻鳥",
+            "山上的是小鳥",
+            "水上的是小鳥",
+            "我看的是小鳥",
+            "你看的是男孩",
+            "我家是高山上的家",
+            "我是女孩",
+            "你是男孩",
+            "男孩是小孩",
+            "女孩是小孩",
+            "男人是大人",
+            "女人是大人",
+            "大人是人",
+            "小孩是人",
+            "小鳥是鳥",
+            "飛鳥是鳥",
+            "一隻飛鳥是鳥",
+            "高山是山",
+            "小家是家",
+            "我家是小家",
+            "前門是門",
+            "後門是門",
+            "門前是高山",
+            "門後是水",
+            "男孩和女孩是小孩",
+            "你和我是小孩",
+          ].forEach((text) => add(text));
+        }
+
+        return pool;
+      }
+
+      function addSentenceCandidate(pool, seen, text, choice, allowedChars, reason, focusChar = "") {
+        const normalized = normalizeSpokenText(text);
+        if (!sentenceAllowed(text, allowedChars) || seen.has(text)) return;
+        seen.add(text);
+        pool.push({
+          text,
+          spokenText: normalized,
+          focusChar: focusChar || (hanChars(text).includes(primaryChoiceChar(choice)) ? primaryChoiceChar(choice) : resolveFocusChar(text, "", choice)),
+          reason,
+        });
+      }
+
+      function generatedPatternPool(choice, model, allowedChars, includeTargetPatterns = true) {
+        const targetChar = primaryChoiceChar(choice);
+        const bank = phraseBank(allowedChars, targetChar);
+        const pool = [];
+        const seen = new Set();
+        const add = (text, reason, focusChar = targetChar) => addSentenceCandidate(pool, seen, text, choice, allowedChars, reason, focusChar);
+
+        for (const sentence of generatedSpecificPatternPool(choice, allowedChars)) {
+          add(sentence.text, sentence.reason, sentence.focusChar);
+        }
+
+        if (includeTargetPatterns) {
+          for (const targetPhrase of bank.targetPhrases) {
+            for (const place of bank.places) {
+              add(`${targetPhrase}在${place}`, "最佳化器依已核准課程的「物／人在位置」句型產生。");
+              add(`${place}有${targetPhrase}`, "最佳化器依已核准課程的「位置有物」句型產生。");
+            }
+            for (const subject of bank.subjects) {
+              add(`${subject}有${targetPhrase}`, "最佳化器依已核准課程的「人物有物」句型產生。");
+              if (phraseAllowed("和", allowedChars)) add(`${subject}和${targetPhrase}在家`, "最佳化器依已核准課程的互動句型產生。");
+              if (phraseAllowed("看", allowedChars)) add(`${subject}看${targetPhrase}`, "最佳化器依已核准課程的看圖動作句型產生。");
+            }
+            for (const thing of bank.things) {
+              if (phraseAllowed("和", allowedChars)) add(`${targetPhrase}和${thing}`, "最佳化器依已核准課程的並列句型產生。");
+              if (phraseAllowed("上", allowedChars)) add(`${targetPhrase}在${thing}上`, "最佳化器依已核准課程的位置句型產生。");
+              if (phraseAllowed("下", allowedChars)) add(`${targetPhrase}在${thing}下`, "最佳化器依已核准課程的位置句型產生。");
+            }
+            if (phraseAllowed(`很大`, allowedChars)) add(`${targetPhrase}很大`, "最佳化器依已核准課程的形容句型產生。");
+            if (phraseAllowed(`很小`, allowedChars)) add(`${targetPhrase}很小`, "最佳化器依已核准課程的形容句型產生。");
+            if (phraseAllowed(`很高`, allowedChars)) add(`${targetPhrase}很高`, "最佳化器依已核准課程的形容句型產生。");
+          }
+        }
+
+        const targetBearingCount = pool.filter((sentence) => choice.newChars.some((char) => hanChars(sentence.text).includes(char))).length;
+        if (targetBearingCount < targetGeneratedSentenceCount) {
+          const recentReviewSentences = lastLessons(model.lessons, 5)
+            .flatMap((lesson) => lesson.sentences || [])
+            .map((sentence) => sentence.text)
+            .filter((text) => sentenceAllowed(text, allowedChars));
+          for (const text of recentReviewSentences) {
+            add(text, "直接取自近五課已核准句，作為複習候選。", resolveFocusChar(text, "", choice));
+          }
+        }
+
+        return pool;
+      }
+
+      function badSentencePenalty(text) {
+        const badPatterns = ["二個", "來家", "去家", "飛在家上", "大門在家下", "小鳥飛在家上", "有是", "是有", "和是", "是和", "在是"];
+        const weakButAllowedPatterns = ["前門是門", "後門是門", "小鳥是鳥", "飛鳥是鳥", "高山是山", "小家是家"];
+        if (badPatterns.some((pattern) => text.includes(pattern))) return 80;
+        return weakButAllowedPatterns.some((pattern) => text.includes(pattern)) ? 90 : 0;
+      }
+
+      function sentenceQuality(sentence, context) {
+        const chars = hanChars(sentence.text);
+        const uniqueChars = unique(chars);
+        const targetHits = targetHitCount(sentence.text, context.targetChars || [context.targetChar]);
+        const reviewHits = uniqueChars.filter((char) => context.reviewCountChars.includes(char)).length;
+        const requiredHits = uniqueChars.filter((char) => context.requiredRecentChars.includes(char)).length;
+        const length = chars.length;
+        const lengthBonus = length >= 6 && length <= 10 ? 16 : length >= 4 && length <= 12 ? 8 : -40;
+        const sourceBonus = sentence.reason.includes("已核准") || sentence.reason.includes("近五課") ? 9 : 0;
+        return targetHits * 34 + reviewHits * 9 + requiredHits * 13 + lengthBonus + sourceBonus - badSentencePenalty(sentence.text);
+      }
+
+      function planMetrics(sentences, context) {
+        const firstFive = sentences.slice(0, targetApprovedSentenceCount);
+        const allText = firstFive.map((sentence) => sentence.text).join("");
+        const targetChars = context.targetChars || [context.targetChar].filter(Boolean);
+        const targetCounts = targetCountsInText(allText, targetChars);
+        const targetCount = targetCountForLesson(allText, targetChars);
+        const reviewCovered = context.reviewCountChars.filter((char) => allText.includes(char));
+        const requiredCovered = context.requiredRecentChars.filter((char) => allText.includes(char));
+        return {
+          targetCount,
+          targetCounts,
+          reviewCovered,
+          missingReviewChars: context.reviewCountChars.filter((char) => !reviewCovered.includes(char)),
+          requiredCovered,
+          missingRequiredChars: context.requiredRecentChars.filter((char) => !requiredCovered.includes(char)),
+        };
+      }
+
+      function optimizeSentencePool(pool, context) {
+        const selected = [];
+        const remaining = [...pool]
+          .map((sentence) => ({ sentence, baseScore: sentenceQuality(sentence, context) }))
+          .sort((a, b) => b.baseScore - a.baseScore);
+
+        for (let slot = 0; slot < targetGeneratedSentenceCount && remaining.length > 0; slot += 1) {
+          const currentText = selected.map((sentence) => sentence.text).join("");
+          const missingReview = context.reviewCountChars.filter((char) => !currentText.includes(char));
+          const missingRequired = context.requiredRecentChars.filter((char) => !currentText.includes(char));
+          const targetChars = context.targetChars || [context.targetChar].filter(Boolean);
+          const currentTargetCount = targetCountForLesson(currentText, targetChars);
+          let bestIndex = 0;
+          let bestValue = -Infinity;
+
+          for (let index = 0; index < remaining.length; index += 1) {
+            const { sentence, baseScore } = remaining[index];
+            const chars = hanChars(sentence.text);
+            const targetHits = targetHitCount(sentence.text, targetChars);
+            const reviewGain = missingReview.filter((char) => chars.includes(char)).length;
+            const requiredGain = missingRequired.filter((char) => chars.includes(char)).length;
+            const needsTarget = slot < 3 || currentTargetCount < targetNewCharCountInLesson;
+            const targetBonus = needsTarget ? targetHits * 55 : targetHits * 8;
+            const noTargetPenalty = needsTarget && targetHits === 0 ? 120 : 0;
+            const coverageBonus = slot >= 3 ? reviewGain * 28 + requiredGain * 40 : reviewGain * 12 + requiredGain * 18;
+            const value = baseScore + targetBonus + coverageBonus - noTargetPenalty - selected.length * 0.2;
+            if (value > bestValue) {
+              bestValue = value;
+              bestIndex = index;
+            }
+          }
+
+          selected.push(remaining.splice(bestIndex, 1)[0].sentence);
+        }
+
+        return selected;
+      }
+
+      function optimizeChoiceSentencesFromEntry(entry, context) {
+        const newChars = entryNewChars(entry);
+        const zhuyin = entry.zhuyinMap || zhuyinMapForChars(newChars, entry.zhuyin);
+        const primaryChar = newChars[0];
+        const choice = {
+          choiceId: choiceIdFromChars(newChars),
+          newChars,
+          zhuyin,
+        };
+        const allowedChars = unique([...context.learnedChars, ...newChars]);
+        const seen = new Set();
+        const pool = [];
+        const localSentences = cleanSentences(entry.sentenceCandidates, allowedChars);
+        for (const sentence of localSentences) {
+          addSentenceCandidate(pool, seen, sentence.text, choice, allowedChars, sentence.reason || "候選字資料庫句，經最佳化器重新排序。", sentence.focusChar);
+        }
+        const includeTargetPatterns = newChars.length === 1 && localSentences.length < Math.min(6, targetGeneratedSentenceCount);
+        for (const sentence of generatedPatternPool(choice, { lessons: context.lessons }, allowedChars, includeTargetPatterns)) {
+          addSentenceCandidate(pool, seen, sentence.text, choice, allowedChars, sentence.reason, sentence.focusChar);
+        }
+        const optimized = optimizeSentencePool(pool, { ...context, targetChar: primaryChar, targetChars: newChars });
+        return {
+          candidates: optimized,
+          metrics: planMetrics(optimized, { ...context, targetChar: primaryChar, targetChars: newChars }),
+          poolSize: pool.length,
+        };
+      }
+
+      function emptyOptimization(context, targetChar) {
+        const targetChars = Array.isArray(targetChar) ? targetChar : [targetChar].filter(Boolean);
+        const emptyContext = { ...context, targetChar: targetChars[0] || "", targetChars };
+        return {
+          candidates: [],
+          metrics: planMetrics([], emptyContext),
+          poolSize: 0,
+        };
+      }
+
+      function optimizeChoiceSentences(choice, model) {
+        return optimizeChoiceSentencesFromEntry(
+          {
+            char: choice.newChars.join(""),
+            newChars: choice.newChars,
+            zhuyinMap: choice.zhuyin,
+            zhuyin: zhuyinTextFromMap(choice.newChars, choice.zhuyin),
+            sentenceCandidates: choice.sentenceCandidates || [],
+          },
+          {
+            lessons: model.lessons,
+            learnedChars: model.learnedChars,
+            requiredRecentChars: model.requiredRecentChars,
+            reviewCountChars: model.reviewCountChars,
+          },
+        );
+      }
+
+      function scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars, optimization, lessons = []) {
+        const learned = new Set(learnedChars);
+        const newChars = entryNewChars(entry);
+        const requiredMissing = (entry.requires || []).filter((char) => !learned.has(char));
+        if (requiredMissing.length > 0 || newChars.some((char) => learned.has(char))) return null;
+        const recent = new Set(recentPool);
+        const requiredRecent = new Set(requiredRecentChars || []);
+        const reviewCount = new Set(reviewCountChars || []);
+        const allowedChars = unique([...learnedChars, ...newChars]);
+        const optimized =
+          optimization ||
+          optimizeChoiceSentencesFromEntry(entry, {
+            lessons,
+            learnedChars,
+            requiredRecentChars,
+            reviewCountChars,
+          });
+        const validSentences = optimized.candidates.length ? optimized.candidates : cleanSentences(entry.sentenceCandidates, allowedChars);
+        const sentenceChars = unique(validSentences.flatMap((sentence) => hanChars(sentence.text)));
+        const reviewHits = sentenceChars.filter((char) => recent.has(char)).length;
+        const requiredHits = sentenceChars.filter((char) => requiredRecent.has(char)).length;
+        const reviewCountHits = sentenceChars.filter((char) => reviewCount.has(char)).length;
+        const sentenceDepth = Math.min(validSentences.length, targetGeneratedSentenceCount);
+        const missingSentencePenalty = Math.max(0, 5 - validSentences.length) * 20;
+        const firstFive = validSentences.slice(0, targetApprovedSentenceCount);
+        const firstFiveText = firstFive.map((sentence) => sentence.text).join("");
+        const targetHitsInPlan = targetCountForLesson(firstFiveText, newChars);
+        const missingTargetPenalty = Math.max(0, targetNewCharCountInLesson - targetHitsInPlan) * 42;
+        const missingReviewPenalty = Math.max(0, reviewCountChars.length - (optimized.metrics?.reviewCovered.length || 0)) * 7;
+        return (
+          Number(entry.priority || 1000) -
+          targetHitsInPlan * 18 -
+          requiredHits * 12 -
+          reviewCountHits * 6 -
+          reviewHits * 2 -
+          sentenceDepth * 2 +
+          missingSentencePenalty +
+          missingTargetPenalty +
+          missingReviewPenalty -
+          Math.min(optimized.poolSize || 0, 80) * 0.15
+        );
+      }
+
+      function clampPlanOffset(value) {
+        return value === 2 || value === "2" ? 2 : 1;
+      }
+
+      function plannedLessonKey(order) {
+        return lessonId(order);
+      }
+
+      function plannedLessonForOrder(order) {
+        const plan = state.plannedLessons?.[plannedLessonKey(order)];
+        return plan?.newChars?.length ? plan : null;
+      }
+
+      function upstreamPlans(latestOrder, planOffset = state.planOffset) {
+        const plans = [];
+        for (let offset = 1; offset < clampPlanOffset(planOffset); offset += 1) {
+          const plan = plannedLessonForOrder(latestOrder + offset);
+          if (plan) plans.push(plan);
+        }
+        return plans;
+      }
+
+      function chooseRecentPool(lessons, planned) {
+        return unique([...recentReviewPool(lessons), ...planned.flatMap((plan) => plan.newChars || [])]);
+      }
+
+      function previousRequiredChars(lessons, planned, count) {
+        const completed = lessons.map((lesson) => ({ order: lesson.order, newChars: lesson.newChars || [] }));
+        const provisional = planned.map((plan) => ({ order: plan.order, newChars: plan.newChars || [] }));
+        return unique([...completed, ...provisional].sort((a, b) => a.order - b.order).slice(-count).flatMap((lesson) => lesson.newChars));
+      }
+
+      function recentLessonNewChars(lessons, planned, count) {
+        const completed = lessons.map((lesson) => ({ order: lesson.order, newChars: lesson.newChars || [] }));
+        const provisional = planned.map((plan) => ({ order: plan.order, newChars: plan.newChars || [] }));
+        return unique([...completed, ...provisional].sort((a, b) => a.order - b.order).slice(-count).flatMap((lesson) => lesson.newChars));
+      }
+
+      function recommend(data) {
+        const lessons = [...(data.lessons || [])].sort((a, b) => a.order - b.order);
+        const latestOrder = Math.max(...lessons.map((lesson) => lesson.order));
+        const planOffset = clampPlanOffset(state.planOffset);
+        const order = latestOrder + planOffset;
+        const planned = upstreamPlans(latestOrder, planOffset);
+        const provisionalLearnedChars = unique(planned.flatMap((plan) => plan.newChars || []));
+        const learnedChars = unique([...lessons.flatMap((lesson) => lesson.newChars || []), ...provisionalLearnedChars]);
+        const recentPool = chooseRecentPool(lessons, planned);
+        const requiredRecentChars = previousRequiredChars(lessons, planned, 3);
+        const reviewCountChars = recentLessonNewChars(lessons, planned, 5);
+        const bankEntries = data.nextCharacterBank || [];
+        const manualChoiceLabels = new Set(state.manualChoices.map((entry) => choiceLabelFromChars(entryNewChars(entry))));
+        const manualEntries = state.manualChoices
+          .filter((entry) => entryNewChars(entry).length)
+          .map((entry, index) => ({
+            ...(entryNewChars(entry).length === 1 ? bankEntries.find((bankEntry) => bankEntry.char === entryNewChars(entry)[0]) || {} : {}),
+            ...entry,
+            char: choiceLabelFromChars(entryNewChars(entry)),
+            newChars: entryNewChars(entry),
+            zhuyinMap: entry.zhuyinMap || zhuyinMapForChars(entryNewChars(entry), entry.zhuyin),
+            zhuyin: entry.zhuyin || zhuyinTextFromMap(entryNewChars(entry), entry.zhuyinMap) || "",
+            priority: 5 + index,
+            why: entry.why || (entryNewChars(entry).length === 1 ? bankEntries.find((bankEntry) => bankEntry.char === entryNewChars(entry)[0])?.why : "") || "教師自行新增的下一課字。",
+            requires: [],
+            sentenceCandidates:
+              entry.sentenceCandidates?.length
+                ? entry.sentenceCandidates
+                : entryNewChars(entry).length === 1
+                  ? bankEntries.find((bankEntry) => bankEntry.char === entryNewChars(entry)[0])?.sentenceCandidates || []
+                  : [],
+            source: "manual",
+          }));
+        const toRecommendation = (entry) => {
+          const newChars = entryNewChars(entry);
+          const choiceId = choiceIdFromChars(newChars);
+          const zhuyin = entry.zhuyinMap || zhuyinMapForChars(newChars, entry.zhuyin);
+          const shouldSkipLocalManualGeneration = entry.source === "manual" && !(entry.sentenceCandidates || []).length;
+          const optimization = shouldSkipLocalManualGeneration
+            ? emptyOptimization({ lessons, learnedChars, requiredRecentChars, reviewCountChars }, newChars)
+            : optimizeChoiceSentencesFromEntry(entry, {
+                lessons,
+                learnedChars,
+                requiredRecentChars,
+                reviewCountChars,
+              });
+          const score = scoreCandidate(entry, learnedChars, recentPool, requiredRecentChars, reviewCountChars, optimization, lessons);
+          if (score === null && entry.source !== "manual") return null;
+          return {
+            choiceId,
+            newChars,
+            zhuyin,
+            title: choiceLabelFromChars(newChars),
+            rationale: entry.why,
+            score: entry.source === "manual" ? Number(score ?? entry.priority ?? 1000) - 10000 : score,
+            source: entry.source || "bank",
+            optimization,
+            sentenceCandidates:
+              entry.source === "manual"
+                ? optimization.candidates.map((sentence) => ({
+                    ...sentence,
+                    reason: sentence.reason.startsWith("自我審核通過")
+                      ? sentence.reason
+                      : `自我審核通過：${sentence.reason}`,
+                  }))
+                : optimization.candidates,
+          };
+        };
+        const manualRecommendations = manualEntries
+          .map(toRecommendation)
+          .filter(Boolean)
+          .sort((a, b) => a.score - b.score);
+        const manualChoiceCharSet = new Set(manualEntries.flatMap((entry) => entry.newChars || entryNewChars(entry)));
+        const bankRecommendations = bankEntries
+          .filter((entry) => !manualChoiceLabels.has(entry.char) && !manualChoiceCharSet.has(entry.char))
+          .map((entry) => {
+            return toRecommendation(entry);
+          })
+          .filter(Boolean)
+          .sort((a, b) => a.score - b.score)
+          .slice(0, 5);
+        const recommendations = [...manualRecommendations, ...bankRecommendations].slice(0, Math.max(5, manualRecommendations.length));
+        return {
+          lessons,
+          latestOrder,
+          order,
+          lessonId: lessonId(order),
+          planOffset,
+          dependencyPlans: planned,
+          provisionalLearnedChars,
+          provisionalReviewChars: reviewCountChars.filter((char) => provisionalLearnedChars.includes(char)),
+          provisionalRequiredRecentChars: requiredRecentChars.filter((char) => provisionalLearnedChars.includes(char)),
+          learnedChars,
+          recentPool,
+          requiredRecentChars,
+          reviewCountChars,
+          recommendations,
+        };
+      }
+
+      function firstLessonForChar(model, char) {
+        return model.lessons.find((lesson) => (lesson.newChars || []).includes(char)) || null;
+      }
+
+      function learnedLookupResult(model, rawText) {
+        const char = hanChars(rawText).join("").slice(0, 1);
+        if (!char) return null;
+        const lesson = firstLessonForChar(model, char);
+        if (!lesson) {
+          return {
+            learned: false,
+            message: `「${char}」還沒有學過，可以考慮排進未來課程。`,
+          };
+        }
+        return {
+          learned: true,
+          message: `「${char}」已學過：${lesson.id} 第 ${lesson.order} 課「${lesson.title || char}」。`,
+        };
+      }
+
+      function learnedLookupResultHtml(model, rawText) {
+        const lookup = learnedLookupResult(model, rawText);
+        if (!lookup) return `<p class="help">輸入一個字，就會顯示它是否已經在課程裡出現。</p>`;
+        return `<div class="lookup-result ${lookup.learned ? "" : "missing"}">${lookup.message}</div>`;
+      }
+
+      function updateLearnedLookup(model = currentModel()) {
+        const result = $("learnedLookupResult");
+        if (result) result.innerHTML = learnedLookupResultHtml(model, state.learnedLookup);
+      }
+
+      function renderSummary(model) {
+        $("summaryPanel").innerHTML = `
+          <div class="summary-grid">
+            <div class="metric"><strong>${model.lessonId}</strong><span>${model.planOffset === 2 ? "下下一課" : "下一課"}</span></div>
+            <div class="metric"><strong>${model.learnedChars.length}</strong><span>已學漢字</span></div>
+            <div class="metric"><strong>${model.latestOrder}</strong><span>目前課數</span></div>
+            <div class="metric"><strong>${model.recommendations.length}</strong><span>候選字</span></div>
+          </div>
+          <p class="help">資料匯出時間：${state.data.exportedAt || "未知"}</p>
+          <p class="help">課程最佳化：前 3 句優先讓本課新字至少出現 ${targetNewCharCountInLesson} 次；後 2 句優先補近 5 課新字；每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字；近 3 課新字 ${model.requiredRecentChars.join("、")} 在整課句子中至少各出現一次。</p>
+          <div class="learned-lookup">
+            <h3>查這個字學過沒</h3>
+            <div class="lookup-row">
+              <input id="learnedLookupInput" maxlength="4" inputmode="text" placeholder="輸入一個字，例如：都" value="${escapeAttr(state.learnedLookup)}" />
+              <button class="btn secondary" type="button" data-clear-learned-lookup>清空</button>
+            </div>
+            <div id="learnedLookupResult">${learnedLookupResultHtml(model, state.learnedLookup)}</div>
+          </div>
+          <details class="learned-details">
+            <summary>展開全部已學字</summary>
+            <div class="learned">${model.learnedChars.map((char) => `<span>${char}</span>`).join("")}</div>
+          </details>
+        `;
+      }
+
+      function renderPlanSlotPanel(model) {
+        const firstOrder = model.latestOrder + 1;
+        const secondOrder = model.latestOrder + 2;
+        const firstPlan = plannedLessonForOrder(firstOrder);
+        const secondPlan = plannedLessonForOrder(secondOrder);
+        const dependencies = model.dependencyPlans || [];
+        $("planSlotPanel").innerHTML = `
+          <h2>規劃第幾課</h2>
+          <div class="plan-slot-controls" role="radiogroup" aria-label="規劃課程槽位">
+            <label class="plan-slot">
+              <input type="radio" name="planOffset" value="1" ${model.planOffset === 1 ? "checked" : ""} />
+              <strong>${lessonId(firstOrder)} 下一課</strong>
+              <span>${firstPlan ? `暫定：${firstPlan.newChars.join("")}` : "先規劃這一課的新字。"}</span>
+            </label>
+            <label class="plan-slot">
+              <input type="radio" name="planOffset" value="2" ${model.planOffset === 2 ? "checked" : ""} />
+              <strong>${lessonId(secondOrder)} 下下一課</strong>
+              <span>${firstPlan ? `會先把 ${firstPlan.newChars.join("")} 當作已學字。` : `可先規劃，但最好先在 ${lessonId(firstOrder)} 確定新字。`}</span>
+            </label>
+          </div>
+          ${
+            dependencies.length
+              ? `<div class="dependency-note">這個 request 會標註依賴：先讓 ${dependencies
+                  .map((plan) => `${lessonId(plan.order)}「${plan.newChars.join("")}」`)
+                  .join("、")} 合併進 main，再合併本課。</div>`
+              : ""
+          }
+          ${secondPlan ? `<div class="dependency-note">已暫存 ${lessonId(secondOrder)}：${secondPlan.newChars.join("")}</div>` : ""}
+        `;
+      }
+
+      function renderManualChoiceForm() {
+        $("manualChar").value = state.manualDraft.char;
+        $("manualZhuyin").value = state.manualDraft.zhuyin;
+        $("manualWhy").value = state.manualDraft.why;
+      }
+
+      function renderAiSettingsForm() {
+        $("aiEndpoint").value = state.aiSettings.endpoint;
+        $("aiToken").value = state.aiSettings.token;
+        $("aiStatusLine").textContent = state.aiSettings.endpoint
+          ? "AI 服務已設定。按候選字卡片裡的「AI 生成 10 句」即可使用。"
+          : "尚未設定 AI 服務；可以先加入自選字，再把 request 貼給 Codex，或完成 Worker 設定後直接在這裡生成。";
+      }
+
+      function renderCustomSection(choice, selected, customRows, draft, feedback) {
+        return `
+          <section class="custom-section">
+            <h3>新增給「${choice.newChars.join("")}」的句子</h3>
+            <p class="help">先在下面輸入一句，再按「新增這句」。新增後會出現在已新增清單，也會同步進入最下面的 lesson request。</p>
+            <div class="draft-box">
+              <h4>輸入新句子</h4>
+              <div class="custom-grid">
+                <input aria-label="新句子" placeholder="句子，例如：你有小小的手" value="${escapeAttr(draft.text)}" data-draft-choice="${choice.choiceId}" data-field="text" />
+                <input aria-label="新句子 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(draft.spokenText)}" data-draft-choice="${choice.choiceId}" data-field="spokenText" />
+                <input aria-label="新句子 focus" placeholder="focus，可留空" value="${escapeAttr(draft.focusChar)}" data-draft-choice="${choice.choiceId}" data-field="focusChar" />
+                <textarea class="note-input" aria-label="新句子配圖要求" placeholder="配圖要求，可留空。例如：山要有三座，角色不要太小。" data-draft-choice="${choice.choiceId}" data-field="imageNotes">${escapeHtml(draft.imageNotes)}</textarea>
+              </div>
+              <div class="custom-tools">
+                <button class="btn secondary" type="button" data-add-custom="${choice.choiceId}">新增這句</button>
+                <span class="custom-feedback">${escapeHtml(feedback)}</span>
+              </div>
+            </div>
+            ${
+              customRows.length
+                ? `<div class="added-list">
+                    <h4>已新增成功的句子</h4>
+                    ${customRows
+                      .map(
+                        (row, index) => `
+                          <div class="added-row ${row.editing ? "editing" : ""}">
+                            <div class="added-row-head">
+                              <span class="pill">完成第 ${index + 1} 句</span>
+                              <div class="header-actions">
+                                <button class="btn secondary" type="button" data-edit-custom="${choice.choiceId}" data-custom="${index}">${row.editing ? "收起編輯" : "編輯"}</button>
+                                <button class="btn secondary" type="button" data-remove-custom="${choice.choiceId}" data-custom="${index}">移除</button>
+                              </div>
+                            </div>
+                            <div class="added-sentence">${escapeHtml(row.text)}</div>
+                            <div class="sentence-meta">
+                              <span class="pill">spoken: ${escapeHtml(row.spokenText || row.text)}</span>
+                              <span class="pill">focus: ${escapeHtml(row.focusChar || resolveFocusChar(row.text, "", choice))}</span>
+                            </div>
+                            ${
+                              row.imageNotes
+                                ? `<div class="added-notes"><strong>配圖要求：</strong>${escapeHtml(row.imageNotes)}</div>`
+                                : ""
+                            }
+                            <div class="custom-grid edit-fields">
+                              <input aria-label="已新增句子" placeholder="句子" value="${escapeAttr(row.text)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="text" />
+                              <input aria-label="已新增 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(row.spokenText)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="spokenText" />
+                              <input aria-label="已新增 focus" placeholder="focus" value="${escapeAttr(row.focusChar)}" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="focusChar" />
+                              <textarea class="note-input" aria-label="已新增配圖要求" placeholder="配圖要求，可留空" data-custom-choice="${choice.choiceId}" data-custom="${index}" data-field="imageNotes">${escapeHtml(row.imageNotes)}</textarea>
+                            </div>
+                          </div>
+                        `,
+                      )
+                      .join("")}
+                  </div>`
+                : ""
+            }
+            ${
+              selected
+                ? `<div class="nearby-request-panel">
+                    <h4>送出這一課</h4>
+                    <p class="help">句子都確認後，從這裡就近複製或分享給 Codex。這個網頁不會直接連到 Codex，看到內容貼進對話才算送出。</p>
+                    <div class="request-actions">
+                      <button class="btn danger" type="button" data-submit-request>送出給 Codex</button>
+                      <button class="btn" type="button" data-copy-request>複製 JSON</button>
+                      <button class="btn secondary" type="button" data-download-request>下載 JSON</button>
+                    </div>
+                  </div>`
+                : ""
+            }
+          </section>
+        `;
+      }
+
+      function aiGenerateButtonText(choice) {
+        if (state.aiGeneratingChoiceId === choice.choiceId) return "AI 生成中";
+        return choice.sentenceCandidates.length ? "AI 再生成 10 句" : "AI 生成 10 句";
+      }
+
+      function renderChoices(model) {
+        const originalRanks = new Map(model.recommendations.map((choice, index) => [choice.choiceId, index + 1]));
+        const orderedRecommendations = [...model.recommendations].sort((a, b) => {
+          if (a.choiceId === state.selectedChoiceId) return -1;
+          if (b.choiceId === state.selectedChoiceId) return 1;
+          if (a.choiceId === state.previewChoiceId) return -1;
+          if (b.choiceId === state.previewChoiceId) return 1;
+          return (originalRanks.get(a.choiceId) || 0) - (originalRanks.get(b.choiceId) || 0);
+        });
+        $("choiceList").innerHTML = orderedRecommendations
+          .map((choice, choiceIndex) => {
+            const selected = choice.choiceId === state.selectedChoiceId;
+            const previewing = selected || choice.choiceId === state.previewChoiceId;
+            const customRows = state.customRowsByChoice.get(choice.choiceId) || [];
+            const selectedIndexes = state.selectedIndexes.get(choice.choiceId) || new Set();
+            const completedCustomCount = customRows.filter((row) => row.text.trim()).length;
+            const selectedSentenceCount = selectedIndexes.size + completedCustomCount;
+            const remainingSentenceCount = Math.max(targetApprovedSentenceCount - selectedSentenceCount, 0);
+            const overSentenceCount = Math.max(selectedSentenceCount - targetApprovedSentenceCount, 0);
+            const sortedSentenceCandidates = choice.sentenceCandidates
+              .map((sentence, sentenceIndex) => ({ sentence, sentenceIndex }))
+              .sort((a, b) => {
+                const selectedDelta = Number(selectedIndexes.has(b.sentenceIndex)) - Number(selectedIndexes.has(a.sentenceIndex));
+                return selectedDelta || a.sentenceIndex - b.sentenceIndex;
+              });
+            const draft = state.customDraftsByChoice.get(choice.choiceId) || { text: "", spokenText: "", focusChar: "", imageNotes: "" };
+            const feedback = state.feedbackByChoice.get(choice.choiceId) || "";
+            return `
+              <article class="choice-card ${selected ? "selected" : ""} ${previewing && !selected ? "previewing" : ""} ${previewing ? "" : "compact"}" data-choice-card="${choice.choiceId}">
+                <div class="choice-head">
+                  <div class="char-badge">${choice.newChars.join("")}</div>
+                  <div>
+                    <h2>${selected ? "已選" : `${originalRanks.get(choice.choiceId) || choiceIndex + 1}.`} ${choice.newChars.join("")} ${Object.values(choice.zhuyin).join(" ")}</h2>
+                    <p>${choice.rationale}</p>
+                    ${optimizerSummaryHtml(choice, model)}
+                  </div>
+                  <div class="choice-actions">
+                    <button class="btn secondary" type="button" ${selected ? "disabled" : `data-preview="${choice.choiceId}"`}>
+                      ${selected ? "正在編輯" : previewing ? "收起句子" : "看句子"}
+                    </button>
+                    ${
+                      previewing && !selected
+                        ? `<button class="btn" type="button" data-select="${choice.choiceId}">確定選這個字</button>`
+                        : ""
+                    }
+                    ${
+                      selected
+                        ? `<button class="btn secondary" type="button" data-unselect="${choice.choiceId}">取消選字</button>`
+                        : ""
+                    }
+                    ${
+                      previewing
+                        ? `<button class="btn secondary" type="button" data-ai-generate="${choice.choiceId}" ${state.aiGeneratingChoiceId ? "disabled" : ""}>${aiGenerateButtonText(choice)}</button>`
+                        : ""
+                    }
+                  </div>
+                </div>
+                ${
+                  selected
+                    ? reviewCoverageHtml(model, choice, {
+                        selectedSentenceCount,
+                        remainingSentenceCount,
+                        overSentenceCount,
+                      })
+                    : ""
+                }
+                ${renderCustomSection(choice, selected, customRows, draft, feedback)}
+                <div class="sentence-list">
+                  ${
+                    choice.sentenceCandidates.length
+                      ? sortedSentenceCandidates
+                          .map(({ sentence, sentenceIndex }) => {
+                            const checked = selectedIndexes.has(sentenceIndex);
+                            const key = sentenceKey(choice.choiceId, sentenceIndex);
+                            const editedSentence = candidateSentence(choice, sentenceIndex);
+                            const draftSentence = candidateDraft(choice, sentenceIndex);
+                            const hasEdit = state.candidateEditsBySentence.has(key);
+                            const editing = state.candidateEditingKeys.has(key);
+                            const imageNotes = state.imageNotesBySentence.get(sentenceKey(choice.choiceId, sentenceIndex)) || "";
+                            return `
+                              <div class="sentence-row ${checked ? "checked" : ""} ${hasEdit ? "edited" : ""}">
+                                <input type="checkbox" data-choice="${choice.choiceId}" data-index="${sentenceIndex}" ${checked ? "checked" : ""} />
+                                <div>
+                                  <div class="sentence-text">${escapeHtml(editedSentence.text)}</div>
+                                  <div class="sentence-meta">
+                                    ${hasEdit ? `<span class="pill">已修改</span>` : ""}
+                                    <span class="pill">spoken: ${escapeHtml(editedSentence.spokenText)}</span>
+                                    <span class="pill">focus: ${escapeHtml(editedSentence.focusChar)}</span>
+                                  </div>
+                                  ${hasEdit ? `<div class="candidate-original">原 AI：${escapeHtml(sentence.text)}</div>` : ""}
+                                  <p>${sentence.reason}</p>
+                                  <div class="candidate-tools">
+                                    <button class="btn secondary" type="button" data-edit-candidate="${choice.choiceId}" data-index="${sentenceIndex}">${editing ? "收起修改" : "修改"}</button>
+                                    ${hasEdit ? `<button class="btn secondary" type="button" data-reset-candidate="${choice.choiceId}" data-index="${sentenceIndex}">還原 AI 句子</button>` : ""}
+                                  </div>
+                                  ${
+                                    editing
+                                      ? `<div class="candidate-edit-panel">
+                                          <div class="candidate-edit-grid">
+                                            <input aria-label="候選句文字" placeholder="句子" value="${escapeAttr(draftSentence.text)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="text" />
+                                            <input aria-label="候選句 spokenText" placeholder="spokenText，可留空" value="${escapeAttr(draftSentence.spokenText)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="spokenText" />
+                                            <input aria-label="候選句 focus" placeholder="focus" value="${escapeAttr(draftSentence.focusChar)}" data-candidate-edit-choice="${choice.choiceId}" data-index="${sentenceIndex}" data-field="focusChar" />
+                                          </div>
+                                          <div class="candidate-tools">
+                                            <button class="btn" type="button" data-apply-candidate="${choice.choiceId}" data-index="${sentenceIndex}">套用修改</button>
+                                            <button class="btn secondary" type="button" data-cancel-candidate="${choice.choiceId}" data-index="${sentenceIndex}">取消</button>
+                                          </div>
+                                        </div>`
+                                      : ""
+                                  }
+                                  <textarea class="note-input" aria-label="候選句配圖要求" placeholder="配圖要求，可留空。例如：畫面要清楚看出二大一小，不要有文字。" data-image-note-choice="${choice.choiceId}" data-index="${sentenceIndex}">${escapeHtml(imageNotes)}</textarea>
+                                </div>
+                              </div>
+                            `;
+                          })
+                          .join("")
+                      : `<div class="sentence-row">
+                          <div></div>
+                          <div>
+                            <div class="sentence-text">還沒有候選句</div>
+                             <p>可以按下面按鈕立刻產生 10 句候選句，再逐句修改；也可以自己新增句子。</p>
+                             <div class="candidate-tools">
+                               <button class="btn" type="button" data-ai-generate="${choice.choiceId}" ${state.aiGeneratingChoiceId ? "disabled" : ""}>${aiGenerateButtonText(choice)}</button>
+                               <button class="btn secondary" type="button" data-generate-candidates="${choice.choiceId}">本機草稿 10 句</button>
+                             </div>
+                          </div>
+                        </div>`
+                  }
+                </div>
+              </article>
+            `;
+          })
+          .join("");
+      }
+
+      function selectedChoice() {
+        return state.recommendations.find((choice) => choice.choiceId === state.selectedChoiceId);
+      }
+
+      function choiceById(choiceId) {
+        return state.recommendations.find((choice) => choice.choiceId === choiceId);
+      }
+
+      function draftForChoice(choiceId) {
+        const draft = state.customDraftsByChoice.get(choiceId) || { text: "", spokenText: "", focusChar: "", imageNotes: "" };
+        state.customDraftsByChoice.set(choiceId, draft);
+        return draft;
+      }
+
+      function setChoiceFeedback(choiceId, message) {
+        state.feedbackByChoice.set(choiceId, message);
+      }
+
+      function sentenceKey(choiceId, sentenceIndex) {
+        return `${choiceId}:${sentenceIndex}`;
+      }
+
+      function rawCandidateSentence(choice, sentenceIndex) {
+        return choice.sentenceCandidates[sentenceIndex] || null;
+      }
+
+      function templateSentencesForChar(char) {
+        if (char === "和") {
+          return [
+            "你和我在家",
+            "我和你在家",
+            "你和我在山上",
+            "我和你在山下",
+            "你和我在水上",
+            "我和你在水下",
+            "我的家和你的家",
+            "大人和小人在山下",
+            "三個人和你在家",
+            "你和我有一個家",
+          ];
+        }
+        return [
+          `${char}在家`,
+          `我有${char}`,
+          `你有${char}`,
+          `${char}在山上`,
+          `${char}在山下`,
+          `${char}在水上`,
+          `大大的${char}`,
+          `小小的${char}`,
+          `你和我有${char}`,
+          `有一個${char}在家`,
+        ];
+      }
+
+      function generatedSentenceCandidates(choice, model) {
+        return optimizeChoiceSentences(choice, model).candidates.slice(0, targetGeneratedSentenceCount);
+      }
+
+      function recentReviewSentenceCandidates(choice, existingCandidates, limit) {
+        if (limit <= 0) return [];
+        const model = currentModel();
+        const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
+        const seen = new Set(existingCandidates.map((sentence) => sentence.text));
+        const candidates = [];
+        for (const sentence of lastLessons(model.lessons, 5).flatMap((lesson) => lesson.sentences || [])) {
+          if (seen.has(sentence.text) || !sentenceAllowed(sentence.text, allowedChars)) continue;
+          seen.add(sentence.text);
+          candidates.push({
+            text: sentence.text,
+            spokenText: normalizeSpokenText(sentence.spokenText || sentence.text),
+            focusChar: resolveFocusChar(sentence.text, "", choice),
+            reason: "直接取自近五課已核准句，作為複習候選。",
+          });
+          if (candidates.length >= limit) break;
+        }
+        return candidates;
+      }
+
+      function replaceManualChoiceCandidates(choice, candidates) {
+        const chars = choice.newChars;
+        const label = choiceLabelFromChars(chars);
+        const bankEntry = chars.length === 1 ? bankEntryForChar(chars[0]) : null;
+        const reviewFill = recentReviewSentenceCandidates(choice, candidates, targetReviewCandidateCount);
+        const sentenceCandidates = [...candidates, ...reviewFill];
+        const replacement = {
+          char: label,
+          newChars: chars,
+          zhuyin: zhuyinTextFromMap(chars, choice.zhuyin) || bankEntry?.zhuyin || "",
+          zhuyinMap: choice.zhuyin,
+          why: choice.rationale || bankEntry?.why || "教師用 AI 重新產生候選句。",
+          sentenceCandidates,
+        };
+        state.manualChoices = [replacement, ...state.manualChoices.filter((entry) => choiceLabelFromChars(entryNewChars(entry)) !== label)];
+        state.selectedIndexes.set(choice.choiceId, new Set());
+        state.candidateEditingKeys = new Set([...state.candidateEditingKeys].filter((key) => !key.startsWith(`${choice.choiceId}:`)));
+        state.candidateDraftsBySentence = new Map([...state.candidateDraftsBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
+        state.candidateEditsBySentence = new Map([...state.candidateEditsBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
+        state.imageNotesBySentence = new Map([...state.imageNotesBySentence].filter(([key]) => !key.startsWith(`${choice.choiceId}:`)));
+        return {
+          aiCount: candidates.length,
+          reviewCount: reviewFill.length,
+          totalCount: sentenceCandidates.length,
+        };
+      }
+
+      function candidateSentence(choice, sentenceIndex) {
+        const original = rawCandidateSentence(choice, sentenceIndex);
+        const edit = state.candidateEditsBySentence.get(sentenceKey(choice.choiceId, sentenceIndex));
+        if (!original) return null;
+        const text = String(edit?.text ?? original.text ?? "");
+        const spokenText = edit ? String(edit.spokenText || text) : String(original.spokenText || text);
+        return {
+          text,
+          spokenText: normalizeSpokenText(spokenText),
+          focusChar: String(edit?.focusChar ?? original.focusChar ?? ""),
+          reason: edit ? `教師修改候選句。${original.reason || ""}`.trim() : String(original.reason || ""),
+        };
+      }
+
+      function candidateDraft(choice, sentenceIndex) {
+        const key = sentenceKey(choice.choiceId, sentenceIndex);
+        const draft = state.candidateDraftsBySentence.get(key);
+        if (draft) return draft;
+        const sentence = candidateSentence(choice, sentenceIndex);
+        return {
+          text: String(sentence?.text || ""),
+          spokenText: String(sentence?.spokenText || sentence?.text || ""),
+          focusChar: String(sentence?.focusChar || ""),
+        };
+      }
+
+      function resolveFocusChar(text, requestedFocusChar, choice) {
+        const chars = hanChars(text);
+        if (requestedFocusChar.trim()) return requestedFocusChar.trim();
+        return choice.newChars.find((char) => chars.includes(char)) || chars[0] || "";
+      }
+
+      function withOptionalImageNotes(sentence, imageNotes) {
+        const notes = String(imageNotes || "").trim();
+        return notes ? { ...sentence, imageNotes: notes } : sentence;
+      }
+
+      function selectedSentences() {
+        const choice = selectedChoice();
+        return choice ? selectedSentencesForChoice(choice) : [];
+      }
+
+      function selectedSentencesForChoice(choice) {
+        if (!choice) return [];
+        const indexes = [...(state.selectedIndexes.get(choice.choiceId) || new Set())].sort((a, b) => a - b);
+        const selected = indexes
+          .map((index) => {
+            const sentence = candidateSentence(choice, index);
+            if (!sentence) return null;
+            return withOptionalImageNotes(sentence, state.imageNotesBySentence.get(sentenceKey(choice.choiceId, index)));
+          })
+          .filter(Boolean);
+        const customRows = state.customRowsByChoice.get(choice.choiceId) || [];
+        const custom = customRows
+          .filter((row) => row.text.trim())
+          .map((row) =>
+            withOptionalImageNotes(
+              {
+                text: row.text.trim(),
+                spokenText: normalizeSpokenText(row.spokenText.trim() || row.text.trim()),
+                focusChar: resolveFocusChar(row.text.trim(), row.focusChar, choice),
+                reason: "教師新增句。",
+              },
+              row.imageNotes,
+            ),
+          );
+        const seen = new Set();
+        return [...selected, ...custom].filter((sentence) => {
+          const key = `${sentence.text}\n${sentence.spokenText}`;
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+      }
+
+      function reviewCharCounts(sentences, chars) {
+        const counts = Object.fromEntries(chars.map((char) => [char, 0]));
+        const tracked = new Set(chars);
+        sentences.forEach((sentence) => {
+          hanChars(sentence.text).forEach((char) => {
+            if (tracked.has(char)) counts[char] += 1;
+          });
+        });
+        return counts;
+      }
+
+      function reviewCoverageHtml(model, choice = selectedChoice(), meter = null) {
+        const chars = model.reviewCountChars || [];
+        if (!choice || chars.length === 0) return "";
+        const counts = reviewCharCounts(selectedSentencesForChoice(choice), chars);
+        const selectedSentenceCount = meter?.selectedSentenceCount ?? selectedSentencesForChoice(choice).length;
+        const remainingSentenceCount = meter?.remainingSentenceCount ?? Math.max(targetApprovedSentenceCount - selectedSentenceCount, 0);
+        const overSentenceCount = meter?.overSentenceCount ?? Math.max(selectedSentenceCount - targetApprovedSentenceCount, 0);
+        return `<div class="review-coverage" data-review-coverage aria-live="polite">
+          <div class="selection-meter ${overSentenceCount ? "warning" : ""}">
+            <strong>${selectedSentenceCount}/${targetApprovedSentenceCount} 句</strong>
+            <span>${
+              overSentenceCount
+                ? `多了 ${overSentenceCount} 句，可以再精簡。`
+                : remainingSentenceCount
+                  ? `還差 ${remainingSentenceCount} 句。`
+                  : "剛好 5 句，可以送出。"
+            }</span>
+          </div>
+          <strong>近五課新字出現次數</strong>
+          <div class="review-count-list">
+            ${chars
+              .map((char) => `<div class="review-count ${counts[char] ? "" : "zero"}">${char}<span>${counts[char] || 0}</span>次</div>`)
+              .join("")}
+          </div>
+          <div class="sticky-request-actions" aria-label="送出這一課">
+            <button class="btn danger" type="button" data-submit-request>送出給 Codex</button>
+            <button class="btn" type="button" data-copy-request>複製 JSON</button>
+            <button class="btn secondary" type="button" data-download-request>下載 JSON</button>
+          </div>
+        </div>`;
+      }
+
+      function optimizerSummaryHtml(choice, model) {
+        const metrics = choice.optimization?.metrics;
+        if (!metrics) return "";
+        const targetText = choice.newChars
+          .map((char) => `${char} ${metrics.targetCounts?.[char] || 0}/${targetNewCharCountInLesson}`)
+          .join("、");
+        const missingReview = metrics.missingReviewChars || [];
+        const missingRequired = metrics.missingRequiredChars || [];
+        const provisionalChars = new Set([
+          ...(model.provisionalReviewChars || []),
+          ...(model.provisionalRequiredRecentChars || []),
+        ]);
+        const hardMissingReview = missingReview.filter((char) => !provisionalChars.has(char));
+        const hardMissingRequired = missingRequired.filter((char) => !provisionalChars.has(char));
+        const provisionalMissing = unique([...missingReview, ...missingRequired].filter((char) => provisionalChars.has(char)));
+        const targetOk = metrics.targetCount >= targetNewCharCountInLesson;
+        const reviewOk = hardMissingReview.length === 0;
+        const requiredOk = hardMissingRequired.length === 0;
+        const reviewPending = reviewOk && missingReview.length > 0;
+        const requiredPending = requiredOk && missingRequired.length > 0;
+        return `<div class="optimizer-summary" aria-label="課程最佳化摘要">
+          <span class="optimizer-pill ${targetOk ? "" : "warning"}">${targetText} 次</span>
+          <span class="optimizer-pill ${reviewOk ? (reviewPending ? "pending" : "") : "warning"}">近五課 ${metrics.reviewCovered.length}/${model.reviewCountChars.length}</span>
+          <span class="optimizer-pill ${requiredOk ? (requiredPending ? "pending" : "") : "warning"}">近三課 ${metrics.requiredCovered.length}/${model.requiredRecentChars.length}</span>
+          ${choice.source === "manual" ? `<span class="optimizer-pill">已自審排序</span>` : ""}
+          <span class="optimizer-pill">候選池 ${choice.optimization.poolSize || choice.sentenceCandidates.length} 句</span>
+          ${hardMissingReview.length ? `<span class="optimizer-pill warning">缺：${hardMissingReview.join("、")}</span>` : ""}
+          ${hardMissingRequired.length ? `<span class="optimizer-pill warning">近三課缺：${hardMissingRequired.join("、")}</span>` : ""}
+          ${provisionalMissing.length ? `<span class="optimizer-pill pending">暫定字待補：${provisionalMissing.join("、")}</span>` : ""}
+        </div>`;
+      }
+
+      function refreshReviewCoverage(model = currentModel()) {
+        const coverage = document.querySelector("[data-review-coverage]");
+        if (!coverage) return;
+        const choice = selectedChoice();
+        coverage.outerHTML = reviewCoverageHtml(model, choice);
+      }
+
+      function plannerStorageKey(model) {
+        return `${plannerStoragePrefix}lesson-${model.lessonId}`;
+      }
+
+      function legacyPlannerStorageKey(model) {
+        return `${plannerStoragePrefix}after-${lessonId(model.latestOrder)}`;
+      }
+
+      function savedLessonOrder(saved) {
+        return Number(saved?.order) || lessonOrderFromId(saved?.lessonId);
+      }
+
+      function isNearbySavedPlanner(saved, model) {
+        const order = savedLessonOrder(saved);
+        return order === model.latestOrder + 1 || order === model.latestOrder + 2;
+      }
+
+      function readPlannerMemory(key) {
+        try {
+          return JSON.parse(localStorage.getItem(key) || "null");
+        } catch {
+          return null;
+        }
+      }
+
+      function findPlannerMemory(model) {
+        const active = readPlannerMemory(activePlannerStorageKey);
+        if (active?.storageKey) {
+          const activeSaved = readPlannerMemory(active.storageKey);
+          if (activeSaved && isNearbySavedPlanner(activeSaved, model)) return activeSaved;
+        }
+
+        const direct = readPlannerMemory(plannerStorageKey(model));
+        if (direct && isNearbySavedPlanner(direct, model)) return direct;
+
+        const legacy = readPlannerMemory(legacyPlannerStorageKey(model));
+        if (legacy && isNearbySavedPlanner(legacy, model)) return legacy;
+
+        const nearby = [];
+        try {
+          for (let index = 0; index < localStorage.length; index += 1) {
+            const key = localStorage.key(index);
+            if (!key?.startsWith(plannerStoragePrefix) || key === activePlannerStorageKey) continue;
+            const saved = readPlannerMemory(key);
+            if (saved && isNearbySavedPlanner(saved, model)) nearby.push(saved);
+          }
+        } catch {
+          return null;
+        }
+        return nearby.sort((a, b) => String(b.savedAt || "").localeCompare(String(a.savedAt || "")))[0] || null;
+      }
+
+      function cleanPlannedLessons(value, latestOrder) {
+        const cleaned = {};
+        for (const [key, plan] of Object.entries(value || {})) {
+          const order = Number(plan?.order);
+          if (![latestOrder + 1, latestOrder + 2].includes(order)) continue;
+          const rawChars = Array.isArray(plan?.newChars) ? plan.newChars.join("") : String(plan?.newChars || "");
+          const newChars = unique(hanChars(rawChars));
+          if (!newChars.length) continue;
+          cleaned[key] = {
+            order,
+            lessonId: lessonId(order),
+            newChars,
+            zhuyin: Object.fromEntries(newChars.map((char) => [char, String(plan?.zhuyin?.[char] || "")])),
+            title: String(plan?.title || newChars.join("")),
+          };
+        }
+        return cleaned;
+      }
+
+      function rememberPlannedChoice(model, choice) {
+        if (!choice) return;
+        const key = plannedLessonKey(model.order);
+        state.plannedLessons = {
+          ...state.plannedLessons,
+          [key]: {
+            order: model.order,
+            lessonId: model.lessonId,
+            newChars: choice.newChars,
+            zhuyin: choice.zhuyin,
+            title: choice.title,
+          },
+        };
+        if (model.planOffset === 1) {
+          const secondKey = plannedLessonKey(model.latestOrder + 2);
+          const secondPlan = state.plannedLessons[secondKey];
+          if (secondPlan && secondPlan.newChars?.some((char) => choice.newChars.includes(char))) {
+            delete state.plannedLessons[secondKey];
+          }
+        }
+      }
+
+      function clearSelectedChoice(model = currentModel()) {
+        const previousChoiceId = state.selectedChoiceId;
+        delete state.plannedLessons[plannedLessonKey(model.order)];
+        state.selectedChoiceId = "";
+        if (state.previewChoiceId === previousChoiceId) state.previewChoiceId = "";
+      }
+
+      function mapToObject(map, valueMapper = (value) => value) {
+        return Object.fromEntries([...map.entries()].map(([key, value]) => [key, valueMapper(value)]));
+      }
+
+      function restoreMapOfArrays(saved, allowedChoiceIds) {
+        return new Map(
+          Object.entries(saved || {})
+            .filter(([choiceId]) => allowedChoiceIds.has(choiceId))
+            .map(([choiceId, indexes]) => [choiceId, new Set((indexes || []).map(Number).filter(Number.isInteger))]),
+        );
+      }
+
+      function restoreMapOfStrings(saved) {
+        return new Map(Object.entries(saved || {}).map(([key, value]) => [key, String(value || "")]));
+      }
+
+      function restoreMapOfCandidateEdits(saved, allowedChoiceIds) {
+        return new Map(
+          Object.entries(saved || {})
+            .filter(([key]) => allowedChoiceIds.has(key.split(":")[0]))
+            .map(([key, edit]) => [
+              key,
+              {
+                text: String(edit?.text || ""),
+                spokenText: String(edit?.spokenText || ""),
+                focusChar: String(edit?.focusChar || ""),
+              },
+            ]),
+        );
+      }
+
+      function cleanSavedRows(rows) {
+        return (rows || [])
+          .filter((row) => row && String(row.text || "").trim())
+          .map((row) => ({
+            text: String(row.text || ""),
+            spokenText: String(row.spokenText || ""),
+            focusChar: String(row.focusChar || ""),
+            imageNotes: String(row.imageNotes || ""),
+            editing: Boolean(row.editing),
+          }));
+      }
+
+      function restoreMapOfRows(saved, allowedChoiceIds) {
+        return new Map(
+          Object.entries(saved || {})
+            .filter(([choiceId]) => allowedChoiceIds.has(choiceId))
+            .map(([choiceId, rows]) => [choiceId, cleanSavedRows(rows)]),
+        );
+      }
+
+      function restoreMapOfDrafts(saved, allowedChoiceIds) {
+        return new Map(
+          Object.entries(saved || {})
+            .filter(([choiceId]) => allowedChoiceIds.has(choiceId))
+            .map(([choiceId, draft]) => [
+              choiceId,
+              {
+                text: String(draft?.text || ""),
+                spokenText: String(draft?.spokenText || ""),
+                focusChar: String(draft?.focusChar || ""),
+                imageNotes: String(draft?.imageNotes || ""),
+              },
+            ]),
+        );
+      }
+
+      function cleanManualChoices(items, learnedChars = []) {
+        const learned = new Set(learnedChars);
+        const seen = new Set();
+        return (items || [])
+          .map((item) => {
+            const newChars = entryNewChars(item);
+            const zhuyinMap =
+              item?.zhuyinMap && typeof item.zhuyinMap === "object"
+                ? Object.fromEntries(newChars.map((char) => [char, String(item.zhuyinMap[char] || "")]))
+                : zhuyinMapForChars(newChars, item?.zhuyin);
+            return {
+              char: choiceLabelFromChars(newChars),
+              newChars,
+              zhuyin: zhuyinTextFromMap(newChars, zhuyinMap),
+              zhuyinMap,
+              why: String(item?.why || "").trim(),
+              source: String(item?.source || ""),
+              sentenceCandidates: (item?.sentenceCandidates || []).map((sentence) => ({
+                text: String(sentence?.text || ""),
+                spokenText: normalizeSpokenText(sentence?.spokenText || sentence?.text || ""),
+                focusChar: String(sentence?.focusChar || ""),
+                reason: String(sentence?.reason || ""),
+              })),
+            };
+          })
+          .filter((item) => {
+            const label = choiceLabelFromChars(item.newChars);
+            if (
+              !label ||
+              item.newChars.some((char) => !item.zhuyinMap[char] || learned.has(char)) ||
+              seen.has(label)
+            )
+              return false;
+            seen.add(label);
+            return true;
+          });
+      }
+
+      function cleanManualDraft(draft) {
+        return {
+          char: String(draft?.char || ""),
+          zhuyin: String(draft?.zhuyin || ""),
+          why: String(draft?.why || ""),
+        };
+      }
+
+      function loadPlannerMemory(model) {
+        try {
+          const saved = findPlannerMemory(model);
+          if (!saved) return false;
+          const order = savedLessonOrder(saved);
+          const restoredOffset = order - model.latestOrder;
+          state.planOffset = restoredOffset === 1 || restoredOffset === 2 ? restoredOffset : clampPlanOffset(saved.planOffset);
+          const activeModel = recommend(state.data);
+          state.storageKey = plannerStorageKey(activeModel);
+          state.plannedLessons = cleanPlannedLessons(saved.plannedLessons, model.latestOrder);
+          const restoredModel = recommend(state.data);
+          state.manualChoices = cleanManualChoices(saved.manualChoices, restoredModel.learnedChars);
+          state.manualDraft = cleanManualDraft(saved.manualDraft);
+          const allowedChoiceIds = new Set([
+            ...restoredModel.recommendations.map((choice) => choice.choiceId),
+            ...state.manualChoices.map((choice) => choiceIdFromChars(entryNewChars(choice))),
+          ]);
+          state.selectedChoiceId = allowedChoiceIds.has(saved.selectedChoiceId) ? saved.selectedChoiceId : "";
+          state.previewChoiceId = allowedChoiceIds.has(saved.previewChoiceId) ? saved.previewChoiceId : "";
+          state.selectedIndexes = restoreMapOfArrays(saved.selectedIndexes, allowedChoiceIds);
+          state.candidateEditsBySentence = restoreMapOfCandidateEdits(saved.candidateEditsBySentence, allowedChoiceIds);
+          state.imageNotesBySentence = restoreMapOfStrings(saved.imageNotesBySentence);
+          state.customRowsByChoice = restoreMapOfRows(saved.customRowsByChoice, allowedChoiceIds);
+          state.customDraftsByChoice = restoreMapOfDrafts(saved.customDraftsByChoice, allowedChoiceIds);
+          savePlannerMemory(restoredModel);
+          return true;
+        } catch {
+          return false;
+        }
+      }
+
+      function savePlannerMemory(model = currentModel()) {
+        state.storageKey = plannerStorageKey(model);
+        const payload = {
+          savedAt: new Date().toISOString(),
+          order: model.order,
+          lessonId: model.lessonId,
+          planOffset: state.planOffset,
+          plannedLessons: state.plannedLessons,
+          selectedChoiceId: state.selectedChoiceId,
+          previewChoiceId: state.previewChoiceId,
+          selectedIndexes: mapToObject(state.selectedIndexes, (set) => [...set]),
+          candidateEditsBySentence: mapToObject(state.candidateEditsBySentence),
+          imageNotesBySentence: mapToObject(state.imageNotesBySentence),
+          customRowsByChoice: mapToObject(state.customRowsByChoice),
+          customDraftsByChoice: mapToObject(state.customDraftsByChoice),
+          manualChoices: state.manualChoices,
+          manualDraft: state.manualDraft,
+        };
+        try {
+          localStorage.setItem(state.storageKey, JSON.stringify(payload));
+          localStorage.setItem(
+            activePlannerStorageKey,
+            JSON.stringify({ storageKey: state.storageKey, lessonId: model.lessonId, savedAt: payload.savedAt }),
+          );
+        } catch {
+          $("statusLine").textContent = "瀏覽器沒有允許儲存草稿，離開頁面前請先複製 JSON。";
+        }
+      }
+
+      function clearPlannerMemory(model = currentModel()) {
+        const key = plannerStorageKey(model);
+        localStorage.removeItem(key);
+        const active = readPlannerMemory(activePlannerStorageKey);
+        if (active?.storageKey === key) localStorage.removeItem(activePlannerStorageKey);
+        state.selectedChoiceId = "";
+        state.previewChoiceId = "";
+        state.planOffset = 1;
+        state.plannedLessons = {};
+        state.selectedIndexes = new Map();
+        state.candidateEditsBySentence = new Map();
+        state.imageNotesBySentence = new Map();
+        state.customRowsByChoice = new Map();
+        state.customDraftsByChoice = new Map();
+        state.feedbackByChoice = new Map();
+        state.manualChoices = [];
+        state.manualDraft = { char: "", zhuyin: "", why: "" };
+        state.storageKey = key;
+      }
+
+      function escapeAttr(value) {
+        return String(value || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+
+      function escapeHtml(value) {
+        return String(value || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+
+      function sentenceSetChars(sentences) {
+        return new Set(sentences.flatMap((sentence) => hanChars(sentence.text)));
+      }
+
+      function missingRequiredRecentChars(model, sentences) {
+        const used = sentenceSetChars(sentences);
+        return model.requiredRecentChars.filter((char) => !used.has(char));
+      }
+
+      function buildRequest(model) {
+        const choice = selectedChoice();
+        const finalSentences = selectedSentences();
+        if (!choice) return "";
+        return JSON.stringify(buildLessonRequest(model, choice, finalSentences), null, 2);
+      }
+
+      function buildLessonRequest(model, choice, finalSentences = []) {
+        const hasApprovedSentences = finalSentences.length > 0;
+        const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
+        const missingRequired = hasApprovedSentences ? missingRequiredRecentChars(model, finalSentences) : model.requiredRecentChars;
+        const dependencies = model.dependencyPlans || [];
+        return {
+          order: model.order,
+          newChars: choice.newChars,
+          zhuyin: choice.zhuyin,
+          title: choice.title,
+          dependsOnLessons: dependencies.map((plan) => ({
+            order: plan.order,
+            lessonId: lessonId(plan.order),
+            newChars: plan.newChars,
+            title: plan.title,
+            status: "planned-not-yet-merged",
+          })),
+          targetSentenceCount: hasApprovedSentences ? finalSentences.length : targetGeneratedSentenceCount,
+          generationConstraints: {
+            sentenceHanCharLength: sentenceLengthRange,
+            allowedChars,
+            provisionalLearnedChars: dependencies.flatMap((plan) => plan.newChars || []),
+            preferReviewChars: model.recentPool,
+            mustIncludeCharsAcrossLesson: model.requiredRecentChars,
+            missingRequiredCharsInCurrentSelection: missingRequired,
+          },
+          teacherNotes: [
+            "由網頁下一課規劃工具產生。",
+            `選定候選字：${choice.choiceId}。`,
+            choice.newChars.length > 1
+              ? `本課一次引入 ${choice.newChars.join("、")}，因為「${choice.newChars.join("")}」屬於需要一起學才自然的詞語；造句時請優先讓這些新字一起出現，不要只練其中一個字。`
+              : "",
+            dependencies.length
+              ? `平行備課依賴：本課假設 ${dependencies
+                  .map((plan) => `${lessonId(plan.order)} 會加入 ${plan.newChars.join("")}`)
+                  .join("；")}。可以先平行草擬，但必須等依賴課程已合併到 main 並重新匯出 planner-data 後，才可以把本課合併或推送到 main。`
+              : "",
+            hasApprovedSentences
+              ? `核准句子：${finalSentences.map((sentence) => sentence.text).join("；")}。`
+              : `尚未核准句子。請先產生 ${targetGeneratedSentenceCount} 個候選句供教師審核；教師核准句子前，不要製作正式圖片或音訊素材。`,
+            `句長目標：每句 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字。`,
+            `優先使用最近五課複習字：${model.recentPool.join(" ")}。`,
+            `整課句子中，最近三課新字至少各出現一次：${model.requiredRecentChars.join(" ")}。`,
+            "只能使用已學字加上本課新字。",
+            hasApprovedSentences
+              ? "撰寫 imagePrompt 時，請把每一句的 imageNotes 當作教師指示。教師核准後，產生已審核的圖片提示、AI 句子音訊，以及正式可用的 AI charTimings。"
+              : "草擬候選句時，句子要具體、容易配圖、符合臺灣華語自然語感，並適合幼兒。",
+          ]
+            .filter(Boolean)
+            .join(" "),
+          approvedSentences: finalSentences,
+        };
+      }
+
+      function updateOutput(model) {
+        const request = buildRequest(model);
+        $("requestPanel").hidden = !selectedChoice();
+        $("requestOutput").value = request;
+        $("requestOutput").placeholder = request
+          ? ""
+          : "請先選一個候選字。選好後，勾選候選句或新增自己的句子，這裡才會產生 lesson request。";
+      }
+
+      function scrollSelectedChoiceIntoView() {
+        window.setTimeout(() => {
+          const choiceId = state.selectedChoiceId || state.previewChoiceId;
+          if (!choiceId) return;
+          document.querySelector(`[data-choice-card="${choiceId}"]`)?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 0);
+      }
+
+      function requestReadinessError() {
+        const model = currentModel();
+        const choice = selectedChoice();
+        if (!choice) return "請先選一個候選字。";
+        const sentences = selectedSentences();
+        if (sentences.length === 0) return "";
+        const badLength = sentences.find((sentence) => {
+          const length = sentenceHanLength(sentence);
+          return length < sentenceLengthRange.min || length > sentenceLengthRange.max;
+        });
+        if (badLength) return `「${badLength.text}」不是 ${sentenceLengthRange.min}-${sentenceLengthRange.max} 個漢字，請調整句長。`;
+        const selectedText = sentences.map((sentence) => sentence.text).join("");
+        const missingNewChars = choice.newChars.filter((char) => !selectedText.includes(char));
+        if (missingNewChars.length > 0) return `本課新字還沒都出現：${missingNewChars.join("、")}。多字詞課要一起練。`;
+        const missing = missingRequiredRecentChars(model, sentences);
+        if (missing.length > 0) return `近三課新字還沒都出現：${missing.join("、")}。請至少各放進一句。`;
+        return "";
+      }
+
+      function codexMessage(model) {
+        const intro = selectedSentences().length
+          ? `請依照下面 lesson request 幫我核對並製作第 ${model.order} 課。`
+          : `請依照下面 lesson request 先幫我產生第 ${model.order} 課候選句，讓我審核後再製作課程。`;
+        return [
+          intro,
+          "",
+          "```json",
+          buildRequest(model),
+          "```",
+        ].join("\n");
+      }
+
+      async function copyText(text) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } catch {
+          return false;
+        }
+      }
+
+      function loadAiSettings() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(aiSettingsStorageKey) || "{}");
+          state.aiSettings = {
+            endpoint: String(saved.endpoint || "").trim(),
+            token: String(saved.token || ""),
+          };
+        } catch {
+          state.aiSettings = { endpoint: "", token: "" };
+        }
+      }
+
+      function saveAiSettings() {
+        state.aiSettings = {
+          endpoint: $("aiEndpoint").value.trim().replace(/\/+$/, ""),
+          token: $("aiToken").value,
+        };
+        localStorage.setItem(aiSettingsStorageKey, JSON.stringify(state.aiSettings));
+        renderAiSettingsForm();
+      }
+
+      function aiServiceUrl() {
+        const endpoint = state.aiSettings.endpoint.replace(/\/+$/, "");
+        return endpoint.endsWith("/generate-sentences") ? endpoint : `${endpoint}/generate-sentences`;
+      }
+
+      function aiRecommendationUrl() {
+        const endpoint = state.aiSettings.endpoint.replace(/\/+$/, "");
+        if (endpoint.endsWith("/generate-sentences")) return endpoint.replace(/\/generate-sentences$/, "/recommend-characters");
+        if (endpoint.endsWith("/recommend-characters")) return endpoint;
+        return `${endpoint}/recommend-characters`;
+      }
+
+      function normalizeAiSentenceCandidates(choice, allowedChars, items) {
+        const targetChars = choice.newChars;
+        const seen = new Set();
+        const pool = [];
+        for (const item of items || []) {
+          const text = String(item?.text || "").trim();
+          const chars = hanChars(text);
+          if (!targetChars.every((char) => chars.includes(char))) continue;
+          if (!chars.every((char) => allowedChars.includes(char))) continue;
+          if (chars.length < sentenceLengthRange.min || chars.length > sentenceLengthRange.max) continue;
+          addSentenceCandidate(
+            pool,
+            seen,
+            text,
+            choice,
+            allowedChars,
+            String(item?.reason || "AI 生成後通過 Planner 規則檢查。"),
+            String(item?.focusChar || targetChars.find((char) => chars.includes(char)) || ""),
+          );
+        }
+        return pool.slice(0, targetGeneratedSentenceCount);
+      }
+
+      async function generateAiCandidates(choiceId) {
+        const model = currentModel();
+        const choice = choiceById(choiceId);
+        if (!choice) return;
+        if (!state.aiSettings.endpoint) {
+          $("statusLine").textContent = "請先在 AI 句子服務填入 Cloudflare Worker URL。";
+          $("aiEndpoint").focus();
+          return;
+        }
+        if (!state.aiSettings.token) {
+          $("statusLine").textContent = "請先在 AI 句子服務填入老師 token。";
+          $("aiToken").focus();
+          return;
+        }
+
+        state.aiGeneratingChoiceId = choiceId;
+        render(model);
+        $("statusLine").textContent = `正在請 AI 替「${choice.newChars.join("")}」產生候選句。`;
+
+        let finalStatus = "";
+        let shouldScrollToChoice = false;
+        try {
+          const lessonRequest = buildLessonRequest(model, choice, []);
+          const response = await fetch(aiServiceUrl(), {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${state.aiSettings.token}`,
+            },
+            body: JSON.stringify({ lessonRequest }),
+          });
+          const payload = await response.json().catch(() => ({}));
+          if (!response.ok) {
+            throw new Error(payload.error || `AI 服務失敗：${response.status}`);
+          }
+          const allowedChars = lessonRequest.generationConstraints.allowedChars;
+          const rawCandidates = payload.sentenceCandidates || payload.candidates || [];
+          const candidates = normalizeAiSentenceCandidates(choice, allowedChars, rawCandidates);
+          if (!candidates.length) {
+            throw new Error("AI 回傳的句子沒有通過 Planner 規則檢查，請再按一次或改字。");
+          }
+          const replacement = replaceManualChoiceCandidates(choice, candidates);
+          state.selectedChoiceId = choiceId;
+          state.previewChoiceId = choiceId;
+          savePlannerMemory(currentModel());
+          const warningText = (payload.warnings || []).length ? ` ${payload.warnings.join(" ")}` : "";
+          finalStatus = `AI 已替「${choice.newChars.join("")}」產生 ${replacement.aiCount} 句新候選，並保留 ${replacement.reviewCount} 句近五課複習候選。${warningText}`;
+          shouldScrollToChoice = true;
+        } catch (error) {
+          const replacement = replaceManualChoiceCandidates(choice, []);
+          if (replacement.reviewCount) {
+            state.selectedChoiceId = choiceId;
+            state.previewChoiceId = choiceId;
+            savePlannerMemory(currentModel());
+            finalStatus = `AI 生成失敗：${error.message} 已先保留 ${replacement.reviewCount} 句近五課複習候選，避免候選池空白。`;
+            shouldScrollToChoice = true;
+          } else {
+            finalStatus = `AI 生成失敗：${error.message}`;
+          }
+        } finally {
+          state.aiGeneratingChoiceId = "";
+          render(currentModel());
+          if (finalStatus) $("statusLine").textContent = finalStatus;
+          if (shouldScrollToChoice) scrollSelectedChoiceIntoView();
+        }
+      }
+
+      function buildRecommendationContext(model) {
+        const previousSentences = lastLessons(model.lessons, 5).flatMap((lesson) =>
+          (lesson.sentences || []).map((sentence) => sentence.text),
+        );
+        return {
+          order: model.order,
+          lessonId: model.lessonId,
+          learnedChars: model.learnedChars,
+          recentPool: model.recentPool,
+          reviewCountChars: model.reviewCountChars,
+          requiredRecentChars: model.requiredRecentChars,
+          previousSentences,
+          nextCharacterBank: state.data?.nextCharacterBank || [],
+          count: 5,
+          targetSentenceCount: targetGeneratedSentenceCount,
+          sentenceHanCharLength: sentenceLengthRange,
+        };
+      }
+
+      function applyAiRecommendations(items) {
+        const recommendations = (items || [])
+          .map((item) => {
+            const newChars = newCharsFromText(Array.isArray(item?.newChars) ? item.newChars.join("") : item?.char);
+            if (!newChars.length) return null;
+            const char = choiceLabelFromChars(newChars);
+            const zhuyinMap =
+              item?.zhuyin && typeof item.zhuyin === "object"
+                ? Object.fromEntries(newChars.map((target) => [target, String(item.zhuyin[target] || zhuyinForChar(target) || "")]))
+                : zhuyinMapForChars(newChars, item?.zhuyin);
+            return {
+              char,
+              newChars,
+              zhuyin: zhuyinTextFromMap(newChars, zhuyinMap),
+              zhuyinMap,
+              why: String(item?.why || "AI 根據目前已學字重新推薦。"),
+              source: "ai-recommendation",
+              sentenceCandidates: (item?.sentenceCandidates || []).map((sentence) => ({
+                text: String(sentence?.text || ""),
+                spokenText: normalizeSpokenText(sentence?.spokenText || sentence?.text || ""),
+                focusChar: String(sentence?.focusChar || newChars[0]),
+                reason: String(sentence?.reason || "AI 推薦字候選句。"),
+              })),
+            };
+          })
+          .filter(Boolean);
+        const recommendedLabels = new Set(recommendations.map((item) => choiceLabelFromChars(entryNewChars(item))));
+        state.manualChoices = [
+          ...recommendations,
+          ...state.manualChoices.filter((entry) => entry.source !== "ai-recommendation" && !recommendedLabels.has(choiceLabelFromChars(entryNewChars(entry)))),
+        ];
+        state.selectedChoiceId = "";
+        state.previewChoiceId = recommendations[0] ? choiceIdFromChars(entryNewChars(recommendations[0])) : "";
+      }
+
+      async function recommendAiCharacters() {
+        const model = currentModel();
+        if (!state.aiSettings.endpoint) {
+          $("statusLine").textContent = "請先在 AI 句子服務填入 Cloudflare Worker URL。";
+          $("aiEndpoint").focus();
+          return;
+        }
+        if (!state.aiSettings.token) {
+          $("statusLine").textContent = "請先在 AI 句子服務填入老師 token。";
+          $("aiToken").focus();
+          return;
+        }
+        state.aiRecommending = true;
+        $("aiRecommendBtn").disabled = true;
+        $("aiRecommendBtn").textContent = "AI 推薦中";
+        $("statusLine").textContent = `正在請 AI 根據最新 ${model.learnedChars.length} 個已學字重新推薦新字。`;
+        try {
+          const response = await fetch(aiRecommendationUrl(), {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${state.aiSettings.token}`,
+            },
+            body: JSON.stringify({ plannerContext: buildRecommendationContext(model) }),
+          });
+          const payload = await response.json().catch(() => ({}));
+          if (!response.ok) {
+            throw new Error(payload.error || `AI 推薦失敗：${response.status}`);
+          }
+          applyAiRecommendations(payload.recommendations || []);
+          const nextModel = currentModel();
+          savePlannerMemory(nextModel);
+          render(nextModel);
+          $("statusLine").textContent = `AI 已根據最新課程推薦 ${payload.recommendations?.length || 0} 個新字；可展開候選句審核。`;
+          scrollSelectedChoiceIntoView();
+        } catch (error) {
+          $("statusLine").textContent = `AI 推薦失敗：${error.message}`;
+        } finally {
+          state.aiRecommending = false;
+          $("aiRecommendBtn").disabled = false;
+          $("aiRecommendBtn").textContent = "AI 推薦新字";
+        }
+      }
+
+      function render(model) {
+        state.recommendations = model.recommendations;
+        renderSummary(model);
+        renderPlanSlotPanel(model);
+        renderManualChoiceForm();
+        renderAiSettingsForm();
+        renderChoices(model);
+        updateOutput(model);
+      }
+
+      async function loadData() {
+        loadAiSettings();
+        const response = await fetch(new URL("planner-data.json", window.location.href), { cache: "no-store" });
+        if (!response.ok) throw new Error(`讀取 planner-data.json 失敗：${response.status}`);
+        state.data = await response.json();
+        const baseModel = recommend(state.data);
+        const restored = loadPlannerMemory(baseModel);
+        const model = recommend(state.data);
+        render(model);
+        if (restored) $("statusLine").textContent = "已恢復上次留下的本課草稿。";
+      }
+
+      function currentModel() {
+        return recommend(state.data);
+      }
+
+      function bankEntryForChar(char) {
+        return (state.data?.nextCharacterBank || []).find((entry) => entry.char === char) || null;
+      }
+
+      function zhuyinForChar(char) {
+        return bankEntryForChar(char)?.zhuyin || fallbackZhuyinByChar[char] || "";
+      }
+
+      document.addEventListener("click", async (event) => {
+        if (event.target.id === "addManualChoiceBtn") {
+          const model = currentModel();
+          const newChars = newCharsFromText(state.manualDraft.char);
+          const char = choiceLabelFromChars(newChars);
+          const zhuyinMap = zhuyinMapForChars(newChars, state.manualDraft.zhuyin);
+          const missingZhuyin = newChars.filter((target) => !zhuyinMap[target]);
+          const zhuyin = zhuyinTextFromMap(newChars, zhuyinMap);
+          const why = state.manualDraft.why.trim();
+          if (!char) {
+            $("statusLine").textContent = "請先輸入新字；可以是一個字，也可以是兩個必須一起學的字。";
+            return;
+          }
+          if (newChars.length > 2) {
+            $("statusLine").textContent = "一課最多先支援兩個新字。";
+            return;
+          }
+          if (missingZhuyin.length) {
+            $("statusLine").textContent = `請幫「${missingZhuyin.join("、")}」輸入注音。兩字詞可以填：朋=ㄆㄥˊ 友=ㄧㄡˇ。`;
+            return;
+          }
+          const learnedNewChars = newChars.filter((target) => model.learnedChars.includes(target));
+          if (learnedNewChars.length) {
+            $("statusLine").textContent = `「${learnedNewChars.join("、")}」已經學過了，不能當下一課新字。`;
+            return;
+          }
+          const existingChoiceId = choiceIdFromChars(newChars);
+          const alreadyManual = state.manualChoices.some((entry) => choiceLabelFromChars(entryNewChars(entry)) === char);
+          if (alreadyManual && model.recommendations.some((choice) => choice.choiceId === existingChoiceId)) {
+            state.previewChoiceId = existingChoiceId;
+            state.manualDraft = { char: "", zhuyin: "", why: "" };
+            savePlannerMemory(model);
+            render(model);
+            $("statusLine").textContent = `「${char}」已經在自選清單，已展開自審句子。`;
+            scrollSelectedChoiceIntoView();
+            return;
+          }
+          state.manualChoices = cleanManualChoices(
+            [{ char, newChars, zhuyin, zhuyinMap, why: why || "教師自行新增的下一課字。" }, ...state.manualChoices],
+            model.learnedChars,
+          );
+          state.previewChoiceId = existingChoiceId;
+          state.manualDraft = { char: "", zhuyin: "", why: "" };
+          const nextModel = currentModel();
+          const newChoice = nextModel.recommendations.find((choice) => choice.choiceId === existingChoiceId);
+          savePlannerMemory(nextModel);
+          render(nextModel);
+          $("statusLine").textContent = newChoice?.sentenceCandidates?.length
+            ? `已加入自選字「${char}」，可使用既有候選句，也可以按 AI 生成 10 句。`
+            : `已加入自選字「${char}」。請在候選字卡片按 AI 生成 10 句，或手動新增句子。`;
+          scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        if (event.target.id === "saveAiSettingsBtn") {
+          saveAiSettings();
+          $("statusLine").textContent = "AI 句子服務設定已儲存在這台裝置。";
+          return;
+        }
+
+        if (event.target.id === "aiRecommendBtn") {
+          await recommendAiCharacters();
+          return;
+        }
+
+        const aiGenerateButton = event.target.closest("[data-ai-generate]");
+        if (aiGenerateButton) {
+          await generateAiCandidates(aiGenerateButton.dataset.aiGenerate);
+          return;
+        }
+
+        const generateCandidatesButton = event.target.closest("[data-generate-candidates]");
+        if (generateCandidatesButton) {
+          const choiceId = generateCandidatesButton.dataset.generateCandidates;
+          const model = currentModel();
+          const choice = choiceById(choiceId);
+          if (!choice) return;
+          const candidates = generatedSentenceCandidates(choice, model);
+          if (candidates.length === 0) {
+            $("statusLine").textContent = `目前已學字還不夠，無法替「${choice.newChars.join("")}」產生可用候選句。`;
+            return;
+          }
+          const replacement = replaceManualChoiceCandidates(choice, candidates);
+          state.selectedChoiceId = choiceId;
+          state.previewChoiceId = choiceId;
+          savePlannerMemory(currentModel());
+          render(currentModel());
+          $("statusLine").textContent = `已替「${choice.newChars.join("")}」生成 ${replacement.aiCount} 句候選，並保留 ${replacement.reviewCount} 句近五課複習候選。`;
+          scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        const previewButton = event.target.closest("[data-preview]");
+        if (previewButton) {
+          const choiceId = previewButton.dataset.preview;
+          state.previewChoiceId = state.previewChoiceId === choiceId ? "" : choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          $("statusLine").textContent = state.previewChoiceId === choiceId ? "已展開候選句，確認後再進入編輯。" : "已收起候選句。";
+          scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        const unselectButton = event.target.closest("[data-unselect]");
+        if (unselectButton) {
+          const model = currentModel();
+          clearSelectedChoice(model);
+          savePlannerMemory(model);
+          render(model);
+          $("statusLine").textContent = "已取消選字，可以重新選別的候選字。已寫好的句子草稿會保留。";
+          return;
+        }
+
+        const selectButton = event.target.closest("[data-select]");
+        if (selectButton) {
+          state.selectedChoiceId = selectButton.dataset.select;
+          state.previewChoiceId = state.selectedChoiceId;
+          if (!state.selectedIndexes.has(state.selectedChoiceId)) {
+            state.selectedIndexes.set(state.selectedChoiceId, new Set());
+          }
+          const model = currentModel();
+          rememberPlannedChoice(model, selectedChoice());
+          render(currentModel());
+          savePlannerMemory(currentModel());
+          $("statusLine").textContent = "已確定選這個字，現在可以勾選、修改或新增句子。";
+          scrollSelectedChoiceIntoView();
+          return;
+        }
+
+        const editCandidateButton = event.target.closest("[data-edit-candidate]");
+        if (editCandidateButton) {
+          const choiceId = editCandidateButton.dataset.editCandidate;
+          const index = Number(editCandidateButton.dataset.index);
+          const choice = choiceById(choiceId);
+          const key = sentenceKey(choiceId, index);
+          if (!choice) return;
+          if (state.candidateEditingKeys.has(key)) {
+            state.candidateEditingKeys.delete(key);
+          } else {
+            state.candidateDraftsBySentence.set(key, candidateDraft(choice, index));
+            state.candidateEditingKeys.add(key);
+          }
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          return;
+        }
+
+        const applyCandidateButton = event.target.closest("[data-apply-candidate]");
+        if (applyCandidateButton) {
+          const choiceId = applyCandidateButton.dataset.applyCandidate;
+          const index = Number(applyCandidateButton.dataset.index);
+          const choice = choiceById(choiceId);
+          const key = sentenceKey(choiceId, index);
+          const draft = state.candidateDraftsBySentence.get(key);
+          if (!choice || !draft) return;
+          const text = draft.text.trim();
+          const spokenText = normalizeSpokenText(draft.spokenText.trim() || text);
+          const focusChar = resolveFocusChar(text, draft.focusChar, choice);
+          if (!text) {
+            $("statusLine").textContent = "請先輸入修改後的句子。";
+            return;
+          }
+          if (focusChar && !hanChars(text).includes(focusChar)) {
+            $("statusLine").textContent = `focus「${focusChar}」沒有出現在句子裡。`;
+            return;
+          }
+          state.candidateEditsBySentence.set(key, { text, spokenText, focusChar });
+          state.candidateDraftsBySentence.delete(key);
+          state.candidateEditingKeys.delete(key);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          $("statusLine").textContent = `已套用修改：「${text}」。`;
+          return;
+        }
+
+        const cancelCandidateButton = event.target.closest("[data-cancel-candidate]");
+        if (cancelCandidateButton) {
+          const choiceId = cancelCandidateButton.dataset.cancelCandidate;
+          const index = Number(cancelCandidateButton.dataset.index);
+          const key = sentenceKey(choiceId, index);
+          state.candidateDraftsBySentence.delete(key);
+          state.candidateEditingKeys.delete(key);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          return;
+        }
+
+        const resetCandidateButton = event.target.closest("[data-reset-candidate]");
+        if (resetCandidateButton) {
+          const choiceId = resetCandidateButton.dataset.resetCandidate;
+          const index = Number(resetCandidateButton.dataset.index);
+          const key = sentenceKey(choiceId, index);
+          state.candidateEditsBySentence.delete(key);
+          state.candidateDraftsBySentence.delete(key);
+          state.candidateEditingKeys.delete(key);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          $("statusLine").textContent = "已還原成原本的 AI 候選句。";
+          return;
+        }
+
+        const addCustomButton = event.target.closest("[data-add-custom]");
+        if (addCustomButton) {
+          const choiceId = addCustomButton.dataset.addCustom;
+          const choice = choiceById(choiceId);
+          const model = currentModel();
+          const draft = draftForChoice(choiceId);
+          const text = draft.text.trim();
+          const spokenText = normalizeSpokenText(draft.spokenText.trim() || text);
+          if (!choice) return;
+          const focusChar = resolveFocusChar(text, draft.focusChar, choice);
+          state.selectedChoiceId = choiceId;
+          if (!text) {
+            setChoiceFeedback(choiceId, "請先輸入句子。");
+            savePlannerMemory(model);
+            render(model);
+            return;
+          }
+          const allowedChars = unique([...model.learnedChars, ...choice.newChars]);
+          const missingChars = forbiddenChars({ text }, allowedChars);
+          if (missingChars.length > 0) {
+            setChoiceFeedback(choiceId, `這句有未學字：${missingChars.join("、")}。`);
+            savePlannerMemory(model);
+            render(model);
+            return;
+          }
+          if (focusChar && !hanChars(text).includes(focusChar)) {
+            setChoiceFeedback(choiceId, `focus「${focusChar}」沒有出現在句子裡。`);
+            savePlannerMemory(model);
+            render(model);
+            return;
+          }
+          const rows = state.customRowsByChoice.get(choiceId) || [];
+          rows.push({ text, spokenText, focusChar, imageNotes: draft.imageNotes.trim() });
+          state.customRowsByChoice.set(choiceId, rows);
+          state.customDraftsByChoice.set(choiceId, { text: "", spokenText: "", focusChar: "", imageNotes: "" });
+          setChoiceFeedback(choiceId, `已新增：「${text}」。`);
+          savePlannerMemory();
+          render(currentModel());
+          return;
+        }
+
+        const editCustomButton = event.target.closest("[data-edit-custom]");
+        if (editCustomButton) {
+          const choiceId = editCustomButton.dataset.editCustom;
+          const index = Number(editCustomButton.dataset.custom);
+          const rows = [...(state.customRowsByChoice.get(choiceId) || [])];
+          if (rows[index]) rows[index] = { ...rows[index], editing: !rows[index].editing };
+          state.customRowsByChoice.set(choiceId, rows);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+          return;
+        }
+
+        const removeCustomButton = event.target.closest("[data-remove-custom]");
+        if (removeCustomButton) {
+          const choiceId = removeCustomButton.dataset.removeCustom;
+          const index = Number(removeCustomButton.dataset.custom);
+          const rows = [...(state.customRowsByChoice.get(choiceId) || [])];
+          const removed = rows.splice(index, 1)[0];
+          state.customRowsByChoice.set(choiceId, rows);
+          state.selectedChoiceId = choiceId;
+          setChoiceFeedback(choiceId, removed?.text ? `已移除：「${removed.text}」。` : "已移除一句。");
+          savePlannerMemory();
+          render(currentModel());
+          return;
+        }
+
+        if (event.target.id === "copyBtn" || event.target.closest("[data-copy-request]")) {
+          const error = requestReadinessError();
+          if (error) {
+            $("statusLine").textContent = error;
+            return;
+          }
+          const copied = await copyText($("requestOutput").value);
+          $("statusLine").textContent = copied ? "已複製 JSON，請貼到 Codex 對話。" : "瀏覽器沒有允許剪貼簿。請長按文字框，手動全選複製。";
+          return;
+        }
+
+        if (event.target.id === "submitBtn" || event.target.closest("[data-submit-request]")) {
+          const model = currentModel();
+          const error = requestReadinessError();
+          if (error) {
+            $("statusLine").textContent = error;
+            return;
+          }
+          const message = codexMessage(model);
+          const copied = await copyText(message);
+          if (navigator.share) {
+            try {
+              await navigator.share({ title: `${model.lessonId} lesson request`, text: message });
+              $("statusLine").textContent = copied
+                ? "已叫出分享面板，也已複製內容。請分享到 Codex 或貼回對話；看到 JSON 出現在對話裡才算送到。"
+                : "已叫出分享面板。若分享目標沒有 Codex，請手動複製下方文字框內容；看到 JSON 出現在對話裡才算送到。";
+              return;
+            } catch {
+              // The share panel can be canceled; the clipboard copy above is still useful.
+            }
+          }
+          $("statusLine").textContent = copied ? "已複製可貼給 Codex 的完整內容。請回到 Codex 對話貼上；看到 JSON 出現在對話裡才算送到。" : "瀏覽器沒有允許自動複製。請長按下方文字框，手動全選複製後貼回 Codex；看到 JSON 出現在對話裡才算送到。";
+          return;
+        }
+
+        if (event.target.id === "downloadBtn" || event.target.closest("[data-download-request]")) {
+          const model = currentModel();
+          const error = requestReadinessError();
+          if (error) {
+            $("statusLine").textContent = error;
+            return;
+          }
+          const blob = new Blob([$("requestOutput").value + "\n"], { type: "application/json" });
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = `${model.lessonId}.json`;
+          link.click();
+          URL.revokeObjectURL(link.href);
+          $("statusLine").textContent = "已下載 JSON。";
+          return;
+        }
+
+        if (event.target.id === "clearDraftBtn") {
+          clearPlannerMemory();
+          render(currentModel());
+          $("statusLine").textContent = "已清除本課保留的草稿。";
+          return;
+        }
+
+        if (event.target.id === "refreshBtn") {
+          await loadData();
+          $("statusLine").textContent = "已重新讀取資料。";
+        }
+
+        if (event.target.closest("[data-clear-learned-lookup]")) {
+          state.learnedLookup = "";
+          const input = $("learnedLookupInput");
+          if (input) input.value = "";
+          updateLearnedLookup();
+          return;
+        }
+      });
+
+      document.addEventListener("change", (event) => {
+        if (event.target.matches('input[name="planOffset"]')) {
+          state.planOffset = clampPlanOffset(event.target.value);
+          const model = currentModel();
+          const plan = plannedLessonForOrder(model.order);
+          const plannedChoiceId = plan ? choiceIdFromChars(plan.newChars) : "";
+          if (plannedChoiceId && model.recommendations.some((choice) => choice.choiceId === plannedChoiceId)) {
+            state.selectedChoiceId = plannedChoiceId;
+            state.previewChoiceId = plannedChoiceId;
+          } else {
+            state.selectedChoiceId = "";
+            state.previewChoiceId = "";
+          }
+          savePlannerMemory(model);
+          render(model);
+          $("statusLine").textContent =
+            state.planOffset === 2
+              ? "正在規劃下下一課；會把前一槽已確定的新字當作暫定已學字。"
+              : "正在規劃下一課。";
+          return;
+        }
+
+        if (event.target.matches("[data-choice][data-index]")) {
+          const choiceId = event.target.dataset.choice;
+          const index = Number(event.target.dataset.index);
+          const set = state.selectedIndexes.get(choiceId) || new Set();
+          if (event.target.checked) set.add(index);
+          else set.delete(index);
+          state.selectedIndexes.set(choiceId, set);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          render(currentModel());
+        }
+      });
+
+      document.addEventListener("input", (event) => {
+        if (event.target.id === "learnedLookupInput") {
+          state.learnedLookup = event.target.value;
+          updateLearnedLookup();
+          return;
+        }
+
+        if (event.target.id === "manualChar" || event.target.id === "manualZhuyin" || event.target.id === "manualWhy") {
+          const previous = state.manualDraft;
+          const next = {
+            char: $("manualChar").value,
+            zhuyin: $("manualZhuyin").value,
+            why: $("manualWhy").value,
+          };
+          if (event.target.id === "manualChar") {
+            const chars = newCharsFromText(next.char);
+            const previousChars = newCharsFromText(previous.char);
+            const knownZhuyin = chars.map((char) => zhuyinForChar(char));
+            const allKnown = knownZhuyin.length === chars.length && knownZhuyin.every(Boolean);
+            if (allKnown) next.zhuyin = knownZhuyin.join(" ");
+            else if (chars.join("") !== previousChars.join("") && next.zhuyin === previous.zhuyin) next.zhuyin = "";
+            const bankEntry = chars.length === 1 ? bankEntryForChar(chars[0]) : null;
+            if (bankEntry?.why && (!previous.why.trim() || previous.why === $("manualWhy").value)) next.why = bankEntry.why;
+            state.manualDraft = next;
+            renderManualChoiceForm();
+          } else {
+            state.manualDraft = next;
+          }
+          savePlannerMemory();
+          return;
+        }
+
+        if (event.target.matches("[data-custom-choice][data-custom][data-field]")) {
+          const choiceId = event.target.dataset.customChoice;
+          const index = Number(event.target.dataset.custom);
+          const field = event.target.dataset.field;
+          const rows = state.customRowsByChoice.get(choiceId) || [];
+          if (!rows[index]) rows[index] = { text: "", spokenText: "", focusChar: "", imageNotes: "" };
+          rows[index][field] = event.target.value;
+          state.customRowsByChoice.set(choiceId, rows);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          updateOutput(currentModel());
+          refreshReviewCoverage();
+        }
+        if (event.target.matches("[data-candidate-edit-choice][data-index][data-field]")) {
+          const choiceId = event.target.dataset.candidateEditChoice;
+          const index = Number(event.target.dataset.index);
+          const field = event.target.dataset.field;
+          const choice = choiceById(choiceId);
+          const key = sentenceKey(choiceId, index);
+          const draft = state.candidateDraftsBySentence.get(key) || candidateDraft(choice, index);
+          draft[field] = event.target.value;
+          state.candidateDraftsBySentence.set(key, draft);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+        }
+        if (event.target.matches("[data-draft-choice][data-field]")) {
+          const choiceId = event.target.dataset.draftChoice;
+          const field = event.target.dataset.field;
+          const draft = draftForChoice(choiceId);
+          draft[field] = event.target.value;
+          state.customDraftsByChoice.set(choiceId, draft);
+          state.selectedChoiceId = choiceId;
+          setChoiceFeedback(choiceId, "");
+          savePlannerMemory();
+          updateOutput(currentModel());
+        }
+        if (event.target.matches("[data-image-note-choice][data-index]")) {
+          const choiceId = event.target.dataset.imageNoteChoice;
+          const index = Number(event.target.dataset.index);
+          state.imageNotesBySentence.set(sentenceKey(choiceId, index), event.target.value);
+          state.selectedChoiceId = choiceId;
+          savePlannerMemory();
+          updateOutput(currentModel());
+        }
+      });
+
+      loadData().catch((error) => {
+        $("summaryPanel").innerHTML = `<p class="help">${error.message}</p>`;
+      });
+    </script>
+  </body>
+</html>
