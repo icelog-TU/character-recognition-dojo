@@ -1,0 +1,196 @@
+{
+  "id": "L161",
+  "order": 161,
+  "newChars": [
+    "綠"
+  ],
+  "zhuyin": {
+    "綠": "ㄌㄩˋ"
+  },
+  "title": "綠",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L157",
+    "L158",
+    "L159",
+    "L160"
+  ],
+  "provisionalLearnedChars": [
+    "吹",
+    "樹",
+    "動",
+    "葉"
+  ],
+  "generationConstraints": {
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠",
+    "provisionalLearnedChars": [
+      "吹",
+      "樹",
+      "動",
+      "葉"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "綠",
+      "葉",
+      "動",
+      "樹",
+      "吹",
+      "風"
+    ],
+    "targetCharMinimumCount": {
+      "綠": 3
+    },
+    "recentTargetMinimumCounts": {
+      "葉": 2,
+      "動": 2,
+      "樹": 2,
+      "吹": 1,
+      "風": 1
+    },
+    "disallowedChars": [
+      "色",
+      "亮",
+      "落",
+      "片",
+      "秋",
+      "黃",
+      "被",
+      "搖",
+      "園",
+      "真"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L161. Latest origin/main is L156, so this package depends on unmerged L157 吹, L158 樹, L159 動, and L160 葉; do not merge production JSON until L157-L160 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 色, 亮, 落, 片, 秋, 黃, 被, 搖, 園, or 真. Images must use L058 style anchors and contain no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "風吹動樹葉和綠草。",
+      "spokenText": "風吹動樹葉和綠草",
+      "focusChar": "綠",
+      "displayLines": [
+        "風吹動樹葉",
+        "和綠草。"
+      ],
+      "scene": "戶外草地和樹旁起風，風把樹葉和綠草吹得在動。畫面要清楚看到綠草、樹葉、風的動感；不可有文字或標籤。",
+      "hanCharCount": 8
+    },
+    {
+      "text": "樹上有紅花和綠葉。",
+      "spokenText": "樹上有紅花和綠葉",
+      "focusChar": "綠",
+      "displayLines": [
+        "樹上有紅花",
+        "和綠葉。"
+      ],
+      "scene": "一棵樹上有紅花和綠葉，色彩清楚但自然，不要像裝飾文字圖。不可有文字、數字或標籤。",
+      "hanCharCount": 8
+    },
+    {
+      "text": "紙上花花綠綠，畫得很棒。",
+      "spokenText": "紙上花花綠綠畫得很棒",
+      "focusChar": "綠",
+      "displayLines": [
+        "紙上花花綠綠，",
+        "畫得很棒。"
+      ],
+      "scene": "桌上有一張孩子畫好的圖畫，畫面色彩豐富、花花綠綠，旁邊有畫筆。畫紙上只能有圖案，不可有字、數字、注音或簽名。",
+      "hanCharCount": 10
+    },
+    {
+      "text": "沒有風，水面上葉子一動不動。",
+      "spokenText": "沒有風水面上葉子一動不動",
+      "focusChar": "動",
+      "displayLines": [
+        "沒有風，水面上",
+        "葉子一動不動。"
+      ],
+      "scene": "安靜的水面上浮著葉子，沒有風吹，葉子完全不動。畫面要平靜，水面、葉子清楚；不可有文字。",
+      "hanCharCount": 12
+    },
+    {
+      "text": "天冷了，紅葉都掉地上了。",
+      "spokenText": "天冷了紅葉都掉地上了",
+      "focusChar": "葉",
+      "displayLines": [
+        "天冷了，紅葉",
+        "都掉地上了。"
+      ],
+      "scene": "天氣變冷，紅葉掉在地上，孩子或大人穿著較暖的衣服走過。不要使用未學字作為畫面文字，圖片中不可出現任何文字或標籤。",
+      "hanCharCount": 10
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L161-G01",
+      "type": "find-character",
+      "sentenceId": "L161-S02",
+      "targetChar": "綠",
+      "reason": "綠葉是本課核心詞，畫面和文字都很清楚。"
+    },
+    {
+      "id": "L161-G02",
+      "type": "teach-character",
+      "sentenceId": "L161-S01",
+      "targetChar": "綠",
+      "targetCharIndex": 6,
+      "prefixText": "風吹動樹葉和",
+      "suffixText": "草",
+      "requiredAudio": [
+        "public/assets/lessons/L161/audio/L161-G02-prefix.m4a",
+        "public/assets/lessons/L161/audio/L161-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L161-G03",
+      "type": "missing-character",
+      "sentenceId": "L161-S03",
+      "targetChar": "綠",
+      "missingIndexes": [
+        4,
+        5
+      ],
+      "options": [
+        "綠",
+        "紅",
+        "花"
+      ]
+    },
+    {
+      "id": "L161-G04",
+      "type": "partial-order",
+      "sentenceId": "L161-S04",
+      "targetChar": "動",
+      "chunks": [
+        "沒有風",
+        "水面上葉子",
+        "一動不動"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L161-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L161-S05",
+      "targetChar": "葉",
+      "correctText": "天冷了，紅葉都掉地上了。",
+      "correctSpokenText": "天冷了紅葉都掉地上了",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "天冷了，綠葉都掉地上了。",
+          "spokenText": "天冷了綠葉都掉地上了",
+          "audioSrc": "/assets/lessons/L161/audio/L161-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "天熱了，紅葉都掉地上了。",
+          "spokenText": "天熱了紅葉都掉地上了",
+          "audioSrc": "/assets/lessons/L161/audio/L161-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

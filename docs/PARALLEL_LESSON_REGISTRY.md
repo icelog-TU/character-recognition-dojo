@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L161 | 綠 / normal lesson | claimed | Production A | codex/l161-complete-package / 9e0f279 | L157:吹, L158:樹, L159:動, L160:葉 | 吹, 樹, 動, 葉 | `curriculum-workflow/lesson-requests/L161.json`, `curriculum-workflow/generated/L161-generation-packet.md` | `public/assets/lessons/L161/images/`, `public/assets/lessons/L161/audio/` | accepted handoff and starting complete package |
+| L161 | 綠 / normal lesson | ready-blocked-by-dependency | Production A | codex/l161-complete-package / pending final commit | L157:吹, L158:樹, L159:動, L160:葉 | 吹, 樹, 動, 葉 | `curriculum-workflow/lesson-requests/L161.json`, `curriculum-workflow/generated/L161-generation-packet.md`, `curriculum-workflow/drafts/L161-draft.json` | `curriculum-workflow/audio-inbox/L161/`, `public/assets/lessons/L161/images/`, `public/assets/lessons/L161/audio/` | complete package prepared; latest main has L157-L158, still blocked until L159-L160 are merged; audio-review pending teacher OK; G02 prefix needs teacher attention because Whisper hears final 和 as homophone 盒 |
 
 ## Status Values
 
