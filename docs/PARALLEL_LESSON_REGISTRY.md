@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L154 | 等 / normal lesson | claimed | Production thread A | codex/l154-complete-package / pending | L148:時, L149:還, L150:燈, L151:關, L152:窗, L153:車 | 時, 還, 燈, 關, 窗, 車 | `curriculum-workflow/lesson-requests/L154.json`, `curriculum-workflow/generated/L154-generation-packet.md`, `curriculum-workflow/drafts/L154-draft.json` | `curriculum-workflow/audio-inbox/L154/`, `public/assets/lessons/L154/` | accepted handoff and starting complete package |
+| L154 | 等 / normal lesson | ready-blocked-by-dependency | Production thread A | codex/l154-complete-package / pending final commit | L148:時, L149:還, L150:燈, L151:關, L152:窗, L153:車 | 時, 還, 燈, 關, 窗, 車 | `curriculum-workflow/lesson-requests/L154.json`, `curriculum-workflow/generated/L154-generation-packet.md`, `curriculum-workflow/drafts/L154-draft.json` | `curriculum-workflow/audio-inbox/L154/`, `public/assets/lessons/L154/` | complete package prepared; production JSON/planner/ledger blocked until L148-L153 are merged |
 
 ## Status Values
 
