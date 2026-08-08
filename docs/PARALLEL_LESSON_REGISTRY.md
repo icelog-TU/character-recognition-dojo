@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L163 | 掃 / normal lesson | ready-blocked-by-dependency | Production B | `codex/l163-complete-package` / pending package commit | L159:動; L160:葉; L161:綠; L162:滿 | 動 葉 綠 滿 | `curriculum-workflow/lesson-requests/L163.json`; `curriculum-workflow/generated/L163-generation-packet.md` | `public/assets/lessons/L163/images/`; `public/assets/lessons/L163/audio/` | complete package prepared; OpenAI audio, Stage 4 G02/G05 audio, AI alignment, and verification complete; production JSON/planner/ledger blocked until L159-L162 merge; audio-review pending teacher OK |
+| L163 | 掃 / normal lesson | ready-blocked-by-dependency | Production B | `codex/l163-complete-package` / `a8f9e0a` | L159:動; L160:葉; L161:綠; L162:滿 | 動 葉 綠 滿 | `curriculum-workflow/lesson-requests/L163.json`; `curriculum-workflow/generated/L163-generation-packet.md` | `public/assets/lessons/L163/images/`; `public/assets/lessons/L163/audio/` | complete package prepared; OpenAI audio, Stage 4 G02/G05 audio, AI alignment, and verification complete; production JSON/planner/ledger blocked until L159-L162 merge; audio-review pending teacher OK: `/tools/audio-review.html?unit=L163&ref=a8f9e0a` |
 
 ## Status Values
 
