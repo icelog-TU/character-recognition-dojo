@@ -360,7 +360,7 @@
           <button id="copySummaryButton" type="button" disabled>複製摘要</button>
         </div>
         <label class="checkline" style="margin-top: 12px">
-          <input id="reviewCompleteInput" type="checkbox" disabled />
+          <input class="review-complete-input" type="checkbox" disabled />
           本版本我已看完，除了下面標記項目外沒有其他問題
         </label>
         <p id="statusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
@@ -401,6 +401,13 @@
       <section class="panel">
         <h2>摘要</h2>
         <textarea id="summaryBox" readonly></textarea>
+      </section>
+
+      <section class="panel">
+        <label class="checkline">
+          <input class="review-complete-input" type="checkbox" disabled />
+          本版本我已看完，除了上面標記項目外沒有其他問題
+        </label>
       </section>
     </main>
 
@@ -774,8 +781,10 @@
         $("repairCount").textContent = String(repairCount());
         $("shortSha").textContent = state.sha ? state.sha.slice(0, 7) : "-";
         $("summaryBox").value = summaryText();
-        $("reviewCompleteInput").disabled = !state.sha;
-        $("reviewCompleteInput").checked = state.reviewComplete;
+        document.querySelectorAll(".review-complete-input").forEach((input) => {
+          input.disabled = !state.sha;
+          input.checked = state.reviewComplete;
+        });
         $("copyFrozenLinkButton").disabled = !state.sha;
         $("copyRepairCommandButton").disabled = !state.sha;
         $("copySummaryButton").disabled = !state.sha;
@@ -949,11 +958,13 @@
       }
 
       $("loadButton").addEventListener("click", load);
-      $("reviewCompleteInput").addEventListener("change", () => {
-        state.reviewComplete = $("reviewCompleteInput").checked;
-        saveCloudSoon();
-      });
       document.addEventListener("change", (event) => {
+        const reviewCompleteInput = event.target.closest(".review-complete-input");
+        if (reviewCompleteInput) {
+          state.reviewComplete = reviewCompleteInput.checked;
+          saveCloudSoon();
+          return;
+        }
         const checkbox = event.target.closest("input[type='checkbox'][data-repair]");
         if (!checkbox) return;
         const key = checkbox.dataset.repair;
