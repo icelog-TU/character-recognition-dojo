@@ -108,6 +108,18 @@
         gap: 8px;
       }
 
+      .lesson-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .lesson-nav .button-row {
+        margin-left: auto;
+      }
+
       button {
         border: 1px solid var(--line);
         border-radius: 6px;
@@ -328,6 +340,17 @@
         </div>
       </section>
 
+      <section class="panel lesson-nav">
+        <div>
+          <strong id="navCurrentUnit">-</strong>
+          <span class="muted">課程審核導覽</span>
+        </div>
+        <div class="button-row">
+          <button id="prevLessonButton" type="button">上一課</button>
+          <button id="nextLessonButton" type="button">下一課</button>
+        </div>
+      </section>
+
       <section class="panel">
         <div class="button-row">
           <button id="signInButton" type="button">Google 登入同步</button>
@@ -441,6 +464,36 @@
       function setCloud(message, tone = "") {
         $("cloudLine").className = `muted ${tone}`.trim();
         $("cloudLine").textContent = message;
+      }
+
+      function currentLessonNumber() {
+        const match = /^L(\d{3})$/.exec(state.unit);
+        return match ? Number(match[1]) : 0;
+      }
+
+      function lessonUnit(number) {
+        return `L${String(number).padStart(3, "0")}`;
+      }
+
+      function lessonUrl(number) {
+        const nextUnit = lessonUnit(number);
+        return `lesson-asset-review.html?repo=${encodeURIComponent(state.repo)}&unit=${encodeURIComponent(nextUnit)}&ref=${encodeURIComponent(state.ref || "main")}`;
+      }
+
+      function updateLessonNav() {
+        const number = currentLessonNumber();
+        $("navCurrentUnit").textContent = state.unit || "-";
+        $("prevLessonButton").disabled = number <= 1;
+        $("nextLessonButton").disabled = number <= 0 || number >= 600;
+      }
+
+      async function goToLesson(offset) {
+        const number = currentLessonNumber();
+        const nextNumber = number + offset;
+        if (nextNumber < 1 || nextNumber > 600) return;
+        window.clearTimeout(state.saveTimer);
+        if (state.user && state.sha) await saveCloud();
+        window.location.href = lessonUrl(nextNumber);
       }
 
       function html(value) {
@@ -726,6 +779,7 @@
         $("copyFrozenLinkButton").disabled = !state.sha;
         $("copyRepairCommandButton").disabled = !state.sha;
         $("copySummaryButton").disabled = !state.sha;
+        updateLessonNav();
 
         $("sentenceList").innerHTML = state.sentences
           .map((sentence) => {
@@ -927,6 +981,12 @@
       $("overviewButton").addEventListener("click", () => {
         window.location.href = `asset-review-index.html?repo=${encodeURIComponent(state.repo)}&ref=${encodeURIComponent(state.ref || "main")}`;
       });
+      $("prevLessonButton").addEventListener("click", () => {
+        void goToLesson(-1);
+      });
+      $("nextLessonButton").addEventListener("click", () => {
+        void goToLesson(1);
+      });
 
       onAuthStateChanged(auth, async (user) => {
         state.user = user;
@@ -941,6 +1001,7 @@
         }
       });
 
+      updateLessonNav();
       if (state.unit) load();
     </script>
   </body>
