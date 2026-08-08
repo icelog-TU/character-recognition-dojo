@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L166 | 洗 / normal lesson | claimed | Production C | codex/l166-complete-package / c3c2c6f | L161 綠, L162 滿, L163 掃, L164 擦, L165 先 | ["綠","滿","掃","擦","先"] | curriculum-workflow/lesson-requests/L166.json, curriculum-workflow/generated/L166-generation-packet.md | public/assets/lessons/L166/images/, public/assets/lessons/L166/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
