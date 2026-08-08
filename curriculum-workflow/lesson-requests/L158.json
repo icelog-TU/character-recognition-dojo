@@ -1,0 +1,350 @@
+{
+  "id": "L158",
+  "order": 158,
+  "newChars": [
+    "樹"
+  ],
+  "zhuyin": {
+    "樹": "ㄕㄨˋ"
+  },
+  "title": "大樹樹上樹下",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L157"
+  ],
+  "provisionalLearnedChars": [
+    "吹"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹"
+    ],
+    "provisionalLearnedChars": [
+      "吹"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "樹",
+      "吹",
+      "風",
+      "再",
+      "等",
+      "車"
+    ],
+    "targetCharMinimumCount": {
+      "樹": 3
+    },
+    "recentTargetMinimumCounts": {
+      "吹": 2,
+      "風": 2,
+      "再": 2,
+      "等": 1,
+      "車": 1
+    },
+    "disallowedChars": [
+      "葉",
+      "搖",
+      "動",
+      "園",
+      "被",
+      "跟",
+      "牌",
+      "圖",
+      "館"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L158 樹. Latest origin/main contains L156 風; L158 depends on unmerged L157 吹, so do not merge production JSON until L157 is present in latest origin/main. Provisional learned char is 吹. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 葉, 搖, 動, 園, 被, 跟, 車牌, 圖書館. Images must use L058 style anchors and contain no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "大風把帽子吹到樹上。",
+      "spokenText": "大風把帽子吹到樹上",
+      "focusChar": "樹",
+      "displayLines": [
+        "大風把帽子",
+        "吹到樹上。"
+      ],
+      "scene": "A strong wind blows a hat up into a tree. Show the hat caught in the tree branches and wind movement clearly. No text, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "我在樹下等爸爸開車過來。",
+      "spokenText": "我在樹下等爸爸開車過來",
+      "focusChar": "樹",
+      "displayLines": [
+        "我在樹下",
+        "等爸爸開車",
+        "過來。"
+      ],
+      "scene": "The fixed 我 girl waits under a tree while dad drives over to pick her up. Show dad approaching in a car, but no license plates, signs, numbers, text, labels, letters, zhuyin, logos, or watermarks.",
+      "hanCharCount": 11
+    },
+    {
+      "text": "大風吹，樹上小鳥飛走了。",
+      "spokenText": "大風吹樹上小鳥飛走了",
+      "focusChar": "樹",
+      "displayLines": [
+        "大風吹，",
+        "樹上小鳥",
+        "飛走了。"
+      ],
+      "scene": "Strong wind blows through a tree, and small birds fly away from the tree. Make the tree, birds, and wind movement clear without text, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "把臉畫好，再畫鼻和眼。",
+      "spokenText": "把臉畫好再畫鼻和眼",
+      "focusChar": "再",
+      "displayLines": [
+        "把臉畫好，",
+        "再畫鼻和眼。"
+      ],
+      "scene": "A child is drawing a face on paper, first the face shape and then the nose and eyes. Paper must be blank except for the drawing; no letters, numbers, labels, writing, signs, zhuyin, logos, or watermarks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "這書好看，我要再借下一本。",
+      "spokenText": "這書好看我要再借下一本",
+      "focusChar": "再",
+      "displayLines": [
+        "這書好看，",
+        "我要再借",
+        "下一本。"
+      ],
+      "scene": "A child enjoys one book and wants to borrow another book next. A bookshelf scene is acceptable, but no readable book titles, signs, labels, numbers, letters, zhuyin, logos, or watermarks.",
+      "hanCharCount": 11
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L158-G01",
+      "type": "find-character",
+      "sentenceId": "L158-S01",
+      "targetChar": "樹",
+      "reason": "Clear concrete use of 樹 in a wind-and-hat scene."
+    },
+    {
+      "id": "L158-G02",
+      "type": "teach-character",
+      "sentenceId": "L158-S02",
+      "targetChar": "樹",
+      "targetCharIndex": 2,
+      "prefixText": "我在",
+      "suffixText": "下等爸爸開車過來",
+      "requiredAudio": [
+        "public/assets/lessons/L158/audio/L158-G02-prefix.m4a",
+        "public/assets/lessons/L158/audio/L158-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L158-G03",
+      "type": "missing-character",
+      "sentenceId": "L158-S03",
+      "targetChar": "樹",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "樹",
+        "風",
+        "吹"
+      ]
+    },
+    {
+      "id": "L158-G04",
+      "type": "partial-order",
+      "sentenceId": "L158-S04",
+      "targetChar": "再",
+      "chunks": [
+        "把臉畫好",
+        "再畫",
+        "鼻和眼"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L158-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L158-S05",
+      "targetChar": "再",
+      "correctText": "這書好看，我要再借下一本。",
+      "correctSpokenText": "這書好看我要再借下一本",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "這書好看，我要再借這一本。",
+          "spokenText": "這書好看我要再借這一本",
+          "audioSrc": "/assets/lessons/L158/audio/L158-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "這書好看，我要再看下一本。",
+          "spokenText": "這書好看我要再看下一本",
+          "audioSrc": "/assets/lessons/L158/audio/L158-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
