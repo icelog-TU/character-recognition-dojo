@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L162 | 滿 / normal lesson | ready-blocked-by-dependency | Production A | codex/l162-complete-package / pending package commit | L159:動, L160:葉, L161:綠 | 動, 葉, 綠 | `curriculum-workflow/lesson-requests/L162.json`, `curriculum-workflow/generated/L162-generation-packet.md` | `public/assets/lessons/L162/images/`, `public/assets/lessons/L162/audio/` | complete package prepared; blocked until L159-L161 enter origin/main; audio-review pending teacher OK |
+| L162 | 滿 / normal lesson | ready-blocked-by-dependency | Production A | codex/l162-complete-package / ed8c59c | L159:動, L160:葉, L161:綠 | 動, 葉, 綠 | `curriculum-workflow/lesson-requests/L162.json`, `curriculum-workflow/generated/L162-generation-packet.md` | `public/assets/lessons/L162/images/`, `public/assets/lessons/L162/audio/` | complete package prepared; blocked until L159-L161 enter origin/main; audio-review pending teacher OK |
 
 ## Status Values
 
