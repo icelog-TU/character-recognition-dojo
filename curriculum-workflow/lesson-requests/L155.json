@@ -1,0 +1,342 @@
+{
+  "id": "L155",
+  "order": 155,
+  "newChars": [
+    "再"
+  ],
+  "zhuyin": {
+    "再": "ㄗㄞˋ"
+  },
+  "title": "再等一下",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L154"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再"
+    ],
+    "provisionalLearnedChars": [
+      "等"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "再",
+      "等",
+      "車",
+      "窗",
+      "關",
+      "燈"
+    ],
+    "targetCharMinimumCount": {
+      "再": 3
+    },
+    "recentTargetMinimumCounts": {
+      "等": 2,
+      "車": 2,
+      "窗": 2,
+      "關": 1,
+      "燈": 1
+    },
+    "disallowedChars": [
+      "喔",
+      "快",
+      "題",
+      "目",
+      "先",
+      "自",
+      "己",
+      "公",
+      "具"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L155. Latest origin/main is L153, so this package depends on unmerged L154 等; do not merge production JSON until L154 is present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 為 not 爲 and 裡 not 裏. Do not add unlearned display characters such as 喔, 快, 題, 目, 先, 自, 己, 公, or 具. Images must use L058 style anchors and contain no text, numbers, signs, route numbers, station names, license plates, zhuyin, labels, English, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "還要再來玩！我會等你。",
+      "spokenText": "還要再來玩我會等你",
+      "focusChar": "再",
+      "displayLines": [
+        "還要再來玩！",
+        "我會等你。"
+      ],
+      "scene": "A child says goodbye to a friend and wants the friend to come play again, while the other child promises to wait. Show a warm playdate or doorway scene. No speech bubbles, text, signs, labels, or numbers.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "車窗關不起來，壞掉了。",
+      "spokenText": "車窗關不起來壞掉了",
+      "focusChar": "關",
+      "displayLines": [
+        "車窗關不起來，",
+        "壞掉了。"
+      ],
+      "scene": "A car window is stuck and cannot be closed; someone notices it is broken. Show the window partly open or stuck. No labels, written warnings, license plates, dashboard text, or numbers.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "窗外的車燈還沒關。",
+      "spokenText": "窗外的車燈還沒關",
+      "focusChar": "燈",
+      "displayLines": [
+        "窗外的車燈",
+        "還沒關。"
+      ],
+      "scene": "A child looks out the window and sees the lights of a parked car still on. The child is about to remind dad to go turn off the car lights. Show the child by the window, the parked car outside, and the car lights still on. No speech bubbles, text, license plates, labels, numbers, or signs.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "再等一等，車子要來了。",
+      "spokenText": "再等一等車子要來了",
+      "focusChar": "再",
+      "displayLines": [
+        "再等一等，",
+        "車子要來了。"
+      ],
+      "scene": "A child waits with an adult for a vehicle that is about to arrive. This may imply waiting for a bus, but do not show route numbers, station names, schedules, text, labels, or the unlearned word 公車.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "做做看，不會做再問人。",
+      "spokenText": "做做看不會做再問人",
+      "focusChar": "再",
+      "displayLines": [
+        "做做看，",
+        "不會做再問人。"
+      ],
+      "scene": "An adult tells a child to try a task or homework problem first, and if the child cannot do it, then ask someone. Show a child trying to work at a table with an adult nearby. Any paper or book must be blank; no written problems, numbers, letters, labels, or text.",
+      "hanCharCount": 9
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L155-G01",
+      "type": "find-character",
+      "sentenceId": "L155-S04",
+      "targetChar": "再",
+      "reason": "Clear use of 再 at the start of the common phrase 再等一等."
+    },
+    {
+      "id": "L155-G02",
+      "type": "teach-character",
+      "sentenceId": "L155-S01",
+      "targetChar": "再",
+      "targetCharIndex": 2,
+      "prefixText": "還要",
+      "suffixText": "來玩我會等你",
+      "requiredAudio": [
+        "public/assets/lessons/L155/audio/L155-G02-prefix.m4a",
+        "public/assets/lessons/L155/audio/L155-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L155-G03",
+      "type": "missing-character",
+      "sentenceId": "L155-S05",
+      "targetChar": "再",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "再",
+        "等",
+        "車"
+      ],
+      "note": "The handoff listed index 7, but zero-based Han-character indexing points to 再 at index 6 in 做做看不會做再問人."
+    },
+    {
+      "id": "L155-G04",
+      "type": "partial-order",
+      "sentenceId": "L155-S03",
+      "targetChar": "燈",
+      "chunks": [
+        "窗外的車燈",
+        "還沒",
+        "關"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L155-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L155-S02",
+      "targetChar": "關",
+      "correctText": "車窗關不起來，壞掉了。",
+      "correctSpokenText": "車窗關不起來壞掉了",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "車門關不起來，壞掉了。",
+          "spokenText": "車門關不起來壞掉了",
+          "audioSrc": "/assets/lessons/L155/audio/L155-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "車窗開不起來，壞掉了。",
+          "spokenText": "車窗開不起來壞掉了",
+          "audioSrc": "/assets/lessons/L155/audio/L155-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
