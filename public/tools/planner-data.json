@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-08T13:18:50.605Z",
+  "exportedAt": "2026-08-08T13:20:58.527Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -72746,8 +72746,9 @@
           "id": "L163-S03",
           "text": "房間裡滿是紙，要打掃。",
           "displayLines": [
-            "房間裡滿是紙，",
-            "要打掃。"
+            "房間裡滿",
+            "是紙，要",
+            "打掃。"
           ],
           "spokenText": "房間裡滿是紙要打掃",
           "focusChar": "掃",
@@ -73058,6 +73059,454 @@
           "G05 wrong-choice audio must be generated from the full wrong texts, not spliced from the correct sentence.",
           "After branch push, teacher audio review uses /tools/audio-review.html with unit L163 and the pushed commit SHA.",
           "AI alignment returned 1 ms cuts for L163-S03 charIndex 3 and L163-S04 charIndex 2; these timings were manually smoothed without changing audio or approved Traditional Chinese text."
+        ]
+      }
+    },
+    {
+      "id": "L164",
+      "order": 164,
+      "newChars": [
+        "擦"
+      ],
+      "zhuyin": {
+        "擦": "ㄘㄚ"
+      },
+      "charAudio": {
+        "擦": "/assets/lessons/L164/audio/char-u64e6.m4a"
+      },
+      "title": "擦",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L164-S01",
+          "text": "桌上滿是水，要擦一擦。",
+          "displayLines": [
+            "桌上滿是水，",
+            "要擦一擦。"
+          ],
+          "spokenText": "桌上滿是水要擦一擦",
+          "focusChar": "擦",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing objects and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean interior environment, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Indoor table with lots of spilled water; a child or adult wipes the tabletop with a plain cloth or paper towel. Clearly show the table full of water and the wiping action. No text, numbers, labels, signs, letters, zhuyin, logos, watermarks, speech bubbles, symbols, or readable marks.",
+          "imageSrc": "/assets/lessons/L164/images/L164-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L164/audio/L164-S01.m4a",
+            "durationMs": 4021,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1940,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2180,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2360,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2580,
+                "endMs": 2800
+              }
+            ]
+          }
+        },
+        {
+          "id": "L164-S02",
+          "text": "掃地後，再擦窗子。",
+          "displayLines": [
+            "掃地後，",
+            "再擦窗子。"
+          ],
+          "spokenText": "掃地後再擦窗子",
+          "focusChar": "擦",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing objects and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean home interior, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Cleaning sequence scene: the floor has already been swept, and a child or adult is now wiping a window. Include a window, a broom resting near the swept floor, and a clean gathered area to make the sequence clear. No text, labels, signs, numbers, letters, zhuyin, logos, watermarks, speech bubbles, symbols, or readable marks.",
+          "imageSrc": "/assets/lessons/L164/images/L164-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L164/audio/L164-S02.m4a",
+            "durationMs": 2767,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1580,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1840,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2000,
+                "endMs": 2360
+              }
+            ]
+          }
+        },
+        {
+          "id": "L164-S03",
+          "text": "畫得太綠了，擦掉再畫。",
+          "displayLines": [
+            "畫得太綠了，",
+            "擦掉再畫。"
+          ],
+          "spokenText": "畫得太綠了擦掉再畫",
+          "focusChar": "擦",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing objects and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean art-table environment, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. A child draws on paper; one area is too green, and the child is using an erasing or wiping tool to remove it before drawing again. The paper may show only picture shapes and color patches, with no text, numbers, zhuyin, labels, signatures, logos, watermarks, speech bubbles, symbols, or readable marks.",
+          "imageSrc": "/assets/lessons/L164/images/L164-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L164/audio/L164-S03.m4a",
+            "durationMs": 3170,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 420
+              },
+              {
+                "charIndex": 2,
+                "startMs": 420,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 940
+              },
+              {
+                "charIndex": 4,
+                "startMs": 940,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1940,
+                "endMs": 2050
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2050,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2160,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2540,
+                "endMs": 2680
+              }
+            ]
+          }
+        },
+        {
+          "id": "L164-S04",
+          "text": "滿地綠葉要掃起來。",
+          "displayLines": [
+            "滿地綠葉",
+            "要掃起來。"
+          ],
+          "spokenText": "滿地綠葉要掃起來",
+          "focusChar": "掃",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing objects and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean outdoor or courtyard environment, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. The ground is full of many green leaves, and a child or adult uses a broom to sweep the leaves into a clear pile. Clearly show many green leaves and the sweeping action. No text, labels, signs, numbers, letters, zhuyin, logos, watermarks, speech bubbles, symbols, or readable marks.",
+          "imageSrc": "/assets/lessons/L164/images/L164-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L164/audio/L164-S04.m4a",
+            "durationMs": 3392,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 860,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1920,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2160,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 2900
+              }
+            ]
+          }
+        },
+        {
+          "id": "L164-S05",
+          "text": "大家動手打掃房間。",
+          "displayLines": [
+            "大家動手",
+            "打掃房間。"
+          ],
+          "spokenText": "大家動手打掃房間",
+          "focusChar": "掃",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing people, objects, and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean room interior, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Family members or classmates clean a room together; one person sweeps while another organizes books and blank papers. Keep it warm and clear. No text, numbers, signs, labels, letters, zhuyin, logos, watermarks, speech bubbles, symbols, or readable marks.",
+          "imageSrc": "/assets/lessons/L164/images/L164-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L164/audio/L164-S05.m4a",
+            "durationMs": 3773,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 520
+              },
+              {
+                "charIndex": 2,
+                "startMs": 520,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 2540
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L164-G01",
+          "type": "find-character",
+          "sentenceId": "L164-S02",
+          "targetChar": "擦",
+          "prompt": "幫忙找出「擦」。",
+          "missingIndexes": [
+            4
+          ]
+        },
+        {
+          "id": "L164-G02",
+          "type": "teach-character",
+          "sentenceId": "L164-S01",
+          "targetChar": "擦",
+          "targetCharIndex": 6,
+          "missingIndexes": [
+            6
+          ],
+          "prompt": "聽一聽，放進「擦」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L164/audio/L164-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L164/audio/L164-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L164-G03",
+          "type": "missing-character",
+          "sentenceId": "L164-S03",
+          "targetChar": "擦",
+          "missingIndexes": [
+            5
+          ],
+          "prompt": "選出不見的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "擦",
+              "correct": true
+            },
+            {
+              "id": "draw",
+              "text": "畫",
+              "correct": false
+            },
+            {
+              "id": "green",
+              "text": "綠",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L164-G04",
+          "type": "partial-order",
+          "sentenceId": "L164-S04",
+          "targetChar": "掃",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "滿地綠葉",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "要掃",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "起來",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L164-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L164-S05",
+          "targetChar": "掃",
+          "prompt": "聽聽誰讀得一樣。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "大家動手打掃房間。",
+              "spokenText": "大家動手打掃房間",
+              "audioSrc": "/assets/lessons/L164/audio/L164-S05.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "大家動手打掃書房。",
+              "spokenText": "大家動手打掃書房",
+              "audioSrc": "/assets/lessons/L164/audio/L164-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "大家動手打掃桌子。",
+              "spokenText": "大家動手打掃桌子",
+              "audioSrc": "/assets/lessons/L164/audio/L164-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "productionNotes": {
+        "status": "ready-blocked-by-dependency",
+        "notes": [
+          "Production JSON, planner data, and ledger updates are blocked until L159-L163 are merged.",
+          "G02 teachAudio prefix text is ??????; suffix text is ??.",
+          "G05 wrong-choice audio must be generated from the full wrong texts, not spliced from the correct sentence.",
+          "Teacher subjective image/audio review is post-merge through the permanent asset review tools."
         ]
       }
     }
