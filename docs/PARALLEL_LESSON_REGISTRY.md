@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L171 | 就 / normal lesson | ready-blocked-by-dependency | Production B | `codex/l171-complete-package` / `5eb0692` | L166:洗; L167:又; L168:髒; L169:亂; L170:回 | 洗 又 髒 亂 回 | `curriculum-workflow/lesson-requests/L171.json`; `curriculum-workflow/generated/L171-generation-packet.md`; `curriculum-workflow/drafts/L171-draft.json` | `public/assets/lessons/L171/images/`; `public/assets/lessons/L171/audio/` | complete package prepared; blocked until L166-L170 enter main; verify passed; AI alignment normalized 头->頭 and manual timing smoothing applied; post-merge review: `tools/lesson-asset-review.html?unit=L171&ref=main` |
+| L171 | 就 / normal lesson | ready-blocked-by-dependency | Production B | `codex/l171-complete-package` / `4ba7b7e` | L166:洗; L167:又; L168:髒; L169:亂; L170:回 | 洗 又 髒 亂 回 | `curriculum-workflow/lesson-requests/L171.json`; `curriculum-workflow/generated/L171-generation-packet.md`; `curriculum-workflow/drafts/L171-draft.json` | `public/assets/lessons/L171/images/`; `public/assets/lessons/L171/audio/` | complete package commit 5eb0692; blocked until L166-L170 enter main; verify passed; AI alignment normalized 头->頭 and manual timing smoothing applied; post-merge review: `tools/lesson-asset-review.html?unit=L171&ref=main` |
 
 ## Status Values
 
