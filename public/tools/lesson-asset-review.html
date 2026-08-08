@@ -227,10 +227,9 @@
         background: #f1eee8;
       }
 
-      .app-crop-preview img {
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        object-position: center;
+      .app-image-preview img {
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
       }
 
       .full-image-preview img {
@@ -749,9 +748,9 @@
               <article class="sentence-card ${flagged ? "needs-repair" : ""}">
                 <div class="image-wrap">
                   <div class="image-previews">
-                    <div class="preview-panel app-crop-preview">
-                      <div class="preview-label">APP 方形裁切預覽</div>
-                      <img src="${html(sentence.imageUrl)}" alt="${html(sentence.id)} app crop preview" loading="lazy" />
+                    <div class="preview-panel app-image-preview">
+                      <div class="preview-label">APP 完整圖片預覽</div>
+                      <img src="${html(sentence.imageUrl)}" alt="${html(sentence.id)} app full image preview" loading="lazy" />
                     </div>
                     <div class="preview-panel full-image-preview">
                       <div class="preview-label">完整原圖</div>

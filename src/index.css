@@ -2767,9 +2767,10 @@ button.char-token {
 .picture-sentence-card img,
 .image-placeholder {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #f1eee8;
 }
 
 .image-placeholder {
