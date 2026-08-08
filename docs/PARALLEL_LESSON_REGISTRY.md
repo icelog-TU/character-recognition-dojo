@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L158 | 樹 / normal lesson | claimed | Production thread A | codex/l158-complete-package / pending | L157:吹 | 吹 | `curriculum-workflow/lesson-requests/L158.json`, `curriculum-workflow/generated/L158-generation-packet.md`, `curriculum-workflow/drafts/L158-draft.json` | `curriculum-workflow/audio-inbox/L158/`, `public/assets/lessons/L158/` | accepted handoff and starting complete package |
 
 ## Status Values
 
