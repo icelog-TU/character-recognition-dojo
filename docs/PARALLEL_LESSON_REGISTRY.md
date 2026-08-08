@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L169 | 亂 / normal lesson | claimed | Production C | codex/l169-complete-package / d6eb7cb | L166:洗, L167:又, L168:髒 | 洗, 又, 髒 | `curriculum-workflow/lesson-requests/L169.json`; `curriculum-workflow/generated/L169-generation-packet.md` | `public/assets/lessons/L169/images/`; `public/assets/lessons/L169/audio/` | accepted handoff and starting complete package |
 
 ## Status Values
 
