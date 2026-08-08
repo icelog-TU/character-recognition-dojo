@@ -604,15 +604,32 @@
           .join("");
       }
 
-      async function saveCloudSoon() {
-        saveLocalApprovals();
-        render();
+      function updateSummaryOnly() {
+        $("totalCount").textContent = String(state.items.length);
+        $("approvedCount").textContent = String(approvedItems().length);
+        $("pendingCount").textContent = String(pendingItems().length);
+        $("summaryBox").value = summaryText();
+      }
+
+      function queueCloudSave() {
         if (!state.user || !state.sha) {
           setCloud("未登入 Google：這次修改只存在本機；登入後才會同步到手機和平板。", "warn");
           return;
         }
         window.clearTimeout(state.saveTimer);
         state.saveTimer = window.setTimeout(saveCloud, 350);
+      }
+
+      async function saveCloudSoon() {
+        saveLocalApprovals();
+        render();
+        queueCloudSave();
+      }
+
+      function saveCloudQuietly() {
+        saveLocalApprovals();
+        updateSummaryOnly();
+        queueCloudSave();
       }
 
       async function saveCloud() {
@@ -648,7 +665,7 @@
           updatedAt: serverTimestamp(),
         };
         try {
-          await setDoc(doc(db, "audioReviews", reviewId()), payload, { merge: true });
+          await setDoc(doc(db, "audioReviews", reviewId()), payload);
           setCloud(`已同步到 Firestore：${payload.approvedCount}/${payload.itemCount}`);
         } catch (error) {
           setCloud(`Firestore 同步失敗：${error.message}`, "bad");
@@ -670,7 +687,8 @@
             });
             state.approvals = { ...state.approvals, ...cloudApprovals };
             saveLocalApprovals();
-            render();
+            if (document.activeElement?.matches("input[data-note]")) updateSummaryOnly();
+            else render();
           } else {
             setCloud(state.user ? "雲端沒有既有審核紀錄。" : "雲端沒有既有審核紀錄；登入 Google 後才能跨裝置儲存修改。");
           }
@@ -685,7 +703,8 @@
               });
               state.approvals = { ...state.approvals, ...cloudApprovals };
               saveLocalApprovals();
-              render();
+              if (document.activeElement?.matches("input[data-note]")) updateSummaryOnly();
+              else render();
               setCloud(`雲端狀態：${data.approvedCount || 0}/${data.itemCount || state.items.length}`);
             },
             (error) => setCloud(`Firestore 讀取失敗：${error.message}`, "bad"),
@@ -735,7 +754,7 @@
         if (!noteInput) return;
         const key = noteInput.dataset.note;
         state.approvals[key] = { ...(state.approvals[key] || {}), note: noteInput.value };
-        saveCloudSoon();
+        saveCloudQuietly();
       });
       $("signInButton").addEventListener("click", async () => {
         try {

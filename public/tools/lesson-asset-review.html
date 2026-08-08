@@ -317,6 +317,10 @@
         padding: 12px;
       }
 
+      .stale-note {
+        margin-bottom: 12px;
+      }
+
       @media (max-width: 860px) {
         .topbar,
         .status-grid,
@@ -411,6 +415,14 @@
         <div id="extraAudioList" class="section-list" aria-live="polite"></div>
       </section>
 
+      <section id="staleRepairPanel" class="panel" hidden>
+        <h2>舊標記</h2>
+        <p class="muted stale-note">
+          這些是雲端保留下來、但目前版本清單沒有直接對應到的維修標記。修正版上 main 後，請依備註複查新檔案；確認沒有問題後取消這裡的勾選。
+        </p>
+        <div id="staleRepairList" class="section-list" aria-live="polite"></div>
+      </section>
+
       <section class="panel">
         <div class="panel-heading">
           <h2>摘要</h2>
@@ -477,6 +489,7 @@
         sentences: [],
         extraAudio: [],
         flags: {},
+        cloudRepairItems: {},
         reviewComplete: false,
         user: null,
         unsubscribeReview: null,
@@ -694,7 +707,7 @@
         return state.flags[key] || defaultFlag();
       }
 
-      function allRepairItems() {
+      function currentRepairItems() {
         const items = [];
         state.sentences.forEach((sentence) => {
           const imageFlag = getFlag(`${sentence.key}:image`);
@@ -737,6 +750,47 @@
           }
         });
         return items;
+      }
+
+      function staleRepairItems(currentKeys = new Set(currentRepairItems().map((item) => item.key))) {
+        const items = [];
+        const cloudItems = state.cloudRepairItems || {};
+        Object.entries(cloudItems).forEach(([key, value]) => {
+          if (currentKeys.has(key)) return;
+          const flag = getFlag(key);
+          if (!flag.needsRepair && !flag.note) return;
+          items.push({
+            key,
+            target: value.target || (key.endsWith(":image") ? "image" : "audio"),
+            label: value.label || key,
+            src: value.src || "",
+            text: value.text || "",
+            note: flag.note || value.note || "",
+            needsRepair: flag.needsRepair === true,
+            stale: true,
+          });
+        });
+        Object.entries(state.flags).forEach(([key, flag]) => {
+          if (currentKeys.has(key) || Object.prototype.hasOwnProperty.call(cloudItems, key)) return;
+          if (!flag.needsRepair && !flag.note) return;
+          items.push({
+            key,
+            target: key.endsWith(":image") ? "image" : "audio",
+            label: key,
+            src: "",
+            text: "",
+            note: flag.note || "",
+            needsRepair: flag.needsRepair === true,
+            stale: true,
+          });
+        });
+        return items;
+      }
+
+      function allRepairItems() {
+        const currentItems = currentRepairItems();
+        const currentKeys = new Set(currentItems.map((item) => item.key));
+        return [...currentItems, ...staleRepairItems(currentKeys)];
       }
 
       function repairCount() {
@@ -832,6 +886,24 @@
         $("copySummaryInlineButton").disabled = !state.sha;
         updateLessonNav();
 
+        const staleItems = staleRepairItems();
+        $("staleRepairPanel").hidden = staleItems.length === 0;
+        $("staleRepairList").innerHTML = staleItems
+          .map(
+            (item) => `
+              <article class="audio-card ${item.needsRepair ? "needs-repair" : ""}">
+                <div class="head">
+                  <strong>${html(item.label)}</strong>
+                  <span class="warn">舊標記</span>
+                </div>
+                ${item.text ? `<div>${html(item.text)}</div>` : ""}
+                ${item.src ? `<div class="mono muted">${html(item.src)}</div>` : ""}
+                ${renderRepairBox(item.key, item.target === "image" ? "舊圖片標記仍需修" : "舊音檔標記仍需修")}
+              </article>
+            `,
+          )
+          .join("");
+
         $("sentenceList").innerHTML = state.sentences
           .map((sentence) => {
             const flagged = getFlag(`${sentence.key}:image`).needsRepair || getFlag(`${sentence.key}:audio`).needsRepair;
@@ -885,15 +957,30 @@
           .join("");
       }
 
-      async function saveCloudSoon() {
-        saveLocalState();
-        render();
+      function updateSummaryOnly() {
+        $("repairCount").textContent = String(repairCount());
+        $("summaryBox").value = summaryText();
+      }
+
+      function queueCloudSave() {
         if (!state.user || !state.sha) {
           setCloud("未登入 Google：這次修改只存在本機；登入後才會同步到手機和平板。", "warn");
           return;
         }
         window.clearTimeout(state.saveTimer);
         state.saveTimer = window.setTimeout(saveCloud, 350);
+      }
+
+      async function saveCloudSoon() {
+        saveLocalState();
+        render();
+        queueCloudSave();
+      }
+
+      function saveCloudQuietly() {
+        saveLocalState();
+        updateSummaryOnly();
+        queueCloudSave();
       }
 
       async function saveCloud() {
@@ -921,7 +1008,7 @@
           updatedAt: serverTimestamp(),
         };
         try {
-          await setDoc(doc(db, "assetReviews", reviewId()), payload, { merge: true });
+          await setDoc(doc(db, "assetReviews", reviewId()), payload);
           setCloud(`已同步到 Firestore：${payload.repairCount} 個需要修`);
         } catch (error) {
           setCloud(`Firestore 同步失敗：${error.message}`, "bad");
@@ -961,6 +1048,7 @@
       }
 
       function mergeCloud(data) {
+        state.cloudRepairItems = data.repairItems || {};
         const flags = {};
         Object.entries(data.repairItems || {}).forEach(([key, value]) => {
           flags[key] = {
@@ -971,6 +1059,10 @@
         state.flags = flags;
         state.reviewComplete = data.reviewComplete === true;
         saveLocalState();
+        if (document.activeElement?.matches("input[data-note]")) {
+          updateSummaryOnly();
+          return;
+        }
         render();
       }
 
@@ -1023,7 +1115,7 @@
         if (!input) return;
         const key = input.dataset.note;
         state.flags[key] = { ...getFlag(key), note: input.value };
-        saveCloudSoon();
+        saveCloudQuietly();
       });
       $("signInButton").addEventListener("click", async () => {
         try {
