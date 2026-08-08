@@ -1,0 +1,349 @@
+{
+  "id": "L151",
+  "order": 151,
+  "newChars": [
+    "關"
+  ],
+  "zhuyin": {
+    "關": "ㄍㄨㄢ"
+  },
+  "title": "關燈開關關心",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L143",
+    "L144",
+    "L145",
+    "L146",
+    "L147",
+    "L148",
+    "L149",
+    "L150"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關"
+    ],
+    "provisionalLearnedChars": [
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "關",
+      "燈",
+      "還",
+      "時",
+      "間",
+      "房"
+    ],
+    "targetCharMinimumCount": {
+      "關": 3
+    },
+    "recentTargetMinimumCounts": {
+      "燈": 2,
+      "還": 2,
+      "時": 2,
+      "間": 1,
+      "房": 1
+    },
+    "disallowedChars": [
+      "電",
+      "動",
+      "遊",
+      "戲",
+      "亮",
+      "暗",
+      "修",
+      "病",
+      "爲",
+      "裏"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L151 關. Use these sentences exactly; spokenText equals text with punctuation removed. L151 depends on L143-L150; do not merge production JSON until L143-L150 are present in latest origin/main. Provisional learned chars are 以、怎、所、房、間、時、還、燈. Use 為, not 爲. Use 裡, not 裏. Do not add unlearned display characters such as 電、動、遊、戲、亮、暗、修、病. Images must use L058 style anchors and contain no text, numbers, signs, zhuyin, labels, logos, written UI, scores, or watermarks. Flower lanterns must not have written characters or symbols. Audio must be standalone OpenAI charAudio for 關, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "房間沒人時，要關燈。",
+      "spokenText": "房間沒人時要關燈",
+      "focusChar": "關",
+      "displayLines": [
+        "房間沒人時，",
+        "要關燈。"
+      ],
+      "hanCharCount": 8,
+      "scene": "An empty room with the light being turned off or already off because nobody is inside. Make the empty room clear. No wall text, labels, posters with writing, numbers, or icons."
+    },
+    {
+      "text": "這個開關怎麼壞了？",
+      "spokenText": "這個開關怎麼壞了",
+      "focusChar": "關",
+      "displayLines": [
+        "這個開關",
+        "怎麼壞了？"
+      ],
+      "hanCharCount": 8,
+      "scene": "A child or adult looks at a broken light switch or wall switch in surprise. The switch should look damaged or not working, but no warning labels, words, symbols, numbers, or brand marks."
+    },
+    {
+      "text": "過了一小時，花燈還沒做好。",
+      "spokenText": "過了一小時花燈還沒做好",
+      "focusChar": "燈",
+      "displayLines": [
+        "過了一小時，",
+        "花燈還沒做好。"
+      ],
+      "hanCharCount": 11,
+      "scene": "A child or family is making a flower lantern, but after a long time it is still unfinished. Show craft materials and a partly made flower lantern. Do not show written clock numbers, labels, words, or symbols."
+    },
+    {
+      "text": "我到校時，校門還沒關。",
+      "spokenText": "我到校時校門還沒關",
+      "focusChar": "關",
+      "displayLines": [
+        "我到校時，",
+        "校門還沒關。"
+      ],
+      "hanCharCount": 9,
+      "scene": "A child arrives at school and the school gate is still open. Show a school entrance and open gate, but no school name, signs, numbers, labels, or written text."
+    },
+    {
+      "text": "沒人關心他，他很難過。",
+      "spokenText": "沒人關心他他很難過",
+      "focusChar": "關",
+      "displayLines": [
+        "沒人關心他，",
+        "他很難過。"
+      ],
+      "hanCharCount": 9,
+      "scene": "A child looks sad because nobody is paying attention or caring for him. Keep the scene gentle and age-appropriate. Show other people nearby not noticing him, without text, speech bubbles, labels, or symbols."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L151-G01",
+      "type": "find-character",
+      "sentenceId": "L151-S02",
+      "targetChar": "關",
+      "reason": "Clear use of 關 in 開關."
+    },
+    {
+      "id": "L151-G02",
+      "type": "teach-character",
+      "sentenceId": "L151-S01",
+      "targetChar": "關",
+      "targetCharIndex": 6,
+      "prefixText": "房間沒人時要",
+      "suffixText": "燈",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L151/audio/L151-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L151/audio/L151-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L151-G03",
+      "type": "missing-character",
+      "sentenceId": "L151-S02",
+      "targetChar": "關",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "關",
+        "開",
+        "燈"
+      ]
+    },
+    {
+      "id": "L151-G04",
+      "type": "partial-order",
+      "sentenceId": "L151-S03",
+      "targetChar": "燈",
+      "chunks": [
+        "過了一小時",
+        "花燈還沒",
+        "做好"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L151-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L151-S04",
+      "targetChar": "關",
+      "correctText": "我到校時校門還沒關",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我到校時校門還沒開",
+          "audioSrc": "/assets/lessons/L151/audio/L151-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我到家時房門還沒關",
+          "audioSrc": "/assets/lessons/L151/audio/L151-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
