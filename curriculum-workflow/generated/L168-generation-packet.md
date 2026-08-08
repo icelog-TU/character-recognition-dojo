@@ -7,7 +7,7 @@
 - 新字：髒
 - 注音：髒=ㄗㄤ
 - 目標句數：5
-- 教師備註：Teacher-approved final source for L168 髒. Latest origin/main at production start contains L165 先; L168 still depends on L166 洗 and L167 又 before production JSON may merge. Provisional learned chars are 先, 洗, 又 as provided in the handoff, with 先 already present in latest main. Do not merge production JSON, planner-data, or ledger until L166-L167 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 乾, 淨, 毛, 巾, 肥, 皂, 泥, 土, 亂, 餐, 椅, 修, 櫃, or 見. G05 wrong-two was adjusted from the handoff fallback because 不見了 uses locked 見 and 少了 has a different Han count; the production option is 掃把怎麼又拿走了？ to satisfy allowed-character and same-length validator rules. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.
+- 教師備註：Teacher-approved final source for L168 髒. Latest origin/main at production start contains L165 先; L168 still depends on L166 洗 and L167 又 before production JSON may merge. Provisional learned chars are 先, 洗, 又 as provided in the handoff, with 先 already present in latest main. Do not merge production JSON, planner-data, or ledger until L166-L167 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 乾, 淨, 毛, 巾, 肥, 皂, 泥, 土, 亂, 餐, 椅, 修, 櫃, 見, or 服. S03 was corrected by the sentence editor from 髒衣服要拿去洗。 to 髒衣髒帽要拿去洗。 because 服 was not learned. G05 wrong-two was adjusted from the handoff fallback because 不見了 uses locked 見 and 少了 has a different Han count; the production option is 掃把怎麼又拿走了？ to satisfy allowed-character and same-length validator rules. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.
 
 ## 已學字邊界
 
@@ -991,45 +991,3 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 圖片提示不可要求文字、字母或數字。
 - 音訊要像完整句子一樣自然朗讀。
 - 正式發布前必須有字級 timing metadata。
-
-## Approved Production Handoff
-
-This section records the teacher-approved final L168 source. Do not regenerate or rewrite these display sentences unless the teacher sends a new approval.
-
-### Boundary
-
-- Latest production main at package start: complete through L165「先」.
-- Dependencies: L166「洗」 and L167「又」 must merge before L168 can enter production JSON.
-- Provisional learned chars from handoff: 先, 洗, 又. The char 先 is already learned on latest main; 洗 and 又 remain provisional until their lessons merge.
-- Final package status before dependencies merge: ready-blocked-by-dependency.
-
-### Final Sentences
-
-| ID | text | spokenText | focusChar | displayLines | imageNotes |
-|---|---|---|---|---|---|
-| L168-S01 | 手又髒了，要去洗手。 | 手又髒了要去洗手 | 髒 | 手又髒了， / 要去洗手。 | Square image / 1:1 composition. A child's hands have become dirty again, and the child is getting ready to wash hands at a sink. Make the dirty hands and hand-washing context very clear and centered. No text, numbers, labels, signs, zhuyin, logos, or watermarks. |
-| L168-S02 | 臉好髒，先去擦一擦。 | 臉好髒先去擦一擦 | 髒 | 臉好髒， / 先去擦一擦。 | Square image / 1:1 composition. A child has visible dirt on the face, and either the child or a caring adult is about to wipe the face with a plain cloth or tissue. No text, numbers, labels, signs, zhuyin, logos, or watermarks. |
-| L168-S03 | 髒衣服要拿去洗。 | 髒衣服要拿去洗 | 髒 | 髒衣服 / 要拿去洗。 | Square image / 1:1 composition. A dirty piece of clothing is being taken to be washed, near a laundry basket or simple laundry area. No text, numbers, labels, signs, zhuyin, logos, or watermarks. |
-| L168-S04 | 掃把怎麼又壞掉了？ | 掃把怎麼又壞掉了 | 又 | 掃把怎麼 / 又壞掉了？ | Square image / 1:1 composition. A broom is broken again, and a child or adult looks confused while noticing the damaged broom. No text, numbers, labels, signs, zhuyin, logos, or watermarks. |
-| L168-S05 | 大人還沒上桌，不可以先吃。 | 大人還沒上桌不可以先吃 | 先 | 大人還沒上桌， / 不可以先吃。 | Square image / 1:1 composition. Food is on the dining table, and a child sitting nearby wants to eat first, but the adults have not come to the table yet. No text, numbers, labels, signs, zhuyin, logos, or watermarks. |
-
-### Stage 4
-
-| Game | Type | Sentence | Target | Notes |
-|---|---|---|---|---|
-| L168-G01 | find-character | L168-S03 | 髒 | Find 髒 in 髒衣服. |
-| L168-G02 | teach-character | L168-S01 | 髒 | targetCharIndex 2. Dedicated prefix text: 手又. Dedicated suffix text: 了要去洗手. |
-| L168-G03 | missing-character | L168-S02 | 髒 | missingIndexes [2], options 髒 / 擦 / 洗. |
-| L168-G04 | partial-order | L168-S05 | 先 | chunks: 大人還沒上桌 / 不可以 / 先吃. |
-| L168-G05 | choose-pronunciation | L168-S04 | 又 | correct: 掃把怎麼又壞掉了？ wrong-one: 掃把怎麼又放好了？ wrong-two: 掃把怎麼又拿走了？ |
-
-`掃把怎麼又拿走了？` is the production G05 wrong-two because `不見了` contains locked 見 and `少了` does not match the correct sentence Han count required by the validator.
-
-### Required Audio
-
-- `/assets/lessons/L168/audio/char-u9ad2.m4a`
-- `/assets/lessons/L168/audio/L168-S01.m4a` through `/assets/lessons/L168/audio/L168-S05.m4a`
-- `/assets/lessons/L168/audio/L168-G02-prefix.m4a`
-- `/assets/lessons/L168/audio/L168-G02-suffix.m4a`
-- `/assets/lessons/L168/audio/L168-G05-wrong-one.m4a`
-- `/assets/lessons/L168/audio/L168-G05-wrong-two.m4a`

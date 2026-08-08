@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L168 | 髒 / normal lesson | needs-rework | Production B | `codex/l168-complete-package` / `d6eb7cb` | L165:先; L166:洗; L167:又 | 先 洗 又 | `curriculum-workflow/lesson-requests/L168.json`; `curriculum-workflow/generated/L168-generation-packet.md` | `public/assets/lessons/L168/images/`; `public/assets/lessons/L168/audio/` | blocked by allowed-character audit: approved S03 uses locked character 服; waiting for teacher/sentence-editor correction before assets |
+| L168 | 髒 / normal lesson | ready-blocked-by-dependency | Production A | `codex/l168-complete-package` / pending rework commit | L165:先; L166:洗; L167:又 | 先 洗 又 | `curriculum-workflow/lesson-requests/L168.json`; `curriculum-workflow/generated/L168-generation-packet.md`; `curriculum-workflow/drafts/L168-draft.json` | `public/assets/lessons/L168/images/`; `public/assets/lessons/L168/audio/` | Production A takeover from Production B; S03 changed from 髒衣服要拿去洗。to 髒衣髒帽要拿去洗。because 服 was not learned. Complete package prepared; blocked until L166-L167 are merged into production. |
 
 ## Status Values
 

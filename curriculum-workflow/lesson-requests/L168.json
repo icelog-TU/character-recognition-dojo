@@ -64,7 +64,7 @@
       "見"
     ]
   },
-  "teacherNotes": "Teacher-approved final source for L168 髒. Latest origin/main at production start contains L165 先; L168 still depends on L166 洗 and L167 又 before production JSON may merge. Provisional learned chars are 先, 洗, 又 as provided in the handoff, with 先 already present in latest main. Do not merge production JSON, planner-data, or ledger until L166-L167 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 乾, 淨, 毛, 巾, 肥, 皂, 泥, 土, 亂, 餐, 椅, 修, 櫃, or 見. G05 wrong-two was adjusted from the handoff fallback because 不見了 uses locked 見 and 少了 has a different Han count; the production option is 掃把怎麼又拿走了？ to satisfy allowed-character and same-length validator rules. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "teacherNotes": "Teacher-approved final source for L168 髒. Latest origin/main at production start contains L165 先; L168 still depends on L166 洗 and L167 又 before production JSON may merge. Provisional learned chars are 先, 洗, 又 as provided in the handoff, with 先 already present in latest main. Do not merge production JSON, planner-data, or ledger until L166-L167 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 乾, 淨, 毛, 巾, 肥, 皂, 泥, 土, 亂, 餐, 椅, 修, 櫃, 見, or 服. S03 was corrected by the sentence editor from 髒衣服要拿去洗。 to 髒衣髒帽要拿去洗。 because 服 was not learned. G05 wrong-two was adjusted from the handoff fallback because 不見了 uses locked 見 and 少了 has a different Han count; the production option is 掃把怎麼又拿走了？ to satisfy allowed-character and same-length validator rules. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
   "approvedSentences": [
     {
       "text": "手又髒了，要去洗手。",
@@ -89,15 +89,15 @@
       "hanCharCount": 8
     },
     {
-      "text": "髒衣服要拿去洗。",
-      "spokenText": "髒衣服要拿去洗",
+      "text": "髒衣髒帽要拿去洗。",
+      "spokenText": "髒衣髒帽要拿去洗",
       "focusChar": "髒",
       "displayLines": [
-        "髒衣服",
+        "髒衣髒帽",
         "要拿去洗。"
       ],
-      "scene": "Square image / 1:1 composition. A dirty piece of clothing is being taken to be washed, near a laundry basket or simple laundry area. Make the dirty clothing and washing destination clear without brands or labels. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
-      "hanCharCount": 7
+      "scene": "Square image / 1:1 composition. Dirty clothes and a dirty hat are placed together, and a child or adult is preparing to take them to be washed. A laundry basket or simple laundry area can appear. Make the dirty clothes, dirty hat, and washing preparation clear and centered, with safe margins. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 8
     },
     {
       "text": "掃把怎麼又壞掉了？",
@@ -128,7 +128,7 @@
       "type": "find-character",
       "sentenceId": "L168-S03",
       "targetChar": "髒",
-      "reason": "髒衣服 is the core phrase for this lesson and puts the target at the first character."
+      "reason": "髒衣髒帽 is the corrected core phrase for this lesson and puts the target character in a clear concrete scene."
     },
     {
       "id": "L168-G02",
