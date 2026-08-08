@@ -10,7 +10,7 @@ Use this file only for **not-yet-merged** lesson work. The source of truth for m
 
 See `docs/CURRICULUM_OPERATING_SOP.md` for the complete multi-thread workflow. In short: this registry coordinates provisional work, but production shipping still happens through one ordered release lane.
 
-When the teacher wants to prepare 2-3 lessons or review modules at the same time, register each active unit here before any real work starts. This registry is mandatory coordination state, not optional notes.
+When the teacher wants to prepare 2-3 lessons or review modules at the same time, register each active unit here before any real work starts. This registry is mandatory coordination state, not optional notes. The first registry row is also the audit trail that a pasted production handoff actually started.
 
 ## Active Parallel Lessons
 
@@ -20,7 +20,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 ## Status Values
 
 - `planned`: Teacher has chosen the lesson order and new character(s), but no Codex thread owns it yet.
-- `claimed`: A Codex thread has announced ownership, but lesson request work has not started.
+- `claimed`: A Codex thread has accepted the handoff, confirmed its assigned worktree is usable, created or selected the task branch, and recorded repo-visible ownership before substantial lesson work starts.
 - `request-ready`: The lesson request exists and has been checked against the intended provisional boundary.
 - `drafting`: Sentences, image prompts, or teacher review are in progress.
 - `assets`: Images, audio, Stage 4 audio, or char timings are being generated. This is not mergeable.
@@ -57,6 +57,8 @@ Do not store final sentence text only in chat, a branch note, or the `Notes` col
 6. Put those not-yet-merged characters in `Provisional Learned Chars`.
 7. Commit and push the registry update before starting large image/audio work. If a quick local claim is needed first, update and push the registry as the first commit before any asset generation.
 
+After a successful claim, continue into the assigned production work without waiting for a separate teacher message. The production handoff should already contain the approved sentences and the full package instructions. Stop instead of continuing only if the assigned worktree is dirty, startup checks fail, required handoff data is missing, dependency or allowed-character checks fail, or the registry cannot be updated/pushed before large asset work.
+
 ## Required Registry Checkpoints
 
 Every parallel lesson thread must update this registry at these three checkpoints:
@@ -64,6 +66,7 @@ Every parallel lesson thread must update this registry at these three checkpoint
 1. **Start / claim:** before lesson request, packet, image, audio, or curriculum JSON work starts.
    - Status should be `claimed`, `request-ready`, or `drafting`.
    - `Owner / Thread`, `Branch / Commit`, `Depends On`, and owned file paths must be filled.
+   - A successful claim is not a pause point. Continue to the next required package step unless a blocker is present.
 2. **Assets prepared:** after reviewed images, audio, and timings are prepared but before the lesson can merge.
    - Status should be `assets-only` if the branch has media files but is missing request/packet/draft, Stage 4 audio, alignment, or production JSON work.
    - Status should be `ready-blocked-by-dependency` if a complete package exists but an earlier lesson is not merged yet.

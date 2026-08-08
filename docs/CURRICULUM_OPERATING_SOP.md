@@ -156,9 +156,12 @@ The standard parallel curriculum workflow uses five conversation threads:
 
 The sentence editor thread is not allowed to send only "make images and audio" instructions. After the teacher approves sentences, it must output a complete production handoff for each unit and either create or explicitly require the receiving production thread to create all source files listed below.
 
+The production handoff must be one-paste executable. The teacher often sends the handoff from a mobile or tablet remote session and may not return to that production conversation before the task should continue. Therefore the receiving production thread must claim the work in the repo and then continue automatically. It must not stop after saying only "claimed" unless a blocker is present.
+
 Required production handoff fields:
 
 - repo URL and required local working copy path
+- assigned production slot: A, B, or C, with the exact worktree path
 - unit id, such as `L127` or `R005`
 - unit kind: normal lesson or review module
 - approved new character(s), Taiwan zhuyin, title, and dependency lessons, or review `afterLessonOrder` and coverage range
@@ -170,6 +173,7 @@ Required production handoff fields:
 - required image style anchor: L058 reference assets unless the teacher approves another style
 - audio rule: standalone OpenAI character audio, whole-sentence AI audio, whole wrong-option AI audio, `assets:audio`, then `assets:align:ai`
 - complete required file list and final status expectation
+- an auto-claim-and-continue block telling the production thread exactly when to continue and exactly when to stop
 
 For a normal lesson, the complete required file list is:
 
@@ -203,6 +207,23 @@ The release thread must merge only in playable order and must reject:
 - unresolved provisional learned characters
 - stale branches not rebased on latest `origin/main`
 
+## Auto-Claim And Continue Workflow
+
+Every production handoff from the sentence editor must include this workflow in plain text for the receiving production thread.
+
+The receiving production thread must:
+
+1. Confirm it is in the assigned worktree slot.
+2. Run the required startup checks: `git fetch origin`, `git status --short --branch`, `git log -1 --oneline`, `npm run tools:check`, and `npm run curriculum:audit-state`.
+3. Stop immediately if the assigned worktree is dirty, on the wrong branch, missing dependencies, or otherwise cannot safely own the lesson.
+4. If clean, create the lesson branch from latest `origin/main`, for example `git switch -c codex/l###-complete-package origin/main`.
+5. Add or update exactly one row in `docs/PARALLEL_LESSON_REGISTRY.md` with status `claimed`, the assigned owner/thread, branch, dependencies, provisional learned characters, and owned request/packet/assets paths.
+6. Continue immediately into request, packet, draft, images, audio, Stage 4, alignment, and validation work. Do not wait for teacher confirmation after a successful claim.
+
+The purpose of the claim is repo-visible evidence that the pasted handoff actually started. If a handoff was pasted but the remote connection failed before Codex ran, no branch or registry row will appear, and the coordinator can detect the missed lesson by auditing lesson-number gaps, branches, and the registry.
+
+Stop instead of continuing only when there is a real blocker: the assigned worktree is dirty, the startup checks fail, the production handoff is missing required approved sentence data, the registry cannot be updated or pushed before large asset work, or the allowed-character/dependency audit fails.
+
 ## Parallel Registry Rules
 
 Use `docs/PARALLEL_LESSON_REGISTRY.md` for every not-yet-merged parallel lesson.
@@ -226,7 +247,7 @@ Required checkpoints:
 
 After the lesson enters `main`, remove the active row or mark it `merged` in the same cleanup commit. The registry must not show stale active work for lessons already in `src/curriculum/sample-lessons.json`.
 
-If a registry update cannot be pushed, stop large invisible asset work and say so in chat.
+If the start/claim update succeeds, the production thread should continue without waiting for a second teacher message. If the registry update cannot be written or pushed, stop large invisible asset work and say so in chat.
 
 ## Lesson Build Sequence
 

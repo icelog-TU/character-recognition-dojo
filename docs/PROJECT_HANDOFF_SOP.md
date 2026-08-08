@@ -100,6 +100,7 @@ Before editing, state the exact ownership in chat, including lesson id and owned
 - AI recommended next characters are also drafts. Do not treat a recommendation file, `approval.selectedChoiceId`, or an unmerged lesson request as a reserved lesson choice unless the teacher explicitly approved that character and final sentence set.
 - Sentence drafting must follow `docs/SENTENCE_GENERATION_SOP.md`.
 - The standard curriculum workflow uses five threads: one sentence editor, three lesson/review production threads, and one ordered release thread. The sentence editor must output a complete production handoff, not just "make images and audio."
+- Production handoffs must be one-paste executable. The receiving production thread claims the unit in `docs/PARALLEL_LESSON_REGISTRY.md` and then continues to the complete package without waiting for a second teacher message, unless a real blocker is present.
 - A normal lesson is not merge-ready unless request, packet, draft, final images, final sentence audio, standalone `charAudio`, Stage 4 `G02`/`G05` audio where referenced, production JSON, planner export, ledger update, registry cleanup/update, and checks are complete.
 - A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a course. The release thread must reject it instead of reconstructing final lesson text from chat.
 - Production audio must use the standard AI audio -> `assets:audio` -> `assets:align:ai` pipeline unless the teacher explicitly approves an exception.
@@ -209,6 +210,8 @@ Please read:
 Multiple Codex threads may be working on this repo. Before editing, fetch/status, confirm the current commit, read the parallel lesson registry, and state which files or subsystem this thread owns.
 
 The standard lesson workflow has five threads: one sentence editor, three production threads for assigned lessons/reviews, and one release thread. If you receive a sentence-editor handoff, build the complete course package. Do not produce only image/audio assets unless the handoff explicitly says this is `assets-only` exploratory work.
+
+If you are a production thread receiving a complete sentence-editor handoff, do not stop after reporting "claimed." Confirm the assigned worktree, run startup checks, create the task branch from `origin/main`, add/update the registry row as `claimed`, then continue directly into the full lesson/review package. Stop only if the assigned worktree is dirty, startup checks fail, the handoff is missing approved sentence data, dependency/allowed-character checks fail, or the registry cannot be updated/pushed before large asset work.
 
 For a normal lesson, complete means:
 curriculum-workflow/lesson-requests/L###.json

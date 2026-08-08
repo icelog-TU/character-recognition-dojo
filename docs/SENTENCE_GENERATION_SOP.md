@@ -217,8 +217,11 @@ Only after this checklist passes should the lesson proceed to image prompts, AI 
 
 When a thread is acting as the sentence editor, its job does not end with five good sentences. After the teacher approves the sentence set, the thread must output a complete production handoff following `docs/CURRICULUM_OPERATING_SOP.md` `Five-Thread Curriculum Workflow`.
 
-The handoff must tell the receiving production thread to build the whole course package, not only media assets. It must include:
+The handoff must tell the receiving production thread to build the whole course package, not only media assets. It must also be one-paste executable: the receiving production thread must be told to claim the unit in the repo and then continue automatically, without waiting for the teacher to re-enter that conversation after an "I claimed it" message.
 
+The handoff must include:
+
+- assigned production slot A/B/C and exact worktree path
 - target unit id and kind, such as `L127` normal lesson or `R005` review module
 - current merged boundary and dependency lessons
 - approved new character(s), Taiwan zhuyin, and title, or review coverage range
@@ -227,5 +230,8 @@ The handoff must tell the receiving production thread to build the whole course 
 - coverage counts for the current target and previous-five review targets
 - Stage 4 plan and required `G02`/`G05` audio work
 - required repo paths for request, packet, draft, images, audio inbox, final assets, production JSON, planner export, ledger, and registry
+- an auto-claim-and-continue block: confirm assigned worktree, run startup checks, stop only on blockers, create the branch from `origin/main`, add/update the registry row as `claimed`, then continue into full package production
 
 The sentence editor must not leave final sentences only in chat. If it cannot write repo files itself, it must explicitly instruct the production thread to create `curriculum-workflow/lesson-requests/L###.json`, `curriculum-workflow/generated/L###-generation-packet.md`, and `curriculum-workflow/drafts/L###-draft.json` before generating or merging assets.
+
+The sentence editor must not design a workflow that requires the teacher to visit the same production conversation twice just to move from "claimed" to "continue." A production thread should pause only for real blockers such as a dirty assigned worktree, failed startup checks, missing approved sentence data, failed dependency/allowed-character audit, or inability to update/push the registry before large asset work.

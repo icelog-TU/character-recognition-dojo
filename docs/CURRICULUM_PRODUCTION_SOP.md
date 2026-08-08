@@ -54,7 +54,7 @@ Only treat text as actually damaged if UTF-8 decoding fails, decoded text contai
 ## Lesson Pipeline
 
 0. Run `git fetch origin`, `git status --short --branch`, and `npm run curriculum:audit-state`, then check `docs/CURRICULUM_LEDGER.md` and `docs/PARALLEL_LESSON_REGISTRY.md`.
-1. Create or claim a lesson row in `docs/PARALLEL_LESSON_REGISTRY.md` before starting any parallel lesson work. This is required before creating request files, generating packets, images, audio, or lesson JSON for a not-yet-merged lesson.
+1. Create or claim a lesson row in `docs/PARALLEL_LESSON_REGISTRY.md` before starting any parallel lesson work. This is required before creating request files, generating packets, images, audio, or lesson JSON for a not-yet-merged lesson. After a clean claim, continue into production work; do not wait for a second teacher message unless a blocker is present.
 2. Create a lesson request in `curriculum-workflow/lesson-requests/`.
 3. Check `docs/CURRICULUM_LEDGER.md` for the merged learned character set and recent review pool. If this is a parallel-prepared later lesson, also check registered provisional dependencies.
 4. Run `npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L004-example.json`.
@@ -126,6 +126,7 @@ Parallel lesson ownership, registry checkpoints, dependency rechecks, and merge 
 Production-specific constraints still apply during parallel work:
 
 - Each thread may prepare only its owned lesson/review request, packet, raw audio inbox, and final asset folder.
+- A production handoff should be one-paste executable. The receiving thread claims the unit in the registry and continues to the complete package unless the assigned worktree is dirty, startup checks fail, required handoff data is missing, dependency/allowed-character checks fail, or the registry cannot be updated/pushed before large asset work.
 - Image prompt writing, image generation, and raw AI audio generation may happen in parallel by owned lesson/review folder.
 - JSON-writing commands must run one at a time: `assets:images`, `assets:audio`, `assets:align`, `assets:align:ai`, and any script that rewrites `src/curriculum/sample-lessons.json` or shared reports.
 - Before any later lesson is merged, re-check every sentence, image prompt, audio file, Stage 4 option, and timing against the now-real learned-character set from latest `origin/main`.
