@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-08T13:45:47.107Z",
+  "exportedAt": "2026-08-08T15:32:38.197Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -71868,67 +71868,67 @@
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L161/audio/L161-S04.m4a",
-            "durationMs": 4571,
+            "durationMs": 5478,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 310
+                "endMs": 230
               },
               {
                 "charIndex": 1,
-                "startMs": 310,
-                "endMs": 620
+                "startMs": 230,
+                "endMs": 460
               },
               {
                 "charIndex": 2,
-                "startMs": 620,
-                "endMs": 1120
+                "startMs": 460,
+                "endMs": 940
               },
               {
                 "charIndex": 3,
-                "startMs": 1120,
-                "endMs": 1400
+                "startMs": 1840,
+                "endMs": 2220
               },
               {
                 "charIndex": 4,
-                "startMs": 2060,
-                "endMs": 2260
+                "startMs": 2220,
+                "endMs": 2600
               },
               {
                 "charIndex": 5,
-                "startMs": 2260,
-                "endMs": 2460
+                "startMs": 2600,
+                "endMs": 2980
               },
               {
                 "charIndex": 6,
-                "startMs": 2460,
-                "endMs": 2700
+                "startMs": 3300,
+                "endMs": 3420
               },
               {
                 "charIndex": 7,
-                "startMs": 2700,
-                "endMs": 3080
+                "startMs": 3420,
+                "endMs": 3540
               },
               {
                 "charIndex": 8,
-                "startMs": 3080,
-                "endMs": 3560
+                "startMs": 3540,
+                "endMs": 3985
               },
               {
                 "charIndex": 9,
-                "startMs": 3560,
-                "endMs": 3700
+                "startMs": 3985,
+                "endMs": 4430
               },
               {
                 "charIndex": 10,
-                "startMs": 3700,
-                "endMs": 4080
+                "startMs": 4430,
+                "endMs": 4875
               },
               {
                 "charIndex": 11,
-                "startMs": 4080,
-                "endMs": 4220
+                "startMs": 4875,
+                "endMs": 5320
               }
             ]
           }
@@ -73643,8 +73643,9 @@
           "id": "L165-S03",
           "text": "先把臉擦一擦，再出門。",
           "displayLines": [
-            "先把臉擦一擦，",
-            "再出門。"
+            "先把臉擦",
+            "一擦，再",
+            "出門。"
           ],
           "spokenText": "先把臉擦一擦再出門",
           "focusChar": "先",
@@ -73946,6 +73947,493 @@
           "G05 wrong-choice audio must be generated from the full wrong texts, not spliced from the correct sentence.",
           "Teacher subjective image/audio review is post-merge through lesson-asset-review unless explicitly requested otherwise.",
           "AI alignment completed after simplified/traditional equivalence normalization; no approved Traditional Chinese text was changed."
+        ]
+      }
+    },
+    {
+      "id": "L166",
+      "order": 166,
+      "newChars": [
+        "洗"
+      ],
+      "zhuyin": {
+        "洗": "ㄒㄧˇ"
+      },
+      "charAudio": {
+        "洗": "/assets/lessons/L166/audio/char-u6d17.m4a"
+      },
+      "title": "洗",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L166-S01",
+          "text": "先洗手，再吃飯。",
+          "displayLines": [
+            "先洗手，",
+            "再吃飯。"
+          ],
+          "spokenText": "先洗手再吃飯",
+          "focusChar": "洗",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for all meaning-bearing people, objects, actions, and quantity relationships. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, readable marks, brand marks, or UI symbols. Scene: before eating, a child washes both hands at a sink; nearby or in the background, a dining table with plain bowls of food is visible. Make the hand-washing action clear and the meal context secondary but readable.",
+          "imageSrc": "/assets/lessons/L166/images/L166-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L166/audio/L166-S01.m4a",
+            "durationMs": 3295,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 880
+              },
+              {
+                "charIndex": 2,
+                "startMs": 880,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1580,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1900,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2240,
+                "endMs": 2400
+              }
+            ]
+          }
+        },
+        {
+          "id": "L166-S02",
+          "text": "先洗臉，再擦一擦臉。",
+          "displayLines": [
+            "先洗臉，",
+            "再擦一擦臉。"
+          ],
+          "spokenText": "先洗臉再擦一擦臉",
+          "focusChar": "洗",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for all meaning-bearing people, objects, actions, and quantity relationships. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, readable marks, brand marks, or UI symbols. Scene: a child at a bathroom sink washes their face with water first; a plain towel or tissue is nearby and the child is also about to wipe or gently wiping the face. Show the sequence of washing face then wiping face without written labels.",
+          "imageSrc": "/assets/lessons/L166/images/L166-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L166/audio/L166-S02.m4a",
+            "durationMs": 3406,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1600,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 2540
+              }
+            ]
+          }
+        },
+        {
+          "id": "L166-S03",
+          "text": "媽媽洗衣，我去把地掃一掃。",
+          "displayLines": [
+            "媽媽洗衣，",
+            "我去把地",
+            "掃一掃。"
+          ],
+          "spokenText": "媽媽洗衣我去把地掃一掃",
+          "focusChar": "洗",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for all meaning-bearing people, objects, actions, and quantity relationships. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, readable marks, brand marks, or UI symbols. Scene: warm household chore scene with mother washing clothes by hand or in a plain basin, while the fixed first-person girl helps by sweeping the floor with a broom nearby. No appliance brands or readable controls.",
+          "imageSrc": "/assets/lessons/L166/images/L166-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L166/audio/L166-S03.m4a",
+            "durationMs": 3355,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 920
+              },
+              {
+                "charIndex": 3,
+                "startMs": 920,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1400,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1560,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1760,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1960,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2220,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2440,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2660,
+                "endMs": 2860
+              }
+            ]
+          }
+        },
+        {
+          "id": "L166-S04",
+          "text": "車上滿是葉子，爸爸去洗車。",
+          "displayLines": [
+            "車上滿是",
+            "葉子，",
+            "爸爸去洗車。"
+          ],
+          "spokenText": "車上滿是葉子爸爸去洗車",
+          "focusChar": "洗",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for all meaning-bearing people, objects, actions, and quantity relationships. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, readable marks, brand marks, or UI symbols. Scene: a family car exterior or windshield is covered with many leaves; father is washing the car with water, sponge, or cloth. Clearly show the car, leaves, water, and washing action. Do not show license plates or any readable marks.",
+          "imageSrc": "/assets/lessons/L166/images/L166-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L166/audio/L166-S04.m4a",
+            "durationMs": 5880,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 940
+              },
+              {
+                "charIndex": 2,
+                "startMs": 940,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1480,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2060,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2700,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3020,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3340,
+                "endMs": 3880
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3880,
+                "endMs": 4100
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4100,
+                "endMs": 4400
+              }
+            ]
+          }
+        },
+        {
+          "id": "L166-S05",
+          "text": "盒裡滿滿是筆，有紅有綠。",
+          "displayLines": [
+            "盒裡滿滿",
+            "是筆，",
+            "有紅有綠。"
+          ],
+          "spokenText": "盒裡滿滿是筆有紅有綠",
+          "focusChar": "滿",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for all meaning-bearing people, objects, actions, and quantity relationships. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, readable marks, brand marks, or UI symbols. Scene: close-up of an open pencil case or small box filled full of plain pens or pencils, clearly including red and green writing tools. The objects should be centered and easy to understand on a phone. Pen bodies must be blank with no brands, text, or numbers.",
+          "imageSrc": "/assets/lessons/L166/images/L166-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L166/audio/L166-S05.m4a",
+            "durationMs": 4774,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1440,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2060,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2700,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3060,
+                "endMs": 3280
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3280,
+                "endMs": 3800
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3800,
+                "endMs": 3920
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L166-G01",
+          "type": "find-character",
+          "sentenceId": "L166-S01",
+          "targetChar": "洗",
+          "prompt": "幫忙找出「洗」。",
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L166-G02",
+          "type": "teach-character",
+          "sentenceId": "L166-S02",
+          "targetChar": "洗",
+          "targetCharIndex": 1,
+          "missingIndexes": [
+            1
+          ],
+          "prompt": "聽一聽，放進「洗」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L166/audio/L166-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L166/audio/L166-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L166-G03",
+          "type": "missing-character",
+          "sentenceId": "L166-S03",
+          "targetChar": "洗",
+          "missingIndexes": [
+            2
+          ],
+          "prompt": "選出不見的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "洗",
+              "correct": true
+            },
+            {
+              "id": "sweep",
+              "text": "掃",
+              "correct": false
+            },
+            {
+              "id": "wipe",
+              "text": "擦",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L166-G04",
+          "type": "partial-order",
+          "sentenceId": "L166-S04",
+          "targetChar": "洗",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "車上滿是葉子",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "爸爸去",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "洗車",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L166-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L166-S05",
+          "targetChar": "滿",
+          "prompt": "聽聽誰讀得一樣。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "盒裡滿滿是筆，有紅有綠。",
+              "spokenText": "盒裡滿滿是筆有紅有綠",
+              "audioSrc": "/assets/lessons/L166/audio/L166-S05.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "盒裡滿滿是書，有紅有綠。",
+              "spokenText": "盒裡滿滿是書有紅有綠",
+              "audioSrc": "/assets/lessons/L166/audio/L166-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "盒裡滿滿是紙，有紅有綠。",
+              "spokenText": "盒裡滿滿是紙有紅有綠",
+              "audioSrc": "/assets/lessons/L166/audio/L166-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "productionNotes": {
+        "status": "merge-ready-candidate",
+        "dependsOnLessons": [
+          "L161",
+          "L162",
+          "L163",
+          "L164",
+          "L165"
+        ],
+        "provisionalLearnedChars": [],
+        "notes": [
+          "Dependencies L161-L165 are present in latest origin/main, so this lesson can enter production JSON after assets and validation pass.",
+          "Allowed-character audit uses actual production learned characters through L165 plus current 洗.",
+          "G02 teachAudio prefix text is 先; suffix text is 臉再擦一擦臉.",
+          "G05 wrong-choice audio must be generated from full wrong texts, not spliced from the correct sentence."
         ]
       }
     }

@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 165:
+Characters taught after Lesson 166:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗`
 
 Recent review pool for the next lesson:
 
-`先 擦 掃 滿 綠 葉 動 樹 吹 風 再 等 車 窗 關 燈`
+`洗 先 擦 掃 滿 綠 葉 動 樹 吹 風 再 等 車 窗 關`
 
 ## Visual Continuity Ledger
 
@@ -253,10 +253,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L164 | 擦 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦 | 桌上滿是水，要擦一擦。 / 掃地後，再擦窗子。 / 畫得太綠了，擦掉再畫。 / 滿地綠葉要掃起來。 / 大家動手打掃房間。 | 掃滿綠葉動 | Introduces `擦` through approved sentence contexts. Reviews recent `掃滿綠葉動`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 | L165 | 先 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先 | 先掃地，再擦桌子。 / 滿地綠葉，先掃一掃。 / 先把臉擦一擦，再出門。 / 先下棋，再去打球。 / 車上坐滿了人。 | 擦掃滿綠葉 | Introduces `先` through approved sentence contexts. Reviews recent `擦掃滿綠葉`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L166 | 洗 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗 | 先洗手，再吃飯。 / 先洗臉，再擦一擦臉。 / 媽媽洗衣，我去把地掃一掃。 / 車上滿是葉子，爸爸去洗車。 / 盒裡滿滿是筆，有紅有綠。 | 先擦掃滿綠 | Introduces `洗` through approved sentence contexts. Reviews recent `先擦掃滿綠`; includes generated square images, OpenAI audio, AI-aligned timings, standalone character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L165. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L166. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

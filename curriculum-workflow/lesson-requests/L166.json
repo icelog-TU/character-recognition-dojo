@@ -1,0 +1,400 @@
+{
+  "id": "L166",
+  "order": 166,
+  "newChars": [
+    "洗"
+  ],
+  "zhuyin": {
+    "洗": "ㄒㄧˇ"
+  },
+  "title": "洗",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L161",
+    "L162",
+    "L163",
+    "L164",
+    "L165"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗"
+    ],
+    "recentReviewPool": [
+      "先",
+      "擦",
+      "掃",
+      "滿",
+      "綠",
+      "葉",
+      "動",
+      "樹",
+      "吹",
+      "風",
+      "再",
+      "等",
+      "車",
+      "窗",
+      "關",
+      "燈"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "洗",
+      "先",
+      "擦",
+      "掃",
+      "滿",
+      "綠"
+    ],
+    "forbiddenChars": [
+      "完",
+      "乾",
+      "淨",
+      "毛",
+      "巾",
+      "肥",
+      "皂",
+      "髒",
+      "錯",
+      "橡",
+      "皮",
+      "客",
+      "廳"
+    ],
+    "targetCharMinimumCount": {
+      "洗": 3
+    },
+    "recentTargetMinimumCounts": {
+      "先": 2,
+      "擦": 2,
+      "掃": 2,
+      "滿": 1,
+      "綠": 1
+    },
+    "coverage": {
+      "currentTarget": {
+        "洗": 4
+      },
+      "previousTargets": {
+        "先": 2,
+        "擦": 2,
+        "掃": 2,
+        "滿": 3,
+        "綠": 1
+      }
+    },
+    "notes": [
+      "Teacher-approved final sentences from Production Handoff L166 are locked.",
+      "Dependencies L161-L165 are merged in origin/main at production time; no provisional learned chars are needed for production JSON.",
+      "Images must be square 1:1 compositions using L058 style anchors and contain no text, numbers, signs, labels, zhuyin, logos, or watermarks.",
+      "Audio must use OpenAI TTS, assets:audio, and assets:align:ai; charAudio must be standalone single-character audio."
+    ]
+  },
+  "teacherNotes": "Production C complete-package handoff. Approved sentences are final; do not rewrite sentence text. Use Taiwan zhuyin only. Stage 4 must use five fixed sentenceGames with G02 dedicated teachAudio and G05 whole-sentence wrong-choice audio.",
+  "approvedSentences": [
+    {
+      "id": "L166-S01",
+      "text": "先洗手，再吃飯。",
+      "displayLines": [
+        "先洗手，",
+        "再吃飯。"
+      ],
+      "spokenText": "先洗手再吃飯",
+      "focusChar": "洗",
+      "imageNotes": "Before eating, a child washes hands near a sink, with dining table and food visible nearby or in the background. Show the sequence wash hands first, then eat. No text, numbers, or labels."
+    },
+    {
+      "id": "L166-S02",
+      "text": "先洗臉，再擦一擦臉。",
+      "displayLines": [
+        "先洗臉，",
+        "再擦一擦臉。"
+      ],
+      "spokenText": "先洗臉再擦一擦臉",
+      "focusChar": "洗",
+      "imageNotes": "A child at a sink washes their face, with a plain towel or tissue nearby for wiping the face afterward. Clearly show washing face and wiping face as a sequence. No text, numbers, or labels."
+    },
+    {
+      "id": "L166-S03",
+      "text": "媽媽洗衣，我去把地掃一掃。",
+      "displayLines": [
+        "媽媽洗衣，",
+        "我去把地",
+        "掃一掃。"
+      ],
+      "spokenText": "媽媽洗衣我去把地掃一掃",
+      "focusChar": "洗",
+      "imageNotes": "Housework-sharing scene: mother washing clothes while the fixed first-person girl helps by sweeping the floor with a broom nearby or on the other side. No washing machine brand, text, numbers, or labels."
+    },
+    {
+      "id": "L166-S04",
+      "text": "車上滿是葉子，爸爸去洗車。",
+      "displayLines": [
+        "車上滿是",
+        "葉子，",
+        "爸爸去洗車。"
+      ],
+      "spokenText": "車上滿是葉子爸爸去洗車",
+      "focusChar": "洗",
+      "imageNotes": "A car exterior or windshield is covered with leaves; father is preparing to wash the car or actively washing it with water. Clearly show car, leaves, water, and washing action. No license plate text or numbers."
+    },
+    {
+      "id": "L166-S05",
+      "text": "盒裡滿滿是筆，有紅有綠。",
+      "displayLines": [
+        "盒裡滿滿",
+        "是筆，",
+        "有紅有綠。"
+      ],
+      "spokenText": "盒裡滿滿是筆有紅有綠",
+      "focusChar": "滿",
+      "imageNotes": "Close-up of a pencil case or box filled with pens or pencils, including red and green ones. Pens must have no writing, numbers, brands, or labels."
+    }
+  ],
+  "stage4Plan": {
+    "games": [
+      {
+        "id": "L166-G01",
+        "type": "find-character",
+        "sentenceId": "L166-S01",
+        "targetChar": "洗",
+        "reason": "Core phrase for washing hands."
+      },
+      {
+        "id": "L166-G02",
+        "type": "teach-character",
+        "sentenceId": "L166-S02",
+        "targetChar": "洗",
+        "targetCharIndex": 1,
+        "teachAudio": {
+          "prefixText": "先",
+          "suffixText": "臉再擦一擦臉"
+        }
+      },
+      {
+        "id": "L166-G03",
+        "type": "missing-character",
+        "sentenceId": "L166-S03",
+        "targetChar": "洗",
+        "missingIndexes": [
+          2
+        ],
+        "options": [
+          "洗",
+          "掃",
+          "擦"
+        ]
+      },
+      {
+        "id": "L166-G04",
+        "type": "partial-order",
+        "sentenceId": "L166-S04",
+        "chunks": [
+          "車上滿是葉子",
+          "爸爸去",
+          "洗車"
+        ]
+      },
+      {
+        "id": "L166-G05",
+        "type": "choose-pronunciation",
+        "sentenceId": "L166-S05",
+        "correctText": "盒裡滿滿是筆，有紅有綠。",
+        "wrongOneText": "盒裡滿滿是書，有紅有綠。",
+        "wrongTwoText": "盒裡滿滿是紙，有紅有綠。"
+      }
+    ]
+  },
+  "assetRequirements": {
+    "imageStyleAnchors": [
+      "public/assets/lessons/L058/images/L058-S01.webp",
+      "public/assets/lessons/L058/images/L058-S02.webp",
+      "public/assets/lessons/L058/images/L058-S03.webp"
+    ],
+    "audioFlow": [
+      "npm run ai:audio -- --lesson L166",
+      "npm run assets:audio -- --lesson L166",
+      "npm run assets:align:ai -- --lesson L166"
+    ],
+    "requiredAudio": [
+      "L166-S01.m4a",
+      "L166-S02.m4a",
+      "L166-S03.m4a",
+      "L166-S04.m4a",
+      "L166-S05.m4a",
+      "char-u6d17.m4a",
+      "L166-G02-prefix.m4a",
+      "L166-G02-suffix.m4a",
+      "L166-G05-wrong-one.m4a",
+      "L166-G05-wrong-two.m4a"
+    ]
+  }
+}
