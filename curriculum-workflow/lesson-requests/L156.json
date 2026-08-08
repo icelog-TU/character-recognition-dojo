@@ -1,0 +1,184 @@
+{
+  "id": "L156",
+  "order": 156,
+  "newChars": [
+    "風"
+  ],
+  "zhuyin": {
+    "風": "ㄈㄥ"
+  },
+  "title": "風很大",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L154",
+    "L155"
+  ],
+  "provisionalLearnedChars": [
+    "等",
+    "再"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "等",
+      "再"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "風",
+      "再",
+      "等",
+      "車",
+      "窗",
+      "關"
+    ],
+    "targetCharMinimumCount": {
+      "風": 3
+    },
+    "recentTargetMinimumCounts": {
+      "再": 2,
+      "等": 2,
+      "車": 2,
+      "窗": 2,
+      "關": 1
+    },
+    "disallowedChars": [
+      "吹",
+      "葉",
+      "樹",
+      "園",
+      "強",
+      "傘"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L156. Latest origin/main is L153, so this package depends on unmerged L154 等 and L155 再; do not merge production JSON until L154 and L155 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 吹, 葉, 樹, 園, 強, or 傘. Images must use L058 style anchors and contain no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "風很大，把窗子關起來。",
+      "spokenText": "風很大把窗子關起來",
+      "focusChar": "風",
+      "displayLines": [
+        "風很大，",
+        "把窗子關起來。"
+      ],
+      "scene": "Strong wind outside a room, with a child or adult closing the window. Show wind visually through moving curtains, rain outside, or other non-text visual motion cues. No text, symbols, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "等風雨小一點，再出去玩。",
+      "spokenText": "等風雨小一點再出去玩",
+      "focusChar": "風",
+      "displayLines": [
+        "等風雨小一點，",
+        "再出去玩。"
+      ],
+      "scene": "A child waits indoors while wind and rain outside become lighter before going out to play. Show the indoor waiting and the softer wind-rain outside visually, without weather labels or text.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "山上風很大，要穿大衣。",
+      "spokenText": "山上風很大要穿大衣",
+      "focusChar": "風",
+      "displayLines": [
+        "山上風很大，",
+        "要穿大衣。"
+      ],
+      "scene": "A windy mountain setting. A child or family member puts on or wears a big coat because the wind is strong. No signs, labels, written markers, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "大家在桌前等飯菜做好。",
+      "spokenText": "大家在桌前等飯菜做好",
+      "focusChar": "等",
+      "displayLines": [
+        "大家在桌前",
+        "等飯菜做好。"
+      ],
+      "scene": "A family waits at a table for food to be ready. Show dishes being prepared or placed nearby, with no readable text, labels, numbers, letters, signs, zhuyin, logos, or watermarks.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "用紙做小車，再畫上車窗。",
+      "spokenText": "用紙做小車再畫上車窗",
+      "focusChar": "再",
+      "displayLines": [
+        "用紙做小車，",
+        "再畫上車窗。"
+      ],
+      "scene": "A child makes a small paper car craft and then draws car windows on it. The paper must not contain writing, letters, numbers, labels, signs, zhuyin, logos, or watermarks.",
+      "hanCharCount": 10
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L156-G01",
+      "type": "find-character",
+      "sentenceId": "L156-S03",
+      "targetChar": "風",
+      "reason": "Clear use of 風 in a concrete outdoor mountain scene."
+    },
+    {
+      "id": "L156-G02",
+      "type": "teach-character",
+      "sentenceId": "L156-S02",
+      "targetChar": "風",
+      "targetCharIndex": 1,
+      "prefixText": "等",
+      "suffixText": "雨小一點再出去玩",
+      "requiredAudio": [
+        "public/assets/lessons/L156/audio/L156-G02-prefix.m4a",
+        "public/assets/lessons/L156/audio/L156-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L156-G03",
+      "type": "missing-character",
+      "sentenceId": "L156-S01",
+      "targetChar": "風",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "風",
+        "窗",
+        "關"
+      ]
+    },
+    {
+      "id": "L156-G04",
+      "type": "partial-order",
+      "sentenceId": "L156-S05",
+      "targetChar": "再",
+      "chunks": [
+        "用紙做小車",
+        "再畫上",
+        "車窗"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L156-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L156-S04",
+      "targetChar": "等",
+      "correctText": "大家在桌前等飯菜做好。",
+      "correctSpokenText": "大家在桌前等飯菜做好",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "大家在桌前等花燈做好。",
+          "spokenText": "大家在桌前等花燈做好",
+          "audioSrc": "/assets/lessons/L156/audio/L156-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "大家在房間等飯菜做好。",
+          "spokenText": "大家在房間等飯菜做好",
+          "audioSrc": "/assets/lessons/L156/audio/L156-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

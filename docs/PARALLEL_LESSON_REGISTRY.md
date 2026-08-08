@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L156 | 風 / normal lesson | claimed | Production thread B | `codex/l156-complete-package` / pending | L154:等; L155:再 | 等 再 | `curriculum-workflow/lesson-requests/L156.json`; `curriculum-workflow/generated/L156-generation-packet.md`; `curriculum-workflow/drafts/L156-draft.json` | `curriculum-workflow/audio-inbox/L156/`; `public/assets/lessons/L156/` | Accepted handoff and starting complete package. Latest `origin/main` is L153, so production JSON remains blocked until L154 and L155 enter `origin/main`. |
+| L156 | 風 / normal lesson | ready-blocked-by-dependency | Production thread B | `codex/l156-complete-package` / pending package commit | L154:等; L155:再 | 等 再 | `curriculum-workflow/lesson-requests/L156.json`; `curriculum-workflow/generated/L156-generation-packet.md`; `curriculum-workflow/drafts/L156-draft.json` | `curriculum-workflow/audio-inbox/L156/`; `public/assets/lessons/L156/` | Complete package prepared with request, packet, draft, images, OpenAI audio, Stage 4 G02/G05 audio, and AI alignment. `npm run verify` passes. Production JSON/planner/ledger remain blocked until L154 and L155 enter `origin/main`. Audio review URL pending package commit. |
 
 ## Status Values
 
