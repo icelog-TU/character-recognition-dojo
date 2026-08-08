@@ -346,7 +346,52 @@ Production and release threads must include or run this status check when teache
 npm run audio:review-status -- --unit L### --ref <branch-or-commit-sha>
 ```
 
-Until all required audio is teacher-approved, the production branch must not be deleted and the registry/final handoff must say `audio-review pending teacher OK` with the review URL. After the teacher approves all files, update the registry or final handoff to `audio-review OK` with the commit SHA. Do not call a lesson merge-ready if teacher audio review was requested but remains pending.
+If the teacher explicitly requests pre-merge audio approval for a specific unit, the production branch must not be deleted and the registry/final handoff must say `audio-review pending teacher OK` with the review URL until approval is complete. Otherwise, teacher audio review is post-merge by default and should be tracked through the asset-review repair queue below, not used to block ordinary release.
+
+## Post-Merge Teacher Asset Review
+
+Teacher image/audio review is post-merge by default. Do not block ordinary production/release while waiting for the teacher to manually inspect every picture and audio file, as long as the required automated gates pass.
+
+Automated gates still block production:
+
+- `npm run verify`
+- `npm run validate:production`
+- required image/audio files exist
+- final images are compressed WebP with no referenced PNG/JPG leftovers
+- final audio is processed `.m4a` with valid format/loudness checks
+- Stage 4 `teachAudio` and `choose-pronunciation` audio referenced by JSON exist
+- `charTimings` and allowed-character checks pass
+
+Teacher subjective review is a repair queue, not a release gate:
+
+- image scene mismatch, unwanted visual detail, style drift, or character inconsistency
+- audio pronunciation that sounds odd to the teacher despite passing technical checks
+- sentence/image mismatch noticed after release
+- teacher preference for regenerating an otherwise technically valid asset
+
+The permanent post-merge review page is:
+
+```text
+public/tools/lesson-asset-review.html
+```
+
+GitHub Pages URL format:
+
+```text
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=<commit-sha-or-main>
+```
+
+Production or release final handoff must include this asset-review URL. The page displays each sentence with its text, `spokenText`, image, and sentence audio, plus the other formal audio files such as `charAudio`, `G02` prefix/suffix, and `G05` options. The teacher marks only items that need repair and writes notes. Unmarked items are not blockers.
+
+Repair threads must query the queue instead of asking the teacher to restate problems:
+
+```bash
+npm run asset:review-status -- --unit L### --ref <commit-sha-or-main>
+```
+
+The default command reports repair items without failing, because post-merge teacher review must not block release automation. Use `--fail-on-repair` only in an asset-repair workflow that intentionally wants a nonzero exit when repair work exists.
+
+An asset repair thread must fix only the marked image/audio items unless the user explicitly expands scope. After repair, rerun the relevant asset processing and validation, push a new commit, and provide a new `lesson-asset-review.html` URL for the repaired commit.
 
 ## Request File
 

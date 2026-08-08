@@ -229,7 +229,7 @@ The handoff must include:
 - final approved sentences with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
 - coverage counts for the current target and previous-five review targets
 - Stage 4 plan and required `G02`/`G05` audio work
-- whether teacher audio review is required, and if so instructions to provide the permanent `audio-review.html` URL and `npm run audio:review-status` command after the production branch is pushed
+- teacher review instructions: provide the permanent `lesson-asset-review.html` URL and `npm run asset:review-status` command for post-merge repair queue; use the audio-only `audio-review.html` URL only if the teacher explicitly requests pre-merge audio approval
 - required repo paths for request, packet, draft, images, audio inbox, final assets, production JSON, planner export, ledger, and registry
 - an auto-claim-and-continue block: confirm assigned worktree, run startup checks, stop only on blockers, create the branch from `origin/main`, add/update the registry row as `claimed`, then continue into full package production
 

@@ -108,6 +108,7 @@ Before editing, state the exact ownership in chat, including lesson id and owned
 - Character-card `charAudio` must be standalone OpenAI TTS generated from the single target character. Never cut, trim, slice, copy, or extract character-card audio from sentence audio.
 - Do not create production wrong-choice audio by cutting or patching the correct sentence audio. Generate each wrong option as whole-sentence AI audio from its final text.
 - Audio files that need teacher listening approval must be reviewed through the permanent page `public/tools/audio-review.html`; do not publish temporary review pages that disappear on the next GitHub Pages deploy.
+- Teacher image/audio review is post-merge by default. Automated gates block release; teacher subjective review becomes a repair queue through `public/tools/lesson-asset-review.html`.
 - New or replacement sentence images must use the L058 style anchors unless the teacher approves a new style direction:
   - `public/assets/lessons/L058/images/L058-S01.webp`
   - `public/assets/lessons/L058/images/L058-S02.webp`
@@ -234,7 +235,10 @@ If teacher audio approval is requested, provide a stable review URL using:
 https://icelog-TU.github.io/character-recognition-dojo/tools/audio-review.html?unit=L###&ref=<branch-or-commit-sha>
 Also provide:
 npm run audio:review-status -- --unit L### --ref <branch-or-commit-sha>
-Do not delete the production branch or call the lesson merge-ready while audio-review is pending teacher OK.
+Only block merge-ready on teacher audio approval if the teacher explicitly requested pre-merge approval for that unit. Otherwise provide the post-merge asset review URL:
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=<commit-sha-or-main>
+Repair queue command:
+npm run asset:review-status -- --unit L### --ref <commit-sha-or-main>
 Before saying FFmpeg/FFprobe/ImageMagick/OpenAI is unavailable, run npm run tools:check and/or npm run ai:check.
 For new or replacement sentence images, use L058 style anchors:
 public/assets/lessons/L058/images/L058-S01.webp

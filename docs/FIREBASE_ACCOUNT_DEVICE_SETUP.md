@@ -155,10 +155,35 @@ service cloud.firestore {
         ]);
       allow delete: if false;
     }
+
+    match /assetReviews/{reviewId} {
+      allow read: if true;
+      allow create, update: if signedIn()
+        && request.resource.data.updatedByUid == request.auth.uid
+        && request.resource.data.repo == 'icelog-TU/character-recognition-dojo'
+        && request.resource.data.keys().hasOnly([
+          'version',
+          'repo',
+          'unit',
+          'ref',
+          'commitSha',
+          'sourcePath',
+          'sentenceCount',
+          'extraAudioCount',
+          'repairCount',
+          'reviewComplete',
+          'repairItems',
+          'updatedByUid',
+          'updatedByEmail',
+          'updatedByName',
+          'updatedAt'
+        ]);
+      allow delete: if false;
+    }
   }
 }
 ```
 
 Do not add a user-facing legacy device-code field or editable device-name field back to Settings. Normal users should see account sign-in, the three learning profiles under that account, editable learning-profile names, and the system-generated device ID only as support/admin diagnostic information.
 
-`audioReviews` is for teacher QA of production audio. It is intentionally separate from child progress and can be public-read because it contains only lesson id, commit SHA, public asset paths, and teacher approval status for already-public audio. Writes still require Google sign-in so random visitors cannot approve audio.
+`audioReviews` is for teacher QA of production audio. `assetReviews` is for post-merge teacher repair queues for images and audio. Both are intentionally separate from child progress and can be public-read because they contain only lesson id, commit SHA, public asset paths, and teacher approval/repair status for already-public assets. Writes still require Google sign-in so random visitors cannot approve or mark repair work.
