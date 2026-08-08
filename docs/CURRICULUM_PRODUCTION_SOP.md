@@ -279,6 +279,37 @@ Before declaring the OpenAI API unavailable, run `npm run ai:check`. Do not rely
 
 When OpenAI audio is available, production lesson audio must use natural Taiwan Mandarin. Reject and regenerate any sentence that sounds like Beijing/Mainland China pronunciation, uses erhua, or adds curled-r/r-colored endings. Final syllables should stay audible but clean; do not accept a rhotic final `孩`, `兒化音`, or similar accent drift.
 
+## Audio Generation Quality Baseline
+
+Use the repo's standard OpenAI audio path for every production lesson/review unless the teacher explicitly approves an exception:
+
+```bash
+npm run ai:check
+npm run ai:audio -- --lesson L###
+npm run assets:audio -- --lesson L###
+npm run assets:align:ai -- --lesson L###
+```
+
+Before generating audio, finish the request, packet, and draft. The draft must already contain the approved `spokenText`, final sentence audio paths, standalone `charAudio` path, `teachAudio` prefix/suffix paths where needed, and `choose-pronunciation` wrong-choice audio paths. Generate audio from the exact draft text; do not type a separate ad hoc prompt that differs from the approved lesson data.
+
+Stage 4 audio is production audio:
+
+- Generate `teachAudio` prefix/suffix from the exact text fragment before/after `targetCharIndex`.
+- Generate each `choose-pronunciation` wrong option from the complete wrong `spokenText`.
+- Do not cut, splice, patch, overdub, or extract these files from a correct sentence audio file.
+
+Short files need extra review. Standalone `charAudio` may be short, but it must sound like a natural single-character pronunciation. One-character `teachAudio` prefix/suffix files can sound clipped or unnatural, so include them in the teacher audio-review page and regenerate instead of forcing acceptance when they sound wrong.
+
+Alignment fixes must preserve the approved Traditional Chinese text. AI transcription can return simplified equivalents such as `车`, `关`, `坏`, or `还`; handle those with equivalence normalization or manual timing review. Do not change production text to simplified Chinese, and do not change a correct character to a same-sound wrong character to satisfy the transcript. If AI timestamps have impossible cuts, such as a 1 ms character segment, manually smooth the timing and record that in the final handoff.
+
+After processing, verify the final `.m4a` files, not only the raw AI files:
+
+- required files exist for `S01-S05`, standalone `charAudio`, `G02` prefix/suffix where referenced, and `G05` wrong choices
+- codec is AAC, sample rate is `44100 Hz`, and channel count is mono
+- every sentence's Han-character count matches `audio.charTimings.length`
+
+For dependency-blocked lessons, do not leave a future lesson in production JSON. If a script requires the lesson to exist in `src/curriculum/sample-lessons.json` temporarily, insert it only long enough to process audio/timings, then immediately remove it before committing. Final `git status` for a dependency-blocked package must not show `src/curriculum/sample-lessons.json`, `public/tools/planner-data.json`, or `docs/CURRICULUM_LEDGER.md` as changed for that future lesson. Mark the registry status `ready-blocked-by-dependency`, not `merge-ready`.
+
 Production audio hard limits for every new or touched lesson/review module:
 
 - Final curriculum audio must be `.m4a` unless there is an explicit exception in the handoff.
