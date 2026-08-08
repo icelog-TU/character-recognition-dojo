@@ -1,0 +1,338 @@
+{
+  "id": "L150",
+  "order": 150,
+  "newChars": [
+    "燈"
+  ],
+  "zhuyin": {
+    "燈": "ㄉㄥㄥ"
+  },
+  "title": "紅燈路燈小燈",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L148",
+    "L149"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈"
+    ],
+    "provisionalLearnedChars": [
+      "時",
+      "還"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "燈",
+      "還",
+      "時",
+      "間",
+      "房",
+      "所"
+    ],
+    "targetCharMinimumCount": {
+      "燈": 3
+    },
+    "recentTargetMinimumCounts": {
+      "還": 2,
+      "時": 2,
+      "間": 2,
+      "房": 1,
+      "所": 1
+    },
+    "disallowedChars": [
+      "電",
+      "動",
+      "車",
+      "街",
+      "亮",
+      "暗",
+      "火"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L150. Latest origin/main now includes L143-L147, so this package depends only on unmerged L148 ? and L149 ?; do not merge production JSON until L148-L149 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use ? not ? and ? not ?. Do not add unlearned display characters such as ?, ?, ?, ?, ?, ?, ?. Sentence text and spokenText are unchanged from handoff; S02 and S05 displayLines are split into three shorter phone-safe lines. Images must use L058 style anchors and contain no text, numbers, signs, zhuyin, labels, English, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "還是紅燈，還不可以走。",
+      "spokenText": "還是紅燈還不可以走",
+      "focusChar": "燈",
+      "displayLines": [
+        "還是紅燈，",
+        "還不可以走。"
+      ],
+      "scene": "A child and adult wait at a crossing because the traffic light is still red. Show a simple red circular light. No written signs, numbers, walk icons with text, labels, or symbols.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "天還沒黑，所以路燈還沒開。",
+      "spokenText": "天還沒黑所以路燈還沒開",
+      "focusChar": "燈",
+      "displayLines": [
+        "天還沒黑，",
+        "所以路燈",
+        "還沒開。"
+      ],
+      "scene": "It is still daylight, so the street lamp is off. Show a clear road or path with an unlit street lamp under a bright sky. No signs, words, numbers, or labels.",
+      "hanCharCount": 11
+    },
+    {
+      "text": "房間沒人時，不用開燈。",
+      "spokenText": "房間沒人時不用開燈",
+      "focusChar": "燈",
+      "displayLines": [
+        "房間沒人時，",
+        "不用開燈。"
+      ],
+      "scene": "An empty room with the light off. Make it clear nobody is in the room. No wall text, labels, posters with writing, numbers, or icons.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "我的房間裡有一個小燈。",
+      "spokenText": "我的房間裡有一個小燈",
+      "focusChar": "燈",
+      "displayLines": [
+        "我的房間裡",
+        "有一個小燈。"
+      ],
+      "scene": "A child's room with a small lamp clearly visible, such as on a table or beside the bed area. No readable book text, labels, numbers, or brand marks.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "放天燈時，所有人都到了。",
+      "spokenText": "放天燈時所有人都到了",
+      "focusChar": "燈",
+      "displayLines": [
+        "放天燈時，",
+        "所有人",
+        "都到了。"
+      ],
+      "scene": "A group of people has arrived to release sky lanterns together. Show sky lanterns visually, but do not put any writing, symbols, or drawings on the lanterns.",
+      "hanCharCount": 10
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L150-G01",
+      "type": "find-character",
+      "sentenceId": "L150-S01",
+      "targetChar": "燈",
+      "reason": "Clear concrete use of the target in red traffic light."
+    },
+    {
+      "id": "L150-G02",
+      "type": "teach-character",
+      "sentenceId": "L150-S02",
+      "targetChar": "燈",
+      "targetCharIndex": 7,
+      "prefixText": "天還沒黑所以路",
+      "suffixText": "還沒開",
+      "requiredAudio": [
+        "public/assets/lessons/L150/audio/L150-G02-prefix.m4a",
+        "public/assets/lessons/L150/audio/L150-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L150-G03",
+      "type": "missing-character",
+      "sentenceId": "L150-S03",
+      "targetChar": "燈",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "燈",
+        "房",
+        "間"
+      ]
+    },
+    {
+      "id": "L150-G04",
+      "type": "partial-order",
+      "sentenceId": "L150-S05",
+      "targetChar": "時",
+      "chunks": [
+        "放天燈時",
+        "所有人",
+        "都到了"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L150-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L150-S04",
+      "targetChar": "燈",
+      "correctText": "我的房間裡有一個小燈。",
+      "correctSpokenText": "我的房間裡有一個小燈",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我的房間裡有一個紅燈。",
+          "spokenText": "我的房間裡有一個紅燈",
+          "audioSrc": "/assets/lessons/L150/audio/L150-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我的房間裡有一個小帽。",
+          "spokenText": "我的房間裡有一個小帽",
+          "audioSrc": "/assets/lessons/L150/audio/L150-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
