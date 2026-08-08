@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-08T02:43:17.560Z",
+  "exportedAt": "2026-08-08T02:45:49.248Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -67153,7 +67153,8 @@
           "text": "過了一小時，花燈還沒做好。",
           "displayLines": [
             "過了一小時，",
-            "花燈還沒做好。"
+            "花燈還沒",
+            "做好。"
           ],
           "spokenText": "過了一小時花燈還沒做好",
           "focusChar": "燈",
@@ -67355,11 +67356,8 @@
         {
           "id": "L151-G01",
           "type": "find-character",
-          "sentenceId": "L151-S02",
+          "sentenceId": "L151-S05",
           "targetChar": "關",
-          "missingIndexes": [
-            3
-          ],
           "prompt": "找出「關」。"
         },
         {
@@ -67464,6 +67462,492 @@
               "id": "wrong-two",
               "text": "我到家時房門還沒關",
               "audioSrc": "/assets/lessons/L151/audio/L151-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L152",
+      "order": 152,
+      "newChars": [
+        "窗"
+      ],
+      "zhuyin": {
+        "窗": "ㄔㄨㄤ"
+      },
+      "charAudio": {
+        "窗": "/assets/lessons/L152/audio/char-u7a97.m4a"
+      },
+      "title": "窗子天窗",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L152-S01",
+          "text": "小狗在窗邊看路燈。",
+          "displayLines": [
+            "小狗在窗邊",
+            "看路燈。"
+          ],
+          "spokenText": "小狗在窗邊看路燈",
+          "focusChar": "窗",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home interior and evening street environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, street signs, license plates, watermark, speech bubbles, arrows, or readable symbols. A small dog sits by a clear home window looking outside at a warm street lamp. The window frame and street lamp must be easy to recognize on a phone.",
+          "imageSrc": "/assets/lessons/L152/images/L152-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L152/audio/L152-S01.m4a",
+            "durationMs": 3909,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1280,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2780,
+                "endMs": 2900
+              }
+            ]
+          }
+        },
+        {
+          "id": "L152-S02",
+          "text": "出門前要關窗，還要關燈。",
+          "displayLines": [
+            "出門前要關窗，",
+            "還要關燈。"
+          ],
+          "spokenText": "出門前要關窗還要關燈",
+          "focusChar": "窗",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home entry or living room environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, switch labels, written UI, watermark, speech bubbles, arrows, or readable symbols. A parent and child are about to leave home; one person closes a window while also reaching toward or preparing to turn off a lamp. Make the window, closing action, and lamp clear without written labels.",
+          "imageSrc": "/assets/lessons/L152/images/L152-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L152/audio/L152-S02.m4a",
+            "durationMs": 4942,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1580,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1800,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2960,
+                "endMs": 3220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3220,
+                "endMs": 3560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3560,
+                "endMs": 3880
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3880,
+                "endMs": 4000
+              }
+            ]
+          }
+        },
+        {
+          "id": "L152-S03",
+          "text": "時間還沒到，還可以玩一下。",
+          "displayLines": [
+            "時間還沒到，",
+            "還可以玩一下。"
+          ],
+          "spokenText": "時間還沒到還可以玩一下",
+          "focusChar": "還",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home playroom environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, schedules, clock numerals, written UI, watermark, speech bubbles, arrows, or readable symbols. A child continues playing with simple toys because it is not time to stop yet, with an adult nearby calmly allowing a little more play. If a time object appears, it must have no numerals or readable marks.",
+          "imageSrc": "/assets/lessons/L152/images/L152-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L152/audio/L152-S03.m4a",
+            "durationMs": 3383,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 310
+              },
+              {
+                "charIndex": 1,
+                "startMs": 310,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1220,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1820,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2150
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2150,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2320,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2600,
+                "endMs": 2750
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2750,
+                "endMs": 2900
+              }
+            ]
+          }
+        },
+        {
+          "id": "L152-S04",
+          "text": "下雨時，要關天窗，開大燈。",
+          "displayLines": [
+            "下雨時，",
+            "要關天窗，開大燈。"
+          ],
+          "spokenText": "下雨時要關天窗開大燈",
+          "focusChar": "窗",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean rainy-day vehicle interior environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, dashboard text, dashboard icons, license plates, written UI, watermark, speech bubbles, arrows, or readable symbols. Rain is visible outside. A roof window or sunroof above the seats is being closed, and bright front lights shine into the rainy scene. The picture may show the inside of a family vehicle, but it must not contain any written character or label.",
+          "imageSrc": "/assets/lessons/L152/images/L152-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L152/audio/L152-S04.m4a",
+            "durationMs": 4266,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1440,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2180,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3100,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3180,
+                "endMs": 3560
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3560,
+                "endMs": 3680
+              }
+            ]
+          }
+        },
+        {
+          "id": "L152-S05",
+          "text": "媽媽關心我在學校過得怎樣。",
+          "displayLines": [
+            "媽媽關心我",
+            "在學校過得怎樣。"
+          ],
+          "spokenText": "媽媽關心我在學校過得怎樣",
+          "focusChar": "關",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home or school-arrival environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, school signs, name tags, written papers, speech bubbles, watermark, arrows, or readable symbols. Reuse the fixed first-person girl identity for 我 when appropriate: friendly young girl with shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes. Mother warmly cares about how the child did at school, with gentle expressions and no speech bubble.",
+          "imageSrc": "/assets/lessons/L152/images/L152-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L152/audio/L152-S05.m4a",
+            "durationMs": 4754,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1380,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1600,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1820,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2440,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2820,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2960,
+                "endMs": 3190
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3190,
+                "endMs": 3420
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L152-G01",
+          "type": "find-character",
+          "sentenceId": "L152-S01",
+          "targetChar": "窗",
+          "prompt": "找出「窗」。"
+        },
+        {
+          "id": "L152-G02",
+          "type": "teach-character",
+          "sentenceId": "L152-S02",
+          "targetChar": "窗",
+          "targetCharIndex": 5,
+          "missingIndexes": [
+            5
+          ],
+          "prompt": "聽一聽，放進「窗」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L152/audio/L152-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L152/audio/L152-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L152-G03",
+          "type": "missing-character",
+          "sentenceId": "L152-S04",
+          "targetChar": "窗",
+          "missingIndexes": [
+            6
+          ],
+          "prompt": "選出少掉的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "窗",
+              "correct": true
+            },
+            {
+              "id": "wrong-關",
+              "text": "關",
+              "correct": false
+            },
+            {
+              "id": "wrong-燈",
+              "text": "燈",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L152-G04",
+          "type": "partial-order",
+          "sentenceId": "L152-S03",
+          "targetChar": "還",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "時間還沒到",
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "還可以",
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "玩一下",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L152-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L152-S05",
+          "targetChar": "關",
+          "prompt": "聽一聽，選出正確的句子。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "媽媽關心我在學校過得怎樣。",
+              "spokenText": "媽媽關心我在學校過得怎樣",
+              "audioSrc": "/assets/lessons/L152/audio/L152-S05.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "爸爸關心我在學校過得怎樣。",
+              "spokenText": "爸爸關心我在學校過得怎樣",
+              "audioSrc": "/assets/lessons/L152/audio/L152-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "媽媽關心我在房間過得怎樣。",
+              "spokenText": "媽媽關心我在房間過得怎樣",
+              "audioSrc": "/assets/lessons/L152/audio/L152-G05-wrong-two.m4a",
               "correct": false
             }
           ]
