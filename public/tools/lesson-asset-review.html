@@ -377,7 +377,7 @@
           本版本我已看完，除了下面標記項目外沒有其他問題
         </label>
         <p id="statusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
-        <p id="cloudLine" class="muted" style="margin-top: 6px">未登入時，標記只會存在這台裝置的瀏覽器。</p>
+        <p id="cloudLine" class="muted" style="margin-top: 6px">可讀取雲端審核狀態；登入 Google 後才會跨裝置儲存修改。</p>
       </section>
 
       <section class="panel">
@@ -888,7 +888,10 @@
       async function saveCloudSoon() {
         saveLocalState();
         render();
-        if (!state.user || !state.sha) return;
+        if (!state.user || !state.sha) {
+          setCloud("未登入 Google：這次修改只存在本機；登入後才會同步到手機和平板。", "warn");
+          return;
+        }
         window.clearTimeout(state.saveTimer);
         state.saveTimer = window.setTimeout(saveCloud, 350);
       }
@@ -928,7 +931,7 @@
       async function attachCloudReview() {
         if (state.unsubscribeReview) state.unsubscribeReview();
         state.unsubscribeReview = null;
-        if (!state.user || !state.sha) return;
+        if (!state.sha) return;
         const ref = doc(db, "assetReviews", reviewId());
         try {
           const snapshot = await getDoc(ref);
@@ -938,8 +941,10 @@
             if (legacySnapshot.exists()) {
               mergeCloud(legacySnapshot.data());
               setCloud("已讀取舊版 commit-key 審查紀錄；下一次同步會搬到 main queue。");
-              await saveCloud();
+              if (state.user) await saveCloud();
             }
+          } else {
+            setCloud(state.user ? "雲端沒有既有審核紀錄。" : "雲端沒有既有審核紀錄；登入 Google 後才能跨裝置儲存修改。");
           }
           state.unsubscribeReview = onSnapshot(
             ref,
@@ -1060,7 +1065,7 @@
           await attachCloudReview();
           await saveCloud();
         } else {
-          setCloud("未登入時，標記只會存在這台裝置的瀏覽器。");
+          setCloud("未登入 Google：可以讀取雲端審核狀態；新的勾選/備註只存在本機。");
         }
       });
 

@@ -391,6 +391,8 @@ https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review
 
 Production or release final handoff must include the index URL and, when useful, the direct single-unit asset-review URL. The single-unit page displays each sentence with its text, `spokenText`, sentence audio, and the same square image view used by the child-facing Stage 3 app. It does not show a separate original-image preview because the app view is the review target. If a required person, object, action, count, or other meaning-bearing detail is cut off or unclear in the square app preview, mark the image as needing repair. The page also lists the other formal audio files such as `charAudio`, `G02` prefix/suffix, and `G05` options. The teacher marks only items that need repair and writes notes. Unmarked items are not blockers.
 
+Review tools use Firestore for cross-device state. They may read `audioReviews` and `assetReviews` without sign-in, so a phone or tablet can load existing cloud review state. Writes require Google sign-in. If the teacher marks a repair item, clears a repair item, writes a note, or checks the whole-unit complete box while not signed in, that change is local to the current browser and must not be treated as cross-device synced.
+
 For post-merge review on `main`, the repair queue is keyed by unit plus stable `main`, not by the latest commit SHA. This keeps L### review status findable after later lessons are pushed. Commit SHA remains visible for diagnosis, but `ref=main` is the normal 600-lesson review workflow.
 
 Repair threads must query the queue instead of asking the teacher to restate problems:
@@ -402,7 +404,16 @@ npm run asset:review-status -- --list --ref main
 
 The default command reports repair items without failing, because post-merge teacher review must not block release automation. Use `--fail-on-repair` only in an asset-repair workflow that intentionally wants a nonzero exit when repair work exists.
 
-An asset repair thread must fix only the marked image/audio items unless the user explicitly expands scope. After repair, rerun the relevant asset processing and validation, push a new commit, and provide a new `lesson-asset-review.html` URL for the repaired commit.
+The complete post-merge repair loop is:
+
+1. Teacher opens `lesson-asset-review.html?unit=L###&ref=main`.
+2. Teacher marks only bad image/audio items as needing repair and writes notes. The whole-unit complete checkbox may be checked only when every remaining unmarked item is acceptable.
+3. Asset repair thread runs `npm run asset:review-status -- --unit L### --ref main`, fixes only the marked items unless scope is explicitly expanded, reruns relevant asset processing and validation, and pushes the repair branch.
+4. Release/repair thread must merge or cherry-pick the repair into `main`; a repair-branch preview URL is not enough for final review.
+5. Teacher reopens the `ref=main` review page. If the repaired asset is now acceptable, the teacher clears the item's `needs repair` checkbox, optionally clears or updates the note, and checks the whole-unit complete box.
+6. The index turns green only when `reviewComplete === true` and `repairCount === 0`. A checked complete box with remaining repair items must still show the unit as needing repair.
+
+An asset repair thread must fix only the marked image/audio items unless the user explicitly expands scope. After repair, rerun the relevant asset processing and validation, push the repair into `main` or provide a branch preview only as an intermediate check, and give the teacher the `ref=main` review URL for final clearing.
 
 ## Request File
 
