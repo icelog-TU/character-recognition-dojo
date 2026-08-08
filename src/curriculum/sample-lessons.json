@@ -69820,6 +69820,455 @@
         "G02 teachAudio prefix text is 等; suffix text is 雨小一點再出去玩.",
         "G05 wrong-choice audio must be generated from the full wrong texts, not spliced from the correct sentence."
       ]
+    },
+    {
+      "id": "L157",
+      "order": 157,
+      "newChars": [
+        "吹"
+      ],
+      "zhuyin": {
+        "吹": "ㄔㄨㄟ"
+      },
+      "charAudio": {
+        "吹": "/assets/lessons/L157/audio/char-u5439.m4a"
+      },
+      "title": "吹吹風",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L157-S01",
+          "text": "房間很熱，打開窗子吹吹風。",
+          "displayLines": [
+            "房間很熱，",
+            "打開窗子",
+            "吹吹風。"
+          ],
+          "spokenText": "房間很熱打開窗子吹吹風",
+          "focusChar": "吹",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No text, letters, numbers, signs, labels, zhuyin, logos, UI marks, or watermarks. Scene: a hot room with a child or adult opening a window so fresh air enters; curtains and loose fabric move gently to show breeze; make the room feel warm but safe and the open window clear.",
+          "imageSrc": "/assets/lessons/L157/images/L157-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L157/audio/L157-S01.m4a",
+            "durationMs": 5078,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 520
+              },
+              {
+                "charIndex": 2,
+                "startMs": 520,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2040,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2280,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2520,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2780,
+                "endMs": 3440
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3740,
+                "endMs": 3880
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3880,
+                "endMs": 4040
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4040,
+                "endMs": 4160
+              }
+            ]
+          }
+        },
+        {
+          "id": "L157-S02",
+          "text": "飯菜很熱，吹一吹再吃。",
+          "displayLines": [
+            "飯菜很熱，",
+            "吹一吹再吃。"
+          ],
+          "spokenText": "飯菜很熱吹一吹再吃",
+          "focusChar": "吹",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No text, letters, numbers, signs, labels, zhuyin, logos, UI marks, or watermarks. Scene: a child sits at a table with hot food, visible steam, and gently blows on the food before eating; make the blowing action and hot food clear.",
+          "imageSrc": "/assets/lessons/L157/images/L157-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L157/audio/L157-S02.m4a",
+            "durationMs": 5475,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2040,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2380,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2600,
+                "endMs": 3260
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3260,
+                "endMs": 3520
+              }
+            ]
+          }
+        },
+        {
+          "id": "L157-S03",
+          "text": "車還沒來，再等一等。",
+          "displayLines": [
+            "車還沒來，",
+            "再等一等。"
+          ],
+          "spokenText": "車還沒來再等一等",
+          "focusChar": "等",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No text, letters, numbers, signs, labels, zhuyin, logos, UI marks, or watermarks. Scene: a child and adult wait at a simple curbside or sheltered waiting area for a vehicle that has not arrived yet; show the waiting feeling with empty road space, but no route numbers, station names, schedules, text, labels, or bus wording.",
+          "imageSrc": "/assets/lessons/L157/images/L157-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L157/audio/L157-S03.m4a",
+            "durationMs": 3091,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1580,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2000,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2540
+              }
+            ]
+          }
+        },
+        {
+          "id": "L157-S04",
+          "text": "我要吹一個大氣球。",
+          "displayLines": [
+            "我要吹一個",
+            "大氣球。"
+          ],
+          "spokenText": "我要吹一個大氣球",
+          "focusChar": "吹",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No text, letters, numbers, signs, labels, zhuyin, logos, UI marks, or watermarks. Scene: a child blowing up one large balloon; cheeks puffed, balloon big and round, action clear, clean background.",
+          "imageSrc": "/assets/lessons/L157/images/L157-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L157/audio/L157-S04.m4a",
+            "durationMs": 4137,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 560
+              },
+              {
+                "charIndex": 2,
+                "startMs": 560,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1170
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1170,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1380,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2160,
+                "endMs": 2460
+              }
+            ]
+          }
+        },
+        {
+          "id": "L157-S05",
+          "text": "來玩大風吹，吹什麼？",
+          "displayLines": [
+            "來玩大風吹，",
+            "吹什麼？"
+          ],
+          "spokenText": "來玩大風吹吹什麼",
+          "focusChar": "吹",
+          "imagePrompt": "Use the approved L058 reference style: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. No text, letters, numbers, signs, labels, zhuyin, logos, UI marks, or watermarks. Scene: several preschool children gathered indoors or in a simple play area for a movement game, ready to jump up and move; show playful anticipation and open space, but no words, signs, labels, speech bubbles, or written game name.",
+          "imageSrc": "/assets/lessons/L157/images/L157-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L157/audio/L157-S05.m4a",
+            "durationMs": 4033,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1100,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1500,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2880,
+                "endMs": 2995
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2995,
+                "endMs": 3110
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3110,
+                "endMs": 3220
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L157-G01",
+          "type": "find-character",
+          "sentenceId": "L157-S05",
+          "targetChar": "吹",
+          "prompt": "找出「吹」。"
+        },
+        {
+          "id": "L157-G02",
+          "type": "teach-character",
+          "sentenceId": "L157-S02",
+          "targetChar": "吹",
+          "targetCharIndex": 4,
+          "missingIndexes": [
+            4
+          ],
+          "prompt": "幫忙讀出這個字。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L157/audio/L157-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L157/audio/L157-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L157-G03",
+          "type": "missing-character",
+          "sentenceId": "L157-S01",
+          "targetChar": "吹",
+          "missingIndexes": [
+            8
+          ],
+          "prompt": "選出不見的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "吹",
+              "correct": true
+            },
+            {
+              "id": "wrong-wind",
+              "text": "風",
+              "correct": false
+            },
+            {
+              "id": "wrong-window",
+              "text": "窗",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L157-G04",
+          "type": "partial-order",
+          "sentenceId": "L157-S03",
+          "targetChar": "等",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "車還沒來",
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "再等",
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "一等",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L157-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L157-S04",
+          "targetChar": "吹",
+          "prompt": "聽聽誰讀得一樣。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我要吹一個大氣球。",
+              "spokenText": "我要吹一個大氣球",
+              "audioSrc": "/assets/lessons/L157/audio/L157-S04.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "我要吹一個小氣球。",
+              "spokenText": "我要吹一個小氣球",
+              "audioSrc": "/assets/lessons/L157/audio/L157-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "我要拿一個大氣球。",
+              "spokenText": "我要拿一個大氣球",
+              "audioSrc": "/assets/lessons/L157/audio/L157-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "reviewLessons": [
