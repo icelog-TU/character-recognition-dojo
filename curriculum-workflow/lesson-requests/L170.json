@@ -1,0 +1,195 @@
+{
+  "id": "L170",
+  "order": 170,
+  "newChars": [
+    "回"
+  ],
+  "zhuyin": {
+    "回": "ㄏㄨㄟˊ"
+  },
+  "title": "回",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L166",
+    "L167",
+    "L168",
+    "L169"
+  ],
+  "provisionalLearnedChars": [
+    "洗",
+    "又",
+    "髒",
+    "亂"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "洗",
+      "又",
+      "髒",
+      "亂"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "回",
+      "亂",
+      "髒",
+      "又",
+      "洗",
+      "先"
+    ],
+    "targetCharMinimumCount": {
+      "回": 3
+    },
+    "recentTargetMinimumCounts": {
+      "亂": 2,
+      "髒": 2,
+      "又": 2,
+      "洗": 1,
+      "先": 1
+    },
+    "disallowedChars": [
+      "服",
+      "弄",
+      "完",
+      "修",
+      "丑",
+      "找回",
+      "回收",
+      "整理",
+      "收拾",
+      "迷",
+      "丟"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L170 回. Latest origin/main at handoff is complete through L165 先; L170 depends on L166 洗, L167 又, L168 髒, and L169 亂. Do not merge production JSON, planner-data, or ledger until L166-L169 are present in latest origin/main. Provisional learned chars are 洗, 又, 髒, 亂. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 服, 弄, 完, 修, 丑, 找回, 回收, 整理, 收拾, 迷, or 丟. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "書包好髒，先拿去洗。",
+      "spokenText": "書包好髒先拿去洗",
+      "focusChar": "髒",
+      "displayLines": [
+        "書包好髒，",
+        "先拿去洗。"
+      ],
+      "scene": "Square image / 1:1 composition. A school bag is visibly dirty, and a child is preparing to take it away to wash. Clearly show the dirty school bag and the action of taking it to be cleaned, centered with safe margins. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "小孩亂走，找不到回家的路。",
+      "spokenText": "小孩亂走找不到回家的路",
+      "focusChar": "回",
+      "displayLines": [
+        "小孩亂走，",
+        "找不到回家的路。"
+      ],
+      "scene": "Square image / 1:1 composition. A child has wandered outside and cannot find the way back home. Show a simple path or crossroads, a home direction implied visually, and the child looking confused, all centered with safe margins. No readable street signs, text, labels, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 11
+    },
+    {
+      "text": "眼鏡不要亂放，放回盒子裡。",
+      "spokenText": "眼鏡不要亂放放回盒子裡",
+      "focusChar": "回",
+      "displayLines": [
+        "眼鏡不要亂放，",
+        "放回盒子裡。"
+      ],
+      "scene": "Square image / 1:1 composition. Glasses have been placed messily on a table, and a child or adult is putting the glasses back into a plain glasses case. Clearly show the glasses, case, and putting-back action, centered with safe margins. No visible text, labels, signs, letters, numbers, zhuyin, brand marks, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 11
+    },
+    {
+      "text": "又大又圓的紅鼻子。",
+      "spokenText": "又大又圓的紅鼻子",
+      "focusChar": "又",
+      "displayLines": [
+        "又大又圓的",
+        "紅鼻子。"
+      ],
+      "scene": "Square image / 1:1 composition. A cute bright clown-like face with a large round red nose. Keep the face warm, friendly, and centered; the big round red nose must be the clear focus. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "小狗髒了，回家洗一洗。",
+      "spokenText": "小狗髒了回家洗一洗",
+      "focusChar": "回",
+      "displayLines": [
+        "小狗髒了，",
+        "回家洗一洗。"
+      ],
+      "scene": "Square image / 1:1 composition. A small dog got dirty outside and is now back home preparing to be washed. Show the dirty dog, a home doorway or home washing area, and the washing preparation clearly, centered with safe margins. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 9
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L170-G01",
+      "type": "find-character",
+      "sentenceId": "L170-S05",
+      "targetChar": "回",
+      "reason": "回家 is the core word group for this lesson and is clear in both text and image."
+    },
+    {
+      "id": "L170-G02",
+      "type": "teach-character",
+      "sentenceId": "L170-S03",
+      "targetChar": "回",
+      "targetCharIndex": 7,
+      "prefixText": "眼鏡不要亂放放",
+      "suffixText": "盒子裡",
+      "requiredAudio": [
+        "public/assets/lessons/L170/audio/L170-G02-prefix.m4a",
+        "public/assets/lessons/L170/audio/L170-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L170-G03",
+      "type": "missing-character",
+      "sentenceId": "L170-S02",
+      "targetChar": "回",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "回",
+        "家",
+        "路"
+      ]
+    },
+    {
+      "id": "L170-G04",
+      "type": "partial-order",
+      "sentenceId": "L170-S01",
+      "targetChar": "髒",
+      "chunks": [
+        "書包好髒",
+        "先拿去",
+        "洗"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L170-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L170-S04",
+      "targetChar": "又",
+      "correctText": "又大又圓的紅鼻子。",
+      "correctSpokenText": "又大又圓的紅鼻子",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "又小又圓的紅鼻子。",
+          "spokenText": "又小又圓的紅鼻子",
+          "audioSrc": "/assets/lessons/L170/audio/L170-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "又大又圓的黑鼻子。",
+          "spokenText": "又大又圓的黑鼻子",
+          "audioSrc": "/assets/lessons/L170/audio/L170-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
