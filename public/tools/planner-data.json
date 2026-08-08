@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-07T15:30:23.959Z",
+  "exportedAt": "2026-08-08T02:36:04.633Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -65311,8 +65311,8 @@
           "id": "L147-S04",
           "text": "我以為所有花都會開。",
           "displayLines": [
-            "我以為所有花",
-            "都會開。"
+            "我以為所有",
+            "花都會開。"
           ],
           "spokenText": "我以為所有花都會開",
           "focusChar": "所",
@@ -65375,8 +65375,8 @@
           "id": "L147-S05",
           "text": "怎麼所有帽子都在地上？",
           "displayLines": [
-            "怎麼所有帽子",
-            "都在地上？"
+            "怎麼所有帽",
+            "子都在地上？"
           ],
           "spokenText": "怎麼所有帽子都在地上",
           "focusChar": "所",
@@ -65542,8 +65542,8 @@
             },
             {
               "id": "wrong-one",
-              "text": "怎麼所有書都在地上？",
-              "spokenText": "怎麼所有書都在地上",
+              "text": "怎麼所有帽子都在路上？",
+              "spokenText": "怎麼所有帽子都在路上",
               "audioSrc": "/assets/lessons/L147/audio/L147-G05-wrong-one.m4a",
               "correct": false
             },
@@ -65566,6 +65566,481 @@
           "char-u9593 transcript returned homophone ? after regeneration; this needs teacher listening confirmation via temporary audio-check page."
         ]
       }
+    },
+    {
+      "id": "L148",
+      "order": 148,
+      "newChars": [
+        "時"
+      ],
+      "zhuyin": {
+        "時": "ㄕˊ"
+      },
+      "charAudio": {
+        "時": "/assets/lessons/L148/audio/char-u6642.m4a"
+      },
+      "title": "時間有時同時",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L148-S01",
+          "text": "爸爸有時在書房下棋。",
+          "displayLines": [
+            "爸爸有時",
+            "在書房下棋。"
+          ],
+          "spokenText": "爸爸有時在書房下棋",
+          "focusChar": "時",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean study-room environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, written book spines, readable papers, UI, watermark, speech bubbles, arrows, or readable symbols. Dad is playing chess or go in a study room. Show a study-like room, a table, and a board with black and white pieces. Books and papers may appear, but every cover and page must be blank or purely decorative with no readable text.",
+          "imageSrc": "/assets/lessons/L148/images/L148-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L148/audio/L148-S01.m4a",
+            "durationMs": 4279,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2520,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2760,
+                "endMs": 3220
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3220,
+                "endMs": 3440
+              }
+            ]
+          }
+        },
+        {
+          "id": "L148-S02",
+          "text": "爸媽同時來房間找我。",
+          "displayLines": [
+            "爸媽同時",
+            "來房間找我。"
+          ],
+          "spokenText": "爸媽同時來房間找我",
+          "focusChar": "時",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home room environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, written posters, readable books, UI, watermark, speech bubbles, arrows, or readable symbols. Reuse the fixed first-person young girl design for the child: friendly preschool-to-early-elementary girl with shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm curious expression. Mom and dad arrive at the room at the same time to look for the child. Show both parents entering together through the doorway while the child is inside the room.",
+          "imageSrc": "/assets/lessons/L148/images/L148-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L148/audio/L148-S02.m4a",
+            "durationMs": 3420,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1320,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1580,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2140,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2380,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2660,
+                "endMs": 2960
+              }
+            ]
+          }
+        },
+        {
+          "id": "L148-S03",
+          "text": "時間到了，所有人一起出門。",
+          "displayLines": [
+            "時間到了，",
+            "所有人",
+            "一起出門。"
+          ],
+          "spokenText": "時間到了所有人一起出門",
+          "focusChar": "時",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home doorway environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, clock numbers, written schedules, icons with writing, UI, watermark, speech bubbles, arrows, or readable symbols. A family or small group leaves home together because it is time to go. Show people near an open front door, putting on shoes or stepping out together, with bags or outdoor items if helpful. Do not show clock numbers, written schedules, signs, labels, or symbols.",
+          "imageSrc": "/assets/lessons/L148/images/L148-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L148/audio/L148-S03.m4a",
+            "durationMs": 4816,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 290
+              },
+              {
+                "charIndex": 1,
+                "startMs": 290,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 890
+              },
+              {
+                "charIndex": 3,
+                "startMs": 890,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1780,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1980,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2180,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2880,
+                "endMs": 3130
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3130,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3380,
+                "endMs": 3740
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3740,
+                "endMs": 3980
+              }
+            ]
+          }
+        },
+        {
+          "id": "L148-S04",
+          "text": "你的臉怎麼這麼紅？",
+          "displayLines": [
+            "你的臉",
+            "怎麼這麼紅？"
+          ],
+          "spokenText": "你的臉怎麼這麼紅",
+          "focusChar": "怎",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean child-friendly environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, written posters, UI, watermark, speech bubbles, arrows, or readable symbols. Reuse the fixed second-person young boy design for 'you': friendly preschool-to-early-elementary boy with short slightly tousled dark hair, bright friendly eyes, sky-blue shirt, green shorts, blue shoes, and a small orange backpack. The boy has a very red face from heat, running, or embarrassment, and another person looks concerned or surprised. Keep the scene gentle and child-friendly.",
+          "imageSrc": "/assets/lessons/L148/images/L148-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L148/audio/L148-S04.m4a",
+            "durationMs": 4373,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 180
+              },
+              {
+                "charIndex": 1,
+                "startMs": 180,
+                "endMs": 360
+              },
+              {
+                "charIndex": 2,
+                "startMs": 360,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 1070
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1070,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1360,
+                "endMs": 1670
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1670,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1980,
+                "endMs": 2260
+              }
+            ]
+          }
+        },
+        {
+          "id": "L148-S05",
+          "text": "這個太難得分，所以我不玩了。",
+          "displayLines": [
+            "這個太難",
+            "得分，所以",
+            "我不玩了。"
+          ],
+          "spokenText": "這個太難得分所以我不玩了",
+          "focusChar": "所",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home play environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, logos, zhuyin, signs, written UI, scores, icons with writing, screen text, watermark, speech bubbles, arrows, or readable symbols. Reuse the fixed first-person young girl design for the child: friendly preschool-to-early-elementary girl with shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes, warm expression. The child is frustrated because a handheld electronic game or small screen game is too hard to score points in, so she stops playing and sets it down. The screen must be blank or show only abstract shapes with no text, numbers, score, symbols, labels, or UI text.",
+          "imageSrc": "/assets/lessons/L148/images/L148-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L148/audio/L148-S05.m4a",
+            "durationMs": 3414,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 160
+              },
+              {
+                "charIndex": 1,
+                "startMs": 160,
+                "endMs": 320
+              },
+              {
+                "charIndex": 2,
+                "startMs": 320,
+                "endMs": 660
+              },
+              {
+                "charIndex": 3,
+                "startMs": 660,
+                "endMs": 900
+              },
+              {
+                "charIndex": 4,
+                "startMs": 900,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1160,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1760,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1900,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2040,
+                "endMs": 2230
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2230,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2420,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 11,
+                "startMs": 2740,
+                "endMs": 2900
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L148-G01",
+          "type": "find-character",
+          "sentenceId": "L148-S03",
+          "targetChar": "時",
+          "prompt": "找出「時」。"
+        },
+        {
+          "id": "L148-G02",
+          "type": "teach-character",
+          "sentenceId": "L148-S01",
+          "targetChar": "時",
+          "targetCharIndex": 3,
+          "missingIndexes": [
+            3
+          ],
+          "prompt": "聽一聽，放進「時」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L148/audio/L148-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L148/audio/L148-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L148-G03",
+          "type": "missing-character",
+          "sentenceId": "L148-S02",
+          "targetChar": "時",
+          "missingIndexes": [
+            3
+          ],
+          "prompt": "選出少掉的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "時",
+              "correct": true
+            },
+            {
+              "id": "wrong-間",
+              "text": "間",
+              "correct": false
+            },
+            {
+              "id": "wrong-房",
+              "text": "房",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L148-G04",
+          "type": "partial-order",
+          "sentenceId": "L148-S04",
+          "targetChar": "怎",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "你的臉",
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "怎麼",
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "這麼紅",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L148-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L148-S05",
+          "targetChar": "所",
+          "prompt": "聽一聽，選出正確的句子。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "這個太難得分，所以我不玩了。",
+              "spokenText": "這個太難得分所以我不玩了",
+              "audioSrc": "/assets/lessons/L148/audio/L148-S05.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "這個太難得分，所以我不看了。",
+              "spokenText": "這個太難得分所以我不看了",
+              "audioSrc": "/assets/lessons/L148/audio/L148-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "這個太難得分，所以我不吃了。",
+              "spokenText": "這個太難得分所以我不吃了",
+              "audioSrc": "/assets/lessons/L148/audio/L148-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "reviewLessons": [
