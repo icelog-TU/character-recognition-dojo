@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L155 | 再 / normal lesson | claimed | Production thread B | `codex/l155-complete-package` / pending | L154:等 | 等 | `curriculum-workflow/lesson-requests/L155.json`; `curriculum-workflow/generated/L155-generation-packet.md`; `curriculum-workflow/drafts/L155-draft.json` | `curriculum-workflow/audio-inbox/L155/`; `public/assets/lessons/L155/` | Accepted handoff and starting complete package. Latest `origin/main` is L153, so production JSON remains blocked until L154 enters `origin/main`. |
 
 ## Status Values
 
