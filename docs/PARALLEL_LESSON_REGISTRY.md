@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L150 | 燈 / normal lesson | ready-blocked-by-dependency | Production thread B | `codex/l150-complete-package` / pending | L148:時, L149:還 | 時, 還 | `curriculum-workflow/lesson-requests/L150.json`; `curriculum-workflow/generated/L150-generation-packet.md`; `curriculum-workflow/drafts/L150-draft.json` | `curriculum-workflow/audio-inbox/L150/`; `public/assets/lessons/L150/` | Complete package prepared from teacher-approved handoff: request, packet, draft, images, sentence audio, charAudio, G02/G05 audio, and AI alignment are done. Production JSON/planner/ledger remain blocked until L148-L149 enter `origin/main`. |
+| L150 | 燈 / normal lesson | ready-blocked-by-dependency | Production thread B | `codex/l150-complete-package` / `fe24927` | L148:時, L149:還 | 時, 還 | `curriculum-workflow/lesson-requests/L150.json`; `curriculum-workflow/generated/L150-generation-packet.md`; `curriculum-workflow/drafts/L150-draft.json` | `curriculum-workflow/audio-inbox/L150/`; `public/assets/lessons/L150/` | Complete package prepared from teacher-approved handoff: request, packet, draft, images, sentence audio, charAudio, G02/G05 audio, and AI alignment are done. Production JSON/planner/ledger remain blocked until L148-L149 enter `origin/main`. |
 
 ## Status Values
 
