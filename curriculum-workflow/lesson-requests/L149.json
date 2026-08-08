@@ -1,0 +1,343 @@
+{
+  "id": "L149",
+  "order": 149,
+  "newChars": [
+    "還"
+  ],
+  "zhuyin": {
+    "還": "ㄏㄞˊ"
+  },
+  "title": "還沒還可以",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L143",
+    "L144",
+    "L145",
+    "L146",
+    "L147",
+    "L148"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還"
+    ],
+    "provisionalLearnedChars": [
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "還",
+      "時",
+      "間",
+      "房",
+      "所",
+      "怎"
+    ],
+    "targetCharMinimumCount": {
+      "還": 3
+    },
+    "recentTargetMinimumCounts": {
+      "時": 2,
+      "間": 2,
+      "房": 2,
+      "所": 1,
+      "怎": 1
+    },
+    "disallowedChars": [
+      "鐘",
+      "錶",
+      "電",
+      "動",
+      "遊",
+      "戲",
+      "能",
+      "嗎",
+      "爲",
+      "裏"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L149 還. Use these sentences exactly; spokenText equals text with punctuation removed. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Use 為, not 爲; use 裡, not 裏. L149 depends on L143 以, L144 怎, L145 所, L146 房, L147 間, and L148 時; do not merge production JSON until L143-L148 are present in latest origin/main. Provisional learned chars are 以, 怎, 所, 房, 間, 時. Image notes may describe a difficult game, but unlearned display characters such as 遊 or 戲 must not appear in displayed lesson text. Images must use L058 style anchors and contain no text, numbers, zhuyin, labels, signs, letters, logos, written UI, scores, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix, and independent G05 wrong-choice whole-sentence audio, processed through assets:audio and AI-aligned before production release.",
+  "approvedSentences": [
+    {
+      "text": "時間還沒到，還可以玩。",
+      "spokenText": "時間還沒到還可以玩",
+      "focusChar": "還",
+      "displayLines": [
+        "時間還沒到，",
+        "還可以玩。"
+      ],
+      "hanCharCount": 10,
+      "scene": "A child wants to keep playing because it is not time to stop yet. Show toys or play activity and an adult nearby, but do not show clock numbers, written schedules, signs, labels, or text."
+    },
+    {
+      "text": "小小孩還不會看時間。",
+      "spokenText": "小小孩還不會看時間",
+      "focusChar": "還",
+      "displayLines": [
+        "小小孩還不會",
+        "看時間。"
+      ],
+      "hanCharCount": 10,
+      "scene": "A very young child looks confused while looking at a clock or time-related object. Do not show readable numbers, written words, labels, or clock numerals; the idea is that the child cannot understand time yet."
+    },
+    {
+      "text": "這房子怎麼有這麼多房間？",
+      "spokenText": "這房子怎麼有這麼多房間",
+      "focusChar": "房",
+      "displayLines": [
+        "這房子怎麼有",
+        "這麼多房間？"
+      ],
+      "hanCharCount": 12,
+      "scene": "A child is surprised by a house with many rooms. Show the inside of a house with many doorways or rooms visible, without signs, room labels, numbers, or written text."
+    },
+    {
+      "text": "這是給大人玩的，所以很難。",
+      "spokenText": "這是給大人玩的所以很難",
+      "focusChar": "所",
+      "displayLines": [
+        "這是給大人玩的，",
+        "所以很難。"
+      ],
+      "hanCharCount": 12,
+      "scene": "A child tries something meant for adults and finds it difficult. This can be a difficult game, puzzle, or tool-like activity, but any screen, paper, or object must have no text, numbers, UI labels, scores, or symbols."
+    },
+    {
+      "text": "這麼難，我還是不要玩好了。",
+      "spokenText": "這麼難我還是不要玩好了",
+      "focusChar": "還",
+      "displayLines": [
+        "這麼難，",
+        "我還是不要玩好了。"
+      ],
+      "hanCharCount": 11,
+      "scene": "The child decides not to continue playing because the activity is too difficult. Show the child stepping away or putting the activity down, with a frustrated but calm expression. No text, numbers, labels, or UI."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L149-G01",
+      "type": "find-character",
+      "sentenceId": "L149-S01",
+      "targetChar": "還",
+      "reason": "Clear repeated use of 還 in 還沒 and 還可以."
+    },
+    {
+      "id": "L149-G02",
+      "type": "teach-character",
+      "sentenceId": "L149-S02",
+      "targetChar": "還",
+      "targetCharIndex": 3,
+      "prefixText": "小小孩",
+      "suffixText": "不會看時間",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L149/audio/L149-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L149/audio/L149-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L149-G03",
+      "type": "missing-character",
+      "sentenceId": "L149-S05",
+      "targetChar": "還",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "還",
+        "時",
+        "間"
+      ]
+    },
+    {
+      "id": "L149-G04",
+      "type": "partial-order",
+      "sentenceId": "L149-S03",
+      "targetChar": "房",
+      "chunks": [
+        "這房子",
+        "怎麼有",
+        "這麼多房間"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L149-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L149-S04",
+      "targetChar": "所",
+      "correctText": "這是給大人玩的所以很難",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "這是給小孩玩的所以很難",
+          "audioSrc": "/assets/lessons/L149/audio/L149-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "這是給大人看的所以很難",
+          "audioSrc": "/assets/lessons/L149/audio/L149-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
