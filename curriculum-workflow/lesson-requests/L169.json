@@ -1,0 +1,365 @@
+{
+  "id": "L169",
+  "order": 169,
+  "newChars": [
+    "亂"
+  ],
+  "zhuyin": {
+    "亂": "ㄌㄨㄢˋ"
+  },
+  "title": "亂",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L166",
+    "L167",
+    "L168"
+  ],
+  "provisionalLearnedChars": [
+    "洗",
+    "又",
+    "髒"
+  ],
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂"
+    ],
+    "provisionalLearnedChars": [
+      "洗",
+      "又",
+      "髒"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "亂",
+      "髒",
+      "又",
+      "洗",
+      "先",
+      "擦"
+    ],
+    "targetCharMinimumCount": {
+      "亂": 3
+    },
+    "recentTargetMinimumCounts": {
+      "髒": 2,
+      "又": 2,
+      "洗": 2,
+      "先": 1,
+      "擦": 1
+    },
+    "disallowedChars": [
+      "整",
+      "理",
+      "收",
+      "拾",
+      "乾",
+      "淨",
+      "牆",
+      "浴",
+      "毛",
+      "巾"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L169, with S02 corrected by sentence editor to ????????? Latest origin/main contains L165; L169 depends on unmerged L166, L167, and L168, so do not merge production JSON until all dependencies are present in latest origin/main. Provisional learned chars are ?, ?, ?. Images must be square 1:1 compositions using L058 style anchors and contain no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "房間又髒又亂。",
+      "spokenText": "房間又髒又亂",
+      "focusChar": "亂",
+      "displayLines": [
+        "房間又髒",
+        "又亂。"
+      ],
+      "scene": "A room is both dirty and messy, with clothes, blank papers, and toys scattered on the floor, but still visually readable. The focus is a dirty messy room. No text, numbers, labels, signs, letters, zhuyin, logos, watermarks, speech bubbles, or readable marks.",
+      "hanCharCount": 6
+    },
+    {
+      "text": "髒衣髒帽不要亂放。",
+      "spokenText": "髒衣髒帽不要亂放",
+      "focusChar": "亂",
+      "displayLines": [
+        "髒衣髒帽",
+        "不要亂放。"
+      ],
+      "scene": "Dirty clothes and a dirty hat are placed messily on the floor or beside a chair, while an adult reminds the child not to leave them there. A plain laundry basket or storage spot may appear. No brand marks, text, numbers, labels, signs, letters, zhuyin, logos, watermarks, speech bubbles, or readable marks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "誰在桌上亂畫？去擦掉。",
+      "spokenText": "誰在桌上亂畫去擦掉",
+      "focusChar": "亂",
+      "displayLines": [
+        "誰在桌上亂畫？",
+        "去擦掉。"
+      ],
+      "scene": "A tabletop has messy scribbles made by a child, and an adult or child is preparing to wipe the scribbles away. The scribble marks must not form any text, numbers, zhuyin, readable symbols, labels, logos, or signatures.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "媽媽洗菜做飯，我擦桌子。",
+      "spokenText": "媽媽洗菜做飯我擦桌子",
+      "focusChar": "洗",
+      "displayLines": [
+        "媽媽洗菜做飯，",
+        "我擦桌子。"
+      ],
+      "scene": "Kitchen and dining-table life scene: mother washes vegetables and cooks, while a child wipes the nearby table to help. No text, numbers, brand marks, labels, signs, letters, zhuyin, logos, watermarks, speech bubbles, or readable marks.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "先脫衣，再洗頭。",
+      "spokenText": "先脫衣再洗頭",
+      "focusChar": "洗",
+      "displayLines": [
+        "先脫衣，",
+        "再洗頭。"
+      ],
+      "scene": "Safe, gentle non-exposed bathing routine scene: a child prepares to wash hair, shown with a towel or bathrobe, or only head and water flow at a sink or shower. No nudity, no text, numbers, labels, signs, letters, zhuyin, logos, watermarks, speech bubbles, or readable marks.",
+      "hanCharCount": 6
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L169-G01",
+      "type": "find-character",
+      "sentenceId": "L169-S03",
+      "targetChar": "亂",
+      "reason": "The phrase ?? is a core lesson phrase and makes the target character clear."
+    },
+    {
+      "id": "L169-G02",
+      "type": "teach-character",
+      "sentenceId": "L169-S02",
+      "targetChar": "亂",
+      "targetCharIndex": 6,
+      "prefixText": "髒衣髒帽不要",
+      "suffixText": "放",
+      "requiredAudio": [
+        "public/assets/lessons/L169/audio/L169-G02-prefix.m4a",
+        "public/assets/lessons/L169/audio/L169-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L169-G03",
+      "type": "missing-character",
+      "sentenceId": "L169-S01",
+      "targetChar": "亂",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "亂",
+        "髒",
+        "又"
+      ]
+    },
+    {
+      "id": "L169-G04",
+      "type": "partial-order",
+      "sentenceId": "L169-S05",
+      "targetChar": "洗",
+      "chunks": [
+        "先脫衣",
+        "再",
+        "洗頭"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L169-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L169-S04",
+      "targetChar": "洗",
+      "correctText": "媽媽洗菜做飯，我擦桌子。",
+      "correctSpokenText": "媽媽洗菜做飯我擦桌子",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "媽媽洗菜做飯，我擦窗子。",
+          "spokenText": "媽媽洗菜做飯我擦窗子",
+          "audioSrc": "/assets/lessons/L169/audio/L169-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "媽媽洗菜做飯，我掃地。",
+          "spokenText": "媽媽洗菜做飯我掃地",
+          "audioSrc": "/assets/lessons/L169/audio/L169-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

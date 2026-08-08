@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L169 | 亂 / normal lesson | needs-rework | Production C | codex/l169-complete-package / final blocker commit in handoff | L166:洗, L167:又, L168:髒 | 洗, 又, 髒 | `curriculum-workflow/lesson-requests/L169.json`; `curriculum-workflow/generated/L169-generation-packet.md` | `public/assets/lessons/L169/images/`; `public/assets/lessons/L169/audio/` | Blocked before asset work: allowed-character audit found unlearned display char `服` in approved S02 `髒衣服不要亂放。`; invalid request/packet/draft were removed. |
+| L169 | 亂 / normal lesson | ready-blocked-by-dependency | Production C | codex/l169-complete-package / final commit in handoff | L166:洗, L167:又, L168:髒 | 洗, 又, 髒 | `curriculum-workflow/lesson-requests/L169.json`; `curriculum-workflow/generated/L169-generation-packet.md`; `curriculum-workflow/drafts/L169-draft.json` | `public/assets/lessons/L169/images/`; `public/assets/lessons/L169/audio/` | Complete package prepared with corrected S02 `髒衣髒帽不要亂放。`, final square images, OpenAI sentence audio, standalone charAudio, G02/G05 audio, and aligned timings. Production JSON/planner/ledger intentionally not updated until L166-L168 merge. |
 
 ## Status Values
 
