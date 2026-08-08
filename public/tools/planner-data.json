@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-08T15:57:56.819Z",
+  "exportedAt": "2026-08-08T16:00:54.773Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -75176,8 +75176,9 @@
           "id": "L168-S05",
           "text": "大人還沒上桌，不可以先吃。",
           "displayLines": [
-            "大人還沒上桌，",
-            "不可以先吃。"
+            "大人還沒",
+            "上桌，不",
+            "可以先吃。"
           ],
           "spokenText": "大人還沒上桌不可以先吃",
           "focusChar": "先",
@@ -75393,6 +75394,442 @@
           "Manual timing smoothing applied to L168-S01 and L168-S03 after AI alignment produced 1ms cuts for 髒; approved Traditional Chinese text was not changed.",
           "Standalone charAudio was regenerated with OpenAI TTS after short-audio ASR checks; final char-u9ad2.m4a transcribes as 髒.",
           "G02 prefix is the exact Han fragment 手又; final short-audio ASR transcribes it as 手右, which is homophonous with 手又 and was accepted by manual review as the same pronunciation."
+        ]
+      }
+    },
+    {
+      "id": "L169",
+      "order": 169,
+      "newChars": [
+        "亂"
+      ],
+      "zhuyin": {
+        "亂": "ㄌㄨㄢˋ"
+      },
+      "charAudio": {
+        "亂": "/assets/lessons/L169/audio/char-u4e82.m4a"
+      },
+      "title": "亂",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L169-S01",
+          "text": "房間又髒又亂。",
+          "displayLines": [
+            "房間又髒",
+            "又亂。"
+          ],
+          "spokenText": "房間又髒又亂",
+          "focusChar": "亂",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing objects and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean room interior, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. A bedroom or play room is both dirty and messy, with clothes, blank papers, and toys scattered on the floor, but still readable and not visually chaotic. Make the dirty messy room the clear focus. No text, numbers, labels, signs, letters, zhuyin, logos, watermarks, speech bubbles, symbols, or readable marks.",
+          "imageSrc": "/assets/lessons/L169/images/L169-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L169/audio/L169-S01.m4a",
+            "durationMs": 2763,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1220,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1680,
+                "endMs": 1840
+              }
+            ]
+          }
+        },
+        {
+          "id": "L169-S02",
+          "text": "髒衣髒帽不要亂放。",
+          "displayLines": [
+            "髒衣髒帽",
+            "不要亂放。"
+          ],
+          "spokenText": "髒衣髒帽不要亂放",
+          "focusChar": "亂",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing objects and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean home interior, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Dirty clothes and a dirty hat are placed messily on the floor or beside a chair, while an adult gently reminds a child not to leave them there. A plain laundry basket or storage spot may appear. No brand marks, text, numbers, labels, signs, letters, zhuyin, logos, watermarks, speech bubbles, symbols, or readable marks.",
+          "imageSrc": "/assets/lessons/L169/images/L169-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L169/audio/L169-S02.m4a",
+            "durationMs": 3494,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1300,
+                "endMs": 1430
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1430,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1940,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2460,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2780,
+                "endMs": 3140
+              }
+            ]
+          }
+        },
+        {
+          "id": "L169-S03",
+          "text": "誰在桌上亂畫？去擦掉。",
+          "displayLines": [
+            "誰在桌上亂畫？",
+            "去擦掉。"
+          ],
+          "spokenText": "誰在桌上亂畫去擦掉",
+          "focusChar": "亂",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing objects and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean dining-table or study-table environment, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. A tabletop has messy child-made scribbles, and an adult or child is preparing to wipe the scribbles away with a plain cloth or paper towel. The scribble marks must be abstract lines only and must not form text, numbers, zhuyin, readable symbols, labels, logos, signatures, or marks.",
+          "imageSrc": "/assets/lessons/L169/images/L169-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L169/audio/L169-S03.m4a",
+            "durationMs": 4750,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1020,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1780,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2160,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3280,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3500,
+                "endMs": 3800
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3800,
+                "endMs": 3980
+              }
+            ]
+          }
+        },
+        {
+          "id": "L169-S04",
+          "text": "媽媽洗菜做飯，我擦桌子。",
+          "displayLines": [
+            "媽媽洗菜做飯，",
+            "我擦桌子。"
+          ],
+          "spokenText": "媽媽洗菜做飯我擦桌子",
+          "focusChar": "洗",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing people, objects, and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean kitchen and dining-table environment, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Mother washes vegetables and cooks in the kitchen, while the fixed ? girl helps nearby by wiping a table. Show vegetables, water, cooking activity, and table-wiping clearly. No text, numbers, brand marks, labels, signs, letters, zhuyin, logos, watermarks, speech bubbles, symbols, or readable marks.",
+          "imageSrc": "/assets/lessons/L169/images/L169-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L169/audio/L169-S04.m4a",
+            "durationMs": 4307,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1640,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2320,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2660,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2820,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2960,
+                "endMs": 3240
+              }
+            ]
+          }
+        },
+        {
+          "id": "L169-S05",
+          "text": "先脫衣，再洗頭。",
+          "displayLines": [
+            "先脫衣，",
+            "再洗頭。"
+          ],
+          "spokenText": "先脫衣再洗頭",
+          "focusChar": "洗",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with centered meaning-bearing action and safe margins for phone square cards. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean bathroom or sink environment, consistent expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Safe, gentle non-exposed bathing routine: a child prepares to wash hair, wearing a modest bathrobe or towel wrap, shown at a sink or shower with only head, shoulders, towel, and water flow visible. No nudity. No text, numbers, labels, signs, letters, zhuyin, logos, watermarks, speech bubbles, symbols, or readable marks.",
+          "imageSrc": "/assets/lessons/L169/images/L169-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L169/audio/L169-S05.m4a",
+            "durationMs": 3918,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 640
+              },
+              {
+                "charIndex": 1,
+                "startMs": 640,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1020,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1880,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2220,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2520,
+                "endMs": 2860
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L169-G01",
+          "type": "find-character",
+          "sentenceId": "L169-S03",
+          "targetChar": "亂",
+          "prompt": "幫忙找出「亂」。",
+          "missingIndexes": [
+            4
+          ]
+        },
+        {
+          "id": "L169-G02",
+          "type": "teach-character",
+          "sentenceId": "L169-S02",
+          "targetChar": "亂",
+          "targetCharIndex": 6,
+          "missingIndexes": [
+            6
+          ],
+          "prompt": "聽一聽，放進「亂」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L169/audio/L169-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L169/audio/L169-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L169-G03",
+          "type": "missing-character",
+          "sentenceId": "L169-S01",
+          "targetChar": "亂",
+          "missingIndexes": [
+            5
+          ],
+          "prompt": "選出不見的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "亂",
+              "correct": true
+            },
+            {
+              "id": "wrong-1",
+              "text": "髒",
+              "correct": false
+            },
+            {
+              "id": "wrong-2",
+              "text": "又",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L169-G04",
+          "type": "partial-order",
+          "sentenceId": "L169-S05",
+          "targetChar": "洗",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "先脫衣",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "再",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "洗頭",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L169-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L169-S04",
+          "targetChar": "洗",
+          "prompt": "聽聽誰讀得一樣。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "媽媽洗菜做飯，我擦桌子。",
+              "spokenText": "媽媽洗菜做飯我擦桌子",
+              "audioSrc": "/assets/lessons/L169/audio/L169-S04.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "媽媽洗菜做飯，我擦窗子。",
+              "spokenText": "媽媽洗菜做飯我擦窗子",
+              "audioSrc": "/assets/lessons/L169/audio/L169-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "媽媽洗菜做飯，我掃地。",
+              "spokenText": "媽媽洗菜做飯我掃地",
+              "audioSrc": "/assets/lessons/L169/audio/L169-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "productionNotes": {
+        "status": "ready-blocked-by-dependency",
+        "notes": [
+          "Production JSON, planner data, and ledger updates are blocked until L166-L168 are merged.",
+          "G02 teachAudio prefix text is ??????; suffix text is ?.",
+          "G05 wrong-choice audio must be generated from the full wrong texts, not spliced from the correct sentence.",
+          "Teacher subjective image/audio review is post-merge through the permanent asset review tools."
         ]
       }
     }
