@@ -203,13 +203,7 @@
         gap: 8px;
       }
 
-      .image-previews {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-      }
-
-      .preview-panel {
+      .app-image-preview {
         display: grid;
         gap: 6px;
       }
@@ -220,21 +214,14 @@
         font-weight: 750;
       }
 
-      .preview-panel img {
+      .app-image-preview img {
         width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: #f1eee8;
-      }
-
-      .app-image-preview img {
-        aspect-ratio: 4 / 3;
-        object-fit: contain;
-      }
-
-      .full-image-preview img {
-        aspect-ratio: 4 / 3;
-        object-fit: contain;
       }
 
       .detail {
@@ -309,7 +296,6 @@
         .topbar,
         .status-grid,
         .sentence-card,
-        .image-previews,
         .repair-grid {
           grid-template-columns: 1fr;
         }
@@ -747,15 +733,9 @@
             return `
               <article class="sentence-card ${flagged ? "needs-repair" : ""}">
                 <div class="image-wrap">
-                  <div class="image-previews">
-                    <div class="preview-panel app-image-preview">
-                      <div class="preview-label">APP 完整圖片預覽</div>
-                      <img src="${html(sentence.imageUrl)}" alt="${html(sentence.id)} app full image preview" loading="lazy" />
-                    </div>
-                    <div class="preview-panel full-image-preview">
-                      <div class="preview-label">完整原圖</div>
-                      <img src="${html(sentence.imageUrl)}" alt="${html(sentence.id)} full image preview" loading="lazy" />
-                    </div>
+                  <div class="app-image-preview">
+                    <div class="preview-label">APP 方形預覽</div>
+                    <img src="${html(sentence.imageUrl)}" alt="${html(sentence.id)} app square image preview" loading="lazy" />
                   </div>
                   <div class="mono muted">${html(sentence.imageSrc)}</div>
                 </div>

@@ -109,7 +109,7 @@ Before editing, state the exact ownership in chat, including lesson id and owned
 - Do not create production wrong-choice audio by cutting or patching the correct sentence audio. Generate each wrong option as whole-sentence AI audio from its final text.
 - Audio files that need teacher listening approval must be reviewed through the permanent page `public/tools/audio-review.html`; do not publish temporary review pages that disappear on the next GitHub Pages deploy.
 - Teacher image/audio review is post-merge by default. Automated gates block release; teacher subjective review becomes a repair queue through `public/tools/asset-review-index.html` and `public/tools/lesson-asset-review.html`.
-- Stage 3 sentence images in the child-facing app must preserve the full picture with `object-fit: contain`; do not crop sentence images into square thumbnails. The lesson asset review page must show an app-style complete-image preview and the complete original image. If meaning-bearing visual content is unclear in the app preview, the image needs repair.
+- Stage 3 sentence images in the child-facing app are square. New or replacement sentence images must be generated as square `1:1` compositions with safe margins for all meaning-bearing people, objects, actions, and count relationships; do not generate wide images and rely on the app crop. The lesson asset review page shows only the app's square image view. If meaning-bearing visual content is cut off or unclear there, the image needs repair.
 - New or replacement sentence images must use the L058 style anchors unless the teacher approves a new style direction:
   - `public/assets/lessons/L058/images/L058-S01.webp`
   - `public/assets/lessons/L058/images/L058-S02.webp`

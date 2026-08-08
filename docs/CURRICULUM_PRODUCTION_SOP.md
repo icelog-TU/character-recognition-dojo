@@ -226,6 +226,7 @@ The app preloads the active lesson's required images and audio when the lesson o
 Production asset hard limits for every new or touched lesson/review module:
 
 - Final referenced sentence images must be `.webp`. Do not ship referenced `.png`, `.jpg`, or `.jpeg` files in `src/curriculum/sample-lessons.json`.
+- New or replacement sentence images must be generated as square `1:1` compositions. Prompt every image with `square image / 1:1 composition`, keep the full scene's meaning-bearing people, objects, actions, and count relationships centered, and leave safe margins so the app's square display does not cut off required content.
 - Longest image edge must be no more than `1024px`.
 - Target sentence image size is `<= 250 KB`.
 - Hard maximum sentence image size is `<= 400 KB`. If an image exceeds this, re-compress or regenerate before merge.
@@ -388,7 +389,7 @@ Single-unit URL format:
 https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=main
 ```
 
-Production or release final handoff must include the index URL and, when useful, the direct single-unit asset-review URL. The single-unit page displays each sentence with its text, `spokenText`, sentence audio, an app-style complete-image preview, and the complete original image. Stage 3 sentence images in the child-facing app must preserve the full picture with `object-fit: contain`; do not crop sentence images into square thumbnails. If a required person, object, action, count, or other meaning-bearing detail is unclear in the app preview, mark the image as needing repair. The page also lists the other formal audio files such as `charAudio`, `G02` prefix/suffix, and `G05` options. The teacher marks only items that need repair and writes notes. Unmarked items are not blockers.
+Production or release final handoff must include the index URL and, when useful, the direct single-unit asset-review URL. The single-unit page displays each sentence with its text, `spokenText`, sentence audio, and the same square image view used by the child-facing Stage 3 app. It does not show a separate original-image preview because the app view is the review target. If a required person, object, action, count, or other meaning-bearing detail is cut off or unclear in the square app preview, mark the image as needing repair. The page also lists the other formal audio files such as `charAudio`, `G02` prefix/suffix, and `G05` options. The teacher marks only items that need repair and writes notes. Unmarked items are not blockers.
 
 For post-merge review on `main`, the repair queue is keyed by unit plus stable `main`, not by the latest commit SHA. This keeps L### review status findable after later lessons are pushed. Commit SHA remains visible for diagnosis, but `ref=main` is the normal 600-lesson review workflow.
 
