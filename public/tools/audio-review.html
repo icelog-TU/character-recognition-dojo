@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>音檔試聽審核</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f5ef;
+        --panel: #ffffff;
+        --ink: #23201b;
+        --muted: #6e675d;
+        --line: #ded7ca;
+        --accent: #0f766e;
+        --accent-soft: #d7f4ee;
+        --bad: #b42318;
+        --warn: #98690c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+
+      main {
+        width: min(1120px, calc(100vw - 28px));
+        margin: 0 auto;
+        padding: 22px 0 48px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(1.55rem, 4vw, 2.4rem);
+        line-height: 1.12;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      .topbar,
+      .panel,
+      .audio-card {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 8px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+        gap: 10px;
+        align-items: end;
+        padding: 14px;
+        margin: 18px 0;
+      }
+
+      label {
+        display: grid;
+        gap: 5px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 9px 10px;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      button {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 9px 12px;
+        color: var(--ink);
+        background: #fff;
+        cursor: pointer;
+      }
+
+      button.primary {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #fff;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
+      .panel {
+        padding: 14px;
+        margin: 12px 0;
+      }
+
+      .status-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        background: #fbfaf7;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.35rem;
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .mono {
+        overflow-wrap: anywhere;
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Consolas,
+          monospace;
+        font-size: 0.82rem;
+      }
+
+      .ok {
+        color: var(--accent);
+      }
+
+      .bad {
+        color: var(--bad);
+      }
+
+      .warn {
+        color: var(--warn);
+      }
+
+      .audio-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .audio-card {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 12px;
+        padding: 12px;
+      }
+
+      .audio-card.approved {
+        border-color: #8bd0c1;
+        background: #f5fffc;
+      }
+
+      .check-cell {
+        display: grid;
+        place-items: start center;
+        padding-top: 3px;
+      }
+
+      input[type="checkbox"] {
+        width: 24px;
+        height: 24px;
+        accent-color: var(--accent);
+      }
+
+      .audio-meta {
+        display: grid;
+        gap: 8px;
+      }
+
+      .audio-head {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: baseline;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 3px 7px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: #0b5d56;
+        font-size: 0.78rem;
+      }
+
+      audio {
+        width: 100%;
+        min-width: 0;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 118px;
+        resize: vertical;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      @media (max-width: 820px) {
+        .topbar,
+        .status-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>音檔試聽審核</h1>
+        <p class="muted">永久工具頁。用指定 Git ref 載入音檔，勾選結果以 unit + commit SHA 儲存。</p>
+      </header>
+
+      <section class="topbar">
+        <label>
+          Unit
+          <input id="unitInput" type="text" placeholder="L153 或 R004" autocomplete="off" />
+        </label>
+        <label>
+          Git ref
+          <input id="refInput" type="text" placeholder="main、branch、或 commit SHA" autocomplete="off" />
+        </label>
+        <label>
+          Repo owner/name
+          <input id="repoInput" type="text" value="icelog-TU/character-recognition-dojo" autocomplete="off" />
+        </label>
+        <div class="button-row">
+          <button id="loadButton" class="primary" type="button">載入</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="button-row">
+          <button id="signInButton" type="button">Google 登入同步</button>
+          <button id="signOutButton" type="button" disabled>登出</button>
+          <button id="copyFrozenLinkButton" type="button" disabled>複製固定版本連結</button>
+          <button id="copyStatusCommandButton" type="button" disabled>複製 Codex 查詢指令</button>
+          <button id="copySummaryButton" type="button" disabled>複製審核摘要</button>
+        </div>
+        <p id="statusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
+        <p id="cloudLine" class="muted" style="margin-top: 6px">未登入時，勾選只會存在這台裝置的瀏覽器。</p>
+      </section>
+
+      <section class="panel">
+        <div class="status-grid">
+          <div class="metric">
+            <span class="muted">總音檔</span>
+            <strong id="totalCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">已勾 OK</span>
+            <strong id="approvedCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">待聽</span>
+            <strong id="pendingCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">版本</span>
+            <strong id="shortSha">-</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="listPanel" class="audio-list" aria-live="polite"></section>
+
+      <section class="panel">
+        <h2>摘要</h2>
+        <textarea id="summaryBox" readonly></textarea>
+      </section>
+    </main>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        onAuthStateChanged,
+        signInWithPopup,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-auth.js";
+      import {
+        doc,
+        getDoc,
+        getFirestore,
+        onSnapshot,
+        serverTimestamp,
+        setDoc,
+      } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB79G4vRFLaRIPh1waBpJ99AS2BOt-ZzGk",
+        authDomain: "character-recognition-dojo.firebaseapp.com",
+        projectId: "character-recognition-dojo",
+        storageBucket: "character-recognition-dojo.firebasestorage.app",
+        messagingSenderId: "602707345296",
+        appId: "1:602707345296:web:4ef123812e6425ba18fd15",
+      };
+
+      const $ = (id) => document.getElementById(id);
+      const params = new URLSearchParams(window.location.search);
+      const state = {
+        repo: params.get("repo") || "icelog-TU/character-recognition-dojo",
+        unit: (params.get("unit") || "").toUpperCase(),
+        ref: params.get("ref") || "main",
+        sha: "",
+        sourcePath: "",
+        items: [],
+        approvals: {},
+        user: null,
+        unsubscribeReview: null,
+        saveTimer: 0,
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      $("repoInput").value = state.repo;
+      $("unitInput").value = state.unit;
+      $("refInput").value = state.ref;
+
+      function setStatus(message, tone = "") {
+        $("statusLine").className = `muted ${tone}`.trim();
+        $("statusLine").textContent = message;
+      }
+
+      function setCloud(message, tone = "") {
+        $("cloudLine").className = `muted ${tone}`.trim();
+        $("cloudLine").textContent = message;
+      }
+
+      function base64Url(input) {
+        const bytes = new TextEncoder().encode(input);
+        let binary = "";
+        bytes.forEach((byte) => {
+          binary += String.fromCharCode(byte);
+        });
+        return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
+      }
+
+      function reviewId() {
+        return base64Url(`${state.repo}|${state.unit}|${state.sha}`);
+      }
+
+      function storageKey() {
+        return `audio-review:${state.repo}:${state.unit}:${state.sha}`;
+      }
+
+      function rawUrl(path) {
+        return `https://raw.githubusercontent.com/${state.repo}/${state.sha}/${path}`;
+      }
+
+      function html(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
+
+      async function fetchJson(url, label) {
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) throw new Error(`${label} HTTP ${response.status}`);
+        return response.json();
+      }
+
+      async function resolveRef() {
+        const ref = encodeURIComponent(state.ref);
+        const url = `https://api.github.com/repos/${state.repo}/commits/${ref}`;
+        const data = await fetchJson(url, "Git ref");
+        state.sha = data.sha;
+      }
+
+      async function loadUnitData() {
+        const isReview = state.unit.startsWith("R");
+        const draftPath = isReview
+          ? `curriculum-workflow/drafts/${state.unit}-draft.json`
+          : `curriculum-workflow/drafts/${state.unit}-draft.json`;
+        const draftResponse = await fetch(rawUrl(draftPath), { cache: "no-store" });
+        if (draftResponse.ok) {
+          state.sourcePath = draftPath;
+          return draftResponse.json();
+        }
+
+        const curriculum = await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum");
+        const lessons = Array.isArray(curriculum.lessons) ? curriculum.lessons : [];
+        const reviews = Array.isArray(curriculum.reviewLessons) ? curriculum.reviewLessons : [];
+        const unit = [...lessons, ...reviews].find((candidate) => candidate.id === state.unit);
+        if (!unit) throw new Error(`找不到 ${state.unit} 的 draft 或 production JSON。`);
+        state.sourcePath = "src/curriculum/sample-lessons.json";
+        return unit;
+      }
+
+      function hanChars(value) {
+        return [...String(value || "")].filter((char) => /\p{Script=Han}/u.test(char));
+      }
+
+      function sentenceFor(unit, sentenceId) {
+        return (unit.sentences || []).find((sentence) => sentence.id === sentenceId) || null;
+      }
+
+      function addItem(items, item) {
+        if (!item.src) return;
+        if (items.some((existing) => existing.key === item.key)) return;
+        items.push({ ...item, url: rawUrl(`public${item.src}`) });
+      }
+
+      function extractAudioItems(unit) {
+        const items = [];
+        Object.entries(unit.charAudio || {}).forEach(([char, src]) => {
+          const code = char.codePointAt(0)?.toString(16) || char;
+          addItem(items, {
+            key: `char-u${code}`,
+            kind: "charAudio",
+            label: `單字 ${char}`,
+            text: char,
+            src,
+          });
+        });
+
+        (unit.sentences || []).forEach((sentence) => {
+          addItem(items, {
+            key: sentence.id,
+            kind: "sentence",
+            label: `${sentence.id} 句子`,
+            text: sentence.text || sentence.spokenText || "",
+            spokenText: sentence.spokenText || "",
+            src: sentence.audio?.src,
+          });
+        });
+
+        (unit.sentenceGames || []).forEach((game) => {
+          if (game.teachAudio) {
+            const sentence = sentenceFor(unit, game.sentenceId);
+            const chars = hanChars(sentence?.spokenText || sentence?.text || "");
+            const targetIndex = Number.isInteger(game.targetCharIndex) ? game.targetCharIndex : chars.indexOf(game.targetChar);
+            const prefixText = targetIndex > 0 ? chars.slice(0, targetIndex).join("") : "";
+            const suffixText = targetIndex >= 0 ? chars.slice(targetIndex + 1).join("") : "";
+            addItem(items, {
+              key: `${game.id}-prefix`,
+              kind: "teachAudio",
+              label: `${game.id} teachAudio prefix`,
+              text: prefixText,
+              src: game.teachAudio.prefixSrc,
+            });
+            addItem(items, {
+              key: `${game.id}-suffix`,
+              kind: "teachAudio",
+              label: `${game.id} teachAudio suffix`,
+              text: suffixText,
+              src: game.teachAudio.suffixSrc,
+            });
+          }
+
+          (game.options || []).forEach((option) => {
+            addItem(items, {
+              key: `${game.id}-${option.id}`,
+              kind: game.type || "game",
+              label: `${game.id} ${option.id}`,
+              text: option.text || option.spokenText || "",
+              spokenText: option.spokenText || "",
+              src: option.audioSrc,
+            });
+          });
+        });
+
+        return items;
+      }
+
+      function loadLocalApprovals() {
+        try {
+          state.approvals = JSON.parse(localStorage.getItem(storageKey()) || "{}") || {};
+        } catch {
+          state.approvals = {};
+        }
+      }
+
+      function saveLocalApprovals() {
+        localStorage.setItem(storageKey(), JSON.stringify(state.approvals));
+      }
+
+      function approvedItems() {
+        return state.items.filter((item) => state.approvals[item.key]?.ok === true);
+      }
+
+      function pendingItems() {
+        return state.items.filter((item) => state.approvals[item.key]?.ok !== true);
+      }
+
+      function summaryText() {
+        const pending = pendingItems();
+        const approved = approvedItems();
+        const lines = [
+          `Audio review: ${state.unit}`,
+          `Repo: ${state.repo}`,
+          `Ref: ${state.ref}`,
+          `Commit: ${state.sha}`,
+          `Source: ${state.sourcePath}`,
+          `Approved: ${approved.length}/${state.items.length}`,
+          `Status: ${pending.length === 0 && state.items.length > 0 ? "audio-review OK" : "audio-review pending"}`,
+          "",
+          "Approved:",
+          ...(approved.length ? approved.map((item) => `- ${item.key} ${item.label}`) : ["- none"]),
+          "",
+          "Pending:",
+          ...(pending.length ? pending.map((item) => `- ${item.key} ${item.label}`) : ["- none"]),
+        ];
+        return lines.join("\n");
+      }
+
+      function statusCommand() {
+        return `npm run audio:review-status -- --unit ${state.unit} --ref ${state.sha}`;
+      }
+
+      function frozenLink() {
+        const url = new URL(window.location.href);
+        url.searchParams.set("repo", state.repo);
+        url.searchParams.set("unit", state.unit);
+        url.searchParams.set("ref", state.sha);
+        return url.toString();
+      }
+
+      function render() {
+        $("totalCount").textContent = String(state.items.length);
+        $("approvedCount").textContent = String(approvedItems().length);
+        $("pendingCount").textContent = String(pendingItems().length);
+        $("shortSha").textContent = state.sha ? state.sha.slice(0, 7) : "-";
+        $("summaryBox").value = summaryText();
+        $("copyFrozenLinkButton").disabled = !state.sha;
+        $("copyStatusCommandButton").disabled = !state.sha;
+        $("copySummaryButton").disabled = !state.sha;
+
+        $("listPanel").innerHTML = state.items
+          .map((item) => {
+            const checked = state.approvals[item.key]?.ok === true;
+            const note = state.approvals[item.key]?.note || "";
+            return `
+              <article class="audio-card ${checked ? "approved" : ""}">
+                <div class="check-cell">
+                    <input type="checkbox" data-key="${html(item.key)}" ${checked ? "checked" : ""} aria-label="${html(item.label)} OK" />
+                </div>
+                <div class="audio-meta">
+                  <div class="audio-head">
+                    <strong>${html(item.label)}</strong>
+                    <span class="tag">${html(item.kind)}</span>
+                    ${checked ? '<span class="ok">OK</span>' : '<span class="warn">待聽</span>'}
+                  </div>
+                  <div>${html(item.text || "")}</div>
+                  ${item.spokenText ? `<div class="muted">spokenText: ${html(item.spokenText)}</div>` : ""}
+                  <audio controls preload="none" src="${html(item.url)}"></audio>
+                  <div class="mono muted">${html(item.src)}</div>
+                  <label>
+                    備註
+                    <input type="text" data-note="${html(item.key)}" value="${html(note)}" placeholder="可留空" />
+                  </label>
+                </div>
+              </article>
+            `;
+          })
+          .join("");
+      }
+
+      async function saveCloudSoon() {
+        saveLocalApprovals();
+        render();
+        if (!state.user || !state.sha) return;
+        window.clearTimeout(state.saveTimer);
+        state.saveTimer = window.setTimeout(saveCloud, 350);
+      }
+
+      async function saveCloud() {
+        if (!state.user || !state.sha) return;
+        const pending = pendingItems();
+        const approvalState = {};
+        state.items.forEach((item) => {
+          approvalState[item.key] = {
+            ok: state.approvals[item.key]?.ok === true,
+            note: state.approvals[item.key]?.note || "",
+            label: item.label,
+            kind: item.kind,
+            text: item.text || "",
+            src: item.src,
+            updatedAtMs: Date.now(),
+          };
+        });
+        const payload = {
+          version: 1,
+          repo: state.repo,
+          unit: state.unit,
+          ref: state.ref,
+          commitSha: state.sha,
+          sourcePath: state.sourcePath,
+          itemCount: state.items.length,
+          approvedCount: state.items.length - pending.length,
+          approvedAll: state.items.length > 0 && pending.length === 0,
+          pendingKeys: pending.map((item) => item.key),
+          approvalState,
+          updatedByUid: state.user.uid,
+          updatedByEmail: state.user.email || "",
+          updatedByName: state.user.displayName || "",
+          updatedAt: serverTimestamp(),
+        };
+        try {
+          await setDoc(doc(db, "audioReviews", reviewId()), payload, { merge: true });
+          setCloud(`已同步到 Firestore：${payload.approvedCount}/${payload.itemCount}`);
+        } catch (error) {
+          setCloud(`Firestore 同步失敗：${error.message}`, "bad");
+        }
+      }
+
+      async function attachCloudReview() {
+        if (state.unsubscribeReview) state.unsubscribeReview();
+        state.unsubscribeReview = null;
+        if (!state.user || !state.sha) return;
+        const ref = doc(db, "audioReviews", reviewId());
+        try {
+          const snapshot = await getDoc(ref);
+          if (snapshot.exists()) {
+            const data = snapshot.data();
+            const cloudApprovals = {};
+            Object.entries(data.approvalState || {}).forEach(([key, value]) => {
+              cloudApprovals[key] = { ok: value.ok === true, note: value.note || "" };
+            });
+            state.approvals = { ...state.approvals, ...cloudApprovals };
+            saveLocalApprovals();
+            render();
+          }
+          state.unsubscribeReview = onSnapshot(
+            ref,
+            (next) => {
+              if (!next.exists()) return;
+              const data = next.data();
+              const cloudApprovals = {};
+              Object.entries(data.approvalState || {}).forEach(([key, value]) => {
+                cloudApprovals[key] = { ok: value.ok === true, note: value.note || "" };
+              });
+              state.approvals = { ...state.approvals, ...cloudApprovals };
+              saveLocalApprovals();
+              render();
+              setCloud(`雲端狀態：${data.approvedCount || 0}/${data.itemCount || state.items.length}`);
+            },
+            (error) => setCloud(`Firestore 讀取失敗：${error.message}`, "bad"),
+          );
+        } catch (error) {
+          setCloud(`Firestore 讀取失敗：${error.message}`, "bad");
+        }
+      }
+
+      async function load() {
+        state.repo = $("repoInput").value.trim();
+        state.unit = $("unitInput").value.trim().toUpperCase();
+        state.ref = $("refInput").value.trim() || "main";
+        if (!state.repo || !state.unit) {
+          setStatus("請輸入 repo 和 unit。", "bad");
+          return;
+        }
+        $("loadButton").disabled = true;
+        setStatus("載入 GitHub 版本與音檔清單...");
+        try {
+          await resolveRef();
+          const unit = await loadUnitData();
+          state.items = extractAudioItems(unit);
+          loadLocalApprovals();
+          render();
+          setStatus(`已載入 ${state.unit}，${state.items.length} 個音檔，commit ${state.sha.slice(0, 12)}。`, "ok");
+          await attachCloudReview();
+        } catch (error) {
+          state.items = [];
+          render();
+          setStatus(error.message, "bad");
+        } finally {
+          $("loadButton").disabled = false;
+        }
+      }
+
+      $("loadButton").addEventListener("click", load);
+      $("listPanel").addEventListener("change", (event) => {
+        const checkbox = event.target.closest("input[type='checkbox'][data-key]");
+        if (!checkbox) return;
+        const key = checkbox.dataset.key;
+        state.approvals[key] = { ...(state.approvals[key] || {}), ok: checkbox.checked };
+        saveCloudSoon();
+      });
+      $("listPanel").addEventListener("input", (event) => {
+        const noteInput = event.target.closest("input[data-note]");
+        if (!noteInput) return;
+        const key = noteInput.dataset.note;
+        state.approvals[key] = { ...(state.approvals[key] || {}), note: noteInput.value };
+        saveCloudSoon();
+      });
+      $("signInButton").addEventListener("click", async () => {
+        try {
+          await signInWithPopup(auth, new GoogleAuthProvider());
+        } catch (error) {
+          setCloud(`登入失敗：${error.message}`, "bad");
+        }
+      });
+      $("signOutButton").addEventListener("click", () => signOut(auth));
+      $("copyFrozenLinkButton").addEventListener("click", () => navigator.clipboard.writeText(frozenLink()));
+      $("copyStatusCommandButton").addEventListener("click", () => navigator.clipboard.writeText(statusCommand()));
+      $("copySummaryButton").addEventListener("click", () => navigator.clipboard.writeText(summaryText()));
+
+      onAuthStateChanged(auth, async (user) => {
+        state.user = user;
+        $("signInButton").disabled = Boolean(user);
+        $("signOutButton").disabled = !user;
+        if (user) {
+          setCloud(`已登入：${user.email || user.displayName || user.uid}`);
+          await attachCloudReview();
+          await saveCloud();
+        } else {
+          setCloud("未登入時，勾選只會存在這台裝置的瀏覽器。");
+        }
+      });
+
+      if (state.unit) load();
+    </script>
+  </body>
+</html>

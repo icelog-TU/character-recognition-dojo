@@ -291,6 +291,32 @@ Production audio hard limits for every new or touched lesson/review module:
 - In each `choose-pronunciation` round, the three option audio files must have `mean_volume` within `3 dB` of each other. A correct file at normal volume with two quiet wrong-choice files is a production defect because children may not hear the wrong options clearly.
 - Do not use browser TTS as production curriculum audio for `charAudio`, sentence audio, or `choose-pronunciation` options unless the exception is recorded and the lesson is explicitly marked for later AI-audio replacement.
 
+## Teacher Audio Review Page
+
+Production threads must not publish temporary audio-review HTML that disappears on the next GitHub Pages deploy. The permanent review entry is:
+
+```text
+public/tools/audio-review.html
+```
+
+GitHub Pages URL format:
+
+```text
+https://icelog-TU.github.io/character-recognition-dojo/tools/audio-review.html?unit=L###&ref=<branch-or-commit-sha>
+```
+
+After a production thread finishes audio and pushes its branch, it must provide the teacher with a stable audio-review URL. Prefer an exact commit SHA in `ref` after the branch is pushed, because the approval record is keyed by unit plus commit SHA. If any audio file changes after review starts, push a new commit and ask for a new review URL; do not reuse old approval checkmarks for changed audio.
+
+The review page loads the unit's draft JSON first, then falls back to production JSON. It lists every detected `charAudio`, sentence audio, `teachAudio` prefix/suffix, and `choose-pronunciation` option audio. The teacher can check each audio file as OK. When signed in with Google and Firestore rules allow it, the page writes shared review status to `audioReviews/{reviewId}`.
+
+Production and release threads must include or run this status check when teacher audio approval matters:
+
+```bash
+npm run audio:review-status -- --unit L### --ref <branch-or-commit-sha>
+```
+
+Until all required audio is teacher-approved, the production branch must not be deleted and the registry/final handoff must say `audio-review pending teacher OK` with the review URL. After the teacher approves all files, update the registry or final handoff to `audio-review OK` with the commit SHA. Do not call a lesson merge-ready if teacher audio review was requested but remains pending.
+
 ## Request File
 
 Example:

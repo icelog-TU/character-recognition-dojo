@@ -172,6 +172,7 @@ Required production handoff fields:
 - Stage 4 plan: one fixed game per sentence for normal lessons, or two-stage review-module plan
 - required image style anchor: L058 reference assets unless the teacher approves another style
 - audio rule: standalone OpenAI character audio, whole-sentence AI audio, whole wrong-option AI audio, `assets:audio`, then `assets:align:ai`
+- teacher audio-review requirement: permanent `public/tools/audio-review.html` URL, exact branch/commit ref, and `npm run audio:review-status` command when the teacher needs to approve audio
 - complete required file list and final status expectation
 - an auto-claim-and-continue block telling the production thread exactly when to continue and exactly when to stop
 

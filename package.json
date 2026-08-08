@@ -14,6 +14,7 @@
     "assets:audit": "node scripts/audit-asset-formats.mjs",
     "assets:audio": "node scripts/process-audio-assets.mjs",
     "assets:images": "node scripts/optimize-images.mjs",
+    "audio:review-status": "node scripts/check-audio-review-status.mjs",
     "ai:audio": "node scripts/generate-audio-drafts.mjs",
     "ai:check": "node scripts/check-ai-setup.mjs",
     "ai:sentences": "node scripts/generate-sentence-candidates.mjs",
