@@ -124,7 +124,7 @@
 
       .status-grid {
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(6, minmax(0, 1fr));
         gap: 10px;
       }
 
@@ -170,7 +170,7 @@
 
       .unit-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
         gap: 10px;
         margin-top: 14px;
       }
@@ -178,10 +178,15 @@
       .unit-card {
         display: grid;
         gap: 8px;
-        min-height: 142px;
+        min-height: 132px;
         padding: 12px;
         color: inherit;
         text-decoration: none;
+      }
+
+      .unit-card.unreviewed {
+        border-color: #e38b82;
+        background: #fff3f0;
       }
 
       .unit-card.repair {
@@ -192,6 +197,12 @@
       .unit-card.complete {
         border-color: #9bd0c4;
         background: #f3fffb;
+      }
+
+      .unit-card.future {
+        border-color: #d3d0ca;
+        background: #eeeeea;
+        color: #777066;
       }
 
       .head {
@@ -225,6 +236,16 @@
       .tag.pending {
         background: #fff1cf;
         color: var(--warn);
+      }
+
+      .tag.unreviewed {
+        background: #ffe1dc;
+        color: var(--danger);
+      }
+
+      .tag.future {
+        background: #dedbd3;
+        color: #6d665e;
       }
 
       @media (max-width: 860px) {
@@ -266,6 +287,7 @@
           <button type="button" data-filter="repair">需要修</button>
           <button type="button" data-filter="complete">已看完</button>
           <button type="button" data-filter="unreviewed">未審</button>
+          <button type="button" data-filter="future">尚未製作</button>
           <button type="button" data-filter="recent">最新 60 課</button>
           <button id="copyAllRepairCommandButton" type="button" disabled>複製全部 repair 查詢</button>
         </div>
@@ -275,8 +297,12 @@
       <section class="panel">
         <div class="status-grid">
           <div class="metric">
-            <span class="muted">課程數</span>
+            <span class="muted">總格數</span>
             <strong id="totalCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">已出貨</span>
+            <strong id="builtCount">0</strong>
           </div>
           <div class="metric">
             <span class="muted">需要修</span>
@@ -291,10 +317,11 @@
             <strong id="unreviewedCount">0</strong>
           </div>
           <div class="metric">
-            <span class="muted">版本</span>
-            <strong id="shortSha">-</strong>
+            <span class="muted">尚未製作</span>
+            <strong id="futureCount">0</strong>
           </div>
         </div>
+        <p id="versionLine" class="mono muted" style="margin-top: 10px">版本：-</p>
       </section>
 
       <section class="panel">
@@ -323,6 +350,7 @@
         ref: params.get("ref") || "main",
         sha: "",
         units: [],
+        builtById: new Map(),
         reviewByUnit: new Map(),
         filter: params.get("filter") || "all",
         search: "",
@@ -379,11 +407,19 @@
 
       async function loadCurriculum() {
         const curriculum = await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum");
-        const lessons = (curriculum.lessons || []).map((unit) => ({ ...unit, kind: "lesson" }));
-        const reviews = (curriculum.reviewLessons || []).map((unit) => ({ ...unit, kind: "review" }));
-        state.units = [...lessons, ...reviews].sort((a, b) => {
-          if (a.kind !== b.kind) return a.kind === "lesson" ? -1 : 1;
-          return (a.order || Number(a.id?.replace(/\D/g, "") || 0)) - (b.order || Number(b.id?.replace(/\D/g, "") || 0));
+        const lessons = (curriculum.lessons || []).map((unit) => ({ ...unit, kind: "lesson", built: true }));
+        state.builtById = new Map(lessons.map((unit) => [unit.id, unit]));
+        state.units = Array.from({ length: 600 }, (_, index) => {
+          const id = `L${String(index + 1).padStart(3, "0")}`;
+          return state.builtById.get(id) || {
+            id,
+            order: index + 1,
+            kind: "lesson",
+            built: false,
+            title: "尚未製作",
+            newChars: [],
+            sentences: [],
+          };
         });
       }
 
@@ -406,6 +442,7 @@
       }
 
       function reviewStatus(unit) {
+        if (!unit.built) return { kind: "future", label: "尚未製作", repairCount: 0 };
         const review = state.reviewByUnit.get(unit.id);
         if (!review) return { kind: "unreviewed", label: "未審", repairCount: 0 };
         if ((review.repairCount || 0) > 0) return { kind: "repair", label: `需要修 ${review.repairCount}`, repairCount: review.repairCount || 0 };
@@ -420,7 +457,8 @@
         if (state.filter === "repair") units = units.filter((unit) => reviewStatus(unit).kind === "repair");
         if (state.filter === "complete") units = units.filter((unit) => reviewStatus(unit).kind === "complete");
         if (state.filter === "unreviewed") units = units.filter((unit) => reviewStatus(unit).kind === "unreviewed");
-        if (state.filter === "recent") units = units.filter((unit) => unit.kind === "lesson").slice(-60);
+        if (state.filter === "future") units = units.filter((unit) => reviewStatus(unit).kind === "future");
+        if (state.filter === "recent") units = units.filter((unit) => unit.built).slice(-60);
         return units;
       }
 
@@ -429,32 +467,48 @@
       }
 
       function render() {
+        const builtUnits = state.units.filter((unit) => unit.built);
         const repairUnits = state.units.filter((unit) => reviewStatus(unit).kind === "repair");
         const completeUnits = state.units.filter((unit) => reviewStatus(unit).kind === "complete");
         const unreviewedUnits = state.units.filter((unit) => reviewStatus(unit).kind === "unreviewed");
+        const futureUnits = state.units.filter((unit) => reviewStatus(unit).kind === "future");
         $("totalCount").textContent = String(state.units.length);
+        $("builtCount").textContent = String(builtUnits.length);
         $("repairUnitCount").textContent = String(repairUnits.length);
         $("completeCount").textContent = String(completeUnits.length);
         $("unreviewedCount").textContent = String(unreviewedUnits.length);
-        $("shortSha").textContent = state.sha ? state.sha.slice(0, 7) : "-";
+        $("futureCount").textContent = String(futureUnits.length);
+        $("versionLine").textContent = state.sha ? `版本：${state.sha}` : "版本：-";
         $("copyAllRepairCommandButton").disabled = !state.sha;
 
         $("unitGrid").innerHTML = filteredUnits()
           .map((unit) => {
             const status = reviewStatus(unit);
             const title = unit.title || (unit.newChars || []).join("");
-            const chars = (unit.newChars || []).join("、") || unit.kind;
-            return `
-              <a class="unit-card ${status.kind === "repair" ? "repair" : status.kind === "complete" ? "complete" : ""}" href="${html(lessonLink(unit))}">
+            const chars = (unit.newChars || []).join("、") || (unit.built ? "已出貨" : "未建立課程資料");
+            const tagClass =
+              status.kind === "repair"
+                ? "repair"
+                : status.kind === "unreviewed"
+                  ? "unreviewed"
+                  : status.kind === "future"
+                    ? "future"
+                    : status.kind === "started"
+                      ? "pending"
+                      : "";
+            const cardClass = `unit-card ${status.kind}`;
+            const cardBody = `
                 <div class="head">
                   <span class="unit-id">${html(unit.id)}</span>
-                  <span class="tag ${status.kind === "repair" ? "repair" : status.kind === "unreviewed" ? "pending" : ""}">${html(status.label)}</span>
+                  <span class="tag ${tagClass}">${html(status.label)}</span>
                 </div>
                 <div>${html(title)}</div>
                 <div class="muted">${html(chars)}</div>
                 <div class="muted">${html((unit.sentences || []).slice(0, 2).map((sentence) => sentence.text || sentence.spokenText || "").join(" / "))}</div>
-              </a>
             `;
+            return unit.built
+              ? `<a class="${cardClass}" href="${html(lessonLink(unit))}">${cardBody}</a>`
+              : `<article class="${cardClass}" aria-label="${html(unit.id)} 尚未製作">${cardBody}</article>`;
           })
           .join("");
       }
@@ -470,7 +524,7 @@
           await loadCurriculum();
           await loadReviewDocs();
           render();
-          setStatus(`已載入 ${state.units.length} 個課程/複習單元，commit ${state.sha.slice(0, 12)}。`, "ok");
+          setStatus(`已載入 L001-L600 進度盤，已出貨 ${state.builtById.size} 課，commit ${state.sha.slice(0, 12)}。`, "ok");
         } catch (error) {
           state.units = [];
           render();

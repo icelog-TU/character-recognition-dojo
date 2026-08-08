@@ -376,7 +376,7 @@ public/tools/asset-review-index.html
 public/tools/lesson-asset-review.html
 ```
 
-Use the index page as the long-term entry point for hundreds of lessons. It loads the production curriculum list without loading every image/audio file, shows review status, supports search and filters, and links into single-unit review pages:
+Use the index page as the long-term entry point for the full L001-L600 plan. It shows all 600 lesson slots, loads only lightweight curriculum/review metadata, and does not load every image/audio file. Built-but-unreviewed lessons are visually distinct from reviewed lessons, repair-needed lessons, and not-yet-built future lessons. The page supports search and filters, and links built lessons into single-unit review pages:
 
 ```text
 https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main
