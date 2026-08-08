@@ -1,0 +1,198 @@
+{
+  "id": "L163",
+  "order": 163,
+  "newChars": [
+    "掃"
+  ],
+  "zhuyin": {
+    "掃": "ㄙㄠˇ"
+  },
+  "title": "掃",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L159",
+    "L160",
+    "L161",
+    "L162"
+  ],
+  "provisionalLearnedChars": [
+    "動",
+    "葉",
+    "綠",
+    "滿"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "動",
+      "葉",
+      "綠",
+      "滿"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "掃",
+      "滿",
+      "綠",
+      "葉",
+      "動",
+      "樹"
+    ],
+    "targetCharMinimumCount": {
+      "掃": 3
+    },
+    "recentTargetMinimumCounts": {
+      "滿": 2,
+      "綠": 2,
+      "葉": 2,
+      "動": 1,
+      "樹": 1
+    },
+    "disallowedChars": [
+      "擦",
+      "拖",
+      "桶",
+      "乾",
+      "淨",
+      "髒",
+      "亂",
+      "春",
+      "客",
+      "廳",
+      "圾",
+      "倒",
+      "丟"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L163 掃. Latest origin/main at handoff is complete through L158 樹; L163 depends on L159 動, L160 葉, L161 綠, and L162 滿. Do not merge production JSON, planner-data, or ledger until L159-L162 are present in latest origin/main. Provisional learned chars are 動, 葉, 綠, 滿. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 擦, 拖, 桶, 乾, 淨, 髒, 亂, 春, 客, 廳, 垃圾, 倒, or 丟. Images must use L058 style anchors and contain no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "滿地綠葉，要掃一掃。",
+      "spokenText": "滿地綠葉要掃一掃",
+      "focusChar": "掃",
+      "displayLines": [
+        "滿地綠葉，",
+        "要掃一掃。"
+      ],
+      "scene": "The ground is full of green leaves, and a child or adult is holding a broom and getting ready to sweep. Make the green leaves covering the ground and the sweeping action clear. No text, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "大家動手一起掃地。",
+      "spokenText": "大家動手一起掃地",
+      "focusChar": "掃",
+      "displayLines": [
+        "大家動手",
+        "一起掃地。"
+      ],
+      "scene": "Several family members or classmates work together to sweep the floor. Some hold brooms and others help tidy the floor. The setting may be a classroom or home, but must have no text, numbers, signs, labels, letters, zhuyin, logos, or watermarks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "房間裡滿是紙，要打掃。",
+      "spokenText": "房間裡滿是紙要打掃",
+      "focusChar": "掃",
+      "displayLines": [
+        "房間裡滿是紙，",
+        "要打掃。"
+      ],
+      "scene": "A room has many blank papers on the floor and near the table, so it needs to be cleaned. Make the messy blank papers and need to tidy clear. No readable paper content, text, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "掃把放在樹下。",
+      "spokenText": "掃把放在樹下",
+      "focusChar": "掃",
+      "displayLines": [
+        "掃把放在",
+        "樹下。"
+      ],
+      "scene": "A broom leans or rests under a tree. A small amount of leaves may be nearby, but keep the scene clean and uncluttered. No text, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 6
+    },
+    {
+      "text": "我用紙做紅花和綠葉。",
+      "spokenText": "我用紙做紅花和綠葉",
+      "focusChar": "綠",
+      "displayLines": [
+        "我用紙做",
+        "紅花和綠葉。"
+      ],
+      "scene": "A child sits at a table using colored paper to make a red flower and green leaves. The colored paper must be blank with no writing, letters, numbers, zhuyin, labels, signatures, logos, or watermarks.",
+      "hanCharCount": 9
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L163-G01",
+      "type": "find-character",
+      "sentenceId": "L163-S04",
+      "targetChar": "掃",
+      "reason": "掃把 is the core word for this lesson, and the target character position is clear."
+    },
+    {
+      "id": "L163-G02",
+      "type": "teach-character",
+      "sentenceId": "L163-S02",
+      "targetChar": "掃",
+      "targetCharIndex": 6,
+      "prefixText": "大家動手一起",
+      "suffixText": "地",
+      "requiredAudio": [
+        "public/assets/lessons/L163/audio/L163-G02-prefix.m4a",
+        "public/assets/lessons/L163/audio/L163-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L163-G03",
+      "type": "missing-character",
+      "sentenceId": "L163-S01",
+      "targetChar": "掃",
+      "missingIndexes": [
+        5,
+        7
+      ],
+      "options": [
+        "掃",
+        "滿",
+        "葉"
+      ]
+    },
+    {
+      "id": "L163-G04",
+      "type": "partial-order",
+      "sentenceId": "L163-S05",
+      "targetChar": "綠",
+      "chunks": [
+        "我用紙做",
+        "紅花和",
+        "綠葉"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L163-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L163-S03",
+      "targetChar": "掃",
+      "correctText": "房間裡滿是紙，要打掃。",
+      "correctSpokenText": "房間裡滿是紙要打掃",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "房間裡滿是書，要打掃。",
+          "spokenText": "房間裡滿是書要打掃",
+          "audioSrc": "/assets/lessons/L163/audio/L163-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "房間裡都是紙，要打掃。",
+          "spokenText": "房間裡都是紙要打掃",
+          "audioSrc": "/assets/lessons/L163/audio/L163-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
