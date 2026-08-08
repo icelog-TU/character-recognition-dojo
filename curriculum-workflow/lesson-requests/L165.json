@@ -1,0 +1,201 @@
+{
+  "id": "L165",
+  "order": 165,
+  "newChars": [
+    "先"
+  ],
+  "zhuyin": {
+    "先": "ㄒㄧㄢ"
+  },
+  "title": "先",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L159",
+    "L160",
+    "L161",
+    "L162",
+    "L163",
+    "L164"
+  ],
+  "provisionalLearnedChars": [
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "先",
+      "擦",
+      "掃",
+      "滿",
+      "綠",
+      "葉"
+    ],
+    "targetCharMinimumCount": {
+      "先": 3
+    },
+    "recentTargetMinimumCounts": {
+      "擦": 2,
+      "掃": 2,
+      "滿": 2,
+      "綠": 1,
+      "葉": 1
+    },
+    "disallowedChars": [
+      "完",
+      "洗",
+      "乾",
+      "淨",
+      "錯",
+      "橡",
+      "皮",
+      "毛",
+      "巾",
+      "客",
+      "廳"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L165 先. Latest origin/main at handoff is complete through L158 樹; L165 depends on L159 動, L160 葉, L161 綠, L162 滿, L163 掃, and L164 擦. Do not merge production JSON, planner-data, or ledger until L159-L164 are present in latest origin/main. Provisional learned chars are 動, 葉, 綠, 滿, 掃, 擦. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 完, 洗, 乾, 淨, 錯, 橡, 皮, 毛, 巾, 客, or 廳. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "先掃地，再擦桌子。",
+      "spokenText": "先掃地再擦桌子",
+      "focusChar": "先",
+      "displayLines": [
+        "先掃地，",
+        "再擦桌子。"
+      ],
+      "scene": "Square image / 1:1 composition. An indoor cleaning sequence: a child or adult sweeps the floor first, and a nearby table is ready for the next step of wiping. Make the sweeping action and table clear. No text, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 7
+    },
+    {
+      "text": "滿地綠葉，先掃一掃。",
+      "spokenText": "滿地綠葉先掃一掃",
+      "focusChar": "先",
+      "displayLines": [
+        "滿地綠葉，",
+        "先掃一掃。"
+      ],
+      "scene": "Square image / 1:1 composition. The ground is full of green leaves, and a child or adult uses a broom to sweep the leaves first. Make the green leaves covering the ground and sweeping action clear. No text, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "先把臉擦一擦，再出門。",
+      "spokenText": "先把臉擦一擦再出門",
+      "focusChar": "先",
+      "displayLines": [
+        "先把臉擦一擦，",
+        "再出門。"
+      ],
+      "scene": "Square image / 1:1 composition. Before going out, a child wipes their face first with a small plain cloth or tissue. A doorway or going-out items can appear in the background. No text, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "先下棋，再去打球。",
+      "spokenText": "先下棋再去打球",
+      "focusChar": "先",
+      "displayLines": [
+        "先下棋，",
+        "再去打球。"
+      ],
+      "scene": "Square image / 1:1 composition. A child plays black and white chess or go pieces at a table first, with a ball nearby showing the next activity will be playing ball. No written board markings, text, labels, signs, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 7
+    },
+    {
+      "text": "車上坐滿了人。",
+      "spokenText": "車上坐滿了人",
+      "focusChar": "滿",
+      "displayLines": [
+        "車上",
+        "坐滿了人。"
+      ],
+      "scene": "Square image / 1:1 composition. Inside a bus-like vehicle or large car, all visible seats are filled with people. Make it clear that the vehicle is full, without license plates, route signs, station names, text, labels, letters, numbers, zhuyin, logos, or watermarks.",
+      "hanCharCount": 6
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L165-G01",
+      "type": "find-character",
+      "sentenceId": "L165-S04",
+      "targetChar": "先",
+      "reason": "先下棋，再去打球 is a clear sequence sentence."
+    },
+    {
+      "id": "L165-G02",
+      "type": "teach-character",
+      "sentenceId": "L165-S02",
+      "targetChar": "先",
+      "targetCharIndex": 4,
+      "prefixText": "滿地綠葉",
+      "suffixText": "掃一掃",
+      "requiredAudio": [
+        "public/assets/lessons/L165/audio/L165-G02-prefix.m4a",
+        "public/assets/lessons/L165/audio/L165-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L165-G03",
+      "type": "missing-character",
+      "sentenceId": "L165-S01",
+      "targetChar": "先",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "先",
+        "再",
+        "掃"
+      ]
+    },
+    {
+      "id": "L165-G04",
+      "type": "partial-order",
+      "sentenceId": "L165-S03",
+      "targetChar": "先",
+      "chunks": [
+        "先把臉",
+        "擦一擦",
+        "再出門"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L165-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L165-S05",
+      "targetChar": "滿",
+      "correctText": "車上坐滿了人。",
+      "correctSpokenText": "車上坐滿了人",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "車上坐滿了書。",
+          "spokenText": "車上坐滿了書",
+          "audioSrc": "/assets/lessons/L165/audio/L165-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "車上坐滿了球。",
+          "spokenText": "車上坐滿了球",
+          "audioSrc": "/assets/lessons/L165/audio/L165-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
