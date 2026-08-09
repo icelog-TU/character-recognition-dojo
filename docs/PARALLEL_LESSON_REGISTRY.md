@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L178 | 聲 / normal lesson | claimed | Production C | codex/l178-complete-package / 32ef287 | L175:馬, L176:停, L177:叫 | ["馬","停","叫"] | curriculum-workflow/lesson-requests/L178.json; curriculum-workflow/generated/L178-generation-packet.md | public/assets/lessons/L178/images/; public/assets/lessons/L178/audio/ | accepted handoff and starting complete package |
+| L178 | 聲 / normal lesson | ready-blocked-by-dependency | Production C | codex/l178-complete-package / latest pushed | L175:馬, L176:停, L177:叫 | ["馬","停","叫"] | curriculum-workflow/lesson-requests/L178.json; curriculum-workflow/generated/L178-generation-packet.md; curriculum-workflow/drafts/L178-draft.json | curriculum-workflow/audio-inbox/L178/; public/assets/lessons/L178/images/; public/assets/lessons/L178/audio/ | complete package prepared; blocked until L175-L177 merge into origin/main; post-merge review: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L178&ref=main |
 
 ## Status Values
 

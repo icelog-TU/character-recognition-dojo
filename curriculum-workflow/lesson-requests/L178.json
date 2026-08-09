@@ -1,0 +1,195 @@
+{
+  "id": "L178",
+  "order": 178,
+  "newChars": [
+    "聲"
+  ],
+  "zhuyin": {
+    "聲": "ㄕㄥ"
+  },
+  "title": "聲",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L175",
+    "L176",
+    "L177"
+  ],
+  "provisionalLearnedChars": [
+    "馬",
+    "停",
+    "叫"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "馬",
+      "停",
+      "叫"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "聲",
+      "叫",
+      "停",
+      "馬",
+      "跑",
+      "事"
+    ],
+    "targetCharMinimumCount": {
+      "聲": 3
+    },
+    "recentTargetMinimumCounts": {
+      "叫": 2,
+      "停": 2,
+      "馬": 2,
+      "跑": 1,
+      "事": 1
+    },
+    "disallowedChars": [
+      "裏",
+      "聽",
+      "音",
+      "喊",
+      "吵",
+      "危",
+      "險",
+      "驚",
+      "嚇",
+      "圖",
+      "館",
+      "靜",
+      "標",
+      "牌"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L178 聲. Latest origin/main at production start is complete through L174 跑, so L178 depends on unmerged L175 馬, L176 停, and L177 叫 before production JSON may merge. Provisional learned chars are 馬, 停, 叫. Do not merge production JSON, planner-data, or ledger until L175-L177 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 這裡, not 這裏, because 裡 is learned and 裏 is not. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "爸爸大叫一聲，我馬上停下來。",
+      "spokenText": "爸爸大叫一聲我馬上停下來",
+      "focusChar": "聲",
+      "displayLines": [
+        "爸爸大叫一聲，",
+        "我馬上停下來。"
+      ],
+      "imageNotes": "爸爸在安全場景中大叫一聲提醒固定的「我」小女孩，小女孩馬上停下來。畫面要清楚呈現爸爸出聲提醒與孩子停下來，不可做成危險驚嚇場景，不可有文字、數字或標籤。",
+      "hanCharCount": 12
+    },
+    {
+      "text": "有事時，就叫媽媽一聲。",
+      "spokenText": "有事時就叫媽媽一聲",
+      "focusChar": "聲",
+      "displayLines": [
+        "有事時，",
+        "就叫媽媽一聲。"
+      ],
+      "imageNotes": "孩子有事情時叫媽媽一聲求助，媽媽溫和回應。畫面是安全、溫暖的求助情境，不可有對話框文字、數字或標籤。",
+      "hanCharCount": 9
+    },
+    {
+      "text": "馬路邊有鳥叫聲。",
+      "spokenText": "馬路邊有鳥叫聲",
+      "focusChar": "聲",
+      "displayLines": [
+        "馬路邊",
+        "有鳥叫聲。"
+      ],
+      "imageNotes": "馬路邊的樹上或草地旁有小鳥在叫，畫面要同時看得到馬路邊與小鳥叫聲的來源。不可有路牌、車牌、文字、數字或標籤。",
+      "hanCharCount": 7
+    },
+    {
+      "text": "紅燈停下來，不要跑過去。",
+      "spokenText": "紅燈停下來不要跑過去",
+      "focusChar": "停",
+      "displayLines": [
+        "紅燈停下來，",
+        "不要跑過去。"
+      ],
+      "imageNotes": "孩子看到紅燈後停下來，不跑過去。畫面要清楚表現紅燈與停下來，必須是安全交通教學情境；紅燈或路邊不可有文字、數字或標籤。",
+      "hanCharCount": 10
+    },
+    {
+      "text": "在這裡看書時，不可以出聲。",
+      "spokenText": "在這裡看書時不可以出聲",
+      "focusChar": "聲",
+      "displayLines": [
+        "在這裡看書時，",
+        "不可以出聲。"
+      ],
+      "imageNotes": "圖書館或安靜閱讀角落中，孩子在這裡看書，大人用溫和手勢提醒不可以出聲。不可有「安靜」標語、書本文字、館名、數字、注音或任何標籤。",
+      "hanCharCount": 11
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L178-G01",
+      "type": "find-character",
+      "sentenceId": "L178-S03",
+      "targetChar": "聲",
+      "reason": "鳥叫聲 is a clear core use of 聲."
+    },
+    {
+      "id": "L178-G02",
+      "type": "teach-character",
+      "sentenceId": "L178-S01",
+      "targetChar": "聲",
+      "targetCharIndex": 5,
+      "prefixText": "爸爸大叫一",
+      "suffixText": "我馬上停下來",
+      "requiredAudio": [
+        "public/assets/lessons/L178/audio/L178-G02-prefix.m4a",
+        "public/assets/lessons/L178/audio/L178-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L178-G03",
+      "type": "missing-character",
+      "sentenceId": "L178-S02",
+      "targetChar": "聲",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "聲",
+        "叫",
+        "停"
+      ]
+    },
+    {
+      "id": "L178-G04",
+      "type": "partial-order",
+      "sentenceId": "L178-S05",
+      "targetChar": "聲",
+      "chunks": [
+        "在這裡看書時",
+        "不可以",
+        "出聲"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L178-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L178-S04",
+      "targetChar": "停",
+      "correctText": "紅燈停下來，不要跑過去。",
+      "correctSpokenText": "紅燈停下來不要跑過去",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "紅燈跑過去，不要停下來。",
+          "spokenText": "紅燈跑過去不要停下來",
+          "audioSrc": "/assets/lessons/L178/audio/L178-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "紅燈停下來，不要坐下去。",
+          "spokenText": "紅燈停下來不要坐下去",
+          "audioSrc": "/assets/lessons/L178/audio/L178-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
