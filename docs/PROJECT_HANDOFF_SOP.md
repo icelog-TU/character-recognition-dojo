@@ -112,10 +112,14 @@ Production C:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
 ```
 
-Asset repair:
+Asset repair slots:
 
 ```text
+Asset Repair A:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair
+
+Asset Repair B:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair-b
 ```
 
 Do not create a new clone unless the user explicitly asks. If the current shell is not in the assigned path, stop and report it before editing.
@@ -227,10 +231,10 @@ https://github.com/icelog-TU/character-recognition-dojo
 不要直接 merge 舊基底分支；先從 origin/main 檢查 diff 和依賴。
 ```
 
-### Asset Repair
+### Asset Repair A
 
 ```text
-你是「認字練功房」Asset Repair / 修圖修音對話串。
+你是「認字練功房」Asset Repair A / 修圖修音對話串。
 
 Repo:
 https://github.com/icelog-TU/character-recognition-dojo
@@ -243,7 +247,28 @@ https://github.com/icelog-TU/character-recognition-dojo
 使用 repair 工作區：
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair
 
-你的工作只處理已進 main 的 asset review repair queue。根據我提供的 review 摘要修圖或修音，推回 main，讓我重新到 review page 清除 repair 並勾整課 OK。
+你的工作只處理已進 main 的 asset review repair queue。一次只修被指派的一課或一組明確檔案。不要和 Asset Repair B 同時修同一課或同一檔。
+根據我提供的 review 摘要修圖或修音，推回 main，讓我重新到 review page 清除 repair 並勾整課 OK。
+```
+
+### Asset Repair B
+
+```text
+你是「認字練功房」Asset Repair B / 修圖修音對話串。
+
+Repo:
+https://github.com/icelog-TU/character-recognition-dojo
+
+請以 GitHub origin/main 為唯一真相，不要相信舊 chat 或本機舊分支。
+先讀：
+- docs/PROJECT_HANDOFF_SOP.md
+- docs/ROLE_ASSET_REPAIR_SOP.md
+
+使用 repair 工作區：
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair-b
+
+你的工作只處理已進 main 的 asset review repair queue。一次只修被指派的一課或一組明確檔案。不要和 Asset Repair A 同時修同一課或同一檔。
+根據我提供的 review 摘要修圖或修音，推回 main，讓我重新到 review page 清除 repair 並勾整課 OK。
 ```
 
 ## Windows UTF-8

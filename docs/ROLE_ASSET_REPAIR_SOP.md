@@ -16,13 +16,19 @@ Read `docs/CURRICULUM_SCHEMA.md` if production JSON references need repair.
 
 ## Assigned Worktree
 
-Use the repair worktree unless the Supervisor assigns a different clean worktree:
+Use the repair slot assigned by the teacher or Supervisor:
 
 ```text
+Asset Repair A:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair
+
+Asset Repair B:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair-b
 ```
 
 If it is dirty, stop and report. Do not stash, reset, or overwrite another repair.
+
+Two Asset Repair threads may run at the same time only when they own different units or clearly disjoint asset files. Do not repair the same lesson, review module, image, audio file, or production JSON section from both repair slots at once.
 
 ## Startup
 
@@ -58,6 +64,8 @@ If the teacher is not signed in, review checkbox changes may be local-only. Trea
 ## Repair Rules
 
 - Repair only units already present in latest `origin/main`.
+- State the exact unit and asset paths owned by this repair before editing.
+- Check whether another repair thread is already assigned to the same unit or file.
 - Keep changes limited to the flagged asset(s) and any required production JSON metadata.
 - For image replacements, use square `1:1` composition and L058 style anchors unless the teacher approved a new style.
 - Final referenced images must be WebP and size-compliant.
