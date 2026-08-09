@@ -16,8 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R009 | review module / no new chars | claimed | Production C | codex/r009-r010-review-package / 2b79d73 | after L180; review sequence R001-R008 | [] | curriculum-workflow/review-requests/R009.json; curriculum-workflow/generated/R009-generation-packet.md | public/assets/reviews/R009/images/; public/assets/reviews/R009/audio/ | accepted handoff and starting complete R009/R010 review pair |
-| R010 | review module / no new chars | claimed | Production C | codex/r009-r010-review-package / 2b79d73 | after L180; review sequence R001-R008 | [] | curriculum-workflow/review-requests/R010.json; curriculum-workflow/generated/R010-generation-packet.md | public/assets/reviews/R010/images/; public/assets/reviews/R010/audio/ | accepted handoff and starting complete R009/R010 review pair |
+| R009 | review module / no new chars | ready-blocked-by-review-sequence | Production C | codex/r009-r010-review-package / pending final commit | after L180; review sequence R001-R008 | [] | curriculum-workflow/review-requests/R009.json; curriculum-workflow/generated/R009-generation-packet.md | public/assets/reviews/R009/images/; public/assets/reviews/R009/audio/ | asset-complete locally; blocked because latest origin/main reviewLessons contain R001-R004 only |
+| R010 | review module / no new chars | ready-blocked-by-review-sequence | Production C | codex/r009-r010-review-package / pending final commit | after L180; review sequence R001-R008 | [] | curriculum-workflow/review-requests/R010.json; curriculum-workflow/generated/R010-generation-packet.md | public/assets/reviews/R010/images/; public/assets/reviews/R010/audio/ | asset-complete locally; blocked because latest origin/main reviewLessons contain R001-R004 only |
 
 ## Status Values
 

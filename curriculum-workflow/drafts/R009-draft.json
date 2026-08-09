@@ -1,0 +1,467 @@
+{
+  "id": "R009",
+  "reviewNumber": 9,
+  "title": "複習九",
+  "afterLessonOrder": 180,
+  "targetLessonRange": {
+    "startOrder": 121,
+    "endOrder": 150
+  },
+  "requiredCoverageChars": [
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間"
+  ],
+  "requiredRounds": 5,
+  "sentences": [
+    {
+      "id": "R009-S01",
+      "text": "外面天空有黑雲。",
+      "displayLines": [
+        "外面天空",
+        "有黑雲。"
+      ],
+      "spokenText": "外面天空有黑雲",
+      "focusChar": "雲",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 外面天空有黑雲。 Scene/backdrop: outdoor open area under a sky with large dark clouds, suggesting rain may come soon. Subject: the sky, dark clouds, and safe outdoor environment are clear and central. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environment, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, phone-readable, main sky and clouds centered with safe margins. Constraints: no visible text, numbers, signs, labels, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R009/images/R009-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R009/audio/R009-S01.m4a",
+        "durationMs": 3287,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1220,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1600,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1900,
+            "endMs": 2100
+          }
+        ]
+      }
+    },
+    {
+      "id": "R009-S02",
+      "text": "下雨了，不要穿白鞋出門。",
+      "displayLines": [
+        "下雨了，",
+        "不要穿白鞋",
+        "出門。"
+      ],
+      "spokenText": "下雨了不要穿白鞋出門",
+      "focusChar": "鞋",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 下雨了，不要穿白鞋出門。 Scene/backdrop: home doorway with rain outside. Subject: a child is about to go out, white shoes are beside the doorway, and an adult gently reminds the child not to wear white shoes into the rain. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home entryway, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, doorway, rain, child, adult, and white shoes centered with safe margins. Constraints: no visible text, numbers, signs, labels, brand marks, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R009/images/R009-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R009/audio/R009-S02.m4a",
+        "durationMs": 5022,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 660
+          },
+          {
+            "charIndex": 1,
+            "startMs": 660,
+            "endMs": 840
+          },
+          {
+            "charIndex": 2,
+            "startMs": 840,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1620,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1880,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2140,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2520,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2940,
+            "endMs": 3180
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3180,
+            "endMs": 3520
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3520,
+            "endMs": 3700
+          }
+        ]
+      }
+    },
+    {
+      "id": "R009-S03",
+      "text": "天氣太熱，先脫外套。",
+      "displayLines": [
+        "天氣太熱，",
+        "先脫外套。"
+      ],
+      "spokenText": "天氣太熱先脫外套",
+      "focusChar": "脫",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 天氣太熱，先脫外套。 Scene/backdrop: warm safe indoor or outdoor setting. Subject: a child clearly feels hot and is taking off an outer jacket, with the jacket halfway off or in the child's hands. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, child and jacket action centered with safe margins. Constraints: no visible text, numbers, signs, labels, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R009/images/R009-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R009/audio/R009-S03.m4a",
+        "durationMs": 3655,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1320,
+            "endMs": 1560
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2080,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2340,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2600,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2940,
+            "endMs": 3140
+          }
+        ]
+      }
+    },
+    {
+      "id": "R009-S04",
+      "text": "先喝點水，再吃飯和菜。",
+      "displayLines": [
+        "先喝點水，",
+        "再吃飯和菜。"
+      ],
+      "spokenText": "先喝點水再吃飯和菜",
+      "focusChar": "喝",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 先喝點水，再吃飯和菜。 Scene/backdrop: family dining table. Subject: a child first drinks water from a cup while rice and vegetables are visible on the table for later eating. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean dining scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, child drinking water, rice, and vegetables centered with safe margins. Constraints: no visible text, numbers, signs, labels, brand marks, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R009/images/R009-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R009/audio/R009-S04.m4a",
+        "durationMs": 3591,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 600
+          },
+          {
+            "charIndex": 2,
+            "startMs": 600,
+            "endMs": 900
+          },
+          {
+            "charIndex": 3,
+            "startMs": 900,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1560,
+            "endMs": 1780
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1780,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2060,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2260,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2620,
+            "endMs": 2820
+          }
+        ]
+      }
+    },
+    {
+      "id": "R009-S05",
+      "text": "老爸下棋，卻不開心。",
+      "displayLines": [
+        "老爸下棋，",
+        "卻不開心。"
+      ],
+      "spokenText": "老爸下棋卻不開心",
+      "focusChar": "棋",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 老爸下棋，卻不開心。 Scene/backdrop: table at home. Subject: a father sits by a table playing chess or a board game with visible board and pieces, but he looks unhappy or frowns gently. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home scene, expressive gentle adult face, bright warm palette. Composition/framing: square image / 1:1 composition, father, board, and pieces centered with safe margins. Constraints: no visible text, numbers, symbols on pieces, signs, labels, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R009/images/R009-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R009/audio/R009-S05.m4a",
+        "durationMs": 4988,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1160,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1460,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2320,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2720,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2920,
+            "endMs": 3120
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R009-G01",
+      "type": "find-character",
+      "sentenceId": "R009-S01",
+      "targetChar": "雲",
+      "prompt": "找一找句子裡的「雲」。"
+    },
+    {
+      "id": "R009-G02",
+      "type": "teach-character",
+      "sentenceId": "R009-S03",
+      "targetChar": "脫",
+      "prompt": "看一看「脫」在句子裡的位置。",
+      "missingIndexes": [
+        5
+      ],
+      "targetCharIndex": 5,
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R009/audio/R009-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R009/audio/R009-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "R009-G03",
+      "type": "missing-character",
+      "sentenceId": "R009-S02",
+      "targetChar": "鞋",
+      "prompt": "選出句子裡少掉的字。",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        {
+          "id": "shoe",
+          "text": "鞋",
+          "correct": true
+        },
+        {
+          "id": "clothes",
+          "text": "衣",
+          "correct": false
+        },
+        {
+          "id": "hat",
+          "text": "帽",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R009-G04",
+      "type": "partial-order",
+      "sentenceId": "R009-S04",
+      "targetChar": "喝",
+      "prompt": "排出正確的句子。",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "slot-1",
+          "text": "先喝點水",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "slot-2",
+          "text": "再吃",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "slot-3",
+          "text": "飯和菜",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "R009-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R009-S05",
+      "targetChar": "棋",
+      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "options": [
+        {
+          "id": "correct",
+          "text": "老爸下棋，卻不開心。",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R009/audio/R009-S05.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "老爸打球，卻不開心。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R009/audio/R009-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "老爸下棋，卻很開心。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R009/audio/R009-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

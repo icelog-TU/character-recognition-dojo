@@ -1,0 +1,467 @@
+{
+  "id": "R010",
+  "reviewNumber": 10,
+  "title": "複習十",
+  "afterLessonOrder": 180,
+  "targetLessonRange": {
+    "startOrder": 121,
+    "endOrder": 150
+  },
+  "requiredCoverageChars": [
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間"
+  ],
+  "requiredRounds": 5,
+  "sentences": [
+    {
+      "id": "R010-S01",
+      "text": "為什麼房間這麼亂？",
+      "displayLines": [
+        "為什麼房間",
+        "這麼亂？"
+      ],
+      "spokenText": "為什麼房間這麼亂",
+      "focusChar": "為",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 為什麼房間這麼亂？ Scene/backdrop: a messy child's room. Subject: scattered safe belongings on the floor and bed, with a child or adult standing inside the room looking puzzled at the mess. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean room environment, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, messy room and puzzled person centered with safe margins. Constraints: no visible text, numbers, signs, labels, book text, brand marks, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R010/images/R010-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R010/audio/R010-S01.m4a",
+        "durationMs": 3930,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 207
+          },
+          {
+            "charIndex": 1,
+            "startMs": 207,
+            "endMs": 413
+          },
+          {
+            "charIndex": 2,
+            "startMs": 413,
+            "endMs": 620
+          },
+          {
+            "charIndex": 3,
+            "startMs": 620,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1440,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1700,
+            "endMs": 1990
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1990,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2280,
+            "endMs": 2520
+          }
+        ]
+      }
+    },
+    {
+      "id": "R010-S02",
+      "text": "怎麼找不到要穿的鞋？",
+      "displayLines": [
+        "怎麼找不到",
+        "要穿的鞋？"
+      ],
+      "spokenText": "怎麼找不到要穿的鞋",
+      "focusChar": "怎",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 怎麼找不到要穿的鞋？ Scene/backdrop: home entryway or bedroom before going out. Subject: a child searches for the shoes they need to wear; nearby items are visible, but the target shoes are not obvious. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, searching child and scattered safe objects centered with safe margins. Constraints: no visible text, numbers, signs, labels, brand marks, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R010/images/R010-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R010/audio/R010-S02.m4a",
+        "durationMs": 3942,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 200
+          },
+          {
+            "charIndex": 1,
+            "startMs": 200,
+            "endMs": 400
+          },
+          {
+            "charIndex": 2,
+            "startMs": 400,
+            "endMs": 740
+          },
+          {
+            "charIndex": 3,
+            "startMs": 740,
+            "endMs": 930
+          },
+          {
+            "charIndex": 4,
+            "startMs": 930,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1120,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1840,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2040,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2260,
+            "endMs": 2520
+          }
+        ]
+      }
+    },
+    {
+      "id": "R010-S03",
+      "text": "他穿上衣，戴帽子。",
+      "displayLines": [
+        "他穿上衣，",
+        "戴帽子。"
+      ],
+      "spokenText": "他穿上衣戴帽子",
+      "focusChar": "戴",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 他穿上衣，戴帽子。 Scene/backdrop: simple home or doorway scene. Subject: a child is wearing a shirt and clearly putting a hat on the head. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, child, shirt, and hat action centered with safe margins. Constraints: no visible text, numbers, signs, labels, logos on the hat or shirt, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R010/images/R010-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R010/audio/R010-S03.m4a",
+        "durationMs": 3582,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 880
+          },
+          {
+            "charIndex": 2,
+            "startMs": 880,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1260,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2000,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2380,
+            "endMs": 2640
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2640,
+            "endMs": 2800
+          }
+        ]
+      }
+    },
+    {
+      "id": "R010-S04",
+      "text": "天黑了，所以房間要開燈。",
+      "displayLines": [
+        "天黑了，",
+        "所以房間",
+        "要開燈。"
+      ],
+      "spokenText": "天黑了所以房間要開燈",
+      "focusChar": "所",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 天黑了，所以房間要開燈。 Scene/backdrop: evening room with a dark sky outside the window. Subject: the room is dim because it is dark outside, and a person is about to turn on the light or the lamp has just lit up. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean room scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, window darkness, room, person, and light source centered with safe margins. Constraints: no visible text, numbers, switch labels, signs, brand marks, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R010/images/R010-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R010/audio/R010-S04.m4a",
+        "durationMs": 4262,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 520
+          },
+          {
+            "charIndex": 1,
+            "startMs": 520,
+            "endMs": 780
+          },
+          {
+            "charIndex": 2,
+            "startMs": 780,
+            "endMs": 1180
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1920,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2020,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2120,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2480,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2660,
+            "endMs": 2980
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2980,
+            "endMs": 3260
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3260,
+            "endMs": 3400
+          }
+        ]
+      }
+    },
+    {
+      "id": "R010-S05",
+      "text": "冷氣關了，房間很熱。",
+      "displayLines": [
+        "冷氣關了，",
+        "房間很熱。"
+      ],
+      "spokenText": "冷氣關了房間很熱",
+      "focusChar": "冷",
+      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 冷氣關了，房間很熱。 Scene/backdrop: warm room with an air conditioner turned off. Subject: a child feels hot, perhaps wiping sweat or fanning themself, while the air conditioner is visibly off without any readable label. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean room scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, hot child and off air conditioner centered with safe margins. Constraints: no visible text, numbers, labels, brand marks, control-panel writing, zhuyin, or watermark.",
+      "imageSrc": "/assets/reviews/R010/images/R010-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R010/audio/R010-S05.m4a",
+        "durationMs": 3847,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1720,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2140,
+            "endMs": 2420
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2420,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2920,
+            "endMs": 3100
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R010-G01",
+      "type": "find-character",
+      "sentenceId": "R010-S04",
+      "targetChar": "燈",
+      "prompt": "找一找句子裡的「燈」。"
+    },
+    {
+      "id": "R010-G02",
+      "type": "teach-character",
+      "sentenceId": "R010-S03",
+      "targetChar": "戴",
+      "prompt": "看一看「戴」在句子裡的位置。",
+      "missingIndexes": [
+        4
+      ],
+      "targetCharIndex": 4,
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R010/audio/R010-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R010/audio/R010-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "R010-G03",
+      "type": "missing-character",
+      "sentenceId": "R010-S05",
+      "targetChar": "冷",
+      "prompt": "選出句子裡少掉的字。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "cold",
+          "text": "冷",
+          "correct": true
+        },
+        {
+          "id": "hot",
+          "text": "熱",
+          "correct": false
+        },
+        {
+          "id": "dark",
+          "text": "黑",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R010-G04",
+      "type": "partial-order",
+      "sentenceId": "R010-S02",
+      "targetChar": "怎",
+      "prompt": "排出正確的句子。",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "slot-1",
+          "text": "怎麼",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "slot-2",
+          "text": "找不到",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "slot-3",
+          "text": "要穿的鞋",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "R010-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R010-S01",
+      "targetChar": "為",
+      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "options": [
+        {
+          "id": "correct",
+          "text": "為什麼房間這麼亂？",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R010/audio/R010-S01.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "為什麼房間這麼熱？",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "為什麼外面這麼亂？",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
