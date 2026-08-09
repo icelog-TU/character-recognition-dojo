@@ -1,0 +1,182 @@
+{
+  "id": "L175",
+  "order": 175,
+  "newChars": [
+    "馬"
+  ],
+  "zhuyin": {
+    "馬": "ㄇㄚˇ"
+  },
+  "title": "馬",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "provisionalLearnedChars": [],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "馬",
+      "跑",
+      "事",
+      "快",
+      "就",
+      "回"
+    ],
+    "targetCharMinimumCount": {
+      "馬": 3
+    },
+    "recentTargetMinimumCounts": {
+      "跑": 2,
+      "事": 2,
+      "快": 2,
+      "就": 1,
+      "回": 1
+    },
+    "disallowedChars": [
+      "車",
+      "停",
+      "叫",
+      "聲",
+      "騎",
+      "匹",
+      "危",
+      "險",
+      "標",
+      "線",
+      "牌",
+      "牽",
+      "原"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L175 馬. Latest origin/main at production start is complete through L174 跑, so L175 has no provisional dependency and may enter production JSON after full validation. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "小馬在草地上跑。",
+      "spokenText": "小馬在草地上跑",
+      "focusChar": "馬",
+      "displayLines": [
+        "小馬在",
+        "草地上跑。"
+      ],
+      "imageNotes": "一隻可愛小馬在草地上奔跑，草地安全開闊，畫面清楚呈現小馬和跑的動作。不可有文字、數字或標籤。",
+      "hanCharCount": 7
+    },
+    {
+      "text": "沒事不要跑到馬路上面。",
+      "spokenText": "沒事不要跑到馬路上面",
+      "focusChar": "馬",
+      "displayLines": [
+        "沒事不要",
+        "跑到馬路上面。"
+      ],
+      "imageNotes": "孩子正要從安全的人行空地跑向馬路，大人立刻提醒不要跑到馬路上面。畫面要清楚區分安全邊界與馬路，但不可有文字、數字、路牌、標線文字或標籤。",
+      "hanCharCount": 10
+    },
+    {
+      "text": "有事時，就馬上回頭找大人。",
+      "spokenText": "有事時就馬上回頭找大人",
+      "focusChar": "馬",
+      "displayLines": [
+        "有事時，",
+        "就馬上回頭找大人。"
+      ],
+      "imageNotes": "孩子遇到事情後立刻回頭去找大人求助。畫面重點是「馬上」表示立刻，不要畫成在馬背上。不可有對話框文字、數字或標籤。",
+      "hanCharCount": 11
+    },
+    {
+      "text": "我會快去快回。",
+      "spokenText": "我會快去快回",
+      "focusChar": "快",
+      "displayLines": [
+        "我會快去",
+        "快回。"
+      ],
+      "imageNotes": "固定的「我」小女孩準備短暫離開，對家人表示會很快去、很快回來。畫面可在家門口或室內門邊，不可有文字、數字或標籤。",
+      "hanCharCount": 6
+    },
+    {
+      "text": "樹上的花快要開了。",
+      "spokenText": "樹上的花快要開了",
+      "focusChar": "快",
+      "displayLines": [
+        "樹上的花",
+        "快要開了。"
+      ],
+      "imageNotes": "樹上的花苞快要開花，孩子或大人抬頭看樹上的花。畫面重點是樹上花苞即將開放，不可有文字、數字或標籤。",
+      "hanCharCount": 8
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L175-G01",
+      "type": "find-character",
+      "sentenceId": "L175-S02",
+      "targetChar": "馬",
+      "reason": "馬路 is the core everyday use of 馬 in this lesson."
+    },
+    {
+      "id": "L175-G02",
+      "type": "teach-character",
+      "sentenceId": "L175-S01",
+      "targetChar": "馬",
+      "targetCharIndex": 1,
+      "prefixText": "小",
+      "suffixText": "在草地上跑",
+      "requiredAudio": [
+        "public/assets/lessons/L175/audio/L175-G02-prefix.m4a",
+        "public/assets/lessons/L175/audio/L175-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L175-G03",
+      "type": "missing-character",
+      "sentenceId": "L175-S03",
+      "targetChar": "馬",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "馬",
+        "跑",
+        "快"
+      ]
+    },
+    {
+      "id": "L175-G04",
+      "type": "partial-order",
+      "sentenceId": "L175-S04",
+      "targetChar": "快",
+      "chunks": [
+        "我會",
+        "快去",
+        "快回"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L175-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L175-S05",
+      "targetChar": "快",
+      "correctText": "樹上的花快要開了。",
+      "correctSpokenText": "樹上的花快要開了",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "樹上的花快要掉了。",
+          "spokenText": "樹上的花快要掉了",
+          "audioSrc": "/assets/lessons/L175/audio/L175-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "樹上的花快要紅了。",
+          "spokenText": "樹上的花快要紅了",
+          "audioSrc": "/assets/lessons/L175/audio/L175-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
