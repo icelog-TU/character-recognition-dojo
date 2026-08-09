@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L185 | 像 / normal lesson | claimed | Production B | codex/l185-complete-package / 053786c | L182:師, L183:話, L184:課 | ["師","話","課"] | curriculum-workflow/lesson-requests/L185.json; curriculum-workflow/generated/L185-generation-packet.md | public/assets/lessons/L185/images/; public/assets/lessons/L185/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
