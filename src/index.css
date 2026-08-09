@@ -1168,6 +1168,15 @@ button {
   font-size: 1.45rem;
 }
 
+.home-char-card.unavailable {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.home-char-card.unavailable strong {
+  color: color-mix(in srgb, var(--accent) 70%, var(--muted));
+}
+
 .top-bar {
   display: flex;
   align-items: center;

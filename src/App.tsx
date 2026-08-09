@@ -36,6 +36,13 @@ type PracticeUnit = Lesson & { reviewNumber?: number; targetLessonRange?: Review
 type PracticeSequenceEntry =
   | { kind: "lesson"; id: string; lesson: Lesson }
   | { kind: "review"; id: string; review: ReviewLesson };
+type ReviewPlaceholderEntry = {
+  kind: "review-placeholder";
+  id: string;
+  afterLessonOrder: number;
+  reviewNumber: number;
+};
+type HomePracticeEntry = PracticeSequenceEntry | ReviewPlaceholderEntry;
 type AudioWindow = Window & typeof globalThis & { webkitAudioContext?: typeof AudioContext };
 type AudioPlayOptions = {
   onTime?: (elapsedMs: number) => void;
@@ -108,6 +115,7 @@ const RAINBOW_GROUPS = [
 const REVIEW_CATALOG_GROUP = { id: "review", label: "複習", range: "R001-R040", color: "#1d7874" } as const;
 const CATALOG_GROUPS = [...RAINBOW_GROUPS, REVIEW_CATALOG_GROUP] as const;
 const REVIEW_CATALOG_SLOT_COUNT = 40;
+const HOME_PRACTICE_CARD_COUNT = 18;
 type RainbowGroup = (typeof RAINBOW_GROUPS)[number];
 type CatalogGroup = (typeof CATALOG_GROUPS)[number];
 type CatalogSlot = { slotNumber: number; group: CatalogGroup; entry: LessonCharEntry | null };
@@ -973,12 +981,65 @@ function practiceSequence(lessons: Lesson[], reviewLessons: ReviewLesson[]): Pra
   ]);
 }
 
+function expectedReviewNumbersAfterLesson(order: number): number[] {
+  if (order < 60 || order > 600 || order % 30 !== 0) return [];
+  const firstReviewNumber = ((order - 60) / 30) * 2 + 1;
+  const reviewNumbers = [firstReviewNumber, firstReviewNumber + 1];
+  if (order === 600) reviewNumbers.push(39, 40);
+  return reviewNumbers;
+}
+
+function homePracticeEntries(entries: PracticeSequenceEntry[]): HomePracticeEntry[] {
+  const reviewsBySlot = new Map<string, Extract<PracticeSequenceEntry, { kind: "review" }>>();
+  for (const entry of entries) {
+    if (entry.kind === "review") {
+      reviewsBySlot.set(`${entry.review.afterLessonOrder}:${entry.review.reviewNumber}`, entry);
+    }
+  }
+
+  const insertedReviewIds = new Set<string>();
+  const homeEntries: HomePracticeEntry[] = [];
+  for (const entry of entries) {
+    if (entry.kind === "review") {
+      if (!insertedReviewIds.has(entry.id)) homeEntries.push(entry);
+      continue;
+    }
+
+    homeEntries.push(entry);
+    for (const reviewNumber of expectedReviewNumbersAfterLesson(entry.lesson.order)) {
+      const reviewEntry = reviewsBySlot.get(`${entry.lesson.order}:${reviewNumber}`);
+      if (reviewEntry) {
+        homeEntries.push(reviewEntry);
+        insertedReviewIds.add(reviewEntry.id);
+      } else {
+        homeEntries.push({
+          kind: "review-placeholder",
+          id: `review-placeholder-${String(reviewNumber).padStart(3, "0")}`,
+          afterLessonOrder: entry.lesson.order,
+          reviewNumber,
+        });
+      }
+    }
+  }
+  return homeEntries;
+}
+
 function practiceEntryLabel(entry: PracticeSequenceEntry): string {
   return entry.kind === "lesson" ? lessonLabel(entry.lesson) : reviewLessonLabel(entry.review);
 }
 
 function practiceEntryBadge(entry: PracticeSequenceEntry): string {
   return entry.kind === "lesson" ? `第 ${entry.lesson.order} 課` : `第 ${entry.review.afterLessonOrder} 課後`;
+}
+
+function homePracticeEntryLabel(entry: HomePracticeEntry): string {
+  if (entry.kind === "review-placeholder") return `複習${smallZhNumber(entry.reviewNumber)}`;
+  return practiceEntryLabel(entry);
+}
+
+function homePracticeEntryBadge(entry: HomePracticeEntry): string {
+  if (entry.kind === "review-placeholder") return `第 ${entry.afterLessonOrder} 課後`;
+  return practiceEntryBadge(entry);
 }
 
 function practiceEntryComplete(entry: PracticeSequenceEntry, completedOrders: Set<number>, completedReviewIds: Set<string>): boolean {
@@ -2052,7 +2113,7 @@ function PracticeHome({
   onStart: (order: number) => void;
   onStartReview: (reviewId: string) => void;
 }) {
-  const visibleEntries = unlockedEntries.slice(-12);
+  const visibleEntries = homePracticeEntries(unlockedEntries).slice(-HOME_PRACTICE_CARD_COUNT);
   const currentIsLesson = currentEntry.kind === "lesson";
   const currentStarting = currentIsLesson && startingOrder === currentEntry.lesson.order;
   const completedUnitCount = completedOrders.size + completedReviewIds.size;
@@ -2093,18 +2154,21 @@ function PracticeHome({
       </div>
       <div className="home-char-grid">
         {visibleEntries.map((entry) => {
-          const completed = practiceEntryComplete(entry, completedOrders, completedReviewIds);
+          const isPlaceholder = entry.kind === "review-placeholder";
+          const completed = !isPlaceholder && practiceEntryComplete(entry, completedOrders, completedReviewIds);
           return (
             <button
-              className={`home-char-card${entry.kind === "review" ? " review-card" : ""}${completed ? " completed" : ""}`}
+              className={`home-char-card${entry.kind !== "lesson" ? " review-card" : ""}${isPlaceholder ? " unavailable" : ""}${completed ? " completed" : ""}`}
               key={entry.id}
               onClick={() => {
+                if (entry.kind === "review-placeholder") return;
                 if (entry.kind === "lesson") onStart(entry.lesson.order);
                 else onStartReview(entry.review.id);
               }}
+              disabled={isPlaceholder}
             >
-              <span>{practiceEntryBadge(entry)}</span>
-              <strong>{practiceEntryLabel(entry)}</strong>
+              <span>{homePracticeEntryBadge(entry)}</span>
+              <strong>{homePracticeEntryLabel(entry)}</strong>
             </button>
           );
         })}
