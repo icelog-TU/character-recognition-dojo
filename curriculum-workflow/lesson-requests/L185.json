@@ -1,0 +1,204 @@
+{
+  "id": "L185",
+  "order": 185,
+  "newChars": [
+    "像"
+  ],
+  "zhuyin": {
+    "像": "ㄒㄧㄤˋ"
+  },
+  "title": "像",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete package for L185. Latest origin/main production JSON is complete through L181 說, so L185 depends on L182 師, L183 話, and L184 課. Use only latest production learned characters plus provisional 師, 話, 課 and current target 像. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 長、真、圖、館、片、教、班、對、請、講、電、想、情、服、完、乾、淨、忙、急、進、步、才、剛、弄、修、丟、收、拾.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L181 說 plus provisional L182 師, L183 話, L184 課 and current 像",
+    "provisionalLearnedChars": [
+      "師",
+      "話",
+      "課"
+    ],
+    "dependsOnLessons": [
+      "L182",
+      "L183",
+      "L184"
+    ],
+    "requiredCoverageChars": [
+      "像",
+      "課",
+      "話",
+      "師",
+      "說",
+      "見"
+    ],
+    "targetCharMinimumCount": {
+      "像": 3
+    },
+    "recentTargetMinimumCounts": {
+      "課": 2,
+      "話": 2,
+      "師": 2,
+      "說": 1,
+      "見": 1
+    },
+    "disallowedChars": [
+      "長",
+      "真",
+      "圖",
+      "館",
+      "片",
+      "教",
+      "班",
+      "對",
+      "請",
+      "講",
+      "電",
+      "想",
+      "情",
+      "服",
+      "完",
+      "乾",
+      "淨",
+      "忙",
+      "急",
+      "進",
+      "步",
+      "才",
+      "剛",
+      "弄",
+      "修",
+      "丟",
+      "收",
+      "拾"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, license plates, road signs, door plates, blackboard writing, clock numbers, speech bubbles, captions, or music-note symbols.",
+      "Use L058 image style anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 像 as public/assets/lessons/L185/audio/char-u50cf.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L185-S01",
+      "text": "老師說，我和爸爸很像。",
+      "spokenText": "老師說我和爸爸很像",
+      "focusChar": "像",
+      "displayLines": [
+        "老師說，",
+        "我和爸爸",
+        "很像。"
+      ],
+      "imageNotes": "老師看著孩子和爸爸，溫和地說他們很像。畫面可呈現孩子和爸爸站在一起，有相似的表情、髮型或帽子，老師在旁邊微笑。不可有文字、數字、對話框或標籤。"
+    },
+    {
+      "id": "L185-S02",
+      "text": "有事要找老師的話，下課再來。",
+      "spokenText": "有事要找老師的話下課再來",
+      "focusChar": "話",
+      "displayLines": [
+        "有事要找",
+        "老師的話，",
+        "下課再來。"
+      ],
+      "imageNotes": "孩子有事想找老師，老師正在上課或忙著看學生，示意孩子下課再來。畫面要表現「先等下課再找老師」的情境；不可有文字、數字、鐘面數字、課表或標籤。"
+    },
+    {
+      "id": "L185-S03",
+      "text": "不去上課，太不像話了。",
+      "spokenText": "不去上課太不像話了",
+      "focusChar": "像",
+      "displayLines": [
+        "不去上課，",
+        "太不像話了。"
+      ],
+      "imageNotes": "一個孩子背著書包卻不去上課，旁邊大人或老師露出嚴肅提醒的表情。畫面要表現「不去上課是不應該的」但不要恐怖或過度責罵；不可有文字、數字、標語或標籤。"
+    },
+    {
+      "id": "L185-S04",
+      "text": "小鳥的叫聲像在說話。",
+      "spokenText": "小鳥的叫聲像在說話",
+      "focusChar": "像",
+      "displayLines": [
+        "小鳥的叫聲",
+        "像在說話。"
+      ],
+      "imageNotes": "小鳥在窗邊或樹上叫，孩子側耳聽，像覺得小鳥正在說話。畫面可有孩子好奇聽小鳥叫的神情；不可有對話框、文字、數字、音符符號或標籤。"
+    },
+    {
+      "id": "L185-S05",
+      "text": "他一見到老師，就跑走了。",
+      "spokenText": "他一見到老師就跑走了",
+      "focusChar": "見",
+      "displayLines": [
+        "他一見到",
+        "老師，",
+        "就跑走了。"
+      ],
+      "imageNotes": "孩子一看見老師就轉身跑走，老師在後方看見他。畫面要是日常校園或教室外的輕鬆情境，不要呈現危險追逐；不可有文字、數字、招牌或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L185-S04",
+      "targetChar": "像",
+      "reason": "「叫聲像在說話」是本課核心用法，目標字清楚，語意自然。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L185-S03",
+      "targetChar": "像",
+      "targetCharIndex": 6,
+      "prefixText": "不去上課太不",
+      "suffixText": "話了"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L185-S01",
+      "targetChar": "像",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "像",
+        "說",
+        "見"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L185-S02",
+      "chunks": [
+        "有事要找",
+        "老師的話",
+        "下課再來"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L185-S05",
+      "correctText": "他一見到老師，就跑走了。",
+      "wrongOneText": "他一見到爸爸，就跑走了。",
+      "wrongTwoText": "他一見到老師，就坐下了。"
+    }
+  },
+  "dependsOnLessons": [
+    "L182",
+    "L183",
+    "L184"
+  ],
+  "provisionalLearnedChars": [
+    "師",
+    "話",
+    "課"
+  ]
+}
