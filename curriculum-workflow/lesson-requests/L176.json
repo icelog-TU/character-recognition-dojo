@@ -1,0 +1,179 @@
+{
+  "id": "L176",
+  "order": 176,
+  "newChars": [
+    "停"
+  ],
+  "zhuyin": {
+    "停": "ㄊㄧㄥˊ"
+  },
+  "title": "停",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L171",
+    "L172",
+    "L173",
+    "L174",
+    "L175"
+  ],
+  "provisionalLearnedChars": [
+    "馬"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "馬"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "停",
+      "馬",
+      "跑",
+      "事",
+      "快",
+      "就"
+    ],
+    "targetCharMinimumCount": {
+      "停": 3
+    },
+    "recentTargetMinimumCounts": {
+      "馬": 2,
+      "跑": 2,
+      "事": 2,
+      "快": 1,
+      "就": 1
+    }
+  },
+  "teacherNotes": "Teacher-approved final source for L176 停. Latest origin/main at production start is complete through L174 跑, so L175 馬 is a provisional learned character and L176 must remain ready-blocked-by-dependency until L175 exists in latest origin/main production JSON and the branch is rebased/rechecked. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Allowed display characters are production learned characters through L174 plus provisional 馬 and current target 停. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "看到紅燈，就要停下來。",
+      "spokenText": "看到紅燈就要停下來",
+      "focusChar": "停",
+      "displayLines": [
+        "看到紅燈，",
+        "就要停下來。"
+      ],
+      "scene": "孩子或家人在路邊看到紅燈後停下來等待。畫面要清楚呈現停下來的動作和紅燈，但紅燈上不可有文字、數字、標籤或路牌文字。",
+      "hanCharCount": 9
+    },
+    {
+      "text": "爸爸把車停在馬路邊。",
+      "spokenText": "爸爸把車停在馬路邊",
+      "focusChar": "停",
+      "displayLines": [
+        "爸爸把車",
+        "停在馬路邊。"
+      ],
+      "scene": "爸爸把車安全停在馬路邊，車子已停好，不在行駛中。畫面要清楚呈現車停在路邊，不可有車牌文字、路牌、數字或標籤。",
+      "hanCharCount": 9
+    },
+    {
+      "text": "好多人在跑，怎麼回事？",
+      "spokenText": "好多人在跑怎麼回事",
+      "focusChar": "事",
+      "displayLines": [
+        "好多人在跑，",
+        "怎麼回事？"
+      ],
+      "scene": "好多人在安全空地或操場上跑，一旁有人疑惑地看著，像是在問怎麼回事。畫面不要做成災難、恐慌或危險場景；不可有文字、數字或標籤。",
+      "hanCharCount": 9
+    },
+    {
+      "text": "小馬愛跑，沒事就跑個不停。",
+      "spokenText": "小馬愛跑沒事就跑個不停",
+      "focusChar": "停",
+      "displayLines": [
+        "小馬愛跑，",
+        "沒事就跑",
+        "個不停。"
+      ],
+      "scene": "可愛小馬在草地上開心地一直跑，旁邊環境安全開闊。畫面要表現跑個不停，但不要混亂或危險；不可有文字、數字或標籤。",
+      "hanCharCount": 11
+    },
+    {
+      "text": "小男孩飛快地跑走了。",
+      "spokenText": "小男孩飛快地跑走了",
+      "focusChar": "快",
+      "displayLines": [
+        "小男孩",
+        "飛快地",
+        "跑走了。"
+      ],
+      "scene": "小男孩在安全空地上跑得很快、正跑走。注意「飛快地」是很快的意思，不要畫成小男孩真的飛起來。不可有文字、數字或標籤。",
+      "hanCharCount": 9
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L176-G01",
+      "type": "find-character",
+      "sentenceId": "L176-S01",
+      "targetChar": "停",
+      "reason": "停下來是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L176-G02",
+      "type": "teach-character",
+      "sentenceId": "L176-S02",
+      "targetChar": "停",
+      "targetCharIndex": 4,
+      "prefixText": "爸爸把車",
+      "suffixText": "在馬路邊",
+      "requiredAudio": [
+        "public/assets/lessons/L176/audio/L176-G02-prefix.m4a",
+        "public/assets/lessons/L176/audio/L176-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L176-G03",
+      "type": "missing-character",
+      "sentenceId": "L176-S04",
+      "targetChar": "停",
+      "missingIndexes": [
+        10
+      ],
+      "options": [
+        "停",
+        "跑",
+        "快"
+      ]
+    },
+    {
+      "id": "L176-G04",
+      "type": "partial-order",
+      "sentenceId": "L176-S05",
+      "targetChar": "快",
+      "chunks": [
+        "小男孩",
+        "飛快地",
+        "跑走了"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L176-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L176-S03",
+      "targetChar": "事",
+      "correctText": "好多人在跑，怎麼回事？",
+      "correctSpokenText": "好多人在跑怎麼回事",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "好多人在走，怎麼回事？",
+          "spokenText": "好多人在走怎麼回事",
+          "audioSrc": "/assets/lessons/L176/audio/L176-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "好多人在坐，怎麼回事？",
+          "spokenText": "好多人在坐怎麼回事",
+          "audioSrc": "/assets/lessons/L176/audio/L176-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L176 | 停 / normal lesson | claimed | Production A | codex/l176-complete-package / 9c702d8 | L175:馬 | ["馬"] | curriculum-workflow/lesson-requests/L176.json; curriculum-workflow/generated/L176-generation-packet.md | public/assets/lessons/L176/images/; public/assets/lessons/L176/audio/ | accepted handoff and starting complete package |
+| L176 | 停 / normal lesson | ready-blocked-by-dependency | Production A | codex/l176-complete-package / 9c702d8 | L175:馬 | ["馬"] | curriculum-workflow/lesson-requests/L176.json; curriculum-workflow/generated/L176-generation-packet.md | public/assets/lessons/L176/images/; public/assets/lessons/L176/audio/ | complete package ready; blocked until L175 is merged into origin/main |
 
 ## Status Values
 
