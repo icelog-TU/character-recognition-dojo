@@ -1,0 +1,177 @@
+{
+  "id": "L177",
+  "order": 177,
+  "newChars": [
+    "叫"
+  ],
+  "zhuyin": {
+    "叫": "ㄐㄧㄠˋ"
+  },
+  "title": "叫",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L175",
+    "L176"
+  ],
+  "provisionalLearnedChars": [
+    "馬",
+    "停"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "馬",
+      "停"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "叫",
+      "停",
+      "馬",
+      "跑",
+      "事",
+      "快"
+    ],
+    "targetCharMinimumCount": {
+      "叫": 3
+    },
+    "recentTargetMinimumCounts": {
+      "停": 2,
+      "馬": 2,
+      "跑": 2,
+      "事": 1,
+      "快": 1
+    }
+  },
+  "teacherNotes": "Teacher-approved final source for L177 叫. Latest origin/main at production start is complete through L174 跑; L177 depends on not-yet-merged L175 馬 and L176 停 before production JSON may merge. Provisional learned chars from the handoff are 馬 and 停. Do not merge production JSON, planner-data, or ledger until L175 and L176 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "我叫小馬停下來。",
+      "spokenText": "我叫小馬停下來",
+      "focusChar": "叫",
+      "displayLines": [
+        "我叫小馬",
+        "停下來。"
+      ],
+      "scene": "Square image / 1:1 composition. The fixed first-person girl gently calls a small pony to stop; the pony is slowing down and stopping on safe grass. Clearly show both calling and stopping through body language, not text. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 7
+    },
+    {
+      "text": "我跑去窗邊叫爸爸。",
+      "spokenText": "我跑去窗邊叫爸爸",
+      "focusChar": "叫",
+      "displayLines": [
+        "我跑去窗邊",
+        "叫爸爸。"
+      ],
+      "scene": "Square image / 1:1 composition. The fixed first-person girl runs to a window and calls for her father; father is outside or nearby turning toward her. Clearly show running to the window and calling father. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "小狗叫個不停，怎麼回事？",
+      "spokenText": "小狗叫個不停怎麼回事",
+      "focusChar": "叫",
+      "displayLines": [
+        "小狗叫個",
+        "不停，",
+        "怎麼回事？"
+      ],
+      "scene": "Square image / 1:1 composition. A small dog keeps barking, while a child or adult looks at it with puzzled curiosity as if wondering what happened. Keep the scene safe, gentle, and not scary. No speech bubbles, visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, or readable marks.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "媽媽叫我馬上回家。",
+      "spokenText": "媽媽叫我馬上回家",
+      "focusChar": "叫",
+      "displayLines": [
+        "媽媽叫我",
+        "馬上回家。"
+      ],
+      "scene": "Square image / 1:1 composition. The fixed girl's mother gently calls the fixed first-person girl to come home right away; the girl is preparing to go home. Show 馬上 as immediately/right away, not riding or sitting on a horse. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "不要停下，快跑！",
+      "spokenText": "不要停下快跑",
+      "focusChar": "跑",
+      "displayLines": [
+        "不要停下，",
+        "快跑！"
+      ],
+      "scene": "Square image / 1:1 composition. In a safe playground or school field running game, someone encourages children not to stop and to keep running fast. This must look like a safe game or race, not a road, traffic, chase, danger, or escape scene. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 6
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L177-G01",
+      "type": "find-character",
+      "sentenceId": "L177-S01",
+      "targetChar": "叫",
+      "reason": "我叫小馬停下來 is the core use of 叫."
+    },
+    {
+      "id": "L177-G02",
+      "type": "teach-character",
+      "sentenceId": "L177-S02",
+      "targetChar": "叫",
+      "targetCharIndex": 5,
+      "prefixText": "我跑去窗邊",
+      "suffixText": "爸爸",
+      "requiredAudio": [
+        "public/assets/lessons/L177/audio/L177-G02-prefix.m4a",
+        "public/assets/lessons/L177/audio/L177-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L177-G03",
+      "type": "missing-character",
+      "sentenceId": "L177-S03",
+      "targetChar": "叫",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "叫",
+        "跑",
+        "停"
+      ]
+    },
+    {
+      "id": "L177-G04",
+      "type": "partial-order",
+      "sentenceId": "L177-S04",
+      "targetChar": "叫",
+      "chunks": [
+        "媽媽叫我",
+        "馬上",
+        "回家"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L177-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L177-S05",
+      "targetChar": "跑",
+      "correctText": "不要停下，快跑！",
+      "correctSpokenText": "不要停下快跑",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "不要停下，快走！",
+          "spokenText": "不要停下快走",
+          "audioSrc": "/assets/lessons/L177/audio/L177-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "不要坐下，快跑。",
+          "spokenText": "不要坐下快跑",
+          "audioSrc": "/assets/lessons/L177/audio/L177-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
