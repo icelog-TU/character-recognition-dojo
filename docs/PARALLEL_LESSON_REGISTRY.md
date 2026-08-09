@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L179 | 聽 / normal lesson | claimed | Production A | codex/l179-complete-package / 10ceda7 | L175:馬, L176:停, L177:叫, L178:聲 | ["馬","停","叫","聲"] | curriculum-workflow/lesson-requests/L179.json; curriculum-workflow/generated/L179-generation-packet.md | public/assets/lessons/L179/images/; public/assets/lessons/L179/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
