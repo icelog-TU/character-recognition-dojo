@@ -394,15 +394,18 @@
       ],
       "options": [
         {
-          "char": "像",
+          "id": "correct",
+          "text": "像",
           "correct": true
         },
         {
-          "char": "說",
+          "id": "say",
+          "text": "說",
           "correct": false
         },
         {
-          "char": "見",
+          "id": "see",
+          "text": "見",
           "correct": false
         }
       ],
@@ -443,16 +446,22 @@
       ],
       "options": [
         {
+          "id": "slot-1",
           "text": "有事要找",
-          "order": 0
+          "correctOrder": 0,
+          "correct": true
         },
         {
+          "id": "slot-2",
           "text": "老師的話",
-          "order": 1
+          "correctOrder": 1,
+          "correct": true
         },
         {
+          "id": "slot-3",
           "text": "下課再來",
-          "order": 2
+          "correctOrder": 2,
+          "correct": true
         }
       ],
       "prompt": "幫小兔子把句子排好。"
@@ -487,14 +496,5 @@
       ],
       "prompt": "幫小兔子選出正確的句子聲音。"
     }
-  ],
-  "productionNotes": {
-    "status": "ready-blocked-by-dependency until L184 enters origin/main",
-    "dependsOnLessons": [
-      "L184"
-    ],
-    "provisionalLearnedChars": [
-      "課"
-    ]
-  }
+  ]
 }

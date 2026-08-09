@@ -7,14 +7,13 @@
 - 新字：像
 - 注音：像=ㄒㄧㄤˋ
 - 目標句數：5
-- 教師備註：Production B complete package for L185. Latest origin/main production JSON is complete through L183 話, so L185 depends on L184 課. Use only latest production learned characters plus provisional 課 and current target 像. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 長、真、圖、館、片、教、班、對、請、講、電、想、情、服、完、乾、淨、忙、急、進、步、才、剛、弄、修、丟、收、拾.
+- 教師備註：Production B complete package for L185. Latest origin/main production JSON is complete through L184 課, so L185 has no remaining provisional dependency. Use only latest production learned characters plus current target 像. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 長、真、圖、館、片、教、班、對、請、講、電、想、情、服、完、乾、淨、忙、急、進、步、才、剛、弄、修、丟、收、拾.
 
 ## 已學字邊界
 
 AI 必須把這份課程序列視為鎖定邊界。
 
-- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話
-- 平行備課暫定已學字：課
+- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課
 - 本課新字：像
 - 顯示句子可用漢字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像
 - 禁止：任何未列在上方的漢字。
@@ -937,6 +936,11 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 老師說的話要聽。
 - 有事的話，就叫老師。
 - 見到老師，要問好。
+- 下課時，我和老師說再見。
+- 上課時，要用心聽老師說話。
+- 有帶書包，卻沒帶課本。
+- 我要去上畫畫課。
+- 窗外有鳥叫聲和說話聲。
 
 ## 造句提示
 
