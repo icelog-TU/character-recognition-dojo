@@ -625,8 +625,7 @@
       }
 
       function reviewTitle(reviewNumber) {
-        const zh = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-        return `複習${zh[reviewNumber] || reviewNumber}`;
+        return `複習${String(reviewNumber).padStart(2, "0")}`;
       }
 
       async function resolveRef() {

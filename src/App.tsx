@@ -947,8 +947,12 @@ function lessonLabel(lesson: Lesson): string {
   return lesson.newChars.join("");
 }
 
+function reviewNumberLabel(reviewNumber: number): string {
+  return String(reviewNumber).padStart(2, "0");
+}
+
 function reviewLessonLabel(review: ReviewLesson): string {
-  return `複習${smallZhNumber(review.reviewNumber)}`;
+  return `複習${reviewNumberLabel(review.reviewNumber)}`;
 }
 
 function reviewLessonAsPracticeUnit(review: ReviewLesson): PracticeUnit {
@@ -1033,7 +1037,7 @@ function practiceEntryBadge(entry: PracticeSequenceEntry): string {
 }
 
 function homePracticeEntryLabel(entry: HomePracticeEntry): string {
-  if (entry.kind === "review-placeholder") return `複習${smallZhNumber(entry.reviewNumber)}`;
+  if (entry.kind === "review-placeholder") return `複習${reviewNumberLabel(entry.reviewNumber)}`;
   return practiceEntryLabel(entry);
 }
 
@@ -2517,7 +2521,7 @@ function CatalogPage({
     normalizedQuery.length > 0
       ? reviewSlots.filter((slot) => {
           const id = reviewSlotId(slot.reviewNumber);
-          const label = slot.review ? reviewLessonLabel(slot.review) : `複習${smallZhNumber(slot.reviewNumber)}`;
+          const label = slot.review ? reviewLessonLabel(slot.review) : `複習${reviewNumberLabel(slot.reviewNumber)}`;
           return (
             id.toLowerCase().includes(normalizedQuery.toLowerCase()) ||
             label.includes(normalizedQuery) ||
@@ -2697,7 +2701,7 @@ function ReviewCatalogGrid({
         const id = review?.id ?? reviewSlotId(slot.reviewNumber);
         const locked = !review || review.afterLessonOrder > nextOrder;
         const completed = Boolean(review && completedReviewIds.has(review.id));
-        const label = review ? reviewLessonLabel(review) : `複習${smallZhNumber(slot.reviewNumber)}`;
+        const label = review ? reviewLessonLabel(review) : `複習${reviewNumberLabel(slot.reviewNumber)}`;
         const status = review ? (locked ? "未解鎖" : completed ? "已完成" : "可練習") : "預留";
         return (
           <button
