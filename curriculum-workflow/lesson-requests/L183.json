@@ -1,0 +1,191 @@
+{
+  "id": "L183",
+  "order": 183,
+  "newChars": [
+    "話"
+  ],
+  "zhuyin": {
+    "話": "ㄏㄨㄚˋ"
+  },
+  "title": "話",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L180",
+    "L181",
+    "L182"
+  ],
+  "provisionalLearnedChars": [
+    "見",
+    "說",
+    "師"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "見",
+      "說",
+      "師"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "話",
+      "師",
+      "說",
+      "見",
+      "聽",
+      "聲"
+    ],
+    "targetCharMinimumCount": {
+      "話": 3
+    },
+    "recentTargetMinimumCounts": {
+      "師": 2,
+      "說": 2,
+      "見": 2,
+      "聽": 1,
+      "聲": 1
+    },
+    "disallowedChars": [
+      "電",
+      "講",
+      "對",
+      "請",
+      "跟",
+      "班",
+      "字",
+      "號",
+      "牌",
+      "標",
+      "籤"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L183 話. Latest origin/main at production start is complete through L179 聽, so L183 depends on not-yet-merged L180 見, L181 說, and L182 師 before production JSON may merge. Provisional learned chars after recomputing against origin/main are 見、說、師. Do not merge production JSON, planner-data, or ledger until L180-L182 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, blackboard text, book text, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix from the exact fragment, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "先問老師，再說話。",
+      "spokenText": "先問老師再說話",
+      "focusChar": "話",
+      "displayLines": [
+        "先問老師，",
+        "再說話。"
+      ],
+      "imageNotes": "學校或教室情境，孩子先舉手或走到老師旁邊問老師，再開始說話。畫面要表現先問老師、再說話的規矩；不可有黑板文字、書本文字、數字或標籤。",
+      "hanCharCount": 7
+    },
+    {
+      "text": "我聽見門外有說話聲。",
+      "spokenText": "我聽見門外有說話聲",
+      "focusChar": "話",
+      "displayLines": [
+        "我聽見門外",
+        "有說話聲。"
+      ],
+      "imageNotes": "固定的「我」小女孩在門內，聽見門外有人說話的聲音，回頭或走向門邊查看。門外人物可模糊呈現正在說話，但不可有對話框文字、門牌、數字或標籤。",
+      "hanCharCount": 9
+    },
+    {
+      "text": "老師說的話要聽。",
+      "spokenText": "老師說的話要聽",
+      "focusChar": "話",
+      "displayLines": [
+        "老師說的話",
+        "要聽。"
+      ],
+      "imageNotes": "老師溫和說話，同學坐好聽老師說的話。畫面要清楚呈現老師說、孩子聽；不可有黑板文字、書本文字、課表、數字或標籤。",
+      "hanCharCount": 7
+    },
+    {
+      "text": "有事的話，就叫老師。",
+      "spokenText": "有事的話就叫老師",
+      "focusChar": "話",
+      "displayLines": [
+        "有事的話，",
+        "就叫老師。"
+      ],
+      "imageNotes": "孩子有事情需要幫忙時，叫老師過來。畫面要溫和、安全，呈現求助老師的情境；不可有對話框文字、數字或標籤。",
+      "hanCharCount": 8
+    },
+    {
+      "text": "見到老師，要問好。",
+      "spokenText": "見到老師要問好",
+      "focusChar": "師",
+      "displayLines": [
+        "見到老師，",
+        "要問好。"
+      ],
+      "imageNotes": "孩子在學校門口、走廊或教室門邊見到老師，禮貌地問好。畫面要清楚呈現孩子和老師互動，但不可有校名、招牌、文字、數字或標籤。",
+      "hanCharCount": 7
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L183-G01",
+      "type": "find-character",
+      "sentenceId": "L183-S03",
+      "targetChar": "話",
+      "reason": "老師說的話 is the core use of 話 in this lesson."
+    },
+    {
+      "id": "L183-G02",
+      "type": "teach-character",
+      "sentenceId": "L183-S01",
+      "targetChar": "話",
+      "targetCharIndex": 6,
+      "prefixText": "先問老師再說",
+      "suffixText": "",
+      "requiredAudio": [
+        "public/assets/lessons/L183/audio/L183-G02-prefix.m4a"
+      ]
+    },
+    {
+      "id": "L183-G03",
+      "type": "missing-character",
+      "sentenceId": "L183-S02",
+      "targetChar": "話",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "話",
+        "說",
+        "聽"
+      ]
+    },
+    {
+      "id": "L183-G04",
+      "type": "partial-order",
+      "sentenceId": "L183-S04",
+      "targetChar": "話",
+      "chunks": [
+        "有事的話",
+        "就叫",
+        "老師"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L183-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L183-S05",
+      "targetChar": "師",
+      "correctText": "見到老師，要問好。",
+      "correctSpokenText": "見到老師要問好",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "見到媽媽，要問好。",
+          "spokenText": "見到媽媽要問好",
+          "audioSrc": "/assets/lessons/L183/audio/L183-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "見到老師，要說話。",
+          "spokenText": "見到老師要說話",
+          "audioSrc": "/assets/lessons/L183/audio/L183-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
