@@ -1,64 +1,60 @@
 # 認字練功房 Project Handoff SOP
 
-這份文件只做新對話串交接入口。不要把所有細節規範複製到這裡；如果要修改流程，請改對應的權威文件，再讓本文件只保留連結與摘要。
+這份文件是新對話串的共同入口。每個新對話串先讀本文件，再依自己的角色讀一份 `ROLE_*_SOP.md`。
 
-## 權威文件分工
+不要依賴舊聊天紀錄、本機舊分支、舊 worktree 名稱、或口頭記憶判斷目前進度。最新真相一律在 GitHub `origin/main`。
 
-- 多對話串協作、工作區、Git、起手檢查、平行備課、合併順序：`docs/CURRICULUM_OPERATING_SOP.md`
-- 課程製作、圖片、音檔、壓縮、AI alignment、Stage 4、QA gate：`docs/CURRICULUM_PRODUCTION_SOP.md`
-- AI 造句提示、前五課複習字覆蓋、句子品質、`spokenText`、`focusChar`：`docs/SENTENCE_GENERATION_SOP.md`
-- 課程 JSON 結構、review module schema、validation schema：`docs/CURRICULUM_SCHEMA.md`
-- 目前已合併課程序、字表、視覺連續性、地點連續性：`docs/CURRICULUM_LEDGER.md`
-- 尚未合併的平行課程占用與 provisional dependencies：`docs/PARALLEL_LESSON_REGISTRY.md`
-- OpenAI key、AI 句子/音檔生成指令：`docs/AI_GENERATION_SETUP.md`
-- Firebase Auth、Firestore 帳號/profile/device 設定與 rules：`docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md`
-- 商品行為規格：`docs/PRODUCT_SPEC.md`
-- 角色收藏與轉蛋系統：`docs/COLLECTION_SYSTEM.md`
-- 收藏角色美術規格：`docs/CHARACTER_ART_STYLE_SPEC.md`
-- Planner Worker 設定：`docs/AI_PLANNER_WORKER_SETUP.md`
-
-如果文件互相衝突，使用上面最具體的權威文件；如果 Markdown 與 production JSON 衝突，latest `origin/main` 的 `src/curriculum/sample-lessons.json` 是出貨真相。
-
-## 目前狀態
+## Source Of Truth
 
 - Repo: `https://github.com/icelog-TU/character-recognition-dojo`
 - GitHub Pages: `https://icelog-tu.github.io/character-recognition-dojo/`
+- Shipping curriculum truth: latest `origin/main:src/curriculum/sample-lessons.json`
+- Shipping lesson assets: latest `origin/main:public/assets/lessons/`
+- Shipping review assets: latest `origin/main:public/assets/reviews/`
+- Merged human summary: `docs/CURRICULUM_LEDGER.md`
+- Not-yet-merged parallel board: `docs/PARALLEL_LESSON_REGISTRY.md`
+
+If Markdown and production JSON disagree, latest `origin/main:src/curriculum/sample-lessons.json` wins. Fix the Markdown summary; do not block work because a stale note disagrees.
+
+## Current Production State
+
+As of latest `origin/main`:
+
 - App name: `認字練功房`
 - Current reviewed lessons: L001-L170
 - L170 introduces `回`.
-- Production review modules: R001-R004 after L090, covering L001-L060.
+- Production review modules: R001-R004.
 - L001-L005 use Stage 1-3.
 - L006-L170 include Stage 4 fixed sentence games.
-- Review modules do not occupy `L###` lesson numbers. After L060, the next new-character lesson is L061.
+- Review modules use `R###` ids and do not consume `L###` lesson numbers.
 
-Always verify current state with `git fetch origin`, `npm run curriculum:audit-state`, and `docs/CURRICULUM_LEDGER.md`; do not trust an older chat transcript as current progress. If ledger Markdown disagrees with production JSON, production JSON wins and the Markdown summary must be corrected, not used to block the current lesson.
+Every new thread must still verify this with `git fetch origin` and `npm run curriculum:audit-state`.
 
-## 新對話串起手
+## Role SOPs
 
-Coordination/release working copy:
+Open exactly one role SOP after this file:
 
-```text
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo-profile-sync
-```
+- Supervisor / coordination / SOP maintenance: `docs/ROLE_SUPERVISOR_SOP.md`
+- Sentence editor: `docs/ROLE_EDITOR_SOP.md`
+- Production A/B/C: `docs/ROLE_PRODUCTION_SOP.md`
+- Release / ordered push to `main`: `docs/ROLE_RELEASE_SOP.md`
+- Asset repair after teacher review: `docs/ROLE_ASSET_REPAIR_SOP.md`
 
-Keep this path clean for release, SOP, and cross-thread coordination. Do not use it for ordinary parallel lesson production unless the user explicitly assigns release or SOP work.
+Role SOPs are entry adapters. Detailed authority still belongs to:
 
-Parallel production threads must use one of the fixed worktree slots:
+- Multi-thread source of truth, worktrees, registry, merge order: `docs/CURRICULUM_OPERATING_SOP.md`
+- Lesson/review production assets, image/audio/alignment, Stage 4 QA: `docs/CURRICULUM_PRODUCTION_SOP.md`
+- Sentence drafting, allowed characters, coverage, `spokenText`, `focusChar`: `docs/SENTENCE_GENERATION_SOP.md`
+- JSON schema and validation expectations: `docs/CURRICULUM_SCHEMA.md`
+- Merged lesson ledger and continuity notes: `docs/CURRICULUM_LEDGER.md`
+- AI key and generation commands: `docs/AI_GENERATION_SETUP.md`
+- Firebase account/device/review-state setup: `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md`
 
-```text
-Production thread A:
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-a
+When SOP files conflict, use the most specific authority file above and update the stale file.
 
-Production thread B:
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b
+## Standard Startup
 
-Production thread C:
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
-```
-
-Do not create a new clone unless the user explicitly asks for one. If the current shell is not in the assigned path, stop and tell the user before editing.
-
-Run:
+Run from the assigned worktree:
 
 ```bash
 git remote -v
@@ -69,71 +65,190 @@ npm run tools:check
 npm run curriculum:audit-state
 ```
 
-Do not run `npm ci` as a routine start command in any active worktree. On Windows it can fail with `EPERM unlink` when another Codex thread, dev server, or Node process locks native package files. Use it only when dependencies are actually missing or stale, and only after confirming that assigned worktree is not actively being used.
+If the task needs GitHub PRs, Actions, Pages, or deployment status, also run:
 
-GitHub CLI is available on this machine. If bare `gh` is not found, use:
+```powershell
+gh auth status
+gh run list --branch main --limit 5
+gh pr list
+```
+
+If bare `gh` is not found, use:
 
 ```powershell
 C:\Users\User\.local\bin\gh.cmd auth status
 C:\Users\User\.local\bin\gh.cmd run list --branch main --limit 5
 C:\Users\User\.local\bin\gh.cmd pr list
-C:\Users\User\.local\bin\gh.cmd issue list
 ```
 
-Read these files before lesson or SOP work:
+Do not report GitHub CLI as unavailable until the full-path command fails.
 
-- `docs/PROJECT_HANDOFF_SOP.md`
-- `docs/CURRICULUM_OPERATING_SOP.md`
-- `docs/CURRICULUM_PRODUCTION_SOP.md`
-- `docs/SENTENCE_GENERATION_SOP.md`
-- `docs/CURRICULUM_LEDGER.md`
-- `docs/PARALLEL_LESSON_REGISTRY.md`
-- `docs/CURRICULUM_SCHEMA.md`
-- `docs/AI_GENERATION_SETUP.md`
+Do not run `npm ci` as a routine startup command. Run it only when dependencies are missing or known stale, and only after confirming no other thread or dev server is using that worktree.
 
-Before editing, state the exact ownership in chat, including lesson id and owned paths. Do not edit `src/curriculum/sample-lessons.json` for a later lesson until its dependency lessons exist in latest `origin/main`.
+## Worktree Map
 
-## 不可違反的規則
+Coordination / SOP / release diagnostics:
+
+```text
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\sop-coordination
+```
+
+Legacy coordination path, may be dirty or stale; inspect before use:
+
+```text
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo-profile-sync
+```
+
+Production slots:
+
+```text
+Production A:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-a
+
+Production B:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b
+
+Production C:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
+```
+
+Asset repair:
+
+```text
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair
+```
+
+Do not create a new clone unless the user explicitly asks. If the current shell is not in the assigned path, stop and report it before editing.
+
+## Non-Negotiable Rules
 
 - Use Taiwan zhuyin only. Do not use Hanyu pinyin.
-- AI sentences are drafts until teacher approved.
-- AI recommended next characters are also drafts. Do not treat a recommendation file, `approval.selectedChoiceId`, or an unmerged lesson request as a reserved lesson choice unless the teacher explicitly approved that character and final sentence set.
-- Sentence drafting must follow `docs/SENTENCE_GENERATION_SOP.md`.
-- The standard curriculum workflow uses five threads: one sentence editor, three lesson/review production threads, and one ordered release thread. The sentence editor must output a complete production handoff, not just "make images and audio."
-- Production handoffs must be one-paste executable. The receiving production thread claims the unit in `docs/PARALLEL_LESSON_REGISTRY.md` and then continues to the complete package without waiting for a second teacher message, unless a real blocker is present.
-- A normal lesson is not merge-ready unless request, packet, draft, final images, final sentence audio, standalone `charAudio`, Stage 4 `G02`/`G05` audio where referenced, production JSON, planner export, ledger update, registry cleanup/update, and checks are complete.
-- A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a course. The release thread must reject it instead of reconstructing final lesson text from chat.
-- Production audio must use the standard AI audio -> `assets:audio` -> `assets:align:ai` pipeline unless the teacher explicitly approves an exception.
-- Before saying FFmpeg, FFprobe, ImageMagick, or OpenAI setup is unavailable, run `npm run tools:check` and/or `npm run ai:check`.
-- Character-card `charAudio` must be standalone OpenAI TTS generated from the single target character. Never cut, trim, slice, copy, or extract character-card audio from sentence audio.
-- Do not create production wrong-choice audio by cutting or patching the correct sentence audio. Generate each wrong option as whole-sentence AI audio from its final text.
-- Audio files that need teacher listening approval must be reviewed through the permanent page `public/tools/audio-review.html`; do not publish temporary review pages that disappear on the next GitHub Pages deploy.
-- Teacher image/audio review is post-merge by default. Automated gates block release; teacher subjective review becomes a repair queue through `public/tools/asset-review-index.html` and `public/tools/lesson-asset-review.html`.
-- The review tools read cloud review state across devices through Firestore. New marks, notes, repair clearing, and whole-unit completion are cross-device only after Google sign-in; otherwise the change is local to that browser.
-- Post-merge repair is not complete when a repair branch preview looks correct. The repaired asset must be pushed into `main`; then the teacher revisits `ref=main`, clears the relevant `needs repair` checkbox, and checks whole-unit complete. The index is green only when `reviewComplete` is true and `repairCount` is zero.
-- Stage 3 sentence images in the child-facing app are square. New or replacement sentence images must be generated as square `1:1` compositions with safe margins for all meaning-bearing people, objects, actions, and count relationships; do not generate wide images and rely on the app crop. The lesson asset review page shows only the app's square image view. If meaning-bearing visual content is cut off or unclear there, the image needs repair.
-- New or replacement sentence images must use the L058 style anchors unless the teacher approves a new style direction:
-  - `public/assets/lessons/L058/images/L058-S01.webp`
-  - `public/assets/lessons/L058/images/L058-S02.webp`
-  - `public/assets/lessons/L058/images/L058-S03.webp`
-- Final sentence images must be WebP, phone-sized, and compressed according to `docs/CURRICULUM_PRODUCTION_SOP.md`.
-- Review modules use `R###`, live in top-level `reviewLessons`, introduce no new characters, and do not consume `L###` lesson numbers.
-- Production-ready review modules must be inserted into the normal playable course sequence and square course-card grid. Example path: `L060` -> `R001` -> `R002` -> `L061`.
-- The child-facing `漢字總覽` page must keep a permanent `複習區` after the six color groups, reserving `R001` through `R040`. Future review slots may appear there only as locked placeholders, not as JSON curriculum records.
-- Review modules grant the same one-time reward as lessons. Replaying a completed review module must not grant another reward.
-- Review modules are two-stage units in the UI: `看圖聽句子` then `句子遊戲`. Do not show normal-lesson Stage 1/2 rows or `第三階段`/`第四階段` labels for review modules.
-- Account progress belongs to profiles under `accounts/{uid}/profiles/{profileId}`. Device records under `accounts/{uid}/devices/{deviceId}` identify phones/tablets by generated system ID and store `activeProfileId`.
-- A family account has up to three active learning profiles. Default labels are `學習檔案一`, `學習檔案二`, and `學習檔案三`; users may rename profile labels to names such as `媽媽`, `哥哥`, and `妹妹`.
-- The app header account/profile button is the primary switching surface. It must show the signed-in account first, then the three learning profiles, and link into Settings for profile renaming.
-- Free browsing is an internal Firestore device authorization for approved teacher/parent devices only; it must not appear as a user-facing mode or toggle.
-- Unlocked lessons must allow direct entry to any stage. Do not force Stage 1 -> Stage 2 -> Stage 3 -> Stage 4 during review.
-- In completed lessons, direct stage entry is replay mode: the selected stage must start at that stage's beginning instead of showing the old completed-stage advance prompt.
-- Every Stage 4 round must have `按我看解答`; revealing the answer must not count as completion, and the revealed state must offer `重新挑戰這一題`.
-- Preserve user/other-thread changes. Never revert unrelated work unless explicitly requested.
+- AI sentences and AI recommended next characters are drafts until teacher approved.
+- Final teacher-approved sentence sets must be captured in repo files, not only in chat.
+- Production handoffs must be one-paste executable.
+- A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a complete course.
+- Production audio must use OpenAI audio, `npm run assets:audio`, and `npm run assets:align:ai` unless the teacher explicitly approves an exception.
+- Standalone character-card `charAudio` must be generated from the single target character. Do not cut it from sentence audio.
+- Wrong-choice audio must be generated as whole-sentence audio from the exact wrong text. Do not splice or patch correct audio.
+- Teacher subjective review is post-merge by default through the permanent asset review pages. Automated gates still block release.
+- Preserve user and other-thread changes. Never stash, reset, revert, or overwrite unrelated work unless explicitly requested.
+
+## Review URLs
+
+Post-merge asset review:
+
+```text
+https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=main
+npm run asset:review-status -- --unit L### --ref main
+npm run asset:review-status -- --list --ref main
+```
+
+Pre-merge audio review only when explicitly requested:
+
+```text
+https://icelog-TU.github.io/character-recognition-dojo/tools/audio-review.html?unit=L###&ref=<branch-or-commit-sha>
+npm run audio:review-status -- --unit L### --ref <branch-or-commit-sha>
+```
+
+Do not publish temporary review pages.
+
+## Copy Prompts For New Threads
+
+### Supervisor
+
+```text
+你是「認字練功房」Supervisor / 總管對話串。
+
+Repo:
+https://github.com/icelog-TU/character-recognition-dojo
+
+請以 GitHub origin/main 為唯一真相，不要相信舊 chat 或本機舊分支。
+先讀：
+- docs/PROJECT_HANDOFF_SOP.md
+- docs/ROLE_SUPERVISOR_SOP.md
+
+使用 coordination/SOP 工作區：
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\sop-coordination
+
+先執行角色 SOP 的起手檢查，只回報狀態，不要修改、commit、push，除非我明確要求。
+```
+
+### Editor
+
+```text
+你是「認字練功房」Editor / 句子編輯對話串。
+
+Repo:
+https://github.com/icelog-TU/character-recognition-dojo
+
+請以 GitHub origin/main 為唯一真相，不要相信舊 chat 或本機舊分支。
+先讀：
+- docs/PROJECT_HANDOFF_SOP.md
+- docs/ROLE_EDITOR_SOP.md
+
+你的工作是跟我選新字、定稿五句話，然後輸出可一鍵貼給 Production A/B/C 的完整 handoff。不要製作圖片或音檔，除非我另外明確要求。
+```
+
+### Production A/B/C
+
+```text
+你是「認字練功房」Production <A|B|C> 對話串。
+
+Repo:
+https://github.com/icelog-TU/character-recognition-dojo
+
+請以 GitHub origin/main 為唯一真相，不要相信舊 chat 或本機舊分支。
+先讀：
+- docs/PROJECT_HANDOFF_SOP.md
+- docs/ROLE_PRODUCTION_SOP.md
+
+指定 worktree:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-<a|b|c>
+
+如果這個 worktree 不是 clean，停止並回報。不要 stash、reset、revert、或覆蓋別人的工作。
+收到 Editor 的完整 handoff 後，依 SOP claim registry，從 origin/main 建新分支，並直接製作完整課程包。
+```
+
+### Release
+
+```text
+你是「認字練功房」Release / 推課對話串。
+
+Repo:
+https://github.com/icelog-TU/character-recognition-dojo
+
+請以 GitHub origin/main 為唯一真相，不要相信舊 chat 或本機舊分支。
+先讀：
+- docs/PROJECT_HANDOFF_SOP.md
+- docs/ROLE_RELEASE_SOP.md
+
+你的工作是把 Production A/B/C 已推到遠端分支的完整課程包，按 playable lesson order 一課一課移植/合併到 main，跑 gate，push，並檢查 GitHub Pages 部署。
+不要直接 merge 舊基底分支；先從 origin/main 檢查 diff 和依賴。
+```
+
+### Asset Repair
+
+```text
+你是「認字練功房」Asset Repair / 修圖修音對話串。
+
+Repo:
+https://github.com/icelog-TU/character-recognition-dojo
+
+請以 GitHub origin/main 為唯一真相，不要相信舊 chat 或本機舊分支。
+先讀：
+- docs/PROJECT_HANDOFF_SOP.md
+- docs/ROLE_ASSET_REPAIR_SOP.md
+
+使用 repair 工作區：
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair
+
+你的工作只處理已進 main 的 asset review repair queue。根據我提供的 review 摘要修圖或修音，推回 main，讓我重新到 review page 清除 repair 並勾整課 OK。
+```
 
 ## Windows UTF-8
 
-Markdown and JSON files are UTF-8. Garbled Chinese in PowerShell output usually means the terminal decoding path is wrong, not that the file is corrupted.
+Markdown and JSON files are UTF-8. Garbled Chinese in PowerShell output usually means terminal decoding is wrong, not that the file is corrupted.
 
 Use explicit UTF-8 reads:
 
@@ -150,105 +265,3 @@ node -e "process.stdout.write(require('fs').readFileSync('docs/PROJECT_HANDOFF_S
 ```
 
 Only report real corruption if explicit UTF-8 decoding fails, replacement characters appear in the decoded file, or GitHub/a UTF-8-aware editor shows the same damaged text.
-
-## Required Checks
-
-For normal completed work:
-
-```bash
-npm run verify
-git diff --stat
-git diff --name-only
-```
-
-For media diagnostics:
-
-```bash
-npm run assets:audit
-```
-
-For production curriculum or asset changes, `npm run validate:production` must pass. If checks fail, conflicts appear, unrelated files are modified, or newer `origin/main` needs inspection, do not push until the issue is fixed or reported.
-
-The user has standing approval for safe, checked, completed work to be merged to `main` so it is visible on GitHub Pages from a phone. Do not merge if the diff contains unrelated work or another thread's unfinished changes.
-
-## 新對話串可複製提示
-
-```text
-We are continuing the `認字練功房` repo:
-https://github.com/icelog-TU/character-recognition-dojo
-
-Use the working copy assigned for your thread. Do not create a new clone.
-
-For release / SOP / coordination work only:
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\character-recognition-dojo-profile-sync
-
-For normal parallel lesson production, use one assigned worktree slot:
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-a
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
-
-If your current working directory is not exactly the assigned path, stop and tell me before editing. Do not work from any older clone.
-
-If your assigned production worktree is dirty, stop and report the dirty files. Do not stash, revert, or overwrite another thread's unfinished work. A dirty state in another worktree does not block your assigned clean worktree.
-
-Before editing, run:
-git remote -v
-git fetch origin
-git status --short --branch
-git log -1 --oneline
-npm run tools:check
-npm run curriculum:audit-state
-
-If GitHub CLI is needed and `gh` is not found, use:
-C:\Users\User\.local\bin\gh.cmd
-
-Please read:
-- docs/PROJECT_HANDOFF_SOP.md
-- docs/CURRICULUM_OPERATING_SOP.md
-- docs/CURRICULUM_PRODUCTION_SOP.md
-- docs/SENTENCE_GENERATION_SOP.md
-- docs/CURRICULUM_LEDGER.md
-- docs/PARALLEL_LESSON_REGISTRY.md
-- docs/CURRICULUM_SCHEMA.md
-- docs/AI_GENERATION_SETUP.md
-
-Multiple Codex threads may be working on this repo. Before editing, fetch/status, confirm the current commit, read the parallel lesson registry, and state which files or subsystem this thread owns.
-
-The standard lesson workflow has five threads: one sentence editor, three production threads for assigned lessons/reviews, and one release thread. If you receive a sentence-editor handoff, build the complete course package. Do not produce only image/audio assets unless the handoff explicitly says this is `assets-only` exploratory work.
-
-If you are a production thread receiving a complete sentence-editor handoff, do not stop after reporting "claimed." Confirm the assigned worktree, run startup checks, create the task branch from `origin/main`, add/update the registry row as `claimed`, then continue directly into the full lesson/review package. Stop only if the assigned worktree is dirty, startup checks fail, the handoff is missing approved sentence data, dependency/allowed-character checks fail, or the registry cannot be updated/pushed before large asset work.
-
-For a normal lesson, complete means:
-curriculum-workflow/lesson-requests/L###.json
-curriculum-workflow/generated/L###-generation-packet.md
-curriculum-workflow/drafts/L###-draft.json
-public/assets/lessons/L###/images/
-public/assets/lessons/L###/audio/ with S01-S05, standalone char-uXXXX, and required G02/G05 audio
-src/curriculum/sample-lessons.json when dependencies are merged
-public/tools/planner-data.json
-docs/CURRICULUM_LEDGER.md
-docs/PARALLEL_LESSON_REGISTRY.md
-
-A branch with only images, S01-S05 audio, and charAudio is `assets-only`, not merge-ready. Final sentence text must be in repo request/draft/generated files, not only in chat.
-
-The app is a Taiwan zhuyin character-recognition app for young children. Do not use Hanyu pinyin.
-AI sentence drafting must follow docs/SENTENCE_GENERATION_SOP.md.
-Production audio must use AI audio, npm run assets:audio, and npm run assets:align:ai unless the teacher explicitly approves an exception.
-If teacher audio approval is requested, provide a stable review URL using:
-https://icelog-TU.github.io/character-recognition-dojo/tools/audio-review.html?unit=L###&ref=<branch-or-commit-sha>
-Also provide:
-npm run audio:review-status -- --unit L### --ref <branch-or-commit-sha>
-Only block merge-ready on teacher audio approval if the teacher explicitly requested pre-merge approval for that unit. Otherwise provide the post-merge asset review URL:
-https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main
-Direct unit URL:
-https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=main
-Repair queue command:
-npm run asset:review-status -- --unit L### --ref main
-All repair queue command:
-npm run asset:review-status -- --list --ref main
-Before saying FFmpeg/FFprobe/ImageMagick/OpenAI is unavailable, run npm run tools:check and/or npm run ai:check.
-For new or replacement sentence images, use L058 style anchors:
-public/assets/lessons/L058/images/L058-S01.webp
-public/assets/lessons/L058/images/L058-S02.webp
-public/assets/lessons/L058/images/L058-S03.webp
-```

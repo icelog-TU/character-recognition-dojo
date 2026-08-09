@@ -14,6 +14,7 @@ Do not duplicate detailed rules across SOP files. Use this authority order when 
 - `docs/CURRICULUM_SCHEMA.md` is the authority for JSON shape and validation expectations.
 - `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md` is the authority for Firebase console setup, Firestore data model, and Firestore rules.
 - `docs/PROJECT_HANDOFF_SOP.md` is only the handoff entry point and must stay concise.
+- `docs/ROLE_SUPERVISOR_SOP.md`, `docs/ROLE_EDITOR_SOP.md`, `docs/ROLE_PRODUCTION_SOP.md`, `docs/ROLE_RELEASE_SOP.md`, and `docs/ROLE_ASSET_REPAIR_SOP.md` are role-specific startup adapters. They must link to the authority files above instead of duplicating detailed rules.
 
 When adding a new rule, update the one authority file above and replace duplicates elsewhere with links.
 
@@ -146,13 +147,15 @@ This means three conversations can prepare L052, L053, and L054 at the same time
 
 ## Five-Thread Curriculum Workflow
 
-The standard parallel curriculum workflow uses five conversation threads:
+The standard parallel curriculum production lane uses five conversation threads:
 
 1. **Sentence editor thread:** drafts with the teacher, performs the allowed-character and coverage audits, and records the teacher-approved final sentence set.
 2. **Production thread A:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-a`.
 3. **Production thread B:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-b`.
 4. **Production thread C:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-c`.
 5. **Release thread:** receives completed units, rebases on latest `origin/main`, merges in playable order, runs gates, pushes, and checks deployment.
+
+The full operating model normally has seven open conversation windows across five role types: Supervisor, Editor, Production A, Production B, Production C, Release, and Asset Repair. Supervisor and Asset Repair sit outside the five-thread production lane. Use the role-specific SOP files from `docs/PROJECT_HANDOFF_SOP.md` when opening new windows.
 
 The sentence editor thread is not allowed to send only "make images and audio" instructions. After the teacher approves sentences, it must output a complete production handoff for each unit and either create or explicitly require the receiving production thread to create all source files listed below.
 
