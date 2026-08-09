@@ -23,8 +23,8 @@ As of latest `origin/main`:
 - App name: `認字練功房`
 - Current reviewed lessons: L001-L184
 - L184 introduces `課`.
-- Production review modules: R001-R004.
-- Overdue review blockers: R005-R010 must be planned, produced, and released before shipping later numbered lessons beyond the current catch-up state.
+- Production review modules: R001-R006.
+- Overdue review blockers: R007-R010 must be planned, produced, and released before shipping later numbered lessons beyond the current catch-up state.
 - L001-L005 use Stage 1-3.
 - L006-L184 include Stage 4 fixed sentence games.
 - Review modules use `R###` ids and do not consume `L###` lesson numbers.

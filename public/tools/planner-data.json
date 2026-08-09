@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-09T16:49:38.065Z",
+  "exportedAt": "2026-08-09T22:46:16.258Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -84888,6 +84888,978 @@
           ]
         }
       ]
+    },
+    {
+      "id": "R005",
+      "reviewNumber": 5,
+      "title": "複習五",
+      "afterLessonOrder": 120,
+      "targetLessonRange": {
+        "startOrder": 61,
+        "endOrder": 90
+      },
+      "requiredCoverageChars": [
+        "坐",
+        "站",
+        "開",
+        "左",
+        "著",
+        "拿",
+        "包",
+        "花",
+        "朵",
+        "了",
+        "畫",
+        "出",
+        "學",
+        "路",
+        "誰",
+        "校",
+        "問",
+        "找",
+        "同",
+        "帶",
+        "筆",
+        "借",
+        "那",
+        "本",
+        "給",
+        "紙",
+        "心",
+        "放",
+        "把",
+        "桌"
+      ],
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "R005-S01",
+          "text": "放學了，同學站起來。",
+          "displayLines": [
+            "放學了，",
+            "同學站起來。"
+          ],
+          "spokenText": "放學了同學站起來",
+          "focusChar": "起",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 放學時，幾位同學從座位上站起來準備離開教室。畫面可有書包和課桌，但不可有文字、數字、課表或標籤。",
+          "imageSrc": "/assets/reviews/R005/images/R005-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R005/audio/R005-S01.m4a",
+            "durationMs": 4329,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1440,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1800,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2040,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2360,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2660,
+                "endMs": 2880
+              }
+            ]
+          }
+        },
+        {
+          "id": "R005-S02",
+          "text": "他拿著書包站在校門邊。",
+          "displayLines": [
+            "他拿著書包",
+            "站在校門邊。"
+          ],
+          "spokenText": "他拿著書包站在校門邊",
+          "focusChar": "著",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 一個男孩拿著書包站在校門邊等人或準備回家。校門不可有校名、文字、數字、招牌或標籤。",
+          "imageSrc": "/assets/reviews/R005/images/R005-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R005/audio/R005-S02.m4a",
+            "durationMs": 3762,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 900
+              },
+              {
+                "charIndex": 2,
+                "startMs": 900,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1420,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1700,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2600,
+                "endMs": 2860
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2860,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3100,
+                "endMs": 3340
+              }
+            ]
+          }
+        },
+        {
+          "id": "R005-S03",
+          "text": "門前左邊那朵花開了。",
+          "displayLines": [
+            "門前左邊",
+            "那朵花開了。"
+          ],
+          "spokenText": "門前左邊那朵花開了",
+          "focusChar": "左",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 門前左邊有一朵花開了，位置要清楚，以門為參照。不可有文字、門牌、數字或標籤。",
+          "imageSrc": "/assets/reviews/R005/images/R005-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R005/audio/R005-S03.m4a",
+            "durationMs": 4707,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1580,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1660,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1940,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2580,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2840,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 7,
+                "startMs": 4020,
+                "endMs": 4100
+              },
+              {
+                "charIndex": 8,
+                "startMs": 4100,
+                "endMs": 4180
+              }
+            ]
+          }
+        },
+        {
+          "id": "R005-S04",
+          "text": "桌上那本書是誰借的？",
+          "displayLines": [
+            "桌上那本書",
+            "是誰借的？"
+          ],
+          "spokenText": "桌上那本書是誰借的",
+          "focusChar": "借",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 桌上有一本書，幾個孩子或孩子和大人在看它，像是在問這本書是誰借的。桌面和書要清楚，書封不可有文字、數字、標籤或可讀圖案。",
+          "imageSrc": "/assets/reviews/R005/images/R005-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R005/audio/R005-S04.m4a",
+            "durationMs": 3684,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1600,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2660,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2880,
+                "endMs": 3080
+              }
+            ]
+          }
+        },
+        {
+          "id": "R005-S05",
+          "text": "我畫出上學的路。",
+          "displayLines": [
+            "我畫出",
+            "上學的路。"
+          ],
+          "spokenText": "我畫出上學的路",
+          "focusChar": "畫",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 孩子在紙上畫一條從家到學校的路，用簡單線條或圖形表示路線，但紙上不可有任何文字、數字、箭頭標籤或地名。",
+          "imageSrc": "/assets/reviews/R005/images/R005-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R005/audio/R005-S05.m4a",
+            "durationMs": 3414,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1460,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1640,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1860,
+                "endMs": 1980
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "R005-G01",
+          "type": "find-character",
+          "sentenceId": "R005-S02",
+          "targetChar": "著",
+          "prompt": "找出「著」。"
+        },
+        {
+          "id": "R005-G02",
+          "type": "teach-character",
+          "sentenceId": "R005-S01",
+          "targetChar": "起",
+          "targetCharIndex": 6,
+          "prompt": "看這裡。",
+          "teachAudio": {
+            "prefixSrc": "/assets/reviews/R005/audio/R005-G02-prefix.m4a",
+            "suffixSrc": "/assets/reviews/R005/audio/R005-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "R005-G03",
+          "type": "missing-character",
+          "sentenceId": "R005-S04",
+          "targetChar": "借",
+          "prompt": "找出少的。",
+          "missingIndexes": [
+            7
+          ],
+          "options": [
+            {
+              "id": "option-0-501f",
+              "text": "借",
+              "correct": true
+            },
+            {
+              "id": "option-1-554f",
+              "text": "問",
+              "correct": false
+            },
+            {
+              "id": "option-2-627e",
+              "text": "找",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "R005-G04",
+          "type": "partial-order",
+          "sentenceId": "R005-S03",
+          "targetChar": "左",
+          "prompt": "放好。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "options": [
+            {
+              "id": "order-0",
+              "text": "門",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "order-1",
+              "text": "前",
+              "correct": true,
+              "correctOrder": 1
+            },
+            {
+              "id": "order-2",
+              "text": "左",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "order-3",
+              "text": "邊",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "order-4",
+              "text": "那",
+              "correct": true,
+              "correctOrder": 4
+            },
+            {
+              "id": "order-5",
+              "text": "朵",
+              "correct": true,
+              "correctOrder": 5
+            },
+            {
+              "id": "order-6",
+              "text": "花",
+              "correct": true,
+              "correctOrder": 6
+            },
+            {
+              "id": "order-7",
+              "text": "開",
+              "correct": true,
+              "correctOrder": 7
+            },
+            {
+              "id": "order-8",
+              "text": "了",
+              "correct": true,
+              "correctOrder": 8
+            }
+          ]
+        },
+        {
+          "id": "R005-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "R005-S05",
+          "targetChar": "畫",
+          "prompt": "點一點。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我畫出上學的路。",
+              "correct": true,
+              "audioSrc": "/assets/reviews/R005/audio/R005-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "我畫出上學的門。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R005/audio/R005-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "我畫出放學的路。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R005/audio/R005-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ],
+      "productionNotes": {
+        "status": "asset-complete-package-in-progress",
+        "pair": "R005/R006",
+        "allowedCharacterBoundary": "L001-L120 only",
+        "noNewCharsZhuyinOrCharAudio": true,
+        "stage4": "Five fixed sentenceGames per review module. Partial-order request chunks are represented as app-compatible per-Han option cards in the draft.",
+        "audio": "Use AI audio -> assets:audio -> assets:align:ai. G02 prefix/suffix and G05 wrong options are whole independent TTS generations.",
+        "timingReview": "AI alignment completed; manually smoothed 1 ms ASR timestamp artifacts in R005-S03 and R006-S01 without changing text or audio."
+      }
+    },
+    {
+      "id": "R006",
+      "reviewNumber": 6,
+      "title": "複習六",
+      "afterLessonOrder": 120,
+      "targetLessonRange": {
+        "startOrder": 61,
+        "endOrder": 90
+      },
+      "requiredCoverageChars": [
+        "坐",
+        "站",
+        "開",
+        "左",
+        "著",
+        "拿",
+        "包",
+        "花",
+        "朵",
+        "了",
+        "畫",
+        "出",
+        "學",
+        "路",
+        "誰",
+        "校",
+        "問",
+        "找",
+        "同",
+        "帶",
+        "筆",
+        "借",
+        "那",
+        "本",
+        "給",
+        "紙",
+        "心",
+        "放",
+        "把",
+        "桌"
+      ],
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "R006-S01",
+          "text": "坐好，拿出筆和紙。",
+          "displayLines": [
+            "坐好，",
+            "拿出筆和紙。"
+          ],
+          "spokenText": "坐好拿出筆和紙",
+          "focusChar": "筆",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 孩子坐好，從桌上或書包裡拿出筆和紙準備寫畫。不可有文字、數字或標籤。",
+          "imageSrc": "/assets/reviews/R006/images/R006-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R006/audio/R006-S01.m4a",
+            "durationMs": 4930,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1580,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1800,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2020,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2440,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3140,
+                "endMs": 3440
+              }
+            ]
+          }
+        },
+        {
+          "id": "R006-S02",
+          "text": "媽媽把書包給我。",
+          "displayLines": [
+            "媽媽把書包",
+            "給我。"
+          ],
+          "spokenText": "媽媽把書包給我",
+          "focusChar": "給",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 媽媽把書包交給孩子，孩子伸手接。畫面重點是「給」的動作，不可有文字、數字或標籤。",
+          "imageSrc": "/assets/reviews/R006/images/R006-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R006/audio/R006-S02.m4a",
+            "durationMs": 2768,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1560,
+                "endMs": 1830
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1830,
+                "endMs": 2100
+              }
+            ]
+          }
+        },
+        {
+          "id": "R006-S03",
+          "text": "我問那本書是誰帶來的？",
+          "displayLines": [
+            "我問那本書",
+            "是誰帶來的？"
+          ],
+          "spokenText": "我問那本書是誰帶來的",
+          "focusChar": "問",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 孩子指著或拿著一本書問旁邊同學，想知道這本書是誰帶來的。不可有對話框、文字、數字或標籤。",
+          "imageSrc": "/assets/reviews/R006/images/R006-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R006/audio/R006-S03.m4a",
+            "durationMs": 4006,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1320,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1600,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2820,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3060,
+                "endMs": 3260
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3260,
+                "endMs": 3440
+              }
+            ]
+          }
+        },
+        {
+          "id": "R006-S04",
+          "text": "他去找小狗。",
+          "displayLines": [
+            "他去找",
+            "小狗。"
+          ],
+          "spokenText": "他去找小狗",
+          "focusChar": "找",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 一個孩子在家裡或院子附近找小狗，小狗可半躲在桌邊、門邊或草地旁。不可有文字、數字或標籤。",
+          "imageSrc": "/assets/reviews/R006/images/R006-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R006/audio/R006-S04.m4a",
+            "durationMs": 3862,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1480,
+                "endMs": 1680
+              }
+            ]
+          }
+        },
+        {
+          "id": "R006-S05",
+          "text": "用心畫一朵花。",
+          "displayLines": [
+            "用心畫",
+            "一朵花。"
+          ],
+          "spokenText": "用心畫一朵花",
+          "focusChar": "心",
+          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 孩子專心地畫一朵花，桌上有紙和筆。畫面要表現專心，不可有文字、數字、簽名或標籤。",
+          "imageSrc": "/assets/reviews/R006/images/R006-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R006/audio/R006-S05.m4a",
+            "durationMs": 2558,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 980
+              },
+              {
+                "charIndex": 2,
+                "startMs": 980,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1200,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1520,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 2000
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "R006-G01",
+          "type": "find-character",
+          "sentenceId": "R006-S03",
+          "targetChar": "問",
+          "prompt": "找出「問」。"
+        },
+        {
+          "id": "R006-G02",
+          "type": "teach-character",
+          "sentenceId": "R006-S01",
+          "targetChar": "筆",
+          "targetCharIndex": 4,
+          "prompt": "看這裡。",
+          "teachAudio": {
+            "prefixSrc": "/assets/reviews/R006/audio/R006-G02-prefix.m4a",
+            "suffixSrc": "/assets/reviews/R006/audio/R006-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "R006-G03",
+          "type": "missing-character",
+          "sentenceId": "R006-S05",
+          "targetChar": "心",
+          "prompt": "找出少的。",
+          "missingIndexes": [
+            1
+          ],
+          "options": [
+            {
+              "id": "option-0-5fc3",
+              "text": "心",
+              "correct": true
+            },
+            {
+              "id": "option-1-624b",
+              "text": "手",
+              "correct": false
+            },
+            {
+              "id": "option-2-773c",
+              "text": "眼",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "R006-G04",
+          "type": "partial-order",
+          "sentenceId": "R006-S02",
+          "targetChar": "給",
+          "prompt": "放好。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "options": [
+            {
+              "id": "order-0",
+              "text": "媽",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "order-1",
+              "text": "媽",
+              "correct": true,
+              "correctOrder": 1
+            },
+            {
+              "id": "order-2",
+              "text": "把",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "order-3",
+              "text": "書",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "order-4",
+              "text": "包",
+              "correct": true,
+              "correctOrder": 4
+            },
+            {
+              "id": "order-5",
+              "text": "給",
+              "correct": true,
+              "correctOrder": 5
+            },
+            {
+              "id": "order-6",
+              "text": "我",
+              "correct": true,
+              "correctOrder": 6
+            }
+          ]
+        },
+        {
+          "id": "R006-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "R006-S04",
+          "targetChar": "找",
+          "prompt": "點一點。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "他去找小狗。",
+              "correct": true,
+              "audioSrc": "/assets/reviews/R006/audio/R006-S04.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "他去找小鳥。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R006/audio/R006-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "他去看小狗。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R006/audio/R006-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ],
+      "productionNotes": {
+        "status": "asset-complete-package-in-progress",
+        "pair": "R005/R006",
+        "allowedCharacterBoundary": "L001-L120 only",
+        "noNewCharsZhuyinOrCharAudio": true,
+        "stage4": "Five fixed sentenceGames per review module. Partial-order request chunks are represented as app-compatible per-Han option cards in the draft.",
+        "audio": "Use AI audio -> assets:audio -> assets:align:ai. G02 prefix/suffix and G05 wrong options are whole independent TTS generations.",
+        "timingReview": "AI alignment completed; manually smoothed 1 ms ASR timestamp artifacts in R005-S03 and R006-S01 without changing text or audio."
+      }
     }
   ],
   "nextCharacterBank": [

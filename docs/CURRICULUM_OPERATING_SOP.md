@@ -489,8 +489,8 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L184, L184 introduces `課`, and review modules are complete through R004.
+As of latest `origin/main`, production curriculum is complete through L184, L184 introduces `課`, and review modules are complete through R006.
 
-Under the review-blocker rule, R005-R010 are overdue catch-up work. Do not ship another numbered lesson after L184 until the overdue review pairs are planned, produced, and released in order.
+Under the review-blocker rule, R007-R010 are overdue catch-up work. Do not ship another numbered lesson after L184 until the overdue review pairs are planned, produced, and released in order.
 
 L001-L005 use the simpler Stage 1-3 flow. L006-L184 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.

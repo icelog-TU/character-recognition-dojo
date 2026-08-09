@@ -56,6 +56,8 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 | Lesson | New Character(s) | Cumulative Learned Characters | Reviewed Sentences | Old Characters Reviewed | Notes |
 |---|---|---|---|---|---|
+| R005 | review module | same as L120 | 放學了，同學站起來。 / 他拿著書包站在校門邊。 / 門前左邊那朵花開了。 / 桌上那本書是誰借的？ / 我畫出上學的路。 | 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 | Fifth review module after L120. Introduces no new characters. R005-R006 together cover every new character from L061-L090. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R006 | review module | same as L120 | 坐好，拿出筆和紙。 / 媽媽把書包給我。 / 我問那本書是誰帶來的？ / 他去找小狗。 / 用心畫一朵花。 | 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 | Sixth review module after L120. Introduces no new characters. Completes the third review pair covering L061-L090. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | L001 | 一、二、三、人 | 一、二、三、人 | 人 / 一人 / 二人 / 三人 | none | Seed lesson. Four characters are introduced together because the first lesson needs enough material to make meaning. |
 | L002 | 個 | 一、二、三、人、個 | 人 / 一個人 / 三個人 | 一、三、人 | `個` is neutral tone in `一個人` and `三個人`. Avoid `二個人`; use `兩個人` only after `兩` is taught. |
 | L003 | 大 | 一、二、三、人、個、大 | 大人 / 二人 / 三個人 / 一個大人 | 一、二、三、人、個 | Uses `大人` as a meaningful phrase and repeats counting people. |
@@ -292,7 +294,7 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 ## Planned Lessons
 
-Merged curriculum is complete through L184. Review modules are complete through R004. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L184. Review modules are complete through R006. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
