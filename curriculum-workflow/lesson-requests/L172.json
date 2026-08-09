@@ -1,0 +1,202 @@
+{
+  "id": "L172",
+  "order": 172,
+  "newChars": [
+    "快"
+  ],
+  "zhuyin": {
+    "快": "ㄎㄨㄞˋ"
+  },
+  "title": "快",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L167",
+    "L168",
+    "L169",
+    "L170",
+    "L171"
+  ],
+  "provisionalLearnedChars": [
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "快",
+      "就",
+      "回",
+      "亂",
+      "髒",
+      "又"
+    ],
+    "targetCharMinimumCount": {
+      "快": 3
+    },
+    "recentTargetMinimumCounts": {
+      "就": 2,
+      "回": 2,
+      "亂": 2,
+      "髒": 1,
+      "又": 1
+    },
+    "disallowedChars": [
+      "服",
+      "見",
+      "跑",
+      "進",
+      "完",
+      "乾",
+      "淨",
+      "才",
+      "剛",
+      "弄",
+      "修",
+      "丟",
+      "收",
+      "拾"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L172 快. Latest origin/main at production start is complete through L167 又; L172 still depends on L168 髒, L169 亂, L170 回, and L171 就 before production JSON may merge. Provisional learned chars from the handoff are 又, 髒, 亂, 回, 就, with 又 already present in latest main. Do not merge production JSON, planner-data, or ledger until L168-L171 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Do not add unlearned display characters such as 服, 見, 跑, 進, 完, 乾, 淨, 才, 剛, 弄, 修, 丟, 收, or 拾. G05 wrong options from the handoff were shorter than the correct sentence and would fail the production validator; production wrong choices are 路邊怎麼這麼髒了？ and 路邊怎麼這麼亂了？ so each option has the same Han count and differs by 1-2 Han characters. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "快一點，車子就要開走了。",
+      "spokenText": "快一點車子就要開走了",
+      "focusChar": "快",
+      "displayLines": [
+        "快一點，車子",
+        "就要開走了。"
+      ],
+      "scene": "Square image / 1:1 composition. A vehicle is about to leave, and a child or adult is hurrying to get on. Show urgency for 快一點 with body posture and motion, not words. No license plate text, route signs, station names, labels, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "不要亂動，快點放回去。",
+      "spokenText": "不要亂動快點放回去",
+      "focusChar": "快",
+      "displayLines": [
+        "不要亂動，",
+        "快點放回去。"
+      ],
+      "scene": "Square image / 1:1 composition. A child has moved or is fiddling with an object, and an adult gently reminds the child to put it back quickly. Use a toy, blank book, or hat as the object. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "小鳥飛得很快。",
+      "spokenText": "小鳥飛得很快",
+      "focusChar": "快",
+      "displayLines": [
+        "小鳥飛得",
+        "很快。"
+      ],
+      "scene": "Square image / 1:1 composition. A small bird flies quickly across the sky. Use wing pose and gentle motion lines or blurred movement to show speed clearly without any symbols or words. No visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 6
+    },
+    {
+      "text": "路邊怎麼這麼髒亂？",
+      "spokenText": "路邊怎麼這麼髒亂",
+      "focusChar": "髒",
+      "displayLines": [
+        "路邊怎麼",
+        "這麼髒亂？"
+      ],
+      "scene": "Square image / 1:1 composition. A roadside has some dirty and messy things scattered on the ground, and a child looks puzzled or frowns. Make the roadside dirty and messy but not disgusting. No signs, visible text, labels, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "一回家，就又出去玩了。",
+      "spokenText": "一回家就又出去玩了",
+      "focusChar": "就",
+      "displayLines": [
+        "一回家，",
+        "就又",
+        "出去玩了。"
+      ],
+      "scene": "Square image / 1:1 composition. A child has just arrived at the home doorway and immediately heads back outside to play again. Clearly show the home doorway and the continuous action of arriving home then going out to play. No house numbers, doorplate text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 9
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L172-G01",
+      "type": "find-character",
+      "sentenceId": "L172-S03",
+      "targetChar": "快",
+      "reason": "飛得很快 is the core use of 快 and has a clear image."
+    },
+    {
+      "id": "L172-G02",
+      "type": "teach-character",
+      "sentenceId": "L172-S02",
+      "targetChar": "快",
+      "targetCharIndex": 4,
+      "prefixText": "不要亂動",
+      "suffixText": "點放回去",
+      "requiredAudio": [
+        "public/assets/lessons/L172/audio/L172-G02-prefix.m4a",
+        "public/assets/lessons/L172/audio/L172-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L172-G03",
+      "type": "missing-character",
+      "sentenceId": "L172-S01",
+      "targetChar": "快",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "快",
+        "就",
+        "回"
+      ]
+    },
+    {
+      "id": "L172-G04",
+      "type": "partial-order",
+      "sentenceId": "L172-S05",
+      "targetChar": "就",
+      "chunks": [
+        "一回家",
+        "就又",
+        "出去玩了"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L172-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L172-S04",
+      "targetChar": "髒",
+      "correctText": "路邊怎麼這麼髒亂？",
+      "correctSpokenText": "路邊怎麼這麼髒亂",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "路邊怎麼這麼髒了？",
+          "spokenText": "路邊怎麼這麼髒了",
+          "audioSrc": "/assets/lessons/L172/audio/L172-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "路邊怎麼這麼亂了？",
+          "spokenText": "路邊怎麼這麼亂了",
+          "audioSrc": "/assets/lessons/L172/audio/L172-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
