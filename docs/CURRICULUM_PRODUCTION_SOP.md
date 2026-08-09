@@ -65,33 +65,61 @@ Only treat text as actually damaged if UTF-8 decoding fails, decoded text contai
 9. For approved sentences, generate one natural full-sentence audio file per sentence.
 10. Process audio without trimming sentence endings.
 11. Use AI transcription timestamps to verify the spoken sentence and write character timing metadata.
-12. Move only reviewed content into `src/curriculum/sample-lessons.json`.
-13. Update `docs/CURRICULUM_LEDGER.md`, including `Current Character State`; run `npm run curriculum:export-planner`; update or clear the registry row if the lesson was parallel-prepared.
-14. Run `npm run verify`.
+12. Finish the lesson-local package: request, packet, draft, final optimized images, final processed audio, timings, Stage 4 assets, and registry status.
+13. Run the fast package audit below and push the package branch.
+14. Leave release integration to Release: `src/curriculum/sample-lessons.json`, `public/tools/planner-data.json`, `docs/CURRICULUM_LEDGER.md`, registry cleanup, final `npm run verify`, push, and deployment.
 
-## Production-Ready Lesson Package
+## Asset-Complete Lesson Package
 
 A production thread may prepare one assigned normal lesson or review module in parallel, but it must leave a complete repo package. Media files alone are not a lesson.
 
-For a normal lesson, the minimum complete package is:
+For a normal lesson, the minimum `asset-complete-package` is:
 
 - `curriculum-workflow/lesson-requests/L###.json` with teacher-approved `newChars`, zhuyin, `allowedChars`, teacher notes, and final `approvedSentences`
 - `curriculum-workflow/generated/L###-generation-packet.md`
 - `curriculum-workflow/drafts/L###-draft.json` with final image prompts, audio refs, `charTimings`, and `sentenceGames`
 - final compressed images under `public/assets/lessons/L###/images/`
 - final processed audio under `public/assets/lessons/L###/audio/`, including sentence audio, standalone `charAudio`, and any `G02`/`G05` Stage 4 audio referenced by the lesson
-- a production entry in `src/curriculum/sample-lessons.json` only when all dependency lessons are already merged
-- refreshed `public/tools/planner-data.json` and updated `docs/CURRICULUM_LEDGER.md` when the unit enters production
 - an accurate `docs/PARALLEL_LESSON_REGISTRY.md` row until merge cleanup
 
 For a review module, use `curriculum-workflow/review-requests/R###.json` and `public/assets/reviews/R###/`; review modules have no `newChars`, zhuyin, or standalone character audio.
+
+Production owns `asset-complete-package`, not `release-ready-package`. It should not spend time rebasing old branches, rebuilding production JSON, refreshing planner data, or updating ledger for dependency-blocked lessons. Those shared-state steps belong to Release after earlier lessons are in latest `origin/main`.
 
 Hard release gate:
 
 - A branch with only `public/assets/lessons/L###/images/`, `S01-S05` audio, and `charAudio` is `assets-only`. It must not be called `merge-ready`, and the release thread must not infer final lesson JSON from chat.
 - A draft that has `durationMs` but missing/empty `charTimings` is not aligned.
-- A normal L006+ lesson with missing `sentenceGames`, missing `teachAudio` files, or missing `choose-pronunciation` wrong-option audio is not production-ready.
+- A normal L006+ lesson with missing `sentenceGames`, missing `teachAudio` files, or missing `choose-pronunciation` wrong-option audio is not asset-complete.
 - A lesson using provisional characters can be prepared, but it cannot enter production until those characters are real in latest `origin/main` or the teacher changes the sentence set.
+
+## Fast Package Audit
+
+Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`, Production must do a fast lesson-local audit. This audit is intended to catch defects that are cheap for Production to fix and expensive for Release to rediscover:
+
+- `lesson-requests/L###.json`, `generated/L###-generation-packet.md`, and `drafts/L###-draft.json` agree on lesson id, order, new character(s), Taiwan zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
+- Top-level `dependsOnLessons` is present whenever the lesson uses provisional characters from earlier unmerged lessons.
+- `displayLines`, when present, join exactly back to `text`; each displayed line should stay at `<= 5` Han characters when zhuyin is shown.
+- `charAudio` paths use `char-uXXXX.m4a`; generation packets and drafts must not leave stale examples such as `char-字.m4a`.
+- Every reviewed sentence has final `imageSrc`, sentence `audio.src`, `durationMs`, and non-empty `charTimings`.
+- Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported game type once, and use every reviewed sentence exactly once.
+- `find-character`, `teach-character`, and `missing-character` point to a target character that actually appears in the referenced sentence.
+- `teach-character` includes `targetCharIndex` and exact generated prefix/suffix `teachAudio` where needed.
+- Stage 4 option schema is complete: option ids, `correct`, and `correctOrder` metadata exist where the game type requires them.
+- `choose-pronunciation` wrong options are near misses, normally same sentence length and only 1-2 Han characters different from the correct option.
+- If any `choose-pronunciation` option text changes, regenerate the corresponding whole-sentence wrong-option audio from the exact final text, then rerun `npm run assets:audio -- --lesson L###`.
+- `choose-pronunciation` option audio should pass the `3 dB` mean-volume spread check. If `npm run assets:audit` reports a spread issue for the new lesson, normalize or regenerate before handoff.
+- All image and audio paths referenced by the draft exist under the owned lesson/review asset folder.
+
+Production should run:
+
+```bash
+npm run validate:production
+git diff --stat
+git diff --name-only
+```
+
+Run `npm run verify` only when the branch has a current production JSON entry and dependencies are already present in latest `origin/main`. For dependency-blocked packages, report that `verify` was skipped because shared-state integration is Release-owned.
 
 ## Cloud Device Authorization
 
@@ -126,7 +154,7 @@ Parallel lesson ownership, registry checkpoints, dependency rechecks, and merge 
 Production-specific constraints still apply during parallel work:
 
 - Each thread may prepare only its owned lesson/review request, packet, raw audio inbox, and final asset folder.
-- A production handoff should be one-paste executable. The receiving thread claims the unit in the registry and continues to the complete package unless the assigned worktree is dirty, startup checks fail, required handoff data is missing, dependency/allowed-character checks fail, or the registry cannot be updated/pushed before large asset work.
+- A production handoff should be one-paste executable. The receiving thread claims the unit in the registry and continues to the `asset-complete-package` unless the assigned worktree is dirty, startup checks fail, required handoff data is missing, dependency/allowed-character checks fail, or the registry cannot be updated/pushed before large asset work.
 - Image prompt writing, image generation, and raw AI audio generation may happen in parallel by owned lesson/review folder.
 - JSON-writing commands must run one at a time: `assets:images`, `assets:audio`, `assets:align`, `assets:align:ai`, and any script that rewrites `src/curriculum/sample-lessons.json` or shared reports.
 - Before any later lesson is merged, re-check every sentence, image prompt, audio file, Stage 4 option, and timing against the now-real learned-character set from latest `origin/main`.
@@ -243,7 +271,7 @@ Get-ChildItem public/assets/lessons/L### -Recurse -File | Measure-Object Length 
 
 For review modules, use `public/assets/reviews/R###` in the same commands.
 
-Until these hard limits are enforced in `npm run validate:production`, the thread shipping the lesson must paste or summarize the size check in its final handoff. Do not describe a lesson as production-ready if the size check was skipped.
+Until these hard limits are enforced in `npm run validate:production`, the thread preparing the lesson must paste or summarize the size check in its final handoff. Do not describe a lesson as asset-complete if the size check was skipped.
 
 For whole-repo asset diagnostics, run:
 
@@ -309,7 +337,7 @@ After processing, verify the final `.m4a` files, not only the raw AI files:
 - codec is AAC, sample rate is `44100 Hz`, and channel count is mono
 - every sentence's Han-character count matches `audio.charTimings.length`
 
-For dependency-blocked lessons, do not leave a future lesson in production JSON. If a script requires the lesson to exist in `src/curriculum/sample-lessons.json` temporarily, insert it only long enough to process audio/timings, then immediately remove it before committing. Final `git status` for a dependency-blocked package must not show `src/curriculum/sample-lessons.json`, `public/tools/planner-data.json`, or `docs/CURRICULUM_LEDGER.md` as changed for that future lesson. Mark the registry status `ready-blocked-by-dependency`, not `merge-ready`.
+For dependency-blocked lessons, do not leave a future lesson in production JSON. If a script requires the lesson to exist in `src/curriculum/sample-lessons.json` temporarily, insert it only long enough to process audio/timings, then immediately remove it before committing. Final `git status` for a dependency-blocked package must not show `src/curriculum/sample-lessons.json`, `public/tools/planner-data.json`, or `docs/CURRICULUM_LEDGER.md` as changed for that future lesson. Mark the registry status `dependency-blocked-asset-complete`, not `merge-ready` or `release-ready`.
 
 Production audio hard limits for every new or touched lesson/review module:
 
@@ -353,15 +381,11 @@ If the teacher explicitly requests pre-merge audio approval for a specific unit,
 
 Teacher image/audio review is post-merge by default. Do not block ordinary production/release while waiting for the teacher to manually inspect every picture and audio file, as long as the required automated gates pass.
 
-Automated gates still block production:
+Automated gates still block the relevant owner:
 
-- `npm run verify`
-- `npm run validate:production`
-- required image/audio files exist
-- final images are compressed WebP with no referenced PNG/JPG leftovers
-- final audio is processed `.m4a` with valid format/loudness checks
-- Stage 4 `teachAudio` and `choose-pronunciation` audio referenced by JSON exist
-- `charTimings` and allowed-character checks pass
+- Production must not hand off an `asset-complete-package` until required image/audio files exist, final images are compressed WebP with no referenced PNG/JPG leftovers, final audio is processed `.m4a`, Stage 4 `teachAudio` and `choose-pronunciation` audio referenced by the draft exist, and `charTimings` plus allowed-character checks pass.
+- Production should run `npm run validate:production` and the fast package audit above. Run `npm run verify` only when the branch has a meaningful current production JSON entry.
+- Release must run `npm run verify` after integrating the unit into latest `origin/main` production JSON, planner, ledger, and registry cleanup.
 
 Teacher subjective review is a repair queue, not a release gate:
 

@@ -30,6 +30,8 @@ Before merging a Production branch:
 
 If a Production branch was built on an old base, create a fresh release branch from `origin/main` and move only the intended unit files.
 
+Production branches are not assumed to be directly mergeable. Treat `asset-complete-package` branches as lesson-local source packages. Shared state inside an old Production branch, including `src/curriculum/sample-lessons.json`, `public/tools/planner-data.json`, `docs/CURRICULUM_LEDGER.md`, SOP files, tools, and repair assets, is not trusted unless the branch was freshly rebased and verified against latest `origin/main`.
+
 ## Startup
 
 Run:
@@ -87,6 +89,18 @@ npm run assets:audit
 
 `assets:audit` default findings should be reported. Strict mode is only required when the task is to enforce all asset findings.
 
+## Production Package Intake
+
+Before integrating a Production package, classify it:
+
+- `asset-complete-package`: lesson-local files are complete and Production's fast package audit passed, but Release still owns main integration.
+- `dependency-blocked-asset-complete`: lesson-local files are complete, but earlier lessons must enter `origin/main` first.
+- `partial-package` or `assets-only`: do not integrate; return it to Production with the missing items.
+
+Release should fix release-owned integration issues, such as rebasing from latest `origin/main`, transplanting the intended lesson files, inserting the production JSON entry, regenerating planner data, updating the ledger, clearing registry rows, running `npm run verify`, pushing, and checking deployment.
+
+If Release finds production-local defects, do not silently absorb them as normal release work. Fix only when needed to keep the current release moving, then report a `release-side repairs` list to Supervisor. Production-local defects include stale request/draft/packet mismatch, invalid `displayLines`, missing top-level `dependsOnLessons`, missing Stage 4 option ids or correctness metadata, repeated/missing Stage 4 sentence usage, stale `charAudio` path examples, wrong-option text that differs too much, wrong-option audio that does not match the final text, and failed lesson-local audio loudness checks.
+
 ## Push And Deployment
 
 After checks pass and the diff is limited to the intended unit/release cleanup:
@@ -109,7 +123,7 @@ Stop and report instead of pushing if:
 - The release branch has unrelated changes.
 - A Production branch deletes or rewrites newer `main` work.
 - Dependencies are missing.
-- Request/packet/draft/final sentence data is missing.
+- Request/packet/draft/final sentence data is missing or internally inconsistent.
 - Stage 4 audio or timings are incomplete.
 - `npm run verify` fails.
 - GitHub Actions or Pages deployment fails after push.

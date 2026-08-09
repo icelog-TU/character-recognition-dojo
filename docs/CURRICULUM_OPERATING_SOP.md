@@ -179,7 +179,7 @@ Required production handoff fields:
 - complete required file list and final status expectation
 - an auto-claim-and-continue block telling the production thread exactly when to continue and exactly when to stop
 
-For a normal lesson, the complete required file list is:
+For a normal lesson, the Production-owned `asset-complete-package` file list is:
 
 ```text
 curriculum-workflow/lesson-requests/L###.json
@@ -192,15 +192,23 @@ public/assets/lessons/L###/audio/char-uXXXX.m4a
 public/assets/lessons/L###/audio/L###-G02-prefix.m4a and/or L###-G02-suffix.m4a when `teach-character` needs them
 public/assets/lessons/L###/audio/L###-G05-wrong-one.m4a
 public/assets/lessons/L###/audio/L###-G05-wrong-two.m4a
-src/curriculum/sample-lessons.json, only when dependencies are merged and the unit is entering production
-public/tools/planner-data.json, after production curriculum changes
-docs/CURRICULUM_LEDGER.md, after production curriculum changes
 docs/PARALLEL_LESSON_REGISTRY.md, while the unit is not yet merged
+```
+
+Release-owned shared-state files are added or updated only when the unit enters `main`:
+
+```text
+src/curriculum/sample-lessons.json
+public/tools/planner-data.json
+docs/CURRICULUM_LEDGER.md
+docs/PARALLEL_LESSON_REGISTRY.md cleanup
 ```
 
 For a review module, replace lesson request/assets paths with `curriculum-workflow/review-requests/R###.json` and `public/assets/reviews/R###/`. Review modules have no `newChars`, `zhuyin`, or `charAudio`.
 
-Production threads must not call a unit complete or merge-ready unless the repo contains the request/packet/draft, final images, final sentence audio, Stage 4 option or teach audio where referenced, production JSON entry when allowed, planner export, ledger update, registry cleanup/update, and passing checks. A branch that contains only images plus `S01-S05` sentence audio plus `charAudio` is `assets-only`, not a course.
+Production target state is `asset-complete-package`, not `release-ready-package`. Production owns the lesson-local package: request, packet, draft, final images, final sentence audio, `charAudio`, Stage 4 audio, timings, and lesson-local metadata consistency. Release owns integration into latest `origin/main`: production JSON insertion, planner export, ledger update, registry cleanup, final `npm run verify`, push, and deployment checks.
+
+Production threads must not call a unit `asset-complete-package` unless the repo contains the request/packet/draft, final images, final sentence audio, Stage 4 option or teach audio where referenced, local timings, and an accurate registry row. A branch that contains only images plus `S01-S05` sentence audio plus `charAudio` is `assets-only`, not a course. A dependency-blocked branch must not be called `merge-ready` or `release-ready`.
 
 The release thread must merge only in playable order and must reject:
 
@@ -209,7 +217,18 @@ The release thread must merge only in playable order and must reject:
 - missing Stage 4 `G02` or `G05` audio referenced by production JSON
 - `durationMs` without production `charTimings`
 - unresolved provisional learned characters
-- stale branches not rebased on latest `origin/main`
+- stale branches that cannot be safely merged into latest `origin/main`
+
+Status names:
+
+- `claimed`: the production thread accepted the assignment and recorded ownership.
+- `assets-only`: images plus ordinary sentence audio may exist, but request/packet/draft/Stage 4/timings are missing or incomplete.
+- `asset-complete-package`: Production finished the lesson-local package and the fast package audit passed. This does not promise the branch can be directly merged.
+- `dependency-blocked-asset-complete`: the lesson-local package is complete, but earlier lessons are not yet in latest `origin/main`.
+- `release-ready-package`: only Release may use this after rebasing or transplanting onto latest `origin/main`, updating shared production state, and passing release gates.
+- `in-main`: the lesson is present in latest `origin/main` production JSON in contiguous playable order.
+
+Production must avoid slow release work. It should not rebuild `src/curriculum/sample-lessons.json`, `public/tools/planner-data.json`, or `docs/CURRICULUM_LEDGER.md` for dependency-blocked lessons. Those shared files are release-owned. If a script temporarily edits them to generate assets or timings, Production must remove those temporary shared-state changes before its final package commit.
 
 ## Auto-Claim And Continue Workflow
 
@@ -251,8 +270,8 @@ The audit must compare all available evidence instead of trusting one progress f
 Classify every lesson in the checked range:
 
 - `in-main`: present in latest `origin/main` production JSON in contiguous order.
-- `complete-package`: request, packet, draft, images, audio, timings, Stage 4 assets, and branch are present, but the lesson is not merged.
-- `dependency-blocked`: package appears complete, but an earlier required lesson is not yet in `origin/main`.
+- `asset-complete-package`: request, packet, draft, images, audio, timings, Stage 4 assets, and branch are present, but the lesson is not merged.
+- `dependency-blocked-asset-complete`: package appears lesson-local complete, but an earlier required lesson is not yet in `origin/main`.
 - `partial-package`: some source or asset files exist, but required package pieces are missing.
 - `missing`: no credible branch, registry row, request, draft, or asset folder exists.
 - `stale-or-misnamed-branch`: branch exists but lesson id, dependencies, registry row, or production JSON do not match the expected order.
@@ -330,16 +349,20 @@ npm run assets:align:ai -- --lesson L###
 ```
 
 13. Manually play every Stage 3 sentence and Stage 4 option audio on a phone-width viewport. Confirm audio starts on tap, final syllables are audible, `charTimings` follow the heard syllables, and `teach-character` playback boundaries do not duplicate or clip the target character.
-14. Add reviewed lesson data to `src/curriculum/sample-lessons.json` only when its dependencies are already in `origin/main`.
-15. Update `docs/CURRICULUM_LEDGER.md`, including the lesson row, merged-through line, review-module status, `Current Character State`, and `Recent review pool for the next lesson`. Do not derive the recent pool from sentence text; it must come from the latest production lesson `newChars` list.
-16. Regenerate planner data:
+14. Production runs the fast package audit from `docs/CURRICULUM_PRODUCTION_SOP.md`, pushes the package branch, and reports `asset-complete-package`, `dependency-blocked-asset-complete`, `partial-package`, or `assets-only`.
+
+Release-only integration steps:
+
+15. Add reviewed lesson data to `src/curriculum/sample-lessons.json` only when its dependencies are already in `origin/main`.
+16. Update `docs/CURRICULUM_LEDGER.md`, including the lesson row, merged-through line, review-module status, `Current Character State`, and `Recent review pool for the next lesson`. Do not derive the recent pool from sentence text; it must come from the latest production lesson `newChars` list.
+17. Regenerate planner data:
 
 ```bash
 npm run curriculum:export-planner
 ```
 
-17. Clear or update the registry row.
-18. Run the full gate:
+18. Clear or update the registry row.
+19. Run the full gate:
 
 ```bash
 npm run verify

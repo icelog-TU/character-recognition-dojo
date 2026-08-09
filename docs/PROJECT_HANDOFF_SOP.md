@@ -139,6 +139,7 @@ Do not create a new clone unless the user explicitly asks. If the current shell 
 - AI sentences and AI recommended next characters are drafts until teacher approved.
 - Final teacher-approved sentence sets must be captured in repo files, not only in chat.
 - Supervisor must run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects skipped lesson numbers.
+- Production delivers `asset-complete-package`; Release owns `release-ready-package` and `in-main`. Do not make Production spend time on shared-state release integration for dependency-blocked lessons.
 - Production handoffs must be one-paste executable.
 - A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a complete course.
 - Production audio must use OpenAI audio, `npm run assets:audio`, and `npm run assets:align:ai` unless the teacher explicitly approves an exception.
@@ -222,13 +223,17 @@ https://github.com/icelog-TU/character-recognition-dojo
 指定 worktree:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-<a|b|c>
 
+Production goal: deliver `asset-complete-package`, not `release-ready-package`. Do the fast package audit in docs/ROLE_PRODUCTION_SOP.md and docs/CURRICULUM_PRODUCTION_SOP.md. Do not spend time on shared-state release integration for dependency-blocked lessons; Release owns production JSON, planner, ledger, final verify, push, and deployment.
+
 如果這個 worktree 不是 clean，停止並回報。不要 stash、reset、revert、或覆蓋別人的工作。
-收到 Editor 的完整 handoff 後，依 SOP claim registry，從 origin/main 建新分支，並直接製作完整課程包。
+收到 Editor 的完整 handoff 後，依 SOP claim registry，從 origin/main 建新分支，並直接製作 `asset-complete-package`；不要做 Release 的 shared-state 整合。
 ```
 
 ### Release
 
 ```text
+Treat Production branches as lesson-local `asset-complete-package` sources unless they have been freshly rebased and verified. Release owns integration on latest origin/main: production JSON, planner, ledger, registry cleanup, final verify, push, and deployment. Report any production-local fixes as `release-side repairs` to Supervisor.
+
 你是「認字練功房」Release / 推課對話串。
 
 Repo:

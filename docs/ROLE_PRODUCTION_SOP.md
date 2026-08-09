@@ -1,6 +1,6 @@
 # Role SOP: Production A/B/C
 
-Production A/B/C build complete lesson or review-module packages from Editor handoffs.
+Production A/B/C build `asset-complete-package` lesson or review-module packages from Editor handoffs.
 
 Production threads may work in parallel, but each thread owns exactly one assigned unit and one assigned worktree slot at a time.
 
@@ -75,9 +75,9 @@ The row must include:
 
 Commit and push the claim before large image/audio work when possible. If the registry cannot be updated or pushed, stop and report the blocker.
 
-## Complete Package Requirements
+## Asset-Complete Package Requirements
 
-A normal lesson package is not complete unless it contains:
+A normal lesson package is not `asset-complete-package` unless it contains:
 
 - `curriculum-workflow/lesson-requests/L###.json`
 - `curriculum-workflow/generated/L###-generation-packet.md`
@@ -87,11 +87,11 @@ A normal lesson package is not complete unless it contains:
 - Standalone `charAudio` generated from the single target character
 - Referenced `G02` teach audio
 - Referenced `G05` wrong-choice whole-sentence audio
-- Production JSON only when dependencies are already in latest `origin/main`
-- Refreshed `public/tools/planner-data.json` and `docs/CURRICULUM_LEDGER.md` only when entering production
 - Accurate registry row until Release merges/cleans it
 
 For review modules, use `curriculum-workflow/review-requests/R###.json` and `public/assets/reviews/R###/`. Review modules have no `newChars`, `zhuyin`, or `charAudio`.
+
+Production does not own normal release integration. Do not spend time rebasing old branches, rebuilding `src/curriculum/sample-lessons.json`, refreshing `public/tools/planner-data.json`, or updating `docs/CURRICULUM_LEDGER.md` for dependency-blocked lessons. Release owns those shared files. If a command temporarily changes shared production state while generating timings, remove those temporary shared-state changes before the final Production commit.
 
 ## Asset Rules
 
@@ -105,16 +105,31 @@ For review modules, use `curriculum-workflow/review-requests/R###.json` and `pub
 - Generate timings with `npm run assets:align:ai`.
 - Do not cut, splice, mute, patch, or extract production character/option audio from other files.
 
-## Checks Before Handoff To Release
+## Fast Package Audit Before Handoff
 
-Run the strongest feasible checks for the package:
+Before reporting done, run a fast lesson-local audit. This should be minutes, not a second release process:
+
+- `request`, `draft`, and `generation packet` agree on lesson id, new character(s), zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
+- Top-level `dependsOnLessons` exists when the lesson uses provisional characters from earlier unmerged lessons.
+- `displayLines`, when present, join exactly back to `text`; each zhuyin line should stay at `<= 5` Han characters.
+- Every sentence has final `imageSrc`, sentence `audio.src`, `durationMs`, and non-empty `charTimings`.
+- `charAudio` uses the repo path form `char-uXXXX.m4a`, not `char-字.m4a`.
+- Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported type once, and use every reviewed sentence exactly once.
+- Stage 4 option schema is complete: option ids are present, correct options are marked, and ordering metadata such as `correctOrder` is present where the game type requires it.
+- `choose-pronunciation` wrong options are near misses: same sentence length where possible and only 1-2 Han characters different from the correct option.
+- `choose-pronunciation` wrong-option audio was generated from the exact full wrong-option text after final text changes.
+- All referenced images and audio files exist in the owned lesson/review asset folder.
+- Touched asset folder size was checked.
+
+Run these commands when feasible:
 
 ```bash
 npm run validate:production
-npm run verify
 git diff --stat
 git diff --name-only
 ```
+
+Run `npm run verify` only when the branch has a valid production JSON entry on a current enough base for that command to test the lesson meaningfully. For dependency-blocked packages that intentionally do not touch production JSON, report `verify skipped: dependency-blocked, shared state left for Release`.
 
 Also inspect touched asset folder size as required by `docs/CURRICULUM_PRODUCTION_SOP.md`.
 
@@ -122,8 +137,8 @@ Push the production branch and report:
 
 - Branch name and commit SHA.
 - Unit id and new character/review kind.
-- Whether it is `merge-ready`, `ready-blocked-by-dependency`, or `assets-only`.
+- Whether it is `asset-complete-package`, `dependency-blocked-asset-complete`, `partial-package`, or `assets-only`.
 - Any failed checks or skipped manual QA.
 - Post-merge asset review URL.
 
-Do not call a package merge-ready if final text exists only in chat or if request/packet/draft/Stage 4 audio/alignment is missing.
+Do not call a package `asset-complete-package` if final text exists only in chat or if request/packet/draft/Stage 4 audio/alignment is missing. Do not call it `release-ready-package`; that status belongs to Release after integration on latest `origin/main`.
