@@ -74,6 +74,7 @@ function normalizeTranscribedHanChar(char) {
     ["给", "給"],
     ["纸", "紙"],
     ["云", "雲"],
+    ["\u4e48", "\u9ebc"],
     ["旗", "棋"],
     ["廟", "鳥"],
     ["它", "他"],
