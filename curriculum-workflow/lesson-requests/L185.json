@@ -9,16 +9,14 @@
   },
   "title": "像",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production B complete package for L185. Latest origin/main production JSON is complete through L181 說, so L185 depends on L182 師, L183 話, and L184 課. Use only latest production learned characters plus provisional 師, 話, 課 and current target 像. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 長、真、圖、館、片、教、班、對、請、講、電、想、情、服、完、乾、淨、忙、急、進、步、才、剛、弄、修、丟、收、拾.",
+  "teacherNotes": "Production B complete package for L185. Latest origin/main production JSON is complete through L182 師, so L185 depends on L183 話 and L184 課. Use only latest production learned characters plus provisional 話, 課 and current target 像. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 長、真、圖、館、片、教、班、對、請、講、電、想、情、服、完、乾、淨、忙、急、進、步、才、剛、弄、修、丟、收、拾.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main production JSON through L181 說 plus provisional L182 師, L183 話, L184 課 and current 像",
+    "allowedBoundary": "origin/main production JSON through L182 師 plus provisional L183 話, L184 課 and current 像",
     "provisionalLearnedChars": [
-      "師",
       "話",
       "課"
     ],
     "dependsOnLessons": [
-      "L182",
       "L183",
       "L184"
     ],
@@ -192,12 +190,10 @@
     }
   },
   "dependsOnLessons": [
-    "L182",
     "L183",
     "L184"
   ],
   "provisionalLearnedChars": [
-    "師",
     "話",
     "課"
   ]
