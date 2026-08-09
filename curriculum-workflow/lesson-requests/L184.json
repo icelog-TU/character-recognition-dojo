@@ -1,0 +1,178 @@
+{
+  "id": "L184",
+  "order": 184,
+  "newChars": [
+    "課"
+  ],
+  "zhuyin": {
+    "課": "ㄎㄜˋ"
+  },
+  "title": "課",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete package for L184. Latest origin/main production JSON is complete through L181, so L184 depends on L182, L183 before production JSON may merge. Use only latest production learned characters plus provisional L182/L183 and current target. Approved sentences are fixed by handoff; do not introduce display text characters such as 像、班、教、室、表、電、講、對、請、跟.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L181 plus provisional L182 師, L183 話 and current 課",
+    "provisionalLearnedChars": [
+      "師",
+      "話"
+    ],
+    "dependsOnLessons": [
+      "L182",
+      "L183"
+    ],
+    "requiredCoverageChars": [
+      "課",
+      "話",
+      "師",
+      "說",
+      "見",
+      "聽"
+    ],
+    "targetCharMinimumCount": {
+      "課": 3
+    },
+    "recentTargetMinimumCounts": {
+      "話": 2,
+      "師": 2,
+      "說": 2,
+      "見": 1,
+      "聽": 1
+    },
+    "disallowedChars": [
+      "像",
+      "班",
+      "教",
+      "室",
+      "表",
+      "電",
+      "講",
+      "對",
+      "請",
+      "跟"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, blackboard text, book text, school names, schedules, speech bubbles, or captions.",
+      "Use L058 image style anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 課 as public/assets/lessons/L184/audio/char-u8ab2.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L184-S01",
+      "text": "下課時，我和老師說再見。",
+      "spokenText": "下課時我和老師說再見",
+      "focusChar": "課",
+      "displayLines": [
+        "下課時，",
+        "我和老師",
+        "說再見。"
+      ],
+      "imageNotes": "下課時，固定的「我」小女孩和老師在教室門口或校園出口說再見。畫面要有下課離別感，但不可有校名、招牌、黑板文字、數字或標籤。"
+    },
+    {
+      "id": "L184-S02",
+      "text": "上課時，要用心聽老師說話。",
+      "spokenText": "上課時要用心聽老師說話",
+      "focusChar": "課",
+      "displayLines": [
+        "上課時，",
+        "要用心聽",
+        "老師說話。"
+      ],
+      "imageNotes": "上課時，同學坐好，用心聽老師說話。畫面要清楚呈現上課、老師說話、孩子專心聽；不可有黑板文字、課表、書本文字、數字或標籤。"
+    },
+    {
+      "id": "L184-S03",
+      "text": "有帶書包，卻沒帶課本。",
+      "spokenText": "有帶書包卻沒帶課本",
+      "focusChar": "課",
+      "displayLines": [
+        "有帶書包，",
+        "卻沒帶課本。"
+      ],
+      "imageNotes": "孩子有帶書包，但打開書包或桌面時發現沒有帶課本。畫面要清楚呈現書包有帶、課本沒帶的狀況；不可有書本文字、數字或標籤。"
+    },
+    {
+      "id": "L184-S04",
+      "text": "我要去上畫畫課。",
+      "spokenText": "我要去上畫畫課",
+      "focusChar": "課",
+      "displayLines": [
+        "我要去上",
+        "畫畫課。"
+      ],
+      "imageNotes": "固定的「我」小女孩準備去上畫畫課，可拿畫紙或畫筆，場景像美術活動或才藝課。畫紙上不可有文字、數字或可讀標籤。"
+    },
+    {
+      "id": "L184-S05",
+      "text": "窗外有鳥叫聲和說話聲。",
+      "spokenText": "窗外有鳥叫聲和說話聲",
+      "focusChar": "話",
+      "displayLines": [
+        "窗外有",
+        "鳥叫聲和",
+        "說話聲。"
+      ],
+      "imageNotes": "室內窗邊場景，窗外有小鳥在叫，也有遠處人們說話的聲音。畫面要表現窗外的鳥和人在說話，但不可有對話框文字、招牌、門牌、數字或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L184-S04",
+      "targetChar": "課",
+      "reason": "「畫畫課」是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L184-S01",
+      "targetChar": "課",
+      "targetCharIndex": 1,
+      "prefixText": "下",
+      "suffixText": "時我和老師說再見"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L184-S03",
+      "targetChar": "課",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "課",
+        "話",
+        "書"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L184-S02",
+      "chunks": [
+        "上課時",
+        "要用心聽",
+        "老師說話"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L184-S05",
+      "correctText": "窗外有鳥叫聲和說話聲。",
+      "wrongOneText": "窗外有狗叫聲和說話聲。",
+      "wrongTwoText": "窗外有鳥叫聲和風聲。"
+    }
+  },
+  "dependsOnLessons": [
+    "L182",
+    "L183"
+  ]
+}
