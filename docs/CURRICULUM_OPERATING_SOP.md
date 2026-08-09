@@ -379,13 +379,27 @@ The review cycle is delayed by one 30-lesson block so the review targets older m
 - After L120, add R005 and R006 for L061-L090.
 - Continue the same pattern every 30 lessons.
 
+Review modules are release blockers. After a milestone lesson is in `main`, the two review modules for that milestone must enter the playable sequence before the next numbered new-character lesson. For example, after L180 is in `main`, Release must ship R009 and R010 before shipping L181. If an earlier review pair was skipped, stop shipping additional numbered lessons and catch up the overdue review pair(s) before continuing.
+
 Formula:
 
 - Milestone `M` starts at 60 and increases by 30.
 - The two review modules after milestone `M` cover lesson range `M - 59` through `M - 30`.
+- The review modules may use only characters learned by lesson `M`. Do not use characters from lessons after `M`, even when producing an overdue review pair after later lessons already exist in `origin/main`.
 - Each review module has exactly 5 reviewed sentences.
 - The pair therefore has 10 reviewed sentences total.
 - Across those 10 sentences, every new character introduced in the covered 30-lesson range must appear at least once.
+
+Required schedule:
+
+| Milestone in main | Required review pair before next numbered lesson | Coverage target | Allowed character ceiling |
+| --- | --- | --- | --- |
+| L060 | R001, R002 before L061 | L001-L030 | characters learned through L060 |
+| L090 | R003, R004 before L091 | L031-L060 | characters learned through L090 |
+| L120 | R005, R006 before L121 | L061-L090 | characters learned through L120 |
+| L150 | R007, R008 before L151 | L091-L120 | characters learned through L150 |
+| L180 | R009, R010 before L181 | L121-L150 | characters learned through L180 |
+| L210 | R011, R012 before L211 | L151-L180 | characters learned through L210 |
 
 Rules:
 
@@ -395,6 +409,8 @@ Rules:
 - Review request files live under `curriculum-workflow/review-requests/R###.json`, not `curriculum-workflow/lesson-requests/L###.json`.
 - Do not create `L061` or `L062` as review placeholders. `L061` is the next new-character lesson id, but the playable path after L060 is `R001` -> `R002` -> `L061`.
 - Review sentence text may use characters learned by the milestone, but the required coverage target is the older 30-lesson range.
+- For overdue review modules, lock `allowedChars` to the milestone ceiling, not to latest `origin/main`. Example: R005/R006 may use only characters learned through L120 even if main is already past L180.
+- Release must reject a numbered lesson if any required review pair at or before the previous milestone is missing from `reviewLessons`.
 - The two review modules should be planned as one pair so coverage can be checked across all 10 sentences before either module ships.
 - Do not add placeholder review modules to `src/curriculum/sample-lessons.json`. Only add production-ready review modules to top-level `reviewLessons` after sentences, images, audio, timings, Stage 4 games, and review coverage are complete.
 - Production-ready review modules in `reviewLessons` must be inserted into the same playable sequence and square course-card grid as numbered lessons. They must not be reachable only through a temporary reservation section.
@@ -411,11 +427,12 @@ Before merging a parallel-prepared lesson:
 
 1. Fetch latest `origin/main`.
 2. Confirm all `dependsOnLessons` exist in `src/curriculum/sample-lessons.json`.
-3. Rebase the branch on latest `origin/main`.
-4. Re-check every sentence against the now-real learned character set.
-5. Re-check `mustIncludeCharsAcrossLesson`, `allowedChars`, image prompts, sentence audio, option audio, and char timings.
-6. Regenerate planner data if production curriculum changed.
-7. Run `npm run verify`.
+3. Confirm no required review pair is missing before this lesson's playable position.
+4. Rebase the branch on latest `origin/main`.
+5. Re-check every sentence against the now-real learned character set.
+6. Re-check `mustIncludeCharsAcrossLesson`, `allowedChars`, image prompts, sentence audio, option audio, and char timings.
+7. Regenerate planner data if production curriculum changed.
+8. Run `npm run verify`.
 
 If any dependency changed its new character, sentence set, or review requirement, move the later lesson to `needs-rework` and do not merge it until reconciled.
 
@@ -456,5 +473,7 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 ## Current Production State
 
 As of latest `origin/main`, production curriculum is complete through L184, L184 introduces `課`, and review modules are complete through R004.
+
+Under the review-blocker rule, R005-R010 are overdue catch-up work. Do not ship another numbered lesson after L184 until the overdue review pairs are planned, produced, and released in order.
 
 L001-L005 use the simpler Stage 1-3 flow. L006-L184 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.

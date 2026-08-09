@@ -89,7 +89,7 @@ A normal lesson package is not `asset-complete-package` unless it contains:
 - Referenced `G05` wrong-choice whole-sentence audio
 - Accurate registry row until Release merges/cleans it
 
-For review modules, use `curriculum-workflow/review-requests/R###.json` and `public/assets/reviews/R###/`. Review modules have no `newChars`, `zhuyin`, or `charAudio`.
+For review modules, use `curriculum-workflow/review-requests/R###.json` and `public/assets/reviews/R###/`. Review modules have no `newChars`, `zhuyin`, or `charAudio`. Verify the review request's coverage target and allowed-character ceiling match the milestone schedule in `docs/CURRICULUM_OPERATING_SOP.md`; overdue review modules must not use characters learned after their milestone ceiling.
 
 Production does not own normal release integration. Do not spend time rebasing old branches, rebuilding `src/curriculum/sample-lessons.json`, refreshing `public/tools/planner-data.json`, or updating `docs/CURRICULUM_LEDGER.md` for dependency-blocked lessons. Release owns those shared files. If a command temporarily changes shared production state while generating timings, remove those temporary shared-state changes before the final Production commit.
 

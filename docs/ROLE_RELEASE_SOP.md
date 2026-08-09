@@ -54,6 +54,8 @@ If bare `gh` fails, retry with `C:\Users\User\.local\bin\gh.cmd`.
 
 - Merge normal lessons in contiguous `L###` order.
 - Insert review modules only according to the review cycle rules.
+- Review modules are blockers. After L060, L090, L120, L150, L180, and every later 30-lesson milestone, ship the required review pair before the next numbered lesson.
+- If review modules were skipped, stop merging further numbered lessons and catch up overdue review pairs first. With main currently past L180 and only R001-R004 shipped, R005-R010 must be released before any later numbered lesson.
 - Do not merge L172 before L171.
 - Do not merge a lesson whose dependencies are only provisional.
 - Do not infer final sentences from chat.
@@ -72,6 +74,7 @@ For each unit entering `main`, confirm:
 - Ledger is updated.
 - Planner data is regenerated.
 - Registry has no stale active row for merged units.
+- For numbered lessons, all review pairs required before that playable position are already present in `reviewLessons`.
 
 Run:
 

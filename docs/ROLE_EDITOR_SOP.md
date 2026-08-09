@@ -42,6 +42,16 @@ For each assigned normal lesson, produce final approved sentence data:
 
 For review modules, follow `docs/CURRICULUM_OPERATING_SOP.md` and `docs/CURRICULUM_SCHEMA.md` review-module rules.
 
+Review module planning must lock the milestone boundary:
+
+- R001/R002: cover L001-L030, may use only characters learned through L060.
+- R003/R004: cover L031-L060, may use only characters learned through L090.
+- R005/R006: cover L061-L090, may use only characters learned through L120.
+- R007/R008: cover L091-L120, may use only characters learned through L150.
+- R009/R010: cover L121-L150, may use only characters learned through L180.
+
+Plan each review pair together as 10 total sentences. Across the pair, every new character in the coverage target must appear at least once. Do not use characters learned after the milestone ceiling, even if latest `origin/main` is already later.
+
 ## Required Sentence Gates
 
 Before sending a Production handoff:
@@ -53,6 +63,7 @@ Before sending a Production handoff:
 - Confirm `spokenText` includes exactly the Han characters from `text` in order, without punctuation.
 - Confirm every `focusChar` appears in its sentence.
 - Confirm current target and recent review coverage follows `docs/SENTENCE_GENERATION_SOP.md`.
+- For review modules, confirm the pair-level coverage target and milestone allowed-character ceiling, and include both in the handoff.
 - Confirm the teacher approved the final set.
 
 ## Production Handoff Rules

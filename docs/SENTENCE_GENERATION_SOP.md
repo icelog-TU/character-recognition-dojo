@@ -35,7 +35,15 @@ After AI drafts sentence candidates, after the teacher adds custom sentences, an
 
 If any Han character is not in `allowedChars`, the sentence is rejected. Do not "fix it later" during image prompts, audio generation, or JSON entry. Report the exact sentence, the illegal character(s), and whether the sentence should be rewritten with learned characters or the lesson's `newChars` plan should be changed by the teacher.
 
-For review modules, `allowedChars` means the characters learned by `afterLessonOrder`; review modules do not introduce new characters.
+For review modules, `allowedChars` means the characters learned by the review milestone, not necessarily latest `origin/main`. Review modules do not introduce new characters. If an overdue review module is produced late, keep the original milestone ceiling:
+
+- R001/R002 after L060 may use only characters learned through L060 and must cover L001-L030.
+- R003/R004 after L090 may use only characters learned through L090 and must cover L031-L060.
+- R005/R006 after L120 may use only characters learned through L120 and must cover L061-L090.
+- R007/R008 after L150 may use only characters learned through L150 and must cover L091-L120.
+- R009/R010 after L180 may use only characters learned through L180 and must cover L121-L150.
+
+Do not use characters learned after the milestone ceiling just because the current repo has later numbered lessons.
 
 For parallel-prepared lessons, provisional learned characters are allowed only when they are explicitly listed in the lesson request and still match latest `origin/main` before merge. Before merging, re-run the audit against the real merged learned-character set.
 

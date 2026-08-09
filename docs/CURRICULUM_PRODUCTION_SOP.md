@@ -489,6 +489,17 @@ Starting after L060, every 30-lesson milestone gets two review modules. These ar
 - After L060: R001/R002, 5 sentences each, must cover every new character from L001-L030 at least once across the 10 sentences. The playable path is `L060` -> `R001` -> `R002` -> `L061`; the next new-character lesson id is L061.
 - After L090: R003/R004, 5 sentences each, must cover every new character from L031-L060 at least once across the 10 sentences. The next new-character lesson is L091.
 - Continue by 30-lesson blocks: after L120 review L061-L090, after L150 review L091-L120, and so on.
+- Review pairs are blockers: after a milestone lesson enters `main`, its two review modules must ship before the next numbered lesson. If the pair was skipped, stop later numbered lessons and catch up the missing review pair(s).
+- For overdue review modules, lock allowed characters to the milestone ceiling, not latest `origin/main`.
+- Required schedule:
+
+| Milestone in main | Required review pair before next numbered lesson | Coverage target | Allowed character ceiling |
+| --- | --- | --- | --- |
+| L060 | R001, R002 before L061 | L001-L030 | characters learned through L060 |
+| L090 | R003, R004 before L091 | L031-L060 | characters learned through L090 |
+| L120 | R005, R006 before L121 | L061-L090 | characters learned through L120 |
+| L150 | R007, R008 before L151 | L091-L120 | characters learned through L150 |
+| L180 | R009, R010 before L181 | L121-L150 | characters learned through L180 |
 - Review modules introduce no new characters and must not contain `newChars`, `zhuyin`, or single-character `charAudio`.
 - Review modules live in top-level `reviewLessons`, not in `lessons`.
 - Review module assets live under `public/assets/reviews/R###/`.

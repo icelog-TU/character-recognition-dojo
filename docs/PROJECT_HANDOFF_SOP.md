@@ -24,6 +24,7 @@ As of latest `origin/main`:
 - Current reviewed lessons: L001-L184
 - L184 introduces `課`.
 - Production review modules: R001-R004.
+- Overdue review blockers: R005-R010 must be planned, produced, and released before shipping later numbered lessons beyond the current catch-up state.
 - L001-L005 use Stage 1-3.
 - L006-L184 include Stage 4 fixed sentence games.
 - Review modules use `R###` ids and do not consume `L###` lesson numbers.
@@ -140,6 +141,7 @@ Do not create a new clone unless the user explicitly asks. If the current shell 
 - Final teacher-approved sentence sets must be captured in repo files, not only in chat.
 - Supervisor must run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects skipped lesson numbers.
 - Production delivers `asset-complete-package`; Release owns `release-ready-package` and `in-main`. Do not make Production spend time on shared-state release integration for dependency-blocked lessons.
+- Review pairs are blockers: after L060/L090/L120/L150/L180 milestones, ship the required review pair before the next numbered lesson. Overdue review modules keep their original milestone allowed-character ceiling, not latest `origin/main`.
 - Production handoffs must be one-paste executable.
 - A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a complete course.
 - Production audio must use OpenAI audio, `npm run assets:audio`, and `npm run assets:align:ai` unless the teacher explicitly approves an exception.
