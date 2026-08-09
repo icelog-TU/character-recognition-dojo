@@ -16,8 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R005 | review module / no new chars | asset-complete-package | Production A | codex/r005-r006-review-package / 3b837d8 | after L120; existing R001-R004 review sequence | [] | curriculum-workflow/review-requests/R005.json; curriculum-workflow/generated/R005-generation-packet.md | public/assets/reviews/R005/images/; public/assets/reviews/R005/audio/ | complete R005/R006 review pair package ready for Release integration |
-| R006 | review module / no new chars | asset-complete-package | Production A | codex/r005-r006-review-package / 3b837d8 | after L120; existing R001-R004 review sequence | [] | curriculum-workflow/review-requests/R006.json; curriculum-workflow/generated/R006-generation-packet.md | public/assets/reviews/R006/images/; public/assets/reviews/R006/audio/ | complete R005/R006 review pair package ready for Release integration |
+| R005 | review module / no new chars | asset-complete-package | Production A | codex/r005-r006-review-package / c7b0a49 | after L120; existing R001-R004 review sequence | [] | curriculum-workflow/review-requests/R005.json; curriculum-workflow/generated/R005-generation-packet.md | public/assets/reviews/R005/images/; public/assets/reviews/R005/audio/ | complete R005/R006 review pair package ready for Release integration |
+| R006 | review module / no new chars | asset-complete-package | Production A | codex/r005-r006-review-package / c7b0a49 | after L120; existing R001-R004 review sequence | [] | curriculum-workflow/review-requests/R006.json; curriculum-workflow/generated/R006-generation-packet.md | public/assets/reviews/R006/images/; public/assets/reviews/R006/audio/ | complete R005/R006 review pair package ready for Release integration |
 
 ## Status Values
 
