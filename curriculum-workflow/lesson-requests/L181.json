@@ -1,0 +1,180 @@
+{
+  "id": "L181",
+  "order": 181,
+  "newChars": [
+    "說"
+  ],
+  "zhuyin": {
+    "說": "ㄕㄨㄛ"
+  },
+  "title": "說",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete package for L181. Latest origin/main production JSON is complete through L178 聲, so L181 depends on L179 聽 and L180 見. Use only latest production learned characters plus provisional 聽, 見 and current target 說. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 話、請、跟、對、音、問候、禮貌.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L178 plus provisional L179 聽, L180 見 and current 說",
+    "provisionalLearnedChars": [
+      "聽",
+      "見"
+    ],
+    "dependsOnLessons": [
+      "L179",
+      "L180"
+    ],
+    "requiredCoverageChars": [
+      "說",
+      "見",
+      "聽",
+      "聲",
+      "叫",
+      "停"
+    ],
+    "targetCharMinimumCount": {
+      "說": 3
+    },
+    "recentTargetMinimumCounts": {
+      "見": 2,
+      "聽": 2,
+      "聲": 2,
+      "叫": 1,
+      "停": 1
+    },
+    "disallowedChars": [
+      "話",
+      "請",
+      "跟",
+      "對",
+      "音",
+      "問",
+      "候",
+      "禮",
+      "貌"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, license plates, road signs, door plates, blackboard writing, speech bubbles, or captions.",
+      "Use L058 image style anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 說 as public/assets/lessons/L181/audio/char-u8aaa.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L181-S01",
+      "text": "出門前，要說一聲再見。",
+      "spokenText": "出門前要說一聲再見",
+      "focusChar": "說",
+      "displayLines": [
+        "出門前，",
+        "要說一聲",
+        "再見。"
+      ],
+      "imageNotes": "家門口離別情境，孩子或媽媽出門前說一聲再見，家人在門口揮手。畫面要溫暖清楚，不可有文字、數字、門牌或標籤。"
+    },
+    {
+      "id": "L181-S02",
+      "text": "看見紅燈，爸爸說停下來。",
+      "spokenText": "看見紅燈爸爸說停下來",
+      "focusChar": "說",
+      "displayLines": [
+        "看見紅燈，",
+        "爸爸說",
+        "停下來。"
+      ],
+      "imageNotes": "安全交通教學情境，爸爸和孩子看見紅燈，爸爸說停下來，孩子停在安全位置。紅燈、路邊和車輛不可有文字、數字、路牌或車牌標籤。"
+    },
+    {
+      "id": "L181-S03",
+      "text": "小馬不見了，我說要一起找。",
+      "spokenText": "小馬不見了我說要一起找",
+      "focusChar": "說",
+      "displayLines": [
+        "小馬不見了，",
+        "我說要",
+        "一起找。"
+      ],
+      "imageNotes": "可愛小馬不見了，固定的「我」小女孩說要和大家一起找。畫面可在草地或家附近，大家開始尋找小馬；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L181-S04",
+      "text": "有狗在叫，可是老太太聽不見。",
+      "spokenText": "有狗在叫可是老太太聽不見",
+      "focusChar": "聽",
+      "displayLines": [
+        "有狗在叫，",
+        "可是老太太",
+        "聽不見。"
+      ],
+      "imageNotes": "小狗在旁邊叫，老太太沒有聽見，表情平靜或疑惑。畫面要溫和，不要嘲笑老人，也不要做成危險情境；不可有對話框文字、數字或標籤。"
+    },
+    {
+      "id": "L181-S05",
+      "text": "同學很小聲地叫我，我沒聽見。",
+      "spokenText": "同學很小聲地叫我我沒聽見",
+      "focusChar": "見",
+      "displayLines": [
+        "同學很小聲",
+        "地叫我，",
+        "我沒聽見。"
+      ],
+      "imageNotes": "學校或教室外的安全場景，同學很小聲地叫固定的「我」小女孩，小女孩沒有聽見。畫面要清楚呈現小聲叫與沒聽見的對比，但不可有對話框文字、黑板文字、數字或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L181-S02",
+      "targetChar": "說",
+      "reason": "看見紅燈，爸爸說停下來的目標字清楚，並讓 Stage 4 五個遊戲各用一個句子。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L181-S01",
+      "targetChar": "說",
+      "targetCharIndex": 4,
+      "prefixText": "出門前要",
+      "suffixText": "一聲再見"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L181-S03",
+      "targetChar": "說",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "說",
+        "聽",
+        "見"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L181-S04",
+      "chunks": [
+        "有狗在叫",
+        "可是老太太",
+        "聽不見"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L181-S05",
+      "correctText": "同學很小聲地叫我，我沒聽見。",
+      "wrongOneText": "同學很小聲地叫我，我沒看見。",
+      "wrongTwoText": "同學很大聲地叫我，我沒聽見。",
+      "wrongTwoSpoken": "同學很大聲地叫我我沒聽見"
+    }
+  },
+  "dependsOnLessons": [
+    "L179",
+    "L180"
+  ]
+}

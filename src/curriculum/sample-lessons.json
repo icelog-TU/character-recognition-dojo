@@ -80985,17 +80985,17 @@
           "options": [
             {
               "id": "correct",
-              "text": "?",
+              "text": "見",
               "correct": true
             },
             {
               "id": "listen",
-              "text": "?",
+              "text": "聽",
               "correct": false
             },
             {
               "id": "sound",
-              "text": "?",
+              "text": "聲",
               "correct": false
             }
           ]
@@ -81021,19 +81021,19 @@
           "options": [
             {
               "id": "slot-1",
-              "text": "??",
+              "text": "一邊",
               "correctOrder": 0,
               "correct": true
             },
             {
               "id": "slot-2",
-              "text": "????",
+              "text": "聽著雨聲",
               "correctOrder": 1,
               "correct": true
             },
             {
               "id": "slot-3",
-              "text": "????",
+              "text": "一邊看書",
               "correctOrder": 2,
               "correct": true
             }
@@ -81081,6 +81081,539 @@
         "G05 wrong-choice audio must be generated from the full wrong texts 誰在看我 and 誰在找我, not spliced from the correct sentence.",
         "Manual timing smoothing: L180-S03 ??? segment and L180-S04 ???? segment were redistributed after AI alignment produced implausibly short or long spans. Text and audio were not changed."
       ]
+    },
+    {
+      "id": "L181",
+      "order": 181,
+      "newChars": [
+        "說"
+      ],
+      "zhuyin": {
+        "說": "ㄕㄨㄛ"
+      },
+      "charAudio": {
+        "說": "/assets/lessons/L181/audio/char-u8aaa.m4a"
+      },
+      "title": "說",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L181-S01",
+          "text": "出門前，要說一聲再見。",
+          "displayLines": [
+            "出門前，",
+            "要說一聲",
+            "再見。"
+          ],
+          "spokenText": "出門前要說一聲再見",
+          "focusChar": "說",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for the doorway, departing child or mother, family members, and waving goodbye gesture. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean home doorway environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Show a warm goodbye at the home doorway: before going out, a child or mother says goodbye once and family members wave from the doorway. Make the speaking and farewell gesture clear through open mouth, friendly hand wave, and body language, with no speech bubbles. No visible text, labels, signs, door numbers, door plates, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+          "imageSrc": "/assets/lessons/L181/images/L181-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L181/audio/L181-S01.m4a",
+            "durationMs": 3607,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1240,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1400,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1620,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1900,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2060,
+                "endMs": 2330
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2330,
+                "endMs": 2600
+              }
+            ]
+          }
+        },
+        {
+          "id": "L181-S02",
+          "text": "看見紅燈，爸爸說停下來。",
+          "displayLines": [
+            "看見紅燈，",
+            "爸爸說",
+            "停下來。"
+          ],
+          "spokenText": "看見紅燈爸爸說停下來",
+          "focusChar": "說",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for father, child, red traffic light, curb, and stopped posture. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean safe street-crossing teaching environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Show father and child seeing a red traffic light; father says to stop and the child stops in a safe position at the curb. The red light must be visible as a simple colored traffic light with no symbols, text, numbers, signs, or labels. No visible text, labels, signs, license plates, road signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+          "imageSrc": "/assets/lessons/L181/images/L181-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L181/audio/L181-S02.m4a",
+            "durationMs": 4379,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1860,
+                "endMs": 2047
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2047,
+                "endMs": 2233
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2233,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3120,
+                "endMs": 3293
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3293,
+                "endMs": 3467
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3467,
+                "endMs": 3640
+              }
+            ]
+          }
+        },
+        {
+          "id": "L181-S03",
+          "text": "小馬不見了，我說要一起找。",
+          "displayLines": [
+            "小馬不見了，",
+            "我說要",
+            "一起找。"
+          ],
+          "spokenText": "小馬不見了我說要一起找",
+          "focusChar": "說",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for the fixed 我 girl, family or classmates, nearby grass or home area, and visual search action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean safe grass or neighborhood-home environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. A cute small horse is missing; the fixed 我 girl with shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, and red shoes says she wants to search together with everyone. Show people beginning to look around for the missing small horse using gentle gestures and concerned but calm expressions. Do not put the girl on a horse. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+          "imageSrc": "/assets/lessons/L181/images/L181-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L181/audio/L181-S03.m4a",
+            "durationMs": 4695,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2160,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3180,
+                "endMs": 3440
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3440,
+                "endMs": 3800
+              }
+            ]
+          }
+        },
+        {
+          "id": "L181-S04",
+          "text": "有狗在叫，可是老太太聽不見。",
+          "displayLines": [
+            "有狗在叫，",
+            "可是老太太",
+            "聽不見。"
+          ],
+          "spokenText": "有狗在叫可是老太太聽不見",
+          "focusChar": "聽",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for a small dog, elderly woman, and clear contrast between barking and not hearing. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean home yard or sidewalk environment, consistent expressive proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. A small dog is barking nearby while an elderly woman does not hear it; she looks peaceful or mildly puzzled, never mocked or frightened. Keep the scene warm, respectful, and safe, with no danger. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+          "imageSrc": "/assets/lessons/L181/images/L181-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L181/audio/L181-S04.m4a",
+            "durationMs": 4743,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1900,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2300,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2700,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2940,
+                "endMs": 3220
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3220,
+                "endMs": 3580
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3580,
+                "endMs": 3880
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3880,
+                "endMs": 4040
+              }
+            ]
+          }
+        },
+        {
+          "id": "L181-S05",
+          "text": "同學很小聲地叫我，我沒聽見。",
+          "displayLines": [
+            "同學很小聲",
+            "地叫我，",
+            "我沒聽見。"
+          ],
+          "spokenText": "同學很小聲地叫我我沒聽見",
+          "focusChar": "見",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins for the fixed 我 girl, a classmate quietly calling, and the not-hearing contrast. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean safe school hallway or outdoor classroom-adjacent environment, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. A classmate quietly calls the fixed 我 girl in a very small voice while she does not hear, shown by the classmate's small open mouth, subtle hand gesture, and the girl looking away or continuing her activity. Make the contrast clear without speech bubbles or written sound marks. No visible text, labels, blackboard writing, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+          "imageSrc": "/assets/lessons/L181/images/L181-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L181/audio/L181-S05.m4a",
+            "durationMs": 4351,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1240,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1380,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1740,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1920,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2680,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2940,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3120,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3380,
+                "endMs": 3620
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L181-G01",
+          "type": "find-character",
+          "sentenceId": "L181-S02",
+          "targetChar": "說",
+          "prompt": "幫忙找出「說」。",
+          "missingIndexes": [
+            6
+          ]
+        },
+        {
+          "id": "L181-G02",
+          "type": "teach-character",
+          "sentenceId": "L181-S01",
+          "targetChar": "說",
+          "targetCharIndex": 4,
+          "missingIndexes": [
+            4
+          ],
+          "prompt": "聽一聽，放進「說」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L181/audio/L181-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L181/audio/L181-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L181-G03",
+          "type": "missing-character",
+          "sentenceId": "L181-S03",
+          "targetChar": "說",
+          "missingIndexes": [
+            6
+          ],
+          "prompt": "選出不見的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "說",
+              "correct": true
+            },
+            {
+              "id": "listen",
+              "text": "聽",
+              "correct": false
+            },
+            {
+              "id": "see",
+              "text": "見",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L181-G04",
+          "type": "partial-order",
+          "sentenceId": "L181-S04",
+          "targetChar": "聽",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "有狗在叫",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "可是老太太",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "聽不見",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L181-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L181-S05",
+          "targetChar": "見",
+          "prompt": "聽聽誰讀得一樣。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "同學很小聲地叫我，我沒聽見。",
+              "spokenText": "同學很小聲地叫我我沒聽見",
+              "audioSrc": "/assets/lessons/L181/audio/L181-S05.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "同學很小聲地叫我，我沒看見。",
+              "spokenText": "同學很小聲地叫我我沒看見",
+              "audioSrc": "/assets/lessons/L181/audio/L181-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "同學很大聲地叫我，我沒聽見。",
+              "spokenText": "同學很大聲地叫我我沒聽見",
+              "audioSrc": "/assets/lessons/L181/audio/L181-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ],
+      "productionNotes": {
+        "status": "ready-blocked-by-dependency",
+        "provisionalLearnedChars": [
+          "聽",
+          "見"
+        ],
+        "dependsOnLessons": [
+          "L179",
+          "L180"
+        ],
+        "notes": [
+          "Latest origin/main at production start contains L178 聲; production JSON, planner data, and ledger updates are blocked until L179 聽 and L180 見 are merged into latest origin/main.",
+          "Allowed-character audit boundary is latest origin/main through L178 plus provisional 聽, 見 and current 說.",
+          "G02 teachAudio prefix text is 出門前要; suffix text is 一聲再見.",
+          "G05 wrong-choice audio must be generated from the full wrong texts, not spliced from the correct sentence.",
+          "S05 displayLines were split as 同學很小聲 / 地叫我， / 我沒聽見。 to satisfy the repo phone layout validator while preserving the approved full text.",
+          "Teacher subjective image/audio review is post-merge through lesson-asset-review unless explicitly requested otherwise.",
+          "Manual timing smoothing: L181-S02 ??? and ??? spans, plus L181-S05 ?? span, were redistributed after AI alignment produced sub-80 ms spans. Text and audio were not changed."
+        ]
+      }
     }
   ],
   "reviewLessons": [
