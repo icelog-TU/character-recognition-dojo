@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L173 | 事 / normal lesson | claimed | Production A | codex/l173-complete-package / 0cbc309 | none (L171:就, L172:快 already merged) | [] | curriculum-workflow/lesson-requests/L173.json; curriculum-workflow/generated/L173-generation-packet.md | public/assets/lessons/L173/images/; public/assets/lessons/L173/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
