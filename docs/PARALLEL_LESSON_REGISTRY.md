@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R007 | review module / no new chars | claimed | Production B | codex/r007-r008-review-package / b81c4eb | after L150; review sequence R001-R006 | [] | curriculum-workflow/review-requests/R007.json; curriculum-workflow/generated/R007-generation-packet.md | public/assets/reviews/R007/images/; public/assets/reviews/R007/audio/ | accepted handoff and starting complete R007/R008 review pair |
+| R008 | review module / no new chars | claimed | Production B | codex/r007-r008-review-package / b81c4eb | after L150; review sequence R001-R006 | [] | curriculum-workflow/review-requests/R008.json; curriculum-workflow/generated/R008-generation-packet.md | public/assets/reviews/R008/images/; public/assets/reviews/R008/audio/ | accepted handoff and starting complete R007/R008 review pair |
 
 ## Status Values
 
