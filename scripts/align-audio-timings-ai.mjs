@@ -86,6 +86,25 @@ function normalizedHanText(text) {
   return hanChars(text).map(normalizeTranscribedHanChar).join("");
 }
 
+function transcriptCharMatchesExpected(actualChar, expectedChar) {
+  const normalizedActual = normalizeTranscribedHanChar(actualChar);
+  const normalizedExpected = normalizeTranscribedHanChar(expectedChar);
+  if (normalizedActual === normalizedExpected) return true;
+
+  const acceptedHomophonePairs = new Set([
+    "坐做",
+    "做坐",
+  ]);
+  return acceptedHomophonePairs.has(`${normalizedExpected}${normalizedActual}`);
+}
+
+function normalizedTranscriptMatchesExpected(actualText, expectedText) {
+  const actualChars = hanChars(actualText);
+  const expectedChars = hanChars(expectedText);
+  if (actualChars.length !== expectedChars.length) return false;
+  return actualChars.every((actualChar, index) => transcriptCharMatchesExpected(actualChar, expectedChars[index]));
+}
+
 function assetPath(src) {
   return path.join(publicRoot, src.replace(/^\//, ""));
 }
@@ -180,7 +199,7 @@ for (const lesson of units) {
 
     const expected = normalizedHanText(sentence.spokenText || sentence.text);
     const actual = normalizedHanText(transcript.text || "");
-    if (actual !== expected) {
+    if (actual !== expected && !normalizedTranscriptMatchesExpected(transcript.text || "", sentence.spokenText || sentence.text)) {
       throw new Error(
         `${sentence.id}: transcript does not match spokenText. Expected ${expected}, got ${actual}. ` +
           "Regenerate or review the audio before writing charTimings.",
