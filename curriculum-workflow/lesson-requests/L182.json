@@ -1,0 +1,185 @@
+{
+  "id": "L182",
+  "order": 182,
+  "newChars": [
+    "師"
+  ],
+  "zhuyin": {
+    "師": "ㄕ"
+  },
+  "title": "師",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L181"
+  ],
+  "provisionalLearnedChars": [
+    "說"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "說"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "師",
+      "說",
+      "見",
+      "聽",
+      "聲",
+      "叫"
+    ],
+    "targetCharMinimumCount": {
+      "師": 3
+    },
+    "recentTargetMinimumCounts": {
+      "說": 2,
+      "見": 2,
+      "聽": 2,
+      "聲": 1,
+      "叫": 1
+    },
+    "disallowedChars": [
+      "教",
+      "課",
+      "室",
+      "生",
+      "話",
+      "請",
+      "跟",
+      "對"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L182 師. Latest origin/main at production start is complete through L180 見, so L182 depends on not-yet-merged L181 說 before production JSON may merge. Provisional learned chars from the current startup truth are 說 only. Do not merge production JSON, planner-data, or ledger until L181 is present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Do not introduce display text characters such as 教、課、室、生、話、請、跟、對 unless they are already learned by latest origin/main. Image prompts may describe classroom scenes, but generated images must not contain written text, numbers, blackboard text, book text, signs, labels, zhuyin, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "同學坐好聽老師說。",
+      "spokenText": "同學坐好聽老師說",
+      "focusChar": "師",
+      "displayLines": [
+        "同學坐好",
+        "聽老師說。"
+      ],
+      "scene": "Square image / 1:1 composition. In a classroom or school reading corner, classmates sit properly and listen while a kind teacher speaks. Clearly show the teacher and seated students. No visible blackboard text, schedule text, book text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks anywhere.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "老師說不要大聲叫。",
+      "spokenText": "老師說不要大聲叫",
+      "focusChar": "師",
+      "displayLines": [
+        "老師說不要",
+        "大聲叫。"
+      ],
+      "scene": "Square image / 1:1 composition. A kind teacher gently reminds students not to shout loudly. The children in a safe indoor classroom scene are calming down. The mood is warm and supportive, not scolding or harsh. No speech bubbles, visible blackboard text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, or readable marks anywhere.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "我沒聽見老師叫我。",
+      "spokenText": "我沒聽見老師叫我",
+      "focusChar": "師",
+      "displayLines": [
+        "我沒聽見",
+        "老師叫我。"
+      ],
+      "scene": "Square image / 1:1 composition. A teacher nearby calls the fixed first-person young girl, but she does not hear and keeps looking elsewhere or focusing on a task. Clearly show the contrast between the teacher calling and the girl not hearing through body language only. No speech bubbles, visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, or readable marks anywhere.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "放學時，我和老師說再見。",
+      "spokenText": "放學時我和老師說再見",
+      "focusChar": "師",
+      "displayLines": [
+        "放學時，",
+        "我和老師",
+        "說再見。"
+      ],
+      "scene": "Square image / 1:1 composition. After school, the fixed first-person young girl and her teacher wave goodbye at a doorway or school campus exit. Show a clear end-of-school farewell feeling through bags, relaxed posture, and waving, without written signs. No school name, signs, visible text, labels, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks anywhere.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "老師說把書和筆拿出來。",
+      "spokenText": "老師說把書和筆拿出來",
+      "focusChar": "說",
+      "displayLines": [
+        "老師說",
+        "把書和筆",
+        "拿出來。"
+      ],
+      "scene": "Square image / 1:1 composition. A teacher at the front of a classroom reminds students to take out books and pencils. Students have books and pencils on their desks, clearly visible, but all pages are blank. No blackboard text, book text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks anywhere.",
+      "hanCharCount": 10
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L182-G01",
+      "type": "find-character",
+      "sentenceId": "L182-S04",
+      "targetChar": "師",
+      "reason": "老師 in the after-school goodbye scene is clear and natural."
+    },
+    {
+      "id": "L182-G02",
+      "type": "teach-character",
+      "sentenceId": "L182-S01",
+      "targetChar": "師",
+      "targetCharIndex": 6,
+      "prefixText": "同學坐好聽老",
+      "suffixText": "說",
+      "requiredAudio": [
+        "public/assets/lessons/L182/audio/L182-G02-prefix.m4a",
+        "public/assets/lessons/L182/audio/L182-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L182-G03",
+      "type": "missing-character",
+      "sentenceId": "L182-S05",
+      "targetChar": "師",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "師",
+        "說",
+        "聽"
+      ]
+    },
+    {
+      "id": "L182-G04",
+      "type": "partial-order",
+      "sentenceId": "L182-S02",
+      "targetChar": "師",
+      "chunks": [
+        "老師說",
+        "不要",
+        "大聲叫"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L182-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L182-S03",
+      "targetChar": "師",
+      "correctText": "我沒聽見老師叫我。",
+      "correctSpokenText": "我沒聽見老師叫我",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我沒看見老師叫我。",
+          "spokenText": "我沒看見老師叫我",
+          "audioSrc": "/assets/lessons/L182/audio/L182-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我沒聽見爸爸叫我。",
+          "spokenText": "我沒聽見爸爸叫我",
+          "audioSrc": "/assets/lessons/L182/audio/L182-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
