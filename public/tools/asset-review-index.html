@@ -436,20 +436,38 @@
         return [
           unit.id,
           unit.title,
+          unit.kind === "review" ? "複習 review" : "",
+          unit.afterLessonOrder ? `L${String(unit.afterLessonOrder).padStart(3, "0")}` : "",
           ...(unit.newChars || []),
+          ...(unit.requiredCoverageChars || []),
           ...(unit.sentences || []).map((sentence) => sentence.text || sentence.spokenText || ""),
         ]
           .join(" ")
           .toLowerCase();
       }
 
+      function expectedReviewNumbersAfterLesson(order) {
+        if (order < 60 || order > 600 || order % 30 !== 0) return [];
+        const firstReviewNumber = ((order - 60) / 30) * 2 + 1;
+        const reviewNumbers = [firstReviewNumber, firstReviewNumber + 1];
+        if (order === 600) reviewNumbers.push(39, 40);
+        return reviewNumbers;
+      }
+
+      function reviewTitle(reviewNumber) {
+        const zh = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+        return `複習${zh[reviewNumber] || reviewNumber}`;
+      }
+
       async function loadCurriculum() {
         const curriculum = await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum");
         const lessons = (curriculum.lessons || []).map((unit) => ({ ...unit, kind: "lesson", built: true }));
-        state.builtById = new Map(lessons.map((unit) => [unit.id, unit]));
-        state.units = Array.from({ length: 600 }, (_, index) => {
+        const reviews = (curriculum.reviewLessons || []).map((unit) => ({ ...unit, kind: "review", built: true }));
+        state.builtById = new Map([...lessons, ...reviews].map((unit) => [unit.id, unit]));
+        state.units = [];
+        for (let index = 0; index < 600; index += 1) {
           const id = `L${String(index + 1).padStart(3, "0")}`;
-          return state.builtById.get(id) || {
+          state.units.push(state.builtById.get(id) || {
             id,
             order: index + 1,
             kind: "lesson",
@@ -457,8 +475,21 @@
             title: "尚未製作",
             newChars: [],
             sentences: [],
-          };
-        });
+          });
+          for (const reviewNumber of expectedReviewNumbersAfterLesson(index + 1)) {
+            const reviewId = `R${String(reviewNumber).padStart(3, "0")}`;
+            state.units.push(state.builtById.get(reviewId) || {
+              id: reviewId,
+              reviewNumber,
+              afterLessonOrder: index + 1,
+              kind: "review",
+              built: false,
+              title: reviewTitle(reviewNumber),
+              requiredCoverageChars: [],
+              sentences: [],
+            });
+          }
+        }
       }
 
       async function loadReviewDocs() {
@@ -523,7 +554,11 @@
           .map((unit) => {
             const status = reviewStatus(unit);
             const title = unit.title || (unit.newChars || []).join("");
-            const chars = (unit.newChars || []).join("、") || (unit.built ? "已出貨" : "未建立課程資料");
+            const chars = unit.kind === "review"
+              ? unit.built
+                ? `第 ${unit.afterLessonOrder} 課後，涵蓋 ${unit.targetLessonRange?.startOrder || "?"}-${unit.targetLessonRange?.endOrder || "?"}`
+                : `第 ${unit.afterLessonOrder} 課後複習，尚未建立資料`
+              : (unit.newChars || []).join("、") || (unit.built ? "已出貨" : "未建立課程資料");
             const tagClass =
               status.kind === "repair"
                 ? "repair"
@@ -561,7 +596,7 @@
           await loadCurriculum();
           await loadReviewDocs();
           render();
-          setStatus(`已載入 L001-L600 進度盤，已出貨 ${state.builtById.size} 課，commit ${state.sha.slice(0, 12)}。`, "ok");
+          setStatus(`已載入 L001-L600 與 R001-R040 進度盤，已出貨 ${state.builtById.size} 個單元，commit ${state.sha.slice(0, 12)}。`, "ok");
         } catch (error) {
           state.units = [];
           render();

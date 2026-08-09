@@ -491,6 +491,7 @@
         flags: {},
         cloudRepairItems: {},
         reviewComplete: false,
+        placeholderUnit: false,
         user: null,
         unsubscribeReview: null,
         saveTimer: 0,
@@ -523,28 +524,55 @@
         return `L${String(number).padStart(3, "0")}`;
       }
 
-      function lessonUrl(number) {
-        const nextUnit = lessonUnit(number);
+      function expectedReviewNumbersAfterLesson(order) {
+        if (order < 60 || order > 600 || order % 30 !== 0) return [];
+        const firstReviewNumber = ((order - 60) / 30) * 2 + 1;
+        const reviewNumbers = [firstReviewNumber, firstReviewNumber + 1];
+        if (order === 600) reviewNumbers.push(39, 40);
+        return reviewNumbers;
+      }
+
+      function reviewSlotForNumber(reviewNumber) {
+        if (!Number.isInteger(reviewNumber) || reviewNumber < 1 || reviewNumber > 40) return null;
+        if (reviewNumber >= 39) return { reviewNumber, afterLessonOrder: 600 };
+        const pairIndex = Math.floor((reviewNumber - 1) / 2);
+        return { reviewNumber, afterLessonOrder: 60 + pairIndex * 30 };
+      }
+
+      function expectedUnitSequence() {
+        const units = [];
+        for (let order = 1; order <= 600; order += 1) {
+          units.push(lessonUnit(order));
+          for (const reviewNumber of expectedReviewNumbersAfterLesson(order)) {
+            units.push(`R${String(reviewNumber).padStart(3, "0")}`);
+          }
+        }
+        return units;
+      }
+
+      function unitUrl(nextUnit) {
         return `lesson-asset-review.html?repo=${encodeURIComponent(state.repo)}&unit=${encodeURIComponent(nextUnit)}&ref=${encodeURIComponent(state.ref || "main")}`;
       }
 
       function updateLessonNav() {
-        const number = currentLessonNumber();
+        const sequence = expectedUnitSequence();
+        const index = sequence.indexOf(state.unit);
         $("navCurrentUnit").textContent = state.unit || "-";
         $("bottomNavCurrentUnit").textContent = state.unit || "-";
-        $("prevLessonButton").disabled = number <= 1;
-        $("nextLessonButton").disabled = number <= 0 || number >= 600;
-        $("bottomPrevLessonButton").disabled = number <= 1;
-        $("bottomNextLessonButton").disabled = number <= 0 || number >= 600;
+        $("prevLessonButton").disabled = index <= 0;
+        $("nextLessonButton").disabled = index < 0 || index >= sequence.length - 1;
+        $("bottomPrevLessonButton").disabled = index <= 0;
+        $("bottomNextLessonButton").disabled = index < 0 || index >= sequence.length - 1;
       }
 
       async function goToLesson(offset) {
-        const number = currentLessonNumber();
-        const nextNumber = number + offset;
-        if (nextNumber < 1 || nextNumber > 600) return;
+        const sequence = expectedUnitSequence();
+        const index = sequence.indexOf(state.unit);
+        const nextUnit = sequence[index + offset];
+        if (!nextUnit) return;
         window.clearTimeout(state.saveTimer);
         if (state.user && state.sha) await saveCloud();
-        window.location.href = lessonUrl(nextNumber);
+        window.location.href = unitUrl(nextUnit);
       }
 
       async function goToOverview() {
@@ -596,6 +624,11 @@
         return response.json();
       }
 
+      function reviewTitle(reviewNumber) {
+        const zh = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+        return `複習${zh[reviewNumber] || reviewNumber}`;
+      }
+
       async function resolveRef() {
         const data = await fetchJson(
           `https://api.github.com/repos/${state.repo}/commits/${encodeURIComponent(state.ref)}`,
@@ -609,6 +642,7 @@
         const draftResponse = await fetch(rawUrl(draftPath), { cache: "no-store" });
         if (draftResponse.ok) {
           state.sourcePath = draftPath;
+          state.placeholderUnit = false;
           return draftResponse.json();
         }
 
@@ -616,8 +650,26 @@
         const lessons = Array.isArray(curriculum.lessons) ? curriculum.lessons : [];
         const reviews = Array.isArray(curriculum.reviewLessons) ? curriculum.reviewLessons : [];
         const unit = [...lessons, ...reviews].find((candidate) => candidate.id === state.unit);
-        if (!unit) throw new Error(`找不到 ${state.unit} 的 draft 或 production JSON。`);
+        if (!unit) {
+          const reviewMatch = /^R(\d{3})$/.exec(state.unit);
+          const reviewSlot = reviewMatch ? reviewSlotForNumber(Number(reviewMatch[1])) : null;
+          if (reviewSlot) {
+            state.sourcePath = "expected review slot";
+            state.placeholderUnit = true;
+            return {
+              id: state.unit,
+              reviewNumber: reviewSlot.reviewNumber,
+              afterLessonOrder: reviewSlot.afterLessonOrder,
+              title: reviewTitle(reviewSlot.reviewNumber),
+              requiredCoverageChars: [],
+              sentences: [],
+              sentenceGames: [],
+            };
+          }
+          throw new Error(`找不到 ${state.unit} 的 draft 或 production JSON。`);
+        }
         state.sourcePath = "src/curriculum/sample-lessons.json";
+        state.placeholderUnit = false;
         return unit;
       }
 
@@ -877,13 +929,13 @@
         $("shortSha").textContent = state.sha ? state.sha.slice(0, 7) : "-";
         $("summaryBox").value = summaryText();
         document.querySelectorAll(".review-complete-input").forEach((input) => {
-          input.disabled = !state.sha;
+          input.disabled = !state.sha || state.placeholderUnit;
           input.checked = state.reviewComplete;
         });
-        $("copyFrozenLinkButton").disabled = !state.sha;
-        $("copyRepairCommandButton").disabled = !state.sha;
-        $("copySummaryButton").disabled = !state.sha;
-        $("copySummaryInlineButton").disabled = !state.sha;
+        $("copyFrozenLinkButton").disabled = !state.sha || state.placeholderUnit;
+        $("copyRepairCommandButton").disabled = !state.sha || state.placeholderUnit;
+        $("copySummaryButton").disabled = !state.sha || state.placeholderUnit;
+        $("copySummaryInlineButton").disabled = !state.sha || state.placeholderUnit;
         updateLessonNav();
 
         const staleItems = staleRepairItems();
@@ -1078,17 +1130,30 @@
         setStatus("載入 GitHub 版本與圖音檔清單...");
         try {
           await resolveRef();
+          state.placeholderUnit = false;
           const unit = await loadUnitData();
           const items = extractReviewItems(unit);
           state.sentences = items.sentences;
           state.extraAudio = items.extraAudio;
-          loadLocalState();
+          if (state.placeholderUnit) {
+            state.flags = {};
+            state.cloudRepairItems = {};
+            state.reviewComplete = false;
+          } else {
+            loadLocalState();
+          }
           render();
-          setStatus(`已載入 ${state.unit}，${state.sentences.length} 張句子卡，${state.extraAudio.length} 個其他音檔，commit ${state.sha.slice(0, 12)}。`, "ok");
-          await attachCloudReview();
+          if (state.placeholderUnit) {
+            setStatus(`${state.unit} 是預期中的複習課，但目前還沒有 draft 或 production JSON；等製作合併後就會在這裡顯示圖檔音檔。`, "warn");
+            setCloud("尚未製作的複習課不會建立雲端審核紀錄。");
+          } else {
+            setStatus(`已載入 ${state.unit}，${state.sentences.length} 張句子卡，${state.extraAudio.length} 個其他音檔，commit ${state.sha.slice(0, 12)}。`, "ok");
+            await attachCloudReview();
+          }
         } catch (error) {
           state.sentences = [];
           state.extraAudio = [];
+          state.placeholderUnit = false;
           render();
           setStatus(error.message, "bad");
         } finally {
