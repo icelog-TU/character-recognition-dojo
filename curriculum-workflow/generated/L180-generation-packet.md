@@ -7,14 +7,14 @@
 - 新字：見
 - 注音：見=ㄐㄧㄢˋ
 - 目標句數：5
-- 教師備註：Teacher-approved final source for L180 見. Latest origin/main at production start is complete through L175 馬, so L180 depends on not-yet-merged L176 停, L177 叫, L178 聲, and L179 聽 before production JSON may merge. Provisional learned chars from the handoff after recomputing against origin/main are 停、叫、聲、聽. Do not merge production JSON, planner-data, or ledger until L176-L179 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.
+- 教師備註：Teacher-approved final source for L180 見. Latest origin/main was rechecked after production work and is complete through L178 聲, so L180 depends on not-yet-merged L179 聽 before production JSON may merge. Provisional learned chars after recomputing against latest origin/main are 聽 only. Do not merge production JSON, planner-data, or ledger until L179 is present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.
 
 ## 已學字邊界
 
 AI 必須把這份課程序列視為鎖定邊界。
 
-- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬
-- 平行備課暫定已學字：停 叫 聲 聽
+- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲
+- 平行備課暫定已學字：聽
 - 本課新字：見
 - 顯示句子可用漢字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見
 - 禁止：任何未列在上方的漢字。
@@ -897,6 +897,21 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 有事時，就馬上回頭找大人。
 - 我會快去快回。
 - 樹上的花快要開了。
+- 看到紅燈，就要停下來。
+- 爸爸把車停在馬路邊。
+- 好多人在跑，怎麼回事？
+- 小馬愛跑，沒事就跑個不停。
+- 小男孩飛快地跑走了。
+- 我叫小馬停下來。
+- 我跑去窗邊叫爸爸。
+- 小狗叫個不停，怎麼回事？
+- 媽媽叫我馬上回家。
+- 不要停下，快跑！
+- 爸爸大叫一聲，我馬上停下來。
+- 有事時，就叫媽媽一聲。
+- 馬路邊有鳥叫聲。
+- 紅燈停下來，不要跑過去。
+- 在這裡看書時，不可以出聲。
 
 ## 造句提示
 

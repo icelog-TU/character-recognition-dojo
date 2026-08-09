@@ -10,22 +10,13 @@
   "title": "見",
   "targetSentenceCount": 5,
   "dependsOnLessons": [
-    "L176",
-    "L177",
-    "L178",
     "L179"
   ],
   "provisionalLearnedChars": [
-    "停",
-    "叫",
-    "聲",
     "聽"
   ],
   "generationConstraints": {
     "provisionalLearnedChars": [
-      "停",
-      "叫",
-      "聲",
       "聽"
     ],
     "sentenceHanCharLength": {
@@ -67,7 +58,7 @@
       "籤"
     ]
   },
-  "teacherNotes": "Teacher-approved final source for L180 見. Latest origin/main at production start is complete through L175 馬, so L180 depends on not-yet-merged L176 停, L177 叫, L178 聲, and L179 聽 before production JSON may merge. Provisional learned chars from the handoff after recomputing against origin/main are 停、叫、聲、聽. Do not merge production JSON, planner-data, or ledger until L176-L179 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "teacherNotes": "Teacher-approved final source for L180 見. Latest origin/main was rechecked after production work and is complete through L178 聲, so L180 depends on not-yet-merged L179 聽 before production JSON may merge. Provisional learned chars after recomputing against latest origin/main are 聽 only. Do not merge production JSON, planner-data, or ledger until L179 is present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
   "approvedSentences": [
     {
       "text": "小馬不見了，我叫大家一起找。",

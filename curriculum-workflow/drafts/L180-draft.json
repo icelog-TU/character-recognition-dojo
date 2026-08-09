@@ -460,8 +460,8 @@
     }
   ],
   "productionNotes": [
-    "Status is ready-blocked-by-dependency until L176 停, L177 叫, L178 聲, and L179 聽 are merged into latest origin/main.",
-    "origin/main was complete through L175 馬 when this package was claimed, so 馬 is learned and only 停、叫、聲、聽 are provisional.",
+    "Status is ready-blocked-by-dependency until L179 聽 is merged into latest origin/main.",
+    "origin/main was rechecked after production work and is complete through L178 聲, so L175 馬, L176 停, L177 叫, and L178 聲 are learned; only L179 聽 is provisional.",
     "Do not leave a provisional L180 production entry in src/curriculum/sample-lessons.json while dependency-blocked.",
     "G02 teach audio must be generated from exact fragments 小馬不 and 了我叫大家一起找.",
     "G05 wrong-choice audio must be generated from the full wrong texts 誰在看我 and 誰在找我, not spliced from the correct sentence.",
