@@ -228,6 +228,46 @@ The purpose of the claim is repo-visible evidence that the pasted handoff actual
 
 Stop instead of continuing only when there is a real blocker: the assigned worktree is dirty, the startup checks fail, the production handoff is missing required approved sentence data, the registry cannot be updated or pushed before large asset work, or the allowed-character/dependency audit fails.
 
+## Lesson Gap Audit
+
+Lesson Gap Audit is the required coordination check for skipped lesson numbers and stale progress records.
+
+The Supervisor must run it:
+
+- before assigning a new multi-lesson batch
+- after Production A/B/C report several completed or blocked packages
+- before Release pushes lessons that were prepared while earlier dependencies were missing
+- whenever the teacher suspects a lesson was skipped or asks whether work through `L###` is complete
+
+The audit must compare all available evidence instead of trusting one progress file:
+
+- latest `origin/main:src/curriculum/sample-lessons.json`
+- latest `origin/main:docs/PARALLEL_LESSON_REGISTRY.md`
+- local and remote branches matching `codex/l###-*`
+- assigned worktree status and current branch
+- request, generation packet, draft JSON, lesson assets, Stage 4 option audio, and production JSON entry for each lesson
+- `dependsOnLessons`, provisional learned characters, and allowed-character blockers
+
+Classify every lesson in the checked range:
+
+- `in-main`: present in latest `origin/main` production JSON in contiguous order.
+- `complete-package`: request, packet, draft, images, audio, timings, Stage 4 assets, and branch are present, but the lesson is not merged.
+- `dependency-blocked`: package appears complete, but an earlier required lesson is not yet in `origin/main`.
+- `partial-package`: some source or asset files exist, but required package pieces are missing.
+- `missing`: no credible branch, registry row, request, draft, or asset folder exists.
+- `stale-or-misnamed-branch`: branch exists but lesson id, dependencies, registry row, or production JSON do not match the expected order.
+
+The report must include:
+
+- current `origin/main` production boundary
+- lesson-by-lesson table through the requested target
+- first blocking gap and its cause
+- lessons that are prepared but cannot be released yet
+- stale, missing, or contradictory registry rows
+- exact next action for Editor, Production, or Release
+
+If a lesson such as `L175` is blocked and later lessons such as `L176-L178` are already prepared, do not rewrite history or discard the later work. Release must merge in order: first complete the missing or blocked lesson, then rebase and re-audit each later lesson before merging it.
+
 ## Parallel Registry Rules
 
 Use `docs/PARALLEL_LESSON_REGISTRY.md` for every not-yet-merged parallel lesson.

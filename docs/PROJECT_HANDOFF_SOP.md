@@ -138,6 +138,7 @@ Do not create a new clone unless the user explicitly asks. If the current shell 
 - Use Taiwan zhuyin only. Do not use Hanyu pinyin.
 - AI sentences and AI recommended next characters are drafts until teacher approved.
 - Final teacher-approved sentence sets must be captured in repo files, not only in chat.
+- Supervisor must run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects skipped lesson numbers.
 - Production handoffs must be one-paste executable.
 - A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a complete course.
 - Production audio must use OpenAI audio, `npm run assets:audio`, and `npm run assets:align:ai` unless the teacher explicitly approves an exception.
@@ -171,6 +172,8 @@ Do not publish temporary review pages.
 ### Supervisor
 
 ```text
+You are the Supervisor. When assigning new batches, before Release pushes dependency-blocked lessons, or when the teacher asks whether lessons through L### are complete, run the Lesson Gap Audit in docs/ROLE_SUPERVISOR_SOP.md and docs/CURRICULUM_OPERATING_SOP.md. Report only; do not edit, commit, or push unless the teacher explicitly asks.
+
 你是「認字練功房」Supervisor / 總管對話串。
 
 Repo:

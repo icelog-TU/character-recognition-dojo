@@ -65,11 +65,36 @@ If bare `gh` fails, retry with `C:\Users\User\.local\bin\gh.cmd`.
 
 - Treat latest `origin/main` as the source of truth.
 - Identify stale local worktrees and branches before assigning work.
+- Run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects a skipped lesson.
 - Keep SOP files concise, role-specific, and non-duplicative.
 - Remove or replace stale, contradictory, or repeated SOP rules.
 - Produce one-paste instructions for Editor, Production A/B/C, Release, and Asset Repair.
 - Diagnose GitHub Pages, Firebase, review pages, audio review pages, registry, ledger, and planner-data drift.
 - Never assume another conversation thread knows this chat's context.
+
+## Lesson Gap Audit
+
+Use Lesson Gap Audit whenever production order may have drifted from prepared work. This is required before assigning a new batch of lessons, before Release merges prepared lessons that were blocked by earlier dependencies, and whenever the teacher asks whether lessons through `L###` are all present.
+
+The audit is read-only unless the teacher explicitly asks for SOP or repo fixes. Compare:
+
+- latest `origin/main:src/curriculum/sample-lessons.json`
+- latest `origin/main:docs/PARALLEL_LESSON_REGISTRY.md`
+- local and remote `codex/l###-*` branches
+- assigned production worktrees
+- per-lesson request, packet, draft, image, audio, Stage 4, and production JSON files
+- dependency and provisional learned-character notes
+
+Classify each lesson in the requested range as one of:
+
+- `in-main`
+- `complete-package`
+- `dependency-blocked`
+- `partial-package`
+- `missing`
+- `stale-or-misnamed-branch`
+
+Report the current production boundary, a per-lesson table, the first blocking gap, stale or missing registry rows, and the next concrete action for Editor, Production, or Release. If a later lesson depends on a missing or incomplete earlier lesson, tell Release to stop at that gap and re-audit after the earlier lesson merges.
 
 ## Boundaries
 
