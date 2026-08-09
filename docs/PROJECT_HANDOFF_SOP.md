@@ -85,6 +85,15 @@ Do not report GitHub CLI as unavailable until the full-path command fails.
 
 Do not run `npm ci` as a routine startup command. Run it only when dependencies are missing or known stale, and only after confirming no other thread or dev server is using that worktree.
 
+Newly created git worktrees do not automatically get ignored dependency folders such as `node_modules`. If `npm run tools:check` reports FFmpeg/FFprobe unavailable and `Test-Path node_modules` is false, the issue is missing repo dependencies in that worktree, not missing system tools. In that case, after confirming the assigned worktree is clean and idle, run:
+
+```bash
+npm ci
+npm run tools:check
+```
+
+Do not use bare `ffmpeg`, `ffprobe`, or PATH checks to bypass the repo tool check.
+
 ## Worktree Map
 
 Coordination / SOP / release diagnostics:

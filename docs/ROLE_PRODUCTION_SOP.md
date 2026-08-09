@@ -56,6 +56,8 @@ git switch -c codex/l###-complete-package origin/main
 
 Use `r###` in the branch name for review modules.
 
+If this is a newly created worktree and `npm run tools:check` reports FFmpeg/FFprobe unavailable, check whether `node_modules` is missing. When `Test-Path node_modules` returns `False`, run `npm ci` once in the assigned clean and idle worktree, then rerun `npm run tools:check`. Do not use bare `ffmpeg` or `ffprobe` PATH checks to bypass the repo scripts.
+
 ## Claim Before Work
 
 Before creating request files, packets, images, audio, or JSON, add or update exactly one row in `docs/PARALLEL_LESSON_REGISTRY.md` for the assigned unit.

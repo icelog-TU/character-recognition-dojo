@@ -30,6 +30,23 @@ If it is dirty, stop and report. Do not stash, reset, or overwrite another repai
 
 Two Asset Repair threads may run at the same time only when they own different units or clearly disjoint asset files. Do not repair the same lesson, review module, image, audio file, or production JSON section from both repair slots at once.
 
+## Dependency Bootstrap
+
+New repair worktrees may not have `node_modules` yet. If `npm run tools:check` reports FFmpeg/FFprobe unavailable, first check whether dependencies are missing:
+
+```powershell
+Test-Path node_modules
+```
+
+If this returns `False`, and the assigned repair worktree is clean and idle, run:
+
+```bash
+npm ci
+npm run tools:check
+```
+
+This is allowed only to bootstrap missing dependencies in the assigned worktree. Do not run `npm ci` routinely in active worktrees, and do not use bare `ffmpeg` or `ffprobe` PATH checks as a substitute for repo scripts.
+
 ## Startup
 
 Run:
