@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L183 | 話 / normal lesson | ready-blocked-by-dependency | Production B | codex/l183-complete-package / package-commit-pending | L180:見, L181:說, L182:師 | ["見","說","師"] | curriculum-workflow/lesson-requests/L183.json; curriculum-workflow/generated/L183-generation-packet.md; curriculum-workflow/drafts/L183-draft.json | public/assets/lessons/L183/images/; public/assets/lessons/L183/audio/ | complete package prepared; production JSON not updated because origin/main is currently complete through L179 聽 and missing L180-L182 |
+| L183 | 話 / normal lesson | ready-blocked-by-dependency | Production B | codex/l183-complete-package / bd656b6 | L180:見, L181:說, L182:師 | ["見","說","師"] | curriculum-workflow/lesson-requests/L183.json; curriculum-workflow/generated/L183-generation-packet.md; curriculum-workflow/drafts/L183-draft.json | public/assets/lessons/L183/images/; public/assets/lessons/L183/audio/ | complete package prepared; production JSON not updated because origin/main is currently complete through L179 聽 and missing L180-L182 |
 
 ## Status Values
 
