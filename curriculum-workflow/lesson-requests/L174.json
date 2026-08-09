@@ -1,0 +1,196 @@
+{
+  "id": "L174",
+  "order": 174,
+  "newChars": [
+    "跑"
+  ],
+  "zhuyin": {
+    "跑": "ㄆㄠˇ"
+  },
+  "title": "跑",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L173"
+  ],
+  "provisionalLearnedChars": [
+    "事"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "事"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "跑",
+      "事",
+      "快",
+      "就",
+      "回",
+      "亂"
+    ],
+    "targetCharMinimumCount": {
+      "跑": 3
+    },
+    "recentTargetMinimumCounts": {
+      "事": 2,
+      "快": 2,
+      "就": 2,
+      "回": 1,
+      "亂": 1
+    },
+    "disallowedChars": [
+      "想",
+      "情",
+      "服",
+      "見",
+      "完",
+      "乾",
+      "淨",
+      "忙",
+      "急",
+      "進",
+      "步",
+      "馬",
+      "才",
+      "剛",
+      "弄",
+      "修",
+      "丟",
+      "收",
+      "拾"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L174 跑. Latest origin/main at production start is complete through L172 快; L174 depends on not-yet-merged L173 事 before production JSON may merge. Provisional learned chars from the handoff are 事. Do not merge production JSON, planner-data, or ledger until L173 is present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Do not add unlearned display characters such as 想, 情, 服, 見, 完, 乾, 淨, 忙, 急, 進, 步, 馬, 才, 剛, 弄, 修, 丟, 收, or 拾. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "再等等，飯菜就快好了。",
+      "spokenText": "再等等飯菜就快好了",
+      "focusChar": "快",
+      "displayLines": [
+        "再等等，",
+        "飯菜就",
+        "快好了。"
+      ],
+      "scene": "Square image / 1:1 composition. A dining table or kitchen scene where food is almost ready and a child waits nearby to come to the table. Show both the waiting action and food nearly ready through body posture, warm steam, and table setting. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "來比誰跑得更快。",
+      "spokenText": "來比誰跑得更快",
+      "focusChar": "跑",
+      "displayLines": [
+        "來比誰",
+        "跑得更快。"
+      ],
+      "scene": "Square image / 1:1 composition. Several children run together in a safe open space or school field, clearly racing to see who runs faster. Use motion and joyful expressions to show running and speed. No track lane numbers, visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 7
+    },
+    {
+      "text": "快去坐好，沒事不要亂跑。",
+      "spokenText": "快去坐好沒事不要亂跑",
+      "focusChar": "跑",
+      "displayLines": [
+        "快去坐好，",
+        "沒事不要",
+        "亂跑。"
+      ],
+      "scene": "Square image / 1:1 composition. Indoor classroom or room scene where an adult gently reminds a child who is about to run around to sit properly. Clearly show the child turning from running toward a chair and the adult's calm reminder. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "看誰先跑回起點。",
+      "spokenText": "看誰先跑回起點",
+      "focusChar": "跑",
+      "displayLines": [
+        "看誰先",
+        "跑回起點。"
+      ],
+      "scene": "Square image / 1:1 composition. Children are running back to the starting point in a game or race. Show the start point using a simple plain ground line or ribbon with no writing. The children should be moving back toward that line. No 起點 words, visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 7
+    },
+    {
+      "text": "有事時，就來找我。",
+      "spokenText": "有事時就來找我",
+      "focusChar": "事",
+      "displayLines": [
+        "有事時，",
+        "就來找我。"
+      ],
+      "scene": "Square image / 1:1 composition. A warm adult or teacher gently tells a child to come find them when something happens or help is needed. Show a caring help-seeking conversation through faces and body language, not speech bubbles. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 7
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L174-G01",
+      "type": "find-character",
+      "sentenceId": "L174-S04",
+      "targetChar": "跑",
+      "reason": "跑回起點 is a clear core action use of 跑."
+    },
+    {
+      "id": "L174-G02",
+      "type": "teach-character",
+      "sentenceId": "L174-S02",
+      "targetChar": "跑",
+      "targetCharIndex": 3,
+      "prefixText": "來比誰",
+      "suffixText": "得更快",
+      "requiredAudio": [
+        "public/assets/lessons/L174/audio/L174-G02-prefix.m4a",
+        "public/assets/lessons/L174/audio/L174-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L174-G03",
+      "type": "missing-character",
+      "sentenceId": "L174-S03",
+      "targetChar": "跑",
+      "missingIndexes": [
+        9
+      ],
+      "options": [
+        "跑",
+        "快",
+        "回"
+      ]
+    },
+    {
+      "id": "L174-G04",
+      "type": "partial-order",
+      "sentenceId": "L174-S01",
+      "targetChar": "快",
+      "chunks": [
+        "再等等",
+        "飯菜就快",
+        "好了"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L174-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L174-S05",
+      "targetChar": "事",
+      "correctText": "有事時，就來找我。",
+      "correctSpokenText": "有事時就來找我",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "有事時，就來找你。",
+          "spokenText": "有事時就來找你",
+          "audioSrc": "/assets/lessons/L174/audio/L174-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "有事時，就來找他。",
+          "spokenText": "有事時就來找他",
+          "audioSrc": "/assets/lessons/L174/audio/L174-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "id": "L173",
+  "order": 173,
+  "newChars": [
+    "事"
+  ],
+  "zhuyin": {
+    "事": "ㄕˋ"
+  },
+  "title": "事",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L168",
+    "L169",
+    "L170",
+    "L171",
+    "L172"
+  ],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "provisionalLearnedChars": [],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "事",
+      "快",
+      "就",
+      "回",
+      "亂",
+      "髒"
+    ],
+    "targetCharMinimumCount": {
+      "事": 3
+    },
+    "recentTargetMinimumCounts": {
+      "快": 2,
+      "就": 2,
+      "回": 2,
+      "亂": 1,
+      "髒": 1
+    },
+    "disallowedChars": [
+      "忙",
+      "急",
+      "情",
+      "發",
+      "生",
+      "服",
+      "見",
+      "完",
+      "乾",
+      "淨",
+      "才",
+      "剛",
+      "弄",
+      "跑",
+      "進",
+      "修",
+      "丟",
+      "收",
+      "拾"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L173 事. Latest origin/main at production start is complete through L172 快, so L171 就 and L172 快 are real learned characters and no provisional learned characters are used. Use Taiwan Traditional Chinese and Taiwan zhuyin only; use 裡 not 裏. Allowed display characters are the production learned set through L172 plus the current target 事. Do not add unlearned display characters such as 忙, 急, 情, 發, 生, 服, 見, 完, 乾, 淨, 才, 剛, 弄, 跑, 進, 修, 丟, 收, or 拾. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "爸爸有事出門，會快去快回。",
+      "spokenText": "爸爸有事出門會快去快回",
+      "focusChar": "事",
+      "displayLines": [
+        "爸爸有事",
+        "出門，",
+        "會快去",
+        "快回。"
+      ],
+      "scene": "爸爸準備出門辦事，對家人表示會快去快回。畫面可有爸爸拿包、在門口準備出門，家人在旁邊。不可有文字、數字、門牌或標籤。",
+      "hanCharCount": 11
+    },
+    {
+      "text": "你找我有什麼事？",
+      "spokenText": "你找我有什麼事",
+      "focusChar": "事",
+      "displayLines": [
+        "你找我",
+        "有什麼事？"
+      ],
+      "scene": "兩個孩子或一個孩子和大人在說話，其中一人被叫住，疑惑地問對方有什麼事。畫面要清楚是對話情境，但不可出現對話框、文字、數字或標籤。",
+      "hanCharCount": 7
+    },
+    {
+      "text": "這麼快就回來了，怎麼回事？",
+      "spokenText": "這麼快就回來了怎麼回事",
+      "focusChar": "事",
+      "displayLines": [
+        "這麼快",
+        "就回來了，",
+        "怎麼回事？"
+      ],
+      "scene": "一個人剛出門不久又很快回來，家人驚訝地看著他，像是在問怎麼回事。畫面要表現快去快回的驚訝感；不可有文字或標籤。",
+      "hanCharCount": 11
+    },
+    {
+      "text": "為什麼門前空地這麼髒亂？",
+      "spokenText": "為什麼門前空地這麼髒亂",
+      "focusChar": "髒",
+      "displayLines": [
+        "為什麼",
+        "門前空地",
+        "這麼髒亂？"
+      ],
+      "scene": "門前的空地有一些髒亂物品散落，孩子或大人看著覺得疑惑。畫面要清楚呈現門前空地與髒亂狀態，但不要過度噁心；不可有文字、數字、招牌或標籤。",
+      "hanCharCount": 11
+    },
+    {
+      "text": "雲很黑，看來就要下雨了。",
+      "spokenText": "雲很黑看來就要下雨了",
+      "focusChar": "就",
+      "displayLines": [
+        "雲很黑，",
+        "看來就要",
+        "下雨了。"
+      ],
+      "scene": "天空有很黑的雲，看起來快要下雨，地面人物可抬頭看天或準備回家。畫面重點是黑雲和即將下雨；不可有文字、數字或標籤。",
+      "hanCharCount": 10
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L173-G01",
+      "type": "find-character",
+      "sentenceId": "L173-S02",
+      "targetChar": "事"
+    },
+    {
+      "id": "L173-G02",
+      "type": "teach-character",
+      "sentenceId": "L173-S01",
+      "targetChar": "事",
+      "targetCharIndex": 3,
+      "prefixText": "爸爸有",
+      "suffixText": "出門會快去快回",
+      "requiredAudio": [
+        "public/assets/lessons/L173/audio/L173-G02-prefix.m4a",
+        "public/assets/lessons/L173/audio/L173-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L173-G03",
+      "type": "missing-character",
+      "sentenceId": "L173-S03",
+      "targetChar": "事",
+      "missingIndexes": [
+        10
+      ],
+      "options": [
+        "事",
+        "回",
+        "快"
+      ]
+    },
+    {
+      "id": "L173-G04",
+      "type": "partial-order",
+      "sentenceId": "L173-S04",
+      "targetChar": "髒",
+      "chunks": [
+        "為什麼門前空地",
+        "這麼",
+        "髒亂"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L173-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L173-S05",
+      "targetChar": "就",
+      "correctText": "雲很黑，看來就要下雨了。",
+      "correctSpokenText": "雲很黑看來就要下雨了",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "雲很白，看來就要下雨了。",
+          "spokenText": "雲很白看來就要下雨了",
+          "audioSrc": "/assets/lessons/L173/audio/L173-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "雲很黑，看來不要下雨了。",
+          "spokenText": "雲很黑看來不要下雨了",
+          "audioSrc": "/assets/lessons/L173/audio/L173-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
