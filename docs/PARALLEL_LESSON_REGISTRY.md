@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L180 | 見 / normal lesson | ready-blocked-by-dependency | Production B | codex/l180-complete-package / package-commit-pending | L176:停, L177:叫, L178:聲, L179:聽 | ["停","叫","聲","聽"] | curriculum-workflow/lesson-requests/L180.json; curriculum-workflow/generated/L180-generation-packet.md; curriculum-workflow/drafts/L180-draft.json | public/assets/lessons/L180/images/; public/assets/lessons/L180/audio/ | complete package ready; blocked until L176 停, L177 叫, L178 聲, and L179 聽 are merged into latest origin/main |
+| L180 | 見 / normal lesson | ready-blocked-by-dependency | Production B | codex/l180-complete-package / f08bc4f | L176:停, L177:叫, L178:聲, L179:聽 | ["停","叫","聲","聽"] | curriculum-workflow/lesson-requests/L180.json; curriculum-workflow/generated/L180-generation-packet.md; curriculum-workflow/drafts/L180-draft.json | public/assets/lessons/L180/images/; public/assets/lessons/L180/audio/ | complete package ready; blocked until L176 停, L177 叫, L178 聲, and L179 聽 are merged into latest origin/main |
 
 ## Status Values
 
