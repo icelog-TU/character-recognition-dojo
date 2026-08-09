@@ -1,0 +1,192 @@
+{
+  "id": "L179",
+  "order": 179,
+  "newChars": [
+    "聽"
+  ],
+  "zhuyin": {
+    "聽": "ㄊㄧㄥ"
+  },
+  "title": "聽",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L175",
+    "L176",
+    "L177",
+    "L178"
+  ],
+  "provisionalLearnedChars": [
+    "馬",
+    "停",
+    "叫",
+    "聲"
+  ],
+  "generationConstraints": {
+    "provisionalLearnedChars": [
+      "馬",
+      "停",
+      "叫",
+      "聲"
+    ],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "mustIncludeCharsAcrossLesson": [
+      "聽",
+      "聲",
+      "叫",
+      "停",
+      "馬",
+      "跑"
+    ],
+    "targetCharMinimumCount": {
+      "聽": 3
+    },
+    "recentTargetMinimumCounts": {
+      "聲": 2,
+      "叫": 2,
+      "停": 2,
+      "馬": 1,
+      "跑": 1
+    },
+    "disallowedChars": [
+      "音",
+      "見",
+      "受",
+      "傷",
+      "館",
+      "安",
+      "靜"
+    ]
+  },
+  "teacherNotes": "Teacher-approved final source for L179 聽. Latest origin/main at production start is complete through L174 跑, so L179 depends on not-yet-merged L175 馬, L176 停, L177 叫, and L178 聲 before production JSON may merge. Provisional learned chars from the handoff are 馬, 停, 叫, 聲. Do not merge production JSON, planner-data, or ledger until L175-L178 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Use 這裡, not 這裏, because 裡 is the learned character. Do not introduce display text characters such as 音、見、受、傷、館、安、靜 unless they are already learned by latest origin/main. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. S01 and S02 must have visual continuity: same road-side / grass-edge setting and same fixed 我 girl; S02 should feel like it follows S01. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "approvedSentences": [
+    {
+      "text": "我在路邊聽到鳥叫聲。",
+      "spokenText": "我在路邊聽到鳥叫聲",
+      "focusChar": "聽",
+      "displayLines": [
+        "我在路邊",
+        "聽到鳥叫聲。"
+      ],
+      "scene": "Square image / 1:1 composition. The fixed first-person young girl is at the side of a road beside a grass edge and trees. She has stopped safely and turns her ear toward a nearby bird call; a small bird in a nearby tree or grass-edge branch suggests the sound source. Warm, safe, calm scene. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, license plates, road-sign text, or readable marks.",
+      "hanCharCount": 9
+    },
+    {
+      "text": "所以跑過去找小鳥。",
+      "spokenText": "所以跑過去找小鳥",
+      "focusChar": "跑",
+      "displayLines": [
+        "所以跑過去",
+        "找小鳥。"
+      ],
+      "scene": "Square image / 1:1 composition. Continue from S01 in the same road-side and grass-edge setting with the same fixed first-person young girl. She has run over to find the small bird and is crouching with concern near one small bird on the ground whose wing droops slightly. The mood is gentle and caring, not bloody, scary, or shocking. No visible text, labels, signs, letters, numbers, zhuyin, medical symbols, brands, logos, watermarks, speech bubbles, arrows, license plates, road-sign text, or readable marks.",
+      "hanCharCount": 8
+    },
+    {
+      "text": "同學出聲叫我，我沒聽到。",
+      "spokenText": "同學出聲叫我我沒聽到",
+      "focusChar": "聽",
+      "displayLines": [
+        "同學出聲",
+        "叫我，",
+        "我沒聽到。"
+      ],
+      "scene": "Square image / 1:1 composition. A classmate nearby is calling out to the fixed first-person young girl, while the girl does not hear and keeps looking at a book or looking away. Clearly show the contrast between someone calling and the girl not hearing through body language only, not speech bubbles. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 10
+    },
+    {
+      "text": "小狗叫個不停。",
+      "spokenText": "小狗叫個不停",
+      "focusChar": "叫",
+      "displayLines": [
+        "小狗叫個",
+        "不停。"
+      ],
+      "scene": "Square image / 1:1 composition. A small dog is barking continuously while a child or adult notices it. Keep the scene friendly and safe, not dangerous, scary, or aggressive. No visible text, labels, signs, letters, numbers, zhuyin, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 6
+    },
+    {
+      "text": "過馬路要停看聽。",
+      "spokenText": "過馬路要停看聽",
+      "focusChar": "聽",
+      "displayLines": [
+        "過馬路要",
+        "停看聽。"
+      ],
+      "scene": "Square image / 1:1 composition. Safe traffic teaching scene. A child is preparing to cross a road and first stops, looks left and right, and listens to nearby traffic sounds. Show the stop-look-listen idea through posture and careful attention, with a simple road and traffic light if useful. No visible text, slogans, labels, signs, letters, numbers, zhuyin, license plates, road-sign text, brands, logos, watermarks, speech bubbles, arrows, or readable marks.",
+      "hanCharCount": 7
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L179-G01",
+      "type": "find-character",
+      "sentenceId": "L179-S01",
+      "targetChar": "聽",
+      "reason": "聽到鳥叫聲 is the core usage for this lesson."
+    },
+    {
+      "id": "L179-G02",
+      "type": "teach-character",
+      "sentenceId": "L179-S03",
+      "targetChar": "聽",
+      "targetCharIndex": 8,
+      "prefixText": "同學出聲叫我我沒",
+      "suffixText": "到",
+      "requiredAudio": [
+        "public/assets/lessons/L179/audio/L179-G02-prefix.m4a",
+        "public/assets/lessons/L179/audio/L179-G02-suffix.m4a"
+      ]
+    },
+    {
+      "id": "L179-G03",
+      "type": "missing-character",
+      "sentenceId": "L179-S05",
+      "targetChar": "聽",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "聽",
+        "看",
+        "停"
+      ]
+    },
+    {
+      "id": "L179-G04",
+      "type": "partial-order",
+      "sentenceId": "L179-S02",
+      "targetChar": "跑",
+      "chunks": [
+        "所以",
+        "跑過去",
+        "找小鳥"
+      ],
+      "shuffleRequired": true
+    },
+    {
+      "id": "L179-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L179-S04",
+      "targetChar": "叫",
+      "correctText": "小狗叫個不停。",
+      "correctSpokenText": "小狗叫個不停",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "小鳥叫個不停。",
+          "spokenText": "小鳥叫個不停",
+          "audioSrc": "/assets/lessons/L179/audio/L179-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "小狗跑個不停。",
+          "spokenText": "小狗跑個不停",
+          "audioSrc": "/assets/lessons/L179/audio/L179-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
