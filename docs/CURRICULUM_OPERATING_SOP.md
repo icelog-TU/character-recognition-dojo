@@ -377,7 +377,8 @@ The review cycle is delayed by one 30-lesson block so the review targets older m
 - After L060, add R001 and R002 for L001-L030. The next new-character lesson remains L061.
 - After L090, add R003 and R004 for L031-L060. The next new-character lesson remains L091.
 - After L120, add R005 and R006 for L061-L090.
-- Continue the same pattern every 30 lessons.
+- Continue the same pattern every 30 lessons through the 600-lesson course.
+- Because the course ends at L600, add a final capstone pair R039 and R040 after L600 to cover L571-L600. This final pair closes the last 30-lesson block even though there is no L630 milestone.
 
 Review modules are release blockers. After a milestone lesson is in `main`, the two review modules for that milestone must enter the playable sequence before the next numbered new-character lesson. For example, after L180 is in `main`, Release must ship R009 and R010 before shipping L181. If an earlier review pair was skipped, stop shipping additional numbered lessons and catch up the overdue review pair(s) before continuing.
 
@@ -386,6 +387,8 @@ Formula:
 - Milestone `M` starts at 60 and increases by 30.
 - The two review modules after milestone `M` cover lesson range `M - 59` through `M - 30`.
 - The review modules may use only characters learned by lesson `M`. Do not use characters from lessons after `M`, even when producing an overdue review pair after later lessons already exist in `origin/main`.
+- Standard pair numbering: for milestone `M`, let `k = (M - 60) / 30`; the pair is `R(2k+1)` and `R(2k+2)`, zero-padded to three digits.
+- Final capstone exception: R039/R040 are after L600, cover L571-L600, and may use characters learned through L600.
 - Each review module has exactly 5 reviewed sentences.
 - The pair therefore has 10 reviewed sentences total.
 - Across those 10 sentences, every new character introduced in the covered 30-lesson range must appear at least once.
@@ -400,6 +403,20 @@ Required schedule:
 | L150 | R007, R008 before L151 | L091-L120 | characters learned through L150 |
 | L180 | R009, R010 before L181 | L121-L150 | characters learned through L180 |
 | L210 | R011, R012 before L211 | L151-L180 | characters learned through L210 |
+| L240 | R013, R014 before L241 | L181-L210 | characters learned through L240 |
+| L270 | R015, R016 before L271 | L211-L240 | characters learned through L270 |
+| L300 | R017, R018 before L301 | L241-L270 | characters learned through L300 |
+| L330 | R019, R020 before L331 | L271-L300 | characters learned through L330 |
+| L360 | R021, R022 before L361 | L301-L330 | characters learned through L360 |
+| L390 | R023, R024 before L391 | L331-L360 | characters learned through L390 |
+| L420 | R025, R026 before L421 | L361-L390 | characters learned through L420 |
+| L450 | R027, R028 before L451 | L391-L420 | characters learned through L450 |
+| L480 | R029, R030 before L481 | L421-L450 | characters learned through L480 |
+| L510 | R031, R032 before L511 | L451-L480 | characters learned through L510 |
+| L540 | R033, R034 before L541 | L481-L510 | characters learned through L540 |
+| L570 | R035, R036 before L571 | L511-L540 | characters learned through L570 |
+| L600 | R037, R038 after L600 | L541-L570 | characters learned through L600 |
+| L600 final capstone | R039, R040 after R037/R038 | L571-L600 | characters learned through L600 |
 
 Rules:
 

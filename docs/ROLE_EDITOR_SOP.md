@@ -44,11 +44,10 @@ For review modules, follow `docs/CURRICULUM_OPERATING_SOP.md` and `docs/CURRICUL
 
 Review module planning must lock the milestone boundary:
 
-- R001/R002: cover L001-L030, may use only characters learned through L060.
-- R003/R004: cover L031-L060, may use only characters learned through L090.
-- R005/R006: cover L061-L090, may use only characters learned through L120.
-- R007/R008: cover L091-L120, may use only characters learned through L150.
-- R009/R010: cover L121-L150, may use only characters learned through L180.
+- Use the full review schedule in `docs/CURRICULUM_OPERATING_SOP.md`.
+- For milestone `M = 60, 90, 120, ... 600`, the standard pair covers `M - 59` through `M - 30` and may use only characters learned through `M`.
+- Pair numbering follows the formula in the operating SOP. Examples: R005/R006 cover L061-L090 using characters through L120; R009/R010 cover L121-L150 using characters through L180; R037/R038 cover L541-L570 using characters through L600.
+- Final capstone R039/R040 covers L571-L600 using characters through L600.
 
 Plan each review pair together as 10 total sentences. Across the pair, every new character in the coverage target must appear at least once. Do not use characters learned after the milestone ceiling, even if latest `origin/main` is already later.
 

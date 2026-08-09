@@ -491,7 +491,8 @@ Starting after L060, every 30-lesson milestone gets two review modules. These ar
 - Continue by 30-lesson blocks: after L120 review L061-L090, after L150 review L091-L120, and so on.
 - Review pairs are blockers: after a milestone lesson enters `main`, its two review modules must ship before the next numbered lesson. If the pair was skipped, stop later numbered lessons and catch up the missing review pair(s).
 - For overdue review modules, lock allowed characters to the milestone ceiling, not latest `origin/main`.
-- Required schedule:
+- Continue this schedule through L600. Use the full schedule table in `docs/CURRICULUM_OPERATING_SOP.md` as authority. The normal delayed cycle reaches R037/R038 after L600 for L541-L570, then the final capstone R039/R040 covers L571-L600 using characters learned through L600.
+- First milestones:
 
 | Milestone in main | Required review pair before next numbered lesson | Coverage target | Allowed character ceiling |
 | --- | --- | --- | --- |

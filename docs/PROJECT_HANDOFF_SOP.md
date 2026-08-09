@@ -142,6 +142,7 @@ Do not create a new clone unless the user explicitly asks. If the current shell 
 - Supervisor must run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects skipped lesson numbers.
 - Production delivers `asset-complete-package`; Release owns `release-ready-package` and `in-main`. Do not make Production spend time on shared-state release integration for dependency-blocked lessons.
 - Review pairs are blockers: after L060/L090/L120/L150/L180 milestones, ship the required review pair before the next numbered lesson. Overdue review modules keep their original milestone allowed-character ceiling, not latest `origin/main`.
+- The review cycle continues through the full 600-lesson course and uses R001-R040. R037/R038 follow L600 for L541-L570, and final capstone R039/R040 cover L571-L600.
 - Production handoffs must be one-paste executable.
 - A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a complete course.
 - Production audio must use OpenAI audio, `npm run assets:audio`, and `npm run assets:align:ai` unless the teacher explicitly approves an exception.

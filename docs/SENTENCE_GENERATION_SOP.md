@@ -37,11 +37,9 @@ If any Han character is not in `allowedChars`, the sentence is rejected. Do not 
 
 For review modules, `allowedChars` means the characters learned by the review milestone, not necessarily latest `origin/main`. Review modules do not introduce new characters. If an overdue review module is produced late, keep the original milestone ceiling:
 
-- R001/R002 after L060 may use only characters learned through L060 and must cover L001-L030.
-- R003/R004 after L090 may use only characters learned through L090 and must cover L031-L060.
-- R005/R006 after L120 may use only characters learned through L120 and must cover L061-L090.
-- R007/R008 after L150 may use only characters learned through L150 and must cover L091-L120.
-- R009/R010 after L180 may use only characters learned through L180 and must cover L121-L150.
+- For milestone `M = 60, 90, 120, ... 600`, the standard pair may use only characters learned through `M` and must cover the new characters from `M - 59` through `M - 30`.
+- Examples: R001/R002 cover L001-L030 using characters through L060; R005/R006 cover L061-L090 using characters through L120; R009/R010 cover L121-L150 using characters through L180; R037/R038 cover L541-L570 using characters through L600.
+- Final capstone R039/R040 covers L571-L600 and may use characters learned through L600.
 
 Do not use characters learned after the milestone ceiling just because the current repo has later numbered lessons.
 
