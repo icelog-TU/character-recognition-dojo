@@ -245,7 +245,6 @@ export function subscribeCloudAccount(callback: (user: CloudAccountUser | null) 
 
 export async function signInWithGoogleAccount(): Promise<CloudAccountUser> {
   const provider = new GoogleAuthProvider();
-  provider.setCustomParameters({ prompt: "select_account" });
   const credential = await signInWithPopup(auth, provider);
   const accountUser = toCloudAccountUser(credential.user);
   if (!accountUser) throw new Error("Google sign-in did not return an account user.");
