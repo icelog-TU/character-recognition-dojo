@@ -58,6 +58,10 @@ Use this section before writing image prompts for homes or recurring places. Kee
 |---|---|---|---|---|---|
 | R005 | review module | same as L120 | 放學了，同學站起來。 / 他拿著書包站在校門邊。 / 門前左邊那朵花開了。 / 桌上那本書是誰借的？ / 我畫出上學的路。 | 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 | Fifth review module after L120. Introduces no new characters. R005-R006 together cover every new character from L061-L090. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | R006 | review module | same as L120 | 坐好，拿出筆和紙。 / 媽媽把書包給我。 / 我問那本書是誰帶來的？ / 他去找小狗。 / 用心畫一朵花。 | 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 | Sixth review module after L120. Introduces no new characters. Completes the third review pair covering L061-L090. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R007 | review module | same as L150 | 把盒子放在桌上。 / 帽子掉到地面上。 / 眼鏡放在盒子裡。 / 小狗的鼻子和臉紅紅的。 / 小孩頭上戴著紅帽子。 | 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 | Seventh review module after L150. Introduces no new characters. R007-R008 together cover every new character from L091-L120. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R008 | review module | same as L150 | 這個圓盒壞掉了。 / 球棒太難用。 / 雨天過後，去外面草地玩。 / 他打出好球，得很多分。 / 幾點了？去空地打球。 | 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 | Eighth review module after L150. Introduces no new characters. Completes the fourth review pair covering L091-L120. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R009 | review module | same as L180 | 外面天空有黑雲。 / 下雨時，不要穿白鞋出門。 / 天氣太熱，先脫外套。 / 先喝點水，再吃飯和菜。 / 老爸下棋，卻不開心。 | 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 | Ninth review module after L180. Introduces no new characters. R009-R010 together cover every new character from L121-L150. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R010 | review module | same as L180 | 為什麼房間這麼亂？ / 怎麼找不到要穿的鞋？ / 他穿上衣，戴帽子。 / 天黑了，所以房間要開燈。 / 冷氣關了，房間還很熱。 | 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 | Tenth review module after L180. Introduces no new characters. Completes the fifth review pair covering L121-L150. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | L001 | 一、二、三、人 | 一、二、三、人 | 人 / 一人 / 二人 / 三人 | none | Seed lesson. Four characters are introduced together because the first lesson needs enough material to make meaning. |
 | L002 | 個 | 一、二、三、人、個 | 人 / 一個人 / 三個人 | 一、三、人 | `個` is neutral tone in `一個人` and `三個人`. Avoid `二個人`; use `兩個人` only after `兩` is taught. |
 | L003 | 大 | 一、二、三、人、個、大 | 大人 / 二人 / 三個人 / 一個大人 | 一、二、三、人、個 | Uses `大人` as a meaningful phrase and repeats counting people. |
@@ -294,7 +298,7 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 ## Planned Lessons
 
-Merged curriculum is complete through L184. Review modules are complete through R006. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L184. Review modules are complete through R010. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

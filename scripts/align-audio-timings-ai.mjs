@@ -40,6 +40,35 @@ function hanChars(text) {
 }
 
 function normalizeTranscribedHanChar(char) {
+  const simplifiedEquivalentMap = new Map([
+    ["\u4e2a", "\u500b"],
+    ["\u8fd9", "\u9019"],
+    ["\u5706", "\u5713"],
+    ["\u574f", "\u58de"],
+    ["\u955c", "\u93e1"],
+    ["\u8138", "\u81c9"],
+    ["\u7ea2", "\u7d05"],
+    ["\u5934", "\u982d"],
+    ["\u96be", "\u96e3"],
+    ["\u8fc7", "\u904e"],
+    ["\u540e", "\u5f8c"],
+    ["\u51e0", "\u5e7e"],
+    ["\u70b9", "\u9ede"],
+    ["\u4e91", "\u96f2"],
+    ["\u8131", "\u812b"],
+    ["\u6c14", "\u6c23"],
+    ["\u70ed", "\u71b1"],
+    ["\u4e48", "\u9ebc"],
+    ["\u4e3a", "\u70ba"],
+    ["\u95f4", "\u9593"],
+    ["\u65f6", "\u6642"],
+    ["\u8fd8", "\u9084"],
+    ["\u706f", "\u71c8"],
+    ["\u5f00", "\u958b"],
+    ["\u5173", "\u95dc"],
+  ]);
+  if (simplifiedEquivalentMap.has(char)) return simplifiedEquivalentMap.get(char);
+
   const map = new Map([
     ["\u753b", "\u756b"],
     ["\u5b66", "\u5b78"],
