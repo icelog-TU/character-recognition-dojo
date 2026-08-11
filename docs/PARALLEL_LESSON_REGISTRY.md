@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L196 | 亮 / normal lesson | claimed | Production D | codex/l196-complete-package / 4a336df9 | L192 電, L193 生, L194 明, L195 光 | ["電","生","明","光"] | curriculum-workflow/lesson-requests/L196.json, curriculum-workflow/generated/L196-generation-packet.md | public/assets/lessons/L196/images/, public/assets/lessons/L196/audio/ | accepted handoff and starting complete package; origin/main recheck shows main through L191, so L192 電 added as dependency/provisional boundary |
+| L196 | 亮 / normal lesson | claimed | Production D | codex/l196-complete-package / 4a336df9 | L193 生, L194 明, L195 光 | ["生","明","光"] | curriculum-workflow/lesson-requests/L196.json, curriculum-workflow/generated/L196-generation-packet.md | public/assets/lessons/L196/images/, public/assets/lessons/L196/audio/ | accepted handoff and starting complete package; branch origin/main base includes L192 電, so dependency boundary is L193-L195 |
 
 ## Status Values
 
