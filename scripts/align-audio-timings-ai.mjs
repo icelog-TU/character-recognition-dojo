@@ -66,6 +66,14 @@ function normalizeTranscribedHanChar(char) {
     ["\u706f", "\u71c8"],
     ["\u5f00", "\u958b"],
     ["\u5173", "\u95dc"],
+    ["\u8f66", "\u8eca"],
+    ["\u53d1", "\u767c"],
+    ["\u7535", "\u96fb"],
+    ["\u8bdd", "\u8a71"],
+    ["\u996d", "\u98ef"],
+    ["\u6d3b", "\u706b"],
+    ["\u8bf4", "\u8aaa"],
+    ["\u98ce", "\u98a8"],
   ]);
   if (simplifiedEquivalentMap.has(char)) return simplifiedEquivalentMap.get(char);
 
