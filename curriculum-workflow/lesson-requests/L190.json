@@ -1,0 +1,179 @@
+{
+  "id": "L190",
+  "order": 190,
+  "newChars": [
+    "火"
+  ],
+  "zhuyin": {
+    "火": "ㄏㄨㄛˇ"
+  },
+  "title": "火",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A complete package request for L190. Latest origin/main production JSON is complete through L189「能」, so dependencies are satisfied and there are no provisional learned characters. Use only latest production learned characters plus current target「火」. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 發、電、光、生、煮、烤、煙、危、險、讓、變、仙、棒、重、乾、淨、功、量、源.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L189 能 plus current target 火",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "火",
+      "能",
+      "力",
+      "真",
+      "想",
+      "像"
+    ],
+    "targetCharMinimumCount": {
+      "火": 3
+    },
+    "recentTargetMinimumCounts": {
+      "能": 2,
+      "力": 2,
+      "真": 2,
+      "想": 1,
+      "像": 1
+    },
+    "disallowedChars": [
+      "發",
+      "電",
+      "光",
+      "生",
+      "煮",
+      "烤",
+      "煙",
+      "危",
+      "險",
+      "讓",
+      "變",
+      "仙",
+      "棒",
+      "重",
+      "乾",
+      "淨",
+      "功",
+      "量",
+      "源"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, license plates, road signs, door plates, blackboard writing, speech bubbles, captions, logos, warning signs, or readable marks.",
+      "Use L058 image style anchors.",
+      "All fire scenes must be calm, supervised, and clearly safe."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 火 as public/assets/lessons/L190/audio/char-u706b.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L190-S01",
+      "text": "不能玩火。",
+      "spokenText": "不能玩火",
+      "focusChar": "火",
+      "displayLines": [
+        "不能",
+        "玩火。"
+      ],
+      "imageNotes": "大人溫和提醒孩子不能玩火，畫面可有安全距離外的小火或火柴被大人收起來。不要讓孩子靠近火或看起來在玩火；不可有文字、數字、警告標語或標籤。"
+    },
+    {
+      "id": "L190-S02",
+      "text": "火很熱，手不能放上去。",
+      "spokenText": "火很熱手不能放上去",
+      "focusChar": "火",
+      "displayLines": [
+        "火很熱，",
+        "手不能",
+        "放上去。"
+      ],
+      "imageNotes": "桌上或安全爐具中有小火，大人阻止孩子把手放上去，表現火很熱。畫面要安全、有距離，不可有文字、數字、標籤或危險驚嚇感。"
+    },
+    {
+      "id": "L190-S03",
+      "text": "小火車真有力。",
+      "spokenText": "小火車真有力",
+      "focusChar": "火",
+      "displayLines": [
+        "小火車",
+        "真有力。"
+      ],
+      "imageNotes": "小火車頭拉著長長的車廂在軌道上跑，看起來很有力。畫面要清楚呈現火車頭、長車廂與軌道；不可有車號、文字、數字、招牌或標籤。"
+    },
+    {
+      "id": "L190-S04",
+      "text": "你做的小火車，真有想像力。",
+      "spokenText": "你做的小火車真有想像力",
+      "focusChar": "力",
+      "displayLines": [
+        "你做的",
+        "小火車，",
+        "真有想像力。"
+      ],
+      "imageNotes": "一個大人看到孩子做的小火車作品，小火車有可愛翅膀，稱讚很有想像力。作品上不可有文字、數字、簽名或標籤；畫面要是兒童手作風格，不要成熟奇幻風。"
+    },
+    {
+      "id": "L190-S05",
+      "text": "紅紅的火像花一樣真好看。",
+      "spokenText": "紅紅的火像花一樣真好看",
+      "focusChar": "火",
+      "displayLines": [
+        "紅紅的火",
+        "像花一樣",
+        "真好看。"
+      ],
+      "imageNotes": "戶外有大人陪同，孩子安全地拿著仙女棒，看著紅紅的火花像花一樣好看。必須呈現安全距離與成人陪伴，不可讓孩子靠近危險火源；不可有文字、數字、標籤或煙火品牌。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L190-S01",
+      "targetChar": "火"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L190-S02",
+      "targetChar": "火",
+      "targetCharIndex": 0,
+      "prefixText": "",
+      "suffixText": "很熱手不能放上去"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L190-S03",
+      "targetChar": "火",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "火",
+        "力",
+        "真"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L190-S04",
+      "chunks": [
+        "你做的小火車",
+        "真有",
+        "想像力"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L190-S05",
+      "correctText": "紅紅的火像花一樣真好看。",
+      "wrongOneText": "紅紅的花像火一樣真好看。",
+      "wrongTwoText": "紅紅的火像花一樣不好看。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}

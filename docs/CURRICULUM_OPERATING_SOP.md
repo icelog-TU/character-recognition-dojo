@@ -489,8 +489,8 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L189, L189 introduces `能`, and review modules are complete through R010.
+As of latest `origin/main`, production curriculum is complete through L190, L190 introduces `火`, and review modules are complete through R010.
 
-Under the review-blocker rule, there are no overdue review modules at the current L189 boundary. The next required review blockers are R011-R012 after L210.
+Under the review-blocker rule, there are no overdue review modules at the current L190 boundary. The next required review blockers are R011-R012 after L210.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L189 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L190 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.

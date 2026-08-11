@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 189:
+Characters taught after Lesson 190:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火`
 
 Recent review pool for the next lesson:
 
-`能 力 真 想 像 課 話 師 說 見 聽 聲 叫 停 馬 跑`
+`火 能 力 真 想 像 課 話 師 說 見 聽 聲 叫 停 馬`
 
 ## Visual Continuity Ledger
 
@@ -305,10 +305,11 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L188 | 力 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力 | 他的畫真有想像力。 / 小馬用力跑，像風一樣。 / 我想用力，可是沒力氣。 / 我真想下課去打球。 / 有話下課再說。 | 真想像課話 | Introduces `力` through approved sentence contexts. Reviews recent `真想像課話`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 | L189 | 能 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能 | 這本書不能借。 / 沒有力氣，不能打球。 / 他的畫真有想像力。 / 真想能像小馬一樣跑得快。 / 老師叫大家下課時去打掃。 | 力真想像課 | Introduces `能` through approved sentence contexts. Reviews recent `力真想像課`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L190 | 火 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火 | 不能玩火。 / 火很熱，手不能放上去。 / 小火車真有力。 / 你做的小火車，真有想像力。 / 紅紅的火像花一樣真好看。 | 能力真想像 | Introduces `火` through approved sentence contexts. Reviews recent `能力真想像`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L189. Review modules are complete through R010. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L190. Review modules are complete through R010. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
