@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L195 | 光 / normal lesson | claimed | Production C | codex/l195-complete-package / 26e9c063 | L192:電, L193:生, L194:明 | ["電","生","明"] | curriculum-workflow/lesson-requests/L195.json; curriculum-workflow/generated/L195-generation-packet.md | public/assets/lessons/L195/images/; public/assets/lessons/L195/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
