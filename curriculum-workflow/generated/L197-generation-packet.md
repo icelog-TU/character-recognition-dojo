@@ -5,13 +5,13 @@ Kind: normal lesson
 New char: 陽
 Zhuyin: 陽 ㄧㄤˊ
 Title: 陽
-Status at package start: dependency-blocked because origin/main contains production lessons through L193 only.
-Depends on: L194, L195, L196
-Provisional learned chars: 明 光 亮
+Status at final recheck: dependency-blocked because origin/main contains L194 and L195, but not L196.
+Depends on: L196
+Provisional learned chars: 亮
 
 ## Allowed Character Boundary
 
-origin/main production JSON through L193「生」 plus provisional learned chars 明 光 亮 plus current target 陽
+origin/main production JSON through L195 plus provisional learned char ? plus current target ?
 Audit fields: sentence text, spokenText, displayLines, focusChar, Stage 4 targets/options/chunks, and G05 wrong text.
 Disallowed/caution chars: 月 照 射 影 暗 線 清 楚 曬 暖 晒 台 臺
 
@@ -115,4 +115,4 @@ Disallowed/caution chars: 月 照 射 影 暗 線 清 楚 曬 暖 晒 台 臺
 
 ## Expected Final Status
 
-Because L194-L196 are not in origin/main at package start, this package is ready-blocked-by-dependency unless Release has merged those lessons before final recheck. Do not leave provisional production JSON changes in src/curriculum/sample-lessons.json.
+Ready-blocked-by-dependency until L196 is in origin/main. Do not leave provisional production JSON changes in src/curriculum/sample-lessons.json.

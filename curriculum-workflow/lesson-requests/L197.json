@@ -9,17 +9,13 @@
   },
   "title": "陽",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production A complete package request for L197. Latest origin/main production JSON is complete through L193「生」 at package start; L194「明」, L195「光」, and L196「亮」 are dependency blockers and are provided as provisional learned characters only for lesson-local asset preparation. Use approved sentences exactly and do not introduce unlearned display text.",
+  "teacherNotes": "Production A complete package request for L197. Latest origin/main production JSON contains L194 and L195 at final recheck; L196 is still a dependency blocker and is provided as the only provisional learned character for lesson-local asset preparation. Use approved sentences exactly and do not introduce unlearned display text.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main production JSON through L193「生」 plus provisional learned chars 明 光 亮 plus current target 陽",
+    "allowedBoundary": "origin/main production JSON through L195 plus provisional learned char ? plus current target ?",
     "provisionalLearnedChars": [
-      "明",
-      "光",
       "亮"
     ],
     "dependsOnLessons": [
-      "L194",
-      "L195",
       "L196"
     ],
     "requiredCoverageChars": [
@@ -175,13 +171,9 @@
     }
   },
   "dependsOnLessons": [
-    "L194",
-    "L195",
     "L196"
   ],
   "provisionalLearnedChars": [
-    "明",
-    "光",
     "亮"
   ]
 }
