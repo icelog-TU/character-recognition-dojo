@@ -1,0 +1,192 @@
+{
+  "id": "L192",
+  "order": 192,
+  "newChars": [
+    "電"
+  ],
+  "zhuyin": {
+    "電": "ㄉㄧㄢˋ"
+  },
+  "title": "電",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete package request for L192. Latest origin/main production JSON is complete through L190 火. L191 發 is not yet in production JSON, so this package uses provisional learned chars [\"發\"] and must remain ready-blocked-by-dependency until L191 merges. G03 missingIndexes are represented as Han-only indexes [1,3] in the draft so both blanks are 電 in 沒電了電話不能用.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L190 火 plus provisional 發 plus current target 電",
+    "provisionalLearnedChars": [
+      "發"
+    ],
+    "dependsOnLessons": [
+      "L187",
+      "L188",
+      "L189",
+      "L190",
+      "L191"
+    ],
+    "requiredCoverageChars": [
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電"
+    ],
+    "targetCharMinimumCount": {
+      "電": 3
+    },
+    "recentTargetMinimumCounts": {
+      "發": 2,
+      "火": 2,
+      "能": 2,
+      "力": 1,
+      "真": 1
+    },
+    "disallowedChars": [
+      "響",
+      "明",
+      "亮",
+      "光",
+      "腦",
+      "視",
+      "池",
+      "線",
+      "梯",
+      "扇",
+      "源",
+      "量",
+      "讓",
+      "變",
+      "現",
+      "生"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, license plates, route signs, station names, blackboard writing, speech bubbles, captions, logos, formulas, arrows, or readable marks.",
+      "Use L058 image style anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 電 as public/assets/lessons/L192/audio/char-u96fb.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L192-S01",
+      "text": "我打電話給媽媽。",
+      "spokenText": "我打電話給媽媽",
+      "focusChar": "電",
+      "displayLines": [
+        "我打電話",
+        "給媽媽。"
+      ],
+      "imageNotes": "孩子拿著電話或手機打電話給媽媽，畫面可有媽媽在另一邊接電話的溫和情境。電話或手機螢幕不可有文字、數字、圖示或標籤。"
+    },
+    {
+      "id": "L192-S02",
+      "text": "沒電了，電話不能用。",
+      "spokenText": "沒電了電話不能用",
+      "focusChar": "電",
+      "displayLines": [
+        "沒電了，",
+        "電話不能用。"
+      ],
+      "imageNotes": "電話或手機沒電不能用，孩子看著黑掉的螢幕或放下電話。螢幕不可有低電量圖示、文字、數字或標籤；用畫面表情呈現不能用。"
+    },
+    {
+      "id": "L192-S03",
+      "text": "電車要出發了。",
+      "spokenText": "電車要出發了",
+      "focusChar": "電",
+      "displayLines": [
+        "電車要",
+        "出發了。"
+      ],
+      "imageNotes": "電車停在月台或軌道旁準備出發，乘客安全站好。不可有車號、站名、文字、數字、路線牌或標籤。"
+    },
+    {
+      "id": "L192-S04",
+      "text": "老師說火力能發電。",
+      "spokenText": "老師說火力能發電",
+      "focusChar": "發",
+      "displayLines": [
+        "老師說",
+        "火力能發電。"
+      ],
+      "imageNotes": "老師用簡單模型或圖像教孩子火力能發電，可有安全的模型火、電燈亮起或發電示意，但畫面中不可出現任何文字、數字、箭頭標籤、公式或黑板字。"
+    },
+    {
+      "id": "L192-S05",
+      "text": "火能發電，又能做飯，真有用。",
+      "spokenText": "火能發電又能做飯真有用",
+      "focusChar": "電",
+      "displayLines": [
+        "火能發電，",
+        "又能做飯，",
+        "真有用。"
+      ],
+      "imageNotes": "安全分區畫面：一邊呈現火力帶動電燈或簡單發電情境，另一邊呈現大人用安全爐火做飯，孩子在旁邊理解火很有用。不可有文字、數字、標籤；火源必須安全且有成人陪同。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L192-S01",
+      "targetChar": "電",
+      "reason": "「電話」是本課核心生活詞，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L192-S03",
+      "targetChar": "電",
+      "targetCharIndex": 0,
+      "prefixText": "",
+      "suffixText": "車要出發了"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L192-S02",
+      "targetChar": "電",
+      "missingIndexes": [
+        1,
+        3
+      ],
+      "options": [
+        "電",
+        "發",
+        "火"
+      ],
+      "indexNote": "Repo sentence games use Han-only indexes. Handoff [1,4] maps to both 電 only if punctuation is counted; app-compatible Han-only indexes are [1,3]."
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L192-S04",
+      "chunks": [
+        "老師說",
+        "火力能",
+        "發電"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L192-S05",
+      "correctText": "火能發電，又能做飯，真有用。",
+      "wrongOneText": "火能發熱，又能做飯，真有用。",
+      "wrongTwoText": "火能發電，又能打球，真有用。"
+    }
+  },
+  "dependsOnLessons": [
+    "L187",
+    "L188",
+    "L189",
+    "L190",
+    "L191"
+  ],
+  "provisionalLearnedChars": [
+    "發"
+  ]
+}
