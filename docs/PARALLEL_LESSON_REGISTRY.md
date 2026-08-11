@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L189 | 能 / normal lesson | claimed | Production C | codex/l189-complete-package / 06736b9 | L184:課, L185:像, L186:想, L187:真, L188:力 | ["真","力"] | curriculum-workflow/lesson-requests/L189.json; curriculum-workflow/generated/L189-generation-packet.md | public/assets/lessons/L189/images/; public/assets/lessons/L189/audio/ | accepted handoff and starting complete package; latest origin/main contains L185/L186 but not L187/L188 |
 
 ## Status Values
 
