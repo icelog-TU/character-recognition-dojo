@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L187 | 真 / normal lesson | claimed | Production A | codex/l187-complete-package / 06736b9 | L182:師, L183:話, L184:課, L185:像, L186:想 | [] | curriculum-workflow/lesson-requests/L187.json; curriculum-workflow/generated/L187-generation-packet.md | public/assets/lessons/L187/images/; public/assets/lessons/L187/audio/ | accepted handoff and starting complete package |
+| L187 | 真 / normal lesson | asset-complete-package | Production A | codex/l187-complete-package / a00d0edcaf64a4eddea55397389580cf8abc371b | L182:師, L183:話, L184:課, L185:像, L186:想 | [] | curriculum-workflow/lesson-requests/L187.json; curriculum-workflow/generated/L187-generation-packet.md | public/assets/lessons/L187/images/; public/assets/lessons/L187/audio/ | complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup |
 
 ## Status Values
 
