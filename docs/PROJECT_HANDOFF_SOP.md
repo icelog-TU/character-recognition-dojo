@@ -21,12 +21,12 @@ If Markdown and production JSON disagree, latest `origin/main:src/curriculum/sam
 As of latest `origin/main`:
 
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L188
-- L188 introduces `力`.
+- Current reviewed lessons: L001-L189
+- L189 introduces `能`.
 - Production review modules: R001-R010.
-- Overdue review blockers: none at current L188; next review blockers are R011-R012 after L210.
+- Overdue review blockers: none at current L189; next review blockers are R011-R012 after L210.
 - L001-L005 use Stage 1-3.
-- L006-L188 include Stage 4 fixed sentence games.
+- L006-L189 include Stage 4 fixed sentence games.
 - Review modules use `R###` ids and do not consume `L###` lesson numbers.
 
 Every new thread must still verify this with `git fetch origin` and `npm run curriculum:audit-state`.

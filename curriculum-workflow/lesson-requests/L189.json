@@ -1,0 +1,191 @@
+{
+  "id": "L189",
+  "order": 189,
+  "newChars": [
+    "能"
+  ],
+  "zhuyin": {
+    "能": "ㄋㄥˊ"
+  },
+  "title": "能",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete package request for L189. Latest origin/main production JSON is complete through L188「力」, so dependencies are satisfied and there are no provisional learned characters. Use only latest production learned characters plus current target「能」.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L188 力 plus current target 能",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能"
+    ],
+    "targetCharMinimumCount": {
+      "能": 3
+    },
+    "recentTargetMinimumCounts": {
+      "力": 2,
+      "真": 2,
+      "想": 2,
+      "像": 1,
+      "課": 1
+    },
+    "disallowedChars": [
+      "嗎",
+      "自",
+      "己",
+      "辦",
+      "幫",
+      "忙",
+      "重",
+      "乾",
+      "淨",
+      "功",
+      "量",
+      "源",
+      "才",
+      "假",
+      "實",
+      "正",
+      "知",
+      "道",
+      "教",
+      "班",
+      "記",
+      "喜",
+      "歡",
+      "睡",
+      "買",
+      "新",
+      "明",
+      "今",
+      "昨",
+      "年",
+      "月",
+      "日"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, license plates, road signs, door plates, blackboard writing, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Use L058 image style anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 能 as public/assets/lessons/L189/audio/char-u80fd.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L189-S01",
+      "text": "這本書不能借。",
+      "spokenText": "這本書不能借",
+      "focusChar": "能",
+      "displayLines": [
+        "這本書",
+        "不能借。"
+      ],
+      "imageNotes": "孩子想借一本書，但大人或老師溫和表示這本書不能借。畫面可有孩子伸手看書、書在桌上；書封不可有文字、數字、標籤或可讀圖案。"
+    },
+    {
+      "id": "L189-S02",
+      "text": "沒有力氣，不能打球。",
+      "spokenText": "沒有力氣不能打球",
+      "focusChar": "能",
+      "displayLines": [
+        "沒有力氣，",
+        "不能打球。"
+      ],
+      "imageNotes": "孩子拿著球或球棒，但看起來沒有力氣，不能打球。畫面要清楚呈現累了、沒力氣的狀態，不要誇張或病態；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L189-S03",
+      "text": "他的畫真有想像力。",
+      "spokenText": "他的畫真有想像力",
+      "focusChar": "力",
+      "displayLines": [
+        "他的畫",
+        "真有想像力。"
+      ],
+      "imageNotes": "孩子展示一張很有想像力的圖畫，畫面可有奇妙但兒童風格的元素，例如會飛的小馬、像小鳥的花或有趣場景。紙上不可有文字、數字、簽名或標籤。"
+    },
+    {
+      "id": "L189-S04",
+      "text": "真想能像小馬一樣跑得快。",
+      "spokenText": "真想能像小馬一樣跑得快",
+      "focusChar": "能",
+      "displayLines": [
+        "真想能像",
+        "小馬一樣",
+        "跑得快。"
+      ],
+      "imageNotes": "孩子看著小馬快跑，心裡很想能像小馬一樣跑得快。畫面可呈現孩子在旁邊羨慕地看小馬奔跑，或孩子想像自己跑得很快；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L189-S05",
+      "text": "老師叫大家下課時去打掃。",
+      "spokenText": "老師叫大家下課時去打掃",
+      "focusChar": "課",
+      "displayLines": [
+        "老師叫大家",
+        "下課時",
+        "去打掃。"
+      ],
+      "imageNotes": "老師溫和地叫大家下課時去打掃，孩子們拿掃具準備打掃教室或走廊。不可有黑板字、課表、文字、數字、標籤或標語。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L189-S01",
+      "targetChar": "能",
+      "reason": "「不能借」是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L189-S04",
+      "targetChar": "能",
+      "targetCharIndex": 2,
+      "prefixText": "真想",
+      "suffixText": "像小馬一樣跑得快"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L189-S02",
+      "targetChar": "能",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "能",
+        "力",
+        "真"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L189-S05",
+      "chunks": [
+        "老師叫大家",
+        "下課時",
+        "去打掃"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L189-S03",
+      "correctText": "他的畫真有想像力。",
+      "wrongOneText": "他的書真有想像力。",
+      "wrongTwoText": "他的畫沒有想像力。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
