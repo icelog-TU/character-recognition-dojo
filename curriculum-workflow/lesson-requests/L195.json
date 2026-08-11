@@ -1,0 +1,190 @@
+{
+  "id": "L195",
+  "order": 195,
+  "newChars": [
+    "光"
+  ],
+  "zhuyin": {
+    "光": "ㄍㄨㄤ"
+  },
+  "title": "光",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L195 光. Latest origin/main at production start is complete through L191 發, so L195 depends on not-yet-merged L192 電, L193 生, and L194 明 before production JSON may merge. Provisional learned chars are 電, 生, 明. Do not update production JSON, planner-data, or ledger until L192-L194 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Use 正體 裡. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L191 發 plus provisional 電、生、明 and current target 光",
+    "provisionalLearnedChars": [
+      "電",
+      "生",
+      "明"
+    ],
+    "dependsOnLessons": [
+      "L192:電",
+      "L193:生",
+      "L194:明"
+    ],
+    "requiredCoverageChars": [
+      "光",
+      "明",
+      "生",
+      "電",
+      "發",
+      "火"
+    ],
+    "targetCharMinimumCount": {
+      "光": 3
+    },
+    "recentTargetMinimumCounts": {
+      "明": 2,
+      "生": 2,
+      "電": 2,
+      "發": 1,
+      "火": 1
+    },
+    "disallowedDisplayChars": [
+      "亮",
+      "陽",
+      "照",
+      "射",
+      "影",
+      "暗",
+      "線",
+      "清",
+      "楚",
+      "活",
+      "命",
+      "安",
+      "全"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, blackboard writing, book text, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Use L058 image style anchors.",
+      "Each image must match the sentence imageNotes and must not be generic."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 光 as public/assets/lessons/L195/audio/char-u5149.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L195-S01",
+      "text": "明天上課，要學光和電。",
+      "spokenText": "明天上課要學光和電",
+      "focusChar": "光",
+      "displayLines": [
+        "明天上課，",
+        "要學光和電。"
+      ],
+      "imageNotes": "教室裡老師準備教光和電，桌上可有安全的小電燈或簡單教具，學生看著老師。畫面要清楚呈現上課學光和電；不可有黑板文字、課本字樣、數字、標籤或注音。"
+    },
+    {
+      "id": "L195-S02",
+      "text": "他畫的小鳥很生動。",
+      "spokenText": "他畫的小鳥很生動",
+      "focusChar": "生",
+      "displayLines": [
+        "他畫的小鳥",
+        "很生動。"
+      ],
+      "imageNotes": "孩子展示自己畫的小鳥，畫裡的小鳥看起來很像真的、很有生命感。畫面重點是孩子的圖畫作品很生動；圖畫中不可出現文字、簽名、數字或標籤。"
+    },
+    {
+      "id": "L195-S03",
+      "text": "明明關燈了，房裡怎麼有光？",
+      "spokenText": "明明關燈了房裡怎麼有光",
+      "focusChar": "光",
+      "displayLines": [
+        "明明關燈了，",
+        "房裡怎麼",
+        "有光？"
+      ],
+      "imageNotes": "房間裡電燈已經關掉，但房裡仍有一點光，孩子疑惑地看向光的來源。畫面要安全、清楚呈現關燈後仍有光；不可有文字、數字、標籤或恐怖元素。"
+    },
+    {
+      "id": "L195-S04",
+      "text": "生火時，會有火光。",
+      "spokenText": "生火時會有火光",
+      "focusChar": "光",
+      "displayLines": [
+        "生火時，",
+        "會有火光。"
+      ],
+      "imageNotes": "安全戶外空地，大人在控制良好的小火旁示範生火，能看到溫和火光。畫面要清楚呈現生火時有火光，孩子保持安全距離；不可有文字、數字、警示標語或標籤。"
+    },
+    {
+      "id": "L195-S05",
+      "text": "電燈會發光。",
+      "spokenText": "電燈會發光",
+      "focusChar": "光",
+      "displayLines": [
+        "電燈會",
+        "發光。"
+      ],
+      "imageNotes": "一盞家用電燈亮起來發出光，旁邊可有孩子抬頭看燈。畫面重點是電燈發光，不可有文字、數字、品牌標誌、標籤或注音。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L195-S05",
+      "targetChar": "光",
+      "reason": "「發光」是本課核心用法，句子短，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L195-S01",
+      "targetChar": "光",
+      "targetCharIndex": 6,
+      "teachAudio": {
+        "prefixText": "明天上課要學",
+        "suffixText": "和電"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L195-S03",
+      "targetChar": "光",
+      "missingIndexes": [
+        10
+      ],
+      "options": [
+        "光",
+        "電",
+        "火"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L195-S02",
+      "chunks": [
+        "他畫的小鳥",
+        "很",
+        "生動"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L195-S04",
+      "correctText": "生火時，會有火光。",
+      "wrongOneText": "生火時，沒有火光。",
+      "wrongTwoText": "關燈時，會有火光。"
+    }
+  },
+  "dependsOnLessons": [
+    "L192:電",
+    "L193:生",
+    "L194:明"
+  ],
+  "provisionalLearnedChars": [
+    "電",
+    "生",
+    "明"
+  ]
+}
