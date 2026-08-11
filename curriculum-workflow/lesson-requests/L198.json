@@ -1,0 +1,184 @@
+{
+  "id": "L198",
+  "order": 198,
+  "newChars": [
+    "月"
+  ],
+  "zhuyin": {
+    "月": "ㄩㄝˋ"
+  },
+  "title": "月",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L198 月. Latest origin/main is complete through L195 光; L196 亮 and L197 陽 are provisional dependencies unless already merged by Release. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 suffix from exact fragment, and independent G05 wrong-choice whole-sentence audio.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L195 光 plus provisional L196 亮, L197 陽, plus current target 月",
+    "provisionalLearnedChars": [
+      "亮",
+      "陽"
+    ],
+    "dependsOnLessons": [
+      "L196",
+      "L197"
+    ],
+    "requiredCoverageChars": [
+      "月",
+      "陽",
+      "亮",
+      "光",
+      "明",
+      "生"
+    ],
+    "targetCharMinimumCount": {
+      "月": 3
+    },
+    "recentTargetMinimumCounts": {
+      "陽": 2,
+      "亮": 2,
+      "光": 2,
+      "明": 1,
+      "生": 1
+    },
+    "disallowedDisplayChars": [
+      "星",
+      "夜",
+      "照",
+      "落",
+      "穿",
+      "過",
+      "影",
+      "暗",
+      "線",
+      "河",
+      "湖",
+      "海"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, blackboard writing, book text, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Use L058 image style anchors.",
+      "Each image must match the sentence imageNotes and must not be generic."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 月 as public/assets/lessons/L198/audio/char-u6708.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L198-S01",
+      "text": "太陽下山，月亮出來了。",
+      "spokenText": "太陽下山月亮出來了",
+      "focusChar": "月",
+      "displayLines": [
+        "太陽下山，",
+        "月亮出來了。"
+      ],
+      "imageNotes": "傍晚太陽正在下山，天空變暗，月亮出現在天上。畫面要清楚呈現太陽下山和月亮出來；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L198-S02",
+      "text": "窗外的月光很明亮。",
+      "spokenText": "窗外的月光很明亮",
+      "focusChar": "月",
+      "displayLines": [
+        "窗外的月光",
+        "很明亮。"
+      ],
+      "imageNotes": "夜晚室內窗邊，窗外有明亮月光照進房間。畫面重點是窗外月光明亮；不可有文字、數字、標籤或恐怖元素。"
+    },
+    {
+      "id": "L198-S03",
+      "text": "同學家的小狗出生一個月了。",
+      "spokenText": "同學家的小狗出生一個月了",
+      "focusChar": "月",
+      "displayLines": [
+        "同學家的",
+        "小狗出生",
+        "一個月了。"
+      ],
+      "imageNotes": "同學家裡有小狗媽媽和一隻已出生一個月的小狗寶寶，孩子溫和地看著小狗。畫面要可愛、生活化，不呈現生產過程或血腥內容；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L198-S04",
+      "text": "月亮又大又圓。",
+      "spokenText": "月亮又大又圓",
+      "focusChar": "月",
+      "displayLines": [
+        "月亮又大",
+        "又圓。"
+      ],
+      "imageNotes": "夜空中有一個又大又圓的月亮，地面可有孩子抬頭看。畫面重點是月亮大而圓；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L198-S05",
+      "text": "陽光下，水面發亮。",
+      "spokenText": "陽光下水面發亮",
+      "focusChar": "陽",
+      "displayLines": [
+        "陽光下，",
+        "水面發亮。"
+      ],
+      "imageNotes": "白天陽光照在水面上，水面閃亮發光，旁邊可有孩子在安全距離觀看。畫面重點是陽光下水面發亮；不可有文字、數字、標籤或危險水域情境。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L198-S02",
+      "targetChar": "月",
+      "reason": "「月光」是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L198-S04",
+      "targetChar": "月",
+      "targetCharIndex": 0,
+      "teachAudio": {
+        "suffixText": "亮又大又圓"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L198-S01",
+      "targetChar": "月",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "月",
+        "陽",
+        "亮"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L198-S03",
+      "chunks": [
+        "同學家的",
+        "小狗出生",
+        "一個月了"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L198-S05",
+      "correctText": "陽光下，水面發亮。",
+      "wrongOneText": "月光下，水面發亮。",
+      "wrongTwoText": "陽光下，水面不亮。"
+    }
+  },
+  "dependsOnLessons": [
+    "L196",
+    "L197"
+  ],
+  "provisionalLearnedChars": [
+    "亮",
+    "陽"
+  ]
+}
