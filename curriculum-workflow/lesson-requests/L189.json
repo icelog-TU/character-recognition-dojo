@@ -9,11 +9,10 @@
   },
   "title": "能",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production C complete package request for L189. Latest origin/main production JSON is complete through L186 想. L187 真 and L188 力 are not yet in production JSON, so this package uses provisional learned chars [\"真\",\"力\"] and must remain ready-blocked-by-dependency until L187/L188 merge.",
+  "teacherNotes": "Production C complete package request for L189. Latest origin/main production JSON is complete through L187 真. L188 力 is not yet in production JSON, so this package uses provisional learned chars [\"力\"] and must remain ready-blocked-by-dependency until L188 merges.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main production JSON through L186 想 plus provisional 真/力 plus current target 能",
+    "allowedBoundary": "origin/main production JSON through L187 真 plus provisional 力 plus current target 能",
     "provisionalLearnedChars": [
-      "真",
       "力"
     ],
     "dependsOnLessons": [
@@ -203,7 +202,6 @@
     "L188"
   ],
   "provisionalLearnedChars": [
-    "真",
     "力"
   ]
 }

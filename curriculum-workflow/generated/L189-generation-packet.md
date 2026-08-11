@@ -12,16 +12,15 @@
 
 ## Dependency state
 
-Latest origin/main production JSON is complete through L186 想. L187 真 and L188 力 are not yet in production JSON, so this package uses provisional learned chars:
+Latest origin/main production JSON is complete through L187 真. L188 力 is not yet in production JSON, so this package uses provisional learned chars:
 
-- 真
 - 力
 
-Final package status must remain `ready-blocked-by-dependency` until L187 and L188 merge, then Release should rebase/recheck before production integration.
+Final package status must remain `ready-blocked-by-dependency` until L188 merges, then Release should rebase/recheck before production integration.
 
 ## Allowed character audit
 
-Boundary: L001-L186 learned chars from latest origin/main + provisional 真/力 + current 能.
+Boundary: L001-L187 learned chars from latest origin/main + provisional 力 + current 能.
 
 Audited fields:
 
