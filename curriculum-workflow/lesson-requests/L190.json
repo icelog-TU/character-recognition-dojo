@@ -9,15 +9,13 @@
   },
   "title": "火",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production A complete package for L190. Latest origin/main production JSON is complete through L187 真, so L188 力 and L189 能 are not yet merged. This package uses provisional learned characters 力 and 能, and must remain dependency-blocked until L188/L189 enter main and Release rebases/rechecks. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 發、電、光、生、煮、烤、煙、危、險、讓、變、仙、棒、重、乾、淨、功、量、源.",
+  "teacherNotes": "Production A complete package for L190. Latest origin/main production JSON is complete through L188 力, so L189 能 is not yet merged. This package uses provisional learned character 能, and must remain dependency-blocked until L189 enters main and Release rebases/rechecks. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 發、電、光、生、煮、烤、煙、危、險、讓、變、仙、棒、重、乾、淨、功、量、源.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main production JSON through L187 真 plus provisional 力、能 plus current 火",
+    "allowedBoundary": "origin/main production JSON through L188 力 plus provisional 能 plus current 火",
     "provisionalLearnedChars": [
-      "力",
       "能"
     ],
     "dependsOnLessons": [
-      "L188",
       "L189"
     ],
     "requiredCoverageChars": [
@@ -181,11 +179,9 @@
     }
   },
   "dependsOnLessons": [
-    "L188",
     "L189"
   ],
   "provisionalLearnedChars": [
-    "力",
     "能"
   ]
 }

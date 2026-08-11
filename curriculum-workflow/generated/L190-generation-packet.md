@@ -7,14 +7,14 @@
 - 新字：火
 - 注音：火=ㄏㄨㄛˇ
 - 目標句數：5
-- 教師備註：Production A complete package for L190. Latest origin/main production JSON is complete through L187 真, so L188 力 and L189 能 are not yet merged. This package uses provisional learned characters 力 and 能, and must remain dependency-blocked until L188/L189 enter main and Release rebases/rechecks. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 發、電、光、生、煮、烤、煙、危、險、讓、變、仙、棒、重、乾、淨、功、量、源.
+- 教師備註：Production A complete package for L190. Latest origin/main production JSON is complete through L188 力, so L189 能 is not yet merged. This package uses provisional learned character 能, and must remain dependency-blocked until L189 enters main and Release rebases/rechecks. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 發、電、光、生、煮、烤、煙、危、險、讓、變、仙、棒、重、乾、淨、功、量、源.
 
 ## 已學字邊界
 
 AI 必須把這份課程序列視為鎖定邊界。
 
-- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真
-- 平行備課暫定已學字：力 能
+- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力
+- 平行備課暫定已學字：能
 - 本課新字：火
 - 顯示句子可用漢字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火
 - 禁止：任何未列在上方的漢字。
@@ -957,6 +957,11 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 老師說話真好聽。
 - 會飛的馬，真難想像。
 - 我真不想去上課。
+- 他的畫真有想像力。
+- 小馬用力跑，像風一樣。
+- 我想用力，可是沒力氣。
+- 我真想下課去打球。
+- 有話下課再說。
 
 ## 造句提示
 
