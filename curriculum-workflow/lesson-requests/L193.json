@@ -9,15 +9,13 @@
   },
   "title": "生",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production A complete package for L193. Latest origin/main production JSON is complete through L190 火, so L191 發 and L192 電 are not yet merged. This package uses provisional learned characters 發 and 電, and must remain dependency-blocked until L191 and L192 enter main and Release rebases/rechecks. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 活、命、先、病、醫、院、安、全、營、煮、機、亮、光.",
+  "teacherNotes": "Production A complete package for L193. Latest origin/main production JSON includes L191, but L192 is not yet merged. This package uses provisional learned character(s) 電 and must remain dependency-blocked until the missing dependency enters main and Release rebases/rechecks. Approved sentences are fixed by handoff; do not introduce unlearned display text such as ?????????????????????????.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main production JSON through L190 火 plus provisional 發 and 電 plus current 生",
+    "allowedBoundary": "latest origin/main production JSON through L191 plus provisional 電 plus current 生",
     "provisionalLearnedChars": [
-      "發",
       "電"
     ],
     "dependsOnLessons": [
-      "L191",
       "L192"
     ],
     "requiredCoverageChars": [
@@ -173,11 +171,9 @@
     }
   },
   "dependsOnLessons": [
-    "L191",
     "L192"
   ],
   "provisionalLearnedChars": [
-    "發",
     "電"
   ]
 }
