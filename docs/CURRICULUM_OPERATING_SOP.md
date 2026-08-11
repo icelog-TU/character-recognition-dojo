@@ -168,7 +168,7 @@ The production handoff must be one-paste executable. The teacher often sends the
 Required production handoff fields:
 
 - repo URL and required local working copy path
-- assigned production slot: A, B, or C, with the exact worktree path
+- assigned production slot: A, B, C, or D, with the exact worktree path
 - unit id, such as `L127` or `R005`
 - unit kind: normal lesson or review module
 - approved new character(s), Taiwan zhuyin, title, and dependency lessons, or review `afterLessonOrder` and coverage range
