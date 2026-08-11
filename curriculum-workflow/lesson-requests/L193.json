@@ -1,0 +1,172 @@
+{
+  "id": "L193",
+  "order": 193,
+  "newChars": [
+    "生"
+  ],
+  "zhuyin": {
+    "生": "ㄕㄥ"
+  },
+  "title": "生",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A complete package request for L193. Latest origin/main production JSON is complete through L192「電」, so dependencies are satisfied and no provisional learned characters are needed. Use only latest production learned characters plus current target「生」. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 活、命、先、病、醫、院、安、全、營、煮、機、亮、光.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L192 電 plus current target 生",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "生",
+      "電",
+      "發",
+      "火",
+      "能",
+      "力"
+    ],
+    "targetCharMinimumCount": {
+      "生": 3
+    },
+    "recentTargetMinimumCounts": {
+      "電": 2,
+      "發": 2,
+      "火": 2,
+      "能": 1,
+      "力": 1
+    },
+    "disallowedChars": [
+      "活",
+      "命",
+      "先",
+      "病",
+      "醫",
+      "院",
+      "安",
+      "全",
+      "營",
+      "煮",
+      "機",
+      "亮",
+      "光"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, train numbers, license plates, screen text, arrows, formulas, warning signs, or readable marks.",
+      "Use L058 image style anchors.",
+      "Scenes involving fire must be calm, supervised, and clearly safe."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 生 as public/assets/lessons/L193/audio/char-u751f.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L193-S01",
+      "text": "火車停下來了，發生什麼事？",
+      "spokenText": "火車停下來了發生什麼事",
+      "focusChar": "生",
+      "displayLines": [
+        "火車停下",
+        "來了，",
+        "發生什麼事？"
+      ],
+      "imageNotes": "一列火車停在軌道上，旁邊的人露出疑惑表情，好像在問發生什麼事。畫面要清楚呈現火車停下與人們疑惑，不可有文字、數字、車號、招牌或標籤。"
+    },
+    {
+      "id": "L193-S02",
+      "text": "爸爸在空地生火做飯。",
+      "spokenText": "爸爸在空地生火做飯",
+      "focusChar": "生",
+      "displayLines": [
+        "爸爸在空地",
+        "生火做飯。"
+      ],
+      "imageNotes": "爸爸在安全的戶外空地，用小火準備做飯，孩子在旁邊保持距離觀看。畫面要溫和、安全，重點是大人在空地生火做飯；不可有文字、數字、招牌或標籤。"
+    },
+    {
+      "id": "L193-S03",
+      "text": "學生用力打出好球。",
+      "spokenText": "學生用力打出好球",
+      "focusChar": "生",
+      "displayLines": [
+        "學生用力",
+        "打出好球。"
+      ],
+      "imageNotes": "一名學生在球場或空地上用力打球，球飛出去，旁邊同學看著。畫面要清楚呈現學生、用力打球、好球的動作；不可有文字、數字、球衣號碼或標籤。"
+    },
+    {
+      "id": "L193-S04",
+      "text": "爸爸說，風車能發電。",
+      "spokenText": "爸爸說風車能發電",
+      "focusChar": "發",
+      "displayLines": [
+        "爸爸說，",
+        "風車能發電。"
+      ],
+      "imageNotes": "爸爸帶孩子看風車，像是在說明風車能發電。畫面可有大風車、爸爸和孩子抬頭看，重點是風車與發電概念；不可有文字、數字、箭頭、公式、招牌或標籤。"
+    },
+    {
+      "id": "L193-S05",
+      "text": "電話掉到桌子下了。",
+      "spokenText": "電話掉到桌子下了",
+      "focusChar": "電",
+      "displayLines": [
+        "電話掉到",
+        "桌子下了。"
+      ],
+      "imageNotes": "一支電話掉在桌子下面，孩子彎下身準備找或拿起來。畫面要清楚呈現電話在桌子下方；不可有文字、數字、螢幕文字、標籤或浮水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L193-S01",
+      "targetChar": "生",
+      "reason": "「發生什麼事」是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L193-S02",
+      "targetChar": "生",
+      "targetCharIndex": 5,
+      "prefixText": "爸爸在空地",
+      "suffixText": "火做飯"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L193-S03",
+      "targetChar": "生",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "生",
+        "力",
+        "火"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L193-S04",
+      "chunks": [
+        "爸爸說",
+        "風車能",
+        "發電"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L193-S05",
+      "correctText": "電話掉到桌子下了。",
+      "wrongOneText": "電話掉到桌子上了。",
+      "wrongTwoText": "書包掉到桌子下了。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
