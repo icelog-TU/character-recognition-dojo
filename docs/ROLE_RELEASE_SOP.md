@@ -101,6 +101,18 @@ Before integrating a Production package, classify it:
 - `dependency-blocked-asset-complete`: lesson-local files are complete, but earlier lessons must enter `origin/main` first.
 - `partial-package` or `assets-only`: do not integrate; return it to Production with the missing items.
 
+Use the package branch and tip commit from Production's handoff as the source. Do not look only at `origin/main` for a newly completed Production package, because `asset-complete-package` explicitly means the unit is not yet integrated into `src/curriculum/sample-lessons.json` on `main`.
+
+If a teacher or Production gives a `lesson-asset-review.html?unit=L###&ref=main` URL for a unit that has not yet been released, and that page says the unit is missing, do not conclude the package is missing. First run:
+
+```bash
+git fetch origin
+git branch -r --list origin/codex/l###-complete-package
+git ls-tree -r --name-only origin/codex/l###-complete-package | rg "L###|R###"
+```
+
+Then inspect the actual package files from the branch. The `ref=main` asset review URL becomes valid only after Release integrates, pushes `main`, and GitHub Pages deploys.
+
 Release should fix release-owned integration issues, such as rebasing from latest `origin/main`, transplanting the intended lesson files, inserting the production JSON entry, regenerating planner data, updating the ledger, clearing registry rows, running `npm run verify`, pushing, and checking deployment.
 
 If Release finds production-local defects, do not silently absorb them as normal release work. Fix only when needed to keep the current release moving, then report a `release-side repairs` list to Supervisor. Production-local defects include stale request/draft/packet mismatch, invalid `displayLines`, missing top-level `dependsOnLessons`, missing Stage 4 option ids or correctness metadata, repeated/missing Stage 4 sentence usage, stale `charAudio` path examples, wrong-option text that differs too much, wrong-option audio that does not match the final text, and failed lesson-local audio loudness checks.

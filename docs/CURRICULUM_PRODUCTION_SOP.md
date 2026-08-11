@@ -413,6 +413,21 @@ Single-unit URL format:
 https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=main
 ```
 
+This `ref=main` URL is the final post-merge review queue only. It is not a proof that an unmerged Production package exists. If the unit is still only on a Production branch, `ref=main` will correctly show "draft or production JSON not found".
+
+Pre-merge package preview is allowed only when the teacher or Release needs to inspect files before integration. It must use the pushed package branch or full tip commit SHA:
+
+```text
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=codex%2Fl###-complete-package
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=<full-commit-sha>
+```
+
+Production handoff must separate these fields:
+
+- Package source: `branch = origin/codex/l###-complete-package` and `tip commit = <full SHA>`.
+- Pre-merge package preview URL: optional, labeled "pre-merge package preview, not final main review queue", and using `ref=<branch-or-full-SHA>`.
+- Post-merge asset review URL: Release-owned final URL using `ref=main`, labeled "usable after Release merges and deploys".
+
 Production or release final handoff must include the index URL and, when useful, the direct single-unit asset-review URL. The single-unit page displays each sentence with its text, `spokenText`, sentence audio, and the same square image view used by the child-facing Stage 3 app. It does not show a separate original-image preview because the app view is the review target. If a required person, object, action, count, or other meaning-bearing detail is cut off or unclear in the square app preview, mark the image as needing repair. The page also lists the other formal audio files such as `charAudio`, `G02` prefix/suffix, and `G05` options. The teacher marks only items that need repair and writes notes. Unmarked items are not blockers.
 
 Review tools use Firestore for cross-device state. They may read `audioReviews` and `assetReviews` without sign-in, so a phone or tablet can load existing cloud review state. Writes require Google sign-in. If the teacher marks a repair item, clears a repair item, writes a note, or checks the whole-unit complete box while not signed in, that change is local to the current browser and must not be treated as cross-device synced.

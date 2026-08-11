@@ -136,9 +136,13 @@ Also inspect touched asset folder size as required by `docs/CURRICULUM_PRODUCTIO
 Push the production branch and report:
 
 - Branch name and commit SHA.
+- Full pushed package ref, such as `origin/codex/l###-complete-package`, plus the full tip commit SHA.
 - Unit id and new character/review kind.
 - Whether it is `asset-complete-package`, `dependency-blocked-asset-complete`, `partial-package`, or `assets-only`.
 - Any failed checks or skipped manual QA.
-- Post-merge asset review URL.
+- Pre-merge package preview URL only if useful, using `ref=<branch-or-full-commit-sha>`. Label it clearly as "pre-merge package preview, not the final main review queue".
+- Post-merge `ref=main` asset review URL may be listed only as the Release-owned final review URL and must be labeled "usable after Release merges and deploys".
 
 Do not call a package `asset-complete-package` if final text exists only in chat or if request/packet/draft/Stage 4 audio/alignment is missing. Do not call it `release-ready-package`; that status belongs to Release after integration on latest `origin/main`.
+
+Never give the teacher a `lesson-asset-review.html?unit=L###&ref=main` URL as proof that an unmerged Production package can be reviewed. Before Release integrates the unit, `ref=main` will not contain that unit and the page will correctly report that the draft or production JSON is missing. Use the pushed package branch or full commit SHA for pre-merge preview.

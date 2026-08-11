@@ -149,6 +149,7 @@ Do not create a new clone unless the user explicitly asks. If the current shell 
 - Standalone character-card `charAudio` must be generated from the single target character. Do not cut it from sentence audio.
 - Wrong-choice audio must be generated as whole-sentence audio from the exact wrong text. Do not splice or patch correct audio.
 - Teacher subjective review is post-merge by default through the permanent asset review pages. Automated gates still block release.
+- `ref=main` asset review URLs are valid only after Release merges the unit into `main` and GitHub Pages deploys. Before release, Production may provide only a pre-merge package preview URL using `ref=<package-branch-or-full-commit-sha>`, clearly labeled as not the final main review queue.
 - Preserve user and other-thread changes. Never stash, reset, revert, or overwrite unrelated work unless explicitly requested.
 
 ## Review URLs
@@ -161,6 +162,17 @@ https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review
 npm run asset:review-status -- --unit L### --ref main
 npm run asset:review-status -- --list --ref main
 ```
+
+Use those `ref=main` URLs only after Release has integrated and deployed the unit. If a newly completed Production package is still only on a package branch, `ref=main` will correctly report that the unit is missing.
+
+Pre-merge package preview, when explicitly useful:
+
+```text
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=codex%2Fl###-complete-package
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=<full-commit-sha>
+```
+
+Label pre-merge links: `pre-merge package preview, not final main review queue`.
 
 Pre-merge audio review only when explicitly requested:
 
@@ -228,6 +240,8 @@ C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-<a|b|c>
 
 Production goal: deliver `asset-complete-package`, not `release-ready-package`. Do the fast package audit in docs/ROLE_PRODUCTION_SOP.md and docs/CURRICULUM_PRODUCTION_SOP.md. Do not spend time on shared-state release integration for dependency-blocked lessons; Release owns production JSON, planner, ledger, final verify, push, and deployment.
 
+Final handoff must include the pushed package branch and full tip commit SHA. If you provide a pre-merge asset preview URL, it must use `ref=<package-branch-or-full-SHA>` and be labeled `pre-merge package preview, not final main review queue`. Do not give `lesson-asset-review.html?unit=L###&ref=main` as usable before Release merges and deploys.
+
 如果這個 worktree 不是 clean，停止並回報。不要 stash、reset、revert、或覆蓋別人的工作。
 收到 Editor 的完整 handoff 後，依 SOP claim registry，從 origin/main 建新分支，並直接製作 `asset-complete-package`；不要做 Release 的 shared-state 整合。
 ```
@@ -236,6 +250,8 @@ Production goal: deliver `asset-complete-package`, not `release-ready-package`. 
 
 ```text
 Treat Production branches as lesson-local `asset-complete-package` sources unless they have been freshly rebased and verified. Release owns integration on latest origin/main: production JSON, planner, ledger, registry cleanup, final verify, push, and deployment. Report any production-local fixes as `release-side repairs` to Supervisor.
+
+If `lesson-asset-review.html?unit=L###&ref=main` says a newly completed package is missing, do not conclude Production failed. `ref=main` is post-merge only. First fetch origin and inspect the package branch and tip commit from the Production handoff.
 
 你是「認字練功房」Release / 推課對話串。
 
