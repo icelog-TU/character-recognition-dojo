@@ -1,0 +1,213 @@
+{
+  "id": "L191",
+  "order": 191,
+  "newChars": [
+    "發"
+  ],
+  "zhuyin": {
+    "發": "ㄈㄚ"
+  },
+  "title": "發",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete package request for L191. Latest origin/main production JSON is complete through L190「火」, so dependencies are satisfied and no provisional learned characters are needed. Use only latest production learned characters plus current target「發」. Approved sentences are fixed by handoff.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L190 火 plus current target 發",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "發",
+      "火",
+      "能",
+      "力",
+      "真",
+      "想"
+    ],
+    "targetCharMinimumCount": {
+      "發": 3
+    },
+    "recentTargetMinimumCounts": {
+      "火": 2,
+      "能": 2,
+      "力": 2,
+      "真": 1,
+      "想": 1
+    },
+    "disallowedChars": [
+      "電",
+      "光",
+      "生",
+      "現",
+      "音",
+      "始",
+      "髮",
+      "票",
+      "燒",
+      "言",
+      "拉",
+      "廂",
+      "讓",
+      "變",
+      "重",
+      "乾",
+      "淨",
+      "功",
+      "量",
+      "源"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, blackboard writing, book text, speech bubbles, captions, logos, warning signs, or readable marks.",
+      "Use L058 image style anchors.",
+      "Any fire scene must be calm, supervised, and clearly safe."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for the target character as public/assets/lessons/L191/audio/char-u767c.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L191-S01",
+      "text": "紅紅的火發出熱氣。",
+      "spokenText": "紅紅的火發出熱氣",
+      "focusChar": "發",
+      "displayLines": [
+        "紅紅的火",
+        "發出熱氣。"
+      ],
+      "imageNotes": "A small red fire safely gives off heat. Keep children at a safe distance with adult supervision; no text, numbers, labels, or danger mood."
+    },
+    {
+      "id": "L191-S02",
+      "text": "他一發火，就大叫。",
+      "spokenText": "他一發火就大叫",
+      "focusChar": "發",
+      "displayLines": [
+        "他一發火，",
+        "就大叫。"
+      ],
+      "imageNotes": "Someone gets angry and shouts while others are mildly surprised. Show emotion without violence, horror, text, numbers, speech bubbles, or labels."
+    },
+    {
+      "id": "L191-S03",
+      "text": "老師發問，我想好了。",
+      "spokenText": "老師發問我想好了",
+      "focusChar": "發",
+      "displayLines": [
+        "老師發問，",
+        "我想好了。"
+      ],
+      "imageNotes": "A teacher asks a question in class, and a child has thought it through and is ready to answer. No blackboard/book/paper text or numbers."
+    },
+    {
+      "id": "L191-S04",
+      "text": "這本書真的不能借。",
+      "spokenText": "這本書真的不能借",
+      "focusChar": "真",
+      "displayLines": [
+        "這本書",
+        "真的不能借。"
+      ],
+      "imageNotes": "A child wants to borrow a book, but a kind adult or teacher gently says this book really cannot be borrowed. Plain book cover, no text or labels."
+    },
+    {
+      "id": "L191-S05",
+      "text": "他沒力氣，不能用力打球。",
+      "spokenText": "他沒力氣不能用力打球",
+      "focusChar": "力",
+      "displayLines": [
+        "他沒力氣，",
+        "不能用力",
+        "打球。"
+      ],
+      "imageNotes": "A tired child holds a ball or bat and has no strength to play hard. Safe, gentle, not sick or exaggerated; no text, numbers, or labels."
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L191-S01",
+      "targetChar": "發",
+      "reason": "Core use: gives off heat."
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L191-S03",
+      "targetChar": "發",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "老師",
+        "suffixText": "問我想好了"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L191-S02",
+      "targetChar": "發",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        "發",
+        "火",
+        "想"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L191-S05",
+      "chunks": [
+        "他沒力氣",
+        "不能用力",
+        "打球"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L191-S04",
+      "correctText": "這本書真的不能借。",
+      "wrongOneText": "這本書真的不能看。",
+      "wrongTwoText": "這本書真的不能拿。"
+    }
+  },
+  "assetPlan": {
+    "imageStyleAnchors": [
+      "public/assets/lessons/L058/images/L058-S01.webp",
+      "public/assets/lessons/L058/images/L058-S02.webp",
+      "public/assets/lessons/L058/images/L058-S03.webp"
+    ],
+    "imagePrompts": [
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. Show a small red flame in a safe supervised setting, with a calm adult present and children clearly at a safe distance. Use gentle heat shimmer near the flame to show it gives off heat. The scene must feel safe, warm, supervised, and not scary.",
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. Show one child or adult getting angry and shouting with an open mouth while nearby people look mildly surprised. Show emotion clearly without violence, fear, or exaggerated threat. Keep the scene gentle and everyday.",
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. In a classroom, a warm teacher asks a question and a child looks ready to answer after thinking. The child may raise a hand or sit upright with a prepared expression. Blackboard, books, worksheets, and papers must be completely blank with no readable marks.",
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. Show a child wanting to borrow a book on a table while a kind adult or teacher gently explains that this book cannot be borrowed. The child may reach toward the book but pauses calmly. The book cover is plain with no text, numbers, labels, or readable designs.",
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. Show a child holding a ball or baseball bat but looking tired and without strength, unable to swing or throw with force. Use a safe playground or open field setting. Make the tired, low-energy feeling clear but not sick, scary, or exaggerated."
+    ],
+    "imageOutputs": [
+      "/assets/lessons/L191/images/L191-S01.webp",
+      "/assets/lessons/L191/images/L191-S02.webp",
+      "/assets/lessons/L191/images/L191-S03.webp",
+      "/assets/lessons/L191/images/L191-S04.webp",
+      "/assets/lessons/L191/images/L191-S05.webp"
+    ],
+    "audioOutputs": [
+      "/assets/lessons/L191/audio/char-u767c.m4a",
+      "/assets/lessons/L191/audio/L191-S01.m4a",
+      "/assets/lessons/L191/audio/L191-S02.m4a",
+      "/assets/lessons/L191/audio/L191-S03.m4a",
+      "/assets/lessons/L191/audio/L191-S04.m4a",
+      "/assets/lessons/L191/audio/L191-S05.m4a",
+      "/assets/lessons/L191/audio/L191-G02-prefix.m4a",
+      "/assets/lessons/L191/audio/L191-G02-suffix.m4a",
+      "/assets/lessons/L191/audio/L191-G05-wrong-one.m4a",
+      "/assets/lessons/L191/audio/L191-G05-wrong-two.m4a"
+    ]
+  }
+}
