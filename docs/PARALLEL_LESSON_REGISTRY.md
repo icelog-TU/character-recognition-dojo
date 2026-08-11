@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L190 | 火 / normal lesson | ready-blocked-by-dependency | Production A | codex/l190-complete-package / e79f6eaa5f923303e3fae8d129d4544b24382341 | L185:像, L186:想, L187:真, L188:力, L189:能 | ["力","能"] | curriculum-workflow/lesson-requests/L190.json; curriculum-workflow/generated/L190-generation-packet.md | public/assets/lessons/L190/images/; public/assets/lessons/L190/audio/ | complete lesson-local package; blocked until L188/L189 enter main, then Release rebases and integrates |
+| L190 | 火 / normal lesson | ready-blocked-by-dependency | Production A | codex/l190-complete-package / d49a01a35b4e004e7c61f06af8be22cdc20d68cd | L189:能 | ["能"] | curriculum-workflow/lesson-requests/L190.json; curriculum-workflow/generated/L190-generation-packet.md | public/assets/lessons/L190/images/; public/assets/lessons/L190/audio/ | complete lesson-local package; blocked until L189 enters main, then Release rebases and integrates |
 
 ## Status Values
 
