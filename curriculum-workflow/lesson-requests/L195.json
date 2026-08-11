@@ -9,15 +9,13 @@
   },
   "title": "光",
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher-approved final source for L195 光. Latest origin/main after production rebase is complete through L192 電, so L195 depends on not-yet-merged L193 生 and L194 明 before production JSON may merge. Provisional learned chars are 生 and 明. Do not update production JSON, planner-data, or ledger until L193-L194 are present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Use 正體 裡. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "teacherNotes": "Teacher-approved final source for L195 光. Latest origin/main after production rebase is complete through L193 生, so L195 depends on not-yet-merged L194 明 before production JSON may merge. Provisional learned chars are 明. Do not update production JSON, planner-data, or ledger until L194 is present in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Use 正體 裡. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main production JSON through L192 電 plus provisional 生、明 and current target 光",
+    "allowedBoundary": "origin/main production JSON through L193 生 plus provisional 明 and current target 光",
     "provisionalLearnedChars": [
-      "生",
       "明"
     ],
     "dependsOnLessons": [
-      "L193:生",
       "L194:明"
     ],
     "requiredCoverageChars": [
@@ -176,11 +174,9 @@
     }
   },
   "dependsOnLessons": [
-    "L193:生",
     "L194:明"
   ],
   "provisionalLearnedChars": [
-    "生",
     "明"
   ]
 }

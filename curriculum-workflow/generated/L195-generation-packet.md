@@ -6,14 +6,14 @@
 - Kind: normal lesson
 - New character: 光
 - Taiwan zhuyin: ㄍㄨㄤ
-- Latest production curriculum after rebase: L001-L192, latest new character 電
-- Dependency blocker before release: L193 生, L194 明
-- Provisional learned chars for package work: 生、明
+- Latest production curriculum after rebase: L001-L193, latest new character 生
+- Dependency blocker before release: L194 明
+- Provisional learned chars for package work: 明
 - Production JSON, planner-data, and ledger are not updated on this dependency-blocked package branch.
 
 ## Rules
 
-- Use only latest origin/main learned display characters through L192 plus provisional 生、明 and current target 光.
+- Use only latest origin/main learned display characters through L193 plus provisional 明 and current target 光.
 - Keep all display text in Taiwan Traditional Chinese and use 正體「裡」.
 - Do not use unlearned display characters such as 亮、陽、照、射、影、暗、線、清、楚、活、命、安、全.
 - Images must be square image / 1:1 composition, WebP, longest edge <= 1024px, target <= 250 KB each, hard max <= 400 KB.
