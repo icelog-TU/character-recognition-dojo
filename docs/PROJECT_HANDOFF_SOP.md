@@ -37,7 +37,7 @@ Open exactly one role SOP after this file:
 
 - Supervisor / coordination / SOP maintenance: `docs/ROLE_SUPERVISOR_SOP.md`
 - Sentence editor: `docs/ROLE_EDITOR_SOP.md`
-- Production A/B/C: `docs/ROLE_PRODUCTION_SOP.md`
+- Production A/B/C/D: `docs/ROLE_PRODUCTION_SOP.md`
 - Release / ordered push to `main`: `docs/ROLE_RELEASE_SOP.md`
 - Asset repair after teacher review: `docs/ROLE_ASSET_REPAIR_SOP.md`
 
@@ -120,6 +120,9 @@ C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b
 
 Production C:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
+
+Production D:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-d
 ```
 
 Asset repair slots:
@@ -219,13 +222,13 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/PROJECT_HANDOFF_SOP.md
 - docs/ROLE_EDITOR_SOP.md
 
-你的工作是跟我選新字、定稿五句話，然後輸出可一鍵貼給 Production A/B/C 的完整 handoff。不要製作圖片或音檔，除非我另外明確要求。
+你的工作是跟我選新字、定稿五句話，然後輸出可一鍵貼給 Production A/B/C/D 的完整 handoff。不要製作圖片或音檔，除非我另外明確要求。
 ```
 
-### Production A/B/C
+### Production A/B/C/D
 
 ```text
-你是「認字練功房」Production <A|B|C> 對話串。
+你是「認字練功房」Production <A|B|C|D> 對話串。
 
 Repo:
 https://github.com/icelog-TU/character-recognition-dojo
@@ -236,7 +239,7 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/ROLE_PRODUCTION_SOP.md
 
 指定 worktree:
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-<a|b|c>
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-<a|b|c|d>
 
 Production goal: deliver `asset-complete-package`, not `release-ready-package`. Do the fast package audit in docs/ROLE_PRODUCTION_SOP.md and docs/CURRICULUM_PRODUCTION_SOP.md. Do not spend time on shared-state release integration for dependency-blocked lessons; Release owns production JSON, planner, ledger, final verify, push, and deployment.
 
@@ -263,7 +266,7 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/PROJECT_HANDOFF_SOP.md
 - docs/ROLE_RELEASE_SOP.md
 
-你的工作是把 Production A/B/C 已推到遠端分支的完整課程包，按 playable lesson order 一課一課移植/合併到 main，跑 gate，push，並檢查 GitHub Pages 部署。
+你的工作是把 Production A/B/C/D 已推到遠端分支的完整課程包，按 playable lesson order 一課一課移植/合併到 main，跑 gate，push，並檢查 GitHub Pages 部署。
 不要直接 merge 舊基底分支；先從 origin/main 檢查 diff 和依賴。
 ```
 

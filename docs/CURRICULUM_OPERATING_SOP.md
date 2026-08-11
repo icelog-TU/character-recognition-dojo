@@ -58,6 +58,9 @@ C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b
 
 Production thread C:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
+
+Production thread D:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-d
 ```
 
 These are git worktrees of the same repo, not new clones. A dirty state in one slot means only that slot is occupied; it must not block the other production slots. A dirty state in `character-recognition-dojo-profile-sync` means the coordination/release workspace is occupied and must not be reused for new lesson production.
@@ -153,9 +156,10 @@ The standard parallel curriculum production lane uses five conversation threads:
 2. **Production thread A:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-a`.
 3. **Production thread B:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-b`.
 4. **Production thread C:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-c`.
+5. **Production thread D:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-d`.
 5. **Release thread:** receives completed units, rebases on latest `origin/main`, merges in playable order, runs gates, pushes, and checks deployment.
 
-The full operating model normally has seven open conversation windows across five role types: Supervisor, Editor, Production A, Production B, Production C, Release, and Asset Repair. Supervisor and Asset Repair sit outside the five-thread production lane. Use the role-specific SOP files from `docs/PROJECT_HANDOFF_SOP.md` when opening new windows.
+The full operating model normally has eight open conversation windows across five role types: Supervisor, Editor, Production A, Production B, Production C, Production D, Release, and Asset Repair. Supervisor and Asset Repair sit outside the six-thread production lane. Use the role-specific SOP files from `docs/PROJECT_HANDOFF_SOP.md` when opening new windows.
 
 The sentence editor thread is not allowed to send only "make images and audio" instructions. After the teacher approves sentences, it must output a complete production handoff for each unit and either create or explicitly require the receiving production thread to create all source files listed below.
 
@@ -254,7 +258,7 @@ Lesson Gap Audit is the required coordination check for skipped lesson numbers a
 The Supervisor must run it:
 
 - before assigning a new multi-lesson batch
-- after Production A/B/C report several completed or blocked packages
+- after Production A/B/C/D report several completed or blocked packages
 - before Release pushes lessons that were prepared while earlier dependencies were missing
 - whenever the teacher suspects a lesson was skipped or asks whether work through `L###` is complete
 

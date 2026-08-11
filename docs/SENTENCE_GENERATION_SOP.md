@@ -227,7 +227,7 @@ The handoff must tell the receiving production thread to build the whole course 
 
 The handoff must include:
 
-- assigned production slot A/B/C and exact worktree path
+- assigned production slot A/B/C/D and exact worktree path
 - target unit id and kind, such as `L127` normal lesson or `R005` review module
 - current merged boundary and dependency lessons
 - approved new character(s), Taiwan zhuyin, and title, or review coverage range

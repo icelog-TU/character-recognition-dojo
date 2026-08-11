@@ -1,6 +1,6 @@
-# Role SOP: Production A/B/C
+# Role SOP: Production A/B/C/D
 
-Production A/B/C build `asset-complete-package` lesson or review-module packages from Editor handoffs.
+Production A/B/C/D build `asset-complete-package` lesson or review-module packages from Editor handoffs.
 
 Production threads may work in parallel, but each thread owns exactly one assigned unit and one assigned worktree slot at a time.
 
@@ -29,6 +29,9 @@ C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b
 
 Production C:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
+
+Production D:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-d
 ```
 
 If the shell is not in the assigned slot, stop before editing.
@@ -67,7 +70,7 @@ The row must include:
 - Unit id.
 - New character(s) or review kind.
 - Status, starting with `claimed`.
-- Owner/thread A/B/C.
+- Owner/thread A/B/C/D.
 - Branch name.
 - Dependencies.
 - Provisional learned characters, if any.

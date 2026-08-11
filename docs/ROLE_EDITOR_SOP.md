@@ -1,6 +1,6 @@
 # Role SOP: Editor
 
-The Editor selects and finalizes lesson sentences with the teacher, then writes a complete one-paste production handoff for Production A/B/C.
+The Editor selects and finalizes lesson sentences with the teacher, then writes a complete one-paste production handoff for Production A/B/C/D.
 
 The Editor does not normally create final images, audio, alignment, or production curriculum JSON.
 
@@ -72,7 +72,7 @@ The handoff must be one-paste executable. The receiving Production thread must b
 Every handoff must include:
 
 - Repo URL.
-- Assigned production slot A/B/C and exact worktree path.
+- Assigned production slot A/B/C/D and exact worktree path.
 - Unit id and unit kind.
 - Latest known merged boundary from `origin/main`.
 - Complete sentence data and Stage 4 plan.
