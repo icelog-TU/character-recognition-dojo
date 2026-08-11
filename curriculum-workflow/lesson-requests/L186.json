@@ -1,0 +1,183 @@
+{
+  "id": "L186",
+  "order": 186,
+  "newChars": [
+    "想"
+  ],
+  "zhuyin": {
+    "想": "ㄒㄧㄤˇ"
+  },
+  "title": "想",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A complete package for L186. Latest origin/main production JSON is complete through L185 像, so L181-L185 dependencies are satisfied and there are no provisional learned characters. Use only latest production learned characters plus current target 想. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 之、能、自己、嗎、長、真、教、班、知、記、喜、歡、睡、買、新、明、今、昨、年、月、日.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L185 像 plus current 想",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "想",
+      "像",
+      "課",
+      "話",
+      "師",
+      "說"
+    ],
+    "targetCharMinimumCount": {
+      "想": 3
+    },
+    "recentTargetMinimumCounts": {
+      "像": 2,
+      "課": 2,
+      "話": 2,
+      "師": 1,
+      "說": 1
+    },
+    "disallowedChars": [
+      "之",
+      "能",
+      "自",
+      "己",
+      "嗎",
+      "長",
+      "真",
+      "教",
+      "班",
+      "知",
+      "記",
+      "喜",
+      "歡",
+      "睡",
+      "買",
+      "新",
+      "明",
+      "今",
+      "昨",
+      "年",
+      "月",
+      "日"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, license plates, road signs, door plates, blackboard writing, speech bubbles, captions, or logos.",
+      "Use L058 image style anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 想 as public/assets/lessons/L186/audio/char-u60f3.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L186-S01",
+      "text": "把想像裡的小人畫下來。",
+      "spokenText": "把想像裡的小人畫下來",
+      "focusChar": "想",
+      "displayLines": [
+        "把想像裡",
+        "的小人",
+        "畫下來。"
+      ],
+      "imageNotes": "孩子把自己想像中的小人畫在紙上，紙上只有圖畫小人，不可有文字、數字、簽名或標籤。畫面要表現想像到畫下來的過程，可有孩子專心畫畫。"
+    },
+    {
+      "id": "L186-S02",
+      "text": "老師說，問話前，先想一想。",
+      "spokenText": "老師說問話前先想一想",
+      "focusChar": "想",
+      "displayLines": [
+        "老師說，",
+        "問話前，",
+        "先想一想。"
+      ],
+      "imageNotes": "老師溫和提醒孩子，問話前先想一想。畫面可在教室或課堂中，孩子舉手或準備問問題，老師在旁邊引導。不可有文字、數字、黑板字、對話框或標籤。"
+    },
+    {
+      "id": "L186-S03",
+      "text": "媽媽說話就像老師在上課。",
+      "spokenText": "媽媽說話就像老師在上課",
+      "focusChar": "像",
+      "displayLines": [
+        "媽媽說話",
+        "就像老師",
+        "在上課。"
+      ],
+      "imageNotes": "媽媽在家裡像老師上課一樣認真說話，孩子坐著聽。畫面要表現媽媽說話像老師上課的情境，但不可出現黑板文字、課本字、數字或標籤。"
+    },
+    {
+      "id": "L186-S04",
+      "text": "下課時，我想找同學下棋。",
+      "spokenText": "下課時我想找同學下棋",
+      "focusChar": "想",
+      "displayLines": [
+        "下課時，",
+        "我想找同學",
+        "下棋。"
+      ],
+      "imageNotes": "下課時，孩子想找同學一起下棋，畫面可有棋盤和同學在旁邊。棋盤不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L186-S05",
+      "text": "下雨天，我不想出門。",
+      "spokenText": "下雨天我不想出門",
+      "focusChar": "想",
+      "displayLines": [
+        "下雨天，",
+        "我不想出門。"
+      ],
+      "imageNotes": "外面下雨，孩子在門口或窗邊看著雨，不想出門。畫面要清楚呈現雨天和不想出門的心情；不可有文字、數字、門牌或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L186-S01",
+      "targetChar": "想",
+      "reason": "「想像」是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L186-S02",
+      "targetChar": "想",
+      "targetCharIndex": 7,
+      "prefixText": "老師說問話前先",
+      "suffixText": "一想"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L186-S05",
+      "targetChar": "想",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "想",
+        "像",
+        "說"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L186-S04",
+      "chunks": [
+        "下課時",
+        "我想找同學",
+        "下棋"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L186-S03",
+      "correctText": "媽媽說話就像老師在上課。",
+      "wrongOneText": "媽媽說話就像爸爸在上課。",
+      "wrongTwoText": "媽媽說話就像老師在下課。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
