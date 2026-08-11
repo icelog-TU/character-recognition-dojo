@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L194 | 明 / normal lesson | claimed | Production B | codex/l194-complete-package / ae59cc7e | L192:電, L193:生 | ["電","生"] | curriculum-workflow/lesson-requests/L194.json; curriculum-workflow/generated/L194-generation-packet.md | public/assets/lessons/L194/images/; public/assets/lessons/L194/audio/ | accepted handoff and starting complete package |
+| L194 | 明 / normal lesson | ready-blocked-by-dependency | Production B | codex/l194-complete-package / edbaf2b0 | L192:電, L193:生 | ["電","生"] | curriculum-workflow/lesson-requests/L194.json; curriculum-workflow/generated/L194-generation-packet.md | public/assets/lessons/L194/images/; public/assets/lessons/L194/audio/ | asset-complete package; blocked until L192 and L193 enter latest origin/main production JSON |
 
 ## Status Values
 

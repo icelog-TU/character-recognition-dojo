@@ -1,0 +1,211 @@
+{
+  "id": "L194",
+  "order": 194,
+  "newChars": [
+    "明"
+  ],
+  "zhuyin": {
+    "明": "ㄇㄧㄥˊ"
+  },
+  "title": "明",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete package request for L194. Latest origin/main production JSON is complete through L191, so L192 ? and L193 ? are provisional dependencies. G05 wrong-two was adjusted from the handoff phrase ending ?? to the validator-safe same-length near miss ending ?.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L191 plus provisional ??? plus current target ?",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明",
+    "provisionalLearnedChars": [
+      "電",
+      "生"
+    ],
+    "dependsOnLessons": [
+      "L192",
+      "L193"
+    ],
+    "requiredCoverageChars": [
+      "明",
+      "生",
+      "電",
+      "發",
+      "火",
+      "能"
+    ],
+    "targetCharMinimumCount": {
+      "明": 3
+    },
+    "recentTargetMinimumCounts": {
+      "生": 2,
+      "電": 2,
+      "發": 2,
+      "火": 1,
+      "能": 1
+    },
+    "disallowedChars": [
+      "亮",
+      "光",
+      "聰",
+      "安",
+      "全",
+      "活",
+      "命",
+      "病",
+      "醫",
+      "院",
+      "現",
+      "講",
+      "清",
+      "楚"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, blackboard writing, book text, speech bubbles, captions, logos, warning signs, or readable marks.",
+      "Use L058 image style anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for ? as public/assets/lessons/L194/audio/char-u660e.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L194-S01",
+      "text": "明天的課，要學怎麼生火。",
+      "spokenText": "明天的課要學怎麼生火",
+      "focusChar": "明",
+      "displayLines": [
+        "明天的課，",
+        "要學怎麼生火。"
+      ],
+      "imageNotes": "Teacher or father prepares to demonstrate safe fire-starting outdoors tomorrow; child watches with learning supplies. No text, numbers, signs, labels, or book writing."
+    },
+    {
+      "id": "L194-S02",
+      "text": "學生不明白老師說的話。",
+      "spokenText": "學生不明白老師說的話",
+      "focusChar": "明",
+      "displayLines": [
+        "學生不明白",
+        "老師說的話。"
+      ],
+      "imageNotes": "Classroom: teacher explains while student looks confused, not understanding the teacher. No blackboard text, speech bubbles, numbers, or labels."
+    },
+    {
+      "id": "L194-S03",
+      "text": "我明明有帶書包。",
+      "spokenText": "我明明有帶書包",
+      "focusChar": "明",
+      "displayLines": [
+        "我明明",
+        "有帶書包。"
+      ],
+      "imageNotes": "Child at doorway or classroom says they clearly did bring a school bag; the bag is beside them or on their back. No text, numbers, or labels."
+    },
+    {
+      "id": "L194-S04",
+      "text": "家裡發生停電，電燈不能開。",
+      "spokenText": "家裡發生停電電燈不能開",
+      "focusChar": "電",
+      "displayLines": [
+        "家裡發生停電，",
+        "電燈不能開。"
+      ],
+      "imageNotes": "Home power outage: electric light cannot turn on. Family looks at lamp or switch; room is dim but safe. No appliance labels, text, numbers, or warning signs."
+    },
+    {
+      "id": "L194-S05",
+      "text": "前面發生什麼事，不能過去。",
+      "spokenText": "前面發生什麼事不能過去",
+      "focusChar": "發",
+      "displayLines": [
+        "前面發生什麼事，",
+        "不能過去。"
+      ],
+      "imageNotes": "People stop at a safe distance because something happened ahead and they cannot go forward. No danger, gore, road signs, text, numbers, or labels."
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L194-S02",
+      "targetChar": "明",
+      "reason": "Core use: ???."
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L194-S03",
+      "targetChar": "明",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "我",
+        "suffixText": "明有帶書包"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L194-S01",
+      "targetChar": "明",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "明",
+        "生",
+        "火"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L194-S05",
+      "chunks": [
+        "前面",
+        "發生什麼事",
+        "不能過去"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L194-S04",
+      "correctText": "家裡發生停電，電燈不能開。",
+      "wrongOneText": "家裡發生停電，電燈不能關。",
+      "wrongTwoText": "家裡發生停電，電燈不能用。"
+    }
+  },
+  "assetPlan": {
+    "imageStyleAnchors": [
+      "public/assets/lessons/L058/images/L058-S01.webp",
+      "public/assets/lessons/L058/images/L058-S02.webp",
+      "public/assets/lessons/L058/images/L058-S03.webp"
+    ],
+    "imagePrompts": [
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. In a safe outdoor open area, a teacher or father calmly prepares to demonstrate safe fire-starting for tomorrow's lesson. A child watches from a safe distance with blank learning supplies or a plain book. Make the future lesson context clear without any written words. The fire setup is supervised and safe, not scary.",
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. In a classroom, a warm teacher is explaining while a student looks puzzled and does not understand what the teacher said. Center the teacher-student interaction and the confused expression. Blackboard, books, papers, and posters must be blank.",
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. A child at a doorway or in a classroom realizes they clearly did bring their school bag; the bag is visible beside them or on their back. Show a simple everyday search-and-realization moment, clear and friendly.",
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. A safe home power outage scene: the room is dim but still visible, the electric light is off and cannot turn on, and family members calmly look at the lamp or wall switch. No fear, no danger, no sparks.",
+      "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, or readable marks. On a safe street or walkway, people stop at a safe distance because something unclear happened ahead and they cannot go forward. Show a blocked or obscured area ahead without text, signs, gore, accidents, or scary danger. Keep it calm and child-safe."
+    ],
+    "imageOutputs": [
+      "/assets/lessons/L194/images/L194-S01.webp",
+      "/assets/lessons/L194/images/L194-S02.webp",
+      "/assets/lessons/L194/images/L194-S03.webp",
+      "/assets/lessons/L194/images/L194-S04.webp",
+      "/assets/lessons/L194/images/L194-S05.webp"
+    ],
+    "audioOutputs": [
+      "/assets/lessons/L194/audio/char-u660e.m4a",
+      "/assets/lessons/L194/audio/L194-S01.m4a",
+      "/assets/lessons/L194/audio/L194-S02.m4a",
+      "/assets/lessons/L194/audio/L194-S03.m4a",
+      "/assets/lessons/L194/audio/L194-S04.m4a",
+      "/assets/lessons/L194/audio/L194-S05.m4a",
+      "/assets/lessons/L194/audio/L194-G02-prefix.m4a",
+      "/assets/lessons/L194/audio/L194-G02-suffix.m4a",
+      "/assets/lessons/L194/audio/L194-G05-wrong-one.m4a",
+      "/assets/lessons/L194/audio/L194-G05-wrong-two.m4a"
+    ]
+  }
+}
