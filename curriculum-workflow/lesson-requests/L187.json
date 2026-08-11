@@ -1,0 +1,180 @@
+{
+  "id": "L187",
+  "order": 187,
+  "newChars": [
+    "真"
+  ],
+  "zhuyin": {
+    "真": "ㄓㄣ"
+  },
+  "title": "真",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A complete package for L187. Latest origin/main production JSON is complete through L186 想, so dependencies are satisfied and there are no provisional learned characters. Use only latest production learned characters plus current target 真. Approved sentences are fixed by handoff; do not introduce unlearned display text such as 假、實、正、知、道、能、嗎、長、教、班、記、喜、歡、睡、買、新、明、今、昨、年、月、日、力.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L186 想 plus current 真",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "真",
+      "想",
+      "像",
+      "課",
+      "話",
+      "師"
+    ],
+    "targetCharMinimumCount": {
+      "真": 3
+    },
+    "recentTargetMinimumCounts": {
+      "想": 2,
+      "像": 2,
+      "課": 2,
+      "話": 1,
+      "師": 1
+    },
+    "disallowedChars": [
+      "假",
+      "實",
+      "正",
+      "知",
+      "道",
+      "能",
+      "嗎",
+      "長",
+      "教",
+      "班",
+      "記",
+      "喜",
+      "歡",
+      "睡",
+      "買",
+      "新",
+      "明",
+      "今",
+      "昨",
+      "年",
+      "月",
+      "日",
+      "力"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, license plates, road signs, door plates, blackboard writing, speech bubbles, captions, logos, or readable marks.",
+      "Use L058 image style anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 真 as public/assets/lessons/L187/audio/char-u771f.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L187-S01",
+      "text": "這朵花真像小鳥。",
+      "spokenText": "這朵花真像小鳥",
+      "focusChar": "真",
+      "displayLines": [
+        "這朵花",
+        "真像小鳥。"
+      ],
+      "imageNotes": "一朵花的形狀看起來很像小鳥，孩子在旁邊觀察。畫面要讓花和小鳥形狀的相似感清楚，但不要出現文字、數字、標籤或對話框。"
+    },
+    {
+      "id": "L187-S02",
+      "text": "我真想下課去玩。",
+      "spokenText": "我真想下課去玩",
+      "focusChar": "真",
+      "displayLines": [
+        "我真想",
+        "下課去玩。"
+      ],
+      "imageNotes": "孩子在課堂中看向窗外或操場，心裡很想下課去玩。畫面要表現「正在上課、想下課去玩」，不可有黑板文字、課表、數字或標籤。"
+    },
+    {
+      "id": "L187-S03",
+      "text": "老師說話真好聽。",
+      "spokenText": "老師說話真好聽",
+      "focusChar": "真",
+      "displayLines": [
+        "老師說話",
+        "真好聽。"
+      ],
+      "imageNotes": "老師溫和地對孩子們說話，孩子們專心聽，表情覺得好聽。不可有對話框、文字、黑板字、數字或標籤。"
+    },
+    {
+      "id": "L187-S04",
+      "text": "會飛的馬，真難想像。",
+      "spokenText": "會飛的馬真難想像",
+      "focusChar": "真",
+      "displayLines": [
+        "會飛的馬，",
+        "真難想像。"
+      ],
+      "imageNotes": "孩子想像一匹會飛的馬，可畫成溫和可愛的飛馬或獨角獸在天空中飛，旁邊有孩子驚訝想像的表情。維持 L058 兒童圖畫書風格，不要成熟奇幻風；不可有文字、數字、標籤或符號。"
+    },
+    {
+      "id": "L187-S05",
+      "text": "我真不想去上課。",
+      "spokenText": "我真不想去上課",
+      "focusChar": "真",
+      "displayLines": [
+        "我真不想",
+        "去上課。"
+      ],
+      "imageNotes": "孩子背著書包在門口或路上，表情不太想去上課，旁邊可有家人溫和陪伴。畫面要日常、不要哭鬧誇張；不可有文字、數字、校名或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L187-S01",
+      "targetChar": "真",
+      "reason": "「真像」是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L187-S04",
+      "targetChar": "真",
+      "targetCharIndex": 4,
+      "prefixText": "會飛的馬",
+      "suffixText": "難想像"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L187-S05",
+      "targetChar": "真",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "真",
+        "想",
+        "像"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L187-S02",
+      "chunks": [
+        "我真想",
+        "下課",
+        "去玩"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L187-S03",
+      "correctText": "老師說話真好聽。",
+      "wrongOneText": "老師說話真好看。",
+      "wrongTwoText": "老師說話真難聽。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
