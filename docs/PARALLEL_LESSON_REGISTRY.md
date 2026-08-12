@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L200 | 長 / normal lesson | claimed | Production D | codex/l200-complete-package / 86867aae | L199 影 | ["影"] | curriculum-workflow/lesson-requests/L200.json, curriculum-workflow/generated/L200-generation-packet.md | public/assets/lessons/L200/images/, public/assets/lessons/L200/audio/ | accepted handoff and starting complete package |
+| L200 | 長 / normal lesson | ready-blocked-by-dependency | Production D | codex/l200-complete-package / final package tip | L199 影 | ["影"] | curriculum-workflow/lesson-requests/L200.json, curriculum-workflow/generated/L200-generation-packet.md, curriculum-workflow/drafts/L200-draft.json | public/assets/lessons/L200/images/, public/assets/lessons/L200/audio/ | dependency-blocked asset-complete package; waiting for L199 before Release integration; validate:production with temp entry OK; assets:audit OK; polyphonic 長 QA notes in final handoff |
 
 ## Status Values
 

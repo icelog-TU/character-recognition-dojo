@@ -1,0 +1,181 @@
+{
+  "id": "L200",
+  "order": 200,
+  "newChars": [
+    "長"
+  ],
+  "zhuyin": {
+    "長": "ㄔㄤˊ／ㄓㄤˇ"
+  },
+  "title": "長",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production D complete package request for L200. Latest origin/main production JSON is complete through L198 月. This lesson depends on L199 影 being merged before release. Use only latest production learned characters plus provisional learned character 影 and current target 長. Approved final sentences, Stage 4 plan, square 1:1 L058-style image rules, and standard OpenAI audio rules are from the teacher handoff. 長 is polyphonic: 長長的/很長 use ㄔㄤˊ, 生長/長大 use ㄓㄤˇ.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L198 月, plus provisional learned character 影, plus current target 長",
+    "provisionalLearnedChars": [
+      "影"
+    ],
+    "dependsOnLessons": [
+      "L199"
+    ],
+    "requiredCoverageChars": [
+      "長",
+      "影",
+      "月",
+      "陽",
+      "亮",
+      "光"
+    ],
+    "targetCharMinimumCount": {
+      "長": 3
+    },
+    "recentTargetMinimumCounts": {
+      "影": 2,
+      "月": 2,
+      "陽": 2,
+      "亮": 1,
+      "光": 1
+    },
+    "disallowedChars": [
+      "透",
+      "星",
+      "河",
+      "流",
+      "需",
+      "才",
+      "照",
+      "落",
+      "穿",
+      "越"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 image style anchors: public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, signatures, speech bubbles, logos, or readable marks.",
+      "Final referenced images must be WebP, longest edge <= 1024px, target <= 250 KB, hard maximum <= 400 KB."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate standalone charAudio for 長 as public/assets/lessons/L200/audio/char-u9577.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Polyphonic QA: S01 長長的 = ㄔㄤˊ ㄔㄤˊ; S03 生長 = ㄓㄤˇ; S04 長大 = ㄓㄤˇ.",
+      "Generate G02 prefix/suffix from exact fragments 小狗出生一個月 and 大了.",
+      "Generate G05 wrong-choice audio as full sentences from exact wrong texts."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L200-S01",
+      "text": "長長的影子在地上。",
+      "spokenText": "長長的影子在地上",
+      "focusChar": "長",
+      "displayLines": [
+        "長長的影子",
+        "在地上。"
+      ],
+      "imageNotes": "陽光或月光下，一個孩子或物品旁邊有長長的影子落在地上。畫面要清楚呈現長長的影子在地上，不可有文字、數字、標籤或恐怖元素。"
+    },
+    {
+      "id": "L200-S02",
+      "text": "月光下，影子和我一起走路。",
+      "spokenText": "月光下影子和我一起走路",
+      "focusChar": "影",
+      "displayLines": [
+        "月光下，",
+        "影子和我",
+        "一起走路。"
+      ],
+      "imageNotes": "夜晚月光下，孩子走在路上，旁邊有自己的影子，好像影子和他一起走路。畫面要溫和、不恐怖；不可有文字、數字、招牌或標籤。"
+    },
+    {
+      "id": "L200-S03",
+      "text": "花草生長要有陽光和水分。",
+      "spokenText": "花草生長要有陽光和水分",
+      "focusChar": "長",
+      "displayLines": [
+        "花草生長",
+        "要有陽光",
+        "和水分。"
+      ],
+      "imageNotes": "花草在陽光下生長，旁邊可有水或澆水後的土地，表現花草生長需要陽光和水分。不可有文字、數字、標籤或科學圖表。"
+    },
+    {
+      "id": "L200-S04",
+      "text": "小狗出生一個月，長大了。",
+      "spokenText": "小狗出生一個月長大了",
+      "focusChar": "長",
+      "displayLines": [
+        "小狗出生",
+        "一個月，",
+        "長大了。"
+      ],
+      "imageNotes": "一隻出生一個月的小狗已經長大一些，孩子或同學在旁邊溫和觀看。畫面可愛生活化，不呈現生產過程或血腥內容；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L200-S05",
+      "text": "太陽出來了，外面好亮。",
+      "spokenText": "太陽出來了外面好亮",
+      "focusChar": "亮",
+      "displayLines": [
+        "太陽出來了，",
+        "外面好亮。"
+      ],
+      "imageNotes": "早晨或白天太陽出來，窗外或戶外變得很亮，孩子看向外面。畫面要清楚呈現太陽出來後外面明亮；不可有文字、數字、標籤或注音。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L200-S01",
+      "targetChar": "長",
+      "reason": "長長的影子是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L200-S04",
+      "targetChar": "長",
+      "targetCharIndex": 7,
+      "prefixText": "小狗出生一個月",
+      "suffixText": "大了"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L200-S03",
+      "targetChar": "長",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "長",
+        "影",
+        "月"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L200-S02",
+      "chunks": [
+        "月光下",
+        "影子和我",
+        "一起走路"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L200-S05",
+      "correctText": "太陽出來了，外面好亮。",
+      "wrongOneText": "月亮出來了，外面好亮。",
+      "wrongTwoText": "太陽出來了，外面很黑。"
+    }
+  },
+  "dependsOnLessons": [
+    "L199"
+  ],
+  "provisionalLearnedChars": [
+    "影"
+  ]
+}
