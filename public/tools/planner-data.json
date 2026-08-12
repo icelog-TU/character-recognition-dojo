@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-12T03:41:30.026Z",
+  "exportedAt": "2026-08-12T04:54:13.949Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -91030,6 +91030,488 @@
             }
           ],
           "prompt": "Choose the sentence you hear."
+        }
+      ]
+    },
+    {
+      "id": "L202",
+      "order": 202,
+      "newChars": [
+        "行"
+      ],
+      "zhuyin": {
+        "行": "ㄒㄧㄥˊ"
+      },
+      "charAudio": {
+        "行": "/assets/lessons/L202/audio/char-u884c.m4a"
+      },
+      "title": "行",
+      "requiredRounds": 5,
+      "originHint": null,
+      "provisionalLearnedChars": [],
+      "dependsOnLessons": [],
+      "sentences": [
+        {
+          "id": "L202-S01",
+          "text": "書上說火星是行星。",
+          "displayLines": [
+            "書上說",
+            "火星是行星。"
+          ],
+          "spokenText": "書上說火星是行星",
+          "focusChar": "行",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, captions, or readable marks. 孩子看一本沒有可讀文字的書，書中以圖像呈現火星是一顆行星。可有火星和其他星球圖示，但不可有文字、星球名稱、數字、標籤或注音。",
+          "imageSrc": "/assets/lessons/L202/images/L202-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L202/audio/L202-S01.m4a",
+            "durationMs": 4087,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1520,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1600,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1840,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 2760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L202-S02",
+          "text": "我要畫太陽、月亮和星星。",
+          "displayLines": [
+            "我要畫太陽、",
+            "月亮和星星。"
+          ],
+          "spokenText": "我要畫太陽月亮和星星",
+          "focusChar": "星",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, captions, or readable marks. 孩子在紙上畫太陽、月亮和星星。畫紙上只能有圖像，不可有文字、簽名、數字、標籤或注音。",
+          "imageSrc": "/assets/lessons/L202/images/L202-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L202/audio/L202-S02.m4a",
+            "durationMs": 5501,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 290
+              },
+              {
+                "charIndex": 1,
+                "startMs": 290,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2020,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 3360,
+                "endMs": 3470
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3470,
+                "endMs": 3580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3580,
+                "endMs": 4480
+              },
+              {
+                "charIndex": 8,
+                "startMs": 4480,
+                "endMs": 4820
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4820,
+                "endMs": 5000
+              }
+            ]
+          }
+        },
+        {
+          "id": "L202-S03",
+          "text": "這電影很長，又很難看。",
+          "displayLines": [
+            "這電影很長，",
+            "又很難看。"
+          ],
+          "spokenText": "這電影很長又很難看",
+          "focusChar": "長",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, captions, or readable marks. 家人或孩子看一部很長又不好看的電影，表情有點累或不喜歡。螢幕畫面不可有字幕、片名、文字、數字、品牌或標籤。",
+          "imageSrc": "/assets/lessons/L202/images/L202-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L202/audio/L202-S03.m4a",
+            "durationMs": 4646,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1540,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2080,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2420,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2600,
+                "endMs": 2900
+              }
+            ]
+          }
+        },
+        {
+          "id": "L202-S04",
+          "text": "校長帶著同學一行人上山。",
+          "displayLines": [
+            "校長帶著",
+            "同學一行人",
+            "上山。"
+          ],
+          "spokenText": "校長帶著同學一行人上山",
+          "focusChar": "行",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, captions, or readable marks. 校長帶著一群同學走上山路，隊伍溫和有秩序。畫面要清楚呈現校長帶著一行人上山；不可有文字、數字、校名、招牌或標籤。",
+          "imageSrc": "/assets/lessons/L202/images/L202-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L202/audio/L202-S04.m4a",
+            "durationMs": 5581,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 540
+              },
+              {
+                "charIndex": 1,
+                "startMs": 540,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1680,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1880,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2280,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2620,
+                "endMs": 3220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3220,
+                "endMs": 3440
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3440,
+                "endMs": 3760
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3760,
+                "endMs": 4460
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4460,
+                "endMs": 4700
+              }
+            ]
+          }
+        },
+        {
+          "id": "L202-S05",
+          "text": "行人的影子在路邊。",
+          "displayLines": [
+            "行人的影子",
+            "在路邊。"
+          ],
+          "spokenText": "行人的影子在路邊",
+          "focusChar": "行",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, symbols, warning signs, signatures, captions, or readable marks. 白天路邊有行人走過，地上或路邊有清楚的行人影子。畫面要安全、生活化，不可有文字、數字、路牌、車牌、標籤或恐怖元素。",
+          "imageSrc": "/assets/lessons/L202/images/L202-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L202/audio/L202-S05.m4a",
+            "durationMs": 4808,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 840
+              },
+              {
+                "charIndex": 1,
+                "startMs": 840,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1180,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1580,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2020,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2300,
+                "endMs": 3220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3220,
+                "endMs": 3680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3680,
+                "endMs": 3960
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L202-G01",
+          "type": "find-character",
+          "sentenceId": "L202-S05",
+          "targetChar": "行",
+          "missingIndexes": [
+            0
+          ],
+          "prompt": "找出句子裡的「行」。"
+        },
+        {
+          "id": "L202-G02",
+          "type": "teach-character",
+          "sentenceId": "L202-S04",
+          "targetChar": "行",
+          "targetCharIndex": 7,
+          "missingIndexes": [
+            7
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L202/audio/L202-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L202/audio/L202-G02-suffix.m4a"
+          },
+          "prompt": "認識「行」這個字。"
+        },
+        {
+          "id": "L202-G03",
+          "type": "missing-character",
+          "sentenceId": "L202-S01",
+          "targetChar": "行",
+          "missingIndexes": [
+            6
+          ],
+          "options": [
+            {
+              "id": "correct",
+              "text": "行",
+              "correct": true
+            },
+            {
+              "id": "option-2",
+              "text": "星",
+              "correct": false
+            },
+            {
+              "id": "option-3",
+              "text": "影",
+              "correct": false
+            }
+          ],
+          "prompt": "選出缺少的字。"
+        },
+        {
+          "id": "L202-G04",
+          "type": "partial-order",
+          "sentenceId": "L202-S03",
+          "targetChar": "長",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "chunks": [
+            {
+              "text": "這電影很長",
+              "order": 0
+            },
+            {
+              "text": "又",
+              "order": 1
+            },
+            {
+              "text": "很難看",
+              "order": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "這電影很長",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "又",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "很難看",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ],
+          "prompt": "排出正確的句子。"
+        },
+        {
+          "id": "L202-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L202-S02",
+          "targetChar": "星",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我要畫太陽、月亮和星星。",
+              "spokenText": "我要畫太陽月亮和星星",
+              "audioSrc": "/assets/lessons/L202/audio/L202-S02.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "我要畫太陽、月亮和小狗。",
+              "spokenText": "我要畫太陽月亮和小狗",
+              "audioSrc": "/assets/lessons/L202/audio/L202-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "我要畫太陽、月亮和影子。",
+              "spokenText": "我要畫太陽月亮和影子",
+              "audioSrc": "/assets/lessons/L202/audio/L202-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ],
+          "prompt": "選出你聽到的句子。"
         }
       ]
     }
