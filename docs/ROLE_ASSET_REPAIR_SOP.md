@@ -4,6 +4,8 @@ Asset Repair fixes image and audio issues for units already merged to `main` and
 
 Do not use Asset Repair for new lesson production.
 
+Teacher-assigned visual refresh batches for already-merged lessons, such as refreshing images from L001 onward to match the current L058-L200 style, are allowed in Asset Repair. Treat those as image-only repair batches governed by `docs/LESSON_VISUAL_CAST_SOP.md`, not as new curriculum production.
+
 ## Read First
 
 1. `docs/PROJECT_HANDOFF_SOP.md`
@@ -86,6 +88,7 @@ If the teacher is not signed in, review checkbox changes may be local-only. Trea
 - Check whether another repair thread is already assigned to the same unit or file.
 - Keep changes limited to the flagged asset(s) and any required production JSON metadata.
 - For image replacements, use square `1:1` composition and L058 style anchors unless the teacher approved a new style. L058 is style-only; follow `docs/LESSON_VISUAL_CAST_SOP.md` so repaired teachers, parents, classmates, elders, and passersby do not all become the same adult woman.
+- For teacher-assigned visual refresh batches, replace only the images in the assigned lesson range. Keep lesson text, audio, Stage 4 data, `charTimings`, and existing `imageSrc` paths unchanged unless the teacher explicitly expands scope.
 - Final referenced images must be WebP and size-compliant.
 - For sentence or option audio replacements, generate whole-sentence AI audio from the exact final text.
 - For character-card audio, generate standalone single-character audio.

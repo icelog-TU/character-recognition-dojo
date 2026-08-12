@@ -159,7 +159,7 @@ The standard parallel curriculum production lane uses five conversation threads:
 5. **Production thread D:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-d`.
 5. **Release thread:** receives completed units, rebases on latest `origin/main`, merges in playable order, runs gates, pushes, and checks deployment.
 
-The full operating model normally has eight open conversation windows across five role types: Supervisor, Editor, Production A, Production B, Production C, Production D, Release, and Asset Repair. Supervisor and Asset Repair sit outside the six-thread production lane. Use the role-specific SOP files from `docs/PROJECT_HANDOFF_SOP.md` when opening new windows.
+The full operating model normally has eight open conversation windows across five role types: Supervisor, Editor, Production A, Production B, Production C, Production D, Release, and Asset Repair. Supervisor and Asset Repair sit outside the six-thread production lane. Visual Refresh is an optional additional role for planned image-only refresh batches on already-merged old lessons. Use the role-specific SOP files from `docs/PROJECT_HANDOFF_SOP.md` when opening new windows.
 
 The sentence editor thread is not allowed to send only "make images and audio" instructions. After the teacher approves sentences, it must output a complete production handoff for each unit and either create or explicitly require the receiving production thread to create all source files listed below.
 

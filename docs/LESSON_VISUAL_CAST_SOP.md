@@ -82,6 +82,43 @@ docs/visual-references/lesson-cast.md
 
 Do not treat these paths as existing until the reference task actually creates and commits them.
 
+## Location Continuity
+
+Stable continuity is household identity, not permanent terrain.
+
+Early curriculum sentences may say a home is on a mountain, below a mountain, on a mountain road, or in the mountains. Those are sentence meanings for those specific lessons. Do not convert them into permanent geography for the entire 600-lesson world.
+
+Rules:
+
+- If the current sentence explicitly says `山上`, `山下`, `山路`, `山裡`, or another terrain/location word, the image must show that location clearly.
+- If the current sentence only says `我家`, `你家`, `他家`, `家裡`, `同學家`, or another home phrase without terrain words, use the stable household identity and interior/exterior style, but do not force a mountain, downhill road, or old early-lesson geography into the image.
+- The protagonist home is a normal warm Taiwan home for ordinary home sentences: bright interior, wood floor, bookshelves, plants, soft cream walls, and the refined L154-L163 family identity.
+- The `你` home is a normal home with blue/green cues and child-school details such as a backpack, shoes, or neat entry area. It is not permanently "down the mountain" unless the sentence says so.
+- The `他` home is a normal home with orange/green sporty cues, two family dogs when relevant, and casual active-family details such as a ball or water bottle. It is not permanently in the mountains unless the sentence says so.
+- School and neighborhood scenes may keep the warm Taiwan mountain-town visual world when useful, but they must not add geography that changes the sentence meaning.
+
+## Visual Refresh From L001
+
+The teacher may choose to refresh old lesson images from L001 onward so the whole course matches the refined L058-L200 visual standard.
+
+This is a separate visual-refresh program, not ordinary new lesson Production:
+
+- Do not mix broad visual refresh work into normal Production A/B/C/D lesson packages unless the teacher explicitly assigns a small batch to that slot.
+- Prefer dedicated visual-refresh or Asset Repair threads working in ordered batches, such as L001-L010, L011-L020, or smaller batches when the images are semantically tricky.
+- Keep lesson text, `spokenText`, audio, Stage 4 data, and `charTimings` unchanged unless the teacher explicitly requests a broader lesson repair.
+- Keep existing `imageSrc` paths when replacing images in place, so production JSON does not need churn.
+- Regenerate only images that are in the assigned batch and record the exact changed asset paths.
+- For each refreshed image, preserve the sentence meaning exactly. Do not add unmentioned people, counts, terrain, signs, labels, letters, numbers, or zhuyin.
+- Use the current cast and location rules in this SOP. Older L001-L053 family images are not identity anchors if they conflict with the L154-L163 protagonist family.
+- Run normal image/production validation before pushing a refresh batch.
+- Give the teacher the permanent `lesson-asset-review.html?unit=L###&ref=main` URLs after the batch is merged, so refreshed images can be checked through the normal repair queue.
+
+Recommended first pass:
+
+1. Create and approve the dedicated cast/location reference images.
+2. Refresh L001-L030 in small batches, because they define early visual language and basic roles.
+3. Continue in order, prioritizing lessons whose images visibly clash with the refined L058-L200 style.
+
 ## Prompt Contract
 
 Every new or replacement sentence-image prompt that includes a human role must include both a style instruction and a cast instruction.

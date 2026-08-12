@@ -40,6 +40,7 @@ Open exactly one role SOP after this file:
 - Production A/B/C/D: `docs/ROLE_PRODUCTION_SOP.md`
 - Release / ordered push to `main`: `docs/ROLE_RELEASE_SOP.md`
 - Asset repair after teacher review: `docs/ROLE_ASSET_REPAIR_SOP.md`
+- Old-image visual refresh batches: `docs/ROLE_VISUAL_REFRESH_SOP.md`
 
 Role SOPs are entry adapters. Detailed authority still belongs to:
 
