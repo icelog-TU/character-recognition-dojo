@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L207 | 進 / normal lesson | claimed | Production C | codex/l207-complete-package / 7ba722f0 | L204:流, L205:河, L206:從 | ["流","河","從"] | curriculum-workflow/lesson-requests/L207.json; curriculum-workflow/generated/L207-generation-packet.md | public/assets/lessons/L207/images/; public/assets/lessons/L207/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
