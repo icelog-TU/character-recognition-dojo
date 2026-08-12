@@ -493,8 +493,8 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L201, L201 introduces `星`, and review modules are complete through R010.
+As of latest `origin/main`, production curriculum is complete through L202, L202 introduces `行`, and review modules are complete through R010.
 
 Under the review-blocker rule, there are no overdue review modules at the current L201 boundary. The next required review blockers are R011-R012 after L210.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L201 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L202 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.

@@ -1,0 +1,169 @@
+{
+  "id": "L202",
+  "order": 202,
+  "newChars": [
+    "行"
+  ],
+  "zhuyin": {
+    "行": "ㄒㄧㄥˊ"
+  },
+  "title": "行",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L202 行. Latest origin/main is complete through L201 星, so L200 長 and L201 星 dependencies are satisfied. Use Taiwan Traditional Chinese and Taiwan zhuyin only. 行 is pronounced ㄒㄧㄥˊ in 行星, 一行人, and 行人. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L201 星 plus current target 行",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "行",
+      "星",
+      "長",
+      "影",
+      "月",
+      "陽"
+    ],
+    "targetCharMinimumCount": {
+      "行": 3
+    },
+    "recentTargetMinimumCounts": {
+      "星": 2,
+      "長": 2,
+      "影": 2,
+      "月": 1,
+      "陽": 1
+    },
+    "disallowedDisplayChars": [
+      "流",
+      "河",
+      "道",
+      "街",
+      "排",
+      "列",
+      "隊",
+      "銀",
+      "為"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, blackboard writing, book text, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Use L058 image style anchors.",
+      "Each image must match the sentence imageNotes and must not be generic."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 行 as public/assets/lessons/L202/audio/char-u884c.m4a, pronounced ㄒㄧㄥˊ.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L202-S01",
+      "text": "書上說火星是行星。",
+      "spokenText": "書上說火星是行星",
+      "focusChar": "行",
+      "displayLines": [
+        "書上說",
+        "火星是行星。"
+      ],
+      "imageNotes": "孩子看一本沒有可讀文字的書，書中以圖像呈現火星是一顆行星。可有火星和其他星球圖示，但不可有文字、星球名稱、數字、標籤或注音。"
+    },
+    {
+      "id": "L202-S02",
+      "text": "我要畫太陽、月亮和星星。",
+      "spokenText": "我要畫太陽月亮和星星",
+      "focusChar": "星",
+      "displayLines": [
+        "我要畫太陽、",
+        "月亮和星星。"
+      ],
+      "imageNotes": "孩子在紙上畫太陽、月亮和星星。畫紙上只能有圖像，不可有文字、簽名、數字、標籤或注音。"
+    },
+    {
+      "id": "L202-S03",
+      "text": "這電影很長，又很難看。",
+      "spokenText": "這電影很長又很難看",
+      "focusChar": "長",
+      "displayLines": [
+        "這電影很長，",
+        "又很難看。"
+      ],
+      "imageNotes": "家人或孩子看一部很長又不好看的電影，表情有點累或不喜歡。螢幕畫面不可有字幕、片名、文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L202-S04",
+      "text": "校長帶著同學一行人上山。",
+      "spokenText": "校長帶著同學一行人上山",
+      "focusChar": "行",
+      "displayLines": [
+        "校長帶著同學",
+        "一行人上山。"
+      ],
+      "imageNotes": "校長帶著一群同學走上山路，隊伍溫和有秩序。畫面要清楚呈現校長帶著一行人上山；不可有文字、數字、校名、招牌或標籤。"
+    },
+    {
+      "id": "L202-S05",
+      "text": "行人的影子在路邊。",
+      "spokenText": "行人的影子在路邊",
+      "focusChar": "行",
+      "displayLines": [
+        "行人的影子",
+        "在路邊。"
+      ],
+      "imageNotes": "白天路邊有行人走過，地上或路邊有清楚的行人影子。畫面要安全、生活化，不可有文字、數字、路牌、車牌、標籤或恐怖元素。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L202-S05",
+      "targetChar": "行",
+      "reason": "「行人」是本課核心生活用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L202-S04",
+      "targetChar": "行",
+      "targetCharIndex": 7,
+      "teachAudio": {
+        "prefixText": "校長帶著同學一",
+        "suffixText": "人上山"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L202-S01",
+      "targetChar": "行",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "行",
+        "星",
+        "影"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L202-S03",
+      "chunks": [
+        "這電影很長",
+        "又",
+        "很難看"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L202-S02",
+      "correctText": "我要畫太陽、月亮和星星。",
+      "wrongOneText": "我要畫太陽、月亮和小狗。",
+      "wrongTwoText": "我要畫太陽、月亮和影子。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
