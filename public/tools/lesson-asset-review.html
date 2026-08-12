@@ -645,9 +645,12 @@
         const draftPath = `curriculum-workflow/drafts/${state.unit}-draft.json`;
         const draftResponse = await fetch(rawUrl(draftPath), { cache: "no-store" });
         if (draftResponse.ok) {
-          state.sourcePath = draftPath;
-          state.placeholderUnit = false;
-          return draftResponse.json();
+          const draft = await draftResponse.json();
+          if (Array.isArray(draft.sentences) && draft.sentences.length > 0) {
+            state.sourcePath = draftPath;
+            state.placeholderUnit = false;
+            return draft;
+          }
         }
 
         const curriculum = await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum");

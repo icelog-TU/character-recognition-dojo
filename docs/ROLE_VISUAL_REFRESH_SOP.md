@@ -100,16 +100,47 @@ Every refreshed image must preserve the original sentence meaning exactly.
 
 ## Handoff
 
+Visual Refresh is allowed to push approved-scope image-only refresh batches directly to `main` when all of these conditions are true:
+
+- The teacher or Supervisor assigned the exact lesson range.
+- The batch changes only image files in that range.
+- No lesson text, `spokenText`, audio, Stage 4 data, `charTimings`, production JSON, planner data, ledger, or SOP files changed.
+- `git fetch origin` has been run immediately before integration.
+- The branch can integrate into latest `origin/main` without conflicts.
+- Required validation passes.
+
+This exception exists because the teacher's normal image review page uses `ref=main`; branch-only visual refresh work is not visible in the teacher's ordinary review flow.
+
+Before pushing to `main`, run:
+
+```bash
+git fetch origin
+git diff --name-only origin/main...HEAD
+npm run validate:production
+npm run verify
+```
+
+Then integrate into latest `origin/main` and push. Prefer a merge commit with a clear message, such as:
+
+```bash
+git switch -c codex/visual-refresh-merge-check origin/main
+git merge --no-ff <visual-refresh-branch> -m "Merge visual refresh L001-L005"
+git push origin main
+```
+
+Use equivalent safe commands if the assigned worktree is on a batch branch. Never reset or overwrite a dirty worktree.
+
 When done, report:
 
 - assigned batch range
 - branch name and final commit
+- main merge commit, if pushed
 - exact image paths changed
 - any images intentionally left unchanged and why
 - validation commands run
-- permanent review URLs for the refreshed lessons after merge
+- permanent `ref=main` review URLs for the refreshed lessons
 
-Visual Refresh should not ask the teacher to inspect branch previews as the normal final check. After Release or Supervisor merges the batch into `main`, the teacher reviews through:
+Visual Refresh should not ask the teacher to inspect branch previews as the normal final check. After the batch reaches `main`, the teacher reviews through:
 
 ```text
 https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=main

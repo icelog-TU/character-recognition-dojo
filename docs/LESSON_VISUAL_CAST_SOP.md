@@ -111,7 +111,8 @@ This is a separate visual-refresh program, not ordinary new lesson Production:
 - For each refreshed image, preserve the sentence meaning exactly. Do not add unmentioned people, counts, terrain, signs, labels, letters, numbers, or zhuyin.
 - Use the current cast and location rules in this SOP. Older L001-L053 family images are not identity anchors if they conflict with the L154-L163 protagonist family.
 - Run normal image/production validation before pushing a refresh batch.
-- Give the teacher the permanent `lesson-asset-review.html?unit=L###&ref=main` URLs after the batch is merged, so refreshed images can be checked through the normal repair queue.
+- Visual Refresh may push assigned image-only batches directly to `main` when `docs/ROLE_VISUAL_REFRESH_SOP.md` conditions are met, because the teacher's ordinary review page uses `ref=main`.
+- Give the teacher the permanent `lesson-asset-review.html?unit=L###&ref=main` URLs after the batch reaches `main`, so refreshed images can be checked through the normal repair queue.
 
 Recommended first pass:
 
