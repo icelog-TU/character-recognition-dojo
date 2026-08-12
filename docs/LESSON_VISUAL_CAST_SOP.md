@@ -35,7 +35,15 @@ If a role has an approved visual description in the ledger, use it. If the ledge
 
 ## Baseline Human Cast
 
-Until the teacher approves dedicated cast reference images, use these text descriptions to keep roles distinct:
+Until the teacher approves dedicated cast reference images, use these text descriptions to keep roles distinct.
+
+Current identity priority:
+
+- The protagonist mother-and-girl pair from L058-L200 is intentional continuity. Do not redesign that pair.
+- Use `public/assets/lessons/L154/images/L154-S01.webp`, `public/assets/lessons/L162/images/L162-S04.webp`, and `public/assets/lessons/L163/images/L163-S02.webp` as the current identity anchors for the protagonist family.
+- The protagonist family is four people: mother, father, little girl protagonist, and older brother. Keep this family together when the sentence context says "my family" or clearly shows the recurring household.
+- Older L001-L053 parent/family images may be useful historical context, but they are not current identity anchors if they conflict with the refined L058-L200 protagonist family style.
+- Teacher identity must be designed separately from the protagonist mother. Do not reuse the L058/L154 mother as the teacher.
 
 | Role | Stable Appearance |
 | --- | --- |
@@ -57,6 +65,7 @@ The next dedicated visual-reference task should create a small accepted cast set
 ```text
 public/assets/reference/lesson-cast/mother.webp
 public/assets/reference/lesson-cast/father.webp
+public/assets/reference/lesson-cast/older-brother.webp
 public/assets/reference/lesson-cast/teacher.webp
 public/assets/reference/lesson-cast/protagonist-child.webp
 public/assets/reference/lesson-cast/classmate-girl.webp
@@ -64,6 +73,10 @@ public/assets/reference/lesson-cast/classmate-boy.webp
 public/assets/reference/lesson-cast/elder-woman.webp
 public/assets/reference/lesson-cast/elder-man.webp
 public/assets/reference/lesson-cast/passersby-group.webp
+public/assets/reference/lesson-locations/school.webp
+public/assets/reference/lesson-locations/protagonist-home.webp
+public/assets/reference/lesson-locations/you-home.webp
+public/assets/reference/lesson-locations/he-home.webp
 docs/visual-references/lesson-cast.md
 ```
 
