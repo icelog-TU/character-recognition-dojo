@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L199 | 影 / normal lesson | claimed | Production C | codex/l199-complete-package / 86867aae | none | [] | curriculum-workflow/lesson-requests/L199.json; curriculum-workflow/generated/L199-generation-packet.md | public/assets/lessons/L199/images/; public/assets/lessons/L199/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 

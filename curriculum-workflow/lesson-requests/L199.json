@@ -1,0 +1,171 @@
+{
+  "id": "L199",
+  "order": 199,
+  "newChars": [
+    "影"
+  ],
+  "zhuyin": {
+    "影": "ㄧㄥˇ"
+  },
+  "title": "影",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L199 影. Latest origin/main at production start is complete through L198 月, so L199 has no provisional dependencies and may enter production JSON after full validation. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, letters, zhuyin, labels, logos, or watermarks. Image scenes with shadows must be child-friendly, not scary. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L198 月 plus current target 影",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "影",
+      "月",
+      "陽",
+      "亮",
+      "光",
+      "明"
+    ],
+    "targetCharMinimumCount": {
+      "影": 3
+    },
+    "recentTargetMinimumCounts": {
+      "月": 2,
+      "陽": 2,
+      "亮": 2,
+      "光": 1,
+      "明": 1
+    },
+    "disallowedDisplayChars": [
+      "暗",
+      "線",
+      "倒",
+      "站",
+      "投",
+      "射",
+      "照",
+      "落",
+      "斜",
+      "長",
+      "越"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, blackboard writing, book text, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Use L058 image style anchors.",
+      "Do not make shadows scary or dangerous."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 影 as public/assets/lessons/L199/audio/char-u5f71.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L199-S01",
+      "text": "陽光很亮，影子很黑。",
+      "spokenText": "陽光很亮影子很黑",
+      "focusChar": "影",
+      "displayLines": [
+        "陽光很亮，",
+        "影子很黑。"
+      ],
+      "imageNotes": "白天戶外陽光很亮，一個孩子或小物旁邊有清楚的黑色影子。畫面要呈現亮陽光與黑影子的對比，但不可恐怖；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L199-S02",
+      "text": "樹葉的光影很好看。",
+      "spokenText": "樹葉的光影很好看",
+      "focusChar": "影",
+      "displayLines": [
+        "樹葉的光影",
+        "很好看。"
+      ],
+      "imageNotes": "陽光穿過樹葉間隙，地面或牆面有漂亮的樹葉光影。畫面重點是樹葉造成的光影很好看；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L199-S03",
+      "text": "窗外有好幾個人影。",
+      "spokenText": "窗外有好幾個人影",
+      "focusChar": "影",
+      "displayLines": [
+        "窗外有",
+        "好幾個人影。"
+      ],
+      "imageNotes": "從室內往窗外看，窗外有幾個人的影子或剪影經過。畫面要清楚是人影，不要恐怖、不要危險；不可有文字、數字、招牌或標籤。"
+    },
+    {
+      "id": "L199-S04",
+      "text": "明亮的月光穿過窗子。",
+      "spokenText": "明亮的月光穿過窗子",
+      "focusChar": "月",
+      "displayLines": [
+        "明亮的月光",
+        "穿過窗子。"
+      ],
+      "imageNotes": "夜晚明亮月光從窗外穿過窗子照進房間。畫面要溫和、安靜，重點是明亮月光進入窗內；不可有文字、數字、標籤或恐怖元素。"
+    },
+    {
+      "id": "L199-S05",
+      "text": "陽光像火，月光像水。",
+      "spokenText": "陽光像火月光像水",
+      "focusChar": "光",
+      "displayLines": [
+        "陽光像火，",
+        "月光像水。"
+      ],
+      "imageNotes": "畫面可用左右對比：一邊是溫暖明亮的陽光像火，一邊是清冷柔和的月光像水。比喻要用顏色和光感表現，不要出現文字、數字、標籤或注音。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L199-S03",
+      "targetChar": "影",
+      "reason": "「人影」是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L199-S02",
+      "targetChar": "影",
+      "targetCharIndex": 4,
+      "teachAudio": {
+        "prefixText": "樹葉的光",
+        "suffixText": "很好看"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L199-S01",
+      "targetChar": "影",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "影",
+        "光",
+        "月"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L199-S04",
+      "chunks": [
+        "明亮的月光",
+        "穿過",
+        "窗子"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L199-S05",
+      "correctText": "陽光像火，月光像水。",
+      "wrongOneText": "陽光像水，月光像火。",
+      "wrongTwoText": "陽光像火，月亮像水。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
