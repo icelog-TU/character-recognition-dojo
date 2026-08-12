@@ -7,14 +7,14 @@
 - 新字：魚
 - 注音：魚=ㄩˊ
 - 目標句數：5
-- 教師備註：Teacher-approved final source for L212 魚. This is a Production D lesson-local asset-complete package. Latest origin/main production JSON is complete through L208 早; L209 晚, L210 海, and L211 船 are not yet merged, so this package is dependency-blocked until Release integrates those lessons first. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 only as style references, with human roles following L154/L162/L163 protagonist-family continuity and docs/LESSON_VISUAL_CAST_SOP.md. Do not copy L058 people. Images must contain no text, numbers, signs, labels, logos, zhuyin, watermarks, boat names, dish labels, or readable marks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 teach audio, and independent G05 wrong-choice whole-sentence audio.
+- 教師備註：Teacher-approved final source for L212 魚. This is a Production D lesson-local asset-complete package. Latest origin/main production JSON is complete through L210 海 after rebase; L211 船 is not yet merged, so this package is dependency-blocked until Release integrates L211 first. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 only as style references, with human roles following L154/L162/L163 protagonist-family continuity and docs/LESSON_VISUAL_CAST_SOP.md. Do not copy L058 people. Images must contain no text, numbers, signs, labels, logos, zhuyin, watermarks, boat names, dish labels, or readable marks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 teach audio, and independent G05 wrong-choice whole-sentence audio.
 
 ## 已學字邊界
 
 AI 必須把這份課程序列視為鎖定邊界。
 
-- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早
-- 平行備課暫定已學字：晚 海 船
+- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早 晚 海
+- 平行備課暫定已學字：船
 - 本課新字：魚
 - 顯示句子可用漢字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早 晚 海 船 魚
 - 禁止：任何未列在上方的漢字。

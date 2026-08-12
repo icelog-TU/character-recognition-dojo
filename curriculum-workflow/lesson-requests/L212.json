@@ -9,17 +9,13 @@
   },
   "title": "魚",
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher-approved final source for L212 魚. This is a Production D lesson-local asset-complete package. Latest origin/main production JSON is complete through L208 早; L209 晚, L210 海, and L211 船 are not yet merged, so this package is dependency-blocked until Release integrates those lessons first. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 only as style references, with human roles following L154/L162/L163 protagonist-family continuity and docs/LESSON_VISUAL_CAST_SOP.md. Do not copy L058 people. Images must contain no text, numbers, signs, labels, logos, zhuyin, watermarks, boat names, dish labels, or readable marks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 teach audio, and independent G05 wrong-choice whole-sentence audio.",
+  "teacherNotes": "Teacher-approved final source for L212 魚. This is a Production D lesson-local asset-complete package. Latest origin/main production JSON is complete through L210 海 after rebase; L211 船 is not yet merged, so this package is dependency-blocked until Release integrates L211 first. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 only as style references, with human roles following L154/L162/L163 protagonist-family continuity and docs/LESSON_VISUAL_CAST_SOP.md. Do not copy L058 people. Images must contain no text, numbers, signs, labels, logos, zhuyin, watermarks, boat names, dish labels, or readable marks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 teach audio, and independent G05 wrong-choice whole-sentence audio.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main production JSON through L208 早 plus provisional learned chars 晚, 海, 船 plus current target 魚",
+    "allowedBoundary": "origin/main production JSON through L210 海 plus provisional learned char 船 plus current target 魚",
     "provisionalLearnedChars": [
-      "晚",
-      "海",
       "船"
     ],
     "dependsOnLessons": [
-      "L209",
-      "L210",
       "L211"
     ],
     "requiredCoverageChars": [
@@ -163,13 +159,9 @@
     }
   },
   "dependsOnLessons": [
-    "L209",
-    "L210",
     "L211"
   ],
   "provisionalLearnedChars": [
-    "晚",
-    "海",
     "船"
   ]
 }
