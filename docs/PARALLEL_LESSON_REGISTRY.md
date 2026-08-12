@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L201 | 星 / normal lesson | ready-blocked-by-dependency | Production A | codex/l201-complete-package / 039a5ff7 | L200:長 | ["長"] | curriculum-workflow/lesson-requests/L201.json; curriculum-workflow/generated/L201-generation-packet.md | public/assets/lessons/L201/images/; public/assets/lessons/L201/audio/ | complete asset package ready; blocked until L200 is in origin/main |
+| L201 | 星 / normal lesson | ready-blocked-by-dependency | Production A | codex/l201-complete-package / 8719f817 | L200:長 | ["長"] | curriculum-workflow/lesson-requests/L201.json; curriculum-workflow/generated/L201-generation-packet.md | public/assets/lessons/L201/images/; public/assets/lessons/L201/audio/ | complete asset package ready; blocked until L200 is in origin/main |
 
 ## Status Values
 
