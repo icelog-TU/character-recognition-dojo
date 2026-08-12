@@ -1,0 +1,174 @@
+{
+  "id": "L196",
+  "order": 196,
+  "newChars": [
+    "亮"
+  ],
+  "zhuyin": {
+    "亮": "ㄌㄧㄤˋ"
+  },
+  "title": "亮",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production package request for L196 亮. Release integrated from latest origin/main complete through L195 光; former provisional dependencies are now satisfied on main. Approved final sentences, Stage 4 plan, square 1:1 L058-style image rules, and standard OpenAI audio rules are from the teacher handoff.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L195 光 plus current target 亮",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "亮",
+      "光",
+      "明",
+      "生",
+      "電",
+      "發"
+    ],
+    "targetCharMinimumCount": {
+      "亮": 3
+    },
+    "recentTargetMinimumCounts": {
+      "光": 2,
+      "明": 2,
+      "生": 2,
+      "電": 1,
+      "發": 1
+    },
+    "disallowedChars": [
+      "陽",
+      "月",
+      "照",
+      "射",
+      "影",
+      "暗",
+      "線",
+      "清",
+      "楚",
+      "漂",
+      "晶",
+      "遠",
+      "近"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 image style anchors: public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, signatures, speech bubbles, logos, or readable marks.",
+      "Final referenced images must be WebP, longest edge <= 1024px, target <= 250 KB, hard maximum <= 400 KB."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate standalone charAudio for 亮 as public/assets/lessons/L196/audio/char-u4eae.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix from exact fragments 電燈不 and 怎麼回事.",
+      "Generate G05 wrong-choice audio as full sentences from exact wrong texts."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L196-S01",
+      "text": "明天，天一亮就要出門。",
+      "spokenText": "明天天一亮就要出門",
+      "focusChar": "亮",
+      "displayLines": [
+        "明天，",
+        "天一亮",
+        "就要出門。"
+      ],
+      "imageNotes": "早晨天剛亮，媽媽叫孩子起床準備出門。畫面要清楚呈現天亮、孩子起床、準備出門；不可有文字、數字、時鐘數字、標籤或注音。"
+    },
+    {
+      "id": "L196-S02",
+      "text": "畫裡的火光明亮又生動。",
+      "spokenText": "畫裡的火光明亮又生動",
+      "focusChar": "亮",
+      "displayLines": [
+        "畫裡的火光",
+        "明亮又生動。"
+      ],
+      "imageNotes": "孩子展示一張自己畫的火光圖，畫裡火光明亮、像真的一樣有生命感。畫面重點是圖畫作品明亮又生動；畫紙上不可出現文字、簽名、數字或標籤。"
+    },
+    {
+      "id": "L196-S03",
+      "text": "看書時，燈光要亮。",
+      "spokenText": "看書時燈光要亮",
+      "focusChar": "亮",
+      "displayLines": [
+        "看書時，",
+        "燈光要亮。"
+      ],
+      "imageNotes": "孩子坐在桌前看書，旁邊有明亮的燈光照著書本。畫面要清楚呈現看書需要燈光夠亮；書頁不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L196-S04",
+      "text": "電燈不亮，怎麼回事？",
+      "spokenText": "電燈不亮怎麼回事",
+      "focusChar": "亮",
+      "displayLines": [
+        "電燈不亮，",
+        "怎麼回事？"
+      ],
+      "imageNotes": "家裡或房間裡的電燈沒有亮，孩子或大人疑惑地看著燈或開關。畫面要清楚呈現電燈不亮與疑惑情境；不可有文字、數字、品牌標誌或標籤。"
+    },
+    {
+      "id": "L196-S05",
+      "text": "發生什麼事，大家都回頭了。",
+      "spokenText": "發生什麼事大家都回頭了",
+      "focusChar": "發",
+      "displayLines": [
+        "發生什麼事，",
+        "大家都",
+        "回頭了。"
+      ],
+      "imageNotes": "一群人在路邊或空地上突然一起回頭看，像是後方發生什麼事。畫面要表現大家回頭與疑惑，不要有危險血腥內容；不可有文字、數字、招牌或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L196-S03",
+      "targetChar": "亮",
+      "reason": "燈光要亮是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L196-S04",
+      "targetChar": "亮",
+      "targetCharIndex": 3,
+      "prefixText": "電燈不",
+      "suffixText": "怎麼回事"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L196-S01",
+      "targetChar": "亮",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "亮",
+        "光",
+        "明"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L196-S02",
+      "chunks": [
+        "畫裡的火光",
+        "明亮",
+        "又生動"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L196-S05",
+      "correctText": "發生什麼事，大家都回頭了。",
+      "wrongOneText": "發生什麼事，大家都出門了。",
+      "wrongTwoText": "發生什麼事，大家都看書了。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
