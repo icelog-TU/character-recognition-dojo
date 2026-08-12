@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L203 | 道 / normal lesson | claimed | Production C | codex/l203-complete-package / 039a5ff7 | L200:長, L201:星, L202:行 | ["長","星","行"] | curriculum-workflow/lesson-requests/L203.json; curriculum-workflow/generated/L203-generation-packet.md | public/assets/lessons/L203/images/; public/assets/lessons/L203/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
