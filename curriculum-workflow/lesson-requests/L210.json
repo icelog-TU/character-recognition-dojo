@@ -1,0 +1,184 @@
+{
+  "id": "L210",
+  "order": 210,
+  "newChars": [
+    "海"
+  ],
+  "zhuyin": {
+    "海": "ㄏㄞˇ"
+  },
+  "title": "海",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L210 海. Latest origin/main production JSON is complete through L208 早, so L209 晚 is a provisional dependency unless it merges before final recheck. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, labels, zhuyin, or watermarks. Audio must use repo OpenAI flow only.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L208 早 plus provisional learned char 晚 plus current target 海",
+    "provisionalLearnedChars": [
+      "晚"
+    ],
+    "dependsOnLessons": [
+      "L209"
+    ],
+    "requiredCoverageChars": [
+      "海",
+      "晚",
+      "早",
+      "進",
+      "從",
+      "河",
+      "流"
+    ],
+    "targetCharMinimumCount": {
+      "海": 3
+    },
+    "recentTargetMinimumCounts": {
+      "晚": 2,
+      "早": 2,
+      "進": 2,
+      "從": 1,
+      "河": 1,
+      "流": 1
+    },
+    "disallowedDisplayChars": [
+      "船",
+      "橋",
+      "岸",
+      "游",
+      "浪",
+      "沙",
+      "灘",
+      "買",
+      "隨",
+      "之",
+      "直",
+      "透",
+      "落"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, road signs, license plates, clock numerals, subtitles, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Use L058 image style anchors.",
+      "Keep all water, beach, vehicle, and evening scenes safe, child-friendly, and clear for phone display."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 海 as public/assets/lessons/L210/audio/char-u6d77.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text.",
+      "Do not splice audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L210-S01",
+      "text": "早上，我去海邊玩。",
+      "spokenText": "早上我去海邊玩",
+      "focusChar": "海",
+      "displayLines": [
+        "早上，我去",
+        "海邊玩。"
+      ],
+      "imageNotes": "早上，孩子在海邊玩，畫面要清楚有海水和海邊活動，可有家人在旁邊看顧。不可有文字、數字、招牌、標籤或水印。"
+    },
+    {
+      "id": "L210-S02",
+      "text": "晚上，大海很黑。",
+      "spokenText": "晚上大海很黑",
+      "focusChar": "海",
+      "displayLines": [
+        "晚上，",
+        "大海很黑。"
+      ],
+      "imageNotes": "晚上的大海顏色很深，天空可有月亮或星星，畫面重點是夜晚與黑黑的大海。不可有文字、數字、標籤或字幕。"
+    },
+    {
+      "id": "L210-S03",
+      "text": "河水流進大海。",
+      "spokenText": "河水流進大海",
+      "focusChar": "海",
+      "displayLines": [
+        "河水流進",
+        "大海。"
+      ],
+      "imageNotes": "河水流進大海，畫面要能看出河流接到大海的交會處，水流方向清楚。不可有文字、數字、地圖標籤或箭頭字樣。"
+    },
+    {
+      "id": "L210-S04",
+      "text": "我從海邊走進車裡。",
+      "spokenText": "我從海邊走進車裡",
+      "focusChar": "海",
+      "displayLines": [
+        "我從海邊",
+        "走進車裡。"
+      ],
+      "imageNotes": "孩子從海邊走向停在旁邊的車，正在進車裡或車門旁準備上車。車牌不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L210-S05",
+      "text": "早點回家，不要太晚。",
+      "spokenText": "早點回家不要太晚",
+      "focusChar": "晚",
+      "displayLines": [
+        "早點回家，",
+        "不要太晚。"
+      ],
+      "imageNotes": "天色變暗，家人提醒孩子早點回家不要太晚，畫面可在戶外或家門口，孩子準備回家。不可有文字、數字、時鐘刻度、標籤或字幕。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L210-S02",
+      "targetChar": "海",
+      "reason": "「大海」是本課核心詞，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L210-S01",
+      "targetChar": "海",
+      "targetCharIndex": 4,
+      "teachAudio": {
+        "prefixText": "早上我去",
+        "suffixText": "邊玩"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L210-S03",
+      "targetChar": "海",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "海",
+        "河",
+        "進"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L210-S04",
+      "chunks": [
+        "我從海邊",
+        "走進",
+        "車裡"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L210-S05",
+      "correctText": "早點回家，不要太晚。",
+      "wrongOneText": "晚點回家，不要太晚。",
+      "wrongTwoText": "早點回家，不要太早。"
+    }
+  },
+  "dependsOnLessons": [
+    "L209"
+  ],
+  "provisionalLearnedChars": [
+    "晚"
+  ]
+}
