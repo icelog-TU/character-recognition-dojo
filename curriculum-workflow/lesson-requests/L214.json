@@ -1,0 +1,198 @@
+{
+  "id": "L214",
+  "order": 214,
+  "newChars": [
+    "泳"
+  ],
+  "zhuyin": {
+    "泳": "ㄩㄥˇ"
+  },
+  "title": "泳",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B asset-complete package for L214. Latest origin/main production JSON is complete through L210「海」, so L211「船」, L212「魚」, and L213「游」 are provisional dependencies. Production owns the lesson-local package only; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy after dependencies and review blockers are resolved. Corrected Stage 4 uses L214-S01 for G03 so all five reviewed sentences are used exactly once.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L210 plus provisional learned chars 船, 魚, 游 plus current target 泳",
+    "provisionalLearnedChars": [
+      "船",
+      "魚",
+      "游"
+    ],
+    "dependsOnLessons": [
+      "L211",
+      "L212",
+      "L213"
+    ],
+    "requiredCoverageChars": [
+      "泳",
+      "游",
+      "魚",
+      "船",
+      "海",
+      "晚"
+    ],
+    "targetCharMinimumCount": {
+      "泳": 3
+    },
+    "recentTargetMinimumCounts": {
+      "游": 2,
+      "魚": 2,
+      "船": 2,
+      "海": 1,
+      "晚": 1
+    },
+    "disallowedDisplayChars": [
+      "池",
+      "貓",
+      "港",
+      "橋",
+      "岸",
+      "浪",
+      "沙",
+      "灘",
+      "買",
+      "煮",
+      "褲",
+      "身",
+      "濕",
+      "乾",
+      "換",
+      "服",
+      "色",
+      "里"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 image anchors only as illustration style references, never as character identity references.",
+      "Follow docs/LESSON_VISUAL_CAST_SOP.md and make every human role explicit: protagonist girl, protagonist father, swimming teacher, passerby captain.",
+      "Do not copy the L058 adult woman, child, clothes, face, or body shape.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, ship names, brand marks, course labels, captions, speech bubbles, or readable marks.",
+      "Keep all water, boat, sea, and swimming scenes safe and child-friendly."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 泳 as public/assets/lessons/L214/audio/char-u6cf3.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text.",
+      "Do not splice audio.",
+      "Manually check S04 船長 pronounces 長 as ㄓㄤˇ."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L214-S01",
+      "text": "小魚不用學游泳。",
+      "spokenText": "小魚不用學游泳",
+      "focusChar": "泳",
+      "displayLines": [
+        "小魚不用",
+        "學游泳。"
+      ],
+      "imageNotes": "水裡的小魚自然游動，旁邊可有主角小女孩在岸邊或船上看著小魚，表現小魚不用學也會游。若出現主角小女孩，外觀依 L154/L162/L163 continuity：粉紅外套、白上衣、藍裙、粉紅鞋、小粉紅髮夾；L058 只作畫風參考，不複製人物長相。不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L214-S02",
+      "text": "游泳課要戴泳帽。",
+      "spokenText": "游泳課要戴泳帽",
+      "focusChar": "泳",
+      "displayLines": [
+        "游泳課要",
+        "戴泳帽。"
+      ],
+      "imageNotes": "游泳課場景，游泳老師提醒主角小女孩戴好泳帽；畫面要清楚有泳帽和上課準備，但不要出現游泳池文字標示。游泳老師是獨立角色，穿運動教學服裝，必須和主角媽媽、學校老師、L058 成人女人外觀不同。主角小女孩依 L154/L162/L163 continuity：粉紅外套、白上衣、藍裙、粉紅鞋、小粉紅髮夾；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L214-S03",
+      "text": "我的泳鏡進水了。",
+      "spokenText": "我的泳鏡進水了",
+      "focusChar": "泳",
+      "displayLines": [
+        "我的泳鏡",
+        "進水了。"
+      ],
+      "imageNotes": "主角小女孩拿著或戴著泳鏡，泳鏡裡進水，她露出困惑或不舒服但安全的表情。主角小女孩外觀依 L154/L162/L163 continuity：粉紅外套、白上衣、藍裙、粉紅鞋、小粉紅髮夾；L058 只作畫風參考，不複製人物長相。泳鏡不可有文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L214-S04",
+      "text": "船長把魚放回海裡。",
+      "spokenText": "船長把魚放回海裡",
+      "focusChar": "魚",
+      "displayLines": [
+        "船長把魚",
+        "放回海裡。"
+      ],
+      "imageNotes": "路人船長角色溫和地把魚放回海裡，畫面表現保護小魚、放回海水，不要血腥或捕魚處理場面。船長是路人船長或海上工作者，外觀必須和主角爸爸、老師、主角媽媽不同；不可複製 L058 成人女人。不可有文字、數字、船名、標籤或水印。注意「船長」的「長」讀 ㄓㄤˇ。"
+    },
+    {
+      "id": "L214-S05",
+      "text": "晚上坐船，不可以下海游泳。",
+      "spokenText": "晚上坐船不可以下海游泳",
+      "focusChar": "泳",
+      "displayLines": [
+        "晚上坐船，",
+        "不可以下海游泳。"
+      ],
+      "imageNotes": "晚上，主角爸爸陪主角小女孩坐船，主角爸爸提醒晚上坐船時不可以下海游泳；畫面要安全，沒有人跳進海裡。主角爸爸依 L154/L162/L163 continuity：藍襯衫或藍外套、白上衣、卡其褲；主角小女孩依 L154/L162/L163 continuity：粉紅外套、白上衣、藍裙、粉紅鞋、小粉紅髮夾；L058 只作畫風參考，不複製人物長相。不可有文字、數字、船名、標籤或水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L214-S02",
+      "targetChar": "泳",
+      "reason": "「游泳課」「泳帽」都是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L214-S03",
+      "targetChar": "泳",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "我的",
+        "suffixText": "鏡進水了"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L214-S01",
+      "targetChar": "泳",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "泳",
+        "游",
+        "魚"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L214-S04",
+      "chunks": [
+        "船長",
+        "把魚放回",
+        "海裡"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L214-S05",
+      "correctText": "晚上坐船，不可以下海游泳。",
+      "wrongOneText": "晚上坐船，可以下海游泳。",
+      "wrongTwoText": "早上坐船，不可以下海游泳。"
+    }
+  },
+  "dependsOnLessons": [
+    "L211",
+    "L212",
+    "L213"
+  ],
+  "provisionalLearnedChars": [
+    "船",
+    "魚",
+    "游"
+  ]
+}
