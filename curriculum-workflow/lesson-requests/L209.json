@@ -9,9 +9,9 @@
   },
   "title": "晚",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production package request for L209 ?. Latest origin/main now contains L206 ?, L207 ?, and L208 ?, so there are no provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
+  "teacherNotes": "Production package request for L209. Latest origin/main contains L206-L208, so there are no provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
   "generationConstraints": {
-    "allowedBoundary": "latest origin/main production JSON through L208 ? plus current target ?",
+    "allowedBoundary": "latest origin/main production JSON through L208 plus current target from newChars",
     "provisionalLearnedChars": [],
     "dependsOnLessons": [],
     "requiredCoverageChars": [

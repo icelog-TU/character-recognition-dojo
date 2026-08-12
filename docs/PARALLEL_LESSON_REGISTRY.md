@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L209 | 晚 / normal lesson | asset-complete-package | Production A | codex/l209-complete-package / pending final commit | none; L206-L208 now in origin/main | [] | curriculum-workflow/lesson-requests/L209.json; curriculum-workflow/generated/L209-generation-packet.md; curriculum-workflow/drafts/L209-draft.json | public/assets/lessons/L209/images/; public/assets/lessons/L209/audio/ | complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy |
+| L209 | 晚 / normal lesson | asset-complete-package | Production A | codex/l209-complete-package / 9aaffcaf | none; L206-L208 now in origin/main | [] | curriculum-workflow/lesson-requests/L209.json; curriculum-workflow/generated/L209-generation-packet.md; curriculum-workflow/drafts/L209-draft.json | public/assets/lessons/L209/images/; public/assets/lessons/L209/audio/ | complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy |
 
 ## Status Values
 
