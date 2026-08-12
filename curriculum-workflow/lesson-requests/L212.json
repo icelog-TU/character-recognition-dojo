@@ -1,0 +1,175 @@
+{
+  "id": "L212",
+  "order": 212,
+  "newChars": [
+    "魚"
+  ],
+  "zhuyin": {
+    "魚": "ㄩˊ"
+  },
+  "title": "魚",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L212 魚. This is a Production D lesson-local asset-complete package. Latest origin/main production JSON is complete through L208 早; L209 晚, L210 海, and L211 船 are not yet merged, so this package is dependency-blocked until Release integrates those lessons first. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 only as style references, with human roles following L154/L162/L163 protagonist-family continuity and docs/LESSON_VISUAL_CAST_SOP.md. Do not copy L058 people. Images must contain no text, numbers, signs, labels, logos, zhuyin, watermarks, boat names, dish labels, or readable marks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 teach audio, and independent G05 wrong-choice whole-sentence audio.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L208 早 plus provisional learned chars 晚, 海, 船 plus current target 魚",
+    "provisionalLearnedChars": [
+      "晚",
+      "海",
+      "船"
+    ],
+    "dependsOnLessons": [
+      "L209",
+      "L210",
+      "L211"
+    ],
+    "requiredCoverageChars": [
+      "魚",
+      "船",
+      "海",
+      "晚",
+      "早",
+      "進"
+    ],
+    "targetCharMinimumCount": {
+      "魚": 3
+    },
+    "recentTargetMinimumCounts": {
+      "船": 2,
+      "海": 2,
+      "晚": 2,
+      "早": 1,
+      "進": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 when the sentence shows the protagonist girl, protagonist mother, or protagonist father.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, boat names, dish labels, aquarium labels, license plates, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop.",
+      "Human roles must be explicitly distinguished: protagonist little girl, protagonist father, protagonist mother, and distant passerby boat crew or sea worker must not share one face or be copied from L058."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 魚 as public/assets/lessons/L212/audio/char-u9b5a.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L212-S01",
+      "text": "海裡有很多小魚。",
+      "spokenText": "海裡有很多小魚",
+      "focusChar": "魚",
+      "displayLines": [
+        "海裡有",
+        "很多小魚。"
+      ],
+      "imageNotes": "海水裡有很多小魚，畫面重點是海裡成群的小魚，水面與海水環境清楚。不可有文字、數字、標籤、水族箱牌子或水印。"
+    },
+    {
+      "id": "L212-S02",
+      "text": "我在船上看大魚。",
+      "spokenText": "我在船上看大魚",
+      "focusChar": "魚",
+      "displayLines": [
+        "我在船上",
+        "看大魚。"
+      ],
+      "imageNotes": "主角小女孩在船上看見水裡的大魚，旁邊可有主角爸爸陪同以表現安全。主角小女孩外觀依 L154/L162/L163 continuity：粉紅外套、白上衣、藍裙、粉紅鞋、小粉紅髮夾；主角爸爸為藍襯衫或外套、白上衣、卡其褲。L058 只作畫風參考，不複製人物長相。不可有文字、數字、船名、標籤或水印。"
+    },
+    {
+      "id": "L212-S03",
+      "text": "晚上，爸爸給我魚吃。",
+      "spokenText": "晚上爸爸給我魚吃",
+      "focusChar": "魚",
+      "displayLines": [
+        "晚上，爸爸",
+        "給我魚吃。"
+      ],
+      "imageNotes": "晚上家裡餐桌旁，主角爸爸把一盤魚料理給主角小女孩吃，畫面溫和生活化，不要血腥或處理生魚。主角爸爸為藍襯衫或外套、白上衣、卡其褲；主角小女孩為粉紅外套、白上衣、藍裙、粉紅鞋、小粉紅髮夾。外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、餐具標籤或水印。"
+    },
+    {
+      "id": "L212-S04",
+      "text": "早點把魚放進水裡。",
+      "spokenText": "早點把魚放進水裡",
+      "focusChar": "魚",
+      "displayLines": [
+        "早點把魚",
+        "放進水裡。"
+      ],
+      "imageNotes": "主角媽媽提醒主角小女孩早點把小魚放回水裡，主角小女孩小心把魚放進清水中，畫面要安全溫柔。主角媽媽為白或米色上衣、寬藍褲、肩長深色髮；主角小女孩為粉紅外套、白上衣、藍裙、粉紅鞋、小粉紅髮夾。外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L212-S05",
+      "text": "晚上，小船開進海裡。",
+      "spokenText": "晚上小船開進海裡",
+      "focusChar": "船",
+      "displayLines": [
+        "晚上，小船",
+        "開進海裡。"
+      ],
+      "imageNotes": "晚上，一艘小船開進海裡，畫面要有夜色、海面和小船前進方向。若有人物出現，只能是遠處船上路人船員或海上工作者，不可畫成主角家庭；人物要很小且安全，並與主角媽媽、爸爸、小女孩明顯不同。不可有文字、數字、船名、標籤或水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L212-S01",
+      "targetChar": "魚",
+      "reason": "「很多小魚」是本課核心圖像用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L212-S04",
+      "targetChar": "魚",
+      "targetCharIndex": 3,
+      "prefixText": "早點把",
+      "suffixText": "放進水裡"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L212-S02",
+      "targetChar": "魚",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "魚",
+        "船",
+        "海"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L212-S05",
+      "chunks": [
+        "晚上",
+        "小船開進",
+        "海裡"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L212-S03",
+      "correctText": "晚上，爸爸給我魚吃。",
+      "wrongOneText": "晚上，爸爸給我菜吃。",
+      "wrongTwoText": "晚上，媽媽給我魚吃。"
+    }
+  },
+  "dependsOnLessons": [
+    "L209",
+    "L210",
+    "L211"
+  ],
+  "provisionalLearnedChars": [
+    "晚",
+    "海",
+    "船"
+  ]
+}
