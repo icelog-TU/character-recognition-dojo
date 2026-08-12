@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L212 | 魚 / normal lesson | claimed | Production D | codex/l212-complete-package / 4e4de762 | L209 晚, L210 海, L211 船 | ["晚","海","船"] | curriculum-workflow/lesson-requests/L212.json, curriculum-workflow/generated/L212-generation-packet.md | public/assets/lessons/L212/images/, public/assets/lessons/L212/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
