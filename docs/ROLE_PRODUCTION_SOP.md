@@ -11,10 +11,11 @@ Production threads may work in parallel, but each thread owns exactly one assign
 3. `docs/CURRICULUM_OPERATING_SOP.md`
 4. `docs/CURRICULUM_PRODUCTION_SOP.md`
 5. `docs/SENTENCE_GENERATION_SOP.md`
-6. `docs/CURRICULUM_SCHEMA.md`
-7. `docs/AI_GENERATION_SETUP.md`
-8. `docs/PARALLEL_LESSON_REGISTRY.md`
-9. `docs/CURRICULUM_LEDGER.md`
+6. `docs/LESSON_VISUAL_CAST_SOP.md`
+7. `docs/CURRICULUM_SCHEMA.md`
+8. `docs/AI_GENERATION_SETUP.md`
+9. `docs/PARALLEL_LESSON_REGISTRY.md`
+10. `docs/CURRICULUM_LEDGER.md`
 
 ## Assigned Worktrees
 
@@ -98,7 +99,8 @@ Production does not own normal release integration. Do not spend time rebasing o
 
 ## Asset Rules
 
-- Use L058 image style anchors unless the teacher approved another style.
+- Use L058 image style anchors unless the teacher approved another style. L058 is style-only; do not copy the L058 adult woman or any other L058 person into unrelated roles.
+- Follow `docs/LESSON_VISUAL_CAST_SOP.md` for mother, father, teacher, classmate, elder, passerby, and other human role identity.
 - New or replacement sentence images must be square `1:1` compositions with safe margins.
 - Final referenced images must be WebP and size-compliant.
 - Generate full-sentence AI audio from `spokenText`.

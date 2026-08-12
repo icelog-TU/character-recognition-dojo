@@ -46,6 +46,7 @@ Role SOPs are entry adapters. Detailed authority still belongs to:
 - Multi-thread source of truth, worktrees, registry, merge order: `docs/CURRICULUM_OPERATING_SOP.md`
 - Lesson/review production assets, image/audio/alignment, Stage 4 QA: `docs/CURRICULUM_PRODUCTION_SOP.md`
 - Sentence drafting, allowed characters, coverage, `spokenText`, `focusChar`: `docs/SENTENCE_GENERATION_SOP.md`
+- Lesson image role identity and cast continuity: `docs/LESSON_VISUAL_CAST_SOP.md`
 - JSON schema and validation expectations: `docs/CURRICULUM_SCHEMA.md`
 - Merged lesson ledger and continuity notes: `docs/CURRICULUM_LEDGER.md`
 - AI key and generation commands: `docs/AI_GENERATION_SETUP.md`

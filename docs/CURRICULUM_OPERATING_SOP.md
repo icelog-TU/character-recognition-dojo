@@ -177,7 +177,7 @@ Required production handoff fields:
 - five approved sentences, each with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
 - coverage counts for current target and previous-five review targets, or review-pair coverage counts
 - Stage 4 plan: one fixed game per sentence for normal lessons, or two-stage review-module plan
-- required image style anchor: L058 reference assets unless the teacher approves another style
+- required image style anchor: L058 reference assets unless the teacher approves another style; specify that L058 is style-only and human role identities must follow `docs/LESSON_VISUAL_CAST_SOP.md`
 - audio rule: standalone OpenAI character audio, whole-sentence AI audio, whole wrong-option AI audio, `assets:audio`, then `assets:align:ai`
 - teacher review requirement: permanent `public/tools/lesson-asset-review.html` URL and `npm run asset:review-status` command for post-merge repair queue; include `public/tools/audio-review.html` only when the teacher explicitly requests pre-merge audio approval
 - complete required file list and final status expectation

@@ -536,6 +536,8 @@ Images are generated or sourced only after sentence approval.
 
 - One image per sentence.
 - Mandatory style anchor: use the polished L058 library set as the approved sentence-image reference, especially `public/assets/lessons/L058/images/L058-S01.webp`, `public/assets/lessons/L058/images/L058-S02.webp`, and `public/assets/lessons/L058/images/L058-S03.webp`.
+- L058 is a style-only anchor. It controls illustration treatment, palette, linework, lighting, composition, and environment detail. It does not define the identity, face, hair, clothing, body shape, or age of mother, father, teacher, passerby, or any other human role.
+- Human role identity and cast continuity are governed by `docs/LESSON_VISUAL_CAST_SOP.md` and approved notes in `docs/CURRICULUM_LEDGER.md`.
 - When generating or replacing sentence images, attach or otherwise provide those reference image files to the image-generation context whenever the tool supports reference images. If the tool cannot accept image references, explicitly state that limitation in the work notes and include the exact reference paths plus the concrete style traits in the prompt.
 - The required style traits are: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean library/interior or outdoor environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition.
 - Do not rely on generic style phrases such as only `warm watercolor children picture-book style`; that has produced inconsistent simpler watercolor images. Prompts for new/replacement sentence images must name the approved L058 style reference and list the concrete style traits above.
@@ -579,7 +581,8 @@ Recurring cast rules:
 
 - `我` already has a fixed young-girl design. Future prompts involving `我` must reuse it.
 - `你` already has a fixed young-boy design from L012. Future prompts involving `你` must reuse the same boy: same age as the fixed `我` girl, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, and small orange backpack.
-- When `你`, `他`, `爸爸`, `媽媽`, `哥哥`, `姐姐`, `弟弟`, `妹妹`, or other stable roles are introduced, add their approved visual description to `docs/CURRICULUM_LEDGER.md`.
+- Follow `docs/LESSON_VISUAL_CAST_SOP.md` for mother, father, teacher, classmate, elder, passerby, and other human role identities. Do not let one attractive L058-style adult woman become every adult role.
+- When `你`, `他`, `爸爸`, `媽媽`, `哥哥`, `姐姐`, `弟弟`, `妹妹`, `老師`, classmates, elders, passersby, or other stable roles are introduced, add their approved visual description to `docs/CURRICULUM_LEDGER.md`.
 - After a role is added to the visual continuity ledger, every future image prompt must reuse that role description.
 - Do not generate unrelated versions of recurring people from lesson to lesson.
 - Do not batch-generate many final character or family images until a small sample is reviewed and approved.

@@ -9,10 +9,11 @@ The Editor does not normally create final images, audio, alignment, or productio
 1. `docs/PROJECT_HANDOFF_SOP.md`
 2. `docs/ROLE_EDITOR_SOP.md`
 3. `docs/SENTENCE_GENERATION_SOP.md`
-4. `docs/CURRICULUM_OPERATING_SOP.md`
-5. `docs/CURRICULUM_LEDGER.md`
-6. `docs/PARALLEL_LESSON_REGISTRY.md`
-7. `docs/CURRICULUM_SCHEMA.md`
+4. `docs/LESSON_VISUAL_CAST_SOP.md`
+5. `docs/CURRICULUM_OPERATING_SOP.md`
+6. `docs/CURRICULUM_LEDGER.md`
+7. `docs/PARALLEL_LESSON_REGISTRY.md`
+8. `docs/CURRICULUM_SCHEMA.md`
 
 If AI sentence generation commands are needed, also read `docs/AI_GENERATION_SETUP.md`.
 
@@ -37,7 +38,8 @@ For each assigned normal lesson, produce final approved sentence data:
 - For every sentence: `text`, `spokenText`, `focusChar`, optional `displayLines`, and concrete `imageNotes`.
 - Coverage counts for the current target and previous-five review targets.
 - Stage 4 plan using the five standard game types once each.
-- Required image style anchor, normally L058 references.
+- Required image style anchor, normally L058 references, explicitly marked as style-only.
+- Required visual cast identity for each sentence that shows people, following `docs/LESSON_VISUAL_CAST_SOP.md`.
 - Audio requirements for sentence audio, standalone `charAudio`, `G02` teach audio, and `G05` wrong-choice audio.
 
 For review modules, follow `docs/CURRICULUM_OPERATING_SOP.md` and `docs/CURRICULUM_SCHEMA.md` review-module rules.

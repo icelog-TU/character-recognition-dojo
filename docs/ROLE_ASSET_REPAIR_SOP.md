@@ -9,8 +9,9 @@ Do not use Asset Repair for new lesson production.
 1. `docs/PROJECT_HANDOFF_SOP.md`
 2. `docs/ROLE_ASSET_REPAIR_SOP.md`
 3. `docs/CURRICULUM_PRODUCTION_SOP.md`
-4. `docs/CURRICULUM_OPERATING_SOP.md`
-5. `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md`
+4. `docs/LESSON_VISUAL_CAST_SOP.md`
+5. `docs/CURRICULUM_OPERATING_SOP.md`
+6. `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md`
 
 Read `docs/CURRICULUM_SCHEMA.md` if production JSON references need repair.
 
@@ -84,7 +85,7 @@ If the teacher is not signed in, review checkbox changes may be local-only. Trea
 - State the exact unit and asset paths owned by this repair before editing.
 - Check whether another repair thread is already assigned to the same unit or file.
 - Keep changes limited to the flagged asset(s) and any required production JSON metadata.
-- For image replacements, use square `1:1` composition and L058 style anchors unless the teacher approved a new style.
+- For image replacements, use square `1:1` composition and L058 style anchors unless the teacher approved a new style. L058 is style-only; follow `docs/LESSON_VISUAL_CAST_SOP.md` so repaired teachers, parents, classmates, elders, and passersby do not all become the same adult woman.
 - Final referenced images must be WebP and size-compliant.
 - For sentence or option audio replacements, generate whole-sentence AI audio from the exact final text.
 - For character-card audio, generate standalone single-character audio.

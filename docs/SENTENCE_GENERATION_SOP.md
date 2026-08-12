@@ -196,7 +196,7 @@ Approve only if the image can clearly show the sentence without relying on writt
 
 If a sentence has a count, contrast, or position, the picture must make it obvious on a phone screen.
 
-For recurring people and places, use `docs/CURRICULUM_LEDGER.md` visual continuity descriptions. Do not redesign `我`, `你`, `他`, parents, family members, or recurring homes from lesson to lesson.
+For recurring people and places, use `docs/LESSON_VISUAL_CAST_SOP.md` plus `docs/CURRICULUM_LEDGER.md` visual continuity descriptions. Do not redesign `我`, `你`, `他`, parents, family members, teachers, classmates, elders, passersby, or recurring homes from lesson to lesson. L058 is an image style reference only; it is not permission to copy the L058 adult woman into mother, teacher, passerby, or other unrelated roles.
 
 ## Review Checklist
 
@@ -233,6 +233,7 @@ The handoff must include:
 - approved new character(s), Taiwan zhuyin, and title, or review coverage range
 - locked `allowedChars`, provisional learned characters, and forbidden/unlearned characters
 - final approved sentences with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
+- visual cast notes for every sentence that shows people, especially mother, father, teacher, classmate, elder, and passerby roles
 - coverage counts for the current target and previous-five review targets
 - Stage 4 plan and required `G02`/`G05` audio work
 - teacher review instructions: provide the permanent `lesson-asset-review.html` URL and `npm run asset:review-status` command for post-merge repair queue; use the audio-only `audio-review.html` URL only if the teacher explicitly requests pre-merge audio approval
