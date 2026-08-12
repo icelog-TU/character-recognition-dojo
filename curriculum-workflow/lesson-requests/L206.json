@@ -1,0 +1,184 @@
+{
+  "id": "L206",
+  "order": 206,
+  "newChars": [
+    "從"
+  ],
+  "zhuyin": {
+    "從": "ㄘㄨㄥˊ"
+  },
+  "title": "從",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L206 從. Latest origin/main production JSON is complete through L203 道, so L204 流 and L205 河 are provisional dependencies unless they merge before final recheck. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, labels, zhuyin, or watermarks. Audio must use repo OpenAI flow only.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L203 道 plus provisional learned chars 流, 河 plus current target 從",
+    "provisionalLearnedChars": [
+      "流",
+      "河"
+    ],
+    "dependsOnLessons": [
+      "L204",
+      "L205"
+    ],
+    "requiredCoverageChars": [
+      "從",
+      "河",
+      "流",
+      "道",
+      "行",
+      "星"
+    ],
+    "targetCharMinimumCount": {
+      "從": 3
+    },
+    "recentTargetMinimumCounts": {
+      "河": 2,
+      "流": 2,
+      "道": 2,
+      "行": 1,
+      "星": 1
+    },
+    "disallowedDisplayChars": [
+      "進",
+      "海",
+      "船",
+      "橋",
+      "岸",
+      "游",
+      "隨",
+      "之",
+      "透",
+      "落"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, road signs, book text, album dates, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Use L058 image style anchors.",
+      "Keep all scenes safe, child-friendly, and clear for phone display."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 從 as public/assets/lessons/L206/audio/char-u5f9e.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text.",
+      "Do not splice audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L206-S01",
+      "text": "我從河邊走到人行道。",
+      "spokenText": "我從河邊走到人行道",
+      "focusChar": "從",
+      "displayLines": [
+        "我從河邊",
+        "走到人行道。"
+      ],
+      "imageNotes": "孩子從河邊往人行道走，畫面同時看得到河邊和人行道，動線清楚。不可有文字、數字、路牌、標籤。"
+    },
+    {
+      "id": "L206-S02",
+      "text": "水從山上流下來。",
+      "spokenText": "水從山上流下來",
+      "focusChar": "從",
+      "displayLines": [
+        "水從山上",
+        "流下來。"
+      ],
+      "imageNotes": "山坡上有水流往下流，像小溪或山水流下來。畫面重點是「從山上流下來」的方向，不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L206-S03",
+      "text": "一道流星從天上飛過。",
+      "spokenText": "一道流星從天上飛過",
+      "focusChar": "從",
+      "displayLines": [
+        "一道流星",
+        "從天上飛過。"
+      ],
+      "imageNotes": "夜空中有一道流星從天上飛過，地面可有孩子抬頭看星空。不可有文字、數字、星座標籤或任何字幕。"
+    },
+    {
+      "id": "L206-S04",
+      "text": "我愛聽小河的流水聲。",
+      "spokenText": "我愛聽小河的流水聲",
+      "focusChar": "流",
+      "displayLines": [
+        "我愛聽",
+        "小河的",
+        "流水聲。"
+      ],
+      "imageNotes": "孩子坐在小河邊安靜聽流水聲，可用側耳或專心聽的姿勢表現。畫面要清楚有小河與流水，不可有文字、數字、標籤或聲音字樣。"
+    },
+    {
+      "id": "L206-S05",
+      "text": "我從小就很可愛。",
+      "spokenText": "我從小就很可愛",
+      "focusChar": "從",
+      "displayLines": [
+        "我從小",
+        "就很可愛。"
+      ],
+      "imageNotes": "孩子看著自己小時候的照片或相簿，旁邊家人微笑。照片裡是更小的同一個孩子，表現「從小」。不可有文字、日期、數字、相框標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L206-S01",
+      "targetChar": "從",
+      "reason": "「我從河邊走到人行道」清楚呈現本課核心用法「從」。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L206-S05",
+      "targetChar": "從",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "我",
+        "suffixText": "小就很可愛"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L206-S03",
+      "targetChar": "流",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        "流",
+        "河",
+        "道"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L206-S04",
+      "chunks": [
+        "我愛聽",
+        "小河的",
+        "流水聲"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L206-S02",
+      "correctText": "水從山上流下來。",
+      "wrongOneText": "水從山下流下來。",
+      "wrongTwoText": "水從山上流過來。"
+    }
+  },
+  "dependsOnLessons": [
+    "L204",
+    "L205"
+  ],
+  "provisionalLearnedChars": [
+    "流",
+    "河"
+  ]
+}
