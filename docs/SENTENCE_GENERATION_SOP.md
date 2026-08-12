@@ -69,6 +69,8 @@ The L064 sentence set should include:
 
 These are minimums, not writing goals. Do not force every sentence to contain the new target character if that makes the set repetitive or unnatural.
 
+Recalculate coverage after every teacher rewrite, AI rewrite, or manual sentence substitution. Do not rely on old coverage counts after even a small text change. If a strong teacher sentence covers several targets, use the freed sentence slots to improve naturalness, scene variety, or target-phrase diversity rather than adding more forced review characters.
+
 For lessons with more or fewer than five approved sentences, preserve the same intent:
 
 - meaningful repeated exposure to the current target
@@ -105,6 +107,16 @@ The final five-sentence set should normally include:
 - sentence patterns that do not all share the same frame
 
 Do not make the whole lesson circle around the previous five characters if the full learned set offers better words. The recent weak-review characters still need coverage, but they should be woven into meaningful phrases rather than repeated mechanically.
+
+During drafting discussion, a useful editor response should include:
+
+- the current candidate five sentences
+- a compact coverage table for the current target and previous-five review targets
+- Han counts for each sentence, excluding punctuation
+- allowed-character audit result, including exact illegal characters when present
+- any sentence that feels weak or coverage-driven, plus natural alternatives
+
+Keep this discussion outside the final production handoff code block.
 
 ## Sentence Quality
 
@@ -198,6 +210,8 @@ If a sentence has a count, contrast, or position, the picture must make it obvio
 
 For recurring people and places, use `docs/LESSON_VISUAL_CAST_SOP.md` plus `docs/CURRICULUM_LEDGER.md` visual continuity descriptions. Do not redesign `我`, `你`, `他`, parents, family members, teachers, classmates, elders, passersby, or recurring homes from lesson to lesson. L058 is an image style reference only; it is not permission to copy the L058 adult woman into mother, teacher, passerby, or other unrelated roles.
 
+For every sentence image with people, `imageNotes` must name the intended human role identity, such as protagonist girl, protagonist mother, protagonist father, older brother, teacher, principal, classmate, elder, passerby, `你` family member, or `他` family member. Avoid vague labels such as "a woman", "an adult", "a person", or "a passerby" when the role should have continuity.
+
 ## Review Checklist
 
 Before sending sentences to image/audio production, verify:
@@ -215,6 +229,8 @@ Before sending sentences to image/audio production, verify:
 - the sentence set is not repetitive
 - `spokenText` matches `text` without punctuation
 - every `focusChar` appears in its sentence
+- every sentence with people has explicit role identities in `imageNotes` following `docs/LESSON_VISUAL_CAST_SOP.md`
+- the Stage 4 plan uses every reviewed sentence exactly once when the lesson has five reviewed sentences and five sentence games
 - the teacher has approved the sentence set
 
 Only after this checklist passes should the lesson proceed to image prompts, AI audio, `teachAudio`, Stage 4 option audio, and AI-aligned `charTimings`.
@@ -224,6 +240,16 @@ Only after this checklist passes should the lesson proceed to image prompts, AI 
 When a thread is acting as the sentence editor, its job does not end with five good sentences. After the teacher approves the sentence set, the thread must output a complete production handoff following `docs/CURRICULUM_OPERATING_SOP.md` `Five-Thread Curriculum Workflow`.
 
 The handoff must tell the receiving production thread to build the whole course package, not only media assets. It must also be one-paste executable: the receiving production thread must be told to claim the unit in the repo and then continue automatically, without waiting for the teacher to re-enter that conversation after an "I claimed it" message.
+
+The complete final handoff must be placed inside one Markdown fenced code block using `text`:
+
+````text
+```text
+...full handoff...
+```
+````
+
+The teacher copies that single gray block into Production. Keep discussion, coverage recalculation, and sentence-polishing notes outside the block unless they are included as final handoff content.
 
 The handoff must include:
 

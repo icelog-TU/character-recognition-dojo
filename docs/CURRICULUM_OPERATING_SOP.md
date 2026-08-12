@@ -165,6 +165,8 @@ The sentence editor thread is not allowed to send only "make images and audio" i
 
 The production handoff must be one-paste executable. The teacher often sends the handoff from a mobile or tablet remote session and may not return to that production conversation before the task should continue. Therefore the receiving production thread must claim the work in the repo and then continue automatically. It must not stop after saying only "claimed" unless a blocker is present.
 
+Every formal production handoff from Editor to Production must be contained in one Markdown fenced `text` code block so the teacher can copy the whole handoff in one action. Discussion, sentence polishing, coverage recalculation, and alternatives stay outside that block unless they are part of the final handoff.
+
 Required production handoff fields:
 
 - repo URL and required local working copy path
@@ -178,6 +180,7 @@ Required production handoff fields:
 - coverage counts for current target and previous-five review targets, or review-pair coverage counts
 - Stage 4 plan: one fixed game per sentence for normal lessons, or two-stage review-module plan
 - required image style anchor: L058 reference assets unless the teacher approves another style; specify that L058 is style-only and human role identities must follow `docs/LESSON_VISUAL_CAST_SOP.md`
+- explicit `imageNotes` role identity for every human in each sentence image; do not use vague adult/person labels when the role should follow cast continuity
 - audio rule: standalone OpenAI character audio, whole-sentence AI audio, whole wrong-option AI audio, `assets:audio`, then `assets:align:ai`
 - teacher review requirement: permanent `public/tools/lesson-asset-review.html` URL and `npm run asset:review-status` command for post-merge repair queue; include `public/tools/audio-review.html` only when the teacher explicitly requests pre-merge audio approval
 - complete required file list and final status expectation
@@ -236,7 +239,7 @@ Production must avoid slow release work. It should not rebuild `src/curriculum/s
 
 ## Auto-Claim And Continue Workflow
 
-Every production handoff from the sentence editor must include this workflow in plain text for the receiving production thread.
+Every production handoff from the sentence editor must include this workflow in plain text for the receiving production thread. In the teacher-facing message, the whole handoff must be inside the single fenced `text` block described above.
 
 The receiving production thread must:
 

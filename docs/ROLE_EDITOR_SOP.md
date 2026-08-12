@@ -25,6 +25,20 @@ Use `docs/CURRICULUM_LEDGER.md` only as the human-readable summary and continuit
 
 Use `docs/PARALLEL_LESSON_REGISTRY.md` only for not-yet-merged provisional dependencies.
 
+## Editor Operating Pattern
+
+For each normal lesson, use this sequence before producing a handoff:
+
+1. Start from latest `origin/main`, report the current production boundary, and name any provisional dependency lessons that are not yet merged.
+2. Build a word/phrase list before drafting sentences. Use the full learned-character set plus the current new character, not only the previous-five review pool.
+3. Reject legal-but-unnatural words early. Coverage counts are minimum gates after good sentences exist; they are not a reason to keep a weak sentence.
+4. Draft more candidate directions than needed, with varied sentence frames, scenes, people, actions, and uses of the new character.
+5. After every teacher edit, recalculate current-target and previous-five coverage, Han sentence counts, and the allowed-character audit. Report exact illegal characters instead of assuming they can be used.
+6. Preserve teacher-approved strong sentences unless there is a hard blocker. If a teacher rejects a sentence as unnatural, identify which coverage target it served and rewrite around that target with natural Taiwan Mandarin.
+7. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, and Stage 4 sentence usage.
+
+During discussion, keep analysis outside the production handoff block. A useful response shape is: candidate five sentences, a small coverage table, Han counts, allowed-character audit result, and any weak sentence or alternative.
+
 ## Editor Output
 
 For each assigned normal lesson, produce final approved sentence data:
@@ -70,6 +84,16 @@ Before sending a Production handoff:
 ## Production Handoff Rules
 
 The handoff must be one-paste executable. The receiving Production thread must be able to claim the unit and continue without another teacher message.
+
+Every formal Production handoff must be wrapped as one complete Markdown fenced code block using `text`:
+
+````text
+```text
+...full handoff...
+```
+````
+
+The teacher uses that gray code block as the one-click copy area. Put discussion, coverage statistics, and sentence-polishing notes outside the block unless they are part of the final handoff itself.
 
 Every handoff must include:
 
