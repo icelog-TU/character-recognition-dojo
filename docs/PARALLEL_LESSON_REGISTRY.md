@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L209 | 晚 / normal lesson | claimed | Production A | codex/l209-complete-package / fdb11b97 | L206:從, L207:進, L208:早 | ["從","進","早"] | curriculum-workflow/lesson-requests/L209.json; curriculum-workflow/generated/L209-generation-packet.md | public/assets/lessons/L209/images/; public/assets/lessons/L209/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
