@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L213 | 游 / normal lesson | claimed | Production A | codex/l213-complete-package / a850660a | L210:海, L211:船, L212:魚 | ["海","船","魚"] | curriculum-workflow/lesson-requests/L213.json; curriculum-workflow/generated/L213-generation-packet.md | public/assets/lessons/L213/images/; public/assets/lessons/L213/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
