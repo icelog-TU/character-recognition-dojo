@@ -62,6 +62,8 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | R008 | review module | same as L150 | 這個圓盒壞掉了。 / 球棒太難用。 / 雨天過後，去外面草地玩。 / 他打出好球，得很多分。 / 幾點了？去空地打球。 | 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 | Eighth review module after L150. Introduces no new characters. Completes the fourth review pair covering L091-L120. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | R009 | review module | same as L180 | 外面天空有黑雲。 / 下雨時，不要穿白鞋出門。 / 天氣太熱，先脫外套。 / 先喝點水，再吃飯和菜。 / 老爸下棋，卻不開心。 | 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 | Ninth review module after L180. Introduces no new characters. R009-R010 together cover every new character from L121-L150. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | R010 | review module | same as L180 | 為什麼房間這麼亂？ / 怎麼找不到要穿的鞋？ / 他穿上衣，戴帽子。 / 天黑了，所以房間要開燈。 / 冷氣關了，房間還很熱。 | 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 | Tenth review module after L180. Introduces no new characters. Completes the fifth review pair covering L121-L150. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R011 | review module | same as L210 | 風一吹，樹葉就動了。 / 樹上滿是綠葉。 / 關好車窗，再開冷氣。 / 等雨停了，再出門。 / 先掃地，再擦桌子。 | 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 | Eleventh review module after L210. Introduces no new characters. R011-R012 together cover every new character from L151-L180. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R012 | review module | same as L210 | 手很髒，要洗一洗。 / 這房間怎麼又髒又亂？ / 沒事就快點回家。 / 他聽見叫聲，所以回頭。 / 小馬跑太快，停不下來。 | 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 | Twelfth review module after L210. Introduces no new characters. Completes the sixth review pair covering L151-L180. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | L001 | 一、二、三、人 | 一、二、三、人 | 人 / 一人 / 二人 / 三人 | none | Seed lesson. Four characters are introduced together because the first lesson needs enough material to make meaning. |
 | L002 | 個 | 一、二、三、人、個 | 人 / 一個人 / 三個人 | 一、三、人 | `個` is neutral tone in `一個人` and `三個人`. Avoid `二個人`; use `兩個人` only after `兩` is taught. |
 | L003 | 大 | 一、二、三、人、個、大 | 大人 / 二人 / 三個人 / 一個大人 | 一、二、三、人、個 | Uses `大人` as a meaningful phrase and repeats counting people. |
@@ -339,7 +341,7 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 ## Planned Lessons
 
-Merged curriculum is complete through L210. Review modules are complete through R010; R011-R012 are now required before L211. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L210. Review modules are complete through R012; the next numbered lesson is L211. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
