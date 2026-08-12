@@ -9,17 +9,13 @@
   },
   "title": "道",
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher-approved final source for L203 道. Latest origin/main at production start is complete through L199 影, so L200 長, L201 星, and L202 行 are provisional dependencies. Production C must build the lesson-local asset-complete package only; do not leave L203 in production JSON until L200-L202 exist in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, road signs, license plates, road writing, labels, logos, zhuyin, or watermarks. Road, sidewalk, and lane scenes must be safe and non-accident scenes. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix audio from the exact fragment, and independent G05 wrong-choice whole-sentence audio.",
+  "teacherNotes": "Teacher-approved final source for L203 道. Latest origin/main at production start is complete through L199 影, so L200 長, L201 星, and L202 行 are provisional dependencies. Production C must build the lesson-local asset-complete package only; do not leave L203 in production JSON until L202 exists in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, road signs, license plates, road writing, labels, logos, zhuyin, or watermarks. Road, sidewalk, and lane scenes must be safe and non-accident scenes. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix audio from the exact fragment, and independent G05 wrong-choice whole-sentence audio.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main production JSON through L199 影 plus provisional learned chars 長, 星, 行 plus current target 道",
+    "allowedBoundary": "origin/main production JSON through L201 星 plus provisional learned char 行 plus current target 道",
     "provisionalLearnedChars": [
-      "長",
-      "星",
       "行"
     ],
     "dependsOnLessons": [
-      "L200",
-      "L201",
       "L202"
     ],
     "requiredCoverageChars": [
@@ -178,13 +174,9 @@
     }
   },
   "dependsOnLessons": [
-    "L200",
-    "L201",
     "L202"
   ],
   "provisionalLearnedChars": [
-    "長",
-    "星",
     "行"
   ]
 }
