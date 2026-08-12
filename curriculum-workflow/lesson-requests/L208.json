@@ -1,0 +1,160 @@
+{
+  "id": "L208",
+  "order": 208,
+  "newChars": [
+    "早"
+  ],
+  "zhuyin": {
+    "早": "ㄗㄠˇ"
+  },
+  "title": "早",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L208 早. Release integrated from latest origin/main complete through L207 進; earlier lesson dependencies are now satisfied on main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using approved lesson style and cast anchors, with no text, numbers, signs, labels, logos, zhuyin, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 teach audio, and independent G05 wrong-choice whole-sentence audio.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L207 進 plus current target 早",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "早",
+      "進",
+      "從",
+      "河",
+      "流",
+      "道",
+      "行"
+    ],
+    "targetCharMinimumCount": {
+      "早": 3
+    },
+    "recentTargetMinimumCounts": {
+      "進": 2,
+      "從": 2,
+      "河": 2,
+      "流": 1,
+      "道": 1,
+      "行": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 image style anchors.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, school names, dates, scoreboards, jersey numbers, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 早 as public/assets/lessons/L208/audio/char-u65e9.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice or cut production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L208-S01",
+      "text": "我從小就學畫畫。",
+      "spokenText": "我從小就學畫畫",
+      "focusChar": "從",
+      "displayLines": [
+        "我從小",
+        "就學畫畫。"
+      ],
+      "imageNotes": "孩子正在看自己小時候學畫畫的照片或作品，也可以是一旁有現在的孩子和較小時候的孩子畫面對照。畫面要表現「從小就學畫畫」，不可有文字、日期、數字、標籤或可辨識書寫內容。"
+    },
+    {
+      "id": "L208-S02",
+      "text": "不用太早進去，學校還沒開。",
+      "spokenText": "不用太早進去學校還沒開",
+      "focusChar": "早",
+      "displayLines": [
+        "不用太早",
+        "進去，",
+        "學校還沒開。"
+      ],
+      "imageNotes": "孩子和家人在學校門口外，學校門還沒開，家人像是在提醒不用太早進去。校門不可有校名、文字、數字、標籤或招牌。"
+    },
+    {
+      "id": "L208-S03",
+      "text": "他早早就進了一球。",
+      "spokenText": "他早早就進了一球",
+      "focusChar": "早",
+      "displayLines": [
+        "他早早就",
+        "進了一球。"
+      ],
+      "imageNotes": "足球比賽畫面，一個孩子剛把球踢進球門，表現很早就進球得分的情境。不可有比分、球衣號碼、文字、隊名、標籤或看板。"
+    },
+    {
+      "id": "L208-S04",
+      "text": "我從河邊走上人行道。",
+      "spokenText": "我從河邊走上人行道",
+      "focusChar": "從",
+      "displayLines": [
+        "我從河邊",
+        "走上人行道。"
+      ],
+      "imageNotes": "孩子從河邊走上人行道，畫面要同時看得到河邊與人行道，動作方向清楚。不可有文字、數字、路牌或標籤。"
+    },
+    {
+      "id": "L208-S05",
+      "text": "河水流個不停。",
+      "spokenText": "河水流個不停",
+      "focusChar": "流",
+      "displayLines": [
+        "河水流個",
+        "不停。"
+      ],
+      "imageNotes": "小河的河水持續流動，畫面重點是河水流個不停，可用連續水流表現，不需要人物。不可有文字、數字、標籤或聲音字樣。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L208-S02",
+      "targetChar": "早",
+      "reason": "「太早」是本課核心時間用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L208-S03",
+      "targetChar": "早",
+      "targetCharIndex": 1,
+      "prefixText": "他",
+      "suffixText": "早就進了一球"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L208-S05",
+      "targetChar": "流",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        "流",
+        "河",
+        "進"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L208-S04",
+      "chunks": [
+        "我從河邊",
+        "走上",
+        "人行道"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L208-S01",
+      "correctText": "我從小就學畫畫。",
+      "wrongOneText": "我從小就學打球。",
+      "wrongTwoText": "我從小就學下棋。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
