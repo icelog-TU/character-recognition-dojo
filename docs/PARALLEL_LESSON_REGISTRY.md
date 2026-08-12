@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L211 | 船 / normal lesson | claimed | Production C | codex/l211-complete-package / a8a11df9 | L209:晚, L210:海 | ["晚","海"] | curriculum-workflow/lesson-requests/L211.json; curriculum-workflow/generated/L211-generation-packet.md | public/assets/lessons/L211/images/; public/assets/lessons/L211/audio/ | accepted handoff and starting complete package |
+| L211 | 船 / normal lesson | ready-blocked-by-dependency | Production C | codex/l211-complete-package / 643d8b5e | L209:晚, L210:海 | ["晚","海"] | curriculum-workflow/lesson-requests/L211.json; curriculum-workflow/generated/L211-generation-packet.md | public/assets/lessons/L211/images/; public/assets/lessons/L211/audio/ | asset-complete package prepared; blocked until L209-L210 enter latest origin/main |
 
 ## Status Values
 
