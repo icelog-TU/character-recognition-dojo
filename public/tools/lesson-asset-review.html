@@ -623,6 +623,22 @@
         return `https://raw.githubusercontent.com/${state.repo}/${state.sha}/${path}`;
       }
 
+      function isMainReview() {
+        return state.ref.trim().toLowerCase() === "main";
+      }
+
+      function isDefaultRepo() {
+        return state.repo.trim().toLowerCase() === "icelog-tu/character-recognition-dojo";
+      }
+
+      function pagesAssetUrl(src) {
+        if (!src) return "";
+        const path = src.startsWith("/") ? src.slice(1) : src;
+        const basePath = window.location.pathname.split("/tools/")[0] || "";
+        const version = state.sha ? `?v=${encodeURIComponent(state.sha.slice(0, 12))}` : "";
+        return `${window.location.origin}${basePath}/${path}${version}`;
+      }
+
       async function fetchJson(url, label) {
         const response = await fetch(url, { cache: "no-store" });
         if (!response.ok) throw new Error(`${label} HTTP ${response.status}`);
@@ -689,7 +705,9 @@
       }
 
       function publicUrl(src) {
-        return src ? rawUrl(`public${src}`) : "";
+        if (!src) return "";
+        if (isMainReview() && isDefaultRepo()) return pagesAssetUrl(src);
+        return rawUrl(`public${src}`);
       }
 
       function addExtraAudio(items, item) {
