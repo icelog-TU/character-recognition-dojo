@@ -1,0 +1,159 @@
+{
+  "id": "L205",
+  "order": 205,
+  "newChars": [
+    "河"
+  ],
+  "zhuyin": {
+    "河": "ㄏㄜˊ"
+  },
+  "title": "河",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L205 河. Release integrated from latest origin/main complete through L204 流; earlier lesson dependencies are now satisfied on main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using approved lesson style and cast anchors, with no text, numbers, signs, labels, logos, zhuyin, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 teach audio, and independent G05 wrong-choice whole-sentence audio.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L204 流 plus current target 河",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "河",
+      "流",
+      "道",
+      "行",
+      "星",
+      "長"
+    ],
+    "targetCharMinimumCount": {
+      "河": 3
+    },
+    "recentTargetMinimumCounts": {
+      "流": 2,
+      "道": 2,
+      "行": 2,
+      "星": 1,
+      "長": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, license plates, road signs, dish labels, or readable marks.",
+      "Use L058 image style anchors.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 河 as public/assets/lessons/L205/audio/char-u6cb3.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice or cut production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L205-S01",
+      "text": "長長的車流像小河一樣。",
+      "spokenText": "長長的車流像小河一樣",
+      "focusChar": "河",
+      "displayLines": [
+        "長長的車流",
+        "像小河一樣。"
+      ],
+      "imageNotes": "從高處或安全路邊看見一長排車流，像一條小河一樣延伸。畫面要清楚表現車流像小河，不可有文字、數字、車牌、路牌或標籤。"
+    },
+    {
+      "id": "L205-S02",
+      "text": "地上有小河，天上有星河。",
+      "spokenText": "地上有小河天上有星河",
+      "focusChar": "河",
+      "displayLines": [
+        "地上有小河，",
+        "天上有星河。"
+      ],
+      "imageNotes": "畫面上下對比：地上有一條小河，天上有像河一樣的星河。畫面要童趣、清楚，不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L205-S03",
+      "text": "一道流星飛過天空。",
+      "spokenText": "一道流星飛過天空",
+      "focusChar": "流",
+      "displayLines": [
+        "一道流星",
+        "飛過天空。"
+      ],
+      "imageNotes": "夜空中一道流星飛過天空。畫面要清楚呈現流星飛過，不可有文字、數字、標籤或災難感。"
+    },
+    {
+      "id": "L205-S04",
+      "text": "這麼長行不行？",
+      "spokenText": "這麼長行不行",
+      "focusChar": "行",
+      "displayLines": [
+        "這麼長",
+        "行不行？"
+      ],
+      "imageNotes": "小女孩拿著一條緞帶和剪刀，像是在問要不要剪這麼長。畫面要安全，可有大人在旁協助；不可有文字、數字、標籤或危險使用剪刀的情境。"
+    },
+    {
+      "id": "L205-S05",
+      "text": "這道菜和那道菜都好吃。",
+      "spokenText": "這道菜和那道菜都好吃",
+      "focusChar": "道",
+      "displayLines": [
+        "這道菜和",
+        "那道菜",
+        "都好吃。"
+      ],
+      "imageNotes": "餐桌上有兩道不同的菜，孩子或家人覺得兩道菜都好吃。畫面不可有文字、數字、菜名標籤或餐廳招牌。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L205-S03",
+      "targetChar": "流",
+      "reason": "使用原本未被 Stage 4 覆蓋的 S03，並複習 L204「流」的「流星」用法。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L205-S01",
+      "targetChar": "河",
+      "targetCharIndex": 7,
+      "prefixText": "長長的車流像小",
+      "suffixText": "一樣"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L205-S02",
+      "targetChar": "河",
+      "missingIndexes": [
+        4,
+        9
+      ],
+      "options": [
+        "河",
+        "流",
+        "道"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L205-S05",
+      "chunks": [
+        "這道菜",
+        "和那道菜",
+        "都好吃"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L205-S04",
+      "correctText": "這麼長行不行？",
+      "wrongOneText": "這麼大行不行？",
+      "wrongTwoText": "這麼長好不好？"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
