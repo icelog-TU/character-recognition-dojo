@@ -1,0 +1,170 @@
+{
+  "id": "L204",
+  "order": 204,
+  "newChars": [
+    "流"
+  ],
+  "zhuyin": {
+    "流": "ㄌㄧㄡˊ"
+  },
+  "title": "流",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production D complete package request for L204. Latest origin/main production JSON is complete through L201 星. This lesson depends on L202 行 and L203 道 being merged before release. Use only latest production learned characters plus provisional learned characters 行、道 and current target 流. Approved final sentences, Stage 4 plan, square 1:1 L058-style image rules, and standard OpenAI audio rules are from the teacher handoff.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L201 星, plus provisional learned characters 行、道, plus current target 流",
+    "provisionalLearnedChars": [
+      "行",
+      "道"
+    ],
+    "dependsOnLessons": [
+      "L202",
+      "L203"
+    ],
+    "requiredCoverageChars": [
+      "流",
+      "道",
+      "行",
+      "星",
+      "長",
+      "影"
+    ],
+    "targetCharMinimumCount": {
+      "流": 3
+    },
+    "recentTargetMinimumCounts": {
+      "道": 2,
+      "行": 2,
+      "星": 2,
+      "長": 1,
+      "影": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 image style anchors: public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, signatures, speech bubbles, logos, road signs, license plates, subtitles, or readable marks.",
+      "Final referenced images must be WebP, longest edge <= 1024px, target <= 250 KB, hard maximum <= 400 KB."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate standalone charAudio for 流 as public/assets/lessons/L204/audio/char-u6d41.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix from exact fragments 這電影很 and 行.",
+      "Generate G05 wrong-choice audio as full sentences from exact wrong texts."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L204-S01",
+      "text": "風一吹，行道樹的影子就動了。",
+      "spokenText": "風一吹行道樹的影子就動了",
+      "focusChar": "道",
+      "displayLines": [
+        "風一吹，",
+        "行道樹的影子",
+        "就動了。"
+      ],
+      "imageNotes": "路邊行道樹被風吹動，樹影也跟著動。畫面要清楚呈現風吹、行道樹、樹影移動；不可有文字、數字、路牌、車牌或標籤。"
+    },
+    {
+      "id": "L204-S02",
+      "text": "這電影很流行。",
+      "spokenText": "這電影很流行",
+      "focusChar": "流",
+      "displayLines": [
+        "這電影",
+        "很流行。"
+      ],
+      "imageNotes": "孩子或家人在看一部很受歡迎的電影，畫面可有大家開心討論或一起看電影。螢幕不可有字幕、片名、文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L204-S03",
+      "text": "我看到流星掉下來。",
+      "spokenText": "我看到流星掉下來",
+      "focusChar": "流",
+      "displayLines": [
+        "我看到流星",
+        "掉下來。"
+      ],
+      "imageNotes": "夜空中有一顆流星劃過往下掉，孩子抬頭看見。畫面要清楚呈現流星掉下來的動作，不可有文字、數字、標籤或恐怖災難感。"
+    },
+    {
+      "id": "L204-S04",
+      "text": "我走在長長的人行道上。",
+      "spokenText": "我走在長長的人行道上",
+      "focusChar": "行",
+      "displayLines": [
+        "我走在長長的",
+        "人行道上。"
+      ],
+      "imageNotes": "孩子走在一條長長的人行道上，路邊安全、清楚。畫面重點是長長的人行道與行走；不可有文字、數字、路牌、車牌或標籤。"
+    },
+    {
+      "id": "L204-S05",
+      "text": "這個月會有流星雨。",
+      "spokenText": "這個月會有流星雨",
+      "focusChar": "流",
+      "displayLines": [
+        "這個月",
+        "會有流星雨。"
+      ],
+      "imageNotes": "電視新聞畫面中，新聞主播正在展示流星雨；可有主播、電視螢幕、夜空流星雨圖像。螢幕和畫面內不可出現任何文字、字幕、數字、新聞台標誌、標籤或注音。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L204-S03",
+      "targetChar": "流",
+      "reason": "流星是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L204-S02",
+      "targetChar": "流",
+      "targetCharIndex": 4,
+      "prefixText": "這電影很",
+      "suffixText": "行"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L204-S05",
+      "targetChar": "流",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "流",
+        "星",
+        "月"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L204-S04",
+      "chunks": [
+        "我走在",
+        "長長的",
+        "人行道上"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L204-S01",
+      "correctText": "風一吹，行道樹的影子就動了。",
+      "wrongOneText": "風一吹，行道樹的影子不動了。",
+      "wrongTwoText": "風一吹，人行道上的影子就動了。"
+    }
+  },
+  "dependsOnLessons": [
+    "L202",
+    "L203"
+  ],
+  "provisionalLearnedChars": [
+    "行",
+    "道"
+  ]
+}
