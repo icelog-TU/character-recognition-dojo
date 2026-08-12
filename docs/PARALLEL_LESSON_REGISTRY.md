@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L215 | 池 / normal lesson | claimed | Production D | codex/l215-complete-package / d8e964c9 | R011, R012, L211 船, L212 魚, L213 游, L214 泳 | ["船","魚","游","泳"] | curriculum-workflow/lesson-requests/L215.json, curriculum-workflow/generated/L215-generation-packet.md | public/assets/lessons/L215/images/, public/assets/lessons/L215/audio/ | accepted handoff and starting complete package; blocked from merge until R011/R012 and L211-L214 are in main |
 
 ## Status Values
 
