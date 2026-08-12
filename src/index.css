@@ -485,7 +485,33 @@ button {
 }
 
 .current-lesson-row {
+  flex: 1;
   grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+}
+
+.current-lesson-nav {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.lesson-step-button {
+  width: 28px;
+  flex: 0 0 28px;
+  border: 1px solid rgba(18, 122, 112, 0.35);
+  border-radius: 8px;
+  background: #f8fffd;
+  color: var(--primary);
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75) inset;
+}
+
+.lesson-step-button:disabled {
+  opacity: 0.35;
+  cursor: default;
 }
 
 .lesson-chip {

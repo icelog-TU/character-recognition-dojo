@@ -1987,7 +1987,9 @@ function App() {
               <PracticeNavigator
                 lessons={curriculum.lessons}
                 selectedOrder={selectedLesson.order}
+                unlockOrder={unlockOrder}
                 completedOrders={completedOrders}
+                onSelect={openLesson}
               />
             )}
             <LessonPanel
@@ -2425,13 +2427,21 @@ function AppDrawer({
 function PracticeNavigator({
   lessons,
   selectedOrder,
+  unlockOrder,
   completedOrders,
+  onSelect,
 }: {
   lessons: Lesson[];
   selectedOrder: number;
+  unlockOrder: number;
   completedOrders: Set<number>;
+  onSelect: (order: number) => void;
 }) {
   const currentEntries = lessons.filter((lesson) => lesson.order === selectedOrder).flatMap(lessonCharEntries).slice(0, 3);
+  const lessonIndex = lessons.findIndex((lesson) => lesson.order === selectedOrder);
+  const previousLesson = lessonIndex > 0 ? lessons[lessonIndex - 1] : null;
+  const nextLesson = lessonIndex >= 0 && lessonIndex < lessons.length - 1 ? lessons[lessonIndex + 1] : null;
+  const nextLocked = Boolean(nextLesson && nextLesson.order > unlockOrder);
 
   return (
     <aside className="side-panel">
@@ -2439,16 +2449,42 @@ function PracticeNavigator({
         <h2>現在這課</h2>
         <span className="mini-label">練習中</span>
       </div>
-      <div className="nearby-row current-lesson-row" aria-label="目前練習課程">
-        {currentEntries.map((entry) => (
-          <LessonJumpButton
-            key={`${entry.lesson.id}-${entry.char}-${entry.index}`}
-            entry={entry}
-            selected={entry.lesson.order === selectedOrder}
-            locked={false}
-            completed={completedOrders.has(entry.lesson.order)}
-          />
-        ))}
+      <div className="current-lesson-nav">
+        <button
+          type="button"
+          className="lesson-step-button"
+          aria-label={previousLesson ? `上一課，第 ${previousLesson.order} 課` : "沒有上一課"}
+          disabled={!previousLesson}
+          onClick={() => {
+            if (previousLesson) onSelect(previousLesson.order);
+          }}
+        >
+          ‹
+        </button>
+        <div className="nearby-row current-lesson-row" aria-label="目前練習課程">
+          {currentEntries.map((entry) => (
+            <LessonJumpButton
+              key={`${entry.lesson.id}-${entry.char}-${entry.index}`}
+              entry={entry}
+              selected={entry.lesson.order === selectedOrder}
+              locked={false}
+              completed={completedOrders.has(entry.lesson.order)}
+            />
+          ))}
+        </div>
+        <button
+          type="button"
+          className="lesson-step-button"
+          aria-label={
+            nextLesson ? (nextLocked ? `第 ${nextLesson.order} 課尚未解鎖` : `下一課，第 ${nextLesson.order} 課`) : "沒有下一課"
+          }
+          disabled={!nextLesson || nextLocked}
+          onClick={() => {
+            if (nextLesson && !nextLocked) onSelect(nextLesson.order);
+          }}
+        >
+          ›
+        </button>
       </div>
     </aside>
   );
