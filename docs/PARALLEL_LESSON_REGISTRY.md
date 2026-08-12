@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L216 | ? / normal lesson | merge-ready | Production A | codex/l216-complete-package / pending | R011, R012, L211:?, L212:?, L213:?, L214:?, L215:? | [] | curriculum-workflow/lesson-requests/L216.json; curriculum-workflow/generated/L216-generation-packet.md | public/assets/lessons/L216/images/; public/assets/lessons/L216/audio/ | asset-complete package; dependencies now in origin/main; Release owns production JSON/planner/ledger integration |
+| L216 | ? / normal lesson | merge-ready | Production A | codex/l216-complete-package / 86e40295 | R011, R012, L211:?, L212:?, L213:?, L214:?, L215:? | [] | curriculum-workflow/lesson-requests/L216.json; curriculum-workflow/generated/L216-generation-packet.md | public/assets/lessons/L216/images/; public/assets/lessons/L216/audio/ | asset-complete package; dependencies now in origin/main; Release owns production JSON/planner/ledger integration |
 
 ## Status Values
 
