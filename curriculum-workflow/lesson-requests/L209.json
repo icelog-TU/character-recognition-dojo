@@ -1,0 +1,168 @@
+{
+  "id": "L209",
+  "order": 209,
+  "newChars": [
+    "晚"
+  ],
+  "zhuyin": {
+    "晚": "ㄨㄢˇ"
+  },
+  "title": "晚",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production package request for L209 ?. Latest origin/main now contains L206 ?, L207 ?, and L208 ?, so there are no provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L208 ? plus current target ?",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "晚",
+      "早",
+      "進",
+      "從",
+      "河",
+      "流"
+    ],
+    "targetCharMinimumCount": {
+      "晚": 3
+    },
+    "recentTargetMinimumCounts": {
+      "早": 2,
+      "進": 2,
+      "從": 2,
+      "河": 1,
+      "流": 1
+    },
+    "disallowedChars": [
+      "海",
+      "船",
+      "橋",
+      "岸",
+      "游",
+      "隨",
+      "之",
+      "直",
+      "透",
+      "落",
+      "買"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, station names, school names, timetables, clock numbers, subtitles, or readable marks.",
+      "Use L058 image style anchors.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 晚 as public/assets/lessons/L209/audio/char-u665a.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice or cut production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L209-S01",
+      "text": "早上出門，晚上回家。",
+      "spokenText": "早上出門晚上回家",
+      "focusChar": "晚",
+      "displayLines": [
+        "早上出門，",
+        "晚上回家。"
+      ],
+      "imageNotes": "同一個孩子早上背著書包出門，晚上回到家門口。可用同一畫面分成左右兩個時間感，但不能有文字、數字、時鐘刻度或標籤。"
+    },
+    {
+      "id": "L209-S02",
+      "text": "小河從早到晚都在流。",
+      "spokenText": "小河從早到晚都在流",
+      "focusChar": "晚",
+      "displayLines": [
+        "小河從早",
+        "到晚都在流。"
+      ],
+      "imageNotes": "小河從白天到夜晚都在流，可用同一條小河搭配左側白天、右側晚上星月光線的視覺對比。不可有文字、數字、標籤或聲音字樣。"
+    },
+    {
+      "id": "L209-S03",
+      "text": "不要太晚進校門。",
+      "spokenText": "不要太晚進校門",
+      "focusChar": "晚",
+      "displayLines": [
+        "不要太晚",
+        "進校門。"
+      ],
+      "imageNotes": "傍晚或晚上，孩子在校門附近，大人提醒不要太晚進校門。校門不可有校名、文字、數字、標籤或招牌。"
+    },
+    {
+      "id": "L209-S04",
+      "text": "車站一天到晚有人進進出出。",
+      "spokenText": "車站一天到晚有人進進出出",
+      "focusChar": "進",
+      "displayLines": [
+        "車站一天到晚",
+        "有人進進出出。"
+      ],
+      "imageNotes": "車站入口有很多人進進出出，畫面重點是人們在出入口來回進出。車站不可有站名、車次、文字、數字、時刻表、標籤或招牌。"
+    },
+    {
+      "id": "L209-S05",
+      "text": "晚上，我從窗邊看星星。",
+      "spokenText": "晚上我從窗邊看星星",
+      "focusChar": "晚",
+      "displayLines": [
+        "晚上，我從窗邊",
+        "看星星。"
+      ],
+      "imageNotes": "晚上，孩子在窗邊往外看星星，畫面要清楚是人在窗邊看夜空。不可有文字、數字、星座標籤或字幕。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L209-S03",
+      "targetChar": "晚",
+      "reason": "「太晚」是本課核心時間用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L209-S05",
+      "targetChar": "晚",
+      "targetCharIndex": 0,
+      "prefixText": "",
+      "suffixText": "上我從窗邊看星星"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L209-S02",
+      "targetChar": "晚",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "晚",
+        "早",
+        "進"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L209-S04",
+      "chunks": [
+        "車站一天到晚",
+        "有人",
+        "進進出出"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L209-S01",
+      "correctText": "早上出門，晚上回家。",
+      "wrongOneText": "早上出門，早上回家。",
+      "wrongTwoText": "晚上出門，晚上回家。"
+    }
+  }
+}
