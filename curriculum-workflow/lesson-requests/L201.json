@@ -1,0 +1,175 @@
+{
+  "id": "L201",
+  "order": 201,
+  "newChars": [
+    "星"
+  ],
+  "zhuyin": {
+    "星": "ㄒㄧㄥ"
+  },
+  "title": "星",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production package request for L201 星. Release integrated from latest origin/main complete through L200 長; former lesson dependency is now satisfied on main. Approved final sentences, Stage 4 plan, image rules, and audio rules are from the teacher handoff.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L200 長 plus current target 星",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "星",
+      "長",
+      "影",
+      "月",
+      "陽",
+      "亮"
+    ],
+    "targetCharMinimumCount": {
+      "星": 3
+    },
+    "recentTargetMinimumCounts": {
+      "長": 2,
+      "影": 2,
+      "月": 2,
+      "陽": 1,
+      "亮": 1
+    },
+    "disallowedChars": [
+      "空",
+      "夜",
+      "宇",
+      "宙",
+      "銀",
+      "河",
+      "流",
+      "行",
+      "日",
+      "耀",
+      "閃",
+      "顆",
+      "短"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, movie titles, subtitles, posters with text, or readable marks.",
+      "Use L058 image style anchors.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 星 as public/assets/lessons/L201/audio/char-u661f.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text.",
+      "S04 and S05 use 長 read as ㄔㄤˊ."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L201-S01",
+      "text": "書上說，太陽是很大的星星。",
+      "spokenText": "書上說太陽是很大的星星",
+      "focusChar": "星",
+      "displayLines": [
+        "書上說，",
+        "太陽是",
+        "很大的",
+        "星星。"
+      ],
+      "imageNotes": "孩子看著一本沒有可讀文字的書，書中用圖像表現太陽和星星的關係，旁邊可有太陽和星星的圖示但不可有文字。畫面要清楚傳達「書上說太陽是很大的星星」；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L201-S02",
+      "text": "月光比星光更亮。",
+      "spokenText": "月光比星光更亮",
+      "focusChar": "星",
+      "displayLines": [
+        "月光比",
+        "星光更亮。"
+      ],
+      "imageNotes": "夜空中有月亮和星星，月光比星光更亮。畫面要清楚呈現月光較亮、星光較小較弱的對比；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L201-S03",
+      "text": "火星比水星還大一點。",
+      "spokenText": "火星比水星還大一點",
+      "focusChar": "星",
+      "displayLines": [
+        "火星比水星",
+        "還大一點。"
+      ],
+      "imageNotes": "畫面顯示火星和水星兩個行星，火星稍微比較大，水星稍微比較小。可以用無文字的大小對比表現，不可有星球名稱文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L201-S04",
+      "text": "月光下的樹影好長。",
+      "spokenText": "月光下的樹影好長",
+      "focusChar": "長",
+      "displayLines": [
+        "月光下的",
+        "樹影好長。"
+      ],
+      "imageNotes": "夜晚月光下，一棵樹在地上形成很長的樹影。畫面要溫和、不恐怖，清楚呈現月光和長長的樹影；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L201-S05",
+      "text": "這電影很長，可是很好看。",
+      "spokenText": "這電影很長可是很好看",
+      "focusChar": "影",
+      "displayLines": [
+        "這電影很長，",
+        "可是很好看。"
+      ],
+      "imageNotes": "家人或孩子在看一部很長但很好看的電影，畫面可有電視或投影畫面與觀眾，但螢幕上不可有可讀文字、字幕、片名、數字、品牌或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L201-S03",
+      "targetChar": "星",
+      "reason": "「火星／水星」是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L201-S02",
+      "targetChar": "星",
+      "targetCharIndex": 3,
+      "prefixText": "月光比",
+      "suffixText": "光更亮"
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L201-S01",
+      "targetChar": "星",
+      "missingIndexes": [
+        9,
+        10
+      ],
+      "options": [
+        "星",
+        "月",
+        "影"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L201-S04",
+      "chunks": [
+        "月光下的",
+        "樹影",
+        "好長"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L201-S05",
+      "correctText": "這電影很長，可是很好看。",
+      "wrongOneText": "這電影很難，可是很好看。",
+      "wrongTwoText": "這電影很長，可是很難看。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
