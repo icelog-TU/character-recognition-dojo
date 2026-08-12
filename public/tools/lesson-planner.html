@@ -196,6 +196,14 @@
         font-weight: 850;
       }
 
+      .learned-actions {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+
       .plan-slot-controls {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1711,6 +1719,10 @@
           </div>
           <details class="learned-details">
             <summary>展開全部已學字</summary>
+            <div class="learned-actions">
+              <button class="btn secondary" type="button" data-copy-learned-chars>複製全部已學字</button>
+              <span class="help">${model.learnedChars.length} 個字，連續字串。</span>
+            </div>
             <div class="learned">${model.learnedChars.map((char) => `<span>${char}</span>`).join("")}</div>
           </details>
         `;
@@ -2669,10 +2681,28 @@
 
       async function copyText(text) {
         try {
-          await navigator.clipboard.writeText(text);
-          return true;
+          if (navigator.clipboard?.writeText) {
+            await navigator.clipboard.writeText(text);
+            return true;
+          }
+        } catch {
+          // Fall back below for browsers that block the async clipboard API.
+        }
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+        textarea.style.top = "0";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        try {
+          return document.execCommand("copy");
         } catch {
           return false;
+        } finally {
+          textarea.remove();
         }
       }
 
@@ -3273,6 +3303,16 @@
           const input = $("learnedLookupInput");
           if (input) input.value = "";
           updateLearnedLookup();
+          return;
+        }
+
+        if (event.target.closest("[data-copy-learned-chars]")) {
+          const model = currentModel();
+          const learnedText = model.learnedChars.join("");
+          const copied = await copyText(learnedText);
+          $("statusLine").textContent = copied
+            ? `已複製 ${model.learnedChars.length} 個已學字。`
+            : "無法自動複製；請展開全部已學字後手動複製。";
           return;
         }
       });
