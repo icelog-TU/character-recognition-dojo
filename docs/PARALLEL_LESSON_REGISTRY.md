@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L207 | 進 / normal lesson | claimed | Production C | codex/l207-complete-package / 7ba722f0 | L204:流, L205:河, L206:從 | ["流","河","從"] | curriculum-workflow/lesson-requests/L207.json; curriculum-workflow/generated/L207-generation-packet.md | public/assets/lessons/L207/images/; public/assets/lessons/L207/audio/ | accepted handoff and starting complete package |
+| L207 | 進 / normal lesson | ready-blocked-by-dependency | Production C | codex/l207-complete-package / pending final commit | L204:流, L205:河, L206:從 | ["流","河","從"] | curriculum-workflow/lesson-requests/L207.json; curriculum-workflow/generated/L207-generation-packet.md; curriculum-workflow/drafts/L207-draft.json | public/assets/lessons/L207/images/; public/assets/lessons/L207/audio/ | asset-complete package prepared; blocked until L204-L206 enter latest origin/main |
 
 ## Status Values
 

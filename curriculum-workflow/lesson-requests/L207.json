@@ -1,0 +1,186 @@
+{
+  "id": "L207",
+  "order": 207,
+  "newChars": [
+    "進"
+  ],
+  "zhuyin": {
+    "進": "ㄐㄧㄣˋ"
+  },
+  "title": "進",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L207 進. Latest origin/main at production start is complete through L203 道, so L204 流, L205 河, and L206 從 are provisional dependencies. Production C must build the lesson-local asset-complete package only; do not leave L207 in production JSON until L204-L206 exist in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, labels, logos, zhuyin, or watermarks. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix/suffix audio from exact fragments, and independent G05 wrong-choice whole-sentence audio.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L203 道 plus provisional learned chars 流, 河, 從 plus current target 進",
+    "provisionalLearnedChars": [
+      "流",
+      "河",
+      "從"
+    ],
+    "dependsOnLessons": [
+      "L204",
+      "L205",
+      "L206"
+    ],
+    "requiredCoverageChars": [
+      "進",
+      "從",
+      "河",
+      "流",
+      "道",
+      "行"
+    ],
+    "targetCharMinimumCount": {
+      "進": 3
+    },
+    "recentTargetMinimumCounts": {
+      "從": 2,
+      "河": 2,
+      "流": 2,
+      "道": 1,
+      "行": 1
+    },
+    "disallowedDisplayChars": [
+      "海",
+      "船",
+      "橋",
+      "岸",
+      "游",
+      "隨",
+      "之",
+      "直",
+      "透",
+      "落"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, blackboard writing, book text, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Use L058 image style anchors.",
+      "Each image must match the sentence-specific imageNotes and remain child-safe."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 進 as public/assets/lessons/L207/audio/char-u9032.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L207-S01",
+      "text": "我從人行道走進校門。",
+      "spokenText": "我從人行道走進校門",
+      "focusChar": "進",
+      "displayLines": [
+        "我從人行道",
+        "走進校門。"
+      ],
+      "imageNotes": "孩子從人行道走進校門，畫面要同時看得到人行道、校門和走進去的動作。校門不可有校名、文字、數字、標籤或招牌。"
+    },
+    {
+      "id": "L207-S02",
+      "text": "河水流個不停。",
+      "spokenText": "河水流個不停",
+      "focusChar": "流",
+      "displayLines": [
+        "河水流個",
+        "不停。"
+      ],
+      "imageNotes": "小河或河水持續流動，畫面重點是河水流動不停的感覺，可用連續水流表現。不可有文字、數字、標籤或聲音字樣。"
+    },
+    {
+      "id": "L207-S03",
+      "text": "雨水從窗外流進房間。",
+      "spokenText": "雨水從窗外流進房間",
+      "focusChar": "進",
+      "displayLines": [
+        "雨水從窗外",
+        "流進房間。"
+      ],
+      "imageNotes": "下雨時，雨水從窗外流進房間，窗邊地上有水，人物可露出驚訝或正在處理的樣子。不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L207-S04",
+      "text": "我坐在河邊看書。",
+      "spokenText": "我坐在河邊看書",
+      "focusChar": "河",
+      "displayLines": [
+        "我坐在河邊",
+        "看書。"
+      ],
+      "imageNotes": "孩子坐在河邊安靜看書，畫面要清楚呈現河邊位置和看書動作。書頁上不可有可辨識文字、數字、注音或標籤。"
+    },
+    {
+      "id": "L207-S05",
+      "text": "我的鞋子進水了。",
+      "spokenText": "我的鞋子進水了",
+      "focusChar": "進",
+      "displayLines": [
+        "我的鞋子",
+        "進水了。"
+      ],
+      "imageNotes": "孩子的鞋子進水，鞋內或鞋邊有水，孩子低頭看鞋子或抬腳檢查。畫面要清楚但不要髒亂噁心，不可有文字、數字或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L207-S05",
+      "targetChar": "進",
+      "reason": "「進水」是本課清楚、生活化的用法，目標字明確。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L207-S01",
+      "targetChar": "進",
+      "targetCharIndex": 6,
+      "teachAudio": {
+        "prefixText": "我從人行道走",
+        "suffixText": "校門"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L207-S03",
+      "targetChar": "進",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "進",
+        "從",
+        "流"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L207-S02",
+      "chunks": [
+        "河水",
+        "流個",
+        "不停"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L207-S04",
+      "correctText": "我坐在河邊看書。",
+      "wrongOneText": "我坐在路邊看書。",
+      "wrongTwoText": "我站在河邊看書。"
+    }
+  },
+  "dependsOnLessons": [
+    "L204",
+    "L205",
+    "L206"
+  ],
+  "provisionalLearnedChars": [
+    "流",
+    "河",
+    "從"
+  ]
+}
