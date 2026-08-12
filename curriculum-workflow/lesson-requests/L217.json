@@ -1,0 +1,197 @@
+{
+  "id": "L217",
+  "order": 217,
+  "newChars": [
+    "濕"
+  ],
+  "zhuyin": {
+    "濕": "ㄕ"
+  },
+  "title": "濕",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B asset-complete package for L217. Latest origin/main production JSON is complete through L215「池」 and review modules through R012; L216「身」 is not in main, so it is a provisional dependency. Production owns the lesson-local package only; Release owns production JSON, planner, ledger, registry cleanup, final merge, and deploy after L216 is merged.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L215 plus provisional learned char 身 plus current target 濕",
+    "provisionalLearnedChars": [
+      "身"
+    ],
+    "dependsOnLessons": [
+      "L216"
+    ],
+    "requiredCoverageChars": [
+      "濕",
+      "身",
+      "池",
+      "泳",
+      "游",
+      "魚",
+      "船"
+    ],
+    "targetCharMinimumCount": {
+      "濕": 3
+    },
+    "recentTargetMinimumCounts": {
+      "身": 2,
+      "池": 2,
+      "泳": 2,
+      "游": 1,
+      "魚": 1,
+      "船": 1
+    },
+    "disallowedDisplayChars": [
+      "乾",
+      "換",
+      "服",
+      "褲",
+      "體",
+      "全",
+      "貓",
+      "港",
+      "橋",
+      "岸",
+      "浪",
+      "沙",
+      "灘",
+      "買",
+      "煮",
+      "色",
+      "里",
+      "照",
+      "右",
+      "弄"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 image anchors only as illustration style references, never as character identity references.",
+      "Follow docs/LESSON_VISUAL_CAST_SOP.md and make every human role explicit: protagonist little girl, protagonist mother.",
+      "Do not copy the L058 adult woman, child, clothes, face, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, brands, pool names, warning signs, direction marks, speech bubbles, captions, or readable marks.",
+      "S02 must be child-safe and modest: show already changed and holding wet swimsuit, never the changing process or exposure.",
+      "S04 must clearly show toy boats beside the fish pond, not in the pond."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 濕 as public/assets/lessons/L217/audio/char-u6fd5.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone files from exact text.",
+      "Do not splice audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L217-S01",
+      "text": "游泳後，身上都濕了。",
+      "spokenText": "游泳後身上都濕了",
+      "focusChar": "濕",
+      "displayLines": [
+        "游泳後，",
+        "身上都濕了。"
+      ],
+      "imageNotes": "主角小女孩游泳後站在安全的游泳池邊，身上都是水、看起來濕濕的，旁邊可有主角媽媽拿毛巾照看。主角小女孩與主角媽媽外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L217-S02",
+      "text": "脫下一身濕濕的泳衣，拿去洗。",
+      "spokenText": "脫下一身濕濕的泳衣拿去洗",
+      "focusChar": "濕",
+      "displayLines": [
+        "脫下一身",
+        "濕濕的泳衣，",
+        "拿去洗。"
+      ],
+      "imageNotes": "主角小女孩已經脫下濕濕的泳衣、換好乾淨衣服，手裡拿著濕泳衣要拿去洗。畫面必須端正、兒童友善，不要呈現換衣過程或過度暴露。主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、品牌、標籤或水印。"
+    },
+    {
+      "id": "L217-S03",
+      "text": "水池邊很濕，不要跑。",
+      "spokenText": "水池邊很濕不要跑",
+      "focusChar": "濕",
+      "displayLines": [
+        "水池邊很濕，",
+        "不要跑。"
+      ],
+      "imageNotes": "主角媽媽提醒主角小女孩，水池邊地面很濕，不要在池邊跑。主角小女孩站在水池邊但沒有奔跑，畫面要安全。主角媽媽與主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、警告牌、標籤或水印。"
+    },
+    {
+      "id": "L217-S04",
+      "text": "魚池邊有好幾隻小船。",
+      "spokenText": "魚池邊有好幾隻小船",
+      "focusChar": "池",
+      "displayLines": [
+        "魚池邊有",
+        "好幾隻小船。"
+      ],
+      "imageNotes": "魚池邊放著好幾隻玩具小船，重點是小船在池邊，不在魚池裡；魚池裡可看見魚，畫面安全溫和。可有主角小女孩在旁邊看，但她沒有把船放進池裡。若出現主角小女孩，外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L217-S05",
+      "text": "雨後的草地很濕。",
+      "spokenText": "雨後的草地很濕",
+      "focusChar": "濕",
+      "displayLines": [
+        "雨後的草地",
+        "很濕。"
+      ],
+      "imageNotes": "雨後的草地濕濕的，草葉上有水珠，地面看起來潮濕。可有主角小女孩站在草地旁觀察，但不要讓她在濕草地上奔跑。若出現主角小女孩，外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、標籤或水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L217-S03",
+      "targetChar": "濕",
+      "reason": "「水池邊很濕」是本課清楚、生活化的用法，目標字明確。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L217-S01",
+      "targetChar": "濕",
+      "targetCharIndex": 6,
+      "teachAudio": {
+        "prefixText": "游泳後身上都",
+        "suffixText": "了"
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L217-S02",
+      "targetChar": "濕",
+      "missingIndexes": [
+        4,
+        5
+      ],
+      "options": [
+        "濕",
+        "身",
+        "泳"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L217-S04",
+      "chunks": [
+        "魚池邊",
+        "有好幾隻",
+        "小船"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L217-S05",
+      "correctText": "雨後的草地很濕。",
+      "wrongOneText": "雨後的草地很綠。",
+      "wrongTwoText": "雨後的草地很冷。"
+    }
+  },
+  "dependsOnLessons": [
+    "L216"
+  ],
+  "provisionalLearnedChars": [
+    "身"
+  ]
+}

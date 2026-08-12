@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L217 | 濕 / normal lesson | claimed | Production B | codex/l217-complete-package / 6854d6c5 | L216:身 | ["身"] | curriculum-workflow/lesson-requests/L217.json; curriculum-workflow/generated/L217-generation-packet.md | public/assets/lessons/L217/images/; public/assets/lessons/L217/audio/ | accepted handoff and starting complete package; blocked from merge until L216 is in main |
+| L217 | 濕 / normal lesson | ready-blocked-by-dependency | Production B | codex/l217-complete-package / package complete | L216:身 | ["身"] | curriculum-workflow/lesson-requests/L217.json; curriculum-workflow/generated/L217-generation-packet.md | public/assets/lessons/L217/images/; public/assets/lessons/L217/audio/ | complete package prepared; blocked from merge until L216 is in main |
 
 ## Status Values
 
