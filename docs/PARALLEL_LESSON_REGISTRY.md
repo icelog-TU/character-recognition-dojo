@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L208 | 早 / normal lesson | claimed | Production D | codex/l208-complete-package / a01a797e | L206 從, L207 進 | ["從","進"] | curriculum-workflow/lesson-requests/L208.json, curriculum-workflow/generated/L208-generation-packet.md | public/assets/lessons/L208/images/, public/assets/lessons/L208/audio/ | accepted handoff and starting complete package; latest main includes L204-L205 so provisional deps reduced to L206-L207 |
+| L208 | 早 / normal lesson | ready-blocked-by-dependency | Production D | codex/l208-complete-package / HEAD | L206 從, L207 進 | ["從","進"] | curriculum-workflow/lesson-requests/L208.json, curriculum-workflow/generated/L208-generation-packet.md, curriculum-workflow/drafts/L208-draft.json | public/assets/lessons/L208/images/, public/assets/lessons/L208/audio/ | asset-complete package ready; latest main includes L204-L205, blocked until L206-L207 merge to main; local allowed-character/package audit PASS; validate:production with temporary insert PASS; npm run verify PASS |
 
 ## Status Values
 
