@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 210:
+Characters taught after Lesson 215:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池`
 
 Recent review pool for the next lesson:
 
-`海 晚 早 進 從 河 流 道 行 星 長 影 月 陽 亮 光`
+`池 泳 游 魚 船 海 晚 早 進 從 河 流 道 行 星 長`
 
 ## Visual Continuity Ledger
 
@@ -62,6 +62,8 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | R008 | review module | same as L150 | 這個圓盒壞掉了。 / 球棒太難用。 / 雨天過後，去外面草地玩。 / 他打出好球，得很多分。 / 幾點了？去空地打球。 | 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 | Eighth review module after L150. Introduces no new characters. Completes the fourth review pair covering L091-L120. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | R009 | review module | same as L180 | 外面天空有黑雲。 / 下雨時，不要穿白鞋出門。 / 天氣太熱，先脫外套。 / 先喝點水，再吃飯和菜。 / 老爸下棋，卻不開心。 | 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 | Ninth review module after L180. Introduces no new characters. R009-R010 together cover every new character from L121-L150. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | R010 | review module | same as L180 | 為什麼房間這麼亂？ / 怎麼找不到要穿的鞋？ / 他穿上衣，戴帽子。 / 天黑了，所以房間要開燈。 / 冷氣關了，房間還很熱。 | 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 | Tenth review module after L180. Introduces no new characters. Completes the fifth review pair covering L121-L150. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R011 | review module | same as L210 | 風一吹，樹葉就動了。 / 樹上滿是綠葉。 / 關好車窗，再開冷氣。 / 等雨停了，再出門。 / 先掃地，再擦桌子。 | 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 | Eleventh review module after L210. Introduces no new characters. R011-R012 together cover every new character from L151-L180. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R012 | review module | same as L210 | 手很髒，要洗一洗。 / 這房間怎麼又髒又亂？ / 沒事就快點回家。 / 他聽見叫聲，所以回頭。 / 小馬跑太快，停不下來。 | 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 | Twelfth review module after L210. Introduces no new characters. Completes the sixth review pair covering L151-L180. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | L001 | 一、二、三、人 | 一、二、三、人 | 人 / 一人 / 二人 / 三人 | none | Seed lesson. Four characters are introduced together because the first lesson needs enough material to make meaning. |
 | L002 | 個 | 一、二、三、人、個 | 人 / 一個人 / 三個人 | 一、三、人 | `個` is neutral tone in `一個人` and `三個人`. Avoid `二個人`; use `兩個人` only after `兩` is taught. |
 | L003 | 大 | 一、二、三、人、個、大 | 大人 / 二人 / 三個人 / 一個大人 | 一、二、三、人、個 | Uses `大人` as a meaningful phrase and repeats counting people. |
@@ -336,10 +338,15 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | L209 | 晚 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚 | 早上出門，晚上回家。 / 小河從早到晚都在流。 / 不要太晚進校門。 / 車站一天到晚有人進進出出。 / 晚上，我從窗邊看星星。 | 早進從河流 | Introduces `晚` through approved sentence contexts. Reviews recent `早進從河流`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 | L210 | 海 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海 | 早上，我去海邊玩。 / 晚上，大海很黑。 / 河水流進大海。 / 我從海邊走進車裡。 / 早點回家，不要太晚。 | 晚早進從河流 | Introduces `海` through approved sentence contexts. Reviews recent `晚早進從河流`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L211 | 船 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船 | 海上風大，早點把船開回來。 / 坐船出海的人，天天早去晚回。 / 晚上坐船，大海黑黑的。 / 我從小就想開大船。 / 我是船長，開船飛進星海裡。 | 海晚早進從 | Introduces `船` through approved sentence contexts. Reviews recent `海晚早進從`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L212 | 魚 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚 | 海裡有很多小魚。 / 我在船上看大魚。 / 晚上，爸爸給我魚吃。 / 早點把魚放進水裡。 / 晚上，小船開進海裡。 | 船海晚早進 | Introduces `魚` through approved sentence contexts. Reviews recent `船海晚早進`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L213 | 游 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游 | 小魚在海裡游來游去。 / 水鳥看得見河裡的魚。 / 晚上，人魚在海面上看船。 / 大船開不進河的上游。 / 一大早，有人在海裡游水。 | 魚船海晚早 | Introduces `游` through approved sentence contexts. Reviews recent `魚船海晚早`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L214 | 泳 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳 | 小魚不用學游泳。 / 游泳課要戴泳帽。 / 我的泳鏡進水了。 / 船長把魚放回海裡。 / 晚上坐船，不可以下海游泳。 | 游魚船海晚 | Introduces `泳` through approved sentence contexts. Reviews recent `游魚船海晚`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
+| L215 | 池 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池 | 電池沒電了。 / 小魚在水池裡游來游去。 / 不可以在魚池裡面游泳。 / 游泳池再過去，有熱水池。 / 風雨太大，海水進船裡了。 | 泳游魚船海 | Introduces `池` through approved sentence contexts. Reviews recent `泳游魚船海`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, and whole-sentence choose-pronunciation wrong-option audio. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L210. Review modules are complete through R010; R011-R012 are now required before L211. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L215. Review modules are complete through R012. The next review blockers are R013-R014 after L240. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

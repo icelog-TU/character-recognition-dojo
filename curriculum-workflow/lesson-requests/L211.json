@@ -1,0 +1,203 @@
+{
+  "id": "L211",
+  "order": 211,
+  "newChars": [
+    "船"
+  ],
+  "zhuyin": {
+    "船": "ㄔㄨㄢˊ"
+  },
+  "title": "船",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integration for L211. Latest origin/main is being advanced in playable order, with R011/R012 and all prior lessons integrated before this unit, so there are no unresolved provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L210 plus current target from newChars",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "船",
+      "海",
+      "晚",
+      "早",
+      "進",
+      "從"
+    ],
+    "targetCharMinimumCount": {
+      "船": 3
+    },
+    "recentTargetMinimumCounts": {
+      "海": 2,
+      "晚": 2,
+      "早": 2,
+      "進": 1,
+      "從": 1
+    },
+    "disallowedDisplayChars": [
+      "港",
+      "橋",
+      "岸",
+      "游",
+      "浪",
+      "沙",
+      "灘",
+      "買",
+      "隨",
+      "之",
+      "直",
+      "透",
+      "落",
+      "色",
+      "里"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 image anchors only as illustration style references; do not copy L058 people, clothes, faces, or body shapes.",
+      "Use L154/L162/L163 protagonist family continuity for protagonist father, mother, and little girl.",
+      "Every prompt with humans must name the role identity: protagonist little girl, protagonist father, protagonist mother, passerby fisher, or sea worker.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, boat names, pier signs, subtitles, logos, or readable marks.",
+      "Each image must clearly match the sentence-specific imageNotes and keep human roles visually distinct."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 船 as public/assets/lessons/L211/audio/char-u8239.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and G05 wrong-option audio as standalone files from exact text.",
+      "Do not splice, cut, or patch production audio.",
+      "In S05, 船長 must be pronounced ㄔㄨㄢˊ ㄓㄤˇ."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L211-S01",
+      "text": "海上風大，早點把船開回來。",
+      "spokenText": "海上風大早點把船開回來",
+      "focusChar": "船",
+      "displayLines": [
+        "海上風大，",
+        "早點把船",
+        "開回來。"
+      ],
+      "imageNotes": "主角爸爸在海邊或碼頭旁看著海上的船，提醒要早點把船開回來；畫面要清楚有大風、海上船隻和回來的方向。不可有文字、數字、船名、碼頭招牌、標籤或水印。人物身份使用主角爸爸，外觀需依 L154/L162/L163 主角家庭 continuity；L058 只作畫風參考，不複製人物長相。"
+    },
+    {
+      "id": "L211-S02",
+      "text": "坐船出海的人，天天早去晚回。",
+      "spokenText": "坐船出海的人天天早去晚回",
+      "focusChar": "船",
+      "displayLines": [
+        "坐船出海",
+        "的人，天天",
+        "早去晚回。"
+      ],
+      "imageNotes": "路人漁民角色或海上工作者在碼頭坐船出海，畫面可呈現清晨出海與傍晚回來的感覺，但不可使用文字、數字、時鐘刻度、船名、碼頭招牌或標籤。人物身份是路人漁民或海上工作者，必須與主角爸爸、老師、主角媽媽外觀明顯不同；L058 只作畫風參考，不複製人物長相。"
+    },
+    {
+      "id": "L211-S03",
+      "text": "晚上坐船，大海黑黑的。",
+      "spokenText": "晚上坐船大海黑黑的",
+      "focusChar": "船",
+      "displayLines": [
+        "晚上坐船，",
+        "大海黑黑的。"
+      ],
+      "imageNotes": "主角小女孩和主角爸爸或主角媽媽晚上坐船，看見黑黑的大海；畫面要安全、平靜，有成人陪同。不可有文字、數字、船名、標籤或字幕。主角家庭外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。"
+    },
+    {
+      "id": "L211-S04",
+      "text": "我從小就想開大船。",
+      "spokenText": "我從小就想開大船",
+      "focusChar": "船",
+      "displayLines": [
+        "我從小就想",
+        "開大船。"
+      ],
+      "imageNotes": "主角小女孩看著自己小時候玩船模型或看大船的照片，表現她從小就想開大船。不可有文字、日期、數字、相框標籤、船名或可辨識書寫內容。主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。"
+    },
+    {
+      "id": "L211-S05",
+      "text": "我是船長，開船飛進星海裡。",
+      "spokenText": "我是船長開船飛進星海裡",
+      "focusChar": "船",
+      "displayLines": [
+        "我是船長，",
+        "開船飛進",
+        "星海裡。"
+      ],
+      "imageNotes": "主角小女孩在玩想像遊戲，假裝自己是船長，開著玩具船或紙船飛進像星星海洋一樣的幻想場景；這是孩子的想像遊戲，不是真實危險航行。不可有文字、數字、船名、標籤或字幕。主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。注意「船長」的「長」讀 ㄓㄤˇ。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L211-S03",
+      "targetChar": "船",
+      "reason": "晚上坐船是本課核心用法，目標字清楚。",
+      "missingIndexes": [
+        3
+      ]
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L211-S04",
+      "targetChar": "船",
+      "targetCharIndex": 7,
+      "prefixText": "我從小就想開大",
+      "suffixText": "",
+      "missingIndexes": [
+        7
+      ]
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L211-S05",
+      "targetChar": "船",
+      "missingIndexes": [
+        2,
+        5
+      ],
+      "options": [
+        "船",
+        "海",
+        "進"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L211-S01",
+      "chunks": [
+        "海上風大",
+        "早點把船",
+        "開回來"
+      ],
+      "targetChar": "船",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L211-S02",
+      "correctText": "坐船出海的人，天天早去晚回。",
+      "wrongOneText": "坐船出海的人，天天早去早回。",
+      "wrongTwoText": "坐船出海的人，天天晚去晚回。",
+      "targetChar": "船",
+      "correctSpokenText": "坐船出海的人天天早去晚回",
+      "wrongOneSpokenText": "坐船出海的人天天早去早回",
+      "wrongTwoSpokenText": "坐船出海的人天天晚去晚回"
+    }
+  }
+}

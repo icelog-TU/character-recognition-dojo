@@ -1,0 +1,186 @@
+{
+  "id": "L215",
+  "order": 215,
+  "newChars": [
+    "池"
+  ],
+  "zhuyin": {
+    "池": "ㄔˊ"
+  },
+  "title": "池",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integration for L215. Latest origin/main is being advanced in playable order, with R011/R012 and all prior lessons integrated before this unit, so there are no unresolved provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L214 plus current target from newChars",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "池",
+      "泳",
+      "游",
+      "魚",
+      "船",
+      "海"
+    ],
+    "targetCharMinimumCount": {
+      "池": 3
+    },
+    "recentTargetMinimumCounts": {
+      "泳": 2,
+      "游": 2,
+      "魚": 2,
+      "船": 1,
+      "海": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 when the sentence shows the protagonist girl or protagonist mother.",
+      "Swimming facility worker is an independent role, wearing simple facility work clothing or sports venue uniform, visually distinct from protagonist mother, school teacher, and the L058 adult woman.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, boat names, car plates, battery plus/minus symbols, pool names, direction labels, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop.",
+      "Human roles must be explicitly distinguished: protagonist little girl, protagonist mother, swimming facility worker, and distant passerby boat crew or sea worker must not share one face or be copied from L058."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 池 as public/assets/lessons/L215/audio/char-u6c60.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L215-S01",
+      "text": "電池沒電了。",
+      "spokenText": "電池沒電了",
+      "focusChar": "池",
+      "displayLines": [
+        "電池",
+        "沒電了。"
+      ],
+      "imageNotes": "主角小女孩拿著不會發光或不會動的玩具，旁邊可看到打開的電池位置和沒有電的電池，但電池上不可有正負號、文字、數字、品牌或標籤。主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。"
+    },
+    {
+      "id": "L215-S02",
+      "text": "小魚在水池裡游來游去。",
+      "spokenText": "小魚在水池裡游來游去",
+      "focusChar": "池",
+      "displayLines": [
+        "小魚在",
+        "水池裡",
+        "游來游去。"
+      ],
+      "imageNotes": "小魚在清楚的水池裡游來游去，畫面重點是水池、小魚和游動方向。可無人物。不可有文字、數字、水池標籤或水印。"
+    },
+    {
+      "id": "L215-S03",
+      "text": "不可以在魚池裡面游泳。",
+      "spokenText": "不可以在魚池裡面游泳",
+      "focusChar": "池",
+      "displayLines": [
+        "不可以在",
+        "魚池裡面",
+        "游泳。"
+      ],
+      "imageNotes": "主角媽媽提醒主角小女孩，不可以在魚池裡面游泳；畫面要清楚是魚池，有魚在池裡，主角小女孩站在池邊沒有下水。主角媽媽為白或米色上衣、寬藍褲、肩長深色髮；主角小女孩為粉紅外套、白上衣、藍裙、粉紅鞋、小粉紅髮夾。外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、警告牌、標籤或水印。"
+    },
+    {
+      "id": "L215-S04",
+      "text": "游泳池再過去，有熱水池。",
+      "spokenText": "游泳池再過去有熱水池",
+      "focusChar": "池",
+      "displayLines": [
+        "游泳池",
+        "再過去，",
+        "有熱水池。"
+      ],
+      "imageNotes": "游泳場工作人員正在替主角媽媽和主角小女孩指路，表示游泳池再往前過去有熱水池；畫面可有兩個不同區域的水池，但不能有文字標示。游泳場工作人員是獨立角色，穿工作服或運動場館制服，必須和主角媽媽、學校老師、L058 成人女人外觀不同。主角媽媽為白或米色上衣、寬藍褲、肩長深色髮；主角小女孩為粉紅外套、白上衣、藍裙、粉紅鞋、小粉紅髮夾。不可有文字、數字、方向標籤、池名或水印。"
+    },
+    {
+      "id": "L215-S05",
+      "text": "風雨太大，海水進船裡了。",
+      "spokenText": "風雨太大海水進船裡了",
+      "focusChar": "船",
+      "displayLines": [
+        "風雨太大，",
+        "海水進",
+        "船裡了。"
+      ],
+      "imageNotes": "風雨很大，海水濺進或流進靠在岸邊的小船裡，畫面要有風雨、海水和船裡進水的情況，但不要呈現危險災難。可無人物；若有人物出現，只能是遠處路人船員或海上工作者，不可畫成主角家庭。不可有文字、數字、船名、標籤或水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L215-S04",
+      "targetChar": "池",
+      "reason": "「游泳池」「熱水池」都是本課核心用法，目標字清楚。",
+      "missingIndexes": [
+        2,
+        9
+      ]
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L215-S01",
+      "targetChar": "池",
+      "targetCharIndex": 1,
+      "prefixText": "電",
+      "suffixText": "沒電了",
+      "missingIndexes": [
+        1
+      ]
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L215-S03",
+      "targetChar": "池",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "池",
+        "泳",
+        "魚"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L215-S02",
+      "chunks": [
+        "小魚在",
+        "水池裡",
+        "游來游去"
+      ],
+      "targetChar": "池",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L215-S05",
+      "correctText": "風雨太大，海水進船裡了。",
+      "wrongOneText": "風雨太大，海水進車裡了。",
+      "wrongTwoText": "風雨太大，雨水進船裡了。",
+      "targetChar": "船",
+      "correctSpokenText": "風雨太大海水進船裡了",
+      "wrongOneSpokenText": "風雨太大海水進車裡了",
+      "wrongTwoSpokenText": "風雨太大雨水進船裡了"
+    }
+  }
+}

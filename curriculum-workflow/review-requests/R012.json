@@ -1,0 +1,585 @@
+{
+  "id": "R012",
+  "kind": "review",
+  "reviewNumber": 12,
+  "title": "複習十二",
+  "afterLessonOrder": 210,
+  "targetLessonRange": {
+    "startOrder": 151,
+    "endOrder": 180
+  },
+  "requiredCoverageChars": [
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見"
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見",
+      "說",
+      "師",
+      "話",
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電",
+      "生",
+      "明",
+      "光",
+      "亮",
+      "陽",
+      "月",
+      "影",
+      "長",
+      "星",
+      "行",
+      "道",
+      "流",
+      "河",
+      "從",
+      "進",
+      "早",
+      "晚",
+      "海"
+    ],
+    "requiredCoverageChars": [
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見"
+    ]
+  },
+  "teacherNotes": "R011/R012 are required review modules after L210 and before L211. They cover L151-L180 and may use only L001-L210 learned characters. Review modules introduce no newChars, zhuyin, or charAudio. Use L058 as style only and L154/L162/L163 for protagonist family continuity.",
+  "approvedSentences": [
+    {
+      "text": "手很髒，要洗一洗。",
+      "spokenText": "手很髒要洗一洗",
+      "focusChar": "洗",
+      "displayLines": [
+        "手很髒，",
+        "要洗一洗。"
+      ],
+      "reason": "Covers 手、髒、洗.",
+      "imageNotes": "主角小女孩的手弄髒了，在洗手台前準備洗手或正在洗手。主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。畫面不要噁心，不可有文字、數字、標籤或水印。"
+    },
+    {
+      "text": "這房間怎麼又髒又亂？",
+      "spokenText": "這房間怎麼又髒又亂",
+      "focusChar": "亂",
+      "displayLines": [
+        "這房間怎麼",
+        "又髒又亂？"
+      ],
+      "reason": "Covers 這、房、間、怎、麼、又、髒、亂.",
+      "imageNotes": "主角小女孩站在房間門口，看見房間裡玩具、書本或衣物散亂，覺得房間又髒又亂。主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。房間髒亂但不要噁心，不可有文字、數字、標籤或水印。"
+    },
+    {
+      "text": "沒事就快點回家。",
+      "spokenText": "沒事就快點回家",
+      "focusChar": "事",
+      "displayLines": [
+        "沒事就",
+        "快點回家。"
+      ],
+      "reason": "Covers 沒、事、就、快、點、回、家.",
+      "imageNotes": "主角媽媽在家門口或路邊提醒主角小女孩，沒事就快點回家。主角媽媽與主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、路牌、門牌或標籤。"
+    },
+    {
+      "text": "他聽見叫聲，所以回頭。",
+      "spokenText": "他聽見叫聲所以回頭",
+      "focusChar": "聽",
+      "displayLines": [
+        "他聽見叫聲，",
+        "所以回頭。"
+      ],
+      "reason": "Covers 他、聽、見、叫、聲、所、以、回、頭.",
+      "imageNotes": "他／男孩同學角色走在路上，聽見後方有人叫他，所以回頭看。男孩同學必須是清楚的孩子角色，外觀要和主角小女孩不同，也不要畫成主角哥哥；可用不同髮型與衣服色彩區分。不可有文字、數字、對話框、標籤或水印。"
+    },
+    {
+      "text": "小馬跑太快，停不下來。",
+      "spokenText": "小馬跑太快停不下來",
+      "focusChar": "馬",
+      "displayLines": [
+        "小馬跑太快，",
+        "停不下來。"
+      ],
+      "reason": "Covers 小、馬、跑、太、快、停、下、來.",
+      "imageNotes": "小馬在安全空地或草地上跑得太快，停不下來，畫面要有速度感但不要危險撞擊。可無人物；若有人物出現，只能是遠處路人照看者，不可畫成主角家庭。不可有文字、數字、標籤或水印。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R012-G01",
+      "type": "find-character",
+      "sentenceId": "R012-S04",
+      "targetChar": "聽",
+      "prompt": "找一找句子裡的「聽」。"
+    },
+    {
+      "id": "R012-G02",
+      "type": "teach-character",
+      "sentenceId": "R012-S02",
+      "targetChar": "亂",
+      "prompt": "看一看「亂」在句子裡的位置。",
+      "missingIndexes": [
+        8
+      ],
+      "targetCharIndex": 8,
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R012/audio/R012-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "R012-G03",
+      "type": "missing-character",
+      "sentenceId": "R012-S03",
+      "targetChar": "事",
+      "prompt": "選出句子裡少掉的字。",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "thing",
+          "text": "事",
+          "correct": true
+        },
+        {
+          "id": "fast",
+          "text": "快",
+          "correct": false
+        },
+        {
+          "id": "back",
+          "text": "回",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R012-G04",
+      "type": "partial-order",
+      "sentenceId": "R012-S05",
+      "targetChar": "馬",
+      "prompt": "排出正確的句子。",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "slot-1",
+          "text": "小馬跑太快",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "slot-2",
+          "text": "停不",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "slot-3",
+          "text": "下來",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "R012-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R012-S01",
+      "targetChar": "洗",
+      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "options": [
+        {
+          "id": "correct",
+          "text": "手很髒，要洗一洗。",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R012/audio/R012-S01.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "手很髒，要擦一擦。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R012/audio/R012-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "手很冷，要洗一洗。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R012/audio/R012-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "id": "R012-G01",
+      "type": "find-character",
+      "sentenceId": "R012-S04",
+      "targetChar": "聽",
+      "prompt": "找一找句子裡的「聽」。"
+    },
+    {
+      "id": "R012-G02",
+      "type": "teach-character",
+      "sentenceId": "R012-S02",
+      "targetChar": "亂",
+      "prompt": "看一看「亂」在句子裡的位置。",
+      "missingIndexes": [
+        8
+      ],
+      "targetCharIndex": 8,
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R012/audio/R012-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "R012-G03",
+      "type": "missing-character",
+      "sentenceId": "R012-S03",
+      "targetChar": "事",
+      "prompt": "選出句子裡少掉的字。",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "thing",
+          "text": "事",
+          "correct": true
+        },
+        {
+          "id": "fast",
+          "text": "快",
+          "correct": false
+        },
+        {
+          "id": "back",
+          "text": "回",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R012-G04",
+      "type": "partial-order",
+      "sentenceId": "R012-S05",
+      "targetChar": "馬",
+      "prompt": "排出正確的句子。",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "slot-1",
+          "text": "小馬跑太快",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "slot-2",
+          "text": "停不",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "slot-3",
+          "text": "下來",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "R012-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R012-S01",
+      "targetChar": "洗",
+      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "options": [
+        {
+          "id": "correct",
+          "text": "手很髒，要洗一洗。",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R012/audio/R012-S01.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "手很髒，要擦一擦。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R012/audio/R012-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "手很冷，要洗一洗。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R012/audio/R012-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

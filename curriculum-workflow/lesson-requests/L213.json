@@ -1,0 +1,199 @@
+{
+  "id": "L213",
+  "order": 213,
+  "newChars": [
+    "游"
+  ],
+  "zhuyin": {
+    "游": "ㄧㄡˊ"
+  },
+  "title": "游",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integration for L213. Latest origin/main is being advanced in playable order, with R011/R012 and all prior lessons integrated before this unit, so there are no unresolved provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L212 plus current target from newChars",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "游",
+      "魚",
+      "船",
+      "海",
+      "晚",
+      "早"
+    ],
+    "targetCharMinimumCount": {
+      "游": 3
+    },
+    "recentTargetMinimumCounts": {
+      "魚": 2,
+      "船": 2,
+      "海": 2,
+      "晚": 1,
+      "早": 1
+    },
+    "disallowedChars": [
+      "泳",
+      "池",
+      "貓",
+      "港",
+      "橋",
+      "岸",
+      "浪",
+      "沙",
+      "灘",
+      "買",
+      "煮",
+      "公",
+      "主",
+      "色",
+      "里"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 image style anchors only as illustration style references, not character identity references.",
+      "Do not copy any L058 adult woman, child, clothing, face, hair, or body shape.",
+      "Name any human role identity clearly in image prompts: fantasy mermaid role, passerby swimmer, and other non-protagonist roles.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, ship names, map labels, direction-arrow text, subtitles, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 游 as public/assets/lessons/L213/audio/char-u6e38.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice or cut production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L213-S01",
+      "text": "小魚在海裡游來游去。",
+      "spokenText": "小魚在海裡游來游去",
+      "focusChar": "游",
+      "displayLines": [
+        "小魚在海裡",
+        "游來游去。"
+      ],
+      "imageNotes": "海水裡有小魚游來游去，畫面重點是小魚在海裡游動的方向和姿態。不可有文字、數字、水族箱標籤或水印。"
+    },
+    {
+      "id": "L213-S02",
+      "text": "水鳥看得見河裡的魚。",
+      "spokenText": "水鳥看得見河裡的魚",
+      "focusChar": "魚",
+      "displayLines": [
+        "水鳥看得見",
+        "河裡的魚。"
+      ],
+      "imageNotes": "水鳥站在河邊或低飛在河面上，看得見河裡的魚。畫面要清楚有水鳥、河水和水中的魚。不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L213-S03",
+      "text": "晚上，人魚在海面上看船。",
+      "spokenText": "晚上人魚在海面上看船",
+      "focusChar": "魚",
+      "displayLines": [
+        "晚上，人魚",
+        "在海面上",
+        "看船。"
+      ],
+      "imageNotes": "晚上的幻想海面場景，一位人魚公主風格的人魚角色在海面上看著遠方的船。這是童話幻想角色，不是真實人物；display text 不可寫「公主」，因為「公、主」未學。不可有文字、數字、船名、標籤或字幕。"
+    },
+    {
+      "id": "L213-S04",
+      "text": "大船開不進河的上游。",
+      "spokenText": "大船開不進河的上游",
+      "focusChar": "游",
+      "displayLines": [
+        "大船開不進",
+        "河的上游。"
+      ],
+      "imageNotes": "一艘大船停在較窄的河口或河道前，無法開進河的上游；畫面要清楚表現大船太大、河道往上游變窄。不可有文字、數字、方向箭頭、地圖標籤、船名或水印。"
+    },
+    {
+      "id": "L213-S05",
+      "text": "一大早，有人在海裡游水。",
+      "spokenText": "一大早有人在海裡游水",
+      "focusChar": "游",
+      "displayLines": [
+        "一大早，",
+        "有人在海裡",
+        "游水。"
+      ],
+      "imageNotes": "一大早，路人游泳者在海裡游水，畫面要安全，有岸邊或成人安全情境，水不要太深太危險。人物身份是路人游泳者，不是主角家庭成員；不可只畫模糊人物。不可有文字、數字、標籤或水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L213-S01",
+      "targetChar": "游",
+      "reason": "「游來游去」是本課核心動作用法，目標字清楚。",
+      "missingIndexes": [
+        5,
+        7
+      ]
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L213-S05",
+      "targetChar": "游",
+      "targetCharIndex": 8,
+      "prefixText": "一大早有人在海裡",
+      "suffixText": "水",
+      "missingIndexes": [
+        8
+      ]
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L213-S04",
+      "targetChar": "游",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "游",
+        "魚",
+        "海"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L213-S02",
+      "chunks": [
+        "水鳥看得見",
+        "河裡的",
+        "魚"
+      ],
+      "targetChar": "魚",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L213-S03",
+      "correctText": "晚上，人魚在海面上看船。",
+      "wrongOneText": "晚上，小魚在海面上看船。",
+      "wrongTwoText": "晚上，人魚在河面上看船。",
+      "targetChar": "魚",
+      "correctSpokenText": "晚上人魚在海面上看船",
+      "wrongOneSpokenText": "晚上小魚在海面上看船",
+      "wrongTwoSpokenText": "晚上人魚在河面上看船"
+    }
+  }
+}
