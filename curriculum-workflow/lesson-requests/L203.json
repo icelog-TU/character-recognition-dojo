@@ -1,0 +1,190 @@
+{
+  "id": "L203",
+  "order": 203,
+  "newChars": [
+    "道"
+  ],
+  "zhuyin": {
+    "道": "ㄉㄠˋ"
+  },
+  "title": "道",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final source for L203 道. Latest origin/main at production start is complete through L199 影, so L200 長, L201 星, and L202 行 are provisional dependencies. Production C must build the lesson-local asset-complete package only; do not leave L203 in production JSON until L200-L202 exist in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. Images must be square 1:1 compositions using L058 style anchors, with no text, numbers, signs, road signs, license plates, road writing, labels, logos, zhuyin, or watermarks. Road, sidewalk, and lane scenes must be safe and non-accident scenes. Audio must be standalone OpenAI charAudio, whole-sentence AI audio, independent G02 prefix audio from the exact fragment, and independent G05 wrong-choice whole-sentence audio.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main production JSON through L199 影 plus provisional learned chars 長, 星, 行 plus current target 道",
+    "provisionalLearnedChars": [
+      "長",
+      "星",
+      "行"
+    ],
+    "dependsOnLessons": [
+      "L200",
+      "L201",
+      "L202"
+    ],
+    "requiredCoverageChars": [
+      "道",
+      "行",
+      "星",
+      "長",
+      "影",
+      "月"
+    ],
+    "targetCharMinimumCount": {
+      "道": 3
+    },
+    "recentTargetMinimumCounts": {
+      "行": 2,
+      "星": 2,
+      "長": 2,
+      "影": 1,
+      "月": 1
+    },
+    "disallowedDisplayChars": [
+      "流",
+      "河",
+      "街",
+      "排",
+      "列",
+      "隊",
+      "顆",
+      "知",
+      "理",
+      "味"
+    ],
+    "forbiddenPhrases": [
+      "跑道"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "No written text, numbers, signs, road signs, license plates, road markings with text, labels, zhuyin, watermarks, blackboard writing, book text, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Use L058 image style anchors.",
+      "Keep road, sidewalk, and lane scenes safe, child-friendly, and non-accident scenes."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 道 as public/assets/lessons/L203/audio/char-u9053.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and G05 wrong-option audio as standalone files from exact text.",
+      "If provisional 長 or 行 is still not merged, check pronunciations: 長長的 is ㄔㄤˊ, 人行道 and 行星 are ㄒㄧㄥˊ."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L203-S01",
+      "text": "路邊有長長的人行道。",
+      "spokenText": "路邊有長長的人行道",
+      "focusChar": "道",
+      "displayLines": [
+        "路邊有長長的",
+        "人行道。"
+      ],
+      "imageNotes": "路邊有一條長長的人行道，旁邊可有行人安全走路。畫面要清楚呈現人行道在路邊且很長；不可有文字、數字、路牌、車牌、招牌或標籤。"
+    },
+    {
+      "id": "L203-S02",
+      "text": "車子不可以開上人行道。",
+      "spokenText": "車子不可以開上人行道",
+      "focusChar": "道",
+      "displayLines": [
+        "車子不可以",
+        "開上人行道。"
+      ],
+      "imageNotes": "車子停在車道或路邊，沒有開上人行道；行人在安全的人行道上。畫面要清楚表現車子不可以開上人行道，但不要畫危險事故；不可有文字、數字、路牌或標籤。"
+    },
+    {
+      "id": "L203-S03",
+      "text": "我要用紙做月亮和星星。",
+      "spokenText": "我要用紙做月亮和星星",
+      "focusChar": "星",
+      "displayLines": [
+        "我要用紙做",
+        "月亮和星星。"
+      ],
+      "imageNotes": "孩子用紙做月亮和星星的手作，桌上有剪好的月亮和星星形狀。畫面只呈現圖形和手作，不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L203-S04",
+      "text": "地球和火星一樣是行星。",
+      "spokenText": "地球和火星一樣是行星",
+      "focusChar": "行",
+      "displayLines": [
+        "地球和火星",
+        "一樣是行星。"
+      ],
+      "imageNotes": "以兒童友善方式呈現地球和火星兩個行星，讓兩者同樣是行星的概念清楚。不可出現星球名稱文字、數字、標籤、箭頭文字或注音。"
+    },
+    {
+      "id": "L203-S05",
+      "text": "車道邊有一個黑影。",
+      "spokenText": "車道邊有一個黑影",
+      "focusChar": "道",
+      "displayLines": [
+        "車道邊有",
+        "一個黑影。"
+      ],
+      "imageNotes": "白天或傍晚車道邊有一個清楚的黑影，畫面要安全、不恐怖，可像是樹或人的影子落在車道邊。不可有文字、數字、路牌、車牌、標籤或恐怖元素。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L203-S01",
+      "targetChar": "道",
+      "reason": "「人行道」是本課核心生活用法，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L203-S02",
+      "targetChar": "道",
+      "targetCharIndex": 9,
+      "teachAudio": {
+        "prefixText": "車子不可以開上人行",
+        "suffixText": ""
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L203-S05",
+      "targetChar": "道",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "道",
+        "行",
+        "影"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L203-S04",
+      "chunks": [
+        "地球和火星",
+        "一樣是",
+        "行星"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L203-S03",
+      "correctText": "我要用紙做月亮和星星。",
+      "wrongOneText": "我要用紙做太陽和星星。",
+      "wrongTwoText": "我要用紙做月亮和影子。"
+    }
+  },
+  "dependsOnLessons": [
+    "L200",
+    "L201",
+    "L202"
+  ],
+  "provisionalLearnedChars": [
+    "長",
+    "星",
+    "行"
+  ]
+}
