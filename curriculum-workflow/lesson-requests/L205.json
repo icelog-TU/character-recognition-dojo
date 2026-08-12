@@ -9,15 +9,13 @@
   },
   "title": "河",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production package request for L205 河. Latest origin/main at claim time is complete through L202 行; L203 道 and L204 流 are not yet in production JSON, so this package uses provisional learned chars and remains dependency-blocked until those lessons merge. Approved final sentences, Stage 4 plan, image rules, and audio rules are from the teacher handoff.",
+  "teacherNotes": "Production package request for L205 河. Latest origin/main is now complete through L203 道; L204 流 is not yet in production JSON, so this package uses 流 as the only provisional learned char and remains dependency-blocked until L204 merges. Approved final sentences, Stage 4 plan, image rules, and audio rules are from the teacher handoff plus the approved Stage 4 correction.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main production JSON through L202 行 plus provisional learned chars 道/流 plus current target 河",
+    "allowedBoundary": "origin/main production JSON through L203 道 plus provisional learned char 流 plus current target 河",
     "provisionalLearnedChars": [
-      "道",
       "流"
     ],
     "dependsOnLessons": [
-      "L203",
       "L204"
     ],
     "requiredCoverageChars": [
@@ -161,11 +159,9 @@
     }
   },
   "dependsOnLessons": [
-    "L203",
     "L204"
   ],
   "provisionalLearnedChars": [
-    "道",
     "流"
   ]
 }

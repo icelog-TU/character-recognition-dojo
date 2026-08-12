@@ -7,14 +7,14 @@
 - 新字：河
 - 注音：河=ㄏㄜˊ
 - 目標句數：5
-- 教師備註：Production package request for L205 河. Latest origin/main at claim time is complete through L202 行; L203 道 and L204 流 are not yet in production JSON, so this package uses provisional learned chars and remains dependency-blocked until those lessons merge. Approved final sentences, Stage 4 plan, image rules, and audio rules are from the teacher handoff.
+- 教師備註：Production package request for L205 河. Latest origin/main is now complete through L203 道; L204 流 is not yet in production JSON, so this package uses 流 as the only provisional learned char and remains dependency-blocked until L204 merges. Approved final sentences, Stage 4 plan, image rules, and audio rules are from the teacher handoff plus the approved Stage 4 correction.
 
 ## 已學字邊界
 
 AI 必須把這份課程序列視為鎖定邊界。
 
-- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行
-- 平行備課暫定已學字：道 流
+- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道
+- 平行備課暫定已學字：流
 - 本課新字：河
 - 顯示句子可用漢字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河
 - 禁止：任何未列在上方的漢字。
@@ -1032,6 +1032,11 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 這電影很長，又很難看。
 - 校長帶著同學一行人上山。
 - 行人的影子在路邊。
+- 路邊有長長的人行道。
+- 車子不可以開上人行道。
+- 我要用紙做月亮和星星。
+- 地球和火星一樣是行星。
+- 車道邊有一個黑影。
 
 ## 造句提示
 
