@@ -2575,7 +2575,7 @@ function CatalogPage({
     <section className="page-panel catalog-page">
       <div className="page-heading">
         <h1>漢字總覽</h1>
-        <p>六百字分成六個彩虹區塊，複習課放在獨立複習區。還沒解鎖或還沒建好的格子會先保留。</p>
+        <p>六百字分成六個彩虹區塊，複習課放在獨立複習區。已製作但還沒解鎖的字會暗色顯示；尚未建立的格子才會先保留問號。</p>
       </div>
       <input
         className="search-input"
@@ -2693,11 +2693,13 @@ function CatalogSlotGrid({
       {slots.map((slot) => {
         const entry = slot.entry;
         const lesson = entry?.lesson ?? null;
+        const built = Boolean(entry && lesson);
         const locked = !lesson || lesson.order > nextOrder;
         const completed = Boolean(lesson && completedOrders.has(lesson.order));
         const active = Boolean(lesson && lesson.order === selectedOrder);
-        const revealed = Boolean(entry && !locked);
+        const revealed = Boolean(entry);
         const slotCode = String(slot.slotNumber).padStart(3, "0");
+        const statusText = built ? (locked ? "未解鎖" : completed ? "已完成" : "可練習") : "尚未建立";
         return (
           <button
             key={`catalog-${slot.slotNumber}`}
@@ -2707,11 +2709,15 @@ function CatalogSlotGrid({
             style={{ "--slot-color": slot.group.color } as CSSProperties}
             disabled={locked}
             onClick={() => lesson && onSelect(lesson.order)}
-            aria-label={revealed && lesson && entry ? `字序第 ${slot.slotNumber} 字，第 ${lesson.order} 課，${entry.char}` : `字序第 ${slot.slotNumber} 字，未解鎖`}
+            aria-label={
+              built && lesson && entry
+                ? `字序第 ${slot.slotNumber} 字，第 ${lesson.order} 課，${entry.char}，${statusText}`
+                : `字序第 ${slot.slotNumber} 字，尚未建立`
+            }
           >
             <span>字序 #{slotCode}</span>
             <strong>{revealed && entry ? entry.char : "?"}</strong>
-            <small>{revealed && lesson ? `第${lesson.order}課` : "未解鎖"}</small>
+            <small>{built && lesson ? `第${lesson.order}課` : "尚未建立"}</small>
           </button>
         );
       })}
