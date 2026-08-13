@@ -1,0 +1,194 @@
+{
+  "id": "L219",
+  "order": 219,
+  "newChars": [
+    "服"
+  ],
+  "zhuyin": {
+    "服": "ㄈㄨˊ"
+  },
+  "title": "服",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integration for L219. Latest origin/main is being advanced in playable order, with all prior lessons integrated before this unit, so there are no unresolved provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L218 plus current target from newChars",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "服",
+      "乾",
+      "濕",
+      "身",
+      "池",
+      "泳"
+    ],
+    "targetCharMinimumCount": {
+      "服": 3
+    },
+    "recentTargetMinimumCounts": {
+      "乾": 2,
+      "濕": 2,
+      "身": 2,
+      "池": 1,
+      "泳": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother and protagonist little girl.",
+      "Recurring teacher must be a separate role identity and must not resemble protagonist mother.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, locker labels, school names, badges, scoreboards, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 服 as public/assets/lessons/L219/audio/char-u670d.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L219-S01",
+      "text": "誰把衣服放在游泳池邊？",
+      "spokenText": "誰把衣服放在游泳池邊",
+      "focusChar": "服",
+      "displayLines": [
+        "誰把衣服",
+        "放在游泳",
+        "池邊？"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在游泳池邊看到一件衣服放在池邊，主角媽媽疑惑地問是誰放的。畫面要清楚呈現游泳池邊、衣服、詢問情境；不可有文字、數字、標籤、置物櫃標示或招牌。"
+    },
+    {
+      "id": "L219-S02",
+      "text": "脫下身上的濕衣服，穿上乾的。",
+      "spokenText": "脫下身上的濕衣服穿上乾的",
+      "focusChar": "服",
+      "displayLines": [
+        "脫下身上的",
+        "濕衣服，",
+        "穿上乾的。"
+      ],
+      "imageNotes": "主角小女孩已經換好乾的衣服，手裡拿著脫下來的濕衣服，主角媽媽在旁邊準備幫忙拿去洗。畫面只能呈現換好後的安全情境，不可呈現脫衣過程；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L219-S03",
+      "text": "一身衣服都還乾著，鞋子濕了。",
+      "spokenText": "一身衣服都還乾著鞋子濕了",
+      "focusChar": "乾",
+      "displayLines": [
+        "一身衣服",
+        "都還乾著，",
+        "鞋子濕了。"
+      ],
+      "imageNotes": "主角小女孩撐傘和主角媽媽從大雨中回到家門口，身上的衣服看起來還乾著，但鞋子明顯濕了，地上有雨水。畫面要突出「衣服乾、鞋子濕」的對比；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L219-S04",
+      "text": "兩人誰也不服氣誰。",
+      "spokenText": "兩人誰也不服氣誰",
+      "focusChar": "服",
+      "displayLines": [
+        "兩人誰也",
+        "不服氣誰。"
+      ],
+      "imageNotes": "兩位孩子角色：主角小女孩和男孩同學，在一場小比賽或遊戲後面對面站著，兩人都露出不服氣的表情，不肯認輸。畫面要清楚表現兩人互不服氣，但不要有分數牌、文字、數字或標籤。"
+    },
+    {
+      "id": "L219-S05",
+      "text": "穿上校服，大家看起來都很像。",
+      "spokenText": "穿上校服大家看起來都很像",
+      "focusChar": "服",
+      "displayLines": [
+        "穿上校服，",
+        "大家看起來",
+        "都很像。"
+      ],
+      "imageNotes": "校園場景，老師帶著一排孩子，孩子們穿上相似的校服後看起來很像；老師要使用 recurring teacher identity，不能長得像主角媽媽。孩子可包含主角小女孩、男孩同學、其他明確不同髮型的孩子。畫面要表現校服讓大家外觀看起來相似，但臉和髮型仍有差異；不可有校名、文字、數字、標籤或徽章字樣。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L219-G01",
+      "type": "find-character",
+      "sentenceId": "L219-S04",
+      "targetChar": "服",
+      "reason": "「不服氣」是本課重要用法，目標字清楚。",
+      "missingIndexes": [
+        5
+      ]
+    },
+    "G02": {
+      "id": "L219-G02",
+      "type": "teach-character",
+      "sentenceId": "L219-S01",
+      "targetChar": "服",
+      "targetCharIndex": 3,
+      "prefixText": "誰把衣",
+      "suffixText": "放在游泳池邊",
+      "missingIndexes": [
+        3
+      ]
+    },
+    "G03": {
+      "id": "L219-G03",
+      "type": "missing-character",
+      "sentenceId": "L219-S05",
+      "targetChar": "服",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "服",
+        "乾",
+        "濕"
+      ]
+    },
+    "G04": {
+      "id": "L219-G04",
+      "type": "partial-order",
+      "sentenceId": "L219-S02",
+      "chunks": [
+        "脫下身上的",
+        "濕衣服",
+        "穿上乾的"
+      ],
+      "targetChar": "服",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "G05": {
+      "id": "L219-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L219-S03",
+      "correctText": "一身衣服都還乾著，鞋子濕了。",
+      "wrongOneText": "一身衣服都還濕著，鞋子乾了。",
+      "wrongTwoText": "一身衣服都還乾著，帽子濕了。",
+      "targetChar": "乾",
+      "correctSpokenText": "一身衣服都還乾著鞋子濕了",
+      "wrongOneSpokenText": "一身衣服都還濕著鞋子乾了",
+      "wrongTwoSpokenText": "一身衣服都還乾著帽子濕了"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}

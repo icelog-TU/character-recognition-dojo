@@ -1,0 +1,207 @@
+{
+  "id": "L216",
+  "order": 216,
+  "newChars": [
+    "身"
+  ],
+  "zhuyin": {
+    "身": "ㄕㄣ"
+  },
+  "title": "身",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integration for L216. Latest origin/main is being advanced in playable order, with all prior lessons integrated before this unit, so there are no unresolved provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L215 plus current target from newChars",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "身",
+      "池",
+      "泳",
+      "游",
+      "魚",
+      "船"
+    ],
+    "targetCharMinimumCount": {
+      "身": 3
+    },
+    "recentTargetMinimumCounts": {
+      "池": 2,
+      "泳": 2,
+      "游": 2,
+      "魚": 1,
+      "船": 1
+    },
+    "disallowedChars": [
+      "體",
+      "全",
+      "濕",
+      "乾",
+      "換",
+      "服",
+      "褲",
+      "貓",
+      "港",
+      "橋",
+      "岸",
+      "浪",
+      "沙",
+      "灘",
+      "買",
+      "煮",
+      "色",
+      "里",
+      "照",
+      "右"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 image style anchors only as illustration style references, not character identity references.",
+      "Do not copy any L058 adult woman, child, clothing, face, hair, or body shape.",
+      "Follow Lesson Visual Cast SOP: protagonist family identities use L154/L162/L163 continuity anchors.",
+      "Name every human role identity clearly in image prompts: protagonist little girl, protagonist mother, protagonist father, swimming teacher, or other explicit role.",
+      "Swimming teacher, if shown, must be visually distinct from protagonist mother, school teacher, and L058 adult woman.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, height-scale numbers, brands, pool names, direction markers, speech bubbles, captions, logos, signatures, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop.",
+      "S02 swimsuit scene must be child-friendly and modest."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 身 as public/assets/lessons/L216/audio/char-u8eab.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice or cut production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L216-S01",
+      "text": "游泳後，身上都是水。",
+      "spokenText": "游泳後身上都是水",
+      "focusChar": "身",
+      "displayLines": [
+        "游泳後，",
+        "身上都是水。"
+      ],
+      "imageNotes": "主角小女孩剛游泳後站在安全的池邊，身上都是水，旁邊可有主角媽媽拿毛巾照看。主角小女孩與主角媽媽外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L216-S02",
+      "text": "我身上穿著泳衣。",
+      "spokenText": "我身上穿著泳衣",
+      "focusChar": "身",
+      "displayLines": [
+        "我身上",
+        "穿著泳衣。"
+      ],
+      "imageNotes": "主角小女孩身上穿著泳衣，準備上游泳課或站在游泳場更衣區外的安全位置。畫面要端正、兒童友善，不要過度暴露。主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、品牌、標籤或水印。"
+    },
+    {
+      "id": "L216-S03",
+      "text": "爸爸的身高比媽媽高。",
+      "spokenText": "爸爸的身高比媽媽高",
+      "focusChar": "身",
+      "displayLines": [
+        "爸爸的身高",
+        "比媽媽高。"
+      ],
+      "imageNotes": "主角爸爸和主角媽媽站在一起比身高，主角爸爸明顯比主角媽媽高，主角小女孩可在旁邊看。主角爸爸、主角媽媽、主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有身高尺數字、文字、標籤或水印。"
+    },
+    {
+      "id": "L216-S04",
+      "text": "是誰把小船放進魚池裡？",
+      "spokenText": "是誰把小船放進魚池裡",
+      "focusChar": "池",
+      "displayLines": [
+        "是誰把小船",
+        "放進魚池裡？"
+      ],
+      "imageNotes": "主角媽媽和主角小女孩站在魚池旁，看見一艘玩具小船被放進魚池裡，主角媽媽像是在問是誰放的。魚池裡有魚，畫面要安全溫和，不要傷到魚。主角媽媽與主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、標籤、對話框或水印。"
+    },
+    {
+      "id": "L216-S05",
+      "text": "游泳池的水很冷。",
+      "spokenText": "游泳池的水很冷",
+      "focusChar": "池",
+      "displayLines": [
+        "游泳池的",
+        "水很冷。"
+      ],
+      "imageNotes": "主角小女孩在游泳池邊用腳尖碰水或站在池邊，表現游泳池的水很冷，旁邊可有游泳老師或主角媽媽照看。若出現游泳老師，必須是獨立角色，和主角媽媽、學校老師、L058 成人女人外觀不同。主角小女孩依 L154/L162/L163 continuity。不可有文字、數字、池名、標籤或水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L216-S03",
+      "targetChar": "身",
+      "reason": "「身高」是本課清楚且高價值的用法，目標字明確。",
+      "missingIndexes": [
+        3
+      ]
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L216-S02",
+      "targetChar": "身",
+      "targetCharIndex": 1,
+      "prefixText": "我",
+      "suffixText": "上穿著泳衣",
+      "missingIndexes": [
+        1
+      ]
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L216-S01",
+      "targetChar": "身",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "身",
+        "池",
+        "泳"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L216-S04",
+      "chunks": [
+        "是誰把小船",
+        "放進",
+        "魚池裡"
+      ],
+      "targetChar": "池",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "sentenceId": "L216-S05",
+      "correctText": "游泳池的水很冷。",
+      "wrongOneText": "游泳池的水很熱。",
+      "wrongTwoText": "游泳池裡水很冷。",
+      "targetChar": "池",
+      "correctSpokenText": "游泳池的水很冷",
+      "wrongOneSpokenText": "游泳池的水很熱",
+      "wrongTwoSpokenText": "游泳池裡水很冷"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}

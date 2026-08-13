@@ -1,0 +1,194 @@
+{
+  "id": "L220",
+  "order": 220,
+  "newChars": [
+    "褲"
+  ],
+  "zhuyin": {
+    "褲": "ㄎㄨˋ"
+  },
+  "title": "褲",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integration for L220. Latest origin/main is being advanced in playable order, with all prior lessons integrated before this unit, so there are no unresolved provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L219 plus current target from newChars",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "褲",
+      "服",
+      "乾",
+      "濕",
+      "身",
+      "池"
+    ],
+    "targetCharMinimumCount": {
+      "褲": 3
+    },
+    "recentTargetMinimumCounts": {
+      "服": 2,
+      "乾": 2,
+      "濕": 2,
+      "身": 1,
+      "池": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "換",
+      "淨",
+      "體",
+      "全",
+      "照",
+      "離",
+      "浴",
+      "沙",
+      "灘",
+      "港",
+      "橋",
+      "岸",
+      "浪",
+      "買",
+      "煮",
+      "色",
+      "右",
+      "弄",
+      "貓",
+      "吸",
+      "塵",
+      "器",
+      "灰"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 when the sentence shows the protagonist girl, protagonist mother, or protagonist father.",
+      "Use recurring teacher identity for S04, visually distinct from protagonist mother and from the L058 adult woman.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, school badges, machine labels, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop.",
+      "S03 must show a reminder about not-yet-dry clothes and pants without changing clothes or exposure.",
+      "S05 must communicate dry/wet two-use cleaning by scene content, not written labels."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 褲 as public/assets/lessons/L220/audio/char-u8932.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L220-S01",
+      "text": "去游泳池，要帶泳褲。",
+      "spokenText": "去游泳池要帶泳褲",
+      "focusChar": "褲",
+      "displayLines": [
+        "去游泳池，",
+        "要帶泳褲。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在家中準備去游泳池，主角小女孩把泳褲放進泳具包裡，旁邊可有泳帽或泳鏡。畫面要清楚表現「去游泳池要帶泳褲」；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L220-S02",
+      "text": "衣服有點濕掉，很快就乾了。",
+      "spokenText": "衣服有點濕掉很快就乾了",
+      "focusChar": "乾",
+      "displayLines": [
+        "衣服有點",
+        "濕掉，",
+        "很快就乾了。"
+      ],
+      "imageNotes": "主角小女孩的衣服被一點水弄濕，主角媽媽在旁邊安撫她，陽光或風吹進來，衣服看起來很快就會乾。畫面要表現只是有點濕、很快變乾，不要像全身淋濕；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L220-S03",
+      "text": "衣褲還沒乾，不要穿上身。",
+      "spokenText": "衣褲還沒乾不要穿上身",
+      "focusChar": "褲",
+      "displayLines": [
+        "衣褲還沒乾，",
+        "不要穿上身。"
+      ],
+      "imageNotes": "主角媽媽提醒主角小女孩，晾著的衣服和褲子還沒乾，不要穿到身上。主角小女孩伸手看著衣褲但還沒有穿，畫面不能呈現更衣或暴露；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L220-S04",
+      "text": "校服有上衣和長褲。",
+      "spokenText": "校服有上衣和長褲",
+      "focusChar": "褲",
+      "displayLines": [
+        "校服有上衣",
+        "和長褲。"
+      ],
+      "imageNotes": "老師在教室或校園中展示一套校服，包含上衣和長褲，旁邊有主角小女孩和男孩同學在看。老師必須使用 recurring teacher identity，不能長得像主角媽媽。畫面要清楚呈現校服由上衣和長褲組成；不可有文字、校徽字樣、數字或標籤。"
+    },
+    {
+      "id": "L220-S05",
+      "text": "這是乾濕兩用的。",
+      "spokenText": "這是乾濕兩用的",
+      "focusChar": "乾",
+      "displayLines": [
+        "這是",
+        "乾濕兩用的。"
+      ],
+      "imageNotes": "主角爸爸在家中展示一台乾濕兩用清潔機，一邊可以處理地上的小水漬，一邊可以清理地上的灰塵或髒東西；主角小女孩在旁邊看。畫面要清楚表現同一台工具可處理乾和濕兩種情況，但不可在機器上出現文字、數字、品牌、標籤或說明牌。"
+    }
+  ],
+  "sentenceGamesPlan": [
+    {
+      "id": "L220-G01",
+      "type": "find-character",
+      "sentenceId": "L220-S04",
+      "targetChar": "褲",
+      "reason": "「長褲」是本課清楚的目標字用法，畫面也清楚。"
+    },
+    {
+      "id": "L220-G02",
+      "type": "teach-character",
+      "sentenceId": "L220-S01",
+      "targetChar": "褲",
+      "targetCharIndex": 7,
+      "teachAudio": {
+        "prefixText": "去游泳池要帶泳",
+        "prefixSrc": "/assets/lessons/L220/audio/L220-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "L220-G03",
+      "type": "missing-character",
+      "sentenceId": "L220-S03",
+      "targetChar": "褲",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "褲",
+        "服",
+        "乾"
+      ]
+    },
+    {
+      "id": "L220-G04",
+      "type": "partial-order",
+      "sentenceId": "L220-S02",
+      "chunks": [
+        "衣服有點濕掉",
+        "很快就",
+        "乾了"
+      ]
+    },
+    {
+      "id": "L220-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L220-S05",
+      "correctText": "這是乾濕兩用的。",
+      "wrongOneText": "這是乾濕兩樣的。",
+      "wrongTwoText": "這是乾濕兩面的。"
+    }
+  ],
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
