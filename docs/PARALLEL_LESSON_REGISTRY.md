@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L230 | 剩 / normal lesson | claimed | Production C | codex/l230-complete-package / 2dc7e1f2 | L227:舊, L228:半, L229:只 | ["舊","半","只"] | curriculum-workflow/lesson-requests/L230.json; curriculum-workflow/generated/L230-generation-packet.md | public/assets/lessons/L230/images/; public/assets/lessons/L230/audio/ | accepted handoff and starting complete package |
+| L230 | 剩 / normal lesson | ready-blocked-by-dependency | Production C | codex/l230-complete-package / branch tip | L227:舊, L228:半, L229:只 | ["舊","半","只"] | curriculum-workflow/lesson-requests/L230.json; curriculum-workflow/generated/L230-generation-packet.md | public/assets/lessons/L230/images/; public/assets/lessons/L230/audio/ | asset-complete-package prepared; blocked until L227-L229 enter main; Release owns shared-state integration |
 
 ## Status Values
 

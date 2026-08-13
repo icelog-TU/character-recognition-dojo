@@ -1,0 +1,221 @@
+{
+  "id": "L230",
+  "order": 230,
+  "newChars": [
+    "剩"
+  ],
+  "zhuyin": {
+    "剩": "ㄕㄥˋ"
+  },
+  "title": "剩",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C asset-complete package. Latest origin/main production JSON is complete through L226. L227, L228, and L229 are provisional dependencies, so Production prepares a complete package while Release owns ordered production JSON insertion after dependencies merge.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L226 plus provisional learned chars L227:舊, L228:半, L229:只 plus current target 剩",
+    "provisionalLearnedChars": [
+      "舊",
+      "半",
+      "只"
+    ],
+    "dependsOnLessons": [
+      "L227",
+      "L228",
+      "L229"
+    ],
+    "requiredCoverageChars": [
+      "剩",
+      "只",
+      "半",
+      "舊",
+      "新",
+      "認"
+    ],
+    "targetCharMinimumCount": {
+      "剩": 3
+    },
+    "recentTargetMinimumCounts": {
+      "只": 2,
+      "半": 2,
+      "舊": 2,
+      "新": 1,
+      "認": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "件",
+      "碗",
+      "條",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "便",
+      "宜",
+      "商",
+      "店",
+      "付",
+      "元",
+      "角"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and protagonist little girl.",
+      "Teacher must use teacher identity and must not look like protagonist mother.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, names, school names, badges, brands, plates, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 剩 as public/assets/lessons/L230/audio/char-u5269.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L230-S01",
+      "text": "球的氣只剩一半了。",
+      "spokenText": "球的氣只剩一半了",
+      "focusChar": "剩",
+      "displayLines": [
+        "球的氣",
+        "只剩一半了。"
+      ],
+      "imageNotes": "主角小女孩在操場或家門前拿著一顆明顯消氣、扁掉一半的球，旁邊可有主角爸爸蹲下來幫她看球。畫面重點是「球沒氣，只剩一半鼓起來」。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L230-S02",
+      "text": "舊車只剩一點電。",
+      "spokenText": "舊車只剩一點電",
+      "focusChar": "剩",
+      "displayLines": [
+        "舊車只剩",
+        "一點電。"
+      ],
+      "imageNotes": "主角爸爸站在一台看起來老舊的小電動車或電動玩具車旁，車燈很暗，爸爸正準備幫車充電，主角小女孩在旁邊看著。畫面要表現「舊車電量很少」，但不可出現電量數字、儀表文字、車牌、標籤或任何可讀文字。"
+    },
+    {
+      "id": "L230-S03",
+      "text": "我認得所有的新同學了。",
+      "spokenText": "我認得所有的新同學了",
+      "focusChar": "認",
+      "displayLines": [
+        "我認得所有的",
+        "新同學了。"
+      ],
+      "imageNotes": "學校教室或校門口，主角小女孩開心地向幾位新同學打招呼，表情像是已經都認得了。可有老師在旁邊微笑看著；老師要使用 recurring teacher identity，不能長得像主角媽媽，也不能複製 L058 成人長相。不可有姓名牌、文字、數字或標籤。"
+    },
+    {
+      "id": "L230-S04",
+      "text": "飯只剩一半了。",
+      "spokenText": "飯只剩一半了",
+      "focusChar": "半",
+      "displayLines": [
+        "飯只剩",
+        "一半了。"
+      ],
+      "imageNotes": "家裡餐桌上，主角小女孩面前的碗或盤子裡飯明顯只剩一半，主角媽媽在旁邊看著她吃飯。畫面要清楚呈現「飯剩一半」。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L230-S05",
+      "text": "這本舊書只剩一半。",
+      "spokenText": "這本舊書只剩一半",
+      "focusChar": "剩",
+      "displayLines": [
+        "這本舊書",
+        "只剩一半。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在家裡整理書，一本舊書破掉或缺頁，明顯只剩一半，但仍被拿在手上查看。畫面重點是「舊書破掉，只剩一半」。書頁和封面不可有可讀文字、數字、標籤或注音。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L230-G01",
+      "type": "find-character",
+      "sentenceId": "L230-S05",
+      "targetChar": "剩",
+      "reason": "「只剩一半」是本課核心用法，畫面也清楚。",
+      "missingIndexes": [
+        5
+      ]
+    },
+    "G02": {
+      "id": "L230-G02",
+      "type": "teach-character",
+      "sentenceId": "L230-S01",
+      "targetChar": "剩",
+      "targetCharIndex": 4,
+      "prefixText": "球的氣只",
+      "suffixText": "一半了",
+      "missingIndexes": [
+        4
+      ]
+    },
+    "G03": {
+      "id": "L230-G03",
+      "type": "missing-character",
+      "sentenceId": "L230-S02",
+      "targetChar": "剩",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "剩",
+        "只",
+        "半"
+      ]
+    },
+    "G04": {
+      "id": "L230-G04",
+      "type": "partial-order",
+      "sentenceId": "L230-S03",
+      "chunks": [
+        "我認得",
+        "所有的",
+        "新同學了"
+      ],
+      "targetChar": "認",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "G05": {
+      "id": "L230-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L230-S04",
+      "correctText": "飯只剩一半了。",
+      "wrongOneText": "飯只剩一點了。",
+      "wrongTwoText": "菜只剩一半了。",
+      "targetChar": "半",
+      "correctSpokenText": "飯只剩一半了",
+      "wrongOneSpokenText": "飯只剩一點了",
+      "wrongTwoSpokenText": "菜只剩一半了"
+    }
+  },
+  "dependsOnLessons": [
+    "L227",
+    "L228",
+    "L229"
+  ],
+  "provisionalLearnedChars": [
+    "舊",
+    "半",
+    "只"
+  ]
+}
