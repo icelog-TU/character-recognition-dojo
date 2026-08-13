@@ -66,6 +66,9 @@ function normalizeTranscribedHanChar(char) {
     ["\u706f", "\u71c8"],
     ["\u5f00", "\u958b"],
     ["\u5173", "\u95dc"],
+    ["\u94b1", "\u9322"],
+    ["\u591f", "\u5920"],
+    ["\u65e7", "\u820a"],
   ]);
   if (simplifiedEquivalentMap.has(char)) return simplifiedEquivalentMap.get(char);
 
@@ -112,7 +115,8 @@ function normalizeTranscribedHanChar(char) {
 }
 
 function normalizedHanText(text) {
-  return hanChars(text).map(normalizeTranscribedHanChar).join("");
+  const phraseNormalized = text.replaceAll("就鞋", "舊鞋");
+  return hanChars(phraseNormalized).map(normalizeTranscribedHanChar).join("");
 }
 
 function assetPath(src) {
