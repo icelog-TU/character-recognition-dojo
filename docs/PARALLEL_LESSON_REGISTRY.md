@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L227 | 舊 / normal lesson | claimed | Production D | codex/l227-complete-package / fd6d8061 | L224 知, L225 認, L226 新 | ["知","認","新"] | curriculum-workflow/lesson-requests/L227.json, curriculum-workflow/generated/L227-generation-packet.md | public/assets/lessons/L227/images/, public/assets/lessons/L227/audio/ | accepted handoff and starting asset-complete-package |
+| L227 | 舊 / normal lesson | dependency-blocked-asset-complete | Production D | codex/l227-complete-package / e56169985f405861a2a8edd3f8de0753880c061f | L224 知, L225 認, L226 新 | ["知","認","新"] | curriculum-workflow/lesson-requests/L227.json, curriculum-workflow/generated/L227-generation-packet.md | public/assets/lessons/L227/images/, public/assets/lessons/L227/audio/ | asset-complete package prepared; blocked until L224-L226 are in main; shared-state integration omitted for Release |
 
 ## Status Values
 
