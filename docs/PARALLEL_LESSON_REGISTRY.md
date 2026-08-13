@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L233 | 買 / normal lesson | ready-blocked-by-dependency | Production B | codex/l233-complete-package / ac1af416 | L228 半, L229 只, L230 剩, L231 夠, L232 錢 | ["半","只","剩","夠","錢"] | curriculum-workflow/lesson-requests/L233.json; curriculum-workflow/generated/L233-generation-packet.md | public/assets/lessons/L233/images/; public/assets/lessons/L233/audio/ | complete package prepared; blocked because L232 錢 is not on origin/main, so production JSON/planner/ledger were intentionally not updated |
+| L233 | 買 / normal lesson | ready-blocked-by-dependency | Production B | codex/l233-complete-package / 93a80903 package commit | L228 半, L229 只, L230 剩, L231 夠, L232 錢 | ["半","只","剩","夠","錢"] | curriculum-workflow/lesson-requests/L233.json; curriculum-workflow/generated/L233-generation-packet.md | public/assets/lessons/L233/images/; public/assets/lessons/L233/audio/ | complete package prepared; blocked because L232 錢 is not on origin/main, so production JSON/planner/ledger were intentionally not updated |
 
 ## Status Values
 
