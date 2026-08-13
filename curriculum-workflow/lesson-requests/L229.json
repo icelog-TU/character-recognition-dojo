@@ -1,0 +1,154 @@
+{
+  "id": "L229",
+  "order": 229,
+  "newChars": ["只"],
+  "zhuyin": {
+    "只": "ㄓˇ"
+  },
+  "title": "只",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B lesson-local asset-complete-package. Latest origin/main verified complete through L226 新 at production start. L227 舊 and L228 半 are not yet in main, so this package is dependency-blocked until those lessons enter main. Production owns request, packet, draft, images, audio inbox, final lesson assets, Stage 4 audio, and local alignment. Release owns production JSON insertion, planner export, ledger update, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L226 plus provisional learned chars 舊, 半 plus current target 只",
+    "provisionalLearnedChars": ["舊", "半"],
+    "dependsOnLessons": ["L227", "L228"],
+    "requiredCoverageChars": ["只", "半", "舊", "新", "認", "知"],
+    "targetCharMinimumCount": {
+      "只": 3
+    },
+    "recentTargetMinimumCounts": {
+      "半": 2,
+      "舊": 2,
+      "新": 2,
+      "認": 1,
+      "知": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenChars": [
+      "剩",
+      "全",
+      "買",
+      "東",
+      "西",
+      "矮",
+      "落",
+      "短",
+      "別",
+      "互",
+      "相",
+      "件",
+      "方",
+      "字",
+      "體",
+      "育",
+      "嬰",
+      "兒",
+      "寶",
+      "讓",
+      "淨",
+      "照",
+      "離",
+      "浴",
+      "沙",
+      "灘",
+      "港",
+      "橋",
+      "岸",
+      "浪",
+      "夠",
+      "清",
+      "潔",
+      "收",
+      "回"
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L229-S01",
+      "text": "新書只看了一半。",
+      "spokenText": "新書只看了一半",
+      "focusChar": "只",
+      "displayLines": ["新書", "只看了一半。"],
+      "imageNotes": "主角小女孩坐在桌前看一本新書，書翻開到中間附近，旁邊還有未看的後半本厚度。新書要看起來乾淨、完整，但封面和頁面不能有文字、數字或標籤。畫面重點是「新書」和「只看了一半」。"
+    },
+    {
+      "id": "L229-S02",
+      "text": "我只有這個半新不舊的書包。",
+      "spokenText": "我只有這個半新不舊的書包",
+      "focusChar": "只",
+      "displayLines": ["我只有這個", "半新不舊的", "書包。"],
+      "imageNotes": "主角小女孩拿著或背著一個半新不舊的書包，書包有一點使用痕跡，但還能用；旁邊沒有其他書包，表現她只有這一個。人物：主角小女孩。不可有品牌、姓名、文字、數字或標籤。"
+    },
+    {
+      "id": "L229-S03",
+      "text": "只要拿一半出來，就可以了。",
+      "spokenText": "只要拿一半出來就可以了",
+      "focusChar": "只",
+      "displayLines": ["只要拿一半", "出來，", "就可以了。"],
+      "imageNotes": "主角媽媽和主角小女孩在家中整理一盒物品，例如積木、書本或餐具。媽媽示意只要把盒子裡一半拿出來就可以，不需要全拿。畫面要清楚看到盒子裡還留一半、拿出來一半，但不能用數字或文字標示。人物：主角媽媽 + 主角小女孩。"
+    },
+    {
+      "id": "L229-S04",
+      "text": "我只知道一半。",
+      "spokenText": "我只知道一半",
+      "focusChar": "只",
+      "displayLines": ["我只知道", "一半。"],
+      "imageNotes": "主角小女孩看著一份複雜的積木拼裝說明圖或圖畫步驟，看起來只懂一半、還有一半不確定。桌上有積木零件或圖紙。說明圖只能有不可讀的簡單圖形，不能有文字、數字、品牌 logo 或標籤。人物：主角小女孩。"
+    },
+    {
+      "id": "L229-S05",
+      "text": "只有爸爸認為車子太舊了。",
+      "spokenText": "只有爸爸認為車子太舊了",
+      "focusChar": "只",
+      "displayLines": ["只有爸爸", "認為車子", "太舊了。"],
+      "imageNotes": "主角爸爸站在一台看起來有點舊的車旁邊，表情覺得車太舊；主角媽媽和主角小女孩在旁邊看起來不太同意或覺得還可以。畫面要表現「只有爸爸這樣認為」。車子可以有舊漆或灰塵，但不要危險或報廢；不可有車牌文字、數字、品牌或標籤。人物：主角爸爸 + 主角媽媽 + 主角小女孩。"
+    }
+  ],
+  "sentenceGamesPlan": [
+    {
+      "id": "L229-G01",
+      "type": "find-character",
+      "sentenceId": "L229-S05",
+      "targetChar": "只"
+    },
+    {
+      "id": "L229-G02",
+      "type": "teach-character",
+      "sentenceId": "L229-S01",
+      "targetChar": "只",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "新書",
+        "suffixText": "看了一半",
+        "prefixSrc": "/assets/lessons/L229/audio/L229-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L229/audio/L229-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L229-G03",
+      "type": "missing-character",
+      "sentenceId": "L229-S02",
+      "targetChar": "只",
+      "missingIndexes": [1],
+      "options": ["只", "半", "舊"]
+    },
+    {
+      "id": "L229-G04",
+      "type": "partial-order",
+      "sentenceId": "L229-S03",
+      "chunks": ["只要拿一半", "出來", "就可以了"]
+    },
+    {
+      "id": "L229-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L229-S04",
+      "targetChar": "只",
+      "correctText": "我只知道一半。",
+      "wrongOneText": "我知道一半。",
+      "wrongTwoText": "我只認得一半。"
+    }
+  ]
+}
