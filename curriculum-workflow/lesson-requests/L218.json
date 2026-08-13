@@ -1,0 +1,198 @@
+{
+  "id": "L218",
+  "order": 218,
+  "newChars": [
+    "乾"
+  ],
+  "zhuyin": {
+    "乾": "ㄍㄢ"
+  },
+  "title": "乾",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L218 complete package handoff. Latest origin/main production JSON is complete through L215; L216 身 and L217 濕 are not merged, so this branch is dependency-blocked and must not enter production JSON until those dependencies are in main. Use L058 only as style reference; protagonist family identity follows L154/L162/L163.",
+  "dependsOnLessons": [
+    "L216",
+    "L217"
+  ],
+  "provisionalLearnedChars": [
+    "身",
+    "濕"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L215 plus provisional learned chars 身, 濕 and current target 乾",
+    "provisionalLearnedChars": [
+      "身",
+      "濕"
+    ],
+    "dependsOnLessons": [
+      "L216",
+      "L217"
+    ],
+    "requiredCoverageChars": [
+      "乾",
+      "濕",
+      "身",
+      "池",
+      "泳",
+      "游"
+    ],
+    "targetCharMinimumCount": {
+      "乾": 3
+    },
+    "recentTargetMinimumCounts": {
+      "濕": 2,
+      "身": 2,
+      "池": 2,
+      "泳": 1,
+      "游": 1
+    },
+    "disallowedDisplayChars": [
+      "淨",
+      "換",
+      "服",
+      "褲",
+      "體",
+      "全",
+      "貓",
+      "港",
+      "橋",
+      "岸",
+      "浪",
+      "沙",
+      "灘",
+      "買",
+      "煮",
+      "色",
+      "里",
+      "照",
+      "右",
+      "弄",
+      "離",
+      "浴"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 only as style anchors, not people identity references.",
+      "Use L154/L162/L163 protagonist family continuity for protagonist mother, father, and little girl.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, brands, battery symbols, pool names, warning signs, or direction labels.",
+      "Every human role must be explicit and visually distinct."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 乾 as public/assets/lessons/L218/audio/char-u4e7e.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and G05 wrong-option audio as standalone files from exact text.",
+      "Do not splice audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L218-S01",
+      "text": "游泳後，媽媽把我身上擦乾。",
+      "spokenText": "游泳後媽媽把我身上擦乾",
+      "focusChar": "乾",
+      "displayLines": [
+        "游泳後，",
+        "媽媽把我",
+        "身上擦乾。"
+      ],
+      "imageNotes": "主角媽媽在游泳後用毛巾幫主角小女孩把身上的水擦乾，場景在安全的游泳場或更衣區外。主角媽媽與主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。畫面端正、兒童友善，不可有文字、數字、品牌、標籤或水印。"
+    },
+    {
+      "id": "L218-S02",
+      "text": "那人愛穿一身黑。",
+      "spokenText": "那人愛穿一身黑",
+      "focusChar": "身",
+      "displayLines": [
+        "那人愛穿",
+        "一身黑。"
+      ],
+      "imageNotes": "路人角色穿著一身黑色衣物，站在戶外或室內普通生活場景中，表現他愛穿一身黑。人物身份是路人角色，外觀必須和主角爸爸、老師、主角媽媽、L058 成人女人不同。不可有文字、數字、品牌、標籤或水印。"
+    },
+    {
+      "id": "L218-S03",
+      "text": "游泳池邊很濕，要擦乾。",
+      "spokenText": "游泳池邊很濕要擦乾",
+      "focusChar": "乾",
+      "displayLines": [
+        "游泳池邊",
+        "很濕，",
+        "要擦乾。"
+      ],
+      "imageNotes": "游泳場工作人員正在把游泳池邊濕濕的地面擦乾，畫面要清楚有游泳池邊、濕地面和擦乾動作。游泳場工作人員是獨立角色，穿工作服或運動場館制服，必須和主角媽媽、學校老師、L058 成人女人外觀不同。不可有文字、數字、池名、警告牌、標籤或水印。"
+    },
+    {
+      "id": "L218-S04",
+      "text": "這個要用乾電池。",
+      "spokenText": "這個要用乾電池",
+      "focusChar": "乾",
+      "displayLines": [
+        "這個要用",
+        "乾電池。"
+      ],
+      "imageNotes": "主角爸爸和主角小女孩在家裡看一個不能動或不能發光的玩具，主角爸爸指出這個玩具要用乾電池。畫面可以看到玩具和乾電池，但電池上不可有正負號、文字、數字、品牌或標籤。主角爸爸與主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。"
+    },
+    {
+      "id": "L218-S05",
+      "text": "地面是乾濕分開的。",
+      "spokenText": "地面是乾濕分開的",
+      "focusChar": "乾",
+      "displayLines": [
+        "地面是",
+        "乾濕分開的。"
+      ],
+      "imageNotes": "家裡浴室或洗手間場景，地面有乾的區域和濕的區域清楚分開，可用玻璃隔間、地面水痕和乾燥區域表現乾濕分開。若出現人物，使用主角媽媽向主角小女孩展示地面乾濕分開；主角家庭外觀依 L154/L162/L163 continuity。不可有文字、數字、標籤、指示牌或水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "type": "find-character",
+      "sentenceId": "L218-S04",
+      "targetChar": "乾",
+      "reason": "乾電池是本課高價值生活詞，目標字清楚。"
+    },
+    "G02": {
+      "type": "teach-character",
+      "sentenceId": "L218-S01",
+      "targetChar": "乾",
+      "targetCharIndex": 10,
+      "teachAudio": {
+        "prefixText": "游泳後媽媽把我身上擦",
+        "suffixText": ""
+      }
+    },
+    "G03": {
+      "type": "missing-character",
+      "sentenceId": "L218-S05",
+      "targetChar": "乾",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "乾",
+        "濕",
+        "池"
+      ]
+    },
+    "G04": {
+      "type": "partial-order",
+      "sentenceId": "L218-S03",
+      "chunks": [
+        "游泳池邊",
+        "很濕",
+        "要擦乾"
+      ]
+    },
+    "G05": {
+      "type": "choose-pronunciation",
+      "correctSentenceId": "L218-S02",
+      "correctText": "那人愛穿一身黑。",
+      "wrongOneText": "那人愛穿一身白。",
+      "wrongTwoText": "那人愛穿一身紅。"
+    }
+  }
+}

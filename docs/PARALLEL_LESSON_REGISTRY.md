@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L218 | 乾 / normal lesson | claimed | Production C | codex/l218-complete-package / 52f8ef18 | L216:身, L217:濕 | ["身","濕"] | curriculum-workflow/lesson-requests/L218.json; curriculum-workflow/generated/L218-generation-packet.md | public/assets/lessons/L218/images/; public/assets/lessons/L218/audio/ | accepted handoff and starting complete package; blocked from merge until L216-L217 are in main |
+| L218 | 乾 / normal lesson | ready-blocked-by-dependency | Production C | codex/l218-complete-package / pending final commit | L216:身, L217:濕 | ["身","濕"] | curriculum-workflow/lesson-requests/L218.json; curriculum-workflow/generated/L218-generation-packet.md | public/assets/lessons/L218/images/; public/assets/lessons/L218/audio/ | complete dependency-blocked package; L216-L217 are not in origin/main; production JSON left for Release |
 
 ## Status Values
 
