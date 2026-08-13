@@ -673,13 +673,13 @@
         const reviews = Array.isArray(curriculum.reviewLessons) ? curriculum.reviewLessons : [];
         const unit = [...lessons, ...reviews].find((candidate) => candidate.id === state.unit);
 
-        if (draftUnit && hasReviewableSentenceAssets(draftUnit)) {
-          state.sourcePath = draftPath;
+        if (unit) {
+          state.sourcePath = "src/curriculum/sample-lessons.json";
           state.placeholderUnit = false;
-          return draftUnit;
+          return unit;
         }
 
-        if (draftUnit && !unit) {
+        if (draftUnit && hasReviewableSentenceAssets(draftUnit)) {
           state.sourcePath = draftPath;
           state.placeholderUnit = false;
           return draftUnit;
@@ -703,9 +703,6 @@
           }
           throw new Error(`找不到 ${state.unit} 的 draft 或 production JSON。`);
         }
-        state.sourcePath = "src/curriculum/sample-lessons.json";
-        state.placeholderUnit = false;
-        return unit;
       }
 
       function hasReviewableSentenceAssets(unit) {
