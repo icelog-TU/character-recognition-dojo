@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L220 | 褲 / normal lesson | claimed | Production A | codex/l220-complete-package / f944d49e | L216:身, L217:濕, L218:乾, L219:服 | ["身","濕","乾","服"] | curriculum-workflow/lesson-requests/L220.json; curriculum-workflow/generated/L220-generation-packet.md | public/assets/lessons/L220/images/; public/assets/lessons/L220/audio/ | accepted handoff and starting asset-complete-package |
 
 ## Status Values
 
@@ -109,3 +110,4 @@ npm run curriculum:audit-state
 ```
 
 If another thread changed the registry, rebase first and preserve both threads' rows. Do not delete another active row unless that lesson is already merged or the user explicitly cancels it.
+
