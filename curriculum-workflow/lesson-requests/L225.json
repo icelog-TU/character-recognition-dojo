@@ -1,0 +1,215 @@
+{
+  "id": "L225",
+  "order": 225,
+  "newChars": [
+    "認"
+  ],
+  "zhuyin": {
+    "認": "ㄖㄣˋ"
+  },
+  "title": "認",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B asset-complete-package for L225. Latest origin/main production curriculum is complete through L223, so L224 知 is a provisional dependency until Release integrates it. Production owns request, packet, draft, images, audio inbox, final lesson-local assets, Stage 4 audio, and AI-aligned timings. Release owns production JSON, planner, ledger, final verify, main merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main L001-L223 learned chars + provisionalLearnedChars [\"知\"] + current target \"認\"",
+    "provisionalLearnedChars": [
+      "知"
+    ],
+    "dependsOnLessons": [
+      "L224"
+    ],
+    "requiredCoverageChars": [
+      "認",
+      "知",
+      "錯",
+      "改",
+      "換",
+      "褲"
+    ],
+    "targetCharMinimumCount": {
+      "認": 3
+    },
+    "recentTargetMinimumCounts": {
+      "知": 2,
+      "錯": 2,
+      "改": 2,
+      "換": 1,
+      "褲": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenChars": [
+      "新",
+      "舊",
+      "半",
+      "全",
+      "買",
+      "東",
+      "西",
+      "矮",
+      "落",
+      "短",
+      "別",
+      "互",
+      "相",
+      "件",
+      "方",
+      "字",
+      "體",
+      "育",
+      "嬰",
+      "兒",
+      "寶",
+      "讓",
+      "淨",
+      "照",
+      "離",
+      "浴",
+      "沙",
+      "灘",
+      "港",
+      "橋",
+      "岸",
+      "浪"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother and protagonist little girl.",
+      "Teacher must be visually distinct from protagonist mother.",
+      "S05 passerby aunt must not be protagonist mother, teacher, or godmother, and no mother/teacher/godmother should appear in that image.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, names, school names, clothing tags, readable papers, or readable marks."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 認 as public/assets/lessons/L225/audio/char-u8a8d.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L225-S01",
+      "text": "做錯事了，要認錯改過。",
+      "spokenText": "做錯事了要認錯改過",
+      "focusChar": "認",
+      "displayLines": [
+        "做錯事了，",
+        "要認錯",
+        "改過。"
+      ],
+      "imageNotes": "男孩同學做錯事後，正在向主角老師認錯，並開始改過，例如把弄亂的桌子整理好。老師必須和主角媽媽視覺上不同。畫面要同時表現認錯和改過；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L225-S02",
+      "text": "不知道怎麼畫，改了又改。",
+      "spokenText": "不知道怎麼畫改了又改",
+      "focusChar": "知",
+      "displayLines": [
+        "不知道",
+        "怎麼畫，",
+        "改了又改。"
+      ],
+      "imageNotes": "主角小女孩坐在桌前畫圖，因為不知道怎麼畫才好，桌上有幾張被擦改過或揉掉的草稿，她正在重新修改圖畫。圖紙上只能有圖案，不可有字、數字或標籤。畫面重點是「不知道怎麼畫」和「改了又改」。"
+    },
+    {
+      "id": "L225-S03",
+      "text": "我認得回家的路。",
+      "spokenText": "我認得回家的路",
+      "focusChar": "認",
+      "displayLines": [
+        "我認得",
+        "回家的路。"
+      ],
+      "imageNotes": "主角小女孩背著書包，走在熟悉的人行道或家附近小路上，前方能看到她家的方向或家門，她表情安心、有把握。畫面要表現她認得回家的路；不可有路牌文字、門牌、地圖文字、數字或標籤。"
+    },
+    {
+      "id": "L225-S04",
+      "text": "褲子拿錯了，改天去換回來。",
+      "spokenText": "褲子拿錯了改天去換回來",
+      "focusChar": "錯",
+      "displayLines": [
+        "褲子拿錯了，",
+        "改天去",
+        "換回來。"
+      ],
+      "imageNotes": "主角小女孩回到家後，發現書包裡或手上拿的是別人的校褲，主角媽媽在旁邊提醒她改天去學校把褲子換回來。畫面可有主角小女孩拿著一條不屬於自己的校褲，旁邊放著書包和校服作為學校線索；不可有姓名貼、校名、文字、數字、尺寸標籤，也不要畫更衣。"
+    },
+    {
+      "id": "L225-S05",
+      "text": "不知道有沒有認錯人。",
+      "spokenText": "不知道有沒有認錯人",
+      "focusChar": "認",
+      "displayLines": [
+        "不知道",
+        "有沒有",
+        "認錯人。"
+      ],
+      "imageNotes": "主角小女孩一個人在校門口或安全的人行道邊，看到遠處一位背影很像熟人的路人阿姨，正猶豫要不要打招呼。路人阿姨的背影、髮型或衣服顏色可以和主角小女孩認識的人有一點相似，但不能直接畫成媽媽、老師或乾媽；要讓畫面呈現「好像認得，又不確定有沒有認錯人」。不可有文字、數字、標籤或對話框。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L225-G01",
+      "type": "find-character",
+      "sentenceId": "L225-S05",
+      "targetChar": "認",
+      "reason": "「認錯人」是本課重要用法，目標字清楚。"
+    },
+    "G02": {
+      "id": "L225-G02",
+      "type": "teach-character",
+      "sentenceId": "L225-S01",
+      "targetChar": "認",
+      "targetCharIndex": 5,
+      "prefixText": "做錯事了要",
+      "suffixText": "錯改過",
+      "prefixAudioPath": "public/assets/lessons/L225/audio/L225-G02-prefix.m4a",
+      "suffixAudioPath": "public/assets/lessons/L225/audio/L225-G02-suffix.m4a"
+    },
+    "G03": {
+      "id": "L225-G03",
+      "type": "missing-character",
+      "sentenceId": "L225-S03",
+      "targetChar": "認",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "認",
+        "知",
+        "錯"
+      ]
+    },
+    "G04": {
+      "id": "L225-G04",
+      "type": "partial-order",
+      "sentenceId": "L225-S04",
+      "chunks": [
+        "褲子拿錯了",
+        "改天去",
+        "換回來"
+      ]
+    },
+    "G05": {
+      "id": "L225-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L225-S02",
+      "correctText": "不知道怎麼畫，改了又改。",
+      "wrongOneText": "不知道怎麼畫，改了又畫。",
+      "wrongTwoText": "不知道怎麼畫，畫了又改。",
+      "wrongOneAudioPath": "public/assets/lessons/L225/audio/L225-G05-wrong-one.m4a",
+      "wrongTwoAudioPath": "public/assets/lessons/L225/audio/L225-G05-wrong-two.m4a"
+    }
+  },
+  "dependsOnLessons": [
+    "L224"
+  ],
+  "provisionalLearnedChars": [
+    "知"
+  ]
+}
