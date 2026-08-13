@@ -1,0 +1,204 @@
+{
+  "id": "L224",
+  "order": 224,
+  "newChars": [
+    "知"
+  ],
+  "zhuyin": {
+    "知": "ㄓ"
+  },
+  "title": "知",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A asset-complete-package for L224. Latest origin/main is complete through L223, so L222 改 and L223 錯 are already real learned characters. Production owns request, packet, draft, images, audio, Stage 4 audio, and alignment. Release owns production JSON insertion, planner export, ledger update, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L223 plus current target from newChars",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "知",
+      "錯",
+      "改",
+      "換",
+      "褲",
+      "服"
+    ],
+    "targetCharMinimumCount": {
+      "知": 3
+    },
+    "recentTargetMinimumCounts": {
+      "錯": 2,
+      "改": 2,
+      "換": 2,
+      "褲": 1,
+      "服": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "認",
+      "新",
+      "舊",
+      "半",
+      "全",
+      "買",
+      "東",
+      "西",
+      "矮",
+      "落",
+      "短",
+      "別",
+      "互",
+      "相",
+      "件",
+      "方",
+      "字",
+      "體",
+      "育",
+      "嬰",
+      "兒",
+      "寶",
+      "讓",
+      "淨",
+      "照",
+      "離",
+      "浴",
+      "沙",
+      "灘",
+      "港",
+      "橋",
+      "岸",
+      "浪"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and protagonist little girl.",
+      "Teacher must be visually distinct from protagonist mother.",
+      "Passerby adult must be visually distinct from protagonist mother and teacher.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, names, school names, badges, clothing tags, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 知 as public/assets/lessons/L224/audio/char-u77e5.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L224-S01",
+      "text": "知錯能改，就是好事。",
+      "spokenText": "知錯能改就是好事",
+      "focusChar": "知",
+      "displayLines": [
+        "知錯能改，",
+        "就是好事。"
+      ],
+      "imageNotes": "男孩同學做錯事後願意改過，正在把自己弄亂的桌子整理好，主角老師在旁邊溫和鼓勵。老師必須和主角媽媽視覺上不同。畫面要表現「知道錯、願意改」是好事；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L224-S02",
+      "text": "小小孩什麼都不知道。",
+      "spokenText": "小小孩什麼都不知道",
+      "focusChar": "知",
+      "displayLines": [
+        "小小孩",
+        "什麼都",
+        "不知道。"
+      ],
+      "imageNotes": "主角媽媽抱著或照顧一個很小的嬰兒，嬰兒天真地看著周圍，表現小小孩還什麼都不知道。畫面可有主角小女孩在旁邊好奇看著，但主要人物是主角媽媽和嬰兒；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L224-S03",
+      "text": "老師看到我做錯事，叫我改過。",
+      "spokenText": "老師看到我做錯事叫我改過",
+      "focusChar": "錯",
+      "displayLines": [
+        "老師看到我",
+        "做錯事，",
+        "叫我改過。"
+      ],
+      "imageNotes": "主角小女孩在教室中做錯事，例如把桌上物品弄亂或拿錯東西，老師看到後溫和提醒她改過。老師必須使用 recurring teacher identity，不能長得像主角媽媽。畫面要表現老師看到、提醒改過的情境；不可有文字、數字、黑板字或標籤。"
+    },
+    {
+      "id": "L224-S04",
+      "text": "不知道路，就找人問路。",
+      "spokenText": "不知道路就找人問路",
+      "focusChar": "知",
+      "displayLines": [
+        "不知道路，",
+        "就找人問路。"
+      ],
+      "imageNotes": "主角小女孩在安全的路邊或人行道上不知道怎麼走，向一位路人阿姨或路人叔叔問路。路人要使用 varied passerby identity，不可長得像主角媽媽或老師。畫面要有路、人行道、問路姿勢；不可有路牌文字、數字、地圖文字或標籤。"
+    },
+    {
+      "id": "L224-S05",
+      "text": "我知道要換校服，也要換校褲。",
+      "spokenText": "我知道要換校服也要換校褲",
+      "focusChar": "換",
+      "displayLines": [
+        "我知道要",
+        "換校服，",
+        "也要換校褲。"
+      ],
+      "imageNotes": "主角小女孩放學回家後，知道要換掉校服和校褲，主角媽媽在旁邊準備家居衣物。畫面只呈現準備更換衣物的安全情境，不呈現更衣過程；校服校褲不可有校名、文字、數字、徽章字樣或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L224-G01",
+      "type": "find-character",
+      "sentenceId": "L224-S01",
+      "targetChar": "知",
+      "reason": "「知錯能改」是本課核心用法，目標字清楚。"
+    },
+    "G02": {
+      "id": "L224-G02",
+      "type": "teach-character",
+      "sentenceId": "L224-S02",
+      "targetChar": "知",
+      "targetCharIndex": 7,
+      "prefixText": "小小孩什麼都不",
+      "suffixText": "道"
+    },
+    "G03": {
+      "id": "L224-G03",
+      "type": "missing-character",
+      "sentenceId": "L224-S04",
+      "targetChar": "知",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "知",
+        "錯",
+        "改"
+      ]
+    },
+    "G04": {
+      "id": "L224-G04",
+      "type": "partial-order",
+      "sentenceId": "L224-S03",
+      "chunks": [
+        "老師看到我",
+        "做錯事",
+        "叫我改過"
+      ]
+    },
+    "G05": {
+      "id": "L224-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L224-S05",
+      "correctText": "我知道要換校服，也要換校褲。",
+      "wrongOneText": "我知道要換校服，也要穿校褲。",
+      "wrongTwoText": "我知道要穿校服，也要換校褲。"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
