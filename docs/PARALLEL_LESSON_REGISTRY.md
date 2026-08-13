@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L231 | 夠 / normal lesson | merge-ready | Production D | codex/l231-complete-package / c6c3997398c7cd04183794a64c9d4d19be237b4e | L227 舊, L228 半, L229 只, L230 剩 | ["舊","半","只","剩"] | curriculum-workflow/lesson-requests/L231.json, curriculum-workflow/generated/L231-generation-packet.md | public/assets/lessons/L231/images/, public/assets/lessons/L231/audio/ | asset-complete package ready for Release integration; dependencies are in origin/main; shared-state integration omitted for Release |
 
 ## Status Values
 
