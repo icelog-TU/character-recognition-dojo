@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L223 | 錯 / normal lesson | claimed | Production D | codex/l223-complete-package / b7c5ffd4 | L216 身, L217 濕, L218 乾, L219 服, L220 褲, L221 換, L222 改 | ["身","濕","乾","服","褲","換","改"] | curriculum-workflow/lesson-requests/L223.json, curriculum-workflow/generated/L223-generation-packet.md | public/assets/lessons/L223/images/, public/assets/lessons/L223/audio/ | accepted handoff and starting asset-complete-package |
 
 ## Status Values
 
