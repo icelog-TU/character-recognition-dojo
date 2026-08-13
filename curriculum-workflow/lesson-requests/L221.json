@@ -1,0 +1,225 @@
+{
+  "id": "L221",
+  "order": 221,
+  "newChars": [
+    "換"
+  ],
+  "zhuyin": {
+    "換": "ㄏㄨㄢˋ"
+  },
+  "title": "換",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integration for L221. Latest origin/main is being advanced in playable order, with all prior lessons integrated before this unit, so there are no unresolved provisional learned characters. Production owns the asset-complete lesson-local package; Release owns production JSON, planner, ledger, registry cleanup, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L220 plus current target from newChars",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "換",
+      "褲",
+      "服",
+      "乾",
+      "濕",
+      "身"
+    ],
+    "targetCharMinimumCount": {
+      "換": 3
+    },
+    "recentTargetMinimumCounts": {
+      "褲": 2,
+      "服": 2,
+      "乾": 2,
+      "濕": 1,
+      "身": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "淨",
+      "體",
+      "全",
+      "照",
+      "離",
+      "浴",
+      "沙",
+      "灘",
+      "港",
+      "橋",
+      "岸",
+      "浪",
+      "買",
+      "煮",
+      "色",
+      "右",
+      "弄",
+      "貓",
+      "吸",
+      "塵",
+      "器",
+      "灰",
+      "短",
+      "襪",
+      "袖",
+      "禮",
+      "喪"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist little girl, protagonist mother, and protagonist father.",
+      "Use public/assets/reference/lesson-cast/godmother.webp as the recurring protagonist godmother visual identity reference for L221-S03.",
+      "Mother, father, teacher, godmother, and other adults must be visually distinct.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, battery symbols, readable funeral/religious text, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 換 as public/assets/lessons/L221/audio/char-u63db.m4a.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L221-S01",
+      "text": "衣服褲子都濕了，快去換掉。",
+      "spokenText": "衣服褲子都濕了快去換掉",
+      "focusChar": "換",
+      "displayLines": [
+        "衣服褲子",
+        "都濕了，",
+        "快去換掉。"
+      ],
+      "imageNotes": "主角小女孩在家門口或浴室外安全區域，衣服和褲子都被雨水弄濕，主角媽媽提醒她快去換掉。畫面只呈現濕衣褲和被提醒的情境，不呈現更衣過程；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L221-S02",
+      "text": "把這一身紅衣服換掉。",
+      "spokenText": "把這一身紅衣服換掉",
+      "focusChar": "換",
+      "displayLines": [
+        "把這一身",
+        "紅衣服",
+        "換掉。"
+      ],
+      "imageNotes": "喪禮或安靜告別會現場，主角小女孩穿著一身紅衣服，主角媽媽溫和提醒她換掉；周圍成人穿深色衣服、氣氛安靜莊重。畫面要靠服裝顏色和場合氣氛表達，不可出現牌位文字、宗教文字、喪禮標語、數字、標籤或可讀文字。"
+    },
+    {
+      "id": "L221-S03",
+      "text": "乾媽的身高很高。",
+      "spokenText": "乾媽的身高很高",
+      "focusChar": "乾",
+      "displayLines": [
+        "乾媽的",
+        "身高很高。"
+      ],
+      "imageNotes": "Use the approved recurring protagonist godmother / 乾媽 reference asset: public/assets/reference/lesson-cast/godmother.webp. She is a very tall adult woman in the protagonist girl's trusted family-friend circle, clearly taller than 我媽媽 and 老師, warm but crisp, with short or neat medium-length hair and a deep green or blue-green long jacket/top. Do not make her look like 媽媽 or 老師; no yellow/coral-red mother palette, no classroom clothing, no book, no pointer, no teaching posture. 畫面中主角小女孩站在乾媽旁邊，明顯看出乾媽身高很高；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L221-S04",
+      "text": "乾電池沒電了，要換。",
+      "spokenText": "乾電池沒電了要換",
+      "focusChar": "換",
+      "displayLines": [
+        "乾電池",
+        "沒電了，",
+        "要換。"
+      ],
+      "imageNotes": "主角爸爸和主角小女孩在家中看著一個沒電的小玩具，旁邊有需要更換的乾電池。主角爸爸準備把舊乾電池換掉。畫面要清楚表現電池沒電要換，但玩具或電池上不可有文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L221-S05",
+      "text": "外面天氣很冷，去換長褲。",
+      "spokenText": "外面天氣很冷去換長褲",
+      "focusChar": "褲",
+      "displayLines": [
+        "外面天氣",
+        "很冷，",
+        "去換長褲。"
+      ],
+      "imageNotes": "主角媽媽在家中提醒主角小女孩，外面天氣很冷，要去換長褲；窗外可有冷風吹樹葉或陰冷天氣，主角小女孩手上或床上有長褲。畫面只呈現準備換衣的安全情境，不呈現更衣過程；不可有文字、數字或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L221-G01",
+      "type": "find-character",
+      "sentenceId": "L221-S02",
+      "targetChar": "換",
+      "reason": "「換掉」是本課核心動詞用法，目標字清楚。",
+      "missingIndexes": [
+        7
+      ]
+    },
+    "G02": {
+      "id": "L221-G02",
+      "type": "teach-character",
+      "sentenceId": "L221-S01",
+      "targetChar": "換",
+      "targetCharIndex": 9,
+      "prefixText": "衣服褲子都濕了快去",
+      "suffixText": "掉",
+      "prefixSrc": "/assets/lessons/L221/audio/L221-G02-prefix.m4a",
+      "suffixSrc": "/assets/lessons/L221/audio/L221-G02-suffix.m4a",
+      "missingIndexes": [
+        9
+      ]
+    },
+    "G03": {
+      "id": "L221-G03",
+      "type": "missing-character",
+      "sentenceId": "L221-S04",
+      "targetChar": "換",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "換",
+        "褲",
+        "乾"
+      ]
+    },
+    "G04": {
+      "id": "L221-G04",
+      "type": "partial-order",
+      "sentenceId": "L221-S05",
+      "chunks": [
+        "外面天氣很冷",
+        "去換",
+        "長褲"
+      ],
+      "targetChar": "褲",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "G05": {
+      "id": "L221-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L221-S03",
+      "correctText": "乾媽的身高很高。",
+      "wrongOneText": "媽媽的身高很高。",
+      "wrongTwoText": "乾媽的身高不高。",
+      "wrongOneSpokenText": "媽媽的身高很高",
+      "wrongTwoSpokenText": "乾媽的身高不高",
+      "wrongOneSrc": "/assets/lessons/L221/audio/L221-G05-wrong-one.m4a",
+      "wrongTwoSrc": "/assets/lessons/L221/audio/L221-G05-wrong-two.m4a",
+      "targetChar": "乾",
+      "correctSpokenText": "乾媽的身高很高"
+    }
+  },
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": []
+}
