@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L226 | 新 / normal lesson | claimed | Production C | codex/l226-complete-package / ad827db2 | L224:知, L225:認 | ["知","認"] | curriculum-workflow/lesson-requests/L226.json; curriculum-workflow/generated/L226-generation-packet.md | public/assets/lessons/L226/images/; public/assets/lessons/L226/audio/ | accepted handoff and starting asset-complete-package |
 
 ## Status Values
 
