@@ -496,8 +496,8 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L221, L221 introduces `換`, and review modules are complete through R012.
+As of latest `origin/main`, production curriculum is complete through L223, L223 introduces `錯`, and review modules are complete through R012.
 
-Under the review-blocker rule, there are no overdue review blockers at L221. R013-R014 become required after L240 and before L241.
+Under the review-blocker rule, there are no overdue review blockers at L223. R013-R014 become required after L240 and before L241.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L221 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+L001-L005 use the simpler Stage 1-3 flow. L006-L223 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
