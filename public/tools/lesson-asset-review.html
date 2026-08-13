@@ -660,12 +660,11 @@
       async function loadUnitData() {
         const draftPath = `curriculum-workflow/drafts/${state.unit}-draft.json`;
         const draftResponse = await fetch(rawUrl(draftPath), { cache: "no-store" });
+        let draftUnit = null;
         if (draftResponse.ok) {
           const draft = await draftResponse.json();
           if (Array.isArray(draft.sentences) && draft.sentences.length > 0) {
-            state.sourcePath = draftPath;
-            state.placeholderUnit = false;
-            return draft;
+            draftUnit = draft;
           }
         }
 
@@ -673,6 +672,19 @@
         const lessons = Array.isArray(curriculum.lessons) ? curriculum.lessons : [];
         const reviews = Array.isArray(curriculum.reviewLessons) ? curriculum.reviewLessons : [];
         const unit = [...lessons, ...reviews].find((candidate) => candidate.id === state.unit);
+
+        if (draftUnit && hasReviewableSentenceAssets(draftUnit)) {
+          state.sourcePath = draftPath;
+          state.placeholderUnit = false;
+          return draftUnit;
+        }
+
+        if (draftUnit && !unit) {
+          state.sourcePath = draftPath;
+          state.placeholderUnit = false;
+          return draftUnit;
+        }
+
         if (!unit) {
           const reviewMatch = /^R(\d{3})$/.exec(state.unit);
           const reviewSlot = reviewMatch ? reviewSlotForNumber(Number(reviewMatch[1])) : null;
@@ -694,6 +706,11 @@
         state.sourcePath = "src/curriculum/sample-lessons.json";
         state.placeholderUnit = false;
         return unit;
+      }
+
+      function hasReviewableSentenceAssets(unit) {
+        const sentences = Array.isArray(unit.sentences) ? unit.sentences : [];
+        return sentences.length > 0 && sentences.every((sentence) => sentence.imageSrc && sentence.audio?.src);
       }
 
       function hanChars(value) {
