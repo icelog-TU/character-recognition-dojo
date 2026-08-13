@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L232 | 錢 / normal lesson | claimed | Production A | codex/l232-complete-package / 845919ab | L231:夠 | ["夠"] | curriculum-workflow/lesson-requests/L232.json; curriculum-workflow/generated/L232-generation-packet.md | public/assets/lessons/L232/images/; public/assets/lessons/L232/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
