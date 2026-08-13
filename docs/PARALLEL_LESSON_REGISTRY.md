@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L219 | 服 / normal lesson | claimed | Production D | codex/l219-complete-package / 5427c441 | L216 身, L217 濕, L218 乾 | ["身","濕","乾"] | curriculum-workflow/lesson-requests/L219.json, curriculum-workflow/generated/L219-generation-packet.md | public/assets/lessons/L219/images/, public/assets/lessons/L219/audio/ | accepted handoff and starting asset-complete-package |
 
 ## Status Values
 
