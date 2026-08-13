@@ -1,0 +1,236 @@
+{
+  "id": "L226",
+  "order": 226,
+  "newChars": [
+    "新"
+  ],
+  "zhuyin": {
+    "新": "ㄒㄧㄣ"
+  },
+  "title": "新",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C asset-complete lesson-local package. Latest observed origin/main is complete through L223, with L224 and L225 not yet in main at handoff time. Production owns request, packet, draft, images, audio, Stage 4 audio, and alignment. Release owns ordered production JSON insertion, planner export, ledger update, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L223 plus provisional learned chars L224:知 and L225:認 plus current target 新",
+    "provisionalLearnedChars": [
+      "知",
+      "認"
+    ],
+    "dependsOnLessons": [
+      "L224",
+      "L225"
+    ],
+    "requiredCoverageChars": [
+      "新",
+      "認",
+      "知",
+      "錯",
+      "改",
+      "換"
+    ],
+    "targetCharMinimumCount": {
+      "新": 3
+    },
+    "recentTargetMinimumCounts": {
+      "認": 2,
+      "知": 2,
+      "錯": 2,
+      "改": 1,
+      "換": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新",
+    "forbiddenDisplayChars": [
+      "舊",
+      "半",
+      "全",
+      "買",
+      "東",
+      "西",
+      "矮",
+      "落",
+      "短",
+      "別",
+      "互",
+      "相",
+      "件",
+      "方",
+      "字",
+      "體",
+      "育",
+      "嬰",
+      "兒",
+      "寶",
+      "讓",
+      "摺",
+      "折",
+      "淨",
+      "照",
+      "離",
+      "浴",
+      "沙",
+      "灘",
+      "港",
+      "橋",
+      "岸",
+      "浪"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and protagonist little girl.",
+      "Teacher must use teacher identity and must not look like protagonist mother.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, names, school names, badges, brands, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 新 as public/assets/lessons/L226/audio/char-u65b0.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L226-S01",
+      "text": "我不認為他知道怎麼做。",
+      "spokenText": "我不認為他知道怎麼做",
+      "focusChar": "認",
+      "displayLines": [
+        "我不認為",
+        "他知道",
+        "怎麼做。"
+      ],
+      "imageNotes": "主角小女孩作為比較大的孩子，看著一位小小孩在摺紙，小小孩拿著紙想摺但明顯摺不起來，紙有點亂，主角小女孩在旁邊露出「他可能不知道怎麼做」的表情。畫面要表現「看著別人不太會做」，不要出現文字、數字、教學圖、摺紙步驟標籤。"
+    },
+    {
+      "id": "L226-S02",
+      "text": "新同學不知道走錯路了。",
+      "spokenText": "新同學不知道走錯路了",
+      "focusChar": "新",
+      "displayLines": [
+        "新同學",
+        "不知道",
+        "走錯路了。"
+      ],
+      "imageNotes": "新同學背著書包，走在學校附近或校園走廊，方向明顯走偏了，遠處可看到正確方向的教室或校門，但不能用文字標示。新同學表情茫然，還不知道自己走錯路。人物身份：新同學；必要時可有遠處的老師或其他學生作背景，但不要讓他們指路。不可有路牌文字、班級牌、數字或標籤。"
+    },
+    {
+      "id": "L226-S03",
+      "text": "新衣服太大，要拿去改一改。",
+      "spokenText": "新衣服太大要拿去改一改",
+      "focusChar": "新",
+      "displayLines": [
+        "新衣服太大，",
+        "要拿去",
+        "改一改。"
+      ],
+      "imageNotes": "主角小女孩穿著或拿著一件明顯太大的新衣服，袖子或衣身太長，主角媽媽在旁邊看著，準備帶去修改。可有量衣服的軟尺或針線工具，但不能有尺寸數字或文字。人物身份：主角小女孩 + 主角媽媽。畫面重點是「新衣服太大，需要改」。"
+    },
+    {
+      "id": "L226-S04",
+      "text": "拿錯課本，要換回來。",
+      "spokenText": "拿錯課本要換回來",
+      "focusChar": "錯",
+      "displayLines": [
+        "拿錯課本，",
+        "要換回來。"
+      ],
+      "imageNotes": "主角小女孩在學校教室裡發現自己拿錯課本，旁邊有女同學也拿著另一本文本外觀不同的課本，兩人準備把課本換回來。課本封面不能有文字、科目、姓名或數字，只能用顏色或圖案區分兩本不同的課本。人物身份：主角小女孩 + 女同學。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L226-S05",
+      "text": "我認得新老師的車。",
+      "spokenText": "我認得新老師的車",
+      "focusChar": "新",
+      "displayLines": [
+        "我認得",
+        "新老師的車。"
+      ],
+      "imageNotes": "主角小女孩在校門口或學校外安全區域，看見新老師的車，表情像是認得那是新老師的車。新老師可以站在車旁或正在走向車，必須使用 teacher identity，不能像主角媽媽。車上不可有車牌文字、數字、校名、標誌或標籤。人物身份：主角小女孩 + 新老師。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L226-G01",
+      "type": "find-character",
+      "sentenceId": "L226-S05",
+      "targetChar": "新",
+      "reason": "「新老師」是本課清楚常見用法，目標字明確。",
+      "missingIndexes": [
+        3
+      ]
+    },
+    "G02": {
+      "id": "L226-G02",
+      "type": "teach-character",
+      "sentenceId": "L226-S02",
+      "targetChar": "新",
+      "targetCharIndex": 0,
+      "suffixText": "同學不知道走錯路了",
+      "missingIndexes": [
+        0
+      ]
+    },
+    "G03": {
+      "id": "L226-G03",
+      "type": "missing-character",
+      "sentenceId": "L226-S03",
+      "targetChar": "新",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "新",
+        "認",
+        "知"
+      ]
+    },
+    "G04": {
+      "id": "L226-G04",
+      "type": "partial-order",
+      "sentenceId": "L226-S04",
+      "chunks": [
+        "拿錯課本",
+        "要換",
+        "回來"
+      ],
+      "targetChar": "錯",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "G05": {
+      "id": "L226-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L226-S01",
+      "correctText": "我不認為他知道怎麼做。",
+      "wrongOneText": "我不認為他知道怎麼畫。",
+      "wrongTwoText": "我不認為他知道怎麼看。",
+      "targetChar": "認",
+      "correctSpokenText": "我不認為他知道怎麼做",
+      "wrongOneSpokenText": "我不認為他知道怎麼畫",
+      "wrongTwoSpokenText": "我不認為他知道怎麼看"
+    }
+  },
+  "dependsOnLessons": [
+    "L224",
+    "L225"
+  ],
+  "provisionalLearnedChars": [
+    "知",
+    "認"
+  ]
+}
