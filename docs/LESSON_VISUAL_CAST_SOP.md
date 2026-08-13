@@ -51,6 +51,7 @@ Current identity priority:
 | `你` / young boy classmate | preschool-age boy, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, matching the existing L012 continuity when applicable |
 | Mother / `媽媽` | adult woman, warm family role, soft cardigan or apron, practical home clothing, distinct from teachers and passersby |
 | Father / `爸爸` | adult man, steady family role, simple shirt or vest, clearly different silhouette and hairstyle from mother and teacher |
+| Protagonist godmother / `乾媽` | adult woman in the protagonist girl's trusted family-friend circle; warm but more crisp and capable than the mother; very tall, clearly taller than the protagonist mother and teacher, with a height difference visible at phone size for sentences such as `乾媽的身高很高`; short hair or neat medium-length hair; deep green or blue-green jacket or long top; avoid the protagonist mother's yellow/coral-red palette and avoid teacher classroom clothing, books, pointing, or instructional posture |
 | Teacher / `老師` | adult teacher, tidy classroom clothing, calm instructional posture, may carry a book or point gently, must not look like the mother unless the sentence explicitly says the mother is acting as a teacher |
 | Classmate girl | preschool-age girl, distinct from the child protagonist, different hairstyle and clothing color |
 | Classmate boy | preschool-age boy, distinct from `你` when both appear, different clothing color or accessory |
@@ -65,6 +66,7 @@ The next dedicated visual-reference task should create a small accepted cast set
 ```text
 public/assets/reference/lesson-cast/mother.webp
 public/assets/reference/lesson-cast/father.webp
+public/assets/reference/lesson-cast/godmother.webp
 public/assets/reference/lesson-cast/older-brother.webp
 public/assets/reference/lesson-cast/teacher.webp
 public/assets/reference/lesson-cast/protagonist-child.webp
@@ -141,6 +143,10 @@ Use the recurring mother identity: warm adult family role, home clothing such as
 ```
 
 ```text
+Use the recurring protagonist godmother identity: very tall adult woman in the protagonist girl's trusted family-friend circle, clearly taller than the protagonist mother and teacher, warm but crisp, short or neat medium-length hair, deep green or blue-green jacket or long top, visually distinct from the protagonist mother and from the teacher.
+```
+
+```text
 Use varied passersby: mixed adult ages, genders, hairstyles, clothing, and body shapes. Do not repeat the same adult woman face.
 ```
 
@@ -157,6 +163,7 @@ Before accepting generated images, Production must check:
 - L058 style is matched without copying L058 person identity.
 - Mother, father, teacher, classmate, elder, and passerby roles are visually distinct.
 - A teacher does not look like the mother unless the sentence explicitly requires that.
+- The protagonist godmother does not look like the protagonist mother or teacher; keep her very tall, more crisp, and in deep green or blue-green family-friend clothing. In height-focused sentences, the image must make her height obvious on a phone screen.
 - A passerby or generic adult is not the same recurring adult woman reused from another role.
 - The same recurring role stays consistent across the lesson and with any ledger description.
 
