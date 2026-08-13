@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L232 | 錢 / normal lesson | ready-blocked-by-dependency | Production A | codex/l232-complete-package / pending package commit | L231:夠 | ["夠"] | curriculum-workflow/lesson-requests/L232.json; curriculum-workflow/generated/L232-generation-packet.md | public/assets/lessons/L232/images/; public/assets/lessons/L232/audio/; curriculum-workflow/audio-inbox/L232/ | complete package prepared; blocked until L231 enters main |
+| L232 | 錢 / normal lesson | ready-blocked-by-dependency | Production A | codex/l232-complete-package / 944dece9 | L231:夠 | ["夠"] | curriculum-workflow/lesson-requests/L232.json; curriculum-workflow/generated/L232-generation-packet.md | public/assets/lessons/L232/images/; public/assets/lessons/L232/audio/; curriculum-workflow/audio-inbox/L232/ | complete package prepared; blocked until L231 enters main |
 
 ## Status Values
 
