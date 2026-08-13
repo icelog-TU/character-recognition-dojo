@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L222 | 改 / normal lesson | ready-blocked-by-dependency | Production C | codex/l222-complete-package / pending final commit | L216:身, L217:濕, L218:乾, L219:服, L220:褲, L221:換 | ["身","濕","乾","服","褲","換"] | curriculum-workflow/lesson-requests/L222.json; curriculum-workflow/generated/L222-generation-packet.md | public/assets/lessons/L222/images/; public/assets/lessons/L222/audio/ | complete lesson-local asset package; L216-L221 are not in origin/main; production JSON left for Release |
+| L222 | 改 / normal lesson | ready-blocked-by-dependency | Production C | codex/l222-complete-package / a5199caf | L216:身, L217:濕, L218:乾, L219:服, L220:褲, L221:換 | ["身","濕","乾","服","褲","換"] | curriculum-workflow/lesson-requests/L222.json; curriculum-workflow/generated/L222-generation-packet.md | public/assets/lessons/L222/images/; public/assets/lessons/L222/audio/ | complete lesson-local asset package; L216-L221 are not in origin/main; production JSON left for Release |
 
 ## Status Values
 
