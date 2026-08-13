@@ -1,0 +1,256 @@
+{
+  "id": "L222",
+  "order": 222,
+  "newChars": [
+    "改"
+  ],
+  "zhuyin": {
+    "改": "ㄍㄞˇ"
+  },
+  "title": "改",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L222 asset-complete-package handoff. Production C owns the lesson-local package only: request, packet, draft, images, audio, Stage 4 audio, and alignment. Latest origin/main production curriculum is complete through L215, so this lesson depends on L216-L221 and remains dependency-blocked until Release integrates those lessons in order. Release owns production JSON insertion, planner export, ledger update, final verify, push, and deployment.",
+  "dependsOnLessons": [
+    "L216",
+    "L217",
+    "L218",
+    "L219",
+    "L220",
+    "L221"
+  ],
+  "provisionalLearnedChars": [
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L215 plus provisional learned characters 身濕乾服褲換 plus current target 改",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改",
+    "provisionalLearnedChars": [
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換"
+    ],
+    "dependsOnLessons": [
+      "L216",
+      "L217",
+      "L218",
+      "L219",
+      "L220",
+      "L221"
+    ],
+    "forbiddenChars": [
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "全",
+      "買",
+      "東",
+      "西",
+      "矮",
+      "落",
+      "短",
+      "淨",
+      "體",
+      "照",
+      "離",
+      "浴",
+      "沙",
+      "灘",
+      "港",
+      "橋",
+      "岸",
+      "浪",
+      "色",
+      "右",
+      "弄",
+      "貓",
+      "吸",
+      "塵",
+      "器",
+      "灰",
+      "禮",
+      "喪"
+    ],
+    "requiredCoverageChars": [
+      "改",
+      "換",
+      "褲",
+      "服",
+      "乾",
+      "濕"
+    ],
+    "targetCharMinimumCount": {
+      "改": 3
+    },
+    "recentTargetMinimumCounts": {
+      "換": 2,
+      "褲": 2,
+      "服": 2,
+      "乾": 1,
+      "濕": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 only as illustration style references: warm natural light, modern children's picture-book pencil-and-watercolor linework, expressive preschool proportions, bright warm palette, and phone-readable square composition.",
+      "Do not copy the specific L058 adult woman, child, clothing, hair, face, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163: protagonist mother in white or cream top, wide blue pants, shoulder-length dark hair; protagonist little girl in pink jacket, white top, blue skirt, pink shoes, small pink hair clip.",
+      "S05 uses a boy classmate; if before/after comparison is used, both sides must be the same boy classmate and visually distinct from the protagonist family.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, brands, school names, size tags, or readable marks in images.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 改 as public/assets/lessons/L222/audio/char-u6539.m4a from the single character 改.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L222-S01",
+      "text": "衣服太小，改一改還能穿。",
+      "spokenText": "衣服太小改一改還能穿",
+      "focusChar": "改",
+      "displayLines": [
+        "衣服太小，",
+        "改一改",
+        "還能穿。"
+      ],
+      "imageNotes": "主角媽媽幫主角小女孩看一件太小的衣服，旁邊有針線或量衣服的動作，表示改一改後還能穿。畫面要表現衣服太小和修改衣服的情境，但不可有文字、數字、尺寸標籤或品牌。"
+    },
+    {
+      "id": "L222-S02",
+      "text": "褲子濕了，先換乾的。",
+      "spokenText": "褲子濕了先換乾的",
+      "focusChar": "換",
+      "displayLines": [
+        "褲子濕了，",
+        "先換乾的。"
+      ],
+      "imageNotes": "主角小女孩的褲子被水弄濕，主角媽媽提醒她先換乾的褲子；旁邊可有乾的褲子放在椅子上。畫面只呈現提醒和準備換的安全情境，不呈現更衣過程；不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L222-S03",
+      "text": "回到家，換掉校服和校褲。",
+      "spokenText": "回到家換掉校服和校褲",
+      "focusChar": "褲",
+      "displayLines": [
+        "回到家，",
+        "換掉校服",
+        "和校褲。"
+      ],
+      "imageNotes": "主角小女孩放學回到家門口或房間外，主角媽媽提醒她換掉校服和校褲，旁邊可有家居衣物準備好。畫面只呈現回家後準備更換校服校褲，不呈現更衣過程；不可有文字、校名、數字或標籤。"
+    },
+    {
+      "id": "L222-S04",
+      "text": "改天再去游泳池。",
+      "spokenText": "改天再去游泳池",
+      "focusChar": "改",
+      "displayLines": [
+        "改天再去",
+        "游泳池。"
+      ],
+      "imageNotes": "主角媽媽和主角小女孩在家中看著窗外下雨或天氣不好，主角媽媽安撫主角小女孩改天再去游泳池。畫面可有放在一旁的泳具包，但不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L222-S05",
+      "text": "改頭換面，就是不再做壞事。",
+      "spokenText": "改頭換面就是不再做壞事",
+      "focusChar": "改",
+      "displayLines": [
+        "改頭換面，",
+        "就是不再",
+        "做壞事。"
+      ],
+      "imageNotes": "男孩同學以前把桌子弄亂或做壞事，現在改頭換面，換成乾淨整齊的樣子，正在幫忙做好事，例如整理桌子或扶起掉下的東西。畫面要表現前後改變，可用同一畫面左右對比，但不可有文字、數字、標籤或對話框。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L222-G01",
+      "type": "find-character",
+      "sentenceId": "L222-S04",
+      "targetChar": "改",
+      "reason": "「改天」是本課常用功能詞，目標字清楚。",
+      "missingIndexes": [
+        0
+      ]
+    },
+    "G02": {
+      "id": "L222-G02",
+      "type": "teach-character",
+      "sentenceId": "L222-S01",
+      "targetChar": "改",
+      "targetCharIndex": 6,
+      "prefixText": "衣服太小改一",
+      "suffixText": "還能穿",
+      "missingIndexes": [
+        6
+      ]
+    },
+    "G03": {
+      "id": "L222-G03",
+      "type": "missing-character",
+      "sentenceId": "L222-S05",
+      "targetChar": "改",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "改",
+        "換",
+        "服"
+      ]
+    },
+    "G04": {
+      "id": "L222-G04",
+      "type": "partial-order",
+      "sentenceId": "L222-S03",
+      "chunks": [
+        "回到家",
+        "換掉校服",
+        "和校褲"
+      ],
+      "targetChar": "褲",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "G05": {
+      "id": "L222-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L222-S02",
+      "targetChar": "換",
+      "correctText": "褲子濕了，先換乾的。",
+      "correctSpokenText": "褲子濕了先換乾的",
+      "wrongOneText": "褲子乾了，先換乾的。",
+      "wrongOneSpokenText": "褲子乾了先換乾的",
+      "wrongTwoText": "褲子濕了，先換濕的。",
+      "wrongTwoSpokenText": "褲子濕了先換濕的"
+    }
+  }
+}
