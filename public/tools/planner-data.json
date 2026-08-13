@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-13T14:24:44.030Z",
+  "exportedAt": "2026-08-13T15:29:52.083Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -104822,6 +104822,465 @@
               "correct": false,
               "audioSrc": "/assets/lessons/L230/audio/L230-G05-wrong-two.m4a",
               "spokenText": "菜只剩一半了"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L231",
+      "order": 231,
+      "newChars": [
+        "夠"
+      ],
+      "zhuyin": {
+        "夠": "ㄍㄡˋ"
+      },
+      "charAudio": {
+        "夠": "/assets/lessons/L231/audio/char-u5920.m4a"
+      },
+      "title": "夠",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L231-S01",
+          "text": "剩下的飯菜夠大家吃。",
+          "spokenText": "剩下的飯菜夠大家吃",
+          "focusChar": "夠",
+          "displayLines": [
+            "剩下的飯菜",
+            "夠大家吃。"
+          ],
+          "imagePrompt": "Use case: illustration-story\nAsset type: L231-S01 lesson image for a children's character-recognition app\nPrimary request: square image / 1:1 composition. Family dinner table at home with protagonist mother looking at remaining rice and dishes on the table; protagonist little girl, protagonist father, and protagonist older brother sit around the table, and the remaining food clearly still looks enough for everyone to share.\nVisual cast: protagonist mother with white or beige top, wide blue pants, shoulder-length dark hair; protagonist little girl with pink jacket, white shirt, blue skirt, pink shoes, small pink hair clip; protagonist father with blue shirt or jacket, white shirt, khaki pants; protagonist older brother with blue-and-white striped top. Use L154/L162/L163 family continuity. L058 is style reference only, not a face or clothing reference.\nComposition: centered dining table with visible shared dishes, all four family members clearly visible, food amount moderate and reassuring, safe margins for phone square crop.\nStyle: warm hand-painted watercolor children's textbook illustration, soft edges and friendly family expressions.\nAvoid: no written text, numbers, labels, logos, brands, watermarks, readable marks, or sad scarcity mood.",
+          "imageNotes": "家裡餐桌場景，主角媽媽看著桌上剩下的一些飯菜，主角小女孩、主角爸爸、主角哥哥都在桌邊，飯菜看起來還夠全家人分著吃。畫面重點是「剩下的飯菜仍然夠大家吃」，不要做成很少或很可憐。不可有文字、數字或標籤。",
+          "imageSrc": "/assets/lessons/L231/images/L231-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L231/audio/L231-S01.m4a",
+            "durationMs": 4092,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1220,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1600,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2380,
+                "endMs": 2670
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2670,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2960,
+                "endMs": 3300
+              }
+            ]
+          }
+        },
+        {
+          "id": "L231-S02",
+          "text": "只剩一點水，不夠喝。",
+          "spokenText": "只剩一點水不夠喝",
+          "focusChar": "夠",
+          "displayLines": [
+            "只剩一點水，",
+            "不夠喝。"
+          ],
+          "imagePrompt": "Use case: illustration-story\nAsset type: L231-S02 lesson image for a children's character-recognition app\nPrimary request: square image / 1:1 composition. After outdoor play, protagonist little girl and protagonist older brother look at one transparent water bottle that has only a tiny amount of water left; both children look thirsty, and the small amount is clearly not enough for both to drink.\nVisual cast: protagonist little girl with pink jacket, white shirt, blue skirt, pink shoes, small pink hair clip; protagonist older brother with blue-and-white striped top and a clearly older child body shape. Family continuity from L154/L162/L163; L058 style only.\nComposition: centered bottle between the two children, very low water level visible without any measurement marks, outdoor play setting, safe margins.\nStyle: warm watercolor children's illustration, gentle and non-distressing.\nAvoid: no text, numbers, measurement marks, bottle brand, labels, logos, watermarks, readable marks, or exaggerated dehydration.",
+          "imageNotes": "主角小女孩和主角哥哥在戶外玩後看著一個透明水壺，裡面只剩很少一點水，兩人都很渴，明顯不夠分著喝。水壺不能有文字、數字、刻度、品牌或標籤。",
+          "imageSrc": "/assets/lessons/L231/images/L231-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L231/audio/L231-S02.m4a",
+            "durationMs": 3702,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1040,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2060,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2620,
+                "endMs": 2860
+              }
+            ]
+          }
+        },
+        {
+          "id": "L231-S03",
+          "text": "只拿一半出來，夠不夠？",
+          "spokenText": "只拿一半出來夠不夠",
+          "focusChar": "夠",
+          "displayLines": [
+            "只拿一半",
+            "出來，",
+            "夠不夠？"
+          ],
+          "imagePrompt": "Use case: illustration-story\nAsset type: L231-S03 lesson image for a children's character-recognition app\nPrimary request: square image / 1:1 composition. At home, protagonist mother takes only half of the cookies out of a plain box and places them on the table; the other half remains inside the box, and protagonist little girl looks at the amount as if asking whether it is enough.\nVisual cast: protagonist mother with white or beige top, wide blue pants, shoulder-length dark hair; protagonist little girl with pink jacket, white shirt, blue skirt, pink shoes, small pink hair clip. L154/L162/L163 continuity; L058 style reference only.\nComposition: table centered, open plain box clearly showing cookies still inside and a smaller group on the table, mother and girl fully visible, safe margins.\nStyle: warm watercolor family-life illustration.\nAvoid: no text, numbers, brands, box labels, packaging marks, logos, watermarks, readable marks, or written quantity symbols.",
+          "imageNotes": "主角媽媽和主角小女孩在家裡，媽媽從盒子裡只拿出一半的餅乾放到桌上，另一半餅乾還留在盒子裡，小女孩看著桌上的份量像是在問夠不夠。餅乾和盒子不可有文字、數字、品牌或標籤。",
+          "imageSrc": "/assets/lessons/L231/images/L231-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L231/audio/L231-S03.m4a",
+            "durationMs": 4029,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1620,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2720,
+                "endMs": 2920
+              }
+            ]
+          }
+        },
+        {
+          "id": "L231-S04",
+          "text": "舊車的電不夠了。",
+          "spokenText": "舊車的電不夠了",
+          "focusChar": "夠",
+          "displayLines": [
+            "舊車的電",
+            "不夠了。"
+          ],
+          "imagePrompt": "Use case: illustration-story\nAsset type: L231-S04 lesson image for a children's character-recognition app\nPrimary request: square image / 1:1 composition. Protagonist father checks an old small electric ride-on car or electric toy car; its headlight is very dim and the car looks weak from low power, while protagonist little girl watches nearby.\nVisual cast: protagonist father with blue shirt or jacket, white shirt, khaki pants; protagonist little girl with pink jacket, white shirt, blue skirt, pink shoes, small pink hair clip. Family continuity from L154/L162/L163; L058 style only.\nComposition: old toy vehicle centered with dim light visible, father kneeling or leaning beside it, girl nearby, safe margins.\nStyle: warm watercolor home or yard illustration, calm problem-solving mood.\nAvoid: no battery level numbers, dashboard text, labels, license plates, brands, logos, watermarks, readable marks, warning icons, or readable symbols.",
+          "imageNotes": "主角爸爸在一台老舊的小電動車或電動玩具車旁邊檢查，車燈很暗，主角小女孩在旁邊看著。畫面要呈現「舊車電力不足」，但不能出現電量數字、儀表文字、車牌、標籤或任何可讀文字。",
+          "imageSrc": "/assets/lessons/L231/images/L231-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L231/audio/L231-S04.m4a",
+            "durationMs": 2438,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1000,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1420,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1660,
+                "endMs": 1880
+              }
+            ]
+          }
+        },
+        {
+          "id": "L231-S05",
+          "text": "新書看到一半了。",
+          "spokenText": "新書看到一半了",
+          "focusChar": "新",
+          "displayLines": [
+            "新書看到",
+            "一半了。"
+          ],
+          "imagePrompt": "Use case: illustration-story\nAsset type: L231-S05 lesson image for a children's character-recognition app\nPrimary request: square image / 1:1 composition. Protagonist little girl quietly reads a new book at home or in a classroom; the book is open around the middle, with page thickness on the left and right looking about half and half, and a simple bookmark near the middle.\nVisual cast: protagonist little girl with pink jacket, white shirt, blue skirt, pink shoes, small pink hair clip. Family continuity from L154/L162/L163; L058 style reference only.\nComposition: girl and open book centered, the halfway page position easy to understand, safe margins, calm reading posture.\nStyle: warm watercolor children's textbook illustration, soft light.\nAvoid: no readable book cover, page text, numbers, labels, brand logos, watermarks, school names, captions, or readable marks.",
+          "imageNotes": "主角小女孩坐在家裡或教室安靜看一本新書，書翻到中間位置，左右頁厚度看起來約各一半。可有書籤夾在中間，但書頁與封面不可有可讀文字、數字、品牌或標籤。",
+          "imageSrc": "/assets/lessons/L231/images/L231-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L231/audio/L231-S05.m4a",
+            "durationMs": 3005,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 580
+              },
+              {
+                "charIndex": 1,
+                "startMs": 580,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1540,
+                "endMs": 1630
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1630,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2080,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2540
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L231-G01",
+          "type": "find-character",
+          "sentenceId": "L231-S03",
+          "targetChar": "夠",
+          "prompt": "找出句子裡的「夠」。",
+          "missingIndexes": [
+            6,
+            8
+          ]
+        },
+        {
+          "id": "L231-G02",
+          "type": "teach-character",
+          "sentenceId": "L231-S01",
+          "targetChar": "夠",
+          "targetCharIndex": 5,
+          "prompt": "教小兔子念這個字。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L231/audio/L231-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L231/audio/L231-G02-suffix.m4a"
+          },
+          "missingIndexes": [
+            5
+          ]
+        },
+        {
+          "id": "L231-G03",
+          "type": "missing-character",
+          "sentenceId": "L231-S02",
+          "targetChar": "夠",
+          "prompt": "選出少掉的字。",
+          "missingIndexes": [
+            6
+          ],
+          "options": [
+            {
+              "id": "L231-G03-A",
+              "text": "夠",
+              "correct": true
+            },
+            {
+              "id": "L231-G03-B",
+              "text": "剩",
+              "correct": false
+            },
+            {
+              "id": "L231-G03-C",
+              "text": "只",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L231-G04",
+          "type": "partial-order",
+          "sentenceId": "L231-S05",
+          "targetChar": "新",
+          "prompt": "排出正確的句子。",
+          "chunks": [
+            {
+              "text": "新書",
+              "order": 0
+            },
+            {
+              "text": "看到",
+              "order": 1
+            },
+            {
+              "text": "一半了",
+              "order": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "L231-G04-A",
+              "text": "新書",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L231-G04-B",
+              "text": "看到",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L231-G04-C",
+              "text": "一半了",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ],
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "correctOrder": [
+            "L231-G04-A",
+            "L231-G04-B",
+            "L231-G04-C"
+          ]
+        },
+        {
+          "id": "L231-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L231-S04",
+          "targetChar": "夠",
+          "prompt": "選出你聽到的句子。",
+          "options": [
+            {
+              "id": "L231-G05-A",
+              "text": "舊車的電不夠了。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L231/audio/L231-S04.m4a",
+              "spokenText": "舊車的電不夠了"
+            },
+            {
+              "id": "L231-G05-B",
+              "text": "舊車的電不剩了。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L231/audio/L231-G05-wrong-one.m4a",
+              "spokenText": "舊車的電不剩了"
+            },
+            {
+              "id": "L231-G05-C",
+              "text": "新車的電不夠了。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L231/audio/L231-G05-wrong-two.m4a",
+              "spokenText": "新車的電不夠了"
             }
           ]
         }
