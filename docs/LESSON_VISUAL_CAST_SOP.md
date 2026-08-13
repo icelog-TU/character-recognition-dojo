@@ -61,12 +61,19 @@ Current identity priority:
 
 ## Reference Image Set
 
-The next dedicated visual-reference task should create a small accepted cast set in the L058 style, reviewed by the teacher before being used broadly:
+Current approved cast reference assets:
+
+```text
+public/assets/reference/lesson-cast/godmother.webp
+```
+
+Use `godmother.webp` as the visual identity reference for the protagonist godmother / `乾媽`.
+
+The next dedicated visual-reference task should create the remaining small accepted cast set in the L058 style, reviewed by the teacher before being used broadly:
 
 ```text
 public/assets/reference/lesson-cast/mother.webp
 public/assets/reference/lesson-cast/father.webp
-public/assets/reference/lesson-cast/godmother.webp
 public/assets/reference/lesson-cast/older-brother.webp
 public/assets/reference/lesson-cast/teacher.webp
 public/assets/reference/lesson-cast/protagonist-child.webp
@@ -82,7 +89,7 @@ public/assets/reference/lesson-locations/he-home.webp
 docs/visual-references/lesson-cast.md
 ```
 
-Do not treat these paths as existing until the reference task actually creates and commits them.
+Do not treat the remaining proposed paths as existing until the reference task actually creates and commits them.
 
 ## Location Continuity
 
@@ -143,7 +150,7 @@ Use the recurring mother identity: warm adult family role, home clothing such as
 ```
 
 ```text
-Use the recurring protagonist godmother identity: very tall adult woman in the protagonist girl's trusted family-friend circle, clearly taller than the protagonist mother and teacher, warm but crisp, short or neat medium-length hair, deep green or blue-green jacket or long top, visually distinct from the protagonist mother and from the teacher.
+Use `public/assets/reference/lesson-cast/godmother.webp` as the recurring protagonist godmother / 乾媽 visual identity reference: very tall adult woman in the protagonist girl's trusted family-friend circle, clearly taller than the protagonist mother and teacher, warm but crisp, short or neat medium-length hair, deep green or blue-green jacket or long top, visually distinct from the protagonist mother and from the teacher.
 ```
 
 ```text
