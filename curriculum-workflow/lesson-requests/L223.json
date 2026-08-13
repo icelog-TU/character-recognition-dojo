@@ -1,0 +1,202 @@
+{
+  "id": "L223",
+  "order": 223,
+  "newChars": [
+    "錯"
+  ],
+  "zhuyin": {
+    "錯": "ㄘㄨㄛˋ"
+  },
+  "title": "錯",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production D asset-complete-package for L223. Latest origin/main is complete through L215 and R012, so L216-L222 are provisional dependencies. Production owns request, packet, draft JSON, final images, final sentence audio, charAudio, Stage 4 G02/G05 audio, alignment, and registry status. Release owns production JSON insertion, planner export, ledger update, final verify, merge, and deployment.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L215 plus provisional learned chars 身, 濕, 乾, 服, 褲, 換, 改 plus current target 錯",
+    "provisionalLearnedChars": [
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改"
+    ],
+    "dependsOnLessons": [
+      "L216",
+      "L217",
+      "L218",
+      "L219",
+      "L220",
+      "L221",
+      "L222"
+    ],
+    "requiredCoverageChars": [
+      "錯",
+      "改",
+      "換",
+      "褲",
+      "服",
+      "乾"
+    ],
+    "targetCharMinimumCount": {
+      "錯": 3
+    },
+    "recentTargetMinimumCounts": {
+      "改": 2,
+      "換": 2,
+      "褲": 2,
+      "服": 1,
+      "乾": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and protagonist little girl.",
+      "Teacher must be visually distinct from protagonist mother if used.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, names, school names, badges, battery plus/minus symbols, brands, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 錯 as public/assets/lessons/L223/audio/char-u932f.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L223-S01",
+      "text": "做錯事了，要改過。",
+      "spokenText": "做錯事了要改過",
+      "focusChar": "錯",
+      "displayLines": [
+        "做錯事了，",
+        "要改過。"
+      ],
+      "imageNotes": "男孩同學做錯事後，主角老師或主角媽媽溫和地引導他改過；畫面可以是男孩同學把弄亂的桌子重新整理好，表現做錯後願意改過。若使用老師，老師必須和主角媽媽視覺上不同。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L223-S02",
+      "text": "褲子拿錯了，改天拿去還。",
+      "spokenText": "褲子拿錯了改天拿去還",
+      "focusChar": "錯",
+      "displayLines": [
+        "褲子拿錯了，",
+        "改天拿去還。"
+      ],
+      "imageNotes": "主角小女孩把別人的褲子拿回家了，在家中發現褲子拿錯，主角媽媽提醒她改天拿去學校還給同學。畫面要清楚呈現「拿錯褲子、之後要拿去還」的情境，可用主角小女孩拿著不屬於自己的褲子、旁邊有書包或校服提示學校來源；不可有姓名、文字、數字或標籤。"
+    },
+    {
+      "id": "L223-S03",
+      "text": "穿錯校服了，快換回來。",
+      "spokenText": "穿錯校服了快換回來",
+      "focusChar": "錯",
+      "displayLines": [
+        "穿錯校服了，",
+        "快換回來。"
+      ],
+      "imageNotes": "學校體育課結束後，兩位女同學角色：主角小女孩和女同學，在準備換回校服時發現彼此穿錯校服，需要快換回來。畫面必須是在學校或教室附近的安全換裝前後情境，只呈現發現穿錯與準備更正，不呈現更衣過程；兩位學生都必須是女同學，不要畫成男女同學互換。校服上不可有校名、文字、數字、徽章字樣或標籤。"
+    },
+    {
+      "id": "L223-S04",
+      "text": "乾電池放錯邊了。",
+      "spokenText": "乾電池放錯邊了",
+      "focusChar": "錯",
+      "displayLines": [
+        "乾電池",
+        "放錯邊了。"
+      ],
+      "imageNotes": "主角爸爸和主角小女孩在家中看著一個小玩具的電池盒，乾電池放錯方向，所以玩具沒有動。畫面要清楚表現乾電池放錯邊，但電池盒、玩具、電池上不可有文字、正負號、數字、品牌或標籤。"
+    },
+    {
+      "id": "L223-S05",
+      "text": "褲子濕了，先換乾的。",
+      "spokenText": "褲子濕了先換乾的",
+      "focusChar": "換",
+      "displayLines": [
+        "褲子濕了，",
+        "先換乾的。"
+      ],
+      "imageNotes": "主角小女孩的褲子被水弄濕，主角媽媽提醒她先換乾的褲子；旁邊可有乾的褲子放在椅子上。畫面只呈現提醒和準備換的安全情境，不呈現更衣過程；不可有文字、數字或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L223-G01",
+      "type": "find-character",
+      "sentenceId": "L223-S04",
+      "targetChar": "錯",
+      "reason": "「放錯邊」是本課清楚用法，目標字明確。",
+      "missingIndexes": [
+        5
+      ]
+    },
+    "G02": {
+      "id": "L223-G02",
+      "type": "teach-character",
+      "sentenceId": "L223-S01",
+      "targetChar": "錯",
+      "targetCharIndex": 1,
+      "prefixText": "做",
+      "suffixText": "事了要改過",
+      "missingIndexes": [
+        1
+      ]
+    },
+    "G03": {
+      "id": "L223-G03",
+      "type": "missing-character",
+      "sentenceId": "L223-S03",
+      "targetChar": "錯",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "錯",
+        "換",
+        "改"
+      ]
+    },
+    "G04": {
+      "id": "L223-G04",
+      "type": "partial-order",
+      "sentenceId": "L223-S02",
+      "chunks": [
+        "褲子拿錯了",
+        "改天",
+        "拿去還"
+      ],
+      "targetChar": "錯",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "G05": {
+      "id": "L223-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L223-S05",
+      "correctText": "褲子濕了，先換乾的。",
+      "wrongOneText": "褲子乾了，先換乾的。",
+      "wrongTwoText": "褲子濕了，先換濕的。",
+      "targetChar": "換",
+      "correctSpokenText": "褲子濕了先換乾的",
+      "wrongOneSpokenText": "褲子乾了先換乾的",
+      "wrongTwoSpokenText": "褲子濕了先換濕的"
+    }
+  }
+}
