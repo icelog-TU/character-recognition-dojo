@@ -1,0 +1,206 @@
+{
+  "id": "L261",
+  "order": 261,
+  "newChars": [
+    "才"
+  ],
+  "zhuyin": {
+    "才": "ㄘㄞˊ"
+  },
+  "title": "才",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Approved handoff for Production C. Latest origin/main production curriculum is complete through L257; L258-L260 are provisional dependencies, so this package is blocked from merge until those dependencies enter main. Teach 才 mainly as conditional/causal usage; keep S04 as accepted time usage. Use 睡著, not 睡着. Treat 病倒 and 假死 gently; no death, injury, emergency, horror, or medical panic imagery.",
+  "generationConstraints": {
+    "allowedBoundary": "Use latest origin/main learned characters through L257 plus provisional learned chars [倒, 病, 假] plus current new char 才.",
+    "provisionalLearnedChars": [
+      "倒",
+      "病",
+      "假"
+    ],
+    "requiredCoverageChars": [
+      "才",
+      "假",
+      "病",
+      "倒",
+      "睡",
+      "死"
+    ],
+    "targetCharMinimumCount": {
+      "才": 3
+    },
+    "recentTargetMinimumCounts": {
+      "假": 2,
+      "病": 2,
+      "倒": 2,
+      "睡": 1,
+      "死": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "請",
+      "醫",
+      "院",
+      "藥",
+      "診",
+      "醒",
+      "裝",
+      "騙",
+      "救",
+      "傷",
+      "休",
+      "息"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, readable marks, horror imagery, injury, death imagery, emergency rescue, or medical panic.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 才 as public/assets/lessons/L261/audio/char-u624d.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L261-S01",
+      "text": "太累了，才會病倒。",
+      "spokenText": "太累了才會病倒",
+      "focusChar": "才",
+      "displayLines": [
+        "太累了，",
+        "才會病倒。"
+      ],
+      "imageNotes": "主角小女孩過度玩耍或活動後非常累，坐在家裡休息，看起來快要病倒但仍安全。畫面要表現太累所以可能生病的因果，不可呈現重病、急救、死亡、受傷或恐怖；主角小女孩身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L261-S02",
+      "text": "早點睡，才不會累。",
+      "spokenText": "早點睡才不會累",
+      "focusChar": "才",
+      "displayLines": [
+        "早點睡，",
+        "才不會累。"
+      ],
+      "imageNotes": "主角媽媽在晚上提醒主角小女孩早點睡，主角小女孩在床邊準備睡覺。主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity；畫面溫和，不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L261-S03",
+      "text": "只有生病，才可以放病假。",
+      "spokenText": "只有生病才可以放病假",
+      "focusChar": "病",
+      "displayLines": [
+        "只有生病，",
+        "才可以放病假。"
+      ],
+      "imageNotes": "主角小女孩在家裡生病休息，主角媽媽在旁邊照顧，畫面要表現只有真的生病才可以在家放病假。不可出現學校或醫院文字標示；不可呈現重病、急救、死亡、受傷或恐怖；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L261-S04",
+      "text": "才回到家，就倒在床上睡著了。",
+      "spokenText": "才回到家就倒在床上睡著了",
+      "focusChar": "睡",
+      "displayLines": [
+        "才回到家，",
+        "就倒在床上睡著了。"
+      ],
+      "imageNotes": "主角小女孩剛回到家，就倒在床上睡著，畫面要看出她剛進家門或剛放下東西後非常累。不要畫成跌倒受傷；主角小女孩身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L261-S05",
+      "text": "小狗不想玩了，才會倒下假死。",
+      "spokenText": "小狗不想玩了才會倒下假死",
+      "focusChar": "假",
+      "displayLines": [
+        "小狗不想玩了，",
+        "才會倒下假死。"
+      ],
+      "imageNotes": "家裡或戶外安全空地，小狗不想繼續玩，故意倒下假死，主角小女孩在旁邊看著牠。畫面必須明確是小狗玩遊戲裝死，不可呈現真的死亡、受傷、急救、悲傷或恐怖；不可有文字、數字、標籤或水印。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L261-G01",
+      "type": "find-character",
+      "sentenceId": "L261-S02",
+      "targetChar": "才",
+      "reason": "「早點睡，才不會累」是本課核心條件用法，語意清楚。"
+    },
+    {
+      "id": "L261-G02",
+      "type": "teach-character",
+      "sentenceId": "L261-S01",
+      "targetChar": "才",
+      "targetCharIndex": 3,
+      "teachAudio": {
+        "prefixText": "太累了",
+        "suffixText": "會病倒",
+        "prefixSrc": "/assets/lessons/L261/audio/L261-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L261/audio/L261-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L261-G03",
+      "type": "missing-character",
+      "sentenceId": "L261-S03",
+      "targetChar": "病",
+      "missingIndexes": [
+        3,
+        8
+      ],
+      "options": [
+        "病",
+        "假",
+        "才"
+      ]
+    },
+    {
+      "id": "L261-G04",
+      "type": "partial-order",
+      "sentenceId": "L261-S04",
+      "chunks": [
+        "才回到家",
+        "就倒在床上",
+        "睡著了"
+      ]
+    },
+    {
+      "id": "L261-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L261-S05",
+      "correctText": "小狗不想玩了，才會倒下假死。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "小狗很想玩了，才會倒下假死。",
+          "audioSrc": "/assets/lessons/L261/audio/L261-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "小狗不想玩了，就會倒下睡著。",
+          "audioSrc": "/assets/lessons/L261/audio/L261-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "expectedStatus": "ready-blocked-by-dependency until L258-L260 are merged to main",
+    "allowedCharacterAudit": "PASS in handoff; Production rechecked against origin/main L001-L257 plus provisional dependencies and current 才.",
+    "coverage": {
+      "才": 5,
+      "假": 2,
+      "病": 3,
+      "倒": 3,
+      "睡": 2,
+      "死": 1
+    }
+  }
+}
