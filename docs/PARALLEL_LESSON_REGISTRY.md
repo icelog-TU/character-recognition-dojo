@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L257 | 睡 / normal lesson | claimed | Production C | codex/l257-complete-package / 51029c12 | L251:重, L252:沙, L253:張, L254:椅, L255:累, L256:死 | ["重","沙","張","椅","累","死"] | curriculum-workflow/lesson-requests/L257.json; curriculum-workflow/generated/L257-generation-packet.md | public/assets/lessons/L257/images/; public/assets/lessons/L257/audio/ | accepted handoff and starting complete package; blocked from merge until L251-L256 are in main |
+| L257 | 睡 / normal lesson | ready-blocked-by-dependency | Production C | codex/l257-complete-package / 4a51fb39 | L251:重, L252:沙, L253:張, L254:椅, L255:累, L256:死 | ["重","沙","張","椅","累","死"] | curriculum-workflow/lesson-requests/L257.json; curriculum-workflow/generated/L257-generation-packet.md | public/assets/lessons/L257/images/; public/assets/lessons/L257/audio/ | complete package pushed; blocked from merge until L251-L256 are in main |
 
 ## Status Values
 
