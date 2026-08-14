@@ -1,0 +1,228 @@
+{
+  "id": "L243",
+  "order": 243,
+  "newChars": [
+    "忙"
+  ],
+  "zhuyin": {
+    "忙": "ㄇㄤˊ"
+  },
+  "title": "忙",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L243 sentence set. Production D prepares a complete lesson-local package from latest origin/main. Latest main includes L234:貴; L235-L242 and review modules R013/R014 are not merged at request creation, so this package is blocked from Release until those dependencies are integrated.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L234 plus provisional L235-L242 learned characters and current target 忙",
+    "provisionalLearnedChars": [
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作"
+    ],
+    "dependsOnLessons": [
+      "L235",
+      "L236",
+      "L237",
+      "L238",
+      "L239",
+      "L240",
+      "L241",
+      "L242"
+    ],
+    "dependsOnReviews": [
+      "R013",
+      "R014"
+    ],
+    "requiredCoverageChars": [
+      "忙",
+      "作",
+      "工",
+      "具",
+      "夜",
+      "市"
+    ],
+    "targetCharMinimumCount": {
+      "忙": 3
+    },
+    "recentTargetMinimumCounts": {
+      "作": 2,
+      "工": 2,
+      "具": 2,
+      "夜": 1,
+      "市": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "幫",
+      "急",
+      "腳",
+      "板",
+      "拖",
+      "業",
+      "碌",
+      "招",
+      "牌",
+      "字",
+      "號",
+      "標",
+      "籤"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother and protagonist little girl.",
+      "Teacher must be designed separately from protagonist mother and must not use mother-like palette or family-scene identity.",
+      "Every human prompt must explicitly name the role identity.",
+      "Night market shop owners, shop workers, and car-wash workers must be visually distinct from protagonist mother and recurring teacher.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, price tags, signboards, vehicle plates, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 忙 as public/assets/lessons/L243/audio/char-u5fd9.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L243-S01",
+      "text": "夜市開了，店家忙著工作。",
+      "spokenText": "夜市開了店家忙著工作",
+      "focusChar": "忙",
+      "displayLines": [
+        "夜市開了，",
+        "店家忙著工作。"
+      ],
+      "imageNotes": "夜市剛開始營業，夜市店家老闆或店員忙著整理攤位、擺放商品或準備開店工作。可有主角小女孩和主角媽媽從安全邊界外看著夜市開始熱鬧，但畫面重點是店家忙著工作。人物身份要明確：夜市店家老闆或店員、主角小女孩、主角媽媽。不可有文字、數字、招牌、價格牌或標籤。"
+    },
+    {
+      "id": "L243-S02",
+      "text": "我忙著做手作面具。",
+      "spokenText": "我忙著做手作面具",
+      "focusChar": "忙",
+      "displayLines": [
+        "我忙著做",
+        "手作面具。"
+      ],
+      "imageNotes": "主角小女孩坐在桌前，專心忙著用紙、顏色材料和安全剪貼工具做一個手作面具。面具可以已經有形狀但不能有文字、數字或標籤。畫面重點是孩子忙著做手作，不要出現恐怖面具。"
+    },
+    {
+      "id": "L243-S03",
+      "text": "工人拿著工具，忙著洗車。",
+      "spokenText": "工人拿著工具忙著洗車",
+      "focusChar": "忙",
+      "displayLines": [
+        "工人拿著工具，",
+        "忙著洗車。"
+      ],
+      "imageNotes": "洗車場或家門口安全場景，一位洗車工人拿著洗車工具，忙著清洗車子。工具可包含海綿、水桶、刷子或水管，但不可有品牌文字、車牌號碼、招牌或標籤。人物身份要明確：洗車工人。"
+    },
+    {
+      "id": "L243-S04",
+      "text": "手作道具都放回盒子裡。",
+      "spokenText": "手作道具都放回盒子裡",
+      "focusChar": "具",
+      "displayLines": [
+        "手作道具",
+        "都放回盒子裡。"
+      ],
+      "imageNotes": "主角小女孩和老師在活動結束後，把桌上的手作道具放回盒子裡。老師要依 LESSON_VISUAL_CAST_SOP 設計，不能長得像主角媽媽；不要用媽媽的黃色或珊瑚紅配色，不要像家庭場景。畫面重點是手作道具被收進盒子。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L243-S05",
+      "text": "雨停了，媽媽忙著擦地。",
+      "spokenText": "雨停了媽媽忙著擦地",
+      "focusChar": "忙",
+      "displayLines": [
+        "雨停了，",
+        "媽媽忙著擦地。"
+      ],
+      "imageNotes": "家裡門口或室內靠近門邊的地面有雨後帶進來的水，主角媽媽忙著用布或拖把擦地，主角小女孩站在旁邊。主角媽媽要依 L154/L162/L163 主角家庭 reference，不可畫成老師。畫面重點是雨停後媽媽忙著擦地。不可有文字、數字或標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L243-G01",
+      "type": "find-character",
+      "sentenceId": "L243-S01",
+      "targetChar": "忙",
+      "reason": "「店家忙著工作」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L243-G02",
+      "type": "teach-character",
+      "sentenceId": "L243-S02",
+      "targetChar": "忙",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "我",
+        "suffixText": "著做手作面具"
+      }
+    },
+    {
+      "id": "L243-G03",
+      "type": "missing-character",
+      "sentenceId": "L243-S03",
+      "targetChar": "忙",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "忙",
+        "工",
+        "具"
+      ]
+    },
+    {
+      "id": "L243-G04",
+      "type": "partial-order",
+      "sentenceId": "L243-S04",
+      "chunks": [
+        "手作道具",
+        "都放回",
+        "盒子裡"
+      ]
+    },
+    {
+      "id": "L243-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L243-S05",
+      "correctText": "雨停了，媽媽忙著擦地。",
+      "wrongOneText": "雨停了，媽媽忙著洗衣。",
+      "wrongTwoText": "雨停了，爸爸忙著擦地。"
+    }
+  ],
+  "dependsOnLessons": [
+    "L235",
+    "L236",
+    "L237",
+    "L238",
+    "L239",
+    "L240",
+    "L241",
+    "L242"
+  ],
+  "dependsOnReviews": [
+    "R013",
+    "R014"
+  ],
+  "provisionalLearnedChars": [
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作"
+  ],
+  "productionNotes": "L243 is a complete package candidate only. It must remain blocked from Release until L235-L242 and required review modules R013/R014 are present in latest origin/main. Release owns production JSON insertion, planner export, ledger update, final verify, merge, and deployment."
+}
