@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L254 | 椅 / normal lesson | claimed | Production D | codex/l254-complete-package / 8df91610 | R013, R014, L241 工, L242 作, L243 忙, L244 幫, L245 急, L246 腳, L247 步, L248 跳, L249 床, L250 搬, L251 重, L252 沙, L253 張 | ["工","作","忙","幫","急","腳","步","跳","床","搬","重","沙","張"] | curriculum-workflow/lesson-requests/L254.json, curriculum-workflow/generated/L254-generation-packet.md | public/assets/lessons/L254/images/, public/assets/lessons/L254/audio/ | accepted handoff and starting complete package; release is dependency-blocked until R013/R014 and L241-L253 are merged to main |
 
 ## Status Values
 
