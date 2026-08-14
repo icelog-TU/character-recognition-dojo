@@ -1,0 +1,222 @@
+{
+  "id": "L256",
+  "order": 256,
+  "newChars": [
+    "死"
+  ],
+  "zhuyin": {
+    "死": "ㄙˇ"
+  },
+  "title": "死",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete package from approved handoff. Latest origin/main production curriculum is complete through L250. L256 is blocked from production JSON until L251-L255 are in main. Treat 死 safely: no real death, bodies, funerals, horror, injury, or disaster in images.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L250 plus provisional learned chars 重 沙 張 椅 累 plus current target 死",
+    "dependsOnLessons": [
+      "L251",
+      "L252",
+      "L253",
+      "L254",
+      "L255"
+    ],
+    "provisionalLearnedChars": [
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累"
+    ],
+    "requiredCoverageChars": [
+      "死",
+      "累",
+      "椅",
+      "張",
+      "沙",
+      "重"
+    ],
+    "targetCharMinimumCount": {
+      "死": 3
+    },
+    "recentTargetMinimumCounts": {
+      "累": 2,
+      "椅": 2,
+      "張": 2,
+      "沙": 1,
+      "重": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "爆",
+      "噴",
+      "熔",
+      "岩",
+      "休",
+      "息",
+      "睡",
+      "覺",
+      "疲",
+      "勞",
+      "舒",
+      "服"
+    ],
+    "forbiddenDisplayPhrases": [
+      "死人",
+      "死不要臉"
+    ],
+    "safetyRules": [
+      "The target character 死 is sensitive. Display text is limited to safe idioms and concrete vocabulary.",
+      "Images must not show death, dead bodies, funerals, mourning, horror, injury, collapse, disaster, frightening faces, or dangerous scenes.",
+      "累死了 and 累得半死 are exaggerated spoken expressions; show only ordinary tiredness.",
+      "死棋 should show a stuck board-game position, not strong negativity or violence.",
+      "死火山 should be a quiet extinct volcano landscape with no eruption, lava, flame, smoke, injury, or disaster."
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist little girl, mother, and father.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, price tags, store signs, book text, toy labels, clock numbers, license plates, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 死 as public/assets/lessons/L256/audio/char-u6b7b.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L256-S01",
+      "text": "這張沙發椅太重，搬到累死了。",
+      "spokenText": "這張沙發椅太重搬到累死了",
+      "focusChar": "死",
+      "displayLines": [
+        "這張沙發椅太重，",
+        "搬到累死了。"
+      ],
+      "imageNotes": "主角爸爸和搬家工人在家裡搬一張很重的沙發椅，搬完後主角爸爸看起來非常累、坐下喘口氣或擦汗。畫面要表現「累死了」是誇張口語，不可呈現死亡、受傷或恐怖畫面；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L256-S02",
+      "text": "沙地上跑來跑去，累得半死。",
+      "spokenText": "沙地上跑來跑去累得半死",
+      "focusChar": "累",
+      "displayLines": [
+        "沙地上跑來跑去，",
+        "累得半死。"
+      ],
+      "imageNotes": "主角小女孩在海邊沙地上跑來跑去後，坐在沙地邊休息，看起來很累但安全。畫面要表現「累得半死」是誇張口語，不可呈現死亡、受傷、昏倒或恐怖畫面；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L256-S03",
+      "text": "爸爸下了一步死棋。",
+      "spokenText": "爸爸下了一步死棋",
+      "focusChar": "死",
+      "displayLines": [
+        "爸爸下了",
+        "一步死棋。"
+      ],
+      "imageNotes": "主角爸爸和主角小女孩在家裡下棋，棋盤上爸爸剛下了一步很糟的棋，主角小女孩看著棋盤露出驚訝或思考表情。畫面重點是棋局，不要出現任何死亡、恐怖或暴力意象；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L256-S04",
+      "text": "死火山裡面，早就沒有火了。",
+      "spokenText": "死火山裡面早就沒有火了",
+      "focusChar": "死",
+      "displayLines": [
+        "死火山裡面，",
+        "早就沒有火了。"
+      ],
+      "imageNotes": "自然地景中的安靜死火山，火山口內沒有火、沒有煙、沒有爆發，周圍可以有綠地或山石，畫面平靜安全。不可畫火山爆發、災難、岩漿、火焰、受傷人物；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L256-S05",
+      "text": "那張小椅子不能坐了。",
+      "spokenText": "那張小椅子不能坐了",
+      "focusChar": "椅",
+      "displayLines": [
+        "那張小椅子",
+        "不能坐了。"
+      ],
+      "imageNotes": "家裡一張小椅子明顯老舊或椅腳不穩，主角媽媽提醒主角小女孩不要坐。主角媽媽身份要符合 L154/L162/L163 family continuity，不可畫成老師；畫面要安全，不要畫孩子跌倒或受傷；不可有文字、數字、標籤或水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L256-G01",
+      "type": "find-character",
+      "sentenceId": "L256-S04",
+      "targetChar": "死",
+      "reason": "「死火山」是本課安全且具體的固定詞，目標字清楚。"
+    },
+    "G02": {
+      "id": "L256-G02",
+      "type": "teach-character",
+      "sentenceId": "L256-S03",
+      "targetChar": "死",
+      "targetCharIndex": 6,
+      "prefixText": "爸爸下了一步",
+      "suffixText": "棋",
+      "missingIndexes": [
+        6
+      ]
+    },
+    "G03": {
+      "id": "L256-G03",
+      "type": "missing-character",
+      "sentenceId": "L256-S01",
+      "targetChar": "死",
+      "missingIndexes": [
+        10
+      ],
+      "options": [
+        "死",
+        "累",
+        "重"
+      ]
+    },
+    "G04": {
+      "id": "L256-G04",
+      "type": "partial-order",
+      "sentenceId": "L256-S02",
+      "targetChar": "累",
+      "chunks": [
+        "沙地上",
+        "跑來跑去",
+        "累得半死"
+      ]
+    },
+    "G05": {
+      "id": "L256-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L256-S05",
+      "targetChar": "椅",
+      "correctText": "那張小椅子不能坐了。",
+      "wrongOneText": "那張小椅子可以坐了。",
+      "wrongTwoText": "那張小椅子不能搬了。",
+      "correctSpokenText": "那張小椅子不能坐了",
+      "wrongOneSpokenText": "那張小椅子可以坐了",
+      "wrongTwoSpokenText": "那張小椅子不能搬了"
+    }
+  },
+  "dependsOnLessons": [
+    "L251",
+    "L252",
+    "L253",
+    "L254",
+    "L255"
+  ],
+  "provisionalLearnedChars": [
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累"
+  ],
+  "productionNotes": "Do not add L256 to src/curriculum/sample-lessons.json until L251-L255 are merged."
+}
