@@ -1,0 +1,237 @@
+{
+  "id": "L239",
+  "order": 239,
+  "newChars": [
+    "夜"
+  ],
+  "zhuyin": {
+    "夜": "ㄧㄝˋ"
+  },
+  "title": "夜",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production D complete package. Latest origin/main at handoff is complete through L233. L234-L238 are provisional dependencies; Release owns ordered production JSON insertion, planner export, ledger update, final verify, merge, and deploy.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L233 plus provisional learned chars 貴, 賣, 店, 場, 市 and current target 夜",
+    "provisionalLearnedChars": [
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市"
+    ],
+    "dependsOnLessons": [
+      "L234",
+      "L235",
+      "L236",
+      "L237",
+      "L238"
+    ],
+    "requiredCoverageChars": [
+      "夜",
+      "市",
+      "場",
+      "店",
+      "賣",
+      "貴"
+    ],
+    "targetCharMinimumCount": {
+      "夜": 3
+    },
+    "recentTargetMinimumCounts": {
+      "市": 2,
+      "場": 2,
+      "店": 2,
+      "賣": 1,
+      "貴": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "旁",
+      "超",
+      "商",
+      "便",
+      "宜",
+      "付",
+      "元",
+      "角",
+      "零",
+      "玻",
+      "璃",
+      "罐",
+      "裝",
+      "嗎",
+      "件",
+      "碗",
+      "條",
+      "具",
+      "價",
+      "員",
+      "主",
+      "區",
+      "城",
+      "景"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother and protagonist little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "Vendors, shopkeepers, passersby, and store roles must look distinct from protagonist mother and teacher.",
+      "No written text, numbers, signs, price lists, labels, zhuyin, watermarks, logos, brands, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 夜 as public/assets/lessons/L239/audio/char-u591c.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L239-S01",
+      "text": "晚上，媽媽帶我去夜市。",
+      "spokenText": "晚上媽媽帶我去夜市",
+      "focusChar": "夜",
+      "displayLines": [
+        "晚上，媽媽",
+        "帶我去夜市。"
+      ],
+      "imageNotes": "主角媽媽帶主角小女孩晚上去夜市，夜市入口和燈光很熱鬧，但不能有任何可讀文字或招牌。畫面要清楚呈現「晚上去夜市」。主角媽媽與主角小女孩使用既有家庭角色設定。不可有文字、數字、招牌、價格、品牌或標籤。"
+    },
+    {
+      "id": "L239-S02",
+      "text": "夜市裡有人賣帽子。",
+      "spokenText": "夜市裡有人賣帽子",
+      "focusChar": "夜",
+      "displayLines": [
+        "夜市裡",
+        "有人賣帽子。"
+      ],
+      "imageNotes": "夜市裡有帽子攤，攤販正在賣帽子，主角小女孩和主角媽媽可在旁邊看帽子。攤販是清楚的夜市攤販角色，不能長得像主角媽媽或老師。帽子攤不能有可讀文字、數字、價格、品牌或標籤。"
+    },
+    {
+      "id": "L239-S03",
+      "text": "夜裡的球場很亮。",
+      "spokenText": "夜裡的球場很亮",
+      "focusChar": "場",
+      "displayLines": [
+        "夜裡的球場",
+        "很亮。"
+      ],
+      "imageNotes": "夜裡的球場開著明亮燈光，球場空間清楚可見，可有幾個孩子或路人在安全區域活動，但不要有比賽號碼或文字標示。畫面重點是「夜裡的球場很亮」。不可有文字、數字、招牌或標籤。"
+    },
+    {
+      "id": "L239-S04",
+      "text": "球場邊有很多店家。",
+      "spokenText": "球場邊有很多店家",
+      "focusChar": "店",
+      "displayLines": [
+        "球場邊",
+        "有很多店家。"
+      ],
+      "imageNotes": "球場邊有好幾家小店或攤位，店家外觀各不相同，附近可見球場與夜間活動人群。店家角色可以是多位不同攤販或店主，不能都長得像主角媽媽或老師。畫面要呈現「球場邊有很多店家」。不可有文字、數字、招牌、價格、品牌或標籤。"
+    },
+    {
+      "id": "L239-S05",
+      "text": "這家店太貴了，不要進去。",
+      "spokenText": "這家店太貴了不要進去",
+      "focusChar": "貴",
+      "displayLines": [
+        "這家店太貴了，",
+        "不要進去。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽站在一家店門口外，媽媽看著店裡商品和手上的錢，溫和地提醒這家店太貴了，不要進去。店裡可見衣服或帽子等商品，但不能有價格或標籤。畫面要清楚呈現「覺得這家店太貴，所以不要進去」。不可有文字、數字、招牌、價格、品牌或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L239-G01",
+      "type": "find-character",
+      "sentenceId": "L239-S02",
+      "targetChar": "夜",
+      "reason": "「夜市」是本課核心用法，目標字清楚。",
+      "missingIndexes": [
+        0
+      ]
+    },
+    "G02": {
+      "id": "L239-G02",
+      "type": "teach-character",
+      "sentenceId": "L239-S01",
+      "targetChar": "夜",
+      "targetCharIndex": 7,
+      "prefixText": "晚上媽媽帶我去",
+      "suffixText": "市",
+      "missingIndexes": [
+        7
+      ]
+    },
+    "G03": {
+      "id": "L239-G03",
+      "type": "missing-character",
+      "sentenceId": "L239-S03",
+      "targetChar": "夜",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "夜",
+        "市",
+        "場"
+      ]
+    },
+    "G04": {
+      "id": "L239-G04",
+      "type": "partial-order",
+      "sentenceId": "L239-S04",
+      "chunks": [
+        "球場邊",
+        "有很多",
+        "店家"
+      ],
+      "targetChar": "店",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "G05": {
+      "id": "L239-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L239-S05",
+      "correctText": "這家店太貴了，不要進去。",
+      "wrongOneText": "這家店不貴了，不要進去。",
+      "wrongTwoText": "這家店太貴了，不要出去。",
+      "targetChar": "貴",
+      "correctSpokenText": "這家店太貴了不要進去",
+      "wrongOneSpokenText": "這家店不貴了不要進去",
+      "wrongTwoSpokenText": "這家店太貴了不要出去"
+    }
+  },
+  "dependsOnLessons": [
+    "L234",
+    "L235",
+    "L236",
+    "L237",
+    "L238"
+  ],
+  "provisionalLearnedChars": [
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市"
+  ],
+  "productionNotes": "Dependency-blocked complete package candidate. Do not leave shared-state integration changes in Production final package unless dependencies are merged and Release requests it."
+}
