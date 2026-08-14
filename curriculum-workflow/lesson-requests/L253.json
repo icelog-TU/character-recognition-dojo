@@ -1,0 +1,291 @@
+{
+  "id": "L253",
+  "order": 253,
+  "newChars": [
+    "張"
+  ],
+  "zhuyin": {
+    "張": "ㄓㄤ"
+  },
+  "title": "張",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C accepted L253 handoff. Origin/main currently contains production curriculum through L240 and review modules through R012; R013/R014 and L241-L252 are not in production JSON, so this package is blocked from merge until those dependencies land.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L240 plus provisional learned chars 工, 作, 忙, 幫, 急, 腳, 步, 跳, 床, 搬, 重, 沙 plus current target 張",
+    "provisionalLearnedChars": [
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙"
+    ],
+    "dependsOnLessons": [
+      "L241",
+      "L242",
+      "L243",
+      "L244",
+      "L245",
+      "L246",
+      "L247",
+      "L248",
+      "L249",
+      "L250",
+      "L251",
+      "L252"
+    ],
+    "dependsOnReviewModules": [
+      "R013",
+      "R014"
+    ],
+    "requiredCoverageChars": [
+      "張",
+      "沙",
+      "重",
+      "搬",
+      "床",
+      "跳"
+    ],
+    "targetCharMinimumCount": {
+      "張": 3
+    },
+    "recentTargetMinimumCounts": {
+      "沙": 2,
+      "重": 2,
+      "搬": 2,
+      "床": 1,
+      "跳": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "椅",
+      "輕",
+      "慢",
+      "踢",
+      "板",
+      "拖",
+      "業",
+      "碌",
+      "招",
+      "牌",
+      "字",
+      "號",
+      "標",
+      "籤",
+      "趕",
+      "救",
+      "診",
+      "條",
+      "踏",
+      "印",
+      "赤",
+      "繩",
+      "差",
+      "跌",
+      "睡",
+      "覺",
+      "躺",
+      "單",
+      "墊",
+      "東",
+      "西",
+      "灘",
+      "桶"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, picture signatures, box labels, vehicle plates, store signs, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 張 as public/assets/lessons/L253/audio/char-u5f35.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L253-S01",
+      "text": "床頭上有一張畫。",
+      "spokenText": "床頭上有一張畫",
+      "focusChar": "張",
+      "displayLines": [
+        "床頭上",
+        "有一張畫。"
+      ],
+      "imageNotes": "主角小女孩的房間場景，床頭上方或床頭邊有一張畫。畫本身可以是簡單圖案或風景，但畫上不可有文字、數字、簽名、標籤或水印。人物若出現要明確：主角小女孩。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L253-S02",
+      "text": "桌上放著很多筆和紙張。",
+      "spokenText": "桌上放著很多筆和紙張",
+      "focusChar": "張",
+      "displayLines": [
+        "桌上放著",
+        "很多筆和紙張。"
+      ],
+      "imageNotes": "桌面場景，桌上放著很多筆和幾張紙張，像是畫畫或寫字前的準備。紙張必須是空白或只有無文字的色塊/圖形，不可有文字、數字、注音、品牌或標籤。可以有主角小女孩在桌邊準備使用。人物若出現要明確：主角小女孩。"
+    },
+    {
+      "id": "L253-S03",
+      "text": "沙發邊有一張桌子。",
+      "spokenText": "沙發邊有一張桌子",
+      "focusChar": "張",
+      "displayLines": [
+        "沙發邊有",
+        "一張桌子。"
+      ],
+      "imageNotes": "家裡客廳場景，沙發旁邊有一張桌子。畫面要清楚呈現沙發和一張桌子的相對位置。人物可不出現；若出現，人物身份要明確：主角小女孩或主角媽媽。不可有文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L253-S04",
+      "text": "沙發太重，要等搬家工人來搬。",
+      "spokenText": "沙發太重要等搬家工人來搬",
+      "focusChar": "搬",
+      "displayLines": [
+        "沙發太重，",
+        "要等搬家工人來搬。"
+      ],
+      "imageNotes": "搬家場景，一張沙發太重，主角家庭在旁邊等待搬家工人來搬。搬家工人可以準備搬沙發，但不要危險或受傷。人物身份要明確：搬家工人、主角爸爸或主角媽媽、主角小女孩。不可有文字、數字、車牌、品牌、箱子標籤或招牌。"
+    },
+    {
+      "id": "L253-S05",
+      "text": "河馬太重了，跳不起來。",
+      "spokenText": "河馬太重了跳不起來",
+      "focusChar": "重",
+      "displayLines": [
+        "河馬太重了，",
+        "跳不起來。"
+      ],
+      "imageNotes": "溫和有趣的動物場景，一隻河馬因為身體很重，試著跳但跳不起來。畫面可略帶幽默，不要嘲笑人類體重，不要危險或受傷。可以在河邊、草地或動物園感覺的自然環境，但不可有文字、數字、招牌或標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L253-G01",
+      "type": "find-character",
+      "sentenceId": "L253-S03",
+      "targetChar": "張",
+      "reason": "「一張桌子」是本課核心量詞用法，目標字清楚。"
+    },
+    {
+      "id": "L253-G02",
+      "type": "teach-character",
+      "sentenceId": "L253-S01",
+      "targetChar": "張",
+      "targetCharIndex": 5,
+      "teachAudioFragments": {
+        "prefixText": "床頭上有一",
+        "suffixText": "畫"
+      }
+    },
+    {
+      "id": "L253-G03",
+      "type": "missing-character",
+      "sentenceId": "L253-S02",
+      "targetChar": "張",
+      "missingIndexes": [
+        9
+      ],
+      "options": [
+        "張",
+        "沙",
+        "重"
+      ]
+    },
+    {
+      "id": "L253-G04",
+      "type": "partial-order",
+      "sentenceId": "L253-S04",
+      "chunks": [
+        "沙發太重",
+        "要等搬家工人",
+        "來搬"
+      ]
+    },
+    {
+      "id": "L253-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L253-S05",
+      "targetChar": "重",
+      "correctText": "河馬太重了，跳不起來。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "小馬太重了，跳不起來。"
+        },
+        {
+          "id": "wrong-two",
+          "text": "河馬太重了，跑不起來。"
+        }
+      ]
+    }
+  ],
+  "dependsOnLessons": [
+    "L241",
+    "L242",
+    "L243",
+    "L244",
+    "L245",
+    "L246",
+    "L247",
+    "L248",
+    "L249",
+    "L250",
+    "L251",
+    "L252"
+  ],
+  "dependsOnReviewModules": [
+    "R013",
+    "R014"
+  ],
+  "provisionalLearnedChars": [
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙"
+  ],
+  "productionNotes": {
+    "status": "ready-blocked-by-dependency-and-review",
+    "originMainBoundary": "L240 / R012",
+    "requiredBeforeMerge": [
+      "R013",
+      "R014",
+      "L241",
+      "L242",
+      "L243",
+      "L244",
+      "L245",
+      "L246",
+      "L247",
+      "L248",
+      "L249",
+      "L250",
+      "L251",
+      "L252"
+    ],
+    "sharedStateHandling": "Do not leave src/curriculum/sample-lessons.json, public/tools/planner-data.json, or docs/CURRICULUM_LEDGER.md changed on this production package branch unless dependencies and required reviews are already merged."
+  }
+}
