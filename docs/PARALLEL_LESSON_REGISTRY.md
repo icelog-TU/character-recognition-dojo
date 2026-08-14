@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L244 | 幫 / normal lesson | claimed | Production A | codex/l244-complete-package / 19794889 | L235:賣, L236:店, L237:場, L238:市, L239:夜, L240:具, L241:工, L242:作, L243:忙; R013, R014 | ["賣","店","場","市","夜","具","工","作","忙"] | curriculum-workflow/lesson-requests/L244.json; curriculum-workflow/generated/L244-generation-packet.md | public/assets/lessons/L244/images/; public/assets/lessons/L244/audio/ | accepted handoff and starting complete package; blocked from merge until missing lessons and R013/R014 enter main |
 
 ## Status Values
 
