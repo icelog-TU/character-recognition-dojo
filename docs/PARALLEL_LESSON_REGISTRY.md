@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L234 | 貴 / normal lesson | claimed | Production C | codex/l234-complete-package / 9cc1b70e | L232:錢, L233:買 | ["錢","買"] | curriculum-workflow/lesson-requests/L234.json; curriculum-workflow/generated/L234-generation-packet.md | public/assets/lessons/L234/images/; public/assets/lessons/L234/audio/ | accepted handoff and starting complete package |
+| L234 | 貴 / normal lesson | ready-blocked-by-dependency | Production C | codex/l234-complete-package / HEAD | L232:錢, L233:買 | ["錢","買"] | curriculum-workflow/lesson-requests/L234.json; curriculum-workflow/generated/L234-generation-packet.md | public/assets/lessons/L234/images/; public/assets/lessons/L234/audio/ | asset-complete package prepared; blocked until L232 and L233 enter latest origin/main |
 
 ## Status Values
 
