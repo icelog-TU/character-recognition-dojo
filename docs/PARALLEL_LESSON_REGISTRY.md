@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L250 | 搬 / normal lesson | claimed | Production D | codex/l250-complete-package / 4405d887 | R013, R014, L241 工, L242 作, L243 忙, L244 幫, L245 急, L246 腳, L247 步, L248 跳, L249 床 | ["工","作","忙","幫","急","腳","步","跳","床"] | curriculum-workflow/lesson-requests/L250.json, curriculum-workflow/generated/L250-generation-packet.md | public/assets/lessons/L250/images/, public/assets/lessons/L250/audio/ | accepted handoff and starting complete package; blocked from merge until R013/R014 and L241-L249 are in main |
+| L250 | 搬 / normal lesson | ready-blocked-by-dependency | Production D | codex/l250-complete-package / 78c52dc1 | R013, R014, L241 工, L242 作, L243 忙, L244 幫, L245 急, L246 腳, L247 步, L248 跳, L249 床 | ["工","作","忙","幫","急","腳","步","跳","床"] | curriculum-workflow/lesson-requests/L250.json, curriculum-workflow/generated/L250-generation-packet.md | public/assets/lessons/L250/images/, public/assets/lessons/L250/audio/ | asset-complete-package prepared; local checks passed; blocked from merge until R013/R014 and L241-L249 are in main |
 
 ## Status Values
 
