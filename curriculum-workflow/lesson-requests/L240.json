@@ -1,0 +1,229 @@
+{
+  "id": "L240",
+  "order": 240,
+  "newChars": [
+    "具"
+  ],
+  "zhuyin": {
+    "具": "ㄐㄩˋ"
+  },
+  "title": "具",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A accepted teacher-approved L240 handoff. This is a dependency-blocked complete package prepared from latest origin/main through L233 with provisional L234-L239 characters.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L233 plus provisional L234-L239 target characters and current target 具",
+    "provisionalLearnedChars": [
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜"
+    ],
+    "dependsOnLessons": [
+      "L234",
+      "L235",
+      "L236",
+      "L237",
+      "L238",
+      "L239"
+    ],
+    "requiredCoverageChars": [
+      "具",
+      "夜",
+      "市",
+      "場",
+      "店",
+      "賣"
+    ],
+    "targetCharMinimumCount": {
+      "具": 3
+    },
+    "recentTargetMinimumCounts": {
+      "夜": 2,
+      "市": 2,
+      "場": 2,
+      "店": 1,
+      "賣": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "工",
+      "餐",
+      "演",
+      "戲",
+      "超",
+      "商",
+      "便",
+      "宜",
+      "付",
+      "元",
+      "角",
+      "零",
+      "玻",
+      "璃",
+      "罐",
+      "裝",
+      "嗎",
+      "件",
+      "碗",
+      "條",
+      "價",
+      "員",
+      "主",
+      "區",
+      "城",
+      "景"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother and protagonist little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, price tags, store signs, book text, toy labels, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 具 as public/assets/lessons/L240/audio/char-u5177.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L240-S01",
+      "text": "我在夜市買了面具。",
+      "spokenText": "我在夜市買了面具",
+      "focusChar": "具",
+      "displayLines": [
+        "我在夜市",
+        "買了面具。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在夜市的面具攤前，主角小女孩拿著或剛買到一個面具。夜市攤販是清楚的攤販角色，不能長得像主角媽媽或老師。面具和攤位不可有文字、數字、價格、品牌或標籤。"
+    },
+    {
+      "id": "L240-S02",
+      "text": "球具放在球場邊。",
+      "spokenText": "球具放在球場邊",
+      "focusChar": "具",
+      "displayLines": [
+        "球具放在",
+        "球場邊。"
+      ],
+      "imageNotes": "球場邊放著球具，例如球、球棒、帽子或球具袋，位置清楚在球場旁邊。畫面重點是「球具放在球場邊」。不可有文字、數字、球衣號碼、品牌或標籤。"
+    },
+    {
+      "id": "L240-S03",
+      "text": "夜晚的市場，店家都關了。",
+      "spokenText": "夜晚的市場店家都關了",
+      "focusChar": "夜",
+      "displayLines": [
+        "夜晚的市場，",
+        "店家都關了。"
+      ],
+      "imageNotes": "夜晚的市場安靜下來，很多店家和攤位都已經關門或收起來，燈光較暗但安全清楚。可以有主角小女孩和主角媽媽從遠處看見市場已經關了。店面和攤位不可有文字、數字、招牌、價格、品牌或標籤。"
+    },
+    {
+      "id": "L240-S04",
+      "text": "這家店賣很多玩具。",
+      "spokenText": "這家店賣很多玩具",
+      "focusChar": "具",
+      "displayLines": [
+        "這家店賣",
+        "很多玩具。"
+      ],
+      "imageNotes": "一家玩具店或小店裡有很多玩具，店家角色正在整理玩具，主角小女孩和主角媽媽在旁邊看。店家角色不能長得像主角媽媽或老師。玩具、店面和背景不可有文字、數字、價格、品牌或標籤。"
+    },
+    {
+      "id": "L240-S05",
+      "text": "老師把道具放在桌上。",
+      "spokenText": "老師把道具放在桌上",
+      "focusChar": "具",
+      "displayLines": [
+        "老師把道具",
+        "放在桌上。"
+      ],
+      "imageNotes": "老師在教室裡把上課用的道具放在桌上，道具可以是面具、球、紙做的物品或簡單教具，但不要出現文字。老師要使用 recurring teacher identity，不能長得像主角媽媽。桌面、道具和教室背景不可有文字、數字、品牌或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L240-G01",
+      "type": "find-character",
+      "sentenceId": "L240-S04",
+      "targetChar": "具",
+      "reason": "「玩具」是本課核心生活用法，目標字清楚。"
+    },
+    "G02": {
+      "id": "L240-G02",
+      "type": "teach-character",
+      "sentenceId": "L240-S02",
+      "targetChar": "具",
+      "targetCharIndex": 1,
+      "prefixText": "球",
+      "suffixText": "放在球場邊",
+      "missingIndexes": [
+        1
+      ]
+    },
+    "G03": {
+      "id": "L240-G03",
+      "type": "missing-character",
+      "sentenceId": "L240-S01",
+      "targetChar": "具",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "具",
+        "夜",
+        "市"
+      ]
+    },
+    "G04": {
+      "id": "L240-G04",
+      "type": "partial-order",
+      "sentenceId": "L240-S03",
+      "chunks": [
+        "夜晚的市場",
+        "店家都",
+        "關了"
+      ],
+      "targetChar": "夜"
+    },
+    "G05": {
+      "id": "L240-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L240-S05",
+      "correctText": "老師把道具放在桌上。",
+      "wrongOneText": "老師把玩具放在桌上。",
+      "wrongTwoText": "老師把道具放在地上。",
+      "correctSpokenText": "老師把道具放在桌上",
+      "wrongOneSpokenText": "老師把玩具放在桌上",
+      "wrongTwoSpokenText": "老師把道具放在地上",
+      "targetChar": "具"
+    }
+  },
+  "dependsOnLessons": [
+    "L234",
+    "L235",
+    "L236",
+    "L237",
+    "L238",
+    "L239"
+  ],
+  "provisionalLearnedChars": [
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜"
+  ],
+  "productionNotes": "Dependency-blocked until L234-L239 enter latest origin/main. Production A owns request, packet, draft, images, audio, Stage 4 audio, and alignment only; Release owns shared production JSON, planner, ledger, and final integration."
+}
