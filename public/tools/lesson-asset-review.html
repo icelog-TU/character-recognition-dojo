@@ -639,10 +639,33 @@
         return `${window.location.origin}${basePath}/${path}${version}`;
       }
 
+      function pagesToolUrl(path) {
+        const basePath = window.location.pathname.split("/tools/")[0] || "";
+        const version = state.sha ? `?v=${encodeURIComponent(state.sha.slice(0, 12))}` : "";
+        return `${window.location.origin}${basePath}/tools/${path}${version}`;
+      }
+
       async function fetchJson(url, label) {
         const response = await fetch(url, { cache: "no-store" });
         if (!response.ok) throw new Error(`${label} HTTP ${response.status}`);
         return response.json();
+      }
+
+      async function fetchProductionCurriculum() {
+        if (isMainReview() && isDefaultRepo()) {
+          try {
+            return {
+              curriculum: await fetchJson(pagesToolUrl("planner-data.json"), "planner data"),
+              sourcePath: "public/tools/planner-data.json",
+            };
+          } catch (error) {
+            console.warn("Falling back to raw production curriculum.", error);
+          }
+        }
+        return {
+          curriculum: await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum"),
+          sourcePath: "src/curriculum/sample-lessons.json",
+        };
       }
 
       function reviewTitle(reviewNumber) {
@@ -658,6 +681,17 @@
       }
 
       async function loadUnitData() {
+        const { curriculum, sourcePath } = await fetchProductionCurriculum();
+        const lessons = Array.isArray(curriculum.lessons) ? curriculum.lessons : [];
+        const reviews = Array.isArray(curriculum.reviewLessons) ? curriculum.reviewLessons : [];
+        const unit = [...lessons, ...reviews].find((candidate) => candidate.id === state.unit);
+
+        if (unit) {
+          state.sourcePath = sourcePath;
+          state.placeholderUnit = false;
+          return unit;
+        }
+
         const draftPath = `curriculum-workflow/drafts/${state.unit}-draft.json`;
         const draftResponse = await fetch(rawUrl(draftPath), { cache: "no-store" });
         let draftUnit = null;
@@ -666,17 +700,6 @@
           if (Array.isArray(draft.sentences) && draft.sentences.length > 0) {
             draftUnit = draft;
           }
-        }
-
-        const curriculum = await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum");
-        const lessons = Array.isArray(curriculum.lessons) ? curriculum.lessons : [];
-        const reviews = Array.isArray(curriculum.reviewLessons) ? curriculum.reviewLessons : [];
-        const unit = [...lessons, ...reviews].find((candidate) => candidate.id === state.unit);
-
-        if (unit) {
-          state.sourcePath = "src/curriculum/sample-lessons.json";
-          state.placeholderUnit = false;
-          return unit;
         }
 
         if (draftUnit && hasReviewableSentenceAssets(draftUnit)) {
