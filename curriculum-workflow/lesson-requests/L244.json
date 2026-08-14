@@ -1,0 +1,233 @@
+{
+  "id": "L244",
+  "order": 244,
+  "newChars": [
+    "幫"
+  ],
+  "zhuyin": {
+    "幫": "ㄅㄤ"
+  },
+  "title": "幫",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L244 sentence set. Production A prepares a complete package from latest origin/main. Latest observed main is complete through L234, so L235-L243 and R013/R014 are dependency/review blockers until merged.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L234 plus provisional L235-L243 characters and current target 幫",
+    "provisionalLearnedChars": [
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙"
+    ],
+    "dependsOnLessons": [
+      "L235",
+      "L236",
+      "L237",
+      "L238",
+      "L239",
+      "L240",
+      "L241",
+      "L242",
+      "L243"
+    ],
+    "dependsOnReviews": [
+      "R013",
+      "R014"
+    ],
+    "requiredCoverageChars": [
+      "幫",
+      "忙",
+      "作",
+      "工",
+      "具",
+      "夜"
+    ],
+    "targetCharMinimumCount": {
+      "幫": 3
+    },
+    "recentTargetMinimumCounts": {
+      "忙": 2,
+      "作": 2,
+      "工": 2,
+      "具": 1,
+      "夜": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "急",
+      "腳",
+      "板",
+      "拖",
+      "業",
+      "碌",
+      "招",
+      "牌",
+      "字",
+      "號",
+      "標",
+      "籤",
+      "群",
+      "戲",
+      "演"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for every sentence.",
+      "Use L058 only as an illustration style anchor, not as a character appearance reference.",
+      "Use protagonist family continuity from L154/L162/L163 for protagonist mother and protagonist little girl.",
+      "Teachers, shopkeepers, clerks, and workers must be visually distinct from protagonist mother.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, brands, price tags, readable product text, or vehicle plates.",
+      "Each image must clearly match the approved imageNotes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 幫 as public/assets/lessons/L244/audio/char-u5e6b.m4a from the single character.",
+      "Generate S01-S05 from spokenText as full-sentence TTS.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L244-S01",
+      "text": "夜市裡，店家忙著工作。",
+      "spokenText": "夜市裡店家忙著工作",
+      "focusChar": "忙",
+      "displayLines": [
+        "夜市裡，",
+        "店家忙著工作。"
+      ],
+      "imageNotes": "夜市場景，夜市店家老闆或店員正在忙著整理攤位、準備商品或開始工作。可有主角小女孩和主角媽媽在安全邊界外看著夜市，但畫面重點是店家忙著工作。人物身份要明確：夜市店家老闆或店員、主角小女孩、主角媽媽。不可有文字、數字、招牌、價格牌或標籤。"
+    },
+    {
+      "id": "L244-S02",
+      "text": "我幫忙把工具放回盒子裡。",
+      "spokenText": "我幫忙把工具放回盒子裡",
+      "focusChar": "幫",
+      "displayLines": [
+        "我幫忙把工具",
+        "放回盒子裡。"
+      ],
+      "imageNotes": "主角小女孩在家裡或活動桌旁幫忙收拾，把安全的工具放回盒子裡。工具可包含鈍頭剪刀、膠水瓶外形、刷子或尺形物，但不能有文字、數字、品牌或標籤。人物身份要明確：主角小女孩。"
+    },
+    {
+      "id": "L244-S03",
+      "text": "老師叫我幫忙做手作道具。",
+      "spokenText": "老師叫我幫忙做手作道具",
+      "focusChar": "幫",
+      "displayLines": [
+        "老師叫我幫忙",
+        "做手作道具。"
+      ],
+      "imageNotes": "教室或活動教室場景，老師請主角小女孩幫忙做手作道具，桌上有紙、色塊材料和安全手作材料。老師要依 LESSON_VISUAL_CAST_SOP 設計，不可以長得像主角媽媽；不要用媽媽的黃色或珊瑚紅配色，不要像家庭角色。人物身份要明確：老師、主角小女孩。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L244-S04",
+      "text": "工人太忙了，我去幫他洗車。",
+      "spokenText": "工人太忙了我去幫他洗車",
+      "focusChar": "幫",
+      "displayLines": [
+        "工人太忙了，",
+        "我去幫他洗車。"
+      ],
+      "imageNotes": "洗車場或家門口安全場景，一位洗車工人正在忙著洗車，主角小女孩拿著小海綿或小水桶在旁邊幫忙。人物身份要明確：洗車工人、主角小女孩。不可有品牌文字、車牌號碼、招牌或標籤。"
+    },
+    {
+      "id": "L244-S05",
+      "text": "媽媽說我真是好幫手。",
+      "spokenText": "媽媽說我真是好幫手",
+      "focusChar": "幫",
+      "displayLines": [
+        "媽媽說我",
+        "真是好幫手。"
+      ],
+      "imageNotes": "家庭場景，主角媽媽溫和地稱讚主角小女孩是好幫手。畫面可呈現主角小女孩剛幫忙收拾玩具、擦桌子或把東西放好，媽媽在旁邊微笑。主角媽媽要依 L154/L162/L163 主角家庭 reference，不可畫成老師。人物身份要明確：主角媽媽、主角小女孩。不可有文字、數字或標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L244-G01",
+      "type": "find-character",
+      "sentenceId": "L244-S05",
+      "targetChar": "幫",
+      "reason": "「好幫手」是本課核心生活用法，目標字清楚。"
+    },
+    {
+      "id": "L244-G02",
+      "type": "teach-character",
+      "sentenceId": "L244-S02",
+      "targetChar": "幫",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "我",
+        "suffixText": "忙把工具放回盒子裡"
+      }
+    },
+    {
+      "id": "L244-G03",
+      "type": "missing-character",
+      "sentenceId": "L244-S03",
+      "targetChar": "幫",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "幫",
+        "忙",
+        "作"
+      ]
+    },
+    {
+      "id": "L244-G04",
+      "type": "partial-order",
+      "sentenceId": "L244-S04",
+      "chunks": [
+        "工人太忙了",
+        "我去幫他",
+        "洗車"
+      ]
+    },
+    {
+      "id": "L244-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L244-S01",
+      "correctText": "夜市裡，店家忙著工作。",
+      "wrongOneText": "夜市裡，店家忙著洗車。",
+      "wrongTwoText": "夜市裡，媽媽忙著工作。"
+    }
+  ],
+  "dependsOnLessons": [
+    "L235",
+    "L236",
+    "L237",
+    "L238",
+    "L239",
+    "L240",
+    "L241",
+    "L242",
+    "L243"
+  ],
+  "dependsOnReviews": [
+    "R013",
+    "R014"
+  ],
+  "provisionalLearnedChars": [
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙"
+  ],
+  "productionNotes": "Production A package is blocked from merge until L235-L243 and R013/R014 are in main. Release owns production JSON insertion, planner export, ledger update, final verify, merge, and deploy."
+}
