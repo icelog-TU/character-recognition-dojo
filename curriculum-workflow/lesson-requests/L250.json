@@ -1,0 +1,253 @@
+{
+  "id": "L250",
+  "order": 250,
+  "newChars": [
+    "搬"
+  ],
+  "zhuyin": {
+    "搬": "ㄅㄢ"
+  },
+  "title": "搬",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L250 sentence set. Production D prepares a complete lesson-local asset-complete-package. This branch is dependency/review blocked until R013/R014 and L241-L249 are merged into latest origin/main.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L240 plus provisional learned chars [工,作,忙,幫,急,腳,步,跳,床] plus current target 搬",
+    "provisionalLearnedChars": [
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床"
+    ],
+    "dependsOnLessons": [
+      "L241",
+      "L242",
+      "L243",
+      "L244",
+      "L245",
+      "L246",
+      "L247",
+      "L248",
+      "L249"
+    ],
+    "dependsOnReviews": [
+      "R013",
+      "R014"
+    ],
+    "requiredCoverageChars": [
+      "搬",
+      "床",
+      "跳",
+      "步",
+      "腳",
+      "急",
+      "幫"
+    ],
+    "targetCharMinimumCount": {
+      "搬": 3
+    },
+    "recentTargetMinimumCounts": {
+      "床": 2,
+      "跳": 2,
+      "步": 2,
+      "腳": 1,
+      "急": 1,
+      "幫": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "輕",
+      "重",
+      "慢",
+      "踢",
+      "板",
+      "拖",
+      "業",
+      "碌",
+      "招",
+      "牌",
+      "字",
+      "號",
+      "標",
+      "籤",
+      "趕",
+      "救",
+      "診",
+      "條",
+      "踏",
+      "印",
+      "赤",
+      "繩",
+      "差",
+      "跌",
+      "睡",
+      "覺",
+      "躺",
+      "單",
+      "墊",
+      "東",
+      "西"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, vehicle plates, box labels, wall writing, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 搬 as public/assets/lessons/L250/audio/char-u642c.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L250-S01",
+      "text": "爸爸幫我搬道具。",
+      "spokenText": "爸爸幫我搬道具",
+      "focusChar": "搬",
+      "displayLines": [
+        "爸爸幫我",
+        "搬道具。"
+      ],
+      "imageNotes": "主角爸爸在家裡或活動場所幫主角小女孩搬手作道具或表演道具，道具可以是沒有文字和數字的盒子、布、簡單模型或安全物品。畫面重點是爸爸幫我搬道具。人物身份要明確：主角爸爸、主角小女孩。不可有文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L250-S02",
+      "text": "不要在床上跳來跳去。",
+      "spokenText": "不要在床上跳來跳去",
+      "focusChar": "床",
+      "displayLines": [
+        "不要在床上",
+        "跳來跳去。"
+      ],
+      "imageNotes": "主角小女孩在家裡房間的床上想跳來跳去，主角媽媽在旁邊提醒不要在床上跳。畫面要表現「床上跳來跳去」但不要危險或摔倒。人物身份要明確：主角小女孩、主角媽媽。不可有文字、數字、標籤或牆上字畫。"
+    },
+    {
+      "id": "L250-S03",
+      "text": "搬床時，腳步要小心。",
+      "spokenText": "搬床時腳步要小心",
+      "focusChar": "搬",
+      "displayLines": [
+        "搬床時，",
+        "腳步要小心。"
+      ],
+      "imageNotes": "家裡房間場景，主角爸爸和另一位明確的搬家工人或主角媽媽正在小心搬床，腳步放慢、注意地面。畫面要表現搬床時腳步要小心，不要危險、不要受傷。人物身份要明確：主角爸爸、搬家工人或主角媽媽。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L250-S04",
+      "text": "門外腳步聲又急又快。",
+      "spokenText": "門外腳步聲又急又快",
+      "focusChar": "步",
+      "displayLines": [
+        "門外腳步聲",
+        "又急又快。"
+      ],
+      "imageNotes": "家裡門內視角或走廊場景，門外有人快步走過，讓人感覺腳步聲又急又快。可畫主角小女孩在門內聽見聲音，但不要做恐怖或危險情境。人物身份要明確：主角小女孩；門外可以是一位路人或主角爸爸快步經過。不可有門牌、文字、數字或標籤。"
+    },
+    {
+      "id": "L250-S05",
+      "text": "搬家工人來幫忙搬家。",
+      "spokenText": "搬家工人來幫忙搬家",
+      "focusChar": "搬",
+      "displayLines": [
+        "搬家工人來",
+        "幫忙搬家。"
+      ],
+      "imageNotes": "搬家場景，搬家工人來幫忙搬家，把沒有文字標籤的箱子或簡單家具搬上車或搬進家門。可有主角媽媽或主角爸爸在旁邊指引，但畫面重點是搬家工人幫忙搬家。人物身份要明確：搬家工人、主角媽媽或主角爸爸。不可有文字、數字、車牌、品牌、箱子標籤或招牌。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L250-G01",
+      "type": "find-character",
+      "sentenceId": "L250-S05",
+      "targetChar": "搬",
+      "reason": "搬家工人來幫忙搬家重複出現本課目標字，語意清楚。"
+    },
+    "G02": {
+      "id": "L250-G02",
+      "type": "teach-character",
+      "sentenceId": "L250-S01",
+      "targetChar": "搬",
+      "targetCharIndex": 4,
+      "prefixText": "爸爸幫我",
+      "suffixText": "道具"
+    },
+    "G03": {
+      "id": "L250-G03",
+      "type": "missing-character",
+      "sentenceId": "L250-S03",
+      "targetChar": "搬",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "搬",
+        "床",
+        "跳"
+      ]
+    },
+    "G04": {
+      "id": "L250-G04",
+      "type": "partial-order",
+      "sentenceId": "L250-S02",
+      "chunks": [
+        "不要",
+        "在床上",
+        "跳來跳去"
+      ],
+      "targetChar": "床"
+    },
+    "G05": {
+      "id": "L250-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L250-S04",
+      "correctText": "門外腳步聲又急又快。",
+      "wrongOneText": "門外風聲又急又快。",
+      "wrongTwoText": "門外腳步聲又急又大。",
+      "correctSpokenText": "門外腳步聲又急又快",
+      "wrongOneSpokenText": "門外風聲又急又快",
+      "wrongTwoSpokenText": "門外腳步聲又急又大",
+      "targetChar": "步"
+    }
+  },
+  "dependsOnLessons": [
+    "L241",
+    "L242",
+    "L243",
+    "L244",
+    "L245",
+    "L246",
+    "L247",
+    "L248",
+    "L249"
+  ],
+  "dependsOnReviews": [
+    "R013",
+    "R014"
+  ],
+  "provisionalLearnedChars": [
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床"
+  ],
+  "productionNotes": "Production D owns lesson-local package only. Release owns production JSON insertion, planner export, ledger update, final verify, merge, and deployment after R013/R014 and L241-L249 are in main."
+}
