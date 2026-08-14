@@ -1149,6 +1149,7 @@ let activeAudioTick: (() => void) | null = null;
 let activeAudioFinish: ((kind: "ended" | "error") => void) | null = null;
 let activeTtsFinish: (() => void) | null = null;
 let ttsPausedByApp = false;
+let playbackPausedByPageVisibility = false;
 let toneAudioContext: AudioContext | null = null;
 let recordingDingAudioUrl: string | null = null;
 let primedRecordingDingAudio: HTMLAudioElement | null = null;
@@ -1454,6 +1455,19 @@ function App() {
   const activePracticeUnit = activeReviewLesson ? reviewLessonAsPracticeUnit(activeReviewLesson) : selectedLesson;
   const hasNextPracticeEntry = practiceEntries.some((entry, index) => entry.id === activePracticeUnit.id && index < practiceEntries.length - 1);
   const streakDays = currentStreakDays(dailyRecords, completedOrders);
+
+  useEffect(() => {
+    document.addEventListener("visibilitychange", handlePageAudibilityChange);
+    window.addEventListener("focus", handlePageAudibilityChange);
+    window.addEventListener("blur", handlePageAudibilityChange);
+    handlePageAudibilityChange();
+    return () => {
+      document.removeEventListener("visibilitychange", handlePageAudibilityChange);
+      window.removeEventListener("focus", handlePageAudibilityChange);
+      window.removeEventListener("blur", handlePageAudibilityChange);
+    };
+  }, []);
+
   const progressSnapshot = useMemo<StoredProgress>(
     () => ({
       version: 1,
@@ -4875,7 +4889,26 @@ function usePlaybackState() {
   return state;
 }
 
-function pausePlayback() {
+function isForegroundPage() {
+  if (typeof document === "undefined") return true;
+  return document.visibilityState === "visible";
+}
+
+function suspendToneAudioContext() {
+  if (!toneAudioContext || toneAudioContext.state !== "running") return;
+  void toneAudioContext.suspend().catch(() => undefined);
+}
+
+function handlePageAudibilityChange() {
+  if (!isForegroundPage()) {
+    pausePlayback(true);
+    suspendToneAudioContext();
+    return;
+  }
+  if (playbackPausedByPageVisibility) resumePlayback();
+}
+
+function pausePlayback(resumeWhenForeground = false) {
   let changed = false;
   if (activeAudio && !activeAudio.paused && !activeAudio.ended) {
     activeAudio.pause();
@@ -4887,16 +4920,23 @@ function pausePlayback() {
     ttsPausedByApp = true;
     changed = true;
   }
-  if (changed) emitPlaybackState();
+  if (changed) {
+    playbackPausedByPageVisibility = resumeWhenForeground;
+    emitPlaybackState();
+  }
 }
 
 function resumePlayback() {
+  if (!isForegroundPage()) return;
   let changed = false;
   if (activeAudio && activeAudio.paused && !activeAudio.ended) {
-    void activeAudio.play().then(() => {
-      activeAudioTick?.();
-      emitPlaybackState();
-    });
+    void activeAudio
+      .play()
+      .then(() => {
+        activeAudioTick?.();
+        emitPlaybackState();
+      })
+      .catch(() => emitPlaybackState());
     changed = true;
   }
   if ("speechSynthesis" in window && activeTtsFinish) {
@@ -4912,6 +4952,7 @@ function resumePlayback() {
     ttsPausedByApp = false;
     changed = true;
   }
+  playbackPausedByPageVisibility = false;
   if (changed) emitPlaybackState();
 }
 
@@ -4937,6 +4978,7 @@ function finishActiveTts() {
 }
 
 function stopPlayback() {
+  playbackPausedByPageVisibility = false;
   finishActiveAudio("error");
   finishActiveTts();
   emitPlaybackState();
@@ -4949,6 +4991,10 @@ function stopAudioFrame() {
 }
 
 function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
+  if (!isForegroundPage()) {
+    options.onError?.();
+    return Promise.resolve<"ended" | "error">("error");
+  }
   const audio = getCachedAudio(src);
   finishActiveTts();
   if (activeAudio) finishActiveAudio("error");
@@ -5025,6 +5071,10 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
 
 function playAudioRange(src: string, startMs: number, endMs: number, options: AudioPlayOptions = {}) {
   if (endMs <= startMs + 30) return Promise.resolve();
+  if (!isForegroundPage()) {
+    options.onError?.();
+    return Promise.resolve();
+  }
   const audio = getCachedAudio(src);
   finishActiveTts();
   if (activeAudio) finishActiveAudio("error");
@@ -5097,6 +5147,7 @@ function playAudioRange(src: string, startMs: number, endMs: number, options: Au
 }
 
 function playRecordedAudioUrl(url: string) {
+  if (!isForegroundPage()) return Promise.resolve();
   return new Promise<void>((resolve) => {
     const audio = new Audio(url);
     audio.onended = () => resolve();
@@ -5216,6 +5267,7 @@ function primeRecordingDingAudio() {
 }
 
 function playRecordingDingAudio() {
+  if (!isForegroundPage()) return Promise.resolve(false);
   const audio = primedRecordingDingAudio ?? createRecordingDingAudio();
   primedRecordingDingAudio = null;
   audio.muted = false;
@@ -5249,6 +5301,7 @@ function playRecordingDingAudio() {
 }
 
 async function playRecordingReadyDing() {
+  if (!isForegroundPage()) return;
   const context = ensureToneAudioContext();
   if (context?.state === "suspended") {
     try {
@@ -5321,6 +5374,7 @@ function playRewardChime() {
 function playToneSequence(
   notes: Array<{ frequency: number; endFrequency: number; duration: number; gain: number; delay?: number }>,
 ) {
+  if (!isForegroundPage()) return;
   const context = ensureToneAudioContext();
   if (!context) return;
   for (const note of notes) {
@@ -5341,6 +5395,7 @@ function playToneSequence(
 }
 
 function ensureToneAudioContext() {
+  if (!isForegroundPage()) return null;
   const audioWindow = window as AudioWindow;
   const AudioContextClass = audioWindow.AudioContext || audioWindow.webkitAudioContext;
   if (!AudioContextClass) return null;
@@ -6509,6 +6564,7 @@ function speakGuide(text: string) {
 
 function playTts(text: string, { rate, pitch }: { rate: number; pitch: number }) {
   const clean = text.replace(/\s+/g, " ").trim();
+  if (!isForegroundPage()) return Promise.resolve();
   if (!clean || !("speechSynthesis" in window)) return Promise.resolve();
   if (activeAudio) finishActiveAudio("error");
   stopAudioFrame();
