@@ -6,8 +6,8 @@
 - order: 234
 - new character: 貴
 - zhuyin: 貴=ㄍㄨㄟˋ
-- dependencies: L232, L233
-- provisional learned chars: 錢 買
+- dependencies at request time: L232, L233
+- provisional learned chars at request time: 錢 買
 
 ## Approved Sentences
 
@@ -32,7 +32,7 @@
 - text: 菜不貴，可以多買一點。
 - spokenText: 菜不貴可以多買一點
 - focusChar: 貴
-- displayLines: ["菜不貴，","可以多買一點。"]
+- displayLines: ["菜不貴，","可以多買","一點。"]
 - imageNotes: 主角媽媽和主角小女孩在菜攤或家裡看一堆新鮮蔬菜，媽媽覺得菜不貴，可以多買一點。畫面要呈現「菜看起來新鮮、份量多、可以多買」，但不能出現價錢、文字、數字、招牌或標籤。
 
 ### L234-S04
@@ -53,8 +53,8 @@
 
 ## Stage 4 Plan
 
-- G01 find-character: L234-S01 target from request.
-- G02 teach-character: L234-S05 target index 4, prefix and suffix generated from exact fragments in the sentence.
+- G01 find-character: L234-S01 target ?.
+- G02 teach-character: L234-S05 target ? index 4, prefix/suffix generated from exact fragments.
 - G03 missing-character: L234-S03 options from request.
 - G04 partial-order: L234-S02 chunks from request.
 - G05 choose-pronunciation: wrong options generated from exact full wrong sentence text.
