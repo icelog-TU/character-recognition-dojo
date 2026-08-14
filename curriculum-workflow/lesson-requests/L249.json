@@ -1,0 +1,267 @@
+{
+  "id": "L249",
+  "order": 249,
+  "newChars": [
+    "床"
+  ],
+  "zhuyin": {
+    "床": "ㄔㄨㄤˊ"
+  },
+  "title": "床",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C accepted L249 handoff. Origin/main currently contains production curriculum through L240 and review modules through R012; R013/R014 and L241-L248 are not in production JSON, so this package is blocked from merge until those dependencies land.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L240 plus provisional learned chars 工, 作, 忙, 幫, 急, 腳, 步, 跳 plus current target 床",
+    "provisionalLearnedChars": [
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳"
+    ],
+    "dependsOnLessons": [
+      "L241",
+      "L242",
+      "L243",
+      "L244",
+      "L245",
+      "L246",
+      "L247",
+      "L248"
+    ],
+    "dependsOnReviewModules": [
+      "R013",
+      "R014"
+    ],
+    "requiredCoverageChars": [
+      "床",
+      "跳",
+      "步",
+      "腳",
+      "急",
+      "幫"
+    ],
+    "targetCharMinimumCount": {
+      "床": 3
+    },
+    "recentTargetMinimumCounts": {
+      "跳": 2,
+      "步": 2,
+      "腳": 2,
+      "急": 1,
+      "幫": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "輕",
+      "重",
+      "慢",
+      "踢",
+      "板",
+      "拖",
+      "業",
+      "碌",
+      "招",
+      "牌",
+      "字",
+      "號",
+      "標",
+      "籤",
+      "趕",
+      "救",
+      "診",
+      "條",
+      "踏",
+      "印",
+      "赤",
+      "繩",
+      "差",
+      "跌",
+      "睡",
+      "覺",
+      "躺",
+      "單",
+      "墊"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, door plates, wall text, clock numbers, chess labels, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 床 as public/assets/lessons/L249/audio/char-u5e8a.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L249-S01",
+      "text": "不要在床上跳來跳去。",
+      "spokenText": "不要在床上跳來跳去",
+      "focusChar": "床",
+      "displayLines": [
+        "不要在床上",
+        "跳來跳去。"
+      ],
+      "imageNotes": "主角小女孩在家裡房間的床上想跳來跳去，主角媽媽在旁邊提醒不要在床上跳。畫面要表現「床上跳來跳去」但不要危險或摔倒。人物身份要明確：主角小女孩、主角媽媽。不可有文字、數字、標籤或牆上字畫。"
+    },
+    {
+      "id": "L249-S02",
+      "text": "不可以穿鞋上床，要光腳。",
+      "spokenText": "不可以穿鞋上床要光腳",
+      "focusChar": "床",
+      "displayLines": [
+        "不可以穿鞋上床，",
+        "要光腳。"
+      ],
+      "imageNotes": "主角小女孩在家裡床邊，鞋子放在地上，正要光著腳上床；主角媽媽可在旁邊提醒不可以穿鞋上床。畫面重點是鞋子脫下、光腳、床邊。人物身份要明確：主角小女孩、主角媽媽。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L249-S03",
+      "text": "門外腳步聲又急又快。",
+      "spokenText": "門外腳步聲又急又快",
+      "focusChar": "步",
+      "displayLines": [
+        "門外腳步聲",
+        "又急又快。"
+      ],
+      "imageNotes": "家裡門內視角或走廊場景，門外有人快步走過，讓人感覺腳步聲又急又快。可畫主角小女孩在門內聽見聲音，但不要做恐怖或危險情境。人物身份要明確：主角小女孩；門外可以是一位路人或主角爸爸快步經過。不可有門牌、文字、數字或標籤。"
+    },
+    {
+      "id": "L249-S04",
+      "text": "爸爸幫忙下了一步好棋。",
+      "spokenText": "爸爸幫忙下了一步好棋",
+      "focusChar": "步",
+      "displayLines": [
+        "爸爸幫忙下了",
+        "一步好棋。"
+      ],
+      "imageNotes": "主角爸爸和主角小女孩在桌邊下棋，爸爸幫忙下了一步好棋，主角小女孩看著棋盤。棋盤和棋子不能有文字、數字、格線標籤或品牌。人物身份要明確：主角爸爸、主角小女孩。"
+    },
+    {
+      "id": "L249-S05",
+      "text": "天亮了，我急著起床。",
+      "spokenText": "天亮了我急著起床",
+      "focusChar": "床",
+      "displayLines": [
+        "天亮了，",
+        "我急著起床。"
+      ],
+      "imageNotes": "早上房間變亮，主角小女孩從床上急著起床，可能要出門或上課。畫面要清楚是天亮後從床上起來，不要出現時鐘數字、文字、標籤或鬧鐘數字。人物身份要明確：主角小女孩。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L249-G01",
+      "type": "find-character",
+      "sentenceId": "L249-S01",
+      "targetChar": "床",
+      "reason": "「床上」是本課核心生活用法，目標字清楚。"
+    },
+    {
+      "id": "L249-G02",
+      "type": "teach-character",
+      "sentenceId": "L249-S02",
+      "targetChar": "床",
+      "targetCharIndex": 6,
+      "teachAudioFragments": {
+        "prefixText": "不可以穿鞋上",
+        "suffixText": "要光腳"
+      }
+    },
+    {
+      "id": "L249-G03",
+      "type": "missing-character",
+      "sentenceId": "L249-S05",
+      "targetChar": "床",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "床",
+        "跳",
+        "腳"
+      ]
+    },
+    {
+      "id": "L249-G04",
+      "type": "partial-order",
+      "sentenceId": "L249-S04",
+      "chunks": [
+        "爸爸幫忙",
+        "下了一步",
+        "好棋"
+      ]
+    },
+    {
+      "id": "L249-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L249-S03",
+      "targetChar": "步",
+      "correctText": "門外腳步聲又急又快。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "門外風聲又急又快。"
+        },
+        {
+          "id": "wrong-two",
+          "text": "門外腳步聲又急又大。"
+        }
+      ]
+    }
+  ],
+  "dependsOnLessons": [
+    "L241",
+    "L242",
+    "L243",
+    "L244",
+    "L245",
+    "L246",
+    "L247",
+    "L248"
+  ],
+  "dependsOnReviewModules": [
+    "R013",
+    "R014"
+  ],
+  "provisionalLearnedChars": [
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳"
+  ],
+  "productionNotes": {
+    "status": "ready-blocked-by-dependency-and-review",
+    "originMainBoundary": "L240 / R012",
+    "requiredBeforeMerge": [
+      "R013",
+      "R014",
+      "L241",
+      "L242",
+      "L243",
+      "L244",
+      "L245",
+      "L246",
+      "L247",
+      "L248"
+    ],
+    "sharedStateHandling": "Do not leave src/curriculum/sample-lessons.json, public/tools/planner-data.json, or docs/CURRICULUM_LEDGER.md changed on this production package branch unless dependencies and required reviews are already merged."
+  }
+}
