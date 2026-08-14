@@ -1,0 +1,211 @@
+{
+  "id": "L237",
+  "order": 237,
+  "newChars": [
+    "場"
+  ],
+  "zhuyin": {
+    "場": "ㄔㄤˇ"
+  },
+  "title": "場",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L237 Production C handoff. Origin/main is complete through L233 at claim time, so L234 貴, L235 賣, and L236 店 are provisional dependencies. Prepare a complete package but keep production JSON out of final branch until dependencies are merged.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L233 plus provisional L234 貴, L235 賣, L236 店 and current target 場",
+    "provisionalLearnedChars": [
+      "貴",
+      "賣",
+      "店"
+    ],
+    "dependsOnLessons": [
+      "L234",
+      "L235",
+      "L236"
+    ],
+    "requiredCoverageChars": [
+      "場",
+      "店",
+      "賣",
+      "貴",
+      "買",
+      "錢"
+    ],
+    "targetCharMinimumCount": {
+      "場": 3
+    },
+    "recentTargetMinimumCounts": {
+      "店": 2,
+      "賣": 2,
+      "貴": 2,
+      "買": 1,
+      "錢": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "市",
+      "商",
+      "便",
+      "宜",
+      "付",
+      "元",
+      "角",
+      "零",
+      "玻",
+      "璃",
+      "罐",
+      "裝",
+      "嗎",
+      "件",
+      "碗",
+      "條",
+      "具",
+      "價",
+      "員",
+      "主"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 only as illustration style reference, not as character identity reference.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother and protagonist little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, price labels, labels, zhuyin, watermarks, logos, brands, price tags, book text, clothing tags, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 場 as public/assets/lessons/L237/audio/char-u5834.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L237-S01",
+      "text": "這家店賣的魚不貴。",
+      "spokenText": "這家店賣的魚不貴",
+      "focusChar": "店",
+      "displayLines": [
+        "這家店賣的魚",
+        "不貴。"
+      ],
+      "imageNotes": "市場魚店或魚攤場景，魚店賣魚的人展示幾條魚，主角小女孩和主角媽媽看著魚，感覺這家店賣的魚不貴。魚店賣魚的人是清楚的店家角色，不能長得像主角媽媽或老師。不可有價目表、文字、數字、招牌、品牌或標籤。"
+    },
+    {
+      "id": "L237-S02",
+      "text": "有人在球場賣水。",
+      "spokenText": "有人在球場賣水",
+      "focusChar": "場",
+      "displayLines": [
+        "有人在球場",
+        "賣水。"
+      ],
+      "imageNotes": "球場旁有一位賣水的人正在賣沒有標籤的水，附近有幾個孩子或路人在球場活動。賣水的人是路邊攤販角色，不能長得像主角媽媽或老師。畫面要清楚呈現「球場有人賣水」。不可有文字、數字、招牌、價格、品牌或標籤。"
+    },
+    {
+      "id": "L237-S03",
+      "text": "球場邊有一家小店。",
+      "spokenText": "球場邊有一家小店",
+      "focusChar": "場",
+      "displayLines": [
+        "球場邊",
+        "有一家小店。"
+      ],
+      "imageNotes": "球場邊有一間小店，小店外觀簡單，旁邊可見球場與活動中的孩子。小店不能有招牌文字或任何可讀標示。畫面重點是「小店在球場邊」。不可有文字、數字、招牌、價格、品牌或標籤。"
+    },
+    {
+      "id": "L237-S04",
+      "text": "一場大雨過後，地上有水。",
+      "spokenText": "一場大雨過後地上有水",
+      "focusChar": "場",
+      "displayLines": [
+        "一場大雨過後，",
+        "地上有水。"
+      ],
+      "imageNotes": "大雨剛停後的戶外場景，地上有明顯積水，天空雲散開，路邊樹葉或草地濕濕的。可有主角小女孩站在安全處看著地上的水，但不要讓她踩進深水。畫面要清楚呈現「一場大雨過後，地上有水」。不可有文字、數字、招牌或標籤。"
+    },
+    {
+      "id": "L237-S05",
+      "text": "眼鏡太貴，錢不夠買。",
+      "spokenText": "眼鏡太貴錢不夠買",
+      "focusChar": "貴",
+      "displayLines": [
+        "眼鏡太貴，",
+        "錢不夠買。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在眼鏡店或家裡看一副眼鏡，小女孩需要或想買眼鏡，但主角媽媽看著手上的錢，表示眼鏡太貴，錢不夠買。畫面要清楚呈現「眼鏡太貴，錢不夠買」。眼鏡、錢、桌面和背景不可有文字、數字、價格、品牌或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L237-G01",
+      "type": "find-character",
+      "sentenceId": "L237-S03",
+      "targetChar": "場",
+      "reason": "「球場邊」是本課核心場地用法，目標字清楚。"
+    },
+    "G02": {
+      "id": "L237-G02",
+      "type": "teach-character",
+      "sentenceId": "L237-S02",
+      "targetChar": "場",
+      "targetCharIndex": 4,
+      "prefixText": "有人在球",
+      "suffixText": "賣水",
+      "missingIndexes": [
+        4
+      ]
+    },
+    "G03": {
+      "id": "L237-G03",
+      "type": "missing-character",
+      "sentenceId": "L237-S04",
+      "targetChar": "場",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "場",
+        "店",
+        "賣"
+      ]
+    },
+    "G04": {
+      "id": "L237-G04",
+      "type": "partial-order",
+      "sentenceId": "L237-S01",
+      "chunks": [
+        "這家店",
+        "賣的魚",
+        "不貴"
+      ],
+      "targetChar": "店"
+    },
+    "G05": {
+      "id": "L237-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L237-S05",
+      "correctText": "眼鏡太貴，錢不夠買。",
+      "wrongOneText": "眼鏡不貴，錢不夠買。",
+      "wrongTwoText": "眼鏡太貴，錢夠買。",
+      "targetChar": "貴",
+      "correctSpokenText": "眼鏡太貴錢不夠買",
+      "wrongOneSpokenText": "眼鏡不貴錢不夠買",
+      "wrongTwoSpokenText": "眼鏡太貴錢夠買"
+    }
+  },
+  "dependsOnLessons": [
+    "L234",
+    "L235",
+    "L236"
+  ],
+  "provisionalLearnedChars": [
+    "貴",
+    "賣",
+    "店"
+  ],
+  "productionNotes": "Dependency-blocked package at claim time because origin/main is complete through L233 and does not include L234-L236."
+}
