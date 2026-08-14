@@ -33,13 +33,14 @@ For each normal lesson, use this sequence before producing a handoff:
 
 1. Fetch and report the latest `origin/main` production boundary, including the last merged lesson id and newest learned character. If local audit output disagrees with `origin/main`, report the local checkout as stale and do not use it for planning.
 2. Build `allowedChars` from the full `origin/main` learned-character set, explicitly approved provisional dependency characters, and the current lesson's new character. Provisional characters supplement dependencies; they are not the whole writing pool.
-3. Build a word/phrase list before drafting sentences. Use the full learned-character set plus the current new character, not only the previous-five review pool or a recent theme line.
-4. Scan the full learned set for scene sources, old actions, old nouns, and old sentence patterns that can make the lesson varied. Do not let all five sentences stay in one topic line when older learned vocabulary supports better scenes.
-5. Reject legal-but-unnatural words early. Coverage counts are minimum gates after good sentences exist; they are not a reason to keep a weak sentence.
-6. Draft more candidate directions than needed, normally 8-10 candidates, with varied sentence frames, scenes, people, actions, `focusChar` choices, and uses of the new character.
-7. After every teacher edit, recalculate current-target and previous-five coverage, Han sentence counts, and the allowed-character audit. Report exact illegal characters instead of assuming they can be used.
-8. Preserve teacher-approved strong sentences unless there is a hard blocker. If a teacher rejects a sentence as unnatural, identify which coverage target it served and rewrite around that target with natural Taiwan Mandarin.
-9. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, and Stage 4 sentence usage.
+3. Perform the full learned-character sweep gate from `docs/SENTENCE_GENERATION_SOP.md` before any word or sentence proposal. The Editor must explicitly consider every learned character from `origin/main`, whether the set has 200, 300, 500, or 600 characters. If this sweep is missing, stop and redo it.
+4. Build a word/phrase list before drafting sentences. Use the full learned-character set plus the current new character, not only the previous-five review pool, the newest 10-20 lessons, provisional dependency characters, or a recent theme line.
+5. Scan the full learned set for scene sources, old actions, old nouns, and old sentence patterns that can make the lesson varied. Do not let all five sentences stay in one topic line when older learned vocabulary supports better scenes.
+6. Reject legal-but-unnatural words early. Coverage counts are minimum gates after good sentences exist; they are not a reason to keep a weak sentence.
+7. Draft more candidate directions than needed, normally 8-10 candidates, with varied sentence frames, scenes, people, actions, `focusChar` choices, and uses of the new character.
+8. After every teacher edit, recalculate current-target and previous-five coverage, Han sentence counts, and the allowed-character audit. Report exact illegal characters instead of assuming they can be used.
+9. Preserve teacher-approved strong sentences unless there is a hard blocker. If a teacher rejects a sentence as unnatural, identify which coverage target it served and rewrite around that target with natural Taiwan Mandarin.
+10. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, and Stage 4 sentence usage.
 
 During discussion, keep analysis outside the production handoff block. A useful response shape is: candidate five sentences, a small coverage table, Han counts, allowed-character audit result, and any weak sentence or alternative.
 
