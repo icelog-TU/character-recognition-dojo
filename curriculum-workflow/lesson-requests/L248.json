@@ -1,0 +1,235 @@
+{
+  "id": "L248",
+  "order": 248,
+  "newChars": [
+    "跳"
+  ],
+  "zhuyin": {
+    "跳": "ㄊㄧㄠˋ"
+  },
+  "title": "跳",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L248 sentence set. Production A prepares a complete package from latest origin/main. Latest observed main is complete through L240, so L241-L247 and R013/R014 are dependency/review blockers until merged.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L240 plus provisional L241-L247 characters and current target 跳",
+    "provisionalLearnedChars": [
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步"
+    ],
+    "dependsOnLessons": [
+      "L241",
+      "L242",
+      "L243",
+      "L244",
+      "L245",
+      "L246",
+      "L247"
+    ],
+    "dependsOnReviews": [
+      "R013",
+      "R014"
+    ],
+    "requiredCoverageChars": [
+      "跳",
+      "步",
+      "腳",
+      "急",
+      "幫",
+      "忙"
+    ],
+    "targetCharMinimumCount": {
+      "跳": 3
+    },
+    "recentTargetMinimumCounts": {
+      "步": 2,
+      "腳": 2,
+      "急": 2,
+      "幫": 1,
+      "忙": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "床",
+      "板",
+      "拖",
+      "業",
+      "碌",
+      "招",
+      "牌",
+      "字",
+      "號",
+      "標",
+      "籤",
+      "趕",
+      "救",
+      "診",
+      "條",
+      "踏",
+      "印",
+      "赤",
+      "輕",
+      "散",
+      "往",
+      "伐",
+      "繩",
+      "差",
+      "跌"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for every sentence.",
+      "Use L058 only as an illustration style anchor, not as a character appearance reference.",
+      "Use protagonist family continuity from L154/L162/L163 for protagonist mother, father, and protagonist little girl.",
+      "Teachers and non-family children must be visually distinct from protagonist family members.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, brands, game labels, board markings, route signs, or vehicle plates.",
+      "Each image must clearly match the approved imageNotes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 跳 as public/assets/lessons/L248/audio/char-u8df3.m4a from the single character.",
+      "Generate S01-S05 from spokenText as full-sentence TTS.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L248-S01",
+      "text": "爸爸和我玩跳棋。",
+      "spokenText": "爸爸和我玩跳棋",
+      "focusChar": "跳",
+      "displayLines": [
+        "爸爸和我",
+        "玩跳棋。"
+      ],
+      "imageNotes": "主角爸爸和主角小女孩在家裡桌邊玩跳棋，桌上是沒有文字和數字的跳棋棋盤與棋子。畫面重點是親子一起玩跳棋，不要讓棋盤出現任何文字、數字、品牌或標籤。人物身份要明確：主角爸爸、主角小女孩。"
+    },
+    {
+      "id": "L248-S02",
+      "text": "跑步後，心跳得很快。",
+      "spokenText": "跑步後心跳得很快",
+      "focusChar": "跳",
+      "displayLines": [
+        "跑步後，",
+        "心跳得很快。"
+      ],
+      "imageNotes": "主角小女孩剛跑步後停下來，一手放在胸口感覺心跳很快，表情是運動後喘一點但安全健康。可在學校操場、空地或公園場景。人物身份要明確：主角小女孩。不可有文字、數字、跑道號碼或標籤。"
+    },
+    {
+      "id": "L248-S03",
+      "text": "錯了又錯，他急得跳腳。",
+      "spokenText": "錯了又錯他急得跳腳",
+      "focusChar": "跳",
+      "displayLines": [
+        "錯了又錯，",
+        "他急得跳腳。"
+      ],
+      "imageNotes": "固定「他」男孩在做拼圖、積木或簡單手作時一直做錯，急得跳腳。畫面要表現又急又氣、連續受挫後跳腳，但不可畫成危險、暴力或受傷。人物身份要明確：固定「他」男孩。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L248-S04",
+      "text": "我光著腳，一步一步走。",
+      "spokenText": "我光著腳一步一步走",
+      "focusChar": "步",
+      "displayLines": [
+        "我光著腳，",
+        "一步一步走。"
+      ],
+      "imageNotes": "海邊場景，主角小女孩光著腳在沙灘或淺淺濕沙上一步一步慢慢走，鞋子可放在旁邊安全位置。畫面重點是光著腳一步一步走在海邊，不要靠近危險海浪，不要有文字、數字、招牌或標籤。人物身份要明確：主角小女孩。"
+    },
+    {
+      "id": "L248-S05",
+      "text": "媽媽急著出門，我去幫忙。",
+      "spokenText": "媽媽急著出門我去幫忙",
+      "focusChar": "幫",
+      "displayLines": [
+        "媽媽急著出門，",
+        "我去幫忙。"
+      ],
+      "imageNotes": "家門口場景，主角媽媽急著出門，主角小女孩幫忙拿包、拿鞋或把小物品遞給媽媽。畫面要表現「急著出門」和「我去幫忙」，不要像慌亂逃跑。人物身份要明確：主角媽媽、主角小女孩。不可有文字、數字、門牌或標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L248-G01",
+      "type": "find-character",
+      "sentenceId": "L248-S03",
+      "targetChar": "跳",
+      "reason": "「急得跳腳」是本課具體、清楚的目標字用法。"
+    },
+    {
+      "id": "L248-G02",
+      "type": "teach-character",
+      "sentenceId": "L248-S01",
+      "targetChar": "跳",
+      "targetCharIndex": 5,
+      "teachAudio": {
+        "prefixText": "爸爸和我玩",
+        "suffixText": "棋"
+      }
+    },
+    {
+      "id": "L248-G03",
+      "type": "missing-character",
+      "sentenceId": "L248-S02",
+      "targetChar": "跳",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "跳",
+        "步",
+        "腳"
+      ]
+    },
+    {
+      "id": "L248-G04",
+      "type": "partial-order",
+      "sentenceId": "L248-S04",
+      "chunks": [
+        "我光著腳",
+        "一步一步",
+        "走"
+      ]
+    },
+    {
+      "id": "L248-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L248-S05",
+      "correctText": "媽媽急著出門，我去幫忙。",
+      "wrongOneText": "媽媽忙著出門，我去幫忙。",
+      "wrongTwoText": "爸爸急著出門，我去幫忙。"
+    }
+  ],
+  "dependsOnLessons": [
+    "L241",
+    "L242",
+    "L243",
+    "L244",
+    "L245",
+    "L246",
+    "L247"
+  ],
+  "dependsOnReviews": [
+    "R013",
+    "R014"
+  ],
+  "provisionalLearnedChars": [
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步"
+  ],
+  "productionNotes": "Production A package is blocked from merge until L241-L247 and R013/R014 are in main. Release owns production JSON insertion, planner export, ledger update, final verify, merge, and deploy."
+}
