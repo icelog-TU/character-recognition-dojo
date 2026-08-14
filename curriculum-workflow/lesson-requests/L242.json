@@ -1,0 +1,248 @@
+{
+  "id": "L242",
+  "order": 242,
+  "newChars": [
+    "作"
+  ],
+  "zhuyin": {
+    "作": "ㄗㄨㄛˋ"
+  },
+  "title": "作",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L242 Production C handoff. Origin/main is complete through L233 at claim time, so L234-L241 and review modules R013/R014 are blockers. Prepare a complete package but keep production JSON out of final branch until dependencies and reviews are merged.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L233 plus provisional L234 貴, L235 賣, L236 店, L237 場, L238 市, L239 夜, L240 具, L241 工 and current target 作",
+    "provisionalLearnedChars": [
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工"
+    ],
+    "dependsOnLessons": [
+      "L234",
+      "L235",
+      "L236",
+      "L237",
+      "L238",
+      "L239",
+      "L240",
+      "L241"
+    ],
+    "dependsOnReviews": [
+      "R013",
+      "R014"
+    ],
+    "requiredCoverageChars": [
+      "作",
+      "工",
+      "具",
+      "夜",
+      "市",
+      "場"
+    ],
+    "targetCharMinimumCount": {
+      "作": 3
+    },
+    "recentTargetMinimumCounts": {
+      "工": 2,
+      "具": 2,
+      "夜": 2,
+      "市": 1,
+      "場": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "忙",
+      "業",
+      "合",
+      "餐",
+      "演",
+      "戲",
+      "超",
+      "商",
+      "便",
+      "宜",
+      "付",
+      "元",
+      "角",
+      "零",
+      "玻",
+      "璃",
+      "罐",
+      "裝",
+      "嗎",
+      "件",
+      "碗",
+      "條",
+      "價",
+      "員",
+      "主",
+      "區",
+      "城",
+      "景"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 only as illustration style reference, not as character identity reference.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother and protagonist little girl.",
+      "Use recurring teacher identity for teachers, distinct from protagonist mother.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, price tags, blackboard writing, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 作 as public/assets/lessons/L242/audio/char-u4f5c.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L242-S01",
+      "text": "老師把手作道具放在桌上。",
+      "spokenText": "老師把手作道具放在桌上",
+      "focusChar": "作",
+      "displayLines": [
+        "老師把手作道具",
+        "放在桌上。"
+      ],
+      "imageNotes": "老師在教室裡把手作道具放在桌上，道具可以是紙做的面具、手工玩具或簡單教具。老師要使用 recurring teacher identity，不能長得像主角媽媽。桌面、道具和教室背景不可有文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L242-S02",
+      "text": "很多人在夜市工作。",
+      "spokenText": "很多人在夜市工作",
+      "focusChar": "工",
+      "displayLines": [
+        "很多人在夜市",
+        "工作。"
+      ],
+      "imageNotes": "夜市裡有很多不同店家和攤販正在工作，例如整理物品、賣東西或收拾攤位。可有主角小女孩和主角媽媽走過夜市。夜市工作者要是不同角色，不能都長得像主角媽媽或老師。不可有文字、數字、招牌、價格、品牌或標籤。"
+    },
+    {
+      "id": "L242-S03",
+      "text": "半夜的市場很黑。",
+      "spokenText": "半夜的市場很黑",
+      "focusChar": "夜",
+      "displayLines": [
+        "半夜的市場",
+        "很黑。"
+      ],
+      "imageNotes": "半夜的市場已經關了，攤位安靜，燈很少，整體很黑但安全清楚。可從遠處看見市場空蕩，不要做成恐怖畫面。不可有文字、數字、招牌、價格、品牌或標籤。"
+    },
+    {
+      "id": "L242-S04",
+      "text": "作家的工具就是筆。",
+      "spokenText": "作家的工具就是筆",
+      "focusChar": "作",
+      "displayLines": [
+        "作家的工具",
+        "就是筆。"
+      ],
+      "imageNotes": "一位作家在家中或書桌前工作，桌上主要工具是一枝筆，旁邊可有紙本或空白稿紙但不可有可讀文字。作家是獨立成人角色，不能長得像主角媽媽或老師。畫面要清楚呈現「作家的工具就是筆」。不可有文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L242-S05",
+      "text": "工作桌上放著很多工具。",
+      "spokenText": "工作桌上放著很多工具",
+      "focusChar": "工",
+      "displayLines": [
+        "工作桌上",
+        "放著很多工具。"
+      ],
+      "imageNotes": "一張工作桌上整齊放著很多安全工具，例如刷子、小木槌、尺形工具或簡單手作工具；不要有危險尖銳感。可有主角小女孩在旁邊看，但不要讓她拿危險工具。不可有文字、數字、品牌或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L242-G01",
+      "type": "find-character",
+      "sentenceId": "L242-S04",
+      "targetChar": "作",
+      "reason": "「作家」是本課新用法，目標字清楚。"
+    },
+    "G02": {
+      "id": "L242-G02",
+      "type": "teach-character",
+      "sentenceId": "L242-S01",
+      "targetChar": "作",
+      "targetCharIndex": 4,
+      "prefixText": "老師把手",
+      "suffixText": "道具放在桌上",
+      "missingIndexes": [
+        4
+      ]
+    },
+    "G03": {
+      "id": "L242-G03",
+      "type": "missing-character",
+      "sentenceId": "L242-S02",
+      "targetChar": "作",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "作",
+        "工",
+        "具"
+      ]
+    },
+    "G04": {
+      "id": "L242-G04",
+      "type": "partial-order",
+      "sentenceId": "L242-S05",
+      "chunks": [
+        "工作桌上",
+        "放著",
+        "很多工具"
+      ],
+      "targetChar": "工"
+    },
+    "G05": {
+      "id": "L242-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L242-S03",
+      "correctText": "半夜的市場很黑。",
+      "wrongOneText": "晚上的市場很黑。",
+      "wrongTwoText": "半夜的球場很黑。",
+      "targetChar": "夜",
+      "correctSpokenText": "半夜的市場很黑",
+      "wrongOneSpokenText": "晚上的市場很黑",
+      "wrongTwoSpokenText": "半夜的球場很黑"
+    }
+  },
+  "dependsOnLessons": [
+    "L234",
+    "L235",
+    "L236",
+    "L237",
+    "L238",
+    "L239",
+    "L240",
+    "L241"
+  ],
+  "dependsOnReviews": [
+    "R013",
+    "R014"
+  ],
+  "provisionalLearnedChars": [
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工"
+  ],
+  "productionNotes": "Dependency-blocked package at claim time because origin/main is complete through L233 and does not include L234-L241 or R013/R014."
+}
