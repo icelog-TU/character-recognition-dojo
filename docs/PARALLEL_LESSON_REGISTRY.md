@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L235 | 賣 / normal lesson | claimed | Production D | codex/l235-complete-package / 014c8e96 | L234 貴 | ["貴"] | curriculum-workflow/lesson-requests/L235.json, curriculum-workflow/generated/L235-generation-packet.md | public/assets/lessons/L235/images/, public/assets/lessons/L235/audio/ | accepted handoff and starting complete package |
+| L235 | 賣 / normal lesson | merge-ready | Production D | codex/l235-complete-package / 1088f04c | L234 貴 (merged in main) | [] | curriculum-workflow/lesson-requests/L235.json, curriculum-workflow/generated/L235-generation-packet.md | public/assets/lessons/L235/images/, public/assets/lessons/L235/audio/ | asset-complete package; L234 dependency is in main; production JSON/planner/ledger left for Release integration |
 
 ## Status Values
 
