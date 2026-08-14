@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R013/R014 | review modules / 複習十三、複習十四 | asset-complete-package | Production B | codex/r013-r014-complete-package / pending final commit | L240 具 | [] | curriculum-workflow/review-requests/R013.json; curriculum-workflow/review-requests/R014.json; curriculum-workflow/generated/R013-generation-packet.md; curriculum-workflow/generated/R014-generation-packet.md | public/assets/reviews/R013/; public/assets/reviews/R014/ | asset-complete review pair package prepared; R013/R014 are required after L240 before L241 can release; Release owns reviewLessons integration, planner, ledger, registry cleanup, final release verify, push, and deploy |
+| R013/R014 | review modules / 複習十三、複習十四 | asset-complete-package | Production B | codex/r013-r014-complete-package / 04479190 | L240 具 | [] | curriculum-workflow/review-requests/R013.json; curriculum-workflow/review-requests/R014.json; curriculum-workflow/generated/R013-generation-packet.md; curriculum-workflow/generated/R014-generation-packet.md | public/assets/reviews/R013/; public/assets/reviews/R014/ | asset-complete review pair package prepared; R013/R014 are required after L240 before L241 can release; Release owns reviewLessons integration, planner, ledger, registry cleanup, final release verify, push, and deploy |
 
 ## Status Values
 
