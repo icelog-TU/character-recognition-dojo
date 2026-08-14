@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L243 | 忙 / normal lesson | ready-blocked-by-dependency | Production D | codex/l243-complete-package / 22be02f3 | L235 賣, L236 店, L237 場, L238 市, L239 夜, L240 具, L241 工, L242 作; R013, R014 review blocker | ["賣","店","場","市","夜","具","工","作"] | curriculum-workflow/lesson-requests/L243.json, curriculum-workflow/generated/L243-generation-packet.md | public/assets/lessons/L243/images/, public/assets/lessons/L243/audio/ | dependency-blocked and ready-blocked-by-review; complete package exists, but L235-L242 and R013/R014 are not in main; production JSON/planner/ledger left for Release integration |
+| L243 | 忙 / normal lesson | ready-blocked-by-dependency | Production D | codex/l243-complete-package / abc751a9 | L235 賣, L236 店, L237 場, L238 市, L239 夜, L240 具, L241 工, L242 作; R013, R014 review blocker | ["賣","店","場","市","夜","具","工","作"] | curriculum-workflow/lesson-requests/L243.json, curriculum-workflow/generated/L243-generation-packet.md | public/assets/lessons/L243/images/, public/assets/lessons/L243/audio/ | dependency-blocked and ready-blocked-by-review; complete package exists, but L235-L242 and R013/R014 are not in main; production JSON/planner/ledger left for Release integration |
 
 ## Status Values
 
