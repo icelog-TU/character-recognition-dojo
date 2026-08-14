@@ -4,7 +4,7 @@ Visual Refresh rebuilds images for already-merged lessons so old course art matc
 
 This role is separate from ordinary Production and ordinary Asset Repair:
 
-- Production A/B/C/D create new lesson or review-module packages.
+- Active Production slots create new lesson or review-module packages.
 - Asset Repair A/B fix teacher-marked image/audio defects from the review queue.
 - Visual Refresh works through old merged lessons in planned image-only batches, starting from L001 when assigned.
 
@@ -28,7 +28,7 @@ Use only the Visual Refresh worktree assigned by the Supervisor or teacher. Reco
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\visual-refresh
 ```
 
-If this worktree does not exist, ask Supervisor to create it from latest `origin/main`. Do not reuse Production A/B/C/D or Asset Repair A/B unless the teacher explicitly assigns that slot for a one-off batch.
+If this worktree does not exist, ask Supervisor to create it from latest `origin/main`. Do not reuse Production or Asset Repair slots unless the teacher explicitly assigns that slot for a one-off batch.
 
 If the assigned worktree is dirty, stop and report the dirty files. Do not stash, reset, revert, or overwrite another thread's work.
 

@@ -68,7 +68,7 @@ If bare `gh` fails, retry with `C:\Users\User\.local\bin\gh.cmd`.
 - Run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects a skipped lesson.
 - Keep SOP files concise, role-specific, and non-duplicative.
 - Remove or replace stale, contradictory, or repeated SOP rules.
-- Produce one-paste instructions for Editor, Production A/B/C/D, Release, and Asset Repair.
+- Produce one-paste instructions for Editor, active Production slots, Release, and Asset Repair.
 - Diagnose GitHub Pages, Firebase, review pages, audio review pages, registry, ledger, and planner-data drift.
 - Never assume another conversation thread knows this chat's context.
 

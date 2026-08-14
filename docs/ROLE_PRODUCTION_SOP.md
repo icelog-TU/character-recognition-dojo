@@ -1,6 +1,6 @@
-# Role SOP: Production A/B/C/D
+# Role SOP: Production Slots
 
-Production A/B/C/D build `asset-complete-package` lesson or review-module packages from Editor handoffs.
+Production slots build `asset-complete-package` lesson or review-module packages from Editor handoffs. The active slot names and worktree paths come from the latest Supervisor/teacher assignment; do not assume the pool can only be A/B/C/D.
 
 Production threads may work in parallel, but each thread owns exactly one assigned unit and one assigned worktree slot at a time.
 
@@ -71,7 +71,7 @@ The row must include:
 - Unit id.
 - New character(s) or review kind.
 - Status, starting with `claimed`.
-- Owner/thread A/B/C/D.
+- Assigned owner/thread slot.
 - Branch name.
 - Dependencies.
 - Provisional learned characters, if any.
