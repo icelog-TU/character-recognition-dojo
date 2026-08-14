@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L245 | 急 / normal lesson | claimed | Production B | codex/l245-complete-package / 8252e36a | L235 賣, L236 店, L237 場, L238 市, L239 夜, L240 具, L241 工, L242 作, L243 忙, L244 幫, R013, R014 | ["賣","店","場","市","夜","具","工","作","忙","幫"] | curriculum-workflow/lesson-requests/L245.json; curriculum-workflow/generated/L245-generation-packet.md | public/assets/lessons/L245/images/; public/assets/lessons/L245/audio/ | accepted handoff and starting complete package; blocked from merge until all dependencies and required review modules are in main |
+| L245 | 急 / normal lesson | ready-blocked-by-dependency | Production B | codex/l245-complete-package / pending final package commit | L235 賣, L236 店, L237 場, L238 市, L239 夜, L240 具, L241 工, L242 作, L243 忙, L244 幫, R013, R014 | ["賣","店","場","市","夜","具","工","作","忙","幫"] | curriculum-workflow/lesson-requests/L245.json; curriculum-workflow/generated/L245-generation-packet.md | public/assets/lessons/L245/images/; public/assets/lessons/L245/audio/ | complete package built and verified; blocked from merge until all dependencies and required review modules are in main |
 
 ## Status Values
 
