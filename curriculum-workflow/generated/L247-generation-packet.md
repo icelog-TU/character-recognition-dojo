@@ -7,7 +7,7 @@
 - 新字：步
 - 注音：步=ㄅㄨˋ
 - 目標句數：5
-- 教師備註：Teacher-approved L247 sentence set. Production D prepares a complete lesson-local asset-complete-package. This branch is dependency/review blocked until L235-L246 and R013/R014 are merged into latest origin/main.
+- 教師備註：Teacher-approved L247 sentence set. Production D prepares a complete lesson-local asset-complete-package. This branch is dependency/review blocked until L241-L246 and R013/R014 are merged into latest origin/main.
 
 ## 已學字邊界
 
