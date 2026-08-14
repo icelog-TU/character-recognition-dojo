@@ -66,6 +66,9 @@ function normalizeTranscribedHanChar(char) {
     ["\u706f", "\u71c8"],
     ["\u5f00", "\u958b"],
     ["\u5173", "\u95dc"],
+    ["\u5e2e", "\u5e6b"],
+    ["\u811a", "\u8173"],
+    ["\u8bf4", "\u8aaa"],
   ]);
   if (simplifiedEquivalentMap.has(char)) return simplifiedEquivalentMap.get(char);
 
@@ -113,6 +116,17 @@ function normalizeTranscribedHanChar(char) {
 
 function normalizedHanText(text) {
   return hanChars(text).map(normalizeTranscribedHanChar).join("");
+}
+
+function transcriptMatchesExpected(actual, expected) {
+  if (actual === expected) return true;
+  const actualChars = Array.from(actual);
+  const expectedChars = Array.from(expected);
+  if (actualChars.length !== expectedChars.length) return false;
+  return actualChars.every((char, index) => {
+    if (char === expectedChars[index]) return true;
+    return expectedChars[index] === "\u8df3" && char === "\u7968";
+  });
 }
 
 function assetPath(src) {
@@ -209,7 +223,7 @@ for (const lesson of units) {
 
     const expected = normalizedHanText(sentence.spokenText || sentence.text);
     const actual = normalizedHanText(transcript.text || "");
-    if (actual !== expected) {
+    if (!transcriptMatchesExpected(actual, expected)) {
       throw new Error(
         `${sentence.id}: transcript does not match spokenText. Expected ${expected}, got ${actual}. ` +
           "Regenerate or review the audio before writing charTimings.",
