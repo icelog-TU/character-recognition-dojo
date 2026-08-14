@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L237 | 場 / normal lesson | claimed | Production C | codex/l237-complete-package / e135992b | L234:貴, L235:賣, L236:店 | ["貴","賣","店"] | curriculum-workflow/lesson-requests/L237.json; curriculum-workflow/generated/L237-generation-packet.md | public/assets/lessons/L237/images/; public/assets/lessons/L237/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
