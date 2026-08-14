@@ -1,0 +1,264 @@
+{
+  "id": "L252",
+  "order": 252,
+  "newChars": [
+    "沙"
+  ],
+  "zhuyin": {
+    "沙": "ㄕㄚ"
+  },
+  "title": "沙",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete package from approved handoff. Latest origin/main production curriculum is complete through L240. L252 is blocked from production JSON until R013/R014 and L241-L251 are in main.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L240 plus provisional learned chars 工 作 忙 幫 急 腳 步 跳 床 搬 重 plus current target 沙",
+    "dependsOnReviewModules": [
+      "R013",
+      "R014"
+    ],
+    "dependsOnLessons": [
+      "L241",
+      "L242",
+      "L243",
+      "L244",
+      "L245",
+      "L246",
+      "L247",
+      "L248",
+      "L249",
+      "L250",
+      "L251"
+    ],
+    "provisionalLearnedChars": [
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重"
+    ],
+    "requiredCoverageChars": [
+      "沙",
+      "重",
+      "搬",
+      "床",
+      "跳",
+      "步"
+    ],
+    "targetCharMinimumCount": {
+      "沙": 3
+    },
+    "recentTargetMinimumCounts": {
+      "重": 2,
+      "搬": 2,
+      "床": 2,
+      "跳": 1,
+      "步": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "輕",
+      "慢",
+      "踢",
+      "板",
+      "拖",
+      "業",
+      "碌",
+      "招",
+      "牌",
+      "字",
+      "號",
+      "標",
+      "籤",
+      "趕",
+      "救",
+      "診",
+      "條",
+      "踏",
+      "印",
+      "赤",
+      "繩",
+      "差",
+      "跌",
+      "睡",
+      "覺",
+      "躺",
+      "單",
+      "墊",
+      "東",
+      "西",
+      "張",
+      "灘",
+      "桶"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist little girl, mother, and father.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, price tags, store signs, book text, toy labels, clock numbers, license plates, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 沙 as public/assets/lessons/L252/audio/char-u6c99.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L252-S01",
+      "text": "海邊的濕沙很重。",
+      "spokenText": "海邊的濕沙很重",
+      "focusChar": "沙",
+      "displayLines": [
+        "海邊的濕沙",
+        "很重。"
+      ],
+      "imageNotes": "海邊場景，主角小女孩提著一個小水桶，水桶裡裝著濕濕的沙子，所以看起來很重。畫面重點是海邊濕沙很重；水桶不可有文字、數字、品牌或標籤。人物身份要明確：主角小女孩。不可有文字、數字、招牌或標籤。"
+    },
+    {
+      "id": "L252-S02",
+      "text": "我光著腳，一步一步走在沙上。",
+      "spokenText": "我光著腳一步一步走在沙上",
+      "focusChar": "沙",
+      "displayLines": [
+        "我光著腳，",
+        "一步一步走在沙上。"
+      ],
+      "imageNotes": "海邊場景，主角小女孩光著腳，一步一步走在沙上，沙地上可有清楚腳印感但不要使用文字或符號。畫面重點是光腳走在沙上。人物身份要明確：主角小女孩。不可有文字、數字、招牌或標籤。"
+    },
+    {
+      "id": "L252-S03",
+      "text": "沙發很重，搬不動。",
+      "spokenText": "沙發很重搬不動",
+      "focusChar": "沙",
+      "displayLines": [
+        "沙發很重，",
+        "搬不動。"
+      ],
+      "imageNotes": "家裡客廳場景，一張沙發很重，主角爸爸試著搬沙發但搬不動。畫面要清楚是沙發很重、搬不動，不要危險或受傷。人物身份要明確：主角爸爸。不可有文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L252-S04",
+      "text": "太晚起了，我急忙跳下床。",
+      "spokenText": "太晚起了我急忙跳下床",
+      "focusChar": "跳",
+      "displayLines": [
+        "太晚起了，",
+        "我急忙跳下床。"
+      ],
+      "imageNotes": "早上房間場景，主角小女孩太晚起了，急忙從床上下來準備出門。畫面要表現急忙但安全，不要有摔倒或危險情節。不可出現時鐘數字、文字、標籤或鬧鐘數字。人物身份要明確：主角小女孩。"
+    },
+    {
+      "id": "L252-S05",
+      "text": "搬床時，腳步要小心。",
+      "spokenText": "搬床時腳步要小心",
+      "focusChar": "搬",
+      "displayLines": [
+        "搬床時，",
+        "腳步要小心。"
+      ],
+      "imageNotes": "家裡房間場景，主角爸爸和主角媽媽正在小心搬床，腳步放穩、注意地面。畫面要表現搬床時腳步要小心，不要危險、不要受傷。人物身份要明確：主角爸爸、主角媽媽。不可有文字、數字或標籤。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L252-G01",
+      "type": "find-character",
+      "sentenceId": "L252-S02",
+      "targetChar": "沙",
+      "reason": "「走在沙上」是本課具體場景用法，目標字清楚。"
+    },
+    "G02": {
+      "id": "L252-G02",
+      "type": "teach-character",
+      "sentenceId": "L252-S01",
+      "targetChar": "沙",
+      "targetCharIndex": 4,
+      "prefixText": "海邊的濕",
+      "suffixText": "很重",
+      "missingIndexes": [
+        4
+      ]
+    },
+    "G03": {
+      "id": "L252-G03",
+      "type": "missing-character",
+      "sentenceId": "L252-S03",
+      "targetChar": "沙",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        "沙",
+        "床",
+        "重"
+      ]
+    },
+    "G04": {
+      "id": "L252-G04",
+      "type": "partial-order",
+      "sentenceId": "L252-S05",
+      "targetChar": "搬",
+      "chunks": [
+        "搬床時",
+        "腳步",
+        "要小心"
+      ]
+    },
+    "G05": {
+      "id": "L252-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L252-S04",
+      "targetChar": "跳",
+      "correctText": "太晚起了，我急忙跳下床。",
+      "wrongOneText": "太晚起了，我急忙跳上床。",
+      "wrongTwoText": "太晚起了，我急忙走下床。",
+      "correctSpokenText": "太晚起了我急忙跳下床",
+      "wrongOneSpokenText": "太晚起了我急忙跳上床",
+      "wrongTwoSpokenText": "太晚起了我急忙走下床"
+    }
+  },
+  "dependsOnReviewModules": [
+    "R013",
+    "R014"
+  ],
+  "dependsOnLessons": [
+    "L241",
+    "L242",
+    "L243",
+    "L244",
+    "L245",
+    "L246",
+    "L247",
+    "L248",
+    "L249",
+    "L250",
+    "L251"
+  ],
+  "provisionalLearnedChars": [
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重"
+  ],
+  "productionNotes": "Do not add L252 to src/curriculum/sample-lessons.json until R013/R014 and L241-L251 are merged."
+}
