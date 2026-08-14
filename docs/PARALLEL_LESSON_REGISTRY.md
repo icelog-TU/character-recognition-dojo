@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L258 | 倒 / normal lesson | claimed | Production D | codex/l258-complete-package / 51029c12 | L251 重, L252 沙, L253 張, L254 椅, L255 累, L256 死, L257 睡 | ["重","沙","張","椅","累","死","睡"] | curriculum-workflow/lesson-requests/L258.json, curriculum-workflow/generated/L258-generation-packet.md | public/assets/lessons/L258/images/, public/assets/lessons/L258/audio/ | accepted handoff and starting complete package; release is dependency-blocked until L251-L257 are merged to main |
+| L258 | 倒 / normal lesson | ready-blocked-by-dependency | Production D | codex/l258-complete-package / 4a8b2824 | L251 重, L252 沙, L253 張, L254 椅, L255 累, L256 死, L257 睡 | ["重","沙","張","椅","累","死","睡"] | curriculum-workflow/lesson-requests/L258.json, curriculum-workflow/generated/L258-generation-packet.md | public/assets/lessons/L258/images/, public/assets/lessons/L258/audio/ | asset-complete-package prepared; local checks passed; release remains blocked until L251-L257 are merged to main |
 
 ## Status Values
 
