@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L256 | 死 / normal lesson | claimed | Production B | codex/l256-complete-package / 2c5a0517 | L251 重, L252 沙, L253 張, L254 椅, L255 累 | ["重","沙","張","椅","累"] | curriculum-workflow/lesson-requests/L256.json; curriculum-workflow/generated/L256-generation-packet.md | public/assets/lessons/L256/images/; public/assets/lessons/L256/audio/ | accepted handoff and starting complete package; blocked from merge until L251-L255 are in main |
 
 ## Status Values
 
