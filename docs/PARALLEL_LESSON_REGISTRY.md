@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L236 | 店 / normal lesson | claimed | Production A | codex/l236-complete-package / 0356a3ca | L234:貴, L235:賣 | ["貴","賣"] | curriculum-workflow/lesson-requests/L236.json; curriculum-workflow/generated/L236-generation-packet.md | public/assets/lessons/L236/images/; public/assets/lessons/L236/audio/ | accepted handoff and starting complete package |
+| L236 | 店 / normal lesson | ready-blocked-by-dependency | Production A | codex/l236-complete-package / 14bfee3f | L234:貴, L235:賣 | ["貴","賣"] | curriculum-workflow/lesson-requests/L236.json; curriculum-workflow/generated/L236-generation-packet.md | public/assets/lessons/L236/images/; public/assets/lessons/L236/audio/; curriculum-workflow/audio-inbox/L236/ | complete package prepared; blocked until L234 and L235 enter main |
 
 ## Status Values
 
