@@ -1,0 +1,206 @@
+{
+  "id": "L257",
+  "order": 257,
+  "newChars": [
+    "睡"
+  ],
+  "zhuyin": {
+    "睡": "ㄕㄨㄟˋ"
+  },
+  "title": "睡",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Approved handoff for Production C. Latest origin/main production curriculum is complete through L250; L251-L256 are provisional dependencies, so this package is blocked from merge until those dependencies enter main. Use Taiwan usage: 睡著, not 睡着; 睡死了 is colloquial deep sleep and must not be visualized as death or horror.",
+  "generationConstraints": {
+    "allowedBoundary": "Use latest origin/main learned characters through L250 plus provisional learned chars [重, 沙, 張, 椅, 累, 死] plus current new char 睡.",
+    "provisionalLearnedChars": [
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死"
+    ],
+    "requiredCoverageChars": [
+      "睡",
+      "死",
+      "累",
+      "椅",
+      "張",
+      "沙"
+    ],
+    "targetCharMinimumCount": {
+      "睡": 3
+    },
+    "recentTargetMinimumCounts": {
+      "死": 2,
+      "累": 2,
+      "椅": 2,
+      "張": 1,
+      "沙": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "覺",
+      "午",
+      "醒",
+      "眠",
+      "休",
+      "息",
+      "夢",
+      "躺",
+      "枕",
+      "被"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, readable marks, horror imagery, injury, or death imagery.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 睡 as public/assets/lessons/L257/audio/char-u7761.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L257-S01",
+      "text": "媽媽累了，坐在椅子上睡著了。",
+      "spokenText": "媽媽累了坐在椅子上睡著了",
+      "focusChar": "睡",
+      "displayLines": [
+        "媽媽累了，",
+        "坐在椅子上睡著了。"
+      ],
+      "imageNotes": "主角媽媽工作或家務後很累，坐在椅子上睡著了。主角媽媽身份要符合 L154/L162/L163 family continuity，不可畫成老師；畫面溫和安靜，不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L257-S02",
+      "text": "爸爸睡死了，什麼都聽不見。",
+      "spokenText": "爸爸睡死了什麼都聽不見",
+      "focusChar": "死",
+      "displayLines": [
+        "爸爸睡死了，",
+        "什麼都聽不見。"
+      ],
+      "imageNotes": "主角爸爸在家裡熟睡，主角小女孩或主角媽媽在旁邊小聲叫他，但爸爸完全沒聽見。畫面要表現「睡死了」是睡得很熟的誇張口語，不可呈現死亡、受傷或恐怖畫面；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L257-S03",
+      "text": "玩沙玩得太累，一到家就睡著。",
+      "spokenText": "玩沙玩得太累一到家就睡著",
+      "focusChar": "睡",
+      "displayLines": [
+        "玩沙玩得太累，",
+        "一到家就睡著。"
+      ],
+      "imageNotes": "主角小女孩在海邊或沙地玩沙後回到家，坐在沙發或椅子旁很快睡著。畫面可帶一點沙地玩耍後的物品，例如小沙桶或鞋上的沙，但場景在家裡；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L257-S04",
+      "text": "這一步死棋，不能改了。",
+      "spokenText": "這一步死棋不能改了",
+      "focusChar": "死",
+      "displayLines": [
+        "這一步死棋，",
+        "不能改了。"
+      ],
+      "imageNotes": "主角爸爸和主角小女孩在家裡下棋，棋盤上有一步明顯走錯，兩人看著棋盤思考。畫面重點是棋局，不要出現任何死亡、恐怖或暴力意象；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L257-S05",
+      "text": "床邊有一張小椅子。",
+      "spokenText": "床邊有一張小椅子",
+      "focusChar": "椅",
+      "displayLines": [
+        "床邊有",
+        "一張小椅子。"
+      ],
+      "imageNotes": "乾淨溫暖的臥室裡，床邊放著一張小椅子，床和椅子的相對位置要清楚。畫面不需要人物；不可有文字、數字、標籤或水印。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L257-G01",
+      "type": "find-character",
+      "sentenceId": "L257-S02",
+      "targetChar": "睡",
+      "reason": "「爸爸睡死了」是本課核心口語用法，目標字清楚。"
+    },
+    {
+      "id": "L257-G02",
+      "type": "teach-character",
+      "sentenceId": "L257-S01",
+      "targetChar": "睡",
+      "targetCharIndex": 9,
+      "teachAudio": {
+        "prefixText": "媽媽累了坐在椅子上",
+        "suffixText": "著了",
+        "prefixSrc": "/assets/lessons/L257/audio/L257-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L257/audio/L257-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L257-G03",
+      "type": "missing-character",
+      "sentenceId": "L257-S03",
+      "targetChar": "睡",
+      "missingIndexes": [
+        10
+      ],
+      "options": [
+        "睡",
+        "累",
+        "死"
+      ]
+    },
+    {
+      "id": "L257-G04",
+      "type": "partial-order",
+      "sentenceId": "L257-S04",
+      "chunks": [
+        "這一步死棋",
+        "不能",
+        "改了"
+      ]
+    },
+    {
+      "id": "L257-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L257-S05",
+      "correctText": "床邊有一張小椅子。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "床邊有一張小桌子。",
+          "audioSrc": "/assets/lessons/L257/audio/L257-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "門邊有一張小椅子。",
+          "audioSrc": "/assets/lessons/L257/audio/L257-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "expectedStatus": "ready-blocked-by-dependency until L251-L256 are merged to main",
+    "allowedCharacterAudit": "PASS in handoff; Production rechecked against origin/main L001-L250 plus provisional dependencies and current 睡.",
+    "coverage": {
+      "睡": 3,
+      "死": 2,
+      "累": 2,
+      "椅": 2,
+      "張": 1,
+      "沙": 1
+    }
+  }
+}
