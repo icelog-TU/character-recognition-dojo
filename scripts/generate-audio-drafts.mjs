@@ -49,6 +49,7 @@ const baseSpeechInstructions = [
   "Do not add erhua, retroflex-r, r-colored curled endings, or any Beijing-style final r sound.",
   "Keep final syllables clean, plain, and audible.",
   "Pronunciation guardrails: 小孩 is ㄒㄧㄠˇ ㄏㄞˊ, never ㄒㄧㄠˇ ㄏㄞˊㄦ or any r-colored form; 孩 always ends cleanly as ㄏㄞˊ. 更 is ㄍㄥˋ and, when generated as a single character, must be spoken exactly once.",
+  "生火 is ㄕㄥ ㄏㄨㄛˇ, meaning to start a fire; do not pronounce it as 生活 ㄕㄥ ㄏㄨㄛˊ.",
   "Do not read punctuation aloud.",
   "For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
 ].join(" ");
