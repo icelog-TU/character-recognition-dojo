@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-13T15:29:52.083Z",
+  "exportedAt": "2026-08-14T02:25:44.880Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -24841,52 +24841,52 @@
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L056/audio/L056-S03.m4a",
-            "durationMs": 4703,
+            "durationMs": 4389,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 270
+                "endMs": 290
               },
               {
                 "charIndex": 1,
-                "startMs": 270,
-                "endMs": 540
+                "startMs": 290,
+                "endMs": 580
               },
               {
                 "charIndex": 2,
-                "startMs": 540,
-                "endMs": 1040
+                "startMs": 580,
+                "endMs": 1080
               },
               {
                 "charIndex": 3,
-                "startMs": 1040,
-                "endMs": 1340
+                "startMs": 1080,
+                "endMs": 1380
               },
               {
                 "charIndex": 4,
-                "startMs": 1840,
-                "endMs": 2030
+                "startMs": 1960,
+                "endMs": 2190
               },
               {
                 "charIndex": 5,
-                "startMs": 2030,
-                "endMs": 2220
+                "startMs": 2190,
+                "endMs": 2420
               },
               {
                 "charIndex": 6,
-                "startMs": 2220,
-                "endMs": 2740
+                "startMs": 2420,
+                "endMs": 2960
               },
               {
                 "charIndex": 7,
-                "startMs": 2740,
-                "endMs": 3020
+                "startMs": 2960,
+                "endMs": 3400
               },
               {
                 "charIndex": 8,
-                "startMs": 3020,
-                "endMs": 3380
+                "startMs": 3400,
+                "endMs": 3860
               }
             ]
           }
@@ -105281,6 +105281,897 @@
               "correct": false,
               "audioSrc": "/assets/lessons/L231/audio/L231-G05-wrong-two.m4a",
               "spokenText": "新車的電不夠了"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L232",
+      "order": 232,
+      "newChars": [
+        "錢"
+      ],
+      "zhuyin": {
+        "錢": "ㄑㄧㄢˊ"
+      },
+      "charAudio": {
+        "錢": "/assets/lessons/L232/audio/char-u9322.m4a"
+      },
+      "title": "錢",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L232-S01",
+          "text": "錢只剩一半了。",
+          "displayLines": [
+            "錢只剩",
+            "一半了。"
+          ],
+          "spokenText": "錢只剩一半了",
+          "focusChar": "錢",
+          "imagePrompt": "Use the approved L058 lesson images only as illustration style references: warm children's picture-book pencil-and-watercolor linework, soft natural light, clean detailed home environment, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. L058 is style-only; do not copy any L058 person, clothing, face, hair, or body shape. Follow Lesson Visual Cast SOP. Use L154/L162/L163 continuity for protagonist little girl: shoulder-length dark hair, small pink hair clip, pink jacket, white top, blue skirt, pink shoes. Scene: on a home table there is a transparent glass jar with coins inside, roughly half full. The protagonist little girl stands beside the table looking at the jar with a surprised noticing expression, as if she found the money is less now. Show the jar half full through visible coin level, with no written measurement marks. Center jar, coins, table, and protagonist little girl with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, measuring marks, brand marks, watermarks, logos, captions, speech bubbles, or readable marks anywhere.",
+          "imageSrc": "/assets/lessons/L232/images/L232-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L232/audio/L232-S01.m4a",
+            "durationMs": 2855,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 880
+              },
+              {
+                "charIndex": 2,
+                "startMs": 880,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1540,
+                "endMs": 1760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L232-S02",
+          "text": "這點錢夠不夠？",
+          "displayLines": [
+            "這點錢",
+            "夠不夠？"
+          ],
+          "spokenText": "這點錢夠不夠",
+          "focusChar": "夠",
+          "imagePrompt": "Use the approved L058 lesson images only as illustration style references: warm children's picture-book pencil-and-watercolor linework, soft natural light, clean home or small stall setting, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. L058 is style-only; do not copy any L058 person identity. Follow Lesson Visual Cast SOP. Use L154/L162/L163 continuity for the protagonist family: protagonist mother has shoulder-length dark hair, white or cream top, wide blue pants, warm practical clothing; protagonist little girl has shoulder-length dark hair, small pink hair clip, pink jacket, white top, blue skirt, pink shoes. Scene: protagonist little girl holds a small handful of coins and asks protagonist mother whether this little amount is enough. Mother bends slightly and looks at the coins with her, both checking the small amount. The coins should look few, but do not include price lists, signs, shop text, or numbers. Center mother, girl, and coins with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, price tags, watermarks, logos, captions, speech bubbles, or readable marks anywhere.",
+          "imageSrc": "/assets/lessons/L232/images/L232-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L232/audio/L232-S02.m4a",
+            "durationMs": 3366,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1700,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1920,
+                "endMs": 2120
+              }
+            ]
+          }
+        },
+        {
+          "id": "L232-S03",
+          "text": "舊鞋還能穿。",
+          "displayLines": [
+            "舊鞋",
+            "還能穿。"
+          ],
+          "spokenText": "舊鞋還能穿",
+          "focusChar": "舊",
+          "imagePrompt": "Use the approved L058 lesson images only as illustration style references: warm children's picture-book pencil-and-watercolor linework, soft natural light, clean home doorway or bedroom setting, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. L058 is style-only; do not copy any L058 person identity. Follow Lesson Visual Cast SOP. Use L154/L162/L163 continuity for protagonist little girl: shoulder-length dark hair, small pink hair clip, pink jacket, white top, blue skirt, pink shoes. Optional protagonist mother may stand nearby nodding, using mother continuity with shoulder-length dark hair, white or cream top, wide blue pants. Scene: protagonist little girl sits at a home doorway or in a room, looking at a pair of slightly old but clean and intact shoes, preparing to keep wearing them. The shoes have gentle wear but no damage, no brand marks, and no labels. Center girl and shoes with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, brand marks, watermarks, logos, captions, speech bubbles, or readable marks anywhere.",
+          "imageSrc": "/assets/lessons/L232/images/L232-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L232/audio/L232-S03.m4a",
+            "durationMs": 2624,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1220,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1380,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1620,
+                "endMs": 1860
+              }
+            ]
+          }
+        },
+        {
+          "id": "L232-S04",
+          "text": "水池裡只剩一點水。",
+          "displayLines": [
+            "水池裡",
+            "只剩一點水。"
+          ],
+          "spokenText": "水池裡只剩一點水",
+          "focusChar": "剩",
+          "imagePrompt": "Use the approved L058 lesson images only as illustration style references: warm children's picture-book pencil-and-watercolor linework, soft natural light, clean outdoor school or garden water-pool setting, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. L058 is style-only; do not copy any L058 person identity. Follow Lesson Visual Cast SOP. Use L154/L162/L163 continuity for protagonist little girl: shoulder-length dark hair, small pink hair clip, pink jacket, white top, blue skirt, pink shoes. Scene: an outdoor small water pool or school water pool has very little water left, only a shallow bit at the bottom, with the pool bottom clearly visible. The protagonist little girl stands safely at the edge looking down at the small remaining water. The scene must feel safe and calm, not dangerous. Center the pool, shallow remaining water, and little girl with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, warning boards, watermarks, logos, captions, speech bubbles, or readable marks anywhere.",
+          "imageSrc": "/assets/lessons/L232/images/L232-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L232/audio/L232-S04.m4a",
+            "durationMs": 3681,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 980
+              },
+              {
+                "charIndex": 2,
+                "startMs": 980,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1340,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1980,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2240,
+                "endMs": 2490
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2490,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2740,
+                "endMs": 3240
+              }
+            ]
+          }
+        },
+        {
+          "id": "L232-S05",
+          "text": "我把錢包放進新書包。",
+          "displayLines": [
+            "我把錢包",
+            "放進新書包。"
+          ],
+          "spokenText": "我把錢包放進新書包",
+          "focusChar": "錢",
+          "imagePrompt": "Use the approved L058 lesson images only as illustration style references: warm children's picture-book pencil-and-watercolor linework, soft natural light, clean detailed family home or before-school entry area, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. L058 is style-only; do not copy any L058 person identity. Follow Lesson Visual Cast SOP. Use L154/L162/L163 continuity for protagonist little girl: shoulder-length dark hair, small pink hair clip, pink jacket, white top, blue skirt, pink shoes. Optional protagonist mother may stand nearby using mother continuity with shoulder-length dark hair, white or cream top, wide blue pants. Scene: protagonist little girl puts a small wallet into a new school bag at home before going out. Mother may watch warmly, confirming she packed it. The wallet and school bag must have no writing, numbers, name tags, brand marks, or labels. Center the girl, wallet, and new school bag with safe margins; make the wallet being placed into the bag clear. No visible text, letters, numbers, zhuyin, labels, signs, name tags, brand marks, watermarks, logos, captions, speech bubbles, or readable marks anywhere.",
+          "imageSrc": "/assets/lessons/L232/images/L232-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L232/audio/L232-S05.m4a",
+            "durationMs": 4999,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 500
+              },
+              {
+                "charIndex": 2,
+                "startMs": 500,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1100,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1620,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1920,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2280,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2440,
+                "endMs": 2660
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L232-G01",
+          "type": "find-character",
+          "sentenceId": "L232-S01",
+          "targetChar": "錢",
+          "prompt": "找出句子裡的「錢」。",
+          "missingIndexes": [
+            0
+          ]
+        },
+        {
+          "id": "L232-G02",
+          "type": "teach-character",
+          "sentenceId": "L232-S02",
+          "targetChar": "錢",
+          "targetCharIndex": 2,
+          "prompt": "教小兔子念這個字。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L232/audio/L232-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L232/audio/L232-G02-suffix.m4a"
+          },
+          "missingIndexes": [
+            2
+          ]
+        },
+        {
+          "id": "L232-G03",
+          "type": "missing-character",
+          "sentenceId": "L232-S05",
+          "targetChar": "錢",
+          "missingIndexes": [
+            2
+          ],
+          "prompt": "選出少掉的字。",
+          "options": [
+            {
+              "id": "L232-G03-A",
+              "text": "錢",
+              "correct": true
+            },
+            {
+              "id": "L232-G03-B",
+              "text": "夠",
+              "correct": false
+            },
+            {
+              "id": "L232-G03-C",
+              "text": "剩",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L232-G04",
+          "type": "partial-order",
+          "sentenceId": "L232-S04",
+          "targetChar": "剩",
+          "prompt": "排出正確的句子。",
+          "options": [
+            {
+              "id": "L232-G04-A",
+              "text": "水池裡",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L232-G04-B",
+              "text": "只剩",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L232-G04-C",
+              "text": "一點水",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ],
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "chunks": [
+            {
+              "text": "水池裡",
+              "order": 0
+            },
+            {
+              "text": "只剩",
+              "order": 1
+            },
+            {
+              "text": "一點水",
+              "order": 2
+            }
+          ],
+          "correctOrder": [
+            "L232-G04-A",
+            "L232-G04-B",
+            "L232-G04-C"
+          ]
+        },
+        {
+          "id": "L232-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L232-S03",
+          "targetChar": "舊",
+          "prompt": "選出你聽到的句子。",
+          "options": [
+            {
+              "id": "L232-G05-A",
+              "text": "舊鞋還能穿。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L232/audio/L232-S03.m4a",
+              "spokenText": "舊鞋還能穿"
+            },
+            {
+              "id": "L232-G05-B",
+              "text": "新鞋還能穿。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L232/audio/L232-G05-wrong-one.m4a",
+              "spokenText": "新鞋還能穿"
+            },
+            {
+              "id": "L232-G05-C",
+              "text": "舊鞋不能穿。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L232/audio/L232-G05-wrong-two.m4a",
+              "spokenText": "舊鞋不能穿"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L233",
+      "order": 233,
+      "newChars": [
+        "買"
+      ],
+      "zhuyin": {
+        "買": "ㄇㄞˇ"
+      },
+      "charAudio": {
+        "買": "/assets/lessons/L233/audio/char-u8cb7.m4a"
+      },
+      "title": "買",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L233-S01",
+          "text": "這點錢買菜夠不夠？",
+          "spokenText": "這點錢買菜夠不夠",
+          "focusChar": "買",
+          "displayLines": [
+            "這點錢買菜",
+            "夠不夠？"
+          ],
+          "imageNotes": "主角小女孩和主角媽媽在菜攤或家裡準備買菜，桌上或手上只有一小把硬幣，媽媽和小女孩一起看著錢，像是在確認這點錢買菜夠不夠。不可有價目表、文字、數字、招牌、品牌或標籤。",
+          "imagePrompt": "Use case: illustration-story\nAsset type: L233-S01 lesson image for a Taiwan preschool Traditional Chinese character-recognition app\nPrimary request: square image / 1:1 composition. Protagonist little girl and protagonist mother are preparing to buy vegetables at a simple vegetable stall or home table. There is only a small handful of plain coins on the table or in their hands. Mother and daughter look at the coins together, clearly checking whether this small amount of money is enough to buy vegetables.\nVisual cast: protagonist little girl from L154/L162/L163 family continuity, wearing a pink jacket, white shirt, blue skirt, pink shoes, and small pink hair clip. Protagonist mother from L154/L162/L163 family continuity, warm family role, practical home clothing such as a soft cardigan or apron, distinct from teachers and passersby. L058 images are style anchors only, not character identity references.\nComposition: center the coins, simple vegetables, mother, and little girl; keep all meaning-bearing objects large and phone-readable with safe margins.\nStyle/medium: refined warm watercolor children's textbook illustration matching L058 style traits: soft transparent watercolor, delicate colored-pencil linework, warm clean lighting, detailed but uncluttered.\nConstraints: no price list, text, numbers, signs, labels, logos, brands, watermarks, readable marks, store signs, or currency numbers.",
+          "imageSrc": "/assets/lessons/L233/images/L233-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L233/audio/L233-S01.m4a",
+            "durationMs": 3327,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 520
+              },
+              {
+                "charIndex": 2,
+                "startMs": 520,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1660,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2040,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2240,
+                "endMs": 2460
+              }
+            ]
+          }
+        },
+        {
+          "id": "L233-S02",
+          "text": "錢不夠，不能買新鞋。",
+          "spokenText": "錢不夠不能買新鞋",
+          "focusChar": "買",
+          "displayLines": [
+            "錢不夠，",
+            "不能買新鞋。"
+          ],
+          "imageNotes": "主角小女孩和主角媽媽在鞋店或家裡看一雙新鞋，媽媽溫和地表示錢不夠，暫時不能買。畫面要清楚呈現「想買新鞋但錢不夠」。鞋盒、鞋子、牆面不可有文字、數字、價格、品牌或標籤。",
+          "imagePrompt": "Use case: illustration-story\nAsset type: L233-S02 lesson image for a Taiwan preschool Traditional Chinese character-recognition app\nPrimary request: square image / 1:1 composition. Protagonist little girl and protagonist mother look at one pair of new shoes at home or in a very plain shoe area. Mother gently indicates that there is not enough money, so they cannot buy the new shoes for now. The scene must clearly show wanting to buy new shoes but not having enough money.\nVisual cast: protagonist little girl from L154/L162/L163 family continuity, pink jacket, white shirt, blue skirt, pink shoes, small pink hair clip. Protagonist mother from L154/L162/L163 family continuity, warm family role, practical soft cardigan or apron, not a teacher or clerk. L058 style anchors only.\nComposition: new shoes centered with a tiny group of plain coins nearby, mother and little girl visible, expressions gentle and understandable, safe margins.\nStyle/medium: refined warm watercolor children's textbook illustration, soft clean palette, delicate colored-pencil lines.\nConstraints: no text, numbers, prices, signs, labels, shoe brand, shoebox writing, wall writing, logos, tags, watermarks, or readable marks.",
+          "imageSrc": "/assets/lessons/L233/images/L233-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L233/audio/L233-S02.m4a",
+            "durationMs": 3743,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1680,
+                "endMs": 1750
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1750,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1820,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2720
+              }
+            ]
+          }
+        },
+        {
+          "id": "L233-S03",
+          "text": "買了水，錢只剩一點。",
+          "spokenText": "買了水錢只剩一點",
+          "focusChar": "買",
+          "displayLines": [
+            "買了水，",
+            "錢只剩一點。"
+          ],
+          "imageNotes": "主角小女孩剛買了一瓶沒有標籤的水，手上或桌上只剩很少硬幣。可有主角媽媽在旁邊看著她數錢。畫面重點是「買水後錢只剩一點」。水瓶、硬幣、桌面不可有文字、數字、刻度、品牌或標籤。",
+          "imagePrompt": "Use case: illustration-story\nAsset type: L233-S03 lesson image for a Taiwan preschool Traditional Chinese character-recognition app\nPrimary request: square image / 1:1 composition. Protagonist little girl has just bought one plain unlabeled water bottle. On the table or in her hand there are only a few plain coins left. Protagonist mother may stand beside her watching as the girl counts the remaining money. The focus is: after buying water, only a little money remains.\nVisual cast: protagonist little girl from L154/L162/L163 family continuity, pink jacket, white shirt, blue skirt, pink shoes, small pink hair clip. Protagonist mother from L154/L162/L163 family continuity, warm practical family role. L058 style anchors only.\nComposition: center the plain water bottle, a very small remaining coin group, and the girl counting; make the leftover money visually clear without using numbers; safe margins.\nStyle/medium: refined warm watercolor children's textbook illustration, soft transparent watercolor, delicate colored-pencil lines.\nConstraints: no bottle label, text, numbers, scale marks, brand, logo, price tag, table writing, watermarks, readable marks, or printed symbols.",
+          "imageSrc": "/assets/lessons/L233/images/L233-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L233/audio/L233-S03.m4a",
+            "durationMs": 3756,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 880
+              },
+              {
+                "charIndex": 2,
+                "startMs": 880,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1340,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1700,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2500,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2780,
+                "endMs": 2970
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2970,
+                "endMs": 3160
+              }
+            ]
+          }
+        },
+        {
+          "id": "L233-S04",
+          "text": "衣服買太多，只穿了一半。",
+          "spokenText": "衣服買太多只穿了一半",
+          "focusChar": "只",
+          "displayLines": [
+            "衣服買太多，",
+            "只穿了一半。"
+          ],
+          "imageNotes": "主角小女孩的房間裡有一小堆新買或剛買來的衣服，一部分已經穿過或拿出來搭配，另一部分還整齊放著沒穿。主角媽媽在旁邊看著，像是在提醒衣服買太多。畫面要清楚表現「衣服買太多，只穿了一半」，不可有文字、數字、品牌、吊牌或標籤。",
+          "imagePrompt": "Use case: illustration-story\nAsset type: L233-S04 lesson image for a Taiwan preschool Traditional Chinese character-recognition app\nPrimary request: square image / 1:1 composition. In the protagonist little girl's room, there is a small pile of newly bought clothes. About half of the clothes have clearly been worn or taken out for outfit matching, and the other half are still neatly folded and unworn. Protagonist mother watches gently as if reminding the girl that too many clothes were bought and only half were worn.\nVisual cast: protagonist little girl from L154/L162/L163 family continuity, pink jacket or casual home outfit retaining her pink hair clip and child identity. Protagonist mother from L154/L162/L163 family continuity, warm family role, practical home clothing. L058 style anchors only.\nComposition: center the two contrasting clothing groups: worn/taken-out clothes and neatly unworn clothes; mother and girl visible; phone-readable square crop with safe margins.\nStyle/medium: refined warm watercolor children's textbook illustration, cozy Taiwan home interior, soft lines and warm light.\nConstraints: no text, numbers, clothing brand, tag, label, hanger tag, printed shirt words, logos, watermarks, readable marks, or price labels.",
+          "imageSrc": "/assets/lessons/L233/images/L233-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L233/audio/L233-S04.m4a",
+            "durationMs": 4122,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1420,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2460,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2760,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2980,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3200,
+                "endMs": 3360
+              }
+            ]
+          }
+        },
+        {
+          "id": "L233-S05",
+          "text": "新書還剩一半沒看。",
+          "spokenText": "新書還剩一半沒看",
+          "focusChar": "剩",
+          "displayLines": [
+            "新書還剩",
+            "一半沒看。"
+          ],
+          "imageNotes": "主角小女孩坐在家裡或教室看一本新書，書翻到中間，後半本明顯還沒看完。可有書籤夾在中間。畫面重點是「新書還剩一半沒看」。書頁與封面不可有可讀文字、數字、品牌或標籤。",
+          "imagePrompt": "Use case: illustration-story\nAsset type: L233-S05 lesson image for a Taiwan preschool Traditional Chinese character-recognition app\nPrimary request: square image / 1:1 composition. Protagonist little girl sits at home or in a classroom reading one new book. The book is open near the middle, with the unread back half visibly remaining. A simple bookmark may sit at the middle. The focus is: the new book still has half left unread.\nVisual cast: protagonist little girl from L154/L162/L163 family continuity, pink jacket, white shirt, blue skirt, pink shoes, small pink hair clip. If the setting is classroom, do not include a teacher unless needed. L058 style anchors only.\nComposition: center the girl and the open book; clearly show the remaining back half thickness without any readable page content; safe margins for square app card.\nStyle/medium: refined warm watercolor children's textbook illustration matching L058 style, soft transparent watercolor and delicate colored-pencil linework.\nConstraints: no readable text, letters, numbers, zhuyin, page writing, book title, brand, label, watermark, logo, or readable marks on cover or pages.",
+          "imageSrc": "/assets/lessons/L233/images/L233-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L233/audio/L233-S05.m4a",
+            "durationMs": 3588,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1580,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1760,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1980,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2160,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2320,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2680,
+                "endMs": 2900
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L233-G01",
+          "type": "find-character",
+          "sentenceId": "L233-S03",
+          "targetChar": "買",
+          "prompt": "找出句子裡的「買」。",
+          "missingIndexes": [
+            0
+          ]
+        },
+        {
+          "id": "L233-G02",
+          "type": "teach-character",
+          "sentenceId": "L233-S01",
+          "targetChar": "買",
+          "targetCharIndex": 3,
+          "prompt": "教小兔子念這個字。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L233/audio/L233-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L233/audio/L233-G02-suffix.m4a"
+          },
+          "missingIndexes": [
+            3
+          ]
+        },
+        {
+          "id": "L233-G03",
+          "type": "missing-character",
+          "sentenceId": "L233-S02",
+          "targetChar": "買",
+          "prompt": "選出少掉的字。",
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "L233-G03-A",
+              "text": "買",
+              "correct": true
+            },
+            {
+              "id": "L233-G03-B",
+              "text": "錢",
+              "correct": false
+            },
+            {
+              "id": "L233-G03-C",
+              "text": "夠",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L233-G04",
+          "type": "partial-order",
+          "sentenceId": "L233-S05",
+          "targetChar": "剩",
+          "prompt": "排出正確的句子。",
+          "chunks": [
+            {
+              "text": "新書",
+              "order": 0
+            },
+            {
+              "text": "還剩一半",
+              "order": 1
+            },
+            {
+              "text": "沒看",
+              "order": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "L233-G04-A",
+              "text": "新書",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L233-G04-B",
+              "text": "還剩一半",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L233-G04-C",
+              "text": "沒看",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ],
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "correctOrder": [
+            "L233-G04-A",
+            "L233-G04-B",
+            "L233-G04-C"
+          ]
+        },
+        {
+          "id": "L233-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L233-S04",
+          "targetChar": "買",
+          "prompt": "選出你聽到的句子。",
+          "options": [
+            {
+              "id": "L233-G05-A",
+              "text": "衣服買太多，只穿了一半。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L233/audio/L233-S04.m4a",
+              "spokenText": "衣服買太多只穿了一半"
+            },
+            {
+              "id": "L233-G05-B",
+              "text": "衣服買太少，只穿了一半。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L233/audio/L233-G05-wrong-one.m4a",
+              "spokenText": "衣服買太少只穿了一半"
+            },
+            {
+              "id": "L233-G05-C",
+              "text": "衣服買太多，只穿了一點。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L233/audio/L233-G05-wrong-two.m4a",
+              "spokenText": "衣服買太多只穿了一點"
             }
           ]
         }
