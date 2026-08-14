@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L248 | 跳 / normal lesson | claimed | Production A | codex/l248-complete-package / 4405d887 | L241:工, L242:作, L243:忙, L244:幫, L245:急, L246:腳, L247:步; R013, R014 | ["工","作","忙","幫","急","腳","步"] | curriculum-workflow/lesson-requests/L248.json; curriculum-workflow/generated/L248-generation-packet.md | public/assets/lessons/L248/images/; public/assets/lessons/L248/audio/ | accepted handoff and starting complete package; blocked from merge until missing lessons and R013/R014 enter main |
 
 ## Status Values
 
