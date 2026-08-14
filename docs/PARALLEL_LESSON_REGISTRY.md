@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L242 | 作 / normal lesson | ready-blocked-by-dependency | Production C | codex/l242-complete-package / adc7ecb6 | L234:貴, L235:賣, L236:店, L237:場, L238:市, L239:夜, L240:具, L241:工, R013, R014 | ["貴","賣","店","場","市","夜","具","工"] | curriculum-workflow/lesson-requests/L242.json; curriculum-workflow/generated/L242-generation-packet.md | public/assets/lessons/L242/images/; public/assets/lessons/L242/audio/ | complete package pushed; blocked until L234-L241 and R013/R014 enter origin/main |
+| L242 | 作 / normal lesson | ready-blocked-by-dependency | Production C | codex/l242-complete-package / adc7ecb6 | L235:賣, L236:店, L237:場, L238:市, L239:夜, L240:具, L241:工, R013, R014 | ["賣","店","場","市","夜","具","工"] | curriculum-workflow/lesson-requests/L242.json; curriculum-workflow/generated/L242-generation-packet.md | public/assets/lessons/L242/images/; public/assets/lessons/L242/audio/ | complete package pushed; latest origin/main includes L234, still blocked until L235-L241 and R013/R014 enter origin/main |
 
 ## Status Values
 

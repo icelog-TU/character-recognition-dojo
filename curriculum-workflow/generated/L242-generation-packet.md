@@ -7,7 +7,7 @@
 - 新字：作
 - 注音：作=ㄗㄨㄛˋ
 - 目標句數：5
-- 教師備註：Teacher-approved L242 Production C handoff. Origin/main is complete through L233 at claim time, so L234-L241 and review modules R013/R014 are blockers. Prepare a complete package but keep production JSON out of final branch until dependencies and reviews are merged.
+- 教師備註：Teacher-approved L242 Production C handoff. Latest origin/main is complete through L234 at final check, so L235-L241 and review modules R013/R014 are blockers. Prepare a complete package but keep production JSON out of final branch until dependencies and reviews are merged.
 
 ## 已學字邊界
 

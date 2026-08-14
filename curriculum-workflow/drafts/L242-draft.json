@@ -478,7 +478,6 @@
     }
   ],
   "provisionalLearnedChars": [
-    "貴",
     "賣",
     "店",
     "場",
@@ -502,9 +501,8 @@
     "R014"
   ],
   "generationConstraints": {
-    "allowedBoundary": "latest origin/main production JSON through L233 plus provisional L234 貴, L235 賣, L236 店, L237 場, L238 市, L239 夜, L240 具, L241 工 and current target 作",
+    "allowedBoundary": "latest origin/main production JSON through L234 plus provisional L235 ?, L236 ?, L237 ?, L238 ?, L239 ?, L240 ?, L241 ? and current target ?",
     "provisionalLearnedChars": [
-      "貴",
       "賣",
       "店",
       "場",
@@ -596,5 +594,5 @@
       "Do not splice, cut, mute, patch, or extract production audio."
     ]
   },
-  "productionNotes": "Dependency-blocked package at claim time because origin/main is complete through L233 and does not include L234-L241 or R013/R014."
+  "productionNotes": "Dependency-blocked package because latest origin/main includes L234 but does not include L235-L241 or R013/R014."
 }
