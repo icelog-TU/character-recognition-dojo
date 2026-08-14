@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L238 | 市 / normal lesson | claimed | Production B | codex/l238-complete-package / e135992b | L234 貴, L235 賣, L236 店, L237 場 | ["貴","賣","店","場"] | curriculum-workflow/lesson-requests/L238.json; curriculum-workflow/generated/L238-generation-packet.md | public/assets/lessons/L238/images/; public/assets/lessons/L238/audio/ | accepted handoff and starting complete package |
+| L238 | 市 / normal lesson | ready-blocked-by-dependency | Production B | codex/l238-complete-package / pending final push | L234 貴, L235 賣, L236 店, L237 場 | ["貴","賣","店","場"] | curriculum-workflow/lesson-requests/L238.json; curriculum-workflow/generated/L238-generation-packet.md; curriculum-workflow/drafts/L238-draft.json | public/assets/lessons/L238/images/; public/assets/lessons/L238/audio/ | complete package prepared; blocked until L234-L237 enter origin/main |
 
 ## Status Values
 
