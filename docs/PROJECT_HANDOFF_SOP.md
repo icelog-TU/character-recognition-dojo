@@ -37,7 +37,7 @@ Open exactly one role SOP after this file:
 
 - Supervisor / coordination / SOP maintenance: `docs/ROLE_SUPERVISOR_SOP.md`
 - Sentence editor: `docs/ROLE_EDITOR_SOP.md`
-- Production A/B/C/D: `docs/ROLE_PRODUCTION_SOP.md`
+- Production slots, currently A/B/C/D unless Supervisor assigns more: `docs/ROLE_PRODUCTION_SOP.md`
 - Release / ordered push to `main`: `docs/ROLE_RELEASE_SOP.md`
 - Asset repair after teacher review: `docs/ROLE_ASSET_REPAIR_SOP.md`
 - Old-image visual refresh batches: `docs/ROLE_VISUAL_REFRESH_SOP.md`
@@ -224,10 +224,10 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/PROJECT_HANDOFF_SOP.md
 - docs/ROLE_EDITOR_SOP.md
 
-你的工作是跟我選新字、定稿五句話，然後輸出可一鍵貼給 Production A/B/C/D 的完整 handoff。不要製作圖片或音檔，除非我另外明確要求。
+你的工作是跟我選新字、定稿五句話，然後輸出可一鍵貼給目前指定 Production slot 的完整 handoff。Production 目前是 A/B/C/D；如果 Supervisor 指派更多 slot，以最新指派為準。不要製作圖片或音檔，除非我另外明確要求。
 ```
 
-### Production A/B/C/D
+### Production Slots
 
 ```text
 你是「認字練功房」Production <A|B|C|D> 對話串。
@@ -268,7 +268,7 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/PROJECT_HANDOFF_SOP.md
 - docs/ROLE_RELEASE_SOP.md
 
-你的工作是把 Production A/B/C/D 已推到遠端分支的完整課程包，按 playable lesson order 一課一課移植/合併到 main，跑 gate，push，並檢查 GitHub Pages 部署。
+你的工作是把各 Production slot 已推到遠端分支的完整課程包，按 playable lesson order 一課一課移植/合併到 main，跑 gate，push，並檢查 GitHub Pages 部署。
 不要直接 merge 舊基底分支；先從 origin/main 檢查 diff 和依賴。
 ```
 

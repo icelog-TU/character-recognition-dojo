@@ -1,6 +1,6 @@
 # Role SOP: Editor
 
-The Editor selects and finalizes lesson sentences with the teacher, then writes a complete one-paste production handoff for Production A/B/C/D.
+The Editor selects and finalizes lesson sentences with the teacher, then writes a complete one-paste production handoff for the currently assigned Production slot. The production pool is currently A/B/C/D, but the Editor must follow the latest Supervisor assignment if the pool changes.
 
 The Editor does not normally create final images, audio, alignment, or production curriculum JSON.
 
@@ -19,7 +19,9 @@ If AI sentence generation commands are needed, also read `docs/AI_GENERATION_SET
 
 ## Source Of Truth
 
-Use latest `origin/main:src/curriculum/sample-lessons.json` for the real learned-character set.
+Before each lesson, run `git fetch origin` and use latest `origin/main:src/curriculum/sample-lessons.json` for the real learned-character set.
+
+Do not use local `main`, the current checkout, stale chat memory, screenshots, old handoffs, or unverified branches as the production boundary. If the local checkout is behind `origin/main`, the Editor must still read `origin/main` directly and report the boundary from that version.
 
 Use `docs/CURRICULUM_LEDGER.md` only as the human-readable summary and continuity guide. If it disagrees with production JSON, production JSON wins.
 
@@ -29,13 +31,15 @@ Use `docs/PARALLEL_LESSON_REGISTRY.md` only for not-yet-merged provisional depen
 
 For each normal lesson, use this sequence before producing a handoff:
 
-1. Start from latest `origin/main`, report the current production boundary, and name any provisional dependency lessons that are not yet merged.
-2. Build a word/phrase list before drafting sentences. Use the full learned-character set plus the current new character, not only the previous-five review pool.
-3. Reject legal-but-unnatural words early. Coverage counts are minimum gates after good sentences exist; they are not a reason to keep a weak sentence.
-4. Draft more candidate directions than needed, with varied sentence frames, scenes, people, actions, and uses of the new character.
-5. After every teacher edit, recalculate current-target and previous-five coverage, Han sentence counts, and the allowed-character audit. Report exact illegal characters instead of assuming they can be used.
-6. Preserve teacher-approved strong sentences unless there is a hard blocker. If a teacher rejects a sentence as unnatural, identify which coverage target it served and rewrite around that target with natural Taiwan Mandarin.
-7. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, and Stage 4 sentence usage.
+1. Fetch and report the latest `origin/main` production boundary, including the last merged lesson id and newest learned character. If local audit output disagrees with `origin/main`, report the local checkout as stale and do not use it for planning.
+2. Build `allowedChars` from the full `origin/main` learned-character set, explicitly approved provisional dependency characters, and the current lesson's new character. Provisional characters supplement dependencies; they are not the whole writing pool.
+3. Build a word/phrase list before drafting sentences. Use the full learned-character set plus the current new character, not only the previous-five review pool or a recent theme line.
+4. Scan the full learned set for scene sources, old actions, old nouns, and old sentence patterns that can make the lesson varied. Do not let all five sentences stay in one topic line when older learned vocabulary supports better scenes.
+5. Reject legal-but-unnatural words early. Coverage counts are minimum gates after good sentences exist; they are not a reason to keep a weak sentence.
+6. Draft more candidate directions than needed, normally 8-10 candidates, with varied sentence frames, scenes, people, actions, `focusChar` choices, and uses of the new character.
+7. After every teacher edit, recalculate current-target and previous-five coverage, Han sentence counts, and the allowed-character audit. Report exact illegal characters instead of assuming they can be used.
+8. Preserve teacher-approved strong sentences unless there is a hard blocker. If a teacher rejects a sentence as unnatural, identify which coverage target it served and rewrite around that target with natural Taiwan Mandarin.
+9. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, and Stage 4 sentence usage.
 
 During discussion, keep analysis outside the production handoff block. A useful response shape is: candidate five sentences, a small coverage table, Han counts, allowed-character audit result, and any weak sentence or alternative.
 
@@ -98,7 +102,7 @@ The teacher uses that gray code block as the one-click copy area. Put discussion
 Every handoff must include:
 
 - Repo URL.
-- Assigned production slot A/B/C/D and exact worktree path.
+- Assigned production slot and exact worktree path from the latest Supervisor/teacher assignment.
 - Unit id and unit kind.
 - Latest known merged boundary from `origin/main`.
 - Complete sentence data and Stage 4 plan.
@@ -123,6 +127,8 @@ Auto-claim-and-continue:
 
 ## What Not To Do
 
+- Do not create lesson request JSON, generation packet Markdown, draft JSON, production curriculum JSON, planner data, ledger entries, image assets, audio assets, `charTimings`, or alignment output unless the teacher explicitly assigns Editor to act outside its normal role.
+- Do not commit or push from the Editor role unless the teacher explicitly asks for an SOP or repo-maintenance change in that same Editor thread.
 - Do not leave final sentences only in chat.
 - Do not tell Production only to "make images and audio."
 - Do not reserve AI-recommended characters without teacher approval.

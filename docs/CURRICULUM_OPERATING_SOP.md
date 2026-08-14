@@ -261,7 +261,7 @@ Lesson Gap Audit is the required coordination check for skipped lesson numbers a
 The Supervisor must run it:
 
 - before assigning a new multi-lesson batch
-- after Production A/B/C/D report several completed or blocked packages
+- after active Production slots report several completed or blocked packages
 - before Release pushes lessons that were prepared while earlier dependencies were missing
 - whenever the teacher suspects a lesson was skipped or asks whether work through `L###` is complete
 

@@ -112,7 +112,7 @@ The teacher may choose to refresh old lesson images from L001 onward so the whol
 
 This is a separate visual-refresh program, not ordinary new lesson Production:
 
-- Do not mix broad visual refresh work into normal Production A/B/C/D lesson packages unless the teacher explicitly assigns a small batch to that slot.
+- Do not mix broad visual refresh work into normal Production lesson packages unless the teacher explicitly assigns a small batch to that slot.
 - Prefer dedicated visual-refresh or Asset Repair threads working in ordered batches, such as L001-L010, L011-L020, or smaller batches when the images are semantically tricky.
 - Keep lesson text, `spokenText`, audio, Stage 4 data, and `charTimings` unchanged unless the teacher explicitly requests a broader lesson repair.
 - Keep existing `imageSrc` paths when replacing images in place, so production JSON does not need churn.

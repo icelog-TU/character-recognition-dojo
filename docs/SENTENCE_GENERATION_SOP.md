@@ -8,10 +8,12 @@ Use it whenever a Codex/GPT thread, planner tool, or teacher-facing workflow dra
 
 Before drafting sentences:
 
-1. Read latest `origin/main` and `src/curriculum/sample-lessons.json`.
-2. Read `docs/CURRICULUM_LEDGER.md` for the merged lesson sequence, recent review pool, visual continuity, and place continuity.
-3. Read `docs/PARALLEL_LESSON_REGISTRY.md` if working on any not-yet-merged parallel lesson.
-4. Use the lesson request's `allowedChars` as the locked character boundary.
+1. Run `git fetch origin`.
+2. Read latest `origin/main:src/curriculum/sample-lessons.json` for the production boundary. Do not use local `main`, the current checkout, stale chat memory, old screenshots, or unverified branches as the boundary.
+3. Report the latest merged lesson id and newest learned character from `origin/main`.
+4. Read `docs/CURRICULUM_LEDGER.md` for the merged lesson sequence, recent review pool, visual continuity, and place continuity.
+5. Read `docs/PARALLEL_LESSON_REGISTRY.md` if working on any not-yet-merged parallel lesson.
+6. Build and use the lesson request's `allowedChars` as the locked character boundary.
 
 If production JSON and Markdown disagree, `src/curriculum/sample-lessons.json` on latest `origin/main` wins.
 
@@ -23,6 +25,8 @@ Every display sentence must use only:
 - this lesson's current new target character(s)
 - explicitly registered provisional learned characters, only when the lesson request lists them for parallel work
 
+`allowedChars` must be built from the complete learned-character set on latest `origin/main`, plus explicitly approved provisional dependency characters, plus the current lesson's new character. It must not be reduced to only recent characters, provisional characters, or the latest theme line.
+
 If a proposed sentence contains any other Han character, stop and identify the unlearned character before generating images, audio, or production curriculum.
 
 Use Taiwan zhuyin only. Do not use Hanyu pinyin in curriculum, prompts, or UI text.
@@ -32,6 +36,8 @@ Use Taiwan zhuyin only. Do not use Hanyu pinyin in curriculum, prompts, or UI te
 This is a hard gate, not a style preference.
 
 After AI drafts sentence candidates, after the teacher adds custom sentences, and after any Codex/GPT rewrite, audit every Han character in `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text against the lesson request's `allowedChars`.
+
+Teacher-suggested sentences are not exempt. The Editor must check them before accepting them and, if a sentence is over boundary, propose a learned-character rewrite or ask the teacher to change the new-character plan.
 
 If any Han character is not in `allowedChars`, the sentence is rejected. Do not "fix it later" during image prompts, audio generation, or JSON entry. Report the exact sentence, the illegal character(s), and whether the sentence should be rewritten with learned characters or the lesson's `newChars` plan should be changed by the teacher.
 
@@ -86,10 +92,12 @@ Draft sentences from useful words and short phrases first, not from isolated cha
 Before writing candidate sentences:
 
 1. List natural words or short phrases that combine the current target character with any already learned character. Use the full learned-character set, not only the recent five lessons.
-2. List natural words or short phrases that combine the current target character with each weak-review character from the previous five lessons.
-3. Prefer combinations that a child can understand, hear clearly, and see in a picture.
-4. Reject combinations that are technically made of allowed characters but are not natural Taiwan Mandarin.
-5. Use the strongest phrase list to build sentences with varied meanings and structures.
+2. Sort the phrase list into useful groups, such as high-frequency life words, fixed collocations, action phrases, scene phrases, abstract-but-worth-teaching uses, and words that are currently not recommended.
+3. Mark common good words that cannot yet be used because one or more Han characters are outside `allowedChars`.
+4. List natural words or short phrases that combine the current target character with each weak-review character from the previous five lessons.
+5. Prefer combinations that a child can understand, hear clearly, and see in a picture.
+6. Reject combinations that are technically made of allowed characters but are not natural Taiwan Mandarin.
+7. Use the strongest phrase list to build sentences with varied meanings and structures.
 
 Examples:
 
@@ -110,13 +118,47 @@ Do not make the whole lesson circle around the previous five characters if the f
 
 During drafting discussion, a useful editor response should include:
 
-- the current candidate five sentences
+- a compact word/phrase analysis before final sentence drafting
+- the current candidate sentence set; early rounds should normally include 8-10 candidates before narrowing to five
 - a compact coverage table for the current target and previous-five review targets
 - Han counts for each sentence, excluding punctuation
 - allowed-character audit result, including exact illegal characters when present
 - any sentence that feels weak or coverage-driven, plus natural alternatives
 
 Keep this discussion outside the final production handoff code block.
+
+## Full Learned-Set Scene Scan
+
+Every normal lesson must deliberately look beyond the newest few lessons. Before narrowing to five approved sentences, scan the complete `allowedChars` set for scene sources, old actions, old nouns, and old sentence patterns that can support natural uses of the new character.
+
+Useful scene sources often include:
+
+- family life
+- school life
+- nature and weather
+- animals and plants
+- body and clothing
+- food and meals
+- traffic, roads, and travel
+- shops and buying/selling
+- games and sports
+- cleaning and organizing
+- time and daily routines
+- spatial position and direction
+- imagination, speech, recognition, judgment, feelings, and other abstract uses
+
+This is not a fixed checklist. As the curriculum grows, newly learned scene domains must also be considered. The goal is a five-sentence set spread across multiple child-readable life scenes, not five variations of one phrase or one picture type.
+
+When drafting candidates, vary:
+
+- subject or speaker
+- scene
+- sentence frame
+- target-character phrase
+- `focusChar`
+- concrete visual action
+
+If the first three or four sentences already meet coverage, use the remaining slots for naturalness and scene variety. Do not keep adding review characters mechanically just because the counts already pass.
 
 ## Sentence Quality
 
@@ -208,9 +250,29 @@ Approve only if the image can clearly show the sentence without relying on writt
 
 If a sentence has a count, contrast, or position, the picture must make it obvious on a phone screen.
 
+For ambiguous, abstract, or role-sensitive sentences, discuss the intended image direction with the teacher before final handoff. Do not wait until Production starts to discover that the picture would be unclear or the role identity would be wrong.
+
 For recurring people and places, use `docs/LESSON_VISUAL_CAST_SOP.md` plus `docs/CURRICULUM_LEDGER.md` visual continuity descriptions. Do not redesign `我`, `你`, `他`, parents, family members, teachers, classmates, elders, passersby, or recurring homes from lesson to lesson. L058 is an image style reference only; it is not permission to copy the L058 adult woman into mother, teacher, passerby, or other unrelated roles.
 
-For every sentence image with people, `imageNotes` must name the intended human role identity, such as protagonist girl, protagonist mother, protagonist father, older brother, teacher, principal, classmate, elder, passerby, `你` family member, or `他` family member. Avoid vague labels such as "a woman", "an adult", "a person", or "a passerby" when the role should have continuity.
+For every sentence image with people, `imageNotes` must name the intended human role identity, such as protagonist girl, protagonist mother, protagonist father, older brother, teacher, principal, godmother, worker, shop owner or clerk, classmate, elder, passerby, `你` family member, or `他` family member. Avoid vague labels such as "a woman", "an adult", "a person", "a big person", "a classmate", or "a passerby" when the role should have continuity or clear social identity.
+
+If a sentence needs context to be natural, put that context in `imageNotes` or rewrite the sentence. Do not keep a sentence that is only understandable with hidden chat context.
+
+## Stage 4 Plan From Sentences
+
+For a normal five-sentence lesson, design five Stage 4 games and use the five standard game types exactly once:
+
+- `find-character`
+- `teach-character`
+- `missing-character`
+- `partial-order`
+- `choose-pronunciation`
+
+Each reviewed sentence must be used by exactly one Stage 4 game. Do not assign two games to the same sentence while another approved sentence receives no Stage 4 practice.
+
+`teach-character` must include a precise `targetCharIndex`. Its `teachAudio` prefix and suffix must be generated from exact fragments around the target character.
+
+For `choose-pronunciation`, finalize the complete `correct`, `wrong-one`, and `wrong-two` option texts before Production makes audio. Wrong-choice audio must be generated from the exact final complete text. Do not ask Production to splice or cut existing sentence audio to make wrong choices.
 
 ## Review Checklist
 
@@ -219,6 +281,7 @@ Before sending sentences to image/audio production, verify:
 - all display Han characters are allowed
 - `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text have been checked against `allowedChars`; any sentence with an unlearned Han character has been rejected or rewritten
 - the draft first explored natural target-character words and short phrases from the full learned set
+- the draft scanned the full learned set for varied scene sources rather than only recent lessons or one theme line
 - the sentence set uses varied target-character phrases rather than one repeated frame
 - the current target count meets the lesson minimum
 - previous 3 lesson targets each appear at least twice
@@ -231,9 +294,19 @@ Before sending sentences to image/audio production, verify:
 - every `focusChar` appears in its sentence
 - every sentence with people has explicit role identities in `imageNotes` following `docs/LESSON_VISUAL_CAST_SOP.md`
 - the Stage 4 plan uses every reviewed sentence exactly once when the lesson has five reviewed sentences and five sentence games
+- `choose-pronunciation` wrong-choice texts are final and ready for exact TTS generation
 - the teacher has approved the sentence set
 
 Only after this checklist passes should the lesson proceed to image prompts, AI audio, `teachAudio`, Stage 4 option audio, and AI-aligned `charTimings`.
+
+The final sentence approval report must include:
+
+- the five final `text` values
+- Han count for each sentence, excluding punctuation
+- current target and previous-five target coverage counts with PASS/FAIL
+- any sentence over 12 Han characters, or an explicit note that none exceed 12
+- expected allowed-character audit result
+- confirmation that every `spokenText` is exactly `text` with punctuation removed and no Han characters added or removed
 
 ## Sentence Editor Handoff
 
@@ -253,7 +326,7 @@ The teacher copies that single gray block into Production. Keep discussion, cove
 
 The handoff must include:
 
-- assigned production slot A/B/C/D and exact worktree path
+- assigned production slot and exact worktree path from the latest Supervisor/teacher assignment
 - target unit id and kind, such as `L127` normal lesson or `R005` review module
 - current merged boundary and dependency lessons
 - approved new character(s), Taiwan zhuyin, and title, or review coverage range
