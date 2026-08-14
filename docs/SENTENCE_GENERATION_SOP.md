@@ -31,6 +31,22 @@ If a proposed sentence contains any other Han character, stop and identify the u
 
 Use Taiwan zhuyin only. Do not use Hanyu pinyin in curriculum, prompts, or UI text.
 
+### Full Learned-Character Sweep Gate
+
+This gate is mandatory before word analysis and before sentence drafting.
+
+For every normal lesson, the Editor must review the entire learned-character set from latest `origin/main`, whether it contains 100, 200, 300, 500, or 600 characters. The Editor must not start from the previous 10-20 lessons, the previous-five coverage targets, recent themes, or provisional dependency characters.
+
+Before proposing words or sentences, the Editor must:
+
+1. State the production boundary used, such as `origin/main L001-L234`.
+2. State the total number of learned characters being swept.
+3. Use the complete learned-character set plus the current target character as the search space for possible words, phrases, scenes, objects, actions, and sentence frames.
+4. Explicitly say that the recent coverage targets are only coverage requirements, not the vocabulary search boundary.
+5. Identify useful older learned characters or older scene domains that help the current target character form richer natural phrases.
+
+If the Editor cannot show that it considered the full learned-character set, it must stop and redo the sweep before drafting candidates. A sentence set drafted only from the newest few lessons is invalid even if its coverage counts pass.
+
 ### Mandatory Allowed-Character Audit
 
 This is a hard gate, not a style preference.
