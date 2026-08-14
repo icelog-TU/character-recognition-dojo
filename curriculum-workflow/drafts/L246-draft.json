@@ -519,12 +519,6 @@
     }
   ],
   "provisionalLearnedChars": [
-    "賣",
-    "店",
-    "場",
-    "市",
-    "夜",
-    "具",
     "工",
     "作",
     "忙",
@@ -532,12 +526,6 @@
     "急"
   ],
   "dependsOnLessons": [
-    "L235",
-    "L236",
-    "L237",
-    "L238",
-    "L239",
-    "L240",
     "L241",
     "L242",
     "L243",
@@ -549,14 +537,8 @@
     "R014"
   ],
   "generationConstraints": {
-    "allowedBoundary": "latest origin/main production JSON through L234 plus provisional L235 賣, L236 店, L237 場, L238 市, L239 夜, L240 具, L241 工, L242 作, L243 忙, L244 幫, L245 急 and current target 腳",
+    "allowedBoundary": "latest origin/main production JSON through L240 plus provisional L241 ?, L242 ?, L243 ?, L244 ?, L245 ? and current target ?",
     "provisionalLearnedChars": [
-      "賣",
-      "店",
-      "場",
-      "市",
-      "夜",
-      "具",
       "工",
       "作",
       "忙",
@@ -564,12 +546,6 @@
       "急"
     ],
     "dependsOnLessons": [
-      "L235",
-      "L236",
-      "L237",
-      "L238",
-      "L239",
-      "L240",
       "L241",
       "L242",
       "L243",
@@ -604,5 +580,5 @@
       "maxHan": 12
     }
   },
-  "productionNotes": "Dependency-blocked package because latest origin/main includes L234 but does not include L235-L245 or R013/R014."
+  "productionNotes": "Dependency-blocked package because latest origin/main includes L235-L240 but does not include L241-L245 or R013/R014."
 }
