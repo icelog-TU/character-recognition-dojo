@@ -1,0 +1,190 @@
+{
+  "id": "L235",
+  "order": 235,
+  "newChars": [
+    "賣"
+  ],
+  "zhuyin": {
+    "賣": "ㄇㄞˋ"
+  },
+  "title": "賣",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L235 sentence set. Production D prepares a complete lesson package from latest origin/main. L234:貴 is present in main at branch creation, so no provisional dependency remains for this request.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L234 plus current target 賣",
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [],
+    "requiredCoverageChars": [
+      "賣",
+      "貴",
+      "買",
+      "錢",
+      "夠",
+      "剩"
+    ],
+    "targetCharMinimumCount": {
+      "賣": 3
+    },
+    "recentTargetMinimumCounts": {
+      "貴": 2,
+      "買": 2,
+      "錢": 2,
+      "夠": 1,
+      "剩": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "店",
+      "外",
+      "送",
+      "商",
+      "便",
+      "宜",
+      "付",
+      "元",
+      "角",
+      "零",
+      "玻",
+      "璃",
+      "罐",
+      "裝",
+      "嗎",
+      "件",
+      "碗",
+      "條",
+      "具",
+      "價"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, protagonist father, protagonist older brother, and protagonist little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "Market vendors or other public adults must be visually distinct from the protagonist mother and recurring teacher.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, price tags, price labels, readable book text, readable coin marks, or readable product marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 賣 as public/assets/lessons/L235/audio/char-u8ce3.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L235-S01",
+      "text": "魚賣得不貴。",
+      "spokenText": "魚賣得不貴",
+      "focusChar": "賣",
+      "displayLines": [
+        "魚賣得",
+        "不貴。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在市場魚攤前，看著幾條魚，魚販正在賣魚，媽媽覺得魚賣得不貴。魚販是一般市場攤販，不能長得像主角媽媽或老師。畫面要呈現「魚正在被賣，而且不貴」的情境，但不可有價目表、文字、數字、招牌、品牌或標籤。"
+    },
+    {
+      "id": "L235-S02",
+      "text": "這本舊書可以賣錢。",
+      "spokenText": "這本舊書可以賣錢",
+      "focusChar": "賣",
+      "displayLines": [
+        "這本舊書",
+        "可以賣錢。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在家裡整理書，桌上有一本舊但完整的書，旁邊有少量硬幣或空錢罐，媽媽像是在說這本舊書可以賣錢。畫面要清楚表現「舊書可以拿去賣換錢」，但書封、書頁、錢罐、硬幣和桌面不可有文字、數字、品牌或標籤。"
+    },
+    {
+      "id": "L235-S03",
+      "text": "小馬賣力跑，還是不夠快。",
+      "spokenText": "小馬賣力跑還是不夠快",
+      "focusChar": "賣",
+      "displayLines": [
+        "小馬賣力跑，",
+        "還是不夠快。"
+      ],
+      "imageNotes": "一匹小馬在草地或安全跑道上很努力地跑，姿勢用力、表情認真，但旁邊可有另一匹馬或跑道前方距離暗示牠還是不夠快。畫面重點是「小馬很賣力跑，但速度還不夠快」。不可有文字、數字、跑道號碼、標籤或招牌。"
+    },
+    {
+      "id": "L235-S04",
+      "text": "新書包太貴，先不買。",
+      "spokenText": "新書包太貴先不買",
+      "focusChar": "貴",
+      "displayLines": [
+        "新書包太貴，",
+        "先不買。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在家裡或店裡看一個新書包，小女孩喜歡但主角媽媽溫和地表示新書包太貴，先不買。畫面要清楚呈現「想買新書包，但覺得太貴所以先不買」。書包、錢、桌面和背景不可有文字、數字、價格、品牌或標籤。"
+    },
+    {
+      "id": "L235-S05",
+      "text": "買菜的錢還剩一點。",
+      "spokenText": "買菜的錢還剩一點",
+      "focusChar": "錢",
+      "displayLines": [
+        "買菜的錢",
+        "還剩一點。"
+      ],
+      "imageNotes": "主角媽媽和主角小女孩買完菜後，在家裡桌上或市場攤旁看著手上剩下的一點硬幣，旁邊有買好的菜。畫面要呈現「買菜的錢還剩一點」。硬幣、菜、桌面、袋子不可有文字、數字、價格、品牌或標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L235-G01",
+      "type": "find-character",
+      "sentenceId": "L235-S02",
+      "targetChar": "賣",
+      "reason": "「可以賣錢」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L235-G02",
+      "type": "teach-character",
+      "sentenceId": "L235-S01",
+      "targetChar": "賣",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "魚",
+        "suffixText": "得不貴"
+      }
+    },
+    {
+      "id": "L235-G03",
+      "type": "missing-character",
+      "sentenceId": "L235-S03",
+      "targetChar": "賣",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        "賣",
+        "買",
+        "貴"
+      ]
+    },
+    {
+      "id": "L235-G04",
+      "type": "partial-order",
+      "sentenceId": "L235-S05",
+      "chunks": [
+        "買菜的錢",
+        "還剩",
+        "一點"
+      ]
+    },
+    {
+      "id": "L235-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L235-S04",
+      "correctText": "新書包太貴，先不買。",
+      "wrongOneText": "新書包太貴，先不賣。",
+      "wrongTwoText": "新書包不貴，先不買。"
+    }
+  ],
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "productionNotes": "L234 was already present in origin/main when codex/l235-complete-package was created, so L235 can be prepared as a merge-ready package if full checks pass. Release still owns final integration, ledger/planner updates, and deployment."
+}
