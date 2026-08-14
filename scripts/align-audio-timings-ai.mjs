@@ -66,6 +66,10 @@ function normalizeTranscribedHanChar(char) {
     ["\u706f", "\u71c8"],
     ["\u5f00", "\u958b"],
     ["\u5173", "\u95dc"],
+    ["\u4e70", "\u8cb7"],
+    ["\u573a", "\u5834"],
+    ["\u8fb9", "\u908a"],
+    ["\u5356", "\u8ce3"],
   ]);
   if (simplifiedEquivalentMap.has(char)) return simplifiedEquivalentMap.get(char);
 
@@ -115,6 +119,14 @@ function normalizedHanText(text) {
   return hanChars(text).map(normalizeTranscribedHanChar).join("");
 }
 
+function normalizedHanTextForExpected(text, expected) {
+  const normalized = normalizedHanText(text);
+  if (normalized === expected) return normalized;
+  const withoutInsertedYiAfterZhe = normalized.replaceAll("\u9019\u4e00", "\u9019");
+  if (withoutInsertedYiAfterZhe === expected) return withoutInsertedYiAfterZhe;
+  return normalized;
+}
+
 function assetPath(src) {
   return path.join(publicRoot, src.replace(/^\//, ""));
 }
@@ -134,6 +146,7 @@ function durationMs(filePath) {
 
 function timingsFromWords(words, sentence) {
   const targetChars = hanChars(sentence.text);
+  const expectedChars = targetChars.map(normalizeTranscribedHanChar);
   const timings = [];
 
   for (const word of words ?? []) {
@@ -144,6 +157,16 @@ function timingsFromWords(words, sentence) {
     const span = Math.max(1, endMs - startMs);
 
     for (let i = 0; i < chars.length && timings.length < targetChars.length; i += 1) {
+      const normalized = normalizeTranscribedHanChar(chars[i]);
+      const nextNormalized = chars[i + 1] ? normalizeTranscribedHanChar(chars[i + 1]) : null;
+      if (
+        normalized === "\u4e00" &&
+        timings.length > 0 &&
+        expectedChars[timings.length - 1] === "\u9019" &&
+        nextNormalized === expectedChars[timings.length]
+      ) {
+        continue;
+      }
       timings.push({
         charIndex: timings.length,
         startMs: Math.round(startMs + (span * i) / chars.length),
@@ -208,7 +231,7 @@ for (const lesson of units) {
     });
 
     const expected = normalizedHanText(sentence.spokenText || sentence.text);
-    const actual = normalizedHanText(transcript.text || "");
+    const actual = normalizedHanTextForExpected(transcript.text || "", expected);
     if (actual !== expected) {
       throw new Error(
         `${sentence.id}: transcript does not match spokenText. Expected ${expected}, got ${actual}. ` +
