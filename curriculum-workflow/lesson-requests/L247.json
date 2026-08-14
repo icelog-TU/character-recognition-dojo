@@ -1,0 +1,250 @@
+{
+  "id": "L247",
+  "order": 247,
+  "newChars": [
+    "步"
+  ],
+  "zhuyin": {
+    "步": "ㄅㄨˋ"
+  },
+  "title": "步",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L247 sentence set. Production D prepares a complete lesson-local asset-complete-package. This branch is dependency/review blocked until L235-L246 and R013/R014 are merged into latest origin/main.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L234 plus provisional learned chars [賣,店,場,市,夜,具,工,作,忙,幫,急,腳] plus current target 步",
+    "provisionalLearnedChars": [
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳"
+    ],
+    "dependsOnLessons": [
+      "L235",
+      "L236",
+      "L237",
+      "L238",
+      "L239",
+      "L240",
+      "L241",
+      "L242",
+      "L243",
+      "L244",
+      "L245",
+      "L246"
+    ],
+    "dependsOnReviews": [
+      "R013",
+      "R014"
+    ],
+    "requiredCoverageChars": [
+      "步",
+      "腳",
+      "急",
+      "幫",
+      "忙",
+      "作"
+    ],
+    "targetCharMinimumCount": {
+      "步": 3
+    },
+    "recentTargetMinimumCounts": {
+      "腳": 2,
+      "急": 2,
+      "幫": 2,
+      "忙": 1,
+      "作": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "板",
+      "拖",
+      "業",
+      "碌",
+      "招",
+      "牌",
+      "字",
+      "號",
+      "標",
+      "籤",
+      "趕",
+      "救",
+      "診",
+      "條",
+      "踏",
+      "印",
+      "赤",
+      "輕",
+      "散",
+      "往",
+      "伐"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style anchors; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist father, mother, and little girl when those roles appear.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, or readable canvas/book content.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 步 as public/assets/lessons/L247/audio/char-u6b65.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L247-S01",
+      "text": "爸爸幫小孩一步一步走。",
+      "spokenText": "爸爸幫小孩一步一步走",
+      "focusChar": "步",
+      "displayLines": [
+        "爸爸幫小孩",
+        "一步一步走。"
+      ],
+      "imageNotes": "主角爸爸在家裡或安全空地，溫和地扶著一個小孩一步一步學走路。小孩可以是主角小女孩較小時的樣子，或一位明確的幼兒角色；不要使用「妹妹」身份，因為句子沒有寫妹妹。人物身份要明確：主角爸爸、小孩。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L247-S02",
+      "text": "他聽見腳步聲，急著回頭。",
+      "spokenText": "他聽見腳步聲急著回頭",
+      "focusChar": "步",
+      "displayLines": [
+        "他聽見腳步聲，",
+        "急著回頭。"
+      ],
+      "imageNotes": "固定「他」男孩在走廊、家門口或安全路邊聽見身後的腳步聲，急著回頭看。畫面要表現他聽見腳步聲後回頭，不要做恐怖或危險情境。人物身份要明確：固定「他」男孩；可有一位路人或家人在背景遠處走來，但不可模糊成不明人士。不可有文字、數字或標籤。"
+    },
+    {
+      "id": "L247-S03",
+      "text": "脫下鞋子放在腳邊。",
+      "spokenText": "脫下鞋子放在腳邊",
+      "focusChar": "腳",
+      "displayLines": [
+        "脫下鞋子",
+        "放在腳邊。"
+      ],
+      "imageNotes": "主角小女孩在家門口或室內地墊上，把鞋子脫下來放在自己的腳邊。畫面要清楚看到鞋子已脫下並放在腳邊，不要有文字、數字、門牌或標籤。人物身份要明確：主角小女孩。"
+    },
+    {
+      "id": "L247-S04",
+      "text": "先想好，不要急著動手做。",
+      "spokenText": "先想好不要急著動手做",
+      "focusChar": "急",
+      "displayLines": [
+        "先想好，",
+        "不要急著動手做。"
+      ],
+      "imageNotes": "主角小女孩坐在桌前準備做一件小手作或簡單積木作品，先停下來想一想，還沒有急著動手做。桌上可有紙、積木或安全材料，但不要出現文字、數字、圖表或標籤。人物身份要明確：主角小女孩。"
+    },
+    {
+      "id": "L247-S05",
+      "text": "畫家作畫，不用人幫忙。",
+      "spokenText": "畫家作畫不用人幫忙",
+      "focusChar": "作",
+      "displayLines": [
+        "畫家作畫，",
+        "不用人幫忙。"
+      ],
+      "imageNotes": "一位畫家在畫室或戶外架著畫架專心作畫，旁邊的人沒有伸手幫忙，只是在旁邊安靜觀看。畫面重點是畫家自己作畫，不需要別人幫忙。人物身份要明確：畫家、旁邊觀看的路人或主角小女孩。畫布上不可有文字、數字、可辨識標籤或水印。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L247-G01",
+      "type": "find-character",
+      "sentenceId": "L247-S02",
+      "targetChar": "步",
+      "reason": "「腳步聲」是本課核心生活用法，目標字清楚。"
+    },
+    {
+      "id": "L247-G02",
+      "type": "teach-character",
+      "sentenceId": "L247-S01",
+      "targetChar": "步",
+      "targetCharIndex": 6,
+      "teachAudio": {
+        "prefixText": "爸爸幫小孩一",
+        "suffixText": "一步走"
+      }
+    },
+    {
+      "id": "L247-G03",
+      "type": "missing-character",
+      "sentenceId": "L247-S03",
+      "targetChar": "腳",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "腳",
+        "步",
+        "急"
+      ]
+    },
+    {
+      "id": "L247-G04",
+      "type": "partial-order",
+      "sentenceId": "L247-S04",
+      "chunks": [
+        "先想好",
+        "不要急著",
+        "動手做"
+      ]
+    },
+    {
+      "id": "L247-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L247-S05",
+      "correctText": "畫家作畫，不用人幫忙。",
+      "wrongOneText": "畫家作畫，不用人著急。",
+      "wrongTwoText": "畫家看畫，不用人幫忙。"
+    }
+  ],
+  "dependsOnLessons": [
+    "L235",
+    "L236",
+    "L237",
+    "L238",
+    "L239",
+    "L240",
+    "L241",
+    "L242",
+    "L243",
+    "L244",
+    "L245",
+    "L246"
+  ],
+  "dependsOnReviews": [
+    "R013",
+    "R014"
+  ],
+  "provisionalLearnedChars": [
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳"
+  ],
+  "productionNotes": "Production D owns lesson-local package only. Release owns production JSON insertion, planner export, ledger update, final verify, merge, and deployment after dependencies and R013/R014 are in main."
+}
