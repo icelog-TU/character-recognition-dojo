@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R013/R014 | review modules / 複習十三、複習十四 | claimed | Production B | codex/r013-r014-complete-package / 4405d887 | L240 具 | [] | curriculum-workflow/review-requests/R013.json; curriculum-workflow/review-requests/R014.json; curriculum-workflow/generated/R013-generation-packet.md; curriculum-workflow/generated/R014-generation-packet.md | public/assets/reviews/R013/; public/assets/reviews/R014/ | accepted handoff and starting complete review pair package; R013/R014 are required after L240 before L241 can release |
 
 ## Status Values
 
