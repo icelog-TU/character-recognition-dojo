@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L282 | 洞 / normal lesson | claimed | Production D | codex/l282-complete-package / c9a3d230 | L277 橋, L278 座, L279 木, L280 積, L281 堆 | ["橋","座","木","積","堆"] | curriculum-workflow/lesson-requests/L282.json, curriculum-workflow/generated/L282-generation-packet.md | public/assets/lessons/L282/images/, public/assets/lessons/L282/audio/ | accepted handoff and starting complete package |
+| L282 | 洞 / normal lesson | claimed | Production D | codex/l282-complete-package / c9a3d230 | L275 住, L276 蓋, L277 橋, L278 座, L279 木, L280 積, L281 堆 | ["住","蓋","橋","座","木","積","堆"] | curriculum-workflow/lesson-requests/L282.json, curriculum-workflow/generated/L282-generation-packet.md | public/assets/lessons/L282/images/, public/assets/lessons/L282/audio/ | accepted handoff and starting complete package; dependency metadata recalculated from latest origin/main L274 |
 
 ## Status Values
 
