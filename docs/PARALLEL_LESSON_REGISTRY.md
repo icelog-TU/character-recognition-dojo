@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L272 | 差 / normal lesson | claimed | Production A | codex/l272-complete-package / bf9c01f1 | L270 精, L271 變 | ["精","變"] | curriculum-workflow/lesson-requests/L272.json, curriculum-workflow/generated/L272-generation-packet.md | public/assets/lessons/L272/images/, public/assets/lessons/L272/audio/ | accepted handoff and starting complete package |
+| L272 | 差 / normal lesson | ready-blocked-by-dependency | Production A | codex/l272-complete-package / package tip | L270 精, L271 變 | ["精","變"] | curriculum-workflow/lesson-requests/L272.json, curriculum-workflow/generated/L272-generation-packet.md | public/assets/lessons/L272/images/, public/assets/lessons/L272/audio/ | complete package prepared; blocked until L270-L271 are in main; production JSON not updated |
 
 ## Status Values
 
