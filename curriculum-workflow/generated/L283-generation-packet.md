@@ -104,3 +104,28 @@
 - G05 wrong-choice audio must be generated from exact complete wrong texts.
 - All images require square image / 1:1 composition and no visible text, numbers, labels, watermarks, signs, zhuyin, or readable marks.
 - Images must show damage gently and safely: no exposed body, no sharp fragments, no injuries, no frightening cave.
+
+## Production QA Results
+
+- Final status: ready-blocked-by-dependency until L277-L282 are in main.
+- Shared-state handling: src/curriculum/sample-lessons.json was temporarily used for audio/alignment and restored; no shared-state file remains dirty.
+- Allowed-character audit: PASS using origin/main L001-L274 plus provisional learned chars [橋,座,木,積,堆,洞] and current target 破.
+- Sentence Han count vs charTimings: PASS for all five sentences. S03 is exactly 11 Han after punctuation removal in production draft.
+- Stage 4 structure: PASS; five game types used once and every reviewed sentence is used once.
+- G02 teach-character audio: prefix and suffix were generated as dedicated OpenAI TTS fragments from exact texts.
+- G05 choose-pronunciation audio: wrong-choice files were generated from exact complete wrong texts.
+- Audio generation: npm run ai:audio -- --lesson L283 generated 10 draft MP3 files.
+- Audio conversion: npm run assets:audio -- --lesson L283 produced AAC 44100 Hz mono m4a files.
+- Alignment: npm run assets:align:ai -- --lesson L283 completed after adding simplified ASR normalization for U+6865 -> U+6A4B; S02 micro-timing for 只 was manually smoothed without changing text or audio.
+- Image generation: five square 1:1 WebP images, all 1024x1024. Visual QA found no readable text, letters, numbers, labels, zhuyin, or watermarks.
+- Image sizes: largest L283-S04.webp is 203,200 bytes; asset folder total is 1,071,387 bytes.
+- Visual cast compliance: L058 used only as style reference; protagonist girl follows L154/L162/L163 continuity; no L058 people copied.
+- Safety compliance: clothing-hole image avoids exposed body; broken-box image avoids sharp fragments/injury; cave is non-scary; car scene is parked and safe.
+
+- validate:production: PASS.
+- npm run verify: PASS. Expected dependency-blocked warning observed: public/assets/lessons/L283/ exists but is not in production curriculum.
+
+## Asset Review URLs
+
+- Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L283&ref=codex%2Fl283-complete-package
+- Post-merge main review: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L283&ref=main

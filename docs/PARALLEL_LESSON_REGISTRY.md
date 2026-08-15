@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L283 | 破 / normal lesson | claimed | Production A | codex/l283-complete-package / c9a3d230 | L277 橋, L278 座, L279 木, L280 積, L281 堆, L282 洞 | ["橋","座","木","積","堆","洞"] | curriculum-workflow/lesson-requests/L283.json, curriculum-workflow/generated/L283-generation-packet.md | public/assets/lessons/L283/images/, public/assets/lessons/L283/audio/ | accepted handoff and starting complete package |
+| L283 | 破 / normal lesson | ready-blocked-by-dependency | Production A | codex/l283-complete-package / package tip pending | L277 橋, L278 座, L279 木, L280 積, L281 堆, L282 洞 | ["橋","座","木","積","堆","洞"] | curriculum-workflow/lesson-requests/L283.json, curriculum-workflow/generated/L283-generation-packet.md | public/assets/lessons/L283/images/, public/assets/lessons/L283/audio/ | complete package ready; blocked until L277-L282 are in main; Editor patch added L277 橋 to dependencies/provisional chars |
 
 ## Status Values
 
