@@ -94497,80 +94497,65 @@
         },
         {
           "id": "L209-S04",
-          "text": "車站一天到晚有人進進出出。",
+          "text": "早上，我從校門進學校。",
           "displayLines": [
-            "車站一天",
-            "到晚有人",
-            "進進出出。"
+            "早上，",
+            "我從校門",
+            "進學校。"
           ],
-          "spokenText": "車站一天到晚有人進進出出",
+          "spokenText": "早上我從校門進學校",
           "focusChar": "進",
-          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and centered meaning-bearing action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, brands, school names, station names, timetables, clock numbers, subtitles, or readable marks. Show a station entrance with many people going in and out through the doorway, clearly moving both directions. The station building and entrance must be blank: no station name, no schedules, no signs, no numbers, no labels. Keep the crowd child-friendly and orderly, no rush or danger.",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L154/L162/L163 protagonist family continuity for the recurring protagonist little girl, mother, and father when they appear. Morning at a school gate. The recurring protagonist little girl walks through the school gate into school, with the gate and the entering action clearly visible. Show warm morning light and a safe school entrance, but the school sign area must be blank or purely decorative with no readable marks. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, signatures, or readable marks.",
           "imageSrc": "/assets/lessons/L209/images/L209-S04.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L209/audio/L209-S04.m4a",
-            "durationMs": 5504,
+            "durationMs": 4328,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 420
+                "endMs": 380
               },
               {
                 "charIndex": 1,
-                "startMs": 420,
-                "endMs": 680
+                "startMs": 380,
+                "endMs": 900
               },
               {
                 "charIndex": 2,
-                "startMs": 680,
-                "endMs": 1140
+                "startMs": 900,
+                "endMs": 1320
               },
               {
                 "charIndex": 3,
-                "startMs": 1140,
-                "endMs": 1560
+                "startMs": 1320,
+                "endMs": 1640
               },
               {
                 "charIndex": 4,
-                "startMs": 1560,
-                "endMs": 1880
+                "startMs": 1640,
+                "endMs": 2000
               },
               {
                 "charIndex": 5,
-                "startMs": 1880,
-                "endMs": 2160
+                "startMs": 2000,
+                "endMs": 2240
               },
               {
                 "charIndex": 6,
-                "startMs": 2700,
-                "endMs": 2930
+                "startMs": 2240,
+                "endMs": 2760
               },
               {
                 "charIndex": 7,
-                "startMs": 2930,
-                "endMs": 3160
+                "startMs": 2760,
+                "endMs": 3080
               },
               {
                 "charIndex": 8,
-                "startMs": 3160,
-                "endMs": 3780
-              },
-              {
-                "charIndex": 9,
-                "startMs": 3780,
-                "endMs": 4060
-              },
-              {
-                "charIndex": 10,
-                "startMs": 4060,
-                "endMs": 4380
-              },
-              {
-                "charIndex": 11,
-                "startMs": 4380,
-                "endMs": 4620
+                "startMs": 3080,
+                "endMs": 3340
               }
             ]
           }
@@ -94695,19 +94680,19 @@
           "options": [
             {
               "id": "L209-G04-A",
-              "text": "車站一天",
+              "text": "早上",
               "correctOrder": 0,
               "correct": true
             },
             {
               "id": "L209-G04-B",
-              "text": "到晚有人",
+              "text": "我從校門",
               "correctOrder": 1,
               "correct": true
             },
             {
               "id": "L209-G04-C",
-              "text": "進進出出",
+              "text": "進學校",
               "correctOrder": 2,
               "correct": true
             }
@@ -94722,22 +94707,19 @@
             5,
             6,
             7,
-            8,
-            9,
-            10,
-            11
+            8
           ],
           "chunks": [
             {
-              "text": "車站一天",
+              "text": "早上",
               "order": 0
             },
             {
-              "text": "到晚有人",
+              "text": "我從校門",
               "order": 1
             },
             {
-              "text": "進進出出",
+              "text": "進學校",
               "order": 2
             }
           ]
@@ -95290,80 +95272,70 @@
         },
         {
           "id": "L211-S02",
-          "text": "坐船出海的人，天天早去晚回。",
+          "text": "早上坐船出海，晚上回家。",
           "displayLines": [
-            "坐船出海",
-            "的人，天天",
-            "早去晚回。"
+            "早上坐船",
+            "出海，",
+            "晚上回家。"
           ],
-          "spokenText": "坐船出海的人天天早去晚回",
+          "spokenText": "早上坐船出海晚上回家",
           "focusChar": "船",
-          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person, clothing, face, or body shape from L058. Square image / 1:1 composition with safe margins. Cast identity: use passerby fishers or sea workers, varied adult roles with sun hats or work jackets, weathered but friendly faces, clearly different from the protagonist father, protagonist mother, and teachers. Scene: at a pier, sea workers board or ride a boat going out to sea; show the feeling of early departure and late return through a gentle split-light composition with warm early light on one side and soft evening light on the other, without clocks or numbers. Keep boat, sea workers, and pier action centered. No written text, numbers, clock marks, boat name, pier sign, signs, labels, zhuyin, logos, watermarks, subtitles, or readable marks.",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L154/L162/L163 protagonist family continuity for the recurring protagonist little girl, mother, and father when they appear. Show the recurring protagonist little girl with her father and mother on a seaside pier or harbor. In the morning they are preparing to ride a small boat out to sea for a family outing, and the scene also gently suggests evening return home with warm evening light near the shore. Keep the family identities clear and the mood child-friendly and concrete. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, signatures, or readable marks.",
           "imageSrc": "/assets/lessons/L211/images/L211-S02.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L211/audio/L211-S02.m4a",
-            "durationMs": 4734,
+            "durationMs": 4036,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 380
+                "endMs": 360
               },
               {
                 "charIndex": 1,
-                "startMs": 380,
-                "endMs": 700
+                "startMs": 360,
+                "endMs": 760
               },
               {
                 "charIndex": 2,
-                "startMs": 700,
-                "endMs": 1000
+                "startMs": 760,
+                "endMs": 1080
               },
               {
                 "charIndex": 3,
-                "startMs": 1000,
-                "endMs": 1180
+                "startMs": 1080,
+                "endMs": 1260
               },
               {
                 "charIndex": 4,
-                "startMs": 1180,
-                "endMs": 1410
+                "startMs": 1260,
+                "endMs": 1600
               },
               {
                 "charIndex": 5,
-                "startMs": 1410,
-                "endMs": 1640
+                "startMs": 1600,
+                "endMs": 1800
               },
               {
                 "charIndex": 6,
-                "startMs": 2160,
-                "endMs": 2420
+                "startMs": 2420,
+                "endMs": 2520
               },
               {
                 "charIndex": 7,
-                "startMs": 2420,
-                "endMs": 2760
+                "startMs": 2520,
+                "endMs": 2620
               },
               {
                 "charIndex": 8,
-                "startMs": 2760,
-                "endMs": 3100
+                "startMs": 2620,
+                "endMs": 3040
               },
               {
                 "charIndex": 9,
-                "startMs": 3100,
-                "endMs": 3400
-              },
-              {
-                "charIndex": 10,
-                "startMs": 3400,
-                "endMs": 3680
-              },
-              {
-                "charIndex": 11,
-                "startMs": 3680,
-                "endMs": 3980
+                "startMs": 3040,
+                "endMs": 3260
               }
             ]
           }
@@ -95682,22 +95654,22 @@
           "options": [
             {
               "id": "L211-G05-A",
-              "text": "坐船出海的人，天天早去晚回。",
-              "spokenText": "坐船出海的人天天早去晚回",
+              "text": "早上坐船出海，晚上回家。",
+              "spokenText": "早上坐船出海晚上回家",
               "audioSrc": "/assets/lessons/L211/audio/L211-S02.m4a",
               "correct": true
             },
             {
               "id": "L211-G05-B",
-              "text": "坐船出海的人，天天早去早回。",
-              "spokenText": "坐船出海的人天天早去早回",
+              "text": "早上坐船出海，早上回家。",
+              "spokenText": "早上坐船出海早上回家",
               "audioSrc": "/assets/lessons/L211/audio/L211-G05-wrong-one.m4a",
               "correct": false
             },
             {
               "id": "L211-G05-C",
-              "text": "坐船出海的人，天天晚去晚回。",
-              "spokenText": "坐船出海的人天天晚去晚回",
+              "text": "晚上坐船出海，晚上回家。",
+              "spokenText": "晚上坐船出海晚上回家",
               "audioSrc": "/assets/lessons/L211/audio/L211-G05-wrong-two.m4a",
               "correct": false
             }
@@ -96360,64 +96332,49 @@
         },
         {
           "id": "L213-S04",
-          "text": "大船開不進河的上游。",
+          "text": "小魚游到船邊。",
           "displayLines": [
-            "大船開不進",
-            "河的上游。"
+            "小魚游到",
+            "船邊。"
           ],
-          "spokenText": "大船開不進河的上游",
+          "spokenText": "小魚游到船邊",
           "focusChar": "游",
-          "imagePrompt": "Use the approved L058 lesson images only as style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Do not copy any specific person, adult woman, child, clothing, face, hair, or body shape from L058. Square image / 1:1 composition with safe margins and centered meaning-bearing action. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environment, expressive preschool-friendly proportions, soft cheeks where people appear, gentle expressions, bright warm palette, phone-readable square composition. No speech bubbles, no visible text, letters, numbers, zhuyin, labels, signs, logos, watermarks, ship names, subtitles, map labels, direction-arrow text, brands, or readable marks. A large boat stopped before a narrow river mouth or narrowing upstream river channel, unable to enter farther upstream. Make the size contrast clear: the boat is too large and the river channel becomes narrow toward the upper river. No direction arrows, no map labels, no ship name, no text.",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. On the sea or a calm river, show a small boat and a small fish swimming to the side of the boat. Make the position relationship clear: the fish is beside the boat, close to the boat edge. The action of swimming toward the boat should be easy to read. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, signatures, or readable marks.",
           "imageSrc": "/assets/lessons/L213/images/L213-S04.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L213/audio/L213-S04.m4a",
-            "durationMs": 3372,
+            "durationMs": 3961,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 440
+                "endMs": 520
               },
               {
                 "charIndex": 1,
-                "startMs": 440,
-                "endMs": 760
+                "startMs": 520,
+                "endMs": 740
               },
               {
                 "charIndex": 2,
-                "startMs": 760,
-                "endMs": 1120
+                "startMs": 740,
+                "endMs": 1040
               },
               {
                 "charIndex": 3,
-                "startMs": 1120,
-                "endMs": 1480
+                "startMs": 1040,
+                "endMs": 1300
               },
               {
                 "charIndex": 4,
-                "startMs": 1480,
-                "endMs": 1640
+                "startMs": 1300,
+                "endMs": 1680
               },
               {
                 "charIndex": 5,
-                "startMs": 1640,
-                "endMs": 1820
-              },
-              {
-                "charIndex": 6,
-                "startMs": 1820,
-                "endMs": 2160
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2160,
-                "endMs": 2380
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2380,
-                "endMs": 2560
+                "startMs": 1680,
+                "endMs": 1900
               }
             ]
           }
@@ -96526,7 +96483,7 @@
           "sentenceId": "L213-S04",
           "targetChar": "游",
           "missingIndexes": [
-            8
+            2
           ],
           "prompt": "選出少掉的字。",
           "options": [
@@ -102421,142 +102378,147 @@
       "sentences": [
         {
           "id": "L226-S01",
-          "text": "我不認為他知道怎麼做。",
-          "spokenText": "我不認為他知道怎麼做",
+          "text": "我認得路，也知道怎麼走。",
+          "spokenText": "我認得路也知道怎麼走",
           "focusChar": "認",
           "displayLines": [
-            "我不認為",
-            "他知道",
-            "怎麼做。"
+            "我認得路，",
+            "也知道",
+            "怎麼走。"
           ],
-          "imagePrompt": "Use case: illustration-story\nAsset type: L226-S01 lesson image for a children's character-recognition app\nPrimary request: square image / 1:1 composition. Protagonist little girl, shown as a slightly older child, watches a small child try to fold plain colored paper; the small child can hold and fold paper but is clearly struggling, with messy folded paper on the table.\nVisual cast: protagonist little girl with pink jacket, white shirt, blue skirt, pink shoes, small pink hair clip; small child is younger but not a baby, with a different face, short hair, and simple green top. L058 is style reference only, not a face or clothing reference.\nComposition: centered table activity, both children fully visible, messy paper clear, protagonist girl's thoughtful expression clear, safe margins for phone square crop.\nStyle: warm hand-painted watercolor children's textbook illustration, soft edges and friendly expressions.\nAvoid: no written text, numbers, instructional diagrams, step labels, captions, logos, watermarks, readable marks, or paper writing.",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L154/L162/L163 protagonist family continuity for the recurring protagonist little girl, mother, and father when they appear. The recurring protagonist little girl stands near a familiar roadside or near the school gate, looking along the way home to show that she recognizes the road and knows how to walk. The recurring mother may stand beside her supportively but should not dominate the action. Do not include readable street signs or route labels. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, signatures, or readable marks.",
           "imageNotes": "主角小女孩作為比較大的孩子，看著一位小小孩在摺紙，小小孩拿著紙想摺但明顯摺不起來，紙有點亂，主角小女孩在旁邊露出「他可能不知道怎麼做」的表情。畫面要表現「看著別人不太會做」，不要出現文字、數字、教學圖、摺紙步驟標籤。",
           "imageSrc": "/assets/lessons/L226/images/L226-S01.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L226/audio/L226-S01.m4a",
-            "durationMs": 4733,
+            "durationMs": 3662,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 430
+                "endMs": 400
               },
               {
                 "charIndex": 1,
-                "startMs": 430,
-                "endMs": 860
+                "startMs": 400,
+                "endMs": 700
               },
               {
                 "charIndex": 2,
-                "startMs": 860,
-                "endMs": 1420
+                "startMs": 700,
+                "endMs": 1000
               },
               {
                 "charIndex": 3,
-                "startMs": 1420,
-                "endMs": 1740
+                "startMs": 1000,
+                "endMs": 1400
               },
               {
                 "charIndex": 4,
-                "startMs": 1740,
-                "endMs": 2400
+                "startMs": 1920,
+                "endMs": 2120
               },
               {
                 "charIndex": 5,
-                "startMs": 2400,
-                "endMs": 2640
+                "startMs": 2120,
+                "endMs": 2320
               },
               {
                 "charIndex": 6,
-                "startMs": 2640,
-                "endMs": 2880
+                "startMs": 2320,
+                "endMs": 2520
               },
               {
                 "charIndex": 7,
-                "startMs": 2880,
-                "endMs": 3300
+                "startMs": 2520,
+                "endMs": 2760
               },
               {
                 "charIndex": 8,
-                "startMs": 3300,
-                "endMs": 3720
+                "startMs": 2760,
+                "endMs": 3000
               },
               {
                 "charIndex": 9,
-                "startMs": 3720,
-                "endMs": 4040
+                "startMs": 3000,
+                "endMs": 3340
               }
             ]
           }
         },
         {
           "id": "L226-S02",
-          "text": "新同學不知道走錯路了。",
-          "spokenText": "新同學不知道走錯路了",
+          "text": "新同學不知道校服穿錯了。",
+          "spokenText": "新同學不知道校服穿錯了",
           "focusChar": "新",
           "displayLines": [
             "新同學",
             "不知道",
-            "走錯路了。"
+            "校服穿錯了。"
           ],
-          "imagePrompt": "Use case: illustration-story\nAsset type: L226-S02 lesson image for a children's character-recognition app\nPrimary request: square image / 1:1 composition. A new classmate wearing a backpack walks the wrong way near a school hallway or school entrance, looking unsure and not yet realizing the route is wrong; the correct direction is implied visually by open doors and other students far away, without any signs.\nVisual cast: new classmate is a child with a distinct look from the protagonist family, short dark hair, orange jacket, navy backpack; optional distant teacher or students stay in the background and do not point or guide. L058 is style reference only.\nComposition: new classmate centered, wrong direction clear through hallway perspective, safe margins, no visual clutter.\nStyle: warm watercolor children's school illustration, gentle and non-scary.\nAvoid: no text, numbers, classroom signs, road signs, class plates, labels, arrows with text, logos, watermarks, or readable marks.",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. At school, show a new girl classmate wearing the wrong school uniform from her previous school, with a clearly different uniform color from the other children. A teacher or another girl classmate gently reminds her. The scene must be kind and not mocking. Use the recurring teacher identity if a teacher appears: tidy classroom clothing, calm instructional posture, visually distinct from the protagonist mother. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, signatures, or readable marks.",
           "imageNotes": "新同學背著書包，走在學校附近或校園走廊，方向明顯走偏了，遠處可看到正確方向的教室或校門，但不能用文字標示。新同學表情茫然，還不知道自己走錯路。人物身份：新同學；必要時可有遠處的老師或其他學生作背景，但不要讓他們指路。不可有路牌文字、班級牌、數字或標籤。",
           "imageSrc": "/assets/lessons/L226/images/L226-S02.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L226/audio/L226-S02.m4a",
-            "durationMs": 4173,
+            "durationMs": 5506,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 620
+                "endMs": 520
               },
               {
                 "charIndex": 1,
-                "startMs": 620,
-                "endMs": 1060
+                "startMs": 520,
+                "endMs": 920
               },
               {
                 "charIndex": 2,
-                "startMs": 1060,
-                "endMs": 1360
+                "startMs": 920,
+                "endMs": 1180
               },
               {
                 "charIndex": 3,
-                "startMs": 1360,
-                "endMs": 1687
+                "startMs": 1180,
+                "endMs": 1527
               },
               {
                 "charIndex": 4,
-                "startMs": 1687,
-                "endMs": 2013
+                "startMs": 1527,
+                "endMs": 1873
               },
               {
                 "charIndex": 5,
-                "startMs": 2013,
-                "endMs": 2340
+                "startMs": 1873,
+                "endMs": 2220
               },
               {
                 "charIndex": 6,
-                "startMs": 2340,
-                "endMs": 2900
+                "startMs": 2220,
+                "endMs": 2920
               },
               {
                 "charIndex": 7,
-                "startMs": 2900,
-                "endMs": 3220
+                "startMs": 2920,
+                "endMs": 3180
               },
               {
                 "charIndex": 8,
-                "startMs": 3220,
-                "endMs": 3440
+                "startMs": 3180,
+                "endMs": 3840
               },
               {
                 "charIndex": 9,
-                "startMs": 3440,
-                "endMs": 3740
+                "startMs": 3840,
+                "endMs": 4100
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4100,
+                "endMs": 4340
               }
             ]
           }
@@ -102875,24 +102837,24 @@
           "options": [
             {
               "id": "L226-G05-A",
-              "text": "我不認為他知道怎麼做。",
-              "correct": true,
+              "text": "我認得路，也知道怎麼走。",
+              "spokenText": "我認得路也知道怎麼走",
               "audioSrc": "/assets/lessons/L226/audio/L226-S01.m4a",
-              "spokenText": "我不認為他知道怎麼做"
+              "correct": true
             },
             {
               "id": "L226-G05-B",
-              "text": "我不認為他知道怎麼畫。",
-              "correct": false,
+              "text": "我認得路，也知道怎麼畫。",
+              "spokenText": "我認得路也知道怎麼畫",
               "audioSrc": "/assets/lessons/L226/audio/L226-G05-wrong-one.m4a",
-              "spokenText": "我不認為他知道怎麼畫"
+              "correct": false
             },
             {
               "id": "L226-G05-C",
-              "text": "我不認為他知道怎麼看。",
-              "correct": false,
+              "text": "我認得車，也知道怎麼走。",
+              "spokenText": "我認得車也知道怎麼走",
               "audioSrc": "/assets/lessons/L226/audio/L226-G05-wrong-two.m4a",
-              "spokenText": "我不認為他知道怎麼看"
+              "correct": false
             }
           ]
         }
@@ -104164,76 +104126,60 @@
         },
         {
           "id": "L229-S05",
-          "text": "只有爸爸認為車子太舊了。",
-          "spokenText": "只有爸爸認為車子太舊了",
+          "text": "我只認得這本舊書。",
+          "spokenText": "我只認得這本舊書",
           "focusChar": "只",
           "displayLines": [
-            "只有爸爸",
-            "認為車子",
-            "太舊了。"
+            "我只認得",
+            "這本舊書。"
           ],
-          "imagePrompt": "Use case: illustration-story\nAsset type: L229-S05 lesson image for a children's character-recognition app\nPrimary request: square image / 1:1 composition. The protagonist father, adult man in blue shirt or jacket over a white shirt with khaki pants, visually distinct from mother and teachers stands beside a slightly old car and looks like he thinks the car is too old, while the protagonist mother, warm family role in practical home clothing, shoulder-length dark hair, visually distinct from teachers and passersby and the protagonist little girl with pink jacket, white shirt, blue skirt, pink shoes, and a small pink hair clip, matching L154/L162/L163 continuity and not copied from L058 stand nearby looking unconvinced or feeling the car is still okay.\nScene/backdrop: safe home driveway or quiet roadside near the protagonist home; car has dull paint or light dust but is not dangerous or broken down.\nComposition/framing: center father, mother, protagonist girl, and the old-looking car; make the contrast clear that only father thinks this.\nStyle/medium: Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058.\nConstraints: no license plate text, no numbers, no brand marks, no labels, no signs, no watermark; mother and father must be visually distinct and consistent with protagonist family continuity.",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L154/L162/L163 protagonist family continuity for the recurring protagonist little girl, mother, and father when they appear. The recurring protagonist little girl stands at a desk or bookshelf, holding one clearly older but clean and safe book. The image should show that this is the one old book she recognizes. The book cover and pages must have no readable writing or symbols. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, signatures, or readable marks.",
           "imageNotes": "主角爸爸站在一台看起來有點舊的車旁邊，表情覺得車太舊；主角媽媽和主角小女孩在旁邊看起來不太同意或覺得還可以。畫面要表現「只有爸爸這樣認為」。車子可以有舊漆或灰塵，但不要危險或報廢；不可有車牌文字、數字、品牌或標籤。人物：主角爸爸 + 主角媽媽 + 主角小女孩。",
           "imageSrc": "/assets/lessons/L229/images/L229-S05.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L229/audio/L229-S05.m4a",
-            "durationMs": 3760,
+            "durationMs": 3529,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 190
+                "endMs": 500
               },
               {
                 "charIndex": 1,
-                "startMs": 190,
-                "endMs": 380
+                "startMs": 500,
+                "endMs": 1200
               },
               {
                 "charIndex": 2,
-                "startMs": 380,
-                "endMs": 650
+                "startMs": 1200,
+                "endMs": 1380
               },
               {
                 "charIndex": 3,
-                "startMs": 650,
-                "endMs": 920
+                "startMs": 1380,
+                "endMs": 1700
               },
               {
                 "charIndex": 4,
-                "startMs": 920,
-                "endMs": 1240
+                "startMs": 1700,
+                "endMs": 1980
               },
               {
                 "charIndex": 5,
-                "startMs": 1240,
-                "endMs": 1780
-              },
-              {
-                "charIndex": 6,
-                "startMs": 1780,
+                "startMs": 1980,
                 "endMs": 2180
               },
               {
-                "charIndex": 7,
+                "charIndex": 6,
                 "startMs": 2180,
-                "endMs": 2400
+                "endMs": 2560
               },
               {
-                "charIndex": 8,
-                "startMs": 2400,
-                "endMs": 2780
-              },
-              {
-                "charIndex": 9,
-                "startMs": 2780,
-                "endMs": 3060
-              },
-              {
-                "charIndex": 10,
-                "startMs": 3060,
-                "endMs": 3440
+                "charIndex": 7,
+                "startMs": 2560,
+                "endMs": 2800
               }
             ]
           }
@@ -104247,7 +104193,7 @@
           "targetChar": "只",
           "prompt": "???????只??",
           "missingIndexes": [
-            0
+            1
           ]
         },
         {
@@ -109584,55 +109530,65 @@
         },
         {
           "id": "L241-S03",
-          "text": "有人在夜市打工。",
-          "spokenText": "有人在夜市打工",
+          "text": "我在夜市看手工小船。",
+          "spokenText": "我在夜市看手工小船",
           "focusChar": "工",
           "displayLines": [
-            "有人在夜市",
-            "打工。"
+            "我在夜市",
+            "看手工小船。"
           ],
           "imageNotes": "夜市攤位旁有一位正在打工的人幫忙整理物品或遞水，旁邊可有主角小女孩和主角媽媽經過。打工的人是一般夜市工作者角色，不能長得像主角媽媽或老師。不可有文字、數字、招牌、價格、品牌或標籤。",
-          "imagePrompt": "Use case: illustration-story\nAsset type: L241-S03 lesson image for a Taiwan preschool Traditional Chinese character-recognition app\nPrimary request: square image / 1:1 composition. Beside a Taiwan night market stall, a clearly distinct night-market worker is doing a part-time job by organizing plain items and handing a cup of water across the counter. The protagonist little girl and protagonist mother pass nearby and notice the worker. The scene clearly communicates: someone is working at the night market.\nVisual cast: protagonist little girl follows L154/L162/L163 family continuity, pink hair clip and child proportions. Protagonist mother follows L154/L162/L163 family continuity. The night-market worker is a separate worker role with different face, hairstyle, clothing, and body language from the mother and from any teacher. L058 images are illustration style anchors only.\nComposition: center the worker's action, night-market stall, mother, and little girl with safe margins; keep the worker's job action readable in the square crop.\nStyle/medium: refined warm watercolor children's textbook illustration matching L058 style traits, soft transparent watercolor, delicate colored-pencil linework, warm evening lighting, detailed but uncluttered.\nConstraints: no written text, numbers, signs, price tags, labels, brands, logos, zhuyin, watermarks, readable marks, or signage.",
+          "imagePrompt": "Use the approved L058 lesson image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Square image / 1:1 composition with safe margins and a centered main action. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L154/L162/L163 protagonist family continuity for the recurring protagonist little girl, mother, and father when they appear. At a Taiwan night market toy stall, the recurring protagonist little girl and her mother look at a handmade small toy boat. The stall may have handmade toys, but there must be no readable signs, labels, prices, or writing. Make the small handmade boat the clear focus. No speech bubbles, no visible text, labels, signs, letters, numbers, zhuyin, logos, watermarks, arrows, signatures, or readable marks.",
           "imageSrc": "/assets/lessons/L241/images/L241-S03.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L241/audio/L241-S03.m4a",
-            "durationMs": 3474,
+            "durationMs": 5317,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 280
+                "endMs": 590
               },
               {
                 "charIndex": 1,
-                "startMs": 280,
-                "endMs": 560
+                "startMs": 590,
+                "endMs": 1180
               },
               {
                 "charIndex": 2,
-                "startMs": 560,
-                "endMs": 1000
+                "startMs": 1180,
+                "endMs": 1780
               },
               {
                 "charIndex": 3,
-                "startMs": 1000,
-                "endMs": 1360
+                "startMs": 1780,
+                "endMs": 2140
               },
               {
                 "charIndex": 4,
-                "startMs": 1360,
-                "endMs": 1640
+                "startMs": 2140,
+                "endMs": 3060
               },
               {
                 "charIndex": 5,
-                "startMs": 1640,
-                "endMs": 1960
+                "startMs": 3060,
+                "endMs": 3540
               },
               {
                 "charIndex": 6,
-                "startMs": 1960,
-                "endMs": 2180
+                "startMs": 3540,
+                "endMs": 3820
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3820,
+                "endMs": 4340
+              },
+              {
+                "charIndex": 8,
+                "startMs": 4340,
+                "endMs": 4600
               }
             ]
           }
@@ -109873,24 +109829,24 @@
           "options": [
             {
               "id": "L241-G05-A",
-              "text": "有人在夜市打工。",
-              "correct": true,
+              "text": "我在夜市看手工小船。",
+              "spokenText": "我在夜市看手工小船",
               "audioSrc": "/assets/lessons/L241/audio/L241-S03.m4a",
-              "spokenText": "有人在夜市打工。"
+              "correct": true
             },
             {
               "id": "L241-G05-B",
-              "text": "有人在夜市打包。",
-              "correct": false,
+              "text": "我在夜市看手工面具。",
+              "spokenText": "我在夜市看手工面具",
               "audioSrc": "/assets/lessons/L241/audio/L241-G05-wrong-one.m4a",
-              "spokenText": "有人在夜市打包。"
+              "correct": false
             },
             {
               "id": "L241-G05-C",
-              "text": "有人在夜市賣菜。",
-              "correct": false,
+              "text": "我在市場看手工小船。",
+              "spokenText": "我在市場看手工小船",
               "audioSrc": "/assets/lessons/L241/audio/L241-G05-wrong-two.m4a",
-              "spokenText": "有人在夜市賣菜。"
+              "correct": false
             }
           ]
         }
