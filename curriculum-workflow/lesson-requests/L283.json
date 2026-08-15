@@ -1,0 +1,180 @@
+{
+  "id": "L283",
+  "order": 283,
+  "newChars": [
+    "破"
+  ],
+  "zhuyin": {
+    "破": "ㄆㄛˋ"
+  },
+  "title": "破",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L277",
+    "L278",
+    "L279",
+    "L280",
+    "L281",
+    "L282"
+  ],
+  "provisionalLearnedChars": [
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞"
+  ],
+  "teacherNotes": "Accepted Production handoff with Editor patch. Build lesson-local complete package only; blocked until L277-L282 are in main. Use origin/main L001-L274 plus provisional learned chars and current target for allowed-character audit.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main L001-L274 + provisional learned chars [橋,座,木,積,堆,洞] + current target 破",
+    "requiredCoverageChars": [
+      "破",
+      "洞",
+      "堆",
+      "積",
+      "木",
+      "座"
+    ],
+    "targetCharMinimumCount": {
+      "破": 3
+    },
+    "recentTargetMinimumCounts": {
+      "洞": 2,
+      "堆": 2,
+      "積": 2,
+      "木": 1,
+      "座": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "usageNotes": [
+      "Do not use unapproved display characters outside the allowed boundary. S03 has exactly 12 Han characters and is allowed. Images must be gentle and safe, with no text, numbers, labels, zhuyin, or watermarks."
+    ],
+    "imageRules": [
+      "All sentence images must be square image / 1:1 composition.",
+      "Use L058 only as style reference, not person identity.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "No visible text, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 破 as public/assets/lessons/L283/audio/char-u7834.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L283-S01",
+      "text": "衣服破了一個洞。",
+      "spokenText": "衣服破了一個洞",
+      "focusChar": "破",
+      "displayLines": [
+        "衣服破了",
+        "一個洞。"
+      ],
+      "imageNotes": "Protagonist little girl looks at a piece of clothing with one clear hole torn in it; show the hole clearly while keeping the child fully covered and safe; no text, numbers, labels, or zhuyin."
+    },
+    {
+      "id": "L283-S02",
+      "text": "舊書破掉了、只剩半本。",
+      "spokenText": "舊書破掉了只剩半本",
+      "focusChar": "破",
+      "displayLines": [
+        "舊書破掉了、",
+        "只剩半本。"
+      ],
+      "imageNotes": "On a table is an old book that is torn and visibly only half remaining or missing about half; protagonist little girl looks at it; pages must have no readable text, page numbers, labels, or zhuyin."
+    },
+    {
+      "id": "L283-S03",
+      "text": "積木堆太高、倒下打破盒子。",
+      "spokenText": "積木堆太高倒下打破盒子",
+      "focusChar": "破",
+      "displayLines": [
+        "積木堆太高、",
+        "倒下打破盒子。"
+      ],
+      "imageNotes": "Protagonist little girl stacked building blocks too high; the tall stack has fallen and broken a nearby cardboard or wooden box. Safe child-friendly scene, no sharp fragments, no injuries, no scared expression; blocks and box have no letters, text, numbers, labels, or zhuyin."
+    },
+    {
+      "id": "L283-S04",
+      "text": "木橋下有一個山洞。",
+      "spokenText": "木橋下有一個山洞",
+      "focusChar": "橋",
+      "displayLines": [
+        "木橋下有",
+        "一個山洞。"
+      ],
+      "imageNotes": "A wooden bridge with a mountain cave underneath it; protagonist little girl watches from a safe distance. Make it warm fairy-tale natural scenery, not a scary cave; no text, numbers, road signs, labels, or zhuyin."
+    },
+    {
+      "id": "L283-S05",
+      "text": "後座有一堆破舊積木。",
+      "spokenText": "後座有一堆破舊積木",
+      "focusChar": "堆",
+      "displayLines": [
+        "後座有一堆",
+        "破舊積木。"
+      ],
+      "imageNotes": "The back seat of a parked car contains a pile of old broken building blocks; protagonist little girl stands nearby looking or preparing to tidy them. Safe car interior, no license plate, no text, no numbers, no labels, no zhuyin; blocks must not contain letters or digits."
+    }
+  ],
+  "stage4Plan": {
+    "games": [
+      {
+        "id": "L283-G01",
+        "type": "find-character",
+        "sentenceId": "L283-S01",
+        "targetChar": "破",
+        "reason": "衣服破了 is the core usage."
+      },
+      {
+        "id": "L283-G02",
+        "type": "teach-character",
+        "sentenceId": "L283-S02",
+        "targetChar": "破",
+        "targetCharIndex": 2,
+        "prefixText": "舊書",
+        "suffixText": "掉了只剩半本"
+      },
+      {
+        "id": "L283-G03",
+        "type": "missing-character",
+        "sentenceId": "L283-S03",
+        "targetChar": "破",
+        "missingIndexes": [
+          9
+        ],
+        "options": [
+          "破",
+          "堆",
+          "洞"
+        ]
+      },
+      {
+        "id": "L283-G04",
+        "type": "partial-order",
+        "sentenceId": "L283-S04",
+        "chunks": [
+          "木橋下",
+          "有一個",
+          "山洞"
+        ]
+      },
+      {
+        "id": "L283-G05",
+        "type": "choose-pronunciation",
+        "sentenceId": "L283-S05",
+        "correctText": "後座有一堆破舊積木。",
+        "wrongOneText": "後座有一堆舊積木。",
+        "wrongTwoText": "後座有一堆木頭。"
+      }
+    ]
+  }
+}
