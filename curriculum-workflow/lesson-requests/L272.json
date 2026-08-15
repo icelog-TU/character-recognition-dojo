@@ -1,0 +1,184 @@
+{
+  "id": "L272",
+  "order": 272,
+  "newChars": [
+    "差"
+  ],
+  "zhuyin": {
+    "差": "ㄔㄚˋ"
+  },
+  "title": "差",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L270",
+    "L271"
+  ],
+  "provisionalLearnedChars": [
+    "精",
+    "變"
+  ],
+  "teacherNotes": "Production handoff approved final sentences. Pronunciation locked to 差 ㄔㄚˋ, such as 變差、差點、差很多; do not use 出差、差事 or other readings. Dependency-blocked until L270 精 and L271 變 are in main.",
+  "generationConstraints": {
+    "allowedBoundary": "Latest origin/main production through L269 神 + provisional learned chars 精, 變 + current 差.",
+    "requiredCoverageChars": [
+      "差",
+      "變",
+      "精",
+      "神",
+      "體",
+      "久"
+    ],
+    "targetCharMinimumCount": {
+      "差": 3
+    },
+    "recentTargetMinimumCounts": {
+      "變": 2,
+      "精": 2,
+      "神": 2,
+      "體": 1,
+      "久": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity continuity from docs/LESSON_VISUAL_CAST_SOP.md, docs/CURRICULUM_LEDGER.md, and docs/visual-references/lesson-cast.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, road signs, temple signs, deity text, or readable marks.",
+      "Tired or low-energy images must be gentle and safe, with no severe illness, emergency care, death, injury, horror, or panic.",
+      "For 神明畫像 scenes, show a respectful decorative deity image without any written text."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 差 as public/assets/lessons/L272/audio/char-u5dee.m4a from the single character, pronounced ㄔㄚˋ.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix audio from exact prefix text and omit suffix audio because the target character is final if the schema supports no-suffix teach audio.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L272-S01",
+      "text": "休息不夠，精神變差。",
+      "spokenText": "休息不夠精神變差",
+      "focusChar": "差",
+      "displayLines": [
+        "休息不夠，",
+        "精神變差。"
+      ],
+      "imageNotes": "主角小女孩休息不夠，坐在家中看起來精神變差、比較累，主角媽媽在旁邊關心。畫面要溫和，不要做成嚴重醫療場景；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L272-S02",
+      "text": "跑太久，體力不夠了。",
+      "spokenText": "跑太久體力不夠了",
+      "focusChar": "體",
+      "displayLines": [
+        "跑太久，",
+        "體力不夠了。"
+      ],
+      "imageNotes": "主角小女孩在安全空地或操場跑太久後，坐在旁邊休息，看起來體力不夠了。主角爸爸或老師在旁邊陪同；不可有跑道號碼、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L272-S03",
+      "text": "精神不好，差點走錯路。",
+      "spokenText": "精神不好差點走錯路",
+      "focusChar": "差",
+      "displayLines": [
+        "精神不好，",
+        "差點走錯路。"
+      ],
+      "imageNotes": "主角小女孩看起來精神不好，在安全路口或校園步道差點走錯方向，主角爸爸或老師在旁邊提醒。畫面要清楚是差點走錯路，不要有文字路牌、數字、標籤或注音。"
+    },
+    {
+      "id": "L272-S04",
+      "text": "大家在看神明的畫像。",
+      "spokenText": "大家在看神明的畫像",
+      "focusChar": "神",
+      "displayLines": [
+        "大家在看",
+        "神明的畫像。"
+      ],
+      "imageNotes": "主角小女孩和幾位家人或路人在廟宇外或畫展空間看神明的畫像。畫像可以有神明形象和裝飾，但不可有文字、數字、招牌、神像文字、標籤或注音。"
+    },
+    {
+      "id": "L272-S05",
+      "text": "人變老，體力也變差。",
+      "spokenText": "人變老體力也變差",
+      "focusChar": "差",
+      "displayLines": [
+        "人變老，",
+        "體力也變差。"
+      ],
+      "imageNotes": "主角老太太或主角爺爺走了一段路後坐下休息，旁邊有主角小女孩陪伴。畫面要溫和呈現年紀大體力比較差，不可帶有嘲笑感；不可有文字、數字、標籤或注音。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L272-G01",
+      "type": "find-character",
+      "sentenceId": "L272-S03",
+      "targetChar": "差",
+      "reason": "「差點走錯路」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L272-G02",
+      "type": "teach-character",
+      "sentenceId": "L272-S01",
+      "targetChar": "差",
+      "targetCharIndex": 7,
+      "teachAudio": {
+        "prefixText": "休息不夠精神變",
+        "suffixText": "",
+        "prefixSrc": "/assets/lessons/L272/audio/L272-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "L272-G03",
+      "type": "missing-character",
+      "sentenceId": "L272-S05",
+      "targetChar": "差",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "差",
+        "變",
+        "體"
+      ]
+    },
+    {
+      "id": "L272-G04",
+      "type": "partial-order",
+      "sentenceId": "L272-S02",
+      "chunks": [
+        "跑太久",
+        "體力",
+        "不夠了"
+      ]
+    },
+    {
+      "id": "L272-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L272-S04",
+      "correctText": "大家在看神明的畫像。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "大家在看神明的花車。",
+          "audioSrc": "/assets/lessons/L272/audio/L272-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "大家在看海神的畫像。",
+          "audioSrc": "/assets/lessons/L272/audio/L272-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
