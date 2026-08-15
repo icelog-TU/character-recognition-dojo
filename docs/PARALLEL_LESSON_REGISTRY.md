@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L277 | 橋 / normal lesson | claimed | Production C | codex/l277-complete-package / f0319ae5 | R015, R016, L271 變, L272 差, L273 緊, L274 卡, L275 住, L276 蓋 | ["變","差","緊","卡","住","蓋"] | curriculum-workflow/lesson-requests/L277.json, curriculum-workflow/generated/L277-generation-packet.md | public/assets/lessons/L277/images/, public/assets/lessons/L277/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
