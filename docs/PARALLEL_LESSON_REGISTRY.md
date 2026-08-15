@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L270 | 精 / normal lesson | claimed | Production C | codex/l270-complete-package / caba28d1 | L265:休, L266:息, L267:久, L268:體, L269:神 | ["休","息","久","體","神"] | curriculum-workflow/lesson-requests/L270.json; curriculum-workflow/generated/L270-generation-packet.md | public/assets/lessons/L270/images/; public/assets/lessons/L270/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
