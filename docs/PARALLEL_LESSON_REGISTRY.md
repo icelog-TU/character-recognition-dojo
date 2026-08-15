@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L277 | 橋 / normal lesson | request-ready | Production C | codex/l277-complete-package / f0319ae5 | R015, R016, L271 變, L272 差, L273 緊, L274 卡, L275 住, L276 蓋 | ["變","差","緊","卡","住","蓋"] | curriculum-workflow/lesson-requests/L277.json, curriculum-workflow/generated/L277-generation-packet.md | public/assets/lessons/L277/images/, public/assets/lessons/L277/audio/ | request, packet, and draft prepared; dependency-blocked against current origin/main |
+| L277 | 橋 / normal lesson | ready-blocked-by-dependency | Production C | codex/l277-complete-package / f0319ae5 | R015, R016, L271 變, L272 差, L273 緊, L274 卡, L275 住, L276 蓋 | ["變","差","緊","卡","住","蓋"] | curriculum-workflow/lesson-requests/L277.json, curriculum-workflow/generated/L277-generation-packet.md | public/assets/lessons/L277/images/, public/assets/lessons/L277/audio/ | complete lesson-local package prepared; blocked until R015/R016 and L271-L276 are in main |
 
 ## Status Values
 
