@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L279 | 木 / normal lesson | ready-blocked-by-dependency | Production A | codex/l279-complete-package / package tip pending | L275 住, L276 蓋, L277 橋, L278 座 | ["住","蓋","橋","座"] | curriculum-workflow/lesson-requests/L279.json, curriculum-workflow/generated/L279-generation-packet.md | public/assets/lessons/L279/images/, public/assets/lessons/L279/audio/ | complete package ready; blocked until L275-L278 are in main; G02 prefix omitted because target is first Han char |
+| L279 | 木 / normal lesson | ready-blocked-by-dependency | Production A | codex/l279-complete-package / 57e94fdb | L275 住, L276 蓋, L277 橋, L278 座 | ["住","蓋","橋","座"] | curriculum-workflow/lesson-requests/L279.json, curriculum-workflow/generated/L279-generation-packet.md | public/assets/lessons/L279/images/, public/assets/lessons/L279/audio/ | complete package ready; blocked until L275-L278 are in main; G02 prefix omitted because target is first Han char |
 
 ## Status Values
 
