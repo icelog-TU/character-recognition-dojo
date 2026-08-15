@@ -1,0 +1,194 @@
+{
+  "id": "R015",
+  "kind": "review",
+  "reviewNumber": 15,
+  "title": "複習十五",
+  "afterLessonOrder": 270,
+  "targetLessonRange": {
+    "startOrder": 211,
+    "endOrder": 240
+  },
+  "requiredCoverageChars": [
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具"
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "requiredCoverageChars": [
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具"
+    ],
+    "forbiddenDisplayChars": [
+      "破",
+      "變"
+    ],
+    "allowedBoundary": "Use only characters learned through latest origin/main L270. Review modules introduce no newChars, no zhuyin, and no charAudio."
+  },
+  "teacherNotes": "Teacher-approved R015/R016 review pair after L270. R015/R016 together must cover every new character from L211-L240. Do not use L271 or later characters in review text. R015 covers 船、魚、池、游、泳、身、濕、服、換、乾、褲、知、錯、改、認、新.",
+  "approvedSentences": [
+    {
+      "text": "船長把魚放回海裡。",
+      "spokenText": "船長把魚放回海裡",
+      "focusChar": "船",
+      "displayLines": [
+        "船長把魚",
+        "放回海裡。"
+      ],
+      "imageNotes": "船長在海邊或船旁把魚放回海裡，畫面要清楚看見船長、魚、大海，動作是把魚放回去。不可有文字、數字、船名、標籤或注音。"
+    },
+    {
+      "text": "不可以在魚池裡游泳。",
+      "spokenText": "不可以在魚池裡游泳",
+      "focusChar": "泳",
+      "displayLines": [
+        "不可以在魚池裡",
+        "游泳。"
+      ],
+      "imageNotes": "主角小女孩站在魚池邊，看到魚池裡有魚，旁邊有老師或主角媽媽溫和提醒不可在魚池裡游泳。畫面要清楚是魚池，不是游泳池；不可有告示文字、數字、標籤或注音。"
+    },
+    {
+      "text": "一身濕衣服，換上乾衣褲。",
+      "spokenText": "一身濕衣服換上乾衣褲",
+      "focusChar": "濕",
+      "displayLines": [
+        "一身濕衣服，",
+        "換上乾衣褲。"
+      ],
+      "imageNotes": "主角小女孩在家中，原本衣服濕了，旁邊放著乾的衣服和褲子準備換上。畫面要清楚濕衣服和乾衣褲的對比，但不可裸露；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "text": "我知道錯了，會改。",
+      "spokenText": "我知道錯了會改",
+      "focusChar": "錯",
+      "displayLines": [
+        "我知道錯了，",
+        "會改。"
+      ],
+      "imageNotes": "主角小女孩知道自己做錯事，例如把玩具或書本放錯地方，正在把東西改回正確位置。主角媽媽在旁邊溫和看著。畫面要具體，不要抽象責罵；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "text": "我認得新老師的車。",
+      "spokenText": "我認得新老師的車",
+      "focusChar": "認",
+      "displayLines": [
+        "我認得",
+        "新老師的車。"
+      ],
+      "imageNotes": "主角小女孩在校門口或安全路邊認出新老師的車，新老師站在車旁。老師需依 docs/LESSON_VISUAL_CAST_SOP.md 設計，不可長得像主角媽媽；車不可有車牌文字、數字、校名或標籤。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R015-G01",
+      "type": "find-character",
+      "sentenceId": "R015-S02",
+      "targetChar": "游",
+      "reason": "「魚池裡游泳」清楚複習游泳相關字。"
+    },
+    {
+      "id": "R015-G02",
+      "type": "teach-character",
+      "sentenceId": "R015-S03",
+      "targetChar": "濕",
+      "targetCharIndex": 2,
+      "teachAudioFragments": {
+        "prefix": "一身",
+        "suffix": "衣服換上乾衣褲"
+      }
+    },
+    {
+      "id": "R015-G03",
+      "type": "missing-character",
+      "sentenceId": "R015-S04",
+      "targetChar": "改",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "改",
+        "錯",
+        "知"
+      ]
+    },
+    {
+      "id": "R015-G04",
+      "type": "partial-order",
+      "sentenceId": "R015-S01",
+      "targetChar": "船",
+      "chunks": [
+        "船長",
+        "把魚",
+        "放回海裡"
+      ]
+    },
+    {
+      "id": "R015-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R015-S05",
+      "targetChar": "認",
+      "correctText": "我認得新老師的車。",
+      "wrongOneText": "我認得舊老師的車。",
+      "wrongTwoText": "我認得新老師的書。"
+    }
+  ]
+}
