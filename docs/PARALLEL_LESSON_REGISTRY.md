@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L276 | 蓋 / normal lesson | claimed | Production B | codex/l276-complete-package / f0319ae5 | R015, R016, L271 變, L272 差, L273 緊, L274 卡, L275 住 | ["變","差","緊","卡","住"] | curriculum-workflow/lesson-requests/L276.json; curriculum-workflow/generated/L276-generation-packet.md | public/assets/lessons/L276/images/; public/assets/lessons/L276/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
