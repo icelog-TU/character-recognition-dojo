@@ -1,0 +1,198 @@
+{
+  "id": "L260",
+  "order": 260,
+  "newChars": [
+    "假"
+  ],
+  "zhuyin": {
+    "假": "ㄐㄧㄚˇ"
+  },
+  "title": "假",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete package from approved handoff. Latest origin/main production curriculum is complete through L258. L260 is blocked from production JSON until L259 is in main. 假 is read ㄐㄧㄚˇ in this lesson.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main production JSON through L258 plus provisional learned char 病 plus current target 假",
+    "dependsOnLessons": [
+      "L259"
+    ],
+    "provisionalLearnedChars": [
+      "病"
+    ],
+    "requiredCoverageChars": [
+      "假",
+      "病",
+      "倒",
+      "睡",
+      "死",
+      "累"
+    ],
+    "targetCharMinimumCount": {
+      "假": 3
+    },
+    "recentTargetMinimumCounts": {
+      "病": 2,
+      "倒": 2,
+      "睡": 2,
+      "死": 1,
+      "累": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "請",
+      "醫",
+      "院",
+      "藥",
+      "診",
+      "醒",
+      "裝",
+      "騙",
+      "救",
+      "傷"
+    ],
+    "safetyRules": [
+      "病倒 and 病假 should be warm and mild; no severe illness, emergency care, medical panic, injury, horror, or death imagery.",
+      "假死 is only a dog playing pretend; no real death, injury, rescue, sadness, horror, or frightening mood.",
+      "假睡 should look like a playful pretend-sleep game, not real sickness or collapse."
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist little girl and mother.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, price tags, store signs, book text, toy labels, clock numbers, license plates, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 假 as public/assets/lessons/L260/audio/char-u5047.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L260-S01",
+      "text": "我病倒了，放病假在家睡。",
+      "spokenText": "我病倒了放病假在家睡",
+      "focusChar": "病",
+      "displayLines": [
+        "我病倒了，",
+        "放病假在家睡。"
+      ],
+      "imageNotes": "主角小女孩生病在家休息，躺在床上或坐在床邊準備睡，主角媽媽在旁邊照顧。主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity；畫面溫和，不可呈現重病、急救、死亡、受傷或恐怖；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L260-S02",
+      "text": "我假睡，等著媽媽來叫我。",
+      "spokenText": "我假睡等著媽媽來叫我",
+      "focusChar": "假",
+      "displayLines": [
+        "我假睡，",
+        "等著媽媽來叫我。"
+      ],
+      "imageNotes": "主角小女孩在床上閉眼裝作睡著，等主角媽媽走進房間來叫她起床。畫面要看得出是調皮的假睡遊戲，不是真生病或真的累倒；主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L260-S03",
+      "text": "我在夜市買假面具。",
+      "spokenText": "我在夜市買假面具",
+      "focusChar": "假",
+      "displayLines": [
+        "我在夜市",
+        "買假面具。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在夜市攤位買一個假面具。攤位可以有面具陳列，但面具和攤位上不可有文字、數字、招牌、標籤或注音；主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity。"
+    },
+    {
+      "id": "L260-S04",
+      "text": "媽媽說，不可以說假話。",
+      "spokenText": "媽媽說不可以說假話",
+      "focusChar": "假",
+      "displayLines": [
+        "媽媽說，",
+        "不可以說假話。"
+      ],
+      "imageNotes": "主角媽媽在家裡溫和但認真地和主角小女孩說話，像是在教她不要說假話。主角媽媽身份要符合 L154/L162/L163 family continuity，不可畫成老師；不可有對話框、文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L260-S05",
+      "text": "小狗玩累了，倒地假死。",
+      "spokenText": "小狗玩累了倒地假死",
+      "focusChar": "假",
+      "displayLines": [
+        "小狗玩累了，",
+        "倒地假死。"
+      ],
+      "imageNotes": "家裡或戶外安全空地，小狗玩累後在主角小女孩面前躺在地上裝死，像玩遊戲。主角小女孩可以在旁邊笑或驚訝但不害怕；畫面必須明確是小狗假死遊戲，不可呈現真的死亡、受傷、急救、悲傷或恐怖；不可有文字、數字、標籤或水印。"
+    }
+  ],
+  "stage4Plan": {
+    "G01": {
+      "id": "L260-G01",
+      "type": "find-character",
+      "sentenceId": "L260-S02",
+      "targetChar": "假",
+      "reason": "「假睡」是本課清楚、生活化的核心用法。"
+    },
+    "G02": {
+      "id": "L260-G02",
+      "type": "teach-character",
+      "sentenceId": "L260-S04",
+      "targetChar": "假",
+      "targetCharIndex": 8,
+      "prefixText": "媽媽說不可以說",
+      "suffixText": "話",
+      "missingIndexes": [
+        8
+      ]
+    },
+    "G03": {
+      "id": "L260-G03",
+      "type": "missing-character",
+      "sentenceId": "L260-S03",
+      "targetChar": "假",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "假",
+        "買",
+        "具"
+      ]
+    },
+    "G04": {
+      "id": "L260-G04",
+      "type": "partial-order",
+      "sentenceId": "L260-S01",
+      "targetChar": "病",
+      "chunks": [
+        "我病倒了",
+        "放病假",
+        "在家睡"
+      ]
+    },
+    "G05": {
+      "id": "L260-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L260-S05",
+      "targetChar": "假",
+      "correctText": "小狗玩累了，倒地假死。",
+      "wrongOneText": "小狗玩累了，倒地睡著。",
+      "wrongTwoText": "小狗玩累了，回家假睡。",
+      "correctSpokenText": "小狗玩累了倒地假死",
+      "wrongOneSpokenText": "小狗玩累了倒地睡著",
+      "wrongTwoSpokenText": "小狗玩累了回家假睡"
+    }
+  },
+  "dependsOnLessons": [
+    "L259"
+  ],
+  "provisionalLearnedChars": [
+    "病"
+  ],
+  "productionNotes": "Do not add L260 to src/curriculum/sample-lessons.json until L259 is merged."
+}
