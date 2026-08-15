@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L287 | 痛 / normal lesson | claimed | Production A | codex/l287-complete-package / c9a3d230 | L282 洞, L283 破, L284 口, L285 傷, L286 皮 | ["洞","破","口","傷","皮"] | curriculum-workflow/lesson-requests/L287.json, curriculum-workflow/generated/L287-generation-packet.md | public/assets/lessons/L287/images/, public/assets/lessons/L287/audio/ | accepted handoff and starting complete package |
+| L287 | 痛 / normal lesson | ready-blocked-by-dependency | Production A | codex/l287-complete-package / package tip pending | L282 洞, L283 破, L284 口, L285 傷, L286 皮 | ["洞","破","口","傷","皮"] | curriculum-workflow/lesson-requests/L287.json, curriculum-workflow/generated/L287-generation-packet.md | public/assets/lessons/L287/images/, public/assets/lessons/L287/audio/ | complete package ready; blocked until L282-L286 are in main |
 
 ## Status Values
 
