@@ -16,7 +16,6 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L259 | 病 / normal lesson | claimed | Production A | codex/l259-complete-package / 66500630 | L251 重, L252 沙, L253 張, L254 椅, L255 累, L256 死, L257 睡, L258 倒 | ["重","沙","張","椅","累","死","睡","倒"] | curriculum-workflow/lesson-requests/L259.json; curriculum-workflow/generated/L259-generation-packet.md | public/assets/lessons/L259/images/; public/assets/lessons/L259/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
