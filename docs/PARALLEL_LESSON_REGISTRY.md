@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L284 | 口 / normal lesson | claimed | Production B | codex/l284-complete-package / c9a3d230 | L279 木, L280 積, L281 堆, L282 洞, L283 破 | ["木","積","堆","洞","破"] | curriculum-workflow/lesson-requests/L284.json, curriculum-workflow/generated/L284-generation-packet.md | public/assets/lessons/L284/images/, public/assets/lessons/L284/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
