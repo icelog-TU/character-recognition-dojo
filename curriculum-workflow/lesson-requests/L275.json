@@ -1,0 +1,203 @@
+{
+  "id": "L275",
+  "order": 275,
+  "newChars": [
+    "住"
+  ],
+  "zhuyin": {
+    "住": "ㄓㄨˋ"
+  },
+  "title": "住",
+  "targetSentenceCount": 5,
+  "dependsOnReviews": [
+    "R015",
+    "R016"
+  ],
+  "dependsOnLessons": [
+    "L271",
+    "L272",
+    "L273",
+    "L274"
+  ],
+  "teacherNotes": "Release verified and merged L275 from origin/codex/l275-complete-package against latest origin/main. Dependencies are satisfied in playable order through L277; R001-R016 are already shipped.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L275.",
+    "requiredCoverageChars": [
+      "住",
+      "卡",
+      "緊",
+      "差",
+      "變",
+      "精"
+    ],
+    "targetCharMinimumCount": {
+      "住": 3
+    },
+    "recentTargetMinimumCounts": {
+      "卡": 2,
+      "緊": 2,
+      "差": 2,
+      "變": 1,
+      "精": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md, docs/CURRICULUM_LEDGER.md, and docs/visual-references/lesson-cast.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 住 as public/assets/lessons/L275/audio/char-u4f4f.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ],
+    "dependencyStatus": {
+      "productionLatestLesson": "L270",
+      "productionLatestLessonTitle": "精",
+      "productionLatestReview": "R014",
+      "missingReviews": [
+        "R015",
+        "R016"
+      ],
+      "missingLessons": [
+        "L271",
+        "L272",
+        "L273",
+        "L274"
+      ],
+      "blocked": true
+    }
+  },
+  "approvedSentences": [
+    {
+      "id": "L275-S01",
+      "text": "我住在海邊，天天看船。",
+      "spokenText": "我住在海邊天天看船",
+      "focusChar": "住",
+      "displayLines": [
+        "我住在海邊，",
+        "天天看船。"
+      ],
+      "imageNotes": "主角小女孩住在海邊，從家附近看海上的船。畫面要有海邊住家、主角小女孩、遠處的船；不可有門牌、文字、數字、船名、標籤或注音。"
+    },
+    {
+      "id": "L275-S02",
+      "text": "盒子卡住了，打不開。",
+      "spokenText": "盒子卡住了打不開",
+      "focusChar": "住",
+      "displayLines": [
+        "盒子卡住了，",
+        "打不開。"
+      ],
+      "imageNotes": "主角小女孩在桌邊想打開一個盒子，但盒子卡住了打不開。盒子不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L275-S03",
+      "text": "門關太緊，卡住了。",
+      "spokenText": "門關太緊卡住了",
+      "focusChar": "住",
+      "displayLines": [
+        "門關太緊，",
+        "卡住了。"
+      ],
+      "imageNotes": "主角爸爸在家門或房門旁試著推門或拉門，門關太緊卡住了。畫面要清楚是門卡住但安全、不驚嚇；不可有門牌、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L275-S04",
+      "text": "精神緊張，睡得很差。",
+      "spokenText": "精神緊張睡得很差",
+      "focusChar": "緊",
+      "displayLines": [
+        "精神緊張，",
+        "睡得很差。"
+      ],
+      "imageNotes": "主角小女孩晚上躺在床上，因為精神緊張睡得很差，表情有點擔心但不恐怖。主角媽媽可在旁邊溫和安撫；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L275-S05",
+      "text": "走到一半，天氣變差，只好回頭。",
+      "spokenText": "走到一半天氣變差只好回頭",
+      "focusChar": "變",
+      "displayLines": [
+        "走到一半，",
+        "天氣變差，",
+        "只好回頭。"
+      ],
+      "imageNotes": "主角小女孩和主角爸爸在爬山走山路，走到一半時天氣變差，天空變黑或開始有風雨，他們只好安全回頭。畫面要清楚是山路爬山情境；不可有文字、數字、路牌、標籤或注音。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L275-G01",
+      "type": "find-character",
+      "sentenceId": "L275-S02",
+      "targetChar": "住",
+      "reason": "「卡住」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L275-G02",
+      "type": "teach-character",
+      "sentenceId": "L275-S01",
+      "targetChar": "住",
+      "targetCharIndex": 1,
+      "prefixText": "我",
+      "suffixText": "在海邊天天看船"
+    },
+    {
+      "id": "L275-G03",
+      "type": "missing-character",
+      "sentenceId": "L275-S03",
+      "targetChar": "住",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "住",
+        "卡",
+        "緊"
+      ]
+    },
+    {
+      "id": "L275-G04",
+      "type": "partial-order",
+      "sentenceId": "L275-S05",
+      "chunks": [
+        "走到一半",
+        "天氣變差",
+        "只好回頭"
+      ]
+    },
+    {
+      "id": "L275-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L275-S04",
+      "correctText": "精神緊張，睡得很差。",
+      "wrongOneText": "精神很好，睡得很差。",
+      "wrongTwoText": "精神緊張，睡得很好。"
+    }
+  ],
+  "notes": [
+    "Stage 4 G03 missingIndexes corrected to [5] because the target character is at 0-based Han index 5 in L275-S03."
+  ],
+  "releaseAudit": {
+    "status": "merged-to-main",
+    "source": "origin/codex/l275-complete-package",
+    "resolvedDependencies": [
+      "L271",
+      "L272",
+      "L273",
+      "L274"
+    ],
+    "verifiedAgainst": "latest origin/main",
+    "notes": "Release transplanted lesson-local package files only; production JSON, planner data, ledger, and registry state were regenerated from main."
+  }
+}

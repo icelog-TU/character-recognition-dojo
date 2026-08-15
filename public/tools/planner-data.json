@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-15T10:50:11.516Z",
+  "exportedAt": "2026-08-15T15:47:25.758Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -127162,7 +127162,7 @@
       "requiredRounds": 5,
       "originHint": {
         "kind": "text",
-        "text": "Teacher-approved Production handoff. Prepared as dependency-blocked package until L270-L271 are in main."
+        "text": "Teacher-approved Production handoff. Prepared as Release integrated package dependencies in playable order."
       },
       "sentences": [
         {
@@ -128551,6 +128551,1387 @@
               "correct": false,
               "audioSrc": "/assets/lessons/L274/audio/L274-G05-wrong-two.m4a",
               "spokenText": "精神很差不想玩了"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L275",
+      "order": 275,
+      "newChars": [
+        "住"
+      ],
+      "zhuyin": {
+        "住": "ㄓㄨˋ"
+      },
+      "charAudio": {
+        "住": "/assets/lessons/L275/audio/char-u4f4f.m4a"
+      },
+      "title": "住",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Teacher-approved Production handoff. Prepared as dependency-blocked package until R015/R016 and L271-L274 are in main."
+      },
+      "sentences": [
+        {
+          "id": "L275-S01",
+          "text": "我住在海邊，天天看船。",
+          "spokenText": "我住在海邊天天看船",
+          "focusChar": "住",
+          "displayLines": [
+            "我住在海邊，",
+            "天天看船。"
+          ],
+          "imageNotes": "主角小女孩住在海邊，從家附近看海上的船。畫面要有海邊住家、主角小女孩、遠處的船；不可有門牌、文字、數字、船名、標籤或注音。",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/school/outdoor environments, expressive preschool proportions, soft cheeks and gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. Do not copy any specific person, clothing, face, hair, or body shape from L058. Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md, docs/CURRICULUM_LEDGER.md, and docs/visual-references/lesson-cast.md: protagonist little girl with pink jacket or pink accents, white top, blue skirt, pink shoes, and small pink hair clip; protagonist mother visually distinct from teacher; protagonist father visually distinct from mother and teacher. Every human role identity must be explicit. Keep mother, father, teacher, elders, passersby, and the protagonist girl visually distinct. No visible text, numbers, signs, labels, zhuyin, watermarks, logos, brand marks, readable covers, road signs, door plates, boat names, or UI text. Keep all meaning-bearing people, objects, and actions centered with safe margins for a square card. Scene requirement from approved imageNotes: 主角小女孩住在海邊，從家附近看海上的船。畫面要有海邊住家、主角小女孩、遠處的船；不可有門牌、文字、數字、船名、標籤或注音。",
+          "imageSrc": "/assets/lessons/L275/images/L275-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L275/audio/L275-S01.m4a",
+            "durationMs": 4677,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1020,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1400,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1700,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2780,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2880,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3140,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3500,
+                "endMs": 3720
+              }
+            ]
+          }
+        },
+        {
+          "id": "L275-S02",
+          "text": "盒子卡住了，打不開。",
+          "spokenText": "盒子卡住了打不開",
+          "focusChar": "住",
+          "displayLines": [
+            "盒子卡住了，",
+            "打不開。"
+          ],
+          "imageNotes": "主角小女孩在桌邊想打開一個盒子，但盒子卡住了打不開。盒子不可有文字、數字、標籤或注音。",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/school/outdoor environments, expressive preschool proportions, soft cheeks and gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. Do not copy any specific person, clothing, face, hair, or body shape from L058. Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md, docs/CURRICULUM_LEDGER.md, and docs/visual-references/lesson-cast.md: protagonist little girl with pink jacket or pink accents, white top, blue skirt, pink shoes, and small pink hair clip; protagonist mother visually distinct from teacher; protagonist father visually distinct from mother and teacher. Every human role identity must be explicit. Keep mother, father, teacher, elders, passersby, and the protagonist girl visually distinct. No visible text, numbers, signs, labels, zhuyin, watermarks, logos, brand marks, readable covers, road signs, door plates, boat names, or UI text. Keep all meaning-bearing people, objects, and actions centered with safe margins for a square card. Scene requirement from approved imageNotes: 主角小女孩在桌邊想打開一個盒子，但盒子卡住了打不開。盒子不可有文字、數字、標籤或注音。",
+          "imageSrc": "/assets/lessons/L275/images/L275-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L275/audio/L275-S02.m4a",
+            "durationMs": 3575,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1380,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1780,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2540,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2760,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2940,
+                "endMs": 3140
+              }
+            ]
+          }
+        },
+        {
+          "id": "L275-S03",
+          "text": "門關太緊，卡住了。",
+          "spokenText": "門關太緊卡住了",
+          "focusChar": "住",
+          "displayLines": [
+            "門關太緊，",
+            "卡住了。"
+          ],
+          "imageNotes": "主角爸爸在家門或房門旁試著推門或拉門，門關太緊卡住了。畫面要清楚是門卡住但安全、不驚嚇；不可有門牌、文字、數字、標籤或注音。",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/school/outdoor environments, expressive preschool proportions, soft cheeks and gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. Do not copy any specific person, clothing, face, hair, or body shape from L058. Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md, docs/CURRICULUM_LEDGER.md, and docs/visual-references/lesson-cast.md: protagonist little girl with pink jacket or pink accents, white top, blue skirt, pink shoes, and small pink hair clip; protagonist mother visually distinct from teacher; protagonist father visually distinct from mother and teacher. Every human role identity must be explicit. Keep mother, father, teacher, elders, passersby, and the protagonist girl visually distinct. No visible text, numbers, signs, labels, zhuyin, watermarks, logos, brand marks, readable covers, road signs, door plates, boat names, or UI text. Keep all meaning-bearing people, objects, and actions centered with safe margins for a square card. Scene requirement from approved imageNotes: 主角爸爸在家門或房門旁試著推門或拉門，門關太緊卡住了。畫面要清楚是門卡住但安全、不驚嚇；不可有門牌、文字、數字、標籤或注音。",
+          "imageSrc": "/assets/lessons/L275/images/L275-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L275/audio/L275-S03.m4a",
+            "durationMs": 3520,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1240,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1840,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2380
+              }
+            ]
+          }
+        },
+        {
+          "id": "L275-S04",
+          "text": "精神緊張，睡得很差。",
+          "spokenText": "精神緊張睡得很差",
+          "focusChar": "緊",
+          "displayLines": [
+            "精神緊張，",
+            "睡得很差。"
+          ],
+          "imageNotes": "主角小女孩晚上躺在床上，因為精神緊張睡得很差，表情有點擔心但不恐怖。主角媽媽可在旁邊溫和安撫；不可有文字、數字、標籤或注音。",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/school/outdoor environments, expressive preschool proportions, soft cheeks and gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. Do not copy any specific person, clothing, face, hair, or body shape from L058. Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md, docs/CURRICULUM_LEDGER.md, and docs/visual-references/lesson-cast.md: protagonist little girl with pink jacket or pink accents, white top, blue skirt, pink shoes, and small pink hair clip; protagonist mother visually distinct from teacher; protagonist father visually distinct from mother and teacher. Every human role identity must be explicit. Keep mother, father, teacher, elders, passersby, and the protagonist girl visually distinct. No visible text, numbers, signs, labels, zhuyin, watermarks, logos, brand marks, readable covers, road signs, door plates, boat names, or UI text. Keep all meaning-bearing people, objects, and actions centered with safe margins for a square card. Scene requirement from approved imageNotes: 主角小女孩晚上躺在床上，因為精神緊張睡得很差，表情有點擔心但不恐怖。主角媽媽可在旁邊溫和安撫；不可有文字、數字、標籤或注音。",
+          "imageSrc": "/assets/lessons/L275/images/L275-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L275/audio/L275-S04.m4a",
+            "durationMs": 2972,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2400
+              }
+            ]
+          }
+        },
+        {
+          "id": "L275-S05",
+          "text": "走到一半，天氣變差，只好回頭。",
+          "spokenText": "走到一半天氣變差只好回頭",
+          "focusChar": "變",
+          "displayLines": [
+            "走到一半，",
+            "天氣變差，",
+            "只好回頭。"
+          ],
+          "imageNotes": "主角小女孩和主角爸爸在爬山走山路，走到一半時天氣變差，天空變黑或開始有風雨，他們只好安全回頭。畫面要清楚是山路爬山情境；不可有文字、數字、路牌、標籤或注音。",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/school/outdoor environments, expressive preschool proportions, soft cheeks and gentle expressions, bright warm palette, phone-readable square image / 1:1 composition. Do not copy any specific person, clothing, face, hair, or body shape from L058. Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md, docs/CURRICULUM_LEDGER.md, and docs/visual-references/lesson-cast.md: protagonist little girl with pink jacket or pink accents, white top, blue skirt, pink shoes, and small pink hair clip; protagonist mother visually distinct from teacher; protagonist father visually distinct from mother and teacher. Every human role identity must be explicit. Keep mother, father, teacher, elders, passersby, and the protagonist girl visually distinct. No visible text, numbers, signs, labels, zhuyin, watermarks, logos, brand marks, readable covers, road signs, door plates, boat names, or UI text. Keep all meaning-bearing people, objects, and actions centered with safe margins for a square card. Scene requirement from approved imageNotes: 主角小女孩和主角爸爸在爬山走山路，走到一半時天氣變差，天空變黑或開始有風雨，他們只好安全回頭。畫面要清楚是山路爬山情境；不可有文字、數字、路牌、標籤或注音。",
+          "imageSrc": "/assets/lessons/L275/images/L275-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L275/audio/L275-S05.m4a",
+            "durationMs": 5896,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1020,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1740,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2120,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2840,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3100,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3340,
+                "endMs": 3600
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3600,
+                "endMs": 3840
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L275-G01",
+          "type": "find-character",
+          "sentenceId": "L275-S02",
+          "targetChar": "住",
+          "prompt": "找出「住」在哪裡。",
+          "missingIndexes": [
+            3
+          ]
+        },
+        {
+          "id": "L275-G02",
+          "type": "teach-character",
+          "sentenceId": "L275-S01",
+          "targetChar": "住",
+          "targetCharIndex": 1,
+          "prompt": "跟著念出這個字。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L275/audio/L275-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L275/audio/L275-G02-suffix.m4a"
+          },
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L275-G03",
+          "type": "missing-character",
+          "sentenceId": "L275-S03",
+          "targetChar": "住",
+          "prompt": "選出空格裡的字。",
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "L275-G03-A",
+              "text": "住",
+              "correct": true
+            },
+            {
+              "id": "L275-G03-B",
+              "text": "卡",
+              "correct": false
+            },
+            {
+              "id": "L275-G03-C",
+              "text": "緊",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L275-G04",
+          "type": "partial-order",
+          "sentenceId": "L275-S05",
+          "targetChar": "變",
+          "prompt": "排出正確的順序。",
+          "chunks": [
+            {
+              "text": "走到一半",
+              "order": 0
+            },
+            {
+              "text": "天氣變差",
+              "order": 1
+            },
+            {
+              "text": "只好回頭",
+              "order": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "L275-G04-A",
+              "text": "走到一半",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L275-G04-B",
+              "text": "天氣變差",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L275-G04-C",
+              "text": "只好回頭",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ],
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "correctOrder": [
+            "L275-G04-A",
+            "L275-G04-B",
+            "L275-G04-C"
+          ]
+        },
+        {
+          "id": "L275-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L275-S04",
+          "targetChar": "緊",
+          "prompt": "選出聽到的句子。",
+          "options": [
+            {
+              "id": "L275-G05-A",
+              "text": "精神緊張，睡得很差。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L275/audio/L275-S04.m4a",
+              "spokenText": "精神緊張睡得很差"
+            },
+            {
+              "id": "L275-G05-B",
+              "text": "精神很好，睡得很差。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L275/audio/L275-G05-wrong-one.m4a",
+              "spokenText": "精神很好睡得很差"
+            },
+            {
+              "id": "L275-G05-C",
+              "text": "精神緊張，睡得很好。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L275/audio/L275-G05-wrong-two.m4a",
+              "spokenText": "精神緊張睡得很好"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L276",
+      "order": 276,
+      "newChars": [
+        "蓋"
+      ],
+      "zhuyin": {
+        "蓋": "ㄍㄞˋ"
+      },
+      "charAudio": {
+        "蓋": "/assets/lessons/L276/audio/char-u84cb.m4a"
+      },
+      "title": "蓋",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L276-S01",
+          "text": "盒蓋卡住了，打不開。",
+          "spokenText": "盒蓋卡住了打不開",
+          "focusChar": "蓋",
+          "displayLines": [
+            "盒蓋卡住了，",
+            "打不開。"
+          ],
+          "imageNotes": "主角小女孩在桌邊想打開一個盒子，但盒蓋卡住了打不開。畫面重點是盒子和卡住的盒蓋；盒子不可有文字、數字、標籤或注音。",
+          "imagePrompt": "square image / 1:1 composition. Refined warm modern children's picture-book illustration, fine pencil and watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural indoor light, bright clean palette, expressive preschool proportions, soft cheeks, detailed but uncluttered Taiwan home table scene. Use the approved L058 lesson images only as illustration style references; do not copy any specific person from L058. Use protagonist little girl continuity from L154/L162/L163: preschool-age Taiwan girl with a small pink hair clip and simple child clothing. Center the protagonist little girl at a table trying to open a plain box; the box lid is visibly stuck and slightly misaligned or held tight, so she cannot open it. The meaning must be clear: box lid stuck, cannot open. Keep the girl, box, lid, and hands fully inside safe margins. The box must be plain with no markings. No visible text, letters, numbers, zhuyin, labels, logos, brands, wall writing, watermarks, or readable marks.",
+          "imageSrc": "/assets/lessons/L276/images/L276-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L276/audio/L276-S01.m4a",
+            "durationMs": 3087,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1980,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2120,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 2540
+              }
+            ]
+          }
+        },
+        {
+          "id": "L276-S02",
+          "text": "把蓋子蓋緊，才不會掉。",
+          "spokenText": "把蓋子蓋緊才不會掉",
+          "focusChar": "蓋",
+          "displayLines": [
+            "把蓋子蓋緊，",
+            "才不會掉。"
+          ],
+          "imageNotes": "主角小女孩把瓶子的蓋子蓋緊，避免蓋子掉下來。請用瓶子或水瓶的蓋子，不要再畫盒蓋，以免和 S01 重複；瓶子不可有文字、數字、標籤或注音。",
+          "imagePrompt": "square image / 1:1 composition. Refined warm modern children's picture-book illustration, fine pencil and watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, bright warm home or classroom craft-table light, detailed but clean scene. Use the approved L058 lesson images only as illustration style references; do not copy any specific person from L058. Use protagonist little girl continuity from L154/L162/L163. Center the protagonist little girl tightening the cap on a plain water bottle, clearly using a bottle cap rather than a box lid. Show the cap being turned firmly so it will not fall off, with the bottle and cap large enough to read at phone size. Keep all key objects inside safe margins. The bottle must be plain with no markings. No visible text, letters, numbers, zhuyin, labels, logos, brands, price marks, wall writing, watermarks, or readable marks.",
+          "imageSrc": "/assets/lessons/L276/images/L276-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L276/audio/L276-S02.m4a",
+            "durationMs": 4283,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2430
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2430,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2620,
+                "endMs": 2860
+              }
+            ]
+          }
+        },
+        {
+          "id": "L276-S03",
+          "text": "房子蓋好了，可以住人。",
+          "spokenText": "房子蓋好了可以住人",
+          "focusChar": "蓋",
+          "displayLines": [
+            "房子蓋好了，",
+            "可以住人。"
+          ],
+          "imageNotes": "一棟新房子剛蓋好，主角小女孩和主角爸爸或主角媽媽在房子外看著，畫面要清楚是房子蓋好了、可以住人。不可有門牌、文字、數字、招牌、標籤或注音。",
+          "imagePrompt": "square image / 1:1 composition. Refined warm modern children's picture-book illustration, fine pencil and watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm daylight, bright clean palette, phone-readable square composition. Use the approved L058 lesson images only as illustration style references; do not copy any specific person from L058. Use protagonist little girl and protagonist father continuity from L154/L162/L163. Center a newly built simple Taiwan house that looks complete and ready for people to live in, with clean walls, a finished roof, windows, and door, but absolutely no doorplate or signs. Place the protagonist little girl and protagonist father outside looking at the finished house with calm happy expressions. The meaning must be clear: the house has been built and can be lived in. Keep the full house, door, roof, and family fully inside safe margins. No construction danger, no visible text, letters, numbers, zhuyin, doorplate, signs, labels, logos, brands, watermarks, or readable marks.",
+          "imageSrc": "/assets/lessons/L276/images/L276-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L276/audio/L276-S03.m4a",
+            "durationMs": 4271,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1370
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1370,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2300,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2540,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2780,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3160,
+                "endMs": 3420
+              }
+            ]
+          }
+        },
+        {
+          "id": "L276-S04",
+          "text": "天氣變差，快把車窗關緊。",
+          "spokenText": "天氣變差快把車窗關緊",
+          "focusChar": "緊",
+          "displayLines": [
+            "天氣變差，",
+            "快把車窗",
+            "關緊。"
+          ],
+          "imageNotes": "主角爸爸開車或停車時，外面天氣變差、風雨快來，主角爸爸把車窗關緊。畫面要安全，不要有危險駕駛；車不可有車牌文字、數字、標籤或注音。",
+          "imagePrompt": "square image / 1:1 composition. Refined warm modern children's picture-book illustration, fine pencil and watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, safe calm family-car scene, cloudy windy weather outside, bright but overcast palette. Use the approved L058 lesson images only as illustration style references; do not copy any specific person from L058. Use protagonist father continuity from L154/L162/L163: caring Taiwan father, clearly adult male family role. Center the protagonist father safely parked or seated in a stopped family car, closing the car window tightly as the weather outside turns worse with wind and light rain clouds. The car interior and window action must be clear; no dangerous driving, no panic. Keep father, window, and weather context fully inside safe margins. The car must have no visible license plate, dashboard text, numbers, labels, logos, brands, signs, zhuyin, watermarks, or readable marks.",
+          "imageSrc": "/assets/lessons/L276/images/L276-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L276/audio/L276-S04.m4a",
+            "durationMs": 4381,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1200,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2060,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2180,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2880,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3100,
+                "endMs": 3580
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3580,
+                "endMs": 3700
+              }
+            ]
+          }
+        },
+        {
+          "id": "L276-S05",
+          "text": "門卡住了，只好找人幫忙。",
+          "spokenText": "門卡住了只好找人幫忙",
+          "focusChar": "卡",
+          "displayLines": [
+            "門卡住了，",
+            "只好找人",
+            "幫忙。"
+          ],
+          "imageNotes": "主角小女孩在家門或房門旁發現門卡住了，只好找主角爸爸幫忙。畫面要清楚是門卡住，需要幫忙；不可有門牌、文字、數字、標籤或注音。",
+          "imagePrompt": "square image / 1:1 composition. Refined warm modern children's picture-book illustration, fine pencil and watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm Taiwan home entryway or room doorway, bright clean palette, gentle family mood. Use the approved L058 lesson images only as illustration style references; do not copy any specific person from L058. Use protagonist little girl and protagonist father continuity from L154/L162/L163. Center the protagonist little girl beside a plain home door that is stuck and will not open smoothly; she looks toward protagonist father for help, and father is calmly coming to help. Show the stuck door clearly without danger or injury. Keep the door, girl's gesture, and father fully inside safe margins. No doorplate, no visible text, letters, numbers, zhuyin, labels, logos, brands, wall writing, watermarks, or readable marks.",
+          "imageSrc": "/assets/lessons/L276/images/L276-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L276/audio/L276-S05.m4a",
+            "durationMs": 4828,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2140,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2420,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2900,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3200,
+                "endMs": 3580
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3580,
+                "endMs": 3860
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3860,
+                "endMs": 4140
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L276-G01",
+          "type": "find-character",
+          "sentenceId": "L276-S02",
+          "targetChar": "蓋",
+          "prompt": "找出句子裡的蓋。",
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L276-G02",
+          "type": "teach-character",
+          "sentenceId": "L276-S01",
+          "targetChar": "蓋",
+          "targetCharIndex": 1,
+          "prompt": "幫忙說出這個字。",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L276/audio/L276-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L276/audio/L276-G02-suffix.m4a"
+          },
+          "missingIndexes": [
+            1
+          ]
+        },
+        {
+          "id": "L276-G03",
+          "type": "missing-character",
+          "sentenceId": "L276-S03",
+          "targetChar": "蓋",
+          "prompt": "選出空格裡的字。",
+          "missingIndexes": [
+            2
+          ],
+          "options": [
+            {
+              "id": "L276-G03-A",
+              "text": "蓋",
+              "correct": true
+            },
+            {
+              "id": "L276-G03-B",
+              "text": "住",
+              "correct": false
+            },
+            {
+              "id": "L276-G03-C",
+              "text": "卡",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L276-G04",
+          "type": "partial-order",
+          "sentenceId": "L276-S05",
+          "targetChar": "卡",
+          "prompt": "排出正確的句子。",
+          "chunks": [
+            {
+              "text": "門卡住了",
+              "order": 0
+            },
+            {
+              "text": "只好",
+              "order": 1
+            },
+            {
+              "text": "找人幫忙",
+              "order": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "L276-G04-A",
+              "text": "門卡住了",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L276-G04-B",
+              "text": "只好",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L276-G04-C",
+              "text": "找人幫忙",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ],
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "correctOrder": [
+            "L276-G04-A",
+            "L276-G04-B",
+            "L276-G04-C"
+          ]
+        },
+        {
+          "id": "L276-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L276-S04",
+          "targetChar": "緊",
+          "prompt": "選出聽到的句子。",
+          "options": [
+            {
+              "id": "L276-G05-A",
+              "text": "天氣變差，快把車窗關緊。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L276/audio/L276-S04.m4a",
+              "spokenText": "天氣變差快把車窗關緊"
+            },
+            {
+              "id": "L276-G05-B",
+              "text": "天氣變好，快把車窗關緊。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L276/audio/L276-G05-wrong-one.m4a",
+              "spokenText": "天氣變好快把車窗關緊"
+            },
+            {
+              "id": "L276-G05-C",
+              "text": "天氣變差，快把車窗打開。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L276/audio/L276-G05-wrong-two.m4a",
+              "spokenText": "天氣變差快把車窗打開"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L277",
+      "order": 277,
+      "newChars": [
+        "橋"
+      ],
+      "zhuyin": {
+        "橋": "ㄑㄧㄠˊ"
+      },
+      "charAudio": {
+        "橋": "/assets/lessons/L277/audio/char-u6a4b.m4a"
+      },
+      "title": "橋",
+      "requiredRounds": 5,
+      "originHint": null,
+      "sentences": [
+        {
+          "id": "L277-S01",
+          "text": "我用玩具蓋橋。",
+          "spokenText": "我用玩具蓋橋",
+          "focusChar": "橋",
+          "displayLines": [
+            "我用玩具",
+            "蓋橋。"
+          ],
+          "imageNotes": "主角小女孩在家中或遊戲區用玩具蓋一座小橋。畫面要清楚看到玩具橋正在被蓋起來，但圖片內不可出現「座」字、文字、數字、標籤或注音。",
+          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as illustration style references: refined warm modern children's picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home play area, phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket, white shirt, blue skirt, pink shoes. Scene: the protagonist little girl is using colorful toy blocks or toy construction pieces to build a small bridge on a table or play mat at home. The toy bridge is clearly being built and centered with safe margins. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, wall writing, readable marks, or watermarks anywhere.",
+          "imageSrc": "/assets/lessons/L277/images/L277-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L277/audio/L277-S01.m4a",
+            "durationMs": 4695,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1480,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2120,
+                "endMs": 2460
+              }
+            ]
+          }
+        },
+        {
+          "id": "L277-S02",
+          "text": "有人住在橋下。",
+          "spokenText": "有人住在橋下",
+          "focusChar": "橋",
+          "displayLines": [
+            "有人住在",
+            "橋下。"
+          ],
+          "imageNotes": "這是主角小女孩正在看一本圖畫書裡的童話場景：橋下住著一個小小的童話人物。不要畫成現實流浪者或貧困場景。圖畫書頁面、橋和背景不可出現文字、數字、標籤或注音。",
+          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as illustration style references: refined warm modern children's picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home environment, phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket, white shirt, blue skirt, pink shoes. Scene: the protagonist little girl is looking at an open picture book. Inside the book illustration is a gentle fairy-tale scene where a tiny storybook person lives under a bridge. Make it clearly a picture-book fantasy scene, not a real homelessness or poverty scene. The book pages, bridge, and background must contain no visible writing. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, page numbers, readable marks, or watermarks anywhere.",
+          "imageSrc": "/assets/lessons/L277/images/L277-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L277/audio/L277-S02.m4a",
+            "durationMs": 4204,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 370
+              },
+              {
+                "charIndex": 1,
+                "startMs": 370,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1400,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1880,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2120,
+                "endMs": 2520
+              }
+            ]
+          }
+        },
+        {
+          "id": "L277-S03",
+          "text": "小車在橋上卡住了。",
+          "spokenText": "小車在橋上卡住了",
+          "focusChar": "卡",
+          "displayLines": [
+            "小車在橋上",
+            "卡住了。"
+          ],
+          "imageNotes": "主角小女孩玩的玩具小車在玩具橋上卡住了，橋和小車都在桌面或遊戲地墊上。畫面要清楚是玩具場景，不是交通事故；不可有車牌、文字、數字、標籤或注音。",
+          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as illustration style references: refined warm modern children's picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home play area, phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket, white shirt, blue skirt, pink shoes. Scene: on a table or play mat, the protagonist little girl's toy car is stuck on top of a toy bridge. Clearly show a toy-scale bridge and toy car, not a real road or traffic accident. The car has no license plate or markings. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, readable marks, or watermarks anywhere.",
+          "imageSrc": "/assets/lessons/L277/images/L277-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L277/audio/L277-S03.m4a",
+            "durationMs": 3978,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1240,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1520,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1940,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2740
+              }
+            ]
+          }
+        },
+        {
+          "id": "L277-S04",
+          "text": "盒蓋卡得很緊。",
+          "spokenText": "盒蓋卡得很緊",
+          "focusChar": "緊",
+          "displayLines": [
+            "盒蓋卡得",
+            "很緊。"
+          ],
+          "imageNotes": "主角小女孩在桌邊想打開一個盒子，但盒蓋卡得很緊。畫面重點是盒蓋卡緊、打不開的狀態；盒子不可有文字、數字、標籤或注音。",
+          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as illustration style references: refined warm modern children's picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home interior, phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket, white shirt, blue skirt, pink shoes. Scene: the protagonist little girl is at a table trying to open a plain box, but the lid is visibly stuck tightly and will not open. Focus on the tight box lid and her gentle effort, no danger. The box is plain with no markings. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, readable marks, or watermarks anywhere.",
+          "imageSrc": "/assets/lessons/L277/images/L277-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L277/audio/L277-S04.m4a",
+            "durationMs": 4293,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1220,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 1940
+              }
+            ]
+          }
+        },
+        {
+          "id": "L277-S05",
+          "text": "蓋好的橋差點倒了。",
+          "spokenText": "蓋好的橋差點倒了",
+          "focusChar": "差",
+          "displayLines": [
+            "蓋好的橋",
+            "差點倒了。"
+          ],
+          "imageNotes": "主角小女孩用玩具蓋好的橋差點倒了，橋微微歪斜但還沒完全倒下。畫面要明確是玩具橋，不是真實橋梁危險；不可有文字、數字、標籤或注音。",
+          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as illustration style references: refined warm modern children's picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home play area, phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket, white shirt, blue skirt, pink shoes. Scene: the protagonist little girl's completed toy bridge is slightly crooked and almost falling over, but it has not collapsed. Make it clearly a toy bridge on a table or play mat, not a dangerous real bridge. Center the leaning toy bridge and the girl's concerned but calm expression. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, readable marks, or watermarks anywhere.",
+          "imageSrc": "/assets/lessons/L277/images/L277-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L277/audio/L277-S05.m4a",
+            "durationMs": 3004,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 520
+              },
+              {
+                "charIndex": 2,
+                "startMs": 520,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1640,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2260,
+                "endMs": 2560
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L277-G01",
+          "type": "find-character",
+          "sentenceId": "L277-S01",
+          "targetChar": "橋",
+          "prompt": "找一找句子裡的「橋」。"
+        },
+        {
+          "id": "L277-G02",
+          "type": "teach-character",
+          "sentenceId": "L277-S02",
+          "targetChar": "橋",
+          "prompt": "幫小兔補上這個字。",
+          "missingIndexes": [
+            5
+          ],
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L277/audio/L277-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L277/audio/L277-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L277-G03",
+          "type": "missing-character",
+          "sentenceId": "L277-S05",
+          "targetChar": "橋",
+          "prompt": "選出少掉的字。",
+          "missingIndexes": [
+            3
+          ],
+          "options": [
+            {
+              "id": "correct",
+              "text": "橋",
+              "correct": true
+            },
+            {
+              "id": "wrong-1",
+              "text": "蓋",
+              "correct": false
+            },
+            {
+              "id": "wrong-2",
+              "text": "住",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L277-G04",
+          "type": "partial-order",
+          "sentenceId": "L277-S03",
+          "targetChar": "卡",
+          "prompt": "排出正確的句子。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "options": [
+            {
+              "id": "slot-1",
+              "text": "小車",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "slot-2",
+              "text": "在橋上",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "slot-3",
+              "text": "卡住了",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L277-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L277-S04",
+          "targetChar": "緊",
+          "prompt": "聽一聽，誰念得一樣？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "盒蓋卡得很緊。",
+              "audioSrc": "/assets/lessons/L277/audio/L277-S04.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-1",
+              "text": "盒蓋卡得不緊。",
+              "audioSrc": "/assets/lessons/L277/audio/L277-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-2",
+              "text": "盒蓋蓋得很緊。",
+              "audioSrc": "/assets/lessons/L277/audio/L277-G05-wrong-two.m4a",
+              "correct": false
             }
           ]
         }
