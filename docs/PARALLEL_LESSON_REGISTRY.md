@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L264 | 養 / normal lesson | claimed | Production A | codex/l264-complete-package / 92ab8f3e | L259 病, L260 假, L261 才, L262 剛, L263 裝 | ["病","假","才","剛","裝"] | curriculum-workflow/lesson-requests/L264.json, curriculum-workflow/generated/L264-generation-packet.md | public/assets/lessons/L264/images/, public/assets/lessons/L264/audio/ | accepted handoff and starting complete package; blocked from merge until L262-L263 are in main |
 
 ## Status Values
 
