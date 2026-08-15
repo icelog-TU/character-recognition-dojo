@@ -1,0 +1,186 @@
+{
+  "id": "L268",
+  "order": 268,
+  "newChars": [
+    "體"
+  ],
+  "zhuyin": {
+    "體": "ㄊㄧˇ"
+  },
+  "title": "體",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integrated L268 on latest origin/main; dependencies resolved: L265, L266, L267.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L268.",
+    "requiredCoverageChars": [
+      "體",
+      "久",
+      "息",
+      "休",
+      "養",
+      "裝"
+    ],
+    "targetCharMinimumCount": {
+      "體": 3
+    },
+    "recentTargetMinimumCounts": {
+      "久": 2,
+      "息": 2,
+      "休": 2,
+      "養": 1,
+      "裝": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Sickness or recovery images must be gentle and safe, with no severe illness, emergency, horror, or panic."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 體 as public/assets/lessons/L268/audio/char-u9ad4.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L268-S01",
+      "text": "多休息，身體才會好。",
+      "spokenText": "多休息身體才會好",
+      "focusChar": "體",
+      "displayLines": [
+        "多休息，",
+        "身體才會好。"
+      ],
+      "imageNotes": "主角媽媽溫和提醒主角小女孩多休息，主角小女孩在家裡坐著或躺著休息，畫面清楚表現休息讓身體變好。不可有文字、數字、藥品標籤或注音。"
+    },
+    {
+      "id": "L268-S02",
+      "text": "生病太久，體力不好。",
+      "spokenText": "生病太久體力不好",
+      "focusChar": "體",
+      "displayLines": [
+        "生病太久，",
+        "體力不好。"
+      ],
+      "imageNotes": "主角小女孩病後在家，想拿起小書包或玩具但看起來沒什麼力氣，主角媽媽在旁邊照看。畫面要溫和，不要做成嚴重醫療場景；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L268-S03",
+      "text": "養好身體，再去上學。",
+      "spokenText": "養好身體再去上學",
+      "focusChar": "體",
+      "displayLines": [
+        "養好身體，",
+        "再去上學。"
+      ],
+      "imageNotes": "主角小女孩身體恢復後，背著書包準備去上學，主角媽媽在門口陪她。畫面重點是先把身體養好，再去上學；不可有文字、數字、門牌、校名或注音。"
+    },
+    {
+      "id": "L268-S04",
+      "text": "書包裝太重，我會很累。",
+      "spokenText": "書包裝太重我會很累",
+      "focusChar": "裝",
+      "displayLines": [
+        "書包裝太重，",
+        "我會很累。"
+      ],
+      "imageNotes": "主角小女孩看著裝得太重的書包，試著背起來或提起來，表情覺得很累。書包可露出書本和用品，但不可有可讀文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L268-S05",
+      "text": "走太久，坐下休息。",
+      "spokenText": "走太久坐下休息",
+      "focusChar": "久",
+      "displayLines": [
+        "走太久，",
+        "坐下休息。"
+      ],
+      "imageNotes": "主角小女孩和主角爸爸在戶外走了很久，主角小女孩坐在椅子或路邊安全休息，主角爸爸在旁邊陪她。不可有文字、數字、路牌或注音。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L268-G01",
+      "type": "find-character",
+      "sentenceId": "L268-S01",
+      "targetChar": "體",
+      "reason": "「身體才會好」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L268-G02",
+      "type": "teach-character",
+      "sentenceId": "L268-S02",
+      "targetChar": "體",
+      "targetCharIndex": 4,
+      "teachAudio": {
+        "prefixText": "生病太久",
+        "suffixText": "力不好",
+        "prefixSrc": "/assets/lessons/L268/audio/L268-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L268/audio/L268-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L268-G03",
+      "type": "missing-character",
+      "sentenceId": "L268-S04",
+      "targetChar": "裝",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        "裝",
+        "重",
+        "體"
+      ]
+    },
+    {
+      "id": "L268-G04",
+      "type": "partial-order",
+      "sentenceId": "L268-S05",
+      "chunks": [
+        "走太久",
+        "坐下",
+        "休息"
+      ]
+    },
+    {
+      "id": "L268-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L268-S03",
+      "correctText": "養好身體，再去上學。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "養好身體，再去看書。",
+          "audioSrc": "/assets/lessons/L268/audio/L268-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "養好身體，不去上學。",
+          "audioSrc": "/assets/lessons/L268/audio/L268-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "integratedFromOriginMain": true,
+    "dependenciesResolved": true,
+    "resolvedDependencies": [
+      "L265",
+      "L266",
+      "L267"
+    ],
+    "releaseSideRepairs": [
+      "Removed draft-only teachAudio prefixText/suffixText from production JSON."
+    ]
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "id": "L267",
+  "order": 267,
+  "newChars": [
+    "久"
+  ],
+  "zhuyin": {
+    "久": "ㄐㄧㄡˇ"
+  },
+  "title": "久",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integrated L267 on latest origin/main; dependencies resolved: L265, L266.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L267.",
+    "requiredCoverageChars": [
+      "久",
+      "息",
+      "休",
+      "養",
+      "裝",
+      "剛"
+    ],
+    "targetCharMinimumCount": {
+      "久": 3
+    },
+    "recentTargetMinimumCounts": {
+      "息": 2,
+      "休": 2,
+      "養": 2,
+      "裝": 1,
+      "剛": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "跌",
+      "躺",
+      "摔",
+      "傷",
+      "瓶",
+      "杯",
+      "茶",
+      "醒",
+      "騙",
+      "救",
+      "醫",
+      "院",
+      "藥",
+      "診"
+    ],
+    "usageNotes": [
+      "Use 睡著, not 睡着.",
+      "All display text must use learned chars only. Image prompts may describe the scene but the image itself must not contain text, numbers, signs, labels, zhuyin, or watermarks."
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for every image.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Sickness and tiredness scenes must be gentle and safe, with no severe illness, death, injury, emergency, horror, or panic."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 久 as public/assets/lessons/L267/audio/char-u4e45.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L267-S01",
+      "text": "玩太久，要休息一下。",
+      "spokenText": "玩太久要休息一下",
+      "focusChar": "久",
+      "displayLines": [
+        "玩太久，",
+        "要休息一下。"
+      ],
+      "imageNotes": "主角小女孩在家裡或安全遊戲區玩太久，坐下來休息一下。畫面要清楚表現玩了一段時間後休息；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L267-S02",
+      "text": "剛剛看書太久，很想睡。",
+      "spokenText": "剛剛看書太久很想睡",
+      "focusChar": "久",
+      "displayLines": [
+        "剛剛看書",
+        "太久，",
+        "很想睡。"
+      ],
+      "imageNotes": "主角小女孩剛剛看書太久，坐在書桌旁或床邊揉眼睛、打呵欠，很想睡。書頁不可出現可讀文字、數字或注音。"
+    },
+    {
+      "id": "L267-S03",
+      "text": "這場病，休養了很久。",
+      "spokenText": "這場病休養了很久",
+      "focusChar": "久",
+      "displayLines": [
+        "這場病，",
+        "休養了很久。"
+      ],
+      "imageNotes": "主角小女孩生病後在家休養，主角媽媽在旁邊照顧，氣氛溫和，不要做成嚴重醫療場景。不可有文字、數字、藥品標籤或注音。"
+    },
+    {
+      "id": "L267-S04",
+      "text": "裝了很久，才把沙發裝好。",
+      "spokenText": "裝了很久才把沙發裝好",
+      "focusChar": "裝",
+      "displayLines": [
+        "裝了很久，",
+        "才把沙發",
+        "裝好。"
+      ],
+      "imageNotes": "主角爸爸在家裡組裝沙發，主角小女孩在旁邊幫忙或觀看，沙發剛裝好，旁邊可有沒有文字的工具零件。不可有說明書文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L267-S05",
+      "text": "多休息，才能早點把病養好。",
+      "spokenText": "多休息才能早點把病養好",
+      "focusChar": "息",
+      "displayLines": [
+        "多休息，",
+        "才能早點",
+        "把病養好。"
+      ],
+      "imageNotes": "主角媽媽溫和提醒生病中的主角小女孩多休息，才能早點養好病。畫面可在臥室或客廳，主角小女孩躺著或坐著休息；不可有文字、數字、藥品標籤或注音。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L267-G01",
+      "type": "find-character",
+      "sentenceId": "L267-S02",
+      "targetChar": "久",
+      "reason": "「看書太久」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L267-G02",
+      "type": "teach-character",
+      "sentenceId": "L267-S01",
+      "targetChar": "久",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "玩太",
+        "suffixText": "要休息一下",
+        "prefixSrc": "/assets/lessons/L267/audio/L267-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L267/audio/L267-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L267-G03",
+      "type": "missing-character",
+      "sentenceId": "L267-S04",
+      "targetChar": "裝",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "裝",
+        "久",
+        "休"
+      ]
+    },
+    {
+      "id": "L267-G04",
+      "type": "partial-order",
+      "sentenceId": "L267-S05",
+      "chunks": [
+        "多休息",
+        "才能早點",
+        "把病養好"
+      ]
+    },
+    {
+      "id": "L267-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L267-S03",
+      "correctText": "這場病，休養了很久。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "這場病，休息了很久。",
+          "audioSrc": "/assets/lessons/L267/audio/L267-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "這場病，休養了一下。",
+          "audioSrc": "/assets/lessons/L267/audio/L267-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "integratedFromOriginMain": true,
+    "dependenciesResolved": true,
+    "resolvedDependencies": [
+      "L265",
+      "L266"
+    ],
+    "releaseSideRepairs": [
+      "Cleared stale old package status after L265-L266 were resolved in release order.",
+      "Fixed overlong displayLines."
+    ]
+  }
+}

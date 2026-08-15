@@ -1,0 +1,258 @@
+{
+  "id": "L266",
+  "order": 266,
+  "newChars": [
+    "息"
+  ],
+  "zhuyin": {
+    "息": "ㄒㄧˊ"
+  },
+  "title": "息",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integrated L266 on latest origin/main; dependencies resolved: L265.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L266.",
+    "requiredCoverageChars": [
+      "息",
+      "休",
+      "養",
+      "裝",
+      "剛",
+      "才"
+    ],
+    "targetCharMinimumCount": {
+      "息": 3
+    },
+    "recentTargetMinimumCounts": {
+      "休": 2,
+      "養": 2,
+      "裝": 2,
+      "剛": 1,
+      "才": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "拼",
+      "組",
+      "架",
+      "螺",
+      "絲",
+      "工具箱",
+      "醫",
+      "院",
+      "藥",
+      "診"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, readable marks, horror imagery, injury, death imagery, emergency rescue, or medical panic.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 息 as public/assets/lessons/L266/audio/char-u606f.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L266-S01",
+      "text": "生病了，要好好休息。",
+      "spokenText": "生病了要好好休息",
+      "focusChar": "息",
+      "displayLines": [
+        "生病了，",
+        "要好好休息。"
+      ],
+      "imageNotes": "主角小女孩生病了，在家裡好好休息，主角媽媽在旁邊照顧。畫面溫和，不可呈現重病、急救、死亡、受傷或恐怖；主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L266-S02",
+      "text": "好的作息，就是早睡早起。",
+      "spokenText": "好的作息就是早睡早起",
+      "focusChar": "息",
+      "displayLines": [
+        "好的作息，",
+        "就是早睡",
+        "早起。"
+      ],
+      "imageNotes": "主角小女孩早上起床精神很好，旁邊可用同一畫面中的溫和夜晚睡覺元素暗示早睡早起。畫面重點是規律作息，不可有時鐘數字、日曆文字、標籤或水印；主角小女孩身份要符合 L154/L162/L163 family continuity。"
+    },
+    {
+      "id": "L266-S03",
+      "text": "早點休息，才能把病養好。",
+      "spokenText": "早點休息才能把病養好",
+      "focusChar": "休",
+      "displayLines": [
+        "早點休息，",
+        "才能把病",
+        "養好。"
+      ],
+      "imageNotes": "主角媽媽提醒生病的主角小女孩早點休息，主角小女孩在床邊或沙發上準備休息。畫面要表現早點休息才能養病；不可呈現重病、急救、死亡、受傷或恐怖；主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L266-S04",
+      "text": "他家養的狗剛生小狗。",
+      "spokenText": "他家養的狗剛生小狗",
+      "focusChar": "養",
+      "displayLines": [
+        "他家養的狗",
+        "剛生小狗。"
+      ],
+      "imageNotes": "一戶人家養的母狗旁邊有剛出生的小狗，畫面溫和、乾淨、安全。人物可用「他爸爸」或「他媽媽」在旁照看狗，不要用模糊的大人；不可呈現血、醫療、驚嚇或不適畫面；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L266-S05",
+      "text": "這張床怎麼裝也裝不好。",
+      "spokenText": "這張床怎麼裝也裝不好",
+      "focusChar": "裝",
+      "displayLines": [
+        "這張床",
+        "怎麼裝",
+        "也裝不好。"
+      ],
+      "imageNotes": "主角爸爸在家裡組裝一張床，但怎麼裝也裝不好，主角小女孩在旁邊看著或幫忙遞零件。畫面要清楚是組裝家具，不要出現文字說明書、數字、標籤或水印；主角爸爸與主角小女孩身份要符合 L154/L162/L163 family continuity。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "息",
+      "count": 3,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "休",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "養",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "裝",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "剛",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "才",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L266-S01": 8,
+      "L266-S02": 10,
+      "L266-S03": 10,
+      "L266-S04": 9,
+      "L266-S05": 10
+    },
+    "allowedCharacterAudit": "Production verified against latest origin/main plus provisional learned chars.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L266-G01",
+      "type": "find-character",
+      "sentenceId": "L266-S02",
+      "targetChar": "息",
+      "reason": "「作息」是本課核心詞，目標字清楚。"
+    },
+    {
+      "id": "L266-G02",
+      "type": "teach-character",
+      "sentenceId": "L266-S01",
+      "targetChar": "息",
+      "targetCharIndex": 7,
+      "prefixText": "生病了要好好休",
+      "suffixText": "",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L266/audio/L266-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "L266-G03",
+      "type": "missing-character",
+      "sentenceId": "L266-S03",
+      "targetChar": "休",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        "休",
+        "息",
+        "養"
+      ]
+    },
+    {
+      "id": "L266-G04",
+      "type": "partial-order",
+      "sentenceId": "L266-S05",
+      "chunks": [
+        "這張床",
+        "怎麼裝",
+        "也裝不好"
+      ]
+    },
+    {
+      "id": "L266-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L266-S04",
+      "targetChar": "養",
+      "correctText": "他家養的狗剛生小狗。",
+      "wrongOneText": "他家養的狗剛看小狗。",
+      "wrongTwoText": "他家養的狗剛生小魚。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L266/audio/L266-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L266/audio/L266-G05-wrong-two.m4a"
+      }
+    }
+  ],
+  "productionNotes": {
+    "dependsOnLessons": [
+      "L262",
+      "L263",
+      "L264",
+      "L265"
+    ],
+    "provisionalLearnedChars": [
+      "剛",
+      "裝",
+      "養",
+      "休"
+    ]
+  },
+  "releaseAudit": {
+    "integratedFromOriginMain": true,
+    "dependenciesResolved": true,
+    "resolvedDependencies": [
+      "L265"
+    ],
+    "releaseSideRepairs": [
+      "Source request lacked top-level dependsOnLessons for L265; release audited it sequentially after L265.",
+      "Fixed overlong displayLines.",
+      "Removed silent L266-G02 suffix teachAudio reference because the target character is sentence-final."
+    ]
+  }
+}
