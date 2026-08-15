@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L274 | 卡 / normal lesson | claimed | Production D | codex/l274-complete-package / f0319ae5 | R015, R016, L271 變, L272 差, L273 緊 | ["變","差","緊"] | curriculum-workflow/lesson-requests/L274.json, curriculum-workflow/generated/L274-generation-packet.md | public/assets/lessons/L274/images/, public/assets/lessons/L274/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
