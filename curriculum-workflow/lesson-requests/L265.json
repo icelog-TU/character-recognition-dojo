@@ -1,0 +1,194 @@
+{
+  "id": "L265",
+  "order": 265,
+  "kind": "lesson",
+  "newChars": [
+    "休"
+  ],
+  "zhuyin": {
+    "休": "ㄒㄧㄡ"
+  },
+  "title": "休",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L262",
+    "L263",
+    "L264"
+  ],
+  "provisionalLearnedChars": [
+    "剛",
+    "裝",
+    "養"
+  ],
+  "teacherNotes": "Production B accepted teacher-approved L265 handoff. Latest origin/main is complete through L261, so L265 is prepared as a dependency-blocked complete package until L262-L264 are merged. Display text may use latest origin/main learned characters plus provisional 剛/裝/養 plus current 休. Use 睡著, never 睡着.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main L001-L261 learned characters + provisionalLearnedChars [\"剛\",\"裝\",\"養\"] + current new char 休",
+    "provisionalLearnedChars": [
+      "剛",
+      "裝",
+      "養"
+    ],
+    "requiredCoverageChars": [
+      "休",
+      "養",
+      "裝",
+      "剛",
+      "才",
+      "假"
+    ],
+    "targetCharMinimumCount": {
+      "休": 3
+    },
+    "recentTargetMinimumCounts": {
+      "養": 2,
+      "裝": 2,
+      "剛": 2,
+      "才": 1,
+      "假": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "購",
+      "物",
+      "壺",
+      "瓶",
+      "缸",
+      "請",
+      "醫",
+      "院",
+      "藥",
+      "診",
+      "息"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, readable marks, heavy illness, emergency rescue, death imagery, injury, or horror.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 休 as public/assets/lessons/L265/audio/char-u4f11.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix from exact fragments and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L265-S01",
+      "text": "生病了，要在家休養。",
+      "spokenText": "生病了要在家休養",
+      "focusChar": "休",
+      "displayLines": [
+        "生病了，",
+        "要在家休養。"
+      ],
+      "imageNotes": "主角小女孩生病了，在家裡休養，主角媽媽在旁邊照顧。畫面要溫和，不可呈現重病、急救、死亡、受傷或恐怖；主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L265-S02",
+      "text": "還有一天才休假。",
+      "spokenText": "還有一天才休假",
+      "focusChar": "休",
+      "displayLines": [
+        "還有一天",
+        "才休假。"
+      ],
+      "imageNotes": "主角小女孩在家裡或教室裡期待明天休假，可以用她看著媽媽或老師、露出期待表情來呈現。不要使用日曆文字、數字或標籤；若出現老師，老師不可長得像主角媽媽；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L265-S03",
+      "text": "剛剛才裝好，是誰又倒出來？",
+      "spokenText": "剛剛才裝好是誰又倒出來",
+      "focusChar": "剛",
+      "displayLines": [
+        "剛剛才裝好，",
+        "是誰又倒出來？"
+      ],
+      "imageNotes": "主角小女孩剛把玩具或物品裝進盒子裡，卻看到東西又被倒出來，疑惑地看著盒子。畫面要清楚呈現剛裝好、又被倒出來的情境；主角小女孩身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L265-S04",
+      "text": "媽媽太忙，不能好好休養。",
+      "spokenText": "媽媽太忙不能好好休養",
+      "focusChar": "休",
+      "displayLines": [
+        "媽媽太忙，",
+        "不能好好休養。"
+      ],
+      "imageNotes": "主角媽媽有點不舒服但仍在家裡忙著做事，主角小女孩在旁邊關心她。畫面要溫和，不可呈現重病、急救、死亡、受傷或恐怖；主角媽媽與主角小女孩身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L265-S05",
+      "text": "車子裝太滿了。",
+      "spokenText": "車子裝太滿了",
+      "focusChar": "裝",
+      "displayLines": [
+        "車子裝",
+        "太滿了。"
+      ],
+      "imageNotes": "一台購物車被東西裝得太滿，主角小女孩和主角媽媽在旁邊看著，像是在市場或店裡整理東西。注意 display text 不可寫「購物車」，但圖片可以畫購物車；購物車和物品上不可有文字、數字、價格、標籤或水印；主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L265-G01",
+      "type": "find-character",
+      "sentenceId": "L265-S01",
+      "targetChar": "休",
+      "reason": "「休養」是本課核心生活用法，目標字清楚。"
+    },
+    {
+      "id": "L265-G02",
+      "type": "teach-character",
+      "sentenceId": "L265-S02",
+      "targetChar": "休",
+      "targetCharIndex": 5,
+      "prefixText": "還有一天才",
+      "suffixText": "假"
+    },
+    {
+      "id": "L265-G03",
+      "type": "missing-character",
+      "sentenceId": "L265-S04",
+      "targetChar": "休",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "休",
+        "養",
+        "假"
+      ]
+    },
+    {
+      "id": "L265-G04",
+      "type": "partial-order",
+      "sentenceId": "L265-S03",
+      "chunks": [
+        "剛剛才裝好",
+        "是誰",
+        "又倒出來"
+      ]
+    },
+    {
+      "id": "L265-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L265-S05",
+      "correctText": "車子裝太滿了。",
+      "wrongOneText": "車子還沒裝滿。",
+      "wrongTwoText": "盒子裝太滿了。"
+    }
+  ],
+  "productionStatus": {
+    "expectedFinalStatus": "ready-blocked-by-dependency if L262-L264 are not in latest origin/main",
+    "productionJsonAllowed": false,
+    "productionJsonBlocker": "L262-L264 are not in latest origin/main at claim time"
+  }
+}

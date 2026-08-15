@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L265 | 休 / normal lesson | claimed | Production B | codex/l265-complete-package / 92ab8f3e | L262 剛, L263 裝, L264 養 | ["剛","裝","養"] | curriculum-workflow/lesson-requests/L265.json; curriculum-workflow/generated/L265-generation-packet.md | public/assets/lessons/L265/images/; public/assets/lessons/L265/audio/ | accepted handoff and starting complete package; blocked from merge until L262-L264 are in main |
+| L265 | 休 / normal lesson | ready-blocked-by-dependency | Production B | codex/l265-complete-package / pending final commit | L262 剛, L263 裝, L264 養 | ["剛","裝","養"] | curriculum-workflow/lesson-requests/L265.json; curriculum-workflow/generated/L265-generation-packet.md | public/assets/lessons/L265/images/; public/assets/lessons/L265/audio/ | complete package prepared; blocked from merge until L262-L264 are in main |
 
 ## Status Values
 
