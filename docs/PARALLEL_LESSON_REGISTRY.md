@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L280 | 積 / normal lesson | claimed | Production B | codex/l280-complete-package / c9a3d230 | L275 住, L276 蓋, L277 橋, L278 座, L279 木 | ["住","蓋","橋","座","木"] | curriculum-workflow/lesson-requests/L280.json, curriculum-workflow/generated/L280-generation-packet.md | public/assets/lessons/L280/images/, public/assets/lessons/L280/audio/ | accepted handoff and starting complete package |
+| L280 | 積 / normal lesson | ready-blocked-by-dependency | Production B | codex/l280-complete-package / 3d6785bc | L275 住, L276 蓋, L277 橋, L278 座, L279 木 | ["住","蓋","橋","座","木"] | curriculum-workflow/lesson-requests/L280.json, curriculum-workflow/generated/L280-generation-packet.md | public/assets/lessons/L280/images/, public/assets/lessons/L280/audio/ | complete package prepared; blocked from merge until L275-L279 are in main |
 
 ## Status Values
 
