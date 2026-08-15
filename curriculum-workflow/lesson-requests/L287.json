@@ -1,0 +1,200 @@
+{
+  "id": "L287",
+  "order": 287,
+  "newChars": [
+    "痛"
+  ],
+  "zhuyin": {
+    "痛": "ㄊㄨㄥˋ"
+  },
+  "title": "痛",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L282",
+    "L283",
+    "L284",
+    "L285",
+    "L286"
+  ],
+  "provisionalLearnedChars": [
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮"
+  ],
+  "teacherNotes": "Accepted Production handoff. Build lesson-local complete package only; blocked until L282-L286 are in main. Use origin/main L001-L274 plus provisional learned chars and current target for allowed-character audit. Injury/pain images must remain gentle, child-safe, non-bloody, and non-medical-horror.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main L001-L274 + provisional learned chars [洞,破,口,傷,皮] + current target 痛",
+    "requiredCoverageChars": [
+      "痛",
+      "皮",
+      "傷",
+      "口",
+      "破",
+      "洞"
+    ],
+    "targetCharMinimumCount": {
+      "痛": 3
+    },
+    "recentTargetMinimumCounts": {
+      "皮": 2,
+      "傷": 2,
+      "口": 2,
+      "破": 1,
+      "洞": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "碰",
+      "軟",
+      "牙",
+      "肚",
+      "哭"
+    ],
+    "usageNotes": [
+      "Images may depict small scraped skin, small wound, foot discomfort, headache, and a deflated broken balloon, but must not be bloody, severe, frightening, or medically intense.",
+      "Do not use unapproved display characters outside the allowed boundary.",
+      "Images must not contain text, numbers, signs, labels, zhuyin, or watermarks."
+    ],
+    "imageRules": [
+      "All sentence images must be square image / 1:1 composition.",
+      "Use L058 only as style reference, not person identity.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks.",
+      "Pain and injury scenes must be gentle and safe: small discomfort only, no blood, no severe injury, no emergency, no horror."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 痛 as public/assets/lessons/L287/audio/char-u75db.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L287-S01",
+      "text": "手上破皮了，有一點痛。",
+      "spokenText": "手上破皮了有一點痛",
+      "focusChar": "痛",
+      "displayLines": [
+        "手上破皮了，",
+        "有一點痛。"
+      ],
+      "imageNotes": "主角小女孩手上有一點破皮，表情有點痛，主角媽媽正在溫和查看或安撫她。畫面重點是小小破皮與一點痛；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L287-S02",
+      "text": "傷口進水，會很痛。",
+      "spokenText": "傷口進水會很痛",
+      "focusChar": "痛",
+      "displayLines": [
+        "傷口進水，",
+        "會很痛。"
+      ],
+      "imageNotes": "主角小女孩洗手時，手上的小傷口進水，她露出覺得痛的表情，主角媽媽在旁邊關心。畫面要清楚呈現傷口進水會痛；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L287-S03",
+      "text": "皮鞋太小，不只會痛，還傷腳。",
+      "spokenText": "皮鞋太小不只會痛還傷腳",
+      "focusChar": "痛",
+      "displayLines": [
+        "皮鞋太小，",
+        "不只會痛，還傷腳。"
+      ],
+      "imageNotes": "主角小女孩試穿太小的皮鞋，腳看起來很不舒服，主角媽媽在旁邊關心。畫面要清楚表現皮鞋太小、會痛、會傷腳；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L287-S04",
+      "text": "媽媽頭痛，在床上休息。",
+      "spokenText": "媽媽頭痛在床上休息",
+      "focusChar": "痛",
+      "displayLines": [
+        "媽媽頭痛，",
+        "在床上休息。"
+      ],
+      "imageNotes": "主角媽媽頭痛，在床上休息，主角小女孩在旁邊安靜關心。畫面要清楚呈現媽媽頭痛需要休息；不可有藥品文字、數字、標籤。"
+    },
+    {
+      "id": "L287-S05",
+      "text": "門口有個氣球破洞了。",
+      "spokenText": "門口有個氣球破洞了",
+      "focusChar": "洞",
+      "displayLines": [
+        "門口有個氣球",
+        "破洞了。"
+      ],
+      "imageNotes": "主角家門口有很多氣球裝飾，其中一個氣球破洞、沒氣了，主角小女孩看著那個破洞氣球。畫面要清楚呈現門口、氣球、破洞和沒氣；不可有文字、數字、招牌或標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L287-G01",
+      "type": "find-character",
+      "sentenceId": "L287-S02",
+      "targetChar": "痛",
+      "reason": "「會很痛」是本課核心感覺用法，目標字清楚。"
+    },
+    {
+      "id": "L287-G02",
+      "type": "teach-character",
+      "sentenceId": "L287-S04",
+      "targetChar": "痛",
+      "targetCharIndex": 3,
+      "teachAudio": {
+        "prefixText": "媽媽頭",
+        "suffixText": "在床上休息",
+        "prefixSrc": "/assets/lessons/L287/audio/L287-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L287/audio/L287-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L287-G03",
+      "type": "missing-character",
+      "sentenceId": "L287-S03",
+      "targetChar": "痛",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "痛",
+        "傷",
+        "皮"
+      ]
+    },
+    {
+      "id": "L287-G04",
+      "type": "partial-order",
+      "sentenceId": "L287-S05",
+      "chunks": [
+        "門口有個",
+        "氣球",
+        "破洞了"
+      ]
+    },
+    {
+      "id": "L287-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L287-S01",
+      "correctText": "手上破皮了，有一點痛。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "手上破皮了，有一點紅。",
+          "audioSrc": "/assets/lessons/L287/audio/L287-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "手上破皮了，有一點髒。",
+          "audioSrc": "/assets/lessons/L287/audio/L287-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
