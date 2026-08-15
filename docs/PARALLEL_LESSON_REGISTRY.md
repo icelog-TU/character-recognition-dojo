@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L275 | 住 / normal lesson | claimed | Production A | codex/l275-complete-package / f0319ae5 | R015, R016, L271 變, L272 差, L273 緊, L274 卡 | ["變","差","緊","卡"] | curriculum-workflow/lesson-requests/L275.json, curriculum-workflow/generated/L275-generation-packet.md | public/assets/lessons/L275/images/, public/assets/lessons/L275/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
