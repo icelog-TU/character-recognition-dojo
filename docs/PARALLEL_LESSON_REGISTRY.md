@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L268 | 體 / normal lesson | claimed | Production A | codex/l268-complete-package / caba28d1 | L265 休, L266 息, L267 久 | ["休","息","久"] | curriculum-workflow/lesson-requests/L268.json, curriculum-workflow/generated/L268-generation-packet.md | public/assets/lessons/L268/images/, public/assets/lessons/L268/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
