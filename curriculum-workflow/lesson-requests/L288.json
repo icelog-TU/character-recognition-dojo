@@ -1,0 +1,215 @@
+{
+  "id": "L288",
+  "order": 288,
+  "newChars": [
+    "受"
+  ],
+  "zhuyin": {
+    "受": "ㄕㄡˋ"
+  },
+  "title": "受",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L283",
+    "L284",
+    "L285",
+    "L286",
+    "L287"
+  ],
+  "provisionalLearnedChars": [
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛"
+  ],
+  "teacherNotes": "Accepted Production B handoff for L288. Prepare complete package only. origin/main currently contains production curriculum through L274, so L283-L287 are provisional dependencies and production JSON integration is blocked until they merge.",
+  "productionStatus": {
+    "status": "ready-blocked-by-dependency",
+    "productionJsonAllowed": false,
+    "blockedBy": [
+      "L283",
+      "L284",
+      "L285",
+      "L286",
+      "L287"
+    ],
+    "notes": "Do not update src/curriculum/sample-lessons.json, public/tools/planner-data.json, or docs/CURRICULUM_LEDGER.md from this production branch."
+  },
+  "generationConstraints": {
+    "allowedBoundary": "Use latest origin/main learned characters through L274 plus provisionalLearnedChars [\"破\",\"口\",\"傷\",\"皮\",\"痛\"] plus current new character \"受\".",
+    "requiredCoverageChars": [
+      "受",
+      "痛",
+      "皮",
+      "傷",
+      "口",
+      "破"
+    ],
+    "targetCharMinimumCount": {
+      "受": 3
+    },
+    "recentTargetMinimumCounts": {
+      "痛": 2,
+      "皮": 2,
+      "傷": 2,
+      "口": 1,
+      "破": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "usageNotes": [
+      "Approved display text and Stage 4 option text must stay inside the allowed boundary.",
+      "Do not introduce unlearned display characters.",
+      "The lesson includes mild injury, wound, foot pain, and headache scenes. Keep every scene preschool-safe: small injury or discomfort only, no gore, no severe injury, and no medical horror."
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for every sentence image.",
+      "Use L058 images only as illustration style anchors, not as character appearance references.",
+      "Use protagonist family continuity from L154/L162/L163 for the little girl and mother.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, letters, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Final images must be WebP, compressed for mobile, longest edge no more than 1024px, target no more than 250 KB, hard limit no more than 400 KB."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 受 as public/assets/lessons/L288/audio/char-u53d7.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix audio from exact fragment text around the target character.",
+      "Generate G05 wrong-option audio as standalone whole-sentence audio from exact wrong text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L288-S01",
+      "text": "腳受傷了，痛得受不了。",
+      "spokenText": "腳受傷了痛得受不了",
+      "focusChar": "受",
+      "displayLines": [
+        "腳受傷了，",
+        "痛得受不了。"
+      ],
+      "imageNotes": "主角小女孩坐著，腳有一點小傷或扭到的樣子，表情覺得很痛，主角媽媽在旁邊關心。畫面重點是腳受傷、痛得受不了；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L288-S02",
+      "text": "傷口破皮又進水，真不好受。",
+      "spokenText": "傷口破皮又進水真不好受",
+      "focusChar": "受",
+      "displayLines": [
+        "傷口破皮又進水，",
+        "真不好受。"
+      ],
+      "imageNotes": "主角小女孩洗手時，手上的小傷口破皮又進水，表情很不舒服，主角媽媽在旁邊關心。畫面要清楚呈現傷口破皮、進水、覺得不好受；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L288-S03",
+      "text": "頭痛又不能睡，很難受。",
+      "spokenText": "頭痛又不能睡很難受",
+      "focusChar": "受",
+      "displayLines": [
+        "頭痛又不能睡，",
+        "很難受。"
+      ],
+      "imageNotes": "主角小女孩躺在床上或坐在床邊，因為頭痛睡不著，表情難受，主角媽媽在旁邊安靜陪伴。畫面要清楚呈現頭痛、不能睡、很難受；不可有藥品文字、數字、標籤。"
+    },
+    {
+      "id": "L288-S04",
+      "text": "皮鞋太小，穿了腳痛。",
+      "spokenText": "皮鞋太小穿了腳痛",
+      "focusChar": "痛",
+      "displayLines": [
+        "皮鞋太小，",
+        "穿了腳痛。"
+      ],
+      "imageNotes": "主角小女孩試穿太小的皮鞋，腳看起來不舒服，主角媽媽在旁邊關心。畫面要清楚表現皮鞋太小、穿了腳痛；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L288-S05",
+      "text": "風聲太大，我受不了。",
+      "spokenText": "風聲太大我受不了",
+      "focusChar": "受",
+      "displayLines": [
+        "風聲太大，",
+        "我受不了。"
+      ],
+      "imageNotes": "主角小女孩在室內靠近窗邊，窗外大風吹動樹葉，風聲很大，她用手摀耳朵，表情覺得受不了。畫面要清楚呈現風聲太大、覺得受不了；不可有文字、數字、標籤。"
+    }
+  ],
+  "coverageCheck": {
+    "受": 5,
+    "痛": 3,
+    "皮": 2,
+    "傷": 2,
+    "口": 1,
+    "破": 1,
+    "result": "PASS"
+  },
+  "stage4Plan": [
+    {
+      "id": "L288-G01",
+      "type": "find-character",
+      "sentenceId": "L288-S05",
+      "targetChar": "受",
+      "reason": "「受不了」是本課核心口語用法，目標字清楚。"
+    },
+    {
+      "id": "L288-G02",
+      "type": "teach-character",
+      "sentenceId": "L288-S01",
+      "targetChar": "受",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "腳",
+        "suffixText": "傷了痛得受不了",
+        "prefixSrc": "/assets/lessons/L288/audio/L288-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L288/audio/L288-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L288-G03",
+      "type": "missing-character",
+      "sentenceId": "L288-S03",
+      "targetChar": "受",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "受",
+        "痛",
+        "傷"
+      ]
+    },
+    {
+      "id": "L288-G04",
+      "type": "partial-order",
+      "sentenceId": "L288-S02",
+      "chunks": [
+        "傷口破皮",
+        "又進水",
+        "真不好受"
+      ]
+    },
+    {
+      "id": "L288-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L288-S04",
+      "correctText": "皮鞋太小，穿了腳痛。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "皮鞋太大，穿了腳痛。",
+          "audioSrc": "/assets/lessons/L288/audio/L288-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "皮鞋太小，穿了手痛。",
+          "audioSrc": "/assets/lessons/L288/audio/L288-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
