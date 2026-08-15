@@ -1,0 +1,197 @@
+{
+  "id": "L264",
+  "order": 264,
+  "newChars": [
+    "養"
+  ],
+  "zhuyin": {
+    "養": "ㄧㄤˇ"
+  },
+  "title": "養",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integrated L264 on latest origin/main; dependencies resolved: L262, L263.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L264.",
+    "requiredCoverageChars": [
+      "養",
+      "裝",
+      "剛",
+      "才",
+      "假",
+      "病"
+    ],
+    "targetCharMinimumCount": {
+      "養": 3
+    },
+    "recentTargetMinimumCounts": {
+      "裝": 2,
+      "剛": 2,
+      "才": 2,
+      "假": 1,
+      "病": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "壺",
+      "瓶",
+      "缸",
+      "請",
+      "醫",
+      "院",
+      "藥",
+      "診",
+      "休",
+      "息"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Sickness-related images must be gentle and safe, with no severe illness, death, injury, emergency, horror, or panic."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 養 as public/assets/lessons/L264/audio/char-u990a.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L264-S01",
+      "text": "生病了，要在家養病。",
+      "spokenText": "生病了要在家養病",
+      "focusChar": "養",
+      "displayLines": [
+        "生病了，",
+        "要在家養病。"
+      ],
+      "imageNotes": "主角小女孩生病了，在家裡養病休養，主角媽媽在旁邊照顧。畫面要溫和，不可呈現重病、急救、死亡、受傷或恐怖；主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L264-S02",
+      "text": "我家養了三隻小魚。",
+      "spokenText": "我家養了三隻小魚",
+      "focusChar": "養",
+      "displayLines": [
+        "我家養了",
+        "三隻小魚。"
+      ],
+      "imageNotes": "主角小女孩在家裡看著家中養的三隻小魚，魚可以在透明水族箱或魚缸中，但畫面不可有文字、數字、標籤或水印。主角小女孩身份要符合 L154/L162/L163 family continuity；要清楚呈現三隻小魚。"
+    },
+    {
+      "id": "L264-S03",
+      "text": "我在假裝養小狗。",
+      "spokenText": "我在假裝養小狗",
+      "focusChar": "假",
+      "displayLines": [
+        "我在假裝",
+        "養小狗。"
+      ],
+      "imageNotes": "主角小女孩在家裡或遊戲區玩角色扮演，假裝自己正在養小狗。可以用玩具小狗或想像遊戲呈現，畫面要清楚是孩子假裝照顧小狗，不是真的混亂照護場景；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L264-S04",
+      "text": "水要裝滿一點，才會剛剛好。",
+      "spokenText": "水要裝滿一點才會剛剛好",
+      "focusChar": "裝",
+      "displayLines": [
+        "水要裝滿",
+        "一點，",
+        "才會剛剛好。"
+      ],
+      "imageNotes": "主角小女孩正在把水裝進水壺、水瓶、魚缸或花瓶，水還差一點才剛剛好。注意 display text 不可出現「水壺」「水瓶」「魚缸」「花瓶」，但圖片可以畫這些物件；主角小女孩身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L264-S05",
+      "text": "真花要養，假花才不用養。",
+      "spokenText": "真花要養假花才不用養",
+      "focusChar": "養",
+      "displayLines": [
+        "真花要養，",
+        "假花才",
+        "不用養。"
+      ],
+      "imageNotes": "桌上或窗邊同時有一盆真花和一朵假花，主角小女孩正在照顧真花，例如看著水或陽光；假花放在旁邊不用照顧。畫面要清楚區分真花和假花，但不可有文字、數字、標籤或水印；主角小女孩身份要符合 L154/L162/L163 family continuity。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L264-G01",
+      "type": "find-character",
+      "sentenceId": "L264-S01",
+      "targetChar": "養",
+      "reason": "「養病」是本課核心生活用法，目標字清楚。"
+    },
+    {
+      "id": "L264-G02",
+      "type": "teach-character",
+      "sentenceId": "L264-S02",
+      "targetChar": "養",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "我家",
+        "suffixText": "了三隻小魚",
+        "prefixSrc": "/assets/lessons/L264/audio/L264-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L264/audio/L264-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L264-G03",
+      "type": "missing-character",
+      "sentenceId": "L264-S05",
+      "targetChar": "養",
+      "missingIndexes": [
+        3,
+        9
+      ],
+      "options": [
+        "養",
+        "假",
+        "才"
+      ]
+    },
+    {
+      "id": "L264-G04",
+      "type": "partial-order",
+      "sentenceId": "L264-S04",
+      "chunks": [
+        "水要裝滿一點",
+        "才會",
+        "剛剛好"
+      ]
+    },
+    {
+      "id": "L264-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L264-S03",
+      "correctText": "我在假裝養小狗。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我在假裝養小魚。",
+          "audioSrc": "/assets/lessons/L264/audio/L264-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我在假裝叫小狗。",
+          "audioSrc": "/assets/lessons/L264/audio/L264-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "integratedFromOriginMain": true,
+    "dependenciesResolved": true,
+    "resolvedDependencies": [
+      "L262",
+      "L263"
+    ]
+  }
+}
