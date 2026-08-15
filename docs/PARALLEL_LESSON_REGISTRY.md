@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L263 | 裝 / normal lesson | claimed | Production D | codex/l263-complete-package / 66500630 | L259 病, L260 假, L261 才, L262 剛 | ["病","假","才","剛"] | curriculum-workflow/lesson-requests/L263.json, curriculum-workflow/generated/L263-generation-packet.md | public/assets/lessons/L263/images/, public/assets/lessons/L263/audio/ | accepted handoff and starting complete package; release is dependency-blocked until L259-L262 are merged to main |
 
 ## Status Values
 
