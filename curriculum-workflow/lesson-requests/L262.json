@@ -1,0 +1,251 @@
+{
+  "id": "L262",
+  "order": 262,
+  "newChars": [
+    "剛"
+  ],
+  "zhuyin": {
+    "剛": "ㄍㄤ"
+  },
+  "title": "剛",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Approved handoff for Production C. Latest origin/main production curriculum is complete through L258; L259-L261 are provisional dependencies, so this package is blocked from merge until those dependencies enter main. Teach 剛 as high-frequency time usage: 剛才, 才剛, 剛生病, 剛放病假, 剛坐下. Use 睡著, not 睡着. Treat 假死 only as a playful dog pretend-dead game; never depict actual death, injury, rescue, sadness, horror, or medical panic.",
+  "generationConstraints": {
+    "allowedBoundary": "Use latest origin/main learned characters through L258 plus provisional learned chars [病, 假, 才] plus current new char 剛.",
+    "provisionalLearnedChars": [
+      "病",
+      "假",
+      "才"
+    ],
+    "requiredCoverageChars": [
+      "剛",
+      "才",
+      "假",
+      "病",
+      "倒",
+      "睡"
+    ],
+    "targetCharMinimumCount": {
+      "剛": 3
+    },
+    "recentTargetMinimumCounts": {
+      "才": 2,
+      "假": 2,
+      "病": 2,
+      "倒": 1,
+      "睡": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "請",
+      "醫",
+      "院",
+      "藥",
+      "診",
+      "醒",
+      "裝",
+      "騙",
+      "救",
+      "傷",
+      "休",
+      "息"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, readable marks, horror imagery, injury, death imagery, emergency rescue, sadness, or medical panic.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 剛 as public/assets/lessons/L262/audio/char-u525b.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L262-S01",
+      "text": "我才剛回家，就想睡了。",
+      "spokenText": "我才剛回家就想睡了",
+      "focusChar": "剛",
+      "displayLines": [
+        "我才剛回家，",
+        "就想睡了。"
+      ],
+      "imageNotes": "主角小女孩才剛回到家，放下書包或走進房間，就露出想睡的樣子。畫面要清楚表現剛回家、很想睡；主角小女孩身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L262-S02",
+      "text": "剛才小狗倒下假死。",
+      "spokenText": "剛才小狗倒下假死",
+      "focusChar": "剛",
+      "displayLines": [
+        "剛才小狗",
+        "倒下假死。"
+      ],
+      "imageNotes": "家裡或安全空地，小狗剛才在主角小女孩面前倒下假死，像玩遊戲。畫面必須明確是小狗裝死遊戲，不可呈現真的死亡、受傷、急救、悲傷或恐怖；主角小女孩身份要符合 L154/L162/L163 family continuity；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L262-S03",
+      "text": "媽媽剛生病，想在家睡。",
+      "spokenText": "媽媽剛生病想在家睡",
+      "focusChar": "病",
+      "displayLines": [
+        "媽媽剛生病，",
+        "想在家睡。"
+      ],
+      "imageNotes": "主角媽媽剛生病，在家裡坐在床邊或沙發旁，想睡覺休息。主角媽媽身份要符合 L154/L162/L163 family continuity，不可畫成老師；畫面溫和，不可呈現重病、急救、死亡、受傷或恐怖；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L262-S04",
+      "text": "剛放病假，不要出門玩。",
+      "spokenText": "剛放病假不要出門玩",
+      "focusChar": "假",
+      "displayLines": [
+        "剛放病假，",
+        "不要出門玩。"
+      ],
+      "imageNotes": "主角小女孩剛放病假，在家裡休息，主角媽媽溫和提醒她不要出門玩。主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity；畫面不可呈現重病、急救、死亡、受傷或恐怖；不可有文字、數字、標籤或水印。"
+    },
+    {
+      "id": "L262-S05",
+      "text": "我才剛坐下，媽媽就叫我。",
+      "spokenText": "我才剛坐下媽媽就叫我",
+      "focusChar": "才",
+      "displayLines": [
+        "我才剛坐下，",
+        "媽媽就叫我。"
+      ],
+      "imageNotes": "主角小女孩才剛在家裡坐下，主角媽媽就從旁邊叫她。畫面要清楚表現剛坐下就被媽媽叫住；主角小女孩與主角媽媽身份要符合 L154/L162/L163 family continuity；不可有對話框文字、數字、標籤或水印。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "剛",
+      "count": 5,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "才",
+        "count": 3,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "假",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "病",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "倒",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "睡",
+        "count": 2,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L262-S01": 9,
+      "L262-S02": 8,
+      "L262-S03": 9,
+      "L262-S04": 9,
+      "L262-S05": 10
+    },
+    "allowedCharacterAudit": "Production must verify from latest origin/main plus provisional learned chars.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L262-G01",
+      "type": "find-character",
+      "sentenceId": "L262-S02",
+      "targetChar": "剛",
+      "reason": "「剛才」是本課最直接的核心時間詞。"
+    },
+    {
+      "id": "L262-G02",
+      "type": "teach-character",
+      "sentenceId": "L262-S01",
+      "targetChar": "剛",
+      "targetCharIndex": 2,
+      "prefixText": "我才",
+      "suffixText": "回家就想睡了",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L262/audio/L262-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L262/audio/L262-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L262-G03",
+      "type": "missing-character",
+      "sentenceId": "L262-S04",
+      "targetChar": "假",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "假",
+        "病",
+        "剛"
+      ]
+    },
+    {
+      "id": "L262-G04",
+      "type": "partial-order",
+      "sentenceId": "L262-S05",
+      "chunks": [
+        "我才剛坐下",
+        "媽媽",
+        "就叫我"
+      ]
+    },
+    {
+      "id": "L262-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L262-S03",
+      "targetChar": "病",
+      "correctText": "媽媽剛生病，想在家睡。",
+      "wrongOneText": "媽媽剛生病，想出門玩。",
+      "wrongTwoText": "媽媽剛回家，想在家睡。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L262/audio/L262-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L262/audio/L262-G05-wrong-two.m4a"
+      }
+    }
+  ],
+  "productionNotes": {
+    "dependsOnLessons": [
+      "L259",
+      "L260",
+      "L261"
+    ],
+    "provisionalLearnedChars": [
+      "病",
+      "假",
+      "才"
+    ],
+    "dependencyHandling": "If L259-L261 are not in latest origin/main, finish a complete lesson-local package and mark ready-blocked-by-dependency. Do not leave provisional production JSON changes in src/curriculum/sample-lessons.json.",
+    "expectedFinalStatus": "ready-blocked-by-dependency unless L259-L261 are merged and production integration is allowed."
+  }
+}
