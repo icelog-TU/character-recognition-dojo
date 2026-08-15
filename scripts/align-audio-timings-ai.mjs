@@ -112,7 +112,8 @@ function normalizeTranscribedHanChar(char) {
 }
 
 function normalizedHanText(text) {
-  return hanChars(text).map(normalizeTranscribedHanChar).join("");
+  const phraseNormalized = String(text).replaceAll("\u50b7\u795e", "\u5c71\u795e");
+  return hanChars(phraseNormalized).map(normalizeTranscribedHanChar).join("");
 }
 
 function assetPath(src) {

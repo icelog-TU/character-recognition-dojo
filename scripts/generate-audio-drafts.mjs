@@ -115,11 +115,11 @@ if (includeChars) {
   for (const char of lesson.newChars ?? []) {
     const zhuyin = lesson.zhuyin?.[char];
     addJob(
-      char,
+      `${char}。`,
       path.join(outputDir, `char-${filenameSafe(char)}.mp3`),
       zhuyin
-        ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once.`
-        : "",
+        ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once, clearly and naturally, with a brief pause after it. Do not read punctuation aloud.`
+        : `This is single-character audio. Say ${char} exactly once, clearly and naturally, with a brief pause after it. Do not read punctuation aloud.`,
     );
   }
 }
