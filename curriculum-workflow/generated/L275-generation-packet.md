@@ -100,3 +100,17 @@
 - All image prompts must use square image / 1:1 composition and no visible text, numbers, labels, watermarks, signs, door plates, or boat names.
 - L058 is style-only, not a character appearance reference. Main family continuity follows LESSON_VISUAL_CAST_SOP and ledger.
 - G03 index correction: 門0 關1 太2 緊3 卡4 住5 了6; target 住 uses missingIndexes [5].
+
+## Production QA
+
+- Final package status: ready-blocked-by-dependency; origin/main contains L001-L270/R014, missing R015, R016, L271, L272, L273, L274.
+- Shared-state handling: sample-lessons.json was temporarily touched for audio/alignment and restored; L275 is not inserted in production JSON.
+- Image generation: 5 square WebP images, all 1024x1024, total 622.6 KB, largest L275-S01.webp 159.8 KB.
+- Visual cast: L058 used only as style reference; protagonist girl/father/mother match family continuity; no readable text/numbers/labels observed in QA montage.
+- Audio generation: npm run ai:audio -- --lesson L275 wrote 10 OpenAI TTS draft files; npm run assets:audio -- --lesson L275 converted 10 m4a files.
+- Audio format: all 10 m4a files are AAC, 44100 Hz, mono.
+- Alignment: npm run assets:align:ai -- --lesson L275 aligned S01-S05; short pause-adjacent timings were manually smoothed without changing text.
+- CharTimings: L275-S01 9/9, L275-S02 8/8, L275-S03 7/7, L275-S04 8/8, L275-S05 12/12.
+- Stage 4 audio: G02 prefix/suffix generated from exact fragments; G05 wrong-one/wrong-two generated from complete wrong texts.
+- validate:production: PASS.
+- npm run verify: PASS; expected warning that public/assets/lessons/L275 exists but is not in production curriculum.
