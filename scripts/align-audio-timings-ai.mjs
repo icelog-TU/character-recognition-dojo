@@ -66,6 +66,7 @@ function normalizeTranscribedHanChar(char) {
     ["\u706f", "\u71c8"],
     ["\u5f00", "\u958b"],
     ["\u5173", "\u95dc"],
+    ["\u76d6", "\u84cb"],
   ]);
   if (simplifiedEquivalentMap.has(char)) return simplifiedEquivalentMap.get(char);
 
@@ -112,7 +113,8 @@ function normalizeTranscribedHanChar(char) {
 }
 
 function normalizedHanText(text) {
-  return hanChars(text).map(normalizeTranscribedHanChar).join("");
+  const phraseNormalized = text.replaceAll("西木", "積木");
+  return hanChars(phraseNormalized).map(normalizeTranscribedHanChar).join("");
 }
 
 function assetPath(src) {

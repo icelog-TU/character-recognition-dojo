@@ -1,0 +1,199 @@
+{
+  "id": "L281",
+  "order": 281,
+  "newChars": [
+    "堆"
+  ],
+  "zhuyin": {
+    "堆": "ㄉㄨㄟ"
+  },
+  "title": "堆",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete-package handoff for L281 堆. Use the approved sentences exactly. Latest origin/main is formally through L274 卡, so L276 蓋, L277 橋, L278 座, L279 木, and L280 積 are provisional dependencies. Do not merge production JSON until L276-L280 exist in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. spokenText must equal text with punctuation removed. No Han characters outside allowedChars may appear in text, spokenText, displayLines, focusChar, or Stage 4 option text. Images must use L058 style anchors and contain no visible text, numbers, zhuyin, signs, labels, logos, or watermarks. Generate standalone AI character audio for 堆 as char-u5806.m4a; do not cut it from sentence audio. Generate sentence audio, G02 teachAudio prefix/suffix, and G05 wrong-choice audio as independent OpenAI TTS whole utterances.",
+  "generationConstraints": {
+    "allowedBoundary": "Use latest origin/main L001-L274 learned characters plus provisionalLearnedChars 蓋 橋 座 木 積 plus current new char 堆.",
+    "dependsOnLessons": [
+      "L276",
+      "L277",
+      "L278",
+      "L279",
+      "L280"
+    ],
+    "provisionalLearnedChars": [
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積"
+    ],
+    "requiredCoverageChars": [
+      "堆",
+      "積",
+      "木",
+      "座",
+      "橋",
+      "蓋"
+    ],
+    "targetCharMinimumCount": {
+      "堆": 3
+    },
+    "recentTargetMinimumCounts": {
+      "積": 2,
+      "木": 2,
+      "座": 2,
+      "橋": 1,
+      "蓋": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "挖",
+      "洞",
+      "土",
+      "泥"
+    ],
+    "usageNotes": [
+      "Do not use 挖、洞、土、泥 in display text, spokenText, displayLines, focusChar, or Stage 4 option text.",
+      "Images may describe sand, toy bridges, wood, and blocks, but the image itself must not contain text, numbers, signs, labels, zhuyin, or watermarks.",
+      "本課尚未學「挖、洞、土、泥」，不可使用這些字。"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for every image.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Toy bridge scenes must be clearly toy or safe viewing scenes, never realistic bridge danger."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 堆 as public/assets/lessons/L281/audio/char-u5806.m4a from the single character pronounced ㄉㄨㄟ.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L281-S01",
+      "text": "我把積木堆很高。",
+      "spokenText": "我把積木堆很高",
+      "focusChar": "堆",
+      "displayLines": [
+        "我把積木",
+        "堆很高。"
+      ],
+      "imageNotes": "主角小女孩在家中或遊戲區把積木堆得很高。畫面要清楚看到積木堆高；積木不可有字母、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L281-S02",
+      "text": "很多木頭堆在橋下。",
+      "spokenText": "很多木頭堆在橋下",
+      "focusChar": "堆",
+      "displayLines": [
+        "很多木頭",
+        "堆在橋下。"
+      ],
+      "imageNotes": "一座橋下堆著很多木頭，主角小女孩在安全距離看著。畫面要清楚是木頭堆在橋下，不要做成危險場景；不可有文字、數字、路牌、標籤或注音。"
+    },
+    {
+      "id": "L281-S03",
+      "text": "那座橋蓋得很好。",
+      "spokenText": "那座橋蓋得很好",
+      "focusChar": "橋",
+      "displayLines": [
+        "那座橋",
+        "蓋得很好。"
+      ],
+      "imageNotes": "一座蓋得很好的橋，主角小女孩和主角爸爸或工人在安全位置看著。畫面要清楚表現橋很穩、蓋得好；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L281-S04",
+      "text": "我用沙子蓋一座山。",
+      "spokenText": "我用沙子蓋一座山",
+      "focusChar": "座",
+      "displayLines": [
+        "我用沙子",
+        "蓋一座山。"
+      ],
+      "imageNotes": "主角小女孩在沙地或安全遊戲區用沙子蓋一座小山。畫面重點是沙子堆成的小山，不是房子；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L281-S05",
+      "text": "積木堆太高，差點倒了。",
+      "spokenText": "積木堆太高差點倒了",
+      "focusChar": "堆",
+      "displayLines": [
+        "積木堆太高，",
+        "差點倒了。"
+      ],
+      "imageNotes": "主角小女孩堆的積木太高，積木堆歪斜差點倒下。畫面要清楚是積木快倒但安全；積木不可有字母、文字、數字、標籤或注音。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L281-G01",
+      "type": "find-character",
+      "sentenceId": "L281-S01",
+      "targetChar": "堆",
+      "reason": "「積木堆很高」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L281-G02",
+      "type": "teach-character",
+      "sentenceId": "L281-S05",
+      "targetChar": "堆",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "積木",
+        "suffixText": "太高差點倒了",
+        "prefixSrc": "/assets/lessons/L281/audio/L281-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L281/audio/L281-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L281-G03",
+      "type": "missing-character",
+      "sentenceId": "L281-S02",
+      "targetChar": "堆",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "堆",
+        "木",
+        "橋"
+      ]
+    },
+    {
+      "id": "L281-G04",
+      "type": "partial-order",
+      "sentenceId": "L281-S04",
+      "chunks": [
+        "我用沙子",
+        "蓋一座",
+        "山"
+      ]
+    },
+    {
+      "id": "L281-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L281-S03",
+      "correctText": "那座橋蓋得很好。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "那座橋蓋得很差。",
+          "audioSrc": "/assets/lessons/L281/audio/L281-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "那座橋卡得很緊。",
+          "audioSrc": "/assets/lessons/L281/audio/L281-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
