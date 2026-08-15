@@ -1,0 +1,263 @@
+{
+  "id": "L276",
+  "order": 276,
+  "newChars": [
+    "蓋"
+  ],
+  "zhuyin": {
+    "蓋": "ㄍㄞˋ"
+  },
+  "title": "蓋",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B accepted handoff on latest origin/main. origin/main production curriculum is complete through L270「精」 and reviewLessons through R014; L276 depends on R015, R016, and provisional lessons L271「變」, L272「差」, L273「緊」, L274「卡」, L275「住」. Keep this package blocked from production JSON until all dependencies and playable-order blockers are in main.",
+  "dependsOnLessons": [
+    "L271",
+    "L272",
+    "L273",
+    "L274",
+    "L275"
+  ],
+  "dependsOnReviewModules": [
+    "R015",
+    "R016"
+  ],
+  "provisionalLearnedChars": [
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "Use latest origin/main learned characters through L270, plus provisional learned chars [\"變\",\"差\",\"緊\",\"卡\",\"住\"], plus current new char 蓋.",
+    "provisionalLearnedChars": [
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住"
+    ],
+    "requiredCoverageChars": [
+      "蓋",
+      "住",
+      "卡",
+      "緊",
+      "差",
+      "變"
+    ],
+    "targetCharMinimumCount": {
+      "蓋": 3
+    },
+    "recentTargetMinimumCounts": {
+      "住": 2,
+      "卡": 2,
+      "緊": 2,
+      "差": 1,
+      "變": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, doorplates, license plates, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 蓋 as public/assets/lessons/L276/audio/char-u84cb.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L276-S01",
+      "text": "盒蓋卡住了，打不開。",
+      "spokenText": "盒蓋卡住了打不開",
+      "focusChar": "蓋",
+      "displayLines": [
+        "盒蓋卡住了，",
+        "打不開。"
+      ],
+      "imageNotes": "主角小女孩在桌邊想打開一個盒子，但盒蓋卡住了打不開。畫面重點是盒子和卡住的盒蓋；盒子不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L276-S02",
+      "text": "把蓋子蓋緊，才不會掉。",
+      "spokenText": "把蓋子蓋緊才不會掉",
+      "focusChar": "蓋",
+      "displayLines": [
+        "把蓋子蓋緊，",
+        "才不會掉。"
+      ],
+      "imageNotes": "主角小女孩把瓶子的蓋子蓋緊，避免蓋子掉下來。請用瓶子或水瓶的蓋子，不要再畫盒蓋，以免和 S01 重複；瓶子不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L276-S03",
+      "text": "房子蓋好了，可以住人。",
+      "spokenText": "房子蓋好了可以住人",
+      "focusChar": "蓋",
+      "displayLines": [
+        "房子蓋好了，",
+        "可以住人。"
+      ],
+      "imageNotes": "一棟新房子剛蓋好，主角小女孩和主角爸爸或主角媽媽在房子外看著，畫面要清楚是房子蓋好了、可以住人。不可有門牌、文字、數字、招牌、標籤或注音。"
+    },
+    {
+      "id": "L276-S04",
+      "text": "天氣變差，快把車窗關緊。",
+      "spokenText": "天氣變差快把車窗關緊",
+      "focusChar": "緊",
+      "displayLines": [
+        "天氣變差，",
+        "快把車窗關緊。"
+      ],
+      "imageNotes": "主角爸爸開車或停車時，外面天氣變差、風雨快來，主角爸爸把車窗關緊。畫面要安全，不要有危險駕駛；車不可有車牌文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L276-S05",
+      "text": "門卡住了，只好找人幫忙。",
+      "spokenText": "門卡住了只好找人幫忙",
+      "focusChar": "卡",
+      "displayLines": [
+        "門卡住了，",
+        "只好找人幫忙。"
+      ],
+      "imageNotes": "主角小女孩在家門或房門旁發現門卡住了，只好找主角爸爸幫忙。畫面要清楚是門卡住，需要幫忙；不可有門牌、文字、數字、標籤或注音。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "蓋",
+      "count": 4,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "住",
+        "count": 3,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "卡",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "緊",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "差",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "變",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L276-S01": 8,
+      "L276-S02": 9,
+      "L276-S03": 9,
+      "L276-S04": 10,
+      "L276-S05": 10
+    },
+    "allowedCharacterAudit": "Production must verify from latest origin/main plus provisional learned chars.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L276-G01",
+      "type": "find-character",
+      "sentenceId": "L276-S02",
+      "targetChar": "蓋",
+      "targetCharIndex": 1,
+      "reason": "「蓋子蓋緊」有兩個目標字，核心用法清楚。"
+    },
+    {
+      "id": "L276-G02",
+      "type": "teach-character",
+      "sentenceId": "L276-S01",
+      "targetChar": "蓋",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "盒",
+        "suffixText": "卡住了打不開",
+        "prefixSrc": "/assets/lessons/L276/audio/L276-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L276/audio/L276-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L276-G03",
+      "type": "missing-character",
+      "sentenceId": "L276-S03",
+      "targetChar": "蓋",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        "蓋",
+        "住",
+        "卡"
+      ]
+    },
+    {
+      "id": "L276-G04",
+      "type": "partial-order",
+      "sentenceId": "L276-S05",
+      "chunks": [
+        "門卡住了",
+        "只好",
+        "找人幫忙"
+      ]
+    },
+    {
+      "id": "L276-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L276-S04",
+      "correctText": "天氣變差，快把車窗關緊。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "天氣變好，快把車窗關緊。",
+          "audioSrc": "/assets/lessons/L276/audio/L276-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "天氣變差，快把車窗打開。",
+          "audioSrc": "/assets/lessons/L276/audio/L276-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "productionStatus": {
+    "status": "ready-blocked-by-dependency",
+    "blockedBy": [
+      "R015",
+      "R016",
+      "L271",
+      "L272",
+      "L273",
+      "L274",
+      "L275"
+    ],
+    "productionJsonAllowed": false
+  }
+}
