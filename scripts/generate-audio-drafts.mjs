@@ -51,6 +51,7 @@ const baseSpeechInstructions = [
   "Pronunciation guardrails: 小孩 is ㄒㄧㄠˇ ㄏㄞˊ, never ㄒㄧㄠˇ ㄏㄞˊㄦ or any r-colored form; 孩 always ends cleanly as ㄏㄞˊ. 更 is ㄍㄥˋ and, when generated as a single character, must be spoken exactly once.",
   "Do not read punctuation aloud.",
   "For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
+  "Lesson L280 guardrails when these words appear: 積木 is ㄐㄧ ㄇㄨˋ, not 西屋; 積雨雲 is ㄐㄧ ㄩˇ ㄩㄣˊ, not 鯽魚雲.",
 ].join(" ");
 
 async function createSpeech({ apiKey, model, voice, input, outputPath, instructionsExtra = "" }) {

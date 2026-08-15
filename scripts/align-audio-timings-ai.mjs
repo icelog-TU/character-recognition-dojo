@@ -66,6 +66,9 @@ function normalizeTranscribedHanChar(char) {
     ["\u706f", "\u71c8"],
     ["\u5f00", "\u958b"],
     ["\u5173", "\u95dc"],
+    ["\u79ef", "\u7a4d"],
+    ["\u6865", "\u6a4b"],
+    ["\u76d6", "\u84cb"],
   ]);
   if (simplifiedEquivalentMap.has(char)) return simplifiedEquivalentMap.get(char);
 
@@ -112,7 +115,12 @@ function normalizeTranscribedHanChar(char) {
 }
 
 function normalizedHanText(text) {
-  return hanChars(text).map(normalizeTranscribedHanChar).join("");
+  const phraseNormalized = text
+    .replace(/雞與雲/g, "積雨雲")
+    .replace(/鸡与云/g, "積雨雲")
+    .replace(/鯽魚雲/g, "積雨雲")
+    .replace(/鲫鱼云/g, "積雨雲");
+  return hanChars(phraseNormalized).map(normalizeTranscribedHanChar).join("");
 }
 
 function assetPath(src) {
