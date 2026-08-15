@@ -1,0 +1,263 @@
+{
+  "id": "L277",
+  "order": 277,
+  "newChars": [
+    "橋"
+  ],
+  "zhuyin": {
+    "橋": "ㄑㄧㄠˊ"
+  },
+  "title": "橋",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L277 package handoff. Production C prepares a complete lesson-local package. This lesson is dependency-blocked until R015/R016 and L271-L276 are merged into main.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main L001-L270 plus provisional learned chars [\"變\",\"差\",\"緊\",\"卡\",\"住\",\"蓋\"] plus current new char 橋",
+    "dependsOnLessons": [
+      "L271",
+      "L272",
+      "L273",
+      "L274",
+      "L275",
+      "L276"
+    ],
+    "dependsOnReviewModules": [
+      "R015",
+      "R016"
+    ],
+    "provisionalLearnedChars": [
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋"
+    ],
+    "requiredCoverageChars": [
+      "橋",
+      "蓋",
+      "住",
+      "卡",
+      "緊",
+      "差"
+    ],
+    "targetCharMinimumCount": {
+      "橋": 3
+    },
+    "recentTargetMinimumCounts": {
+      "蓋": 2,
+      "住": 2,
+      "卡": 2,
+      "緊": 1,
+      "差": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "座",
+      "鬆"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md, docs/CURRICULUM_LEDGER.md, and docs/visual-references/lesson-cast.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 橋 as public/assets/lessons/L277/audio/char-u6a4b.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L277-S01",
+      "text": "我用玩具蓋橋。",
+      "spokenText": "我用玩具蓋橋",
+      "focusChar": "橋",
+      "displayLines": [
+        "我用玩具",
+        "蓋橋。"
+      ],
+      "imageNotes": "主角小女孩在家中或遊戲區用玩具蓋一座小橋。畫面要清楚看到玩具橋正在被蓋起來，但圖片內不可出現「座」字、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L277-S02",
+      "text": "有人住在橋下。",
+      "spokenText": "有人住在橋下",
+      "focusChar": "橋",
+      "displayLines": [
+        "有人住在",
+        "橋下。"
+      ],
+      "imageNotes": "這是主角小女孩正在看一本圖畫書裡的童話場景：橋下住著一個小小的童話人物。不要畫成現實流浪者或貧困場景。圖畫書頁面、橋和背景不可出現文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L277-S03",
+      "text": "小車在橋上卡住了。",
+      "spokenText": "小車在橋上卡住了",
+      "focusChar": "卡",
+      "displayLines": [
+        "小車在橋上",
+        "卡住了。"
+      ],
+      "imageNotes": "主角小女孩玩的玩具小車在玩具橋上卡住了，橋和小車都在桌面或遊戲地墊上。畫面要清楚是玩具場景，不是交通事故；不可有車牌、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L277-S04",
+      "text": "盒蓋卡得很緊。",
+      "spokenText": "盒蓋卡得很緊",
+      "focusChar": "緊",
+      "displayLines": [
+        "盒蓋卡得",
+        "很緊。"
+      ],
+      "imageNotes": "主角小女孩在桌邊想打開一個盒子，但盒蓋卡得很緊。畫面重點是盒蓋卡緊、打不開的狀態；盒子不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L277-S05",
+      "text": "蓋好的橋差點倒了。",
+      "spokenText": "蓋好的橋差點倒了",
+      "focusChar": "差",
+      "displayLines": [
+        "蓋好的橋",
+        "差點倒了。"
+      ],
+      "imageNotes": "主角小女孩用玩具蓋好的橋差點倒了，橋微微歪斜但還沒完全倒下。畫面要明確是玩具橋，不是真實橋梁危險；不可有文字、數字、標籤或注音。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "橋",
+      "count": 4,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "蓋",
+        "count": 3,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "住",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "卡",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "緊",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "差",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L277-S01": 6,
+      "L277-S02": 7,
+      "L277-S03": 8,
+      "L277-S04": 7,
+      "L277-S05": 8
+    },
+    "allowedCharacterAudit": "Production must verify from latest origin/main plus provisional learned chars.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L277-G01",
+      "type": "find-character",
+      "sentenceId": "L277-S01",
+      "targetChar": "橋",
+      "reason": "蓋橋是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L277-G02",
+      "type": "teach-character",
+      "sentenceId": "L277-S02",
+      "targetChar": "橋",
+      "targetCharIndex": 5,
+      "prefixText": "有人住在",
+      "suffixText": "下",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L277/audio/L277-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L277/audio/L277-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L277-G03",
+      "type": "missing-character",
+      "sentenceId": "L277-S05",
+      "targetChar": "橋",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "橋",
+        "蓋",
+        "住"
+      ]
+    },
+    {
+      "id": "L277-G04",
+      "type": "partial-order",
+      "sentenceId": "L277-S03",
+      "chunks": [
+        "小車",
+        "在橋上",
+        "卡住了"
+      ]
+    },
+    {
+      "id": "L277-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L277-S04",
+      "targetChar": "緊",
+      "correctText": "盒蓋卡得很緊。",
+      "wrongOneText": "盒蓋卡得不緊。",
+      "wrongTwoText": "盒蓋蓋得很緊。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L277/audio/L277-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L277/audio/L277-G05-wrong-two.m4a"
+      }
+    }
+  ],
+  "dependsOnLessons": [
+    "L271",
+    "L272",
+    "L273",
+    "L274",
+    "L275",
+    "L276"
+  ],
+  "dependsOnReviewModules": [
+    "R015",
+    "R016"
+  ],
+  "provisionalLearnedChars": [
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋"
+  ],
+  "expectedFinalStatus": "ready-blocked-by-dependency unless R015/R016 and L271-L276 are merged before final validation"
+}
