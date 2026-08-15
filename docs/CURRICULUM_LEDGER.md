@@ -66,6 +66,8 @@ Use this section before writing image prompts for homes or recurring places. Kee
 | R012 | review module | same as L210 | 手很髒，要洗一洗。 / 這房間怎麼又髒又亂？ / 沒事就快點回家。 / 他聽見叫聲，所以回頭。 / 小馬跑太快，停不下來。 | 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 | Twelfth review module after L210. Introduces no new characters. Completes the sixth review pair covering L151-L180. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | R013 | review module | same as L240 | 老師說話要用心聽。 / 明天上課，要學怎麼生火。 / 太陽發出明亮的光。 / 月光下，影子好長。 / 河水從山上流進大海。 | 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早 晚 海 | Thirteenth review module after L240. Introduces no new characters. R013-R014 together cover every new character from L181-L210. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | R014 | review module | same as L240 | 書上說，火星是行星。 / 早上，我走在人行道上。 / 晚上，電燈亮了。 / 你的畫真有想像力。 / 這門快壞了，不能太用力開。 | 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早 晚 海 | Fourteenth review module after L240. Introduces no new characters. Completes the seventh review pair covering L181-L210. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R015 | review module | same as L270 | 船長把魚放回海裡。 / 不可以在魚池裡游泳。 / 一身濕衣服，換上乾衣褲。 / 我知道錯了，會改。 / 我認得新老師的車。 | 船 魚 游 泳 池 身 濕 乾 服 褲 換 改 錯 知 認 | Fifteenth review module after L270. Introduces no new characters. R015-R016 together cover every new character from L211-L240. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
+| R016 | review module | same as L270 | 新買的棋子，不見了一半。 / 舊書只剩半本。 / 錢不夠，不要買太貴的玩具。 / 夜市的店賣很多玩具。 / 球場邊放著球具。 | 新 舊 半 只 剩 夠 錢 買 貴 賣 店 場 市 夜 具 | Sixteenth review module after L270. Introduces no new characters. Completes the eighth review pair covering L211-L240. Includes reviewed images, AI audio, AI-aligned timings, and fixed review games. |
 | L001 | 一、二、三、人 | 一、二、三、人 | 人 / 一人 / 二人 / 三人 | none | Seed lesson. Four characters are introduced together because the first lesson needs enough material to make meaning. |
 | L002 | 個 | 一、二、三、人、個 | 人 / 一個人 / 三個人 | 一、三、人 | `個` is neutral tone in `一個人` and `三個人`. Avoid `二個人`; use `兩個人` only after `兩` is taught. |
 | L003 | 大 | 一、二、三、人、個、大 | 大人 / 二人 / 三個人 / 一個大人 | 一、二、三、人、個 | Uses `大人` as a meaningful phrase and repeats counting people. |
@@ -403,7 +405,7 @@ Use this section before writing image prompts for homes or recurring places. Kee
 
 ## Planned Lessons
 
-Merged curriculum is complete through L270. Review modules are complete through R014. R015-R016 are required now after L270 and before L271. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L270. Review modules are complete through R016. The L270 review blocker is satisfied; the next numbered lesson is L271. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 

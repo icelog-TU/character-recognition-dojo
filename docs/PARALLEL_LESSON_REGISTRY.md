@@ -16,8 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R015 | review modules after L270 / no new chars | claimed | Production C | codex/r015-r016-review-package / f0319ae5 | L270 精 | [] | curriculum-workflow/review-requests/R015.json, curriculum-workflow/generated/R015-generation-packet.md | public/assets/reviews/R015/images/, public/assets/reviews/R015/audio/ | accepted handoff and starting complete review pair package after L270 |
-| R016 | review modules after L270 / no new chars | claimed | Production C | codex/r015-r016-review-package / f0319ae5 | L270 精 | [] | curriculum-workflow/review-requests/R016.json, curriculum-workflow/generated/R016-generation-packet.md | public/assets/reviews/R016/images/, public/assets/reviews/R016/audio/ | accepted handoff and starting complete review pair package after L270 |
+| R015 | review modules after L270 / no new chars | merged | Production C | codex/r015-r016-review-package / f0319ae5 | L270 精 | [] | curriculum-workflow/review-requests/R015.json, curriculum-workflow/generated/R015-generation-packet.md | public/assets/reviews/R015/images/, public/assets/reviews/R015/audio/ | package branch has R015 in production reviewLessons; awaiting Release merge to main |
+| R016 | review modules after L270 / no new chars | merged | Production C | codex/r015-r016-review-package / f0319ae5 | L270 精 | [] | curriculum-workflow/review-requests/R016.json, curriculum-workflow/generated/R016-generation-packet.md | public/assets/reviews/R016/images/, public/assets/reviews/R016/audio/ | package branch has R016 in production reviewLessons; awaiting Release merge to main |
 
 ## Status Values
 
