@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L281 | 堆 / normal lesson | ready-blocked-by-dependency | Production C | codex/l281-complete-package / package pending final commit | L276 蓋, L277 橋, L278 座, L279 木, L280 積 | ["蓋","橋","座","木","積"] | curriculum-workflow/lesson-requests/L281.json, curriculum-workflow/generated/L281-generation-packet.md | public/assets/lessons/L281/images/, public/assets/lessons/L281/audio/ | asset-complete lesson-local package; blocked from production JSON until L276-L280 are in main |
+| L281 | 堆 / normal lesson | ready-blocked-by-dependency | Production C | codex/l281-complete-package / branch tip | L276 蓋, L277 橋, L278 座, L279 木, L280 積 | ["蓋","橋","座","木","積"] | curriculum-workflow/lesson-requests/L281.json, curriculum-workflow/generated/L281-generation-packet.md | public/assets/lessons/L281/images/, public/assets/lessons/L281/audio/ | asset-complete lesson-local package; blocked from production JSON until L276-L280 are in main |
 
 ## Status Values
 
