@@ -1,0 +1,249 @@
+{
+  "id": "L270",
+  "order": 270,
+  "newChars": [
+    "精"
+  ],
+  "zhuyin": {
+    "精": "ㄐㄧㄥ"
+  },
+  "title": "精",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C accepted teacher-approved handoff for L270. Latest origin/main production JSON is complete through L264 養; L265-L269 are dependencies and are not yet merged at claim time. Build lesson-local complete package only, with final status ready-blocked-by-dependency until L265-L269 enter main.",
+  "generationConstraints": {
+    "allowedBoundary": "Use latest origin/main learned characters through L264 養, plus provisional learned chars 休, 息, 久, 體, 神, plus current new char 精.",
+    "dependsOnLessons": [
+      "L265",
+      "L266",
+      "L267",
+      "L268",
+      "L269"
+    ],
+    "provisionalLearnedChars": [
+      "休",
+      "息",
+      "久",
+      "體",
+      "神"
+    ],
+    "requiredCoverageChars": [
+      "精",
+      "神",
+      "體",
+      "久",
+      "息",
+      "休"
+    ],
+    "targetCharMinimumCount": {
+      "精": 3
+    },
+    "recentTargetMinimumCounts": {
+      "神": 2,
+      "體": 2,
+      "久": 2,
+      "息": 1,
+      "休": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md, docs/CURRICULUM_LEDGER.md, and docs/visual-references/lesson-cast.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 精 as public/assets/lessons/L270/audio/char-u7cbe.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L270-S01",
+      "text": "休息很久，精神很好。",
+      "spokenText": "休息很久精神很好",
+      "focusChar": "精",
+      "displayLines": [
+        "休息很久，",
+        "精神很好。"
+      ],
+      "imageNotes": "主角小女孩在家休息很久後，精神很好，坐起來或站起來看起來有精神，主角媽媽在旁邊微笑。畫面要溫和清楚，不要做成醫療場景；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L270-S02",
+      "text": "他身體很好，天天精力滿滿。",
+      "spokenText": "他身體很好天天精力滿滿",
+      "focusChar": "精",
+      "displayLines": [
+        "他身體很好，",
+        "天天精力滿滿。"
+      ],
+      "imageNotes": "主角哥哥身體很好，在戶外或家中每天都很有精神地活動，例如跳起來、跑動或準備玩球。人物身份是主角哥哥；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L270-S03",
+      "text": "他精心畫了一隻鳥。",
+      "spokenText": "他精心畫了一隻鳥",
+      "focusChar": "精",
+      "displayLines": [
+        "他精心畫了",
+        "一隻鳥。"
+      ],
+      "imageNotes": "主角哥哥坐在桌前很用心地畫一隻鳥，桌上有畫紙和筆，但紙上不可出現文字或數字。畫面重點是很仔細、很用心地畫鳥；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L270-S04",
+      "text": "多跑步，才能養出好體力。",
+      "spokenText": "多跑步才能養出好體力",
+      "focusChar": "體",
+      "displayLines": [
+        "多跑步，",
+        "才能養出好體力。"
+      ],
+      "imageNotes": "主角小女孩在安全空地或操場跑步，主角爸爸或老師在旁邊陪同鼓勵。畫面要表現跑步讓體力變好，不要有跑道號碼、文字、標籤或注音。"
+    },
+    {
+      "id": "L270-S05",
+      "text": "他出神地看著大海，很久很久。",
+      "spokenText": "他出神地看著大海很久很久",
+      "focusChar": "神",
+      "displayLines": [
+        "他出神地看著大海，",
+        "很久很久。"
+      ],
+      "imageNotes": "主角哥哥坐在海邊安全位置，安靜出神地看著大海，看了很久。畫面要有大海與專注出神的表情；不可有文字、數字、招牌、路牌、標籤或注音。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "精",
+      "count": 3,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "神",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "體",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "久",
+        "count": 3,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "息",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "休",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L270-S01": 8,
+      "L270-S02": 11,
+      "L270-S03": 8,
+      "L270-S04": 10,
+      "L270-S05": 12
+    },
+    "allowedCharacterAudit": "Production must verify from latest origin/main plus provisional learned chars.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L270-G01",
+      "type": "find-character",
+      "sentenceId": "L270-S01",
+      "targetChar": "精",
+      "reason": "精神很好是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L270-G02",
+      "type": "teach-character",
+      "sentenceId": "L270-S03",
+      "targetChar": "精",
+      "targetCharIndex": 1,
+      "prefixText": "他",
+      "suffixText": "心畫了一隻鳥",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L270/audio/L270-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L270/audio/L270-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L270-G03",
+      "type": "missing-character",
+      "sentenceId": "L270-S02",
+      "targetChar": "精",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "精",
+        "神",
+        "體"
+      ]
+    },
+    {
+      "id": "L270-G04",
+      "type": "partial-order",
+      "sentenceId": "L270-S04",
+      "chunks": [
+        "多跑步",
+        "才能養出",
+        "好體力"
+      ]
+    },
+    {
+      "id": "L270-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L270-S05",
+      "targetChar": "神",
+      "correctText": "他出神地看著大海，很久很久。",
+      "wrongOneText": "他出門去看著大海，很久很久。",
+      "wrongTwoText": "他出神地看著小鳥，很久很久。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L270/audio/L270-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L270/audio/L270-G05-wrong-two.m4a"
+      }
+    }
+  ],
+  "productionNotes": {
+    "dependsOnLessons": [
+      "L265",
+      "L266",
+      "L267",
+      "L268",
+      "L269"
+    ],
+    "provisionalLearnedChars": [
+      "休",
+      "息",
+      "久",
+      "體",
+      "神"
+    ]
+  }
+}
