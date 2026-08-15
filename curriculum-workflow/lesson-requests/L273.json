@@ -1,0 +1,190 @@
+{
+  "id": "L273",
+  "order": 273,
+  "newChars": [
+    "緊"
+  ],
+  "zhuyin": {
+    "緊": "ㄐㄧㄣˇ"
+  },
+  "title": "緊",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integrated L273 on latest origin/main; dependencies resolved: L270, L271, L272.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L273.",
+    "requiredCoverageChars": [
+      "緊",
+      "差",
+      "變",
+      "精",
+      "神",
+      "體"
+    ],
+    "targetCharMinimumCount": {
+      "緊": 3
+    },
+    "recentTargetMinimumCounts": {
+      "差": 2,
+      "變": 2,
+      "精": 2,
+      "神": 1,
+      "體": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family identity anchors from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, doorplates, or readable marks.",
+      "Images about poor energy, nervousness, tiredness, or elder stamina must stay warm and gentle, with no panic, mockery, severe medical scene, injury, or horror."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 緊 as public/assets/lessons/L273/audio/char-u7dca.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L273-S01",
+      "text": "精神緊張，睡不著。",
+      "spokenText": "精神緊張睡不著",
+      "focusChar": "緊",
+      "displayLines": [
+        "精神緊張，",
+        "睡不著。"
+      ],
+      "imageNotes": "主角小女孩晚上躺在床上，因為精神緊張睡不著，表情有點擔心但不恐怖。主角媽媽可在旁邊溫和安撫；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L273-S02",
+      "text": "盒子關太緊，打不開。",
+      "spokenText": "盒子關太緊打不開",
+      "focusChar": "緊",
+      "displayLines": [
+        "盒子關太緊，",
+        "打不開。"
+      ],
+      "imageNotes": "主角小女孩在桌邊想打開一個盒子，但盒子關得太緊打不開。盒子不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L273-S03",
+      "text": "老人家體力變差，走不動。",
+      "spokenText": "老人家體力變差走不動",
+      "focusChar": "差",
+      "displayLines": [
+        "老人家",
+        "體力變差，",
+        "走不動。"
+      ],
+      "imageNotes": "主角老太太走了一段路後停下來休息，體力變差走不動，主角小女孩在旁邊陪她或扶著她。畫面要溫和，不可有嘲笑感；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L273-S04",
+      "text": "體重變重，褲子也變緊了。",
+      "spokenText": "體重變重褲子也變緊了",
+      "focusChar": "緊",
+      "displayLines": [
+        "體重變重，",
+        "褲子也變",
+        "緊了。"
+      ],
+      "imageNotes": "主角爸爸在家試穿舊褲子，發現褲子變緊了，表情自然、不誇張。畫面要避免嘲笑身材，不要出現體重計數字；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L273-S05",
+      "text": "精神很差，不想出門。",
+      "spokenText": "精神很差不想出門",
+      "focusChar": "精",
+      "displayLines": [
+        "精神很差，",
+        "不想出門。"
+      ],
+      "imageNotes": "主角小女孩坐在家裡，看起來精神很差，不想出門，主角媽媽在旁邊關心。畫面要溫和，不要做成嚴重醫療場景；不可有文字、數字、門牌、標籤或注音。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L273-G01",
+      "type": "find-character",
+      "sentenceId": "L273-S02",
+      "targetChar": "緊",
+      "reason": "「關太緊」是本課具體核心用法，目標字清楚。"
+    },
+    {
+      "id": "L273-G02",
+      "type": "teach-character",
+      "sentenceId": "L273-S01",
+      "targetChar": "緊",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "精神",
+        "suffixText": "張睡不著",
+        "prefixSrc": "/assets/lessons/L273/audio/L273-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L273/audio/L273-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L273-G03",
+      "type": "missing-character",
+      "sentenceId": "L273-S04",
+      "targetChar": "緊",
+      "missingIndexes": [
+        9
+      ],
+      "options": [
+        "緊",
+        "重",
+        "差"
+      ]
+    },
+    {
+      "id": "L273-G04",
+      "type": "partial-order",
+      "sentenceId": "L273-S03",
+      "chunks": [
+        "老人家體力",
+        "變差",
+        "走不動"
+      ]
+    },
+    {
+      "id": "L273-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L273-S05",
+      "correctText": "精神很差，不想出門。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "精神很差，不想出海。",
+          "audioSrc": "/assets/lessons/L273/audio/L273-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "精神很差，想要出門。",
+          "audioSrc": "/assets/lessons/L273/audio/L273-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "integratedFromOriginMain": true,
+    "dependenciesResolved": true,
+    "resolvedDependencies": [
+      "L270",
+      "L271",
+      "L272"
+    ],
+    "releaseSideRepairs": [
+      "Cleared stale old package status after L271-L272 were resolved in release order.",
+      "Fixed overlong displayLines and changed L273-G05-B to a one-character near-miss; regenerated wrong-one audio."
+    ]
+  }
+}

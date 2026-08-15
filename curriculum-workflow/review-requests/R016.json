@@ -1,0 +1,202 @@
+{
+  "id": "R016",
+  "kind": "review",
+  "reviewNumber": 16,
+  "title": "複習十六",
+  "afterLessonOrder": 270,
+  "targetLessonRange": {
+    "startOrder": 211,
+    "endOrder": 240
+  },
+  "requiredCoverageChars": [
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具"
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "requiredCoverageChars": [
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具"
+    ],
+    "forbiddenDisplayChars": [
+      "破",
+      "變"
+    ],
+    "allowedBoundary": "Release verified against production JSON through R016."
+  },
+  "teacherNotes": "Release integrated R016 on latest origin/main; dependencies resolved: L270.",
+  "approvedSentences": [
+    {
+      "text": "新買的棋子，不見了一半。",
+      "spokenText": "新買的棋子不見了一半",
+      "focusChar": "新",
+      "displayLines": [
+        "新買的棋子，",
+        "不見了一半。"
+      ],
+      "imageNotes": "主角小女孩在桌邊看著新買的一盒棋子，盒子裡的棋子少了一半，她正在找不見的棋子。盒子和棋子不可有文字、數字、標籤或注音。"
+    },
+    {
+      "text": "舊書只剩半本。",
+      "spokenText": "舊書只剩半本",
+      "focusChar": "舊",
+      "displayLines": [
+        "舊書只剩",
+        "半本。"
+      ],
+      "imageNotes": "桌上有一本很舊的書，只剩半本或明顯少了一半，主角小女孩看著它。畫面要清楚是舊書只剩半本，但不可使用文字、頁碼、數字、標籤或注音。"
+    },
+    {
+      "text": "錢不夠，不要買太貴的玩具。",
+      "spokenText": "錢不夠不要買太貴的玩具",
+      "focusChar": "貴",
+      "displayLines": [
+        "錢不夠，",
+        "不要買太貴",
+        "的玩具。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在玩具店或市場攤位前，主角媽媽溫和提醒錢不夠，不要買太貴的玩具。畫面可有玩具和錢包，但不可出現價格、文字、數字、標籤或注音。"
+    },
+    {
+      "text": "夜市的店賣很多玩具。",
+      "spokenText": "夜市的店賣很多玩具",
+      "focusChar": "夜",
+      "displayLines": [
+        "夜市的店",
+        "賣很多玩具。"
+      ],
+      "imageNotes": "夜市裡有一家玩具店或玩具攤，店家賣很多玩具，主角小女孩和家人在攤前看。畫面要有夜市氛圍和玩具，但不可有招牌文字、價格、數字、標籤或注音。"
+    },
+    {
+      "text": "球場邊放著球具。",
+      "spokenText": "球場邊放著球具",
+      "focusChar": "具",
+      "displayLines": [
+        "球場邊",
+        "放著球具。"
+      ],
+      "imageNotes": "安全球場邊放著球具，例如球、球棒、手套或球袋，旁邊可有主角哥哥準備打球。畫面重點是球場邊的球具；不可有球衣號碼、文字、數字、標籤或注音。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R016-G01",
+      "type": "find-character",
+      "sentenceId": "R016-S03",
+      "targetChar": "貴",
+      "reason": "「太貴的玩具」是清楚生活用法。"
+    },
+    {
+      "id": "R016-G02",
+      "type": "teach-character",
+      "sentenceId": "R016-S01",
+      "targetChar": "買",
+      "targetCharIndex": 1,
+      "teachAudioFragments": {
+        "prefix": "新",
+        "suffix": "的棋子不見了一半"
+      }
+    },
+    {
+      "id": "R016-G03",
+      "type": "missing-character",
+      "sentenceId": "R016-S02",
+      "targetChar": "剩",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "剩",
+        "只",
+        "半"
+      ]
+    },
+    {
+      "id": "R016-G04",
+      "type": "partial-order",
+      "sentenceId": "R016-S04",
+      "targetChar": "夜",
+      "chunks": [
+        "夜市的店",
+        "賣很多",
+        "玩具"
+      ]
+    },
+    {
+      "id": "R016-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R016-S05",
+      "targetChar": "具",
+      "correctText": "球場邊放著球具。",
+      "wrongOneText": "球場邊放著玩具。",
+      "wrongTwoText": "球場邊放著棋子。"
+    }
+  ],
+  "releaseAudit": {
+    "integratedFromOriginMain": true,
+    "dependenciesResolved": true,
+    "resolvedDependencies": [
+      "L270"
+    ]
+  }
+}

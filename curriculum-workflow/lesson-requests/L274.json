@@ -1,0 +1,205 @@
+{
+  "id": "L274",
+  "order": 274,
+  "newChars": [
+    "卡"
+  ],
+  "zhuyin": {
+    "卡": "ㄎㄚˇ"
+  },
+  "title": "卡",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release integrated L274 on latest origin/main; dependencies resolved: L271, L272, L273.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L274.",
+    "requiredCoverageChars": [
+      "卡",
+      "緊",
+      "差",
+      "變",
+      "精",
+      "神"
+    ],
+    "targetCharMinimumCount": {
+      "卡": 3
+    },
+    "recentTargetMinimumCounts": {
+      "緊": 2,
+      "差": 2,
+      "變": 2,
+      "精": 1,
+      "神": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "住",
+      "慢",
+      "卡片",
+      "卡車",
+      "招",
+      "牌",
+      "字",
+      "號",
+      "標",
+      "籤"
+    ],
+    "usageNotes": [
+      "Do not use 住 in display text, spokenText, displayLines, or Stage 4 option text.",
+      "Lock 卡 to jammed/stuck usage: 卡得很緊, 卡死, 卡在.",
+      "Images may depict jammed objects, but the image itself must not contain text, numbers, signs, labels, zhuyin, or watermarks."
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for every image.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Tiredness and low-energy scenes must be gentle and safe, with no severe illness, emergency, horror, mockery, or panic."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 卡 as public/assets/lessons/L274/audio/char-u5361.m4a from the single character pronounced ㄎㄚˇ.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L274-S01",
+      "text": "盒子卡得很緊，打不開。",
+      "spokenText": "盒子卡得很緊打不開",
+      "focusChar": "卡",
+      "displayLines": [
+        "盒子卡得",
+        "很緊，",
+        "打不開。"
+      ],
+      "imageNotes": "主角小女孩在桌邊想打開一個盒子，但盒子卡得很緊打不開。盒子不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L274-S02",
+      "text": "門卡死了，動不了。",
+      "spokenText": "門卡死了動不了",
+      "focusChar": "卡",
+      "displayLines": [
+        "門卡死了，",
+        "動不了。"
+      ],
+      "imageNotes": "主角爸爸在家門或房門旁試著推門或拉門，但門卡死了動不了。畫面要清楚是門卡住但不可使用「住」字；不可有門牌、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L274-S03",
+      "text": "精神很差，不想動了。",
+      "spokenText": "精神很差不想動了",
+      "focusChar": "精",
+      "displayLines": [
+        "精神很差，",
+        "不想動了。"
+      ],
+      "imageNotes": "主角小女孩坐在家裡，看起來精神很差，不想動，主角媽媽在旁邊關心。畫面要溫和，不要做成嚴重醫療場景；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L274-S04",
+      "text": "褲子變緊，卡在腳上。",
+      "spokenText": "褲子變緊卡在腳上",
+      "focusChar": "卡",
+      "displayLines": [
+        "褲子變緊，",
+        "卡在腳上。"
+      ],
+      "imageNotes": "主角爸爸在家試穿舊褲子，褲腳卡在腳上不好穿，表情自然、不誇張。畫面要避免嘲笑身材；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L274-S05",
+      "text": "體力變差，走不動了。",
+      "spokenText": "體力變差走不動了",
+      "focusChar": "差",
+      "displayLines": [
+        "體力變差，",
+        "走不動了。"
+      ],
+      "imageNotes": "主角老太太走了一段路後停下來休息，體力變差走不動，主角小女孩在旁邊陪她或扶著她。畫面要溫和，不可有嘲笑感；不可有文字、數字、標籤或注音。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L274-G01",
+      "type": "find-character",
+      "sentenceId": "L274-S02",
+      "targetChar": "卡",
+      "reason": "「門卡死了」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L274-G02",
+      "type": "teach-character",
+      "sentenceId": "L274-S01",
+      "targetChar": "卡",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "盒子",
+        "suffixText": "得很緊打不開",
+        "prefixSrc": "/assets/lessons/L274/audio/L274-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L274/audio/L274-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L274-G03",
+      "type": "missing-character",
+      "sentenceId": "L274-S04",
+      "targetChar": "卡",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        "卡",
+        "緊",
+        "變"
+      ]
+    },
+    {
+      "id": "L274-G04",
+      "type": "partial-order",
+      "sentenceId": "L274-S05",
+      "chunks": [
+        "體力",
+        "變差",
+        "走不動了"
+      ]
+    },
+    {
+      "id": "L274-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L274-S03",
+      "correctText": "精神很差，不想動了。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "精神很好，不想動了。",
+          "audioSrc": "/assets/lessons/L274/audio/L274-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "精神很差，不想玩了。",
+          "audioSrc": "/assets/lessons/L274/audio/L274-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "integratedFromOriginMain": true,
+    "dependenciesResolved": true,
+    "resolvedDependencies": [
+      "L271",
+      "L272",
+      "L273"
+    ],
+    "releaseSideRepairs": [
+      "Cleared stale old package status after R015-R016 and L271-L273 were resolved in release order.",
+      "Fixed L274-S01 displayLines and changed L274-G05-C to a one-character near-miss; regenerated wrong-two audio."
+    ]
+  }
+}
