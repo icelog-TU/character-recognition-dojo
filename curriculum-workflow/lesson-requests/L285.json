@@ -1,0 +1,194 @@
+{
+  "id": "L285",
+  "order": 285,
+  "newChars": [
+    "傷"
+  ],
+  "zhuyin": {
+    "傷": "ㄕㄤ"
+  },
+  "title": "傷",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete-package handoff for L285 傷. Use the approved sentences exactly. Latest origin/main is formally through L274 卡, so L280 積, L281 堆, L282 洞, L283 破, and L284 口 are provisional dependencies. Do not merge production JSON until L280-L284 exist in latest origin/main. Use Taiwan Traditional Chinese and Taiwan zhuyin only. spokenText must equal text with punctuation removed. No Han characters outside allowedChars may appear in text, spokenText, displayLines, focusChar, or Stage 4 option text. Images may show very small scratches or small holes, but must be child-appropriate: no gore, no severe injury, no frightening medical scene. Generate standalone AI character audio for 傷 as char-u50b7.m4a; do not cut it from sentence audio. Generate sentence audio, G02 teachAudio prefix/suffix, and G05 wrong-choice audio as independent OpenAI TTS whole utterances.",
+  "generationConstraints": {
+    "allowedBoundary": "Use latest origin/main L001-L274 learned characters plus provisionalLearnedChars 積 堆 洞 破 口 plus current new char 傷.",
+    "dependsOnLessons": [
+      "L280",
+      "L281",
+      "L282",
+      "L283",
+      "L284"
+    ],
+    "provisionalLearnedChars": [
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口"
+    ],
+    "requiredCoverageChars": [
+      "傷",
+      "口",
+      "破",
+      "洞",
+      "堆",
+      "積"
+    ],
+    "targetCharMinimumCount": {
+      "傷": 3
+    },
+    "recentTargetMinimumCounts": {
+      "口": 2,
+      "破": 2,
+      "洞": 2,
+      "堆": 1,
+      "積": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "usageNotes": [
+      "Do not add unapproved display characters in text, spokenText, displayLines, focusChar, or Stage 4 option text.",
+      "The lesson includes small wound imagery, but it must remain preschool-safe: tiny scratch or small cut only, no blood focus, no gore, no severe injury, no frightening medical scene.",
+      "Images may describe the scene visually, but the image itself must not contain text, numbers, signs, labels, zhuyin, or watermarks."
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for every image.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from L154/L162/L163 for protagonist mother, father, and little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Small injury scenes must show reassurance and care, not fear or danger."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 傷 as public/assets/lessons/L285/audio/char-u50b7.m4a from the single character pronounced ㄕㄤ.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L285-S01",
+      "text": "手上有一個小傷口。",
+      "spokenText": "手上有一個小傷口",
+      "focusChar": "傷",
+      "displayLines": [
+        "手上有一個",
+        "小傷口。"
+      ],
+      "imageNotes": "主角小女孩手上有一個很小的傷口，主角媽媽正在溫和查看或安撫她。畫面重點是小傷口和被照顧的安心感；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L285-S02",
+      "text": "傷口不大，不要緊。",
+      "spokenText": "傷口不大不要緊",
+      "focusChar": "傷",
+      "displayLines": [
+        "傷口不大，",
+        "不要緊。"
+      ],
+      "imageNotes": "主角媽媽溫和安撫主角小女孩，主角小女孩手上只有小小傷口，表情慢慢放心。畫面要清楚是「傷口不大，不要緊」；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L285-S03",
+      "text": "小船破了，不能下水。",
+      "spokenText": "小船破了不能下水",
+      "focusChar": "破",
+      "displayLines": [
+        "小船破了，",
+        "不能下水。"
+      ],
+      "imageNotes": "主角小女孩在水盆或淺水邊拿著一艘破掉的小玩具船，沒有把船放進水裡。畫面要清楚呈現小船破了所以不能下水玩；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L285-S04",
+      "text": "洞口堆積了很多沙子。",
+      "spokenText": "洞口堆積了很多沙子",
+      "focusChar": "堆",
+      "displayLines": [
+        "洞口堆積了",
+        "很多沙子。"
+      ],
+      "imageNotes": "主角小女孩在沙地或遊樂場隧道口前，看見洞口堆積很多沙子，洞口被沙子擋住一部分。畫面要清楚呈現洞口、堆積、很多沙子；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L285-S05",
+      "text": "新衣服破了個洞，我很傷心。",
+      "spokenText": "新衣服破了個洞我很傷心",
+      "focusChar": "傷",
+      "displayLines": [
+        "新衣服破了個洞，",
+        "我很傷心。"
+      ],
+      "imageNotes": "主角小女孩看著自己新衣服上的破洞，表情傷心。破洞要清楚但不要誇張，不要裸露身體，不要危險撕裂感；不可有文字、數字、標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L285-G01",
+      "type": "find-character",
+      "sentenceId": "L285-S02",
+      "targetChar": "傷",
+      "reason": "「傷口」是本課核心詞，目標字在句首清楚。"
+    },
+    {
+      "id": "L285-G02",
+      "type": "teach-character",
+      "sentenceId": "L285-S01",
+      "targetChar": "傷",
+      "targetCharIndex": 6,
+      "teachAudio": {
+        "prefixText": "手上有一個小",
+        "suffixText": "口",
+        "prefixSrc": "/assets/lessons/L285/audio/L285-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L285/audio/L285-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L285-G03",
+      "type": "missing-character",
+      "sentenceId": "L285-S05",
+      "targetChar": "傷",
+      "missingIndexes": [
+        9
+      ],
+      "options": [
+        "傷",
+        "破",
+        "口"
+      ]
+    },
+    {
+      "id": "L285-G04",
+      "type": "partial-order",
+      "sentenceId": "L285-S04",
+      "chunks": [
+        "洞口",
+        "堆積了",
+        "很多沙子"
+      ]
+    },
+    {
+      "id": "L285-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L285-S03",
+      "correctText": "小船破了，不能下水。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "小船沒破，可以下水。",
+          "audioSrc": "/assets/lessons/L285/audio/L285-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "大船破了，不能下水。",
+          "audioSrc": "/assets/lessons/L285/audio/L285-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
