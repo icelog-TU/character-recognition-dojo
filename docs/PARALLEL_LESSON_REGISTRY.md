@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L307 | 照 / normal lesson | ready-blocked-by-dependency | Production B | codex/l307-complete-package / a5eed1fd | L306 澆 | ["澆"] | curriculum-workflow/lesson-requests/L307.json, curriculum-workflow/generated/L307-generation-packet.md | public/assets/lessons/L307/images/, public/assets/lessons/L307/audio/ | complete package prepared; latest origin/main includes L301-L305; blocked until L306 is in main |
+| L307 | 照 / normal lesson | ready-blocked-by-dependency | Production B | codex/l307-complete-package / 68b75ec0 | L306 澆 | ["澆"] | curriculum-workflow/lesson-requests/L307.json, curriculum-workflow/generated/L307-generation-packet.md | public/assets/lessons/L307/images/, public/assets/lessons/L307/audio/ | complete package prepared; latest origin/main includes L301-L305; blocked until L306 is in main |
 
 ## Status Values
 
