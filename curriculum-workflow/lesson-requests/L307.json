@@ -1,0 +1,230 @@
+{
+  "id": "L307",
+  "order": 307,
+  "newChars": [
+    "照"
+  ],
+  "zhuyin": {
+    "照": "ㄓㄠˋ"
+  },
+  "title": "照",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete-package handoff for L307. Use approved sentences exactly. L307 must not enter production JSON until L301-L306 are in main. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text.",
+  "dependsOnLessons": [
+    "L301",
+    "L302",
+    "L303",
+    "L304",
+    "L305",
+    "L306"
+  ],
+  "provisionalLearnedChars": [
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main learned chars through L300 + provisionalLearnedChars + current new char",
+    "requiredCoverageChars": [
+      "照",
+      "澆",
+      "種",
+      "土",
+      "泥",
+      "條"
+    ],
+    "targetCharMinimumCount": {
+      "照": 3
+    },
+    "recentTargetMinimumCounts": {
+      "澆": 2,
+      "種": 2,
+      "土": 2,
+      "泥": 1,
+      "條": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "顧"
+    ],
+    "imageRules": [
+      "square image / 1:1 composition",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate standalone charAudio, sentence audio, G02 prefix/suffix, and G05 wrong-option audio. Do not splice audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L307-S01",
+      "text": "太陽高照，地面的泥土都乾了。",
+      "spokenText": "太陽高照地面的泥土都乾了",
+      "focusChar": "照",
+      "displayLines": [
+        "太陽高照，",
+        "地面的泥土都乾了。"
+      ],
+      "imageNotes": "Strong sun outdoors shines onto the ground; mud and soil are visibly dry. No text, numbers, or labels."
+    },
+    {
+      "id": "L307-S02",
+      "text": "媽媽種花，我幫忙澆水。",
+      "spokenText": "媽媽種花我幫忙澆水",
+      "focusChar": "澆",
+      "displayLines": [
+        "媽媽種花，",
+        "我幫忙澆水。"
+      ],
+      "imageNotes": "Protagonist mother plants flowers near a doorway or flowerpot; protagonist girl helps water. No text, numbers, or labels."
+    },
+    {
+      "id": "L307-S03",
+      "text": "月光照著一條小路。",
+      "spokenText": "月光照著一條小路",
+      "focusChar": "照",
+      "displayLines": [
+        "月光照著",
+        "一條小路。"
+      ],
+      "imageNotes": "Moonlight shines on one quiet small path at night; calm, not scary. No text, numbers, road signs, or labels."
+    },
+    {
+      "id": "L307-S04",
+      "text": "土太乾了，要澆水。",
+      "spokenText": "土太乾了要澆水",
+      "focusChar": "澆",
+      "displayLines": [
+        "土太乾了，",
+        "要澆水。"
+      ],
+      "imageNotes": "Dry soil in a flowerpot or small garden; protagonist girl prepares to water. No text, numbers, or labels."
+    },
+    {
+      "id": "L307-S05",
+      "text": "把花種在門口，才能照到陽光。",
+      "spokenText": "把花種在門口才能照到陽光",
+      "focusChar": "照",
+      "displayLines": [
+        "把花種在門口，",
+        "才能照到陽光。"
+      ],
+      "imageNotes": "Protagonist girl and mother plant flowers at the doorway where sunlight reaches them. No doorplate, text, numbers, or labels."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L307-G01",
+      "type": "find-character",
+      "sentenceId": "L307-S03",
+      "targetChar": "照",
+      "reason": "Core visual use: moonlight shines."
+    },
+    {
+      "id": "L307-G02",
+      "type": "teach-character",
+      "sentenceId": "L307-S01",
+      "targetChar": "照",
+      "targetCharIndex": 3,
+      "prefixText": "太陽高",
+      "suffixText": "地面的泥土都乾了",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L307/audio/L307-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L307/audio/L307-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L307-G03",
+      "type": "missing-character",
+      "sentenceId": "L307-S02",
+      "targetChar": "澆",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "澆",
+        "種",
+        "土"
+      ]
+    },
+    {
+      "id": "L307-G04",
+      "type": "partial-order",
+      "sentenceId": "L307-S04",
+      "chunks": [
+        "土太乾了",
+        "要",
+        "澆水"
+      ]
+    },
+    {
+      "id": "L307-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L307-S05",
+      "targetChar": "照",
+      "correctText": "把花種在門口，才能照到陽光。",
+      "wrongOneText": "把花種在門口，才能看到陽光。",
+      "wrongTwoText": "把花種在門口，才能走到陽光。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L307/audio/L307-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L307/audio/L307-G05-wrong-two.m4a"
+      }
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "照",
+      "count": 4,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "澆",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "種",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "土",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "泥",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "條",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L307-S01": 12,
+      "L307-S02": 9,
+      "L307-S03": 8,
+      "L307-S04": 7,
+      "L307-S05": 12
+    },
+    "allowedCharacterAudit": "Expected PASS; Production must verify.",
+    "longerThan12Han": false
+  }
+}
