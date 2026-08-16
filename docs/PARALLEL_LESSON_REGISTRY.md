@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L295 | 哭 / normal lesson | claimed | Production A | codex/l295-complete-package / f529f5d6 | L288 受, L289 忍, L290 耐, L291 敢, L292 當, L293 然, L294 怕 | ["受","忍","耐","敢","當","然","怕"] | curriculum-workflow/lesson-requests/L295.json, curriculum-workflow/generated/L295-generation-packet.md | public/assets/lessons/L295/images/, public/assets/lessons/L295/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
