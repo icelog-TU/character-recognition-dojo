@@ -1,0 +1,273 @@
+{
+  "id": "L311",
+  "order": 311,
+  "newChars": [
+    "次"
+  ],
+  "zhuyin": {
+    "次": "ㄘˋ"
+  },
+  "title": "次",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved L311 complete package; dependencies L307-L310 are now in latest origin/main.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "Latest origin/main L001-L310 learned chars plus current new char [\\u6b21].",
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "次",
+      "每",
+      "忘",
+      "顧",
+      "照",
+      "澆"
+    ],
+    "targetCharMinimumCount": {
+      "次": 3
+    },
+    "recentTargetMinimumCounts": {
+      "每": 2,
+      "忘": 2,
+      "顧": 2,
+      "照": 1,
+      "澆": 1
+    },
+    "forbiddenDisplayChars": [
+      "記",
+      "第",
+      "貓"
+    ],
+    "maxHanCharactersPerSentence": 12
+  },
+  "approvedSentences": [
+    {
+      "id": "L311-S01",
+      "text": "不要每次出門都忘了關燈。",
+      "spokenText": "不要每次出門都忘了關燈",
+      "focusChar": "次",
+      "displayLines": [
+        "不要每次",
+        "出門都忘了",
+        "關燈。"
+      ],
+      "imageNotes": "The protagonist girl and mother are preparing to leave home; mother reminds her to check whether the light is turned off. No text, numbers, or labels."
+    },
+    {
+      "id": "L311-S02",
+      "text": "下次我會照顧小狗。",
+      "spokenText": "下次我會照顧小狗",
+      "focusChar": "次",
+      "displayLines": [
+        "下次我會",
+        "照顧小狗。"
+      ],
+      "imageNotes": "The protagonist girl tells her mother she will care for the family dog next time; show a healthy dog and a plain water bowl or dog item. No text, numbers, or labels."
+    },
+    {
+      "id": "L311-S03",
+      "text": "這次不要又忘了帶水。",
+      "spokenText": "這次不要又忘了帶水",
+      "focusChar": "次",
+      "displayLines": [
+        "這次不要又",
+        "忘了帶水。"
+      ],
+      "imageNotes": "The protagonist girl is preparing to go out; mother reminds her not to forget to bring water this time. A plain water bottle sits by the door. No text, numbers, or labels."
+    },
+    {
+      "id": "L311-S04",
+      "text": "天氣太熱，再澆一次水好了。",
+      "spokenText": "天氣太熱再澆一次水好了",
+      "focusChar": "次",
+      "displayLines": [
+        "天氣太熱，",
+        "再澆一次",
+        "水好了。"
+      ],
+      "imageNotes": "Hot weather; protagonist girl beside flowerpots or a small garden is preparing to water again. The watering container has no text, numbers, or labels."
+    },
+    {
+      "id": "L311-S05",
+      "text": "每天都要照顧小鳥。",
+      "spokenText": "每天都要照顧小鳥",
+      "focusChar": "每",
+      "displayLines": [
+        "每天都要",
+        "照顧小鳥。"
+      ],
+      "imageNotes": "The protagonist girl cares for a healthy cute small bird every day, giving water or watching it eat. The bird is not in a tiny sealed space. No text, numbers, or labels."
+    }
+  ],
+  "stage4Plan": {
+    "games": [
+      {
+        "id": "L311-G01",
+        "type": "find-character",
+        "sentenceId": "L311-S02",
+        "targetChar": "次",
+        "prompt": "Find the target character.",
+        "missingIndexes": [
+          1
+        ]
+      },
+      {
+        "id": "L311-G02",
+        "type": "teach-character",
+        "sentenceId": "L311-S04",
+        "targetChar": "次",
+        "targetCharIndex": 7,
+        "prompt": "Listen to the target character.",
+        "missingIndexes": [
+          7
+        ],
+        "teachAudio": {
+          "prefixSrc": "/assets/lessons/L311/audio/L311-G02-prefix.m4a",
+          "suffixSrc": "/assets/lessons/L311/audio/L311-G02-suffix.m4a"
+        },
+        "teachAudioText": {
+          "prefixText": "天氣太熱再澆一",
+          "suffixText": "水好了"
+        }
+      },
+      {
+        "id": "L311-G03",
+        "type": "missing-character",
+        "sentenceId": "L311-S01",
+        "targetChar": "忘",
+        "prompt": "Choose the missing character.",
+        "missingIndexes": [
+          7
+        ],
+        "options": [
+          {
+            "id": "L311-G03-A",
+            "text": "忘",
+            "correct": true
+          },
+          {
+            "id": "L311-G03-B",
+            "text": "每",
+            "correct": false
+          },
+          {
+            "id": "L311-G03-C",
+            "text": "次",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "L311-G04",
+        "type": "partial-order",
+        "sentenceId": "L311-S03",
+        "targetChar": "次",
+        "prompt": "Put the chunks in order.",
+        "missingIndexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "chunks": [
+          {
+            "id": "L311-G04-A",
+            "text": "這次",
+            "order": 0
+          },
+          {
+            "id": "L311-G04-B",
+            "text": "不要又",
+            "order": 1
+          },
+          {
+            "id": "L311-G04-C",
+            "text": "忘了帶水",
+            "order": 2
+          }
+        ]
+      },
+      {
+        "id": "L311-G05",
+        "type": "choose-pronunciation",
+        "sentenceId": "L311-S05",
+        "targetChar": "每",
+        "prompt": "Choose the sentence you heard.",
+        "options": [
+          {
+            "id": "L311-G05-A",
+            "text": "每天都要照顧小鳥。",
+            "correct": true,
+            "sentenceId": "L311-S05"
+          },
+          {
+            "id": "L311-G05-B",
+            "text": "每天都要照顧小狗。",
+            "correct": false,
+            "audioSrc": "/assets/lessons/L311/audio/L311-G05-wrong-one.m4a"
+          },
+          {
+            "id": "L311-G05-C",
+            "text": "每天都要照顧小魚。",
+            "correct": false,
+            "audioSrc": "/assets/lessons/L311/audio/L311-G05-wrong-two.m4a"
+          }
+        ]
+      }
+    ],
+    "note": "G02 targetCharIndex corrected to 7 to match exact prefix/suffix fragments and target char."
+  },
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "次",
+      "count": 4,
+      "required": 3,
+      "result": "PASS"
+    },
+    "previousTargets": [
+      {
+        "char": "每",
+        "count": 2,
+        "required": 2,
+        "result": "PASS"
+      },
+      {
+        "char": "忘",
+        "count": 2,
+        "required": 2,
+        "result": "PASS"
+      },
+      {
+        "char": "顧",
+        "count": 2,
+        "required": 2,
+        "result": "PASS"
+      },
+      {
+        "char": "照",
+        "count": 2,
+        "required": 1,
+        "result": "PASS"
+      },
+      {
+        "char": "澆",
+        "count": 1,
+        "required": 1,
+        "result": "PASS"
+      }
+    ],
+    "sentenceHanCounts": {
+      "L311-S01": 11,
+      "L311-S02": 8,
+      "L311-S03": 9,
+      "L311-S04": 11,
+      "L311-S05": 8
+    },
+    "allowedCharacterAudit": "Production must verify; Editor expected PASS."
+  }
+}
