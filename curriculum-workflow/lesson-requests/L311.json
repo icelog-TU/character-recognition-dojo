@@ -9,27 +9,12 @@
   },
   "title": "次",
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher-approved L311 complete package handoff. Dependency-blocked until L307-L310 are in main.",
-  "dependsOnLessons": [
-    "L307",
-    "L308",
-    "L309",
-    "L310"
-  ],
-  "provisionalLearnedChars": [
-    "照",
-    "顧",
-    "忘",
-    "每"
-  ],
+  "teacherNotes": "Teacher-approved L311 complete package; dependencies L307-L310 are now in latest origin/main.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
   "generationConstraints": {
-    "allowedDisplayCharsBoundary": "Latest origin/main L001-L306 learned chars plus provisionalLearnedChars [\\u7167,\\u9867,\\u5fd8,\\u6bcf] plus current new char [\\u6b21].",
-    "provisionalLearnedChars": [
-      "照",
-      "顧",
-      "忘",
-      "每"
-    ],
+    "allowedDisplayCharsBoundary": "Latest origin/main L001-L310 learned chars plus current new char [\\u6b21].",
+    "provisionalLearnedChars": [],
     "requiredCoverageChars": [
       "次",
       "每",
@@ -62,8 +47,9 @@
       "spokenText": "不要每次出門都忘了關燈",
       "focusChar": "次",
       "displayLines": [
-        "不要每次出門",
-        "都忘了關燈。"
+        "不要每次",
+        "出門都忘了",
+        "關燈。"
       ],
       "imageNotes": "The protagonist girl and mother are preparing to leave home; mother reminds her to check whether the light is turned off. No text, numbers, or labels."
     },
@@ -96,7 +82,8 @@
       "focusChar": "次",
       "displayLines": [
         "天氣太熱，",
-        "再澆一次水好了。"
+        "再澆一次",
+        "水好了。"
       ],
       "imageNotes": "Hot weather; protagonist girl beside flowerpots or a small garden is preparing to water again. The watering container has no text, numbers, or labels."
     },

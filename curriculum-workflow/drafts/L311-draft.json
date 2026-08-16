@@ -11,18 +11,6 @@
     "次": "/assets/lessons/L311/audio/char-u6b21.m4a"
   },
   "title": "次",
-  "dependsOnLessons": [
-    "L307",
-    "L308",
-    "L309",
-    "L310"
-  ],
-  "provisionalLearnedChars": [
-    "照",
-    "顧",
-    "忘",
-    "每"
-  ],
   "requiredRounds": 5,
   "originHint": {
     "kind": "production-handoff",
@@ -35,8 +23,9 @@
       "spokenText": "不要每次出門都忘了關燈",
       "focusChar": "次",
       "displayLines": [
-        "不要每次出門",
-        "都忘了關燈。"
+        "不要每次",
+        "出門都忘了",
+        "關燈。"
       ],
       "imageNotes": "The protagonist girl and mother are preparing to leave home; mother reminds her to check whether the light is turned off. No text, numbers, or labels.",
       "imagePrompt": "square image / 1:1 composition. Warm rounded children picture-book illustration in the L058 style, using recurring protagonist girl and mother continuity. At the home doorway, the protagonist girl and mother are preparing to leave. The mother gently reminds the girl to look back and check whether the room light has been turned off before going out. Show a visible lamp or ceiling light inside the home and the doorway context, with the action of checking the light clear. Center the family, doorway, and lamp with safe margins. No written text, numbers, labels, signs, captions, logos, zhuyin, or watermark anywhere.",
@@ -236,7 +225,8 @@
       "focusChar": "次",
       "displayLines": [
         "天氣太熱，",
-        "再澆一次水好了。"
+        "再澆一次",
+        "水好了。"
       ],
       "imageNotes": "Hot weather; protagonist girl beside flowerpots or a small garden is preparing to water again. The watering container has no text, numbers, or labels.",
       "imagePrompt": "square image / 1:1 composition. Warm rounded children picture-book illustration in the L058 style, with recurring protagonist girl continuity. A hot sunny day near flowerpots or a small home garden. The protagonist girl is beside the plants, holding a plain watering can and preparing to water again because the weather is very hot. Show sunshine or heat visually but safely; make the watering action and plants clear. Center the girl, watering can, plants, and sunlight with safe margins. No written text, numbers, labels, signs, captions, logos, zhuyin, or watermark anywhere.",
@@ -484,17 +474,5 @@
         }
       ]
     }
-  ],
-  "releaseAudit": {
-    "packageStatus": "ready-blocked-by-dependency",
-    "dependencyBlockers": [
-      "L307",
-      "L308",
-      "L309",
-      "L310"
-    ],
-    "productionJsonEntryAllowed": false,
-    "productionJsonOwner": "Release",
-    "notes": "L311 complete package must not enter production JSON until L307-L310 are in latest origin/main."
-  }
+  ]
 }
