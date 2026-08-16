@@ -1,0 +1,248 @@
+{
+  "id": "L297",
+  "order": 297,
+  "newChars": [
+    "嚇"
+  ],
+  "zhuyin": {
+    "嚇": "ㄒㄧㄚˋ"
+  },
+  "title": "嚇",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete-package handoff for L297 嚇. Use the approved sentences exactly. Latest production boundary must be verified from origin/main before release; at claim time the lesson is dependency-blocked until L292-L296 are in production JSON. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate. Keep frightening scenes child-appropriate: no horror, no attacks, no bullying, no gore, no labels or visible writing.",
+  "dependsOnLessons": [
+    "L292",
+    "L293",
+    "L294",
+    "L295",
+    "L296"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main learned chars through production JSON L289 + provisionalLearnedChars [\"當\",\"然\",\"怕\",\"哭\",\"被\"] + current new char 嚇",
+    "dependsOnLessons": [
+      "L292",
+      "L293",
+      "L294",
+      "L295",
+      "L296"
+    ],
+    "provisionalLearnedChars": [
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被"
+    ],
+    "requiredCoverageChars": [
+      "嚇",
+      "被",
+      "哭",
+      "怕",
+      "然",
+      "當"
+    ],
+    "targetCharMinimumCount": {
+      "嚇": 3
+    },
+    "recentTargetMinimumCounts": {
+      "被": 2,
+      "哭": 2,
+      "怕": 2,
+      "然": 1,
+      "當": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "咬",
+      "教",
+      "導",
+      "答",
+      "接",
+      "溼"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, subtitles, or readable marks.",
+      "Frightened scenes must be preschool-safe: no horror, no gore, no attack, no bullying, no frightening monster details.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 嚇 as public/assets/lessons/L297/audio/char-u5687.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L297-S01",
+      "text": "我怕狗，才會被狗叫聲嚇到。",
+      "spokenText": "我怕狗才會被狗叫聲嚇到",
+      "focusChar": "嚇",
+      "displayLines": [
+        "我怕狗，",
+        "才會被狗叫聲嚇到。"
+      ],
+      "imageNotes": "主角小女孩在安全距離外看見一隻小狗，小狗叫了一聲，她因為怕狗而被狗叫聲嚇到。主角媽媽在旁邊陪伴安撫。畫面要清楚呈現怕狗、被狗叫聲嚇到；不可畫成狗攻擊人，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L297-S02",
+      "text": "不要嚇人，會把人嚇哭。",
+      "spokenText": "不要嚇人會把人嚇哭",
+      "focusChar": "嚇",
+      "displayLines": [
+        "不要嚇人，",
+        "會把人嚇哭。"
+      ],
+      "imageNotes": "兩個孩子在玩遊戲，其中一個孩子做出突然嚇人的動作，主角小女孩或另一個孩子被嚇得快哭，主角媽媽在旁邊溫和制止。畫面要清楚呈現不要嚇人、會把人嚇哭；不可畫成霸凌、恐怖或暴力攻擊，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L297-S03",
+      "text": "我被可怕的電影嚇哭了。",
+      "spokenText": "我被可怕的電影嚇哭了",
+      "focusChar": "嚇",
+      "displayLines": [
+        "我被可怕的電影",
+        "嚇哭了。"
+      ],
+      "imageNotes": "主角小女孩在家中看電影，螢幕畫面只用模糊的暗色影像或誇張但不恐怖的怪影表示，她被可怕的電影嚇哭了，主角媽媽在旁邊安撫。不可出現電影文字、數字、字幕或標籤；不要畫真正恐怖、血腥或怪物細節。"
+    },
+    {
+      "id": "L297-S04",
+      "text": "我怕窗外的黑影，好嚇人。",
+      "spokenText": "我怕窗外的黑影好嚇人",
+      "focusChar": "嚇",
+      "displayLines": [
+        "我怕窗外的黑影，",
+        "好嚇人。"
+      ],
+      "imageNotes": "主角小女孩在室內看見窗外有黑影，黑影其實可以是樹影或普通人影，她覺得害怕、覺得好嚇人，主角媽媽在旁邊陪伴。畫面要清楚呈現窗外黑影和孩子覺得嚇人；不要畫恐怖鬼怪，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L297-S05",
+      "text": "當心地上有洞，不然會掉進去。",
+      "spokenText": "當心地上有洞不然會掉進去",
+      "focusChar": "然",
+      "displayLines": [
+        "當心地上有洞，",
+        "不然會掉進去。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽走在公園或路邊，地上有一個可見的小洞或坑洞，主角媽媽提醒她當心，不然可能掉進去。畫面要清楚呈現地上有洞、需要當心；洞要安全、不恐怖，不可有文字、數字、標籤。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "嚇",
+      "count": 5,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "被",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "哭",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "怕",
+        "count": 3,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "然",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "當",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L297-S01": 11,
+      "L297-S02": 9,
+      "L297-S03": 10,
+      "L297-S04": 10,
+      "L297-S05": 12
+    },
+    "allowedCharacterAudit": "Production verified against latest production JSON learned chars plus provisionalLearnedChars and current new char.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L297-G01",
+      "type": "find-character",
+      "sentenceId": "L297-S02",
+      "targetChar": "嚇",
+      "reason": "不要嚇人是本課核心生活用法，目標字清楚。"
+    },
+    {
+      "id": "L297-G02",
+      "type": "teach-character",
+      "sentenceId": "L297-S01",
+      "targetChar": "嚇",
+      "targetCharIndex": 9,
+      "prefixText": "我怕狗才會被狗叫聲",
+      "suffixText": "到",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L297/audio/L297-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L297/audio/L297-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L297-G03",
+      "type": "missing-character",
+      "sentenceId": "L297-S03",
+      "targetChar": "嚇",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "嚇",
+        "哭",
+        "怕"
+      ]
+    },
+    {
+      "id": "L297-G04",
+      "type": "partial-order",
+      "sentenceId": "L297-S05",
+      "chunks": [
+        "當心地上有洞",
+        "不然",
+        "會掉進去"
+      ]
+    },
+    {
+      "id": "L297-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L297-S04",
+      "targetChar": "嚇",
+      "correctText": "我怕窗外的黑影，好嚇人。",
+      "wrongOneText": "我看窗外的黑影，好嚇人。",
+      "wrongTwoText": "我怕窗外的白雲，好嚇人。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L297/audio/L297-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L297/audio/L297-G05-wrong-two.m4a"
+      }
+    }
+  ]
+}
