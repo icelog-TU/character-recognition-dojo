@@ -1,0 +1,205 @@
+{
+  "id": "L299",
+  "order": 299,
+  "newChars": [
+    "對"
+  ],
+  "zhuyin": {
+    "對": "ㄉㄨㄟˋ"
+  },
+  "title": "對",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L296",
+    "L297",
+    "L298"
+  ],
+  "provisionalLearnedChars": [
+    "被",
+    "嚇",
+    "罵"
+  ],
+  "teacherNotes": "Accepted Production handoff. Latest origin/main is complete through L295 哭, so build lesson-local complete package only and block until L296-L298 are in main. Use origin/main L001-L295 plus provisional learned chars [被,嚇,罵] and current target 對 for learner-facing allowed-character audit. Scenes involving scolding, frightening, crying, or apology must remain gentle and child-safe; do not depict severe shaming, bullying, adult rage, horror, or emotional oppression.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main L001-L295 + provisional learned chars [被,嚇,罵] + current target 對",
+    "coverageTargets": {
+      "current": "對",
+      "previous1": "罵",
+      "previous2": "嚇",
+      "previous3": "被",
+      "previous4": "哭",
+      "previous5": "怕"
+    },
+    "targetCharMinimumCount": {
+      "對": 3
+    },
+    "recentTargetMinimumCounts": {
+      "罵": 2,
+      "嚇": 2,
+      "被": 2,
+      "哭": 1,
+      "怕": 1
+    },
+    "additionalDependencyCharsUsed": [],
+    "fullyUnlearnedChars": [],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "歉",
+      "咬",
+      "教",
+      "導",
+      "答",
+      "接",
+      "溼"
+    ],
+    "usageNotes": [
+      "Use 對不起; 起 is already learned in latest origin/main.",
+      "Do not depict severe shaming, bullying, adult rage, horror, or emotional oppression.",
+      "Images may describe objects and scenes outside the learned-character gate, but visible text, numbers, signs, labels, zhuyin, and watermarks are forbidden."
+    ],
+    "imageRules": [
+      "All sentence images must be square image / 1:1 composition.",
+      "Use L058 only as style reference, not person identity.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 對 as public/assets/lessons/L299/audio/char-u5c0d.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and suffix audio from exact text fragments.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact complete text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L299-S01",
+      "text": "做錯事被罵，要說對不起。",
+      "spokenText": "做錯事被罵要說對不起",
+      "focusChar": "對",
+      "displayLines": [
+        "做錯事被罵，",
+        "要說對不起。"
+      ],
+      "imageNotes": "主角小女孩不小心做錯事，例如打翻玩具或弄亂桌面，被主角媽媽溫和提醒後，準備說對不起。畫面要清楚呈現做錯事、被罵或被提醒、要說對不起；不要畫成嚴厲責罵或羞辱，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L299-S02",
+      "text": "不可以亂罵人，快說對不起。",
+      "spokenText": "不可以亂罵人快說對不起",
+      "focusChar": "對",
+      "displayLines": [
+        "不可以亂罵人，",
+        "快說對不起。"
+      ],
+      "imageNotes": "兩個孩子發生小衝突，其中一個孩子亂罵人，主角媽媽或老師溫和介入，提醒孩子快說對不起。畫面要清楚呈現不可以亂罵人、要說對不起；不可畫成霸凌、成人怒罵或激烈衝突，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L299-S03",
+      "text": "把人嚇哭，這樣不對。",
+      "spokenText": "把人嚇哭這樣不對",
+      "focusChar": "對",
+      "displayLines": [
+        "把人嚇哭，",
+        "這樣不對。"
+      ],
+      "imageNotes": "一個孩子做出突然嚇人的動作，把另一個孩子嚇哭，主角媽媽或老師溫和制止。畫面要清楚呈現把人嚇哭是不對的；不可畫成霸凌、恐怖或暴力攻擊，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L299-S04",
+      "text": "我被門外黑影嚇哭了。",
+      "spokenText": "我被門外黑影嚇哭了",
+      "focusChar": "嚇",
+      "displayLines": [
+        "我被門外黑影",
+        "嚇哭了。"
+      ],
+      "imageNotes": "主角小女孩在室內看見門外有黑影，黑影其實可以是樹影或普通人影，她被門外黑影嚇哭了，主角媽媽在旁邊安撫。畫面要清楚呈現門外黑影和孩子被嚇哭；不要畫恐怖鬼怪，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L299-S05",
+      "text": "我怕黑，不敢出門。",
+      "spokenText": "我怕黑不敢出門",
+      "focusChar": "怕",
+      "displayLines": [
+        "我怕黑，",
+        "不敢出門。"
+      ],
+      "imageNotes": "主角小女孩站在家門口，門外天黑，她怕黑、不敢出門，主角媽媽在旁邊溫和陪伴。畫面要清楚呈現怕黑、不敢出門；不可畫成恐怖場景，不可有文字、數字、標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L299-G01",
+      "type": "find-character",
+      "sentenceId": "L299-S02",
+      "targetChar": "對",
+      "reason": "「對不起」是本課核心生活用法，目標字清楚。"
+    },
+    {
+      "id": "L299-G02",
+      "type": "teach-character",
+      "sentenceId": "L299-S01",
+      "targetChar": "對",
+      "targetCharIndex": 7,
+      "teachAudio": {
+        "prefixText": "做錯事被罵要說",
+        "suffixText": "不起",
+        "prefixSrc": "/assets/lessons/L299/audio/L299-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L299/audio/L299-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L299-G03",
+      "type": "missing-character",
+      "sentenceId": "L299-S03",
+      "targetChar": "對",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "對",
+        "罵",
+        "嚇"
+      ]
+    },
+    {
+      "id": "L299-G04",
+      "type": "partial-order",
+      "sentenceId": "L299-S04",
+      "chunks": [
+        "我被門外黑影",
+        "嚇哭",
+        "了"
+      ]
+    },
+    {
+      "id": "L299-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L299-S05",
+      "correctText": "我怕黑，不敢出門。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我怕黑，敢出門。",
+          "audioSrc": "/assets/lessons/L299/audio/L299-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我不怕黑，不敢出門。",
+          "audioSrc": "/assets/lessons/L299/audio/L299-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "productionJsonAllowedOnlyAfterDependenciesMerged": true,
+    "expectedStatusIfDependenciesMissing": "ready-blocked-by-dependency",
+    "postMergeAssetReviewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L299&ref=main"
+  }
+}
