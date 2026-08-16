@@ -1,0 +1,248 @@
+{
+  "id": "L306",
+  "order": 306,
+  "newChars": [
+    "澆"
+  ],
+  "zhuyin": {
+    "澆": "ㄐㄧㄠ"
+  },
+  "title": "澆",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A complete-package handoff for L306 澆. Use approved sentences exactly. Latest origin/main must be verified before release. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate. Use natural Taiwan Mandarin for 澆水 and 澆花; do not use unnatural 澆樹 or unlearned display characters such as 熄, 壺, 照, 顧.",
+  "dependsOnLessons": [
+    "L301",
+    "L302",
+    "L303",
+    "L304",
+    "L305"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main learned chars through production JSON L300 + provisional learned chars [蟲, 條, 泥, 土, 種] + current new char 澆",
+    "dependsOnLessons": [
+      "L301",
+      "L302",
+      "L303",
+      "L304",
+      "L305"
+    ],
+    "provisionalLearnedChars": [
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種"
+    ],
+    "requiredCoverageChars": [
+      "澆",
+      "種",
+      "土",
+      "泥",
+      "條",
+      "蟲"
+    ],
+    "targetCharMinimumCount": {
+      "澆": 3
+    },
+    "recentTargetMinimumCounts": {
+      "種": 2,
+      "土": 2,
+      "泥": 2,
+      "條": 1,
+      "蟲": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "熄",
+      "壺",
+      "照",
+      "顧",
+      "寶",
+      "抱",
+      "弟",
+      "件",
+      "碰",
+      "抓",
+      "告",
+      "訴",
+      "清",
+      "楚",
+      "覺"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Insects must be cute, gentle, sparse, and preschool-appropriate; no gross close-ups, no horror, no dense swarms, no realistic frightening details.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 澆 as public/assets/lessons/L306/audio/char-u6f86.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L306-S01",
+      "text": "爸爸買泥土回家種花。",
+      "spokenText": "爸爸買泥土回家種花",
+      "focusChar": "種",
+      "displayLines": [
+        "爸爸買泥土",
+        "回家種花。"
+      ],
+      "imageNotes": "主角爸爸買了一包泥土回家，準備和主角小女孩一起種花。畫面可有泥土包、花盆、小花，但圖片中不可有任何文字、數字、品牌或標籤。重點是爸爸買泥土回家種花。"
+    },
+    {
+      "id": "L306-S02",
+      "text": "我給媽媽種的花澆水。",
+      "spokenText": "我給媽媽種的花澆水",
+      "focusChar": "澆",
+      "displayLines": [
+        "我給媽媽種的花",
+        "澆水。"
+      ],
+      "imageNotes": "主角小女孩拿著沒有文字或標籤的澆水容器，正在幫主角媽媽種的花澆水，主角媽媽在旁邊看著。畫面要清楚呈現給花澆水；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L306-S03",
+      "text": "爸爸把水澆在土上。",
+      "spokenText": "爸爸把水澆在土上",
+      "focusChar": "澆",
+      "displayLines": [
+        "爸爸把水",
+        "澆在土上。"
+      ],
+      "imageNotes": "主角爸爸在戶外或花盆旁，把水澆在土上，像是在種花前先讓土變濕。主角小女孩可在旁邊看。畫面要清楚呈現把水澆在土上；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L306-S04",
+      "text": "一條小蟲從泥土裡爬出來。",
+      "spokenText": "一條小蟲從泥土裡爬出來",
+      "focusChar": "蟲",
+      "displayLines": [
+        "一條小蟲",
+        "從泥土裡爬出來。"
+      ],
+      "imageNotes": "一條可愛小蟲從泥土裡爬出來，畫面像自然觀察場景，泥土和小蟲清楚可見。蟲要溫和可愛，不要噁心、不要密集蟲群，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L306-S05",
+      "text": "下雨了，就不用澆花。",
+      "spokenText": "下雨了就不用澆花",
+      "focusChar": "澆",
+      "displayLines": [
+        "下雨了，",
+        "就不用澆花。"
+      ],
+      "imageNotes": "戶外正在下雨，花盆或花圃裡的小花被雨水澆到，主角小女孩站在門口或窗邊看著，不需要再澆花。畫面要清楚呈現下雨所以不用澆花；不可有文字、數字、標籤。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "澆",
+      "count": 3,
+      "required": 3,
+      "result": "PASS"
+    },
+    "previousTargets": [
+      {
+        "char": "種",
+        "count": 2,
+        "required": 2,
+        "result": "PASS"
+      },
+      {
+        "char": "土",
+        "count": 3,
+        "required": 2,
+        "result": "PASS"
+      },
+      {
+        "char": "泥",
+        "count": 2,
+        "required": 2,
+        "result": "PASS"
+      },
+      {
+        "char": "條",
+        "count": 1,
+        "required": 1,
+        "result": "PASS"
+      },
+      {
+        "char": "蟲",
+        "count": 1,
+        "required": 1,
+        "result": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L306-S01": 9,
+      "L306-S02": 9,
+      "L306-S03": 8,
+      "L306-S04": 11,
+      "L306-S05": 8
+    },
+    "allowedCharacterAudit": "Production must verify against latest origin/main learned chars + provisionalLearnedChars + current new char before asset work.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L306-G01",
+      "type": "find-character",
+      "sentenceId": "L306-S02",
+      "targetChar": "澆",
+      "reason": "給花澆水是本課最核心、最自然的動詞用法。"
+    },
+    {
+      "id": "L306-G02",
+      "type": "teach-character",
+      "sentenceId": "L306-S03",
+      "targetChar": "澆",
+      "targetCharIndex": 4,
+      "prefixText": "爸爸把水",
+      "suffixText": "在土上"
+    },
+    {
+      "id": "L306-G03",
+      "type": "missing-character",
+      "sentenceId": "L306-S01",
+      "targetChar": "種",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "種",
+        "土",
+        "泥"
+      ]
+    },
+    {
+      "id": "L306-G04",
+      "type": "partial-order",
+      "sentenceId": "L306-S04",
+      "chunks": [
+        "一條小蟲",
+        "從泥土裡",
+        "爬出來"
+      ]
+    },
+    {
+      "id": "L306-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L306-S05",
+      "correctText": "下雨了，就不用澆花。",
+      "wrongOneText": "下雨了，就不用種花。",
+      "wrongTwoText": "下雨了，就不用買花。"
+    }
+  ]
+}
