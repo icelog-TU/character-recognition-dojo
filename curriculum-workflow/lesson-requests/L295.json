@@ -1,0 +1,218 @@
+{
+  "id": "L295",
+  "order": 295,
+  "newChars": [
+    "哭"
+  ],
+  "zhuyin": {
+    "哭": "ㄎㄨ"
+  },
+  "title": "哭",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L288",
+    "L289",
+    "L290",
+    "L291",
+    "L292",
+    "L293",
+    "L294"
+  ],
+  "provisionalLearnedChars": [
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕"
+  ],
+  "teacherNotes": "Accepted Production handoff. Latest origin/main is complete through L287 痛, so build lesson-local complete package only and block until L288-L294 are in main. Use origin/main L001-L287 plus provisional learned chars [受,忍,耐,敢,當,然,怕] and current target 哭 for allowed-character audit. Pain, injury, fear, and crying scenes must remain gentle, child-safe, non-bloody, non-severe, and non-frightening. S05 must not look like fighting, bullying, or violent attack.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main L001-L287 + provisional learned chars [受,忍,耐,敢,當,然,怕] + current target 哭",
+    "requiredCoverageChars": [
+      "哭",
+      "怕",
+      "然",
+      "當",
+      "敢",
+      "耐",
+      "受",
+      "忍"
+    ],
+    "targetCharMinimumCount": {
+      "哭": 3
+    },
+    "recentTargetMinimumCounts": {
+      "怕": 2,
+      "然": 2,
+      "當": 2,
+      "敢": 1,
+      "耐": 1
+    },
+    "additionalDependencyCharsUsed": [
+      "受",
+      "忍"
+    ],
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "笑",
+      "害",
+      "危",
+      "險",
+      "趕",
+      "直",
+      "告",
+      "訴",
+      "清",
+      "楚",
+      "覺",
+      "完",
+      "但"
+    ],
+    "usageNotes": [
+      "Images may depict fear of pain, small injury, discomfort, and near-crying, but must remain gentle and child-safe.",
+      "Do not depict blood, severe injury, emergency, medical horror, frightening scenes, fighting, bullying, or violent attack.",
+      "Do not use unapproved display characters outside the allowed boundary.",
+      "Images must not contain text, numbers, signs, labels, zhuyin, or watermarks."
+    ],
+    "imageRules": [
+      "All sentence images must be square image / 1:1 composition.",
+      "Use L058 only as style reference, not person identity.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 哭 as public/assets/lessons/L295/audio/char-u54ed.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "If G02 suffix is empty, omit suffix audio from draft unless tooling requires a placeholder; do not cut from full sentence audio.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L295-S01",
+      "text": "我很怕痛，忍著不哭。",
+      "spokenText": "我很怕痛忍著不哭",
+      "focusChar": "哭",
+      "displayLines": [
+        "我很怕痛，",
+        "忍著不哭。"
+      ],
+      "imageNotes": "主角小女孩手上或腳上有一點小傷，表情很怕痛但努力忍著不哭，主角媽媽在旁邊關心。畫面要清楚呈現怕痛、忍著不哭；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L295-S02",
+      "text": "受傷很痛，當然會哭。",
+      "spokenText": "受傷很痛當然會哭",
+      "focusChar": "哭",
+      "displayLines": [
+        "受傷很痛，",
+        "當然會哭。"
+      ],
+      "imageNotes": "主角小女孩有一點小傷，覺得痛而哭了，主角媽媽在旁邊安撫。畫面要清楚呈現受傷很痛、當然會哭；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L295-S03",
+      "text": "我不怕黑，我敢晚上出門。",
+      "spokenText": "我不怕黑我敢晚上出門",
+      "focusChar": "怕",
+      "displayLines": [
+        "我不怕黑，",
+        "我敢晚上出門。"
+      ],
+      "imageNotes": "主角小女孩在晚上站在家門口，外面天色暗但不恐怖，她表情有信心，主角媽媽或主角爸爸在旁邊陪伴。畫面要清楚呈現不怕黑、敢晚上出門；不可畫成恐怖場景，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L295-S04",
+      "text": "耐心等紅燈，然後當心過馬路。",
+      "spokenText": "耐心等紅燈然後當心過馬路",
+      "focusChar": "然",
+      "displayLines": [
+        "耐心等紅燈，",
+        "然後當心過馬路。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽站在路口等紅燈，等好之後準備當心過馬路。畫面要清楚呈現耐心等紅燈、然後當心過馬路；不可有交通號誌文字、數字、車牌或標籤。"
+    },
+    {
+      "id": "L295-S05",
+      "text": "不要打到我，不然我會哭。",
+      "spokenText": "不要打到我不然我會哭",
+      "focusChar": "哭",
+      "displayLines": [
+        "不要打到我，",
+        "不然我會哭。"
+      ],
+      "imageNotes": "主角小女孩和另一個孩子在玩球或玩具，另一個孩子的球或玩具揮得太靠近，主角小女孩退一步，表情委屈快哭。畫面要清楚呈現「不要打到我，不然我會哭」的提醒；不可畫成打架、霸凌或暴力攻擊，不可有文字、數字、標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L295-G01",
+      "type": "find-character",
+      "sentenceId": "L295-S05",
+      "targetChar": "哭",
+      "reason": "「我會哭」是本課核心情緒用法，目標字清楚。"
+    },
+    {
+      "id": "L295-G02",
+      "type": "teach-character",
+      "sentenceId": "L295-S01",
+      "targetChar": "哭",
+      "targetCharIndex": 7,
+      "teachAudio": {
+        "prefixText": "我很怕痛忍著不",
+        "suffixText": "",
+        "prefixSrc": "/assets/lessons/L295/audio/L295-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "L295-G03",
+      "type": "missing-character",
+      "sentenceId": "L295-S02",
+      "targetChar": "哭",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "哭",
+        "怕",
+        "痛"
+      ]
+    },
+    {
+      "id": "L295-G04",
+      "type": "partial-order",
+      "sentenceId": "L295-S04",
+      "chunks": [
+        "耐心等紅燈",
+        "然後",
+        "當心過馬路"
+      ]
+    },
+    {
+      "id": "L295-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L295-S03",
+      "correctText": "我不怕黑，我敢晚上出門。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我很怕黑，我不敢晚上出門。",
+          "audioSrc": "/assets/lessons/L295/audio/L295-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我不怕黑，我敢晚上回家。",
+          "audioSrc": "/assets/lessons/L295/audio/L295-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
