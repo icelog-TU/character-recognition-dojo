@@ -176,6 +176,7 @@ Required production handoff fields:
 - approved new character(s), Taiwan zhuyin, title, and dependency lessons, or review `afterLessonOrder` and coverage range
 - latest known merged boundary from `origin/main`, plus any provisional learned characters
 - exact `allowedChars` boundary and forbidden/unlearned characters noted by the teacher
+- separated dependency audit fields: coverage targets, additional provisional characters used in approved display text outside the coverage window, final `dependsOnLessons`, final `provisionalLearnedChars`, and the Editor allowed-character self-check
 - five approved sentences, each with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
 - coverage counts for current target and previous-five review targets, or review-pair coverage counts
 - Stage 4 plan: one fixed game per sentence for normal lessons, or two-stage review-module plan

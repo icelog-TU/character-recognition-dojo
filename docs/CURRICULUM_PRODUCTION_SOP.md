@@ -99,6 +99,7 @@ Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`
 
 - `lesson-requests/L###.json`, `generated/L###-generation-packet.md`, and `drafts/L###-draft.json` agree on lesson id, order, new character(s), Taiwan zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
 - Top-level `dependsOnLessons` is present whenever the lesson uses provisional characters from earlier unmerged lessons.
+- `dependsOnLessons` and `provisionalLearnedChars` cover every not-yet-merged Han character used in learner-facing text: `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text. Do not apply this character gate to `imageNotes` or image prompts, which are production instructions rather than learner-facing curriculum text. Do not trust a handoff that lists only previous-five coverage targets; rerun the approved-text sweep against latest `origin/main` learned chars plus provisional chars plus the current new character.
 - `displayLines`, when present, join exactly back to `text`; each displayed line should stay at `<= 5` Han characters when zhuyin is shown.
 - `charAudio` paths use `char-uXXXX.m4a`; generation packets and drafts must not leave stale examples such as `char-字.m4a`.
 - Every reviewed sentence has final `imageSrc`, sentence `audio.src`, `durationMs`, and non-empty `charTimings`.

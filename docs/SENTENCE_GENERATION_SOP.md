@@ -67,6 +67,43 @@ Do not use characters learned after the milestone ceiling just because the curre
 
 For parallel-prepared lessons, provisional learned characters are allowed only when they are explicitly listed in the lesson request and still match latest `origin/main` before merge. Before merging, re-run the audit against the real merged learned-character set.
 
+### Editor Handoff Dependency Gate
+
+This gate is mandatory before the Editor outputs a Production handoff for any normal lesson prepared ahead of `origin/main`.
+
+Coverage targets and allowed-character dependencies are different things:
+
+- Coverage targets answer which recent target characters must be practiced.
+- Allowed-character dependencies answer whether every Han character in the approved display text is legal.
+
+Do not derive `dependsOnLessons` or `provisionalLearnedChars` only from the previous-five coverage targets. In parallel production, an approved sentence may use an unmerged character outside the coverage window. That character is still a dependency.
+
+Before final handoff, the Editor must:
+
+1. Run `git fetch origin`.
+2. Read latest `origin/main:src/curriculum/sample-lessons.json`.
+3. Report the exact `origin/main` commit and latest complete lesson id/new character used as the boundary.
+4. Build the merged learned-character set from that `origin/main` production JSON.
+5. List the coverage targets separately: current lesson plus previous 1-5 lesson targets.
+6. Combine approved S01-S05 `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text, then sweep every Han character.
+7. Classify every Han character as one of:
+   - already learned in latest `origin/main`
+   - current lesson new character
+   - provisional character from a specific not-yet-merged lesson
+   - fully unlearned
+8. Reject the handoff if any fully unlearned character appears. Rewrite the sentence or change the lesson plan before Production sees it.
+9. Add every provisional character used by the approved text to `dependsOnLessons` and `provisionalLearnedChars`, even if that character is outside the previous-five coverage targets.
+10. Build the final allowed set as `latest origin/main learned chars + provisionalLearnedChars + current new char`, then rerun the audit and report `Editor allowed-character sweep: PASS`.
+
+The handoff must separate these sections:
+
+- `Coverage targets`: current target plus previous five targets, with counts and PASS/FAIL.
+- `Additional provisional chars used in display text`: provisional characters outside the coverage window, with sentence ids; write `None` if there are none.
+- `Correct dependencies`: final `dependsOnLessons` and `provisionalLearnedChars`.
+- `Editor self-check`: `I have verified that every Han character in approved S01-S05 and Stage 4 option text is in latest origin/main learned chars + provisionalLearnedChars + current new char.`
+
+Practical rule: before handoff, never ask only "which recent lessons need coverage?" Always ask "Every single Han character in the five approved display sentences: is it already in latest main, the current new character, or explicitly listed as provisional?"
+
 ## Required Coverage
 
 For a normal five-sentence new-character lesson:
@@ -347,6 +384,7 @@ The handoff must include:
 - current merged boundary and dependency lessons
 - approved new character(s), Taiwan zhuyin, and title, or review coverage range
 - locked `allowedChars`, provisional learned characters, and forbidden/unlearned characters
+- the Editor Handoff Dependency Gate output: coverage targets, additional provisional chars used outside coverage, final dependencies/provisional learned characters, and Editor self-check
 - final approved sentences with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
 - visual cast notes for every sentence that shows people, especially mother, father, teacher, classmate, elder, and passerby roles
 - coverage counts for the current target and previous-five review targets

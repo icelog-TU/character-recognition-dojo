@@ -40,7 +40,8 @@ For each normal lesson, use this sequence before producing a handoff:
 7. Draft more candidate directions than needed, normally 8-10 candidates, with varied sentence frames, scenes, people, actions, `focusChar` choices, and uses of the new character.
 8. After every teacher edit, recalculate current-target and previous-five coverage, Han sentence counts, and the allowed-character audit. Report exact illegal characters instead of assuming they can be used.
 9. Preserve teacher-approved strong sentences unless there is a hard blocker. If a teacher rejects a sentence as unnatural, identify which coverage target it served and rewrite around that target with natural Taiwan Mandarin.
-10. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, and Stage 4 sentence usage.
+10. Before final handoff, run the Editor Handoff Dependency Gate from `docs/SENTENCE_GENERATION_SOP.md`. Derive `dependsOnLessons` and `provisionalLearnedChars` from the approved display text sweep, not only from previous-five coverage targets.
+11. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, and Stage 4 sentence usage.
 
 During discussion, keep analysis outside the production handoff block. A useful response shape is: candidate five sentences, a small coverage table, Han counts, allowed-character audit result, and any weak sentence or alternative.
 
@@ -53,6 +54,9 @@ For each assigned normal lesson, produce final approved sentence data:
 - Dependency lessons and any provisional learned characters.
 - Locked `allowedChars`.
 - Forbidden/unlearned characters found during audit.
+- Coverage targets separated from allowed-character dependencies.
+- Additional provisional characters used in approved display text outside the coverage window, or `None`.
+- Editor allowed-character self-check showing the `origin/main` boundary, final `provisionalLearnedChars`, and PASS/FAIL.
 - Five approved sentences.
 - For every sentence: `text`, `spokenText`, `focusChar`, optional `displayLines`, and concrete `imageNotes`.
 - Coverage counts for the current target and previous-five review targets.
@@ -78,6 +82,8 @@ Before sending a Production handoff:
 
 - Audit every Han character in `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text against `allowedChars`.
 - Reject or rewrite any sentence with unlearned Han characters.
+- Separate coverage targets from dependency/provisional learned characters. Coverage targets are only the current lesson and previous five lesson targets. `dependsOnLessons` and `provisionalLearnedChars` must include every not-yet-merged character used by approved display text, even when that character is outside the coverage window.
+- Run a final approved-text sweep against latest `origin/main` learned chars plus final `provisionalLearnedChars` plus the current new character. If any Han character is still illegal, do not hand off.
 - Use Taiwan wording and Taiwan zhuyin only.
 - Keep sentences concrete, imageable, and normally 4-12 Han characters.
 - Confirm `spokenText` includes exactly the Han characters from `text` in order, without punctuation.
@@ -106,6 +112,10 @@ Every handoff must include:
 - Assigned production slot and exact worktree path from the latest Supervisor/teacher assignment.
 - Unit id and unit kind.
 - Latest known merged boundary from `origin/main`.
+- Coverage target list: current lesson and previous 1-5 lesson targets only.
+- Display text provisional dependency sweep: provisional chars required by coverage, additional provisional chars used outside coverage, fully unlearned chars, and PASS/FAIL.
+- Correct dependencies: final `dependsOnLessons` and `provisionalLearnedChars`, derived from all approved text and Stage 4 option text.
+- Editor self-check sentence confirming every Han character in approved S01-S05 and Stage 4 option text is in latest `origin/main` learned chars plus `provisionalLearnedChars` plus current new char.
 - Complete sentence data and Stage 4 plan.
 - Required repo files to create or update.
 - Auto-claim-and-continue block.
