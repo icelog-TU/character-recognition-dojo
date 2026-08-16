@@ -1,0 +1,189 @@
+{
+  "id": "L300",
+  "order": 300,
+  "newChars": ["爬"],
+  "zhuyin": {
+    "爬": "ㄆㄚˊ"
+  },
+  "title": "爬",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete-package handoff for L300 爬. Use approved sentences exactly. L300 is the last normal lesson before the next required review lesson set. Latest origin/main must be verified before release. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate. Keep climbing scenes safe, low, and preschool-appropriate: no dangerous heights, no horror, no severe injury, no labels or visible writing.",
+  "dependsOnLessons": ["L298", "L299"],
+  "provisionalLearnedChars": ["罵", "對"],
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main learned chars through production JSON L297 + provisionalLearnedChars [\"罵\",\"對\"] + current new char 爬",
+    "dependsOnLessons": ["L298", "L299"],
+    "requiredCoverageChars": ["爬", "對", "罵", "嚇", "被", "哭"],
+    "targetCharMinimumCount": {
+      "爬": 3
+    },
+    "recentTargetMinimumCounts": {
+      "對": 2,
+      "罵": 2,
+      "嚇": 2,
+      "被": 1,
+      "哭": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": ["次", "條", "窗", "樓", "梯", "牆", "坡", "告", "訴", "清", "楚", "覺"],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, subtitles, or readable marks.",
+      "Climbing and startling scenes must be preschool-safe: no dangerous heights, no severe injury, no horror, no attack, no bullying.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 爬 as public/assets/lessons/L300/audio/char-u722c.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L300-S01",
+      "text": "不要爬樹，會被罵。",
+      "spokenText": "不要爬樹會被罵",
+      "focusChar": "爬",
+      "displayLines": ["不要爬樹，", "會被罵。"],
+      "imageNotes": "主角小女孩正想爬一棵低矮的樹，主角媽媽站在旁邊嚴肅提醒她不要爬樹。畫面要清楚呈現不要爬樹、會被罵的情境；樹要低矮安全，不可有文字、數字、標籤，不要畫成危險高樹。"
+    },
+    {
+      "id": "L300-S02",
+      "text": "爬太高，我嚇到哭了。",
+      "spokenText": "爬太高我嚇到哭了",
+      "focusChar": "爬",
+      "displayLines": ["爬太高，", "我嚇到哭了。"],
+      "imageNotes": "主角小女孩爬到遊樂場低矮攀爬架或低矮平台上，覺得太高而嚇到哭，主角爸爸在旁邊伸手保護。畫面要清楚呈現爬太高、嚇到哭；不可有危險高處、文字、數字、標籤。"
+    },
+    {
+      "id": "L300-S03",
+      "text": "爬上桌子，這樣不對。",
+      "spokenText": "爬上桌子這樣不對",
+      "focusChar": "爬",
+      "displayLines": ["爬上桌子，", "這樣不對。"],
+      "imageNotes": "主角小女孩爬上家中的桌子，主角媽媽在旁邊提醒這樣不對。畫面要清楚呈現爬上桌子是不對的行為；桌子高度安全，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L300-S04",
+      "text": "氣球破掉，嚇到小孩子。",
+      "spokenText": "氣球破掉嚇到小孩子",
+      "focusChar": "嚇",
+      "displayLines": ["氣球破掉，", "嚇到小孩子。"],
+      "imageNotes": "主角小男孩在室內或生日派對場景旁邊，附近一顆氣球破掉，他被突如其來的聲音嚇到。畫面要清楚呈現氣球破掉、嚇到小孩子；不可有文字、數字、標籤，不要畫成驚悚或過度害怕。"
+    },
+    {
+      "id": "L300-S05",
+      "text": "罵錯人了，很對不起。",
+      "spokenText": "罵錯人了很對不起",
+      "focusChar": "對",
+      "displayLines": ["罵錯人了，", "很對不起。"],
+      "imageNotes": "主角小女孩誤以為主角哥哥弄壞玩具而罵了他，後來發現罵錯人，表情很抱歉，主角哥哥站在旁邊。畫面要清楚呈現罵錯人後覺得對不起；不可出現文字、數字、對話框或標籤。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "爬",
+      "count": 3,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "對",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "罵",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "嚇",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "被",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "哭",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L300-S01": 7,
+      "L300-S02": 8,
+      "L300-S03": 8,
+      "L300-S04": 9,
+      "L300-S05": 8
+    },
+    "allowedCharacterAudit": "Expected PASS; Production must verify against latest production JSON learned chars plus provisionalLearnedChars and current new char.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L300-G01",
+      "type": "find-character",
+      "sentenceId": "L300-S02",
+      "targetChar": "爬",
+      "reason": "「爬太高」是本課核心動作用法，目標字清楚。"
+    },
+    {
+      "id": "L300-G02",
+      "type": "teach-character",
+      "sentenceId": "L300-S01",
+      "targetChar": "爬",
+      "targetCharIndex": 2,
+      "prefixText": "不要",
+      "suffixText": "樹會被罵",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L300/audio/L300-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L300/audio/L300-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L300-G03",
+      "type": "missing-character",
+      "sentenceId": "L300-S03",
+      "targetChar": "對",
+      "missingIndexes": [7],
+      "options": ["對", "爬", "嚇"]
+    },
+    {
+      "id": "L300-G04",
+      "type": "partial-order",
+      "sentenceId": "L300-S04",
+      "chunks": ["氣球破掉", "嚇到", "小孩子"]
+    },
+    {
+      "id": "L300-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L300-S05",
+      "targetChar": "對",
+      "correctText": "罵錯人了，很對不起。",
+      "wrongOneText": "罵錯人了，很不對。",
+      "wrongTwoText": "罵錯人了，不要哭。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L300/audio/L300-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L300/audio/L300-G05-wrong-two.m4a"
+      }
+    }
+  ]
+}
