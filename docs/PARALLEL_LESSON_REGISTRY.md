@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L306 | 澆 / normal lesson | claimed | Production A | codex/l306-complete-package / 176c94c5 | L301 蟲, L302 條, L303 泥, L304 土, L305 種 | ["蟲","條","泥","土","種"] | curriculum-workflow/lesson-requests/L306.json, curriculum-workflow/generated/L306-generation-packet.md | public/assets/lessons/L306/images/, public/assets/lessons/L306/audio/ | accepted handoff and starting complete package; L306 must not enter production JSON until L301-L305 are in main |
+| L306 | 澆 / normal lesson | ready-blocked-by-dependency | Production A | codex/l306-complete-package / latest pushed tip | L301 蟲, L302 條, L303 泥, L304 土, L305 種 | ["蟲","條","泥","土","種"] | curriculum-workflow/lesson-requests/L306.json, curriculum-workflow/generated/L306-generation-packet.md | public/assets/lessons/L306/images/, public/assets/lessons/L306/audio/ | complete package ready; blocked until L301-L305 are in main; AI alignment reviewed with Traditional/Simplified transcript equivalence and production text unchanged |
 
 ## Status Values
 
