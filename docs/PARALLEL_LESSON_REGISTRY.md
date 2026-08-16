@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L301 | 蟲 / normal lesson | claimed | Production D | codex/l301-complete-package / 5364f6b3 | R017, R018 | [] | curriculum-workflow/lesson-requests/L301.json, curriculum-workflow/generated/L301-generation-packet.md | public/assets/lessons/L301/images/, public/assets/lessons/L301/audio/ | accepted handoff and starting complete package; L301 must not enter production JSON until R017/R018 are in main |
 
 ## Status Values
 
