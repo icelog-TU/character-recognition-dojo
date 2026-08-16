@@ -12,19 +12,9 @@
   },
   "title": "照",
   "dependsOnLessons": [
-    "L301",
-    "L302",
-    "L303",
-    "L304",
-    "L305",
     "L306"
   ],
   "provisionalLearnedChars": [
-    "蟲",
-    "條",
-    "泥",
-    "土",
-    "種",
     "澆"
   ],
   "requiredRounds": 5,
@@ -517,15 +507,10 @@
   "releaseAudit": {
     "packageStatus": "ready-blocked-by-dependency",
     "dependencyBlockers": [
-      "L301",
-      "L302",
-      "L303",
-      "L304",
-      "L305",
       "L306"
     ],
     "productionJsonEntryAllowed": false,
     "productionJsonOwner": "Release",
-    "notes": "L307 complete package must not enter production JSON until L301-L306 are in latest origin/main."
+    "notes": "L307 complete package must not enter production JSON until L306 is in latest origin/main."
   }
 }

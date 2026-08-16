@@ -7,7 +7,7 @@
 - 新字：照
 - 注音：照=ㄓㄠˋ
 - 目標句數：5
-- 教師備註：Production B complete-package handoff for L307. Use approved sentences exactly. L307 must not enter production JSON until L301-L306 are in main. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text.
+- 教師備註：L307 complete package; latest origin/main now includes L301-L305, blocked until L306 is in main.
 
 ## 已學字邊界
 

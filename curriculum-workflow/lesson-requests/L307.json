@@ -9,21 +9,11 @@
   },
   "title": "照",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production B complete-package handoff for L307. Use approved sentences exactly. L307 must not enter production JSON until L301-L306 are in main. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text.",
+  "teacherNotes": "L307 complete package; latest origin/main now includes L301-L305, blocked until L306 is in main.",
   "dependsOnLessons": [
-    "L301",
-    "L302",
-    "L303",
-    "L304",
-    "L305",
     "L306"
   ],
   "provisionalLearnedChars": [
-    "蟲",
-    "條",
-    "泥",
-    "土",
-    "種",
     "澆"
   ],
   "generationConstraints": {
@@ -60,7 +50,8 @@
     "audioRules": [
       "Use repo OpenAI audio flow only.",
       "Generate standalone charAudio, sentence audio, G02 prefix/suffix, and G05 wrong-option audio. Do not splice audio."
-    ]
+    ],
+    "allowedDisplayCharsBoundary": "Latest origin/main L001-L305 learned chars plus provisionalLearnedChars [\\u6f86] plus current new char [\\u7167]."
   },
   "approvedSentences": [
     {
