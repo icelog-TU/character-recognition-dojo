@@ -1,0 +1,263 @@
+{
+  "id": "R018",
+  "kind": "review",
+  "reviewNumber": 18,
+  "title": "複習十八",
+  "afterLessonOrder": 300,
+  "targetLessonRange": {
+    "startOrder": 241,
+    "endOrder": 270
+  },
+  "requiredCoverageChars": [
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精"
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "requiredCoverageChars": [
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精"
+    ],
+    "allowedBoundary": "Production JSON through L300. Review learner-facing text must use only chars learned by L300."
+  },
+  "dependsOnLessons": [
+    "L298",
+    "L299",
+    "L300"
+  ],
+  "teacherNotes": "Teacher-approved review module package after L300. Review modules introduce no newChars, zhuyin, or charAudio. Production confirmed origin/main already includes L298-L300, so no provisional learned chars are needed for the allowed-character sweep. R018 covers: 死, 睡, 倒, 病, 假, 才, 剛, 裝, 養, 休, 息, 久, 體, 神, 精. R017/R018 pair covers L241-L270 exactly once or more across the pair.",
+  "approvedSentences": [
+    {
+      "text": "生病了，要好好休息。",
+      "displayLines": [
+        "生病了，",
+        "要好好休息。"
+      ],
+      "spokenText": "生病了要好好休息",
+      "focusChar": "休",
+      "imageNotes": "The protagonist little girl is sick at home resting in bed, with the protagonist mother caring for her. Keep the scene warm and gentle, without serious medical or frightening feeling; no text, numbers, or labels."
+    },
+    {
+      "text": "才剛裝好，椅子就倒了。",
+      "displayLines": [
+        "才剛裝好，",
+        "椅子就倒了。"
+      ],
+      "spokenText": "才剛裝好椅子就倒了",
+      "focusChar": "裝",
+      "imageNotes": "The protagonist father has just finished assembling a chair, and the chair immediately falls over on the floor while the protagonist little girl watches. Clearly show just assembled and then fallen chair; no text, numbers, or labels."
+    },
+    {
+      "text": "小狗睡了很久才起來。",
+      "displayLines": [
+        "小狗睡了",
+        "很久才起來。"
+      ],
+      "spokenText": "小狗睡了很久才起來",
+      "focusChar": "睡",
+      "imageNotes": "A small family dog has slept for a long time on a little bed or mat at home and is now slowly getting up. The protagonist little girl watches nearby. Clearly show the dog waking after a long sleep; no text, numbers, or labels."
+    },
+    {
+      "text": "假花不用養，也不會死。",
+      "displayLines": [
+        "假花不用養，",
+        "也不會死。"
+      ],
+      "spokenText": "假花不用養也不會死",
+      "focusChar": "假",
+      "imageNotes": "On a table, show a fake flower and a real flower for contrast. The protagonist mother or little girl looks at the fake flower. Clearly show fake flowers do not need care and will not die; keep flowers pleasant, not frightening; no text, numbers, or labels."
+    },
+    {
+      "text": "養好身體，才有精神。",
+      "displayLines": [
+        "養好身體，",
+        "才有精神。"
+      ],
+      "spokenText": "養好身體才有精神",
+      "focusChar": "精",
+      "imageNotes": "After resting and recovering, the protagonist little girl looks energetic in sunlight, stretching or preparing to go out and play, with the protagonist mother nearby. Clearly show a healthy body and good spirit; no text, numbers, or labels."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R018-G01",
+      "type": "find-character",
+      "sentenceId": "R018-S05",
+      "targetChar": "精",
+      "prompt": "找一找句子裡的「精」。"
+    },
+    {
+      "id": "R018-G02",
+      "type": "teach-character",
+      "sentenceId": "R018-S02",
+      "targetChar": "裝",
+      "prompt": "幫小兔補上這個字。",
+      "missingIndexes": [
+        2
+      ],
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R018/audio/R018-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R018/audio/R018-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "R018-G03",
+      "type": "missing-character",
+      "sentenceId": "R018-S04",
+      "targetChar": "死",
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "死",
+          "correct": true
+        },
+        {
+          "id": "wrong-1",
+          "text": "養",
+          "correct": false
+        },
+        {
+          "id": "wrong-2",
+          "text": "假",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R018-G04",
+      "type": "partial-order",
+      "sentenceId": "R018-S01",
+      "targetChar": "休",
+      "prompt": "排出正確的句子。",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "options": [
+        {
+          "id": "slot-1",
+          "text": "生病了",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "slot-2",
+          "text": "要好好",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "slot-3",
+          "text": "休息",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "R018-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R018-S03",
+      "targetChar": "睡",
+      "prompt": "聽聽看誰讀對了。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "小狗睡了很久才起來。",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R018/audio/R018-S03.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "小狗睡了一下才起來。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R018/audio/R018-G05-wrong-one.m4a",
+          "spokenText": "小狗睡了一下才起來"
+        },
+        {
+          "id": "wrong-two",
+          "text": "小狗睡了很久不起來。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R018/audio/R018-G05-wrong-two.m4a",
+          "spokenText": "小狗睡了很久不起來"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "status": "integrated-from-latest-origin-main",
+    "integratedReviewModulesThrough": "R018",
+    "note": "Release transplanted review-local package files, checked L300 review ceiling, and integrated R017-R018 before L301."
+  }
+}

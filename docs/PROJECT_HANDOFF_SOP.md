@@ -23,8 +23,8 @@ As of latest `origin/main`:
 - App name: `認字練功房`
 - Current reviewed lessons: L001-L300
 - L300 introduces `爬`.
-- Production review modules: R001-R016.
-- Overdue review blockers: R017-R018 are now required before L301.
+- Production review modules: R001-R018.
+- Overdue review blockers: none at L300; R019-R020 are required after L330 and before L331.
 - L001-L005 use Stage 1-3.
 - L006-L300 include Stage 4 fixed sentence games.
 - Review modules use `R###` ids and do not consume `L###` lesson numbers.

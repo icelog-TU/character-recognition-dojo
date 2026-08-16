@@ -497,8 +497,8 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L300, L300 introduces `爬`, and review modules are complete through R016.
+As of latest `origin/main`, production curriculum is complete through L300, L300 introduces `爬`, and review modules are complete through R018.
 
-Under the review-blocker rule, R017-R018 are now required before L301.
+Under the review-blocker rule, no review pair is overdue at L300; R019-R020 are required after L330 and before L331.
 
 L001-L005 use the simpler Stage 1-3 flow. L006-L300 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
