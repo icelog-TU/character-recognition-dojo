@@ -1,0 +1,242 @@
+{
+  "id": "L303",
+  "order": 303,
+  "newChars": [
+    "泥"
+  ],
+  "zhuyin": {
+    "泥": "ㄋㄧˊ"
+  },
+  "title": "泥",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete-package handoff for L303. Use approved sentences exactly. L303 must not enter production JSON until R017/R018, L301, and L302 are in main. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text.",
+  "dependsOnLessons": [
+    "L301",
+    "L302"
+  ],
+  "dependsOnReviewModules": [
+    "R017",
+    "R018"
+  ],
+  "provisionalLearnedChars": [
+    "蟲",
+    "條"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main learned chars through production JSON L300 + provisionalLearnedChars + current new char",
+    "dependsOnLessons": [
+      "L301",
+      "L302"
+    ],
+    "dependsOnReviewModules": [
+      "R017",
+      "R018"
+    ],
+    "requiredCoverageChars": [
+      "泥",
+      "條",
+      "蟲",
+      "爬",
+      "對",
+      "罵"
+    ],
+    "targetCharMinimumCount": {
+      "泥": 3
+    },
+    "recentTargetMinimumCounts": {
+      "條": 2,
+      "蟲": 2,
+      "爬": 2,
+      "對": 1,
+      "罵": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "土",
+      "巴",
+      "寶",
+      "抱",
+      "抓",
+      "碰"
+    ],
+    "imageRules": [
+      "square image / 1:1 composition",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands.",
+      "Bug scenes must be cute, single-bug, preschool-safe, and not gross."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate standalone charAudio, sentence audio, G02 prefix/suffix, and G05 wrong-option audio. Do not splice audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L303-S01",
+      "text": "一條小蟲在泥地上爬。",
+      "spokenText": "一條小蟲在泥地上爬",
+      "focusChar": "泥",
+      "displayLines": [
+        "一條小蟲",
+        "在泥地上爬。"
+      ],
+      "imageNotes": "One cute small bug crawling slowly on damp mud ground near grass; preschool-safe, not gross, no dense bug group, no text or labels."
+    },
+    {
+      "id": "L303-S02",
+      "text": "對面的房子是水泥蓋的。",
+      "spokenText": "對面的房子是水泥蓋的",
+      "focusChar": "泥",
+      "displayLines": [
+        "對面的房子",
+        "是水泥蓋的。"
+      ],
+      "imageNotes": "Protagonist little girl and father stand roadside looking at a concrete house across the street; no doorplate, text, numbers, signs, or labels."
+    },
+    {
+      "id": "L303-S03",
+      "text": "那條蟲放進盒子，才不會亂爬。",
+      "spokenText": "那條蟲放進盒子才不會亂爬",
+      "focusChar": "條",
+      "displayLines": [
+        "那條蟲",
+        "放進盒子，",
+        "才不會亂爬。"
+      ],
+      "imageNotes": "Protagonist little girl carefully puts one cute small bug into an open transparent observation box, not sealed; mother may watch; no harm, no text or labels."
+    },
+    {
+      "id": "L303-S04",
+      "text": "玩得滿身都是泥，被罵了。",
+      "spokenText": "玩得滿身都是泥被罵了",
+      "focusChar": "泥",
+      "displayLines": [
+        "玩得滿身",
+        "都是泥，",
+        "被罵了。"
+      ],
+      "imageNotes": "Protagonist little girl outdoors with mud on clothes, hands, and feet; mother gives a serious reminder; mild, not gross, no text or labels."
+    },
+    {
+      "id": "L303-S05",
+      "text": "鞋子上有泥，要擦掉才對。",
+      "spokenText": "鞋子上有泥要擦掉才對",
+      "focusChar": "泥",
+      "displayLines": [
+        "鞋子上有泥，",
+        "要擦掉才對。"
+      ],
+      "imageNotes": "Protagonist little girl has mud on her shoes at the doorway; mother reminds her to wipe it off first; no text or labels."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L303-G01",
+      "type": "find-character",
+      "sentenceId": "L303-S05",
+      "targetChar": "泥",
+      "reason": "Core usage: mud on shoes."
+    },
+    {
+      "id": "L303-G02",
+      "type": "teach-character",
+      "sentenceId": "L303-S01",
+      "targetChar": "泥",
+      "targetCharIndex": 5,
+      "prefixText": "一條小蟲在",
+      "suffixText": "地上爬",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L303/audio/L303-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L303/audio/L303-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L303-G03",
+      "type": "missing-character",
+      "sentenceId": "L303-S03",
+      "targetChar": "蟲",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        "蟲",
+        "泥",
+        "爬"
+      ]
+    },
+    {
+      "id": "L303-G04",
+      "type": "partial-order",
+      "sentenceId": "L303-S04",
+      "chunks": [
+        "玩得",
+        "滿身都是泥",
+        "被罵了"
+      ]
+    },
+    {
+      "id": "L303-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L303-S02",
+      "targetChar": "泥",
+      "correctText": "對面的房子是水泥蓋的。",
+      "wrongOneText": "對面的房子是木頭蓋的。",
+      "wrongTwoText": "對面的房子是積木蓋的。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L303/audio/L303-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L303/audio/L303-G05-wrong-two.m4a"
+      }
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "泥",
+      "count": 4,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "條",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "蟲",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "爬",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "對",
+        "count": 2,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "罵",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L303-S01": 9,
+      "L303-S02": 10,
+      "L303-S03": 12,
+      "L303-S04": 10,
+      "L303-S05": 10
+    },
+    "allowedCharacterAudit": "Expected PASS; Production must verify.",
+    "longerThan12Han": false
+  }
+}

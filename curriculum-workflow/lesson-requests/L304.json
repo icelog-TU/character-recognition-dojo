@@ -1,0 +1,251 @@
+{
+  "id": "L304",
+  "order": 304,
+  "newChars": [
+    "土"
+  ],
+  "zhuyin": {
+    "土": "ㄊㄨˇ"
+  },
+  "title": "土",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete-package handoff for L304 土. Use approved sentences exactly. L304 must not enter production JSON until L301-L303 are in main. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate. Keep insects, soil, mud, shadows, and outdoor scenes gentle, clean, and preschool-appropriate: no frightening bug swarms, no danger, no labels or visible writing.",
+  "dependsOnLessons": [
+    "L301",
+    "L302",
+    "L303"
+  ],
+  "provisionalLearnedChars": [
+    "蟲",
+    "條",
+    "泥"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main learned chars through production JSON L300 + provisionalLearnedChars [\"蟲\",\"條\",\"泥\"] + current new char 土",
+    "dependsOnLessons": [
+      "L301",
+      "L302",
+      "L303"
+    ],
+    "provisionalLearnedChars": [
+      "蟲",
+      "條",
+      "泥"
+    ],
+    "requiredCoverageChars": [
+      "土",
+      "泥",
+      "條",
+      "蟲",
+      "爬",
+      "對"
+    ],
+    "targetCharMinimumCount": {
+      "土": 3
+    },
+    "recentTargetMinimumCounts": {
+      "泥": 2,
+      "條": 2,
+      "蟲": 2,
+      "爬": 1,
+      "對": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "巴",
+      "嘴",
+      "尾",
+      "寶",
+      "抱",
+      "抓",
+      "碰"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, subtitles, or readable marks.",
+      "Insects, mud, soil, shadows, and outdoor scenes must be gentle, safe, child-appropriate, clean, non-horror, and not frightening.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 土 as public/assets/lessons/L304/audio/char-u571f.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L304-S01",
+      "text": "養蟲要有泥土。",
+      "spokenText": "養蟲要有泥土",
+      "focusChar": "土",
+      "displayLines": [
+        "養蟲",
+        "要有泥土。"
+      ],
+      "imageNotes": "主角小女孩在透明觀察盒中養幾隻可愛小蟲，盒子裡有泥土、樹葉和空氣孔，主角媽媽在旁邊看著。畫面要清楚呈現養蟲需要泥土；盒子不要密封，不要傷害小蟲，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L304-S02",
+      "text": "小草從泥土裡長出來。",
+      "spokenText": "小草從泥土裡長出來",
+      "focusChar": "土",
+      "displayLines": [
+        "小草從",
+        "泥土裡",
+        "長出來。"
+      ],
+      "imageNotes": "一株小草從泥土裡長出來，畫面近景可看到泥土和小草，背景明亮自然。畫面要清楚呈現小草從泥土裡長出來；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L304-S03",
+      "text": "長長的人影，一條一條在地上。",
+      "spokenText": "長長的人影一條一條在地上",
+      "focusChar": "條",
+      "displayLines": [
+        "長長的人影，",
+        "一條一條",
+        "在地上。"
+      ],
+      "imageNotes": "傍晚或陽光斜照時，主角小女孩、主角爸爸和主角媽媽走在地上，地面上有一條一條長長的人影。畫面重點是地上的長人影像一條一條的線；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L304-S04",
+      "text": "對面那座土山好高。",
+      "spokenText": "對面那座土山好高",
+      "focusChar": "土",
+      "displayLines": [
+        "對面那座",
+        "土山好高。"
+      ],
+      "imageNotes": "主角小女孩和主角爸爸站在安全位置，看著對面一座高高的土山或土堆山。畫面要清楚呈現對面那座土山很高；不可有危險懸崖，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L304-S05",
+      "text": "好多蟲在土裡爬來爬去。",
+      "spokenText": "好多蟲在土裡爬來爬去",
+      "focusChar": "蟲",
+      "displayLines": [
+        "好多蟲",
+        "在土裡",
+        "爬來爬去。"
+      ],
+      "imageNotes": "透明剖面式自然觀察畫面中，幾隻可愛小蟲在土裡爬來爬去。畫面要清楚呈現土裡有好多蟲在爬，但不要畫成密集蟲群、不要噁心或恐怖；不可有文字、數字、標籤。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "土",
+      "count": 4,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "泥",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "條",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "蟲",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "爬",
+        "count": 2,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "對",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L304-S01": 6,
+      "L304-S02": 9,
+      "L304-S03": 12,
+      "L304-S04": 8,
+      "L304-S05": 10
+    },
+    "allowedCharacterAudit": "Expected PASS; Production must verify against latest production JSON learned chars plus provisionalLearnedChars and current new char.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L304-G01",
+      "type": "find-character",
+      "sentenceId": "L304-S02",
+      "targetChar": "土",
+      "reason": "「泥土」是本課核心實物用法，目標字清楚。"
+    },
+    {
+      "id": "L304-G02",
+      "type": "teach-character",
+      "sentenceId": "L304-S01",
+      "targetChar": "土",
+      "targetCharIndex": 5,
+      "prefixText": "養蟲要有泥",
+      "suffixText": "",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L304/audio/L304-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "L304-G03",
+      "type": "missing-character",
+      "sentenceId": "L304-S03",
+      "targetChar": "條",
+      "missingIndexes": [
+        6,
+        8
+      ],
+      "options": [
+        "條",
+        "土",
+        "泥"
+      ]
+    },
+    {
+      "id": "L304-G04",
+      "type": "partial-order",
+      "sentenceId": "L304-S05",
+      "chunks": [
+        "好多蟲",
+        "在土裡",
+        "爬來爬去"
+      ]
+    },
+    {
+      "id": "L304-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L304-S04",
+      "targetChar": "土",
+      "correctText": "對面那座土山好高。",
+      "wrongOneText": "對面那座山好高。",
+      "wrongTwoText": "對面那座橋好高。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L304/audio/L304-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L304/audio/L304-G05-wrong-two.m4a"
+      }
+    }
+  ]
+}

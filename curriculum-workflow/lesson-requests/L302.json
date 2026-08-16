@@ -1,0 +1,246 @@
+{
+  "id": "L302",
+  "order": 302,
+  "newChars": [
+    "條"
+  ],
+  "zhuyin": {
+    "條": "ㄊㄧㄠˊ"
+  },
+  "title": "條",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A complete-package handoff for L302 條. Use approved sentences exactly. Latest origin/main is complete through L300 爬 with review modules through R016, so this is a lesson-local package blocked until R017/R018 and L301 蟲 are in main. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate. Keep insect imagery cute, gentle, sparse, and preschool-appropriate; no gross close-ups, horror, dense swarms, text, numbers, labels, or watermarks.",
+  "dependsOnLessons": [
+    "L301"
+  ],
+  "dependsOnReviewModules": [
+    "R017",
+    "R018"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main learned chars through production JSON L300 + provisional learned chars [蟲] + current new char 條",
+    "dependsOnLessons": [
+      "L301"
+    ],
+    "dependsOnReviewModules": [
+      "R017",
+      "R018"
+    ],
+    "provisionalLearnedChars": [
+      "蟲"
+    ],
+    "requiredCoverageChars": [
+      "條",
+      "蟲",
+      "爬",
+      "對",
+      "罵",
+      "嚇"
+    ],
+    "targetCharMinimumCount": {
+      "條": 3
+    },
+    "recentTargetMinimumCounts": {
+      "蟲": 2,
+      "爬": 2,
+      "對": 2,
+      "罵": 1,
+      "嚇": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "寶",
+      "抱",
+      "弟",
+      "件",
+      "碰",
+      "抓",
+      "告",
+      "訴",
+      "清",
+      "楚",
+      "覺"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Insects must be cute, gentle, sparse, and preschool-appropriate; no gross close-ups, horror, dense swarms, or realistic frightening details.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 條 as public/assets/lessons/L302/audio/char-u689d.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L302-S01",
+      "text": "一條小河流進大海。",
+      "spokenText": "一條小河流進大海",
+      "focusChar": "條",
+      "displayLines": [
+        "一條小河",
+        "流進大海。"
+      ],
+      "imageNotes": "一條小河從草地或山邊流向遠方的大海，畫面開闊、明亮。重點是小河像一條線流進大海；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L302-S02",
+      "text": "一條小蟲爬到頭上，我嚇一跳。",
+      "spokenText": "一條小蟲爬到頭上我嚇一跳",
+      "focusChar": "條",
+      "displayLines": [
+        "一條小蟲",
+        "爬到頭上，",
+        "我嚇一跳。"
+      ],
+      "imageNotes": "一條可愛小蟲爬到主角小女孩頭上，主角小女孩嚇一跳但不是嚴重驚恐，主角媽媽可在旁邊安撫。畫面要清楚呈現小蟲在頭上、嚇一跳；不可有恐怖感、文字、數字、標籤。"
+    },
+    {
+      "id": "L302-S03",
+      "text": "小狗爬上床，被媽媽罵。",
+      "spokenText": "小狗爬上床被媽媽罵",
+      "focusChar": "爬",
+      "displayLines": [
+        "小狗爬上床，",
+        "被媽媽罵。"
+      ],
+      "imageNotes": "家裡的小狗爬上床，主角媽媽站在床邊嚴肅提醒不可以這樣，主角小女孩在旁邊看著。畫面要清楚呈現小狗爬上床、被媽媽罵；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L302-S04",
+      "text": "走這條路，對不對？",
+      "spokenText": "走這條路對不對",
+      "focusChar": "對",
+      "displayLines": [
+        "走這條路，",
+        "對不對？"
+      ],
+      "imageNotes": "主角小女孩和主角爸爸站在路口或分岔小路前，主角小女孩指著其中一條路，像是在問走這條路對不對。畫面要清楚呈現選路與問路情境；不可有路牌文字、數字、標籤。"
+    },
+    {
+      "id": "L302-S05",
+      "text": "小鳥看見一條蟲，就飛過去。",
+      "spokenText": "小鳥看見一條蟲就飛過去",
+      "focusChar": "條",
+      "displayLines": [
+        "小鳥看見",
+        "一條蟲，",
+        "就飛過去。"
+      ],
+      "imageNotes": "一隻小鳥看見地上或樹葉上的一條小蟲，正朝小蟲飛過去。畫面要清楚呈現小鳥看見一條蟲後飛過去；不要畫吃掉的瞬間，不要血腥或驚嚇，不可有文字、數字、標籤。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "條",
+      "count": 4,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "蟲",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "爬",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "對",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "罵",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "嚇",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L302-S01": 8,
+      "L302-S02": 12,
+      "L302-S03": 9,
+      "L302-S04": 7,
+      "L302-S05": 11
+    },
+    "allowedCharacterAudit": "Expected PASS; Production must verify against latest production JSON learned chars plus provisional learned chars and current new char.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L302-G01",
+      "type": "find-character",
+      "sentenceId": "L302-S01",
+      "targetChar": "條",
+      "reason": "「一條小河」是本課核心量詞用法，目標字清楚。"
+    },
+    {
+      "id": "L302-G02",
+      "type": "teach-character",
+      "sentenceId": "L302-S02",
+      "targetChar": "條",
+      "targetCharIndex": 1,
+      "prefixText": "一",
+      "suffixText": "小蟲爬到頭上我嚇一跳",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L302/audio/L302-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L302/audio/L302-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L302-G03",
+      "type": "missing-character",
+      "sentenceId": "L302-S03",
+      "targetChar": "罵",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "罵",
+        "爬",
+        "蟲"
+      ]
+    },
+    {
+      "id": "L302-G04",
+      "type": "partial-order",
+      "sentenceId": "L302-S04",
+      "chunks": [
+        "走這條路",
+        "對",
+        "不對"
+      ]
+    },
+    {
+      "id": "L302-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L302-S05",
+      "correctText": "小鳥看見一條蟲，就飛過去。",
+      "wrongOneText": "小鳥看見一條蟲，就飛回去。",
+      "wrongTwoText": "小鳥看見一條蟲，就飛下去。"
+    }
+  ]
+}
