@@ -1,0 +1,244 @@
+{
+  "id": "L301",
+  "order": 301,
+  "newChars": [
+    "蟲"
+  ],
+  "zhuyin": {
+    "蟲": "ㄔㄨㄥˊ"
+  },
+  "title": "蟲",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved final sentences from Production Handoff L301. Latest origin/main boundary is L001-L300 with review modules R001-R016. L301 is blocked from production JSON until R017/R018 are merged after L300. Approved learner-facing text uses only latest origin/main L001-L300 learned chars plus current new char 蟲.",
+  "dependsOnLessons": [],
+  "dependsOnReviewModules": [
+    "R017",
+    "R018"
+  ],
+  "provisionalLearnedChars": [],
+  "packageStatus": "ready-blocked-by-review-dependency",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main L001-L300 learned chars + current new char 蟲",
+    "dependsOnReviewModules": [
+      "R017",
+      "R018"
+    ],
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "蟲",
+      "爬",
+      "對",
+      "罵",
+      "嚇",
+      "被"
+    ],
+    "targetCharMinimumCount": {
+      "蟲": 3
+    },
+    "recentTargetMinimumCounts": {
+      "爬": 2,
+      "對": 2,
+      "罵": 2,
+      "嚇": 1,
+      "被": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "條",
+      "寶",
+      "地",
+      "碰",
+      "抓",
+      "告",
+      "訴",
+      "清",
+      "楚",
+      "覺"
+    ],
+    "imageRules": [
+      "All new sentence images must be square image / 1:1 composition.",
+      "Use L058 only as style reference, not character appearance reference.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "Bugs must be cute, gentle, sparse, and preschool-safe; no gross realism, horror, or dense swarms.",
+      "No visible text, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 蟲 as public/assets/lessons/L301/audio/char-u87f2.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L301-S01",
+      "text": "小蟲在樹葉上爬。",
+      "spokenText": "小蟲在樹葉上爬",
+      "focusChar": "蟲",
+      "displayLines": [
+        "小蟲在樹葉上",
+        "爬。"
+      ],
+      "imageNotes": "一隻可愛的小蟲在綠色樹葉上慢慢爬，畫面近景但不要噁心。主體是小蟲和樹葉，構圖清楚、溫和；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L301-S02",
+      "text": "小孩把蟲放到桌上，被媽媽罵。",
+      "spokenText": "小孩把蟲放到桌上被媽媽罵",
+      "focusChar": "蟲",
+      "displayLines": [
+        "小孩把蟲放到桌上，",
+        "被媽媽罵。"
+      ],
+      "imageNotes": "主角小女孩把一隻小蟲放到家中桌上，主角媽媽在旁邊嚴肅提醒她不可以這樣做。畫面要清楚呈現小孩把蟲放到桌上、被媽媽罵；蟲要小而可愛，不可噁心，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L301-S03",
+      "text": "小蟲吃菜葉，對不對？",
+      "spokenText": "小蟲吃菜葉對不對",
+      "focusChar": "對",
+      "displayLines": [
+        "小蟲吃菜葉，",
+        "對不對？"
+      ],
+      "imageNotes": "一隻小蟲正在咬一片菜葉，主角小女孩在旁邊觀察，表情像是在想這樣對不對。畫面要清楚呈現小蟲吃菜葉；不可有文字、數字、對話框或標籤。"
+    },
+    {
+      "id": "L301-S04",
+      "text": "小蟲爬到頭上，我嚇了一跳。",
+      "spokenText": "小蟲爬到頭上我嚇了一跳",
+      "focusChar": "嚇",
+      "displayLines": [
+        "小蟲爬到頭上，",
+        "我嚇了一跳。"
+      ],
+      "imageNotes": "一隻可愛小蟲爬到主角小女孩頭上，主角小女孩被嚇了一跳但不是嚴重驚恐，主角媽媽可在旁邊安撫。畫面要清楚呈現小蟲在頭上、嚇了一跳；不可有恐怖感、文字、數字、標籤。"
+    },
+    {
+      "id": "L301-S05",
+      "text": "不要罵人，要好好說。",
+      "spokenText": "不要罵人要好好說",
+      "focusChar": "罵",
+      "displayLines": [
+        "不要罵人，",
+        "要好好說。"
+      ],
+      "imageNotes": "主角媽媽溫和提醒主角小女孩不要罵人，要好好說話。畫面是親子溝通情境，主角小女孩低頭聽媽媽說；不可有文字、數字、對話框或標籤。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "蟲",
+      "count": 4,
+      "required": 3,
+      "pass": true
+    },
+    "recentTargets": [
+      {
+        "lesson": "L300",
+        "char": "爬",
+        "count": 2,
+        "required": 2,
+        "pass": true
+      },
+      {
+        "lesson": "L299",
+        "char": "對",
+        "count": 2,
+        "required": 2,
+        "pass": true
+      },
+      {
+        "lesson": "L298",
+        "char": "罵",
+        "count": 2,
+        "required": 2,
+        "pass": true
+      },
+      {
+        "lesson": "L297",
+        "char": "嚇",
+        "count": 1,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "lesson": "L296",
+        "char": "被",
+        "count": 1,
+        "required": 1,
+        "pass": true
+      }
+    ],
+    "sentenceHanCounts": {
+      "L301-S01": 7,
+      "L301-S02": 12,
+      "L301-S03": 8,
+      "L301-S04": 11,
+      "L301-S05": 8
+    },
+    "allowedCharacterAudit": "PASS against latest origin/main L001-L300 + current 蟲",
+    "anyLongerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L301-G01",
+      "type": "find-character",
+      "sentenceId": "L301-S01",
+      "targetChar": "蟲",
+      "reason": "「小蟲」是本課核心名詞，目標字清楚。"
+    },
+    {
+      "id": "L301-G02",
+      "type": "teach-character",
+      "sentenceId": "L301-S02",
+      "targetChar": "蟲",
+      "targetCharIndex": 3,
+      "teachAudioText": {
+        "prefixText": "小孩把",
+        "suffixText": "放到桌上被媽媽罵"
+      }
+    },
+    {
+      "id": "L301-G03",
+      "type": "missing-character",
+      "sentenceId": "L301-S04",
+      "targetChar": "嚇",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "嚇",
+        "蟲",
+        "爬"
+      ]
+    },
+    {
+      "id": "L301-G04",
+      "type": "partial-order",
+      "sentenceId": "L301-S03",
+      "chunks": [
+        "小蟲",
+        "吃菜葉",
+        "對不對"
+      ]
+    },
+    {
+      "id": "L301-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L301-S05",
+      "correctText": "不要罵人，要好好說。",
+      "wrongOneText": "不要罵人，要好好看。",
+      "wrongTwoText": "不要罵人，要好好玩。"
+    }
+  ],
+  "releaseAudit": {
+    "latestOriginMainBoundary": "L300 爬",
+    "reviewDependencyStatus": "ready-blocked-by-review-dependency until R017/R018 are merged",
+    "allowedCharacterAudit": "PASS against latest origin/main L001-L300 + current 蟲"
+  }
+}
