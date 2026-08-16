@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L311 | 次 / normal lesson | claimed | Production B | codex/l311-complete-package / e14f29a7 | L307 照, L308 顧, L309 忘, L310 每 | ["照","顧","忘","每"] | curriculum-workflow/lesson-requests/L311.json, curriculum-workflow/generated/L311-generation-packet.md | public/assets/lessons/L311/images/, public/assets/lessons/L311/audio/ | accepted handoff and starting complete package; L311 must not enter production JSON until L307-L310 are in main |
+| L311 | 次 / normal lesson | ready-blocked-by-dependency | Production B | codex/l311-complete-package / f39a008c | L307 照, L308 顧, L309 忘, L310 每 | ["照","顧","忘","每"] | curriculum-workflow/lesson-requests/L311.json, curriculum-workflow/generated/L311-generation-packet.md | public/assets/lessons/L311/images/, public/assets/lessons/L311/audio/ | complete package prepared; blocked until L307-L310 are in main |
 
 ## Status Values
 
