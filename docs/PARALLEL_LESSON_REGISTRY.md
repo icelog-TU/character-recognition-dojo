@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L298 | 罵 / normal lesson | claimed | Production D | codex/l298-complete-package / fa77990b | L296 被, L297 嚇 | ["被","嚇"] | curriculum-workflow/lesson-requests/L298.json, curriculum-workflow/generated/L298-generation-packet.md | public/assets/lessons/L298/images/, public/assets/lessons/L298/audio/ | accepted handoff; recalculated dependency boundary from latest origin/main L295 |
 
 ## Status Values
 
