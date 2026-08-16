@@ -10,18 +10,14 @@
   "title": "對",
   "targetSentenceCount": 5,
   "dependsOnLessons": [
-    "L296",
-    "L297",
     "L298"
   ],
   "provisionalLearnedChars": [
-    "被",
-    "嚇",
     "罵"
   ],
-  "teacherNotes": "Accepted Production handoff. Latest origin/main is complete through L295 哭, so build lesson-local complete package only and block until L296-L298 are in main. Use origin/main L001-L295 plus provisional learned chars [被,嚇,罵] and current target 對 for learner-facing allowed-character audit. Scenes involving scolding, frightening, crying, or apology must remain gentle and child-safe; do not depict severe shaming, bullying, adult rage, horror, or emotional oppression.",
+  "teacherNotes": "Accepted Production handoff. Latest origin/main is complete through L297 嚇, so build lesson-local complete package only and block until L298 are in main. Use origin/main L001-L297 + provisional learned chars [罵] + current target 對 for learner-facing allowed-character audit. Scenes involving scolding, frightening, crying, or apology must remain gentle and child-safe; do not depict severe shaming, bullying, adult rage, horror, or emotional oppression.",
   "generationConstraints": {
-    "allowedBoundary": "origin/main L001-L295 + provisional learned chars [被,嚇,罵] + current target 對",
+    "allowedBoundary": "origin/main L001-L297 + provisional learned chars [罵] + current target 對",
     "coverageTargets": {
       "current": "對",
       "previous1": "罵",
