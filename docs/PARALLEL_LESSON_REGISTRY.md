@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L294 | 怕 / normal lesson | claimed | Production D | codex/l294-complete-package / f529f5d6 | L289 忍, L290 耐, L291 敢, L292 當, L293 然 | ["忍","耐","敢","當","然"] | curriculum-workflow/lesson-requests/L294.json, curriculum-workflow/generated/L294-generation-packet.md | public/assets/lessons/L294/images/, public/assets/lessons/L294/audio/ | accepted handoff and starting complete package |
+| L294 | 怕 / normal lesson | needs-rework | Production D | codex/l294-complete-package / f529f5d6 | L289 忍, L290 耐, L291 敢, L292 當, L293 然 | ["忍","耐","敢","當","然"] | curriculum-workflow/lesson-requests/L294.json, curriculum-workflow/generated/L294-generation-packet.md | public/assets/lessons/L294/images/, public/assets/lessons/L294/audio/ | stopped before asset work: allowed-character audit failed because approved S03 uses 受, which is not in latest origin/main L001-L287 learned chars, provisional chars, or current char 怕 |
 
 ## Status Values
 
