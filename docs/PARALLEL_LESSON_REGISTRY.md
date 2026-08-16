@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L291 | 敢 / normal lesson | claimed | Production A | codex/l291-complete-package / 27f47997 | L288 受, L289 忍, L290 耐 | ["受","忍","耐"] | curriculum-workflow/lesson-requests/L291.json, curriculum-workflow/generated/L291-generation-packet.md | public/assets/lessons/L291/images/, public/assets/lessons/L291/audio/ | accepted handoff and starting complete package; latest main already includes L286 皮 and L287 痛 |
 
 ## Status Values
 
