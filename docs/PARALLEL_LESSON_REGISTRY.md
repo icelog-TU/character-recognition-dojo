@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L293 | 然 / normal lesson | claimed | Production B | codex/l293-complete-package / f529f5d6 | L288 受, L289 忍, L290 耐, L291 敢, L292 當 | ["受","忍","耐","敢","當"] | curriculum-workflow/lesson-requests/L293.json, curriculum-workflow/generated/L293-generation-packet.md | public/assets/lessons/L293/images/, public/assets/lessons/L293/audio/ | reassigned from Production C to Production B; accepted handoff and starting complete package |
+| L293 | 然 / normal lesson | ready-blocked-by-dependency | Production B | codex/l293-complete-package / a7a2682a | L288 受, L289 忍, L290 耐, L291 敢, L292 當 | ["受","忍","耐","敢","當"] | curriculum-workflow/lesson-requests/L293.json, curriculum-workflow/generated/L293-generation-packet.md | public/assets/lessons/L293/images/, public/assets/lessons/L293/audio/ | complete package prepared; blocked from merge until L288-L292 are in main |
 
 ## Status Values
 
