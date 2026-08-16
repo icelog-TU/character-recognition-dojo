@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-16T05:44:40.715Z",
+  "exportedAt": "2026-08-16T07:56:46.737Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -139085,7 +139085,7 @@
               "text": "我怕衣服濕掉，不敢下水。",
               "correct": true,
               "audioSrc": "/assets/lessons/L296/audio/L296-S03.m4a",
-              "spokenText": "我怕衣服濕掉不敢下水"
+              "spokenText": "我怕衣服濕掉，不敢下水。"
             },
             {
               "id": "L296-G05-B",
@@ -139099,7 +139099,7 @@
               "text": "我怕衣服濕掉，不敢玩水。",
               "correct": false,
               "audioSrc": "/assets/lessons/L296/audio/L296-G05-wrong-two.m4a",
-              "spokenText": "我怕衣服濕掉不敢玩水"
+              "spokenText": "我怕衣服濕掉，不敢玩水。"
             }
           ]
         }
@@ -139605,6 +139605,1445 @@
               "text": "我怕窗外的白雲，好嚇人。",
               "audioSrc": "/assets/lessons/L297/audio/L297-G05-wrong-two.m4a",
               "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L298",
+      "order": 298,
+      "newChars": [
+        "罵"
+      ],
+      "zhuyin": {
+        "罵": "ㄇㄚˋ"
+      },
+      "charAudio": {
+        "罵": "/assets/lessons/L298/audio/char-u7f75.m4a"
+      },
+      "title": "罵",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "text",
+        "text": "Teacher-approved final sentences from Production Handoff L298. Production recalculated latest origin/main boundary as L001-L295; L292-L295 are already merged, so only L296 被 and L297 嚇 remain provisional. Coverage targets remain L298 罵, L297 嚇, L296 被, L295 哭, L294 怕, L293 然, with additional L292 當 already in main."
+      },
+      "sentences": [
+        {
+          "id": "L298-S01",
+          "text": "我怕大人生氣罵人。",
+          "spokenText": "我怕大人生氣罵人",
+          "focusChar": "罵",
+          "displayLines": [
+            "我怕大人",
+            "生氣罵人。"
+          ],
+          "imageNotes": "主角小女孩看見一位路人大人或店員生氣罵人，她站在主角媽媽旁邊覺得害怕。畫面要清楚呈現大人生氣罵人讓孩子害怕，但不要畫成主角媽媽罵孩子，不要過度兇狠；不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Keep scolding scenes gentle and child-safe: no bullying, no adult rage at a child, no humiliation, no violence, no frightening emotional pressure. Scene: safe public indoor or storefront-like area without signs. A passerby adult or shop clerk is visibly upset and scolding another adult off to the side, not scolding the protagonist little girl. The protagonist little girl stands close beside the protagonist mother and looks afraid. The mother calmly protects and reassures her. Make clear that an angry adult scolding people can make the child afraid, but keep expressions restrained and non-threatening.",
+          "imageSrc": "/assets/lessons/L298/images/L298-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L298/audio/L298-S01.m4a",
+            "durationMs": 3961,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1520,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2860
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2860,
+                "endMs": 3160
+              }
+            ]
+          }
+        },
+        {
+          "id": "L298-S02",
+          "text": "被人大罵，當然會嚇到。",
+          "spokenText": "被人大罵當然會嚇到",
+          "focusChar": "嚇",
+          "displayLines": [
+            "被人大罵，",
+            "當然會嚇到。"
+          ],
+          "imageNotes": "兩個孩子或一個孩子和路人大人之間發生大聲責備情境，被罵的孩子嚇到退縮，旁邊有主角媽媽或老師溫和制止。畫面重點是被人大罵會嚇到；不要畫成成人暴怒威脅孩子，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Keep scolding scenes gentle and child-safe: no bullying, no adult rage at a child, no humiliation, no violence, no frightening emotional pressure. Scene: classroom or playroom. One child has been loudly scolded and looks startled, stepping back slightly. Another child or a mildly upset passerby adult is nearby, but not threatening. A teacher or protagonist mother gently steps in with a calm stop gesture. Make clear that being loudly scolded can frighten someone. No harsh adult rage, no intimidation, no tears required.",
+          "imageSrc": "/assets/lessons/L298/images/L298-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L298/audio/L298-S02.m4a",
+            "durationMs": 3606,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1800,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2900,
+                "endMs": 3080
+              }
+            ]
+          }
+        },
+        {
+          "id": "L298-S03",
+          "text": "不要罵人，我被罵會哭。",
+          "spokenText": "不要罵人我被罵會哭",
+          "focusChar": "罵",
+          "displayLines": [
+            "不要罵人，",
+            "我被罵會哭。"
+          ],
+          "imageNotes": "主角小女孩面對另一個孩子，表情委屈，表示不要罵人，自己被罵會哭。主角媽媽或老師在旁邊溫和調停。畫面要清楚呈現不要罵人、被罵會哭；不可畫成霸凌或激烈衝突，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Keep scolding scenes gentle and child-safe: no bullying, no adult rage at a child, no humiliation, no violence, no frightening emotional pressure. Scene: calm playroom or classroom. The protagonist little girl faces another child who has been scolding; the protagonist girl looks hurt and close to crying, gently expressing that scolding makes her cry. A teacher or protagonist mother stands between or beside them, mediating warmly. Make clear: do not scold people; being scolded can make the girl cry. No bullying or intense conflict.",
+          "imageSrc": "/assets/lessons/L298/images/L298-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L298/audio/L298-S03.m4a",
+            "durationMs": 4162,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 250
+              },
+              {
+                "charIndex": 1,
+                "startMs": 250,
+                "endMs": 500
+              },
+              {
+                "charIndex": 2,
+                "startMs": 500,
+                "endMs": 700
+              },
+              {
+                "charIndex": 3,
+                "startMs": 700,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1660,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2160,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2360,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2840,
+                "endMs": 3060
+              }
+            ]
+          }
+        },
+        {
+          "id": "L298-S04",
+          "text": "大叫罵人，好嚇人。",
+          "spokenText": "大叫罵人好嚇人",
+          "focusChar": "罵",
+          "displayLines": [
+            "大叫罵人，",
+            "好嚇人。"
+          ],
+          "imageNotes": "一個孩子大叫罵人，主角小女孩在旁邊覺得被嚇到，老師或主角媽媽溫和制止。畫面要清楚呈現大叫罵人很嚇人；不要畫成恐怖或暴力場景，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Keep scolding scenes gentle and child-safe: no bullying, no adult rage at a child, no humiliation, no violence, no frightening emotional pressure. Scene: classroom or play area. One child is yelling in anger, shown with a wide open mouth and tense posture, while the protagonist little girl nearby looks startled or frightened. A teacher or protagonist mother calmly intervenes with an open hand gesture. Make clear: yelling and scolding is scary. No horror, violence, or aggressive confrontation.",
+          "imageSrc": "/assets/lessons/L298/images/L298-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L298/audio/L298-S04.m4a",
+            "durationMs": 4150,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1940,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2160,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2440,
+                "endMs": 2740
+              }
+            ]
+          }
+        },
+        {
+          "id": "L298-S05",
+          "text": "做錯事被罵，忍不住哭了。",
+          "spokenText": "做錯事被罵忍不住哭了",
+          "focusChar": "罵",
+          "displayLines": [
+            "做錯事被罵，",
+            "忍不住哭了。"
+          ],
+          "imageNotes": "主角小女孩不小心做錯事，例如打翻玩具或弄亂桌面，被溫和提醒後忍不住哭了，主角媽媽在旁邊安撫。畫面要清楚呈現做錯事、被罵後忍不住哭；不要畫成嚴厲責罵或羞辱，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Keep scolding scenes gentle and child-safe: no bullying, no adult rage at a child, no humiliation, no violence, no frightening emotional pressure. Scene: home play area. The protagonist little girl has accidentally made a mistake, such as knocking over toys or making a small mess on a table. After a gentle scolding or firm reminder, she cannot hold back and cries softly. The protagonist mother is nearby comforting her with a gentle posture. Make clear: doing something wrong and being scolded led to crying, but avoid severe blame, shame, or anger.",
+          "imageSrc": "/assets/lessons/L298/images/L298-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L298/audio/L298-S05.m4a",
+            "durationMs": 3473,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 560
+              },
+              {
+                "charIndex": 2,
+                "startMs": 560,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2060,
+                "endMs": 2061
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2060,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2240,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2440,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2800,
+                "endMs": 3000
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L298-G01",
+          "type": "find-character",
+          "sentenceId": "L298-S03",
+          "targetChar": "罵",
+          "prompt": "Find the target character.",
+          "missingIndexes": [
+            2,
+            6
+          ]
+        },
+        {
+          "id": "L298-G02",
+          "type": "teach-character",
+          "sentenceId": "L298-S01",
+          "targetChar": "罵",
+          "targetCharIndex": 6,
+          "prompt": "Listen to the target character.",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L298/audio/L298-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L298/audio/L298-G02-suffix.m4a"
+          },
+          "teachAudioText": {
+            "prefixText": "我怕大人生氣",
+            "suffixText": "人"
+          },
+          "missingIndexes": [
+            6
+          ]
+        },
+        {
+          "id": "L298-G03",
+          "type": "missing-character",
+          "sentenceId": "L298-S02",
+          "targetChar": "罵",
+          "prompt": "Choose the missing character.",
+          "missingIndexes": [
+            3
+          ],
+          "options": [
+            {
+              "id": "L298-G03-A",
+              "text": "罵",
+              "correct": true
+            },
+            {
+              "id": "L298-G03-B",
+              "text": "嚇",
+              "correct": false
+            },
+            {
+              "id": "L298-G03-C",
+              "text": "哭",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L298-G04",
+          "type": "partial-order",
+          "sentenceId": "L298-S05",
+          "targetChar": "罵",
+          "prompt": "Put the sentence in order.",
+          "chunks": [
+            {
+              "text": "做錯事被罵",
+              "order": 0
+            },
+            {
+              "text": "忍不住",
+              "order": 1
+            },
+            {
+              "text": "哭了",
+              "order": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "L298-G04-A",
+              "text": "做錯事被罵",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L298-G04-B",
+              "text": "忍不住",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L298-G04-C",
+              "text": "哭了",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ],
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "correctOrder": [
+            "L298-G04-A",
+            "L298-G04-B",
+            "L298-G04-C"
+          ]
+        },
+        {
+          "id": "L298-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L298-S04",
+          "targetChar": "罵",
+          "prompt": "Choose the sentence you hear.",
+          "options": [
+            {
+              "id": "L298-G05-A",
+              "text": "大叫罵人，好嚇人。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L298/audio/L298-S04.m4a",
+              "spokenText": "大叫罵人，好嚇人。"
+            },
+            {
+              "id": "L298-G05-B",
+              "text": "大叫罵人，不嚇人。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L298/audio/L298-G05-wrong-one.m4a",
+              "spokenText": "大叫罵人，不嚇人。"
+            },
+            {
+              "id": "L298-G05-C",
+              "text": "大叫打人，好嚇人。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L298/audio/L298-G05-wrong-two.m4a",
+              "spokenText": "大叫打人，好嚇人。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L299",
+      "order": 299,
+      "newChars": [
+        "對"
+      ],
+      "zhuyin": {
+        "對": "ㄉㄨㄟˋ"
+      },
+      "charAudio": {
+        "對": "/assets/lessons/L299/audio/char-u5c0d.m4a"
+      },
+      "title": "對",
+      "requiredRounds": 5,
+      "originHint": "Accepted Production handoff. Latest origin/main is complete through L297 嚇, so build lesson-local complete package only and block until L298 are in main. Use origin/main L001-L297 + provisional learned chars [罵] + current target 對 for learner-facing allowed-character audit. Scenes involving scolding, frightening, crying, or apology must remain gentle and child-safe; do not depict severe shaming, bullying, adult rage, horror, or emotional oppression.",
+      "sentences": [
+        {
+          "id": "L299-S01",
+          "text": "做錯事被罵，要說對不起。",
+          "spokenText": "做錯事被罵要說對不起",
+          "focusChar": "對",
+          "displayLines": [
+            "做錯事被罵，",
+            "要說對不起。"
+          ],
+          "imageNotes": "主角小女孩不小心做錯事，例如打翻玩具或弄亂桌面，被主角媽媽溫和提醒後，準備說對不起。畫面要清楚呈現做錯事、被罵或被提醒、要說對不起；不要畫成嚴厲責罵或羞辱，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. When a teacher appears, make the teacher visually distinct from the protagonist mother and do not use the family color palette. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Scenes involving scolding, frightening, crying, or apology must be gentle, child-safe, non-bullying, non-horror, non-violent, and emotionally mild. Scene direction: warm home interior. Clearly show protagonist little girl accidentally making a small mess with toys or a tabletop, protagonist mother gently reminding her, and the girl preparing to apologize. The mother is calm, not angry or humiliating. Approved image notes for semantic fidelity: 主角小女孩不小心做錯事，例如打翻玩具或弄亂桌面，被主角媽媽溫和提醒後，準備說對不起。畫面要清楚呈現做錯事、被罵或被提醒、要說對不起；不要畫成嚴厲責罵或羞辱，不可有文字、數字、標籤。",
+          "imageSrc": "/assets/lessons/L299/images/L299-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L299/audio/L299-S01.m4a",
+            "durationMs": 4009,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2733
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2733,
+                "endMs": 2967
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2967,
+                "endMs": 3200
+              }
+            ]
+          }
+        },
+        {
+          "id": "L299-S02",
+          "text": "不可以亂罵人，快說對不起。",
+          "spokenText": "不可以亂罵人快說對不起",
+          "focusChar": "對",
+          "displayLines": [
+            "不可以",
+            "亂罵人，",
+            "快說對不起。"
+          ],
+          "imageNotes": "兩個孩子發生小衝突，其中一個孩子亂罵人，主角媽媽或老師溫和介入，提醒孩子快說對不起。畫面要清楚呈現不可以亂罵人、要說對不起；不可畫成霸凌、成人怒罵或激烈衝突，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. When a teacher appears, make the teacher visually distinct from the protagonist mother and do not use the family color palette. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Scenes involving scolding, frightening, crying, or apology must be gentle, child-safe, non-bullying, non-horror, non-violent, and emotionally mild. Scene direction: classroom or home play area. Show two children after a small verbal conflict, with protagonist mother or a teacher gently intervening and prompting an apology. Keep body language calm; no bullying, shouting adult, or intense conflict. Approved image notes for semantic fidelity: 兩個孩子發生小衝突，其中一個孩子亂罵人，主角媽媽或老師溫和介入，提醒孩子快說對不起。畫面要清楚呈現不可以亂罵人、要說對不起；不可畫成霸凌、成人怒罵或激烈衝突，不可有文字、數字、標籤。",
+          "imageSrc": "/assets/lessons/L299/images/L299-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L299/audio/L299-S02.m4a",
+            "durationMs": 4076,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 510
+              },
+              {
+                "charIndex": 2,
+                "startMs": 510,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1140,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1320,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2360,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 2933
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2933,
+                "endMs": 3107
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3107,
+                "endMs": 3280
+              }
+            ]
+          }
+        },
+        {
+          "id": "L299-S03",
+          "text": "把人嚇哭，這樣不對。",
+          "spokenText": "把人嚇哭這樣不對",
+          "focusChar": "對",
+          "displayLines": [
+            "把人嚇哭，",
+            "這樣不對。"
+          ],
+          "imageNotes": "一個孩子做出突然嚇人的動作，把另一個孩子嚇哭，主角媽媽或老師溫和制止。畫面要清楚呈現把人嚇哭是不對的；不可畫成霸凌、恐怖或暴力攻擊，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. When a teacher appears, make the teacher visually distinct from the protagonist mother and do not use the family color palette. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Scenes involving scolding, frightening, crying, or apology must be gentle, child-safe, non-bullying, non-horror, non-violent, and emotionally mild. Scene direction: classroom or playroom. Show one child making a sudden mild scary gesture that made another child cry, while protagonist mother or a teacher gently stops the behavior. Make it clear the action is wrong without depicting horror, bullying, or violence. Approved image notes for semantic fidelity: 一個孩子做出突然嚇人的動作，把另一個孩子嚇哭，主角媽媽或老師溫和制止。畫面要清楚呈現把人嚇哭是不對的；不可畫成霸凌、恐怖或暴力攻擊，不可有文字、數字、標籤。",
+          "imageSrc": "/assets/lessons/L299/images/L299-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L299/audio/L299-S03.m4a",
+            "durationMs": 3539,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1200,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1920,
+                "endMs": 2150
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2150,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2380,
+                "endMs": 2610
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2610,
+                "endMs": 2840
+              }
+            ]
+          }
+        },
+        {
+          "id": "L299-S04",
+          "text": "我被門外黑影嚇哭了。",
+          "spokenText": "我被門外黑影嚇哭了",
+          "focusChar": "嚇",
+          "displayLines": [
+            "我被門外",
+            "黑影",
+            "嚇哭了。"
+          ],
+          "imageNotes": "主角小女孩在室內看見門外有黑影，黑影其實可以是樹影或普通人影，她被門外黑影嚇哭了，主角媽媽在旁邊安撫。畫面要清楚呈現門外黑影和孩子被嚇哭；不要畫恐怖鬼怪，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. When a teacher appears, make the teacher visually distinct from the protagonist mother and do not use the family color palette. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Scenes involving scolding, frightening, crying, or apology must be gentle, child-safe, non-bullying, non-horror, non-violent, and emotionally mild. Scene direction: indoor doorway at night. Protagonist little girl sees a dark shape outside the door that can plausibly be a tree shadow or ordinary person shadow, and she cries from being startled. Protagonist mother comforts her. No ghost, monster, horror, or threatening figure. Approved image notes for semantic fidelity: 主角小女孩在室內看見門外有黑影，黑影其實可以是樹影或普通人影，她被門外黑影嚇哭了，主角媽媽在旁邊安撫。畫面要清楚呈現門外黑影和孩子被嚇哭；不要畫恐怖鬼怪，不可有文字、數字、標籤。",
+          "imageSrc": "/assets/lessons/L299/images/L299-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L299/audio/L299-S04.m4a",
+            "durationMs": 4033,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2040,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3160,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3380,
+                "endMs": 3620
+              }
+            ]
+          }
+        },
+        {
+          "id": "L299-S05",
+          "text": "我怕黑，不敢出門。",
+          "spokenText": "我怕黑不敢出門",
+          "focusChar": "怕",
+          "displayLines": [
+            "我怕黑，",
+            "不敢出門。"
+          ],
+          "imageNotes": "主角小女孩站在家門口，門外天黑，她怕黑、不敢出門，主角媽媽在旁邊溫和陪伴。畫面要清楚呈現怕黑、不敢出門；不可畫成恐怖場景，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Do not copy any specific person, clothing, hair, face, or body shape from L058. Use protagonist family continuity from L154/L162/L163 for the recurring little girl, protagonist mother, and protagonist father when present. When a teacher appears, make the teacher visually distinct from the protagonist mother and do not use the family color palette. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks. Scenes involving scolding, frightening, crying, or apology must be gentle, child-safe, non-bullying, non-horror, non-violent, and emotionally mild. Scene direction: safe home doorway at night. Protagonist little girl stands inside near the door, looking afraid of the dark and unwilling to go outside. Protagonist mother stays beside her warmly. Dark outside but not scary. Approved image notes for semantic fidelity: 主角小女孩站在家門口，門外天黑，她怕黑、不敢出門，主角媽媽在旁邊溫和陪伴。畫面要清楚呈現怕黑、不敢出門；不可畫成恐怖場景，不可有文字、數字、標籤。",
+          "imageSrc": "/assets/lessons/L299/images/L299-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L299/audio/L299-S05.m4a",
+            "durationMs": 3938,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1480,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1780,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2440,
+                "endMs": 2680
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L299-G01",
+          "type": "find-character",
+          "sentenceId": "L299-S02",
+          "targetChar": "對",
+          "prompt": "Find the target character.",
+          "missingIndexes": [
+            8
+          ]
+        },
+        {
+          "id": "L299-G02",
+          "type": "teach-character",
+          "sentenceId": "L299-S01",
+          "targetChar": "對",
+          "targetCharIndex": 7,
+          "prompt": "Listen to the target character.",
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L299/audio/L299-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L299/audio/L299-G02-suffix.m4a"
+          },
+          "teachAudioText": {
+            "prefixText": "做錯事被罵要說",
+            "suffixText": "不起"
+          },
+          "missingIndexes": [
+            7
+          ]
+        },
+        {
+          "id": "L299-G03",
+          "type": "missing-character",
+          "sentenceId": "L299-S03",
+          "targetChar": "對",
+          "prompt": "Choose the missing character.",
+          "missingIndexes": [
+            7
+          ],
+          "options": [
+            {
+              "id": "L299-G03-A",
+              "text": "對",
+              "correct": true
+            },
+            {
+              "id": "L299-G03-B",
+              "text": "罵",
+              "correct": false
+            },
+            {
+              "id": "L299-G03-C",
+              "text": "嚇",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L299-G04",
+          "type": "partial-order",
+          "sentenceId": "L299-S04",
+          "targetChar": "嚇",
+          "prompt": "Put the sentence in order.",
+          "chunks": [
+            {
+              "text": "我被門外黑影",
+              "order": 0
+            },
+            {
+              "text": "嚇哭",
+              "order": 1
+            },
+            {
+              "text": "了",
+              "order": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "L299-G04-A",
+              "text": "我被門外黑影",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L299-G04-B",
+              "text": "嚇哭",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L299-G04-C",
+              "text": "了",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ],
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "correctOrder": [
+            "L299-G04-A",
+            "L299-G04-B",
+            "L299-G04-C"
+          ]
+        },
+        {
+          "id": "L299-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L299-S05",
+          "targetChar": "怕",
+          "prompt": "Choose the sentence you hear.",
+          "options": [
+            {
+              "id": "L299-G05-A",
+              "text": "我怕黑，不敢出門。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L299/audio/L299-S05.m4a",
+              "spokenText": "我怕黑，不敢出門。"
+            },
+            {
+              "id": "L299-G05-B",
+              "text": "我怕黑，不敢開門。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L299/audio/L299-G05-wrong-one.m4a",
+              "spokenText": "我怕黑，不敢開門。"
+            },
+            {
+              "id": "L299-G05-C",
+              "text": "我怕黑，不敢出聲。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L299/audio/L299-G05-wrong-two.m4a",
+              "spokenText": "我怕黑，不敢出聲。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L300",
+      "order": 300,
+      "newChars": [
+        "爬"
+      ],
+      "zhuyin": {
+        "爬": "ㄆㄚˊ"
+      },
+      "charAudio": {
+        "爬": "/assets/lessons/L300/audio/char-u722c.m4a"
+      },
+      "title": "爬",
+      "requiredRounds": 5,
+      "originHint": {
+        "kind": "production-handoff",
+        "text": "Production B complete package from teacher-approved L300 handoff; dependency-blocked until L298-L299 are in main."
+      },
+      "sentences": [
+        {
+          "id": "L300-S01",
+          "text": "不要爬樹，會被罵。",
+          "spokenText": "不要爬樹會被罵",
+          "focusChar": "爬",
+          "displayLines": [
+            "不要爬樹，",
+            "會被罵。"
+          ],
+          "imageNotes": "主角小女孩正想爬一棵低矮的樹，主角媽媽站在旁邊嚴肅提醒她不要爬樹。畫面要清楚呈現不要爬樹、會被罵的情境；樹要低矮安全，不可有文字、數字、標籤，不要畫成危險高樹。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: refined warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home, classroom, park, or play setting, and phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket or pink top, blue skirt or child-friendly outfit, and warm expressive face; protagonist mother is a warm adult family role in practical clothing; protagonist father and protagonist older brother must be distinct family roles. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere. Climbing, startling, scolding, crying, and broken-toy scenes must be gentle, safe, child-appropriate, nonviolent, non-bloody, non-horror, and not frightening. Scene: a safe park or home garden with one low, sturdy tree. The recurring protagonist little girl is just starting to climb or reaching toward the low tree, while the recurring protagonist mother stands close beside her with a serious but caring expression and a calm stop gesture. Make it clear the mother is warning her not to climb the tree and that being scolded is a consequence. The tree must look low and safe, not a dangerous tall tree. Teacher image notes: 主角小女孩正想爬一棵低矮的樹，主角媽媽站在旁邊嚴肅提醒她不要爬樹。畫面要清楚呈現不要爬樹、會被罵的情境；樹要低矮安全，不可有文字、數字、標籤，不要畫成危險高樹。",
+          "imageSrc": "/assets/lessons/L300/images/L300-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L300/audio/L300-S01.m4a",
+            "durationMs": 3486,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 330
+              },
+              {
+                "charIndex": 1,
+                "startMs": 330,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 2460
+              }
+            ]
+          }
+        },
+        {
+          "id": "L300-S02",
+          "text": "爬太高，我嚇到哭了。",
+          "spokenText": "爬太高我嚇到哭了",
+          "focusChar": "爬",
+          "displayLines": [
+            "爬太高，",
+            "我嚇到哭了。"
+          ],
+          "imageNotes": "主角小女孩爬到遊樂場低矮攀爬架或低矮平台上，覺得太高而嚇到哭，主角爸爸在旁邊伸手保護。畫面要清楚呈現爬太高、嚇到哭；不可有危險高處、文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: refined warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home, classroom, park, or play setting, and phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket or pink top, blue skirt or child-friendly outfit, and warm expressive face; protagonist mother is a warm adult family role in practical clothing; protagonist father and protagonist older brother must be distinct family roles. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere. Climbing, startling, scolding, crying, and broken-toy scenes must be gentle, safe, child-appropriate, nonviolent, non-bloody, non-horror, and not frightening. Scene: playground with a low climbing frame or low platform. The recurring protagonist little girl is on a low play structure, feeling that it is too high and crying from being startled. The recurring protagonist father stands very close with arms ready to protect her. Make the structure visibly low and safe, with no dangerous height, no fall, and no injury. Teacher image notes: 主角小女孩爬到遊樂場低矮攀爬架或低矮平台上，覺得太高而嚇到哭，主角爸爸在旁邊伸手保護。畫面要清楚呈現爬太高、嚇到哭；不可有危險高處、文字、數字、標籤。",
+          "imageSrc": "/assets/lessons/L300/images/L300-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L300/audio/L300-S02.m4a",
+            "durationMs": 3206,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1520,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1960,
+                "endMs": 2150
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2150,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2780
+              }
+            ]
+          }
+        },
+        {
+          "id": "L300-S03",
+          "text": "爬上桌子，這樣不對。",
+          "spokenText": "爬上桌子這樣不對",
+          "focusChar": "爬",
+          "displayLines": [
+            "爬上桌子，",
+            "這樣不對。"
+          ],
+          "imageNotes": "主角小女孩爬上家中的桌子，主角媽媽在旁邊提醒這樣不對。畫面要清楚呈現爬上桌子是不對的行為；桌子高度安全，不可有文字、數字、標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: refined warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home, classroom, park, or play setting, and phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket or pink top, blue skirt or child-friendly outfit, and warm expressive face; protagonist mother is a warm adult family role in practical clothing; protagonist father and protagonist older brother must be distinct family roles. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere. Climbing, startling, scolding, crying, and broken-toy scenes must be gentle, safe, child-appropriate, nonviolent, non-bloody, non-horror, and not frightening. Scene: home dining or living room. The recurring protagonist little girl has climbed onto a sturdy low table in an unsafe behavior moment. The recurring protagonist mother stands nearby, reminding her that this is not right. Make the table height safe and stable; show correction without anger, danger, falling, or injury. Teacher image notes: 主角小女孩爬上家中的桌子，主角媽媽在旁邊提醒這樣不對。畫面要清楚呈現爬上桌子是不對的行為；桌子高度安全，不可有文字、數字、標籤。",
+          "imageSrc": "/assets/lessons/L300/images/L300-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L300/audio/L300-S03.m4a",
+            "durationMs": 4046,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1740,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1840,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2220,
+                "endMs": 2500
+              }
+            ]
+          }
+        },
+        {
+          "id": "L300-S04",
+          "text": "氣球破掉，嚇到小孩子。",
+          "spokenText": "氣球破掉嚇到小孩子",
+          "focusChar": "嚇",
+          "displayLines": [
+            "氣球破掉，",
+            "嚇到小孩子。"
+          ],
+          "imageNotes": "主角小男孩在室內或生日派對場景旁邊，附近一顆氣球破掉，他被突如其來的聲音嚇到。畫面要清楚呈現氣球破掉、嚇到小孩子；不可有文字、數字、標籤，不要畫成驚悚或過度害怕。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: refined warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home, classroom, park, or play setting, and phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket or pink top, blue skirt or child-friendly outfit, and warm expressive face; protagonist mother is a warm adult family role in practical clothing; protagonist father and protagonist older brother must be distinct family roles. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere. Climbing, startling, scolding, crying, and broken-toy scenes must be gentle, safe, child-appropriate, nonviolent, non-bloody, non-horror, and not frightening. Scene: indoor birthday party or playroom. The recurring protagonist young boy stands near a single popped balloon or deflated balloon pieces on the floor, startled by the sudden sound. Show gentle surprise, not horror or intense fear. Include party decorations with no text or numbers. The focus is the balloon popped and the child was startled. Teacher image notes: 主角小男孩在室內或生日派對場景旁邊，附近一顆氣球破掉，他被突如其來的聲音嚇到。畫面要清楚呈現氣球破掉、嚇到小孩子；不可有文字、數字、標籤，不要畫成驚悚或過度害怕。",
+          "imageSrc": "/assets/lessons/L300/images/L300-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L300/audio/L300-S04.m4a",
+            "durationMs": 4763,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1280,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2660,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2820,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2980,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3340,
+                "endMs": 3530
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3530,
+                "endMs": 3720
+              }
+            ]
+          }
+        },
+        {
+          "id": "L300-S05",
+          "text": "罵錯人了，很對不起。",
+          "spokenText": "罵錯人了很對不起",
+          "focusChar": "對",
+          "displayLines": [
+            "罵錯人了，",
+            "很對不起。"
+          ],
+          "imageNotes": "主角小女孩誤以為主角哥哥弄壞玩具而罵了他，後來發現罵錯人，表情很抱歉，主角哥哥站在旁邊。畫面要清楚呈現罵錯人後覺得對不起；不可出現文字、數字、對話框或標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. square image / 1:1 composition. Use approved L058 lesson images only as style references: refined warm modern children picture-book illustration, fine pencil-and-watercolor linework, soft transparent watercolor, delicate colored-pencil outlines, warm natural light, bright clean palette, expressive preschool proportions, soft cheeks, gentle facial expressions, detailed but uncluttered Taiwan home, classroom, park, or play setting, and phone-readable square composition. L058 is style reference only; do not copy any L058 person, clothing, face, hair, or body shape. Use protagonist family continuity from L154/L162/L163: protagonist little girl with small pink hair clip, pink jacket or pink top, blue skirt or child-friendly outfit, and warm expressive face; protagonist mother is a warm adult family role in practical clothing; protagonist father and protagonist older brother must be distinct family roles. Keep all meaning-bearing subjects centered with safe margins. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere. Climbing, startling, scolding, crying, and broken-toy scenes must be gentle, safe, child-appropriate, nonviolent, non-bloody, non-horror, and not frightening. Scene: home play area. The recurring protagonist little girl looks apologetic after wrongly scolding the recurring protagonist older brother because she thought he broke a toy. The older brother stands beside the harmless broken toy, looking calm. Make it clear she feels sorry for scolding the wrong person. No speech bubbles, no argument, no bullying, no readable marks. Teacher image notes: 主角小女孩誤以為主角哥哥弄壞玩具而罵了他，後來發現罵錯人，表情很抱歉，主角哥哥站在旁邊。畫面要清楚呈現罵錯人後覺得對不起；不可出現文字、數字、對話框或標籤。",
+          "imageSrc": "/assets/lessons/L300/images/L300-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L300/audio/L300-S05.m4a",
+            "durationMs": 3598,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 840
+              },
+              {
+                "charIndex": 2,
+                "startMs": 840,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1780,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2160,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2700
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L300-G01",
+          "type": "find-character",
+          "sentenceId": "L300-S02",
+          "targetChar": "爬",
+          "prompt": "Find the target character.",
+          "missingIndexes": [
+            0
+          ]
+        },
+        {
+          "id": "L300-G02",
+          "type": "teach-character",
+          "sentenceId": "L300-S01",
+          "targetChar": "爬",
+          "targetCharIndex": 2,
+          "prompt": "Listen to the target character.",
+          "missingIndexes": [
+            2
+          ],
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L300/audio/L300-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L300/audio/L300-G02-suffix.m4a"
+          },
+          "teachAudioText": {
+            "prefixText": "不要",
+            "suffixText": "樹會被罵"
+          }
+        },
+        {
+          "id": "L300-G03",
+          "type": "missing-character",
+          "sentenceId": "L300-S03",
+          "targetChar": "對",
+          "prompt": "Choose the missing character.",
+          "missingIndexes": [
+            7
+          ],
+          "options": [
+            {
+              "id": "L300-G03-A",
+              "text": "對",
+              "correct": true
+            },
+            {
+              "id": "L300-G03-B",
+              "text": "爬",
+              "correct": false
+            },
+            {
+              "id": "L300-G03-C",
+              "text": "嚇",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L300-G04",
+          "type": "partial-order",
+          "sentenceId": "L300-S04",
+          "targetChar": "嚇",
+          "prompt": "Put the sentence in order.",
+          "chunks": [
+            {
+              "text": "氣球破掉",
+              "order": 0
+            },
+            {
+              "text": "嚇到",
+              "order": 1
+            },
+            {
+              "text": "小孩子",
+              "order": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "L300-G04-A",
+              "text": "氣球破掉",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L300-G04-B",
+              "text": "嚇到",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L300-G04-C",
+              "text": "小孩子",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ],
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "correctOrder": [
+            "L300-G04-A",
+            "L300-G04-B",
+            "L300-G04-C"
+          ]
+        },
+        {
+          "id": "L300-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L300-S05",
+          "targetChar": "對",
+          "prompt": "Choose the sentence you hear.",
+          "options": [
+            {
+              "id": "L300-G05-A",
+              "text": "罵錯人了，很對不起。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L300/audio/L300-S05.m4a",
+              "spokenText": "罵錯人了，很對不起。"
+            },
+            {
+              "id": "L300-G05-B",
+              "text": "嚇錯人了，很對不起。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L300/audio/L300-G05-wrong-one.m4a",
+              "spokenText": "嚇錯人了，很對不起。"
+            },
+            {
+              "id": "L300-G05-C",
+              "text": "罵錯人了，很對不住。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L300/audio/L300-G05-wrong-two.m4a",
+              "spokenText": "罵錯人了，很對不住。"
             }
           ]
         }
