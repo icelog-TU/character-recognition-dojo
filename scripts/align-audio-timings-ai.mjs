@@ -66,6 +66,15 @@ function normalizeTranscribedHanChar(char) {
     ["\u706f", "\u71c8"],
     ["\u5f00", "\u958b"],
     ["\u5173", "\u95dc"],
+    ["\u53d1", "\u767c"],
+    ["\u521a", "\u525b"],
+    ["\u5f20", "\u5f35"],
+    ["\u5e2e", "\u5e6b"],
+    ["\u88c5", "\u88dd"],
+    ["\u517b", "\u990a"],
+    ["\u4f53", "\u9ad4"],
+    ["\u811a", "\u8173"],
+    ["\u4f24", "\u50b7"],
   ]);
   if (simplifiedEquivalentMap.has(char)) return simplifiedEquivalentMap.get(char);
 
@@ -107,6 +116,7 @@ function normalizeTranscribedHanChar(char) {
     ["廟", "鳥"],
     ["它", "他"],
     ["她", "他"],
+    ["甲", "假"],
   ]);
   return map.get(char) ?? char;
 }
