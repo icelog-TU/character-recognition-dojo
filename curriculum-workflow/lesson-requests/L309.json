@@ -9,14 +9,12 @@
   },
   "title": "忘",
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher-approved final sentences from Production Handoff L309. Latest origin/main production boundary verified as L305 種. L306-L308 are dependencies if not present in latest main. L309 must not enter production JSON until L306-L308 are in main.",
+  "teacherNotes": "Teacher-approved final sentences from Production Handoff L309. Latest origin/main production boundary rechecked as L306 澆. L309 must not enter production JSON until remaining dependencies L307, L308 are in main.",
   "dependsOnLessons": [
-    "L306",
     "L307",
     "L308"
   ],
   "provisionalLearnedChars": [
-    "澆",
     "照",
     "顧"
   ],
@@ -336,14 +334,12 @@
     "忘"
   ],
   "generationConstraints": {
-    "allowedBoundary": "latest origin/main L001-L305 learned chars + provisionalLearnedChars [\"澆\",\"照\",\"顧\"] + current new char「忘」",
+    "allowedBoundary": "latest origin/main L306 learned chars + provisionalLearnedChars [\"?\",\"?\"] + current new char???",
     "dependsOnLessons": [
-      "L306",
       "L307",
       "L308"
     ],
     "provisionalLearnedChars": [
-      "澆",
       "照",
       "顧"
     ],
@@ -496,7 +492,7 @@
       "L309-S04": 12,
       "L309-S05": 9
     },
-    "allowedCharacterAudit": "PASS against latest origin/main L001-L305 + provisional 澆/照/顧 + current 忘",
+    "allowedCharacterAudit": "PASS against latest origin/main through L306 + provisional ?/? + current ?",
     "anyLongerThan12Han": false
   },
   "stage4Plan": [

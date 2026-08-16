@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L309 | 忘 / normal lesson | ready-blocked-by-dependency | Production D | codex/l309-complete-package / dee0af70 | L306 澆, L307 照, L308 顧 | ["澆","照","顧"] | curriculum-workflow/lesson-requests/L309.json, curriculum-workflow/generated/L309-generation-packet.md | public/assets/lessons/L309/images/, public/assets/lessons/L309/audio/ | asset-complete package prepared; local package audits and production validation passed; L309 must not enter production JSON until L306-L308 are in main |
+| L309 | 忘 / normal lesson | ready-blocked-by-dependency | Production D | codex/l309-complete-package / 8859ccf9 | L307 照, L308 顧 | ["照","顧"] | curriculum-workflow/lesson-requests/L309.json, curriculum-workflow/generated/L309-generation-packet.md | public/assets/lessons/L309/images/, public/assets/lessons/L309/audio/ | asset-complete package prepared; local package audits and production validation passed; L306 is now in main; L309 must not enter production JSON until L307-L308 are in main |
 
 ## Status Values
 
