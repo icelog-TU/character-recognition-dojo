@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L299 | 對 / normal lesson | claimed | Production A | codex/l299-complete-package / fa77990b | L296 被, L297 嚇, L298 罵 | ["被","嚇","罵"] | curriculum-workflow/lesson-requests/L299.json, curriculum-workflow/generated/L299-generation-packet.md | public/assets/lessons/L299/images/, public/assets/lessons/L299/audio/ | accepted handoff and starting complete package |
+| L299 | 對 / normal lesson | ready-blocked-by-dependency | Production A | codex/l299-complete-package / package tip pending | L296 被, L297 嚇, L298 罵 | ["被","嚇","罵"] | curriculum-workflow/lesson-requests/L299.json, curriculum-workflow/generated/L299-generation-packet.md | public/assets/lessons/L299/images/, public/assets/lessons/L299/audio/ | complete package ready; blocked until L296-L298 are in main; S03/S04 alignment reviewed simplified transcript equivalents without changing production text |
 
 ## Status Values
 
