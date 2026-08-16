@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L305 | 種 / normal lesson | claimed | Production D | codex/l305-complete-package / 4ba03d38 | L301 蟲, L302 條, L303 泥, L304 土 | ["蟲","條","泥","土"] | curriculum-workflow/lesson-requests/L305.json, curriculum-workflow/generated/L305-generation-packet.md | public/assets/lessons/L305/images/, public/assets/lessons/L305/audio/ | accepted handoff and starting complete package; L305 must not enter production JSON until L301-L304 are in main |
+| L305 | 種 / normal lesson | ready-blocked-by-dependency | Production D | codex/l305-complete-package / 11f3bc03 | L301 蟲, L302 條, L303 泥, L304 土 | ["蟲","條","泥","土"] | curriculum-workflow/lesson-requests/L305.json, curriculum-workflow/generated/L305-generation-packet.md | public/assets/lessons/L305/images/, public/assets/lessons/L305/audio/ | complete package prepared; local allowed-character, image, audio, alignment, and production asset audits passed; L305 must not enter production JSON until L301-L304 are in main |
 
 ## Status Values
 
