@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L300 | 爬 / normal lesson | claimed | Production B | codex/l300-complete-package / e8bee0ac | L298 罵, L299 對 | ["罵","對"] | curriculum-workflow/lesson-requests/L300.json, curriculum-workflow/generated/L300-generation-packet.md | public/assets/lessons/L300/images/, public/assets/lessons/L300/audio/ | accepted handoff and starting complete package; L300 is the last normal lesson before the next required review lesson set |
 
 ## Status Values
 
