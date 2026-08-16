@@ -1,0 +1,204 @@
+{
+  "id": "L286",
+  "order": 286,
+  "newChars": [
+    "皮"
+  ],
+  "zhuyin": {
+    "皮": "ㄆㄧˊ"
+  },
+  "title": "皮",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release verified and merged L286 from origin/codex/l286-complete-package against latest origin/main. Dependencies are satisfied in playable order through L287; R001-R016 are already shipped.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L286.",
+    "dependsOnLessons": [
+      "L281",
+      "L282",
+      "L283",
+      "L284",
+      "L285"
+    ],
+    "forbiddenDisplayChars": [
+      "軟"
+    ],
+    "requiredCoverageChars": [
+      "皮",
+      "傷",
+      "口",
+      "破",
+      "洞",
+      "堆"
+    ],
+    "targetCharMinimumCount": {
+      "皮": 3
+    },
+    "recentTargetMinimumCounts": {
+      "傷": 2,
+      "口": 2,
+      "破": 2,
+      "洞": 1,
+      "堆": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for every image.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "No visible text, letters, numbers, signs, labels, zhuyin, watermarks, logos, brands, prices, or readable marks.",
+      "Small scrape and foot discomfort scenes must stay gentle and child-safe: no blood, no severe injury, no scary medical feeling."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 皮 as public/assets/lessons/L286/audio/char-u76ae.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L286-S01",
+      "text": "手上破皮了，有小傷口。",
+      "spokenText": "手上破皮了有小傷口",
+      "focusChar": "皮",
+      "displayLines": [
+        "手上破皮了，",
+        "有小傷口。"
+      ],
+      "imageNotes": "主角小女孩手上有一點破皮和小傷口，主角媽媽正在溫和查看或安撫她。畫面重點是小小破皮與被照顧的安心感；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L286-S02",
+      "text": "新皮鞋破了一個洞。",
+      "spokenText": "新皮鞋破了一個洞",
+      "focusChar": "皮",
+      "displayLines": [
+        "新皮鞋",
+        "破了一個洞。"
+      ],
+      "imageNotes": "主角小女孩看著一雙新皮鞋，其中一隻鞋上破了一個洞。畫面要清楚呈現新皮鞋與破洞；不可有品牌字樣、文字、數字、標籤。"
+    },
+    {
+      "id": "L286-S03",
+      "text": "媽媽把皮包放在椅子上。",
+      "spokenText": "媽媽把皮包放在椅子上",
+      "focusChar": "皮",
+      "displayLines": [
+        "媽媽把皮包",
+        "放在椅子上。"
+      ],
+      "imageNotes": "主角媽媽把皮包放在椅子上，主角小女孩可在旁邊看著。畫面重點是皮包與椅子上的放置動作；不可有品牌字樣、文字、數字、標籤。"
+    },
+    {
+      "id": "L286-S04",
+      "text": "鞋店門口堆了很多破鞋。",
+      "spokenText": "鞋店門口堆了很多破鞋",
+      "focusChar": "堆",
+      "displayLines": [
+        "鞋店門口",
+        "堆了很多",
+        "破鞋。"
+      ],
+      "imageNotes": "鞋店門口有一堆破鞋準備整理或回收，店員站在旁邊整理，主角小女孩可在店門口看著。畫面要清楚呈現鞋店門口、堆在一起的破鞋；不可出現店名、招牌文字、價格、數字或標籤。"
+    },
+    {
+      "id": "L286-S05",
+      "text": "這皮鞋太小，穿了會傷腳。",
+      "spokenText": "這皮鞋太小穿了會傷腳",
+      "focusChar": "傷",
+      "displayLines": [
+        "這皮鞋太小，",
+        "穿了會傷腳。"
+      ],
+      "imageNotes": "主角小女孩試穿一雙太小的皮鞋，腳看起來不舒服，主角媽媽在旁邊關心。畫面要清楚表現皮鞋太小、穿了會傷腳；不可血腥，不可有文字、數字、標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L286-G01",
+      "type": "find-character",
+      "sentenceId": "L286-S02",
+      "targetChar": "皮",
+      "reason": "「新皮鞋」是本課核心生活詞，目標字清楚。"
+    },
+    {
+      "id": "L286-G02",
+      "type": "teach-character",
+      "sentenceId": "L286-S01",
+      "targetChar": "皮",
+      "targetCharIndex": 3,
+      "teachAudio": {
+        "prefixText": "手上破",
+        "suffixText": "了有小傷口",
+        "prefixSrc": "/assets/lessons/L286/audio/L286-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L286/audio/L286-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L286-G03",
+      "type": "missing-character",
+      "sentenceId": "L286-S05",
+      "targetChar": "皮",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        "皮",
+        "傷",
+        "口"
+      ]
+    },
+    {
+      "id": "L286-G04",
+      "type": "partial-order",
+      "sentenceId": "L286-S04",
+      "chunks": [
+        "鞋店門口",
+        "堆了很多",
+        "破鞋"
+      ]
+    },
+    {
+      "id": "L286-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L286-S03",
+      "correctText": "媽媽把皮包放在椅子上。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "媽媽把書包放在椅子上。",
+          "audioSrc": "/assets/lessons/L286/audio/L286-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "媽媽把皮包放在地上。",
+          "audioSrc": "/assets/lessons/L286/audio/L286-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "status": "merged-to-main",
+    "source": "origin/codex/l286-complete-package",
+    "resolvedDependencies": [
+      "L281",
+      "L282",
+      "L283",
+      "L284",
+      "L285"
+    ],
+    "verifiedAgainst": "latest origin/main",
+    "notes": "Release transplanted lesson-local package files only; production JSON, planner data, ledger, and registry state were regenerated from main."
+  },
+  "dependsOnLessons": [
+    "L281",
+    "L282",
+    "L283",
+    "L284",
+    "L285"
+  ]
+}

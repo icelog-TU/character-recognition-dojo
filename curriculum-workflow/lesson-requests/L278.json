@@ -1,0 +1,215 @@
+{
+  "id": "L278",
+  "order": 278,
+  "newChars": [
+    "座"
+  ],
+  "zhuyin": {
+    "座": "ㄗㄨㄛˋ"
+  },
+  "title": "座",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release verified and merged L278 from origin/codex/l278-complete-package against latest origin/main. Dependencies are satisfied in playable order through L287; R001-R016 are already shipped.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L278.",
+    "dependsOnReviewModules": [
+      "R015",
+      "R016"
+    ],
+    "dependsOnLessons": [
+      "L271",
+      "L272",
+      "L273",
+      "L274",
+      "L275",
+      "L276",
+      "L277"
+    ],
+    "forbiddenDisplayChars": [
+      "位",
+      "慢"
+    ],
+    "requiredCoverageChars": [
+      "座",
+      "橋",
+      "蓋",
+      "住",
+      "卡",
+      "緊"
+    ],
+    "targetCharMinimumCount": {
+      "座": 3
+    },
+    "recentTargetMinimumCounts": {
+      "橋": 2,
+      "蓋": 2,
+      "住": 2,
+      "卡": 1,
+      "緊": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for every image.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "No visible text, letters, numbers, signs, labels, zhuyin, watermarks, logos, brands, prices, or readable marks.",
+      "Do not depict unsafe driving, dangerous bridges, road signs, or readable constellation labels."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 座 as public/assets/lessons/L278/audio/char-u5ea7.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and G05 wrong-option audio as standalone whole-text files from exact text; target is final Han character so no suffix audio is required.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L278-S01",
+      "text": "河上有一座橋。",
+      "spokenText": "河上有一座橋",
+      "focusChar": "座",
+      "displayLines": [
+        "河上有",
+        "一座橋。"
+      ],
+      "imageNotes": "河上有一座橋，主角小女孩在安全的河邊看著橋。畫面要清楚表現河和一座橋；不可有文字、數字、路牌、標籤或注音。"
+    },
+    {
+      "id": "L278-S02",
+      "text": "我坐在車後座。",
+      "spokenText": "我坐在車後座",
+      "focusChar": "座",
+      "displayLines": [
+        "我坐在",
+        "車後座。"
+      ],
+      "imageNotes": "主角小女孩安全坐在車子的後座，主角爸爸或主角媽媽在前座。畫面要安全、溫和，不要出現行車危險；車內不可有文字、數字、車牌、標籤或注音。"
+    },
+    {
+      "id": "L278-S03",
+      "text": "晚上，我在橋上看星座。",
+      "spokenText": "晚上我在橋上看星座",
+      "focusChar": "座",
+      "displayLines": [
+        "晚上，",
+        "我在橋上",
+        "看星座。"
+      ],
+      "imageNotes": "晚上，主角小女孩在安全的小橋或觀景橋上看天空星座，旁邊可有主角爸爸陪同。不要畫成車道橋或危險橋面；天空可有星星連成星座圖形，但不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L278-S04",
+      "text": "盒蓋卡住了，關不緊。",
+      "spokenText": "盒蓋卡住了關不緊",
+      "focusChar": "卡",
+      "displayLines": [
+        "盒蓋卡住了，",
+        "關不緊。"
+      ],
+      "imageNotes": "主角小女孩在桌邊看著一個盒子，盒蓋卡住了，所以關不緊。畫面重點是盒蓋和盒子卡住的狀態；盒子不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L278-S05",
+      "text": "玩具房子蓋好了，給小人住。",
+      "spokenText": "玩具房子蓋好了給小人住",
+      "focusChar": "蓋",
+      "displayLines": [
+        "玩具房子",
+        "蓋好了，",
+        "給小人住。"
+      ],
+      "imageNotes": "主角小女孩用玩具蓋好一間小房子，準備給玩具小人住。畫面要清楚是玩具房子，不是真實房屋施工；玩具不可有文字、數字、標籤或注音。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L278-G01",
+      "type": "find-character",
+      "sentenceId": "L278-S01",
+      "targetChar": "座",
+      "reason": "「一座橋」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L278-G02",
+      "type": "teach-character",
+      "sentenceId": "L278-S02",
+      "targetChar": "座",
+      "targetCharIndex": 5,
+      "teachAudio": {
+        "prefixText": "我坐在車後",
+        "suffixText": "",
+        "prefixSrc": "/assets/lessons/L278/audio/L278-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "L278-G03",
+      "type": "missing-character",
+      "sentenceId": "L278-S03",
+      "targetChar": "座",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "座",
+        "橋",
+        "星"
+      ]
+    },
+    {
+      "id": "L278-G04",
+      "type": "partial-order",
+      "sentenceId": "L278-S05",
+      "chunks": [
+        "玩具房子",
+        "蓋好了",
+        "給小人住"
+      ]
+    },
+    {
+      "id": "L278-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L278-S04",
+      "correctText": "盒蓋卡住了，關不緊。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "盒蓋卡住了，打不開。",
+          "audioSrc": "/assets/lessons/L278/audio/L278-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "盒蓋蓋好了，關不緊。",
+          "audioSrc": "/assets/lessons/L278/audio/L278-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "status": "merged-to-main",
+    "source": "origin/codex/l278-complete-package",
+    "resolvedDependencies": [
+      "L271",
+      "L272",
+      "L273",
+      "L274",
+      "L275",
+      "L276",
+      "L277"
+    ],
+    "verifiedAgainst": "latest origin/main",
+    "notes": "Release transplanted lesson-local package files only; production JSON, planner data, ledger, and registry state were regenerated from main."
+  },
+  "dependsOnLessons": [
+    "L271",
+    "L272",
+    "L273",
+    "L274",
+    "L275",
+    "L276",
+    "L277"
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "id": "L280",
+  "order": 280,
+  "newChars": [
+    "積"
+  ],
+  "zhuyin": {
+    "積": "ㄐㄧ"
+  },
+  "title": "積",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L275",
+    "L276",
+    "L277",
+    "L278",
+    "L279"
+  ],
+  "teacherNotes": "Release verified and merged L280 from origin/codex/l280-complete-package against latest origin/main. Dependencies are satisfied in playable order through L287; R001-R016 are already shipped.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L280.",
+    "requiredCoverageChars": [
+      "積",
+      "木",
+      "座",
+      "橋",
+      "蓋",
+      "住"
+    ],
+    "targetCharMinimumCount": {
+      "積": 3
+    },
+    "recentTargetMinimumCounts": {
+      "木": 2,
+      "座": 2,
+      "橋": 2,
+      "蓋": 1,
+      "住": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "堆",
+      "挖",
+      "洞"
+    ],
+    "usageNotes": [
+      "Do not use 堆, 挖, or 洞 in display text, spokenText, displayLines, focusChar, or Stage 4 option text.",
+      "Display text may use only learned characters from latest origin/main plus the provisional dependency characters and 積.",
+      "Images may describe blocks, a bridge, standing water, or rain clouds, but the image itself must contain no readable text, numbers, labels, signs, letters, zhuyin, brands, or watermarks."
+    ],
+    "imageRules": [
+      "Every new sentence image must be a square image / 1:1 composition.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from L154/L162/L163 for the protagonist little girl.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, letters, numbers, zhuyin, signs, labels, logos, brands, readable marks, or watermarks.",
+      "Final images must be WebP, longest edge <= 1024px, target <= 250 KB, hard maximum <= 400 KB."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 積 as public/assets/lessons/L280/audio/char-u7a4d.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, overdub, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L280-S01",
+      "text": "我用積木蓋一座橋。",
+      "spokenText": "我用積木蓋一座橋",
+      "focusChar": "積",
+      "displayLines": [
+        "我用積木",
+        "蓋一座橋。"
+      ],
+      "imageNotes": "主角小女孩在家中或遊戲區用積木蓋一座橋。畫面要清楚看到積木和一座橋；積木不可有字母、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L280-S02",
+      "text": "那座木橋下面有積水。",
+      "spokenText": "那座木橋下面有積水",
+      "focusChar": "積",
+      "displayLines": [
+        "那座木橋",
+        "下面有積水。"
+      ],
+      "imageNotes": "一座木橋下面有積水，主角小女孩在安全距離觀察。畫面要清楚是木橋下方的積水，不要做成洪水或危險場景；不可有文字、數字、路牌、標籤或注音。"
+    },
+    {
+      "id": "L280-S03",
+      "text": "積木卡住了，拿不下來。",
+      "spokenText": "積木卡住了拿不下來",
+      "focusChar": "積",
+      "displayLines": [
+        "積木卡住了，",
+        "拿不下來。"
+      ],
+      "imageNotes": "主角小女孩在玩積木時，兩塊積木卡住了拿不下來。畫面要清楚是積木卡住，不要有危險；積木不可有字母、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L280-S04",
+      "text": "蓋一間積木房子給小人住。",
+      "spokenText": "蓋一間積木房子給小人住",
+      "focusChar": "積",
+      "displayLines": [
+        "蓋一間積木",
+        "房子給",
+        "小人住。"
+      ],
+      "imageNotes": "主角小女孩用積木蓋一間小房子，準備給玩具小人住。畫面要清楚是積木房子與玩具小人；積木和玩具不可有字母、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L280-S05",
+      "text": "天上有很黑的積雨雲。",
+      "spokenText": "天上有很黑的積雨雲",
+      "focusChar": "積",
+      "displayLines": [
+        "天上有很",
+        "黑的積雨雲。"
+      ],
+      "imageNotes": "天空中有很黑的積雨雲，看起來快要下雨，主角小女孩可在戶外安全位置抬頭看天。畫面重點是黑色積雨雲；不可有文字、數字、標籤或注音。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "積",
+      "count": 5,
+      "required": 3,
+      "result": "PASS"
+    },
+    "recentTargets": [
+      {
+        "lesson": "L279",
+        "char": "木",
+        "count": 4,
+        "required": 2,
+        "result": "PASS"
+      },
+      {
+        "lesson": "L278",
+        "char": "座",
+        "count": 2,
+        "required": 2,
+        "result": "PASS"
+      },
+      {
+        "lesson": "L277",
+        "char": "橋",
+        "count": 2,
+        "required": 2,
+        "result": "PASS"
+      },
+      {
+        "lesson": "L276",
+        "char": "蓋",
+        "count": 2,
+        "required": 1,
+        "result": "PASS"
+      },
+      {
+        "lesson": "L275",
+        "char": "住",
+        "count": 2,
+        "required": 1,
+        "result": "PASS"
+      }
+    ],
+    "sentenceHanCounts": {
+      "L280-S01": 8,
+      "L280-S02": 9,
+      "L280-S03": 9,
+      "L280-S04": 11,
+      "L280-S05": 9
+    },
+    "longerThan12Han": false,
+    "allowedCharacterAuditExpected": "PASS"
+  },
+  "stage4Plan": [
+    {
+      "id": "L280-G01",
+      "type": "find-character",
+      "sentenceId": "L280-S03",
+      "targetChar": "積",
+      "reason": "「積木卡住」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L280-G02",
+      "type": "teach-character",
+      "sentenceId": "L280-S01",
+      "targetChar": "積",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "我用",
+        "suffixText": "木蓋一座橋",
+        "prefixSrc": "/assets/lessons/L280/audio/L280-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L280/audio/L280-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L280-G03",
+      "type": "missing-character",
+      "sentenceId": "L280-S05",
+      "targetChar": "積",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        "積",
+        "雲",
+        "黑"
+      ]
+    },
+    {
+      "id": "L280-G04",
+      "type": "partial-order",
+      "sentenceId": "L280-S04",
+      "chunks": [
+        "蓋一間",
+        "積木房子",
+        "給小人住"
+      ]
+    },
+    {
+      "id": "L280-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L280-S02",
+      "correctText": "那座木橋下面有積水。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "那座木橋上面有積水。",
+          "audioSrc": "/assets/lessons/L280/audio/L280-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "那座木橋下面有河水。",
+          "audioSrc": "/assets/lessons/L280/audio/L280-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "status": "merged-to-main",
+    "source": "origin/codex/l280-complete-package",
+    "resolvedDependencies": [
+      "L275",
+      "L276",
+      "L277",
+      "L278",
+      "L279"
+    ],
+    "verifiedAgainst": "latest origin/main",
+    "notes": "Release transplanted lesson-local package files only; production JSON, planner data, ledger, and registry state were regenerated from main."
+  }
+}

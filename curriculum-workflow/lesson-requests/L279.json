@@ -1,0 +1,194 @@
+{
+  "id": "L279",
+  "order": 279,
+  "newChars": [
+    "木"
+  ],
+  "zhuyin": {
+    "木": "ㄇㄨˋ"
+  },
+  "title": "木",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L275",
+    "L276",
+    "L277",
+    "L278"
+  ],
+  "teacherNotes": "Release verified and merged L279 from origin/codex/l279-complete-package against latest origin/main. Dependencies are satisfied in playable order through L287; R001-R016 are already shipped.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L279.",
+    "productionBoundary": "L274",
+    "productionLatestTitle": "卡",
+    "dependencyStatus": {
+      "productionLatestLesson": "L274",
+      "productionLatestLessonTitle": "卡",
+      "missingLessons": [
+        "L275",
+        "L276",
+        "L277",
+        "L278"
+      ],
+      "blocked": true
+    },
+    "requiredCoverageChars": [
+      "木",
+      "座",
+      "橋",
+      "蓋",
+      "住",
+      "卡"
+    ],
+    "targetCharMinimumCount": {
+      "木": 3
+    },
+    "recentTargetMinimumCounts": {
+      "座": 2,
+      "橋": 2,
+      "蓋": 2,
+      "住": 1,
+      "卡": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "積"
+    ],
+    "usageNotes": [
+      "Do not use the unlearned character for building-block compound terms.",
+      "Images may show wooden toys and wooden bridge pieces, but no visible text, numbers, labels, or zhuyin."
+    ],
+    "imageRules": [
+      "All images must be square image / 1:1 composition.",
+      "Use L058 only as illustration style references, not people appearance references.",
+      "Use protagonist family continuity from LESSON_VISUAL_CAST_SOP and ledger."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L279-S01",
+      "text": "我要蓋一座木橋。",
+      "spokenText": "我要蓋一座木橋",
+      "focusChar": "木",
+      "displayLines": [
+        "我要蓋",
+        "一座木橋。"
+      ],
+      "imageNotes": "Protagonist little girl builds one wooden bridge at home or in a play area using toy or safe craft materials; no text, numbers, labels, or zhuyin."
+    },
+    {
+      "id": "L279-S02",
+      "text": "工人用木頭蓋房子。",
+      "spokenText": "工人用木頭蓋房子",
+      "focusChar": "木",
+      "displayLines": [
+        "工人用木頭",
+        "蓋房子。"
+      ],
+      "imageNotes": "A construction worker safely uses wood to build a house; show worker, wood, and house building clearly; no text, numbers, signs, labels, or zhuyin."
+    },
+    {
+      "id": "L279-S03",
+      "text": "木盒卡住了，打不開。",
+      "spokenText": "木盒卡住了打不開",
+      "focusChar": "木",
+      "displayLines": [
+        "木盒卡住了，",
+        "打不開。"
+      ],
+      "imageNotes": "Protagonist little girl at a table tries to open a wooden box, but the wooden box is stuck and will not open; no text, numbers, labels, or zhuyin."
+    },
+    {
+      "id": "L279-S04",
+      "text": "橋下住著一隻小狗。",
+      "spokenText": "橋下住著一隻小狗",
+      "focusChar": "橋",
+      "displayLines": [
+        "橋下住著",
+        "一隻小狗。"
+      ],
+      "imageNotes": "A small dog lives in a cozy little nook under a bridge, with the protagonist little girl watching from a safe distance; warm fairy-tale feeling, not poverty; no text, numbers, labels, or zhuyin."
+    },
+    {
+      "id": "L279-S05",
+      "text": "後座放著木頭玩具。",
+      "spokenText": "後座放著木頭玩具",
+      "focusChar": "座",
+      "displayLines": [
+        "後座放著",
+        "木頭玩具。"
+      ],
+      "imageNotes": "Wooden toys are on the back seat of a parked car; protagonist little girl looks at or safely reaches toward the toys; no license plate, text, numbers, labels, or zhuyin."
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L279-G01",
+      "type": "find-character",
+      "sentenceId": "L279-S01",
+      "targetChar": "木",
+      "reason": "Core use in wooden bridge."
+    },
+    {
+      "id": "L279-G02",
+      "type": "teach-character",
+      "sentenceId": "L279-S03",
+      "targetChar": "木",
+      "targetCharIndex": 0,
+      "teachAudio": {
+        "prefixText": "",
+        "suffixText": "盒卡住了打不開",
+        "suffixSrc": "/assets/lessons/L279/audio/L279-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L279-G03",
+      "type": "missing-character",
+      "sentenceId": "L279-S02",
+      "targetChar": "木",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "木",
+        "蓋",
+        "住"
+      ]
+    },
+    {
+      "id": "L279-G04",
+      "type": "partial-order",
+      "sentenceId": "L279-S04",
+      "chunks": [
+        "橋下",
+        "住著",
+        "一隻小狗"
+      ]
+    },
+    {
+      "id": "L279-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L279-S05",
+      "correctText": "後座放著木頭玩具。",
+      "wrongOneText": "後座放著木盒玩具。",
+      "wrongTwoText": "後座放著木橋玩具。"
+    }
+  ],
+  "notes": [
+    "G02 target is the first Han character, so prefix text is empty and prefixSrc is omitted per CURRICULUM_PRODUCTION_SOP; suffix audio is generated from exact suffix text."
+  ],
+  "releaseAudit": {
+    "status": "merged-to-main",
+    "source": "origin/codex/l279-complete-package",
+    "resolvedDependencies": [
+      "L275",
+      "L276",
+      "L277",
+      "L278"
+    ],
+    "verifiedAgainst": "latest origin/main",
+    "notes": "Release transplanted lesson-local package files only; production JSON, planner data, ledger, and registry state were regenerated from main."
+  }
+}

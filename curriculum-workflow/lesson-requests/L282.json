@@ -1,0 +1,213 @@
+{
+  "id": "L282",
+  "order": 282,
+  "newChars": [
+    "洞"
+  ],
+  "zhuyin": {
+    "洞": "ㄉㄨㄥˋ"
+  },
+  "title": "洞",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release verified and merged L282 from origin/codex/l282-complete-package against latest origin/main. Dependencies are satisfied in playable order through L287; R001-R016 are already shipped.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L282.",
+    "dependsOnLessons": [
+      "L275",
+      "L276",
+      "L277",
+      "L278",
+      "L279",
+      "L280",
+      "L281"
+    ],
+    "forbiddenDisplayChars": [
+      "挖",
+      "土",
+      "泥",
+      "旁"
+    ],
+    "requiredCoverageChars": [
+      "洞",
+      "堆",
+      "積",
+      "木",
+      "座",
+      "橋"
+    ],
+    "targetCharMinimumCount": {
+      "洞": 3
+    },
+    "recentTargetMinimumCounts": {
+      "堆": 2,
+      "積": 2,
+      "木": 2,
+      "座": 1,
+      "橋": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "imageRules": [
+      "Generate square image / 1:1 composition for every image.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, letters, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "洞 scenes must be safe, warm, and child-friendly; avoid scary caves, danger, poverty, or horror."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 洞 as public/assets/lessons/L282/audio/char-u6d1e.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L282-S01",
+      "text": "進去樹洞裡面看看。",
+      "spokenText": "進去樹洞裡面看看",
+      "focusChar": "洞",
+      "displayLines": [
+        "進去樹洞",
+        "裡面看看。"
+      ],
+      "imageNotes": "主角小女孩在童話式的安全樹洞入口前，好奇想進去樹洞裡面看看。畫面要溫和、可愛，不要做成危險或恐怖洞穴；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L282-S02",
+      "text": "從前的人住在山洞裡。",
+      "spokenText": "從前的人住在山洞裡",
+      "focusChar": "洞",
+      "displayLines": [
+        "從前的人",
+        "住在山洞裡。"
+      ],
+      "imageNotes": "這是主角小女孩正在看圖畫書或想像中的從前場景：從前的人住在山洞裡。畫面要像童書歷史想像，不要做成恐怖或貧困場景；書頁不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L282-S03",
+      "text": "這個積木上有一個洞。",
+      "spokenText": "這個積木上有一個洞",
+      "focusChar": "洞",
+      "displayLines": [
+        "這個積木上",
+        "有一個洞。"
+      ],
+      "imageNotes": "桌上有一個積木，積木上有一個明顯的洞，主角小女孩在旁邊觀察。積木不可有字母、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L282-S04",
+      "text": "我用積木堆出一座橋。",
+      "spokenText": "我用積木堆出一座橋",
+      "focusChar": "堆",
+      "displayLines": [
+        "我用積木",
+        "堆出一座橋。"
+      ],
+      "imageNotes": "主角小女孩在家中或遊戲區用積木堆出一座橋。畫面要清楚看到積木橋；積木不可有字母、文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L282-S05",
+      "text": "桌上一大堆書。",
+      "spokenText": "桌上一大堆書",
+      "focusChar": "堆",
+      "displayLines": [
+        "桌上",
+        "一大堆書。"
+      ],
+      "imageNotes": "桌上有一大堆書，主角小女孩看著桌上的書或準備整理。書封和書頁不可有文字、數字、標籤或注音。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L282-G01",
+      "type": "find-character",
+      "sentenceId": "L282-S03",
+      "targetChar": "洞",
+      "reason": "「積木上有一個洞」是具體核心用法，目標字清楚。"
+    },
+    {
+      "id": "L282-G02",
+      "type": "teach-character",
+      "sentenceId": "L282-S01",
+      "targetChar": "洞",
+      "targetCharIndex": 3,
+      "teachAudio": {
+        "prefixText": "進去樹",
+        "suffixText": "裡面看看",
+        "prefixSrc": "/assets/lessons/L282/audio/L282-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L282/audio/L282-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L282-G03",
+      "type": "missing-character",
+      "sentenceId": "L282-S02",
+      "targetChar": "洞",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        "洞",
+        "山",
+        "住"
+      ]
+    },
+    {
+      "id": "L282-G04",
+      "type": "partial-order",
+      "sentenceId": "L282-S04",
+      "chunks": [
+        "我用積木",
+        "堆出",
+        "一座橋"
+      ]
+    },
+    {
+      "id": "L282-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L282-S05",
+      "correctText": "桌上一大堆書。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "桌上一大堆積木。",
+          "audioSrc": "/assets/lessons/L282/audio/L282-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "桌上一大堆玩具。",
+          "audioSrc": "/assets/lessons/L282/audio/L282-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "releaseAudit": {
+    "status": "merged-to-main",
+    "source": "origin/codex/l282-complete-package",
+    "resolvedDependencies": [
+      "L275",
+      "L276",
+      "L277",
+      "L278",
+      "L279",
+      "L280",
+      "L281"
+    ],
+    "verifiedAgainst": "latest origin/main",
+    "notes": "Release transplanted lesson-local package files only; production JSON, planner data, ledger, and registry state were regenerated from main."
+  },
+  "dependsOnLessons": [
+    "L275",
+    "L276",
+    "L277",
+    "L278",
+    "L279",
+    "L280",
+    "L281"
+  ]
+}

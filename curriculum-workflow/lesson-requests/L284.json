@@ -1,0 +1,256 @@
+{
+  "id": "L284",
+  "order": 284,
+  "newChars": [
+    "口"
+  ],
+  "zhuyin": {
+    "口": "ㄎㄡˇ"
+  },
+  "title": "口",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L279",
+    "L280",
+    "L281",
+    "L282",
+    "L283"
+  ],
+  "teacherNotes": "Release verified and merged L284 from origin/codex/l284-complete-package against latest origin/main. Dependencies are satisfied in playable order through L287; R001-R016 are already shipped.",
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L284.",
+    "requiredCoverageChars": [
+      "口",
+      "破",
+      "洞",
+      "堆",
+      "積",
+      "木"
+    ],
+    "targetCharMinimumCount": {
+      "口": 3
+    },
+    "recentTargetMinimumCounts": {
+      "破": 2,
+      "洞": 2,
+      "堆": 2,
+      "積": 1,
+      "木": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "usageNotes": [
+      "Approved display text and Stage 4 option text must stay inside the allowed boundary.",
+      "Do not introduce L285+ or other unlearned display characters.",
+      "The word 口子 should be illustrated as a slit-like tear, distinct from a large hole."
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for every sentence image.",
+      "Use L058 images only as illustration style anchors, not as character appearance references.",
+      "Use protagonist family continuity from L154/L162/L163 for the little girl and mother.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, letters, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Final images must be WebP, compressed for mobile, longest edge no more than 1024px, target no more than 250 KB, hard limit no more than 400 KB."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 口 as public/assets/lessons/L284/audio/char-u53e3.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix audio from exact prefix text. Because the target character is final in the sentence, use the schema-supported no-suffix teachAudio format.",
+      "Generate G05 wrong-option audio as standalone whole-sentence audio from exact wrong text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L284-S01",
+      "text": "有人把木頭堆在洞口。",
+      "spokenText": "有人把木頭堆在洞口",
+      "focusChar": "口",
+      "displayLines": [
+        "有人把木頭",
+        "堆在洞口。"
+      ],
+      "imageNotes": "遊樂器材隧道的洞口前被人堆了木頭，主角小女孩站在安全距離看著，因為洞口被擋住所以不能玩。畫面要清楚是遊戲場隧道洞口，不是山洞或危險工地；木頭和遊具不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L284-S02",
+      "text": "衣服破了一個口子。",
+      "spokenText": "衣服破了一個口子",
+      "focusChar": "口",
+      "displayLines": [
+        "衣服破了",
+        "一個口子。"
+      ],
+      "imageNotes": "一件衣服的袖口或衣服邊緣裂開一個 V 字形或裂縫狀的口子，主角小女孩拿著衣服查看。這個口子不是圓形洞；要和 S03 的褲子大洞明顯不同。不可讓人物身體裸露；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L284-S03",
+      "text": "褲子破了一個大洞。",
+      "spokenText": "褲子破了一個大洞",
+      "focusChar": "洞",
+      "displayLines": [
+        "褲子破了",
+        "一個大洞。"
+      ],
+      "imageNotes": "一件褲子上破了一個明顯的大洞，洞可以是圓形或不規則形，主角小女孩拿著褲子查看。這是破洞，不是袖口裂縫；要和 S02 的 V 字形口子明顯不同。不可讓人物身體裸露；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L284-S04",
+      "text": "飯菜看起來很可口。",
+      "spokenText": "飯菜看起來很可口",
+      "focusChar": "口",
+      "displayLines": [
+        "飯菜看起來",
+        "很可口。"
+      ],
+      "imageNotes": "餐桌上有看起來很可口的飯菜，主角小女孩和主角媽媽在桌邊準備吃飯。畫面重點是飯菜看起來好吃；不可有文字、數字、標籤或注音。"
+    },
+    {
+      "id": "L284-S05",
+      "text": "家裡一大堆破舊積木。",
+      "spokenText": "家裡一大堆破舊積木",
+      "focusChar": "堆",
+      "displayLines": [
+        "家裡一大堆",
+        "破舊積木。"
+      ],
+      "imageNotes": "主角小女孩家裡有一大堆破舊積木，主角小女孩在旁邊整理或看著。積木可以看起來舊、掉色、缺角，但不要有尖銳危險；積木不可有字母、文字、數字、標籤或注音。"
+    }
+  ],
+  "coverageCheck": {
+    "口": 3,
+    "破": 3,
+    "洞": 2,
+    "堆": 2,
+    "積": 1,
+    "木": 2,
+    "result": "PASS"
+  },
+  "stage4Plan": [
+    {
+      "id": "L284-G01",
+      "type": "find-character",
+      "sentenceId": "L284-S02",
+      "targetChar": "口",
+      "reason": "「口子」是本課核心用法，目標字清楚。"
+    },
+    {
+      "id": "L284-G02",
+      "type": "teach-character",
+      "sentenceId": "L284-S04",
+      "targetChar": "口",
+      "targetCharIndex": 7,
+      "teachAudio": {
+        "prefixText": "飯菜看起來很可",
+        "suffixText": "",
+        "prefixSrc": "/assets/lessons/L284/audio/L284-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "L284-G03",
+      "type": "missing-character",
+      "sentenceId": "L284-S01",
+      "targetChar": "口",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        {
+          "id": "L284-G03-A",
+          "text": "口",
+          "correct": true
+        },
+        {
+          "id": "L284-G03-B",
+          "text": "洞",
+          "correct": false
+        },
+        {
+          "id": "L284-G03-C",
+          "text": "堆",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L284-G04",
+      "type": "partial-order",
+      "sentenceId": "L284-S05",
+      "chunks": [
+        {
+          "text": "家裡",
+          "order": 0
+        },
+        {
+          "text": "一大堆",
+          "order": 1
+        },
+        {
+          "text": "破舊積木",
+          "order": 2
+        }
+      ],
+      "targetChar": "堆",
+      "options": [
+        {
+          "id": "L284-G04-A",
+          "text": "家裡",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L284-G04-B",
+          "text": "一大堆",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L284-G04-C",
+          "text": "破舊積木",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "L284-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L284-S03",
+      "correctText": "褲子破了一個大洞。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "褲子破了一個小洞。",
+          "audioSrc": "/assets/lessons/L284/audio/L284-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "褲子破了一個口子。",
+          "audioSrc": "/assets/lessons/L284/audio/L284-G05-wrong-two.m4a"
+        }
+      ],
+      "targetChar": "洞"
+    }
+  ],
+  "releaseAudit": {
+    "status": "merged-to-main",
+    "source": "origin/codex/l284-complete-package",
+    "resolvedDependencies": [
+      "L279",
+      "L280",
+      "L281",
+      "L282",
+      "L283"
+    ],
+    "verifiedAgainst": "latest origin/main",
+    "notes": "Release transplanted lesson-local package files only; production JSON, planner data, ledger, and registry state were regenerated from main."
+  }
+}
