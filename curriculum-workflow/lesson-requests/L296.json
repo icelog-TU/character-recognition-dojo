@@ -1,0 +1,217 @@
+{
+  "id": "L296",
+  "order": 296,
+  "newChars": [
+    "被"
+  ],
+  "zhuyin": {
+    "被": "ㄅㄟˋ"
+  },
+  "title": "被",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L290",
+    "L291",
+    "L292",
+    "L293",
+    "L294",
+    "L295"
+  ],
+  "teacherNotes": "Production B L296 handoff. Complete package only; release-integrated until L290-L295 are in latest origin/main. Editor allowed-character sweep passed against origin/main L001-L287 plus releaseIntegrationChars [\"耐\",\"敢\",\"當\",\"然\",\"怕\",\"哭\"] plus current new char 被. ImageNotes and prompts are production-only instructions and are not part of the learner-facing allowed-character gate.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main L001-L287 learned chars + releaseIntegrationChars [\"耐\",\"敢\",\"當\",\"然\",\"怕\",\"哭\"] + current new char 被",
+    "requiredCoverageChars": [
+      "被",
+      "哭",
+      "怕",
+      "然",
+      "當",
+      "敢"
+    ],
+    "targetCharMinimumCount": {
+      "被": 3
+    },
+    "recentTargetMinimumCounts": {
+      "哭": 2,
+      "怕": 2,
+      "然": 2,
+      "當": 1,
+      "敢": 1
+    },
+    "additionalProvisionalCharsUsedInLearnerText": {
+      "耐": [
+        "L296-S05"
+      ]
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "嚇",
+      "咬",
+      "教",
+      "導",
+      "答",
+      "接",
+      "溼"
+    ],
+    "usageNotes": [
+      "Use 濕, not 溼.",
+      "S01 and S04 include being hit by a ball and a toy being broken, but images must not show violence, bullying, severe injury, blood, or frightening content.",
+      "Learner-facing text includes text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and image prompts are not constrained by the learned-character gate."
+    ],
+    "imageRules": [
+      "All sentence images must be square image / 1:1 composition.",
+      "Use L058 only as style reference, not person identity.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks.",
+      "Injury, fear, crying, and broken-toy scenes must stay gentle, safe, nonviolent, non-bloody, and child-appropriate."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 被 as public/assets/lessons/L296/audio/char-u88ab.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L296-S01",
+      "text": "我被球打到，痛得哭了。",
+      "spokenText": "我被球打到痛得哭了",
+      "focusChar": "被",
+      "displayLines": [
+        "我被球打到，",
+        "痛得哭了。"
+      ],
+      "imageNotes": "主角小女孩在安全遊戲中被球輕輕打到，覺得痛所以哭了，主角媽媽在旁邊關心安撫。畫面要清楚呈現被球打到、痛得哭了；不可血腥，不可畫成故意攻擊，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L296-S02",
+      "text": "我很怕上課被老師問到。",
+      "spokenText": "我很怕上課被老師問到",
+      "focusChar": "被",
+      "displayLines": [
+        "我很怕上課",
+        "被老師問到。"
+      ],
+      "imageNotes": "主角小女孩在教室上課，老師溫和提問，她看起來緊張害怕被老師問到。老師要依 LESSON_VISUAL_CAST_SOP 設計，不可像主角媽媽。畫面要清楚呈現上課、被老師問到、覺得怕；不可有黑板文字、數字、標籤。"
+    },
+    {
+      "id": "L296-S03",
+      "text": "我怕衣服濕掉，不敢下水。",
+      "spokenText": "我怕衣服濕掉不敢下水",
+      "focusChar": "怕",
+      "displayLines": [
+        "我怕衣服",
+        "濕掉，",
+        "不敢下水。"
+      ],
+      "imageNotes": "主角小女孩在游泳池邊或淺水邊，穿著一般衣服，怕衣服濕掉所以不敢下水，主角媽媽在旁邊陪伴。畫面要清楚呈現衣服怕濕、不敢下水；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L296-S04",
+      "text": "新玩具被玩壞，當然會哭。",
+      "spokenText": "新玩具被玩壞當然會哭",
+      "focusChar": "被",
+      "displayLines": [
+        "新玩具被",
+        "玩壞，",
+        "當然會哭。"
+      ],
+      "imageNotes": "主角小女孩的新玩具被另一個孩子玩壞了，她覺得難過要哭，主角媽媽在旁邊安撫。畫面要清楚呈現新玩具被玩壞、孩子難過會哭；不可畫成打架或霸凌，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L296-S05",
+      "text": "耐心等紅燈，然後當心過馬路。",
+      "spokenText": "耐心等紅燈然後當心過馬路",
+      "focusChar": "然",
+      "displayLines": [
+        "耐心等紅燈，",
+        "然後當心",
+        "過馬路。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽站在路口等紅燈，等好之後準備當心過馬路。畫面要清楚呈現耐心等紅燈、然後當心過馬路；不可有交通號誌文字、數字、車牌或標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L296-G01",
+      "type": "find-character",
+      "sentenceId": "L296-S02",
+      "targetChar": "被",
+      "reason": "「被老師問到」是本課核心被動用法，目標字清楚。"
+    },
+    {
+      "id": "L296-G02",
+      "type": "teach-character",
+      "sentenceId": "L296-S01",
+      "targetChar": "被",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "我",
+        "suffixText": "球打到痛得哭了",
+        "prefixSrc": "/assets/lessons/L296/audio/L296-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L296/audio/L296-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L296-G03",
+      "type": "missing-character",
+      "sentenceId": "L296-S04",
+      "targetChar": "被",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        "被",
+        "哭",
+        "怕"
+      ]
+    },
+    {
+      "id": "L296-G04",
+      "type": "partial-order",
+      "sentenceId": "L296-S05",
+      "chunks": [
+        "耐心等紅燈",
+        "然後",
+        "當心過馬路"
+      ],
+      "targetChar": "然"
+    },
+    {
+      "id": "L296-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L296-S03",
+      "correctText": "我怕衣服濕掉，不敢下水。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我怕衣服濕掉，不敢出門。",
+          "audioSrc": "/assets/lessons/L296/audio/L296-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我怕衣服濕掉，敢下水。",
+          "audioSrc": "/assets/lessons/L296/audio/L296-G05-wrong-two.m4a"
+        }
+      ],
+      "targetChar": "怕"
+    }
+  ],
+  "productionAudit": {
+    "status": "release-integrated-prep",
+    "latestOriginMainBoundary": "L287 痛",
+    "fullyUnlearnedChars": [],
+    "notes": "Production must rerun allowed-character audit before assets and before final handoff."
+  },
+  "releaseAudit": {
+    "status": "integrated-from-latest-origin-main",
+    "integratedInMainThrough": "L297",
+    "note": "Release transplanted lesson-local package files and rechecked dependencies through L297."
+  }
+}
