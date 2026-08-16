@@ -1,0 +1,197 @@
+{
+  "id": "L291",
+  "order": 291,
+  "newChars": [
+    "敢"
+  ],
+  "zhuyin": {
+    "敢": "ㄍㄢˇ"
+  },
+  "title": "敢",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L288",
+    "L289",
+    "L290"
+  ],
+  "provisionalLearnedChars": [
+    "受",
+    "忍",
+    "耐"
+  ],
+  "teacherNotes": "Accepted Production handoff. Latest origin/main is complete through L287, so L286 皮 and L287 痛 are already learned; build lesson-local complete package only and block until L288-L290 are in main. Use origin/main L001-L287 plus provisional learned chars [受,忍,耐] and current target 敢 for allowed-character audit. Do not confuse 敢 with 趕. Injury/pain scenes must remain gentle, child-safe, non-bloody, and non-medical-horror.",
+  "generationConstraints": {
+    "allowedBoundary": "origin/main L001-L287 + provisional learned chars [受,忍,耐] + current target 敢",
+    "requiredCoverageChars": [
+      "敢",
+      "耐",
+      "忍",
+      "受",
+      "痛",
+      "皮"
+    ],
+    "targetCharMinimumCount": {
+      "敢": 3
+    },
+    "recentTargetMinimumCounts": {
+      "耐": 2,
+      "忍": 2,
+      "受": 2,
+      "痛": 1,
+      "皮": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "趕",
+      "直",
+      "怕",
+      "告",
+      "訴"
+    ],
+    "usageNotes": [
+      "This lesson uses 敢 as in 敢不敢, not 趕.",
+      "Images may depict small scraped skin, foot pain, and discomfort, but must not be bloody, severe, frightening, or medically intense.",
+      "Do not use unapproved display characters outside the allowed boundary.",
+      "Images must not contain text, numbers, signs, labels, zhuyin, or watermarks."
+    ],
+    "imageRules": [
+      "All sentence images must be square image / 1:1 composition.",
+      "Use L058 only as style reference, not person identity.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks.",
+      "Pain and injury scenes must be gentle and safe: small discomfort only, no blood, no severe injury, no emergency, no horror."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 敢 as public/assets/lessons/L291/audio/char-u6562.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L291-S01",
+      "text": "傷口破皮，不敢看。",
+      "spokenText": "傷口破皮不敢看",
+      "focusChar": "敢",
+      "displayLines": [
+        "傷口破皮，",
+        "不敢看。"
+      ],
+      "imageNotes": "主角小女孩手上有一點小傷口和破皮，她把臉稍微轉開，不敢看自己的傷口，主角媽媽在旁邊溫和安撫。畫面重點是傷口破皮、不敢看；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L291-S02",
+      "text": "你敢不敢和我比力氣？",
+      "spokenText": "你敢不敢和我比力氣",
+      "focusChar": "敢",
+      "displayLines": [
+        "你敢不敢",
+        "和我比力氣？"
+      ],
+      "imageNotes": "主角小女孩和另一個孩子在安全遊戲中比力氣，例如雙手互推或一起搬一個很輕的玩具箱。畫面要像孩子在玩比力氣遊戲，不要危險動作；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L291-S03",
+      "text": "腳痛得受不了，我不敢跑。",
+      "spokenText": "腳痛得受不了我不敢跑",
+      "focusChar": "敢",
+      "displayLines": [
+        "腳痛得受不了，",
+        "我不敢跑。"
+      ],
+      "imageNotes": "主角小女孩坐在場邊或路邊，腳痛得受不了，所以不敢跑，主角媽媽在旁邊關心。畫面要清楚呈現腳痛、受不了、不敢跑；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L291-S04",
+      "text": "不敢說，就只好忍耐。",
+      "spokenText": "不敢說就只好忍耐",
+      "focusChar": "忍",
+      "displayLines": [
+        "不敢說，",
+        "就只好忍耐。"
+      ],
+      "imageNotes": "主角小女孩穿著太小的皮鞋坐在椅子上，腳已經痛了，但她不敢跟主角媽媽說，只好低頭忍耐。主角媽媽在旁邊或前方整理東西，還沒有發現她不舒服。畫面重點是不敢說、只好忍耐；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L291-S05",
+      "text": "不要忍耐，難受要和大人說。",
+      "spokenText": "不要忍耐難受要和大人說",
+      "focusChar": "耐",
+      "displayLines": [
+        "不要忍耐，",
+        "難受要和大人說。"
+      ],
+      "imageNotes": "延續上一句情境，主角媽媽發現主角小女孩很難受，蹲下來關心她，主角小女孩坐在椅子上指著太小的皮鞋或腳。畫面要清楚呈現媽媽提醒她不要一直忍耐，難受要和大人說；不可有文字、數字、標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L291-G01",
+      "type": "find-character",
+      "sentenceId": "L291-S02",
+      "targetChar": "敢",
+      "reason": "「敢不敢」是本課核心問句用法，目標字出現清楚。"
+    },
+    {
+      "id": "L291-G02",
+      "type": "teach-character",
+      "sentenceId": "L291-S01",
+      "targetChar": "敢",
+      "targetCharIndex": 5,
+      "teachAudio": {
+        "prefixText": "傷口破皮不",
+        "suffixText": "看",
+        "prefixSrc": "/assets/lessons/L291/audio/L291-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L291/audio/L291-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L291-G03",
+      "type": "missing-character",
+      "sentenceId": "L291-S03",
+      "targetChar": "敢",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "敢",
+        "受",
+        "耐"
+      ]
+    },
+    {
+      "id": "L291-G04",
+      "type": "partial-order",
+      "sentenceId": "L291-S05",
+      "chunks": [
+        "不要忍耐",
+        "難受",
+        "要和大人說"
+      ]
+    },
+    {
+      "id": "L291-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L291-S04",
+      "correctText": "不敢說，就只好忍耐。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "不敢說，就只好受痛。",
+          "audioSrc": "/assets/lessons/L291/audio/L291-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "不敢說，就只好出聲。",
+          "audioSrc": "/assets/lessons/L291/audio/L291-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
