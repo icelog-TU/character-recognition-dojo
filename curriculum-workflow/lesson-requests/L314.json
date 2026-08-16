@@ -1,0 +1,318 @@
+{
+  "id": "L314",
+  "order": 314,
+  "newChars": [
+    "收"
+  ],
+  "zhuyin": {
+    "收": "ㄕㄡ"
+  },
+  "title": "收",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A complete-package handoff for L314 收. Use approved sentences exactly. Latest origin/main must be verified before release. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate. Do not use unlearned display characters such as 拾, 整, 理, 業, 功, 東, 西, 寫, 日, 號.",
+  "dependsOnLessons": [
+    "L312",
+    "L313"
+  ],
+  "provisionalLearnedChars": [
+    "記",
+    "完"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L311 + provisional learned chars [記, 完] + current new char 收",
+    "dependsOnLessons": [
+      "L312",
+      "L313"
+    ],
+    "provisionalLearnedChars": [
+      "記",
+      "完"
+    ],
+    "requiredCoverageChars": [
+      "收",
+      "完",
+      "記",
+      "次",
+      "每",
+      "忘"
+    ],
+    "targetCharMinimumCount": {
+      "收": 3
+    },
+    "recentTargetMinimumCounts": {
+      "完": 2,
+      "記": 2,
+      "次": 2,
+      "每": 1,
+      "忘": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "拾",
+      "整",
+      "理",
+      "業",
+      "功",
+      "東",
+      "西",
+      "寫",
+      "日",
+      "號"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 收 as public/assets/lessons/L314/audio/char-u6536.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and suffix from the exact fragments 掃完地記得把掃把 and 好.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L314-S01",
+      "text": "畫完畫，記得把桌面收一收。",
+      "spokenText": "畫完畫記得把桌面收一收",
+      "focusChar": "收",
+      "displayLines": [
+        "畫完畫，",
+        "記得把桌面收一收。"
+      ],
+      "imageNotes": "主角小女孩在家中桌前畫畫，桌面有紙張、畫具和用過的筆，畫完後正在把桌面收一收。畫面要清楚呈現畫完畫、收桌面的動作；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L314-S02",
+      "text": "掃完地，記得把掃把收好。",
+      "spokenText": "掃完地記得把掃把收好",
+      "focusChar": "收",
+      "displayLines": [
+        "掃完地，",
+        "記得把掃把收好。"
+      ],
+      "imageNotes": "主角小女孩在家中掃完地，正把掃把放回牆邊或清潔角落，主角媽媽可以在旁邊溫和提醒。畫面要清楚呈現掃完地後把掃把收好；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L314-S03",
+      "text": "游完泳，要把泳衣放好。",
+      "spokenText": "游完泳要把泳衣放好",
+      "focusChar": "完",
+      "displayLines": [
+        "游完泳，",
+        "要把泳衣放好。"
+      ],
+      "imageNotes": "主角小女孩游泳後在更衣或家中整理場景，已換上乾淨衣服，手上拿著泳衣準備放好。畫面要清楚呈現游完泳後把泳衣放好；不可有文字、數字、標籤，不要畫成泳衣還穿在身上。"
+    },
+    {
+      "id": "L314-S04",
+      "text": "每次玩完積木，要放回盒子。",
+      "spokenText": "每次玩完積木要放回盒子",
+      "focusChar": "完",
+      "displayLines": [
+        "每次玩完積木，",
+        "要放回盒子。"
+      ],
+      "imageNotes": "主角小女孩在家中地板或桌邊玩積木，玩完後把積木放回沒有文字的盒子裡。畫面要清楚呈現玩完積木後放回盒子；不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L314-S05",
+      "text": "下次不要忘了收好棋子。",
+      "spokenText": "下次不要忘了收好棋子",
+      "focusChar": "收",
+      "displayLines": [
+        "下次不要忘了",
+        "收好棋子。"
+      ],
+      "imageNotes": "主角小女孩和主角爸爸或主角媽媽下棋後，棋子散在棋盤旁，主角小女孩正在把棋子收好。畫面要清楚呈現下次不要忘了收好棋子；棋盤、棋子、盒子不可有文字、數字或標籤。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "收",
+      "count": 4,
+      "required": 3,
+      "status": "PASS"
+    },
+    "previousTargets": [
+      {
+        "lesson": "L313",
+        "char": "完",
+        "count": 4,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "lesson": "L312",
+        "char": "記",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "lesson": "L311",
+        "char": "次",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "lesson": "L310",
+        "char": "每",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "lesson": "L309",
+        "char": "忘",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L314-S01": 11,
+      "L314-S02": 10,
+      "L314-S03": 9,
+      "L314-S04": 11,
+      "L314-S05": 10
+    },
+    "allowedCharacterAuditExpected": "PASS",
+    "anyLongerThan12Han": false
+  },
+  "stage4Plan": {
+    "games": [
+      {
+        "id": "L314-G01",
+        "type": "find-character",
+        "sentenceId": "L314-S01",
+        "targetChar": "收",
+        "prompt": "Find the target character.",
+        "missingIndexes": [
+          8,
+          10
+        ]
+      },
+      {
+        "id": "L314-G02",
+        "type": "teach-character",
+        "sentenceId": "L314-S02",
+        "targetChar": "收",
+        "targetCharIndex": 8,
+        "prompt": "Listen to the target character.",
+        "missingIndexes": [
+          8
+        ],
+        "teachAudio": {
+          "prefixSrc": "/assets/lessons/L314/audio/L314-G02-prefix.m4a",
+          "suffixSrc": "/assets/lessons/L314/audio/L314-G02-suffix.m4a"
+        },
+        "teachAudioText": {
+          "prefixText": "掃完地記得把掃把",
+          "suffixText": "好"
+        }
+      },
+      {
+        "id": "L314-G03",
+        "type": "missing-character",
+        "sentenceId": "L314-S05",
+        "targetChar": "收",
+        "prompt": "Choose the missing character.",
+        "missingIndexes": [
+          6
+        ],
+        "options": [
+          {
+            "id": "L314-G03-A",
+            "text": "收",
+            "correct": true
+          },
+          {
+            "id": "L314-G03-B",
+            "text": "完",
+            "correct": false
+          },
+          {
+            "id": "L314-G03-C",
+            "text": "記",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "L314-G04",
+        "type": "partial-order",
+        "sentenceId": "L314-S04",
+        "targetChar": "完",
+        "prompt": "Put the chunks in order.",
+        "missingIndexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "chunks": [
+          {
+            "id": "L314-G04-A",
+            "text": "每次玩完積木",
+            "order": 0
+          },
+          {
+            "id": "L314-G04-B",
+            "text": "要放回",
+            "order": 1
+          },
+          {
+            "id": "L314-G04-C",
+            "text": "盒子",
+            "order": 2
+          }
+        ]
+      },
+      {
+        "id": "L314-G05",
+        "type": "choose-pronunciation",
+        "sentenceId": "L314-S03",
+        "targetChar": "完",
+        "prompt": "Choose the sentence you heard.",
+        "options": [
+          {
+            "id": "L314-G05-A",
+            "text": "游完泳，要把泳衣放好。",
+            "correct": true,
+            "sentenceId": "L314-S03"
+          },
+          {
+            "id": "L314-G05-B",
+            "text": "游完泳，要把泳衣收好。",
+            "correct": false,
+            "audioSrc": "/assets/lessons/L314/audio/L314-G05-wrong-one.m4a"
+          },
+          {
+            "id": "L314-G05-C",
+            "text": "游完泳，要把泳衣洗好。",
+            "correct": false,
+            "audioSrc": "/assets/lessons/L314/audio/L314-G05-wrong-two.m4a"
+          }
+        ]
+      }
+    ]
+  }
+}
