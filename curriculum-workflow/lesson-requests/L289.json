@@ -1,0 +1,268 @@
+{
+  "id": "L289",
+  "order": 289,
+  "newChars": [
+    "忍"
+  ],
+  "zhuyin": {
+    "忍": "ㄖㄣˇ"
+  },
+  "title": "忍",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release verified and merged L289 from origin/codex/l289-complete-package against latest origin/main. Dependencies are satisfied in playable order through L289; R001-R016 are already shipped.",
+  "dependsOnLessons": [
+    "L283",
+    "L284",
+    "L285",
+    "L286",
+    "L287",
+    "L288"
+  ],
+  "generationConstraints": {
+    "allowedBoundary": "Release verified against production JSON through L289.",
+    "dependsOnLessons": [
+      "L283",
+      "L284",
+      "L285",
+      "L286",
+      "L287",
+      "L288"
+    ],
+    "requiredCoverageChars": [
+      "忍",
+      "受",
+      "痛",
+      "皮",
+      "傷",
+      "口",
+      "破"
+    ],
+    "targetCharMinimumCount": {
+      "忍": 3
+    },
+    "recentTargetMinimumCounts": {
+      "受": 2,
+      "痛": 2,
+      "皮": 2,
+      "傷": 1,
+      "口": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "耐",
+      "哭"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No written text, numbers, signs, labels, zhuyin, watermarks, logos, brands, wall writing, or readable marks.",
+      "Injury/discomfort scenes must be preschool-safe: tiny wound, mild discomfort, no gore, no severe injury, no frightening medical scene.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 忍 as public/assets/lessons/L289/audio/char-u5fcd.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix/suffix and G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L289-S01",
+      "text": "我忍著痛，不叫出聲。",
+      "spokenText": "我忍著痛不叫出聲",
+      "focusChar": "忍",
+      "displayLines": [
+        "我忍著痛，",
+        "不叫出聲。"
+      ],
+      "imageNotes": "主角小女孩手上或腳上有一點小傷，表情忍著痛，沒有大叫，主角媽媽在旁邊關心。畫面重點是忍著痛、不叫出聲；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L289-S02",
+      "text": "小狗受傷了，我不忍心看。",
+      "spokenText": "小狗受傷了我不忍心看",
+      "focusChar": "忍",
+      "displayLines": [
+        "小狗受傷了，",
+        "我不忍心看。"
+      ],
+      "imageNotes": "主角小女孩看見一隻小狗有小傷或腳不舒服，表情很心疼、不忍心看，主角媽媽在旁邊陪她。畫面要清楚呈現小狗受傷、主角小女孩不忍心看；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L289-S03",
+      "text": "皮鞋太小，腳痛得受不了。",
+      "spokenText": "皮鞋太小腳痛得受不了",
+      "focusChar": "受",
+      "displayLines": [
+        "皮鞋太小，",
+        "腳痛得",
+        "受不了。"
+      ],
+      "imageNotes": "主角小女孩試穿太小的皮鞋，腳看起來很不舒服，主角媽媽在旁邊關心。畫面要清楚表現皮鞋太小、腳痛得受不了；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L289-S04",
+      "text": "手上破皮了，傷口很痛。",
+      "spokenText": "手上破皮了傷口很痛",
+      "focusChar": "痛",
+      "displayLines": [
+        "手上破皮了，",
+        "傷口很痛。"
+      ],
+      "imageNotes": "主角小女孩手上有一點破皮和小傷口，表情覺得痛，主角媽媽正在溫和查看或安撫她。畫面重點是破皮、傷口、很痛；不可血腥，不可有文字、數字、標籤。"
+    },
+    {
+      "id": "L289-S05",
+      "text": "大太陽下打球，熱到難以忍受。",
+      "spokenText": "大太陽下打球熱到難以忍受",
+      "focusChar": "忍",
+      "displayLines": [
+        "大太陽",
+        "下打球，",
+        "熱到難以",
+        "忍受。"
+      ],
+      "imageNotes": "主角小女孩和其他孩子在大太陽下的球場打球，天氣很熱，主角小女孩滿頭汗、表情覺得熱到難以忍受。畫面要清楚呈現大太陽、打球、太熱難以忍受；不要畫成危險中暑，不可有文字、數字、標籤。"
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "忍",
+      "count": 3,
+      "required": 3,
+      "status": "PASS"
+    },
+    "recentTargets": [
+      {
+        "char": "受",
+        "count": 3,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "痛",
+        "count": 3,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "皮",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "char": "傷",
+        "count": 2,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "char": "口",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L289-S01": 8,
+      "L289-S02": 10,
+      "L289-S03": 10,
+      "L289-S04": 10,
+      "L289-S05": 12
+    },
+    "allowedCharacterAudit": "Production must verify from latest origin/main plus provisional learned chars.",
+    "longerThan12Han": false
+  },
+  "stage4Plan": [
+    {
+      "id": "L289-G01",
+      "type": "find-character",
+      "sentenceId": "L289-S02",
+      "targetChar": "忍",
+      "reason": "「不忍心」是本課重要用法，目標字清楚。"
+    },
+    {
+      "id": "L289-G02",
+      "type": "teach-character",
+      "sentenceId": "L289-S01",
+      "targetChar": "忍",
+      "targetCharIndex": 1,
+      "prefixText": "我",
+      "suffixText": "著痛不叫出聲",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L289/audio/L289-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L289/audio/L289-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L289-G03",
+      "type": "missing-character",
+      "sentenceId": "L289-S05",
+      "targetChar": "忍",
+      "missingIndexes": [
+        10
+      ],
+      "options": [
+        "忍",
+        "受",
+        "痛"
+      ]
+    },
+    {
+      "id": "L289-G04",
+      "type": "partial-order",
+      "sentenceId": "L289-S04",
+      "chunks": [
+        "手上破皮了",
+        "傷口",
+        "很痛"
+      ],
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "L289-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L289-S03",
+      "targetChar": "受",
+      "correctText": "皮鞋太小，腳痛得受不了。",
+      "wrongOneText": "皮鞋太大，腳痛得受不了。",
+      "wrongTwoText": "皮鞋太小，手痛得受不了。",
+      "wrongAudio": {
+        "wrongOneSrc": "/assets/lessons/L289/audio/L289-G05-wrong-one.m4a",
+        "wrongTwoSrc": "/assets/lessons/L289/audio/L289-G05-wrong-two.m4a"
+      }
+    }
+  ],
+  "releaseAudit": {
+    "status": "merged-to-main",
+    "source": "origin/codex/l289-complete-package",
+    "resolvedDependencies": [
+      "L283",
+      "L284",
+      "L285",
+      "L286",
+      "L287",
+      "L288"
+    ],
+    "verifiedAgainst": "latest origin/main",
+    "notes": "Release transplanted lesson-local package files only; production JSON, planner data, ledger, and registry state were regenerated from main."
+  }
+}

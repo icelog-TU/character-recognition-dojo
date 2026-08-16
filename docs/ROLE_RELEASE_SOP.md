@@ -56,7 +56,7 @@ If bare `gh` fails, retry with `C:\Users\User\.local\bin\gh.cmd`.
 - Insert review modules only according to the review cycle rules.
 - Review modules are blockers. After L060, L090, L120, L150, L180, and every later 30-lesson milestone, ship the required review pair before the next numbered lesson.
 - Continue blockers through the 600-lesson course. After L600, ship R037/R038 for L541-L570, then final capstone R039/R040 for L571-L600 before calling the 600-lesson curriculum complete.
-- If review modules were skipped, stop merging further numbered lessons and catch up overdue review pairs first. With main currently at L287 and R001-R016 shipped, no review pair is overdue; R017-R018 are required after L300 and before L301.
+- If review modules were skipped, stop merging further numbered lessons and catch up overdue review pairs first. With main currently at L289 and R001-R016 shipped, no review pair is overdue; R017-R018 are required after L300 and before L301.
 - Do not merge L172 before L171.
 - Do not merge a lesson whose dependencies are only provisional.
 - Do not infer final sentences from chat.
