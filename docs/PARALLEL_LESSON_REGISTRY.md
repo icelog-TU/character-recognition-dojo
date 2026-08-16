@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L297 | 嚇 / normal lesson | ready-blocked-by-dependency | Production C | codex/l297-complete-package / final package push | L292 當, L293 然, L294 怕, L295 哭, L296 被 | ["當","然","怕","哭","被"] | curriculum-workflow/lesson-requests/L297.json, curriculum-workflow/generated/L297-generation-packet.md | public/assets/lessons/L297/images/, public/assets/lessons/L297/audio/ | complete lesson-local package; dependency-blocked until L292-L296 are in latest origin/main; production JSON/planner/ledger left for Release |
+| L297 | 嚇 / normal lesson | ready-blocked-by-dependency | Production C | codex/l297-complete-package / f2362782 | L292 當, L293 然, L294 怕, L295 哭, L296 被 | ["當","然","怕","哭","被"] | curriculum-workflow/lesson-requests/L297.json, curriculum-workflow/generated/L297-generation-packet.md | public/assets/lessons/L297/images/, public/assets/lessons/L297/audio/ | complete lesson-local package; dependency-blocked until L292-L296 are in latest origin/main; production JSON/planner/ledger left for Release |
 
 ## Status Values
 
