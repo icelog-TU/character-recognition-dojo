@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L289 | 忍 / normal lesson | claimed | Production C | codex/l289-complete-package / 3df939cf | L284 口, L285 傷, L286 皮, L287 痛, L288 受 | ["口","傷","皮","痛","受"] | curriculum-workflow/lesson-requests/L289.json, curriculum-workflow/generated/L289-generation-packet.md | public/assets/lessons/L289/images/, public/assets/lessons/L289/audio/ | accepted handoff and starting complete package |
+| L289 | 忍 / normal lesson | ready-blocked-by-dependency | Production C | codex/l289-complete-package / a114bba1 | L283 破, L284 口, L285 傷, L286 皮, L287 痛, L288 受 | ["破","口","傷","皮","痛","受"] | curriculum-workflow/lesson-requests/L289.json, curriculum-workflow/generated/L289-generation-packet.md | public/assets/lessons/L289/images/, public/assets/lessons/L289/audio/ | corrected handoff accepted; asset-complete package prepared; blocked until L283-L288 enter main |
 
 ## Status Values
 
