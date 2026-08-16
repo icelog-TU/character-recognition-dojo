@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R017/R018 | review lessons / review pair | claimed | Production C | codex/r017-r018-review-package / 5364f6b3 | L298 罵, L299 對, L300 爬 | ["罵","對","爬"] | curriculum-workflow/review-requests/R017.json, curriculum-workflow/review-requests/R018.json, curriculum-workflow/generated/R017-generation-packet.md, curriculum-workflow/generated/R018-generation-packet.md | public/assets/reviews/R017/images/, public/assets/reviews/R017/audio/, public/assets/reviews/R018/images/, public/assets/reviews/R018/audio/ | accepted handoff and starting complete review pair package; R017/R018 must be inserted only after L300 is in production curriculum |
 
 ## Status Values
 
