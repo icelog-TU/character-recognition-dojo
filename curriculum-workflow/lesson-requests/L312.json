@@ -9,13 +9,9 @@
   },
   "title": "記",
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher-approved final sentences from Production Handoff L312. Production boundary verified from latest origin/main L001-L310. L312 is dependency-blocked until L311 次 is in main; do not enter production JSON before dependency merges. Learner-facing text audit covers text, spokenText, displayLines, focusChar, and Stage 4 option text.",
-  "dependsOnLessons": [
-    "L311"
-  ],
-  "provisionalLearnedChars": [
-    "次"
-  ],
+  "teacherNotes": "Teacher-approved final sentences from Production Handoff L312. Production boundary rechecked after fetch/rebase: latest origin/main includes L311, so no provisional learned chars are needed. Production C prepared the asset-complete package only; Release owns production JSON, planner, ledger, final verify, and deployment.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
   "allowedChars": [
     "一",
     "二",
@@ -504,7 +500,7 @@
       "L312-S04": 10,
       "L312-S05": 9
     },
-    "allowedCharacterAudit": "PASS against latest origin/main L001-L310 + provisionalLearnedChars [\"次\"] + current 記 for text, spokenText, displayLines, focusChar, and Stage 4 option text.",
+    "allowedCharacterAudit": "PASS against latest origin/main L001-L311 + current ? for text, spokenText, displayLines, focusChar, and Stage 4 option text.",
     "anyLongerThan12Han": false
   },
   "stage4Plan": [
@@ -560,8 +556,9 @@
     }
   ],
   "releaseAudit": {
-    "productionJsonAllowed": false,
-    "status": "ready-blocked-by-dependency",
-    "blocker": "L311 次 is not in latest origin/main production curriculum."
+    "productionJsonAllowed": true,
+    "status": "asset-complete-package",
+    "blocker": null,
+    "releaseNext": "Release must integrate L312 into production JSON, planner data, and ledger on latest origin/main, then run npm run verify."
   }
 }
