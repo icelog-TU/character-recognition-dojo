@@ -5199,6 +5199,14 @@ function playMissChime() {
   ]);
 }
 
+function playCardResetChime() {
+  if (navigator.vibrate) navigator.vibrate(45);
+  playToneSequence([
+    { frequency: 392, endFrequency: 330, duration: 0.12, gain: 0.065 },
+    { frequency: 294, endFrequency: 247, duration: 0.16, gain: 0.06, delay: 0.11 },
+  ]);
+}
+
 function getRecordingDingAudioUrl() {
   if (recordingDingAudioUrl) return recordingDingAudioUrl;
   const sampleRate = 44100;
@@ -5810,7 +5818,7 @@ function SentencePracticePreview({
     if (pickedCount >= (optionPickLimits.get(option.id) ?? 1)) return;
     const expectedText = han[missingIndexes[pickedOptionIds.length]];
     if (option.text !== expectedText) {
-      playMissChime();
+      playCardResetChime();
       setPickedOptionIds([]);
       void speakStageFour("順序不對，再排一次。");
       return;
