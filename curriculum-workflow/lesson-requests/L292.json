@@ -1,0 +1,212 @@
+{
+  "id": "L292",
+  "order": 292,
+  "newChars": [
+    "當"
+  ],
+  "zhuyin": {
+    "當": "ㄉㄤ"
+  },
+  "title": "當",
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L288",
+    "L289",
+    "L290",
+    "L291"
+  ],
+  "productionStatus": {
+    "status": "ready-blocked-by-dependency",
+    "productionJsonAllowed": false,
+    "blockedBy": [
+      "L288",
+      "L289",
+      "L290",
+      "L291"
+    ],
+    "notes": "L292 is prepared as a complete package only. Do not insert into production JSON until L288-L291 are merged in latest origin/main."
+  },
+  "teacherNotes": "Production B accepted teacher-approved L292 handoff. Latest origin/main is complete through L287 痛 at claim time; L288-L291 are provisional dependencies. Approved sentences are fixed by teacher handoff.",
+  "generationConstraints": {
+    "allowedBoundary": "latest origin/main L001-L287 learned chars + provisionalLearnedChars [\"受\",\"忍\",\"耐\",\"敢\"] + current new char 當",
+    "provisionalLearnedChars": [
+      "受",
+      "忍",
+      "耐",
+      "敢"
+    ],
+    "requiredCoverageChars": [
+      "當",
+      "敢",
+      "耐",
+      "忍",
+      "受",
+      "痛"
+    ],
+    "targetCharMinimumCount": {
+      "當": 3
+    },
+    "recentTargetMinimumCounts": {
+      "敢": 2,
+      "耐": 2,
+      "忍": 2,
+      "受": 1,
+      "痛": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "趕",
+      "直",
+      "告",
+      "訴",
+      "清",
+      "楚",
+      "覺"
+    ],
+    "usageNotes": [
+      "當 is used as 當面、當心、敢當; do not confuse with 擋.",
+      "Images may show headache or foot pain, but must remain gentle and child-safe.",
+      "No severe injury, medical horror, blood, frightening expressions, or punishment scenes."
+    ],
+    "imageRules": [
+      "All sentence images must be square image / 1:1 composition.",
+      "Use L058 only as style reference, not person identity.",
+      "Use protagonist family continuity from L154/L162/L163.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, numbers, signs, labels, zhuyin, watermarks, brands, logos, or readable marks."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 當 as public/assets/lessons/L292/audio/char-u7576.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix from exact fragment 做了錯事要敢做敢; suffix is empty and should be omitted if schema/generator supports no suffix.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L292-S01",
+      "text": "做了錯事，要敢做敢當。",
+      "spokenText": "做了錯事要敢做敢當",
+      "focusChar": "當",
+      "displayLines": [
+        "做了錯事，",
+        "要敢做敢當。"
+      ],
+      "imageNotes": "主角小女孩不小心把桌上的東西弄倒或打亂，主角媽媽在旁邊溫和詢問，主角小女孩勇敢承認。畫面重點是做錯事、敢做敢當；不可有文字、數字、標籤，不要讓媽媽看起來在生氣罵人。"
+    },
+    {
+      "id": "L292-S02",
+      "text": "有什麼話，就當面說。",
+      "spokenText": "有什麼話就當面說",
+      "focusChar": "當",
+      "displayLines": [
+        "有什麼話，",
+        "就當面說。"
+      ],
+      "imageNotes": "主角小女孩和另一個孩子面對面說話，主角媽媽在旁邊溫和引導。畫面要清楚呈現有話當面說的面對面溝通情境；不可有對話框、文字、數字或標籤。"
+    },
+    {
+      "id": "L292-S03",
+      "text": "過馬路時，要當心走。",
+      "spokenText": "過馬路時要當心走",
+      "focusChar": "當",
+      "displayLines": [
+        "過馬路時，",
+        "要當心走。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在斑馬線旁準備過馬路，主角媽媽牽著她，提醒她當心走。畫面要清楚呈現過馬路和當心走；不可有交通號誌文字、數字、車牌或標籤。"
+    },
+    {
+      "id": "L292-S04",
+      "text": "頭痛得受不了，不要忍耐。",
+      "spokenText": "頭痛得受不了不要忍耐",
+      "focusChar": "受",
+      "displayLines": [
+        "頭痛得受不了，",
+        "不要忍耐。"
+      ],
+      "imageNotes": "主角小女孩頭痛得受不了，坐在床邊或躺在床上，主角媽媽在旁邊關心，提醒她不要一直忍耐。畫面要清楚呈現頭痛、受不了、不要忍耐；不可有藥品文字、數字、標籤。"
+    },
+    {
+      "id": "L292-S05",
+      "text": "腳很痛，只能忍耐走回家。",
+      "spokenText": "腳很痛只能忍耐走回家",
+      "focusChar": "忍",
+      "displayLines": [
+        "腳很痛，",
+        "只能忍耐走回家。"
+      ],
+      "imageNotes": "主角小女孩在外面腳痛，慢慢走回家，主角媽媽或主角爸爸在旁邊扶著或陪著她。畫面要清楚呈現腳很痛、只能忍耐走回家；不可血腥，不可有文字、數字、標籤。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L292-G01",
+      "type": "find-character",
+      "sentenceId": "L292-S02",
+      "targetChar": "當",
+      "reason": "「當面說」是本課核心生活用法，目標字清楚。"
+    },
+    {
+      "id": "L292-G02",
+      "type": "teach-character",
+      "sentenceId": "L292-S01",
+      "targetChar": "當",
+      "targetCharIndex": 8,
+      "teachAudio": {
+        "prefixText": "做了錯事要敢做敢",
+        "suffixText": "",
+        "prefixSrc": "/assets/lessons/L292/audio/L292-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "L292-G03",
+      "type": "missing-character",
+      "sentenceId": "L292-S03",
+      "targetChar": "當",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        "當",
+        "敢",
+        "忍"
+      ]
+    },
+    {
+      "id": "L292-G04",
+      "type": "partial-order",
+      "sentenceId": "L292-S05",
+      "targetChar": "忍",
+      "chunks": [
+        "腳很痛",
+        "只能忍耐",
+        "走回家"
+      ]
+    },
+    {
+      "id": "L292-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L292-S04",
+      "targetChar": "受",
+      "correctText": "頭痛得受不了，不要忍耐。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "頭痛得受不了，不要出門。",
+          "audioSrc": "/assets/lessons/L292/audio/L292-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "頭痛得受不了，不要跑步。",
+          "audioSrc": "/assets/lessons/L292/audio/L292-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
