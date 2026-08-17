@@ -14,7 +14,7 @@ Do not duplicate detailed rules across SOP files. Use this authority order when 
 - `docs/CURRICULUM_SCHEMA.md` is the authority for JSON shape and validation expectations.
 - `docs/FIREBASE_ACCOUNT_DEVICE_SETUP.md` is the authority for Firebase console setup, Firestore data model, and Firestore rules.
 - `docs/PROJECT_HANDOFF_SOP.md` is only the handoff entry point and must stay concise.
-- `docs/ROLE_SUPERVISOR_SOP.md`, `docs/ROLE_EDITOR_SOP.md`, `docs/ROLE_PRODUCTION_SOP.md`, `docs/ROLE_RELEASE_SOP.md`, and `docs/ROLE_ASSET_REPAIR_SOP.md` are role-specific startup adapters. They must link to the authority files above instead of duplicating detailed rules.
+- `docs/ROLE_SUPERVISOR_SOP.md`, `docs/ROLE_EDITOR_SOP.md`, `docs/ROLE_REVIEW_MIGRATION_SOP.md`, `docs/ROLE_PRODUCTION_SOP.md`, `docs/ROLE_RELEASE_SOP.md`, and `docs/ROLE_ASSET_REPAIR_SOP.md` are role-specific startup adapters. They must link to the authority files above instead of duplicating detailed rules.
 
 When adding a new rule, update the one authority file above and replace duplicates elsewhere with links.
 

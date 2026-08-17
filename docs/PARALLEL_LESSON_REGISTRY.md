@@ -93,7 +93,7 @@ I depend on L050:好 being merged first.
 
 - A later lesson may draft against provisional previous characters only when those characters are registered here or explicitly included in the user's lesson request.
 - Review modules must use R### ids, not L### ids. They do not introduce new characters, do not use `newChars`, and do not advance the next new-character lesson number.
-- After L060, the two review modules are R001 and R002. The next new-character lesson remains L061.
+- Starting after L045, every 15-lesson milestone gets two review modules. Example: after L045, R001/R002 must ship before L046; after L060, R003/R004 must ship before L061.
 - Do not merge a later lesson while any `Depends On` row is not merged.
 - If a dependency lesson changes its new character(s), every later row that listed it must move to `needs-rework` until rechecked.
 - After each dependency merges, the later lesson thread must fetch/rebase and re-check `allowedChars`, `mustIncludeCharsAcrossLesson`, sentence text, image prompts, audio, and timings.

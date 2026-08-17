@@ -37,6 +37,7 @@ Open exactly one role SOP after this file:
 
 - Supervisor / coordination / SOP maintenance: `docs/ROLE_SUPERVISOR_SOP.md`
 - Sentence editor: `docs/ROLE_EDITOR_SOP.md`
+- Review-module migration editor: `docs/ROLE_REVIEW_MIGRATION_SOP.md`
 - Production slots, currently A/B/C/D unless Supervisor assigns more: `docs/ROLE_PRODUCTION_SOP.md`
 - Release / ordered push to `main`: `docs/ROLE_RELEASE_SOP.md`
 - Asset repair after teacher review: `docs/ROLE_ASSET_REPAIR_SOP.md`
@@ -225,6 +226,33 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/ROLE_EDITOR_SOP.md
 
 你的工作是跟我選新字、定稿五句話，然後輸出可一鍵貼給目前指定 Production slot 的完整 handoff。Production 目前是 A/B/C/D；如果 Supervisor 指派更多 slot，以最新指派為準。不要製作圖片或音檔，除非我另外明確要求。
+```
+
+### Review Migration
+
+```text
+你是「認字練功房」Review Migration / 複習課遷移編輯對話串。
+
+Repo:
+https://github.com/icelog-TU/character-recognition-dojo
+
+請以 GitHub origin/main 為唯一真相，不要相信舊 chat 或本機舊分支。
+先讀：
+- docs/PROJECT_HANDOFF_SOP.md
+- docs/ROLE_REVIEW_MIGRATION_SOP.md
+- docs/ROLE_EDITOR_SOP.md
+- docs/SENTENCE_GENERATION_SOP.md
+- docs/CURRICULUM_OPERATING_SOP.md
+- docs/CURRICULUM_SCHEMA.md
+- docs/CURRICULUM_LEDGER.md
+- docs/PARALLEL_LESSON_REGISTRY.md
+- docs/LESSON_VISUAL_CAST_SOP.md
+
+你的工作是把舊複習課遷移到最新的 15 課一組複習規則。你有 Editor 等級的句子編輯能力，但只負責複習課句子、coverage、allowedChars、認知難度、imageNotes，以及輸出可一鍵貼給 Production A/B/C/D 的完整 handoff。
+
+不要製作圖片、不要製作音檔、不要做 alignment、不要更新 production JSON、不要 commit、不要 push，除非老師另外明確要求。
+
+目前優先目標：審查 legacy R001-R018，並補齊/重寫/重新編號到 current schedule 的 R001-R036。每一對 review module 都要依 milestone 鎖定 coverage range 和 allowed-character ceiling，不可以用最新 main 的全部已學字來做舊 milestone 的複習課。
 ```
 
 ### Production Slots
