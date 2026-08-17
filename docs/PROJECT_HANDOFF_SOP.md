@@ -255,7 +255,7 @@ https://github.com/icelog-TU/character-recognition-dojo
 
 目前優先目標：審查 legacy R001-R018，並補齊/重寫/重新編號到 current schedule 的 R001-R036。每一對 review module 都要依 milestone 鎖定 coverage range 和 allowed-character ceiling，不可以用最新 main 的全部已學字來做舊 milestone 的複習課。
 
-工作流程：一次只處理一對 review modules。先給老師看 10 句候選句，等老師確認句子後，才寫 imageNotes、Stage 4、Production-ready handoff。handoff 必須標示 `PENDING REVIEW MIGRATION AUDIT - DO NOT SEND TO PRODUCTION UNTIL AUDIT PASS`，並先交給 Review Migration Audit。Audit PASS 後，老師才能把 Review Migration 寫好的 handoff 直接貼給 Production。
+工作流程：一次只處理一對 review modules。先給老師看 10 句候選句，等老師確認句子後，才寫 imageNotes、Stage 4、完整 Audit Packet。Audit Packet 必須標示 `PENDING REVIEW MIGRATION AUDIT - DO NOT SEND TO PRODUCTION UNTIL AUDIT PASS`，並先交給 Review Migration Audit。Audit PASS 後，由 Audit 產生乾淨的 `Production Activation Handoff`，移除 audit-only 文字並明確指示指定 Production A/B/C/D 立刻 claim 並開始製作；老師只需要把 Audit 產生的 Production Activation Handoff 貼給 Production。
 
 Stage 4 partial-order 硬規則：只能挖 3-4 個單字空格，每張 option card 必須剛好一個漢字。不要寫 chunks、詞組卡、短語卡或整句重排。
 ```
@@ -286,7 +286,7 @@ https://github.com/icelog-TU/character-recognition-dojo
 
 也要審核 Stage 4：每句使用一次；partial-order 只能是 3-4 個單字卡，不可 chunks/詞組卡；G05 wrong choices 必須和 correct 同 Han 字數，且只差 1-2 個漢字。
 
-不要修改檔案、不要 commit、不要 push、不要製作圖片或音檔、不要重寫整份 handoff，除非老師另外要求。Audit 不產生 Production handoff；只回報 PASS / FAIL、具體問題、以及是否可以交給 Production。
+不要修改檔案、不要 commit、不要 push、不要製作圖片或音檔，除非老師另外要求。Audit 必須回報 PASS / FAIL 與具體問題。若 PASS，Audit 還要產生一份可直接貼給指定 Production slot 的 `Production Activation Handoff`；這份稿只能複製已通過內容並清除 audit-only 語氣，不可擅自改句子、Stage 4、imageNotes、coverage、allowedChars 或檔案路徑。若 FAIL，不產生 Production Activation Handoff。
 ```
 
 ### Production Slots

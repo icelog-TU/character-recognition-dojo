@@ -37,8 +37,8 @@ Review Migration must:
 R001-R036 are a draft pool only. A review pair becomes production-eligible only after:
 
 1. The teacher approves the pair's 10 review sentences.
-2. Review Migration produces Production-ready handoff blocks.
-3. Review Migration Audit returns PASS.
+2. Review Migration produces an audit packet containing complete Production-ready content.
+3. Review Migration Audit returns PASS and produces a clean Production Activation Handoff.
 
 Do not send any pair to Production before all three gates are complete.
 
@@ -98,15 +98,15 @@ After teacher sentence approval, write imageNotes with explicit role identities 
 
 ## Output
 
-For each review module, produce a complete Production handoff in a single Markdown fenced code block using `text`.
+For each review pair, produce an `Audit Packet` in one or more Markdown fenced code blocks using `text`. The packet must contain complete Production-ready content, but it is addressed to Review Migration Audit first.
 
-The handoff must be clearly marked:
+The Audit Packet must be clearly marked:
 
 ```text
 PENDING REVIEW MIGRATION AUDIT - DO NOT SEND TO PRODUCTION UNTIL AUDIT PASS
 ```
 
-The handoff must include:
+The Audit Packet must include:
 
 - Assigned Production slot and exact worktree path.
 - Unit id, such as `R001`.
@@ -122,10 +122,10 @@ The handoff must include:
 - `G05 choose-pronunciation` option texts with the same Han count as the correct sentence and only 1-2 Han-character differences.
 - `partial-order` plan that blanks exactly 3-4 Han characters. Each option card must be exactly one Han character. Do not use chunks, word cards, phrase cards, or full-sentence reordering.
 - Required review request, draft, generated packet, image, and audio asset paths.
-- Auto-claim-and-continue instructions for Production.
+- Auto-claim-and-continue instructions that Audit can copy into the later Production Activation Handoff.
 - Stop conditions.
 
-Discussion, audit notes, and rejected sentence options must stay outside the final handoff block.
+Discussion, audit notes, and rejected sentence options must stay outside the Audit Packet block.
 
 ## Second-Pass Audit
 
@@ -143,7 +143,9 @@ Send one pair at a time, such as R001/R002, with:
 - Stage 4 plan summary, including the `partial-order` missing Han characters and `G05` wrong-choice texts.
 - Any sentence naturalness, cognitive load, or imageability concern.
 
-If Review Migration Audit returns FAIL, revise the handoff and resend the pair for audit before Production.
+If Review Migration Audit returns FAIL, revise the Audit Packet and resend the pair for audit before Production.
+
+If Review Migration Audit returns PASS, Audit is responsible for producing the final `Production Activation Handoff` by copying the approved content and removing audit-only wording. Review Migration does not need to regenerate a new Production handoff unless Audit finds a problem or the teacher asks for a revision.
 
 ## What Not To Do
 
@@ -154,5 +156,5 @@ If Review Migration Audit returns FAIL, revise the handoff and resend the pair f
 - Do not commit or push unless the teacher explicitly asks for repo maintenance in this Review Migration thread.
 - Do not treat legacy R001-R018 as valid under the new schedule without auditing them.
 - Do not use latest `origin/main` learned characters as the allowed set for an overdue review module; use the milestone ceiling.
-- Do not let Audit generate or rewrite Production handoffs. Audit is a reviewer only; Review Migration owns the Production-ready handoff.
+- Do not expect the teacher to manually clean audit-only wording before sending work to Production. Review Migration owns the approved content; Audit owns the PASS-time wrapper conversion into a Production Activation Handoff.
 - Do not write `partial-order` as multi-character chunks. The current app and validator require 3-4 single-Han option cards.

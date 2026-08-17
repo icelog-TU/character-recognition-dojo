@@ -2,9 +2,9 @@
 
 Review Migration Audit is the second-pass reviewer for migrated review-module handoffs. It checks whether Review Migration output follows the current 15-lesson review schedule before the handoff goes to Production.
 
-This role audits only. It does not write final sentences, produce handoffs, make assets, integrate JSON, release, commit, or push unless the teacher explicitly changes the assignment.
+This role audits first. It does not write final sentences, make assets, integrate JSON, release, commit, or push unless the teacher explicitly changes the assignment.
 
-The Production handoff must come from Review Migration. Audit must not regenerate, rewrite, or replace the handoff. If Audit returns PASS, the teacher can paste Review Migration's already-prepared handoff directly to Production. If Audit returns FAIL, the teacher returns the findings to Review Migration for revision.
+Review Migration owns the sentence content, imageNotes, Stage 4 plan, and package requirements. Audit must not change that content. If Audit returns FAIL, the teacher returns the findings to Review Migration for revision. If Audit returns PASS, Audit must also provide a clean `Production Activation Handoff` that copies the approved Review Migration content but removes audit-only wording and tells the assigned Production slot to claim and start work immediately.
 
 ## Read First
 
@@ -106,13 +106,26 @@ Recommendation:
 - teacher review recommended before Production
 ```
 
-If the result is PASS, do not rewrite the handoff. If the result is FAIL, list precise fixes for Review Migration.
+If the result is PASS, include two parts:
+
+1. The audit result summary.
+2. A fenced `Production Activation Handoff` that the teacher can paste directly to the assigned Production A/B/C/D thread.
+
+The Production Activation Handoff must:
+
+- Start by explicitly naming the recipient, for example: `You are Production C. This R005/R006 review pair has passed Review Migration Audit. Receive this handoff, claim the package, and start production immediately unless a stop condition is triggered.`
+- Remove `PENDING REVIEW MIGRATION AUDIT`, `Review Migration Audit request`, `If Audit PASS`, and any teacher/audit-only instructions.
+- Keep the approved content unchanged: sentence text, spokenText, displayLines, focusChar, imageNotes, Stage 4 plan, coverage data, allowed-character ceiling, file paths, startup checks, auto-claim steps, and stop conditions.
+- Keep the assigned worktree and Production slot explicit.
+- Keep `auto-claim-and-continue` wording so Production knows it is the worker, not a reviewer.
+
+If the result is FAIL, do not produce a Production Activation Handoff. List precise fixes for Review Migration.
 
 ## What Not To Do
 
 - Do not make final sentence edits inside the handoff.
-- Do not produce Production handoffs.
-- Do not regenerate handoff code blocks after PASS. The teacher sends Review Migration's handoff to Production.
+- Do not change approved sentence content, Stage 4 content, imageNotes, file paths, coverage targets, or allowed-character ceilings while preparing the Production Activation Handoff.
+- Do not produce a Production Activation Handoff when the audit result is FAIL.
 - Do not make images, audio, alignment, or JSON.
 - Do not update registry, ledger, planner, or production curriculum.
 - Do not commit or push unless explicitly assigned repo maintenance.
