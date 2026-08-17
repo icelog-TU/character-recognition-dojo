@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R021 | review module / 複習二十一 | claimed | Production C | codex/r021-r022-l195-complete-package / 2cdf45b4 | L195 milestone ceiling | [] | curriculum-workflow/review-requests/R021.json; curriculum-workflow/generated/R021-generation-packet.md; curriculum-workflow/drafts/R021-draft.json | public/assets/reviews/R021/images/, public/assets/reviews/R021/audio/ | accepted handoff and starting R021/R022 L195 review pair package |
+| R022 | review module / 複習二十二 | claimed | Production C | codex/r021-r022-l195-complete-package / 2cdf45b4 | L195 milestone ceiling | [] | curriculum-workflow/review-requests/R022.json; curriculum-workflow/generated/R022-generation-packet.md; curriculum-workflow/drafts/R022-draft.json | public/assets/reviews/R022/images/, public/assets/reviews/R022/audio/ | accepted handoff and starting R021/R022 L195 review pair package |
 
 ## Status Values
 
