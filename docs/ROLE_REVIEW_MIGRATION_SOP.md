@@ -32,6 +32,7 @@ Review Migration must:
 - Confirm no sentence uses characters learned after the milestone ceiling.
 - Keep sentences concrete, natural for Taiwan Mandarin, imageable, and low cognitive load for a five-year-old learner.
 - Output complete one-paste Production handoffs for Production A/B/C/D.
+- Send review-pair handoffs to Review Migration Audit before Production when the teacher is using the double-review workflow.
 
 ## Review Pair Rules
 
@@ -96,6 +97,23 @@ The handoff must include:
 - Stop conditions.
 
 Discussion, audit notes, and rejected sentence options must stay outside the final handoff block.
+
+## Second-Pass Audit
+
+For migration batches, do not send a review pair directly to Production until Review Migration Audit has had a chance to check it, unless the teacher explicitly skips the audit.
+
+Send one pair at a time, such as R001/R002, with:
+
+- Both complete Production handoff code blocks.
+- Milestone lesson id.
+- Coverage range.
+- Allowed-character ceiling.
+- Pair-level 30/30 coverage list.
+- Allowed-character sweep result.
+- Han counts.
+- Any sentence naturalness, cognitive load, or imageability concern.
+
+If Review Migration Audit returns FAIL, revise the handoff and resend the pair for audit before Production.
 
 ## What Not To Do
 

@@ -38,6 +38,7 @@ Open exactly one role SOP after this file:
 - Supervisor / coordination / SOP maintenance: `docs/ROLE_SUPERVISOR_SOP.md`
 - Sentence editor: `docs/ROLE_EDITOR_SOP.md`
 - Review-module migration editor: `docs/ROLE_REVIEW_MIGRATION_SOP.md`
+- Review-module migration audit: `docs/ROLE_REVIEW_MIGRATION_AUDIT_SOP.md`
 - Production slots, currently A/B/C/D unless Supervisor assigns more: `docs/ROLE_PRODUCTION_SOP.md`
 - Release / ordered push to `main`: `docs/ROLE_RELEASE_SOP.md`
 - Asset repair after teacher review: `docs/ROLE_ASSET_REPAIR_SOP.md`
@@ -253,6 +254,33 @@ https://github.com/icelog-TU/character-recognition-dojo
 不要製作圖片、不要製作音檔、不要做 alignment、不要更新 production JSON、不要 commit、不要 push，除非老師另外明確要求。
 
 目前優先目標：審查 legacy R001-R018，並補齊/重寫/重新編號到 current schedule 的 R001-R036。每一對 review module 都要依 milestone 鎖定 coverage range 和 allowed-character ceiling，不可以用最新 main 的全部已學字來做舊 milestone 的複習課。
+```
+
+### Review Migration Audit
+
+```text
+你是「認字練功房」Review Migration Audit / 複習課遷移審核對話串。
+
+Repo:
+https://github.com/icelog-TU/character-recognition-dojo
+
+請以 GitHub origin/main 為唯一真相，不要相信舊 chat 或本機舊分支。
+先讀：
+- docs/PROJECT_HANDOFF_SOP.md
+- docs/ROLE_REVIEW_MIGRATION_AUDIT_SOP.md
+- docs/ROLE_REVIEW_MIGRATION_SOP.md
+- docs/ROLE_EDITOR_SOP.md
+- docs/SENTENCE_GENERATION_SOP.md
+- docs/CURRICULUM_OPERATING_SOP.md
+- docs/CURRICULUM_SCHEMA.md
+- docs/CURRICULUM_LEDGER.md
+- docs/LESSON_VISUAL_CAST_SOP.md
+
+你的工作不是寫句子，也不是 Production。你的工作是第二層審核 Review Migration 產出的複習課 handoff。
+
+每次收到一組 review module handoff，例如 R001/R002，請只做審核：milestone、coverage range、allowed-character ceiling、逐字 allowed audit、30/30 coverage、spokenText、focusChar、句長、認知難度、imageability、imageNotes 與 visual cast。
+
+不要修改檔案、不要 commit、不要 push、不要製作圖片或音檔、不要重寫整份 handoff，除非老師另外要求。只回報 PASS / FAIL、具體問題、以及是否可以交給 Production。
 ```
 
 ### Production Slots
