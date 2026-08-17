@@ -370,7 +370,8 @@
 
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
-      import { collection, getDocs, getFirestore } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-auth.js";
+      import { collection, doc, getDocs, getFirestore, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
       const firebaseConfig = {
         apiKey: "AIzaSyB79G4vRFLaRIPh1waBpJ99AS2BOt-ZzGk",
@@ -390,11 +391,13 @@
         units: [],
         builtById: new Map(),
         reviewByUnit: new Map(),
+        user: null,
         filter: params.get("filter") || "all",
         search: "",
       };
 
       const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
       const db = getFirestore(app);
 
       $("repoInput").value = state.repo;
@@ -407,6 +410,15 @@
           .replaceAll("<", "&lt;")
           .replaceAll(">", "&gt;")
           .replaceAll('"', "&quot;");
+      }
+
+      function base64Url(input) {
+        const bytes = new TextEncoder().encode(input);
+        let binary = "";
+        bytes.forEach((byte) => {
+          binary += String.fromCharCode(byte);
+        });
+        return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
       }
 
       function setStatus(message, tone = "") {
@@ -481,6 +493,10 @@
         return `asset-review:${state.repo}:${unit.id}:${reviewScope()}:${unit.contentSignature || "no-content"}`;
       }
 
+      function reviewIdForUnit(unit) {
+        return base64Url(`${state.repo}|${unit.id}|${reviewScope()}`);
+      }
+
       function localReviewForUnit(unit) {
         try {
           const local = JSON.parse(localStorage.getItem(localStorageKey(unit)) || "{}") || {};
@@ -502,11 +518,42 @@
         }
       }
 
+      function extraAudioCount(unit) {
+        return (unit.sentenceGames || []).reduce((count, game) => {
+          const wrongChoiceCount = (game.options || []).filter((option) => option.audioSrc).length;
+          const teachAudioCount = (game.teachAudio?.prefixSrc ? 1 : 0) + (game.teachAudio?.suffixSrc ? 1 : 0);
+          return count + wrongChoiceCount + teachAudioCount;
+        }, 0);
+      }
+
       function loadLocalReviewDocs() {
         state.builtById.forEach((unit) => {
           const localReview = localReviewForUnit(unit);
           if (localReview) state.reviewByUnit.set(unit.id, localReview);
         });
+      }
+
+      async function syncLocalReviewDocsToCloud() {
+        if (!state.user || !state.sha || !state.builtById.size) return 0;
+        const writes = [];
+        state.builtById.forEach((unit) => {
+          const localReview = localReviewForUnit(unit);
+          if (!localReview) return;
+          const payload = {
+            ...localReview,
+            commitSha: state.sha,
+            sourcePath: "src/curriculum/sample-lessons.json",
+            sentenceCount: (unit.sentences || []).length,
+            extraAudioCount: extraAudioCount(unit),
+            updatedByUid: state.user.uid,
+            updatedByEmail: state.user.email || "",
+            updatedByName: state.user.displayName || "",
+            updatedAt: serverTimestamp(),
+          };
+          writes.push(setDoc(doc(db, "assetReviews", reviewIdForUnit(unit)), payload));
+        });
+        await Promise.all(writes);
+        return writes.length;
       }
 
       async function fetchJson(url, label) {
@@ -697,8 +744,10 @@
           await loadCurriculum();
           await loadReviewDocs();
           loadLocalReviewDocs();
+          const syncedCount = await syncLocalReviewDocsToCloud();
           render();
           setStatus(`已載入 L001-L600 與 R001-R076 進度盤，已出貨 ${state.builtById.size} 個單元，commit ${state.sha.slice(0, 12)}。`, "ok");
+          if (syncedCount) setStatus(`已載入總覽，並補同步 ${syncedCount} 筆本機審查狀態到雲端。`, "ok");
         } catch (error) {
           state.units = [];
           render();
@@ -722,6 +771,17 @@
       });
       $("copyAllRepairCommandButton").addEventListener("click", () => {
         navigator.clipboard.writeText(`npm run asset:review-status -- --list --ref ${state.ref}`);
+      });
+
+      onAuthStateChanged(auth, async (user) => {
+        state.user = user;
+        if (!user || !state.builtById.size) return;
+        try {
+          const syncedCount = await syncLocalReviewDocsToCloud();
+          if (syncedCount) setStatus(`已登入，並補同步 ${syncedCount} 筆本機審查狀態到雲端。`, "ok");
+        } catch (error) {
+          setStatus(`本機審查狀態同步失敗：${error.message}`, "bad");
+        }
       });
 
       load();
