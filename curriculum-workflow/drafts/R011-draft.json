@@ -2,319 +2,334 @@
   "id": "R011",
   "reviewNumber": 11,
   "title": "複習十一",
-  "afterLessonOrder": 210,
+  "afterLessonOrder": 120,
   "targetLessonRange": {
-    "startOrder": 151,
-    "endOrder": 180
+    "startOrder": 91,
+    "endOrder": 120
   },
   "requiredCoverageChars": [
-    "關",
-    "窗",
-    "車",
-    "等",
-    "再",
-    "風",
-    "吹",
-    "樹",
-    "動",
-    "葉",
-    "綠",
-    "滿",
-    "掃",
-    "擦",
-    "先",
-    "洗",
-    "又",
-    "髒",
-    "亂",
-    "回",
-    "就",
-    "快",
-    "事",
-    "跑",
-    "馬",
-    "停",
-    "叫",
-    "聲",
-    "聽",
-    "見"
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天"
   ],
   "requiredRounds": 5,
   "sentences": [
     {
       "id": "R011-S01",
-      "text": "風一吹，樹葉就動了。",
+      "text": "好幾個小孩在玩球。",
+      "spokenText": "好幾個小孩在玩球",
+      "focusChar": "玩",
       "displayLines": [
-        "風一吹，",
-        "樹葉就動了。"
+        "好幾個小孩",
+        "在玩球。"
       ],
-      "spokenText": "風一吹樹葉就動了",
-      "focusChar": "風",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R011 review sentence image. Scene: outdoors under a tree, wind blows and the tree leaves move. Include the recurring protagonist little girl watching the moving leaves, with pink jacket, white top, blue skirt, pink shoes, and small pink hair clip. Leaves and branches should visibly sway in the wind. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
       "imageSrc": "/assets/reviews/R011/images/R011-S01.webp",
-      "approved": true,
+      "imageAlt": "好幾個小孩在玩球。",
+      "imageNotes": "A clear children's picture-book scene with several children playing ball together on a school playground or open play area. Show at least four children so 好幾個 is visually clear. The children are actively playing with one ball; no adults are the focus. Keep the recurring protagonist girl visible as one of the children or watching nearby.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show at least four children playing with one ball on a school playground or open play area, with the recurring protagonist girl visible as one of the children or watching nearby. No adults are the focus. Keep all children and the ball centered with safe margins. No written text, letters, numbers, score labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
       "audio": {
         "src": "/assets/reviews/R011/audio/R011-S01.m4a",
-        "durationMs": 5667,
+        "durationMs": 2946,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 760
+            "endMs": 460
           },
           {
             "charIndex": 1,
-            "startMs": 760,
-            "endMs": 1600
+            "startMs": 460,
+            "endMs": 720
           },
           {
             "charIndex": 2,
-            "startMs": 1600,
-            "endMs": 1920
+            "startMs": 720,
+            "endMs": 960
           },
           {
             "charIndex": 3,
-            "startMs": 2760,
-            "endMs": 3060
+            "startMs": 960,
+            "endMs": 1220
           },
           {
             "charIndex": 4,
-            "startMs": 3060,
-            "endMs": 3200
+            "startMs": 1220,
+            "endMs": 1500
           },
           {
             "charIndex": 5,
-            "startMs": 3200,
-            "endMs": 4080
+            "startMs": 1500,
+            "endMs": 1840
           },
           {
             "charIndex": 6,
-            "startMs": 4080,
-            "endMs": 4260
+            "startMs": 1840,
+            "endMs": 2180
           },
           {
             "charIndex": 7,
-            "startMs": 4260,
-            "endMs": 4500
+            "startMs": 2180,
+            "endMs": 2440
           }
         ]
-      }
+      },
+      "approved": true
     },
     {
       "id": "R011-S02",
-      "text": "樹上滿是綠葉。",
+      "text": "他打球得很多分。",
+      "spokenText": "他打球得很多分",
+      "focusChar": "分",
       "displayLines": [
-        "樹上滿是",
-        "綠葉。"
+        "他打球",
+        "得很多分。"
       ],
-      "spokenText": "樹上滿是綠葉",
-      "focusChar": "滿",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R011 review sentence image. Scene: one healthy tree full of many green leaves, with the canopy filling the composition clearly. No people are needed. The key idea is that the tree is full of green leaves. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
       "imageSrc": "/assets/reviews/R011/images/R011-S02.webp",
-      "approved": true,
+      "imageAlt": "他打球得很多分。",
+      "imageNotes": "Use the fixed recurring sporty boy identity for 他, not a generic boy. The sporty boy is playing a simple ball game and has clearly scored many points. Show a small child-friendly scoreboard or score cards with many points marked, and the sporty boy happily holding or hitting the ball. Make 他 visually refer to the recurring sporty boy, not the protagonist girl.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show the recurring sporty boy for 他, with orange athletic shirt, navy shorts, red sneakers, and green wristband, playing a simple ball game and happily scoring many points. Use a child-friendly score area with many plain colored tokens or dots, not digits or text. Make the sporty boy clearly the main subject, centered with safe margins. No written text, letters, numbers, labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
       "audio": {
         "src": "/assets/reviews/R011/audio/R011-S02.m4a",
-        "durationMs": 2554,
+        "durationMs": 2809,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 520
+            "endMs": 380
           },
           {
             "charIndex": 1,
-            "startMs": 520,
-            "endMs": 880
+            "startMs": 380,
+            "endMs": 700
           },
           {
             "charIndex": 2,
-            "startMs": 880,
-            "endMs": 1300
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1300,
-            "endMs": 1560
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1560,
-            "endMs": 1820
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1820,
-            "endMs": 2040
-          }
-        ]
-      }
-    },
-    {
-      "id": "R011-S03",
-      "text": "關好車窗，再開冷氣。",
-      "displayLines": [
-        "關好車窗，",
-        "再開冷氣。"
-      ],
-      "spokenText": "關好車窗再開冷氣",
-      "focusChar": "關",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R011 review sentence image. Scene: inside a family car, the recurring protagonist father closes the car window before turning on the car air conditioner; the recurring protagonist little girl may sit safely in the back seat. Father identity: blue shirt or blue jacket over white top, khaki pants, clearly different from mother or teacher. Girl identity: pink jacket, white top, blue skirt, pink shoes, small pink hair clip. Show a closed car window and air blowing gently from plain vents with no markings. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
-      "imageSrc": "/assets/reviews/R011/images/R011-S03.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R011/audio/R011-S03.m4a",
-        "durationMs": 2985,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 360
-          },
-          {
-            "charIndex": 1,
-            "startMs": 360,
-            "endMs": 740
-          },
-          {
-            "charIndex": 2,
-            "startMs": 740,
+            "startMs": 700,
             "endMs": 1020
           },
           {
             "charIndex": 3,
             "startMs": 1020,
-            "endMs": 1280
+            "endMs": 1460
           },
           {
             "charIndex": 4,
-            "startMs": 1280,
-            "endMs": 1900
+            "startMs": 1460,
+            "endMs": 1770
           },
           {
             "charIndex": 5,
-            "startMs": 1900,
-            "endMs": 2140
+            "startMs": 1770,
+            "endMs": 2080
           },
           {
             "charIndex": 6,
-            "startMs": 2140,
-            "endMs": 2380
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2380,
-            "endMs": 2580
+            "startMs": 2080,
+            "endMs": 2420
           }
         ]
-      }
+      },
+      "approved": true
     },
     {
-      "id": "R011-S04",
-      "text": "等雨停了，再出門。",
+      "id": "R011-S03",
+      "text": "球棒掉到草地上。",
+      "spokenText": "球棒掉到草地上",
+      "focusChar": "棒",
       "displayLines": [
-        "等雨停了，",
-        "再出門。"
+        "球棒掉到",
+        "草地上。"
       ],
-      "spokenText": "等雨停了再出門",
-      "focusChar": "等",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R011 review sentence image. Scene: at an ordinary home doorway or window, the recurring protagonist mother and recurring protagonist little girl wait for rain to stop before going out. Mother identity: white or cream top, wide blue pants, shoulder-length dark hair, clearly not a teacher. Girl identity: pink jacket, white top, blue skirt, pink shoes, small pink hair clip. Rain is nearly stopping outside; they hold or look at simple rain gear with no marks. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
-      "imageSrc": "/assets/reviews/R011/images/R011-S04.webp",
-      "approved": true,
+      "imageSrc": "/assets/reviews/R011/images/R011-S03.webp",
+      "imageAlt": "球棒掉到草地上。",
+      "imageNotes": "A ball bat has fallen onto green grass. The bat should be clearly on the grass, not in a child's hand. Keep the scene simple: grass, the bat, and possibly a ball nearby. Do not make the bat look like a pencil or stick.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show a clear child-safe ball bat fallen on green grass, with maybe one ball nearby. The bat must be lying on the grass, not held by anyone, and should look like a ball bat, not a pencil or thin stick. Keep the scene simple and centered. No written text, letters, numbers, labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
       "audio": {
-        "src": "/assets/reviews/R011/audio/R011-S04.m4a",
-        "durationMs": 2716,
+        "src": "/assets/reviews/R011/audio/R011-S03.m4a",
+        "durationMs": 2925,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 300
+            "endMs": 420
           },
           {
             "charIndex": 1,
-            "startMs": 300,
-            "endMs": 620
+            "startMs": 420,
+            "endMs": 640
           },
           {
             "charIndex": 2,
-            "startMs": 620,
-            "endMs": 860
+            "startMs": 640,
+            "endMs": 1180
           },
           {
             "charIndex": 3,
-            "startMs": 860,
-            "endMs": 1240
+            "startMs": 1180,
+            "endMs": 1440
           },
           {
             "charIndex": 4,
-            "startMs": 1380,
+            "startMs": 1440,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1700,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1840,
+            "endMs": 2160
+          }
+        ]
+      },
+      "approved": true
+    },
+    {
+      "id": "R011-S04",
+      "text": "頭上的帽子掉了。",
+      "spokenText": "頭上的帽子掉了",
+      "focusChar": "帽",
+      "displayLines": [
+        "頭上的帽子",
+        "掉了。"
+      ],
+      "imageSrc": "/assets/reviews/R011/images/R011-S04.webp",
+      "imageAlt": "頭上的帽子掉了。",
+      "imageNotes": "A child's hat is falling off from their head. Show the hat just above or beside the child's head in mid-fall, with the child looking surprised. The relation between 頭上 and 帽子 must be visually clear.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show a child's hat falling off from the child's head, just above or beside the head in mid-fall, with the child looking surprised but safe. Make the relation between the head and hat visually clear. Center the child and falling hat with safe margins. No written text, letters, numbers, labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
+      "audio": {
+        "src": "/assets/reviews/R011/audio/R011-S04.m4a",
+        "durationMs": 2538,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 520
+          },
+          {
+            "charIndex": 2,
+            "startMs": 520,
+            "endMs": 800
+          },
+          {
+            "charIndex": 3,
+            "startMs": 800,
+            "endMs": 1000
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1000,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1160,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1520,
+            "endMs": 1780
+          }
+        ]
+      },
+      "approved": true
+    },
+    {
+      "id": "R011-S05",
+      "text": "外面小鳥飛過天空。",
+      "spokenText": "外面小鳥飛過天空",
+      "focusChar": "空",
+      "displayLines": [
+        "外面小鳥",
+        "飛過天空。"
+      ],
+      "imageSrc": "/assets/reviews/R011/images/R011-S05.webp",
+      "imageAlt": "外面小鳥飛過天空。",
+      "imageNotes": "The recurring protagonist girl is outside looking up. A small bird is flying across the sky above her. Make 外面 clear with outdoor ground, sky, and open space. The bird should be in the sky, not inside a house or on a tree.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show the recurring protagonist girl outdoors looking up at a small bird flying across the open sky above her. Make the outdoor setting clear with ground, open space, and sky; the bird must be in the sky, not inside a house or perched on a tree. Center girl and bird with safe margins. No written text, letters, numbers, labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
+      "audio": {
+        "src": "/assets/reviews/R011/audio/R011-S05.m4a",
+        "durationMs": 4523,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1060,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1260,
             "endMs": 1680
           },
           {
             "charIndex": 5,
             "startMs": 1680,
-            "endMs": 1960
+            "endMs": 1940
           },
           {
             "charIndex": 6,
-            "startMs": 1960,
-            "endMs": 2140
+            "startMs": 1940,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2260,
+            "endMs": 2480
           }
         ]
-      }
-    },
-    {
-      "id": "R011-S05",
-      "text": "先掃地，再擦桌子。",
-      "displayLines": [
-        "先掃地，",
-        "再擦桌子。"
-      ],
-      "spokenText": "先掃地再擦桌子",
-      "focusChar": "掃",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R011 review sentence image. Scene: inside an ordinary home, the recurring protagonist little girl helps with chores by sweeping the floor first and then wiping a table. Girl identity: pink jacket, white top, blue skirt, pink shoes, small pink hair clip. Show a broom on the floor and a table being wiped, both actions clear in one square composition. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
-      "imageSrc": "/assets/reviews/R011/images/R011-S05.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R011/audio/R011-S05.m4a",
-        "durationMs": 4660,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 580
-          },
-          {
-            "charIndex": 1,
-            "startMs": 580,
-            "endMs": 920
-          },
-          {
-            "charIndex": 2,
-            "startMs": 920,
-            "endMs": 1220
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1680,
-            "endMs": 1980
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1980,
-            "endMs": 2400
-          },
-          {
-            "charIndex": 5,
-            "startMs": 2400,
-            "endMs": 2600
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2600,
-            "endMs": 2900
-          }
-        ]
-      }
+      },
+      "approved": true
     }
   ],
   "sentenceGames": [
@@ -322,46 +337,52 @@
       "id": "R011-G01",
       "type": "find-character",
       "sentenceId": "R011-S03",
-      "targetChar": "關",
-      "prompt": "找一找句子裡的「關」。"
+      "targetChar": "棒",
+      "prompt": "找到「棒」。",
+      "missingIndexes": [
+        1
+      ],
+      "options": []
     },
     {
       "id": "R011-G02",
       "type": "teach-character",
-      "sentenceId": "R011-S04",
-      "targetChar": "等",
-      "prompt": "看一看「等」在句子裡的位置。",
+      "sentenceId": "R011-S05",
+      "targetChar": "空",
+      "targetCharIndex": 7,
+      "prompt": "幫小兔子念這個字。",
       "missingIndexes": [
-        0
+        7
       ],
-      "targetCharIndex": 0,
+      "options": [],
       "teachAudio": {
-        "suffixSrc": "/assets/reviews/R011/audio/R011-G02-suffix.m4a"
+        "prefixSrc": "/assets/reviews/R011/audio/R011-G02-prefix.m4a",
+        "suffixSrc": null
       }
     },
     {
       "id": "R011-G03",
       "type": "missing-character",
-      "sentenceId": "R011-S01",
-      "targetChar": "葉",
-      "prompt": "選出句子裡少掉的字。",
+      "sentenceId": "R011-S02",
+      "targetChar": "分",
+      "prompt": "選出少掉的字。",
       "missingIndexes": [
-        4
+        6
       ],
       "options": [
         {
-          "id": "leaf",
-          "text": "葉",
+          "id": "R011-G03-A",
+          "text": "分",
           "correct": true
         },
         {
-          "id": "tree",
-          "text": "樹",
+          "id": "R011-G03-B",
+          "text": "球",
           "correct": false
         },
         {
-          "id": "wind",
-          "text": "風",
+          "id": "R011-G03-C",
+          "text": "打",
           "correct": false
         }
       ]
@@ -369,61 +390,58 @@
     {
       "id": "R011-G04",
       "type": "partial-order",
-      "sentenceId": "R011-S05",
-      "targetChar": "掃",
-      "prompt": "排出正確的句子。",
+      "sentenceId": "R011-S04",
+      "targetChar": "頭",
+      "prompt": "把字放回正確的位置。",
       "missingIndexes": [
         0,
         1,
-        2,
-        3,
-        4,
-        5,
-        6
+        3
       ],
       "options": [
         {
-          "id": "slot-1",
-          "text": "先掃地",
-          "correctOrder": 0,
-          "correct": true
+          "id": "R011-G04-A",
+          "text": "頭",
+          "correct": true,
+          "correctOrder": 0
         },
         {
-          "id": "slot-2",
-          "text": "再擦",
-          "correctOrder": 1,
-          "correct": true
+          "id": "R011-G04-B",
+          "text": "上",
+          "correct": true,
+          "correctOrder": 1
         },
         {
-          "id": "slot-3",
-          "text": "桌子",
-          "correctOrder": 2,
-          "correct": true
+          "id": "R011-G04-C",
+          "text": "帽",
+          "correct": true,
+          "correctOrder": 2
         }
       ]
     },
     {
       "id": "R011-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R011-S02",
-      "targetChar": "滿",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "sentenceId": "R011-S01",
+      "targetChar": "玩",
+      "prompt": "聽聽誰念對。",
+      "missingIndexes": [],
       "options": [
         {
-          "id": "correct",
-          "text": "樹上滿是綠葉。",
+          "id": "R011-G05-A",
+          "text": "好幾個小孩在玩球。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R011/audio/R011-S02.m4a"
+          "sentenceId": "R011-S01"
         },
         {
-          "id": "wrong-one",
-          "text": "樹上滿是紅花。",
+          "id": "R011-G05-B",
+          "text": "好幾個小孩在打球。",
           "correct": false,
           "audioSrc": "/assets/reviews/R011/audio/R011-G05-wrong-one.m4a"
         },
         {
-          "id": "wrong-two",
-          "text": "桌上滿是綠葉。",
+          "id": "R011-G05-C",
+          "text": "好幾個小狗在玩球。",
           "correct": false,
           "audioSrc": "/assets/reviews/R011/audio/R011-G05-wrong-two.m4a"
         }
