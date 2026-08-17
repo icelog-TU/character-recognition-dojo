@@ -113,11 +113,21 @@ If the result is PASS, include two parts:
 
 The Production Activation Handoff must:
 
-- Start by explicitly naming the recipient, for example: `You are Production C. This R005/R006 review pair has passed Review Migration Audit. Receive this handoff, claim the package, and start production immediately unless a stop condition is triggered.`
+- Start by explicitly naming the recipient, for example: `You are Production D. This R007/R008 review pair has passed Review Migration Audit. Receive this handoff, claim the package, and start production immediately unless a stop condition is triggered.`
 - Remove `PENDING REVIEW MIGRATION AUDIT`, `Review Migration Audit request`, `If Audit PASS`, and any teacher/audit-only instructions.
 - Keep the approved content unchanged: sentence text, spokenText, displayLines, focusChar, imageNotes, Stage 4 plan, coverage data, allowed-character ceiling, file paths, startup checks, auto-claim steps, and stop conditions.
 - Keep the assigned worktree and Production slot explicit.
 - Keep `auto-claim-and-continue` wording so Production knows it is the worker, not a reviewer.
+
+Unless the teacher explicitly assigns another slot, Audit must assign review-pair Production Activation Handoffs by fixed round-robin:
+
+- R001/R002 -> Production A, worktree `C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-a`
+- R003/R004 -> Production B, worktree `C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b`
+- R005/R006 -> Production C, worktree `C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c`
+- R007/R008 -> Production D, worktree `C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-d`
+- Then repeat A/B/C/D for later pairs: R009/R010 -> A, R011/R012 -> B, R013/R014 -> C, R015/R016 -> D, and so on.
+
+If the Audit Packet names a different Production slot than the round-robin rule, use the teacher's latest explicit instruction first; otherwise correct the slot and worktree in the Production Activation Handoff while preserving all approved lesson content.
 
 If the result is FAIL, do not produce a Production Activation Handoff. List precise fixes for Review Migration.
 

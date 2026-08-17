@@ -108,7 +108,7 @@ PENDING REVIEW MIGRATION AUDIT - DO NOT SEND TO PRODUCTION UNTIL AUDIT PASS
 
 The Audit Packet must include:
 
-- Assigned Production slot and exact worktree path.
+- Suggested Production slot and exact worktree path. This is advisory for Audit unless the teacher explicitly assigned the slot.
 - Unit id, such as `R001`.
 - Unit kind: `review module`.
 - Milestone lesson id.
@@ -146,6 +146,8 @@ Send one pair at a time, such as R001/R002, with:
 If Review Migration Audit returns FAIL, revise the Audit Packet and resend the pair for audit before Production.
 
 If Review Migration Audit returns PASS, Audit is responsible for producing the final `Production Activation Handoff` by copying the approved content and removing audit-only wording. Review Migration does not need to regenerate a new Production handoff unless Audit finds a problem or the teacher asks for a revision.
+
+Unless the teacher explicitly assigns a different slot, Review Migration should suggest slots using the review-pair round-robin: R001/R002 -> A, R003/R004 -> B, R005/R006 -> C, R007/R008 -> D, then repeat A/B/C/D. Audit makes the final Production Activation Handoff slot/worktree selection from the teacher's latest instruction or this round-robin rule.
 
 ## What Not To Do
 
