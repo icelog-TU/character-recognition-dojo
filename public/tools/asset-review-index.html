@@ -418,6 +418,61 @@
         return `https://raw.githubusercontent.com/${state.repo}/${state.sha}/${path}`;
       }
 
+      function stableStringify(value) {
+        if (Array.isArray(value)) return `[${value.map(stableStringify).join(",")}]`;
+        if (value && typeof value === "object") {
+          return `{${Object.keys(value)
+            .sort()
+            .map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`)
+            .join(",")}}`;
+        }
+        return JSON.stringify(value ?? null);
+      }
+
+      function shortHash(value) {
+        const input = stableStringify(value);
+        let hash = 2166136261;
+        for (let index = 0; index < input.length; index += 1) {
+          hash ^= input.charCodeAt(index);
+          hash = Math.imul(hash, 16777619);
+        }
+        return `${(hash >>> 0).toString(16).padStart(8, "0")}-${input.length}`;
+      }
+
+      function unitContentSignature(unit) {
+        return shortHash({
+          id: unit.id,
+          order: unit.order,
+          reviewNumber: unit.reviewNumber,
+          afterLessonOrder: unit.afterLessonOrder,
+          targetLessonRange: unit.targetLessonRange,
+          newChars: unit.newChars,
+          requiredCoverageChars: unit.requiredCoverageChars,
+          sentences: (unit.sentences || []).map((sentence) => ({
+            id: sentence.id,
+            text: sentence.text,
+            spokenText: sentence.spokenText,
+            imageSrc: sentence.imageSrc,
+            audioSrc: sentence.audio?.src,
+          })),
+          sentenceGames: (unit.sentenceGames || []).map((game) => ({
+            id: game.id,
+            type: game.type,
+            sentenceId: game.sentenceId,
+            targetChar: game.targetChar,
+            targetCharIndex: game.targetCharIndex,
+            missingIndexes: game.missingIndexes,
+            options: (game.options || []).map((option) => ({
+              id: option.id,
+              text: option.text,
+              correct: option.correct,
+              audioSrc: option.audioSrc,
+            })),
+            teachAudio: game.teachAudio,
+          })),
+        });
+      }
+
       async function fetchJson(url, label) {
         const response = await fetch(url, { cache: "no-store" });
         if (!response.ok) throw new Error(`${label} HTTP ${response.status}`);
@@ -447,11 +502,9 @@
       }
 
       function expectedReviewNumbersAfterLesson(order) {
-        if (order < 60 || order > 600 || order % 30 !== 0) return [];
-        const firstReviewNumber = ((order - 60) / 30) * 2 + 1;
-        const reviewNumbers = [firstReviewNumber, firstReviewNumber + 1];
-        if (order === 600) reviewNumbers.push(39, 40);
-        return reviewNumbers;
+        if (order < 45 || order > 600 || (order - 45) % 15 !== 0) return [];
+        const firstReviewNumber = ((order - 45) / 15) * 2 + 1;
+        return [firstReviewNumber, firstReviewNumber + 1];
       }
 
       function reviewTitle(reviewNumber) {
@@ -460,8 +513,14 @@
 
       async function loadCurriculum() {
         const curriculum = await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum");
-        const lessons = (curriculum.lessons || []).map((unit) => ({ ...unit, kind: "lesson", built: true }));
-        const reviews = (curriculum.reviewLessons || []).map((unit) => ({ ...unit, kind: "review", built: true }));
+        const lessons = (curriculum.lessons || []).map((unit) => {
+          const builtUnit = { ...unit, kind: "lesson", built: true };
+          return { ...builtUnit, contentSignature: unitContentSignature(builtUnit) };
+        });
+        const reviews = (curriculum.reviewLessons || []).map((unit) => {
+          const builtUnit = { ...unit, kind: "review", built: true };
+          return { ...builtUnit, contentSignature: unitContentSignature(builtUnit) };
+        });
         state.builtById = new Map([...lessons, ...reviews].map((unit) => [unit.id, unit]));
         state.units = [];
         for (let index = 0; index < 600; index += 1) {
@@ -499,6 +558,13 @@
             const data = snapshot.data();
             if (data.repo !== state.repo || !data.unit) return;
             if (data.ref !== state.ref && !(state.ref === "main" && data.ref === "main")) return;
+            const unit = state.builtById.get(data.unit);
+            if (!unit) return;
+            if (data.contentSignature) {
+              if (data.contentSignature !== unit.contentSignature) return;
+            } else if (unit.kind === "review") {
+              return;
+            }
             const previous = state.reviewByUnit.get(data.unit);
             const previousMs = previous?.updatedAt?.toMillis?.() || 0;
             const nextMs = data.updatedAt?.toMillis?.() || 0;
@@ -595,7 +661,7 @@
           await loadCurriculum();
           await loadReviewDocs();
           render();
-          setStatus(`已載入 L001-L600 與 R001-R040 進度盤，已出貨 ${state.builtById.size} 個單元，commit ${state.sha.slice(0, 12)}。`, "ok");
+          setStatus(`已載入 L001-L600 與 R001-R076 進度盤，已出貨 ${state.builtById.size} 個單元，commit ${state.sha.slice(0, 12)}。`, "ok");
         } catch (error) {
           state.units = [];
           render();

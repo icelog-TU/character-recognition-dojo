@@ -488,6 +488,7 @@
         ref: params.get("ref") || "main",
         sha: "",
         sourcePath: "",
+        contentSignature: "",
         sentences: [],
         extraAudio: [],
         flags: {},
@@ -530,18 +531,15 @@
       }
 
       function expectedReviewNumbersAfterLesson(order) {
-        if (order < 60 || order > 600 || order % 30 !== 0) return [];
-        const firstReviewNumber = ((order - 60) / 30) * 2 + 1;
-        const reviewNumbers = [firstReviewNumber, firstReviewNumber + 1];
-        if (order === 600) reviewNumbers.push(39, 40);
-        return reviewNumbers;
+        if (order < 45 || order > 600 || (order - 45) % 15 !== 0) return [];
+        const firstReviewNumber = ((order - 45) / 15) * 2 + 1;
+        return [firstReviewNumber, firstReviewNumber + 1];
       }
 
       function reviewSlotForNumber(reviewNumber) {
-        if (!Number.isInteger(reviewNumber) || reviewNumber < 1 || reviewNumber > 40) return null;
-        if (reviewNumber >= 39) return { reviewNumber, afterLessonOrder: 600 };
+        if (!Number.isInteger(reviewNumber) || reviewNumber < 1 || reviewNumber > 76) return null;
         const pairIndex = Math.floor((reviewNumber - 1) / 2);
-        return { reviewNumber, afterLessonOrder: 60 + pairIndex * 30 };
+        return { reviewNumber, afterLessonOrder: 45 + pairIndex * 15 };
       }
 
       function expectedUnitSequence() {
@@ -603,6 +601,61 @@
         return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
       }
 
+      function stableStringify(value) {
+        if (Array.isArray(value)) return `[${value.map(stableStringify).join(",")}]`;
+        if (value && typeof value === "object") {
+          return `{${Object.keys(value)
+            .sort()
+            .map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`)
+            .join(",")}}`;
+        }
+        return JSON.stringify(value ?? null);
+      }
+
+      function shortHash(value) {
+        const input = stableStringify(value);
+        let hash = 2166136261;
+        for (let index = 0; index < input.length; index += 1) {
+          hash ^= input.charCodeAt(index);
+          hash = Math.imul(hash, 16777619);
+        }
+        return `${(hash >>> 0).toString(16).padStart(8, "0")}-${input.length}`;
+      }
+
+      function unitContentSignature(unit) {
+        return shortHash({
+          id: unit.id,
+          order: unit.order,
+          reviewNumber: unit.reviewNumber,
+          afterLessonOrder: unit.afterLessonOrder,
+          targetLessonRange: unit.targetLessonRange,
+          newChars: unit.newChars,
+          requiredCoverageChars: unit.requiredCoverageChars,
+          sentences: (unit.sentences || []).map((sentence) => ({
+            id: sentence.id,
+            text: sentence.text,
+            spokenText: sentence.spokenText,
+            imageSrc: sentence.imageSrc,
+            audioSrc: sentence.audio?.src,
+          })),
+          sentenceGames: (unit.sentenceGames || []).map((game) => ({
+            id: game.id,
+            type: game.type,
+            sentenceId: game.sentenceId,
+            targetChar: game.targetChar,
+            targetCharIndex: game.targetCharIndex,
+            missingIndexes: game.missingIndexes,
+            options: (game.options || []).map((option) => ({
+              id: option.id,
+              text: option.text,
+              correct: option.correct,
+              audioSrc: option.audioSrc,
+            })),
+            teachAudio: game.teachAudio,
+          })),
+        });
+      }
+
       function reviewId() {
         return base64Url(`${state.repo}|${state.unit}|${reviewScope()}`);
       }
@@ -616,7 +669,7 @@
       }
 
       function storageKey() {
-        return `asset-review:${state.repo}:${state.unit}:${reviewScope()}`;
+        return `asset-review:${state.repo}:${state.unit}:${reviewScope()}:${state.contentSignature || "no-content"}`;
       }
 
       function rawUrl(path) {
@@ -1111,6 +1164,7 @@
           ref: state.ref,
           commitSha: state.sha,
           sourcePath: state.sourcePath,
+          contentSignature: state.contentSignature,
           sentenceCount: state.sentences.length,
           extraAudioCount: state.extraAudio.length,
           repairCount: repairCount(),
@@ -1136,10 +1190,10 @@
         const ref = doc(db, "assetReviews", reviewId());
         try {
           const snapshot = await getDoc(ref);
-          if (snapshot.exists()) mergeCloud(snapshot.data());
+          if (snapshot.exists() && reviewMatchesCurrentContent(snapshot.data())) mergeCloud(snapshot.data());
           else if (reviewScope() === "main") {
             const legacySnapshot = await getDoc(doc(db, "assetReviews", legacyShaReviewId()));
-            if (legacySnapshot.exists()) {
+            if (legacySnapshot.exists() && reviewMatchesCurrentContent(legacySnapshot.data())) {
               mergeCloud(legacySnapshot.data());
               setCloud("已讀取舊版 commit-key 審查紀錄；下一次同步會搬到 main queue。");
               if (state.user) await saveCloud();
@@ -1151,6 +1205,7 @@
             ref,
             (next) => {
               if (!next.exists()) return;
+              if (!reviewMatchesCurrentContent(next.data())) return;
               mergeCloud(next.data());
               setCloud(`雲端狀態：${next.data().repairCount || 0} 個需要修`);
             },
@@ -1159,6 +1214,12 @@
         } catch (error) {
           setCloud(`Firestore 讀取失敗：${error.message}`, "bad");
         }
+      }
+
+      function reviewMatchesCurrentContent(data) {
+        if (!data) return false;
+        if (data.contentSignature) return data.contentSignature === state.contentSignature;
+        return !/^R\d{3}$/.test(state.unit);
       }
 
       function mergeCloud(data) {
@@ -1194,6 +1255,7 @@
           await resolveRef();
           state.placeholderUnit = false;
           const unit = await loadUnitData();
+          state.contentSignature = state.placeholderUnit ? "" : unitContentSignature(unit);
           const items = extractReviewItems(unit);
           state.sentences = items.sentences;
           state.extraAudio = items.extraAudio;
