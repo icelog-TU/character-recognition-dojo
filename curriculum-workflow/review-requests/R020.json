@@ -1,0 +1,244 @@
+{
+  "id": "R020",
+  "kind": "review",
+  "reviewNumber": 20,
+  "title": "複習二十",
+  "pairMateId": "R019",
+  "afterLessonOrder": 180,
+  "targetLessonRange": {
+    "startOrder": 151,
+    "endOrder": 180
+  },
+  "requiredCoverageChars": [
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見"
+  ],
+  "targetSentenceCount": 5,
+  "requiredRounds": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "requiredCoverageChars": [
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見"
+    ],
+    "allowedCharacterCeilingLessonId": "L180",
+    "provisionalLearnedChars": []
+  },
+  "teacherNotes": "R020 current review migration module. Milestone L180; coverage L151-L180; allowed-character ceiling through L180 only. Review modules introduce no new characters and have no zhuyin or charAudio.",
+  "approvedSentences": [
+    {
+      "id": "R020-S01",
+      "text": "手很髒，我去洗手。",
+      "spokenText": "手很髒我去洗手",
+      "focusChar": "洗",
+      "displayLines": [
+        "手很髒，",
+        "我去洗手。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity for 我. Her hands are visibly dirty with mud or grime, and she is washing them at a sink. Make both dirty hands and washing action clear."
+    },
+    {
+      "id": "R020-S02",
+      "text": "房間很亂，滿地都是書。",
+      "spokenText": "房間很亂滿地都是書",
+      "focusChar": "亂",
+      "displayLines": [
+        "房間很亂，",
+        "滿地都是書。"
+      ],
+      "imageNotes": "A room is messy, with books scattered all over the floor. The books should be on the floor, not neatly on shelves. Keep the scene readable and not visually overwhelming."
+    },
+    {
+      "id": "R020-S03",
+      "text": "小馬跑得很快。",
+      "spokenText": "小馬跑得很快",
+      "focusChar": "快",
+      "displayLines": [
+        "小馬跑得",
+        "很快。"
+      ],
+      "imageNotes": "A small horse is running quickly on safe grass. Show a lively running pose and some motion in the mane or legs, but avoid a dangerous race or crowded scene."
+    },
+    {
+      "id": "R020-S04",
+      "text": "我聽見小鳥叫。",
+      "spokenText": "我聽見小鳥叫",
+      "focusChar": "聽",
+      "displayLines": [
+        "我聽見",
+        "小鳥叫。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity for 我. She is listening and looking toward a nearby bird that is calling. The bird should have its beak open, and the girl's listening reaction should make 聽見 clear."
+    },
+    {
+      "id": "R020-S05",
+      "text": "他有事，就先回家了。",
+      "spokenText": "他有事就先回家了",
+      "focusChar": "回",
+      "displayLines": [
+        "他有事，",
+        "就先回家了。"
+      ],
+      "imageNotes": "Use the fixed recurring sporty boy identity for 他, not a generic boy. He was at school or outdoors with other children, but because he has something to do, he leaves first and walks toward home with his small backpack. Other children may remain behind to make 先回家 clear."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R020-G01",
+      "type": "find-character",
+      "sentenceId": "R020-S01",
+      "targetChar": "洗",
+      "prompt": "找到「洗」。",
+      "options": [
+        "手",
+        "髒",
+        "洗",
+        "去"
+      ]
+    },
+    {
+      "id": "R020-G02",
+      "type": "teach-character",
+      "sentenceId": "R020-S05",
+      "targetChar": "回",
+      "targetCharIndex": 5,
+      "prefixText": "他有事就先",
+      "suffixText": "家了",
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R020/audio/R020-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R020/audio/R020-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "R020-G03",
+      "type": "missing-character",
+      "sentenceId": "R020-S03",
+      "targetChar": "快",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "text": "快"
+        },
+        {
+          "text": "跑"
+        },
+        {
+          "text": "馬"
+        }
+      ]
+    },
+    {
+      "id": "R020-G04",
+      "type": "partial-order",
+      "sentenceId": "R020-S02",
+      "targetChar": "亂",
+      "missingIndexes": [
+        0,
+        1,
+        3
+      ],
+      "missingChars": [
+        "房",
+        "間",
+        "亂"
+      ],
+      "options": [
+        {
+          "text": "房",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "text": "間",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "text": "亂",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "R020-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R020-S04",
+      "targetChar": "聽",
+      "correctText": "我聽見小鳥叫。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "我看見小鳥叫。",
+          "audioSrc": "/assets/reviews/R020/audio/R020-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "我聽見小狗叫。",
+          "audioSrc": "/assets/reviews/R020/audio/R020-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

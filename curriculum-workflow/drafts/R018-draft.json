@@ -1,352 +1,340 @@
 {
   "id": "R018",
+  "kind": "review",
   "reviewNumber": 18,
   "title": "複習十八",
-  "afterLessonOrder": 300,
+  "pairMateId": "R017",
+  "afterLessonOrder": 165,
   "targetLessonRange": {
-    "startOrder": 241,
-    "endOrder": 270
+    "startOrder": 136,
+    "endOrder": 165
   },
+  "allowedCharacterCeilingLessonId": "L165",
   "requiredCoverageChars": [
-    "工",
-    "作",
-    "忙",
-    "幫",
-    "急",
-    "腳",
-    "步",
-    "跳",
-    "床",
-    "搬",
-    "重",
-    "沙",
-    "張",
-    "椅",
-    "累",
-    "死",
-    "睡",
-    "倒",
-    "病",
-    "假",
-    "才",
-    "剛",
-    "裝",
-    "養",
-    "休",
-    "息",
-    "久",
-    "體",
-    "神",
-    "精"
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先"
   ],
   "requiredRounds": 5,
   "sentences": [
     {
       "id": "R018-S01",
-      "text": "生病了，要好好休息。",
+      "text": "桌上有滿滿的飯菜。",
+      "spokenText": "桌上有滿滿的飯菜",
+      "focusChar": "滿",
       "displayLines": [
-        "生病了，",
-        "要好好休息。"
+        "桌上有",
+        "滿滿的飯菜。"
       ],
-      "spokenText": "生病了要好好休息",
-      "focusChar": "休",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, or brand marks anywhere in the image. The protagonist little girl is sick at home resting in bed, with the protagonist mother caring for her. Keep the scene warm and gentle, without serious medical or frightening feeling; no text, numbers, or labels.",
+      "imageNotes": "A dining table is full of rice and vegetables. Make the table clearly full, with multiple dishes and rice visible. Do not add text labels or extra unmentioned people.",
+      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as mandatory style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Follow recurring cast continuity from L154-S01, L162-S04, and L163-S02 where named. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles anywhere in the image. A dining table is full of rice and vegetables. Make the table clearly full, with multiple dishes and rice visible. Do not add text labels or extra unmentioned people.",
       "imageSrc": "/assets/reviews/R018/images/R018-S01.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R018/audio/R018-S01.m4a",
-        "durationMs": 3691,
+        "durationMs": 2647,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 540
+            "endMs": 240
           },
           {
             "charIndex": 1,
-            "startMs": 540,
-            "endMs": 780
+            "startMs": 240,
+            "endMs": 680
           },
           {
             "charIndex": 2,
-            "startMs": 780,
-            "endMs": 1240
+            "startMs": 680,
+            "endMs": 1000
           },
           {
             "charIndex": 3,
-            "startMs": 1480,
-            "endMs": 1680
+            "startMs": 1000,
+            "endMs": 1240
           },
           {
             "charIndex": 4,
-            "startMs": 1680,
-            "endMs": 1930
+            "startMs": 1240,
+            "endMs": 1500
           },
           {
             "charIndex": 5,
-            "startMs": 1930,
-            "endMs": 2180
+            "startMs": 1500,
+            "endMs": 1680
           },
           {
             "charIndex": 6,
-            "startMs": 2180,
-            "endMs": 2560
+            "startMs": 1680,
+            "endMs": 1900
           },
           {
             "charIndex": 7,
-            "startMs": 2560,
-            "endMs": 2720
+            "startMs": 1900,
+            "endMs": 2140
           }
         ]
       }
     },
     {
       "id": "R018-S02",
-      "text": "才剛裝好，椅子就倒了。",
+      "text": "我先擦桌子，再掃地。",
+      "spokenText": "我先擦桌子再掃地",
+      "focusChar": "擦",
       "displayLines": [
-        "才剛裝好，",
-        "椅子就倒了。"
+        "我先擦桌子，",
+        "再掃地。"
       ],
-      "spokenText": "才剛裝好椅子就倒了",
-      "focusChar": "裝",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, or brand marks anywhere in the image. The protagonist father has just finished assembling a chair, and the chair immediately falls over on the floor while the protagonist little girl watches. Clearly show just assembled and then fallen chair; no text, numbers, or labels.",
+      "imageNotes": "Use the recurring protagonist girl identity for 我. Show her wiping the table with a cloth first, with a broom nearby to indicate she will sweep the floor next. The sequence should be understandable from the scene.",
+      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as mandatory style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Follow recurring cast continuity from L154-S01, L162-S04, and L163-S02 where named. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles anywhere in the image. Use the recurring protagonist girl identity for 我. Show her wiping the table with a cloth first, with a broom nearby to indicate she will sweep the floor next. The sequence should be understandable from the scene.",
       "imageSrc": "/assets/reviews/R018/images/R018-S02.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R018/audio/R018-S02.m4a",
-        "durationMs": 3759,
+        "durationMs": 4736,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 440
+            "endMs": 340
           },
           {
             "charIndex": 1,
-            "startMs": 440,
-            "endMs": 760
+            "startMs": 340,
+            "endMs": 920
           },
           {
             "charIndex": 2,
-            "startMs": 760,
-            "endMs": 1020
+            "startMs": 920,
+            "endMs": 1320
           },
           {
             "charIndex": 3,
-            "startMs": 1020,
-            "endMs": 1360
+            "startMs": 1320,
+            "endMs": 1580
           },
           {
             "charIndex": 4,
-            "startMs": 1360,
-            "endMs": 1640
+            "startMs": 1580,
+            "endMs": 1860
           },
           {
             "charIndex": 5,
-            "startMs": 1640,
-            "endMs": 1800
+            "startMs": 2240,
+            "endMs": 2560
           },
           {
             "charIndex": 6,
-            "startMs": 1800,
-            "endMs": 2300
+            "startMs": 2560,
+            "endMs": 2900
           },
           {
             "charIndex": 7,
-            "startMs": 2300,
-            "endMs": 2520
-          },
-          {
-            "charIndex": 8,
-            "startMs": 2520,
-            "endMs": 2720
+            "startMs": 2900,
+            "endMs": 3060
           }
         ]
       }
     },
     {
       "id": "R018-S03",
-      "text": "小狗睡了很久才起來。",
+      "text": "為什麼車還不來？",
+      "spokenText": "為什麼車還不來",
+      "focusChar": "為",
       "displayLines": [
-        "小狗睡了",
-        "很久才起來。"
+        "為什麼車",
+        "還不來？"
       ],
-      "spokenText": "小狗睡了很久才起來",
-      "focusChar": "睡",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, or brand marks anywhere in the image. A small family dog has slept for a long time on a little bed or mat at home and is now slowly getting up. The protagonist little girl watches nearby. Clearly show the dog waking after a long sleep; no text, numbers, or labels.",
+      "imageNotes": "The recurring protagonist girl is waiting by a roadside or simple bus stop with an adult. She looks toward the road, wondering why the vehicle has not arrived yet. Keep the road empty enough that 車還不來 is clear.",
+      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as mandatory style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Follow recurring cast continuity from L154-S01, L162-S04, and L163-S02 where named. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles anywhere in the image. The recurring protagonist girl is waiting by a roadside or simple bus stop with an adult. She looks toward the road, wondering why the vehicle has not arrived yet. Keep the road empty enough that 車還不來 is clear.",
       "imageSrc": "/assets/reviews/R018/images/R018-S03.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R018/audio/R018-S03.m4a",
-        "durationMs": 4361,
+        "durationMs": 3940,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 440
+            "endMs": 233
           },
           {
             "charIndex": 1,
-            "startMs": 440,
-            "endMs": 640
+            "startMs": 233,
+            "endMs": 467
           },
           {
             "charIndex": 2,
-            "startMs": 640,
-            "endMs": 1040
+            "startMs": 467,
+            "endMs": 700
           },
           {
             "charIndex": 3,
-            "startMs": 1040,
-            "endMs": 1240
+            "startMs": 700,
+            "endMs": 1740
           },
           {
             "charIndex": 4,
-            "startMs": 1240,
-            "endMs": 1620
+            "startMs": 1740,
+            "endMs": 2160
           },
           {
             "charIndex": 5,
-            "startMs": 1620,
-            "endMs": 1840
+            "startMs": 2160,
+            "endMs": 2460
           },
           {
             "charIndex": 6,
-            "startMs": 1840,
-            "endMs": 2120
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2120,
-            "endMs": 2420
-          },
-          {
-            "charIndex": 8,
-            "startMs": 2420,
-            "endMs": 2640
+            "startMs": 2460,
+            "endMs": 2700
           }
         ]
       }
     },
     {
       "id": "R018-S04",
-      "text": "假花不用養，也不會死。",
+      "text": "車子怎麼不動了？",
+      "spokenText": "車子怎麼不動了",
+      "focusChar": "動",
       "displayLines": [
-        "假花不用養，",
-        "也不會死。"
+        "車子怎麼",
+        "不動了？"
       ],
-      "spokenText": "假花不用養也不會死",
-      "focusChar": "假",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, or brand marks anywhere in the image. On a table, show a fake flower and a real flower for contrast. The protagonist mother or little girl looks at the fake flower. Clearly show fake flowers do not need care and will not die; keep flowers pleasant, not frightening; no text, numbers, or labels.",
+      "imageNotes": "A child is crouching or sitting near a toy car that has stopped moving. The child looks puzzled at the toy car. The scene should clearly show the car is not moving, without needing motion lines or text labels.",
+      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as mandatory style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Follow recurring cast continuity from L154-S01, L162-S04, and L163-S02 where named. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles anywhere in the image. A child is crouching or sitting near a toy car that has stopped moving. The child looks puzzled at the toy car. The scene should clearly show the car is not moving, without needing motion lines or text labels.",
       "imageSrc": "/assets/reviews/R018/images/R018-S04.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R018/audio/R018-S04.m4a",
-        "durationMs": 4745,
+        "durationMs": 2113,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 560
+            "endMs": 380
           },
           {
             "charIndex": 1,
-            "startMs": 560,
-            "endMs": 800
+            "startMs": 380,
+            "endMs": 600
           },
           {
             "charIndex": 2,
-            "startMs": 800,
-            "endMs": 1560
+            "startMs": 600,
+            "endMs": 760
           },
           {
             "charIndex": 3,
-            "startMs": 1560,
-            "endMs": 1860
+            "startMs": 760,
+            "endMs": 920
           },
           {
             "charIndex": 4,
-            "startMs": 1860,
-            "endMs": 2160
+            "startMs": 920,
+            "endMs": 1260
           },
           {
             "charIndex": 5,
-            "startMs": 2980,
-            "endMs": 3160
+            "startMs": 1260,
+            "endMs": 1440
           },
           {
             "charIndex": 6,
-            "startMs": 3160,
-            "endMs": 3460
-          },
-          {
-            "charIndex": 7,
-            "startMs": 3460,
-            "endMs": 3760
-          },
-          {
-            "charIndex": 8,
-            "startMs": 3760,
-            "endMs": 4180
+            "startMs": 1440,
+            "endMs": 1700
           }
         ]
       }
     },
     {
       "id": "R018-S05",
-      "text": "養好身體，才有精神。",
+      "text": "兩個小孩在玩黑白棋。",
+      "spokenText": "兩個小孩在玩黑白棋",
+      "focusChar": "棋",
       "displayLines": [
-        "養好身體，",
-        "才有精神。"
+        "兩個小孩",
+        "在玩黑白棋。"
       ],
-      "spokenText": "養好身體才有精神",
-      "focusChar": "精",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, or brand marks anywhere in the image. After resting and recovering, the protagonist little girl looks energetic in sunlight, stretching or preparing to go out and play, with the protagonist mother nearby. Clearly show a healthy body and good spirit; no text, numbers, or labels.",
+      "imageNotes": "Show two generic children sitting at a table playing black-and-white board game pieces. The children must be generic and must not look like the recurring protagonist girl, the recurring young boy classmate, or the recurring sporty boy. Make exactly two children visible.",
+      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as mandatory style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Follow recurring cast continuity from L154-S01, L162-S04, and L163-S02 where named. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles anywhere in the image. Show two generic children sitting at a table playing black-and-white board game pieces. The children must be generic and must not look like the recurring protagonist girl, the recurring young boy classmate, or the recurring sporty boy. Make exactly two children visible.",
       "imageSrc": "/assets/reviews/R018/images/R018-S05.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R018/audio/R018-S05.m4a",
-        "durationMs": 3815,
+        "durationMs": 4797,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 440
+            "endMs": 310
           },
           {
             "charIndex": 1,
-            "startMs": 440,
-            "endMs": 860
+            "startMs": 310,
+            "endMs": 620
           },
           {
             "charIndex": 2,
-            "startMs": 860,
-            "endMs": 1180
+            "startMs": 620,
+            "endMs": 1240
           },
           {
             "charIndex": 3,
-            "startMs": 1180,
-            "endMs": 1440
+            "startMs": 1240,
+            "endMs": 1700
           },
           {
             "charIndex": 4,
-            "startMs": 1780,
-            "endMs": 2080
+            "startMs": 1700,
+            "endMs": 2480
           },
           {
             "charIndex": 5,
-            "startMs": 2080,
-            "endMs": 2400
+            "startMs": 2480,
+            "endMs": 2840
           },
           {
             "charIndex": 6,
-            "startMs": 2400,
-            "endMs": 2660
+            "startMs": 2840,
+            "endMs": 3460
           },
           {
             "charIndex": 7,
-            "startMs": 2660,
-            "endMs": 2860
+            "startMs": 3460,
+            "endMs": 3780
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3780,
+            "endMs": 4020
           }
         ]
       }
@@ -357,19 +345,43 @@
       "id": "R018-G01",
       "type": "find-character",
       "sentenceId": "R018-S05",
-      "targetChar": "精",
-      "prompt": "找一找句子裡的「精」。"
+      "targetChar": "棋",
+      "prompt": "找到「棋」。",
+      "options": [
+        {
+          "id": "option-1",
+          "text": "玩",
+          "correct": false
+        },
+        {
+          "id": "option-2",
+          "text": "黑",
+          "correct": false
+        },
+        {
+          "id": "option-3",
+          "text": "白",
+          "correct": false
+        },
+        {
+          "id": "option-4",
+          "text": "棋",
+          "correct": true
+        }
+      ]
     },
     {
       "id": "R018-G02",
       "type": "teach-character",
       "sentenceId": "R018-S02",
-      "targetChar": "裝",
+      "targetChar": "擦",
+      "targetCharIndex": 2,
       "prompt": "幫小兔補上這個字。",
       "missingIndexes": [
         2
       ],
-      "targetCharIndex": 2,
+      "prefixText": "我先",
+      "suffixText": "桌子再掃地",
       "teachAudio": {
         "prefixSrc": "/assets/reviews/R018/audio/R018-G02-prefix.m4a",
         "suffixSrc": "/assets/reviews/R018/audio/R018-G02-suffix.m4a"
@@ -379,25 +391,25 @@
       "id": "R018-G03",
       "type": "missing-character",
       "sentenceId": "R018-S04",
-      "targetChar": "死",
+      "targetChar": "動",
       "prompt": "選出少掉的字。",
       "missingIndexes": [
-        8
+        5
       ],
       "options": [
         {
           "id": "correct",
-          "text": "死",
+          "text": "動",
           "correct": true
         },
         {
           "id": "wrong-1",
-          "text": "養",
+          "text": "車",
           "correct": false
         },
         {
           "id": "wrong-2",
-          "text": "假",
+          "text": "不",
           "correct": false
         }
       ]
@@ -405,35 +417,30 @@
     {
       "id": "R018-G04",
       "type": "partial-order",
-      "sentenceId": "R018-S01",
-      "targetChar": "休",
+      "sentenceId": "R018-S03",
+      "targetChar": "為",
       "prompt": "排出正確的句子。",
       "missingIndexes": [
         0,
         1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
+        2
       ],
       "options": [
         {
-          "id": "slot-1",
-          "text": "生病了",
+          "id": "R018-G04-A",
+          "text": "為",
           "correctOrder": 0,
           "correct": true
         },
         {
-          "id": "slot-2",
-          "text": "要好好",
+          "id": "R018-G04-B",
+          "text": "什",
           "correctOrder": 1,
           "correct": true
         },
         {
-          "id": "slot-3",
-          "text": "休息",
+          "id": "R018-G04-C",
+          "text": "麼",
           "correctOrder": 2,
           "correct": true
         }
@@ -442,43 +449,32 @@
     {
       "id": "R018-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R018-S03",
-      "targetChar": "睡",
+      "sentenceId": "R018-S01",
+      "targetChar": "滿",
       "prompt": "聽聽看誰讀對了。",
       "options": [
         {
           "id": "correct",
-          "text": "小狗睡了很久才起來。",
+          "text": "桌上有滿滿的飯菜。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R018/audio/R018-S03.m4a"
+          "audioSrc": "/assets/reviews/R018/audio/R018-S01.m4a",
+          "spokenText": "桌上有滿滿的飯菜"
         },
         {
           "id": "wrong-one",
-          "text": "小狗睡了一下才起來。",
+          "text": "桌下有滿滿的飯菜。",
           "correct": false,
           "audioSrc": "/assets/reviews/R018/audio/R018-G05-wrong-one.m4a",
-          "spokenText": "小狗睡了一下才起來"
+          "spokenText": "桌下有滿滿的飯菜"
         },
         {
           "id": "wrong-two",
-          "text": "小狗睡了很久不起來。",
+          "text": "桌上有少少的飯菜。",
           "correct": false,
           "audioSrc": "/assets/reviews/R018/audio/R018-G05-wrong-two.m4a",
-          "spokenText": "小狗睡了很久不起來"
+          "spokenText": "桌上有少少的飯菜"
         }
       ]
     }
-  ],
-  "releaseAudit": {
-    "integratedFromOriginMain": true,
-    "dependenciesResolved": true,
-    "resolvedDependencies": [
-      "L298",
-      "L299",
-      "L300"
-    ],
-    "status": "integrated-from-latest-origin-main",
-    "integratedReviewModulesThrough": "R018",
-    "note": "Release transplanted review-local package files, checked L300 review ceiling, and integrated R017-R018 before L301."
-  }
+  ]
 }

@@ -1,0 +1,247 @@
+{
+  "id": "R019",
+  "kind": "review",
+  "reviewNumber": 19,
+  "title": "複習十九",
+  "pairMateId": "R020",
+  "afterLessonOrder": 180,
+  "targetLessonRange": {
+    "startOrder": 151,
+    "endOrder": 180
+  },
+  "requiredCoverageChars": [
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見"
+  ],
+  "targetSentenceCount": 5,
+  "requiredRounds": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "requiredCoverageChars": [
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見"
+    ],
+    "allowedCharacterCeilingLessonId": "L180",
+    "provisionalLearnedChars": []
+  },
+  "teacherNotes": "R019 current review migration module. Milestone L180; coverage L151-L180; allowed-character ceiling through L180 only. Review modules introduce no new characters and have no zhuyin or charAudio.",
+  "approvedSentences": [
+    {
+      "id": "R019-S01",
+      "text": "風把窗子吹開了，我去關窗。",
+      "spokenText": "風把窗子吹開了我去關窗",
+      "focusChar": "關",
+      "displayLines": [
+        "風把窗子",
+        "吹開了，",
+        "我去關窗。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity for 我. In a room, strong wind has blown the window open and the curtain is moving. The girl is walking to the window or reaching toward it to close it."
+    },
+    {
+      "id": "R019-S02",
+      "text": "風把樹上的綠葉吹動了。",
+      "spokenText": "風把樹上的綠葉吹動了",
+      "focusChar": "樹",
+      "displayLines": [
+        "風把樹上的",
+        "綠葉吹動了。"
+      ],
+      "imageNotes": "Outdoor scene with a tree. Wind is blowing the green leaves on the tree, and the leaves are visibly moving. The leaves should be clearly green, and the movement should come from wind, not from a person touching the tree."
+    },
+    {
+      "id": "R019-S03",
+      "text": "我先掃地，再擦桌子。",
+      "spokenText": "我先掃地再擦桌子",
+      "focusChar": "掃",
+      "displayLines": [
+        "我先掃地，",
+        "再擦桌子。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity for 我. She is sweeping the floor first in a room. A cloth is visible on or near the table to show that she will wipe the table next."
+    },
+    {
+      "id": "R019-S04",
+      "text": "他等的車來了，停在他前面。",
+      "spokenText": "他等的車來了停在他前面",
+      "focusChar": "停",
+      "displayLines": [
+        "他等的車",
+        "來了，",
+        "停在他前面。"
+      ],
+      "imageNotes": "Use the fixed recurring sporty boy identity for 他, not a generic boy. He is waiting by the roadside. The vehicle he is waiting for has arrived and stopped directly in front of him, with the boy and vehicle clearly positioned."
+    },
+    {
+      "id": "R019-S05",
+      "text": "小狗叫了一聲，又叫好幾聲。",
+      "spokenText": "小狗叫了一聲又叫好幾聲",
+      "focusChar": "聲",
+      "displayLines": [
+        "小狗叫了",
+        "一聲，",
+        "又叫好幾聲。"
+      ],
+      "imageNotes": "A small dog barks once, then barks several more times. The recurring protagonist girl may be nearby listening and noticing the repeated barking. Do not use written sound effects, letters, or text labels."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R019-G01",
+      "type": "find-character",
+      "sentenceId": "R019-S01",
+      "targetChar": "關",
+      "prompt": "找到「關」。",
+      "options": [
+        "關",
+        "窗",
+        "風",
+        "吹"
+      ]
+    },
+    {
+      "id": "R019-G02",
+      "type": "teach-character",
+      "sentenceId": "R019-S02",
+      "targetChar": "樹",
+      "targetCharIndex": 2,
+      "prefixText": "風把",
+      "suffixText": "上的綠葉吹動了",
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R019/audio/R019-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R019/audio/R019-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "R019-G03",
+      "type": "missing-character",
+      "sentenceId": "R019-S05",
+      "targetChar": "聲",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "text": "聲"
+        },
+        {
+          "text": "叫"
+        },
+        {
+          "text": "又"
+        }
+      ]
+    },
+    {
+      "id": "R019-G04",
+      "type": "partial-order",
+      "sentenceId": "R019-S03",
+      "targetChar": "掃",
+      "missingIndexes": [
+        0,
+        1,
+        2
+      ],
+      "missingChars": [
+        "我",
+        "先",
+        "掃"
+      ],
+      "options": [
+        {
+          "text": "我",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "text": "先",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "text": "掃",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "R019-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R019-S04",
+      "targetChar": "停",
+      "correctText": "他等的車來了，停在他前面。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "他等的車來了，停在他後面。",
+          "audioSrc": "/assets/reviews/R019/audio/R019-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "他等的車來了，停在我前面。",
+          "audioSrc": "/assets/reviews/R019/audio/R019-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
