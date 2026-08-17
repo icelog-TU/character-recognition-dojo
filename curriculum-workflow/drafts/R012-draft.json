@@ -2,305 +2,70 @@
   "id": "R012",
   "reviewNumber": 12,
   "title": "複習十二",
-  "afterLessonOrder": 210,
+  "afterLessonOrder": 120,
   "targetLessonRange": {
-    "startOrder": 151,
-    "endOrder": 180
+    "startOrder": 91,
+    "endOrder": 120
   },
   "requiredCoverageChars": [
-    "關",
-    "窗",
-    "車",
-    "等",
-    "再",
-    "風",
-    "吹",
-    "樹",
-    "動",
-    "葉",
-    "綠",
-    "滿",
-    "掃",
-    "擦",
-    "先",
-    "洗",
-    "又",
-    "髒",
-    "亂",
-    "回",
-    "就",
-    "快",
-    "事",
-    "跑",
-    "馬",
-    "停",
-    "叫",
-    "聲",
-    "聽",
-    "見"
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天"
   ],
   "requiredRounds": 5,
   "sentences": [
     {
       "id": "R012-S01",
-      "text": "手很髒，要洗一洗。",
+      "text": "眼鏡盒子壞掉了。",
+      "spokenText": "眼鏡盒子壞掉了",
+      "focusChar": "壞",
       "displayLines": [
-        "手很髒，",
-        "要洗一洗。"
+        "眼鏡盒子",
+        "壞掉了"
       ],
-      "spokenText": "手很髒要洗一洗",
-      "focusChar": "洗",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R012 review sentence image. Scene: at a clean sink, the recurring protagonist little girl has dirty hands and is about to wash or is gently washing her hands. Girl identity: pink jacket, white top, blue skirt, pink shoes, small pink hair clip. The dirt is visible but not gross. Show water and soap-like bubbles without labels. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
       "imageSrc": "/assets/reviews/R012/images/R012-S01.webp",
-      "approved": true,
+      "imageAlt": "眼鏡盒子壞掉了。",
+      "imageNotes": "The recurring protagonist girl's father is looking at a broken glasses case on a table. He is the only character wearing glasses. The case should be visibly cracked or unable to close, while the glasses are nearby. Make clear that the 眼鏡盒子 is broken, not the glasses themselves.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show the recurring protagonist girl's father at a table looking at a broken glasses case; he is the only visible character wearing glasses. The case is visibly cracked or unable to close, while the glasses nearby are intact. Make clear the case is broken, not the glasses. Center father, case, and glasses with safe margins. No written text, letters, numbers, labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
       "audio": {
         "src": "/assets/reviews/R012/audio/R012-S01.m4a",
-        "durationMs": 3094,
+        "durationMs": 3110,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 440
+            "endMs": 380
           },
           {
             "charIndex": 1,
-            "startMs": 440,
-            "endMs": 1200
-          },
-          {
-            "charIndex": 2,
-            "startMs": 1200,
-            "endMs": 1201
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1740,
-            "endMs": 2040
-          },
-          {
-            "charIndex": 4,
-            "startMs": 2040,
-            "endMs": 2260
-          },
-          {
-            "charIndex": 5,
-            "startMs": 2260,
-            "endMs": 2540
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2540,
-            "endMs": 2760
-          }
-        ]
-      }
-    },
-    {
-      "id": "R012-S02",
-      "text": "這房間怎麼又髒又亂？",
-      "displayLines": [
-        "這房間怎麼",
-        "又髒又亂？"
-      ],
-      "spokenText": "這房間怎麼又髒又亂",
-      "focusChar": "亂",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R012 review sentence image. Scene: the recurring protagonist little girl stands at the doorway of an ordinary room, looking puzzled at a messy room with scattered toys, blank books, and clothing. Girl identity: pink jacket, white top, blue skirt, pink shoes, small pink hair clip. The room is dirty and messy but not disgusting. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
-      "imageSrc": "/assets/reviews/R012/images/R012-S02.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R012/audio/R012-S02.m4a",
-        "durationMs": 4146,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 220
-          },
-          {
-            "charIndex": 1,
-            "startMs": 220,
-            "endMs": 560
-          },
-          {
-            "charIndex": 2,
-            "startMs": 560,
-            "endMs": 840
-          },
-          {
-            "charIndex": 3,
-            "startMs": 840,
-            "endMs": 1020
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1020,
-            "endMs": 1200
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1200,
-            "endMs": 1520
-          },
-          {
-            "charIndex": 6,
-            "startMs": 1520,
-            "endMs": 1640
-          },
-          {
-            "charIndex": 7,
-            "startMs": 1640,
-            "endMs": 2080
-          },
-          {
-            "charIndex": 8,
-            "startMs": 2080,
-            "endMs": 2140
-          }
-        ]
-      }
-    },
-    {
-      "id": "R012-S03",
-      "text": "沒事就快點回家。",
-      "displayLines": [
-        "沒事就",
-        "快點回家。"
-      ],
-      "spokenText": "沒事就快點回家",
-      "focusChar": "事",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R012 review sentence image. Scene: at an ordinary home doorway or quiet roadside near home, the recurring protagonist mother warmly reminds the recurring protagonist little girl to come home quickly if there is nothing else. Mother identity: white or cream top, wide blue pants, shoulder-length dark hair, clearly not a teacher. Girl identity: pink jacket, white top, blue skirt, pink shoes, small pink hair clip. Keep it safe and ordinary. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
-      "imageSrc": "/assets/reviews/R012/images/R012-S03.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R012/audio/R012-S03.m4a",
-        "durationMs": 2985,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 320
-          },
-          {
-            "charIndex": 1,
-            "startMs": 320,
-            "endMs": 640
-          },
-          {
-            "charIndex": 2,
-            "startMs": 640,
-            "endMs": 1120
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1120,
-            "endMs": 1460
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1460,
-            "endMs": 1680
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1680,
-            "endMs": 1960
-          },
-          {
-            "charIndex": 6,
-            "startMs": 1960,
-            "endMs": 2180
-          }
-        ]
-      }
-    },
-    {
-      "id": "R012-S04",
-      "text": "他聽見叫聲，所以回頭。",
-      "displayLines": [
-        "他聽見叫聲，",
-        "所以回頭。"
-      ],
-      "spokenText": "他聽見叫聲所以回頭",
-      "focusChar": "聽",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R012 review sentence image. Scene: a boy classmate walking on a safe sidewalk or path hears someone calling from behind, so he turns his head back. Boy classmate identity: clearly a child, short dark hair, green or yellow casual top, dark shorts or pants; he must look different from the recurring protagonist little girl and must not look like the protagonist brother in blue-white stripes. Show the calling source only through another distant child waving with no speech bubble. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
-      "imageSrc": "/assets/reviews/R012/images/R012-S04.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R012/audio/R012-S04.m4a",
-        "durationMs": 4171,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 300
-          },
-          {
-            "charIndex": 1,
-            "startMs": 300,
-            "endMs": 640
-          },
-          {
-            "charIndex": 2,
-            "startMs": 640,
-            "endMs": 880
-          },
-          {
-            "charIndex": 3,
-            "startMs": 880,
-            "endMs": 1280
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1280,
-            "endMs": 1500
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1880,
-            "endMs": 2070
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2070,
-            "endMs": 2260
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2260,
-            "endMs": 2700
-          },
-          {
-            "charIndex": 8,
-            "startMs": 2700,
-            "endMs": 2940
-          }
-        ]
-      }
-    },
-    {
-      "id": "R012-S05",
-      "text": "小馬跑太快，停不下來。",
-      "displayLines": [
-        "小馬跑太快，",
-        "停不下來。"
-      ],
-      "spokenText": "小馬跑太快停不下來",
-      "focusChar": "馬",
-      "imagePrompt": "Use L058 lesson images only as illustration style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable square composition. L058 is style-only; do not copy any L058 adult woman, child, clothing, face, body shape, or identity. Follow L154/L162/L163 protagonist family continuity when a protagonist family member appears. Asset type: R012 review sentence image. Scene: a cute small horse runs too fast across a safe open grassy area and is having trouble stopping. Show speed with flowing mane, lifted hooves, and motion in grass, but no collision and no danger. No protagonist family members. If a person appears, only a distant passerby caretaker who looks unrelated to protagonist family. Square image / 1:1 composition with centered subject, clear key action, and safe margins. No visible text, numbers, signs, labels, book text, brand marks, license plates, door plates, speech bubbles, zhuyin, logos, watermarks, subtitles, or readable marks anywhere in the image.",
-      "imageSrc": "/assets/reviews/R012/images/R012-S05.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R012/audio/R012-S05.m4a",
-        "durationMs": 2873,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 500
-          },
-          {
-            "charIndex": 1,
-            "startMs": 500,
+            "startMs": 380,
             "endMs": 660
           },
           {
@@ -311,35 +76,260 @@
           {
             "charIndex": 3,
             "startMs": 940,
-            "endMs": 1320
+            "endMs": 1200
           },
           {
             "charIndex": 4,
-            "startMs": 1320,
-            "endMs": 1540
+            "startMs": 1200,
+            "endMs": 1800
           },
           {
             "charIndex": 5,
-            "startMs": 1540,
-            "endMs": 1820
-          },
-          {
-            "charIndex": 6,
-            "startMs": 1820,
+            "startMs": 1800,
             "endMs": 2020
           },
           {
-            "charIndex": 7,
+            "charIndex": 6,
             "startMs": 2020,
-            "endMs": 2190
+            "endMs": 2260
+          }
+        ]
+      },
+      "approved": true
+    },
+    {
+      "id": "R012-S02",
+      "text": "這個球棒太大，很難用。",
+      "spokenText": "這個球棒太大很難用",
+      "focusChar": "難",
+      "displayLines": [
+        "這個球棒太大",
+        "很難用"
+      ],
+      "imageSrc": "/assets/reviews/R012/images/R012-S02.webp",
+      "imageAlt": "這個球棒太大，很難用。",
+      "imageNotes": "A small child is trying to use an oversized ball bat. The bat is much too large for the child, making it hard to hold or swing. Show the child struggling safely, with the size contrast clear. The meaning should be that the bat is hard to use because it is too big.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show a small child safely trying to hold or swing an oversized ball bat that is much too large, making it clearly hard to use. Keep the child safe and the size contrast obvious. Center child and bat with safe margins. No written text, letters, numbers, labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
+      "audio": {
+        "src": "/assets/reviews/R012/audio/R012-S02.m4a",
+        "durationMs": 4214,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 230
+          },
+          {
+            "charIndex": 1,
+            "startMs": 230,
+            "endMs": 460
+          },
+          {
+            "charIndex": 2,
+            "startMs": 460,
+            "endMs": 840
+          },
+          {
+            "charIndex": 3,
+            "startMs": 840,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1040,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1900,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2940,
+            "endMs": 3180
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3180,
+            "endMs": 3420
           },
           {
             "charIndex": 8,
-            "startMs": 2190,
-            "endMs": 2360
+            "startMs": 3420,
+            "endMs": 3660
           }
         ]
-      }
+      },
+      "approved": true
+    },
+    {
+      "id": "R012-S03",
+      "text": "我的鼻子和臉紅紅的。",
+      "spokenText": "我的鼻子和臉紅紅的",
+      "focusChar": "鼻",
+      "displayLines": [
+        "我的鼻子和臉",
+        "紅紅的"
+      ],
+      "imageSrc": "/assets/reviews/R012/images/R012-S03.webp",
+      "imageAlt": "我的鼻子和臉紅紅的。",
+      "imageNotes": "The recurring protagonist girl is looking in a mirror or being gently checked by her mother. Her nose and cheeks are red, as if from cold weather or mild irritation. Keep it calm and non-medical; no injury, blood, or distress.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show the recurring protagonist girl being gently checked by her mother or looking in a mirror; her nose and cheeks are red as if from cold weather or mild irritation. Keep the scene calm, non-medical, with no injury, blood, or distress. Center faces clearly with safe margins. No written text, letters, numbers, labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
+      "audio": {
+        "src": "/assets/reviews/R012/audio/R012-S03.m4a",
+        "durationMs": 5397,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 520
+          },
+          {
+            "charIndex": 2,
+            "startMs": 520,
+            "endMs": 880
+          },
+          {
+            "charIndex": 3,
+            "startMs": 880,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1120,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1820,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2160,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2660,
+            "endMs": 2900
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2900,
+            "endMs": 3160
+          }
+        ]
+      },
+      "approved": true
+    },
+    {
+      "id": "R012-S04",
+      "text": "圓球在桌下。",
+      "spokenText": "圓球在桌下",
+      "focusChar": "圓",
+      "displayLines": [
+        "圓球",
+        "在桌下"
+      ],
+      "imageSrc": "/assets/reviews/R012/images/R012-S04.webp",
+      "imageAlt": "圓球在桌下。",
+      "imageNotes": "A round ball is under a table. The table and the ball must be clearly visible, with the ball obviously below the tabletop and between or near the table legs. Keep the scene uncluttered.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show a clearly round ball under a table, below the tabletop and near or between the table legs. Keep the scene uncluttered and phone-readable, centered with safe margins. No written text, letters, numbers, labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
+      "audio": {
+        "src": "/assets/reviews/R012/audio/R012-S04.m4a",
+        "durationMs": 3135,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 560
+          },
+          {
+            "charIndex": 1,
+            "startMs": 560,
+            "endMs": 880
+          },
+          {
+            "charIndex": 2,
+            "startMs": 880,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1420,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1600,
+            "endMs": 1980
+          }
+        ]
+      },
+      "approved": true
+    },
+    {
+      "id": "R012-S05",
+      "text": "幾點了？去外面玩。",
+      "spokenText": "幾點了去外面玩",
+      "focusChar": "點",
+      "displayLines": [
+        "幾點了",
+        "去外面玩"
+      ],
+      "imageSrc": "/assets/reviews/R012/images/R012-S05.webp",
+      "imageAlt": "幾點了？去外面玩。",
+      "imageNotes": "The recurring protagonist girl is looking at a simple clock while preparing to go outside to play. Show an outdoor play area visible through an open door or window, so 去外面玩 is clear. The scene should feel like a child asking the time before going out.",
+      "imagePrompt": "Create a square image / 1:1 composition in warm picture-book pencil-and-watercolor style. Show the recurring protagonist girl looking at a simple clock while preparing to go outside to play; an outdoor play area is visible through an open door or window. The clock face should be plain with no digits or readable marks. Center girl, clock, and outdoor opening with safe margins. No written text, letters, numbers, labels, signs, zhuyin, logos, watermarks, captions, or speech bubbles.",
+      "audio": {
+        "src": "/assets/reviews/R012/audio/R012-S05.m4a",
+        "durationMs": 2704,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1420,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1440,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1680,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1920,
+            "endMs": 2160
+          }
+        ]
+      },
+      "approved": true
     }
   ],
   "sentenceGames": [
@@ -347,46 +337,52 @@
       "id": "R012-G01",
       "type": "find-character",
       "sentenceId": "R012-S04",
-      "targetChar": "聽",
-      "prompt": "找一找句子裡的「聽」。"
+      "targetChar": "圓",
+      "prompt": "找到「圓」。",
+      "missingIndexes": [
+        0
+      ],
+      "options": []
     },
     {
       "id": "R012-G02",
       "type": "teach-character",
       "sentenceId": "R012-S02",
-      "targetChar": "亂",
-      "prompt": "看一看「亂」在句子裡的位置。",
+      "targetChar": "大",
+      "targetCharIndex": 5,
+      "prompt": "幫小兔子念這個字。",
       "missingIndexes": [
-        8
+        5
       ],
-      "targetCharIndex": 8,
+      "options": [],
       "teachAudio": {
-        "prefixSrc": "/assets/reviews/R012/audio/R012-G02-prefix.m4a"
+        "prefixSrc": "/assets/reviews/R012/audio/R012-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R012/audio/R012-G02-suffix.m4a"
       }
     },
     {
       "id": "R012-G03",
       "type": "missing-character",
       "sentenceId": "R012-S03",
-      "targetChar": "事",
-      "prompt": "選出句子裡少掉的字。",
+      "targetChar": "紅",
+      "prompt": "選出少掉的字。",
       "missingIndexes": [
-        1
+        7
       ],
       "options": [
         {
-          "id": "thing",
-          "text": "事",
+          "id": "R012-G03-A",
+          "text": "紅",
           "correct": true
         },
         {
-          "id": "fast",
-          "text": "快",
+          "id": "R012-G03-B",
+          "text": "圓",
           "correct": false
         },
         {
-          "id": "back",
-          "text": "回",
+          "id": "R012-G03-C",
+          "text": "臉",
           "correct": false
         }
       ]
@@ -395,37 +391,31 @@
       "id": "R012-G04",
       "type": "partial-order",
       "sentenceId": "R012-S05",
-      "targetChar": "馬",
-      "prompt": "排出正確的句子。",
+      "targetChar": "幾",
+      "prompt": "把字放回正確的位置。",
       "missingIndexes": [
         0,
         1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
+        2
       ],
       "options": [
         {
-          "id": "slot-1",
-          "text": "小馬跑太快",
-          "correctOrder": 0,
-          "correct": true
+          "id": "R012-G04-A",
+          "text": "幾",
+          "correct": true,
+          "correctOrder": 0
         },
         {
-          "id": "slot-2",
-          "text": "停不",
-          "correctOrder": 1,
-          "correct": true
+          "id": "R012-G04-B",
+          "text": "點",
+          "correct": true,
+          "correctOrder": 1
         },
         {
-          "id": "slot-3",
-          "text": "下來",
-          "correctOrder": 2,
-          "correct": true
+          "id": "R012-G04-C",
+          "text": "了",
+          "correct": true,
+          "correctOrder": 2
         }
       ]
     },
@@ -433,24 +423,25 @@
       "id": "R012-G05",
       "type": "choose-pronunciation",
       "sentenceId": "R012-S01",
-      "targetChar": "洗",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "targetChar": "壞",
+      "prompt": "聽聽誰念對。",
+      "missingIndexes": [],
       "options": [
         {
-          "id": "correct",
-          "text": "手很髒，要洗一洗。",
+          "id": "R012-G05-A",
+          "text": "眼鏡盒子壞掉了。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R012/audio/R012-S01.m4a"
+          "sentenceId": "R012-S01"
         },
         {
-          "id": "wrong-one",
-          "text": "手很髒，要擦一擦。",
+          "id": "R012-G05-B",
+          "text": "眼鏡盒子掉下了。",
           "correct": false,
           "audioSrc": "/assets/reviews/R012/audio/R012-G05-wrong-one.m4a"
         },
         {
-          "id": "wrong-two",
-          "text": "手很冷，要洗一洗。",
+          "id": "R012-G05-C",
+          "text": "眼鏡盒子太大了。",
           "correct": false,
           "audioSrc": "/assets/reviews/R012/audio/R012-G05-wrong-two.m4a"
         }

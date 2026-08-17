@@ -3,579 +3,182 @@
   "kind": "review",
   "reviewNumber": 11,
   "title": "複習十一",
-  "afterLessonOrder": 210,
+  "afterLessonOrder": 120,
   "targetLessonRange": {
-    "startOrder": 151,
-    "endOrder": 180
+    "startOrder": 91,
+    "endOrder": 120
   },
   "requiredCoverageChars": [
-    "關",
-    "窗",
-    "車",
-    "等",
-    "再",
-    "風",
-    "吹",
-    "樹",
-    "動",
-    "葉",
-    "綠",
-    "滿",
-    "掃",
-    "擦",
-    "先",
-    "洗",
-    "又",
-    "髒",
-    "亂",
-    "回",
-    "就",
-    "快",
-    "事",
-    "跑",
-    "馬",
-    "停",
-    "叫",
-    "聲",
-    "聽",
-    "見"
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天"
   ],
   "targetSentenceCount": 5,
-  "generationConstraints": {
-    "sentenceHanCharLength": {
-      "min": 4,
-      "max": 12
-    },
-    "allowedChars": [
-      "一",
-      "二",
-      "三",
-      "人",
-      "個",
-      "大",
-      "的",
-      "小",
-      "手",
-      "我",
-      "有",
-      "山",
-      "上",
-      "下",
-      "你",
-      "水",
-      "在",
-      "高",
-      "很",
-      "家",
-      "和",
-      "隻",
-      "鳥",
-      "孩",
-      "指",
-      "看",
-      "女",
-      "飛",
-      "男",
-      "門",
-      "前",
-      "後",
-      "也",
-      "是",
-      "不",
-      "到",
-      "走",
-      "他",
-      "沒",
-      "裡",
-      "兩",
-      "狗",
-      "都",
-      "爸",
-      "媽",
-      "愛",
-      "書",
-      "可",
-      "會",
-      "這",
-      "吃",
-      "做",
-      "好",
-      "樣",
-      "要",
-      "更",
-      "邊",
-      "多",
-      "少",
-      "比",
-      "來",
-      "起",
-      "去",
-      "坐",
-      "站",
-      "開",
-      "左",
-      "著",
-      "拿",
-      "包",
-      "花",
-      "朵",
-      "了",
-      "畫",
-      "出",
-      "學",
-      "路",
-      "誰",
-      "校",
-      "問",
-      "找",
-      "同",
-      "帶",
-      "筆",
-      "借",
-      "那",
-      "本",
-      "給",
-      "紙",
-      "心",
-      "放",
-      "把",
-      "桌",
-      "子",
-      "盒",
-      "掉",
-      "壞",
-      "眼",
-      "用",
-      "鏡",
-      "鼻",
-      "臉",
-      "紅",
-      "圓",
-      "太",
-      "難",
-      "得",
-      "過",
-      "分",
-      "幾",
-      "點",
-      "玩",
-      "打",
-      "球",
-      "棒",
-      "頭",
-      "帽",
-      "草",
-      "地",
-      "面",
-      "外",
-      "空",
-      "天",
-      "雨",
-      "雲",
-      "黑",
-      "白",
-      "棋",
-      "鞋",
-      "穿",
-      "戴",
-      "衣",
-      "脫",
-      "氣",
-      "套",
-      "熱",
-      "冷",
-      "喝",
-      "飯",
-      "菜",
-      "老",
-      "卻",
-      "麼",
-      "什",
-      "為",
-      "以",
-      "怎",
-      "所",
-      "房",
-      "間",
-      "時",
-      "還",
-      "燈",
-      "關",
-      "窗",
-      "車",
-      "等",
-      "再",
-      "風",
-      "吹",
-      "樹",
-      "動",
-      "葉",
-      "綠",
-      "滿",
-      "掃",
-      "擦",
-      "先",
-      "洗",
-      "又",
-      "髒",
-      "亂",
-      "回",
-      "就",
-      "快",
-      "事",
-      "跑",
-      "馬",
-      "停",
-      "叫",
-      "聲",
-      "聽",
-      "見",
-      "說",
-      "師",
-      "話",
-      "課",
-      "像",
-      "想",
-      "真",
-      "力",
-      "能",
-      "火",
-      "發",
-      "電",
-      "生",
-      "明",
-      "光",
-      "亮",
-      "陽",
-      "月",
-      "影",
-      "長",
-      "星",
-      "行",
-      "道",
-      "流",
-      "河",
-      "從",
-      "進",
-      "早",
-      "晚",
-      "海"
-    ],
-    "requiredCoverageChars": [
-      "關",
-      "窗",
-      "車",
-      "等",
-      "再",
-      "風",
-      "吹",
-      "樹",
-      "動",
-      "葉",
-      "綠",
-      "滿",
-      "掃",
-      "擦",
-      "先",
-      "洗",
-      "又",
-      "髒",
-      "亂",
-      "回",
-      "就",
-      "快",
-      "事",
-      "跑",
-      "馬",
-      "停",
-      "叫",
-      "聲",
-      "聽",
-      "見"
-    ]
-  },
-  "teacherNotes": "R011/R012 are required review modules after L210 and before L211. They cover L151-L180 and may use only L001-L210 learned characters. Review modules introduce no newChars, zhuyin, or charAudio. Use L058 as style only and L154/L162/L163 for protagonist family continuity.",
+  "teacherNotes": "Teacher-approved review migration module R011; pair with R012. Milestone L120; coverage L091-L120; allowed-character ceiling through L120 only. Review modules introduce no new characters and have no zhuyin or charAudio.",
   "approvedSentences": [
     {
-      "text": "風一吹，樹葉就動了。",
-      "spokenText": "風一吹樹葉就動了",
-      "focusChar": "風",
+      "id": "R011-S01",
+      "text": "好幾個小孩在玩球。",
+      "spokenText": "好幾個小孩在玩球",
+      "focusChar": "玩",
       "displayLines": [
-        "風一吹，",
-        "樹葉就動了。"
+        "好幾個小孩",
+        "在玩球"
       ],
-      "reason": "Covers 風、吹、樹、葉、就、動.",
-      "imageNotes": "戶外樹下場景，風一吹，樹葉跟著動起來。可以有主角小女孩在旁邊看樹葉動，主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、標籤或水印。"
+      "imageNotes": "A clear children's picture-book scene with several children playing ball together on a school playground or open play area. Show at least four children so 好幾個 is visually clear. The children are actively playing with one ball; no adults are the focus. Keep the recurring protagonist girl visible as one of the children or watching nearby."
     },
     {
-      "text": "樹上滿是綠葉。",
-      "spokenText": "樹上滿是綠葉",
-      "focusChar": "滿",
+      "id": "R011-S02",
+      "text": "他打球得很多分。",
+      "spokenText": "他打球得很多分",
+      "focusChar": "分",
       "displayLines": [
-        "樹上滿是",
-        "綠葉。"
+        "他打球",
+        "得很多分"
       ],
-      "reason": "Covers 樹、滿、綠、葉.",
-      "imageNotes": "一棵樹上長滿綠色葉子，畫面重點是樹上很多綠葉。可無人物。不可有文字、數字、標籤或水印。"
+      "imageNotes": "Use the fixed recurring sporty boy identity for 他, not a generic boy. The sporty boy is playing a simple ball game and has clearly scored many points. Show a small child-friendly scoreboard or score cards with many points marked, and the sporty boy happily holding or hitting the ball. Make 他 visually refer to the recurring sporty boy, not the protagonist girl."
     },
     {
-      "text": "關好車窗，再開冷氣。",
-      "spokenText": "關好車窗再開冷氣",
-      "focusChar": "關",
+      "id": "R011-S03",
+      "text": "球棒掉到草地上。",
+      "spokenText": "球棒掉到草地上",
+      "focusChar": "棒",
       "displayLines": [
-        "關好車窗，",
-        "再開冷氣。"
+        "球棒掉到",
+        "草地上"
       ],
-      "reason": "Covers 關、車、窗、再.",
-      "imageNotes": "主角爸爸坐在車內，先關好車窗再開車內冷氣，主角小女孩可坐在後座。主角爸爸與主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。車內不可有文字、數字、車牌、品牌標誌或標籤。"
+      "imageNotes": "A ball bat has fallen onto green grass. The bat should be clearly on the grass, not in a child's hand. Keep the scene simple: grass, the bat, and possibly a ball nearby. Do not make the bat look like a pencil or stick."
     },
     {
-      "text": "等雨停了，再出門。",
-      "spokenText": "等雨停了再出門",
-      "focusChar": "等",
+      "id": "R011-S04",
+      "text": "頭上的帽子掉了。",
+      "spokenText": "頭上的帽子掉了",
+      "focusChar": "帽",
       "displayLines": [
-        "等雨停了，",
-        "再出門。"
+        "頭上的帽子",
+        "掉了"
       ],
-      "reason": "Covers 等、雨、停、再、出、門.",
-      "imageNotes": "主角媽媽和主角小女孩在家門口或窗邊等雨停，雨快停了，準備再出門。主角媽媽與主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、門牌或標籤。"
+      "imageNotes": "A child's hat is falling off from their head. Show the hat just above or beside the child's head in mid-fall, with the child looking surprised. The relation between 頭上 and 帽子 must be visually clear."
     },
     {
-      "text": "先掃地，再擦桌子。",
-      "spokenText": "先掃地再擦桌子",
-      "focusChar": "掃",
+      "id": "R011-S05",
+      "text": "外面小鳥飛過天空。",
+      "spokenText": "外面小鳥飛過天空",
+      "focusChar": "空",
       "displayLines": [
-        "先掃地，",
-        "再擦桌子。"
+        "外面小鳥",
+        "飛過天空"
       ],
-      "reason": "Covers 先、掃、地、再、擦、桌、子.",
-      "imageNotes": "主角小女孩在家裡幫忙做家事，先掃地，再擦桌子；畫面要清楚有掃地工具和桌子。主角小女孩外觀依 L154/L162/L163 continuity；L058 只作畫風參考，不複製人物長相。不可有文字、數字、標籤或水印。"
+      "imageNotes": "The recurring protagonist girl is outside looking up. A small bird is flying across the sky above her. Make 外面 clear with outdoor ground, sky, and open space. The bird should be in the sky, not inside a house or on a tree."
     }
   ],
-  "sentenceGames": [
+  "stage4Plan": [
     {
       "id": "R011-G01",
       "type": "find-character",
       "sentenceId": "R011-S03",
-      "targetChar": "關",
-      "prompt": "找一找句子裡的「關」。"
+      "targetChar": "棒",
+      "prompt": "找到「棒」。",
+      "options": [
+        "球",
+        "棒",
+        "掉",
+        "草"
+      ]
     },
     {
       "id": "R011-G02",
       "type": "teach-character",
-      "sentenceId": "R011-S04",
-      "targetChar": "等",
-      "prompt": "看一看「等」在句子裡的位置。",
-      "missingIndexes": [
-        0
-      ],
-      "targetCharIndex": 0,
+      "sentenceId": "R011-S05",
+      "targetChar": "空",
+      "targetCharIndex": 7,
+      "prefixText": "外面小鳥飛過天",
+      "suffixText": "",
       "teachAudio": {
-        "suffixSrc": "/assets/reviews/R011/audio/R011-G02-suffix.m4a"
+        "prefixSrc": "/assets/reviews/R011/audio/R011-G02-prefix.m4a",
+        "suffixSrc": null
       }
     },
     {
       "id": "R011-G03",
       "type": "missing-character",
-      "sentenceId": "R011-S01",
-      "targetChar": "葉",
-      "prompt": "選出句子裡少掉的字。",
+      "sentenceId": "R011-S02",
+      "targetChar": "分",
       "missingIndexes": [
-        4
+        6
       ],
       "options": [
-        {
-          "id": "leaf",
-          "text": "葉",
-          "correct": true
-        },
-        {
-          "id": "tree",
-          "text": "樹",
-          "correct": false
-        },
-        {
-          "id": "wind",
-          "text": "風",
-          "correct": false
-        }
-      ]
+        "分",
+        "球",
+        "打"
+      ],
+      "correctAnswer": "分"
     },
     {
       "id": "R011-G04",
       "type": "partial-order",
-      "sentenceId": "R011-S05",
-      "targetChar": "掃",
-      "prompt": "排出正確的句子。",
-      "missingIndexes": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "options": [
-        {
-          "id": "slot-1",
-          "text": "先掃地",
-          "correctOrder": 0,
-          "correct": true
-        },
-        {
-          "id": "slot-2",
-          "text": "再擦",
-          "correctOrder": 1,
-          "correct": true
-        },
-        {
-          "id": "slot-3",
-          "text": "桌子",
-          "correctOrder": 2,
-          "correct": true
-        }
-      ]
-    },
-    {
-      "id": "R011-G05",
-      "type": "choose-pronunciation",
-      "sentenceId": "R011-S02",
-      "targetChar": "滿",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
-      "options": [
-        {
-          "id": "correct",
-          "text": "樹上滿是綠葉。",
-          "correct": true,
-          "audioSrc": "/assets/reviews/R011/audio/R011-S02.m4a"
-        },
-        {
-          "id": "wrong-one",
-          "text": "樹上滿是紅花。",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R011/audio/R011-G05-wrong-one.m4a"
-        },
-        {
-          "id": "wrong-two",
-          "text": "桌上滿是綠葉。",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R011/audio/R011-G05-wrong-two.m4a"
-        }
-      ]
-    }
-  ],
-  "games": [
-    {
-      "id": "R011-G01",
-      "type": "find-character",
-      "sentenceId": "R011-S03",
-      "targetChar": "關",
-      "prompt": "找一找句子裡的「關」。"
-    },
-    {
-      "id": "R011-G02",
-      "type": "teach-character",
       "sentenceId": "R011-S04",
-      "targetChar": "等",
-      "prompt": "看一看「等」在句子裡的位置。",
-      "missingIndexes": [
-        0
-      ],
-      "targetCharIndex": 0,
-      "teachAudio": {
-        "suffixSrc": "/assets/reviews/R011/audio/R011-G02-suffix.m4a"
-      }
-    },
-    {
-      "id": "R011-G03",
-      "type": "missing-character",
-      "sentenceId": "R011-S01",
-      "targetChar": "葉",
-      "prompt": "選出句子裡少掉的字。",
-      "missingIndexes": [
-        4
-      ],
-      "options": [
-        {
-          "id": "leaf",
-          "text": "葉",
-          "correct": true
-        },
-        {
-          "id": "tree",
-          "text": "樹",
-          "correct": false
-        },
-        {
-          "id": "wind",
-          "text": "風",
-          "correct": false
-        }
-      ]
-    },
-    {
-      "id": "R011-G04",
-      "type": "partial-order",
-      "sentenceId": "R011-S05",
-      "targetChar": "掃",
-      "prompt": "排出正確的句子。",
       "missingIndexes": [
         0,
         1,
-        2,
-        3,
-        4,
-        5,
-        6
+        3
+      ],
+      "missingChars": [
+        "頭",
+        "上",
+        "帽"
       ],
       "options": [
-        {
-          "id": "slot-1",
-          "text": "先掃地",
-          "correctOrder": 0,
-          "correct": true
-        },
-        {
-          "id": "slot-2",
-          "text": "再擦",
-          "correctOrder": 1,
-          "correct": true
-        },
-        {
-          "id": "slot-3",
-          "text": "桌子",
-          "correctOrder": 2,
-          "correct": true
-        }
+        "頭",
+        "上",
+        "帽"
       ]
     },
     {
       "id": "R011-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R011-S02",
-      "targetChar": "滿",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
-      "options": [
-        {
-          "id": "correct",
-          "text": "樹上滿是綠葉。",
-          "correct": true,
-          "audioSrc": "/assets/reviews/R011/audio/R011-S02.m4a"
-        },
+      "sentenceId": "R011-S01",
+      "correctText": "好幾個小孩在玩球。",
+      "wrongOptions": [
         {
           "id": "wrong-one",
-          "text": "樹上滿是紅花。",
-          "correct": false,
+          "text": "好幾個小孩在打球。",
           "audioSrc": "/assets/reviews/R011/audio/R011-G05-wrong-one.m4a"
         },
         {
           "id": "wrong-two",
-          "text": "桌上滿是綠葉。",
-          "correct": false,
+          "text": "好幾個小狗在玩球。",
           "audioSrc": "/assets/reviews/R011/audio/R011-G05-wrong-two.m4a"
         }
-      ]
+      ],
+      "correctAudioSrc": "/assets/reviews/R011/audio/R011-S01.m4a"
     }
   ]
 }
