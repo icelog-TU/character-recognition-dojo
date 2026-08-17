@@ -1,514 +1,69 @@
-# R008 複習模組生成資料包
-
-## Review Module
+# R008 Review Module Generation Packet
 
 - Unit: R008
-- Title: 複習八
-- Review number: 8
-- afterLessonOrder: L150
-- targetLessonRange: L091-L120
+- Review number/title: 8 / 複習八
+- Kind: review module
 - Pair: R007/R008
-- 本模組必選覆蓋字：子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天
-- Teacher notes: R007/R008 review pair after L150. Covers L091-L120 across the pair; may use only L001-L150 learned characters. Review modules introduce no newChars, zhuyin, or charAudio. R007/R008 are blocked from release until R005/R006 exist in top-level reviewLessons. Use L058 image style anchors; audio flow is AI audio -> assets:audio -> assets:align:ai.
+- afterLessonOrder: 90
+- targetLessonRange: L061-L090
+- Allowed-character ceiling: L090
+- Allowed-character audit: PASS
+- Pair-level coverage: PASS, 30/30 target characters covered across R007/R008
+- Review modules introduce no new characters; no zhuyin; no charAudio
 
-## Character Boundary
+## Required Coverage Chars
 
-- Allowed character ceiling: L150
-- Allowed chars: 一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間
-- Review modules introduce no newChars, zhuyin, or charAudio.
-- Use Taiwan Mandarin and Traditional Chinese only. No Hanyu pinyin.
-- Use L058 style anchors for images. No visible text, numbers, zhuyin, labels, signs, or watermarks.
-- Use whole-sentence AI audio, standard assets:audio processing, AI alignment, and dedicated G02/G05 audio assets.
+坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌
 
 ## Approved Sentences
 
-| ID | Text | spokenText | focusChar | displayLines | imageSrc | audioSrc |
-|---|---|---|---|---|---|---|
-| R008-S01 | 這個圓盒壞掉了。 | 這個圓盒壞掉了 | 圓 | 這個圓盒 / 壞掉了。 | /assets/reviews/R008/images/R008-S01.webp | /assets/reviews/R008/audio/R008-S01.m4a |
-| R008-S02 | 球棒太難用。 | 球棒太難用 | 難 | 球棒 / 太難用。 | /assets/reviews/R008/images/R008-S02.webp | /assets/reviews/R008/audio/R008-S02.m4a |
-| R008-S03 | 雨天過後，去外面草地玩。 | 雨天過後去外面草地玩 | 過 | 雨天過後， / 去外面 / 草地玩。 | /assets/reviews/R008/images/R008-S03.webp | /assets/reviews/R008/audio/R008-S03.m4a |
-| R008-S04 | 他打出好球，得很多分。 | 他打出好球得很多分 | 分 | 他打出好球， / 得很多分。 | /assets/reviews/R008/images/R008-S04.webp | /assets/reviews/R008/audio/R008-S04.m4a |
-| R008-S05 | 幾點了？去空地打球。 | 幾點了去空地打球 | 點 | 幾點了？ / 去空地打球。 | /assets/reviews/R008/images/R008-S05.webp | /assets/reviews/R008/audio/R008-S05.m4a |
+1. 我在校門路邊畫畫。
+   - spokenText: 我在校門路邊畫畫
+   - focusChar: 校
+   - displayLines: ["我在校門","路邊畫畫。"]
+   - Han count: 8
+   - imageNotes: Concrete phone-readable square image for: 我在校門路邊畫畫。 Show the recurring protagonist girl for `我` sitting or kneeling safely by the roadside near a school gate, drawing on paper. Make the school gate and roadside setting visually clear without any readable school name, signs, letters, numbers, zhuyin, logos, or speech bubbles. Use the recurring protagonist girl identity.
 
-## Image Prompts
+2. 媽媽帶我去學校。
+   - spokenText: 媽媽帶我去學校
+   - focusChar: 帶
+   - displayLines: ["媽媽帶我","去學校。"]
+   - Han count: 7
+   - imageNotes: Concrete phone-readable square image for: 媽媽帶我去學校。 Show the recurring protagonist mother accompanying the recurring protagonist girl to school, walking together toward a school entrance. Use protagonist mother and protagonist girl identities; mother must be visually distinct from teacher and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.
 
-### R008-S01
-L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A round plain box that is broken, such as a tilted lid or soft cracked edge; safe and not sharp. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.
+3. 花朵開了，很好看。
+   - spokenText: 花朵開了很好看
+   - focusChar: 朵
+   - displayLines: ["花朵開了，","很好看。"]
+   - Han count: 7
+   - imageNotes: Concrete phone-readable square image for: 花朵開了，很好看。 Show several flowers blooming and looking pretty. No people are required. Make the open blossoms clear at phone size. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.
 
-### R008-S02
-L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A child holding a baseball bat and looking like it is hard to use or hard to swing; a ball may be nearby. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.
+4. 小孩開心拿花給我。
+   - spokenText: 小孩開心拿花給我
+   - focusChar: 給
+   - displayLines: ["小孩開心","拿花給我。"]
+   - Han count: 8
+   - imageNotes: Concrete phone-readable square image for: 小孩開心拿花給我。 Show a generic preschool child happily holding out a flower to the recurring protagonist girl for `我`. Human role identities: generic preschool child distinct from recurring protagonist girl, recurring `你`, and recurring `他`; recurring protagonist girl receives or looks at the flower. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.
 
-### R008-S03
-Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 雨天過後，孩子到外面的草地上玩，天空和外面環境要清楚，草地上可有小水漥。不可有文字、數字、箭頭或標籤。
+5. 我把紙放在左邊。
+   - spokenText: 我把紙放在左邊
+   - focusChar: 左
+   - displayLines: ["我把紙放","在左邊。"]
+   - Han count: 7
+   - imageNotes: Concrete phone-readable square image for: 我把紙放在左邊。 Show the recurring protagonist girl for `我` placing a sheet of paper on her own left side. The left side must be clear from the protagonist girl's body perspective, preferably near her left hand. If she faces the viewer, remember her left side may appear on the viewer's right. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.
 
-### R008-S04
-L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A child swinging a bat and hitting a good ball while classmates cheer happily, showing the feeling of scoring many points without any scoreboard. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.
+## Stage 4
 
-### R008-S05
-Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 孩子準備去安全的空地打球，像是正在確認時間後出發。球和空地要清楚，不可有時鐘數字、文字或標籤。
+- R008-G01: find-character, sentence R008-S02, target 帶
+- R008-G02: teach-character, sentence R008-S01, target 校, targetCharIndex 2, prefix「我在」, suffix「門路邊畫畫」
+- R008-G03: missing-character, sentence R008-S04, target 給
+- R008-G04: partial-order, sentence R008-S05, missingIndexes [0,1,2], single-Han options 我/把/紙
+- R008-G05: choose-pronunciation, sentence R008-S03, wrong audio generated from exact full wrong texts
 
-## Sentence Games
+## Image Requirements
 
-- R008-G01: find-character, R008-S05, target 點
-- R008-G02: teach-character, R008-S02, target 難, targetCharIndex 3, teachAudio {"prefixSrc":"/assets/reviews/R008/audio/R008-G02-prefix.m4a","suffixSrc":"/assets/reviews/R008/audio/R008-G02-suffix.m4a"}
-- R008-G03: missing-character, R008-S01, target 壞, missingIndexes [4], options 壞:true / 掉:false / 圓:false
-- R008-G04: partial-order, R008-S03, target 過, missingIndexes [0,1,2,3,4,5,6,7,8,9], order 0:雨天過後 / 1:去外面 / 2:草地玩
-- R008-G05: choose-pronunciation, R008-S04, target 分, options correct:他打出好球，得很多分。:true:/assets/reviews/R008/audio/R008-S04.m4a / wrong-one:他打出壞球，得很多分。:false:/assets/reviews/R008/audio/R008-G05-wrong-one.m4a / wrong-two:他打出好球，得很少分。:false:/assets/reviews/R008/audio/R008-G05-wrong-two.m4a
+All final images must be WebP, square 1:1, <=1024px long edge, target <=250 KB and hard <=400 KB. Image prompts must follow L058 style traits and explicit cast roles.
 
-## Production JSON Draft
+## Audio Requirements
 
-```json
-{
-  "id": "R008",
-  "reviewNumber": 8,
-  "title": "複習八",
-  "afterLessonOrder": 150,
-  "targetLessonRange": {
-    "startOrder": 91,
-    "endOrder": 120
-  },
-  "requiredCoverageChars": [
-    "子",
-    "盒",
-    "掉",
-    "壞",
-    "眼",
-    "用",
-    "鏡",
-    "鼻",
-    "臉",
-    "紅",
-    "圓",
-    "太",
-    "難",
-    "得",
-    "過",
-    "分",
-    "幾",
-    "點",
-    "玩",
-    "打",
-    "球",
-    "棒",
-    "頭",
-    "帽",
-    "草",
-    "地",
-    "面",
-    "外",
-    "空",
-    "天"
-  ],
-  "requiredRounds": 5,
-  "sentences": [
-    {
-      "id": "R008-S01",
-      "text": "這個圓盒壞掉了。",
-      "displayLines": [
-        "這個圓盒",
-        "壞掉了。"
-      ],
-      "spokenText": "這個圓盒壞掉了",
-      "focusChar": "圓",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A round plain box that is broken, such as a tilted lid or soft cracked edge; safe and not sharp. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
-      "imageSrc": "/assets/reviews/R008/images/R008-S01.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R008/audio/R008-S01.m4a",
-        "durationMs": 3299,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 280
-          },
-          {
-            "charIndex": 1,
-            "startMs": 280,
-            "endMs": 560
-          },
-          {
-            "charIndex": 2,
-            "startMs": 560,
-            "endMs": 1100
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1100,
-            "endMs": 1380
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1380,
-            "endMs": 2340
-          },
-          {
-            "charIndex": 5,
-            "startMs": 2340,
-            "endMs": 2620
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2620,
-            "endMs": 2900
-          }
-        ]
-      }
-    },
-    {
-      "id": "R008-S02",
-      "text": "球棒太難用。",
-      "displayLines": [
-        "球棒",
-        "太難用。"
-      ],
-      "spokenText": "球棒太難用",
-      "focusChar": "難",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A child holding a baseball bat and looking like it is hard to use or hard to swing; a ball may be nearby. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
-      "imageSrc": "/assets/reviews/R008/images/R008-S02.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R008/audio/R008-S02.m4a",
-        "durationMs": 2540,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 480
-          },
-          {
-            "charIndex": 1,
-            "startMs": 480,
-            "endMs": 720
-          },
-          {
-            "charIndex": 2,
-            "startMs": 1260,
-            "endMs": 1540
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1540,
-            "endMs": 1860
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1860,
-            "endMs": 2080
-          }
-        ]
-      }
-    },
-    {
-      "id": "R008-S03",
-      "text": "雨天過後，去外面草地玩。",
-      "displayLines": [
-        "雨天過後，",
-        "去外面",
-        "草地玩。"
-      ],
-      "spokenText": "雨天過後去外面草地玩",
-      "focusChar": "過",
-      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 雨天過後，孩子到外面的草地上玩，天空和外面環境要清楚，草地上可有小水漥。不可有文字、數字、箭頭或標籤。",
-      "imageSrc": "/assets/reviews/R008/images/R008-S03.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R008/audio/R008-S03.m4a",
-        "durationMs": 4703,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 420
-          },
-          {
-            "charIndex": 1,
-            "startMs": 420,
-            "endMs": 780
-          },
-          {
-            "charIndex": 2,
-            "startMs": 780,
-            "endMs": 1040
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1040,
-            "endMs": 1320
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1320,
-            "endMs": 1700
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1700,
-            "endMs": 1920
-          },
-          {
-            "charIndex": 6,
-            "startMs": 1920,
-            "endMs": 2200
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2200,
-            "endMs": 2520
-          },
-          {
-            "charIndex": 8,
-            "startMs": 2520,
-            "endMs": 2780
-          },
-          {
-            "charIndex": 9,
-            "startMs": 2780,
-            "endMs": 3080
-          }
-        ]
-      }
-    },
-    {
-      "id": "R008-S04",
-      "text": "他打出好球，得很多分。",
-      "displayLines": [
-        "他打出好球，",
-        "得很多分。"
-      ],
-      "spokenText": "他打出好球得很多分",
-      "focusChar": "分",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A child swinging a bat and hitting a good ball while classmates cheer happily, showing the feeling of scoring many points without any scoreboard. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
-      "imageSrc": "/assets/reviews/R008/images/R008-S04.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R008/audio/R008-S04.m4a",
-        "durationMs": 4072,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 260
-          },
-          {
-            "charIndex": 1,
-            "startMs": 260,
-            "endMs": 500
-          },
-          {
-            "charIndex": 2,
-            "startMs": 500,
-            "endMs": 760
-          },
-          {
-            "charIndex": 3,
-            "startMs": 760,
-            "endMs": 1040
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1040,
-            "endMs": 1300
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1720,
-            "endMs": 1850
-          },
-          {
-            "charIndex": 6,
-            "startMs": 1850,
-            "endMs": 2070
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2070,
-            "endMs": 2260
-          },
-          {
-            "charIndex": 8,
-            "startMs": 2260,
-            "endMs": 2460
-          }
-        ]
-      }
-    },
-    {
-      "id": "R008-S05",
-      "text": "幾點了？去空地打球。",
-      "displayLines": [
-        "幾點了？",
-        "去空地打球。"
-      ],
-      "spokenText": "幾點了去空地打球",
-      "focusChar": "點",
-      "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 孩子準備去安全的空地打球，像是正在確認時間後出發。球和空地要清楚，不可有時鐘數字、文字或標籤。",
-      "imageSrc": "/assets/reviews/R008/images/R008-S05.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R008/audio/R008-S05.m4a",
-        "durationMs": 4881,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 440
-          },
-          {
-            "charIndex": 1,
-            "startMs": 440,
-            "endMs": 700
-          },
-          {
-            "charIndex": 2,
-            "startMs": 700,
-            "endMs": 1020
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1420,
-            "endMs": 1680
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1680,
-            "endMs": 2020
-          },
-          {
-            "charIndex": 5,
-            "startMs": 2020,
-            "endMs": 2240
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2240,
-            "endMs": 2600
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2600,
-            "endMs": 2840
-          }
-        ]
-      }
-    }
-  ],
-  "sentenceGames": [
-    {
-      "id": "R008-G01",
-      "type": "find-character",
-      "sentenceId": "R008-S05",
-      "targetChar": "點",
-      "prompt": "找一找句子裡的「點」。"
-    },
-    {
-      "id": "R008-G02",
-      "type": "teach-character",
-      "sentenceId": "R008-S02",
-      "targetChar": "難",
-      "prompt": "看一看「難」在句子裡的位置。",
-      "missingIndexes": [
-        3
-      ],
-      "targetCharIndex": 3,
-      "teachAudio": {
-        "prefixSrc": "/assets/reviews/R008/audio/R008-G02-prefix.m4a",
-        "suffixSrc": "/assets/reviews/R008/audio/R008-G02-suffix.m4a"
-      }
-    },
-    {
-      "id": "R008-G03",
-      "type": "missing-character",
-      "sentenceId": "R008-S01",
-      "targetChar": "壞",
-      "prompt": "選出句子裡少掉的字。",
-      "missingIndexes": [
-        4
-      ],
-      "options": [
-        {
-          "id": "broken",
-          "text": "壞",
-          "correct": true
-        },
-        {
-          "id": "fall",
-          "text": "掉",
-          "correct": false
-        },
-        {
-          "id": "round",
-          "text": "圓",
-          "correct": false
-        }
-      ]
-    },
-    {
-      "id": "R008-G04",
-      "type": "partial-order",
-      "sentenceId": "R008-S03",
-      "targetChar": "過",
-      "prompt": "幫小兔子排好句子。",
-      "missingIndexes": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "options": [
-        {
-          "id": "order-0",
-          "text": "雨天過後",
-          "correct": true,
-          "correctOrder": 0
-        },
-        {
-          "id": "order-1",
-          "text": "去外面",
-          "correct": true,
-          "correctOrder": 1
-        },
-        {
-          "id": "order-2",
-          "text": "草地玩",
-          "correct": true,
-          "correctOrder": 2
-        }
-      ]
-    },
-    {
-      "id": "R008-G05",
-      "type": "choose-pronunciation",
-      "sentenceId": "R008-S04",
-      "targetChar": "分",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
-      "options": [
-        {
-          "id": "correct",
-          "text": "他打出好球，得很多分。",
-          "correct": true,
-          "audioSrc": "/assets/reviews/R008/audio/R008-S04.m4a"
-        },
-        {
-          "id": "wrong-one",
-          "text": "他打出壞球，得很多分。",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R008/audio/R008-G05-wrong-one.m4a"
-        },
-        {
-          "id": "wrong-two",
-          "text": "他打出好球，得很少分。",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R008/audio/R008-G05-wrong-two.m4a"
-        }
-      ]
-    }
-  ]
-}
-```
+Generate whole-sentence OpenAI audio for all review sentences, dedicated G02 prefix/suffix audio, and whole-sentence G05 wrong-choice audio. Do not splice or cut audio.

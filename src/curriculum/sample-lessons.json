@@ -152080,60 +152080,111 @@
       "id": "R007",
       "reviewNumber": 7,
       "title": "複習七",
-      "afterLessonOrder": 150,
+      "afterLessonOrder": 90,
       "targetLessonRange": {
-        "startOrder": 91,
-        "endOrder": 120
+        "startOrder": 61,
+        "endOrder": 90
       },
       "requiredCoverageChars": [
-        "子",
-        "盒",
-        "掉",
-        "壞",
-        "眼",
-        "用",
-        "鏡",
-        "鼻",
-        "臉",
-        "紅",
-        "圓",
-        "太",
-        "難",
-        "得",
-        "過",
-        "分",
-        "幾",
-        "點",
-        "玩",
-        "打",
-        "球",
-        "棒",
-        "頭",
-        "帽",
-        "草",
-        "地",
-        "面",
-        "外",
-        "空",
-        "天"
+        "坐",
+        "站",
+        "開",
+        "左",
+        "著",
+        "拿",
+        "包",
+        "花",
+        "朵",
+        "了",
+        "畫",
+        "出",
+        "學",
+        "路",
+        "誰",
+        "校",
+        "問",
+        "找",
+        "同",
+        "帶",
+        "筆",
+        "借",
+        "那",
+        "本",
+        "給",
+        "紙",
+        "心",
+        "放",
+        "把",
+        "桌"
       ],
       "requiredRounds": 5,
       "sentences": [
         {
           "id": "R007-S01",
-          "text": "把盒子放在桌上。",
+          "text": "同學問我借筆。",
+          "spokenText": "同學問我借筆",
+          "focusChar": "借",
           "displayLines": [
-            "把盒子",
-            "放在桌上。"
+            "同學問我",
+            "借筆。"
           ],
-          "spokenText": "把盒子放在桌上",
-          "focusChar": "放",
-          "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A child placing a plain box onto a table; the table surface, box, and placing action are clear and central. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
+          "imageNotes": "Concrete phone-readable square image for: 同學問我借筆。 Show a generic preschool classmate politely asking the recurring protagonist girl for `我` to borrow a pencil, with the pencil clearly visible between them. Human role identities: recurring protagonist girl and a generic preschool classmate visually distinct from recurring `你` boy, recurring `他` boy, and the protagonist girl. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 同學問我借筆。 Show a generic preschool classmate politely asking the recurring protagonist girl for `我` to borrow a pencil, with the pencil clearly visible between them. Human role identities: recurring protagonist girl and a generic preschool classmate visually distinct from recurring `你` boy, recurring `他` boy, and the protagonist girl. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
           "imageSrc": "/assets/reviews/R007/images/R007-S01.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R007/audio/R007-S01.m4a",
-            "durationMs": 3301,
+            "durationMs": 3809,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1940,
+                "endMs": 2140
+              }
+            ]
+          }
+        },
+        {
+          "id": "R007-S02",
+          "text": "我坐在桌邊。",
+          "spokenText": "我坐在桌邊",
+          "focusChar": "坐",
+          "displayLines": [
+            "我坐在",
+            "桌邊。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 我坐在桌邊。 Show the recurring protagonist girl for `我` sitting beside a table, with her body position and the table edge clearly visible. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 我坐在桌邊。 Show the recurring protagonist girl for `我` sitting beside a table, with her body position and the table edge clearly visible. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
+          "imageSrc": "/assets/reviews/R007/images/R007-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R007/audio/R007-S02.m4a",
+            "durationMs": 3025,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -152143,228 +152194,173 @@
               {
                 "charIndex": 1,
                 "startMs": 340,
-                "endMs": 700
+                "endMs": 720
               },
               {
                 "charIndex": 2,
-                "startMs": 700,
-                "endMs": 1060
+                "startMs": 720,
+                "endMs": 1140
               },
               {
                 "charIndex": 3,
-                "startMs": 1060,
-                "endMs": 1780
-              },
-              {
-                "charIndex": 4,
-                "startMs": 1780,
-                "endMs": 2300
-              },
-              {
-                "charIndex": 5,
-                "startMs": 2300,
-                "endMs": 2460
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2460,
-                "endMs": 2620
-              }
-            ]
-          }
-        },
-        {
-          "id": "R007-S02",
-          "text": "帽子掉到地面上。",
-          "displayLines": [
-            "帽子掉到",
-            "地面上。"
-          ],
-          "spokenText": "帽子掉到地面上",
-          "focusChar": "掉",
-          "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A hat lying on the ground with a child nearby noticing it has fallen; make the hat clearly on the ground, not on a table or head. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
-          "imageSrc": "/assets/reviews/R007/images/R007-S02.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R007/audio/R007-S02.m4a",
-            "durationMs": 3093,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 440
-              },
-              {
-                "charIndex": 1,
-                "startMs": 440,
-                "endMs": 780
-              },
-              {
-                "charIndex": 2,
-                "startMs": 780,
-                "endMs": 1200
-              },
-              {
-                "charIndex": 3,
-                "startMs": 1200,
-                "endMs": 1540
-              },
-              {
-                "charIndex": 4,
-                "startMs": 1540,
-                "endMs": 1840
-              },
-              {
-                "charIndex": 5,
-                "startMs": 1840,
-                "endMs": 2140
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2140,
-                "endMs": 2400
-              }
-            ]
-          }
-        },
-        {
-          "id": "R007-S03",
-          "text": "眼鏡放在盒子裡。",
-          "displayLines": [
-            "眼鏡放在",
-            "盒子裡。"
-          ],
-          "spokenText": "眼鏡放在盒子裡",
-          "focusChar": "鏡",
-          "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A pair of eyeglasses placed inside an open plain box; both glasses and box are large and easy to see. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
-          "imageSrc": "/assets/reviews/R007/images/R007-S03.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R007/audio/R007-S03.m4a",
-            "durationMs": 3934,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 540
-              },
-              {
-                "charIndex": 1,
-                "startMs": 540,
-                "endMs": 920
-              },
-              {
-                "charIndex": 2,
-                "startMs": 920,
-                "endMs": 1880
-              },
-              {
-                "charIndex": 3,
-                "startMs": 1880,
-                "endMs": 2380
-              },
-              {
-                "charIndex": 4,
-                "startMs": 2380,
-                "endMs": 2660
-              },
-              {
-                "charIndex": 5,
-                "startMs": 2660,
-                "endMs": 2840
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2840,
-                "endMs": 3080
-              }
-            ]
-          }
-        },
-        {
-          "id": "R007-S04",
-          "text": "小狗的鼻子和臉紅紅的。",
-          "displayLines": [
-            "小狗的鼻子",
-            "和臉紅紅的。"
-          ],
-          "spokenText": "小狗的鼻子和臉紅紅的",
-          "focusChar": "鼻",
-          "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A cute puppy with a visibly red nose and rosy red cheeks, happy and not in pain; gentle, non-medical, non-scary scene. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
-          "imageSrc": "/assets/reviews/R007/images/R007-S04.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R007/audio/R007-S04.m4a",
-            "durationMs": 4193,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 540
-              },
-              {
-                "charIndex": 1,
-                "startMs": 540,
-                "endMs": 760
-              },
-              {
-                "charIndex": 2,
-                "startMs": 760,
-                "endMs": 1120
-              },
-              {
-                "charIndex": 3,
-                "startMs": 1120,
+                "startMs": 1140,
                 "endMs": 1320
               },
               {
                 "charIndex": 4,
                 "startMs": 1320,
                 "endMs": 1560
+              }
+            ]
+          }
+        },
+        {
+          "id": "R007-S03",
+          "text": "我找到一本書，是誰的？",
+          "spokenText": "我找到一本書是誰的",
+          "focusChar": "找",
+          "displayLines": [
+            "我找到",
+            "一本書，",
+            "是誰的？"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 我找到一本書，是誰的？ Show the recurring protagonist girl for `我` holding or pointing to a found book and looking around as if wondering whose book it is. Include one or two generic preschool classmates nearby, but do not put readable names or labels on the book. Human role identities: recurring protagonist girl plus generic preschool classmates distinct from recurring `你` and `他` unless specifically used. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 我找到一本書，是誰的？ Show the recurring protagonist girl for `我` holding or pointing to a found book and looking around as if wondering whose book it is. Include one or two generic preschool classmates nearby, but do not put readable names or labels on the book. Human role identities: recurring protagonist girl plus generic preschool classmates distinct from recurring `你` and `他` unless specifically used. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
+          "imageSrc": "/assets/reviews/R007/images/R007-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R007/audio/R007-S03.m4a",
+            "durationMs": 5115,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1200,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1840,
+                "endMs": 2120
               },
               {
                 "charIndex": 5,
-                "startMs": 1560,
-                "endMs": 2040
+                "startMs": 2120,
+                "endMs": 2400
               },
               {
                 "charIndex": 6,
-                "startMs": 2040,
-                "endMs": 2360
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2360,
-                "endMs": 3240
-              },
-              {
-                "charIndex": 8,
-                "startMs": 3240,
+                "startMs": 2400,
                 "endMs": 3520
               },
               {
-                "charIndex": 9,
+                "charIndex": 7,
                 "startMs": 3520,
-                "endMs": 3760
+                "endMs": 3800
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3800,
+                "endMs": 4100
+              }
+            ]
+          }
+        },
+        {
+          "id": "R007-S04",
+          "text": "那個人畫出一朵大花。",
+          "spokenText": "那個人畫出一朵大花",
+          "focusChar": "那",
+          "displayLines": [
+            "那個人畫出",
+            "一朵大花。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 那個人畫出一朵大花。 The speaker/viewpoint is the recurring protagonist girl, standing some distance away and looking toward another person who is drawing. The other person must be clearly at a noticeable distance from the girl, not close beside her, so the meaning is `那個人` rather than `這個人`. Show the distant person drawing a picture with one very large flower visible on the paper or easel. Human role identities: recurring protagonist girl as distant observer; distant generic older child or generic adult artist visually distinct from protagonist family, teacher, and L058 adult. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 那個人畫出一朵大花。 The speaker/viewpoint is the recurring protagonist girl, standing some distance away and looking toward another person who is drawing. The other person must be clearly at a noticeable distance from the girl, not close beside her, so the meaning is `那個人` rather than `這個人`. Show the distant person drawing a picture with one very large flower visible on the paper or easel. Human role identities: recurring protagonist girl as distant observer; distant generic older child or generic adult artist visually distinct from protagonist family, teacher, and L058 adult. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
+          "imageSrc": "/assets/reviews/R007/images/R007-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R007/audio/R007-S04.m4a",
+            "durationMs": 3788,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 440
+              },
+              {
+                "charIndex": 2,
+                "startMs": 440,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1480,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2400,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2980,
+                "endMs": 3180
               }
             ]
           }
         },
         {
           "id": "R007-S05",
-          "text": "小孩頭上戴著紅帽子。",
+          "text": "女孩站著開書包。",
+          "spokenText": "女孩站著開書包",
+          "focusChar": "站",
           "displayLines": [
-            "小孩頭上",
-            "戴著紅帽子。"
+            "女孩站著",
+            "開書包。"
           ],
-          "spokenText": "小孩頭上戴著紅帽子",
-          "focusChar": "頭",
-          "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A child wearing a plain red hat clearly on the head; no logo or markings on the hat. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
+          "imageNotes": "Concrete phone-readable square image for: 女孩站著開書包。 Show a generic preschool girl standing while opening her school bag, with the bag visibly open or being opened. The text cannot use `打開` because `打` is not in the L090 ceiling, but the picture should show the ordinary action of opening the bag. Human role identity: generic preschool girl, visually distinct from recurring protagonist girl and other recurring children. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 女孩站著開書包。 Show a generic preschool girl standing while opening her school bag, with the bag visibly open or being opened. The text cannot use `打開` because `打` is not in the L090 ceiling, but the picture should show the ordinary action of opening the bag. Human role identity: generic preschool girl, visually distinct from recurring protagonist girl and other recurring children. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
           "imageSrc": "/assets/reviews/R007/images/R007-S05.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R007/audio/R007-S05.m4a",
-            "durationMs": 4199,
+            "durationMs": 4625,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -152374,42 +152370,32 @@
               {
                 "charIndex": 1,
                 "startMs": 380,
-                "endMs": 680
+                "endMs": 780
               },
               {
                 "charIndex": 2,
-                "startMs": 680,
-                "endMs": 960
+                "startMs": 780,
+                "endMs": 1580
               },
               {
                 "charIndex": 3,
-                "startMs": 960,
-                "endMs": 1400
+                "startMs": 1580,
+                "endMs": 1940
               },
               {
                 "charIndex": 4,
-                "startMs": 1400,
-                "endMs": 1700
+                "startMs": 1940,
+                "endMs": 2560
               },
               {
                 "charIndex": 5,
-                "startMs": 1700,
-                "endMs": 1860
+                "startMs": 2560,
+                "endMs": 2880
               },
               {
                 "charIndex": 6,
-                "startMs": 1860,
-                "endMs": 2200
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2200,
-                "endMs": 2440
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2440,
-                "endMs": 2600
+                "startMs": 2880,
+                "endMs": 3140
               }
             ]
           }
@@ -152419,48 +152405,55 @@
         {
           "id": "R007-G01",
           "type": "find-character",
-          "sentenceId": "R007-S01",
-          "targetChar": "放",
-          "prompt": "找一找句子裡的「放」。"
+          "sentenceId": "R007-S05",
+          "targetChar": "站",
+          "prompt": "找出句子裡的字。",
+          "missingIndexes": [
+            2
+          ]
         },
         {
           "id": "R007-G02",
           "type": "teach-character",
-          "sentenceId": "R007-S05",
-          "targetChar": "頭",
-          "prompt": "看一看「頭」在句子裡的位置。",
+          "sentenceId": "R007-S02",
+          "targetChar": "坐",
+          "targetCharIndex": 1,
+          "prompt": "教小兔子念這個字。",
           "missingIndexes": [
-            2
+            1
           ],
-          "targetCharIndex": 2,
           "teachAudio": {
             "prefixSrc": "/assets/reviews/R007/audio/R007-G02-prefix.m4a",
             "suffixSrc": "/assets/reviews/R007/audio/R007-G02-suffix.m4a"
+          },
+          "teachAudioText": {
+            "prefixText": "我",
+            "suffixText": "在桌邊"
           }
         },
         {
           "id": "R007-G03",
           "type": "missing-character",
           "sentenceId": "R007-S03",
-          "targetChar": "鏡",
-          "prompt": "選出句子裡少掉的字。",
+          "targetChar": "找",
+          "prompt": "選出少掉的字。",
           "missingIndexes": [
             1
           ],
           "options": [
             {
-              "id": "mirror",
-              "text": "鏡",
+              "id": "R007-G03-A",
+              "text": "找",
               "correct": true
             },
             {
-              "id": "eye",
-              "text": "眼",
+              "id": "R007-G03-B",
+              "text": "到",
               "correct": false
             },
             {
-              "id": "box",
-              "text": "子",
+              "id": "R007-G03-C",
+              "text": "書",
               "correct": false
             }
           ]
@@ -152469,69 +152462,62 @@
           "id": "R007-G04",
           "type": "partial-order",
           "sentenceId": "R007-S04",
-          "targetChar": "鼻",
-          "prompt": "幫小兔子排好句子。",
+          "targetChar": "那",
+          "prompt": "把少掉的字排回句子裡。",
           "missingIndexes": [
+            0,
             1,
-            2,
-            3,
-            4
+            2
           ],
           "options": [
             {
               "id": "R007-G04-A",
-              "text": "狗",
+              "text": "那",
               "correctOrder": 0,
               "correct": true
             },
             {
               "id": "R007-G04-B",
-              "text": "的",
+              "text": "個",
               "correctOrder": 1,
               "correct": true
             },
             {
               "id": "R007-G04-C",
-              "text": "鼻",
+              "text": "人",
               "correctOrder": 2,
-              "correct": true
-            },
-            {
-              "id": "R007-G04-D",
-              "text": "子",
-              "correctOrder": 3,
               "correct": true
             }
           ],
           "correctOrder": [
             "R007-G04-A",
             "R007-G04-B",
-            "R007-G04-C",
-            "R007-G04-D"
+            "R007-G04-C"
           ]
         },
         {
           "id": "R007-G05",
           "type": "choose-pronunciation",
-          "sentenceId": "R007-S02",
-          "targetChar": "掉",
-          "prompt": "聽一聽，哪一句和畫面一樣？",
+          "sentenceId": "R007-S01",
+          "targetChar": "借",
+          "prompt": "選出你聽到的句子。",
           "options": [
             {
-              "id": "correct",
-              "text": "帽子掉到地面上。",
+              "id": "R007-G05-A",
+              "text": "同學問我借筆。",
               "correct": true,
-              "audioSrc": "/assets/reviews/R007/audio/R007-S02.m4a"
+              "sentenceId": "R007-S01",
+              "audioSrc": "/assets/reviews/R007/audio/R007-S01.m4a"
             },
             {
-              "id": "wrong-one",
-              "text": "盒子掉到地面上。",
+              "id": "R007-G05-B",
+              "text": "同學問我借書。",
               "correct": false,
               "audioSrc": "/assets/reviews/R007/audio/R007-G05-wrong-one.m4a"
             },
             {
-              "id": "wrong-two",
-              "text": "帽子放到地面上。",
+              "id": "R007-G05-C",
+              "text": "同學問你借筆。",
               "correct": false,
               "audioSrc": "/assets/reviews/R007/audio/R007-G05-wrong-two.m4a"
             }
@@ -152543,159 +152529,176 @@
       "id": "R008",
       "reviewNumber": 8,
       "title": "複習八",
-      "afterLessonOrder": 150,
+      "afterLessonOrder": 90,
       "targetLessonRange": {
-        "startOrder": 91,
-        "endOrder": 120
+        "startOrder": 61,
+        "endOrder": 90
       },
       "requiredCoverageChars": [
-        "子",
-        "盒",
-        "掉",
-        "壞",
-        "眼",
-        "用",
-        "鏡",
-        "鼻",
-        "臉",
-        "紅",
-        "圓",
-        "太",
-        "難",
-        "得",
-        "過",
-        "分",
-        "幾",
-        "點",
-        "玩",
-        "打",
-        "球",
-        "棒",
-        "頭",
-        "帽",
-        "草",
-        "地",
-        "面",
-        "外",
-        "空",
-        "天"
+        "坐",
+        "站",
+        "開",
+        "左",
+        "著",
+        "拿",
+        "包",
+        "花",
+        "朵",
+        "了",
+        "畫",
+        "出",
+        "學",
+        "路",
+        "誰",
+        "校",
+        "問",
+        "找",
+        "同",
+        "帶",
+        "筆",
+        "借",
+        "那",
+        "本",
+        "給",
+        "紙",
+        "心",
+        "放",
+        "把",
+        "桌"
       ],
       "requiredRounds": 5,
       "sentences": [
         {
           "id": "R008-S01",
-          "text": "這個圓盒壞掉了。",
+          "text": "我在校門路邊畫畫。",
+          "spokenText": "我在校門路邊畫畫",
+          "focusChar": "校",
           "displayLines": [
-            "這個圓盒",
-            "壞掉了。"
+            "我在校門",
+            "路邊畫畫。"
           ],
-          "spokenText": "這個圓盒壞掉了",
-          "focusChar": "圓",
-          "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A round plain box that is broken, such as a tilted lid or soft cracked edge; safe and not sharp. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
+          "imageNotes": "Concrete phone-readable square image for: 我在校門路邊畫畫。 Show the recurring protagonist girl for `我` sitting or kneeling safely by the roadside near a school gate, drawing on paper. Make the school gate and roadside setting visually clear without any readable school name, signs, letters, numbers, zhuyin, logos, or speech bubbles. Use the recurring protagonist girl identity.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 我在校門路邊畫畫。 Show the recurring protagonist girl for `我` sitting or kneeling safely by the roadside near a school gate, drawing on paper. Make the school gate and roadside setting visually clear without any readable school name, signs, letters, numbers, zhuyin, logos, or speech bubbles. Use the recurring protagonist girl identity. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
           "imageSrc": "/assets/reviews/R008/images/R008-S01.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R008/audio/R008-S01.m4a",
-            "durationMs": 3299,
+            "durationMs": 4038,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 280
+                "endMs": 230
               },
               {
                 "charIndex": 1,
-                "startMs": 280,
-                "endMs": 560
+                "startMs": 230,
+                "endMs": 460
               },
               {
                 "charIndex": 2,
-                "startMs": 560,
-                "endMs": 1100
+                "startMs": 460,
+                "endMs": 960
               },
               {
                 "charIndex": 3,
-                "startMs": 1100,
-                "endMs": 1380
+                "startMs": 960,
+                "endMs": 1180
               },
               {
                 "charIndex": 4,
-                "startMs": 1380,
-                "endMs": 2340
+                "startMs": 1180,
+                "endMs": 1460
               },
               {
                 "charIndex": 5,
-                "startMs": 2340,
-                "endMs": 2620
+                "startMs": 1460,
+                "endMs": 1780
               },
               {
                 "charIndex": 6,
-                "startMs": 2620,
-                "endMs": 2900
+                "startMs": 1780,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2100,
+                "endMs": 2340
               }
             ]
           }
         },
         {
           "id": "R008-S02",
-          "text": "球棒太難用。",
+          "text": "媽媽帶我去學校。",
+          "spokenText": "媽媽帶我去學校",
+          "focusChar": "帶",
           "displayLines": [
-            "球棒",
-            "太難用。"
+            "媽媽帶我",
+            "去學校。"
           ],
-          "spokenText": "球棒太難用",
-          "focusChar": "難",
-          "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A child holding a baseball bat and looking like it is hard to use or hard to swing; a ball may be nearby. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
+          "imageNotes": "Concrete phone-readable square image for: 媽媽帶我去學校。 Show the recurring protagonist mother accompanying the recurring protagonist girl to school, walking together toward a school entrance. Use protagonist mother and protagonist girl identities; mother must be visually distinct from teacher and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 媽媽帶我去學校。 Show the recurring protagonist mother accompanying the recurring protagonist girl to school, walking together toward a school entrance. Use protagonist mother and protagonist girl identities; mother must be visually distinct from teacher and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
           "imageSrc": "/assets/reviews/R008/images/R008-S02.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R008/audio/R008-S02.m4a",
-            "durationMs": 2540,
+            "durationMs": 2983,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 480
+                "endMs": 400
               },
               {
                 "charIndex": 1,
-                "startMs": 480,
-                "endMs": 720
+                "startMs": 400,
+                "endMs": 620
               },
               {
                 "charIndex": 2,
-                "startMs": 1260,
-                "endMs": 1540
+                "startMs": 620,
+                "endMs": 1000
               },
               {
                 "charIndex": 3,
-                "startMs": 1540,
-                "endMs": 1860
+                "startMs": 1000,
+                "endMs": 1300
               },
               {
                 "charIndex": 4,
-                "startMs": 1860,
-                "endMs": 2080
+                "startMs": 1300,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1840,
+                "endMs": 2060
               }
             ]
           }
         },
         {
           "id": "R008-S03",
-          "text": "雨天過後，去外面草地玩。",
+          "text": "花朵開了，很好看。",
+          "spokenText": "花朵開了很好看",
+          "focusChar": "朵",
           "displayLines": [
-            "雨天過後，",
-            "去外面",
-            "草地玩。"
+            "花朵開了，",
+            "很好看。"
           ],
-          "spokenText": "雨天過後去外面草地玩",
-          "focusChar": "過",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 雨天過後，孩子到外面的草地上玩，天空和外面環境要清楚，草地上可有小水漥。不可有文字、數字、箭頭或標籤。",
+          "imageNotes": "Concrete phone-readable square image for: 花朵開了，很好看。 Show several flowers blooming and looking pretty. No people are required. Make the open blossoms clear at phone size. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 花朵開了，很好看。 Show several flowers blooming and looking pretty. No people are required. Make the open blossoms clear at phone size. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
           "imageSrc": "/assets/reviews/R008/images/R008-S03.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R008/audio/R008-S03.m4a",
-            "durationMs": 4703,
+            "durationMs": 3523,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -152705,170 +152708,147 @@
               {
                 "charIndex": 1,
                 "startMs": 420,
-                "endMs": 780
+                "endMs": 840
               },
               {
                 "charIndex": 2,
-                "startMs": 780,
-                "endMs": 1040
+                "startMs": 840,
+                "endMs": 1360
               },
               {
                 "charIndex": 3,
-                "startMs": 1040,
-                "endMs": 1320
+                "startMs": 1360,
+                "endMs": 1660
               },
               {
                 "charIndex": 4,
-                "startMs": 1320,
-                "endMs": 1700
+                "startMs": 2060,
+                "endMs": 2320
               },
               {
                 "charIndex": 5,
-                "startMs": 1700,
-                "endMs": 1920
+                "startMs": 2320,
+                "endMs": 2580
               },
               {
                 "charIndex": 6,
-                "startMs": 1920,
-                "endMs": 2200
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2200,
-                "endMs": 2520
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2520,
-                "endMs": 2780
-              },
-              {
-                "charIndex": 9,
-                "startMs": 2780,
-                "endMs": 3080
+                "startMs": 2580,
+                "endMs": 2960
               }
             ]
           }
         },
         {
           "id": "R008-S04",
-          "text": "他打出好球，得很多分。",
+          "text": "小孩開心拿花給我。",
+          "spokenText": "小孩開心拿花給我",
+          "focusChar": "給",
           "displayLines": [
-            "他打出好球，",
-            "得很多分。"
+            "小孩開心",
+            "拿花給我。"
           ],
-          "spokenText": "他打出好球得很多分",
-          "focusChar": "分",
-          "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app, matching public/assets/lessons/L058/images/L058-S01.webp, L058-S02.webp, and L058-S03.webp: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. A child swinging a bat and hitting a good ball while classmates cheer happily, showing the feeling of scoring many points without any scoreboard. square image / 1:1 composition, centered meaning-bearing subjects and objects with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, brand marks, or readable markings.",
+          "imageNotes": "Concrete phone-readable square image for: 小孩開心拿花給我。 Show a generic preschool child happily holding out a flower to the recurring protagonist girl for `我`. Human role identities: generic preschool child distinct from recurring protagonist girl, recurring `你`, and recurring `他`; recurring protagonist girl receives or looks at the flower. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 小孩開心拿花給我。 Show a generic preschool child happily holding out a flower to the recurring protagonist girl for `我`. Human role identities: generic preschool child distinct from recurring protagonist girl, recurring `你`, and recurring `他`; recurring protagonist girl receives or looks at the flower. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
           "imageSrc": "/assets/reviews/R008/images/R008-S04.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R008/audio/R008-S04.m4a",
-            "durationMs": 4072,
+            "durationMs": 3195,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 260
+                "endMs": 340
               },
               {
                 "charIndex": 1,
-                "startMs": 260,
-                "endMs": 500
+                "startMs": 340,
+                "endMs": 660
               },
               {
                 "charIndex": 2,
-                "startMs": 500,
-                "endMs": 760
+                "startMs": 660,
+                "endMs": 1060
               },
               {
                 "charIndex": 3,
-                "startMs": 760,
-                "endMs": 1040
+                "startMs": 1060,
+                "endMs": 1360
               },
               {
                 "charIndex": 4,
-                "startMs": 1040,
-                "endMs": 1300
+                "startMs": 1360,
+                "endMs": 1740
               },
               {
                 "charIndex": 5,
-                "startMs": 1720,
-                "endMs": 1850
+                "startMs": 1740,
+                "endMs": 1960
               },
               {
                 "charIndex": 6,
-                "startMs": 1850,
-                "endMs": 2070
+                "startMs": 1960,
+                "endMs": 2190
               },
               {
                 "charIndex": 7,
-                "startMs": 2070,
-                "endMs": 2260
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2260,
-                "endMs": 2460
+                "startMs": 2190,
+                "endMs": 2420
               }
             ]
           }
         },
         {
           "id": "R008-S05",
-          "text": "幾點了？去空地打球。",
+          "text": "我把紙放在左邊。",
+          "spokenText": "我把紙放在左邊",
+          "focusChar": "左",
           "displayLines": [
-            "幾點了？",
-            "去空地打球。"
+            "我把紙放",
+            "在左邊。"
           ],
-          "spokenText": "幾點了去空地打球",
-          "focusChar": "點",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 孩子準備去安全的空地打球，像是正在確認時間後出發。球和空地要清楚，不可有時鐘數字、文字或標籤。",
+          "imageNotes": "Concrete phone-readable square image for: 我把紙放在左邊。 Show the recurring protagonist girl for `我` placing a sheet of paper on her own left side. The left side must be clear from the protagonist girl's body perspective, preferably near her left hand. If she faces the viewer, remember her left side may appear on the viewer's right. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Concrete phone-readable square image for: 我把紙放在左邊。 Show the recurring protagonist girl for `我` placing a sheet of paper on her own left side. The left side must be clear from the protagonist girl's body perspective, preferably near her left hand. If she faces the viewer, remember her left side may appear on the viewer's right. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles. Center the subject, action, and key objects with safe margins for a square mobile lesson card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere.",
           "imageSrc": "/assets/reviews/R008/images/R008-S05.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R008/audio/R008-S05.m4a",
-            "durationMs": 4881,
+            "durationMs": 3168,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 440
+                "endMs": 360
               },
               {
                 "charIndex": 1,
-                "startMs": 440,
-                "endMs": 700
+                "startMs": 360,
+                "endMs": 780
               },
               {
                 "charIndex": 2,
-                "startMs": 700,
-                "endMs": 1020
+                "startMs": 780,
+                "endMs": 1220
               },
               {
                 "charIndex": 3,
-                "startMs": 1420,
-                "endMs": 1680
+                "startMs": 1220,
+                "endMs": 1720
               },
               {
                 "charIndex": 4,
-                "startMs": 1680,
-                "endMs": 2020
+                "startMs": 1720,
+                "endMs": 2140
               },
               {
                 "charIndex": 5,
-                "startMs": 2020,
-                "endMs": 2240
+                "startMs": 2140,
+                "endMs": 2360
               },
               {
                 "charIndex": 6,
-                "startMs": 2240,
-                "endMs": 2600
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2600,
-                "endMs": 2840
+                "startMs": 2360,
+                "endMs": 2560
               }
             ]
           }
@@ -152878,48 +152858,55 @@
         {
           "id": "R008-G01",
           "type": "find-character",
-          "sentenceId": "R008-S05",
-          "targetChar": "點",
-          "prompt": "找一找句子裡的「點」。"
+          "sentenceId": "R008-S02",
+          "targetChar": "帶",
+          "prompt": "找出句子裡的字。",
+          "missingIndexes": [
+            2
+          ]
         },
         {
           "id": "R008-G02",
           "type": "teach-character",
-          "sentenceId": "R008-S02",
-          "targetChar": "難",
-          "prompt": "看一看「難」在句子裡的位置。",
+          "sentenceId": "R008-S01",
+          "targetChar": "校",
+          "targetCharIndex": 2,
+          "prompt": "教小兔子念這個字。",
           "missingIndexes": [
-            3
+            2
           ],
-          "targetCharIndex": 3,
           "teachAudio": {
             "prefixSrc": "/assets/reviews/R008/audio/R008-G02-prefix.m4a",
             "suffixSrc": "/assets/reviews/R008/audio/R008-G02-suffix.m4a"
+          },
+          "teachAudioText": {
+            "prefixText": "我在",
+            "suffixText": "門路邊畫畫"
           }
         },
         {
           "id": "R008-G03",
           "type": "missing-character",
-          "sentenceId": "R008-S01",
-          "targetChar": "壞",
-          "prompt": "選出句子裡少掉的字。",
+          "sentenceId": "R008-S04",
+          "targetChar": "給",
+          "prompt": "選出少掉的字。",
           "missingIndexes": [
-            4
+            6
           ],
           "options": [
             {
-              "id": "broken",
-              "text": "壞",
+              "id": "R008-G03-A",
+              "text": "給",
               "correct": true
             },
             {
-              "id": "fall",
-              "text": "掉",
+              "id": "R008-G03-B",
+              "text": "拿",
               "correct": false
             },
             {
-              "id": "round",
-              "text": "圓",
+              "id": "R008-G03-C",
+              "text": "花",
               "correct": false
             }
           ]
@@ -152927,70 +152914,63 @@
         {
           "id": "R008-G04",
           "type": "partial-order",
-          "sentenceId": "R008-S03",
-          "targetChar": "過",
-          "prompt": "幫小兔子排好句子。",
+          "sentenceId": "R008-S05",
+          "targetChar": "左",
+          "prompt": "把少掉的字排回句子裡。",
           "missingIndexes": [
             0,
             1,
-            2,
-            3
+            2
           ],
           "options": [
             {
               "id": "R008-G04-A",
-              "text": "雨",
+              "text": "我",
               "correctOrder": 0,
               "correct": true
             },
             {
               "id": "R008-G04-B",
-              "text": "天",
+              "text": "把",
               "correctOrder": 1,
               "correct": true
             },
             {
               "id": "R008-G04-C",
-              "text": "過",
+              "text": "紙",
               "correctOrder": 2,
-              "correct": true
-            },
-            {
-              "id": "R008-G04-D",
-              "text": "後",
-              "correctOrder": 3,
               "correct": true
             }
           ],
           "correctOrder": [
             "R008-G04-A",
             "R008-G04-B",
-            "R008-G04-C",
-            "R008-G04-D"
+            "R008-G04-C"
           ]
         },
         {
           "id": "R008-G05",
           "type": "choose-pronunciation",
-          "sentenceId": "R008-S04",
-          "targetChar": "分",
-          "prompt": "聽一聽，哪一句和畫面一樣？",
+          "sentenceId": "R008-S03",
+          "targetChar": "朵",
+          "prompt": "選出你聽到的句子。",
           "options": [
             {
-              "id": "correct",
-              "text": "他打出好球，得很多分。",
+              "id": "R008-G05-A",
+              "text": "花朵開了，很好看。",
               "correct": true,
-              "audioSrc": "/assets/reviews/R008/audio/R008-S04.m4a"
+              "sentenceId": "R008-S03",
+              "audioSrc": "/assets/reviews/R008/audio/R008-S03.m4a"
             },
             {
-              "id": "wrong-one",
-              "text": "他打出壞球，得很多分。",
+              "id": "R008-G05-B",
+              "text": "花朵開了，很好吃。",
               "correct": false,
               "audioSrc": "/assets/reviews/R008/audio/R008-G05-wrong-one.m4a"
             },
             {
-              "id": "wrong-two",
-              "text": "他打出好球，得很少分。",
+              "id": "R008-G05-C",
+              "text": "花朵開了，很高看。",
               "correct": false,
               "audioSrc": "/assets/reviews/R008/audio/R008-G05-wrong-two.m4a"
             }

@@ -3,50 +3,46 @@
   "kind": "review",
   "reviewNumber": 7,
   "title": "複習七",
-  "afterLessonOrder": 150,
+  "afterLessonOrder": 90,
   "targetLessonRange": {
-    "startOrder": 91,
-    "endOrder": 120
+    "startOrder": 61,
+    "endOrder": 90
   },
   "requiredCoverageChars": [
-    "子",
-    "盒",
-    "掉",
-    "壞",
-    "眼",
-    "用",
-    "鏡",
-    "鼻",
-    "臉",
-    "紅",
-    "圓",
-    "太",
-    "難",
-    "得",
-    "過",
-    "分",
-    "幾",
-    "點",
-    "玩",
-    "打",
-    "球",
-    "棒",
-    "頭",
-    "帽",
-    "草",
-    "地",
-    "面",
-    "外",
-    "空",
-    "天"
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌"
   ],
   "targetSentenceCount": 5,
+  "requiredRounds": 5,
   "generationConstraints": {
-    "sentenceHanCharLength": {
-      "min": 4,
-      "max": 12
-    },
-    "provisionalLearnedChars": [],
     "allowedChars": [
       "一",
       "二",
@@ -140,197 +136,156 @@
       "心",
       "放",
       "把",
-      "桌",
-      "子",
-      "盒",
-      "掉",
-      "壞",
-      "眼",
-      "用",
-      "鏡",
-      "鼻",
-      "臉",
-      "紅",
-      "圓",
-      "太",
-      "難",
-      "得",
-      "過",
-      "分",
-      "幾",
-      "點",
-      "玩",
-      "打",
-      "球",
-      "棒",
-      "頭",
-      "帽",
-      "草",
-      "地",
-      "面",
-      "外",
-      "空",
-      "天",
-      "雨",
-      "雲",
-      "黑",
-      "白",
-      "棋",
-      "鞋",
-      "穿",
-      "戴",
-      "衣",
-      "脫",
-      "氣",
-      "套",
-      "熱",
-      "冷",
-      "喝",
-      "飯",
-      "菜",
-      "老",
-      "卻",
-      "麼",
-      "什",
-      "為",
-      "以",
-      "怎",
-      "所",
-      "房",
-      "間"
+      "桌"
     ],
-    "requiredCoverageChars": [
-      "子",
-      "盒",
-      "掉",
-      "壞",
-      "眼",
-      "用",
-      "鏡",
-      "鼻",
-      "臉",
-      "紅",
-      "圓",
-      "太",
-      "難",
-      "得",
-      "過",
-      "分",
-      "幾",
-      "點",
-      "玩",
-      "打",
-      "球",
-      "棒",
-      "頭",
-      "帽",
-      "草",
-      "地",
-      "面",
-      "外",
-      "空",
-      "天"
+    "allowedDisplayCharsBoundary": "L090 milestone ceiling; characters learned through L090 only.",
+    "maxHanCharactersPerSentence": 12,
+    "reviewPairId": "R007/R008",
+    "pairCoverageTarget": [
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌"
     ]
   },
-  "teacherNotes": "R007/R008 review pair after L150. Covers L091-L120 across the pair; may use only L001-L150 learned characters. Review modules introduce no newChars, zhuyin, or charAudio. R007/R008 are blocked from release until R005/R006 exist in top-level reviewLessons. Use L058 image style anchors; audio flow is AI audio -> assets:audio -> assets:align:ai.",
+  "teacherNotes": "Review Migration approved R007/R008 pair. R007 covers L061-L090 as part of the pair; allowed-character ceiling is L090.",
   "approvedSentences": [
     {
-      "text": "把盒子放在桌上。",
-      "spokenText": "把盒子放在桌上",
-      "focusChar": "放",
+      "id": "R007-S01",
+      "text": "同學問我借筆。",
+      "spokenText": "同學問我借筆",
+      "focusChar": "借",
       "displayLines": [
-        "把盒子",
-        "放在桌上。"
+        "同學問我",
+        "借筆。"
       ],
-      "imageNotes": "桌上有一個盒子，孩子把盒子放到桌上。畫面重點是「放」的動作與桌、盒子的關係。不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 同學問我借筆。 Show a generic preschool classmate politely asking the recurring protagonist girl for `我` to borrow a pencil, with the pencil clearly visible between them. Human role identities: recurring protagonist girl and a generic preschool classmate visually distinct from recurring `你` boy, recurring `他` boy, and the protagonist girl. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "帽子掉到地面上。",
-      "spokenText": "帽子掉到地面上",
-      "focusChar": "掉",
+      "id": "R007-S02",
+      "text": "我坐在桌邊。",
+      "spokenText": "我坐在桌邊",
+      "focusChar": "坐",
       "displayLines": [
-        "帽子掉到",
-        "地面上。"
+        "我坐在",
+        "桌邊。"
       ],
-      "imageNotes": "一頂帽子掉在地面上，旁邊可有孩子剛發現帽子掉了。畫面要清楚是帽子在地面，不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 我坐在桌邊。 Show the recurring protagonist girl for `我` sitting beside a table, with her body position and the table edge clearly visible. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "眼鏡放在盒子裡。",
-      "spokenText": "眼鏡放在盒子裡",
-      "focusChar": "鏡",
+      "id": "R007-S03",
+      "text": "我找到一本書，是誰的？",
+      "spokenText": "我找到一本書是誰的",
+      "focusChar": "找",
       "displayLines": [
-        "眼鏡放在",
-        "盒子裡。"
+        "我找到",
+        "一本書，",
+        "是誰的？"
       ],
-      "imageNotes": "一副眼鏡放在打開的盒子裡，盒子和眼鏡都要清楚可見。不可有文字、數字、品牌或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 我找到一本書，是誰的？ Show the recurring protagonist girl for `我` holding or pointing to a found book and looking around as if wondering whose book it is. Include one or two generic preschool classmates nearby, but do not put readable names or labels on the book. Human role identities: recurring protagonist girl plus generic preschool classmates distinct from recurring `你` and `他` unless specifically used. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "小狗的鼻子和臉紅紅的。",
-      "spokenText": "小狗的鼻子和臉紅紅的",
-      "focusChar": "鼻",
+      "id": "R007-S04",
+      "text": "那個人畫出一朵大花。",
+      "spokenText": "那個人畫出一朵大花",
+      "focusChar": "那",
       "displayLines": [
-        "小狗的鼻子",
-        "和臉紅紅的。"
+        "那個人畫出",
+        "一朵大花。"
       ],
-      "imageNotes": "小狗的鼻子和臉有明顯紅紅的顏色，表情可愛不痛苦。畫面避免醫療或恐怖感，不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 那個人畫出一朵大花。 The speaker/viewpoint is the recurring protagonist girl, standing some distance away and looking toward another person who is drawing. The other person must be clearly at a noticeable distance from the girl, not close beside her, so the meaning is `那個人` rather than `這個人`. Show the distant person drawing a picture with one very large flower visible on the paper or easel. Human role identities: recurring protagonist girl as distant observer; distant generic older child or generic adult artist visually distinct from protagonist family, teacher, and L058 adult. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "小孩頭上戴著紅帽子。",
-      "spokenText": "小孩頭上戴著紅帽子",
-      "focusChar": "頭",
+      "id": "R007-S05",
+      "text": "女孩站著開書包。",
+      "spokenText": "女孩站著開書包",
+      "focusChar": "站",
       "displayLines": [
-        "小孩頭上",
-        "戴著紅帽子。"
+        "女孩站著",
+        "開書包。"
       ],
-      "imageNotes": "一個小孩頭上戴著紅帽子，紅帽子清楚在頭上。不可有文字、數字、帽子標誌或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 女孩站著開書包。 Show a generic preschool girl standing while opening her school bag, with the bag visibly open or being opened. The text cannot use `打開` because `打` is not in the L090 ceiling, but the picture should show the ordinary action of opening the bag. Human role identity: generic preschool girl, visually distinct from recurring protagonist girl and other recurring children. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     }
   ],
   "sentenceGames": [
     {
       "id": "R007-G01",
       "type": "find-character",
-      "sentenceId": "R007-S01",
-      "targetChar": "放",
-      "prompt": "找一找句子裡的「放」。"
+      "sentenceId": "R007-S05",
+      "targetChar": "站",
+      "prompt": "找出句子裡的字。",
+      "missingIndexes": [
+        2
+      ]
     },
     {
       "id": "R007-G02",
       "type": "teach-character",
-      "sentenceId": "R007-S05",
-      "targetChar": "頭",
-      "prompt": "看一看「頭」在句子裡的位置。",
+      "sentenceId": "R007-S02",
+      "targetChar": "坐",
+      "targetCharIndex": 1,
+      "prompt": "教小兔子念這個字。",
       "missingIndexes": [
-        2
+        1
       ],
-      "targetCharIndex": 2,
       "teachAudio": {
         "prefixSrc": "/assets/reviews/R007/audio/R007-G02-prefix.m4a",
         "suffixSrc": "/assets/reviews/R007/audio/R007-G02-suffix.m4a"
+      },
+      "teachAudioText": {
+        "prefixText": "我",
+        "suffixText": "在桌邊"
       }
     },
     {
       "id": "R007-G03",
       "type": "missing-character",
       "sentenceId": "R007-S03",
-      "targetChar": "鏡",
-      "prompt": "選出句子裡少掉的字。",
+      "targetChar": "找",
+      "prompt": "選出少掉的字。",
       "missingIndexes": [
         1
       ],
       "options": [
         {
-          "id": "mirror",
-          "text": "鏡",
+          "id": "R007-G03-A",
+          "text": "找",
           "correct": true
         },
         {
-          "id": "eye",
-          "text": "眼",
+          "id": "R007-G03-B",
+          "text": "到",
           "correct": false
         },
         {
-          "id": "box",
-          "text": "子",
+          "id": "R007-G03-C",
+          "text": "書",
           "correct": false
         }
       ]
@@ -339,180 +294,62 @@
       "id": "R007-G04",
       "type": "partial-order",
       "sentenceId": "R007-S04",
-      "targetChar": "鼻",
-      "prompt": "幫小兔子排好句子。",
+      "targetChar": "那",
+      "prompt": "把少掉的字排回句子裡。",
       "missingIndexes": [
         0,
         1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "options": [
-        {
-          "id": "slot-1",
-          "text": "小狗的鼻子",
-          "correctOrder": 0,
-          "correct": true
-        },
-        {
-          "id": "slot-2",
-          "text": "和臉",
-          "correctOrder": 1,
-          "correct": true
-        },
-        {
-          "id": "slot-3",
-          "text": "紅紅的",
-          "correctOrder": 2,
-          "correct": true
-        }
-      ]
-    },
-    {
-      "id": "R007-G05",
-      "type": "choose-pronunciation",
-      "sentenceId": "R007-S02",
-      "targetChar": "掉",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
-      "options": [
-        {
-          "id": "correct",
-          "text": "帽子掉到地面上。",
-          "correct": true,
-          "audioSrc": "/assets/reviews/R007/audio/R007-S02.m4a"
-        },
-        {
-          "id": "wrong-one",
-          "text": "盒子掉到地面上。",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R007/audio/R007-G05-wrong-one.m4a"
-        },
-        {
-          "id": "wrong-two",
-          "text": "帽子放到地面上。",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R007/audio/R007-G05-wrong-two.m4a"
-        }
-      ]
-    }
-  ],
-  "games": [
-    {
-      "id": "R007-G01",
-      "type": "find-character",
-      "sentenceId": "R007-S01",
-      "targetChar": "放",
-      "prompt": "找一找句子裡的「放」。"
-    },
-    {
-      "id": "R007-G02",
-      "type": "teach-character",
-      "sentenceId": "R007-S05",
-      "targetChar": "頭",
-      "prompt": "看一看「頭」在句子裡的位置。",
-      "missingIndexes": [
         2
       ],
-      "targetCharIndex": 2,
-      "teachAudio": {
-        "prefixSrc": "/assets/reviews/R007/audio/R007-G02-prefix.m4a",
-        "suffixSrc": "/assets/reviews/R007/audio/R007-G02-suffix.m4a"
-      }
-    },
-    {
-      "id": "R007-G03",
-      "type": "missing-character",
-      "sentenceId": "R007-S03",
-      "targetChar": "鏡",
-      "prompt": "選出句子裡少掉的字。",
-      "missingIndexes": [
-        1
-      ],
       "options": [
         {
-          "id": "mirror",
-          "text": "鏡",
-          "correct": true
-        },
-        {
-          "id": "eye",
-          "text": "眼",
-          "correct": false
-        },
-        {
-          "id": "box",
-          "text": "子",
-          "correct": false
-        }
-      ]
-    },
-    {
-      "id": "R007-G04",
-      "type": "partial-order",
-      "sentenceId": "R007-S04",
-      "targetChar": "鼻",
-      "prompt": "幫小兔子排好句子。",
-      "missingIndexes": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "options": [
-        {
-          "id": "slot-1",
-          "text": "小狗的鼻子",
+          "id": "R007-G04-A",
+          "text": "那",
           "correctOrder": 0,
           "correct": true
         },
         {
-          "id": "slot-2",
-          "text": "和臉",
+          "id": "R007-G04-B",
+          "text": "個",
           "correctOrder": 1,
           "correct": true
         },
         {
-          "id": "slot-3",
-          "text": "紅紅的",
+          "id": "R007-G04-C",
+          "text": "人",
           "correctOrder": 2,
           "correct": true
         }
+      ],
+      "correctOrder": [
+        "R007-G04-A",
+        "R007-G04-B",
+        "R007-G04-C"
       ]
     },
     {
       "id": "R007-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R007-S02",
-      "targetChar": "掉",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "sentenceId": "R007-S01",
+      "targetChar": "借",
+      "prompt": "選出你聽到的句子。",
       "options": [
         {
-          "id": "correct",
-          "text": "帽子掉到地面上。",
+          "id": "R007-G05-A",
+          "text": "同學問我借筆。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R007/audio/R007-S02.m4a"
+          "sentenceId": "R007-S01",
+          "audioSrc": "/assets/reviews/R007/audio/R007-S01.m4a"
         },
         {
-          "id": "wrong-one",
-          "text": "盒子掉到地面上。",
+          "id": "R007-G05-B",
+          "text": "同學問我借書。",
           "correct": false,
           "audioSrc": "/assets/reviews/R007/audio/R007-G05-wrong-one.m4a"
         },
         {
-          "id": "wrong-two",
-          "text": "帽子放到地面上。",
+          "id": "R007-G05-C",
+          "text": "同學問你借筆。",
           "correct": false,
           "audioSrc": "/assets/reviews/R007/audio/R007-G05-wrong-two.m4a"
         }
