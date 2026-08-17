@@ -2,7 +2,7 @@
   "id": "R003",
   "reviewNumber": 3,
   "title": "複習三",
-  "afterLessonOrder": 90,
+  "afterLessonOrder": 60,
   "targetLessonRange": {
     "startOrder": 31,
     "endOrder": 60
@@ -43,307 +43,98 @@
   "sentences": [
     {
       "id": "R003-S01",
-      "text": "這本書是爸爸借來的",
-      "displayLines": [
-        "這本書是",
-        "爸爸借來的"
-      ],
-      "spokenText": "這本書是爸爸借來的",
+      "text": "這是媽媽的書。",
+      "spokenText": "這是媽媽的書",
       "focusChar": "是",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home interior, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 爸爸把一本借來的書拿給孩子看，孩子看著書，書本清楚但不能有任何文字。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, or logos.",
+      "displayLines": [
+        "這是媽媽的",
+        "書。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 這是媽媽的書。 Show the recurring protagonist mother holding or placing her own book, with the book clearly belonging to her through family context and body position, but without any written name or label. Use the recurring protagonist mother identity: warm adult family role in home clothing, visually distinct from teacher, passersby, and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean home interior, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: the recurring protagonist mother holds or places her own plain book at home; the book clearly belongs to her through family context and body position, with no written name or label. Role identity: recurring protagonist mother, visually distinct from teacher, passersby, and the L058 adult woman. Keep subject centered with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
       "imageSrc": "/assets/reviews/R003/images/R003-S01.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R003/audio/R003-S01.m4a",
-        "durationMs": 5040,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 300
-          },
-          {
-            "charIndex": 1,
-            "startMs": 300,
-            "endMs": 660
-          },
-          {
-            "charIndex": 2,
-            "startMs": 660,
-            "endMs": 1000
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1000,
-            "endMs": 1860
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1860,
-            "endMs": 2170
-          },
-          {
-            "charIndex": 5,
-            "startMs": 2170,
-            "endMs": 2480
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2480,
-            "endMs": 3120
-          },
-          {
-            "charIndex": 7,
-            "startMs": 3120,
-            "endMs": 3380
-          },
-          {
-            "charIndex": 8,
-            "startMs": 3380,
-            "endMs": 3580
-          }
-        ]
+        "durationMs": 0,
+        "charTimings": []
       }
     },
     {
       "id": "R003-S02",
-      "text": "媽媽做的愛心很好看",
+      "text": "爸爸會做好吃的。",
+      "spokenText": "爸爸會做好吃的",
+      "focusChar": "會",
       "displayLines": [
-        "媽媽做的",
-        "愛心很好看"
+        "爸爸會做",
+        "好吃的。"
       ],
-      "spokenText": "媽媽做的愛心很好看",
-      "focusChar": "做",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean craft table scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 媽媽和孩子一起看一個媽媽做的愛心手作品，愛心清楚漂亮，表情溫暖。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, or logos.",
+      "imageNotes": "Concrete phone-readable square image for: 爸爸會做好吃的。 Show the recurring protagonist father making tasty food at home, such as preparing a simple child-friendly meal on a kitchen counter. The food should look appealing, and father's action of making food should be clear. Use the recurring protagonist father identity: adult father matching the protagonist family, visually distinct from mother, teacher, and generic adults. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean kitchen interior, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: the recurring protagonist father is making tasty child-friendly food at home on a kitchen counter; the food looks appealing and his action of preparing food is clear. Role identity: recurring protagonist father, visually distinct from mother, teacher, and generic adults. Keep father, food, and counter centered with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
       "imageSrc": "/assets/reviews/R003/images/R003-S02.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R003/audio/R003-S02.m4a",
-        "durationMs": 4575,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 380
-          },
-          {
-            "charIndex": 1,
-            "startMs": 380,
-            "endMs": 640
-          },
-          {
-            "charIndex": 2,
-            "startMs": 640,
-            "endMs": 880
-          },
-          {
-            "charIndex": 3,
-            "startMs": 880,
-            "endMs": 1160
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1160,
-            "endMs": 1400
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1400,
-            "endMs": 1600
-          },
-          {
-            "charIndex": 6,
-            "startMs": 1600,
-            "endMs": 1990
-          },
-          {
-            "charIndex": 7,
-            "startMs": 1990,
-            "endMs": 2380
-          },
-          {
-            "charIndex": 8,
-            "startMs": 2380,
-            "endMs": 2720
-          }
-        ]
+        "durationMs": 0,
+        "charTimings": []
       }
     },
     {
       "id": "R003-S03",
-      "text": "他沒看到路邊的人",
+      "text": "我和媽媽都愛吃這個。",
+      "spokenText": "我和媽媽都愛吃這個",
+      "focusChar": "都",
       "displayLines": [
-        "他沒看到",
-        "路邊的人"
+        "我和媽媽都",
+        "愛吃這個。"
       ],
-      "spokenText": "他沒看到路邊的人",
-      "focusChar": "他",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean outdoor road scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 固定小男孩走在路上，沒有注意到路邊站著的人；路邊位置清楚，人物表情自然。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, or logos.",
+      "imageNotes": "Concrete phone-readable square image for: 我和媽媽都愛吃這個。 Show the recurring protagonist girl for `我` and the recurring protagonist mother happily eating or reaching for the same visible food item on the table, so both clearly like eating it. Use protagonist family identities. Mother must be visually distinct from teacher and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean family dining scene, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: the recurring protagonist girl and recurring protagonist mother happily eat or reach for the same visible food item on the table, clearly showing both like eating it. Role identities: protagonist girl and protagonist mother, with mother visually distinct from teacher and the L058 adult woman. Keep the shared food and both faces centered with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
       "imageSrc": "/assets/reviews/R003/images/R003-S03.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R003/audio/R003-S03.m4a",
-        "durationMs": 3849,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 400
-          },
-          {
-            "charIndex": 1,
-            "startMs": 400,
-            "endMs": 740
-          },
-          {
-            "charIndex": 2,
-            "startMs": 740,
-            "endMs": 1030
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1030,
-            "endMs": 1320
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1320,
-            "endMs": 2100
-          },
-          {
-            "charIndex": 5,
-            "startMs": 2100,
-            "endMs": 2260
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2260,
-            "endMs": 2460
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2460,
-            "endMs": 2660
-          }
-        ]
+        "durationMs": 0,
+        "charTimings": []
       }
     },
     {
       "id": "R003-S04",
-      "text": "兩隻小狗都在家裡",
+      "text": "他走到水邊。",
+      "spokenText": "他走到水邊",
+      "focusChar": "走",
       "displayLines": [
-        "兩隻小狗",
-        "都在家裡"
+        "他走到水",
+        "邊。"
       ],
-      "spokenText": "兩隻小狗都在家裡",
-      "focusChar": "兩",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home interior or doorway scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 家裡有兩隻小狗，兩隻狗都在室內或家門內，孩子在旁邊看著，兩隻的數量要清楚。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, or logos.",
+      "imageNotes": "Concrete phone-readable square image for: 他走到水邊。 Show the recurring sporty boy for `他` walking toward the edge of safe shallow water, such as a calm pond or stream edge, with the water boundary clear. Keep the scene safe and calm; he is near the water edge, not falling in. Use the recurring `他` identity: sporty young boy with orange athletic shirt, navy shorts, red sneakers, green wristband, visually distinct from `你`. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, calm outdoor scene, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: the recurring sporty boy for `他` walks toward the edge of safe shallow water, such as a calm pond or stream edge; the water boundary is clear and he is not falling in. Role identity: recurring `他` boy, sporty young boy with orange athletic shirt, navy shorts, red sneakers, green wristband, visually distinct from `你`. Keep boy and water edge centered with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
       "imageSrc": "/assets/reviews/R003/images/R003-S04.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R003/audio/R003-S04.m4a",
-        "durationMs": 4173,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 400
-          },
-          {
-            "charIndex": 1,
-            "startMs": 400,
-            "endMs": 840
-          },
-          {
-            "charIndex": 2,
-            "startMs": 840,
-            "endMs": 1200
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1200,
-            "endMs": 1440
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1440,
-            "endMs": 2160
-          },
-          {
-            "charIndex": 5,
-            "startMs": 2160,
-            "endMs": 2520
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2520,
-            "endMs": 2840
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2840,
-            "endMs": 3040
-          }
-        ]
+        "durationMs": 0,
+        "charTimings": []
       }
     },
     {
       "id": "R003-S05",
-      "text": "不要把水放在書上",
+      "text": "兩隻狗都去水裡，他沒去。",
+      "spokenText": "兩隻狗都去水裡他沒去",
+      "focusChar": "沒",
       "displayLines": [
-        "不要把水",
-        "放在書上"
+        "兩隻狗都",
+        "去水裡，",
+        "他沒去。"
       ],
-      "spokenText": "不要把水放在書上",
-      "focusChar": "不",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home table or classroom table scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 孩子正要把水杯放在書上，大人溫和提醒不要這樣；書和水杯都清楚可見，語氣是照顧與提醒。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, or logos.",
+      "imageNotes": "Concrete phone-readable square image for: 兩隻狗都去水裡，他沒去。 Show two friendly dogs in shallow water while the recurring sporty boy `他` stays dry on the shore and does not go into the water. Make the contrast clear: both dogs are in the water, the boy is outside the water. Use the recurring `他` identity and two family dogs associated with `他` when useful. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, calm outdoor shallow-water scene, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: two friendly dogs are in shallow water while the recurring sporty boy `他` stays dry on the shore and clearly does not go into the water. Make the contrast clear: both dogs are in the water, the boy is outside the water. Role identity: recurring `他` boy with orange athletic shirt, navy shorts, red sneakers, green wristband; two friendly dogs. Keep dogs, shoreline, and boy centered with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
       "imageSrc": "/assets/reviews/R003/images/R003-S05.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R003/audio/R003-S05.m4a",
-        "durationMs": 3920,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 240
-          },
-          {
-            "charIndex": 1,
-            "startMs": 240,
-            "endMs": 480
-          },
-          {
-            "charIndex": 2,
-            "startMs": 480,
-            "endMs": 940
-          },
-          {
-            "charIndex": 3,
-            "startMs": 940,
-            "endMs": 1400
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1400,
-            "endMs": 1920
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1920,
-            "endMs": 2300
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2300,
-            "endMs": 2520
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2520,
-            "endMs": 2860
-          }
-        ]
+        "durationMs": 0,
+        "charTimings": []
       }
     }
   ],
@@ -351,20 +142,25 @@
     {
       "id": "R003-G01",
       "type": "find-character",
-      "sentenceId": "R003-S01",
-      "targetChar": "是",
-      "prompt": "找一找句子裡的「是」。"
+      "sentenceId": "R003-S04",
+      "targetChar": "走",
+      "prompt": "找出「走」。",
+      "missingIndexes": [
+        1
+      ],
+      "options": []
     },
     {
       "id": "R003-G02",
       "type": "teach-character",
       "sentenceId": "R003-S02",
-      "targetChar": "做",
-      "prompt": "看一看「做」在句子裡的位置。",
+      "targetChar": "會",
+      "targetCharIndex": 2,
+      "prompt": "幫小兔子念這個字。",
       "missingIndexes": [
         2
       ],
-      "targetCharIndex": 2,
+      "options": [],
       "teachAudio": {
         "prefixSrc": "/assets/reviews/R003/audio/R003-G02-prefix.m4a",
         "suffixSrc": "/assets/reviews/R003/audio/R003-G02-suffix.m4a"
@@ -374,25 +170,25 @@
       "id": "R003-G03",
       "type": "missing-character",
       "sentenceId": "R003-S03",
-      "targetChar": "他",
-      "prompt": "選出句子裡少掉的字。",
+      "targetChar": "都",
+      "prompt": "選出少掉的字。",
       "missingIndexes": [
-        0
+        4
       ],
       "options": [
         {
-          "id": "he",
-          "text": "他",
+          "id": "R003-G03-A",
+          "text": "都",
           "correct": true
         },
         {
-          "id": "person",
-          "text": "人",
+          "id": "R003-G03-B",
+          "text": "愛",
           "correct": false
         },
         {
-          "id": "road",
-          "text": "路",
+          "id": "R003-G03-C",
+          "text": "吃",
           "correct": false
         }
       ]
@@ -400,60 +196,58 @@
     {
       "id": "R003-G04",
       "type": "partial-order",
-      "sentenceId": "R003-S04",
+      "sentenceId": "R003-S05",
       "targetChar": "兩",
-      "prompt": "把句子前半段排回來。",
+      "prompt": "把字放回正確的位置。",
       "missingIndexes": [
         0,
         1,
-        2,
-        3
+        2
       ],
       "options": [
         {
-          "id": "two",
+          "id": "R003-G04-A",
           "text": "兩",
-          "correct": true
+          "correct": true,
+          "correctOrder": 0
         },
         {
-          "id": "classifier",
+          "id": "R003-G04-B",
           "text": "隻",
-          "correct": true
+          "correct": true,
+          "correctOrder": 1
         },
         {
-          "id": "small",
-          "text": "小",
-          "correct": true
-        },
-        {
-          "id": "dog",
+          "id": "R003-G04-C",
           "text": "狗",
-          "correct": true
+          "correct": true,
+          "correctOrder": 2
         }
       ]
     },
     {
       "id": "R003-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R003-S05",
-      "targetChar": "不",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "sentenceId": "R003-S01",
+      "targetChar": "是",
+      "prompt": "聽聽誰念對。",
+      "missingIndexes": [],
       "options": [
         {
-          "id": "correct",
-          "text": "不要把水放在書上",
+          "id": "R003-G05-A",
+          "text": "這是媽媽的書。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R003/audio/R003-S05.m4a"
+          "sentenceId": "R003-S01"
         },
         {
-          "id": "wrong-one",
-          "text": "不要把書放在水上",
+          "id": "R003-G05-B",
+          "text": "這是爸爸的書。",
           "correct": false,
           "audioSrc": "/assets/reviews/R003/audio/R003-G05-wrong-one.m4a"
         },
         {
-          "id": "wrong-two",
-          "text": "不要把水放在書裡",
+          "id": "R003-G05-C",
+          "text": "這是媽媽的狗。",
           "correct": false,
           "audioSrc": "/assets/reviews/R003/audio/R003-G05-wrong-two.m4a"
         }
