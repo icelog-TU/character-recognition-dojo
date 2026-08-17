@@ -122,6 +122,7 @@ The Audit Packet must include:
 - `G05 choose-pronunciation` option texts with the same Han count as the correct sentence and only 1-2 Han-character differences.
 - `partial-order` plan that blanks exactly 3-4 Han characters. Each option card must be exactly one Han character. Do not use chunks, word cards, phrase cards, or full-sentence reordering.
 - Required review request, draft, generated packet, image, and audio asset paths.
+- The mandatory image style and cast requirements from `docs/LESSON_VISUAL_CAST_SOP.md`, or an explicit instruction for Audit to insert that block unchanged into the final `Production Activation Handoff`.
 - Auto-claim-and-continue instructions that Audit can copy into the later Production Activation Handoff.
 - Stop conditions.
 

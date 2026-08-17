@@ -91,6 +91,38 @@ docs/visual-references/lesson-cast.md
 
 Do not treat the remaining proposed paths as existing until the reference task actually creates and commits them.
 
+## Mandatory Production Handoff Block
+
+Review Migration Audit must include this block, or an equivalent updated copy of it, in every PASS-time `Production Activation Handoff` for review modules. Review Migration should also include it in Audit Packets when possible. The block is an execution requirement for Production, not a sentence edit and not a replacement for sentence-level `imageNotes`.
+
+```text
+Image style and cast requirements:
+Production must follow docs/CURRICULUM_PRODUCTION_SOP.md and docs/LESSON_VISUAL_CAST_SOP.md before generating or accepting any image.
+
+Use the approved L058 lesson images as mandatory style references, especially:
+- public/assets/lessons/L058/images/L058-S01.webp
+- public/assets/lessons/L058/images/L058-S02.webp
+- public/assets/lessons/L058/images/L058-S03.webp
+
+L058 is style-only: pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, and phone-readable square composition. Do not copy any L058 person identity.
+
+For recurring cast identity, use the current visual cast anchors required by docs/LESSON_VISUAL_CAST_SOP.md:
+- public/assets/lessons/L154/images/L154-S01.webp
+- public/assets/lessons/L162/images/L162-S04.webp
+- public/assets/lessons/L163/images/L163-S02.webp
+
+When a sentence uses `我`, use the recurring protagonist girl identity.
+When a sentence uses `你`, use the recurring young boy classmate identity.
+When a sentence uses `他`, use the fixed recurring sporty boy identity.
+Mother, father, teacher, generic adults, generic children, recurring `我`, recurring `你`, and recurring `他` must remain visually distinct.
+
+Generic children must not be reused as recurring children. Recurring children must not be redesigned as random new children.
+
+Before accepting each generated image, compare it side by side against the L058 style references and the relevant cast anchors. Reject and regenerate any image that drifts into generic cartoon, simple watercolor wash, anime, 3D render, photo-realistic style, inconsistent proportions, or non-recurring/random character identity.
+
+Stop and return to Supervisor / Asset Repair if Production cannot access the L058 style reference images or the required cast anchor images, or if generated images repeatedly fail to preserve L058 style and recurring cast identity.
+```
+
 ## Location Continuity
 
 Stable continuity is household identity, not permanent terrain.

@@ -118,6 +118,7 @@ The Production Activation Handoff must:
 - Keep the approved content unchanged: sentence text, spokenText, displayLines, focusChar, imageNotes, Stage 4 plan, coverage data, allowed-character ceiling, file paths, startup checks, auto-claim steps, and stop conditions.
 - Keep the assigned worktree and Production slot explicit.
 - Keep `auto-claim-and-continue` wording so Production knows it is the worker, not a reviewer.
+- Include the mandatory `Image style and cast requirements` block from `docs/LESSON_VISUAL_CAST_SOP.md`. This block must name the L058 style references, the current cast identity anchors, recurring `我` / `你` / `他` identity rules, side-by-side comparison requirement, and the stop condition for inaccessible references or repeated style/cast drift.
 
 Unless the teacher explicitly assigns another slot, Audit must assign review-pair Production Activation Handoffs by fixed round-robin:
 
