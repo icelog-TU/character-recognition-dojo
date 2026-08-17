@@ -495,6 +495,7 @@
         locallyEditedKeys: new Set(),
         cloudRepairItems: {},
         reviewComplete: false,
+        reviewCompleteLocallyEdited: false,
         placeholderUnit: false,
         user: null,
         unsubscribeReview: null,
@@ -1241,7 +1242,7 @@
           };
         });
         state.flags = flags;
-        state.reviewComplete = data.reviewComplete === true;
+        if (!state.reviewCompleteLocallyEdited) state.reviewComplete = data.reviewComplete === true;
         saveLocalState();
         if (document.activeElement?.matches("input[data-note]")) {
           updateSummaryOnly();
@@ -1298,6 +1299,7 @@
       document.addEventListener("change", (event) => {
         const reviewCompleteInput = event.target.closest(".review-complete-input");
         if (reviewCompleteInput) {
+          state.reviewCompleteLocallyEdited = true;
           state.reviewComplete = reviewCompleteInput.checked;
           saveCloudSoon();
           return;
