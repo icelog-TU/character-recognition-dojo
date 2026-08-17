@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R013/R014 | review modules / 複習十三、複習十四 | claimed | Production C | codex/r013-r014-l135-complete-package / c2ba9401 | L135 milestone ceiling | [] | curriculum-workflow/review-requests/R013.json; curriculum-workflow/review-requests/R014.json; curriculum-workflow/generated/R013-generation-packet.md; curriculum-workflow/generated/R014-generation-packet.md | public/assets/reviews/R013/images/, public/assets/reviews/R013/audio/; public/assets/reviews/R014/images/, public/assets/reviews/R014/audio/ | new 15-lesson review cadence package; milestone/afterLessonOrder L135; coverage L106-L135; do not confuse with old codex/r013-r014-complete-package after L240 branch |
 
 ## Status Values
 
