@@ -2,31 +2,13 @@
   "id": "R001",
   "kind": "review",
   "reviewNumber": 1,
-  "title": "???",
-  "afterLessonOrder": 60,
+  "title": "複習一",
+  "afterLessonOrder": 45,
   "targetLessonRange": {
-    "startOrder": 1,
-    "endOrder": 30
+    "startOrder": 16,
+    "endOrder": 45
   },
   "requiredCoverageChars": [
-    "一",
-    "二",
-    "三",
-    "人",
-    "個",
-    "大",
-    "的",
-    "小",
-    "手",
-    "我",
-    "有",
-    "山",
-    "上",
-    "下",
-    "你",
-    "水",
-    "在",
-    "高",
     "很",
     "家",
     "和",
@@ -41,7 +23,22 @@
     "門",
     "前",
     "後",
-    "也"
+    "也",
+    "是",
+    "不",
+    "到",
+    "走",
+    "他",
+    "沒",
+    "裡",
+    "兩",
+    "狗",
+    "都",
+    "爸",
+    "媽",
+    "愛",
+    "書",
+    "可"
   ],
   "targetSentenceCount": 5,
   "generationConstraints": {
@@ -55,8 +52,8 @@
       "三",
       "人",
       "個",
-      "大",
       "的",
+      "大",
       "小",
       "手",
       "我",
@@ -97,42 +94,9 @@
       "媽",
       "愛",
       "書",
-      "可",
-      "會",
-      "這",
-      "吃",
-      "做",
-      "好",
-      "樣",
-      "要",
-      "更",
-      "邊",
-      "多",
-      "少",
-      "比",
-      "來",
-      "起",
-      "去"
+      "可"
     ],
     "requiredCoverageChars": [
-      "一",
-      "二",
-      "三",
-      "人",
-      "個",
-      "大",
-      "的",
-      "小",
-      "手",
-      "我",
-      "有",
-      "山",
-      "上",
-      "下",
-      "你",
-      "水",
-      "在",
-      "高",
       "很",
       "家",
       "和",
@@ -147,45 +111,193 @@
       "門",
       "前",
       "後",
-      "也"
-    ]
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可"
+    ],
+    "allowedCharacterCeilingLessonId": "L045",
+    "pairId": "R001/R002"
   },
-  "teacherNotes": "First review pair after L060. R001 introduces no new characters and must be paired with R002 to cover L001-L030.",
+  "teacherNotes": "Review Migration Audit PASS. First migrated review pair after L045; covers L016-L045. Review modules introduce no new characters, no zhuyin, and no charAudio. Production target is asset-complete-package.",
   "approvedSentences": [
     {
-      "text": "一二三，大家一起看鳥飛",
-      "spokenText": "一二三大家一起看鳥飛",
-      "focusChar": "鳥",
-      "reason": "????????",
-      "imageNotes": "Warm watercolor children picture-book style for a Taiwan Traditional Chinese character-recognition app. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, or logos. Outdoor schoolyard or park scene. A small group of children are happily looking up together as several little birds fly across the sky. The children should clearly act together, with shared gaze and pointing gestures, so the scene reads as everyone watching birds fly. Keep the image calm, bright, and child-friendly."
+      "text": "我家有一隻鳥。",
+      "spokenText": "我家有一隻鳥",
+      "focusChar": "家",
+      "displayLines": [
+        "我家有一隻",
+        "鳥。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 我家有一隻鳥。 Show the recurring protagonist girl for `我` inside the recurring protagonist home, with one clearly visible bird in the home. The home should feel like the protagonist family home, not a generic classroom or shop. Use L058 only as style reference, not as a person identity reference."
     },
     {
-      "text": "一個小孩在門前看小鳥",
-      "spokenText": "一個小孩在門前看小鳥",
-      "focusChar": "小",
-      "reason": "????????",
-      "imageNotes": "Warm watercolor children picture-book style for a Taiwan Traditional Chinese character-recognition app. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, or logos. Front door of a cozy home. One small child stands in front of the door, quietly watching a little bird near the doorway, either perched on a low branch or hopping on the ground. The door-front setting and the child's focused attention on the bird must be visually clear."
-    },
-    {
-      "text": "女孩和男孩去山下看水",
-      "spokenText": "女孩和男孩去山下看水",
-      "focusChar": "水",
-      "reason": "????????",
-      "imageNotes": "Warm watercolor children picture-book style for a Taiwan Traditional Chinese character-recognition app. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. A girl and a boy walk together on a safe path toward the bottom of a mountain. At the foot of the mountain there is clear water, such as a stream or small lake, and both children are looking at it. The mountain, the lower position, the walking action, and the water should all be clear."
-    },
-    {
-      "text": "大人的手指很大",
-      "spokenText": "大人的手指很大",
+      "text": "女孩指小鳥。",
+      "spokenText": "女孩指小鳥",
       "focusChar": "指",
-      "reason": "????????",
-      "imageNotes": "Warm watercolor children picture-book style for a Taiwan Traditional Chinese character-recognition app. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, or logos. Close, gentle comparison scene at a family table. An adult hand and a small child's hand are placed side by side, with the adult fingers visibly much larger. The hands should be friendly and natural, not scary, with the comparison of finger size immediately clear."
+      "displayLines": [
+        "女孩指小鳥",
+        "。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 女孩指小鳥。 Show a generic preschool girl pointing at a bird picture in an open book, as if asking a recurring preschool teacher what kind of bird it is. The teacher role must be clear: adult teacher/caregiver identity, visually distinct from protagonist mother and from the L058 adult woman. The bird is an illustration inside the book but there must be no readable text, labels, letters, numbers, zhuyin, logos, or speech bubbles. Use L058 only as style reference, not as a person identity reference."
     },
     {
-      "text": "你看，門後也有書",
-      "spokenText": "你看門後也有書",
-      "focusChar": "後",
-      "reason": "????????",
-      "imageNotes": "Warm watercolor children picture-book style for a Taiwan Traditional Chinese character-recognition app. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, or logos. Cozy room interior. A door is open, and behind the door there is a small stack of books or a little bookshelf partly hidden by the door. One child points toward the books while showing them to another person. The picture should clearly communicate that there are books behind the door too."
+      "text": "男孩走到門前。",
+      "spokenText": "男孩走到門前",
+      "focusChar": "走",
+      "displayLines": [
+        "男孩走到門",
+        "前。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 男孩走到門前。 Show a generic preschool boy walking toward the front of a door, with the door and his walking direction clearly visible. Human role identity: generic preschool boy, visually distinct from recurring `你` boy and recurring `他` boy unless Audit recommends using one recurring role. Use L058 only as style reference, not as a person identity reference."
+    },
+    {
+      "text": "他沒在家裡。",
+      "spokenText": "他沒在家裡",
+      "focusChar": "沒",
+      "displayLines": [
+        "他沒在家裡",
+        "。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 他沒在家裡。 Show the recurring protagonist girl for `我` visiting the recurring sporty boy `他` at his home and looking for him, but he is not inside the home. Through a window, the viewer can see the recurring sporty boy far away outside, while the protagonist girl does not notice him. Use the recurring `他` home identity: normal home with orange/green sporty cues, not a permanent mountain home unless the sentence says so. Use L058 only as style reference, not as a person identity reference."
+    },
+    {
+      "text": "爸爸媽媽都愛狗。",
+      "spokenText": "爸爸媽媽都愛狗",
+      "focusChar": "愛",
+      "displayLines": [
+        "爸爸媽媽都",
+        "愛狗。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 爸爸媽媽都愛狗。 Show the recurring protagonist father and recurring protagonist mother both showing affection toward a dog, such as smiling and gently petting it together. Father and mother must be visually distinct from each other, from the teacher, and from generic adults. Use L058 only as style reference, not as a person identity reference."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R001-G01",
+      "type": "find-character",
+      "sentenceId": "R001-S04",
+      "targetChar": "沒",
+      "prompt": "找一找句子裡的「沒」。"
+    },
+    {
+      "id": "R001-G02",
+      "type": "teach-character",
+      "sentenceId": "R001-S02",
+      "targetChar": "指",
+      "targetCharIndex": 2,
+      "prompt": "教小兔子念這個字。",
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R001/audio/R001-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R001/audio/R001-G02-suffix.m4a"
+      },
+      "teachAudioText": {
+        "prefixText": "女孩",
+        "suffixText": "小鳥"
+      }
+    },
+    {
+      "id": "R001-G03",
+      "type": "missing-character",
+      "sentenceId": "R001-S03",
+      "targetChar": "走",
+      "prompt": "選出句子裡少掉的字。",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "R001-G03-A",
+          "text": "走",
+          "correct": true
+        },
+        {
+          "id": "R001-G03-B",
+          "text": "男",
+          "correct": false
+        },
+        {
+          "id": "R001-G03-C",
+          "text": "孩",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R001-G04",
+      "type": "partial-order",
+      "sentenceId": "R001-S05",
+      "targetChar": "愛",
+      "prompt": "把少掉的字排回句子裡。",
+      "missingIndexes": [
+        4,
+        5,
+        6
+      ],
+      "options": [
+        {
+          "id": "R001-G04-A",
+          "text": "都",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "R001-G04-B",
+          "text": "愛",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "R001-G04-C",
+          "text": "狗",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "R001-G04-A",
+        "R001-G04-B",
+        "R001-G04-C"
+      ]
+    },
+    {
+      "id": "R001-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R001-S01",
+      "targetChar": "鳥",
+      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "options": [
+        {
+          "id": "R001-G05-A",
+          "text": "我家有一隻鳥。",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R001/audio/R001-S01.m4a"
+        },
+        {
+          "id": "R001-G05-B",
+          "text": "我家有一隻狗。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R001/audio/R001-G05-wrong-one.m4a"
+        },
+        {
+          "id": "R001-G05-C",
+          "text": "我家有一個人。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R001/audio/R001-G05-wrong-two.m4a"
+        }
+      ]
     }
   ]
 }
