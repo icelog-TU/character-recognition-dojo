@@ -4,6 +4,8 @@ Review Migration Audit is the second-pass reviewer for migrated review-module ha
 
 This role audits only. It does not write final sentences, produce handoffs, make assets, integrate JSON, release, commit, or push unless the teacher explicitly changes the assignment.
 
+The Production handoff must come from Review Migration. Audit must not regenerate, rewrite, or replace the handoff. If Audit returns PASS, the teacher can paste Review Migration's already-prepared handoff directly to Production. If Audit returns FAIL, the teacher returns the findings to Review Migration for revision.
+
 ## Read First
 
 1. `docs/PROJECT_HANDOFF_SOP.md`
@@ -27,6 +29,8 @@ Review Migration Audit exists to catch the most likely migration failures:
 - The pair does not actually cover every target character in its 30-lesson range.
 - Sentences pass mechanically but are too abstract, too hard to draw, or too cognitively heavy for a five-year-old.
 - Image notes use unclear character identities or violate visual cast continuity.
+- The Stage 4 `partial-order` plan uses chunks, phrase cards, or too many blanks instead of 3-4 single-Han option cards.
+- The `G05 choose-pronunciation` wrong choices are not same-length near misses.
 
 ## Input
 
@@ -41,9 +45,12 @@ Audit one review pair at a time unless the teacher asks otherwise. A normal batc
   - 30/30 coverage list
   - allowed-character sweep result
   - Han counts
+  - Stage 4 plan, including partial-order missing characters and G05 wrong-choice texts
   - cognitive difficulty or imageability concerns
 
 If the input lacks the full handoff text or the pair-level summary, ask Review Migration to provide the missing material. Do not infer final text from screenshots or summaries.
+
+The handoff should be marked `PENDING REVIEW MIGRATION AUDIT - DO NOT SEND TO PRODUCTION UNTIL AUDIT PASS`. Missing this marker is not a sentence failure, but Audit should remind Review Migration to add it before teacher distribution.
 
 ## Required Checks
 
@@ -65,6 +72,9 @@ For each review pair:
 9. Confirm sentence Han counts are normally 4-12.
 10. Flag any sentence that is too abstract, too hard to visualize, unnatural in Taiwan Mandarin, or high cognitive load for a five-year-old learner.
 11. Confirm image notes are concrete and identify recurring people using `docs/LESSON_VISUAL_CAST_SOP.md`.
+12. Confirm Stage 4 uses every reviewed sentence exactly once.
+13. Confirm `partial-order` blanks exactly 3-4 Han characters, `missingIndexes.length` equals `options.length`, and every option text is exactly one Han character. Multi-character chunks or phrase cards are FAIL.
+14. Confirm `G05 choose-pronunciation` wrong choices have the same Han count as the correct text and differ by only 1-2 Han characters.
 
 ## Output
 
@@ -102,6 +112,7 @@ If the result is PASS, do not rewrite the handoff. If the result is FAIL, list p
 
 - Do not make final sentence edits inside the handoff.
 - Do not produce Production handoffs.
+- Do not regenerate handoff code blocks after PASS. The teacher sends Review Migration's handoff to Production.
 - Do not make images, audio, alignment, or JSON.
 - Do not update registry, ledger, planner, or production curriculum.
 - Do not commit or push unless explicitly assigned repo maintenance.

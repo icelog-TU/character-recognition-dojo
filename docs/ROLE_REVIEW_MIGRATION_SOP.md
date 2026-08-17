@@ -34,6 +34,14 @@ Review Migration must:
 - Output complete one-paste Production handoffs for Production A/B/C/D.
 - Send review-pair handoffs to Review Migration Audit before Production when the teacher is using the double-review workflow.
 
+R001-R036 are a draft pool only. A review pair becomes production-eligible only after:
+
+1. The teacher approves the pair's 10 review sentences.
+2. Review Migration produces Production-ready handoff blocks.
+3. Review Migration Audit returns PASS.
+
+Do not send any pair to Production before all three gates are complete.
+
 ## Review Pair Rules
 
 For milestone `M = 45, 60, 75, ... 600`:
@@ -75,9 +83,28 @@ For each assigned review pair:
 
 If a sentence is legal but too abstract for a five-year-old, simplify it even if it passes coverage.
 
+## Teacher Sentence Approval Gate
+
+Review Migration works one review pair at a time, two review modules per batch. Examples: R001/R002, R003/R004, R005/R006.
+
+Before writing any Production handoff:
+
+1. Give the teacher only the 10 candidate sentences for the pair, plus the pair milestone, coverage range, allowed-character ceiling, and coverage summary.
+2. Wait for the teacher to approve or edit the sentence set.
+3. After every teacher edit, rerun pair-level coverage and allowed-character checks.
+4. Do not generate handoff code blocks until the teacher confirms the final 10 sentences.
+
+After teacher sentence approval, write imageNotes with explicit role identities for every sentence that shows people. Generic labels such as `adult`, `person`, `woman`, or unclear family roles are not enough when a recurring or social role is intended. Follow `docs/LESSON_VISUAL_CAST_SOP.md`.
+
 ## Output
 
 For each review module, produce a complete Production handoff in a single Markdown fenced code block using `text`.
+
+The handoff must be clearly marked:
+
+```text
+PENDING REVIEW MIGRATION AUDIT - DO NOT SEND TO PRODUCTION UNTIL AUDIT PASS
+```
 
 The handoff must include:
 
@@ -91,7 +118,9 @@ The handoff must include:
 - Pair-level coverage checklist.
 - Five approved review sentences for this module.
 - `text`, `spokenText`, `focusChar`, `displayLines`, and concrete `imageNotes` for each sentence.
-- Stage 4 plan appropriate for review modules.
+- Stage 4 plan appropriate for review modules, using every sentence once.
+- `G05 choose-pronunciation` option texts with the same Han count as the correct sentence and only 1-2 Han-character differences.
+- `partial-order` plan that blanks exactly 3-4 Han characters. Each option card must be exactly one Han character. Do not use chunks, word cards, phrase cards, or full-sentence reordering.
 - Required review request, draft, generated packet, image, and audio asset paths.
 - Auto-claim-and-continue instructions for Production.
 - Stop conditions.
@@ -111,6 +140,7 @@ Send one pair at a time, such as R001/R002, with:
 - Pair-level 30/30 coverage list.
 - Allowed-character sweep result.
 - Han counts.
+- Stage 4 plan summary, including the `partial-order` missing Han characters and `G05` wrong-choice texts.
 - Any sentence naturalness, cognitive load, or imageability concern.
 
 If Review Migration Audit returns FAIL, revise the handoff and resend the pair for audit before Production.
@@ -124,3 +154,5 @@ If Review Migration Audit returns FAIL, revise the handoff and resend the pair f
 - Do not commit or push unless the teacher explicitly asks for repo maintenance in this Review Migration thread.
 - Do not treat legacy R001-R018 as valid under the new schedule without auditing them.
 - Do not use latest `origin/main` learned characters as the allowed set for an overdue review module; use the milestone ceiling.
+- Do not let Audit generate or rewrite Production handoffs. Audit is a reviewer only; Review Migration owns the Production-ready handoff.
+- Do not write `partial-order` as multi-character chunks. The current app and validator require 3-4 single-Han option cards.
