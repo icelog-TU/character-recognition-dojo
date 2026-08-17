@@ -3,50 +3,46 @@
   "kind": "review",
   "reviewNumber": 8,
   "title": "複習八",
-  "afterLessonOrder": 150,
+  "afterLessonOrder": 90,
   "targetLessonRange": {
-    "startOrder": 91,
-    "endOrder": 120
+    "startOrder": 61,
+    "endOrder": 90
   },
   "requiredCoverageChars": [
-    "子",
-    "盒",
-    "掉",
-    "壞",
-    "眼",
-    "用",
-    "鏡",
-    "鼻",
-    "臉",
-    "紅",
-    "圓",
-    "太",
-    "難",
-    "得",
-    "過",
-    "分",
-    "幾",
-    "點",
-    "玩",
-    "打",
-    "球",
-    "棒",
-    "頭",
-    "帽",
-    "草",
-    "地",
-    "面",
-    "外",
-    "空",
-    "天"
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌"
   ],
   "targetSentenceCount": 5,
+  "requiredRounds": 5,
   "generationConstraints": {
-    "sentenceHanCharLength": {
-      "min": 4,
-      "max": 12
-    },
-    "provisionalLearnedChars": [],
     "allowedChars": [
       "一",
       "二",
@@ -140,198 +136,155 @@
       "心",
       "放",
       "把",
-      "桌",
-      "子",
-      "盒",
-      "掉",
-      "壞",
-      "眼",
-      "用",
-      "鏡",
-      "鼻",
-      "臉",
-      "紅",
-      "圓",
-      "太",
-      "難",
-      "得",
-      "過",
-      "分",
-      "幾",
-      "點",
-      "玩",
-      "打",
-      "球",
-      "棒",
-      "頭",
-      "帽",
-      "草",
-      "地",
-      "面",
-      "外",
-      "空",
-      "天",
-      "雨",
-      "雲",
-      "黑",
-      "白",
-      "棋",
-      "鞋",
-      "穿",
-      "戴",
-      "衣",
-      "脫",
-      "氣",
-      "套",
-      "熱",
-      "冷",
-      "喝",
-      "飯",
-      "菜",
-      "老",
-      "卻",
-      "麼",
-      "什",
-      "為",
-      "以",
-      "怎",
-      "所",
-      "房",
-      "間"
+      "桌"
     ],
-    "requiredCoverageChars": [
-      "子",
-      "盒",
-      "掉",
-      "壞",
-      "眼",
-      "用",
-      "鏡",
-      "鼻",
-      "臉",
-      "紅",
-      "圓",
-      "太",
-      "難",
-      "得",
-      "過",
-      "分",
-      "幾",
-      "點",
-      "玩",
-      "打",
-      "球",
-      "棒",
-      "頭",
-      "帽",
-      "草",
-      "地",
-      "面",
-      "外",
-      "空",
-      "天"
+    "allowedDisplayCharsBoundary": "L090 milestone ceiling; characters learned through L090 only.",
+    "maxHanCharactersPerSentence": 12,
+    "reviewPairId": "R007/R008",
+    "pairCoverageTarget": [
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌"
     ]
   },
-  "teacherNotes": "R007/R008 review pair after L150. Covers L091-L120 across the pair; may use only L001-L150 learned characters. Review modules introduce no newChars, zhuyin, or charAudio. R007/R008 are blocked from release until R005/R006 exist in top-level reviewLessons. Use L058 image style anchors; audio flow is AI audio -> assets:audio -> assets:align:ai.",
+  "teacherNotes": "Review Migration approved R007/R008 pair. R008 covers L061-L090 as part of the pair; allowed-character ceiling is L090.",
   "approvedSentences": [
     {
-      "text": "這個圓盒壞掉了。",
-      "spokenText": "這個圓盒壞掉了",
-      "focusChar": "圓",
+      "id": "R008-S01",
+      "text": "我在校門路邊畫畫。",
+      "spokenText": "我在校門路邊畫畫",
+      "focusChar": "校",
       "displayLines": [
-        "這個圓盒",
-        "壞掉了。"
+        "我在校門",
+        "路邊畫畫。"
       ],
-      "imageNotes": "一個圓形盒子壞掉了，例如盒蓋歪掉或邊緣裂開，但不要危險尖銳。不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 我在校門路邊畫畫。 Show the recurring protagonist girl for `我` sitting or kneeling safely by the roadside near a school gate, drawing on paper. Make the school gate and roadside setting visually clear without any readable school name, signs, letters, numbers, zhuyin, logos, or speech bubbles. Use the recurring protagonist girl identity."
     },
     {
-      "text": "球棒太難用。",
-      "spokenText": "球棒太難用",
-      "focusChar": "難",
+      "id": "R008-S02",
+      "text": "媽媽帶我去學校。",
+      "spokenText": "媽媽帶我去學校",
+      "focusChar": "帶",
       "displayLines": [
-        "球棒",
-        "太難用。"
+        "媽媽帶我",
+        "去學校。"
       ],
-      "imageNotes": "孩子拿著球棒，表情覺得不好使用或太難揮，旁邊可有球。畫面要表現「難用」，不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 媽媽帶我去學校。 Show the recurring protagonist mother accompanying the recurring protagonist girl to school, walking together toward a school entrance. Use protagonist mother and protagonist girl identities; mother must be visually distinct from teacher and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "大雨過後，去草地上玩水。",
-      "spokenText": "大雨過後去草地上玩水",
-      "focusChar": "過",
+      "id": "R008-S03",
+      "text": "花朵開了，很好看。",
+      "spokenText": "花朵開了很好看",
+      "focusChar": "朵",
       "displayLines": [
-        "大雨過後，",
-        "去草地上",
-        "玩水。"
+        "花朵開了，",
+        "很好看。"
       ],
-      "imageNotes": "大雨過後，草地上有小水坑，孩子在草地上玩水。畫面要安全、明亮，不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 花朵開了，很好看。 Show several flowers blooming and looking pretty. No people are required. Make the open blossoms clear at phone size. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "他打出好球，得很多分。",
-      "spokenText": "他打出好球得很多分",
-      "focusChar": "分",
+      "id": "R008-S04",
+      "text": "小孩開心拿花給我。",
+      "spokenText": "小孩開心拿花給我",
+      "focusChar": "給",
       "displayLines": [
-        "他打出好球，",
-        "得很多分。"
+        "小孩開心",
+        "拿花給我。"
       ],
-      "imageNotes": "孩子用球棒打出一顆好球，旁邊同學開心，呈現得很多分的高興感；不要使用記分板數字。不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 小孩開心拿花給我。 Show a generic preschool child happily holding out a flower to the recurring protagonist girl for `我`. Human role identities: generic preschool child distinct from recurring protagonist girl, recurring `你`, and recurring `他`; recurring protagonist girl receives or looks at the flower. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "幾點去打球？",
-      "spokenText": "幾點去打球",
-      "focusChar": "點",
+      "id": "R008-S05",
+      "text": "我把紙放在左邊。",
+      "spokenText": "我把紙放在左邊",
+      "focusChar": "左",
       "displayLines": [
-        "幾點",
-        "去打球？"
+        "我把紙放",
+        "在左邊。"
       ],
-      "imageNotes": "孩子拿著球或球棒，像是在問什麼時候去打球。可有大人在旁邊回應，但不可出現時鐘數字、文字、對話框或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 我把紙放在左邊。 Show the recurring protagonist girl for `我` placing a sheet of paper on her own left side. The left side must be clear from the protagonist girl's body perspective, preferably near her left hand. If she faces the viewer, remember her left side may appear on the viewer's right. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     }
   ],
   "sentenceGames": [
     {
       "id": "R008-G01",
       "type": "find-character",
-      "sentenceId": "R008-S05",
-      "targetChar": "點",
-      "prompt": "找一找句子裡的「點」。"
+      "sentenceId": "R008-S02",
+      "targetChar": "帶",
+      "prompt": "找出句子裡的字。",
+      "missingIndexes": [
+        2
+      ]
     },
     {
       "id": "R008-G02",
       "type": "teach-character",
-      "sentenceId": "R008-S02",
-      "targetChar": "難",
-      "prompt": "看一看「難」在句子裡的位置。",
+      "sentenceId": "R008-S01",
+      "targetChar": "校",
+      "targetCharIndex": 2,
+      "prompt": "教小兔子念這個字。",
       "missingIndexes": [
-        3
+        2
       ],
-      "targetCharIndex": 3,
       "teachAudio": {
         "prefixSrc": "/assets/reviews/R008/audio/R008-G02-prefix.m4a",
         "suffixSrc": "/assets/reviews/R008/audio/R008-G02-suffix.m4a"
+      },
+      "teachAudioText": {
+        "prefixText": "我在",
+        "suffixText": "門路邊畫畫"
       }
     },
     {
       "id": "R008-G03",
       "type": "missing-character",
-      "sentenceId": "R008-S01",
-      "targetChar": "壞",
-      "prompt": "選出句子裡少掉的字。",
+      "sentenceId": "R008-S04",
+      "targetChar": "給",
+      "prompt": "選出少掉的字。",
       "missingIndexes": [
-        4
+        6
       ],
       "options": [
         {
-          "id": "broken",
-          "text": "壞",
+          "id": "R008-G03-A",
+          "text": "給",
           "correct": true
         },
         {
-          "id": "fall",
-          "text": "掉",
+          "id": "R008-G03-B",
+          "text": "拿",
           "correct": false
         },
         {
-          "id": "round",
-          "text": "圓",
+          "id": "R008-G03-C",
+          "text": "花",
           "correct": false
         }
       ]
@@ -339,181 +292,63 @@
     {
       "id": "R008-G04",
       "type": "partial-order",
-      "sentenceId": "R008-S03",
-      "targetChar": "過",
-      "prompt": "幫小兔子排好句子。",
+      "sentenceId": "R008-S05",
+      "targetChar": "左",
+      "prompt": "把少掉的字排回句子裡。",
       "missingIndexes": [
         0,
         1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
+        2
       ],
       "options": [
         {
-          "id": "order-0",
-          "text": "雨天過後",
-          "correct": true,
-          "correctOrder": 0
-        },
-        {
-          "id": "order-1",
-          "text": "去外面",
-          "correct": true,
-          "correctOrder": 1
-        },
-        {
-          "id": "order-2",
-          "text": "草地玩",
-          "correct": true,
-          "correctOrder": 2
-        }
-      ]
-    },
-    {
-      "id": "R008-G05",
-      "type": "choose-pronunciation",
-      "sentenceId": "R008-S04",
-      "targetChar": "分",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
-      "options": [
-        {
-          "id": "correct",
-          "text": "他打出好球，得很多分。",
-          "correct": true,
-          "audioSrc": "/assets/reviews/R008/audio/R008-S04.m4a"
-        },
-        {
-          "id": "wrong-one",
-          "text": "他打出壞球，得很多分。",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R008/audio/R008-G05-wrong-one.m4a"
-        },
-        {
-          "id": "wrong-two",
-          "text": "他打出好球，得很少分。",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R008/audio/R008-G05-wrong-two.m4a"
-        }
-      ]
-    }
-  ],
-  "games": [
-    {
-      "id": "R008-G01",
-      "type": "find-character",
-      "sentenceId": "R008-S05",
-      "targetChar": "點",
-      "prompt": "找一找句子裡的「點」。"
-    },
-    {
-      "id": "R008-G02",
-      "type": "teach-character",
-      "sentenceId": "R008-S02",
-      "targetChar": "難",
-      "prompt": "看一看「難」在句子裡的位置。",
-      "missingIndexes": [
-        3
-      ],
-      "targetCharIndex": 3,
-      "teachAudio": {
-        "prefixSrc": "/assets/reviews/R008/audio/R008-G02-prefix.m4a",
-        "suffixSrc": "/assets/reviews/R008/audio/R008-G02-suffix.m4a"
-      }
-    },
-    {
-      "id": "R008-G03",
-      "type": "missing-character",
-      "sentenceId": "R008-S01",
-      "targetChar": "壞",
-      "prompt": "選出句子裡少掉的字。",
-      "missingIndexes": [
-        4
-      ],
-      "options": [
-        {
-          "id": "broken",
-          "text": "壞",
+          "id": "R008-G04-A",
+          "text": "我",
+          "correctOrder": 0,
           "correct": true
         },
         {
-          "id": "fall",
-          "text": "掉",
-          "correct": false
+          "id": "R008-G04-B",
+          "text": "把",
+          "correctOrder": 1,
+          "correct": true
         },
         {
-          "id": "round",
-          "text": "圓",
-          "correct": false
+          "id": "R008-G04-C",
+          "text": "紙",
+          "correctOrder": 2,
+          "correct": true
         }
-      ]
-    },
-    {
-      "id": "R008-G04",
-      "type": "partial-order",
-      "sentenceId": "R008-S03",
-      "targetChar": "過",
-      "prompt": "幫小兔子排好句子。",
-      "missingIndexes": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
       ],
-      "options": [
-        {
-          "id": "order-0",
-          "text": "雨天過後",
-          "correct": true,
-          "correctOrder": 0
-        },
-        {
-          "id": "order-1",
-          "text": "去外面",
-          "correct": true,
-          "correctOrder": 1
-        },
-        {
-          "id": "order-2",
-          "text": "草地玩",
-          "correct": true,
-          "correctOrder": 2
-        }
+      "correctOrder": [
+        "R008-G04-A",
+        "R008-G04-B",
+        "R008-G04-C"
       ]
     },
     {
       "id": "R008-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R008-S04",
-      "targetChar": "分",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "sentenceId": "R008-S03",
+      "targetChar": "朵",
+      "prompt": "選出你聽到的句子。",
       "options": [
         {
-          "id": "correct",
-          "text": "他打出好球，得很多分。",
+          "id": "R008-G05-A",
+          "text": "花朵開了，很好看。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R008/audio/R008-S04.m4a"
+          "sentenceId": "R008-S03",
+          "audioSrc": "/assets/reviews/R008/audio/R008-S03.m4a"
         },
         {
-          "id": "wrong-one",
-          "text": "他打出壞球，得很多分。",
+          "id": "R008-G05-B",
+          "text": "花朵開了，很好吃。",
           "correct": false,
           "audioSrc": "/assets/reviews/R008/audio/R008-G05-wrong-one.m4a"
         },
         {
-          "id": "wrong-two",
-          "text": "他打出好球，得很少分。",
+          "id": "R008-G05-C",
+          "text": "花朵開了，很高看。",
           "correct": false,
           "audioSrc": "/assets/reviews/R008/audio/R008-G05-wrong-two.m4a"
         }
