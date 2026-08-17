@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R015 | review module / 複習十五 | claimed | Production D | codex/r015-r016-l150-complete-package / b8d71059 | L150 milestone ceiling | None | curriculum-workflow/review-requests/R015.json, curriculum-workflow/generated/R015-generation-packet.md | public/assets/reviews/R015/images/, public/assets/reviews/R015/audio/ | accepted Review Migration handoff and starting complete review module package |
+| R016 | review module / 複習十六 | claimed | Production D | codex/r015-r016-l150-complete-package / b8d71059 | L150 milestone ceiling | None | curriculum-workflow/review-requests/R016.json, curriculum-workflow/generated/R016-generation-packet.md | public/assets/reviews/R016/images/, public/assets/reviews/R016/audio/ | accepted Review Migration handoff and starting complete review module package |
 
 ## Status Values
 
