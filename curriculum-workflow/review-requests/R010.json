@@ -3,57 +3,55 @@
   "kind": "review",
   "reviewNumber": 10,
   "title": "複習十",
-  "afterLessonOrder": 180,
+  "pairMateId": "R009",
+  "afterLessonOrder": 105,
   "targetLessonRange": {
-    "startOrder": 121,
-    "endOrder": 150
+    "startOrder": 76,
+    "endOrder": 105
   },
   "requiredCoverageChars": [
-    "雨",
-    "雲",
-    "黑",
-    "白",
-    "棋",
-    "鞋",
-    "穿",
-    "戴",
-    "衣",
-    "脫",
-    "氣",
-    "套",
-    "熱",
-    "冷",
-    "喝",
-    "飯",
-    "菜",
-    "老",
-    "卻",
-    "麼",
-    "什",
-    "為",
-    "以",
-    "怎",
-    "所",
-    "房",
-    "間",
-    "時",
-    "還",
-    "燈"
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌",
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過"
   ],
   "targetSentenceCount": 5,
+  "requiredRounds": 5,
   "generationConstraints": {
-    "sentenceHanCharLength": {
-      "min": 4,
-      "max": 12
-    },
     "allowedChars": [
       "一",
       "二",
       "三",
       "人",
       "個",
-      "大",
       "的",
+      "大",
       "小",
       "手",
       "我",
@@ -154,190 +152,119 @@
       "太",
       "難",
       "得",
-      "過",
-      "分",
-      "幾",
-      "點",
-      "玩",
-      "打",
-      "球",
-      "棒",
-      "頭",
-      "帽",
-      "草",
-      "地",
-      "面",
-      "外",
-      "空",
-      "天",
-      "雨",
-      "雲",
-      "黑",
-      "白",
-      "棋",
-      "鞋",
-      "穿",
-      "戴",
-      "衣",
-      "脫",
-      "氣",
-      "套",
-      "熱",
-      "冷",
-      "喝",
-      "飯",
-      "菜",
-      "老",
-      "卻",
-      "麼",
-      "什",
-      "為",
-      "以",
-      "怎",
-      "所",
-      "房",
-      "間",
-      "時",
-      "還",
-      "燈",
-      "關",
-      "窗",
-      "車",
-      "等",
-      "再",
-      "風",
-      "吹",
-      "樹",
-      "動",
-      "葉",
-      "綠",
-      "滿",
-      "掃",
-      "擦",
-      "先",
-      "洗",
-      "又",
-      "髒",
-      "亂",
-      "回",
-      "就",
-      "快",
-      "事",
-      "跑",
-      "馬",
-      "停",
-      "叫"
+      "過"
     ],
     "requiredCoverageChars": [
-      "雨",
-      "雲",
-      "黑",
-      "白",
-      "棋",
-      "鞋",
-      "穿",
-      "戴",
-      "衣",
-      "脫",
-      "氣",
-      "套",
-      "熱",
-      "冷",
-      "喝",
-      "飯",
-      "菜",
-      "老",
-      "卻",
-      "麼",
-      "什",
-      "為",
-      "以",
-      "怎",
-      "所",
-      "房",
-      "間",
-      "時",
-      "還",
-      "燈"
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過"
+    ],
+    "allowedCharacterCeilingLessonId": "L105",
+    "reviewPair": [
+      "R009",
+      "R010"
     ]
   },
-  "teacherNotes": "R009/R010 是 L180 後的 overdue review module pair，覆蓋 L121-L150，只能使用 L001-L180 milestone ceiling 內已學字；本 handoff 明確禁止使用 L181 以後才學的字。Production C 只製作 asset-complete-package；若 R005-R008 尚未在 latest origin/main reviewLessons，最終狀態必須是 ready-blocked-by-review-sequence，不更新 shared production JSON、planner 或 ledger。Review modules 不引入 newChars、zhuyin 或 charAudio。圖片使用 L058 style anchors，且不得含文字、數字、招牌、標籤、注音或水印。音檔走 OpenAI audio -> assets:audio -> assets:align:ai。",
+  "teacherNotes": "Review Migration Audit PASS. Review modules introduce no new characters, zhuyin, or charAudio. L105 is the allowed-character ceiling.",
   "approvedSentences": [
     {
-      "text": "為什麼房間這麼亂？",
-      "spokenText": "為什麼房間這麼亂",
-      "focusChar": "為",
+      "id": "R010-S01",
+      "text": "眼鏡壞了，很難用。",
+      "spokenText": "眼鏡壞了很難用",
+      "focusChar": "鏡",
       "displayLines": [
-        "為什麼房間",
-        "這麼亂？"
+        "眼鏡壞了，",
+        "很難用。"
       ],
-      "reason": "覆蓋為、什、麼、房、間。",
-      "imageNotes": "房間很亂，物品散落，孩子或大人站在房間裡疑惑地看著。畫面要清楚呈現房間亂；不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 眼鏡壞了，很難用。 Show the recurring protagonist father, the only character in this sentence who wears glasses, holding or wearing broken glasses that are hard to use. Make the glasses visibly crooked, cracked, or damaged without making the scene unsafe. Human role identity: recurring protagonist father with glasses; do not give glasses to the protagonist girl or mother in this image. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "怎麼找不到要穿的鞋？",
-      "spokenText": "怎麼找不到要穿的鞋",
-      "focusChar": "怎",
+      "id": "R010-S02",
+      "text": "小狗鼻子紅紅的。",
+      "spokenText": "小狗鼻子紅紅的",
+      "focusChar": "鼻",
       "displayLines": [
-        "怎麼找不到",
-        "要穿的鞋？"
+        "小狗鼻子",
+        "紅紅的。"
       ],
-      "reason": "覆蓋怎、麼、穿、鞋。",
-      "imageNotes": "孩子準備出門或換鞋時找不到要穿的鞋，旁邊有一些物品但目標鞋子不明顯。不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 小狗鼻子紅紅的。 Show a small friendly dog with a clearly red nose. No people are required. Keep the dog warm and child-friendly, not sick or scary. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "他穿上衣，戴帽子。",
-      "spokenText": "他穿上衣戴帽子",
-      "focusChar": "戴",
+      "id": "R010-S03",
+      "text": "我把臉畫得太圓了。",
+      "spokenText": "我把臉畫得太圓了",
+      "focusChar": "圓",
       "displayLines": [
-        "他穿上衣，",
-        "戴帽子。"
+        "我把臉畫得",
+        "太圓了。"
       ],
-      "reason": "覆蓋穿、衣、戴。",
-      "imageNotes": "孩子穿著上衣，正在戴帽子，動作清楚。不可有文字、數字、帽子標誌或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 我把臉畫得太圓了。 Show the recurring protagonist girl for `我` looking at her own drawing of a face that is visibly too round. The drawing should have a very round face shape but no text, labels, numbers, zhuyin, logos, or speech bubbles. Use the recurring protagonist girl identity."
     },
     {
-      "text": "天黑了，所以房間要開燈。",
-      "spokenText": "天黑了所以房間要開燈",
-      "focusChar": "所",
+      "id": "R010-S04",
+      "text": "我拿得到那本書。",
+      "spokenText": "我拿得到那本書",
+      "focusChar": "得",
       "displayLines": [
-        "天黑了，",
-        "所以房間",
-        "要開燈。"
+        "我拿得到",
+        "那本書。"
       ],
-      "reason": "覆蓋天、黑、所、以、房、間。",
-      "imageNotes": "天黑了，房間裡有點暗，有人準備開燈或燈剛亮起。畫面要清楚表現天黑與房間開燈；不可有文字、數字、開關標籤或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 我拿得到那本書。 Show the recurring protagonist girl for `我` stretching her arm upward, trying hard to reach a book placed high on a shelf or high table, and just managing to get it. The book should be high enough that her effort is clear, but the scene must remain safe. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "冷氣關了，房間很熱。",
-      "spokenText": "冷氣關了房間很熱",
-      "focusChar": "冷",
+      "id": "R010-S05",
+      "text": "你把紙給我。",
+      "spokenText": "你把紙給我",
+      "focusChar": "給",
       "displayLines": [
-        "冷氣關了，",
-        "房間很熱。"
+        "你把紙",
+        "給我。"
       ],
-      "reason": "覆蓋冷、氣、房、間、熱。",
-      "imageNotes": "房間裡冷氣關了，孩子覺得很熱，可以有擦汗或搧風動作。冷氣機不可有品牌、文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 你把紙給我。 Show the recurring young boy classmate for `你` handing a sheet of paper to the recurring protagonist girl for `我`. Use the recurring `你` boy identity and recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     }
   ],
   "sentenceGames": [
     {
       "id": "R010-G01",
       "type": "find-character",
-      "sentenceId": "R010-S04",
-      "targetChar": "燈",
-      "prompt": "找一找句子裡的「燈」。"
+      "sentenceId": "R010-S01",
+      "targetChar": "鏡"
     },
     {
       "id": "R010-G02",
       "type": "teach-character",
-      "sentenceId": "R010-S03",
-      "targetChar": "戴",
-      "prompt": "看一看「戴」在句子裡的位置。",
-      "missingIndexes": [
-        4
-      ],
-      "targetCharIndex": 4,
+      "sentenceId": "R010-S04",
+      "targetChar": "得",
+      "targetCharIndex": 2,
+      "prefixText": "我拿",
+      "suffixText": "到那本書",
       "teachAudio": {
         "prefixSrc": "/assets/reviews/R010/audio/R010-G02-prefix.m4a",
         "suffixSrc": "/assets/reviews/R010/audio/R010-G02-suffix.m4a"
@@ -347,178 +274,50 @@
       "id": "R010-G03",
       "type": "missing-character",
       "sentenceId": "R010-S05",
-      "targetChar": "冷",
-      "prompt": "選出句子裡少掉的字。",
+      "targetChar": "給",
       "missingIndexes": [
-        0
+        3
       ],
       "options": [
         {
-          "id": "cold",
-          "text": "冷",
-          "correct": true
+          "text": "給"
         },
         {
-          "id": "hot",
-          "text": "熱",
-          "correct": false
+          "text": "把"
         },
         {
-          "id": "dark",
-          "text": "黑",
-          "correct": false
+          "text": "紙"
         }
       ]
     },
     {
       "id": "R010-G04",
       "type": "partial-order",
-      "sentenceId": "R010-S02",
-      "targetChar": "怎",
-      "prompt": "排出正確的句子。",
-      "missingIndexes": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "options": [
-        {
-          "id": "slot-1",
-          "text": "怎麼",
-          "correctOrder": 0,
-          "correct": true
-        },
-        {
-          "id": "slot-2",
-          "text": "找不到",
-          "correctOrder": 1,
-          "correct": true
-        },
-        {
-          "id": "slot-3",
-          "text": "要穿的鞋",
-          "correctOrder": 2,
-          "correct": true
-        }
-      ]
-    },
-    {
-      "id": "R010-G05",
-      "type": "choose-pronunciation",
-      "sentenceId": "R010-S01",
-      "targetChar": "為",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
-      "options": [
-        {
-          "id": "correct",
-          "text": "為什麼房間這麼亂？",
-          "correct": true,
-          "audioSrc": "/assets/reviews/R010/audio/R010-S01.m4a"
-        },
-        {
-          "id": "wrong-one",
-          "text": "為什麼房間這麼熱？",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-one.m4a"
-        },
-        {
-          "id": "wrong-two",
-          "text": "為什麼外面這麼亂？",
-          "correct": false,
-          "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-two.m4a"
-        }
-      ]
-    }
-  ],
-  "games": [
-    {
-      "id": "R010-G01",
-      "type": "find-character",
-      "sentenceId": "R010-S04",
-      "targetChar": "燈",
-      "prompt": "找一找句子裡的「燈」。"
-    },
-    {
-      "id": "R010-G02",
-      "type": "teach-character",
       "sentenceId": "R010-S03",
-      "targetChar": "戴",
-      "prompt": "看一看「戴」在句子裡的位置。",
-      "missingIndexes": [
-        4
-      ],
-      "targetCharIndex": 4,
-      "teachAudio": {
-        "prefixSrc": "/assets/reviews/R010/audio/R010-G02-prefix.m4a",
-        "suffixSrc": "/assets/reviews/R010/audio/R010-G02-suffix.m4a"
-      }
-    },
-    {
-      "id": "R010-G03",
-      "type": "missing-character",
-      "sentenceId": "R010-S05",
-      "targetChar": "冷",
-      "prompt": "選出句子裡少掉的字。",
-      "missingIndexes": [
-        0
-      ],
-      "options": [
-        {
-          "id": "cold",
-          "text": "冷",
-          "correct": true
-        },
-        {
-          "id": "hot",
-          "text": "熱",
-          "correct": false
-        },
-        {
-          "id": "dark",
-          "text": "黑",
-          "correct": false
-        }
-      ]
-    },
-    {
-      "id": "R010-G04",
-      "type": "partial-order",
-      "sentenceId": "R010-S02",
-      "targetChar": "怎",
-      "prompt": "排出正確的句子。",
+      "targetChar": "臉",
       "missingIndexes": [
         0,
         1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
+        2
+      ],
+      "missingChars": [
+        "我",
+        "把",
+        "臉"
       ],
       "options": [
         {
-          "id": "slot-1",
-          "text": "怎麼",
+          "text": "我",
           "correctOrder": 0,
           "correct": true
         },
         {
-          "id": "slot-2",
-          "text": "找不到",
+          "text": "把",
           "correctOrder": 1,
           "correct": true
         },
         {
-          "id": "slot-3",
-          "text": "要穿的鞋",
+          "text": "臉",
           "correctOrder": 2,
           "correct": true
         }
@@ -527,26 +326,18 @@
     {
       "id": "R010-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R010-S01",
-      "targetChar": "為",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
-      "options": [
-        {
-          "id": "correct",
-          "text": "為什麼房間這麼亂？",
-          "correct": true,
-          "audioSrc": "/assets/reviews/R010/audio/R010-S01.m4a"
-        },
+      "sentenceId": "R010-S02",
+      "targetChar": "鼻",
+      "correctText": "小狗鼻子紅紅的。",
+      "wrongOptions": [
         {
           "id": "wrong-one",
-          "text": "為什麼房間這麼熱？",
-          "correct": false,
+          "text": "小狗鼻子很紅的。",
           "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-one.m4a"
         },
         {
           "id": "wrong-two",
-          "text": "為什麼外面這麼亂？",
-          "correct": false,
+          "text": "小狗鼻子圓圓的。",
           "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-two.m4a"
         }
       ]

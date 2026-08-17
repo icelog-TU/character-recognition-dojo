@@ -152987,115 +152987,61 @@
       "id": "R009",
       "reviewNumber": 9,
       "title": "複習九",
-      "afterLessonOrder": 180,
+      "afterLessonOrder": 105,
       "targetLessonRange": {
-        "startOrder": 121,
-        "endOrder": 150
+        "startOrder": 76,
+        "endOrder": 105
       },
       "requiredCoverageChars": [
-        "雨",
-        "雲",
-        "黑",
-        "白",
-        "棋",
-        "鞋",
-        "穿",
-        "戴",
-        "衣",
-        "脫",
-        "氣",
-        "套",
-        "熱",
-        "冷",
-        "喝",
-        "飯",
-        "菜",
-        "老",
-        "卻",
-        "麼",
-        "什",
-        "為",
-        "以",
-        "怎",
-        "所",
-        "房",
-        "間",
-        "時",
-        "還",
-        "燈"
+        "校",
+        "問",
+        "找",
+        "同",
+        "帶",
+        "筆",
+        "借",
+        "那",
+        "本",
+        "給",
+        "紙",
+        "心",
+        "放",
+        "把",
+        "桌",
+        "子",
+        "盒",
+        "掉",
+        "壞",
+        "眼",
+        "用",
+        "鏡",
+        "鼻",
+        "臉",
+        "紅",
+        "圓",
+        "太",
+        "難",
+        "得",
+        "過"
       ],
       "requiredRounds": 5,
       "sentences": [
         {
           "id": "R009-S01",
-          "text": "外面天空有黑雲。",
+          "text": "同學問我借那本書。",
+          "spokenText": "同學問我借那本書",
+          "focusChar": "借",
           "displayLines": [
-            "外面天空",
-            "有黑雲。"
+            "同學問我",
+            "借那本書。"
           ],
-          "spokenText": "外面天空有黑雲",
-          "focusChar": "雲",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 外面天空有黑雲。 Scene/backdrop: outdoor open area under a sky with large dark clouds, suggesting rain may come soon. Subject: the sky, dark clouds, and safe outdoor environment are clear and central. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environment, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, phone-readable, main sky and clouds centered with safe margins. Constraints: no visible text, numbers, signs, labels, zhuyin, or watermark.",
+          "imageNotes": "Concrete phone-readable square image for: 同學問我借那本書。 Show a generic preschool classmate asking the recurring protagonist girl for `我` to borrow a specific book that is at a noticeable distance from the protagonist girl, not close in her hands. The distance must make `那本書` clear rather than `這本書`; the classmate may point toward the distant book. Human role identities: recurring protagonist girl and generic preschool classmate distinct from recurring `你` and `他`. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 同學問我借那本書。 Show a generic preschool classmate asking the recurring protagonist girl for `我` to borrow a specific book that is at a noticeable distance from the protagonist girl, not close in her hands. The distance must make `那本書` clear rather than `這本書`; the classmate may point toward the distant book. Human role identities: recurring protagonist girl and generic preschool classmate distinct from recurring `你` and `他`. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
           "imageSrc": "/assets/reviews/R009/images/R009-S01.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R009/audio/R009-S01.m4a",
-            "durationMs": 3287,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 340
-              },
-              {
-                "charIndex": 1,
-                "startMs": 340,
-                "endMs": 640
-              },
-              {
-                "charIndex": 2,
-                "startMs": 640,
-                "endMs": 980
-              },
-              {
-                "charIndex": 3,
-                "startMs": 980,
-                "endMs": 1220
-              },
-              {
-                "charIndex": 4,
-                "startMs": 1220,
-                "endMs": 1600
-              },
-              {
-                "charIndex": 5,
-                "startMs": 1600,
-                "endMs": 1900
-              },
-              {
-                "charIndex": 6,
-                "startMs": 1900,
-                "endMs": 2100
-              }
-            ]
-          }
-        },
-        {
-          "id": "R009-S02",
-          "text": "下雨時，不要穿白鞋出門。",
-          "displayLines": [
-            "下雨時，",
-            "不要穿白鞋",
-            "出門。"
-          ],
-          "spokenText": "下雨時不要穿白鞋出門",
-          "focusChar": "鞋",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 下雨了，不要穿白鞋出門。 Scene/backdrop: home doorway with rain outside. Subject: a child is about to go out, white shoes are beside the doorway, and an adult gently reminds the child not to wear white shoes into the rain. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home entryway, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, doorway, rain, child, adult, and white shoes centered with safe margins. Constraints: no visible text, numbers, signs, labels, brand marks, zhuyin, or watermark.",
-          "imageSrc": "/assets/reviews/R009/images/R009-S02.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R009/audio/R009-S02.m4a",
-            "durationMs": 4087,
+            "durationMs": 4443,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -153105,11 +153051,677 @@
               {
                 "charIndex": 1,
                 "startMs": 380,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2260,
+                "endMs": 2500
+              }
+            ]
+          }
+        },
+        {
+          "id": "R009-S02",
+          "text": "我把紙放在桌上。",
+          "spokenText": "我把紙放在桌上",
+          "focusChar": "放",
+          "displayLines": [
+            "我把紙放",
+            "在桌上。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 我把紙放在桌上。 Show the recurring protagonist girl for `我` placing a sheet of paper on top of a table. The paper and tabletop must be clear. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 我把紙放在桌上。 Show the recurring protagonist girl for `我` placing a sheet of paper on top of a table. The paper and tabletop must be clear. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imageSrc": "/assets/reviews/R009/images/R009-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R009/audio/R009-S02.m4a",
+            "durationMs": 3334,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1220,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1680,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2160,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2540
+              }
+            ]
+          }
+        },
+        {
+          "id": "R009-S03",
+          "text": "我找不到筆，心裡難過。",
+          "spokenText": "我找不到筆心裡難過",
+          "focusChar": "找",
+          "displayLines": [
+            "我找不到筆，",
+            "心裡難過。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 我找不到筆，心裡難過。 Show the recurring protagonist girl for `我` looking sad while searching around a desk or school bag for a missing pencil. The pencil should not be visible or should be hidden enough that she has not found it. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 我找不到筆，心裡難過。 Show the recurring protagonist girl for `我` looking sad while searching around a desk or school bag for a missing pencil. The pencil should not be visible or should be hidden enough that she has not found it. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imageSrc": "/assets/reviews/R009/images/R009-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R009/audio/R009-S03.m4a",
+            "durationMs": 4733,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1080,
+                "endMs": 1290
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1290,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2260,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3100,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3500,
+                "endMs": 3720
+              }
+            ]
+          }
+        },
+        {
+          "id": "R009-S04",
+          "text": "媽媽帶我去學校。",
+          "spokenText": "媽媽帶我去學校",
+          "focusChar": "校",
+          "displayLines": [
+            "媽媽帶我",
+            "去學校。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 媽媽帶我去學校。 Show the recurring protagonist mother accompanying the recurring protagonist girl to school, walking together toward a school entrance. Use protagonist mother and protagonist girl identities; mother must be visually distinct from teacher and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 媽媽帶我去學校。 Show the recurring protagonist mother accompanying the recurring protagonist girl to school, walking together toward a school entrance. Use protagonist mother and protagonist girl identities; mother must be visually distinct from teacher and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imageSrc": "/assets/reviews/R009/images/R009-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R009/audio/R009-S04.m4a",
+            "durationMs": 2670,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
                 "endMs": 660
               },
               {
                 "charIndex": 2,
                 "startMs": 660,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1540,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1820,
+                "endMs": 2000
+              }
+            ]
+          }
+        },
+        {
+          "id": "R009-S05",
+          "text": "小盒子掉到桌下。",
+          "spokenText": "小盒子掉到桌下",
+          "focusChar": "掉",
+          "displayLines": [
+            "小盒子掉",
+            "到桌下。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 小盒子掉到桌下。 Show a small box falling or already fallen under a table, with the table and under-table position clear. No people are required. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 小盒子掉到桌下。 Show a small box falling or already fallen under a table, with the table and under-table position clear. No people are required. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imageSrc": "/assets/reviews/R009/images/R009-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R009/audio/R009-S05.m4a",
+            "durationMs": 3725,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 720
+              },
+              {
+                "charIndex": 1,
+                "startMs": 720,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1060,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1460,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2260,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2700,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2820,
+                "endMs": 3160
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "R009-G01",
+          "type": "find-character",
+          "sentenceId": "R009-S05",
+          "targetChar": "掉"
+        },
+        {
+          "id": "R009-G02",
+          "type": "teach-character",
+          "sentenceId": "R009-S04",
+          "targetChar": "校",
+          "targetCharIndex": 6,
+          "teachAudio": {
+            "prefixSrc": "/assets/reviews/R009/audio/R009-G02-prefix.m4a"
+          }
+        },
+        {
+          "id": "R009-G03",
+          "type": "missing-character",
+          "sentenceId": "R009-S03",
+          "targetChar": "找",
+          "missingIndexes": [
+            1
+          ],
+          "options": [
+            {
+              "id": "option-1",
+              "text": "找",
+              "correct": true
+            },
+            {
+              "id": "option-2",
+              "text": "筆",
+              "correct": false
+            },
+            {
+              "id": "option-3",
+              "text": "過",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "R009-G04",
+          "type": "partial-order",
+          "sentenceId": "R009-S02",
+          "targetChar": "紙",
+          "missingIndexes": [
+            0,
+            1,
+            2
+          ],
+          "missingChars": [
+            "我",
+            "把",
+            "紙"
+          ],
+          "options": [
+            {
+              "id": "option-1",
+              "text": "我",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "option-2",
+              "text": "把",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "option-3",
+              "text": "紙",
+              "correctOrder": 2,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "R009-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "R009-S01",
+          "targetChar": "借",
+          "options": [
+            {
+              "id": "correct",
+              "text": "同學問我借那本書。",
+              "audioSrc": "/assets/reviews/R009/audio/R009-S01.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "同學問他借那本書。",
+              "audioSrc": "/assets/reviews/R009/audio/R009-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "同學問我借這本書。",
+              "audioSrc": "/assets/reviews/R009/audio/R009-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R010",
+      "reviewNumber": 10,
+      "title": "複習十",
+      "afterLessonOrder": 105,
+      "targetLessonRange": {
+        "startOrder": 76,
+        "endOrder": 105
+      },
+      "requiredCoverageChars": [
+        "校",
+        "問",
+        "找",
+        "同",
+        "帶",
+        "筆",
+        "借",
+        "那",
+        "本",
+        "給",
+        "紙",
+        "心",
+        "放",
+        "把",
+        "桌",
+        "子",
+        "盒",
+        "掉",
+        "壞",
+        "眼",
+        "用",
+        "鏡",
+        "鼻",
+        "臉",
+        "紅",
+        "圓",
+        "太",
+        "難",
+        "得",
+        "過"
+      ],
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "R010-S01",
+          "text": "眼鏡壞了，很難用。",
+          "spokenText": "眼鏡壞了很難用",
+          "focusChar": "鏡",
+          "displayLines": [
+            "眼鏡壞了，",
+            "很難用。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 眼鏡壞了，很難用。 Show the recurring protagonist father, the only character in this sentence who wears glasses, holding or wearing broken glasses that are hard to use. Make the glasses visibly crooked, cracked, or damaged without making the scene unsafe. Human role identity: recurring protagonist father with glasses; do not give glasses to the protagonist girl or mother in this image. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 眼鏡壞了，很難用。 Show the recurring protagonist father, the only character in this sentence who wears glasses, holding or wearing broken glasses that are hard to use. Make the glasses visibly crooked, cracked, or damaged without making the scene unsafe. Human role identity: recurring protagonist father with glasses; do not give glasses to the protagonist girl or mother in this image. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imageSrc": "/assets/reviews/R010/images/R010-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R010/audio/R010-S01.m4a",
+            "durationMs": 3757,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1860,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2180,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2720
+              }
+            ]
+          }
+        },
+        {
+          "id": "R010-S02",
+          "text": "小狗鼻子紅紅的。",
+          "spokenText": "小狗鼻子紅紅的",
+          "focusChar": "鼻",
+          "displayLines": [
+            "小狗鼻子",
+            "紅紅的。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 小狗鼻子紅紅的。 Show a small friendly dog with a clearly red nose. No people are required. Keep the dog warm and child-friendly, not sick or scary. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 小狗鼻子紅紅的。 Show a small friendly dog with a clearly red nose. No people are required. Keep the dog warm and child-friendly, not sick or scary. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imageSrc": "/assets/reviews/R010/images/R010-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R010/audio/R010-S02.m4a",
+            "durationMs": 3247,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1380,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2140,
+                "endMs": 2340
+              }
+            ]
+          }
+        },
+        {
+          "id": "R010-S03",
+          "text": "我把臉畫得太圓了。",
+          "spokenText": "我把臉畫得太圓了",
+          "focusChar": "圓",
+          "displayLines": [
+            "我把臉畫得",
+            "太圓了。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 我把臉畫得太圓了。 Show the recurring protagonist girl for `我` looking at her own drawing of a face that is visibly too round. The drawing should have a very round face shape but no text, labels, numbers, zhuyin, logos, or speech bubbles. Use the recurring protagonist girl identity.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 我把臉畫得太圓了。 Show the recurring protagonist girl for `我` looking at her own drawing of a face that is visibly too round. The drawing should have a very round face shape but no text, labels, numbers, zhuyin, logos, or speech bubbles. Use the recurring protagonist girl identity.",
+          "imageSrc": "/assets/reviews/R010/images/R010-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R010/audio/R010-S03.m4a",
+            "durationMs": 2740,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 480
+              },
+              {
+                "charIndex": 2,
+                "startMs": 480,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1040,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1240,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1680,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1820,
+                "endMs": 2100
+              }
+            ]
+          }
+        },
+        {
+          "id": "R010-S04",
+          "text": "我拿得到那本書。",
+          "spokenText": "我拿得到那本書",
+          "focusChar": "得",
+          "displayLines": [
+            "我拿得到",
+            "那本書。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 我拿得到那本書。 Show the recurring protagonist girl for `我` stretching her arm upward, trying hard to reach a book placed high on a shelf or high table, and just managing to get it. The book should be high enough that her effort is clear, but the scene must remain safe. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 我拿得到那本書。 Show the recurring protagonist girl for `我` stretching her arm upward, trying hard to reach a book placed high on a shelf or high table, and just managing to get it. The book should be high enough that her effort is clear, but the scene must remain safe. Use the recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imageSrc": "/assets/reviews/R010/images/R010-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R010/audio/R010-S04.m4a",
+            "durationMs": 3224,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 900
+              },
+              {
+                "charIndex": 2,
+                "startMs": 900,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1840,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2080,
+                "endMs": 2340
+              }
+            ]
+          }
+        },
+        {
+          "id": "R010-S05",
+          "text": "你把紙給我。",
+          "spokenText": "你把紙給我",
+          "focusChar": "給",
+          "displayLines": [
+            "你把紙",
+            "給我。"
+          ],
+          "imageNotes": "Concrete phone-readable square image for: 你把紙給我。 Show the recurring young boy classmate for `你` handing a sheet of paper to the recurring protagonist girl for `我`. Use the recurring `你` boy identity and recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Warm pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette. Use L058 lesson images only as illustration style reference, not as person identity reference. Follow recurring cast continuity where named. No readable text, letters, numbers, labels, signs, zhuyin, logos, watermarks, or speech bubbles in the image. Concrete phone-readable square image for: 你把紙給我。 Show the recurring young boy classmate for `你` handing a sheet of paper to the recurring protagonist girl for `我`. Use the recurring `你` boy identity and recurring protagonist girl identity. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+          "imageSrc": "/assets/reviews/R010/images/R010-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R010/audio/R010-S05.m4a",
+            "durationMs": 2949,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
                 "endMs": 1000
               },
               {
@@ -153121,692 +153733,6 @@
                 "charIndex": 4,
                 "startMs": 1350,
                 "endMs": 1700
-              },
-              {
-                "charIndex": 5,
-                "startMs": 1700,
-                "endMs": 2040
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2040,
-                "endMs": 2420
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2420,
-                "endMs": 2620
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2620,
-                "endMs": 2900
-              },
-              {
-                "charIndex": 9,
-                "startMs": 2900,
-                "endMs": 3100
-              }
-            ]
-          }
-        },
-        {
-          "id": "R009-S03",
-          "text": "天氣太熱，先脫外套。",
-          "displayLines": [
-            "天氣太熱，",
-            "先脫外套。"
-          ],
-          "spokenText": "天氣太熱先脫外套",
-          "focusChar": "脫",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 天氣太熱，先脫外套。 Scene/backdrop: warm safe indoor or outdoor setting. Subject: a child clearly feels hot and is taking off an outer jacket, with the jacket halfway off or in the child's hands. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, child and jacket action centered with safe margins. Constraints: no visible text, numbers, signs, labels, zhuyin, or watermark.",
-          "imageSrc": "/assets/reviews/R009/images/R009-S03.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R009/audio/R009-S03.m4a",
-            "durationMs": 3655,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 460
-              },
-              {
-                "charIndex": 1,
-                "startMs": 460,
-                "endMs": 740
-              },
-              {
-                "charIndex": 2,
-                "startMs": 740,
-                "endMs": 1320
-              },
-              {
-                "charIndex": 3,
-                "startMs": 1320,
-                "endMs": 1560
-              },
-              {
-                "charIndex": 4,
-                "startMs": 2080,
-                "endMs": 2340
-              },
-              {
-                "charIndex": 5,
-                "startMs": 2340,
-                "endMs": 2600
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2600,
-                "endMs": 2940
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2940,
-                "endMs": 3140
-              }
-            ]
-          }
-        },
-        {
-          "id": "R009-S04",
-          "text": "先喝點水，再吃飯和菜。",
-          "displayLines": [
-            "先喝點水，",
-            "再吃飯和菜。"
-          ],
-          "spokenText": "先喝點水再吃飯和菜",
-          "focusChar": "喝",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 先喝點水，再吃飯和菜。 Scene/backdrop: family dining table. Subject: a child first drinks water from a cup while rice and vegetables are visible on the table for later eating. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean dining scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, child drinking water, rice, and vegetables centered with safe margins. Constraints: no visible text, numbers, signs, labels, brand marks, zhuyin, or watermark.",
-          "imageSrc": "/assets/reviews/R009/images/R009-S04.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R009/audio/R009-S04.m4a",
-            "durationMs": 3591,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 440
-              },
-              {
-                "charIndex": 1,
-                "startMs": 440,
-                "endMs": 600
-              },
-              {
-                "charIndex": 2,
-                "startMs": 600,
-                "endMs": 900
-              },
-              {
-                "charIndex": 3,
-                "startMs": 900,
-                "endMs": 1200
-              },
-              {
-                "charIndex": 4,
-                "startMs": 1560,
-                "endMs": 1780
-              },
-              {
-                "charIndex": 5,
-                "startMs": 1780,
-                "endMs": 2060
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2060,
-                "endMs": 2260
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2260,
-                "endMs": 2620
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2620,
-                "endMs": 2820
-              }
-            ]
-          }
-        },
-        {
-          "id": "R009-S05",
-          "text": "老爸下棋，卻不開心。",
-          "displayLines": [
-            "老爸下棋，",
-            "卻不開心。"
-          ],
-          "spokenText": "老爸下棋卻不開心",
-          "focusChar": "棋",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 老爸下棋，卻不開心。 Scene/backdrop: table at home. Subject: a father sits by a table playing chess or a board game with visible board and pieces, but he looks unhappy or frowns gently. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home scene, expressive gentle adult face, bright warm palette. Composition/framing: square image / 1:1 composition, father, board, and pieces centered with safe margins. Constraints: no visible text, numbers, symbols on pieces, signs, labels, zhuyin, or watermark.",
-          "imageSrc": "/assets/reviews/R009/images/R009-S05.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R009/audio/R009-S05.m4a",
-            "durationMs": 4988,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 360
-              },
-              {
-                "charIndex": 1,
-                "startMs": 360,
-                "endMs": 620
-              },
-              {
-                "charIndex": 2,
-                "startMs": 620,
-                "endMs": 1160
-              },
-              {
-                "charIndex": 3,
-                "startMs": 1160,
-                "endMs": 1460
-              },
-              {
-                "charIndex": 4,
-                "startMs": 1460,
-                "endMs": 2320
-              },
-              {
-                "charIndex": 5,
-                "startMs": 2320,
-                "endMs": 2720
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2720,
-                "endMs": 2920
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2920,
-                "endMs": 3120
-              }
-            ]
-          }
-        }
-      ],
-      "sentenceGames": [
-        {
-          "id": "R009-G01",
-          "type": "find-character",
-          "sentenceId": "R009-S01",
-          "targetChar": "雲",
-          "prompt": "找一找句子裡的「雲」。"
-        },
-        {
-          "id": "R009-G02",
-          "type": "teach-character",
-          "sentenceId": "R009-S03",
-          "targetChar": "脫",
-          "prompt": "看一看「脫」在句子裡的位置。",
-          "missingIndexes": [
-            5
-          ],
-          "targetCharIndex": 5,
-          "teachAudio": {
-            "prefixSrc": "/assets/reviews/R009/audio/R009-G02-prefix.m4a",
-            "suffixSrc": "/assets/reviews/R009/audio/R009-G02-suffix.m4a"
-          }
-        },
-        {
-          "id": "R009-G03",
-          "type": "missing-character",
-          "sentenceId": "R009-S02",
-          "targetChar": "鞋",
-          "prompt": "選出句子裡少掉的字。",
-          "missingIndexes": [
-            7
-          ],
-          "options": [
-            {
-              "id": "shoe",
-              "text": "鞋",
-              "correct": true
-            },
-            {
-              "id": "clothes",
-              "text": "衣",
-              "correct": false
-            },
-            {
-              "id": "hat",
-              "text": "帽",
-              "correct": false
-            }
-          ]
-        },
-        {
-          "id": "R009-G04",
-          "type": "partial-order",
-          "sentenceId": "R009-S04",
-          "targetChar": "喝",
-          "prompt": "排出正確的句子。",
-          "missingIndexes": [
-            0,
-            1,
-            2,
-            3
-          ],
-          "options": [
-            {
-              "id": "R009-G04-A",
-              "text": "先",
-              "correctOrder": 0,
-              "correct": true
-            },
-            {
-              "id": "R009-G04-B",
-              "text": "喝",
-              "correctOrder": 1,
-              "correct": true
-            },
-            {
-              "id": "R009-G04-C",
-              "text": "點",
-              "correctOrder": 2,
-              "correct": true
-            },
-            {
-              "id": "R009-G04-D",
-              "text": "水",
-              "correctOrder": 3,
-              "correct": true
-            }
-          ],
-          "correctOrder": [
-            "R009-G04-A",
-            "R009-G04-B",
-            "R009-G04-C",
-            "R009-G04-D"
-          ]
-        },
-        {
-          "id": "R009-G05",
-          "type": "choose-pronunciation",
-          "sentenceId": "R009-S05",
-          "targetChar": "棋",
-          "prompt": "聽一聽，哪一句和畫面一樣？",
-          "options": [
-            {
-              "id": "correct",
-              "text": "老爸下棋，卻不開心。",
-              "correct": true,
-              "audioSrc": "/assets/reviews/R009/audio/R009-S05.m4a"
-            },
-            {
-              "id": "wrong-one",
-              "text": "老爸打球，卻不開心。",
-              "correct": false,
-              "audioSrc": "/assets/reviews/R009/audio/R009-G05-wrong-one.m4a"
-            },
-            {
-              "id": "wrong-two",
-              "text": "老爸下棋，卻很開心。",
-              "correct": false,
-              "audioSrc": "/assets/reviews/R009/audio/R009-G05-wrong-two.m4a"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R010",
-      "reviewNumber": 10,
-      "title": "複習十",
-      "afterLessonOrder": 180,
-      "targetLessonRange": {
-        "startOrder": 121,
-        "endOrder": 150
-      },
-      "requiredCoverageChars": [
-        "雨",
-        "雲",
-        "黑",
-        "白",
-        "棋",
-        "鞋",
-        "穿",
-        "戴",
-        "衣",
-        "脫",
-        "氣",
-        "套",
-        "熱",
-        "冷",
-        "喝",
-        "飯",
-        "菜",
-        "老",
-        "卻",
-        "麼",
-        "什",
-        "為",
-        "以",
-        "怎",
-        "所",
-        "房",
-        "間",
-        "時",
-        "還",
-        "燈"
-      ],
-      "requiredRounds": 5,
-      "sentences": [
-        {
-          "id": "R010-S01",
-          "text": "為什麼房間這麼亂？",
-          "displayLines": [
-            "為什麼房間",
-            "這麼亂？"
-          ],
-          "spokenText": "為什麼房間這麼亂",
-          "focusChar": "為",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 為什麼房間這麼亂？ Scene/backdrop: a messy child's room. Subject: scattered safe belongings on the floor and bed, with a child or adult standing inside the room looking puzzled at the mess. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean room environment, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, messy room and puzzled person centered with safe margins. Constraints: no visible text, numbers, signs, labels, book text, brand marks, zhuyin, or watermark.",
-          "imageSrc": "/assets/reviews/R010/images/R010-S01.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R010/audio/R010-S01.m4a",
-            "durationMs": 3930,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 207
-              },
-              {
-                "charIndex": 1,
-                "startMs": 207,
-                "endMs": 413
-              },
-              {
-                "charIndex": 2,
-                "startMs": 413,
-                "endMs": 620
-              },
-              {
-                "charIndex": 3,
-                "startMs": 620,
-                "endMs": 1440
-              },
-              {
-                "charIndex": 4,
-                "startMs": 1440,
-                "endMs": 1700
-              },
-              {
-                "charIndex": 5,
-                "startMs": 1700,
-                "endMs": 1990
-              },
-              {
-                "charIndex": 6,
-                "startMs": 1990,
-                "endMs": 2280
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2280,
-                "endMs": 2520
-              }
-            ]
-          }
-        },
-        {
-          "id": "R010-S02",
-          "text": "怎麼找不到要穿的鞋？",
-          "displayLines": [
-            "怎麼找不到",
-            "要穿的鞋？"
-          ],
-          "spokenText": "怎麼找不到要穿的鞋",
-          "focusChar": "怎",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 怎麼找不到要穿的鞋？ Scene/backdrop: home entryway or bedroom before going out. Subject: a child searches for the shoes they need to wear; nearby items are visible, but the target shoes are not obvious. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, searching child and scattered safe objects centered with safe margins. Constraints: no visible text, numbers, signs, labels, brand marks, zhuyin, or watermark.",
-          "imageSrc": "/assets/reviews/R010/images/R010-S02.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R010/audio/R010-S02.m4a",
-            "durationMs": 3942,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 200
-              },
-              {
-                "charIndex": 1,
-                "startMs": 200,
-                "endMs": 400
-              },
-              {
-                "charIndex": 2,
-                "startMs": 400,
-                "endMs": 740
-              },
-              {
-                "charIndex": 3,
-                "startMs": 740,
-                "endMs": 930
-              },
-              {
-                "charIndex": 4,
-                "startMs": 930,
-                "endMs": 1120
-              },
-              {
-                "charIndex": 5,
-                "startMs": 1120,
-                "endMs": 1840
-              },
-              {
-                "charIndex": 6,
-                "startMs": 1840,
-                "endMs": 2040
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2040,
-                "endMs": 2260
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2260,
-                "endMs": 2520
-              }
-            ]
-          }
-        },
-        {
-          "id": "R010-S03",
-          "text": "他穿上衣，戴帽子。",
-          "displayLines": [
-            "他穿上衣，",
-            "戴帽子。"
-          ],
-          "spokenText": "他穿上衣戴帽子",
-          "focusChar": "戴",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 他穿上衣，戴帽子。 Scene/backdrop: simple home or doorway scene. Subject: a child is wearing a shirt and clearly putting a hat on the head. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, child, shirt, and hat action centered with safe margins. Constraints: no visible text, numbers, signs, labels, logos on the hat or shirt, zhuyin, or watermark.",
-          "imageSrc": "/assets/reviews/R010/images/R010-S03.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R010/audio/R010-S03.m4a",
-            "durationMs": 3582,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 460
-              },
-              {
-                "charIndex": 1,
-                "startMs": 460,
-                "endMs": 880
-              },
-              {
-                "charIndex": 2,
-                "startMs": 880,
-                "endMs": 1260
-              },
-              {
-                "charIndex": 3,
-                "startMs": 1260,
-                "endMs": 1520
-              },
-              {
-                "charIndex": 4,
-                "startMs": 2000,
-                "endMs": 2380
-              },
-              {
-                "charIndex": 5,
-                "startMs": 2380,
-                "endMs": 2640
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2640,
-                "endMs": 2800
-              }
-            ]
-          }
-        },
-        {
-          "id": "R010-S04",
-          "text": "天黑了，所以房間要開燈。",
-          "displayLines": [
-            "天黑了，",
-            "所以房間",
-            "要開燈。"
-          ],
-          "spokenText": "天黑了所以房間要開燈",
-          "focusChar": "所",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image. Primary request: 天黑了，所以房間要開燈。 Scene/backdrop: evening room with a dark sky outside the window. Subject: the room is dim because it is dark outside, and a person is about to turn on the light or the lamp has just lit up. Style/medium: match L058 style anchors, modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean room scene, consistent expressive preschool proportions, soft cheeks, bright warm palette. Composition/framing: square image / 1:1 composition, window darkness, room, person, and light source centered with safe margins. Constraints: no visible text, numbers, switch labels, signs, brand marks, zhuyin, or watermark.",
-          "imageSrc": "/assets/reviews/R010/images/R010-S04.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R010/audio/R010-S04.m4a",
-            "durationMs": 4262,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 520
-              },
-              {
-                "charIndex": 1,
-                "startMs": 520,
-                "endMs": 780
-              },
-              {
-                "charIndex": 2,
-                "startMs": 780,
-                "endMs": 1180
-              },
-              {
-                "charIndex": 3,
-                "startMs": 1920,
-                "endMs": 2020
-              },
-              {
-                "charIndex": 4,
-                "startMs": 2020,
-                "endMs": 2120
-              },
-              {
-                "charIndex": 5,
-                "startMs": 2120,
-                "endMs": 2480
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2480,
-                "endMs": 2660
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2660,
-                "endMs": 2980
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2980,
-                "endMs": 3260
-              },
-              {
-                "charIndex": 9,
-                "startMs": 3260,
-                "endMs": 3400
-              }
-            ]
-          }
-        },
-        {
-          "id": "R010-S05",
-          "text": "冷氣關了，房間還很熱。",
-          "displayLines": [
-            "冷氣關了，",
-            "房間還很熱。"
-          ],
-          "spokenText": "冷氣關了房間還很熱",
-          "focusChar": "冷",
-          "imagePrompt": "Use case: illustration-story. Asset type: review module sentence image for a Taiwan Traditional Chinese character-recognition app. Use the approved L058 style anchors as visual reference: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Style/medium: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Composition/framing: square image / 1:1 composition, centered subject, clear action, safe margins on all sides. Constraints: No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, logos, readable book covers, readable papers, readable boards, or readable classroom materials. Primary request: 房間裡的冷氣關了，但孩子還覺得很熱，用表情和動作表現還很熱。冷氣機可以出現，但不可有文字、數字、標籤或遥控器畫面。",
-          "imageSrc": "/assets/reviews/R010/images/R010-S05.webp",
-          "approved": true,
-          "audio": {
-            "src": "/assets/reviews/R010/audio/R010-S05.m4a",
-            "durationMs": 3873,
-            "charTimings": [
-              {
-                "charIndex": 0,
-                "startMs": 0,
-                "endMs": 440
-              },
-              {
-                "charIndex": 1,
-                "startMs": 440,
-                "endMs": 660
-              },
-              {
-                "charIndex": 2,
-                "startMs": 660,
-                "endMs": 1100
-              },
-              {
-                "charIndex": 3,
-                "startMs": 1100,
-                "endMs": 1560
-              },
-              {
-                "charIndex": 4,
-                "startMs": 2040,
-                "endMs": 2170
-              },
-              {
-                "charIndex": 5,
-                "startMs": 2170,
-                "endMs": 2300
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2300,
-                "endMs": 2700
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2700,
-                "endMs": 3060
-              },
-              {
-                "charIndex": 8,
-                "startMs": 3060,
-                "endMs": 3200
               }
             ]
           }
@@ -153816,20 +153742,15 @@
         {
           "id": "R010-G01",
           "type": "find-character",
-          "sentenceId": "R010-S04",
-          "targetChar": "燈",
-          "prompt": "找一找句子裡的「燈」。"
+          "sentenceId": "R010-S01",
+          "targetChar": "鏡"
         },
         {
           "id": "R010-G02",
           "type": "teach-character",
-          "sentenceId": "R010-S03",
-          "targetChar": "戴",
-          "prompt": "看一看「戴」在句子裡的位置。",
-          "missingIndexes": [
-            4
-          ],
-          "targetCharIndex": 4,
+          "sentenceId": "R010-S04",
+          "targetChar": "得",
+          "targetCharIndex": 2,
           "teachAudio": {
             "prefixSrc": "/assets/reviews/R010/audio/R010-G02-prefix.m4a",
             "suffixSrc": "/assets/reviews/R010/audio/R010-G02-suffix.m4a"
@@ -153839,25 +153760,24 @@
           "id": "R010-G03",
           "type": "missing-character",
           "sentenceId": "R010-S05",
-          "targetChar": "冷",
-          "prompt": "選出句子裡少掉的字。",
+          "targetChar": "給",
           "missingIndexes": [
-            0
+            3
           ],
           "options": [
             {
-              "id": "cold",
-              "text": "冷",
+              "id": "option-1",
+              "text": "給",
               "correct": true
             },
             {
-              "id": "hot",
-              "text": "熱",
+              "id": "option-2",
+              "text": "把",
               "correct": false
             },
             {
-              "id": "dark",
-              "text": "黑",
+              "id": "option-3",
+              "text": "紙",
               "correct": false
             }
           ]
@@ -153865,72 +153785,62 @@
         {
           "id": "R010-G04",
           "type": "partial-order",
-          "sentenceId": "R010-S02",
-          "targetChar": "怎",
-          "prompt": "排出正確的句子。",
+          "sentenceId": "R010-S03",
+          "targetChar": "臉",
           "missingIndexes": [
             0,
             1,
-            2,
-            3
+            2
+          ],
+          "missingChars": [
+            "我",
+            "把",
+            "臉"
           ],
           "options": [
             {
-              "id": "R010-G04-A",
-              "text": "怎",
+              "id": "option-1",
+              "text": "我",
               "correctOrder": 0,
               "correct": true
             },
             {
-              "id": "R010-G04-B",
-              "text": "麼",
+              "id": "option-2",
+              "text": "把",
               "correctOrder": 1,
               "correct": true
             },
             {
-              "id": "R010-G04-C",
-              "text": "找",
+              "id": "option-3",
+              "text": "臉",
               "correctOrder": 2,
               "correct": true
-            },
-            {
-              "id": "R010-G04-D",
-              "text": "不",
-              "correctOrder": 3,
-              "correct": true
             }
-          ],
-          "correctOrder": [
-            "R010-G04-A",
-            "R010-G04-B",
-            "R010-G04-C",
-            "R010-G04-D"
           ]
         },
         {
           "id": "R010-G05",
           "type": "choose-pronunciation",
-          "sentenceId": "R010-S01",
-          "targetChar": "為",
-          "prompt": "聽一聽，哪一句和畫面一樣？",
+          "sentenceId": "R010-S02",
+          "targetChar": "鼻",
           "options": [
             {
               "id": "correct",
-              "text": "為什麼房間這麼亂？",
-              "correct": true,
-              "audioSrc": "/assets/reviews/R010/audio/R010-S01.m4a"
+              "text": "小狗鼻子紅紅的。",
+              "audioSrc": "/assets/reviews/R010/audio/R010-S02.m4a",
+              "correct": true
             },
             {
               "id": "wrong-one",
-              "text": "為什麼房間這麼熱？",
-              "correct": false,
-              "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-one.m4a"
+              "text": "小狗鼻子很紅的。",
+              "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-one.m4a",
+              "correct": false
             },
             {
               "id": "wrong-two",
-              "text": "為什麼外面這麼亂？",
-              "correct": false,
-              "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-two.m4a"
+              "text": "小狗鼻子圓圓的。",
+              "audioSrc": "/assets/reviews/R010/audio/R010-G05-wrong-two.m4a",
+              "correct": false
             }
           ]
         }
