@@ -498,6 +498,7 @@
         user: null,
         unsubscribeReview: null,
         saveTimer: 0,
+        pendingCloudSave: false,
       };
 
       const app = initializeApp(firebaseConfig);
@@ -1135,6 +1136,7 @@
           return;
         }
         window.clearTimeout(state.saveTimer);
+        state.pendingCloudSave = true;
         state.saveTimer = window.setTimeout(saveCloud, 350);
       }
 
@@ -1181,6 +1183,7 @@
         } catch (error) {
           setCloud(`Firestore 同步失敗：${error.message}`, "bad");
         }
+        state.pendingCloudSave = false;
       }
 
       async function attachCloudReview() {
@@ -1205,6 +1208,7 @@
             ref,
             (next) => {
               if (!next.exists()) return;
+              if (state.pendingCloudSave) return;
               if (!reviewMatchesCurrentContent(next.data())) return;
               mergeCloud(next.data());
               setCloud(`雲端狀態：${next.data().repairCount || 0} 個需要修`);
