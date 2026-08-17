@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R009 | review module | claimed | Production A | codex/r009-r010-complete-package / 462422dc | L105 milestone ceiling; covers L076-L105; pair R010 | none | curriculum-workflow/review-requests/R009.json; curriculum-workflow/generated/R009-generation-packet.md; curriculum-workflow/drafts/R009-draft.json | public/assets/reviews/R009/; curriculum-workflow/audio-inbox/R009/ | accepted audited review migration handoff and starting asset-complete package; Release owns production JSON integration |
+| R010 | review module | claimed | Production A | codex/r009-r010-complete-package / 462422dc | L105 milestone ceiling; covers L076-L105; pair R009 | none | curriculum-workflow/review-requests/R010.json; curriculum-workflow/generated/R010-generation-packet.md; curriculum-workflow/drafts/R010-draft.json | public/assets/reviews/R010/; curriculum-workflow/audio-inbox/R010/ | accepted audited review migration handoff and starting asset-complete package; Release owns production JSON integration |
 
 ## Status Values
 
