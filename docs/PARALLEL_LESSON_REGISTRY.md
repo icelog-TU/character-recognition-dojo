@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R001/R002 | review modules | merge-ready | Production A | codex/r001-r002-review-package / 2a76370a | L045 milestone ceiling; covers L016-L045 | none | curriculum-workflow/review-requests/R001.json; curriculum-workflow/review-requests/R002.json; curriculum-workflow/generated/R001-generation-packet.md; curriculum-workflow/generated/R002-generation-packet.md; curriculum-workflow/drafts/R001-draft.json; curriculum-workflow/drafts/R002-draft.json | public/assets/reviews/R001/; public/assets/reviews/R002/ | asset-complete-package; R001/R002 local validation passed with temporary reviewLessons state; Release owns production JSON, planner, ledger, final verify, merge, and deploy |
+| R001/R002 | review modules | merge-ready | Production A | codex/r001-r002-review-package / 5f875e99 | L045 milestone ceiling; covers L016-L045 | none | curriculum-workflow/review-requests/R001.json; curriculum-workflow/review-requests/R002.json; curriculum-workflow/generated/R001-generation-packet.md; curriculum-workflow/generated/R002-generation-packet.md; curriculum-workflow/drafts/R001-draft.json; curriculum-workflow/drafts/R002-draft.json | public/assets/reviews/R001/; public/assets/reviews/R002/ | asset-complete-package; R001/R002 local validation passed with temporary reviewLessons state; Release owns production JSON, planner, ledger, final verify, merge, and deploy |
 
 ## Status Values
 
