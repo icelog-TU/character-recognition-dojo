@@ -5677,6 +5677,43 @@ function SentencePracticePreview({
     void speakStageFour(answerRevealText(game, sentence, zhuyinMap, shuffledGameOptions));
   }
 
+  function skipCurrentRound() {
+    if (disabled || isCurrentRoundComplete || doneCount >= requiredCount) return;
+    guideRunRef.current += 1;
+    stopPlayback();
+    clearAutoStopRecordingTimer();
+    const recorder = mediaRecorderRef.current;
+    if (recorder && recorder.state !== "inactive") {
+      recorder.ondataavailable = null;
+      recorder.onstop = null;
+      recorder.stop();
+    }
+    recordingStreamRef.current?.getTracks().forEach((track) => track.stop());
+    recordingStreamRef.current = null;
+    mediaRecorderRef.current = null;
+    recordedChunksRef.current = [];
+    setPickedOptionIds([]);
+    setRoundComplete(false);
+    setCompletedGameId(null);
+    setRecording(false);
+    setRecordedAudioUrl((current) => {
+      if (current) URL.revokeObjectURL(current);
+      return null;
+    });
+    setTeachPhase("reading");
+    setActiveGameCharIndex(null);
+    setAskingGameCharIndex(null);
+    setRecordingGameCharIndex(null);
+    setFoundGameIndexes(new Set());
+    setSelectedPronunciationOptionId(null);
+    setAnswerRevealed(false);
+    setFloatingRecordChar(null);
+    pressStartRef.current = null;
+    primingPressActiveRef.current = false;
+    releasedDuringPrimeRef.current = false;
+    onRoundDone(doneAfterThisRound);
+  }
+
   function clearAutoStopRecordingTimer() {
     if (autoStopRecordingTimerRef.current === null) return;
     window.clearTimeout(autoStopRecordingTimerRef.current);
@@ -6133,6 +6170,18 @@ function SentencePracticePreview({
         <span className="pill">
           {doneCount} / {requiredCount}
         </span>
+        {!isCurrentRoundComplete && (
+          <button
+            type="button"
+            className="stage-four-skip-button"
+            disabled={disabled}
+            title="跳過這一題"
+            aria-label="跳過這一題"
+            onClick={skipCurrentRound}
+          >
+            →
+          </button>
+        )}
       </div>
       <StageFourHelper text={gameGuide} onReplay={replayInstruction} />
       {gameBody}

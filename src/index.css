@@ -2243,8 +2243,34 @@ button.char-token {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+}
+
+.stage-four-skip-button {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  border: 1px solid rgba(34, 132, 123, 0.32);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--primary-strong);
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(19, 79, 74, 0.1);
+}
+
+.stage-four-skip-button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(19, 79, 74, 0.14);
+}
+
+.stage-four-skip-button:disabled {
+  opacity: 0.48;
 }
 
 .sentence-game-prompt {
