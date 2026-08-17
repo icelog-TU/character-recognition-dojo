@@ -162,6 +162,7 @@ Rules:
 - In that same pattern, `find-character`, `teach-character`, and `missing-character` should usually target the current lesson's new character; `partial-order` and `choose-pronunciation` may focus on review characters.
 - `missingIndexes` uses Han-character indexes in the sentence, skipping punctuation.
 - `options` is used for missing-character, partial-order, and choose-pronunciation games.
+- `partial-order` must use 3-4 missing Han-character indexes and exactly one single-Han option card per missing index. Multi-character phrase cards are invalid.
 - `choose-pronunciation` options should use reviewed AI audio when audio choices are provided. Do not rely on browser TTS as the production voice for these choices.
 - `choose-pronunciation` wrong options must have final `text` first, then full wrong-sentence AI audio generated from that exact text. Do not create wrong-option audio by editing or splicing the correct sentence audio.
 - Normal fifth-round wrong audio file names should use `L###-G05-wrong-one.m4a` and `L###-G05-wrong-two.m4a` unless an older lesson already has a documented legacy filename.

@@ -668,7 +668,9 @@ Current production data starts Stage 4 at L006. Stage 4 uses a fixed `sentenceGa
 - Use the last two Stage 4 games, usually `partial-order` and `choose-pronunciation`, more flexibly for review characters or sentence-level listening discrimination.
 - `targetChar` must appear in the referenced sentence. It may be the current lesson's new character or a review character.
 - A lesson should usually include at least three interactions involving the current new character, while allowing 1-2 interactions focused on review characters.
-- For early lessons, `partial-order` should blank only 2-4 Han characters, not the full sentence.
+- `partial-order` must blank only 3-4 Han characters, not the full sentence.
+- `partial-order` option cards must each contain exactly one Han character. Do not use multi-character word or phrase cards such as `耐心等紅燈`; the current app interaction compares one card to one missing Han-character slot.
+- `partial-order` `missingIndexes.length` must equal `options.length`, and every option must have a valid `correctOrder` pointing to the matching missing Han character.
 - `teach-character` can use local recording/playback first; speech scoring can be added later.
 - `choose-pronunciation` should use reviewed AI audio assets for production choices. Do not use browser TTS as the production reading for options.
 - `choose-pronunciation` wrong choices should be near misses: same sentence length and only 1-2 Han characters different from the correct sentence. Do not use a completely different reviewed sentence as a wrong audio choice.

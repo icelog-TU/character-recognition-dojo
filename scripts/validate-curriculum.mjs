@@ -227,6 +227,34 @@ function validateSentenceGames({ unit, currentAllowed, enforceUniqueStageFourSen
         }
       }
     }
+
+    if (game.type === "partial-order") {
+      const missingIndexes = Array.isArray(game.missingIndexes) ? game.missingIndexes : [];
+      const options = game.options ?? [];
+      if (missingIndexes.length < 3 || missingIndexes.length > 4) {
+        errors.push(`${label}: partial-order must blank 3-4 Han characters, found ${missingIndexes.length}.`);
+      }
+      if (options.length !== missingIndexes.length) {
+        errors.push(`${label}: partial-order must have exactly one option card per missing Han character.`);
+      }
+      for (const option of options) {
+        const optionChars = hanChars(option.text ?? "");
+        if (optionChars.length !== 1) {
+          errors.push(`${label}: partial-order option ${option.id} must be exactly one Han character.`);
+        }
+        if (!Number.isInteger(option.correctOrder) || option.correctOrder < 0 || option.correctOrder >= missingIndexes.length) {
+          errors.push(`${label}: partial-order option ${option.id} needs a valid correctOrder.`);
+          continue;
+        }
+        const expectedChar = chars[missingIndexes[option.correctOrder]];
+        if (optionChars[0] !== expectedChar) {
+          errors.push(`${label}: partial-order option ${option.id} text ${option.text} does not match missing index ${missingIndexes[option.correctOrder]}.`);
+        }
+        if (option.correct !== true) {
+          errors.push(`${label}: partial-order option ${option.id} must be marked correct.`);
+        }
+      }
+    }
   }
 }
 
