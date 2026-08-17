@@ -590,11 +590,20 @@
       }
 
       async function resolveRef() {
-        const data = await fetchJson(
-          `https://api.github.com/repos/${state.repo}/commits/${encodeURIComponent(state.ref)}`,
-          "Git ref",
-        );
-        state.sha = data.sha;
+        try {
+          const data = await fetchJson(
+            `https://api.github.com/repos/${state.repo}/commits/${encodeURIComponent(state.ref)}`,
+            "Git ref",
+          );
+          state.sha = data.sha;
+        } catch (error) {
+          if (isMainReview() && isDefaultRepo()) {
+            console.warn("Git ref lookup failed; continuing with GitHub Pages main data.", error);
+            state.sha = "main";
+            return;
+          }
+          throw error;
+        }
       }
 
       function unitSearchText(unit) {
