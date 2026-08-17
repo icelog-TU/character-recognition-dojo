@@ -473,6 +473,42 @@
         });
       }
 
+      function reviewScope() {
+        return state.ref.trim().toLowerCase() === "main" ? "main" : state.sha;
+      }
+
+      function localStorageKey(unit) {
+        return `asset-review:${state.repo}:${unit.id}:${reviewScope()}:${unit.contentSignature || "no-content"}`;
+      }
+
+      function localReviewForUnit(unit) {
+        try {
+          const local = JSON.parse(localStorage.getItem(localStorageKey(unit)) || "{}") || {};
+          if (!local.flags && local.reviewComplete !== true) return null;
+          const repairItems = local.flags || {};
+          const repairCount = Object.values(repairItems).filter((item) => item?.needsRepair === true).length;
+          return {
+            version: 1,
+            repo: state.repo,
+            unit: unit.id,
+            ref: state.ref,
+            contentSignature: unit.contentSignature,
+            repairCount,
+            reviewComplete: local.reviewComplete === true,
+            repairItems,
+          };
+        } catch {
+          return null;
+        }
+      }
+
+      function loadLocalReviewDocs() {
+        state.builtById.forEach((unit) => {
+          const localReview = localReviewForUnit(unit);
+          if (localReview) state.reviewByUnit.set(unit.id, localReview);
+        });
+      }
+
       async function fetchJson(url, label) {
         const response = await fetch(url, { cache: "no-store" });
         if (!response.ok) throw new Error(`${label} HTTP ${response.status}`);
@@ -660,6 +696,7 @@
           await resolveRef();
           await loadCurriculum();
           await loadReviewDocs();
+          loadLocalReviewDocs();
           render();
           setStatus(`已載入 L001-L600 與 R001-R076 進度盤，已出貨 ${state.builtById.size} 個單元，commit ${state.sha.slice(0, 12)}。`, "ok");
         } catch (error) {
