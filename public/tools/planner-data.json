@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-17T14:04:43.934Z",
+  "exportedAt": "2026-08-17T14:52:14.118Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -155955,307 +155955,323 @@
       "id": "R015",
       "reviewNumber": 15,
       "title": "複習十五",
-      "afterLessonOrder": 270,
+      "afterLessonOrder": 150,
       "targetLessonRange": {
-        "startOrder": 211,
-        "endOrder": 240
+        "startOrder": 121,
+        "endOrder": 150
       },
       "requiredCoverageChars": [
-        "船",
-        "魚",
-        "游",
-        "泳",
-        "池",
-        "身",
-        "濕",
-        "乾",
-        "服",
-        "褲",
-        "換",
-        "改",
-        "錯",
-        "知",
-        "認",
-        "新",
-        "舊",
-        "半",
-        "只",
-        "剩",
-        "夠",
-        "錢",
-        "買",
-        "貴",
-        "賣",
-        "店",
-        "場",
-        "市",
-        "夜",
-        "具"
+        "雨",
+        "雲",
+        "黑",
+        "白",
+        "棋",
+        "鞋",
+        "穿",
+        "戴",
+        "衣",
+        "脫",
+        "氣",
+        "套",
+        "熱",
+        "冷",
+        "喝",
+        "飯",
+        "菜",
+        "老",
+        "卻",
+        "麼",
+        "什",
+        "為",
+        "以",
+        "怎",
+        "所",
+        "房",
+        "間",
+        "時",
+        "還",
+        "燈"
       ],
       "requiredRounds": 5,
       "sentences": [
         {
           "id": "R015-S01",
-          "text": "船長把魚放回海裡。",
+          "text": "下雨時，天空有黑雲。",
+          "spokenText": "下雨時天空有黑雲",
+          "focusChar": "雲",
           "displayLines": [
-            "船長把魚",
-            "放回海裡。"
+            "下雨時，",
+            "天空有黑雲。"
           ],
-          "spokenText": "船長把魚放回海裡",
-          "focusChar": "船",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, boat names, or brand marks anywhere in the image. Seaside or small boat scene: a visually distinct boat captain gently releases a fish back into the sea beside a boat. The captain, fish, ocean water, and release-back action are clear and centered. The captain is not the protagonist father, mother, or teacher.",
+          "imageNotes": "The recurring protagonist girl is indoors by a window looking outside. It is raining outside, and the sky has obvious dark clouds. Make the rain and black clouds clear without adding text labels.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. The recurring protagonist girl is indoors by a window looking outside. It is raining outside, and the sky has obvious dark clouds. Make the rain and black clouds clear without adding text labels.",
           "imageSrc": "/assets/reviews/R015/images/R015-S01.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R015/audio/R015-S01.m4a",
-            "durationMs": 3451,
+            "durationMs": 4123,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 420
+                "endMs": 520
               },
               {
                 "charIndex": 1,
-                "startMs": 420,
-                "endMs": 700
+                "startMs": 520,
+                "endMs": 760
               },
               {
                 "charIndex": 2,
-                "startMs": 700,
-                "endMs": 1240
+                "startMs": 760,
+                "endMs": 1200
               },
               {
                 "charIndex": 3,
-                "startMs": 1240,
-                "endMs": 1540
+                "startMs": 1700,
+                "endMs": 2020
               },
               {
                 "charIndex": 4,
-                "startMs": 1540,
-                "endMs": 2200
+                "startMs": 2020,
+                "endMs": 2320
               },
               {
                 "charIndex": 5,
-                "startMs": 2200,
-                "endMs": 2540
+                "startMs": 2320,
+                "endMs": 2880
               },
               {
                 "charIndex": 6,
-                "startMs": 2540,
-                "endMs": 2860
+                "startMs": 2880,
+                "endMs": 3240
               },
               {
                 "charIndex": 7,
-                "startMs": 2860,
-                "endMs": 3040
+                "startMs": 3240,
+                "endMs": 3460
               }
             ]
           }
         },
         {
           "id": "R015-S02",
-          "text": "不可以在魚池裡游泳。",
+          "text": "我穿上衣和白鞋，戴帽子。",
+          "spokenText": "我穿上衣和白鞋戴帽子",
+          "focusChar": "鞋",
           "displayLines": [
-            "不可以在",
-            "魚池裡",
-            "游泳。"
+            "我穿上衣",
+            "和白鞋，",
+            "戴帽子。"
           ],
-          "spokenText": "不可以在魚池裡游泳",
-          "focusChar": "泳",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, or brand marks anywhere in the image. Fish pond scene, clearly not a swimming pool: the protagonist little girl stands safely beside a pond with visible fish in the water while a visually distinct teacher or protagonist mother gently reminds her not to swim there. The pond edge, fish, and no-swimming situation are clear without any written sign.",
+          "imageNotes": "Use the recurring protagonist girl identity for 我. She is standing and dressed in a shirt, white shoes, and a hat. The white shoes and hat must both be clearly visible in the square composition.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. Use the recurring protagonist girl identity for 我. She is standing and dressed in a shirt, white shoes, and a hat. The white shoes and hat must both be clearly visible in the square composition.",
           "imageSrc": "/assets/reviews/R015/images/R015-S02.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R015/audio/R015-S02.m4a",
-            "durationMs": 3197,
+            "durationMs": 5094,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 240
+                "endMs": 600
               },
               {
                 "charIndex": 1,
-                "startMs": 240,
-                "endMs": 480
+                "startMs": 600,
+                "endMs": 1100
               },
               {
                 "charIndex": 2,
-                "startMs": 480,
-                "endMs": 720
+                "startMs": 1100,
+                "endMs": 1460
               },
               {
                 "charIndex": 3,
-                "startMs": 720,
-                "endMs": 1120
+                "startMs": 1460,
+                "endMs": 1740
               },
               {
                 "charIndex": 4,
-                "startMs": 1120,
-                "endMs": 1440
+                "startMs": 1740,
+                "endMs": 2460
               },
               {
                 "charIndex": 5,
-                "startMs": 1440,
-                "endMs": 1660
+                "startMs": 2460,
+                "endMs": 2920
               },
               {
                 "charIndex": 6,
-                "startMs": 1660,
-                "endMs": 2100
+                "startMs": 2920,
+                "endMs": 3160
               },
               {
                 "charIndex": 7,
-                "startMs": 2100,
-                "endMs": 2260
+                "startMs": 3680,
+                "endMs": 3980
               },
               {
                 "charIndex": 8,
-                "startMs": 2260,
-                "endMs": 2460
+                "startMs": 3980,
+                "endMs": 4220
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4220,
+                "endMs": 4360
               }
             ]
           }
         },
         {
           "id": "R015-S03",
-          "text": "一身濕衣服，換上乾衣褲。",
+          "text": "天氣熱了，他脫下外套。",
+          "spokenText": "天氣熱了他脫下外套",
+          "focusChar": "套",
           "displayLines": [
-            "一身濕衣服，",
-            "換上乾衣褲。"
+            "天氣熱了，",
+            "他脫下外套。"
           ],
-          "spokenText": "一身濕衣服換上乾衣褲",
-          "focusChar": "濕",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, or brand marks anywhere in the image. Warm home scene: the protagonist little girl is fully dressed, her clothing visibly damp from water, and dry clothes plus dry pants are prepared nearby on a chair or table for changing. Show only the safe preparation moment, no nudity and no changing process. The wet clothes versus dry clothes contrast is clear.",
+          "imageNotes": "Use the fixed recurring sporty boy identity for 他, not a generic boy. The weather feels hot, and the sporty boy is taking off his outer jacket. The jacket should be clearly an outer layer.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. Use the fixed recurring sporty boy identity for 他, not a generic boy. The weather feels hot, and the sporty boy is taking off his outer jacket. The jacket should be clearly an outer layer.",
           "imageSrc": "/assets/reviews/R015/images/R015-S03.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R015/audio/R015-S03.m4a",
-            "durationMs": 4440,
+            "durationMs": 4076,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 380
+                "endMs": 480
               },
               {
                 "charIndex": 1,
-                "startMs": 380,
-                "endMs": 800
+                "startMs": 480,
+                "endMs": 900
               },
               {
                 "charIndex": 2,
-                "startMs": 800,
-                "endMs": 1120
+                "startMs": 900,
+                "endMs": 1200
               },
               {
                 "charIndex": 3,
-                "startMs": 1120,
-                "endMs": 1400
+                "startMs": 1200,
+                "endMs": 1440
               },
               {
                 "charIndex": 4,
-                "startMs": 1400,
-                "endMs": 1700
+                "startMs": 1840,
+                "endMs": 2140
               },
               {
                 "charIndex": 5,
-                "startMs": 2280,
-                "endMs": 2440
+                "startMs": 2140,
+                "endMs": 2300
               },
               {
                 "charIndex": 6,
-                "startMs": 2440,
-                "endMs": 3020
+                "startMs": 2300,
+                "endMs": 2680
               },
               {
                 "charIndex": 7,
-                "startMs": 3020,
-                "endMs": 3440
+                "startMs": 2680,
+                "endMs": 2980
               },
               {
                 "charIndex": 8,
-                "startMs": 3440,
-                "endMs": 3680
-              },
-              {
-                "charIndex": 9,
-                "startMs": 3680,
-                "endMs": 3860
+                "startMs": 2980,
+                "endMs": 3180
               }
             ]
           }
         },
         {
           "id": "R015-S04",
-          "text": "我知道錯了，會改。",
+          "text": "天冷了，所以我喝熱水。",
+          "spokenText": "天冷了所以我喝熱水",
+          "focusChar": "喝",
           "displayLines": [
-            "我知道錯了，",
-            "會改。"
+            "天冷了，",
+            "所以我喝",
+            "熱水。"
           ],
-          "spokenText": "我知道錯了會改",
-          "focusChar": "錯",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, or brand marks anywhere in the image. Concrete home scene: the protagonist little girl realizes she put toys or books in the wrong place and is calmly moving them back to the correct place. The protagonist mother watches warmly without scolding. The scene shows correction and responsibility, not abstract blame.",
+          "imageNotes": "Use the recurring protagonist girl identity for 我. She is in a cold-weather scene, holding a cup and drinking hot water. A small amount of steam may show the water is hot, but keep the image calm and safe.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. Use the recurring protagonist girl identity for 我. She is in a cold-weather scene, holding a cup and drinking hot water. A small amount of steam may show the water is hot, but keep the image calm and safe.",
           "imageSrc": "/assets/reviews/R015/images/R015-S04.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R015/audio/R015-S04.m4a",
-            "durationMs": 3984,
+            "durationMs": 5253,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 280
+                "endMs": 480
               },
               {
                 "charIndex": 1,
-                "startMs": 280,
-                "endMs": 560
+                "startMs": 480,
+                "endMs": 840
               },
               {
                 "charIndex": 2,
-                "startMs": 560,
-                "endMs": 840
+                "startMs": 840,
+                "endMs": 1420
               },
               {
                 "charIndex": 3,
                 "startMs": 1780,
-                "endMs": 1920
+                "endMs": 1970
               },
               {
                 "charIndex": 4,
-                "startMs": 1920,
-                "endMs": 2060
+                "startMs": 1970,
+                "endMs": 2160
               },
               {
                 "charIndex": 5,
-                "startMs": 2380,
+                "startMs": 2160,
                 "endMs": 2700
               },
               {
                 "charIndex": 6,
                 "startMs": 2700,
-                "endMs": 3020
+                "endMs": 2840
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2840,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3200,
+                "endMs": 3460
               }
             ]
           }
         },
         {
           "id": "R015-S05",
-          "text": "我認得新老師的車。",
+          "text": "我吃飯，也吃菜。",
+          "spokenText": "我吃飯也吃菜",
+          "focusChar": "飯",
           "displayLines": [
-            "我認得",
-            "新老師的車。"
+            "我吃飯，",
+            "也吃菜。"
           ],
-          "spokenText": "我認得新老師的車",
-          "focusChar": "認",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, license plates, school names, or brand marks anywhere in the image. Safe school gate or roadside scene: the protagonist little girl recognizes the new teacher's car, and the new teacher stands near the car. Use a distinct teacher identity, tidy and calm, visually different from the protagonist mother and not copied from L058.",
+          "imageNotes": "Use the recurring protagonist girl identity for 我. She is sitting at a table eating a meal. Show rice clearly in a bowl and vegetables nearby so both 飯 and 菜 are visible.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. Use the recurring protagonist girl identity for 我. She is sitting at a table eating a meal. Show rice clearly in a bowl and vegetables nearby so both 飯 and 菜 are visible.",
           "imageSrc": "/assets/reviews/R015/images/R015-S05.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R015/audio/R015-S05.m4a",
-            "durationMs": 3584,
+            "durationMs": 3533,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -156270,32 +156286,22 @@
               {
                 "charIndex": 2,
                 "startMs": 800,
-                "endMs": 1080
+                "endMs": 1060
               },
               {
                 "charIndex": 3,
-                "startMs": 1080,
-                "endMs": 1720
+                "startMs": 1500,
+                "endMs": 1800
               },
               {
                 "charIndex": 4,
-                "startMs": 1720,
-                "endMs": 2000
+                "startMs": 1800,
+                "endMs": 2060
               },
               {
                 "charIndex": 5,
-                "startMs": 2000,
-                "endMs": 2220
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2220,
-                "endMs": 2540
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2540,
-                "endMs": 2720
+                "startMs": 2060,
+                "endMs": 2300
               }
             ]
           }
@@ -156306,47 +156312,54 @@
           "id": "R015-G01",
           "type": "find-character",
           "sentenceId": "R015-S02",
-          "targetChar": "游",
-          "prompt": "找一找句子裡的「游」。"
+          "targetChar": "鞋",
+          "prompt": "找到「鞋」。",
+          "missingIndexes": [
+            7
+          ]
         },
         {
           "id": "R015-G02",
           "type": "teach-character",
           "sentenceId": "R015-S03",
-          "targetChar": "濕",
-          "prompt": "幫小兔補上這個字。",
+          "targetChar": "套",
+          "targetCharIndex": 8,
+          "prompt": "教小兔子念這個字。",
           "missingIndexes": [
-            2
+            8
           ],
-          "targetCharIndex": 2,
           "teachAudio": {
             "prefixSrc": "/assets/reviews/R015/audio/R015-G02-prefix.m4a",
-            "suffixSrc": "/assets/reviews/R015/audio/R015-G02-suffix.m4a"
+            "suffixSrc": null
+          },
+          "teachAudioText": {
+            "prefixText": "天氣熱了他脫下外",
+            "suffixText": ""
           }
         },
         {
           "id": "R015-G03",
           "type": "missing-character",
-          "sentenceId": "R015-S04",
-          "targetChar": "改",
+          "sentenceId": "R015-S05",
+          "targetChar": "飯",
           "prompt": "選出少掉的字。",
           "missingIndexes": [
-            6
+            2
           ],
           "options": [
             {
-              "id": "correct",
-              "text": "改",
+              "id": "R015-G03-A",
+              "text": "飯",
               "correct": true
             },
             {
-              "id": "wrong-1",
-              "text": "錯",
+              "id": "R015-G03-B",
+              "text": "菜",
               "correct": false
             },
             {
-              "id": "wrong-2",
-              "text": "知",
+              "id": "R015-G03-C",
+              "text": "喝",
               "correct": false
             }
           ]
@@ -156354,436 +156367,390 @@
         {
           "id": "R015-G04",
           "type": "partial-order",
-          "sentenceId": "R015-S01",
-          "targetChar": "船",
-          "prompt": "排出正確的句子。",
+          "sentenceId": "R015-S04",
+          "targetChar": "所",
+          "prompt": "把少掉的字排回句子裡。",
           "missingIndexes": [
-            0,
-            1,
-            2,
-            3
+            3,
+            4,
+            6
           ],
           "options": [
             {
               "id": "R015-G04-A",
-              "text": "船",
+              "text": "所",
               "correctOrder": 0,
               "correct": true
             },
             {
               "id": "R015-G04-B",
-              "text": "長",
+              "text": "以",
               "correctOrder": 1,
               "correct": true
             },
             {
               "id": "R015-G04-C",
-              "text": "把",
+              "text": "喝",
               "correctOrder": 2,
-              "correct": true
-            },
-            {
-              "id": "R015-G04-D",
-              "text": "魚",
-              "correctOrder": 3,
               "correct": true
             }
           ],
           "correctOrder": [
             "R015-G04-A",
             "R015-G04-B",
-            "R015-G04-C",
-            "R015-G04-D"
+            "R015-G04-C"
           ]
         },
         {
           "id": "R015-G05",
           "type": "choose-pronunciation",
-          "sentenceId": "R015-S05",
-          "targetChar": "認",
-          "prompt": "聽聽看誰讀對了。",
+          "sentenceId": "R015-S01",
+          "targetChar": "雲",
+          "prompt": "選出你聽到的句子。",
           "options": [
             {
-              "id": "correct",
-              "text": "我認得新老師的車。",
+              "id": "R015-G05-A",
+              "text": "下雨時，天空有黑雲。",
               "correct": true,
-              "audioSrc": "/assets/reviews/R015/audio/R015-S05.m4a"
+              "sentenceId": "R015-S01",
+              "audioSrc": "/assets/reviews/R015/audio/R015-S01.m4a"
             },
             {
-              "id": "wrong-one",
-              "text": "我認得舊老師的車。",
+              "id": "R015-G05-B",
+              "text": "下雨時，天空有白雲。",
               "correct": false,
-              "audioSrc": "/assets/reviews/R015/audio/R015-G05-wrong-one.m4a",
-              "spokenText": "我認得舊老師的車。"
+              "audioSrc": "/assets/reviews/R015/audio/R015-G05-wrong-one.m4a"
             },
             {
-              "id": "wrong-two",
-              "text": "我認得新老師的書。",
+              "id": "R015-G05-C",
+              "text": "下雨時，外面有黑雲。",
               "correct": false,
-              "audioSrc": "/assets/reviews/R015/audio/R015-G05-wrong-two.m4a",
-              "spokenText": "我認得新老師的書。"
+              "audioSrc": "/assets/reviews/R015/audio/R015-G05-wrong-two.m4a"
             }
           ]
         }
-      ],
-      "releaseAudit": {
-        "integratedFromOriginMain": true,
-        "dependenciesResolved": true,
-        "resolvedDependencies": [
-          "L270"
-        ]
-      }
+      ]
     },
     {
       "id": "R016",
       "reviewNumber": 16,
       "title": "複習十六",
-      "afterLessonOrder": 270,
+      "afterLessonOrder": 150,
       "targetLessonRange": {
-        "startOrder": 211,
-        "endOrder": 240
+        "startOrder": 121,
+        "endOrder": 150
       },
       "requiredCoverageChars": [
-        "船",
-        "魚",
-        "游",
-        "泳",
-        "池",
-        "身",
-        "濕",
-        "乾",
-        "服",
-        "褲",
-        "換",
-        "改",
-        "錯",
-        "知",
-        "認",
-        "新",
-        "舊",
-        "半",
-        "只",
-        "剩",
-        "夠",
-        "錢",
-        "買",
-        "貴",
-        "賣",
-        "店",
-        "場",
-        "市",
-        "夜",
-        "具"
+        "雨",
+        "雲",
+        "黑",
+        "白",
+        "棋",
+        "鞋",
+        "穿",
+        "戴",
+        "衣",
+        "脫",
+        "氣",
+        "套",
+        "熱",
+        "冷",
+        "喝",
+        "飯",
+        "菜",
+        "老",
+        "卻",
+        "麼",
+        "什",
+        "為",
+        "以",
+        "怎",
+        "所",
+        "房",
+        "間",
+        "時",
+        "還",
+        "燈"
       ],
       "requiredRounds": 5,
       "sentences": [
         {
           "id": "R016-S01",
-          "text": "新買的棋子，不見了一半。",
+          "text": "兩個老人下黑白棋。",
+          "spokenText": "兩個老人下黑白棋",
+          "focusChar": "棋",
           "displayLines": [
-            "新買的棋子，",
-            "不見了一半。"
+            "兩個老人",
+            "下黑白棋。"
           ],
-          "spokenText": "新買的棋子不見了一半",
-          "focusChar": "新",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, or brand marks anywhere in the image. Tabletop home scene: the protagonist little girl looks at a newly bought box of game pieces or chess pieces, with about half of the pieces missing from the box. She is looking around for the missing pieces. The box and pieces are plain with no writing or numbers.",
+          "imageNotes": "Show two elder adults sitting face to face at a table playing black-and-white board game pieces. The two elders should be visually distinct from the recurring parents and teacher. Make it clear there are two people playing together.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. Show two elder adults sitting face to face at a table playing black-and-white board game pieces. The two elders should be visually distinct from the recurring parents and teacher. Make it clear there are two people playing together.",
           "imageSrc": "/assets/reviews/R016/images/R016-S01.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R016/audio/R016-S01.m4a",
-            "durationMs": 3295,
+            "durationMs": 4318,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 500
+                "endMs": 360
               },
               {
                 "charIndex": 1,
-                "startMs": 500,
-                "endMs": 740
+                "startMs": 360,
+                "endMs": 920
               },
               {
                 "charIndex": 2,
-                "startMs": 740,
-                "endMs": 1180
+                "startMs": 920,
+                "endMs": 1200
               },
               {
                 "charIndex": 3,
-                "startMs": 1180,
-                "endMs": 1260
+                "startMs": 1200,
+                "endMs": 1780
               },
               {
                 "charIndex": 4,
-                "startMs": 1260,
-                "endMs": 1480
+                "startMs": 1780,
+                "endMs": 2400
               },
               {
                 "charIndex": 5,
-                "startMs": 1480,
-                "endMs": 1800
+                "startMs": 2400,
+                "endMs": 2860
               },
               {
                 "charIndex": 6,
-                "startMs": 1800,
-                "endMs": 2000
+                "startMs": 2860,
+                "endMs": 3240
               },
               {
                 "charIndex": 7,
-                "startMs": 2000,
-                "endMs": 2260
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2260,
-                "endMs": 2360
-              },
-              {
-                "charIndex": 9,
-                "startMs": 2360,
-                "endMs": 2500
+                "startMs": 3240,
+                "endMs": 3420
               }
             ]
           }
         },
         {
           "id": "R016-S02",
-          "text": "舊書只剩半本。",
+          "text": "房間裡沒有開燈。",
+          "spokenText": "房間裡沒有開燈",
+          "focusChar": "燈",
           "displayLines": [
-            "舊書只剩",
-            "半本。"
+            "房間裡",
+            "沒有開燈。"
           ],
-          "spokenText": "舊書只剩半本",
-          "focusChar": "舊",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, page numbers, signs, watermarks, logos, or brand marks anywhere in the image. Table scene: a very old book is visibly only half remaining or missing half its pages, and the protagonist little girl looks at it. The book pages and cover must be blank or abstract, with no readable writing.",
+          "imageNotes": "Show a room with a visible lamp or ceiling light that is turned off. The room is dim but still readable. The meaning is that the light is not turned on, not that the room has no light fixture.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. Show a room with a visible lamp or ceiling light that is turned off. The room is dim but still readable. The meaning is that the light is not turned on, not that the room has no light fixture.",
           "imageSrc": "/assets/reviews/R016/images/R016-S02.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R016/audio/R016-S02.m4a",
-            "durationMs": 3138,
+            "durationMs": 3913,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 440
+                "endMs": 280
               },
               {
                 "charIndex": 1,
-                "startMs": 440,
-                "endMs": 700
+                "startMs": 280,
+                "endMs": 600
               },
               {
                 "charIndex": 2,
-                "startMs": 700,
-                "endMs": 1480
+                "startMs": 600,
+                "endMs": 880
               },
               {
                 "charIndex": 3,
-                "startMs": 1480,
-                "endMs": 1700
+                "startMs": 880,
+                "endMs": 1450
               },
               {
                 "charIndex": 4,
-                "startMs": 1700,
-                "endMs": 2200
+                "startMs": 1450,
+                "endMs": 2020
               },
               {
                 "charIndex": 5,
-                "startMs": 2200,
-                "endMs": 2380
+                "startMs": 2020,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2460,
+                "endMs": 2580
               }
             ]
           }
         },
         {
           "id": "R016-S03",
-          "text": "錢不夠，不要買太貴的玩具。",
+          "text": "外面下雨，他卻還在玩球。",
+          "spokenText": "外面下雨他卻還在玩球",
+          "focusChar": "卻",
           "displayLines": [
-            "錢不夠，",
-            "不要買太貴",
-            "的玩具。"
+            "外面下雨，",
+            "他卻還在",
+            "玩球。"
           ],
-          "spokenText": "錢不夠不要買太貴的玩具",
-          "focusChar": "貴",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, prices, signs, watermarks, logos, or brand marks anywhere in the image. Toy stall or toy shop scene: the protagonist little girl looks at a toy she wants, while the protagonist mother gently explains that there is not enough money and they should not buy the expensive toy. Show toys and a small wallet or coins, but no price tags or written signs.",
+          "imageNotes": "Use the fixed recurring sporty boy identity for 他, not a generic boy. He is outside playing ball even though it is raining. Rain should be visible, but the scene should remain safe and not distressed.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. Use the fixed recurring sporty boy identity for 他, not a generic boy. He is outside playing ball even though it is raining. Rain should be visible, but the scene should remain safe and not distressed.",
           "imageSrc": "/assets/reviews/R016/images/R016-S03.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R016/audio/R016-S03.m4a",
-            "durationMs": 4828,
+            "durationMs": 3928,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 400
+                "endMs": 340
               },
               {
                 "charIndex": 1,
-                "startMs": 400,
-                "endMs": 780
+                "startMs": 340,
+                "endMs": 740
               },
               {
                 "charIndex": 2,
-                "startMs": 780,
-                "endMs": 1020
+                "startMs": 740,
+                "endMs": 1080
               },
               {
                 "charIndex": 3,
-                "startMs": 1580,
-                "endMs": 1690
+                "startMs": 1080,
+                "endMs": 1280
               },
               {
                 "charIndex": 4,
-                "startMs": 1690,
-                "endMs": 1800
+                "startMs": 1720,
+                "endMs": 1960
               },
               {
                 "charIndex": 5,
-                "startMs": 1800,
-                "endMs": 2080
+                "startMs": 1960,
+                "endMs": 2180
               },
               {
                 "charIndex": 6,
-                "startMs": 2080,
-                "endMs": 2500
+                "startMs": 2180,
+                "endMs": 2520
               },
               {
                 "charIndex": 7,
-                "startMs": 2500,
-                "endMs": 2660
+                "startMs": 2520,
+                "endMs": 2820
               },
               {
                 "charIndex": 8,
-                "startMs": 2660,
-                "endMs": 2920
+                "startMs": 2820,
+                "endMs": 3140
               },
               {
                 "charIndex": 9,
-                "startMs": 2920,
-                "endMs": 3120
-              },
-              {
-                "charIndex": 10,
-                "startMs": 3120,
-                "endMs": 3320
+                "startMs": 3140,
+                "endMs": 3400
               }
             ]
           }
         },
         {
           "id": "R016-S04",
-          "text": "夜市的店賣很多玩具。",
+          "text": "為什麼沒有飯？",
+          "spokenText": "為什麼沒有飯",
+          "focusChar": "為",
           "displayLines": [
-            "夜市的店",
-            "賣很多玩具。"
+            "為什麼",
+            "沒有飯？"
           ],
-          "spokenText": "夜市的店賣很多玩具",
-          "focusChar": "夜",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, prices, signs, watermarks, logos, or brand marks anywhere in the image. Night market scene: a toy shop or toy stall at night sells many toys, with the protagonist little girl and family looking at the display. Show a warm night-market atmosphere with lantern-like lights but no readable signs or numbers.",
+          "imageNotes": "Use the recurring protagonist girl identity. Today the table has noodles instead of rice. The girl wants rice, so show a thought bubble above her with a bowl of rice inside, while the actual table has noodles. This explains why she asks why there is no rice.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. Use the recurring protagonist girl identity. Today the table has noodles instead of rice. The girl wants rice, so show a thought bubble above her with a bowl of rice inside, while the actual table has noodles. This explains why she asks why there is no rice.",
           "imageSrc": "/assets/reviews/R016/images/R016-S04.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R016/audio/R016-S04.m4a",
-            "durationMs": 3648,
+            "durationMs": 3631,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 440
+                "endMs": 207
               },
               {
                 "charIndex": 1,
-                "startMs": 440,
-                "endMs": 740
+                "startMs": 207,
+                "endMs": 413
               },
               {
                 "charIndex": 2,
-                "startMs": 740,
-                "endMs": 1000
+                "startMs": 413,
+                "endMs": 620
               },
               {
                 "charIndex": 3,
-                "startMs": 1000,
-                "endMs": 1240
+                "startMs": 620,
+                "endMs": 990
               },
               {
                 "charIndex": 4,
-                "startMs": 1240,
-                "endMs": 1640
+                "startMs": 990,
+                "endMs": 1360
               },
               {
                 "charIndex": 5,
-                "startMs": 1640,
-                "endMs": 1970
-              },
-              {
-                "charIndex": 6,
-                "startMs": 1970,
-                "endMs": 2300
-              },
-              {
-                "charIndex": 7,
-                "startMs": 2300,
-                "endMs": 2660
-              },
-              {
-                "charIndex": 8,
-                "startMs": 2660,
-                "endMs": 2840
+                "startMs": 1360,
+                "endMs": 1720
               }
             ]
           }
         },
         {
           "id": "R016-S05",
-          "text": "球場邊放著球具。",
+          "text": "鞋子怎麼穿？",
+          "spokenText": "鞋子怎麼穿",
+          "focusChar": "怎",
           "displayLines": [
-            "球場邊",
-            "放著球具。"
+            "鞋子",
+            "怎麼穿？"
           ],
-          "spokenText": "球場邊放著球具",
-          "focusChar": "具",
-          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, jersey numbers, signs, watermarks, logos, or brand marks anywhere in the image. Safe ball field edge scene: sports equipment such as balls, a bat, gloves, and a bag are placed neatly at the edge of the field. The protagonist older brother may stand nearby preparing to play. The equipment is the focus and must be clearly readable on a phone.",
+          "imageNotes": "Show a very young generic child, about three or four years old, sitting on the floor with shoes and looking unsure how to put them on. This child must be generic and must not look like the recurring protagonist girl, the recurring young boy classmate, or the recurring sporty boy.",
+          "imagePrompt": "square image / 1:1 composition. Modern children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, and phone-readable composition. Use L058 only as style reference; do not copy any L058 person. Follow recurring cast identity from L154/L162/L163 anchors when the sentence names recurring 我/你/他. Center the subject, action, and key objects with safe margins for a square mobile review card. No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, captions, readable marks, speech bubbles, or watermark anywhere. Show a very young generic child, about three or four years old, sitting on the floor with shoes and looking unsure how to put them on. This child must be generic and must not look like the recurring protagonist girl, the recurring young boy classmate, or the recurring sporty boy.",
           "imageSrc": "/assets/reviews/R016/images/R016-S05.webp",
           "approved": true,
           "audio": {
             "src": "/assets/reviews/R016/audio/R016-S05.m4a",
-            "durationMs": 4696,
+            "durationMs": 2786,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 420
+                "endMs": 520
               },
               {
                 "charIndex": 1,
-                "startMs": 420,
-                "endMs": 800
+                "startMs": 520,
+                "endMs": 740
               },
               {
                 "charIndex": 2,
-                "startMs": 800,
-                "endMs": 1180
+                "startMs": 740,
+                "endMs": 950
               },
               {
                 "charIndex": 3,
-                "startMs": 1180,
-                "endMs": 1760
+                "startMs": 950,
+                "endMs": 1160
               },
               {
                 "charIndex": 4,
-                "startMs": 1760,
-                "endMs": 2060
-              },
-              {
-                "charIndex": 5,
-                "startMs": 2060,
-                "endMs": 2460
-              },
-              {
-                "charIndex": 6,
-                "startMs": 2460,
-                "endMs": 2620
+                "startMs": 1160,
+                "endMs": 1460
               }
             ]
           }
@@ -156793,48 +156760,55 @@
         {
           "id": "R016-G01",
           "type": "find-character",
-          "sentenceId": "R016-S03",
-          "targetChar": "貴",
-          "prompt": "找一找句子裡的「貴」。"
+          "sentenceId": "R016-S02",
+          "targetChar": "燈",
+          "prompt": "找到「燈」。",
+          "missingIndexes": [
+            6
+          ]
         },
         {
           "id": "R016-G02",
           "type": "teach-character",
           "sentenceId": "R016-S01",
-          "targetChar": "買",
-          "prompt": "幫小兔補上這個字。",
+          "targetChar": "棋",
+          "targetCharIndex": 7,
+          "prompt": "教小兔子念這個字。",
           "missingIndexes": [
-            1
+            7
           ],
-          "targetCharIndex": 1,
           "teachAudio": {
             "prefixSrc": "/assets/reviews/R016/audio/R016-G02-prefix.m4a",
-            "suffixSrc": "/assets/reviews/R016/audio/R016-G02-suffix.m4a"
+            "suffixSrc": null
+          },
+          "teachAudioText": {
+            "prefixText": "兩個老人下黑白",
+            "suffixText": ""
           }
         },
         {
           "id": "R016-G03",
           "type": "missing-character",
-          "sentenceId": "R016-S02",
-          "targetChar": "剩",
+          "sentenceId": "R016-S03",
+          "targetChar": "卻",
           "prompt": "選出少掉的字。",
           "missingIndexes": [
-            3
+            5
           ],
           "options": [
             {
-              "id": "correct",
-              "text": "剩",
+              "id": "R016-G03-A",
+              "text": "卻",
               "correct": true
             },
             {
-              "id": "wrong-1",
-              "text": "只",
+              "id": "R016-G03-B",
+              "text": "還",
               "correct": false
             },
             {
-              "id": "wrong-2",
-              "text": "半",
+              "id": "R016-G03-C",
+              "text": "玩",
               "correct": false
             }
           ]
@@ -156842,85 +156816,69 @@
         {
           "id": "R016-G04",
           "type": "partial-order",
-          "sentenceId": "R016-S04",
-          "targetChar": "夜",
-          "prompt": "排出正確的句子。",
+          "sentenceId": "R016-S05",
+          "targetChar": "鞋",
+          "prompt": "把少掉的字排回句子裡。",
           "missingIndexes": [
             0,
-            1,
             2,
-            3
+            4
           ],
           "options": [
             {
               "id": "R016-G04-A",
-              "text": "夜",
+              "text": "鞋",
               "correctOrder": 0,
               "correct": true
             },
             {
               "id": "R016-G04-B",
-              "text": "市",
+              "text": "怎",
               "correctOrder": 1,
               "correct": true
             },
             {
               "id": "R016-G04-C",
-              "text": "的",
+              "text": "穿",
               "correctOrder": 2,
-              "correct": true
-            },
-            {
-              "id": "R016-G04-D",
-              "text": "店",
-              "correctOrder": 3,
               "correct": true
             }
           ],
           "correctOrder": [
             "R016-G04-A",
             "R016-G04-B",
-            "R016-G04-C",
-            "R016-G04-D"
+            "R016-G04-C"
           ]
         },
         {
           "id": "R016-G05",
           "type": "choose-pronunciation",
-          "sentenceId": "R016-S05",
-          "targetChar": "具",
-          "prompt": "聽聽看誰讀對了。",
+          "sentenceId": "R016-S04",
+          "targetChar": "為",
+          "prompt": "選出你聽到的句子。",
           "options": [
             {
-              "id": "correct",
-              "text": "球場邊放著球具。",
+              "id": "R016-G05-A",
+              "text": "為什麼沒有飯？",
               "correct": true,
-              "audioSrc": "/assets/reviews/R016/audio/R016-S05.m4a"
+              "sentenceId": "R016-S04",
+              "audioSrc": "/assets/reviews/R016/audio/R016-S04.m4a"
             },
             {
-              "id": "wrong-one",
-              "text": "球場邊放著玩具。",
+              "id": "R016-G05-B",
+              "text": "為什麼還有飯？",
               "correct": false,
-              "audioSrc": "/assets/reviews/R016/audio/R016-G05-wrong-one.m4a",
-              "spokenText": "球場邊放著玩具。"
+              "audioSrc": "/assets/reviews/R016/audio/R016-G05-wrong-one.m4a"
             },
             {
-              "id": "wrong-two",
-              "text": "球場邊放著棋子。",
+              "id": "R016-G05-C",
+              "text": "為什麼沒有燈？",
               "correct": false,
-              "audioSrc": "/assets/reviews/R016/audio/R016-G05-wrong-two.m4a",
-              "spokenText": "球場邊放著棋子。"
+              "audioSrc": "/assets/reviews/R016/audio/R016-G05-wrong-two.m4a"
             }
           ]
         }
-      ],
-      "releaseAudit": {
-        "integratedFromOriginMain": true,
-        "dependenciesResolved": true,
-        "resolvedDependencies": [
-          "L270"
-        ]
-      }
+      ]
     },
     {
       "id": "R017",

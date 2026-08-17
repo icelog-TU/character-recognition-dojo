@@ -3,200 +3,417 @@
   "kind": "review",
   "reviewNumber": 16,
   "title": "複習十六",
-  "afterLessonOrder": 270,
+  "afterLessonOrder": 150,
   "targetLessonRange": {
-    "startOrder": 211,
-    "endOrder": 240
+    "startOrder": 121,
+    "endOrder": 150
   },
   "requiredCoverageChars": [
-    "船",
-    "魚",
-    "游",
-    "泳",
-    "池",
-    "身",
-    "濕",
-    "乾",
-    "服",
-    "褲",
-    "換",
-    "改",
-    "錯",
-    "知",
-    "認",
-    "新",
-    "舊",
-    "半",
-    "只",
-    "剩",
-    "夠",
-    "錢",
-    "買",
-    "貴",
-    "賣",
-    "店",
-    "場",
-    "市",
-    "夜",
-    "具"
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈"
   ],
   "targetSentenceCount": 5,
+  "requiredRounds": 5,
   "generationConstraints": {
-    "sentenceHanCharLength": {
-      "min": 4,
-      "max": 12
-    },
-    "requiredCoverageChars": [
-      "船",
-      "魚",
-      "游",
-      "泳",
-      "池",
-      "身",
-      "濕",
-      "乾",
-      "服",
-      "褲",
-      "換",
-      "改",
-      "錯",
-      "知",
-      "認",
-      "新",
-      "舊",
-      "半",
-      "只",
-      "剩",
-      "夠",
-      "錢",
-      "買",
-      "貴",
-      "賣",
-      "店",
-      "場",
-      "市",
-      "夜",
-      "具"
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈"
     ],
-    "forbiddenDisplayChars": [
-      "破",
-      "變"
-    ],
-    "allowedBoundary": "Release verified against production JSON through R016."
+    "allowedDisplayCharsBoundary": "L150 milestone ceiling; characters learned through L150 only.",
+    "maxHanCharactersPerSentence": 12,
+    "reviewPairId": "R015/R016",
+    "pairCoverageTarget": [
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈"
+    ]
   },
-  "teacherNotes": "Release integrated R016 on latest origin/main; dependencies resolved: L270.",
+  "teacherNotes": "Review Migration approved R015/R016 pair. R016 covers L121-L150 as part of the pair; allowed-character ceiling is L150.",
   "approvedSentences": [
     {
-      "text": "新買的棋子，不見了一半。",
-      "spokenText": "新買的棋子不見了一半",
-      "focusChar": "新",
+      "id": "R016-S01",
+      "text": "兩個老人下黑白棋。",
+      "spokenText": "兩個老人下黑白棋",
+      "focusChar": "棋",
       "displayLines": [
-        "新買的棋子，",
-        "不見了一半。"
+        "兩個老人",
+        "下黑白棋。"
       ],
-      "imageNotes": "主角小女孩在桌邊看著新買的一盒棋子，盒子裡的棋子少了一半，她正在找不見的棋子。盒子和棋子不可有文字、數字、標籤或注音。"
+      "imageNotes": "Show two elder adults sitting face to face at a table playing black-and-white board game pieces. The two elders should be visually distinct from the recurring parents and teacher. Make it clear there are two people playing together."
     },
     {
-      "text": "舊書只剩半本。",
-      "spokenText": "舊書只剩半本",
-      "focusChar": "舊",
+      "id": "R016-S02",
+      "text": "房間裡沒有開燈。",
+      "spokenText": "房間裡沒有開燈",
+      "focusChar": "燈",
       "displayLines": [
-        "舊書只剩",
-        "半本。"
+        "房間裡",
+        "沒有開燈。"
       ],
-      "imageNotes": "桌上有一本很舊的書，只剩半本或明顯少了一半，主角小女孩看著它。畫面要清楚是舊書只剩半本，但不可使用文字、頁碼、數字、標籤或注音。"
+      "imageNotes": "Show a room with a visible lamp or ceiling light that is turned off. The room is dim but still readable. The meaning is that the light is not turned on, not that the room has no light fixture."
     },
     {
-      "text": "錢不夠，不要買太貴的玩具。",
-      "spokenText": "錢不夠不要買太貴的玩具",
-      "focusChar": "貴",
+      "id": "R016-S03",
+      "text": "外面下雨，他卻還在玩球。",
+      "spokenText": "外面下雨他卻還在玩球",
+      "focusChar": "卻",
       "displayLines": [
-        "錢不夠，",
-        "不要買太貴",
-        "的玩具。"
+        "外面下雨，",
+        "他卻還在",
+        "玩球。"
       ],
-      "imageNotes": "主角小女孩和主角媽媽在玩具店或市場攤位前，主角媽媽溫和提醒錢不夠，不要買太貴的玩具。畫面可有玩具和錢包，但不可出現價格、文字、數字、標籤或注音。"
+      "imageNotes": "Use the fixed recurring sporty boy identity for 他, not a generic boy. He is outside playing ball even though it is raining. Rain should be visible, but the scene should remain safe and not distressed."
     },
     {
-      "text": "夜市的店賣很多玩具。",
-      "spokenText": "夜市的店賣很多玩具",
-      "focusChar": "夜",
+      "id": "R016-S04",
+      "text": "為什麼沒有飯？",
+      "spokenText": "為什麼沒有飯",
+      "focusChar": "為",
       "displayLines": [
-        "夜市的店",
-        "賣很多玩具。"
+        "為什麼",
+        "沒有飯？"
       ],
-      "imageNotes": "夜市裡有一家玩具店或玩具攤，店家賣很多玩具，主角小女孩和家人在攤前看。畫面要有夜市氛圍和玩具，但不可有招牌文字、價格、數字、標籤或注音。"
+      "imageNotes": "Use the recurring protagonist girl identity. Today the table has noodles instead of rice. The girl wants rice, so show a thought bubble above her with a bowl of rice inside, while the actual table has noodles. This explains why she asks why there is no rice."
     },
     {
-      "text": "球場邊放著球具。",
-      "spokenText": "球場邊放著球具",
-      "focusChar": "具",
+      "id": "R016-S05",
+      "text": "鞋子怎麼穿？",
+      "spokenText": "鞋子怎麼穿",
+      "focusChar": "怎",
       "displayLines": [
-        "球場邊",
-        "放著球具。"
+        "鞋子",
+        "怎麼穿？"
       ],
-      "imageNotes": "安全球場邊放著球具，例如球、球棒、手套或球袋，旁邊可有主角哥哥準備打球。畫面重點是球場邊的球具；不可有球衣號碼、文字、數字、標籤或注音。"
+      "imageNotes": "Show a very young generic child, about three or four years old, sitting on the floor with shoes and looking unsure how to put them on. This child must be generic and must not look like the recurring protagonist girl, the recurring young boy classmate, or the recurring sporty boy."
     }
   ],
   "sentenceGames": [
     {
       "id": "R016-G01",
       "type": "find-character",
-      "sentenceId": "R016-S03",
-      "targetChar": "貴",
-      "reason": "「太貴的玩具」是清楚生活用法。"
+      "sentenceId": "R016-S02",
+      "targetChar": "燈",
+      "prompt": "找到「燈」。",
+      "missingIndexes": [
+        6
+      ]
     },
     {
       "id": "R016-G02",
       "type": "teach-character",
       "sentenceId": "R016-S01",
-      "targetChar": "買",
-      "targetCharIndex": 1,
-      "teachAudioFragments": {
-        "prefix": "新",
-        "suffix": "的棋子不見了一半"
+      "targetChar": "棋",
+      "targetCharIndex": 7,
+      "prompt": "教小兔子念這個字。",
+      "missingIndexes": [
+        7
+      ],
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R016/audio/R016-G02-prefix.m4a",
+        "suffixSrc": null
+      },
+      "teachAudioText": {
+        "prefixText": "兩個老人下黑白",
+        "suffixText": ""
       }
     },
     {
       "id": "R016-G03",
       "type": "missing-character",
-      "sentenceId": "R016-S02",
-      "targetChar": "剩",
+      "sentenceId": "R016-S03",
+      "targetChar": "卻",
+      "prompt": "選出少掉的字。",
       "missingIndexes": [
-        3
+        5
       ],
       "options": [
-        "剩",
-        "只",
-        "半"
+        {
+          "id": "R016-G03-A",
+          "text": "卻",
+          "correct": true
+        },
+        {
+          "id": "R016-G03-B",
+          "text": "還",
+          "correct": false
+        },
+        {
+          "id": "R016-G03-C",
+          "text": "玩",
+          "correct": false
+        }
       ]
     },
     {
       "id": "R016-G04",
       "type": "partial-order",
-      "sentenceId": "R016-S04",
-      "targetChar": "夜",
-      "chunks": [
-        "夜市的店",
-        "賣很多",
-        "玩具"
+      "sentenceId": "R016-S05",
+      "targetChar": "鞋",
+      "prompt": "把少掉的字排回句子裡。",
+      "missingIndexes": [
+        0,
+        2,
+        4
+      ],
+      "options": [
+        {
+          "id": "R016-G04-A",
+          "text": "鞋",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "R016-G04-B",
+          "text": "怎",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "R016-G04-C",
+          "text": "穿",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "R016-G04-A",
+        "R016-G04-B",
+        "R016-G04-C"
       ]
     },
     {
       "id": "R016-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R016-S05",
-      "targetChar": "具",
-      "correctText": "球場邊放著球具。",
-      "wrongOneText": "球場邊放著玩具。",
-      "wrongTwoText": "球場邊放著棋子。"
+      "sentenceId": "R016-S04",
+      "targetChar": "為",
+      "prompt": "選出你聽到的句子。",
+      "options": [
+        {
+          "id": "R016-G05-A",
+          "text": "為什麼沒有飯？",
+          "correct": true,
+          "sentenceId": "R016-S04",
+          "audioSrc": "/assets/reviews/R016/audio/R016-S04.m4a"
+        },
+        {
+          "id": "R016-G05-B",
+          "text": "為什麼還有飯？",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R016/audio/R016-G05-wrong-one.m4a"
+        },
+        {
+          "id": "R016-G05-C",
+          "text": "為什麼沒有燈？",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R016/audio/R016-G05-wrong-two.m4a"
+        }
+      ]
     }
-  ],
-  "releaseAudit": {
-    "integratedFromOriginMain": true,
-    "dependenciesResolved": true,
-    "resolvedDependencies": [
-      "L270"
-    ]
-  }
+  ]
 }

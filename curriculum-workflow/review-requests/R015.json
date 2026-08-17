@@ -3,139 +3,295 @@
   "kind": "review",
   "reviewNumber": 15,
   "title": "複習十五",
-  "afterLessonOrder": 270,
+  "afterLessonOrder": 150,
   "targetLessonRange": {
-    "startOrder": 211,
-    "endOrder": 240
+    "startOrder": 121,
+    "endOrder": 150
   },
   "requiredCoverageChars": [
-    "船",
-    "魚",
-    "游",
-    "泳",
-    "池",
-    "身",
-    "濕",
-    "乾",
-    "服",
-    "褲",
-    "換",
-    "改",
-    "錯",
-    "知",
-    "認",
-    "新",
-    "舊",
-    "半",
-    "只",
-    "剩",
-    "夠",
-    "錢",
-    "買",
-    "貴",
-    "賣",
-    "店",
-    "場",
-    "市",
-    "夜",
-    "具"
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈"
   ],
   "targetSentenceCount": 5,
+  "requiredRounds": 5,
   "generationConstraints": {
-    "sentenceHanCharLength": {
-      "min": 4,
-      "max": 12
-    },
-    "requiredCoverageChars": [
-      "船",
-      "魚",
-      "游",
-      "泳",
-      "池",
-      "身",
-      "濕",
-      "乾",
-      "服",
-      "褲",
-      "換",
-      "改",
-      "錯",
-      "知",
-      "認",
-      "新",
-      "舊",
-      "半",
-      "只",
-      "剩",
-      "夠",
-      "錢",
-      "買",
-      "貴",
-      "賣",
-      "店",
-      "場",
-      "市",
-      "夜",
-      "具"
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈"
     ],
-    "forbiddenDisplayChars": [
-      "破",
-      "變"
-    ],
-    "allowedBoundary": "Release verified against production JSON through R015."
+    "allowedDisplayCharsBoundary": "L150 milestone ceiling; characters learned through L150 only.",
+    "maxHanCharactersPerSentence": 12,
+    "reviewPairId": "R015/R016",
+    "pairCoverageTarget": [
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈"
+    ]
   },
-  "teacherNotes": "Release integrated R015 on latest origin/main; dependencies resolved: L270.",
+  "teacherNotes": "Review Migration approved R015/R016 pair. R015 covers L121-L150 as part of the pair; allowed-character ceiling is L150.",
   "approvedSentences": [
     {
-      "text": "船長把魚放回海裡。",
-      "spokenText": "船長把魚放回海裡",
-      "focusChar": "船",
+      "id": "R015-S01",
+      "text": "下雨時，天空有黑雲。",
+      "spokenText": "下雨時天空有黑雲",
+      "focusChar": "雲",
       "displayLines": [
-        "船長把魚",
-        "放回海裡。"
+        "下雨時，",
+        "天空有黑雲。"
       ],
-      "imageNotes": "船長在海邊或船旁把魚放回海裡，畫面要清楚看見船長、魚、大海，動作是把魚放回去。不可有文字、數字、船名、標籤或注音。"
+      "imageNotes": "The recurring protagonist girl is indoors by a window looking outside. It is raining outside, and the sky has obvious dark clouds. Make the rain and black clouds clear without adding text labels."
     },
     {
-      "text": "不可以在魚池裡游泳。",
-      "spokenText": "不可以在魚池裡游泳",
-      "focusChar": "泳",
+      "id": "R015-S02",
+      "text": "我穿上衣和白鞋，戴帽子。",
+      "spokenText": "我穿上衣和白鞋戴帽子",
+      "focusChar": "鞋",
       "displayLines": [
-        "不可以在",
-        "魚池裡",
-        "游泳。"
+        "我穿上衣",
+        "和白鞋，",
+        "戴帽子。"
       ],
-      "imageNotes": "主角小女孩站在魚池邊，看到魚池裡有魚，旁邊有老師或主角媽媽溫和提醒不可在魚池裡游泳。畫面要清楚是魚池，不是游泳池；不可有告示文字、數字、標籤或注音。"
+      "imageNotes": "Use the recurring protagonist girl identity for 我. She is standing and dressed in a shirt, white shoes, and a hat. The white shoes and hat must both be clearly visible in the square composition."
     },
     {
-      "text": "一身濕衣服，換上乾衣褲。",
-      "spokenText": "一身濕衣服換上乾衣褲",
-      "focusChar": "濕",
+      "id": "R015-S03",
+      "text": "天氣熱了，他脫下外套。",
+      "spokenText": "天氣熱了他脫下外套",
+      "focusChar": "套",
       "displayLines": [
-        "一身濕衣服，",
-        "換上乾衣褲。"
+        "天氣熱了，",
+        "他脫下外套。"
       ],
-      "imageNotes": "主角小女孩在家中，原本衣服濕了，旁邊放著乾的衣服和褲子準備換上。畫面要清楚濕衣服和乾衣褲的對比，但不可裸露；不可有文字、數字、標籤或注音。"
+      "imageNotes": "Use the fixed recurring sporty boy identity for 他, not a generic boy. The weather feels hot, and the sporty boy is taking off his outer jacket. The jacket should be clearly an outer layer."
     },
     {
-      "text": "我知道錯了，會改。",
-      "spokenText": "我知道錯了會改",
-      "focusChar": "錯",
+      "id": "R015-S04",
+      "text": "天冷了，所以我喝熱水。",
+      "spokenText": "天冷了所以我喝熱水",
+      "focusChar": "喝",
       "displayLines": [
-        "我知道錯了，",
-        "會改。"
+        "天冷了，",
+        "所以我喝",
+        "熱水。"
       ],
-      "imageNotes": "主角小女孩知道自己做錯事，例如把玩具或書本放錯地方，正在把東西改回正確位置。主角媽媽在旁邊溫和看著。畫面要具體，不要抽象責罵；不可有文字、數字、標籤或注音。"
+      "imageNotes": "Use the recurring protagonist girl identity for 我. She is in a cold-weather scene, holding a cup and drinking hot water. A small amount of steam may show the water is hot, but keep the image calm and safe."
     },
     {
-      "text": "我認得新老師的車。",
-      "spokenText": "我認得新老師的車",
-      "focusChar": "認",
+      "id": "R015-S05",
+      "text": "我吃飯，也吃菜。",
+      "spokenText": "我吃飯也吃菜",
+      "focusChar": "飯",
       "displayLines": [
-        "我認得",
-        "新老師的車。"
+        "我吃飯，",
+        "也吃菜。"
       ],
-      "imageNotes": "主角小女孩在校門口或安全路邊認出新老師的車，新老師站在車旁。老師需依 docs/LESSON_VISUAL_CAST_SOP.md 設計，不可長得像主角媽媽；車不可有車牌文字、數字、校名或標籤。"
+      "imageNotes": "Use the recurring protagonist girl identity for 我. She is sitting at a table eating a meal. Show rice clearly in a bowl and vegetables nearby so both 飯 and 菜 are visible."
     }
   ],
   "sentenceGames": [
@@ -143,60 +299,122 @@
       "id": "R015-G01",
       "type": "find-character",
       "sentenceId": "R015-S02",
-      "targetChar": "游",
-      "reason": "「魚池裡游泳」清楚複習游泳相關字。"
+      "targetChar": "鞋",
+      "prompt": "找到「鞋」。",
+      "missingIndexes": [
+        7
+      ]
     },
     {
       "id": "R015-G02",
       "type": "teach-character",
       "sentenceId": "R015-S03",
-      "targetChar": "濕",
-      "targetCharIndex": 2,
-      "teachAudioFragments": {
-        "prefix": "一身",
-        "suffix": "衣服換上乾衣褲"
+      "targetChar": "套",
+      "targetCharIndex": 8,
+      "prompt": "教小兔子念這個字。",
+      "missingIndexes": [
+        8
+      ],
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R015/audio/R015-G02-prefix.m4a",
+        "suffixSrc": null
+      },
+      "teachAudioText": {
+        "prefixText": "天氣熱了他脫下外",
+        "suffixText": ""
       }
     },
     {
       "id": "R015-G03",
       "type": "missing-character",
-      "sentenceId": "R015-S04",
-      "targetChar": "改",
+      "sentenceId": "R015-S05",
+      "targetChar": "飯",
+      "prompt": "選出少掉的字。",
       "missingIndexes": [
-        6
+        2
       ],
       "options": [
-        "改",
-        "錯",
-        "知"
+        {
+          "id": "R015-G03-A",
+          "text": "飯",
+          "correct": true
+        },
+        {
+          "id": "R015-G03-B",
+          "text": "菜",
+          "correct": false
+        },
+        {
+          "id": "R015-G03-C",
+          "text": "喝",
+          "correct": false
+        }
       ]
     },
     {
       "id": "R015-G04",
       "type": "partial-order",
-      "sentenceId": "R015-S01",
-      "targetChar": "船",
-      "chunks": [
-        "船長",
-        "把魚",
-        "放回海裡"
+      "sentenceId": "R015-S04",
+      "targetChar": "所",
+      "prompt": "把少掉的字排回句子裡。",
+      "missingIndexes": [
+        3,
+        4,
+        6
+      ],
+      "options": [
+        {
+          "id": "R015-G04-A",
+          "text": "所",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "R015-G04-B",
+          "text": "以",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "R015-G04-C",
+          "text": "喝",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "R015-G04-A",
+        "R015-G04-B",
+        "R015-G04-C"
       ]
     },
     {
       "id": "R015-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R015-S05",
-      "targetChar": "認",
-      "correctText": "我認得新老師的車。",
-      "wrongOneText": "我認得舊老師的車。",
-      "wrongTwoText": "我認得新老師的書。"
+      "sentenceId": "R015-S01",
+      "targetChar": "雲",
+      "prompt": "選出你聽到的句子。",
+      "options": [
+        {
+          "id": "R015-G05-A",
+          "text": "下雨時，天空有黑雲。",
+          "correct": true,
+          "sentenceId": "R015-S01",
+          "audioSrc": "/assets/reviews/R015/audio/R015-S01.m4a"
+        },
+        {
+          "id": "R015-G05-B",
+          "text": "下雨時，天空有白雲。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R015/audio/R015-G05-wrong-one.m4a"
+        },
+        {
+          "id": "R015-G05-C",
+          "text": "下雨時，外面有黑雲。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R015/audio/R015-G05-wrong-two.m4a"
+        }
+      ]
     }
-  ],
-  "releaseAudit": {
-    "integratedFromOriginMain": true,
-    "dependenciesResolved": true,
-    "resolvedDependencies": [
-      "L270"
-    ]
-  }
+  ]
 }
