@@ -3,12 +3,27 @@
   "kind": "review",
   "reviewNumber": 6,
   "title": "複習六",
-  "afterLessonOrder": 120,
+  "afterLessonOrder": 75,
   "targetLessonRange": {
-    "startOrder": 61,
-    "endOrder": 90
+    "startOrder": 46,
+    "endOrder": 75
   },
   "requiredCoverageChars": [
+    "會",
+    "這",
+    "吃",
+    "做",
+    "好",
+    "樣",
+    "要",
+    "更",
+    "邊",
+    "多",
+    "少",
+    "比",
+    "來",
+    "起",
+    "去",
     "坐",
     "站",
     "開",
@@ -23,22 +38,7 @@
     "出",
     "學",
     "路",
-    "誰",
-    "校",
-    "問",
-    "找",
-    "同",
-    "帶",
-    "筆",
-    "借",
-    "那",
-    "本",
-    "給",
-    "紙",
-    "心",
-    "放",
-    "把",
-    "桌"
+    "誰"
   ],
   "targetSentenceCount": 5,
   "generationConstraints": {
@@ -46,7 +46,7 @@
       "min": 4,
       "max": 12
     },
-    "provisionalLearnedChars": [],
+    "allowedCharacterCeilingLesson": "L075",
     "allowedChars": [
       "一",
       "二",
@@ -125,212 +125,87 @@
       "出",
       "學",
       "路",
-      "誰",
-      "校",
-      "問",
-      "找",
-      "同",
-      "帶",
-      "筆",
-      "借",
-      "那",
-      "本",
-      "給",
-      "紙",
-      "心",
-      "放",
-      "把",
-      "桌",
-      "子",
-      "盒",
-      "掉",
-      "壞",
-      "眼",
-      "用",
-      "鏡",
-      "鼻",
-      "臉",
-      "紅",
-      "圓",
-      "太",
-      "難",
-      "得",
-      "過",
-      "分",
-      "幾",
-      "點",
-      "玩",
-      "打",
-      "球",
-      "棒",
-      "頭",
-      "帽",
-      "草",
-      "地",
-      "面"
+      "誰"
     ],
-    "requiredCoverageChars": [
-      "坐",
-      "站",
-      "開",
-      "左",
-      "著",
-      "拿",
-      "包",
-      "花",
-      "朵",
-      "了",
-      "畫",
-      "出",
-      "學",
-      "路",
-      "誰",
-      "校",
-      "問",
-      "找",
-      "同",
-      "帶",
-      "筆",
-      "借",
-      "那",
-      "本",
-      "給",
-      "紙",
-      "心",
-      "放",
-      "把",
-      "桌"
-    ]
+    "provisionalLearnedChars": [],
+    "dependsOnLessons": [
+      "L075"
+    ],
+    "partialOrderRule": "3-4 single-Han option cards only; no chunks or phrases."
   },
-  "teacherNotes": "R005/R006 review module pair after L120. This pair covers L061-L090 and must use only L001-L120 learned display characters. R005/R006 introduce no newChars, zhuyin, or charAudio. Use the Taiwan form 著, not 着. Use L058 style anchors; images must be square 1:1 and contain no written text, numbers, signs, labels, zhuyin, or watermarks. Generate whole-sentence AI audio, exact G02 teachAudio fragments, and whole-sentence G05 wrong-choice audio; process through assets:audio and assets:align:ai.",
+  "teacherNotes": "Review Migration approved R005/R006 pair for the L075 milestone. Production prepares asset-complete package only; Release integrates reviewLessons.",
   "approvedSentences": [
     {
       "id": "R006-S01",
-      "text": "坐好，拿出筆和紙。",
-      "spokenText": "坐好拿出筆和紙",
-      "focusChar": "筆",
+      "text": "你比我會畫花。",
+      "spokenText": "你比我會畫花",
+      "focusChar": "比",
       "displayLines": [
-        "坐好，",
-        "拿出筆和紙。"
+        "你比我會",
+        "畫花。"
       ],
-      "reason": "Covers 坐, 拿, 出, 筆, 紙.",
-      "imageNotes": "孩子坐好，從桌上或書包裡拿出筆和紙準備寫畫。不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 你比我會畫花。 Show the recurring young boy classmate for `你` drawing flowers skillfully while the recurring protagonist girl for `我` looks at his flower drawing. The comparison should be clear through the drawings: his flowers look more complete or confident than hers, without mocking. Use recurring `你` boy and recurring protagonist girl identities. No written text, labels, numbers, zhuyin, logos, or speech bubbles."
     },
     {
       "id": "R006-S02",
-      "text": "媽媽把書包給我。",
-      "spokenText": "媽媽把書包給我",
-      "focusChar": "給",
+      "text": "坐起來吃，這樣更好。",
+      "spokenText": "坐起來吃這樣更好",
+      "focusChar": "樣",
       "displayLines": [
-        "媽媽把書包",
-        "給我。"
+        "坐起來吃，",
+        "這樣更好。"
       ],
-      "reason": "Covers 媽媽, 把, 書包, 給, 我.",
-      "imageNotes": "媽媽把書包交給孩子，孩子伸手接。畫面重點是「給」的動作，不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 坐起來吃，這樣更好。 Show a very young generic child, about three to four years old, sitting up properly to eat after previously leaning or slouching. A generic adult caregiver nearby gently guides the child with a calm expression. The image should make “sitting up to eat is better” clear, without making an older child look rude. Human role identity: very young generic child and generic adult caregiver, visually distinct from protagonist family and teacher."
     },
     {
       "id": "R006-S03",
-      "text": "我問那本書是誰帶來的？",
-      "spokenText": "我問那本書是誰帶來的",
-      "focusChar": "問",
+      "text": "媽媽會做包包。",
+      "spokenText": "媽媽會做包包",
+      "focusChar": "做",
       "displayLines": [
-        "我問那本書",
-        "是誰帶來的？"
+        "媽媽會做",
+        "包包。"
       ],
-      "reason": "Covers 問, 那, 本, 書, 誰, 帶, 來.",
-      "imageNotes": "孩子指著或拿著一本書問旁邊同學，想知道這本書是誰帶來的。不可有對話框、文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 媽媽會做包包。 Show the recurring protagonist mother making or sewing a simple child’s bag at home, with fabric or bag parts visible. Use the recurring protagonist mother identity: warm adult family role, visually distinct from teacher and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
       "id": "R006-S04",
-      "text": "他去找小狗。",
-      "spokenText": "他去找小狗",
-      "focusChar": "找",
+      "text": "我要畫去上學的路。",
+      "spokenText": "我要畫去上學的路",
+      "focusChar": "要",
       "displayLines": [
-        "他去找",
-        "小狗。"
+        "我要畫去",
+        "上學的路。"
       ],
-      "reason": "Covers 他, 去, 找, 小狗.",
-      "imageNotes": "一個孩子在家裡或院子附近找小狗，小狗可半躲在桌邊、門邊或草地旁。不可有文字、數字或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 我要畫去上學的路。 Show the recurring protagonist girl for `我` drawing a simple map-like picture of the route to school, with a home, a path or road, and a school-like building shown visually. No readable labels, letters, numbers, signs, zhuyin, logos, or speech bubbles. Use the recurring protagonist girl identity."
     },
     {
       "id": "R006-S05",
-      "text": "用心畫一朵花。",
-      "spokenText": "用心畫一朵花",
-      "focusChar": "心",
+      "text": "門左邊有少少的花。",
+      "spokenText": "門左邊有少少的花",
+      "focusChar": "左",
       "displayLines": [
-        "用心畫",
-        "一朵花。"
+        "門左邊有",
+        "少少的花。"
       ],
-      "reason": "Covers 用, 心, 畫, 一, 朵, 花.",
-      "imageNotes": "孩子專心地畫一朵花，桌上有紙和筆。畫面要表現專心，不可有文字、數字、簽名或標籤。"
+      "imageNotes": "Concrete phone-readable square image for: 門左邊有少少的花。 Show a clear front-facing door with a small number of flowers on the door’s left side, shown as viewer-left because the door faces the viewer. The left side must be visually unambiguous at phone size. If the right side is visible, it may have more empty space or more flowers for contrast, but do not add text or labels. No people are required."
     }
   ],
   "sentenceGames": [
     {
       "id": "R006-G01",
       "type": "find-character",
-      "sentenceId": "R006-S03",
-      "targetChar": "問"
-    },
-    {
-      "id": "R006-G02",
-      "type": "teach-character",
-      "sentenceId": "R006-S01",
-      "targetChar": "筆",
-      "targetCharIndex": 4,
-      "teachAudioFragments": {
-        "prefixText": "坐好拿出",
-        "suffixText": "和紙"
-      }
-    },
-    {
-      "id": "R006-G03",
-      "type": "missing-character",
-      "sentenceId": "R006-S05",
-      "targetChar": "心",
-      "missingIndexes": [
-        1
-      ],
-      "options": [
-        "心",
-        "手",
-        "眼"
-      ]
-    },
-    {
-      "id": "R006-G04",
-      "type": "partial-order",
-      "sentenceId": "R006-S02",
-      "chunks": [
-        "媽媽把",
-        "書包",
-        "給我"
-      ]
-    },
-    {
-      "id": "R006-G05",
-      "type": "choose-pronunciation",
       "sentenceId": "R006-S04",
-      "correctText": "他去找小狗。",
-      "wrongOneText": "他去找小鳥。",
-      "wrongTwoText": "他去看小狗。"
-    }
-  ],
-  "games": [
-    {
-      "id": "R006-G01",
-      "type": "find-character",
-      "sentenceId": "R006-S03",
-      "targetChar": "問",
-      "prompt": "找出「問」。"
+      "targetChar": "要",
+      "prompt": "找出句子裡的「要」。"
     },
     {
       "id": "R006-G02",
       "type": "teach-character",
       "sentenceId": "R006-S01",
-      "targetChar": "筆",
-      "targetCharIndex": 4,
-      "prompt": "看這裡。",
+      "targetChar": "比",
+      "targetCharIndex": 1,
+      "prompt": "聽一聽，補回不見的字。",
       "teachAudio": {
         "prefixSrc": "/assets/reviews/R006/audio/R006-G02-prefix.m4a",
         "suffixSrc": "/assets/reviews/R006/audio/R006-G02-suffix.m4a"
@@ -339,26 +214,26 @@
     {
       "id": "R006-G03",
       "type": "missing-character",
-      "sentenceId": "R006-S05",
-      "targetChar": "心",
-      "prompt": "找出少的。",
+      "sentenceId": "R006-S03",
+      "targetChar": "做",
+      "prompt": "選出不見的字。",
       "missingIndexes": [
-        1
+        3
       ],
       "options": [
         {
-          "id": "option-0-5fc3",
-          "text": "心",
+          "id": "R006-G03-A",
+          "text": "做",
           "correct": true
         },
         {
-          "id": "option-1-624b",
-          "text": "手",
+          "id": "R006-G03-B",
+          "text": "會",
           "correct": false
         },
         {
-          "id": "option-2-773c",
-          "text": "眼",
+          "id": "R006-G03-C",
+          "text": "包",
           "correct": false
         }
       ]
@@ -366,85 +241,70 @@
     {
       "id": "R006-G04",
       "type": "partial-order",
-      "sentenceId": "R006-S02",
-      "targetChar": "給",
-      "prompt": "放好。",
+      "sentenceId": "R006-S05",
+      "targetChar": "左",
+      "prompt": "把不見的字照順序放回句子。",
       "missingIndexes": [
         0,
         1,
         2,
-        3,
-        4,
-        5,
-        6
+        3
       ],
       "options": [
         {
-          "id": "order-0",
-          "text": "媽",
-          "correct": true,
-          "correctOrder": 0
+          "id": "R006-G04-A",
+          "text": "門",
+          "correctOrder": 0,
+          "correct": true
         },
         {
-          "id": "order-1",
-          "text": "媽",
-          "correct": true,
-          "correctOrder": 1
+          "id": "R006-G04-B",
+          "text": "左",
+          "correctOrder": 1,
+          "correct": true
         },
         {
-          "id": "order-2",
-          "text": "把",
-          "correct": true,
-          "correctOrder": 2
+          "id": "R006-G04-C",
+          "text": "邊",
+          "correctOrder": 2,
+          "correct": true
         },
         {
-          "id": "order-3",
-          "text": "書",
-          "correct": true,
-          "correctOrder": 3
-        },
-        {
-          "id": "order-4",
-          "text": "包",
-          "correct": true,
-          "correctOrder": 4
-        },
-        {
-          "id": "order-5",
-          "text": "給",
-          "correct": true,
-          "correctOrder": 5
-        },
-        {
-          "id": "order-6",
-          "text": "我",
-          "correct": true,
-          "correctOrder": 6
+          "id": "R006-G04-D",
+          "text": "有",
+          "correctOrder": 3,
+          "correct": true
         }
+      ],
+      "correctOrder": [
+        "R006-G04-A",
+        "R006-G04-B",
+        "R006-G04-C",
+        "R006-G04-D"
       ]
     },
     {
       "id": "R006-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R006-S04",
-      "targetChar": "找",
-      "prompt": "點一點。",
+      "sentenceId": "R006-S02",
+      "targetChar": "樣",
+      "prompt": "選出你聽到的句子。",
       "options": [
         {
           "id": "correct",
-          "text": "他去找小狗。",
+          "text": "坐起來吃，這樣更好。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R006/audio/R006-S04.m4a"
+          "audioSrc": "/assets/reviews/R006/audio/R006-S02.m4a"
         },
         {
           "id": "wrong-one",
-          "text": "他去找小鳥。",
+          "text": "坐起來看，這樣更好。",
           "correct": false,
           "audioSrc": "/assets/reviews/R006/audio/R006-G05-wrong-one.m4a"
         },
         {
           "id": "wrong-two",
-          "text": "他去看小狗。",
+          "text": "坐起來吃，這樣很好。",
           "correct": false,
           "audioSrc": "/assets/reviews/R006/audio/R006-G05-wrong-two.m4a"
         }
