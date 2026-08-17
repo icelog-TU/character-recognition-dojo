@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R001/R002 | review modules | claimed | Production A | codex/r001-r002-review-package / 81a349f8 | L045 milestone ceiling; covers L016-L045 | none | curriculum-workflow/review-requests/R001.json; curriculum-workflow/review-requests/R002.json; curriculum-workflow/generated/R001-generation-packet.md; curriculum-workflow/generated/R002-generation-packet.md | public/assets/reviews/R001/; public/assets/reviews/R002/ | accepted handoff and starting asset-complete review package; Production target is asset-complete-package, Release owns shared-state integration |
 
 ## Status Values
 
