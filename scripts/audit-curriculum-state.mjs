@@ -128,13 +128,19 @@ if (lessons.length === 0) {
     .map((line) => line.split("|").slice(1, -1).map((cell) => cell.trim()));
   for (const row of registryRows) {
     const [unitId, , status] = row;
+    const notes = row[9] ?? "";
+    const isReviewMigrationPackage = /\breview migration package\b/i.test(notes);
     const number = lessonNumber(unitId);
     if (Number.isFinite(number) && number <= lessonNumber(lastId) && status !== "merged") {
       errors.push(`docs/PARALLEL_LESSON_REGISTRY.md has active row ${unitId}, but ${unitId} is already in production curriculum.`);
     }
     const review = reviewNumber(unitId);
     if (Number.isFinite(review) && reviewLessons.some((candidate) => candidate.id === unitId) && status !== "merged") {
-      errors.push(`docs/PARALLEL_LESSON_REGISTRY.md has active row ${unitId}, but ${unitId} is already in production reviewLessons.`);
+      if (isReviewMigrationPackage) {
+        warnings.push(`docs/PARALLEL_LESSON_REGISTRY.md has review migration row ${unitId} replacing an existing production reviewLessons entry.`);
+      } else {
+        errors.push(`docs/PARALLEL_LESSON_REGISTRY.md has active row ${unitId}, but ${unitId} is already in production reviewLessons.`);
+      }
     }
     if (status === "merged") {
       warnings.push(`docs/PARALLEL_LESSON_REGISTRY.md still contains merged row ${unitId}; cleanup is recommended.`);
