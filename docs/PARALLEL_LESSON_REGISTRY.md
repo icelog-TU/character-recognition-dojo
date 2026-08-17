@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R005 | review module / review lesson | claimed | Production C | codex/r005-r006-complete-package / d5adf150 | L075 milestone ceiling | [] | curriculum-workflow/review-requests/R005.json, curriculum-workflow/generated/R005-generation-packet.md | public/assets/reviews/R005/images/, public/assets/reviews/R005/audio/ | accepted handoff and starting complete review migration package; use L075 allowed-character ceiling |
+| R006 | review module / review lesson | claimed | Production C | codex/r005-r006-complete-package / d5adf150 | L075 milestone ceiling | [] | curriculum-workflow/review-requests/R006.json, curriculum-workflow/generated/R006-generation-packet.md | public/assets/reviews/R006/images/, public/assets/reviews/R006/audio/ | accepted handoff and starting complete review migration package; use L075 allowed-character ceiling |
 
 ## Status Values
 
