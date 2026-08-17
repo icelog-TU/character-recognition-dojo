@@ -56,14 +56,14 @@ Review module note:
 
 - Review modules are planned after every 15-lesson milestone starting after L045.
 - Review modules are not lessons. They use `R###` ids, display as `複習一`, `複習二`, and live in top-level `reviewLessons`.
-- Production-ready review modules in `reviewLessons` are inserted into the playable course sequence and square course-card grid after their `afterLessonOrder`. Example: `L060` -> `R001` -> `R002` -> `L061`.
+- Production-ready review modules in `reviewLessons` are inserted into the playable course sequence and square course-card grid after their `afterLessonOrder`. Example: `L045` -> `R001` -> `R002` -> `L046`; `L060` -> `R003` -> `R004` -> `L061`.
 - The `漢字總覽` page also has a permanent `複習區` after the six color groups, reserving `R001` through `R076`. These UI placeholders do not create JSON records; only production-ready review modules belong in `reviewLessons`.
 - Review modules grant the same one-time completion reward as lessons. Replays must not grant another reward.
 - Review modules display as two-stage practice units: `看圖聽句子` then `句子遊戲`. They do not show normal-lesson Stage 1/2 rows, and they must not expose the internal reused Stage 3/4 numbering to the child.
 - The first pair after L045 is R001/R002 and covers L016-L045; the second pair after L060 is R003/R004 and covers L031-L060.
 - Each review module has 5 sentences, and each two-module pair must cover every new character from its target 30-lesson range at least once.
 - Do not add empty placeholder review modules to this JSON. Add review modules only after the review module flow, sentences, images, audio, timings, and pair-level coverage checklist are production-ready. Placeholder slots for future review modules belong only in the `漢字總覽` review area UI.
-- Do not create L061/L062 as review modules; after L060, L061 remains the next new-character lesson id, but the playable path must pass through R001/R002 first.
+- Do not create L046/L047 or L061/L062 as review modules. L046 and L061 remain new-character lesson ids, but the playable path must pass through the milestone review pair first: `L045` -> `R001` -> `R002` -> `L046`; `L060` -> `R003` -> `R004` -> `L061`.
 
 ## Review Module
 
@@ -72,10 +72,10 @@ Review module note:
   "id": "R001",
   "reviewNumber": 1,
   "title": "複習一",
-  "afterLessonOrder": 60,
+  "afterLessonOrder": 45,
   "targetLessonRange": {
-    "startOrder": 1,
-    "endOrder": 30
+    "startOrder": 16,
+    "endOrder": 45
   },
   "requiredCoverageChars": ["一", "二", "三"],
   "requiredRounds": 5,

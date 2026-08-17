@@ -449,9 +449,9 @@ Rules:
 - Review modules use `R###` ids, display as `複習一`, `複習二`, and live in top-level `reviewLessons`, not `lessons`.
 - Review module assets live under `public/assets/reviews/R###/`, not `public/assets/lessons/L###/`.
 - Review request files live under `curriculum-workflow/review-requests/R###.json`, not `curriculum-workflow/lesson-requests/L###.json`.
-- Do not create `L061` or `L062` as review placeholders. `L061` is the next new-character lesson id, but the playable path after L060 is `R001` -> `R002` -> `L061`.
+- Do not create `L046`/`L047` or `L061`/`L062` as review placeholders. `L046` and `L061` remain new-character lesson ids, but the playable path must pass through the milestone review pair first: `L045` -> `R001` -> `R002` -> `L046`; `L060` -> `R003` -> `R004` -> `L061`.
 - Review sentence text may use characters learned by the milestone, but the required coverage target is the older 30-lesson range.
-- For overdue review modules, lock `allowedChars` to the milestone ceiling, not to latest `origin/main`. Example: R005/R006 may use only characters learned through L120 even if main is already past L180.
+- For overdue review modules, lock `allowedChars` to the milestone ceiling, not to latest `origin/main`. Example: R005/R006 may use only characters learned through L075 even if main is already past L180.
 - Release must reject a numbered lesson if any required review pair at or before the previous milestone is missing from `reviewLessons`.
 - The two review modules should be planned as one pair so coverage can be checked across all 10 sentences before either module ships.
 - Do not add placeholder review modules to `src/curriculum/sample-lessons.json`. Only add production-ready review modules to top-level `reviewLessons` after sentences, images, audio, timings, Stage 4 games, and review coverage are complete.

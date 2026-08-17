@@ -112,9 +112,9 @@ const RAINBOW_GROUPS = [
   { id: "blue", label: "藍", range: "401-500", start: 401, end: 500, color: "#2e78d6" },
   { id: "purple", label: "紫", range: "501-600", start: 501, end: 600, color: "#8156c6" },
 ] as const;
-const REVIEW_CATALOG_GROUP = { id: "review", label: "複習", range: "R001-R040", color: "#1d7874" } as const;
+const REVIEW_CATALOG_GROUP = { id: "review", label: "複習", range: "R001-R076", color: "#1d7874" } as const;
 const CATALOG_GROUPS = [...RAINBOW_GROUPS, REVIEW_CATALOG_GROUP] as const;
-const REVIEW_CATALOG_SLOT_COUNT = 40;
+const REVIEW_CATALOG_SLOT_COUNT = 76;
 const HOME_PRACTICE_CARD_COUNT = 18;
 type RainbowGroup = (typeof RAINBOW_GROUPS)[number];
 type CatalogGroup = (typeof CATALOG_GROUPS)[number];
@@ -986,11 +986,9 @@ function practiceSequence(lessons: Lesson[], reviewLessons: ReviewLesson[]): Pra
 }
 
 function expectedReviewNumbersAfterLesson(order: number): number[] {
-  if (order < 60 || order > 600 || order % 30 !== 0) return [];
-  const firstReviewNumber = ((order - 60) / 30) * 2 + 1;
-  const reviewNumbers = [firstReviewNumber, firstReviewNumber + 1];
-  if (order === 600) reviewNumbers.push(39, 40);
-  return reviewNumbers;
+  if (order < 45 || order > 600 || (order - 45) % 15 !== 0) return [];
+  const firstReviewNumber = ((order - 45) / 15) * 2 + 1;
+  return [firstReviewNumber, firstReviewNumber + 1];
 }
 
 function homePracticeEntries(entries: PracticeSequenceEntry[]): HomePracticeEntry[] {
