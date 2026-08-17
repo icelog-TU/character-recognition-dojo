@@ -168,6 +168,7 @@ service cloud.firestore {
           'ref',
           'commitSha',
           'sourcePath',
+          'contentSignature',
           'sentenceCount',
           'extraAudioCount',
           'repairCount',
@@ -186,4 +187,4 @@ service cloud.firestore {
 
 Do not add a user-facing legacy device-code field or editable device-name field back to Settings. Normal users should see account sign-in, the three learning profiles under that account, editable learning-profile names, and the system-generated device ID only as support/admin diagnostic information.
 
-`audioReviews` is for teacher QA of production audio. `assetReviews` is for post-merge teacher repair queues for images and audio. Both are intentionally separate from child progress and can be public-read because they contain only lesson id, commit SHA, public asset paths, and teacher approval/repair status for already-public assets. Review pages must read these documents even before sign-in so the teacher can see the same current review state on phone and tablet. Writes still require Google sign-in so random visitors cannot approve, clear, or mark repair work. If a teacher changes checkboxes or notes while not signed in, that change is browser-local and must not be considered cross-device synced.
+`audioReviews` is for teacher QA of production audio. `assetReviews` is for post-merge teacher repair queues for images and audio. Both are intentionally separate from child progress and can be public-read because they contain only lesson id, commit SHA, public asset paths, and teacher approval/repair status for already-public assets. Review pages must read these documents even before sign-in so the teacher can see the same current review state on phone and tablet. Writes still require Google sign-in so random visitors cannot approve, clear, or mark repair work. `assetReviews.contentSignature` is required so a review record only applies to the exact current lesson/review content and does not accidentally mark a replaced image/audio version as reviewed. If a teacher changes checkboxes or notes while not signed in, that change is browser-local and must not be considered cross-device synced.

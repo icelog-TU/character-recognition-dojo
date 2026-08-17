@@ -328,6 +328,8 @@
           <button type="button" data-filter="future">尚未製作</button>
           <button type="button" data-filter="recent">最新 60 課</button>
           <button id="copyAllRepairCommandButton" type="button" disabled>複製全部 repair 查詢</button>
+          <button id="signInButton" type="button">Google 登入同步</button>
+          <button id="signOutButton" type="button" disabled>登出</button>
         </div>
         <p id="statusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
       </section>
@@ -370,7 +372,7 @@
 
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
-      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-auth.js";
+      import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-auth.js";
       import { collection, doc, getDocs, getFirestore, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
       const firebaseConfig = {
@@ -779,9 +781,19 @@
       $("copyAllRepairCommandButton").addEventListener("click", () => {
         navigator.clipboard.writeText(`npm run asset:review-status -- --list --ref ${state.ref}`);
       });
+      $("signInButton").addEventListener("click", async () => {
+        try {
+          await signInWithPopup(auth, new GoogleAuthProvider());
+        } catch (error) {
+          setStatus(`登入失敗：${error.message}`, "bad");
+        }
+      });
+      $("signOutButton").addEventListener("click", () => signOut(auth));
 
       onAuthStateChanged(auth, async (user) => {
         state.user = user;
+        $("signInButton").disabled = Boolean(user);
+        $("signOutButton").disabled = !user;
         if (!user || !state.builtById.size) return;
         try {
           const syncedCount = await syncLocalReviewDocsToCloud();

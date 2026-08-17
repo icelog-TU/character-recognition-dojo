@@ -1,0 +1,99 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function ownsAccount(accountId) {
+      return signedIn() && request.auth.uid == accountId;
+    }
+
+    function hasNoServerManagedFields() {
+      return !request.resource.data.keys().hasAny([
+        'freeBrowse',
+        'role',
+        'trustedFreeBrowse'
+      ]);
+    }
+
+    function preservesServerManagedFields() {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny([
+        'freeBrowse',
+        'role',
+        'trustedFreeBrowse'
+      ]);
+    }
+
+    match /accounts/{accountId} {
+      allow read, create, update: if ownsAccount(accountId);
+      allow delete: if false;
+
+      match /devices/{deviceId} {
+        allow read: if ownsAccount(accountId);
+        allow create: if ownsAccount(accountId) && hasNoServerManagedFields();
+        allow update: if ownsAccount(accountId) && preservesServerManagedFields();
+        allow delete: if false;
+      }
+
+      match /profiles/{profileId} {
+        allow read: if ownsAccount(accountId);
+        allow create: if ownsAccount(accountId) && hasNoServerManagedFields();
+        allow update: if ownsAccount(accountId) && preservesServerManagedFields();
+        allow delete: if false;
+      }
+    }
+
+    match /audioReviews/{reviewId} {
+      allow read: if true;
+      allow create, update: if signedIn()
+        && request.resource.data.updatedByUid == request.auth.uid
+        && request.resource.data.repo == 'icelog-TU/character-recognition-dojo'
+        && request.resource.data.keys().hasOnly([
+          'version',
+          'repo',
+          'unit',
+          'ref',
+          'commitSha',
+          'sourcePath',
+          'itemCount',
+          'approvedCount',
+          'approvedAll',
+          'pendingKeys',
+          'approvalState',
+          'updatedByUid',
+          'updatedByEmail',
+          'updatedByName',
+          'updatedAt'
+        ]);
+      allow delete: if false;
+    }
+
+    match /assetReviews/{reviewId} {
+      allow read: if true;
+      allow create, update: if signedIn()
+        && request.resource.data.updatedByUid == request.auth.uid
+        && request.resource.data.repo == 'icelog-TU/character-recognition-dojo'
+        && request.resource.data.keys().hasOnly([
+          'version',
+          'repo',
+          'unit',
+          'ref',
+          'commitSha',
+          'sourcePath',
+          'contentSignature',
+          'sentenceCount',
+          'extraAudioCount',
+          'repairCount',
+          'reviewComplete',
+          'repairItems',
+          'updatedByUid',
+          'updatedByEmail',
+          'updatedByName',
+          'updatedAt'
+        ]);
+      allow delete: if false;
+    }
+  }
+}
