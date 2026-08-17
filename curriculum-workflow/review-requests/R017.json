@@ -3,161 +3,329 @@
   "kind": "review",
   "reviewNumber": 17,
   "title": "複習十七",
-  "afterLessonOrder": 300,
+  "pairMateId": "R018",
+  "afterLessonOrder": 165,
   "targetLessonRange": {
-    "startOrder": 241,
-    "endOrder": 270
+    "startOrder": 136,
+    "endOrder": 165
   },
+  "allowedCharacterCeilingLessonId": "L165",
+  "dependsOnLessons": [
+    "L165"
+  ],
+  "provisionalLearnedChars": [],
   "requiredCoverageChars": [
-    "工",
-    "作",
-    "忙",
-    "幫",
-    "急",
-    "腳",
-    "步",
-    "跳",
-    "床",
-    "搬",
-    "重",
-    "沙",
-    "張",
-    "椅",
-    "累",
-    "死",
-    "睡",
-    "倒",
-    "病",
-    "假",
-    "才",
-    "剛",
-    "裝",
-    "養",
-    "休",
-    "息",
-    "久",
-    "體",
-    "神",
-    "精"
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先"
   ],
   "targetSentenceCount": 5,
+  "requiredRounds": 5,
   "generationConstraints": {
     "sentenceHanCharLength": {
       "min": 4,
       "max": 12
     },
-    "requiredCoverageChars": [
-      "工",
-      "作",
-      "忙",
-      "幫",
-      "急",
-      "腳",
-      "步",
-      "跳",
-      "床",
-      "搬",
-      "重",
-      "沙",
-      "張",
-      "椅",
-      "累",
-      "死",
-      "睡",
-      "倒",
-      "病",
-      "假",
-      "才",
-      "剛",
-      "裝",
-      "養",
-      "休",
-      "息",
-      "久",
-      "體",
-      "神",
-      "精"
-    ],
-    "allowedBoundary": "Production JSON through L300. Review learner-facing text must use only chars learned by L300."
+    "allowedCharacterCeilingLessonId": "L165",
+    "allowedBoundary": "Review learner-facing text must use only characters learned through L165.",
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先"
+    ]
   },
-  "dependsOnLessons": [
-    "L298",
-    "L299",
-    "L300"
-  ],
-  "teacherNotes": "Teacher-approved review module package after L300. Review modules introduce no newChars, zhuyin, or charAudio. Production confirmed origin/main already includes L298-L300, so no provisional learned chars are needed for the allowed-character sweep. R017 covers: 工, 作, 忙, 幫, 急, 腳, 步, 跳, 床, 搬, 重, 沙, 張, 椅, 累. R017/R018 pair covers L241-L270 exactly once or more across the pair.",
+  "teacherNotes": "Teacher-approved review module package for the L165 milestone. Review modules introduce no newChars, zhuyin, or charAudio. R017/R018 pair covers L136-L165 and uses the L165 allowed-character ceiling.",
   "approvedSentences": [
     {
-      "text": "工人搬沙發，累壞了。",
+      "id": "R017-S01",
+      "text": "吃飯時，我先吃菜。",
+      "spokenText": "吃飯時我先吃菜",
+      "focusChar": "先",
       "displayLines": [
-        "工人搬沙發，",
-        "累壞了。"
+        "吃飯時，",
+        "我先吃菜。"
       ],
-      "spokenText": "工人搬沙發累壞了",
-      "focusChar": "搬",
-      "imageNotes": "Moving scene: a clearly identified moving worker is carrying one sofa and looks very tired. The protagonist father or mother may stand nearby ready to help. Show the worker moving the sofa and being exhausted; no text, numbers, or labels."
+      "imageNotes": "Use the recurring protagonist girl identity for 我. She is sitting at a dining table with rice and vegetables in front of her. Show her eating vegetables first, with rice also visible on the table."
     },
     {
-      "text": "畫家忙著作畫。",
+      "id": "R017-S02",
+      "text": "房間裡的燈還沒關。",
+      "spokenText": "房間裡的燈還沒關",
+      "focusChar": "燈",
       "displayLines": [
-        "畫家忙著",
-        "作畫。"
+        "房間裡的燈",
+        "還沒關。"
       ],
-      "spokenText": "畫家忙著作畫",
-      "focusChar": "作",
-      "imageNotes": "A clearly identified painter sits at an easel, focused and busy painting. There are brushes and paint on a table. The painter must not look like the teacher or protagonist mother; no text, numbers, or labels."
+      "imageNotes": "Show a room with a visible lamp or ceiling light still turned on. The recurring protagonist girl may be looking at the light. The meaning is that the light has not been turned off yet."
     },
     {
-      "text": "這張椅子太重，幫我搬。",
+      "id": "R017-S03",
+      "text": "風很大，所以我關窗。",
+      "spokenText": "風很大所以我關窗",
+      "focusChar": "關",
       "displayLines": [
-        "這張椅子",
-        "太重，",
-        "幫我搬。"
+        "風很大，",
+        "所以我關窗。"
       ],
-      "spokenText": "這張椅子太重幫我搬",
-      "focusChar": "張",
-      "imageNotes": "The protagonist little girl is trying to move one chair but it is too heavy, and she asks the protagonist father for help moving it. Clearly show one heavy chair and the need for help; no text, numbers, or labels."
+      "imageNotes": "Use the recurring protagonist girl identity for 我. She is by a window, closing it because strong wind is blowing in. Show the wind moving the curtain or nearby leaves outside so the reason is clear."
     },
     {
-      "text": "不要在床上跳，會傷腳。",
+      "id": "R017-S04",
+      "text": "風吹樹葉，綠葉動了。",
+      "spokenText": "風吹樹葉綠葉動了",
+      "focusChar": "樹",
       "displayLines": [
-        "不要在床上",
-        "跳，會傷腳。"
+        "風吹樹葉，",
+        "綠葉動了。"
       ],
-      "spokenText": "不要在床上跳會傷腳",
-      "focusChar": "跳",
-      "imageNotes": "The protagonist little girl is near or on a bed and is about to jump. The protagonist mother reminds her not to jump on the bed because it could hurt her foot. Keep it safe, no serious injury; no text, numbers, or labels."
+      "imageNotes": "Outdoor scene with a tree. Wind is blowing the tree leaves, and the green leaves are visibly moving. Keep the leaves clearly green and avoid making the scene look like a storm."
     },
     {
-      "text": "走山路不要急，一步一步走。",
+      "id": "R017-S05",
+      "text": "老人等車，卻沒有車來。",
+      "spokenText": "老人等車卻沒有車來",
+      "focusChar": "卻",
       "displayLines": [
-        "走山路",
-        "不要急，",
-        "一步一步走。"
+        "老人等車，",
+        "卻沒有車來。"
       ],
-      "spokenText": "走山路不要急一步一步走",
-      "focusChar": "步",
-      "imageNotes": "The protagonist little girl and protagonist father walk on a safe mountain path. Father reminds her not to rush and to walk step by step. Show a safe path, no dangerous cliff; no text, numbers, or labels."
+      "imageNotes": "Show one elder adult waiting by a roadside or simple bus stop. The road should be empty with no vehicle arriving. The elder adult must be visually distinct from the recurring parents and teacher."
     }
   ],
   "sentenceGames": [
     {
       "id": "R017-G01",
       "type": "find-character",
-      "sentenceId": "R017-S03",
-      "targetChar": "張",
-      "prompt": "找一找句子裡的「張」。"
+      "sentenceId": "R017-S02",
+      "targetChar": "燈",
+      "prompt": "找到「燈」。",
+      "options": [
+        {
+          "id": "option-1",
+          "text": "房",
+          "correct": false
+        },
+        {
+          "id": "option-2",
+          "text": "間",
+          "correct": false
+        },
+        {
+          "id": "option-3",
+          "text": "燈",
+          "correct": true
+        },
+        {
+          "id": "option-4",
+          "text": "關",
+          "correct": false
+        }
+      ]
     },
     {
       "id": "R017-G02",
       "type": "teach-character",
-      "sentenceId": "R017-S01",
-      "targetChar": "搬",
+      "sentenceId": "R017-S04",
+      "targetChar": "樹",
+      "targetCharIndex": 2,
       "prompt": "幫小兔補上這個字。",
       "missingIndexes": [
         2
       ],
-      "targetCharIndex": 2,
+      "prefixText": "風吹",
+      "suffixText": "葉綠葉動了",
       "teachAudio": {
         "prefixSrc": "/assets/reviews/R017/audio/R017-G02-prefix.m4a",
         "suffixSrc": "/assets/reviews/R017/audio/R017-G02-suffix.m4a"
@@ -166,26 +334,26 @@
     {
       "id": "R017-G03",
       "type": "missing-character",
-      "sentenceId": "R017-S04",
-      "targetChar": "腳",
+      "sentenceId": "R017-S05",
+      "targetChar": "卻",
       "prompt": "選出少掉的字。",
       "missingIndexes": [
-        8
+        4
       ],
       "options": [
         {
           "id": "correct",
-          "text": "腳",
+          "text": "卻",
           "correct": true
         },
         {
           "id": "wrong-1",
-          "text": "床",
+          "text": "還",
           "correct": false
         },
         {
           "id": "wrong-2",
-          "text": "跳",
+          "text": "車",
           "correct": false
         }
       ]
@@ -193,38 +361,30 @@
     {
       "id": "R017-G04",
       "type": "partial-order",
-      "sentenceId": "R017-S05",
-      "targetChar": "步",
+      "sentenceId": "R017-S03",
+      "targetChar": "關",
       "prompt": "排出正確的句子。",
       "missingIndexes": [
-        0,
-        1,
-        2,
         3,
         4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
+        6
       ],
       "options": [
         {
-          "id": "slot-1",
-          "text": "走山路",
+          "id": "R017-G04-A",
+          "text": "所",
           "correctOrder": 0,
           "correct": true
         },
         {
-          "id": "slot-2",
-          "text": "不要急",
+          "id": "R017-G04-B",
+          "text": "以",
           "correctOrder": 1,
           "correct": true
         },
         {
-          "id": "slot-3",
-          "text": "一步一步走",
+          "id": "R017-G04-C",
+          "text": "關",
           "correctOrder": 2,
           "correct": true
         }
@@ -233,36 +393,32 @@
     {
       "id": "R017-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R017-S02",
-      "targetChar": "作",
+      "sentenceId": "R017-S01",
+      "targetChar": "先",
       "prompt": "聽聽看誰讀對了。",
       "options": [
         {
           "id": "correct",
-          "text": "畫家忙著作畫。",
+          "text": "吃飯時，我先吃菜。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R017/audio/R017-S02.m4a"
+          "audioSrc": "/assets/reviews/R017/audio/R017-S01.m4a",
+          "spokenText": "吃飯時我先吃菜"
         },
         {
           "id": "wrong-one",
-          "text": "畫家忙著看書。",
+          "text": "吃飯時，我先吃飯。",
           "correct": false,
           "audioSrc": "/assets/reviews/R017/audio/R017-G05-wrong-one.m4a",
-          "spokenText": "畫家忙著看書"
+          "spokenText": "吃飯時我先吃飯"
         },
         {
           "id": "wrong-two",
-          "text": "畫家忙著吃飯。",
+          "text": "吃飯時，他先吃菜。",
           "correct": false,
           "audioSrc": "/assets/reviews/R017/audio/R017-G05-wrong-two.m4a",
-          "spokenText": "畫家忙著吃飯"
+          "spokenText": "吃飯時他先吃菜"
         }
       ]
     }
-  ],
-  "releaseAudit": {
-    "status": "integrated-from-latest-origin-main",
-    "integratedReviewModulesThrough": "R018",
-    "note": "Release transplanted review-local package files, checked L300 review ceiling, and integrated R017-R018 before L301."
-  }
+  ]
 }

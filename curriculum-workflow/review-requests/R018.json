@@ -3,139 +3,285 @@
   "kind": "review",
   "reviewNumber": 18,
   "title": "複習十八",
-  "afterLessonOrder": 300,
+  "pairMateId": "R017",
+  "afterLessonOrder": 165,
   "targetLessonRange": {
-    "startOrder": 241,
-    "endOrder": 270
+    "startOrder": 136,
+    "endOrder": 165
   },
+  "allowedCharacterCeilingLessonId": "L165",
+  "dependsOnLessons": [
+    "L165"
+  ],
+  "provisionalLearnedChars": [],
   "requiredCoverageChars": [
-    "工",
-    "作",
-    "忙",
-    "幫",
-    "急",
-    "腳",
-    "步",
-    "跳",
-    "床",
-    "搬",
-    "重",
-    "沙",
-    "張",
-    "椅",
-    "累",
-    "死",
-    "睡",
-    "倒",
-    "病",
-    "假",
-    "才",
-    "剛",
-    "裝",
-    "養",
-    "休",
-    "息",
-    "久",
-    "體",
-    "神",
-    "精"
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先"
   ],
   "targetSentenceCount": 5,
+  "requiredRounds": 5,
   "generationConstraints": {
     "sentenceHanCharLength": {
       "min": 4,
       "max": 12
     },
-    "requiredCoverageChars": [
-      "工",
-      "作",
-      "忙",
-      "幫",
-      "急",
-      "腳",
-      "步",
-      "跳",
-      "床",
-      "搬",
-      "重",
-      "沙",
-      "張",
-      "椅",
-      "累",
-      "死",
-      "睡",
-      "倒",
-      "病",
-      "假",
-      "才",
-      "剛",
-      "裝",
-      "養",
-      "休",
-      "息",
-      "久",
-      "體",
-      "神",
-      "精"
-    ],
-    "allowedBoundary": "Production JSON through L300. Review learner-facing text must use only chars learned by L300."
+    "allowedCharacterCeilingLessonId": "L165",
+    "allowedBoundary": "Review learner-facing text must use only characters learned through L165.",
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先"
+    ]
   },
-  "dependsOnLessons": [
-    "L298",
-    "L299",
-    "L300"
-  ],
-  "teacherNotes": "Teacher-approved review module package after L300. Review modules introduce no newChars, zhuyin, or charAudio. Production confirmed origin/main already includes L298-L300, so no provisional learned chars are needed for the allowed-character sweep. R018 covers: 死, 睡, 倒, 病, 假, 才, 剛, 裝, 養, 休, 息, 久, 體, 神, 精. R017/R018 pair covers L241-L270 exactly once or more across the pair.",
+  "teacherNotes": "Teacher-approved review module package for the L165 milestone. Review modules introduce no newChars, zhuyin, or charAudio. R017/R018 pair covers L136-L165 and uses the L165 allowed-character ceiling.",
   "approvedSentences": [
     {
-      "text": "生病了，要好好休息。",
+      "id": "R018-S01",
+      "text": "桌上有滿滿的飯菜。",
+      "spokenText": "桌上有滿滿的飯菜",
+      "focusChar": "滿",
       "displayLines": [
-        "生病了，",
-        "要好好休息。"
+        "桌上有",
+        "滿滿的飯菜。"
       ],
-      "spokenText": "生病了要好好休息",
-      "focusChar": "休",
-      "imageNotes": "The protagonist little girl is sick at home resting in bed, with the protagonist mother caring for her. Keep the scene warm and gentle, without serious medical or frightening feeling; no text, numbers, or labels."
+      "imageNotes": "A dining table is full of rice and vegetables. Make the table clearly full, with multiple dishes and rice visible. Do not add text labels or extra unmentioned people."
     },
     {
-      "text": "才剛裝好，椅子就倒了。",
+      "id": "R018-S02",
+      "text": "我先擦桌子，再掃地。",
+      "spokenText": "我先擦桌子再掃地",
+      "focusChar": "擦",
       "displayLines": [
-        "才剛裝好，",
-        "椅子就倒了。"
+        "我先擦桌子，",
+        "再掃地。"
       ],
-      "spokenText": "才剛裝好椅子就倒了",
-      "focusChar": "裝",
-      "imageNotes": "The protagonist father has just finished assembling a chair, and the chair immediately falls over on the floor while the protagonist little girl watches. Clearly show just assembled and then fallen chair; no text, numbers, or labels."
+      "imageNotes": "Use the recurring protagonist girl identity for 我. Show her wiping the table with a cloth first, with a broom nearby to indicate she will sweep the floor next. The sequence should be understandable from the scene."
     },
     {
-      "text": "小狗睡了很久才起來。",
+      "id": "R018-S03",
+      "text": "為什麼車還不來？",
+      "spokenText": "為什麼車還不來",
+      "focusChar": "為",
       "displayLines": [
-        "小狗睡了",
-        "很久才起來。"
+        "為什麼車",
+        "還不來？"
       ],
-      "spokenText": "小狗睡了很久才起來",
-      "focusChar": "睡",
-      "imageNotes": "A small family dog has slept for a long time on a little bed or mat at home and is now slowly getting up. The protagonist little girl watches nearby. Clearly show the dog waking after a long sleep; no text, numbers, or labels."
+      "imageNotes": "The recurring protagonist girl is waiting by a roadside or simple bus stop with an adult. She looks toward the road, wondering why the vehicle has not arrived yet. Keep the road empty enough that 車還不來 is clear."
     },
     {
-      "text": "假花不用養，也不會死。",
+      "id": "R018-S04",
+      "text": "車子怎麼不動了？",
+      "spokenText": "車子怎麼不動了",
+      "focusChar": "動",
       "displayLines": [
-        "假花不用養，",
-        "也不會死。"
+        "車子怎麼",
+        "不動了？"
       ],
-      "spokenText": "假花不用養也不會死",
-      "focusChar": "假",
-      "imageNotes": "On a table, show a fake flower and a real flower for contrast. The protagonist mother or little girl looks at the fake flower. Clearly show fake flowers do not need care and will not die; keep flowers pleasant, not frightening; no text, numbers, or labels."
+      "imageNotes": "A child is crouching or sitting near a toy car that has stopped moving. The child looks puzzled at the toy car. The scene should clearly show the car is not moving, without needing motion lines or text labels."
     },
     {
-      "text": "養好身體，才有精神。",
+      "id": "R018-S05",
+      "text": "兩個小孩在玩黑白棋。",
+      "spokenText": "兩個小孩在玩黑白棋",
+      "focusChar": "棋",
       "displayLines": [
-        "養好身體，",
-        "才有精神。"
+        "兩個小孩",
+        "在玩黑白棋。"
       ],
-      "spokenText": "養好身體才有精神",
-      "focusChar": "精",
-      "imageNotes": "After resting and recovering, the protagonist little girl looks energetic in sunlight, stretching or preparing to go out and play, with the protagonist mother nearby. Clearly show a healthy body and good spirit; no text, numbers, or labels."
+      "imageNotes": "Show two generic children sitting at a table playing black-and-white board game pieces. The children must be generic and must not look like the recurring protagonist girl, the recurring young boy classmate, or the recurring sporty boy. Make exactly two children visible."
     }
   ],
   "sentenceGames": [
@@ -143,19 +289,43 @@
       "id": "R018-G01",
       "type": "find-character",
       "sentenceId": "R018-S05",
-      "targetChar": "精",
-      "prompt": "找一找句子裡的「精」。"
+      "targetChar": "棋",
+      "prompt": "找到「棋」。",
+      "options": [
+        {
+          "id": "option-1",
+          "text": "玩",
+          "correct": false
+        },
+        {
+          "id": "option-2",
+          "text": "黑",
+          "correct": false
+        },
+        {
+          "id": "option-3",
+          "text": "白",
+          "correct": false
+        },
+        {
+          "id": "option-4",
+          "text": "棋",
+          "correct": true
+        }
+      ]
     },
     {
       "id": "R018-G02",
       "type": "teach-character",
       "sentenceId": "R018-S02",
-      "targetChar": "裝",
+      "targetChar": "擦",
+      "targetCharIndex": 2,
       "prompt": "幫小兔補上這個字。",
       "missingIndexes": [
         2
       ],
-      "targetCharIndex": 2,
+      "prefixText": "我先",
+      "suffixText": "桌子再掃地",
       "teachAudio": {
         "prefixSrc": "/assets/reviews/R018/audio/R018-G02-prefix.m4a",
         "suffixSrc": "/assets/reviews/R018/audio/R018-G02-suffix.m4a"
@@ -165,25 +335,25 @@
       "id": "R018-G03",
       "type": "missing-character",
       "sentenceId": "R018-S04",
-      "targetChar": "死",
+      "targetChar": "動",
       "prompt": "選出少掉的字。",
       "missingIndexes": [
-        8
+        5
       ],
       "options": [
         {
           "id": "correct",
-          "text": "死",
+          "text": "動",
           "correct": true
         },
         {
           "id": "wrong-1",
-          "text": "養",
+          "text": "車",
           "correct": false
         },
         {
           "id": "wrong-2",
-          "text": "假",
+          "text": "不",
           "correct": false
         }
       ]
@@ -191,35 +361,30 @@
     {
       "id": "R018-G04",
       "type": "partial-order",
-      "sentenceId": "R018-S01",
-      "targetChar": "休",
+      "sentenceId": "R018-S03",
+      "targetChar": "為",
       "prompt": "排出正確的句子。",
       "missingIndexes": [
         0,
         1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
+        2
       ],
       "options": [
         {
-          "id": "slot-1",
-          "text": "生病了",
+          "id": "R018-G04-A",
+          "text": "為",
           "correctOrder": 0,
           "correct": true
         },
         {
-          "id": "slot-2",
-          "text": "要好好",
+          "id": "R018-G04-B",
+          "text": "什",
           "correctOrder": 1,
           "correct": true
         },
         {
-          "id": "slot-3",
-          "text": "休息",
+          "id": "R018-G04-C",
+          "text": "麼",
           "correctOrder": 2,
           "correct": true
         }
@@ -228,36 +393,32 @@
     {
       "id": "R018-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R018-S03",
-      "targetChar": "睡",
+      "sentenceId": "R018-S01",
+      "targetChar": "滿",
       "prompt": "聽聽看誰讀對了。",
       "options": [
         {
           "id": "correct",
-          "text": "小狗睡了很久才起來。",
+          "text": "桌上有滿滿的飯菜。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R018/audio/R018-S03.m4a"
+          "audioSrc": "/assets/reviews/R018/audio/R018-S01.m4a",
+          "spokenText": "桌上有滿滿的飯菜"
         },
         {
           "id": "wrong-one",
-          "text": "小狗睡了一下才起來。",
+          "text": "桌下有滿滿的飯菜。",
           "correct": false,
           "audioSrc": "/assets/reviews/R018/audio/R018-G05-wrong-one.m4a",
-          "spokenText": "小狗睡了一下才起來"
+          "spokenText": "桌下有滿滿的飯菜"
         },
         {
           "id": "wrong-two",
-          "text": "小狗睡了很久不起來。",
+          "text": "桌上有少少的飯菜。",
           "correct": false,
           "audioSrc": "/assets/reviews/R018/audio/R018-G05-wrong-two.m4a",
-          "spokenText": "小狗睡了很久不起來"
+          "spokenText": "桌上有少少的飯菜"
         }
       ]
     }
-  ],
-  "releaseAudit": {
-    "status": "integrated-from-latest-origin-main",
-    "integratedReviewModulesThrough": "R018",
-    "note": "Release transplanted review-local package files, checked L300 review ceiling, and integrated R017-R018 before L301."
-  }
+  ]
 }
