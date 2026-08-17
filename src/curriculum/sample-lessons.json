@@ -44029,70 +44029,75 @@
         },
         {
           "id": "L097-S05",
-          "text": "沒有眼鏡可用，我看不到",
+          "text": "沒有眼鏡可用，爸爸看不到。",
           "displayLines": [
             "沒有眼鏡",
-            "可用，我",
-            "看不到"
+            "可用，爸爸",
+            "看不到。"
           ],
-          "spokenText": "沒有眼鏡可用我看不到",
+          "spokenText": "沒有眼鏡可用爸爸看不到",
           "focusChar": "鏡",
-          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean everyday home scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos. Show an adult or another child who needs eyeglasses, not the fixed first-person girl. The person has no usable eyeglasses and cannot see clearly, squinting gently at a blank book or simple object. Keep the scene calm and child-safe; do not include readable writing anywhere.",
+          "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean home interior, expressive preschool proportions, bright warm palette, and phone-readable composition. Do not copy any specific person from L058. Use the recurring protagonist father identity from the family reference: adult man, steady family role, simple blue shirt or vest, clearly different from the mother. In the family home, father has no usable eyeglasses and cannot see clearly. Show an empty glasses case or eyeglasses out of reach/unusable nearby, while father squints gently at a blank book or simple object. The protagonist girl may be nearby but father is the main subject. Do not show mother as the person who cannot see. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, or logos.",
           "imageSrc": "/assets/lessons/L097/images/L097-S05.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L097/audio/L097-S05.m4a",
-            "durationMs": 3340,
+            "durationMs": 5094,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 250
+                "endMs": 350
               },
               {
                 "charIndex": 1,
-                "startMs": 250,
-                "endMs": 500
+                "startMs": 350,
+                "endMs": 700
               },
               {
                 "charIndex": 2,
-                "startMs": 500,
-                "endMs": 900
+                "startMs": 700,
+                "endMs": 1280
               },
               {
                 "charIndex": 3,
-                "startMs": 900,
-                "endMs": 1080
+                "startMs": 1280,
+                "endMs": 1500
               },
               {
                 "charIndex": 4,
-                "startMs": 1080,
-                "endMs": 1460
+                "startMs": 1500,
+                "endMs": 2040
               },
               {
                 "charIndex": 5,
-                "startMs": 1460,
-                "endMs": 1620
+                "startMs": 2040,
+                "endMs": 2280
               },
               {
                 "charIndex": 6,
-                "startMs": 2200,
-                "endMs": 2420
+                "startMs": 2780,
+                "endMs": 3060
               },
               {
                 "charIndex": 7,
-                "startMs": 2420,
-                "endMs": 2740
+                "startMs": 3060,
+                "endMs": 3340
               },
               {
                 "charIndex": 8,
-                "startMs": 2740,
-                "endMs": 2890
+                "startMs": 3340,
+                "endMs": 3980
               },
               {
                 "charIndex": 9,
-                "startMs": 2890,
-                "endMs": 3040
+                "startMs": 3980,
+                "endMs": 4180
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4180,
+                "endMs": 4380
               }
             ]
           }
@@ -44205,19 +44210,19 @@
           "options": [
             {
               "id": "correct",
-              "text": "沒有眼鏡可用我看不到",
+              "text": "沒有眼鏡可用爸爸看不到",
               "correct": true,
               "audioSrc": "/assets/lessons/L097/audio/L097-S05.m4a"
             },
             {
               "id": "wrong-one",
-              "text": "沒有眼鏡可用他看不到",
+              "text": "沒有眼鏡可用媽媽看不到",
               "correct": false,
               "audioSrc": "/assets/lessons/L097/audio/L097-G05-wrong-one.m4a"
             },
             {
               "id": "wrong-two",
-              "text": "沒有眼鏡可用我看不出",
+              "text": "沒有眼鏡可用爸爸看不出",
               "correct": false,
               "audioSrc": "/assets/lessons/L097/audio/L097-G05-wrong-two.m4a"
             }
