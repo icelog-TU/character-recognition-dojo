@@ -68,13 +68,14 @@ For each review pair:
 5. Confirm no Han character appears before it is learned by the milestone ceiling.
 6. Confirm every target new character in the 30-lesson coverage range appears at least once across the two review modules.
 7. Confirm `spokenText` equals `text` with punctuation removed, without adding or removing Han characters.
-8. Confirm `focusChar` appears in its sentence.
-9. Confirm sentence Han counts are normally 4-12.
-10. Flag any sentence that is too abstract, too hard to visualize, unnatural in Taiwan Mandarin, or high cognitive load for a five-year-old learner.
-11. Confirm image notes are concrete and identify recurring people using `docs/LESSON_VISUAL_CAST_SOP.md`.
-12. Confirm Stage 4 uses every reviewed sentence exactly once.
-13. Confirm `partial-order` blanks exactly 3-4 Han characters, `missingIndexes.length` equals `options.length`, and every option text is exactly one Han character. Multi-character chunks or phrase cards are FAIL.
-14. Confirm `G05 choose-pronunciation` wrong choices have the same Han count as the correct text and differ by only 1-2 Han characters.
+8. Confirm every sentence with `displayLines` satisfies `displayLines.join("") === text`, including punctuation such as `，`, `。`, `？`, and `！`. If punctuation is missing from `displayLines`, the packet is FAIL and must return to Review Migration for revision.
+9. Confirm `focusChar` appears in its sentence.
+10. Confirm sentence Han counts are normally 4-12.
+11. Flag any sentence that is too abstract, too hard to visualize, unnatural in Taiwan Mandarin, or high cognitive load for a five-year-old learner.
+12. Confirm image notes are concrete and identify recurring people using `docs/LESSON_VISUAL_CAST_SOP.md`.
+13. Confirm Stage 4 uses every reviewed sentence exactly once.
+14. Confirm `partial-order` blanks exactly 3-4 Han characters, `missingIndexes.length` equals `options.length`, and every option text is exactly one Han character. Multi-character chunks or phrase cards are FAIL.
+15. Confirm `G05 choose-pronunciation` wrong choices have the same Han count as the correct text and differ by only 1-2 Han characters.
 
 ## Output
 
