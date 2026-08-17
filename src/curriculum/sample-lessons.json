@@ -50497,64 +50497,69 @@
         },
         {
           "id": "L112-S03",
-          "text": "有幾個人要來吃點心？",
+          "text": "有幾個同學要來吃點心？",
           "displayLines": [
-            "有幾個人",
+            "有幾個同學",
             "要來吃點心？"
           ],
-          "spokenText": "有幾個人要來吃點心",
+          "spokenText": "有幾個同學要來吃點心",
           "focusChar": "幾",
-          "imagePrompt": "Warm simple Taiwanese children's picture book illustration in the same visual style as lesson L058: fine pencil-and-watercolor linework, clean rounded shapes, soft natural light, bright warm palette, gentle expressions, phone-readable composition, and an uncluttered family dining room or classroom snack table. Show snacks prepared on a table while a mother or child seems to be asking how many people will come eat snacks. Include a few seats or waiting family/classroom space to suggest guests without any written or numeric count. Do not include readable text, numbers, letters, labels, signs, zhuyin, or writing anywhere in the image.",
+          "imagePrompt": "Use the L058 approved lesson image style anchors. Square image / 1:1 composition with safe margins. Warm children's picture-book watercolor and fine colored-pencil style. Show only unrelated children and classmates in a simple classroom or friendly snack area, not the protagonist girl, not her mother, and not family members. A snack table is prepared, with a child wondering how many classmates will come eat snacks and a few different classmates arriving or waiting nearby. No adults, parents, doorway family scene, duplicate mothers, readable text, numbers, letters, labels, signs, zhuyin, brands, speech bubbles, UI, watermark, or readable marks.",
           "imageSrc": "/assets/lessons/L112/images/L112-S03.webp",
           "approved": true,
           "audio": {
             "src": "/assets/lessons/L112/audio/L112-S03.m4a",
-            "durationMs": 5040,
+            "durationMs": 4983,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 340
+                "endMs": 360
               },
               {
                 "charIndex": 1,
-                "startMs": 340,
-                "endMs": 820
+                "startMs": 360,
+                "endMs": 600
               },
               {
                 "charIndex": 2,
-                "startMs": 820,
-                "endMs": 1040
+                "startMs": 600,
+                "endMs": 820
               },
               {
                 "charIndex": 3,
-                "startMs": 1040,
-                "endMs": 1260
+                "startMs": 820,
+                "endMs": 1120
               },
               {
                 "charIndex": 4,
-                "startMs": 1260,
-                "endMs": 2000
+                "startMs": 1120,
+                "endMs": 1380
               },
               {
                 "charIndex": 5,
-                "startMs": 2000,
-                "endMs": 2380
+                "startMs": 1380,
+                "endMs": 1760
               },
               {
                 "charIndex": 6,
-                "startMs": 2380,
-                "endMs": 2700
+                "startMs": 1760,
+                "endMs": 2020
               },
               {
                 "charIndex": 7,
-                "startMs": 2700,
-                "endMs": 3020
+                "startMs": 2020,
+                "endMs": 2260
               },
               {
                 "charIndex": 8,
-                "startMs": 3020,
-                "endMs": 3280
+                "startMs": 2260,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2540,
+                "endMs": 2760
               }
             ]
           }
@@ -50617,7 +50622,7 @@
           ],
           "spokenText": "你沒有打人好棒",
           "focusChar": "棒",
-          "imagePrompt": "Warm simple Taiwanese children's picture book illustration in the same visual style as lesson L058: fine pencil-and-watercolor linework, clean rounded shapes, soft natural light, bright warm palette, gentle facial expressions, consistent expressive preschool proportions, phone-readable composition, and an uncluttered home or classroom play area. Show a child who had been upset choosing not to hit anyone: hands relaxed by their sides or taking a calming breath, with a caring adult or mother kneeling nearby and warmly praising them. The mood should show accepted emotions and positive encouragement. Do not show violence, impact, injury, serious crying, fear, horror, or punishment. Do not include readable text, numbers, letters, labels, signs, zhuyin, or writing anywhere in the image.",
+          "imagePrompt": "Use the L058 approved lesson image style anchors. Square image / 1:1 composition with safe margins. Warm children's picture-book watercolor and fine colored-pencil style. In a daycare playroom, show two younger unknown toddlers or very small preschool children, not the protagonist girl, not fixed boy characters, and not known family members. A child-safe toy is visibly broken on the floor between them. One tiny child has an angry crying face, clearly upset but not hitting anyone and not touching the other child; the other child is nearby, safe, and unharmed. An unrelated daycare teacher or caregiver, visually distinct from all mother characters, kneels and warmly praises the upset child for not hitting. No violence, impact, injury, punishment, fear, readable text, numbers, letters, labels, signs, zhuyin, brands, speech bubbles, UI, watermark, or readable marks.",
           "imageSrc": "/assets/lessons/L112/images/L112-S05.webp",
           "approved": true,
           "audio": {
@@ -50723,34 +50728,34 @@
           "sentenceId": "L112-S03",
           "targetChar": "幾",
           "missingIndexes": [
-            0,
             1,
             2,
-            3
+            3,
+            4
           ],
           "prompt": "排出正確的句子。",
           "options": [
             {
               "id": "L112-G04-A",
-              "text": "有",
+              "text": "幾",
               "correctOrder": 0,
               "correct": true
             },
             {
               "id": "L112-G04-B",
-              "text": "幾",
+              "text": "個",
               "correctOrder": 1,
               "correct": true
             },
             {
               "id": "L112-G04-C",
-              "text": "個",
+              "text": "同",
               "correctOrder": 2,
               "correct": true
             },
             {
               "id": "L112-G04-D",
-              "text": "人",
+              "text": "學",
               "correctOrder": 3,
               "correct": true
             }
@@ -50816,7 +50821,7 @@
           ],
           "spokenText": "他用球棒打到我的頭",
           "focusChar": "頭",
-          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean safe playground or grass field, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Use the fixed second-person boy: friendly young boy, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack. Use the fixed first-person girl: friendly young girl, shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes. The boy is playing baseball and accidentally lets a soft child-safe foam baseball bat lightly touch the girl's head. Make it clearly accidental and gentle, with surprised but calm expressions. The bat must look like a safe child's sports toy, not a weapon. No injury, blood, crying hard, violence, fear, horror, anger, readable text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, or logos.",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors and L035 references for the fixed third-person sporty boy. Square image / 1:1 composition with safe margins. Modern children's picture-book watercolor and fine colored-pencil style in a safe playground or grass field. Use the fixed 'he' boy from L035, not the fixed blue-shirt second-person boy: short energetic slightly spiky black hair, plain orange athletic T-shirt, navy shorts, red sneakers, green wristband, no backpack. Use the fixed first-person girl as 'my'. The sporty boy is playing with a soft child-safe foam baseball bat and accidentally lightly bumps the girl's head. Make it clearly accidental and gentle, with surprised but calm expressions. The bat must look like a safe toy, not a weapon. No injury, blood, hard crying, violence mood, fear, anger, readable text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, or logos.",
           "imageSrc": "/assets/lessons/L113/images/L113-S01.webp",
           "approved": true,
           "audio": {
@@ -51263,7 +51268,7 @@
           ],
           "spokenText": "你頭上的花帽很好看",
           "focusChar": "帽",
-          "imagePrompt": "Use the L058 approved sentence-image style anchors: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, and public/assets/lessons/L058/images/L058-S03.webp. Modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean park or home-garden scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Preserve the fixed first-person young girl: shoulder-length dark brown hair, small pink hair clip, yellow top, coral-red pinafore dress, red shoes if visible, warm expression. She is wearing a pretty hat with clear flower decorations on top; the flowers are decorative, not readable marks. Preserve the fixed second-person young boy: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack if visible. The boy looks at the girl's flower hat with a pleased expression, showing that the hat looks good. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable symbols.",
+          "imagePrompt": "Use the L058 approved sentence-image style anchors and L012 references for the fixed second-person young boy. Square image / 1:1 composition with safe margins. Modern children's picture-book watercolor and fine colored-pencil style in a park or home-garden scene. Use the fixed second-person young boy: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack if visible. The boy wears a sporty multicolor patterned cap or bucket hat on his head. The hat is a colorful fancy/flower-pattern hat with lively multicolor fabric panels or abstract color patches, but it must not have literal flower decorations, blossoms, a flower crown, or big flowers attached. The fixed first-person girl may stand nearby admiring the hat, but she must not wear it. No visible text, letters, numbers, labels, zhuyin, signage, UI, watermark, speech bubbles, arrows, logos, or readable symbols.",
           "imageSrc": "/assets/lessons/L114/images/L114-S01.webp",
           "approved": true,
           "audio": {
