@@ -2,189 +2,114 @@
   "id": "R013",
   "reviewNumber": 13,
   "title": "複習十三",
-  "afterLessonOrder": 240,
+  "afterLessonOrder": 135,
   "targetLessonRange": {
-    "startOrder": 181,
-    "endOrder": 210
+    "startOrder": 106,
+    "endOrder": 135
   },
   "requiredCoverageChars": [
-    "說",
-    "師",
-    "話",
-    "課",
-    "像",
-    "想",
-    "真",
-    "力",
-    "能",
-    "火",
-    "發",
-    "電",
-    "生",
-    "明",
-    "光",
-    "亮",
-    "陽",
-    "月",
-    "影",
-    "長",
-    "星",
-    "行",
-    "道",
-    "流",
-    "河",
-    "從",
-    "進",
-    "早",
-    "晚",
-    "海"
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝"
   ],
   "requiredRounds": 5,
   "sentences": [
     {
       "id": "R013-S01",
-      "text": "老師說話要用心聽。",
+      "text": "幾點要玩黑白棋？",
       "displayLines": [
-        "老師說話",
-        "要用心聽。"
+        "幾點要玩",
+        "黑白棋？"
       ],
-      "spokenText": "老師說話要用心聽",
-      "focusChar": "說",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, license plates, or brand marks anywhere in the image. Classroom scene: a visually distinct teacher speaks calmly to children while the protagonist little girl sits properly and listens attentively. Teacher identity: tidy classroom clothing and calm instructional posture, visually different from the protagonist mother and not using the mother yellow/coral-red family palette. The classroom board and walls are blank.",
+      "spokenText": "幾點要玩黑白棋",
+      "focusChar": "棋",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. The recurring protagonist girl is looking at a simple clock while a black-and-white board game is set on the table nearby. The black and white game pieces should be clearly visible. The scene should feel like she is asking what time they will play.",
       "imageSrc": "/assets/reviews/R013/images/R013-S01.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R013/audio/R013-S01.m4a",
-        "durationMs": 3599,
+        "durationMs": 3511,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 360
+            "endMs": 420
           },
           {
             "charIndex": 1,
-            "startMs": 360,
-            "endMs": 620
+            "startMs": 420,
+            "endMs": 780
           },
           {
             "charIndex": 2,
-            "startMs": 620,
+            "startMs": 780,
             "endMs": 1060
           },
           {
             "charIndex": 3,
             "startMs": 1060,
-            "endMs": 1380
+            "endMs": 1400
           },
           {
             "charIndex": 4,
-            "startMs": 1380,
-            "endMs": 1920
+            "startMs": 1400,
+            "endMs": 2000
           },
           {
             "charIndex": 5,
-            "startMs": 1920,
-            "endMs": 2260
+            "startMs": 2000,
+            "endMs": 2360
           },
           {
             "charIndex": 6,
-            "startMs": 2260,
-            "endMs": 2520
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2520,
-            "endMs": 2740
+            "startMs": 2360,
+            "endMs": 2640
           }
         ]
       }
     },
     {
       "id": "R013-S02",
-      "text": "明天上課，要學怎麼生火。",
+      "text": "他打球，得了一分。",
       "displayLines": [
-        "明天上課，",
-        "要學怎麼",
-        "生火。"
+        "他打球，",
+        "得了一分。"
       ],
-      "spokenText": "明天上課要學怎麼生火",
-      "focusChar": "課",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, license plates, or brand marks anywhere in the image. Safe outdoor learning or life-skills class scene. A visually distinct teacher supervises the protagonist little girl and other children while introducing a small safe fire bowl or supervised campfire setup from a clear distance. Adult supervision is obvious and calm; the scene is not dangerous.",
+      "spokenText": "他打球得了一分",
+      "focusChar": "分",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Use the fixed recurring sporty boy identity for 他, not a generic boy. The sporty boy has just hit or thrown a ball and earned one point. Show one clear point marker using one simple dot/star/token only, with no written numbers or scoreboard text, so 一分 is visually obvious.",
       "imageSrc": "/assets/reviews/R013/images/R013-S02.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R013/audio/R013-S02.m4a",
-        "durationMs": 3073,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 320
-          },
-          {
-            "charIndex": 1,
-            "startMs": 320,
-            "endMs": 640
-          },
-          {
-            "charIndex": 2,
-            "startMs": 640,
-            "endMs": 900
-          },
-          {
-            "charIndex": 3,
-            "startMs": 900,
-            "endMs": 1120
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1120,
-            "endMs": 1500
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1500,
-            "endMs": 1700
-          },
-          {
-            "charIndex": 6,
-            "startMs": 1700,
-            "endMs": 1890
-          },
-          {
-            "charIndex": 7,
-            "startMs": 1890,
-            "endMs": 2080
-          },
-          {
-            "charIndex": 8,
-            "startMs": 2080,
-            "endMs": 2330
-          },
-          {
-            "charIndex": 9,
-            "startMs": 2330,
-            "endMs": 2580
-          }
-        ]
-      }
-    },
-    {
-      "id": "R013-S03",
-      "text": "太陽發出明亮的光。",
-      "displayLines": [
-        "太陽發出",
-        "明亮的光。"
-      ],
-      "spokenText": "太陽發出明亮的光",
-      "focusChar": "光",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, license plates, or brand marks anywhere in the image. Bright outdoor nature scene with the sun shining clear warm light over the sky, trees, and flowers. Optional protagonist little girl safely outdoors looking up at the sunlight; the focus remains the sun and bright light.",
-      "imageSrc": "/assets/reviews/R013/images/R013-S03.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R013/audio/R013-S03.m4a",
-        "durationMs": 3602,
+        "durationMs": 2835,
         "charTimings": [
           {
             "charIndex": 0,
@@ -199,150 +124,189 @@
           {
             "charIndex": 2,
             "startMs": 660,
-            "endMs": 1400
+            "endMs": 940
           },
           {
             "charIndex": 3,
-            "startMs": 1400,
-            "endMs": 1800
+            "startMs": 940,
+            "endMs": 1380
           },
           {
             "charIndex": 4,
-            "startMs": 1800,
-            "endMs": 2100
+            "startMs": 1380,
+            "endMs": 1540
           },
           {
             "charIndex": 5,
-            "startMs": 2100,
-            "endMs": 2260
+            "startMs": 1540,
+            "endMs": 1780
           },
           {
             "charIndex": 6,
-            "startMs": 2260,
-            "endMs": 2580
+            "startMs": 1780,
+            "endMs": 1920
+          }
+        ]
+      }
+    },
+    {
+      "id": "R013-S03",
+      "text": "草地上有球棒。",
+      "displayLines": [
+        "草地上",
+        "有球棒。"
+      ],
+      "spokenText": "草地上有球棒",
+      "focusChar": "棒",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. A ball bat is lying on green grass. The bat should be clearly visible on the grass and not held by anyone. Keep the scene simple; a ball may be nearby, but the bat is the main object.",
+      "imageSrc": "/assets/reviews/R013/images/R013-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R013/audio/R013-S03.m4a",
+        "durationMs": 2902,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
           },
           {
-            "charIndex": 7,
-            "startMs": 2580,
-            "endMs": 2700
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1620,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1960,
+            "endMs": 2100
           }
         ]
       }
     },
     {
       "id": "R013-S04",
-      "text": "月光下，影子好長。",
+      "text": "帽子戴在我頭上。",
       "displayLines": [
-        "月光下，",
-        "影子好長。"
+        "帽子戴在",
+        "我頭上。"
       ],
-      "spokenText": "月光下影子好長",
-      "focusChar": "影",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, license plates, or brand marks anywhere in the image. Gentle nighttime outdoor scene, not scary. Bright moonlight falls on the ground and creates a long shadow from the protagonist little girl or a tree. The moonlight and long shadow are centered and readable on a phone screen.",
+      "spokenText": "帽子戴在我頭上",
+      "focusChar": "戴",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. The recurring protagonist girl is wearing a hat on her head. Make the hat clearly on top of her head and make her the speaker for 我. Keep the pose simple and front-facing enough that 戴在我頭上 is visually clear.",
       "imageSrc": "/assets/reviews/R013/images/R013-S04.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R013/audio/R013-S04.m4a",
-        "durationMs": 4174,
+        "durationMs": 2693,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 440
+            "endMs": 460
           },
           {
             "charIndex": 1,
-            "startMs": 440,
+            "startMs": 460,
             "endMs": 720
           },
           {
             "charIndex": 2,
             "startMs": 720,
-            "endMs": 1460
+            "endMs": 1040
           },
           {
             "charIndex": 3,
-            "startMs": 1860,
-            "endMs": 2090
+            "startMs": 1040,
+            "endMs": 1280
           },
           {
             "charIndex": 4,
-            "startMs": 2090,
-            "endMs": 2320
+            "startMs": 1280,
+            "endMs": 1580
           },
           {
             "charIndex": 5,
-            "startMs": 2320,
-            "endMs": 2980
+            "startMs": 1580,
+            "endMs": 1800
           },
           {
             "charIndex": 6,
-            "startMs": 2980,
-            "endMs": 3280
+            "startMs": 1800,
+            "endMs": 2080
           }
         ]
       }
     },
     {
       "id": "R013-S05",
-      "text": "河水從山上流進大海。",
+      "text": "外面下雨，天空有雲。",
       "displayLines": [
-        "河水從山上",
-        "流進大海。"
+        "外面下雨，",
+        "天空有雲。"
       ],
-      "spokenText": "河水從山上流進大海",
-      "focusChar": "流",
-      "imagePrompt": "Square image / 1:1 composition. Use the approved L058 lesson images only as style references: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Do not copy any specific person from L058. Keep the main subject, key objects, actions, and count relationships centered with safe margins. No visible text, letters, numbers, zhuyin, labels, signs, watermarks, logos, license plates, or brand marks anywhere in the image. Natural landscape scene without people. A river visibly flows down from mountains and continues into the sea, with mountain, river path, and ocean all readable in a square composition. Show flow through natural water movement only, without arrows.",
+      "spokenText": "外面下雨天空有雲",
+      "focusChar": "雲",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. The recurring protagonist girl is indoors by a window looking outside. Outside, rain is falling and there are clouds in the sky. Make 外面 clear by showing the window frame and outdoor rainy sky.",
       "imageSrc": "/assets/reviews/R013/images/R013-S05.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R013/audio/R013-S05.m4a",
-        "durationMs": 4170,
+        "durationMs": 3613,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 420
+            "endMs": 360
           },
           {
             "charIndex": 1,
-            "startMs": 420,
-            "endMs": 700
+            "startMs": 360,
+            "endMs": 740
           },
           {
             "charIndex": 2,
-            "startMs": 700,
-            "endMs": 1580
+            "startMs": 740,
+            "endMs": 1060
           },
           {
             "charIndex": 3,
-            "startMs": 1580,
-            "endMs": 2060
+            "startMs": 1060,
+            "endMs": 1280
           },
           {
             "charIndex": 4,
-            "startMs": 2060,
-            "endMs": 2380
+            "startMs": 2000,
+            "endMs": 2060
           },
           {
             "charIndex": 5,
-            "startMs": 2380,
-            "endMs": 2660
+            "startMs": 2060,
+            "endMs": 2360
           },
           {
             "charIndex": 6,
-            "startMs": 2660,
-            "endMs": 2940
+            "startMs": 2360,
+            "endMs": 2760
           },
           {
             "charIndex": 7,
-            "startMs": 2940,
-            "endMs": 3300
-          },
-          {
-            "charIndex": 8,
-            "startMs": 3300,
-            "endMs": 3520
+            "startMs": 2760,
+            "endMs": 2940
           }
         ]
       }
@@ -352,48 +316,66 @@
     {
       "id": "R013-G01",
       "type": "find-character",
-      "sentenceId": "R013-S03",
-      "targetChar": "光",
-      "prompt": "找一找句子裡的「光」。"
+      "sentenceId": "R013-S01",
+      "targetChar": "棋",
+      "prompt": "找到「棋」。",
+      "options": [
+        {
+          "id": "R013-G01-A",
+          "text": "幾",
+          "correct": false
+        },
+        {
+          "id": "R013-G01-B",
+          "text": "點",
+          "correct": false
+        },
+        {
+          "id": "R013-G01-C",
+          "text": "棋",
+          "correct": true
+        },
+        {
+          "id": "R013-G01-D",
+          "text": "玩",
+          "correct": false
+        }
+      ]
     },
     {
       "id": "R013-G02",
       "type": "teach-character",
-      "sentenceId": "R013-S01",
-      "targetChar": "說",
-      "prompt": "幫小兔補上這個字。",
-      "missingIndexes": [
-        2
-      ],
-      "targetCharIndex": 2,
+      "sentenceId": "R013-S05",
+      "targetChar": "雲",
+      "targetCharIndex": 7,
+      "prompt": "聽一聽，補回不見的字。",
       "teachAudio": {
-        "prefixSrc": "/assets/reviews/R013/audio/R013-G02-prefix.m4a",
-        "suffixSrc": "/assets/reviews/R013/audio/R013-G02-suffix.m4a"
+        "prefixSrc": "/assets/reviews/R013/audio/R013-G02-prefix.m4a"
       }
     },
     {
       "id": "R013-G03",
       "type": "missing-character",
-      "sentenceId": "R013-S05",
-      "targetChar": "流",
-      "prompt": "選出少掉的字。",
+      "sentenceId": "R013-S02",
+      "targetChar": "分",
+      "prompt": "選出不見的字。",
       "missingIndexes": [
-        5
+        6
       ],
       "options": [
         {
-          "id": "correct",
-          "text": "流",
+          "id": "R013-G03-A",
+          "text": "分",
           "correct": true
         },
         {
-          "id": "wrong-1",
-          "text": "進",
+          "id": "R013-G03-B",
+          "text": "球",
           "correct": false
         },
         {
-          "id": "wrong-2",
-          "text": "從",
+          "id": "R013-G03-C",
+          "text": "打",
           "correct": false
         }
       ]
@@ -402,69 +384,71 @@
       "id": "R013-G04",
       "type": "partial-order",
       "sentenceId": "R013-S04",
-      "targetChar": "影",
-      "prompt": "排出正確的句子。",
+      "targetChar": "戴",
+      "prompt": "把不見的字照順序放回句子。",
       "missingIndexes": [
         0,
-        1,
         2,
-        3,
-        4,
-        5,
-        6
+        5
       ],
       "options": [
         {
-          "id": "slot-1",
-          "text": "月光下",
+          "id": "R013-G04-A",
+          "text": "帽",
           "correctOrder": 0,
           "correct": true
         },
         {
-          "id": "slot-2",
-          "text": "影子",
+          "id": "R013-G04-B",
+          "text": "戴",
           "correctOrder": 1,
           "correct": true
         },
         {
-          "id": "slot-3",
-          "text": "好長",
+          "id": "R013-G04-C",
+          "text": "頭",
           "correctOrder": 2,
           "correct": true
         }
+      ],
+      "correctOrder": [
+        "R013-G04-A",
+        "R013-G04-B",
+        "R013-G04-C"
       ]
     },
     {
       "id": "R013-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R013-S02",
-      "targetChar": "課",
-      "prompt": "聽聽看誰讀對了。",
+      "sentenceId": "R013-S03",
+      "targetChar": "棒",
+      "prompt": "選出你聽到的句子。",
       "options": [
         {
           "id": "correct",
-          "text": "明天上課，要學怎麼生火。",
+          "text": "草地上有球棒。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R013/audio/R013-S02.m4a"
+          "audioSrc": "/assets/reviews/R013/audio/R013-S03.m4a"
         },
         {
           "id": "wrong-one",
-          "text": "明天上課，要學怎麼發電。",
+          "text": "草地上有球帽。",
           "correct": false,
           "audioSrc": "/assets/reviews/R013/audio/R013-G05-wrong-one.m4a"
         },
         {
           "id": "wrong-two",
-          "text": "明天上課，要學怎麼畫畫。",
+          "text": "草地上有球鞋。",
           "correct": false,
           "audioSrc": "/assets/reviews/R013/audio/R013-G05-wrong-two.m4a"
         }
       ]
     }
   ],
-  "releaseAudit": {
-    "integratedFromOriginMain": true,
-    "dependenciesResolved": true,
+  "productionNotes": {
+    "kind": "review-module-migration-package",
+    "pairMateId": "R014",
+    "allowedCharacterCeilingLesson": "L135",
     "allowedChars": [
       "一",
       "二",
@@ -603,112 +587,12 @@
       "套",
       "熱",
       "冷",
-      "喝",
-      "飯",
-      "菜",
-      "老",
-      "卻",
-      "麼",
-      "什",
-      "為",
-      "以",
-      "怎",
-      "所",
-      "房",
-      "間",
-      "時",
-      "還",
-      "燈",
-      "關",
-      "窗",
-      "車",
-      "等",
-      "再",
-      "風",
-      "吹",
-      "樹",
-      "動",
-      "葉",
-      "綠",
-      "滿",
-      "掃",
-      "擦",
-      "先",
-      "洗",
-      "又",
-      "髒",
-      "亂",
-      "回",
-      "就",
-      "快",
-      "事",
-      "跑",
-      "馬",
-      "停",
-      "叫",
-      "聲",
-      "聽",
-      "見",
-      "說",
-      "師",
-      "話",
-      "課",
-      "像",
-      "想",
-      "真",
-      "力",
-      "能",
-      "火",
-      "發",
-      "電",
-      "生",
-      "明",
-      "光",
-      "亮",
-      "陽",
-      "月",
-      "影",
-      "長",
-      "星",
-      "行",
-      "道",
-      "流",
-      "河",
-      "從",
-      "進",
-      "早",
-      "晚",
-      "海",
-      "船",
-      "魚",
-      "游",
-      "泳",
-      "池",
-      "身",
-      "濕",
-      "乾",
-      "服",
-      "褲",
-      "換",
-      "改",
-      "錯",
-      "知",
-      "認",
-      "新",
-      "舊",
-      "半",
-      "只",
-      "剩",
-      "夠",
-      "錢",
-      "買",
-      "貴",
-      "賣",
-      "店",
-      "場",
-      "市",
-      "夜",
-      "具"
-    ]
+      "喝"
+    ],
+    "dependsOnLessons": [
+      "L135"
+    ],
+    "provisionalLearnedChars": [],
+    "releaseIntegration": "Release owns insertion/replacement in top-level reviewLessons after L135."
   }
 }
