@@ -492,6 +492,7 @@
         sentences: [],
         extraAudio: [],
         flags: {},
+        locallyEditedKeys: new Set(),
         cloudRepairItems: {},
         reviewComplete: false,
         placeholderUnit: false,
@@ -1230,6 +1231,10 @@
         state.cloudRepairItems = data.repairItems || {};
         const flags = {};
         Object.entries(data.repairItems || {}).forEach(([key, value]) => {
+          if (state.locallyEditedKeys.has(key)) {
+            flags[key] = state.flags[key] || defaultFlag();
+            return;
+          }
           flags[key] = {
             needsRepair: value.needsRepair === true,
             note: value.note || "",
@@ -1300,6 +1305,7 @@
         const checkbox = event.target.closest("input[type='checkbox'][data-repair]");
         if (!checkbox) return;
         const key = checkbox.dataset.repair;
+        state.locallyEditedKeys.add(key);
         state.flags[key] = { ...getFlag(key), needsRepair: checkbox.checked };
         saveCloudSoon();
       });
@@ -1307,6 +1313,7 @@
         const input = event.target.closest("input[data-note]");
         if (!input) return;
         const key = input.dataset.note;
+        state.locallyEditedKeys.add(key);
         state.flags[key] = { ...getFlag(key), note: input.value };
         saveCloudQuietly();
       });
