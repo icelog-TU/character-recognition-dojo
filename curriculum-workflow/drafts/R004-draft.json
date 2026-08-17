@@ -2,7 +2,7 @@
   "id": "R004",
   "reviewNumber": 4,
   "title": "複習四",
-  "afterLessonOrder": 90,
+  "afterLessonOrder": 60,
   "targetLessonRange": {
     "startOrder": 31,
     "endOrder": 60
@@ -43,255 +43,20 @@
   "sentences": [
     {
       "id": "R004-S01",
-      "text": "這個比那個更好吃",
-      "displayLines": [
-        "這個比那個",
-        "更好吃"
-      ],
-      "spokenText": "這個比那個更好吃",
+      "text": "大人比你更高。",
+      "spokenText": "大人比你更高",
       "focusChar": "比",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean dining table scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 桌上有兩份食物，孩子比較這個和那個，表情顯示其中一個更好吃；不要用文字標示。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, or logos.",
+      "displayLines": [
+        "大人比你",
+        "更高。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 大人比你更高。 Show the recurring young boy classmate for `你` standing beside a generic adult caregiver, with the adult clearly taller than the child. Use the recurring `你` boy identity: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack when useful. The generic adult caregiver must be visually distinct from protagonist mother, protagonist father, teacher, and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, simple outdoor or classroom-adjacent child scene, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: recurring young boy classmate for `你` stands beside a generic adult caregiver who is clearly taller than the child. Role identity: recurring `你` boy with short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, and small orange backpack when useful; generic adult caregiver visually distinct from protagonist mother, protagonist father, teacher, and the L058 adult woman. Keep adult and child centered full-body with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
       "imageSrc": "/assets/reviews/R004/images/R004-S01.webp",
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R004/audio/R004-S01.m4a",
-        "durationMs": 4062,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 330
-          },
-          {
-            "charIndex": 1,
-            "startMs": 330,
-            "endMs": 660
-          },
-          {
-            "charIndex": 2,
-            "startMs": 660,
-            "endMs": 1120
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1120,
-            "endMs": 1510
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1510,
-            "endMs": 1900
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1900,
-            "endMs": 2620
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2620,
-            "endMs": 2880
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2880,
-            "endMs": 3140
-          }
-        ]
-      }
-    },
-    {
-      "id": "R004-S02",
-      "text": "男孩女孩一樣可愛",
-      "displayLines": [
-        "男孩女孩",
-        "一樣可愛"
-      ],
-      "spokenText": "男孩女孩一樣可愛",
-      "focusChar": "樣",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school or park scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 固定小男孩和固定小女孩站在一起，兩人都可愛、開心，表現一樣可愛。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, or logos.",
-      "imageSrc": "/assets/reviews/R004/images/R004-S02.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R004/audio/R004-S02.m4a",
-        "durationMs": 4409,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 440
-          },
-          {
-            "charIndex": 1,
-            "startMs": 440,
-            "endMs": 800
-          },
-          {
-            "charIndex": 2,
-            "startMs": 800,
-            "endMs": 1100
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1100,
-            "endMs": 1440
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1440,
-            "endMs": 1700
-          },
-          {
-            "charIndex": 5,
-            "startMs": 1700,
-            "endMs": 1960
-          },
-          {
-            "charIndex": 6,
-            "startMs": 1960,
-            "endMs": 2230
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2230,
-            "endMs": 2500
-          }
-        ]
-      }
-    },
-    {
-      "id": "R004-S03",
-      "text": "那邊人多，這邊人少",
-      "displayLines": [
-        "那邊人多，",
-        "這邊人少"
-      ],
-      "spokenText": "那邊人多這邊人少",
-      "focusChar": "邊",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean outdoor or schoolyard scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 同一場景分成兩邊，一邊人很多，另一邊人比較少，孩子看著兩邊差異；不要用文字或箭頭標示。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, arrows, or logos.",
-      "imageSrc": "/assets/reviews/R004/images/R004-S03.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R004/audio/R004-S03.m4a",
-        "durationMs": 3784,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 440
-          },
-          {
-            "charIndex": 1,
-            "startMs": 440,
-            "endMs": 760
-          },
-          {
-            "charIndex": 2,
-            "startMs": 760,
-            "endMs": 1020
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1020,
-            "endMs": 1380
-          },
-          {
-            "charIndex": 4,
-            "startMs": 2180,
-            "endMs": 2350
-          },
-          {
-            "charIndex": 5,
-            "startMs": 2350,
-            "endMs": 2520
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2520,
-            "endMs": 2900
-          },
-          {
-            "charIndex": 7,
-            "startMs": 2900,
-            "endMs": 3160
-          }
-        ]
-      }
-    },
-    {
-      "id": "R004-S04",
-      "text": "同學一起走去上學",
-      "displayLines": [
-        "同學一起",
-        "走去上學"
-      ],
-      "spokenText": "同學一起走去上學",
-      "focusChar": "起",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean school-route scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 幾位同學背著書包，一起走去上學，路上和學校方向清楚，但不要出現文字招牌。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, or logos.",
-      "imageSrc": "/assets/reviews/R004/images/R004-S04.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R004/audio/R004-S04.m4a",
-        "durationMs": 5718,
-        "charTimings": [
-          {
-            "charIndex": 0,
-            "startMs": 0,
-            "endMs": 440
-          },
-          {
-            "charIndex": 1,
-            "startMs": 440,
-            "endMs": 800
-          },
-          {
-            "charIndex": 2,
-            "startMs": 800,
-            "endMs": 1210
-          },
-          {
-            "charIndex": 3,
-            "startMs": 1210,
-            "endMs": 1620
-          },
-          {
-            "charIndex": 4,
-            "startMs": 1620,
-            "endMs": 2160
-          },
-          {
-            "charIndex": 5,
-            "startMs": 2160,
-            "endMs": 2540
-          },
-          {
-            "charIndex": 6,
-            "startMs": 2540,
-            "endMs": 3060
-          },
-          {
-            "charIndex": 7,
-            "startMs": 3060,
-            "endMs": 3380
-          }
-        ]
-      }
-    },
-    {
-      "id": "R004-S05",
-      "text": "媽媽很會做好吃的",
-      "displayLines": [
-        "媽媽很會",
-        "做好吃的"
-      ],
-      "spokenText": "媽媽很會做好吃的",
-      "focusChar": "會",
-      "imagePrompt": "L058 style reference for the Taiwan Traditional Chinese character-recognition app: modern children's picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean home kitchen or dining table scene, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. 媽媽在家中或餐桌旁做出好吃的食物，孩子開心看著。No visible text, letters, numbers, zhuyin, labels, signs, UI, watermark, speech bubbles, or logos.",
-      "imageSrc": "/assets/reviews/R004/images/R004-S05.webp",
-      "approved": true,
-      "audio": {
-        "src": "/assets/reviews/R004/audio/R004-S05.m4a",
-        "durationMs": 4757,
+        "durationMs": 3330,
         "charTimings": [
           {
             "charIndex": 0,
@@ -301,37 +66,227 @@
           {
             "charIndex": 1,
             "startMs": 340,
-            "endMs": 580
+            "endMs": 640
           },
           {
             "charIndex": 2,
-            "startMs": 580,
-            "endMs": 1280
+            "startMs": 640,
+            "endMs": 1220
           },
           {
             "charIndex": 3,
-            "startMs": 1280,
-            "endMs": 1580
+            "startMs": 1220,
+            "endMs": 1740
           },
           {
             "charIndex": 4,
-            "startMs": 1580,
-            "endMs": 1860
+            "startMs": 1740,
+            "endMs": 2000
           },
           {
             "charIndex": 5,
-            "startMs": 1860,
-            "endMs": 2090
+            "startMs": 2000,
+            "endMs": 2400
+          }
+        ]
+      }
+    },
+    {
+      "id": "R004-S02",
+      "text": "山上人多，山下人少。",
+      "spokenText": "山上人多山下人少",
+      "focusChar": "多",
+      "displayLines": [
+        "山上人多，",
+        "山下人少。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 山上人多，山下人少。 Show a mountain scene with many varied people on the upper mountain path and fewer varied people at the lower mountain area, so 多 and 少 are clear at phone size. Use varied passersby: mixed adult and child ages, genders, hairstyles, clothing, and body shapes. Do not clone the same adult woman or reuse protagonist mother/teacher faces. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, clear mountain scene, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: many varied people on the upper mountain path and fewer varied people at the lower mountain area, so the contrast between many and few is obvious at phone size. Role identities: varied passersby with mixed adult and child ages, genders, hairstyles, clothing, and body shapes; do not clone the same adult woman and do not reuse protagonist mother or teacher faces. Keep upper and lower mountain areas visible and centered with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
+      "imageSrc": "/assets/reviews/R004/images/R004-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R004/audio/R004-S02.m4a",
+        "durationMs": 4707,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 540
+          },
+          {
+            "charIndex": 1,
+            "startMs": 540,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2440,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2480,
+            "endMs": 2760
           },
           {
             "charIndex": 6,
-            "startMs": 2090,
-            "endMs": 2320
+            "startMs": 2760,
+            "endMs": 3080
           },
           {
             "charIndex": 7,
-            "startMs": 2320,
-            "endMs": 2620
+            "startMs": 3080,
+            "endMs": 3360
+          }
+        ]
+      }
+    },
+    {
+      "id": "R004-S03",
+      "text": "吃起來很好吃。",
+      "spokenText": "吃起來很好吃",
+      "focusChar": "起",
+      "displayLines": [
+        "吃起來很",
+        "好吃。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 吃起來很好吃。 Show a generic preschool child tasting a small bite of food and looking pleased, with the food clearly visible and appetizing. The scene should communicate that the food tastes good, without using text or speech bubbles. Human role identity: generic preschool child, visually distinct from recurring protagonist girl, recurring `你` boy, and recurring `他` boy. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, clean dining scene, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: a generic preschool child tastes a small bite of food and looks pleased; the food is clearly visible and appetizing, communicating that it tastes good without text. Role identity: generic preschool child visually distinct from recurring protagonist girl, recurring `你` boy, and recurring `他` boy. Keep child face and food centered with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
+      "imageSrc": "/assets/reviews/R004/images/R004-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R004/audio/R004-S03.m4a",
+        "durationMs": 2972,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 960,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1280,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1600,
+            "endMs": 1940
+          }
+        ]
+      }
+    },
+    {
+      "id": "R004-S04",
+      "text": "女孩很可愛。",
+      "spokenText": "女孩很可愛",
+      "focusChar": "可",
+      "displayLines": [
+        "女孩很可愛",
+        "。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 女孩很可愛。 Show a sweet, friendly generic preschool girl in a simple child scene, such as smiling while holding a small toy or sitting politely. Human role identity: generic preschool girl, visually distinct from the recurring protagonist girl `我` and from any classmate girl continuity. Do not make her look like the protagonist girl. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, simple child scene, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: a sweet friendly generic preschool girl smiles while holding a small toy or sitting politely. Role identity: generic preschool girl visually distinct from the recurring protagonist girl `我` and from any classmate girl continuity; do not make her look like the protagonist girl. Keep child centered with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
+      "imageSrc": "/assets/reviews/R004/images/R004-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R004/audio/R004-S04.m4a",
+        "durationMs": 2484,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1240,
+            "endMs": 1510
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1510,
+            "endMs": 1780
+          }
+        ]
+      }
+    },
+    {
+      "id": "R004-S05",
+      "text": "不要這樣吃。",
+      "spokenText": "不要這樣吃",
+      "focusChar": "樣",
+      "displayLines": [
+        "不要這樣",
+        "吃。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 不要這樣吃。 Show a very young generic child, about three to four years old, directly grabbing rice or soft food from a bowl with their hand. A generic adult caregiver nearby gently guides or stops the child with a calm expression. The scene should show a toddler/preschooler still learning table manners, not an older child acting rude. Human role identity: very young generic child and generic adult caregiver; both must be visually distinct from recurring protagonist family, teacher, and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles.",
+      "imagePrompt": "square image / 1:1 composition. Warm children's picture-book pencil-and-watercolor linework, soft natural light, clean home dining scene, expressive preschool-course style, bright warm palette, phone-readable square composition. Scene: a very young generic child, about three to four years old, directly grabs rice or soft food from a bowl with their hand while a generic adult caregiver nearby gently guides or stops the child with a calm expression. Show a toddler or preschooler still learning table manners, not an older child acting rude. Role identities: very young generic child and generic adult caregiver, both visually distinct from recurring protagonist family, teacher, and the L058 adult woman. Keep bowl, child's hand, and caregiver centered with safe margins. No written text, labels, numbers, signs, zhuyin, logos, watermarks, captions, or speech bubbles anywhere.",
+      "imageSrc": "/assets/reviews/R004/images/R004-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/reviews/R004/audio/R004-S05.m4a",
+        "durationMs": 1973,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 240
+          },
+          {
+            "charIndex": 1,
+            "startMs": 240,
+            "endMs": 480
+          },
+          {
+            "charIndex": 2,
+            "startMs": 480,
+            "endMs": 750
+          },
+          {
+            "charIndex": 3,
+            "startMs": 750,
+            "endMs": 1020
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1020,
+            "endMs": 1440
           }
         ]
       }
@@ -341,20 +296,25 @@
     {
       "id": "R004-G01",
       "type": "find-character",
-      "sentenceId": "R004-S01",
-      "targetChar": "比",
-      "prompt": "找一找句子裡的「比」。"
+      "sentenceId": "R004-S05",
+      "targetChar": "樣",
+      "prompt": "找出「樣」。",
+      "missingIndexes": [
+        3
+      ],
+      "options": []
     },
     {
       "id": "R004-G02",
       "type": "teach-character",
-      "sentenceId": "R004-S02",
-      "targetChar": "樣",
-      "prompt": "看一看「樣」在句子裡的位置。",
+      "sentenceId": "R004-S01",
+      "targetChar": "比",
+      "targetCharIndex": 2,
+      "prompt": "幫小兔子念這個字。",
       "missingIndexes": [
-        5
+        2
       ],
-      "targetCharIndex": 5,
+      "options": [],
       "teachAudio": {
         "prefixSrc": "/assets/reviews/R004/audio/R004-G02-prefix.m4a",
         "suffixSrc": "/assets/reviews/R004/audio/R004-G02-suffix.m4a"
@@ -364,25 +324,25 @@
       "id": "R004-G03",
       "type": "missing-character",
       "sentenceId": "R004-S03",
-      "targetChar": "邊",
-      "prompt": "選出句子裡少掉的字。",
+      "targetChar": "起",
+      "prompt": "選出少掉的字。",
       "missingIndexes": [
         1
       ],
       "options": [
         {
-          "id": "side",
-          "text": "邊",
+          "id": "R004-G03-A",
+          "text": "起",
           "correct": true
         },
         {
-          "id": "many",
-          "text": "多",
+          "id": "R004-G03-B",
+          "text": "來",
           "correct": false
         },
         {
-          "id": "few",
-          "text": "少",
+          "id": "R004-G03-C",
+          "text": "很",
           "correct": false
         }
       ]
@@ -390,60 +350,65 @@
     {
       "id": "R004-G04",
       "type": "partial-order",
-      "sentenceId": "R004-S04",
-      "targetChar": "起",
-      "prompt": "把句子中間排回來。",
+      "sentenceId": "R004-S02",
+      "targetChar": "多",
+      "prompt": "把字放回正確的位置。",
       "missingIndexes": [
+        0,
+        1,
         2,
-        3,
-        4,
-        5
+        3
       ],
       "options": [
         {
-          "id": "one",
-          "text": "一",
-          "correct": true
+          "id": "R004-G04-A",
+          "text": "山",
+          "correct": true,
+          "correctOrder": 0
         },
         {
-          "id": "together",
-          "text": "起",
-          "correct": true
+          "id": "R004-G04-B",
+          "text": "上",
+          "correct": true,
+          "correctOrder": 1
         },
         {
-          "id": "walk",
-          "text": "走",
-          "correct": true
+          "id": "R004-G04-C",
+          "text": "人",
+          "correct": true,
+          "correctOrder": 2
         },
         {
-          "id": "go",
-          "text": "去",
-          "correct": true
+          "id": "R004-G04-D",
+          "text": "多",
+          "correct": true,
+          "correctOrder": 3
         }
       ]
     },
     {
       "id": "R004-G05",
       "type": "choose-pronunciation",
-      "sentenceId": "R004-S05",
-      "targetChar": "會",
-      "prompt": "聽一聽，哪一句和畫面一樣？",
+      "sentenceId": "R004-S04",
+      "targetChar": "可",
+      "prompt": "聽聽誰念對。",
+      "missingIndexes": [],
       "options": [
         {
-          "id": "correct",
-          "text": "媽媽很會做好吃的",
+          "id": "R004-G05-A",
+          "text": "女孩很可愛。",
           "correct": true,
-          "audioSrc": "/assets/reviews/R004/audio/R004-S05.m4a"
+          "sentenceId": "R004-S04"
         },
         {
-          "id": "wrong-one",
-          "text": "媽媽不會做好吃的",
+          "id": "R004-G05-B",
+          "text": "男孩很可愛。",
           "correct": false,
           "audioSrc": "/assets/reviews/R004/audio/R004-G05-wrong-one.m4a"
         },
         {
-          "id": "wrong-two",
-          "text": "爸爸很會做好吃的",
+          "id": "R004-G05-C",
+          "text": "女孩很愛吃。",
           "correct": false,
           "audioSrc": "/assets/reviews/R004/audio/R004-G05-wrong-two.m4a"
         }

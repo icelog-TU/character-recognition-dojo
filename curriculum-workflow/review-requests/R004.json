@@ -3,7 +3,7 @@
   "kind": "review",
   "reviewNumber": 4,
   "title": "複習四",
-  "afterLessonOrder": 90,
+  "afterLessonOrder": 60,
   "targetLessonRange": {
     "startOrder": 31,
     "endOrder": 60
@@ -41,46 +41,46 @@
     "去"
   ],
   "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved review migration module R004; pair with R003. Milestone L060; coverage L031-L060; allowed-character ceiling through L060 only. Review modules introduce no new characters and have no zhuyin or charAudio.",
   "generationConstraints": {
-    "sentenceHanCharLength": {
-      "min": 4,
-      "max": 12
-    },
-    "provisionalLearnedChars": [
-      "把"
-    ],
     "allowedChars": [
       "一",
-      "個",
+      "二",
+      "三",
       "人",
+      "個",
       "大",
-      "小",
       "的",
+      "小",
+      "手",
       "我",
-      "你",
-      "他",
       "有",
       "山",
       "上",
       "下",
+      "你",
       "水",
       "在",
+      "高",
+      "很",
       "家",
       "和",
       "隻",
       "鳥",
       "孩",
+      "指",
       "看",
       "女",
+      "飛",
       "男",
       "門",
       "前",
       "後",
-      "也",
       "是",
       "不",
       "到",
       "走",
+      "他",
       "沒",
       "裡",
       "兩",
@@ -105,13 +105,7 @@
       "比",
       "來",
       "起",
-      "去",
-      "那",
-      "同",
-      "學",
-      "路",
-      "把",
-      "放"
+      "去"
     ],
     "requiredCoverageChars": [
       "是",
@@ -144,44 +138,147 @@
       "來",
       "起",
       "去"
-    ]
+    ],
+    "provisionalLearnedChars": [],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "stage4PartialOrderRule": "Blank exactly 3-4 Han characters. Every option card must be exactly one Han character; no chunks, phrase cards, or full-sentence reordering."
   },
-  "teacherNotes": "L090 後的 review module。R003/R004 成對覆蓋 L031-L060。latest origin/main 目前未到 L090；不可合併 production reviewLessons，直到 L089/L090 已在 main。圖片使用 L058 風格參考；音檔走 AI audio -> assets:audio -> assets:align:ai。Review modules 不引入 newChars、zhuyin 或 charAudio。",
   "approvedSentences": [
     {
-      "text": "這個比那個更好吃",
-      "spokenText": "這個比那個更好吃",
+      "id": "R004-S01",
+      "text": "大人比你更高。",
+      "spokenText": "大人比你更高",
       "focusChar": "比",
-      "reason": "覆蓋 這、比、更、好、吃。",
-      "imageNotes": "桌上有兩份食物，孩子比較這個和那個，表情顯示其中一個更好吃；不要用文字標示。不要有文字、數字、招牌。"
+      "displayLines": [
+        "大人比你",
+        "更高。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 大人比你更高。 Show the recurring young boy classmate for `你` standing beside a generic adult caregiver, with the adult clearly taller than the child. Use the recurring `你` boy identity: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack when useful. The generic adult caregiver must be visually distinct from protagonist mother, protagonist father, teacher, and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "男孩女孩一樣可愛",
-      "spokenText": "男孩女孩一樣可愛",
-      "focusChar": "樣",
-      "reason": "覆蓋 樣、可、愛。",
-      "imageNotes": "固定小男孩和固定小女孩站在一起，兩人都可愛、開心，表現一樣可愛。不要有文字、數字、招牌。"
+      "id": "R004-S02",
+      "text": "山上人多，山下人少。",
+      "spokenText": "山上人多山下人少",
+      "focusChar": "多",
+      "displayLines": [
+        "山上人多，",
+        "山下人少。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 山上人多，山下人少。 Show a mountain scene with many varied people on the upper mountain path and fewer varied people at the lower mountain area, so 多 and 少 are clear at phone size. Use varied passersby: mixed adult and child ages, genders, hairstyles, clothing, and body shapes. Do not clone the same adult woman or reuse protagonist mother/teacher faces. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "那邊人多，這邊人少",
-      "spokenText": "那邊人多這邊人少",
-      "focusChar": "邊",
-      "reason": "覆蓋 邊、多、少、這。",
-      "imageNotes": "同一場景分成兩邊，一邊人很多，另一邊人比較少，孩子看著兩邊差異。不要有文字、數字、招牌。"
-    },
-    {
-      "text": "同學一起走去上學",
-      "spokenText": "同學一起走去上學",
+      "id": "R004-S03",
+      "text": "吃起來很好吃。",
+      "spokenText": "吃起來很好吃",
       "focusChar": "起",
-      "reason": "覆蓋 起、走、去，並複習 同、學。",
-      "imageNotes": "幾位同學背著書包，一起走路上學，路上和學校方向清楚。不要有文字、數字、招牌。"
+      "displayLines": [
+        "吃起來很",
+        "好吃。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 吃起來很好吃。 Show a generic preschool child tasting a small bite of food and looking pleased, with the food clearly visible and appetizing. The scene should communicate that the food tastes good, without using text or speech bubbles. Human role identity: generic preschool child, visually distinct from recurring protagonist girl, recurring `你` boy, and recurring `他` boy. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "媽媽很會做好吃的",
-      "spokenText": "媽媽很會做好吃的",
-      "focusChar": "會",
-      "reason": "覆蓋 媽、會、做、好、吃。",
-      "imageNotes": "媽媽在家中或餐桌旁做出好吃的食物，孩子開心看著。不要有文字、數字、招牌。"
+      "id": "R004-S04",
+      "text": "女孩很可愛。",
+      "spokenText": "女孩很可愛",
+      "focusChar": "可",
+      "displayLines": [
+        "女孩很可愛",
+        "。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 女孩很可愛。 Show a sweet, friendly generic preschool girl in a simple child scene, such as smiling while holding a small toy or sitting politely. Human role identity: generic preschool girl, visually distinct from the recurring protagonist girl `我` and from any classmate girl continuity. Do not make her look like the protagonist girl. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
+    },
+    {
+      "id": "R004-S05",
+      "text": "不要這樣吃。",
+      "spokenText": "不要這樣吃",
+      "focusChar": "樣",
+      "displayLines": [
+        "不要這樣",
+        "吃。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 不要這樣吃。 Show a very young generic child, about three to four years old, directly grabbing rice or soft food from a bowl with their hand. A generic adult caregiver nearby gently guides or stops the child with a calm expression. The scene should show a toddler/preschooler still learning table manners, not an older child acting rude. Human role identity: very young generic child and generic adult caregiver; both must be visually distinct from recurring protagonist family, teacher, and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     }
-  ]
+  ],
+  "stage4Plan": {
+    "games": [
+      {
+        "id": "R004-G01",
+        "type": "find-character",
+        "sentenceId": "R004-S05",
+        "targetChar": "樣"
+      },
+      {
+        "id": "R004-G02",
+        "type": "teach-character",
+        "sentenceId": "R004-S01",
+        "targetChar": "比",
+        "targetCharIndex": 2,
+        "prefixText": "大人",
+        "suffixText": "你更高",
+        "teachAudio": {
+          "prefixSrc": "/assets/reviews/R004/audio/R004-G02-prefix.m4a",
+          "suffixSrc": "/assets/reviews/R004/audio/R004-G02-suffix.m4a"
+        }
+      },
+      {
+        "id": "R004-G03",
+        "type": "missing-character",
+        "sentenceId": "R004-S03",
+        "targetChar": "起",
+        "missingIndexes": [
+          1
+        ],
+        "options": [
+          "起",
+          "來",
+          "很"
+        ]
+      },
+      {
+        "id": "R004-G04",
+        "type": "partial-order",
+        "sentenceId": "R004-S02",
+        "targetChar": "多",
+        "missingIndexes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "options": [
+          "山",
+          "上",
+          "人",
+          "多"
+        ]
+      },
+      {
+        "id": "R004-G05",
+        "type": "choose-pronunciation",
+        "sentenceId": "R004-S04",
+        "targetChar": "可",
+        "options": [
+          {
+            "text": "女孩很可愛。",
+            "correct": true,
+            "sentenceId": "R004-S04"
+          },
+          {
+            "text": "男孩很可愛。",
+            "correct": false,
+            "audioSrc": "/assets/reviews/R004/audio/R004-G05-wrong-one.m4a"
+          },
+          {
+            "text": "女孩很愛吃。",
+            "correct": false,
+            "audioSrc": "/assets/reviews/R004/audio/R004-G05-wrong-two.m4a"
+          }
+        ]
+      }
+    ]
+  }
 }

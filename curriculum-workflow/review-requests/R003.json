@@ -3,7 +3,7 @@
   "kind": "review",
   "reviewNumber": 3,
   "title": "複習三",
-  "afterLessonOrder": 90,
+  "afterLessonOrder": 60,
   "targetLessonRange": {
     "startOrder": 31,
     "endOrder": 60
@@ -41,46 +41,46 @@
     "去"
   ],
   "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved review migration module R003; pair with R004. Milestone L060; coverage L031-L060; allowed-character ceiling through L060 only. Review modules introduce no new characters and have no zhuyin or charAudio.",
   "generationConstraints": {
-    "sentenceHanCharLength": {
-      "min": 4,
-      "max": 12
-    },
-    "provisionalLearnedChars": [
-      "把"
-    ],
     "allowedChars": [
       "一",
-      "個",
+      "二",
+      "三",
       "人",
+      "個",
       "大",
-      "小",
       "的",
+      "小",
+      "手",
       "我",
-      "你",
-      "他",
       "有",
       "山",
       "上",
       "下",
+      "你",
       "水",
       "在",
+      "高",
+      "很",
       "家",
       "和",
       "隻",
       "鳥",
       "孩",
+      "指",
       "看",
       "女",
+      "飛",
       "男",
       "門",
       "前",
       "後",
-      "也",
       "是",
       "不",
       "到",
       "走",
+      "他",
       "沒",
       "裡",
       "兩",
@@ -105,13 +105,7 @@
       "比",
       "來",
       "起",
-      "去",
-      "路",
-      "本",
-      "借",
-      "心",
-      "放",
-      "把"
+      "去"
     ],
     "requiredCoverageChars": [
       "是",
@@ -144,44 +138,146 @@
       "來",
       "起",
       "去"
-    ]
+    ],
+    "provisionalLearnedChars": [],
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "stage4PartialOrderRule": "Blank exactly 3-4 Han characters. Every option card must be exactly one Han character; no chunks, phrase cards, or full-sentence reordering."
   },
-  "teacherNotes": "L090 後的 review module。R003/R004 成對覆蓋 L031-L060。latest origin/main 目前未到 L090，本 request 使用 provisional L089「把」做平行準備；不可合併 production reviewLessons，直到 L089/L090 已在 main。圖片使用 L058 風格參考；音檔走 AI audio -> assets:audio -> assets:align:ai。Review modules 不引入 newChars、zhuyin 或 charAudio。",
   "approvedSentences": [
     {
-      "text": "這本書是爸爸借來的",
-      "spokenText": "這本書是爸爸借來的",
+      "id": "R003-S01",
+      "text": "這是媽媽的書。",
+      "spokenText": "這是媽媽的書",
       "focusChar": "是",
-      "reason": "覆蓋 是、書、爸、來，並複習 本、借。",
-      "imageNotes": "爸爸把一本借來的書拿給孩子看，孩子看著書，書本清楚但不能有文字。不要有文字、數字、招牌。"
+      "displayLines": [
+        "這是媽媽的",
+        "書。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 這是媽媽的書。 Show the recurring protagonist mother holding or placing her own book, with the book clearly belonging to her through family context and body position, but without any written name or label. Use the recurring protagonist mother identity: warm adult family role in home clothing, visually distinct from teacher, passersby, and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "媽媽做的愛心很好看",
-      "spokenText": "媽媽做的愛心很好看",
-      "focusChar": "做",
-      "reason": "覆蓋 媽、做、愛、好。",
-      "imageNotes": "媽媽和孩子一起看一個媽媽做的愛心手作品，愛心清楚漂亮，表情溫暖。不要有文字、數字、招牌。"
+      "id": "R003-S02",
+      "text": "爸爸會做好吃的。",
+      "spokenText": "爸爸會做好吃的",
+      "focusChar": "會",
+      "displayLines": [
+        "爸爸會做",
+        "好吃的。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 爸爸會做好吃的。 Show the recurring protagonist father making tasty food at home, such as preparing a simple child-friendly meal on a kitchen counter. The food should look appealing, and father's action of making food should be clear. Use the recurring protagonist father identity: adult father matching the protagonist family, visually distinct from mother, teacher, and generic adults. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "他沒看到路邊的人",
-      "spokenText": "他沒看到路邊的人",
-      "focusChar": "他",
-      "reason": "覆蓋 他、沒、到、邊，並複習 路。",
-      "imageNotes": "固定小男孩走在路上，沒有注意到路邊站著的人；路邊位置清楚，人物表情自然。不要有文字、數字、招牌。"
+      "id": "R003-S03",
+      "text": "我和媽媽都愛吃這個。",
+      "spokenText": "我和媽媽都愛吃這個",
+      "focusChar": "都",
+      "displayLines": [
+        "我和媽媽都",
+        "愛吃這個。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 我和媽媽都愛吃這個。 Show the recurring protagonist girl for `我` and the recurring protagonist mother happily eating or reaching for the same visible food item on the table, so both clearly like eating it. Use protagonist family identities. Mother must be visually distinct from teacher and the L058 adult woman. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "兩隻小狗都在家裡",
-      "spokenText": "兩隻小狗都在家裡",
-      "focusChar": "兩",
-      "reason": "覆蓋 兩、狗、都、裡。",
-      "imageNotes": "家裡有兩隻小狗，兩隻狗都在室內或家門內，孩子在旁邊看著。不要有文字、數字、招牌。"
+      "id": "R003-S04",
+      "text": "他走到水邊。",
+      "spokenText": "他走到水邊",
+      "focusChar": "走",
+      "displayLines": [
+        "他走到水",
+        "邊。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 他走到水邊。 Show the recurring sporty boy for `他` walking toward the edge of safe shallow water, such as a calm pond or stream edge, with the water boundary clear. Keep the scene safe and calm; he is near the water edge, not falling in. Use the recurring `他` identity: sporty young boy with orange athletic shirt, navy shorts, red sneakers, green wristband, visually distinct from `你`. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     },
     {
-      "text": "不要把水放在書上",
-      "spokenText": "不要把水放在書上",
-      "focusChar": "不",
-      "reason": "覆蓋 不、要、書，並複習 provisional 把與 L088 放。",
-      "imageNotes": "孩子正要把水杯或水放在書上，大人溫和提醒不要這樣；書和水都清楚可見。不要有文字、數字、招牌。"
+      "id": "R003-S05",
+      "text": "兩隻狗都去水裡，他沒去。",
+      "spokenText": "兩隻狗都去水裡他沒去",
+      "focusChar": "沒",
+      "displayLines": [
+        "兩隻狗都",
+        "去水裡，",
+        "他沒去。"
+      ],
+      "imageNotes": "Concrete phone-readable square image for: 兩隻狗都去水裡，他沒去。 Show two friendly dogs in shallow water while the recurring sporty boy `他` stays dry on the shore and does not go into the water. Make the contrast clear: both dogs are in the water, the boy is outside the water. Use the recurring `他` identity and two family dogs associated with `他` when useful. No written text, labels, numbers, signs, zhuyin, logos, or speech bubbles."
     }
-  ]
+  ],
+  "stage4Plan": {
+    "games": [
+      {
+        "id": "R003-G01",
+        "type": "find-character",
+        "sentenceId": "R003-S04",
+        "targetChar": "走"
+      },
+      {
+        "id": "R003-G02",
+        "type": "teach-character",
+        "sentenceId": "R003-S02",
+        "targetChar": "會",
+        "targetCharIndex": 2,
+        "prefixText": "爸爸",
+        "suffixText": "做好吃的",
+        "teachAudio": {
+          "prefixSrc": "/assets/reviews/R003/audio/R003-G02-prefix.m4a",
+          "suffixSrc": "/assets/reviews/R003/audio/R003-G02-suffix.m4a"
+        }
+      },
+      {
+        "id": "R003-G03",
+        "type": "missing-character",
+        "sentenceId": "R003-S03",
+        "targetChar": "都",
+        "missingIndexes": [
+          4
+        ],
+        "options": [
+          "都",
+          "愛",
+          "吃"
+        ]
+      },
+      {
+        "id": "R003-G04",
+        "type": "partial-order",
+        "sentenceId": "R003-S05",
+        "targetChar": "兩",
+        "missingIndexes": [
+          0,
+          1,
+          2
+        ],
+        "options": [
+          "兩",
+          "隻",
+          "狗"
+        ]
+      },
+      {
+        "id": "R003-G05",
+        "type": "choose-pronunciation",
+        "sentenceId": "R003-S01",
+        "targetChar": "是",
+        "options": [
+          {
+            "text": "這是媽媽的書。",
+            "correct": true,
+            "sentenceId": "R003-S01"
+          },
+          {
+            "text": "這是爸爸的書。",
+            "correct": false,
+            "audioSrc": "/assets/reviews/R003/audio/R003-G05-wrong-one.m4a"
+          },
+          {
+            "text": "這是媽媽的狗。",
+            "correct": false,
+            "audioSrc": "/assets/reviews/R003/audio/R003-G05-wrong-two.m4a"
+          }
+        ]
+      }
+    ]
+  }
 }
