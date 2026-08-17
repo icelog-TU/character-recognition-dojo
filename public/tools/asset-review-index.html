@@ -744,10 +744,17 @@
           await loadCurriculum();
           await loadReviewDocs();
           loadLocalReviewDocs();
-          const syncedCount = await syncLocalReviewDocsToCloud();
+          let syncedCount = 0;
+          let syncError = "";
+          try {
+            syncedCount = await syncLocalReviewDocsToCloud();
+          } catch (error) {
+            syncError = error.message;
+          }
           render();
           setStatus(`已載入 L001-L600 與 R001-R076 進度盤，已出貨 ${state.builtById.size} 個單元，commit ${state.sha.slice(0, 12)}。`, "ok");
           if (syncedCount) setStatus(`已載入總覽，並補同步 ${syncedCount} 筆本機審查狀態到雲端。`, "ok");
+          else if (syncError) setStatus(`已載入總覽；本機審查狀態已顯示，但雲端補同步失敗：${syncError}`, "warn");
         } catch (error) {
           state.units = [];
           render();
