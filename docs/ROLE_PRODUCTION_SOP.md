@@ -41,24 +41,33 @@ If the assigned slot is dirty, stop and report the dirty files. Do not stash, re
 
 ## Startup
 
-Run from the assigned worktree:
+Run this first from the assigned worktree:
 
 ```bash
 git remote -v
 git fetch origin
 git status --short --branch
 git log -1 --oneline
-npm run tools:check
-npm run curriculum:audit-state
 ```
 
-If clean, create the unit branch from latest `origin/main`:
+If the worktree is dirty, stop and report the dirty files. If the worktree is clean but currently on an old package branch, that only means it is safe to switch branches. It does not mean the old branch is a valid base for the next assignment.
+
+For every new lesson or review-pair assignment, create the unit branch from latest `origin/main` before running package startup audits:
 
 ```bash
 git switch -c codex/l###-complete-package origin/main
 ```
 
 Use `r###` in the branch name for review modules.
+
+After switching to the new branch from `origin/main`, run:
+
+```bash
+npm run tools:check
+npm run curriculum:audit-state
+```
+
+Do not run a new assignment's `curriculum:audit-state` on an old `*-complete-package` branch. Old branches may contain registry rows for packages that have since merged into `main`, which creates false blockers.
 
 If this is a newly created worktree and `npm run tools:check` reports FFmpeg/FFprobe unavailable, check whether `node_modules` is missing. When `Test-Path node_modules` returns `False`, run `npm ci` once in the assigned clean and idle worktree, then rerun `npm run tools:check`. Do not use bare `ffmpeg` or `ffprobe` PATH checks to bypass the repo scripts.
 

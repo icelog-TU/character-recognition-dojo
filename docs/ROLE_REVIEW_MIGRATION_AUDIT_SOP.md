@@ -120,6 +120,7 @@ The Production Activation Handoff must:
 - Keep the assigned worktree and Production slot explicit.
 - Keep `auto-claim-and-continue` wording so Production knows it is the worker, not a reviewer.
 - Include the mandatory `Image style and cast requirements` block from `docs/LESSON_VISUAL_CAST_SOP.md`. This block must name the L058 style references, the current cast identity anchors, recurring `我` / `你` / `他` identity rules, side-by-side comparison requirement, and the stop condition for inaccessible references or repeated style/cast drift.
+- Ensure the startup instructions tell Production to check for a dirty worktree first, then create the new package branch from latest `origin/main`, and only then run `npm run tools:check` and `npm run curriculum:audit-state`. Do not instruct Production to run a new assignment's `curriculum:audit-state` while still on an old `*-complete-package` branch.
 
 Unless the teacher explicitly assigns another slot, Audit must assign review-pair Production Activation Handoffs by fixed round-robin:
 

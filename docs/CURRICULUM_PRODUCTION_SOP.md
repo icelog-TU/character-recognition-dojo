@@ -53,7 +53,7 @@ Only treat text as actually damaged if UTF-8 decoding fails, decoded text contai
 
 ## Lesson Pipeline
 
-0. Run `git fetch origin`, `git status --short --branch`, and `npm run curriculum:audit-state`, then check `docs/CURRICULUM_LEDGER.md` and `docs/PARALLEL_LESSON_REGISTRY.md`.
+0. Run `git fetch origin` and `git status --short --branch` in the assigned worktree. If it is dirty, stop. If it is clean but on an old package branch, switch to a new assignment branch from latest `origin/main` before running package audits. A clean old branch is only safe to leave; it is not a valid base for a new lesson/review assignment. After creating the new branch from `origin/main`, run `npm run curriculum:audit-state`, then check `docs/CURRICULUM_LEDGER.md` and `docs/PARALLEL_LESSON_REGISTRY.md`.
 1. Create or claim a lesson row in `docs/PARALLEL_LESSON_REGISTRY.md` before starting any parallel lesson work. This is required before creating request files, generating packets, images, audio, or lesson JSON for a not-yet-merged lesson. After a clean claim, continue into production work; do not wait for a second teacher message unless a blocker is present.
 2. Create a lesson request in `curriculum-workflow/lesson-requests/`.
 3. Check `docs/CURRICULUM_LEDGER.md` for the merged learned character set and recent review pool. If this is a parallel-prepared later lesson, also check registered provisional dependencies.

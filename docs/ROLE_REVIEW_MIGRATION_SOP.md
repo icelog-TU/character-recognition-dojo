@@ -126,6 +126,7 @@ The Audit Packet must include:
 - Required review request, draft, generated packet, image, and audio asset paths.
 - The mandatory image style and cast requirements from `docs/LESSON_VISUAL_CAST_SOP.md`, or an explicit instruction for Audit to insert that block unchanged into the final `Production Activation Handoff`.
 - Auto-claim-and-continue instructions that Audit can copy into the later Production Activation Handoff.
+- Startup instructions that check for a dirty worktree first, create the new package branch from latest `origin/main`, and run `npm run tools:check` plus `npm run curriculum:audit-state` only after switching to that new branch.
 - Stop conditions.
 
 Discussion, audit notes, and rejected sentence options must stay outside the Audit Packet block.
