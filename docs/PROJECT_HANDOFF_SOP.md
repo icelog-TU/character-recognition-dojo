@@ -23,8 +23,8 @@ As of latest `origin/main`:
 - App name: `認字練功房`
 - Current reviewed lessons: L001-L311
 - L311 introduces `次`.
-- Production review modules: R001-R018.
-- Overdue review blockers: none at L311; R019-R020 are required after L330 and before L331.
+- Production review modules: R001-R018 currently exist from the retired 30-lesson review schedule.
+- Review schedule migration required: the current rule is every 15 lessons starting after L045, so a curriculum already past L300 needs valid R001-R036 before continuing numbered lesson release past the L300 playable position.
 - L001-L005 use Stage 1-3.
 - L006-L311 include Stage 4 fixed sentence games.
 - Review modules use `R###` ids and do not consume `L###` lesson numbers.
@@ -146,8 +146,8 @@ Do not create a new clone unless the user explicitly asks. If the current shell 
 - Final teacher-approved sentence sets must be captured in repo files, not only in chat.
 - Supervisor must run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects skipped lesson numbers.
 - Production delivers `asset-complete-package`; Release owns `release-ready-package` and `in-main`. Do not make Production spend time on shared-state release integration for dependency-blocked lessons.
-- Review pairs are blockers: after L060/L090/L120/L150/L180 milestones, ship the required review pair before the next numbered lesson. Overdue review modules keep their original milestone allowed-character ceiling, not latest `origin/main`.
-- The review cycle continues through the full 600-lesson course and uses R001-R040. R037/R038 follow L600 for L541-L570, and final capstone R039/R040 cover L571-L600.
+- Review pairs are blockers: after L045/L060/L075/L090 and every later 15-lesson milestone, ship the required review pair before the next numbered lesson. Overdue review modules keep their original milestone allowed-character ceiling, not latest `origin/main`.
+- The review cycle continues through the full 600-lesson course and uses R001-R076. R075/R076 follow L600 for L571-L600; there is no extra capstone pair beyond R076.
 - Production handoffs must be one-paste executable.
 - A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a complete course.
 - Production audio must use OpenAI audio, `npm run assets:audio`, and `npm run assets:align:ai` unless the teacher explicitly approves an exception.

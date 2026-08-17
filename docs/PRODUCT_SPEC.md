@@ -13,7 +13,7 @@
 5. Current production lessons add Block 4 from L006 onward, after picture-supported listening.
 6. Completing all required blocks unlocks the next lesson.
 7. Completed lessons enter manual and random review.
-8. Starting after L060, every 30-lesson milestone reserves two 5-sentence review modules for the older 30-lesson block. Review modules do not occupy `L###` lesson numbers.
+8. Starting after L045, every 15-lesson milestone reserves two 5-sentence review modules covering the most recent 30 numbered lessons. Review modules do not occupy `L###` lesson numbers.
 
 ## Hard UX Requirements
 
@@ -106,18 +106,18 @@ L001-L005 use picture-supported sentence listening without Stage 4. Current prod
 
 ## Review Module Rhythm
 
-The curriculum adds two review modules after every 30-lesson milestone starting after L060. These are separate review units, not numbered lessons.
+The curriculum adds two review modules after every 15-lesson milestone starting after L045. These are separate review units, not numbered lessons.
 
-- After L060: R001/R002 cover all new characters from L001-L030. The playable path is `L060` -> `R001` -> `R002` -> `L061`; the next new-character lesson id is still L061.
-- After L090: R003/R004 cover all new characters from L031-L060. The next new-character lesson is L091.
-- After L120: R005/R006 cover all new characters from L061-L090.
+- After L045: R001/R002 cover all new characters from L016-L045. The playable path is `L045` -> `R001` -> `R002` -> `L046`; the next new-character lesson id is still L046.
+- After L060: R003/R004 cover all new characters from L031-L060. The next new-character lesson is L061.
+- After L075: R005/R006 cover all new characters from L046-L075. The next new-character lesson is L076.
 - Production-ready review modules must render as playable square cards in the same course-card grid as numbered lessons. Future review slots that are not built yet must not appear as playable or reservation cards on the practice home.
-- The `漢字總覽` page has a separate permanent `複習區` after the six color groups. It reserves `R001` through `R040`; shipped and unlocked review modules are clickable there, while future modules appear only as non-playable placeholders.
+- The `漢字總覽` page has a separate permanent `複習區` after the six color groups. It reserves `R001` through `R076`; shipped and unlocked review modules are clickable there, while future modules appear only as non-playable placeholders.
 - Review modules show only two child-facing stages: `看圖聽句子` and `句子遊戲`. They must not display skipped Stage 1/2 rows or labels like `第三階段` and `第四階段`.
 - Review modules must grant the same one-time reward as lessons, and their `下一課` button must advance to the next review module or numbered lesson in the playable path.
 - Continue the same pattern.
 
-Each review pair has 10 sentences total, and every character introduced in the target 30-lesson range must appear at least once across those 10 sentences.
+Each review pair has 10 sentences total, and every character introduced in the target 30-lesson range must appear at least once across those 10 sentences. The pair may use any character learned by that milestone, but not characters from later lessons.
 
 The first lesson can be a seed lesson. Current seed draft:
 

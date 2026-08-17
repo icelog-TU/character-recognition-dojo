@@ -4,7 +4,7 @@ This document records the reward collection design for `認字練功房`.
 
 ## Current Direction
 
-The app will eventually contain about 600 lessons, plus review modules after every 30-lesson milestone. Each first-time lesson or review-module completion grants:
+The app will eventually contain about 600 lessons, plus two review modules after every 15-lesson milestone starting after L045. Each first-time lesson or review-module completion grants:
 
 - 30 coins
 - 12 stars

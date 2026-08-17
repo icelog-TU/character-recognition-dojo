@@ -378,25 +378,24 @@ npm run verify
 
 ## Review Module Cycle
 
-Starting after L060, the course inserts two review modules after every 30-lesson milestone. Review modules are not numbered lessons and must not occupy `L###` lesson ids.
+Starting after L045, the course inserts two review modules after every 15-lesson milestone. Review modules are not numbered lessons and must not occupy `L###` lesson ids.
 
-The review cycle is delayed by one 30-lesson block so the review targets older material:
+Each review pair covers the most recent 30 numbered lessons at that milestone:
 
-- After L060, add R001 and R002 for L001-L030. The next new-character lesson remains L061.
-- After L090, add R003 and R004 for L031-L060. The next new-character lesson remains L091.
-- After L120, add R005 and R006 for L061-L090.
-- Continue the same pattern every 30 lessons through the 600-lesson course.
-- Because the course ends at L600, add a final capstone pair R039 and R040 after L600 to cover L571-L600. This final pair closes the last 30-lesson block even though there is no L630 milestone.
+- After L045, add R001 and R002 for L016-L045. The next new-character lesson remains L046.
+- After L060, add R003 and R004 for L031-L060. The next new-character lesson remains L061.
+- After L075, add R005 and R006 for L046-L075. The next new-character lesson remains L076.
+- Continue the same pattern every 15 lessons through the 600-lesson course.
+- Because L600 is itself a 15-lesson milestone, the final standard pair is R075 and R076 after L600 for L571-L600. There is no extra capstone pair beyond R076.
 
-Review modules are release blockers. After a milestone lesson is in `main`, the two review modules for that milestone must enter the playable sequence before the next numbered new-character lesson. For example, after L180 is in `main`, Release must ship R009 and R010 before shipping L181. If an earlier review pair was skipped, stop shipping additional numbered lessons and catch up the overdue review pair(s) before continuing.
+Review modules are release blockers. After a milestone lesson is in `main`, the two review modules for that milestone must enter the playable sequence before the next numbered new-character lesson. For example, after L180 is in `main`, Release must ship R019 and R020 before shipping L181. If an earlier review pair was skipped, stop shipping additional numbered lessons and catch up the overdue review pair(s) before continuing.
 
 Formula:
 
-- Milestone `M` starts at 60 and increases by 30.
-- The two review modules after milestone `M` cover lesson range `M - 59` through `M - 30`.
+- Milestone `M` starts at 45 and increases by 15.
+- The two review modules after milestone `M` cover lesson range `M - 29` through `M`.
 - The review modules may use only characters learned by lesson `M`. Do not use characters from lessons after `M`, even when producing an overdue review pair after later lessons already exist in `origin/main`.
-- Standard pair numbering: for milestone `M`, let `k = (M - 60) / 30`; the pair is `R(2k+1)` and `R(2k+2)`, zero-padded to three digits.
-- Final capstone exception: R039/R040 are after L600, cover L571-L600, and may use characters learned through L600.
+- Standard pair numbering: for milestone `M`, let `k = (M - 45) / 15`; the pair is `R(2k+1)` and `R(2k+2)`, zero-padded to three digits.
 - Each review module has exactly 5 reviewed sentences.
 - The pair therefore has 10 reviewed sentences total.
 - Across those 10 sentences, every new character introduced in the covered 30-lesson range must appear at least once.
@@ -405,26 +404,44 @@ Required schedule:
 
 | Milestone in main | Required review pair before next numbered lesson | Coverage target | Allowed character ceiling |
 | --- | --- | --- | --- |
-| L060 | R001, R002 before L061 | L001-L030 | characters learned through L060 |
-| L090 | R003, R004 before L091 | L031-L060 | characters learned through L090 |
-| L120 | R005, R006 before L121 | L061-L090 | characters learned through L120 |
-| L150 | R007, R008 before L151 | L091-L120 | characters learned through L150 |
-| L180 | R009, R010 before L181 | L121-L150 | characters learned through L180 |
-| L210 | R011, R012 before L211 | L151-L180 | characters learned through L210 |
-| L240 | R013, R014 before L241 | L181-L210 | characters learned through L240 |
-| L270 | R015, R016 before L271 | L211-L240 | characters learned through L270 |
-| L300 | R017, R018 before L301 | L241-L270 | characters learned through L300 |
-| L330 | R019, R020 before L331 | L271-L300 | characters learned through L330 |
-| L360 | R021, R022 before L361 | L301-L330 | characters learned through L360 |
-| L390 | R023, R024 before L391 | L331-L360 | characters learned through L390 |
-| L420 | R025, R026 before L421 | L361-L390 | characters learned through L420 |
-| L450 | R027, R028 before L451 | L391-L420 | characters learned through L450 |
-| L480 | R029, R030 before L481 | L421-L450 | characters learned through L480 |
-| L510 | R031, R032 before L511 | L451-L480 | characters learned through L510 |
-| L540 | R033, R034 before L541 | L481-L510 | characters learned through L540 |
-| L570 | R035, R036 before L571 | L511-L540 | characters learned through L570 |
-| L600 | R037, R038 after L600 | L541-L570 | characters learned through L600 |
-| L600 final capstone | R039, R040 after R037/R038 | L571-L600 | characters learned through L600 |
+| L045 | R001, R002 before L046 | L016-L045 | characters learned through L045 |
+| L060 | R003, R004 before L061 | L031-L060 | characters learned through L060 |
+| L075 | R005, R006 before L076 | L046-L075 | characters learned through L075 |
+| L090 | R007, R008 before L091 | L061-L090 | characters learned through L090 |
+| L105 | R009, R010 before L106 | L076-L105 | characters learned through L105 |
+| L120 | R011, R012 before L121 | L091-L120 | characters learned through L120 |
+| L135 | R013, R014 before L136 | L106-L135 | characters learned through L135 |
+| L150 | R015, R016 before L151 | L121-L150 | characters learned through L150 |
+| L165 | R017, R018 before L166 | L136-L165 | characters learned through L165 |
+| L180 | R019, R020 before L181 | L151-L180 | characters learned through L180 |
+| L195 | R021, R022 before L196 | L166-L195 | characters learned through L195 |
+| L210 | R023, R024 before L211 | L181-L210 | characters learned through L210 |
+| L225 | R025, R026 before L226 | L196-L225 | characters learned through L225 |
+| L240 | R027, R028 before L241 | L211-L240 | characters learned through L240 |
+| L255 | R029, R030 before L256 | L226-L255 | characters learned through L255 |
+| L270 | R031, R032 before L271 | L241-L270 | characters learned through L270 |
+| L285 | R033, R034 before L286 | L256-L285 | characters learned through L285 |
+| L300 | R035, R036 before L301 | L271-L300 | characters learned through L300 |
+| L315 | R037, R038 before L316 | L286-L315 | characters learned through L315 |
+| L330 | R039, R040 before L331 | L301-L330 | characters learned through L330 |
+| L345 | R041, R042 before L346 | L316-L345 | characters learned through L345 |
+| L360 | R043, R044 before L361 | L331-L360 | characters learned through L360 |
+| L375 | R045, R046 before L376 | L346-L375 | characters learned through L375 |
+| L390 | R047, R048 before L391 | L361-L390 | characters learned through L390 |
+| L405 | R049, R050 before L406 | L376-L405 | characters learned through L405 |
+| L420 | R051, R052 before L421 | L391-L420 | characters learned through L420 |
+| L435 | R053, R054 before L436 | L406-L435 | characters learned through L435 |
+| L450 | R055, R056 before L451 | L421-L450 | characters learned through L450 |
+| L465 | R057, R058 before L466 | L436-L465 | characters learned through L465 |
+| L480 | R059, R060 before L481 | L451-L480 | characters learned through L480 |
+| L495 | R061, R062 before L496 | L466-L495 | characters learned through L495 |
+| L510 | R063, R064 before L511 | L481-L510 | characters learned through L510 |
+| L525 | R065, R066 before L526 | L496-L525 | characters learned through L525 |
+| L540 | R067, R068 before L541 | L511-L540 | characters learned through L540 |
+| L555 | R069, R070 before L556 | L526-L555 | characters learned through L555 |
+| L570 | R071, R072 before L571 | L541-L570 | characters learned through L570 |
+| L585 | R073, R074 before L586 | L556-L585 | characters learned through L585 |
+| L600 | R075, R076 after L600 | L571-L600 | characters learned through L600 |
 
 Rules:
 
@@ -439,12 +456,13 @@ Rules:
 - The two review modules should be planned as one pair so coverage can be checked across all 10 sentences before either module ships.
 - Do not add placeholder review modules to `src/curriculum/sample-lessons.json`. Only add production-ready review modules to top-level `reviewLessons` after sentences, images, audio, timings, Stage 4 games, and review coverage are complete.
 - Production-ready review modules in `reviewLessons` must be inserted into the same playable sequence and square course-card grid as numbered lessons. They must not be reachable only through a temporary reservation section.
-- The child-facing `漢字總覽` page must also provide a permanent `複習區` after the six color groups. This review area reserves `R001` through `R040` so completed review modules stay findable even after many later lessons are unlocked.
+- The child-facing `漢字總覽` page must also provide a permanent `複習區` after the six color groups. This review area reserves `R001` through `R076` so completed review modules stay findable even after many later lessons are unlocked.
 - In the `漢字總覽` review area, production-ready and unlocked review modules are clickable. Locked or not-yet-built review modules may appear only as UI placeholders; do not add empty placeholder review modules to `src/curriculum/sample-lessons.json`.
 - Review modules grant the same one-time completion reward as lessons. Replaying an already completed review module must not grant another reward.
 - Review modules are displayed as two-stage units only: first `看圖聽句子`, then `句子遊戲`. The UI must not show skipped normal-lesson Stage 1/2 rows, and must not label the review stages as `第三階段` or `第四階段`.
-- The review module `下一課` button must follow the playable sequence. Example: `L060` -> `R001` -> `R002` -> `L061`.
-- The first playable pair is after L060: R001/R002, two 5-sentence review modules covering all new characters from L001-L030.
+- The review module `下一課` button must follow the playable sequence. Example: `L045` -> `R001` -> `R002` -> `L046`; `L060` -> `R003` -> `R004` -> `L061`.
+- The first playable pair is after L045: R001/R002, two 5-sentence review modules covering all new characters from L016-L045.
+- Migration note: the repo previously used an older 30-lesson review schedule with R001-R018. Because the teacher confirmed no learner has reached L045 yet, existing review modules may be renumbered, moved, rebuilt, or replaced to match the 15-lesson schedule. Do not assume legacy R001-R018 meanings are still valid; audit each existing review module against the new milestone, coverage range, and allowed-character ceiling before reusing it.
 
 ## Dependency Recheck Before Merge
 
@@ -497,8 +515,8 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L311, L311 introduces `次`, and review modules are complete through R018.
+As of latest `origin/main`, production curriculum is complete through L311, L311 introduces `次`, and review modules R001-R018 exist from the legacy 30-lesson schedule.
 
-Under the review-blocker rule, no review pair is overdue at L311; R019-R020 are required after L330 and before L331.
+Under the current 15-lesson review-blocker rule, the review schedule needs migration before further numbered lesson release. For a course already through L311, review pairs through the L300 milestone are required before the playable sequence should continue past L300: R001-R036 under the new schedule. Existing legacy R001-R018 must be audited or rebuilt against the new meanings before they count.
 
 L001-L005 use the simpler Stage 1-3 flow. L006-L311 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
