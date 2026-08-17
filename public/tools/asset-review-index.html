@@ -432,6 +432,20 @@
         return `https://raw.githubusercontent.com/${state.repo}/${state.sha}/${path}`;
       }
 
+      function isMainReview() {
+        return state.ref.trim().toLowerCase() === "main";
+      }
+
+      function isDefaultRepo() {
+        return state.repo.trim().toLowerCase() === "icelog-tu/character-recognition-dojo";
+      }
+
+      function pagesToolUrl(path) {
+        const basePath = window.location.pathname.split("/tools/")[0] || "";
+        const version = state.sha ? `?v=${encodeURIComponent(state.sha.slice(0, 12))}` : "";
+        return `${window.location.origin}${basePath}/tools/${path}${version}`;
+      }
+
       function stableStringify(value) {
         if (Array.isArray(value)) return `[${value.map(stableStringify).join(",")}]`;
         if (value && typeof value === "object") {
@@ -564,6 +578,17 @@
         return response.json();
       }
 
+      async function fetchProductionCurriculum() {
+        if (isMainReview() && isDefaultRepo()) {
+          try {
+            return await fetchJson(pagesToolUrl("planner-data.json"), "planner data");
+          } catch (error) {
+            console.warn("Falling back to raw production curriculum.", error);
+          }
+        }
+        return fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum");
+      }
+
       async function resolveRef() {
         const data = await fetchJson(
           `https://api.github.com/repos/${state.repo}/commits/${encodeURIComponent(state.ref)}`,
@@ -597,7 +622,7 @@
       }
 
       async function loadCurriculum() {
-        const curriculum = await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum");
+        const curriculum = await fetchProductionCurriculum();
         const lessons = (curriculum.lessons || []).map((unit) => {
           const builtUnit = { ...unit, kind: "lesson", built: true };
           return { ...builtUnit, contentSignature: unitContentSignature(builtUnit) };
