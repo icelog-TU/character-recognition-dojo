@@ -106,6 +106,18 @@ For review modules, use `curriculum-workflow/review-requests/R###.json` and `pub
 
 Production does not own normal release integration. Do not spend time rebasing old branches, rebuilding `src/curriculum/sample-lessons.json`, refreshing `public/tools/planner-data.json`, or updating `docs/CURRICULUM_LEDGER.md` for dependency-blocked lessons. Release owns those shared files. If a command temporarily changes shared production state while generating timings, remove those temporary shared-state changes before the final Production commit.
 
+A package is not handoff-ready while it exists only as local dirty files. Unless the teacher explicitly requested a local-only diagnostic run, Production must commit and push the package branch after the required package checks pass. If a handoff both assigns an `asset-complete-package` and says not to commit or push, stop and ask for a corrected Production Activation Handoff before doing large work.
+
+Review migration replacement packages are a narrow exception to the normal `curriculum:audit-state` rule. When a Production Activation Handoff explicitly says that `R###/R###` replaces existing legacy `reviewLessons` ids, an `audit-state` failure that only says the active registry rows already exist in production `reviewLessons` is an expected legacy id collision. Production may continue only if:
+
+- The handoff labels the work as `review migration replacement package`.
+- The package request/draft metadata uses the current schedule, not the legacy schedule.
+- `src/curriculum/sample-lessons.json`, `public/tools/planner-data.json`, and `docs/CURRICULUM_LEDGER.md` are not changed.
+- `npm run tools:check` and `npm run validate:production` pass.
+- The final report clearly says `curriculum:audit-state` failed only because of the expected legacy review id collision.
+
+If `curriculum:audit-state` reports any other failure, stop and report it.
+
 ## Asset Rules
 
 - Use L058 image style anchors unless the teacher approved another style. L058 is style-only; do not copy the L058 adult woman or any other L058 person into unrelated roles.

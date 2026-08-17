@@ -127,6 +127,8 @@ The Audit Packet must include:
 - The mandatory image style and cast requirements from `docs/LESSON_VISUAL_CAST_SOP.md`, or an explicit instruction for Audit to insert that block unchanged into the final `Production Activation Handoff`.
 - Auto-claim-and-continue instructions that Audit can copy into the later Production Activation Handoff.
 - Startup instructions that check for a dirty worktree first, create the new package branch from latest `origin/main`, and run `npm run tools:check` plus `npm run curriculum:audit-state` only after switching to that new branch.
+- Package completion instructions that Audit can turn into a Production Activation Handoff: after required package checks pass, Production commits and pushes the package branch, then reports the branch and full tip commit SHA. Do not include no-commit/no-push wording inside content intended for Production, unless the teacher explicitly requested local-only diagnostic work.
+- If this review pair replaces an existing legacy `R###` id in `reviewLessons`, clearly label it `review migration replacement package`. State the current schedule metadata, the legacy metadata if known, and that Release owns replacing the legacy `reviewLessons` entries. Production must not modify `src/curriculum/sample-lessons.json`, `public/tools/planner-data.json`, or `docs/CURRICULUM_LEDGER.md` for the replacement package.
 - Stop conditions.
 
 Discussion, audit notes, and rejected sentence options must stay outside the Audit Packet block.

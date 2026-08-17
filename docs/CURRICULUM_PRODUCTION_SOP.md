@@ -86,12 +86,15 @@ For a review module, use `curriculum-workflow/review-requests/R###.json` and `pu
 
 Production owns `asset-complete-package`, not `release-ready-package`. It should not spend time rebasing old branches, rebuilding production JSON, refreshing planner data, or updating ledger for dependency-blocked lessons. Those shared-state steps belong to Release after earlier lessons are in latest `origin/main`.
 
+An `asset-complete-package` must be committed and pushed to its package branch unless the teacher explicitly requested local-only diagnostic work. A local dirty worktree is not a complete handoff state, because Release cannot inspect or integrate files that were never pushed.
+
 Hard release gate:
 
 - A branch with only `public/assets/lessons/L###/images/`, `S01-S05` audio, and `charAudio` is `assets-only`. It must not be called `merge-ready`, and the release thread must not infer final lesson JSON from chat.
 - A draft that has `durationMs` but missing/empty `charTimings` is not aligned.
 - A normal L006+ lesson with missing `sentenceGames`, missing `teachAudio` files, or missing `choose-pronunciation` wrong-option audio is not asset-complete.
 - A lesson using provisional characters can be prepared, but it cannot enter production until those characters are real in latest `origin/main` or the teacher changes the sentence set.
+- A migrated review package may intentionally reuse an `R###` id that already exists in legacy `reviewLessons`. That is allowed only when the handoff labels it `review migration replacement package`. Production prepares and pushes the package files on a branch, but does not edit production JSON, planner data, or ledger. Release later replaces the legacy review entry with the current schedule entry. In this narrow case, `npm run curriculum:audit-state` may fail with an expected legacy id collision; Production must report the exact failure and continue only if no other audit-state failure is present.
 
 ## Fast Package Audit
 
