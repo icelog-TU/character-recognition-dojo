@@ -16,8 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R007 | review module / 複習七 | merge-ready | Production D | codex/r007-r008-complete-package / a8efd3b7 | L090 milestone ceiling | None | curriculum-workflow/review-requests/R007.json, curriculum-workflow/generated/R007-generation-packet.md | public/assets/reviews/R007/images/, public/assets/reviews/R007/audio/ | Review Migration asset-complete package; Release owns reviewLessons integration |
-| R008 | review module / 複習八 | merge-ready | Production D | codex/r007-r008-complete-package / a8efd3b7 | L090 milestone ceiling | None | curriculum-workflow/review-requests/R008.json, curriculum-workflow/generated/R008-generation-packet.md | public/assets/reviews/R008/images/, public/assets/reviews/R008/audio/ | Review Migration asset-complete package; Release owns reviewLessons integration |
+| R007 | review module / 複習七 | merge-ready | Production D | codex/r007-r008-complete-package / f076d10a | L090 milestone ceiling | None | curriculum-workflow/review-requests/R007.json, curriculum-workflow/generated/R007-generation-packet.md | public/assets/reviews/R007/images/, public/assets/reviews/R007/audio/ | Review Migration asset-complete package; Release owns reviewLessons integration |
+| R008 | review module / 複習八 | merge-ready | Production D | codex/r007-r008-complete-package / f076d10a | L090 milestone ceiling | None | curriculum-workflow/review-requests/R008.json, curriculum-workflow/generated/R008-generation-packet.md | public/assets/reviews/R008/images/, public/assets/reviews/R008/audio/ | Review Migration asset-complete package; Release owns reviewLessons integration |
 
 ## Status Values
 
