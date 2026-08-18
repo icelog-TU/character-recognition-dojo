@@ -2854,16 +2854,17 @@ button.char-token {
 .picture-sentence-card .sentence-line {
   gap: 6px;
   min-height: 76px;
-  padding: 8px 4px;
+  padding: 8px 2px;
 }
 
 .picture-sentence-card .sentence-line-row {
-  gap: 5px;
+  gap: 2px;
 }
 
 .picture-sentence-card .char-token {
   flex: 0 0 auto;
-  min-width: 42px;
+  gap: 2px;
+  min-width: 38px;
 }
 
 .picture-sentence-card .hanzi {
@@ -2897,7 +2898,7 @@ button.char-token {
     justify-items: center;
     justify-content: center;
     align-items: center;
-    gap: 6px 5px;
+    gap: 6px 2px;
   }
 
   .picture-sentence-card .sentence-line-row {
@@ -3895,7 +3896,7 @@ button.char-token {
     justify-items: center;
     justify-content: center;
     align-items: center;
-    gap: 6px 5px;
+    gap: 6px 2px;
   }
 
   .picture-sentence-card .sentence-line-row {
@@ -3923,16 +3924,17 @@ button.char-token {
 
   .picture-sentence-card .char-token {
     flex: 0 1 auto;
-    min-width: 38px;
+    gap: 2px;
+    min-width: 34px;
   }
 
   .picture-sentence-card .hanzi {
-    font-size: clamp(1.72rem, 7vw, 2.18rem);
+    font-size: clamp(1.66rem, 6.7vw, 2.08rem);
   }
 
   .picture-sentence-card .zhuyin-mark {
-    font-size: clamp(0.5rem, 2vw, 0.62rem);
-    min-width: 1.35em;
+    font-size: clamp(0.48rem, 1.9vw, 0.6rem);
+    min-width: 1.22em;
   }
 }
 
