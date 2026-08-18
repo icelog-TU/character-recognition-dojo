@@ -21,8 +21,8 @@ If Markdown and production JSON disagree, latest `origin/main:src/curriculum/sam
 As of latest `origin/main`:
 
 - App name: `認字練功房`
-- Current reviewed lessons: L001-L311
-- L311 introduces `次`.
+- Current reviewed lessons: L001-L314
+- L314 introduces `收`.
 - Production review modules: R001-R018 currently exist from the retired 30-lesson review schedule.
 - Review schedule migration required: the current rule is every 15 lessons starting after L045, so a curriculum already past L300 needs valid R001-R036 before continuing numbered lesson release past the L300 playable position.
 - L001-L005 use Stage 1-3.
