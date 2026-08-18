@@ -16,8 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R031 | review module / 複習三十一 | claimed | Production D | codex/r031-r032-l270-complete-package / 9d094593 | L270 milestone ceiling | None | curriculum-workflow/review-requests/R031.json, curriculum-workflow/generated/R031-generation-packet.md | public/assets/reviews/R031/images/, public/assets/reviews/R031/audio/ | accepted Review Migration Activation Handoff and starting complete review module package |
-| R032 | review module / 複習三十二 | claimed | Production D | codex/r031-r032-l270-complete-package / 9d094593 | L270 milestone ceiling | None | curriculum-workflow/review-requests/R032.json, curriculum-workflow/generated/R032-generation-packet.md | public/assets/reviews/R032/images/, public/assets/reviews/R032/audio/ | accepted Review Migration Activation Handoff and starting complete review module package |
+| R031 | review module / 複習三十一 | merge-ready | Production D | codex/r031-r032-l270-complete-package / package tip | L270 milestone ceiling | None | curriculum-workflow/review-requests/R031.json, curriculum-workflow/generated/R031-generation-packet.md | public/assets/reviews/R031/images/, public/assets/reviews/R031/audio/ | asset-complete-package; Release owns reviewLessons/planner/ledger integration |
+| R032 | review module / 複習三十二 | merge-ready | Production D | codex/r031-r032-l270-complete-package / package tip | L270 milestone ceiling | None | curriculum-workflow/review-requests/R032.json, curriculum-workflow/generated/R032-generation-packet.md | public/assets/reviews/R032/images/, public/assets/reviews/R032/audio/ | asset-complete-package; Release owns reviewLessons/planner/ledger integration |
 
 ## Status Values
 
