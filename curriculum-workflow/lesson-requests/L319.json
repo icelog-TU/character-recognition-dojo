@@ -1,0 +1,292 @@
+{
+  "id": "L319",
+  "order": 319,
+  "newChars": [
+    "些"
+  ],
+  "zhuyin": {
+    "些": "ㄒㄧㄝ"
+  },
+  "title": "些",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production B complete-package handoff for L319. Approved sentences are fixed. Latest origin/main includes L317 ?; L318 ? is not merged at package start, so dependsOnLessons and provisionalLearnedChars cover ?. Release owns ordered integration after L318.",
+  "dependsOnLessons": [
+    "L318"
+  ],
+  "provisionalLearnedChars": [
+    "哪"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L317 + provisional ? + current new char ?",
+    "allowedCharsLocked": "??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+    "dependsOnLessons": [
+      "L318"
+    ],
+    "provisionalLearnedChars": [
+      "哪"
+    ],
+    "requiredCoverageChars": [
+      "些",
+      "哪",
+      "粉",
+      "色",
+      "彩",
+      "收"
+    ],
+    "targetCharMinimumCount": {
+      "些": 3
+    },
+    "recentTargetMinimumCounts": {
+      "哪": 2,
+      "粉": 2,
+      "色": 2,
+      "彩": 1,
+      "收": 1
+    },
+    "coverageCounts": {
+      "些": 5,
+      "哪": 2,
+      "粉": 3,
+      "色": 2,
+      "彩": 2,
+      "收": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity and recurring young boy continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Mother, teacher, protagonist girl, recurring young boy, and generic children must remain visually distinct.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for ? as public/assets/lessons/L319/audio/char-u4e9b.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and suffix from exact fragments ? and ??????.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact full wrong texts.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L319-S01",
+      "text": "這些粉彩筆，要收好。",
+      "spokenText": "這些粉彩筆要收好",
+      "focusChar": "些",
+      "displayLines": [
+        "這些",
+        "粉彩筆，",
+        "要收好。"
+      ],
+      "hanCount": 8,
+      "imageNotes": "Use the recurring protagonist girl identity. On the table is a group of pastel sticks / pastel pencils, with a transparent-lid storage box nearby. The girl is putting these pastel sticks into the box. The image must clearly show \"these pastel sticks\" as a group and that they should be put away. Do not depict a watercolor palette or ordinary pencils. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L319-S02",
+      "text": "哪些彩色筆是你的？",
+      "spokenText": "哪些彩色筆是你的",
+      "focusChar": "哪",
+      "displayLines": [
+        "哪些",
+        "彩色筆",
+        "是你的？"
+      ],
+      "hanCount": 8,
+      "imageNotes": "Use the recurring protagonist girl identity and the recurring ??? young boy identity. On the table are mixed colored pencils from two or three groups; some are closer to the girl and some are closer to the boy. The girl is looking at the boy as if asking which colored pencils are his. The image must show selecting \"which ones\" from many colored pencils. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L319-S03",
+      "text": "粉紅色再多一些。",
+      "spokenText": "粉紅色再多一些",
+      "focusChar": "些",
+      "displayLines": [
+        "粉紅色",
+        "再多一些。"
+      ],
+      "hanCount": 7,
+      "imageNotes": "Use the recurring protagonist girl identity. She is working on a drawing with pink flowers or pink clouds, and the pink area is not enough yet. She is holding a pink drawing material and is about to add a little more pink. The image must clearly suggest \"a bit more pink.\" No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L319-S04",
+      "text": "有些粉圓掉到桌上。",
+      "spokenText": "有些粉圓掉到桌上",
+      "focusChar": "些",
+      "displayLines": [
+        "有些粉圓",
+        "掉到桌上。"
+      ],
+      "hanCount": 8,
+      "imageNotes": "Tabletop dessert scene. Show a bowl or cup of sweet dessert with many tapioca pearls / ?? still inside, and only some pearls have fallen onto the table. Use the recurring protagonist girl identity if a child is shown; she notices the pearls on the table. The image must show \"some, not all\" of the pearls fell out. Do not show a fully overturned dessert. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L319-S05",
+      "text": "這些花要放哪裡？",
+      "spokenText": "這些花要放哪裡",
+      "focusChar": "哪",
+      "displayLines": [
+        "這些花",
+        "要放哪裡？"
+      ],
+      "hanCount": 7,
+      "imageNotes": "Use the recurring protagonist girl identity. The flowers are already arranged in a vase, and the girl is holding the vase with both hands while deciding where to place it. Show at least two clear, reasonable location choices in the room, such as beside a windowsill and on or beside a bookshelf/cabinet. It is acceptable to use two wordless thought bubbles above the girl: one bubble shows the vase by the windowsill, and the other shows the vase by the bookshelf/cabinet. The thought bubbles must contain only pictures, with no text, symbols, labels, or numbers. The focus is that these flowers are already in a vase and she is choosing where to put the vase. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L319-G01",
+      "type": "find-character",
+      "sentenceId": "L319-S01",
+      "targetChar": "些",
+      "targetCharIndex": 1,
+      "prompt": "??????",
+      "options": [
+        {
+          "id": "L319-G01-A",
+          "text": "些",
+          "correct": true
+        },
+        {
+          "id": "L319-G01-B",
+          "text": "哪",
+          "correct": false
+        },
+        {
+          "id": "L319-G01-C",
+          "text": "粉",
+          "correct": false
+        },
+        {
+          "id": "L319-G01-D",
+          "text": "彩",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L319-G02",
+      "type": "teach-character",
+      "sentenceId": "L319-S02",
+      "targetChar": "些",
+      "targetCharIndex": 1,
+      "prompt": "????????????",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L319/audio/L319-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L319/audio/L319-G02-suffix.m4a"
+      },
+      "teachAudioText": {
+        "prefixText": "哪",
+        "suffixText": "彩色筆是你的"
+      }
+    },
+    {
+      "id": "L319-G03",
+      "type": "missing-character",
+      "sentenceId": "L319-S03",
+      "targetChar": "些",
+      "targetCharIndex": 6,
+      "prompt": "???????",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        {
+          "id": "L319-G03-A",
+          "text": "些",
+          "correct": true
+        },
+        {
+          "id": "L319-G03-B",
+          "text": "哪",
+          "correct": false
+        },
+        {
+          "id": "L319-G03-C",
+          "text": "粉",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L319-G04",
+      "type": "partial-order",
+      "sentenceId": "L319-S04",
+      "targetChar": "些",
+      "prompt": "????????",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "id": "L319-G04-A",
+          "text": "有",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L319-G04-B",
+          "text": "些",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L319-G04-C",
+          "text": "粉",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L319-G04-D",
+          "text": "圓",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L319-G04-A",
+        "L319-G04-B",
+        "L319-G04-C",
+        "L319-G04-D"
+      ]
+    },
+    {
+      "id": "L319-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L319-S05",
+      "targetChar": "哪",
+      "prompt": "????????",
+      "options": [
+        {
+          "id": "L319-G05-A",
+          "text": "這些花要放哪裡？",
+          "correct": true,
+          "sentenceId": "L319-S05",
+          "audioSrc": "/assets/lessons/L319/audio/L319-S05.m4a",
+          "spokenText": "這些花要放哪裡"
+        },
+        {
+          "id": "L319-G05-B",
+          "text": "那些花要放哪裡？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L319/audio/L319-G05-wrong-one.m4a",
+          "spokenText": "那些花要放哪裡"
+        },
+        {
+          "id": "L319-G05-C",
+          "text": "這些花要放這裡？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L319/audio/L319-G05-wrong-two.m4a",
+          "spokenText": "這些花要放這裡"
+        }
+      ]
+    }
+  ]
+}

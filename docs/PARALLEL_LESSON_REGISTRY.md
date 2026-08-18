@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L319 | 些 / normal lesson | claimed | Production B | codex/l319-complete-package | L318 | 哪 | `curriculum-workflow/lesson-requests/L319.json`; `curriculum-workflow/generated/L319-generation-packet.md`; `curriculum-workflow/drafts/L319-draft.json` | `public/assets/lessons/L319/`; `curriculum-workflow/audio-inbox/L319/` | Teacher-approved Editor handoff; build dependency-blocked asset-complete package; Release owns ordered integration after L318. |
+| L319 | 些 / normal lesson | ready-blocked-by-dependency | Production B | codex/l319-complete-package | L318 | 哪 | `curriculum-workflow/lesson-requests/L319.json`; `curriculum-workflow/generated/L319-generation-packet.md`; `curriculum-workflow/drafts/L319-draft.json` | `public/assets/lessons/L319/`; `curriculum-workflow/audio-inbox/L319/` | Dependency-blocked asset-complete package prepared from teacher-approved Editor handoff; Release owns ordered integration after L318. |
 
 ## Status Values
 
