@@ -1,0 +1,305 @@
+{
+  "id": "R031",
+  "kind": "review",
+  "reviewNumber": 31,
+  "title": "複習三十一",
+  "afterLessonOrder": 270,
+  "targetLessonRange": {
+    "startOrder": 241,
+    "endOrder": 270
+  },
+  "targetSentenceCount": 5,
+  "requiredRounds": 5,
+  "requiredCoverageChars": [
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精"
+  ],
+  "generationConstraints": {
+    "requiredCoverageChars": [
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精"
+    ],
+    "allowedCeilingLessonId": "L270",
+    "provisionalLearnedChars": [],
+    "allowedCharsDescription": "latest origin/main learned chars through L270 only"
+  },
+  "teacherNotes": "Review migration approved review module R031; pair mate R032; no new characters; no charAudio; Release owns integration.",
+  "approvedSentences": [
+    {
+      "id": "R031-S01",
+      "text": "沙發好重，搬到累死人。",
+      "spokenText": "沙發好重搬到累死人",
+      "focusChar": "重",
+      "displayLines": [
+        "沙發好重，",
+        "搬到累死人。"
+      ],
+      "imageNotes": "Show two generic adults, visually distinct from father, mother, teacher, and recurring children, just after moving a very heavy sofa. They are sitting down or leaning nearby, extremely tired. The phrase 累死人 is exaggeration; do not show actual death, injury, fear, or danger.",
+      "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Use the approved L058 lesson images as mandatory style references only: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Match warm pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette. Do not copy any person identity from L058. Follow docs/LESSON_VISUAL_CAST_SOP.md and current cast anchors: L154-S01, L162-S04, L163-S02. Keep recurring protagonist girl, recurring young boy classmate, recurring sporty boy, mother, father, teacher, generic adults, and generic children visually distinct. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, watermarks, price numerals, license plates, or speech bubbles. Show two generic adults, visually distinct from father, mother, teacher, and recurring children, just after moving a very heavy sofa. They are sitting down or leaning nearby, extremely tired. The phrase 累死人 is exaggeration; do not show actual death, injury, fear, or danger.",
+      "imageSrc": "/assets/reviews/R031/images/R031-S01.webp",
+      "approved": true
+    },
+    {
+      "id": "R031-S02",
+      "text": "工人忙著工作，我幫忙開門。",
+      "spokenText": "工人忙著工作我幫忙開門",
+      "focusChar": "幫",
+      "displayLines": [
+        "工人忙著",
+        "工作，",
+        "我幫忙開門。"
+      ],
+      "imageNotes": "Use a generic worker visually distinct from father, mother, teacher, and passersby. Use the recurring protagonist girl identity for 我. The worker is busy working or carrying work materials toward a doorway, and the girl helps by opening the door.",
+      "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Use the approved L058 lesson images as mandatory style references only: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Match warm pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette. Do not copy any person identity from L058. Follow docs/LESSON_VISUAL_CAST_SOP.md and current cast anchors: L154-S01, L162-S04, L163-S02. Keep recurring protagonist girl, recurring young boy classmate, recurring sporty boy, mother, father, teacher, generic adults, and generic children visually distinct. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, watermarks, price numerals, license plates, or speech bubbles. Use a generic worker visually distinct from father, mother, teacher, and passersby. Use the recurring protagonist girl identity for 我. The worker is busy working or carrying work materials toward a doorway, and the girl helps by opening the door.",
+      "imageSrc": "/assets/reviews/R031/images/R031-S02.webp",
+      "approved": true
+    },
+    {
+      "id": "R031-S03",
+      "text": "他急著上車，腳步很快。",
+      "spokenText": "他急著上車腳步很快",
+      "focusChar": "急",
+      "displayLines": [
+        "他急著上車，",
+        "腳步很快。"
+      ],
+      "imageNotes": "Use the fixed recurring sporty boy identity for 他. He is hurrying toward a car or bus, with quick steps, carrying school or outing items. The scene should show urgency without danger.",
+      "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Use the approved L058 lesson images as mandatory style references only: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Match warm pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette. Do not copy any person identity from L058. Follow docs/LESSON_VISUAL_CAST_SOP.md and current cast anchors: L154-S01, L162-S04, L163-S02. Keep recurring protagonist girl, recurring young boy classmate, recurring sporty boy, mother, father, teacher, generic adults, and generic children visually distinct. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, watermarks, price numerals, license plates, or speech bubbles. Use the fixed recurring sporty boy identity for 他. He is hurrying toward a car or bus, with quick steps, carrying school or outing items. The scene should show urgency without danger.",
+      "imageSrc": "/assets/reviews/R031/images/R031-S03.webp",
+      "approved": true
+    },
+    {
+      "id": "R031-S04",
+      "text": "小孩在沙地上跳來跳去。",
+      "spokenText": "小孩在沙地上跳來跳去",
+      "focusChar": "跳",
+      "displayLines": [
+        "小孩在沙地",
+        "上跳來跳去。"
+      ],
+      "imageNotes": "Show a generic child, visually distinct from recurring 我/你/他, safely jumping around on sand or in a sandy play area. The sand should be clearly visible.",
+      "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Use the approved L058 lesson images as mandatory style references only: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Match warm pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette. Do not copy any person identity from L058. Follow docs/LESSON_VISUAL_CAST_SOP.md and current cast anchors: L154-S01, L162-S04, L163-S02. Keep recurring protagonist girl, recurring young boy classmate, recurring sporty boy, mother, father, teacher, generic adults, and generic children visually distinct. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, watermarks, price numerals, license plates, or speech bubbles. Show a generic child, visually distinct from recurring 我/你/他, safely jumping around on sand or in a sandy play area. The sand should be clearly visible.",
+      "imageSrc": "/assets/reviews/R031/images/R031-S04.webp",
+      "approved": true
+    },
+    {
+      "id": "R031-S05",
+      "text": "這張椅子很難裝，我裝不好。",
+      "spokenText": "這張椅子很難裝我裝不好",
+      "focusChar": "裝",
+      "displayLines": [
+        "這張椅子",
+        "很難裝，",
+        "我裝不好。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity for 我. A small child-safe chair is partly assembled in front of her, and she looks confused because she cannot assemble it well. Show chair parts clearly, but do not show sharp tools or dangerous assembly.",
+      "imagePrompt": "square image / 1:1 composition, centered subject, safe margins on all sides, phone-readable picture-book illustration. Use the approved L058 lesson images as mandatory style references only: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp. Match warm pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette. Do not copy any person identity from L058. Follow docs/LESSON_VISUAL_CAST_SOP.md and current cast anchors: L154-S01, L162-S04, L163-S02. Keep recurring protagonist girl, recurring young boy classmate, recurring sporty boy, mother, father, teacher, generic adults, and generic children visually distinct. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, watermarks, price numerals, license plates, or speech bubbles. Use the recurring protagonist girl identity for 我. A small child-safe chair is partly assembled in front of her, and she looks confused because she cannot assemble it well. Show chair parts clearly, but do not show sharp tools or dangerous assembly.",
+      "imageSrc": "/assets/reviews/R031/images/R031-S05.webp",
+      "approved": true
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R031-G01",
+      "type": "find-character",
+      "sentenceId": "R031-S02",
+      "targetChar": "幫",
+      "prompt": "找到「幫」。",
+      "options": [
+        {
+          "id": "R031-G01-A",
+          "text": "幫",
+          "correct": true
+        },
+        {
+          "id": "R031-G01-B",
+          "text": "工",
+          "correct": false
+        },
+        {
+          "id": "R031-G01-C",
+          "text": "作",
+          "correct": false
+        },
+        {
+          "id": "R031-G01-D",
+          "text": "忙",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R031-G02",
+      "type": "teach-character",
+      "sentenceId": "R031-S05",
+      "targetChar": "裝",
+      "targetCharIndex": 6,
+      "prompt": "聽一聽，補回不見的字。",
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R031/audio/R031-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R031/audio/R031-G02-suffix.m4a"
+      },
+      "teachAudioText": {
+        "prefixText": "這張椅子很難",
+        "suffixText": "我裝不好"
+      }
+    },
+    {
+      "id": "R031-G03",
+      "type": "missing-character",
+      "sentenceId": "R031-S03",
+      "targetChar": "急",
+      "prompt": "選出不見的字。",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "R031-G03-A",
+          "text": "急",
+          "correct": true
+        },
+        {
+          "id": "R031-G03-B",
+          "text": "快",
+          "correct": false
+        },
+        {
+          "id": "R031-G03-C",
+          "text": "走",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R031-G04",
+      "type": "partial-order",
+      "sentenceId": "R031-S01",
+      "targetChar": "重",
+      "prompt": "把不見的字照順序放回句子。",
+      "missingIndexes": [
+        0,
+        3,
+        4,
+        6
+      ],
+      "options": [
+        {
+          "id": "R031-G04-A",
+          "text": "沙",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "R031-G04-B",
+          "text": "重",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "R031-G04-C",
+          "text": "搬",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "R031-G04-D",
+          "text": "累",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "R031-G04-A",
+        "R031-G04-B",
+        "R031-G04-C",
+        "R031-G04-D"
+      ]
+    },
+    {
+      "id": "R031-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R031-S04",
+      "targetChar": "跳",
+      "prompt": "選出你聽到的句子。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "小孩在沙地上跳來跳去。",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R031/audio/R031-S04.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "小孩在草地上跳來跳去。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R031/audio/R031-G05-wrong-one.m4a",
+          "spokenText": "小孩在草地上跳來跳去"
+        },
+        {
+          "id": "wrong-two",
+          "text": "小孩在沙地上走來走去。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R031/audio/R031-G05-wrong-two.m4a",
+          "spokenText": "小孩在沙地上走來走去"
+        }
+      ]
+    }
+  ]
+}
