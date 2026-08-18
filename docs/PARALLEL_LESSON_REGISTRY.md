@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L315 | 彩 / normal lesson | claimed | Production B | codex/l315-complete-package | None | None | `curriculum-workflow/lesson-requests/L315.json`; `curriculum-workflow/generated/L315-generation-packet.md`; `curriculum-workflow/drafts/L315-draft.json` | `public/assets/lessons/L315/`; `curriculum-workflow/audio-inbox/L315/` | Teacher-approved Editor handoff; build asset-complete package; Release owns ordered integration. |
+| L315 | 彩 / normal lesson | merge-ready | Production B | codex/l315-complete-package | None | None | `curriculum-workflow/lesson-requests/L315.json`; `curriculum-workflow/generated/L315-generation-packet.md`; `curriculum-workflow/drafts/L315-draft.json` | `public/assets/lessons/L315/`; `curriculum-workflow/audio-inbox/L315/` | Asset-complete package prepared from teacher-approved Editor handoff; Release owns ordered integration. |
 
 ## Status Values
 
