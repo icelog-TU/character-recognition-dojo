@@ -137,7 +137,8 @@ Before reporting done, run a fast lesson-local audit. This should be minutes, no
 
 - `request`, `draft`, and `generation packet` agree on lesson id, new character(s), zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
 - Top-level `dependsOnLessons` exists when the lesson uses provisional characters from earlier unmerged lessons.
-- `displayLines`, when present, join exactly back to `text`; each zhuyin line should stay at `<= 5` Han characters.
+- `displayLines`, when present, join exactly back to `text`; each zhuyin line must stay at `<= 5` visible characters, including punctuation and any other learner-facing visible symbol.
+- `displayLines` must use functional phrase breaks, not arbitrary count-only breaks. Do not split natural words or phrases such as `彩色筆`; return to Editor/Review Migration/Supervisor if the handoff line breaks are awkward or unclear.
 - Every sentence has final `imageSrc`, sentence `audio.src`, `durationMs`, and non-empty `charTimings`.
 - `charAudio` uses the repo path form `char-uXXXX.m4a`, not `char-字.m4a`.
 - Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported type once, and use every reviewed sentence exactly once.

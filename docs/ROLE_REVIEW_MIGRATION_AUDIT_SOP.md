@@ -69,14 +69,15 @@ For each review pair:
 6. Confirm every target new character in the 30-lesson coverage range appears at least once across the two review modules.
 7. Confirm `spokenText` equals `text` with punctuation removed, without adding or removing Han characters.
 8. Confirm every sentence with `displayLines` satisfies `displayLines.join("") === text`, including punctuation such as `，`, `。`, `？`, and `！`. If punctuation is missing from `displayLines`, the packet is FAIL and must return to Review Migration for revision.
-9. Confirm every individual `displayLines` line contains at most 5 Han characters when zhuyin is visible. If any line has more than 5 Han characters, the packet is FAIL and must return to Review Migration for revision. Do not ask Production to discover or fix this after asset generation.
-10. Confirm `focusChar` appears in its sentence.
-11. Confirm sentence Han counts are normally 4-12.
-12. Flag any sentence that is too abstract, too hard to visualize, unnatural in Taiwan Mandarin, or high cognitive load for a five-year-old learner.
-13. Confirm image notes are concrete and identify recurring people using `docs/LESSON_VISUAL_CAST_SOP.md`.
-14. Confirm Stage 4 uses every reviewed sentence exactly once.
-15. Confirm `partial-order` blanks exactly 3-4 Han characters, `missingIndexes.length` equals `options.length`, and every option text is exactly one Han character. Multi-character chunks or phrase cards are FAIL.
-16. Confirm `G05 choose-pronunciation` wrong choices have the same Han count as the correct text and differ by only 1-2 Han characters.
+9. Confirm every individual `displayLines` line contains at most 5 visible characters when zhuyin is visible, including punctuation and any other learner-facing visible symbol. If any line has more than 5 visible characters, the packet is FAIL and must return to Review Migration for revision. Do not ask Production to discover or fix this after asset generation.
+10. Confirm every `displayLines` break follows functional phrase boundaries. Do not split a natural word or phrase, such as `彩色筆`, merely to satisfy the length gate. Awkward splits such as `用完彩色` / `筆，` are FAIL and must return to Review Migration for revision.
+11. Confirm `focusChar` appears in its sentence.
+12. Confirm sentence Han counts are normally 4-12.
+13. Flag any sentence that is too abstract, too hard to visualize, unnatural in Taiwan Mandarin, or high cognitive load for a five-year-old learner.
+14. Confirm image notes are concrete and identify recurring people using `docs/LESSON_VISUAL_CAST_SOP.md`.
+15. Confirm Stage 4 uses every reviewed sentence exactly once.
+16. Confirm `partial-order` blanks exactly 3-4 Han characters, `missingIndexes.length` equals `options.length`, and every option text is exactly one Han character. Multi-character chunks or phrase cards are FAIL.
+17. Confirm `G05 choose-pronunciation` wrong choices have the same Han count as the correct text and differ by only 1-2 Han characters.
 
 ## Output
 

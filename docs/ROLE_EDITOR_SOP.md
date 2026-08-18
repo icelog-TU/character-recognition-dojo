@@ -102,7 +102,8 @@ Before sending a Production handoff:
 - Keep sentences concrete, imageable, and normally 4-12 Han characters.
 - Confirm `spokenText` includes exactly the Han characters from `text` in order, without punctuation.
 - Confirm every `displayLines` array joins exactly back to `text`, including punctuation.
-- Confirm every `displayLines` line contains at most 5 Han characters when zhuyin is visible. If a line is too long, split only `displayLines`; do not change `text` or `spokenText`.
+- Confirm every `displayLines` line contains at most 5 visible characters when zhuyin is visible, including punctuation and any other learner-facing visible symbol. Do not use a Han-only count.
+- Confirm `displayLines` breaks follow functional phrase boundaries. Do not split a natural word or phrase, such as `彩色筆`, merely to satisfy the length gate. Prefer breaks at subject, time/frequency, object, action, result, reason/condition, short predicate, or natural punctuation boundaries.
 - Confirm every `focusChar` appears in its sentence.
 - Confirm current target and recent review coverage follows `docs/SENTENCE_GENERATION_SOP.md`.
 - For review modules, confirm the pair-level coverage target and milestone allowed-character ceiling, and include both in the handoff.

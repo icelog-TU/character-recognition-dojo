@@ -297,6 +297,39 @@ Rules:
 - `displayLines` affects only visual line breaks; audio and timings still use `text` and `spokenText`.
 - If a line is longer than 5 visible characters, split only `displayLines` and keep `text` plus `spokenText` unchanged. A line like `這本書太長，` is 6 visible characters and must be split.
 
+Functional break gate:
+
+- Passing the 5-visible-character layout gate is not enough. Line breaks must support how the child reads the sentence.
+- Prefer breaks at meaningful functional phrase boundaries: time/frequency phrase, subject phrase, object phrase, action phrase, result phrase, reason/condition phrase, short predicate phrase, or natural punctuation boundary.
+- Do not split a natural word or phrase only because the character count fits. For example, do not split `彩色筆` as `彩色` / `筆` unless there is no better option.
+- If a natural phrase is longer than 5 visible characters, split at the least harmful internal boundary while preserving meaning and reading rhythm.
+- After every teacher-approved sentence change, Editor must show the updated `displayLines`; do not leave functional line breaking for Production to invent.
+
+Examples:
+
+```json
+{
+  "text": "用完彩色筆，要記得收好。",
+  "displayLines": ["用完", "彩色筆，", "要記得", "收好。"]
+}
+```
+
+Do not split this as `["用完彩色", "筆，", "要記得", "收好。"]`, because it breaks the object phrase `彩色筆`.
+
+```json
+{
+  "text": "同學每次都沒收桌子，被罵了。",
+  "displayLines": ["同學每次都", "沒收桌子，", "被罵了。"]
+}
+```
+
+```json
+{
+  "text": "天氣冷，樹葉變紅色了。",
+  "displayLines": ["天氣冷，", "樹葉", "變紅色了。"]
+}
+```
+
 ## Imageability
 
 Before approving a sentence, imagine the picture.
@@ -350,6 +383,7 @@ Before sending sentences to image/audio production, verify:
 - `spokenText` matches `text` without punctuation
 - every `displayLines` array joins exactly back to `text`, including punctuation
 - every `displayLines` line is at most 5 visible characters, including punctuation, when zhuyin is visible
+- every `displayLines` break follows functional phrase boundaries; no natural word or phrase is split awkwardly just to satisfy the length gate
 - every `focusChar` appears in its sentence
 - every sentence with people has explicit role identities in `imageNotes` following `docs/LESSON_VISUAL_CAST_SOP.md`
 - the Stage 4 plan uses every reviewed sentence exactly once when the lesson has five reviewed sentences and five sentence games
