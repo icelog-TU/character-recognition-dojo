@@ -1,0 +1,274 @@
+{
+  "id": "L316",
+  "order": 316,
+  "newChars": [
+    "色"
+  ],
+  "zhuyin": {
+    "色": "ㄙㄜˋ"
+  },
+  "title": "色",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete-package handoff for L316 色. Use approved sentences exactly. Latest origin/main is complete through L314 收; L315 彩 is not merged, so this package depends on L315 and uses 彩 as a provisional learned character. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
+  "dependsOnLessons": [
+    "L315"
+  ],
+  "provisionalLearnedChars": [
+    "彩"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L314 + provisional learned chars [彩] + current new char 色",
+    "dependsOnLessons": [
+      "L315"
+    ],
+    "provisionalLearnedChars": [
+      "彩"
+    ],
+    "requiredCoverageChars": [
+      "色",
+      "彩",
+      "收",
+      "完",
+      "記",
+      "次"
+    ],
+    "targetCharMinimumCount": {
+      "色": 3
+    },
+    "recentTargetMinimumCounts": {
+      "彩": 2,
+      "收": 2,
+      "完": 2,
+      "記": 1,
+      "次": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Teacher identity must be visually distinct from protagonist mother.",
+      "Generic classmates must not look like recurring protagonist girl, recurring young boy classmate, or recurring sporty boy.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 色 as public/assets/lessons/L316/audio/char-u8272.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and suffix from exact fragments 天氣冷樹葉變紅 and 了.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L316-S01",
+      "text": "用完彩色筆，要記得收好。",
+      "spokenText": "用完彩色筆要記得收好",
+      "focusChar": "色",
+      "displayLines": [
+        "用完",
+        "彩色筆，",
+        "要記得",
+        "收好。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. She has finished using colored pencils and is putting them away. Show paper and colored pencils clearly on the table. The image should focus on putting away the colored pencils after use. No written text, numbers, labels, zhuyin, signs, or watermarks."
+    },
+    {
+      "id": "L316-S02",
+      "text": "同學每次都沒收桌子，被罵了。",
+      "spokenText": "同學每次都沒收桌子被罵了",
+      "focusChar": "收",
+      "displayLines": [
+        "同學每次都",
+        "沒收桌子，",
+        "被罵了。"
+      ],
+      "imageNotes": "Classroom scene with a generic classmate, not the recurring protagonist girl. The classmate's desk is messy and not put away; the teacher is nearby giving a firm but gentle reminder. Do not make the teacher scary or harsh. No written text, numbers, labels, zhuyin, signs, or watermarks."
+    },
+    {
+      "id": "L316-S03",
+      "text": "上完彩帶課，天色也晚了。",
+      "spokenText": "上完彩帶課天色也晚了",
+      "focusChar": "色",
+      "displayLines": [
+        "上完",
+        "彩帶課，",
+        "天色也",
+        "晚了。"
+      ],
+      "imageNotes": "Classroom or activity room after a ribbon craft class. Show used colorful ribbons or ribbon work on the table, and a window or doorway where the outside sky is getting late. The image should clearly show class has ended and the sky is late. No written text, numbers, labels, zhuyin, signs, or watermarks."
+    },
+    {
+      "id": "L316-S04",
+      "text": "天氣冷，樹葉變紅色了。",
+      "spokenText": "天氣冷樹葉變紅色了",
+      "focusChar": "色",
+      "displayLines": [
+        "天氣冷，",
+        "樹葉",
+        "變紅色了。"
+      ],
+      "imageNotes": "Outdoor cold-weather scene. Use the recurring protagonist girl identity wearing warmer clothing while looking at tree leaves that have turned red. Make both cold weather and red leaves clear. No written text, numbers, labels, zhuyin, signs, or watermarks."
+    },
+    {
+      "id": "L316-S05",
+      "text": "媽媽臉色發白，要休息。",
+      "spokenText": "媽媽臉色發白要休息",
+      "focusChar": "色",
+      "displayLines": [
+        "媽媽",
+        "臉色發白，",
+        "要休息。"
+      ],
+      "imageNotes": "Use the recurring protagonist mother and recurring protagonist girl identities. Mother looks pale and sits or rests gently; the protagonist girl is nearby showing care. Keep the image warm and mild, not severe, frightening, or medical-emergency-like. No written text, numbers, labels, zhuyin, signs, or watermarks."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L316-G01",
+      "type": "find-character",
+      "sentenceId": "L316-S01",
+      "targetChar": "色",
+      "prompt": "找到「色」。",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        {
+          "id": "L316-G01-A",
+          "text": "色",
+          "correct": true
+        },
+        {
+          "id": "L316-G01-B",
+          "text": "彩",
+          "correct": false
+        },
+        {
+          "id": "L316-G01-C",
+          "text": "收",
+          "correct": false
+        },
+        {
+          "id": "L316-G01-D",
+          "text": "完",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L316-G02",
+      "type": "teach-character",
+      "sentenceId": "L316-S04",
+      "targetChar": "色",
+      "targetCharIndex": 7,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        7
+      ],
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L316/audio/L316-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L316/audio/L316-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L316-G03",
+      "type": "missing-character",
+      "sentenceId": "L316-S02",
+      "targetChar": "收",
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        {
+          "id": "L316-G03-A",
+          "text": "收",
+          "correct": true
+        },
+        {
+          "id": "L316-G03-B",
+          "text": "色",
+          "correct": false
+        },
+        {
+          "id": "L316-G03-C",
+          "text": "完",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L316-G04",
+      "type": "partial-order",
+      "sentenceId": "L316-S03",
+      "targetChar": "彩",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "id": "L316-G04-A",
+          "text": "上",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L316-G04-B",
+          "text": "完",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L316-G04-C",
+          "text": "彩",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L316-G04-D",
+          "text": "帶",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "L316-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L316-S05",
+      "targetChar": "色",
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L316-G05-A",
+          "text": "媽媽臉色發白，要休息。",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L316/audio/L316-S05.m4a"
+        },
+        {
+          "id": "L316-G05-B",
+          "text": "媽媽臉色發紅，要休息。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L316/audio/L316-G05-wrong-one.m4a"
+        },
+        {
+          "id": "L316-G05-C",
+          "text": "媽媽臉色發黑，要休息。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L316/audio/L316-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
