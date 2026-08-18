@@ -69,7 +69,7 @@ For each review pair:
 6. Confirm every target new character in the 30-lesson coverage range appears at least once across the two review modules.
 7. Confirm `spokenText` equals `text` with punctuation removed, without adding or removing Han characters.
 8. Confirm every sentence with `displayLines` satisfies `displayLines.join("") === text`, including punctuation such as `，`, `。`, `？`, and `！`. If punctuation is missing from `displayLines`, the packet is FAIL and must return to Review Migration for revision.
-9. Confirm every individual `displayLines` line contains at most 5 visible characters when zhuyin is visible, including punctuation and any other learner-facing visible symbol. If any line has more than 5 visible characters, the packet is FAIL and must return to Review Migration for revision. Do not ask Production to discover or fix this after asset generation.
+9. Confirm every individual `displayLines` line contains at most 6 visible characters when zhuyin is visible, including punctuation and any other learner-facing visible symbol. If any line has more than 6 visible characters, the packet is FAIL and must return to Review Migration for revision. Do not ask Production to discover or fix this after asset generation.
 10. Confirm every `displayLines` break follows functional phrase boundaries. Do not split a natural word or phrase, such as `彩色筆`, merely to satisfy the length gate. Awkward splits such as `用完彩色` / `筆，` are FAIL and must return to Review Migration for revision.
 11. Confirm `focusChar` appears in its sentence.
 12. Confirm sentence Han counts are normally 4-12.

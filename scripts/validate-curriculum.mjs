@@ -57,9 +57,9 @@ function validateSentenceContent({ unitLabel, sentence, currentAllowed }) {
       errors.push(`${sentence.id}: displayLines must join back to text.`);
     } else {
       for (const line of sentence.displayLines) {
-        if (displayLineVisibleChars(line) > 5) {
+        if (displayLineVisibleChars(line) > 6) {
           errors.push(
-            `${sentence.id}: displayLines line "${line}" is too long for phone layout; use at most 5 visible characters including punctuation.`,
+            `${sentence.id}: displayLines line "${line}" is too long for phone layout; use at most 6 visible characters including punctuation.`,
           );
         }
       }

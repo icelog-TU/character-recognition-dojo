@@ -293,16 +293,16 @@ Rules:
 
 - Lines must join exactly back to `text`.
 - Lines must preserve punctuation. `spokenText` removes punctuation; `displayLines` does not.
-- Each line must stay at or under 5 visible characters when zhuyin is visible. Count Han characters, punctuation, and any other learner-facing visible full-width character. Do not use a Han-only count for display-line layout.
+- Each line must stay at or under 6 visible characters when zhuyin is visible. Count Han characters, punctuation, and any other learner-facing visible full-width character. Do not use a Han-only count for display-line layout.
 - `displayLines` affects only visual line breaks; audio and timings still use `text` and `spokenText`.
-- If a line is longer than 5 visible characters, split only `displayLines` and keep `text` plus `spokenText` unchanged. A line like `這本書太長，` is 6 visible characters and must be split.
+- If a line is longer than 6 visible characters, split only `displayLines` and keep `text` plus `spokenText` unchanged. A line like `這本書太長了，` is 7 visible characters and must be split.
 
 Functional break gate:
 
-- Passing the 5-visible-character layout gate is not enough. Line breaks must support how the child reads the sentence.
+- Passing the 6-visible-character layout gate is not enough. Line breaks must support how the child reads the sentence.
 - Prefer breaks at meaningful functional phrase boundaries: time/frequency phrase, subject phrase, object phrase, action phrase, result phrase, reason/condition phrase, short predicate phrase, or natural punctuation boundary.
 - Do not split a natural word or phrase only because the character count fits. For example, do not split `彩色筆` as `彩色` / `筆` unless there is no better option.
-- If a natural phrase is longer than 5 visible characters, split at the least harmful internal boundary while preserving meaning and reading rhythm.
+- If a natural phrase is longer than 6 visible characters, split at the least harmful internal boundary while preserving meaning and reading rhythm.
 - After every teacher-approved sentence change, Editor must show the updated `displayLines`; do not leave functional line breaking for Production to invent.
 
 Examples:
@@ -382,7 +382,7 @@ Before sending sentences to image/audio production, verify:
 - the sentence set is not repetitive
 - `spokenText` matches `text` without punctuation
 - every `displayLines` array joins exactly back to `text`, including punctuation
-- every `displayLines` line is at most 5 visible characters, including punctuation, when zhuyin is visible
+- every `displayLines` line is at most 6 visible characters, including punctuation, when zhuyin is visible
 - every `displayLines` break follows functional phrase boundaries; no natural word or phrase is split awkwardly just to satisfy the length gate
 - every `focusChar` appears in its sentence
 - every sentence with people has explicit role identities in `imageNotes` following `docs/LESSON_VISUAL_CAST_SOP.md`
