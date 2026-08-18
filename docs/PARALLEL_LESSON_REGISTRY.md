@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L316 | 色 / normal lesson | claimed | Production C | codex/l316-complete-package / 010dd643 | L315 彩 | ["彩"] | curriculum-workflow/lesson-requests/L316.json; curriculum-workflow/generated/L316-generation-packet.md; curriculum-workflow/drafts/L316-draft.json | public/assets/lessons/L316/images/, public/assets/lessons/L316/audio/, curriculum-workflow/audio-inbox/L316/ | Teacher-approved Editor handoff; build asset-complete package; Release owns ordered integration. |
 
 ## Status Values
 
