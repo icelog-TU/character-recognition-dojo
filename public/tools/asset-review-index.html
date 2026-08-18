@@ -328,6 +328,7 @@
           <button type="button" data-filter="future">尚未製作</button>
           <button type="button" data-filter="recent">最新 60 課</button>
           <button id="copyAllRepairCommandButton" type="button" disabled>複製全部 repair 查詢</button>
+          <button id="manualSyncButton" type="button" disabled>同步本機到雲端</button>
           <button id="signInButton" type="button">Google 登入同步</button>
           <button id="signOutButton" type="button" disabled>登出</button>
         </div>
@@ -556,15 +557,15 @@
         });
       }
 
-      async function syncLocalReviewDocsToCloud() {
+      async function syncLocalReviewDocsToCloud({ force = false } = {}) {
         if (!state.user || !state.sha || !state.builtById.size) return 0;
         const writes = [];
         state.builtById.forEach((unit) => {
           const localReview = localReviewForUnit(unit);
           if (!localReview) return;
           const cloudReview = state.cloudReviewByUnit.get(unit.id);
-          if (cloudReview && !localReview.localUpdatedAtMs) return;
-          if (cloudReview && reviewUpdatedAtMs(cloudReview) >= localReview.localUpdatedAtMs) return;
+          if (!force && cloudReview && !localReview.localUpdatedAtMs) return;
+          if (!force && cloudReview && reviewUpdatedAtMs(cloudReview) >= localReview.localUpdatedAtMs) return;
           const payload = {
             ...localReview,
             commitSha: state.sha,
@@ -754,6 +755,7 @@
         $("futureCount").textContent = String(futureUnits.length);
         $("versionLine").textContent = state.sha ? `版本：${state.sha}` : "版本：-";
         $("copyAllRepairCommandButton").disabled = !state.sha;
+        $("manualSyncButton").disabled = !state.user || !state.sha || !state.builtById.size;
 
         $("unitGrid").innerHTML = filteredUnits()
           .map((unit) => {
@@ -801,21 +803,8 @@
           await loadCurriculum();
           await loadReviewDocs();
           loadLocalReviewDocs();
-          let syncedCount = 0;
-          let syncError = "";
-          try {
-            syncedCount = await syncLocalReviewDocsToCloud();
-            if (syncedCount) {
-              await loadReviewDocs();
-              loadLocalReviewDocs();
-            }
-          } catch (error) {
-            syncError = error.message;
-          }
           render();
-          setStatus(`已載入 L001-L600 與 R001-R076 進度盤，已出貨 ${state.builtById.size} 個單元，commit ${state.sha.slice(0, 12)}。`, "ok");
-          if (syncedCount) setStatus(`已載入總覽，並補同步 ${syncedCount} 筆本機審查狀態到雲端。`, "ok");
-          else if (syncError) setStatus(`已載入總覽；本機審查狀態已顯示，但雲端補同步失敗：${syncError}`, "warn");
+          setStatus(`已載入 L001-L600 與 R001-R076 進度盤，已出貨 ${state.builtById.size} 個單元，commit ${state.sha.slice(0, 12)}。若這台是最新狀態，請按「同步本機到雲端」。`, "ok");
         } catch (error) {
           state.units = [];
           render();
@@ -840,6 +829,28 @@
       $("copyAllRepairCommandButton").addEventListener("click", () => {
         navigator.clipboard.writeText(`npm run asset:review-status -- --list --ref ${state.ref}`);
       });
+      $("manualSyncButton").addEventListener("click", async () => {
+        if (!state.user) {
+          setStatus("請先登入 Google，才能同步本機狀態到雲端。", "warn");
+          return;
+        }
+        if (!state.sha || !state.builtById.size) {
+          setStatus("請先載入總覽，再同步本機狀態到雲端。", "warn");
+          return;
+        }
+        $("manualSyncButton").disabled = true;
+        try {
+          const syncedCount = await syncLocalReviewDocsToCloud({ force: true });
+          await loadReviewDocs();
+          loadLocalReviewDocs();
+          render();
+          setStatus(`已手動同步 ${syncedCount} 筆本機審查狀態到雲端。`, "ok");
+        } catch (error) {
+          setStatus(`手動同步失敗：${error.message}`, "bad");
+        } finally {
+          $("manualSyncButton").disabled = !state.user || !state.sha || !state.builtById.size;
+        }
+      });
       $("signInButton").addEventListener("click", async () => {
         try {
           await signInWithPopup(auth, new GoogleAuthProvider());
@@ -853,6 +864,11 @@
         state.user = user;
         $("signInButton").disabled = Boolean(user);
         $("signOutButton").disabled = !user;
+        render();
+        if (user && state.builtById.size) {
+          setStatus("已登入 Google。若這台是最新狀態，請按「同步本機到雲端」。", "ok");
+        }
+        if (!state.enableAutomaticOverviewUpload) return;
         if (!user || !state.builtById.size) return;
         try {
           const syncedCount = await syncLocalReviewDocsToCloud();

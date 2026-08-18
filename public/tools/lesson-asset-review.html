@@ -372,6 +372,7 @@
         <div class="button-row">
           <button id="signInButton" type="button">Google 登入同步</button>
           <button id="signOutButton" type="button" disabled>登出</button>
+          <button id="manualSyncButton" type="button" disabled>同步到雲端</button>
           <button id="copyFrozenLinkButton" type="button" disabled>複製固定版本連結</button>
           <button id="copyRepairCommandButton" type="button" disabled>複製修復查詢指令</button>
           <button id="copySummaryButton" type="button" disabled>複製摘要</button>
@@ -380,6 +381,9 @@
           <input class="review-complete-input" type="checkbox" disabled />
           本版本我已看完，除了下面標記項目外沒有其他問題
         </label>
+        <div class="button-row" style="margin-top: 8px">
+          <button id="topManualSyncButton" type="button" disabled>同步到雲端</button>
+        </div>
         <p id="statusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
         <p id="cloudLine" class="muted" style="margin-top: 6px">可讀取雲端審核狀態；登入 Google 後才會跨裝置儲存修改。</p>
       </section>
@@ -436,6 +440,9 @@
           <input class="review-complete-input" type="checkbox" disabled />
           本版本我已看完，除了上面標記項目外沒有其他問題
         </label>
+        <div class="button-row" style="margin-top: 8px">
+          <button id="bottomManualSyncButton" type="button" disabled>同步到雲端</button>
+        </div>
       </section>
 
       <section class="panel lesson-nav">
@@ -1058,6 +1065,10 @@
         $("copyRepairCommandButton").disabled = !state.sha || state.placeholderUnit;
         $("copySummaryButton").disabled = !state.sha || state.placeholderUnit;
         $("copySummaryInlineButton").disabled = !state.sha || state.placeholderUnit;
+        const manualSyncDisabled = !state.user || !state.sha || state.placeholderUnit;
+        ["manualSyncButton", "topManualSyncButton", "bottomManualSyncButton"].forEach((id) => {
+          $(id).disabled = manualSyncDisabled;
+        });
         updateLessonNav();
 
         const staleItems = staleRepairItems();
@@ -1162,6 +1173,7 @@
 
       async function saveCloud() {
         if (!state.user || !state.sha) return;
+        if (!state.localUpdatedAtMs) state.localUpdatedAtMs = Date.now();
         const items = allRepairItems();
         const repairItems = {};
         items.forEach((item) => {
@@ -1180,6 +1192,7 @@
           repairCount: repairCount(),
           reviewComplete: state.reviewComplete === true,
           repairItems,
+          localUpdatedAtMs: state.localUpdatedAtMs,
           updatedByUid: state.user.uid,
           updatedByEmail: state.user.email || "",
           updatedByName: state.user.displayName || "",
@@ -1192,6 +1205,23 @@
           setCloud(`Firestore 同步失敗：${error.message}`, "bad");
         }
         state.pendingCloudSave = false;
+      }
+
+      async function forceSyncCloud() {
+        if (!state.user) {
+          setCloud("請先登入 Google，才能同步到雲端。", "warn");
+          return;
+        }
+        if (!state.sha || state.placeholderUnit) {
+          setCloud("請先載入正式課程，再同步到雲端。", "warn");
+          return;
+        }
+        window.clearTimeout(state.saveTimer);
+        state.pendingCloudSave = true;
+        state.localUpdatedAtMs = Date.now();
+        saveLocalState();
+        await saveCloud();
+        render();
       }
 
       async function attachCloudReview() {
@@ -1235,6 +1265,12 @@
       }
 
       function mergeCloud(data) {
+        const cloudMs = reviewUpdatedAtMs(data);
+        if (state.localUpdatedAtMs && cloudMs && state.localUpdatedAtMs > cloudMs && !state.pendingCloudSave) {
+          state.cloudRepairItems = data.repairItems || {};
+          setCloud("本機審查狀態比雲端新；若這台是正確版本，請按「同步到雲端」。", "warn");
+          return;
+        }
         state.cloudRepairItems = data.repairItems || {};
         const flags = {};
         Object.entries(data.repairItems || {}).forEach(([key, value]) => {
@@ -1249,12 +1285,21 @@
         });
         state.flags = flags;
         if (!state.reviewCompleteLocallyEdited) state.reviewComplete = data.reviewComplete === true;
+        state.localUpdatedAtMs = reviewUpdatedAtMs(data);
         saveLocalState();
         if (document.activeElement?.matches("input[data-note]")) {
           updateSummaryOnly();
           return;
         }
         render();
+      }
+
+      function reviewUpdatedAtMs(review) {
+        if (!review) return 0;
+        if (typeof review.updatedAt?.toMillis === "function") return review.updatedAt.toMillis();
+        if (typeof review.localUpdatedAtMs === "number") return review.localUpdatedAtMs;
+        if (typeof review.updatedAtMs === "number") return review.updatedAtMs;
+        return 0;
       }
 
       async function load() {
@@ -1337,6 +1382,9 @@
       $("copyRepairCommandButton").addEventListener("click", () => navigator.clipboard.writeText(repairCommand()));
       $("copySummaryButton").addEventListener("click", copySummary);
       $("copySummaryInlineButton").addEventListener("click", copySummary);
+      $("manualSyncButton").addEventListener("click", forceSyncCloud);
+      $("topManualSyncButton").addEventListener("click", forceSyncCloud);
+      $("bottomManualSyncButton").addEventListener("click", forceSyncCloud);
       $("overviewButton").addEventListener("click", () => {
         void goToOverview();
       });
@@ -1363,7 +1411,6 @@
         if (user) {
           setCloud(`已登入：${user.email || user.displayName || user.uid}`);
           await attachCloudReview();
-          await saveCloud();
         } else {
           setCloud("未登入 Google：可以讀取雲端審核狀態；新的勾選/備註只存在本機。");
         }
