@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L317 | 粉 / normal lesson | request-ready | Production D | codex/l317-complete-package / ce9a3bcd | None | None | curriculum-workflow/lesson-requests/L317.json, curriculum-workflow/generated/L317-generation-packet.md | public/assets/lessons/L317/images/, public/assets/lessons/L317/audio/ | request, packet, and draft started; L316 already merged on latest origin/main |
+| L317 | 粉 / normal lesson | merge-ready | Production D | codex/l317-complete-package / final pushed tip | None | None | curriculum-workflow/lesson-requests/L317.json, curriculum-workflow/generated/L317-generation-packet.md | public/assets/lessons/L317/images/, public/assets/lessons/L317/audio/ | asset-complete-package; L316 already merged; Release owns production JSON/planner/ledger integration |
 
 ## Status Values
 
