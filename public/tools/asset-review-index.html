@@ -328,7 +328,8 @@
           <button type="button" data-filter="future">尚未製作</button>
           <button type="button" data-filter="recent">最新 60 課</button>
           <button id="copyAllRepairCommandButton" type="button" disabled>複製全部 repair 查詢</button>
-          <button id="manualSyncButton" type="button" disabled>同步本機到雲端</button>
+          <button id="manualSyncButton" type="button" disabled title="把這台裝置目前的總覽審核狀態寫到雲端">⇧ 同步到雲端</button>
+          <button id="cloudDownloadButton" type="button" disabled title="用雲端總覽審核狀態覆蓋這台裝置">⇩ 從雲端下載</button>
           <button id="signInButton" type="button">Google 登入同步</button>
           <button id="signOutButton" type="button" disabled>登出</button>
         </div>
@@ -557,6 +558,32 @@
         });
       }
 
+      function writeCloudReviewToLocal(unit, review) {
+        const updatedAtMs = reviewUpdatedAtMs(review) || Date.now();
+        localStorage.setItem(
+          localStorageKey(unit),
+          JSON.stringify({
+            flags: review.repairItems || {},
+            reviewComplete: review.reviewComplete === true,
+            updatedAtMs,
+          }),
+        );
+        state.reviewByUnit.set(unit.id, review);
+      }
+
+      async function downloadCloudReviewDocsToLocal() {
+        if (!state.user || !state.sha || !state.builtById.size) return 0;
+        await loadReviewDocs();
+        let count = 0;
+        state.cloudReviewByUnit.forEach((review, unitId) => {
+          const unit = state.builtById.get(unitId);
+          if (!unit) return;
+          writeCloudReviewToLocal(unit, review);
+          count += 1;
+        });
+        return count;
+      }
+
       async function syncLocalReviewDocsToCloud({ force = false } = {}) {
         if (!state.user || !state.sha || !state.builtById.size) return 0;
         const writes = [];
@@ -756,6 +783,7 @@
         $("versionLine").textContent = state.sha ? `版本：${state.sha}` : "版本：-";
         $("copyAllRepairCommandButton").disabled = !state.sha;
         $("manualSyncButton").disabled = !state.user || !state.sha || !state.builtById.size;
+        $("cloudDownloadButton").disabled = !state.user || !state.sha || !state.builtById.size;
 
         $("unitGrid").innerHTML = filteredUnits()
           .map((unit) => {
@@ -849,6 +877,27 @@
           setStatus(`手動同步失敗：${error.message}`, "bad");
         } finally {
           $("manualSyncButton").disabled = !state.user || !state.sha || !state.builtById.size;
+        }
+      });
+      $("cloudDownloadButton").addEventListener("click", async () => {
+        if (!state.user) {
+          setStatus("請先登入 Google，才能從雲端下載。", "warn");
+          return;
+        }
+        if (!state.sha || !state.builtById.size) {
+          setStatus("請先載入總覽，再從雲端下載。", "warn");
+          return;
+        }
+        $("cloudDownloadButton").disabled = true;
+        try {
+          const downloadedCount = await downloadCloudReviewDocsToLocal();
+          loadLocalReviewDocs();
+          render();
+          setStatus(`已從雲端下載 ${downloadedCount} 筆審查狀態到這台裝置。`, "ok");
+        } catch (error) {
+          setStatus(`從雲端下載失敗：${error.message}`, "bad");
+        } finally {
+          $("cloudDownloadButton").disabled = !state.user || !state.sha || !state.builtById.size;
         }
       });
       $("signInButton").addEventListener("click", async () => {

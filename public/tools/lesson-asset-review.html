@@ -416,7 +416,8 @@
         <div class="button-row">
           <button id="signInButton" type="button">Google 登入同步</button>
           <button id="signOutButton" type="button" disabled>登出</button>
-          <button id="manualSyncButton" type="button" disabled>同步到雲端</button>
+          <button id="manualSyncButton" type="button" disabled title="把這台裝置目前的審核狀態寫到雲端">⇧ 同步到雲端</button>
+          <button id="cloudDownloadButton" type="button" disabled title="用雲端審核狀態覆蓋這台裝置">⇩ 從雲端下載</button>
           <button id="copyFrozenLinkButton" type="button" disabled>複製固定版本連結</button>
           <button id="copyRepairCommandButton" type="button" disabled>複製修復查詢指令</button>
           <button id="copySummaryButton" type="button" disabled>複製摘要</button>
@@ -426,7 +427,8 @@
           本版本我已看完，除了下面標記項目外沒有其他問題
         </label>
         <div class="button-row" style="margin-top: 8px">
-          <button id="topManualSyncButton" type="button" disabled>同步到雲端</button>
+          <button id="topManualSyncButton" type="button" disabled title="把這台裝置目前的審核狀態寫到雲端">⇧ 同步到雲端</button>
+          <button id="topCloudDownloadButton" type="button" disabled title="用雲端審核狀態覆蓋這台裝置">⇩ 從雲端下載</button>
         </div>
         <p id="statusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
         <p id="cloudLine" class="muted" style="margin-top: 6px">可讀取雲端審核狀態；登入 Google 後才會跨裝置儲存修改。</p>
@@ -485,7 +487,8 @@
           本版本我已看完，除了上面標記項目外沒有其他問題
         </label>
         <div class="button-row" style="margin-top: 8px">
-          <button id="bottomManualSyncButton" type="button" disabled>同步到雲端</button>
+          <button id="bottomManualSyncButton" type="button" disabled title="把這台裝置目前的審核狀態寫到雲端">⇧ 同步到雲端</button>
+          <button id="bottomCloudDownloadButton" type="button" disabled title="用雲端審核狀態覆蓋這台裝置">⇩ 從雲端下載</button>
         </div>
       </section>
 
@@ -1154,7 +1157,14 @@
         $("copySummaryButton").disabled = !state.sha || state.placeholderUnit;
         $("copySummaryInlineButton").disabled = !state.sha || state.placeholderUnit;
         const manualSyncDisabled = !state.user || !state.sha || state.placeholderUnit;
-        ["manualSyncButton", "topManualSyncButton", "bottomManualSyncButton"].forEach((id) => {
+        [
+          "manualSyncButton",
+          "topManualSyncButton",
+          "bottomManualSyncButton",
+          "cloudDownloadButton",
+          "topCloudDownloadButton",
+          "bottomCloudDownloadButton",
+        ].forEach((id) => {
           $(id).disabled = manualSyncDisabled;
         });
         updateLessonNav();
@@ -1314,6 +1324,31 @@
         render();
       }
 
+      async function forceDownloadCloud() {
+        if (!state.user) {
+          setCloud("請先登入 Google，才能從雲端下載。", "warn");
+          return;
+        }
+        if (!state.sha || state.placeholderUnit) {
+          setCloud("請先載入正式課程，再從雲端下載。", "warn");
+          return;
+        }
+        window.clearTimeout(state.saveTimer);
+        state.pendingCloudSave = false;
+        const ref = doc(db, "assetReviews", reviewId());
+        try {
+          const snapshot = await getDoc(ref);
+          if (!snapshot.exists() || !reviewMatchesCurrentContent(snapshot.data())) {
+            setCloud("雲端沒有這一課目前版本的審核紀錄。", "warn");
+            return;
+          }
+          mergeCloud(snapshot.data(), { force: true });
+          setCloud(`已從雲端下載：${snapshot.data().repairCount || 0} 個需要修。`, "ok");
+        } catch (error) {
+          setCloud(`Firestore 下載失敗：${error.message}`, "bad");
+        }
+      }
+
       async function attachCloudReview() {
         if (state.unsubscribeReview) state.unsubscribeReview();
         state.unsubscribeReview = null;
@@ -1354,9 +1389,10 @@
         return !/^R\d{3}$/.test(state.unit);
       }
 
-      function mergeCloud(data) {
+      function mergeCloud(data, options = {}) {
+        const force = options.force === true;
         const cloudMs = reviewUpdatedAtMs(data);
-        if (state.localUpdatedAtMs && cloudMs && state.localUpdatedAtMs > cloudMs && !state.pendingCloudSave) {
+        if (!force && state.localUpdatedAtMs && cloudMs && state.localUpdatedAtMs > cloudMs && !state.pendingCloudSave) {
           state.cloudRepairItems = data.repairItems || {};
           setCloud("本機審查狀態比雲端新；若這台是正確版本，請按「同步到雲端」。", "warn");
           return;
@@ -1364,7 +1400,7 @@
         state.cloudRepairItems = data.repairItems || {};
         const flags = {};
         Object.entries(data.repairItems || {}).forEach(([key, value]) => {
-          if (state.locallyEditedKeys.has(key)) {
+          if (!force && state.locallyEditedKeys.has(key)) {
             flags[key] = state.flags[key] || defaultFlag();
             return;
           }
@@ -1374,7 +1410,11 @@
           };
         });
         state.flags = flags;
-        if (!state.reviewCompleteLocallyEdited) state.reviewComplete = data.reviewComplete === true;
+        if (force || !state.reviewCompleteLocallyEdited) state.reviewComplete = data.reviewComplete === true;
+        if (force) {
+          state.locallyEditedKeys.clear();
+          state.reviewCompleteLocallyEdited = false;
+        }
         state.localUpdatedAtMs = reviewUpdatedAtMs(data);
         saveLocalState();
         if (document.activeElement?.matches("input[data-note]")) {
@@ -1475,6 +1515,9 @@
       $("manualSyncButton").addEventListener("click", forceSyncCloud);
       $("topManualSyncButton").addEventListener("click", forceSyncCloud);
       $("bottomManualSyncButton").addEventListener("click", forceSyncCloud);
+      $("cloudDownloadButton").addEventListener("click", forceDownloadCloud);
+      $("topCloudDownloadButton").addEventListener("click", forceDownloadCloud);
+      $("bottomCloudDownloadButton").addEventListener("click", forceDownloadCloud);
       $("overviewButton").addEventListener("click", () => {
         void goToOverview();
       });
