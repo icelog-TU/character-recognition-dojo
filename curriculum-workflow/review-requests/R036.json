@@ -1,0 +1,223 @@
+{
+  "id": "R036",
+  "kind": "review",
+  "unitKind": "review module",
+  "reviewNumber": 36,
+  "title": "複習三十六",
+  "pairMate": "R035",
+  "afterLessonOrder": 300,
+  "targetLessonRange": {
+    "startOrder": 271,
+    "endOrder": 300
+  },
+  "allowedCharacterCeiling": "L300",
+  "requiredCoverageChars": [
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬"
+  ],
+  "requiredRounds": 5,
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "allowedCharacterCeiling": "L300",
+    "reviewMigrationReplacementPackage": false,
+    "requiredCoverageChars": [
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口",
+      "傷",
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬"
+    ],
+    "provisionalLearnedChars": []
+  },
+  "newChars": [],
+  "zhuyin": {},
+  "charAudio": {},
+  "reviewMigrationReplacementPackage": false,
+  "teacherNotes": "Review migration audit PASS. Production B builds an asset-complete package for R035/R036 after L300 without modifying shared release files.",
+  "approvedSentences": [
+    {
+      "id": "R036-S01",
+      "text": "鞋子破了一個洞。",
+      "spokenText": "鞋子破了一個洞",
+      "focusChar": "破",
+      "displayLines": [
+        "鞋子破了",
+        "一個洞。"
+      ],
+      "imageNotes": "Show one shoe with one clear hole in it. No people are required. The hole should be visible and not confused with decoration."
+    },
+    {
+      "id": "R036-S02",
+      "text": "手受傷破皮，我忍耐不哭。",
+      "spokenText": "手受傷破皮我忍耐不哭",
+      "focusChar": "忍",
+      "displayLines": [
+        "手受傷破皮，",
+        "我忍耐不哭。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity for 我. Her hand has a small scrape or broken skin, and she is trying to endure it without crying. Do not show blood, fear, or a frightening injury."
+    },
+    {
+      "id": "R036-S03",
+      "text": "我不敢爬樹，怕被媽媽罵。",
+      "spokenText": "我不敢爬樹怕被媽媽罵",
+      "focusChar": "敢",
+      "displayLines": [
+        "我不敢爬樹，",
+        "怕被媽媽罵。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity for 我 and the recurring protagonist mother identity for 媽媽 if mother appears. Other generic children are already up in the tree and invite the protagonist girl to come up. The protagonist girl stands under the tree shaking her head, not daring to climb because she is afraid her mother will scold her. Keep the tree-climbing scene safe and not dangerous."
+    },
+    {
+      "id": "R036-S04",
+      "text": "小孩被狗叫聲嚇哭了。",
+      "spokenText": "小孩被狗叫聲嚇哭了",
+      "focusChar": "嚇",
+      "displayLines": [
+        "小孩被狗",
+        "叫聲嚇哭了。"
+      ],
+      "imageNotes": "Show a small generic child, younger/smaller than the usual preschool children, being startled by a dog's sudden bark and crying. The dog should not look vicious, should not chase the child, and the scene should not feel dangerous."
+    },
+    {
+      "id": "R036-S05",
+      "text": "紅燈過馬路，當然不對。",
+      "spokenText": "紅燈過馬路當然不對",
+      "focusChar": "對",
+      "displayLines": [
+        "紅燈過馬路，",
+        "當然不對。"
+      ],
+      "imageNotes": "Show a red traffic light and a person about to cross or crossing the road at the wrong time. The image must clearly communicate that crossing on red is not correct, but do not show a crash, injury, or frightening danger. Avoid readable text or signage."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R036-G01",
+      "type": "find-character",
+      "sentenceId": "R036-S01",
+      "targetChar": "破",
+      "options": [
+        "破",
+        "洞",
+        "鞋",
+        "子"
+      ]
+    },
+    {
+      "id": "R036-G02",
+      "type": "teach-character",
+      "sentenceId": "R036-S03",
+      "targetChar": "敢",
+      "targetCharIndex": 2,
+      "prefixText": "我不",
+      "suffixText": "爬樹怕被媽媽罵"
+    },
+    {
+      "id": "R036-G03",
+      "type": "missing-character",
+      "sentenceId": "R036-S05",
+      "targetChar": "對",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        "對",
+        "當",
+        "然"
+      ]
+    },
+    {
+      "id": "R036-G04",
+      "type": "partial-order",
+      "sentenceId": "R036-S02",
+      "targetChar": "忍",
+      "missingIndexes": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "missingChars": [
+        "傷",
+        "破",
+        "忍",
+        "耐"
+      ],
+      "options": [
+        "傷",
+        "破",
+        "忍",
+        "耐"
+      ],
+      "correctOrder": [
+        "傷",
+        "破",
+        "忍",
+        "耐"
+      ]
+    },
+    {
+      "id": "R036-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R036-S04",
+      "targetChar": "嚇",
+      "correctText": "小孩被狗叫聲嚇哭了。",
+      "wrongTextOne": "小孩被狗叫聲嚇到了。",
+      "wrongTextTwo": "小孩被車叫聲嚇哭了。"
+    }
+  ]
+}
