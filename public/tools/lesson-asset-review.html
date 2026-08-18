@@ -496,6 +496,7 @@
         cloudRepairItems: {},
         reviewComplete: false,
         reviewCompleteLocallyEdited: false,
+        localUpdatedAtMs: 0,
         placeholderUnit: false,
         user: null,
         unsubscribeReview: null,
@@ -972,9 +973,11 @@
           const local = JSON.parse(localStorage.getItem(storageKey()) || "{}") || {};
           state.flags = local.flags || {};
           state.reviewComplete = local.reviewComplete === true;
+          state.localUpdatedAtMs = Number(local.updatedAtMs) || 0;
         } catch {
           state.flags = {};
           state.reviewComplete = false;
+          state.localUpdatedAtMs = 0;
         }
       }
 
@@ -984,6 +987,7 @@
           JSON.stringify({
             flags: state.flags,
             reviewComplete: state.reviewComplete,
+            updatedAtMs: state.localUpdatedAtMs,
           }),
         );
       }
@@ -1143,12 +1147,14 @@
       }
 
       async function saveCloudSoon() {
+        state.localUpdatedAtMs = Date.now();
         saveLocalState();
         render();
         queueCloudSave();
       }
 
       function saveCloudQuietly() {
+        state.localUpdatedAtMs = Date.now();
         saveLocalState();
         updateSummaryOnly();
         queueCloudSave();

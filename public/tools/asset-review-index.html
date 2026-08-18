@@ -393,6 +393,7 @@
         units: [],
         builtById: new Map(),
         reviewByUnit: new Map(),
+        cloudReviewByUnit: new Map(),
         user: null,
         filter: params.get("filter") || "all",
         search: "",
@@ -517,6 +518,7 @@
         try {
           const local = JSON.parse(localStorage.getItem(localStorageKey(unit)) || "{}") || {};
           if (!local.flags && local.reviewComplete !== true) return null;
+          const localUpdatedAtMs = Number(local.updatedAtMs) || 0;
           const repairItems = local.flags || {};
           const repairCount = Object.values(repairItems).filter((item) => item?.needsRepair === true).length;
           return {
@@ -525,6 +527,7 @@
             unit: unit.id,
             ref: state.ref,
             contentSignature: unit.contentSignature,
+            localUpdatedAtMs,
             repairCount,
             reviewComplete: local.reviewComplete === true,
             repairItems,
@@ -545,7 +548,11 @@
       function loadLocalReviewDocs() {
         state.builtById.forEach((unit) => {
           const localReview = localReviewForUnit(unit);
-          if (localReview) state.reviewByUnit.set(unit.id, localReview);
+          if (!localReview) return;
+          const cloudReview = state.cloudReviewByUnit.get(unit.id);
+          if (cloudReview && !localReview.localUpdatedAtMs) return;
+          if (cloudReview && reviewUpdatedAtMs(cloudReview) >= localReview.localUpdatedAtMs) return;
+          state.reviewByUnit.set(unit.id, localReview);
         });
       }
 
@@ -555,6 +562,9 @@
         state.builtById.forEach((unit) => {
           const localReview = localReviewForUnit(unit);
           if (!localReview) return;
+          const cloudReview = state.cloudReviewByUnit.get(unit.id);
+          if (cloudReview && !localReview.localUpdatedAtMs) return;
+          if (cloudReview && reviewUpdatedAtMs(cloudReview) >= localReview.localUpdatedAtMs) return;
           const payload = {
             ...localReview,
             commitSha: state.sha,
@@ -671,6 +681,7 @@
 
       async function loadReviewDocs() {
         state.reviewByUnit = new Map();
+        state.cloudReviewByUnit = new Map();
         try {
           const snapshots = await getDocs(collection(db, "assetReviews"));
           snapshots.forEach((snapshot) => {
@@ -687,11 +698,21 @@
             const previous = state.reviewByUnit.get(data.unit);
             const previousMs = previous?.updatedAt?.toMillis?.() || 0;
             const nextMs = data.updatedAt?.toMillis?.() || 0;
-            if (!previous || nextMs >= previousMs) state.reviewByUnit.set(data.unit, data);
+            if (!previous || nextMs >= previousMs) {
+              state.reviewByUnit.set(data.unit, data);
+              state.cloudReviewByUnit.set(data.unit, data);
+            }
           });
         } catch (error) {
           setStatus(`已載入課程，但 Firestore review 狀態讀取失敗：${error.message}`, "bad");
         }
+      }
+
+      function reviewUpdatedAtMs(review) {
+        if (!review) return 0;
+        if (typeof review.updatedAt?.toMillis === "function") return review.updatedAt.toMillis();
+        if (typeof review.updatedAtMs === "number") return review.updatedAtMs;
+        return 0;
       }
 
       function reviewStatus(unit) {
@@ -784,6 +805,10 @@
           let syncError = "";
           try {
             syncedCount = await syncLocalReviewDocsToCloud();
+            if (syncedCount) {
+              await loadReviewDocs();
+              loadLocalReviewDocs();
+            }
           } catch (error) {
             syncError = error.message;
           }
