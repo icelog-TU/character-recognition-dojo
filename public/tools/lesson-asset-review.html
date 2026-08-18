@@ -490,6 +490,8 @@
           <button id="bottomManualSyncButton" type="button" disabled title="把這台裝置目前的審核狀態寫到雲端">⇧ 同步到雲端</button>
           <button id="bottomCloudDownloadButton" type="button" disabled title="用雲端審核狀態覆蓋這台裝置">⇩ 從雲端下載</button>
         </div>
+        <p id="bottomStatusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
+        <p id="bottomCloudLine" class="muted" style="margin-top: 6px">可讀取雲端審核狀態；登入 Google 後才會跨裝置儲存修改。</p>
       </section>
 
       <section class="panel lesson-nav">
@@ -498,6 +500,7 @@
           <span class="muted">課程審核導覽</span>
         </div>
         <div class="button-row">
+          <button id="backToTopButton" type="button">↑ 回到頂端</button>
           <button id="bottomOverviewButton" type="button">回總覽</button>
           <button id="bottomPrevLessonButton" type="button">上一課</button>
           <button id="bottomNextLessonButton" type="button">下一課</button>
@@ -571,13 +574,17 @@
       $("refInput").value = state.ref;
 
       function setStatus(message, tone = "") {
-        $("statusLine").className = `muted ${tone}`.trim();
-        $("statusLine").textContent = message;
+        ["statusLine", "bottomStatusLine"].forEach((id) => {
+          $(id).className = `muted ${tone}`.trim();
+          $(id).textContent = message;
+        });
       }
 
       function setCloud(message, tone = "") {
-        $("cloudLine").className = `muted ${tone}`.trim();
-        $("cloudLine").textContent = message;
+        ["cloudLine", "bottomCloudLine"].forEach((id) => {
+          $(id).className = `muted ${tone}`.trim();
+          $(id).textContent = message;
+        });
       }
 
       function currentLessonNumber() {
@@ -1532,6 +1539,9 @@
       });
       $("bottomOverviewButton").addEventListener("click", () => {
         void goToOverview();
+      });
+      $("backToTopButton").addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
       $("bottomPrevLessonButton").addEventListener("click", () => {
         void goToLesson(-1);
