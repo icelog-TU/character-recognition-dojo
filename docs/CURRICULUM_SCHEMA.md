@@ -121,6 +121,7 @@ Rules:
 
 - `text` is what appears on screen.
 - `displayLines` is optional. Use it when a sentence needs teacher-approved visual line breaks, such as `["一個", "大大的人"]`. It must contain the same Han characters as `text` in the same order.
+- `zhuyinOverrides` is optional. Use it only when a sentence needs a context-specific reading for a previously learned multi-pronunciation character. Keys are zero-based Han-character indices in `text`, skipping punctuation. For example, if a multi-pronunciation character is the fifth Han character in `text`, use key `"4"`. Do not change the lesson-level `zhuyin` entry just to fix one sentence context.
 - `spokenText` is what the audio says. Use this to omit punctuation from reading.
 - `focusChar` is the preferred target for games.
 - `imagePrompt` is the reviewed prompt for generating or sourcing a picture for this sentence.

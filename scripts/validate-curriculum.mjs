@@ -66,6 +66,30 @@ function validateSentenceContent({ unitLabel, sentence, currentAllowed }) {
     }
   }
 
+  if (sentence.zhuyinOverrides !== undefined) {
+    if (
+      sentence.zhuyinOverrides === null ||
+      Array.isArray(sentence.zhuyinOverrides) ||
+      typeof sentence.zhuyinOverrides !== "object"
+    ) {
+      errors.push(`${sentence.id}: zhuyinOverrides must be an object keyed by Han character index.`);
+    } else {
+      for (const [rawIndex, value] of Object.entries(sentence.zhuyinOverrides)) {
+        if (!/^(0|[1-9]\d*)$/.test(rawIndex)) {
+          errors.push(`${sentence.id}: zhuyinOverrides key ${rawIndex} must be a zero-based Han character index.`);
+          continue;
+        }
+        const index = Number(rawIndex);
+        if (index < 0 || index >= chars.length) {
+          errors.push(`${sentence.id}: zhuyinOverrides index ${rawIndex} is outside Han character count ${chars.length}.`);
+        }
+        if (typeof value !== "string" || value.trim() === "") {
+          errors.push(`${sentence.id}: zhuyinOverrides[${rawIndex}] must be a non-empty zhuyin string.`);
+        }
+      }
+    }
+  }
+
   if (!chars.includes(sentence.focusChar)) {
     errors.push(`${sentence.id}: focusChar ${sentence.focusChar} does not appear in text.`);
   }

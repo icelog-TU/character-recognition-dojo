@@ -6273,7 +6273,7 @@ function answerRevealText(
     return `解答是「${game.targetChar}」。`;
   }
   if (game.type === "teach-character") {
-    const zhuyin = zhuyinMap.get(game.targetChar);
+    const zhuyin = sentenceZhuyin(sentence, zhuyinMap, targetIndex, game.targetChar);
     return zhuyin ? `解答是「${game.targetChar}」，念作${zhuyin}。` : `解答是「${game.targetChar}」。`;
   }
   if (game.type === "missing-character") {
@@ -6358,7 +6358,7 @@ function SentenceGameLine({
               const token = (
                 <>
                   <span className="hanzi">{char}</span>
-                  <Zhuyin value={zhuyinMap.get(char) ?? ""} />
+                  <Zhuyin value={sentenceZhuyin(sentence, zhuyinMap, hanIndex, char)} />
                 </>
               );
               const className = `char-token${foundIndexes.has(hanIndex) ? " found" : ""}${
@@ -6572,7 +6572,7 @@ function SentenceCard({
                   className={`char-token${hanIndex === activeCharIndex ? " active" : ""}`}
                 >
                   <span className="hanzi">{char}</span>
-                  <Zhuyin value={zhuyinMap.get(char) ?? ""} />
+                  <Zhuyin value={sentenceZhuyin(sentence, zhuyinMap, hanIndex, char)} />
                 </span>
               );
             })}
@@ -6581,6 +6581,10 @@ function SentenceCard({
       </div>
     </div>
   );
+}
+
+function sentenceZhuyin(sentence: LessonSentence, zhuyinMap: Map<string, string>, hanIndex: number, char: string) {
+  return sentence.zhuyinOverrides?.[String(hanIndex)] ?? zhuyinMap.get(char) ?? "";
 }
 
 function Zhuyin({ value, size = "normal" }: { value: string; size?: "normal" | "large" }) {

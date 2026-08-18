@@ -43,6 +43,7 @@ export interface LessonSentence {
   id: string;
   text: string;
   displayLines?: string[];
+  zhuyinOverrides?: Record<string, string>;
   spokenText: string;
   focusChar: string;
   imagePrompt: string;
