@@ -7,14 +7,14 @@
 - 新字：色
 - 注音：色=ㄙㄜˋ
 - 目標句數：5
-- 教師備註：Production C complete-package handoff for L316 色. Use approved sentences exactly. Latest origin/main is complete through L314 收; L315 彩 is not merged, so this package depends on L315 and uses 彩 as a provisional learned character. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.
+- 教師備註：Production C complete-package handoff for L316 色. Use approved sentences exactly. Latest origin/main is now rebased onto a commit that includes L315, so L316 depends on L315 but does not require provisional learned characters.
 
 ## 已學字邊界
 
 AI 必須把這份課程序列視為鎖定邊界。
 
 - 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早 晚 海 船 魚 游 泳 池 身 濕 乾 服 褲 換 改 錯 知 認 新 舊 半 只 剩 夠 錢 買 貴 賣 店 場 市 夜 具 工 作 忙 幫 急 腳 步 跳 床 搬 重 沙 張 椅 累 死 睡 倒 病 假 才 剛 裝 養 休 息 久 體 神 精 變 差 緊 卡 住 蓋 橋 座 木 積 堆 洞 破 口 傷 皮 痛 受 忍 耐 敢 當 然 怕 哭 被 嚇 罵 對 爬 蟲 條 泥 土 種 澆 照 顧 忘 每 次 記 完 收
-- 平行備課暫定已學字：彩
+- 平行備課暫定已學字：無
 - 本課新字：色
 - 顯示句子可用漢字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早 晚 海 船 魚 游 泳 池 身 濕 乾 服 褲 換 改 錯 知 認 新 舊 半 只 剩 夠 錢 買 貴 賣 店 場 市 夜 具 工 作 忙 幫 急 腳 步 跳 床 搬 重 沙 張 椅 累 死 睡 倒 病 假 才 剛 裝 養 休 息 久 體 神 精 變 差 緊 卡 住 蓋 橋 座 木 積 堆 洞 破 口 傷 皮 痛 受 忍 耐 敢 當 然 怕 哭 被 嚇 罵 對 爬 蟲 條 泥 土 種 澆 照 顧 忘 每 次 記 完 收 彩 色
 - 禁止：任何未列在上方的漢字。

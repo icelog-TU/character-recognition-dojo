@@ -9,21 +9,17 @@
   },
   "title": "色",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production C complete-package handoff for L316 色. Use approved sentences exactly. Latest origin/main is complete through L314 收; L315 彩 is not merged, so this package depends on L315 and uses 彩 as a provisional learned character. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
+  "teacherNotes": "Production C complete-package handoff for L316. Approved sentences are fixed. The package depends on L315; latest origin/main now includes L315, so no provisional learned characters are required on this rebased package branch. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
   "dependsOnLessons": [
     "L315"
   ],
-  "provisionalLearnedChars": [
-    "彩"
-  ],
+  "provisionalLearnedChars": [],
   "generationConstraints": {
     "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L314 + provisional learned chars [彩] + current new char 色",
     "dependsOnLessons": [
       "L315"
     ],
-    "provisionalLearnedChars": [
-      "彩"
-    ],
+    "provisionalLearnedChars": [],
     "requiredCoverageChars": [
       "色",
       "彩",
