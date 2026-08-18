@@ -2845,6 +2845,12 @@ button.char-token {
   padding: 8px;
 }
 
+.image-placeholder.image-load-error {
+  border-color: #d94735;
+  background: #fff8f6;
+  color: #9f2418;
+}
+
 .picture-sentence-card .sentence-card {
   margin: 0;
   box-shadow: none;

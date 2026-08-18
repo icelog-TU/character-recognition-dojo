@@ -4169,6 +4169,7 @@ function LessonPanel({
               onSpeakEnd={(target) => setSpeakingTarget((current) => (current === target ? null : current))}
               onRoundDone={(doneAfterThisRound) => {
                 setGameDoneCount((count) => Math.min(count + 1, requiredGameRounds));
+                if (doneAfterThisRound && !pictureDone) setPracticeDoneCount(1);
                 if (doneAfterThisRound && !completed) void handleClaimReward(true);
               }}
             />
@@ -4656,6 +4657,7 @@ function PictureSentencePreview({
 }) {
   const [playingSentenceId, setPlayingSentenceId] = useState<string | null>(null);
   const [activeCharIndex, setActiveCharIndex] = useState<number | null>(null);
+  const [imageErrorIds, setImageErrorIds] = useState<Set<string>>(() => new Set());
   const currentSentenceIndex = Math.min(currentIndex, lesson.sentences.length);
   const completedSentenceIdSet = useMemo(() => new Set(completedSentenceIds), [completedSentenceIds]);
   const sentenceButtonRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -4681,6 +4683,12 @@ function PictureSentencePreview({
     };
   }, [currentSentenceIndex, disabled, done, lesson.id, lesson.sentences.length]);
 
+  function completeSentence(sentence: LessonSentence, index: number) {
+    const nextCompleted = Array.from(new Set([...completedSentenceIds, sentence.id]));
+    const nextIndex = Math.max(currentSentenceIndex, Math.min(index + 1, lesson.sentences.length));
+    onProgress(nextIndex, nextCompleted);
+  }
+
   function handleSentenceTap(sentence: LessonSentence, index: number) {
     if (disabled || playingSentenceId) return;
     void playSentence(sentence, {
@@ -4691,13 +4699,12 @@ function PictureSentencePreview({
       onEnded: () => {
         setActiveCharIndex(null);
         setPlayingSentenceId(null);
-        const nextCompleted = Array.from(new Set([...completedSentenceIds, sentence.id]));
-        const nextIndex = Math.max(currentSentenceIndex, Math.min(index + 1, lesson.sentences.length));
-        onProgress(nextIndex, nextCompleted);
+        completeSentence(sentence, index);
       },
       onError: () => {
         setActiveCharIndex(null);
         setPlayingSentenceId(null);
+        completeSentence(sentence, index);
       },
     });
   }
@@ -4729,16 +4736,23 @@ function PictureSentencePreview({
             disabled={disabled || Boolean(playingSentenceId)}
             onClick={() => handleSentenceTap(sentence, index)}
           >
-            {sentence.imageSrc ? (
+            {sentence.imageSrc && !imageErrorIds.has(sentence.id) ? (
               <img
                 src={assetUrl(sentence.imageSrc)}
                 alt=""
                 loading={index <= currentSentenceIndex + 1 ? "eager" : "lazy"}
                 decoding="async"
+                onError={() => {
+                  setImageErrorIds((prev) => {
+                    const next = new Set(prev);
+                    next.add(sentence.id);
+                    return next;
+                  });
+                }}
               />
             ) : (
-              <div className="image-placeholder" aria-label="圖片待製作">
-                <span>圖片快來了</span>
+              <div className={`image-placeholder${sentence.imageSrc ? " image-load-error" : ""}`} aria-label={sentence.imageSrc ? "圖片載入失敗" : "圖片待製作"}>
+                <span>{sentence.imageSrc ? "圖片載入失敗，點這張繼續" : "圖片快來了"}</span>
               </div>
             )}
             <SentenceCard
@@ -5012,6 +5026,7 @@ function playAudioSrc(src: string, options: AudioPlayOptions = {}) {
       if (kind === "error") {
         audio.pause();
         audio.currentTime = 0;
+        audioCache.delete(assetUrl(src));
       }
       stopAudioFrame();
       if (activeAudio === audio) activeAudio = null;
