@@ -16,8 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R027 | review module | claimed | Production B | codex/r027-r028-complete-package / a3888c4d | L240 | None | curriculum-workflow/review-requests/R027.json; curriculum-workflow/generated/R027-generation-packet.md | public/assets/reviews/R027/images/; public/assets/reviews/R027/audio/ | accepted L240 review handoff; starting asset-complete package |
-| R028 | review module | claimed | Production B | codex/r027-r028-complete-package / a3888c4d | L240 | None | curriculum-workflow/review-requests/R028.json; curriculum-workflow/generated/R028-generation-packet.md | public/assets/reviews/R028/images/; public/assets/reviews/R028/audio/ | accepted L240 review handoff; starting asset-complete package |
+| R027 | review module | merge-ready | Production B | codex/r027-r028-complete-package / 8252dde0 | L240 | None | curriculum-workflow/review-requests/R027.json; curriculum-workflow/generated/R027-generation-packet.md | public/assets/reviews/R027/images/; public/assets/reviews/R027/audio/ | asset-complete package; Release owns reviewLessons integration, planner, ledger, registry cleanup, and deployment |
+| R028 | review module | merge-ready | Production B | codex/r027-r028-complete-package / 8252dde0 | L240 | None | curriculum-workflow/review-requests/R028.json; curriculum-workflow/generated/R028-generation-packet.md | public/assets/reviews/R028/images/; public/assets/reviews/R028/audio/ | asset-complete package; Release owns reviewLessons integration, planner, ledger, registry cleanup, and deployment |
 
 ## Status Values
 
