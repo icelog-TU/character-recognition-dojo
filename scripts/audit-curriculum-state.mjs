@@ -12,6 +12,17 @@ function readJson(relativePath) {
   return JSON.parse(readText(relativePath));
 }
 
+function stableStringify(value) {
+  if (Array.isArray(value)) return `[${value.map(stableStringify).join(",")}]`;
+  if (value && typeof value === "object") {
+    return `{${Object.keys(value)
+      .sort()
+      .map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`)
+      .join(",")}}`;
+  }
+  return JSON.stringify(value ?? null);
+}
+
 function lessonNumber(id) {
   const match = /^L(\d{3})$/.exec(id);
   return match ? Number(match[1]) : Number.NaN;
@@ -181,7 +192,9 @@ if (lessons.length === 0) {
     if (
       plannerLessons.length !== lessons.length ||
       plannerLast?.id !== lastId ||
-      plannerReviewLessons.length !== reviewLessons.length
+      plannerReviewLessons.length !== reviewLessons.length ||
+      stableStringify(plannerLessons) !== stableStringify(lessons) ||
+      stableStringify(plannerReviewLessons) !== stableStringify(reviewLessons)
     ) {
       errors.push("public/tools/planner-data.json is stale; run npm run curriculum:export-planner.");
     }

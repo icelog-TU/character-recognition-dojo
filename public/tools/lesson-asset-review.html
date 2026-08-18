@@ -255,6 +255,50 @@
         align-content: start;
       }
 
+      .zhuyin-preview {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0.08em;
+        align-items: flex-end;
+        width: fit-content;
+        max-width: 100%;
+        padding: 8px 10px 6px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfaf7;
+        line-height: 1.1;
+      }
+
+      .zhuyin-preview ruby {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        min-width: 1.35em;
+        margin: 0 0.04em;
+        font-size: 1.35rem;
+        font-weight: 750;
+      }
+
+      .zhuyin-preview rt {
+        display: block;
+        min-height: 1.15em;
+        color: var(--accent);
+        font-size: 0.46em;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .zhuyin-preview .punct {
+        align-self: flex-end;
+        min-width: 0.55em;
+        padding-bottom: 0.08em;
+        font-size: 1.35rem;
+        font-weight: 750;
+      }
+
       .head {
         display: flex;
         flex-wrap: wrap;
@@ -498,6 +542,7 @@
         contentSignature: "",
         sentences: [],
         extraAudio: [],
+        zhuyinMap: new Map(),
         flags: {},
         locallyEditedKeys: new Set(),
         cloudRepairItems: {},
@@ -601,6 +646,46 @@
           .replaceAll("<", "&lt;")
           .replaceAll(">", "&gt;")
           .replaceAll('"', "&quot;");
+      }
+
+      function buildZhuyinMap(lessons, upToOrder) {
+        const map = new Map();
+        lessons.forEach((lesson) => {
+          if (!Number.isFinite(lesson.order) || lesson.order > upToOrder) return;
+          (lesson.newChars || []).forEach((char) => {
+            map.set(char, lesson.zhuyin?.[char] || "");
+          });
+        });
+        return map;
+      }
+
+      function unitZhuyinBoundary(unit, lessons) {
+        if (Number.isFinite(unit.order)) return unit.order;
+        if (Number.isFinite(unit.afterLessonOrder)) return unit.afterLessonOrder;
+        const ids = (unit.dependsOnLessons || []).map((id) => Number(/^L(\d{3})$/.exec(id)?.[1] || 0));
+        const maxDependency = Math.max(0, ...ids);
+        if (maxDependency) return maxDependency;
+        return Math.max(0, ...lessons.map((lesson) => Number(lesson.order) || 0));
+      }
+
+      function sentenceZhuyin(sentence, hanIndex, char) {
+        return sentence.zhuyinOverrides?.[String(hanIndex)] || state.zhuyinMap.get(char) || "";
+      }
+
+      function renderZhuyinText(text, zhuyinOverrides = {}) {
+        let hanIndex = 0;
+        const sentence = { zhuyinOverrides };
+        return Array.from(String(text || ""))
+          .map((char) => {
+            if (/\p{Script=Han}/u.test(char)) {
+              const zhuyin = sentenceZhuyin(sentence, hanIndex, char);
+              hanIndex += 1;
+              return `<ruby><rb>${html(char)}</rb><rt>${html(zhuyin)}</rt></ruby>`;
+            }
+            if (/\s/u.test(char)) return "";
+            return `<span class="punct">${html(char)}</span>`;
+          })
+          .join("");
       }
 
       function base64Url(input) {
@@ -753,6 +838,7 @@
         if (unit) {
           state.sourcePath = sourcePath;
           state.placeholderUnit = false;
+          state.zhuyinMap = buildZhuyinMap(lessons, unitZhuyinBoundary(unit, lessons));
           return unit;
         }
 
@@ -769,6 +855,7 @@
         if (draftUnit && hasReviewableSentenceAssets(draftUnit)) {
           state.sourcePath = draftPath;
           state.placeholderUnit = false;
+          state.zhuyinMap = buildZhuyinMap(lessons, unitZhuyinBoundary(draftUnit, lessons));
           return draftUnit;
         }
 
@@ -823,6 +910,7 @@
           id: sentence.id,
           text: sentence.text || sentence.spokenText || "",
           spokenText: sentence.spokenText || "",
+          zhuyinOverrides: sentence.zhuyinOverrides || {},
           imageSrc: sentence.imageSrc || "",
           imageUrl: publicUrl(sentence.imageSrc || ""),
           audioSrc: sentence.audio?.src || "",
@@ -1107,6 +1195,7 @@
                     ${flagged ? '<span class="bad">需要修</span>' : '<span class="tag">圖文音</span>'}
                   </div>
                   <div>${html(sentence.text)}</div>
+                  <div class="zhuyin-preview" aria-label="注音預覽">${renderZhuyinText(sentence.text, sentence.zhuyinOverrides)}</div>
                   ${sentence.spokenText ? `<div class="muted">spokenText: ${html(sentence.spokenText)}</div>` : ""}
                   ${sentence.audioUrl ? `<audio controls preload="metadata" src="${html(sentence.audioUrl)}"></audio>` : '<div class="bad">缺 audio src</div>'}
                   <div class="mono muted">${html(sentence.audioSrc)}</div>
@@ -1132,6 +1221,7 @@
                   ${flagged ? '<span class="bad">需要修</span>' : ""}
                 </div>
                 <div>${html(audio.text || "")}</div>
+                ${audio.text ? `<div class="zhuyin-preview" aria-label="注音預覽">${renderZhuyinText(audio.text)}</div>` : ""}
                 ${audio.spokenText ? `<div class="muted">spokenText: ${html(audio.spokenText)}</div>` : ""}
                 <audio controls preload="metadata" src="${html(audio.url)}"></audio>
                 <div class="mono muted">${html(audio.src)}</div>
