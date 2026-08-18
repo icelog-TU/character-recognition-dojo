@@ -1300,6 +1300,9 @@
         };
         try {
           await setDoc(doc(db, "assetReviews", reviewId()), payload);
+          state.cloudRepairItems = repairItems;
+          state.reviewCompleteLocallyEdited = false;
+          state.locallyEditedKeys.clear();
           setCloud(`已同步到 Firestore：${payload.repairCount} 個需要修`);
         } catch (error) {
           setCloud(`Firestore 同步失敗：${error.message}`, "bad");

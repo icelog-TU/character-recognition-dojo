@@ -604,7 +604,12 @@
             updatedByName: state.user.displayName || "",
             updatedAt: serverTimestamp(),
           };
-          writes.push(setDoc(doc(db, "assetReviews", reviewIdForUnit(unit)), payload));
+          writes.push(
+            setDoc(doc(db, "assetReviews", reviewIdForUnit(unit)), payload).then(() => {
+              state.cloudReviewByUnit.set(unit.id, payload);
+              state.reviewByUnit.set(unit.id, payload);
+            }),
+          );
         });
         await Promise.all(writes);
         return writes.length;
