@@ -88,6 +88,7 @@ service cloud.firestore {
           'repairCount',
           'reviewComplete',
           'repairItems',
+          'localUpdatedAtMs',
           'updatedByUid',
           'updatedByEmail',
           'updatedByName',
