@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R025 | review module / 複習二十五 | merge-ready | Production A | codex/r025-r026-l225-complete-package / branch tip | L225 milestone ceiling; covers L196-L225; pair R026 | none | curriculum-workflow/review-requests/R025.json; curriculum-workflow/generated/R025-generation-packet.md; curriculum-workflow/drafts/R025-draft.json | public/assets/reviews/R025/images/; public/assets/reviews/R025/audio/ | Production asset-complete package only; validation passes after local reviewLessons injection; Release owns integration |
+| R026 | review module / 複習二十六 | merge-ready | Production A | codex/r025-r026-l225-complete-package / branch tip | L225 milestone ceiling; covers L196-L225; pair R025 | none | curriculum-workflow/review-requests/R026.json; curriculum-workflow/generated/R026-generation-packet.md; curriculum-workflow/drafts/R026-draft.json | public/assets/reviews/R026/images/; public/assets/reviews/R026/audio/ | Production asset-complete package only; validation passes after local reviewLessons injection; Release owns integration |
 
 ## Status Values
 
