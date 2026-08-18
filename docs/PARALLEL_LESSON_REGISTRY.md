@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L318 | 哪 / normal lesson | merge-ready | Production A | codex/l318-complete-package / package branch tip | none | [] | curriculum-workflow/lesson-requests/L318.json; curriculum-workflow/generated/L318-generation-packet.md; curriculum-workflow/drafts/L318-draft.json | public/assets/lessons/L318/; curriculum-workflow/audio-inbox/L318/ | Asset-complete package; latest origin/main includes L317 and R033-R036; Release owns ordered integration |
 
 ## Status Values
 

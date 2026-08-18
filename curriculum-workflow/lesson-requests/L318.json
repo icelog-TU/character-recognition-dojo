@@ -1,0 +1,278 @@
+{
+  "id": "L318",
+  "order": 318,
+  "newChars": [
+    "哪"
+  ],
+  "zhuyin": {
+    "哪": "ㄋㄚˇ"
+  },
+  "title": "哪",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A complete-package handoff for L318. Latest origin/main includes L317, so no provisional learned characters are needed. Release owns ordered integration.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through L317 + current new char",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "哪",
+      "粉",
+      "色",
+      "彩",
+      "收",
+      "完"
+    ],
+    "targetCharMinimumCount": {
+      "哪": 3
+    },
+    "recentTargetMinimumCounts": {
+      "粉": 2,
+      "色": 2,
+      "彩": 2,
+      "收": 1,
+      "完": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "裏"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Teacher identity must be visually distinct from protagonist mother.",
+      "Generic children must not look like recurring protagonist girl, recurring young boy classmate, or recurring sporty boy.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 哪 as public/assets/lessons/L318/audio/char-u54ea.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and suffix from exact fragments 我忘記把彩色筆收到 and 裡了.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L318-S01",
+      "text": "粉彩和水彩，哪個更好看？",
+      "spokenText": "粉彩和水彩哪個更好看",
+      "focusChar": "哪",
+      "displayLines": [
+        "粉彩",
+        "和水彩，",
+        "哪個",
+        "更好看？"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. On the table, show one pastel drawing and one watercolor painting side by side; both are attractive but visibly different in material texture. The girl is comparing the two pictures. The image must clearly suggest \"pastel and watercolor, which looks better\" without written labels. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L318-S02",
+      "text": "我忘記把彩色筆收到哪裡了。",
+      "spokenText": "我忘記把彩色筆收到哪裡了",
+      "focusChar": "哪",
+      "displayLines": [
+        "我忘記",
+        "把彩色筆",
+        "收到哪裡",
+        "了。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. She is at a desk or shelf looking for colored pencils, with a facial expression showing she forgot where she put them away. A drawer or cabinet may be partly open, but the scene should not be too messy. The focus is that she cannot remember where the colored pencils were put away. If the colored pencil case appears, it should be slightly hidden or not immediately obvious. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L318-S03",
+      "text": "粉彩畫完了，要放哪裡？",
+      "spokenText": "粉彩畫完了要放哪裡",
+      "focusChar": "哪",
+      "displayLines": [
+        "粉彩",
+        "畫完了，",
+        "要放哪裡？"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. She is holding a finished pastel drawing and deciding where to put it. Show at least two clear possible places: for example, a portfolio folder on the table and an empty picture frame or hanging spot on the wall. The question \"where should it go\" must be visually meaningful; do not show only one storage folder. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L318-S04",
+      "text": "哪朵花要畫粉紅色？",
+      "spokenText": "哪朵花要畫粉紅色",
+      "focusChar": "哪",
+      "displayLines": [
+        "哪朵花",
+        "要畫",
+        "粉紅色？"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. On the table is a flower drawing with about five or six flowers. Two or three flowers are already colored in different colors, and three or four flowers are still uncolored line art. The girl is holding a pink drawing tool and choosing which uncolored flower to make pink. The image must clearly show choice among several flowers, not a color-identification quiz for a toddler. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L318-S05",
+      "text": "天色晚了，你要去哪裡？",
+      "spokenText": "天色晚了你要去哪裡",
+      "focusChar": "哪",
+      "displayLines": [
+        "天色晚了，",
+        "你要",
+        "去哪裡？"
+      ],
+      "imageNotes": "Use the recurring 「你」 young boy identity. The sky is getting late but not frightening. The boy has a small backpack and is standing near a doorway or safe roadside as if about to go somewhere. A recurring protagonist girl or protagonist mother may be nearby asking where he is going. The focus is \"the sky is late\" and \"where are you going\"; do not depict a dangerous dark road. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L318-G01",
+      "type": "find-character",
+      "sentenceId": "L318-S04",
+      "targetChar": "哪",
+      "targetCharIndex": 0,
+      "prompt": "找到「哪」。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "L318-G01-A",
+          "text": "哪",
+          "correct": true
+        },
+        {
+          "id": "L318-G01-B",
+          "text": "粉",
+          "correct": false
+        },
+        {
+          "id": "L318-G01-C",
+          "text": "色",
+          "correct": false
+        },
+        {
+          "id": "L318-G01-D",
+          "text": "彩",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L318-G02",
+      "type": "teach-character",
+      "sentenceId": "L318-S02",
+      "targetChar": "哪",
+      "targetCharIndex": 9,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        9
+      ],
+      "teachAudio": {
+        "prefixText": "我忘記把彩色筆收到",
+        "suffixText": "裡了",
+        "prefixSrc": "/assets/lessons/L318/audio/L318-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L318/audio/L318-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L318-G03",
+      "type": "missing-character",
+      "sentenceId": "L318-S05",
+      "targetChar": "哪",
+      "targetCharIndex": 7,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        {
+          "id": "L318-G03-A",
+          "text": "哪",
+          "correct": true
+        },
+        {
+          "id": "L318-G03-B",
+          "text": "粉",
+          "correct": false
+        },
+        {
+          "id": "L318-G03-C",
+          "text": "色",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L318-G04",
+      "type": "partial-order",
+      "sentenceId": "L318-S03",
+      "targetChar": "哪",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "L318-G04-A",
+          "text": "要",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L318-G04-B",
+          "text": "放",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L318-G04-C",
+          "text": "哪",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L318-G04-D",
+          "text": "裡",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L318-G04-A",
+        "L318-G04-B",
+        "L318-G04-C",
+        "L318-G04-D"
+      ]
+    },
+    {
+      "id": "L318-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L318-S01",
+      "targetChar": "哪",
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L318-G05-A",
+          "text": "粉彩和水彩，哪個更好看？",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L318/audio/L318-S01.m4a"
+        },
+        {
+          "id": "L318-G05-B",
+          "text": "粉彩和水彩，那個更好看？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L318/audio/L318-G05-wrong-one.m4a"
+        },
+        {
+          "id": "L318-G05-C",
+          "text": "粉彩和水彩，哪個更好用？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L318/audio/L318-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
