@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R035/R036 | review modules after L300; covers L271-L300 | claimed | Production B | codex/r035-r036-l300-complete-package | L300 milestone ceiling | None | `curriculum-workflow/review-requests/R035.json`, `curriculum-workflow/review-requests/R036.json`, `curriculum-workflow/generated/R035-generation-packet.md`, `curriculum-workflow/generated/R036-generation-packet.md`, `curriculum-workflow/drafts/R035-draft.json`, `curriculum-workflow/drafts/R036-draft.json` | `public/assets/reviews/R035/`, `public/assets/reviews/R036/`, `curriculum-workflow/audio-inbox/R035/`, `curriculum-workflow/audio-inbox/R036/` | Claim for Production B asset-complete-package. Release owns production JSON, planner data, ledger, and registry cleanup. |
 
 ## Status Values
 
