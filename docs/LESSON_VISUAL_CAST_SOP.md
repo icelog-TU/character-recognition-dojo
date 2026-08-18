@@ -214,6 +214,8 @@ Release may reject or hold a package when a repeated wrong-role face makes the i
 
 Asset Repair should treat wrong-role cloning as an image repair defect. A teacher note such as "teacher looks like mom" or "all adults are the same woman" is enough scope to regenerate the affected image.
 
+Asset Repair should also treat style drift as a failed repair. Fixing a marked object, pose, or scene detail does not permit the repaired image to become generic cartoon, simple watercolor wash, anime, 3D render, photorealistic, dark/muted, or inconsistent with the L058 style reference set. If the repaired image loses the established course style or recurring cast identity, regenerate before pushing.
+
 ## Ledger Updates
 
 When a new recurring human role is approved in merged assets, add a concise visual continuity note to `docs/CURRICULUM_LEDGER.md` during Release or the next supervised SOP/ledger maintenance pass.

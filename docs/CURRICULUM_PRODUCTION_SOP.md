@@ -451,12 +451,12 @@ The complete post-merge repair loop is:
 
 1. Teacher opens `lesson-asset-review.html?unit=L###&ref=main`.
 2. Teacher marks only bad image/audio items as needing repair and writes notes. The whole-unit complete checkbox may be checked only when every remaining unmarked item is acceptable.
-3. Asset repair thread runs `npm run asset:review-status -- --unit L### --ref main`, fixes only the marked items unless scope is explicitly expanded, reruns relevant asset processing and validation, and pushes the repair branch.
+3. Asset repair thread runs `npm run asset:review-status -- --unit L### --ref main`, fixes only the marked items unless scope is explicitly expanded, preserves the L058 style anchor and recurring cast identity required by `docs/LESSON_VISUAL_CAST_SOP.md`, reruns relevant asset processing and validation, and pushes the repair branch.
 4. Release/repair thread must merge or cherry-pick the repair into `main`; a repair-branch preview URL is not enough for final review.
 5. Teacher reopens the `ref=main` review page. If the repaired asset is now acceptable, the teacher clears the item's `needs repair` checkbox, optionally clears or updates the note, and checks the whole-unit complete box.
 6. The index turns green only when `reviewComplete === true` and `repairCount === 0`. A checked complete box with remaining repair items must still show the unit as needing repair.
 
-An asset repair thread must fix only the marked image/audio items unless the user explicitly expands scope. After repair, rerun the relevant asset processing and validation, push the repair into `main` or provide a branch preview only as an intermediate check, and give the teacher the `ref=main` review URL for final clearing.
+An asset repair thread must fix only the marked image/audio items unless the user explicitly expands scope. Image repair must not introduce a new style or randomize recurring roles while fixing the marked defect; style drift and cast drift are failed repairs. After repair, rerun the relevant asset processing and validation, push the repair into `main` or provide a branch preview only as an intermediate check, and give the teacher the `ref=main` review URL for final clearing.
 
 ## Request File
 
