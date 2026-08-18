@@ -24,6 +24,10 @@ function hanChars(text) {
   return Array.from(text).filter((char) => /\p{Script=Han}/u.test(char));
 }
 
+function displayLineVisibleChars(text) {
+  return Array.from(text).filter((char) => !/\s/u.test(char)).length;
+}
+
 function hanDistance(left, right) {
   const leftChars = hanChars(left);
   const rightChars = hanChars(right);
@@ -53,8 +57,10 @@ function validateSentenceContent({ unitLabel, sentence, currentAllowed }) {
       errors.push(`${sentence.id}: displayLines must join back to text.`);
     } else {
       for (const line of sentence.displayLines) {
-        if (hanChars(line).length > 5) {
-          errors.push(`${sentence.id}: displayLines line "${line}" is too long for phone layout; use shorter lines.`);
+        if (displayLineVisibleChars(line) > 5) {
+          errors.push(
+            `${sentence.id}: displayLines line "${line}" is too long for phone layout; use at most 5 visible characters including punctuation.`,
+          );
         }
       }
     }

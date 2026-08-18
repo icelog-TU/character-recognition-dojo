@@ -293,9 +293,9 @@ Rules:
 
 - Lines must join exactly back to `text`.
 - Lines must preserve punctuation. `spokenText` removes punctuation; `displayLines` does not.
-- Each line must stay at or under 5 Han characters when zhuyin is visible.
+- Each line must stay at or under 5 visible characters when zhuyin is visible. Count Han characters, punctuation, and any other learner-facing visible full-width character. Do not use a Han-only count for display-line layout.
 - `displayLines` affects only visual line breaks; audio and timings still use `text` and `spokenText`.
-- If a line is longer than 5 Han characters, split only `displayLines` and keep `text` plus `spokenText` unchanged.
+- If a line is longer than 5 visible characters, split only `displayLines` and keep `text` plus `spokenText` unchanged. A line like `這本書太長，` is 6 visible characters and must be split.
 
 ## Imageability
 
@@ -349,7 +349,7 @@ Before sending sentences to image/audio production, verify:
 - the sentence set is not repetitive
 - `spokenText` matches `text` without punctuation
 - every `displayLines` array joins exactly back to `text`, including punctuation
-- every `displayLines` line is at most 5 Han characters when zhuyin is visible
+- every `displayLines` line is at most 5 visible characters, including punctuation, when zhuyin is visible
 - every `focusChar` appears in its sentence
 - every sentence with people has explicit role identities in `imageNotes` following `docs/LESSON_VISUAL_CAST_SOP.md`
 - the Stage 4 plan uses every reviewed sentence exactly once when the lesson has five reviewed sentences and five sentence games
