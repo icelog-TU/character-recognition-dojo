@@ -1,0 +1,267 @@
+{
+  "id": "L317",
+  "order": 317,
+  "newChars": [
+    "粉"
+  ],
+  "zhuyin": {
+    "粉": "ㄈㄣˇ"
+  },
+  "title": "粉",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production D complete-package handoff for L317. Approved sentences are fixed. Latest origin/main includes L316 色, so no dependsOnLessons or provisionalLearnedChars are required. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L316 + current new char 粉",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "粉",
+      "色",
+      "彩",
+      "收",
+      "完",
+      "記"
+    ],
+    "targetCharMinimumCount": {
+      "粉": 3
+    },
+    "recentTargetMinimumCounts": {
+      "色": 2,
+      "彩": 2,
+      "收": 2,
+      "完": 1,
+      "記": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Teacher, mother, protagonist girl, and generic children must remain visually distinct.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 粉 as public/assets/lessons/L317/audio/char-u7c89.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and suffix from exact fragments 樹上開滿 and 色的花.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L317-S01",
+      "text": "我用水彩，畫粉紅色的花。",
+      "spokenText": "我用水彩畫粉紅色的花",
+      "focusChar": "粉",
+      "displayLines": [
+        "我用水彩，",
+        "畫粉紅色",
+        "的花。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. She is sitting at a table using watercolor paint to paint flowers. The paper clearly shows pink flowers. Show watercolor materials such as a watercolor palette and water cup. The image must clearly show \"watercolor\" and \"pink flowers.\" No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L317-S02",
+      "text": "我把粉彩筆都收起來了。",
+      "spokenText": "我把粉彩筆都收起來了",
+      "focusChar": "粉",
+      "displayLines": [
+        "我把粉彩筆",
+        "都收起來",
+        "了。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. She is holding a closed transparent-lid case of pastel sticks/pastel pencils; through the clear lid, the pastel sticks are visibly arranged neatly inside. On the table is a finished pastel drawing, showing she just used the pastel sticks. Do not leave loose pastel sticks scattered on the table. The image must clearly show the pastel sticks are already put away. Do not depict ordinary pencils, colored pencils, or a watercolor palette. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L317-S03",
+      "text": "樹上開滿粉色的花。",
+      "spokenText": "樹上開滿粉色的花",
+      "focusChar": "粉",
+      "displayLines": [
+        "樹上開滿",
+        "粉色的花。"
+      ],
+      "imageNotes": "Outdoor flower-tree scene. A tree is full of pink blossoms on the branches. The focus is the tree covered with many pink flowers, not flowers on the ground. A small recurring protagonist girl may stand under the tree looking up at the flowers if useful for scale, but the flower-covered tree must be the clear subject. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L317-S04",
+      "text": "粉圓太多了，吃不完。",
+      "spokenText": "粉圓太多了吃不完",
+      "focusChar": "粉",
+      "displayLines": [
+        "粉圓",
+        "太多了，",
+        "吃不完。"
+      ],
+      "imageNotes": "Tabletop dessert scene. Show a bowl or cup of sweet dessert with many visible tapioca pearls / 粉圓. Use the recurring protagonist girl identity looking at the many pearls with a mild \"too much to finish\" expression, not distressed. Avoid branded bubble tea cups or any readable packaging. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L317-S05",
+      "text": "洗衣粉用完，記得要收好。",
+      "spokenText": "洗衣粉用完記得要收好",
+      "focusChar": "粉",
+      "displayLines": [
+        "洗衣粉",
+        "用完，",
+        "記得要",
+        "收好。"
+      ],
+      "imageNotes": "Safe home laundry-area scene. Use the recurring protagonist mother and recurring protagonist girl identities. Mother is helping or reminding the girl to put a laundry powder box or bag back into a safe high shelf or cabinet after use. The image must show \"laundry powder used and put away safely.\" Keep the scene warm and safe; do not show a child playing with detergent alone. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L317-G01",
+      "type": "find-character",
+      "sentenceId": "L317-S01",
+      "targetChar": "粉",
+      "targetCharIndex": 5,
+      "prompt": "找到「粉」。",
+      "options": [
+        {
+          "id": "L317-G01-A",
+          "text": "粉",
+          "correct": true
+        },
+        {
+          "id": "L317-G01-B",
+          "text": "彩",
+          "correct": false
+        },
+        {
+          "id": "L317-G01-C",
+          "text": "色",
+          "correct": false
+        },
+        {
+          "id": "L317-G01-D",
+          "text": "紅",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L317-G02",
+      "type": "teach-character",
+      "sentenceId": "L317-S03",
+      "targetChar": "粉",
+      "targetCharIndex": 4,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L317/audio/L317-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L317/audio/L317-G02-suffix.m4a"
+      },
+      "teachAudioText": {
+        "prefixText": "樹上開滿",
+        "suffixText": "色的花"
+      }
+    },
+    {
+      "id": "L317-G03",
+      "type": "missing-character",
+      "sentenceId": "L317-S04",
+      "targetChar": "粉",
+      "targetCharIndex": 0,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "L317-G03-A",
+          "text": "粉",
+          "correct": true
+        },
+        {
+          "id": "L317-G03-B",
+          "text": "彩",
+          "correct": false
+        },
+        {
+          "id": "L317-G03-C",
+          "text": "色",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L317-G04",
+      "type": "partial-order",
+      "sentenceId": "L317-S02",
+      "targetChar": "收",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "options": [
+        {
+          "id": "L317-G04-A",
+          "text": "收",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L317-G04-B",
+          "text": "起",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L317-G04-C",
+          "text": "來",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L317-G04-D",
+          "text": "了",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "L317-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L317-S05",
+      "targetChar": "粉",
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L317-G05-A",
+          "text": "洗衣粉用完，記得要收好。",
+          "correct": true,
+          "sentenceId": "L317-S05",
+          "audioSrc": "/assets/lessons/L317/audio/L317-S05.m4a",
+          "spokenText": "洗衣粉用完記得要收好"
+        },
+        {
+          "id": "L317-G05-B",
+          "text": "洗衣粉用完，記得要放好。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L317/audio/L317-G05-wrong-one.m4a",
+          "spokenText": "洗衣粉用完記得要放好"
+        },
+        {
+          "id": "L317-G05-C",
+          "text": "洗衣粉用完，忘記要收好。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L317/audio/L317-G05-wrong-two.m4a",
+          "spokenText": "洗衣粉用完忘記要收好"
+        }
+      ]
+    }
+  ]
+}
