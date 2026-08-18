@@ -1,0 +1,101 @@
+# R034 複習三十四 Generation Packet
+
+- Unit kind: review module
+- Review number: 34
+- afterLessonOrder: 285
+- targetLessonRange: L256-L285
+- requiredRounds: 5
+- requiredCoverageChars: 死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷
+
+## Sentences
+
+### R034-S01
+- text: 蓋這座橋用掉一堆積木。
+- spokenText: 蓋這座橋用掉一堆積木
+- focusChar: 橋
+- displayLines: ["蓋這座橋","用掉一堆","積木。"]
+- imageSrc: /assets/reviews/R034/images/R034-S01.webp
+- audioSrc: /assets/reviews/R034/audio/R034-S01.m4a
+- durationMs: 5609
+- charTimings: 10
+- imageNotes: Show a generic child, visually distinct from recurring 我/你/他, using many blocks to build a bridge. The bridge shape should be clear, and a pile of blocks has been used up. No readable labels.
+
+### R034-S02
+- text: 房子倒了，再蓋一個新的。
+- spokenText: 房子倒了再蓋一個新的
+- focusChar: 倒
+- displayLines: ["房子倒了，","再蓋一個","新的。"]
+- imageSrc: /assets/reviews/R034/images/R034-S02.webp
+- audioSrc: /assets/reviews/R034/audio/R034-S02.m4a
+- durationMs: 3935
+- charTimings: 10
+- imageNotes: Show a block house that has fallen down, and a generic child building another new block house. The sentence text does not say 積木, but the image should make the house clearly made from blocks. The old one has fallen; the new one is being built.
+
+### R034-S03
+- text: 窗子太緊，卡住了。
+- spokenText: 窗子太緊卡住了
+- focusChar: 卡
+- displayLines: ["窗子太緊，","卡住了。"]
+- imageSrc: /assets/reviews/R034/images/R034-S03.webp
+- audioSrc: /assets/reviews/R034/audio/R034-S03.m4a
+- durationMs: 2809
+- charTimings: 7
+- imageNotes: Show a window that is too tight and stuck, either hard to open or hard to close. No people are required. Make the stuck window clear without danger.
+
+### R034-S04
+- text: 球卡在洞口出不來。
+- spokenText: 球卡在洞口出不來
+- focusChar: 洞
+- displayLines: ["球卡在洞口","出不來。"]
+- imageSrc: /assets/reviews/R034/images/R034-S04.webp
+- audioSrc: /assets/reviews/R034/audio/R034-S04.m4a
+- durationMs: 4045
+- charTimings: 8
+- imageNotes: Show a ball stuck at the opening of a hole, unable to come out. The ball, hole opening, and stuck state must be clear. Do not show a person or animal stuck.
+
+### R034-S05
+- text: 鞋子破了一個洞。
+- spokenText: 鞋子破了一個洞
+- focusChar: 破
+- displayLines: ["鞋子破了","一個洞。"]
+- imageSrc: /assets/reviews/R034/images/R034-S05.webp
+- audioSrc: /assets/reviews/R034/audio/R034-S05.m4a
+- durationMs: 2925
+- charTimings: 7
+- imageNotes: Show a shoe with one clear hole in it. No people are required. The hole should be visible and not confused with decoration.
+
+## Sentence Games
+
+### R034-G01
+- type: find-character
+- sentenceId: R034-S03
+- targetChar: 卡
+- options: R034-G01-A:卡:correct / R034-G01-B:緊 / R034-G01-C:住 / R034-G01-D:窗
+
+### R034-G02
+- type: teach-character
+- sentenceId: R034-S01
+- targetChar: 橋
+- missingIndexes: [3]
+- teachAudio: prefixText="蓋這座"; suffixText="用掉一堆積木"; prefixSrc=/assets/reviews/R034/audio/R034-G02-prefix.m4a; suffixSrc=/assets/reviews/R034/audio/R034-G02-suffix.m4a
+
+### R034-G03
+- type: missing-character
+- sentenceId: R034-S04
+- targetChar: 洞
+- missingIndexes: [3]
+- options: R034-G03-A:洞:correct / R034-G03-B:口 / R034-G03-C:卡
+
+### R034-G04
+- type: partial-order
+- sentenceId: R034-S02
+- targetChar: 倒
+- missingIndexes: [2,5,8]
+- options: R034-G04-A:倒:correct:order0 / R034-G04-B:蓋:correct:order1 / R034-G04-C:新:correct:order2
+- correctOrder: ["倒","蓋","新"]
+
+### R034-G05
+- type: choose-pronunciation
+- sentenceId: R034-S05
+- targetChar: 破
+- options: correct:鞋子破了一個洞。:correct / wrong-one:帽子破了一個洞。 / wrong-two:鞋子破了一個口。

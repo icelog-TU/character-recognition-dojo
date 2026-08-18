@@ -1,0 +1,211 @@
+{
+  "id": "R033",
+  "unitKind": "review module",
+  "reviewNumber": 33,
+  "title": "複習三十三",
+  "pairMate": "R034",
+  "afterLessonOrder": 285,
+  "targetLessonRange": {
+    "startOrder": 256,
+    "endOrder": 285
+  },
+  "allowedCharacterCeiling": "L285",
+  "requiredCoverageChars": [
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精",
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷"
+  ],
+  "requiredRounds": 5,
+  "newChars": [],
+  "provisionalLearnedChars": [],
+  "reviewMigrationReplacementPackage": false,
+  "sentences": [
+    {
+      "id": "R033-S01",
+      "text": "睡太少，身體會變差。",
+      "spokenText": "睡太少身體會變差",
+      "focusChar": "睡",
+      "displayLines": [
+        "睡太少，",
+        "身體會變差。"
+      ],
+      "imageNotes": "Show a generic child, visually distinct from recurring 我/你/他, after sleeping too little. The child looks tired and low-energy, showing that the body feels worse. Keep the scene warm and not medically intense."
+    },
+    {
+      "id": "R033-S02",
+      "text": "放假時多休息，精神才會好。",
+      "spokenText": "放假時多休息精神才會好",
+      "focusChar": "精",
+      "displayLines": [
+        "放假時",
+        "多休息，",
+        "精神才會好。"
+      ],
+      "imageNotes": "Show a generic child, visually distinct from recurring 我/你/他, resting during a holiday and then looking bright and energetic. The scene should feel like a calm holiday at home. Do not make it a hospital or medical scene."
+    },
+    {
+      "id": "R033-S03",
+      "text": "我養的小魚生病了。",
+      "spokenText": "我養的小魚生病了",
+      "focusChar": "養",
+      "displayLines": [
+        "我養的小魚",
+        "生病了。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity for 我. She looks at a fish tank at home; the small fish she keeps looks weak or low-energy as if sick. Do not show death or a frightening scene."
+    },
+    {
+      "id": "R033-S04",
+      "text": "剛才裝椅子時，傷到手指。",
+      "spokenText": "剛才裝椅子時傷到手指",
+      "focusChar": "傷",
+      "displayLines": [
+        "剛才裝",
+        "椅子時，",
+        "傷到手指。"
+      ],
+      "imageNotes": "Show a generic adult, visually distinct from father, mother, teacher, and passersby, assembling a simple chair and accidentally hurting a finger. The injury should be minor, such as a small bandage or held finger. Do not show blood, sharp tools, fear, or danger."
+    },
+    {
+      "id": "R033-S05",
+      "text": "太久沒下雨，小草都死掉了。",
+      "spokenText": "太久沒下雨小草都死掉了",
+      "focusChar": "久",
+      "displayLines": [
+        "太久沒下雨，",
+        "小草都",
+        "死掉了。"
+      ],
+      "imageNotes": "Show a dry patch of grass after a long time without rain. The small grass is dry and withered, showing it has died. The scene should show dryness clearly but not feel dark or scary."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R033-G01",
+      "type": "find-character",
+      "sentenceId": "R033-S01",
+      "targetChar": "睡",
+      "options": [
+        {
+          "id": "R033-G01-A",
+          "text": "睡",
+          "correct": true
+        },
+        {
+          "id": "R033-G01-B",
+          "text": "體",
+          "correct": false
+        },
+        {
+          "id": "R033-G01-C",
+          "text": "差",
+          "correct": false
+        },
+        {
+          "id": "R033-G01-D",
+          "text": "久",
+          "correct": false
+        }
+      ],
+      "prompt": "找到「睡」。"
+    },
+    {
+      "id": "R033-G02",
+      "type": "teach-character",
+      "sentenceId": "R033-S02",
+      "targetChar": "精",
+      "targetCharIndex": 6,
+      "prefixText": "放假時多休息",
+      "suffixText": "神才會好"
+    },
+    {
+      "id": "R033-G03",
+      "type": "missing-character",
+      "sentenceId": "R033-S03",
+      "targetChar": "養",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "R033-G03-A",
+          "text": "養",
+          "correct": true
+        },
+        {
+          "id": "R033-G03-B",
+          "text": "病",
+          "correct": false
+        },
+        {
+          "id": "R033-G03-C",
+          "text": "魚",
+          "correct": false
+        }
+      ],
+      "prompt": "補上「養」。"
+    },
+    {
+      "id": "R033-G04",
+      "type": "partial-order",
+      "sentenceId": "R033-S04",
+      "targetChar": "傷",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        6
+      ],
+      "options": [
+        "剛",
+        "才",
+        "裝",
+        "傷"
+      ]
+    },
+    {
+      "id": "R033-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R033-S05",
+      "targetChar": "久",
+      "correctText": "太久沒下雨，小草都死掉了。",
+      "wrongOptions": [
+        {
+          "id": "wrong-one",
+          "text": "太久沒下雨，小花都死掉了。"
+        },
+        {
+          "id": "wrong-two",
+          "text": "太久沒下雨，小草都乾掉了。"
+        }
+      ]
+    }
+  ]
+}
