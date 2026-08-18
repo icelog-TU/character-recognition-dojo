@@ -81,6 +81,7 @@ For each assigned review pair:
 9. Recalculate coverage after every edit.
 10. Before handoff, run an allowed-character sweep over every Han character in `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text.
 11. Before handoff, confirm every sentence with `displayLines` satisfies `displayLines.join("") === text`, including punctuation such as `，`, `。`, `？`, and `！`. `spokenText` removes punctuation; `displayLines` must not.
+12. Before handoff, confirm every individual `displayLines` line contains at most 5 Han characters when zhuyin is visible. If a visual line is longer than 5 Han, split the line without changing `text` or `spokenText`.
 
 If a sentence is legal but too abstract for a five-year-old, simplify it even if it passes coverage.
 
@@ -120,6 +121,7 @@ The Audit Packet must include:
 - Five approved review sentences for this module.
 - `text`, `spokenText`, `focusChar`, `displayLines`, and concrete `imageNotes` for each sentence.
 - A schema precheck confirming every `displayLines.join("") === text`; if any display line break omits punctuation, revise the packet before sending to Audit.
+- A layout precheck confirming every individual `displayLines` line is at most 5 Han characters. Lines such as `我在游泳池裡`, `我換上乾衣服，`, or `我知道做錯事，` are invalid because each contains 6 Han characters and must be split before the packet goes to Audit.
 - Stage 4 plan appropriate for review modules, using every sentence once.
 - `G05 choose-pronunciation` option texts with the same Han count as the correct sentence and only 1-2 Han-character differences.
 - `partial-order` plan that blanks exactly 3-4 Han characters. Each option card must be exactly one Han character. Do not use chunks, word cards, phrase cards, or full-sentence reordering.
