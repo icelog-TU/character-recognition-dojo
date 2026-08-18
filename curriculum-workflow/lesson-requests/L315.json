@@ -1,0 +1,308 @@
+{
+  "id": "L315",
+  "order": 315,
+  "newChars": [
+    "彩"
+  ],
+  "zhuyin": {
+    "彩": "ㄘㄞˇ"
+  },
+  "title": "彩",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Editor handoff for Production B. Build L315 normal lesson asset-complete package from latest origin/main after L314. Release owns ordered integration into production JSON, planner data, ledger, and registry cleanup.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L314 + current new char 彩",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "彩",
+      "收",
+      "完",
+      "記",
+      "次",
+      "每"
+    ],
+    "targetCharMinimumCount": {
+      "彩": 3
+    },
+    "recentTargetMinimumCounts": {
+      "收": 2,
+      "完": 2,
+      "記": 2,
+      "次": 1,
+      "每": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Every human prompt must explicitly name the role identity.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate standalone charAudio for 彩 as public/assets/lessons/L315/audio/char-u5f69.m4a from the single character 彩.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and suffix from the exact fragments 天邊火紅的雲 and 真好看.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact wrong option text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L315-S01",
+      "text": "每次畫水彩，要記得洗手。",
+      "spokenText": "每次畫水彩要記得洗手",
+      "focusChar": "彩",
+      "displayLines": [
+        "每次畫水",
+        "彩，要記得",
+        "洗手。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. She is at a table painting with watercolors, with watercolor tools and paper visible. A sink or mother reminding her to wash hands may be nearby. The image should clearly show painting with watercolor and remembering to wash hands. No written text, numbers, labels, zhuyin, signs, or watermarks."
+    },
+    {
+      "id": "L315-S02",
+      "text": "看完書不用收，媽媽要看。",
+      "spokenText": "看完書不用收媽媽要看",
+      "focusChar": "收",
+      "displayLines": [
+        "看完書不用",
+        "收，媽媽",
+        "要看。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl and recurring protagonist mother identities. The protagonist girl has finished reading a book, but the book stays out because mother is about to read it next. Show mother reaching for or looking at the same book so the reason for not putting it away is clear. No written text, numbers, labels, zhuyin, signs, or watermarks."
+    },
+    {
+      "id": "L315-S03",
+      "text": "彩帶用完後，記得要收好。",
+      "spokenText": "彩帶用完後記得要收好",
+      "focusChar": "彩",
+      "displayLines": [
+        "彩帶用完",
+        "後，記得",
+        "要收好。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity with either the recurring mother or distinct teacher role depending on the setting. After a simple decorating activity, colorful ribbons are being rolled up or put into a box. The image should clearly show that the ribbon has been used and is now being put away. No written text, numbers, labels, zhuyin, signs, or watermarks."
+    },
+    {
+      "id": "L315-S04",
+      "text": "天邊火紅的雲彩真好看。",
+      "spokenText": "天邊火紅的雲彩真好看",
+      "focusChar": "彩",
+      "displayLines": [
+        "天邊火紅的",
+        "雲彩真好",
+        "看。"
+      ],
+      "imageNotes": "Outdoor or window-side evening scene. Show fire-red clouds along the far edge of the sky, with the recurring protagonist girl looking up from a safe place. The sky and red clouds should be the visual focus. No written text, numbers, labels, zhuyin, signs, or watermarks."
+    },
+    {
+      "id": "L315-S05",
+      "text": "穿上紅衣服，才有好彩頭。",
+      "spokenText": "穿上紅衣服才有好彩頭",
+      "focusChar": "彩",
+      "displayLines": [
+        "穿上紅衣",
+        "服，才有",
+        "好彩頭。"
+      ],
+      "imageNotes": "Lunar New Year family setting. Use the recurring protagonist girl and recurring protagonist mother identities. The girl wears red clothing while mother smiles and helps adjust or admire the outfit. The scene may include warm festive atmosphere, but do not include readable couplets, written characters, numbers, labels, zhuyin, signs, or watermarks. The image should make the red clothing and lucky New Year feeling clear for a young child."
+    }
+  ],
+  "coverageCheck": {
+    "currentTarget": {
+      "char": "彩",
+      "count": 4,
+      "required": 3,
+      "status": "PASS"
+    },
+    "previousTargets": [
+      {
+        "lesson": "L314",
+        "char": "收",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "lesson": "L313",
+        "char": "完",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "lesson": "L312",
+        "char": "記",
+        "count": 2,
+        "required": 2,
+        "status": "PASS"
+      },
+      {
+        "lesson": "L311",
+        "char": "次",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      },
+      {
+        "lesson": "L310",
+        "char": "每",
+        "count": 1,
+        "required": 1,
+        "status": "PASS"
+      }
+    ],
+    "hanCounts": {
+      "L315-S01": 10,
+      "L315-S02": 10,
+      "L315-S03": 10,
+      "L315-S04": 10,
+      "L315-S05": 10
+    },
+    "allowedCharacterAuditExpected": "PASS",
+    "anyLongerThan12Han": false
+  },
+  "stage4Plan": {
+    "games": [
+      {
+        "id": "L315-G01",
+        "type": "find-character",
+        "sentenceId": "L315-S01",
+        "targetChar": "彩",
+        "prompt": "Find the target character.",
+        "missingIndexes": [
+          4
+        ]
+      },
+      {
+        "id": "L315-G02",
+        "type": "teach-character",
+        "sentenceId": "L315-S04",
+        "targetChar": "彩",
+        "targetCharIndex": 6,
+        "prompt": "Listen to the target character.",
+        "missingIndexes": [
+          6
+        ],
+        "teachAudio": {
+          "prefixSrc": "/assets/lessons/L315/audio/L315-G02-prefix.m4a",
+          "suffixSrc": "/assets/lessons/L315/audio/L315-G02-suffix.m4a"
+        },
+        "teachAudioText": {
+          "prefixText": "天邊火紅的雲",
+          "suffixText": "真好看"
+        }
+      },
+      {
+        "id": "L315-G03",
+        "type": "missing-character",
+        "sentenceId": "L315-S02",
+        "targetChar": "收",
+        "prompt": "Choose the missing character.",
+        "missingIndexes": [
+          5
+        ],
+        "options": [
+          {
+            "id": "L315-G03-A",
+            "text": "收",
+            "correct": true
+          },
+          {
+            "id": "L315-G03-B",
+            "text": "完",
+            "correct": false
+          },
+          {
+            "id": "L315-G03-C",
+            "text": "彩",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "L315-G04",
+        "type": "partial-order",
+        "sentenceId": "L315-S03",
+        "targetChar": "彩",
+        "prompt": "Put the characters in order.",
+        "missingIndexes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "options": [
+          {
+            "id": "L315-G04-A",
+            "text": "彩",
+            "correctOrder": 0,
+            "correct": true
+          },
+          {
+            "id": "L315-G04-B",
+            "text": "帶",
+            "correctOrder": 1,
+            "correct": true
+          },
+          {
+            "id": "L315-G04-C",
+            "text": "用",
+            "correctOrder": 2,
+            "correct": true
+          },
+          {
+            "id": "L315-G04-D",
+            "text": "完",
+            "correctOrder": 3,
+            "correct": true
+          }
+        ],
+        "correctOrder": [
+          "L315-G04-A",
+          "L315-G04-B",
+          "L315-G04-C",
+          "L315-G04-D"
+        ]
+      },
+      {
+        "id": "L315-G05",
+        "type": "choose-pronunciation",
+        "sentenceId": "L315-S05",
+        "targetChar": "彩",
+        "prompt": "Choose the sentence you heard.",
+        "options": [
+          {
+            "id": "L315-G05-A",
+            "text": "穿上紅衣服，才有好彩頭。",
+            "correct": true,
+            "sentenceId": "L315-S05",
+            "audioSrc": "/assets/lessons/L315/audio/L315-S05.m4a"
+          },
+          {
+            "id": "L315-G05-B",
+            "text": "穿上紅衣服，才有好看頭。",
+            "correct": false,
+            "audioSrc": "/assets/lessons/L315/audio/L315-G05-wrong-one.m4a"
+          },
+          {
+            "id": "L315-G05-C",
+            "text": "穿上紅衣服，才有好記頭。",
+            "correct": false,
+            "audioSrc": "/assets/lessons/L315/audio/L315-G05-wrong-two.m4a"
+          }
+        ]
+      }
+    ]
+  }
+}
