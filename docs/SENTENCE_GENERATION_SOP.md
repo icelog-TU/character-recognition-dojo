@@ -292,8 +292,10 @@ Use `displayLines` only when needed for phone layout.
 Rules:
 
 - Lines must join exactly back to `text`.
-- Each line should stay at or under 5 Han characters when zhuyin is visible.
+- Lines must preserve punctuation. `spokenText` removes punctuation; `displayLines` does not.
+- Each line must stay at or under 5 Han characters when zhuyin is visible.
 - `displayLines` affects only visual line breaks; audio and timings still use `text` and `spokenText`.
+- If a line is longer than 5 Han characters, split only `displayLines` and keep `text` plus `spokenText` unchanged.
 
 ## Imageability
 
@@ -327,6 +329,8 @@ Each reviewed sentence must be used by exactly one Stage 4 game. Do not assign t
 
 For `choose-pronunciation`, finalize the complete `correct`, `wrong-one`, and `wrong-two` option texts before Production makes audio. Wrong-choice audio must be generated from the exact final complete text. Do not ask Production to splice or cut existing sentence audio to make wrong choices.
 
+For `partial-order`, blank exactly 3-4 Han characters. Each option card must contain exactly one Han character. Do not use phrase chunks, word cards, or full-sentence reordering. `missingIndexes.length` must equal `options.length`, and each option's `correctOrder` must point to the matching missing Han character.
+
 ## Review Checklist
 
 Before sending sentences to image/audio production, verify:
@@ -344,9 +348,13 @@ Before sending sentences to image/audio production, verify:
 - position words have concrete anchors when needed
 - the sentence set is not repetitive
 - `spokenText` matches `text` without punctuation
+- every `displayLines` array joins exactly back to `text`, including punctuation
+- every `displayLines` line is at most 5 Han characters when zhuyin is visible
 - every `focusChar` appears in its sentence
 - every sentence with people has explicit role identities in `imageNotes` following `docs/LESSON_VISUAL_CAST_SOP.md`
 - the Stage 4 plan uses every reviewed sentence exactly once when the lesson has five reviewed sentences and five sentence games
+- the Stage 4 plan uses the five standard game types exactly once for a normal five-sentence lesson
+- every `partial-order` game blanks exactly 3-4 single Han characters, with one single-Han option card per blank
 - `choose-pronunciation` wrong-choice texts are final and ready for exact TTS generation
 - the teacher has approved the sentence set
 
@@ -376,6 +384,8 @@ The complete final handoff must be placed inside one Markdown fenced code block 
 ````
 
 The teacher copies that single gray block into Production. Keep discussion, coverage recalculation, and sentence-polishing notes outside the block unless they are included as final handoff content.
+
+The handoff must be clean Production-facing text. Do not include Audit-thread wording, draft-only caveats, `if Audit PASS`, `do not commit`, `do not push`, or `local only` restrictions unless the teacher explicitly requested a local-only diagnostic task. Normal Production handoffs should instruct the assigned Production slot to claim, build, validate, commit, push the package branch, and report the full tip commit SHA.
 
 The handoff must include:
 

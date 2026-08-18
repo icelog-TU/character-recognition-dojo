@@ -45,6 +45,20 @@ For each normal lesson, use this sequence before producing a handoff:
 
 During discussion, keep analysis outside the production handoff block. A useful response shape is: candidate five sentences, a small coverage table, Han counts, allowed-character audit result, and any weak sentence or alternative.
 
+## Teacher Sentence Approval Gate
+
+For normal lessons, do not produce the full Production handoff until the teacher has approved the final sentence set or explicitly asks for the handoff.
+
+The normal sequence is:
+
+1. Propose candidate sentences or a five-sentence draft.
+2. Report coverage, Han counts, allowed-character result, and weak points.
+3. Revise with the teacher.
+4. After every teacher edit, recalculate allowed-character audit, current and previous-five coverage, Han counts, `spokenText`, and `displayLines`.
+5. Only after the teacher confirms the five sentences, produce the complete Production handoff.
+
+This gate exists to reduce rework. A full handoff produced too early is more likely to contain stale coverage, stale `displayLines`, wrong image notes, or Stage 4 data that no longer matches the final sentences.
+
 ## Editor Output
 
 For each assigned normal lesson, produce final approved sentence data:
@@ -87,6 +101,8 @@ Before sending a Production handoff:
 - Use Taiwan wording and Taiwan zhuyin only.
 - Keep sentences concrete, imageable, and normally 4-12 Han characters.
 - Confirm `spokenText` includes exactly the Han characters from `text` in order, without punctuation.
+- Confirm every `displayLines` array joins exactly back to `text`, including punctuation.
+- Confirm every `displayLines` line contains at most 5 Han characters when zhuyin is visible. If a line is too long, split only `displayLines`; do not change `text` or `spokenText`.
 - Confirm every `focusChar` appears in its sentence.
 - Confirm current target and recent review coverage follows `docs/SENTENCE_GENERATION_SOP.md`.
 - For review modules, confirm the pair-level coverage target and milestone allowed-character ceiling, and include both in the handoff.
@@ -120,6 +136,8 @@ Every handoff must include:
 - Required repo files to create or update.
 - Auto-claim-and-continue block.
 - Stop conditions.
+
+The final Production handoff must be clean Production-facing text. Do not include Audit-thread wording, draft-only discussion, `if Audit PASS`, `do not commit`, `do not push`, or `local only` restrictions unless the teacher explicitly requested a local-only diagnostic task. A normal Production package handoff should tell the assigned Production slot to claim, build, validate, commit, push the package branch, and report the full tip commit SHA.
 
 ## Auto-Claim-And-Continue Block
 
