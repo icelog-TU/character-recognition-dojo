@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L320 | 最 / normal lesson | claimed | Production C | codex/l320-complete-package / daf48704 | L318 哪, L319 些 | ["哪","些"] | curriculum-workflow/lesson-requests/L320.json; curriculum-workflow/generated/L320-generation-packet.md; curriculum-workflow/drafts/L320-draft.json | public/assets/lessons/L320/images/, public/assets/lessons/L320/audio/, curriculum-workflow/audio-inbox/L320/ | Teacher-approved Editor handoff; build dependency-blocked asset-complete package; Release owns ordered integration. |
 
 ## Status Values
 
