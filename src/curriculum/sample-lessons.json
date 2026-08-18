@@ -163383,6 +163383,1096 @@
         "R028 is an asset-complete review module package prepared by Production B.",
         "Release owns insertion into top-level reviewLessons, planner export, ledger update, registry cleanup, and deployment."
       ]
+    },
+    {
+      "id": "R029",
+      "reviewNumber": 29,
+      "title": "複習二十九",
+      "afterLessonOrder": 255,
+      "targetLessonRange": {
+        "startOrder": 226,
+        "endOrder": 255
+      },
+      "requiredCoverageChars": [
+        "新",
+        "舊",
+        "半",
+        "只",
+        "剩",
+        "夠",
+        "錢",
+        "買",
+        "貴",
+        "賣",
+        "店",
+        "場",
+        "市",
+        "夜",
+        "具",
+        "工",
+        "作",
+        "忙",
+        "幫",
+        "急",
+        "腳",
+        "步",
+        "跳",
+        "床",
+        "搬",
+        "重",
+        "沙",
+        "張",
+        "椅",
+        "累"
+      ],
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "R029-S01",
+          "text": "媽媽在找工作的書，我幫忙找。",
+          "displayLines": [
+            "媽媽在找",
+            "工作的書，",
+            "我幫忙找。"
+          ],
+          "spokenText": "媽媽在找工作的書我幫忙找",
+          "focusChar": "幫",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Use the recurring protagonist mother identity for 媽媽 and the recurring protagonist girl identity for 我. Mother is at home near a desk or bookshelf looking for a book related to work, and the girl is helping her look for it. Make it clear both are searching for a book. Do not add readable book titles or signs.",
+          "imageSrc": "/assets/reviews/R029/images/R029-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R029/audio/R029-S01.m4a",
+            "durationMs": 4548,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1280,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1520,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3320
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3320,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3500,
+                "endMs": 3740
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3740,
+                "endMs": 4040
+              }
+            ]
+          }
+        },
+        {
+          "id": "R029-S02",
+          "text": "他急著上學，腳步很快。",
+          "displayLines": [
+            "他急著上學，",
+            "腳步很快。"
+          ],
+          "spokenText": "他急著上學腳步很快",
+          "focusChar": "急",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Use the fixed recurring sporty boy identity for 他. He is carrying or wearing school items and is hurrying to school, walking with quick steps. The scene should show urgency without danger or panic.",
+          "imageSrc": "/assets/reviews/R029/images/R029-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R029/audio/R029-S02.m4a",
+            "durationMs": 4174,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2320,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2600,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3380,
+                "endMs": 3600
+              }
+            ]
+          }
+        },
+        {
+          "id": "R029-S03",
+          "text": "小孩從床上跳下來。",
+          "displayLines": [
+            "小孩從床上",
+            "跳下來。"
+          ],
+          "spokenText": "小孩從床上跳下來",
+          "focusChar": "床",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Show a generic child, visually distinct from recurring 我/你/他, jumping down from a low child-safe bed. The floor is safe and close. Do not make the action look dangerous.",
+          "imageSrc": "/assets/reviews/R029/images/R029-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R029/audio/R029-S03.m4a",
+            "durationMs": 2856,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2000,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2220,
+                "endMs": 2420
+              }
+            ]
+          }
+        },
+        {
+          "id": "R029-S04",
+          "text": "這張椅子很重，搬起來很累。",
+          "displayLines": [
+            "這張椅子",
+            "很重，",
+            "搬起來很累。"
+          ],
+          "spokenText": "這張椅子很重搬起來很累",
+          "focusChar": "重",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Use the recurring protagonist father identity as the visible adult. Father is moving a thick, heavy-looking chair and looks tired from carrying or moving it. Keep father visually distinct from mother, teacher, generic adults, and passersby. The chair should clearly look heavy, and the father's tiredness should be visible but not exaggerated.",
+          "imageSrc": "/assets/reviews/R029/images/R029-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R029/audio/R029-S04.m4a",
+            "durationMs": 4071,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 880
+              },
+              {
+                "charIndex": 3,
+                "startMs": 880,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1040,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1500,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2580,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2880,
+                "endMs": 3220
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3220,
+                "endMs": 3340
+              }
+            ]
+          }
+        },
+        {
+          "id": "R029-S05",
+          "text": "好幾個小孩在沙地上玩球。",
+          "displayLines": [
+            "好幾個小孩",
+            "在沙地上",
+            "玩球。"
+          ],
+          "spokenText": "好幾個小孩在沙地上玩球",
+          "focusChar": "沙",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Show several generic children playing ball on sand or in a sandy play area. The children must be visually distinct from recurring 我, recurring 你, and recurring 他. Make the sand and ball clearly visible.",
+          "imageSrc": "/assets/reviews/R029/images/R029-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R029/audio/R029-S05.m4a",
+            "durationMs": 4814,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 880
+              },
+              {
+                "charIndex": 3,
+                "startMs": 880,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1140,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1480,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2160,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2540,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 3220
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3220,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3500,
+                "endMs": 3800
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "R029-G01",
+          "type": "find-character",
+          "sentenceId": "R029-S01",
+          "targetChar": "幫",
+          "prompt": "找到「幫」。",
+          "options": [
+            {
+              "id": "R029-G01-A",
+              "text": "幫",
+              "correct": true
+            },
+            {
+              "id": "R029-G01-B",
+              "text": "工",
+              "correct": false
+            },
+            {
+              "id": "R029-G01-C",
+              "text": "作",
+              "correct": false
+            },
+            {
+              "id": "R029-G01-D",
+              "text": "忙",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "R029-G02",
+          "type": "teach-character",
+          "sentenceId": "R029-S02",
+          "targetChar": "急",
+          "targetCharIndex": 1,
+          "prompt": "聽兔兔補回不見的字「急」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/reviews/R029/audio/R029-G02-prefix.m4a",
+            "suffixSrc": "/assets/reviews/R029/audio/R029-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "R029-G03",
+          "type": "missing-character",
+          "sentenceId": "R029-S03",
+          "targetChar": "床",
+          "missingIndexes": [
+            3
+          ],
+          "prompt": "選出不見的字。",
+          "options": [
+            {
+              "id": "R029-G03-A",
+              "text": "床",
+              "correct": true
+            },
+            {
+              "id": "R029-G03-B",
+              "text": "沙",
+              "correct": false
+            },
+            {
+              "id": "R029-G03-C",
+              "text": "椅",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "R029-G04",
+          "type": "partial-order",
+          "sentenceId": "R029-S04",
+          "targetChar": "重",
+          "missingIndexes": [
+            1,
+            2,
+            6,
+            10
+          ],
+          "prompt": "把不見的字照順序放回句子。",
+          "options": [
+            {
+              "id": "R029-G04-A",
+              "text": "張",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "R029-G04-B",
+              "text": "椅",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "R029-G04-C",
+              "text": "搬",
+              "correctOrder": 2,
+              "correct": true
+            },
+            {
+              "id": "R029-G04-D",
+              "text": "累",
+              "correctOrder": 3,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "R029-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "R029-S05",
+          "targetChar": "沙",
+          "prompt": "選出聽到的句子。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "好幾個小孩在沙地上玩球。",
+              "correct": true,
+              "audioSrc": "/assets/reviews/R029/audio/R029-S05.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "好幾個小孩在草地上玩球。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R029/audio/R029-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "好幾個小孩在沙地上打球。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R029/audio/R029-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ],
+      "productionNotes": {
+        "unitKind": "review module",
+        "pairMate": "R030",
+        "milestoneLesson": "L255",
+        "allowedCharacterCeiling": "L255",
+        "reviewMigrationReplacementPackage": false,
+        "provisionalLearnedChars": [],
+        "dependsOnLessons": [
+          "L255 milestone ceiling"
+        ],
+        "ownedBy": "Production C",
+        "branch": "codex/r029-r030-l255-complete-package"
+      },
+      "releaseAudit": {
+        "sharedStateIntegrationOwner": "Release",
+        "doNotModifyInProduction": [
+          "src/curriculum/sample-lessons.json",
+          "public/tools/planner-data.json",
+          "docs/CURRICULUM_LEDGER.md"
+        ]
+      }
+    },
+    {
+      "id": "R030",
+      "reviewNumber": 30,
+      "title": "複習三十",
+      "afterLessonOrder": 255,
+      "targetLessonRange": {
+        "startOrder": 226,
+        "endOrder": 255
+      },
+      "requiredCoverageChars": [
+        "新",
+        "舊",
+        "半",
+        "只",
+        "剩",
+        "夠",
+        "錢",
+        "買",
+        "貴",
+        "賣",
+        "店",
+        "場",
+        "市",
+        "夜",
+        "具",
+        "工",
+        "作",
+        "忙",
+        "幫",
+        "急",
+        "腳",
+        "步",
+        "跳",
+        "床",
+        "搬",
+        "重",
+        "沙",
+        "張",
+        "椅",
+        "累"
+      ],
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "R030-S01",
+          "text": "大風吹，樹上葉子只剩一半。",
+          "displayLines": [
+            "大風吹，",
+            "樹上葉子",
+            "只剩一半。"
+          ],
+          "spokenText": "大風吹樹上葉子只剩一半",
+          "focusChar": "半",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Show a strong wind after it has blown many leaves off a tree. The tree has only about half its leaves left, with fallen leaves on the ground. Make \"only half left\" visually clear without text labels.",
+          "imageSrc": "/assets/reviews/R030/images/R030-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R030/audio/R030-S01.m4a",
+            "durationMs": 4054,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1380,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1700,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3180,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3420,
+                "endMs": 3580
+              }
+            ]
+          }
+        },
+        {
+          "id": "R030-S02",
+          "text": "新書太貴，我的錢不夠買。",
+          "displayLines": [
+            "新書太貴，",
+            "我的錢",
+            "不夠買。"
+          ],
+          "spokenText": "新書太貴我的錢不夠買",
+          "focusChar": "貴",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Use the recurring protagonist girl identity for 我. She is looking at a new book and a price marker, holding money that is clearly not enough to buy it. Avoid readable text on the book or price sign if possible; use visual price cues.",
+          "imageSrc": "/assets/reviews/R030/images/R030-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R030/audio/R030-S02.m4a",
+            "durationMs": 3363,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1800,
+                "endMs": 1890
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1890,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2220,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2480,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2680,
+                "endMs": 2880
+              }
+            ]
+          }
+        },
+        {
+          "id": "R030-S03",
+          "text": "媽媽把舊衣服改好了。",
+          "displayLines": [
+            "媽媽把舊",
+            "衣服改好了。"
+          ],
+          "spokenText": "媽媽把舊衣服改好了",
+          "focusChar": "舊",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Use the recurring protagonist mother identity. Mother has altered or repaired an old piece of clothing, and the clothing now looks neatly fixed or adjusted. She may be at a table or sewing area. The mother must be visually distinct from the teacher and generic women.",
+          "imageSrc": "/assets/reviews/R030/images/R030-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R030/audio/R030-S03.m4a",
+            "durationMs": 3017,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 440
+              },
+              {
+                "charIndex": 2,
+                "startMs": 440,
+                "endMs": 680
+              },
+              {
+                "charIndex": 3,
+                "startMs": 680,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1080,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1300,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1440,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1720,
+                "endMs": 1930
+              },
+              {
+                "charIndex": 8,
+                "startMs": 1930,
+                "endMs": 2140
+              }
+            ]
+          }
+        },
+        {
+          "id": "R030-S04",
+          "text": "市場有人在賣菜。",
+          "displayLines": [
+            "市場有人",
+            "在賣菜。"
+          ],
+          "spokenText": "市場有人在賣菜",
+          "focusChar": "賣",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Show a market with a generic vendor selling vegetables. The vendor is not the protagonist mother and must be visually distinct from mother, teacher, and other recurring adults. Vegetables should be clearly visible. No readable signs or unlearned text.",
+          "imageSrc": "/assets/reviews/R030/images/R030-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R030/audio/R030-S04.m4a",
+            "durationMs": 3585,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1700,
+                "endMs": 1810
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1810,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1920,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2360,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2620,
+                "endMs": 2920
+              }
+            ]
+          }
+        },
+        {
+          "id": "R030-S05",
+          "text": "夜市裡有賣面具的小店。",
+          "displayLines": [
+            "夜市裡有",
+            "賣面具的",
+            "小店。"
+          ],
+          "spokenText": "夜市裡有賣面具的小店",
+          "focusChar": "具",
+          "imagePrompt": "Use the approved L058 lesson images only as style references: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Composition/framing: square image / 1:1 composition, centered subject and key objects, generous safe margins, readable on a phone. Avoid visible text, letters, numbers, zhuyin, labels, signs, UI, watermarks, logos, captions, or speech bubbles. Show a night market with a small shop selling masks. Several child-safe, friendly-looking masks hang or sit on the stall. The scene should clearly be at night, with warm market lights. Do not make the masks scary. No readable signs or unlearned text.",
+          "imageSrc": "/assets/reviews/R030/images/R030-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R030/audio/R030-S05.m4a",
+            "durationMs": 3601,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1820,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2120,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2560,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2840,
+                "endMs": 3000
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "R030-G01",
+          "type": "find-character",
+          "sentenceId": "R030-S01",
+          "targetChar": "半",
+          "prompt": "找到「半」。",
+          "options": [
+            {
+              "id": "R030-G01-A",
+              "text": "半",
+              "correct": true
+            },
+            {
+              "id": "R030-G01-B",
+              "text": "只",
+              "correct": false
+            },
+            {
+              "id": "R030-G01-C",
+              "text": "剩",
+              "correct": false
+            },
+            {
+              "id": "R030-G01-D",
+              "text": "葉",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "R030-G02",
+          "type": "teach-character",
+          "sentenceId": "R030-S02",
+          "targetChar": "貴",
+          "targetCharIndex": 3,
+          "prompt": "聽兔兔補回不見的字「貴」。",
+          "teachAudio": {
+            "prefixSrc": "/assets/reviews/R030/audio/R030-G02-prefix.m4a",
+            "suffixSrc": "/assets/reviews/R030/audio/R030-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "R030-G03",
+          "type": "missing-character",
+          "sentenceId": "R030-S04",
+          "targetChar": "賣",
+          "missingIndexes": [
+            5
+          ],
+          "prompt": "選出不見的字。",
+          "options": [
+            {
+              "id": "R030-G03-A",
+              "text": "賣",
+              "correct": true
+            },
+            {
+              "id": "R030-G03-B",
+              "text": "買",
+              "correct": false
+            },
+            {
+              "id": "R030-G03-C",
+              "text": "店",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "R030-G04",
+          "type": "partial-order",
+          "sentenceId": "R030-S05",
+          "targetChar": "具",
+          "missingIndexes": [
+            0,
+            1,
+            6,
+            9
+          ],
+          "prompt": "把不見的字照順序放回句子。",
+          "options": [
+            {
+              "id": "R030-G04-A",
+              "text": "夜",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "R030-G04-B",
+              "text": "市",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "R030-G04-C",
+              "text": "具",
+              "correctOrder": 2,
+              "correct": true
+            },
+            {
+              "id": "R030-G04-D",
+              "text": "店",
+              "correctOrder": 3,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "R030-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "R030-S03",
+          "targetChar": "舊",
+          "prompt": "選出聽到的句子。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "媽媽把舊衣服改好了。",
+              "correct": true,
+              "audioSrc": "/assets/reviews/R030/audio/R030-S03.m4a"
+            },
+            {
+              "id": "wrong-one",
+              "text": "媽媽把新衣服改好了。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R030/audio/R030-G05-wrong-one.m4a"
+            },
+            {
+              "id": "wrong-two",
+              "text": "爸爸把舊衣服改好了。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R030/audio/R030-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ],
+      "productionNotes": {
+        "unitKind": "review module",
+        "pairMate": "R029",
+        "milestoneLesson": "L255",
+        "allowedCharacterCeiling": "L255",
+        "reviewMigrationReplacementPackage": false,
+        "provisionalLearnedChars": [],
+        "dependsOnLessons": [
+          "L255 milestone ceiling"
+        ],
+        "ownedBy": "Production C",
+        "branch": "codex/r029-r030-l255-complete-package"
+      },
+      "releaseAudit": {
+        "sharedStateIntegrationOwner": "Release",
+        "doNotModifyInProduction": [
+          "src/curriculum/sample-lessons.json",
+          "public/tools/planner-data.json",
+          "docs/CURRICULUM_LEDGER.md"
+        ]
+      }
     }
   ]
 }
