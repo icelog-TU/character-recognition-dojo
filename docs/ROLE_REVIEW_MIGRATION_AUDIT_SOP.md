@@ -37,7 +37,7 @@ Review Migration Audit exists to catch the most likely migration failures:
 Audit one review pair at a time unless the teacher asks otherwise. A normal batch is:
 
 - Two review modules, such as R001/R002.
-- Both complete Production handoff code blocks.
+- Both complete Audit Packet code blocks containing Production-ready content.
 - The Review Migration pair-level audit summary:
   - milestone
   - coverage range

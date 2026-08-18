@@ -405,7 +405,7 @@ The final sentence approval report must include:
 
 ## Sentence Editor Handoff
 
-When a thread is acting as the sentence editor, its job does not end with five good sentences. After the teacher approves the sentence set, the thread must output a complete production handoff following `docs/CURRICULUM_OPERATING_SOP.md` `Five-Thread Curriculum Workflow`.
+When a thread is acting as the sentence editor, its job does not end with five good sentences. After the teacher approves the sentence set, the thread must output a complete production handoff following `docs/CURRICULUM_OPERATING_SOP.md` `Parallel Curriculum Workflow`.
 
 The handoff must tell the receiving production thread to build the whole course package, not only media assets. It must also be one-paste executable: the receiving production thread must be told to claim the unit in the repo and then continue automatically, without waiting for the teacher to re-enter that conversation after an "I claimed it" message.
 

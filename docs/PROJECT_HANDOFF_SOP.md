@@ -18,18 +18,22 @@ If Markdown and production JSON disagree, latest `origin/main:src/curriculum/sam
 
 ## Current Production State
 
-As of latest `origin/main`:
+Repo audit snapshot, maintained by `npm run curriculum:audit-state`:
 
-- App name: `認字練功房`
 - Current reviewed lessons: L001-L318
 - L318 introduces `哪`.
-- Production review modules: R001-R018 currently exist from the retired 30-lesson review schedule.
-- Review schedule migration required: the current rule is every 15 lessons starting after L045, so a curriculum already past L300 needs valid R001-R036 before continuing numbered lesson release past the L300 playable position.
-- L001-L005 use Stage 1-3.
-- L006-L311 include Stage 4 fixed sentence games.
-- Review modules use `R###` ids and do not consume `L###` lesson numbers.
 
-Every new thread must still verify this with `git fetch origin` and `npm run curriculum:audit-state`.
+Do not trust this snapshot by itself, an old chat, a stale local `main`, or a package branch. The current curriculum boundary changes often.
+
+Every new thread must run `git fetch origin` and inspect latest `origin/main:src/curriculum/sample-lessons.json` before deciding:
+
+- the latest shipped numbered lesson
+- the latest learned character set
+- which review modules are already in `reviewLessons`
+- whether any required review pair blocks the next numbered lesson
+- whether a package branch is already obsolete, legacy, or still usable
+
+App name: `認字練功房`. Review modules use `R###` ids, do not consume `L###` lesson numbers, and follow the current 15-lesson milestone schedule starting after L045. L001-L005 use Stage 1-3. L006 and later normal lessons should include Stage 4 fixed sentence games unless the teacher explicitly changes the design.
 
 ## Role SOPs
 
@@ -249,11 +253,11 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/PARALLEL_LESSON_REGISTRY.md
 - docs/LESSON_VISUAL_CAST_SOP.md
 
-你的工作是把舊複習課遷移到最新的 15 課一組複習規則。你有 Editor 等級的句子編輯能力，但只負責複習課句子、coverage、allowedChars、認知難度、imageNotes，以及輸出可一鍵貼給 Production A/B/C/D 的完整 handoff。
+你的工作是把舊複習課遷移到最新的 15 課一組複習規則。你有 Editor 等級的句子編輯能力，但只負責複習課句子、coverage、allowedChars、認知難度、imageNotes，以及輸出可一鍵貼給 Review Migration Audit 的完整 Audit Packet。Audit PASS 後由 Review Migration Audit 產生可貼給 Production A/B/C/D 的乾淨 Production Activation Handoff。
 
 不要製作圖片、不要製作音檔、不要做 alignment、不要更新 production JSON、不要 commit、不要 push，除非老師另外明確要求。
 
-目前優先目標：審查 legacy R001-R018，並補齊/重寫/重新編號到 current schedule 的 R001-R036。每一對 review module 都要依 milestone 鎖定 coverage range 和 allowed-character ceiling，不可以用最新 main 的全部已學字來做舊 milestone 的複習課。
+目前目標依老師指定的缺口而定：審查 legacy review modules，並補齊/重寫/重新編號到 current 15-lesson schedule。每一對 review module 都要依 milestone 鎖定 coverage range 和 allowed-character ceiling，不可以用最新 main 的全部已學字來做舊 milestone 的複習課。到 L300 時需要 R001-R036；同一公式一路延伸到 L600 的 R075/R076。
 
 工作流程：一次只處理一對 review modules。先給老師看 10 句候選句，等老師確認句子後，才寫 imageNotes、Stage 4、完整 Audit Packet。Audit Packet 必須標示 `PENDING REVIEW MIGRATION AUDIT - DO NOT SEND TO PRODUCTION UNTIL AUDIT PASS`，並先交給 Review Migration Audit。Audit PASS 後，由 Audit 產生乾淨的 `Production Activation Handoff`，移除 audit-only 文字並明確指示指定 Production A/B/C/D 立刻 claim 並開始製作；老師只需要把 Audit 產生的 Production Activation Handoff 貼給 Production。
 

@@ -120,7 +120,7 @@ Rules:
 Rules:
 
 - `text` is what appears on screen.
-- `displayLines` is optional. Use it when a sentence needs teacher-approved visual line breaks, such as `["一個", "大大的人"]`. It must contain the same Han characters as `text` in the same order.
+- `displayLines` is optional. Use it when a sentence needs teacher-approved visual line breaks, such as `["一個", "大大的人"]`. When present, `displayLines.join("")` must equal `text` exactly, including punctuation and any learner-facing visible symbol.
 - Each `displayLines` line must be at most 6 visible characters for phone layout. Count punctuation as visible; for example, 6 Han characters plus `，` is 7 visible characters and must be split.
 - `displayLines` must be semantically readable, not only short enough. Prefer breaks at functional phrase boundaries such as subject, object, action, result, condition, time/frequency, short predicate, or natural punctuation. Do not split a natural phrase such as `彩色筆` into `彩色` / `筆` unless no better split is possible.
 - `zhuyinOverrides` is optional. Use it only when a sentence needs a context-specific reading for a previously learned multi-pronunciation character. Keys are zero-based Han-character indices in `text`, skipping punctuation. For example, if a multi-pronunciation character is the fifth Han character in `text`, use key `"4"`. Do not change the lesson-level `zhuyin` entry just to fix one sentence context.

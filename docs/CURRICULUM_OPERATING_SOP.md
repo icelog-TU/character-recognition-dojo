@@ -148,18 +148,18 @@ Production release is a single lane:
 
 This means three conversations can prepare L052, L053, and L054 at the same time only if they are in separate worktree slots. `main` still receives L052 first, then L053, then L054.
 
-## Five-Thread Curriculum Workflow
+## Parallel Curriculum Workflow
 
-The standard parallel curriculum production lane uses five conversation threads:
+The standard parallel curriculum worker lane uses six conversation threads:
 
 1. **Sentence editor thread:** drafts with the teacher, performs the allowed-character and coverage audits, and records the teacher-approved final sentence set.
 2. **Production thread A:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-a`.
 3. **Production thread B:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-b`.
 4. **Production thread C:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-c`.
 5. **Production thread D:** builds one assigned lesson/review unit from a complete handoff in `worktrees\parallel-d`.
-5. **Release thread:** receives completed units, rebases on latest `origin/main`, merges in playable order, runs gates, pushes, and checks deployment.
+6. **Release thread:** receives completed units, rebases on latest `origin/main`, merges in playable order, runs gates, pushes, and checks deployment.
 
-The full operating model normally has eight open conversation windows across five role types: Supervisor, Editor, Production A, Production B, Production C, Production D, Release, and Asset Repair. Supervisor and Asset Repair sit outside the six-thread production lane. Visual Refresh is an optional additional role for planned image-only refresh batches on already-merged old lessons. Use the role-specific SOP files from `docs/PROJECT_HANDOFF_SOP.md` when opening new windows.
+The full operating model normally has eight open conversation windows across five core role types: Supervisor, Editor, Production A, Production B, Production C, Production D, Release, and Asset Repair. Supervisor and Asset Repair sit outside the six-thread worker lane. Review Migration, Review Migration Audit, and Visual Refresh are optional specialized roles. Use the role-specific SOP files from `docs/PROJECT_HANDOFF_SOP.md` when opening new windows.
 
 The sentence editor thread is not allowed to send only "make images and audio" instructions. After the teacher approves sentences, it must output a complete production handoff for each unit and either create or explicitly require the receiving production thread to create all source files listed below.
 
@@ -515,8 +515,10 @@ Do not overwrite another thread's lesson request, asset folder, registry row, or
 
 ## Current Production State
 
-As of latest `origin/main`, production curriculum is complete through L311, L311 introduces `次`, and review modules R001-R018 exist from the legacy 30-lesson schedule.
+Do not hard-code the current production boundary from this document. It changes many times per day. At the start of any Editor, Production, Release, Review Migration, Audit, Repair, or Supervisor task, run `git fetch origin` and read `origin/main:src/curriculum/sample-lessons.json` directly.
 
-Under the current 15-lesson review-blocker rule, the review schedule needs migration before further numbered lesson release. For a course already through L311, review pairs through the L300 milestone are required before the playable sequence should continue past L300: R001-R036 under the new schedule. Existing legacy R001-R018 must be audited or rebuilt against the new meanings before they count.
+If a handoff contains a current-state snapshot, treat it only as the sender's last-known context. Reconfirm against latest `origin/main` before using it as an allowed-character boundary, dependency boundary, release blocker, or package status.
 
-L001-L005 use the simpler Stage 1-3 flow. L006-L311 already include Stage 4 sentence games after picture-supported sentence listening. Future production lessons should keep Stage 4 unless the teacher explicitly changes the lesson design.
+Under the current 15-lesson review-blocker rule, migrated review modules are required at each milestone before later numbered lessons become playable. Existing legacy review modules must be audited or rebuilt against the current milestone, coverage range, and allowed-character ceiling before they count.
+
+L001-L005 use the simpler Stage 1-3 flow. L006 and later normal lessons should include Stage 4 sentence games after picture-supported sentence listening unless the teacher explicitly changes the lesson design.

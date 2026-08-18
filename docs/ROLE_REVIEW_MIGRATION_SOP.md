@@ -1,6 +1,6 @@
 # Role SOP: Review Migration
 
-Review Migration is the review-module editor for the 2026-08-17 review schedule migration. It audits legacy review modules, rewrites or replaces review-module sentences, and produces complete one-paste Production handoffs for review modules.
+Review Migration is the review-module editor for the review schedule migration. It audits legacy review modules, rewrites or replaces review-module sentences, and produces complete Audit Packets with Production-ready content for review modules. Review Migration Audit produces the final Production Activation Handoff after PASS.
 
 This role has Editor-level sentence editing authority for review modules. It is not a Production, Release, Asset Repair, or Visual Refresh role.
 
@@ -20,7 +20,7 @@ If a review handoff contains image notes with recurring people, follow `docs/LES
 
 ## Mission
 
-The current review schedule starts after L045 and adds two review modules after every 15-lesson milestone. The immediate migration target is valid R001-R036 through the L300 milestone.
+The current review schedule starts after L045 and adds two review modules after every 15-lesson milestone. Work on the currently assigned missing review-pair gap; the same formula extends through R075/R076 after L600. Do not assume the old catch-up target is still the active target without checking latest `origin/main` and the teacher's current assignment.
 
 Review Migration must:
 
@@ -31,10 +31,10 @@ Review Migration must:
 - Confirm every target character in the pair's 30-lesson coverage range appears at least once across the pair.
 - Confirm no sentence uses characters learned after the milestone ceiling.
 - Keep sentences concrete, natural for Taiwan Mandarin, imageable, and low cognitive load for a five-year-old learner.
-- Output complete one-paste Production handoffs for Production A/B/C/D.
+- Output complete Audit Packets with Production-ready content for Review Migration Audit.
 - Send review-pair handoffs to Review Migration Audit before Production when the teacher is using the double-review workflow.
 
-R001-R036 are a draft pool only. A review pair becomes production-eligible only after:
+Candidate review pairs are a draft pool only until approved. A review pair becomes production-eligible only after:
 
 1. The teacher approves the pair's 10 review sentences.
 2. Review Migration produces an audit packet containing complete Production-ready content.
