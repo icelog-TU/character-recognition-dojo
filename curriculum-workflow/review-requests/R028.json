@@ -1,0 +1,280 @@
+{
+  "id": "R028",
+  "kind": "review",
+  "reviewNumber": 28,
+  "title": "複習二十八",
+  "pairMateId": "R027",
+  "afterLessonOrder": 240,
+  "targetLessonRange": {
+    "startOrder": 211,
+    "endOrder": 240
+  },
+  "requiredCoverageChars": [
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具"
+  ],
+  "targetSentenceCount": 5,
+  "requiredRounds": 5,
+  "generationConstraints": {
+    "sentenceHanCharLength": {
+      "min": 4,
+      "max": 12
+    },
+    "requiredCoverageChars": [
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具"
+    ],
+    "allowedBoundary": "Production JSON learned characters through L240 only. R027/R028 are review modules and introduce no new characters."
+  },
+  "teacherNotes": "R028 is part of the R027/R028 review pair after L240, covering L211-L240. Review modules introduce no newChars, zhuyin, or charAudio. Review migration audit passed; Production prepares asset-complete package only and leaves shared-state integration to Release.",
+  "approvedSentences": [
+    {
+      "id": "R028-S01",
+      "text": "白飯只剩一點，一人分一半。",
+      "spokenText": "白飯只剩一點一人分一半",
+      "focusChar": "半",
+      "displayLines": [
+        "白飯只剩",
+        "一點，",
+        "一人分一半。"
+      ],
+      "imageNotes": "Show two generic children, visually distinct from recurring 我, 你, and 他, sitting at a table with only a little white rice left. They divide the remaining white rice into two equal halves, one half for each child. Make only a little rice remains and one person gets one half visually clear. No text labels."
+    },
+    {
+      "id": "R028-S02",
+      "text": "新玩具太貴，我的錢不夠買。",
+      "spokenText": "新玩具太貴我的錢不夠買",
+      "focusChar": "貴",
+      "displayLines": [
+        "新玩具太貴，",
+        "我的錢",
+        "不夠買。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity for 我. The girl is looking at a new toy with a visible price tag or price marker using simple non-text visual cues if possible. She holds a small amount of money, clearly not enough to buy the toy. Avoid readable Chinese signs or numerals."
+    },
+    {
+      "id": "R028-S03",
+      "text": "媽媽把舊衣服改好了。",
+      "spokenText": "媽媽把舊衣服改好了",
+      "focusChar": "舊",
+      "displayLines": [
+        "媽媽把舊",
+        "衣服改好了。"
+      ],
+      "imageNotes": "Use the recurring protagonist mother identity. Mother has altered or repaired an old piece of clothing, and the clothing now looks neatly fixed or adjusted. She may be at a table or sewing area. The mother must be visually distinct from the teacher and generic women."
+    },
+    {
+      "id": "R028-S04",
+      "text": "市場裡有一間賣玩具的店。",
+      "spokenText": "市場裡有一間賣玩具的店",
+      "focusChar": "店",
+      "displayLines": [
+        "市場裡",
+        "有一間",
+        "賣玩具的店。"
+      ],
+      "imageNotes": "Show a market with one small shop or stall selling toys. Toys should be visible on the stall or shelves. Use varied generic adults and passersby if people appear; do not reuse mother, teacher, or recurring child identities. Do not include readable signs or unlearned text."
+    },
+    {
+      "id": "R028-S05",
+      "text": "夜市裡有很多人。",
+      "spokenText": "夜市裡有很多人",
+      "focusChar": "夜",
+      "displayLines": [
+        "夜市裡",
+        "有很多人。"
+      ],
+      "imageNotes": "Show a night market scene with warm lights, stalls, and many varied generic people walking around. The scene should clearly be at night. No readable signs or unlearned text. Generic adults and children should be visually varied and not confused with recurring cast."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R028-G01",
+      "type": "find-character",
+      "sentenceId": "R028-S02",
+      "targetChar": "貴",
+      "prompt": "找到「貴」。",
+      "options": [
+        {
+          "id": "R028-G01-A",
+          "text": "貴",
+          "correct": true
+        },
+        {
+          "id": "R028-G01-B",
+          "text": "錢",
+          "correct": false
+        },
+        {
+          "id": "R028-G01-C",
+          "text": "買",
+          "correct": false
+        },
+        {
+          "id": "R028-G01-D",
+          "text": "新",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R028-G02",
+      "type": "teach-character",
+      "sentenceId": "R028-S04",
+      "targetChar": "店",
+      "targetCharIndex": 10,
+      "prompt": "跟著念「店」。",
+      "teachAudio": {
+        "prefixSrc": "/assets/reviews/R028/audio/R028-G02-prefix.m4a"
+      },
+      "teachAudioText": {
+        "prefixText": "市場裡有一間賣玩具的",
+        "suffixText": ""
+      }
+    },
+    {
+      "id": "R028-G03",
+      "type": "missing-character",
+      "sentenceId": "R028-S05",
+      "targetChar": "夜",
+      "prompt": "找出少掉的字。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "R028-G03-A",
+          "text": "夜",
+          "correct": true
+        },
+        {
+          "id": "R028-G03-B",
+          "text": "市",
+          "correct": false
+        },
+        {
+          "id": "R028-G03-C",
+          "text": "人",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R028-G04",
+      "type": "partial-order",
+      "sentenceId": "R028-S01",
+      "targetChar": "半",
+      "prompt": "把字放回正確位置。",
+      "missingIndexes": [
+        2,
+        3,
+        10
+      ],
+      "options": [
+        {
+          "id": "option-1",
+          "text": "只",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "option-2",
+          "text": "剩",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "option-3",
+          "text": "半",
+          "correctOrder": 2,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "R028-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R028-S03",
+      "targetChar": "舊",
+      "prompt": "選出正確的句子。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "媽媽把舊衣服改好了。",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R028/audio/R028-S03.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "媽媽把新衣服改好了。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R028/audio/R028-G05-wrong-one.m4a",
+          "spokenText": "媽媽把新衣服改好了"
+        },
+        {
+          "id": "wrong-two",
+          "text": "爸爸把舊衣服改好了。",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R028/audio/R028-G05-wrong-two.m4a",
+          "spokenText": "爸爸把舊衣服改好了"
+        }
+      ]
+    }
+  ]
+}
