@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L327 | 直 | claimed | Production C | codex/l327-complete-package | L324:圖; L325:向; L326:線 | 圖 向 線 | curriculum-workflow/lesson-requests/L327.json; curriculum-workflow/generated/L327-generation-packet.md; curriculum-workflow/drafts/L327-draft.json | curriculum-workflow/audio-inbox/L327/; public/assets/lessons/L327/ | Asset-complete-package claim from latest origin/main through L323:方. L323 and R037/R038 are already in origin/main at claim time. |
 
 ## Status Values
 
