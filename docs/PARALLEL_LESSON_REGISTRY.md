@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L328 | 轉 / normal lesson | claimed | Production D | codex/l328-complete-package / 0c883894 | L324 圖, L325 向, L326 線, L327 直 | ["圖","向","線","直"] | curriculum-workflow/lesson-requests/L328.json, curriculum-workflow/generated/L328-generation-packet.md | public/assets/lessons/L328/images/, public/assets/lessons/L328/audio/ | accepted handoff and starting complete package |
 
 ## Status Values
 
