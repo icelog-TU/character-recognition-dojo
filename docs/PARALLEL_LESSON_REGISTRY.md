@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L323 | 方 / normal lesson | claimed | Production B | codex/l323-complete-package | None | None | `curriculum-workflow/lesson-requests/L323.json`; `curriculum-workflow/generated/L323-generation-packet.md`; `curriculum-workflow/drafts/L323-draft.json` | `public/assets/lessons/L323/`; `curriculum-workflow/audio-inbox/L323/` | Teacher-approved Editor handoff; L322 is already merged in latest origin/main; build asset-complete package. |
 
 ## Status Values
 
