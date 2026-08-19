@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L325 | 向 / normal lesson | claimed | Production D | codex/l325-complete-package / fe9b3d26 | L323 方, L324 圖 | ["方","圖"] | curriculum-workflow/lesson-requests/L325.json, curriculum-workflow/generated/L325-generation-packet.md | public/assets/lessons/L325/images/, public/assets/lessons/L325/audio/ | accepted handoff and starting complete package |
+| L325 | 向 / normal lesson | ready-blocked-by-dependency | Production D | codex/l325-complete-package / 8b5fe834 | L323 方, L324 圖 | ["方","圖"] | curriculum-workflow/lesson-requests/L325.json, curriculum-workflow/generated/L325-generation-packet.md | public/assets/lessons/L325/images/, public/assets/lessons/L325/audio/ | complete local package; blocked until L323 and L324 enter production JSON; images side-by-side reviewed against L058/cast anchors |
 
 ## Status Values
 
