@@ -1,0 +1,292 @@
+{
+  "id": "L324",
+  "order": 324,
+  "newChars": [
+    "圖"
+  ],
+  "zhuyin": {
+    "圖": "ㄊㄨˊ"
+  },
+  "title": "圖",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete-package handoff for L324. Latest origin/main at claim includes L323 方, so the handoff dependency on L323 is resolved. Approved sentences are fixed; do not change text. Release owns shared-state integration.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L323 + current new char 圖",
+    "allowedCharsLocked": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "圖",
+      "方",
+      "東",
+      "西",
+      "最",
+      "些"
+    ],
+    "targetCharMinimumCount": {
+      "圖": 3
+    },
+    "recentTargetMinimumCounts": {
+      "方": 2,
+      "東": 2,
+      "西": 2,
+      "最": 1,
+      "些": 1
+    },
+    "coverageCounts": {
+      "圖": 5,
+      "方": 2,
+      "東": 2,
+      "西": 2,
+      "最": 1,
+      "些": 1,
+      "哪": 2
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 13
+    },
+    "forbiddenDisplayChars": [],
+    "displayLineMaxVisibleChars": 6,
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 S01-S05 lesson images only as illustration style references; do not copy any L058 person identity.",
+      "Open each final WebP and compare side by side with L058 S01-S05 and relevant cast anchors before accepting.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Mother, teacher, worker uncle, generic classmates, generic adults, and generic children must remain visually distinct.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 圖 as public/assets/lessons/L324/audio/char-u5716.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix and suffix from exact fragments 老師叫同學看 and 說話.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L324-S01",
+      "text": "地圖上，東方和西方在哪裡？",
+      "spokenText": "地圖上東方和西方在哪裡",
+      "focusChar": "圖",
+      "displayLines": [
+        "地圖上，",
+        "東方和西方",
+        "在哪裡？"
+      ],
+      "hanCount": 11,
+      "imageNotes": "主角小女孩坐在桌邊看一張簡單彩色地圖，地圖上有東方和西方的方向標示，或用太陽升起、下山的小圖示輔助方向。主角小女孩用手指著地圖，好像在找「東方和西方在哪裡」。"
+    },
+    {
+      "id": "L324-S02",
+      "text": "老師叫同學看圖說話。",
+      "spokenText": "老師叫同學看圖說話",
+      "focusChar": "圖",
+      "displayLines": [
+        "老師叫同學",
+        "看圖說話。"
+      ],
+      "hanCount": 9,
+      "imageNotes": "教室場景，老師站在教室前方，拿著或指著一張大圖卡；幾位 generic classmates 坐著看圖，有一位同學正在舉手說話。人物身份要明確：老師、generic classmates。"
+    },
+    {
+      "id": "L324-S03",
+      "text": "這些圖畫，哪一張最好看？",
+      "spokenText": "這些圖畫哪一張最好看",
+      "focusChar": "圖",
+      "displayLines": [
+        "這些圖畫，",
+        "哪一張",
+        "最好看？"
+      ],
+      "hanCount": 10,
+      "imageNotes": "桌上或牆上排著幾張不同的兒童圖畫，有花、樹、房子、天空等不同內容。主角小女孩和主角媽媽一起看這些圖畫，主角小女孩像是在問哪一張最好看。"
+    },
+    {
+      "id": "L324-S04",
+      "text": "工人先看工作圖，才動手做。",
+      "spokenText": "工人先看工作圖才動手做",
+      "focusChar": "圖",
+      "displayLines": [
+        "工人先看",
+        "工作圖，",
+        "才動手做。"
+      ],
+      "hanCount": 11,
+      "imageNotes": "工人叔叔在工作桌前，先看一張工作圖，上面有簡單的木工或組裝圖；桌上有木板、工具、半完成的小架子。重點是「先看工作圖，再動手做」，不要畫成已經完成很久的作品。"
+    },
+    {
+      "id": "L324-S05",
+      "text": "這張地圖，東邊是學校，西邊是家。",
+      "spokenText": "這張地圖東邊是學校西邊是家",
+      "focusChar": "圖",
+      "displayLines": [
+        "這張地圖，",
+        "東邊是學校，",
+        "西邊是家。"
+      ],
+      "hanCount": 13,
+      "imageNotes": "一張簡單兒童地圖攤在桌上，地圖東邊標示學校，西邊標示家，中間有路。主角小女孩指著地圖上的學校和家，看起來正在理解方向和位置。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L324-G01",
+      "type": "find-character",
+      "sentenceId": "L324-S01",
+      "targetChar": "圖",
+      "targetCharIndex": 1,
+      "prompt": "找到「圖」。",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "L324-G01-A",
+          "text": "圖",
+          "correct": true
+        },
+        {
+          "id": "L324-G01-B",
+          "text": "方",
+          "correct": false
+        },
+        {
+          "id": "L324-G01-C",
+          "text": "東",
+          "correct": false
+        },
+        {
+          "id": "L324-G01-D",
+          "text": "西",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L324-G02",
+      "type": "teach-character",
+      "sentenceId": "L324-S02",
+      "targetChar": "圖",
+      "targetCharIndex": 6,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        6
+      ],
+      "teachAudio": {
+        "prefixText": "老師叫同學看",
+        "suffixText": "說話",
+        "prefixSrc": "/assets/lessons/L324/audio/L324-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L324/audio/L324-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L324-G03",
+      "type": "missing-character",
+      "sentenceId": "L324-S04",
+      "targetChar": "圖",
+      "targetCharIndex": 6,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        {
+          "id": "L324-G03-A",
+          "text": "圖",
+          "correct": true
+        },
+        {
+          "id": "L324-G03-B",
+          "text": "書",
+          "correct": false
+        },
+        {
+          "id": "L324-G03-C",
+          "text": "畫",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L324-G04",
+      "type": "partial-order",
+      "sentenceId": "L324-S05",
+      "targetChar": "圖",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "options": [
+        {
+          "id": "L324-G04-A",
+          "text": "地",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L324-G04-B",
+          "text": "圖",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L324-G04-C",
+          "text": "東",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L324-G04-D",
+          "text": "邊",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L324-G04-A",
+        "L324-G04-B",
+        "L324-G04-C",
+        "L324-G04-D"
+      ]
+    },
+    {
+      "id": "L324-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L324-S03",
+      "targetChar": "圖",
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L324-G05-A",
+          "text": "這些圖畫，哪一張最好看？",
+          "correct": true,
+          "sentenceId": "L324-S03",
+          "audioSrc": "/assets/lessons/L324/audio/L324-S03.m4a",
+          "spokenText": "這些圖畫哪一張最好看"
+        },
+        {
+          "id": "L324-G05-B",
+          "text": "這些圖畫，哪一張最難看？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L324/audio/L324-G05-wrong-one.m4a",
+          "spokenText": "這些圖畫哪一張最難看"
+        },
+        {
+          "id": "L324-G05-C",
+          "text": "這些圖畫，哪一張最大？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L324/audio/L324-G05-wrong-two.m4a",
+          "spokenText": "這些圖畫哪一張最大"
+        }
+      ]
+    }
+  ]
+}
