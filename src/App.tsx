@@ -5664,7 +5664,7 @@ function SentencePracticePreview({
       void runTeachCharacterIntro(resetRunId);
       return;
     }
-    void speakStageFour(gameGuideText(game, "reading"));
+    void runHelperIntro(resetRunId);
   }
 
   function revealAnswer() {
@@ -6058,7 +6058,6 @@ function SentencePracticePreview({
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
             🔊 重播這一句
           </button>
-          <p className="block-note">點一下找到的字。</p>
         </>
       );
     }
@@ -6216,10 +6215,14 @@ function SentencePracticePreview({
       )}
       {isCurrentRoundComplete && (
         <div ref={roundCompleteActionRef} className="sentence-game-complete">
-          <p className="success">完成這一題。</p>
-          <button type="button" className="btn next-game-button" onClick={() => onRoundDone(doneAfterThisRound)}>
-            {doneAfterThisRound ? "領取獎勵" : "下一題"}
-          </button>
+          <div className="sentence-game-complete-actions">
+            <button type="button" className="btn redo-game-button" disabled={disabled} onClick={resetCurrentRound}>
+              重做這一題
+            </button>
+            <button type="button" className="btn next-game-button" onClick={() => onRoundDone(doneAfterThisRound)}>
+              {doneAfterThisRound ? "領取獎勵" : "下一題"}
+            </button>
+          </div>
         </div>
       )}
     </>
