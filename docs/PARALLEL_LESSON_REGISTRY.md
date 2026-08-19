@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L324 | 圖 | claimed | Production C | codex/l324-complete-package |  |  | curriculum-workflow/lesson-requests/L324.json; curriculum-workflow/generated/L324-generation-packet.md; curriculum-workflow/drafts/L324-draft.json | curriculum-workflow/audio-inbox/L324/; public/assets/lessons/L324/ | Asset-complete-package claim from latest origin/main through L323:方. Handoff dependency on L323 is already resolved in origin/main at claim time. |
 
 ## Status Values
 
