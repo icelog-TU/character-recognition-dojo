@@ -1,0 +1,282 @@
+{
+  "id": "L325",
+  "order": 325,
+  "newChars": [
+    "向"
+  ],
+  "zhuyin": {
+    "向": "ㄒㄧㄤˋ"
+  },
+  "title": "向",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production D asset-complete package for L325 向. Approved sentences are fixed by Editor handoff. Latest origin/main production JSON is complete through L322 東, so L323 方 and L324 圖 remain dependencies and provisional learned characters until Release integrates them. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
+  "dependsOnLessons": [
+    "L323",
+    "L324"
+  ],
+  "provisionalLearnedChars": [
+    "方",
+    "圖"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L322 + provisionalLearnedChars 方 圖 + current new char 向",
+    "dependsOnLessons": [
+      "L323",
+      "L324"
+    ],
+    "provisionalLearnedChars": [
+      "方",
+      "圖"
+    ],
+    "requiredCoverageChars": [
+      "向",
+      "圖",
+      "方",
+      "東",
+      "西",
+      "最"
+    ],
+    "targetCharMinimumCount": {
+      "向": 3
+    },
+    "recentTargetMinimumCounts": {
+      "圖": 2,
+      "方": 2,
+      "東": 2,
+      "西": 1,
+      "最": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, direction labels, compass letters, or watermarks anywhere.",
+      "Natural directional cues are allowed, but do not rely on written labels, arrows, or compass text.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop.",
+      "Reject and regenerate any image that drifts from the L058 pencil-and-watercolor style or recurring cast continuity."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 向 as public/assets/lessons/L325/audio/char-u5411.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix and suffix audio from exact fragments 風從東邊吹 and 西邊.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L325-S01",
+      "text": "看地圖，先向東方走。",
+      "spokenText": "看地圖先向東方走",
+      "focusChar": "向",
+      "displayLines": [
+        "看地圖，",
+        "先向東方走。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity and recurring protagonist father identity. The girl and father stand at an outdoor road intersection, looking at a simple map together. The father points to the map and the girl is ready to walk along the road toward the east side. The image must clearly show looking at a map and walking toward the east direction without visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, watermarks, compass letters, or direction words."
+    },
+    {
+      "id": "L325-S02",
+      "text": "風從東邊吹向西邊。",
+      "spokenText": "風從東邊吹向西邊",
+      "focusChar": "向",
+      "displayLines": [
+        "風從東邊",
+        "吹向西邊。"
+      ],
+      "imageNotes": "Outdoor scene with wind blowing leaves or ribbons across the frame from the east side toward the west side. Use natural motion cues such as leaning trees, drifting leaves, and flowing ribbons to show the wind direction. Do not make written direction labels, arrows, compass marks, letters, numbers, Chinese characters, zhuyin, signs, logos, labels, or watermarks the subject."
+    },
+    {
+      "id": "L325-S03",
+      "text": "這樣拿，地圖的方向才對。",
+      "spokenText": "這樣拿地圖的方向才對",
+      "focusChar": "向",
+      "displayLines": [
+        "這樣拿，",
+        "地圖的方向",
+        "才對。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity and recurring protagonist mother or father identity. The girl holds a simple map while the parent helps her rotate it correctly. The map should show a simple route line and non-text visual direction cues, making it clear that the map is now held the right way. Do not show readable words, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, compass letters, direction words, or watermarks."
+    },
+    {
+      "id": "L325-S04",
+      "text": "爸爸指向最亮的星。",
+      "spokenText": "爸爸指向最亮的星",
+      "focusChar": "向",
+      "displayLines": [
+        "爸爸指向",
+        "最亮的星。"
+      ],
+      "imageNotes": "Nighttime outdoor scene. Use the recurring protagonist father identity and recurring protagonist girl identity. The father raises his hand and points toward the brightest star in the sky, while the girl stands beside him and looks in the same direction. The sky has several stars, with one clearly the brightest. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L325-S05",
+      "text": "一隻小鳥飛向東邊。",
+      "spokenText": "一隻小鳥飛向東邊",
+      "focusChar": "向",
+      "displayLines": [
+        "一隻小鳥",
+        "飛向東邊。"
+      ],
+      "imageNotes": "Daytime outdoor sky scene. One small bird is flying toward the east side, with natural visual cues such as the low morning sun on that side to suggest east without words. The bird is the main subject. Do not use written labels, arrows, direction symbols, compass letters, letters, numbers, Chinese characters, zhuyin, signs, logos, or watermarks."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L325-G01",
+      "type": "find-character",
+      "sentenceId": "L325-S01",
+      "targetChar": "向",
+      "targetCharIndex": 4,
+      "prompt": "找到「向」。",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        {
+          "id": "L325-G01-A",
+          "text": "向",
+          "correct": true
+        },
+        {
+          "id": "L325-G01-B",
+          "text": "東",
+          "correct": false
+        },
+        {
+          "id": "L325-G01-C",
+          "text": "西",
+          "correct": false
+        },
+        {
+          "id": "L325-G01-D",
+          "text": "方",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L325-G02",
+      "type": "teach-character",
+      "sentenceId": "L325-S02",
+      "targetChar": "向",
+      "targetCharIndex": 5,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        5
+      ],
+      "teachAudio": {
+        "prefixText": "風從東邊吹",
+        "suffixText": "西邊",
+        "prefixSrc": "/assets/lessons/L325/audio/L325-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L325/audio/L325-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L325-G03",
+      "type": "missing-character",
+      "sentenceId": "L325-S04",
+      "targetChar": "向",
+      "targetCharIndex": 3,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        {
+          "id": "L325-G03-A",
+          "text": "向",
+          "correct": true
+        },
+        {
+          "id": "L325-G03-B",
+          "text": "東",
+          "correct": false
+        },
+        {
+          "id": "L325-G03-C",
+          "text": "西",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L325-G04",
+      "type": "partial-order",
+      "sentenceId": "L325-S03",
+      "targetChar": "向",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "options": [
+        {
+          "id": "L325-G04-A",
+          "text": "圖",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L325-G04-B",
+          "text": "的",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L325-G04-C",
+          "text": "方",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L325-G04-D",
+          "text": "向",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L325-G04-A",
+        "L325-G04-B",
+        "L325-G04-C",
+        "L325-G04-D"
+      ]
+    },
+    {
+      "id": "L325-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L325-S05",
+      "targetChar": "向",
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L325-G05-A",
+          "text": "一隻小鳥飛向東邊。",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L325/audio/L325-S05.m4a"
+        },
+        {
+          "id": "L325-G05-B",
+          "text": "一隻小鳥飛向西邊。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L325/audio/L325-G05-wrong-one.m4a"
+        },
+        {
+          "id": "L325-G05-C",
+          "text": "一隻小鳥飛向上方。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L325/audio/L325-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
