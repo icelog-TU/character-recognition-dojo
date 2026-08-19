@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R039/R040 | review pair after L330 | claimed | Production A | codex/r039-r040-complete-package | none; L330 is in main | none | `curriculum-workflow/review-requests/R039.json`; `curriculum-workflow/review-requests/R040.json`; `curriculum-workflow/generated/R039-generation-packet.md`; `curriculum-workflow/generated/R040-generation-packet.md`; `curriculum-workflow/drafts/R039-draft.json`; `curriculum-workflow/drafts/R040-draft.json` | `curriculum-workflow/audio-inbox/R039/`; `curriculum-workflow/audio-inbox/R040/`; `public/assets/reviews/R039/`; `public/assets/reviews/R040/` | Current-schedule review pair covering L301-L330 with allowed ceiling through L330 only. |
+| R039/R040 | review pair after L330 | merge-ready | Production A | codex/r039-r040-complete-package | none; L330 is in main | none | `curriculum-workflow/review-requests/R039.json`; `curriculum-workflow/review-requests/R040.json`; `curriculum-workflow/generated/R039-generation-packet.md`; `curriculum-workflow/generated/R040-generation-packet.md`; `curriculum-workflow/drafts/R039-draft.json`; `curriculum-workflow/drafts/R040-draft.json` | `curriculum-workflow/audio-inbox/R039/`; `curriculum-workflow/audio-inbox/R040/`; `public/assets/reviews/R039/`; `public/assets/reviews/R040/` | Asset-complete review pair covering L301-L330 with allowed ceiling through L330 only. Release owns production JSON, planner-data, ledger integration, and registry cleanup. |
 
 ## Status Values
 
