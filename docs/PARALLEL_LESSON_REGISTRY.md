@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L333 | 原 / normal lesson | claimed | Production B | codex/l333-complete-package | L331; L332 | 落; 因 | `curriculum-workflow/lesson-requests/L333.json`; `curriculum-workflow/generated/L333-generation-packet.md`; `curriculum-workflow/drafts/L333-draft.json` | `public/assets/lessons/L333/`; `curriculum-workflow/audio-inbox/L333/` | Teacher-approved Editor handoff; build dependency-blocked asset-complete package; Release owns ordered integration. |
+| L333 | 原 / normal lesson | ready-blocked-by-dependency | Production B | codex/l333-complete-package | L331; L332 | 落; 因 | `curriculum-workflow/lesson-requests/L333.json`; `curriculum-workflow/generated/L333-generation-packet.md`; `curriculum-workflow/drafts/L333-draft.json` | `public/assets/lessons/L333/`; `curriculum-workflow/audio-inbox/L333/` | Asset-complete package built; blocked until L331 and L332 are integrated; Release owns ordered integration. |
 
 ## Status Values
 

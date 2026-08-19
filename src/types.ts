@@ -93,4 +93,7 @@ export interface SentenceGameOption {
   text: string;
   correct: boolean;
   audioSrc?: string;
+  pronunciationText?: string;
+  spokenText?: string;
+  ttsText?: string;
 }

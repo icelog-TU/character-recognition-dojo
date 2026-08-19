@@ -154,7 +154,7 @@ if (includeGameAudio) {
     if (game.type === "choose-pronunciation") {
       for (const option of game.options ?? []) {
         if (option.correct === true || !option.audioSrc) continue;
-        addJob(option.text, path.join(outputDir, draftNameFromAudioSrc(option.audioSrc)));
+        addJob(option.ttsText ?? option.spokenText ?? option.text, path.join(outputDir, draftNameFromAudioSrc(option.audioSrc)));
       }
     }
   }

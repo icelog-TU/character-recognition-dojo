@@ -1,0 +1,302 @@
+{
+  "id": "L333",
+  "order": 333,
+  "kind": "lesson",
+  "newChars": [
+    "原"
+  ],
+  "zhuyin": {
+    "原": "ㄩㄢˊ"
+  },
+  "title": "原",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Editor handoff for L333 原. Latest origin/main is complete through L330 角. L333 depends on L331 落 and L332 因 unless they merge before Release integration. Production builds a dependency-blocked asset-complete package; Release owns ordered integration.",
+  "dependsOnLessons": [
+    "L331",
+    "L332"
+  ],
+  "provisionalLearnedChars": [
+    "落",
+    "因"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L330 plus provisional chars 落 因 plus current new char 原",
+    "dependsOnLessons": [
+      "L331",
+      "L332"
+    ],
+    "provisionalLearnedChars": [
+      "落",
+      "因"
+    ],
+    "requiredCoverageChars": [
+      "原",
+      "因",
+      "落",
+      "角",
+      "右",
+      "轉"
+    ],
+    "targetCharMinimumCount": {
+      "原": 3
+    },
+    "recentTargetMinimumCounts": {
+      "因": 2,
+      "落": 2,
+      "角": 2,
+      "右": 1,
+      "轉": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Also compare each final exported WebP side by side with refined preferred examples L115-S01, L115-S02, L118-S02, L119-S01, and L128-S03.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Mother, father, protagonist girl, and generic adults must remain visually distinct.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, arrows, labels, captions, logos, brands, UI symbols, road names, map labels, store signs, explanatory markings, or watermarks anywhere.",
+      "Before accepting each final WebP image, compare side by side with L058 style anchors, refined preferred examples, and relevant cast anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 原 as public/assets/lessons/L333/audio/char-u539f.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix and suffix from exact fragments 好冷 and 來是因為門沒關.",
+      "Generate G04 wrong-option audio as standalone whole-sentence files from exact whole-sentence pronunciation variants, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L333-S01",
+      "text": "前面轉角右轉，就能看到車站。",
+      "spokenText": "前面轉角右轉就能看到車站",
+      "focusChar": "轉",
+      "displayLines": [
+        "前面轉角",
+        "右轉，就能",
+        "看到車站。"
+      ],
+      "imageNotes": "爸爸開車，媽媽坐在旁邊看地圖幫爸爸指路；車子行駛到前方轉角，情境是右轉後就會看到車站。不要使用箭頭、文字、路名或標籤。"
+    },
+    {
+      "id": "L333-S02",
+      "text": "好冷，原來是因為門沒關。",
+      "spokenText": "好冷原來是因為門沒關",
+      "focusChar": "原",
+      "displayLines": [
+        "好冷，",
+        "原來是因為",
+        "門沒關。"
+      ],
+      "imageNotes": "家裡客廳或房間裡，門開著，冷風吹進來；主角小女孩抱著手臂覺得冷，媽媽發現門沒關。"
+    },
+    {
+      "id": "L333-S03",
+      "text": "一間小店座落在草原上。",
+      "spokenText": "一間小店座落在草原上",
+      "focusChar": "原",
+      "displayLines": [
+        "一間小店",
+        "座落在",
+        "草原上。"
+      ],
+      "imageNotes": "寬廣草原上有一間小店，外觀溫和可愛；主角小女孩和爸爸在遠處看見小店。不要有可讀招牌文字。"
+    },
+    {
+      "id": "L333-S04",
+      "text": "起火的原因不明。",
+      "spokenText": "起火的原因不明",
+      "focusChar": "原",
+      "displayLines": [
+        "起火的",
+        "原因不明。"
+      ],
+      "imageNotes": "戶外安全距離外，有一小處已被大人圍起來處理的起火現場；主角爸爸和主角小女孩站遠遠看著。畫面不要驚嚇，不要有人受傷，不要大火失控。"
+    },
+    {
+      "id": "L333-S05",
+      "text": "找個沒人的角落，休息一下。",
+      "spokenText": "找個沒人的角落休息一下",
+      "focusChar": "落",
+      "displayLines": [
+        "找個沒人的",
+        "角落，",
+        "休息一下。"
+      ],
+      "imageNotes": "主角小女孩在安靜的房間或教室一角坐下休息，旁邊沒有人打擾；畫面溫和安靜。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L333-G01",
+      "type": "find-character",
+      "sentenceId": "L333-S01",
+      "targetChar": "轉",
+      "targetCharIndex": 2,
+      "prompt": "找到「轉」。",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "L333-G01-A",
+          "text": "轉",
+          "correct": true
+        },
+        {
+          "id": "L333-G01-B",
+          "text": "角",
+          "correct": false
+        },
+        {
+          "id": "L333-G01-C",
+          "text": "右",
+          "correct": false
+        },
+        {
+          "id": "L333-G01-D",
+          "text": "原",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L333-G02",
+      "type": "teach-character",
+      "sentenceId": "L333-S02",
+      "targetChar": "原",
+      "targetCharIndex": 2,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        2
+      ],
+      "teachAudio": {
+        "prefixText": "好冷",
+        "targetText": "原",
+        "suffixText": "來是因為門沒關",
+        "prefixSrc": "/assets/lessons/L333/audio/L333-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L333/audio/L333-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L333-G03",
+      "type": "missing-character",
+      "sentenceId": "L333-S03",
+      "targetChar": "原",
+      "targetCharIndex": 8,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        {
+          "id": "L333-G03-A",
+          "text": "原",
+          "correct": true
+        },
+        {
+          "id": "L333-G03-B",
+          "text": "草",
+          "correct": false
+        },
+        {
+          "id": "L333-G03-C",
+          "text": "落",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L333-G04",
+      "type": "choose-pronunciation",
+      "sentenceId": "L333-S04",
+      "targetChar": "原",
+      "targetCharIndex": 3,
+      "prompt": "選出念得對的聲音。",
+      "options": [
+        {
+          "id": "L333-G04-A",
+          "text": "起火的原因不明。",
+          "pronunciationText": "ㄩㄢˊ",
+          "correct": true,
+          "sentenceId": "L333-S04",
+          "audioSrc": "/assets/lessons/L333/audio/L333-S04.m4a",
+          "spokenText": "起火的原因不明"
+        },
+        {
+          "id": "L333-G04-B",
+          "text": "起火的原因不明。",
+          "pronunciationText": "ㄩㄢ",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L333/audio/L333-G04-wrong-one.m4a",
+          "ttsText": "起火的淵因不明"
+        },
+        {
+          "id": "L333-G04-C",
+          "text": "起火的原因不明。",
+          "pronunciationText": "ㄩㄢˇ",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L333/audio/L333-G04-wrong-two.m4a",
+          "ttsText": "起火的遠因不明"
+        },
+        {
+          "id": "L333-G04-D",
+          "text": "起火的原因不明。",
+          "pronunciationText": "ㄩㄢˋ",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L333/audio/L333-G04-wrong-three.m4a",
+          "ttsText": "起火的怨因不明"
+        }
+      ]
+    },
+    {
+      "id": "L333-G05",
+      "type": "partial-order",
+      "sentenceId": "L333-S05",
+      "targetChar": "落",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "L333-G05-A",
+          "text": "角",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L333-G05-B",
+          "text": "落",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L333-G05-C",
+          "text": "休",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L333-G05-D",
+          "text": "息",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L333-G05-A",
+        "L333-G05-B",
+        "L333-G05-C",
+        "L333-G05-D"
+      ]
+    }
+  ]
+}

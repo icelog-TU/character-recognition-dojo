@@ -248,8 +248,12 @@ function validateSentenceGames({ unit, currentAllowed, enforceUniqueStageFourSen
     if (game.type === "choose-pronunciation") {
       const correctOption = (game.options ?? []).find((option) => option.correct === true);
       if (correctOption) {
+        const usesPronunciationChoices = (game.options ?? []).every(
+          (option) => typeof option.pronunciationText === "string" && option.pronunciationText.trim() !== "",
+        );
         for (const option of game.options ?? []) {
           if (option.correct) continue;
+          if (usesPronunciationChoices) continue;
           const distance = hanDistance(correctOption.text, option.text);
           if (distance < 1 || distance > 2) {
             errors.push(`${label}: wrong option ${option.id} should differ from the correct sentence by 1-2 Han characters.`);
