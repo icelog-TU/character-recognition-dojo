@@ -1,0 +1,292 @@
+{
+  "id": "L331",
+  "order": 331,
+  "newChars": [
+    "落"
+  ],
+  "zhuyin": {
+    "落": "ㄌㄨㄛˋ"
+  },
+  "title": "落",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete-package handoff for L331. Latest origin/main at claim includes L327 直. L328 轉, L329 右, and L330 角 remain provisional dependencies. Approved sentences are fixed; do not change text. Release owns shared-state integration.",
+  "dependsOnLessons": [
+    "L328",
+    "L329",
+    "L330"
+  ],
+  "provisionalLearnedChars": [
+    "轉",
+    "右",
+    "角"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L327 + provisional 轉/右/角 + current new char 落",
+    "allowedCharsLocked": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落",
+    "dependsOnLessons": [
+      "L328",
+      "L329",
+      "L330"
+    ],
+    "provisionalLearnedChars": [
+      "轉",
+      "右",
+      "角"
+    ],
+    "requiredCoverageChars": [
+      "落",
+      "角",
+      "右",
+      "轉",
+      "直",
+      "線"
+    ],
+    "targetCharMinimumCount": {
+      "落": 3
+    },
+    "recentTargetMinimumCounts": {
+      "角": 2,
+      "右": 2,
+      "轉": 2,
+      "直": 1,
+      "線": 1
+    },
+    "coverageCounts": {
+      "落": 4,
+      "角": 2,
+      "右": 2,
+      "轉": 2,
+      "直": 1,
+      "線": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 10
+    },
+    "forbiddenDisplayChars": [],
+    "displayLineMaxVisibleChars": 6,
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use full L058 S01-S05 as style-only references and check final WebPs side by side.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, captions, arrows, UI symbols, or watermarks."
+    ],
+    "audioRules": [
+      "Generate charAudio for 落 as public/assets/lessons/L331/audio/char-u843d.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G03 prefix and suffix from exact fragments 地圖的右上角有 and 葉.",
+      "Generate G05 wrong-pronunciation options as standalone whole-sentence TTS variants from the full sentence with target 落 intentionally pronounced as ㄌㄚˋ, ㄌㄠˋ, and ㄌㄜˋ.",
+      "Do not splice, cut, mute, patch, overdub, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L331-S01",
+      "text": "滿天黑雲，大雨直落。",
+      "spokenText": "滿天黑雲大雨直落",
+      "focusChar": "落",
+      "displayLines": [
+        "滿天黑雲，",
+        "大雨直落。"
+      ],
+      "hanCount": 8,
+      "imageNotes": "天空布滿深色雨雲，大雨直直落下；主角小女孩站在窗內看外面的雨，畫面安全、不淋雨。不要使用閃電、文字、符號或箭頭。"
+    },
+    {
+      "id": "L331-S02",
+      "text": "電線卡在角落。",
+      "spokenText": "電線卡在角落",
+      "focusChar": "角",
+      "displayLines": [
+        "電線卡在",
+        "角落。"
+      ],
+      "hanCount": 6,
+      "imageNotes": "房間裡一條電線卡在桌子或牆邊的角落，主角爸爸蹲下來準備把電線整理出來；主角小女孩在旁邊看。畫面要安全，不要表現破損電線、插座危險或觸電感。"
+    },
+    {
+      "id": "L331-S03",
+      "text": "地圖的右上角有落葉。",
+      "spokenText": "地圖的右上角有落葉",
+      "focusChar": "右",
+      "displayLines": [
+        "地圖的",
+        "右上角",
+        "有落葉。"
+      ],
+      "hanCount": 9,
+      "imageNotes": "桌上放著一張地圖，地圖右上角有一片落葉；主角小女孩站在桌旁看地圖。不要使用箭頭、文字、地名或標籤。"
+    },
+    {
+      "id": "L331-S04",
+      "text": "轉一轉發條，小車就會跑。",
+      "spokenText": "轉一轉發條小車就會跑",
+      "focusChar": "轉",
+      "displayLines": [
+        "轉一轉發條，",
+        "小車就會跑。"
+      ],
+      "hanCount": 10,
+      "imageNotes": "主角小女孩坐在地板上，手裡拿著發條小車，正在轉發條；旁邊有小車準備往前跑的自然動作感。不要使用箭頭、文字或速度符號。"
+    },
+    {
+      "id": "L331-S05",
+      "text": "落地窗的右邊有花。",
+      "spokenText": "落地窗的右邊有花",
+      "focusChar": "落",
+      "displayLines": [
+        "落地窗的",
+        "右邊有花。"
+      ],
+      "hanCount": 8,
+      "imageNotes": "家裡明亮的落地窗旁，窗戶右邊放著一盆花；主角媽媽或主角小女孩在旁邊看花。畫面重點是落地窗和右邊的花。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L331-G01",
+      "type": "find-character",
+      "sentenceId": "L331-S01",
+      "targetChar": "落",
+      "targetCharIndex": 7,
+      "prompt": "找到「落」。",
+      "missingIndexes": [
+        7
+      ],
+      "options": []
+    },
+    {
+      "id": "L331-G02",
+      "type": "partial-order",
+      "sentenceId": "L331-S02",
+      "targetChar": "落",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "options": [
+        {
+          "id": "L331-G02-A",
+          "text": "電",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L331-G02-B",
+          "text": "線",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L331-G02-C",
+          "text": "角",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L331-G02-D",
+          "text": "落",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L331-G02-A",
+        "L331-G02-B",
+        "L331-G02-C",
+        "L331-G02-D"
+      ]
+    },
+    {
+      "id": "L331-G03",
+      "type": "teach-character",
+      "sentenceId": "L331-S03",
+      "targetChar": "落",
+      "targetCharIndex": 7,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        7
+      ],
+      "teachAudio": {
+        "prefixText": "地圖的右上角有",
+        "suffixText": "葉",
+        "prefixSrc": "/assets/lessons/L331/audio/L331-G03-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L331/audio/L331-G03-suffix.m4a"
+      }
+    },
+    {
+      "id": "L331-G04",
+      "type": "missing-character",
+      "sentenceId": "L331-S04",
+      "targetChar": "轉",
+      "targetCharIndex": 0,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "L331-G04-A",
+          "text": "轉",
+          "correct": true
+        },
+        {
+          "id": "L331-G04-B",
+          "text": "發",
+          "correct": false
+        },
+        {
+          "id": "L331-G04-C",
+          "text": "車",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L331-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L331-S05",
+      "targetChar": "落",
+      "targetCharIndex": 0,
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L331-G05-A",
+          "text": "落地窗的右邊有花。",
+          "correct": true,
+          "sentenceId": "L331-S05",
+          "audioSrc": "/assets/lessons/L331/audio/L331-S05.m4a",
+          "spokenText": "落地窗的右邊有花",
+          "pronunciation": "ㄌㄨㄛˋ"
+        },
+        {
+          "id": "L331-G05-B",
+          "text": "落地窗的右邊有花。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L331/audio/L331-G05-wrong-la.m4a",
+          "spokenText": "落地窗的右邊有花",
+          "pronunciation": "ㄌㄚˋ"
+        },
+        {
+          "id": "L331-G05-C",
+          "text": "落地窗的右邊有花。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L331/audio/L331-G05-wrong-lao.m4a",
+          "spokenText": "落地窗的右邊有花",
+          "pronunciation": "ㄌㄠˋ"
+        },
+        {
+          "id": "L331-G05-D",
+          "text": "落地窗的右邊有花。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L331/audio/L331-G05-wrong-le.m4a",
+          "spokenText": "落地窗的右邊有花",
+          "pronunciation": "ㄌㄜˋ"
+        }
+      ]
+    }
+  ]
+}
