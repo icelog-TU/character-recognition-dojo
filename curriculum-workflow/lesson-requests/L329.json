@@ -1,0 +1,309 @@
+{
+  "id": "L329",
+  "order": 329,
+  "newChars": [
+    "右"
+  ],
+  "zhuyin": {
+    "右": "ㄧㄡˋ"
+  },
+  "title": "右",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production A complete-package handoff for L329. Latest origin/main at claim is 30f18b5e Integrate lesson L327; L328 轉 is not merged and is treated as a provisional dependency. Approved sentences are fixed; do not change text. Release owns final ordered integration after L328 is in main.",
+  "dependsOnLessons": [
+    "L328"
+  ],
+  "provisionalLearnedChars": [
+    "轉"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L327 + provisional 轉 + current new char 右",
+    "provisionalLearnedChars": [
+      "轉"
+    ],
+    "dependsOnLessons": [
+      "L328"
+    ],
+    "requiredCoverageChars": [
+      "右",
+      "轉",
+      "直",
+      "線",
+      "向",
+      "圖"
+    ],
+    "targetCharMinimumCount": {
+      "右": 3
+    },
+    "recentTargetMinimumCounts": {
+      "轉": 2,
+      "直": 2,
+      "線": 2,
+      "向": 1,
+      "圖": 1
+    },
+    "coverageCounts": {
+      "右": 4,
+      "轉": 2,
+      "直": 3,
+      "線": 2,
+      "向": 2,
+      "圖": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "displayLineMaxVisibleChars": 6,
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 S01-S05 lesson images only as illustration style references; do not copy any L058 person identity.",
+      "Open each final WebP and compare side by side with L058 S01-S05 and relevant cast anchors before accepting.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Mother, father, teacher, protagonist girl, classmates, generic adults, and generic children must remain visually distinct.",
+      "No visible text, letters, Chinese characters, zhuyin, labels, captions, arrows, UI symbols, explanatory markings, brands, watermarks, or readable signs anywhere.",
+      "Clocks may show simple clock hands and tick marks, but avoid readable extra text or labels."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 右 as public/assets/lessons/L329/audio/char-u53f3.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix and suffix from exact fragments 先向左轉再向 and 轉.",
+      "Generate G04 wrong-option audio as standalone whole-sentence files from exact wrong option text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L329-S01",
+      "text": "從左到右畫一條直線。",
+      "spokenText": "從左到右畫一條直線",
+      "focusChar": "右",
+      "displayLines": [
+        "從左到右",
+        "畫一條直線。"
+      ],
+      "hanCount": 9,
+      "imageNotes": "主角小女孩坐在桌前，右手拿筆，在紙上畫一條橫向直線；線從紙的左側延伸到右側。不要使用箭頭、文字、符號或圖解標記。"
+    },
+    {
+      "id": "L329-S02",
+      "text": "先向左轉，再向右轉。",
+      "spokenText": "先向左轉再向右轉",
+      "focusChar": "右",
+      "displayLines": [
+        "先向左轉，",
+        "再向右轉。"
+      ],
+      "hanCount": 8,
+      "imageNotes": "主角小女孩和同學在做體操，老師在前面帶動作；孩子們正在轉身做左右轉的動作，畫面自然呈現體操課。不要使用箭頭、文字、符號或動作說明標記。"
+    },
+    {
+      "id": "L329-S03",
+      "text": "過馬路時，要左看右看。",
+      "spokenText": "過馬路時要左看右看",
+      "focusChar": "右",
+      "displayLines": [
+        "過馬路時，",
+        "要左看右看。"
+      ],
+      "hanCount": 9,
+      "imageNotes": "主角小女孩和媽媽站在人行道邊，準備過馬路；小女孩轉頭看路上的車，媽媽在旁邊陪著。車輛距離安全，畫面不要危險驚嚇。"
+    },
+    {
+      "id": "L329-S04",
+      "text": "三點左右，要去同學家玩。",
+      "spokenText": "三點左右要去同學家玩",
+      "focusChar": "右",
+      "displayLines": [
+        "三點左右，",
+        "要去",
+        "同學家玩。"
+      ],
+      "hanCount": 10,
+      "imageNotes": "家裡牆上時鐘接近三點，主角小女孩背著小包站在門口，媽媽在旁邊送她出門，情境是準備去同學家玩。時鐘可見但不要出現可讀文字或數字以外的額外標記。"
+    },
+    {
+      "id": "L329-S05",
+      "text": "爸爸一直在地圖上畫線。",
+      "spokenText": "爸爸一直在地圖上畫線",
+      "focusChar": "線",
+      "displayLines": [
+        "爸爸一直",
+        "在地圖上",
+        "畫線。"
+      ],
+      "hanCount": 10,
+      "imageNotes": "主角爸爸坐在桌前看地圖，手上拿筆在地圖上畫路線；主角小女孩在旁邊看。地圖可以有簡單道路線條，但不要有可讀文字、地名、箭頭或符號。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L329-G01",
+      "type": "find-character",
+      "sentenceId": "L329-S01",
+      "targetChar": "右",
+      "targetCharIndex": 3,
+      "prompt": "找到「右」。",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        {
+          "id": "L329-G01-A",
+          "text": "右",
+          "correct": true
+        },
+        {
+          "id": "L329-G01-B",
+          "text": "左",
+          "correct": false
+        },
+        {
+          "id": "L329-G01-C",
+          "text": "直",
+          "correct": false
+        },
+        {
+          "id": "L329-G01-D",
+          "text": "線",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L329-G02",
+      "type": "teach-character",
+      "sentenceId": "L329-S02",
+      "targetChar": "右",
+      "targetCharIndex": 6,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        7
+      ],
+      "teachAudio": {
+        "prefixText": "先向左轉再向",
+        "suffixText": "轉",
+        "prefixSrc": "/assets/lessons/L329/audio/L329-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L329/audio/L329-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L329-G03",
+      "type": "missing-character",
+      "sentenceId": "L329-S03",
+      "targetChar": "右",
+      "targetCharIndex": 7,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        {
+          "id": "L329-G03-A",
+          "text": "右",
+          "correct": true
+        },
+        {
+          "id": "L329-G03-B",
+          "text": "左",
+          "correct": false
+        },
+        {
+          "id": "L329-G03-C",
+          "text": "看",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L329-G04",
+      "type": "choose-pronunciation",
+      "sentenceId": "L329-S04",
+      "targetChar": "右",
+      "targetCharIndex": 3,
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L329-G04-A",
+          "text": "三點左右，要去同學家玩。",
+          "correct": true,
+          "sentenceId": "L329-S04",
+          "audioSrc": "/assets/lessons/L329/audio/L329-S04.m4a",
+          "spokenText": "三點左右要去同學家玩",
+          "pronunciation": "ㄧㄡˋ"
+        },
+        {
+          "id": "L329-G04-B",
+          "text": "三點左手，要去同學家玩。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L329/audio/L329-G04-wrong-one.m4a",
+          "spokenText": "三點左手要去同學家玩",
+          "pronunciation": "ㄧㄡˇ"
+        },
+        {
+          "id": "L329-G04-C",
+          "text": "三點左邊，要去同學家玩。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L329/audio/L329-G04-wrong-two.m4a",
+          "spokenText": "三點左邊要去同學家玩",
+          "pronunciation": "ㄧㄡ"
+        },
+        {
+          "id": "L329-G04-D",
+          "text": "三點左轉，要去同學家玩。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L329/audio/L329-G04-wrong-three.m4a",
+          "spokenText": "三點左轉要去同學家玩",
+          "pronunciation": "ㄧㄡˊ"
+        }
+      ]
+    },
+    {
+      "id": "L329-G05",
+      "type": "partial-order",
+      "sentenceId": "L329-S05",
+      "targetChar": "線",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        3,
+        6,
+        8,
+        9
+      ],
+      "options": [
+        {
+          "id": "L329-G05-A",
+          "text": "直",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L329-G05-B",
+          "text": "圖",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L329-G05-C",
+          "text": "畫",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L329-G05-D",
+          "text": "線",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L329-G05-A",
+        "L329-G05-B",
+        "L329-G05-C",
+        "L329-G05-D"
+      ]
+    }
+  ]
+}
