@@ -66,7 +66,8 @@ For each normal lesson, use this sequence before producing a handoff:
 8. After every teacher edit, recalculate current-target and previous-five coverage, Han sentence counts, `spokenText`, `displayLines`, and the allowed-character audit. Report exact illegal characters instead of assuming they can be used. Do not reuse a coverage table from before the edit.
 9. Preserve teacher-approved strong sentences unless there is a hard blocker. If a teacher rejects a sentence as unnatural, identify which coverage target it served and rewrite around that target with natural Taiwan Mandarin.
 10. Before final handoff, run the Editor Handoff Dependency Gate from `docs/SENTENCE_GENERATION_SOP.md`. Derive `dependsOnLessons` and `provisionalLearnedChars` from the approved display text sweep, not only from previous-five coverage targets.
-11. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, and Stage 4 sentence usage.
+11. Before final handoff, run the Stage 4 Index Validation Gate from `docs/SENTENCE_GENERATION_SOP.md`. Do not rely on manual counting for `targetCharIndex`, `missingIndexes`, or `partial-order` option mapping.
+12. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, Stage 4 sentence usage, and Stage 4 index self-check.
 
 During discussion, keep analysis outside the production handoff block. A useful response shape is: candidate five sentences, a small coverage table, Han counts, allowed-character audit result, and any weak sentence or alternative.
 
@@ -100,6 +101,7 @@ For each assigned normal lesson, produce final approved sentence data:
 - For every sentence: `text`, `spokenText`, `focusChar`, optional `displayLines`, and concrete `imageNotes`.
 - Coverage counts for the current target and previous-five review targets.
 - Stage 4 plan using the five standard game types once each.
+- Stage 4 index self-check table showing each indexed game's Han-only sequence, intended target, index, actual character at that index, and PASS/FAIL; for `partial-order`, include `missingIndexes`, Han values, single-Han option cards, and `correctOrder` mapping PASS/FAIL.
 - Required image style anchor, normally L058 references, explicitly marked as style-only.
 - Required visual cast identity for each sentence that shows people, following `docs/LESSON_VISUAL_CAST_SOP.md`.
 - Audio requirements for sentence audio, standalone `charAudio`, `G02` teach audio, and `G05` wrong-choice audio.
@@ -131,6 +133,7 @@ Before sending a Production handoff:
 - Confirm `displayLines` uses the fewest readable lines: two lines when possible; three lines only when no functional two-line split fits; four or more lines only with a clear reason.
 - Confirm `displayLines` breaks follow functional phrase boundaries. Do not split a natural word or phrase, such as `彩色筆`, merely to satisfy the length gate. Prefer breaks at subject, time/frequency, object, action, result, reason/condition, short predicate, or natural punctuation boundaries.
 - Confirm every `focusChar` appears in its sentence.
+- Mechanically validate every Stage 4 index against the Han-only sentence sequence: every explicit `targetCharIndex` must point to `targetChar`, every `missingIndexes` entry must be in range, and every `partial-order` option must be a single Han card whose `correctOrder` points to the matching missing Han character.
 - Confirm current target and recent review coverage follows `docs/SENTENCE_GENERATION_SOP.md`.
 - For review modules, confirm the pair-level coverage target and milestone allowed-character ceiling, and include both in the handoff.
 - Confirm the teacher approved the final set.
@@ -160,6 +163,7 @@ Every handoff must include:
 - Correct dependencies: final `dependsOnLessons` and `provisionalLearnedChars`, derived from all approved text and Stage 4 option text.
 - Editor self-check sentence confirming every Han character in approved S01-S05 and Stage 4 option text is in latest `origin/main` learned chars plus `provisionalLearnedChars` plus current new char.
 - Complete sentence data and Stage 4 plan.
+- Stage 4 index self-check showing that `targetCharIndex`, `missingIndexes`, and `partial-order` `correctOrder` values were machine-checked against each sentence's zero-based Han-only sequence.
 - Required repo files to create or update.
 - Auto-claim-and-continue block.
 - Stop conditions.

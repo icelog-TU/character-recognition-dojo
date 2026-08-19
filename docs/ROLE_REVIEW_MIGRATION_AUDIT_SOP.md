@@ -30,6 +30,7 @@ Review Migration Audit exists to catch the most likely migration failures:
 - Sentences pass mechanically but are too abstract, too hard to draw, or too cognitively heavy for a five-year-old.
 - Image notes use unclear character identities or violate visual cast continuity.
 - The Stage 4 `partial-order` plan uses chunks, phrase cards, or too many blanks instead of 3-4 single-Han option cards.
+- Stage 4 `targetCharIndex`, `missingIndexes`, or `partial-order` `correctOrder` values point to the wrong Han character after punctuation is skipped.
 - The `G05 choose-pronunciation` wrong choices are not same-length near misses.
 
 ## Input
@@ -46,6 +47,7 @@ Audit one review pair at a time unless the teacher asks otherwise. A normal batc
   - allowed-character sweep result
   - Han counts
   - Stage 4 plan, including partial-order missing characters and G05 wrong-choice texts
+  - Stage 4 index self-check table
   - cognitive difficulty or imageability concerns
 
 If the input lacks the full handoff text or the pair-level summary, ask Review Migration to provide the missing material. Do not infer final text from screenshots or summaries.
@@ -78,7 +80,8 @@ For each review pair:
 15. Confirm image notes are concrete and identify recurring people using `docs/LESSON_VISUAL_CAST_SOP.md`.
 16. Confirm Stage 4 uses every reviewed sentence exactly once.
 17. Confirm `partial-order` blanks exactly 3-4 Han characters, `missingIndexes.length` equals `options.length`, and every option text is exactly one Han character. Multi-character chunks or phrase cards are FAIL.
-18. Confirm `G05 choose-pronunciation` wrong choices have the same Han count as the correct text and differ by only 1-2 Han characters.
+18. Confirm the Stage 4 index self-check is present and correct: build each sentence's zero-based Han-only sequence; every explicit `targetCharIndex` must be in range and point to `targetChar`; every `missingIndexes` entry must be in range; every `partial-order` option's `correctOrder` must map its single-Han `text` to the matching `missingIndexes` Han character. Any mismatch is FAIL and must return to Review Migration.
+19. Confirm `G05 choose-pronunciation` wrong choices have the same Han count as the correct text and differ by only 1-2 Han characters.
 
 ## Output
 

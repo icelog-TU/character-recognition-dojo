@@ -413,6 +413,45 @@ For `choose-pronunciation`, finalize the complete `correct`, `wrong-one`, and `w
 
 For `partial-order`, blank exactly 3-4 Han characters. Each option card must contain exactly one Han character. Do not use phrase chunks, word cards, or full-sentence reordering. `missingIndexes.length` must equal `options.length`, and each option's `correctOrder` must point to the matching missing Han character.
 
+## Stage 4 Index Validation Gate
+
+Before sending any Production handoff, Editor must mechanically validate Stage 4 indexes. Do not rely on hand-counting in chat.
+
+Build each sentence's Han-only sequence from `text`:
+
+- Count only Han characters.
+- Use zero-based indexes.
+- Ignore punctuation, spaces, and `displayLines` breaks.
+
+Validate every Stage 4 field that points to a character:
+
+- `find-character.targetCharIndex`, when present.
+- `teach-character.targetCharIndex`.
+- `missing-character.targetCharIndex`, when present, and every `missingIndexes` entry.
+- `partial-order.missingIndexes`, each option's `correctOrder`, and each option's `text`.
+- `choose-pronunciation.targetCharIndex`, when present.
+
+Hard requirements:
+
+- Every explicit `targetCharIndex` must be an integer in range, and `Han[targetCharIndex]` must equal `targetChar`.
+- Every `missingIndexes` entry must be an integer in range.
+- For a target-specific `missing-character` round, the missing target index must point to the intended `targetChar`.
+- For `partial-order`, `missingIndexes.length` must equal `options.length`; every option card must contain exactly one Han character; every `correctOrder` must be valid; and the option text must match the Han character at `missingIndexes[correctOrder]`.
+- If the target character appears more than once in the sentence, Editor must explicitly state which occurrence is intended and validate that exact index.
+
+If any check fails, do not hand off. Fix the Stage 4 plan and rerun the full handoff audit.
+
+Every Production handoff must include a compact Stage 4 index self-check block. Example format:
+
+```text
+Stage 4 index self-check:
+- L329-G02 / S02: Han = 先[0] 向[1] 左[2] 轉[3] 再[4] 向[5] 右[6] 轉[7]; targetChar 右, targetCharIndex 6, Han[6]=右, PASS.
+- L329-G03 / S03: Han = 過[0] 馬[1] 路[2] 時[3] 要[4] 左[5] 看[6] 右[7] 看[8]; targetChar 右, targetCharIndex 7, Han[7]=右, PASS.
+- L329-G04 partial-order: missingIndexes [...], Han[index] values [...], options are single-Han cards PASS, correctOrder mapping PASS.
+```
+
+The repo validator also checks these rules once the draft JSON exists, but Editor must catch index mistakes before they reach Production.
+
 ## Review Checklist
 
 Before sending sentences to image/audio production, verify:
@@ -438,6 +477,7 @@ Before sending sentences to image/audio production, verify:
 - every sentence with people has explicit role identities in `imageNotes` following `docs/LESSON_VISUAL_CAST_SOP.md`
 - the Stage 4 plan uses every reviewed sentence exactly once when the lesson has five reviewed sentences and five sentence games
 - the Stage 4 plan uses the five standard game types exactly once for a normal five-sentence lesson
+- every Stage 4 `targetCharIndex`, `missingIndexes`, `partial-order` option card, and `correctOrder` mapping has passed the Stage 4 Index Validation Gate, with a self-check table ready for the handoff
 - every `partial-order` game blanks exactly 3-4 single Han characters, with one single-Han option card per blank
 - `choose-pronunciation` wrong-choice texts are final and ready for exact TTS generation
 - the teacher has approved the sentence set
@@ -482,7 +522,7 @@ The handoff must include:
 - final approved sentences with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
 - visual cast notes for every sentence that shows people, especially mother, father, teacher, classmate, elder, and passerby roles
 - coverage counts for the current target and previous-five review targets
-- Stage 4 plan and required `G02`/`G05` audio work
+- Stage 4 plan, Stage 4 index self-check, and required `G02`/`G05` audio work
 - teacher review instructions: provide the permanent `lesson-asset-review.html` URL and `npm run asset:review-status` command for post-merge repair queue; use the audio-only `audio-review.html` URL only if the teacher explicitly requests pre-merge audio approval
 - required repo paths for request, packet, draft, images, audio inbox, final assets, production JSON, planner export, ledger, and registry
 - an auto-claim-and-continue block: confirm assigned worktree, run startup checks, stop only on blockers, create the branch from `origin/main`, add/update the registry row as `claimed`, then continue into full package production
