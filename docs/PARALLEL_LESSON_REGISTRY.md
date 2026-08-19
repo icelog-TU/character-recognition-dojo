@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R037 | review module / R037 | claimed | Production A | codex/r037-r038-complete-package / fe9b3d26 | L315 milestone ceiling | none | curriculum-workflow/review-requests/R037.json; curriculum-workflow/generated/R037-generation-packet.md; curriculum-workflow/drafts/R037-draft.json | public/assets/reviews/R037/; curriculum-workflow/audio-inbox/R037/ | accepted R037/R038 handoff; overdue L315 review pair; allowed-character ceiling locked to L315 |
+| R038 | review module / R038 | claimed | Production A | codex/r037-r038-complete-package / fe9b3d26 | L315 milestone ceiling | none | curriculum-workflow/review-requests/R038.json; curriculum-workflow/generated/R038-generation-packet.md; curriculum-workflow/drafts/R038-draft.json | public/assets/reviews/R038/; curriculum-workflow/audio-inbox/R038/ | accepted R037/R038 handoff; overdue L315 review pair; allowed-character ceiling locked to L315 |
 
 ## Status Values
 
