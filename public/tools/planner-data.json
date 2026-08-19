@@ -148958,16 +148958,16 @@
           "id": "L310-G03",
           "type": "missing-character",
           "sentenceId": "L310-S03",
-          "targetChar": "忘",
+          "targetChar": "顧",
           "prompt": "Choose the missing character.",
           "missingIndexes": [
-            6
+            1
           ],
           "options": [
             {
               "id": "L310-G03-A",
               "text": "忘",
-              "correct": true
+              "correct": false
             },
             {
               "id": "L310-G03-B",
@@ -148977,7 +148977,7 @@
             {
               "id": "L310-G03-C",
               "text": "顧",
-              "correct": false
+              "correct": true
             }
           ]
         },
