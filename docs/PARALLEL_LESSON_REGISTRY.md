@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L321 | 西 / normal lesson | claimed | Production D | codex/l321-complete-package / 3819dda4 | L319 些, L320 最 | ["些","最"] | curriculum-workflow/lesson-requests/L321.json, curriculum-workflow/generated/L321-generation-packet.md | public/assets/lessons/L321/images/, public/assets/lessons/L321/audio/ | accepted handoff and starting complete package |
+| L321 | 西 / normal lesson | ready-blocked-by-dependency | Production D | codex/l321-complete-package / pending final commit | L319 些, L320 最 | ["些","最"] | curriculum-workflow/lesson-requests/L321.json, curriculum-workflow/generated/L321-generation-packet.md | public/assets/lessons/L321/images/, public/assets/lessons/L321/audio/ | dependency-blocked asset-complete package prepared; waiting for L319/L320 before Release integration |
 
 ## Status Values
 

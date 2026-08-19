@@ -1,0 +1,285 @@
+{
+  "id": "L321",
+  "order": 321,
+  "newChars": [
+    "西"
+  ],
+  "zhuyin": {
+    "西": "ㄒㄧ"
+  },
+  "title": "西",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production D complete-package handoff for L321. Latest origin/main includes L318; L319 and L320 are not in production JSON at claim time, so this package keeps dependencies and provisional learned characters. Release owns ordered integration.",
+  "dependsOnLessons": [
+    "L319",
+    "L320"
+  ],
+  "provisionalLearnedChars": [
+    "些",
+    "最"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through L318 + provisional learned chars 些, 最 + current new char 西",
+    "dependsOnLessons": [
+      "L319",
+      "L320"
+    ],
+    "provisionalLearnedChars": [
+      "些",
+      "最"
+    ],
+    "requiredCoverageChars": [
+      "西",
+      "最",
+      "些",
+      "哪",
+      "粉",
+      "色"
+    ],
+    "targetCharMinimumCount": {
+      "西": 3
+    },
+    "recentTargetMinimumCounts": {
+      "最": 2,
+      "些": 2,
+      "哪": 2,
+      "粉": 1,
+      "色": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [
+      "東"
+    ],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Teacher identity must be visually distinct from protagonist mother.",
+      "Generic children must not look like recurring protagonist girl, recurring young boy classmate, or recurring sporty boy.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, arrows, compass marks, direction labels, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop.",
+      "Reject and regenerate any image that drifts from the L058 pencil-and-watercolor style or recurring cast continuity."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 西 as public/assets/lessons/L321/audio/char-u897f.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 suffix from exact fragment 邊的天空滿是粉色雲彩; no prefix file is needed because the target character is first.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L321-S01",
+      "text": "每天，太陽從西邊下山。",
+      "spokenText": "每天太陽從西邊下山",
+      "focusChar": "西",
+      "displayLines": [
+        "每天，太陽",
+        "從西邊下山。"
+      ],
+      "imageNotes": "Outdoor sunset scene. The sun is setting behind or near mountains on the west side, with warm evening light. The recurring protagonist girl may be shown watching from a safe place. The image must clearly convey \"the sun goes down in the west every day\" without any text, arrows, compass marks, direction labels, road signs, letters, numbers, zhuyin, or watermarks."
+    },
+    {
+      "id": "L321-S02",
+      "text": "西邊的天空，滿是粉色雲彩。",
+      "spokenText": "西邊的天空滿是粉色雲彩",
+      "focusChar": "西",
+      "displayLines": [
+        "西邊的天空，",
+        "滿是",
+        "粉色雲彩。"
+      ],
+      "imageNotes": "Evening sky scene looking west. The west side of the sky is full of many soft pink clouds, like sunset clouds. A horizon or mountain edge may help show the evening direction, but do not use any written direction labels, arrows, compass marks, letters, numbers, Chinese characters, zhuyin, signs, or watermarks. The focus is the west sky filled with pink clouds."
+    },
+    {
+      "id": "L321-S03",
+      "text": "西風吹來，樹葉變紅了。",
+      "spokenText": "西風吹來樹葉變紅了",
+      "focusChar": "西",
+      "displayLines": [
+        "西風吹來，",
+        "樹葉變紅了。"
+      ],
+      "imageNotes": "Outdoor cool-weather scene. Wind blows from one side through trees, and the leaves are turning red. The recurring protagonist girl may be present wearing warmer clothing and looking at the red leaves. The image should suggest a cool west wind and red leaves, but must not use written labels, arrows, direction symbols, letters, numbers, Chinese characters, zhuyin, signs, or watermarks."
+    },
+    {
+      "id": "L321-S04",
+      "text": "不知道哪些人能跑到最後？",
+      "spokenText": "不知道哪些人能跑到最後",
+      "focusChar": "些",
+      "displayLines": [
+        "不知道哪些人",
+        "能跑到最後？"
+      ],
+      "imageNotes": "Safe children's road race or family fun run scene, like a child-friendly marathon. A group of runners are still running toward a visible finish arch or finish line in the distance, but the outcome is not yet known. The image must express \"we do not know which people can run to the end\" without showing danger, collapse, distress, elimination, readable bib numbers, signs, race labels, text, letters, numbers, Chinese characters, zhuyin, or watermarks."
+    },
+    {
+      "id": "L321-S05",
+      "text": "這些西裝，哪一套最好看？",
+      "spokenText": "這些西裝哪一套最好看",
+      "focusChar": "西",
+      "displayLines": [
+        "這些西裝，",
+        "哪一套",
+        "最好看？"
+      ],
+      "imageNotes": "Use the recurring protagonist father and recurring protagonist girl identities. Father is at home or in a clothing shop trying or comparing several suits. The girl is helping compare which suit looks best. Show several suits with visibly different colors or styles. Do not include price tags, brand labels, mirror text, readable signs, letters, numbers, Chinese characters, zhuyin, or watermarks."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L321-G01",
+      "type": "find-character",
+      "sentenceId": "L321-S01",
+      "targetChar": "西",
+      "targetCharIndex": 5,
+      "prompt": "找到「西」。",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "id": "L321-G01-A",
+          "text": "西",
+          "correct": true
+        },
+        {
+          "id": "L321-G01-B",
+          "text": "些",
+          "correct": false
+        },
+        {
+          "id": "L321-G01-C",
+          "text": "最",
+          "correct": false
+        },
+        {
+          "id": "L321-G01-D",
+          "text": "哪",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L321-G02",
+      "type": "teach-character",
+      "sentenceId": "L321-S02",
+      "targetChar": "西",
+      "targetCharIndex": 0,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        0
+      ],
+      "teachAudio": {
+        "prefixText": "",
+        "suffixText": "邊的天空滿是粉色雲彩",
+        "suffixSrc": "/assets/lessons/L321/audio/L321-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L321-G03",
+      "type": "missing-character",
+      "sentenceId": "L321-S03",
+      "targetChar": "西",
+      "targetCharIndex": 0,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "L321-G03-A",
+          "text": "西",
+          "correct": true
+        },
+        {
+          "id": "L321-G03-B",
+          "text": "最",
+          "correct": false
+        },
+        {
+          "id": "L321-G03-C",
+          "text": "哪",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L321-G04",
+      "type": "partial-order",
+      "sentenceId": "L321-S04",
+      "targetChar": "些",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "options": [
+        {
+          "id": "L321-G04-A",
+          "text": "哪",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L321-G04-B",
+          "text": "些",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L321-G04-C",
+          "text": "人",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L321-G04-D",
+          "text": "能",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L321-G04-A",
+        "L321-G04-B",
+        "L321-G04-C",
+        "L321-G04-D"
+      ]
+    },
+    {
+      "id": "L321-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L321-S05",
+      "targetChar": "西",
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L321-G05-A",
+          "text": "這些西裝，哪一套最好看？",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L321/audio/L321-S05.m4a"
+        },
+        {
+          "id": "L321-G05-B",
+          "text": "那些西裝，哪一套最好看？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L321/audio/L321-G05-wrong-one.m4a"
+        },
+        {
+          "id": "L321-G05-C",
+          "text": "這些西裝，哪一套最難看？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L321/audio/L321-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
