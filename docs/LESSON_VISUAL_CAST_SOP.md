@@ -120,7 +120,16 @@ Mother, father, teacher, generic adults, generic children, recurring `我`, recu
 
 Generic children must not be reused as recurring children. Recurring children must not be redesigned as random new children.
 
-Before accepting each generated or repaired image, open the actual final exported WebP and compare it side by side against the L058 style references and the relevant cast anchors. This is a hard per-image style-lock gate, not a loose inspiration check and not satisfied by mentioning L058 in the prompt. The image must highly preserve the L058 illustration treatment. Reject and regenerate any image that drifts into generic cartoon, simple watercolor wash, anime, 3D render, photo-realistic style, simplified round generic faces, tiny/random child proportions, inconsistent proportions, or non-recurring/random character identity.
+Before accepting each generated or repaired image, open the actual final exported WebP and compare it side by side against the L058 style references and the relevant cast anchors. This is a hard per-image style-lock gate, not a loose inspiration check and not satisfied by mentioning L058 in the prompt. It is also not satisfied by checking that the picture "reads correctly." The image must highly preserve the L058 illustration treatment. Reject and regenerate any image that drifts into generic cartoon, simple watercolor wash, thin detailed Japanese-style watercolor, anime, 3D render, photo-realistic style, simplified round generic faces, tiny/random child proportions, inconsistent proportions, or non-recurring/random character identity.
+
+Production final report must list every changed image separately:
+- S01 style-lock PASS/FAIL, cast PASS/FAIL
+- S02 style-lock PASS/FAIL, cast PASS/FAIL
+- S03 style-lock PASS/FAIL, cast PASS/FAIL
+- S04 style-lock PASS/FAIL, cast PASS/FAIL
+- S05 style-lock PASS/FAIL, cast PASS/FAIL
+
+If any draft image was rejected for style or cast drift, say it was rejected and regenerated. Rejected draft images must not be committed or called final.
 
 Stop and return to Supervisor / Asset Repair if Production cannot access the L058 style reference images or the required cast anchor images, or if generated images repeatedly fail to preserve L058 style and recurring cast identity.
 ```
@@ -208,7 +217,11 @@ Before accepting generated or repaired images, Production / Asset Repair must ch
 - A passerby or generic adult is not the same recurring adult woman reused from another role.
 - The same recurring role stays consistent across the lesson and with any ledger description.
 
+Semantic correctness is only one gate. A generated image can clearly show the sentence meaning and still fail if its style or cast identity drifts. Do not report "the image reads correctly" as a substitute for side-by-side style-lock.
+
 If the generated image clones the wrong role or only loosely resembles the L058 style, regenerate the image. Do not pass the issue to Release as a known defect unless the teacher explicitly accepts it.
+
+Production final reports must name the actual per-image result for every changed image: `S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS ...`. If a changed image has no people, write `cast N/A`. If any rejected draft existed, state that it was rejected and not committed.
 
 ## Release And Repair Duties
 

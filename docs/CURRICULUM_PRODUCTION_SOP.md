@@ -107,6 +107,8 @@ Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`
 - `displayLines`, when present, join exactly back to `text`; each displayed line must stay at `<= 6` visible characters when zhuyin is shown. Count Han characters, punctuation, and any other learner-facing visible full-width character.
 - `displayLines` should use the fewest readable lines: two lines when possible; three lines only when no functional two-line split fits; four or more lines only with a clear reason.
 - `displayLines` must also use functional phrase breaks. Do not accept awkward count-only splits that break natural words or phrases, such as `用完彩色` / `筆，`; ask Editor/Review Migration/Supervisor for corrected `displayLines` before image/audio work if the handoff is unclear.
+- Image acceptance must include a real L058 side-by-side style-lock check for every final image, not only a semantic/imageNotes check. "The sentence reads correctly", "the object is clear", or "the action is visible" is not enough. Compare each exported WebP against the L058 reference set and relevant cast anchors before accepting it.
+- For each final image, reject and regenerate if it is semantically correct but visually drifts into generic/simple watercolor, thin detailed Japanese-style watercolor, flat cartoon, anime, 3D render, photorealism, overly round generic child faces, tiny/random child proportions, or redesigned recurring identities.
 - `charAudio` paths use `char-uXXXX.m4a`; generation packets and drafts must not leave stale examples such as `char-字.m4a`.
 - Every reviewed sentence has final `imageSrc`, sentence `audio.src`, `durationMs`, and non-empty `charTimings`.
 - Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported game type once, and use every reviewed sentence exactly once.
@@ -118,6 +120,7 @@ Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`
 - If any `choose-pronunciation` option text changes, regenerate the corresponding whole-sentence wrong-option audio from the exact final text, then rerun `npm run assets:audio -- --lesson L###`.
 - `choose-pronunciation` option audio should pass the `3 dB` mean-volume spread check. If `npm run assets:audit` reports a spread issue for the new lesson, normalize or regenerate before handoff.
 - All image and audio paths referenced by the draft exist under the owned lesson/review asset folder.
+- The final report lists per-image style/cast results, for example: `S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS ...`. If any image was rejected during generation, say it was rejected and regenerated before final commit. Do not call a rejected draft image final, and do not commit rejected draft images.
 
 Production should run:
 

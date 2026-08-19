@@ -122,6 +122,9 @@ If `curriculum:audit-state` reports any other failure, stop and report it.
 
 - Use the full L058 image style anchor set unless the teacher approved another style. L058 is style-only; do not copy the L058 adult woman or any other L058 person into unrelated roles.
 - Before accepting each final image, open or preview the actual exported WebP side by side with the L058 reference set and any relevant cast anchors. This is a hard style-lock gate, not a loose inspiration check. Regenerate images that are merely semantically correct but drift into simpler cartoon/watercolor, overly round generic faces, tiny/random child proportions, or non-recurring identities.
+- Side-by-side style-lock is not the same as checking whether the image "reads correctly." A picture can show the correct action, object, or location and still fail if its style or recurring cast identity drifts. Do not accept an image based only on semantic correctness.
+- For every S01-S05 image or review sentence image, compare the final exported WebP against the L058 anchors and the relevant cast anchors before it becomes final. Reject and regenerate drafts that drift into generic/simple watercolor, thin detailed Japanese-style watercolor, flat cartoon, anime, 3D render, photorealism, simplified round child faces, or redesigned recurring characters.
+- Rejected draft images must not be committed or described as final. If audio or JSON work was already started, restore any temporary production JSON diffs and regenerate only the failed images unless another blocker requires broader rework.
 - Follow `docs/LESSON_VISUAL_CAST_SOP.md` for mother, father, teacher, classmate, elder, passerby, and other human role identity.
 - New or replacement sentence images must be square `1:1` compositions with safe margins.
 - Final referenced images must be WebP and size-compliant.
@@ -169,7 +172,8 @@ Push the production branch and report:
 - Full pushed package ref, such as `origin/codex/l###-complete-package`, plus the full tip commit SHA.
 - Unit id and new character/review kind.
 - Whether it is `asset-complete-package`, `dependency-blocked-asset-complete`, `partial-package`, or `assets-only`.
-- Per-image or per-range L058 side-by-side style-lock result, plus recurring cast identity result for every changed image.
+- Per-image L058 side-by-side style-lock result and recurring cast identity result for every changed image, written explicitly as `S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS ...`. Do not replace this with a vague range note when any people or recurring roles appear.
+- Any image drafts rejected for style/cast drift, and confirmation that rejected drafts were not committed.
 - Any failed checks or skipped manual QA.
 - Pre-merge package preview URL only if useful, using `ref=<branch-or-full-commit-sha>`. Label it clearly as "pre-merge package preview, not the final main review queue".
 - Post-merge `ref=main` asset review URL may be listed only as the Release-owned final review URL and must be labeled "usable after Release merges and deploys".
