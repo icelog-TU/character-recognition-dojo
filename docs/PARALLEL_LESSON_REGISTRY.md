@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L322 | 東 / normal lesson | claimed | Production A | codex/l322-complete-package / bacfa12a | L320 最; L321 西 | ["最","西"] | curriculum-workflow/lesson-requests/L322.json; curriculum-workflow/generated/L322-generation-packet.md; curriculum-workflow/drafts/L322-draft.json | public/assets/lessons/L322/; curriculum-workflow/audio-inbox/L322/ | accepted handoff and starting complete package; L319 is already merged in latest origin/main |
 
 ## Status Values
 
