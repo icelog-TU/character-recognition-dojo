@@ -1,0 +1,304 @@
+{
+  "id": "L327",
+  "order": 327,
+  "newChars": [
+    "直"
+  ],
+  "zhuyin": {
+    "直": "ㄓˊ"
+  },
+  "title": "直",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production C complete-package handoff for L327. Latest origin/main at claim includes L323 方 and R037/R038. L324 圖, L325 向, and L326 線 remain provisional dependencies at package start. Approved sentences are fixed; do not change text. Release owns shared-state integration.",
+  "dependsOnLessons": [
+    "L324",
+    "L325",
+    "L326"
+  ],
+  "provisionalLearnedChars": [
+    "圖",
+    "向",
+    "線"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L323 + provisional 圖/向/線 + current new char 直",
+    "allowedCharsLocked": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直",
+    "dependsOnLessons": [
+      "L324",
+      "L325",
+      "L326"
+    ],
+    "provisionalLearnedChars": [
+      "圖",
+      "向",
+      "線"
+    ],
+    "requiredCoverageChars": [
+      "直",
+      "線",
+      "向",
+      "圖",
+      "方",
+      "東"
+    ],
+    "targetCharMinimumCount": {
+      "直": 3
+    },
+    "recentTargetMinimumCounts": {
+      "線": 2,
+      "向": 2,
+      "圖": 2,
+      "方": 1,
+      "東": 1
+    },
+    "coverageCounts": {
+      "直": 5,
+      "線": 3,
+      "向": 2,
+      "圖": 3,
+      "方": 1,
+      "東": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "displayLineMaxVisibleChars": 6,
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 S01-S05 lesson images only as illustration style references; do not copy any L058 person identity.",
+      "Open each final WebP and compare side by side with L058 S01-S05 and relevant cast anchors before accepting.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Mother, father, teacher, protagonist girl, recurring boys, workers, generic adults, and generic children must remain visually distinct.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 直 as public/assets/lessons/L327/audio/char-u76f4.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix and suffix from exact fragments 看地圖向前 and 走.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L327-S01",
+      "text": "在地圖上，畫一條直線。",
+      "spokenText": "在地圖上畫一條直線",
+      "focusChar": "直",
+      "displayLines": [
+        "在地圖上，",
+        "畫一條直線。"
+      ],
+      "hanCount": 9,
+      "imageNotes": "主角小女孩坐在桌前看一張簡單地圖，用筆在地圖上畫一條很直的線，像是在標出一條路。地圖要簡單，不要塞太多文字標籤；重點是「地圖上畫直線」。"
+    },
+    {
+      "id": "L327-S02",
+      "text": "看地圖，向前直走。",
+      "spokenText": "看地圖向前直走",
+      "focusChar": "直",
+      "displayLines": [
+        "看地圖，",
+        "向前直走。"
+      ],
+      "hanCount": 7,
+      "imageNotes": "主角小女孩和主角爸爸站在路口一起看地圖。爸爸指著前方的路，主角小女孩準備沿著前方直直走。畫面要清楚表現「看地圖」和「向前直走」。"
+    },
+    {
+      "id": "L327-S03",
+      "text": "這條路線，一直向東。",
+      "spokenText": "這條路線一直向東",
+      "focusChar": "直",
+      "displayLines": [
+        "這條路線，",
+        "一直向東。"
+      ],
+      "hanCount": 8,
+      "imageNotes": "路邊或公園入口有一面大型直立式地圖牌，像佈告欄那麼大。主角小女孩和主角爸爸站在地圖牌前，看著上面一條明顯的路線；那條路線從西邊往東邊延伸。爸爸指著路線，畫面要表現「這條路線，一直向東」。不要把場景侷限在桌面地圖。"
+    },
+    {
+      "id": "L327-S04",
+      "text": "他在最前方，站得很直。",
+      "spokenText": "他在最前方站得很直",
+      "focusChar": "直",
+      "displayLines": [
+        "他在最前方，",
+        "站得很直。"
+      ],
+      "hanCount": 9,
+      "imageNotes": "運動員排隊場景，一位 fixed `他` 男孩站在隊伍最前方，身體站得很直，像是準備帶隊或聽老師/教練說話。後面有幾位 generic children 排成一列。畫面重點是「最前方」和「站得很直」。"
+    },
+    {
+      "id": "L327-S05",
+      "text": "工作圖上的線要畫直。",
+      "spokenText": "工作圖上的線要畫直",
+      "focusChar": "直",
+      "displayLines": [
+        "工作圖上的",
+        "線要畫直。"
+      ],
+      "hanCount": 9,
+      "imageNotes": "工人叔叔或主角爸爸在工作桌前看一張工作圖，用尺或直邊工具把線畫直。桌上有簡單工具和紙張，重點是「工作圖上的線要畫直」。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L327-G01",
+      "type": "find-character",
+      "sentenceId": "L327-S01",
+      "targetChar": "直",
+      "targetCharIndex": 7,
+      "prompt": "找到「直」。",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        {
+          "id": "L327-G01-A",
+          "text": "直",
+          "correct": true
+        },
+        {
+          "id": "L327-G01-B",
+          "text": "線",
+          "correct": false
+        },
+        {
+          "id": "L327-G01-C",
+          "text": "條",
+          "correct": false
+        },
+        {
+          "id": "L327-G01-D",
+          "text": "圖",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L327-G02",
+      "type": "teach-character",
+      "sentenceId": "L327-S02",
+      "targetChar": "直",
+      "targetCharIndex": 5,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        5
+      ],
+      "teachAudio": {
+        "prefixText": "看地圖向前",
+        "suffixText": "走",
+        "prefixSrc": "/assets/lessons/L327/audio/L327-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L327/audio/L327-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L327-G03",
+      "type": "missing-character",
+      "sentenceId": "L327-S05",
+      "targetChar": "直",
+      "targetCharIndex": 8,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        {
+          "id": "L327-G03-A",
+          "text": "直",
+          "correct": true
+        },
+        {
+          "id": "L327-G03-B",
+          "text": "線",
+          "correct": false
+        },
+        {
+          "id": "L327-G03-C",
+          "text": "圖",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L327-G04",
+      "type": "partial-order",
+      "sentenceId": "L327-S03",
+      "targetChar": "直",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "options": [
+        {
+          "id": "L327-G04-A",
+          "text": "線",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L327-G04-B",
+          "text": "一",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L327-G04-C",
+          "text": "直",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L327-G04-D",
+          "text": "向",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L327-G04-A",
+        "L327-G04-B",
+        "L327-G04-C",
+        "L327-G04-D"
+      ]
+    },
+    {
+      "id": "L327-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L327-S04",
+      "targetChar": "直",
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L327-G05-A",
+          "text": "他在最前方，站得很直。",
+          "correct": true,
+          "sentenceId": "L327-S04",
+          "audioSrc": "/assets/lessons/L327/audio/L327-S04.m4a",
+          "spokenText": "他在最前方站得很直"
+        },
+        {
+          "id": "L327-G05-B",
+          "text": "他在最後方，站得很直。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L327/audio/L327-G05-wrong-one.m4a",
+          "spokenText": "他在最後方站得很直"
+        },
+        {
+          "id": "L327-G05-C",
+          "text": "他在最前方，坐得很直。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L327/audio/L327-G05-wrong-two.m4a",
+          "spokenText": "他在最前方坐得很直"
+        }
+      ]
+    }
+  ]
+}
