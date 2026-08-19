@@ -17,6 +17,41 @@ Before drafting sentences:
 
 If production JSON and Markdown disagree, `src/curriculum/sample-lessons.json` on latest `origin/main` wins.
 
+## New Character Discovery Gate
+
+This gate happens before ordinary sentence drafting. It is mandatory whenever the teacher asks the Editor to plan the next normal lesson target character.
+
+The Editor must not draft five sentences or write a Production handoff until the teacher has chosen the target character.
+
+Before recommending the next new character:
+
+1. Run `git fetch origin`.
+2. Read latest `origin/main:src/curriculum/sample-lessons.json` directly and report the official latest merged lesson id and newest learned character.
+3. Read the parallel registry only for accepted not-yet-merged provisional lessons that the teacher still wants to keep in sequence.
+4. Build the current planned sequence from official merged lessons plus accepted provisional lessons. Do not rely on local `main`, stale chat memory, screenshots, or old handoffs.
+5. Identify the recent three target characters and recent five target characters from that planned sequence.
+6. Re-scan not-yet-learned candidate characters. Do not restrict the search to the latest theme line, the previous 10-20 lessons, or the previous chat's candidate list.
+7. For each useful candidate character, evaluate:
+   - natural word/phrase potential with the recent three targets
+   - natural word/phrase potential with the recent five targets
+   - ability to open new sentence patterns
+   - ability to open new uses or meanings
+   - ability to open new concrete scenes
+   - five-year-old suitability
+   - imageability and audio clarity
+   - Stage 4 viability
+8. Return a candidate analysis and recommendation ranking only.
+9. Stop for teacher selection before drafting sentences.
+
+Recommended discovery report:
+
+- latest `origin/main` boundary
+- current planned/provisional lesson sequence
+- recent three target characters
+- recent five target characters
+- candidate table: new character, usable phrases, recent-three/five fit, new sentence/scenario value, child suitability, imageability risk, recommendation
+- explicit stop line: `Waiting for teacher target-character selection; no five-sentence draft produced yet.`
+
 ## Character Boundary
 
 Every display sentence must use only:
@@ -112,6 +147,8 @@ For a normal five-sentence new-character lesson:
 - Each target character from the previous 3 lessons must appear at least 2 times across the five approved sentences.
 - Each target character from the previous 4th and 5th lessons must appear at least 1 time across the five approved sentences.
 
+Coverage targets are exactly six entries: current lesson plus previous 1, previous 2, previous 3, previous 4, and previous 5. Do not include previous 6, previous 7, or any earlier lesson as a coverage target. Earlier characters may appear as allowed vocabulary when they are legal, but they must not be reported as required coverage.
+
 Example for L064 after:
 
 - L063 `開`
@@ -128,7 +165,18 @@ The L064 sentence set should include:
 
 These are minimums, not writing goals. Do not force every sentence to contain the new target character if that makes the set repetitive or unnatural.
 
-Recalculate coverage after every teacher rewrite, AI rewrite, or manual sentence substitution. Do not rely on old coverage counts after even a small text change. If a strong teacher sentence covers several targets, use the freed sentence slots to improve naturalness, scene variety, or target-phrase diversity rather than adding more forced review characters.
+Recalculate coverage after every teacher rewrite, AI rewrite, or manual sentence substitution. Do not rely on old coverage counts after even a small text change. The recalculation must also refresh Han counts, `spokenText`, `displayLines`, and the allowed-character audit. If a strong teacher sentence covers several targets, use the freed sentence slots to improve naturalness, scene variety, or target-phrase diversity rather than adding more forced review characters.
+
+Every coverage report should list:
+
+- `Current L###「X」`: actual count and PASS/FAIL
+- `Previous 1 L###「X」`: actual count and PASS/FAIL
+- `Previous 2 L###「X」`: actual count and PASS/FAIL
+- `Previous 3 L###「X」`: actual count and PASS/FAIL
+- `Previous 4 L###「X」`: actual count and PASS/FAIL
+- `Previous 5 L###「X」`: actual count and PASS/FAIL
+
+The Editor must explicitly state that previous-six or earlier characters were not included as coverage targets. If a previous-six or earlier character appears in a sentence, it is treated only as allowed vocabulary, not as a coverage requirement.
 
 For lessons with more or fewer than five approved sentences, preserve the same intent:
 

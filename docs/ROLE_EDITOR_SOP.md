@@ -27,6 +27,31 @@ Use `docs/CURRICULUM_LEDGER.md` only as the human-readable summary and continuit
 
 Use `docs/PARALLEL_LESSON_REGISTRY.md` only for not-yet-merged provisional dependencies.
 
+## New Character Discovery Gate
+
+Before the teacher chooses the next normal lesson target character, the Editor must run a fresh discovery pass. This is a hard gate: do not draft five sentences, do not prepare a handoff, and do not rely on old chat memory or yesterday's candidate list.
+
+For each new-character discovery pass:
+
+1. Run `git fetch origin`.
+2. Read latest `origin/main:src/curriculum/sample-lessons.json` directly and report the official latest merged lesson id and newest learned character.
+3. Read `docs/PARALLEL_LESSON_REGISTRY.md` only to identify already handed-off but not-yet-merged provisional lesson targets that the teacher still wants to keep in sequence.
+4. Build the current planned sequence from merged lessons plus accepted provisional lessons. If a provisional lesson is uncertain, label it uncertain instead of silently using it.
+5. List the recent three and recent five target characters from that planned sequence. These are context for candidate discovery, not yet the coverage table for a final sentence set.
+6. Re-scan not-yet-learned candidate characters. Do not select only from the newest theme, the latest few lessons, or stale candidates from the chat.
+7. For each strong candidate, analyze whether it can connect naturally to the recent three/five targets, open useful words, open new sentence patterns, open new scenes, stay suitable for a five-year-old, remain imageable, and support Stage 4.
+8. Report only candidate characters, useful word/phrase directions, strengths, risks, and a recommendation ranking.
+9. Stop and wait for the teacher to choose the target character. Sentence drafting starts only after teacher selection.
+
+The discovery report should include:
+
+- latest `origin/main` boundary
+- current planned/provisional sequence
+- recent three target characters
+- recent five target characters
+- candidate character table with phrase potential, recent-three/five fit, new sentence/scenario value, child suitability, imageability risk, and recommendation
+- an explicit note that no five-sentence draft has been produced yet
+
 ## Editor Operating Pattern
 
 For each normal lesson, use this sequence before producing a handoff:
@@ -38,7 +63,7 @@ For each normal lesson, use this sequence before producing a handoff:
 5. Scan the full learned set for scene sources, old actions, old nouns, and old sentence patterns that can make the lesson varied. Do not let all five sentences stay in one topic line when older learned vocabulary supports better scenes.
 6. Reject legal-but-unnatural words early. Coverage counts are minimum gates after good sentences exist; they are not a reason to keep a weak sentence.
 7. Draft more candidate directions than needed, normally 8-10 candidates, with varied sentence frames, scenes, people, actions, `focusChar` choices, and uses of the new character.
-8. After every teacher edit, recalculate current-target and previous-five coverage, Han sentence counts, and the allowed-character audit. Report exact illegal characters instead of assuming they can be used.
+8. After every teacher edit, recalculate current-target and previous-five coverage, Han sentence counts, `spokenText`, `displayLines`, and the allowed-character audit. Report exact illegal characters instead of assuming they can be used. Do not reuse a coverage table from before the edit.
 9. Preserve teacher-approved strong sentences unless there is a hard blocker. If a teacher rejects a sentence as unnatural, identify which coverage target it served and rewrite around that target with natural Taiwan Mandarin.
 10. Before final handoff, run the Editor Handoff Dependency Gate from `docs/SENTENCE_GENERATION_SOP.md`. Derive `dependsOnLessons` and `provisionalLearnedChars` from the approved display text sweep, not only from previous-five coverage targets.
 11. Before final handoff, confirm the five sentences, `spokenText`, `focusChar`, `displayLines`, coverage, allowed-character audit, imageability, visual cast identities, and Stage 4 sentence usage.
@@ -96,7 +121,7 @@ Before sending a Production handoff:
 
 - Audit every Han character in `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text against `allowedChars`.
 - Reject or rewrite any sentence with unlearned Han characters.
-- Separate coverage targets from dependency/provisional learned characters. Coverage targets are only the current lesson and previous five lesson targets. `dependsOnLessons` and `provisionalLearnedChars` must include every not-yet-merged character used by approved display text, even when that character is outside the coverage window.
+- Separate coverage targets from dependency/provisional learned characters. Coverage targets are exactly the current lesson and previous five lesson targets. Previous-six or earlier characters may be allowed vocabulary, but they are never coverage requirements. `dependsOnLessons` and `provisionalLearnedChars` must include every not-yet-merged character used by approved display text, even when that character is outside the coverage window.
 - Run a final approved-text sweep against latest `origin/main` learned chars plus final `provisionalLearnedChars` plus the current new character. If any Han character is still illegal, do not hand off.
 - Use Taiwan wording and Taiwan zhuyin only.
 - Keep sentences concrete, imageable, and normally 4-12 Han characters.
@@ -163,5 +188,6 @@ Auto-claim-and-continue:
 - Do not leave final sentences only in chat.
 - Do not tell Production only to "make images and audio."
 - Do not reserve AI-recommended characters without teacher approval.
+- Do not draft five lesson sentences before the teacher has selected the target character from a fresh New Character Discovery Gate.
 - Do not use Hanyu pinyin.
 - Do not ask Production to merge to `main`; Release owns ordered merge/push.
