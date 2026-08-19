@@ -1,0 +1,239 @@
+{
+  "id": "R038",
+  "kind": "review",
+  "unitKind": "review module",
+  "reviewNumber": 38,
+  "title": "複習三十八",
+  "pairMate": "R037",
+  "afterLessonOrder": 315,
+  "targetLessonRange": {
+    "startOrder": 286,
+    "endOrder": 315
+  },
+  "allowedCharacterCeiling": "L315",
+  "requiredCoverageChars": [
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬",
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆",
+    "照",
+    "顧",
+    "忘",
+    "每",
+    "次",
+    "記",
+    "完",
+    "收",
+    "彩"
+  ],
+  "requiredRounds": 5,
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "allowedCharacterCeiling": "L315",
+    "reviewMigrationReplacementPackage": false,
+    "forbiddenCharacters": [
+      "色",
+      "粉",
+      "哪",
+      "些",
+      "最",
+      "西",
+      "東",
+      "方",
+      "圖",
+      "向"
+    ],
+    "requiredCoverageChars": [
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬",
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種",
+      "澆",
+      "照",
+      "顧",
+      "忘",
+      "每",
+      "次",
+      "記",
+      "完",
+      "收",
+      "彩"
+    ],
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩",
+    "provisionalLearnedChars": []
+  },
+  "newChars": [],
+  "zhuyin": {},
+  "charAudio": {},
+  "reviewMigrationReplacementPackage": false,
+  "teacherNotes": "Review Migration Audit PASS. Production A builds asset-complete package for R037/R038 after L315. Allowed-character ceiling is locked to L315 even though origin/main is later. Do not use L316+ characters. Release owns shared-state integration.",
+  "approvedSentences": [
+    {
+      "id": "R038-S01",
+      "text": "看到蟲，當然會怕。",
+      "spokenText": "看到蟲當然會怕",
+      "focusChar": "怕",
+      "displayLines": [
+        "看到蟲，",
+        "當然會怕。"
+      ],
+      "imageNotes": "主角小女孩在花盆或泥土旁看到一條小蟲，露出有點害怕的表情。畫面要可愛、生活化，不要恐怖化。"
+    },
+    {
+      "id": "R038-S02",
+      "text": "做對做錯都可以，不會被罵。",
+      "spokenText": "做對做錯都可以不會被罵",
+      "focusChar": "對",
+      "displayLines": [
+        "做對做錯",
+        "都可以，",
+        "不會被罵。"
+      ],
+      "imageNotes": "教室或家中學習場景，老師或主角媽媽鼓勵孩子嘗試。畫面可有兩個小例子，一邊做對、一邊做錯，但大人沒有生氣，氣氛是「可以試，不會被罵」。"
+    },
+    {
+      "id": "R038-S03",
+      "text": "他被老師罵，哭了。",
+      "spokenText": "他被老師罵哭了",
+      "focusChar": "罵",
+      "displayLines": [
+        "他被老師罵，",
+        "哭了。"
+      ],
+      "imageNotes": "教室場景，一位 generic boy 被老師責備後哭了。老師表情嚴肅但不要過度凶狠；畫面重點是孩子被罵後哭了。"
+    },
+    {
+      "id": "R038-S04",
+      "text": "每次玩完，都忘記收。",
+      "spokenText": "每次玩完都忘記收",
+      "focusChar": "忘",
+      "displayLines": [
+        "每次玩完，",
+        "都忘記收。"
+      ],
+      "imageNotes": "主角小女孩或 generic child 玩完積木、球或玩具後，玩具散在地上沒有收。大人可以在旁邊提醒，畫面要清楚表現「玩完忘記收」。"
+    },
+    {
+      "id": "R038-S05",
+      "text": "這種彩帶用完，要收好。",
+      "spokenText": "這種彩帶用完要收好",
+      "focusChar": "彩",
+      "displayLines": [
+        "這種彩帶",
+        "用完，",
+        "要收好。"
+      ],
+      "imageNotes": "美術或活動後，桌上有用完的彩帶。主角小女孩把彩帶整理好、收進盒子或抽屜，畫面重點是「彩帶用完要收好」。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R038-G01",
+      "type": "find-character",
+      "sentenceId": "R038-S01",
+      "targetChar": "怕",
+      "prompt": "幫小兔子找這個字。",
+      "options": [
+        "怕",
+        "當",
+        "然",
+        "蟲"
+      ]
+    },
+    {
+      "id": "R038-G02",
+      "type": "teach-character",
+      "sentenceId": "R038-S02",
+      "targetChar": "對",
+      "targetCharIndex": 1,
+      "prompt": "小兔子卡住了，請教牠念紅框的字。",
+      "prefixText": "做",
+      "suffixText": "做錯都可以不會被罵"
+    },
+    {
+      "id": "R038-G03",
+      "type": "missing-character",
+      "sentenceId": "R038-S03",
+      "targetChar": "哭",
+      "missingIndexes": [
+        5
+      ],
+      "prompt": "幫小兔子補上少掉的字。",
+      "options": [
+        "哭",
+        "怕",
+        "痛"
+      ]
+    },
+    {
+      "id": "R038-G04",
+      "type": "partial-order",
+      "sentenceId": "R038-S04",
+      "targetChar": "忘",
+      "missingIndexes": [
+        5,
+        6,
+        7
+      ],
+      "missingChars": [
+        "忘",
+        "記",
+        "收"
+      ],
+      "prompt": "幫小兔子把字放回句子裡。",
+      "options": [
+        "忘",
+        "記",
+        "收"
+      ],
+      "correctOrder": [
+        "忘",
+        "記",
+        "收"
+      ]
+    },
+    {
+      "id": "R038-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R038-S05",
+      "targetChar": "彩",
+      "prompt": "先聽每個朋友念，再選念對的朋友。",
+      "correctText": "這種彩帶用完，要收好。",
+      "wrongTextOne": "這種彩帶用完，要放好。",
+      "wrongTextTwo": "這種彩帶用完，要洗手。"
+    }
+  ]
+}
