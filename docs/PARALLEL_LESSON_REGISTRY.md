@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L330 | 角 / normal lesson | claimed | Production B | codex/l330-complete-package | L328; L329 | 轉; 右 | `curriculum-workflow/lesson-requests/L330.json`; `curriculum-workflow/generated/L330-generation-packet.md`; `curriculum-workflow/drafts/L330-draft.json` | `public/assets/lessons/L330/`; `curriculum-workflow/audio-inbox/L330/` | Teacher-approved Editor handoff; build dependency-blocked asset-complete package; Release owns ordered integration. |
 
 ## Status Values
 
