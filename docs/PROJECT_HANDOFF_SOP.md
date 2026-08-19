@@ -20,8 +20,8 @@ If Markdown and production JSON disagree, latest `origin/main:src/curriculum/sam
 
 Repo audit snapshot, maintained by `npm run curriculum:audit-state`:
 
-- Current reviewed lessons: L001-L323
-- L323 introduces `方`.
+- Current reviewed lessons: L001-L324
+- L324 introduces `圖`.
 
 Do not trust this snapshot by itself, an old chat, a stale local `main`, or a package branch. The current curriculum boundary changes often.
 
