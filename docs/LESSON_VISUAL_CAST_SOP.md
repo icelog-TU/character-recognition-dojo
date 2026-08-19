@@ -19,6 +19,24 @@ Use L058 references for illustration treatment only:
 
 Do not copy the specific woman, child, clothing, hair, face, or body shape from L058 into unrelated roles.
 
+## Refined Preferred Style And Proportion Examples
+
+L058 remains the original style anchor. The teacher also approved the following merged lesson images as practical refined examples for the current target look, human proportions, and protagonist-family continuity:
+
+```text
+public/assets/lessons/L115/images/L115-S01.webp
+public/assets/lessons/L115/images/L115-S02.webp
+public/assets/lessons/L118/images/L118-S02.webp
+public/assets/lessons/L119/images/L119-S01.webp
+public/assets/lessons/L128/images/L128-S03.webp
+```
+
+Use these in side-by-side checks when a generated image includes the protagonist girl, protagonist mother, recurring young boy / `你`, recurring sporty boy / `他`, or similar family/classmate scenes. These examples show the preferred balance: warm L058-like pencil-and-watercolor detail, stable preschool proportions, natural Taiwan home/neighborhood lighting, and phone-readable square composition.
+
+The protagonist girl must stay in the same preschool age band and body proportion range. Do not let her drift from image to image into a toddler, older elementary-school child, teen, or random round-faced generic child. When context allows, preserve the recurring cues from the approved examples: short dark bob with pink hair clip, pink cardigan or similarly soft child clothing, navy skirt, pink shoes, and yellow bag. Do not force every cue into scenes where it would be unnatural, but do not redesign her identity.
+
+The protagonist mother should keep the warm family identity and adult proportions shown in the refined examples, while remaining visually distinct from the teacher, godmother, and generic adult women. The recurring young boy and sporty boy should also keep their approved age/proportion range instead of becoming random new boys.
+
 ## Why This Exists
 
 Recent production work overused the adult woman from the L058 reference images. This made mother, teacher, passerby, and other unrelated adults look like the same person. That is a visual continuity error, not a valid style match.
@@ -107,6 +125,15 @@ Use the approved L058 lesson images as the mandatory style reference set:
 - public/assets/lessons/L058/images/L058-S05.webp
 
 L058 is style-only: pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft natural faces, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity.
+
+Also use the refined preferred style/proportion examples from docs/LESSON_VISUAL_CAST_SOP.md when people appear, especially protagonist-family or recurring child scenes:
+- public/assets/lessons/L115/images/L115-S01.webp
+- public/assets/lessons/L115/images/L115-S02.webp
+- public/assets/lessons/L118/images/L118-S02.webp
+- public/assets/lessons/L119/images/L119-S01.webp
+- public/assets/lessons/L128/images/L128-S03.webp
+
+These refined examples are not optional decoration. They are the current practical target for stable protagonist-girl age/proportions, mother continuity, recurring boy proportions, and the preferred warm detailed course style. Reject images where the child becomes too young, too old, too round-faced, too tiny, or visually redesigned.
 
 For recurring cast identity, use the current visual cast anchors required by docs/LESSON_VISUAL_CAST_SOP.md:
 - public/assets/lessons/L154/images/L154-S01.webp
@@ -208,9 +235,10 @@ If a sentence intentionally says one role resembles or impersonates another, say
 
 ## Production Duties
 
-Before accepting generated or repaired images, Production / Asset Repair must check each final WebP side by side against the L058 reference set and relevant cast anchors:
+Before accepting generated or repaired images, Production / Asset Repair must check each final WebP side by side against the L058 reference set, the refined preferred examples above, and relevant cast anchors:
 
 - L058 style is highly matched without copying L058 person identity.
+- Refined preferred examples are matched for protagonist-girl age/proportions, mother continuity, recurring child proportions, and warm detailed course treatment.
 - Mother, father, teacher, classmate, elder, and passerby roles are visually distinct.
 - A teacher does not look like the mother unless the sentence explicitly requires that.
 - The protagonist godmother does not look like the protagonist mother or teacher; keep her very tall, more crisp, and in deep green or blue-green family-friend clothing. In height-focused sentences, the image must make her height obvious on a phone screen.

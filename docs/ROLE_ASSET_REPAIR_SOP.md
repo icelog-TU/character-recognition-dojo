@@ -89,7 +89,7 @@ If the teacher is not signed in, review checkbox changes may be local-only. Trea
 - Keep changes limited to the flagged asset(s) and any required production JSON metadata.
 - For image replacements, use square `1:1` composition and the full L058 style anchor set unless the teacher approved a new style. L058 is style-only; follow `docs/LESSON_VISUAL_CAST_SOP.md` so repaired teachers, parents, classmates, elders, and passersby do not all become the same adult woman.
 - Image repair is not a free redesign. Fix the marked defect while preserving the original sentence meaning, current `imageSrc` path, course style, and approved recurring cast identity.
-- Before regenerating or accepting any repaired image, open or otherwise inspect the old image, the full L058 style reference set, and any relevant cast anchors side by side. After final export/compression, inspect the actual final WebP side by side again before pushing. This is a hard per-image acceptance gate, not a loose reference check.
+- Before regenerating or accepting any repaired image, open or otherwise inspect the old image, the full L058 style reference set, the refined preferred style/proportion examples listed in `docs/LESSON_VISUAL_CAST_SOP.md`, and any relevant cast anchors side by side. After final export/compression, inspect the actual final WebP side by side again before pushing. This is a hard per-image acceptance gate, not a loose reference check.
 - Semantic correctness is not enough for image repair. A repaired image can fix the teacher's marked object/action problem and still fail if it drifts from the L058 style or recurring cast identity. Do not report "the image reads correctly" as a substitute for side-by-side style-lock.
 - A repaired image may fix the marked defect only if it also highly preserves the L058 illustration treatment: fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed but uncluttered environment, soft expressive preschool proportions, and consistent face/body proportions. If the tool cannot display image references directly, state that limitation and still include the exact reference paths and concrete style/cast traits in the prompt.
 - Mandatory style references for repaired lesson/review images:
@@ -102,7 +102,13 @@ If the teacher is not signed in, review checkbox changes may be local-only. Trea
   - `public/assets/lessons/L154/images/L154-S01.webp`
   - `public/assets/lessons/L162/images/L162-S04.webp`
   - `public/assets/lessons/L163/images/L163-S02.webp`
-- Reject and regenerate repaired images that drift into generic cartoon, simple watercolor wash, anime, 3D render, photorealistic style, muted/dark palette, simplified round generic faces, tiny/random child proportions, inconsistent proportions, or random/non-recurring character identities.
+- Refined preferred style/proportion examples:
+  - `public/assets/lessons/L115/images/L115-S01.webp`
+  - `public/assets/lessons/L115/images/L115-S02.webp`
+  - `public/assets/lessons/L118/images/L118-S02.webp`
+  - `public/assets/lessons/L119/images/L119-S01.webp`
+  - `public/assets/lessons/L128/images/L128-S03.webp`
+- Reject and regenerate repaired images that drift into generic cartoon, simple watercolor wash, anime, 3D render, photorealistic style, muted/dark palette, simplified round generic faces, tiny/random child proportions, inconsistent proportions, unstable protagonist-girl age/proportions, or random/non-recurring character identities.
 - If repeated repair attempts cannot preserve L058 style and the required cast identity, stop and report to Supervisor instead of pushing a drifting image.
 - For teacher-assigned visual refresh batches, replace only the images in the assigned lesson range. Keep lesson text, audio, Stage 4 data, `charTimings`, and existing `imageSrc` paths unchanged unless the teacher explicitly expands scope.
 - Final referenced images must be WebP and size-compliant.
