@@ -1,0 +1,297 @@
+{
+  "id": "L330",
+  "order": 330,
+  "kind": "lesson",
+  "newChars": [
+    "角"
+  ],
+  "zhuyin": {
+    "角": "ㄐㄧㄠˇ"
+  },
+  "title": "角",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Editor handoff for L330 角. Latest origin/main is complete through L327 直. L330 depends on L328 轉 and L329 右 unless they merge before Release integration. Production builds a dependency-blocked asset-complete package; Release owns ordered integration.",
+  "dependsOnLessons": [
+    "L328",
+    "L329"
+  ],
+  "provisionalLearnedChars": [
+    "轉",
+    "右"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L327 plus provisional chars 轉 右 plus current new char 角",
+    "dependsOnLessons": [
+      "L328",
+      "L329"
+    ],
+    "provisionalLearnedChars": [
+      "轉",
+      "右"
+    ],
+    "requiredCoverageChars": [
+      "角",
+      "右",
+      "轉",
+      "直",
+      "線",
+      "向"
+    ],
+    "targetCharMinimumCount": {
+      "角": 3
+    },
+    "recentTargetMinimumCounts": {
+      "右": 2,
+      "轉": 2,
+      "直": 2,
+      "線": 1,
+      "向": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Teacher identity must be visually distinct from protagonist mother.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, arrows, labels, captions, logos, brands, UI symbols, explanatory markings, or watermarks anywhere.",
+      "Before accepting each final WebP image, compare side by side with L058 style anchors and relevant cast anchors."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 角 as public/assets/lessons/L330/audio/char-u89d2.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix and suffix from exact fragments 直走到轉 and 再向右轉.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact whole-sentence pronunciation variants, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L330-S01",
+      "text": "直走到轉角，再向右轉。",
+      "spokenText": "直走到轉角再向右轉",
+      "focusChar": "角",
+      "displayLines": [
+        "直走到轉角，",
+        "再向右轉。"
+      ],
+      "imageNotes": "主角小女孩和爸爸走在人行道上，前方是街道轉角；爸爸帶著小女孩準備在轉角處往右邊走。畫面自然呈現走路轉彎，不要使用箭頭、文字或符號。"
+    },
+    {
+      "id": "L330-S02",
+      "text": "紙的右上角有一條線。",
+      "spokenText": "紙的右上角有一條線",
+      "focusChar": "右",
+      "displayLines": [
+        "紙的右上角",
+        "有一條線。"
+      ],
+      "imageNotes": "桌上放著一張紙，紙的右上角清楚畫著一條短線；主角小女孩在旁邊看著紙。不要加箭頭、標籤或文字提示。"
+    },
+    {
+      "id": "L330-S03",
+      "text": "這個角是直角。",
+      "spokenText": "這個角是直角",
+      "focusChar": "角",
+      "displayLines": [
+        "這個角",
+        "是直角。"
+      ],
+      "imageNotes": "老師在教室裡教學，站在白板或教具板旁，指著一個清楚的直角形狀；畫面要使用固定老師角色外觀。可以用兩條垂直相交的線呈現直角，不要出現文字標記。"
+    },
+    {
+      "id": "L330-S04",
+      "text": "媽媽眼角紅了。",
+      "spokenText": "媽媽眼角紅了",
+      "focusChar": "角",
+      "displayLines": [
+        "媽媽眼角",
+        "紅了。"
+      ],
+      "imageNotes": "主角媽媽坐在客廳或房間裡看書，因為書的內容感人而哭了，眼角有一點紅；主角小女孩在旁邊關心媽媽。表情溫和，不要畫成嚴重受傷或驚嚇。"
+    },
+    {
+      "id": "L330-S05",
+      "text": "彩色筆在桌角那邊。",
+      "spokenText": "彩色筆在桌角那邊",
+      "focusChar": "角",
+      "displayLines": [
+        "彩色筆在",
+        "桌角那邊。"
+      ],
+      "imageNotes": "桌子一角放著一盒彩色筆，主角小女孩站在桌邊看著或伸手去拿；畫面讓彩色筆的位置明顯是在桌角附近。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L330-G01",
+      "type": "teach-character",
+      "sentenceId": "L330-S01",
+      "targetChar": "角",
+      "targetCharIndex": 4,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        4
+      ],
+      "teachAudio": {
+        "prefixText": "直走到轉",
+        "targetText": "角",
+        "suffixText": "再向右轉",
+        "prefixSrc": "/assets/lessons/L330/audio/L330-G01-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L330/audio/L330-G01-suffix.m4a"
+      }
+    },
+    {
+      "id": "L330-G02",
+      "type": "find-character",
+      "sentenceId": "L330-S02",
+      "targetChar": "右",
+      "targetCharIndex": 2,
+      "prompt": "找到「右」。",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "L330-G02-A",
+          "text": "右",
+          "correct": true
+        },
+        {
+          "id": "L330-G02-B",
+          "text": "角",
+          "correct": false
+        },
+        {
+          "id": "L330-G02-C",
+          "text": "上",
+          "correct": false
+        },
+        {
+          "id": "L330-G02-D",
+          "text": "線",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L330-G03",
+      "type": "missing-character",
+      "sentenceId": "L330-S03",
+      "targetChar": "角",
+      "targetCharIndex": 2,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "L330-G03-A",
+          "text": "角",
+          "correct": true
+        },
+        {
+          "id": "L330-G03-B",
+          "text": "個",
+          "correct": false
+        },
+        {
+          "id": "L330-G03-C",
+          "text": "直",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L330-G04",
+      "type": "choose-pronunciation",
+      "sentenceId": "L330-S04",
+      "targetChar": "角",
+      "targetCharIndex": 3,
+      "prompt": "選出念得對的聲音。",
+      "options": [
+        {
+          "id": "L330-G04-A",
+          "text": "媽媽眼角紅了。",
+          "pronunciationText": "ㄐㄧㄠˇ",
+          "correct": true,
+          "sentenceId": "L330-S04",
+          "audioSrc": "/assets/lessons/L330/audio/L330-S04.m4a",
+          "spokenText": "媽媽眼角紅了"
+        },
+        {
+          "id": "L330-G04-B",
+          "text": "媽媽眼角紅了。",
+          "pronunciationText": "ㄐㄧㄠ",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L330/audio/L330-G04-wrong-one.m4a",
+          "ttsText": "媽媽眼交紅了"
+        },
+        {
+          "id": "L330-G04-C",
+          "text": "媽媽眼角紅了。",
+          "pronunciationText": "ㄐㄧㄠˋ",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L330/audio/L330-G04-wrong-two.m4a",
+          "ttsText": "媽媽眼叫紅了"
+        },
+        {
+          "id": "L330-G04-D",
+          "text": "媽媽眼角紅了。",
+          "pronunciationText": "ㄐㄩㄝˊ",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L330/audio/L330-G04-wrong-three.m4a",
+          "ttsText": "媽媽眼覺紅了"
+        }
+      ]
+    },
+    {
+      "id": "L330-G05",
+      "type": "partial-order",
+      "sentenceId": "L330-S05",
+      "targetChar": "角",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        2,
+        4,
+        5,
+        7
+      ],
+      "options": [
+        {
+          "id": "L330-G05-A",
+          "text": "筆",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L330-G05-B",
+          "text": "桌",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L330-G05-C",
+          "text": "角",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L330-G05-D",
+          "text": "邊",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L330-G05-A",
+        "L330-G05-B",
+        "L330-G05-C",
+        "L330-G05-D"
+      ]
+    }
+  ]
+}
