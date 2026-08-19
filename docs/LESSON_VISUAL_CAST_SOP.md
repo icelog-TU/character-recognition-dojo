@@ -99,12 +99,14 @@ Review Migration Audit must include this block, or an equivalent updated copy of
 Image style and cast requirements:
 Production must follow docs/CURRICULUM_PRODUCTION_SOP.md and docs/LESSON_VISUAL_CAST_SOP.md before generating or accepting any image.
 
-Use the approved L058 lesson images as mandatory style references, especially:
+Use the approved L058 lesson images as the mandatory style reference set:
 - public/assets/lessons/L058/images/L058-S01.webp
 - public/assets/lessons/L058/images/L058-S02.webp
 - public/assets/lessons/L058/images/L058-S03.webp
+- public/assets/lessons/L058/images/L058-S04.webp
+- public/assets/lessons/L058/images/L058-S05.webp
 
-L058 is style-only: pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, and phone-readable square composition. Do not copy any L058 person identity.
+L058 is style-only: pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft natural faces, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity.
 
 For recurring cast identity, use the current visual cast anchors required by docs/LESSON_VISUAL_CAST_SOP.md:
 - public/assets/lessons/L154/images/L154-S01.webp
@@ -118,7 +120,7 @@ Mother, father, teacher, generic adults, generic children, recurring `我`, recu
 
 Generic children must not be reused as recurring children. Recurring children must not be redesigned as random new children.
 
-Before accepting each generated image, compare it side by side against the L058 style references and the relevant cast anchors. Reject and regenerate any image that drifts into generic cartoon, simple watercolor wash, anime, 3D render, photo-realistic style, inconsistent proportions, or non-recurring/random character identity.
+Before accepting each generated or repaired image, open the actual final exported WebP and compare it side by side against the L058 style references and the relevant cast anchors. This is a hard per-image style-lock gate, not a loose inspiration check and not satisfied by mentioning L058 in the prompt. The image must highly preserve the L058 illustration treatment. Reject and regenerate any image that drifts into generic cartoon, simple watercolor wash, anime, 3D render, photo-realistic style, simplified round generic faces, tiny/random child proportions, inconsistent proportions, or non-recurring/random character identity.
 
 Stop and return to Supervisor / Asset Repair if Production cannot access the L058 style reference images or the required cast anchor images, or if generated images repeatedly fail to preserve L058 style and recurring cast identity.
 ```
@@ -197,16 +199,16 @@ If a sentence intentionally says one role resembles or impersonates another, say
 
 ## Production Duties
 
-Before accepting generated images, Production must check:
+Before accepting generated or repaired images, Production / Asset Repair must check each final WebP side by side against the L058 reference set and relevant cast anchors:
 
-- L058 style is matched without copying L058 person identity.
+- L058 style is highly matched without copying L058 person identity.
 - Mother, father, teacher, classmate, elder, and passerby roles are visually distinct.
 - A teacher does not look like the mother unless the sentence explicitly requires that.
 - The protagonist godmother does not look like the protagonist mother or teacher; keep her very tall, more crisp, and in deep green or blue-green family-friend clothing. In height-focused sentences, the image must make her height obvious on a phone screen.
 - A passerby or generic adult is not the same recurring adult woman reused from another role.
 - The same recurring role stays consistent across the lesson and with any ledger description.
 
-If the generated image clones the wrong role, regenerate the image. Do not pass the issue to Release as a known defect unless the teacher explicitly accepts it.
+If the generated image clones the wrong role or only loosely resembles the L058 style, regenerate the image. Do not pass the issue to Release as a known defect unless the teacher explicitly accepts it.
 
 ## Release And Repair Duties
 
@@ -214,7 +216,7 @@ Release may reject or hold a package when a repeated wrong-role face makes the i
 
 Asset Repair should treat wrong-role cloning as an image repair defect. A teacher note such as "teacher looks like mom" or "all adults are the same woman" is enough scope to regenerate the affected image.
 
-Asset Repair should also treat style drift as a failed repair. Fixing a marked object, pose, or scene detail does not permit the repaired image to become generic cartoon, simple watercolor wash, anime, 3D render, photorealistic, dark/muted, or inconsistent with the L058 style reference set. If the repaired image loses the established course style or recurring cast identity, regenerate before pushing.
+Asset Repair should also treat style drift as a failed repair. Fixing a marked object, pose, or scene detail does not permit the repaired image to become generic cartoon, simple watercolor wash, anime, 3D render, photorealistic, dark/muted, simplified/round-faced, tiny/random-proportioned, or inconsistent with the L058 style reference set. If the repaired image loses the established course style or recurring cast identity, regenerate before pushing.
 
 ## Ledger Updates
 
