@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L335 | 特 / normal lesson | claimed | Production D | codex/l335-complete-package | L334 別 | ["別"] | curriculum-workflow/lesson-requests/L335.json, curriculum-workflow/generated/L335-generation-packet.md, curriculum-workflow/drafts/L335-draft.json | curriculum-workflow/audio-inbox/L335/, public/assets/lessons/L335/images/, public/assets/lessons/L335/audio/ | accepted handoff; latest origin/main already includes L333 原, so only L334 remains provisional |
 
 ## Status Values
 
