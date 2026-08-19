@@ -1,0 +1,272 @@
+{
+  "id": "L322",
+  "order": 322,
+  "newChars": [
+    "東"
+  ],
+  "zhuyin": {
+    "東": "ㄉㄨㄥ"
+  },
+  "title": "東",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release-integrated package for L322 東. Approved sentences are fixed. Integrated onto origin/main after L321, so L321 ? is already a production learned character, not a provisional dependency. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L321 + current new char 東",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "東",
+      "西",
+      "最",
+      "些",
+      "哪",
+      "粉"
+    ],
+    "targetCharMinimumCount": {
+      "東": 3
+    },
+    "recentTargetMinimumCounts": {
+      "西": 2,
+      "最": 2,
+      "些": 2,
+      "哪": 1,
+      "粉": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Teacher identity must be visually distinct from protagonist mother.",
+      "Generic children must not look like recurring protagonist girl, recurring young boy classmate, or recurring sporty boy.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 東 as public/assets/lessons/L322/audio/char-u6771.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and suffix from exact fragments ?? and 西??哪?.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L322-S01",
+      "text": "每天，太陽從東邊出來。",
+      "spokenText": "每天太陽從東邊出來",
+      "focusChar": "東",
+      "displayLines": [
+        "每天，太陽",
+        "從東邊出來。"
+      ],
+      "imageNotes": "Morning outdoor scene. The sun is rising from the east side near mountains or the horizon, with bright warm morning light. The recurring protagonist girl may be shown watching from a safe place. The image must clearly convey \"the sun comes out from the east every day\" without any text, arrows, compass marks, direction labels, road signs, letters, numbers, Chinese characters, zhuyin, or watermarks."
+    },
+    {
+      "id": "L322-S02",
+      "text": "這些東西要放哪裡？",
+      "spokenText": "這些東西要放哪裡",
+      "focusChar": "東",
+      "displayLines": [
+        "這些東西",
+        "要放哪裡？"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. On a table or floor are several things that need to be put away, such as books, colored pencils, toys, shoes, and a small box. Nearby are two or three reasonable storage places, such as a bookshelf, storage box, or cabinet. The girl is looking at these things as if deciding where they should go. The focus is \"these things\" and \"where to put them.\" No visible text, labels, symbols, letters, numbers, Chinese characters, zhuyin, signs, logos, or watermarks."
+    },
+    {
+      "id": "L322-S03",
+      "text": "先用心聽，不要問東問西。",
+      "spokenText": "先用心聽不要問東問西",
+      "focusChar": "東",
+      "displayLines": [
+        "先用心聽，",
+        "不要",
+        "問東問西。"
+      ],
+      "imageNotes": "Classroom or home learning scene. Use the recurring protagonist girl identity and either a clearly distinct teacher identity or recurring protagonist mother identity. The teacher/mother is calmly explaining or telling a story, and the girl is sitting and listening carefully. The image should suggest \"listen carefully first\" and avoid making the child look scolded. If question bubbles are used, they must be wordless and visually secondary. No visible text, labels, symbols, letters, numbers, Chinese characters, zhuyin, signs, logos, or watermarks."
+    },
+    {
+      "id": "L322-S04",
+      "text": "哪些東西最好用？",
+      "spokenText": "哪些東西最好用",
+      "focusChar": "東",
+      "displayLines": [
+        "哪些東西",
+        "最好用？"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. On the table are several comparable tools or objects, such as pastel sticks, colored pencils, and watercolor materials. The girl is trying or comparing them to decide which things are easiest or best to use. The focus is comparing which things are best to use, not ranking with written labels. No visible text, labels, rankings, numbers, letters, Chinese characters, zhuyin, signs, logos, or watermarks."
+    },
+    {
+      "id": "L322-S05",
+      "text": "粉彩筆是我最愛的畫具。",
+      "spokenText": "粉彩筆是我最愛的畫具",
+      "focusChar": "最",
+      "displayLines": [
+        "粉彩筆",
+        "是我最愛的",
+        "畫具。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. She is happily holding or using pastel sticks / pastel pencils to draw. Other art tools such as watercolor materials or colored pencils may be nearby, but the pastel sticks should be most prominent. Show a drawing in progress or a completed picture. The focus is that pastel sticks are her favorite art tool. Do not depict ordinary pencils as the main object. No visible text, labels, symbols, letters, numbers, Chinese characters, zhuyin, signs, logos, or watermarks."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L322-G01",
+      "type": "find-character",
+      "sentenceId": "L322-S01",
+      "targetChar": "東",
+      "targetCharIndex": 5,
+      "prompt": "找到「東」。",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "id": "L322-G01-A",
+          "text": "東",
+          "correct": true
+        },
+        {
+          "id": "L322-G01-B",
+          "text": "西",
+          "correct": false
+        },
+        {
+          "id": "L322-G01-C",
+          "text": "哪",
+          "correct": false
+        },
+        {
+          "id": "L322-G01-D",
+          "text": "最",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L322-G02",
+      "type": "teach-character",
+      "sentenceId": "L322-S02",
+      "targetChar": "東",
+      "targetCharIndex": 2,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        2
+      ],
+      "teachAudio": {
+        "prefixText": "這些",
+        "suffixText": "西要放哪裡",
+        "prefixSrc": "/assets/lessons/L322/audio/L322-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L322/audio/L322-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L322-G03",
+      "type": "missing-character",
+      "sentenceId": "L322-S04",
+      "targetChar": "東",
+      "targetCharIndex": 2,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "L322-G03-A",
+          "text": "東",
+          "correct": true
+        },
+        {
+          "id": "L322-G03-B",
+          "text": "西",
+          "correct": false
+        },
+        {
+          "id": "L322-G03-C",
+          "text": "最",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L322-G04",
+      "type": "partial-order",
+      "sentenceId": "L322-S03",
+      "targetChar": "東",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "options": [
+        {
+          "id": "L322-G04-A",
+          "text": "不",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L322-G04-B",
+          "text": "要",
+          "correct": true,
+          "correctOrder": 1
+        },
+        {
+          "id": "L322-G04-C",
+          "text": "問",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L322-G04-D",
+          "text": "東",
+          "correct": true,
+          "correctOrder": 3
+        }
+      ],
+      "correctOrder": [
+        "L322-G04-A",
+        "L322-G04-B",
+        "L322-G04-C",
+        "L322-G04-D"
+      ]
+    },
+    {
+      "id": "L322-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L322-S05",
+      "targetChar": "最",
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L322-G05-A",
+          "text": "粉彩筆是我最愛的畫具。",
+          "correct": true,
+          "sentenceId": "L322-S05",
+          "audioSrc": "/assets/lessons/L322/audio/L322-S05.m4a"
+        },
+        {
+          "id": "L322-G05-B",
+          "text": "粉彩筆是我最愛的玩具。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L322/audio/L322-G05-wrong-one.m4a"
+        },
+        {
+          "id": "L322-G05-C",
+          "text": "粉彩筆是我最怕的畫具。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L322/audio/L322-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
