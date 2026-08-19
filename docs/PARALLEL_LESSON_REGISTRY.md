@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L332 | 因 / normal lesson | claimed | Production D | codex/l332-complete-package | L328 轉, L329 右, L330 角, L331 落 | ["轉","右","角","落"] | curriculum-workflow/lesson-requests/L332.json, curriculum-workflow/generated/L332-generation-packet.md, curriculum-workflow/drafts/L332-draft.json | curriculum-workflow/audio-inbox/L332/, public/assets/lessons/L332/images/, public/assets/lessons/L332/audio/ | accepted handoff; dependency-blocked package because origin/main is L327 |
+| L332 | 因 / normal lesson | ready-blocked-by-dependency | Production D | codex/l332-complete-package | L328 轉, L329 右, L330 角, L331 落 | ["轉","右","角","落"] | curriculum-workflow/lesson-requests/L332.json, curriculum-workflow/generated/L332-generation-packet.md, curriculum-workflow/drafts/L332-draft.json | curriculum-workflow/audio-inbox/L332/, public/assets/lessons/L332/images/, public/assets/lessons/L332/audio/ | asset-complete package with image/audio/alignment complete; remains blocked until L328-L331 are merged |
 
 ## Status Values
 

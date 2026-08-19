@@ -1,0 +1,294 @@
+{
+  "id": "L332",
+  "order": 332,
+  "newChars": [
+    "因"
+  ],
+  "zhuyin": {
+    "因": "ㄧㄣ"
+  },
+  "title": "因",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Production D dependency-blocked asset-complete package for L332 因. Startup recheck on 2026-08-19 found latest origin/main is L327 直, so L328 轉, L329 右, L330 角, and L331 落 remain dependencies and provisional learned characters until Release integrates them. Approved sentences and Stage 4 plan are fixed by Editor handoff. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, Stage 4 option text, G02 teach fragments, and visible card text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
+  "dependsOnLessons": [
+    "L328",
+    "L329",
+    "L330",
+    "L331"
+  ],
+  "provisionalLearnedChars": [
+    "轉",
+    "右",
+    "角",
+    "落"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L327 + provisionalLearnedChars 轉 右 角 落 + current new char 因",
+    "dependsOnLessons": [
+      "L328",
+      "L329",
+      "L330",
+      "L331"
+    ],
+    "provisionalLearnedChars": [
+      "轉",
+      "右",
+      "角",
+      "落"
+    ],
+    "requiredCoverageChars": [
+      "因",
+      "落",
+      "角",
+      "右",
+      "轉",
+      "直"
+    ],
+    "targetCharMinimumCount": {
+      "因": 3
+    },
+    "recentTargetMinimumCounts": {
+      "落": 2,
+      "角": 2,
+      "右": 2,
+      "轉": 1,
+      "直": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the complete L058 lesson image set only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Keep 主角小女孩, 主角媽媽, 主角爸爸, and 同學 visually distinct.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, arrows, UI symbols, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop.",
+      "Before accepting final exported WebP images, review them side-by-side against the L058 style anchors and relevant cast anchors; regenerate if style or recurring cast continuity drifts."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 因 as public/assets/lessons/L332/audio/char-u56e0.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G01 teach-character prefix and suffix audio from exact fragments 生病的病 and 還不知道.",
+      "Generate S03 choose-pronunciation wrong-option audio as whole-sentence TTS variants with the target 因 pronounced as ㄧㄥ, ㄧㄣˇ, and ㄧㄣˋ respectively.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L332-S01",
+      "text": "生病的病因，還不知道。",
+      "spokenText": "生病的病因還不知道",
+      "focusChar": "因",
+      "displayLines": [
+        "生病的病因，",
+        "還不知道。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity and recurring protagonist mother identity. The protagonist girl lies in bed resting and looks sick and uncomfortable; her mother sits beside the bed caring for her with a concerned expression. No visible medical text, diagnosis sheets, readable labels, letters, numbers, Chinese characters, zhuyin, logos, UI symbols, or watermarks."
+    },
+    {
+      "id": "L332-S02",
+      "text": "因為右腳痛，不能跑。",
+      "spokenText": "因為右腳痛不能跑",
+      "focusChar": "因",
+      "displayLines": [
+        "因為右腳痛，",
+        "不能跑。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity and distinct classmate children. The protagonist girl sits on a bench beside a playground or park path, gently touching her own right foot, while classmates run nearby; she temporarily cannot run with them. Keep the scene calm, not severely injured or frightening. No visible text, letters, numbers, Chinese characters, zhuyin, labels, arrows, logos, UI symbols, or watermarks."
+    },
+    {
+      "id": "L332-S03",
+      "text": "路不好走，因為落葉很多。",
+      "spokenText": "路不好走因為落葉很多",
+      "focusChar": "因",
+      "displayLines": [
+        "路不好走，",
+        "因為落葉",
+        "很多。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity and recurring protagonist father identity. A sidewalk or park path is partly covered with many fallen leaves, and the protagonist girl and father walk carefully. The picture should naturally show that the leaf-covered path is hard to walk on. No visible text, letters, numbers, Chinese characters, zhuyin, labels, arrows, signs, logos, UI symbols, or watermarks."
+    },
+    {
+      "id": "L332-S04",
+      "text": "小狗直直跑到轉角。",
+      "spokenText": "小狗直直跑到轉角",
+      "focusChar": "直",
+      "displayLines": [
+        "小狗直直",
+        "跑到轉角。"
+      ],
+      "imageNotes": "A friendly small dog runs straight ahead along a sidewalk toward a visible street or wall corner ahead. Use the recurring protagonist girl identity behind the dog, watching it run. Make the straight path and the corner clear without using arrows, labels, text, letters, numbers, Chinese characters, zhuyin, signs, logos, UI symbols, or watermarks."
+    },
+    {
+      "id": "L332-S05",
+      "text": "紙花落在右邊角落。",
+      "spokenText": "紙花落在右邊角落",
+      "focusChar": "落",
+      "displayLines": [
+        "紙花落在",
+        "右邊角落。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity in a room. On the floor in the right-side corner of the room, one handmade paper flower has fallen; nearby or on a table are simple paper-flower craft materials. The girl looks at the fallen paper flower. No visible text, letters, numbers, Chinese characters, zhuyin, labels, arrows, logos, UI symbols, or watermarks."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L332-G01",
+      "type": "teach-character",
+      "sentenceId": "L332-S01",
+      "targetChar": "因",
+      "targetCharIndex": 4,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "teachAudio": {
+        "prefixText": "生病的病",
+        "suffixText": "還不知道",
+        "prefixSrc": "/assets/lessons/L332/audio/L332-G01-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L332/audio/L332-G01-suffix.m4a"
+      }
+    },
+    {
+      "id": "L332-G02",
+      "type": "find-character",
+      "sentenceId": "L332-S02",
+      "targetChar": "因",
+      "targetCharIndex": 0,
+      "prompt": "找到「因」。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "L332-G02-A",
+          "text": "因",
+          "correct": true
+        },
+        {
+          "id": "L332-G02-B",
+          "text": "右",
+          "correct": false
+        },
+        {
+          "id": "L332-G02-C",
+          "text": "腳",
+          "correct": false
+        },
+        {
+          "id": "L332-G02-D",
+          "text": "跑",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L332-G03",
+      "type": "choose-pronunciation",
+      "sentenceId": "L332-S03",
+      "targetChar": "因",
+      "targetCharIndex": 4,
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L332-G03-A",
+          "text": "路不好走，因為落葉很多。",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L332/audio/L332-S03.m4a"
+        },
+        {
+          "id": "L332-G03-B",
+          "text": "路不好走，因為落葉不多。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L332/audio/L332-G03-wrong-ying.m4a"
+        },
+        {
+          "id": "L332-G03-C",
+          "text": "路不好走，因為落葉很少。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L332/audio/L332-G03-wrong-yin3.m4a"
+        },
+        {
+          "id": "L332-G03-D",
+          "text": "路不好走，因為落花很多。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L332/audio/L332-G03-wrong-yin4.m4a"
+        }
+      ]
+    },
+    {
+      "id": "L332-G04",
+      "type": "missing-character",
+      "sentenceId": "L332-S04",
+      "targetChar": "轉",
+      "targetCharIndex": 6,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        {
+          "id": "L332-G04-A",
+          "text": "轉",
+          "correct": true
+        },
+        {
+          "id": "L332-G04-B",
+          "text": "直",
+          "correct": false
+        },
+        {
+          "id": "L332-G04-C",
+          "text": "角",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L332-G05",
+      "type": "partial-order",
+      "sentenceId": "L332-S05",
+      "targetChar": "落",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "options": [
+        {
+          "id": "L332-G05-A",
+          "text": "紙",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L332-G05-B",
+          "text": "落",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L332-G05-C",
+          "text": "右",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L332-G05-D",
+          "text": "角",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L332-G05-A",
+        "L332-G05-B",
+        "L332-G05-C",
+        "L332-G05-D"
+      ]
+    }
+  ]
+}
