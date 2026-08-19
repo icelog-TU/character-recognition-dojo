@@ -184,6 +184,34 @@
         text-decoration: none;
       }
 
+      .unit-card .unit-link {
+        display: grid;
+        gap: 5px;
+        min-width: 0;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .quick-ok-button {
+        align-self: end;
+        justify-self: end;
+        min-width: 28px;
+        min-height: 28px;
+        padding: 0 7px;
+        border-color: #9bd0c4;
+        border-radius: 999px;
+        color: var(--accent);
+        background: #fff;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .quick-ok-button.done {
+        border-color: var(--accent);
+        color: #fff;
+        background: var(--accent);
+      }
+
       .unit-card.unreviewed {
         border-color: #e38b82;
         background: #fff3f0;
@@ -669,6 +697,74 @@
         state.reviewByUnit.set(unit.id, review);
       }
 
+      function writeLocalReviewForUnit(unit, review) {
+        const updatedAtMs = review.localUpdatedAtMs || Date.now();
+        localStorage.setItem(
+          localStorageKey(unit),
+          JSON.stringify({
+            flags: review.repairItems || {},
+            reviewComplete: review.reviewComplete === true,
+            updatedAtMs,
+          }),
+        );
+        state.reviewByUnit.set(unit.id, {
+          ...review,
+          localUpdatedAtMs: updatedAtMs,
+        });
+      }
+
+      function completeReviewForUnit(unit) {
+        const updatedAtMs = Date.now();
+        return {
+          version: 1,
+          repo: state.repo,
+          unit: unit.id,
+          ref: state.ref,
+          contentSignature: unit.contentSignature,
+          localUpdatedAtMs: updatedAtMs,
+          repairCount: 0,
+          reviewComplete: true,
+          repairItems: {},
+        };
+      }
+
+      async function syncOneReviewDocToCloud(unit, review) {
+        if (!state.user || !state.sha || !unit?.built) return false;
+        const payload = {
+          ...review,
+          commitSha: state.sha,
+          sourcePath: "src/curriculum/sample-lessons.json",
+          sentenceCount: (unit.sentences || []).length,
+          extraAudioCount: extraAudioCount(unit),
+          updatedByUid: state.user.uid,
+          updatedByEmail: state.user.email || "",
+          updatedByName: state.user.displayName || "",
+          updatedAt: serverTimestamp(),
+        };
+        await setDoc(doc(db, "assetReviews", reviewIdForUnit(unit)), payload);
+        state.cloudReviewByUnit.set(unit.id, payload);
+        state.reviewByUnit.set(unit.id, payload);
+        return true;
+      }
+
+      async function markUnitCompleteFromOverview(unit) {
+        if (!unit?.built) return;
+        const review = completeReviewForUnit(unit);
+        writeLocalReviewForUnit(unit, review);
+        render();
+        if (!state.user) {
+          setStatus(`${unit.id} 已在這台裝置標記為「已看完、沒問題」。登入 Google 後可同步到雲端。`, "ok");
+          return;
+        }
+        try {
+          await syncOneReviewDocToCloud(unit, review);
+          render();
+          setStatus(`${unit.id} 已標記為「已看完、沒問題」，並同步到雲端。`, "ok");
+        } catch (error) {
+          setStatus(`${unit.id} 已在本機標記為已看完，但雲端同步失敗：${error.message}`, "bad");
+        }
+      }
+
       async function downloadCloudReviewDocsToLocal() {
         if (!state.user || !state.sha || !state.builtById.size) return 0;
         await loadReviewDocs();
@@ -917,8 +1013,11 @@
                 <div class="unit-title">${html(title)}</div>
                 <div class="unit-chars muted">${html(chars)}</div>
             `;
+            const quickOkButton = unit.built
+              ? `<button class="quick-ok-button ${status.kind === "complete" ? "done" : ""}" type="button" data-quick-complete="${html(unit.id)}" title="標記本課已看完，沒有問題" aria-label="標記 ${html(unit.id)} 已看完，沒有問題">✓</button>`
+              : "";
             return unit.built
-              ? `<a id="${cardId}" class="${cardClass}" href="${html(lessonLink(unit))}">${cardBody}</a>`
+              ? `<article id="${cardId}" class="${cardClass}"><a class="unit-link" href="${html(lessonLink(unit))}">${cardBody}</a>${quickOkButton}</article>`
               : `<article id="${cardId}" class="${cardClass}" aria-label="${html(unit.id)} 尚未製作">${cardBody}</article>`;
           })
           .join("");
@@ -961,6 +1060,19 @@
         }
         const startOrder = Number(button.dataset.jumpOrder);
         if (Number.isFinite(startOrder)) jumpToRangeStart(startOrder);
+      });
+      $("unitGrid").addEventListener("click", (event) => {
+        const button = event.target.closest("[data-quick-complete]");
+        if (!button) return;
+        event.preventDefault();
+        event.stopPropagation();
+        const unit = state.builtById.get(button.dataset.quickComplete);
+        if (!unit) return;
+        button.disabled = true;
+        markUnitCompleteFromOverview(unit).catch((error) => {
+          button.disabled = false;
+          setStatus(`標記 ${unit.id} 失敗：${error.message}`, "bad");
+        });
       });
       $("searchInput").addEventListener("input", () => {
         state.search = $("searchInput").value;
