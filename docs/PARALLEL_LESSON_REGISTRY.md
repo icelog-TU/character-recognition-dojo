@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L331 | 落 | claimed | Production C | codex/l331-complete-package | L328:轉; L329:右; L330:角 | 轉 右 角 | curriculum-workflow/lesson-requests/L331.json; curriculum-workflow/generated/L331-generation-packet.md; curriculum-workflow/drafts/L331-draft.json | curriculum-workflow/audio-inbox/L331/; public/assets/lessons/L331/ | Asset-complete-package claim from latest origin/main through L327:直. L328/L329/L330 package branches exist but are not merged at claim time. |
 
 ## Status Values
 
