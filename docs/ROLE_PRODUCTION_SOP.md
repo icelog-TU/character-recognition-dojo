@@ -138,6 +138,7 @@ Before reporting done, run a fast lesson-local audit. This should be minutes, no
 - `request`, `draft`, and `generation packet` agree on lesson id, new character(s), zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
 - Top-level `dependsOnLessons` exists when the lesson uses provisional characters from earlier unmerged lessons.
 - `displayLines`, when present, join exactly back to `text`; each zhuyin line must stay at `<= 6` visible characters, including punctuation and any other learner-facing visible symbol.
+- `displayLines` uses the fewest readable lines: two lines when possible, three lines only when no functional two-line split works, and four or more lines only with a clear reason.
 - `displayLines` must use functional phrase breaks, not arbitrary count-only breaks. Do not split natural words or phrases such as `彩色筆`; return to Editor/Review Migration/Supervisor if the handoff line breaks are awkward or unclear.
 - Every sentence has final `imageSrc`, sentence `audio.src`, `durationMs`, and non-empty `charTimings`.
 - `charAudio` uses the repo path form `char-uXXXX.m4a`, not `char-字.m4a`.

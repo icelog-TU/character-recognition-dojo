@@ -294,6 +294,7 @@ Rules:
 - Lines must join exactly back to `text`.
 - Lines must preserve punctuation. `spokenText` removes punctuation; `displayLines` does not.
 - Each line must stay at or under 6 visible characters when zhuyin is visible. Count Han characters, punctuation, and any other learner-facing visible full-width character. Do not use a Han-only count for display-line layout.
+- Use the fewest readable lines that satisfy the 6-visible-character limit. Prefer two lines whenever a functional two-line split works; use three lines only when two lines would exceed the limit or force an awkward phrase break. Four or more lines should be exceptional and should be explained.
 - `displayLines` affects only visual line breaks; audio and timings still use `text` and `spokenText`.
 - If a line is longer than 6 visible characters, split only `displayLines` and keep `text` plus `spokenText` unchanged. A line like `這本書太長了，` is 7 visible characters and must be split.
 
@@ -310,11 +311,11 @@ Examples:
 ```json
 {
   "text": "用完彩色筆，要記得收好。",
-  "displayLines": ["用完", "彩色筆，", "要記得", "收好。"]
+  "displayLines": ["用完彩色筆，", "要記得收好。"]
 }
 ```
 
-Do not split this as `["用完彩色", "筆，", "要記得", "收好。"]`, because it breaks the object phrase `彩色筆`.
+This fits in two readable lines, so do not split it into four lines. Also do not split it as `["用完彩色", "筆，", "要記得", "收好。"]`, because it breaks the object phrase `彩色筆`.
 
 ```json
 {
@@ -326,7 +327,7 @@ Do not split this as `["用完彩色", "筆，", "要記得", "收好。"]`, bec
 ```json
 {
   "text": "天氣冷，樹葉變紅色了。",
-  "displayLines": ["天氣冷，", "樹葉", "變紅色了。"]
+  "displayLines": ["天氣冷，樹葉", "變紅色了。"]
 }
 ```
 
@@ -383,6 +384,7 @@ Before sending sentences to image/audio production, verify:
 - `spokenText` matches `text` without punctuation
 - every `displayLines` array joins exactly back to `text`, including punctuation
 - every `displayLines` line is at most 6 visible characters, including punctuation, when zhuyin is visible
+- every `displayLines` uses the fewest readable lines: two lines when possible, three lines only when two cannot work, and four or more lines only with a clear reason
 - every `displayLines` break follows functional phrase boundaries; no natural word or phrase is split awkwardly just to satisfy the length gate
 - every `focusChar` appears in its sentence
 - every sentence with people has explicit role identities in `imageNotes` following `docs/LESSON_VISUAL_CAST_SOP.md`
