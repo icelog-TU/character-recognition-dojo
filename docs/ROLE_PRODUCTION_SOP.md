@@ -136,6 +136,7 @@ If `curriculum:audit-state` reports any other failure, stop and report it.
 Before reporting done, run a fast lesson-local audit. This should be minutes, not a second release process:
 
 - `request`, `draft`, and `generation packet` agree on lesson id, new character(s), zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
+- The `generation packet` contains the final approved sentence records that match the draft, including `text`, `spokenText`, `focusChar`, `displayLines`, and `imageNotes` for every sentence or review sentence. A packet that contains only generation prompts, stale candidates, or missing final records is not package-complete.
 - Top-level `dependsOnLessons` exists when the lesson uses provisional characters from earlier unmerged lessons.
 - `displayLines`, when present, join exactly back to `text`; each zhuyin line must stay at `<= 6` visible characters, including punctuation and any other learner-facing visible symbol.
 - `displayLines` uses the fewest readable lines: two lines when possible, three lines only when no functional two-line split works, and four or more lines only with a clear reason.

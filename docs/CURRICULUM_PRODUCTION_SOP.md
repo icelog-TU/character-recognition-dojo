@@ -76,7 +76,7 @@ A production thread may prepare one assigned normal lesson or review module in p
 For a normal lesson, the minimum `asset-complete-package` is:
 
 - `curriculum-workflow/lesson-requests/L###.json` with teacher-approved `newChars`, zhuyin, `allowedChars`, teacher notes, and final `approvedSentences`
-- `curriculum-workflow/generated/L###-generation-packet.md`
+- `curriculum-workflow/generated/L###-generation-packet.md` with the final approved sentence records matching the draft, not only generation prompts or stale candidate notes
 - `curriculum-workflow/drafts/L###-draft.json` with final image prompts, audio refs, `charTimings`, and `sentenceGames`
 - final compressed images under `public/assets/lessons/L###/images/`
 - final processed audio under `public/assets/lessons/L###/audio/`, including sentence audio, standalone `charAudio`, and any `G02`/`G05` Stage 4 audio referenced by the lesson
@@ -101,6 +101,7 @@ Hard release gate:
 Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`, Production must do a fast lesson-local audit. This audit is intended to catch defects that are cheap for Production to fix and expensive for Release to rediscover:
 
 - `lesson-requests/L###.json`, `generated/L###-generation-packet.md`, and `drafts/L###-draft.json` agree on lesson id, order, new character(s), Taiwan zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
+- The generation packet must contain the final approved sentence set exactly as implemented in the draft, including final `text`, `spokenText`, `focusChar`, `displayLines`, and `imageNotes`. Missing final records or stale candidate text is a Production package defect even if request/draft/assets pass validators; fix it before reporting `asset-complete-package`.
 - Top-level `dependsOnLessons` is present whenever the lesson uses provisional characters from earlier unmerged lessons.
 - `dependsOnLessons` and `provisionalLearnedChars` cover every not-yet-merged Han character used in learner-facing text: `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text. Do not apply this character gate to `imageNotes` or image prompts, which are production instructions rather than learner-facing curriculum text. Do not trust a handoff that lists only previous-five coverage targets; rerun the approved-text sweep against latest `origin/main` learned chars plus provisional chars plus the current new character.
 - `displayLines`, when present, join exactly back to `text`; each displayed line must stay at `<= 6` visible characters when zhuyin is shown. Count Han characters, punctuation, and any other learner-facing visible full-width character.
