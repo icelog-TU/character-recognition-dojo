@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L329 | 右 | claimed | Production A | codex/l329-complete-package | L328:轉 | 轉 | `curriculum-workflow/lesson-requests/L329.json`; `curriculum-workflow/generated/L329-generation-packet.md`; `curriculum-workflow/drafts/L329-draft.json` | `curriculum-workflow/audio-inbox/L329/`; `public/assets/lessons/L329/` | Dependency-blocked package; base `origin/main` is L327 at `30f18b5e`. |
+| L329 | 右 | ready-blocked-by-dependency | Production A | codex/l329-complete-package | L328:轉 | 轉 | `curriculum-workflow/lesson-requests/L329.json`; `curriculum-workflow/generated/L329-generation-packet.md`; `curriculum-workflow/drafts/L329-draft.json` | `curriculum-workflow/audio-inbox/L329/`; `public/assets/lessons/L329/` | Dependency-blocked asset-complete package; L328 was not merged at claim. Release owns final production JSON/planner/ledger integration after L328 enters main. |
 
 ## Status Values
 
