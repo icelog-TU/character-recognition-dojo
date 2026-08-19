@@ -1,0 +1,285 @@
+{
+  "id": "L320",
+  "order": 320,
+  "newChars": [
+    "最"
+  ],
+  "zhuyin": {
+    "最": "ㄗㄨㄟˋ"
+  },
+  "title": "最",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Release-integrated package for L320 最. Approved sentences are fixed. Integrated onto origin/main after L319, so L318 and L319 are production learned lessons, not provisional dependencies. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, and Stage 4 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L319 + current new char 最",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "最",
+      "些",
+      "哪",
+      "粉",
+      "色",
+      "彩"
+    ],
+    "targetCharMinimumCount": {
+      "最": 3
+    },
+    "recentTargetMinimumCounts": {
+      "些": 2,
+      "哪": 2,
+      "粉": 2,
+      "色": 1,
+      "彩": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use L058 lesson images only as illustration style references; do not copy any L058 person, clothing, face, hair, or body shape.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "Use the recurring protagonist girl identity for 我 and protagonist scenes.",
+      "Use the recurring young boy identity for 你.",
+      "Use the recurring protagonist mother identity for 媽媽.",
+      "Mother, teacher, protagonist girl, recurring young boy, and generic children must remain visually distinct.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, signs, labels, logos, brands, subtitles, readable marks, or watermarks anywhere.",
+      "Each image must clearly match its approved image notes and remain phone-readable in a square crop."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 最 as public/assets/lessons/L320/audio/char-u6700.m4a from the single character.",
+      "Generate S01-S05 from spokenText.",
+      "Generate G02 prefix and suffix from exact fragments 粉紅色 and 好再多一些.",
+      "Generate G05 wrong-option audio as standalone whole-text files from exact full wrong-option text.",
+      "Do not splice, cut, mute, patch, or extract production audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L320-S01",
+      "text": "這些粉彩畫，哪一張最好看？",
+      "spokenText": "這些粉彩畫哪一張最好看",
+      "focusChar": "最",
+      "displayLines": [
+        "這些",
+        "粉彩畫，",
+        "哪一張",
+        "最好看？"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. On the table are several completed pastel drawings, each with different content and all looking attractive. The girl is comparing or choosing one of the drawings. The image must clearly show \"these pastel drawings\" and the question of which one looks best. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L320-S02",
+      "text": "有些衣服沒乾，要最後才能收。",
+      "spokenText": "有些衣服沒乾要最後才能收",
+      "focusChar": "最",
+      "displayLines": [
+        "有些衣服",
+        "沒乾，",
+        "要最後",
+        "才能收。"
+      ],
+      "imageNotes": "Use the recurring protagonist mother and recurring protagonist girl identities. Show a drying rack with several pieces of clothing. Some clothes are already dry and folded nearby, while some are still visibly damp and hanging, so they cannot be put away yet. Mother or the girl is checking which clothes are still wet. The image must clearly show \"some clothes are not dry\" and \"they can only be collected last.\" No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L320-S03",
+      "text": "粉紅色最好再多一些。",
+      "spokenText": "粉紅色最好再多一些",
+      "focusChar": "最",
+      "displayLines": [
+        "粉紅色",
+        "最好再",
+        "多一些。"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. She is looking at a drawing with flowers or clouds where the pink area is still not enough. She holds a pink drawing material and is about to add a little more pink. The image must clearly suggest adjusting the picture by adding more pink. No visible text, letters, numbers, Chinese characters, zhuyin, labels, signs, logos, or watermarks."
+    },
+    {
+      "id": "L320-S04",
+      "text": "哪一條路才能到學校？",
+      "spokenText": "哪一條路才能到學校",
+      "focusChar": "哪",
+      "displayLines": [
+        "哪一條路",
+        "才能到",
+        "學校？"
+      ],
+      "imageNotes": "Use the recurring protagonist girl identity. She may stand with the recurring 「你」 young boy at a safe fork in the road. There are two or three different paths ahead, and one path clearly leads to a school building while the other paths go elsewhere. The children look like they are deciding which road reaches the school. Do not use written signs, arrows, road labels, numbers, or text; the school should be shown by building appearance only. Keep the scene safe and child-friendly."
+    },
+    {
+      "id": "L320-S05",
+      "text": "這一道是媽媽最拿手的菜。",
+      "spokenText": "這一道是媽媽最拿手的菜",
+      "focusChar": "最",
+      "displayLines": [
+        "這一道",
+        "是媽媽",
+        "最拿手的",
+        "菜。"
+      ],
+      "imageNotes": "Use the recurring protagonist mother and recurring protagonist girl identities. Mother is serving one homemade dish at the family table, and the girl looks happy or expectant. The table may include rice and a few simple side dishes, but the focus should be the dish mother is presenting as her specialty. Do not depict a competition, restaurant advertisement, written menu, labels, or text."
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L320-G01",
+      "type": "find-character",
+      "sentenceId": "L320-S01",
+      "targetChar": "最",
+      "targetCharIndex": 8,
+      "prompt": "找到「最」。",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        {
+          "id": "L320-G01-A",
+          "text": "最",
+          "correct": true
+        },
+        {
+          "id": "L320-G01-B",
+          "text": "些",
+          "correct": false
+        },
+        {
+          "id": "L320-G01-C",
+          "text": "哪",
+          "correct": false
+        },
+        {
+          "id": "L320-G01-D",
+          "text": "粉",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L320-G02",
+      "type": "teach-character",
+      "sentenceId": "L320-S03",
+      "targetChar": "最",
+      "targetCharIndex": 3,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        3
+      ],
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L320/audio/L320-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L320/audio/L320-G02-suffix.m4a"
+      },
+      "teachAudioText": {
+        "prefixText": "粉紅色",
+        "suffixText": "好再多一些"
+      }
+    },
+    {
+      "id": "L320-G03",
+      "type": "missing-character",
+      "sentenceId": "L320-S05",
+      "targetChar": "最",
+      "targetCharIndex": 6,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        {
+          "id": "L320-G03-A",
+          "text": "最",
+          "correct": true
+        },
+        {
+          "id": "L320-G03-B",
+          "text": "哪",
+          "correct": false
+        },
+        {
+          "id": "L320-G03-C",
+          "text": "些",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L320-G04",
+      "type": "partial-order",
+      "sentenceId": "L320-S04",
+      "targetChar": "哪",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "id": "L320-G04-A",
+          "text": "哪",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L320-G04-B",
+          "text": "一",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L320-G04-C",
+          "text": "條",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L320-G04-D",
+          "text": "路",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L320-G04-A",
+        "L320-G04-B",
+        "L320-G04-C",
+        "L320-G04-D"
+      ]
+    },
+    {
+      "id": "L320-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L320-S02",
+      "targetChar": "最",
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L320-G05-A",
+          "text": "有些衣服沒乾，要最後才能收。",
+          "correct": true,
+          "sentenceId": "L320-S02",
+          "audioSrc": "/assets/lessons/L320/audio/L320-S02.m4a",
+          "spokenText": "有些衣服沒乾要最後才能收"
+        },
+        {
+          "id": "L320-G05-B",
+          "text": "有些衣服沒乾，要最先才能收。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L320/audio/L320-G05-wrong-one.m4a",
+          "spokenText": "有些衣服沒乾要最先才能收"
+        },
+        {
+          "id": "L320-G05-C",
+          "text": "有些衣服沒乾，要最後才能洗。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L320/audio/L320-G05-wrong-two.m4a",
+          "spokenText": "有些衣服沒乾要最後才能洗"
+        }
+      ]
+    }
+  ]
+}
