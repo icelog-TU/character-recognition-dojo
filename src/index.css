@@ -2427,9 +2427,9 @@ button.char-token {
 .sentence-game-card .sentence-line-row {
   width: 100%;
   min-width: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 8px;
+  gap: clamp(2px, 1.1vw, 6px);
 }
 
 .sentence-game-card button.char-token {
@@ -2443,10 +2443,17 @@ button.char-token {
 }
 
 .sentence-game-card .char-token {
-  flex: 0 1 clamp(42px, 17vw, 58px);
-  min-width: 0;
-  min-height: clamp(50px, 16vw, 60px);
-  padding: 4px 2px;
+  flex: 0 0 auto;
+  min-width: clamp(30px, 8vw, 42px);
+  min-height: clamp(44px, 12vw, 54px);
+  gap: clamp(1px, 0.55vw, 3px);
+  padding: 3px 1px;
+}
+
+.sentence-game-card .punctuation {
+  flex: 0 0 auto;
+  font-size: clamp(1.12rem, 4.8vw, 1.42rem);
+  line-height: 1;
 }
 
 .sentence-game-card .target-game-char {
@@ -2470,12 +2477,12 @@ button.char-token {
 }
 
 .sentence-game-card .hanzi {
-  font-size: clamp(2rem, 11vw, 2.45rem);
+  font-size: clamp(1.72rem, 8.4vw, 2.2rem);
 }
 
 .sentence-game-card .zhuyin-mark {
-  font-size: clamp(0.54rem, 2.7vw, 0.68rem);
-  min-width: 1.35em;
+  font-size: clamp(0.48rem, 2.15vw, 0.62rem);
+  min-width: 1.08em;
 }
 
 .stage-four-sentence-card {
@@ -2494,19 +2501,26 @@ button.char-token {
 .stage-four-sentence-card .sentence-line-row {
   width: 100%;
   min-width: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 8px;
+  gap: clamp(2px, 1.1vw, 6px);
 }
 
 .stage-four-sentence-card .char-token {
-  flex: 0 1 auto;
-  min-width: 44px;
+  flex: 0 0 auto;
+  min-width: clamp(30px, 8vw, 42px);
+  min-height: clamp(44px, 12vw, 54px);
+  gap: clamp(1px, 0.55vw, 3px);
   padding-inline: 1px;
 }
 
+.stage-four-sentence-card .hanzi {
+  font-size: clamp(1.72rem, 8.4vw, 2.2rem);
+}
+
 .stage-four-sentence-card .zhuyin-mark {
-  min-width: 1.28em;
+  font-size: clamp(0.48rem, 2.15vw, 0.62rem);
+  min-width: 1.08em;
 }
 
 .sentence-game-card button.char-token:not(:disabled):active {
@@ -2516,14 +2530,14 @@ button.char-token {
 .sentence-blank {
   display: inline-grid;
   place-items: center;
-  flex: 0 1 clamp(48px, 18vw, 64px);
-  min-width: 0;
-  min-height: clamp(52px, 17vw, 64px);
+  flex: 0 0 auto;
+  min-width: clamp(38px, 10vw, 52px);
+  min-height: clamp(44px, 12vw, 56px);
   border: 2px dashed var(--primary);
   border-radius: 8px;
   background: #eef8f4;
   color: var(--primary-strong);
-  font-size: clamp(2rem, 11vw, 2.45rem);
+  font-size: clamp(1.72rem, 8.4vw, 2.2rem);
   font-weight: 900;
   line-height: 1;
 }
@@ -2832,7 +2846,7 @@ button.char-token {
   }
 
   .sentence-game-card .sentence-line-row {
-    gap: 6px;
+    gap: 3px;
   }
 
   .stage-four-sentence-card {
@@ -2844,22 +2858,22 @@ button.char-token {
   }
 
   .stage-four-sentence-card .sentence-line-row {
-    gap: 6px 4px;
+    gap: 3px;
   }
 
   .stage-four-sentence-card .char-token {
-    min-width: 38px;
-    min-height: 52px;
-    gap: 2px;
+    min-width: clamp(30px, 8vw, 38px);
+    min-height: clamp(42px, 11vw, 50px);
+    gap: 1px;
   }
 
   .stage-four-sentence-card .hanzi {
-    font-size: clamp(1.92rem, 9.4vw, 2.28rem);
+    font-size: clamp(1.68rem, 8vw, 2.05rem);
   }
 
   .stage-four-sentence-card .zhuyin-mark {
-    font-size: clamp(0.5rem, 2.4vw, 0.62rem);
-    min-width: 1.22em;
+    font-size: clamp(0.46rem, 2vw, 0.58rem);
+    min-width: 1.04em;
   }
 
   .game-option-grid {
