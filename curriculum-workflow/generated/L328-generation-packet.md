@@ -8,14 +8,14 @@
 - Zhuyin: ㄓㄨㄢˇ
 - Title: 轉
 - Branch: codex/l328-complete-package
-- Package status target: dependency-blocked-asset-complete until L324, L325, L326, and L327 merge
+- Package status target: asset-complete-package. Startup recheck on 2026-08-19 found L324, L325, L326, and L327 already merged in origin/main.
 
 ## Dependency Boundary
 
-- Latest production boundary at claim time: L001-L323, latest new character 方
-- dependsOnLessons: L324, L325, L326, L327
-- provisionalLearnedChars: 圖, 向, 線, 直
-- Allowed learner-facing text boundary: latest origin/main learned chars through L323 + 圖 + 向 + 線 + 直 + 轉
+- Latest production boundary at final Production recheck: L001-L327
+- dependsOnLessons: none; L324, L325, L326, and L327 are present in origin/main
+- provisionalLearnedChars: none
+- Allowed learner-facing text boundary: latest origin/main learned chars through L327 + 轉
 
 Learner-facing text includes sentence text, spokenText, displayLines, focusChar, Stage 4 option text, G02 teach fragments, and G05 option text. Image notes and image prompts are production instructions, not learner text.
 

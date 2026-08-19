@@ -9,33 +9,13 @@
   },
   "title": "轉",
   "targetSentenceCount": 5,
-  "teacherNotes": "Production D asset-complete package for L328 轉. Approved sentences are fixed by Editor handoff. Latest origin/main production JSON is complete through L323 方, so L324 圖, L325 向, L326 線, and L327 直 remain dependencies and provisional learned characters until Release integrates them. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, Stage 4 option text, G02 teach fragments, and G05 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
-  "dependsOnLessons": [
-    "L324",
-    "L325",
-    "L326",
-    "L327"
-  ],
-  "provisionalLearnedChars": [
-    "圖",
-    "向",
-    "線",
-    "直"
-  ],
+  "teacherNotes": "Production D asset-complete package for L328 ?. Approved sentences are fixed by Editor handoff. Startup recheck on 2026-08-19 found latest origin/main already includes L324 ?, L325 ?, L326 ?, and L327 ?, so no provisional learned characters remain for this package. Learner-facing allowed-character sweep covers text, spokenText, displayLines, focusChar, Stage 4 option text, G02 teach fragments, and G05 option text. Image notes and prompts are production instructions and are not part of the learned-character gate.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
   "generationConstraints": {
-    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L323 + provisionalLearnedChars 圖 向 線 直 + current new char 轉",
-    "dependsOnLessons": [
-      "L324",
-      "L325",
-      "L326",
-      "L327"
-    ],
-    "provisionalLearnedChars": [
-      "圖",
-      "向",
-      "線",
-      "直"
-    ],
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L327 + current new char ?",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
     "requiredCoverageChars": [
       "轉",
       "直",
