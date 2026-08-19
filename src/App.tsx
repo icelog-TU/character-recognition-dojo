@@ -5461,6 +5461,8 @@ function SentencePracticePreview({
   const [selectedPronunciationOptionId, setSelectedPronunciationOptionId] = useState<string | null>(null);
   const [answerRevealed, setAnswerRevealed] = useState(false);
   const [floatingRecordChar, setFloatingRecordChar] = useState<string | null>(null);
+  const [mistakeOptionId, setMistakeOptionId] = useState<string | null>(null);
+  const [mistakeFeedbackKey, setMistakeFeedbackKey] = useState(0);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const recordedChunksRef = useRef<Blob[]>([]);
   const guideRunRef = useRef(0);
@@ -5468,6 +5470,7 @@ function SentencePracticePreview({
   const primingPressActiveRef = useRef(false);
   const releasedDuringPrimeRef = useRef(false);
   const autoStopRecordingTimerRef = useRef<number | null>(null);
+  const mistakeFeedbackTimerRef = useRef<number | null>(null);
   const recordingStreamRef = useRef<MediaStream | null>(null);
   const roundCompleteActionRef = useRef<HTMLDivElement | null>(null);
   const gameSentenceRef = useRef<HTMLDivElement | null>(null);
@@ -5509,6 +5512,8 @@ function SentencePracticePreview({
     setSelectedPronunciationOptionId(null);
     setAnswerRevealed(false);
     setFloatingRecordChar(null);
+    setMistakeOptionId(null);
+    setMistakeFeedbackKey(0);
     setRecordedAudioUrl((current) => {
       if (current) URL.revokeObjectURL(current);
       return null;
@@ -5522,6 +5527,7 @@ function SentencePracticePreview({
     primingPressActiveRef.current = false;
     releasedDuringPrimeRef.current = false;
     clearAutoStopRecordingTimer();
+    clearMistakeFeedbackTimer();
   }, [game?.id]);
 
   useEffect(() => () => {
@@ -5531,6 +5537,9 @@ function SentencePracticePreview({
   useEffect(() => () => {
     if (autoStopRecordingTimerRef.current !== null) {
       window.clearTimeout(autoStopRecordingTimerRef.current);
+    }
+    if (mistakeFeedbackTimerRef.current !== null) {
+      window.clearTimeout(mistakeFeedbackTimerRef.current);
     }
     recordingStreamRef.current?.getTracks().forEach((track) => track.stop());
   }, []);
@@ -5657,9 +5666,12 @@ function SentencePracticePreview({
     setSelectedPronunciationOptionId(null);
     setAnswerRevealed(false);
     setFloatingRecordChar(null);
+    setMistakeOptionId(null);
+    setMistakeFeedbackKey(0);
     pressStartRef.current = null;
     primingPressActiveRef.current = false;
     releasedDuringPrimeRef.current = false;
+    clearMistakeFeedbackTimer();
     if (game.type === "teach-character") {
       void runTeachCharacterIntro(resetRunId);
       return;
@@ -5683,10 +5695,13 @@ function SentencePracticePreview({
     setRecording(false);
     setRecordingGameCharIndex(null);
     setFloatingRecordChar(null);
+    setMistakeOptionId(null);
+    setMistakeFeedbackKey(0);
     setTeachPhase("reading");
     setActiveGameCharIndex(null);
     setAskingGameCharIndex(null);
     setAnswerRevealed(true);
+    clearMistakeFeedbackTimer();
     void speakStageFour(answerRevealText(game, sentence, zhuyinMap, shuffledGameOptions));
   }
 
@@ -5721,9 +5736,12 @@ function SentencePracticePreview({
     setSelectedPronunciationOptionId(null);
     setAnswerRevealed(false);
     setFloatingRecordChar(null);
+    setMistakeOptionId(null);
+    setMistakeFeedbackKey(0);
     pressStartRef.current = null;
     primingPressActiveRef.current = false;
     releasedDuringPrimeRef.current = false;
+    clearMistakeFeedbackTimer();
     onRoundDone(doneAfterThisRound);
   }
 
@@ -5731,6 +5749,24 @@ function SentencePracticePreview({
     if (autoStopRecordingTimerRef.current === null) return;
     window.clearTimeout(autoStopRecordingTimerRef.current);
     autoStopRecordingTimerRef.current = null;
+  }
+
+  function clearMistakeFeedbackTimer() {
+    if (mistakeFeedbackTimerRef.current === null) return;
+    window.clearTimeout(mistakeFeedbackTimerRef.current);
+    mistakeFeedbackTimerRef.current = null;
+  }
+
+  function showCardMistakeFeedback(optionId: string, afterFeedback: () => void) {
+    clearMistakeFeedbackTimer();
+    playCardResetChime();
+    setMistakeOptionId(optionId);
+    setMistakeFeedbackKey((current) => current + 1);
+    mistakeFeedbackTimerRef.current = window.setTimeout(() => {
+      mistakeFeedbackTimerRef.current = null;
+      setMistakeOptionId(null);
+      afterFeedback();
+    }, 560);
   }
 
   function scheduleTapRecordingStop() {
@@ -5850,9 +5886,9 @@ function SentencePracticePreview({
   }
 
   async function handleMissingOption(option: SentenceGameOption) {
-    if (answerRevealed) return;
+    if (answerRevealed || mistakeOptionId) return;
     if (!option.correct) {
-      playMissChime();
+      showCardMistakeFeedback(option.id, () => setPickedOptionIds([]));
       void speakStageFour("不是這個，再找找看。");
       return;
     }
@@ -5863,13 +5899,12 @@ function SentencePracticePreview({
   }
 
   async function handleOrderOption(option: SentenceGameOption) {
-    if (answerRevealed) return;
+    if (answerRevealed || mistakeOptionId) return;
     const pickedCount = pickedOptionIds.filter((id) => id === option.id).length;
     if (pickedCount >= (optionPickLimits.get(option.id) ?? 1)) return;
     const expectedText = han[missingIndexes[pickedOptionIds.length]];
     if (option.text !== expectedText) {
-      playCardResetChime();
-      setPickedOptionIds([]);
+      showCardMistakeFeedback(option.id, () => setPickedOptionIds([]));
       void speakStageFour("順序不對，再排一次。");
       return;
     }
@@ -6100,6 +6135,8 @@ function SentencePracticePreview({
               targetChar={game.targetChar}
               activeIndex={activeGameCharIndex}
               blanks={answerRevealed ? answerFilledBlanks : filledBlanks}
+              mistakeKey={mistakeFeedbackKey}
+              mistakeActive={Boolean(mistakeOptionId)}
             />
           </div>
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
@@ -6110,8 +6147,10 @@ function SentencePracticePreview({
               options={shuffledGameOptions}
               pickedOptionIds={pickedOptionIds}
               optionPickLimits={optionPickLimits}
-              disabled={answerRevealed}
+              disabled={answerRevealed || Boolean(mistakeOptionId)}
               showAnswer={answerRevealed}
+              mistakeOptionId={mistakeOptionId}
+              mistakeKey={mistakeFeedbackKey}
               onPick={handleMissingOption}
             />
           </div>
@@ -6129,6 +6168,8 @@ function SentencePracticePreview({
               targetChar={game.targetChar}
               activeIndex={activeGameCharIndex}
               blanks={answerRevealed ? answerFilledBlanks : filledBlanks}
+              mistakeKey={mistakeFeedbackKey}
+              mistakeActive={Boolean(mistakeOptionId)}
             />
           </div>
           <button type="button" className="sentence-replay-button" disabled={disabled} onClick={() => void replayCurrentSentence()}>
@@ -6139,8 +6180,10 @@ function SentencePracticePreview({
               options={shuffledGameOptions}
               pickedOptionIds={pickedOptionIds}
               optionPickLimits={optionPickLimits}
-              disabled={answerRevealed}
+              disabled={answerRevealed || Boolean(mistakeOptionId)}
               showAnswer={answerRevealed}
+              mistakeOptionId={mistakeOptionId}
+              mistakeKey={mistakeFeedbackKey}
               onPick={handleOrderOption}
             />
           </div>
@@ -6332,6 +6375,8 @@ function SentenceGameLine({
   blanks,
   clickable = false,
   foundIndexes = new Set<number>(),
+  mistakeKey = 0,
+  mistakeActive = false,
   onCharClick,
   onCharPressStart,
   onCharPressEnd,
@@ -6345,6 +6390,8 @@ function SentenceGameLine({
   blanks?: Map<number, string>;
   clickable?: boolean;
   foundIndexes?: Set<number>;
+  mistakeKey?: number;
+  mistakeActive?: boolean;
   onCharClick?: (hanIndex: number) => void | Promise<void>;
   onCharPressStart?: (hanIndex: number) => void;
   onCharPressEnd?: (hanIndex: number) => void;
@@ -6352,7 +6399,7 @@ function SentenceGameLine({
   let hanIndex = -1;
   const displayLines = sentence.displayLines?.length ? sentence.displayLines : [sentence.text];
   return (
-    <div className="sentence-card sentence-game-card">
+    <div className={`sentence-card sentence-game-card${mistakeActive ? " mistake" : ""}`} data-mistake-key={mistakeKey}>
       <div className="sentence-line" aria-label={sentence.text}>
         {displayLines.map((line, lineIndex) => (
           <div key={`${sentence.id}-game-line-${lineIndex}`} className="sentence-line-row">
@@ -6528,6 +6575,8 @@ function GameOptionGrid({
   optionPickLimits,
   disabled = false,
   showAnswer = false,
+  mistakeOptionId,
+  mistakeKey = 0,
   onPick,
 }: {
   options: SentenceGameOption[];
@@ -6535,17 +6584,22 @@ function GameOptionGrid({
   optionPickLimits?: ReadonlyMap<string, number>;
   disabled?: boolean;
   showAnswer?: boolean;
+  mistakeOptionId?: string | null;
+  mistakeKey?: number;
   onPick: (option: SentenceGameOption) => void | Promise<void>;
 }) {
   return (
-    <div className="game-option-grid">
+    <div className={`game-option-grid${mistakeOptionId ? " mistake" : ""}`} data-mistake-key={mistakeKey}>
       {options.map((option) => {
         const pickedCount = pickedOptionIds.filter((id) => id === option.id).length;
         const pickedDisabled = pickedCount >= (optionPickLimits?.get(option.id) ?? 1);
+        const isMistake = mistakeOptionId === option.id;
         return (
           <button
             key={option.id}
-            className={`game-option${pickedCount > 0 ? " picked" : ""}${showAnswer && option.correct ? " answer" : ""}`}
+            className={`game-option${pickedCount > 0 ? " picked" : ""}${showAnswer && option.correct ? " answer" : ""}${
+              isMistake ? " mistake" : ""
+            }`}
             disabled={disabled || pickedDisabled}
             onClick={() => void onPick(option)}
           >
