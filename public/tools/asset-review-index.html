@@ -256,6 +256,45 @@
         color: #6d665e;
       }
 
+      .range-jump-nav {
+        position: fixed;
+        top: 50%;
+        right: 8px;
+        z-index: 20;
+        display: none;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        max-height: calc(100vh - 28px);
+        padding: 6px;
+        overflow-y: auto;
+        border: 1px solid rgba(221, 213, 200, 0.86);
+        border-radius: 999px;
+        background: rgba(255, 253, 249, 0.92);
+        box-shadow: 0 10px 24px rgba(34, 32, 27, 0.14);
+        transform: translateY(-50%);
+      }
+
+      .range-jump-nav.visible {
+        display: grid;
+      }
+
+      .range-jump-nav button {
+        min-width: 38px;
+        min-height: 30px;
+        padding: 4px 6px;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        font-weight: 800;
+        line-height: 1;
+        color: var(--accent);
+        background: #fff;
+      }
+
+      .range-jump-nav button:hover {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+
       @media (max-width: 860px) {
         .topbar,
         .status-grid {
@@ -290,6 +329,19 @@
         .unit-title,
         .unit-chars {
           font-size: 0.62rem;
+        }
+
+        .range-jump-nav {
+          right: 4px;
+          padding: 4px;
+          gap: 4px;
+        }
+
+        .range-jump-nav button {
+          min-width: 34px;
+          min-height: 28px;
+          padding: 3px 5px;
+          font-size: 0.66rem;
         }
       }
     </style>
@@ -371,6 +423,7 @@
         <div id="unitGrid" class="unit-grid" aria-live="polite"></div>
       </section>
     </main>
+    <nav id="rangeJumpNav" class="range-jump-nav" aria-label="Quick lesson range jumps"></nav>
 
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
@@ -408,6 +461,51 @@
       $("repoInput").value = state.repo;
       $("refInput").value = state.ref;
       $("searchInput").value = state.search;
+
+      function setAllFilterAndClearSearch() {
+        state.filter = "all";
+        state.search = "";
+        $("searchInput").value = "";
+        document.querySelectorAll("[data-filter]").forEach((candidate) => {
+          candidate.classList.toggle("active", candidate.dataset.filter === "all");
+        });
+      }
+
+      function scrollToUnitId(unitId) {
+        const element = document.getElementById(`unit-${unitId}`);
+        if (!element) return false;
+        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        return true;
+      }
+
+      function jumpToRangeStart(startOrder) {
+        if (!state.units.length) return;
+        setAllFilterAndClearSearch();
+        render();
+        window.requestAnimationFrame(() => {
+          const targetId = `L${String(startOrder).padStart(3, "0")}`;
+          if (scrollToUnitId(targetId)) return;
+          const fallback = state.units.find((unit) => unit.kind === "lesson" && unit.order >= startOrder);
+          if (fallback) scrollToUnitId(fallback.id);
+        });
+      }
+
+      function renderRangeJumpNav() {
+        const nav = $("rangeJumpNav");
+        if (!state.units.length) {
+          nav.classList.remove("visible");
+          nav.innerHTML = "";
+          return;
+        }
+        const lessonStarts = [];
+        for (let start = 1; start <= 551; start += 50) lessonStarts.push(start);
+        nav.innerHTML = [
+          '<button type="button" data-jump="top" title="Top">&uarr;</button>',
+          ...lessonStarts.map((start) => `<button type="button" data-jump-order="${start}" title="L${String(start).padStart(3, "0")}">` + String(start) + "</button>"),
+          '<button type="button" data-jump="bottom" title="Bottom">&darr;</button>',
+        ].join("");
+        nav.classList.add("visible");
+      }
 
       function html(value) {
         return String(value ?? "")
@@ -810,6 +908,7 @@
                       ? "pending"
                       : "";
             const cardClass = `unit-card ${status.kind}`;
+            const cardId = `unit-${html(unit.id)}`;
             const cardBody = `
                 <div class="head">
                   <span class="unit-id">${html(unit.id)}</span>
@@ -819,10 +918,11 @@
                 <div class="unit-chars muted">${html(chars)}</div>
             `;
             return unit.built
-              ? `<a class="${cardClass}" href="${html(lessonLink(unit))}">${cardBody}</a>`
-              : `<article class="${cardClass}" aria-label="${html(unit.id)} 尚未製作">${cardBody}</article>`;
+              ? `<a id="${cardId}" class="${cardClass}" href="${html(lessonLink(unit))}">${cardBody}</a>`
+              : `<article id="${cardId}" class="${cardClass}" aria-label="${html(unit.id)} 尚未製作">${cardBody}</article>`;
           })
           .join("");
+        renderRangeJumpNav();
       }
 
       async function load() {
@@ -848,6 +948,20 @@
       }
 
       $("loadButton").addEventListener("click", load);
+      $("rangeJumpNav").addEventListener("click", (event) => {
+        const button = event.target.closest("button");
+        if (!button) return;
+        if (button.dataset.jump === "top") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          return;
+        }
+        if (button.dataset.jump === "bottom") {
+          window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
+          return;
+        }
+        const startOrder = Number(button.dataset.jumpOrder);
+        if (Number.isFinite(startOrder)) jumpToRangeStart(startOrder);
+      });
       $("searchInput").addEventListener("input", () => {
         state.search = $("searchInput").value;
         render();
