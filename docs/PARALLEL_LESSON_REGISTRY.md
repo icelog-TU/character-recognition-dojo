@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L334 | 別 | claimed | Production C | codex/l334-complete-package | L331:落; L332:因; L333:原 | 落 因 原 | curriculum-workflow/lesson-requests/L334.json; curriculum-workflow/generated/L334-generation-packet.md; curriculum-workflow/drafts/L334-draft.json | curriculum-workflow/audio-inbox/L334/; public/assets/lessons/L334/ | Asset-complete-package claim from latest origin/main through L330:角. L331/L332/L333 package branches exist but are not merged at claim time. |
+| L334 | 別 | merge-ready | Production C | codex/l334-complete-package | none | none | curriculum-workflow/lesson-requests/L334.json; curriculum-workflow/generated/L334-generation-packet.md; curriculum-workflow/drafts/L334-draft.json | curriculum-workflow/audio-inbox/L334/; public/assets/lessons/L334/ | Asset-complete-package complete and rebased to latest origin/main through L333:原. L331/L332/L333 dependencies are merged; no provisional learned chars remain. Local package audit, L058/refined/cast side-by-side image QA, audio/timing generation, validate:production, assets:audit, validate:curriculum, and build passed. |
 
 ## Status Values
 
