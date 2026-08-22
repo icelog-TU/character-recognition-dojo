@@ -27,11 +27,14 @@ C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair
 
 Asset Repair B:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair-b
+
+Asset Repair C:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair-c
 ```
 
 If it is dirty, stop and report. Do not stash, reset, or overwrite another repair.
 
-Two Asset Repair threads may run at the same time only when they own different units or clearly disjoint asset files. Do not repair the same lesson, review module, image, audio file, or production JSON section from both repair slots at once.
+Multiple Asset Repair threads may run at the same time only when they own different units or clearly disjoint asset files. Do not repair the same lesson, review module, image, audio file, or production JSON section from more than one repair slot at once.
 
 ## Dependency Bootstrap
 
