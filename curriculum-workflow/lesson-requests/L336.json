@@ -1,0 +1,301 @@
+{
+  "id": "L336",
+  "order": 336,
+  "kind": "lesson",
+  "newChars": [
+    "處"
+  ],
+  "zhuyin": {
+    "處": "ㄔㄨˋ"
+  },
+  "title": "處",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Editor handoff for L336. Latest origin/main has integrated L334「別」; L335「特」 remains a provisional dependency. Production builds a dependency-blocked asset-complete package. Release owns ordered integration into production JSON/planner/ledger after L335 enters main.",
+  "dependsOnLessons": [
+    "L335"
+  ],
+  "provisionalLearnedChars": [
+    "特"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L334 plus provisional L335「特」 plus current new char L336「處」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處",
+    "dependsOnLessons": [
+      "L335"
+    ],
+    "provisionalLearnedChars": [
+      "特"
+    ],
+    "requiredCoverageChars": [
+      "處",
+      "特",
+      "別",
+      "原",
+      "因",
+      "落"
+    ],
+    "targetCharMinimumCount": {
+      "處": 3
+    },
+    "recentTargetMinimumCounts": {
+      "特": 2,
+      "別": 2,
+      "原": 2,
+      "因": 1,
+      "落": 1
+    },
+    "coverageCounts": {
+      "處": 4,
+      "特": 2,
+      "別": 2,
+      "原": 2,
+      "因": 1,
+      "落": 2
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Before accepting each final WebP image, compare side by side with the L058 style anchors, refined preferred examples L115/L118/L119/L128, and relevant cast anchors.",
+      "Use protagonist family continuity from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "S01-S03 use the recurring protagonist girl.",
+      "S04 uses the recurring protagonist girl and protagonist mother.",
+      "S05 uses the recurring protagonist girl and protagonist father.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, arrows, labels, captions, logos, brands, UI symbols, explanatory markings, door numbers, license plates, or watermarks anywhere."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 處 as public/assets/lessons/L336/audio/char-u8655.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix and suffix from exact fragments 到 and 找筆原來在這裡.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L336-S01",
+      "text": "這處角落，花草特別多。",
+      "spokenText": "這處角落花草特別多",
+      "focusChar": "處",
+      "displayLines": [
+        "這處角落，",
+        "花草特別多。"
+      ],
+      "imageNotes": "學校院子或花園的一個角落，有很多花和草，主角小女孩站在旁邊看。畫面要清楚呈現「這處角落」和「花草很多」，不要文字標牌。"
+    },
+    {
+      "id": "L336-S02",
+      "text": "到處找筆，原來在這裡。",
+      "spokenText": "到處找筆原來在這裡",
+      "focusChar": "處",
+      "displayLines": [
+        "到處找筆，",
+        "原來在這裡。"
+      ],
+      "imageNotes": "主角小女孩在桌邊找彩色筆，桌上和地上有一些物品，最後看到筆就在桌子一角或盒子旁邊。畫面要能看出她正在找東西，筆的位置要清楚，不要品牌或文字。"
+    },
+    {
+      "id": "L336-S03",
+      "text": "從哪裡拿出來，就放回原處。",
+      "spokenText": "從哪裡拿出來就放回原處",
+      "focusChar": "處",
+      "displayLines": [
+        "從哪裡",
+        "拿出來，",
+        "就放回原處。"
+      ],
+      "imageNotes": "主角小女孩從書架或桌上的固定位置拿出一本書，旁邊用同一畫面呈現她把書放回原本的位置。可以用簡單前後動作構圖，但不要箭頭、文字或標籤。"
+    },
+    {
+      "id": "L336-S04",
+      "text": "高處特別冷，上山要多穿衣服。",
+      "spokenText": "高處特別冷上山要多穿衣服",
+      "focusChar": "處",
+      "displayLines": [
+        "高處特別冷，",
+        "上山要多穿",
+        "衣服。"
+      ],
+      "imageNotes": "主角小女孩和主角媽媽在山上或高處步道，風比較大，媽媽幫小女孩穿外套或圍好衣服。畫面要清楚呈現高處、冷、上山、多穿衣服。"
+    },
+    {
+      "id": "L336-S05",
+      "text": "因為門把脫落，所以門打不開。",
+      "spokenText": "因為門把脫落所以門打不開",
+      "focusChar": "落",
+      "displayLines": [
+        "因為門把",
+        "脫落，所以",
+        "門打不開。"
+      ],
+      "imageNotes": "主角小女孩和主角爸爸在家門邊，門把掉落或鬆脫在門旁，門打不開。爸爸蹲下查看門把，小女孩在旁邊看。畫面要清楚但不危險，不要文字、品牌、門牌號碼。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L336-G01",
+      "type": "find-character",
+      "sentenceId": "L336-S01",
+      "targetChar": "處",
+      "targetCharIndex": 1,
+      "prompt": "找到「處」。",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "L336-G01-A",
+          "text": "處",
+          "correct": true
+        },
+        {
+          "id": "L336-G01-B",
+          "text": "角",
+          "correct": false
+        },
+        {
+          "id": "L336-G01-C",
+          "text": "落",
+          "correct": false
+        },
+        {
+          "id": "L336-G01-D",
+          "text": "特",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L336-G02",
+      "type": "teach-character",
+      "sentenceId": "L336-S02",
+      "targetChar": "處",
+      "targetCharIndex": 1,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        1
+      ],
+      "teachAudio": {
+        "prefixText": "到",
+        "targetText": "處",
+        "suffixText": "找筆原來在這裡",
+        "prefixSrc": "/assets/lessons/L336/audio/L336-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L336/audio/L336-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L336-G03",
+      "type": "missing-character",
+      "sentenceId": "L336-S03",
+      "targetChar": "處",
+      "targetCharIndex": 10,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        10
+      ],
+      "options": [
+        {
+          "id": "L336-G03-A",
+          "text": "處",
+          "correct": true
+        },
+        {
+          "id": "L336-G03-B",
+          "text": "原",
+          "correct": false
+        },
+        {
+          "id": "L336-G03-C",
+          "text": "特",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L336-G04",
+      "type": "partial-order",
+      "sentenceId": "L336-S04",
+      "targetChar": "處",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "id": "L336-G04-A",
+          "text": "高",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L336-G04-B",
+          "text": "處",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L336-G04-C",
+          "text": "特",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L336-G04-D",
+          "text": "別",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L336-G04-A",
+        "L336-G04-B",
+        "L336-G04-C",
+        "L336-G04-D"
+      ]
+    },
+    {
+      "id": "L336-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L336-S05",
+      "targetChar": "落",
+      "targetCharIndex": 5,
+      "prompt": "選出念得對的聲音。",
+      "options": [
+        {
+          "id": "L336-G05-A",
+          "text": "因為門把脫落，所以門打不開。",
+          "correct": true,
+          "sentenceId": "L336-S05",
+          "audioSrc": "/assets/lessons/L336/audio/L336-S05.m4a",
+          "spokenText": "因為門把脫落所以門打不開",
+          "pronunciationText": "ㄌㄨㄛˋ"
+        },
+        {
+          "id": "L336-G05-B",
+          "text": "因為門把脫落，所以門關不上。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L336/audio/L336-G05-wrong-one.m4a",
+          "ttsText": "因為門把脫落所以門關不上",
+          "spokenText": "因為門把脫落所以門關不上",
+          "pronunciationText": "ㄌㄨㄛˋ"
+        },
+        {
+          "id": "L336-G05-C",
+          "text": "因為門把沒掉，所以門打不開。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L336/audio/L336-G05-wrong-two.m4a",
+          "ttsText": "因為門把沒掉所以門打不開",
+          "spokenText": "因為門把沒掉所以門打不開",
+          "pronunciationText": "ㄌㄨㄛˋ"
+        }
+      ]
+    }
+  ]
+}
