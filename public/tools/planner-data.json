@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-19T14:51:40.335Z",
+  "exportedAt": "2026-08-22T11:36:28.922Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -160439,6 +160439,514 @@
             "L333-G05-B",
             "L333-G05-C",
             "L333-G05-D"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L334",
+      "order": 334,
+      "newChars": [
+        "別"
+      ],
+      "zhuyin": {
+        "別": "ㄅㄧㄝˊ"
+      },
+      "charAudio": {
+        "別": "/assets/lessons/L334/audio/char-u5225.m4a"
+      },
+      "title": "別",
+      "packageStatus": "merge-ready-asset-complete",
+      "requiredRounds": 5,
+      "originHint": "Production package rebased to latest origin/main through L333; no provisional dependencies remain.",
+      "sentences": [
+        {
+          "id": "L334-S01",
+          "text": "不是你的原因，是別的原因。",
+          "spokenText": "不是你的原因是別的原因",
+          "focusChar": "別",
+          "displayLines": [
+            "不是你的",
+            "原因，",
+            "是別的原因。"
+          ],
+          "imageNotes": "主角小女孩拿著一支手機或小型電子用品，表情很緊張，以為是自己剛剛拿了之後把它弄壞了。主角爸爸或主角媽媽蹲在旁邊安慰她，另一手打開電池蓋或看著明顯老舊、快壞掉的電池，表示東西本來就有問題，不是小女孩造成的。畫面不要出現可讀文字、數字、品牌標誌或螢幕文字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. Square 1:1 composition. Use the approved L058 lesson images only as style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, public/assets/lessons/L058/images/L058-S05.webp. L058 is style-only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Also match the refined preferred style/proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, public/assets/lessons/L128/images/L128-S03.webp. These are the current practical target for stable protagonist-girl age/proportions, mother continuity, recurring child proportions, warm detailed course treatment, and non-generic faces. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, public/assets/lessons/L163/images/L163-S02.webp. Keep 主角小女孩, 主角媽媽, 主角爸爸, 老師, and generic children visually distinct. Do not redesign recurring roles or turn them into random new people. No visible text, letters, numbers, Chinese characters, zhuyin, readable signs, labels, captions, UI symbols, arrows, logos, watermarks, brands, screen text, traffic text, license plates, or explanatory markings anywhere. Keep all meaning-bearing subjects centered with safe margins and readable on a phone screen. Scene and role instructions: 主角小女孩拿著一支手機或小型電子用品，表情很緊張，以為是自己剛剛拿了之後把它弄壞了。主角爸爸或主角媽媽蹲在旁邊安慰她，另一手打開電池蓋或看著明顯老舊、快壞掉的電池，表示東西本來就有問題，不是小女孩造成的。畫面不要出現可讀文字、數字、品牌標誌或螢幕文字。",
+          "imageSrc": "/assets/lessons/L334/images/L334-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L334/audio/L334-S01.m4a",
+            "durationMs": 4073,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 870
+              },
+              {
+                "charIndex": 3,
+                "startMs": 870,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1450
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1450,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2680,
+                "endMs": 3000
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3000,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3240,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3420,
+                "endMs": 3600
+              }
+            ]
+          }
+        },
+        {
+          "id": "L334-S02",
+          "text": "因為右手痛，不能拿筆。",
+          "spokenText": "因為右手痛不能拿筆",
+          "focusChar": "因",
+          "displayLines": [
+            "因為右手痛，",
+            "不能拿筆。"
+          ],
+          "imageNotes": "主角小女孩坐在桌前，右手有小繃帶或正在被她輕輕扶著，桌上有一支筆和紙，她想寫或畫但不能拿筆。主角媽媽或老師在旁邊關心她。右手要清楚，傷勢輕微，不要畫得嚴重或可怕。不要出現可讀文字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. Square 1:1 composition. Use the approved L058 lesson images only as style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, public/assets/lessons/L058/images/L058-S05.webp. L058 is style-only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Also match the refined preferred style/proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, public/assets/lessons/L128/images/L128-S03.webp. These are the current practical target for stable protagonist-girl age/proportions, mother continuity, recurring child proportions, warm detailed course treatment, and non-generic faces. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, public/assets/lessons/L163/images/L163-S02.webp. Keep 主角小女孩, 主角媽媽, 主角爸爸, 老師, and generic children visually distinct. Do not redesign recurring roles or turn them into random new people. No visible text, letters, numbers, Chinese characters, zhuyin, readable signs, labels, captions, UI symbols, arrows, logos, watermarks, brands, screen text, traffic text, license plates, or explanatory markings anywhere. Keep all meaning-bearing subjects centered with safe margins and readable on a phone screen. Scene and role instructions: 主角小女孩坐在桌前，右手有小繃帶或正在被她輕輕扶著，桌上有一支筆和紙，她想寫或畫但不能拿筆。主角媽媽或老師在旁邊關心她。右手要清楚，傷勢輕微，不要畫得嚴重或可怕。不要出現可讀文字。",
+          "imageSrc": "/assets/lessons/L334/images/L334-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L334/audio/L334-S02.m4a",
+            "durationMs": 4039,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1340,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2640,
+                "endMs": 2730
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2730,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2820,
+                "endMs": 3220
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3220,
+                "endMs": 3420
+              }
+            ]
+          }
+        },
+        {
+          "id": "L334-S03",
+          "text": "別坐在角落，地上有水。",
+          "spokenText": "別坐在角落地上有水",
+          "focusChar": "別",
+          "displayLines": [
+            "別坐在角落，",
+            "地上有水。"
+          ],
+          "imageNotes": "主角小女孩正要坐到房間角落，角落地上有一小灘水。主角媽媽或老師伸手溫和提醒她不要坐下。畫面要清楚表現角落、水、準備坐下但被提醒的動作。不要出現可讀文字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. Square 1:1 composition. Use the approved L058 lesson images only as style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, public/assets/lessons/L058/images/L058-S05.webp. L058 is style-only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Also match the refined preferred style/proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, public/assets/lessons/L128/images/L128-S03.webp. These are the current practical target for stable protagonist-girl age/proportions, mother continuity, recurring child proportions, warm detailed course treatment, and non-generic faces. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, public/assets/lessons/L163/images/L163-S02.webp. Keep 主角小女孩, 主角媽媽, 主角爸爸, 老師, and generic children visually distinct. Do not redesign recurring roles or turn them into random new people. No visible text, letters, numbers, Chinese characters, zhuyin, readable signs, labels, captions, UI symbols, arrows, logos, watermarks, brands, screen text, traffic text, license plates, or explanatory markings anywhere. Keep all meaning-bearing subjects centered with safe margins and readable on a phone screen. Scene and role instructions: 主角小女孩正要坐到房間角落，角落地上有一小灘水。主角媽媽或老師伸手溫和提醒她不要坐下。畫面要清楚表現角落、水、準備坐下但被提醒的動作。不要出現可讀文字。",
+          "imageSrc": "/assets/lessons/L334/images/L334-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L334/audio/L334-S03.m4a",
+            "durationMs": 4066,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1200,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2240,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2400,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2560,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2880,
+                "endMs": 3140
+              }
+            ]
+          }
+        },
+        {
+          "id": "L334-S04",
+          "text": "跑快一點，別落後了。",
+          "spokenText": "跑快一點別落後了",
+          "focusChar": "別",
+          "displayLines": [
+            "跑快一點，",
+            "別落後了。"
+          ],
+          "imageNotes": "戶外跑步或體育活動場景，主角小女孩和幾個 generic child 一起跑步，前方有孩子稍微領先，主角小女孩正在努力追上。老師或主角爸爸媽媽可以在旁邊鼓勵。畫面要表現「快跑、不要落後」，不要做成正式競賽壓力過大的畫面，不要出現可讀文字或跑道號碼。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. Square 1:1 composition. Use the approved L058 lesson images only as style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, public/assets/lessons/L058/images/L058-S05.webp. L058 is style-only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Also match the refined preferred style/proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, public/assets/lessons/L128/images/L128-S03.webp. These are the current practical target for stable protagonist-girl age/proportions, mother continuity, recurring child proportions, warm detailed course treatment, and non-generic faces. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, public/assets/lessons/L163/images/L163-S02.webp. Keep 主角小女孩, 主角媽媽, 主角爸爸, 老師, and generic children visually distinct. Do not redesign recurring roles or turn them into random new people. No visible text, letters, numbers, Chinese characters, zhuyin, readable signs, labels, captions, UI symbols, arrows, logos, watermarks, brands, screen text, traffic text, license plates, or explanatory markings anywhere. Keep all meaning-bearing subjects centered with safe margins and readable on a phone screen. Scene and role instructions: 戶外跑步或體育活動場景，主角小女孩和幾個 generic child 一起跑步，前方有孩子稍微領先，主角小女孩正在努力追上。老師或主角爸爸媽媽可以在旁邊鼓勵。畫面要表現「快跑、不要落後」，不要做成正式競賽壓力過大的畫面，不要出現可讀文字或跑道號碼。",
+          "imageSrc": "/assets/lessons/L334/images/L334-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L334/audio/L334-S04.m4a",
+            "durationMs": 4134,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 830
+              },
+              {
+                "charIndex": 3,
+                "startMs": 830,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1460,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1640,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1800,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1980,
+                "endMs": 2180
+              }
+            ]
+          }
+        },
+        {
+          "id": "L334-S05",
+          "text": "轉角有車，別跑過去。",
+          "spokenText": "轉角有車別跑過去",
+          "focusChar": "別",
+          "displayLines": [
+            "轉角有車，",
+            "別跑過去。"
+          ],
+          "imageNotes": "街道轉角場景，主角小女孩正想往前跑，主角爸爸或主角媽媽拉住她或伸手提醒。轉角處有一輛車正在慢慢出現或靠近，距離安全但能看出需要小心。畫面要清楚表現轉角、有車、不要跑過去。不要出現可讀交通文字、車牌或號誌文字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: lesson sentence image. Square 1:1 composition. Use the approved L058 lesson images only as style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, public/assets/lessons/L058/images/L058-S05.webp. L058 is style-only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environments, expressive preschool proportions, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Also match the refined preferred style/proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, public/assets/lessons/L128/images/L128-S03.webp. These are the current practical target for stable protagonist-girl age/proportions, mother continuity, recurring child proportions, warm detailed course treatment, and non-generic faces. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, public/assets/lessons/L163/images/L163-S02.webp. Keep 主角小女孩, 主角媽媽, 主角爸爸, 老師, and generic children visually distinct. Do not redesign recurring roles or turn them into random new people. No visible text, letters, numbers, Chinese characters, zhuyin, readable signs, labels, captions, UI symbols, arrows, logos, watermarks, brands, screen text, traffic text, license plates, or explanatory markings anywhere. Keep all meaning-bearing subjects centered with safe margins and readable on a phone screen. Scene and role instructions: 街道轉角場景，主角小女孩正想往前跑，主角爸爸或主角媽媽拉住她或伸手提醒。轉角處有一輛車正在慢慢出現或靠近，距離安全但能看出需要小心。畫面要清楚表現轉角、有車、不要跑過去。不要出現可讀交通文字、車牌或號誌文字。",
+          "imageSrc": "/assets/lessons/L334/images/L334-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L334/audio/L334-S05.m4a",
+            "durationMs": 3481,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1320,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1540,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1800,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2540,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2800,
+                "endMs": 3040
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L334-G01",
+          "type": "find-character",
+          "sentenceId": "L334-S01",
+          "targetChar": "別",
+          "targetCharIndex": 7,
+          "prompt": "找到「別」。",
+          "missingIndexes": [
+            7
+          ],
+          "options": [
+            {
+              "id": "L334-G01-A",
+              "text": "別",
+              "correct": true
+            },
+            {
+              "id": "L334-G01-B",
+              "text": "因",
+              "correct": false
+            },
+            {
+              "id": "L334-G01-C",
+              "text": "原",
+              "correct": false
+            },
+            {
+              "id": "L334-G01-D",
+              "text": "落",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L334-G02",
+          "type": "teach-character",
+          "sentenceId": "L334-S04",
+          "targetChar": "別",
+          "targetCharIndex": 4,
+          "prompt": "聽一聽，幫忙說出這個字。",
+          "missingIndexes": [
+            4
+          ],
+          "teachAudio": {
+            "prefixText": "跑快一點",
+            "targetText": "別",
+            "suffixText": "落後了",
+            "prefixSrc": "/assets/lessons/L334/audio/L334-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L334/audio/L334-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L334-G03",
+          "type": "missing-character",
+          "sentenceId": "L334-S05",
+          "targetChar": "別",
+          "targetCharIndex": 4,
+          "prompt": "選出少掉的字。",
+          "missingIndexes": [
+            4
+          ],
+          "options": [
+            {
+              "id": "L334-G03-A",
+              "text": "別",
+              "correct": true
+            },
+            {
+              "id": "L334-G03-B",
+              "text": "角",
+              "correct": false
+            },
+            {
+              "id": "L334-G03-C",
+              "text": "右",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L334-G04",
+          "type": "partial-order",
+          "sentenceId": "L334-S02",
+          "targetChar": "因",
+          "prompt": "把字排回句子裡。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "L334-G04-A",
+              "text": "因",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L334-G04-B",
+              "text": "為",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L334-G04-C",
+              "text": "右",
+              "correctOrder": 2,
+              "correct": true
+            },
+            {
+              "id": "L334-G04-D",
+              "text": "手",
+              "correctOrder": 3,
+              "correct": true
+            }
+          ],
+          "correctOrder": [
+            "L334-G04-A",
+            "L334-G04-B",
+            "L334-G04-C",
+            "L334-G04-D"
+          ]
+        },
+        {
+          "id": "L334-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L334-S03",
+          "targetChar": "別",
+          "targetCharIndex": 0,
+          "prompt": "選出念得對的聲音。",
+          "options": [
+            {
+              "id": "L334-G05-A",
+              "text": "別坐在角落，地上有水。",
+              "correct": true,
+              "sentenceId": "L334-S03",
+              "audioSrc": "/assets/lessons/L334/audio/L334-S03.m4a",
+              "spokenText": "別坐在角落地上有水",
+              "pronunciationText": "ㄅㄧㄝˊ"
+            },
+            {
+              "id": "L334-G05-B",
+              "text": "別坐在角落，地上有土。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L334/audio/L334-G05-wrong-one.m4a",
+              "ttsText": "別坐在角落地上有土",
+              "spokenText": "別坐在角落地上有土",
+              "pronunciationText": "ㄅㄧㄝˊ"
+            },
+            {
+              "id": "L334-G05-C",
+              "text": "別坐在角落，地上有書。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L334/audio/L334-G05-wrong-two.m4a",
+              "ttsText": "別坐在角落地上有書",
+              "spokenText": "別坐在角落地上有書",
+              "pronunciationText": "ㄅㄧㄝˊ"
+            }
           ]
         }
       ]
