@@ -1806,8 +1806,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 
 These records are teacher-approved and must match the L329 draft and production-shaped branch JSON. Editor correction confirmed: L329-G02 targetCharIndex is 6 and L329-G03 targetCharIndex is 7.
 
-```json
-{
+```json{
   "approvedSentences": [
     {
       "id": "L329-S01",
@@ -1931,7 +1930,7 @@ These records are teacher-approved and must match the L329 draft and production-
       "targetCharIndex": 7,
       "prompt": "選出少掉的字。",
       "missingIndexes": [
-        8
+        7
       ],
       "options": [
         {
@@ -1948,49 +1947,6 @@ These records are teacher-approved and must match the L329 draft and production-
           "id": "L329-G03-C",
           "text": "看",
           "correct": false
-        }
-      ]
-    },
-    {
-      "id": "L329-G04",
-      "type": "choose-pronunciation",
-      "sentenceId": "L329-S04",
-      "targetChar": "右",
-      "targetCharIndex": 3,
-      "prompt": "選出聽到的句子。",
-      "options": [
-        {
-          "id": "L329-G04-A",
-          "text": "三點左右，要去同學家玩。",
-          "correct": true,
-          "sentenceId": "L329-S04",
-          "audioSrc": "/assets/lessons/L329/audio/L329-S04.m4a",
-          "spokenText": "三點左右要去同學家玩",
-          "pronunciation": "ㄧㄡˋ"
-        },
-        {
-          "id": "L329-G04-B",
-          "text": "三點左手，要去同學家玩。",
-          "correct": false,
-          "audioSrc": "/assets/lessons/L329/audio/L329-G04-wrong-one.m4a",
-          "spokenText": "三點左手要去同學家玩",
-          "pronunciation": "ㄧㄡˇ"
-        },
-        {
-          "id": "L329-G04-C",
-          "text": "三點左邊，要去同學家玩。",
-          "correct": false,
-          "audioSrc": "/assets/lessons/L329/audio/L329-G04-wrong-two.m4a",
-          "spokenText": "三點左邊要去同學家玩",
-          "pronunciation": "ㄧㄡ"
-        },
-        {
-          "id": "L329-G04-D",
-          "text": "三點左轉，要去同學家玩。",
-          "correct": false,
-          "audioSrc": "/assets/lessons/L329/audio/L329-G04-wrong-three.m4a",
-          "spokenText": "三點左轉要去同學家玩",
-          "pronunciation": "ㄧㄡˊ"
         }
       ]
     },
@@ -2037,6 +1993,49 @@ These records are teacher-approved and must match the L329 draft and production-
         "L329-G05-B",
         "L329-G05-C",
         "L329-G05-D"
+      ]
+    },
+    {
+      "id": "L329-G04",
+      "type": "choose-pronunciation",
+      "sentenceId": "L329-S04",
+      "targetChar": "右",
+      "targetCharIndex": 3,
+      "prompt": "選出聽到的句子。",
+      "options": [
+        {
+          "id": "L329-G04-A",
+          "text": "三點左右，要去同學家玩。",
+          "correct": true,
+          "sentenceId": "L329-S04",
+          "audioSrc": "/assets/lessons/L329/audio/L329-S04.m4a",
+          "spokenText": "三點左右要去同學家玩",
+          "pronunciation": "ㄧㄡˋ"
+        },
+        {
+          "id": "L329-G04-B",
+          "text": "三點左手，要去同學家玩。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L329/audio/L329-G04-wrong-one.m4a",
+          "spokenText": "三點左手要去同學家玩",
+          "pronunciation": "ㄧㄡˇ"
+        },
+        {
+          "id": "L329-G04-C",
+          "text": "三點左邊，要去同學家玩。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L329/audio/L329-G04-wrong-two.m4a",
+          "spokenText": "三點左邊要去同學家玩",
+          "pronunciation": "ㄧㄡ"
+        },
+        {
+          "id": "L329-G04-D",
+          "text": "三點左轉，要去同學家玩。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L329/audio/L329-G04-wrong-three.m4a",
+          "spokenText": "三點左轉要去同學家玩",
+          "pronunciation": "ㄧㄡˊ"
+        }
       ]
     }
   ]
