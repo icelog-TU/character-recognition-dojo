@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L344 | 跟 | claimed | Production A | codex/l344-complete-package | L339:齊; L340:全; L341:今; L342:們; L343:年 | 齊 全 今 們 年 | `curriculum-workflow/lesson-requests/L344.json`; `curriculum-workflow/generated/L344-generation-packet.md`; `curriculum-workflow/drafts/L344-draft.json` | `curriculum-workflow/audio-inbox/L344/`; `public/assets/lessons/L344/` | Building dependency-blocked asset-complete package from approved handoff; latest main has L338「整」 and L339-L343 remain provisional. |
 
 ## Status Values
 
