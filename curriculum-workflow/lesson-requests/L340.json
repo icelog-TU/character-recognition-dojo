@@ -1,0 +1,304 @@
+{
+  "id": "L340",
+  "order": 340,
+  "kind": "lesson",
+  "newChars": [
+    "全"
+  ],
+  "zhuyin": {
+    "全": "ㄑㄩㄢˊ"
+  },
+  "title": "全",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Editor handoff for L340. Latest origin/main production JSON is complete through L337「理」. L338「整」 and L339「齊」 remain accepted provisional dependencies from origin/codex/l338-complete-package and origin/codex/l339-complete-package. Production builds a dependency-blocked asset-complete package. Release owns ordered integration into production JSON/planner/ledger after L338 and L339 enter main.",
+  "dependsOnLessons": [
+    "L338",
+    "L339"
+  ],
+  "provisionalLearnedChars": [
+    "整",
+    "齊"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L337 plus provisional L338「整」 and L339「齊」 plus current new char L340「全」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全",
+    "dependsOnLessons": [
+      "L338",
+      "L339"
+    ],
+    "provisionalLearnedChars": [
+      "整",
+      "齊"
+    ],
+    "requiredCoverageChars": [
+      "全",
+      "齊",
+      "整",
+      "理",
+      "處",
+      "特"
+    ],
+    "targetCharMinimumCount": {
+      "全": 3
+    },
+    "recentTargetMinimumCounts": {
+      "齊": 2,
+      "整": 2,
+      "理": 2,
+      "處": 1,
+      "特": 1
+    },
+    "coverageCounts": {
+      "全": 4,
+      "齊": 2,
+      "整": 2,
+      "理": 2,
+      "處": 1,
+      "特": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Use refined preferred examples from docs/LESSON_VISUAL_CAST_SOP.md for protagonist girl, family, teacher, and classroom proportions.",
+      "Before accepting each final WebP image, compare side by side with the L058 style anchors, refined preferred examples, and relevant cast anchors.",
+      "S01 uses a teacher visually distinct from protagonist mother and generic classmates that are not named 小月 or 小光.",
+      "S02/S03/S05 use the recurring protagonist girl identity.",
+      "S02/S03 use the recurring protagonist mother identity.",
+      "S04 uses the recurring protagonist father identity and keeps father distinct from teacher and generic adults.",
+      "No readable text, numbers, subtitles, labels, brands, logos, UI symbols, license plates, name tags, classroom labels, screen text, or document text in images."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 全 as public/assets/lessons/L340/audio/char-u5168.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix and suffix from exact fragments 把門口的鞋子 and 都放整齊.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L340-S01",
+      "text": "同學全都到齊了沒？",
+      "spokenText": "同學全都到齊了沒",
+      "focusChar": "全",
+      "displayLines": [
+        "同學全都",
+        "到齊了沒？"
+      ],
+      "imageNotes": "幼兒園教室裡，老師站在門口或教室前方，正在溫和地問學生有沒有都到齊。幾位同學已經坐好或站好，門口還可以有一位剛走進來的同學，讓畫面呈現「老師正在確認人有沒有到齊」。不要點名表、文字、數字或姓名牌。"
+    },
+    {
+      "id": "L340-S02",
+      "text": "把門口的鞋子全都放整齊。",
+      "spokenText": "把門口的鞋子全都放整齊",
+      "focusChar": "全",
+      "displayLines": [
+        "把門口的鞋子",
+        "全都放整齊。"
+      ],
+      "imageNotes": "家門口玄關有好幾雙鞋子散亂在地上，主角媽媽正在提醒主角小女孩整理鞋子。小女孩蹲在玄關，把所有鞋子一雙一雙排整齊。畫面要清楚呈現「鞋子全都放整齊」，不要品牌或文字。"
+    },
+    {
+      "id": "L340-S03",
+      "text": "玩水後，全身都濕了。",
+      "spokenText": "玩水後全身都濕了",
+      "focusChar": "全",
+      "displayLines": [
+        "玩水後，",
+        "全身都濕了。"
+      ],
+      "imageNotes": "主角小女孩剛在戶外或浴室附近玩水，頭髮、衣服、手腳都濕了，地上有安全的小水花。主角媽媽拿著毛巾準備幫她擦乾。畫面要可愛、生活化，不要危險水域或滑倒。"
+    },
+    {
+      "id": "L340-S04",
+      "text": "爸爸忙著處理工作的事。",
+      "spokenText": "爸爸忙著處理工作的事",
+      "focusChar": "理",
+      "displayLines": [
+        "爸爸忙著處理",
+        "工作的事。"
+      ],
+      "imageNotes": "家中書桌旁，主角爸爸坐著或站著忙工作，桌上有電腦、文件或工具，表情專注但不焦躁。主角小女孩在旁邊安靜看著或等爸爸。畫面要呈現「爸爸正在處理工作的事」，不要螢幕文字、文件文字、品牌標誌。"
+    },
+    {
+      "id": "L340-S05",
+      "text": "全新的整理盒，特別好用。",
+      "spokenText": "全新的整理盒特別好用",
+      "focusChar": "全",
+      "displayLines": [
+        "全新的",
+        "整理盒，",
+        "特別好用。"
+      ],
+      "imageNotes": "主角小女孩在桌邊使用一個全新的整理盒，把彩色筆、小紙張、橡皮擦或小物品分格放好。整理盒乾淨新穎，物品放得清楚整齊，女孩看起來覺得很好用。不要品牌、標籤或任何可讀文字。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L340-G01",
+      "type": "find-character",
+      "sentenceId": "L340-S01",
+      "targetChar": "全",
+      "targetCharIndex": 2,
+      "prompt": "找到「全」。",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "L340-G01-A",
+          "text": "全",
+          "correct": true
+        },
+        {
+          "id": "L340-G01-B",
+          "text": "齊",
+          "correct": false
+        },
+        {
+          "id": "L340-G01-C",
+          "text": "整",
+          "correct": false
+        },
+        {
+          "id": "L340-G01-D",
+          "text": "理",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L340-G02",
+      "type": "teach-character",
+      "sentenceId": "L340-S02",
+      "targetChar": "全",
+      "targetCharIndex": 6,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        6
+      ],
+      "teachAudio": {
+        "prefixText": "把門口的鞋子",
+        "targetText": "全",
+        "suffixText": "都放整齊",
+        "prefixSrc": "/assets/lessons/L340/audio/L340-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L340/audio/L340-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L340-G03",
+      "type": "missing-character",
+      "sentenceId": "L340-S03",
+      "targetChar": "全",
+      "targetCharIndex": 3,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        3
+      ],
+      "options": [
+        {
+          "id": "L340-G03-A",
+          "text": "全",
+          "correct": true
+        },
+        {
+          "id": "L340-G03-B",
+          "text": "身",
+          "correct": false
+        },
+        {
+          "id": "L340-G03-C",
+          "text": "都",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L340-G04",
+      "type": "partial-order",
+      "sentenceId": "L340-S04",
+      "targetChar": "理",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "options": [
+        {
+          "id": "L340-G04-A",
+          "text": "處",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L340-G04-B",
+          "text": "理",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L340-G04-C",
+          "text": "工",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L340-G04-D",
+          "text": "作",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L340-G04-A",
+        "L340-G04-B",
+        "L340-G04-C",
+        "L340-G04-D"
+      ]
+    },
+    {
+      "id": "L340-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L340-S05",
+      "targetChar": "全",
+      "targetCharIndex": 0,
+      "prompt": "選出念得對的聲音。",
+      "options": [
+        {
+          "id": "L340-G05-A",
+          "text": "全新的整理盒，特別好用。",
+          "correct": true,
+          "sentenceId": "L340-S05",
+          "audioSrc": "/assets/lessons/L340/audio/L340-S05.m4a",
+          "spokenText": "全新的整理盒特別好用",
+          "pronunciationText": "ㄑㄩㄢˊ"
+        },
+        {
+          "id": "L340-G05-B",
+          "text": "最新的整理盒，特別好用。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L340/audio/L340-G05-wrong-one.m4a",
+          "ttsText": "最新的整理盒特別好用",
+          "spokenText": "最新的整理盒特別好用",
+          "pronunciationText": "ㄑㄩㄢˊ"
+        },
+        {
+          "id": "L340-G05-C",
+          "text": "半新的整理盒，特別好用。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L340/audio/L340-G05-wrong-two.m4a",
+          "ttsText": "半新的整理盒特別好用",
+          "spokenText": "半新的整理盒特別好用",
+          "pronunciationText": "ㄑㄩㄢˊ"
+        }
+      ]
+    }
+  ]
+}

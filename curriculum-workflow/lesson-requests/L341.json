@@ -1,0 +1,314 @@
+{
+  "id": "L341",
+  "order": 341,
+  "kind": "lesson",
+  "newChars": [
+    "今"
+  ],
+  "zhuyin": {
+    "今": "ㄐㄧㄣ"
+  },
+  "title": "今",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Production B handoff for L341. This lesson is produced as a dependency-blocked complete asset package against origin/main 730be57b, with L338 整, L339 齊, and L340 全 treated as provisional dependencies until they enter main. Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push to main, and deployment checks.",
+  "dependsOnLessons": [
+    "L338",
+    "L339",
+    "L340"
+  ],
+  "provisionalLearnedChars": [
+    "整",
+    "齊",
+    "全"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L337 plus provisional chars 整/齊/全 and current new char 今",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今",
+    "dependsOnLessons": [
+      "L338",
+      "L339",
+      "L340"
+    ],
+    "provisionalLearnedChars": [
+      "整",
+      "齊",
+      "全"
+    ],
+    "requiredCoverageChars": [
+      "今",
+      "全",
+      "齊",
+      "整",
+      "理",
+      "處"
+    ],
+    "targetCharMinimumCount": {
+      "今": 3
+    },
+    "recentTargetMinimumCounts": {
+      "全": 2,
+      "齊": 2,
+      "整": 2,
+      "理": 1,
+      "處": 1
+    },
+    "coverageCounts": {
+      "今": 3,
+      "全": 2,
+      "齊": 2,
+      "整": 2,
+      "理": 1,
+      "處": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the approved L058 lesson images only as style references; do not copy any L058 person identity.",
+      "Use the refined preferred examples listed in docs/LESSON_VISUAL_CAST_SOP.md for protagonist-girl, family, classroom, and preschool proportions.",
+      "Use recurring protagonist girl identity for S01-S05.",
+      "Use recurring protagonist mother identity for S03, S04, and S05; keep mother distinct from teacher and generic adults.",
+      "Use recurring protagonist father identity for S05.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, subtitles, labels, captions, signs, logos, brands, UI symbols, film titles, calendar dates, license plates, or watermarks anywhere."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 今 as public/assets/lessons/L341/audio/char-u4eca.m4a from the single character only.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 suffix from exact fragment 晚爸媽要帶我去看電影. No prefix audio is needed because targetCharIndex is 0.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L341-S01",
+      "text": "今天放假，不用上學。",
+      "spokenText": "今天放假不用上學",
+      "focusChar": "今",
+      "displayLines": [
+        "今天放假，",
+        "不用上學。"
+      ],
+      "imageNotes": "早上在家裡，主角小女孩穿著居家衣服，開心地坐在客廳或房間裡玩，不用背書包出門。旁邊可以放著書包和鞋子，但沒有出門上學的動作。畫面不要出現行事曆、文字或日期數字。"
+    },
+    {
+      "id": "L341-S02",
+      "text": "到處找黑白棋子，全都找齊了。",
+      "spokenText": "到處找黑白棋子全都找齊了",
+      "focusChar": "齊",
+      "displayLines": [
+        "到處找",
+        "黑白棋子，",
+        "全都找齊了。"
+      ],
+      "imageNotes": "家裡客廳或桌邊，主角小女孩剛把散落在不同地方的黑白棋子找回來，桌上或盒子裡有黑棋和白棋都放在一起，表情很開心。畫面要清楚呈現「找了很多地方後，棋子都找齊了」，不要文字標籤。"
+    },
+    {
+      "id": "L341-S03",
+      "text": "今天要去游泳，先整理泳具。",
+      "spokenText": "今天要去游泳先整理泳具",
+      "focusChar": "今",
+      "displayLines": [
+        "今天要去",
+        "游泳，",
+        "先整理泳具。"
+      ],
+      "imageNotes": "主角小女孩在家裡準備出門游泳，正在把泳衣、泳帽、毛巾或游泳用具放進袋子裡。主角媽媽可以在旁邊提醒或幫忙。畫面要呈現「因為今天要游泳，所以先整理泳具」，不要泳池危險畫面、品牌或文字。"
+    },
+    {
+      "id": "L341-S04",
+      "text": "把桌上東西，全都放整齊。",
+      "spokenText": "把桌上東西全都放整齊",
+      "focusChar": "整",
+      "displayLines": [
+        "把桌上東西，",
+        "全都放整齊。"
+      ],
+      "imageNotes": "家裡桌面上原本散著書、本子、彩色筆、小盒子等物品，主角小女孩正在把它們一樣一樣排好、收好。主角媽媽可以在旁邊溫和提醒。畫面要清楚呈現桌上東西從亂到整齊，不要品牌、標籤或可讀文字。"
+    },
+    {
+      "id": "L341-S05",
+      "text": "今晚爸媽要帶我去看電影。",
+      "spokenText": "今晚爸媽要帶我去看電影",
+      "focusChar": "今",
+      "displayLines": [
+        "今晚爸媽",
+        "要帶我去",
+        "看電影。"
+      ],
+      "imageNotes": "晚上，主角爸爸和主角媽媽帶著主角小女孩準備去電影院或已經站在電影院外。畫面可以有明亮的入口、海報框或售票區造型，但所有海報和看板都不能有可讀文字、片名、數字或品牌。氛圍期待、開心，不要擁擠或黑暗可怕。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L341-G01",
+      "type": "find-character",
+      "sentenceId": "L341-S01",
+      "targetChar": "今",
+      "targetCharIndex": 0,
+      "prompt": "找出「今」。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "L341-G01-A",
+          "text": "今",
+          "correct": true
+        },
+        {
+          "id": "L341-G01-B",
+          "text": "天",
+          "correct": false
+        },
+        {
+          "id": "L341-G01-C",
+          "text": "學",
+          "correct": false
+        },
+        {
+          "id": "L341-G01-D",
+          "text": "用",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L341-G02",
+      "type": "teach-character",
+      "sentenceId": "L341-S05",
+      "targetChar": "今",
+      "targetCharIndex": 0,
+      "prompt": "聽一聽「今」後面的句子。",
+      "missingIndexes": [
+        0
+      ],
+      "teachAudio": {
+        "prefixText": "",
+        "targetText": "今",
+        "suffixText": "晚爸媽要帶我去看電影",
+        "suffixSrc": "/assets/lessons/L341/audio/L341-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L341-G03",
+      "type": "missing-character",
+      "sentenceId": "L341-S03",
+      "targetChar": "今",
+      "targetCharIndex": 0,
+      "prompt": "補上少掉的字。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "L341-G03-A",
+          "text": "今",
+          "correct": true
+        },
+        {
+          "id": "L341-G03-B",
+          "text": "全",
+          "correct": false
+        },
+        {
+          "id": "L341-G03-C",
+          "text": "整",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L341-G04",
+      "type": "partial-order",
+      "sentenceId": "L341-S04",
+      "targetChar": "整",
+      "prompt": "排出正確的字。",
+      "missingIndexes": [
+        5,
+        6,
+        8,
+        9
+      ],
+      "options": [
+        {
+          "id": "L341-G04-A",
+          "text": "全",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L341-G04-B",
+          "text": "都",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L341-G04-C",
+          "text": "整",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L341-G04-D",
+          "text": "齊",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L341-G04-A",
+        "L341-G04-B",
+        "L341-G04-C",
+        "L341-G04-D"
+      ]
+    },
+    {
+      "id": "L341-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L341-S02",
+      "targetChar": "齊",
+      "targetCharIndex": 10,
+      "prompt": "選出正確的句子。",
+      "options": [
+        {
+          "id": "L341-G05-A",
+          "text": "到處找黑白棋子，全都找齊了。",
+          "correct": true,
+          "sentenceId": "L341-S02",
+          "audioSrc": "/assets/lessons/L341/audio/L341-S02.m4a",
+          "spokenText": "到處找黑白棋子全都找齊了",
+          "pronunciationText": "ㄑㄧˊ"
+        },
+        {
+          "id": "L341-G05-B",
+          "text": "到處找黑白棋子，全都找到了。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L341/audio/L341-G05-wrong-one.m4a",
+          "ttsText": "到處找黑白棋子全都找到了",
+          "spokenText": "到處找黑白棋子全都找到了",
+          "pronunciationText": "ㄑㄧˊ"
+        },
+        {
+          "id": "L341-G05-C",
+          "text": "到處找黑白棋子，全都找回了。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L341/audio/L341-G05-wrong-two.m4a",
+          "ttsText": "到處找黑白棋子全都找回了",
+          "spokenText": "到處找黑白棋子全都找回了",
+          "pronunciationText": "ㄑㄧˊ"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "L341-G01 / S01: Han = 今[0] 天[1] 放[2] 假[3] 不[4] 用[5] 上[6] 學[7]; targetChar 今, targetCharIndex 0, Han[0]=今, PASS.",
+    "L341-G02 / S05: Han = 今[0] 晚[1] 爸[2] 媽[3] 要[4] 帶[5] 我[6] 去[7] 看[8] 電[9] 影[10]; targetChar 今, targetCharIndex 0, Han[0]=今, PASS.",
+    "L341-G03 / S03: Han = 今[0] 天[1] 要[2] 去[3] 游[4] 泳[5] 先[6] 整[7] 理[8] 泳[9] 具[10]; targetChar 今, targetCharIndex 0, Han[0]=今, PASS.",
+    "L341-G04 / S04 partial-order: Han = 把[0] 桌[1] 上[2] 東[3] 西[4] 全[5] 都[6] 放[7] 整[8] 齊[9]; missingIndexes [5,6,8,9] = 全/都/整/齊; options are single-Han cards PASS; correctOrder mapping PASS.",
+    "L341-G05 / S02: Han = 到[0] 處[1] 找[2] 黑[3] 白[4] 棋[5] 子[6] 全[7] 都[8] 找[9] 齊[10] 了[11]; targetChar 齊, targetCharIndex 10, Han[10]=齊, PASS."
+  ]
+}

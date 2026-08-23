@@ -1,0 +1,314 @@
+{
+  "id": "L339",
+  "order": 339,
+  "kind": "lesson",
+  "newChars": [
+    "齊"
+  ],
+  "zhuyin": {
+    "齊": "ㄑㄧˊ"
+  },
+  "title": "齊",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Editor handoff for L339. Latest origin/main is 2e769866 and formal curriculum is complete through L336「處」 with R040 after L330. L337「理」 and L338「整」 are accepted provisional dependencies but are not merged into main at this handoff boundary. Production builds a dependency-blocked asset-complete package. Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push, and deployment after L337 and L338 enter main.",
+  "dependsOnLessons": [
+    "L337",
+    "L338"
+  ],
+  "provisionalLearnedChars": [
+    "理",
+    "整"
+  ],
+  "generationConstraints": {
+    "originMainCommit": "2e769866efc9ea04d3dc2080a514e623dcdf1de5",
+    "formalBoundary": "L001-L336",
+    "latestFormalLesson": "L336「處」",
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L336 plus provisional L337「理」, L338「整」, and current new char L339「齊」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊",
+    "dependsOnLessons": [
+      "L337",
+      "L338"
+    ],
+    "provisionalLearnedChars": [
+      "理",
+      "整"
+    ],
+    "requiredCoverageChars": [
+      "齊",
+      "整",
+      "理",
+      "處",
+      "特",
+      "別"
+    ],
+    "targetCharMinimumCount": {
+      "齊": 3
+    },
+    "recentTargetMinimumCounts": {
+      "整": 2,
+      "理": 2,
+      "處": 2,
+      "特": 1,
+      "別": 1
+    },
+    "coverageCounts": {
+      "齊": 3,
+      "整": 2,
+      "理": 2,
+      "處": 2,
+      "特": 1,
+      "別": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Before accepting each final WebP image, compare side by side with the L058 style anchors, refined preferred examples L115/L118/L119/L128, and relevant cast anchors.",
+      "Use protagonist family continuity and role distinctions from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "If named cast appears, follow docs/visual-references/lesson-cast.md exactly.",
+      "S05 uses named cast 小光 and must match public/assets/reference/lesson-cast/xiaoguang.webp.",
+      "Generic classmates may appear, but must not be confused with 小光 or 小月.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, arrows, labels, captions, logos, brands, UI symbols, explanatory markings, license plates, subtitles, or watermarks anywhere.",
+      "Avoid scary, violent, bloody, disaster, injury, or horror framing."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 齊 as public/assets/lessons/L339/audio/char-u9f4a.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix from exact fragment 去整理房間把東西放整.",
+      "G02 target 齊 is final Han character, so no suffix audio is needed.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L339-S01",
+      "text": "這種魚很難處理，卻特別好吃。",
+      "spokenText": "這種魚很難處理卻特別好吃",
+      "focusChar": "理",
+      "displayLines": [
+        "這種魚",
+        "很難處理，",
+        "卻特別好吃。"
+      ],
+      "imageNotes": "廚房裡，主角媽媽正在處理一條魚，主角小女孩站在旁邊看。小女孩的思考泡泡裡出現一盤看起來很好吃的魚料理，表示她知道處理雖然麻煩，但煮好後特別好吃。畫面不要血腥、不要刀具特寫；思考泡泡裡可以有料理畫面，但不要任何文字。"
+    },
+    {
+      "id": "L339-S02",
+      "text": "等大家都到齊，才可以開動。",
+      "spokenText": "等大家都到齊才可以開動",
+      "focusChar": "齊",
+      "displayLines": [
+        "等大家都",
+        "到齊，",
+        "才可以",
+        "開動。"
+      ],
+      "imageNotes": "大家族聚餐，三家人左右、十幾個人圍著大餐桌，桌上有飯菜，大家還在等最後一位家人走到座位旁。畫面要呈現「人還沒到齊，所以先等一下」，不要文字或數字。"
+    },
+    {
+      "id": "L339-S03",
+      "text": "玩具不要到處亂放。",
+      "spokenText": "玩具不要到處亂放",
+      "focusChar": "處",
+      "displayLines": [
+        "玩具不要",
+        "到處亂放。"
+      ],
+      "imageNotes": "家裡客廳或小女孩房間，玩具散在地上不同地方，主角媽媽正在溫和提醒主角小女孩不要亂放玩具。畫面是家庭場景，不要畫成小學教室。"
+    },
+    {
+      "id": "L339-S04",
+      "text": "去整理房間，把東西放整齊。",
+      "spokenText": "去整理房間把東西放整齊",
+      "focusChar": "齊",
+      "displayLines": [
+        "去整理房間，",
+        "把東西",
+        "放整齊。"
+      ],
+      "imageNotes": "主角媽媽站在房間門口或房間裡，正在叫主角小女孩整理房間；小女孩開始把書、玩具、盒子或衣服放整齊。畫面要看出這是媽媽給孩子的指令。"
+    },
+    {
+      "id": "L339-S05",
+      "text": "小光做得很好，要向他看齊。",
+      "spokenText": "小光做得很好要向他看齊",
+      "focusChar": "齊",
+      "displayLines": [
+        "小光做得",
+        "很好，",
+        "要向他看齊。"
+      ],
+      "imageNotes": "教室裡，老師在講臺上溫和表揚固定 recurring boy classmate 小光。Production 必須使用 approved 小光 reference: public/assets/reference/lesson-cast/xiaoguang.webp。小光是主角女孩的同學，有圓眼鏡、整齊短黑髮、白短袖襯衫、深藍針織背心、卡其短褲、白襪、棕色鞋，可搭配深綠書包。小光坐姿端正、用心上課或課堂表現很好，其他同學看向他學習。不要畫成 generic boy，也不要畫成既有「你」小男孩；不要變成排隊看人、崇拜或嘲笑。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L339-G01",
+      "type": "find-character",
+      "sentenceId": "L339-S03",
+      "targetChar": "處",
+      "targetCharIndex": 5,
+      "prompt": "找到「處」。",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "id": "L339-G01-A",
+          "text": "處",
+          "correct": true
+        },
+        {
+          "id": "L339-G01-B",
+          "text": "齊",
+          "correct": false
+        },
+        {
+          "id": "L339-G01-C",
+          "text": "整",
+          "correct": false
+        },
+        {
+          "id": "L339-G01-D",
+          "text": "理",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L339-G02",
+      "type": "teach-character",
+      "sentenceId": "L339-S04",
+      "targetChar": "齊",
+      "targetCharIndex": 10,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        10
+      ],
+      "teachAudio": {
+        "prefixText": "去整理房間把東西放整",
+        "targetText": "齊",
+        "prefixSrc": "/assets/lessons/L339/audio/L339-G02-prefix.m4a"
+      }
+    },
+    {
+      "id": "L339-G03",
+      "type": "missing-character",
+      "sentenceId": "L339-S05",
+      "targetChar": "齊",
+      "targetCharIndex": 10,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        10
+      ],
+      "options": [
+        {
+          "id": "L339-G03-A",
+          "text": "齊",
+          "correct": true
+        },
+        {
+          "id": "L339-G03-B",
+          "text": "整",
+          "correct": false
+        },
+        {
+          "id": "L339-G03-C",
+          "text": "理",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L339-G04",
+      "type": "partial-order",
+      "sentenceId": "L339-S01",
+      "targetChar": "處",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        5,
+        6,
+        8,
+        9
+      ],
+      "options": [
+        {
+          "id": "L339-G04-A",
+          "text": "處",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L339-G04-B",
+          "text": "理",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L339-G04-C",
+          "text": "特",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L339-G04-D",
+          "text": "別",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L339-G04-A",
+        "L339-G04-B",
+        "L339-G04-C",
+        "L339-G04-D"
+      ]
+    },
+    {
+      "id": "L339-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L339-S02",
+      "targetChar": "齊",
+      "targetCharIndex": 5,
+      "prompt": "選出念得對的聲音。",
+      "options": [
+        {
+          "id": "L339-G05-A",
+          "text": "等大家都到齊，才可以開動。",
+          "correct": true,
+          "sentenceId": "L339-S02",
+          "audioSrc": "/assets/lessons/L339/audio/L339-S02.m4a",
+          "spokenText": "等大家都到齊才可以開動"
+        },
+        {
+          "id": "L339-G05-B",
+          "text": "等大家都到家，才可以開動。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L339/audio/L339-G05-wrong-one.m4a",
+          "ttsText": "等大家都到家才可以開動",
+          "spokenText": "等大家都到家才可以開動"
+        },
+        {
+          "id": "L339-G05-C",
+          "text": "等大家都到桌，才可以開動。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L339/audio/L339-G05-wrong-two.m4a",
+          "ttsText": "等大家都到桌才可以開動",
+          "spokenText": "等大家都到桌才可以開動"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "L339-G01 / S03: Han = 玩[0] 具[1] 不[2] 要[3] 到[4] 處[5] 亂[6] 放[7]; targetChar 處, targetCharIndex 5, Han[5]=處, PASS.",
+    "L339-G02 / S04: Han = 去[0] 整[1] 理[2] 房[3] 間[4] 把[5] 東[6] 西[7] 放[8] 整[9] 齊[10]; targetChar 齊, targetCharIndex 10, Han[10]=齊, PASS.",
+    "L339-G03 / S05: Han = 小[0] 光[1] 做[2] 得[3] 很[4] 好[5] 要[6] 向[7] 他[8] 看[9] 齊[10]; targetChar 齊, targetCharIndex 10, Han[10]=齊, PASS.",
+    "L339-G04 / S01 partial-order: Han = 這[0] 種[1] 魚[2] 很[3] 難[4] 處[5] 理[6] 卻[7] 特[8] 別[9] 好[10] 吃[11]; missingIndexes [5,6,8,9] = 處/理/特/別; options are single-Han cards PASS; correctOrder mapping PASS.",
+    "L339-G05 / S02: Han = 等[0] 大[1] 家[2] 都[3] 到[4] 齊[5] 才[6] 可[7] 以[8] 開[9] 動[10]; targetChar 齊, targetCharIndex 5, Han[5]=齊, PASS. Correct and wrong option Han counts are all 11."
+  ]
+}
