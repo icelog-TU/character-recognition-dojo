@@ -114,6 +114,9 @@ These records are the final implemented lesson-local package records and must ma
         "最大的是",
         "長方盒子。"
       ],
+      "zhuyinOverrides": {
+        "4": "ㄔㄤˊ"
+      },
       "imageNotes": "桌上放幾個不同形狀和大小的盒子：圓盒、小方盒、長方盒。主角小女孩看著盒子或指著最大的長方盒子，讓畫面清楚表現「最大的是長方盒子」。",
       "imageSrc": "/assets/lessons/L323/images/L323-S05.webp",
       "audioSrc": "/assets/lessons/L323/audio/L323-S05.m4a",
