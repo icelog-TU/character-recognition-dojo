@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L342 | 們 | claimed | Production C | `codex/l342-complete-package` | L338, L339, L340, L341 | 整, 齊, 全, 今 | `curriculum-workflow/lesson-requests/L342.json`; `curriculum-workflow/generated/L342-generation-packet.md`; `curriculum-workflow/drafts/L342-draft.json` | `curriculum-workflow/audio-inbox/L342/`; `public/assets/lessons/L342/` | Claimed from `origin/main` 5efe113d; dependency-blocked until L338-L341 enter main. |
+| L342 | 們 | ready-blocked-by-dependency | Production C | `codex/l342-complete-package` | L339, L340, L341 | 齊, 全, 今 | `curriculum-workflow/lesson-requests/L342.json`; `curriculum-workflow/generated/L342-generation-packet.md`; `curriculum-workflow/drafts/L342-draft.json` | `curriculum-workflow/audio-inbox/L342/`; `public/assets/lessons/L342/` | Complete lesson-local package rebased onto `origin/main` 1e823192; blocked until L339-L341 enter main. |
 
 ## Status Values
 
