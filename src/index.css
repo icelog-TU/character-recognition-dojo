@@ -2531,8 +2531,12 @@ button.char-token {
   display: inline-grid;
   place-items: center;
   flex: 0 0 auto;
-  min-width: clamp(38px, 10vw, 52px);
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  min-width: clamp(42px, 10.5vw, 56px);
   min-height: clamp(44px, 12vw, 56px);
+  margin-inline: clamp(4px, 1.4vw, 10px);
   border: 2px dashed var(--primary);
   border-radius: 8px;
   background: #eef8f4;
