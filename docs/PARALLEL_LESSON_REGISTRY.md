@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L343 | 年 | claimed | Production D | codex/l343-complete-package | L338, L339, L340, L341, L342 | 整, 齊, 全, 今, 們 | `curriculum-workflow/lesson-requests/L343.json`; `curriculum-workflow/generated/L343-generation-packet.md`; `curriculum-workflow/drafts/L343-draft.json` | `curriculum-workflow/audio-inbox/L343/`; `public/assets/lessons/L343/` | Claimed from origin/main `6f053c27`; dependency-blocked until L338-L342 merge. |
+| L343 | 年 | ready-blocked-by-dependency | Production D | codex/l343-complete-package | L338, L339, L340, L341, L342 | 整, 齊, 全, 今, 們 | `curriculum-workflow/lesson-requests/L343.json`; `curriculum-workflow/generated/L343-generation-packet.md`; `curriculum-workflow/drafts/L343-draft.json` | `curriculum-workflow/audio-inbox/L343/`; `public/assets/lessons/L343/` | Complete lesson-local package from origin/main `6f053c27`; blocked until L338-L342 merge. Release owns production JSON, planner, ledger, final verify, push, and deployment. |
 
 ## Status Values
 
