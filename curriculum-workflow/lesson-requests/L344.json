@@ -1,0 +1,299 @@
+{
+  "id": "L344",
+  "order": 344,
+  "kind": "lesson",
+  "newChars": [
+    "跟"
+  ],
+  "zhuyin": {
+    "跟": "ㄍㄣ"
+  },
+  "title": "跟",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Editor handoff for L344. Latest origin/main production JSON is complete through L338「整」. L339「齊」, L340「全」, L341「今」, L342「們」, and L343「年」 remain accepted provisional dependencies. Production builds a dependency-blocked asset-complete package. Release owns ordered integration into production JSON/planner/ledger after L339-L343 enter main.",
+  "dependsOnLessons": [
+    "L339",
+    "L340",
+    "L341",
+    "L342",
+    "L343"
+  ],
+  "provisionalLearnedChars": [
+    "齊",
+    "全",
+    "今",
+    "們",
+    "年"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L338 plus provisional L339「齊」, L340「全」, L341「今」, L342「們」, L343「年」 plus current new char L344「跟」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟",
+    "dependsOnLessons": [
+      "L339",
+      "L340",
+      "L341",
+      "L342",
+      "L343"
+    ],
+    "provisionalLearnedChars": [
+      "齊",
+      "全",
+      "今",
+      "們",
+      "年"
+    ],
+    "requiredCoverageChars": [
+      "跟",
+      "年",
+      "們",
+      "今",
+      "全",
+      "齊"
+    ],
+    "targetCharMinimumCount": {
+      "跟": 3
+    },
+    "recentTargetMinimumCounts": {
+      "年": 2,
+      "們": 2,
+      "今": 2,
+      "全": 1,
+      "齊": 1
+    },
+    "coverageCounts": {
+      "跟": 4,
+      "年": 2,
+      "們": 2,
+      "今": 2,
+      "全": 1,
+      "齊": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Use refined preferred examples from docs/LESSON_VISUAL_CAST_SOP.md for protagonist girl, family, mother, father, teacher, and home-scene proportions.",
+      "Before accepting each final WebP image, compare side by side with the L058 style anchors, refined preferred examples, and relevant cast anchors.",
+      "S01/S03/S04/S05 use the recurring protagonist girl identity.",
+      "S01/S03 use protagonist family continuity. The protagonist family is four people: mother, father, little girl protagonist, and older brother.",
+      "S01/S05 use recurring protagonist mother identity.",
+      "S03 uses recurring protagonist mother, father, protagonist girl, and older brother identities.",
+      "S04 teacher must be visually distinct from protagonist mother.",
+      "S02 uses varied generic visitors and a distinct adult guide/chaperone; no named cast is required.",
+      "No readable text, numbers, subtitles, labels, brands, logos, UI symbols, route signs, store signs, ticket text, museum names, calendar dates, or license plates in images."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 跟 as public/assets/lessons/L344/audio/char-u8ddf.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix and suffix from exact fragments 今早我們 and 媽媽去買菜.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L344-S01",
+      "text": "今早我們跟媽媽去買菜。",
+      "spokenText": "今早我們跟媽媽去買菜",
+      "focusChar": "跟",
+      "displayLines": [
+        "今早我們跟",
+        "媽媽去買菜。"
+      ],
+      "imageNotes": "早上市場或小店裡，主角小女孩和主角哥哥兩個孩子跟著主角媽媽一起買菜。媽媽在挑菜或拿菜，主角小女孩和哥哥在旁邊幫忙看或拿小袋子。使用 protagonist family continuity：主角小女孩、主角媽媽、主角哥哥要是固定家庭角色，不要畫成 generic children。畫面要清楚呈現「今早我們跟媽媽去買菜」，不要價格牌、商品文字、品牌或數字。"
+    },
+    {
+      "id": "L344-S02",
+      "text": "人全都到齊，才能進去。",
+      "spokenText": "人全都到齊才能進去",
+      "focusChar": "齊",
+      "displayLines": [
+        "人全都到齊，",
+        "才能進去。"
+      ],
+      "imageNotes": "博物館或展覽館入口外，一群人正在入口前集合，帶隊的大人確認大家都到齊後才能進去。入口可以有建築、門口和排隊動線，但不要出現任何可讀館名、標語、票券文字、數字或品牌。畫面要清楚呈現「人到齊後才能進去」。"
+    },
+    {
+      "id": "L344-S03",
+      "text": "去年我跟家人們去海邊玩。",
+      "spokenText": "去年我跟家人們去海邊玩",
+      "focusChar": "跟",
+      "displayLines": [
+        "去年我跟",
+        "家人們去",
+        "海邊玩。"
+      ],
+      "imageNotes": "主角小女孩看著相簿或照片，照片裡是去年她跟全家四個人在海邊玩的回憶：主角小女孩、主角媽媽、主角爸爸、主角哥哥都到齊，在海浪和沙灘旁一起玩水或玩沙。畫面要用相簿或回憶泡泡表示「去年」，但不要文字、日期、年份或數字。"
+    },
+    {
+      "id": "L344-S04",
+      "text": "明年我要跟老師學水彩。",
+      "spokenText": "明年我要跟老師學水彩",
+      "focusChar": "跟",
+      "displayLines": [
+        "明年我要跟",
+        "老師學水彩。"
+      ],
+      "imageNotes": "主角小女孩想像明年跟老師學水彩，畫面可以是教室或美術教室裡，老師溫和示範水彩，小女孩專心看或跟著畫。可用想像泡泡或未來感構圖表示「明年」，但不要文字、年份、日曆或數字。老師要和主角媽媽長相明顯不同。"
+    },
+    {
+      "id": "L344-S05",
+      "text": "媽媽今天穿了高跟鞋。",
+      "spokenText": "媽媽今天穿了高跟鞋",
+      "focusChar": "跟",
+      "displayLines": [
+        "媽媽今天",
+        "穿了高跟鞋。"
+      ],
+      "imageNotes": "家門口玄關前，主角媽媽準備出門，今天穿上高跟鞋，主角小女孩在旁邊看。畫面要清楚呈現媽媽腳上的高跟鞋，但不要過度特寫腳部；場景要在玄關或門口，避免畫成在客廳深處穿鞋。不要品牌、標籤、文字或數字。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L344-G01",
+      "type": "find-character",
+      "sentenceId": "L344-S05",
+      "targetChar": "跟",
+      "targetCharIndex": 7,
+      "options": [
+        {
+          "id": "L344-G01-A",
+          "text": "跟",
+          "correct": true
+        },
+        {
+          "id": "L344-G01-B",
+          "text": "高",
+          "correct": false
+        },
+        {
+          "id": "L344-G01-C",
+          "text": "今",
+          "correct": false
+        },
+        {
+          "id": "L344-G01-D",
+          "text": "鞋",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L344-G02",
+      "type": "teach-character",
+      "sentenceId": "L344-S01",
+      "targetChar": "跟",
+      "targetCharIndex": 4,
+      "teachAudio": {
+        "prefixSrc": "/assets/lessons/L344/audio/L344-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L344/audio/L344-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L344-G03",
+      "type": "missing-character",
+      "sentenceId": "L344-S04",
+      "targetChar": "跟",
+      "targetCharIndex": 4,
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        {
+          "id": "L344-G03-A",
+          "text": "跟",
+          "correct": true
+        },
+        {
+          "id": "L344-G03-B",
+          "text": "年",
+          "correct": false
+        },
+        {
+          "id": "L344-G03-C",
+          "text": "學",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L344-G04",
+      "type": "partial-order",
+      "sentenceId": "L344-S02",
+      "targetChar": "齊",
+      "missingIndexes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "options": [
+        {
+          "id": "L344-G04-A",
+          "text": "全",
+          "correctOrder": 0
+        },
+        {
+          "id": "L344-G04-B",
+          "text": "都",
+          "correctOrder": 1
+        },
+        {
+          "id": "L344-G04-C",
+          "text": "到",
+          "correctOrder": 2
+        },
+        {
+          "id": "L344-G04-D",
+          "text": "齊",
+          "correctOrder": 3
+        }
+      ],
+      "correctSequence": [
+        "L344-G04-A",
+        "L344-G04-B",
+        "L344-G04-C",
+        "L344-G04-D"
+      ]
+    },
+    {
+      "id": "L344-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L344-S03",
+      "targetChar": "跟",
+      "targetCharIndex": 3,
+      "options": [
+        {
+          "id": "L344-G05-A",
+          "text": "去年我跟家人們去海邊玩。",
+          "correct": true,
+          "sentenceId": "L344-S03",
+          "audioSrc": "/assets/lessons/L344/audio/L344-S03.m4a"
+        },
+        {
+          "id": "L344-G05-B",
+          "text": "去年我看家人們去海邊玩。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L344/audio/L344-G05-wrong-one.m4a"
+        },
+        {
+          "id": "L344-G05-C",
+          "text": "去年我帶家人們去海邊玩。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L344/audio/L344-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "L344-G01 / S05: targetChar 跟, targetCharIndex 7, Han[7]=跟, PASS.",
+    "L344-G02 / S01: targetChar 跟, targetCharIndex 4, Han[4]=跟, PASS.",
+    "L344-G03 / S04: targetChar 跟, targetCharIndex 4, Han[4]=跟, PASS.",
+    "L344-G04 / S02: missingIndexes [1,2,3,4] = 全/都/到/齊, options are single-Han cards, correctOrder mapping PASS.",
+    "L344-G05 / S03: targetChar 跟, targetCharIndex 3, Han[3]=跟, PASS."
+  ]
+}
