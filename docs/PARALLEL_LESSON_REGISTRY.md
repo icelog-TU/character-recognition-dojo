@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L338 | 整 | claimed | Production C | codex/l338-complete-package | L337:理 | 理 | curriculum-workflow/lesson-requests/L338.json; curriculum-workflow/generated/L338-generation-packet.md; curriculum-workflow/drafts/L338-draft.json | curriculum-workflow/audio-inbox/L338/; public/assets/lessons/L338/ | Dependency-blocked until L337 enters main. Approved handoff received for L338; production package in progress. |
 
 ## Status Values
 
