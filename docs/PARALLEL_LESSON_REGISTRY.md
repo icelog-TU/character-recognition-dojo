@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L341 | 今 / normal lesson | claimed | Production B | codex/l341-complete-package | L338; L339; L340 | 整; 齊; 全 | curriculum-workflow/lesson-requests/L341.json; curriculum-workflow/generated/L341-generation-packet.md; curriculum-workflow/drafts/L341-draft.json | public/assets/lessons/L341/; curriculum-workflow/audio-inbox/L341/ | Dependency-blocked until L338-L340 enter main; Production B owns lesson-local asset package. |
 
 ## Status Values
 
