@@ -38,6 +38,7 @@ The interaction content follows the existing Justin app pattern:
 - Each character gets deterministic content based on its character ID.
 - The same character should not reshuffle its lines after reload.
 - Different characters should not all repeat the same activity sequence.
+- A single character's 10 heart interaction slots must not repeat the same visible action label.
 - Seen interaction positions are stored in `seenCharacterInteractions`.
 - Newly unlocked unseen interactions may sparkle or show a new marker.
 - Once an interaction has been opened, it should not keep presenting itself as new after leaving and returning.

@@ -788,10 +788,7 @@ const CHARACTER_INTERACTION_TEMPLATES: Array<{
 ];
 
 function characterInteractions(character: CollectibleCharacter): CharacterInteraction[] {
-  return Array.from({ length: 10 }, (_, index) => {
-    const template = CHARACTER_INTERACTION_TEMPLATES[
-      interactionTemplateIndex(character, index, CHARACTER_INTERACTION_TEMPLATES.length)
-    ];
+  return CHARACTER_INTERACTION_TEMPLATES.slice(0, 10).map((template, index) => {
     const heart = index + 1;
     return {
       heart,
@@ -926,12 +923,6 @@ function seededPick<T>(items: readonly T[], seed: number): T {
 
 function characterSeed(character: CollectibleCharacter, salt: number): number {
   return characterCollectionIndex(character.characterId) * 997 + FAMILY_ROLES.findIndex((role) => role.id === character.familyRoleId) * 131 + salt * 53;
-}
-
-function interactionTemplateIndex(character: CollectibleCharacter, tierIndex: number, templateCount: number): number {
-  if (tierIndex === 0) return 0;
-  if (tierIndex === 1) return 1;
-  return (characterCollectionIndex(character.characterId) + tierIndex * 7) % templateCount;
 }
 
 function characterMood(hearts: number): string {
