@@ -71,8 +71,10 @@ Current identity priority:
 | Father / `爸爸` | adult man, steady family role, simple shirt or vest, clearly different silhouette and hairstyle from mother and teacher |
 | Protagonist godmother / `乾媽` | adult woman in the protagonist girl's trusted family-friend circle; warm but more crisp and capable than the mother; very tall, clearly taller than the protagonist mother and teacher, with a height difference visible at phone size for sentences such as `乾媽的身高很高`; short hair or neat medium-length hair; deep green or blue-green jacket or long top; avoid the protagonist mother's yellow/coral-red palette and avoid teacher classroom clothing, books, pointing, or instructional posture |
 | Teacher / `老師` | adult teacher, tidy classroom clothing, calm instructional posture, may carry a book or point gently, must not look like the mother unless the sentence explicitly says the mother is acting as a teacher |
-| Classmate girl | preschool-age girl, distinct from the child protagonist, different hairstyle and clothing color |
-| Classmate boy | preschool-age boy, distinct from `你` when both appear, different clothing color or accessory |
+| 小月 / recurring girl classmate | preschool-age girl, same age band as the protagonist girl; cute classmate with long softly curly dark chestnut hair, small crescent-moon hair clip, lavender cardigan, pale cream shirt, teal pleated skirt, white socks, violet shoes, and a plain small school bag when useful; use `public/assets/reference/lesson-cast/xiaoyue.webp` as the visual identity reference; keep distinct from the protagonist girl and do not give her the protagonist's short bob, pink hair clip, pink jacket, blue skirt, or pink shoes |
+| 小光 / recurring boy classmate | preschool-age boy, same age band as the protagonist girl; neat model-student classmate with round glasses, tidy short black side-parted hair, white short-sleeve shirt, navy knit vest, khaki shorts, white socks, brown school shoes, and a plain dark green school bag when useful; use `public/assets/reference/lesson-cast/xiaoguang.webp` as the visual identity reference; keep distinct from the existing `你` young boy classmate and do not use sky-blue shirt, green shorts, blue shoes, or an orange backpack |
+| Generic classmate girl | preschool-age girl, distinct from the child protagonist and from 小月, different hairstyle and clothing color |
+| Generic classmate boy | preschool-age boy, distinct from `你`, `他`, and 小光 when any appear, different clothing color or accessory |
 | Elder woman | older adult woman, short or tied hair, gentle face lines, simple elder clothing, not a reused mother face |
 | Elder man | older adult man, older posture or face lines, simple elder clothing, not a reused father face |
 | Passersby / generic adults | varied adult people with different ages, genders, hairstyles, clothing, and body shapes; never duplicate the mother/teacher template across a crowd |
@@ -83,9 +85,13 @@ Current approved cast reference assets:
 
 ```text
 public/assets/reference/lesson-cast/godmother.webp
+public/assets/reference/lesson-cast/xiaoyue.webp
+public/assets/reference/lesson-cast/xiaoguang.webp
 ```
 
 Use `godmother.webp` as the visual identity reference for the protagonist godmother / `乾媽`.
+Use `xiaoyue.webp` as the visual identity reference for 小月, the recurring girl classmate.
+Use `xiaoguang.webp` as the visual identity reference for 小光, the recurring boy classmate.
 
 The next dedicated visual-reference task should create the remaining small accepted cast set in the L058 style, reviewed by the teacher before being used broadly:
 
@@ -95,8 +101,6 @@ public/assets/reference/lesson-cast/father.webp
 public/assets/reference/lesson-cast/older-brother.webp
 public/assets/reference/lesson-cast/teacher.webp
 public/assets/reference/lesson-cast/protagonist-child.webp
-public/assets/reference/lesson-cast/classmate-girl.webp
-public/assets/reference/lesson-cast/classmate-boy.webp
 public/assets/reference/lesson-cast/elder-woman.webp
 public/assets/reference/lesson-cast/elder-man.webp
 public/assets/reference/lesson-cast/passersby-group.webp
@@ -143,7 +147,9 @@ For recurring cast identity, use the current visual cast anchors required by doc
 When a sentence uses `我`, use the recurring protagonist girl identity.
 When a sentence uses `你`, use the recurring young boy classmate identity.
 When a sentence uses `他`, use the fixed recurring sporty boy identity.
-Mother, father, teacher, generic adults, generic children, recurring `我`, recurring `你`, and recurring `他` must remain visually distinct.
+When a sentence uses `小月`, use `public/assets/reference/lesson-cast/xiaoyue.webp` as the recurring girl classmate identity.
+When a sentence uses `小光`, use `public/assets/reference/lesson-cast/xiaoguang.webp` as the recurring boy classmate identity.
+Mother, father, teacher, generic adults, generic children, recurring `我`, recurring `你`, recurring `他`, 小月, and 小光 must remain visually distinct.
 
 Generic children must not be reused as recurring children. Recurring children must not be redesigned as random new children.
 
@@ -240,6 +246,7 @@ Before accepting generated or repaired images, Production / Asset Repair must ch
 - L058 style is highly matched without copying L058 person identity.
 - Refined preferred examples are matched for protagonist-girl age/proportions, mother continuity, recurring child proportions, and warm detailed course treatment.
 - Mother, father, teacher, classmate, elder, and passerby roles are visually distinct.
+- 小月 and 小光 match their approved reference assets when named in the sentence or image notes, and generic classmates are not accidentally reused as 小月 or 小光.
 - A teacher does not look like the mother unless the sentence explicitly requires that.
 - The protagonist godmother does not look like the protagonist mother or teacher; keep her very tall, more crisp, and in deep green or blue-green family-friend clothing. In height-focused sentences, the image must make her height obvious on a phone screen.
 - A passerby or generic adult is not the same recurring adult woman reused from another role.
