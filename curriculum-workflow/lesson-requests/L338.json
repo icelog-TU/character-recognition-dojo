@@ -1,0 +1,312 @@
+{
+  "id": "L338",
+  "order": 338,
+  "kind": "lesson",
+  "newChars": [
+    "整"
+  ],
+  "zhuyin": {
+    "整": "ㄓㄥˇ"
+  },
+  "title": "整",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Editor handoff for L338. Latest origin/main has integrated L336「處」; L337「理」 remains a provisional dependency. Production builds a dependency-blocked asset-complete package. Release owns ordered integration into production JSON/planner/ledger after L337 enters main.",
+  "dependsOnLessons": [
+    "L337"
+  ],
+  "provisionalLearnedChars": [
+    "理"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L336 plus provisional L337「理」 plus current new char L338「整」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整",
+    "dependsOnLessons": [
+      "L337"
+    ],
+    "provisionalLearnedChars": [
+      "理"
+    ],
+    "requiredCoverageChars": [
+      "整",
+      "理",
+      "處",
+      "特",
+      "別",
+      "原"
+    ],
+    "targetCharMinimumCount": {
+      "整": 3
+    },
+    "recentTargetMinimumCounts": {
+      "理": 2,
+      "處": 2,
+      "特": 2,
+      "別": 1,
+      "原": 1
+    },
+    "coverageCounts": {
+      "整": 4,
+      "理": 2,
+      "處": 2,
+      "特": 2,
+      "別": 2,
+      "原": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Before accepting each final WebP image, compare side by side with the L058 style anchors, refined preferred examples L115/L118/L119/L128, and relevant cast anchors.",
+      "Use protagonist family continuity and role distinctions from docs/LESSON_VISUAL_CAST_SOP.md and docs/CURRICULUM_LEDGER.md.",
+      "S01 uses the recurring protagonist girl.",
+      "S02 uses recurring「他」sporty boy identity, plus generic classmates or teacher if needed.",
+      "S03 uses the recurring protagonist girl.",
+      "S04 uses the recurring protagonist girl.",
+      "S05 uses recurring「他」sporty boy identity, plus a family member or teacher if needed.",
+      "No visible text, letters, numbers, Chinese characters, zhuyin, arrows, labels, captions, logos, brands, UI symbols, explanatory markings, license plates, or watermarks anywhere."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 整 as public/assets/lessons/L338/audio/char-u6574.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix from exact fragment 把彩色筆.",
+      "Generate G02 suffix from exact fragment 理好放回原處.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L338-S01",
+      "text": "整套星星衣服和鞋帽，好特別。",
+      "spokenText": "整套星星衣服和鞋帽好特別",
+      "focusChar": "整",
+      "displayLines": [
+        "整套星星",
+        "衣服和鞋帽，",
+        "好特別。"
+      ],
+      "imageNotes": "主角小女孩穿著一整套星星圖案的衣服，搭配星星圖案的鞋子和帽子，站在家裡或教室裡開心展示。畫面要清楚呈現「整套」和「星星衣服、鞋帽」是一組，不要文字、品牌或標籤。"
+    },
+    {
+      "id": "L338-S02",
+      "text": "他特別好動，老愛到處亂跑。",
+      "spokenText": "他特別好動老愛到處亂跑",
+      "focusChar": "處",
+      "displayLines": [
+        "他特別好動，",
+        "老愛到處",
+        "亂跑。"
+      ],
+      "imageNotes": "固定 recurring「他」的 sporty boy 在教室或操場上跑來跑去，身體動作很活潑，旁邊有同學或老師看著他。畫面要呈現「好動、到處亂跑」，但不要危險奔跑、撞倒人、受傷或混亂衝突。"
+    },
+    {
+      "id": "L338-S03",
+      "text": "把彩色筆整理好，放回原處。",
+      "spokenText": "把彩色筆整理好放回原處",
+      "focusChar": "理",
+      "displayLines": [
+        "把彩色筆",
+        "整理好，",
+        "放回原處。"
+      ],
+      "imageNotes": "主角小女孩在桌邊把散開的彩色筆整理整齊，放回原本的筆盒或固定位置。畫面要清楚呈現彩色筆從亂到整齊、放回原處，不要品牌、文字或標籤。"
+    },
+    {
+      "id": "L338-S04",
+      "text": "滿桌都是東西，整理一下。",
+      "spokenText": "滿桌都是東西整理一下",
+      "focusChar": "整",
+      "displayLines": [
+        "滿桌都是",
+        "東西，",
+        "整理一下。"
+      ],
+      "imageNotes": "一張桌子上放滿書、彩色筆、紙、盒子等物品，主角小女孩正在把東西分類整理。畫面要看得出桌面很滿、正在整理，但不要過度髒亂或讓物品難以辨認。"
+    },
+    {
+      "id": "L338-S05",
+      "text": "整天都在睡，起來動一動。",
+      "spokenText": "整天都在睡起來動一動",
+      "focusChar": "整",
+      "displayLines": [
+        "整天都在睡，",
+        "起來動一動。"
+      ],
+      "imageNotes": "固定 recurring「他」的 sporty boy 白天還躺在床上或沙發上睡覺，家人或老師溫和地叫他起來活動，旁邊可以有球或鞋子表示要起來動一動。畫面要溫和、日間感清楚，不要像生病或深夜睡覺。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L338-G01",
+      "type": "find-character",
+      "sentenceId": "L338-S01",
+      "targetChar": "整",
+      "targetCharIndex": 0,
+      "prompt": "找到「整」。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "L338-G01-A",
+          "text": "整",
+          "correct": true
+        },
+        {
+          "id": "L338-G01-B",
+          "text": "星",
+          "correct": false
+        },
+        {
+          "id": "L338-G01-C",
+          "text": "特",
+          "correct": false
+        },
+        {
+          "id": "L338-G01-D",
+          "text": "別",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L338-G02",
+      "type": "teach-character",
+      "sentenceId": "L338-S03",
+      "targetChar": "整",
+      "targetCharIndex": 4,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        4
+      ],
+      "teachAudio": {
+        "prefixText": "把彩色筆",
+        "targetText": "整",
+        "suffixText": "理好放回原處",
+        "prefixSrc": "/assets/lessons/L338/audio/L338-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L338/audio/L338-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L338-G03",
+      "type": "missing-character",
+      "sentenceId": "L338-S05",
+      "targetChar": "整",
+      "targetCharIndex": 0,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "L338-G03-A",
+          "text": "整",
+          "correct": true
+        },
+        {
+          "id": "L338-G03-B",
+          "text": "天",
+          "correct": false
+        },
+        {
+          "id": "L338-G03-C",
+          "text": "動",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L338-G04",
+      "type": "partial-order",
+      "sentenceId": "L338-S02",
+      "targetChar": "處",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "L338-G04-A",
+          "text": "特",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L338-G04-B",
+          "text": "別",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L338-G04-C",
+          "text": "到",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L338-G04-D",
+          "text": "處",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctOrder": [
+        "L338-G04-A",
+        "L338-G04-B",
+        "L338-G04-C",
+        "L338-G04-D"
+      ]
+    },
+    {
+      "id": "L338-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L338-S04",
+      "targetChar": "整",
+      "targetCharIndex": 6,
+      "prompt": "選出念得對的聲音。",
+      "options": [
+        {
+          "id": "L338-G05-A",
+          "text": "滿桌都是東西，整理一下。",
+          "correct": true,
+          "sentenceId": "L338-S04",
+          "audioSrc": "/assets/lessons/L338/audio/L338-S04.m4a",
+          "spokenText": "滿桌都是東西整理一下",
+          "pronunciationText": "ㄓㄥˇ"
+        },
+        {
+          "id": "L338-G05-B",
+          "text": "滿桌都是東西，打理一下。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L338/audio/L338-G05-wrong-one.m4a",
+          "ttsText": "滿桌都是東西打理一下",
+          "spokenText": "滿桌都是東西打理一下",
+          "pronunciationText": "ㄓㄥˇ"
+        },
+        {
+          "id": "L338-G05-C",
+          "text": "滿桌都是東西，處理一下。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L338/audio/L338-G05-wrong-two.m4a",
+          "ttsText": "滿桌都是東西處理一下",
+          "spokenText": "滿桌都是東西處理一下",
+          "pronunciationText": "ㄓㄥˇ"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "L338-G01 / S01: Han = 整[0] 套[1] 星[2] 星[3] 衣[4] 服[5] 和[6] 鞋[7] 帽[8] 好[9] 特[10] 別[11]; targetChar 整, targetCharIndex 0, Han[0]=整, PASS.",
+    "L338-G02 / S03: Han = 把[0] 彩[1] 色[2] 筆[3] 整[4] 理[5] 好[6] 放[7] 回[8] 原[9] 處[10]; targetChar 整, targetCharIndex 4, Han[4]=整, PASS.",
+    "L338-G03 / S05: Han = 整[0] 天[1] 都[2] 在[3] 睡[4] 起[5] 來[6] 動[7] 一[8] 動[9]; targetChar 整, targetCharIndex 0, missingIndexes [0], Han[0]=整, PASS.",
+    "L338-G04 / S02 partial-order: Han = 他[0] 特[1] 別[2] 好[3] 動[4] 老[5] 愛[6] 到[7] 處[8] 亂[9] 跑[10]; missingIndexes [1,2,7,8] = 特/別/到/處; options are single-Han cards PASS; correctOrder mapping PASS.",
+    "L338-G05 / S04: Han = 滿[0] 桌[1] 都[2] 是[3] 東[4] 西[5] 整[6] 理[7] 一[8] 下[9]; targetChar 整, targetCharIndex 6, Han[6]=整, PASS. Correct and wrong option Han counts are all 10."
+  ]
+}
