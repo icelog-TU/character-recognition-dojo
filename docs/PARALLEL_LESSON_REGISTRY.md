@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L340 | 全 | claimed | Production A | codex/l340-complete-package | L338:整; L339:齊 | 整 齊 | `curriculum-workflow/lesson-requests/L340.json`; `curriculum-workflow/generated/L340-generation-packet.md`; `curriculum-workflow/drafts/L340-draft.json` | `curriculum-workflow/audio-inbox/L340/`; `public/assets/lessons/L340/` | Building dependency-blocked asset-complete package from approved handoff; latest main has L337「理」 and L338/L339 remain provisional. |
+| L340 | 全 | ready-blocked-by-dependency | Production A | codex/l340-complete-package | L338:整; L339:齊 | 整 齊 | `curriculum-workflow/lesson-requests/L340.json`; `curriculum-workflow/generated/L340-generation-packet.md`; `curriculum-workflow/drafts/L340-draft.json` | `curriculum-workflow/audio-inbox/L340/`; `public/assets/lessons/L340/` | Dependency-blocked asset-complete package; latest main production JSON still ends at L337「理」, with L338/L339 provisional. Release owns production JSON, planner, ledger, registry cleanup, and final verify after dependencies merge. |
 
 ## Status Values
 
