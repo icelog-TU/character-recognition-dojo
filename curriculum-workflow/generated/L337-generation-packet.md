@@ -5,15 +5,15 @@ Kind: normal lesson
 New character: 理
 Zhuyin: ㄌㄧˇ
 Title: 理
-Package status target: dependency-blocked-asset-complete
-Dependencies: L336
-Provisional learned chars: 處
+Package status target: asset-complete-package
+Dependencies: None
+Provisional learned chars: None
 
 This packet records the teacher-approved final lesson data for Production B. It is not only a candidate-generation prompt. The final request, packet, and draft must agree on sentence text, spokenText, focusChar, displayLines, imageNotes, Stage 4 indexes, and audio paths.
 
 ## Boundary
 
-Latest known merged production boundary for this handoff: origin/main through L335「特」, with R040 as the latest review module. L336「處」 is not in main yet and is a provisional dependency.
+Production recheck boundary: origin/main through L336「處」, with R040 as the latest review module. L336 is now a real learned character; no provisional dependency remains.
 
 Locked allowedChars:
 

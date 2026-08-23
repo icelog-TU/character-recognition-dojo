@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L337 | 理 / normal lesson | ready-blocked-by-dependency | Production B | codex/l337-complete-package | L336 | 處 | `curriculum-workflow/lesson-requests/L337.json`; `curriculum-workflow/generated/L337-generation-packet.md`; `curriculum-workflow/drafts/L337-draft.json` | `public/assets/lessons/L337/`; `curriculum-workflow/audio-inbox/L337/` | Dependency-blocked until L336 enters main; lesson-local asset-complete package built with request, packet, draft, images, audio, Stage 4 audio, and AI-aligned timings. |
+| L337 | 理 / normal lesson | merge-ready | Production B | codex/l337-complete-package | none | none | `curriculum-workflow/lesson-requests/L337.json`; `curriculum-workflow/generated/L337-generation-packet.md`; `curriculum-workflow/drafts/L337-draft.json` | `public/assets/lessons/L337/`; `curriculum-workflow/audio-inbox/L337/` | Rebased after L336 entered main; lesson-local asset-complete package built with request, packet, draft, images, audio, Stage 4 audio, and AI-aligned timings. Release owns production JSON, planner, ledger, registry cleanup, final verify, and push to main. |
 
 ## Status Values
 
