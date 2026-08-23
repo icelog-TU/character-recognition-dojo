@@ -10,38 +10,14 @@
   },
   "title": "跟",
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher-approved Editor handoff for L344. Latest origin/main production JSON is complete through L338「整」. L339「齊」, L340「全」, L341「今」, L342「們」, and L343「年」 remain accepted provisional dependencies. Production builds a dependency-blocked asset-complete package. Release owns ordered integration into production JSON/planner/ledger after L339-L343 enter main.",
-  "dependsOnLessons": [
-    "L339",
-    "L340",
-    "L341",
-    "L342",
-    "L343"
-  ],
-  "provisionalLearnedChars": [
-    "齊",
-    "全",
-    "今",
-    "們",
-    "年"
-  ],
+  "teacherNotes": "Teacher-approved Editor handoff for L344. Latest origin/main production JSON is complete through L343. L339-L343 are now formal learned lessons in main, so no provisional learned chars remain for this package. Production builds an asset-complete package; Release owns final production JSON/planner/ledger integration.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
   "generationConstraints": {
-    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L338 plus provisional L339「齊」, L340「全」, L341「今」, L342「們」, L343「年」 plus current new char L344「跟」",
+    "allowedDisplayCharsBoundary": "latest origin/main learned chars through production JSON L343 plus current new char L344",
     "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟",
-    "dependsOnLessons": [
-      "L339",
-      "L340",
-      "L341",
-      "L342",
-      "L343"
-    ],
-    "provisionalLearnedChars": [
-      "齊",
-      "全",
-      "今",
-      "們",
-      "年"
-    ],
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
     "requiredCoverageChars": [
       "跟",
       "年",

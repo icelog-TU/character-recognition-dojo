@@ -12,22 +12,10 @@
   },
   "title": "跟",
   "requiredRounds": 5,
-  "originHint": "Dependency-blocked production package. Latest origin/main production JSON is complete through L338. L339, L340, L341, L342, and L343 remain provisional dependencies; Release owns final ordered integration after those lessons enter main.",
-  "dependsOnLessons": [
-    "L339",
-    "L340",
-    "L341",
-    "L342",
-    "L343"
-  ],
-  "provisionalLearnedChars": [
-    "齊",
-    "全",
-    "今",
-    "們",
-    "年"
-  ],
-  "packageStatus": "dependency-blocked-asset-complete",
+  "originHint": "Rebased on origin/main through L343. L339-L343 are formal learned lessons in latest main; no provisional dependencies remain. Release owns final production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "packageStatus": "asset-complete-package",
   "sentences": [
     {
       "id": "L344-S01",

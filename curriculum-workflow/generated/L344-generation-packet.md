@@ -7,14 +7,13 @@
 - 新字：跟
 - 注音：跟=ㄍㄣ
 - 目標句數：5
-- 教師備註：Teacher-approved Editor handoff for L344. Latest origin/main production JSON is complete through L338「整」. L339「齊」, L340「全」, L341「今」, L342「們」, and L343「年」 remain accepted provisional dependencies. Production builds a dependency-blocked asset-complete package. Release owns ordered integration into production JSON/planner/ledger after L339-L343 enter main.
+- 教師備註：Teacher-approved Editor handoff for L344. Latest origin/main production JSON is complete through L343. L339-L343 are now formal learned lessons in main, so no provisional learned chars remain for this package. Production builds an asset-complete package; Release owns final production JSON/planner/ledger integration.
 
 ## 已學字邊界
 
 AI 必須把這份課程序列視為鎖定邊界。
 
-- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早 晚 海 船 魚 游 泳 池 身 濕 乾 服 褲 換 改 錯 知 認 新 舊 半 只 剩 夠 錢 買 貴 賣 店 場 市 夜 具 工 作 忙 幫 急 腳 步 跳 床 搬 重 沙 張 椅 累 死 睡 倒 病 假 才 剛 裝 養 休 息 久 體 神 精 變 差 緊 卡 住 蓋 橋 座 木 積 堆 洞 破 口 傷 皮 痛 受 忍 耐 敢 當 然 怕 哭 被 嚇 罵 對 爬 蟲 條 泥 土 種 澆 照 顧 忘 每 次 記 完 收 彩 色 粉 哪 些 最 西 東 方 圖 向 線 直 轉 右 角 落 因 原 別 特 處 理 整
-- 平行備課暫定已學字：齊 全 今 們 年
+- 前面已學字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早 晚 海 船 魚 游 泳 池 身 濕 乾 服 褲 換 改 錯 知 認 新 舊 半 只 剩 夠 錢 買 貴 賣 店 場 市 夜 具 工 作 忙 幫 急 腳 步 跳 床 搬 重 沙 張 椅 累 死 睡 倒 病 假 才 剛 裝 養 休 息 久 體 神 精 變 差 緊 卡 住 蓋 橋 座 木 積 堆 洞 破 口 傷 皮 痛 受 忍 耐 敢 當 然 怕 哭 被 嚇 罵 對 爬 蟲 條 泥 土 種 澆 照 顧 忘 每 次 記 完 收 彩 色 粉 哪 些 最 西 東 方 圖 向 線 直 轉 右 角 落 因 原 別 特 處 理 整 齊 全 今 們 年
 - 本課新字：跟
 - 顯示句子可用漢字：一 二 三 人 個 大 的 小 手 我 有 山 上 下 你 水 在 高 很 家 和 隻 鳥 孩 指 看 女 飛 男 門 前 後 也 是 不 到 走 他 沒 裡 兩 狗 都 爸 媽 愛 書 可 會 這 吃 做 好 樣 要 更 邊 多 少 比 來 起 去 坐 站 開 左 著 拿 包 花 朵 了 畫 出 學 路 誰 校 問 找 同 帶 筆 借 那 本 給 紙 心 放 把 桌 子 盒 掉 壞 眼 用 鏡 鼻 臉 紅 圓 太 難 得 過 分 幾 點 玩 打 球 棒 頭 帽 草 地 面 外 空 天 雨 雲 黑 白 棋 鞋 穿 戴 衣 脫 氣 套 熱 冷 喝 飯 菜 老 卻 麼 什 為 以 怎 所 房 間 時 還 燈 關 窗 車 等 再 風 吹 樹 動 葉 綠 滿 掃 擦 先 洗 又 髒 亂 回 就 快 事 跑 馬 停 叫 聲 聽 見 說 師 話 課 像 想 真 力 能 火 發 電 生 明 光 亮 陽 月 影 長 星 行 道 流 河 從 進 早 晚 海 船 魚 游 泳 池 身 濕 乾 服 褲 換 改 錯 知 認 新 舊 半 只 剩 夠 錢 買 貴 賣 店 場 市 夜 具 工 作 忙 幫 急 腳 步 跳 床 搬 重 沙 張 椅 累 死 睡 倒 病 假 才 剛 裝 養 休 息 久 體 神 精 變 差 緊 卡 住 蓋 橋 座 木 積 堆 洞 破 口 傷 皮 痛 受 忍 耐 敢 當 然 怕 哭 被 嚇 罵 對 爬 蟲 條 泥 土 種 澆 照 顧 忘 每 次 記 完 收 彩 色 粉 哪 些 最 西 東 方 圖 向 線 直 轉 右 角 落 因 原 別 特 處 理 整 齊 全 今 們 年 跟
 - 禁止：任何未列在上方的漢字。
@@ -1712,6 +1711,31 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 把彩色筆整理好，放回原處。
 - 滿桌都是東西，整理一下。
 - 整天都在睡，起來動一動。
+- 這種魚很難處理，卻特別好吃。
+- 等大家都到齊，才可以開動。
+- 玩具不要到處亂放。
+- 去整理房間，把東西放整齊。
+- 小光做得很好，要向他看齊。
+- 同學全都到齊了沒？
+- 把門口的鞋子全都放整齊。
+- 玩水後，全身都濕了。
+- 爸爸忙著處理工作的事。
+- 全新的整理盒，特別好用。
+- 今天放假，不用上學。
+- 到處找黑白棋子，全都找齊了。
+- 今天要去游泳，先整理泳具。
+- 把桌上東西，全都放整齊。
+- 今晚爸媽要帶我去看電影。
+- 今晚我們要去夜市。
+- 學生們全都到齊，才能開車。
+- 這間店的東西很齊全。
+- 孩子們先整理書包，再出門。
+- 老師們今天要開會。
+- 今年的雨水特別多。
+- 新年到了，我們全家都很開心。
+- 過年時，家人們全都到齊。
+- 去年種的花，今年全開了。
+- 過年前，整理舊東西，換新的。
 
 ## 造句提示
 
@@ -1860,7 +1884,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 
 ## Final Teacher-Approved Production Records
 
-These records are the teacher-approved final content implemented in the L344 draft. They supersede blank draft placeholders above.
+These records are the teacher-approved final content implemented in the L344 draft after rebasing on origin/main through L343. They supersede blank draft placeholders above.
 
 ```json
 {
@@ -1877,22 +1901,10 @@ These records are the teacher-approved final content implemented in the L344 dra
   },
   "title": "跟",
   "requiredRounds": 5,
-  "originHint": "Dependency-blocked production package. Latest origin/main production JSON is complete through L338. L339, L340, L341, L342, and L343 remain provisional dependencies; Release owns final ordered integration after those lessons enter main.",
-  "dependsOnLessons": [
-    "L339",
-    "L340",
-    "L341",
-    "L342",
-    "L343"
-  ],
-  "provisionalLearnedChars": [
-    "齊",
-    "全",
-    "今",
-    "們",
-    "年"
-  ],
-  "packageStatus": "dependency-blocked-asset-complete",
+  "originHint": "Rebased on origin/main through L343. L339-L343 are formal learned lessons in latest main; no provisional dependencies remain. Release owns final production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "packageStatus": "asset-complete-package",
   "sentences": [
     {
       "id": "L344-S01",
@@ -1909,8 +1921,59 @@ These records are the teacher-approved final content implemented in the L344 dra
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L344/audio/L344-S01.m4a",
-        "durationMs": null,
-        "charTimings": []
+        "durationMs": 5694,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 540
+          },
+          {
+            "charIndex": 1,
+            "startMs": 540,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1840,
+            "endMs": 2067
+          },
+          {
+            "charIndex": 3,
+            "startMs": 2067,
+            "endMs": 2293
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2293,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2520,
+            "endMs": 2820
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2820,
+            "endMs": 3200
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3200,
+            "endMs": 3760
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3760,
+            "endMs": 4000
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4000,
+            "endMs": 4280
+          }
+        ]
       }
     },
     {
@@ -1928,8 +1991,54 @@ These records are the teacher-approved final content implemented in the L344 dra
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L344/audio/L344-S02.m4a",
-        "durationMs": null,
-        "charTimings": []
+        "durationMs": 5039,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1300,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1580,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1880,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2120,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2600,
+            "endMs": 2880
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2880,
+            "endMs": 3100
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3100,
+            "endMs": 3340
+          }
+        ]
       }
     },
     {
@@ -1948,8 +2057,64 @@ These records are the teacher-approved final content implemented in the L344 dra
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L344/audio/L344-S03.m4a",
-        "durationMs": null,
-        "charTimings": []
+        "durationMs": 5298,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1260,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1300,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1500,
+            "endMs": 1780
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1780,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1940,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2300,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2760,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3040,
+            "endMs": 3240
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3240,
+            "endMs": 3520
+          }
+        ]
       }
     },
     {
@@ -1967,8 +2132,59 @@ These records are the teacher-approved final content implemented in the L344 dra
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L344/audio/L344-S04.m4a",
-        "durationMs": null,
-        "charTimings": []
+        "durationMs": 5121,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1080,
+            "endMs": 1230
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1230,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1380,
+            "endMs": 1740
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1740,
+            "endMs": 1970
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1970,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2200,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2620,
+            "endMs": 2980
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2980,
+            "endMs": 3300
+          }
+        ]
       }
     },
     {
@@ -1986,8 +2202,54 @@ These records are the teacher-approved final content implemented in the L344 dra
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L344/audio/L344-S05.m4a",
-        "durationMs": null,
-        "charTimings": []
+        "durationMs": 3477,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1100,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1460,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1800,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2040,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2340,
+            "endMs": 2600
+          }
+        ]
       }
     }
   ],
