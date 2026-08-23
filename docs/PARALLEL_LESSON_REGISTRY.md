@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L339 | 齊 / normal lesson | claimed | Production D | codex/l339-complete-package | L337 理; L338 整 | ["理", "整"] | curriculum-workflow/lesson-requests/L339.json, curriculum-workflow/generated/L339-generation-packet.md, curriculum-workflow/drafts/L339-draft.json | curriculum-workflow/audio-inbox/L339/, public/assets/lessons/L339/images/, public/assets/lessons/L339/audio/ | accepted handoff; origin/main includes L336 處, so L337 理 and L338 整 remain provisional dependencies |
 
 ## Status Values
 
