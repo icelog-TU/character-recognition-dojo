@@ -49,6 +49,7 @@ const baseSpeechInstructions = [
   "Do not add erhua, retroflex-r, r-colored curled endings, or any Beijing-style final r sound.",
   "Keep final syllables clean, plain, and audible.",
   "Pronunciation guardrails: 小孩 is ㄒㄧㄠˇ ㄏㄞˊ, never ㄒㄧㄠˇ ㄏㄞˊㄦ or any r-colored form; 孩 always ends cleanly as ㄏㄞˊ. 更 is ㄍㄥˋ and, when generated as a single character, must be spoken exactly once.",
+  "When reading 位子, pronounce 子 as neutral-tone zi (ㄨㄟˋ ˙ㄗ), never as 位置 (ㄨㄟˋ ㄓˋ).",
   "Do not read punctuation aloud.",
   "For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
 ].join(" ");

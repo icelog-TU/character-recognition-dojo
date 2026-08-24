@@ -1,0 +1,498 @@
+{
+  "id": "L353",
+  "order": 353,
+  "newChars": [
+    "正"
+  ],
+  "zhuyin": {
+    "正": "ㄓㄥˋ"
+  },
+  "charAudio": {
+    "正": "/assets/lessons/L353/audio/char-u6b63.m4a"
+  },
+  "title": "正",
+  "dependsOnLessons": [
+    "L351",
+    "L352"
+  ],
+  "provisionalLearnedChars": [
+    "餐",
+    "位"
+  ],
+  "packageStatus": "dependency-blocked-asset-complete",
+  "requiredRounds": 5,
+  "originHint": "Production C package from origin/main 61dacec7 through L350 plus provisional L351 餐 and L352 位. L351/L352 were not in main at claim, so Release must integrate them before L353. Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push, and deployment.",
+  "sentences": [
+    {
+      "id": "L353-S01",
+      "text": "媽媽叫我時，我正在客廳看書。",
+      "spokenText": "媽媽叫我時我正在客廳看書",
+      "focusChar": "正",
+      "targetCharIndex": 6,
+      "displayLines": [
+        "媽媽叫我時，",
+        "我正在客廳",
+        "看書。"
+      ],
+      "imageNotes": "家中客廳，主角小女孩坐在沙發或地墊上看書，主角媽媽從旁邊或門口叫她；畫面要表現「媽媽叫她時，她正在看書」。不要書名文字、牆上文字、電視字幕或可讀文字。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Use the current protagonist-family identity anchors: recurring protagonist girl with stable preschool age/proportions, short dark bob with a small pink hair clip and soft child clothing when context allows; recurring mother as a warm family adult visually distinct from teachers, staff, and passersby; recurring father and family members visually consistent with the protagonist family when shown. Scene: warm protagonist family living room in daytime, with a sofa or soft floor mat, low table, bookshelves or plants, and natural window light. The recurring protagonist girl is sitting comfortably on the sofa or floor mat, absorbed in reading a picture book with a blank cover and no readable marks. The recurring protagonist mother stands gently at the side or doorway calling to her; the girl is clearly in the middle of reading when called. Keep the mood calm and everyday, with the mother not looking like a teacher. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, route maps, station names, ads, bus numbers, seat numbers, snack package text, visible numeric writing, UI symbols, and watermarks.",
+      "imageSrc": "/assets/lessons/L353/images/S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L353/audio/L353-S01.m4a",
+        "durationMs": 3823,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 440
+          },
+          {
+            "charIndex": 2,
+            "startMs": 440,
+            "endMs": 680
+          },
+          {
+            "charIndex": 3,
+            "startMs": 680,
+            "endMs": 960
+          },
+          {
+            "charIndex": 4,
+            "startMs": 960,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1480,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1620,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1800,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2200,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2260,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2400,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 11,
+            "startMs": 2780,
+            "endMs": 2960
+          }
+        ]
+      }
+    },
+    {
+      "id": "L353-S02",
+      "text": "這個位子正好沒人坐。",
+      "spokenText": "這個位子正好沒人坐",
+      "focusChar": "正",
+      "targetCharIndex": 4,
+      "displayLines": [
+        "這個位子",
+        "正好沒人坐。"
+      ],
+      "imageNotes": "公車車廂裡，有一個空位明顯沒有人坐，主角小女孩和主角媽媽看著那個位子，像是發現剛好可以坐。畫面重點是「公車上的這個位子沒人坐」。不要路線圖文字、站名、廣告字、車號、座位號碼或可讀標誌。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Use the current protagonist-family identity anchors: recurring protagonist girl with stable preschool age/proportions, short dark bob with a small pink hair clip and soft child clothing when context allows; recurring mother as a warm family adult visually distinct from teachers, staff, and passersby; recurring father and family members visually consistent with the protagonist family when shown. Scene: inside a clean Taiwan city bus in daytime, drawn with warm watercolor detail. One empty seat is clearly visible and unoccupied, with simple blank seat fabric and no labels. The recurring protagonist girl and recurring mother stand nearby looking toward that exact empty seat, as if noticing they can sit there. Other generic passengers may be present but not blocking the empty seat. Keep it safe and calm; no route map details, no station names, no advertisements. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, route maps, station names, ads, bus numbers, seat numbers, snack package text, visible numeric writing, UI symbols, and watermarks.",
+      "imageSrc": "/assets/lessons/L353/images/S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L353/audio/L353-S02.m4a",
+        "durationMs": 3216,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 140
+          },
+          {
+            "charIndex": 1,
+            "startMs": 140,
+            "endMs": 280
+          },
+          {
+            "charIndex": 2,
+            "startMs": 280,
+            "endMs": 660
+          },
+          {
+            "charIndex": 3,
+            "startMs": 660,
+            "endMs": 900
+          },
+          {
+            "charIndex": 4,
+            "startMs": 900,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1500,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1760,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1940,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2240,
+            "endMs": 2420
+          }
+        ]
+      }
+    },
+    {
+      "id": "L353-S03",
+      "text": "吃正餐前，不可以吃點心。",
+      "spokenText": "吃正餐前不可以吃點心",
+      "focusChar": "正",
+      "targetCharIndex": 1,
+      "displayLines": [
+        "吃正餐前，",
+        "不可以吃",
+        "點心。"
+      ],
+      "imageNotes": "家中餐桌或廚房旁，主角小女孩想拿點心，主角媽媽溫和提醒她正餐前不可以吃點心；旁邊可以有即將吃的飯菜。不要零食包裝文字、品牌、菜單文字或對話框。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Use the current protagonist-family identity anchors: recurring protagonist girl with stable preschool age/proportions, short dark bob with a small pink hair clip and soft child clothing when context allows; recurring mother as a warm family adult visually distinct from teachers, staff, and passersby; recurring father and family members visually consistent with the protagonist family when shown. Scene: warm protagonist family dining area or kitchen beside a dining table. The recurring protagonist girl reaches toward a small plate of snacks or a plain snack bowl, while the recurring mother gently holds up a hand or gestures toward the prepared meal dishes on the table, reminding her that the real meal comes first. Show rice, vegetables, and soup dishes ready for mealtime. The mother's expression is kind, not scolding. Snack containers are plain with no packaging text. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, route maps, station names, ads, bus numbers, seat numbers, snack package text, visible numeric writing, UI symbols, and watermarks.",
+      "imageSrc": "/assets/lessons/L353/images/S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L353/audio/L353-S03.m4a",
+        "durationMs": 4320,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1380,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1840,
+            "endMs": 2050
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2050,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2260,
+            "endMs": 2580
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2580,
+            "endMs": 2860
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2860,
+            "endMs": 3060
+          }
+        ]
+      }
+    },
+    {
+      "id": "L353-S04",
+      "text": "這間餐廳正好有位子。",
+      "spokenText": "這間餐廳正好有位子",
+      "focusChar": "正",
+      "targetCharIndex": 4,
+      "displayLines": [
+        "這間餐廳",
+        "正好有位子。"
+      ],
+      "imageNotes": "餐廳入口或內部，主角小女孩和家人剛進餐廳，店內有一個明顯空位，店員或家人指向那個位子，表現這間餐廳剛好有位子。這句是在講餐廳裡的位子，不是公車位子。不要餐廳招牌、候位號碼、菜單、價格、店名、桌號或任何可讀文字。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Use the current protagonist-family identity anchors: recurring protagonist girl with stable preschool age/proportions, short dark bob with a small pink hair clip and soft child clothing when context allows; recurring mother as a warm family adult visually distinct from teachers, staff, and passersby; recurring father and family members visually consistent with the protagonist family when shown. Scene: inside a clean family restaurant or just past the entrance, with warm lighting and several dining tables. The recurring protagonist girl enters with protagonist family members; one clearly empty dining table or set of seats is visible in the restaurant. A generic restaurant staff member or father gently points toward the empty table to show that there is a seat available. Make it unambiguously a restaurant seat, not a bus seat. Keep staff visually generic and distinct from the mother and teacher. All menus, signs, table markers, and wall decorations are blank or purely decorative. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, route maps, station names, ads, bus numbers, seat numbers, snack package text, visible numeric writing, UI symbols, and watermarks.",
+      "imageSrc": "/assets/lessons/L353/images/S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L353/audio/L353-S04.m4a",
+        "durationMs": 3667,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 920
+          },
+          {
+            "charIndex": 3,
+            "startMs": 920,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1140,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1800,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2120,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2360,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2620,
+            "endMs": 2720
+          }
+        ]
+      }
+    },
+    {
+      "id": "L353-S05",
+      "text": "兩個人誰也不讓誰。",
+      "spokenText": "兩個人誰也不讓誰",
+      "focusChar": "讓",
+      "targetCharIndex": 6,
+      "displayLines": [
+        "兩個人",
+        "誰也不讓誰。"
+      ],
+      "imageNotes": "兩個 generic child 在遊戲區或走廊中間互相擋住路、都不肯退一步，表情固執但不要吵架失控；旁邊可以有主角小女孩或老師看見情況。畫面表現「誰也不讓誰」，不要打架、推人、哭鬧、受傷或恐怖畫面；不要文字或對話框。",
+      "imagePrompt": "Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Scene: school hallway or indoor play area with warm daylight and clean details. Two generic preschool children stand face-to-face in the middle of a narrow passage, each politely but stubbornly holding their ground and blocking the other's path. Their arms and posture show neither wants to step aside, but there is no pushing, no fighting, no crying, and no injury. A recurring protagonist girl or a teacher may watch from the side, visually separate from the two generic children. The two children must not look like Xiaoguang, Xiaoyue, or the fixed young boy classmate; give them distinct generic clothing and hairstyles. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, route maps, station names, ads, bus numbers, seat numbers, snack package text, visible numeric writing, UI symbols, and watermarks.",
+      "imageSrc": "/assets/lessons/L353/images/S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L353/audio/L353-S05.m4a",
+        "durationMs": 3539,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 230
+          },
+          {
+            "charIndex": 1,
+            "startMs": 230,
+            "endMs": 460
+          },
+          {
+            "charIndex": 2,
+            "startMs": 460,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1400,
+            "endMs": 1640
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1640,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1920,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2160,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2340,
+            "endMs": 2780
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L353-G01",
+      "type": "find-character",
+      "sentenceId": "L353-S01",
+      "targetChar": "正",
+      "targetCharIndex": 6,
+      "prompt": "找到正，點一下。"
+    },
+    {
+      "id": "L353-G02",
+      "type": "teach-character",
+      "sentenceId": "L353-S02",
+      "targetChar": "正",
+      "targetCharIndex": 4,
+      "prompt": "幫忙說出這個字。",
+      "teachAudio": {
+        "prefixText": "這個位子",
+        "targetText": "正",
+        "suffixText": "好沒人坐",
+        "prefixSrc": "/assets/lessons/L353/audio/L353-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L353/audio/L353-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L353-G03",
+      "type": "missing-character",
+      "sentenceId": "L353-S03",
+      "targetChar": "正",
+      "targetCharIndex": 1,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "L353-G03-A",
+          "text": "正",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "L353-G04",
+      "type": "partial-order",
+      "sentenceId": "L353-S05",
+      "targetChar": "讓",
+      "prompt": "把句子排回正確順序。",
+      "missingIndexes": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "options": [
+        {
+          "id": "L353-G04-A",
+          "text": "誰",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L353-G04-B",
+          "text": "也",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L353-G04-C",
+          "text": "不",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L353-G04-D",
+          "text": "讓",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctSequence": [
+        "L353-G04-A",
+        "L353-G04-B",
+        "L353-G04-C",
+        "L353-G04-D"
+      ]
+    },
+    {
+      "id": "L353-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L353-S04",
+      "targetChar": "正",
+      "targetCharIndex": 4,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "這間餐廳正好有位子。",
+          "correct": true,
+          "sentenceId": "L353-S04",
+          "audioSrc": "/assets/lessons/L353/audio/L353-S04.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "這間餐廳剛好有位子。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L353/audio/L353-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "這間餐廳正好有椅子。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L353/audio/L353-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "S01 Han-only: 媽0 媽1 叫2 我3 時4 我5 正6 在7 客8 廳9 看10 書11; G01 target 正 index 6 PASS.",
+    "S02 Han-only: 這0 個1 位2 子3 正4 好5 沒6 人7 坐8; G02 target 正 index 4 PASS.",
+    "S03 Han-only: 吃0 正1 餐2 前3 不4 可5 以6 吃7 點8 心9; G03 target 正 index 1 PASS.",
+    "S04 Han-only: 這0 間1 餐2 廳3 正4 好5 有6 位7 子8; G05 target 正 index 4 PASS.",
+    "S05 Han-only: 兩0 個1 人2 誰3 也4 不5 讓6 誰7; G04 missingIndexes [3,4,5,6] = 誰/也/不/讓 PASS; option cards are single Han PASS; correctOrder mapping PASS."
+  ]
+}
