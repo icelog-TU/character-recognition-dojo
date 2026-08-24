@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L350 | 廳 | claimed | Production D | codex/l350-complete-package | L349 | 讓 | `curriculum-workflow/lesson-requests/L350.json`; `curriculum-workflow/generated/L350-generation-packet.md`; `curriculum-workflow/drafts/L350-draft.json` | `curriculum-workflow/audio-inbox/L350/`; `public/assets/lessons/L350/` | Claimed from origin/main `f9714d19`; L349 not in main at claim, so package will be dependency-blocked until L349 releases. |
+| L350 | 廳 | dependency-blocked-asset-complete | Production D | codex/l350-complete-package | L349 | 讓 | `curriculum-workflow/lesson-requests/L350.json`; `curriculum-workflow/generated/L350-generation-packet.md`; `curriculum-workflow/drafts/L350-draft.json` | `curriculum-workflow/audio-inbox/L350/`; `public/assets/lessons/L350/` | Package complete from origin/main `f9714d19`; L349 not in main at final check, so Release must integrate L349 before L350. Local package audit PASS; `validate:production` PASS on current production JSON. |
 
 ## Status Values
 
