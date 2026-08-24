@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L345 | 常 / normal lesson | claimed | Production B | codex/l345-complete-package | none | none | curriculum-workflow/lesson-requests/L345.json; curriculum-workflow/generated/L345-generation-packet.md; curriculum-workflow/drafts/L345-draft.json | public/assets/lessons/L345/; curriculum-workflow/audio-inbox/L345/ | L344 is merged in origin/main, so no provisional dependency remains. L345 is the last normal lesson before R041/R042. Production B owns the lesson-local asset package. |
+| L345 | 常 / normal lesson | merge-ready | Production B | codex/l345-complete-package | none | none | curriculum-workflow/lesson-requests/L345.json; curriculum-workflow/generated/L345-generation-packet.md; curriculum-workflow/drafts/L345-draft.json | public/assets/lessons/L345/; curriculum-workflow/audio-inbox/L345/ | L344 is merged in origin/main, so no provisional dependency remains. Complete lesson-local asset package prepared and checked by Production B. L345 is the last normal lesson before R041/R042. Release still owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, and merge to main. |
 
 ## Status Values
 
