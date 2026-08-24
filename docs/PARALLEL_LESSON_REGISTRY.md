@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L349 | 讓 / normal lesson | claimed | Production C | codex/l349-complete-package (claim) | none | none | `curriculum-workflow/lesson-requests/L349.json`; `curriculum-workflow/generated/L349-generation-packet.md`; `curriculum-workflow/drafts/L349-draft.json` | `curriculum-workflow/audio-inbox/L349/`; `public/assets/lessons/L349/` | Claimed from `origin/main` f9714d19; no provisional dependencies; canonical Stage 4 order required. |
 
 ## Status Values
 
