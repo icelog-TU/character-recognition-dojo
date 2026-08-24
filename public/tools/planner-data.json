@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-23T15:04:21.308Z",
+  "exportedAt": "2026-08-24T00:22:47.578Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -165776,6 +165776,512 @@
         "L343-G03 / S05: Han = 過[0] 年[1] 前[2] 整[3] 理[4] 舊[5] 東[6] 西[7] 換[8] 新[9] 的[10]; targetChar 年, targetCharIndex 1, missingIndexes [1], Han[1]=年, PASS.",
         "L343-G04 / S03 partial-order: Han = 過[0] 年[1] 時[2] 家[3] 人[4] 們[5] 全[6] 都[7] 到[8] 齊[9]; missingIndexes [6,7,8,9] = 全/都/到/齊; options are single-Han cards PASS; correctOrder mapping PASS.",
         "L343-G05 / S04: Han = 去[0] 年[1] 種[2] 的[3] 花[4] 今[5] 年[6] 全[7] 開[8] 了[9]; targetChar 年, targetCharIndex 6, Han[6]=年, PASS. Correct and wrong option Han counts are all 10."
+      ]
+    },
+    {
+      "id": "L344",
+      "order": 344,
+      "newChars": [
+        "跟"
+      ],
+      "zhuyin": {
+        "跟": "ㄍㄣ"
+      },
+      "charAudio": {
+        "跟": "/assets/lessons/L344/audio/char-u8ddf.m4a"
+      },
+      "title": "跟",
+      "requiredRounds": 5,
+      "originHint": "Production package prepared after L343 entered main; Release integrated the lesson-local package on latest main.",
+      "packageStatus": "merge-ready-asset-complete",
+      "sentences": [
+        {
+          "id": "L344-S01",
+          "text": "今早我們跟媽媽去買菜。",
+          "spokenText": "今早我們跟媽媽去買菜",
+          "focusChar": "跟",
+          "displayLines": [
+            "今早我們跟",
+            "媽媽去買菜。"
+          ],
+          "imagePrompt": "Use L058 lesson images as style references only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette, phone-readable square composition. Do not copy any L058 person identity. Use refined preferred examples L115-S01, L115-S02, L118-S02, L119-S01, and L128-S03 for proportions and course visual polish. Use current protagonist family anchors L154-S01, L162-S04, and L163-S02 for the recurring protagonist girl, mother, father, and older brother continuity where relevant. No readable text, numbers, labels, signs, brand marks, logos, captions, tickets, dates, calendar text, product labels, or UI symbols anywhere. Cast: recurring protagonist girl, recurring protagonist mother, and recurring older brother from the protagonist family continuity. The two children must not look like generic children. Mother should be the warm protagonist mother, not teacher or passerby. Scene requirement: 早上市場或小店裡，主角小女孩和主角哥哥兩個孩子跟著主角媽媽一起買菜。媽媽在挑菜或拿菜，主角小女孩和哥哥在旁邊幫忙看或拿小袋子。使用 protagonist family continuity：主角小女孩、主角媽媽、主角哥哥要是固定家庭角色，不要畫成 generic children。畫面要清楚呈現「今早我們跟媽媽去買菜」，不要價格牌、商品文字、品牌或數字。",
+          "imageNotes": "早上市場或小店裡，主角小女孩和主角哥哥兩個孩子跟著主角媽媽一起買菜。媽媽在挑菜或拿菜，主角小女孩和哥哥在旁邊幫忙看或拿小袋子。使用 protagonist family continuity：主角小女孩、主角媽媽、主角哥哥要是固定家庭角色，不要畫成 generic children。畫面要清楚呈現「今早我們跟媽媽去買菜」，不要價格牌、商品文字、品牌或數字。",
+          "imageSrc": "/assets/lessons/L344/images/L344-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L344/audio/L344-S01.m4a",
+            "durationMs": 5694,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 540
+              },
+              {
+                "charIndex": 1,
+                "startMs": 540,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1840,
+                "endMs": 2067
+              },
+              {
+                "charIndex": 3,
+                "startMs": 2067,
+                "endMs": 2293
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2293,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2520,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2820,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3200,
+                "endMs": 3760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3760,
+                "endMs": 4000
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4000,
+                "endMs": 4280
+              }
+            ]
+          }
+        },
+        {
+          "id": "L344-S02",
+          "text": "人全都到齊，才能進去。",
+          "spokenText": "人全都到齊才能進去",
+          "focusChar": "齊",
+          "displayLines": [
+            "人全都到齊，",
+            "才能進去。"
+          ],
+          "imagePrompt": "Use L058 lesson images as style references only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette, phone-readable square composition. Do not copy any L058 person identity. Use refined preferred examples L115-S01, L115-S02, L118-S02, L119-S01, and L128-S03 for proportions and course visual polish. Use current protagonist family anchors L154-S01, L162-S04, and L163-S02 for the recurring protagonist girl, mother, father, and older brother continuity where relevant. No readable text, numbers, labels, signs, brand marks, logos, captions, tickets, dates, calendar text, product labels, or UI symbols anywhere. Cast: varied generic visitors and one distinct adult guide or chaperone. No named cast; do not accidentally depict Xiaoyue or Xiaoguang as named reference characters. Scene requirement: 博物館或展覽館入口外，一群人正在入口前集合，帶隊的大人確認大家都到齊後才能進去。入口可以有建築、門口和排隊動線，但不要出現任何可讀館名、標語、票券文字、數字或品牌。畫面要清楚呈現「人到齊後才能進去」。",
+          "imageNotes": "博物館或展覽館入口外，一群人正在入口前集合，帶隊的大人確認大家都到齊後才能進去。入口可以有建築、門口和排隊動線，但不要出現任何可讀館名、標語、票券文字、數字或品牌。畫面要清楚呈現「人到齊後才能進去」。",
+          "imageSrc": "/assets/lessons/L344/images/L344-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L344/audio/L344-S02.m4a",
+            "durationMs": 5039,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1300,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1580,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1880,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2120,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2600,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2880,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3100,
+                "endMs": 3340
+              }
+            ]
+          }
+        },
+        {
+          "id": "L344-S03",
+          "text": "去年我跟家人們去海邊玩。",
+          "spokenText": "去年我跟家人們去海邊玩",
+          "focusChar": "跟",
+          "displayLines": [
+            "去年我跟",
+            "家人們去",
+            "海邊玩。"
+          ],
+          "imagePrompt": "Use L058 lesson images as style references only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette, phone-readable square composition. Do not copy any L058 person identity. Use refined preferred examples L115-S01, L115-S02, L118-S02, L119-S01, and L128-S03 for proportions and course visual polish. Use current protagonist family anchors L154-S01, L162-S04, and L163-S02 for the recurring protagonist girl, mother, father, and older brother continuity where relevant. No readable text, numbers, labels, signs, brand marks, logos, captions, tickets, dates, calendar text, product labels, or UI symbols anywhere. Cast: protagonist family of four: recurring protagonist girl, recurring mother, recurring father, and recurring older brother. Keep all four roles visually distinct and together in the beach memory/photo scene. Scene requirement: 主角小女孩看著相簿或照片，照片裡是去年她跟全家四個人在海邊玩的回憶：主角小女孩、主角媽媽、主角爸爸、主角哥哥都到齊，在海浪和沙灘旁一起玩水或玩沙。畫面要用相簿或回憶泡泡表示「去年」，但不要文字、日期、年份或數字。",
+          "imageNotes": "主角小女孩看著相簿或照片，照片裡是去年她跟全家四個人在海邊玩的回憶：主角小女孩、主角媽媽、主角爸爸、主角哥哥都到齊，在海浪和沙灘旁一起玩水或玩沙。畫面要用相簿或回憶泡泡表示「去年」，但不要文字、日期、年份或數字。",
+          "imageSrc": "/assets/lessons/L344/images/L344-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L344/audio/L344-S03.m4a",
+            "durationMs": 5298,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1260,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2300,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3040,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3240,
+                "endMs": 3520
+              }
+            ]
+          }
+        },
+        {
+          "id": "L344-S04",
+          "text": "明年我要跟老師學水彩。",
+          "spokenText": "明年我要跟老師學水彩",
+          "focusChar": "跟",
+          "displayLines": [
+            "明年我要跟",
+            "老師學水彩。"
+          ],
+          "imagePrompt": "Use L058 lesson images as style references only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette, phone-readable square composition. Do not copy any L058 person identity. Use refined preferred examples L115-S01, L115-S02, L118-S02, L119-S01, and L128-S03 for proportions and course visual polish. Use current protagonist family anchors L154-S01, L162-S04, and L163-S02 for the recurring protagonist girl, mother, father, and older brother continuity where relevant. No readable text, numbers, labels, signs, brand marks, logos, captions, tickets, dates, calendar text, product labels, or UI symbols anywhere. Cast: recurring protagonist girl plus a teacher designed clearly separately from the protagonist mother. Teacher has classroom/art-teacher posture and clothing; do not reuse mother face or family palette. Scene requirement: 主角小女孩想像明年跟老師學水彩，畫面可以是教室或美術教室裡，老師溫和示範水彩，小女孩專心看或跟著畫。可用想像泡泡或未來感構圖表示「明年」，但不要文字、年份、日曆或數字。老師要和主角媽媽長相明顯不同。",
+          "imageNotes": "主角小女孩想像明年跟老師學水彩，畫面可以是教室或美術教室裡，老師溫和示範水彩，小女孩專心看或跟著畫。可用想像泡泡或未來感構圖表示「明年」，但不要文字、年份、日曆或數字。老師要和主角媽媽長相明顯不同。",
+          "imageSrc": "/assets/lessons/L344/images/L344-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L344/audio/L344-S04.m4a",
+            "durationMs": 5121,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1080,
+                "endMs": 1230
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1230,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1380,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 1970
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1970,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2620,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2980,
+                "endMs": 3300
+              }
+            ]
+          }
+        },
+        {
+          "id": "L344-S05",
+          "text": "媽媽今天穿了高跟鞋。",
+          "spokenText": "媽媽今天穿了高跟鞋",
+          "focusChar": "跟",
+          "displayLines": [
+            "媽媽今天",
+            "穿了高跟鞋。"
+          ],
+          "imagePrompt": "Use L058 lesson images as style references only: warm picture-book pencil-and-watercolor linework, soft natural light, detailed but clean environment, expressive preschool proportions, bright warm palette, phone-readable square composition. Do not copy any L058 person identity. Use refined preferred examples L115-S01, L115-S02, L118-S02, L119-S01, and L128-S03 for proportions and course visual polish. Use current protagonist family anchors L154-S01, L162-S04, and L163-S02 for the recurring protagonist girl, mother, father, and older brother continuity where relevant. No readable text, numbers, labels, signs, brand marks, logos, captions, tickets, dates, calendar text, product labels, or UI symbols anywhere. Cast: recurring protagonist mother and recurring protagonist girl at the home entryway. Mother identity should match protagonist mother continuity; focus on high-heeled shoes without an awkward foot-only close-up. Scene requirement: 家門口玄關前，主角媽媽準備出門，今天穿上高跟鞋，主角小女孩在旁邊看。畫面要清楚呈現媽媽腳上的高跟鞋，但不要過度特寫腳部；場景要在玄關或門口，避免畫成在客廳深處穿鞋。不要品牌、標籤、文字或數字。",
+          "imageNotes": "家門口玄關前，主角媽媽準備出門，今天穿上高跟鞋，主角小女孩在旁邊看。畫面要清楚呈現媽媽腳上的高跟鞋，但不要過度特寫腳部；場景要在玄關或門口，避免畫成在客廳深處穿鞋。不要品牌、標籤、文字或數字。",
+          "imageSrc": "/assets/lessons/L344/images/L344-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L344/audio/L344-S05.m4a",
+            "durationMs": 3477,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1100,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1800,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2040,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2340,
+                "endMs": 2600
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L344-G01",
+          "type": "find-character",
+          "sentenceId": "L344-S05",
+          "targetChar": "跟",
+          "targetCharIndex": 7,
+          "options": [
+            {
+              "id": "L344-G01-A",
+              "text": "跟",
+              "correct": true
+            },
+            {
+              "id": "L344-G01-B",
+              "text": "高",
+              "correct": false
+            },
+            {
+              "id": "L344-G01-C",
+              "text": "今",
+              "correct": false
+            },
+            {
+              "id": "L344-G01-D",
+              "text": "鞋",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L344-G02",
+          "type": "teach-character",
+          "sentenceId": "L344-S01",
+          "targetChar": "跟",
+          "targetCharIndex": 4,
+          "teachAudio": {
+            "prefixSrc": "/assets/lessons/L344/audio/L344-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L344/audio/L344-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L344-G03",
+          "type": "missing-character",
+          "sentenceId": "L344-S04",
+          "targetChar": "跟",
+          "targetCharIndex": 4,
+          "missingIndexes": [
+            4
+          ],
+          "options": [
+            {
+              "id": "L344-G03-A",
+              "text": "跟",
+              "correct": true
+            },
+            {
+              "id": "L344-G03-B",
+              "text": "年",
+              "correct": false
+            },
+            {
+              "id": "L344-G03-C",
+              "text": "學",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L344-G04",
+          "type": "partial-order",
+          "sentenceId": "L344-S02",
+          "targetChar": "齊",
+          "missingIndexes": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "options": [
+            {
+              "id": "L344-G04-A",
+              "text": "全",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L344-G04-B",
+              "text": "都",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L344-G04-C",
+              "text": "到",
+              "correctOrder": 2,
+              "correct": true
+            },
+            {
+              "id": "L344-G04-D",
+              "text": "齊",
+              "correctOrder": 3,
+              "correct": true
+            }
+          ],
+          "correctSequence": [
+            "L344-G04-A",
+            "L344-G04-B",
+            "L344-G04-C",
+            "L344-G04-D"
+          ]
+        },
+        {
+          "id": "L344-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L344-S03",
+          "targetChar": "跟",
+          "targetCharIndex": 3,
+          "options": [
+            {
+              "id": "L344-G05-A",
+              "text": "去年我跟家人們去海邊玩。",
+              "correct": true,
+              "sentenceId": "L344-S03",
+              "audioSrc": "/assets/lessons/L344/audio/L344-S03.m4a"
+            },
+            {
+              "id": "L344-G05-B",
+              "text": "去年我看家人們去海邊玩。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L344/audio/L344-G05-wrong-one.m4a"
+            },
+            {
+              "id": "L344-G05-C",
+              "text": "去年我帶家人們去海邊玩。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L344/audio/L344-G05-wrong-two.m4a"
+            }
+          ]
+        }
       ]
     }
   ],
