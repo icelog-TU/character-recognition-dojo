@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-24T13:21:58.451Z",
+  "exportedAt": "2026-08-24T14:33:53.616Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -169334,6 +169334,1075 @@
               "text": "這家飯店常常客多。",
               "correct": false,
               "audioSrc": "/assets/lessons/L350/audio/L350-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L351",
+      "order": 351,
+      "newChars": [
+        "餐"
+      ],
+      "zhuyin": {
+        "餐": "ㄘㄢ"
+      },
+      "charAudio": {
+        "餐": "/assets/lessons/L351/audio/char-u9910.m4a"
+      },
+      "title": "餐",
+      "requiredRounds": 5,
+      "originHint": "Rebased on origin/main 61dacec7 through L350. L349「讓」 and L350「廳」 are formal learned content, so L351 has no provisional dependencies. Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push, and deployment.",
+      "sentences": [
+        {
+          "id": "L351-S01",
+          "text": "這家餐廳好吃，我們是常客。",
+          "spokenText": "這家餐廳好吃我們是常客",
+          "focusChar": "餐",
+          "displayLines": [
+            "這家餐廳",
+            "好吃，",
+            "我們是常客。"
+          ],
+          "imageNotes": "一家餐廳裡，主角小女孩和家人坐在熟悉的位置用餐，店員友善地招呼他們，表現他們常常來這家餐廳。不要餐廳招牌、菜單文字、價格、店名、桌號或可讀文字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L351 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/restaurant environments, expressive preschool-to-early-elementary proportions, stable rounded but not overly generic faces, bright warm palette, and phone-readable composition. Do not copy any specific person from L058. Use current visual cast SOP continuity for recurring protagonist girl, mother, father, and family roles. Avoid all visible text, letters, Chinese characters, zhuyin, numbers, labels, captions, signs, menus, receipts, prices, table numbers, brands, logos, UI symbols, license plates, package text, clock numbers, book titles, and watermarks. Scene: familiar restaurant interior. Recurring protagonist little girl sits with her family at a familiar table eating a meal. A friendly generic restaurant server greets them warmly, showing they are regular customers. Staff and other customers are generic people, not fixed cast members. No menus or signs. Approved image note: 一家餐廳裡，主角小女孩和家人坐在熟悉的位置用餐，店員友善地招呼他們，表現他們常常來這家餐廳。不要餐廳招牌、菜單文字、價格、店名、桌號或可讀文字。",
+          "imageSrc": "/assets/lessons/L351/images/L351-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L351/audio/L351-S01.m4a",
+            "durationMs": 4610,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 760
+              },
+              {
+                "charIndex": 3,
+                "startMs": 760,
+                "endMs": 960
+              },
+              {
+                "charIndex": 4,
+                "startMs": 960,
+                "endMs": 1310
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1310,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2360,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2640,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2780,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3100,
+                "endMs": 3320
+              }
+            ]
+          }
+        },
+        {
+          "id": "L351-S02",
+          "text": "在餐廳，可以讓我學著點餐嗎？",
+          "spokenText": "在餐廳可以讓我學著點餐嗎",
+          "focusChar": "餐",
+          "displayLines": [
+            "在餐廳，",
+            "可以讓我",
+            "學著點餐嗎？"
+          ],
+          "imageNotes": "餐廳餐桌旁，主角小女孩拿著無字圖卡式菜單或看著桌上的餐點圖片，正在詢問主角爸爸或主角媽媽能不能學著點餐；大人陪在旁邊。不要菜單文字、價格數字、店名或品牌。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L351 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/restaurant environments, expressive preschool-to-early-elementary proportions, stable rounded but not overly generic faces, bright warm palette, and phone-readable composition. Do not copy any specific person from L058. Use current visual cast SOP continuity for recurring protagonist girl, mother, father, and family roles. Avoid all visible text, letters, Chinese characters, zhuyin, numbers, labels, captions, signs, menus, receipts, prices, table numbers, brands, logos, UI symbols, license plates, package text, clock numbers, book titles, and watermarks. Scene: restaurant table. Recurring protagonist little girl holds a wordless picture-card style menu or looks at food pictures while asking a recurring parent, preferably father or mother, whether she may learn to order. Parent sits beside her supportively. Menu must have pictures only, no readable text or prices. Approved image note: 餐廳餐桌旁，主角小女孩拿著無字圖卡式菜單或看著桌上的餐點圖片，正在詢問主角爸爸或主角媽媽能不能學著點餐；大人陪在旁邊。不要菜單文字、價格數字、店名或品牌。",
+          "imageSrc": "/assets/lessons/L351/images/L351-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L351/audio/L351-S02.m4a",
+            "durationMs": 4208,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 880
+              },
+              {
+                "charIndex": 2,
+                "startMs": 880,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1390
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1390,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1660,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2460,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2720,
+                "endMs": 3000
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3000,
+                "endMs": 3280
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3280,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3500,
+                "endMs": 3760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L351-S03",
+          "text": "媽媽做了一桌大餐，請客人吃。",
+          "spokenText": "媽媽做了一桌大餐請客人吃",
+          "focusChar": "餐",
+          "displayLines": [
+            "媽媽做了",
+            "一桌大餐，",
+            "請客人吃。"
+          ],
+          "imageNotes": "家中飯廳，主角媽媽準備了一整桌豐盛餐點，正在招呼一位或幾位 generic 成人客人一起吃；主角小女孩在旁邊看著。客人不是固定角色，不要畫成小光、小月、老師或主角家人。不要牆上文字、餐具品牌或可讀標籤。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L351 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/restaurant environments, expressive preschool-to-early-elementary proportions, stable rounded but not overly generic faces, bright warm palette, and phone-readable composition. Do not copy any specific person from L058. Use current visual cast SOP continuity for recurring protagonist girl, mother, father, and family roles. Avoid all visible text, letters, Chinese characters, zhuyin, numbers, labels, captions, signs, menus, receipts, prices, table numbers, brands, logos, UI symbols, license plates, package text, clock numbers, book titles, and watermarks. Scene: home dining room. Recurring protagonist mother has prepared a full table of generous dishes and warmly invites one or several generic adult guests to eat. Recurring protagonist girl watches nearby. Guests are generic adults, not Xiaoguang, not Xiaoyue, not teacher, and not protagonist family members. Approved image note: 家中飯廳，主角媽媽準備了一整桌豐盛餐點，正在招呼一位或幾位 generic 成人客人一起吃；主角小女孩在旁邊看著。客人不是固定角色，不要畫成小光、小月、老師或主角家人。不要牆上文字、餐具品牌或可讀標籤。",
+          "imageSrc": "/assets/lessons/L351/images/L351-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L351/audio/L351-S03.m4a",
+            "durationMs": 4641,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1160,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1440,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1600,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2380,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2620,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3360,
+                "endMs": 3620
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3620,
+                "endMs": 3920
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3920,
+                "endMs": 4160
+              }
+            ]
+          }
+        },
+        {
+          "id": "L351-S04",
+          "text": "媽媽讓我點了一客套餐。",
+          "spokenText": "媽媽讓我點了一客套餐",
+          "focusChar": "餐",
+          "displayLines": [
+            "媽媽讓我",
+            "點了一客",
+            "套餐。"
+          ],
+          "imageNotes": "餐廳裡，主角小女孩在主角媽媽陪同下，指向一份套餐圖片或桌上的套餐模型，像是在學著點一客套餐；桌上可有一份包含主餐、菜和湯的小套餐。不要可讀菜單文字、價格、套餐名稱、店名或品牌。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L351 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/restaurant environments, expressive preschool-to-early-elementary proportions, stable rounded but not overly generic faces, bright warm palette, and phone-readable composition. Do not copy any specific person from L058. Use current visual cast SOP continuity for recurring protagonist girl, mother, father, and family roles. Avoid all visible text, letters, Chinese characters, zhuyin, numbers, labels, captions, signs, menus, receipts, prices, table numbers, brands, logos, UI symbols, license plates, package text, clock numbers, book titles, and watermarks. Scene: restaurant. Recurring protagonist girl sits with recurring protagonist mother and points to a wordless set-meal picture or a table-top display model, learning to order one set meal. Show a small set meal with main dish, vegetables, and soup on the table. No menu text, no prices, no set names. Approved image note: 餐廳裡，主角小女孩在主角媽媽陪同下，指向一份套餐圖片或桌上的套餐模型，像是在學著點一客套餐；桌上可有一份包含主餐、菜和湯的小套餐。不要可讀菜單文字、價格、套餐名稱、店名或品牌。",
+          "imageSrc": "/assets/lessons/L351/images/L351-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L351/audio/L351-S04.m4a",
+            "durationMs": 3684,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2380,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2820,
+                "endMs": 3040
+              }
+            ]
+          }
+        },
+        {
+          "id": "L351-S05",
+          "text": "今天的早餐是飯和菜。",
+          "spokenText": "今天的早餐是飯和菜",
+          "focusChar": "餐",
+          "displayLines": [
+            "今天的早餐",
+            "是飯和菜。"
+          ],
+          "imageNotes": "早上家中餐桌，主角小女孩面前有一碗飯和幾樣菜，主角媽媽或家人在旁邊準備早餐。畫面要表現早餐是飯和菜，而不是麵包或牛奶。不要包裝文字、時鐘數字、餐具品牌或牆上可讀文字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L351 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home/restaurant environments, expressive preschool-to-early-elementary proportions, stable rounded but not overly generic faces, bright warm palette, and phone-readable composition. Do not copy any specific person from L058. Use current visual cast SOP continuity for recurring protagonist girl, mother, father, and family roles. Avoid all visible text, letters, Chinese characters, zhuyin, numbers, labels, captions, signs, menus, receipts, prices, table numbers, brands, logos, UI symbols, license plates, package text, clock numbers, book titles, and watermarks. Scene: morning home dining table. Recurring protagonist little girl has a bowl of rice and several vegetable dishes in front of her. Recurring protagonist mother or family member prepares breakfast nearby. Clearly show breakfast is rice and dishes, not bread or milk. No package text or clock numbers. Approved image note: 早上家中餐桌，主角小女孩面前有一碗飯和幾樣菜，主角媽媽或家人在旁邊準備早餐。畫面要表現早餐是飯和菜，而不是麵包或牛奶。不要包裝文字、時鐘數字、餐具品牌或牆上可讀文字。",
+          "imageSrc": "/assets/lessons/L351/images/L351-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L351/audio/L351-S05.m4a",
+            "durationMs": 4822,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 207
+              },
+              {
+                "charIndex": 1,
+                "startMs": 207,
+                "endMs": 413
+              },
+              {
+                "charIndex": 2,
+                "startMs": 413,
+                "endMs": 620
+              },
+              {
+                "charIndex": 3,
+                "startMs": 620,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1000,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1300,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2300,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2580,
+                "endMs": 2860
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L351-G01",
+          "type": "find-character",
+          "sentenceId": "L351-S03",
+          "targetChar": "餐",
+          "targetCharIndex": 7,
+          "prompt": "找到「餐」。",
+          "missingIndexes": [
+            7
+          ],
+          "options": [
+            {
+              "id": "L351-G01-A",
+              "text": "餐",
+              "correct": true
+            },
+            {
+              "id": "L351-G01-B",
+              "text": "廳",
+              "correct": false
+            },
+            {
+              "id": "L351-G01-C",
+              "text": "讓",
+              "correct": false
+            },
+            {
+              "id": "L351-G01-D",
+              "text": "客",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L351-G02",
+          "type": "teach-character",
+          "sentenceId": "L351-S05",
+          "targetChar": "餐",
+          "targetCharIndex": 4,
+          "prompt": "這個字我不會念，請你幫我。",
+          "missingIndexes": [
+            4
+          ],
+          "teachAudio": {
+            "prefixText": "今天的早",
+            "targetText": "餐",
+            "suffixText": "是飯和菜",
+            "prefixSrc": "/assets/lessons/L351/audio/L351-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L351/audio/L351-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L351-G03",
+          "type": "missing-character",
+          "sentenceId": "L351-S02",
+          "targetChar": "餐",
+          "targetCharIndex": 1,
+          "prompt": "字寶寶不見了，把「餐」找回來。",
+          "missingIndexes": [
+            1
+          ],
+          "options": [
+            {
+              "id": "L351-G03-A",
+              "text": "餐",
+              "correct": true
+            },
+            {
+              "id": "L351-G03-B",
+              "text": "廳",
+              "correct": false
+            },
+            {
+              "id": "L351-G03-C",
+              "text": "客",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L351-G04",
+          "type": "partial-order",
+          "sentenceId": "L351-S04",
+          "targetChar": "餐",
+          "prompt": "把不見的字照順序放回句子。",
+          "missingIndexes": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "options": [
+            {
+              "id": "L351-G04-A",
+              "text": "讓",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L351-G04-B",
+              "text": "我",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L351-G04-C",
+              "text": "點",
+              "correctOrder": 2,
+              "correct": true
+            },
+            {
+              "id": "L351-G04-D",
+              "text": "了",
+              "correctOrder": 3,
+              "correct": true
+            }
+          ],
+          "correctSequence": [
+            "L351-G04-A",
+            "L351-G04-B",
+            "L351-G04-C",
+            "L351-G04-D"
+          ]
+        },
+        {
+          "id": "L351-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L351-S01",
+          "targetChar": "餐",
+          "targetCharIndex": 2,
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "L351-G05-A",
+              "text": "這家餐廳好吃，我們是常客。",
+              "correct": true,
+              "sentenceId": "L351-S01",
+              "audioSrc": "/assets/lessons/L351/audio/L351-S01.m4a"
+            },
+            {
+              "id": "L351-G05-B",
+              "text": "這家餐廳好看，我們是常客。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L351/audio/L351-G05-wrong-one.m4a"
+            },
+            {
+              "id": "L351-G05-C",
+              "text": "這家書店好吃，我們是常客。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L351/audio/L351-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L352",
+      "order": 352,
+      "newChars": [
+        "位"
+      ],
+      "zhuyin": {
+        "位": "ㄨㄟˋ"
+      },
+      "charAudio": {
+        "位": "/assets/lessons/L352/audio/char-u4f4d.m4a"
+      },
+      "title": "位",
+      "requiredRounds": 5,
+      "originHint": "Production B package from origin/main 61dacec7 through L350 plus provisional L351 餐. L351 was not in main at claim, so Release must integrate L351 before L352. Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push, and deployment.",
+      "sentences": [
+        {
+          "id": "L352-S01",
+          "text": "這家餐廳客滿，沒有位子。",
+          "spokenText": "這家餐廳客滿沒有位子",
+          "focusChar": "位",
+          "targetCharIndex": 8,
+          "displayLines": [
+            "這家餐廳",
+            "客滿，",
+            "沒有位子。"
+          ],
+          "imageNotes": "餐廳裡座位都坐滿了，入口處還有幾位客人在等，主角小女孩和家人站在入口附近，看起來找不到位子。不要餐廳招牌、候位號碼、菜單、價格、店名或任何可讀文字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L352 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Use the current protagonist-family identity anchors: recurring protagonist girl with preschool age/proportions, short dark bob with pink hair clip and soft child clothing when context allows; recurring mother as warm family adult distinct from teacher/passersby; recurring father as steady family adult distinct from generic guests/staff. Scene: inside a busy family restaurant, every visible dining seat is occupied and several generic customers wait near the entrance. The recurring protagonist girl stands near the entrance with her recurring family, looking for a seat but none are available. Show the meaning through full tables, occupied chairs, and waiting people, with a clear empty-safe walkway. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, parking space numbers, route maps, station names, ads, house numbers, visible numeric writing, and watermarks.",
+          "imageSrc": "/assets/lessons/L352/images/S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L352/audio/L352-S01.m4a",
+            "durationMs": 3811,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1220,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2040,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2510
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2510,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2820,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3160,
+                "endMs": 3280
+              }
+            ]
+          }
+        },
+        {
+          "id": "L352-S02",
+          "text": "可以讓我坐窗邊的位子嗎？",
+          "spokenText": "可以讓我坐窗邊的位子嗎",
+          "focusChar": "位",
+          "targetCharIndex": 8,
+          "displayLines": [
+            "可以讓我",
+            "坐窗邊的",
+            "位子嗎？"
+          ],
+          "imageNotes": "餐廳裡，主角小女孩指向靠窗的一個空位，正在詢問主角媽媽或主角爸爸能不能坐窗邊的位子；窗外可以有簡單街景或天空。不要窗上文字、菜單文字、桌號、價格或品牌。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L352 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Use the current protagonist-family identity anchors: recurring protagonist girl with preschool age/proportions, short dark bob with pink hair clip and soft child clothing when context allows; recurring mother as warm family adult distinct from teacher/passersby; recurring father as steady family adult distinct from generic guests/staff. Scene: inside a restaurant, the recurring protagonist girl politely points toward one empty seat by a bright window and asks her recurring mother or father if she may sit there. The window may show a simple street scene or sky outside. Make the single empty window-side seat easy to read at phone size. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, parking space numbers, route maps, station names, ads, house numbers, visible numeric writing, and watermarks.",
+          "imageSrc": "/assets/lessons/L352/images/S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L352/audio/L352-S02.m4a",
+            "durationMs": 4269,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 210
+              },
+              {
+                "charIndex": 1,
+                "startMs": 210,
+                "endMs": 420
+              },
+              {
+                "charIndex": 2,
+                "startMs": 420,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1600,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2020,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2300,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3060,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3200,
+                "endMs": 3420
+              }
+            ]
+          }
+        },
+        {
+          "id": "L352-S03",
+          "text": "餐廳前面剛好有停車位。",
+          "spokenText": "餐廳前面剛好有停車位",
+          "focusChar": "位",
+          "targetCharIndex": 9,
+          "displayLines": [
+            "餐廳前面",
+            "剛好有",
+            "停車位。"
+          ],
+          "imageNotes": "餐廳外面，主角爸爸開車或停車，餐廳前方剛好有一個空的停車位；主角小女孩可坐在車內或站在旁邊看。不要車牌、停車格號碼、路牌文字、餐廳招牌文字或店名。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L352 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Use the current protagonist-family identity anchors: recurring protagonist girl with preschool age/proportions, short dark bob with pink hair clip and soft child clothing when context allows; recurring father as steady family adult distinct from generic guests/staff. Scene: outside a restaurant facade with no readable signs. The recurring protagonist father is driving or parking a family car, and directly in front of the restaurant there is one clearly open parking space. The recurring protagonist girl is either visible in the car or standing safely nearby watching. Show parking through curb, painted but unnumbered lines, and the empty space; no collision, no danger. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, parking space numbers, route maps, station names, ads, house numbers, visible numeric writing, and watermarks.",
+          "imageSrc": "/assets/lessons/L352/images/S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L352/audio/L352-S03.m4a",
+            "durationMs": 3045,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1740,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1940,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2200,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2380,
+                "endMs": 2580
+              }
+            ]
+          }
+        },
+        {
+          "id": "L352-S04",
+          "text": "請讓位給老太太。",
+          "spokenText": "請讓位給老太太",
+          "focusChar": "位",
+          "targetCharIndex": 2,
+          "displayLines": [
+            "請讓位給",
+            "老太太。"
+          ],
+          "imageNotes": "公車或捷運車廂裡，主角小女孩或一位 generic child 正在把座位讓給老太太；老太太站在旁邊準備坐下，畫面表現禮貌讓位。不要路線圖文字、站名、廣告字、車號或可讀標誌。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L352 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Use the current protagonist girl identity if a named family child is shown; otherwise use a generic child distinct from Xiaoguang, Xiaoyue, and the recurring young boy. Scene: inside a clean bus or metro carriage. A polite child is standing up from a seat and offering it to a generic elder woman. The elder woman stands nearby and is about to sit down, with gentle older adult face lines and simple elder clothing, visually distinct from the protagonist mother and teacher. Keep the interaction respectful and calm. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, parking space numbers, route maps, station names, ads, house numbers, vehicle numbers, visible numeric writing, and watermarks.",
+          "imageSrc": "/assets/lessons/L352/images/S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L352/audio/L352-S04.m4a",
+            "durationMs": 3773,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 620
+              },
+              {
+                "charIndex": 1,
+                "startMs": 620,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1000,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2080,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2380,
+                "endMs": 2640
+              }
+            ]
+          }
+        },
+        {
+          "id": "L352-S05",
+          "text": "一口氣來了好幾位客人。",
+          "spokenText": "一口氣來了好幾位客人",
+          "focusChar": "位",
+          "targetCharIndex": 7,
+          "displayLines": [
+            "一口氣來了",
+            "好幾位",
+            "客人。"
+          ],
+          "imageNotes": "家中玄關或餐廳入口，一次來了好幾位 generic 成人客人，主角小女孩或家人正在迎接他們；畫面要表現「好幾位客人一起來」，不要只畫一位客人。客人不是固定角色，不要畫成小光、小月、老師或主角家人。不要門牌號碼、招牌或可讀文字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: L352 sentence image, square 1:1. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan environments, expressive preschool proportions, soft cheeks, gentle faces, bright warm palette, and phone-readable square composition. Do not copy any specific person from L058. Use the current protagonist-family identity anchors when the family appears: recurring protagonist girl, mother, father, and older brother remain visually distinct. Scene: at a home entryway or restaurant entrance, several varied generic adult guests arrive together at once, clearly more than one guest. The recurring protagonist girl or her family welcomes them warmly. The guests are generic adults and must not look like Xiaoguang, Xiaoyue, teacher, or protagonist family members. Make the group arrival clear at phone size. Avoid all visible text, letters, Chinese characters, zhuyin, subtitles, labels, signs, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, parking space numbers, route maps, station names, ads, house numbers, visible numeric writing, and watermarks.",
+          "imageSrc": "/assets/lessons/L352/images/S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L352/audio/L352-S05.m4a",
+            "durationMs": 3939,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1390
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1390,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2460,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3020,
+                "endMs": 3260
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L352-G01",
+          "type": "find-character",
+          "sentenceId": "L352-S01",
+          "targetChar": "位",
+          "targetCharIndex": 8,
+          "prompt": "找到「位」。",
+          "missingIndexes": [
+            8
+          ],
+          "options": [
+            {
+              "id": "L352-G01-A",
+              "text": "位",
+              "correct": true
+            },
+            {
+              "id": "L352-G01-B",
+              "text": "餐",
+              "correct": false
+            },
+            {
+              "id": "L352-G01-C",
+              "text": "廳",
+              "correct": false
+            },
+            {
+              "id": "L352-G01-D",
+              "text": "客",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L352-G02",
+          "type": "teach-character",
+          "sentenceId": "L352-S02",
+          "targetChar": "位",
+          "targetCharIndex": 8,
+          "prompt": "聽一聽，幫忙說出這個字。",
+          "missingIndexes": [
+            8
+          ],
+          "teachAudio": {
+            "prefixText": "可以讓我坐窗邊的",
+            "targetText": "位",
+            "suffixText": "子嗎",
+            "prefixSrc": "/assets/lessons/L352/audio/L352-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L352/audio/L352-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "L352-G03",
+          "type": "missing-character",
+          "sentenceId": "L352-S03",
+          "targetChar": "位",
+          "targetCharIndex": 9,
+          "prompt": "選出少掉的字。",
+          "missingIndexes": [
+            9
+          ],
+          "options": [
+            {
+              "id": "L352-G03-A",
+              "text": "位",
+              "correct": true
+            },
+            {
+              "id": "L352-G03-B",
+              "text": "廳",
+              "correct": false
+            },
+            {
+              "id": "L352-G03-C",
+              "text": "餐",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L352-G04",
+          "type": "partial-order",
+          "sentenceId": "L352-S04",
+          "targetChar": "位",
+          "prompt": "把字排回句子裡。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "L352-G04-A",
+              "text": "請",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "L352-G04-B",
+              "text": "讓",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "L352-G04-C",
+              "text": "位",
+              "correctOrder": 2,
+              "correct": true
+            },
+            {
+              "id": "L352-G04-D",
+              "text": "給",
+              "correctOrder": 3,
+              "correct": true
+            }
+          ],
+          "correctSequence": [
+            "L352-G04-A",
+            "L352-G04-B",
+            "L352-G04-C",
+            "L352-G04-D"
+          ]
+        },
+        {
+          "id": "L352-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L352-S05",
+          "targetChar": "位",
+          "targetCharIndex": 7,
+          "prompt": "聽朋友念，選出正確的一句。",
+          "options": [
+            {
+              "id": "L352-G05-A",
+              "text": "一口氣來了好幾位客人。",
+              "correct": true,
+              "sentenceId": "L352-S05",
+              "audioSrc": "/assets/lessons/L352/audio/L352-S05.m4a"
+            },
+            {
+              "id": "L352-G05-B",
+              "text": "一口氣來了好幾個客人。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L352/audio/L352-G05-wrong-one.m4a"
+            },
+            {
+              "id": "L352-G05-C",
+              "text": "一口氣走了好幾位客人。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L352/audio/L352-G05-wrong-two.m4a"
             }
           ]
         }

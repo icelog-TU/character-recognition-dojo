@@ -1,0 +1,238 @@
+{
+  "id": "L352",
+  "order": 352,
+  "kind": "lesson",
+  "newChars": [
+    "位"
+  ],
+  "zhuyin": {
+    "位": "ㄨㄟˋ"
+  },
+  "title": "位",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Production B handoff for L352. Latest origin/main boundary at production start is 61dacec7 with formal production lessons L001-L350 and latest formal new character 廳. L351 餐 is not in origin/main at production start, so L352 is dependency-blocked and uses 餐 as a provisional learned character. Production builds a lesson-local dependency-blocked asset-complete package; Release owns ordered integration into production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [
+    "L351"
+  ],
+  "provisionalLearnedChars": [
+    "餐"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "formal learned chars through latest origin/main production JSON L350 plus provisional L351「餐」 plus current new char L352「位」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位",
+    "dependsOnLessons": [
+      "L351"
+    ],
+    "provisionalLearnedChars": [
+      "餐"
+    ],
+    "requiredCoverageChars": [
+      "位",
+      "餐",
+      "廳",
+      "讓",
+      "客",
+      "嗎"
+    ],
+    "targetCharMinimumCount": {
+      "位": 3
+    },
+    "recentTargetMinimumCounts": {
+      "餐": 2,
+      "廳": 2,
+      "讓": 2,
+      "客": 1,
+      "嗎": 1
+    },
+    "coverageCounts": {
+      "位": 5,
+      "餐": 2,
+      "廳": 2,
+      "讓": 2,
+      "客": 2,
+      "嗎": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "stage4OrderRule": "Canonical normal L006+ order required: G01 find-character, G02 teach-character, G03 missing-character, G04 partial-order, G05 choose-pronunciation. No exception.",
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Before accepting each final WebP image, compare side by side with the L058 style anchors, refined preferred examples, and relevant cast anchors.",
+      "Use fixed protagonist girl, protagonist mother, protagonist father, and family continuity consistently when those family roles appear.",
+      "S04 elder woman is a generic elder, not a fixed recurring role.",
+      "S05 guests are generic adult guests, not Xiaoguang, Xiaoyue, teacher, or protagonist family.",
+      "No readable text, labels, signs, subtitles, brand marks, logos, license plates, price tags, receipts, menus, book titles, table numbers, restaurant names, queue numbers, parking space numbers, route maps, station names, ads, house numbers, visible numeric writing, or watermarks anywhere."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 位 as public/assets/lessons/L352/audio/char-u4f4d.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix from exact fragment 可以讓我坐窗邊的 and suffix from exact fragment 子嗎.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L352-S01",
+      "text": "這家餐廳客滿，沒有位子。",
+      "spokenText": "這家餐廳客滿沒有位子",
+      "focusChar": "位",
+      "targetCharIndex": 8,
+      "displayLines": [
+        "這家餐廳",
+        "客滿，",
+        "沒有位子。"
+      ],
+      "imageNotes": "餐廳裡座位都坐滿了，入口處還有幾位客人在等，主角小女孩和家人站在入口附近，看起來找不到位子。不要餐廳招牌、候位號碼、菜單、價格、店名或任何可讀文字。"
+    },
+    {
+      "id": "L352-S02",
+      "text": "可以讓我坐窗邊的位子嗎？",
+      "spokenText": "可以讓我坐窗邊的位子嗎",
+      "focusChar": "位",
+      "targetCharIndex": 8,
+      "displayLines": [
+        "可以讓我",
+        "坐窗邊的",
+        "位子嗎？"
+      ],
+      "imageNotes": "餐廳裡，主角小女孩指向靠窗的一個空位，正在詢問主角媽媽或主角爸爸能不能坐窗邊的位子；窗外可以有簡單街景或天空。不要窗上文字、菜單文字、桌號、價格或品牌。"
+    },
+    {
+      "id": "L352-S03",
+      "text": "餐廳前面剛好有停車位。",
+      "spokenText": "餐廳前面剛好有停車位",
+      "focusChar": "位",
+      "targetCharIndex": 9,
+      "displayLines": [
+        "餐廳前面",
+        "剛好有",
+        "停車位。"
+      ],
+      "imageNotes": "餐廳外面，主角爸爸開車或停車，餐廳前方剛好有一個空的停車位；主角小女孩可坐在車內或站在旁邊看。不要車牌、停車格號碼、路牌文字、餐廳招牌文字或店名。"
+    },
+    {
+      "id": "L352-S04",
+      "text": "請讓位給老太太。",
+      "spokenText": "請讓位給老太太",
+      "focusChar": "位",
+      "targetCharIndex": 2,
+      "displayLines": [
+        "請讓位給",
+        "老太太。"
+      ],
+      "imageNotes": "公車或捷運車廂裡，主角小女孩或一位 generic child 正在把座位讓給老太太；老太太站在旁邊準備坐下，畫面表現禮貌讓位。不要路線圖文字、站名、廣告字、車號或可讀標誌。"
+    },
+    {
+      "id": "L352-S05",
+      "text": "一口氣來了好幾位客人。",
+      "spokenText": "一口氣來了好幾位客人",
+      "focusChar": "位",
+      "targetCharIndex": 7,
+      "displayLines": [
+        "一口氣來了",
+        "好幾位",
+        "客人。"
+      ],
+      "imageNotes": "家中玄關或餐廳入口，一次來了好幾位 generic 成人客人，主角小女孩或家人正在迎接他們；畫面要表現「好幾位客人一起來」，不要只畫一位客人。客人不是固定角色，不要畫成小光、小月、老師或主角家人。不要門牌號碼、招牌或可讀文字。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L352-G01",
+      "type": "find-character",
+      "sentenceId": "L352-S01",
+      "targetChar": "位",
+      "targetCharIndex": 8
+    },
+    {
+      "id": "L352-G02",
+      "type": "teach-character",
+      "sentenceId": "L352-S02",
+      "targetChar": "位",
+      "targetCharIndex": 8,
+      "teachAudio": {
+        "prefixText": "可以讓我坐窗邊的",
+        "targetText": "位",
+        "suffixText": "子嗎"
+      }
+    },
+    {
+      "id": "L352-G03",
+      "type": "missing-character",
+      "sentenceId": "L352-S03",
+      "targetChar": "位",
+      "targetCharIndex": 9,
+      "missingIndexes": [
+        9
+      ],
+      "options": [
+        {
+          "text": "位"
+        }
+      ]
+    },
+    {
+      "id": "L352-G04",
+      "type": "partial-order",
+      "sentenceId": "L352-S04",
+      "targetChar": "位",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "text": "請",
+          "correctOrder": 0
+        },
+        {
+          "text": "讓",
+          "correctOrder": 1
+        },
+        {
+          "text": "位",
+          "correctOrder": 2
+        },
+        {
+          "text": "給",
+          "correctOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "L352-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L352-S05",
+      "targetChar": "位",
+      "targetCharIndex": 7,
+      "options": [
+        {
+          "id": "correct",
+          "text": "一口氣來了好幾位客人。"
+        },
+        {
+          "id": "wrong-one",
+          "text": "一口氣來了好幾個客人。"
+        },
+        {
+          "id": "wrong-two",
+          "text": "一口氣走了好幾位客人。"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "S01 Han-only: 這0 家1 餐2 廳3 客4 滿5 沒6 有7 位8 子9; G01 target 位 index 8 PASS.",
+    "S02 Han-only: 可0 以1 讓2 我3 坐4 窗5 邊6 的7 位8 子9 嗎10; G02 target 位 index 8 PASS.",
+    "S03 Han-only: 餐0 廳1 前2 面3 剛4 好5 有6 停7 車8 位9; G03 target 位 index 9 PASS.",
+    "S04 Han-only: 請0 讓1 位2 給3 老4 太5 太6; G04 missingIndexes [0,1,2,3] = 請/讓/位/給 PASS; option cards are single Han PASS; correctOrder mapping PASS.",
+    "S05 Han-only: 一0 口1 氣2 來3 了4 好5 幾6 位7 客8 人9; G05 target 位 index 7 PASS."
+  ]
+}
