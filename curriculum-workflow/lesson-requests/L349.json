@@ -1,0 +1,248 @@
+{
+  "id": "L349",
+  "order": 349,
+  "kind": "lesson",
+  "newChars": [
+    "讓"
+  ],
+  "zhuyin": {
+    "讓": "ㄖㄤˋ"
+  },
+  "title": "讓",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Production C handoff for L349「讓」. Boundary checked by Editor: origin/main f9714d19 Integrate lesson L348, formal production lessons L001-L348, latest formal new character 客. No provisional dependencies. Production builds a lesson-local asset-complete package; Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "formal learned chars through L348 plus current new char L349「讓」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
+    "requiredCoverageChars": [
+      "讓",
+      "客",
+      "嗎",
+      "請",
+      "常",
+      "跟"
+    ],
+    "targetCharMinimumCount": {
+      "讓": 3
+    },
+    "recentTargetMinimumCounts": {
+      "客": 2,
+      "嗎": 2,
+      "請": 2,
+      "常": 1,
+      "跟": 1
+    },
+    "coverageCounts": {
+      "讓": 4,
+      "客": 2,
+      "嗎": 2,
+      "請": 2,
+      "常": 1,
+      "跟": 2
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "stage4OrderRule": "Canonical normal L006+ order required: G01 find-character, G02 teach-character, G03 missing-character, G04 partial-order, G05 choose-pronunciation. No exception.",
+    "imageRules": [
+      "Use docs/LESSON_VISUAL_CAST_SOP.md.",
+      "Use L058 only as style reference, not character identity.",
+      "Use fixed protagonist girl, protagonist mother, protagonist father, and family continuity consistently.",
+      "S04 must use Xiaoguang reference public/assets/reference/lesson-cast/xiaoguang.webp.",
+      "S05 elder woman is generic, not a fixed recurring role.",
+      "No readable text, labels, signs, subtitles, brand marks, logos, license plates, price tags, receipts, menus, book titles, route maps, station names, ads, warning signs, dog tags, or visible numeric writing in generated images."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate standalone charAudio for 讓 as public/assets/lessons/L349/audio/char-u8b93.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix from exact fragment 請 and suffix from exact fragment 一讓好嗎.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L349-S01",
+      "text": "今天是爸爸請客嗎？",
+      "spokenText": "今天是爸爸請客嗎",
+      "focusChar": "客",
+      "displayLines": [
+        "今天是爸爸",
+        "請客嗎？"
+      ],
+      "imageNotes": "飯店或餐廳聚餐場景，有很多人一起吃飯，不是只有主角一家四口。主角一家四口也在場，主角爸爸正站在櫃檯或餐桌旁準備結帳，主角小女孩看著爸爸，好像在問今天是不是爸爸請客。不要菜單文字、餐廳招牌、價格數字、收據文字或品牌。"
+    },
+    {
+      "id": "L349-S02",
+      "text": "媽媽不讓我跟大狗玩。",
+      "spokenText": "媽媽不讓我跟大狗玩",
+      "focusChar": "讓",
+      "targetCharIndex": 3,
+      "displayLines": [
+        "媽媽不讓我",
+        "跟大狗玩。"
+      ],
+      "imageNotes": "戶外路邊或公園，主角小女孩想靠近一隻看起來很大、可能有危險的大狗，主角媽媽伸手攔住她，不讓她過去。狗可以大、警覺、距離較近，但不要畫成攻擊、咬人、受傷或恐怖畫面；不要警告牌文字或狗牌文字。"
+    },
+    {
+      "id": "L349-S03",
+      "text": "請讓一讓好嗎？",
+      "spokenText": "請讓一讓好嗎",
+      "focusChar": "讓",
+      "targetCharIndex": 1,
+      "displayLines": [
+        "請讓一讓",
+        "好嗎？"
+      ],
+      "imageNotes": "走廊、門口或市場小路，有人擋在路中間，主角小女孩或主角媽媽禮貌地請對方讓開一點，好讓人通過。畫面表現「請讓一讓」的情境，不要對話框、標語或可讀文字。"
+    },
+    {
+      "id": "L349-S04",
+      "text": "我跟小光是書店的常客。",
+      "spokenText": "我跟小光是書店的常客",
+      "focusChar": "客",
+      "displayLines": [
+        "我跟小光是",
+        "書店的常客。"
+      ],
+      "imageNotes": "書店裡，主角小女孩和小光一起在固定書架旁看書或挑書，店員或書店環境讓人感覺他們常常來。小光必須使用固定角色 reference：圓眼鏡、整齊短黑髮、白短袖襯衫、深藍針織背心、卡其短褲、白襪、棕色鞋、深綠書包。不要書名文字、招牌、價格標籤或可讀文字。"
+    },
+    {
+      "id": "L349-S05",
+      "text": "我讓座給老太太。",
+      "spokenText": "我讓座給老太太",
+      "focusChar": "讓",
+      "targetCharIndex": 1,
+      "displayLines": [
+        "我讓座給",
+        "老太太。"
+      ],
+      "imageNotes": "公車或捷運車廂裡，主角小女孩站起來，把座位讓給一位老太太；老太太正要坐下或已經坐下，表情感謝。畫面要溫和清楚，車內不要路線圖文字、站名、廣告字、車號或可讀標誌。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L349-G01",
+      "type": "find-character",
+      "sentenceId": "L349-S02",
+      "targetChar": "讓",
+      "targetCharIndex": 3
+    },
+    {
+      "id": "L349-G02",
+      "type": "teach-character",
+      "sentenceId": "L349-S03",
+      "targetChar": "讓",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "請",
+        "targetText": "讓",
+        "suffixText": "一讓好嗎",
+        "prefixSrc": "/assets/lessons/L349/audio/L349-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L349/audio/L349-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L349-G03",
+      "type": "missing-character",
+      "sentenceId": "L349-S05",
+      "targetChar": "讓",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "L349-G03-A",
+          "text": "讓",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "L349-G04",
+      "type": "partial-order",
+      "sentenceId": "L349-S04",
+      "targetChar": "常",
+      "missingIndexes": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "L349-G04-A",
+          "text": "書",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L349-G04-B",
+          "text": "店",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L349-G04-C",
+          "text": "的",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L349-G04-D",
+          "text": "常",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctSequence": [
+        "L349-G04-A",
+        "L349-G04-B",
+        "L349-G04-C",
+        "L349-G04-D"
+      ]
+    },
+    {
+      "id": "L349-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L349-S01",
+      "targetChar": "客",
+      "targetCharIndex": 6,
+      "options": [
+        {
+          "id": "L349-G05-A",
+          "text": "今天是爸爸請客嗎？",
+          "correct": true,
+          "sentenceId": "L349-S01",
+          "audioSrc": "/assets/lessons/L349/audio/L349-S01.m4a"
+        },
+        {
+          "id": "L349-G05-B",
+          "text": "今天是媽媽請客嗎？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L349/audio/L349-G05-wrong-one.m4a"
+        },
+        {
+          "id": "L349-G05-C",
+          "text": "今天是爸爸做客嗎？",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L349/audio/L349-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "S01 Han-only: 今0 天1 是2 爸3 爸4 請5 客6 嗎7; G05 target 客 index 6 PASS.",
+    "S02 Han-only: 媽0 媽1 不2 讓3 我4 跟5 大6 狗7 玩8; G01 target 讓 index 3 PASS.",
+    "S03 Han-only: 請0 讓1 一2 讓3 好4 嗎5; G02 target 讓 index 1 PASS.",
+    "S04 Han-only: 我0 跟1 小2 光3 是4 書5 店6 的7 常8 客9; G04 missingIndexes [5,6,7,8] = 書/店/的/常 PASS; option cards are single Han PASS; correctOrder mapping PASS.",
+    "S05 Han-only: 我0 讓1 座2 給3 老4 太5 太6; G03 target 讓 index 1 PASS."
+  ]
+}

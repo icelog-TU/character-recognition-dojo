@@ -1,0 +1,305 @@
+{
+  "id": "L350",
+  "order": 350,
+  "kind": "lesson",
+  "newChars": [
+    "廳"
+  ],
+  "zhuyin": {
+    "廳": "ㄊㄧㄥ"
+  },
+  "title": "廳",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Production D handoff for L350. Latest origin/main boundary at production start is f9714d19 with formal production lessons L001-L348 and latest formal new character 客. L349 讓 is not in origin/main at production start, so L350 is dependency-blocked and uses 讓 as a provisional learned character. Production builds a lesson-local dependency-blocked asset-complete package; Release owns ordered integration into production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [
+    "L349"
+  ],
+  "provisionalLearnedChars": [
+    "讓"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "formal learned chars through latest origin/main production JSON L348 plus provisional L349「讓」 plus current new char L350「廳」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳",
+    "dependsOnLessons": [
+      "L349"
+    ],
+    "provisionalLearnedChars": [
+      "讓"
+    ],
+    "requiredCoverageChars": [
+      "廳",
+      "讓",
+      "客",
+      "嗎",
+      "請",
+      "常"
+    ],
+    "targetCharMinimumCount": {
+      "廳": 3
+    },
+    "recentTargetMinimumCounts": {
+      "讓": 2,
+      "客": 2,
+      "嗎": 2,
+      "請": 1,
+      "常": 1
+    },
+    "coverageCounts": {
+      "廳": 4,
+      "讓": 2,
+      "客": 5,
+      "嗎": 2,
+      "請": 1,
+      "常": 2
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "stage4OrderRule": "Canonical normal L006+ order required: G01 find-character, G02 teach-character, G03 missing-character, G04 partial-order, G05 choose-pronunciation. No exception.",
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Before accepting each final WebP image, compare side by side with the L058 style anchors, refined preferred examples, and relevant cast anchors.",
+      "Use fixed protagonist girl, protagonist mother, protagonist father, and family continuity consistently when those family roles appear.",
+      "S01 guest is a generic adult guest, not a fixed cast member; do not make the guest Xiaoguang, Xiaoyue, teacher, or protagonist family.",
+      "S04 staff and waiting customers are generic people, not fixed cast members.",
+      "No visible text, labels, signs, subtitles, brand marks, logos, license plates, price tags, receipts, menus, book titles, room numbers, queue numbers, restaurant names, warning signs, dog tags, TV subtitles, package text, visible numeric writing, or watermarks anywhere."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 廳 as public/assets/lessons/L350/audio/char-u5ef3.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix from exact fragment 我家飯 and suffix from exact fragment 有一張大飯桌.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L350-S01",
+      "text": "請客人到客廳坐下休息。",
+      "spokenText": "請客人到客廳坐下休息",
+      "focusChar": "廳",
+      "targetCharIndex": 5,
+      "displayLines": [
+        "請客人到",
+        "客廳坐下",
+        "休息。"
+      ],
+      "imageNotes": "家中客廳，主角媽媽或主角爸爸正在招呼一位 generic 成人客人到沙發坐下休息；主角小女孩在旁邊看著。客人不是固定角色，不要畫成小光、小月、老師或主角家人。客廳要明確有沙發、茶几等家庭客廳元素。不要可讀文字、標誌或牆上字。"
+    },
+    {
+      "id": "L350-S02",
+      "text": "不要讓小狗跑進客廳，知道嗎？",
+      "spokenText": "不要讓小狗跑進客廳知道嗎",
+      "focusChar": "廳",
+      "targetCharIndex": 8,
+      "displayLines": [
+        "不要讓小狗",
+        "跑進客廳，",
+        "知道嗎？"
+      ],
+      "imageNotes": "家中客廳入口，主角媽媽攔住一隻小狗，提醒主角小女孩不要讓小狗跑進客廳；小狗在門口或走廊邊，還沒有衝進客廳。畫面要生活化，不要髒亂災難化，也不要讓小狗看起來受傷或被粗暴對待。"
+    },
+    {
+      "id": "L350-S03",
+      "text": "我家飯廳有一張大飯桌。",
+      "spokenText": "我家飯廳有一張大飯桌",
+      "focusChar": "廳",
+      "targetCharIndex": 3,
+      "displayLines": [
+        "我家飯廳有",
+        "一張大飯桌。"
+      ],
+      "imageNotes": "主角小女孩家中的飯廳，有一張明顯的大飯桌和幾張椅子，主角小女孩站在旁邊介紹或看著飯桌。畫面重點是「飯廳」和「大飯桌」，不要餐廳招牌、菜單文字、價格數字或牆上可讀文字。"
+    },
+    {
+      "id": "L350-S04",
+      "text": "這家飯店常常客滿。",
+      "spokenText": "這家飯店常常客滿",
+      "focusChar": "客",
+      "targetCharIndex": 6,
+      "displayLines": [
+        "這家飯店",
+        "常常客滿。"
+      ],
+      "imageNotes": "飯店或餐廳入口/候位區，有很多客人在等位或排隊，店員在入口招呼，表現這家店常常客滿。不要畫可讀招牌、號碼牌、菜單、價格、店名或任何文字；可以用滿座的餐桌和等待的人群表達客滿。"
+    },
+    {
+      "id": "L350-S05",
+      "text": "可以讓我拿飯去客廳吃嗎？",
+      "spokenText": "可以讓我拿飯去客廳吃嗎",
+      "focusChar": "廳",
+      "targetCharIndex": 8,
+      "displayLines": [
+        "可以讓我",
+        "拿飯去",
+        "客廳吃嗎？"
+      ],
+      "imageNotes": "家中飯廳或廚房旁，主角小女孩端著一碗飯或餐盤，正在詢問主角媽媽能不能拿到客廳吃；背景可看到客廳方向和沙發。畫面要表現孩子在詢問，不要讓她已經坐在客廳吃。不要電視字幕、包裝文字或可讀文字。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L350-G01",
+      "type": "find-character",
+      "sentenceId": "L350-S01",
+      "targetChar": "廳",
+      "targetCharIndex": 5,
+      "prompt": "找到「廳」。",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "id": "L350-G01-A",
+          "text": "廳",
+          "correct": true
+        },
+        {
+          "id": "L350-G01-B",
+          "text": "客",
+          "correct": false
+        },
+        {
+          "id": "L350-G01-C",
+          "text": "讓",
+          "correct": false
+        },
+        {
+          "id": "L350-G01-D",
+          "text": "常",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L350-G02",
+      "type": "teach-character",
+      "sentenceId": "L350-S03",
+      "targetChar": "廳",
+      "targetCharIndex": 3,
+      "prompt": "聽一聽，幫忙說出這個字。",
+      "missingIndexes": [
+        3
+      ],
+      "teachAudio": {
+        "prefixText": "我家飯",
+        "targetText": "廳",
+        "suffixText": "有一張大飯桌",
+        "prefixSrc": "/assets/lessons/L350/audio/L350-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L350/audio/L350-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L350-G03",
+      "type": "missing-character",
+      "sentenceId": "L350-S02",
+      "targetChar": "廳",
+      "targetCharIndex": 8,
+      "prompt": "選出少掉的字。",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        {
+          "id": "L350-G03-A",
+          "text": "廳",
+          "correct": true
+        },
+        {
+          "id": "L350-G03-B",
+          "text": "客",
+          "correct": false
+        },
+        {
+          "id": "L350-G03-C",
+          "text": "嗎",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L350-G04",
+      "type": "partial-order",
+      "sentenceId": "L350-S05",
+      "targetChar": "廳",
+      "prompt": "把字排回句子裡。",
+      "missingIndexes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "options": [
+        {
+          "id": "L350-G04-A",
+          "text": "客",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L350-G04-B",
+          "text": "廳",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L350-G04-C",
+          "text": "吃",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L350-G04-D",
+          "text": "嗎",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctSequence": [
+        "L350-G04-A",
+        "L350-G04-B",
+        "L350-G04-C",
+        "L350-G04-D"
+      ]
+    },
+    {
+      "id": "L350-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L350-S04",
+      "targetChar": "客",
+      "targetCharIndex": 6,
+      "prompt": "聽朋友念，選出正確的一句。",
+      "options": [
+        {
+          "id": "L350-G05-A",
+          "text": "這家飯店常常客滿。",
+          "correct": true,
+          "sentenceId": "L350-S04",
+          "audioSrc": "/assets/lessons/L350/audio/L350-S04.m4a"
+        },
+        {
+          "id": "L350-G05-B",
+          "text": "這家飯店常常客少。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L350/audio/L350-G05-wrong-one.m4a"
+        },
+        {
+          "id": "L350-G05-C",
+          "text": "這家飯店常常客多。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L350/audio/L350-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "S01 Han-only: 請0 客1 人2 到3 客4 廳5 坐6 下7 休8 息9; G01 target 廳 index 5 PASS.",
+    "S02 Han-only: 不0 要1 讓2 小3 狗4 跑5 進6 客7 廳8 知9 道10 嗎11; G03 target 廳 index 8 PASS.",
+    "S03 Han-only: 我0 家1 飯2 廳3 有4 一5 張6 大7 飯8 桌9; G02 target 廳 index 3 PASS.",
+    "S04 Han-only: 這0 家1 飯2 店3 常4 常5 客6 滿7; G05 target 客 index 6 PASS.",
+    "S05 Han-only: 可0 以1 讓2 我3 拿4 飯5 去6 客7 廳8 吃9 嗎10; G04 missingIndexes [7,8,9,10] = 客/廳/吃/嗎 PASS; option cards are single Han PASS; correctOrder mapping PASS."
+  ]
+}
