@@ -5558,6 +5558,7 @@ function SentencePracticePreview({
   const doneAfterThisRound = doneCount + 1 >= requiredCount;
   const isCurrentRoundComplete = Boolean(game && roundComplete && completedGameId === game.id);
   const gameId = game?.id;
+  const visibleRoundNumber = requiredCount > 0 ? Math.min(doneCount + 1, requiredCount) : 0;
 
   useEffect(() => {
     if (!isCurrentRoundComplete || disabled) return;
@@ -6214,7 +6215,7 @@ function SentencePracticePreview({
       <div className="practice-meta">
         <span className="pill">{SENTENCE_GAME_LABELS[game.type]}</span>
         <span className="pill">
-          {doneCount} / {requiredCount}
+          {visibleRoundNumber} / {requiredCount}
         </span>
         {!isCurrentRoundComplete && (
           <button
