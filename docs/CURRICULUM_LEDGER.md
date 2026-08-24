@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 346:
+Characters taught after Lesson 347:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎`
 
 Recent review pool for the next lesson:
 
-`請 常 跟 年 們 今 全 齊 整 理 處 特 別 原 因 落`
+`嗎 請 常 跟 年 們 今 全 齊 整 理 處 特 別 原 因`
 
 ## Visual Continuity Ledger
 
@@ -514,10 +514,11 @@ Note: R001-R004 have been migrated to the current 15-lesson review schedule. R00
 | R041 | review module | same as L345 | 這些粉色花，哪朵最好看。 / 看地圖，向東方直走。 / 從左到右畫一條直線。 / 把東西整理好，放整齊。 / 先走到轉角，再向右轉。 | 些 粉 色 哪 最 圖 向 東 方 直 右 線 西 整 理 齊 轉 角 | 41st current-schedule review module after L345. Introduces no new characters. R041-R042 together cover every new character from L316-L345 under the current 15-lesson review schedule. Includes reviewed images, AI audio, AI-aligned timings, and fixed review sentence games with whole-sentence choose-pronunciation wrong-option audio. |
 | R042 | review module | same as L345 | 今年常常下雨，真受不了。 / 特別冷，原因是落地窗沒關。 / 我們常跟媽媽去買東西。 / 學生們全都到齊了。 / 高處的風特別大。 | 今 年 常 特 別 原 因 落 們 跟 東 西 全 齊 處 | 42nd current-schedule review module after L345. Introduces no new characters. Completes the R041-R042 milestone review pair covering L316-L345 before L346. Includes reviewed images, AI audio, AI-aligned timings, and fixed review sentence games with whole-sentence choose-pronunciation wrong-option audio. |
 | L346 | 請 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請 | 今天我請假，不去上學。 / 請問，可不可以跟你們一起玩？ / 老師常請我們吃點心。 / 過年時，爸爸請大家吃年菜。 / 我常跟爸爸下棋。 | 常 跟 年 們 今 | Introduces `請` through approved sentence contexts. Reviews recent `常 跟 年 們 今`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, whole-sentence choose-pronunciation wrong-option audio, and canonical normal-lesson Stage 4 order with no exception. |
+| L347 | 嗎 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎 | 請問，這種花要常常澆水嗎？ / 你要跟我們一起看星星嗎？ / 過年可以買新衣服嗎？ / 可以請老師過來嗎？ / 你們常跟爸爸去爬山嗎？ | 請 常 跟 年 們 | Introduces `嗎` through approved sentence contexts. Reviews recent `請 常 跟 年 們`; includes generated images, AI audio, AI-aligned timings, dedicated character audio, teach-character audio, whole-sentence choose-pronunciation wrong-option audio, and canonical normal-lesson Stage 4 order with no exception. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L346. Review modules R001-R042 are valid for the current 15-lesson schedule through the L345 milestone. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L347. Review modules R001-R042 are valid for the current 15-lesson schedule through the L345 milestone. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
