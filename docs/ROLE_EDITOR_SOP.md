@@ -100,7 +100,8 @@ For each assigned normal lesson, produce final approved sentence data:
 - Five approved sentences.
 - For every sentence: `text`, `spokenText`, `focusChar`, optional `displayLines`, and concrete `imageNotes`.
 - Coverage counts for the current target and previous-five review targets.
-- Stage 4 plan using the five standard game types once each.
+- Stage 4 plan using the five standard game types once each in canonical normal-lesson order: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`.
+- If the teacher explicitly approved any Stage 4 order exception, state the exact exception and reason; otherwise do not reorder Stage 4 games for variety or convenience.
 - Stage 4 index self-check table showing each indexed game's Han-only sequence, intended target, index, actual character at that index, and PASS/FAIL; for `partial-order`, include `missingIndexes`, Han values, single-Han option cards, and `correctOrder` mapping PASS/FAIL.
 - Required image style anchor, normally L058 references, explicitly marked as style-only.
 - Required visual cast identity for each sentence that shows people, following `docs/LESSON_VISUAL_CAST_SOP.md`.

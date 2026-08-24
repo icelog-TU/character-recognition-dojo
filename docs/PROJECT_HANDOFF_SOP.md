@@ -33,7 +33,7 @@ Every new thread must run `git fetch origin` and inspect latest `origin/main:src
 - whether any required review pair blocks the next numbered lesson
 - whether a package branch is already obsolete, legacy, or still usable
 
-App name: `認字練功房`. Review modules use `R###` ids, do not consume `L###` lesson numbers, and follow the current 15-lesson milestone schedule starting after L045. L001-L005 use Stage 1-3. L006 and later normal lessons should include Stage 4 fixed sentence games unless the teacher explicitly changes the design.
+App name: `認字練功房`. Review modules use `R###` ids, do not consume `L###` lesson numbers, and follow the current 15-lesson milestone schedule starting after L045. L001-L005 use Stage 1-3. L006 and later normal lessons should include Stage 4 fixed sentence games unless the teacher explicitly changes the design. Normal five-sentence lesson Stage 4 order is canonical: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`; any exception must be teacher-approved and documented.
 
 ## Role SOPs
 

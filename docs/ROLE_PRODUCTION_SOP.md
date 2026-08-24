@@ -148,7 +148,8 @@ Before reporting done, run a fast lesson-local audit. This should be minutes, no
 - `displayLines` must use functional phrase breaks, not arbitrary count-only breaks. Do not split natural words or phrases such as `彩色筆`; return to Editor/Review Migration/Supervisor if the handoff line breaks are awkward or unclear.
 - Every sentence has final `imageSrc`, sentence `audio.src`, `durationMs`, and non-empty `charTimings`.
 - `charAudio` uses the repo path form `char-uXXXX.m4a`, not `char-字.m4a`.
-- Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported type once, and use every reviewed sentence exactly once.
+- Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported type once, use every reviewed sentence exactly once, and follow canonical normal-lesson order: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`.
+- If Editor hands off a different Stage 4 order without an explicit teacher-approved exception and reason, stop and return to Editor/Supervisor instead of producing assets from the drifted order.
 - Stage 4 option schema is complete: option ids are present, correct options are marked, and ordering metadata such as `correctOrder` is present where the game type requires it.
 - `choose-pronunciation` wrong options are near misses: same sentence length where possible and only 1-2 Han characters different from the correct option.
 - `choose-pronunciation` wrong-option audio was generated from the exact full wrong-option text after final text changes.

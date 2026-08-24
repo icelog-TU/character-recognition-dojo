@@ -179,7 +179,7 @@ Required production handoff fields:
 - separated dependency audit fields: coverage targets, additional provisional characters used in approved display text outside the coverage window, final `dependsOnLessons`, final `provisionalLearnedChars`, and the Editor allowed-character self-check
 - five approved sentences, each with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
 - coverage counts for current target and previous-five review targets, or review-pair coverage counts
-- Stage 4 plan: one fixed game per sentence for normal lessons, or two-stage review-module plan
+- Stage 4 plan: one fixed game per sentence for normal lessons, using canonical order `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`, or two-stage review-module plan
 - required image style anchor: L058 reference assets unless the teacher approves another style; specify that L058 is style-only and human role identities must follow `docs/LESSON_VISUAL_CAST_SOP.md`
 - explicit `imageNotes` role identity for every human in each sentence image; do not use vague adult/person labels when the role should follow cast continuity
 - audio rule: standalone OpenAI character audio, whole-sentence AI audio, whole wrong-option AI audio, `assets:audio`, then `assets:align:ai`

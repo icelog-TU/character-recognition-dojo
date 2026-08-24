@@ -399,13 +399,15 @@ If a sentence needs context to be natural, put that context in `imageNotes` or r
 
 For a normal five-sentence lesson, design five Stage 4 games and use the five standard game types exactly once:
 
-- `find-character`
-- `teach-character`
-- `missing-character`
-- `partial-order`
-- `choose-pronunciation`
+1. `G01` = `find-character`
+2. `G02` = `teach-character`
+3. `G03` = `missing-character`
+4. `G04` = `partial-order`
+5. `G05` = `choose-pronunciation`
 
 Each reviewed sentence must be used by exactly one Stage 4 game. Do not assign two games to the same sentence while another approved sentence receives no Stage 4 practice.
+
+Do not reorder normal-lesson Stage 4 games for variety or because a later sentence feels more convenient for a different type. If the teacher explicitly approves a non-canonical order, record the exact exception and reason in the Editor handoff so Production and Release can verify that the drift was intentional.
 
 `teach-character` must include a precise `targetCharIndex`. Its `teachAudio` prefix and suffix must be generated from exact fragments around the target character.
 
@@ -476,7 +478,7 @@ Before sending sentences to image/audio production, verify:
 - every `focusChar` appears in its sentence
 - every sentence with people has explicit role identities in `imageNotes` following `docs/LESSON_VISUAL_CAST_SOP.md`
 - the Stage 4 plan uses every reviewed sentence exactly once when the lesson has five reviewed sentences and five sentence games
-- the Stage 4 plan uses the five standard game types exactly once for a normal five-sentence lesson
+- the Stage 4 plan uses the five standard game types exactly once in canonical normal-lesson order: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`
 - every Stage 4 `targetCharIndex`, `missingIndexes`, `partial-order` option card, and `correctOrder` mapping has passed the Stage 4 Index Validation Gate, with a self-check table ready for the handoff
 - every `partial-order` game blanks exactly 3-4 single Han characters, with one single-Han option card per blank
 - `choose-pronunciation` wrong-choice texts are final and ready for exact TTS generation

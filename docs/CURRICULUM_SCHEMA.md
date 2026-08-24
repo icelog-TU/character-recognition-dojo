@@ -162,6 +162,8 @@ Rules:
 - `targetCharIndex` is required for `teach-character`. It is the Han-character index in `sentence.text`, skipping punctuation, and must point to `targetChar`. This makes repeated characters such as `爸爸` unambiguous.
 - `teachAudio` is required for production `teach-character` when there is text before or after the target character. Generate `prefixSrc` from exactly the Han text before `targetCharIndex`, and `suffixSrc` from exactly the Han text after `targetCharIndex`. Do not create these files by cutting the full sentence audio.
 - Early lessons should use fixed, teacher-reviewed game plans. Do not randomize game type at runtime.
+- In a normal L006+ five-sentence production lesson, the five Stage 4 games must use this canonical order: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`.
+- Do not reorder normal-lesson Stage 4 games unless the teacher explicitly approves the exception and the exception is recorded in the handoff, packet, release notes, and ledger.
 - In a normal five-sentence production lesson, the five Stage 4 games should use all five reviewed sentences exactly once.
 - In that same pattern, `find-character`, `teach-character`, and `missing-character` should usually target the current lesson's new character; `partial-order` and `choose-pronunciation` may focus on review characters.
 - `missingIndexes` uses Han-character indexes in the sentence, skipping punctuation.

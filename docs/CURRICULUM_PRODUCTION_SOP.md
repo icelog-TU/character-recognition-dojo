@@ -111,7 +111,7 @@ Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`
 - For each final image, reject and regenerate if it is semantically correct but visually drifts into generic/simple watercolor, thin detailed Japanese-style watercolor, flat cartoon, anime, 3D render, photorealism, overly round generic child faces, tiny/random child proportions, or redesigned recurring identities.
 - `charAudio` paths use `char-uXXXX.m4a`; generation packets and drafts must not leave stale examples such as `char-字.m4a`.
 - Every reviewed sentence has final `imageSrc`, sentence `audio.src`, `durationMs`, and non-empty `charTimings`.
-- Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported game type once, and use every reviewed sentence exactly once.
+- Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported game type once, use every reviewed sentence exactly once, and follow canonical normal-lesson order: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`, unless the teacher explicitly approved and documented an exception.
 - `find-character`, `teach-character`, and `missing-character` point to a target character that actually appears in the referenced sentence.
 - `teach-character` includes `targetCharIndex` and exact generated prefix/suffix `teachAudio` where needed.
 - Every explicit Stage 4 `targetCharIndex` must be machine-checked against the zero-based Han-only sentence sequence and point to `targetChar`; every `missingIndexes` entry must be in range; every `partial-order` option must be one Han card whose `correctOrder` maps to the matching missing Han character. If the handoff self-check is missing or mismatches the draft/validator output, stop and return to Editor/Supervisor instead of guessing a correction.
@@ -681,8 +681,15 @@ Current production data starts Stage 4 at L006. Stage 4 uses a fixed `sentenceGa
 - Supported first-pass game types: `find-character`, `teach-character`, `missing-character`, `partial-order`, and `choose-pronunciation`.
 - When a lesson has five Stage 4 sentence games, use all five supported game types exactly once. Do not repeat one type and omit another.
 - When a lesson has five reviewed sentences and five Stage 4 sentence games, every reviewed sentence must appear in Stage 4 exactly once. Do not let `find-character` and `teach-character` reuse the same sentence while another sentence receives no interaction.
-- For the normal five-sentence lesson pattern, design the first three Stage 4 games as the new-character practice set: `find-character`, `teach-character`, and `missing-character` should each target the current lesson's new character when the approved sentences make that possible.
-- Use the last two Stage 4 games, usually `partial-order` and `choose-pronunciation`, more flexibly for review characters or sentence-level listening discrimination.
+- For normal L006+ five-sentence production lessons, Stage 4 game order is fixed and must not drift:
+  1. `G01` = `find-character`
+  2. `G02` = `teach-character`
+  3. `G03` = `missing-character`
+  4. `G04` = `partial-order`
+  5. `G05` = `choose-pronunciation`
+- Do not reorder normal-lesson Stage 4 games for variety, sentence convenience, asset convenience, or because an older production lesson drifted. If the teacher explicitly approves an exception, record the exact exception and reason in the Editor handoff, Production generation packet, Release notes, and ledger entry.
+- In the canonical order, design `G01`-`G03` as the new-character practice set: `find-character`, `teach-character`, and `missing-character` should each target the current lesson's new character when the approved sentences make that possible.
+- Use `G04` `partial-order` and `G05` `choose-pronunciation` more flexibly for review characters or sentence-level listening discrimination.
 - `targetChar` must appear in the referenced sentence. It may be the current lesson's new character or a review character.
 - A lesson should usually include at least three interactions involving the current new character, while allowing 1-2 interactions focused on review characters.
 - `partial-order` must blank only 3-4 Han characters, not the full sentence.
