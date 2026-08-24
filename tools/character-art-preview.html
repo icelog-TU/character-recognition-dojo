@@ -1,0 +1,1074 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>角色圖片預覽</title>
+    <style>
+      :root {
+        color: #3b2d22;
+        background: #fff6dd;
+        font-family:
+          "Noto Sans TC",
+          "Microsoft JhengHei",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(180deg, rgba(255, 246, 221, 0.94), rgba(255, 250, 235, 0.98)),
+          #fff6dd;
+      }
+
+      main {
+        width: min(100%, 1120px);
+        margin: 0 auto;
+        padding: 22px clamp(14px, 3vw, 28px) 40px;
+      }
+
+      header {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0;
+        color: #9d3e28;
+        font-size: clamp(1.7rem, 5vw, 2.5rem);
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+        color: #705746;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .toolbar,
+      .species-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        margin: 18px 0;
+      }
+
+      .pill,
+      .species-tab {
+        border: 1px solid #f0c98b;
+        border-radius: 999px;
+        background: #fff;
+        color: #775035;
+        padding: 8px 12px;
+        font-weight: 800;
+      }
+
+      .species-tab {
+        cursor: pointer;
+      }
+
+      .species-tab.active {
+        border-color: #df5b41;
+        color: #9d3e28;
+        box-shadow: 0 0 0 2px rgba(223, 91, 65, 0.16);
+      }
+
+      .preview-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+        gap: 18px;
+        align-items: start;
+      }
+
+      .character-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .character-card,
+      .detail-panel {
+        border: 1px solid #f0cf9b;
+        border-radius: 8px;
+        background: #fffaf0;
+        box-shadow: 0 10px 24px rgba(93, 64, 37, 0.1);
+      }
+
+      .character-card {
+        display: grid;
+        gap: 8px;
+        padding: 10px;
+        color: inherit;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .character-card.active {
+        outline: 3px solid #df5b41;
+      }
+
+      .character-card img,
+      .detail-panel img {
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+        background: #fbefd0;
+      }
+
+      .character-card strong {
+        color: #5f3925;
+        font-size: 1rem;
+      }
+
+      .character-card small {
+        color: #8a6a53;
+        font-weight: 700;
+        line-height: 1.35;
+      }
+
+      .detail-panel {
+        position: sticky;
+        top: 14px;
+        padding: 14px;
+      }
+
+      .detail-panel h2 {
+        margin: 12px 0 4px;
+        color: #9d3e28;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+      }
+
+      .detail-panel dl {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 8px 10px;
+        margin: 14px 0 0;
+        color: #705746;
+      }
+
+      .detail-panel dt {
+        font-weight: 900;
+      }
+
+      .detail-panel dd {
+        margin: 0;
+      }
+
+      @media (max-width: 780px) {
+        .preview-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .detail-panel {
+          position: static;
+          order: -1;
+        }
+      }
+
+      @media (max-width: 520px) {
+        main {
+          padding-inline: 10px;
+        }
+
+        .character-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 10px;
+        }
+
+        .character-card {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>收藏角色圖片預覽</h1>
+        <p>這裡是美術審核用頁面，不會改變正式 app 的轉蛋、金幣、星星或收藏進度。</p>
+      </header>
+
+      <div class="toolbar" aria-label="角色資訊">
+        <span class="pill">地上的生物</span>
+        <span class="pill" id="speciesNamePill">貓家族</span>
+        <span class="pill">9 個角色</span>
+      </div>
+
+      <div class="species-tabs" id="speciesTabs" aria-label="切換家族"></div>
+
+      <section class="preview-layout">
+        <div class="character-grid" id="characterGrid" aria-label="角色圖片預覽"></div>
+        <aside class="detail-panel" aria-live="polite">
+          <img id="detailImage" alt="" />
+          <h2 id="detailTitle"></h2>
+          <p id="detailDescription"></p>
+          <dl>
+            <dt>物種</dt>
+            <dd id="detailSpecies"></dd>
+            <dt>用途</dt>
+            <dd>角色收藏、轉蛋結果、角色個人頁</dd>
+            <dt>狀態</dt>
+            <dd>已接入正式收藏角色資產</dd>
+          </dl>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const pageBase = window.location.pathname.includes("/character-recognition-dojo/")
+        ? "/character-recognition-dojo/"
+        : "/";
+
+      const speciesData = {
+        cat: {
+          label: "貓家族",
+          species: "貓",
+          basePath: `${pageBase}assets/characters/land/cat/`,
+          characters: [
+            ["cat-grandpa.webp", "貓爺爺", "溫和的貓爺爺，有圍巾、背心和小拐杖。"],
+            ["cat-grandma.webp", "貓奶奶", "溫柔的貓奶奶，有小眼鏡和披肩。"],
+            ["cat-father.webp", "貓爸爸", "穩重的貓爸爸，穿藍色襯衫。"],
+            ["cat-mother.webp", "貓媽媽", "親切的貓媽媽，有圍裙和柔和外套。"],
+            ["cat-older-brother.webp", "貓哥哥", "活潑的貓哥哥，有帽子和背包。"],
+            ["cat-older-sister.webp", "貓姐姐", "開朗的貓姐姐，有蝴蝶結和小包包。"],
+            ["cat-younger-brother.webp", "貓弟弟", "小小的貓弟弟，穿吊帶褲，拿著玩具。"],
+            ["cat-younger-sister.webp", "貓妹妹", "可愛的貓妹妹，穿粉色裙子。"],
+            ["cat-baby.webp", "貓寶寶", "最小的貓寶寶，坐著穿小圍兜。"],
+          ],
+        },
+        dog: {
+          label: "狗家族",
+          species: "狗",
+          basePath: `${pageBase}assets/characters/land/dog/`,
+          characters: [
+            ["dog-grandpa.webp", "狗爺爺", "溫和的狗爺爺，有橄欖綠圍巾、棕色背心和小拐杖。"],
+            ["dog-grandma.webp", "狗奶奶", "溫柔的狗奶奶，有小眼鏡、青綠披肩和蜜桃色衣服。"],
+            ["dog-father.webp", "狗爸爸", "穩重的狗爸爸，穿柔和綠襯衫和棕色褲子。"],
+            ["dog-mother.webp", "狗媽媽", "親切的狗媽媽，有薰衣草外套和溫暖圍裙。"],
+            ["dog-older-brother.webp", "狗哥哥", "活潑的狗哥哥，有珊瑚色帽子、藍色上衣和背包。"],
+            ["dog-older-sister.webp", "狗姐姐", "開朗的狗姐姐，有薄荷色蝴蝶結和小包包。"],
+            ["dog-younger-brother.webp", "狗弟弟", "小小的狗弟弟，穿綠色吊帶褲，拿著玩具車。"],
+            ["dog-younger-sister.webp", "狗妹妹", "可愛的狗妹妹，穿藍色裙子和黃色蝴蝶結。"],
+            ["dog-baby.webp", "狗寶寶", "最小的狗寶寶，坐著穿薄荷色小圍兜。"],
+          ],
+        },
+        rabbit: {
+          label: "兔家族",
+          species: "兔",
+          basePath: `${pageBase}assets/characters/land/rabbit/`,
+          characters: [
+            ["rabbit-grandpa.webp", "兔爺爺", "溫和的兔爺爺，有小眼鏡、圍巾和折好的報紙。"],
+            ["rabbit-grandma.webp", "兔奶奶", "溫柔的兔奶奶，有小眼鏡和小花籃。"],
+            ["rabbit-father.webp", "兔爸爸", "穩重的兔爸爸，有地圖和小側背包。"],
+            ["rabbit-mother.webp", "兔媽媽", "親切的兔媽媽，拿著小澆水壺照顧花。"],
+            ["rabbit-older-brother.webp", "兔哥哥", "活潑的兔哥哥，有運動帽、球和運動服。"],
+            ["rabbit-older-sister.webp", "兔姐姐", "開朗的兔姐姐，有花髮夾和小洋娃娃。"],
+            ["rabbit-younger-brother.webp", "兔弟弟", "小小的兔弟弟，穿吊帶褲，拿著機器人玩具。"],
+            ["rabbit-younger-sister.webp", "兔妹妹", "可愛的兔妹妹，有小背包和圖畫書。"],
+            ["rabbit-baby.webp", "兔寶寶", "最小的兔寶寶，坐著拿固齒器和小毯子。"],
+          ],
+        },
+        bear: {
+          label: "熊家族",
+          species: "熊",
+          basePath: `${pageBase}assets/characters/land/bear/`,
+          characters: [
+            ["bear-grandpa.webp", "熊爺爺", "溫和的熊爺爺，有小眼鏡、茶杯和小書。"],
+            ["bear-grandma.webp", "熊奶奶", "溫柔的熊奶奶，有小眼鏡和毛線籃。"],
+            ["bear-father.webp", "熊爸爸", "穩重的熊爸爸，穿白襯衫，拿著小工具箱。"],
+            ["bear-mother.webp", "熊媽媽", "親切的熊媽媽，有托特包和溫暖圍裙。"],
+            ["bear-older-brother.webp", "熊哥哥", "活潑的熊哥哥，穿橘色連身褲，帶著小相機。"],
+            ["bear-older-sister.webp", "熊姐姐", "開朗的熊姐姐，有花髮夾和小花籃。"],
+            ["bear-younger-brother.webp", "熊弟弟", "小小的熊弟弟，穿吊帶褲，拿著玩具飛機。"],
+            ["bear-younger-sister.webp", "熊妹妹", "可愛的熊妹妹，有小斜背包和蝴蝶結。"],
+            ["bear-baby.webp", "熊寶寶", "最小的熊寶寶，坐著拿小搖鈴。"],
+          ],
+        },
+        deer: {
+          label: "鹿家族",
+          species: "鹿",
+          basePath: `${pageBase}assets/characters/land/deer/`,
+          characters: [
+            ["deer-grandpa.webp", "鹿爺爺", "溫和的鹿爺爺，有小眼鏡、背心和折好的報紙。"],
+            ["deer-grandma.webp", "鹿奶奶", "溫柔的鹿奶奶，有小眼鏡、花籃和青綠披肩。"],
+            ["deer-father.webp", "鹿爸爸", "穩重的鹿爸爸，穿暖色背心，拿著折好的地圖。"],
+            ["deer-mother.webp", "鹿媽媽", "親切的鹿媽媽，有澆水壺和柔和圍裙。"],
+            ["deer-older-brother.webp", "鹿哥哥", "活潑的鹿哥哥，有橘色背包、球和運動服。"],
+            ["deer-older-sister.webp", "鹿姐姐", "開朗的鹿姐姐，有花髮夾和圖畫書。"],
+            ["deer-younger-brother.webp", "鹿弟弟", "小小的鹿弟弟，拿著紅色玩具火車。"],
+            ["deer-younger-sister.webp", "鹿妹妹", "可愛的鹿妹妹，有薄荷背包和蜜桃蝴蝶結。"],
+            ["deer-baby.webp", "鹿寶寶", "最小的鹿寶寶，坐著拿小搖鈴。"],
+          ],
+        },
+        fox: {
+          label: "狐狸家族",
+          species: "狐狸",
+          basePath: `${pageBase}assets/characters/land/fox/`,
+          characters: [
+            ["fox-grandpa.webp", "狐狸爺爺", "溫和的狐狸爺爺，有小眼鏡、藍色外套和小書。"],
+            ["fox-grandma.webp", "狐狸奶奶", "溫柔的狐狸奶奶，有小眼鏡、茶杯和毛線袋。"],
+            ["fox-father.webp", "狐狸爸爸", "穩重的狐狸爸爸，有小側背包和杯子。"],
+            ["fox-mother.webp", "狐狸媽媽", "親切的狐狸媽媽，有托特包和圖畫書。"],
+            ["fox-older-brother.webp", "狐狸哥哥", "活潑的狐狸哥哥，有小相機、背包和探險背心。"],
+            ["fox-older-sister.webp", "狐狸姐姐", "開朗的狐狸姐姐，有小洋娃娃和藍色花髮夾。"],
+            ["fox-younger-brother.webp", "狐狸弟弟", "小小的狐狸弟弟，拿著機器人玩具。"],
+            ["fox-younger-sister.webp", "狐狸妹妹", "可愛的狐狸妹妹，有黃色小包包和薄荷蝴蝶結。"],
+            ["fox-baby.webp", "狐狸寶寶", "最小的狐狸寶寶，坐著拿固齒器和小毯子。"],
+          ],
+        },
+        squirrel: {
+          label: "松鼠家族",
+          species: "松鼠",
+          basePath: `${pageBase}assets/characters/land/squirrel/`,
+          characters: [
+            ["squirrel-grandpa.webp", "松鼠爺爺", "溫和的松鼠爺爺，有小眼鏡、橄欖外套和折好的報紙。"],
+            ["squirrel-grandma.webp", "松鼠奶奶", "溫柔的松鼠奶奶，有小眼鏡、茶杯和橡果籃。"],
+            ["squirrel-father.webp", "松鼠爸爸", "穩重的松鼠爸爸，有小工具箱和暖色背心。"],
+            ["squirrel-mother.webp", "松鼠媽媽", "親切的松鼠媽媽，有澆水壺和小花盆。"],
+            ["squirrel-older-brother.webp", "松鼠哥哥", "活潑的松鼠哥哥，有足球和橘色背包。"],
+            ["squirrel-older-sister.webp", "松鼠姐姐", "開朗的松鼠姐姐，有圖畫書和珊瑚花髮夾。"],
+            ["squirrel-younger-brother.webp", "松鼠弟弟", "小小的松鼠弟弟，拿著玩具飛機。"],
+            ["squirrel-younger-sister.webp", "松鼠妹妹", "可愛的松鼠妹妹，有蜜桃小包包和薄荷蝴蝶結。"],
+            ["squirrel-baby.webp", "松鼠寶寶", "最小的松鼠寶寶，坐著拿小搖鈴和橡果玩具。"],
+          ],
+        },
+        panda: {
+          label: "貓熊家族",
+          species: "貓熊",
+          basePath: `${pageBase}assets/characters/land/panda/`,
+          characters: [
+            ["panda-grandpa.webp", "貓熊爺爺", "溫和的貓熊爺爺，有摺扇、竹杖和中式長衫。"],
+            ["panda-grandma.webp", "貓熊奶奶", "溫柔的貓熊奶奶，有小燈籠、竹籃和節慶漢服。"],
+            ["panda-father.webp", "貓熊爸爸", "穩重的貓熊爸爸，有竹籃、卷軸筒和唐裝外套。"],
+            ["panda-mother.webp", "貓熊媽媽", "親切的貓熊媽媽，有茶杯、竹盆栽和柔和漢服。"],
+            ["panda-older-brother.webp", "貓熊哥哥", "活潑的貓熊哥哥，有手鼓和節慶表演服。"],
+            ["panda-older-sister.webp", "貓熊姐姐", "開朗的貓熊姐姐，有彩帶棒、荷包和花髮飾。"],
+            ["panda-younger-brother.webp", "貓熊弟弟", "小小的貓熊弟弟，拿著舞獅玩具。"],
+            ["panda-younger-sister.webp", "貓熊妹妹", "可愛的貓熊妹妹，有紙風車和圓形小包包。"],
+            ["panda-baby.webp", "貓熊寶寶", "最小的貓熊寶寶，坐著拿小撥浪鼓和竹玩具。"],
+          ],
+        },
+        tiger: {
+          label: "老虎家族",
+          species: "老虎",
+          basePath: `${pageBase}assets/characters/land/tiger/`,
+          characters: [
+            ["tiger-grandpa.webp", "老虎爺爺", "溫和的老虎爺爺，有小眼鏡、摺扇和日式祭典外套。"],
+            ["tiger-grandma.webp", "老虎奶奶", "溫柔的老虎奶奶，有小眼鏡、茶杯和點心籃。"],
+            ["tiger-father.webp", "老虎爸爸", "穩重的老虎爸爸，有風呂敷包和無字小燈籠。"],
+            ["tiger-mother.webp", "老虎媽媽", "親切的老虎媽媽，有團扇、花籃和珊瑚色浴衣。"],
+            ["tiger-older-brother.webp", "老虎哥哥", "活潑的老虎哥哥，有小太鼓、鼓棒和祭典背心。"],
+            ["tiger-older-sister.webp", "老虎姐姐", "開朗的老虎姐姐，有紙傘、花髮飾和薄荷色浴衣。"],
+            ["tiger-younger-brother.webp", "老虎弟弟", "小小的老虎弟弟，拿著鯉魚旗玩具和小鼓。"],
+            ["tiger-younger-sister.webp", "老虎妹妹", "可愛的老虎妹妹，有紙風車、蝴蝶結和圓形小包包。"],
+            ["tiger-baby.webp", "老虎寶寶", "最小的老虎寶寶，坐著拿小撥浪鼓和柔軟玩具球。"],
+          ],
+        },
+        lion: {
+          label: "獅子家族",
+          species: "獅子",
+          basePath: `${pageBase}assets/characters/land/lion/`,
+          characters: [
+            ["lion-grandpa.webp", "獅子爺爺", "溫和的獅子爺爺，有小眼鏡、空白卷軸和童話斗篷。"],
+            ["lion-grandma.webp", "獅子奶奶", "溫柔的獅子奶奶，有小眼鏡、茶杯和麵包籃。"],
+            ["lion-father.webp", "獅子爸爸", "穩重的獅子爸爸，有提燈、布包和歐洲市集背心。"],
+            ["lion-mother.webp", "獅子媽媽", "親切的獅子媽媽，有香草籃、空白書本和圍裙洋裝。"],
+            ["lion-older-brother.webp", "獅子哥哥", "活潑的獅子哥哥，有木頭玩具劍和無圖案小盾牌。"],
+            ["lion-older-sister.webp", "獅子姐姐", "開朗的獅子姐姐，有小魯特琴、緞帶棒和花環。"],
+            ["lion-younger-brother.webp", "獅子弟弟", "小小的獅子弟弟，拿著木馬玩具和圓餅乾。"],
+            ["lion-younger-sister.webp", "獅子妹妹", "可愛的獅子妹妹，有花環玩具、野花束和小包包。"],
+            ["lion-baby.webp", "獅子寶寶", "最小的獅子寶寶，坐著拿小搖鈴和布馬玩具。"],
+          ],
+        },
+        elephant: {
+          label: "大象家族",
+          species: "大象",
+          basePath: `${pageBase}assets/characters/land/elephant/`,
+          characters: [
+            ["elephant-grandpa.webp", "大象爺爺", "溫和的大象爺爺，有小眼鏡、手扇和南亞節慶披巾。"],
+            ["elephant-grandma.webp", "大象奶奶", "溫柔的大象奶奶，有小眼鏡、甜點碗和花籃。"],
+            ["elephant-father.webp", "大象爸爸", "穩重的大象爸爸，有小鼓、鼓棒和深藍色節慶上衣。"],
+            ["elephant-mother.webp", "大象媽媽", "親切的大象媽媽，有小陶碗、花環和珊瑚色紗麗。"],
+            ["elephant-older-brother.webp", "大象哥哥", "活潑的大象哥哥，有風箏、線軸和芥黃色上衣。"],
+            ["elephant-older-sister.webp", "大象姐姐", "開朗的大象姐姐，有緞帶棒、花髮飾和薄荷色裙裝。"],
+            ["elephant-younger-brother.webp", "大象弟弟", "小小的大象弟弟，拿著陀螺和木頭市集車玩具。"],
+            ["elephant-younger-sister.webp", "大象妹妹", "可愛的大象妹妹，有紙風車、小籃包和蝴蝶結。"],
+            ["elephant-baby.webp", "大象寶寶", "最小的大象寶寶，坐著拿小搖鈴和柔軟玩具球。"],
+          ],
+        },
+        koala: {
+          label: "無尾熊家族",
+          species: "無尾熊",
+          basePath: `${pageBase}assets/characters/land/koala/`,
+          characters: [
+            ["koala-grandpa.webp", "無尾熊爺爺", "溫和的無尾熊爺爺，有小眼鏡、空白筆記本和尤加利木杖。"],
+            ["koala-grandma.webp", "無尾熊奶奶", "溫柔的無尾熊奶奶，有小眼鏡、茶杯和尤加利葉籃。"],
+            ["koala-father.webp", "無尾熊爸爸", "穩重的無尾熊爸爸，有望遠鏡、水壺和森林綠巡守上衣。"],
+            ["koala-mother.webp", "無尾熊媽媽", "親切的無尾熊媽媽，有野餐籃、保溫瓶和珊瑚色洋裝。"],
+            ["koala-older-brother.webp", "無尾熊哥哥", "活潑的無尾熊哥哥，有放大鏡、背包和無圖案木頭玩具。"],
+            ["koala-older-sister.webp", "無尾熊姐姐", "開朗的無尾熊姐姐，有小相機、空白素描本和薄荷色洋裝。"],
+            ["koala-younger-brother.webp", "無尾熊弟弟", "小小的無尾熊弟弟，拿著玩具車和葉子造型風箏。"],
+            ["koala-younger-sister.webp", "無尾熊妹妹", "可愛的無尾熊妹妹，有紙風車、尤加利小籃包和蝴蝶結。"],
+            ["koala-baby.webp", "無尾熊寶寶", "最小的無尾熊寶寶，坐著拿小搖鈴和葉色布球。"],
+          ],
+        },
+        monkey: {
+          label: "猴子家族",
+          species: "猴子",
+          basePath: `${pageBase}assets/characters/land/monkey/`,
+          characters: [
+            ["monkey-grandpa.webp", "猴子爺爺", "溫和的猴子爺爺，有小眼鏡、空白市集地圖、草帽和小木杖。"],
+            ["monkey-grandma.webp", "猴子奶奶", "溫柔的猴子奶奶，有小眼鏡、可可杯和熱帶水果籃。"],
+            ["monkey-father.webp", "猴子爸爸", "穩重的猴子爸爸，有小鼓、帆布包和森林綠市集上衣。"],
+            ["monkey-mother.webp", "猴子媽媽", "親切的猴子媽媽，有花籃、無標籤果汁瓶和珊瑚色洋裝。"],
+            ["monkey-older-brother.webp", "猴子哥哥", "活潑的猴子哥哥，有沙鈴、背包和芥黃色節慶背心。"],
+            ["monkey-older-sister.webp", "猴子姐姐", "開朗的猴子姐姐，有小吉他、緞帶沙鈴棒和薄荷色洋裝。"],
+            ["monkey-younger-brother.webp", "猴子弟弟", "小小的猴子弟弟，拿著陀螺和木頭市集車玩具。"],
+            ["monkey-younger-sister.webp", "猴子妹妹", "可愛的猴子妹妹，有紙風車、小編織包和蝴蝶結。"],
+            ["monkey-baby.webp", "猴子寶寶", "最小的猴子寶寶，坐著拿小搖鈴和熱帶水果色布球。"],
+          ],
+        },
+        hedgehog: {
+          label: "刺蝟家族",
+          species: "刺蝟",
+          basePath: `${pageBase}assets/characters/land/hedgehog/`,
+          characters: [
+            ["hedgehog-grandpa.webp", "刺蝟爺爺", "溫和的刺蝟爺爺，有小眼鏡、空白地圖、小木杖和北歐冬帽。"],
+            ["hedgehog-grandma.webp", "刺蝟奶奶", "溫柔的刺蝟奶奶，有小眼鏡、莓果茶和松果莓果籃。"],
+            ["hedgehog-father.webp", "刺蝟爸爸", "穩重的刺蝟爸爸，有木頭羅盤、繩圈和森林綠羊毛上衣。"],
+            ["hedgehog-mother.webp", "刺蝟媽媽", "親切的刺蝟媽媽，有麵包籃、木湯匙和珊瑚色冬裙。"],
+            ["hedgehog-older-brother.webp", "刺蝟哥哥", "活潑的刺蝟哥哥，有小手鼓、木雪橇和芥黃色背心。"],
+            ["hedgehog-older-sister.webp", "刺蝟姐姐", "開朗的刺蝟姐姐，有木頭小琴、緞帶棒和薄荷色洋裝。"],
+            ["hedgehog-younger-brother.webp", "刺蝟弟弟", "小小的刺蝟弟弟，拿著木船車和小陀螺。"],
+            ["hedgehog-younger-sister.webp", "刺蝟妹妹", "可愛的刺蝟妹妹，有紙風車、莓果小包和珊瑚蝴蝶結。"],
+            ["hedgehog-baby.webp", "刺蝟寶寶", "最小的刺蝟寶寶，坐著拿小搖鈴、固齒環和布球。"],
+          ],
+        },
+        horse: {
+          label: "馬家族",
+          species: "馬",
+          basePath: `${pageBase}assets/characters/land/horse/`,
+          characters: [
+            ["horse-grandpa.webp", "馬爺爺", "溫和的馬爺爺，有小眼鏡、空白地圖、小木杖和小燈籠。"],
+            ["horse-grandma.webp", "馬奶奶", "溫柔的馬奶奶，有小眼鏡、茶壺、茶杯和水果籃。"],
+            ["horse-father.webp", "馬爸爸", "穩重的馬爸爸，有帆布包、捲地毯和空白小羅盤。"],
+            ["horse-mother.webp", "馬媽媽", "親切的馬媽媽，有花草籃、無標籤香料罐和水壺。"],
+            ["horse-older-brother.webp", "馬哥哥", "活潑的馬哥哥，有小鈸、背包和木頭駱駝車玩具。"],
+            ["horse-older-sister.webp", "馬姐姐", "開朗的馬姐姐，有小木琴、緞帶棒和薄荷色洋裝。"],
+            ["horse-younger-brother.webp", "馬弟弟", "小小的馬弟弟，拿著木頭商隊車和小陀螺。"],
+            ["horse-younger-sister.webp", "馬妹妹", "可愛的馬妹妹，有紙風車、水果珠小包和珊瑚蝴蝶結。"],
+            ["horse-baby.webp", "馬寶寶", "最小的馬寶寶，坐著拿小搖鈴、固齒環和布球。"],
+          ],
+        },
+        dolphin: {
+          label: "海豚家族",
+          species: "海豚",
+          basePath: `${pageBase}assets/characters/sea/dolphin/`,
+          characters: [
+            ["dolphin-grandpa.webp", "海豚爺爺", "溫和的海豚爺爺，有小眼鏡、空白卷軸、蘆葦杖和蓮花。"],
+            ["dolphin-grandma.webp", "海豚奶奶", "溫柔的海豚奶奶，有小眼鏡、陶瓶、小杯子和蓮花籃。"],
+            ["dolphin-father.webp", "海豚爸爸", "穩重的海豚爸爸，有紙莎草扇、陶罐和藤籃。"],
+            ["dolphin-mother.webp", "海豚媽媽", "親切的海豚媽媽，有蓮花籃、空白紙莎草扇和小陶瓶。"],
+            ["dolphin-older-brother.webp", "海豚哥哥", "活潑的海豚哥哥，有小搖鈴、背包和木頭小船玩具。"],
+            ["dolphin-older-sister.webp", "海豚姐姐", "開朗的海豚姐姐，有小豎琴、紙莎草扇和薄荷色亞麻披肩。"],
+            ["dolphin-younger-brother.webp", "海豚弟弟", "小小的海豚弟弟，拿著木頭小船、陀螺和小袋子。"],
+            ["dolphin-younger-sister.webp", "海豚妹妹", "可愛的海豚妹妹，有紙風車、蓮花小包和珊瑚蝴蝶結。"],
+            ["dolphin-baby.webp", "海豚寶寶", "最小的海豚寶寶，漂浮著拿小搖鈴、固齒環和布球。"],
+          ],
+        },
+        whale: {
+          label: "鯨魚家族",
+          species: "鯨魚",
+          basePath: `${pageBase}assets/characters/sea/whale/`,
+          characters: [
+            ["whale-grandpa.webp", "鯨魚爺爺", "溫和的鯨魚爺爺，有小眼鏡、空白航海圖、羅盤和木指揮杖。"],
+            ["whale-grandma.webp", "鯨魚奶奶", "溫柔的鯨魚奶奶，有小眼鏡、茶壺、小杯子和海玻璃籃。"],
+            ["whale-father.webp", "鯨魚爸爸", "穩重的鯨魚爸爸，有望遠鏡、工具包和空白圓形儀表。"],
+            ["whale-mother.webp", "鯨魚媽媽", "親切的鯨魚媽媽，有紙花工具籃、無標籤油壺和安全玩具工具。"],
+            ["whale-older-brother.webp", "鯨魚哥哥", "活潑的鯨魚哥哥，有齒輪玩具、潛水鐘模型和空白筆記本。"],
+            ["whale-older-sister.webp", "鯨魚姐姐", "開朗的鯨魚姐姐，有放大鏡、空白素描本和緞帶棒。"],
+            ["whale-younger-brother.webp", "鯨魚弟弟", "小小的鯨魚弟弟，拿著發條潛水艇玩具、齒輪陀螺和小袋子。"],
+            ["whale-younger-sister.webp", "鯨魚妹妹", "可愛的鯨魚妹妹，有紙風車、齒輪小包和珊瑚蝴蝶結。"],
+            ["whale-baby.webp", "鯨魚寶寶", "最小的鯨魚寶寶，漂浮著拿小搖鈴、齒輪固齒環和布球。"],
+          ],
+        },
+        seal: {
+          label: "海豹家族",
+          species: "海豹",
+          basePath: `${pageBase}assets/characters/sea/seal/`,
+          characters: [
+            ["seal-grandpa.webp", "海豹爺爺", "溫和的海豹爺爺，有小眼鏡、空白研究筆記、木手杖和羅盤。"],
+            ["seal-grandma.webp", "海豹奶奶", "溫柔的海豹奶奶，有小眼鏡、保溫杯、石頭貝殼籃和空白採樣牌。"],
+            ["seal-father.webp", "海豹爸爸", "穩重的海豹爸爸，有望遠鏡、野外背包和空白天氣儀表。"],
+            ["seal-mother.webp", "海豹媽媽", "親切的海豹媽媽，有研究工具籃、無標籤採樣瓶和安全小工具。"],
+            ["seal-older-brother.webp", "海豹哥哥", "活潑的海豹哥哥，有小雪橇、放大鏡、背包和空白筆記本。"],
+            ["seal-older-sister.webp", "海豹姐姐", "開朗的海豹姐姐，有空白素描本、觀察鏡和薄荷色探險披肩。"],
+            ["seal-younger-brother.webp", "海豹弟弟", "小小的海豹弟弟，拿著木頭雪車、陀螺和小袋子。"],
+            ["seal-younger-sister.webp", "海豹妹妹", "可愛的海豹妹妹，有紙風車、冰珠小包和珊瑚蝴蝶結。"],
+            ["seal-baby.webp", "海豹寶寶", "最小的海豹寶寶，坐著拿小搖鈴、固齒環和布球。"],
+          ],
+        },
+        turtle: {
+          label: "海龜家族",
+          species: "海龜",
+          basePath: `${pageBase}assets/characters/sea/turtle/`,
+          characters: [
+            ["turtle-grandpa.webp", "海龜爺爺", "溫和的海龜爺爺，有草帽、小眼鏡、木槳、空白航海布和編織小袋。"],
+            ["turtle-grandma.webp", "海龜奶奶", "溫柔的海龜奶奶，有小眼鏡、編織扇、茶杯、花籃和貝殼。"],
+            ["turtle-father.webp", "海龜爸爸", "穩重的海龜爸爸，有繩圈、空白木盤、工具袋和空白天氣板。"],
+            ["turtle-mother.webp", "海龜媽媽", "親切的海龜媽媽，有花冠、果物玩具籃、托盤和無標籤杯子。"],
+            ["turtle-older-brother.webp", "海龜哥哥", "活潑的海龜哥哥，有小帆船玩具、觀察筒、背包和空白筆記本。"],
+            ["turtle-older-sister.webp", "海龜姐姐", "開朗的海龜姐姐，有小相機、空白畫板、花環和編織小包。"],
+            ["turtle-younger-brother.webp", "海龜弟弟", "小小的海龜弟弟，拿著椰殼鼓、小木船、貝殼陀螺和繩球。"],
+            ["turtle-younger-sister.webp", "海龜妹妹", "可愛的海龜妹妹，有紙風車、花籃、貝殼玩具和編織小包。"],
+            ["turtle-baby.webp", "海龜寶寶", "最小的海龜寶寶，坐著拿小搖鈴、固齒環和小布球。"],
+          ],
+        },
+        octopus: {
+          label: "章魚家族",
+          species: "章魚",
+          basePath: `${pageBase}assets/characters/sea/octopus/`,
+          characters: [
+            ["octopus-grandpa.webp", "章魚爺爺", "溫和的章魚爺爺，有小眼鏡、木手杖、空白卷軸和無字懷錶。"],
+            ["octopus-grandma.webp", "章魚奶奶", "溫柔的章魚奶奶，有小眼鏡、摺扇、茶杯和花籃。"],
+            ["octopus-father.webp", "章魚爸爸", "穩重的章魚爸爸，有背包、空白冊子、無字羅盤和木尺。"],
+            ["octopus-mother.webp", "章魚媽媽", "親切的章魚媽媽，有花籃、無標籤香水瓶和空白手鏡。"],
+            ["octopus-older-brother.webp", "章魚哥哥", "活潑的章魚哥哥，有小船玩具、觀察筒、背包和空白筆記本。"],
+            ["octopus-older-sister.webp", "章魚姐姐", "開朗的章魚姐姐，有小相機、空白畫板、緞帶圈和編織小包。"],
+            ["octopus-younger-brother.webp", "章魚弟弟", "小小的章魚弟弟，拿著木船、陀螺、繩球和空白小票。"],
+            ["octopus-younger-sister.webp", "章魚妹妹", "可愛的章魚妹妹，有紙風車、花籃、空白吊牌和編織小包。"],
+            ["octopus-baby.webp", "章魚寶寶", "最小的章魚寶寶，拿著小搖鈴、固齒環、布球和玩具面具。"],
+          ],
+        },
+        squid: {
+          label: "魷魚家族",
+          species: "魷魚",
+          basePath: `${pageBase}assets/characters/sea/squid/`,
+          characters: [
+            ["squid-grandpa.webp", "魷魚爺爺", "溫和的魷魚爺爺，有小眼鏡、手杖、空白平板和無字圓形裝置。"],
+            ["squid-grandma.webp", "魷魚奶奶", "溫柔的魷魚奶奶，有小眼鏡、透明扇、茶杯和柔光花籃。"],
+            ["squid-father.webp", "魷魚爸爸", "穩重的魷魚爸爸，有背包、空白光板和無字感測圓盤。"],
+            ["squid-mother.webp", "魷魚媽媽", "親切的魷魚媽媽，有柔光花籃、無標籤小瓶、空白手鏡和托盤。"],
+            ["squid-older-brother.webp", "魷魚哥哥", "活潑的魷魚哥哥，有玩具飛板、光學筒、背包和空白筆記本。"],
+            ["squid-older-sister.webp", "魷魚姐姐", "開朗的魷魚姐姐，有小相機、空白繪圖板、光圈緞帶和小包。"],
+            ["squid-younger-brother.webp", "魷魚弟弟", "小小的魷魚弟弟，拿著玩具飛行器、發光陀螺、光球和空白小平板。"],
+            ["squid-younger-sister.webp", "魷魚妹妹", "可愛的魷魚妹妹，有光風車、發光珠籃、星星玩具和空白吊牌。"],
+            ["squid-baby.webp", "魷魚寶寶", "最小的魷魚寶寶，拿著小搖鈴、固齒環、布球和星星玩具。"],
+          ],
+        },
+        crab: {
+          label: "螃蟹家族",
+          species: "螃蟹",
+          basePath: `${pageBase}assets/characters/sea/crab/`,
+          characters: [
+            ["crab-grandpa.webp", "螃蟹爺爺", "溫和的螃蟹爺爺，有小眼鏡、木手杖、空白卷軸和無字木牌。"],
+            ["crab-grandma.webp", "螃蟹奶奶", "溫柔的螃蟹奶奶，有小眼鏡、編織扇、花籃、貝殼和茶杯。"],
+            ["crab-father.webp", "螃蟹爸爸", "穩重的螃蟹爸爸，有背包、空白木板和無字圓形量盤。"],
+            ["crab-mother.webp", "螃蟹媽媽", "親切的螃蟹媽媽，有花籃、無標籤陶瓶、托盤和布袋。"],
+            ["crab-older-brother.webp", "螃蟹哥哥", "活潑的螃蟹哥哥，有小推車、繩球、空白筆記本和無字木牌。"],
+            ["crab-older-sister.webp", "螃蟹姐姐", "開朗的螃蟹姐姐，有木頭觀景盒、空白畫板、花環和編織小包。"],
+            ["crab-younger-brother.webp", "螃蟹弟弟", "小小的螃蟹弟弟，拿著小推車、陀螺、繩球和空白木牌。"],
+            ["crab-younger-sister.webp", "螃蟹妹妹", "可愛的螃蟹妹妹，有紙風車、花籃、貝殼玩具和空白吊牌。"],
+            ["crab-baby.webp", "螃蟹寶寶", "最小的螃蟹寶寶，拿著小搖鈴、固齒環、布球和貝殼玩具。"],
+          ],
+        },
+        shrimp: {
+          label: "蝦家族",
+          species: "蝦",
+          basePath: `${pageBase}assets/characters/sea/shrimp/`,
+          characters: [
+            ["shrimp-grandpa.webp", "蝦爺爺", "溫和的蝦爺爺，有小眼鏡、手杖、空白音樂卡和無字銅圓盤。"],
+            ["shrimp-grandma.webp", "蝦奶奶", "溫柔的蝦奶奶，有小眼鏡、摺扇、茶杯和花籃。"],
+            ["shrimp-father.webp", "蝦爸爸", "穩重的蝦爸爸，有玩具小號、背包、空白節奏板和無字銅圓盤。"],
+            ["shrimp-mother.webp", "蝦媽媽", "親切的蝦媽媽，有玩具麥克風、花籃、無標籤香水瓶和空白手鏡。"],
+            ["shrimp-older-brother.webp", "蝦哥哥", "活潑的蝦哥哥，有玩具薩克斯風、背包、空白筆記本和小鼓。"],
+            ["shrimp-older-sister.webp", "蝦姐姐", "開朗的蝦姐姐，有小相機、空白舞卡、緞帶圈和花籃。"],
+            ["shrimp-younger-brother.webp", "蝦弟弟", "小小的蝦弟弟，拿著小鼓、陀螺、節奏搖鈴和空白木牌。"],
+            ["shrimp-younger-sister.webp", "蝦妹妹", "可愛的蝦妹妹，有紙風車、花籃、鈴鼓玩具和空白吊牌。"],
+            ["shrimp-baby.webp", "蝦寶寶", "最小的蝦寶寶，拿著小搖鈴、固齒環、布球和小鼓玩具。"],
+          ],
+        },
+        fish: {
+          label: "魚家族",
+          species: "魚",
+          basePath: `${pageBase}assets/characters/sea/fish/`,
+          characters: [
+            ["fish-grandpa.webp", "魚爺爺", "溫和的魚爺爺，有小眼鏡、手杖、摺扇、茶杯和無字小燈籠。"],
+            ["fish-grandma.webp", "魚奶奶", "溫柔的魚奶奶，有小眼鏡、團扇、茶杯、花籃和小布袋。"],
+            ["fish-father.webp", "魚爸爸", "穩重的魚爸爸，有小鼓、摺扇、無標籤點心盒和小背包。"],
+            ["fish-mother.webp", "魚媽媽", "親切的魚媽媽，有花籃、手鏡、無標籤香水瓶和小布袋。"],
+            ["fish-older-brother.webp", "魚哥哥", "活潑的魚哥哥，有小鼓、團扇、彩球和空白祭典卡。"],
+            ["fish-older-sister.webp", "魚姐姐", "開朗的魚姐姐，有紙傘、紙風車、花籃和空白吊牌。"],
+            ["fish-younger-brother.webp", "魚弟弟", "小小的魚弟弟，拿著陀螺、彩球、小鼓和空白木牌。"],
+            ["fish-younger-sister.webp", "魚妹妹", "可愛的魚妹妹，有紙風車、糖蘋果、花籃和空白吊牌。"],
+            ["fish-baby.webp", "魚寶寶", "最小的魚寶寶，拿著小搖鈴、固齒環、布球和小鼓玩具。"],
+          ],
+        },
+        tropicalFish: {
+          label: "彩魚家族",
+          species: "彩魚",
+          basePath: `${pageBase}assets/characters/sea/tropical-fish/`,
+          characters: [
+            ["tropical-fish-grandpa.webp", "彩魚爺爺", "溫和的彩魚爺爺，有小眼鏡、手杖、花環、果汁和掌葉扇。"],
+            ["tropical-fish-grandma.webp", "彩魚奶奶", "溫柔的彩魚奶奶，有小眼鏡、花冠、編織扇、花籃和水果杯。"],
+            ["tropical-fish-father.webp", "彩魚爸爸", "穩重的彩魚爸爸，有小沙鈴、小鼓、水果籃和掌葉扇。"],
+            ["tropical-fish-mother.webp", "彩魚媽媽", "親切的彩魚媽媽，有花籃、手鏡、果汁和小提包。"],
+            ["tropical-fish-older-brother.webp", "彩魚哥哥", "活潑的彩魚哥哥，有小沙鈴、小鼓、空白舞卡和彩球。"],
+            ["tropical-fish-older-sister.webp", "彩魚姐姐", "開朗的彩魚姐姐，有緞帶圈、小沙鈴、花籃和空白吊牌。"],
+            ["tropical-fish-younger-brother.webp", "彩魚弟弟", "小小的彩魚弟弟，拿著彩球、小沙鈴、陀螺和空白吊牌。"],
+            ["tropical-fish-younger-sister.webp", "彩魚妹妹", "可愛的彩魚妹妹，有紙風車、小鈴鼓、花籃和空白吊牌。"],
+            ["tropical-fish-baby.webp", "彩魚寶寶", "最小的彩魚寶寶，拿著小搖鈴、固齒環、布球和小花玩具。"],
+          ],
+        },
+        blowfish: {
+          label: "河豚家族",
+          species: "河豚",
+          basePath: `${pageBase}assets/characters/sea/blowfish/`,
+          characters: [
+            ["blowfish-grandpa.webp", "河豚爺爺", "溫和的河豚爺爺，有小眼鏡、手杖、空白地圖、小燈和熱飲。"],
+            ["blowfish-grandma.webp", "河豚奶奶", "溫柔的河豚奶奶，有小眼鏡、保暖手套、莓果籃和熱飲。"],
+            ["blowfish-father.webp", "河豚爸爸", "穩重的河豚爸爸，有探險背包、熱飲、空白記錄板和小燈。"],
+            ["blowfish-mother.webp", "河豚媽媽", "親切的河豚媽媽，有花籃、手鏡、熱飲和手套小包。"],
+            ["blowfish-older-brother.webp", "河豚哥哥", "活潑的河豚哥哥，有背包、小燈、空白觀察卡和雪橇玩具。"],
+            ["blowfish-older-sister.webp", "河豚姐姐", "開朗的河豚姐姐，有針織手套、莓果花籃、空白吊牌和小鈴玩具。"],
+            ["blowfish-younger-brother.webp", "河豚弟弟", "小小的河豚弟弟，拿著雪球玩具、雪橇玩具、陀螺和空白木牌。"],
+            ["blowfish-younger-sister.webp", "河豚妹妹", "可愛的河豚妹妹，有針織手套、莓果花籃、小鈴玩具和空白吊牌。"],
+            ["blowfish-baby.webp", "河豚寶寶", "最小的河豚寶寶，拿著小搖鈴、固齒環、布球和手套玩具。"],
+          ],
+        },
+        jellyfish: {
+          label: "水母家族",
+          species: "水母",
+          basePath: `${pageBase}assets/characters/sea/jellyfish/`,
+          characters: [
+            ["jellyfish-grandpa.webp", "水母爺爺", "溫和的水母爺爺，有小眼鏡、手杖、發光小燈、空白紙和熱飲。"],
+            ["jellyfish-grandma.webp", "水母奶奶", "溫柔的水母奶奶，有小眼鏡、花冠、扇子、花籃和發光杯。"],
+            ["jellyfish-father.webp", "水母爸爸", "穩重的水母爸爸，有發光小燈、空白板、花籃和小鈴玩具。"],
+            ["jellyfish-mother.webp", "水母媽媽", "親切的水母媽媽，有花籃、手鏡、發光小瓶和空白吊牌。"],
+            ["jellyfish-older-brother.webp", "水母哥哥", "活潑的水母哥哥，有發光小燈、空白筆記本、緞帶圈和小鈴玩具。"],
+            ["jellyfish-older-sister.webp", "水母姐姐", "開朗的水母姐姐，有發光花杖、緞帶圈、花籃和空白吊牌。"],
+            ["jellyfish-younger-brother.webp", "水母弟弟", "小小的水母弟弟，拿著發光搖鈴、陀螺、緞帶玩具和空白木牌。"],
+            ["jellyfish-younger-sister.webp", "水母妹妹", "可愛的水母妹妹，有發光花搖鈴、花籃、緞帶玩具和空白吊牌。"],
+            ["jellyfish-baby.webp", "水母寶寶", "最小的水母寶寶，拿著發光搖鈴、固齒環、布球和小花玩具。"],
+          ],
+        },
+        starfish: {
+          label: "海星家族",
+          species: "海星",
+          basePath: `${pageBase}assets/characters/sea/starfish/`,
+          characters: [
+            ["starfish-grandpa.webp", "海星爺爺", "溫和的海星爺爺，有小眼鏡、手杖、空白節目卡、小燈和熱飲。"],
+            ["starfish-grandma.webp", "海星奶奶", "溫柔的海星奶奶，有小眼鏡、摺扇、花籃、熱飲和空白吊牌。"],
+            ["starfish-father.webp", "海星爸爸", "穩重的海星爸爸，有小燈、空白提示卡、圓頭指揮棒和花籃。"],
+            ["starfish-mother.webp", "海星媽媽", "親切的海星媽媽，有花籃、手鏡、無標籤香水瓶和空白吊牌。"],
+            ["starfish-older-brother.webp", "海星哥哥", "活潑的海星哥哥，有小燈、空白筆記本、圓頭指揮棒和緞帶圈。"],
+            ["starfish-older-sister.webp", "海星姐姐", "開朗的海星姐姐，有花籃、緞帶圈、摺扇和空白吊牌。"],
+            ["starfish-younger-brother.webp", "海星弟弟", "小小的海星弟弟，拿著小燈玩具、陀螺、緞帶圈和空白木牌。"],
+            ["starfish-younger-sister.webp", "海星妹妹", "可愛的海星妹妹，有花籃、緞帶圈、小鈴鼓和空白吊牌。"],
+            ["starfish-baby.webp", "海星寶寶", "最小的海星寶寶，拿著小搖鈴、固齒環、布球和小燈玩具。"],
+          ],
+        },
+        seahorse: {
+          label: "海馬家族",
+          species: "海馬",
+          basePath: `${pageBase}assets/characters/sea/seahorse/`,
+          characters: [
+            ["seahorse-grandpa.webp", "海馬爺爺", "溫和的海馬爺爺，有小眼鏡、手杖、空白書本、小燈和熱飲。"],
+            ["seahorse-grandma.webp", "海馬奶奶", "溫柔的海馬奶奶，有小眼鏡、空白書本、摺扇、花籃和熱飲。"],
+            ["seahorse-father.webp", "海馬爸爸", "穩重的海馬爸爸，有空白書本、小燈、花籃和無字卷軸筒。"],
+            ["seahorse-mother.webp", "海馬媽媽", "親切的海馬媽媽，有花籃、手鏡、無標籤小瓶和空白書本。"],
+            ["seahorse-older-brother.webp", "海馬哥哥", "活潑的海馬哥哥，有空白筆記本、小燈、緞帶圈和無字卷軸筒。"],
+            ["seahorse-older-sister.webp", "海馬姐姐", "開朗的海馬姐姐，有花籃、空白書本、緞帶圈和小燈。"],
+            ["seahorse-younger-brother.webp", "海馬弟弟", "小小的海馬弟弟，拿著陀螺、空白木牌、小燈玩具和空白書本。"],
+            ["seahorse-younger-sister.webp", "海馬妹妹", "可愛的海馬妹妹，有花籃、緞帶圈、空白吊牌和小書。"],
+            ["seahorse-baby.webp", "海馬寶寶", "最小的海馬寶寶，拿著小搖鈴、固齒環、布球和小書玩具。"],
+          ],
+        },
+        clam: {
+          label: "蛤蜊家族",
+          species: "蛤蜊",
+          basePath: `${pageBase}assets/characters/sea/clam/`,
+          characters: [
+            ["clam-grandpa.webp", "蛤蜊爺爺", "溫和的蛤蜊爺爺，有小眼鏡、手杖、空白珍珠帳本、小燈和熱飲。"],
+            ["clam-grandma.webp", "蛤蜊奶奶", "溫柔的蛤蜊奶奶，有小眼鏡、摺扇、珍珠籃、熱茶和空白吊牌。"],
+            ["clam-father.webp", "蛤蜊爸爸", "穩重的蛤蜊爸爸，有空白帳本、小燈、拋光布和珍珠籃。"],
+            ["clam-mother.webp", "蛤蜊媽媽", "親切的蛤蜊媽媽，有花籃、手鏡、無標籤小瓶和空白帳本。"],
+            ["clam-older-brother.webp", "蛤蜊哥哥", "活潑的蛤蜊哥哥，有空白筆記本、小燈、拋光布和緞帶圈。"],
+            ["clam-older-sister.webp", "蛤蜊姐姐", "開朗的蛤蜊姐姐，有花籃、緞帶圈、摺扇和空白吊牌。"],
+            ["clam-younger-brother.webp", "蛤蜊弟弟", "小小的蛤蜊弟弟，拿著陀螺、空白木牌、小燈玩具和拋光布。"],
+            ["clam-younger-sister.webp", "蛤蜊妹妹", "可愛的蛤蜊妹妹，有花籃、緞帶圈、小鈴鼓和空白吊牌。"],
+            ["clam-baby.webp", "蛤蜊寶寶", "最小的蛤蜊寶寶，拿著小搖鈴、固齒環、布球和小珍珠玩具。"],
+          ],
+        },
+        bird: {
+          label: "小鳥家族",
+          species: "小鳥",
+          basePath: `${pageBase}assets/characters/sky/bird/`,
+          characters: [
+            ["bird-grandpa.webp", "小鳥爺爺", "溫和的小鳥爺爺，有飛行帽、信件包、指南針和圍巾。"],
+            ["bird-grandma.webp", "小鳥奶奶", "溫柔的小鳥奶奶，有飛行帽、空白信紙、茶杯和小籃子。"],
+            ["bird-father.webp", "小鳥爸爸", "穩重的小鳥爸爸，有飛行帽、空白夾板、郵差包和玩具飛機。"],
+            ["bird-mother.webp", "小鳥媽媽", "親切的小鳥媽媽，有花籃、空白信封和小收音機。"],
+            ["bird-older-brother.webp", "小鳥哥哥", "活潑的小鳥哥哥，有空白筆記本、玩具飛機、緞帶圈和小包。"],
+            ["bird-older-sister.webp", "小鳥姐姐", "開朗的小鳥姐姐，有相機、花環、空白夾板和小包。"],
+            ["bird-younger-brother.webp", "小鳥弟弟", "小小的小鳥弟弟，有玩具飛機、陀螺、球和郵差包。"],
+            ["bird-younger-sister.webp", "小鳥妹妹", "可愛的小鳥妹妹，有花籃、相機、空白信封和緞帶圈。"],
+            ["bird-baby.webp", "小鳥寶寶", "最小的小鳥寶寶，有搖鈴、球、固齒環和玩具飛機。"],
+          ],
+        },
+        eagle: {
+          label: "老鷹家族",
+          species: "老鷹",
+          basePath: `${pageBase}assets/characters/sky/eagle/`,
+          characters: [
+            ["eagle-grandpa.webp", "老鷹爺爺", "溫和的老鷹爺爺，有登山帽、望遠鏡、空白卷軸和木杖。"],
+            ["eagle-grandma.webp", "老鷹奶奶", "溫柔的老鷹奶奶，有花帽、花籃、空白卡片和茶杯。"],
+            ["eagle-father.webp", "老鷹爸爸", "穩重的老鷹爸爸，有探險背心、望遠鏡、空白書本和繩圈。"],
+            ["eagle-mother.webp", "老鷹媽媽", "親切的老鷹媽媽，有花籃、空白卡片、小燈和圍裙。"],
+            ["eagle-older-brother.webp", "老鷹哥哥", "活潑的老鷹哥哥，有背包、望遠鏡、空白筆記本和石頭收藏。"],
+            ["eagle-older-sister.webp", "老鷹姐姐", "開朗的老鷹姐姐，有花環、相機、空白夾板和小包。"],
+            ["eagle-younger-brother.webp", "老鷹弟弟", "小小的老鷹弟弟，有望遠鏡、圓石、繩球和小包。"],
+            ["eagle-younger-sister.webp", "老鷹妹妹", "可愛的老鷹妹妹，有花籃、相機、緞帶圈和空白卡片。"],
+            ["eagle-baby.webp", "老鷹寶寶", "最小的老鷹寶寶，有搖鈴、球、固齒環和玩具望遠鏡。"],
+          ],
+        },
+        owl: {
+          label: "貓頭鷹家族",
+          species: "貓頭鷹",
+          basePath: `${pageBase}assets/characters/sky/owl/`,
+          characters: [
+            ["owl-grandpa.webp", "貓頭鷹爺爺", "溫和的貓頭鷹爺爺，有小眼鏡、空白書本、小燈和羽毛書籤。"],
+            ["owl-grandma.webp", "貓頭鷹奶奶", "溫柔的貓頭鷹奶奶，有小眼鏡、空白書本、熱茶和星星小燈。"],
+            ["owl-father.webp", "貓頭鷹爸爸", "穩重的貓頭鷹爸爸，有空白書本、小燈、卷軸筒和羽毛書籤。"],
+            ["owl-mother.webp", "貓頭鷹媽媽", "親切的貓頭鷹媽媽，有花籃、手鏡、空白書本和小燈。"],
+            ["owl-older-brother.webp", "貓頭鷹哥哥", "活潑的貓頭鷹哥哥，有空白筆記本、星象儀玩具、羽毛書籤和小背包。"],
+            ["owl-older-sister.webp", "貓頭鷹姐姐", "開朗的貓頭鷹姐姐，有花籃、空白書本、小燈和緞帶圈。"],
+            ["owl-younger-brother.webp", "貓頭鷹弟弟", "小小的貓頭鷹弟弟，有陀螺、空白木牌、小燈玩具和羽毛書籤。"],
+            ["owl-younger-sister.webp", "貓頭鷹妹妹", "可愛的貓頭鷹妹妹，有花籃、緞帶圈、空白吊牌和小書。"],
+            ["owl-baby.webp", "貓頭鷹寶寶", "最小的貓頭鷹寶寶，有小搖鈴、固齒環、布球和小書玩具。"],
+          ],
+        },
+        duck: {
+          label: "鴨家族",
+          species: "鴨",
+          basePath: `${pageBase}assets/characters/sky/duck/`,
+          characters: [
+            ["duck-grandpa.webp", "鴨爺爺", "溫和的鴨爺爺，有雨衣、空白報紙、玩具船和雨傘。"],
+            ["duck-grandma.webp", "鴨奶奶", "溫柔的鴨奶奶，有花帽、鬱金香籃、茶杯和雨傘。"],
+            ["duck-father.webp", "鴨爸爸", "穩重的鴨爸爸，有雨外套、空白夾板、玩具運河船和側背包。"],
+            ["duck-mother.webp", "鴨媽媽", "親切的鴨媽媽，有鬱金香籃、空白卡片、澆水壺和雨傘。"],
+            ["duck-older-brother.webp", "鴨哥哥", "活潑的鴨哥哥，有小風車、空白筆記本、玩具船和球。"],
+            ["duck-older-sister.webp", "鴨姐姐", "開朗的鴨姐姐，有鬱金香籃、相機、空白明信片和緞帶圈。"],
+            ["duck-younger-brother.webp", "鴨弟弟", "小小的鴨弟弟，有玩具船、小車、空白木票和球。"],
+            ["duck-younger-sister.webp", "鴨妹妹", "可愛的鴨妹妹，有鬱金香籃、娃娃、空白明信片和緞帶圈。"],
+            ["duck-baby.webp", "鴨寶寶", "最小的鴨寶寶，有搖鈴、固齒環、球和小船玩具。"],
+          ],
+        },
+        swan: {
+          label: "天鵝家族",
+          species: "天鵝",
+          basePath: `${pageBase}assets/characters/sky/swan/`,
+          characters: [
+            ["swan-grandpa.webp", "天鵝爺爺", "溫和的天鵝爺爺，有宮廷外套、空白節目單、指揮棒和望遠鏡。"],
+            ["swan-grandma.webp", "天鵝奶奶", "溫柔的天鵝奶奶，有紫色披肩、花扇、茶杯和空白節目單。"],
+            ["swan-father.webp", "天鵝爸爸", "穩重的天鵝爸爸，有宮廷背心、空白樂譜、花束和望遠鏡。"],
+            ["swan-mother.webp", "天鵝媽媽", "親切的天鵝媽媽，有花籃、空白邀請卡、手鏡和芭蕾舞鞋。"],
+            ["swan-older-brother.webp", "天鵝哥哥", "活潑的天鵝哥哥，有空白練習本、舞台面具、花束和望遠鏡。"],
+            ["swan-older-sister.webp", "天鵝姐姐", "開朗的天鵝姐姐，有花籃、空白節目卡、緞帶圈和手鏡。"],
+            ["swan-younger-brother.webp", "天鵝弟弟", "小小的天鵝弟弟，有玩具馬車、空白木票、球和緞帶棒。"],
+            ["swan-younger-sister.webp", "天鵝妹妹", "可愛的天鵝妹妹，有芭蕾娃娃、花籃、空白卡片和緞帶圈。"],
+            ["swan-baby.webp", "天鵝寶寶", "最小的天鵝寶寶，有搖鈴、固齒環、球和芭蕾舞鞋玩具。"],
+          ],
+        },
+        flamingo: {
+          label: "火鶴家族",
+          species: "火鶴",
+          basePath: `${pageBase}assets/characters/sky/flamingo/`,
+          characters: [
+            ["flamingo-grandpa.webp", "火鶴爺爺", "溫和的火鶴爺爺，有草帽、空白報紙、花環和沙鈴。"],
+            ["flamingo-grandma.webp", "火鶴奶奶", "溫柔的火鶴奶奶，有花飾、鈴鼓、杯子和花籃。"],
+            ["flamingo-father.webp", "火鶴爸爸", "穩重的火鶴爸爸，有白襯衫、空白卡片、沙鈴和小鼓。"],
+            ["flamingo-mother.webp", "火鶴媽媽", "親切的火鶴媽媽，有花朵、扇子、沙鈴和緞帶圈。"],
+            ["flamingo-older-brother.webp", "火鶴哥哥", "活潑的火鶴哥哥，有背包、小鼓、空白筆記本和玩具喇叭。"],
+            ["flamingo-older-sister.webp", "火鶴姐姐", "開朗的火鶴姐姐，有相機、花環、空白卡片和緞帶圈。"],
+            ["flamingo-younger-brother.webp", "火鶴弟弟", "小小的火鶴弟弟，有玩具鼓、小車、空白木票和球。"],
+            ["flamingo-younger-sister.webp", "火鶴妹妹", "可愛的火鶴妹妹，有娃娃、花籃、空白卡片和緞帶圈。"],
+            ["flamingo-baby.webp", "火鶴寶寶", "最小的火鶴寶寶，有搖鈴、固齒環、球和小沙鈴。"],
+          ],
+        },
+        penguin: {
+          label: "企鵝家族",
+          species: "企鵝",
+          basePath: `${pageBase}assets/characters/sky/penguin/`,
+          characters: [
+            ["penguin-grandpa.webp", "企鵝爺爺", "溫和的企鵝爺爺，有極地探險裝、觀察筆記和小儀器。"],
+            ["penguin-grandma.webp", "企鵝奶奶", "親切的企鵝奶奶，有暖披肩、保溫杯和極地小籃。"],
+            ["penguin-father.webp", "企鵝爸爸", "穩重的企鵝爸爸，有防寒外套、地圖板和探測工具。"],
+            ["penguin-mother.webp", "企鵝媽媽", "溫柔的企鵝媽媽，有暖色外套、筆記板和小相機。"],
+            ["penguin-older-brother.webp", "企鵝哥哥", "活潑的企鵝哥哥，有背包、望遠鏡和極地玩具。"],
+            ["penguin-older-sister.webp", "企鵝姐姐", "開朗的企鵝姐姐，有記錄板、相機和小包包。"],
+            ["penguin-younger-brother.webp", "企鵝弟弟", "小小的企鵝弟弟，有玩具車、雪球和探險小物。"],
+            ["penguin-younger-sister.webp", "企鵝妹妹", "可愛的企鵝妹妹，有小娃娃、蝴蝶結和極地籃。"],
+            ["penguin-baby.webp", "企鵝寶寶", "最小的企鵝寶寶，有搖鈴、固齒環和柔軟玩具。"],
+          ],
+        },
+        bat: {
+          label: "蝙蝠家族",
+          species: "蝙蝠",
+          basePath: `${pageBase}assets/characters/sky/bat/`,
+          characters: [
+            ["bat-grandpa.webp", "蝙蝠爺爺", "溫和的蝙蝠爺爺，有劇場披風、眼鏡和空白節目單。"],
+            ["bat-grandma.webp", "蝙蝠奶奶", "親切的蝙蝠奶奶，有優雅披肩、花籃和小燈。"],
+            ["bat-father.webp", "蝙蝠爸爸", "穩重的蝙蝠爸爸，有劇場外套、面具和空白卡片。"],
+            ["bat-mother.webp", "蝙蝠媽媽", "溫柔的蝙蝠媽媽，有深色洋裝、燭台和小包包。"],
+            ["bat-older-brother.webp", "蝙蝠哥哥", "活潑的蝙蝠哥哥，有背包、玩具面具和小道具。"],
+            ["bat-older-sister.webp", "蝙蝠姐姐", "開朗的蝙蝠姐姐，有相機、空白筆記本和緞帶。"],
+            ["bat-younger-brother.webp", "蝙蝠弟弟", "小小的蝙蝠弟弟，有玩具車、機器人和小球。"],
+            ["bat-younger-sister.webp", "蝙蝠妹妹", "可愛的蝙蝠妹妹，有小娃娃、蝴蝶結和小包包。"],
+            ["bat-baby.webp", "蝙蝠寶寶", "最小的蝙蝠寶寶，有搖鈴、固齒環和柔軟玩具。"],
+          ],
+        },
+        butterfly: {
+          label: "蝴蝶家族",
+          species: "蝴蝶",
+          basePath: `${pageBase}assets/characters/sky/butterfly/`,
+          characters: [
+            ["butterfly-grandpa.webp", "蝴蝶爺爺", "溫和的蝴蝶爺爺，有茶會背心、眼鏡和花籃。"],
+            ["butterfly-grandma.webp", "蝴蝶奶奶", "親切的蝴蝶奶奶，有紫色披肩、茶杯和花籃。"],
+            ["butterfly-father.webp", "蝴蝶爸爸", "穩重的蝴蝶爸爸，有紳士外套、茶杯和空白卡片。"],
+            ["butterfly-mother.webp", "蝴蝶媽媽", "溫柔的蝴蝶媽媽，有花園洋裝、茶壺和小鏡。"],
+            ["butterfly-older-brother.webp", "蝴蝶哥哥", "活潑的蝴蝶哥哥，有筆記本、放大鏡和小背包。"],
+            ["butterfly-older-sister.webp", "蝴蝶姐姐", "開朗的蝴蝶姐姐，有相機、花籃和空白卡片。"],
+            ["butterfly-younger-brother.webp", "蝴蝶弟弟", "小小的蝴蝶弟弟，有玩具車、機器人和小球。"],
+            ["butterfly-younger-sister.webp", "蝴蝶妹妹", "可愛的蝴蝶妹妹，有娃娃、花籃和緞帶圈。"],
+            ["butterfly-baby.webp", "蝴蝶寶寶", "最小的蝴蝶寶寶，有搖鈴、固齒環和柔軟玩具。"],
+          ],
+        },
+        bee: {
+          label: "蜜蜂家族",
+          species: "蜜蜂",
+          basePath: `${pageBase}assets/characters/sky/bee/`,
+          characters: [
+            ["bee-grandpa.webp", "蜜蜂爺爺", "溫和的蜜蜂爺爺，有甜點工坊圍裙、蜂蜜棒和空白食譜卡。"],
+            ["bee-grandma.webp", "蜜蜂奶奶", "親切的蜜蜂奶奶，有花圍裙、蜂蜜蛋糕和茶杯。"],
+            ["bee-father.webp", "蜜蜂爸爸", "穩重的蜜蜂爸爸，有工作圍裙、蜂蜜罐和空白夾板。"],
+            ["bee-mother.webp", "蜜蜂媽媽", "溫柔的蜜蜂媽媽，有烘焙圍裙、攪拌碗和木匙。"],
+            ["bee-older-brother.webp", "蜜蜂哥哥", "活潑的蜜蜂哥哥，有外送背心、餅乾盒和小木匙。"],
+            ["bee-older-sister.webp", "蜜蜂姐姐", "開朗的蜜蜂姐姐，有紫色圍裙、蜂蜜塔和空白菜單。"],
+            ["bee-younger-brother.webp", "蜜蜂弟弟", "小小的蜜蜂弟弟，有玩具蜂蜜車、餅乾和小圍巾。"],
+            ["bee-younger-sister.webp", "蜜蜂妹妹", "可愛的蜜蜂妹妹，有蝴蝶結、杯子蛋糕玩偶和花籃。"],
+            ["bee-baby.webp", "蜜蜂寶寶", "最小的蜜蜂寶寶，有搖鈴、固齒環和蜂巢玩具。"],
+          ],
+        },
+        ladybug: {
+          label: "瓢蟲家族",
+          species: "瓢蟲",
+          basePath: `${pageBase}assets/characters/sky/ladybug/`,
+          characters: [
+            ["ladybug-grandpa.webp", "瓢蟲爺爺", "溫和的瓢蟲爺爺，有園丁背心、草帽和種子袋。"],
+            ["ladybug-grandma.webp", "瓢蟲奶奶", "親切的瓢蟲奶奶，有紫色披肩、澆水壺和花籃。"],
+            ["ladybug-father.webp", "瓢蟲爸爸", "穩重的瓢蟲爸爸，有園藝圍裙、耙子和空白計畫板。"],
+            ["ladybug-mother.webp", "瓢蟲媽媽", "溫柔的瓢蟲媽媽，有花盆、修枝剪和花園洋裝。"],
+            ["ladybug-older-brother.webp", "瓢蟲哥哥", "活潑的瓢蟲哥哥，有放大鏡、蘑菇地圖和小背包。"],
+            ["ladybug-older-sister.webp", "瓢蟲姐姐", "開朗的瓢蟲姐姐，有捕蟲網、空白筆記本和葉子圍巾。"],
+            ["ladybug-younger-brother.webp", "瓢蟲弟弟", "小小的瓢蟲弟弟，有玩具推車、橡實鏟和藍色吊帶褲。"],
+            ["ladybug-younger-sister.webp", "瓢蟲妹妹", "可愛的瓢蟲妹妹，有花朵娃娃、莓果籃和蝴蝶結。"],
+            ["ladybug-baby.webp", "瓢蟲寶寶", "最小的瓢蟲寶寶，有蘑菇搖鈴、固齒環和葉子玩具。"],
+          ],
+        },
+        dragonfly: {
+          label: "蜻蜓家族",
+          species: "蜻蜓",
+          basePath: `${pageBase}assets/characters/sky/dragonfly/`,
+          characters: [
+            ["dragonfly-grandpa.webp", "蜻蜓爺爺", "溫和的蜻蜓爺爺，有未來飛行背心、羅盤和空白地圖。"],
+            ["dragonfly-grandma.webp", "蜻蜓奶奶", "親切的蜻蜓奶奶，有紫色披肩、星星燈和空白清單。"],
+            ["dragonfly-father.webp", "蜻蜓爸爸", "穩重的蜻蜓爸爸，有飛行外套、滑翔玩具和空白平板。"],
+            ["dragonfly-mother.webp", "蜻蜓媽媽", "溫柔的蜻蜓媽媽，有通訊器、空白路線卡和透明圍裙。"],
+            ["dragonfly-older-brother.webp", "蜻蜓哥哥", "活潑的蜻蜓哥哥，有小型無人機、背包和任務卡。"],
+            ["dragonfly-older-sister.webp", "蜻蜓姐姐", "開朗的蜻蜓姐姐，有望遠鏡、空白筆記本和粉色飛行裙。"],
+            ["dragonfly-younger-brother.webp", "蜻蜓弟弟", "小小的蜻蜓弟弟，有玩具滑翔機、天空球和護目鏡。"],
+            ["dragonfly-younger-sister.webp", "蜻蜓妹妹", "可愛的蜻蜓妹妹，有星星玩偶、天空日記和小蝴蝶結。"],
+            ["dragonfly-baby.webp", "蜻蜓寶寶", "最小的蜻蜓寶寶，有飛機搖鈴、固齒環和雲朵玩具。"],
+          ],
+        },
+        firefly: {
+          label: "螢火蟲家族",
+          species: "螢火蟲",
+          basePath: `${pageBase}assets/characters/sky/firefly/`,
+          characters: [
+            ["firefly-grandpa.webp", "螢火蟲爺爺", "溫和的螢火蟲爺爺，有星光披巾、燈杖和空白星圖。"],
+            ["firefly-grandma.webp", "螢火蟲奶奶", "親切的螢火蟲奶奶，有紫色披肩、星星燈和花籃。"],
+            ["firefly-father.webp", "螢火蟲爸爸", "穩重的螢火蟲爸爸，有望遠鏡、路線卡和導覽外套。"],
+            ["firefly-mother.webp", "螢火蟲媽媽", "溫柔的螢火蟲媽媽，有燈籠籃、空白導覽卡和花裙。"],
+            ["firefly-older-brother.webp", "螢火蟲哥哥", "活潑的螢火蟲哥哥，有彗星玩具、背包和空白票卡。"],
+            ["firefly-older-sister.webp", "螢火蟲姐姐", "開朗的螢火蟲姐姐，有星星相機、日記和薄荷色洋裝。"],
+            ["firefly-younger-brother.webp", "螢火蟲弟弟", "小小的螢火蟲弟弟，有燈籠小車、月亮球和藍色連身衣。"],
+            ["firefly-younger-sister.webp", "螢火蟲妹妹", "可愛的螢火蟲妹妹，有星星娃娃、燈籠小包和蝴蝶結。"],
+            ["firefly-baby.webp", "螢火蟲寶寶", "最小的螢火蟲寶寶，有星星搖鈴、月亮固齒環和燈籠玩具。"],
+          ],
+        },
+        moth: {
+          label: "飛蛾家族",
+          species: "飛蛾",
+          basePath: `${pageBase}assets/characters/sky/moth/`,
+          characters: [
+            ["moth-grandpa.webp", "飛蛾爺爺", "溫和的飛蛾爺爺，有裁縫背心、線軸和空白紙樣。"],
+            ["moth-grandma.webp", "飛蛾奶奶", "親切的飛蛾奶奶，有紫色披肩、針插和布料。"],
+            ["moth-father.webp", "飛蛾爸爸", "穩重的飛蛾爸爸，有裁縫外套、剪刀和量身卡。"],
+            ["moth-mother.webp", "飛蛾媽媽", "溫柔的飛蛾媽媽，有月亮布料、線軸和縫紉圍裙。"],
+            ["moth-older-brother.webp", "飛蛾哥哥", "活潑的飛蛾哥哥，有布風箏、紙樣卡和小背包。"],
+            ["moth-older-sister.webp", "飛蛾姐姐", "開朗的飛蛾姐姐，有刺繡框、空白筆記本和薄荷洋裝。"],
+            ["moth-younger-brother.webp", "飛蛾弟弟", "小小的飛蛾弟弟，有布機器人、線軸和藍色連身衣。"],
+            ["moth-younger-sister.webp", "飛蛾妹妹", "可愛的飛蛾妹妹，有布娃娃、緞帶籃和粉色蝴蝶結。"],
+            ["moth-baby.webp", "飛蛾寶寶", "最小的飛蛾寶寶，有月亮玩偶、線軸搖鈴和固齒環。"],
+          ],
+        },
+        cicada: {
+          label: "蟬家族",
+          species: "蟬",
+          basePath: `${pageBase}assets/characters/sky/cicada/`,
+          characters: [
+            ["cicada-grandpa.webp", "蟬爺爺", "溫和的蟬爺爺，有夏日音樂背心、小鼓和空白樂譜卡。"],
+            ["cicada-grandma.webp", "蟬奶奶", "親切的蟬奶奶，有紫色披肩、鈴鼓和花籃。"],
+            ["cicada-father.webp", "蟬爸爸", "穩重的蟬爸爸，有白襯衫、沙鈴和空白節奏卡。"],
+            ["cicada-mother.webp", "蟬媽媽", "溫柔的蟬媽媽，有鈴鼓、葉子圍裙和空白音樂紙。"],
+            ["cicada-older-brother.webp", "蟬哥哥", "活潑的蟬哥哥，有竹笛、背包和空白樂譜卡。"],
+            ["cicada-older-sister.webp", "蟬姐姐", "開朗的蟬姐姐，有拇指琴、歌曲日記和薄荷洋裝。"],
+            ["cicada-younger-brother.webp", "蟬弟弟", "小小的蟬弟弟，有玩具鼓車、沙鈴和藍色祭典服。"],
+            ["cicada-younger-sister.webp", "蟬妹妹", "可愛的蟬妹妹，有歌手娃娃、花朵沙鈴和蝴蝶結。"],
+            ["cicada-baby.webp", "蟬寶寶", "最小的蟬寶寶，有小鼓搖鈴、葉子固齒環和沙鈴玩具。"],
+          ],
+        },
+      };
+
+      const spaceRoles = [
+        ["grandpa", "爺爺", "溫和的"],
+        ["grandma", "奶奶", "親切的"],
+        ["father", "爸爸", "穩重的"],
+        ["mother", "媽媽", "可靠的"],
+        ["older-brother", "哥哥", "活潑的"],
+        ["older-sister", "姐姐", "開朗的"],
+        ["younger-brother", "弟弟", "小小的"],
+        ["younger-sister", "妹妹", "可愛的"],
+        ["baby", "寶寶", "最小的"],
+      ];
+
+      const spaceFamilies = [
+        ["star", "星星家族", "星星", "夢幻睡衣與星光魔法風"],
+        ["moon", "月亮家族", "月亮", "夜晚宮廷與童話守夜人風"],
+        ["sun", "太陽家族", "太陽", "太陽祭典與金色神話風"],
+        ["comet", "彗星家族", "彗星", "高速旅行者與太空郵差風"],
+        ["planet", "行星家族", "行星", "環球旅人與星球探險風"],
+        ["saturn-ring", "土星環家族", "土星環", "優雅舞會與軌道芭蕾風"],
+        ["meteor", "流星家族", "流星", "運動競賽與太空賽跑風"],
+        ["nebula", "星雲家族", "星雲", "雲霧藝術家與夢幻畫室風"],
+        ["black-hole", "黑洞家族", "黑洞", "神祕學者與深空圖書館風"],
+        ["martian", "火星人家族", "火星人", "復古科幻與火星小鎮風"],
+        ["crystal-alien", "水晶星人家族", "水晶星人", "水晶王國與礦石工匠風"],
+        ["robot-alien", "機器星人家族", "機器星人", "機器城市與未來工程師風"],
+        ["light-alien", "光能星人家族", "光能星人", "發光精靈與能量花園風"],
+        ["ufo", "小幽浮族家族", "小幽浮族", "飛行學校與太空交通員風"],
+        ["star-beast", "異世界星獸家族", "異世界星獸", "奇幻星球與冒險旅團風"],
+      ];
+
+      Object.assign(
+        speciesData,
+        Object.fromEntries(
+          spaceFamilies.map(([folder, label, species, style]) => [
+            folder,
+            {
+              label,
+              species,
+              basePath: `${pageBase}assets/characters/space/${folder}/`,
+              characters: spaceRoles.map(([fileRole, roleLabel, tone]) => [
+                `${folder}-${fileRole}.webp`,
+                `${species}${roleLabel}`,
+                `${tone}${species}${roleLabel}，採用${style}。`,
+              ]),
+            },
+          ]),
+        ),
+      );
+
+      const speciesTabs = document.querySelector("#speciesTabs");
+      const speciesNamePill = document.querySelector("#speciesNamePill");
+      const grid = document.querySelector("#characterGrid");
+      const detailImage = document.querySelector("#detailImage");
+      const detailTitle = document.querySelector("#detailTitle");
+      const detailDescription = document.querySelector("#detailDescription");
+      const detailSpecies = document.querySelector("#detailSpecies");
+      let activeSpeciesId = new URLSearchParams(window.location.search).get("species") || "cat";
+      let activeCharacterIndex = 0;
+
+      function selectCharacter(index) {
+        const data = speciesData[activeSpeciesId];
+        const [fileName, title, description] = data.characters[index];
+        activeCharacterIndex = index;
+        detailImage.src = `${data.basePath}${fileName}`;
+        detailTitle.textContent = title;
+        detailDescription.textContent = description;
+        detailSpecies.textContent = data.species;
+        document.querySelectorAll(".character-card").forEach((button, buttonIndex) => {
+          button.classList.toggle("active", buttonIndex === index);
+        });
+      }
+
+      function renderSpecies(speciesId) {
+        activeSpeciesId = speciesData[speciesId] ? speciesId : "cat";
+        activeCharacterIndex = 0;
+        const data = speciesData[activeSpeciesId];
+        speciesNamePill.textContent = data.label;
+        grid.replaceChildren();
+        data.characters.forEach(([fileName, title, description], index) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "character-card";
+          button.addEventListener("click", () => selectCharacter(index));
+
+          const image = document.createElement("img");
+          image.src = `${data.basePath}${fileName}`;
+          image.alt = "";
+
+          const name = document.createElement("strong");
+          name.textContent = title;
+
+          const note = document.createElement("small");
+          note.textContent = description;
+
+          button.append(image, name, note);
+          grid.append(button);
+        });
+        document.querySelectorAll(".species-tab").forEach((button) => {
+          button.classList.toggle("active", button.dataset.speciesId === activeSpeciesId);
+        });
+        selectCharacter(activeCharacterIndex);
+      }
+
+      Object.entries(speciesData).forEach(([speciesId, data]) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "species-tab";
+        button.dataset.speciesId = speciesId;
+        button.textContent = data.label;
+        button.addEventListener("click", () => renderSpecies(speciesId));
+        speciesTabs.append(button);
+      });
+
+      renderSpecies(activeSpeciesId);
+    </script>
+  </body>
+</html>

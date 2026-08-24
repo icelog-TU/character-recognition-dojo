@@ -1,0 +1,1569 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>課程圖音檔審查</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f5ef;
+        --panel: #fffdf9;
+        --ink: #22201b;
+        --muted: #6f675c;
+        --line: #ddd5c8;
+        --accent: #0f766e;
+        --accent-soft: #dff5ef;
+        --danger: #b42318;
+        --danger-soft: #fee4df;
+        --warn: #946200;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+
+      main {
+        width: min(1180px, calc(100vw - 28px));
+        margin: 0 auto;
+        padding: 22px 0 52px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(1.55rem, 4vw, 2.4rem);
+        line-height: 1.12;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 1.15rem;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      .topbar,
+      .panel,
+      .sentence-card,
+      .audio-card {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 8px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+        gap: 10px;
+        align-items: end;
+        padding: 14px;
+        margin: 18px 0;
+      }
+
+      label {
+        display: grid;
+        gap: 5px;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 9px 10px;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      textarea {
+        min-height: 118px;
+        resize: vertical;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .panel-heading {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .panel-heading h2 {
+        margin: 0;
+      }
+
+      .lesson-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .lesson-nav .button-row {
+        margin-left: auto;
+      }
+
+      button {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 9px 12px;
+        color: var(--ink);
+        background: #fff;
+        cursor: pointer;
+      }
+
+      button.primary {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #fff;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
+      .panel {
+        padding: 14px;
+        margin: 12px 0;
+      }
+
+      .status-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        background: #fbfaf7;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.35rem;
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .mono {
+        overflow-wrap: anywhere;
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Consolas,
+          monospace;
+        font-size: 0.82rem;
+      }
+
+      .ok {
+        color: var(--accent);
+      }
+
+      .bad {
+        color: var(--danger);
+      }
+
+      .warn {
+        color: var(--warn);
+      }
+
+      .section-list {
+        display: grid;
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .sentence-card {
+        display: grid;
+        grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
+        gap: 14px;
+        padding: 14px;
+      }
+
+      .sentence-card.needs-repair,
+      .audio-card.needs-repair {
+        border-color: #f0a199;
+        background: #fff8f6;
+      }
+
+      .image-wrap {
+        display: grid;
+        gap: 8px;
+      }
+
+      .app-image-preview {
+        display: grid;
+        gap: 6px;
+      }
+
+      .preview-label {
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 750;
+      }
+
+      .app-image-preview img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f1eee8;
+      }
+
+      .detail {
+        display: grid;
+        gap: 9px;
+        align-content: start;
+      }
+
+      .zhuyin-preview {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0.08em;
+        align-items: flex-end;
+        width: fit-content;
+        max-width: 100%;
+        padding: 8px 10px 6px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfaf7;
+        line-height: 1.1;
+      }
+
+      .zhuyin-preview ruby {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        min-width: 1.35em;
+        margin: 0 0.04em;
+        font-size: 1.35rem;
+        font-weight: 750;
+      }
+
+      .zhuyin-preview rt {
+        display: block;
+        min-height: 1.15em;
+        color: var(--accent);
+        font-size: 0.46em;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .zhuyin-preview .punct {
+        align-self: flex-end;
+        min-width: 0.55em;
+        padding-bottom: 0.08em;
+        font-size: 1.35rem;
+        font-weight: 750;
+      }
+
+      .head {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: baseline;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 3px 7px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: #0b5d56;
+        font-size: 0.78rem;
+      }
+
+      .repair-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .repair-box {
+        display: grid;
+        gap: 8px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        background: #fff;
+      }
+
+      .repair-box.flagged {
+        border-color: #f0a199;
+        background: var(--danger-soft);
+      }
+
+      .checkline {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: var(--ink);
+        font-weight: 650;
+      }
+
+      input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        accent-color: var(--danger);
+      }
+
+      audio {
+        width: 100%;
+      }
+
+      .audio-card {
+        display: grid;
+        gap: 9px;
+        padding: 12px;
+      }
+
+      .stale-note {
+        margin-bottom: 12px;
+      }
+
+      @media (max-width: 860px) {
+        .topbar,
+        .status-grid,
+        .sentence-card,
+        .repair-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>課程圖音檔審查</h1>
+        <p class="muted">Post-merge repair queue。只標記需要修的項目；沒有標記不會阻止 production/release。</p>
+      </header>
+
+      <section class="topbar">
+        <label>
+          Unit
+          <input id="unitInput" type="text" placeholder="L155 或 R004" autocomplete="off" />
+        </label>
+        <label>
+          Git ref
+          <input id="refInput" type="text" placeholder="main、branch、或 commit SHA" autocomplete="off" />
+        </label>
+        <label>
+          Repo owner/name
+          <input id="repoInput" type="text" value="icelog-TU/character-recognition-dojo" autocomplete="off" />
+        </label>
+        <div class="button-row">
+          <button id="overviewButton" type="button">回總覽</button>
+          <button id="loadButton" class="primary" type="button">載入</button>
+        </div>
+      </section>
+
+      <section class="panel lesson-nav">
+        <div>
+          <strong id="navCurrentUnit">-</strong>
+          <span class="muted">課程審核導覽</span>
+        </div>
+        <div class="button-row">
+          <button id="prevLessonButton" type="button">上一課</button>
+          <button id="nextLessonButton" type="button">下一課</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="button-row">
+          <button id="signInButton" type="button">Google 登入同步</button>
+          <button id="signOutButton" type="button" disabled>登出</button>
+          <button id="manualSyncButton" type="button" disabled title="把這台裝置目前的審核狀態寫到雲端">⇧ 同步到雲端</button>
+          <button id="cloudDownloadButton" type="button" disabled title="用雲端審核狀態覆蓋這台裝置">⇩ 從雲端下載</button>
+          <button id="copyFrozenLinkButton" type="button" disabled>複製固定版本連結</button>
+          <button id="copyRepairCommandButton" type="button" disabled>複製修復查詢指令</button>
+          <button id="copySummaryButton" type="button" disabled>複製摘要</button>
+        </div>
+        <label class="checkline" style="margin-top: 12px">
+          <input class="review-complete-input" type="checkbox" disabled />
+          本版本我已看完，除了下面標記項目外沒有其他問題
+        </label>
+        <div class="button-row" style="margin-top: 8px">
+          <button id="topManualSyncButton" type="button" disabled title="把這台裝置目前的審核狀態寫到雲端">⇧ 同步到雲端</button>
+          <button id="topCloudDownloadButton" type="button" disabled title="用雲端審核狀態覆蓋這台裝置">⇩ 從雲端下載</button>
+        </div>
+        <p id="statusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
+        <p id="cloudLine" class="muted" style="margin-top: 6px">可讀取雲端審核狀態；登入 Google 後才會跨裝置儲存修改。</p>
+      </section>
+
+      <section class="panel">
+        <div class="status-grid">
+          <div class="metric">
+            <span class="muted">句子圖文音卡</span>
+            <strong id="sentenceCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">其他音檔</span>
+            <strong id="extraAudioCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">需要修</span>
+            <strong id="repairCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">版本</span>
+            <strong id="shortSha">-</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>句子圖文音</h2>
+        <div id="sentenceList" class="section-list" aria-live="polite"></div>
+      </section>
+
+      <section class="panel">
+        <h2>其他正式音檔</h2>
+        <div id="extraAudioList" class="section-list" aria-live="polite"></div>
+      </section>
+
+      <section id="staleRepairPanel" class="panel" hidden>
+        <h2>舊標記</h2>
+        <p class="muted stale-note">
+          這些是雲端保留下來、但目前版本清單沒有直接對應到的維修標記。修正版上 main 後，請依備註複查新檔案；確認沒有問題後取消這裡的勾選。
+        </p>
+        <div id="staleRepairList" class="section-list" aria-live="polite"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>摘要</h2>
+          <button id="copySummaryInlineButton" type="button" disabled>複製摘要</button>
+        </div>
+        <textarea id="summaryBox" readonly></textarea>
+      </section>
+
+      <section class="panel">
+        <label class="checkline">
+          <input class="review-complete-input" type="checkbox" disabled />
+          本版本我已看完，除了上面標記項目外沒有其他問題
+        </label>
+        <div class="button-row" style="margin-top: 8px">
+          <button id="bottomManualSyncButton" type="button" disabled title="把這台裝置目前的審核狀態寫到雲端">⇧ 同步到雲端</button>
+          <button id="bottomCloudDownloadButton" type="button" disabled title="用雲端審核狀態覆蓋這台裝置">⇩ 從雲端下載</button>
+        </div>
+        <p id="bottomStatusLine" class="muted" style="margin-top: 10px">尚未載入。</p>
+        <p id="bottomCloudLine" class="muted" style="margin-top: 6px">可讀取雲端審核狀態；登入 Google 後才會跨裝置儲存修改。</p>
+      </section>
+
+      <section class="panel lesson-nav">
+        <div>
+          <strong id="bottomNavCurrentUnit">-</strong>
+          <span class="muted">課程審核導覽</span>
+        </div>
+        <div class="button-row">
+          <button id="backToTopButton" type="button">↑ 回到頂端</button>
+          <button id="bottomOverviewButton" type="button">回總覽</button>
+          <button id="bottomPrevLessonButton" type="button">上一課</button>
+          <button id="bottomNextLessonButton" type="button">下一課</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
+      import {
+        browserLocalPersistence,
+        getAuth,
+        GoogleAuthProvider,
+        onAuthStateChanged,
+        setPersistence,
+        signInWithPopup,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-auth.js";
+      import {
+        doc,
+        getDoc,
+        getFirestore,
+        onSnapshot,
+        serverTimestamp,
+        setDoc,
+      } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB79G4vRFLaRIPh1waBpJ99AS2BOt-ZzGk",
+        authDomain: "character-recognition-dojo.firebaseapp.com",
+        projectId: "character-recognition-dojo",
+        storageBucket: "character-recognition-dojo.firebasestorage.app",
+        messagingSenderId: "602707345296",
+        appId: "1:602707345296:web:4ef123812e6425ba18fd15",
+      };
+
+      const $ = (id) => document.getElementById(id);
+      const params = new URLSearchParams(window.location.search);
+      const state = {
+        repo: params.get("repo") || "icelog-TU/character-recognition-dojo",
+        unit: (params.get("unit") || "").toUpperCase(),
+        ref: params.get("ref") || "main",
+        sha: "",
+        sourcePath: "",
+        contentSignature: "",
+        sentences: [],
+        extraAudio: [],
+        zhuyinMap: new Map(),
+        flags: {},
+        locallyEditedKeys: new Set(),
+        cloudRepairItems: {},
+        reviewComplete: false,
+        reviewCompleteLocallyEdited: false,
+        localUpdatedAtMs: 0,
+        placeholderUnit: false,
+        user: null,
+        unsubscribeReview: null,
+        saveTimer: 0,
+        pendingCloudSave: false,
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      await setPersistence(auth, browserLocalPersistence).catch((error) => {
+        console.warn("Firebase Auth local persistence is unavailable.", error);
+      });
+      const db = getFirestore(app);
+
+      $("repoInput").value = state.repo;
+      $("unitInput").value = state.unit;
+      $("refInput").value = state.ref;
+
+      function setStatus(message, tone = "") {
+        ["statusLine", "bottomStatusLine"].forEach((id) => {
+          $(id).className = `muted ${tone}`.trim();
+          $(id).textContent = message;
+        });
+      }
+
+      function setCloud(message, tone = "") {
+        ["cloudLine", "bottomCloudLine"].forEach((id) => {
+          $(id).className = `muted ${tone}`.trim();
+          $(id).textContent = message;
+        });
+      }
+
+      function currentLessonNumber() {
+        const match = /^L(\d{3})$/.exec(state.unit);
+        return match ? Number(match[1]) : 0;
+      }
+
+      function lessonUnit(number) {
+        return `L${String(number).padStart(3, "0")}`;
+      }
+
+      function expectedReviewNumbersAfterLesson(order) {
+        if (order < 45 || order > 600 || (order - 45) % 15 !== 0) return [];
+        const firstReviewNumber = ((order - 45) / 15) * 2 + 1;
+        return [firstReviewNumber, firstReviewNumber + 1];
+      }
+
+      function reviewSlotForNumber(reviewNumber) {
+        if (!Number.isInteger(reviewNumber) || reviewNumber < 1 || reviewNumber > 76) return null;
+        const pairIndex = Math.floor((reviewNumber - 1) / 2);
+        return { reviewNumber, afterLessonOrder: 45 + pairIndex * 15 };
+      }
+
+      function expectedUnitSequence() {
+        const units = [];
+        for (let order = 1; order <= 600; order += 1) {
+          units.push(lessonUnit(order));
+          for (const reviewNumber of expectedReviewNumbersAfterLesson(order)) {
+            units.push(`R${String(reviewNumber).padStart(3, "0")}`);
+          }
+        }
+        return units;
+      }
+
+      function unitUrl(nextUnit) {
+        return `lesson-asset-review.html?repo=${encodeURIComponent(state.repo)}&unit=${encodeURIComponent(nextUnit)}&ref=${encodeURIComponent(state.ref || "main")}`;
+      }
+
+      function updateLessonNav() {
+        const sequence = expectedUnitSequence();
+        const index = sequence.indexOf(state.unit);
+        $("navCurrentUnit").textContent = state.unit || "-";
+        $("bottomNavCurrentUnit").textContent = state.unit || "-";
+        $("prevLessonButton").disabled = index <= 0;
+        $("nextLessonButton").disabled = index < 0 || index >= sequence.length - 1;
+        $("bottomPrevLessonButton").disabled = index <= 0;
+        $("bottomNextLessonButton").disabled = index < 0 || index >= sequence.length - 1;
+      }
+
+      async function goToLesson(offset) {
+        const sequence = expectedUnitSequence();
+        const index = sequence.indexOf(state.unit);
+        const nextUnit = sequence[index + offset];
+        if (!nextUnit) return;
+        window.clearTimeout(state.saveTimer);
+        if (state.user && state.sha) await saveCloud();
+        window.location.href = unitUrl(nextUnit);
+      }
+
+      async function goToOverview() {
+        window.clearTimeout(state.saveTimer);
+        if (state.user && state.sha) await saveCloud();
+        window.location.href = `asset-review-index.html?repo=${encodeURIComponent(state.repo)}&ref=${encodeURIComponent(state.ref || "main")}`;
+      }
+
+      function html(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
+
+      function buildZhuyinMap(lessons, upToOrder) {
+        const map = new Map();
+        lessons.forEach((lesson) => {
+          if (!Number.isFinite(lesson.order) || lesson.order > upToOrder) return;
+          (lesson.newChars || []).forEach((char) => {
+            map.set(char, lesson.zhuyin?.[char] || "");
+          });
+        });
+        return map;
+      }
+
+      function unitZhuyinBoundary(unit, lessons) {
+        if (Number.isFinite(unit.order)) return unit.order;
+        if (Number.isFinite(unit.afterLessonOrder)) return unit.afterLessonOrder;
+        const ids = (unit.dependsOnLessons || []).map((id) => Number(/^L(\d{3})$/.exec(id)?.[1] || 0));
+        const maxDependency = Math.max(0, ...ids);
+        if (maxDependency) return maxDependency;
+        return Math.max(0, ...lessons.map((lesson) => Number(lesson.order) || 0));
+      }
+
+      function sentenceZhuyin(sentence, hanIndex, char) {
+        return sentence.zhuyinOverrides?.[String(hanIndex)] || state.zhuyinMap.get(char) || "";
+      }
+
+      function renderZhuyinText(text, zhuyinOverrides = {}) {
+        let hanIndex = 0;
+        const sentence = { zhuyinOverrides };
+        return Array.from(String(text || ""))
+          .map((char) => {
+            if (/\p{Script=Han}/u.test(char)) {
+              const zhuyin = sentenceZhuyin(sentence, hanIndex, char);
+              hanIndex += 1;
+              return `<ruby><rb>${html(char)}</rb><rt>${html(zhuyin)}</rt></ruby>`;
+            }
+            if (/\s/u.test(char)) return "";
+            return `<span class="punct">${html(char)}</span>`;
+          })
+          .join("");
+      }
+
+      function base64Url(input) {
+        const bytes = new TextEncoder().encode(input);
+        let binary = "";
+        bytes.forEach((byte) => {
+          binary += String.fromCharCode(byte);
+        });
+        return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
+      }
+
+      function stableStringify(value) {
+        if (Array.isArray(value)) return `[${value.map(stableStringify).join(",")}]`;
+        if (value && typeof value === "object") {
+          return `{${Object.keys(value)
+            .sort()
+            .map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`)
+            .join(",")}}`;
+        }
+        return JSON.stringify(value ?? null);
+      }
+
+      function shortHash(value) {
+        const input = stableStringify(value);
+        let hash = 2166136261;
+        for (let index = 0; index < input.length; index += 1) {
+          hash ^= input.charCodeAt(index);
+          hash = Math.imul(hash, 16777619);
+        }
+        return `${(hash >>> 0).toString(16).padStart(8, "0")}-${input.length}`;
+      }
+
+      function unitContentSignature(unit) {
+        return shortHash({
+          id: unit.id,
+          order: unit.order,
+          reviewNumber: unit.reviewNumber,
+          afterLessonOrder: unit.afterLessonOrder,
+          targetLessonRange: unit.targetLessonRange,
+          newChars: unit.newChars,
+          requiredCoverageChars: unit.requiredCoverageChars,
+          sentences: (unit.sentences || []).map((sentence) => ({
+            id: sentence.id,
+            text: sentence.text,
+            spokenText: sentence.spokenText,
+            imageSrc: sentence.imageSrc,
+            audioSrc: sentence.audio?.src,
+          })),
+          sentenceGames: (unit.sentenceGames || []).map((game) => ({
+            id: game.id,
+            type: game.type,
+            sentenceId: game.sentenceId,
+            targetChar: game.targetChar,
+            targetCharIndex: game.targetCharIndex,
+            missingIndexes: game.missingIndexes,
+            options: (game.options || []).map((option) => ({
+              id: option.id,
+              text: option.text,
+              correct: option.correct,
+              audioSrc: option.audioSrc,
+            })),
+            teachAudio: game.teachAudio,
+          })),
+        });
+      }
+
+      function reviewId() {
+        return base64Url(`${state.repo}|${state.unit}|${reviewScope()}`);
+      }
+
+      function legacyShaReviewId() {
+        return base64Url(`${state.repo}|${state.unit}|${state.sha}`);
+      }
+
+      function reviewScope() {
+        return state.ref.trim().toLowerCase() === "main" ? "main" : state.sha;
+      }
+
+      function storageKey() {
+        return `asset-review:${state.repo}:${state.unit}:${reviewScope()}:${state.contentSignature || "no-content"}`;
+      }
+
+      function rawUrl(path) {
+        return `https://raw.githubusercontent.com/${state.repo}/${state.sha}/${path}`;
+      }
+
+      function isMainReview() {
+        return state.ref.trim().toLowerCase() === "main";
+      }
+
+      function isDefaultRepo() {
+        return state.repo.trim().toLowerCase() === "icelog-tu/character-recognition-dojo";
+      }
+
+      function pagesAssetUrl(src) {
+        if (!src) return "";
+        const path = src.startsWith("/") ? src.slice(1) : src;
+        const basePath = window.location.pathname.split("/tools/")[0] || "";
+        const version = state.sha ? `?v=${encodeURIComponent(state.sha.slice(0, 12))}` : "";
+        return `${window.location.origin}${basePath}/${path}${version}`;
+      }
+
+      function pagesToolUrl(path) {
+        const basePath = window.location.pathname.split("/tools/")[0] || "";
+        const version = state.sha ? `?v=${encodeURIComponent(state.sha.slice(0, 12))}` : "";
+        return `${window.location.origin}${basePath}/tools/${path}${version}`;
+      }
+
+      async function fetchJson(url, label) {
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) throw new Error(`${label} HTTP ${response.status}`);
+        return response.json();
+      }
+
+      async function fetchProductionCurriculum() {
+        if (isMainReview() && isDefaultRepo()) {
+          try {
+            return {
+              curriculum: await fetchJson(pagesToolUrl("planner-data.json"), "planner data"),
+              sourcePath: "public/tools/planner-data.json",
+            };
+          } catch (error) {
+            console.warn("Falling back to raw production curriculum.", error);
+          }
+        }
+        return {
+          curriculum: await fetchJson(rawUrl("src/curriculum/sample-lessons.json"), "production curriculum"),
+          sourcePath: "src/curriculum/sample-lessons.json",
+        };
+      }
+
+      function reviewTitle(reviewNumber) {
+        return `複習${String(reviewNumber).padStart(2, "0")}`;
+      }
+
+      async function resolveRef() {
+        const data = await fetchJson(
+          `https://api.github.com/repos/${state.repo}/commits/${encodeURIComponent(state.ref)}`,
+          "Git ref",
+        );
+        state.sha = data.sha;
+      }
+
+      async function loadUnitData() {
+        const { curriculum, sourcePath } = await fetchProductionCurriculum();
+        const lessons = Array.isArray(curriculum.lessons) ? curriculum.lessons : [];
+        const reviews = Array.isArray(curriculum.reviewLessons) ? curriculum.reviewLessons : [];
+        const unit = [...lessons, ...reviews].find((candidate) => candidate.id === state.unit);
+
+        if (unit) {
+          state.sourcePath = sourcePath;
+          state.placeholderUnit = false;
+          state.zhuyinMap = buildZhuyinMap(lessons, unitZhuyinBoundary(unit, lessons));
+          return unit;
+        }
+
+        const draftPath = `curriculum-workflow/drafts/${state.unit}-draft.json`;
+        const draftResponse = await fetch(rawUrl(draftPath), { cache: "no-store" });
+        let draftUnit = null;
+        if (draftResponse.ok) {
+          const draft = await draftResponse.json();
+          if (Array.isArray(draft.sentences) && draft.sentences.length > 0) {
+            draftUnit = draft;
+          }
+        }
+
+        if (draftUnit && hasReviewableSentenceAssets(draftUnit)) {
+          state.sourcePath = draftPath;
+          state.placeholderUnit = false;
+          state.zhuyinMap = buildZhuyinMap(lessons, unitZhuyinBoundary(draftUnit, lessons));
+          return draftUnit;
+        }
+
+        if (!unit) {
+          const reviewMatch = /^R(\d{3})$/.exec(state.unit);
+          const reviewSlot = reviewMatch ? reviewSlotForNumber(Number(reviewMatch[1])) : null;
+          if (reviewSlot) {
+            state.sourcePath = "expected review slot";
+            state.placeholderUnit = true;
+            return {
+              id: state.unit,
+              reviewNumber: reviewSlot.reviewNumber,
+              afterLessonOrder: reviewSlot.afterLessonOrder,
+              title: reviewTitle(reviewSlot.reviewNumber),
+              requiredCoverageChars: [],
+              sentences: [],
+              sentenceGames: [],
+            };
+          }
+          throw new Error(`找不到 ${state.unit} 的 draft 或 production JSON。`);
+        }
+      }
+
+      function hasReviewableSentenceAssets(unit) {
+        const sentences = Array.isArray(unit.sentences) ? unit.sentences : [];
+        return sentences.length > 0 && sentences.every((sentence) => sentence.imageSrc && sentence.audio?.src);
+      }
+
+      function hanChars(value) {
+        return [...String(value || "")].filter((char) => /\p{Script=Han}/u.test(char));
+      }
+
+      function sentenceFor(unit, sentenceId) {
+        return (unit.sentences || []).find((sentence) => sentence.id === sentenceId) || null;
+      }
+
+      function publicUrl(src) {
+        if (!src) return "";
+        if (isMainReview() && isDefaultRepo()) return pagesAssetUrl(src);
+        return rawUrl(`public${src}`);
+      }
+
+      function addExtraAudio(items, item) {
+        if (!item.src) return;
+        if (items.some((existing) => existing.key === item.key)) return;
+        items.push({ ...item, url: publicUrl(item.src) });
+      }
+
+      function extractReviewItems(unit) {
+        const sentences = (unit.sentences || []).map((sentence) => ({
+          key: sentence.id,
+          id: sentence.id,
+          text: sentence.text || sentence.spokenText || "",
+          spokenText: sentence.spokenText || "",
+          zhuyinOverrides: sentence.zhuyinOverrides || {},
+          imageSrc: sentence.imageSrc || "",
+          imageUrl: publicUrl(sentence.imageSrc || ""),
+          audioSrc: sentence.audio?.src || "",
+          audioUrl: publicUrl(sentence.audio?.src || ""),
+        }));
+
+        const extraAudio = [];
+        Object.entries(unit.charAudio || {}).forEach(([char, src]) => {
+          const code = char.codePointAt(0)?.toString(16) || char;
+          addExtraAudio(extraAudio, {
+            key: `char-u${code}`,
+            kind: "charAudio",
+            label: `單字 ${char}`,
+            text: char,
+            src,
+          });
+        });
+
+        (unit.sentenceGames || []).forEach((game) => {
+          if (game.teachAudio) {
+            const sentence = sentenceFor(unit, game.sentenceId);
+            const chars = hanChars(sentence?.spokenText || sentence?.text || "");
+            const targetIndex = Number.isInteger(game.targetCharIndex) ? game.targetCharIndex : chars.indexOf(game.targetChar);
+            addExtraAudio(extraAudio, {
+              key: `${game.id}-prefix`,
+              kind: "teachAudio",
+              label: `${game.id} prefix`,
+              text: targetIndex > 0 ? chars.slice(0, targetIndex).join("") : "",
+              src: game.teachAudio.prefixSrc,
+            });
+            addExtraAudio(extraAudio, {
+              key: `${game.id}-suffix`,
+              kind: "teachAudio",
+              label: `${game.id} suffix`,
+              text: targetIndex >= 0 ? chars.slice(targetIndex + 1).join("") : "",
+              src: game.teachAudio.suffixSrc,
+            });
+          }
+
+          (game.options || []).forEach((option) => {
+            addExtraAudio(extraAudio, {
+              key: `${game.id}-${option.id}`,
+              kind: game.type || "game",
+              label: `${game.id} ${option.id}`,
+              text: option.text || option.spokenText || "",
+              spokenText: option.spokenText || "",
+              src: option.audioSrc,
+            });
+          });
+        });
+
+        return { sentences, extraAudio };
+      }
+
+      function defaultFlag() {
+        return { needsRepair: false, note: "" };
+      }
+
+      function getFlag(key) {
+        return state.flags[key] || defaultFlag();
+      }
+
+      function currentRepairItems() {
+        const items = [];
+        state.sentences.forEach((sentence) => {
+          const imageFlag = getFlag(`${sentence.key}:image`);
+          if (imageFlag.needsRepair || imageFlag.note) {
+            items.push({
+              key: `${sentence.key}:image`,
+              target: "image",
+              label: `${sentence.id} image`,
+              src: sentence.imageSrc,
+              text: sentence.text,
+              note: imageFlag.note || "",
+              needsRepair: imageFlag.needsRepair === true,
+            });
+          }
+          const audioFlag = getFlag(`${sentence.key}:audio`);
+          if (audioFlag.needsRepair || audioFlag.note) {
+            items.push({
+              key: `${sentence.key}:audio`,
+              target: "audio",
+              label: `${sentence.id} audio`,
+              src: sentence.audioSrc,
+              text: sentence.spokenText || sentence.text,
+              note: audioFlag.note || "",
+              needsRepair: audioFlag.needsRepair === true,
+            });
+          }
+        });
+        state.extraAudio.forEach((audio) => {
+          const audioFlag = getFlag(`${audio.key}:audio`);
+          if (audioFlag.needsRepair || audioFlag.note) {
+            items.push({
+              key: `${audio.key}:audio`,
+              target: "audio",
+              label: audio.label,
+              src: audio.src,
+              text: audio.spokenText || audio.text || "",
+              note: audioFlag.note || "",
+              needsRepair: audioFlag.needsRepair === true,
+            });
+          }
+        });
+        return items;
+      }
+
+      function staleRepairItems(currentKeys = new Set(currentRepairItems().map((item) => item.key))) {
+        const items = [];
+        const cloudItems = state.cloudRepairItems || {};
+        Object.entries(cloudItems).forEach(([key, value]) => {
+          if (currentKeys.has(key)) return;
+          const flag = getFlag(key);
+          if (!flag.needsRepair && !flag.note) return;
+          items.push({
+            key,
+            target: value.target || (key.endsWith(":image") ? "image" : "audio"),
+            label: value.label || key,
+            src: value.src || "",
+            text: value.text || "",
+            note: flag.note || value.note || "",
+            needsRepair: flag.needsRepair === true,
+            stale: true,
+          });
+        });
+        Object.entries(state.flags).forEach(([key, flag]) => {
+          if (currentKeys.has(key) || Object.prototype.hasOwnProperty.call(cloudItems, key)) return;
+          if (!flag.needsRepair && !flag.note) return;
+          items.push({
+            key,
+            target: key.endsWith(":image") ? "image" : "audio",
+            label: key,
+            src: "",
+            text: "",
+            note: flag.note || "",
+            needsRepair: flag.needsRepair === true,
+            stale: true,
+          });
+        });
+        return items;
+      }
+
+      function allRepairItems() {
+        const currentItems = currentRepairItems();
+        const currentKeys = new Set(currentItems.map((item) => item.key));
+        return [...currentItems, ...staleRepairItems(currentKeys)];
+      }
+
+      function repairCount() {
+        return allRepairItems().filter((item) => item.needsRepair).length;
+      }
+
+      function loadLocalState() {
+        try {
+          const local = JSON.parse(localStorage.getItem(storageKey()) || "{}") || {};
+          state.flags = local.flags || {};
+          state.reviewComplete = local.reviewComplete === true;
+          state.localUpdatedAtMs = Number(local.updatedAtMs) || 0;
+        } catch {
+          state.flags = {};
+          state.reviewComplete = false;
+          state.localUpdatedAtMs = 0;
+        }
+      }
+
+      function saveLocalState() {
+        localStorage.setItem(
+          storageKey(),
+          JSON.stringify({
+            flags: state.flags,
+            reviewComplete: state.reviewComplete,
+            updatedAtMs: state.localUpdatedAtMs,
+          }),
+        );
+      }
+
+      function summaryText() {
+        const items = allRepairItems();
+        const lines = [
+          `Lesson asset review: ${state.unit}`,
+          `Repo: ${state.repo}`,
+          `Ref: ${state.ref}`,
+          `Commit: ${state.sha}`,
+          `Review scope: ${reviewScope()}`,
+          `Source: ${state.sourcePath}`,
+          `Review complete: ${state.reviewComplete ? "yes" : "no"}`,
+          `Needs repair: ${repairCount()}`,
+          "",
+          "Repair items:",
+          ...(items.length
+            ? items.map((item) => `- ${item.key} ${item.label} ${item.src || ""}${item.note ? ` | ${item.note}` : ""}`)
+            : ["- none"]),
+        ];
+        return lines.join("\n");
+      }
+
+      function copySummary() {
+        return navigator.clipboard.writeText(summaryText());
+      }
+
+      function repairCommand() {
+        return `npm run asset:review-status -- --unit ${state.unit} --ref ${reviewScope() === "main" ? "main" : state.sha}`;
+      }
+
+      function frozenLink() {
+        const url = new URL(window.location.href);
+        url.searchParams.set("repo", state.repo);
+        url.searchParams.set("unit", state.unit);
+        url.searchParams.set("ref", reviewScope() === "main" ? "main" : state.sha);
+        return url.toString();
+      }
+
+      function renderRepairBox(key, labelText) {
+        const flag = getFlag(key);
+        return `
+          <div class="repair-box ${flag.needsRepair ? "flagged" : ""}">
+            <label class="checkline">
+              <input type="checkbox" data-repair="${html(key)}" ${flag.needsRepair ? "checked" : ""} />
+              ${html(labelText)}
+            </label>
+            <label>
+              備註
+              <input type="text" data-note="${html(key)}" value="${html(flag.note || "")}" placeholder="例如：圖裡有字、聲音太小、人物不一致" />
+            </label>
+          </div>
+        `;
+      }
+
+      function render() {
+        $("sentenceCount").textContent = String(state.sentences.length);
+        $("extraAudioCount").textContent = String(state.extraAudio.length);
+        $("repairCount").textContent = String(repairCount());
+        $("shortSha").textContent = state.sha ? state.sha.slice(0, 7) : "-";
+        $("summaryBox").value = summaryText();
+        document.querySelectorAll(".review-complete-input").forEach((input) => {
+          input.disabled = !state.sha || state.placeholderUnit;
+          input.checked = state.reviewComplete;
+        });
+        $("copyFrozenLinkButton").disabled = !state.sha || state.placeholderUnit;
+        $("copyRepairCommandButton").disabled = !state.sha || state.placeholderUnit;
+        $("copySummaryButton").disabled = !state.sha || state.placeholderUnit;
+        $("copySummaryInlineButton").disabled = !state.sha || state.placeholderUnit;
+        const manualSyncDisabled = !state.user || !state.sha || state.placeholderUnit;
+        [
+          "manualSyncButton",
+          "topManualSyncButton",
+          "bottomManualSyncButton",
+          "cloudDownloadButton",
+          "topCloudDownloadButton",
+          "bottomCloudDownloadButton",
+        ].forEach((id) => {
+          $(id).disabled = manualSyncDisabled;
+        });
+        updateLessonNav();
+
+        const staleItems = staleRepairItems();
+        $("staleRepairPanel").hidden = staleItems.length === 0;
+        $("staleRepairList").innerHTML = staleItems
+          .map(
+            (item) => `
+              <article class="audio-card ${item.needsRepair ? "needs-repair" : ""}">
+                <div class="head">
+                  <strong>${html(item.label)}</strong>
+                  <span class="warn">舊標記</span>
+                </div>
+                ${item.text ? `<div>${html(item.text)}</div>` : ""}
+                ${item.src ? `<div class="mono muted">${html(item.src)}</div>` : ""}
+                ${renderRepairBox(item.key, item.target === "image" ? "舊圖片標記仍需修" : "舊音檔標記仍需修")}
+              </article>
+            `,
+          )
+          .join("");
+
+        $("sentenceList").innerHTML = state.sentences
+          .map((sentence) => {
+            const flagged = getFlag(`${sentence.key}:image`).needsRepair || getFlag(`${sentence.key}:audio`).needsRepair;
+            return `
+              <article class="sentence-card ${flagged ? "needs-repair" : ""}">
+                <div class="image-wrap">
+                  <div class="app-image-preview">
+                    <div class="preview-label">APP 方形預覽</div>
+                    <img src="${html(sentence.imageUrl)}" alt="${html(sentence.id)} app square image preview" loading="lazy" />
+                  </div>
+                  <div class="mono muted">${html(sentence.imageSrc)}</div>
+                </div>
+                <div class="detail">
+                  <div class="head">
+                    <strong>${html(sentence.id)}</strong>
+                    ${flagged ? '<span class="bad">需要修</span>' : '<span class="tag">圖文音</span>'}
+                  </div>
+                  <div>${html(sentence.text)}</div>
+                  <div class="zhuyin-preview" aria-label="注音預覽">${renderZhuyinText(sentence.text, sentence.zhuyinOverrides)}</div>
+                  ${sentence.spokenText ? `<div class="muted">spokenText: ${html(sentence.spokenText)}</div>` : ""}
+                  ${sentence.audioUrl ? `<audio controls preload="metadata" src="${html(sentence.audioUrl)}"></audio>` : '<div class="bad">缺 audio src</div>'}
+                  <div class="mono muted">${html(sentence.audioSrc)}</div>
+                  <div class="repair-grid">
+                    ${renderRepairBox(`${sentence.key}:image`, "圖片需要修")}
+                    ${renderRepairBox(`${sentence.key}:audio`, "句子音檔需要修")}
+                  </div>
+                </div>
+              </article>
+            `;
+          })
+          .join("");
+
+        $("extraAudioList").innerHTML = state.extraAudio
+          .map((audio) => {
+            const key = `${audio.key}:audio`;
+            const flagged = getFlag(key).needsRepair;
+            return `
+              <article class="audio-card ${flagged ? "needs-repair" : ""}">
+                <div class="head">
+                  <strong>${html(audio.label)}</strong>
+                  <span class="tag">${html(audio.kind)}</span>
+                  ${flagged ? '<span class="bad">需要修</span>' : ""}
+                </div>
+                <div>${html(audio.text || "")}</div>
+                ${audio.text ? `<div class="zhuyin-preview" aria-label="注音預覽">${renderZhuyinText(audio.text)}</div>` : ""}
+                ${audio.spokenText ? `<div class="muted">spokenText: ${html(audio.spokenText)}</div>` : ""}
+                <audio controls preload="metadata" src="${html(audio.url)}"></audio>
+                <div class="mono muted">${html(audio.src)}</div>
+                ${renderRepairBox(key, "音檔需要修")}
+              </article>
+            `;
+          })
+          .join("");
+      }
+
+      function updateSummaryOnly() {
+        $("repairCount").textContent = String(repairCount());
+        $("summaryBox").value = summaryText();
+      }
+
+      function queueCloudSave() {
+        if (!state.user || !state.sha) {
+          setCloud("未登入 Google：這次修改只存在本機；登入後才會同步到手機和平板。", "warn");
+          return;
+        }
+        window.clearTimeout(state.saveTimer);
+        state.pendingCloudSave = true;
+        state.saveTimer = window.setTimeout(saveCloud, 350);
+      }
+
+      async function saveCloudSoon() {
+        state.localUpdatedAtMs = Date.now();
+        saveLocalState();
+        render();
+        queueCloudSave();
+      }
+
+      function saveCloudQuietly() {
+        state.localUpdatedAtMs = Date.now();
+        saveLocalState();
+        updateSummaryOnly();
+        queueCloudSave();
+      }
+
+      async function saveCloud() {
+        if (!state.user || !state.sha) return;
+        if (!state.localUpdatedAtMs) state.localUpdatedAtMs = Date.now();
+        const items = allRepairItems();
+        const repairItems = {};
+        items.forEach((item) => {
+          repairItems[item.key] = item;
+        });
+        const payload = {
+          version: 1,
+          repo: state.repo,
+          unit: state.unit,
+          ref: state.ref,
+          commitSha: state.sha,
+          sourcePath: state.sourcePath,
+          contentSignature: state.contentSignature,
+          sentenceCount: state.sentences.length,
+          extraAudioCount: state.extraAudio.length,
+          repairCount: repairCount(),
+          reviewComplete: state.reviewComplete === true,
+          repairItems,
+          localUpdatedAtMs: state.localUpdatedAtMs,
+          updatedByUid: state.user.uid,
+          updatedByEmail: state.user.email || "",
+          updatedByName: state.user.displayName || "",
+          updatedAt: serverTimestamp(),
+        };
+        try {
+          await setDoc(doc(db, "assetReviews", reviewId()), payload);
+          state.cloudRepairItems = repairItems;
+          state.reviewCompleteLocallyEdited = false;
+          state.locallyEditedKeys.clear();
+          setCloud(`已同步到 Firestore：${payload.repairCount} 個需要修`);
+        } catch (error) {
+          setCloud(`Firestore 同步失敗：${error.message}`, "bad");
+        }
+        state.pendingCloudSave = false;
+      }
+
+      async function forceSyncCloud() {
+        if (!state.user) {
+          setCloud("請先登入 Google，才能同步到雲端。", "warn");
+          return;
+        }
+        if (!state.sha || state.placeholderUnit) {
+          setCloud("請先載入正式課程，再同步到雲端。", "warn");
+          return;
+        }
+        window.clearTimeout(state.saveTimer);
+        state.pendingCloudSave = true;
+        state.localUpdatedAtMs = Date.now();
+        saveLocalState();
+        await saveCloud();
+        render();
+      }
+
+      async function forceDownloadCloud() {
+        if (!state.user) {
+          setCloud("請先登入 Google，才能從雲端下載。", "warn");
+          return;
+        }
+        if (!state.sha || state.placeholderUnit) {
+          setCloud("請先載入正式課程，再從雲端下載。", "warn");
+          return;
+        }
+        window.clearTimeout(state.saveTimer);
+        state.pendingCloudSave = false;
+        const ref = doc(db, "assetReviews", reviewId());
+        try {
+          const snapshot = await getDoc(ref);
+          if (!snapshot.exists() || !reviewMatchesCurrentContent(snapshot.data())) {
+            setCloud("雲端沒有這一課目前版本的審核紀錄。", "warn");
+            return;
+          }
+          mergeCloud(snapshot.data(), { force: true });
+          setCloud(`已從雲端下載：${snapshot.data().repairCount || 0} 個需要修。`, "ok");
+        } catch (error) {
+          setCloud(`Firestore 下載失敗：${error.message}`, "bad");
+        }
+      }
+
+      async function attachCloudReview() {
+        if (state.unsubscribeReview) state.unsubscribeReview();
+        state.unsubscribeReview = null;
+        if (!state.sha) return;
+        const ref = doc(db, "assetReviews", reviewId());
+        try {
+          const snapshot = await getDoc(ref);
+          if (snapshot.exists() && reviewMatchesCurrentContent(snapshot.data())) mergeCloud(snapshot.data());
+          else if (reviewScope() === "main") {
+            const legacySnapshot = await getDoc(doc(db, "assetReviews", legacyShaReviewId()));
+            if (legacySnapshot.exists() && reviewMatchesCurrentContent(legacySnapshot.data())) {
+              mergeCloud(legacySnapshot.data());
+              setCloud("已讀取舊版 commit-key 審查紀錄；下一次同步會搬到 main queue。");
+              if (state.user) await saveCloud();
+            }
+          } else {
+            setCloud(state.user ? "雲端沒有既有審核紀錄。" : "雲端沒有既有審核紀錄；登入 Google 後才能跨裝置儲存修改。");
+          }
+          state.unsubscribeReview = onSnapshot(
+            ref,
+            (next) => {
+              if (!next.exists()) return;
+              if (state.pendingCloudSave) return;
+              if (!reviewMatchesCurrentContent(next.data())) return;
+              mergeCloud(next.data());
+              setCloud(`雲端狀態：${next.data().repairCount || 0} 個需要修`);
+            },
+            (error) => setCloud(`Firestore 讀取失敗：${error.message}`, "bad"),
+          );
+        } catch (error) {
+          setCloud(`Firestore 讀取失敗：${error.message}`, "bad");
+        }
+      }
+
+      function reviewMatchesCurrentContent(data) {
+        if (!data) return false;
+        if (data.contentSignature) return data.contentSignature === state.contentSignature;
+        return !/^R\d{3}$/.test(state.unit);
+      }
+
+      function mergeCloud(data, options = {}) {
+        const force = options.force === true;
+        const cloudMs = reviewUpdatedAtMs(data);
+        if (!force && state.localUpdatedAtMs && cloudMs && state.localUpdatedAtMs > cloudMs && !state.pendingCloudSave) {
+          state.cloudRepairItems = data.repairItems || {};
+          setCloud("本機審查狀態比雲端新；若這台是正確版本，請按「同步到雲端」。", "warn");
+          return;
+        }
+        state.cloudRepairItems = data.repairItems || {};
+        const flags = {};
+        Object.entries(data.repairItems || {}).forEach(([key, value]) => {
+          if (!force && state.locallyEditedKeys.has(key)) {
+            flags[key] = state.flags[key] || defaultFlag();
+            return;
+          }
+          flags[key] = {
+            needsRepair: value.needsRepair === true,
+            note: value.note || "",
+          };
+        });
+        state.flags = flags;
+        if (force || !state.reviewCompleteLocallyEdited) state.reviewComplete = data.reviewComplete === true;
+        if (force) {
+          state.locallyEditedKeys.clear();
+          state.reviewCompleteLocallyEdited = false;
+        }
+        state.localUpdatedAtMs = reviewUpdatedAtMs(data);
+        saveLocalState();
+        if (document.activeElement?.matches("input[data-note]")) {
+          updateSummaryOnly();
+          return;
+        }
+        render();
+      }
+
+      function reviewUpdatedAtMs(review) {
+        if (!review) return 0;
+        if (typeof review.updatedAt?.toMillis === "function") return review.updatedAt.toMillis();
+        if (typeof review.localUpdatedAtMs === "number") return review.localUpdatedAtMs;
+        if (typeof review.updatedAtMs === "number") return review.updatedAtMs;
+        return 0;
+      }
+
+      async function load() {
+        state.repo = $("repoInput").value.trim();
+        state.unit = $("unitInput").value.trim().toUpperCase();
+        state.ref = $("refInput").value.trim() || "main";
+        if (!state.repo || !state.unit) {
+          setStatus("請輸入 repo 和 unit。", "bad");
+          return;
+        }
+        $("loadButton").disabled = true;
+        setStatus("載入 GitHub 版本與圖音檔清單...");
+        try {
+          await resolveRef();
+          state.placeholderUnit = false;
+          const unit = await loadUnitData();
+          state.contentSignature = state.placeholderUnit ? "" : unitContentSignature(unit);
+          const items = extractReviewItems(unit);
+          state.sentences = items.sentences;
+          state.extraAudio = items.extraAudio;
+          if (state.placeholderUnit) {
+            state.flags = {};
+            state.cloudRepairItems = {};
+            state.reviewComplete = false;
+          } else {
+            loadLocalState();
+          }
+          render();
+          if (state.placeholderUnit) {
+            setStatus(`${state.unit} 是預期中的複習課，但目前還沒有 draft 或 production JSON；等製作合併後就會在這裡顯示圖檔音檔。`, "warn");
+            setCloud("尚未製作的複習課不會建立雲端審核紀錄。");
+          } else {
+            setStatus(`已載入 ${state.unit}，${state.sentences.length} 張句子卡，${state.extraAudio.length} 個其他音檔，commit ${state.sha.slice(0, 12)}。`, "ok");
+            await attachCloudReview();
+          }
+        } catch (error) {
+          state.sentences = [];
+          state.extraAudio = [];
+          state.placeholderUnit = false;
+          render();
+          setStatus(error.message, "bad");
+        } finally {
+          $("loadButton").disabled = false;
+        }
+      }
+
+      $("loadButton").addEventListener("click", load);
+      document.addEventListener("change", (event) => {
+        const reviewCompleteInput = event.target.closest(".review-complete-input");
+        if (reviewCompleteInput) {
+          state.reviewCompleteLocallyEdited = true;
+          state.reviewComplete = reviewCompleteInput.checked;
+          saveCloudSoon();
+          return;
+        }
+        const checkbox = event.target.closest("input[type='checkbox'][data-repair]");
+        if (!checkbox) return;
+        const key = checkbox.dataset.repair;
+        state.locallyEditedKeys.add(key);
+        state.flags[key] = { ...getFlag(key), needsRepair: checkbox.checked };
+        saveCloudSoon();
+      });
+      document.addEventListener("input", (event) => {
+        const input = event.target.closest("input[data-note]");
+        if (!input) return;
+        const key = input.dataset.note;
+        state.locallyEditedKeys.add(key);
+        state.flags[key] = { ...getFlag(key), note: input.value };
+        saveCloudQuietly();
+      });
+      $("signInButton").addEventListener("click", async () => {
+        try {
+          await signInWithPopup(auth, new GoogleAuthProvider());
+        } catch (error) {
+          setCloud(`登入失敗：${error.message}`, "bad");
+        }
+      });
+      $("signOutButton").addEventListener("click", () => signOut(auth));
+      $("copyFrozenLinkButton").addEventListener("click", () => navigator.clipboard.writeText(frozenLink()));
+      $("copyRepairCommandButton").addEventListener("click", () => navigator.clipboard.writeText(repairCommand()));
+      $("copySummaryButton").addEventListener("click", copySummary);
+      $("copySummaryInlineButton").addEventListener("click", copySummary);
+      $("manualSyncButton").addEventListener("click", forceSyncCloud);
+      $("topManualSyncButton").addEventListener("click", forceSyncCloud);
+      $("bottomManualSyncButton").addEventListener("click", forceSyncCloud);
+      $("cloudDownloadButton").addEventListener("click", forceDownloadCloud);
+      $("topCloudDownloadButton").addEventListener("click", forceDownloadCloud);
+      $("bottomCloudDownloadButton").addEventListener("click", forceDownloadCloud);
+      $("overviewButton").addEventListener("click", () => {
+        void goToOverview();
+      });
+      $("prevLessonButton").addEventListener("click", () => {
+        void goToLesson(-1);
+      });
+      $("nextLessonButton").addEventListener("click", () => {
+        void goToLesson(1);
+      });
+      $("bottomOverviewButton").addEventListener("click", () => {
+        void goToOverview();
+      });
+      $("backToTopButton").addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      $("bottomPrevLessonButton").addEventListener("click", () => {
+        void goToLesson(-1);
+      });
+      $("bottomNextLessonButton").addEventListener("click", () => {
+        void goToLesson(1);
+      });
+
+      onAuthStateChanged(auth, async (user) => {
+        state.user = user;
+        $("signInButton").disabled = Boolean(user);
+        $("signOutButton").disabled = !user;
+        if (user) {
+          setCloud(`已登入：${user.email || user.displayName || user.uid}`);
+          await attachCloudReview();
+        } else {
+          setCloud("未登入 Google：可以讀取雲端審核狀態；新的勾選/備註只存在本機。");
+        }
+      });
+
+      updateLessonNav();
+      if (state.unit) load();
+    </script>
+  </body>
+</html>
