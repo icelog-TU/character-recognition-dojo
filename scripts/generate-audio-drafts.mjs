@@ -51,6 +51,7 @@ const baseSpeechInstructions = [
   "Pronunciation guardrails: 小孩 is ㄒㄧㄠˇ ㄏㄞˊ, never ㄒㄧㄠˇ ㄏㄞˊㄦ or any r-colored form; 孩 always ends cleanly as ㄏㄞˊ. 更 is ㄍㄥˋ and, when generated as a single character, must be spoken exactly once.",
   "Do not read punctuation aloud.",
   "For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
+  "Pronunciation guardrails: 讓 is Taiwan Mandarin ràng (ㄖㄤˋ), never 張 or zhang. 請 is qǐng (ㄑㄧㄥˇ), never the English word seen. In 一讓好嗎, keep the initial 一 audible before 讓.",
 ].join(" ");
 
 async function createSpeech({ apiKey, model, voice, input, outputPath, instructionsExtra = "" }) {
