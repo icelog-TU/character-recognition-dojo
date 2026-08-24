@@ -10,25 +10,13 @@
   },
   "title": "正",
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher-approved Production C handoff for L353. Boundary checked by Editor: origin/main 61dacec7 Integrate lessons L349 L350, formal production lessons L001-L350, latest formal new character 廳. L351「餐」 and L352「位」 are not in origin/main at Production start, so L353 is dependency-blocked and uses 餐 and 位 as provisional learned characters. Production builds a lesson-local dependency-blocked asset-complete package; Release owns ordered integration into production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
-  "dependsOnLessons": [
-    "L351",
-    "L352"
-  ],
-  "provisionalLearnedChars": [
-    "餐",
-    "位"
-  ],
+  "teacherNotes": "Teacher-approved Production C handoff for L353. Final package is rebased on origin/main aceff105, where L351「餐」 and L352「位」 are present in production JSON. Production start boundary was origin/main 61dacec7 with L351/L352 not yet merged; after final fetch/rebase, origin/main aceff105 includes L351 and L352, so the final package no longer needs provisional dependencies. Production builds a lesson-local asset-complete package; Release owns ordered integration into production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
   "generationConstraints": {
-    "allowedDisplayCharsBoundary": "formal learned chars through latest origin/main production JSON L350 plus provisional L351「餐」 and L352「位」 plus current new char L353「正」",
-    "dependsOnLessons": [
-      "L351",
-      "L352"
-    ],
-    "provisionalLearnedChars": [
-      "餐",
-      "位"
-    ],
+    "allowedDisplayCharsBoundary": "formal learned chars through latest origin/main production JSON L352 plus current new char L353「正」",
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
     "requiredCoverageChars": [
       "正",
       "位",
@@ -264,5 +252,6 @@
     "S03 Han-only: 吃0 正1 餐2 前3 不4 可5 以6 吃7 點8 心9; G03 target 正 index 1 PASS.",
     "S04 Han-only: 這0 間1 餐2 廳3 正4 好5 有6 位7 子8; G05 target 正 index 4 PASS.",
     "S05 Han-only: 兩0 個1 人2 誰3 也4 不5 讓6 誰7; G04 missingIndexes [3,4,5,6] = 誰/也/不/讓 PASS; option cards are single Han PASS; correctOrder mapping PASS."
-  ]
+  ],
+  "packageStatus": "asset-complete-package"
 }

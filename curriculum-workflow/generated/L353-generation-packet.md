@@ -3,12 +3,12 @@
 ## Boundary
 - Unit: L353
 - New character: 正 ㄓㄥˋ
-- Source boundary: origin/main 61dacec7, formal lessons L001-L350, review modules R041/R042 present.
-- Dependencies: L351「餐」 and L352「位」 were not in main at Production start.
-- Provisional learned chars: 餐, 位.
+- Source boundary: origin/main aceff105 after final rebase, formal lessons L001-L352, review modules R041/R042 present.
+- Dependencies: none after final rebase. Production start boundary 61dacec7 did not yet include L351/L352, but latest origin/main aceff105 does.
+- Provisional learned chars: none after final rebase.
 - Coverage targets: 正 >= 3, 位 >= 2, 餐 >= 2, 廳 >= 2, 讓 >= 1, 客 >= 1.
 - Coverage result: 正 4 PASS; 位 2 PASS; 餐 2 PASS; 廳 2 PASS; 讓 1 PASS; 客 1 PASS.
-- Allowed-character audit: PASS against formal learned chars through L350 plus provisional 餐/位 plus current 正.
+- Allowed-character audit: PASS against formal learned chars through L352 plus current 正.
 - Stage 4 order: G01 find-character, G02 teach-character, G03 missing-character, G04 partial-order, G05 choose-pronunciation.
 
 ## Asset Notes

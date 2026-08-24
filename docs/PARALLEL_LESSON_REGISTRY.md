@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L353 | 正 / normal lesson | ready-blocked-by-dependency | Production C | codex/l353-complete-package | L351:餐; L352:位 | 餐; 位 | `curriculum-workflow/lesson-requests/L353.json`; `curriculum-workflow/generated/L353-generation-packet.md`; `curriculum-workflow/drafts/L353-draft.json` | `curriculum-workflow/audio-inbox/L353/`; `public/assets/lessons/L353/` | Dependency-blocked asset-complete package from `origin/main` 61dacec7; L351/L352 were not in main at Production start; canonical Stage 4 order used; Release owns production JSON/planner/ledger integration. |
+| L353 | 正 / normal lesson | merge-ready | Production C | codex/l353-complete-package | none | none | `curriculum-workflow/lesson-requests/L353.json`; `curriculum-workflow/generated/L353-generation-packet.md`; `curriculum-workflow/drafts/L353-draft.json` | `curriculum-workflow/audio-inbox/L353/`; `public/assets/lessons/L353/` | Asset-complete package rebased on `origin/main` aceff105 after L351/L352 entered main; Production start boundary was 61dacec7 when L351/L352 were not yet merged; canonical Stage 4 order used; Release owns production JSON/planner/ledger integration. |
 
 ## Status Values
 
