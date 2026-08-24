@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L347 | 嗎 | claimed | Production A | codex/l347-complete-package | none | none | `curriculum-workflow/lesson-requests/L347.json`; `curriculum-workflow/generated/L347-generation-packet.md`; `curriculum-workflow/drafts/L347-draft.json` | `curriculum-workflow/audio-inbox/L347/`; `public/assets/lessons/L347/` | Building asset-complete package from approved handoff; latest main has L346「請」 so no provisional dependency is required. |
+| L347 | 嗎 | merge-ready | Production A | codex/l347-complete-package | none | none | `curriculum-workflow/lesson-requests/L347.json`; `curriculum-workflow/generated/L347-generation-packet.md`; `curriculum-workflow/drafts/L347-draft.json` | `curriculum-workflow/audio-inbox/L347/`; `public/assets/lessons/L347/` | Asset-complete package built and validated from approved handoff; latest main has L346「請」 so no provisional dependency is required. Release owns production JSON/planner/ledger integration and registry cleanup. |
 
 ## Status Values
 
