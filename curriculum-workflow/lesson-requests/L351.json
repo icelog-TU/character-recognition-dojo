@@ -10,26 +10,14 @@
   },
   "title": "餐",
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher-approved Production A handoff for L351. Latest origin/main boundary at production start is f9714d19 with formal production lessons L001-L348, latest formal new character 客. L349「讓」 and L350「廳」 are not in latest origin/main at production start, so L351 records them as provisional dependencies. Production builds a lesson-local dependency-blocked asset-complete package; Release owns ordered integration into production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
-  "dependsOnLessons": [
-    "L349",
-    "L350"
-  ],
-  "provisionalLearnedChars": [
-    "讓",
-    "廳"
-  ],
+  "teacherNotes": "Teacher-approved Production A handoff for L351. Production started from origin/main f9714d19 where L349/L350 were not merged, then rebased after origin/main 61dacec7 integrated L349「讓」 and L350「廳」. L351 now has no provisional dependencies. Production builds a lesson-local asset-complete package; Release owns ordered integration into production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
   "generationConstraints": {
-    "allowedDisplayCharsBoundary": "formal learned chars through latest origin/main production JSON L348 plus provisional L349「讓」 and L350「廳」 plus current new char L351「餐」",
+    "allowedDisplayCharsBoundary": "formal learned chars through latest origin/main production JSON L350 plus current new char L351「餐」",
     "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐",
-    "dependsOnLessons": [
-      "L349",
-      "L350"
-    ],
-    "provisionalLearnedChars": [
-      "讓",
-      "廳"
-    ],
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
     "requiredCoverageChars": [
       "餐",
       "廳",

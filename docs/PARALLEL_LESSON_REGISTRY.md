@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L351 | 餐 | claimed | Production A | codex/l351-complete-package | L349; L350 | 讓; 廳 | `curriculum-workflow/lesson-requests/L351.json`; `curriculum-workflow/generated/L351-generation-packet.md`; `curriculum-workflow/drafts/L351-draft.json` | `curriculum-workflow/audio-inbox/L351/`; `public/assets/lessons/L351/` | Building dependency-blocked asset-complete package from approved handoff; latest main has L348「客」, so L349「讓」 and L350「廳」 are provisional dependencies. |
+| L351 | 餐 | merge-ready | Production A | codex/l351-complete-package | none | none | `curriculum-workflow/lesson-requests/L351.json`; `curriculum-workflow/generated/L351-generation-packet.md`; `curriculum-workflow/drafts/L351-draft.json` | `curriculum-workflow/audio-inbox/L351/`; `public/assets/lessons/L351/` | Asset-complete package built and rebased after latest main integrated L349「讓」 and L350「廳」; no provisional dependency remains. Release owns production JSON/planner/ledger integration and registry cleanup. |
 
 ## Status Values
 

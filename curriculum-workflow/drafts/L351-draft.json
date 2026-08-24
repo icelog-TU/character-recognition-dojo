@@ -11,17 +11,11 @@
     "餐": "/assets/lessons/L351/audio/char-u9910.m4a"
   },
   "title": "餐",
-  "dependsOnLessons": [
-    "L349",
-    "L350"
-  ],
-  "provisionalLearnedChars": [
-    "讓",
-    "廳"
-  ],
-  "packageStatus": "dependency-blocked-asset-complete",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "packageStatus": "asset-complete-package",
   "requiredRounds": 5,
-  "originHint": "Built from origin/main f9714d19 through L348. L349「讓」 and L350「廳」 are provisional dependencies; Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push, and deployment.",
+  "originHint": "Rebased on origin/main 61dacec7 through L350. L349「讓」 and L350「廳」 are formal learned content, so L351 has no provisional dependencies. Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push, and deployment.",
   "sentences": [
     {
       "id": "L351-S01",
