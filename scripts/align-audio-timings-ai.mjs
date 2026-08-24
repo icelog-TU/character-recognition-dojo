@@ -73,6 +73,7 @@ function normalizeTranscribedHanChar(char) {
     ["\u9c7c", "\u9b5a"],
     ["\u5374", "\u537b"],
     ["\u9f50", "\u9f4a"],
+    ["\u8bf7", "\u8acb"],
     ["\u4e66", "\u66f8"],
     ["\u4e70", "\u8cb7"],
     ["\u8fdb", "\u9032"],
