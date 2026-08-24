@@ -218,6 +218,8 @@ Production target state is `asset-complete-package`, not `release-ready-package`
 
 Production threads must not call a unit `asset-complete-package` unless the repo contains the request/packet/draft, final images, final sentence audio, Stage 4 option or teach audio where referenced, local timings, and an accurate registry row. A branch that contains only images plus `S01-S05` sentence audio plus `charAudio` is `assets-only`, not a course. A dependency-blocked branch must not be called `merge-ready` or `release-ready`.
 
+Dependency blockers block Release into `main`; they do not block Production from preparing a lesson-local package in parallel. For example, if `L346` is being prepared or released and the teacher has already approved `L347`, Production may claim and build `L347` from latest `origin/main`, record `L346` as a provisional dependency, and report `dependency-blocked-asset-complete`. Release later integrates `L346` first, then rechecks and integrates `L347`.
+
 The release thread must merge only in playable order and must reject:
 
 - missing request, packet, or draft source files
@@ -253,7 +255,7 @@ The receiving production thread must:
 
 The purpose of the claim is repo-visible evidence that the pasted handoff actually started. If a handoff was pasted but the remote connection failed before Codex ran, no branch or registry row will appear, and the coordinator can detect the missed lesson by auditing lesson-number gaps, branches, and the registry.
 
-Stop instead of continuing only when there is a real blocker: the assigned worktree is dirty, the startup checks fail, the production handoff is missing required approved sentence data, the registry cannot be updated or pushed before large asset work, or the allowed-character/dependency audit fails.
+Stop instead of continuing only when there is a real Production blocker: the assigned worktree is dirty, the startup checks fail, the production handoff is missing required approved sentence data, the registry cannot be updated or pushed before large asset work, or the allowed-character/dependency audit shows missing, inconsistent, or unapproved dependencies. Do not stop merely because an earlier lesson or review pair has not entered `origin/main`; that is a Release/main blocker and should be recorded as `dependsOnLessons` / provisional dependency for a dependency-blocked package.
 
 ## Lesson Gap Audit
 

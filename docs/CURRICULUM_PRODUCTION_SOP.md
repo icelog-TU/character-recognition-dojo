@@ -54,7 +54,7 @@ Only treat text as actually damaged if UTF-8 decoding fails, decoded text contai
 ## Lesson Pipeline
 
 0. Run `git fetch origin` and `git status --short --branch` in the assigned worktree. If it is dirty, stop. If it is clean but on an old package branch, switch to a new assignment branch from latest `origin/main` before running package audits. A clean old branch is only safe to leave; it is not a valid base for a new lesson/review assignment. After creating the new branch from `origin/main`, run `npm run curriculum:audit-state`, then check `docs/CURRICULUM_LEDGER.md` and `docs/PARALLEL_LESSON_REGISTRY.md`.
-1. Create or claim a lesson row in `docs/PARALLEL_LESSON_REGISTRY.md` before starting any parallel lesson work. This is required before creating request files, generating packets, images, audio, or lesson JSON for a not-yet-merged lesson. After a clean claim, continue into production work; do not wait for a second teacher message unless a blocker is present.
+1. Create or claim a lesson row in `docs/PARALLEL_LESSON_REGISTRY.md` before starting any parallel lesson work. This is required before creating request files, generating packets, images, audio, or lesson JSON for a not-yet-merged lesson. After a clean claim, continue into production work; do not wait for a second teacher message. Earlier lessons or milestone review pairs that are not yet in `origin/main` are dependency blockers for Release, not blockers for Production package preparation, as long as they are recorded as provisional dependencies.
 2. Create a lesson request in `curriculum-workflow/lesson-requests/`.
 3. Check `docs/CURRICULUM_LEDGER.md` for the merged learned character set and recent review pool. If this is a parallel-prepared later lesson, also check registered provisional dependencies.
 4. Run `npm run curriculum:packet -- --request curriculum-workflow/lesson-requests/L004-example.json`.
@@ -93,7 +93,7 @@ Hard release gate:
 - A branch with only `public/assets/lessons/L###/images/`, `S01-S05` audio, and `charAudio` is `assets-only`. It must not be called `merge-ready`, and the release thread must not infer final lesson JSON from chat.
 - A draft that has `durationMs` but missing/empty `charTimings` is not aligned.
 - A normal L006+ lesson with missing `sentenceGames`, missing `teachAudio` files, or missing `choose-pronunciation` wrong-option audio is not asset-complete.
-- A lesson using provisional characters can be prepared, but it cannot enter production until those characters are real in latest `origin/main` or the teacher changes the sentence set.
+- A lesson using provisional characters can be prepared as a dependency-blocked Production package. It cannot enter `main`, be called `release-ready`, or be treated as playable until those characters are real in latest `origin/main` or the teacher changes the sentence set.
 - A migrated review package may intentionally reuse an `R###` id that already exists in legacy `reviewLessons`. That is allowed only when the handoff labels it `review migration replacement package`. Production prepares and pushes the package files on a branch, but does not edit production JSON, planner data, or ledger. Release later replaces the legacy review entry with the current schedule entry. In this narrow case, `npm run curriculum:audit-state` may fail with an expected legacy id collision; Production must report the exact failure and continue only if no other audit-state failure is present.
 
 ## Fast Package Audit
@@ -165,7 +165,7 @@ Parallel lesson ownership, registry checkpoints, dependency rechecks, and merge 
 Production-specific constraints still apply during parallel work:
 
 - Each thread may prepare only its owned lesson/review request, packet, raw audio inbox, and final asset folder.
-- A production handoff should be one-paste executable. The receiving thread claims the unit in the registry and continues to the `asset-complete-package` unless the assigned worktree is dirty, startup checks fail, required handoff data is missing, dependency/allowed-character checks fail, or the registry cannot be updated/pushed before large asset work.
+- A production handoff should be one-paste executable. The receiving thread claims the unit in the registry and continues to the `asset-complete-package` unless the assigned worktree is dirty, startup checks fail, required handoff data is missing, dependency/allowed-character declarations are inconsistent or missing, or the registry cannot be updated/pushed before large asset work. Do not stop merely because an earlier numbered lesson or required review pair is not yet in `origin/main`; record it as a dependency and finish a dependency-blocked package.
 - Image prompt writing, image generation, and raw AI audio generation may happen in parallel by owned lesson/review folder.
 - JSON-writing commands must run one at a time: `assets:images`, `assets:audio`, `assets:align`, `assets:align:ai`, and any script that rewrites `src/curriculum/sample-lessons.json` or shared reports.
 - Before any later lesson is merged, re-check every sentence, image prompt, audio file, Stage 4 option, and timing against the now-real learned-character set from latest `origin/main`.
@@ -518,7 +518,7 @@ Starting after L045, every 15-lesson milestone gets two review modules. These ar
 - After L060: R003/R004, 5 sentences each, must cover every new character from L031-L060 at least once across the 10 sentences. The next new-character lesson is L061.
 - After L075: R005/R006, 5 sentences each, must cover every new character from L046-L075 at least once across the 10 sentences. The next new-character lesson is L076.
 - Continue by 15-lesson milestones: after L090 review L061-L090, after L105 review L076-L105, and so on.
-- Review pairs are blockers: after a milestone lesson enters `main`, its two review modules must ship before the next numbered lesson. If the pair was skipped, stop later numbered lessons and catch up the missing review pair(s).
+- Review pairs are Release/main blockers: after a milestone lesson enters `main`, its two review modules must ship before the next numbered lesson enters `main`. If the pair was skipped, Release must stop merging later numbered lessons and catch up the missing review pair(s). Production may still prepare later dependency-blocked lesson-local packages when provisional dependencies are recorded.
 - For overdue review modules, lock allowed characters to the milestone ceiling, not latest `origin/main`.
 - Continue this schedule through L600. Use the full schedule table in `docs/CURRICULUM_OPERATING_SOP.md` as authority. The final standard pair is R075/R076 after L600 for L571-L600; there is no extra capstone pair.
 - First milestones:

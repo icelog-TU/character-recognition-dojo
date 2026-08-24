@@ -4,6 +4,8 @@ Production slots build `asset-complete-package` lesson or review-module packages
 
 Production threads may work in parallel, but each thread owns exactly one assigned unit and one assigned worktree slot at a time.
 
+Dependency blockers block Release/main integration, not Production package preparation. If the teacher or Editor assigns a later lesson while earlier lessons or a milestone review pair are still unmerged, do not refuse the assignment for that reason alone. Claim the unit, record the earlier unit(s) as `dependsOnLessons` / provisional dependencies in the registry and package files, build the lesson-local package, and report `dependency-blocked-asset-complete`. Release will later integrate packages into `main` in playable order.
+
 ## Read First
 
 1. `docs/PROJECT_HANDOFF_SOP.md`

@@ -54,7 +54,7 @@ If bare `gh` fails, retry with `C:\Users\User\.local\bin\gh.cmd`.
 
 - Merge normal lessons in contiguous `L###` order.
 - Insert review modules only according to the review cycle rules.
-- Review modules are blockers. After L045, L060, L075, L090, and every later 15-lesson milestone, ship the required review pair before the next numbered lesson.
+- Review modules are Release/main blockers. After L045, L060, L075, L090, and every later 15-lesson milestone, ship the required review pair before the next numbered lesson enters `main`. This does not prevent Production from preparing dependency-blocked later packages; it only controls Release order.
 - Continue blockers through the 600-lesson course. After L600, ship R075/R076 for L571-L600 before calling the 600-lesson curriculum complete. There is no extra capstone pair beyond R076.
 - If review modules were skipped, stop merging further numbered lessons and catch up overdue review pairs first. For any milestone already passed by latest `origin/main`, Release must confirm the corresponding current-schedule review pair is present and valid before merging later numbered lessons. Legacy review modules from the retired 30-lesson schedule do not count until audited or rebuilt against the current milestone, coverage range, and allowed-character ceiling.
 - Do not merge L172 before L171.

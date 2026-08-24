@@ -30,7 +30,7 @@ Every new thread must run `git fetch origin` and inspect latest `origin/main:src
 - the latest shipped numbered lesson
 - the latest learned character set
 - which review modules are already in `reviewLessons`
-- whether any required review pair blocks the next numbered lesson
+- whether any required review pair blocks the next numbered lesson from entering `main`
 - whether a package branch is already obsolete, legacy, or still usable
 
 App name: `認字練功房`. Review modules use `R###` ids, do not consume `L###` lesson numbers, and follow the current 15-lesson milestone schedule starting after L045. L001-L005 use Stage 1-3. L006 and later normal lessons should include Stage 4 fixed sentence games unless the teacher explicitly changes the design. Normal five-sentence lesson Stage 4 order is canonical: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`; any exception must be teacher-approved and documented.
@@ -155,7 +155,7 @@ Do not create a new clone unless the user explicitly asks. If the current shell 
 - Final teacher-approved sentence sets must be captured in repo files, not only in chat.
 - Supervisor must run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects skipped lesson numbers.
 - Production delivers `asset-complete-package`; Release owns `release-ready-package` and `in-main`. Do not make Production spend time on shared-state release integration for dependency-blocked lessons.
-- Review pairs are blockers: after L045/L060/L075/L090 and every later 15-lesson milestone, ship the required review pair before the next numbered lesson. Overdue review modules keep their original milestone allowed-character ceiling, not latest `origin/main`.
+- Review pairs are Release/main blockers, not parallel Production blockers: after L045/L060/L075/L090 and every later 15-lesson milestone, Release must ship the required review pair before the next numbered lesson enters `main`. Production may still prepare later lesson-local packages in parallel when the teacher has approved their targets/sentences and the package records the required provisional dependencies. Overdue review modules keep their original milestone allowed-character ceiling, not latest `origin/main`.
 - The review cycle continues through the full 600-lesson course and uses R001-R076. R075/R076 follow L600 for L571-L600; there is no extra capstone pair beyond R076.
 - Production handoffs must be one-paste executable.
 - A branch with only images plus `S01-S05` audio plus `charAudio` is `assets-only`, not a complete course.
@@ -321,7 +321,7 @@ Production goal: deliver `asset-complete-package`, not `release-ready-package`. 
 Final handoff must include the pushed package branch and full tip commit SHA. If you provide a pre-merge asset preview URL, it must use `ref=<package-branch-or-full-SHA>` and be labeled `pre-merge package preview, not final main review queue`. Do not give `lesson-asset-review.html?unit=L###&ref=main` as usable before Release merges and deploys.
 
 如果這個 worktree 不是 clean，停止並回報。不要 stash、reset、revert、或覆蓋別人的工作。
-收到 Editor 的完整 handoff 後，依 SOP claim registry，從 origin/main 建新分支，並直接製作 `asset-complete-package`；不要做 Release 的 shared-state 整合。
+收到 Editor 的完整 handoff 後，依 SOP claim registry，從 origin/main 建新分支，並直接製作 `asset-complete-package`；不要做 Release 的 shared-state 整合。若前一課或 milestone review pair 尚未進 `origin/main`，不要因此拒絕製作；把它列為 `dependsOnLessons` / provisional dependency，完成後回報 `dependency-blocked-asset-complete`，等待 Release 依 playable order 整合。
 ```
 
 ### Release

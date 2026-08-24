@@ -92,6 +92,7 @@ For each assigned normal lesson, produce final approved sentence data:
 - Unit id, such as `L171`.
 - New character(s), Taiwan zhuyin, title.
 - Dependency lessons and any provisional learned characters.
+- If dependency lessons are not yet merged, state that they are Release/main blockers only; Production should still claim and build the assigned dependency-blocked package after recording `dependsOnLessons` / `provisionalLearnedChars`.
 - Locked `allowedChars`.
 - Forbidden/unlearned characters found during audit.
 - Coverage targets separated from allowed-character dependencies.
