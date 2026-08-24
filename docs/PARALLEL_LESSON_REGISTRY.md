@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L348 | 客 / normal lesson | claimed | Production B | codex/l348-complete-package | L347:嗎 | 嗎 | curriculum-workflow/lesson-requests/L348.json; curriculum-workflow/generated/L348-generation-packet.md; curriculum-workflow/drafts/L348-draft.json | public/assets/lessons/L348/; curriculum-workflow/audio-inbox/L348/ | L347 is not in origin/main at claim time, so L348 is dependency-blocked and uses 嗎 provisionally. Production B owns the lesson-local asset package only; Release owns production JSON, planner, ledger, final verify, and merge. |
 
 ## Status Values
 
