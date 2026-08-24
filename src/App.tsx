@@ -1039,6 +1039,10 @@ function practiceEntryComplete(entry: PracticeSequenceEntry, completedOrders: Se
   return entry.kind === "lesson" ? completedOrders.has(entry.lesson.order) : completedReviewIds.has(entry.review.id);
 }
 
+function practiceEntryLocked(entry: PracticeSequenceEntry, unlockOrder: number): boolean {
+  return entry.kind === "lesson" ? entry.lesson.order > unlockOrder : entry.review.afterLessonOrder > unlockOrder;
+}
+
 function nextPracticeEntry(entries: PracticeSequenceEntry[], completedOrders: Set<number>, completedReviewIds: Set<string>): PracticeSequenceEntry {
   return entries.find((entry) => !practiceEntryComplete(entry, completedOrders, completedReviewIds)) ?? entries[entries.length - 1];
 }
@@ -1442,7 +1446,14 @@ function App() {
     curriculum.lessons.find((lesson) => lesson.order === selectedOrder) ?? curriculum.lessons[0];
   const activeReviewLesson = (curriculum.reviewLessons ?? []).find((review) => review.id === activeReviewId) ?? null;
   const activePracticeUnit = activeReviewLesson ? reviewLessonAsPracticeUnit(activeReviewLesson) : selectedLesson;
-  const hasNextPracticeEntry = practiceEntries.some((entry, index) => entry.id === activePracticeUnit.id && index < practiceEntries.length - 1);
+  const activePracticeEntry =
+    practiceEntries.find((entry) =>
+      activeReviewLesson
+        ? entry.kind === "review" && entry.review.id === activeReviewLesson.id
+        : entry.kind === "lesson" && entry.lesson.order === selectedLesson.order,
+    ) ?? null;
+  const activePracticeEntryIndex = activePracticeEntry ? practiceEntries.findIndex((entry) => entry.id === activePracticeEntry.id) : -1;
+  const hasNextPracticeEntry = activePracticeEntryIndex >= 0 && activePracticeEntryIndex < practiceEntries.length - 1;
   const streakDays = currentStreakDays(dailyRecords, completedOrders);
 
   useEffect(() => {
@@ -1920,6 +1931,11 @@ function App() {
     setMenuOpen(false);
   }
 
+  function openPracticeEntry(entry: PracticeSequenceEntry) {
+    if (entry.kind === "lesson") openLesson(entry.lesson.order);
+    else openReview(entry.review.id);
+  }
+
   function startLessonWithFeedback(order: number) {
     if (startingOrder !== null) return;
     setStartingOrder(order);
@@ -1993,6 +2009,16 @@ function App() {
                 unlockOrder={unlockOrder}
                 completedOrders={completedOrders}
                 onSelect={openLesson}
+              />
+            )}
+            {activeReviewLesson && activePracticeEntry && (
+              <PracticeSequenceNavigator
+                entries={practiceEntries}
+                activeEntry={activePracticeEntry}
+                unlockOrder={unlockOrder}
+                completedOrders={completedOrders}
+                completedReviewIds={completedReviewIds}
+                onSelect={openPracticeEntry}
               />
             )}
             <LessonPanel
@@ -2484,6 +2510,84 @@ function PracticeNavigator({
           disabled={!nextLesson || nextLocked}
           onClick={() => {
             if (nextLesson && !nextLocked) onSelect(nextLesson.order);
+          }}
+        >
+          ›
+        </button>
+      </div>
+    </aside>
+  );
+}
+
+function PracticeSequenceNavigator({
+  entries,
+  activeEntry,
+  unlockOrder,
+  completedOrders,
+  completedReviewIds,
+  onSelect,
+}: {
+  entries: PracticeSequenceEntry[];
+  activeEntry: PracticeSequenceEntry;
+  unlockOrder: number;
+  completedOrders: Set<number>;
+  completedReviewIds: Set<string>;
+  onSelect: (entry: PracticeSequenceEntry) => void;
+}) {
+  const activeIndex = entries.findIndex((entry) => entry.id === activeEntry.id);
+  const previousEntry = activeIndex > 0 ? entries[activeIndex - 1] : null;
+  const nextEntry = activeIndex >= 0 && activeIndex < entries.length - 1 ? entries[activeIndex + 1] : null;
+  const previousLocked = Boolean(previousEntry && practiceEntryLocked(previousEntry, unlockOrder));
+  const nextLocked = Boolean(nextEntry && practiceEntryLocked(nextEntry, unlockOrder));
+  const completed = practiceEntryComplete(activeEntry, completedOrders, completedReviewIds);
+
+  return (
+    <aside className="side-panel">
+      <div className="nav-heading">
+        <h2>現在這課</h2>
+        <span className="mini-label">練習中</span>
+      </div>
+      <div className="current-lesson-nav">
+        <button
+          type="button"
+          className="lesson-step-button"
+          aria-label={
+            previousEntry
+              ? previousLocked
+                ? `${practiceEntryBadge(previousEntry)} ${practiceEntryLabel(previousEntry)}尚未解鎖`
+                : `上一課，${practiceEntryBadge(previousEntry)} ${practiceEntryLabel(previousEntry)}`
+              : "沒有上一課"
+          }
+          disabled={!previousEntry || previousLocked}
+          onClick={() => {
+            if (previousEntry && !previousLocked) onSelect(previousEntry);
+          }}
+        >
+          ‹
+        </button>
+        <div className="nearby-row current-lesson-row" aria-label="目前練習課程">
+          <div
+            className={`lesson-chip lesson-chip-readonly review-lesson-chip active${completed ? " completed" : ""}`}
+            aria-current="true"
+            aria-label={`${practiceEntryBadge(activeEntry)} ${practiceEntryLabel(activeEntry)}`}
+          >
+            <span>{practiceEntryBadge(activeEntry)}</span>
+            <strong>{practiceEntryLabel(activeEntry)}</strong>
+          </div>
+        </div>
+        <button
+          type="button"
+          className="lesson-step-button"
+          aria-label={
+            nextEntry
+              ? nextLocked
+                ? `${practiceEntryBadge(nextEntry)} ${practiceEntryLabel(nextEntry)}尚未解鎖`
+                : `下一課，${practiceEntryBadge(nextEntry)} ${practiceEntryLabel(nextEntry)}`
+              : "沒有下一課"
+          }
+          disabled={!nextEntry || nextLocked}
+          onClick={() => {
+            if (nextEntry && !nextLocked) onSelect(nextEntry);
           }}
         >
           ›
