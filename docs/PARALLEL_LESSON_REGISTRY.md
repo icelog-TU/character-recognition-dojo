@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L346 | 請 | claimed | Production D | codex/l346-complete-package | none; R041/R042 released before start | none | `curriculum-workflow/lesson-requests/L346.json`; `curriculum-workflow/generated/L346-generation-packet.md`; `curriculum-workflow/drafts/L346-draft.json` | `curriculum-workflow/audio-inbox/L346/`; `public/assets/lessons/L346/` | Claimed from origin/main `dfd052ff`; formal boundary L001-L345 plus R041/R042. |
 
 ## Status Values
 
