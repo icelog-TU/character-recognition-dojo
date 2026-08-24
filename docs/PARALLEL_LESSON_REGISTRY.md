@@ -16,8 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| R041 | review module | claimed | Production C | codex/r041-r042-review-package | none | none | `curriculum-workflow/review-requests/R041.json`; `curriculum-workflow/generated/R041-generation-packet.md`; `curriculum-workflow/drafts/R041-draft.json` | `curriculum-workflow/audio-inbox/R041/`; `public/assets/reviews/R041/` | Review pair after L345; covers L316-L345; allowed ceiling L345; must merge before L346. |
-| R042 | review module | claimed | Production C | codex/r041-r042-review-package | none | none | `curriculum-workflow/review-requests/R042.json`; `curriculum-workflow/generated/R042-generation-packet.md`; `curriculum-workflow/drafts/R042-draft.json` | `curriculum-workflow/audio-inbox/R042/`; `public/assets/reviews/R042/` | Review pair after L345; covers L316-L345; allowed ceiling L345; must merge before L346. |
+| R041 | review module | merged | Production C | codex/r041-r042-review-package | none | none | `curriculum-workflow/review-requests/R041.json`; `curriculum-workflow/generated/R041-generation-packet.md`; `curriculum-workflow/drafts/R041-draft.json` | `curriculum-workflow/audio-inbox/R041/`; `public/assets/reviews/R041/` | Package branch inserts R041 in production reviewLessons after L345; Release should clean this row after main merge. |
+| R042 | review module | merged | Production C | codex/r041-r042-review-package | none | none | `curriculum-workflow/review-requests/R042.json`; `curriculum-workflow/generated/R042-generation-packet.md`; `curriculum-workflow/drafts/R042-draft.json` | `curriculum-workflow/audio-inbox/R042/`; `public/assets/reviews/R042/` | Package branch inserts R042 in production reviewLessons after L345; Release should clean this row after main merge before L346. |
 
 ## Status Values
 

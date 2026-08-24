@@ -187044,6 +187044,990 @@
           ]
         }
       ]
+    },
+    {
+      "id": "R041",
+      "reviewNumber": 41,
+      "title": "複習四十一",
+      "afterLessonOrder": 345,
+      "targetLessonRange": {
+        "startOrder": 316,
+        "endOrder": 345
+      },
+      "requiredCoverageChars": [
+        "色",
+        "粉",
+        "哪",
+        "些",
+        "最",
+        "西",
+        "東",
+        "方",
+        "圖",
+        "向",
+        "線",
+        "直",
+        "轉",
+        "右",
+        "角",
+        "落",
+        "因",
+        "原",
+        "別",
+        "特",
+        "處",
+        "理",
+        "整",
+        "齊",
+        "全",
+        "今",
+        "們",
+        "年",
+        "跟",
+        "常"
+      ],
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "R041-S01",
+          "text": "這些粉色花，哪朵最好看。",
+          "displayLines": [
+            "這些粉色花，",
+            "哪朵最好看。"
+          ],
+          "spokenText": "這些粉色花哪朵最好看",
+          "focusChar": "哪",
+          "imageNotes": "花園或花店裡，有幾朵粉色花擺在一起，主角小女孩正在看花、比較哪一朵最好看。畫面要清楚呈現多朵粉色花和「選哪朵」的情境，不要價格牌、花名標籤、文字或數字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 這些粉色花，哪朵最好看。 Image notes: 花園或花店裡，有幾朵粉色花擺在一起，主角小女孩正在看花、比較哪一朵最好看。畫面要清楚呈現多朵粉色花和「選哪朵」的情境，不要價格牌、花名標籤、文字或數字。 Scene: In a warm garden or flower shop, several pink flowers are grouped together. The recurring protagonist girl compares the flowers and looks as if she is choosing which flower looks best. Make the multiple pink flowers and choice/comparison situation clear. No price tags, flower labels, text, or numbers.",
+          "imageSrc": "/assets/reviews/R041/images/R041-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R041/audio/R041-S01.m4a",
+            "durationMs": 4767,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1280,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1520,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2820,
+                "endMs": 3080
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3080,
+                "endMs": 3280
+              }
+            ]
+          }
+        },
+        {
+          "id": "R041-S02",
+          "text": "看地圖，向東方直走。",
+          "displayLines": [
+            "看地圖，",
+            "向東方直走。"
+          ],
+          "spokenText": "看地圖向東方直走",
+          "focusChar": "圖",
+          "imageNotes": "主角小女孩和爸爸或老師一起看一張簡化地圖，地圖上有路線和方向箭頭，兩人準備照著地圖往東方直走。地圖不能有可讀文字、東西南北字樣或數字；方向可以用太陽在右上方或地圖上的無字箭頭來表現。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 看地圖，向東方直走。 Image notes: 主角小女孩和爸爸或老師一起看一張簡化地圖，地圖上有路線和方向箭頭，兩人準備照著地圖往東方直走。地圖不能有可讀文字、東西南北字樣或數字；方向可以用太陽在右上方或地圖上的無字箭頭來表現。 Scene: The recurring protagonist girl and her recurring father look together at a simplified visual-only map. A route line and simple non-text arrows on the map show a straight path toward the east, hinted by the sun in the upper-right area. The map has no readable words, no compass letters, no Chinese direction labels, and no numbers.",
+          "imageSrc": "/assets/reviews/R041/images/R041-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R041/audio/R041-S02.m4a",
+            "durationMs": 3819,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2160,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2720
+              }
+            ]
+          }
+        },
+        {
+          "id": "R041-S03",
+          "text": "從左到右畫一條直線。",
+          "displayLines": [
+            "從左到右",
+            "畫一條直線。"
+          ],
+          "spokenText": "從左到右畫一條直線",
+          "focusChar": "線",
+          "imageNotes": "主角小女孩坐在桌邊，用筆在紙上從左邊往右邊畫一條直線。畫面要清楚呈現筆的移動方向和一條直線，但紙上不要有文字、數字、箭頭標籤或可讀符號。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 從左到右畫一條直線。 Image notes: 主角小女孩坐在桌邊，用筆在紙上從左邊往右邊畫一條直線。畫面要清楚呈現筆的移動方向和一條直線，但紙上不要有文字、數字、箭頭標籤或可讀符號。 Scene: The recurring protagonist girl sits at a desk and uses a pencil to draw one straight horizontal line on blank paper from her left side toward her right side. Show the hand position and line direction through pose and composition, without written marks, numbers, arrow labels, or readable symbols.",
+          "imageSrc": "/assets/reviews/R041/images/R041-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R041/audio/R041-S03.m4a",
+            "durationMs": 4819,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 980
+              },
+              {
+                "charIndex": 2,
+                "startMs": 980,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1620,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2340,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2600,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2960,
+                "endMs": 3300
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3300,
+                "endMs": 3480
+              }
+            ]
+          }
+        },
+        {
+          "id": "R041-S04",
+          "text": "把東西整理好，放整齊。",
+          "displayLines": [
+            "把東西",
+            "整理好，",
+            "放整齊。"
+          ],
+          "spokenText": "把東西整理好放整齊",
+          "focusChar": "理",
+          "imageNotes": "家裡桌上或房間裡有書、本子、彩色筆、小盒子等物品，主角小女孩正在先把東西整理好，再把它們放整齊。畫面要呈現整理後變整齊的動作，不要品牌、標籤、文字或數字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 把東西整理好，放整齊。 Image notes: 家裡桌上或房間裡有書、本子、彩色筆、小盒子等物品，主角小女孩正在先把東西整理好，再把它們放整齊。畫面要呈現整理後變整齊的動作，不要品牌、標籤、文字或數字。 Scene: In the protagonist family's warm home room, books, notebooks, colored pencils, and small boxes are being sorted. The recurring protagonist girl is arranging the items into neat groups and placing them tidily. Show the action of organizing and the orderly result. No labels, brands, text, or numbers.",
+          "imageSrc": "/assets/reviews/R041/images/R041-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R041/audio/R041-S04.m4a",
+            "durationMs": 3962,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1640,
+                "endMs": 1641
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1840,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2720,
+                "endMs": 2721
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3020,
+                "endMs": 3320
+              }
+            ]
+          }
+        },
+        {
+          "id": "R041-S05",
+          "text": "先走到轉角，再向右轉。",
+          "displayLines": [
+            "先走到轉角，",
+            "再向右轉。"
+          ],
+          "spokenText": "先走到轉角再向右轉",
+          "focusChar": "轉",
+          "imageNotes": "戶外安全街角或學校走廊轉角，主角小女孩先走到轉角，再往自己的右邊轉。畫面要清楚顯示轉角和右轉方向，但不要路牌、店名、箭頭文字、號碼或車牌。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 先走到轉角，再向右轉。 Image notes: 戶外安全街角或學校走廊轉角，主角小女孩先走到轉角，再往自己的右邊轉。畫面要清楚顯示轉角和右轉方向，但不要路牌、店名、箭頭文字、號碼或車牌。 Scene: At a safe school corridor corner, the recurring protagonist girl has walked to the corner and is turning to her own right. Use her body orientation, foot placement, and the hallway bend to make the right turn clear. No road signs, store names, arrow text, numbers, or license plates.",
+          "imageSrc": "/assets/reviews/R041/images/R041-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R041/audio/R041-S05.m4a",
+            "durationMs": 5260,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 660
+              },
+              {
+                "charIndex": 1,
+                "startMs": 660,
+                "endMs": 980
+              },
+              {
+                "charIndex": 2,
+                "startMs": 980,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2140,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2320,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2740,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3020,
+                "endMs": 3260
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3260,
+                "endMs": 3520
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "R041-G01",
+          "type": "find-character",
+          "sentenceId": "R041-S01",
+          "targetChar": "哪",
+          "targetCharIndex": 5,
+          "prompt": "找出句子裡的字。",
+          "missingIndexes": [
+            5
+          ]
+        },
+        {
+          "id": "R041-G02",
+          "type": "teach-character",
+          "sentenceId": "R041-S05",
+          "targetChar": "轉",
+          "targetCharIndex": 8,
+          "prompt": "跟著念這個字。",
+          "missingIndexes": [
+            8
+          ],
+          "teachAudio": {
+            "prefixText": "先走到轉角再向右",
+            "prefixSrc": "/assets/reviews/R041/audio/R041-G02-prefix.m4a"
+          }
+        },
+        {
+          "id": "R041-G03",
+          "type": "missing-character",
+          "sentenceId": "R041-S02",
+          "targetChar": "圖",
+          "targetCharIndex": 2,
+          "prompt": "補上不見的字。",
+          "missingIndexes": [
+            2
+          ],
+          "options": [
+            {
+              "id": "R041-G03-A",
+              "text": "圖",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "R041-G04",
+          "type": "partial-order",
+          "sentenceId": "R041-S03",
+          "targetChar": "線",
+          "prompt": "把字排回句子裡。",
+          "missingIndexes": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "options": [
+            {
+              "id": "R041-G04-A",
+              "text": "一",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "R041-G04-B",
+              "text": "條",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "R041-G04-C",
+              "text": "直",
+              "correctOrder": 2,
+              "correct": true
+            },
+            {
+              "id": "R041-G04-D",
+              "text": "線",
+              "correctOrder": 3,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "R041-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "R041-S04",
+          "targetChar": "齊",
+          "targetCharIndex": 8,
+          "prompt": "選出聽到的句子。",
+          "options": [
+            {
+              "id": "R041-G05-correct",
+              "text": "把東西整理好，放整齊。",
+              "correct": true,
+              "sentenceId": "R041-S04",
+              "audioSrc": "/assets/reviews/R041/audio/R041-S04.m4a",
+              "spokenText": "把東西整理好放整齊"
+            },
+            {
+              "id": "R041-G05-wrong-one",
+              "text": "把東西整理好，放整好。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R041/audio/R041-G05-wrong-one.m4a",
+              "spokenText": "把東西整理好放整好"
+            },
+            {
+              "id": "R041-G05-wrong-two",
+              "text": "把東西整理好，放整了。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R041/audio/R041-G05-wrong-two.m4a",
+              "spokenText": "把東西整理好放整了"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R042",
+      "reviewNumber": 42,
+      "title": "複習四十二",
+      "afterLessonOrder": 345,
+      "targetLessonRange": {
+        "startOrder": 316,
+        "endOrder": 345
+      },
+      "requiredCoverageChars": [
+        "色",
+        "粉",
+        "哪",
+        "些",
+        "最",
+        "西",
+        "東",
+        "方",
+        "圖",
+        "向",
+        "線",
+        "直",
+        "轉",
+        "右",
+        "角",
+        "落",
+        "因",
+        "原",
+        "別",
+        "特",
+        "處",
+        "理",
+        "整",
+        "齊",
+        "全",
+        "今",
+        "們",
+        "年",
+        "跟",
+        "常"
+      ],
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "R042-S01",
+          "text": "今年常常下雨，真受不了。",
+          "displayLines": [
+            "今年常常",
+            "下雨，",
+            "真受不了。"
+          ],
+          "spokenText": "今年常常下雨真受不了",
+          "focusChar": "常",
+          "imageNotes": "主角小女孩站在家門口或窗邊看外面下雨，表情有點無奈，地上有雨水和水花，旁邊可以有雨傘或雨鞋。畫面要呈現「今年常常下雨，很受不了」的心情，但不要文字、日期、數字、日曆或天氣圖表。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 今年常常下雨，真受不了。 Image notes: 主角小女孩站在家門口或窗邊看外面下雨，表情有點無奈，地上有雨水和水花，旁邊可以有雨傘或雨鞋。畫面要呈現「今年常常下雨，很受不了」的心情，但不要文字、日期、數字、日曆或天氣圖表。 Scene: The recurring protagonist girl stands at her warm home doorway or by a window watching rain outside. She looks mildly frustrated or helpless, with puddles and splashes visible and an umbrella or rain shoes nearby. Daytime rainy mood, no text, dates, numbers, calendar, or weather chart.",
+          "imageSrc": "/assets/reviews/R042/images/R042-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R042/audio/R042-S01.m4a",
+            "durationMs": 4267,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1240,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1520,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2120,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2340,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2540,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2700,
+                "endMs": 2860
+              }
+            ]
+          }
+        },
+        {
+          "id": "R042-S02",
+          "text": "特別冷，原因是落地窗沒關。",
+          "displayLines": [
+            "特別冷，",
+            "原因是",
+            "落地窗沒關。"
+          ],
+          "spokenText": "特別冷原因是落地窗沒關",
+          "focusChar": "原",
+          "imageNotes": "家裡房間裡，主角小女孩覺得很冷，旁邊的落地窗開著，冷風吹進來，窗簾或紙張被吹動。畫面要讓孩子看出「冷的原因是落地窗沒關」，不要文字標籤、溫度數字或恐怖感。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 特別冷，原因是落地窗沒關。 Image notes: 家裡房間裡，主角小女孩覺得很冷，旁邊的落地窗開著，冷風吹進來，窗簾或紙張被吹動。畫面要讓孩子看出「冷的原因是落地窗沒關」，不要文字標籤、溫度數字或恐怖感。 Scene: Inside the protagonist family's warm home room, the recurring protagonist girl feels very cold because a floor-to-ceiling window is open. Cold wind blows curtains and a few blank papers. Make the open window clearly the reason for the cold. No written labels, temperature numbers, or scary mood.",
+          "imageSrc": "/assets/reviews/R042/images/R042-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R042/audio/R042-S02.m4a",
+            "durationMs": 3862,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1030
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1030,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1260,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1800,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2020,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2280,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2580,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3140,
+                "endMs": 3360
+              }
+            ]
+          }
+        },
+        {
+          "id": "R042-S03",
+          "text": "我們常跟媽媽去買東西。",
+          "displayLines": [
+            "我們常跟媽媽",
+            "去買東西。"
+          ],
+          "spokenText": "我們常跟媽媽去買東西",
+          "focusChar": "跟",
+          "imageNotes": "早上市場或小店裡，主角小女孩和主角哥哥兩個孩子跟著主角媽媽買東西。媽媽在挑選生活用品或菜，兩個孩子在旁邊幫忙拿袋子或看東西。使用固定 protagonist family continuity，不要畫成 generic children。不要價格牌、商品文字、品牌或數字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 我們常跟媽媽去買東西。 Image notes: 早上市場或小店裡，主角小女孩和主角哥哥兩個孩子跟著主角媽媽買東西。媽媽在挑選生活用品或菜，兩個孩子在旁邊幫忙拿袋子或看東西。使用固定 protagonist family continuity，不要畫成 generic children。不要價格牌、商品文字、品牌或數字。 Scene: In a bright morning market or small shop, the recurring protagonist girl and her recurring older brother follow their recurring protagonist mother while shopping. Mother chooses daily goods or vegetables; the two children help hold bags or look at items. Keep fixed protagonist family continuity. No price tags, product text, brands, or numbers.",
+          "imageSrc": "/assets/reviews/R042/images/R042-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R042/audio/R042-S03.m4a",
+            "durationMs": 5594,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 520
+              },
+              {
+                "charIndex": 2,
+                "startMs": 520,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1620,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1840,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 3080
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3080,
+                "endMs": 3280
+              }
+            ]
+          }
+        },
+        {
+          "id": "R042-S04",
+          "text": "學生們全都到齊了。",
+          "displayLines": [
+            "學生們全都",
+            "到齊了。"
+          ],
+          "spokenText": "學生們全都到齊了",
+          "focusChar": "們",
+          "imageNotes": "教室裡，學生們都已經到座位上或圍坐在地墊上，老師站在前方確認大家都到了。畫面要呈現「學生們全都到齊」，可以有最後一位學生剛坐好，但不要點名表、姓名牌、文字或數字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 學生們全都到齊了。 Image notes: 教室裡，學生們都已經到座位上或圍坐在地墊上，老師站在前方確認大家都到了。畫面要呈現「學生們全都到齊」，可以有最後一位學生剛坐好，但不要點名表、姓名牌、文字或數字。 Scene: In a classroom, all students are present, seated at desks or gathered on a floor mat, while a recurring teacher stands at the front calmly confirming everyone has arrived. A final student may be just sitting down. Teacher must be visually distinct from the protagonist mother. Generic classmates must not resemble Xiaoyue or Xiaoguang. No attendance sheets, name tags, text, or numbers.",
+          "imageSrc": "/assets/reviews/R042/images/R042-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R042/audio/R042-S04.m4a",
+            "durationMs": 3924,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1840,
+                "endMs": 1841
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1840,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2420,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2740
+              }
+            ]
+          }
+        },
+        {
+          "id": "R042-S05",
+          "text": "高處的風特別大。",
+          "displayLines": [
+            "高處的風",
+            "特別大。"
+          ],
+          "spokenText": "高處的風特別大",
+          "focusChar": "處",
+          "imageNotes": "山上觀景處或高高的安全平台，主角小女孩和爸爸站在安全欄杆內，風吹得帽子、頭髮或衣服飄動。畫面要清楚呈現「高處風很大」，不要危險邊緣、墜落感、文字標示或高度數字。",
+          "imagePrompt": "Use case: illustration-story. Asset type: review sentence image for a children character-recognition app. Square image / 1:1 composition with safe margins and phone-readable subjects. Use the approved L058 lesson images as mandatory style references: public/assets/lessons/L058/images/L058-S01.webp, public/assets/lessons/L058/images/L058-S02.webp, public/assets/lessons/L058/images/L058-S03.webp, public/assets/lessons/L058/images/L058-S04.webp, and public/assets/lessons/L058/images/L058-S05.webp. Also match the refined preferred style and proportion examples: public/assets/lessons/L115/images/L115-S01.webp, public/assets/lessons/L115/images/L115-S02.webp, public/assets/lessons/L118/images/L118-S02.webp, public/assets/lessons/L119/images/L119-S01.webp, and public/assets/lessons/L128/images/L128-S03.webp. L058 is style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle facial expressions, consistent face/body proportions, and phone-readable square composition. Do not copy any L058 person identity. Use recurring cast identity anchors required by docs/LESSON_VISUAL_CAST_SOP.md: public/assets/lessons/L154/images/L154-S01.webp, public/assets/lessons/L162/images/L162-S04.webp, and public/assets/lessons/L163/images/L163-S02.webp. Keep protagonist girl, protagonist mother, protagonist father, protagonist older brother, teachers, classmates, generic adults, and generic children visually distinct. Generic classmates must not resemble the named cast Xiaoyue or Xiaoguang unless the sentence explicitly names them. No visible text, letters, Chinese characters, zhuyin, captions, labels, route signs, store signs, calendar dates, weather charts, name tags, price tags, brand marks, logos, watermarks, license plates, or readable numbers anywhere. Sentence meaning: 高處的風特別大。 Image notes: 山上觀景處或高高的安全平台，主角小女孩和爸爸站在安全欄杆內，風吹得帽子、頭髮或衣服飄動。畫面要清楚呈現「高處風很大」，不要危險邊緣、墜落感、文字標示或高度數字。 Scene: At a mountain lookout or high safe viewing platform, the recurring protagonist girl and recurring father stand safely inside a sturdy railing. Strong wind blows the girl's hair, hat, or clothing. Make the high place and strong wind clear while avoiding danger, cliff-edge fear, falling feeling, text signs, or height numbers.",
+          "imageSrc": "/assets/reviews/R042/images/R042-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R042/audio/R042-S05.m4a",
+            "durationMs": 4075,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1450
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1450,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1780,
+                "endMs": 2080
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "R042-G01",
+          "type": "find-character",
+          "sentenceId": "R042-S01",
+          "targetChar": "常",
+          "targetCharIndex": 2,
+          "prompt": "找出句子裡的字。",
+          "missingIndexes": [
+            2
+          ]
+        },
+        {
+          "id": "R042-G02",
+          "type": "teach-character",
+          "sentenceId": "R042-S02",
+          "targetChar": "原",
+          "targetCharIndex": 3,
+          "prompt": "跟著念這個字。",
+          "missingIndexes": [
+            3
+          ],
+          "teachAudio": {
+            "prefixText": "特別冷",
+            "suffixText": "因是落地窗沒關",
+            "prefixSrc": "/assets/reviews/R042/audio/R042-G02-prefix.m4a",
+            "suffixSrc": "/assets/reviews/R042/audio/R042-G02-suffix.m4a"
+          }
+        },
+        {
+          "id": "R042-G03",
+          "type": "missing-character",
+          "sentenceId": "R042-S03",
+          "targetChar": "跟",
+          "targetCharIndex": 3,
+          "prompt": "補上不見的字。",
+          "missingIndexes": [
+            3
+          ],
+          "options": [
+            {
+              "id": "R042-G03-A",
+              "text": "跟",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "R042-G04",
+          "type": "partial-order",
+          "sentenceId": "R042-S04",
+          "targetChar": "齊",
+          "prompt": "把字排回句子裡。",
+          "missingIndexes": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "options": [
+            {
+              "id": "R042-G04-A",
+              "text": "全",
+              "correctOrder": 0,
+              "correct": true
+            },
+            {
+              "id": "R042-G04-B",
+              "text": "都",
+              "correctOrder": 1,
+              "correct": true
+            },
+            {
+              "id": "R042-G04-C",
+              "text": "到",
+              "correctOrder": 2,
+              "correct": true
+            },
+            {
+              "id": "R042-G04-D",
+              "text": "齊",
+              "correctOrder": 3,
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "R042-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "R042-S05",
+          "targetChar": "處",
+          "targetCharIndex": 1,
+          "prompt": "選出聽到的句子。",
+          "options": [
+            {
+              "id": "R042-G05-correct",
+              "text": "高處的風特別大。",
+              "correct": true,
+              "sentenceId": "R042-S05",
+              "audioSrc": "/assets/reviews/R042/audio/R042-S05.m4a",
+              "spokenText": "高處的風特別大"
+            },
+            {
+              "id": "R042-G05-wrong-one",
+              "text": "高山的風特別大。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R042/audio/R042-G05-wrong-one.m4a",
+              "spokenText": "高山的風特別大"
+            },
+            {
+              "id": "R042-G05-wrong-two",
+              "text": "高空的風特別大。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R042/audio/R042-G05-wrong-two.m4a",
+              "spokenText": "高空的風特別大"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
