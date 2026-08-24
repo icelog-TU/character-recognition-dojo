@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L352 | 位 / normal lesson | claimed | Production B | codex/l352-complete-package | L351:餐 | 餐 | `curriculum-workflow/lesson-requests/L352.json`; `curriculum-workflow/generated/L352-generation-packet.md`; `curriculum-workflow/drafts/L352-draft.json` | `public/assets/lessons/L352/` | Claimed from latest origin/main 61dacec7; dependency-blocked until L351 enters main. |
 
 ## Status Values
 
