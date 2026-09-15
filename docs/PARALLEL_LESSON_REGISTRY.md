@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L368 | 感 | claimed | Production D | codex/l368-complete-package | L366:吧; L367:謝 | 吧 謝 | curriculum-workflow/lesson-requests/L368.json; curriculum-workflow/generated/L368-generation-packet.md; curriculum-workflow/drafts/L368-draft.json | public/assets/lessons/L368/; curriculum-workflow/audio-inbox/L368/ | Teacher-approved five sentences and imageNotes; base cd4abf4b through L365/R044. Release dependencies only; Production continues. |
 
 ## Status Values
 
