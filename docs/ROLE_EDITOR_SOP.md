@@ -86,7 +86,8 @@ Editor requirements:
 - The previous-five coverage window still contains five previous lesson targets, not five previous characters. If a previous lesson was also a two-character word lesson, report that previous target as one lesson target and include the per-character counts in the detail line.
 - Stage 4 still uses the canonical five game types in order. `targetChar` and all indexed fields must point to one Han character, never the two-character word. Across `G01`-`G03`, cover both new characters when possible; for example one game may target `朋` and another may target `友`.
 - `partial-order` remains single-character only: 3-4 one-Han blanks and one-Han option cards. Do not make an option card `朋友`.
-- The handoff must tell Production to verify the current app UI for the pilot: course card, Stage 1 target display, Stage 2 accepted target set, Stage 4 prompts, character overview entries, and post-merge asset review page.
+- Stage 2 rule for the handoff: one-character lessons complete after 3 target-card taps in a six-card grid; two-character word lessons complete after 4 target-card taps in a six-card grid, with 2 cards for each current lesson character and 2 old-character distractors. For `朋友`, write the expected grid as `朋, 朋, 友, 友, old, old`.
+- The handoff must tell Production to verify the current app UI for the pilot: course card, Stage 1 target display, Stage 2 accepted target set, Stage 2 expected target-card rule, Stage 4 prompts, character overview entries, and post-merge asset review page.
 
 ## Teacher Sentence Approval Gate
 
@@ -108,7 +109,7 @@ For each assigned normal lesson, produce final approved sentence data:
 
 - Unit id, such as `L171`.
 - New character(s), Taiwan zhuyin, title.
-- For a two-character word lesson: target word, reason for grouping, per-character zhuyin, word count, per-character counts, and explicit note that Stage 2/Stage 4 remain single-Han interactions.
+- For a two-character word lesson: target word, reason for grouping, per-character zhuyin, word count, per-character counts, explicit Stage 2 six-card expectation, and explicit note that Stage 2/Stage 4 remain single-Han interactions.
 - Dependency lessons and any provisional learned characters.
 - If dependency lessons are not yet merged, state that they are Release/main blockers only; Production should still claim and build the assigned dependency-blocked package after recording `dependsOnLessons` / `provisionalLearnedChars`.
 - Locked `allowedChars`.

@@ -137,11 +137,11 @@ For a normal lesson whose `newChars` has two characters because the teacher appr
 - `title` is the target word and `newChars`, `zhuyin`, and `charAudio` contain both single Han characters.
 - Ledger and character overview behavior treat both characters as learned at the same lesson order.
 - Stage 1 renders the word target and both zhuyin readings without overlap on phone width.
-- Stage 2 accepts both introduced characters as target finds and provides meaningful repeated practice for both.
+- Stage 2 accepts both introduced characters as target finds. The intended six-card rule is exact: one-character lessons use 3 current-target cards plus 3 distractors; two-character word lessons use 2 cards for each current lesson character plus 2 distractors, completing after all 4 target cards are tapped.
 - Stage 4 uses canonical order and single-Han interactions. No `targetChar`, missing slot, or option card may be the whole two-character word.
 - `npm run curriculum:package-intake -- --unit L### --ref <package-ref>` passes on the package branch or exact SHA.
 
-The first two-character word lesson after this SOP change is a pilot. If any of the UI checks above cannot be verified with the current app, stop before pushing and return the app/UI blocker to Supervisor instead of forcing the lesson into `main`.
+The first two-character word lesson after this SOP change is a pilot. Do not block Release solely because a pre-merge card-count simulation cannot prove the 2+2 Stage 2 distribution; record it as a post-merge teacher verification item. Stop before pushing only for hard package defects, failed validation, a missing/unsupported target character, broken Stage 4 single-Han data, or another app/UI issue that prevents the lesson from being opened and tested on `main`.
 
 ## Push And Deployment
 

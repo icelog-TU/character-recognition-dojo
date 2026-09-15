@@ -1,0 +1,521 @@
+{
+  "id": "L366",
+  "order": 366,
+  "title": "吧",
+  "newChars": [
+    "吧"
+  ],
+  "zhuyin": {
+    "吧": "ㄅㄚ˙"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "releaseBlockers": [],
+  "packageStatus": "asset-complete-package",
+  "originHint": "Production B package from origin/main 4d3d883d through L365. No provisional dependencies. Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push, and deployment.",
+  "charAudio": {
+    "吧": "/assets/lessons/L366/audio/char-u5427.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L366-S01",
+      "text": "你喜歡公園吧？",
+      "spokenText": "你喜歡公園吧",
+      "focusChar": "吧",
+      "targetCharIndex": 5,
+      "displayLines": [
+        "你喜歡",
+        "公園吧？"
+      ],
+      "imageNotes": "主角小女孩和固定「你」小男孩在公園裡玩或看花草，主角小女孩看著「你」小男孩，好像在問他是不是喜歡公園。畫面要清楚是公園，有草地、樹、長椅或花草。固定「你」小男孩要使用既有 young boy classmate identity，不要畫成小光。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: L366-S01 square lesson image. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan park environment, expressive preschool proportions, soft natural faces, bright warm palette, phone-readable square composition. Use recurring protagonist girl identity: preschool Taiwanese girl with short dark bob, small pink hair clip, soft child clothing, stable face/body proportions. Use fixed recurring young boy classmate identity for 「你」: preschool-age boy, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack; keep him distinct from 小光 and do not give round glasses, navy vest, khaki shorts, or green school bag. Scene: in a pleasant park with grass, trees, bench, and flowers, the protagonist girl and the young boy classmate are playing or looking at flowers. The protagonist girl looks toward the boy as if asking whether he likes the park. No readable text, labels, signs, numbers, brands, logos, speech bubbles, captions, watermarks, anime, flat cartoon, 3D render, photorealism, or copied L058 identities.",
+      "imageReuseDecision": "New scene: inspected current lesson need and existing style/cast references; no exact reusable scene covers this sentence meaning and cast combination.",
+      "imageSrc": "/assets/lessons/L366/images/L366-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L366/audio/L366-S01.m4a",
+        "durationMs": 2670,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 630
+          },
+          {
+            "charIndex": 2,
+            "startMs": 630,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1380,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1520,
+            "endMs": 1840
+          }
+        ]
+      }
+    },
+    {
+      "id": "L366-S02",
+      "text": "爸爸的笑話，很好笑吧？",
+      "spokenText": "爸爸的笑話很好笑吧",
+      "focusChar": "吧",
+      "targetCharIndex": 8,
+      "displayLines": [
+        "爸爸的笑話，",
+        "很好笑吧？"
+      ],
+      "imageNotes": "主角爸爸剛說完笑話，主角小女孩和家人笑得很開心，爸爸帶著得意又期待的表情，好像在問「很好笑吧？」不要文字對話框、字幕或可讀笑話內容。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: L366-S02 square lesson image. Use L058 as style-only reference: warm natural light, rich pencil-and-watercolor detail, clean cozy Taiwan home dining/living room, expressive preschool proportions, soft natural faces, bright varied palette, phone-readable composition. Use recurring protagonist family: father with short dark side-parted hair, blue overshirt over pale top, khaki trousers, clean-shaven; protagonist girl with short dark bob and pink hair clip; mother/older brother may appear as family but stay distinct. Scene: father has just told a joke at home; the protagonist girl and family are laughing happily, while father smiles with a proud, expectant expression as if asking if it was funny. No speech balloons, no joke text, no readable books/papers, no subtitles, labels, numbers, brands, logos, watermarks, anime, flat cartoon, 3D render, photorealism.",
+      "imageReuseDecision": "New scene: inspected current lesson need and existing style/cast references; no exact reusable scene covers this sentence meaning and cast combination.",
+      "imageSrc": "/assets/lessons/L366/images/L366-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L366/audio/L366-S02.m4a",
+        "durationMs": 2995,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 190
+          },
+          {
+            "charIndex": 1,
+            "startMs": 190,
+            "endMs": 380
+          },
+          {
+            "charIndex": 2,
+            "startMs": 380,
+            "endMs": 760
+          },
+          {
+            "charIndex": 3,
+            "startMs": 760,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1060,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1240,
+            "endMs": 1610
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1610,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1980,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2300,
+            "endMs": 2540
+          }
+        ]
+      }
+    },
+    {
+      "id": "L366-S03",
+      "text": "這個驚喜很奇怪，但收下吧。",
+      "spokenText": "這個驚喜很奇怪但收下吧",
+      "focusChar": "吧",
+      "targetCharIndex": 10,
+      "displayLines": [
+        "這個驚喜",
+        "很奇怪，",
+        "但收下吧。"
+      ],
+      "imageNotes": "主角小女孩收到一個奇怪但可愛的小禮物，例如怪物造型帽子、怪物手套或造型特別的小玩具。旁邊的媽媽或爸爸溫和地鼓勵她收下，女孩表情有點驚訝但願意接受。不要恐怖、不要品牌、包裝字或文字卡片。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: L366-S03 square lesson image. Use L058 style-only reference: warm picture-book pencil-and-watercolor linework, soft natural light, detailed clean home interior, expressive stable preschool proportions, natural faces, bright warm palette, phone-readable square composition. Use recurring protagonist girl identity; include recurring protagonist mother or father as the gentle adult, visually distinct and not teacher-like. Scene: protagonist girl receives a strange but cute small gift, such as a monster-shaped hat, monster mittens, or a special oddly shaped toy. Mother or father beside her gently encourages her to accept it. Girl looks a little surprised but willing, with a soft curious expression. Gift and wrapping are blank. No horror, no scary threat, no readable cards, no package writing, no labels, no brands, no logos, no numbers, no subtitles, no watermarks, no anime, no flat cartoon, no 3D render, no photorealism.",
+      "imageReuseDecision": "New scene: inspected current lesson need and existing style/cast references; no exact reusable scene covers this sentence meaning and cast combination.",
+      "imageSrc": "/assets/lessons/L366/images/L366-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L366/audio/L366-S03.m4a",
+        "durationMs": 4277,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 210
+          },
+          {
+            "charIndex": 1,
+            "startMs": 210,
+            "endMs": 420
+          },
+          {
+            "charIndex": 2,
+            "startMs": 420,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1220,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1860,
+            "endMs": 2050
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2050,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2720,
+            "endMs": 3000
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3000,
+            "endMs": 3300
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3300,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3480,
+            "endMs": 3680
+          }
+        ]
+      }
+    },
+    {
+      "id": "L366-S04",
+      "text": "你喜歡大狗，但是別過去吧。",
+      "spokenText": "你喜歡大狗但是別過去吧",
+      "focusChar": "吧",
+      "targetCharIndex": 10,
+      "displayLines": [
+        "你喜歡大狗，",
+        "但是別",
+        "過去吧。"
+      ],
+      "imageNotes": "固定「你」小男孩看到一隻大狗，表情喜歡但有點想靠近；主角小女孩或老師在旁邊提醒他不要過去。大狗要看起來大但安全，沒有攻擊姿勢或兇狠表情。固定「你」小男孩要使用既有 young boy classmate identity，不要畫成小光。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: L366-S04 square lesson image. Use L058 style-only reference: warm modern children's picture-book pencil-and-watercolor linework, soft natural daylight, detailed clean park or sidewalk environment, expressive preschool proportions, natural faces, bright warm palette, phone-readable composition. Use fixed recurring young boy classmate identity for 「你」: preschool-age boy with short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack; keep distinct from 小光, no round glasses or navy vest. Include protagonist girl or teacher gently reminding him, visually distinct from the boy. Scene: the young boy sees a large calm dog nearby and clearly likes it but is about to approach; the protagonist girl or teacher stands beside him with a gentle cautioning gesture to not go over. The large dog is big but safe and friendly, relaxed posture, no attack, no bared teeth, no frightening mood. No readable signs, collars with text, labels, numbers, brands, logos, speech bubbles, subtitles, watermarks, anime, flat cartoon, 3D render, photorealism.",
+      "imageReuseDecision": "New scene: inspected current lesson need and existing style/cast references; no exact reusable scene covers this sentence meaning and cast combination.",
+      "imageSrc": "/assets/lessons/L366/images/L366-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L366/audio/L366-S04.m4a",
+        "durationMs": 4461,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 650
+          },
+          {
+            "charIndex": 2,
+            "startMs": 650,
+            "endMs": 880
+          },
+          {
+            "charIndex": 3,
+            "startMs": 880,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1300,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2000,
+            "endMs": 2250
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2250,
+            "endMs": 2500
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3060,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3220,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3480,
+            "endMs": 3680
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3680,
+            "endMs": 3880
+          }
+        ]
+      }
+    },
+    {
+      "id": "L366-S05",
+      "text": "不要哭了，笑一笑吧。",
+      "spokenText": "不要哭了笑一笑吧",
+      "focusChar": "吧",
+      "targetCharIndex": 7,
+      "displayLines": [
+        "不要哭了，",
+        "笑一笑吧。"
+      ],
+      "imageNotes": "主角小女孩或固定「他」小男孩因為小事在哭，旁邊的媽媽、爸爸或老師溫柔安慰，拿著玩具、手帕或指著好玩的東西，希望孩子笑一笑。畫面要溫和，表現「安慰哭泣的孩子」。不要嚴重受傷、恐怖或災難場景。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: L366-S05 square lesson image. Use L058 style-only reference: warm children's picture-book pencil-and-watercolor linework, soft natural light, detailed clean home or classroom corner, expressive preschool proportions, natural faces, bright warm palette, phone-readable square composition. Use recurring protagonist girl identity as the child being comforted, with short dark bob and pink hair clip; use recurring protagonist mother as the comforting adult, visually distinct from teacher. Scene: after a small everyday upset, the protagonist girl has been crying softly, with a few tears, and mother gently comforts her with a handkerchief and a small toy, encouraging her to smile. The tone is warm and safe, no serious injury or disaster. No readable text, labels, signs, book text, numbers, brands, logos, speech bubbles, subtitles, watermarks, anime, flat cartoon, 3D render, photorealism.",
+      "imageReuseDecision": "New scene: inspected current lesson need and existing style/cast references; no exact reusable scene covers this sentence meaning and cast combination.",
+      "imageSrc": "/assets/lessons/L366/images/L366-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L366/audio/L366-S05.m4a",
+        "durationMs": 4134,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 240
+          },
+          {
+            "charIndex": 1,
+            "startMs": 240,
+            "endMs": 480
+          },
+          {
+            "charIndex": 2,
+            "startMs": 480,
+            "endMs": 800
+          },
+          {
+            "charIndex": 3,
+            "startMs": 800,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2000,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2200,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2360,
+            "endMs": 2580
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2580,
+            "endMs": 2800
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L366-G01",
+      "type": "find-character",
+      "sentenceId": "L366-S01",
+      "targetChar": "吧",
+      "targetCharIndex": 5,
+      "prompt": "找到吧，點一下。"
+    },
+    {
+      "id": "L366-G02",
+      "type": "teach-character",
+      "sentenceId": "L366-S02",
+      "targetChar": "吧",
+      "targetCharIndex": 8,
+      "prompt": "幫忙說出這個字。",
+      "teachAudio": {
+        "prefixText": "爸爸的笑話很好笑",
+        "targetText": "吧",
+        "prefixSrc": "/assets/lessons/L366/audio/L366-G02-prefix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L366/audio/L366-G02-prefix.m4a",
+          "durationMs": 3177,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 190
+            },
+            {
+              "charIndex": 1,
+              "startMs": 190,
+              "endMs": 380
+            },
+            {
+              "charIndex": 2,
+              "startMs": 380,
+              "endMs": 660
+            },
+            {
+              "charIndex": 3,
+              "startMs": 660,
+              "endMs": 980
+            },
+            {
+              "charIndex": 4,
+              "startMs": 980,
+              "endMs": 1160
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1160,
+              "endMs": 1530
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1530,
+              "endMs": 1900
+            },
+            {
+              "charIndex": 7,
+              "startMs": 1900,
+              "endMs": 2220
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L366-G03",
+      "type": "missing-character",
+      "sentenceId": "L366-S03",
+      "targetChar": "吧",
+      "targetCharIndex": 10,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        10
+      ],
+      "options": [
+        {
+          "id": "L366-G03-A",
+          "text": "吧",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "L366-G04",
+      "type": "partial-order",
+      "sentenceId": "L366-S04",
+      "targetChar": "吧",
+      "targetCharIndex": 10,
+      "prompt": "把不見的字照順序放回句子。",
+      "missingIndexes": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "options": [
+        {
+          "id": "L366-G04-A",
+          "text": "但",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L366-G04-B",
+          "text": "是",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L366-G04-C",
+          "text": "去",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L366-G04-D",
+          "text": "吧",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctSequence": [
+        "L366-G04-A",
+        "L366-G04-B",
+        "L366-G04-C",
+        "L366-G04-D"
+      ]
+    },
+    {
+      "id": "L366-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L366-S05",
+      "targetChar": "吧",
+      "targetCharIndex": 7,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "不要哭了，笑一笑吧。",
+          "correct": true,
+          "sentenceId": "L366-S05",
+          "audioSrc": "/assets/lessons/L366/audio/L366-S05.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "不要哭了，看一看吧。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L366/audio/L366-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "不要哭了，喝一口吧。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L366/audio/L366-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

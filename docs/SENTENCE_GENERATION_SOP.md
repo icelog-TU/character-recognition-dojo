@@ -536,7 +536,7 @@ The handoff must include:
 - target unit id and kind, such as `L127` normal lesson or `R005` review module
 - current merged boundary and dependency lessons
 - approved new character(s), Taiwan zhuyin, and title, or review coverage range
-- for a two-character word lesson, the target word, grouping reason, word/per-character coverage counts, and confirmation that Stage 2/Stage 4 use single-Han interactions
+- for a two-character word lesson, the target word, grouping reason, word/per-character coverage counts, the Stage 2 expectation `2 cards per new character + 2 distractors = 4 target taps`, and confirmation that Stage 2/Stage 4 use single-Han interactions
 - locked `allowedChars`, provisional learned characters, and forbidden/unlearned characters
 - the Editor Handoff Dependency Gate output: coverage targets, additional provisional chars used outside coverage, final dependencies/provisional learned characters, and Editor self-check
 - final approved sentences with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`
