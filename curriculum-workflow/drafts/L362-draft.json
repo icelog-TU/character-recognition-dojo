@@ -1,0 +1,510 @@
+{
+  "id": "L362",
+  "order": 362,
+  "newChars": [
+    "喜"
+  ],
+  "zhuyin": {
+    "喜": "ㄒㄧˇ"
+  },
+  "charAudio": {
+    "喜": "/assets/lessons/L362/audio/char-u559c.m4a"
+  },
+  "title": "喜",
+  "dependsOnLessons": [
+    "L360",
+    "L361"
+  ],
+  "provisionalLearnedChars": [
+    "奇",
+    "驚"
+  ],
+  "releaseBlockers": [
+    "L360",
+    "R043",
+    "R044",
+    "L361"
+  ],
+  "packageStatus": "dependency-blocked-asset-complete",
+  "requiredRounds": 5,
+  "originHint": "Production B package from origin/main 496aa87a through L359 plus provisional L360 奇 and L361 驚. R043/R044 are Release/playable blockers after L360. Release must integrate L360, R043, R044, and L361 before L362. Release owns production JSON insertion, planner export, ledger update, registry cleanup, final verify, push, and deployment.",
+  "sentences": [
+    {
+      "id": "L362-S01",
+      "text": "過年時穿紅衣才喜氣。",
+      "spokenText": "過年時穿紅衣才喜氣",
+      "focusChar": "喜",
+      "targetCharIndex": 7,
+      "displayLines": [
+        "過年時",
+        "穿紅衣",
+        "才喜氣。"
+      ],
+      "imageNotes": "過年家中或親戚聚會場景，主角小女孩穿著紅色上衣或紅色外套，看起來喜氣；旁邊有家人、年菜或紅色裝飾，但不要可讀春聯、文字、數字或符號。畫面要表現「穿紅衣很喜氣」。",
+      "imagePrompt": "Use case: illustration-story. Asset type: L362-S01 square lesson image. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home interior, expressive preschool proportions, soft natural faces, bright warm palette, and phone-readable square composition. Do not copy any specific person or identity from L058. Use recurring protagonist girl identity: preschool girl with short dark bob, small pink hair clip, stable face/body proportions. Scene: Lunar New Year family gathering at home, with the protagonist girl wearing a red top or red jacket and looking festive and happy. Family members, New Year dishes, and red decorations may be present, but all decorative papers and objects must be blank with no readable marks. Make the idea of wearing red clothing and looking festive clear. Avoid readable couplets, text, letters, Chinese characters, zhuyin, symbols, numbers, brand marks, logos, watermarks, anime, flat cartoon, 3D render, photorealism, and copied reference identities.",
+      "imageSrc": "/assets/lessons/L362/images/L362-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L362/audio/L362-S01.m4a",
+        "durationMs": 3180,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 240
+          },
+          {
+            "charIndex": 1,
+            "startMs": 240,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 880
+          },
+          {
+            "charIndex": 3,
+            "startMs": 880,
+            "endMs": 1180
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1180,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1500,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1720,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2280,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2540,
+            "endMs": 2780
+          }
+        ]
+      }
+    },
+    {
+      "id": "L362-S02",
+      "text": "小月很受動物們的喜愛。",
+      "spokenText": "小月很受動物們的喜愛",
+      "focusChar": "喜",
+      "targetCharIndex": 8,
+      "displayLines": [
+        "小月很受",
+        "動物們的",
+        "喜愛。"
+      ],
+      "imageNotes": "小月在公園或動物園安全互動區，溫柔地蹲下看小動物，幾隻小動物主動靠近她，例如小狗、小鳥、小兔子或小雞，表現動物們很喜愛她。小月必須使用 public/assets/reference/lesson-cast/xiaoyue.webp，不能畫成主角小女孩或 generic classmate。不要危險大型動物。",
+      "imagePrompt": "Use case: illustration-story. Asset type: L362-S02 square lesson image. Use L058 lesson images as style references only, plus the Xiaoyue cast reference at public/assets/reference/lesson-cast/xiaoyue.webp for identity. Xiaoyue must have long soft curly dark chestnut hair, a small crescent-moon hair clip, lavender cardigan, pale cream top, teal pleated skirt, white socks, and purple shoes. Scene: safe park or zoo small-animal interaction area in daylight. Xiaoyue kneels gently and smiles while several small friendly animals move toward her, such as a small dog, bird, rabbit, or chick, showing they like her. Keep animals safe and small; no dangerous large animals. Style: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, bright warm palette, detailed but clean, phone-readable square composition. Avoid making Xiaoyue look like the protagonist girl or a generic classmate; avoid readable text, labels, signs, brands, logos, numbers, watermarks, anime, flat cartoon, 3D render, photorealism, and copied L058 identities.",
+      "imageSrc": "/assets/lessons/L362/images/L362-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L362/audio/L362-S02.m4a",
+        "durationMs": 3966,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 700
+          },
+          {
+            "charIndex": 1,
+            "startMs": 700,
+            "endMs": 960
+          },
+          {
+            "charIndex": 2,
+            "startMs": 960,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1580,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1860,
+            "endMs": 2220
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2220,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2440,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2680,
+            "endMs": 3080
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3080,
+            "endMs": 3180
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3180,
+            "endMs": 3420
+          }
+        ]
+      }
+    },
+    {
+      "id": "L362-S03",
+      "text": "這真是一個奇怪的驚喜。",
+      "spokenText": "這真是一個奇怪的驚喜",
+      "focusChar": "喜",
+      "targetCharIndex": 9,
+      "displayLines": [
+        "這真是",
+        "一個奇怪的",
+        "驚喜。"
+      ],
+      "imageNotes": "主角小女孩打開禮物盒，看到裡面是一頂可愛怪物造型帽子或怪物手套，表情又驚訝又開心。禮物看起來奇怪但好玩，不恐怖。不要文字卡片、品牌或包裝字。",
+      "imagePrompt": "Use case: illustration-story. Asset type: L362-S03 square lesson image. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home interior, expressive preschool proportions, soft natural faces, bright warm palette, and phone-readable square composition. Use recurring protagonist girl identity with short dark bob and small pink hair clip. Scene: the protagonist girl opens a gift box at home and sees a strange but fun surprise inside: a cute monster-shaped hat or cute monster mittens. Her expression is both surprised and happy. The gift looks odd and playful, not scary. The box, card, and wrapping must be blank with no readable marks. Avoid readable text, cards, labels, package text, brands, logos, numbers, watermarks, horror, scary monster design, anime, flat cartoon, 3D render, photorealism, and copied reference identities.",
+      "imageSrc": "/assets/lessons/L362/images/L362-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L362/audio/L362-S03.m4a",
+        "durationMs": 4798,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 880
+          },
+          {
+            "charIndex": 2,
+            "startMs": 880,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1160,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1380,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1600,
+            "endMs": 2110
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2110,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2620,
+            "endMs": 3240
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3240,
+            "endMs": 3540
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3540,
+            "endMs": 3780
+          }
+        ]
+      }
+    },
+    {
+      "id": "L362-S04",
+      "text": "這本書叫花園裡的小怪物。",
+      "spokenText": "這本書叫花園裡的小怪物",
+      "focusChar": "怪",
+      "targetCharIndex": 9,
+      "displayLines": [
+        "這本書叫",
+        "花園裡的",
+        "小怪物。"
+      ],
+      "imageNotes": "主角小女孩正在看一本打開的圖畫書，書頁畫面裡是一個花園和可愛的小怪物。不要讓書上出現可讀書名或文字；用書頁插圖表現「花園裡的小怪物」。",
+      "imagePrompt": "Use case: illustration-story. Asset type: L362-S04 square lesson image. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean Taiwan home interior, expressive preschool proportions, soft natural faces, bright warm palette, and phone-readable square composition. Use recurring protagonist girl identity with short dark bob and small pink hair clip. Scene: protagonist girl reading an open picture book. The visible book pages show a garden scene with flowers, grass, and a cute little friendly monster inside the illustrated garden. Use the page illustration to communicate the book's content instead of readable title text. The book cover and pages must have no readable writing. Avoid readable book title, page text, labels, speech bubbles, letters, Chinese characters, zhuyin, brands, logos, numbers, watermarks, horror, scary monster design, anime, flat cartoon, 3D render, photorealism, and copied reference identities.",
+      "imageSrc": "/assets/lessons/L362/images/L362-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L362/audio/L362-S04.m4a",
+        "durationMs": 6048,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 840
+          },
+          {
+            "charIndex": 3,
+            "startMs": 840,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2400,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2480,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2700,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2940,
+            "endMs": 3580
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3580,
+            "endMs": 4060
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4060,
+            "endMs": 4300
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4300,
+            "endMs": 4520
+          }
+        ]
+      }
+    },
+    {
+      "id": "L362-S05",
+      "text": "海裡的魚會發光，真驚奇。",
+      "spokenText": "海裡的魚會發光真驚奇",
+      "focusChar": "奇",
+      "targetCharIndex": 9,
+      "displayLines": [
+        "海裡的魚",
+        "會發光，",
+        "真驚奇。"
+      ],
+      "imageNotes": "海底或水族箱場景，幾條魚身上發出柔和亮光，主角小女孩隔著玻璃或在安全觀察區看得很驚奇。畫面要清楚是發光的魚，不要黑暗恐怖深海，不要文字標籤或說明牌。",
+      "imagePrompt": "Use case: illustration-story. Asset type: L362-S05 square lesson image. Use the approved L058 lesson images only as style references: warm modern children's picture-book pencil-and-watercolor linework, soft natural light, detailed but clean aquarium or safe ocean-view environment, expressive preschool proportions, soft natural faces, bright warm palette, and phone-readable square composition. Use recurring protagonist girl identity if shown. Scene: safe aquarium viewing area or gentle underwater viewing window. Several fish glow softly with warm, magical bioluminescent light while the protagonist girl watches through glass with an amazed expression. Make glowing fish clear, but keep the scene safe, bright, and not scary. Avoid dark horror deep sea, readable labels, signs, explanation plaques, letters, Chinese characters, zhuyin, brands, logos, numbers, watermarks, dangerous water, anime, flat cartoon, 3D render, photorealism, and copied reference identities.",
+      "imageSrc": "/assets/lessons/L362/images/L362-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L362/audio/L362-S05.m4a",
+        "durationMs": 4893,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 500
+          },
+          {
+            "charIndex": 1,
+            "startMs": 500,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1300,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2200,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2540,
+            "endMs": 2880
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3680,
+            "endMs": 3900
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3900,
+            "endMs": 4240
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4240,
+            "endMs": 4520
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L362-G01",
+      "type": "find-character",
+      "sentenceId": "L362-S01",
+      "targetChar": "喜",
+      "targetCharIndex": 7,
+      "prompt": "找到喜，點一下。"
+    },
+    {
+      "id": "L362-G02",
+      "type": "teach-character",
+      "sentenceId": "L362-S02",
+      "targetChar": "喜",
+      "targetCharIndex": 8,
+      "prompt": "幫忙說出這個字。",
+      "teachAudio": {
+        "prefixText": "小月很受動物們的",
+        "targetText": "喜",
+        "suffixText": "愛",
+        "prefixSrc": "/assets/lessons/L362/audio/L362-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L362/audio/L362-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L362-G03",
+      "type": "missing-character",
+      "sentenceId": "L362-S03",
+      "targetChar": "喜",
+      "targetCharIndex": 9,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        9
+      ],
+      "options": [
+        {
+          "id": "L362-G03-A",
+          "text": "喜",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "L362-G04",
+      "type": "partial-order",
+      "sentenceId": "L362-S04",
+      "prompt": "把句子排回正確順序。",
+      "missingIndexes": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "options": [
+        {
+          "id": "L362-G04-A",
+          "text": "花",
+          "correctOrder": 0,
+          "correct": true
+        },
+        {
+          "id": "L362-G04-B",
+          "text": "園",
+          "correctOrder": 1,
+          "correct": true
+        },
+        {
+          "id": "L362-G04-C",
+          "text": "怪",
+          "correctOrder": 2,
+          "correct": true
+        },
+        {
+          "id": "L362-G04-D",
+          "text": "物",
+          "correctOrder": 3,
+          "correct": true
+        }
+      ],
+      "correctSequence": [
+        "L362-G04-A",
+        "L362-G04-B",
+        "L362-G04-C",
+        "L362-G04-D"
+      ],
+      "targetChar": "怪"
+    },
+    {
+      "id": "L362-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L362-S05",
+      "targetChar": "奇",
+      "targetCharIndex": 9,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "海裡的魚會發光，真驚奇。",
+          "correct": true,
+          "sentenceId": "L362-S05",
+          "audioSrc": "/assets/lessons/L362/audio/L362-S05.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "海裡的魚會發光，真好看。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L362/audio/L362-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "河裡的魚會發光，真驚奇。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L362/audio/L362-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}

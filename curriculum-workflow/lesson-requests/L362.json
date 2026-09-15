@@ -1,0 +1,222 @@
+{
+  "id": "L362",
+  "order": 362,
+  "kind": "lesson",
+  "newChars": [
+    "喜"
+  ],
+  "zhuyin": {
+    "喜": "ㄒㄧˇ"
+  },
+  "title": "喜",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Production B handoff for L362. Latest origin/main boundary at production start is 496aa87a with formal production lessons L001-L359 and latest formal new character 怪. L360 奇 and L361 驚 are not in origin/main at production start, so L362 is dependency-blocked and uses 奇 and 驚 as provisional learned characters. R043/R044 after L360 are Release/playable blockers only. Production builds a lesson-local dependency-blocked asset-complete package; Release owns ordered integration into production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [
+    "L360",
+    "L361"
+  ],
+  "releaseBlockers": [
+    "L360",
+    "R043",
+    "R044",
+    "L361"
+  ],
+  "provisionalLearnedChars": [
+    "奇",
+    "驚"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "formal learned chars through latest origin/main production JSON L359 plus provisional L360「奇」 and L361「驚」 plus current new char L362「喜」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜",
+    "requiredCoverageChars": [
+      "喜",
+      "驚",
+      "奇",
+      "怪",
+      "物",
+      "園"
+    ],
+    "coverageCounts": {
+      "喜": 3,
+      "驚": 2,
+      "奇": 2,
+      "怪": 2,
+      "物": 2,
+      "園": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "stage4OrderRule": "Canonical normal L006+ order required: G01 find-character, G02 teach-character, G03 missing-character, G04 partial-order, G05 choose-pronunciation. No exception.",
+    "imageRules": [
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Use refined preferred examples and cast anchors from docs/LESSON_VISUAL_CAST_SOP.md.",
+      "When a sentence uses 小月, use public/assets/reference/lesson-cast/xiaoyue.webp as the recurring girl classmate identity.",
+      "When a sentence uses or depicts the protagonist girl, use recurring protagonist girl identity.",
+      "Mother, family adults, generic relatives, and public-place adults must remain visually distinct.",
+      "No readable text, labels, signs, subtitles, brand marks, logos, book titles, movie titles, package text, numbers, or watermarks."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate standalone charAudio for 喜 from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix from exact fragment 小月很受動物們的 and suffix from exact fragment 愛.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L362-S01",
+      "text": "過年時穿紅衣才喜氣。",
+      "spokenText": "過年時穿紅衣才喜氣",
+      "focusChar": "喜",
+      "targetCharIndex": 7,
+      "displayLines": [
+        "過年時",
+        "穿紅衣",
+        "才喜氣。"
+      ],
+      "imageNotes": "過年家中或親戚聚會場景，主角小女孩穿著紅色上衣或紅色外套，看起來喜氣；旁邊有家人、年菜或紅色裝飾，但不要可讀春聯、文字、數字或符號。畫面要表現「穿紅衣很喜氣」。"
+    },
+    {
+      "id": "L362-S02",
+      "text": "小月很受動物們的喜愛。",
+      "spokenText": "小月很受動物們的喜愛",
+      "focusChar": "喜",
+      "targetCharIndex": 8,
+      "displayLines": [
+        "小月很受",
+        "動物們的",
+        "喜愛。"
+      ],
+      "imageNotes": "小月在公園或動物園安全互動區，溫柔地蹲下看小動物，幾隻小動物主動靠近她，例如小狗、小鳥、小兔子或小雞，表現動物們很喜愛她。小月必須使用 public/assets/reference/lesson-cast/xiaoyue.webp，不能畫成主角小女孩或 generic classmate。不要危險大型動物。"
+    },
+    {
+      "id": "L362-S03",
+      "text": "這真是一個奇怪的驚喜。",
+      "spokenText": "這真是一個奇怪的驚喜",
+      "focusChar": "喜",
+      "targetCharIndex": 9,
+      "displayLines": [
+        "這真是",
+        "一個奇怪的",
+        "驚喜。"
+      ],
+      "imageNotes": "主角小女孩打開禮物盒，看到裡面是一頂可愛怪物造型帽子或怪物手套，表情又驚訝又開心。禮物看起來奇怪但好玩，不恐怖。不要文字卡片、品牌或包裝字。"
+    },
+    {
+      "id": "L362-S04",
+      "text": "這本書叫花園裡的小怪物。",
+      "spokenText": "這本書叫花園裡的小怪物",
+      "focusChar": "怪",
+      "targetCharIndex": 9,
+      "displayLines": [
+        "這本書叫",
+        "花園裡的",
+        "小怪物。"
+      ],
+      "imageNotes": "主角小女孩正在看一本打開的圖畫書，書頁畫面裡是一個花園和可愛的小怪物。不要讓書上出現可讀書名或文字；用書頁插圖表現「花園裡的小怪物」。"
+    },
+    {
+      "id": "L362-S05",
+      "text": "海裡的魚會發光，真驚奇。",
+      "spokenText": "海裡的魚會發光真驚奇",
+      "focusChar": "奇",
+      "targetCharIndex": 9,
+      "displayLines": [
+        "海裡的魚",
+        "會發光，",
+        "真驚奇。"
+      ],
+      "imageNotes": "海底或水族箱場景，幾條魚身上發出柔和亮光，主角小女孩隔著玻璃或在安全觀察區看得很驚奇。畫面要清楚是發光的魚，不要黑暗恐怖深海，不要文字標籤或說明牌。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L362-G01",
+      "type": "find-character",
+      "sentenceId": "L362-S01",
+      "targetChar": "喜",
+      "targetCharIndex": 7
+    },
+    {
+      "id": "L362-G02",
+      "type": "teach-character",
+      "sentenceId": "L362-S02",
+      "targetChar": "喜",
+      "targetCharIndex": 8,
+      "teachAudio": {
+        "prefixText": "小月很受動物們的",
+        "targetText": "喜",
+        "suffixText": "愛"
+      }
+    },
+    {
+      "id": "L362-G03",
+      "type": "missing-character",
+      "sentenceId": "L362-S03",
+      "targetChar": "喜",
+      "targetCharIndex": 9,
+      "missingIndexes": [
+        9
+      ],
+      "options": [
+        {
+          "text": "喜"
+        }
+      ]
+    },
+    {
+      "id": "L362-G04",
+      "type": "partial-order",
+      "sentenceId": "L362-S04",
+      "missingIndexes": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "options": [
+        {
+          "text": "花",
+          "correctOrder": 0
+        },
+        {
+          "text": "園",
+          "correctOrder": 1
+        },
+        {
+          "text": "怪",
+          "correctOrder": 2
+        },
+        {
+          "text": "物",
+          "correctOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "L362-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L362-S05",
+      "targetChar": "奇",
+      "targetCharIndex": 9,
+      "options": [
+        {
+          "id": "correct",
+          "text": "海裡的魚會發光，真驚奇。"
+        },
+        {
+          "id": "wrong-one",
+          "text": "海裡的魚會發光，真好看。"
+        },
+        {
+          "id": "wrong-two",
+          "text": "河裡的魚會發光，真驚奇。"
+        }
+      ]
+    }
+  ]
+}
