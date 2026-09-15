@@ -666,9 +666,9 @@ All input audio was generated from complete approved text with repo ai:audio. No
 - G02 prefix: gpt-4o-mini-tts / nova / speed 0.9. Input exactly 動. Teacher explicitly confirmed clear correct pronunciation in this task.
 - Standalone 物: latest candidate tts-1-hd / nova / speed 0.5, input exactly 物, 929 ms. Teacher rejected the earlier drifting pronunciation; latest candidate is awaiting teacher confirmation.
 - All ten M4As processed with npm run assets:audio -- --lesson L358; mono AAC 44100 Hz.
-- G02 prefix was regenerated several times due unreliable short-utterance transcription. G02 suffix was regenerated once after transcript mismatch and then passed.
+- G02 prefix was regenerated several times due unreliable short-utterance transcription. Teacher explicitly confirmed the current prefix pronunciation; Supervisor added silence-detect timing for the voiced segment (0-294 ms of a 1362 ms file) without changing the audio. G02 suffix was regenerated once after transcript mismatch and then passed.
 - AI alignment successfully wrote five sentence tracks, suffix and two wrong-option tracks (8 total). Simplified equivalents 鸡/雞 and 园/園 were added to the existing alignment map; no homophone bypass.
-- G02 prefix Whisper transcription still hallucinates unrelated text despite teacher-confirmed pronunciation. Dedicated prefix timings are intentionally empty, not fabricated.
+- G02 prefix Whisper transcription still hallucinates unrelated text despite teacher-confirmed pronunciation, so the prefix timing is a supervisor-measured single-character timing rather than an AI transcript alignment.
 - Full-sentence tails were preserved by the standard processor; no trailing syllables were cut.
 - G05 mean loudness: correct -19.3 dB, wrong-one -18.7 dB, wrong-two -18.8 dB, spread 0.6 dB PASS.
 
@@ -680,8 +680,8 @@ PASS: automated browser QA at width 390, 5 decoded images and 11 audio controls 
 An exploratory npx eslint call could not run because this repo uses oxlint, not an ESLint config; the actual repo lint passed.
 PASS: assets:audit --strict audited 396 units, 1939 image references and 3842 audio references, with zero warnings. It ran with the temporary L358 entry included.
 PASS: final curriculum:audit-state after removing only the temporary L358 entry; expected warning for the unmerged L358 asset folder. All other production data equals HEAD.
-Pending: manual Stage 3 heard-syllable/highlight and teach replay review.
-FAIL / unresolved: complete all-track AI alignment, due G02 prefix; latest standalone 物 teacher review pending.
+Pending: manual Stage 3 heard-syllable/highlight and teach replay review; latest standalone 物 teacher review pending.
+Unresolved before asset-complete: teacher/manual acceptance of standalone 物 and Stage 4 playback behavior.
 verify skipped: dependencies unmerged; production JSON/planner/ledger integration is Release-owned.
 
 ### Release Handoff
