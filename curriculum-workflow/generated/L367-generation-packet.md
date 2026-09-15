@@ -264,7 +264,9 @@ Standalone character duration: 1161 ms. G05 mean volume spread: 1.1 dB. All fina
 - Final media total: 1,105,890 bytes.
 - Detailed durable evidence: L367-technical-qa.json and draft.productionQA.
 - Full npm run verify skipped: dependency-blocked; shared-state integration and final verify belong to Release.
-- Pushed-ref intake and review-status results are reported in final handoff.
+- npm run curriculum:package-intake -- --unit L367 --ref origin/codex/l367-complete-package: PASS on pushed package. Advisory: no explicit manual playback evidence; browser limitation recorded below.
+- asset:review-status uses GitHub branch ref codex/l367-complete-package or full SHA, not local tracking prefix origin/.
+- npm run asset:review-status -- --unit L367 --ref codex/l367-complete-package: command PASS; no teacher review document yet, expected for post-main review workflow.
 
 ## Shared Script Change
 
@@ -281,4 +283,3 @@ Teacher review is post-main. Usable only after Release merges and deploys:
 https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L367&ref=main
 https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main
 npm run asset:review-status -- --unit L367 --ref main
-
