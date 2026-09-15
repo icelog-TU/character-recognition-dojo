@@ -376,7 +376,7 @@ GitHub Pages URL format:
 https://icelog-TU.github.io/character-recognition-dojo/tools/audio-review.html?unit=L###&ref=<branch-or-commit-sha>
 ```
 
-After a production thread finishes audio and pushes its branch, it must provide the teacher with a stable audio-review URL. Prefer an exact commit SHA in `ref` after the branch is pushed, because the approval record is keyed by unit plus commit SHA. If any audio file changes after review starts, push a new commit and ask for a new review URL; do not reuse old approval checkmarks for changed audio.
+After a production thread finishes audio and pushes its branch, it must provide the teacher with a stable audio-review URL. Prefer an exact commit SHA in `ref` after the branch is pushed, because the approval record is keyed by unit plus commit SHA. If a branch ref must be used and it contains `/`, URL-encode the slash, for example `codex%2Fl###-complete-package`; never give an unencoded `ref=codex/l###-complete-package` URL. If any audio file changes after review starts, push a new commit and ask for a new review URL; do not reuse old approval checkmarks for changed audio.
 
 The review page loads the unit's draft JSON first, then falls back to production JSON. It lists every detected `charAudio`, sentence audio, `teachAudio` prefix/suffix, and `choose-pronunciation` option audio. The teacher can check each audio file as OK. When signed in with Google and Firestore rules allow it, the page writes shared review status to `audioReviews/{reviewId}`.
 
@@ -397,6 +397,21 @@ Automated gates still block the relevant owner:
 - Production must not hand off an `asset-complete-package` until required image/audio files exist, final images are compressed WebP with no referenced PNG/JPG leftovers, final audio is processed `.m4a`, Stage 4 `teachAudio` and `choose-pronunciation` audio referenced by the draft exist, and `charTimings` plus allowed-character checks pass.
 - Production should run `npm run validate:production` and the fast package audit above. Run `npm run verify` only when the branch has a meaningful current production JSON entry.
 - Release must run `npm run verify` after integrating the unit into latest `origin/main` production JSON, planner, ledger, and registry cleanup.
+
+### Browser automation fallback for pre-merge playback QA
+
+Production should complete playback/highlight/recording QA itself when its browser control surface works. If Codex browser automation or Computer Use crashes, times out, cannot identify the browser URL, or cannot operate local media playback, this is a tooling failure, not proof that the package assets are bad. Do not keep opening new Production slots just to retry the same broken browser path.
+
+Before using a fallback, Production must still pass the non-browser technical gates: required image/audio files exist, final images are WebP, final audio is processed `.m4a`, ffmpeg can decode every referenced audio file, Stage 4 `teachAudio` and `choose-pronunciation` option audio exist, `charTimings` and Stage 4 timing metadata are present, allowed-character checks pass, and the lesson-local validators/audits pass.
+
+If those gates pass, the teacher may manually review the pushed pre-merge package through the permanent GitHub Pages review tools, preferably with `ref=<full-commit-sha>`:
+
+```text
+https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L###&ref=<full-commit-sha>
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=<full-commit-sha>
+```
+
+Teacher manual pre-merge asset QA can substitute for failed browser automation only when the package records the exact commit SHA and URL checked, the scope checked (audio, images, or both), the browser automation failure reason, and the teacher's PASS or exact repair findings. This fallback may complete the package only if the teacher reports PASS and all technical gates above pass. It cannot be used for missing assets, failed validators, known bad audio/images, or skipped Stage 4 timing/alignment work.
 
 Teacher subjective review is a repair queue, not a release gate:
 
@@ -432,6 +447,8 @@ Pre-merge package preview is allowed only when the teacher or Release needs to i
 https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=codex%2Fl###-complete-package
 https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=<full-commit-sha>
 ```
+
+Do not use an unencoded branch ref such as `ref=codex/l###-complete-package`; the slash must be encoded as `%2F`. Full commit SHA refs are preferred for pre-merge teacher review because they are immutable and avoid branch-name URL parsing issues.
 
 Production handoff must separate these fields:
 

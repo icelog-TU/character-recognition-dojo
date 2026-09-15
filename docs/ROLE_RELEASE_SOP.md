@@ -101,6 +101,8 @@ Before integrating a Production package, classify it:
 - `dependency-blocked-asset-complete`: lesson-local files are complete, but earlier lessons must enter `origin/main` first.
 - `partial-package` or `assets-only`: do not integrate; return it to Production with the missing items.
 
+If a package was completed using the browser automation fallback, Release may accept it only when the package is explicitly marked `asset-complete-package` or `dependency-blocked-asset-complete` and the notes record the exact immutable commit SHA, pre-merge review URL, reviewed scope, automation failure reason, teacher manual PASS or repair findings, and passed technical checks. Do not integrate a package that merely says browser QA failed or teacher review is pending. Do integrate normally when the fallback is fully documented and the package otherwise passes Release intake checks.
+
 Use the package branch and tip commit from Production's handoff as the source. Do not look only at `origin/main` for a newly completed Production package, because `asset-complete-package` explicitly means the unit is not yet integrated into `src/curriculum/sample-lessons.json` on `main`.
 
 If a teacher or Production gives a `lesson-asset-review.html?unit=L###&ref=main` URL for a unit that has not yet been released, and that page says the unit is missing, do not conclude the package is missing. First run:

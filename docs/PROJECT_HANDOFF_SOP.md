@@ -163,7 +163,7 @@ Do not create a new clone unless the user explicitly asks. If the current shell 
 - Standalone character-card `charAudio` must be generated from the single target character. Do not cut it from sentence audio.
 - Wrong-choice audio must be generated as whole-sentence audio from the exact wrong text. Do not splice or patch correct audio.
 - Teacher subjective review is post-merge by default through the permanent asset review pages. Automated gates still block release.
-- `ref=main` asset review URLs are valid only after Release merges the unit into `main` and GitHub Pages deploys. Before release, Production may provide only a pre-merge package preview URL using `ref=<package-branch-or-full-commit-sha>`, clearly labeled as not the final main review queue.
+- `ref=main` asset review URLs are valid only after Release merges the unit into `main` and GitHub Pages deploys. Before release, Production may provide only a pre-merge package preview URL using `ref=<package-branch-or-full-commit-sha>`, clearly labeled as not the final main review queue. If the ref is a branch name containing `/`, URL-encode it (`codex%2Fl###-complete-package`) or, preferably, use the full pushed commit SHA.
 - Preserve user and other-thread changes. Never stash, reset, revert, or overwrite unrelated work unless explicitly requested.
 
 ## Review URLs
@@ -187,6 +187,7 @@ https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review
 ```
 
 Label pre-merge links: `pre-merge package preview, not final main review queue`.
+Never use an unencoded branch ref such as `ref=codex/l###-complete-package` in a review URL. The slash can break browser automation or URL handling. Prefer the full pushed commit SHA for teacher pre-merge review because it is immutable and avoids branch-name encoding issues.
 
 Pre-merge audio review only when explicitly requested:
 
@@ -196,6 +197,19 @@ npm run audio:review-status -- --unit L### --ref <branch-or-commit-sha>
 ```
 
 Do not publish temporary review pages.
+
+### Browser QA fallback
+
+Production normally owns playback/highlight/recording QA before calling a package `asset-complete-package`. If Codex browser automation or Computer Use cannot complete playback QA because the browser/control surface crashes, times out, or cannot operate local media playback, do not mark the package complete from that failure alone. First complete the technical gates that do not depend on browser automation: file existence, WebP/audio format checks, ffmpeg decode, `charTimings`, Stage 4 referenced audio, allowed-character checks, and the lesson-local validators.
+
+If those technical gates pass and the teacher manually reviews the pushed pre-merge package on the permanent GitHub Pages review tools, teacher manual pre-merge asset QA may substitute for the failed browser automation. The package notes, draft, registry row, and final handoff must record:
+
+- the exact review URL and immutable commit SHA the teacher checked
+- whether the teacher checked audio, images, or both
+- the automation failure reason
+- the teacher's PASS or exact repair findings
+
+This fallback is only for tool/control failure. It must not be used to hide real asset defects, skipped technical validators, missing Stage 4 assets, missing timings, or failed production checks.
 
 ## Copy Prompts For New Threads
 
