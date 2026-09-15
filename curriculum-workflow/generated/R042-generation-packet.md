@@ -122,6 +122,16 @@ Use these reviewed games exactly as production data.
         "id": "R042-G03-A",
         "text": "跟",
         "correct": true
+      },
+      {
+        "id": "R042-G03-B",
+        "text": "很",
+        "correct": false
+      },
+      {
+        "id": "R042-G03-C",
+        "text": "眼",
+        "correct": false
       }
     ]
   },

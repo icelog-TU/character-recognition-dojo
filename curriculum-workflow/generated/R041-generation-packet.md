@@ -120,6 +120,16 @@ Use these reviewed games exactly as production data.
         "id": "R041-G03-A",
         "text": "圖",
         "correct": true
+      },
+      {
+        "id": "R041-G03-B",
+        "text": "圓",
+        "correct": false
+      },
+      {
+        "id": "R041-G03-C",
+        "text": "畫",
+        "correct": false
       }
     ]
   },

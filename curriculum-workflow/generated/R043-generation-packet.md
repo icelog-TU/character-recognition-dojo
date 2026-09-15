@@ -236,6 +236,16 @@ L360 is the only remaining numbered dependency; pair follows L360 and precedes L
           "id": "R043-G03-A",
           "text": "請",
           "correct": true
+        },
+        {
+          "id": "R043-G03-B",
+          "text": "說",
+          "correct": false
+        },
+        {
+          "id": "R043-G03-C",
+          "text": "話",
+          "correct": false
         }
       ]
     },
@@ -1420,6 +1430,16 @@ L360 is the only remaining numbered dependency; pair follows L360 and precedes L
           "id": "R043-G03-A",
           "text": "請",
           "correct": true
+        },
+        {
+          "id": "R043-G03-B",
+          "text": "說",
+          "correct": false
+        },
+        {
+          "id": "R043-G03-C",
+          "text": "話",
+          "correct": false
         }
       ]
     },
