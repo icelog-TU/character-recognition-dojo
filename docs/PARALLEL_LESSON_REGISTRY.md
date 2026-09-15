@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L392 | 頁 | claimed | Production E | codex/l392-complete-package | L385, L386, L387, L388, L389, L390, L391 | 字 名 第 念 號 數 報 | curriculum-workflow/lesson-requests/L392.json; curriculum-workflow/generated/L392-generation-packet.md; curriculum-workflow/drafts/L392-draft.json | public/assets/lessons/L392/; curriculum-workflow/audio-inbox/L392/ | Teacher-approved handoff; base 3f105601; lesson-local package. Release owns contiguous lesson/review dependency integration. |
+| L392 | 頁 | dependency-blocked-asset-complete | Production E | codex/l392-complete-package | L385, L386, L387, L388, L389, L390, L391 | 字 名 第 念 號 數 報 | curriculum-workflow/lesson-requests/L392.json; curriculum-workflow/generated/L392-generation-packet.md; curriculum-workflow/drafts/L392-draft.json | public/assets/lessons/L392/ | 5 WebP; 10 M4A; sentence and Stage 4 timings. Technical QA PASS; Browser QA tooling fallback recorded. Release sequence: L381, L382, L383, L384, L385, L386, L387, L388, L389, L390, L391, R047, R048. |
 
 ## Status Values
 

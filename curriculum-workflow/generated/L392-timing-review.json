@@ -1,0 +1,70 @@
+[
+  {
+    "id": "L392-S01",
+    "oldEndMs": 2560,
+    "newEndMs": 2656,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L392-S02",
+    "oldEndMs": 4320,
+    "newEndMs": 4431,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L392-S03",
+    "oldEndMs": 2540,
+    "newEndMs": 2629,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L392-S04",
+    "oldEndMs": 3700,
+    "newEndMs": 3806,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L392-S05",
+    "oldEndMs": 3180,
+    "newEndMs": 3251,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L392-G02-suffix",
+    "original": [
+      {
+        "charIndex": 0,
+        "startMs": 0,
+        "endMs": 260
+      },
+      {
+        "charIndex": 1,
+        "startMs": 940,
+        "endMs": 980
+      },
+      {
+        "charIndex": 2,
+        "startMs": 1220,
+        "endMs": 1221
+      }
+    ],
+    "corrected": [
+      {
+        "charIndex": 0,
+        "startMs": 0,
+        "endMs": 350
+      },
+      {
+        "charIndex": 1,
+        "startMs": 350,
+        "endMs": 970
+      },
+      {
+        "charIndex": 2,
+        "startMs": 970,
+        "endMs": 1333
+      }
+    ],
+    "reason": "Whisper returned 40 ms and 1 ms segments. Waveform review identifies syllable troughs near 350 and 970 ms and final decay at 1333 ms; smooth to continuous non-overlapping audible spans."
+  }
+]
