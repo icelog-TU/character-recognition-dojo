@@ -41,6 +41,10 @@ function hanChars(text) {
 
 function normalizeTranscribedHanChar(char) {
   const simplifiedEquivalentMap = new Map([
+    ["\u7ecf", "\u7d93"],
+    ["\u4eb2", "\u89aa"],
+    ["\u56ed", "\u5712"],
+    ["\u98ce", "\u98a8"],
     ["\u4e2a", "\u500b"],
     ["\u8fd9", "\u9019"],
     ["\u5706", "\u5713"],
@@ -199,11 +203,12 @@ function timingsFromWords(words, sentence) {
   return timings;
 }
 
-async function transcribeWithWords({ apiKey, filePath, fileName }) {
+async function transcribeWithWords({ apiKey, filePath, fileName, context }) {
   const form = new FormData();
   form.append("model", "whisper-1");
   form.append("file", new Blob([fs.readFileSync(filePath)], { type: "audio/mp4" }), fileName);
   form.append("language", "zh");
+  if (context) form.append("prompt", context);
   form.append("response_format", "verbose_json");
   form.append("timestamp_granularities[]", "word");
 
@@ -231,6 +236,7 @@ for (const lesson of units) {
   if (lessonFilter && lesson.id !== lessonFilter) continue;
 
   for (const sentence of lesson.sentences ?? []) {
+    if (args.sentence && sentence.id !== String(args.sentence).toUpperCase()) continue;
     if (!sentence.audio?.src) continue;
     const filePath = assetPath(sentence.audio.src);
     if (!fs.existsSync(filePath)) {
@@ -242,6 +248,7 @@ for (const lesson of units) {
       apiKey,
       filePath,
       fileName: path.basename(filePath),
+      context: args["transcription-context"],
     });
 
     const expected = normalizedHanText(sentence.spokenText || sentence.text);

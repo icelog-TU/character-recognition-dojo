@@ -1,0 +1,140 @@
+{
+  "unit": "L375",
+  "sourceBoundary": "95ca55f72ed99e36652a4de2dff4a5d20c16c1cc",
+  "allowedCharacters": 379,
+  "coverage": {
+    "經": 4,
+    "往": 2,
+    "通": 2,
+    "交": 2,
+    "親": 1,
+    "朋": 1,
+    "友": 2,
+    "朋友": 1
+  },
+  "checks": "PASS",
+  "audio": [
+    {
+      "id": "L375-S01",
+      "durationMs": 2596,
+      "tailMs": 236,
+      "meanDb": -16.9,
+      "maxDb": -2.8,
+      "bytes": 32953
+    },
+    {
+      "id": "L375-S02",
+      "durationMs": 3192,
+      "tailMs": 112,
+      "meanDb": -18.2,
+      "maxDb": -3.7,
+      "bytes": 42510
+    },
+    {
+      "id": "L375-S03",
+      "durationMs": 3222,
+      "tailMs": 162,
+      "meanDb": -18,
+      "maxDb": -2.1,
+      "bytes": 44319
+    },
+    {
+      "id": "L375-S04",
+      "durationMs": 3105,
+      "tailMs": 165,
+      "meanDb": -18.9,
+      "maxDb": -2,
+      "bytes": 39491
+    },
+    {
+      "id": "L375-S05",
+      "durationMs": 2992,
+      "tailMs": 132,
+      "meanDb": -17.7,
+      "maxDb": -2,
+      "bytes": 37537
+    },
+    {
+      "id": "G02-prefix",
+      "durationMs": 567,
+      "tailMs": 247,
+      "meanDb": -23.4,
+      "maxDb": -7.1,
+      "bytes": 7994
+    },
+    {
+      "id": "G02-suffix",
+      "durationMs": 2419,
+      "tailMs": 159,
+      "meanDb": -18.2,
+      "maxDb": -4.6,
+      "bytes": 30681
+    },
+    {
+      "id": "wrong-one",
+      "durationMs": 3327,
+      "tailMs": 147,
+      "meanDb": -18.1,
+      "maxDb": -2,
+      "bytes": 41793
+    },
+    {
+      "id": "wrong-two",
+      "durationMs": 2857,
+      "tailMs": 117,
+      "meanDb": -17.7,
+      "maxDb": -2.6,
+      "bytes": 35962
+    },
+    {
+      "id": "char-u7d93",
+      "durationMs": 2345,
+      "bytes": 20775
+    }
+  ],
+  "images": [
+    {
+      "id": "L375-S01",
+      "bytes": 229266,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L375-S02",
+      "bytes": 152744,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L375-S03",
+      "bytes": 138712,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L375-S04",
+      "bytes": 138228,
+      "styleLock": "PASS",
+      "cast": "N/A"
+    },
+    {
+      "id": "L375-S05",
+      "bytes": 123338,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "totalBytes": 1116303,
+  "alignmentNote": "S04 independently transcribed without prompt by gpt-4o-transcribe as 纸船经不起大风. Whisper topic context disambiguated paper boat; S03 re-aligned without context to avoid degenerate timestamp. No homophone aliases added.",
+  "regeneratedImages": [
+    "S03 background pseudo-lettering removed; initial draft excluded."
+  ],
+  "audioRegeneration": "S04: coral, shimmer, nova, alloy attempts superseded; final sage. Other tracks coral. Silence-only tail trim preserves final sound plus 90ms.",
+  "playback": {
+    "status": "tooling-unavailable",
+    "reason": "Chrome Browser Use net::ERR_BLOCKED_BY_CLIENT opening local M4A",
+    "attemptedUrl": "http://127.0.0.1:5188/character-recognition-dojo/assets/lessons/L375/audio/L375-S01.m4a",
+    "scope": "Phone-width playback/highlighting, G02 recording/replay, G05 all-option playback not verified interactively. No manual PASS claimed. Teacher subjective review is post-main.",
+    "technicalChecks": "All 5 WebP and 10 AAC/M4A decode; 9 aligned records; volumes, tails, indexes, allowed characters and lesson-local validators PASS."
+  }
+}
