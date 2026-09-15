@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L363 | 歡 | claimed | Production C | `codex/l363-complete-package` | L360, R043, R044, L361, L362 | 奇, 驚, 喜 | `curriculum-workflow/lesson-requests/L363.json`; `curriculum-workflow/generated/L363-generation-packet.md`; `curriculum-workflow/drafts/L363-draft.json` | `public/assets/lessons/L363/`; `curriculum-workflow/audio-inbox/L363/` | Base 496aa87a through L359. Character dependencies L360/L361/L362; R043/R044 are Release/playable-order blockers only. |
 
 ## Status Values
 
