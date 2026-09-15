@@ -3900,13 +3900,16 @@ function LessonPanel({
   }, [lesson.id, activeStage, advancingStage]);
 
   useEffect(() => {
-    if (rewardState !== "claiming" || !lessonReady) return;
+    if ((rewardState !== "claiming" && rewardState !== "claimed") || !lessonReady) return;
     let firstFrame = 0;
     let secondFrame = 0;
     firstFrame = window.requestAnimationFrame(() => {
       secondFrame = window.requestAnimationFrame(() => {
-        const target = rewardPanelRef.current?.querySelector<HTMLElement>(".reward-animation") ?? rewardPanelRef.current;
-        target?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        const target =
+          rewardState === "claimed"
+            ? rewardPanelRef.current?.querySelector<HTMLElement>(".reward-actions") ?? rewardPanelRef.current
+            : rewardPanelRef.current?.querySelector<HTMLElement>(".reward-animation") ?? rewardPanelRef.current;
+        if (target) scrollActiveLessonWorkIntoView(target, { extraBottomInset: 240 });
       });
     });
     return () => {

@@ -72,6 +72,7 @@ For each unit entering `main`, confirm:
 - Images and all referenced audio files exist.
 - Sentence audio has `durationMs` and production `charTimings`.
 - Stage 4 references are complete, including `G02` teach audio and `G05` wrong-choice audio when used.
+- Stage 4 `G03 missing-character` has exactly three single-Han options: one correct answer and two distractors. A one-button `missing-character` round is a production-local defect and must not be released unless Supervisor gives an explicit exception.
 - Ledger is updated.
 - Planner data is regenerated.
 - Registry has no stale active row for merged units.
@@ -128,6 +129,8 @@ Then inspect the actual package files from the branch. The `ref=main` asset revi
 Release should fix release-owned integration issues, such as rebasing from latest `origin/main`, transplanting the intended lesson files, inserting the production JSON entry, regenerating planner data, updating the ledger, clearing registry rows, running `npm run verify`, pushing, and checking deployment.
 
 If Release finds production-local defects, do not silently absorb them as normal release work. Fix only when needed to keep the current release moving, then report a `release-side repairs` list to Supervisor. Production-local defects include stale request/draft/packet mismatch, generation packets that are missing final approved sentence records, invalid `displayLines`, missing top-level `dependsOnLessons`, missing Stage 4 option ids or correctness metadata, repeated/missing Stage 4 sentence usage, non-canonical normal-lesson Stage 4 order without a teacher-approved exception, stale `charAudio` path examples, wrong-option text that differs too much, wrong-option audio that does not match the final text, and failed lesson-local audio loudness checks.
+
+After integrating a lesson or review module that touches Stage 4 or lesson completion flow, Release must smoke-test that the final reward state is usable on a phone/tablet-width viewport: after `領取獎勵`, the red `下一課` button and white `回首頁休息` button must be visible or automatically scrolled into view and must not be hidden behind the floating playback bar. This is app behavior QA, not subjective image/audio review.
 
 ## Two-Character Word Lesson Release Gate
 
