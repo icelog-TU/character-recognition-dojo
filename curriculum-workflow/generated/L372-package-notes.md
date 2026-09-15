@@ -58,7 +58,9 @@ This uses the current Production SOP browser automation fallback after non-brows
 - Scoped assets:audit strict PASS: one unit, five image references, ten audio references, zero warnings.
 - Scoped validate:production PASS. Baseline npm run validate:production also PASS, independently of L372 validation.
 - Full shared-state npm run verify is skipped because L370/L371 integration is Release-owned.
-- Post-push package-intake results are recorded in the final handoff below.
+- Post-push original `npm run curriculum:package-intake -- --unit L372 --ref origin/codex/l372-complete-package` PASS at `9155f1b4e2c87a00cfc85531c8aa466d70092194`: five WebP, ten referenced M4A, canonical five games, no blocking package-status defects.
+- Final `curriculum:audit-state` PASS on this branch's unmodified L367 base; the expected warning identifies L372 as an asset folder awaiting integration. Latest official boundary is separately read from origin/main (L369).
+- An additional unscoped `npm run assets:audit` scan was started, then interrupted after several minutes without a final result. It is not claimed as PASS. The required lesson-local strict format/audio audit above completed with zero warnings. No validator implementation was modified.
 
 ## Release review links
 
