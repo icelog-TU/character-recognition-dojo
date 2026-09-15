@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L365 | 但 | claimed | Production A | codex/l365-complete-package | L364:笑 | 笑 | curriculum-workflow/lesson-requests/L365.json; curriculum-workflow/generated/L365-generation-packet.md; curriculum-workflow/drafts/L365-draft.json | curriculum-workflow/audio-inbox/L365/; public/assets/lessons/L365/ | Base origin/main 0b0c9786, formal L001-L363; R043/R044 merged. Teacher-approved handoff; L364 blocks Release only. |
+| L365 | 但 | dependency-blocked-asset-complete | Production A | codex/l365-complete-package | L364:笑 | 笑 | curriculum-workflow/lesson-requests/L365.json; curriculum-workflow/generated/L365-generation-packet.md; curriculum-workflow/drafts/L365-draft.json | curriculum-workflow/audio-inbox/L365/; public/assets/lessons/L365/ | Base origin/main 0b0c9786, formal L001-L363; R043/R044 merged. Technical and browser QA complete; L364 blocks Release only; teacher formal review post-main. |
 
 ## Status Values
 
