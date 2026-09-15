@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L356 | 公 / normal lesson | claimed | Production B | codex/l356-complete-package | L354:排; L355:雞 | 排; 雞 | `curriculum-workflow/lesson-requests/L356.json`; `curriculum-workflow/generated/L356-generation-packet.md`; `curriculum-workflow/drafts/L356-draft.json` | `public/assets/lessons/L356/` | Claimed from latest origin/main 71762b03; dependency-blocked until L354 and L355 enter main. |
 
 ## Status Values
 
