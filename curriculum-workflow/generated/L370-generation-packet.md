@@ -249,7 +249,7 @@ Expected Stage 2: 朋 x2, 友 x2, two distinct old characters; 4 target taps. St
       ]
     }
   ],
-  "notes": "Two-character word lesson pilot; one normal lesson/order/course card. Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation. Expected six cards: 朋 x2, 友 x2, two distinct old characters; completion requires four target taps. L366-L369 now formally merged on main 95ca55f72ed99e36652a4de2dff4a5d20c16c1cc. Stopped per teacher non-Stage-2 technical-gate condition: L370-G02-prefix exact spokenText is 朋, but AI transcription returned 旁. No transcript substitution performed; alignment command exited 1 before persisting final timings. Standalone prefix needs pronunciation review/regeneration before rerunning alignment. This is separate from the overridden Stage 2 duplicate-card verification item."
+  "notes": "Two-character word lesson pilot; one normal lesson/order/course card. Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation. Expected six cards: 朋 x2, 友 x2, two distinct old characters; completion requires four target taps. L366-L369 now formally merged on main 95ca55f72ed99e36652a4de2dff4a5d20c16c1cc. Stopped per teacher non-Stage-2 technical-gate condition: L370-G02-prefix exact spokenText is 朋, but AI transcription returned 旁. No transcript substitution performed; alignment command exited 1 before persisting final timings. Standalone prefix needs pronunciation review/regeneration before rerunning alignment. This is separate from the overridden Stage 2 duplicate-card verification item. Retry after re-reading 95ca55f7: explicit zhuyin prefix regenerated to 1091 ms; exact transcript now 憨 instead of 朋. Audio needs direct review; no bypass or false timing acceptance."
 }
 ```
 
@@ -261,6 +261,8 @@ Word 朋友 count4; 朋4; 友4; 情2 感2 謝2 吧1 但1. Allowed 374 chars, lin
 
 
 ## Production Stop Report
+
+Retry after latest-main SOP re-read (95ca55f7): regenerated only G02-prefix with explicit 朋 / ㄆㄥˊ / peng rising-tone instructions and unchanged input 朋. New processed duration is 1091 ms. AI transcript now returns 憨 instead of expected 朋; exact-text alignment gate still exits 1. This may be short-utterance recognition ambiguity or pronunciation quality; no auditory diagnosis is claimed. Direct audio review is required before accepting or changing timing metadata. The Stage 2 teacher override remains in force and is not the cause of this stop.
 
 Package status: needs-rework. Stopped per teacher non-Stage-2 technical-gate condition: L370-G02-prefix exact spokenText is 朋, but AI transcription returned 旁. No transcript substitution performed; alignment command exited 1 before persisting final timings. Standalone prefix needs pronunciation review/regeneration before rerunning alignment. This is separate from the overridden Stage 2 duplicate-card verification item.
 

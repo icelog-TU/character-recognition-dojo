@@ -13,6 +13,11 @@ const han = text => [...text].filter(c => /\p{Script=Han}/u.test(c)).join("");
 // Normalize only equivalent simplified transcription glyphs; retain raw evidence.
 const originalFetch = globalThis.fetch;
 globalThis.fetch = async (...args) => {
+  if (action === "generate" && fragment === "L370-G02-prefix" && String(args[0]).includes("/audio/speech")) {
+    const body = JSON.parse(args[1].body);
+    body.instructions += " The input is the single character 朋, Taiwan zhuyin ㄆㄥˊ (peng, second/rising tone), as in 朋友. Say only 朋 once, no 友, no explanation. Keep the eng vowel, not ang; do not say 旁 (pang).";
+    args[1] = {...args[1], body:JSON.stringify(body)};
+  }
   const response = await originalFetch(...args);
   if (!String(args[0]).includes("/audio/transcriptions") || !response.ok) return response;
   const raw = await response.json();
