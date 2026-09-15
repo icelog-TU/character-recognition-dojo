@@ -171360,6 +171360,613 @@
           ]
         }
       ]
+    },
+    {
+      "id": "L355",
+      "order": 355,
+      "newChars": [
+        "雞"
+      ],
+      "zhuyin": {
+        "雞": "ㄐㄧ"
+      },
+      "title": "雞",
+      "charAudio": {
+        "雞": "/assets/lessons/L355/audio/char-u96de.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L355-S01",
+          "text": "雞排店正在開門。",
+          "spokenText": "雞排店正在開門",
+          "focusChar": "雞",
+          "displayLines": [
+            "雞排店",
+            "正在開門。"
+          ],
+          "imageNotes": "雞排店門口，店家的鐵捲門正在慢慢往上升，裡面燈亮起來，老闆或店員正在準備開店。門口可以有簡單攤台或油鍋設備，但不要品牌、招牌文字、菜單文字、價格或標誌。",
+          "targetCharIndex": 0,
+          "imagePrompt": "Use full L058 style anchors only for rich warm picture-book pencil-and-watercolor treatment, fine textured outlines, luminous substantial watercolor forms, detailed clean Taiwan environments, natural faces and stable preschool proportions. One square full-bleed scene with safe margins. Use refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family anchors L154-S01, L162-S04, L163-S02 for recurring identities. No readable text, letters, numbers, labels, signs, menus, prices, logos, brands, UI symbols or watermark. Scene: Taiwanese chicken-cutlet shop opening: metal rolling shutter halfway rising, warm lights inside, generic middle-aged salt-and-pepper-haired male shopkeeper in forest-green shirt and apron operates side wall button; stainless counter and golden cutlets identify shop. Generic shopkeeper distinct from father.",
+          "imageSrc": "/assets/lessons/L355/images/L355-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L355/audio/L355-S01.m4a",
+            "durationMs": 2590,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2080,
+                "endMs": 2410
+              }
+            ]
+          }
+        },
+        {
+          "id": "L355-S02",
+          "text": "這家餐廳有雞排飯。",
+          "spokenText": "這家餐廳有雞排飯",
+          "focusChar": "雞",
+          "displayLines": [
+            "這家餐廳",
+            "有雞排飯。"
+          ],
+          "imageNotes": "餐廳門口或櫃台旁有一個餐點立牌，立牌上用無文字圖案清楚畫出一份雞排飯：白飯、雞排、配菜。主角小女孩和家人看著立牌或餐點展示。不要可讀文字、菜名、價格、品牌或標誌。",
+          "targetCharIndex": 5,
+          "imagePrompt": "Use full L058 style anchors only for rich warm picture-book pencil-and-watercolor treatment, fine textured outlines, luminous substantial watercolor forms, detailed clean Taiwan environments, natural faces and stable preschool proportions. One square full-bleed scene with safe margins. Use refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family anchors L154-S01, L162-S04, L163-S02 for recurring identities. No readable text, letters, numbers, labels, signs, menus, prices, logos, brands, UI symbols or watermark. Scene: Restaurant entrance, prominent wordless meal display showing white rice, golden breaded chicken cutlet and vegetable sides; fixed protagonist girl with pink cardigan, bob and clip, navy skirt, yellow bag alongside fixed mother in cream blouse and blue trousers, looking at display.",
+          "imageSrc": "/assets/lessons/L355/images/L355-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L355/audio/L355-S02.m4a",
+            "durationMs": 2694,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 140
+              },
+              {
+                "charIndex": 1,
+                "startMs": 140,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 820
+              },
+              {
+                "charIndex": 3,
+                "startMs": 820,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1060,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2220,
+                "endMs": 2514
+              }
+            ]
+          }
+        },
+        {
+          "id": "L355-S03",
+          "text": "座位上有小雞的花樣。",
+          "spokenText": "座位上有小雞的花樣",
+          "focusChar": "雞",
+          "displayLines": [
+            "座位上有",
+            "小雞的花樣。"
+          ],
+          "imageNotes": "一張座位或椅子，上面有明顯的小雞花樣裝飾；可以是椅墊、椅套、貼紙感圖案，或整個座位被小雞圖樣的裝飾紙包覆。畫面要讓座位上一看就有小雞花樣。不要文字、數字或標籤。",
+          "targetCharIndex": 5,
+          "imagePrompt": "Use full L058 style anchors only for rich warm picture-book pencil-and-watercolor treatment, fine textured outlines, luminous substantial watercolor forms, detailed clean Taiwan environments, natural faces and stable preschool proportions. One square full-bleed scene with safe margins. Use refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family anchors L154-S01, L162-S04, L163-S02 for recurring identities. No readable text, letters, numbers, labels, signs, menus, prices, logos, brands, UI symbols or watermark. Scene: One wooden chair in a warm clean room; its pale blue fabric seat cushion prominently covered with repeating yellow baby-chick motifs, clearly decorative printed pattern with orange beaks and legs; no live chicks on chair, no humans.",
+          "imageSrc": "/assets/lessons/L355/images/L355-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L355/audio/L355-S03.m4a",
+            "durationMs": 2942,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1880,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2280,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2540,
+                "endMs": 2762
+              }
+            ]
+          }
+        },
+        {
+          "id": "L355-S04",
+          "transcriptionVocabularyHint": "臺灣華語詞彙：位子。",
+          "ttsInstructions": "Pronounce 位子 as ㄨㄟˋ ˙ㄗ, with a clear short neutral-tone 子, never 位置 (ㄨㄟˋ ㄓˋ). Read the exact input naturally once, without adding any words.",
+          "text": "我們位子正好排在一起。",
+          "spokenText": "我們位子正好排在一起",
+          "focusChar": "排",
+          "displayLines": [
+            "我們位子",
+            "正好排在",
+            "一起。"
+          ],
+          "imageNotes": "遊覽車內的座位，主角小女孩和小月的座位正好排在一起，相鄰或前後很近。要清楚呈現遊覽車座位排列。小月必須使用固定角色 reference：public/assets/reference/lesson-cast/xiaoyue.webp；不要畫成 generic classmate，也不要畫成主角女孩。不要使用姓名牌、座號或可讀文字。",
+          "targetCharIndex": 6,
+          "imagePrompt": "Use full L058 style anchors only for rich warm picture-book pencil-and-watercolor treatment, fine textured outlines, luminous substantial watercolor forms, detailed clean Taiwan environments, natural faces and stable preschool proportions. One square full-bleed scene with safe margins. Use refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family anchors L154-S01, L162-S04, L163-S02 for recurring identities. No readable text, letters, numbers, labels, signs, menus, prices, logos, brands, UI symbols or watermark. Scene: Inside a tour coach, fixed protagonist girl and fixed Xiaoyue sit adjacent in same two-seat row. Clearly visible repeating seat rows and aisle, window and curtains. Xiaoyue must match public/assets/reference/lesson-cast/xiaoyue.webp: long softly curly chestnut hair, moon clip, lavender cardigan, cream shirt, teal pleated skirt, white socks, purple shoes; distinct from short-bob pink-cardigan protagonist. Natural child proportions and seated poses.",
+          "imageSrc": "/assets/lessons/L355/images/L355-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L355/audio/L355-S04.m4a",
+            "durationMs": 4241,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 310
+              },
+              {
+                "charIndex": 1,
+                "startMs": 310,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1270,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1780,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2310,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2660,
+                "endMs": 3000
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3000,
+                "endMs": 3260
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3260,
+                "endMs": 3580
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3580,
+                "endMs": 3770
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3770,
+                "endMs": 4061
+              }
+            ]
+          }
+        },
+        {
+          "id": "L355-S05",
+          "text": "小雞在草地上跑來跑去。",
+          "spokenText": "小雞在草地上跑來跑去",
+          "focusChar": "雞",
+          "displayLines": [
+            "小雞在草地上",
+            "跑來跑去。"
+          ],
+          "imageNotes": "戶外草地上，幾隻小雞正在跑來跑去，畫面活潑但安全。可以有陽光、草地、小花，不需要人物。不要文字、標誌或過度擬人化。",
+          "targetCharIndex": 1,
+          "imagePrompt": "Use full L058 style anchors only for rich warm picture-book pencil-and-watercolor treatment, fine textured outlines, luminous substantial watercolor forms, detailed clean Taiwan environments, natural faces and stable preschool proportions. One square full-bleed scene with safe margins. Use refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family anchors L154-S01, L162-S04, L163-S02 for recurring identities. No readable text, letters, numbers, labels, signs, menus, prices, logos, brands, UI symbols or watermark. Scene: Several natural fluffy yellow baby chicks running in different directions across bright grass with a few small flowers, tiny orange feet lifted mid-step, soft sunshine, detailed clean outdoor scene; no people, no clothes or anthropomorphic gestures.",
+          "imageSrc": "/assets/lessons/L355/images/L355-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L355/audio/L355-S05.m4a",
+            "durationMs": 4174,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1540,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1940,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2820,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3120,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3380,
+                "endMs": 3700
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3700,
+                "endMs": 3994
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L355-G01",
+          "type": "find-character",
+          "sentenceId": "L355-S01",
+          "targetChar": "雞",
+          "targetCharIndex": 0,
+          "prompt": "找到「雞」。"
+        },
+        {
+          "id": "L355-G02",
+          "type": "teach-character",
+          "sentenceId": "L355-S03",
+          "targetChar": "雞",
+          "targetCharIndex": 5,
+          "prompt": "這個字我不會念，請你幫我。",
+          "teachAudio": {
+            "prefixText": "座位上有小",
+            "targetText": "雞",
+            "suffixText": "的花樣",
+            "suffixTtsInstructions": "只朗讀輸入的三個字「的花樣」。第一字是助詞「的」，念輕聲ㄉㄜ，不是這、個、一個。清楚念出開頭的ㄉㄜ，再連著念花樣。不要加字，不要省字，不要解說。",
+            "prefixSrc": "/assets/lessons/L355/audio/L355-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L355/audio/L355-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L355/audio/L355-G02-prefix.m4a",
+              "durationMs": 2379,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 460
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 460,
+                  "endMs": 660
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 660,
+                  "endMs": 1160
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1160,
+                  "endMs": 1880
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1880,
+                  "endMs": 2199
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L355/audio/L355-G02-suffix.m4a",
+              "durationMs": 1169,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 260
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 260,
+                  "endMs": 600
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 600,
+                  "endMs": 989
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L355-G03",
+          "type": "missing-character",
+          "sentenceId": "L355-S05",
+          "targetChar": "雞",
+          "targetCharIndex": 1,
+          "missingIndexes": [
+            1
+          ],
+          "prompt": "把不見的字放回句子。",
+          "options": [
+            {
+              "id": "L355-G03-A",
+              "text": "雞",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L355-G04",
+          "type": "partial-order",
+          "sentenceId": "L355-S04",
+          "targetChar": "排",
+          "missingIndexes": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "prompt": "把不見的字照順序放回句子。",
+          "options": [
+            {
+              "id": "L355-G04-A",
+              "text": "正",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "L355-G04-B",
+              "text": "好",
+              "correct": true,
+              "correctOrder": 1
+            },
+            {
+              "id": "L355-G04-C",
+              "text": "排",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "L355-G04-D",
+              "text": "在",
+              "correct": true,
+              "correctOrder": 3
+            }
+          ],
+          "correctSequence": [
+            "L355-G04-A",
+            "L355-G04-B",
+            "L355-G04-C",
+            "L355-G04-D"
+          ]
+        },
+        {
+          "id": "L355-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L355-S02",
+          "targetChar": "雞",
+          "targetCharIndex": 5,
+          "prompt": "聽一聽，誰念得對？",
+          "options": [
+            {
+              "id": "L355-G05-A",
+              "text": "這家餐廳有雞排飯。",
+              "correct": true,
+              "sentenceId": "L355-S02",
+              "audioSrc": "/assets/lessons/L355/audio/L355-S02.m4a"
+            },
+            {
+              "id": "L355-G05-B",
+              "text": "這家飯店有雞排飯。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L355/audio/L355-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L355/audio/L355-G05-wrong-one.m4a",
+                "durationMs": 3054,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 220
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 220,
+                    "endMs": 640
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 640,
+                    "endMs": 880
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 880,
+                    "endMs": 1100
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1100,
+                    "endMs": 1580
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1790,
+                    "endMs": 2180
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2180,
+                    "endMs": 2560
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2560,
+                    "endMs": 2874
+                  }
+                ]
+              }
+            },
+            {
+              "id": "L355-G05-C",
+              "text": "這家餐廳有雞排餐。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L355/audio/L355-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L355/audio/L355-G05-wrong-two.m4a",
+                "durationMs": 2853,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 260
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 260,
+                    "endMs": 680
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 680,
+                    "endMs": 1000
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1000,
+                    "endMs": 1220
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1220,
+                    "endMs": 1800
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1800,
+                    "endMs": 2060
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2060,
+                    "endMs": 2320
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2320,
+                    "endMs": 2673
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "reviewLessons": [
