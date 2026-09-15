@@ -633,7 +633,7 @@ The following request records are final and match the draft. No approved sentenc
       "S05 first draft rejected for overly photographic cabbage/soil texture; regenerated and rejected draft excluded."
     ],
     "audioGeneration": "Repo OpenAI ai:audio; all processed by assets:audio. Sentences/G02 prefix/G05 use gpt-4o-mini-tts coral. Current charAudio and G02 suffix use gpt-4o-mini-tts sage.",
-    "audioAlignment": "Five sentences, G02 prefix, and both G05 wrong choices passed assets:align:ai. G02 suffix single character remains unverified: Whisper returned a homophone or empty transcript across regenerations; no fabricated suffix timing.",
+    "audioAlignment": "Five sentences, G02 prefix, both G05 wrong choices, and supervisor-added measured G02 suffix single-character timing are present in the draft. G02 suffix audio acceptance still requires teacher/manual playback confirmation before asset-complete status.",
     "manualPlayback": "NOT COMPLETED: active tool environment cannot hear audio input or verify phone playback/recording. Automated transcript checks are not a replacement for this gate.",
     "shortAudioSecondaryCheck": "gpt-4o-transcribe returned the homophone 源 for 園 and Latin phonetic text for 裡; these do not establish a verified tone/playback result.",
     "assetFormatAudit": "PASS: scoped L357 assets:audit --strict, 5 images / 10 audio files, 0 errors / 0 warnings. Total asset folder 1,476,449 bytes."
@@ -688,7 +688,7 @@ Full L058 style-only set was opened as a contact sheet. Refined examples L115-S0
 - Coverage: 園5, 公2, 雞2, 排3, 正1, 位1; all minimums PASS.
 - Stage 4 fixed order, sentence usage once, target indexes, single-Han partial-order cards and G05 full wrong texts: PASS.
 - All 5 sentence audio files, G02 prefix and both G05 wrong options: assets:align:ai PASS; saved in draft.
-- G02 suffix remains unverified and has no fabricated charTimings. Single-character sound/tones and phone playback need review; see productionQa above.
+- G02 suffix now has supervisor-added measured single-character timing from the audio file, but single-character sound/tones and phone playback still need teacher/manual review; see productionQa above.
 - validate:production PASS on temporary L357-only fixture.
 - assets:audit --strict PASS on temporary L357-only fixture, 5 images and 10 audio refs, zero errors/warnings. Final assets 1,476,449 bytes.
 - Full verify skipped because dependency-blocked lesson is absent from shared production JSON.
