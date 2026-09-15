@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L379 | 送 / normal single-character | claimed | Production D | codex/l379-complete-package | L374, L375, L376, L377, L378 | 往經已近接 | curriculum-workflow/lesson-requests/L379.json; curriculum-workflow/generated/L379-generation-packet.md; curriculum-workflow/drafts/L379-draft.json | curriculum-workflow/audio-inbox/L379/; public/assets/lessons/L379/ | Claim only. Base 7e630478, main through L369. Release requires all predecessors through L375, then R045/R046 (L346-L375 ceiling), then L376-L379. Teacher-approved five sentences; S04 bird departure and S05 protagonist girl sends guest off. |
 
 ## Status Values
 
