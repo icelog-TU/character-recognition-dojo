@@ -20,7 +20,7 @@
     "公",
     "園"
   ],
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "requiredRounds": 5,
   "charAudio": {
     "物": "/assets/lessons/L358/audio/char-u7269.m4a"
@@ -85,6 +85,11 @@
             "endMs": 2320
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "5": "ㄉㄨㄥˋ",
+        "6": "ㄨˋ",
+        "7": "ㄩㄢˊ"
       }
     },
     {
@@ -141,6 +146,13 @@
             "endMs": 2420
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "0": "ㄉㄨㄥˋ",
+        "1": "ㄨˋ",
+        "2": "ㄩㄢˊ",
+        "5": "ㄍㄨㄥ",
+        "6": "ㄐㄧ"
       }
     },
     {
@@ -192,6 +204,11 @@
             "endMs": 2420
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "1": "ㄐㄧ",
+        "4": "ㄉㄨㄥˋ",
+        "5": "ㄨˋ"
       }
     },
     {
@@ -269,6 +286,11 @@
             "endMs": 3340
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "0": "ㄐㄧ",
+        "8": "ㄆㄞˊ",
+        "10": "ㄐㄧ"
       }
     },
     {
@@ -340,6 +362,12 @@
             "endMs": 3480
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "0": "ㄍㄨㄥ",
+        "6": "ㄉㄨㄥˋ",
+        "7": "ㄨˋ",
+        "8": "ㄩㄢˊ"
       }
     }
   ],
@@ -617,12 +645,8 @@
     }
   ],
   "productionQA": {
-    "status": "pending-audio-review",
-    "blockers": [
-      "Standalone 物 regenerated after teacher rejection; latest 929 ms candidate awaits teacher review",
-      "Manual Stage 3 highlight listening and teach replay QA pending",
-      "G02 prefix 動 has teacher-approved pronunciation and supervisor-added silence-detect timing; teacher/manual playback QA still must confirm it behaves correctly in Stage 4."
-    ],
+    "status": "teacher-manual-pre-merge-asset-qa-pass",
+    "blockers": [],
     "audioVoices": {
       "default": "coral",
       "charAudio": "nova / tts-1-hd / speed 0.5",
@@ -630,7 +654,9 @@
     },
     "charAudioSha256": "98aab0efea242c851ae6517730cc29f3c3f7c4aaac26e7450e2f20a6727cfd22",
     "teacherApprovedPrefixSha256": "f887275693f11d0f4bbfa75e501e92e5717875f8424b00ae0f6553e444cd03f4",
-    "supervisorTimingRepair": "Added G02 prefix single-character timing from ffmpeg silencedetect: voiced segment 0-294 ms of 1362 ms file; audio file unchanged."
+    "supervisorTimingRepair": "Added G02 prefix single-character timing from ffmpeg silencedetect: voiced segment 0-294 ms of 1362 ms file; audio file unchanged.",
+    "manualPlayback": "Teacher manual pre-merge asset QA PASS on rescue commit: teacher confirmed L358 audio and images have no problems. Teacher reported missing zhuyin for newer/provisional characters; Supervisor added sentence-level zhuyinOverrides for 物/園/雞/排/公/動. Browser/phone automation remains represented by manual teacher acceptance.",
+    "zhuyinRepair": "Added zhuyinOverrides for dependency-blocked preview display: 物=ㄨˋ, 動=ㄉㄨㄥˋ, 園=ㄩㄢˊ, 公=ㄍㄨㄥ, 雞=ㄐㄧ, 排=ㄆㄞˊ."
   },
   "charTtsInstructions": {
     "物": "請用台灣國語清楚念出單字物，注音ㄨˋ，第四聲，音高由高往低明確下降。保持實聲、嘴唇圓起，不要氣音，不要上揚，不要拖長飄音。只念一次物，不要加任何解說。"

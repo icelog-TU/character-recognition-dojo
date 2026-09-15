@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L358 | 物 | needs-rework | Production A | codex/l358-complete-package / 73a34b0c | L354:排; L355:雞; L356:公; L357:園 | 排 雞 公 園 | curriculum-workflow/lesson-requests/L358.json; curriculum-workflow/generated/L358-generation-packet.md; curriculum-workflow/drafts/L358-draft.json | curriculum-workflow/audio-inbox/L358/; public/assets/lessons/L358/ | Base origin/main 71762b03. Pushed partial checkpoint 73a34b0c, not asset-complete. Teacher approved S05 lines and 動 pronunciation; regenerated 物 awaits review. G02 prefix AI alignment and manual playback QA remain. Earlier lessons block Release only. |
+| L358 | 物 | dependency-blocked-asset-complete | Supervisor rescue | `codex/l358-supervisor-rescue` | L354:排; L355:雞; L356:公; L357:園 | 排 雞 公 園 | curriculum-workflow/lesson-requests/L358.json; curriculum-workflow/generated/L358-generation-packet.md; curriculum-workflow/drafts/L358-draft.json | curriculum-workflow/audio-inbox/L358/; public/assets/lessons/L358/ | Teacher manual pre-merge asset QA PASS for audio/images. Supervisor repaired G02 prefix timing and added sentence zhuyinOverrides for dependency-blocked preview display: 物/動/園/公/雞/排. Earlier lessons block Release only. |
 
 ## Status Values
 

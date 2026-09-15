@@ -646,7 +646,7 @@ One square 1:1 full-bleed children's picture-book illustration. Match the entire
 
 ## Production QA
 
-Status: partial-package / needs-rework. Do not integrate or call asset-complete yet.
+Status: dependency-blocked-asset-complete; teacher manual pre-merge asset QA PASS; supervisor repaired G02 prefix timing and dependency-blocked preview zhuyinOverrides for 物/動/園/公/雞/排.
 
 ### Image Acceptance
 Built-in image generation, then ImageMagick resize to 1024 square and WebP quality 76.
@@ -680,12 +680,12 @@ PASS: automated browser QA at width 390, 5 decoded images and 11 audio controls 
 An exploratory npx eslint call could not run because this repo uses oxlint, not an ESLint config; the actual repo lint passed.
 PASS: assets:audit --strict audited 396 units, 1939 image references and 3842 audio references, with zero warnings. It ran with the temporary L358 entry included.
 PASS: final curriculum:audit-state after removing only the temporary L358 entry; expected warning for the unmerged L358 asset folder. All other production data equals HEAD.
-Pending: manual Stage 3 heard-syllable/highlight and teach replay review; latest standalone 物 teacher review pending.
-Unresolved before asset-complete: teacher/manual acceptance of standalone 物 and Stage 4 playback behavior.
+Teacher manual pre-merge asset QA PASS: teacher confirmed L358 audio and images have no problems, including the latest standalone 物 candidate.
+Supervisor repaired missing dependency-blocked preview zhuyin by adding sentence-level zhuyinOverrides for 物/動/園/公/雞/排. G02 prefix has supervisor-added measured single-character timing; audio file unchanged.
 verify skipped: dependencies unmerged; production JSON/planner/ledger integration is Release-owned.
 
 ### Release Handoff
 Base and final dependency check: origin/main 71762b03e12b5e82770874bc634183d70cefcb33. L354/L355/L356/L357 absent in formal production.
-Request/packet/draft and 15 final-path media files are a partial checkpoint, not an asset-complete handoff. Keep needs-rework until audio QA is resolved.
+Request/packet/draft and 15 final-path media files are now a dependency-blocked asset-complete handoff after teacher manual pre-merge asset QA PASS and supervisor metadata repair.
 After merge and deployment only: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L358&ref=main
 Status command: npm run asset:review-status -- --unit L358 --ref main
