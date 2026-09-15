@@ -1337,6 +1337,8 @@ Base origin/main: cd4abf4b1ffe125be5402883a31b3197e1e892cd. Locked vocabulary de
 
 ## QA Evidence
 
+Full `npm run assets:audit` PASS: 410 units, 2009 image references, 3978 audio references, zero warnings; L369 was included through the temporary production entry. Strict package intake on the pushed package branch PASS. Final curriculum:audit-state PASS with only the expected unintegrated L369 asset-folder notice.
+
 Browser QA: Chrome 390x844. All 53 sentence characters highlighted; all ten M4A files played to ended. Stage 4 G02 dedicated prefix, synthetic recording and suffix replay completed. G05 all three reader options played on first tap. No human listening approval claimed; formal teacher review is post-main. Provisional character zhuyin is supplied by earlier lessons at Release integration.
 
 L369-S01: style-lock PASS; cast PASS. New illustration inspected against L058 full style set and relevant fixed-cast references.
@@ -1353,7 +1355,7 @@ Audio: OpenAI coral, ten independent full clips. Two character-audio regeneratio
 
 Technical QA PASS: allowed characters, coverage 情4/感2/謝3/吧2/但1/笑1, displayLines joins and <=6 visible characters, focusChar, exact spokenText, canonical game order, five sentences each used once, Han indexes and option metadata, WebP format, audio AAC mono 44.1kHz, ffmpeg decode, timings count/bounds and <=300ms sentence/fragment tail. tools:check, ai:check, validate:production and lesson-local technical QA passed. Lint completed with three existing L360/L364 helper warnings. Full verify is skipped for Release-owned dependency integration.
 
-Generation utilities: optional terminal-silence trimming, scoped alignment/vocabulary hint support, simplified 对/對 equivalence and optional TTS pronunciation instructions. No other lesson assets changed. Raw audio and local QA harnesses remain in ignored audio-inbox/L369/.
+Generation utilities: optional terminal-silence trimming, simplified 对/對 equivalence and optional TTS pronunciation instructions. No other lesson assets changed. Raw audio and local QA harnesses remain in ignored audio-inbox/L369/.
 
 Post-merge teacher review only after Release and Pages deployment: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L369&ref=main
 Review index after deployment: https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main

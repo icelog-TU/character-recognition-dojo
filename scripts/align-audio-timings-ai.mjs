@@ -205,7 +205,6 @@ async function transcribeWithWords({ apiKey, filePath, fileName }) {
   form.append("model", "whisper-1");
   form.append("file", new Blob([fs.readFileSync(filePath)], { type: "audio/mp4" }), fileName);
   form.append("language", "zh");
-  if (args.vocabulary) form.append("prompt", `Vocabulary: ${args.vocabulary}`);
   form.append("response_format", "verbose_json");
   form.append("timestamp_granularities[]", "word");
 
@@ -233,7 +232,6 @@ for (const lesson of units) {
   if (lessonFilter && lesson.id !== lessonFilter) continue;
 
   for (const sentence of lesson.sentences ?? []) {
-    if (args.sentence && sentence.id.toUpperCase() !== String(args.sentence).toUpperCase()) continue;
     if (!sentence.audio?.src) continue;
     const filePath = assetPath(sentence.audio.src);
     if (!fs.existsSync(filePath)) {

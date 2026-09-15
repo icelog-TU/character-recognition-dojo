@@ -392,6 +392,16 @@
     "validateProduction": "PASS with temporary L369 entry and final referenced assets",
     "technical": "PASS",
     "lint": "PASS with three existing unused-variable warnings in L360/L364 helpers",
-    "verify": "Skipped: dependency-blocked shared-state integration belongs to Release"
+    "verify": "Skipped: dependency-blocked shared-state integration belongs to Release",
+    "assetsAudit": {
+      "status": "PASS",
+      "units": 410,
+      "imageReferences": 2009,
+      "audioReferences": 3978,
+      "warnings": 0,
+      "includesL369": true
+    },
+    "curriculumAuditState": "PASS; expected L369 not-yet-integrated asset folder notice",
+    "strictPackageIntake": "PASS on pushed package branch"
   }
 }
