@@ -76,7 +76,7 @@ Local Vite fixture uses the final owned draft plus provisional metadata in memor
 
 PASS: tools:check; ai:check; curriculum:audit-state (expected unmerged asset-folder warning); curriculum:packet generation before restoring approved records; standard audio processing and AI alignment via owned-draft adapter; lesson-local format audit and production validator; mechanical audit, full audio decode, volume and size checks. Standard main `validate:production` also passes, but is not used as proof for L390.
 
-Full verify skipped: dependency-blocked, no shipping production JSON integration; Release owns it. Pushed-ref package-intake must be run and reported; this partial status intentionally prevents acceptance.
+Full verify skipped: dependency-blocked, no shipping production JSON integration; Release owns it. Pushed-ref package-intake executed after push: FAIL/exit 1. It enumerated 5 images, 9 audio files and all five game types; errors were partial status and explicit blocker text in registry/draft/packet. Its initial missing QA-evidence warning was addressed by adding the actual limited Browser QA evidence to draft/request notes. No asset-complete acceptance claimed.
 
 Final media: images 780178 bytes; audio 380979 bytes; total 1161157 bytes. Every image under 250 KiB. Exact per-file sizes/durations in `L390-audit-report.json`.
 
