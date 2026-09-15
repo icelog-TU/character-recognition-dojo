@@ -1,0 +1,1308 @@
+{
+  "unit": "R043",
+  "sourcePackageSha": "02a35b9b4d102d62238718d0379a4b8e32462b03",
+  "baseMainSha": "496aa87af167b0760bcee8f9ca959d6cc657edfd",
+  "branch": "codex/r043-r044-package-rescue",
+  "scope": "Only assigned package audio tails, alignment and completion records; approved sentence and image content retained.",
+  "method": "Whisper-1 word timestamps on final AAC audio using the repository alignment algorithm; exact Traditional/Simplified-equivalent Han transcript validation. A 500 ms padded analysis-only WAV recheck is recorded where needed. No homophone substitution.",
+  "audioMethod": "FFmpeg silencedetect -40 dB / 100 ms; preserve audible decay plus 160 ms, stream-copy complete AAC packets; no leading trims, regeneration, internal splices or re-encoding.",
+  "corrections": [
+    "R043-S01: silence at 990-1327 ms separates 落 / 特; 特 set to 1327-1720 ms using the measured post-pause onset and original repeated AI boundary before 別. Later 別 / 髒 boundary retained at 2000 ms.",
+    "R043-S03: padded re-alignment resolves zero-span 請; start refined to acoustic post-pause onset 1209 ms, end 1560 ms. Removed only the post-speech tail after 3033 ms: speech decay ends 2873 ms, followed by >2 s silence and a 43 ms isolated transient.",
+    "R043-G02-suffix: final syllable end extended from 1200 to measured audible decay 1357 ms."
+  ],
+  "technicalStatus": "PASS: 9 exact transcripts, AAC mono 44100 Hz decode, timing counts/bounds/spans/overlap and <=300 ms trailing silence",
+  "evidence": "curriculum-workflow/generated/R043-rescue-audio-qa.json",
+  "browserQA": {
+    "status": "PASS: every audio control played to ended",
+    "controls": 10,
+    "uniqueFiles": 9,
+    "method": "Codex in-app Chromium; existing lesson-asset-review.html served locally with file URL adapter and visible native media ended-event diagnostics. Sequential playback queue exercised all sentence, G02 and G05 controls.",
+    "scope": "Automated media loading and playback; no teacher subjective listening approval, physical-phone highlight test or microphone/stitched recording assessment is claimed.",
+    "sop": "Current production SOP permits technical-gates fallback for browser/tool limitations; teacher subjective review is normally post-merge.",
+    "url": "http://127.0.0.1:8343/tools/lesson-asset-review.html?unit=R043&ref=local-rescue",
+    "endedDurationsMs": {
+      "R043-S01": 2461,
+      "R043-S02": 4133,
+      "R043-S03": 3042,
+      "R043-S04": 4226,
+      "R043-S05": 3227,
+      "R043-G02-prefix": 2554,
+      "R043-G02-suffix": 1532,
+      "R043-G05-wrong-one": 2647,
+      "R043-G05-wrong-two": 3436
+    }
+  },
+  "audio": {
+    "R043-S01": {
+      "text": "這個角落特別髒",
+      "src": "/assets/reviews/R043/audio/R043-S01.m4a",
+      "before": {
+        "durationMs": 3059,
+        "speechEndMs": 2290,
+        "tailMs": 769,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.8,
+        "maxDb": -2.2
+      },
+      "after": {
+        "durationMs": 2461,
+        "speechEndMs": 2290,
+        "tailMs": 171,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -16.9,
+        "maxDb": -2.2
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.4600000381469727,
+        "text": "这个角落 特别脏",
+        "words": [
+          {
+            "word": "这个",
+            "start": 0,
+            "end": 0.36000001430511475
+          },
+          {
+            "word": "角",
+            "start": 0.36000001430511475,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "落",
+            "start": 0.7400000095367432,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "特",
+            "start": 1.6799999475479126,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "别",
+            "start": 1.7200000286102295,
+            "end": 2
+          },
+          {
+            "word": "脏",
+            "start": 2,
+            "end": 2.180000066757202
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      },
+      "textMatch": true,
+      "recheck": {
+        "method": "whisper-1, temporary 500 ms leading and trailing padding, exact text prompt; subtract 500 ms from word offsets",
+        "offsetMs": 500,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.4600000381469727,
+          "text": "這個角落特別髒",
+          "words": [
+            {
+              "word": "這個",
+              "start": 0,
+              "end": 0.8999999761581421
+            },
+            {
+              "word": "角",
+              "start": 0.8999999761581421,
+              "end": 1.2400000095367432
+            },
+            {
+              "word": "落",
+              "start": 1.2400000095367432,
+              "end": 1.6200000047683716
+            },
+            {
+              "word": "特別",
+              "start": 1.6200000047683716,
+              "end": 2.4200000762939453
+            },
+            {
+              "word": "髒",
+              "start": 2.4200000762939453,
+              "end": 2.700000047683716
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/reviews/R043/audio/R043-S01.m4a",
+        "durationMs": 2461,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 200
+          },
+          {
+            "charIndex": 1,
+            "startMs": 200,
+            "endMs": 400
+          },
+          {
+            "charIndex": 2,
+            "startMs": 400,
+            "endMs": 740
+          },
+          {
+            "charIndex": 3,
+            "startMs": 740,
+            "endMs": 990
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1327,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1720,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2000,
+            "endMs": 2200
+          }
+        ]
+      },
+      "sha256": "34eeb7c0bb998370246f6930152f13281aafe7fe8746864953ae95658f99005c"
+    },
+    "R043-S02": {
+      "text": "今年天氣特別熱原因不明",
+      "src": "/assets/reviews/R043/audio/R043-S02.m4a",
+      "before": {
+        "durationMs": 5861,
+        "speechEndMs": 3954,
+        "tailMs": 1907,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.1,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 4133,
+        "speechEndMs": 3954,
+        "tailMs": 179,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.6,
+        "maxDb": -2
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 4.130000114440918,
+        "text": "今年天气特别热,原因不明。",
+        "words": [
+          {
+            "word": "今年",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "天",
+            "start": 0.5400000214576721,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "气",
+            "start": 1.059999942779541,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "特",
+            "start": 1.2799999713897705,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "别",
+            "start": 1.6399999856948853,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "热",
+            "start": 1.9199999570846558,
+            "end": 2.119999885559082
+          },
+          {
+            "word": "原因",
+            "start": 2.7200000286102295,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "不",
+            "start": 3.2200000286102295,
+            "end": 3.6600000858306885
+          },
+          {
+            "word": "明。",
+            "start": 3.6600000858306885,
+            "end": 3.859999895095825
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 5
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/reviews/R043/audio/R043-S02.m4a",
+        "durationMs": 4133,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 270
+          },
+          {
+            "charIndex": 1,
+            "startMs": 270,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1060,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1280,
+            "endMs": 1640
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1640,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1920,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2720,
+            "endMs": 2970
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2970,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3220,
+            "endMs": 3660
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3660,
+            "endMs": 3860
+          }
+        ]
+      },
+      "sha256": "3ea97c86e6d22358e3f19227b6d879c9b92f885959d5d8a0b754b57fe2bddb9e"
+    },
+    "R043-S03": {
+      "text": "彩色筆請別到處亂放",
+      "src": "/assets/reviews/R043/audio/R043-S03.m4a",
+      "before": {
+        "durationMs": 5312,
+        "speechEndMs": 5095,
+        "tailMs": 217,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -21,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3042,
+        "speechEndMs": 2873,
+        "tailMs": 169,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.6,
+        "maxDb": -2
+      },
+      "textMatch": true,
+      "initialTranscript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 5.309999942779541,
+        "text": "彩色筆 請別到處亂放",
+        "words": [
+          {
+            "word": "彩",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "色",
+            "start": 0.4399999976158142,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "筆",
+            "start": 0.699999988079071,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "請",
+            "start": 1.559999942779541,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "別",
+            "start": 1.559999942779541,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "到",
+            "start": 1.7799999713897705,
+            "end": 2
+          },
+          {
+            "word": "處",
+            "start": 2,
+            "end": 2.319999933242798
+          },
+          {
+            "word": "亂",
+            "start": 2.319999933242798,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "放",
+            "start": 2.619999885559082,
+            "end": 2.8399999141693115
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 6
+        }
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.0399999618530273,
+        "text": "彩色筆 請別到處亂放",
+        "words": [
+          {
+            "word": "彩",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "色",
+            "start": 0.4399999976158142,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "筆",
+            "start": 0.699999988079071,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "請",
+            "start": 1.559999942779541,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "別",
+            "start": 1.559999942779541,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "到",
+            "start": 1.7799999713897705,
+            "end": 2
+          },
+          {
+            "word": "處",
+            "start": 2,
+            "end": 2.319999933242798
+          },
+          {
+            "word": "亂",
+            "start": 2.319999933242798,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "放",
+            "start": 2.619999885559082,
+            "end": 2.819999933242798
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "recheck": {
+        "method": "whisper-1, temporary 500 ms leading and trailing padding, exact text prompt; subtract 500 ms from word offsets",
+        "offsetMs": 500,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 4.039999961853027,
+          "text": "彩色筆請別到處亂放",
+          "words": [
+            {
+              "word": "彩",
+              "start": 0,
+              "end": 0.9200000166893005
+            },
+            {
+              "word": "色",
+              "start": 0.9200000166893005,
+              "end": 1.2000000476837158
+            },
+            {
+              "word": "筆",
+              "start": 1.2000000476837158,
+              "end": 1.440000057220459
+            },
+            {
+              "word": "請",
+              "start": 1.440000057220459,
+              "end": 2.059999942779541
+            },
+            {
+              "word": "別",
+              "start": 2.059999942779541,
+              "end": 2.2799999713897705
+            },
+            {
+              "word": "到",
+              "start": 2.2799999713897705,
+              "end": 2.5
+            },
+            {
+              "word": "處",
+              "start": 2.5,
+              "end": 2.819999933242798
+            },
+            {
+              "word": "亂",
+              "start": 2.819999933242798,
+              "end": 3.119999885559082
+            },
+            {
+              "word": "放",
+              "start": 3.119999885559082,
+              "end": 3.3399999141693115
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 5
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/reviews/R043/audio/R043-S03.m4a",
+        "durationMs": 3042,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 940
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1209,
+            "endMs": 1560
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1560,
+            "endMs": 1780
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1780,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2000,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2320,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2620,
+            "endMs": 2840
+          }
+        ]
+      },
+      "sha256": "93cb7d8e541530468c52f84f3995a33cb98523abaade9860bd37d3c6da75b1ff"
+    },
+    "R043-S04": {
+      "text": "把房間整理好全都放整齊",
+      "src": "/assets/reviews/R043/audio/R043-S04.m4a",
+      "before": {
+        "durationMs": 4496,
+        "speechEndMs": 4052,
+        "tailMs": 444,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.4,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 4226,
+        "speechEndMs": 4052,
+        "tailMs": 174,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.1,
+        "maxDb": -2
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 4.21999979019165,
+        "text": "把房间整理好,全都放整齐。",
+        "words": [
+          {
+            "word": "把",
+            "start": 0,
+            "end": 0.2800000011920929
+          },
+          {
+            "word": "房",
+            "start": 0.2800000011920929,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "间",
+            "start": 0.7599999904632568,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "整",
+            "start": 1.100000023841858,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "理",
+            "start": 1.3600000143051147,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "好",
+            "start": 1.5800000429153442,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "全",
+            "start": 2.6600000858306885,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "都",
+            "start": 2.819999933242798,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "放",
+            "start": 3.0999999046325684,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "整",
+            "start": 3.440000057220459,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "齐。",
+            "start": 3.680000066757202,
+            "end": 3.940000057220459
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 5
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/reviews/R043/audio/R043-S04.m4a",
+        "durationMs": 4226,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1360,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1580,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2660,
+            "endMs": 2820
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2820,
+            "endMs": 3100
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3100,
+            "endMs": 3440
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3440,
+            "endMs": 3680
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3680,
+            "endMs": 3940
+          }
+        ]
+      },
+      "sha256": "51945383ab49d94a77419c6f156e495624b025228d86df09434b4db642ed15c1"
+    },
+    "R043-S05": {
+      "text": "我們常跟爸爸去公園",
+      "src": "/assets/reviews/R043/audio/R043-S05.m4a",
+      "before": {
+        "durationMs": 3530,
+        "speechEndMs": 3052,
+        "tailMs": 478,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.4,
+        "maxDb": -3.4
+      },
+      "after": {
+        "durationMs": 3227,
+        "speechEndMs": 3052,
+        "tailMs": 175,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.9,
+        "maxDb": -3.4
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.2200000286102295,
+        "text": "我們常跟爸爸去公園。",
+        "words": [
+          {
+            "word": "我們",
+            "start": 0,
+            "end": 0.5199999809265137
+          },
+          {
+            "word": "常",
+            "start": 0.5199999809265137,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "跟",
+            "start": 1.1200000047683716,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "爸爸",
+            "start": 1.3600000143051147,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "去",
+            "start": 1.7599999904632568,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "公",
+            "start": 2.4000000953674316,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "園。",
+            "start": 2.680000066757202,
+            "end": 2.940000057220459
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/reviews/R043/audio/R043-S05.m4a",
+        "durationMs": 3227,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 520
+          },
+          {
+            "charIndex": 2,
+            "startMs": 520,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1120,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1360,
+            "endMs": 1560
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1560,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1760,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2400,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2680,
+            "endMs": 2940
+          }
+        ]
+      },
+      "sha256": "d855364cd3464ab4d9618697768d3947de500fc3e2c655c643d34845d0453a87"
+    },
+    "R043-G02-prefix": {
+      "text": "今年天氣特別熱",
+      "src": "/assets/reviews/R043/audio/R043-G02-prefix.m4a",
+      "before": {
+        "durationMs": 3154,
+        "speechEndMs": 2386,
+        "tailMs": 768,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.2,
+        "maxDb": -3.4
+      },
+      "after": {
+        "durationMs": 2554,
+        "speechEndMs": 2386,
+        "tailMs": 168,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.3,
+        "maxDb": -3.4
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.549999952316284,
+        "text": "今年天气特别热",
+        "words": [
+          {
+            "word": "今年",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "天",
+            "start": 0.6000000238418579,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "气",
+            "start": 1.1399999856948853,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "特",
+            "start": 1.3799999952316284,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "别",
+            "start": 1.840000033378601,
+            "end": 2.119999885559082
+          },
+          {
+            "word": "热",
+            "start": 2.119999885559082,
+            "end": 2.319999933242798
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/reviews/R043/audio/R043-G02-prefix.m4a",
+        "durationMs": 2554,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 600
+          },
+          {
+            "charIndex": 2,
+            "startMs": 600,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1380,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1840,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2120,
+            "endMs": 2320
+          }
+        ]
+      },
+      "sha256": "c116f14804a346379e377d04197d7e54f093a452aa8f441ab06356d8f7592153"
+    },
+    "R043-G02-suffix": {
+      "text": "因不明",
+      "src": "/assets/reviews/R043/audio/R043-G02-suffix.m4a",
+      "before": {
+        "durationMs": 2159,
+        "speechEndMs": 1357,
+        "tailMs": 802,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19,
+        "maxDb": -4.8
+      },
+      "after": {
+        "durationMs": 1532,
+        "speechEndMs": 1357,
+        "tailMs": 175,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.5,
+        "maxDb": -4.8
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 1.5299999713897705,
+        "text": "因不明",
+        "words": [
+          {
+            "word": "因",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "不",
+            "start": 0.5400000214576721,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "明",
+            "start": 0.8799999952316284,
+            "end": 1.2000000476837158
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 2
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/reviews/R043/audio/R043-G02-suffix.m4a",
+        "durationMs": 1532,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 540
+          },
+          {
+            "charIndex": 1,
+            "startMs": 540,
+            "endMs": 880
+          },
+          {
+            "charIndex": 2,
+            "startMs": 880,
+            "endMs": 1357
+          }
+        ]
+      },
+      "sha256": "71a050fb1ca26bbd53adee8273dd0ba561e7f62c94394a76b3000cb8de5df2e6"
+    },
+    "R043-G05-wrong-one": {
+      "text": "我們常跟媽媽去公園。",
+      "src": "/assets/reviews/R043/audio/R043-G05-wrong-one.m4a",
+      "before": {
+        "durationMs": 3218,
+        "speechEndMs": 2487,
+        "tailMs": 731,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18,
+        "maxDb": -2.4
+      },
+      "after": {
+        "durationMs": 2647,
+        "speechEndMs": 2487,
+        "tailMs": 160,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.1,
+        "maxDb": -2.4
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.640000104904175,
+        "text": "我們常跟媽媽去公園。",
+        "words": [
+          {
+            "word": "我們",
+            "start": 0,
+            "end": 0.36000001430511475
+          },
+          {
+            "word": "常",
+            "start": 0.36000001430511475,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "跟",
+            "start": 0.7400000095367432,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "媽",
+            "start": 1.0199999809265137,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "媽",
+            "start": 1.2599999904632568,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "去",
+            "start": 1.4800000190734863,
+            "end": 1.8600000143051147
+          },
+          {
+            "word": "公",
+            "start": 1.8600000143051147,
+            "end": 2.119999885559082
+          },
+          {
+            "word": "園。",
+            "start": 2.119999885559082,
+            "end": 2.359999895095825
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/reviews/R043/audio/R043-G05-wrong-one.m4a",
+        "durationMs": 2647,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 180
+          },
+          {
+            "charIndex": 1,
+            "startMs": 180,
+            "endMs": 360
+          },
+          {
+            "charIndex": 2,
+            "startMs": 360,
+            "endMs": 740
+          },
+          {
+            "charIndex": 3,
+            "startMs": 740,
+            "endMs": 1020
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1020,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1260,
+            "endMs": 1480
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1480,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1860,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2120,
+            "endMs": 2360
+          }
+        ]
+      },
+      "sha256": "85665fce2c1e41f713b33175bc8dd69d75aec182b06650b724625d28b022b722"
+    },
+    "R043-G05-wrong-two": {
+      "text": "我們常跟爸爸去花園。",
+      "src": "/assets/reviews/R043/audio/R043-G05-wrong-two.m4a",
+      "before": {
+        "durationMs": 4044,
+        "speechEndMs": 3267,
+        "tailMs": 777,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19,
+        "maxDb": -3.6
+      },
+      "after": {
+        "durationMs": 3436,
+        "speechEndMs": 3267,
+        "tailMs": 169,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.2,
+        "maxDb": -3.6
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.430000066757202,
+        "text": "我們常跟爸爸去花園。",
+        "words": [
+          {
+            "word": "我們",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "常",
+            "start": 0.47999998927116394,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "跟",
+            "start": 1.0800000429153442,
+            "end": 1.340000033378601
+          },
+          {
+            "word": "爸爸",
+            "start": 1.340000033378601,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "去",
+            "start": 1.7599999904632568,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "花",
+            "start": 2.5199999809265137,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "園。",
+            "start": 2.880000114440918,
+            "end": 3.140000104904175
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/reviews/R043/audio/R043-G05-wrong-two.m4a",
+        "durationMs": 3436,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 240
+          },
+          {
+            "charIndex": 1,
+            "startMs": 240,
+            "endMs": 480
+          },
+          {
+            "charIndex": 2,
+            "startMs": 480,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1080,
+            "endMs": 1340
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1340,
+            "endMs": 1550
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1550,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1760,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2520,
+            "endMs": 2880
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2880,
+            "endMs": 3140
+          }
+        ]
+      },
+      "sha256": "dfdfbf60301f2e34e48fc32385dace6347c88f9094778bd5dfd26c496333f7b4"
+    }
+  },
+  "validation": {
+    "tools": "PASS",
+    "production": "PASS on unchanged main and separately on lesson-local draft data in memory",
+    "curriculum": "PASS using current L359 main plus L360 rescue draft in memory; existing old-lesson advisory warnings only",
+    "formats": "PASS strict mono AAC 44100 Hz / WebP / size / G05 loudness spread audit with zero warnings",
+    "technical": "PASS transcript, hash, 80-900 ms timing spans, ordered indices, no overlap, measured and metadata tail <=300 ms",
+    "preservation": "PASS: approved sentence and request content, game design, images and retained AAC packet hashes/PTS identical to pinned source; main curriculum/planner/ledger unchanged",
+    "assetFolderBytes": 1361022,
+    "release": "Shared-state integration and full npm run verify remain Release-owned."
+  }
+}
