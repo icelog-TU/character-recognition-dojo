@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L386 | 名 | partial-package | Production D | codex/l386-complete-package | L381, L382, L383, L384, L385 | 傳、相、信、寫、字 | curriculum-workflow/lesson-requests/L386.json; curriculum-workflow/generated/L386-generation-packet.md; curriculum-workflow/drafts/L386-draft.json | public/assets/lessons/L386/; curriculum-workflow/audio-inbox/L386/ | Approved five sentences/imageNotes. Base bf2825a6 through L375. Release requires R045/R046 after L375 and L376-L385 first; excludes 第、姓、單 from learner text. All 5 WebP and 10 M4A ready; local technical audits pass. Phone G03 six-Han row clips at 390px (tablet 820px fits); G02 maintained-press recording/replay unverified. See L386-package-notes.md; Supervisor repair decision required before asset-complete. |
+| L386 | 名 | claimed | Package Rescue | codex/l386-package-rescue | L381, L382, L383, L384, L385 | 傳、相、信、寫、字 | curriculum-workflow/lesson-requests/L386.json; curriculum-workflow/generated/L386-generation-packet.md; curriculum-workflow/drafts/L386-draft.json | public/assets/lessons/L386/; curriculum-workflow/audio-inbox/L386/ | Rescue claimed from original package; package remains incomplete pending asset/timing/UI verification. Earlier lessons and required review pair remain Release dependencies. |
 
 ## Status Values
 
