@@ -1,0 +1,22 @@
+{
+  "model": "whisper-1",
+  "prompt": "動",
+  "offsetMs": 500,
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.5299999713897705,
+    "text": "動",
+    "words": [
+      {
+        "word": "動",
+        "start": 0,
+        "end": 0.7599999904632568
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  }
+}
