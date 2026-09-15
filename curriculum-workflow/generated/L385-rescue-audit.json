@@ -1,0 +1,20 @@
+{
+  "unit": "L385",
+  "source": "dc0e0f152b3fde6955198eff7b72f2de3bea5ba1",
+  "status": "PASS",
+  "assetBytes": 1059918,
+  "audioFiles": 10,
+  "timingFiles": 9,
+  "checks": [
+    "approved text preserved",
+    "coverage allowed boundary",
+    "Stage4 indexes/options/fragment text",
+    "80-900ms timings/no overlap",
+    "final tail <=300ms",
+    "volume/G05 spread",
+    "AAC decode/format",
+    "original speech packets preserved except declared regeneration",
+    "request/packet/draft parity",
+    "release shared state unchanged"
+  ]
+}

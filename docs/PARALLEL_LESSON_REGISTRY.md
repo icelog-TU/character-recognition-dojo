@@ -1,4 +1,4 @@
-# Parallel Lesson Registry
+﻿# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L385 | 字 / normal single-character lesson | claimed | Package Rescue | codex/l385-package-rescue | L380, L381, L382, L383, L384 | 連, 傳, 相, 信, 寫 | curriculum-workflow/lesson-requests/L385.json; curriculum-workflow/generated/L385-generation-packet.md; curriculum-workflow/drafts/L385-draft.json | public/assets/lessons/L385/; curriculum-workflow/audio-inbox/L385/ | Rescue claimed from original package; package remains incomplete pending asset/timing/UI verification. Earlier lessons and required review pair remain Release dependencies. |
+| L385 | 字 / normal single-character lesson | dependency-blocked-asset-complete | Package Rescue | codex/l385-package-rescue | L380, L381, L382, L383, L384 | 連, 傳, 相, 信, 寫 | curriculum-workflow/lesson-requests/L385.json; curriculum-workflow/generated/L385-generation-packet.md; curriculum-workflow/drafts/L385-draft.json | public/assets/lessons/L385/; curriculum-workflow/audio-inbox/L385/ | Recovered and exported S01-S04 originals; created S05 and corrected mismatched worksheet marks before final export. Generated dedicated G02 prefix 這個, approved by teacher and independent transcription. Added all sentence/Stage4 timings and processed final silence. Release waits for remaining preceding lessons; R045/R046 already on main; see L385-rescue-qa.md. |
 
 ## Status Values
 

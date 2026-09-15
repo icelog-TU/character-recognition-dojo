@@ -1,0 +1,27 @@
+{
+  "model": "whisper-1",
+  "prompt": "這個",
+  "offsetMs": 500,
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.690000057220459,
+    "text": "chicka",
+    "words": [
+      {
+        "word": "chi",
+        "start": 0,
+        "end": 0.8600000143051147
+      },
+      {
+        "word": "cka",
+        "start": 0.8600000143051147,
+        "end": 1
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  }
+}
