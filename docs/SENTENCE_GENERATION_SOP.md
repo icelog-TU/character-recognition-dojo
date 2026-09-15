@@ -186,6 +186,14 @@ For lessons with more or fewer than five approved sentences, preserve the same i
 
 If a lesson introduces multiple target characters as one natural unit, such as `朋友`, count the unit intentionally. Prefer sentences that practice the target characters together instead of mechanically isolating one half of the word.
 
+Two-character word coverage:
+
+- Treat the word as the current lesson target unit and count exact word occurrences.
+- Also count each introduced Han character separately. A five-sentence pilot should normally include the target word in at least three useful sentence contexts, which will usually give each introduced character at least three occurrences.
+- If the teacher approves a sentence where only one half of the word appears, report that separately. Do not hide it inside the word count.
+- Do not satisfy coverage by writing unnatural fragments that use one target character outside ordinary Taiwan Mandarin.
+- Previous-five coverage still counts lesson targets, not raw character slots. If a previous target was a two-character word, list it once as `Previous N L###「XY」`, then show word and per-character counts.
+
 ## Word-First Drafting
 
 Draft sentences from useful words and short phrases first, not from isolated character-count targets.
@@ -415,6 +423,15 @@ For `choose-pronunciation`, finalize the complete `correct`, `wrong-one`, and `w
 
 For `partial-order`, blank exactly 3-4 Han characters. Each option card must contain exactly one Han character. Do not use phrase chunks, word cards, or full-sentence reordering. `missingIndexes.length` must equal `options.length`, and each option's `correctOrder` must point to the matching missing Han character.
 
+For two-character word lessons, Stage 4 remains single-Han at the interaction layer:
+
+- Keep the canonical order: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`.
+- `G01`-`G03` should collectively practice both introduced characters when possible. Example: `G01` target `朋`, `G02` target `友`, `G03` target whichever has the stronger sentence.
+- `targetChar` must be one Han character, not the whole word. `targetCharIndex` must point to that exact Han occurrence.
+- `missing-character` may blank one target character at a time. Do not blank `朋友` as a two-character slot.
+- `partial-order` may include `朋` and/or `友`, but every blank and every option remains a single Han character.
+- `choose-pronunciation` remains whole-sentence listening with full-sentence option audio; it is not a word-level pronunciation picker unless the app/schema are explicitly changed later.
+
 ## Stage 4 Index Validation Gate
 
 Before sending any Production handoff, Editor must mechanically validate Stage 4 indexes. Do not rely on hand-counting in chat.
@@ -519,6 +536,7 @@ The handoff must include:
 - target unit id and kind, such as `L127` normal lesson or `R005` review module
 - current merged boundary and dependency lessons
 - approved new character(s), Taiwan zhuyin, and title, or review coverage range
+- for a two-character word lesson, the target word, grouping reason, word/per-character coverage counts, and confirmation that Stage 2/Stage 4 use single-Han interactions
 - locked `allowedChars`, provisional learned characters, and forbidden/unlearned characters
 - the Editor Handoff Dependency Gate output: coverage targets, additional provisional chars used outside coverage, final dependencies/provisional learned characters, and Editor self-check
 - final approved sentences with `text`, `spokenText`, `focusChar`, optional `displayLines`, and `imageNotes`

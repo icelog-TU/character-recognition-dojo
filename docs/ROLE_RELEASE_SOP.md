@@ -129,6 +129,20 @@ Release should fix release-owned integration issues, such as rebasing from lates
 
 If Release finds production-local defects, do not silently absorb them as normal release work. Fix only when needed to keep the current release moving, then report a `release-side repairs` list to Supervisor. Production-local defects include stale request/draft/packet mismatch, generation packets that are missing final approved sentence records, invalid `displayLines`, missing top-level `dependsOnLessons`, missing Stage 4 option ids or correctness metadata, repeated/missing Stage 4 sentence usage, non-canonical normal-lesson Stage 4 order without a teacher-approved exception, stale `charAudio` path examples, wrong-option text that differs too much, wrong-option audio that does not match the final text, and failed lesson-local audio loudness checks.
 
+## Two-Character Word Lesson Release Gate
+
+For a normal lesson whose `newChars` has two characters because the teacher approved a natural target word such as `朋友`, Release must verify these additional points before pushing:
+
+- The lesson consumes exactly one `L###` order and appears once in the course grid.
+- `title` is the target word and `newChars`, `zhuyin`, and `charAudio` contain both single Han characters.
+- Ledger and character overview behavior treat both characters as learned at the same lesson order.
+- Stage 1 renders the word target and both zhuyin readings without overlap on phone width.
+- Stage 2 accepts both introduced characters as target finds and provides meaningful repeated practice for both.
+- Stage 4 uses canonical order and single-Han interactions. No `targetChar`, missing slot, or option card may be the whole two-character word.
+- `npm run curriculum:package-intake -- --unit L### --ref <package-ref>` passes on the package branch or exact SHA.
+
+The first two-character word lesson after this SOP change is a pilot. If any of the UI checks above cannot be verified with the current app, stop before pushing and return the app/UI blocker to Supervisor instead of forcing the lesson into `main`.
+
 ## Push And Deployment
 
 After checks pass and the diff is limited to the intended unit/release cleanup:

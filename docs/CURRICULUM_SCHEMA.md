@@ -52,6 +52,15 @@ Rules:
 - `originHint` is optional internal curriculum metadata. It must not appear in the child-facing lesson practice UI unless a separate reviewed child-safe design is explicitly built.
 - `requiredRounds` controls Stage 4 sentence-game rounds when `sentenceGames` is present. Stages 1-3 have fixed completion behavior.
 
+Two-character word lesson rules:
+
+- Use this pattern only with explicit teacher approval for a natural word or fixed learning unit, for example `朋友`. Do not use it just to accelerate the lesson count.
+- The lesson still has one `id`, one `order`, and one course-card slot. Put both introduced characters in `newChars`, for example `["朋", "友"]`, and use the word itself as `title`.
+- Both characters share the same lesson order in the character overview and learned-character ledger.
+- `zhuyin` and `charAudio` remain per single character. Do not invent unsupported `wordAudio`, `targetText`, or phrase-card fields unless the app/schema validators are updated in the same change.
+- Stage 1 may display the word target together with per-character zhuyin. Stage 2 and Stage 4 still operate on single Han characters.
+- Stage 4 `targetChar`, `targetCharIndex`, `missingIndexes`, and `partial-order` option cards always point to one Han character at a time. Do not use `targetChar: "朋友"` or an option card with `"朋友"`.
+
 Review module note:
 
 - Review modules are planned after every 15-lesson milestone starting after L045.
@@ -165,7 +174,7 @@ Rules:
 - In a normal L006+ five-sentence production lesson, the five Stage 4 games must use this canonical order: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`.
 - Do not reorder normal-lesson Stage 4 games unless the teacher explicitly approves the exception and the exception is recorded in the handoff, packet, release notes, and ledger.
 - In a normal five-sentence production lesson, the five Stage 4 games should use all five reviewed sentences exactly once.
-- In that same pattern, `find-character`, `teach-character`, and `missing-character` should usually target the current lesson's new character; `partial-order` and `choose-pronunciation` may focus on review characters.
+- In that same pattern, `find-character`, `teach-character`, and `missing-character` should usually target the current lesson's new character; `partial-order` and `choose-pronunciation` may focus on review characters. In a two-character word lesson, `G01`-`G03` should cover both newly introduced characters across the three target-specific games when the approved sentences make that possible.
 - `missingIndexes` uses Han-character indexes in the sentence, skipping punctuation.
 - `options` is used for missing-character, partial-order, and choose-pronunciation games.
 - `partial-order` must use 3-4 missing Han-character indexes and exactly one single-Han option card per missing index. Multi-character phrase cards are invalid.

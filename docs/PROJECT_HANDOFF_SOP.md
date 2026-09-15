@@ -35,6 +35,8 @@ Every new thread must run `git fetch origin` and inspect latest `origin/main:src
 
 App name: `認字練功房`. Review modules use `R###` ids, do not consume `L###` lesson numbers, and follow the current 15-lesson milestone schedule starting after L045. L001-L005 use Stage 1-3. L006 and later normal lessons should include Stage 4 fixed sentence games unless the teacher explicitly changes the design. Normal five-sentence lesson Stage 4 order is canonical: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`; any exception must be teacher-approved and documented.
 
+Two-character word lessons are allowed only when the teacher explicitly chooses a natural learning unit that should not be split, such as `朋友`. They still consume exactly one `L###` lesson order and use `newChars` with two single Han characters. Both characters become learned at that same lesson order. Stage 1 may present the word as the child-facing target, but Stage 2 and Stage 4 interactions remain single-Han-character interactions; do not create two-character chunk cards or whole-word blank cards. The first two-character lesson after this SOP change is a pilot and Release must verify the course grid, character overview, Stage 1, Stage 2, Stage 4, and review tools before deploying it.
+
 ## Role SOPs
 
 Open exactly one role SOP after this file:

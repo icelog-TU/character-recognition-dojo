@@ -116,9 +116,19 @@ function main() {
   const mediaFiles = listFiles(ref, `public/assets/lessons/${unit}`);
   const imageFiles = mediaFiles.filter((file) => file.endsWith(".webp"));
   const audioFiles = mediaFiles.filter((file) => file.endsWith(".m4a"));
+  const newChars = Array.isArray(draft.newChars) ? draft.newChars : [];
 
   if (draft.id !== unit) errors.push(`${draftPath}: id is ${draft.id}, expected ${unit}.`);
   if (request.id !== unit) errors.push(`${requestPath}: id is ${request.id}, expected ${unit}.`);
+  if (!newChars.length) errors.push(`${draftPath}: newChars is missing or empty.`);
+  if (new Set(newChars).size !== newChars.length) errors.push(`${draftPath}: newChars contains duplicates.`);
+  if (Array.isArray(request.newChars) && request.newChars.join("|") !== newChars.join("|")) {
+    errors.push(`${requestPath}: newChars ${JSON.stringify(request.newChars)} does not match draft ${JSON.stringify(newChars)}.`);
+  }
+  for (const char of newChars) {
+    if (!draft.zhuyin?.[char]) errors.push(`${draftPath}: zhuyin is missing for ${char}.`);
+    if (!draft.charAudio?.[char]) errors.push(`${draftPath}: charAudio is missing for ${char}.`);
+  }
   if (!COMPLETE_STATUSES.has(draft.packageStatus)) {
     errors.push(`${draftPath}: packageStatus is ${JSON.stringify(draft.packageStatus)}, not asset-complete.`);
   }

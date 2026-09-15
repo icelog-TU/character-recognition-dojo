@@ -93,15 +93,33 @@ Hard release gate:
 - A branch with only `public/assets/lessons/L###/images/`, `S01-S05` audio, and `charAudio` is `assets-only`. It must not be called `merge-ready`, and the release thread must not infer final lesson JSON from chat.
 - A draft that has `durationMs` but missing/empty `charTimings` is not aligned.
 - A normal L006+ lesson with missing `sentenceGames`, missing `teachAudio` files, or missing `choose-pronunciation` wrong-option audio is not asset-complete.
-- A package is not asset-complete if any repo handoff file still says `partial-package`, `needs-rework`, `Do not integrate`, `NOT COMPLETED`, `FAIL`, `unresolved`, `pending teacher review`, or `manual/playback QA pending`. Those words are an explicit stop sign until the package owner updates the files with the completed check and pushes a new tip.
+- A package is not asset-complete if any repo handoff file still says `partial-package`, `needs-rework`, `Do not integrate`, `NOT COMPLETED`, `FAIL`, `unresolved`, or otherwise states that required technical files/checks are incomplete. Teacher subjective image/audio review is post-merge by default and must not be written as a pre-main blocker unless the teacher explicitly requested pre-merge approval for that unit.
 - A lesson using provisional characters can be prepared as a dependency-blocked Production package. It cannot enter `main`, be called `release-ready`, or be treated as playable until those characters are real in latest `origin/main` or the teacher changes the sentence set.
 - A migrated review package may intentionally reuse an `R###` id that already exists in legacy `reviewLessons`. That is allowed only when the handoff labels it `review migration replacement package`. Production prepares and pushes the package files on a branch, but does not edit production JSON, planner data, or ledger. Release later replaces the legacy review entry with the current schedule entry. In this narrow case, `npm run curriculum:audit-state` may fail with an expected legacy id collision; Production must report the exact failure and continue only if no other audit-state failure is present.
+
+## Two-Character Word Lesson Production
+
+A two-character word lesson is a normal numbered lesson that introduces two Han characters as one natural target word, such as `朋友`. It is not two lessons and it is not a review module.
+
+Production rules:
+
+- Use one `L###` request, packet, draft, package branch, and asset folder.
+- Use `title` for the word and `newChars` for the two single Han characters. Do not add unsupported schema fields for the word unless the app/schema/validators are intentionally changed.
+- Generate and reference standalone `charAudio` for each introduced character. The existing schema is per character.
+- Sentence audio and sentence `charTimings` remain full-sentence and per Han character.
+- Stage 1 display must be checked on phone width: both characters and zhuyin must be visible, readable, and not overlap.
+- Stage 2 must accept both introduced characters as target finds. For the pilot, verify the app gives meaningful repeated practice for both characters; if one character never appears or is not accepted, stop and report an app/UI blocker.
+- Stage 4 remains single-Han at the interaction layer. `targetChar` is one of the introduced characters or a review character; `targetCharIndex` points to one Han occurrence; `missingIndexes` and `partial-order` options are single-Han.
+- Do not create chunk cards, word cards, or two-character blank slots for `partial-order` or `missing-character`.
+- `G01`-`G03` should cover both introduced characters when the approved sentences make it possible. If only one can be targeted naturally, record the reason in the packet and final handoff.
+- The final handoff must include a two-character pilot QA line covering Stage 1 display, Stage 2 accepted targets, Stage 4 single-Han indexing, and character overview risk.
 
 ## Fast Package Audit
 
 Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`, Production must do a fast lesson-local audit. This audit is intended to catch defects that are cheap for Production to fix and expensive for Release to rediscover:
 
 - `lesson-requests/L###.json`, `generated/L###-generation-packet.md`, and `drafts/L###-draft.json` agree on lesson id, order, new character(s), Taiwan zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
+- For a two-character word lesson, those files also agree on the target word/title, both `newChars`, both zhuyin entries, both `charAudio` paths, and the single-Han Stage 2/Stage 4 interaction rule.
 - The generation packet must contain the final approved sentence set exactly as implemented in the draft, including final `text`, `spokenText`, `focusChar`, `displayLines`, and `imageNotes`. Missing final records or stale candidate text is a Production package defect even if request/draft/assets pass validators; fix it before reporting `asset-complete-package`.
 - Run the package intake gate against the pushed package ref before final handoff:
 
@@ -121,6 +139,7 @@ If the command fails, do not report `asset-complete-package` or `dependency-bloc
 - Every reviewed sentence has final `imageSrc`, sentence `audio.src`, `durationMs`, and non-empty `charTimings`.
 - Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported game type once, use every reviewed sentence exactly once, and follow canonical normal-lesson order: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`, unless the teacher explicitly approved and documented an exception.
 - `find-character`, `teach-character`, and `missing-character` point to a target character that actually appears in the referenced sentence.
+- For two-character word lessons, `find-character`, `teach-character`, and `missing-character` may target either introduced character, but each target is one Han character and the package must explain how both introduced characters were practiced.
 - `teach-character` includes `targetCharIndex` and exact generated prefix/suffix `teachAudio` where needed.
 - Every explicit Stage 4 `targetCharIndex` must be machine-checked against the zero-based Han-only sentence sequence and point to `targetChar`; every `missingIndexes` entry must be in range; every `partial-order` option must be one Han card whose `correctOrder` maps to the matching missing Han character. If the handoff self-check is missing or mismatches the draft/validator output, stop and return to Editor/Supervisor instead of guessing a correction.
 - Stage 4 option schema is complete: option ids, `correct`, and `correctOrder` metadata exist where the game type requires them.

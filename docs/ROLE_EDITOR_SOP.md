@@ -71,6 +71,23 @@ For each normal lesson, use this sequence before producing a handoff:
 
 During discussion, keep analysis outside the production handoff block. A useful response shape is: candidate five sentences, a small coverage table, Han counts, allowed-character audit result, and any weak sentence or alternative.
 
+## Two-Character Word Lesson Rules
+
+Use a two-character word lesson only when the teacher explicitly chooses a natural unit that should not be split, such as `朋友`. Do not independently combine two unrelated next-character candidates into one lesson.
+
+Editor requirements:
+
+- Label the handoff `two-character word lesson pilot` until at least one such lesson has shipped and the teacher accepts the flow.
+- Use one `L###` id and one lesson order. Set `newChars` to the two single Han characters and `title` to the word, for example `title: "朋友"`, `newChars: ["朋", "友"]`.
+- Build `allowedChars` from latest `origin/main` learned characters plus all current `newChars` plus provisional learned characters. Do not audit against only one half of the word.
+- Explain why the word should be learned together and why splitting the characters would make worse sentences or less natural Taiwan Mandarin.
+- Prefer sentences that practice the target word naturally. Do not mechanically isolate `朋` and `友` in unnatural phrases just to raise counts.
+- Coverage reporting must list the current target as the word and also list each introduced character's count. For example: `Current L###「朋友」: word count 3, 朋 count 3, 友 count 3`.
+- The previous-five coverage window still contains five previous lesson targets, not five previous characters. If a previous lesson was also a two-character word lesson, report that previous target as one lesson target and include the per-character counts in the detail line.
+- Stage 4 still uses the canonical five game types in order. `targetChar` and all indexed fields must point to one Han character, never the two-character word. Across `G01`-`G03`, cover both new characters when possible; for example one game may target `朋` and another may target `友`.
+- `partial-order` remains single-character only: 3-4 one-Han blanks and one-Han option cards. Do not make an option card `朋友`.
+- The handoff must tell Production to verify the current app UI for the pilot: course card, Stage 1 target display, Stage 2 accepted target set, Stage 4 prompts, character overview entries, and post-merge asset review page.
+
 ## Teacher Sentence Approval Gate
 
 For normal lessons, do not produce the full Production handoff until the teacher has approved the final sentence set or explicitly asks for the handoff.
@@ -91,6 +108,7 @@ For each assigned normal lesson, produce final approved sentence data:
 
 - Unit id, such as `L171`.
 - New character(s), Taiwan zhuyin, title.
+- For a two-character word lesson: target word, reason for grouping, per-character zhuyin, word count, per-character counts, and explicit note that Stage 2/Stage 4 remain single-Han interactions.
 - Dependency lessons and any provisional learned characters.
 - If dependency lessons are not yet merged, state that they are Release/main blockers only; Production should still claim and build the assigned dependency-blocked package after recording `dependsOnLessons` / `provisionalLearnedChars`.
 - Locked `allowedChars`.

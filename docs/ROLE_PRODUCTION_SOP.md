@@ -99,12 +99,22 @@ A normal lesson package is not `asset-complete-package` unless it contains:
 - `curriculum-workflow/drafts/L###-draft.json`
 - Final compressed images under `public/assets/lessons/L###/images/`
 - Processed sentence audio under `public/assets/lessons/L###/audio/`
-- Standalone `charAudio` generated from the single target character
+- Standalone `charAudio` generated from every introduced single target character
 - Referenced `G02` teach audio
 - Referenced `G05` wrong-choice whole-sentence audio
 - Accurate registry row until Release merges/cleans it
 
 For review modules, use `curriculum-workflow/review-requests/R###.json` and `public/assets/reviews/R###/`. Review modules have no `newChars`, `zhuyin`, or `charAudio`. Verify the review request's coverage target and allowed-character ceiling match the milestone schedule in `docs/CURRICULUM_OPERATING_SOP.md`; overdue review modules must not use characters learned after their milestone ceiling.
+
+Two-character word lesson packages must also satisfy:
+
+- The request, packet, and draft all label the unit as one lesson with `title` equal to the target word and `newChars` containing exactly the two single Han characters.
+- `zhuyin` and `charAudio` exist for both characters. Do not provide only a word-level audio file.
+- Do not invent unsupported fields such as `targetText` or `wordAudio` unless the app/schema/validators are changed in the same branch.
+- Stage 1 QA must confirm the child-facing target display is understandable as the word and does not squeeze, overlap, or hide either character's zhuyin.
+- Stage 2 QA must confirm both new characters are accepted targets. The grid should give repeated practice for each new character, normally at least two visible target cards per character unless a later app design records a different approved target count.
+- Stage 4 QA must confirm every `targetChar`, `targetCharIndex`, `missingIndexes`, and `partial-order` option remains single-Han. Whole-word blanks or option cards such as `朋友` are invalid.
+- Character overview / learned-character behavior must list both characters at the same lesson order after Release integration. Production should flag any obvious app limitation in the final handoff so Release can verify it before deploy.
 
 Production does not own normal release integration. Do not spend time rebasing old branches, rebuilding `src/curriculum/sample-lessons.json`, refreshing `public/tools/planner-data.json`, or updating `docs/CURRICULUM_LEDGER.md` for dependency-blocked lessons. Release owns those shared files. If a command temporarily changes shared production state while generating timings, remove those temporary shared-state changes before the final Production commit.
 
@@ -132,7 +142,7 @@ If `curriculum:audit-state` reports any other failure, stop and report it.
 - New or replacement sentence images must be square `1:1` compositions with safe margins.
 - Final referenced images must be WebP and size-compliant.
 - Generate full-sentence AI audio from `spokenText`.
-- Generate standalone character-card audio from the single target character.
+- Generate standalone character-card audio from every introduced single target character.
 - Generate wrong-choice audio from the exact full wrong-option text.
 - Process audio with `npm run assets:audio`.
 - Generate timings with `npm run assets:align:ai`.
@@ -152,6 +162,7 @@ Before reporting done, run a fast lesson-local audit. This should be minutes, no
 - `charAudio` uses the repo path form `char-uXXXX.m4a`, not `char-字.m4a`.
 - Five-sentence Stage 4 lessons have exactly five `sentenceGames`, use each supported type once, use every reviewed sentence exactly once, and follow canonical normal-lesson order: `G01 find-character`, `G02 teach-character`, `G03 missing-character`, `G04 partial-order`, `G05 choose-pronunciation`.
 - If Editor hands off a different Stage 4 order without an explicit teacher-approved exception and reason, stop and return to Editor/Supervisor instead of producing assets from the drifted order.
+- For a two-character word lesson, `G01`-`G03` should cover both new characters when possible, but every Stage 4 target remains one Han character. Reject any handoff or draft that uses the whole word as `targetChar`, a missing slot, or an option card.
 - Stage 4 option schema is complete: option ids are present, correct options are marked, and ordering metadata such as `correctOrder` is present where the game type requires it.
 - `choose-pronunciation` wrong options are near misses: same sentence length where possible and only 1-2 Han characters different from the correct option.
 - `choose-pronunciation` wrong-option audio was generated from the exact full wrong-option text after final text changes.
