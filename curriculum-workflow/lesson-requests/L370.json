@@ -19,7 +19,7 @@
   "dependsOnLessons": [],
   "provisionalLearnedChars": [],
   "releaseBlockers": [],
-  "teacherNotes": "Two-character word lesson pilot; one normal lesson/order/course card. Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation. Expected six cards: 朋 x2, 友 x2, two distinct old characters; completion requires four target taps. L366-L369 now formally merged on main 95ca55f72ed99e36652a4de2dff4a5d20c16c1cc.",
+  "teacherNotes": "Two-character word lesson pilot; one normal lesson/order/course card. Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation. Expected six cards: 朋 x2, 友 x2, two distinct old characters; completion requires four target taps. L366-L369 now formally merged on main 95ca55f72ed99e36652a4de2dff4a5d20c16c1cc. Final boundary check 9cd3405fcc7edbfd8a6438d5dbd293cadc6ce4cb still L001-L369; dependsOnLessons and provisionalLearnedChars remain empty. Technical QA and pilot outcomes are recorded in the final generation packet.",
   "generationConstraints": {
     "allowedChars": [
       "一",
@@ -501,6 +501,58 @@
               "endMs": 532
             }
           ]
+        },
+        "suffixAudio": {
+          "spokenText": "借我雨衣我跟他道謝",
+          "src": "/assets/lessons/L370/audio/L370-G02-suffix.m4a",
+          "durationMs": 3526,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 340
+            },
+            {
+              "charIndex": 1,
+              "startMs": 340,
+              "endMs": 640
+            },
+            {
+              "charIndex": 2,
+              "startMs": 640,
+              "endMs": 880
+            },
+            {
+              "charIndex": 3,
+              "startMs": 880,
+              "endMs": 1080
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1620,
+              "endMs": 1820
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1820,
+              "endMs": 2020
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2020,
+              "endMs": 2260
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2260,
+              "endMs": 2600
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2600,
+              "endMs": 2760
+            }
+          ]
         }
       }
     },
@@ -604,5 +656,5 @@
       ]
     }
   ],
-  "packageStatus": "needs-rework"
+  "packageStatus": "asset-complete-package"
 }

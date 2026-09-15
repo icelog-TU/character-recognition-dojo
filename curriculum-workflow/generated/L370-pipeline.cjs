@@ -45,6 +45,12 @@ if (action === "generate" && fragment) {
   }
 }
 if (action === "align") {
+  const approved = JSON.parse(read("curriculum-workflow/generated/L370-teacher-audio-review.json", "utf8"));
+  for (const item of approved.assets) {
+    const digest = require("node:crypto").createHash("sha256").update(read("public"+item.audio.src)).digest("hex");
+    if (digest !== item.sha256) throw Error("Teacher-reviewed file changed: "+item.id);
+    draft.stage4AudioAlignment = {...draft.stage4AudioAlignment, [item.id]:item.audio};
+  }
   const approvedPrefix = "public/assets/lessons/L370/audio/L370-G02-prefix.m4a";
   const hash = require("node:crypto").createHash("sha256").update(read(approvedPrefix)).digest("hex");
   if (hash !== "f1629d1104b644731063882677597b539747a292a183208b6ea95ba55362b258") throw Error("Teacher-approved prefix changed; renew audio review.");
@@ -58,6 +64,7 @@ if (action === "align") {
     }
     if (game.type === "choose-pronunciation") {
       for (const option of game.options.filter(o => !o.correct)) {
+        if (game.id === "L370-G05" && option.id === "wrong-one") continue;
         draft.sentences.push({id:game.id+"-"+option.id,text:option.text,spokenText:option.spokenText,approved:true,audio:{src:option.audioSrc}});
       }
     }
