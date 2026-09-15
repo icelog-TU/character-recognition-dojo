@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L370 | 朋友 / two-character word lesson pilot | claimed | Production B | codex/l370-complete-package | L366, L367, L368, L369 | 吧, 謝, 感, 情 | curriculum-workflow/lesson-requests/L370.json; curriculum-workflow/generated/L370-generation-packet.md; curriculum-workflow/drafts/L370-draft.json | public/assets/lessons/L370/; curriculum-workflow/audio-inbox/L370/ | One normal lesson, order 370; newChars 朋/友; base cd4abf4b1ffe125be5402883a31b3197e1e892cd. Claim only; dependency blockers apply to Release. Pilot app/UI gates required. |
 
 ## Status Values
 
