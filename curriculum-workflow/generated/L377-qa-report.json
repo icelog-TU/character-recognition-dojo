@@ -1,0 +1,517 @@
+{
+  "unit": "L377",
+  "slot": "Production A",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "branch": "codex/l377-complete-package",
+  "baseSha": "280f78b37502f17985d8ccd2e621b0f2d8263454",
+  "mainSha": "7e630478c9123dd3b733539b469276eb60e58575",
+  "formalBoundary": "L001-L369",
+  "dependsOnLessons": [
+    "L370",
+    "L372",
+    "L373",
+    "L374",
+    "L375",
+    "L376"
+  ],
+  "provisionalLearnedChars": [
+    "朋",
+    "友",
+    "交",
+    "通",
+    "往",
+    "經",
+    "已"
+  ],
+  "releaseMilestones": "L370-L375 (including L371); L375 -> R045/R046 covering L346-L375 -> L376 -> L377",
+  "allowedCount": 380,
+  "consistency": "PASS",
+  "coverage": {
+    "近": 3,
+    "已": 2,
+    "經": 3,
+    "往": 2,
+    "通": 1,
+    "交": 1,
+    "朋": 1,
+    "友": 1,
+    "朋友": 1
+  },
+  "outsideCoverageVocabulary": "L370 朋友: word 1, 朋 1, 友 1; not a coverage target",
+  "technical": {
+    "status": "PASS",
+    "coverage": {
+      "近": 3,
+      "已": 2,
+      "經": 3,
+      "往": 2,
+      "通": 1,
+      "交": 1,
+      "朋": 1,
+      "友": 1
+    },
+    "images": 5,
+    "audio": [
+      {
+        "src": "/assets/lessons/L377/audio/L377-S01.m4a",
+        "durationMs": 4253,
+        "mean": -18.8,
+        "max": -1.9
+      },
+      {
+        "src": "/assets/lessons/L377/audio/L377-S02.m4a",
+        "durationMs": 3509,
+        "mean": -18.8,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L377/audio/L377-S03.m4a",
+        "durationMs": 3302,
+        "mean": -18.8,
+        "max": -1.9
+      },
+      {
+        "src": "/assets/lessons/L377/audio/L377-S04.m4a",
+        "durationMs": 2650,
+        "mean": -18,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L377/audio/L377-S05.m4a",
+        "durationMs": 1901,
+        "mean": -17.9,
+        "max": -4.9
+      },
+      {
+        "src": "/assets/lessons/L377/audio/L377-G02-prefix.m4a",
+        "durationMs": 767,
+        "mean": -16.6,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L377/audio/L377-G02-suffix.m4a",
+        "durationMs": 3158,
+        "mean": -18.4,
+        "max": -3.8
+      },
+      {
+        "src": "/assets/lessons/L377/audio/L377-G05-wrong-one.m4a",
+        "durationMs": 2761,
+        "mean": -17.9,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L377/audio/L377-G05-wrong-two.m4a",
+        "durationMs": 2539,
+        "mean": -18.5,
+        "max": -3.4
+      },
+      {
+        "src": "/assets/lessons/L377/audio/char-u8fd1.m4a",
+        "durationMs": 2066,
+        "mean": -19.6,
+        "max": -1.9
+      }
+    ],
+    "stage4Order": "PASS",
+    "indexes": "PASS",
+    "allowed": "PASS",
+    "displayLines": "PASS",
+    "timings": "PASS",
+    "ffmpegDecode": "PASS"
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "stage2": {
+      "cards": [
+        "近",
+        "經",
+        "最",
+        "近",
+        "常",
+        "近"
+      ],
+      "wrongDoesNotComplete": true,
+      "threeTapsRequired": true
+    },
+    "stage3": [
+      {
+        "sentence": 1,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "sentence": 2,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 3,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 4,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 5,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "stage4": {
+      "g01": {
+        "found": true,
+        "waitsForNext": true
+      },
+      "g02": {
+        "recordReplay": true,
+        "waitsForNext": true
+      },
+      "g03": {
+        "options": [
+          "近",
+          "進",
+          "往"
+        ],
+        "bothWrongRejected": true,
+        "retryRetainsThree": true,
+        "correctCompletes": true,
+        "waitsForNext": true
+      },
+      "g04": {
+        "displayOrder": [
+          "不",
+          "已",
+          "通",
+          "經"
+        ],
+        "correctSequence": [
+          "已",
+          "經",
+          "不",
+          "通"
+        ],
+        "shuffled": true,
+        "completionDoesNotLeak": true,
+        "waitsForNext": true
+      },
+      "g05": {
+        "options": 3,
+        "allPlayed": true,
+        "openingDoesNotReadAnswer": true
+      }
+    },
+    "status": "PASS"
+  },
+  "reward": {
+    "base": "280f78b3",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "correctChoice": 1,
+    "state": {
+      ".reward-actions": {
+        "text": "再次練習本課沒有下一課回首頁休息",
+        "top": 403.984375,
+        "bottom": 597.984375,
+        "inViewport": true
+      },
+      ".reward-next-button": {
+        "text": "沒有下一課",
+        "disabled": true,
+        "top": 471.984375,
+        "bottom": 529.984375,
+        "inViewport": true
+      },
+      ".reward-home-button": {
+        "text": "回首頁休息",
+        "disabled": false,
+        "top": 539.984375,
+        "bottom": 597.984375,
+        "inViewport": true
+      }
+    },
+    "note": "L377 is the temporary curriculum endpoint, so next lesson is disabled. Latest main 9cd3405f contains the shared reward-navigation scroll fix; Release must retain it."
+  },
+  "images": [
+    {
+      "id": "L377-S01",
+      "src": "/assets/lessons/L377/images/L377-S01.webp",
+      "bytes": 167020,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L377-S02",
+      "src": "/assets/lessons/L377/images/L377-S02.webp",
+      "bytes": 173682,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L377-S03",
+      "src": "/assets/lessons/L377/images/L377-S03.webp",
+      "bytes": 167268,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L377-S04",
+      "src": "/assets/lessons/L377/images/L377-S04.webp",
+      "bytes": 219730,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L377-S05",
+      "src": "/assets/lessons/L377/images/L377-S05.webp",
+      "bytes": 149394,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "imageRegenerations": 0,
+  "rejectedImagesCommitted": false,
+  "audio": [
+    {
+      "src": "/assets/lessons/L377/audio/L377-S01.m4a",
+      "durationMs": 4253,
+      "mean": -18.8,
+      "max": -1.9,
+      "bytes": 57102
+    },
+    {
+      "src": "/assets/lessons/L377/audio/L377-S02.m4a",
+      "durationMs": 3509,
+      "mean": -18.8,
+      "max": -2,
+      "bytes": 43441
+    },
+    {
+      "src": "/assets/lessons/L377/audio/L377-S03.m4a",
+      "durationMs": 3302,
+      "mean": -18.8,
+      "max": -1.9,
+      "bytes": 41410
+    },
+    {
+      "src": "/assets/lessons/L377/audio/L377-S04.m4a",
+      "durationMs": 2650,
+      "mean": -18,
+      "max": -2,
+      "bytes": 33355
+    },
+    {
+      "src": "/assets/lessons/L377/audio/L377-S05.m4a",
+      "durationMs": 1901,
+      "mean": -17.9,
+      "max": -4.9,
+      "bytes": 24397
+    },
+    {
+      "src": "/assets/lessons/L377/audio/L377-G02-prefix.m4a",
+      "durationMs": 767,
+      "mean": -16.6,
+      "max": -2,
+      "bytes": 10272
+    },
+    {
+      "src": "/assets/lessons/L377/audio/L377-G02-suffix.m4a",
+      "durationMs": 3158,
+      "mean": -18.4,
+      "max": -3.8,
+      "bytes": 39404
+    },
+    {
+      "src": "/assets/lessons/L377/audio/L377-G05-wrong-one.m4a",
+      "durationMs": 2761,
+      "mean": -17.9,
+      "max": -2,
+      "bytes": 34853
+    },
+    {
+      "src": "/assets/lessons/L377/audio/L377-G05-wrong-two.m4a",
+      "durationMs": 2539,
+      "mean": -18.5,
+      "max": -3.4,
+      "bytes": 32276
+    },
+    {
+      "src": "/assets/lessons/L377/audio/char-u8fd1.m4a",
+      "durationMs": 2066,
+      "mean": -19.6,
+      "max": -1.9,
+      "bytes": 11885
+    }
+  ],
+  "audioRegenerations": {
+    "char-u8fd1": 3,
+    "L377-G02-prefix": 2,
+    "L377-G05-wrong-two": 1
+  },
+  "g05MeanSpreadDb": 0.6,
+  "alignment": {
+    "engine": "whisper-1 word timestamps via assets:align:ai",
+    "files": 9,
+    "singleHanVocabularyHint": "走; used only for the one-Han prefix; not supplied to multi-Han files",
+    "smoothing": "S01 衣 2840-2880 ms extended to 2840-2920 ms; 服 begins 2920 instead of 2880, retaining original combined 衣服 2840-3080 interval. All other timings unchanged.",
+    "finalPipelineByteIdentity": "All ten outputs from assets:audio --lesson L377 --trim-tail match the assets used for alignment and playback byte-for-byte."
+  },
+  "shortAudioAssessment": {
+    "standaloneInput": "近",
+    "standaloneTarget": "ㄐㄧㄣˋ",
+    "prefixInput": "走",
+    "independentAsr": [
+      {
+        "file": "char-u8fd1.m4a",
+        "text": "тсин"
+      },
+      {
+        "file": "L377-G02-prefix.m4a",
+        "text": "So."
+      },
+      {
+        "file": "L377-G02-suffix.m4a",
+        "text": "一看小鸡已经睡了。"
+      },
+      {
+        "file": "L377-G05-wrong-one.m4a",
+        "text": "下棋也能找朋友。"
+      },
+      {
+        "file": "L377-G05-wrong-two.m4a",
+        "text": "下棋不能交朋友。"
+      },
+      {
+        "file": "L377-S01.m4a",
+        "text": "最近經常下雨，衣服都不乾。"
+      },
+      {
+        "file": "L377-S02.m4a",
+        "text": "走近一看，小鸡已经睡了。"
+      },
+      {
+        "file": "L377-S03.m4a",
+        "text": "往前坐近一点，才看得见。"
+      },
+      {
+        "file": "L377-S04.m4a",
+        "text": "往海边的路已经不通了。"
+      },
+      {
+        "file": "L377-S05.m4a",
+        "text": "下棋也能交朋友。"
+      }
+    ],
+    "standaloneOtherAsr": [
+      {
+        "model": "whisper-1",
+        "text": "親"
+      },
+      {
+        "model": "gpt-4o-mini-transcribe",
+        "text": "진"
+      }
+    ],
+    "caveat": "Unprompted ASR is unstable for isolated one-syllable clips and returns foreign script or homophones. It is not treated as proof of a Chinese spelling or pronunciation. The standalone final clip has one voiced run with a steep falling pitch (approximately 291 to 107 Hz), supporting the specified fourth tone. No human listening approval is claimed; teacher subjective review follows main integration."
+  },
+  "pipelineChanges": [
+    "generate-audio-drafts: optional --instructions for exact standalone articulation",
+    "process-audio-assets: optional --file and --trim-tail; terminal silence only, preserve 120 ms, character cards untouched",
+    "align-audio-timings-ai: simplified 鸡/经 equivalences and optional single-Han vocabulary hint"
+  ],
+  "commands": {
+    "toolsCheck": "PASS",
+    "aiCheck": "PASS",
+    "startupAuditState": "PASS",
+    "packet": "PASS; final records synchronized after generation",
+    "images": "PASS; five 1024 square WebP files",
+    "audio": "PASS; ten processed AAC mono 44100 Hz M4A files",
+    "alignAi": "PASS; nine required sentence/fragment/option timing records",
+    "assetsAudit": "PASS; 414 units, 2029 image references, 4016 audio references, zero warnings",
+    "validateProduction": "PASS with temporary L377 production entry",
+    "lessonLocalTechnical": "PASS",
+    "lint": "PASS; three pre-existing unused-variable warnings in L360/L364 helpers",
+    "verify": "SKIPPED: dependency-blocked; final shared-state integration belongs to Release",
+    "packageIntake": "Run against pushed origin/codex/l377-complete-package before final handoff",
+    "finalAuditState": "PASS; expected unmerged L377 asset-folder warning only",
+    "finalConsistency": "PASS; embedded packet JSON deep-equals final request and draft"
+  },
+  "automationNotes": [
+    "Initial start-button locator timed out waiting for an animated button to stabilize; disabling animation in the QA browser resolved it. Final test passed.",
+    "Stage 2 uses three 近 plus 經/最/常 distractors; 經 is the approved prior provisional character and becomes formal before playable Release.",
+    "G02 microphone is synthetic; physical-device recording quality is not claimed.",
+    "Reward next/home controls fit above the floating playback bar. Next is disabled because the isolated temporary curriculum ends at L377. Retain latest main reward-navigation fix 9cd3405f.",
+    "Vite reported a React development warning: FindManyChallenge updates LessonPanel during render. Stage 2 target acceptance and completion assertions still passed. Shared app code was not changed by this package."
+  ],
+  "sizes": {
+    "imagesBytes": 877094,
+    "audioBytes": 328395,
+    "totalBytes": 1205489
+  }
+}

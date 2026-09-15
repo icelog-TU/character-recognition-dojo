@@ -128,6 +128,36 @@ function publicSrc(filePath) {
   return `/${relative}`;
 }
 
+function trimTrailingSilence(filePath) {
+  const duration = getDurationMs(filePath) / 1000;
+  const result = spawnSync(ffmpegCommand, [
+    "-hide_banner", "-nostats", "-i", filePath,
+    "-af", "silencedetect=noise=-45dB:d=0.3", "-f", "null", "-",
+  ], { encoding: "utf8" });
+  if (result.error || result.status !== 0) throw new Error(`Silence detection failed: ${filePath}`);
+  const starts = [...result.stderr.matchAll(/silence_start:\s*([\d.]+)/g)];
+  const ends = [...result.stderr.matchAll(/silence_end:\s*([\d.]+)/g)];
+  if (!starts.length || !ends.length) return null;
+  const start = Number(starts.at(-1)[1]);
+  const end = Number(ends.at(-1)[1]);
+  if (Math.abs(end - duration) > 0.08 || start < 0.3 || duration - start < 0.3) return null;
+
+  // Preserve a 120 ms safety tail; never remove internal pauses or character-card silence.
+  const retainedSeconds = Math.max(0.5, start + 0.12);
+  const tempPath = `${filePath}.tail-tmp.m4a`;
+  try {
+    execFileSync(ffmpegCommand, [
+      "-y", "-i", filePath, "-t", retainedSeconds.toFixed(3),
+      "-vn", "-ac", "1", "-ar", "44100", "-c:a", "aac", "-b:a", "96k",
+      "-movflags", "+faststart", tempPath,
+    ], { stdio: "ignore" });
+    fs.copyFileSync(tempPath, filePath);
+  } finally {
+    fs.rmSync(tempPath, { force: true });
+  }
+  return { originalDurationMs: Math.round(duration * 1000), retainedDurationMs: Math.round(retainedSeconds * 1000) };
+}
+
 const args = parseArgs(process.argv.slice(2));
 const lessonFilter = args.lesson ? String(args.lesson).toUpperCase() : null;
 const inputRoot = lessonFilter ? path.join(inboxRoot, lessonFilter) : inboxRoot;
@@ -139,7 +169,7 @@ if (!fs.existsSync(inputRoot)) {
   process.exit(0);
 }
 
-const files = listAudioFiles(inputRoot);
+const files = listAudioFiles(inputRoot).filter((filePath) => !args.file || path.basename(filePath) === args.file);
 if (files.length === 0) {
   console.log(`No audio files found in ${inputRoot}`);
   process.exit(0);
@@ -190,6 +220,7 @@ for (const sourcePath of files) {
   ], { stdio: "ignore" });
 
   const loudness = reinforceQuietAudio(targetPath);
+  const trimmedTail = args["trim-tail"] && !baseName.startsWith("char-") ? trimTrailingSilence(targetPath) : null;
   const durationMs = getDurationMs(targetPath);
   report.push({
     lessonId,
@@ -198,6 +229,7 @@ for (const sourcePath of files) {
     src: publicSrc(targetPath),
     durationMs,
     loudness,
+    ...(trimmedTail ? { trimmedTail } : {}),
   });
 
   const loudnessNote = loudness.gainDb ? `, +${loudness.gainDb} dB safety gain` : "";
