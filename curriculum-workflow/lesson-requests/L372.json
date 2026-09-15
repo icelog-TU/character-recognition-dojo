@@ -10,7 +10,7 @@
     "交": "ㄐㄧㄠ"
   },
   "targetSentenceCount": 5,
-  "packageStatus": "in-production",
+  "packageStatus": "asset-complete-package",
   "dependsOnLessons": [
     "L368",
     "L369",
@@ -404,8 +404,6 @@
       "交"
     ],
     "provisionalLearnedChars": [
-      "感",
-      "情",
       "朋",
       "友",
       "親"
@@ -871,5 +869,76 @@
     ],
     "lockedAllowedBase": "3ee22616",
     "allowedCount": 376
+  },
+  "productionQA": {
+    "date": "2026-09-15",
+    "technicalStatus": "PASS",
+    "imageReview": {
+      "S01": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS"
+      },
+      "S02": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS"
+      },
+      "S03": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS"
+      },
+      "S04": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS"
+      },
+      "S05": {
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS"
+      }
+    },
+    "imageComparison": "Final WebP images individually opened and compared side by side with all L058 images and family/boy/teacher anchors; refined examples used as generation references. No rejected image versions.",
+    "manualPlayback": {
+      "status": "browser-automation-limited",
+      "reviewedCommit": "fc223ac70b9336a0689d8946064c5ec698594c59",
+      "previewLabel": "pre-merge package preview, not final main review queue",
+      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L372&ref=fc223ac70b9336a0689d8946064c5ec698594c59",
+      "browser": "Chrome extension",
+      "reviewMedia": "All 11 rendered audio controls (10 unique M4A files) played to ended; currentTime equals duration; media error null.",
+      "localUrl": "http://127.0.0.1:5175/character-recognition-dojo/",
+      "viewport": "390x844 CSS pixels verified",
+      "stage3": "S01-S05 clicked and completed in actual lesson UI; initial active-token highlights observed and zero active tokens after playback. S01/S02 repeated at verified 390px. Auditory synchronization and final-syllable listening are not claimed.",
+      "stage4": "G01/G03 correct target accepted; G04 single-Han 幫忙搬家 order accepted. G05 all three avatar buttons started playback on first click and returned to idle. G02 prefix/suffix played to ended independently.",
+      "toolingLimitation": "G02 target press entered floating-character priming state, then remained there across observations without a recording result or concatenated replay. The browser-only control surface did not expose an actionable microphone permission prompt; native controls are unavailable. Local console had no error/warning. Cause could not be established from available controls. No successful microphone recording or replay is claimed. Browser output exposes UI and playback state, not audible sound for agent listening.",
+      "reviewConsole": "Review page logged: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received. This did not prevent any media control from reaching ended; causality is not established.",
+      "fallbackBasis": "CURRICULUM_PRODUCTION_SOP Browser automation fallback: non-browser technical gates passed. Teacher subjective asset review remains post-merge; no teacher pre-merge PASS is claimed."
+    },
+    "audio": {
+      "generation": "OpenAI gpt-4o-mini-tts coral; exact standalone 交, five spokenText sentences, two exact G02 fragments, two whole wrong-option sentences. No speech splicing.",
+      "alignment": "All nine sentence/fragment/option transcriptions matched Han sequence, with simplified-to-traditional equivalence normalization; AI alignment run against final trimmed M4A. PCM-based local correction for two 媽媽 pairs is documented in L372-timing-repair.json.",
+      "tail": "Only trailing post-speech silence trimmed; final timing-to-duration margins 202-223 ms. Decode and timing checks passed; human auditory tail judgment not claimed.",
+      "character": "char-u4ea4.m4a generated independently from 交 (ㄐㄧㄠ), 1997 ms; mean -19.8 dB, peak -2.0 dB. Independent unprompted transcription returned 教。; this is not literal character recognition or tone certification. No objective decoding/duration/volume defect was found.",
+      "g05VolumeSpreadDb": 0.4
+    },
+    "checks": [
+      "tools:check PASS",
+      "ai:check PASS",
+      "curriculum:audit-state startup PASS",
+      "curriculum:packet executed; approved request and aligned final draft retained",
+      "L372-pipeline generate/process/align/images completed using unchanged repository scripts scoped to owned draft",
+      "L372-audit PASS: allowed376, coverage, layouts, indices, files, codec, decode, timing, hashes and sizes",
+      "L372-pipeline formats --strict PASS: 1 unit, 5 images, 10 audio, zero warnings",
+      "L372-pipeline production PASS",
+      "validate:production baseline PASS (not substituted for draft validation)"
+    ],
+    "skipped": [
+      "Full npm run verify: dependency-blocked package; Release owns shared-state integration and final verify."
+    ],
+    "imageBytes": 874204,
+    "audioBytes": 410169,
+    "totalMediaBytes": 1284373
   }
 }
