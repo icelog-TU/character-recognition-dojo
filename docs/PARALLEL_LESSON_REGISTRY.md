@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L356 | 公 / normal lesson | asset-complete-package | Package Rescue | codex/l356-package-rescue | L354:排; L355:雞 (both in base main 2bf989ca) | none | `curriculum-workflow/lesson-requests/L356.json`; `curriculum-workflow/generated/L356-generation-packet.md`; `curriculum-workflow/drafts/L356-draft.json` | `public/assets/lessons/L356/` | L356 audio tail and Stage 4 metadata rescue; original package 9c30a88a. Technical gates PASS; focused browser playback PASS (10 files); see draft for QA scope. Release owns integration. |
 
 ## Status Values
 

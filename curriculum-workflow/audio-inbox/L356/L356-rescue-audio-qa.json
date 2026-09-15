@@ -1,0 +1,722 @@
+{
+  "sourcePackageSha": "9c30a88a4335ea17255be57b0621070b10c1e4c2",
+  "baseMainSha": "2bf989ca23620819539303fa4e8f684a0657cf11",
+  "branch": "codex/l356-package-rescue",
+  "scope": "L356 audio tail and alignment metadata only",
+  "alignmentMethod": "Repository align-audio-timings-ai.mjs whisper-1 word timestamp algorithm adapted to lesson-local draft and Stage 4 audio; no shared curriculum writes.",
+  "prefixCorrection": "A second whisper-1 pass used a temporary WAV with 500 ms leading and trailing padding and the exact prefix prompt. Subtracted the 500 ms offset, clamped initial silence to zero, and obtained positive word intervals. Final audio was not padded.",
+  "suffixCorrection": "Extended the final 跑 word end from Whisper 1220 ms to the measured audible decay end 1416 ms (-40 dB silencedetect), without changing the audio or onset.",
+  "tailMethod": "FFmpeg -40 dB / 100 ms silencedetect; stream-copy endpoint at detected audible end +160 ms, rounded to complete AAC packets. No speech regeneration, waveform re-encoding, leading trim, or internal edits.",
+  "evidence": "curriculum-workflow/audio-inbox/L356/L356-rescue-audio-qa.json",
+  "audio": {
+    "L356-S01": {
+      "text": "太陽一出來公雞就叫",
+      "src": "/assets/lessons/L356/audio/L356-S01.m4a",
+      "before": {
+        "durationMs": 4236,
+        "speechEndMs": 3328,
+        "tailMs": 908,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3506,
+        "speechEndMs": 3328,
+        "tailMs": 178,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.1,
+        "maxDb": -2
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.5,
+        "text": "太陽一出來,公雞就叫。",
+        "words": [
+          {
+            "word": "太",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "陽",
+            "start": 0.3799999952316284,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "一",
+            "start": 0.6200000047683716,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "出來",
+            "start": 0.9399999976158142,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "公",
+            "start": 2.180000066757202,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "雞",
+            "start": 2.5199999809265137,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "就",
+            "start": 2.700000047683716,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "叫。",
+            "start": 3.059999942779541,
+            "end": 3.2799999713897705
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "sha256": "6025c9af534d92904ef1f2f74ddd1a1fbf90e38bc6c0fc1342558bf8ba8312a4"
+    },
+    "L356-S02": {
+      "text": "小雞跟著公雞跑",
+      "src": "/assets/lessons/L356/audio/L356-S02.m4a",
+      "before": {
+        "durationMs": 4198,
+        "speechEndMs": 2388,
+        "tailMs": 1810,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -20.4,
+        "maxDb": -2.1
+      },
+      "after": {
+        "durationMs": 2554,
+        "speechEndMs": 2388,
+        "tailMs": 166,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -2.1
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.549999952316284,
+        "text": "小鸡跟着公鸡跑",
+        "words": [
+          {
+            "word": "小",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "鸡",
+            "start": 0.5799999833106995,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "跟",
+            "start": 0.8399999737739563,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "着",
+            "start": 1.159999966621399,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "公",
+            "start": 1.3600000143051147,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "鸡",
+            "start": 1.7400000095367432,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "跑",
+            "start": 1.9199999570846558,
+            "end": 2.299999952316284
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      },
+      "textMatch": true,
+      "sha256": "1babaf481403fc9005043e0bf80a42fea761bff9e8ea1bb8ea4a483323e97ec3"
+    },
+    "L356-S03": {
+      "text": "公車上正好有位子",
+      "src": "/assets/lessons/L356/audio/L356-S03.m4a",
+      "before": {
+        "durationMs": 4530,
+        "speechEndMs": 2736,
+        "tailMs": 1794,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.4,
+        "maxDb": -2.3
+      },
+      "after": {
+        "durationMs": 2902,
+        "speechEndMs": 2736,
+        "tailMs": 166,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.5,
+        "maxDb": -2.3
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.9000000953674316,
+        "text": "公車上正好有位子。",
+        "words": [
+          {
+            "word": "公",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "車",
+            "start": 0.3799999952316284,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "上",
+            "start": 0.6600000262260437,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "正",
+            "start": 1.159999966621399,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "好",
+            "start": 1.559999942779541,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "有",
+            "start": 1.899999976158142,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "位",
+            "start": 2.200000047683716,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "子。",
+            "start": 2.5399999618530273,
+            "end": 2.6600000858306885
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      },
+      "textMatch": true,
+      "sha256": "37eac2434eda9d59503b962be5b1b79012b562a0d41ec062c3d405cb2bcd41ec"
+    },
+    "L356-S04": {
+      "text": "等公車時要排好",
+      "src": "/assets/lessons/L356/audio/L356-S04.m4a",
+      "before": {
+        "durationMs": 2833,
+        "speechEndMs": 2235,
+        "tailMs": 598,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2415,
+        "speechEndMs": 2235,
+        "tailMs": 180,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -2
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.4100000858306885,
+        "text": "等公車時要排好。",
+        "words": [
+          {
+            "word": "等",
+            "start": 0,
+            "end": 0.30000001192092896
+          },
+          {
+            "word": "公",
+            "start": 0.30000001192092896,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "車",
+            "start": 0.7400000095367432,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "時",
+            "start": 1.0199999809265137,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "要",
+            "start": 1.3200000524520874,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "排",
+            "start": 1.600000023841858,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "好。",
+            "start": 1.9199999570846558,
+            "end": 2.2200000286102295
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      },
+      "textMatch": true,
+      "sha256": "ed071a2b144eb1fa0cb8c591ece942c3d8cf95e638849a21b1cfe2e5244f5b73"
+    },
+    "L356-S05": {
+      "text": "餐廳正門口有一排沙發",
+      "src": "/assets/lessons/L356/audio/L356-S05.m4a",
+      "before": {
+        "durationMs": 3649,
+        "speechEndMs": 3153,
+        "tailMs": 496,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -2.5
+      },
+      "after": {
+        "durationMs": 3320,
+        "speechEndMs": 3153,
+        "tailMs": 167,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.8,
+        "maxDb": -2.5
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.319999933242798,
+        "text": "餐厅正门口有一排沙发。",
+        "words": [
+          {
+            "word": "餐",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "厅",
+            "start": 0.3799999952316284,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "正",
+            "start": 0.699999988079071,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "门",
+            "start": 1.0199999809265137,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "口",
+            "start": 1.2400000095367432,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "有一",
+            "start": 1.5399999618530273,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "排",
+            "start": 2.259999990463257,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "沙",
+            "start": 2.619999885559082,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "发。",
+            "start": 2.9000000953674316,
+            "end": 3.0799999237060547
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "sha256": "7149e791da99b80702dceb3b76d08a60f22c09146420a36d045788437ed1dda8"
+    },
+    "L356-G02-prefix": {
+      "text": "小雞跟著",
+      "src": "/assets/lessons/L356/audio/L356-G02-prefix.m4a",
+      "before": {
+        "durationMs": 2123,
+        "speechEndMs": 1695,
+        "tailMs": 428,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -24.4,
+        "maxDb": -6.3
+      },
+      "after": {
+        "durationMs": 1857,
+        "speechEndMs": 1695,
+        "tailMs": 162,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -23.8,
+        "maxDb": -6.3
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 1.850000023841858,
+        "text": "小雞 跟著",
+        "words": [
+          {
+            "word": "小",
+            "start": 0,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "雞",
+            "start": 0.5600000023841858,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "跟",
+            "start": 1.5,
+            "end": 1.5
+          },
+          {
+            "word": "著",
+            "start": 1.5,
+            "end": 1.6399999856948853
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 2
+        }
+      },
+      "textMatch": true,
+      "sha256": "26e79bebf55668506cc3aea7cd55f31ce91feeda83f04a835d1122868d306e41"
+    },
+    "L356-G02-suffix": {
+      "text": "雞跑",
+      "src": "/assets/lessons/L356/audio/L356-G02-suffix.m4a",
+      "before": {
+        "durationMs": 1927,
+        "speechEndMs": 1416,
+        "tailMs": 511,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.2,
+        "maxDb": -1.8
+      },
+      "after": {
+        "durationMs": 1579,
+        "speechEndMs": 1416,
+        "tailMs": 163,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -1.8
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 1.5700000524520874,
+        "text": "鸡 跑",
+        "words": [
+          {
+            "word": "鸡",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "跑",
+            "start": 1.100000023841858,
+            "end": 1.2200000286102295
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 2
+        }
+      },
+      "textMatch": true,
+      "sha256": "369620b40e98815098aada319f9ef43cfce09f4f222cab3b7acdc096f2abb3c5"
+    },
+    "L356-G05-wrong-one": {
+      "text": "公車上正好沒位子。",
+      "src": "/assets/lessons/L356/audio/L356-G05-wrong-one.m4a",
+      "before": {
+        "durationMs": 4764,
+        "speechEndMs": 3379,
+        "tailMs": 1385,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.4,
+        "maxDb": -2.8
+      },
+      "after": {
+        "durationMs": 3552,
+        "speechEndMs": 3379,
+        "tailMs": 173,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.1,
+        "maxDb": -2.8
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.549999952316284,
+        "text": "公車上正好沒位子。",
+        "words": [
+          {
+            "word": "公",
+            "start": 0,
+            "end": 0.4000000059604645
+          },
+          {
+            "word": "車",
+            "start": 0.4000000059604645,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "上",
+            "start": 0.7400000095367432,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "正",
+            "start": 1.3200000524520874,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "好",
+            "start": 1.9600000381469727,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "沒",
+            "start": 2.4000000953674316,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "位",
+            "start": 2.759999990463257,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "子。",
+            "start": 3.140000104904175,
+            "end": 3.299999952316284
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "sha256": "b13e637a3a63aa1cf43743cd0d8d90287e061580be7decc3a074a916f636030d"
+    },
+    "L356-G05-wrong-two": {
+      "text": "公車上正好有帽子。",
+      "src": "/assets/lessons/L356/audio/L356-G05-wrong-two.m4a",
+      "before": {
+        "durationMs": 3447,
+        "speechEndMs": 2454,
+        "tailMs": 993,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -2.4
+      },
+      "after": {
+        "durationMs": 2624,
+        "speechEndMs": 2454,
+        "tailMs": 170,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.1,
+        "maxDb": -2.4
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.619999885559082,
+        "text": "公車上正好有帽子。",
+        "words": [
+          {
+            "word": "公",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "車",
+            "start": 0.3199999928474426,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "上",
+            "start": 0.5600000023841858,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "正",
+            "start": 0.9599999785423279,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "好",
+            "start": 1.4600000381469727,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "有",
+            "start": 1.7599999904632568,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "帽",
+            "start": 2.0399999618530273,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "子。",
+            "start": 2.299999952316284,
+            "end": 2.4200000762939453
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      },
+      "textMatch": true,
+      "sha256": "115253ada61f68de216a776f464588fb7e14c36b21784eff9e4f77b14e26e8dd"
+    }
+  },
+  "prefixPaddedRecheck": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 2.8499999046325684,
+    "text": "小雞跟著",
+    "words": [
+      {
+        "word": "小",
+        "start": 0,
+        "end": 1.059999942779541
+      },
+      {
+        "word": "雞",
+        "start": 1.059999942779541,
+        "end": 1.3200000524520874
+      },
+      {
+        "word": "跟",
+        "start": 1.3200000524520874,
+        "end": 2
+      },
+      {
+        "word": "著",
+        "start": 2,
+        "end": 2.1600000858306885
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 3
+    }
+  },
+  "browserQA": {
+    "scope": "Focused rescue audio playback QA in Codex in-app Chromium using the existing lesson-asset-review.html served locally, with local file URL resolution and diagnostic ended-event labels; no deployed page changes.",
+    "url": "http://127.0.0.1:8356/tools/lesson-asset-review.html?unit=L356&ref=local-rescue",
+    "result": "PASS: 11 controls / 10 unique audio files played to ended, including all S01-S05, standalone charAudio, G02 prefix/suffix and all G05 options.",
+    "limits": "This is automated media playback evidence, not teacher subjective listening approval or a new full-app microphone / stitched-recording / phone highlight assessment.",
+    "endedDurationsMs": {
+      "S01": 3506,
+      "S02": 2554,
+      "S03": 2902,
+      "S04": 2415,
+      "S05": 3320,
+      "charAudio": 1463,
+      "G02prefix": 1857,
+      "G02suffix": 1579,
+      "G05correct": 2902,
+      "G05wrongOne": 3552,
+      "G05wrongTwo": 2624
+    }
+  },
+  "technicalQA": {
+    "toolsCheck": "PASS",
+    "productionValidator": "PASS on unchanged shared curriculum; also PASS with L356 appended only in process memory",
+    "curriculumValidator": "PASS with L356 appended only in process memory; existing older-lesson warnings unrelated to L356",
+    "tailSilence": "PASS: all 9 touched clips <=180 ms at -40 dB / 100 ms silence threshold",
+    "transcript": "PASS: exact Han text on all 9 final clips, with documented simplified/traditional normalization",
+    "packetPreservation": "PASS: every retained AAC packet hash and PTS equals the matching original packet in all 9 touched clips",
+    "unchangedContent": "PASS: approved sentence fields, request, 5 images, charAudio, main curriculum, planner and ledger",
+    "packageAssetBytes": 1236432,
+    "stage4Alignment": "PASS: prefix 4, suffix 2, wrong-one 8, wrong-two 8 ordered positive Han intervals; final duration minus last timing <=300 ms"
+  }
+}
