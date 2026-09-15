@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L383 | 信 | claimed | Production D | codex/l383-complete-package | L378, L379, L380, L381, L382 | 接、送、連、傳、相 | curriculum-workflow/lesson-requests/L383.json; curriculum-workflow/generated/L383-generation-packet.md; curriculum-workflow/drafts/L383-draft.json | public/assets/lessons/L383/; curriculum-workflow/audio-inbox/L383/ | Approved five sentences and imageNotes; base 250ca4a3 through L375. Release requires R045/R046 after L375 and L376-L382 first. Production claim only; asset work follows. |
+| L383 | 信 | ready-blocked-by-dependency | Production D | origin/codex/l383-complete-package; claim ad260e47; package tip in branch history | L378, L379, L380, L381, L382 | 接、送、連、傳、相 | curriculum-workflow/lesson-requests/L383.json; curriculum-workflow/generated/L383-generation-packet.md; curriculum-workflow/drafts/L383-draft.json | public/assets/lessons/L383/; curriculum-workflow/audio-inbox/L383/ | asset-complete-package; dependency-blocked-asset-complete. Base250ca4a3 throughL375; Release requires R045/R046 then L376-L382. 5WebP/9M4A; allowed/coverage/index/timing/format/production gates PASS. Browser QA and G02 hold-record tooling limitation documented in L383-package-notes.md; post-main teacher review under SOP fallback. |
 
 ## Status Values
 
