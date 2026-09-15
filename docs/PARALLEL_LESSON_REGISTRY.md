@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L377 | 近 | claimed | Production A | codex/l377-complete-package | L370:朋友; L372:交; L373:通; L374:往; L375:經; L376:已 | 朋友交通往經已 | curriculum-workflow/lesson-requests/L377.json; curriculum-workflow/generated/L377-generation-packet.md; curriculum-workflow/drafts/L377-draft.json | curriculum-workflow/audio-inbox/L377/; public/assets/lessons/L377/ | Base 280f78b3, formal L001-L369. Release must include all preceding lessons including L371, then L375 -> R045/R046 (L346-L375) -> L376 -> L377. Dependencies block Release only. |
 
 ## Status Values
 
