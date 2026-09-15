@@ -1,0 +1,397 @@
+{
+  "unit": "L369",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseOriginMain": "cd4abf4b1ffe125be5402883a31b3197e1e892cd",
+  "technical": {
+    "status": "PASS",
+    "coverage": {
+      "情": 4,
+      "感": 2,
+      "謝": 3,
+      "吧": 2,
+      "但": 1,
+      "笑": 1
+    },
+    "images": 5,
+    "audio": [
+      {
+        "src": "/assets/lessons/L369/audio/L369-S01.m4a",
+        "durationMs": 3705,
+        "mean": -17.7,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L369/audio/L369-S02.m4a",
+        "durationMs": 3467,
+        "mean": -18.6,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L369/audio/L369-S03.m4a",
+        "durationMs": 3383,
+        "mean": -19.2,
+        "max": -2.1
+      },
+      {
+        "src": "/assets/lessons/L369/audio/L369-S04.m4a",
+        "durationMs": 4191,
+        "mean": -18,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L369/audio/L369-S05.m4a",
+        "durationMs": 2765,
+        "mean": -19.9,
+        "max": -2.2
+      },
+      {
+        "src": "/assets/lessons/L369/audio/L369-G02-prefix.m4a",
+        "durationMs": 2739,
+        "mean": -18.1,
+        "max": -2.6
+      },
+      {
+        "src": "/assets/lessons/L369/audio/L369-G02-suffix.m4a",
+        "durationMs": 1167,
+        "mean": -14.1,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L369/audio/L369-G05-wrong-one.m4a",
+        "durationMs": 2971,
+        "mean": -18.5,
+        "max": -2.5
+      },
+      {
+        "src": "/assets/lessons/L369/audio/L369-G05-wrong-two.m4a",
+        "durationMs": 3563,
+        "mean": -18.8,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L369/audio/char-u60c5.m4a",
+        "durationMs": 2113,
+        "mean": -19.1,
+        "max": -2
+      }
+    ],
+    "stage4Order": "PASS",
+    "indexes": "PASS",
+    "allowed": "PASS",
+    "displayLines": "PASS",
+    "timings": "PASS",
+    "ffmpegDecode": "PASS"
+  },
+  "browser": {
+    "viewport": 390,
+    "stage3": [
+      {
+        "sentence": 1,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "sentence": 2,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "sentence": 3,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "sentence": 4,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "sentence": 5,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    ]
+  },
+  "media": [
+    {
+      "file": "char-u60c5.m4a",
+      "ended": true,
+      "duration": 2.112993
+    },
+    {
+      "file": "L369-G02-prefix.m4a",
+      "ended": true,
+      "duration": 2.739002
+    },
+    {
+      "file": "L369-G02-suffix.m4a",
+      "ended": true,
+      "duration": 1.167007
+    },
+    {
+      "file": "L369-G05-wrong-one.m4a",
+      "ended": true,
+      "duration": 2.970998
+    },
+    {
+      "file": "L369-G05-wrong-two.m4a",
+      "ended": true,
+      "duration": 3.562993
+    },
+    {
+      "file": "L369-S01.m4a",
+      "ended": true,
+      "duration": 3.705011
+    },
+    {
+      "file": "L369-S02.m4a",
+      "ended": true,
+      "duration": 3.467007
+    },
+    {
+      "file": "L369-S03.m4a",
+      "ended": true,
+      "duration": 3.382993
+    },
+    {
+      "file": "L369-S04.m4a",
+      "ended": true,
+      "duration": 4.190998
+    },
+    {
+      "file": "L369-S05.m4a",
+      "ended": true,
+      "duration": 2.765011
+    }
+  ],
+  "stage4Media": [
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-S01.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-S02.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-S03.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-S04.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-S05.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-S01.m4a",
+      "ended": false
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-G02-prefix.m4a",
+      "ended": true
+    },
+    {
+      "src": "blob:http://127.0.0.1:5185/12bae2ea-f2e4-4801-a290-261f020f0713",
+      "ended": true
+    },
+    {
+      "src": "blob:http://127.0.0.1:5185/12bae2ea-f2e4-4801-a290-261f020f0713",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-G02-prefix.m4a",
+      "ended": true
+    },
+    {
+      "src": "blob:http://127.0.0.1:5185/072e00c6-4ccb-4547-a099-69ebbeb23a24",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-G02-suffix.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-G05-wrong-two.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-G05-wrong-one.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L369/audio/L369-S05.m4a",
+      "ended": true
+    }
+  ],
+  "imageQA": [
+    {
+      "id": "L369-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 163522,
+      "note": "New illustration inspected against L058 full style set and relevant fixed-cast references."
+    },
+    {
+      "id": "L369-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 183538,
+      "note": "New illustration inspected against L058 full style set and relevant fixed-cast references."
+    },
+    {
+      "id": "L369-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 153490,
+      "note": "New illustration inspected against L058 full style set and relevant fixed-cast references."
+    },
+    {
+      "id": "L369-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 113710,
+      "note": "Initial smiling mouth rejected; targeted expression edit accepted after final WebP inspection."
+    },
+    {
+      "id": "L369-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 137112,
+      "note": "New illustration inspected against L058 full style set and relevant fixed-cast references."
+    }
+  ],
+  "imageBytes": 751372,
+  "audioBytes": 389215,
+  "tts": {
+    "provider": "OpenAI",
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "files": 10,
+    "charRegenerations": 2,
+    "source": "Exact approved spokenText; standalone 情 input only; dedicated G02 fragments; whole wrong-option texts"
+  },
+  "charReview": {
+    "whisper1": "擎",
+    "gpt4oMiniTranscribe": "晴",
+    "gpt4oTranscribe": "請",
+    "pitch": "Final voiced trajectory rises from approximately 158 Hz to 258 Hz after initial dip; acoustic check only, not human phonetic approval.",
+    "note": "Short standalone ASR spelling varies. Two independent decoders return the target second-tone homophone. Teacher subjective review remains post-main."
+  },
+  "asr": [
+    {
+      "file": "char-u60c5.m4a",
+      "text": "請。"
+    },
+    {
+      "file": "L369-G02-prefix.m4a",
+      "text": "谢谢你的花，我欣。"
+    },
+    {
+      "file": "L369-G02-suffix.m4a",
+      "text": "好多了。"
+    },
+    {
+      "file": "L369-G05-wrong-one.m4a",
+      "text": "事情做完了，去玩嗎?"
+    },
+    {
+      "file": "L369-G05-wrong-two.m4a",
+      "text": "事情做完了，去看吧。"
+    },
+    {
+      "file": "L369-S01.m4a",
+      "text": "我跟小月感情好，有話都會說。"
+    },
+    {
+      "file": "L369-S02.m4a",
+      "text": "感謝你帶路，先休息一下吧。"
+    },
+    {
+      "file": "L369-S03.m4a",
+      "text": "谢谢你的花，我心情好多了。"
+    },
+    {
+      "file": "L369-S04.m4a",
+      "text": "他很少笑，但是對人很熱情。"
+    },
+    {
+      "file": "L369-S05.m4a",
+      "text": "事情做完了，去玩吧。"
+    }
+  ],
+  "scope": "Headless Chrome 390x844. Synthetic microphone verifies recording/replay state only. No human listening PASS claimed. Provisional characters gain their lesson-level zhuyin when Release integrates earlier lessons.",
+  "checks": {
+    "tools": "PASS",
+    "ai": "PASS",
+    "validateProduction": "PASS with temporary L369 entry and final referenced assets",
+    "technical": "PASS",
+    "lint": "PASS with three existing unused-variable warnings in L360/L364 helpers",
+    "verify": "Skipped: dependency-blocked shared-state integration belongs to Release"
+  }
+}

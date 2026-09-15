@@ -41,6 +41,7 @@ function hanChars(text) {
 
 function normalizeTranscribedHanChar(char) {
   const simplifiedEquivalentMap = new Map([
+    ["\u5bf9", "\u5c0d"],
     ["\u4e2a", "\u500b"],
     ["\u8fd9", "\u9019"],
     ["\u5706", "\u5713"],
@@ -204,6 +205,7 @@ async function transcribeWithWords({ apiKey, filePath, fileName }) {
   form.append("model", "whisper-1");
   form.append("file", new Blob([fs.readFileSync(filePath)], { type: "audio/mp4" }), fileName);
   form.append("language", "zh");
+  if (args.vocabulary) form.append("prompt", `Vocabulary: ${args.vocabulary}`);
   form.append("response_format", "verbose_json");
   form.append("timestamp_granularities[]", "word");
 
@@ -231,6 +233,7 @@ for (const lesson of units) {
   if (lessonFilter && lesson.id !== lessonFilter) continue;
 
   for (const sentence of lesson.sentences ?? []) {
+    if (args.sentence && sentence.id.toUpperCase() !== String(args.sentence).toUpperCase()) continue;
     if (!sentence.audio?.src) continue;
     const filePath = assetPath(sentence.audio.src);
     if (!fs.existsSync(filePath)) {
