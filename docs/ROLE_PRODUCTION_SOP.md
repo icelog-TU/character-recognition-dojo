@@ -8,6 +8,18 @@ Dependency blockers block Release/main integration, not Production package prepa
 
 Package Rescue is a separate role for fixing an already pushed but incomplete unmerged package branch. Production should still fix defects it finds before final handoff. After Production has handed off and moved on, Supervisor may assign Package Rescue so active Production slots do not have to stop their current lesson.
 
+## Completion Gate
+
+Do not report `asset-complete-package` or `dependency-blocked-asset-complete` until the branch itself proves completion. Before the final handoff, all of these must be true:
+
+- Request, generation packet, draft, registry row, and final report all agree on package status.
+- No package file still says `partial-package`, `needs-rework`, `Do not integrate`, `NOT COMPLETED`, `FAIL`, `unresolved`, or similar incomplete language.
+- Every referenced image, sentence audio, `charAudio`, `G02` teach audio, `G05` wrong-choice audio, and final timing/alignment file exists.
+- Every sentence has final `audio.src`, `durationMs`, and non-empty `charTimings`.
+- The pushed branch passes `npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complete-package` or the correct review-module equivalent.
+
+If any item fails, report `partial-package` / `needs-rework` with exact missing items. Do not rely on the branch name, chat summary, or intent to finish later. Package Rescue exists for already-pushed incomplete branches, but Production's goal is still to avoid needing Rescue.
+
 ## Read First
 
 1. `docs/PROJECT_HANDOFF_SOP.md`

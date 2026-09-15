@@ -102,6 +102,8 @@ Before integrating a Production package, classify it:
 - `dependency-blocked-asset-complete`: lesson-local files are complete, but earlier lessons must enter `origin/main` first.
 - `partial-package` or `assets-only`: do not integrate; return it to Production with the missing items.
 
+Release intake is intentionally strict. Missing image/audio files, missing timings, missing Stage 4 referenced audio, failed package intake, or package files that still say `partial-package` are not release integration problems. Stop before transplanting files and route the unit to Production or Package Rescue.
+
 Run the package intake gate on the package branch or exact SHA before transplanting files:
 
 ```bash

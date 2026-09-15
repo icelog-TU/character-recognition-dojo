@@ -4,6 +4,8 @@ Package Rescue fixes incomplete or inconsistent Production packages before they 
 
 Use Package Rescue when a Production package branch exists but cannot be accepted by Release because it is `partial-package`, fails `curriculum:package-intake`, has request/packet/draft mismatches, missing or stale Stage 4 metadata, missing referenced assets, incomplete audio/timing files, or unclear package status.
 
+Package Rescue is a recovery path, not the normal last step of Production. If Production has not yet handed off, Production should fix its own package. Use Rescue when interrupting the original Production slot would disrupt active work, when Release has already performed intake and found package-local blockers, or when Supervisor explicitly assigns a rescue.
+
 Do not use Package Rescue for new lesson planning, normal Production of a fresh Editor handoff, Release integration into `main`, or post-merge asset review repairs.
 
 ## Read First
