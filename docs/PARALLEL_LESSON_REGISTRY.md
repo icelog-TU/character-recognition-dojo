@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R045 | review module | claimed | Production C | codex/r045-r046-complete-package | None | None | curriculum-workflow/review-requests/R045.json; curriculum-workflow/generated/R045-generation-packet.md; curriculum-workflow/drafts/R045-draft.json | curriculum-workflow/audio-inbox/R045/; public/assets/reviews/R045/ | L375 milestone; pair covers L346-L375, ceiling L375; no newChars/zhuyin/charAudio. Playable order L375-R045-R046-L376. |
+| R046 | review module | claimed | Production C | codex/r045-r046-complete-package | None | None | curriculum-workflow/review-requests/R046.json; curriculum-workflow/generated/R046-generation-packet.md; curriculum-workflow/drafts/R046-draft.json | curriculum-workflow/audio-inbox/R046/; public/assets/reviews/R046/ | L375 milestone; pair covers L346-L375, ceiling L375; no newChars/zhuyin/charAudio. Playable order L375-R045-R046-L376. |
 
 ## Status Values
 
