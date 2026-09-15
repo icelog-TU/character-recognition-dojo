@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L354 | 排 | claimed | Production D | codex/l354-complete-package | none | none | curriculum-workflow/lesson-requests/L354.json; curriculum-workflow/generated/L354-generation-packet.md; curriculum-workflow/drafts/L354-draft.json | public/assets/lessons/L354/; curriculum-workflow/audio-inbox/L354/ | Base origin/main 71762b03, formal L001-L353; approved Editor handoff; lesson-local package. |
 
 ## Status Values
 
