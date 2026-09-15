@@ -2084,6 +2084,7 @@ See L382-rescue-qa.md for technical evidence and Release dependency scope.
   "rescueQA": {
     "sourcePackageSha": "11ddddfd1bbf50b1d6fb38e885cb1e7b08f1d089",
     "role": "Package Rescue",
+    "browserQA": "Browser QA PASS: all 11 audio controls per unit played to ended; G01-G05, phone reward navigation and phone/tablet G03 verified. G02 uses synthetic test microphone, not physical-device acceptance. See L382-rescue-browser-qa.json.",
     "notes": "curriculum-workflow/generated/L382-rescue-qa.md",
     "audioEvidence": "curriculum-workflow/generated/L382-rescue-audio-evidence.json",
     "timingEvidence": "curriculum-workflow/generated/L382-rescue-timing-review.json"
