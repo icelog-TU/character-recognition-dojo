@@ -607,3 +607,15 @@ Final Production report must include:
 ```
 
 See R043-R044-package-notes.md and R043-R044-technical-report.json. Original handoff URLs below/above are historical; use lesson-asset-review.html with the pushed immutable SHA.
+
+## Browser attempt after checkpoint push
+
+```json
+{
+  "attemptedSha": "db22ca7f407307bab2d81b7b8eb0c4528201bd45",
+  "exactUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R043&ref=db22ca7f407307bab2d81b7b8eb0c4528201bd45",
+  "loaded": "R043: five sentence cards and five extra audio entries loaded",
+  "failure": "First R043-S01 Play click: inspected target navigated or closed; tab inventory confirms This page crashed. No successful audible playback, highlighting, microphone recording or stitched replay QA.",
+  "teacherManualQa": "NOT performed; no PASS; technical timing/tail gate still fails. Do not promote via fallback."
+}
+```

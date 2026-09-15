@@ -210,7 +210,14 @@
     ],
     "manualPlaybackQa": "PENDING; no teacher approval for R043/R044. L354 approval does not apply.",
     "release": "BLOCKED: unresolved timing/tail QA plus L355-L360 dependencies. Not asset-complete, not merge-ready.",
-    "repairPlan": "Listen against final audio; repair the impossible R043 S01/S03 boundaries based on heard syllables, verify actual final-syllable endpoint before trimming tails, rerun AI alignment after audio edits, then mobile sentence and G02/G05 playback/recording QA."
+    "repairPlan": "Listen against final audio; repair the impossible R043 S01/S03 boundaries based on heard syllables, verify actual final-syllable endpoint before trimming tails, rerun AI alignment after audio edits, then mobile sentence and G02/G05 playback/recording QA.",
+    "browserAutomation": {
+      "attemptedSha": "db22ca7f407307bab2d81b7b8eb0c4528201bd45",
+      "exactUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R043&ref=db22ca7f407307bab2d81b7b8eb0c4528201bd45",
+      "loaded": "R043: five sentence cards and five extra audio entries loaded",
+      "failure": "First R043-S01 Play click: inspected target navigated or closed; tab inventory confirms This page crashed. No successful audible playback, highlighting, microphone recording or stitched replay QA.",
+      "teacherManualQa": "NOT performed; no PASS; technical timing/tail gate still fails. Do not promote via fallback."
+    }
   },
   "kind": "review",
   "allowedChars": [

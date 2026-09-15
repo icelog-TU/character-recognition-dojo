@@ -42,3 +42,17 @@ The two owned `.cjs` adapters invoke the existing repo scripts against memory-on
 After push, use `https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R043&ref=<full-pushed-SHA>` (and R044).
 Label: **pre-merge package preview, not final main review queue**.
 The supplied handoff's `review-asset-review.html` filename is absent in this repo; the permanent lesson-asset-review tool supports review units. Do not use `ref=main` for this unmerged pair.
+
+## Browser attempt at pushed asset checkpoint
+
+```json
+{
+  "attemptedSha": "db22ca7f407307bab2d81b7b8eb0c4528201bd45",
+  "exactUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R043&ref=db22ca7f407307bab2d81b7b8eb0c4528201bd45",
+  "loaded": "R043: five sentence cards and five extra audio entries loaded",
+  "failure": "First R043-S01 Play click: inspected target navigated or closed; tab inventory confirms This page crashed. No successful audible playback, highlighting, microphone recording or stitched replay QA.",
+  "teacherManualQa": "NOT performed; no PASS; technical timing/tail gate still fails. Do not promote via fallback."
+}
+```
+
+This failure is a tooling failure; it does not establish that the media is bad. Existing timing/tail findings remain separate blockers. Later notes-only tip preserves the same image/audio bytes.
