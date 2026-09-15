@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L389 | 號 | claimed | Production C | codex/l389-complete-package | L384, L385, L386, L387, L388 | 寫字名第念 | curriculum-workflow/lesson-requests/L389.json; curriculum-workflow/generated/L389-generation-packet.md; curriculum-workflow/drafts/L389-draft.json | public/assets/lessons/L389/; curriculum-workflow/audio-inbox/L389/ | Claimed from origin/main 68e05282; formal boundary L375. Release must preserve playable order including R045/R046. Existing review-pair branch retained. |
 
 ## Status Values
 
