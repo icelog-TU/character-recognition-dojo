@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L385 | 字 / normal single-character lesson | claimed | Production B | codex/l385-complete-package | L380, L381, L382, L383, L384 | 連, 傳, 相, 信, 寫 | curriculum-workflow/lesson-requests/L385.json; curriculum-workflow/generated/L385-generation-packet.md; curriculum-workflow/drafts/L385-draft.json | public/assets/lessons/L385/; curriculum-workflow/audio-inbox/L385/ | Base 250ca4a3, formal L001-L375. Release requires R045/R046 and prior lessons through L384; no parallel-production blocker. No readable writing in images; S03 before digital sending, S04 physical card passed to rear classmate. |
 
 ## Status Values
 
