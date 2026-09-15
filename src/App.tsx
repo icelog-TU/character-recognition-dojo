@@ -5735,10 +5735,17 @@ function SentencePracticePreview({
 
   function completeRound() {
     if (isCurrentRoundComplete || disabled || doneCount >= requiredCount) return;
+    interruptStageFourGuide();
     setAnswerRevealed(false);
     setCompletedGameId(game.id);
     setRoundComplete(true);
     playCelebrateChime();
+  }
+
+  function interruptStageFourGuide() {
+    guideRunRef.current += 1;
+    stopPlayback();
+    setActiveGameCharIndex(null);
   }
 
   function resetCurrentRound() {
@@ -5980,6 +5987,7 @@ function SentencePracticePreview({
 
   async function handleFindChar(index: number) {
     if (answerRevealed) return;
+    interruptStageFourGuide();
     if (index !== targetIndex) {
       playMissChime();
       void speakStageFour("再找找看。");
@@ -5993,6 +6001,7 @@ function SentencePracticePreview({
 
   async function handleMissingOption(option: SentenceGameOption) {
     if (answerRevealed || mistakeOptionId) return;
+    interruptStageFourGuide();
     if (!option.correct) {
       showCardMistakeFeedback(option.id, () => setPickedOptionIds([]));
       void speakStageFour("不是這個，再找找看。");
@@ -6009,6 +6018,7 @@ function SentencePracticePreview({
     const pickedCount = pickedOptionIds.filter((id) => id === option.id).length;
     if (pickedCount >= (optionPickLimits.get(option.id) ?? 1)) return;
     const expectedText = han[missingIndexes[pickedOptionIds.length]];
+    interruptStageFourGuide();
     if (option.text !== expectedText) {
       showCardMistakeFeedback(option.id, () => setPickedOptionIds([]));
       void speakStageFour("順序不對，再排一次。");
@@ -6039,6 +6049,7 @@ function SentencePracticePreview({
 
   async function handlePronunciationChoice(option: SentenceGameOption) {
     if (answerRevealed) return;
+    interruptStageFourGuide();
     setSelectedPronunciationOptionId(option.id);
     if (!option.correct) {
       playMissChime();
