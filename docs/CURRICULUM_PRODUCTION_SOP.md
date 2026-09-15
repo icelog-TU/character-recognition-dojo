@@ -97,6 +97,14 @@ Hard release gate:
 - A lesson using provisional characters can be prepared as a dependency-blocked Production package. It cannot enter `main`, be called `release-ready`, or be treated as playable until those characters are real in latest `origin/main` or the teacher changes the sentence set.
 - A migrated review package may intentionally reuse an `R###` id that already exists in legacy `reviewLessons`. That is allowed only when the handoff labels it `review migration replacement package`. Production prepares and pushes the package files on a branch, but does not edit production JSON, planner data, or ledger. Release later replaces the legacy review entry with the current schedule entry. In this narrow case, `npm run curriculum:audit-state` may fail with an expected legacy id collision; Production must report the exact failure and continue only if no other audit-state failure is present.
 
+## Package Rescue
+
+Package Rescue is the standing role for unmerged package branches that already exist but are not acceptable to Release. Use it for `partial-package`, failed `curriculum:package-intake`, request/packet/draft inconsistency, missing referenced files, incomplete Stage 4 metadata, missing audio/timings, or stale package-status notes after Production has handed off or moved on.
+
+Package Rescue starts from the package branch or exact package SHA, not from latest `origin/main`, and produces a pushed rescue branch/SHA for Release to inspect. It may fix package-local request, packet, draft, registry, images, audio, timings, and QA notes. It must not perform Release integration into `src/curriculum/sample-lessons.json`, planner data, ledger, `main`, or GitHub Pages.
+
+Do not use Package Rescue for post-merge teacher review repairs; those stay in Asset Repair. Do not use Package Rescue to replace normal Production for a fresh Editor handoff; Production remains responsible for building new packages correctly in the first place.
+
 ## Two-Character Word Lesson Production
 
 A two-character word lesson is a normal numbered lesson that introduces two Han characters as one natural target word, such as `朋友`. It is not two lessons and it is not a review module.

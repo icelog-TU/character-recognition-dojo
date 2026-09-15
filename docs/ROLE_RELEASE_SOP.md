@@ -110,6 +110,8 @@ npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complet
 
 If the gate fails, stop intake and report the exact errors. Do not trust a `*-complete-package` branch name when the draft, packet, registry row, or notes still say `partial-package`, `needs-rework`, `Do not integrate`, `NOT COMPLETED`, `FAIL`, or `unresolved`. If a historical pre-gate package needs a Supervisor exception, record that exception explicitly in the release notes instead of silently merging it.
 
+When an unmerged package branch needs package-local fixes and the original Production slot has moved on or should not be interrupted, ask Supervisor to assign Package Rescue. Release should not turn broad package rescue into normal release work. Release may fix small release-owned integration issues, but package-local defects belong to Production or Package Rescue.
+
 Teacher image/audio review is normally post-merge through the permanent `ref=main` asset review queue. Do not block ordinary Release because the teacher has not reviewed or synced a pre-merge branch preview. Branch preview review is optional and only supports special cases.
 
 If a package was completed using the browser automation fallback, Release may accept it when the package is explicitly marked `asset-complete-package` or `dependency-blocked-asset-complete`, records the automation failure reason and passed technical checks, and otherwise passes Release intake checks. Teacher manual pre-merge PASS may be recorded when available, but it is not required for ordinary release unless the teacher explicitly requested pre-merge approval for that unit. Do not integrate a package that merely says assets are missing, validators failed, or the package is still partial.
@@ -129,6 +131,8 @@ Then inspect the actual package files from the branch. The `ref=main` asset revi
 Release should fix release-owned integration issues, such as rebasing from latest `origin/main`, transplanting the intended lesson files, inserting the production JSON entry, regenerating planner data, updating the ledger, clearing registry rows, running `npm run verify`, pushing, and checking deployment.
 
 If Release finds production-local defects, do not silently absorb them as normal release work. Fix only when needed to keep the current release moving, then report a `release-side repairs` list to Supervisor. Production-local defects include stale request/draft/packet mismatch, generation packets that are missing final approved sentence records, invalid `displayLines`, missing top-level `dependsOnLessons`, missing Stage 4 option ids or correctness metadata, repeated/missing Stage 4 sentence usage, non-canonical normal-lesson Stage 4 order without a teacher-approved exception, stale `charAudio` path examples, wrong-option text that differs too much, wrong-option audio that does not match the final text, and failed lesson-local audio loudness checks.
+
+For larger production-local defects, stop and provide a Package Rescue handoff: unit id, package branch/tip SHA, intake errors, exact files or checks that failed, and confirmation that the unit has not been integrated into `main`.
 
 After integrating a lesson or review module that touches Stage 4 or lesson completion flow, Release must smoke-test that the final reward state is usable on a phone/tablet-width viewport: after `領取獎勵`, the red `下一課` button and white `回首頁休息` button must be visible or automatically scrolled into view and must not be hidden behind the floating playback bar. This is app behavior QA, not subjective image/audio review.
 

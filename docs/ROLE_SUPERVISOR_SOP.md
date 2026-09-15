@@ -68,7 +68,8 @@ If bare `gh` fails, retry with `C:\Users\User\.local\bin\gh.cmd`.
 - Run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects a skipped lesson.
 - Keep SOP files concise, role-specific, and non-duplicative.
 - Remove or replace stale, contradictory, or repeated SOP rules.
-- Produce one-paste instructions for Editor, active Production slots, Release, and Asset Repair.
+- Produce one-paste instructions for Editor, active Production slots, Package Rescue, Release, and Asset Repair.
+- Assign Package Rescue when an unmerged Production package branch exists but is not acceptable to Release because it is `partial-package`, fails intake, or has package-local request/packet/draft/assets/Stage 4 defects.
 - Diagnose GitHub Pages, Firebase, review pages, audio review pages, registry, ledger, and planner-data drift.
 - Never assume another conversation thread knows this chat's context.
 
@@ -95,6 +96,8 @@ Classify each lesson in the requested range as one of:
 - `stale-or-misnamed-branch`
 
 Report the current production boundary, a per-lesson table, the first blocking gap, stale or missing registry rows, and the next concrete action for Editor, Production, or Release. If a later lesson depends on a missing or incomplete earlier lesson, tell Release to stop at that gap and re-audit after the earlier lesson merges.
+
+If the next concrete action is to fix an already pushed but incomplete package branch, assign Package Rescue instead of interrupting an active Production slot. The handoff must include the unit id, source package branch or exact SHA, current blocker, assigned rescue worktree, and explicit instruction that Rescue must not integrate into `main`.
 
 ## Boundaries
 

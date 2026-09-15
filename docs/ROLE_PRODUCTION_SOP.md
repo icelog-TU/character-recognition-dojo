@@ -6,6 +6,8 @@ Production threads may work in parallel, but each thread owns exactly one assign
 
 Dependency blockers block Release/main integration, not Production package preparation. If the teacher or Editor assigns a later lesson while earlier lessons or a milestone review pair are still unmerged, do not refuse the assignment for that reason alone. Claim the unit, record the earlier unit(s) as `dependsOnLessons` / provisional dependencies in the registry and package files, build the lesson-local package, and report `dependency-blocked-asset-complete`. Release will later integrate packages into `main` in playable order.
 
+Package Rescue is a separate role for fixing an already pushed but incomplete unmerged package branch. Production should still fix defects it finds before final handoff. After Production has handed off and moved on, Supervisor may assign Package Rescue so active Production slots do not have to stop their current lesson.
+
 ## Read First
 
 1. `docs/PROJECT_HANDOFF_SOP.md`
@@ -200,3 +202,5 @@ Push the production branch and report:
 Do not call a package `asset-complete-package` if final text exists only in chat or if request/packet/draft/Stage 4 audio/alignment is missing. Do not call it `release-ready-package`; that status belongs to Release after integration on latest `origin/main`.
 
 Never give the teacher a `lesson-asset-review.html?unit=L###&ref=main` URL as proof that an unmerged Production package can be reviewed. Before Release integrates the unit, `ref=main` will not contain that unit and the page will correctly report that the draft or production JSON is missing. Use the pushed package branch or full commit SHA for pre-merge preview, with branch refs URL-encoded.
+
+If Release or Supervisor later finds this pushed package is incomplete, the fix may be assigned to Package Rescue. In that case, do not continue modifying the same unit from the Production slot unless the teacher explicitly sends it back to you; avoid two threads editing the same package branch.

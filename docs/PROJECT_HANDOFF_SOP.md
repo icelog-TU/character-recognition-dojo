@@ -48,6 +48,7 @@ Open exactly one role SOP after this file:
 - Review-module migration editor: `docs/ROLE_REVIEW_MIGRATION_SOP.md`
 - Review-module migration audit: `docs/ROLE_REVIEW_MIGRATION_AUDIT_SOP.md`
 - Production slots, currently A/B/C/D unless Supervisor assigns more: `docs/ROLE_PRODUCTION_SOP.md`
+- Package rescue for incomplete unmerged Production branches: `docs/ROLE_PACKAGE_RESCUE_SOP.md`
 - Release / ordered push to `main`: `docs/ROLE_RELEASE_SOP.md`
 - Asset repair after teacher review: `docs/ROLE_ASSET_REPAIR_SOP.md`
 - Old-image visual refresh batches: `docs/ROLE_VISUAL_REFRESH_SOP.md`
@@ -150,6 +151,13 @@ Asset Repair C:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\asset-repair-c
 ```
 
+Package Rescue worktrees are assignment-specific. Use the exact path provided by Supervisor or the teacher, commonly a per-unit rescue worktree such as:
+
+```text
+C:\Users\User\Documents\Codex\2026-09-15\new-chat-4\l###-rescue
+C:\Users\User\Documents\Codex\2026-09-15\new-chat-4\r###-r###-rescue
+```
+
 Do not create a new clone unless the user explicitly asks. If the current shell is not in the assigned path, stop and report it before editing.
 
 ## Non-Negotiable Rules
@@ -159,6 +167,7 @@ Do not create a new clone unless the user explicitly asks. If the current shell 
 - Final teacher-approved sentence sets must be captured in repo files, not only in chat.
 - Supervisor must run Lesson Gap Audit before assigning new multi-lesson batches, before Release pushes dependency-blocked packages, and whenever the teacher suspects skipped lesson numbers.
 - Production delivers `asset-complete-package`; Release owns `release-ready-package` and `in-main`. Do not make Production spend time on shared-state release integration for dependency-blocked lessons.
+- Package Rescue is the standing role for rescuing incomplete unmerged package branches. Use it when Release or Supervisor finds a `partial-package`, failed package-intake, stale packet/draft/request mismatch, missing Stage 4 metadata, missing referenced assets, or other package-local defect after Production has already produced a branch. Package Rescue does not replace normal Production, Release, or Asset Repair.
 - Review pairs are Release/main blockers, not parallel Production blockers: after L045/L060/L075/L090 and every later 15-lesson milestone, Release must ship the required review pair before the next numbered lesson enters `main`. Production may still prepare later lesson-local packages in parallel when the teacher has approved their targets/sentences and the package records the required provisional dependencies. Overdue review modules keep their original milestone allowed-character ceiling, not latest `origin/main`.
 - The review cycle continues through the full 600-lesson course and uses R001-R076. R075/R076 follow L600 for L571-L600; there is no extra capstone pair beyond R076.
 - Production handoffs must be one-paste executable.
@@ -342,6 +351,29 @@ Final handoff must include the pushed package branch and full tip commit SHA. If
 
 如果這個 worktree 不是 clean，停止並回報。不要 stash、reset、revert、或覆蓋別人的工作。
 收到 Editor 的完整 handoff 後，依 SOP claim registry，從 origin/main 建新分支，並直接製作 `asset-complete-package`；不要做 Release 的 shared-state 整合。若前一課或 milestone review pair 尚未進 `origin/main`，不要因此拒絕製作；把它列為 `dependsOnLessons` / provisional dependency，完成後回報 `dependency-blocked-asset-complete`，等待 Release 依 playable order 整合。
+```
+
+### Package Rescue
+
+```text
+你是「認字練功房」Package Rescue / 課程包救援對話串。
+
+Repo:
+https://github.com/icelog-TU/character-recognition-dojo
+
+請以老師或 Supervisor 指定的 package branch / exact SHA 作為救援來源，並以 GitHub origin/main 作為正式邊界參考。不要相信舊 chat 或本機舊分支。
+先讀：
+- docs/PROJECT_HANDOFF_SOP.md
+- docs/ROLE_PACKAGE_RESCUE_SOP.md
+
+你的工作是修正尚未進 main 的 Production package，使它從 partial-package / intake failed / metadata mismatch / missing asset 狀態變成可交給 Release 的 `asset-complete-package` 或 `dependency-blocked-asset-complete`。不要做新課選字，不要從零製作正常 Production，不要把 package 整合進 main，不要處理已進 main 的 asset review repair queue。
+
+指定 worktree:
+<Supervisor 指定的 package rescue worktree path>
+
+如果這個 worktree 不是 clean，或目前不是 Git repo / 不是指定路徑，停止並完整回報。不要 stash、reset、revert、或覆蓋別人的工作。
+
+起手先 fetch、檢查 worktree、確認來源 package branch/SHA、跑 tools/check 與 package-intake，回報原始 blocker。修好後 commit/push rescue branch，回報完整 tip SHA、package-intake 結果、修正內容與 Release 應使用的 branch/SHA。
 ```
 
 ### Release
