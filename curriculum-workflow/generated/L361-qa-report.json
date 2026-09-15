@@ -1,0 +1,307 @@
+{
+  "status": "PASS",
+  "coverage": {
+    "驚": 4,
+    "奇": 2,
+    "怪": 3,
+    "物": 2,
+    "園": 1,
+    "公": 1
+  },
+  "images": 5,
+  "audio": [
+    {
+      "src": "/assets/lessons/L361/audio/char-u9a5a.m4a",
+      "durationMs": 836,
+      "mean": -16.7,
+      "max": -2
+    },
+    {
+      "src": "/assets/lessons/L361/audio/L361-S01.m4a",
+      "durationMs": 4264,
+      "mean": -17.1,
+      "max": -2
+    },
+    {
+      "src": "/assets/lessons/L361/audio/L361-S02.m4a",
+      "durationMs": 3851,
+      "mean": -18.8,
+      "max": -2
+    },
+    {
+      "src": "/assets/lessons/L361/audio/L361-S03.m4a",
+      "durationMs": 2658,
+      "mean": -17.5,
+      "max": -2.6
+    },
+    {
+      "src": "/assets/lessons/L361/audio/L361-S04.m4a",
+      "durationMs": 3311,
+      "mean": -18.4,
+      "max": -2.1
+    },
+    {
+      "src": "/assets/lessons/L361/audio/L361-S05.m4a",
+      "durationMs": 3467,
+      "mean": -18.7,
+      "max": -2.2
+    },
+    {
+      "src": "/assets/lessons/L361/audio/L361-G02-prefix.m4a",
+      "durationMs": 3802,
+      "mean": -16.9,
+      "max": -2
+    },
+    {
+      "src": "/assets/lessons/L361/audio/L361-G05-wrong-one.m4a",
+      "durationMs": 3094,
+      "mean": -18.8,
+      "max": -2
+    },
+    {
+      "src": "/assets/lessons/L361/audio/L361-G05-wrong-two.m4a",
+      "durationMs": 3419,
+      "mean": -17.7,
+      "max": -2
+    }
+  ],
+  "stage4Order": "PASS",
+  "indexes": "PASS",
+  "allowed": "PASS",
+  "displayLines": "PASS",
+  "timings": "PASS",
+  "ffmpegDecode": "PASS",
+  "baseCommit": "2bf989ca23620819539303fa4e8f684a0657cf11",
+  "finalMainCheck": "496aa87af167b0760bcee8f9ca959d6cc657edfd",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "dependencies": [
+    "L360"
+  ],
+  "releaseBlockers": [
+    "L360",
+    "R043",
+    "R044"
+  ],
+  "imagesStyleCast": [
+    {
+      "id": "L361-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "dimensions": "1024x1024"
+    },
+    {
+      "id": "L361-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "dimensions": "1024x1024"
+    },
+    {
+      "id": "L361-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "dimensions": "1024x1024"
+    },
+    {
+      "id": "L361-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "dimensions": "1024x1024"
+    },
+    {
+      "id": "L361-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "dimensions": "1024x1024"
+    }
+  ],
+  "rejectedImages": [],
+  "browserQA": {
+    "viewport": 390,
+    "stage3": [
+      {
+        "sentence": 1,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 2,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 3,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "sentence": 4,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "sentence": 5,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      }
+    ],
+    "stage4Media": [
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-S01.m4a",
+        "ended": true
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-S02.m4a",
+        "ended": true
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-S03.m4a",
+        "ended": true
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-S04.m4a",
+        "ended": true
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-S05.m4a",
+        "ended": true
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-S01.m4a",
+        "ended": false
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-G02-prefix.m4a",
+        "ended": true
+      },
+      {
+        "src": "blob:http://127.0.0.1:5185/67152de3-867d-4062-b118-c1ea1e2b72b0",
+        "ended": true
+      },
+      {
+        "src": "blob:http://127.0.0.1:5185/67152de3-867d-4062-b118-c1ea1e2b72b0",
+        "ended": true
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-G02-prefix.m4a",
+        "ended": true
+      },
+      {
+        "src": "blob:http://127.0.0.1:5185/ff0a2802-3479-47be-bdad-fde4e453b4ac",
+        "ended": true
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-S05.m4a",
+        "ended": true
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-G05-wrong-two.m4a",
+        "ended": true
+      },
+      {
+        "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L361/audio/L361-G05-wrong-one.m4a",
+        "ended": true
+      }
+    ],
+    "teachRecording": "PASS using Chrome synthetic microphone: hold, cue, recording, prefix plus recording replay, next-question action",
+    "choosePronunciation": "PASS: all three choices first-click playback to ended",
+    "standalonePlayback": "PASS: all nine final audio files played to ended",
+    "limitations": "Headless automation has no human listening or physical-phone microphone verification. Initial animated-button stability timeout was recovered by disabling CSS animations only in the QA page. No teacher subjective PASS is claimed. Latest main SOP places subjective review in the post-merge repair queue."
+  },
+  "independentTranscription": {
+    "model": "gpt-4o-transcribe",
+    "expectedTextHint": false,
+    "results": [
+      {
+        "file": "char-u9a5a.m4a",
+        "text": "Jing"
+      },
+      {
+        "file": "L361-G02-prefix.m4a",
+        "text": "怪物玩具讓我大吃一。"
+      },
+      {
+        "file": "L361-G05-wrong-one.m4a",
+        "text": "小狗跑出来，我吓了一跳。"
+      },
+      {
+        "file": "L361-G05-wrong-two.m4a",
+        "text": "小狗跑过来，我吃了一惊。"
+      },
+      {
+        "file": "L361-S01.m4a",
+        "text": "从帽子里变出鸟，好惊奇。"
+      },
+      {
+        "file": "L361-S02.m4a",
+        "text": "怪物玩具让我大吃一惊。"
+      },
+      {
+        "file": "L361-S03.m4a",
+        "text": "公园里有奇怪的动物。"
+      },
+      {
+        "file": "L361-S04.m4a",
+        "text": "媽媽老是大驚小怪。"
+      },
+      {
+        "file": "L361-S05.m4a",
+        "text": "小狗跑出来，我吃了一惊。"
+      }
+    ],
+    "note": "Standalone target transcribed as romanized Jing. All eight longer audio transcripts match approved Han text after traditional/simplified normalization. This is not a human tone judgment."
+  },
+  "audioRegeneration": {
+    "S02": "Three regenerations for initial consonant ambiguity; final independent transcript is 怪物.",
+    "S03": "One regeneration after 公 was transcribed 空.",
+    "S04": "One regeneration after 老是 was transcribed 老師.",
+    "S05": "One regeneration; Whisper vocabulary disambiguates 驚/斤, independently confirmed without a hint.",
+    "charAudio": "One regeneration after 请 recognition; final independently recognized Jing."
+  }
+}

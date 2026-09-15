@@ -128,6 +128,30 @@ function publicSrc(filePath) {
   return `/${relative}`;
 }
 
+function trimTrailingSilence(filePath) {
+  const duration = getDurationMs(filePath) / 1000;
+  const result = spawnSync(ffmpegCommand, [
+    "-hide_banner", "-nostats", "-i", filePath,
+    "-af", "silencedetect=noise=-45dB:d=0.3", "-f", "null", "-",
+  ], { encoding: "utf8" });
+  if (result.status !== 0) throw new Error(`Silence detection failed: ${filePath}`);
+  const starts = [...result.stderr.matchAll(/silence_start:\s*([\d.]+)/g)];
+  const ends = [...result.stderr.matchAll(/silence_end:\s*([\d.]+)/g)];
+  if (!starts.length || !ends.length) return;
+  const start = Number(starts.at(-1)[1]);
+  const end = Number(ends.at(-1)[1]);
+  // Keep speech intact; remove only terminal silence and retain a short buffer.
+  if (Math.abs(end - duration) > 0.08 || start < 0.5 || duration - start < 0.3) return;
+  const tempPath = `${filePath}.tail-tmp.m4a`;
+  execFileSync(ffmpegCommand, [
+    "-y", "-i", filePath, "-t", Math.max(0.7, start + 0.12).toFixed(3),
+    "-vn", "-ac", "1", "-ar", "44100", "-c:a", "aac", "-b:a", "96k",
+    "-movflags", "+faststart", tempPath,
+  ], { stdio: "ignore" });
+  fs.copyFileSync(tempPath, filePath);
+  fs.rmSync(tempPath);
+}
+
 const args = parseArgs(process.argv.slice(2));
 const lessonFilter = args.lesson ? String(args.lesson).toUpperCase() : null;
 const inputRoot = lessonFilter ? path.join(inboxRoot, lessonFilter) : inboxRoot;
@@ -190,6 +214,7 @@ for (const sourcePath of files) {
   ], { stdio: "ignore" });
 
   const loudness = reinforceQuietAudio(targetPath);
+  if (args["trim-tail"] === true) trimTrailingSilence(targetPath);
   const durationMs = getDurationMs(targetPath);
   report.push({
     lessonId,

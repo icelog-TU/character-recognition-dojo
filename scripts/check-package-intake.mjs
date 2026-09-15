@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { execFileSync } from "node:child_process";
+import { lessonAudioSources } from "./lib/lesson-audio-sources.mjs";
 
 const COMPLETE_STATUSES = new Set(["asset-complete-package", "dependency-blocked-asset-complete"]);
 const COMPLETE_REGISTRY_STATUSES = new Set([
@@ -149,9 +150,13 @@ function main() {
   }
 
   if (imageFiles.length !== 5) errors.push(`${unit}: expected 5 WebP images, found ${imageFiles.length}.`);
-  if (audioFiles.length !== 10) errors.push(`${unit}: expected 10 M4A audio files, found ${audioFiles.length}.`);
+  const expectedAudio = lessonAudioSources(draft);
+  if (audioFiles.length !== expectedAudio.size) errors.push(`${unit}: expected ${expectedAudio.size} referenced M4A audio files, found ${audioFiles.length}.`);
 
   const finalAssetPaths = new Set(mediaFiles.map((file) => `/${file.replaceAll("\\", "/").replace(/^public\//, "")}`));
+  for (const src of expectedAudio) {
+    if (!src.endsWith(".m4a") || !finalAssetPaths.has(src)) errors.push(`${unit}: missing processed audio ${src}.`);
+  }
   for (const sentence of draft.sentences || []) {
     const timings = sentence.audio?.charTimings;
     const expectedTimingCount = hanChars(sentence.spokenText).length;

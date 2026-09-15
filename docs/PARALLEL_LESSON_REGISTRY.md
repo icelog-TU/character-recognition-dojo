@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L361 | 驚 | claimed | Production A | codex/l361-complete-package | L356:公; L357:園; L358:物; L359:怪; L360:奇; R043; R044 | 公 園 物 怪 奇 | curriculum-workflow/lesson-requests/L361.json; curriculum-workflow/generated/L361-generation-packet.md; curriculum-workflow/drafts/L361-draft.json | curriculum-workflow/audio-inbox/L361/; public/assets/lessons/L361/ | Base origin/main 2bf989ca, formal L001-L355. Teacher-approved handoff; earlier lessons and milestone reviews block Release only. |
+| L361 | 驚 | dependency-blocked-asset-complete | Production A | codex/l361-complete-package | L360:奇; R043; R044 | 奇 | curriculum-workflow/lesson-requests/L361.json; curriculum-workflow/generated/L361-generation-packet.md; curriculum-workflow/generated/L361-qa-report.json; curriculum-workflow/drafts/L361-draft.json | curriculum-workflow/audio-inbox/L361/; public/assets/lessons/L361/ | Base 2bf989ca; main rechecked 496aa87a formal L001-L359. Five WebP, nine M4A, complete timings and Stage 4. Technical and automated Browser QA PASS; synthetic microphone only, no human listening claim. Release blockers only. |
 
 ## Status Values
 
