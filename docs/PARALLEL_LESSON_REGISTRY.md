@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L358 | 物 | claimed | Production A | codex/l358-complete-package | L354:排; L355:雞; L356:公; L357:園 | 排 雞 公 園 | curriculum-workflow/lesson-requests/L358.json; curriculum-workflow/generated/L358-generation-packet.md; curriculum-workflow/drafts/L358-draft.json | curriculum-workflow/audio-inbox/L358/; public/assets/lessons/L358/ | Claimed from origin/main 71762b03. Teacher assigned A. Before asset generation, resolve S05 displayLines: isolated 前 breaks 動物園前; Production SOP requires functional phrase breaks. Earlier lessons block Release only. |
+| L358 | 物 | needs-rework | Production A | codex/l358-complete-package | L354:排; L355:雞; L356:公; L357:園 | 排 雞 公 園 | curriculum-workflow/lesson-requests/L358.json; curriculum-workflow/generated/L358-generation-packet.md; curriculum-workflow/drafts/L358-draft.json | curriculum-workflow/audio-inbox/L358/; public/assets/lessons/L358/ | Base origin/main 71762b03. Partial package checkpoint, not asset-complete. Teacher approved S05 lines and 動 pronunciation; regenerated 物 awaits review. G02 prefix AI alignment and manual playback QA remain. Earlier lessons block Release only. |
 
 ## Status Values
 

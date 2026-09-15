@@ -54,6 +54,10 @@ const baseSpeechInstructions = [
 ].join(" ");
 
 async function createSpeech({ apiKey, model, voice, input, outputPath, instructionsExtra = "" }) {
+  const speed = Number(getEnv("OPENAI_TTS_SPEED", "0.9"));
+  if (!Number.isFinite(speed) || speed < 0.25 || speed > 4) {
+    throw new Error("OPENAI_TTS_SPEED must be between 0.25 and 4.");
+  }
   const response = await fetch("https://api.openai.com/v1/audio/speech", {
     method: "POST",
     headers: {
@@ -65,7 +69,7 @@ async function createSpeech({ apiKey, model, voice, input, outputPath, instructi
       voice,
       input,
       response_format: "mp3",
-      speed: 0.9,
+      speed,
       instructions: [baseSpeechInstructions, instructionsExtra].filter(Boolean).join(" "),
     }),
   });
@@ -118,7 +122,7 @@ if (includeChars) {
       char,
       path.join(outputDir, `char-${filenameSafe(char)}.mp3`),
       zhuyin
-        ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once.`
+        ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once. ${lesson.charTtsInstructions?.[char] ?? ""}`
         : "",
     );
   }
@@ -128,7 +132,7 @@ if (includeSentences) {
   for (const sentence of lesson.sentences ?? []) {
     if (sentence.approved !== true) continue;
     if (sentenceFilter && sentence.id.toUpperCase() !== sentenceFilter) continue;
-    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`));
+    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`), sentence.ttsInstructions ?? "");
   }
 }
 
