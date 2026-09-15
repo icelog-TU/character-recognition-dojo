@@ -393,7 +393,49 @@ Base `3317753c2dec1351da479202fc2affa5d5206b60`, formal L001-L369, 372 learned c
       "prompt": "幫忙說出這個字。",
       "teachAudio": {
         "prefixText": "爸爸常跟親友來",
-        "prefixSrc": "/assets/lessons/L374/audio/L374-G02-prefix.m4a"
+        "prefixSrc": "/assets/lessons/L374/audio/L374-G02-prefix.m4a",
+        "prefixAudio": {
+          "spokenText": "爸爸常跟親友來",
+          "src": "/assets/lessons/L374/audio/L374-G02-prefix.m4a",
+          "durationMs": 2461,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 210
+            },
+            {
+              "charIndex": 1,
+              "startMs": 210,
+              "endMs": 420
+            },
+            {
+              "charIndex": 2,
+              "startMs": 420,
+              "endMs": 1140
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1140,
+              "endMs": 1420
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1420,
+              "endMs": 1700
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1700,
+              "endMs": 1940
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1940,
+              "endMs": 2258
+            }
+          ]
+        }
       }
     },
     {
