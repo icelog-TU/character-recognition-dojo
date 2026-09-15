@@ -168,7 +168,7 @@ for (const job of jobs) {
     voice,
     input: job.input,
     outputPath: job.outputPath,
-    instructionsExtra: job.instructionsExtra,
+    instructionsExtra: [job.instructionsExtra, args.instructions].filter(Boolean).join(" "),
   });
 }
 

@@ -139,7 +139,7 @@ if (!fs.existsSync(inputRoot)) {
   process.exit(0);
 }
 
-const files = listAudioFiles(inputRoot);
+const files = listAudioFiles(inputRoot).filter((filePath) => !args.file || path.basename(filePath) === args.file);
 if (files.length === 0) {
   console.log(`No audio files found in ${inputRoot}`);
   process.exit(0);

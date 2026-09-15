@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L373 | 通 | claimed | Production A | codex/l373-complete-package | L370:朋友; L371:親; L372:交 | 朋友親交 | curriculum-workflow/lesson-requests/L373.json; curriculum-workflow/generated/L373-generation-packet.md; curriculum-workflow/drafts/L373-draft.json | curriculum-workflow/audio-inbox/L373/; public/assets/lessons/L373/ | Base origin/main 3317753c, formal L001-L369. Teacher-approved single-character lesson; S02 uses 轉學. Dependencies block Release only. |
+| L373 | 通 | dependency-blocked-asset-complete | Production A | codex/l373-complete-package | L370:朋友; L371:親; L372:交 | 朋友親交 | curriculum-workflow/lesson-requests/L373.json; curriculum-workflow/generated/L373-generation-packet.md; curriculum-workflow/drafts/L373-draft.json | curriculum-workflow/audio-inbox/L373/; public/assets/lessons/L373/ | Base origin/main 3317753c, formal L001-L369. Teacher-approved single-character lesson; S02 uses 轉學. Five WebPs and ten M4As complete; technical/browser QA complete. Dependencies block Release only; teacher subjective review post-main. |
 
 ## Status Values
 
