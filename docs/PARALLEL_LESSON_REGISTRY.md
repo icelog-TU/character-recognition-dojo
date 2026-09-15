@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L355 | 雞 | claimed | Production A | codex/l355-complete-package | L354:排 | 排 | curriculum-workflow/lesson-requests/L355.json; curriculum-workflow/generated/L355-generation-packet.md; curriculum-workflow/drafts/L355-draft.json | curriculum-workflow/audio-inbox/L355/; public/assets/lessons/L355/ | Claimed from origin/main 71762b03; approved handoff received. L354 blocks Release integration only. |
 
 ## Status Values
 
