@@ -1,0 +1,151 @@
+{
+  "unit": "L379",
+  "packageStatus": "partial-package",
+  "coverage": {
+    "送": 4,
+    "接": 2,
+    "近": 2,
+    "已": 2,
+    "經": 2,
+    "往": 1
+  },
+  "sentences": [
+    {
+      "id": "L379-S01",
+      "han": 11,
+      "timingCount": 11,
+      "tailGapMs": 285
+    },
+    {
+      "id": "L379-S02",
+      "han": 8,
+      "timingCount": 8,
+      "tailGapMs": 209
+    },
+    {
+      "id": "L379-S03",
+      "han": 11,
+      "timingCount": 11,
+      "tailGapMs": 310
+    },
+    {
+      "id": "L379-S04",
+      "han": 10,
+      "timingCount": 10,
+      "tailGapMs": 448
+    },
+    {
+      "id": "L379-S05",
+      "han": 12,
+      "timingCount": 12,
+      "tailGapMs": 242
+    }
+  ],
+  "games": [
+    {
+      "id": "L379-G01",
+      "target": "送",
+      "index": 7,
+      "options": 0
+    },
+    {
+      "id": "L379-G02",
+      "target": "送",
+      "index": 5,
+      "options": 0
+    },
+    {
+      "id": "L379-G03",
+      "target": "送",
+      "index": 2,
+      "options": 3
+    },
+    {
+      "id": "L379-G04",
+      "target": "接",
+      "index": 2,
+      "options": 4
+    },
+    {
+      "id": "L379-G05",
+      "target": "送",
+      "index": 10,
+      "options": 3
+    }
+  ],
+  "media": [
+    {
+      "file": "L379-S01.webp",
+      "bytes": 235862
+    },
+    {
+      "file": "L379-S02.webp",
+      "bytes": 181696
+    },
+    {
+      "file": "L379-S03.webp",
+      "bytes": 197790
+    },
+    {
+      "file": "L379-S04.webp",
+      "bytes": 249590
+    },
+    {
+      "file": "L379-S05.webp",
+      "bytes": 181740
+    },
+    {
+      "file": "char-u9001.m4a",
+      "bytes": 24751,
+      "durationMs": 1230
+    },
+    {
+      "file": "L379-G02-prefix.m4a",
+      "bytes": 27414,
+      "durationMs": 2159
+    },
+    {
+      "file": "L379-G02-suffix.m4a",
+      "bytes": 11828,
+      "durationMs": 929
+    },
+    {
+      "file": "L379-G05-wrong-one.m4a",
+      "bytes": 49203,
+      "durationMs": 3994
+    },
+    {
+      "file": "L379-G05-wrong-two.m4a",
+      "bytes": 66168,
+      "durationMs": 5294
+    },
+    {
+      "file": "L379-S01.m4a",
+      "bytes": 46296,
+      "durationMs": 3645
+    },
+    {
+      "file": "L379-S02.m4a",
+      "bytes": 35068,
+      "durationMs": 2809
+    },
+    {
+      "file": "L379-S03.m4a",
+      "bytes": 40914,
+      "durationMs": 3390
+    },
+    {
+      "file": "L379-S04.m4a",
+      "bytes": 50607,
+      "durationMs": 3808
+    },
+    {
+      "file": "L379-S05.m4a",
+      "bytes": 62061,
+      "durationMs": 4922
+    }
+  ],
+  "totalBytes": 1460988,
+  "mechanical": "PASS",
+  "fullAcceptance": "BLOCKED: G01 phone clipping, pending timing listening and G02/navigation QA"
+}
