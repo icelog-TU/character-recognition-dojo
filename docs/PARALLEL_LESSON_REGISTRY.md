@@ -17,6 +17,9 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 
+| R045 | review L346-L375 | claimed | Package Rescue | codex/r045-r046-package-rescue | L375 (in main); paired R045/R046 | none | curriculum-workflow/review-requests/R045.json; curriculum-workflow/generated/R045-generation-packet.md; curriculum-workflow/drafts/R045-draft.json | public/assets/reviews/R045/ | Teacher assigned rescue from 9991d7dfe4c11a31ebd212a8b4e09d71ca59b307. Audio and timing repair in progress; no main integration. |
+| R046 | review L346-L375 | claimed | Package Rescue | codex/r045-r046-package-rescue | L375 (in main); paired R045/R046 | none | curriculum-workflow/review-requests/R046.json; curriculum-workflow/generated/R046-generation-packet.md; curriculum-workflow/drafts/R046-draft.json | public/assets/reviews/R046/ | Teacher assigned rescue from 9991d7dfe4c11a31ebd212a8b4e09d71ca59b307. Audio and timing repair in progress; no main integration. |
+
 ## Status Values
 
 - `planned`: Teacher has chosen the lesson order and new character(s), but no Codex thread owns it yet.
