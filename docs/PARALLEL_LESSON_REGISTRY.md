@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L368 | 感 | claimed | Package Rescue | codex/l368-package-rescue | L366 / L367 (merged) | none | curriculum-workflow/lesson-requests/L368.json / curriculum-workflow/generated/L368-generation-packet.md / curriculum-workflow/drafts/L368-draft.json | public/assets/lessons/L368/; curriculum-workflow/audio-inbox/L368/ | Rescue source 6dacaba6f199865a4f04ab0e0bf84a1c584e9131. Repair G02 suffix, alignment and audio tails. In progress; do not integrate. |
 
 ## Status Values
 
