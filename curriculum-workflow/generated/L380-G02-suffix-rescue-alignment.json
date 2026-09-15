@@ -1,0 +1,31 @@
+{
+  "model": "whisper-1",
+  "prompt": "忙送來",
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.5,
+    "text": "忙送來",
+    "words": [
+      {
+        "word": "忙",
+        "start": 0,
+        "end": 0.46000000834465027
+      },
+      {
+        "word": "送",
+        "start": 0.46000000834465027,
+        "end": 0.9200000166893005
+      },
+      {
+        "word": "來",
+        "start": 0.9200000166893005,
+        "end": 1.2400000095367432
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  }
+}

@@ -4620,16 +4620,10 @@ function FindManyChallenge({
     setCollectingId(item.id);
     playFoundChime();
     await Promise.all([playLessonChar(lesson, item.char), waitMs(520)]);
-    setFoundIds((prev) => {
-      const next = new Set(prev);
-      next.add(item.id);
-      const completedTotal = [...next].filter((id) => {
-        const candidate = items.find((item) => item.id === id);
-        return candidate ? targets.includes(candidate.char) : false;
-      }).length;
-      if (completedTotal >= targetTotal) onComplete();
-      return next;
-    });
+    const next = new Set(foundIds);
+    next.add(item.id);
+    setFoundIds(next);
+    if (foundTotal + 1 >= targetTotal) onComplete();
     setCollectingId(null);
   }
 

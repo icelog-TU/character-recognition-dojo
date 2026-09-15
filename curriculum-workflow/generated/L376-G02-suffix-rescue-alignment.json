@@ -1,0 +1,36 @@
+{
+  "model": "whisper-1",
+  "prompt": "經打通了",
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.5499999523162842,
+    "text": "經打通了",
+    "words": [
+      {
+        "word": "經",
+        "start": 0,
+        "end": 0.5600000023841858
+      },
+      {
+        "word": "打",
+        "start": 0.5600000023841858,
+        "end": 0.9399999976158142
+      },
+      {
+        "word": "通",
+        "start": 0.9399999976158142,
+        "end": 1.159999966621399
+      },
+      {
+        "word": "了",
+        "start": 1.159999966621399,
+        "end": 1.3799999952316284
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  }
+}

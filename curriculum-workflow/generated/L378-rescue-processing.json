@@ -1,0 +1,21 @@
+[
+  {
+    "lessonId": "L378",
+    "source": "curriculum-workflow/audio-inbox/L378/L378-G02-suffix.mp3",
+    "output": "public/assets/lessons/L378/audio/L378-G02-suffix.m4a",
+    "src": "/assets/lessons/L378/audio/L378-G02-suffix.m4a",
+    "durationMs": 1212,
+    "loudness": {
+      "before": {
+        "max": -6.2,
+        "mean": -20.4
+      },
+      "gainDb": 0,
+      "after": {
+        "max": -6.2,
+        "mean": -20.4
+      }
+    },
+    "note": "Processing-stage duration before final silence-only trim; final bytes and duration are in rescue-qa.json."
+  }
+]

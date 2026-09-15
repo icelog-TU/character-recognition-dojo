@@ -1,0 +1,36 @@
+{
+  "model": "whisper-1",
+  "prompt": "舊玩具已經",
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 2.1500000953674316,
+    "text": "舊玩具已經",
+    "words": [
+      {
+        "word": "舊",
+        "start": 0,
+        "end": 0.41999998688697815
+      },
+      {
+        "word": "玩",
+        "start": 0.41999998688697815,
+        "end": 0.7200000286102295
+      },
+      {
+        "word": "具",
+        "start": 0.7200000286102295,
+        "end": 0.9800000190734863
+      },
+      {
+        "word": "已經",
+        "start": 0.9800000190734863,
+        "end": 1.7999999523162842
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 3
+    }
+  }
+}
