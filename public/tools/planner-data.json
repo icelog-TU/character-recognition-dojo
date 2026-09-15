@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-15T11:51:27.937Z",
+  "exportedAt": "2026-09-15T11:52:49.533Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -178773,6 +178773,748 @@
               "text": "不要哭了，喝一口吧。",
               "correct": false,
               "audioSrc": "/assets/lessons/L366/audio/L366-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L367",
+      "order": 367,
+      "title": "謝",
+      "newChars": [
+        "謝"
+      ],
+      "zhuyin": {
+        "謝": "ㄒㄧㄝˋ"
+      },
+      "requiredRounds": 5,
+      "releaseBlockers": [
+        "L366"
+      ],
+      "sourceBoundary": "cd4abf4b1ffe125be5402883a31b3197e1e892cd",
+      "charAudio": {
+        "謝": "/assets/lessons/L367/audio/char-u8b1d.m4a"
+      },
+      "sentences": [
+        {
+          "id": "L367-S01",
+          "text": "收到驚喜，要說謝謝吧。",
+          "spokenText": "收到驚喜要說謝謝吧",
+          "focusChar": "謝",
+          "displayLines": [
+            "收到驚喜，",
+            "要說謝謝吧。"
+          ],
+          "imageNotes": "主角小女孩在家中打開一個小盒子，看到裡面是可愛的小禮物或驚喜物品，表情驚喜又開心。主角媽媽或主角爸爸在旁邊溫柔提醒她要說謝謝。不要出現可讀文字、品牌、卡片字樣、標誌或數字。",
+          "imagePrompt": "Use case: illustration-story. One square phone-readable children's picture-book image. Match all five L058 style references: fine pencil-and-watercolor linework, detailed clean environment, bright varied warm palette, softly modeled natural faces and stable preschool proportions. Use refined L115/L118/L119/L128 examples and L154/L162/L163 family identity. Never copy L058 people identities. Not flat cartoon, simple wash, anime, 3D, photo, toddler or teenager. Recurring protagonist girl: short dark bob, small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes, matching refined family reference face/age/proportions. Recurring mother: chin-length side-parted dark hair, warm natural adult face, ivory blouse/cardigan, blue jeans, matching family anchors, not teacher. In bright home living room girl has opened a small mint-colored gift box on low table, revealing a cute flower hairclip. She looks delighted and surprised. Mother beside her gently gestures toward gift with warm encouraging smile, reminding her to say thanks. No card. Cozy sofa and houseplants. No readable text, letters, numbers, labels, logos, brands, cards, captions, speech balloons, watermarks, book titles or pseudo-writing anywhere.",
+          "imageReuseDecision": "New scene required for approved action/cast; existing images used only as references.",
+          "imageSrc": "/assets/lessons/L367/images/L367-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L367/audio/L367-S01.m4a",
+            "durationMs": 2972,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 780
+              },
+              {
+                "charIndex": 2,
+                "startMs": 780,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1740,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2180,
+                "endMs": 2390
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2390,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2600,
+                "endMs": 2840
+              }
+            ]
+          }
+        },
+        {
+          "id": "L367-S02",
+          "text": "小光幫我找筆，我跟他道謝。",
+          "spokenText": "小光幫我找筆我跟他道謝",
+          "focusChar": "謝",
+          "displayLines": [
+            "小光幫我",
+            "找筆，",
+            "我跟他道謝。"
+          ],
+          "imageNotes": "教室裡，小光依照 public/assets/reference/lesson-cast/xiaoguang.webp 固定角色 reference 出場，幫主角小女孩在桌子旁或地上找到一支掉下去的筆。主角小女孩看著小光道謝。小光不能畫成 generic classmate，也不能畫成既有「你」小男孩。不要出現可讀文字、品牌或標誌。",
+          "imagePrompt": "Use case: illustration-story. One square phone-readable children's picture-book image. Match all five L058 style references: fine pencil-and-watercolor linework, detailed clean environment, bright varied warm palette, softly modeled natural faces and stable preschool proportions. Use refined L115/L118/L119/L128 examples and L154/L162/L163 family identity. Never copy L058 people identities. Not flat cartoon, simple wash, anime, 3D, photo, toddler or teenager. Recurring protagonist girl: short dark bob, small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes, matching refined family reference face/age/proportions. Xiaoguang MUST exactly match separate reference: round glasses, tidy short black side-parted hair, white short-sleeve shirt, navy knit vest, khaki shorts, white socks, brown shoes, dark green schoolbag. Bright classroom with small desks. Xiaoguang crouches next to desk having found a dropped plain pencil on floor, lifts it toward girl. Girl faces him warmly with thankful smile and hands lightly clasped. Pencil clearly visible. No teacher or other boy. No readable text, letters, numbers, labels, logos, brands, cards, captions, speech balloons, watermarks, book titles or pseudo-writing anywhere.",
+          "imageReuseDecision": "New scene required for approved action/cast; existing images used only as references.",
+          "imageSrc": "/assets/lessons/L367/images/L367-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L367/audio/L367-S02.m4a",
+            "durationMs": 3477,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1500,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2160,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2280,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2480,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2720,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3020,
+                "endMs": 3200
+              }
+            ]
+          }
+        },
+        {
+          "id": "L367-S03",
+          "text": "他一直說笑話，大家笑個不停。",
+          "spokenText": "他一直說笑話大家笑個不停",
+          "focusChar": "笑",
+          "displayLines": [
+            "他一直說",
+            "笑話，大家",
+            "笑個不停。"
+          ],
+          "imageNotes": "教室下課或家中客廳場景，固定 recurring「他」小男孩正在誇張地說笑話，旁邊幾個孩子笑得很開心，主角小女孩也在其中。畫面要表現「大家笑個不停」，但不要使用文字、對話框、笑話內容、字幕或標誌。",
+          "imagePrompt": "Use case: illustration-story. One square phone-readable children's picture-book image. Match all five L058 style references: fine pencil-and-watercolor linework, detailed clean environment, bright varied warm palette, softly modeled natural faces and stable preschool proportions. Use refined L115/L118/L119/L128 examples and L154/L162/L163 family identity. Never copy L058 people identities. Not flat cartoon, simple wash, anime, 3D, photo, toddler or teenager. Recurring protagonist girl: short dark bob, small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes, matching refined family reference face/age/proportions. Recurring HE sporty boy from L118-S02: short spiky dark hair, orange athletic T-shirt, navy shorts, red sneakers, green wristband. He tells a funny story with comical expressive hand gestures in classroom break. Protagonist girl and two visually distinct generic children laugh joyfully nearby, natural open smiles, no distress. Generic children in teal and yellow outfits, no glasses, no moon clips. Blank classroom boards, unmarked books. No readable text, letters, numbers, labels, logos, brands, cards, captions, speech balloons, watermarks, book titles or pseudo-writing anywhere.",
+          "imageReuseDecision": "New scene required for approved action/cast; existing images used only as references.",
+          "imageSrc": "/assets/lessons/L367/images/L367-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L367/audio/L367-S03.m4a",
+            "durationMs": 3214,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 430
+              },
+              {
+                "charIndex": 2,
+                "startMs": 430,
+                "endMs": 640
+              },
+              {
+                "charIndex": 3,
+                "startMs": 640,
+                "endMs": 980
+              },
+              {
+                "charIndex": 4,
+                "startMs": 980,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1260,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1760,
+                "endMs": 1950
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1950,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2140,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2440,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2580,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 11,
+                "startMs": 2760,
+                "endMs": 3000
+              }
+            ]
+          }
+        },
+        {
+          "id": "L367-S04",
+          "text": "綠葉還在，但是花都謝了。",
+          "spokenText": "綠葉還在但是花都謝了",
+          "focusChar": "謝",
+          "displayLines": [
+            "綠葉還在，",
+            "但是花都",
+            "謝了。"
+          ],
+          "imageNotes": "花園或陽台盆栽場景，枝葉仍然是綠色的，但花朵已經枯萎、低垂或掉落。主角小女孩可以蹲下觀察花，畫面要清楚對比「綠葉還在」和「花都謝了」。不要出現文字、標籤、數字或品牌。",
+          "imagePrompt": "Use case: illustration-story. One square phone-readable children's picture-book image. Match all five L058 style references: fine pencil-and-watercolor linework, detailed clean environment, bright varied warm palette, softly modeled natural faces and stable preschool proportions. Use refined L115/L118/L119/L128 examples and L154/L162/L163 family identity. Never copy L058 people identities. Not flat cartoon, simple wash, anime, 3D, photo, toddler or teenager. No people. Close child-eye view of a balcony flowering plant in plain terracotta pot. All leaves remain lush vividly green, but ALL flowers have faded and withered: drooping dry brownish petal heads and fallen faded pink petals below. Clear readable contrast of living green foliage and spent blossoms, no fresh blooming flowers. Clean balcony floor, soft daylight, leafy background, detailed pencil watercolor botanical texture. No readable text, letters, numbers, labels, logos, brands, cards, captions, speech balloons, watermarks, book titles or pseudo-writing anywhere.",
+          "imageReuseDecision": "New scene required for approved action/cast; existing images used only as references.",
+          "imageSrc": "/assets/lessons/L367/images/L367-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L367/audio/L367-S04.m4a",
+            "durationMs": 3220,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1580,
+                "endMs": 1790
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1790,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2000,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2300,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2700,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2880,
+                "endMs": 3080
+              }
+            ]
+          }
+        },
+        {
+          "id": "L367-S05",
+          "text": "不喜歡，但還是說聲謝謝吧。",
+          "spokenText": "不喜歡但還是說聲謝謝吧",
+          "focusChar": "謝",
+          "displayLines": [
+            "不喜歡，",
+            "但還是說聲",
+            "謝謝吧。"
+          ],
+          "imageNotes": "主角小女孩收到一個她不太喜歡的小禮物或點心，表情有點勉強；主角媽媽在旁邊溫柔提醒她要有禮貌。畫面要表現她不喜歡但仍準備道謝，不要讓送禮者看起來被羞辱或難過。不要出現可讀文字、品牌、標誌或卡片字樣。",
+          "imagePrompt": "Use case: illustration-story. One square phone-readable children's picture-book image. Match all five L058 style references: fine pencil-and-watercolor linework, detailed clean environment, bright varied warm palette, softly modeled natural faces and stable preschool proportions. Use refined L115/L118/L119/L128 examples and L154/L162/L163 family identity. Never copy L058 people identities. Not flat cartoon, simple wash, anime, 3D, photo, toddler or teenager. Recurring protagonist girl: short dark bob, small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes, matching refined family reference face/age/proportions. Recurring mother: chin-length side-parted dark hair, warm natural adult face, ivory blouse/cardigan, blue jeans, matching family anchors, not teacher. At home low table the girl holds an offered plain plate with a small green vegetable bun she does not like. Her expression is mildly reluctant, polite small closed smile, not disgust or cruelty. Mother beside her leans gently and offers reassuring hand on shoulder, kindly reminding gratitude. No unhappy giver. Soft daylight, cozy clean room, restrained natural emotion. No readable text, letters, numbers, labels, logos, brands, cards, captions, speech balloons, watermarks, book titles or pseudo-writing anywhere.",
+          "imageReuseDecision": "New scene required for approved action/cast; existing images used only as references.",
+          "imageSrc": "/assets/lessons/L367/images/L367-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L367/audio/L367-S05.m4a",
+            "durationMs": 4601,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 630
+              },
+              {
+                "charIndex": 2,
+                "startMs": 630,
+                "endMs": 920
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1560,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1840,
+                "endMs": 2410
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2410,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2980,
+                "endMs": 3440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3440,
+                "endMs": 3660
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3660,
+                "endMs": 3940
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3940,
+                "endMs": 4220
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4220,
+                "endMs": 4480
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L367-G01",
+          "type": "find-character",
+          "sentenceId": "L367-S01",
+          "targetChar": "謝",
+          "targetCharIndex": 6,
+          "prompt": "找出句子裡的字。"
+        },
+        {
+          "id": "L367-G02",
+          "type": "teach-character",
+          "sentenceId": "L367-S02",
+          "targetChar": "謝",
+          "targetCharIndex": 10,
+          "prompt": "教小幫手認字。",
+          "teachAudio": {
+            "prefixText": "小光幫我找筆我跟他道",
+            "prefixSrc": "/assets/lessons/L367/audio/L367-G02-prefix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L367/audio/L367-G02-prefix.m4a",
+              "durationMs": 3016,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 400
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 400,
+                  "endMs": 620
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 620,
+                  "endMs": 920
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 920,
+                  "endMs": 1240
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1240,
+                  "endMs": 1480
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 1480,
+                  "endMs": 1700
+                },
+                {
+                  "charIndex": 6,
+                  "startMs": 2160,
+                  "endMs": 2300
+                },
+                {
+                  "charIndex": 7,
+                  "startMs": 2300,
+                  "endMs": 2460
+                },
+                {
+                  "charIndex": 8,
+                  "startMs": 2460,
+                  "endMs": 2680
+                },
+                {
+                  "charIndex": 9,
+                  "startMs": 2680,
+                  "endMs": 2860
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L367-G03",
+          "type": "missing-character",
+          "sentenceId": "L367-S03",
+          "targetChar": "笑",
+          "targetCharIndex": 4,
+          "prompt": "補上不見的字。",
+          "missingIndexes": [
+            4
+          ],
+          "options": [
+            {
+              "id": "L367-G03-A",
+              "text": "笑",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L367-G04",
+          "type": "partial-order",
+          "sentenceId": "L367-S04",
+          "targetChar": "謝",
+          "prompt": "把句子排回正確順序。",
+          "missingIndexes": [
+            4,
+            5,
+            6,
+            8
+          ],
+          "options": [
+            {
+              "id": "L367-G04-1",
+              "text": "花",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "L367-G04-2",
+              "text": "謝",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "L367-G04-3",
+              "text": "但",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "L367-G04-4",
+              "text": "是",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L367-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L367-S05",
+          "targetChar": "謝",
+          "targetCharIndex": 8,
+          "prompt": "聽一聽，選出讀對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "不喜歡，但還是說聲謝謝吧。",
+              "correct": true,
+              "sentenceId": "L367-S05",
+              "audioSrc": "/assets/lessons/L367/audio/L367-S05.m4a",
+              "audio": {
+                "src": "/assets/lessons/L367/audio/L367-S05.m4a",
+                "durationMs": 4601,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 340
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 340,
+                    "endMs": 630
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 630,
+                    "endMs": 920
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1560,
+                    "endMs": 1840
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1840,
+                    "endMs": 2410
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2410,
+                    "endMs": 2980
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2980,
+                    "endMs": 3440
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3440,
+                    "endMs": 3660
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3660,
+                    "endMs": 3940
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3940,
+                    "endMs": 4220
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 4220,
+                    "endMs": 4480
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "不喜歡，但還是說聲謝謝嗎。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L367/audio/L367-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L367/audio/L367-G05-wrong-one.m4a",
+                "durationMs": 4386,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 420
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 420,
+                    "endMs": 710
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 710,
+                    "endMs": 1000
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1860,
+                    "endMs": 2160
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 2160,
+                    "endMs": 2440
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2440,
+                    "endMs": 2720
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2720,
+                    "endMs": 3240
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3240,
+                    "endMs": 3560
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3560,
+                    "endMs": 3770
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3770,
+                    "endMs": 3980
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3980,
+                    "endMs": 4260
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "不喜歡，但還是說聲謝謝了。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L367/audio/L367-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L367/audio/L367-G05-wrong-two.m4a",
+                "durationMs": 3783,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 340
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 340,
+                    "endMs": 620
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 620,
+                    "endMs": 900
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1540,
+                    "endMs": 1800
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1800,
+                    "endMs": 2040
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2040,
+                    "endMs": 2280
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2280,
+                    "endMs": 2740
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2740,
+                    "endMs": 2980
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2980,
+                    "endMs": 3220
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3220,
+                    "endMs": 3460
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3460,
+                    "endMs": 3700
+                  }
+                ]
+              }
             }
           ]
         }

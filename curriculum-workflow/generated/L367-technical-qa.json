@@ -1,0 +1,219 @@
+{
+  "sourceBoundary": "cd4abf4b1ffe125be5402883a31b3197e1e892cd",
+  "allowedCharacters": "PASS",
+  "coverage": {
+    "謝": 6,
+    "吧": 2,
+    "但": 2,
+    "笑": 2,
+    "歡": 1,
+    "喜": 2
+  },
+  "displayLines": "PASS",
+  "stage4": "PASS",
+  "timingReport": [
+    {
+      "id": "L367-S01",
+      "durationMs": 2972,
+      "lastEndMs": 2840,
+      "minSpanMs": 160,
+      "maxSpanMs": 420
+    },
+    {
+      "id": "L367-S02",
+      "durationMs": 3477,
+      "lastEndMs": 3200,
+      "minSpanMs": 120,
+      "maxSpanMs": 420
+    },
+    {
+      "id": "L367-S03",
+      "durationMs": 3214,
+      "lastEndMs": 3000,
+      "minSpanMs": 140,
+      "maxSpanMs": 340
+    },
+    {
+      "id": "L367-S04",
+      "durationMs": 3220,
+      "lastEndMs": 3080,
+      "minSpanMs": 180,
+      "maxSpanMs": 400
+    },
+    {
+      "id": "L367-S05",
+      "durationMs": 4601,
+      "lastEndMs": 4480,
+      "minSpanMs": 220,
+      "maxSpanMs": 570
+    },
+    {
+      "id": "L367-G02-prefix",
+      "durationMs": 3016,
+      "lastEndMs": 2860,
+      "minSpanMs": 140,
+      "maxSpanMs": 400
+    },
+    {
+      "id": "L367-G05-wrong-one",
+      "durationMs": 4386,
+      "lastEndMs": 4260,
+      "minSpanMs": 210,
+      "maxSpanMs": 520
+    },
+    {
+      "id": "L367-G05-wrong-two",
+      "durationMs": 3783,
+      "lastEndMs": 3700,
+      "minSpanMs": 240,
+      "maxSpanMs": 460
+    }
+  ],
+  "audioReport": [
+    {
+      "src": "/assets/lessons/L367/audio/L367-S01.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 2972,
+      "meanVolumeDb": -18.4,
+      "maxVolumeDb": -3.8,
+      "bytes": 37329
+    },
+    {
+      "src": "/assets/lessons/L367/audio/L367-S02.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3477,
+      "meanVolumeDb": -18.1,
+      "maxVolumeDb": -2.8,
+      "bytes": 44721
+    },
+    {
+      "src": "/assets/lessons/L367/audio/L367-S03.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3214,
+      "meanVolumeDb": -18.4,
+      "maxVolumeDb": -3.4,
+      "bytes": 40648
+    },
+    {
+      "src": "/assets/lessons/L367/audio/L367-S04.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3220,
+      "meanVolumeDb": -18.4,
+      "maxVolumeDb": -2.2,
+      "bytes": 42502
+    },
+    {
+      "src": "/assets/lessons/L367/audio/L367-S05.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 4601,
+      "meanVolumeDb": -19,
+      "maxVolumeDb": -2,
+      "bytes": 57806
+    },
+    {
+      "src": "/assets/lessons/L367/audio/L367-G02-prefix.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3016,
+      "meanVolumeDb": -18.4,
+      "maxVolumeDb": -2,
+      "bytes": 38173
+    },
+    {
+      "src": "/assets/lessons/L367/audio/L367-G05-wrong-one.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 4386,
+      "meanVolumeDb": -17.9,
+      "maxVolumeDb": -2.5,
+      "bytes": 54815
+    },
+    {
+      "src": "/assets/lessons/L367/audio/L367-G05-wrong-two.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3783,
+      "meanVolumeDb": -18.1,
+      "maxVolumeDb": -2,
+      "bytes": 51713
+    },
+    {
+      "src": "/assets/lessons/L367/audio/char-u8b1d.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 1161,
+      "meanVolumeDb": -19.4,
+      "maxVolumeDb": -2.1,
+      "bytes": 14085
+    }
+  ],
+  "imageReport": [
+    {
+      "id": "L367-S01",
+      "format": "WEBP 1024 1024",
+      "bytes": 136158,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L367-S02",
+      "format": "WEBP 1024 1024",
+      "bytes": 116490,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L367-S03",
+      "format": "WEBP 1024 1024",
+      "bytes": 135350,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L367-S04",
+      "format": "WEBP 1024 1024",
+      "bytes": 203664,
+      "styleLock": "PASS",
+      "cast": "N/A"
+    },
+    {
+      "id": "L367-S05",
+      "format": "WEBP 1024 1024",
+      "bytes": 132436,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "assetBytes": 1105890,
+  "g05MeanVolumeSpreadDb": 1.1000000000000014,
+  "normalizationTests": "PASS: six standard simplified/traditional mappings; unrelated characters unchanged",
+  "rejectedImageDrafts": [],
+  "browserQA": {
+    "status": "tooling limitation",
+    "reason": "In-app browser unavailable. Chrome local L367-S01 M4A navigation returned net::ERR_BLOCKED_BY_CLIENT. Phone-width playback/listening/highlight QA could not be completed.",
+    "teacherReview": "Post-main repair queue under current SOP; no ordinary pre-merge approval required."
+  }
+}
