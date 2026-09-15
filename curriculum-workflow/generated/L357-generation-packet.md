@@ -4,7 +4,7 @@
 
 Owner: Production C. Branch: codex/l357-complete-package.
 Base/final checked origin/main: 71762b03e12b5e82770874bc634183d70cefcb33; formal L001-L353, R041/R042 merged after L345.
-Status: partial-package; audio acceptance and phone playback QA pending.
+Status: dependency-blocked-asset-complete; teacher manual pre-merge asset QA PASS; supervisor repaired dependency-blocked preview zhuyinOverrides for 園/公/雞/排.
 dependsOnLessons: ["L354", "L355", "L356"]
 provisionalLearnedChars: ["排", "雞", "公"]
 Dependencies block Release only. Release owns shared production JSON, planner, ledger, integration and deployment.
@@ -26,7 +26,7 @@ The following request records are final and match the draft. No approved sentenc
     "園": "ㄩㄢˊ"
   },
   "targetSentenceCount": 5,
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "dependsOnLessons": [
     "L354",
     "L355",
@@ -634,7 +634,7 @@ The following request records are final and match the draft. No approved sentenc
     ],
     "audioGeneration": "Repo OpenAI ai:audio; all processed by assets:audio. Sentences/G02 prefix/G05 use gpt-4o-mini-tts coral. Current charAudio and G02 suffix use gpt-4o-mini-tts sage.",
     "audioAlignment": "Five sentences, G02 prefix, both G05 wrong choices, and supervisor-added measured G02 suffix single-character timing are present in the draft. G02 suffix audio acceptance still requires teacher/manual playback confirmation before asset-complete status.",
-    "manualPlayback": "NOT COMPLETED: active tool environment cannot hear audio input or verify phone playback/recording. Automated transcript checks are not a replacement for this gate.",
+    "manualPlayback": "Teacher manual pre-merge asset QA PASS on rescue commit: teacher confirmed L357 audio and images have no problems. Teacher reported missing zhuyin for newer/provisional characters; Supervisor added sentence-level zhuyinOverrides for 園/公/雞/排. Browser/phone automation remains represented by manual teacher acceptance.",
     "shortAudioSecondaryCheck": "gpt-4o-transcribe returned the homophone 源 for 園 and Latin phonetic text for 裡; these do not establish a verified tone/playback result.",
     "assetFormatAudit": "PASS: scoped L357 assets:audit --strict, 5 images / 10 audio files, 0 errors / 0 warnings. Total asset folder 1,476,449 bytes."
   }
@@ -688,9 +688,10 @@ Full L058 style-only set was opened as a contact sheet. Refined examples L115-S0
 - Coverage: 園5, 公2, 雞2, 排3, 正1, 位1; all minimums PASS.
 - Stage 4 fixed order, sentence usage once, target indexes, single-Han partial-order cards and G05 full wrong texts: PASS.
 - All 5 sentence audio files, G02 prefix and both G05 wrong options: assets:align:ai PASS; saved in draft.
-- G02 suffix now has supervisor-added measured single-character timing from the audio file, but single-character sound/tones and phone playback still need teacher/manual review; see productionQa above.
+- G02 suffix has supervisor-added measured single-character timing from the audio file; teacher manual audio acceptance PASS.
 - validate:production PASS on temporary L357-only fixture.
 - assets:audit --strict PASS on temporary L357-only fixture, 5 images and 10 audio refs, zero errors/warnings. Final assets 1,476,449 bytes.
+- Teacher manual pre-merge asset QA PASS: teacher confirmed L357 audio and images have no problems. Supervisor repaired missing dependency-blocked preview zhuyin by adding sentence-level zhuyinOverrides for 園/公/雞/排.
 - Full verify skipped because dependency-blocked lesson is absent from shared production JSON.
 - Shared script change requiring Release inspection: alignment simplified/traditional normalization 园->園, 长->長, 鸡->雞 only. No homophone substitution.
 - S05 first draft rejected for photographic texture, regenerated and excluded from commit.

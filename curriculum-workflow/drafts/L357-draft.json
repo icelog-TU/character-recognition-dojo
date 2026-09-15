@@ -23,7 +23,7 @@
     "雞",
     "公"
   ],
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "sentences": [
     {
       "id": "L357-S01",
@@ -79,6 +79,10 @@
             "endMs": 2540
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "1": "ㄩㄢˊ",
+        "6": "ㄐㄧ"
       }
     },
     {
@@ -145,6 +149,11 @@
             "endMs": 2700
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "0": "ㄍㄨㄥ",
+        "1": "ㄩㄢˊ",
+        "6": "ㄆㄞˊ"
       }
     },
     {
@@ -201,6 +210,11 @@
             "endMs": 2520
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "0": "ㄍㄨㄥ",
+        "1": "ㄐㄧ",
+        "5": "ㄩㄢˊ"
       }
     },
     {
@@ -272,6 +286,9 @@
             "endMs": 3260
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "1": "ㄩㄢˊ"
       }
     },
     {
@@ -349,6 +366,11 @@
             "endMs": 3300
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "1": "ㄩㄢˊ",
+        "5": "ㄆㄞˊ",
+        "7": "ㄆㄞˊ"
       }
     }
   ],
@@ -692,8 +714,9 @@
       "S05 first draft rejected for overly photographic cabbage/soil texture; regenerated and rejected draft excluded."
     ],
     "audioGeneration": "Repo OpenAI ai:audio; all processed by assets:audio. Sentences/G02 prefix/G05 use gpt-4o-mini-tts coral. Current charAudio and G02 suffix use gpt-4o-mini-tts sage.",
-    "audioAlignment": "Five sentences, G02 prefix, both G05 wrong choices, and supervisor-added measured G02 suffix single-character timing are present in the draft. G02 suffix audio acceptance still requires teacher/manual playback confirmation before asset-complete status.",
-    "manualPlayback": "NOT COMPLETED: active tool environment cannot hear audio input or verify phone playback/recording. Automated transcript checks are not a replacement for this gate.",
-    "shortAudioSecondaryCheck": "gpt-4o-transcribe returned the homophone 源 for 園 and Latin phonetic text for 裡; these do not establish a verified tone/playback result."
+    "audioAlignment": "Five sentences, G02 prefix, both G05 wrong choices, and supervisor-added measured G02 suffix single-character timing are present in the draft. Teacher manual audio acceptance PASS.",
+    "manualPlayback": "Teacher manual pre-merge asset QA PASS on rescue commit: teacher confirmed L357 audio and images have no problems. Teacher reported missing zhuyin for newer/provisional characters; Supervisor added sentence-level zhuyinOverrides for 園/公/雞/排. Browser/phone automation remains represented by manual teacher acceptance.",
+    "shortAudioSecondaryCheck": "gpt-4o-transcribe returned the homophone 源 for 園 and Latin phonetic text for 裡; these do not establish a verified tone/playback result.",
+    "zhuyinRepair": "Added zhuyinOverrides for dependency-blocked preview display: 園=ㄩㄢˊ, 公=ㄍㄨㄥ, 雞=ㄐㄧ, 排=ㄆㄞˊ."
   }
 }
