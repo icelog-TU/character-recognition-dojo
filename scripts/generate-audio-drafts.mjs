@@ -53,7 +53,7 @@ const baseSpeechInstructions = [
   "For a single Chinese character, read the character once as a complete syllable, not as separate zhuyin sounds.",
 ].join(" ");
 
-async function createSpeech({ apiKey, model, voice, input, outputPath, instructionsExtra = "" }) {
+async function createSpeech({ apiKey, model, voice, input, outputPath, instructionsExtra = "", speed = 0.9 }) {
   const response = await fetch("https://api.openai.com/v1/audio/speech", {
     method: "POST",
     headers: {
@@ -65,7 +65,7 @@ async function createSpeech({ apiKey, model, voice, input, outputPath, instructi
       voice,
       input,
       response_format: "mp3",
-      speed: 0.9,
+      speed,
       instructions: [baseSpeechInstructions, instructionsExtra].filter(Boolean).join(" "),
     }),
   });
@@ -89,6 +89,7 @@ const includeGameAudio = includeSentences && flagEnabled(args.gameAudio ?? args[
 const apiKey = requireOpenAIKey();
 const model = getEnv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts");
 const voice = getEnv("OPENAI_TTS_VOICE", "coral");
+const charSpeed = Number(getEnv("OPENAI_TTS_CHAR_SPEED", "0.65"));
 const curriculum = JSON.parse(fs.readFileSync(curriculumPath, "utf8"));
 const lesson =
   curriculum.lessons?.find((candidate) => candidate.id === lessonId) ??
@@ -104,11 +105,11 @@ fs.mkdirSync(outputDir, { recursive: true });
 
 const jobs = [];
 const jobPaths = new Set();
-function addJob(input, outputPath, instructionsExtra = "") {
+function addJob(input, outputPath, instructionsExtra = "", speed = 0.9) {
   if (!input || !outputPath) return;
   if (jobPaths.has(outputPath)) return;
   jobPaths.add(outputPath);
-  jobs.push({ input, outputPath, instructionsExtra });
+  jobs.push({ input, outputPath, instructionsExtra, speed });
 }
 
 if (includeChars) {
@@ -120,6 +121,7 @@ if (includeChars) {
       zhuyin
         ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once.`
         : "",
+      Number.isFinite(charSpeed) ? charSpeed : 0.65,
     );
   }
 }
@@ -169,6 +171,7 @@ for (const job of jobs) {
     input: job.input,
     outputPath: job.outputPath,
     instructionsExtra: job.instructionsExtra,
+    speed: job.speed,
   });
 }
 
