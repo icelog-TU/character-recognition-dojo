@@ -40,19 +40,9 @@
     "奇"
   ],
   "dependsOnLessons": [
-    "L355",
-    "L356",
-    "L357",
-    "L358",
-    "L359",
     "L360"
   ],
   "provisionalLearnedChars": [
-    "雞",
-    "公",
-    "園",
-    "物",
-    "怪",
     "奇"
   ],
   "requiredRounds": 5,
@@ -72,7 +62,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R043/audio/R043-S01.m4a",
-        "durationMs": 3059,
+        "durationMs": 2507,
         "charTimings": [
           {
             "charIndex": 0,
@@ -96,7 +86,7 @@
           },
           {
             "charIndex": 4,
-            "startMs": 1700,
+            "startMs": 1320,
             "endMs": 1720
           },
           {
@@ -107,7 +97,7 @@
           {
             "charIndex": 6,
             "startMs": 2000,
-            "endMs": 2200
+            "endMs": 2300
           }
         ]
       }
@@ -128,7 +118,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R043/audio/R043-S02.m4a",
-        "durationMs": 5861,
+        "durationMs": 4179,
         "charTimings": [
           {
             "charIndex": 0,
@@ -143,47 +133,47 @@
           {
             "charIndex": 2,
             "startMs": 560,
-            "endMs": 1080
+            "endMs": 1060
           },
           {
             "charIndex": 3,
-            "startMs": 1080,
-            "endMs": 1260
+            "startMs": 1060,
+            "endMs": 1280
           },
           {
             "charIndex": 4,
-            "startMs": 1260,
-            "endMs": 1660
+            "startMs": 1280,
+            "endMs": 1540
           },
           {
             "charIndex": 5,
-            "startMs": 1660,
-            "endMs": 1920
+            "startMs": 1540,
+            "endMs": 1800
           },
           {
             "charIndex": 6,
-            "startMs": 1920,
-            "endMs": 2100
+            "startMs": 1800,
+            "endMs": 2140
           },
           {
             "charIndex": 7,
-            "startMs": 3040,
-            "endMs": 3130
+            "startMs": 2700,
+            "endMs": 2960
           },
           {
             "charIndex": 8,
-            "startMs": 3130,
+            "startMs": 2960,
             "endMs": 3220
           },
           {
             "charIndex": 9,
             "startMs": 3220,
-            "endMs": 3680
+            "endMs": 3660
           },
           {
             "charIndex": 10,
-            "startMs": 3680,
-            "endMs": 3840
+            "startMs": 3660,
+            "endMs": 3960
           }
         ]
       }
@@ -203,52 +193,52 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R043/audio/R043-S03.m4a",
-        "durationMs": 5312,
+        "durationMs": 3552,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 440
+            "endMs": 460
           },
           {
             "charIndex": 1,
-            "startMs": 440,
-            "endMs": 700
+            "startMs": 460,
+            "endMs": 800
           },
           {
             "charIndex": 2,
-            "startMs": 700,
-            "endMs": 940
+            "startMs": 800,
+            "endMs": 1060
           },
           {
             "charIndex": 3,
-            "startMs": 1560,
-            "endMs": 1561
+            "startMs": 1540,
+            "endMs": 1820
           },
           {
             "charIndex": 4,
-            "startMs": 1560,
-            "endMs": 1780
+            "startMs": 1820,
+            "endMs": 2100
           },
           {
             "charIndex": 5,
-            "startMs": 1780,
-            "endMs": 2000
+            "startMs": 2100,
+            "endMs": 2400
           },
           {
             "charIndex": 6,
-            "startMs": 2000,
-            "endMs": 2320
+            "startMs": 2400,
+            "endMs": 2740
           },
           {
             "charIndex": 7,
-            "startMs": 2320,
-            "endMs": 2620
+            "startMs": 2740,
+            "endMs": 3060
           },
           {
             "charIndex": 8,
-            "startMs": 2620,
-            "endMs": 2840
+            "startMs": 3060,
+            "endMs": 3340
           }
         ]
       }
@@ -269,7 +259,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R043/audio/R043-S04.m4a",
-        "durationMs": 4496,
+        "durationMs": 4272,
         "charTimings": [
           {
             "charIndex": 0,
@@ -324,7 +314,7 @@
           {
             "charIndex": 10,
             "startMs": 3680,
-            "endMs": 3940
+            "endMs": 4060
           }
         ]
       }
@@ -344,7 +334,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R043/audio/R043-S05.m4a",
-        "durationMs": 3530,
+        "durationMs": 3274,
         "charTimings": [
           {
             "charIndex": 0,
@@ -389,7 +379,7 @@
           {
             "charIndex": 8,
             "startMs": 2680,
-            "endMs": 2940
+            "endMs": 3060
           }
         ]
       }
@@ -416,7 +406,69 @@
         "targetText": "原",
         "suffixText": "因不明",
         "prefixSrc": "/assets/reviews/R043/audio/R043-G02-prefix.m4a",
-        "suffixSrc": "/assets/reviews/R043/audio/R043-G02-suffix.m4a"
+        "suffixSrc": "/assets/reviews/R043/audio/R043-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/reviews/R043/audio/R043-G02-prefix.m4a",
+          "durationMs": 2600,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 300
+            },
+            {
+              "charIndex": 1,
+              "startMs": 300,
+              "endMs": 600
+            },
+            {
+              "charIndex": 2,
+              "startMs": 600,
+              "endMs": 1140
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1140,
+              "endMs": 1400
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1400,
+              "endMs": 1700
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1700,
+              "endMs": 2000
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2000,
+              "endMs": 2380
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/reviews/R043/audio/R043-G02-suffix.m4a",
+          "durationMs": 1579,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 540
+            },
+            {
+              "charIndex": 1,
+              "startMs": 540,
+              "endMs": 880
+            },
+            {
+              "charIndex": 2,
+              "startMs": 880,
+              "endMs": 1360
+            }
+          ]
+        }
       }
     },
     {
@@ -489,29 +541,182 @@
           "text": "我們常跟爸爸去公園。",
           "correct": true,
           "sentenceId": "R043-S05",
-          "audioSrc": "/assets/reviews/R043/audio/R043-S05.m4a"
+          "audioSrc": "/assets/reviews/R043/audio/R043-S05.m4a",
+          "audio": {
+            "src": "/assets/reviews/R043/audio/R043-S05.m4a",
+            "durationMs": 3274,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 520
+              },
+              {
+                "charIndex": 2,
+                "startMs": 520,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1560,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1760,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2680,
+                "endMs": 3060
+              }
+            ]
+          }
         },
         {
           "id": "wrong-one",
           "text": "我們常跟媽媽去公園。",
           "correct": false,
-          "audioSrc": "/assets/reviews/R043/audio/R043-G05-wrong-one.m4a"
+          "audioSrc": "/assets/reviews/R043/audio/R043-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/reviews/R043/audio/R043-G05-wrong-one.m4a",
+            "durationMs": 2716,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 400
+              },
+              {
+                "charIndex": 2,
+                "startMs": 400,
+                "endMs": 740
+              },
+              {
+                "charIndex": 3,
+                "startMs": 740,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1020,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1260,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1460,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1860,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2140,
+                "endMs": 2500
+              }
+            ]
+          }
         },
         {
           "id": "wrong-two",
           "text": "我們常跟爸爸去花園。",
           "correct": false,
-          "audioSrc": "/assets/reviews/R043/audio/R043-G05-wrong-two.m4a"
+          "audioSrc": "/assets/reviews/R043/audio/R043-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/reviews/R043/audio/R043-G05-wrong-two.m4a",
+            "durationMs": 3483,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 480
+              },
+              {
+                "charIndex": 2,
+                "startMs": 480,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1550
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1550,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1760,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2880,
+                "endMs": 3280
+              }
+            ]
+          }
         }
       ]
     }
   ],
-  "packageStatus": "partial-package",
+  "packageStatus": "asset-complete-package",
   "productionQa": {
     "date": "2026-09-15",
-    "status": "partial-package",
-    "technicalFormats": "PASS: 10 WebP / 18 processed AAC m4a, 44100Hz mono; ffmpeg decode 18/18; strict format audit zero warnings; G05 loudness spread passes",
-    "structure": "PASS: allowed ceiling L360, pair coverage 30/30, exact approved text/spokenText/displayLines, game indexes/cards/options; in-memory curriculum validation with six dependency drafts",
+    "status": "asset-complete-package",
+    "sopRef": "496aa87af167b0760bcee8f9ca959d6cc657edfd",
+    "releaseDependency": "L355-L359 now in origin/main; L360 奇 remains the integration prerequisite; review pair precedes L361",
     "imageStyleAndCast": {
       "R043-S01": {
         "styleLock": "PASS",
@@ -534,116 +739,98 @@
         "cast": "PASS"
       }
     },
-    "imageReferences": "Complete L058 S01-S05 style-only, L115 S01/S02, L118 S02, L119 S01, L128 S03, L154 S01, L162 S04, L163 S02 family, xiaoyue.webp; visually checked final WebPs via contact sheets and full images",
-    "folderBytes": 1395993,
-    "timingFindings": [
-      "R043-S01 特[4] 1700-1720 (20ms)",
-      "R043-S01 measured duration minus last AI end = 859ms; listen/trim or repair alignment",
-      "R043-S02 measured duration minus last AI end = 2021ms; listen/trim or repair alignment",
-      "R043-S03 請[3] 1560-1561 (1ms)",
-      "R043-S03 overlap at 4",
-      "R043-S03 measured duration minus last AI end = 2472ms; listen/trim or repair alignment",
-      "R043-S04 measured duration minus last AI end = 556ms; listen/trim or repair alignment",
-      "R043-S05 measured duration minus last AI end = 590ms; listen/trim or repair alignment",
-      "R043-G02-prefix measured duration minus last AI end = 814ms; listen/trim or repair alignment",
-      "R043-G02-suffix measured duration minus last AI end = 959ms; listen/trim or repair alignment",
-      "R043-G05-wrong-one measured duration minus last AI end = 898ms; listen/trim or repair alignment",
-      "R043-G05-wrong-two measured duration minus last AI end = 904ms; listen/trim or repair alignment"
-    ],
-    "manualPlaybackQa": "PENDING; no teacher approval for R043/R044. L354 approval does not apply.",
-    "release": "BLOCKED: unresolved timing/tail QA plus L355-L360 dependencies. Not asset-complete, not merge-ready.",
-    "repairPlan": "Listen against final audio; repair the impossible R043 S01/S03 boundaries based on heard syllables, verify actual final-syllable endpoint before trimming tails, rerun AI alignment after audio edits, then mobile sentence and G02/G05 playback/recording QA.",
-    "browserAutomation": {
-      "attemptedSha": "db22ca7f407307bab2d81b7b8eb0c4528201bd45",
-      "exactUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R043&ref=db22ca7f407307bab2d81b7b8eb0c4528201bd45",
-      "loaded": "R043: five sentence cards and five extra audio entries loaded",
-      "failure": "First R043-S01 Play click: inspected target navigated or closed; tab inventory confirms This page crashed. No successful audible playback, highlighting, microphone recording or stitched replay QA.",
-      "teacherManualQa": "NOT performed; no PASS; technical timing/tail gate still fails. Do not promote via fallback."
-    }
+    "technicalChecks": "PASS: 30/30 pair coverage; locked allowed ceiling L360; exact approved text, displayLines, Stage 4 indexes/cards; 10 WebP; 18 AAC M4A 44100Hz mono; ffmpeg decode 18/18; strict format audit zero warnings; G05 volume spread within 3dB",
+    "timingChecks": "PASS: final processed files transcribed with all Han characters; sequential indexes, 80-900ms spans, no overlap, final highlight endpoints leave 202-223ms tail",
+    "timingCorrection": "R043-S01 特 manually smoothed to 1320-1720ms using inspected PCM onset (1320ms at -35dB following silence; vowel energy 1460-1660ms; next syllable 1720ms). R043-S03 regenerated at speed 1.0; 請 final AI interval 1540-1820ms. Last syllable endpoints reconciled with 20ms acoustic frames; AAC tail remux preserves 200ms decay margin, no speech splicing.",
+    "transcriptionContext": "R043 G02 suffix uses weather/原因 context in Whisper prompt to disambiguate same-sound spelling; returned Han text is compared unchanged except simplified/traditional equivalents.",
+    "browserQa": "Tooling unavailable: prior first S01 Play click on immutable R043 preview caused This page crashed. Listening/highlight/recording interaction not executed successfully; accepted technical-gates fallback under current SOP. No manual playback PASS claimed.",
+    "teacherReview": "Post-main subjective image/audio repair queue; no pre-main teacher review or cloud sync required for ordinary Production completion.",
+    "folderBytes": 1376393,
+    "packageIntake": "Review-specific R043-R044-intake.cjs checks pushed ref. Latest upstream check-package-intake accepts only L###; R### unsupported, not a review asset defect."
   },
   "stage4AudioAlignment": {
     "R043-G02-prefix": {
       "spokenText": "今年天氣特別熱",
       "src": "/assets/reviews/R043/audio/R043-G02-prefix.m4a",
-      "durationMs": 3154,
+      "durationMs": 2600,
       "charTimings": [
         {
           "charIndex": 0,
           "startMs": 0,
-          "endMs": 310
+          "endMs": 300
         },
         {
           "charIndex": 1,
-          "startMs": 310,
-          "endMs": 620
+          "startMs": 300,
+          "endMs": 600
         },
         {
           "charIndex": 2,
-          "startMs": 620,
+          "startMs": 600,
           "endMs": 1140
         },
         {
           "charIndex": 3,
           "startMs": 1140,
-          "endMs": 1380
+          "endMs": 1400
         },
         {
           "charIndex": 4,
-          "startMs": 1380,
-          "endMs": 1710
+          "startMs": 1400,
+          "endMs": 1700
         },
         {
           "charIndex": 5,
-          "startMs": 1710,
-          "endMs": 2040
+          "startMs": 1700,
+          "endMs": 2000
         },
         {
           "charIndex": 6,
-          "startMs": 2040,
-          "endMs": 2340
+          "startMs": 2000,
+          "endMs": 2380
         }
       ]
     },
     "R043-G02-suffix": {
       "spokenText": "因不明",
       "src": "/assets/reviews/R043/audio/R043-G02-suffix.m4a",
-      "durationMs": 2159,
+      "durationMs": 1579,
       "charTimings": [
         {
           "charIndex": 0,
           "startMs": 0,
-          "endMs": 560
+          "endMs": 540
         },
         {
           "charIndex": 1,
-          "startMs": 560,
-          "endMs": 900
+          "startMs": 540,
+          "endMs": 880
         },
         {
           "charIndex": 2,
-          "startMs": 900,
-          "endMs": 1200
+          "startMs": 880,
+          "endMs": 1360
         }
       ]
     },
     "R043-G05-wrong-one": {
       "spokenText": "我們常跟媽媽去公園",
       "src": "/assets/reviews/R043/audio/R043-G05-wrong-one.m4a",
-      "durationMs": 3218,
+      "durationMs": 2716,
       "charTimings": [
         {
           "charIndex": 0,
           "startMs": 0,
-          "endMs": 210
+          "endMs": 200
         },
         {
           "charIndex": 1,
-          "startMs": 210,
-          "endMs": 420
+          "startMs": 200,
+          "endMs": 400
         },
         {
           "charIndex": 2,
-          "startMs": 420,
+          "startMs": 400,
           "endMs": 740
         },
         {
@@ -659,11 +846,11 @@
         {
           "charIndex": 5,
           "startMs": 1260,
-          "endMs": 1440
+          "endMs": 1460
         },
         {
           "charIndex": 6,
-          "startMs": 1440,
+          "startMs": 1460,
           "endMs": 1860
         },
         {
@@ -674,14 +861,14 @@
         {
           "charIndex": 8,
           "startMs": 2140,
-          "endMs": 2320
+          "endMs": 2500
         }
       ]
     },
     "R043-G05-wrong-two": {
       "spokenText": "我們常跟爸爸去花園",
       "src": "/assets/reviews/R043/audio/R043-G05-wrong-two.m4a",
-      "durationMs": 4044,
+      "durationMs": 3483,
       "charTimings": [
         {
           "charIndex": 0,
@@ -721,12 +908,12 @@
         {
           "charIndex": 7,
           "startMs": 2520,
-          "endMs": 2900
+          "endMs": 2880
         },
         {
           "charIndex": 8,
-          "startMs": 2900,
-          "endMs": 3140
+          "startMs": 2880,
+          "endMs": 3280
         }
       ]
     }

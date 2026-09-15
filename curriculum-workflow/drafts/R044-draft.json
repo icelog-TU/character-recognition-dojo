@@ -40,19 +40,9 @@
     "奇"
   ],
   "dependsOnLessons": [
-    "L355",
-    "L356",
-    "L357",
-    "L358",
-    "L359",
     "L360"
   ],
   "provisionalLearnedChars": [
-    "雞",
-    "公",
-    "園",
-    "物",
-    "怪",
     "奇"
   ],
   "requiredRounds": 5,
@@ -73,7 +63,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R044/audio/R044-S01.m4a",
-        "durationMs": 5488,
+        "durationMs": 4156,
         "charTimings": [
           {
             "charIndex": 0,
@@ -83,16 +73,16 @@
           {
             "charIndex": 1,
             "startMs": 380,
-            "endMs": 640
+            "endMs": 660
           },
           {
             "charIndex": 2,
-            "startMs": 640,
-            "endMs": 830
+            "startMs": 660,
+            "endMs": 840
           },
           {
             "charIndex": 3,
-            "startMs": 830,
+            "startMs": 840,
             "endMs": 1020
           },
           {
@@ -123,12 +113,12 @@
           {
             "charIndex": 9,
             "startMs": 3300,
-            "endMs": 3680
+            "endMs": 3660
           },
           {
             "charIndex": 10,
-            "startMs": 3680,
-            "endMs": 3840
+            "startMs": 3660,
+            "endMs": 3940
           }
         ]
       }
@@ -148,7 +138,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R044/audio/R044-S02.m4a",
-        "durationMs": 4886,
+        "durationMs": 3158,
         "charTimings": [
           {
             "charIndex": 0,
@@ -193,7 +183,7 @@
           {
             "charIndex": 8,
             "startMs": 2760,
-            "endMs": 2860
+            "endMs": 2940
           }
         ]
       }
@@ -213,16 +203,16 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R044/audio/R044-S03.m4a",
-        "durationMs": 3382,
+        "durationMs": 2972,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 320
+            "endMs": 300
           },
           {
             "charIndex": 1,
-            "startMs": 320,
+            "startMs": 300,
             "endMs": 620
           },
           {
@@ -253,7 +243,7 @@
           {
             "charIndex": 7,
             "startMs": 2500,
-            "endMs": 2640
+            "endMs": 2760
           }
         ]
       }
@@ -273,7 +263,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R044/audio/R044-S04.m4a",
-        "durationMs": 3028,
+        "durationMs": 2763,
         "charTimings": [
           {
             "charIndex": 0,
@@ -303,7 +293,7 @@
           {
             "charIndex": 5,
             "startMs": 1560,
-            "endMs": 1760
+            "endMs": 1740
           },
           {
             "charIndex": 6,
@@ -334,7 +324,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/reviews/R044/audio/R044-S05.m4a",
-        "durationMs": 4134,
+        "durationMs": 3901,
         "charTimings": [
           {
             "charIndex": 0,
@@ -349,16 +339,16 @@
           {
             "charIndex": 2,
             "startMs": 720,
-            "endMs": 1140
+            "endMs": 1120
           },
           {
             "charIndex": 3,
-            "startMs": 1140,
-            "endMs": 1440
+            "startMs": 1120,
+            "endMs": 1420
           },
           {
             "charIndex": 4,
-            "startMs": 1440,
+            "startMs": 1420,
             "endMs": 1660
           },
           {
@@ -369,22 +359,22 @@
           {
             "charIndex": 6,
             "startMs": 1960,
-            "endMs": 2200
+            "endMs": 2240
           },
           {
             "charIndex": 7,
-            "startMs": 2200,
+            "startMs": 2240,
             "endMs": 2730
           },
           {
             "charIndex": 8,
             "startMs": 2730,
-            "endMs": 3260
+            "endMs": 3220
           },
           {
             "charIndex": 9,
-            "startMs": 3260,
-            "endMs": 3560
+            "startMs": 3220,
+            "endMs": 3680
           }
         ]
       }
@@ -411,7 +401,69 @@
         "targetText": "讓",
         "suffixText": "客人進客廳",
         "prefixSrc": "/assets/reviews/R044/audio/R044-G02-prefix.m4a",
-        "suffixSrc": "/assets/reviews/R044/audio/R044-G02-suffix.m4a"
+        "suffixSrc": "/assets/reviews/R044/audio/R044-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/reviews/R044/audio/R044-G02-prefix.m4a",
+          "durationMs": 2577,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 420
+            },
+            {
+              "charIndex": 1,
+              "startMs": 420,
+              "endMs": 780
+            },
+            {
+              "charIndex": 2,
+              "startMs": 780,
+              "endMs": 1000
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1000,
+              "endMs": 1220
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1900,
+              "endMs": 2360
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/reviews/R044/audio/R044-G02-suffix.m4a",
+          "durationMs": 2298,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 460
+            },
+            {
+              "charIndex": 1,
+              "startMs": 460,
+              "endMs": 960
+            },
+            {
+              "charIndex": 2,
+              "startMs": 960,
+              "endMs": 1360
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1360,
+              "endMs": 1780
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1780,
+              "endMs": 2080
+            }
+          ]
+        }
       }
     },
     {
@@ -484,29 +536,182 @@
           "text": "這家餐廳正好有位子。",
           "correct": true,
           "sentenceId": "R044-S02",
-          "audioSrc": "/assets/reviews/R044/audio/R044-S02.m4a"
+          "audioSrc": "/assets/reviews/R044/audio/R044-S02.m4a",
+          "audio": {
+            "src": "/assets/reviews/R044/audio/R044-S02.m4a",
+            "durationMs": 3158,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1160,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1880,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 2940
+              }
+            ]
+          }
         },
         {
           "id": "wrong-one",
           "text": "這家飯店正好有位子。",
           "correct": false,
-          "audioSrc": "/assets/reviews/R044/audio/R044-G05-wrong-one.m4a"
+          "audioSrc": "/assets/reviews/R044/audio/R044-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/reviews/R044/audio/R044-G05-wrong-one.m4a",
+            "durationMs": 2902,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1140,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1720,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2020,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2220,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2540,
+                "endMs": 2700
+              }
+            ]
+          }
         },
         {
           "id": "wrong-two",
           "text": "這家餐廳正好有椅子。",
           "correct": false,
-          "audioSrc": "/assets/reviews/R044/audio/R044-G05-wrong-two.m4a"
+          "audioSrc": "/assets/reviews/R044/audio/R044-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/reviews/R044/audio/R044-G05-wrong-two.m4a",
+            "durationMs": 3134,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1140,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2160,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2480,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2920
+              }
+            ]
+          }
         }
       ]
     }
   ],
-  "packageStatus": "partial-package",
+  "packageStatus": "asset-complete-package",
   "productionQa": {
     "date": "2026-09-15",
-    "status": "partial-package",
-    "technicalFormats": "PASS: 10 WebP / 18 processed AAC m4a, 44100Hz mono; ffmpeg decode 18/18; strict format audit zero warnings; G05 loudness spread passes",
-    "structure": "PASS: allowed ceiling L360, pair coverage 30/30, exact approved text/spokenText/displayLines, game indexes/cards/options; in-memory curriculum validation with six dependency drafts",
+    "status": "asset-complete-package",
+    "sopRef": "496aa87af167b0760bcee8f9ca959d6cc657edfd",
+    "releaseDependency": "L355-L359 now in origin/main; L360 奇 remains the integration prerequisite; review pair precedes L361",
     "imageStyleAndCast": {
       "R044-S01": {
         "styleLock": "PASS",
@@ -529,35 +734,20 @@
         "cast": "PASS"
       }
     },
-    "imageReferences": "Complete L058 S01-S05 style-only, L115 S01/S02, L118 S02, L119 S01, L128 S03, L154 S01, L162 S04, L163 S02 family, xiaoyue.webp; visually checked final WebPs via contact sheets and full images",
-    "folderBytes": 1374653,
-    "timingFindings": [
-      "R044-S01 measured duration minus last AI end = 1648ms; listen/trim or repair alignment",
-      "R044-S02 measured duration minus last AI end = 2026ms; listen/trim or repair alignment",
-      "R044-S03 measured duration minus last AI end = 742ms; listen/trim or repair alignment",
-      "R044-S04 measured duration minus last AI end = 488ms; listen/trim or repair alignment",
-      "R044-S05 measured duration minus last AI end = 574ms; listen/trim or repair alignment",
-      "R044-G02-prefix measured duration minus last AI end = 1477ms; listen/trim or repair alignment",
-      "R044-G02-suffix measured duration minus last AI end = 619ms; listen/trim or repair alignment",
-      "R044-G05-wrong-one measured duration minus last AI end = 734ms; listen/trim or repair alignment",
-      "R044-G05-wrong-two measured duration minus last AI end = 1307ms; listen/trim or repair alignment"
-    ],
-    "manualPlaybackQa": "PENDING; no teacher approval for R043/R044. L354 approval does not apply.",
-    "release": "BLOCKED: unresolved timing/tail QA plus L355-L360 dependencies. Not asset-complete, not merge-ready.",
-    "repairPlan": "Listen against final audio; repair the impossible R043 S01/S03 boundaries based on heard syllables, verify actual final-syllable endpoint before trimming tails, rerun AI alignment after audio edits, then mobile sentence and G02/G05 playback/recording QA.",
-    "browserAutomation": {
-      "attemptedSha": "db22ca7f407307bab2d81b7b8eb0c4528201bd45",
-      "exactUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R043&ref=db22ca7f407307bab2d81b7b8eb0c4528201bd45",
-      "loaded": "R043: five sentence cards and five extra audio entries loaded",
-      "failure": "First R043-S01 Play click: inspected target navigated or closed; tab inventory confirms This page crashed. No successful audible playback, highlighting, microphone recording or stitched replay QA.",
-      "teacherManualQa": "NOT performed; no PASS; technical timing/tail gate still fails. Do not promote via fallback."
-    }
+    "technicalChecks": "PASS: 30/30 pair coverage; locked allowed ceiling L360; exact approved text, displayLines, Stage 4 indexes/cards; 10 WebP; 18 AAC M4A 44100Hz mono; ffmpeg decode 18/18; strict format audit zero warnings; G05 volume spread within 3dB",
+    "timingChecks": "PASS: final processed files transcribed with all Han characters; sequential indexes, 80-900ms spans, no overlap, final highlight endpoints leave 202-223ms tail",
+    "timingCorrection": "R043-S01 特 manually smoothed to 1320-1720ms using inspected PCM onset (1320ms at -35dB following silence; vowel energy 1460-1660ms; next syllable 1720ms). R043-S03 regenerated at speed 1.0; 請 final AI interval 1540-1820ms. Last syllable endpoints reconciled with 20ms acoustic frames; AAC tail remux preserves 200ms decay margin, no speech splicing.",
+    "transcriptionContext": "R043 G02 suffix uses weather/原因 context in Whisper prompt to disambiguate same-sound spelling; returned Han text is compared unchanged except simplified/traditional equivalents.",
+    "browserQa": "Tooling unavailable: prior first S01 Play click on immutable R043 preview caused This page crashed. Listening/highlight/recording interaction not executed successfully; accepted technical-gates fallback under current SOP. No manual playback PASS claimed.",
+    "teacherReview": "Post-main subjective image/audio repair queue; no pre-main teacher review or cloud sync required for ordinary Production completion.",
+    "folderBytes": 1362501,
+    "packageIntake": "Review-specific R043-R044-intake.cjs checks pushed ref. Latest upstream check-package-intake accepts only L###; R### unsupported, not a review asset defect."
   },
   "stage4AudioAlignment": {
     "R044-G02-prefix": {
       "spokenText": "客人到了請",
       "src": "/assets/reviews/R044/audio/R044-G02-prefix.m4a",
-      "durationMs": 3737,
+      "durationMs": 2577,
       "charTimings": [
         {
           "charIndex": 0,
@@ -581,24 +771,24 @@
         },
         {
           "charIndex": 4,
-          "startMs": 1920,
-          "endMs": 2260
+          "startMs": 1900,
+          "endMs": 2360
         }
       ]
     },
     "R044-G02-suffix": {
       "spokenText": "客人進客廳",
       "src": "/assets/reviews/R044/audio/R044-G02-suffix.m4a",
-      "durationMs": 2559,
+      "durationMs": 2298,
       "charTimings": [
         {
           "charIndex": 0,
           "startMs": 0,
-          "endMs": 480
+          "endMs": 460
         },
         {
           "charIndex": 1,
-          "startMs": 480,
+          "startMs": 460,
           "endMs": 960
         },
         {
@@ -609,19 +799,19 @@
         {
           "charIndex": 3,
           "startMs": 1360,
-          "endMs": 1800
+          "endMs": 1780
         },
         {
           "charIndex": 4,
-          "startMs": 1800,
-          "endMs": 1940
+          "startMs": 1780,
+          "endMs": 2080
         }
       ]
     },
     "R044-G05-wrong-one": {
       "spokenText": "這家飯店正好有位子",
       "src": "/assets/reviews/R044/audio/R044-G05-wrong-one.m4a",
-      "durationMs": 3394,
+      "durationMs": 2902,
       "charTimings": [
         {
           "charIndex": 0,
@@ -666,23 +856,23 @@
         {
           "charIndex": 8,
           "startMs": 2540,
-          "endMs": 2660
+          "endMs": 2700
         }
       ]
     },
     "R044-G05-wrong-two": {
       "spokenText": "這家餐廳正好有椅子",
       "src": "/assets/reviews/R044/audio/R044-G05-wrong-two.m4a",
-      "durationMs": 4187,
+      "durationMs": 3134,
       "charTimings": [
         {
           "charIndex": 0,
           "startMs": 0,
-          "endMs": 260
+          "endMs": 240
         },
         {
           "charIndex": 1,
-          "startMs": 260,
+          "startMs": 240,
           "endMs": 580
         },
         {
@@ -693,11 +883,11 @@
         {
           "charIndex": 3,
           "startMs": 940,
-          "endMs": 1120
+          "endMs": 1140
         },
         {
           "charIndex": 4,
-          "startMs": 1120,
+          "startMs": 1140,
           "endMs": 1900
         },
         {
@@ -708,17 +898,17 @@
         {
           "charIndex": 6,
           "startMs": 2160,
-          "endMs": 2500
+          "endMs": 2480
         },
         {
           "charIndex": 7,
-          "startMs": 2500,
+          "startMs": 2480,
           "endMs": 2740
         },
         {
           "charIndex": 8,
           "startMs": 2740,
-          "endMs": 2880
+          "endMs": 2920
         }
       ]
     }

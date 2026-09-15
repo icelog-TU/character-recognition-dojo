@@ -4,8 +4,8 @@ const mode=process.argv[2],root=path.resolve('src/curriculum/sample-lessons.json
 if(mode==='production'||mode==='formats'||mode==='curriculum'){
  let virtual={lessons:[],reviewLessons:units};
  if(mode==='curriculum'){
-  virtual=JSON.parse(read(root,'utf8'));virtual.reviewLessons.push(...units);
-  for(let n=355;n<=360;n++)virtual.lessons.push(JSON.parse(cp.execFileSync('git',['show',`origin/codex/l${n}-complete-package:curriculum-workflow/drafts/L${n}-draft.json`],{encoding:'utf8'})));
+  virtual=JSON.parse(cp.execFileSync('git',['show','origin/main:src/curriculum/sample-lessons.json'],{encoding:'utf8',maxBuffer:64000000}));virtual.lessons=virtual.lessons.filter(l=>l.order<=360);virtual.reviewLessons=virtual.reviewLessons.filter(r=>r.afterLessonOrder<=360&&!units.some(u=>u.id===r.id));virtual.reviewLessons.push(...units);
+  for(let n=355;n<=360;n++)if(!virtual.lessons.some(l=>l.order===n))virtual.lessons.push(JSON.parse(cp.execFileSync('git',['show',`origin/codex/l${n}-complete-package:curriculum-workflow/drafts/L${n}-draft.json`],{encoding:'utf8'})));
  }
  fs.readFileSync=function(file,...args){return path.resolve(String(file))===root?JSON.stringify(virtual):read.call(this,file,...args)};
  process.argv=['node','script','--strict'];
