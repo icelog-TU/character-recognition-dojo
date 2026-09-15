@@ -1,0 +1,688 @@
+{
+  "id": "L357",
+  "order": 357,
+  "newChars": [
+    "園"
+  ],
+  "zhuyin": {
+    "園": "ㄩㄢˊ"
+  },
+  "charAudio": {
+    "園": "/assets/lessons/L357/audio/char-u5712.m4a"
+  },
+  "title": "園",
+  "requiredRounds": 5,
+  "originHint": "Teacher-approved Production C handoff. Base origin/main 71762b03, formal L001-L353 and reviews R001-R042. L354/L355/L356 are Release-only blockers. Release owns production JSON, planner, ledger, final integration and deployment.",
+  "dependsOnLessons": [
+    "L354",
+    "L355",
+    "L356"
+  ],
+  "provisionalLearnedChars": [
+    "排",
+    "雞",
+    "公"
+  ],
+  "packageStatus": "partial-package",
+  "sentences": [
+    {
+      "id": "L357-S01",
+      "text": "校園裡有養小雞。",
+      "spokenText": "校園裡有養小雞",
+      "focusChar": "園",
+      "displayLines": [
+        "校園裡有",
+        "養小雞。"
+      ],
+      "imageNotes": "學校校園的一角，有安全圍起來的小雞活動區，幾隻小雞在裡面走動或吃東西。可以有主角小女孩和同學遠遠觀看。要看得出是校園，不要可讀校名、標語、班牌或文字。",
+      "imagePrompt": "Use case: illustration-story. Square 1:1 phone-readable scene with safe margins. Match the full L058 style-only reference set: rich warm picture-book pencil-and-watercolor linework, luminous natural light, detailed clean environments, softly modeled forms and bright varied palette. No generic flat cartoon, thin wash, anime, 3D or photorealism. Do not copy any L058 person identity. Use the recurring protagonist girl from L115-S01 and L154/L162/L163: stable preschool proportions, short dark bob, small pink hair clip, pink cardigan, pale top, navy skirt, pink shoes and plain yellow bag. School courtyard corner with recognizable classroom windows, corridor and play yard in background, no writing. Several tiny yellow chicks are safely inside a low secure mesh enclosure with feed and water. The protagonist girl watches from outside at a respectful distance. Chicks and school context both clear. No other children necessary. No text, letters, numbers, labels, signs, logos, brand marks or watermarks anywhere.",
+      "imageReuseDecision": "New scene: reviewed earlier scene metadata does not establish this exact object arrangement and meaning.",
+      "imageSrc": "/assets/lessons/L357/images/L357-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L357/audio/L357-S01.m4a",
+        "durationMs": 3165,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1120,
+            "endMs": 1640
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1640,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2000,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2380,
+            "endMs": 2540
+          }
+        ]
+      }
+    },
+    {
+      "id": "L357-S02",
+      "text": "公園裡有好幾排長椅。",
+      "spokenText": "公園裡有好幾排長椅",
+      "focusChar": "園",
+      "displayLines": [
+        "公園裡有",
+        "好幾排長椅。"
+      ],
+      "imageNotes": "公園步道旁有好幾排長椅，排列整齊，周圍有樹、花草和開放空間。不要文字標示、告示牌內容、品牌或標誌。",
+      "imagePrompt": "Use case: illustration-story. Square 1:1 phone-readable scene with safe margins. Match the full L058 style-only reference set: rich warm picture-book pencil-and-watercolor linework, luminous natural light, detailed clean environments, softly modeled forms and bright varied palette. No generic flat cartoon, thin wash, anime, 3D or photorealism. Do not copy any L058 person identity. Public park with THREE clearly separated parallel rows of long wooden benches, each row containing two long benches, beside a footpath. Slightly elevated viewpoint makes rows obvious. Trees, flowerbeds and open lawn, softly detailed daylight. No people. No text, letters, numbers, labels, signs, logos, brand marks or watermarks anywhere.",
+      "imageReuseDecision": "New scene: reviewed earlier scene metadata does not establish this exact object arrangement and meaning.",
+      "imageSrc": "/assets/lessons/L357/images/L357-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L357/audio/L357-S02.m4a",
+        "durationMs": 3760,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 840
+          },
+          {
+            "charIndex": 3,
+            "startMs": 840,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1360,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1700,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1860,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2160,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2600,
+            "endMs": 2700
+          }
+        ]
+      }
+    },
+    {
+      "id": "L357-S03",
+      "text": "公雞跑進花園裡。",
+      "spokenText": "公雞跑進花園裡",
+      "focusChar": "園",
+      "displayLines": [
+        "公雞跑進",
+        "花園裡。"
+      ],
+      "imageNotes": "一隻公雞跑進花園裡，花園中有花草和小路，畫面清楚呈現公雞在花園裡。可以有主角小女孩在旁邊驚訝看著，但不要讓畫面變成追逐或危險。不要文字或標誌。",
+      "imagePrompt": "Use case: illustration-story. Square 1:1 phone-readable scene with safe margins. Match the full L058 style-only reference set: rich warm picture-book pencil-and-watercolor linework, luminous natural light, detailed clean environments, softly modeled forms and bright varied palette. No generic flat cartoon, thin wash, anime, 3D or photorealism. Do not copy any L058 person identity. Use the recurring protagonist girl from L115-S01 and L154/L162/L163: stable preschool proportions, short dark bob, small pink hair clip, pink cardigan, pale top, navy skirt, pink shoes and plain yellow bag. One rooster with red comb, golden neck and dark curved tail stepping quickly through a small open garden gate into colorful flowerbeds and a garden path. The protagonist girl stands to one side, mildly surprised and watching. No chasing or danger. No text, letters, numbers, labels, signs, logos, brand marks or watermarks anywhere.",
+      "imageReuseDecision": "New scene: reviewed earlier scene metadata does not establish this exact object arrangement and meaning.",
+      "imageSrc": "/assets/lessons/L357/images/L357-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L357/audio/L357-S03.m4a",
+        "durationMs": 3490,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 480
+          },
+          {
+            "charIndex": 1,
+            "startMs": 480,
+            "endMs": 660
+          },
+          {
+            "charIndex": 2,
+            "startMs": 660,
+            "endMs": 1340
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1340,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1680,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2020,
+            "endMs": 2180
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2180,
+            "endMs": 2520
+          }
+        ]
+      }
+    },
+    {
+      "id": "L357-S04",
+      "text": "花園的角落正好有位子。",
+      "spokenText": "花園的角落正好有位子",
+      "focusChar": "園",
+      "displayLines": [
+        "花園的角落",
+        "正好有位子。"
+      ],
+      "imageNotes": "花園角落有一張空椅子或空座位，主角小女孩正好可以坐下休息。畫面要清楚呈現「花園角落」和「有空位子」。不要文字、標籤或座號。",
+      "imagePrompt": "Use case: illustration-story. Square 1:1 phone-readable scene with safe margins. Match the full L058 style-only reference set: rich warm picture-book pencil-and-watercolor linework, luminous natural light, detailed clean environments, softly modeled forms and bright varied palette. No generic flat cartoon, thin wash, anime, 3D or photorealism. Do not copy any L058 person identity. Use the recurring protagonist girl from L115-S01 and L154/L162/L163: stable preschool proportions, short dark bob, small pink hair clip, pink cardigan, pale top, navy skirt, pink shoes and plain yellow bag. A sheltered right-angle corner of a flower garden, formed by two low hedges and lush flowerbeds, contains one plainly unoccupied garden bench. The protagonist girl stands next to it with a pleased resting expression, about to sit, while the seat remains fully visible and empty. Garden corner and available seat are the focus. No text, letters, numbers, labels, signs, logos, brand marks or watermarks anywhere.",
+      "imageReuseDecision": "New scene: reviewed earlier scene metadata does not establish this exact object arrangement and meaning.",
+      "imageSrc": "/assets/lessons/L357/images/L357-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L357/audio/L357-S04.m4a",
+        "durationMs": 4415,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1300,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1580,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2240,
+            "endMs": 2580
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2580,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2800,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3120,
+            "endMs": 3260
+          }
+        ]
+      }
+    },
+    {
+      "id": "L357-S05",
+      "text": "菜園裡有一排一排的白菜。",
+      "spokenText": "菜園裡有一排一排的白菜",
+      "focusChar": "園",
+      "displayLines": [
+        "菜園裡有",
+        "一排一排的",
+        "白菜。"
+      ],
+      "imageNotes": "菜園裡種著一排一排整齊的白菜，泥土田畦清楚，白菜排列要明顯。可以有陽光和簡單菜園環境，不需要人物。不要文字、數字、標籤或標誌。",
+      "imagePrompt": "Use case: illustration-story. Square 1:1 phone-readable scene with safe margins. Match the full L058 style-only reference set: rich warm picture-book pencil-and-watercolor linework, luminous natural light, detailed clean environments, softly modeled forms and bright varied palette. No generic flat cartoon, thin wash, anime, 3D or photorealism. Do not copy any L058 person identity. Vegetable garden with several unmistakable parallel soil beds of mature Chinese napa cabbages: elongated upright pale-green heads with crinkled green leaves and broad creamy white ribs, NOT round Western cabbages or lettuces. Clear brown soil furrows between neat rows recede into distance. Warm sunlight, simple garden boundary, no people. No text, letters, numbers, labels, signs, logos, brand marks or watermarks anywhere. Final regenerated prompt: clearly hand-drawn picture-book plate, fine pencil outlines, broad softly painted leaf planes, medium-wide entire beds; no photographic microtexture.",
+      "imageReuseDecision": "New scene: reviewed earlier scene metadata does not establish this exact object arrangement and meaning.",
+      "imageSrc": "/assets/lessons/L357/images/L357-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L357/audio/L357-S05.m4a",
+        "durationMs": 4388,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 520
+          },
+          {
+            "charIndex": 1,
+            "startMs": 520,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1440,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1840,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2100,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2400,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2620,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2940,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3040,
+            "endMs": 3300
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L357-G01",
+      "type": "find-character",
+      "sentenceId": "L357-S01",
+      "targetChar": "園",
+      "targetCharIndex": 1,
+      "prompt": "找到園，點一下。"
+    },
+    {
+      "id": "L357-G02",
+      "type": "teach-character",
+      "sentenceId": "L357-S03",
+      "targetChar": "園",
+      "targetCharIndex": 5,
+      "prompt": "幫忙說出這個字。",
+      "teachAudio": {
+        "prefixText": "公雞跑進花",
+        "targetText": "園",
+        "suffixText": "裡",
+        "prefixSrc": "/assets/lessons/L357/audio/L357-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L357/audio/L357-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L357/audio/L357-G02-prefix.m4a",
+          "durationMs": 2177,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 440
+            },
+            {
+              "charIndex": 1,
+              "startMs": 440,
+              "endMs": 760
+            },
+            {
+              "charIndex": 2,
+              "startMs": 760,
+              "endMs": 1120
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1120,
+              "endMs": 1420
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1420,
+              "endMs": 1680
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L357-G03",
+      "type": "missing-character",
+      "sentenceId": "L357-S02",
+      "targetChar": "園",
+      "targetCharIndex": 1,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "L357-G03-A",
+          "text": "園",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "L357-G04",
+      "type": "partial-order",
+      "sentenceId": "L357-S05",
+      "targetChar": "園",
+      "prompt": "把句子排回正確順序。",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "id": "L357-G04-A",
+          "text": "菜",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L357-G04-B",
+          "text": "園",
+          "correct": true,
+          "correctOrder": 1
+        },
+        {
+          "id": "L357-G04-C",
+          "text": "裡",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L357-G04-D",
+          "text": "有",
+          "correct": true,
+          "correctOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "L357-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L357-S04",
+      "targetChar": "園",
+      "targetCharIndex": 1,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "花園的角落正好有位子。",
+          "correct": true,
+          "sentenceId": "L357-S04",
+          "audioSrc": "/assets/lessons/L357/audio/L357-S04.m4a",
+          "audio": {
+            "src": "/assets/lessons/L357/audio/L357-S04.m4a",
+            "durationMs": 4415,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2800,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3120,
+                "endMs": 3260
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "公園的角落正好有位子。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L357/audio/L357-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L357/audio/L357-G05-wrong-one.m4a",
+            "durationMs": 3939,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1240,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1520,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2680,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2940,
+                "endMs": 3320
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3320,
+                "endMs": 3460
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "花園的角落正好有椅子。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L357/audio/L357-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L357/audio/L357-G05-wrong-two.m4a",
+            "durationMs": 4781,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 520
+              },
+              {
+                "charIndex": 2,
+                "startMs": 520,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1100,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1360,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2820,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3040,
+                "endMs": 3240
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "productionQa": {
+    "styleLock": {
+      "S01": "PASS",
+      "S02": "PASS",
+      "S03": "PASS",
+      "S04": "PASS",
+      "S05": "PASS"
+    },
+    "cast": {
+      "S01": "PASS",
+      "S02": "N/A",
+      "S03": "PASS",
+      "S04": "PASS",
+      "S05": "N/A"
+    },
+    "rejectedImages": [
+      "S05 first draft rejected for overly photographic cabbage/soil texture; regenerated and rejected draft excluded."
+    ],
+    "audioGeneration": "Repo OpenAI ai:audio; all processed by assets:audio. Sentences/G02 prefix/G05 use gpt-4o-mini-tts coral. Current charAudio and G02 suffix use gpt-4o-mini-tts sage.",
+    "audioAlignment": "Five sentences, G02 prefix, and both G05 wrong choices passed assets:align:ai. G02 suffix single character remains unverified: Whisper returned a homophone or empty transcript across regenerations; no fabricated suffix timing.",
+    "manualPlayback": "NOT COMPLETED: active tool environment cannot hear audio input or verify phone playback/recording. Automated transcript checks are not a replacement for this gate.",
+    "shortAudioSecondaryCheck": "gpt-4o-transcribe returned the homophone 源 for 園 and Latin phonetic text for 裡; these do not establish a verified tone/playback result."
+  }
+}

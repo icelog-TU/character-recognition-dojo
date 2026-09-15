@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L357 | 園 | claimed | Production C | `codex/l357-complete-package` | L354:排, L355:雞, L356:公 | 排, 雞, 公 | `curriculum-workflow/lesson-requests/L357.json`; `curriculum-workflow/generated/L357-generation-packet.md`; `curriculum-workflow/drafts/L357-draft.json` | `public/assets/lessons/L357/`; `curriculum-workflow/audio-inbox/L357/` | Base origin/main 71762b03; dependencies block Release only; approved five sentences and canonical Stage 4. |
+| L357 | 園 | partial-package | Production C | `codex/l357-complete-package` | L354:排, L355:雞, L356:公 | 排, 雞, 公 | `curriculum-workflow/lesson-requests/L357.json`; `curriculum-workflow/generated/L357-generation-packet.md`; `curriculum-workflow/drafts/L357-draft.json` | `public/assets/lessons/L357/`; `curriculum-workflow/audio-inbox/L357/` | Base origin/main 71762b03. All images and audio files present; sentence/G02-prefix/G05 alignment PASS; G02 suffix acceptance and manual phone/audio QA pending. Not asset-complete. Release-only dependencies remain. |
 
 ## Status Values
 
