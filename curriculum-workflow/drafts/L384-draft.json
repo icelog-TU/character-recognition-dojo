@@ -1,0 +1,719 @@
+{
+  "id": "L384",
+  "order": 384,
+  "title": "寫",
+  "newChars": [
+    "寫"
+  ],
+  "zhuyin": {
+    "寫": "ㄒㄧㄝˇ"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [
+    "L379",
+    "L380",
+    "L381",
+    "L382",
+    "L383"
+  ],
+  "provisionalLearnedChars": [
+    "送",
+    "連",
+    "傳",
+    "相",
+    "信"
+  ],
+  "teacherNotes": "Teacher-approved L384 single-character lesson. Base 250ca4a3361a15104ba19158bb1b0710dac43ecc; formal L001-L375, 379 learned characters; full allowed set 385. Learner dependencies L379-L383 (送連傳相信); no outside-coverage provisional. Release requires R045/R046 and L376-L383 in playable order. Dependencies block Release only. Stage 2 uses three 寫 and three prior learned distractors. G03 exactly 寫/畫/拿; G04 three single-Han cards 太/相/信. Handoff isCorrect is normalized to supported correct with unchanged answer mapping. S02 phone means contact number recorded on paper then digitally sent, not passing paper; no readable numerals. S04 matching illegible writing, not drawings. 寫 ㄒㄧㄝˇ; 相 in 相信/相同 ㄒㄧㄤ; 傳說 ㄔㄨㄢˊ. Teacher subjective review is post-main. NOT COMPLETED: G02 prefix 把電話 cannot reliably pass the exact-transcript/timing gate after 8 standalone generations (7 regenerations). Rejected latest candidate is retained only in ignored audio-inbox; shipping prefix is absent. Never substitute 打電話 or splice S02. Phone/tablet playback and final package validation remain pending. This is partial-package, not asset-complete.",
+  "packageStatus": "partial-package",
+  "charAudio": {
+    "寫": "/assets/lessons/L384/audio/char-u5beb.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L384-S01",
+      "text": "我寫信給小月，請你送去。",
+      "spokenText": "我寫信給小月請你送去",
+      "displayLines": [
+        "我寫信",
+        "給小月，",
+        "請你送去。"
+      ],
+      "focusChar": "寫",
+      "imageNotes": "教室課間，主角小女孩把剛寫好的折疊信紙交給固定「你」小男孩，另一手指向稍遠處坐著的小月，請他代送。桌上留著筆，呈現剛寫完、正在交付的時點，不要讓女孩同時還在寫同一張信。小月使用 public/assets/reference/lesson-cast/xiaoyue.webp；「你」不可畫成哥哥或小光。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book illustration with safe margins and a phone-readable composition. Strictly match full L058 style reference sheet: detailed expressive pencil-and-watercolor linework, warm natural daylight, rich but clean environments, bright natural palette, soft natural faces, stable preschool proportions. Not generic simplified watercolor, not anime, not flat cartoon, not photo or 3D. L058 is style only, not identity. Refined/cast sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 protagonist household identity. Girl: short dark bob, pink hair clip, pink cardigan, navy skirt, pink shoes, same preschool face and proportions as family anchors. Mother: same soft dark shoulder-length hair, cream cardigan, blue skirt/trousers, family-anchor adult face. Father: same short dark brown hair, blue shirt, khaki trousers and family-anchor face. Fixed YOU boy: preschool, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, NOT older brother, sporty HE boy or Xiaoguang. Xiaoyue uses dedicated reference: long softly wavy chestnut hair, crescent hairclip, lavender cardigan, cream shirt, teal pleated skirt, white socks, purple shoes. Only include the characters named in the scene. No readable text, letters, digits, signs, subtitles, logos, brands, watermarks or UI symbols anywhere. Writing must be purely illegible tiny broken pencil strokes, never legible characters or digits.\nPrimary scene: 教室課間，主角小女孩把剛寫好的折疊信紙交給固定「你」小男孩，另一手指向稍遠處坐著的小月，請他代送。桌上留著筆，呈現剛寫完、正在交付的時點，不要讓女孩同時還在寫同一張信。小月使用 public/assets/reference/lesson-cast/xiaoyue.webp；「你」不可畫成哥哥或小光。",
+      "imageSrc": "/assets/lessons/L384/images/L384-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L384/audio/L384-S01.m4a",
+        "durationMs": 5037,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 540
+          },
+          {
+            "charIndex": 1,
+            "startMs": 540,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1160,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1440,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2120,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2520,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 6,
+            "startMs": 3320,
+            "endMs": 3600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3600,
+            "endMs": 3900
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3900,
+            "endMs": 4140
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4140,
+            "endMs": 4400
+          }
+        ]
+      }
+    },
+    {
+      "id": "L384-S02",
+      "text": "把電話寫下來，傳給爸爸。",
+      "spokenText": "把電話寫下來傳給爸爸",
+      "displayLines": [
+        "把電話",
+        "寫下來，",
+        "傳給爸爸。"
+      ],
+      "focusChar": "寫",
+      "imageNotes": "家中桌邊，主角媽媽正在對主角小女孩交代事情；女孩用筆記下聯絡電話，媽媽拿著手機在旁，準備協助拍下記錄再傳給不在現場的爸爸。這裡「電話」指電話號碼，不是畫一部電話；「傳」是手機傳送，不是遞紙。紙面與螢幕只呈現不可辨識的筆跡或簡化圖形，不畫可讀號碼。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book illustration with safe margins and a phone-readable composition. Strictly match full L058 style reference sheet: detailed expressive pencil-and-watercolor linework, warm natural daylight, rich but clean environments, bright natural palette, soft natural faces, stable preschool proportions. Not generic simplified watercolor, not anime, not flat cartoon, not photo or 3D. L058 is style only, not identity. Refined/cast sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 protagonist household identity. Girl: short dark bob, pink hair clip, pink cardigan, navy skirt, pink shoes, same preschool face and proportions as family anchors. Mother: same soft dark shoulder-length hair, cream cardigan, blue skirt/trousers, family-anchor adult face. Father: same short dark brown hair, blue shirt, khaki trousers and family-anchor face. Fixed YOU boy: preschool, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, NOT older brother, sporty HE boy or Xiaoguang. Xiaoyue uses dedicated reference: long softly wavy chestnut hair, crescent hairclip, lavender cardigan, cream shirt, teal pleated skirt, white socks, purple shoes. Only include the characters named in the scene. No readable text, letters, digits, signs, subtitles, logos, brands, watermarks or UI symbols anywhere. Writing must be purely illegible tiny broken pencil strokes, never legible characters or digits.\nPrimary scene: 家中桌邊，主角媽媽正在對主角小女孩交代事情；女孩用筆記下聯絡電話，媽媽拿著手機在旁，準備協助拍下記錄再傳給不在現場的爸爸。這裡「電話」指電話號碼，不是畫一部電話；「傳」是手機傳送，不是遞紙。紙面與螢幕只呈現不可辨識的筆跡或簡化圖形，不畫可讀號碼。",
+      "imageSrc": "/assets/lessons/L384/images/L384-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L384/audio/L384-S02.m4a",
+        "durationMs": 4591,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 220
+          },
+          {
+            "charIndex": 1,
+            "startMs": 220,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1020
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1020,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1460,
+            "endMs": 1740
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1740,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2360,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2660,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2960,
+            "endMs": 3130
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3130,
+            "endMs": 3300
+          }
+        ]
+      }
+    },
+    {
+      "id": "L384-S03",
+      "text": "這個傳說，我不太相信。",
+      "spokenText": "這個傳說我不太相信",
+      "displayLines": [
+        "這個傳說，",
+        "我不太相信。"
+      ],
+      "focusChar": "信",
+      "imageNotes": "主角媽媽與主角小女孩共讀繪本；書中畫著一條長長的魚飛在雲間。媽媽指著書中畫面說故事，女孩歪頭、微皺眉，露出半信半疑的表情。飛魚只存在書頁內，不能變成房間裡真實發生的事；不使用恐怖怪物或嘲笑表情。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book illustration with safe margins and a phone-readable composition. Strictly match full L058 style reference sheet: detailed expressive pencil-and-watercolor linework, warm natural daylight, rich but clean environments, bright natural palette, soft natural faces, stable preschool proportions. Not generic simplified watercolor, not anime, not flat cartoon, not photo or 3D. L058 is style only, not identity. Refined/cast sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 protagonist household identity. Girl: short dark bob, pink hair clip, pink cardigan, navy skirt, pink shoes, same preschool face and proportions as family anchors. Mother: same soft dark shoulder-length hair, cream cardigan, blue skirt/trousers, family-anchor adult face. Father: same short dark brown hair, blue shirt, khaki trousers and family-anchor face. Fixed YOU boy: preschool, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, NOT older brother, sporty HE boy or Xiaoguang. Xiaoyue uses dedicated reference: long softly wavy chestnut hair, crescent hairclip, lavender cardigan, cream shirt, teal pleated skirt, white socks, purple shoes. Only include the characters named in the scene. No readable text, letters, digits, signs, subtitles, logos, brands, watermarks or UI symbols anywhere. Writing must be purely illegible tiny broken pencil strokes, never legible characters or digits.\nPrimary scene: 主角媽媽與主角小女孩共讀繪本；書中畫著一條長長的魚飛在雲間。媽媽指著書中畫面說故事，女孩歪頭、微皺眉，露出半信半疑的表情。飛魚只存在書頁內，不能變成房間裡真實發生的事；不使用恐怖怪物或嘲笑表情。",
+      "imageSrc": "/assets/lessons/L384/images/L384-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L384/audio/L384-S03.m4a",
+        "durationMs": 4792,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 210
+          },
+          {
+            "charIndex": 1,
+            "startMs": 210,
+            "endMs": 420
+          },
+          {
+            "charIndex": 2,
+            "startMs": 420,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1080,
+            "endMs": 1470
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1470,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1860,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2300,
+            "endMs": 2470
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2470,
+            "endMs": 2640
+          }
+        ]
+      }
+    },
+    {
+      "id": "L384-S04",
+      "text": "我們寫的東西完全相同。",
+      "spokenText": "我們寫的東西完全相同",
+      "displayLines": [
+        "我們寫的東西",
+        "完全相同。"
+      ],
+      "focusChar": "寫",
+      "imageNotes": "教室桌邊，主角小女孩和小月各自拿出一張剛寫好的紙，比較後驚訝地互看。兩張紙的不可辨識短筆跡必須在行數、位置、長短與排列上明顯一致，讓「完全相同」可看出來；不是比較兩張畫，也不是一人拿兩張影印紙。小月使用 public/assets/reference/lesson-cast/xiaoyue.webp；不要生成可讀文字。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book illustration with safe margins and a phone-readable composition. Strictly match full L058 style reference sheet: detailed expressive pencil-and-watercolor linework, warm natural daylight, rich but clean environments, bright natural palette, soft natural faces, stable preschool proportions. Not generic simplified watercolor, not anime, not flat cartoon, not photo or 3D. L058 is style only, not identity. Refined/cast sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 protagonist household identity. Girl: short dark bob, pink hair clip, pink cardigan, navy skirt, pink shoes, same preschool face and proportions as family anchors. Mother: same soft dark shoulder-length hair, cream cardigan, blue skirt/trousers, family-anchor adult face. Father: same short dark brown hair, blue shirt, khaki trousers and family-anchor face. Fixed YOU boy: preschool, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, NOT older brother, sporty HE boy or Xiaoguang. Xiaoyue uses dedicated reference: long softly wavy chestnut hair, crescent hairclip, lavender cardigan, cream shirt, teal pleated skirt, white socks, purple shoes. Only include the characters named in the scene. No readable text, letters, digits, signs, subtitles, logos, brands, watermarks or UI symbols anywhere. Writing must be purely illegible tiny broken pencil strokes, never legible characters or digits.\nPrimary scene: 教室桌邊，主角小女孩和小月各自拿出一張剛寫好的紙，比較後驚訝地互看。兩張紙的不可辨識短筆跡必須在行數、位置、長短與排列上明顯一致，讓「完全相同」可看出來；不是比較兩張畫，也不是一人拿兩張影印紙。小月使用 public/assets/reference/lesson-cast/xiaoyue.webp；不要生成可讀文字。",
+      "imageSrc": "/assets/lessons/L384/images/L384-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L384/audio/L384-S04.m4a",
+        "durationMs": 4435,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 600
+          },
+          {
+            "charIndex": 2,
+            "startMs": 600,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1380,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1600,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1820,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2040,
+            "endMs": 2580
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2580,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3120,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3480,
+            "endMs": 3760
+          }
+        ]
+      }
+    },
+    {
+      "id": "L384-S05",
+      "text": "寫得太小，連爸爸都看不見。",
+      "spokenText": "寫得太小連爸爸都看不見",
+      "displayLines": [
+        "寫得太小，",
+        "連爸爸都",
+        "看不見。"
+      ],
+      "focusChar": "寫",
+      "imageNotes": "家中桌邊，主角爸爸拿著女孩寫的紙，瞇眼湊近看，仍然辨識不出來；女孩拿筆站在旁邊。紙張大部分留白，筆跡極小、密集，只佔一小角，突出「寫得太小」。爸爸不是失明，也不是房間太暗，不加眼傷或醫療情節。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book illustration with safe margins and a phone-readable composition. Strictly match full L058 style reference sheet: detailed expressive pencil-and-watercolor linework, warm natural daylight, rich but clean environments, bright natural palette, soft natural faces, stable preschool proportions. Not generic simplified watercolor, not anime, not flat cartoon, not photo or 3D. L058 is style only, not identity. Refined/cast sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 protagonist household identity. Girl: short dark bob, pink hair clip, pink cardigan, navy skirt, pink shoes, same preschool face and proportions as family anchors. Mother: same soft dark shoulder-length hair, cream cardigan, blue skirt/trousers, family-anchor adult face. Father: same short dark brown hair, blue shirt, khaki trousers and family-anchor face. Fixed YOU boy: preschool, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange backpack, NOT older brother, sporty HE boy or Xiaoguang. Xiaoyue uses dedicated reference: long softly wavy chestnut hair, crescent hairclip, lavender cardigan, cream shirt, teal pleated skirt, white socks, purple shoes. Only include the characters named in the scene. No readable text, letters, digits, signs, subtitles, logos, brands, watermarks or UI symbols anywhere. Writing must be purely illegible tiny broken pencil strokes, never legible characters or digits.\nPrimary scene: 家中桌邊，主角爸爸拿著女孩寫的紙，瞇眼湊近看，仍然辨識不出來；女孩拿筆站在旁邊。紙張大部分留白，筆跡極小、密集，只佔一小角，突出「寫得太小」。爸爸不是失明，也不是房間太暗，不加眼傷或醫療情節。",
+      "imageSrc": "/assets/lessons/L384/images/L384-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L384/audio/L384-S05.m4a",
+        "durationMs": 3923,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 600
+          },
+          {
+            "charIndex": 2,
+            "startMs": 600,
+            "endMs": 920
+          },
+          {
+            "charIndex": 3,
+            "startMs": 920,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1800,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1880,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2100,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2320,
+            "endMs": 2580
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2580,
+            "endMs": 2860
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2860,
+            "endMs": 3000
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3000,
+            "endMs": 3160
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L384-G01",
+      "type": "find-character",
+      "sentenceId": "L384-S01",
+      "targetChar": "寫",
+      "targetCharIndex": 1,
+      "prompt": "在句子裡找到寫，點一下。"
+    },
+    {
+      "id": "L384-G02",
+      "type": "teach-character",
+      "sentenceId": "L384-S02",
+      "targetChar": "寫",
+      "targetCharIndex": 3,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "把電話",
+        "suffixText": "下來傳給爸爸",
+        "prefixSrc": "/assets/lessons/L384/audio/L384-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L384/audio/L384-G02-suffix.m4a",
+        "suffixAudio": {
+          "src": "/assets/lessons/L384/audio/L384-G02-suffix.m4a",
+          "durationMs": 2654,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 460
+            },
+            {
+              "charIndex": 1,
+              "startMs": 460,
+              "endMs": 800
+            },
+            {
+              "charIndex": 2,
+              "startMs": 800,
+              "endMs": 1380
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1380,
+              "endMs": 1640
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1640,
+              "endMs": 1830
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1830,
+              "endMs": 2020
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L384-G03",
+      "type": "missing-character",
+      "sentenceId": "L384-S04",
+      "targetChar": "寫",
+      "targetCharIndex": 2,
+      "missingIndexes": [
+        2
+      ],
+      "prompt": "補上不見的字。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "寫",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "畫",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "拿",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L384-G04",
+      "type": "partial-order",
+      "sentenceId": "L384-S03",
+      "targetChar": "傳",
+      "targetCharIndex": 2,
+      "missingIndexes": [
+        6,
+        7,
+        8
+      ],
+      "prompt": "把句子排回正確順序。",
+      "options": [
+        {
+          "id": "card-xin",
+          "text": "信",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-tai",
+          "text": "太",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-xiang",
+          "text": "相",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L384-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L384-S05",
+      "targetChar": "連",
+      "targetCharIndex": 4,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "寫得太小，連爸爸都看不見。",
+          "correct": true,
+          "sentenceId": "L384-S05",
+          "audioSrc": "/assets/lessons/L384/audio/L384-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L384/audio/L384-S05.m4a",
+            "durationMs": 3923,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 920
+              },
+              {
+                "charIndex": 3,
+                "startMs": 920,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1800,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1880,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2580,
+                "endMs": 2860
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2860,
+                "endMs": 3000
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3000,
+                "endMs": 3160
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "寫得太大，連爸爸都看不見。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L384/audio/L384-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L384/audio/L384-G05-wrong-one.m4a",
+            "durationMs": 4506,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 520
+              },
+              {
+                "charIndex": 2,
+                "startMs": 520,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2060,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2410
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2410,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2680,
+                "endMs": 3260
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3260,
+                "endMs": 3620
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3620,
+                "endMs": 3800
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3800,
+                "endMs": 3960
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "寫得太小，連媽媽都看不見。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L384/audio/L384-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L384/audio/L384-G05-wrong-two.m4a",
+            "durationMs": 4879,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1900,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2000,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2360,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2780,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3140,
+                "endMs": 3320
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3320,
+                "endMs": 3500
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

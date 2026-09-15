@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L384 | 寫 | claimed | Production A | codex/l384-complete-package | L379:送; L380:連; L381:傳; L382:相; L383:信 | 送連傳相信 | curriculum-workflow/lesson-requests/L384.json; curriculum-workflow/generated/L384-generation-packet.md; curriculum-workflow/drafts/L384-draft.json | curriculum-workflow/audio-inbox/L384/; public/assets/lessons/L384/ | Base 250ca4a3, formal through L375. Release requires R045/R046 and L376-L383 in playable order. Approved five sentences; S02 digital phone-record transfer, S04 matching illegible writing. Dependencies block Release only. |
+| L384 | 寫 | needs-rework | Production A | codex/l384-complete-package | L379:送; L380:連; L381:傳; L382:相; L383:信 | 送連傳相信 | curriculum-workflow/lesson-requests/L384.json; curriculum-workflow/generated/L384-generation-packet.md; curriculum-workflow/drafts/L384-draft.json | curriculum-workflow/audio-inbox/L384/; public/assets/lessons/L384/ | Partial package: 5 WebP, 9 M4A, 8 aligned records. G02 prefix 把電話 blocked by repeated transcript/timing mismatch; rejected candidate not shipped. Playback QA and final gates pending. Release also needs R045/R046 and L376-L383. |
 
 ## Status Values
 

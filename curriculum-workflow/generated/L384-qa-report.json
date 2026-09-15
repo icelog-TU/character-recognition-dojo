@@ -1,0 +1,192 @@
+{
+  "unit": "L384",
+  "status": "partial-package",
+  "blocker": "NOT COMPLETED: G02 prefix 把電話 cannot reliably pass the exact-transcript/timing gate after 8 standalone generations (7 regenerations). Rejected latest candidate is retained only in ignored audio-inbox; shipping prefix is absent. Never substitute 打電話 or splice S02. Phone/tablet playback and final package validation remain pending. This is partial-package, not asset-complete.",
+  "base": "250ca4a3361a15104ba19158bb1b0710dac43ecc",
+  "dependsOnLessons": [
+    "L379",
+    "L380",
+    "L381",
+    "L382",
+    "L383"
+  ],
+  "provisionalLearnedChars": [
+    "送",
+    "連",
+    "傳",
+    "相",
+    "信"
+  ],
+  "allowedCount": 385,
+  "approvedFields": "PASS",
+  "coverage": {
+    "寫": 4,
+    "信": 2,
+    "相": 2,
+    "傳": 2,
+    "連": 1,
+    "送": 1
+  },
+  "displayLines": "PASS",
+  "stage4Indexes": "PASS",
+  "g03": "Three distinct cards 寫/畫/拿, one correct",
+  "g04": "Three single-Han cards 太/相/信",
+  "images": [
+    {
+      "id": "L384-S01",
+      "bytes": 161780,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L384-S02",
+      "bytes": 172296,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L384-S03",
+      "bytes": 168136,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L384-S04",
+      "bytes": 145210,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L384-S05",
+      "bytes": 150812,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    }
+  ],
+  "audio": [
+    {
+      "name": "char-u5beb.m4a",
+      "bytes": 33182,
+      "durationMs": 2345,
+      "meanDb": -20.2,
+      "maxDb": -2
+    },
+    {
+      "name": "L384-G02-suffix.m4a",
+      "bytes": 30211,
+      "durationMs": 2654,
+      "meanDb": -27.4,
+      "maxDb": -9.9
+    },
+    {
+      "name": "L384-G05-wrong-one.m4a",
+      "bytes": 53692,
+      "durationMs": 4506,
+      "meanDb": -17.9,
+      "maxDb": -2
+    },
+    {
+      "name": "L384-G05-wrong-two.m4a",
+      "bytes": 52002,
+      "durationMs": 4879,
+      "meanDb": -19.7,
+      "maxDb": -2
+    },
+    {
+      "name": "L384-S01.m4a",
+      "bytes": 58442,
+      "durationMs": 5037,
+      "meanDb": -18.7,
+      "maxDb": -2
+    },
+    {
+      "name": "L384-S02.m4a",
+      "bytes": 46057,
+      "durationMs": 4591,
+      "meanDb": -18.9,
+      "maxDb": -3.2
+    },
+    {
+      "name": "L384-S03.m4a",
+      "bytes": 40640,
+      "durationMs": 4792,
+      "meanDb": -19.7,
+      "maxDb": -2.5
+    },
+    {
+      "name": "L384-S04.m4a",
+      "bytes": 54257,
+      "durationMs": 4435,
+      "meanDb": -18.6,
+      "maxDb": -2
+    },
+    {
+      "name": "L384-S05.m4a",
+      "bytes": 43275,
+      "durationMs": 3923,
+      "meanDb": -19.4,
+      "maxDb": -2
+    }
+  ],
+  "g05MeanSpreadDb": 1.8,
+  "sizes": {
+    "images": 798234,
+    "audio": 411758,
+    "total": 1209992
+  },
+  "audioGeneration": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "standalone": "寫",
+    "standaloneASR": "寫",
+    "standalonePitch": "Measured contour falls approximately 190 to 136 Hz then rises to 190 Hz, consistent with dipping tone; not human listening approval.",
+    "S01Regenerations": 1,
+    "G02PrefixRegenerations": 7,
+    "unalteredAudioTail": true,
+    "splicing": false
+  },
+  "alignment": {
+    "source": "assets:align:ai whisper-1, no transcript prompt or forced matching",
+    "completedRecords": 8,
+    "sentenceCounts": [
+      10,
+      10,
+      9,
+      10,
+      11
+    ],
+    "missing": "G02 prefix",
+    "manualSmoothing": false
+  },
+  "checks": {
+    "tools": "PASS",
+    "aiSetup": "PASS",
+    "startupAuditState": "PASS",
+    "packetGeneration": "PASS",
+    "existingMediaDecode": "PASS (9 retained M4A)",
+    "imageFormats": "PASS",
+    "fullAlignment": "FAIL: G02 prefix",
+    "phoneTabletPlayback": "NOT RUN: required prefix blocked",
+    "validateProduction": "NOT RUN: package known incomplete",
+    "assetsAudit": "NOT RUN globally; existing L384 media inspected directly",
+    "packageIntake": "Expected blocked until G02 prefix is corrected",
+    "verify": "SKIPPED: dependency-blocked, Release owns shared state"
+  },
+  "imageRegenerations": 0,
+  "teacherReview": "Post-main by default; this stop is an audio-generation technical blocker, not a pre-main teacher-review requirement."
+}
