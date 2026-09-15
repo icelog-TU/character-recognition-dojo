@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L362 | 喜 / normal lesson | claimed | Production B | codex/l362-complete-package | L360:奇; R043; R044; L361:驚 | 奇; 驚 | `curriculum-workflow/lesson-requests/L362.json`; `curriculum-workflow/generated/L362-generation-packet.md`; `curriculum-workflow/drafts/L362-draft.json` | `public/assets/lessons/L362/` | Claimed from latest origin/main 496aa87a; dependency-blocked until L360, R043/R044, and L361 enter main. |
 
 ## Status Values
 
