@@ -54,7 +54,7 @@ Standard assets:audio processing completed. Terminal silence over 350 ms was red
 
 - Lesson-local `validate:production` via adapter: FAIL because durations/timings are unwritten for S01-S05.
 - AI alignment: FAIL at G02 suffix exact-text verification.
-- Pushed package-intake must report failure for this partial package; do not override its status.
+- Pushed-ref `npm run curriculum:package-intake -- --unit L394 --ref origin/codex/l394-complete-package`: FAIL. It found five images and ten audio files, but correctly rejected partial-package/needs-rework status and all five empty sentence timing arrays; it also warned that G02 prefix/suffix timing metadata is missing. Do not override this gate.
 - Shared-state `verify` skipped: future lesson is not in production JSON; Release owns integration.
 
 Image total: 903494 bytes. Audio total: 377600 bytes. Total: 1281094 bytes (about 1.22 MiB).
