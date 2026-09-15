@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-15T18:40:32.713Z",
+  "exportedAt": "2026-09-15T18:42:54.103Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -185248,6 +185248,677 @@
         }
       },
       "notes": "Normal single-character L374. AI transcriptions match exact approved Han text, with simplified-equivalent normalization. Final M4A trailing silence trimmed only, preserving 180 ms decay. Final-character end adjusted to measured silence onset. S05 心 timing corrected from 1940-2000 ms to 1580-1960 ms and 情 start to 1960 ms: PCM shows post-pause onset at 1560-1580 ms, frication 1580-1740 ms, voiced syllable 1760-1940 ms, transition at 1940-1980 ms. No speech splicing. Phone-width QA at 390x844: Stage 1 character playback, all five Stage 3 playback completion states, G01/G03 single-character acceptance, G04 four-card ordering and G05 three first-click playbacks observed. G02 dedicated prefix reached target-wait state. Browser control did not complete microphone recording/replay after target press; manual auditory quality and live highlight synchronization are not certified by this tooling session. Technical media, transcript, timing and volume checks passed; subjective teacher review remains post-merge."
+    },
+    {
+      "id": "L375",
+      "order": 375,
+      "title": "經",
+      "newChars": [
+        "經"
+      ],
+      "zhuyin": {
+        "經": "ㄐㄧㄥ"
+      },
+      "charAudio": {
+        "經": "/assets/lessons/L375/audio/char-u7d93.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L375-S01",
+          "text": "通往學校，要經過花園。",
+          "spokenText": "通往學校要經過花園",
+          "focusChar": "經",
+          "displayLines": [
+            "通往學校，",
+            "要經過花園。"
+          ],
+          "imageNotes": "主角小女孩背著書包，和媽媽沿著花園步道走向學校。前景是進入花園的小路，中景是兩側花草，遠景清楚可見學校建築與入口。步道連續穿過花園、接到學校，讓孩子理解上學路線會經過花園。不使用文字路牌、校名、箭頭或地圖文字。",
+          "imagePrompt": "Use case: illustration-story. Generate ONE square 1024px phone-readable children's picture-book illustration. Match the full L058 style contact sheet ONLY for fine pencil-and-watercolor linework, bright varied warm palette, natural soft daylight, detailed clean environment, softly modeled natural faces. Never copy L058 people identities. Refined/family contact sheet controls identity and preschool proportions: protagonist girl short dark bob pink clip pink cardigan pale top navy skirt pink shoes, yellow bag where natural. Mother side-parted chin-length dark hair ivory blouse blue jeans; father short tousled dark hair blue button shirt beige pants. Not toddler/teen, flat cartoon, anime, 3D or photo. No text, letters, numbers, pseudo-writing, labels, brands, logos, signs, captions, arrows or watermarks anywhere. Mother and daughter with yellow school bag walk away in three-quarter view on ONE clearly continuous path entering a flower garden in foreground, passing between flower beds in middle, connecting directly to visible school entrance in background. School facade with classroom windows and open gateway, no signs. Their faces partly visible. Sunny Taiwan neighborhood, safe walkway, no road crossings.",
+          "imageReuseDecision": "Existing curriculum search found no exact approved action/cast combination. Generate new image; references are style/cast only.",
+          "imageSrc": "/assets/lessons/L375/images/L375-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L375/audio/L375-S01.m4a",
+            "durationMs": 2596,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 180
+              },
+              {
+                "charIndex": 1,
+                "startMs": 180,
+                "endMs": 500
+              },
+              {
+                "charIndex": 2,
+                "startMs": 500,
+                "endMs": 740
+              },
+              {
+                "charIndex": 3,
+                "startMs": 740,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1020,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1340,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1620,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1880,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2180,
+                "endMs": 2360
+              }
+            ]
+          }
+        },
+        {
+          "id": "L375-S02",
+          "text": "爸爸經常跟親友往來。",
+          "spokenText": "爸爸經常跟親友往來",
+          "focusChar": "經",
+          "displayLines": [
+            "爸爸經常跟",
+            "親友往來。"
+          ],
+          "imageNotes": "主角家客廳裡，爸爸和來訪的 generic 成年親友圍坐聊天。一位親友自然地幫忙擺杯子，另一位和爸爸熟悉地談笑，主角小女孩在旁邊自在地活動。呈現熟悉、經常互相拜訪的關係，不是正式會議或首次見面。generic 親友須與主角父母有不同外貌與衣著。不必增加日曆、時間文字或重複人物來硬表現頻率。",
+          "imagePrompt": "Use case: illustration-story. Generate ONE square 1024px phone-readable children's picture-book illustration. Match the full L058 style contact sheet ONLY for fine pencil-and-watercolor linework, bright varied warm palette, natural soft daylight, detailed clean environment, softly modeled natural faces. Never copy L058 people identities. Refined/family contact sheet controls identity and preschool proportions: protagonist girl short dark bob pink clip pink cardigan pale top navy skirt pink shoes, yellow bag where natural. Mother side-parted chin-length dark hair ivory blouse blue jeans; father short tousled dark hair blue button shirt beige pants. Not toddler/teen, flat cartoon, anime, 3D or photo. No text, letters, numbers, pseudo-writing, labels, brands, logos, signs, captions, arrows or watermarks anywhere. Home living room father sits chatting informally with two clearly distinct visiting generic adult friends: stocky man with glasses and rust polo, curly tied-haired woman in teal blouse arranging plain cups on low table. Girl plays nearby relaxed. Familiar welcoming frequent-visit mood, not office meeting. Natural anatomy, adults distinct from family anchors.",
+          "imageReuseDecision": "Existing curriculum search found no exact approved action/cast combination. Generate new image; references are style/cast only.",
+          "imageSrc": "/assets/lessons/L375/images/L375-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L375/audio/L375-S02.m4a",
+            "durationMs": 3192,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 230
+              },
+              {
+                "charIndex": 1,
+                "startMs": 230,
+                "endMs": 460
+              },
+              {
+                "charIndex": 2,
+                "startMs": 460,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1200,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1880,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2460,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2700,
+                "endMs": 3080
+              }
+            ]
+          }
+        },
+        {
+          "id": "L375-S03",
+          "text": "我跟朋友經常交換書看。",
+          "spokenText": "我跟朋友經常交換書看",
+          "focusChar": "交",
+          "displayLines": [
+            "我跟朋友",
+            "經常交換",
+            "書看。"
+          ],
+          "imageNotes": "主角小女孩和固定同學小月坐在閱讀角。女孩把自己帶來的一本圖畫書遞給小月，小月同時把另一本圖畫書遞給女孩。兩人神情熟悉愉快，身旁各有小書袋。清楚呈現雙方交換不同的書，不是只有一方送書。書本封面與內頁只畫圖，不放可讀文字。小月使用 public/assets/reference/lesson-cast/xiaoyue.webp。",
+          "imagePrompt": "Use case: illustration-story. Generate ONE square 1024px phone-readable children's picture-book illustration. Match the full L058 style contact sheet ONLY for fine pencil-and-watercolor linework, bright varied warm palette, natural soft daylight, detailed clean environment, softly modeled natural faces. Never copy L058 people identities. Refined/family contact sheet controls identity and preschool proportions: protagonist girl short dark bob pink clip pink cardigan pale top navy skirt pink shoes, yellow bag where natural. Mother side-parted chin-length dark hair ivory blouse blue jeans; father short tousled dark hair blue button shirt beige pants. Not toddler/teen, flat cartoon, anime, 3D or photo. No text, letters, numbers, pseudo-writing, labels, brands, logos, signs, captions, arrows or watermarks anywhere. Protagonist girl and Xiaoyue sit opposite each other in reading corner, BOTH simultaneously exchange TWO DIFFERENT picture books: girl extends blue book illustrated only with a boat to Xiaoyue; Xiaoyue extends green book illustrated only with a flower to girl. Clear four natural hands and reciprocal handover, not one-sided gifting. Two book bags at their sides. Xiaoyue MUST match separate reference long softly curly chestnut hair, crescent clip, lavender cardigan, cream top, teal pleated skirt, white socks, purple shoes. Both same preschool age.",
+          "imageReuseDecision": "Existing curriculum search found no exact approved action/cast combination. Generate new image; references are style/cast only.",
+          "imageSrc": "/assets/lessons/L375/images/L375-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L375/audio/L375-S03.m4a",
+            "durationMs": 3222,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 810
+              },
+              {
+                "charIndex": 3,
+                "startMs": 810,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1080,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1640,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2240,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2520,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2800,
+                "endMs": 3060
+              }
+            ]
+          }
+        },
+        {
+          "id": "L375-S04",
+          "text": "紙船經不起大風。",
+          "spokenText": "紙船經不起大風",
+          "focusChar": "經",
+          "displayLines": [
+            "紙船經不起",
+            "大風。"
+          ],
+          "imageNotes": "院子裡的淺水盆中，一艘摺紙船被一陣大風吹歪，船身側翻、船緣碰到水面，失去平穩漂浮的狀態。周圍樹葉與細草向同一方向傾斜，幾片葉子被風吹動，讓人看出風力是紙船翻倒的原因。紙船保留明顯摺紙質感，不畫成大型船或風暴災難。可不安排人物，不使用箭頭或文字。",
+          "imagePrompt": "Use case: illustration-story. Generate ONE square 1024px phone-readable children's picture-book illustration. Match the full L058 style contact sheet ONLY for fine pencil-and-watercolor linework, bright varied warm palette, natural soft daylight, detailed clean environment, softly modeled natural faces. Never copy L058 people identities. Refined/family contact sheet controls identity and preschool proportions: protagonist girl short dark bob pink clip pink cardigan pale top navy skirt pink shoes, yellow bag where natural. Mother side-parted chin-length dark hair ivory blouse blue jeans; father short tousled dark hair blue button shirt beige pants. Not toddler/teen, flat cartoon, anime, 3D or photo. No text, letters, numbers, pseudo-writing, labels, brands, logos, signs, captions, arrows or watermarks anywhere. Close clear courtyard shallow round water basin with ONE white folded-paper boat tipped strongly SIDEWAYS by wind, one folded rim in water, tilted hull no longer floating level. Crisp recognizable origami folds and slight damp edge. Nearby fine grass and leafy twigs all bend toward right; several airborne leaves move right, small water ripples. Natural gentle daylight, no storm, no people, not large ship. Wind causality and unstable paper boat obvious at phone size.",
+          "imageReuseDecision": "Existing curriculum search found no exact approved action/cast combination. Generate new image; references are style/cast only.",
+          "imageSrc": "/assets/lessons/L375/images/L375-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L375/audio/L375-S04.m4a",
+            "durationMs": 3105,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 960
+              },
+              {
+                "charIndex": 2,
+                "startMs": 960,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1580,
+                "endMs": 1850
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1850,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2120,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2780,
+                "endMs": 2940
+              }
+            ]
+          }
+        },
+        {
+          "id": "L375-S05",
+          "text": "把交通工具畫在紙上。",
+          "spokenText": "把交通工具畫在紙上",
+          "focusChar": "通",
+          "displayLines": [
+            "把交通工具",
+            "畫在紙上。"
+          ],
+          "imageNotes": "教室美勞桌旁，固定老師站在主角小女孩身邊，指向桌上的白紙，請她畫交通工具。女孩握著畫筆，紙上已有一輛簡單公車和一艘小船的輪廓。桌旁可有無文字的玩具車與玩具船供觀察。呈現老師下指令、女孩正在畫的情境。老師外貌與主角媽媽不同。圖畫、玩具及教室背景不放文字、號碼或品牌。",
+          "imagePrompt": "Use case: illustration-story. Generate ONE square 1024px phone-readable children's picture-book illustration. Match the full L058 style contact sheet ONLY for fine pencil-and-watercolor linework, bright varied warm palette, natural soft daylight, detailed clean environment, softly modeled natural faces. Never copy L058 people identities. Refined/family contact sheet controls identity and preschool proportions: protagonist girl short dark bob pink clip pink cardigan pale top navy skirt pink shoes, yellow bag where natural. Mother side-parted chin-length dark hair ivory blouse blue jeans; father short tousled dark hair blue button shirt beige pants. Not toddler/teen, flat cartoon, anime, 3D or photo. No text, letters, numbers, pseudo-writing, labels, brands, logos, signs, captions, arrows or watermarks anywhere. Classroom art table. Protagonist girl seated holding pencil actively draws on a large white sheet with simple clear bus and small boat OUTLINES, pictures only. Fixed classroom teacher beside her gently points to sheet instructively, hair neatly tied back, round glasses, teal vest over white blouse and burgundy long skirt, entirely distinct from mother bob/ivory blouse/blue jeans. Plain toy bus and boat nearby for observation. Paper fully visible from elevated angle, bus windows blank, no signage or writing.",
+          "imageReuseDecision": "Existing curriculum search found no exact approved action/cast combination. Generate new image; references are style/cast only.",
+          "imageSrc": "/assets/lessons/L375/images/L375-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L375/audio/L375-S05.m4a",
+            "durationMs": 2992,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 880
+              },
+              {
+                "charIndex": 3,
+                "startMs": 880,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1380,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2100,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2380,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2560,
+                "endMs": 2860
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L375-G01",
+          "type": "find-character",
+          "sentenceId": "L375-S01",
+          "targetChar": "經",
+          "targetCharIndex": 5,
+          "prompt": "找出句子裡的字。"
+        },
+        {
+          "id": "L375-G02",
+          "type": "teach-character",
+          "sentenceId": "L375-S02",
+          "targetChar": "經",
+          "targetCharIndex": 2,
+          "prompt": "教小幫手認字。",
+          "teachAudio": {
+            "prefixText": "爸爸",
+            "prefixSrc": "/assets/lessons/L375/audio/L375-G02-prefix.m4a",
+            "suffixText": "常跟親友往來",
+            "suffixSrc": "/assets/lessons/L375/audio/L375-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L375/audio/L375-G02-prefix.m4a",
+              "durationMs": 567,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 160
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 160,
+                  "endMs": 320
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L375/audio/L375-G02-suffix.m4a",
+              "durationMs": 2419,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 540
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 540,
+                  "endMs": 900
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 900,
+                  "endMs": 1280
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1280,
+                  "endMs": 1620
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1620,
+                  "endMs": 1900
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 1900,
+                  "endMs": 2260
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L375-G03",
+          "type": "missing-character",
+          "sentenceId": "L375-S04",
+          "targetChar": "經",
+          "targetCharIndex": 2,
+          "prompt": "補上不見的字。",
+          "missingIndexes": [
+            2
+          ],
+          "options": [
+            {
+              "id": "correct",
+              "text": "經",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "親",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "通",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L375-G04",
+          "type": "partial-order",
+          "sentenceId": "L375-S03",
+          "targetChar": "交",
+          "prompt": "把句子排回正確順序。",
+          "missingIndexes": [
+            2,
+            3,
+            6,
+            7
+          ],
+          "options": [
+            {
+              "id": "card-jiao",
+              "text": "交",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-peng",
+              "text": "朋",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-huan",
+              "text": "換",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-you",
+              "text": "友",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L375-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L375-S05",
+          "targetChar": "通",
+          "targetCharIndex": 2,
+          "prompt": "聽一聽，選出讀對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "把交通工具畫在紙上。",
+              "spokenText": "把交通工具畫在紙上",
+              "correct": true,
+              "sentenceId": "L375-S05",
+              "audioSrc": "/assets/lessons/L375/audio/L375-S05.m4a",
+              "audio": {
+                "src": "/assets/lessons/L375/audio/L375-S05.m4a",
+                "durationMs": 2992,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 200
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 200,
+                    "endMs": 620
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 620,
+                    "endMs": 880
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 880,
+                    "endMs": 1120
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1120,
+                    "endMs": 1380
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1380,
+                    "endMs": 2100
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2100,
+                    "endMs": 2380
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2380,
+                    "endMs": 2560
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2560,
+                    "endMs": 2860
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "把交通工具放在紙上。",
+              "spokenText": "把交通工具放在紙上",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L375/audio/L375-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L375/audio/L375-G05-wrong-one.m4a",
+                "durationMs": 3327,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 240
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 240,
+                    "endMs": 700
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 700,
+                    "endMs": 980
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 980,
+                    "endMs": 1260
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1260,
+                    "endMs": 1480
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1480,
+                    "endMs": 2240
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2240,
+                    "endMs": 2680
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2680,
+                    "endMs": 2860
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2860,
+                    "endMs": 3180
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "把交通工具畫在地上。",
+              "spokenText": "把交通工具畫在地上",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L375/audio/L375-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L375/audio/L375-G05-wrong-two.m4a",
+                "durationMs": 2857,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 180
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 180,
+                    "endMs": 600
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 600,
+                    "endMs": 860
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 860,
+                    "endMs": 1120
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1120,
+                    "endMs": 1400
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1400,
+                    "endMs": 2040
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2040,
+                    "endMs": 2320
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2320,
+                    "endMs": 2520
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2520,
+                    "endMs": 2740
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "reviewLessons": [
