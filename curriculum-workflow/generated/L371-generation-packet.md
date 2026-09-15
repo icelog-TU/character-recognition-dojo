@@ -1098,7 +1098,7 @@ Shared alignment script adds only observed standard 亲→親 and 谢→謝 mapp
 - Mechanical approved data, coverage including word counts, indices, formats, ffmpeg decode, durations, volumes and timings: PASS. Detailed evidence in L371-technical-qa.json and draft.productionQA.
 - git diff --stat / --name-only / --check inspected before commit.
 - Full shared-state verify and global validate:curriculum skipped: dependencies not integrated. Current-main validators alone would not validate L371. Release owns final shared integration.
-- Pushed package-intake result is recorded in the final handoff.
+- npm run curriculum:package-intake -- --unit L371 --ref origin/codex/l371-complete-package: PASS on pushed asset commit bf95817a206f80363031e20e42ca68f295174bd9 (five images, ten audio files).
 
 ## Browser QA
 
