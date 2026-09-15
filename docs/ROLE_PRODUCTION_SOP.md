@@ -112,7 +112,8 @@ Two-character word lesson packages must also satisfy:
 - `zhuyin` and `charAudio` exist for both characters. Do not provide only a word-level audio file.
 - Do not invent unsupported fields such as `targetText` or `wordAudio` unless the app/schema/validators are changed in the same branch.
 - Stage 1 QA must confirm the child-facing target display is understandable as the word and does not squeeze, overlap, or hide either character's zhuyin.
-- Stage 2 QA must confirm both new characters are accepted targets. The grid should give repeated practice for each new character, normally at least two visible target cards per character unless a later app design records a different approved target count.
+- Stage 2 QA must confirm both new characters are accepted targets. The expected six-card grid is exact: one-character lessons have 3 current-target cards plus 3 old-character distractors; two-character word lessons have 2 cards for each current lesson character plus 2 old-character distractors. For `朋友`, the intended target cards are two `朋` and two `友`, and completion requires tapping all four target cards.
+- For the first two-character pilot, do not stop package production solely because a pre-merge card-count simulation reports only one card per new character. Record the mismatch in the final handoff as a post-merge teacher verification item. Stop only if an introduced character is not accepted as a target at all, or if another required package gate fails.
 - Stage 4 QA must confirm every `targetChar`, `targetCharIndex`, `missingIndexes`, and `partial-order` option remains single-Han. Whole-word blanks or option cards such as `朋友` are invalid.
 - Character overview / learned-character behavior must list both characters at the same lesson order after Release integration. Production should flag any obvious app limitation in the final handoff so Release can verify it before deploy.
 

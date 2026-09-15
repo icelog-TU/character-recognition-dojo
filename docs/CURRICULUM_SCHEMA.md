@@ -59,6 +59,7 @@ Two-character word lesson rules:
 - Both characters share the same lesson order in the character overview and learned-character ledger.
 - `zhuyin` and `charAudio` remain per single character. Do not invent unsupported `wordAudio`, `targetText`, or phrase-card fields unless the app/schema validators are updated in the same change.
 - Stage 1 may display the word target together with per-character zhuyin. Stage 2 and Stage 4 still operate on single Han characters.
+- Stage 2 six-card target distribution depends on `newChars.length`: one-character lessons use 3 copies of the one current target character plus 3 distractor/review cards; two-character word lessons use 2 copies of each current target character plus 2 distractor/review cards. Stage 2 is complete when all current-target cards have been tapped: 3 taps for one-character lessons, 4 taps for two-character word lessons.
 - Stage 4 `targetChar`, `targetCharIndex`, `missingIndexes`, and `partial-order` option cards always point to one Han character at a time. Do not use `targetChar: "朋友"` or an option card with `"朋友"`.
 
 Review module note:

@@ -108,18 +108,19 @@ Production rules:
 - Generate and reference standalone `charAudio` for each introduced character. The existing schema is per character.
 - Sentence audio and sentence `charTimings` remain full-sentence and per Han character.
 - Stage 1 display must be checked on phone width: both characters and zhuyin must be visible, readable, and not overlap.
-- Stage 2 must accept both introduced characters as target finds. For the pilot, verify the app gives meaningful repeated practice for both characters; if one character never appears or is not accepted, stop and report an app/UI blocker.
+- Stage 2 target-card distribution is explicit. One-character lessons use a six-card grid with 3 cards for the current target character and 3 distractor/review cards; completion requires tapping all 3 target cards. Two-character word lessons use a six-card grid with 2 cards for each current lesson character and 2 distractor/review cards; completion requires tapping all 4 target cards. For `朋友`, this means two `朋` cards and two `友` cards.
+- Stage 2 must accept both introduced characters as target finds. For the first two-character pilot, record any pre-merge card-count simulation mismatch as a pilot verification item and continue package production unless the teacher explicitly asks to block; the teacher will verify the real Stage 2 behavior post-merge on `main`. If either introduced character is not accepted as a target at all, stop and report an app/UI blocker.
 - Stage 4 remains single-Han at the interaction layer. `targetChar` is one of the introduced characters or a review character; `targetCharIndex` points to one Han occurrence; `missingIndexes` and `partial-order` options are single-Han.
 - Do not create chunk cards, word cards, or two-character blank slots for `partial-order` or `missing-character`.
 - `G01`-`G03` should cover both introduced characters when the approved sentences make it possible. If only one can be targeted naturally, record the reason in the packet and final handoff.
-- The final handoff must include a two-character pilot QA line covering Stage 1 display, Stage 2 accepted targets, Stage 4 single-Han indexing, and character overview risk.
+- The final handoff must include a two-character pilot QA line covering Stage 1 display, Stage 2 accepted targets, Stage 2 expected target-card rule, any pre-merge card-count simulation result, Stage 4 single-Han indexing, and character overview risk.
 
 ## Fast Package Audit
 
 Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`, Production must do a fast lesson-local audit. This audit is intended to catch defects that are cheap for Production to fix and expensive for Release to rediscover:
 
 - `lesson-requests/L###.json`, `generated/L###-generation-packet.md`, and `drafts/L###-draft.json` agree on lesson id, order, new character(s), Taiwan zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
-- For a two-character word lesson, those files also agree on the target word/title, both `newChars`, both zhuyin entries, both `charAudio` paths, and the single-Han Stage 2/Stage 4 interaction rule.
+- For a two-character word lesson, those files also agree on the target word/title, both `newChars`, both zhuyin entries, both `charAudio` paths, the Stage 2 target-card rule, and the single-Han Stage 2/Stage 4 interaction rule.
 - The generation packet must contain the final approved sentence set exactly as implemented in the draft, including final `text`, `spokenText`, `focusChar`, `displayLines`, and `imageNotes`. Missing final records or stale candidate text is a Production package defect even if request/draft/assets pass validators; fix it before reporting `asset-complete-package`.
 - Run the package intake gate against the pushed package ref before final handoff:
 
