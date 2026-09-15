@@ -93,6 +93,7 @@ Hard release gate:
 - A branch with only `public/assets/lessons/L###/images/`, `S01-S05` audio, and `charAudio` is `assets-only`. It must not be called `merge-ready`, and the release thread must not infer final lesson JSON from chat.
 - A draft that has `durationMs` but missing/empty `charTimings` is not aligned.
 - A normal L006+ lesson with missing `sentenceGames`, missing `teachAudio` files, or missing `choose-pronunciation` wrong-option audio is not asset-complete.
+- A package is not asset-complete if any repo handoff file still says `partial-package`, `needs-rework`, `Do not integrate`, `NOT COMPLETED`, `FAIL`, `unresolved`, `pending teacher review`, or `manual/playback QA pending`. Those words are an explicit stop sign until the package owner updates the files with the completed check and pushes a new tip.
 - A lesson using provisional characters can be prepared as a dependency-blocked Production package. It cannot enter `main`, be called `release-ready`, or be treated as playable until those characters are real in latest `origin/main` or the teacher changes the sentence set.
 - A migrated review package may intentionally reuse an `R###` id that already exists in legacy `reviewLessons`. That is allowed only when the handoff labels it `review migration replacement package`. Production prepares and pushes the package files on a branch, but does not edit production JSON, planner data, or ledger. Release later replaces the legacy review entry with the current schedule entry. In this narrow case, `npm run curriculum:audit-state` may fail with an expected legacy id collision; Production must report the exact failure and continue only if no other audit-state failure is present.
 
@@ -102,6 +103,13 @@ Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`
 
 - `lesson-requests/L###.json`, `generated/L###-generation-packet.md`, and `drafts/L###-draft.json` agree on lesson id, order, new character(s), Taiwan zhuyin, final sentence text, `spokenText`, `focusChar`, and `displayLines`.
 - The generation packet must contain the final approved sentence set exactly as implemented in the draft, including final `text`, `spokenText`, `focusChar`, `displayLines`, and `imageNotes`. Missing final records or stale candidate text is a Production package defect even if request/draft/assets pass validators; fix it before reporting `asset-complete-package`.
+- Run the package intake gate against the pushed package ref before final handoff:
+
+```bash
+npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complete-package
+```
+
+If the command fails, do not report `asset-complete-package` or `dependency-blocked-asset-complete`. Fix the package or report it explicitly as `partial-package` / `needs-rework` with the missing items. A branch name containing `complete-package` is not proof of completion; the draft `packageStatus`, registry row, generation packet, and final handoff must all agree.
 - Top-level `dependsOnLessons` is present whenever the lesson uses provisional characters from earlier unmerged lessons.
 - `dependsOnLessons` and `provisionalLearnedChars` cover every not-yet-merged Han character used in learner-facing text: `text`, `spokenText`, `displayLines`, `focusChar`, and Stage 4 option text. Do not apply this character gate to `imageNotes` or image prompts, which are production instructions rather than learner-facing curriculum text. Do not trust a handoff that lists only previous-five coverage targets; rerun the approved-text sweep against latest `origin/main` learned chars plus provisional chars plus the current new character.
 - `displayLines`, when present, join exactly back to `text`; each displayed line must stay at `<= 6` visible characters when zhuyin is shown. Count Han characters, punctuation, and any other learner-facing visible full-width character.

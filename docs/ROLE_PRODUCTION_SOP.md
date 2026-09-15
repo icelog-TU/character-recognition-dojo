@@ -157,6 +157,7 @@ Before reporting done, run a fast lesson-local audit. This should be minutes, no
 - `choose-pronunciation` wrong-option audio was generated from the exact full wrong-option text after final text changes.
 - All referenced images and audio files exist in the owned lesson/review asset folder.
 - Touched asset folder size was checked.
+- The pushed branch passes `npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complete-package`. If this gate fails, report `partial-package` or `needs-rework`; do not report `asset-complete-package` or `dependency-blocked-asset-complete`.
 
 Run these commands when feasible:
 
@@ -176,6 +177,7 @@ Push the production branch and report:
 - Full pushed package ref, such as `origin/codex/l###-complete-package`, plus the full tip commit SHA.
 - Unit id and new character/review kind.
 - Whether it is `asset-complete-package`, `dependency-blocked-asset-complete`, `partial-package`, or `assets-only`.
+- The `curriculum:package-intake` result. A final report that says complete while the gate fails, or while repo files still say `partial-package`, `needs-rework`, `Do not integrate`, `NOT COMPLETED`, `FAIL`, `unresolved`, or teacher/manual playback review pending, is invalid and must be corrected before Release receives it.
 - Per-image L058 side-by-side style-lock result and recurring cast identity result for every changed image, written explicitly as `S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS ...`. Do not replace this with a vague range note when any people or recurring roles appear.
 - Any image drafts rejected for style/cast drift, and confirmation that rejected drafts were not committed.
 - Any failed checks or skipped manual QA.
