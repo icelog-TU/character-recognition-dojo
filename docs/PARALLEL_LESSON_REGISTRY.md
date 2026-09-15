@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L389 | 號 | ready-blocked-by-dependency | Production C | codex/l389-complete-package | L384, L385, L386, L387, L388 | 寫字名第念 | curriculum-workflow/lesson-requests/L389.json; curriculum-workflow/generated/L389-generation-packet.md; curriculum-workflow/drafts/L389-draft.json | public/assets/lessons/L389/; curriculum-workflow/audio-inbox/L389/ | dependency-blocked-asset-complete. Five WebP, ten M4A, sentence and Stage 4 timings, local validators and 390/768px QA recorded in packet. Main rechecked 3f105601, formal L375. Release preserves playable order including R045/R046 and L376-L388. Existing review-pair branch retained. |
+| L389 | 號 | ready-blocked-by-dependency | Production C | codex/l389-complete-package; asset commit 9d898b4b | L384, L385, L386, L387, L388 | 寫字名第念 | curriculum-workflow/lesson-requests/L389.json; curriculum-workflow/generated/L389-generation-packet.md; curriculum-workflow/drafts/L389-draft.json | public/assets/lessons/L389/; curriculum-workflow/audio-inbox/L389/ | dependency-blocked-asset-complete; pushed package-intake PASS. Five WebP, ten M4A, sentence and Stage 4 timings, local validators and 390/768px QA recorded in packet. Main rechecked 3f105601, formal L375. Release preserves playable order including R045/R046 and L376-L388. Existing review-pair branch retained. |
 
 ## Status Values
 

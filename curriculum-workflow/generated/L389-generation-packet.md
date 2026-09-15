@@ -438,7 +438,7 @@ Browser QA is functional playback observation, not a claim of teacher subjective
 - After restoring shared state: validate:curriculum PASS (375 baseline lessons; historical target-choice warnings only), validate:production PASS. Final audit-state PASS with expected unmerged L389 asset-folder warning.
 - Final fast audit PASS: request/draft/packet agreement, allowed385, game mappings, timing counts, sentence end gaps 202/216/150/223/197ms, and referenced files.
 - verify skipped: dependency-blocked, shared integration belongs to Release.
-- Pushed-ref curriculum:package-intake is the final handoff gate.
+- Pushed-ref curriculum:package-intake PASS at asset commit 9d898b4bbb5596375fc0e3cc0757f8466a9c0161: five images, ten audio files, canonical Stage 4, no blocking package-status defects. Final metadata-only tip rechecked with the same gate.
 
 ## Release And Review
 
