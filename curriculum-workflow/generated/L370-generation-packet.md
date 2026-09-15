@@ -41,18 +41,18 @@ All eleven assets decode; character-card volume checks pass; G05 three-option me
 Raw generated MP3 inbox exists locally under curriculum-workflow/audio-inbox/L370/ and remains ignored per repository policy.
 Total final media: 1333337 bytes, within 2.5MB budget.
 
-## Phone-Width Pilot QA
+## Browser QA: Phone-Width Pilot
 Tested current branch app with a lesson-local draft fixture at http://127.0.0.1:5185/character-recognition-dojo/ in Chrome 390x844. Test progress is isolated to this local origin; no production JSON or cloud review writes.
 - Course card PASS: one L370 titled 朋友.
 - Stage 1 PASS: both glyphs and zhuyin visible without overlap; both standalone character-card clicks started audio and completed.
 - Stage 2 target acceptance PASS: 友 then 朋 accepted; observed grid has one each plus four old characters and completes 2/2. Expected two each plus two distinct old characters/four taps remains the teacher-overridden post-merge pilot verification item.
 - Stage 3 playback/control PASS: all five sentence clicks started and ended, stage reached 3/4. Phone screenshot shows individual Han highlight and separate 朋/友 positions. Timings are independent per Han; acoustic/highlight synchronization is not claimed as a human listening approval.
 - Stage 4 PASS for canonical five modes and single-Han target/blank/card structure. G01 朋 and G03 朋 accepted; G04 感/謝/照/顧 filled correctly in order.
-- G02 prefix playback reached the red 友 target. Browser-controlled tap displayed the floating 友 but did not produce an observable recording/replay completion. Microphone/ding/recorded-voice/suffix replay listening was not completed through this browser control surface; do not infer an asset defect or claim a successful recorded replay. Exact fragment content, decoding, volume and timing gates passed.
+- G02 prefix playback reached the red 友 target. Browser-controlled tap displayed the floating 友 but did not produce an observable recording/replay completion. Microphone/ding/recorded-voice/suffix replay listening is deferred because this browser control surface could not finish the recording workflow; do not infer an asset defect or claim a successful recorded replay. Exact fragment content, decoding, volume and timing gates passed.
 - G04 filled-card playback completed; automatic next-round completion was not observed before using the visible skip control to inspect G05. Final boundary has a newer reward-completion navigation fix; Release should verify transitions on main.
 - G05 first-click playback PASS for each of all three option controls; each returned from playing to idle.
 - Character overview PASS: separate 朋 (#373) and 友 (#374) entries, both course370.
-- Asset review tool: verify the pushed immutable packet lists both new-character audio files and all assets; teacher subjective review remains the post-main repair workflow.
+- Asset review tool PASS: immutable 43f1ed1de66ed80aaaf5cbf556e8c1b94761af9f loaded five sentence cards and seven other audio entries, including both 朋/友 charAudio, G02 prefix/suffix and all three G05 options (correct shares S05). This was read-only inspection, not teacher approval or a cloud review write. Teacher subjective review remains the post-main repair workflow.
 Browser-observed playback states do not constitute auditory certification. Technical fallback follows current SOP; two scoped teacher listening confirmations are additional evidence.
 
 ## Validation And Release Handoff
