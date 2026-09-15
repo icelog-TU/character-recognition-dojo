@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "allowedCount": 376,
+  "coverage": {
+    "交": 4,
+    "親": 2,
+    "朋": 2,
+    "友": 3,
+    "情": 2,
+    "感": 1,
+    "謝": 1,
+    "朋友": 2
+  },
+  "images": [
+    {
+      "id": "L372-S01",
+      "dimensions": "1024x1024",
+      "bytes": 188900,
+      "sha256": "aea963a3bb221667df39e6749974739fbb8e72a4261796831a2d83d0dda854f0"
+    },
+    {
+      "id": "L372-S02",
+      "dimensions": "1024x1024",
+      "bytes": 160030,
+      "sha256": "faa97120dc4c677687c2bc7686cda450a1f5118dc8bbad7e62273ae9c956f6c1"
+    },
+    {
+      "id": "L372-S03",
+      "dimensions": "1024x1024",
+      "bytes": 174278,
+      "sha256": "7669a079d5a297a36143ff4df612fb3a14dac0718169a3dbee60964f780efd1d"
+    },
+    {
+      "id": "L372-S04",
+      "dimensions": "1024x1024",
+      "bytes": 187496,
+      "sha256": "f5e414dba5e6f6cfffca56db932bc6148da7e926489d192f117bf819ef4c2c64"
+    },
+    {
+      "id": "L372-S05",
+      "dimensions": "1024x1024",
+      "bytes": 163500,
+      "sha256": "4eee265aa6217e8c74d0d26ccee8db391965fb5d16988637664a9fb1ed2d64ad"
+    }
+  ],
+  "audio": [
+    {
+      "id": "L372-S01",
+      "decode": "PASS",
+      "durationMs": 2020,
+      "tailMs": 220,
+      "bytes": 25403,
+      "sha256": "844def962a3138e6c5539c4428722daf87ddee4b25d27bd82e825a86fbc87487"
+    },
+    {
+      "id": "L372-S02",
+      "decode": "PASS",
+      "durationMs": 4272,
+      "tailMs": 212,
+      "bytes": 53476,
+      "sha256": "d0ec79cb57d083e7f0c609d31773b65e221f07a199b39be6cf4dfcf9a47949a3"
+    },
+    {
+      "id": "L372-S03",
+      "decode": "PASS",
+      "durationMs": 4272,
+      "tailMs": 212,
+      "bytes": 57104,
+      "sha256": "80b638e71e0cf19d770d8fa109ff3be694621a3e9f8a25cdc876409daaeae350"
+    },
+    {
+      "id": "L372-S04",
+      "decode": "PASS",
+      "durationMs": 3204,
+      "tailMs": 204,
+      "bytes": 41116,
+      "sha256": "84bf40bef08f5047e467035df2b62073e750560b29542818169c32ddc471b6b3"
+    },
+    {
+      "id": "L372-S05",
+      "decode": "PASS",
+      "durationMs": 4342,
+      "tailMs": 202,
+      "bytes": 55740,
+      "sha256": "0acdfbdf5fc4d5be0788acde689d77be6ba99d57392da2bb103b05a8779264e2"
+    },
+    {
+      "id": "L372-G02-prefix",
+      "decode": "PASS",
+      "durationMs": 2763,
+      "tailMs": 223,
+      "bytes": 34700,
+      "sha256": "9585dfbdc36ef55999537a8037e476776cf934294a4cd50f15de15be0e562f8e"
+    },
+    {
+      "id": "L372-G02-suffix",
+      "decode": "PASS",
+      "durationMs": 1207,
+      "tailMs": 207,
+      "bytes": 14668,
+      "sha256": "289fdd80def233aa3e2946edaff34a7d780e3692d2f582df42e55607ee506326"
+    },
+    {
+      "id": "L372-G05-wrong-one",
+      "decode": "PASS",
+      "durationMs": 4133,
+      "tailMs": 213,
+      "bytes": 51527,
+      "sha256": "5f165c7711b57fe52df4470d8688f67c0bb795310131be8a1c0e7e423b613c99"
+    },
+    {
+      "id": "L372-G05-wrong-two",
+      "decode": "PASS",
+      "durationMs": 4922,
+      "tailMs": 202,
+      "bytes": 61446,
+      "sha256": "eed1ccb4bb2994bde3dc236d976a981e3273d4f2201de7b9244bb42d72f5d6aa"
+    },
+    {
+      "id": "char-u4ea4",
+      "decode": "PASS",
+      "durationMs": 1997,
+      "bytes": 14989,
+      "sha256": "0a77f0516f8327357c7a16a8a7acd7f12a0dbb33c74e68bd6248018e9533e0a5"
+    }
+  ],
+  "imageBytes": 874204,
+  "audioBytes": 410169,
+  "folderBytes": 1284373
+}
