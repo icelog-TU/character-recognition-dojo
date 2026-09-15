@@ -506,6 +506,16 @@ Base origin/main: 0b0c9786d5f0fda9556b6a6d5eb58dcc0bc9a23b. Formal lessons L001-
           "id": "L365-G03-A",
           "text": "但",
           "correct": true
+        },
+        {
+          "id": "L365-G03-B",
+          "text": "怕",
+          "correct": false
+        },
+        {
+          "id": "L365-G03-C",
+          "text": "很",
+          "correct": false
         }
       ]
     },
@@ -1084,6 +1094,16 @@ Base origin/main: 0b0c9786d5f0fda9556b6a6d5eb58dcc0bc9a23b. Formal lessons L001-
           "id": "L365-G03-A",
           "text": "但",
           "correct": true
+        },
+        {
+          "id": "L365-G03-B",
+          "text": "怕",
+          "correct": false
+        },
+        {
+          "id": "L365-G03-C",
+          "text": "很",
+          "correct": false
         }
       ]
     },
