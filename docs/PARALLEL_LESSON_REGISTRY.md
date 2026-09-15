@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L366 | 吧 / normal lesson | claimed | Production B | codex/l366-complete-package | None | None | `curriculum-workflow/lesson-requests/L366.json`; `curriculum-workflow/generated/L366-generation-packet.md`; `curriculum-workflow/drafts/L366-draft.json`; `curriculum-workflow/audio-inbox/L366/` | `public/assets/lessons/L366/` | Claimed from latest origin/main 4d3d883d; normal asset-complete package, no known dependency blockers. |
 
 ## Status Values
 
