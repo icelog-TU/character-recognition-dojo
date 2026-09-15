@@ -907,6 +907,16 @@ Status: dependency-blocked-asset-complete. Initial main 496aa87af167b0760bcee8f9
           "id": "L363-G03-A",
           "text": "歡",
           "correct": true
+        },
+        {
+          "id": "L363-G03-B",
+          "text": "對",
+          "correct": false
+        },
+        {
+          "id": "L363-G03-C",
+          "text": "樹",
+          "correct": false
         }
       ]
     },

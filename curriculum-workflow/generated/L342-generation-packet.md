@@ -146,7 +146,7 @@ Use each reviewed sentence exactly once.
     "targetChar": "們",
     "targetCharIndex": 2,
     "missingIndexes": [2],
-    "options": [{ "text": "們" }]
+    "options": [{"id":"L342-G03-A","text":"們","correct":true}, {"id":"L342-G03-B","text":"門","correct":false}, {"id":"L342-G03-C","text":"間","correct":false}]
   },
   {
     "id": "L342-G04",

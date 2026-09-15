@@ -525,6 +525,16 @@ Teacher-approved content below is final; generate no alternate sentences. Taiwan
           "id": "L355-G03-A",
           "text": "雞",
           "correct": true
+        },
+        {
+          "id": "L355-G03-B",
+          "text": "齊",
+          "correct": false
+        },
+        {
+          "id": "L355-G03-C",
+          "text": "跟",
+          "correct": false
         }
       ]
     },

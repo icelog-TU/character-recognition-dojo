@@ -141,6 +141,16 @@ Reuse review: L350/L353 restaurant scenes do not show this exact waiting family;
           "id": "L354-G03-A",
           "text": "排",
           "correct": true
+        },
+        {
+          "id": "L354-G03-B",
+          "text": "拿",
+          "correct": false
+        },
+        {
+          "id": "L354-G03-C",
+          "text": "整",
+          "correct": false
         }
       ]
     },

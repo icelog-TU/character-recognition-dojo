@@ -116,7 +116,7 @@ Canonical normal L006+ order required and used: G01 find-character, G02 teach-ch
   "targetCharIndex": 1,
   "missingIndexes": [1],
   "options": [
-    { "id": "L349-G03-A", "text": "讓", "correct": true }
+    { "id": "L349-G03-A", "text": "讓", "correct": true }, {"id":"L349-G03-B","text":"請","correct":false}, {"id":"L349-G03-C","text":"話","correct":false}
   ]
 }
 ```

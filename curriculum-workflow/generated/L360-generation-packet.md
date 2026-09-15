@@ -607,6 +607,16 @@ L355-L359 dependencies now exist in main; Release owns insertion of L360.
           "id": "L360-G03-A",
           "text": "奇",
           "correct": true
+        },
+        {
+          "id": "L360-G03-B",
+          "text": "椅",
+          "correct": false
+        },
+        {
+          "id": "L360-G03-C",
+          "text": "齊",
+          "correct": false
         }
       ]
     },
@@ -1151,6 +1161,16 @@ L355-L359 dependencies now exist in main; Release owns insertion of L360.
           "id": "L360-G03-A",
           "text": "奇",
           "correct": true
+        },
+        {
+          "id": "L360-G03-B",
+          "text": "椅",
+          "correct": false
+        },
+        {
+          "id": "L360-G03-C",
+          "text": "齊",
+          "correct": false
         }
       ]
     },

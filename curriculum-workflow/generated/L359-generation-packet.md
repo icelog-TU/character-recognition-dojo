@@ -34,7 +34,7 @@ G01=find-character, G02=teach-character, G03=missing-character, G04=partial-orde
 
 - L359-G01: find-character / sentenceId=L359-S01 / targetChar=怪 / targetCharIndex=8
 - L359-G02: teach-character / sentenceId=L359-S03 / targetChar=怪 / targetCharIndex=4 / teachAudio={"prefixText":"我不敢看","targetText":"怪","suffixText":"物電影","prefixSrc":"/assets/lessons/L359/audio/L359-G02-prefix.m4a","suffixSrc":"/assets/lessons/L359/audio/L359-G02-suffix.m4a"}
-- L359-G03: missing-character / sentenceId=L359-S04 / targetChar=怪 / targetCharIndex=5 / options=[{"id":"L359-G03-A","text":"怪","correct":true}]
+- L359-G03: missing-character / sentenceId=L359-S04 / targetChar=怪 / targetCharIndex=5 / options=[{"id":"L359-G03-A","text":"怪","correct":true}, {"id":"L359-G03-B","text":"快","correct":false}, {"id":"L359-G03-C","text":"怕","correct":false}]
 - L359-G04: partial-order / sentenceId=L359-S02 / targetChar=物 / targetCharIndex= / options=[{"id":"L359-G04-A","text":"動","correctOrder":0,"correct":true},{"id":"L359-G04-B","text":"物","correctOrder":1,"correct":true},{"id":"L359-G04-C","text":"園","correctOrder":2,"correct":true},{"id":"L359-G04-D","text":"裡","correctOrder":3,"correct":true}]
 - L359-G05: choose-pronunciation / sentenceId=L359-S05 / targetChar=怪 / targetCharIndex=5 / options=[{"id":"correct","text":"公園裡沒有怪物。","correct":true,"sentenceId":"L359-S05","audioSrc":"/assets/lessons/L359/audio/L359-S05.m4a"},{"id":"wrong-one","text":"公園裡沒有動物。","correct":false,"audioSrc":"/assets/lessons/L359/audio/L359-G05-wrong-one.m4a"},{"id":"wrong-two","text":"公園裡沒有小雞。","correct":false,"audioSrc":"/assets/lessons/L359/audio/L359-G05-wrong-two.m4a"}]
 
@@ -444,6 +444,16 @@ L354 排 merged into origin/main during package work and is no longer provisiona
           "id": "L359-G03-A",
           "text": "怪",
           "correct": true
+        },
+        {
+          "id": "L359-G03-B",
+          "text": "快",
+          "correct": false
+        },
+        {
+          "id": "L359-G03-C",
+          "text": "怕",
+          "correct": false
         }
       ]
     },

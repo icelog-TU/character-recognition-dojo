@@ -439,6 +439,16 @@
           "id": "L353-G03-A",
           "text": "正",
           "correct": true
+        },
+        {
+          "id": "L353-G03-B",
+          "text": "左",
+          "correct": false
+        },
+        {
+          "id": "L353-G03-C",
+          "text": "在",
+          "correct": false
         }
       ]
     },

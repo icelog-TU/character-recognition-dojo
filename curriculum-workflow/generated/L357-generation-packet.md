@@ -545,6 +545,16 @@ The following request records are final and match the draft. No approved sentenc
           "id": "L357-G03-A",
           "text": "園",
           "correct": true
+        },
+        {
+          "id": "L357-G03-B",
+          "text": "圓",
+          "correct": false
+        },
+        {
+          "id": "L357-G03-C",
+          "text": "原",
+          "correct": false
         }
       ]
     },

@@ -25,7 +25,7 @@ G01=find-character, G02=teach-character, G03=missing-character, G04=partial-orde
 
 - L356-G01: find-character / sentenceId=L356-S01 / targetChar=公 / targetCharIndex=5
 - L356-G02: teach-character / sentenceId=L356-S02 / targetChar=公 / targetCharIndex=4 / teachAudio={"prefixText":"小雞跟著","targetText":"公","suffixText":"雞跑","prefixSrc":"/assets/lessons/L356/audio/L356-G02-prefix.m4a","suffixSrc":"/assets/lessons/L356/audio/L356-G02-suffix.m4a"}
-- L356-G03: missing-character / sentenceId=L356-S04 / targetChar=公 / targetCharIndex=1 / options=[{"id":"L356-G03-A","text":"公","correct":true}]
+- L356-G03: missing-character / sentenceId=L356-S04 / targetChar=公 / targetCharIndex=1 / options=[{"id":"L356-G03-A","text":"公","correct":true}, {"id":"L356-G03-B","text":"全","correct":false}, {"id":"L356-G03-C","text":"個","correct":false}]
 - L356-G04: partial-order / sentenceId=L356-S05 / targetChar=排 / targetCharIndex= / options=[{"id":"L356-G04-A","text":"餐","correctOrder":0,"correct":true},{"id":"L356-G04-B","text":"廳","correctOrder":1,"correct":true},{"id":"L356-G04-C","text":"正","correctOrder":2,"correct":true},{"id":"L356-G04-D","text":"門","correctOrder":3,"correct":true}]
 - L356-G05: choose-pronunciation / sentenceId=L356-S03 / targetChar=公 / targetCharIndex=0 / options=[{"id":"correct","text":"公車上正好有位子。","correct":true,"sentenceId":"L356-S03","audioSrc":"/assets/lessons/L356/audio/L356-S03.m4a"},{"id":"wrong-one","text":"公車上正好沒位子。","correct":false,"audioSrc":"/assets/lessons/L356/audio/L356-G05-wrong-one.m4a"},{"id":"wrong-two","text":"公車上正好有帽子。","correct":false,"audioSrc":"/assets/lessons/L356/audio/L356-G05-wrong-two.m4a"}]
 
@@ -419,6 +419,16 @@ OpenAI repo audio pipeline generated standalone character audio, sentence audio,
           "id": "L356-G03-A",
           "text": "公",
           "correct": true
+        },
+        {
+          "id": "L356-G03-B",
+          "text": "全",
+          "correct": false
+        },
+        {
+          "id": "L356-G03-C",
+          "text": "個",
+          "correct": false
         }
       ]
     },

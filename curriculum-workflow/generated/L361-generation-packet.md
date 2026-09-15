@@ -516,6 +516,16 @@ Release blockers: L360, R043, R044. Production JSON, planner and ledger integrat
           "id": "L361-G03-A",
           "text": "驚",
           "correct": true
+        },
+        {
+          "id": "L361-G03-B",
+          "text": "影",
+          "correct": false
+        },
+        {
+          "id": "L361-G03-C",
+          "text": "樹",
+          "correct": false
         }
       ]
     },
@@ -1054,6 +1064,16 @@ Release blockers: L360, R043, R044. Production JSON, planner and ledger integrat
           "id": "L361-G03-A",
           "text": "驚",
           "correct": true
+        },
+        {
+          "id": "L361-G03-B",
+          "text": "影",
+          "correct": false
+        },
+        {
+          "id": "L361-G03-C",
+          "text": "樹",
+          "correct": false
         }
       ]
     },

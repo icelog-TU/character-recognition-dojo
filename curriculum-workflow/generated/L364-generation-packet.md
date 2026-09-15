@@ -405,6 +405,16 @@ G02 uses independently generated 我不喜歡被人; target 笑 is final, so suf
         "id": "answer",
         "text": "笑",
         "correct": true
+      },
+      {
+        "id": "L364-G03-B",
+        "text": "筆",
+        "correct": false
+      },
+      {
+        "id": "L364-G03-C",
+        "text": "草",
+        "correct": false
       }
     ]
   },

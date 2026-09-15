@@ -143,7 +143,7 @@
 - Target char: 喜
 - Target index: 9
 - Missing indexes: 9
-- Options: L362-G03-A:喜
+- Options: L362-G03-A:喜 | L362-G03-B:奇 (incorrect) | L362-G03-C:客 (incorrect)
 
 ### L362-G04 - partial-order
 

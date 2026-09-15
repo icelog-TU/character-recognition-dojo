@@ -541,6 +541,16 @@ Teacher approved S05 displayLines correction: 公車正好停在 / 動物園前�
           "id": "L358-G03-A",
           "text": "物",
           "correct": true
+        },
+        {
+          "id": "L358-G03-B",
+          "text": "特",
+          "correct": false
+        },
+        {
+          "id": "L358-G03-C",
+          "text": "作",
+          "correct": false
         }
       ]
     },

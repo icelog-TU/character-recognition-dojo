@@ -124,7 +124,7 @@
 - Target char: 吧
 - Target index: 10
 - Missing indexes: 10
-- Options: L366-G03-A:吧
+- Options: L366-G03-A:吧 | L366-G03-B:把 (incorrect) | L366-G03-C:爸 (incorrect)
 
 ### L366-G04 - partial-order
 
