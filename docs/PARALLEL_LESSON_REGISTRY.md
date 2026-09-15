@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L360 | 奇 | claimed | Production C | `codex/l360-complete-package` | L355:雞, L356:公, L357:園, L358:物, L359:怪 | 雞, 公, 園, 物, 怪 | `curriculum-workflow/lesson-requests/L360.json`; `curriculum-workflow/generated/L360-generation-packet.md`; `curriculum-workflow/drafts/L360-draft.json` | `public/assets/lessons/L360/`; `curriculum-workflow/audio-inbox/L360/` | Base origin/main aa1144e3 through L354. Release-only dependencies; R043/R044 must follow L360 before L361 enters main. |
+| L360 | 奇 | partial-package | Production C | `codex/l360-complete-package` | L355:雞, L356:公, L357:園, L358:物, L359:怪 | 雞, 公, 園, 物, 怪 | `curriculum-workflow/lesson-requests/L360.json`; `curriculum-workflow/generated/L360-generation-packet.md`; `curriculum-workflow/drafts/L360-draft.json` | `public/assets/lessons/L360/`; `curriculum-workflow/audio-inbox/L360/` | Base origin/main aa1144e3 through L354. Five images and ten audio files exist; timing defects S01 index4=40ms and G05 wrong-one index9=1ms, unverified tails, manual playback QA pending. Not asset-complete. Shared alignment adds 园→園. R043/R044 must follow L360 before L361 enters main. |
 
 ## Status Values
 
