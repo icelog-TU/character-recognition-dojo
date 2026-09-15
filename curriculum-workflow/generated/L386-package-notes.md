@@ -63,7 +63,7 @@ Because G03 has an actual visible defect, browser fallback cannot promote this p
 - PASS: ordinary `npm run validate:production` and final `curriculum:audit-state` on base production. The expected unmerged L386 asset-folder warning is recorded; these main-only checks do not replace the separate L386 draft audit.
 - Historical alignment and timing assertions initially failed as detailed above; final technical audit passes.
 - `npm run verify` skipped: dependency-blocked; shared-state integration belongs to Release.
-- Required pushed-ref package-intake is run after this checkpoint is pushed. Asset-complete is not asserted; this draft intentionally retains partial-package because of G03.
+- Pushed-ref package-intake executed against 7e410db0896644bd32722fa26f9a3865f4aa2330: FAIL because draft/registry/packet intentionally retain partial-package. It found all five images and ten audio files and canonical five games. Full output classification is retained in L386-intake-report.json. Asset-complete is not asserted.
 
 ## Review URLs
 

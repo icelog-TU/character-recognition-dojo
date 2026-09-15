@@ -1,0 +1,17 @@
+{
+  "unit": "L386",
+  "checkedRef": "origin/codex/l386-complete-package",
+  "checkedCommit": "7e410db0896644bd32722fa26f9a3865f4aa2330",
+  "result": "FAIL",
+  "reason": "Intentionally partial-package: confirmed phone G03 clipping defect; package cannot be promoted.",
+  "assets": {
+    "images": 5,
+    "audio": 10
+  },
+  "errors": [
+    "Draft status partial-package",
+    "Registry status partial-package",
+    "Registry / packet / draft explicitly retain blocker text"
+  ],
+  "warning": "Initial intake did not recognize playback/manual QA evidence in packet/draft; explicit Phone playback QA summary added afterward. Detailed evidence already exists in L386-package-notes.md."
+}
