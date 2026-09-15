@@ -23,8 +23,8 @@
     "相",
     "信"
   ],
-  "teacherNotes": "Teacher-approved L384 single-character lesson. Base 250ca4a3361a15104ba19158bb1b0710dac43ecc; formal L001-L375, 379 learned characters; full allowed set 385. Learner dependencies L379-L383 (送連傳相信); no outside-coverage provisional. Release requires R045/R046 and L376-L383 in playable order. Dependencies block Release only. Stage 2 uses three 寫 and three prior learned distractors. G03 exactly 寫/畫/拿; G04 three single-Han cards 太/相/信. Handoff isCorrect is normalized to supported correct with unchanged answer mapping. S02 phone means contact number recorded on paper then digitally sent, not passing paper; no readable numerals. S04 matching illegible writing, not drawings. 寫 ㄒㄧㄝˇ; 相 in 相信/相同 ㄒㄧㄤ; 傳說 ㄔㄨㄢˊ. Teacher subjective review is post-main. NOT COMPLETED: G02 prefix 把電話 cannot reliably pass the exact-transcript/timing gate after 8 standalone generations (7 regenerations). Rejected latest candidate is retained only in ignored audio-inbox; shipping prefix is absent. Never substitute 打電話 or splice S02. Phone/tablet playback and final package validation remain pending. This is partial-package, not asset-complete.",
-  "packageStatus": "partial-package",
+  "teacherNotes": "Exact G02 prefix 把電話. S02 records a contact number then digitally sends it; no readable numerals. S04 matching illegible writing, not drawings. 相 reads ㄒㄧㄤ; 傳說 reads ㄔㄨㄢˊ. Release requires R045/R046 and all preceding lessons; latest checked main is L380 with R045/R046 present. Teacher subjective review is post-main except recorded explicit approvals. See L384-rescue-qa.md.",
+  "packageStatus": "dependency-blocked-asset-complete",
   "charAudio": {
     "寫": "/assets/lessons/L384/audio/char-u5beb.m4a"
   },
@@ -45,7 +45,7 @@
       "imageSrc": "/assets/lessons/L384/images/L384-S01.webp",
       "audio": {
         "src": "/assets/lessons/L384/audio/L384-S01.m4a",
-        "durationMs": 5037,
+        "durationMs": 4597,
         "charTimings": [
           {
             "charIndex": 0,
@@ -95,7 +95,7 @@
           {
             "charIndex": 9,
             "startMs": 4140,
-            "endMs": 4400
+            "endMs": 4418
           }
         ]
       }
@@ -116,7 +116,7 @@
       "imageSrc": "/assets/lessons/L384/images/L384-S02.webp",
       "audio": {
         "src": "/assets/lessons/L384/audio/L384-S02.m4a",
-        "durationMs": 4591,
+        "durationMs": 3599,
         "charTimings": [
           {
             "charIndex": 0,
@@ -146,29 +146,32 @@
           {
             "charIndex": 5,
             "startMs": 1740,
-            "endMs": 2360
+            "endMs": 2400
           },
           {
             "charIndex": 6,
-            "startMs": 2360,
+            "startMs": 2420,
             "endMs": 2660
           },
           {
             "charIndex": 7,
             "startMs": 2660,
-            "endMs": 2960
+            "endMs": 2940
           },
           {
             "charIndex": 8,
-            "startMs": 2960,
-            "endMs": 3130
+            "startMs": 2940,
+            "endMs": 3110
           },
           {
             "charIndex": 9,
-            "startMs": 3130,
-            "endMs": 3300
+            "startMs": 3110,
+            "endMs": 3428
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "6": "ㄔㄨㄢˊ"
       }
     },
     {
@@ -186,7 +189,7 @@
       "imageSrc": "/assets/lessons/L384/images/L384-S03.webp",
       "audio": {
         "src": "/assets/lessons/L384/audio/L384-S03.m4a",
-        "durationMs": 4792,
+        "durationMs": 2879,
         "charTimings": [
           {
             "charIndex": 0,
@@ -231,9 +234,13 @@
           {
             "charIndex": 8,
             "startMs": 2470,
-            "endMs": 2640
+            "endMs": 2706
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "2": "ㄔㄨㄢˊ",
+        "7": "ㄒㄧㄤ"
       }
     },
     {
@@ -251,7 +258,7 @@
       "imageSrc": "/assets/lessons/L384/images/L384-S04.webp",
       "audio": {
         "src": "/assets/lessons/L384/audio/L384-S04.m4a",
-        "durationMs": 4435,
+        "durationMs": 3970,
         "charTimings": [
           {
             "charIndex": 0,
@@ -301,9 +308,12 @@
           {
             "charIndex": 9,
             "startMs": 3480,
-            "endMs": 3760
+            "endMs": 3798
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "8": "ㄒㄧㄤ"
       }
     },
     {
@@ -322,7 +332,7 @@
       "imageSrc": "/assets/lessons/L384/images/L384-S05.webp",
       "audio": {
         "src": "/assets/lessons/L384/audio/L384-S05.m4a",
-        "durationMs": 3923,
+        "durationMs": 3367,
         "charTimings": [
           {
             "charIndex": 0,
@@ -377,7 +387,7 @@
           {
             "charIndex": 10,
             "startMs": 3000,
-            "endMs": 3160
+            "endMs": 3203
           }
         ]
       }
@@ -405,38 +415,61 @@
         "prefixSrc": "/assets/lessons/L384/audio/L384-G02-prefix.m4a",
         "suffixSrc": "/assets/lessons/L384/audio/L384-G02-suffix.m4a",
         "suffixAudio": {
+          "spokenText": "下來傳給爸爸",
           "src": "/assets/lessons/L384/audio/L384-G02-suffix.m4a",
-          "durationMs": 2654,
+          "durationMs": 2252,
           "charTimings": [
             {
               "charIndex": 0,
               "startMs": 0,
-              "endMs": 460
+              "endMs": 340
             },
             {
               "charIndex": 1,
-              "startMs": 460,
-              "endMs": 800
+              "startMs": 340,
+              "endMs": 680
             },
             {
               "charIndex": 2,
-              "startMs": 800,
-              "endMs": 1380
+              "startMs": 680,
+              "endMs": 1360
             },
             {
               "charIndex": 3,
-              "startMs": 1380,
+              "startMs": 1360,
               "endMs": 1640
             },
             {
               "charIndex": 4,
               "startMs": 1640,
-              "endMs": 1830
+              "endMs": 1850
             },
             {
               "charIndex": 5,
-              "startMs": 1830,
-              "endMs": 2020
+              "startMs": 1850,
+              "endMs": 2077
+            }
+          ]
+        },
+        "prefixAudio": {
+          "spokenText": "把電話",
+          "src": "/assets/lessons/L384/audio/L384-G02-prefix.m4a",
+          "durationMs": 1416,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 480
+            },
+            {
+              "charIndex": 1,
+              "startMs": 480,
+              "endMs": 900
+            },
+            {
+              "charIndex": 2,
+              "startMs": 900,
+              "endMs": 1252
             }
           ]
         }
@@ -519,7 +552,7 @@
           "audioSrc": "/assets/lessons/L384/audio/L384-S05.m4a",
           "audio": {
             "src": "/assets/lessons/L384/audio/L384-S05.m4a",
-            "durationMs": 3923,
+            "durationMs": 3367,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -574,7 +607,7 @@
               {
                 "charIndex": 10,
                 "startMs": 3000,
-                "endMs": 3160
+                "endMs": 3203
               }
             ]
           }
@@ -585,8 +618,9 @@
           "correct": false,
           "audioSrc": "/assets/lessons/L384/audio/L384-G05-wrong-one.m4a",
           "audio": {
+            "spokenText": "寫得太大連爸爸都看不見",
             "src": "/assets/lessons/L384/audio/L384-G05-wrong-one.m4a",
-            "durationMs": 4506,
+            "durationMs": 4179,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -641,7 +675,7 @@
               {
                 "charIndex": 10,
                 "startMs": 3800,
-                "endMs": 3960
+                "endMs": 4013
               }
             ]
           }
@@ -652,8 +686,9 @@
           "correct": false,
           "audioSrc": "/assets/lessons/L384/audio/L384-G05-wrong-two.m4a",
           "audio": {
+            "spokenText": "寫得太小連媽媽都看不見",
             "src": "/assets/lessons/L384/audio/L384-G05-wrong-two.m4a",
-            "durationMs": 4879,
+            "durationMs": 3738,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -708,12 +743,205 @@
               {
                 "charIndex": 10,
                 "startMs": 3320,
-                "endMs": 3500
+                "endMs": 3570
               }
             ]
           }
         }
       ]
     }
-  ]
+  ],
+  "stage4AudioAlignment": {
+    "L384-G02-prefix": {
+      "spokenText": "把電話",
+      "src": "/assets/lessons/L384/audio/L384-G02-prefix.m4a",
+      "durationMs": 1416,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 480
+        },
+        {
+          "charIndex": 1,
+          "startMs": 480,
+          "endMs": 900
+        },
+        {
+          "charIndex": 2,
+          "startMs": 900,
+          "endMs": 1252
+        }
+      ]
+    },
+    "L384-G02-suffix": {
+      "spokenText": "下來傳給爸爸",
+      "src": "/assets/lessons/L384/audio/L384-G02-suffix.m4a",
+      "durationMs": 2252,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 340
+        },
+        {
+          "charIndex": 1,
+          "startMs": 340,
+          "endMs": 680
+        },
+        {
+          "charIndex": 2,
+          "startMs": 680,
+          "endMs": 1360
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1360,
+          "endMs": 1640
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1640,
+          "endMs": 1850
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1850,
+          "endMs": 2077
+        }
+      ]
+    },
+    "L384-G05-wrong-one": {
+      "spokenText": "寫得太大連爸爸都看不見",
+      "src": "/assets/lessons/L384/audio/L384-G05-wrong-one.m4a",
+      "durationMs": 4179,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 360
+        },
+        {
+          "charIndex": 1,
+          "startMs": 360,
+          "endMs": 520
+        },
+        {
+          "charIndex": 2,
+          "startMs": 520,
+          "endMs": 800
+        },
+        {
+          "charIndex": 3,
+          "startMs": 800,
+          "endMs": 1120
+        },
+        {
+          "charIndex": 4,
+          "startMs": 2060,
+          "endMs": 2140
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2140,
+          "endMs": 2410
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2410,
+          "endMs": 2680
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2680,
+          "endMs": 3260
+        },
+        {
+          "charIndex": 8,
+          "startMs": 3260,
+          "endMs": 3620
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3620,
+          "endMs": 3800
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3800,
+          "endMs": 4013
+        }
+      ]
+    },
+    "L384-G05-wrong-two": {
+      "spokenText": "寫得太小連媽媽都看不見",
+      "src": "/assets/lessons/L384/audio/L384-G05-wrong-two.m4a",
+      "durationMs": 3738,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 400
+        },
+        {
+          "charIndex": 1,
+          "startMs": 400,
+          "endMs": 600
+        },
+        {
+          "charIndex": 2,
+          "startMs": 600,
+          "endMs": 1020
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1020,
+          "endMs": 1300
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1900,
+          "endMs": 2000
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2000,
+          "endMs": 2360
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2360,
+          "endMs": 2500
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2500,
+          "endMs": 2780
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2780,
+          "endMs": 3140
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3140,
+          "endMs": 3320
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3320,
+          "endMs": 3570
+        }
+      ]
+    }
+  },
+  "rescueQA": {
+    "sourcePackageSha": "d6dd05e92d53435cb745608852b6259887001069",
+    "role": "Package Rescue",
+    "browserQA": "Browser QA PASS: all 11 audio controls per unit played to ended; G01-G05, phone reward navigation and phone/tablet G03 verified. G02 uses synthetic test microphone, not physical-device acceptance. See L384-rescue-browser-qa.json.",
+    "notes": "curriculum-workflow/generated/L384-rescue-qa.md",
+    "audioEvidence": "curriculum-workflow/generated/L384-rescue-audio-evidence.json",
+    "timingEvidence": "curriculum-workflow/generated/L384-rescue-timing-review.json"
+  }
 }

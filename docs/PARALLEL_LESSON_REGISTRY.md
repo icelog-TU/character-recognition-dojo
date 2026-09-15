@@ -1,4 +1,4 @@
-# Parallel Lesson Registry
+﻿# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L384 | 寫 | claimed | Package Rescue | codex/l384-package-rescue | L379:送; L380:連; L381:傳; L382:相; L383:信 | 送連傳相信 | curriculum-workflow/lesson-requests/L384.json; curriculum-workflow/generated/L384-generation-packet.md; curriculum-workflow/drafts/L384-draft.json | curriculum-workflow/audio-inbox/L384/; public/assets/lessons/L384/ | Rescue claimed from original package; package remains incomplete pending asset/timing/UI verification. Earlier lessons and required review pair remain Release dependencies. |
+| L384 | 寫 | dependency-blocked-asset-complete | Package Rescue | codex/l384-package-rescue | L379:送; L380:連; L381:傳; L382:相; L383:信 | 送連傳相信 | curriculum-workflow/lesson-requests/L384.json; curriculum-workflow/generated/L384-generation-packet.md; curriculum-workflow/drafts/L384-draft.json | curriculum-workflow/audio-inbox/L384/; public/assets/lessons/L384/ | Generated dedicated exact G02 prefix 把電話 (not 打電話, no sentence splice), with matching transcription and timings. Trimmed terminal silence and a post-silence charAudio transient while preserving original speech packets. Release waits for remaining preceding lessons; R045/R046 already on main; see L384-rescue-qa.md. |
 
 ## Status Values
 
