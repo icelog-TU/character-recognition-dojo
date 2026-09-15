@@ -55,3 +55,12 @@ Release must satisfy L363 and integrate shared state, then run final verify. Tea
 https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L364&ref=main
 
 Post-merge status: npm run asset:review-status -- --unit L364 --ref main
+
+## Pushed-ref intake result
+
+Tested pushed asset commit 9139c5da4ea8400839b161b61cba926a693ec912:
+
+- Stock `npm run curriculum:package-intake -- --unit L364 --ref origin/codex/l364-complete-package --strict`: exit 1, sole finding `expected 10 M4A audio files, found 9`.
+- `node curriculum-workflow/generated/L364-audit.cjs intake origin/codex/l364-complete-package`: PASS with zero other findings, using only the explicit prefix-only handoff count exception.
+- Production follows the teacher's explicit nine-file/no-suffix specification. Stock intake compatibility must be acknowledged by Supervisor/Release; this report does not claim the unmodified stock command passed. Shared validator code was not changed.
+- Staged scope and whitespace checks passed; all owned assets pushed. No rejected images included.
