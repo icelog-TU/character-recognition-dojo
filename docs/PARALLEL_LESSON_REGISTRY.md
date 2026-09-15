@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R043/R044 | review pair after L360, L331-L360 | claimed | Production D replacement | codex/r043-r044-complete-package | L355:雞; L356:公; L357:園; L358:物; L359:怪; L360:奇 | 雞 公 園 物 怪 奇 | curriculum-workflow/review-requests/R043.json; curriculum-workflow/review-requests/R044.json; curriculum-workflow/generated/R043-generation-packet.md; curriculum-workflow/generated/R044-generation-packet.md; curriculum-workflow/drafts/R043-draft.json; curriculum-workflow/drafts/R044-draft.json | public/assets/reviews/R043/; public/assets/reviews/R044/; curriculum-workflow/audio-inbox/R043/; curriculum-workflow/audio-inbox/R044/ | Teacher activation handoff; base debe8774, formal through L354. Approved 10 sentences; 30/30 coverage. Release must integrate L355-L360 first. |
 
 ## Status Values
 
