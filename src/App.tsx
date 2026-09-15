@@ -5914,7 +5914,7 @@ function SentencePracticePreview({
     setActiveGameCharIndex(null);
     setAskingGameCharIndex(targetIndex);
     setTeachPhase("asking");
-    await speakStageFour("哇！這個字我不會念，請教我念。請按一下紅框的字。");
+    await speakStageFour("哇！這個字我不會念，請你幫我念。請按一下紅框的字。");
     if (guideRunRef.current !== runId) return;
     setTeachPhase("ready");
   }
