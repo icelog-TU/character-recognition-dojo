@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L391 | 報 | claimed | Production A | codex/l391-complete-package | L385:字; L386:名; L387:第; L388:念; L389:號; L390:數 | 字名第念號數 | curriculum-workflow/lesson-requests/L391.json; curriculum-workflow/generated/L391-generation-packet.md; curriculum-workflow/drafts/L391-draft.json | curriculum-workflow/audio-inbox/L391/; public/assets/lessons/L391/ | Base b313ded8, formal through L375. 字 is vocabulary-only dependency outside coverage. Release requires all predecessors, R045/R046 and L390 -> R047/R048 (L361-L390) -> L391. No readable image text exception. | 
+| L391 | 報 | dependency-blocked-asset-complete | Production A | codex/l391-complete-package | L385:字; L386:名; L387:第; L388:念; L389:號; L390:數 | 字名第念號數 | curriculum-workflow/lesson-requests/L391.json; curriculum-workflow/generated/L391-generation-packet.md; curriculum-workflow/drafts/L391-draft.json | curriculum-workflow/audio-inbox/L391/; public/assets/lessons/L391/ | 5 WebP, 10 M4A, AI timings, Browser QA phone/tablet PASS. Main recheck 2169c169, formal L380; Release order L390 -> R047 -> R048 -> L391; all predecessors/reviews required. 報 ㄅㄠˋ; 數 ㄕㄨˋ. Teacher review post-main. |
 
 ## Status Values
 
