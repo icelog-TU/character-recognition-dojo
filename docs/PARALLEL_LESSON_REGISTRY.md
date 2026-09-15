@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L376 | 已 | claimed | Production D | codex/l376-complete-package | L371:親; L372:交; L373:通; L374:往; L375:經 | 親 交 通 往 經 | curriculum-workflow/lesson-requests/L376.json; curriculum-workflow/generated/L376-generation-packet.md; curriculum-workflow/drafts/L376-draft.json | public/assets/lessons/L376/; curriculum-workflow/audio-inbox/L376/ | Base 95ca55f7 through L369/R044. Release order L375 → R045 → R046 → L376; review pair after L375 covers L346-L375, ceiling through L375. L370 is also a prior playable prerequisite but its chars are not used. Teacher-approved five sentences; S04 completed book return. |
+| L376 | 已 | partial-package | Production D | codex/l376-complete-package | L371:親; L372:交; L373:通; L374:往; L375:經 | 親 交 通 往 經 | curriculum-workflow/lesson-requests/L376.json; curriculum-workflow/generated/L376-generation-packet.md; curriculum-workflow/drafts/L376-draft.json | public/assets/lessons/L376/; curriculum-workflow/audio-inbox/L376/ | Base 95ca55f7 through L369/R044. Release order L375 → R045 → R046 → L376; review pair after L375 covers L346-L375, ceiling through L375. L370 is also a prior playable prerequisite but its chars are not used. Teacher-approved five sentences; S04 completed book return. BLOCKED: G02 suffix transcript mismatch, full alignment unavailable; not for Release intake. |
 
 ## Status Values
 

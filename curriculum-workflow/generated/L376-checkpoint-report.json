@@ -1,0 +1,130 @@
+{
+  "status": "partial-package",
+  "blocker": "Mandatory AI alignment blocked at L376-G02-suffix. Exact required input 經打通了. Four independently generated versions returned 清打通了; 精打通了 (independent model/raw and processed: 心打通了); 已經打通了; 已經打通了. No non-equivalent transcription substitution is accepted. Full align command stops before committing timings. Do not integrate this partial package.",
+  "stage2": {
+    "status": "PASS",
+    "cards": [
+      "已",
+      "站",
+      "已",
+      "後",
+      "往",
+      "已"
+    ],
+    "targetCount": 3,
+    "otherCount": 3,
+    "observedProgress": [
+      "1/3 not complete",
+      "2/3 not complete",
+      "3/3 全部找到了 and 通關"
+    ],
+    "scope": "Actual localhost app with launch state only; gameplay unchanged. Older 往 is approved L374 provisional."
+  },
+  "content": {
+    "allowed": 378,
+    "coverage": {
+      "已": 3,
+      "經": 3,
+      "往": 2,
+      "通": 2,
+      "交": 2,
+      "親": 1
+    },
+    "approvedText": "PASS",
+    "displayLines": "PASS",
+    "stage4Index": "PASS",
+    "sentenceOrder": [
+      "S01",
+      "S02",
+      "S04",
+      "S03",
+      "S05"
+    ]
+  },
+  "checks": {
+    "tools": "PASS",
+    "ai": "PASS",
+    "startupState": "PASS",
+    "packet": "Executed and restored approved content",
+    "images": "In-flight generation collected; per-image review in package notes",
+    "audioGeneration": "10 raw MP3 generated; G02 suffix regenerated three times",
+    "audioProcessing": "10 M4A processed",
+    "alignment": "BLOCKED at G02 suffix",
+    "phonePlayback": "Not completed because required audio gate is blocked",
+    "sharedVerify": "Skipped: Release-owned dependency and review integration"
+  },
+  "media": [
+    {
+      "file": "public\\assets\\lessons\\L376\\images\\L376-S01.webp",
+      "bytes": 195430
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\images\\L376-S02.webp",
+      "bytes": 166064
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\images\\L376-S03.webp",
+      "bytes": 152724
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\images\\L376-S04.webp",
+      "bytes": 142046
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\images\\L376-S05.webp",
+      "bytes": 147822
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\char-u5df2.m4a",
+      "bytes": 16760,
+      "decode": "PASS"
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\L376-G02-prefix.m4a",
+      "bytes": 11256,
+      "decode": "PASS"
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\L376-G02-suffix.m4a",
+      "bytes": 24421,
+      "decode": "PASS"
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\L376-G05-wrong-one.m4a",
+      "bytes": 39113,
+      "decode": "PASS"
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\L376-G05-wrong-two.m4a",
+      "bytes": 43476,
+      "decode": "PASS"
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\L376-S01.m4a",
+      "bytes": 60901,
+      "decode": "PASS"
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\L376-S02.m4a",
+      "bytes": 30352,
+      "decode": "PASS"
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\L376-S03.m4a",
+      "bytes": 35355,
+      "decode": "PASS"
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\L376-S04.m4a",
+      "bytes": 60614,
+      "decode": "PASS"
+    },
+    {
+      "file": "public\\assets\\lessons\\L376\\audio\\L376-S05.m4a",
+      "bytes": 34319,
+      "decode": "PASS"
+    }
+  ],
+  "imageBytes": 804086,
+  "audioBytes": 356567
+}

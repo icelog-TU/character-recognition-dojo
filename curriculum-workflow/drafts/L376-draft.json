@@ -1,0 +1,246 @@
+{
+  "id": "L376",
+  "order": 376,
+  "title": "已",
+  "newChars": [
+    "已"
+  ],
+  "zhuyin": {
+    "已": "ㄧˇ"
+  },
+  "charAudio": {
+    "已": "/assets/lessons/L376/audio/char-u5df2.m4a"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [
+    "L371",
+    "L372",
+    "L373",
+    "L374",
+    "L375"
+  ],
+  "provisionalLearnedChars": [
+    "親",
+    "交",
+    "通",
+    "往",
+    "經"
+  ],
+  "packageStatus": "partial-package",
+  "notes": "Teacher-approved single-character L376 已 (已經). S04 final is completed personal book return, not planting a tree; 還 at Han index8 is ㄏㄨㄢˊ. Base 95ca55f7 formal through L369. Learner dependencies L371-L375, provisional 親交通往經. Release also needs all earlier lessons including L370. Required playable order L375 → R045 → R046 → L376. R045/R046 after L375 cover L346-L375 with allowed ceiling through L375; neither is in main at claim. Review pair is Release blocker only, outside this package. Stage2 expected six single-Han cards: three 已 plus three old characters; all three targets required. Mandatory AI alignment blocked at L376-G02-suffix. Exact required input 經打通了. Four independently generated versions returned 清打通了; 精打通了 (independent model/raw and processed: 心打通了); 已經打通了; 已經打通了. No non-equivalent transcription substitution is accepted. Full align command stops before committing timings. Do not integrate this partial package.",
+  "sentences": [
+    {
+      "id": "L376-S01",
+      "text": "往後站，公車已經來了。",
+      "spokenText": "往後站公車已經來了",
+      "focusChar": "已",
+      "displayLines": [
+        "往後站，",
+        "公車已經",
+        "來了。"
+      ],
+      "imageNotes": "公車站旁，主角媽媽提醒主角小女孩往後站，女孩正從靠近路緣的位置退回媽媽身旁。公車已到站旁，正在低速靠站，車身清楚可見。呈現公車來了，因此先退後等車停穩。女孩留在人行道上，不跨入車道，也不與公車貼得太近。不畫成衝撞、驚險逃跑或已登車。不放站牌文字、路線號碼、廣告、品牌或可讀車牌。",
+      "imagePrompt": "Single square 1:1 preschool educational picture-book illustration. Supplied reference sheet: row1 all L058 STYLE ONLY, row2 refined examples, row3 family and teacher identity anchors. Closely preserve fine pencil-and-watercolor lines, warm natural sunlight, bright rich nuanced color, detailed clean environment, soft natural faces, stable preschool proportions. No readable text, letters, numbers, brands, watermarks, logos or captions anywhere. Reject generic simple cartoon, thin Japanese watercolor, anime, 3D and photorealism. Fixed protagonist girl, preschool age, short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes, correct family-anchor proportions. Fixed mother: dark shoulder-length hair, cream cardigan and blue skirt, warm adult face. Fixed father: short dark hair, blue shirt, tan trousers. Preserve family identities from bottom-row references. Bus stop on broad sidewalk in Taiwan. Mother gently gestures for girl to step BACK away from curb toward mother. Girl clearly taking a calm backward step, still fully on sidewalk with ample safe distance. Large plain city bus has arrived and is slowly pulling alongside curb on ROAD, not sidewalk. Bus is prominent with no markings or route display. Both remain well away from its path. Clear arrival-and-step-back story, not boarding, not danger or running. Empty/plain bus shelter, no readable sign, advertisement or plate.",
+      "imageReuseDecision": "New scene: prior L356/L358 bus scenes show seating/queue/stopped bus, not girl stepping back with mother on arrival.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L376/images/L376-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L376/audio/L376-S01.m4a"
+      }
+    },
+    {
+      "id": "L376-S02",
+      "text": "電話已經打通了。",
+      "spokenText": "電話已經打通了",
+      "focusChar": "已",
+      "displayLines": [
+        "電話已經",
+        "打通了。"
+      ],
+      "imageNotes": "主角家中，媽媽拿著已接通的電話，微笑著準備交給主角小女孩。女孩抬頭伸手接電話。畫面另一側可用小幅分隔場景，呈現爸爸在另一個地方拿著電話回應，表示雙方已接通。以實際交談與回應呈現，不只畫撥號或等待接聽。手機螢幕不放號碼或文字。",
+      "imagePrompt": "Single square 1:1 preschool educational picture-book illustration. Supplied reference sheet: row1 all L058 STYLE ONLY, row2 refined examples, row3 family and teacher identity anchors. Closely preserve fine pencil-and-watercolor lines, warm natural sunlight, bright rich nuanced color, detailed clean environment, soft natural faces, stable preschool proportions. No readable text, letters, numbers, brands, watermarks, logos or captions anywhere. Reject generic simple cartoon, thin Japanese watercolor, anime, 3D and photorealism. Fixed protagonist girl, preschool age, short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes, correct family-anchor proportions. Fixed mother: dark shoulder-length hair, cream cardigan and blue skirt, warm adult face. Fixed father: short dark hair, blue shirt, tan trousers. Preserve family identities from bottom-row references. Connected phone call. Main 3/4 of composition warm family home: mother smiling, mouth slightly open as she answers a connected call, holding mobile phone out toward girl who reaches to receive it. Small clear separated scene on right shows father elsewhere with phone to his ear responding warmly, proving call has connected. Phone screens plain, no digits, text or call graphics. Natural conversation, not dialing or waiting. Do not confuse father panel with someone in same room.",
+      "imageReuseDecision": "New scene: L192-S01 is a child calling mother, not mother handing connected father call to girl.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L376/images/L376-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L376/audio/L376-S02.m4a"
+      }
+    },
+    {
+      "id": "L376-S03",
+      "text": "往前開，就到交流道。",
+      "spokenText": "往前開就到交流道",
+      "focusChar": "往",
+      "displayLines": [
+        "往前開，",
+        "就到交流道。"
+      ],
+      "imageNotes": "從主角家車內後座向前看的視角，爸爸專心駕車，媽媽坐在副駕駛座，示意前方道路。前方可見通向交流道的匝道及高架道路結構，讓孩子理解繼續往前開就會到交流道。車輛在正常車道行駛，人物繫好安全帶。不畫行人走上匝道，不使用可讀路牌、地名、路線號碼或導航文字。",
+      "imagePrompt": "Single square 1:1 preschool educational picture-book illustration. Supplied reference sheet: row1 all L058 STYLE ONLY, row2 refined examples, row3 family and teacher identity anchors. Closely preserve fine pencil-and-watercolor lines, warm natural sunlight, bright rich nuanced color, detailed clean environment, soft natural faces, stable preschool proportions. No readable text, letters, numbers, brands, watermarks, logos or captions anywhere. Reject generic simple cartoon, thin Japanese watercolor, anime, 3D and photorealism. Fixed mother: dark shoulder-length hair, cream cardigan and blue skirt, warm adult face. Fixed father: short dark hair, blue shirt, tan trousers. Preserve family identities from bottom-row references. Camera inside family car, rear seat looking forward between front seats. Father drives on LEFT, both hands positioned naturally at wheel, eyes on road; mother in RIGHT front passenger seat gestures gently toward road. BOTH have visibly correctly fastened seatbelts. Ahead through broad windshield: ordinary forward roadway clearly approaching a highway interchange ramp with curved ascending lane and overpass structures. Roads continuous, sensible and safe. No pedestrians, no readable signs or navigation screens, no speedometer digits. Warm daylight, phone-readable composition showing parents identities in partial rear/side profiles and clear interchange.",
+      "imageReuseDecision": "New scene: no earlier interchange scene matches required rear-seat family view.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L376/images/L376-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L376/audio/L376-S03.m4a"
+      }
+    },
+    {
+      "id": "L376-S04",
+      "text": "我已經親手把書交還老師。",
+      "spokenText": "我已經親手把書交還老師",
+      "focusChar": "已",
+      "displayLines": [
+        "我已經親手",
+        "把書交還",
+        "老師。"
+      ],
+      "imageNotes": "教室裡，固定老師已接過主角小女孩交還的書，書現在清楚拿在老師手中。女孩站在老師面前，雙手剛收回，神情安心。重點是交還動作已經完成，不是女孩仍拿著書、準備交還，或把書留在桌上請人代交。老師須與主角媽媽不同。書封面只用圖像，不放可讀文字。",
+      "zhuyinOverrides": {
+        "8": "ㄏㄨㄢˊ"
+      },
+      "imagePrompt": "Single square 1:1 preschool educational picture-book illustration. Supplied reference sheet: row1 all L058 STYLE ONLY, row2 refined examples, row3 family and teacher identity anchors. Closely preserve fine pencil-and-watercolor lines, warm natural sunlight, bright rich nuanced color, detailed clean environment, soft natural faces, stable preschool proportions. No readable text, letters, numbers, brands, watermarks, logos or captions anywhere. Reject generic simple cartoon, thin Japanese watercolor, anime, 3D and photorealism. Fixed protagonist girl, preschool age, short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes, correct family-anchor proportions. Fixed teacher with tied-back dark hair, teal blouse and neutral skirt, clearly distinct from mother. Classroom, COMPLETED personal book return. Teacher alone holds the returned closed picture book firmly with BOTH hands against her torso. Girl stands facing her with both empty hands already withdrawn close to her own waist, no touching book, relaxed relieved smile. Clear gap between child hands and teacher-held book. Book cover has a simple house/tree illustration and absolutely no words. Do not show a mid-handoff, child still holding book, or book on desk. Warm classroom bookshelves and tidy child furniture.",
+      "imageReuseDecision": "New scene: prior handing scenes are mid-transfer; exact completed return requires book entirely in teacher hands.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L376/images/L376-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L376/audio/L376-S04.m4a"
+      }
+    },
+    {
+      "id": "L376-S05",
+      "text": "別把通風口蓋住。",
+      "spokenText": "別把通風口蓋住",
+      "focusChar": "通",
+      "displayLines": [
+        "別把通風口",
+        "蓋住。"
+      ],
+      "imageNotes": "家中，爸爸正收拾物品，一片輕薄布料的一角靠近牆面的通風格柵。媽媽指著格柵提醒，爸爸停下動作，準備把布移開。通風口有清楚的格柵結構，畫面保留可辨識的開口，讓孩子看懂不要拿布覆蓋它。不需要電線、機械剖面、文字、箭頭或誇張風線。不畫成孩子操作電器或拆卸通風設備。",
+      "imagePrompt": "Single square 1:1 preschool educational picture-book illustration. Supplied reference sheet: row1 all L058 STYLE ONLY, row2 refined examples, row3 family and teacher identity anchors. Closely preserve fine pencil-and-watercolor lines, warm natural sunlight, bright rich nuanced color, detailed clean environment, soft natural faces, stable preschool proportions. No readable text, letters, numbers, brands, watermarks, logos or captions anywhere. Reject generic simple cartoon, thin Japanese watercolor, anime, 3D and photorealism. Fixed mother: dark shoulder-length hair, cream cardigan and blue skirt, warm adult face. Fixed father: short dark hair, blue shirt, tan trousers. Preserve family identities from bottom-row references. Warm family home. Father tidies a light thin cloth; only one corner of cloth is near the edge of a WALL AIR VENT, leaving most vent grille clearly visible. Mother points specifically at grille, reminding him; father pauses and starts drawing cloth away. Vent is large recognizable rectangular slatted wall grille at waist height, dark visible openings between slats, no electrical appliances, no wires. No exaggerated airflow, arrows or diagrams. Two adults only, no child handling machinery. Clear single scene, vent and cloth unobscured.",
+      "imageReuseDecision": "New scene: no earlier wall-vent/cloth warning scene matches approved meaning.",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L376/images/L376-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L376/audio/L376-S05.m4a"
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L376-G01",
+      "type": "find-character",
+      "sentenceId": "L376-S01",
+      "targetChar": "已",
+      "targetCharIndex": 5
+    },
+    {
+      "id": "L376-G02",
+      "type": "teach-character",
+      "sentenceId": "L376-S02",
+      "targetChar": "已",
+      "targetCharIndex": 2,
+      "teachAudio": {
+        "prefixText": "電話",
+        "suffixText": "經打通了",
+        "prefixSrc": "/assets/lessons/L376/audio/L376-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L376/audio/L376-G02-suffix.m4a"
+      }
+    },
+    {
+      "id": "L376-G03",
+      "type": "missing-character",
+      "sentenceId": "L376-S04",
+      "targetChar": "已",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "已",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "也",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "才",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L376-G04",
+      "type": "partial-order",
+      "sentenceId": "L376-S03",
+      "targetChar": "往",
+      "missingIndexes": [
+        0,
+        5,
+        6,
+        7
+      ],
+      "options": [
+        {
+          "id": "card-liu",
+          "text": "流",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-wang",
+          "text": "往",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-dao",
+          "text": "道",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-jiao",
+          "text": "交",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L376-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L376-S05",
+      "targetChar": "通",
+      "targetCharIndex": 2,
+      "options": [
+        {
+          "id": "correct",
+          "text": "別把通風口蓋住。",
+          "spokenText": "別把通風口蓋住",
+          "correct": true,
+          "sentenceId": "L376-S05",
+          "audioSrc": "/assets/lessons/L376/audio/L376-S05.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "別把通風口打開。",
+          "spokenText": "別把通風口打開",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L376/audio/L376-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "別把通風口關上。",
+          "spokenText": "別把通風口關上",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L376/audio/L376-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ]
+}
