@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L371 | 親 | claimed | Production C | codex/l371-complete-package | L366,L367,L368,L369,L370 | 吧謝感情朋友 | curriculum-workflow/lesson-requests/L371.json; curriculum-workflow/generated/L371-generation-packet.md; curriculum-workflow/drafts/L371-draft.json | public/assets/lessons/L371/; curriculum-workflow/audio-inbox/L371/ | Single-character lesson; L370 word lesson and prior units block Release only. |
+| L371 | 親 | ready-blocked-by-dependency | Production C | codex/l371-complete-package (claim b00cce32; package tip on branch) | L368,L369,L370 | 感情朋友 | curriculum-workflow/lesson-requests/L371.json; curriculum-workflow/generated/L371-generation-packet.md; curriculum-workflow/drafts/L371-draft.json | public/assets/lessons/L371/; curriculum-workflow/audio-inbox/L371/ | dependency-blocked-asset-complete; 5 WebP, 10 M4A, technical gates PASS. Main 3ee22616 includes L366/L367. L370 word coverage 2; 朋/友 each 3. Browser tooling limitation documented. Prior integration and L370 pilot QA belong to Release. |
 
 ## Status Values
 
