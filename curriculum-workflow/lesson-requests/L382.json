@@ -25,8 +25,8 @@
     "傳"
   ],
   "sourceBoundary": "9b081280afab0f52d126298279093f2e3290ca78",
-  "packageStatus": "partial-package",
-  "teacherNotes": "All 相 pronounced ㄒㄧㄤ; 傳 ㄔㄨㄢˊ. No 信/寫. Release only after R045/R046, L376-L381. Stage2 six cards, three 相 targets; G03 相/想/看 three choices, only 相 correct. Verify phone/tablet reward navigation; teacher subjective review post-main. Production paused at real G02 suffix alignment failure; images and phone/tablet QA not run. Long audio end gaps need review. See L382-technical-qa.json.",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "teacherNotes": "All 相 read ㄒㄧㄤ; 傳 reads ㄔㄨㄢˊ. Do not introduce 信/寫. Stage2 three 相 cards plus three learned distractors. G03 相/想/看, only 相 correct. Release requires R045/R046 and all preceding lessons; latest checked main is L380 with R045/R046 present. Teacher subjective review is post-main except recorded explicit approvals. See L382-rescue-qa.md.",
   "allowedChars": [
     "一",
     "二",
@@ -441,7 +441,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L382/audio/L382-S01.m4a",
-        "durationMs": 4204,
+        "durationMs": 3367,
         "charTimings": [
           {
             "charIndex": 0,
@@ -486,9 +486,12 @@
           {
             "charIndex": 8,
             "startMs": 2760,
-            "endMs": 3140
+            "endMs": 3190
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "7": "ㄒㄧㄤ"
       }
     },
     {
@@ -507,7 +510,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L382/audio/L382-S02.m4a",
-        "durationMs": 5366,
+        "durationMs": 4412,
         "charTimings": [
           {
             "charIndex": 0,
@@ -562,9 +565,12 @@
           {
             "charIndex": 10,
             "startMs": 3960,
-            "endMs": 4120
+            "endMs": 4240
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "9": "ㄒㄧㄤ"
       }
     },
     {
@@ -582,7 +588,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L382/audio/L382-S03.m4a",
-        "durationMs": 4136,
+        "durationMs": 3622,
         "charTimings": [
           {
             "charIndex": 0,
@@ -627,9 +633,12 @@
           {
             "charIndex": 8,
             "startMs": 3140,
-            "endMs": 3380
+            "endMs": 3462
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "4": "ㄔㄨㄢˊ"
       }
     },
     {
@@ -647,7 +656,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L382/audio/L382-S04.m4a",
-        "durationMs": 3569,
+        "durationMs": 3251,
         "charTimings": [
           {
             "charIndex": 0,
@@ -697,7 +706,7 @@
           {
             "charIndex": 9,
             "startMs": 2760,
-            "endMs": 3020
+            "endMs": 3074
           }
         ]
       }
@@ -717,7 +726,7 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L382/audio/L382-S05.m4a",
-        "durationMs": 5494,
+        "durationMs": 4760,
         "charTimings": [
           {
             "charIndex": 0,
@@ -741,7 +750,7 @@
           },
           {
             "charIndex": 4,
-            "startMs": 2320,
+            "startMs": 2696,
             "endMs": 3240
           },
           {
@@ -762,9 +771,13 @@
           {
             "charIndex": 8,
             "startMs": 4300,
-            "endMs": 4500
+            "endMs": 4597
           }
         ]
+      },
+      "zhuyinOverrides": {
+        "0": "ㄒㄧㄤ",
+        "1": "ㄔㄨㄢˊ"
       }
     }
   ],
@@ -790,8 +803,9 @@
         "prefixText": "兩家住得近還有小路",
         "suffixText": "連",
         "prefixAudio": {
+          "spokenText": "兩家住得近還有小路",
           "src": "/assets/lessons/L382/audio/L382-G02-prefix.m4a",
-          "durationMs": 3797,
+          "durationMs": 3204,
           "charTimings": [
             {
               "charIndex": 0,
@@ -801,42 +815,54 @@
             {
               "charIndex": 1,
               "startMs": 360,
-              "endMs": 1020
+              "endMs": 840
             },
             {
               "charIndex": 2,
-              "startMs": 1260,
-              "endMs": 1400
+              "startMs": 840,
+              "endMs": 1380
             },
             {
               "charIndex": 3,
-              "startMs": 1400,
-              "endMs": 1720
+              "startMs": 1380,
+              "endMs": 1620
             },
             {
               "charIndex": 4,
-              "startMs": 1720,
-              "endMs": 1800
+              "startMs": 1620,
+              "endMs": 1820
             },
             {
               "charIndex": 5,
-              "startMs": 1800,
+              "startMs": 1820,
               "endMs": 2110
             },
             {
               "charIndex": 6,
               "startMs": 2110,
-              "endMs": 2420
+              "endMs": 2400
             },
             {
               "charIndex": 7,
-              "startMs": 2420,
+              "startMs": 2400,
               "endMs": 2860
             },
             {
               "charIndex": 8,
               "startMs": 2860,
-              "endMs": 2960
+              "endMs": 3024
+            }
+          ]
+        },
+        "suffixAudio": {
+          "spokenText": "連",
+          "src": "/assets/lessons/L382/audio/L382-G02-suffix.m4a",
+          "durationMs": 673,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 513
             }
           ]
         }
@@ -927,7 +953,7 @@
           "spokenText": "飯店會把早餐送到房間",
           "audio": {
             "src": "/assets/lessons/L382/audio/L382-S04.m4a",
-            "durationMs": 3569,
+            "durationMs": 3251,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -977,7 +1003,7 @@
               {
                 "charIndex": 9,
                 "startMs": 2760,
-                "endMs": 3020
+                "endMs": 3074
               }
             ]
           }
@@ -989,8 +1015,9 @@
           "audioSrc": "/assets/lessons/L382/audio/L382-G05-wrong-one.m4a",
           "spokenText": "飯店會把晚餐送到房間",
           "audio": {
+            "spokenText": "飯店會把晚餐送到房間",
             "src": "/assets/lessons/L382/audio/L382-G05-wrong-one.m4a",
-            "durationMs": 4949,
+            "durationMs": 3158,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -1040,7 +1067,7 @@
               {
                 "charIndex": 9,
                 "startMs": 2720,
-                "endMs": 2940
+                "endMs": 2995
               }
             ]
           }
@@ -1052,8 +1079,9 @@
           "audioSrc": "/assets/lessons/L382/audio/L382-G05-wrong-two.m4a",
           "spokenText": "飯店會把早餐送到門口",
           "audio": {
+            "spokenText": "飯店會把早餐送到門口",
             "src": "/assets/lessons/L382/audio/L382-G05-wrong-two.m4a",
-            "durationMs": 3064,
+            "durationMs": 2740,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -1103,7 +1131,7 @@
               {
                 "charIndex": 9,
                 "startMs": 2280,
-                "endMs": 2560
+                "endMs": 2579
               }
             ]
           }

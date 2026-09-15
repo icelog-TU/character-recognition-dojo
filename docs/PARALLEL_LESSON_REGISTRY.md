@@ -1,4 +1,4 @@
-# Parallel Lesson Registry
+﻿# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L382 | 相 / normal lesson | claimed | Package Rescue | codex/l382-package-rescue | L377, L378, L379, L380, L381 | 近, 接, 送, 連, 傳 | curriculum-workflow/lesson-requests/L382.json; curriculum-workflow/generated/L382-generation-packet.md; curriculum-workflow/drafts/L382-draft.json | curriculum-workflow/audio-inbox/L382/; public/assets/lessons/L382/ | Rescue claimed from original package; package remains incomplete pending asset/timing/UI verification. Earlier lessons and required review pair remain Release dependencies. |
+| L382 | 相 / normal lesson | dependency-blocked-asset-complete | Package Rescue | codex/l382-package-rescue | L377, L378, L379, L380, L381 | 近, 接, 送, 連, 傳 | curriculum-workflow/lesson-requests/L382.json; curriculum-workflow/generated/L382-generation-packet.md; curriculum-workflow/drafts/L382-draft.json | curriculum-workflow/audio-inbox/L382/; public/assets/lessons/L382/ | Created five final WebP illustrations and dedicated G02 suffix 連. Completed audio review, final silence processing and timing metadata. S05 有 interval excludes measured phrase silence; trailing 1ms impulse after 797ms silence removed without changing speech. Release waits for remaining preceding lessons; R045/R046 already on main; see L382-rescue-qa.md. |
 
 ## Status Values
 
