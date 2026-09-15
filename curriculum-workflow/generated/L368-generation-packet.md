@@ -1,10 +1,9 @@
-# L368 感 — approved records and blocked production package
+# L368 感 blocked production packet
 
-packageStatus: partial-package. Owner Production D. Branch codex/l368-complete-package. Dependencies L366 吧 / L367 謝. Do not integrate.
+packageStatus: partial-package. Dependencies L366/L367. Do not integrate.
 
-## Locked request, approved sentences and imageNotes
+## Final approved request and imageNotes
 
-```json
 {
   "id": "L368",
   "kind": "lesson",
@@ -882,16 +881,16 @@ packageStatus: partial-package. Owner Production D. Branch codex/l368-complete-p
       "g05MeanSpreadDb": 0.3,
       "alignment": "Full gate FAIL; recovery-only alignment saved 8 other clips for diagnosis, not an acceptance override",
       "technicalAudit": "FAIL: missing accepted suffix metadata; additional timing defects listed in diagnostic report",
-      "verify": "Skipped: dependency-blocked and incomplete package; Release owns shared-state integration"
+      "verify": "Skipped: dependency-blocked and incomplete package; Release owns shared-state integration",
+      "packageIntake": "FAIL on pushed cc800929: partial-package/needs-rework markers and missing G02 suffix timing metadata; no gate bypass.",
+      "productionValidation": "Scoped L368 production assets validator PASS; baseline npm validate:production PASS; neither overrides full alignment/technical blockers."
     },
     "nextAction": "Resolve G02 suffix pronunciation/recognition with real playback or corrected standalone TTS; rerun full AI alignment and fix documented collapsed boundaries based on audio evidence; trim tails, complete playback QA, then validators and unmodified package-intake before promoting status."
   }
 }
-```
 
-## Actual generated images, audio and diagnostic timings
+## Draft, actual prompts, media and diagnostic timings
 
-```json
 {
   "id": "L368",
   "order": 368,
@@ -1860,9 +1859,10 @@ packageStatus: partial-package. Owner Production D. Branch codex/l368-complete-p
       "g05MeanSpreadDb": 0.3,
       "alignment": "Full gate FAIL; recovery-only alignment saved 8 other clips for diagnosis, not an acceptance override",
       "technicalAudit": "FAIL: missing accepted suffix metadata; additional timing defects listed in diagnostic report",
-      "verify": "Skipped: dependency-blocked and incomplete package; Release owns shared-state integration"
+      "verify": "Skipped: dependency-blocked and incomplete package; Release owns shared-state integration",
+      "packageIntake": "FAIL on pushed cc800929: partial-package/needs-rework markers and missing G02 suffix timing metadata; no gate bypass.",
+      "productionValidation": "Scoped L368 production assets validator PASS; baseline npm validate:production PASS; neither overrides full alignment/technical blockers."
     },
     "nextAction": "Resolve G02 suffix pronunciation/recognition with real playback or corrected standalone TTS; rerun full AI alignment and fix documented collapsed boundaries based on audio evidence; trim tails, complete playback QA, then validators and unmodified package-intake before promoting status."
   }
 }
-```

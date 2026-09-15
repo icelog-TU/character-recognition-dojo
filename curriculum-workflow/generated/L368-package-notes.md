@@ -330,3 +330,7 @@ Use owned L368-pipeline.cjs to invoke unchanged repository scripts against the d
 Image prompts are stored per sentence in draft and packet. Original generated PNGs and comparison sheets remain outside the repository; no rejected image variants were committed. Raw MP3 inbox is local and ignored by repository policy.
 
 After recovery, rerun complete alignment, final-tail and metadata work, lesson-local audits and pushed-ref package-intake. Keep the approved text and exact G02 prefix/suffix unchanged. Full shared-state verify belongs to Release after dependencies L366/L367.
+
+## Pushed-ref intake
+
+Unmodified curriculum:package-intake against pushed cc800929 returned exit 1: package status partial-package, registry needs-rework and missing G02 suffix timing metadata. Scoped L368 asset validation and baseline validate:production passed, but these do not override the failed full alignment and technical audit. The branch is a preserved recovery package, not Release-ready.
