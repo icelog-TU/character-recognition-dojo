@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L357 | 園 | dependency-blocked-asset-complete | Supervisor rescue | `codex/l357-supervisor-rescue` | L354:排, L355:雞, L356:公 | 排, 雞, 公 | `curriculum-workflow/lesson-requests/L357.json`; `curriculum-workflow/generated/L357-generation-packet.md`; `curriculum-workflow/drafts/L357-draft.json` | `public/assets/lessons/L357/`; `curriculum-workflow/audio-inbox/L357/` | Teacher manual pre-merge asset QA PASS for audio/images. Supervisor repaired G02 suffix timing and added sentence zhuyinOverrides for dependency-blocked preview display: 園/公/雞/排. Release-only dependencies remain. |
+| L357 | 園 | dependency-blocked-asset-complete | Supervisor rescue | `codex/l357-supervisor-rescue` | L354:排, L355:雞, L356:公 | 排, 雞, 公 | `curriculum-workflow/lesson-requests/L357.json`; `curriculum-workflow/generated/L357-generation-packet.md`; `curriculum-workflow/drafts/L357-draft.json` | `public/assets/lessons/L357/`; `curriculum-workflow/audio-inbox/L357/` | Teacher manual pre-merge asset QA PASS for audio/images. Supervisor repaired G02 suffix timing and added sentence zhuyinOverrides for dependency-blocked preview display: 園/公/雞/排/長. Release-only dependencies remain. |
 
 ## Status Values
 

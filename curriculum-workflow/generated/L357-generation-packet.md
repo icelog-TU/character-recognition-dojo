@@ -4,7 +4,7 @@
 
 Owner: Production C. Branch: codex/l357-complete-package.
 Base/final checked origin/main: 71762b03e12b5e82770874bc634183d70cefcb33; formal L001-L353, R041/R042 merged after L345.
-Status: dependency-blocked-asset-complete; teacher manual pre-merge asset QA PASS; supervisor repaired dependency-blocked preview zhuyinOverrides for 園/公/雞/排.
+Status: dependency-blocked-asset-complete; teacher manual pre-merge asset QA PASS; supervisor repaired dependency-blocked preview zhuyinOverrides for 園/公/雞/排/長.
 dependsOnLessons: ["L354", "L355", "L356"]
 provisionalLearnedChars: ["排", "雞", "公"]
 Dependencies block Release only. Release owns shared production JSON, planner, ledger, integration and deployment.
@@ -466,7 +466,10 @@ The following request records are final and match the draft. No approved sentenc
         "公園裡有",
         "好幾排長椅。"
       ],
-      "imageNotes": "公園步道旁有好幾排長椅，排列整齊，周圍有樹、花草和開放空間。不要文字標示、告示牌內容、品牌或標誌。"
+      "imageNotes": "公園步道旁有好幾排長椅，排列整齊，周圍有樹、花草和開放空間。不要文字標示、告示牌內容、品牌或標誌。",
+      "zhuyinOverrides": {
+        "7": "ㄔㄤˊ"
+      }
     },
     {
       "id": "L357-S03",
@@ -634,9 +637,10 @@ The following request records are final and match the draft. No approved sentenc
     ],
     "audioGeneration": "Repo OpenAI ai:audio; all processed by assets:audio. Sentences/G02 prefix/G05 use gpt-4o-mini-tts coral. Current charAudio and G02 suffix use gpt-4o-mini-tts sage.",
     "audioAlignment": "Five sentences, G02 prefix, both G05 wrong choices, and supervisor-added measured G02 suffix single-character timing are present in the draft. G02 suffix audio acceptance still requires teacher/manual playback confirmation before asset-complete status.",
-    "manualPlayback": "Teacher manual pre-merge asset QA PASS on rescue commit: teacher confirmed L357 audio and images have no problems. Teacher reported missing zhuyin for newer/provisional characters; Supervisor added sentence-level zhuyinOverrides for 園/公/雞/排. Browser/phone automation remains represented by manual teacher acceptance.",
+    "manualPlayback": "Teacher manual pre-merge asset QA PASS on rescue commit: teacher confirmed L357 audio and images have no problems. Teacher reported missing zhuyin for newer/provisional characters; Supervisor added sentence-level zhuyinOverrides for 園/公/雞/排/長/長. Browser/phone automation remains represented by manual teacher acceptance.",
     "shortAudioSecondaryCheck": "gpt-4o-transcribe returned the homophone 源 for 園 and Latin phonetic text for 裡; these do not establish a verified tone/playback result.",
-    "assetFormatAudit": "PASS: scoped L357 assets:audit --strict, 5 images / 10 audio files, 0 errors / 0 warnings. Total asset folder 1,476,449 bytes."
+    "assetFormatAudit": "PASS: scoped L357 assets:audit --strict, 5 images / 10 audio files, 0 errors / 0 warnings. Total asset folder 1,476,449 bytes.",
+    "zhuyinRepair": ""
   }
 }
 ```
@@ -691,7 +695,7 @@ Full L058 style-only set was opened as a contact sheet. Refined examples L115-S0
 - G02 suffix has supervisor-added measured single-character timing from the audio file; teacher manual audio acceptance PASS.
 - validate:production PASS on temporary L357-only fixture.
 - assets:audit --strict PASS on temporary L357-only fixture, 5 images and 10 audio refs, zero errors/warnings. Final assets 1,476,449 bytes.
-- Teacher manual pre-merge asset QA PASS: teacher confirmed L357 audio and images have no problems. Supervisor repaired missing dependency-blocked preview zhuyin by adding sentence-level zhuyinOverrides for 園/公/雞/排.
+- Teacher manual pre-merge asset QA PASS: teacher confirmed L357 audio and images have no problems. Supervisor repaired missing dependency-blocked preview zhuyin by adding sentence-level zhuyinOverrides for 園/公/雞/排/長.
 - Full verify skipped because dependency-blocked lesson is absent from shared production JSON.
 - Shared script change requiring Release inspection: alignment simplified/traditional normalization 园->園, 长->長, 鸡->雞 only. No homophone substitution.
 - S05 first draft rejected for photographic texture, regenerated and excluded from commit.

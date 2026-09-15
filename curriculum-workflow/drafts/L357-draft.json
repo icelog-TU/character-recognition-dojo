@@ -153,7 +153,8 @@
       "zhuyinOverrides": {
         "0": "ㄍㄨㄥ",
         "1": "ㄩㄢˊ",
-        "6": "ㄆㄞˊ"
+        "6": "ㄆㄞˊ",
+        "7": "ㄔㄤˊ"
       }
     },
     {
@@ -715,8 +716,8 @@
     ],
     "audioGeneration": "Repo OpenAI ai:audio; all processed by assets:audio. Sentences/G02 prefix/G05 use gpt-4o-mini-tts coral. Current charAudio and G02 suffix use gpt-4o-mini-tts sage.",
     "audioAlignment": "Five sentences, G02 prefix, both G05 wrong choices, and supervisor-added measured G02 suffix single-character timing are present in the draft. Teacher manual audio acceptance PASS.",
-    "manualPlayback": "Teacher manual pre-merge asset QA PASS on rescue commit: teacher confirmed L357 audio and images have no problems. Teacher reported missing zhuyin for newer/provisional characters; Supervisor added sentence-level zhuyinOverrides for 園/公/雞/排. Browser/phone automation remains represented by manual teacher acceptance.",
+    "manualPlayback": "Teacher manual pre-merge asset QA PASS on rescue commit: teacher confirmed L357 audio and images have no problems. Teacher reported missing zhuyin for newer/provisional characters; Supervisor added sentence-level zhuyinOverrides for 園/公/雞/排/長. Browser/phone automation remains represented by manual teacher acceptance.",
     "shortAudioSecondaryCheck": "gpt-4o-transcribe returned the homophone 源 for 園 and Latin phonetic text for 裡; these do not establish a verified tone/playback result.",
-    "zhuyinRepair": "Added zhuyinOverrides for dependency-blocked preview display: 園=ㄩㄢˊ, 公=ㄍㄨㄥ, 雞=ㄐㄧ, 排=ㄆㄞˊ."
+    "zhuyinRepair": "Added zhuyinOverrides for dependency-blocked preview display: 園=ㄩㄢˊ, 公=ㄍㄨㄥ, 雞=ㄐㄧ, 排=ㄆㄞˊ, 長=ㄔㄤˊ."
   }
 }
