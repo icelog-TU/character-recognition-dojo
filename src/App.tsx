@@ -3796,6 +3796,7 @@ function LessonPanel({
   const pictureDone = practiceDoneCount >= 1;
   const gamesDone = !usesSentenceGames || gameDoneCount >= requiredGameRounds;
   const lessonReady = soundUnlocked && findUnlocked && pictureDone && gamesDone;
+  const rewardPanelVisible = lessonReady || rewardState === "claiming" || rewardState === "claimed";
   const progressSteps = isReview ? [pictureDone, ...(usesSentenceGames ? [gamesDone] : [])] : [soundUnlocked, findUnlocked, pictureDone, ...(usesSentenceGames ? [gamesDone] : [])];
   const availableStages = isReview ? (usesSentenceGames ? [3, 4] : [3]) : usesSentenceGames ? [1, 2, 3, 4] : [1, 2, 3];
   const lessonReward = { coins: 30, stars: 12 };
@@ -3900,7 +3901,7 @@ function LessonPanel({
   }, [lesson.id, activeStage, advancingStage]);
 
   useEffect(() => {
-    if ((rewardState !== "claiming" && rewardState !== "claimed") || !lessonReady) return;
+    if ((rewardState !== "claiming" && rewardState !== "claimed") || !rewardPanelVisible) return;
     let firstFrame = 0;
     let secondFrame = 0;
     firstFrame = window.requestAnimationFrame(() => {
@@ -3916,7 +3917,7 @@ function LessonPanel({
       window.cancelAnimationFrame(firstFrame);
       window.cancelAnimationFrame(secondFrame);
     };
-  }, [lessonReady, rewardState]);
+  }, [rewardPanelVisible, rewardState]);
 
   useEffect(() => {
     if (soundUnlocked && activeStage === 1) void speakForTarget("advance2", GUIDE_TEXT.toStageTwo);
@@ -4275,7 +4276,7 @@ function LessonPanel({
         </LessonBlock>
       )}
 
-      {lessonReady && (
+      {rewardPanelVisible && (
         <RewardPanel
           panelRef={rewardPanelRef}
           state={rewardState}
