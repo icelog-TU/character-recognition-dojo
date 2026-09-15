@@ -1,0 +1,220 @@
+{
+  "sourceBoundary": "44fedeffd9055ac64799b69f6f20145f9b51ff41",
+  "allowedCharacters": "PASS",
+  "coverage": {
+    "歡": 4,
+    "喜": 5,
+    "驚": 2,
+    "奇": 2,
+    "怪": 2,
+    "物": 2
+  },
+  "displayLines": "PASS",
+  "stage4": "PASS",
+  "timingReport": [
+    {
+      "id": "L363-S01",
+      "durationMs": 2017,
+      "minCharSpanMs": 200,
+      "maxCharSpanMs": 360,
+      "lastEndMs": 1860
+    },
+    {
+      "id": "L363-S02",
+      "durationMs": 2634,
+      "minCharSpanMs": 180,
+      "maxCharSpanMs": 440,
+      "lastEndMs": 2520
+    },
+    {
+      "id": "L363-S03",
+      "durationMs": 3132,
+      "minCharSpanMs": 200,
+      "maxCharSpanMs": 560,
+      "lastEndMs": 3020
+    },
+    {
+      "id": "L363-S04",
+      "durationMs": 4623,
+      "minCharSpanMs": 180,
+      "maxCharSpanMs": 620,
+      "lastEndMs": 4400
+    },
+    {
+      "id": "L363-S05",
+      "durationMs": 3001,
+      "minCharSpanMs": 200,
+      "maxCharSpanMs": 740,
+      "lastEndMs": 2740
+    },
+    {
+      "id": "L363-G02-prefix",
+      "durationMs": 4023,
+      "minCharSpanMs": 340,
+      "maxCharSpanMs": 640,
+      "lastEndMs": 1520
+    },
+    {
+      "id": "L363-G02-suffix",
+      "durationMs": 2423,
+      "minCharSpanMs": 100,
+      "maxCharSpanMs": 600,
+      "lastEndMs": 1480
+    },
+    {
+      "id": "L363-G05-wrong-one",
+      "durationMs": 3315,
+      "minCharSpanMs": 220,
+      "maxCharSpanMs": 800,
+      "lastEndMs": 3060
+    },
+    {
+      "id": "L363-G05-wrong-two",
+      "durationMs": 2468,
+      "minCharSpanMs": 220,
+      "maxCharSpanMs": 480,
+      "lastEndMs": 2320
+    }
+  ],
+  "audioReport": [
+    {
+      "src": "/assets/lessons/L363/audio/L363-S01.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 2017,
+      "bytes": 25795
+    },
+    {
+      "src": "/assets/lessons/L363/audio/L363-S02.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 2634,
+      "bytes": 33069
+    },
+    {
+      "src": "/assets/lessons/L363/audio/L363-S03.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3132,
+      "bytes": 41303
+    },
+    {
+      "src": "/assets/lessons/L363/audio/L363-S04.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 4623,
+      "bytes": 62269
+    },
+    {
+      "src": "/assets/lessons/L363/audio/L363-S05.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3001,
+      "bytes": 38173
+    },
+    {
+      "src": "/assets/lessons/L363/audio/L363-G02-prefix.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 4023,
+      "bytes": 25957
+    },
+    {
+      "src": "/assets/lessons/L363/audio/L363-G02-suffix.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 2423,
+      "bytes": 27174
+    },
+    {
+      "src": "/assets/lessons/L363/audio/L363-G05-wrong-one.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 3315,
+      "bytes": 41904
+    },
+    {
+      "src": "/assets/lessons/L363/audio/L363-G05-wrong-two.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 2468,
+      "bytes": 31426
+    },
+    {
+      "src": "/assets/lessons/L363/audio/char-u6b61.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": 44100,
+      "durationMs": 1161,
+      "bytes": 15433
+    }
+  ],
+  "imageReport": [
+    {
+      "id": "L363-S01",
+      "format": "WEBP 1024 1024",
+      "bytes": 142460,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L363-S02",
+      "format": "WEBP 1024 1024",
+      "bytes": 223122,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L363-S03",
+      "format": "WEBP 1024 1024",
+      "bytes": 152910,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L363-S04",
+      "format": "WEBP 1024 1024",
+      "bytes": 121936,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L363-S05",
+      "format": "WEBP 1024 1024",
+      "bytes": 238946,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "assetBytes": 1221877,
+  "rejectedImageDrafts": [
+    {
+      "id": "L363-S03",
+      "reason": "Letter-like book-spine marks removed using image edit; rejected draft not committed."
+    }
+  ],
+  "browserQA": {
+    "status": "tooling limitation",
+    "reason": "Codex in-app browser rejected local L363-S01 M4A navigation with net::ERR_BLOCKED_BY_CLIENT; agent cannot hear output.",
+    "teacherReview": "Post-main repair queue under current SOP; no pre-merge approval required."
+  }
+}
