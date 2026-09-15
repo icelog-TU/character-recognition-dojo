@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L387 | 第 | claimed | Production A | codex/l387-complete-package | L382:相; L383:信; L384:寫; L385:字; L386:名 | 相信寫字名 | curriculum-workflow/lesson-requests/L387.json; curriculum-workflow/generated/L387-generation-packet.md; curriculum-workflow/drafts/L387-draft.json | curriculum-workflow/audio-inbox/L387/; public/assets/lessons/L387/ | Base c22e3129, formal L001-L375. Release requires predecessors and R045/R046 in playable order. Teacher text exception only S03 girl CAT / boy DOG and S04 sand HELLO, to compare and describe writing without erroneous Han glyphs. All other image text prohibited. |
+| L387 | 第 | dependency-blocked-asset-complete | Production A | codex/l387-complete-package | L382:相; L383:信; L384:寫; L385:字; L386:名 | 相信寫字名 | curriculum-workflow/lesson-requests/L387.json; curriculum-workflow/generated/L387-generation-packet.md; curriculum-workflow/drafts/L387-draft.json | curriculum-workflow/audio-inbox/L387/; public/assets/lessons/L387/ | 5 WebP, 10 M4A, AI timings, Browser QA phone/tablet PASS. S03 CAT/DOG and S04 HELLO teacher exception. Main recheck 7fcef325, formal L375; all predecessors and R045/R046 required for Release. Teacher review post-main. |
 
 ## Status Values
 

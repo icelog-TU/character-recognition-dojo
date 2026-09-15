@@ -1,0 +1,1561 @@
+# L387 Production Generation Packet
+
+Owner: Production A
+Branch: codex/l387-complete-package
+Package status: dependency-blocked-asset-complete
+Base: c22e312996d0d699c02d3bc19af6cfce2087f639
+Final main recheck: 7fcef325b37f13fc68fe950bffd7fea8e9db6108
+
+Teacher-approved L387 single-character lesson. Base c22e312996d0d699c02d3bc19af6cfce2087f639; formal L001-L375, 379 learned Han; allowed set 385. Dependencies L382-L386 (相信寫字名). Earlier predecessors and R045/R046 block Release only. G01 targets first 第 at index3, not second 第 at index8. Stage 2 three 第 plus three prior learned distractors. G03 第/等/的, G04 不/相/同. 相同 reads ㄒㄧㄤ; 第 ㄉㄧˋ. Teacher subjective review is post-main. Teacher-approved readable-image-text exception ONLY: L387-S03 girl paper CAT and fixed YOU boy paper DOG; L387-S04 sand inscription HELLO. Exact uppercase normal-direction spelling, no additional text. Reason: lesson compares written content and describes writing in sand; teacher specified English to avoid incorrectly generated Chinese glyphs. Not English pronunciation teaching; do not add English to spokenText, allowedChars or Han coverage. Release must retain this exception and reason in release notes and ledger. All other image text remains prohibited. Final main recheck 7fcef325b37f13fc68fe950bffd7fea8e9db6108: formal through L375; remaining learner dependencies L382, L383, L384, L385, L386. All predecessors and R045/R046 are Release playable-order prerequisites. Browser QA passed at 390x844 and 820x1180 using simulated prerequisite progress and synthetic microphone; physical-device microphone and teacher subjective review are post-main. No audio cutting or splicing.
+
+## QA Summary
+
+Five 1024-square WebP images and ten processed M4A audio files, nine final AI timing records. S01-S05 style-lock PASS and cast PASS. S03 CAT/DOG and S04 HELLO exact spelling and normal direction PASS. S03 two rejected compositions corrected; rejected versions not committed.
+
+Browser QA: phone/tablet Stage 1/2/3/4, G02 synthetic recording/replay, G03 three-option retry, G04 three single-Han cards, G05 all options played to ended, first reward and replay without duplicate award PASS. Next control disabled at isolated package endpoint. See L387-qa-report.json for evidence, long timing span review and technical limitations. Teacher subjective review remains post-main.
+
+## Final Approved Request
+
+```json
+{
+  "id": "L387",
+  "kind": "lesson",
+  "order": 387,
+  "title": "第",
+  "newChars": [
+    "第"
+  ],
+  "zhuyin": {
+    "第": "ㄉㄧˋ"
+  },
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L382",
+    "L383",
+    "L384",
+    "L385",
+    "L386"
+  ],
+  "provisionalLearnedChars": [
+    "相",
+    "信",
+    "寫",
+    "字",
+    "名"
+  ],
+  "teacherNotes": "Teacher-approved L387 single-character lesson. Base c22e312996d0d699c02d3bc19af6cfce2087f639; formal L001-L375, 379 learned Han; allowed set 385. Dependencies L382-L386 (相信寫字名). Earlier predecessors and R045/R046 block Release only. G01 targets first 第 at index3, not second 第 at index8. Stage 2 three 第 plus three prior learned distractors. G03 第/等/的, G04 不/相/同. 相同 reads ㄒㄧㄤ; 第 ㄉㄧˋ. Teacher subjective review is post-main. Teacher-approved readable-image-text exception ONLY: L387-S03 girl paper CAT and fixed YOU boy paper DOG; L387-S04 sand inscription HELLO. Exact uppercase normal-direction spelling, no additional text. Reason: lesson compares written content and describes writing in sand; teacher specified English to avoid incorrectly generated Chinese glyphs. Not English pronunciation teaching; do not add English to spokenText, allowedChars or Han coverage. Release must retain this exception and reason in release notes and ledger. All other image text remains prohibited. Final main recheck 7fcef325b37f13fc68fe950bffd7fea8e9db6108: formal through L375; remaining learner dependencies L382, L383, L384, L385, L386. All predecessors and R045/R046 are Release playable-order prerequisites. Browser QA passed at 390x844 and 820x1180 using simulated prerequisite progress and synthetic microphone; physical-device microphone and teacher subjective review are post-main. No audio cutting or splicing.",
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見",
+      "說",
+      "師",
+      "話",
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電",
+      "生",
+      "明",
+      "光",
+      "亮",
+      "陽",
+      "月",
+      "影",
+      "長",
+      "星",
+      "行",
+      "道",
+      "流",
+      "河",
+      "從",
+      "進",
+      "早",
+      "晚",
+      "海",
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精",
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口",
+      "傷",
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬",
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種",
+      "澆",
+      "照",
+      "顧",
+      "忘",
+      "每",
+      "次",
+      "記",
+      "完",
+      "收",
+      "彩",
+      "色",
+      "粉",
+      "哪",
+      "些",
+      "最",
+      "西",
+      "東",
+      "方",
+      "圖",
+      "向",
+      "線",
+      "直",
+      "轉",
+      "右",
+      "角",
+      "落",
+      "因",
+      "原",
+      "別",
+      "特",
+      "處",
+      "理",
+      "整",
+      "齊",
+      "全",
+      "今",
+      "們",
+      "年",
+      "跟",
+      "常",
+      "請",
+      "嗎",
+      "客",
+      "讓",
+      "廳",
+      "餐",
+      "位",
+      "正",
+      "排",
+      "雞",
+      "公",
+      "園",
+      "物",
+      "怪",
+      "奇",
+      "驚",
+      "喜",
+      "歡",
+      "笑",
+      "但",
+      "吧",
+      "謝",
+      "感",
+      "情",
+      "朋",
+      "友",
+      "親",
+      "交",
+      "通",
+      "往",
+      "經",
+      "相",
+      "信",
+      "寫",
+      "字",
+      "名",
+      "第"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "第",
+      "名",
+      "字",
+      "寫",
+      "信",
+      "相"
+    ],
+    "maxHanCharactersPerSentence": 12
+  },
+  "approvedSentences": [
+    {
+      "id": "L387-S01",
+      "text": "小光跑第一名，我跑第二名。",
+      "spokenText": "小光跑第一名我跑第二名",
+      "displayLines": [
+        "小光跑",
+        "第一名，",
+        "我跑第二名。"
+      ],
+      "focusChar": "第",
+      "imageNotes": "學校短跑終點，小光剛先跨過終點線，主角小女孩緊接著到達，其他 generic classmates 仍在後方。用抵達先後表現名次，不畫數字名牌、排名文字或頒獎台。小光使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡及固定身份特徵；跑步時不背書包。",
+      "approved": true
+    },
+    {
+      "id": "L387-S02",
+      "text": "這是我第一次寫信。",
+      "spokenText": "這是我第一次寫信",
+      "displayLines": [
+        "這是我",
+        "第一次寫信。"
+      ],
+      "focusChar": "第",
+      "imageNotes": "家中桌邊，主角小女孩握筆，認真又有些生疏地開始寫信；媽媽坐在旁邊溫和陪伴，紙上只有少量不可辨識筆跡。以初次嘗試的神情與姿態表現，不用數字或標題說明「第一次」。本張沒有可讀英文例外。",
+      "approved": true
+    },
+    {
+      "id": "L387-S03",
+      "text": "你寫的字，跟我的不相同。",
+      "spokenText": "你寫的字跟我的不相同",
+      "displayLines": [
+        "你寫的字，",
+        "跟我的",
+        "不相同。"
+      ],
+      "focusChar": "相",
+      "imageNotes": "教室桌邊，主角小女孩與固定「你」小男孩把各自剛寫的紙並排比較。女孩紙上只有大寫 CAT，男孩紙上只有大寫 DOG，兩張紙都朝向觀者且清楚可讀；女孩指向兩張纸，說明寫的內容不同。桌上有筆，表現親手書寫，不是比較兩張印刷商品標籤。兩個單字必須拼字正確、正常方向；不可只畫不同筆跡卻沒有可讀字。「你」不是小光或哥哥。",
+      "approved": true
+    },
+    {
+      "id": "L387-S04",
+      "text": "沙地上有一排大大的字。",
+      "spokenText": "沙地上有一排大大的字",
+      "displayLines": [
+        "沙地上有一排",
+        "大大的字。"
+      ],
+      "focusChar": "字",
+      "imageNotes": "海邊平整沙地上，用手指或小樹枝劃出一排大寫 HELLO，五個字母寬大清楚、順序正確，筆畫是沙地凹痕與自然陰影，不是浮在圖片上的文字貼圖。主角小女孩蹲在旁邊看，人物不要遮字；海水離文字有一段距離。不得改成漢字、亂畫線條或散落的字母。",
+      "approved": true
+    },
+    {
+      "id": "L387-S05",
+      "text": "我第一次看見這麼大的魚。",
+      "spokenText": "我第一次看見這麼大的魚",
+      "displayLines": [
+        "我第一次",
+        "看見這麼",
+        "大的魚。"
+      ],
+      "focusChar": "第",
+      "imageNotes": "水族展示池前，主角小女孩和爸爸站在安全的透明觀景窗外，女孩睜大眼睛看著一條從窗內游過、身長明顯超過自己的大魚。用女孩與魚的比例表現「這麼大」，神情是驚奇，不是受到攻擊；不畫海豚、鯨魚或恐怖獵食畫面，不用尺寸數字。",
+      "approved": true
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L387-G01",
+      "type": "find-character",
+      "sentenceId": "L387-S01",
+      "targetChar": "第",
+      "targetCharIndex": 3,
+      "prompt": "在句子裡找到第，點一下。"
+    },
+    {
+      "id": "L387-G02",
+      "type": "teach-character",
+      "sentenceId": "L387-S02",
+      "targetChar": "第",
+      "targetCharIndex": 3,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "這是我",
+        "suffixText": "一次寫信",
+        "prefixSrc": "/assets/lessons/L387/audio/L387-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L387/audio/L387-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L387/audio/L387-G02-prefix.m4a",
+          "durationMs": 2856,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 240
+            },
+            {
+              "charIndex": 1,
+              "startMs": 240,
+              "endMs": 840
+            },
+            {
+              "charIndex": 2,
+              "startMs": 840,
+              "endMs": 1320
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L387/audio/L387-G02-suffix.m4a",
+          "durationMs": 2720,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 300
+            },
+            {
+              "charIndex": 1,
+              "startMs": 300,
+              "endMs": 600
+            },
+            {
+              "charIndex": 2,
+              "startMs": 600,
+              "endMs": 1560
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1560,
+              "endMs": 1800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L387-G03",
+      "type": "missing-character",
+      "sentenceId": "L387-S05",
+      "targetChar": "第",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "prompt": "補上不見的字。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "第",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "等",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "的",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L387-G04",
+      "type": "partial-order",
+      "sentenceId": "L387-S03",
+      "targetChar": "相",
+      "targetCharIndex": 8,
+      "missingIndexes": [
+        7,
+        8,
+        9
+      ],
+      "prompt": "把句子排回正確順序。",
+      "options": [
+        {
+          "id": "card-tong",
+          "text": "同",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-bu",
+          "text": "不",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-xiang",
+          "text": "相",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L387-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L387-S04",
+      "targetChar": "字",
+      "targetCharIndex": 9,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "沙地上有一排大大的字。",
+          "correct": true,
+          "sentenceId": "L387-S04",
+          "audioSrc": "/assets/lessons/L387/audio/L387-S04.m4a",
+          "audio": {
+            "src": "/assets/lessons/L387/audio/L387-S04.m4a",
+            "durationMs": 4628,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 680
+              },
+              {
+                "charIndex": 1,
+                "startMs": 680,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 860,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1460,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2180,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 3300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3300,
+                "endMs": 3490
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3490,
+                "endMs": 3680
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3680,
+                "endMs": 3900
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "沙地上有一排小小的字。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L387/audio/L387-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L387/audio/L387-G05-wrong-one.m4a",
+            "durationMs": 5905,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3020,
+                "endMs": 3260
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3260,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3420,
+                "endMs": 3560
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "沙地上有一排大大的花。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L387/audio/L387-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L387/audio/L387-G05-wrong-two.m4a",
+            "durationMs": 5135,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1380,
+                "endMs": 1730
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1730,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2080,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3180,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3360,
+                "endMs": 3540
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3540,
+                "endMs": 3880
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "packageStatus": "dependency-blocked-asset-complete"
+}
+```
+
+## Final Lesson-Local Draft
+
+```json
+{
+  "id": "L387",
+  "order": 387,
+  "title": "第",
+  "newChars": [
+    "第"
+  ],
+  "zhuyin": {
+    "第": "ㄉㄧˋ"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [
+    "L382",
+    "L383",
+    "L384",
+    "L385",
+    "L386"
+  ],
+  "provisionalLearnedChars": [
+    "相",
+    "信",
+    "寫",
+    "字",
+    "名"
+  ],
+  "teacherNotes": "Teacher-approved L387 single-character lesson. Base c22e312996d0d699c02d3bc19af6cfce2087f639; formal L001-L375, 379 learned Han; allowed set 385. Dependencies L382-L386 (相信寫字名). Earlier predecessors and R045/R046 block Release only. G01 targets first 第 at index3, not second 第 at index8. Stage 2 three 第 plus three prior learned distractors. G03 第/等/的, G04 不/相/同. 相同 reads ㄒㄧㄤ; 第 ㄉㄧˋ. Teacher subjective review is post-main. Teacher-approved readable-image-text exception ONLY: L387-S03 girl paper CAT and fixed YOU boy paper DOG; L387-S04 sand inscription HELLO. Exact uppercase normal-direction spelling, no additional text. Reason: lesson compares written content and describes writing in sand; teacher specified English to avoid incorrectly generated Chinese glyphs. Not English pronunciation teaching; do not add English to spokenText, allowedChars or Han coverage. Release must retain this exception and reason in release notes and ledger. All other image text remains prohibited. Final main recheck 7fcef325b37f13fc68fe950bffd7fea8e9db6108: formal through L375; remaining learner dependencies L382, L383, L384, L385, L386. All predecessors and R045/R046 are Release playable-order prerequisites. Browser QA passed at 390x844 and 820x1180 using simulated prerequisite progress and synthetic microphone; physical-device microphone and teacher subjective review are post-main. No audio cutting or splicing.",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "charAudio": {
+    "第": "/assets/lessons/L387/audio/char-u7b2c.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L387-S01",
+      "text": "小光跑第一名，我跑第二名。",
+      "spokenText": "小光跑第一名我跑第二名",
+      "displayLines": [
+        "小光跑",
+        "第一名，",
+        "我跑第二名。"
+      ],
+      "focusChar": "第",
+      "imageNotes": "學校短跑終點，小光剛先跨過終點線，主角小女孩緊接著到達，其他 generic classmates 仍在後方。用抵達先後表現名次，不畫數字名牌、排名文字或頒獎台。小光使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡及固定身份特徵；跑步時不背書包。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book scene with safe margins and readable action on a phone. Match the provided full L058 style sheet strictly: fine expressive pencil-and-watercolor lines, natural warm light, bright natural colors, richly detailed clean environments, natural soft faces, stable preschool body proportions. No generic simple watercolor, anime, flat cartoon, photo or 3D. L058 is STYLE ONLY. The refined sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 family identity. Protagonist girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, same face and preschool proportions as anchors. Mother: same soft shoulder-length dark hair, cream cardigan and blue skirt/trousers, family-anchor adult face. Father: short dark brown hair, blue shirt, khaki trousers, same family-anchor adult face. Fixed YOU boy: same preschool age, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange bag if needed, not Xiaoguang or older brother. Xiaoguang: dedicated reference identity, round glasses, neat short side-parted black hair, white shirt, navy knitted vest, khaki shorts, white socks, brown shoes; NO BAG during running. Include only the named people for the scene. No logos, brands, watermarks, signs, numbers or subtitles.\nNo readable text, letters or numbers anywhere; any paper marks must be illegible.\nPrimary scene: 學校短跑終點，小光剛先跨過終點線，主角小女孩緊接著到達，其他 generic classmates 仍在後方。用抵達先後表現名次，不畫數字名牌、排名文字或頒獎台。小光使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡及固定身份特徵；跑步時不背書包。",
+      "imageSrc": "/assets/lessons/L387/images/L387-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L387/audio/L387-S01.m4a",
+        "durationMs": 4357,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 500
+          },
+          {
+            "charIndex": 1,
+            "startMs": 500,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1080,
+            "endMs": 1370
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1370,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1660,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2560,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2700,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2960,
+            "endMs": 3250
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3250,
+            "endMs": 3540
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3540,
+            "endMs": 3800
+          }
+        ]
+      }
+    },
+    {
+      "id": "L387-S02",
+      "text": "這是我第一次寫信。",
+      "spokenText": "這是我第一次寫信",
+      "displayLines": [
+        "這是我",
+        "第一次寫信。"
+      ],
+      "focusChar": "第",
+      "imageNotes": "家中桌邊，主角小女孩握筆，認真又有些生疏地開始寫信；媽媽坐在旁邊溫和陪伴，紙上只有少量不可辨識筆跡。以初次嘗試的神情與姿態表現，不用數字或標題說明「第一次」。本張沒有可讀英文例外。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book scene with safe margins and readable action on a phone. Match the provided full L058 style sheet strictly: fine expressive pencil-and-watercolor lines, natural warm light, bright natural colors, richly detailed clean environments, natural soft faces, stable preschool body proportions. No generic simple watercolor, anime, flat cartoon, photo or 3D. L058 is STYLE ONLY. The refined sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 family identity. Protagonist girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, same face and preschool proportions as anchors. Mother: same soft shoulder-length dark hair, cream cardigan and blue skirt/trousers, family-anchor adult face. Father: short dark brown hair, blue shirt, khaki trousers, same family-anchor adult face. Fixed YOU boy: same preschool age, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange bag if needed, not Xiaoguang or older brother. Xiaoguang: dedicated reference identity, round glasses, neat short side-parted black hair, white shirt, navy knitted vest, khaki shorts, white socks, brown shoes; NO BAG during running. Include only the named people for the scene. No logos, brands, watermarks, signs, numbers or subtitles.\nNo readable text, letters or numbers anywhere; any paper marks must be illegible.\nPrimary scene: 家中桌邊，主角小女孩握筆，認真又有些生疏地開始寫信；媽媽坐在旁邊溫和陪伴，紙上只有少量不可辨識筆跡。以初次嘗試的神情與姿態表現，不用數字或標題說明「第一次」。本張沒有可讀英文例外。",
+      "imageSrc": "/assets/lessons/L387/images/L387-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L387/audio/L387-S02.m4a",
+        "durationMs": 3958,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 240
+          },
+          {
+            "charIndex": 1,
+            "startMs": 240,
+            "endMs": 480
+          },
+          {
+            "charIndex": 2,
+            "startMs": 480,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1400,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1680,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1960,
+            "endMs": 2420
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2420,
+            "endMs": 3080
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3080,
+            "endMs": 3320
+          }
+        ]
+      }
+    },
+    {
+      "id": "L387-S03",
+      "text": "你寫的字，跟我的不相同。",
+      "spokenText": "你寫的字跟我的不相同",
+      "displayLines": [
+        "你寫的字，",
+        "跟我的",
+        "不相同。"
+      ],
+      "focusChar": "相",
+      "imageNotes": "教室桌邊，主角小女孩與固定「你」小男孩把各自剛寫的紙並排比較。女孩紙上只有大寫 CAT，男孩紙上只有大寫 DOG，兩張紙都朝向觀者且清楚可讀；女孩指向兩張纸，說明寫的內容不同。桌上有筆，表現親手書寫，不是比較兩張印刷商品標籤。兩個單字必須拼字正確、正常方向；不可只畫不同筆跡卻沒有可讀字。「你」不是小光或哥哥。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book scene with safe margins and readable action on a phone. Match the provided full L058 style sheet strictly: fine expressive pencil-and-watercolor lines, natural warm light, bright natural colors, richly detailed clean environments, natural soft faces, stable preschool body proportions. No generic simple watercolor, anime, flat cartoon, photo or 3D. L058 is STYLE ONLY. The refined sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 family identity. Protagonist girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, same face and preschool proportions as anchors. Mother: same soft shoulder-length dark hair, cream cardigan and blue skirt/trousers, family-anchor adult face. Father: short dark brown hair, blue shirt, khaki trousers, same family-anchor adult face. Fixed YOU boy: same preschool age, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange bag if needed, not Xiaoguang or older brother. Xiaoguang: dedicated reference identity, round glasses, neat short side-parted black hair, white shirt, navy knitted vest, khaki shorts, white socks, brown shoes; NO BAG during running. Include only the named people for the scene. No logos, brands, watermarks, signs, numbers or subtitles.\nONLY allowed readable text: girl paper CAT, boy paper DOG, exact uppercase handwritten pencil, normal direction. No other writing.\nPrimary scene: 教室桌邊，主角小女孩與固定「你」小男孩把各自剛寫的紙並排比較。女孩紙上只有大寫 CAT，男孩紙上只有大寫 DOG，兩張紙都朝向觀者且清楚可讀；女孩指向兩張纸，說明寫的內容不同。桌上有筆，表現親手書寫，不是比較兩張印刷商品標籤。兩個單字必須拼字正確、正常方向；不可只畫不同筆跡卻沒有可讀字。「你」不是小光或哥哥。 Final correction: exactly two children, no adults, paper sheets contain only CAT and DOG, no drawings.",
+      "imageSrc": "/assets/lessons/L387/images/L387-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L387/audio/L387-S03.m4a",
+        "durationMs": 3491,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1020
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1020,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1660,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1840,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2020,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2300,
+            "endMs": 2580
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2580,
+            "endMs": 2780
+          }
+        ]
+      }
+    },
+    {
+      "id": "L387-S04",
+      "text": "沙地上有一排大大的字。",
+      "spokenText": "沙地上有一排大大的字",
+      "displayLines": [
+        "沙地上有一排",
+        "大大的字。"
+      ],
+      "focusChar": "字",
+      "imageNotes": "海邊平整沙地上，用手指或小樹枝劃出一排大寫 HELLO，五個字母寬大清楚、順序正確，筆畫是沙地凹痕與自然陰影，不是浮在圖片上的文字貼圖。主角小女孩蹲在旁邊看，人物不要遮字；海水離文字有一段距離。不得改成漢字、亂畫線條或散落的字母。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book scene with safe margins and readable action on a phone. Match the provided full L058 style sheet strictly: fine expressive pencil-and-watercolor lines, natural warm light, bright natural colors, richly detailed clean environments, natural soft faces, stable preschool body proportions. No generic simple watercolor, anime, flat cartoon, photo or 3D. L058 is STYLE ONLY. The refined sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 family identity. Protagonist girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, same face and preschool proportions as anchors. Mother: same soft shoulder-length dark hair, cream cardigan and blue skirt/trousers, family-anchor adult face. Father: short dark brown hair, blue shirt, khaki trousers, same family-anchor adult face. Fixed YOU boy: same preschool age, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange bag if needed, not Xiaoguang or older brother. Xiaoguang: dedicated reference identity, round glasses, neat short side-parted black hair, white shirt, navy knitted vest, khaki shorts, white socks, brown shoes; NO BAG during running. Include only the named people for the scene. No logos, brands, watermarks, signs, numbers or subtitles.\nONLY allowed readable text: HELLO, five capital letters incised in sand, exact normal direction. No other writing.\nPrimary scene: 海邊平整沙地上，用手指或小樹枝劃出一排大寫 HELLO，五個字母寬大清楚、順序正確，筆畫是沙地凹痕與自然陰影，不是浮在圖片上的文字貼圖。主角小女孩蹲在旁邊看，人物不要遮字；海水離文字有一段距離。不得改成漢字、亂畫線條或散落的字母。",
+      "imageSrc": "/assets/lessons/L387/images/L387-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L387/audio/L387-S04.m4a",
+        "durationMs": 4628,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 680
+          },
+          {
+            "charIndex": 1,
+            "startMs": 680,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1460,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1820,
+            "endMs": 2180
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2180,
+            "endMs": 2580
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2580,
+            "endMs": 3300
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3300,
+            "endMs": 3490
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3490,
+            "endMs": 3680
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3680,
+            "endMs": 3900
+          }
+        ]
+      }
+    },
+    {
+      "id": "L387-S05",
+      "text": "我第一次看見這麼大的魚。",
+      "spokenText": "我第一次看見這麼大的魚",
+      "displayLines": [
+        "我第一次",
+        "看見這麼",
+        "大的魚。"
+      ],
+      "focusChar": "第",
+      "imageNotes": "水族展示池前，主角小女孩和爸爸站在安全的透明觀景窗外，女孩睜大眼睛看著一條從窗內游過、身長明顯超過自己的大魚。用女孩與魚的比例表現「這麼大」，神情是驚奇，不是受到攻擊；不畫海豚、鯨魚或恐怖獵食畫面，不用尺寸數字。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Make ONE finished square 1024x1024 modern children's picture-book scene with safe margins and readable action on a phone. Match the provided full L058 style sheet strictly: fine expressive pencil-and-watercolor lines, natural warm light, bright natural colors, richly detailed clean environments, natural soft faces, stable preschool body proportions. No generic simple watercolor, anime, flat cartoon, photo or 3D. L058 is STYLE ONLY. The refined sheet supplies L115/L118/L119/L128 proportions and L154/L162/L163 family identity. Protagonist girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, same face and preschool proportions as anchors. Mother: same soft shoulder-length dark hair, cream cardigan and blue skirt/trousers, family-anchor adult face. Father: short dark brown hair, blue shirt, khaki trousers, same family-anchor adult face. Fixed YOU boy: same preschool age, short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, small orange bag if needed, not Xiaoguang or older brother. Xiaoguang: dedicated reference identity, round glasses, neat short side-parted black hair, white shirt, navy knitted vest, khaki shorts, white socks, brown shoes; NO BAG during running. Include only the named people for the scene. No logos, brands, watermarks, signs, numbers or subtitles.\nNo readable text, letters or numbers anywhere; any paper marks must be illegible.\nPrimary scene: 水族展示池前，主角小女孩和爸爸站在安全的透明觀景窗外，女孩睜大眼睛看著一條從窗內游過、身長明顯超過自己的大魚。用女孩與魚的比例表現「這麼大」，神情是驚奇，不是受到攻擊；不畫海豚、鯨魚或恐怖獵食畫面，不用尺寸數字。",
+      "imageSrc": "/assets/lessons/L387/images/L387-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L387/audio/L387-S05.m4a",
+        "durationMs": 3981,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 510
+          },
+          {
+            "charIndex": 2,
+            "startMs": 510,
+            "endMs": 720
+          },
+          {
+            "charIndex": 3,
+            "startMs": 720,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1080,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1700,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1880,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2100,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2320,
+            "endMs": 2550
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2550,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2780,
+            "endMs": 3060
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L387-G01",
+      "type": "find-character",
+      "sentenceId": "L387-S01",
+      "targetChar": "第",
+      "targetCharIndex": 3,
+      "prompt": "在句子裡找到第，點一下。"
+    },
+    {
+      "id": "L387-G02",
+      "type": "teach-character",
+      "sentenceId": "L387-S02",
+      "targetChar": "第",
+      "targetCharIndex": 3,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "這是我",
+        "suffixText": "一次寫信",
+        "prefixSrc": "/assets/lessons/L387/audio/L387-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L387/audio/L387-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L387/audio/L387-G02-prefix.m4a",
+          "durationMs": 2856,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 240
+            },
+            {
+              "charIndex": 1,
+              "startMs": 240,
+              "endMs": 840
+            },
+            {
+              "charIndex": 2,
+              "startMs": 840,
+              "endMs": 1320
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L387/audio/L387-G02-suffix.m4a",
+          "durationMs": 2720,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 300
+            },
+            {
+              "charIndex": 1,
+              "startMs": 300,
+              "endMs": 600
+            },
+            {
+              "charIndex": 2,
+              "startMs": 600,
+              "endMs": 1560
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1560,
+              "endMs": 1800
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L387-G03",
+      "type": "missing-character",
+      "sentenceId": "L387-S05",
+      "targetChar": "第",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "prompt": "補上不見的字。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "第",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "等",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "的",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L387-G04",
+      "type": "partial-order",
+      "sentenceId": "L387-S03",
+      "targetChar": "相",
+      "targetCharIndex": 8,
+      "missingIndexes": [
+        7,
+        8,
+        9
+      ],
+      "prompt": "把句子排回正確順序。",
+      "options": [
+        {
+          "id": "card-tong",
+          "text": "同",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-bu",
+          "text": "不",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-xiang",
+          "text": "相",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L387-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L387-S04",
+      "targetChar": "字",
+      "targetCharIndex": 9,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "沙地上有一排大大的字。",
+          "correct": true,
+          "sentenceId": "L387-S04",
+          "audioSrc": "/assets/lessons/L387/audio/L387-S04.m4a",
+          "audio": {
+            "src": "/assets/lessons/L387/audio/L387-S04.m4a",
+            "durationMs": 4628,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 680
+              },
+              {
+                "charIndex": 1,
+                "startMs": 680,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 860,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1460,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2180,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 3300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3300,
+                "endMs": 3490
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3490,
+                "endMs": 3680
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3680,
+                "endMs": 3900
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "沙地上有一排小小的字。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L387/audio/L387-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L387/audio/L387-G05-wrong-one.m4a",
+            "durationMs": 5905,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3020,
+                "endMs": 3260
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3260,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3420,
+                "endMs": 3560
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "沙地上有一排大大的花。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L387/audio/L387-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L387/audio/L387-G05-wrong-two.m4a",
+            "durationMs": 5135,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1380,
+                "endMs": 1730
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1730,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2080,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3180,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3360,
+                "endMs": 3540
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3540,
+                "endMs": 3880
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+```
