@@ -1,0 +1,341 @@
+{
+  "unit": "L365",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseOriginMain": "0b0c9786d5f0fda9556b6a6d5eb58dcc0bc9a23b",
+  "technical": {
+    "status": "PASS",
+    "coverage": {
+      "但": 5,
+      "笑": 3,
+      "歡": 2,
+      "喜": 3,
+      "驚": 2,
+      "奇": 1
+    },
+    "images": 5,
+    "audio": [
+      {
+        "src": "/assets/lessons/L365/audio/L365-S01.m4a",
+        "durationMs": 3913,
+        "mean": -18,
+        "max": -3
+      },
+      {
+        "src": "/assets/lessons/L365/audio/L365-S02.m4a",
+        "durationMs": 4115,
+        "mean": -18.3,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L365/audio/L365-S03.m4a",
+        "durationMs": 3475,
+        "mean": -17.7,
+        "max": -3.4
+      },
+      {
+        "src": "/assets/lessons/L365/audio/L365-S04.m4a",
+        "durationMs": 4221,
+        "mean": -17.8,
+        "max": -2.5
+      },
+      {
+        "src": "/assets/lessons/L365/audio/L365-S05.m4a",
+        "durationMs": 4681,
+        "mean": -18.9,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L365/audio/L365-G02-prefix.m4a",
+        "durationMs": 2220,
+        "mean": -17.3,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L365/audio/L365-G02-suffix.m4a",
+        "durationMs": 2262,
+        "mean": -25.5,
+        "max": -9.4
+      },
+      {
+        "src": "/assets/lessons/L365/audio/L365-G05-wrong-one.m4a",
+        "durationMs": 4155,
+        "mean": -17.4,
+        "max": -2.1
+      },
+      {
+        "src": "/assets/lessons/L365/audio/L365-G05-wrong-two.m4a",
+        "durationMs": 4153,
+        "mean": -18.3,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L365/audio/char-u4f46.m4a",
+        "durationMs": 1272,
+        "mean": -27.5,
+        "max": -8.5
+      }
+    ],
+    "stage4Order": "PASS",
+    "indexes": "PASS",
+    "allowed": "PASS",
+    "displayLines": "PASS",
+    "timings": "PASS",
+    "ffmpegDecode": "PASS"
+  },
+  "browser": {
+    "viewport": 390,
+    "stage3": [
+      {
+        "sentence": 1,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "sentence": 2,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 3,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 4,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 5,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    ]
+  },
+  "media": [
+    {
+      "file": "char-u4f46.m4a",
+      "ended": true,
+      "duration": 1.271995
+    },
+    {
+      "file": "L365-G02-prefix.m4a",
+      "ended": true,
+      "duration": 2.22
+    },
+    {
+      "file": "L365-G02-suffix.m4a",
+      "ended": true,
+      "duration": 2.261995
+    },
+    {
+      "file": "L365-G05-wrong-one.m4a",
+      "ended": true,
+      "duration": 4.155011
+    },
+    {
+      "file": "L365-G05-wrong-two.m4a",
+      "ended": true,
+      "duration": 4.152993
+    },
+    {
+      "file": "L365-S01.m4a",
+      "ended": true,
+      "duration": 3.912993
+    },
+    {
+      "file": "L365-S02.m4a",
+      "ended": true,
+      "duration": 4.115011
+    },
+    {
+      "file": "L365-S03.m4a",
+      "ended": true,
+      "duration": 3.475011
+    },
+    {
+      "file": "L365-S04.m4a",
+      "ended": true,
+      "duration": 4.220998
+    },
+    {
+      "file": "L365-S05.m4a",
+      "ended": true,
+      "duration": 4.680998
+    }
+  ],
+  "stage4Media": [
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-S01.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-S02.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-S03.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-S04.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-S05.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-S01.m4a",
+      "ended": false
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-G02-prefix.m4a",
+      "ended": true
+    },
+    {
+      "src": "blob:http://127.0.0.1:5185/2ee22834-add1-4576-9d15-65dcb9bc203e",
+      "ended": true
+    },
+    {
+      "src": "blob:http://127.0.0.1:5185/2ee22834-add1-4576-9d15-65dcb9bc203e",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-G02-prefix.m4a",
+      "ended": true
+    },
+    {
+      "src": "blob:http://127.0.0.1:5185/2cbc471f-b6d1-43aa-ba16-f183ef628130",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-G02-suffix.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-G05-wrong-two.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-S05.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L365/audio/L365-G05-wrong-one.m4a",
+      "ended": true
+    }
+  ],
+  "imageQA": [
+    {
+      "id": "L365-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "source": "New imagegen illustration",
+      "note": "Final WebP inspected against L058 style set and refined cast anchors."
+    },
+    {
+      "id": "L365-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "source": "New imagegen illustration",
+      "note": "Final WebP inspected against L058 style set and refined cast anchors."
+    },
+    {
+      "id": "L365-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "source": "Reused merged L361-S02.webp",
+      "note": "Final WebP inspected against L058 style set and refined cast anchors."
+    },
+    {
+      "id": "L365-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "source": "New imagegen illustration",
+      "note": "Initial book-spine glyph marks rejected; edited to plain unmarked spines and re-inspected."
+    },
+    {
+      "id": "L365-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "source": "New imagegen illustration",
+      "note": "Final WebP inspected against L058 style set and refined cast anchors."
+    }
+  ],
+  "audio": {
+    "provider": "OpenAI",
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "files": 10,
+    "regeneration": {
+      "S03": 1,
+      "G02suffix": 2,
+      "G05wrongOne": 2
+    },
+    "alignment": "whisper-1 on processed M4A; vocabulary disambiguation where required; no fabricated timings",
+    "asrNote": "Independent ASR recognized complete approved sentences, fragments and standalone character across checks. Short isolated-clip transcripts varied across calls; ASR is not human phonetic review."
+  },
+  "scope": "Headless Chrome 390x844. Synthetic microphone verifies recording/replay state only. No teacher/manual listening PASS claimed; formal subjective review is post-main.",
+  "checks": {
+    "validateProduction": "PASS",
+    "toolsCheck": "PASS",
+    "aiCheck": "PASS",
+    "lint": "PASS; two existing unused-variable warnings in L360-rescue-check.cjs",
+    "fullVerify": "Skipped: Release owns shared-state integration"
+  }
+}
