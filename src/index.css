@@ -2407,6 +2407,7 @@ button.char-token {
 }
 
 .sentence-game-card {
+  container-type: inline-size;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -2433,7 +2434,7 @@ button.char-token {
 .sentence-game-card .sentence-line-row {
   width: 100%;
   min-width: 0;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: clamp(2px, 1.1vw, 6px);
 }
@@ -2483,7 +2484,7 @@ button.char-token {
 }
 
 .sentence-game-card .hanzi {
-  font-size: clamp(1.72rem, 8.4vw, 2.2rem);
+  font-size: clamp(1.15rem, 7cqw, 2.2rem);
 }
 
 .sentence-game-card .zhuyin-mark {
@@ -2492,6 +2493,7 @@ button.char-token {
 }
 
 .stage-four-sentence-card {
+  container-type: inline-size;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -2507,7 +2509,7 @@ button.char-token {
 .stage-four-sentence-card .sentence-line-row {
   width: 100%;
   min-width: 0;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: clamp(2px, 1.1vw, 6px);
 }
@@ -2521,7 +2523,7 @@ button.char-token {
 }
 
 .stage-four-sentence-card .hanzi {
-  font-size: clamp(1.72rem, 8.4vw, 2.2rem);
+  font-size: clamp(1.15rem, 7cqw, 2.2rem);
 }
 
 .stage-four-sentence-card .zhuyin-mark {
@@ -2878,7 +2880,7 @@ button.char-token {
   }
 
   .stage-four-sentence-card .hanzi {
-    font-size: clamp(1.68rem, 8vw, 2.05rem);
+    font-size: clamp(1.15rem, 7cqw, 2.05rem);
   }
 
   .stage-four-sentence-card .zhuyin-mark {
