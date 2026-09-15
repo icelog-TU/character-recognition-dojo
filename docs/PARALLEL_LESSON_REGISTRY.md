@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L374 | 往 / normal single-character lesson | claimed | Production B | codex/l374-complete-package | L370, L371, L372, L373 | 朋, 友, 親, 交, 通 | curriculum-workflow/lesson-requests/L374.json; curriculum-workflow/generated/L374-generation-packet.md; curriculum-workflow/drafts/L374-draft.json | public/assets/lessons/L374/; curriculum-workflow/audio-inbox/L374/ | Base 3317753c2dec1351da479202fc2affa5d5206b60; approved final five sentences; dependency blockers apply to Release only. |
+| L374 | 往 / normal single-character lesson | dependency-blocked-asset-complete | Production B | codex/l374-complete-package | L370, L371, L372, L373 | 朋, 友, 親, 交, 通 | curriculum-workflow/lesson-requests/L374.json; curriculum-workflow/generated/L374-generation-packet.md; curriculum-workflow/drafts/L374-draft.json | public/assets/lessons/L374/; curriculum-workflow/audio-inbox/L374/ | Base 3317753c2dec1351da479202fc2affa5d5206b60; 5 WebP + 9 M4A; local validators and strict format audit PASS; G02 recording/replay tooling limitation documented in packet; dependencies block Release only. |
 
 ## Status Values
 
