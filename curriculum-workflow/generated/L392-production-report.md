@@ -4,6 +4,8 @@ Status: dependency-blocked-asset-complete
 
 Branch: codex/l392-complete-package. Full pushed SHA is supplied by the final handoff; verify the same ref with curriculum:package-intake.
 
+Package intake PASS on pushed asset commit 2a8ee16b264702ed6c088ca343e3c2fe3b16becd using `npm run curriculum:package-intake -- --unit L392 --ref origin/codex/l392-complete-package`: 5 WebP, 10 M4A, canonical Stage 4, no warnings. Full unchanged-base `npm run validate:production` also returned `Production assets OK`. Final report-only commit is rechecked against the pushed ref before handoff.
+
 Text dependencies: L385, L386, L387, L388, L389, L390, L391. Release sequence blockers: L381, L382, L383, L384, L385, L386, L387, L388, L389, L390, L391, R047, R048.
 
 ## Production QA
