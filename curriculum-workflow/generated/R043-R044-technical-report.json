@@ -1,0 +1,154 @@
+{
+  "coverage": {
+    "落": 1,
+    "因": 1,
+    "原": 1,
+    "別": 3,
+    "特": 2,
+    "處": 1,
+    "理": 1,
+    "整": 2,
+    "齊": 1,
+    "全": 1,
+    "今": 1,
+    "們": 1,
+    "年": 1,
+    "跟": 1,
+    "常": 1,
+    "請": 2,
+    "嗎": 1,
+    "客": 3,
+    "讓": 1,
+    "廳": 2,
+    "餐": 1,
+    "位": 1,
+    "正": 1,
+    "排": 1,
+    "雞": 1,
+    "公": 2,
+    "園": 2,
+    "物": 2,
+    "怪": 1,
+    "奇": 1
+  },
+  "structureErrors": [],
+  "timingFindings": [
+    "R043-S01 特[4] 1700-1720 (20ms)",
+    "R043-S01 measured duration minus last AI end = 859ms; listen/trim or repair alignment",
+    "R043-S02 measured duration minus last AI end = 2021ms; listen/trim or repair alignment",
+    "R043-S03 請[3] 1560-1561 (1ms)",
+    "R043-S03 overlap at 4",
+    "R043-S03 measured duration minus last AI end = 2472ms; listen/trim or repair alignment",
+    "R043-S04 measured duration minus last AI end = 556ms; listen/trim or repair alignment",
+    "R043-S05 measured duration minus last AI end = 590ms; listen/trim or repair alignment",
+    "R043-G02-prefix measured duration minus last AI end = 814ms; listen/trim or repair alignment",
+    "R043-G02-suffix measured duration minus last AI end = 959ms; listen/trim or repair alignment",
+    "R043-G05-wrong-one measured duration minus last AI end = 898ms; listen/trim or repair alignment",
+    "R043-G05-wrong-two measured duration minus last AI end = 904ms; listen/trim or repair alignment",
+    "R044-S01 measured duration minus last AI end = 1648ms; listen/trim or repair alignment",
+    "R044-S02 measured duration minus last AI end = 2026ms; listen/trim or repair alignment",
+    "R044-S03 measured duration minus last AI end = 742ms; listen/trim or repair alignment",
+    "R044-S04 measured duration minus last AI end = 488ms; listen/trim or repair alignment",
+    "R044-S05 measured duration minus last AI end = 574ms; listen/trim or repair alignment",
+    "R044-G02-prefix measured duration minus last AI end = 1477ms; listen/trim or repair alignment",
+    "R044-G02-suffix measured duration minus last AI end = 619ms; listen/trim or repair alignment",
+    "R044-G05-wrong-one measured duration minus last AI end = 734ms; listen/trim or repair alignment",
+    "R044-G05-wrong-two measured duration minus last AI end = 1307ms; listen/trim or repair alignment"
+  ],
+  "decode": [
+    {
+      "id": "R043-S01",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R043-S02",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R043-S03",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R043-S04",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R043-S05",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R043-G02-prefix",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R043-G02-suffix",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R043-G05-wrong-one",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R043-G05-wrong-two",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R044-S01",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R044-S02",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R044-S03",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R044-S04",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R044-S05",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R044-G02-prefix",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R044-G02-suffix",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R044-G05-wrong-one",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "id": "R044-G05-wrong-two",
+      "pass": true,
+      "error": ""
+    }
+  ],
+  "sizes": {
+    "R043": 1395993,
+    "R044": 1374653
+  }
+}
