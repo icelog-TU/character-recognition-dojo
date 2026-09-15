@@ -1,0 +1,880 @@
+{
+  "id": "L364",
+  "kind": "lesson",
+  "order": 364,
+  "title": "笑",
+  "newChars": [
+    "笑"
+  ],
+  "zhuyin": {
+    "笑": "ㄒㄧㄠˋ"
+  },
+  "targetSentenceCount": 5,
+  "packageStatus": "asset-complete-package",
+  "dependsOnLessons": [
+    "L361",
+    "L362",
+    "L363"
+  ],
+  "provisionalLearnedChars": [
+    "驚",
+    "喜",
+    "歡"
+  ],
+  "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑",
+  "teacherNotes": "Teacher-approved five exact sentences and canonical games. Base 44fedeff, formal L360/R044. L361-L363 are provisional learner dependencies and Release blockers only. G02 target final: prefix only, no suffix. No new later lessons.",
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見",
+      "說",
+      "師",
+      "話",
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電",
+      "生",
+      "明",
+      "光",
+      "亮",
+      "陽",
+      "月",
+      "影",
+      "長",
+      "星",
+      "行",
+      "道",
+      "流",
+      "河",
+      "從",
+      "進",
+      "早",
+      "晚",
+      "海",
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精",
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口",
+      "傷",
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬",
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種",
+      "澆",
+      "照",
+      "顧",
+      "忘",
+      "每",
+      "次",
+      "記",
+      "完",
+      "收",
+      "彩",
+      "色",
+      "粉",
+      "哪",
+      "些",
+      "最",
+      "西",
+      "東",
+      "方",
+      "圖",
+      "向",
+      "線",
+      "直",
+      "轉",
+      "右",
+      "角",
+      "落",
+      "因",
+      "原",
+      "別",
+      "特",
+      "處",
+      "理",
+      "整",
+      "齊",
+      "全",
+      "今",
+      "們",
+      "年",
+      "跟",
+      "常",
+      "請",
+      "嗎",
+      "客",
+      "讓",
+      "廳",
+      "餐",
+      "位",
+      "正",
+      "排",
+      "雞",
+      "公",
+      "園",
+      "物",
+      "怪",
+      "奇",
+      "驚",
+      "喜",
+      "歡",
+      "笑"
+    ],
+    "provisionalLearnedChars": [
+      "驚",
+      "喜",
+      "歡"
+    ],
+    "requiredCoverageChars": [
+      "笑",
+      "歡",
+      "喜",
+      "驚",
+      "奇",
+      "怪"
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L364-S01",
+      "text": "畫了一張奇怪的笑臉。",
+      "spokenText": "畫了一張奇怪的笑臉",
+      "focusChar": "笑",
+      "displayLines": [
+        "畫了一張",
+        "奇怪的笑臉。"
+      ],
+      "imageNotes": "主角小女孩在紙上畫了一張很奇怪的笑臉，五官歪歪的或表情很誇張，但可愛、不恐怖。桌上有彩色筆，畫面清楚看出「畫笑臉」。"
+    },
+    {
+      "id": "L364-S02",
+      "text": "我不喜歡被人笑。",
+      "spokenText": "我不喜歡被人笑",
+      "focusChar": "笑",
+      "displayLines": [
+        "我不喜歡",
+        "被人笑。"
+      ],
+      "imageNotes": "主角小女孩做錯一件小事或畫錯一張圖，旁邊一個 generic child 笑了，她看起來不開心或有點難過。畫面要溫和，不要惡意霸凌；可以有老師在旁邊提醒大家不要笑別人。"
+    },
+    {
+      "id": "L364-S03",
+      "text": "盒子裡跳出小狗，我又驚又笑。",
+      "spokenText": "盒子裡跳出小狗我又驚又笑",
+      "focusChar": "笑",
+      "displayLines": [
+        "盒子裡跳出",
+        "小狗，",
+        "我又驚又笑。"
+      ],
+      "imageNotes": "主角小女孩打開盒子，一隻友善可愛的小狗突然從盒子裡跳出來。女孩先吃驚，接著笑出來。小狗不要攻擊感，不要恐怖驚嚇。"
+    },
+    {
+      "id": "L364-S04",
+      "text": "他哭得驚天動地。",
+      "spokenText": "他哭得驚天動地",
+      "focusChar": "驚",
+      "displayLines": [
+        "他哭得",
+        "驚天動地。"
+      ],
+      "imageNotes": "固定「他」小男孩坐在家裡或教室角落大哭，哭聲很大，旁邊的人露出驚訝或安撫表情。畫面要表現「哭得很誇張、很大聲」，不要恐怖或災難感。"
+    },
+    {
+      "id": "L364-S05",
+      "text": "爸爸喜歡說笑話。",
+      "spokenText": "爸爸喜歡說笑話",
+      "focusChar": "笑",
+      "displayLines": [
+        "爸爸喜歡",
+        "說笑話。"
+      ],
+      "imageNotes": "主角爸爸在家中客廳對主角小女孩說笑話，爸爸表情輕鬆開心，小女孩聽了在笑。畫面要自然親子互動，不要文字對話框或字幕。"
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L364-G01",
+      "type": "find-character",
+      "sentenceId": "L364-S01",
+      "targetChar": "笑",
+      "targetCharIndex": 7,
+      "prompt": "找到這個字，點一下。"
+    },
+    {
+      "id": "L364-G02",
+      "type": "teach-character",
+      "sentenceId": "L364-S02",
+      "targetChar": "笑",
+      "targetCharIndex": 6,
+      "prompt": "幫忙說出這個字。",
+      "teachAudio": {
+        "prefixText": "我不喜歡被人",
+        "targetText": "笑",
+        "prefixSrc": "/assets/lessons/L364/audio/L364-G02-prefix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L364/audio/L364-G02-prefix.m4a",
+          "durationMs": 2600,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 230
+            },
+            {
+              "charIndex": 1,
+              "startMs": 230,
+              "endMs": 460
+            },
+            {
+              "charIndex": 2,
+              "startMs": 460,
+              "endMs": 840
+            },
+            {
+              "charIndex": 3,
+              "startMs": 840,
+              "endMs": 1220
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1220,
+              "endMs": 2020
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2020,
+              "endMs": 2400
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L364-G03",
+      "type": "missing-character",
+      "sentenceId": "L364-S03",
+      "targetChar": "笑",
+      "targetCharIndex": 11,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        11
+      ],
+      "options": [
+        {
+          "id": "answer",
+          "text": "笑",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "L364-G04",
+      "type": "partial-order",
+      "sentenceId": "L364-S04",
+      "targetChar": "驚",
+      "prompt": "把句子排回正確順序。",
+      "missingIndexes": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "options": [
+        {
+          "id": "card-0",
+          "text": "驚",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-1",
+          "text": "天",
+          "correct": true,
+          "correctOrder": 1
+        },
+        {
+          "id": "card-2",
+          "text": "動",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-3",
+          "text": "地",
+          "correct": true,
+          "correctOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "L364-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L364-S05",
+      "targetChar": "笑",
+      "targetCharIndex": 5,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "爸爸喜歡說笑話。",
+          "correct": true,
+          "sentenceId": "L364-S05",
+          "audioSrc": "/assets/lessons/L364/audio/L364-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L364/audio/L364-S05.m4a",
+            "durationMs": 2322,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 150
+              },
+              {
+                "charIndex": 1,
+                "startMs": 150,
+                "endMs": 300
+              },
+              {
+                "charIndex": 2,
+                "startMs": 300,
+                "endMs": 710
+              },
+              {
+                "charIndex": 3,
+                "startMs": 710,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1560,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1820,
+                "endMs": 2120
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "媽媽喜歡說笑話。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L364/audio/L364-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L364/audio/L364-G05-wrong-one.m4a",
+            "durationMs": 2624,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1820,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2160,
+                "endMs": 2420
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "爸爸喜歡聽笑話。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L364/audio/L364-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L364/audio/L364-G05-wrong-two.m4a",
+            "durationMs": 2647,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 250
+              },
+              {
+                "charIndex": 1,
+                "startMs": 250,
+                "endMs": 500
+              },
+              {
+                "charIndex": 2,
+                "startMs": 500,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1580,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1940,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 2480
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "productionQa": {
+    "date": "2026-09-15",
+    "technicalStatus": "PASS",
+    "claimBase": "44fedeffd9055ac64799b69f6f20145f9b51ff41",
+    "latestMainChecked": "3c9beb7ad4b16cd264d62338829815d17e8a9387",
+    "formalThrough": "L362",
+    "releaseBlockers": [
+      "L363"
+    ],
+    "imageQa": [
+      {
+        "id": "L364-S01",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS",
+        "notes": "Protagonist girl drawing a clearly visible silly smile; pink cardigan, bob and clip match family anchors."
+      },
+      {
+        "id": "L364-S02",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS",
+        "notes": "Protagonist girl, visually distinct generic pigtail child, and teal-clad recurring teacher; gentle social scene."
+      },
+      {
+        "id": "L364-S03",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS",
+        "notes": "Protagonist girl surprised and smiling as friendly puppy emerges from the box; no threatening expression."
+      },
+      {
+        "id": "L364-S04",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS",
+        "notes": "Fixed sporty boy: spiky dark hair, orange shirt, navy shorts, red sneakers and green wristband; loud crying with teacher comfort."
+      },
+      {
+        "id": "L364-S05",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "semantics": "PASS",
+        "notes": "Recurring father in blue shirt and protagonist girl laughing together; family anchors and natural joke-telling gesture."
+      }
+    ],
+    "imageReferences": {
+      "styleOnly": [
+        "L058-S01",
+        "L058-S02",
+        "L058-S03",
+        "L058-S04",
+        "L058-S05"
+      ],
+      "refined": [
+        "L115-S01",
+        "L115-S02",
+        "L118-S02",
+        "L119-S01",
+        "L128-S03"
+      ],
+      "cast": [
+        "L154-S01",
+        "L162-S04",
+        "L163-S02",
+        "L035-S01",
+        "R044-S04"
+      ],
+      "rejectedImages": 0
+    },
+    "charAudioQa": {
+      "model": "gpt-4o-transcribe",
+      "language": "zh",
+      "prompt": null,
+      "transcript": "笑",
+      "durationMs": 2066,
+      "sha256": "602c513810ddd407acab3b054d1fd37e36dccbe7cc89d938b3bce1acf8720b5a",
+      "regenerations": 1,
+      "note": "Initial short clip produced inconsistent independent transcription. Regenerated only standalone 笑, processed with repository pipeline, then obtained exact 笑 without a text prompt. This is transcription evidence, not human audition."
+    },
+    "audioQa": {
+      "decode": "PASS: all 9 M4A files",
+      "format": "AAC, 44100 Hz, mono; repository processing",
+      "alignment": "PASS: five sentences plus three dedicated Stage 4 clips; AI alignment repeated after volume repair",
+      "tailMs": [
+        {
+          "id": "L364-S01",
+          "tailMs": 205
+        },
+        {
+          "id": "L364-S02",
+          "tailMs": 210
+        },
+        {
+          "id": "L364-S03",
+          "tailMs": 209
+        },
+        {
+          "id": "L364-S04",
+          "tailMs": 218
+        },
+        {
+          "id": "L364-S05",
+          "tailMs": 202
+        },
+        {
+          "id": "L364-G02-prefix",
+          "tailMs": 200
+        },
+        {
+          "id": "L364-G05-wrong-one",
+          "tailMs": 204
+        },
+        {
+          "id": "L364-G05-wrong-two",
+          "tailMs": 167
+        }
+      ],
+      "g05MeanVolumeSpreadDb": 2.1,
+      "volumeRepair": "G05 wrong-two reinforced with repository safety-gain/limiter function (+7.8 dB); no speech splicing."
+    },
+    "browserQa": {
+      "status": "tooling-fallback",
+      "scope": "Stage 3 phone-width listening/highlights and Stage 4 first-click, recording/stitched replay and option playback",
+      "evidence": "The same Codex in-app browser surface crashed to This page crashed on first playback in the preceding R043 run; prior L354 had the same crash. L364 did not repeat that broken browser path, per SOP. No L364 manual listening, highlight synchrony or microphone replay PASS is claimed.",
+      "rule": "docs/CURRICULUM_PRODUCTION_SOP.md: Browser automation fallback for pre-merge playback QA",
+      "teacherReview": "Post-main review queue; no teacher pre-merge review requested or claimed."
+    },
+    "intakeException": "Explicit L364 handoff requires 9 unique audio files because G02 target is final and suffixSrc must be omitted. The stock intake script hardcodes 10. L364-audit.cjs intake verifies exact nine-file references and applies only this count exception to the otherwise unchanged strict intake gate. Report the stock count incompatibility separately.",
+    "validation": [
+      "tools:check PASS",
+      "ai:check PASS",
+      "curriculum:packet PASS",
+      "repository image optimization PASS",
+      "repository audio processing and AI alignment PASS",
+      "lesson-local production validation PASS",
+      "strict asset format/volume audit PASS",
+      "technical/allowed-character/layout/coverage/index audit PASS",
+      "virtual curriculum validation PASS, latest main + missing dependency draft + L364",
+      "validate:production PASS on branch baseline",
+      "curriculum:audit-state PASS on branch baseline; L364 future folder warning expected"
+    ],
+    "verify": "Skipped: dependency-blocked; shared state integration belongs to Release."
+  }
+}
