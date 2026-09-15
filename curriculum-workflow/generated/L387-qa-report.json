@@ -905,7 +905,7 @@
     "assetsAudit": "PASS: 420 units, 2059 image references, 4076 audio references, zero warnings; included temporary L387 entry.",
     "mobile": "PASS",
     "fullVerify": "SKIPPED: Release owns dependency integration",
-    "packageIntake": "Run against pushed ref before final handoff",
+    "packageIntake": "PASS --strict against pushed 47e59079bbc1b828ac915f3fbb9d41c9a20afcfb; repeat against final report-only tip before handoff",
     "lint": "PASS with three pre-existing unused-variable warnings in L360/L364 helpers",
     "auditState": "PASS after removing temporary L387; expected unmerged L387 asset-folder warning",
     "browserConsole": "Existing React development warning: FindManyChallenge updates LessonPanel during render. Both viewport interaction tests completed successfully; shared UI was not changed."
