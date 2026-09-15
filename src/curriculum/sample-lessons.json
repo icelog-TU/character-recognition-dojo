@@ -180510,6 +180510,721 @@
           "release": "Run latest-main integration verification in Release; this branch contains only an unmerged complete package."
         }
       }
+    },
+    {
+      "id": "L369",
+      "order": 369,
+      "title": "情",
+      "newChars": [
+        "情"
+      ],
+      "zhuyin": {
+        "情": "ㄑㄧㄥˊ"
+      },
+      "requiredRounds": 5,
+      "releaseBlockers": [
+        "L366",
+        "L367",
+        "L368"
+      ],
+      "charAudio": {
+        "情": "/assets/lessons/L369/audio/char-u60c5.m4a"
+      },
+      "sentences": [
+        {
+          "id": "L369-S01",
+          "text": "我跟小月感情好，有話都會說。",
+          "spokenText": "我跟小月感情好有話都會說",
+          "focusChar": "情",
+          "displayLines": [
+            "我跟小月",
+            "感情好，",
+            "有話都會說。"
+          ],
+          "imageNotes": "學校下課時，主角小女孩和固定同學小月坐在庭院長椅上。女孩靠近小月，認真分享自己的事情。小月轉身專心聽，神情親近自然。兩人的書包放在旁邊，呈現熟悉、願意分享心事的同學關係。小月須使用專屬 reference：public/assets/reference/lesson-cast/xiaoyue.webp。長柔卷深栗色頭髮、小月亮髮夾、薰衣草 cardigan、淡奶油上衣、青綠百褶裙、白襪與紫色鞋。不可畫成主角女孩或 generic classmate。",
+          "approved": true,
+          "imagePrompt": "Use case: illustration-story. Single square 1:1 full-bleed children's lesson illustration, safe margins. Match L058 ONLY for warm picture-book pencil-and-watercolor treatment, fine textured linework, rich detailed clean environment, bright natural light and stable expressive preschool proportions. Not thin watercolor wash, flat cartoon, anime, 3D or photoreal. Refined cast sheet governs identity: protagonist girl short dark bob pink hair clip, pink cardigan cream top navy skirt pink shoes. Mother dark bob cream blouse blue trousers. Do not copy L058 identities. No readable text, letters, numbers, brands, labels, signs, captions, speech bubbles, symbols or watermark. School courtyard after class, warm afternoon. Exactly two same-age preschool girls sit close together on a wooden garden bench, both schoolbags beside them. Protagonist girl leans toward Xiaoyue speaking earnestly with a small natural hand gesture; Xiaoyue turns her torso and face toward her, listening attentively with warm close-friend expression. No whispering secrecy pose. Xiaoyue MUST match dedicated third reference: long softly curly dark chestnut hair, crescent clip, lavender cardigan, cream blouse, teal pleated skirt, white socks, violet shoes. Different hair silhouettes, no identity swaps. Both full bodies visible on bench, conversation is focal point.",
+          "imageReuseDecision": "New image required for exact approved relational action and cast combination.",
+          "imageSrc": "/assets/lessons/L369/images/L369-S01.webp",
+          "audio": {
+            "src": "/assets/lessons/L369/audio/L369-S01.m4a",
+            "durationMs": 3705,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 920
+              },
+              {
+                "charIndex": 3,
+                "startMs": 920,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1100,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1420,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1680,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2480,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2660,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2840,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3100,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3340,
+                "endMs": 3540
+              }
+            ]
+          }
+        },
+        {
+          "id": "L369-S02",
+          "text": "感謝你帶路，先休息一下吧。",
+          "spokenText": "感謝你帶路先休息一下吧",
+          "focusChar": "感",
+          "displayLines": [
+            "感謝你帶路，",
+            "先休息",
+            "一下吧。"
+          ],
+          "imageNotes": "學校庭院裡，固定「你」小男孩剛帶一位來訪的 generic 阿姨找到活動場地。遠處可見布置好的活動桌與畫作。阿姨微笑著向男孩道謝，伸手示意旁邊的長椅，請他先坐下休息。阿姨的長相與衣著須和主角媽媽、老師不同。「你」使用固定年幼男孩身份：短而略蓬的深色頭髮、天藍上衣、綠短褲、藍鞋；需要書包時用橘色小書包。不放文字指示牌。",
+          "approved": true,
+          "imagePrompt": "Use case: illustration-story. Single square 1:1 full-bleed children's lesson illustration, safe margins. Match L058 ONLY for warm picture-book pencil-and-watercolor treatment, fine textured linework, rich detailed clean environment, bright natural light and stable expressive preschool proportions. Not thin watercolor wash, flat cartoon, anime, 3D or photoreal. Refined cast sheet governs identity: protagonist girl short dark bob pink hair clip, pink cardigan cream top navy skirt pink shoes. Mother dark bob cream blouse blue trousers. Do not copy L058 identities. No readable text, letters, numbers, brands, labels, signs, captions, speech bubbles, symbols or watermark. School courtyard, fixed young boy 'you' from third reference: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes, orange backpack. He just guided a visiting generic aunt to activity area. Distant tables with simple image-only paintings establish arrival. Generic aunt, not mother or teacher: mature woman with dark hair tied in a low ponytail, oval glasses, burgundy casual shirt and pale green trousers, no classroom props. She smiles appreciatively at boy while extending an open palm toward nearby bench to invite him to rest. Boy looks slightly tired but pleased, about to sit. Exactly these two foreground people; natural adult-child proportions.",
+          "imageReuseDecision": "New image required for exact approved relational action and cast combination.",
+          "imageSrc": "/assets/lessons/L369/images/L369-S02.webp",
+          "audio": {
+            "src": "/assets/lessons/L369/audio/L369-S02.m4a",
+            "durationMs": 3467,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 250
+              },
+              {
+                "charIndex": 1,
+                "startMs": 250,
+                "endMs": 500
+              },
+              {
+                "charIndex": 2,
+                "startMs": 500,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1980,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2300,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2930
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2930,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3120,
+                "endMs": 3340
+              }
+            ]
+          }
+        },
+        {
+          "id": "L369-S03",
+          "text": "謝謝你的花，我心情好多了。",
+          "spokenText": "謝謝你的花我心情好多了",
+          "focusChar": "情",
+          "displayLines": [
+            "謝謝你的花，",
+            "我心情",
+            "好多了。"
+          ],
+          "imageNotes": "主角家中，主角小女孩原本因心愛的玩具壞了而難過，旁邊桌上放著輪子掉下來的小玩具車。固定「你」小男孩來看她，送上一小束花。女孩接過花，眼角還有一點淚痕，但已露出笑容，抬頭向男孩道謝。重點是受到關心後心情好了一些；玩具仍未修好。男孩維持 S02 的同一固定身份。",
+          "approved": true,
+          "imagePrompt": "Use case: illustration-story. Single square 1:1 full-bleed children's lesson illustration, safe margins. Match L058 ONLY for warm picture-book pencil-and-watercolor treatment, fine textured linework, rich detailed clean environment, bright natural light and stable expressive preschool proportions. Not thin watercolor wash, flat cartoon, anime, 3D or photoreal. Refined cast sheet governs identity: protagonist girl short dark bob pink hair clip, pink cardigan cream top navy skirt pink shoes. Mother dark bob cream blouse blue trousers. Do not copy L058 identities. No readable text, letters, numbers, brands, labels, signs, captions, speech bubbles, symbols or watermark. Warm protagonist home. Exactly fixed protagonist girl and fixed young 'you' boy (short tousled dark hair sky-blue shirt green shorts blue shoes, matching reference). Boy offers a small bouquet; girl accepts flowers with a relieved grateful smile, slight visible tear streak at eye, looking up at boy. A small toy car on nearby low table is visibly still broken: one wheel detached beside it, corresponding axle empty. Keep broken toy legible but bouquet exchange main focus. No mother, no magically repaired toy, no sharp hazards. Bright wood floor plants bookcase, books entirely unmarked.",
+          "imageReuseDecision": "New image required for exact approved relational action and cast combination.",
+          "imageSrc": "/assets/lessons/L369/images/L369-S03.webp",
+          "audio": {
+            "src": "/assets/lessons/L369/audio/L369-S03.m4a",
+            "durationMs": 3383,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 480
+              },
+              {
+                "charIndex": 2,
+                "startMs": 480,
+                "endMs": 700
+              },
+              {
+                "charIndex": 3,
+                "startMs": 700,
+                "endMs": 920
+              },
+              {
+                "charIndex": 4,
+                "startMs": 920,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1680,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2420,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2840,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3020,
+                "endMs": 3260
+              }
+            ]
+          }
+        },
+        {
+          "id": "L369-S04",
+          "text": "他很少笑，但是對人很熱情。",
+          "spokenText": "他很少笑但是對人很熱情",
+          "focusChar": "情",
+          "displayLines": [
+            "他很少笑，",
+            "但是對人",
+            "很熱情。"
+          ],
+          "imageNotes": "固定「他」運動型小男孩在自己家門口迎接主角小女孩。男孩表情平靜，沒有明顯笑容，但主動把門打開，伸手歡迎她進屋，另一手拿著準備一起玩的球。以迎接與分享的動作表現熱情。不要把沒笑畫成生氣、冷漠或不願意招呼。「他」使用既有固定運動型男孩身份，不可套用「你」或小光。",
+          "approved": true,
+          "imagePrompt": "Use case: illustration-story. Single square 1:1 full-bleed children's lesson illustration, safe margins. Match L058 ONLY for warm picture-book pencil-and-watercolor treatment, fine textured linework, rich detailed clean environment, bright natural light and stable expressive preschool proportions. Not thin watercolor wash, flat cartoon, anime, 3D or photoreal. Refined cast sheet governs identity: protagonist girl short dark bob pink hair clip, pink cardigan cream top navy skirt pink shoes. Mother dark bob cream blouse blue trousers. Do not copy L058 identities. No readable text, letters, numbers, brands, labels, signs, captions, speech bubbles, symbols or watermark. At sporty 'he' boy's own home entry, orange door and modest green sporting cues, no geography claims. Fixed sporty boy from refined upper-right reference, short energetic slightly spiky black hair, plain orange athletic T-shirt, navy shorts, red sneakers, green wristband, no backpack or glasses. Neutral calm mouth with no smile yet warm attentive eyes. Door already held open with his body; one hand makes an inviting open-palm gesture into home, other hand holds a ball ready to share. Protagonist girl stands at doorway arriving, pleased and relaxed. Distinguish sporty boy from blue-shirt 'you'; he is not angry, cold or reluctant. Both full bodies and doorway readable. Final imagegen edit: flatten sporty boy mouth to a relaxed neutral non-smiling line, preserving welcoming eyes, gesture, cast and detailed style.",
+          "imageReuseDecision": "New image required for exact approved relational action and cast combination.",
+          "imageSrc": "/assets/lessons/L369/images/L369-S04.webp",
+          "audio": {
+            "src": "/assets/lessons/L369/audio/L369-S04.m4a",
+            "durationMs": 4191,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1920,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2660,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3060,
+                "endMs": 3460
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3460,
+                "endMs": 3660
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3660,
+                "endMs": 3920
+              }
+            ]
+          }
+        },
+        {
+          "id": "L369-S05",
+          "text": "事情做完了，去玩吧。",
+          "spokenText": "事情做完了去玩吧",
+          "focusChar": "情",
+          "displayLines": [
+            "事情做完了，",
+            "去玩吧。"
+          ],
+          "imageNotes": "家中畫畫的小桌旁，主角小女孩已洗好畫筆、倒空洗筆水，畫具整齊收好，桌面也擦乾淨了。主角媽媽看著完成的收拾工作，微笑著示意她可以去玩。女孩開心地準備走向旁邊的積木區。呈現先完成事情，再去玩；不要畫成仍在清洗或收拾。",
+          "approved": true,
+          "imagePrompt": "Use case: illustration-story. Single square 1:1 full-bleed children's lesson illustration, safe margins. Match L058 ONLY for warm picture-book pencil-and-watercolor treatment, fine textured linework, rich detailed clean environment, bright natural light and stable expressive preschool proportions. Not thin watercolor wash, flat cartoon, anime, 3D or photoreal. Refined cast sheet governs identity: protagonist girl short dark bob pink hair clip, pink cardigan cream top navy skirt pink shoes. Mother dark bob cream blouse blue trousers. Do not copy L058 identities. No readable text, letters, numbers, brands, labels, signs, captions, speech bubbles, symbols or watermark. Warm protagonist home art corner. Art cleanup is completely FINISHED: small tabletop clean and dry, washed clean brushes neatly stored bristles-up, empty rinsing cup visibly empty, closed paints organized. Fixed mother (dark bob cream blouse blue trousers) smiles and gestures toward nearby building-block play area, giving permission to play. Fixed girl happily steps AWAY from finished clean art table toward blocks, empty hands. Neither is washing/wiping/cleaning; no sink action. Show clean table and blocks clearly, normal bright home continuity.",
+          "imageReuseDecision": "New image required for exact approved relational action and cast combination.",
+          "imageSrc": "/assets/lessons/L369/images/L369-S05.webp",
+          "audio": {
+            "src": "/assets/lessons/L369/audio/L369-S05.m4a",
+            "durationMs": 2765,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 560
+              },
+              {
+                "charIndex": 2,
+                "startMs": 560,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2620
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L369-G01",
+          "type": "find-character",
+          "sentenceId": "L369-S01",
+          "targetChar": "情",
+          "targetCharIndex": 5,
+          "prompt": "找到情，點一下。"
+        },
+        {
+          "id": "L369-G02",
+          "type": "teach-character",
+          "sentenceId": "L369-S03",
+          "targetChar": "情",
+          "targetCharIndex": 7,
+          "prompt": "幫忙說出這個字。",
+          "teachAudio": {
+            "prefixText": "謝謝你的花我心",
+            "suffixText": "好多了",
+            "prefixSrc": "/assets/lessons/L369/audio/L369-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L369/audio/L369-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L369/audio/L369-G02-prefix.m4a",
+              "durationMs": 2739,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 280
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 280,
+                  "endMs": 560
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 560,
+                  "endMs": 820
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 820,
+                  "endMs": 1080
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1080,
+                  "endMs": 1500
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 2020,
+                  "endMs": 2260
+                },
+                {
+                  "charIndex": 6,
+                  "startMs": 2260,
+                  "endMs": 2500
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L369/audio/L369-G02-suffix.m4a",
+              "durationMs": 1167,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 460
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 460,
+                  "endMs": 740
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 740,
+                  "endMs": 1000
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L369-G03",
+          "type": "missing-character",
+          "sentenceId": "L369-S04",
+          "targetChar": "情",
+          "targetCharIndex": 10,
+          "missingIndexes": [
+            10
+          ],
+          "prompt": "補上不見的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "情",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "心",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "感",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L369-G04",
+          "type": "partial-order",
+          "sentenceId": "L369-S02",
+          "targetChar": "感",
+          "missingIndexes": [
+            5,
+            6,
+            7,
+            10
+          ],
+          "prompt": "把句子排回正確順序。",
+          "options": [
+            {
+              "id": "card-xi",
+              "text": "息",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-ba",
+              "text": "吧",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-xian",
+              "text": "先",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-xiu",
+              "text": "休",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L369-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L369-S05",
+          "targetChar": "情",
+          "prompt": "聽一聽，選出讀對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "事情做完了，去玩吧。",
+              "correct": true,
+              "sentenceId": "L369-S05",
+              "audioSrc": "/assets/lessons/L369/audio/L369-S05.m4a",
+              "audio": {
+                "src": "/assets/lessons/L369/audio/L369-S05.m4a",
+                "durationMs": 2765,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 280
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 280,
+                    "endMs": 560
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 560,
+                    "endMs": 1020
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1020,
+                    "endMs": 1180
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1180,
+                    "endMs": 1340
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1900,
+                    "endMs": 2220
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2220,
+                    "endMs": 2400
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2400,
+                    "endMs": 2620
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "事情做完了，去玩嗎？",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L369/audio/L369-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L369/audio/L369-G05-wrong-one.m4a",
+                "durationMs": 2971,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 310
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 310,
+                    "endMs": 620
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 620,
+                    "endMs": 1120
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1120,
+                    "endMs": 1290
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1290,
+                    "endMs": 1460
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2180,
+                    "endMs": 2380
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2380,
+                    "endMs": 2580
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2580,
+                    "endMs": 2800
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "事情做完了，去看吧。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L369/audio/L369-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L369/audio/L369-G05-wrong-two.m4a",
+                "durationMs": 3563,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 250
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 250,
+                    "endMs": 500
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 500,
+                    "endMs": 1160
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1160,
+                    "endMs": 1350
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1350,
+                    "endMs": 1540
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2140,
+                    "endMs": 2560
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2560,
+                    "endMs": 3220
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3220,
+                    "endMs": 3400
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "reviewLessons": [
