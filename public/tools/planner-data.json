@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-15T06:17:42.584Z",
+  "exportedAt": "2026-09-15T07:02:38.877Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -174180,6 +174180,749 @@
           ]
         }
       ]
+    },
+    {
+      "id": "L360",
+      "order": 360,
+      "newChars": [
+        "奇"
+      ],
+      "zhuyin": {
+        "奇": "ㄑㄧˊ"
+      },
+      "title": "奇",
+      "charAudio": {
+        "奇": "/assets/lessons/L360/audio/char-u5947.m4a"
+      },
+      "requiredRounds": 5,
+      "sourceBoundary": "aa1144e3b119c516f037c4625e4e837649061362",
+      "originHint": "Teacher-approved Production C assignment. Main advanced from Editor 71762b03 to aa1144e3 through L354; 排 is now formal. L355-L359 are Release-only dependencies. Preserve approved displayLines. After L360, Release must integrate R043/R044 before L361; this does not block parallel Production. Future handoffs resume A/B/C/D rotation; next slot D.",
+      "sentences": [
+        {
+          "id": "L360-S01",
+          "text": "我很好奇，怪物為什麼哭？",
+          "spokenText": "我很好奇怪物為什麼哭",
+          "focusChar": "奇",
+          "displayLines": [
+            "我很好奇，",
+            "怪物為什麼",
+            "哭？"
+          ],
+          "imageNotes": "主角小女孩正在看一本打開的繪本，書頁上有一隻可愛、不恐怖的怪物正在哭。小女孩露出好奇、關心的表情，好像在想怪物為什麼哭。不要可讀文字、書名、對話框或標籤。",
+          "imagePrompt": "Use case: illustration-story. One square 1:1 phone-readable children's picture-book scene, safe margins. Use all five L058 images for style only: warm natural light, fine pencil-and-watercolor linework, softly modeled forms, rich but clean painted environment, bright varied palette. Preserve the refined examples' preschool proportions and soft natural faces. Not photo, 3D, anime, flat cartoon or thin generic watercolor. Do not copy identities from the L058 style set. The recurring protagonist girl matches the L115 and L154/L162/L163 cast references: preschool age, short dark bob with small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes; keep stable facial features and proportions. Warm family living room. Girl seated at a low reading table studying an open picture book. Three-quarter view shows her curious, caring face AND the open page clearly. On one large wordless page is a cute gentle round teal imaginary monster, sitting sadly with two obvious tears, soft stubby horns, no teeth. Monster exists ONLY as a flat printed illustration on the paper, not in the room. Book has no text. Girl tilts her head wondering why it cries. Bookshelf and daylight behind. No readable text, letters, numbers, book titles, labels, brands, logos, signs, speech balloons, packaging or watermarks anywhere.",
+          "imageReuseDecision": "New scene required for the approved object/action relationship; existing style/cast references do not depict this exact scene.",
+          "imageSrc": "/assets/lessons/L360/images/L360-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L360/audio/L360-S01.m4a",
+            "durationMs": 3529,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2513
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2513,
+                "endMs": 2747
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2747,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2980,
+                "endMs": 3300
+              }
+            ]
+          }
+        },
+        {
+          "id": "L360-S02",
+          "text": "動物園裡有奇怪的鳥。",
+          "spokenText": "動物園裡有奇怪的鳥",
+          "focusChar": "奇",
+          "displayLines": [
+            "動物園裡有",
+            "奇怪的鳥。"
+          ],
+          "imageNotes": "動物園的安全圍欄或鳥類展示區裡，有一隻外形特別、顏色或羽毛很新奇但不嚇人的鳥。主角小女孩可以在遠處好奇觀看。不要可讀說明牌、園名或標誌。",
+          "imagePrompt": "Use case: illustration-story. One square 1:1 phone-readable children's picture-book scene, safe margins. Use all five L058 images for style only: warm natural light, fine pencil-and-watercolor linework, softly modeled forms, rich but clean painted environment, bright varied palette. Preserve the refined examples' preschool proportions and soft natural faces. Not photo, 3D, anime, flat cartoon or thin generic watercolor. Do not copy identities from the L058 style set. The recurring protagonist girl matches the L115 and L154/L162/L163 cast references: preschool age, short dark bob with small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes; keep stable facial features and proportions. A safe zoo aviary with fine mesh enclosure, natural branches, planted habitat, stone viewing path and no signage. One unusual but friendly-looking bird has a fan crest, curved beak and patterned turquoise/golden plumage. Its anatomy is a believable bird with two legs and two wings. Girl observes curiously from the visitor side at a distance. Bird and enclosure are the main focus, clear at phone size. No readable text, letters, numbers, book titles, labels, brands, logos, signs, speech balloons, packaging or watermarks anywhere.",
+          "imageReuseDecision": "New scene required for the approved object/action relationship; existing style/cast references do not depict this exact scene.",
+          "imageSrc": "/assets/lessons/L360/images/L360-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L360/audio/L360-S02.m4a",
+            "durationMs": 3785,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1460,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2460
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2460,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2780,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3603
+              }
+            ]
+          }
+        },
+        {
+          "id": "L360-S03",
+          "text": "小雞對怪物玩具很好奇。",
+          "spokenText": "小雞對怪物玩具很好奇",
+          "focusChar": "奇",
+          "displayLines": [
+            "小雞對",
+            "怪物玩具",
+            "很好奇。"
+          ],
+          "imageNotes": "草地或桌邊，一隻小雞靠近一個可愛、不恐怖的怪物玩具，歪頭觀看，表現出好奇。怪物玩具要明顯是玩具，不是真怪物。不要文字、品牌或包裝標籤。",
+          "imagePrompt": "Use case: illustration-story. One square 1:1 phone-readable children's picture-book scene, safe margins. Use all five L058 images for style only: warm natural light, fine pencil-and-watercolor linework, softly modeled forms, rich but clean painted environment, bright varied palette. Preserve the refined examples' preschool proportions and soft natural faces. Not photo, 3D, anime, flat cartoon or thin generic watercolor. Do not copy identities from the L058 style set. Close child-eye view beside a garden play mat in warm daylight. One small fluffy yellow chick stands near a cute monster plush toy, head tilted inquisitively toward it. The toy is obviously sewn fabric with visible seams, felt stubby horns, embroidered soft eyes and a floppy seated body, no sharp teeth. Chick and toy both fully visible; no people. Clearly a plush toy, not a living monster. Rich painted grass and garden detail, not photographic feather or soil texture. No readable text, letters, numbers, book titles, labels, brands, logos, signs, speech balloons, packaging or watermarks anywhere.",
+          "imageReuseDecision": "New scene required for the approved object/action relationship; existing style/cast references do not depict this exact scene.",
+          "imageSrc": "/assets/lessons/L360/images/L360-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L360/audio/L360-S03.m4a",
+            "durationMs": 3367,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1160,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1380,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1680,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1880,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2300,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2720,
+                "endMs": 3100
+              }
+            ]
+          }
+        },
+        {
+          "id": "L360-S04",
+          "text": "公園裡有一個奇怪的洞。",
+          "spokenText": "公園裡有一個奇怪的洞",
+          "focusChar": "奇",
+          "displayLines": [
+            "公園裡有",
+            "一個奇怪的",
+            "洞。"
+          ],
+          "imageNotes": "明亮安全的公園草地上有一個形狀奇怪的小洞，主角小女孩和家人或同學在旁邊好奇查看。洞不要太大、不要危險、不要像災害場景。不要告示牌文字或標誌。",
+          "imagePrompt": "Use case: illustration-story. One square 1:1 phone-readable children's picture-book scene, safe margins. Use all five L058 images for style only: warm natural light, fine pencil-and-watercolor linework, softly modeled forms, rich but clean painted environment, bright varied palette. Preserve the refined examples' preschool proportions and soft natural faces. Not photo, 3D, anime, flat cartoon or thin generic watercolor. Do not copy identities from the L058 style set. The recurring protagonist girl matches the L115 and L154/L162/L163 cast references: preschool age, short dark bob with small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes; keep stable facial features and proportions. Her recurring mother matches the family reference: softly side-parted chin-length dark brown hair, light ivory blouse/cardigan, blue jeans, warm adult face, distinct from a teacher. Bright safe public park lawn beside a stone path with trees and benches in distance. One SMALL shallow irregular clover-shaped hole about the size of a child's shoe is in the grass, with a visible light soil bottom, no deep darkness. Girl and her mother crouch or bend nearby at a safe distance, curiously looking at its unusual outline. No disaster, sinkhole or fall risk. The girl and mother remain distinct recurring family identities. No readable text, letters, numbers, book titles, labels, brands, logos, signs, speech balloons, packaging or watermarks anywhere.",
+          "imageReuseDecision": "New scene required for the approved object/action relationship; existing style/cast references do not depict this exact scene.",
+          "imageSrc": "/assets/lessons/L360/images/L360-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L360/audio/L360-S04.m4a",
+            "durationMs": 3181,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2020,
+                "endMs": 2290
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2290,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2560,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2820,
+                "endMs": 2940
+              }
+            ]
+          }
+        },
+        {
+          "id": "L360-S05",
+          "text": "這個新玩具很新奇。",
+          "spokenText": "這個新玩具很新奇",
+          "focusChar": "奇",
+          "displayLines": [
+            "這個新玩具",
+            "很新奇。"
+          ],
+          "imageNotes": "主角小女孩在家裡或教室裡看著一個新玩具，玩具造型特別、會動或有有趣機關，看起來新奇但安全。小女孩表情好奇開心。不要文字、品牌、螢幕字或包裝標籤。",
+          "imagePrompt": "Use case: illustration-story. One square 1:1 phone-readable children's picture-book scene, safe margins. Use all five L058 images for style only: warm natural light, fine pencil-and-watercolor linework, softly modeled forms, rich but clean painted environment, bright varied palette. Preserve the refined examples' preschool proportions and soft natural faces. Not photo, 3D, anime, flat cartoon or thin generic watercolor. Do not copy identities from the L058 style set. The recurring protagonist girl matches the L115 and L154/L162/L163 cast references: preschool age, short dark bob with small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes; keep stable facial features and proportions. Warm home play area. Girl sits beside a low table admiring one new unusual safe wooden mechanical toy: a colorful hand-cranked carousel with chunky wooden flowers and rounded cams visible inside a transparent enclosure. Large safe handle and smooth edges. Toy is assembled, no loose tiny parts or exposed dangerous gears; no screens. Girl's curious delighted expression and one hand near the crank communicate discovering the movement. Detailed bookshelf, plants, soft daylight. No readable text, letters, numbers, book titles, labels, brands, logos, signs, speech balloons, packaging or watermarks anywhere.",
+          "imageReuseDecision": "New scene required for the approved object/action relationship; existing style/cast references do not depict this exact scene.",
+          "imageSrc": "/assets/lessons/L360/images/L360-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L360/audio/L360-S05.m4a",
+            "durationMs": 2995,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 140
+              },
+              {
+                "charIndex": 1,
+                "startMs": 140,
+                "endMs": 280
+              },
+              {
+                "charIndex": 2,
+                "startMs": 280,
+                "endMs": 740
+              },
+              {
+                "charIndex": 3,
+                "startMs": 740,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1000,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1280,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2140,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2760
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L360-G01",
+          "type": "find-character",
+          "sentenceId": "L360-S05",
+          "targetChar": "奇",
+          "targetCharIndex": 7,
+          "prompt": "找到奇，點一下。"
+        },
+        {
+          "id": "L360-G02",
+          "type": "teach-character",
+          "sentenceId": "L360-S01",
+          "targetChar": "奇",
+          "targetCharIndex": 3,
+          "prompt": "幫忙說出這個字。",
+          "teachAudio": {
+            "prefixText": "我很好",
+            "targetText": "奇",
+            "suffixText": "怪物為什麼哭",
+            "prefixSrc": "/assets/lessons/L360/audio/L360-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L360/audio/L360-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L360/audio/L360-G02-prefix.m4a",
+              "durationMs": 1463,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 420
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 420,
+                  "endMs": 760
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 760,
+                  "endMs": 1296
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L360/audio/L360-G02-suffix.m4a",
+              "durationMs": 1973,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 300
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 300,
+                  "endMs": 660
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 660,
+                  "endMs": 907
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 907,
+                  "endMs": 1153
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1153,
+                  "endMs": 1400
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 1400,
+                  "endMs": 1740
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L360-G03",
+          "type": "missing-character",
+          "sentenceId": "L360-S03",
+          "targetChar": "奇",
+          "targetCharIndex": 9,
+          "prompt": "補上不見的字。",
+          "missingIndexes": [
+            9
+          ],
+          "options": [
+            {
+              "id": "L360-G03-A",
+              "text": "奇",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L360-G04",
+          "type": "partial-order",
+          "sentenceId": "L360-S02",
+          "targetChar": "奇",
+          "prompt": "把句子排回正確順序。",
+          "missingIndexes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "options": [
+            {
+              "id": "L360-G04-A",
+              "text": "動",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "L360-G04-B",
+              "text": "物",
+              "correct": true,
+              "correctOrder": 1
+            },
+            {
+              "id": "L360-G04-C",
+              "text": "園",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "L360-G04-D",
+              "text": "裡",
+              "correct": true,
+              "correctOrder": 3
+            }
+          ]
+        },
+        {
+          "id": "L360-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L360-S04",
+          "targetChar": "奇",
+          "targetCharIndex": 6,
+          "prompt": "聽一聽，選出讀對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "公園裡有一個奇怪的洞。",
+              "correct": true,
+              "sentenceId": "L360-S04",
+              "audioSrc": "/assets/lessons/L360/audio/L360-S04.m4a",
+              "audio": {
+                "src": "/assets/lessons/L360/audio/L360-S04.m4a",
+                "durationMs": 3181,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 280
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 280,
+                    "endMs": 580
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 580,
+                    "endMs": 860
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 860,
+                    "endMs": 1500
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1500,
+                    "endMs": 1760
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1760,
+                    "endMs": 2020
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2020,
+                    "endMs": 2290
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2290,
+                    "endMs": 2560
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2560,
+                    "endMs": 2820
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 2820,
+                    "endMs": 2940
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "公園裡有一個奇怪的鳥。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L360/audio/L360-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L360/audio/L360-G05-wrong-one.m4a",
+                "durationMs": 2809,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 300
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 300,
+                    "endMs": 520
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 520,
+                    "endMs": 780
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 780,
+                    "endMs": 1280
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1280,
+                    "endMs": 1480
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1480,
+                    "endMs": 1680
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1680,
+                    "endMs": 1920
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 1920,
+                    "endMs": 2160
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2160,
+                    "endMs": 2440
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 2440,
+                    "endMs": 2580
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "公園裡有一個奇怪的門。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L360/audio/L360-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L360/audio/L360-G05-wrong-two.m4a",
+                "durationMs": 3622,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 300
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 300,
+                    "endMs": 620
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 620,
+                    "endMs": 1100
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1100,
+                    "endMs": 1480
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1480,
+                    "endMs": 1740
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1740,
+                    "endMs": 2000
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2000,
+                    "endMs": 2410
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2410,
+                    "endMs": 2820
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2820,
+                    "endMs": 3120
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3120,
+                    "endMs": 3340
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "rescueQA": {
+        "sourcePackageSha": "04992fe4fac0aee1dd6c3c341390b5e0431cf5bc",
+        "baseMainSha": "496aa87af167b0760bcee8f9ca959d6cc657edfd",
+        "branch": "codex/l360-package-rescue",
+        "scope": "Only assigned package audio tails, alignment and completion records; approved sentence and image content retained.",
+        "method": "Whisper-1 word timestamps on final AAC audio using the repository alignment algorithm; exact Traditional/Simplified-equivalent Han transcript validation. A 500 ms padded analysis-only WAV recheck is recorded where needed. No homophone substitution.",
+        "audioMethod": "FFmpeg silencedetect -40 dB / 100 ms; preserve audible decay plus 160 ms, stream-copy complete AAC packets; no leading trims, regeneration, internal splices or re-encoding.",
+        "corrections": [
+          "L360-S02: final syllable end extended from 3480 to measured audible decay 3603 ms.",
+          "L360-G02-prefix: final syllable end extended from 1100 to measured audible decay 1296 ms."
+        ],
+        "technicalStatus": "PASS: 9 exact transcripts, AAC mono 44100 Hz decode, timing counts/bounds/spans/overlap and <=300 ms trailing silence",
+        "evidence": "curriculum-workflow/generated/L360-rescue-audio-qa.json",
+        "browserQA": {
+          "status": "PASS: every audio control played to ended",
+          "controls": 11,
+          "uniqueFiles": 10,
+          "method": "Codex in-app Chromium; existing lesson-asset-review.html served locally with file URL adapter and visible native media ended-event diagnostics. Sequential playback queue exercised all sentence, G02 and G05 controls.",
+          "scope": "Automated media loading and playback; no teacher subjective listening approval, physical-phone highlight test or microphone/stitched recording assessment is claimed.",
+          "sop": "Current production SOP permits technical-gates fallback for browser/tool limitations; teacher subjective review is normally post-merge.",
+          "url": "http://127.0.0.1:8360/tools/lesson-asset-review.html?unit=L360&ref=local-rescue",
+          "endedDurationsMs": {
+            "L360-S01": 3529,
+            "L360-S02": 3785,
+            "L360-S03": 3367,
+            "L360-S04": 3181,
+            "L360-S05": 2995,
+            "L360-G02-prefix": 1463,
+            "L360-G02-suffix": 1973,
+            "L360-G05-wrong-one": 2809,
+            "L360-G05-wrong-two": 3622,
+            "charAudio": 1788
+          }
+        },
+        "validation": {
+          "tools": "PASS",
+          "production": "PASS on unchanged main and separately on lesson-local draft data in memory",
+          "curriculum": "PASS using current L359 main plus L360 rescue draft in memory; existing old-lesson advisory warnings only",
+          "formats": "PASS strict mono AAC 44100 Hz / WebP / size / G05 loudness spread audit with zero warnings",
+          "technical": "PASS transcript, hash, 80-900 ms timing spans, ordered indices, no overlap, measured and metadata tail <=300 ms",
+          "preservation": "PASS: approved sentence and request content, game design, images and retained AAC packet hashes/PTS identical to pinned source; main curriculum/planner/ledger unchanged",
+          "assetFolderBytes": 1258042,
+          "release": "Shared-state integration and full npm run verify remain Release-owned."
+        }
+      }
     }
   ],
   "reviewLessons": [
