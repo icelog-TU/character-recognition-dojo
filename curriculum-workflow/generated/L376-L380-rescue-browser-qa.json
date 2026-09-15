@@ -1,0 +1,10 @@
+{
+  "status": "PASS within documented browser test scope",
+  "manualPlayback": "Chrome native audio: all 55 controls (50 unique files) played to ended without decode errors.",
+  "environment": "Local Vite in-memory package fixture; synthetic prerequisite progress; no main curriculum or real learner/cloud state changed.",
+  "phone": "L379 at measured 390x844: both six-character G01 display lines fit within x=49..326, no clipped Han or zhuyin. Desktop 1920px rows also fit. Additional viewport override attempts did not apply; no 320px/820px claim.",
+  "games": "L379 G01 correct target; G02 hold/record/replay reaches next question; G03 wrong answer does not advance, correct answer does; G04 ordered single-Han completion; G05 reveal does not grant reward, restart and correct selection completes; reward +30 coins/+12 stars and next L380 observed.",
+  "recordingScope": "G02 uses synthetic pointer hold and oscillator MediaStream with real MediaRecorder/replay flow; real-device microphone and subjective pronunciation remain post-main teacher checks.",
+  "stage2": "L379 1/3 and 2/3 have no completion button; 3/3 displays completion. Parent callback moved out of state updater; no update-during-render warning in this regression.",
+  "images": "All 25 original approved images retained byte-for-byte; source production style/cast review retained, no new teacher approval claimed."
+}
