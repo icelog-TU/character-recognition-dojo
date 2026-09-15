@@ -118,7 +118,7 @@ if (includeChars) {
       char,
       path.join(outputDir, `char-${filenameSafe(char)}.mp3`),
       zhuyin
-        ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once.`
+        ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once. ${lesson.charTtsInstructions?.[char] ?? ""}`
         : "",
     );
   }
@@ -128,7 +128,7 @@ if (includeSentences) {
   for (const sentence of lesson.sentences ?? []) {
     if (sentence.approved !== true) continue;
     if (sentenceFilter && sentence.id.toUpperCase() !== sentenceFilter) continue;
-    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`));
+    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`), sentence.ttsInstructions ?? "");
   }
 }
 
@@ -144,10 +144,10 @@ if (includeGameAudio) {
       const prefixText = chars.slice(0, game.targetCharIndex).join("");
       const suffixText = chars.slice(game.targetCharIndex + 1).join("");
       if (game.teachAudio?.prefixSrc) {
-        addJob(prefixText, path.join(outputDir, draftNameFromAudioSrc(game.teachAudio.prefixSrc)));
+        addJob(prefixText, path.join(outputDir, draftNameFromAudioSrc(game.teachAudio.prefixSrc)), game.teachAudio.prefixTtsInstructions ?? "");
       }
       if (game.teachAudio?.suffixSrc) {
-        addJob(suffixText, path.join(outputDir, draftNameFromAudioSrc(game.teachAudio.suffixSrc)));
+        addJob(suffixText, path.join(outputDir, draftNameFromAudioSrc(game.teachAudio.suffixSrc)), game.teachAudio.suffixTtsInstructions ?? "");
       }
     }
 
