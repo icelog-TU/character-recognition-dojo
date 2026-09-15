@@ -1,0 +1,617 @@
+{
+  "unit": "L373",
+  "slot": "Production A",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseOriginMain": "3317753c2dec1351da479202fc2affa5d5206b60",
+  "dependsOnLessons": [
+    "L370",
+    "L371",
+    "L372"
+  ],
+  "provisionalLearnedChars": [
+    "朋",
+    "友",
+    "親",
+    "交"
+  ],
+  "technical": {
+    "status": "PASS",
+    "coverage": {
+      "通": 4,
+      "交": 2,
+      "親": 2,
+      "朋": 2,
+      "友": 3,
+      "情": 1,
+      "感": 1
+    },
+    "images": 5,
+    "audio": [
+      {
+        "src": "/assets/lessons/L373/audio/L373-S01.m4a",
+        "durationMs": 4798,
+        "mean": -18.7,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L373/audio/L373-S02.m4a",
+        "durationMs": 4701,
+        "mean": -18.7,
+        "max": -2.3
+      },
+      {
+        "src": "/assets/lessons/L373/audio/L373-S03.m4a",
+        "durationMs": 3893,
+        "mean": -17.8,
+        "max": -2.1
+      },
+      {
+        "src": "/assets/lessons/L373/audio/L373-S04.m4a",
+        "durationMs": 4386,
+        "mean": -17.1,
+        "max": -2.1
+      },
+      {
+        "src": "/assets/lessons/L373/audio/L373-S05.m4a",
+        "durationMs": 3997,
+        "mean": -18.3,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L373/audio/L373-G02-prefix.m4a",
+        "durationMs": 1997,
+        "mean": -19.3,
+        "max": -4.3
+      },
+      {
+        "src": "/assets/lessons/L373/audio/L373-G02-suffix.m4a",
+        "durationMs": 818,
+        "mean": -15.8,
+        "max": -1.9
+      },
+      {
+        "src": "/assets/lessons/L373/audio/L373-G05-wrong-one.m4a",
+        "durationMs": 3323,
+        "mean": -18,
+        "max": -2.1
+      },
+      {
+        "src": "/assets/lessons/L373/audio/L373-G05-wrong-two.m4a",
+        "durationMs": 3399,
+        "mean": -18.1,
+        "max": -2
+      },
+      {
+        "src": "/assets/lessons/L373/audio/char-u901a.m4a",
+        "durationMs": 1950,
+        "mean": -19.1,
+        "max": -2
+      }
+    ],
+    "stage4Order": "PASS",
+    "indexes": "PASS",
+    "allowed": "PASS",
+    "displayLines": "PASS",
+    "timings": "PASS",
+    "ffmpegDecode": "PASS"
+  },
+  "wordCoverage": {
+    "朋友": 2,
+    "朋": 2,
+    "友": 3
+  },
+  "browser": {
+    "viewport": 390,
+    "stage3": [
+      {
+        "sentence": 1,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "sentence": 2,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "sentence": 3,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 4,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sentence": 5,
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  "media": [
+    {
+      "file": "char-u901a.m4a",
+      "ended": true,
+      "duration": 1.95
+    },
+    {
+      "file": "L373-G02-prefix.m4a",
+      "ended": true,
+      "duration": 1.997007
+    },
+    {
+      "file": "L373-G02-suffix.m4a",
+      "ended": true,
+      "duration": 0.818005
+    },
+    {
+      "file": "L373-G05-wrong-one.m4a",
+      "ended": true,
+      "duration": 3.322993
+    },
+    {
+      "file": "L373-G05-wrong-two.m4a",
+      "ended": true,
+      "duration": 3.399002
+    },
+    {
+      "file": "L373-S01.m4a",
+      "ended": true,
+      "duration": 4.798005
+    },
+    {
+      "file": "L373-S02.m4a",
+      "ended": true,
+      "duration": 4.700998
+    },
+    {
+      "file": "L373-S03.m4a",
+      "ended": true,
+      "duration": 3.892993
+    },
+    {
+      "file": "L373-S04.m4a",
+      "ended": true,
+      "duration": 4.386009
+    },
+    {
+      "file": "L373-S05.m4a",
+      "ended": true,
+      "duration": 3.997007
+    }
+  ],
+  "stage4Media": [
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-S01.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-S02.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-S03.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-S04.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-S05.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-S02.m4a",
+      "ended": false
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-G02-prefix.m4a",
+      "ended": true
+    },
+    {
+      "src": "blob:http://127.0.0.1:5185/9fe2e30d-2fe0-4b0b-9c47-2fc2143fad07",
+      "ended": true
+    },
+    {
+      "src": "blob:http://127.0.0.1:5185/9fe2e30d-2fe0-4b0b-9c47-2fc2143fad07",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-G02-prefix.m4a",
+      "ended": true
+    },
+    {
+      "src": "blob:http://127.0.0.1:5185/42d117f7-87bf-406d-a83a-e76fe94b35a2",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-G02-suffix.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-S05.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-G05-wrong-two.m4a",
+      "ended": true
+    },
+    {
+      "src": "http://127.0.0.1:5185/character-recognition-dojo/assets/lessons/L373/audio/L373-G05-wrong-one.m4a",
+      "ended": true
+    }
+  ],
+  "imageQA": [
+    {
+      "id": "L373-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 161220,
+      "note": "Final WebP inspected against complete L058 style set and relevant recurring cast anchors."
+    },
+    {
+      "id": "L373-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 158218,
+      "note": "Final WebP inspected against complete L058 style set and relevant recurring cast anchors."
+    },
+    {
+      "id": "L373-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 167852,
+      "note": "Final WebP inspected against complete L058 style set and relevant recurring cast anchors."
+    },
+    {
+      "id": "L373-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 240042,
+      "note": "Initial cropped boat with recurring family rejected. Regenerated zoomed-out full train and boat with generic passengers accepted."
+    },
+    {
+      "id": "L373-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 144084,
+      "note": "Final WebP inspected against complete L058 style set and relevant recurring cast anchors."
+    }
+  ],
+  "imageBytes": 871416,
+  "audioBytes": 432405,
+  "tts": {
+    "provider": "OpenAI",
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "files": 10,
+    "charRegenerations": 3,
+    "prefixRegenerations": 1,
+    "suffixRegenerations": 1,
+    "source": "Exact approved inputs, standalone 通 input only, independent teaching fragments and whole wrong-option texts"
+  },
+  "charReview": {
+    "asr": [
+      {
+        "model": "whisper-1",
+        "text": "通"
+      },
+      {
+        "model": "gpt-4o-mini-transcribe",
+        "text": "通"
+      }
+    ],
+    "pitch": [
+      {
+        "ms": 660,
+        "hz": 216,
+        "confidence": 0.81
+      },
+      {
+        "ms": 670,
+        "hz": 216,
+        "confidence": 0.92
+      },
+      {
+        "ms": 680,
+        "hz": 216,
+        "confidence": 0.95
+      },
+      {
+        "ms": 690,
+        "hz": 219,
+        "confidence": 0.98
+      },
+      {
+        "ms": 700,
+        "hz": 219,
+        "confidence": 0.99
+      },
+      {
+        "ms": 710,
+        "hz": 219,
+        "confidence": 0.99
+      },
+      {
+        "ms": 720,
+        "hz": 110,
+        "confidence": 0.99
+      },
+      {
+        "ms": 730,
+        "hz": 219,
+        "confidence": 0.99
+      },
+      {
+        "ms": 740,
+        "hz": 219,
+        "confidence": 0.99
+      },
+      {
+        "ms": 750,
+        "hz": 216,
+        "confidence": 0.99
+      },
+      {
+        "ms": 760,
+        "hz": 216,
+        "confidence": 0.99
+      },
+      {
+        "ms": 770,
+        "hz": 213,
+        "confidence": 0.99
+      },
+      {
+        "ms": 780,
+        "hz": 213,
+        "confidence": 0.99
+      },
+      {
+        "ms": 790,
+        "hz": 211,
+        "confidence": 0.99
+      },
+      {
+        "ms": 800,
+        "hz": 211,
+        "confidence": 0.99
+      },
+      {
+        "ms": 810,
+        "hz": 211,
+        "confidence": 1
+      },
+      {
+        "ms": 820,
+        "hz": 211,
+        "confidence": 0.99
+      },
+      {
+        "ms": 830,
+        "hz": 208,
+        "confidence": 0.99
+      },
+      {
+        "ms": 840,
+        "hz": 208,
+        "confidence": 0.99
+      },
+      {
+        "ms": 850,
+        "hz": 211,
+        "confidence": 0.99
+      },
+      {
+        "ms": 860,
+        "hz": 211,
+        "confidence": 0.99
+      },
+      {
+        "ms": 870,
+        "hz": 213,
+        "confidence": 0.99
+      },
+      {
+        "ms": 880,
+        "hz": 213,
+        "confidence": 1
+      },
+      {
+        "ms": 890,
+        "hz": 216,
+        "confidence": 1
+      },
+      {
+        "ms": 900,
+        "hz": 216,
+        "confidence": 1
+      },
+      {
+        "ms": 910,
+        "hz": 216,
+        "confidence": 1
+      },
+      {
+        "ms": 920,
+        "hz": 216,
+        "confidence": 1
+      },
+      {
+        "ms": 930,
+        "hz": 109,
+        "confidence": 1
+      },
+      {
+        "ms": 940,
+        "hz": 109,
+        "confidence": 1
+      },
+      {
+        "ms": 950,
+        "hz": 216,
+        "confidence": 1
+      },
+      {
+        "ms": 960,
+        "hz": 216,
+        "confidence": 1
+      },
+      {
+        "ms": 970,
+        "hz": 213,
+        "confidence": 1
+      },
+      {
+        "ms": 980,
+        "hz": 213,
+        "confidence": 1
+      },
+      {
+        "ms": 990,
+        "hz": 211,
+        "confidence": 1
+      },
+      {
+        "ms": 1000,
+        "hz": 211,
+        "confidence": 1
+      },
+      {
+        "ms": 1010,
+        "hz": 208,
+        "confidence": 1
+      },
+      {
+        "ms": 1020,
+        "hz": 208,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1030,
+        "hz": 205,
+        "confidence": 0.99
+      }
+    ],
+    "note": "Final Whisper and gpt-4o-mini-transcribe return 通. gpt-4o-transcribe can return Korean tong spelling for this isolated syllable. Voiced contour is approximately level 205-219 Hz, aside from octave-estimation artifacts. Acoustic/ASR evidence does not replace human subjective review."
+  },
+  "asr": [
+    {
+      "file": "char-u901a.m4a",
+      "text": "통."
+    },
+    {
+      "file": "L373-G02-prefix.m4a",
+      "text": "媽媽正在跟親友"
+    },
+    {
+      "file": "L373-G02-suffix.m4a",
+      "text": "電話"
+    },
+    {
+      "file": "L373-G05-wrong-one.m4a",
+      "text": "把门打开，让房间通风。"
+    },
+    {
+      "file": "L373-G05-wrong-two.m4a",
+      "text": "把窗打开，让客厅通风。"
+    },
+    {
+      "file": "L373-S01.m4a",
+      "text": "我跟朋友交換玩具，感情更好。"
+    },
+    {
+      "file": "L373-S02.m4a",
+      "text": "朋友亲口通知我，他要转学了。"
+    },
+    {
+      "file": "L373-S03.m4a",
+      "text": "媽媽正在跟親友通電話。"
+    },
+    {
+      "file": "L373-S04.m4a",
+      "text": "火车和船都是交通工具。"
+    },
+    {
+      "file": "L373-S05.m4a",
+      "text": "把窗打开，让房间通风。"
+    }
+  ],
+  "timingReview": "Final processed audio AI-aligned. G05 wrong-two final 風 end corrected from 2960 ms to measured speech end 3279 ms; terminal silence begins at 3279 ms and 120 ms buffer remains. Other AI timings retained.",
+  "scope": "Chrome headless 390x844; Stage 3 all 53 highlights; G02 synthetic microphone recording/replay; G05 all options played on first tap. Synthetic recording is a functional test, not human listening approval. G01/G03/G04 mechanically verified; not interactively solved in this playback run. Provisional character zhuyin comes from earlier lessons during Release integration.",
+  "checks": {
+    "tools": "PASS",
+    "ai": "PASS",
+    "validateProduction": "PASS with L373 temporary entry and final assets",
+    "assetAudit": "PASS: 414 units, 2029 image references, 4016 audio references, 0 warnings",
+    "technical": "PASS",
+    "lint": "PASS with three pre-existing L360/L364 helper warnings",
+    "verify": "Skipped: dependency-blocked shared-state integration belongs to Release"
+  }
+}

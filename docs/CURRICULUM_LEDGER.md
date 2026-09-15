@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 372:
+Characters taught after Lesson 373:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交通`
 
 Recent review pool for the next lesson:
 
-`交 親 友 朋 情 感 謝 吧 但 笑 歡 喜 驚 奇 怪 物 園`
+`通 交 親 友 朋 情 感 謝 吧 但 笑 歡 喜 驚 奇 怪 物`
 
 ## Visual Continuity Ledger
 
@@ -540,12 +540,13 @@ Note: R001-R004 have been migrated to the current 15-lesson review schedule. R00
 | L370 | 朋友 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友 | 我跟朋友感情好，但也會生氣。 / 感謝你照顧我家的小雞。 / 朋友借我雨衣，我跟他道謝。 / 好朋友要搬家，我心情很差。 / 小朋友，排好再上船吧。 | 情 感 謝 吧 但 | Source e88dbe1dbd99b426344f6d72e3e7e86a48aece36. Two-character pilot, one order; both 朋/友 learned at L370. Teacher override: Stage 2 2+2 target-card distribution is post-merge teacher verification. Canonical single-Han Stage 4; G03 three choices. |
 | L371 | 親 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親 | 朋友親手做紙花給我，好感動。 / 朋友熱情地請我去他家做客。 / 媽媽親親我，叫我快睡吧。 / 感謝爸爸帶我去看流星。 / 家裡出事情，親朋好友來幫忙。 | 朋 友 情 感 謝 吧 | Source 70937914b1fba2c2ef716f822340070c2f7834d3. Package intake passed; dependencies satisfied in main. Canonical single-Han Stage 4; G03 three choices. Teacher asset review is post-main. |
 | L372 | 交 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交 | 我想跟你交朋友。 / 我把親手畫的圖交給老師。 / 爸爸跟老朋友有多年的交情。 / 感謝親友來幫忙搬家。 / 事情太多，媽媽忙得不可開交。 | 親 朋 友 情 感 謝 | Source 213baf333717159767fc51ef24b9e75995a6e82b. Package intake passed; dependencies satisfied in main. Canonical single-Han Stage 4; G03 three choices. Teacher asset review is post-main. |
+| L373 | 通 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交通 | 我跟朋友交換玩具，感情更好。 / 朋友親口通知我，他要轉學了。 / 媽媽正在跟親友通電話。 / 火車和船都是交通工具。 / 把窗打開，讓房間通風。 | 交 親 朋 友 情 感 | Source ff872a2d9de4066d4b25f4eb2cb8e24e417fdf5b. Package intake passed; dependencies satisfied in main. Canonical single-Han Stage 4; G03 three choices. Teacher asset review is post-main. |
 | R043 | review module | same as L360 | 這個角落特別髒。 / 今年天氣特別熱，原因不明。 / 彩色筆請別到處亂放。 / 把房間整理好，全都放整齊。 / 我們常跟爸爸去公園。 | 落 因 原 別 特 處 理 整 齊 全 今 們 年 跟 常 請 公 園 | 複習四十三 after L360. R043/R044 cover 30/30 introduced characters from L331-L360; no new characters. Rescue source 6e0ef7639778b6d4203405b60a619a66b4a77eff. Intake, audio hash/decode/timing and strict format checks passed. Teacher asset review is post-main. |
 | R044 | review module | same as L360 | 客人到了，請讓客人進客廳。 / 這家餐廳正好有位子。 / 公園裡有一排長椅。 / 小雞也是動物，對嗎？ / 小月對怪物玩具很好奇。 | 請 嗎 客 讓 廳 餐 位 正 排 雞 公 園 物 怪 奇 | 複習四十四 after L360. R043/R044 cover 30/30 introduced characters from L331-L360; no new characters. Rescue source 6e0ef7639778b6d4203405b60a619a66b4a77eff. Intake, audio hash/decode/timing and strict format checks passed. Teacher asset review is post-main. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L372. Review modules R001-R044 are valid for the current 15-lesson schedule through the L360 milestone. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L373. Review modules R001-R044 are valid for the current 15-lesson schedule through the L360 milestone. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
