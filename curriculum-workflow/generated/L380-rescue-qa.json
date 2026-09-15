@@ -1,0 +1,1250 @@
+{
+  "unit": "L380",
+  "sourcePackageSha": "2d213e7b5d8db921e05630bb86708442fb2e7316",
+  "baseMainSha": "7fcef325b37f13fc68fe950bffd7fea8e9db6108",
+  "branch": "codex/l376-l380-package-rescue",
+  "evidence": "curriculum-workflow/generated/L380-rescue-qa.json",
+  "method": "Repository assets:align:ai entry point against owned draft in memory; Traditional/Simplified equivalents only. G02 exact-text prompt; independent target-blind transcription for regenerated short clips. Single-character alignment may use 500 ms analysis-only padding with offsets subtracted.",
+  "audioMethod": "Standard OpenAI generation and repository processing for regenerated files. Silence-only stream-copy trimming retains speech and 160 ms decay buffer. Other audio reused with original AAC packet hashes.",
+  "corrections": [
+    "L380-S02 index 4 startMs: 1840 -> 1652 ms from measured -40 dB / 80 ms pause onset; repeated AI boundary retained at other end.",
+    "L380-G02-prefix final audible decay: 2080 -> 2217 ms measured by FFmpeg -40 dB / 100 ms silence detection.",
+    "L380-G05-wrong-two index 4 startMs: 1640 -> 1427 ms from measured -40 dB / 80 ms pause onset; repeated AI boundary retained at other end."
+  ],
+  "regeneratedAudio": [],
+  "technicalStatus": "PASS: 9 complete transcript alignments, all Han spans 80-900 ms, no overlap; measured and metadata tails <=300 ms.",
+  "browserQA": {
+    "status": "PASS within documented browser test scope",
+    "manualPlayback": "Chrome native audio: all 55 controls (50 unique files) played to ended without decode errors.",
+    "environment": "Local Vite in-memory package fixture; synthetic prerequisite progress; no main curriculum or real learner/cloud state changed.",
+    "phone": "L379 at measured 390x844: both six-character G01 display lines fit within x=49..326, no clipped Han or zhuyin. Desktop 1920px rows also fit. Additional viewport override attempts did not apply; no 320px/820px claim.",
+    "games": "L379 G01 correct target; G02 hold/record/replay reaches next question; G03 wrong answer does not advance, correct answer does; G04 ordered single-Han completion; G05 reveal does not grant reward, restart and correct selection completes; reward +30 coins/+12 stars and next L380 observed.",
+    "recordingScope": "G02 uses synthetic pointer hold and oscillator MediaStream with real MediaRecorder/replay flow; real-device microphone and subjective pronunciation remain post-main teacher checks.",
+    "stage2": "L379 1/3 and 2/3 have no completion button; 3/3 displays completion. Parent callback moved out of state updater; no update-during-render warning in this regression.",
+    "images": "All 25 original approved images retained byte-for-byte; source production style/cast review retained, no new teacher approval claimed."
+  },
+  "release": "Release owns R045/R046 prerequisite checks and ordered L376-L380 main integration. Shared curriculum/planner/ledger are unchanged.",
+  "reviewIndex": "https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main",
+  "postMergeReview": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L380&ref=main",
+  "statusCommand": "npm run asset:review-status -- --unit L380 --ref main",
+  "regenerationSources": {},
+  "independentTranscriptions": {},
+  "sourceHistory": {
+    "superseded": true,
+    "requestTeacherNotes": "Teacher-approved L380 normal single-character lesson; package base 387662cd9e655e98e1aa6a2e4d8add1806f7f8b2, initially formal L001-L370 (374 Han) and allowed 380. Final source-of-truth recheck 250ca4a3361a15104ba19158bb1b0710dac43ecc: formal L001-L375 (379 Han), final allowed 384, no chars after L380. Learner dependencies L376, L377, L378, L379; provisional 已近接送. No approved learner-facing content changed. Release playable order: all predecessors through L375 -> R045 -> R046 (coverage L346-L375, ceiling L375) -> L376 -> L377 -> L378 -> L379 -> L380. Dependencies and milestones block Release only. Stage 2: three 連 plus three distinct prior learned distractors. G03 exactly 連/又/已, one correct, retry preserves three. G05 correct audio is S02. Automated Chrome phone/tablet QA uses simulated prerequisite progress and synthetic microphone; it does not promote unmerged predecessors. Teacher subjective audio/image review is post-main.",
+    "supersededGeneratedRecords": {
+      "L380-qa-report.json": "{\r\n  \"unit\": \"L380\",\r\n  \"owner\": \"Production A\",\r\n  \"branch\": \"codex/l380-complete-package\",\r\n  \"packageStatus\": \"dependency-blocked-asset-complete\",\r\n  \"base\": \"387662cd9e655e98e1aa6a2e4d8add1806f7f8b2\",\r\n  \"mainSha\": \"250ca4a3361a15104ba19158bb1b0710dac43ecc\",\r\n  \"formalBoundary\": \"L375\",\r\n  \"formalChars\": 379,\r\n  \"allowedCount\": 384,\r\n  \"initialAllowedCount\": 380,\r\n  \"dependsOnLessons\": [\r\n    \"L376\",\r\n    \"L377\",\r\n    \"L378\",\r\n    \"L379\"\r\n  ],\r\n  \"provisionalLearnedChars\": [\r\n    \"已\",\r\n    \"近\",\r\n    \"接\",\r\n    \"送\"\r\n  ],\r\n  \"releaseMilestones\": \"L375 -> R045 -> R046 (L346-L375) -> L376 -> L377 -> L378 -> L379 -> L380\",\r\n  \"consistency\": \"PASS\",\r\n  \"coverage\": {\r\n    \"連\": 4,\r\n    \"送\": 2,\r\n    \"接\": 3,\r\n    \"近\": 2,\r\n    \"已\": 1,\r\n    \"經\": 1\r\n  },\r\n  \"technical\": {\r\n    \"status\": \"PASS\",\r\n    \"allowed\": 384,\r\n    \"coverage\": {\r\n      \"連\": 4,\r\n      \"送\": 2,\r\n      \"接\": 3,\r\n      \"近\": 2,\r\n      \"已\": 1,\r\n      \"經\": 1\r\n    },\r\n    \"displayLines\": \"PASS\",\r\n    \"stage4Indexes\": \"PASS\",\r\n    \"imageMetadata\": [\r\n      {\r\n        \"id\": \"L380-S01\",\r\n        \"src\": \"/assets/lessons/L380/images/L380-S01.webp\",\r\n        \"bytes\": 93506,\r\n        \"width\": 1024,\r\n        \"height\": 1024\r\n      },\r\n      {\r\n        \"id\": \"L380-S02\",\r\n        \"src\": \"/assets/lessons/L380/images/L380-S02.webp\",\r\n        \"bytes\": 161004,\r\n        \"width\": 1024,\r\n        \"height\": 1024\r\n      },\r\n      {\r\n        \"id\": \"L380-S03\",\r\n        \"src\": \"/assets/lessons/L380/images/L380-S03.webp\",\r\n        \"bytes\": 187120,\r\n        \"width\": 1024,\r\n        \"height\": 1024\r\n      },\r\n      {\r\n        \"id\": \"L380-S04\",\r\n        \"src\": \"/assets/lessons/L380/images/L380-S04.webp\",\r\n        \"bytes\": 157108,\r\n        \"width\": 1024,\r\n        \"height\": 1024\r\n      },\r\n      {\r\n        \"id\": \"L380-S05\",\r\n        \"src\": \"/assets/lessons/L380/images/L380-S05.webp\",\r\n        \"bytes\": 139080,\r\n        \"width\": 1024,\r\n        \"height\": 1024\r\n      }\r\n    ],\r\n    \"audio\": [\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/L380-S01.m4a\",\r\n        \"durationMs\": 3422,\r\n        \"mean\": -18.3,\r\n        \"max\": -2,\r\n        \"bytes\": 36943\r\n      },\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/L380-S02.m4a\",\r\n        \"durationMs\": 5631,\r\n        \"mean\": -20.4,\r\n        \"max\": -2.2,\r\n        \"bytes\": 49436\r\n      },\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/L380-S03.m4a\",\r\n        \"durationMs\": 4184,\r\n        \"mean\": -19.7,\r\n        \"max\": -2,\r\n        \"bytes\": 38899\r\n      },\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/L380-S04.m4a\",\r\n        \"durationMs\": 4736,\r\n        \"mean\": -20,\r\n        \"max\": -2,\r\n        \"bytes\": 50310\r\n      },\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/L380-S05.m4a\",\r\n        \"durationMs\": 3309,\r\n        \"mean\": -19.1,\r\n        \"max\": -2.1,\r\n        \"bytes\": 38510\r\n      },\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/L380-G02-prefix.m4a\",\r\n        \"durationMs\": 2763,\r\n        \"mean\": -19.4,\r\n        \"max\": -2,\r\n        \"bytes\": 30483\r\n      },\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/L380-G02-suffix.m4a\",\r\n        \"durationMs\": 2206,\r\n        \"mean\": -19,\r\n        \"max\": -3.5,\r\n        \"bytes\": 26734\r\n      },\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/L380-G05-wrong-one.m4a\",\r\n        \"durationMs\": 5283,\r\n        \"mean\": -18.1,\r\n        \"max\": -2,\r\n        \"bytes\": 58624\r\n      },\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/L380-G05-wrong-two.m4a\",\r\n        \"durationMs\": 4363,\r\n        \"mean\": -19.2,\r\n        \"max\": -2,\r\n        \"bytes\": 53644\r\n      },\r\n      {\r\n        \"src\": \"/assets/lessons/L380/audio/char-u9023.m4a\",\r\n        \"durationMs\": 2113,\r\n        \"mean\": -19,\r\n        \"max\": -3.1,\r\n        \"bytes\": 26509\r\n      }\r\n    ],\r\n    \"g05MeanSpreadDb\": 2.3,\r\n    \"timings\": \"PASS\",\r\n    \"ffmpegDecode\": \"PASS\",\r\n    \"sizes\": {\r\n      \"images\": 737818,\r\n      \"audio\": 410092,\r\n      \"total\": 1147910\r\n    }\r\n  },\r\n  \"mobile\": [\r\n    {\r\n      \"viewport\": {\r\n        \"width\": 390,\r\n        \"height\": 844\r\n      },\r\n      \"stage1\": {\r\n        \"standalonePlayed\": true\r\n      },\r\n      \"stage2\": {\r\n        \"cards\": [\r\n          \"連\",\r\n          \"電\",\r\n          \"已\",\r\n          \"連\",\r\n          \"線\",\r\n          \"連\"\r\n        ],\r\n        \"threeTargetsRequired\": true,\r\n        \"wrongRejected\": true\r\n      },\r\n      \"stage3\": [\r\n        {\r\n          \"sentence\": 1,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        },\r\n        {\r\n          \"sentence\": 2,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7,\r\n            8,\r\n            9,\r\n            10\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        },\r\n        {\r\n          \"sentence\": 3,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7,\r\n            8,\r\n            9\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        },\r\n        {\r\n          \"sentence\": 4,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7,\r\n            8,\r\n            9\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        },\r\n        {\r\n          \"sentence\": 5,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7,\r\n            8\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        }\r\n      ],\r\n      \"stage4\": {\r\n        \"g01\": {\r\n          \"immediateFeedback\": true,\r\n          \"waitsForNext\": true\r\n        },\r\n        \"g02\": {\r\n          \"syntheticRecordReplay\": true,\r\n          \"waitsForNext\": true\r\n        },\r\n        \"g03\": {\r\n          \"threeDistinctCards\": true,\r\n          \"oneBlank\": true,\r\n          \"bothWrongRejected\": true,\r\n          \"rescueDoesNotComplete\": true,\r\n          \"retryPreservesThree\": true,\r\n          \"onlyCorrectCompletes\": true\r\n        },\r\n        \"g04\": {\r\n          \"displayOrder\": [\r\n            \"開\",\r\n            \"接\",\r\n            \"車\",\r\n            \"送\"\r\n          ],\r\n          \"correctSequence\": [\r\n            \"開\",\r\n            \"車\",\r\n            \"接\",\r\n            \"送\"\r\n          ],\r\n          \"noCompletionLeak\": true\r\n        },\r\n        \"g05\": {\r\n          \"openingDoesNotRevealAnswer\": true,\r\n          \"files\": [\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-two.m4a\",\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-S02.m4a\",\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-one.m4a\"\r\n          ],\r\n          \"correct\": 1,\r\n          \"nav\": {\r\n            \".reward-actions\": {\r\n              \"text\": \"再次練習本課沒有下一課回首頁休息\",\r\n              \"top\": 403.875,\r\n              \"bottom\": 597.875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            },\r\n            \".reward-next-button\": {\r\n              \"text\": \"沒有下一課\",\r\n              \"disabled\": true,\r\n              \"top\": 471.875,\r\n              \"bottom\": 529.875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            },\r\n            \".reward-home-button\": {\r\n              \"text\": \"回首頁休息\",\r\n              \"disabled\": false,\r\n              \"top\": 539.875,\r\n              \"bottom\": 597.875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"reward\": {\r\n        \"firstCompletion\": true,\r\n        \"coins\": 150,\r\n        \"stars\": 48,\r\n        \"nextDisabledAtPackageEndpoint\": true,\r\n        \"replay\": {\r\n          \"files\": [\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-two.m4a\",\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-S02.m4a\",\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-one.m4a\"\r\n          ],\r\n          \"correct\": 1,\r\n          \"nav\": {\r\n            \".reward-actions\": {\r\n              \"text\": \"再次練習本課沒有下一課回首頁休息\",\r\n              \"top\": 403.875,\r\n              \"bottom\": 597.875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            },\r\n            \".reward-next-button\": {\r\n              \"text\": \"沒有下一課\",\r\n              \"disabled\": true,\r\n              \"top\": 471.875,\r\n              \"bottom\": 529.875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            },\r\n            \".reward-home-button\": {\r\n              \"text\": \"回首頁休息\",\r\n              \"disabled\": false,\r\n              \"top\": 539.875,\r\n              \"bottom\": 597.875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            }\r\n          }\r\n        },\r\n        \"noDoubleReward\": true\r\n      },\r\n      \"status\": \"PASS\"\r\n    },\r\n    {\r\n      \"viewport\": {\r\n        \"width\": 820,\r\n        \"height\": 1180\r\n      },\r\n      \"stage1\": {\r\n        \"standalonePlayed\": true\r\n      },\r\n      \"stage2\": {\r\n        \"cards\": [\r\n          \"連\",\r\n          \"已\",\r\n          \"連\",\r\n          \"線\",\r\n          \"電\",\r\n          \"連\"\r\n        ],\r\n        \"threeTargetsRequired\": true,\r\n        \"wrongRejected\": true\r\n      },\r\n      \"stage3\": [\r\n        {\r\n          \"sentence\": 1,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        },\r\n        {\r\n          \"sentence\": 2,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7,\r\n            8,\r\n            9,\r\n            10\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        },\r\n        {\r\n          \"sentence\": 3,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7,\r\n            8,\r\n            9\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        },\r\n        {\r\n          \"sentence\": 4,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7,\r\n            8,\r\n            9\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        },\r\n        {\r\n          \"sentence\": 5,\r\n          \"highlighted\": [\r\n            0,\r\n            1,\r\n            2,\r\n            3,\r\n            4,\r\n            5,\r\n            6,\r\n            7,\r\n            8\r\n          ],\r\n          \"noHorizontalOverflow\": true\r\n        }\r\n      ],\r\n      \"stage4\": {\r\n        \"g01\": {\r\n          \"immediateFeedback\": true,\r\n          \"waitsForNext\": true\r\n        },\r\n        \"g02\": {\r\n          \"syntheticRecordReplay\": true,\r\n          \"waitsForNext\": true\r\n        },\r\n        \"g03\": {\r\n          \"threeDistinctCards\": true,\r\n          \"oneBlank\": true,\r\n          \"bothWrongRejected\": true,\r\n          \"rescueDoesNotComplete\": true,\r\n          \"retryPreservesThree\": true,\r\n          \"onlyCorrectCompletes\": true\r\n        },\r\n        \"g04\": {\r\n          \"displayOrder\": [\r\n            \"開\",\r\n            \"接\",\r\n            \"車\",\r\n            \"送\"\r\n          ],\r\n          \"correctSequence\": [\r\n            \"開\",\r\n            \"車\",\r\n            \"接\",\r\n            \"送\"\r\n          ],\r\n          \"noCompletionLeak\": true\r\n        },\r\n        \"g05\": {\r\n          \"openingDoesNotRevealAnswer\": true,\r\n          \"files\": [\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-two.m4a\",\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-S02.m4a\",\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-one.m4a\"\r\n          ],\r\n          \"correct\": 1,\r\n          \"nav\": {\r\n            \".reward-actions\": {\r\n              \"text\": \"再次練習本課沒有下一課回首頁休息\",\r\n              \"top\": 802.46875,\r\n              \"bottom\": 928.46875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            },\r\n            \".reward-next-button\": {\r\n              \"text\": \"沒有下一課\",\r\n              \"disabled\": true,\r\n              \"top\": 870.46875,\r\n              \"bottom\": 928.46875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            },\r\n            \".reward-home-button\": {\r\n              \"text\": \"回首頁休息\",\r\n              \"disabled\": false,\r\n              \"top\": 870.46875,\r\n              \"bottom\": 928.46875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"reward\": {\r\n        \"firstCompletion\": true,\r\n        \"coins\": 150,\r\n        \"stars\": 48,\r\n        \"nextDisabledAtPackageEndpoint\": true,\r\n        \"replay\": {\r\n          \"files\": [\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-two.m4a\",\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-S02.m4a\",\r\n            \"http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-one.m4a\"\r\n          ],\r\n          \"correct\": 1,\r\n          \"nav\": {\r\n            \".reward-actions\": {\r\n              \"text\": \"再次練習本課沒有下一課回首頁休息\",\r\n              \"top\": 802.46875,\r\n              \"bottom\": 928.46875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            },\r\n            \".reward-next-button\": {\r\n              \"text\": \"沒有下一課\",\r\n              \"disabled\": true,\r\n              \"top\": 870.46875,\r\n              \"bottom\": 928.46875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            },\r\n            \".reward-home-button\": {\r\n              \"text\": \"回首頁休息\",\r\n              \"disabled\": false,\r\n              \"top\": 870.46875,\r\n              \"bottom\": 928.46875,\r\n              \"inViewport\": true,\r\n              \"aboveBar\": true\r\n            }\r\n          }\r\n        },\r\n        \"noDoubleReward\": true\r\n      },\r\n      \"status\": \"PASS\"\r\n    }\r\n  ],\r\n  \"media\": [\r\n    {\r\n      \"file\": \"char-u9023.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 2.112993\r\n    },\r\n    {\r\n      \"file\": \"L380-G02-prefix.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 2.762993\r\n    },\r\n    {\r\n      \"file\": \"L380-G02-suffix.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 2.206009\r\n    },\r\n    {\r\n      \"file\": \"L380-G05-wrong-one.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 5.282993\r\n    },\r\n    {\r\n      \"file\": \"L380-G05-wrong-two.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 4.362993\r\n    },\r\n    {\r\n      \"file\": \"L380-S01.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 3.421995\r\n    },\r\n    {\r\n      \"file\": \"L380-S02.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 5.630998\r\n    },\r\n    {\r\n      \"file\": \"L380-S03.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 4.183991\r\n    },\r\n    {\r\n      \"file\": \"L380-S04.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 4.736009\r\n    },\r\n    {\r\n      \"file\": \"L380-S05.m4a\",\r\n      \"ended\": true,\r\n      \"duration\": 3.309002\r\n    }\r\n  ],\r\n  \"images\": [\r\n    {\r\n      \"id\": \"L380-S01\",\r\n      \"src\": \"/assets/lessons/L380/images/L380-S01.webp\",\r\n      \"bytes\": 93506,\r\n      \"width\": 1024,\r\n      \"height\": 1024,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\",\r\n      \"semantics\": \"PASS\",\r\n      \"notes\": \"Unpowered battery-lamp project: connected insulated wires, empty battery holder with batteries outside, unlit bulb, hands away, tools down; no mains equipment or instructional diagram.\"\r\n    },\r\n    {\r\n      \"id\": \"L380-S02\",\r\n      \"src\": \"/assets/lessons/L380/images/L380-S02.webp\",\r\n      \"bytes\": 161004,\r\n      \"width\": 1024,\r\n      \"height\": 1024,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\",\r\n      \"semantics\": \"PASS\",\r\n      \"notes\": \"Girl/mother winter clothing; small dog in simple fitted sweater stands naturally on four paws; no distress or anthropomorphic outfit.\"\r\n    },\r\n    {\r\n      \"id\": \"L380-S03\",\r\n      \"src\": \"/assets/lessons/L380/images/L380-S03.webp\",\r\n      \"bytes\": 187120,\r\n      \"width\": 1024,\r\n      \"height\": 1024,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\",\r\n      \"semantics\": \"PASS\",\r\n      \"notes\": \"Girl/mother walk toward school from nearby separate home; safe path, clear gate, no clock/labels.\"\r\n    },\r\n    {\r\n      \"id\": \"L380-S04\",\r\n      \"src\": \"/assets/lessons/L380/images/L380-S04.webp\",\r\n      \"bytes\": 157108,\r\n      \"width\": 1024,\r\n      \"height\": 1024,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\",\r\n      \"semantics\": \"PASS\",\r\n      \"notes\": \"Father briskly delivers forgotten wordless book to girl at school; teacher has distinct tied hair/lanyard and is not the mother.\"\r\n    },\r\n    {\r\n      \"id\": \"L380-S05\",\r\n      \"src\": \"/assets/lessons/L380/images/L380-S05.webp\",\r\n      \"bytes\": 139080,\r\n      \"width\": 1024,\r\n      \"height\": 1024,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\",\r\n      \"semantics\": \"PASS\",\r\n      \"notes\": \"Exactly three nonoverlapping sheets, each with one completed smiling portrait; girl still holds brush.\"\r\n    }\r\n  ],\r\n  \"sizes\": {\r\n    \"images\": 737818,\r\n    \"audio\": 410092,\r\n    \"total\": 1147910\r\n  },\r\n  \"imageRegenerations\": {\r\n    \"S01\": 1,\r\n    \"S03\": 1\r\n  },\r\n  \"rejectedImagesCommitted\": false,\r\n  \"rejectedImageReasons\": {\r\n    \"S01\": \"Initial draft added an instruction book and installed batteries; final removes book and leaves holder empty.\",\r\n    \"S03\": \"Initial figures walked away from school; final figures walk toward school and school clock removed.\"\r\n  },\r\n  \"audio\": {\r\n    \"model\": \"gpt-4o-mini-tts\",\r\n    \"voice\": \"coral\",\r\n    \"standaloneInput\": \"連\",\r\n    \"zhuyin\": \"ㄌㄧㄢˊ\",\r\n    \"regenerations\": {\r\n      \"S01\": 3,\r\n      \"S05\": 1,\r\n      \"G02prefix\": 1\r\n    },\r\n    \"g02Prefix\": \"忘了帶書爸爸\",\r\n    \"g02Suffix\": \"忙送來\",\r\n    \"g05Correct\": \"L380-S02.m4a\",\r\n    \"g05WrongTexts\": [\r\n      \"最近很冷，連小狗都穿衣服。\",\r\n      \"最近太冷，連小狗也穿衣服。\"\r\n    ],\r\n    \"meanSpreadDb\": 2.3,\r\n    \"independentTranscription\": [\r\n      {\r\n        \"file\": \"char-u9023.m4a\",\r\n        \"text\": \"Lian.\"\r\n      },\r\n      {\r\n        \"file\": \"L380-G02-prefix.m4a\",\r\n        \"text\": \"忘了带书，爸爸\"\r\n      },\r\n      {\r\n        \"file\": \"L380-G02-suffix.m4a\",\r\n        \"text\": \"忙送來\"\r\n      },\r\n      {\r\n        \"file\": \"L380-G05-wrong-one.m4a\",\r\n        \"text\": \"最近很冷，連小狗都穿衣服。\"\r\n      },\r\n      {\r\n        \"file\": \"L380-G05-wrong-two.m4a\",\r\n        \"text\": \"最近太冷，連小狗也穿衣服。\"\r\n      },\r\n      {\r\n        \"file\": \"L380-S01.m4a\",\r\n        \"text\": \"电线已经连接好了。\"\r\n      },\r\n      {\r\n        \"file\": \"L380-S02.m4a\",\r\n        \"text\": \"最近太冷，连小狗都穿衣服。\"\r\n      },\r\n      {\r\n        \"file\": \"L380-S03.m4a\",\r\n        \"text\": \"學校很近，不用開車接送。\"\r\n      },\r\n      {\r\n        \"file\": \"L380-S04.m4a\",\r\n        \"text\": \"忘了带书，爸爸连忙送来。\"\r\n      },\r\n      {\r\n        \"file\": \"L380-S05.m4a\",\r\n        \"text\": \"我接连画了三张笑脸。\"\r\n      }\r\n    ],\r\n    \"charAssessment\": \"One voiced syllable; unprompted ASR returned Lian. Measured pitch rises from approximately 152 to 229 Hz in the latter part, consistent with the requested second tone. No human subjective listening approval is claimed.\",\r\n    \"trailingAudio\": \"Original terminal silence/breath and syllable decay retained; no sentence-end trimming, slicing or splicing.\",\r\n    \"pipeline\": \"assets:audio standard mono AAC 44100 Hz; G02 prefix additionally processed with --file L380-G02-prefix.mp3 --minimum-mean -22, yielding mean -19.4 dB; AI alignment rerun afterward.\"\r\n  },\r\n  \"alignment\": {\r\n    \"engine\": \"whisper-1 word timestamps through assets:align:ai\",\r\n    \"count\": 9,\r\n    \"s01\": \"Unprompted final full-sentence alignment has valid 8 spans; earlier degenerate timestamp versions not shipped.\",\r\n    \"s02Smoothing\": \"連 index4 span 1840-1880 extended to 1840-1920; 小 index5 begins 1920 instead of 1880. Original combined 1840-2380 interval retained. All other AI spans unchanged.\",\r\n    \"simplifiedEquivalence\": \"连 normalized to 連; not a spoken-text edit.\"\r\n  },\r\n  \"checks\": {\r\n    \"tools\": \"PASS\",\r\n    \"aiSetup\": \"PASS\",\r\n    \"startupAuditState\": \"PASS\",\r\n    \"packetGeneration\": \"PASS; final packet synchronized after asset generation\",\r\n    \"lessonLocalAudit\": \"PASS\",\r\n    \"validateProduction\": \"PASS with temporary L380 entry; later removed\",\r\n    \"assetsAudit\": \"PASS: 415 units, 2034 image references, 4027 audio references; zero warnings.\",\r\n    \"mobileAndTablet\": \"PASS; 390x844 and 820x1180\",\r\n    \"lint\": \"PASS; three pre-existing warnings in L360/L364 helpers\",\r\n    \"fullVerify\": \"SKIPPED: dependency-blocked; Release owns integration\",\r\n    \"packageIntake\": \"Run against the pushed immutable ref before final handoff\"\r\n  },\r\n  \"limitations\": [\r\n    \"The existing FindManyChallenge emitted a React development warning about updating LessonPanel during render. Stage 2 six-card and three-target completion tests passed on both viewports; no shared UI file is changed in this package.\",\r\n    \"Chrome automation is not physical-phone microphone QA; G02 recording/replay used a synthetic microphone.\",\r\n    \"The temporary curriculum ends at L380, so next-lesson control is visibly disabled as 沒有下一課; actual next-lesson transition remains Release-owned.\",\r\n    \"Teacher subjective image/audio review is post-main; no pre-main teacher PASS gate added.\"\r\n  ]\r\n}\r\n"
+    }
+  },
+  "audio": {
+    "L380-S01": {
+      "text": "電線已經連接好了",
+      "src": "/assets/lessons/L380/audio/L380-S01.m4a",
+      "before": {
+        "durationMs": 3422,
+        "speechEndMs": 2514,
+        "tailMs": 908,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2693,
+        "speechEndMs": 2514,
+        "tailMs": 179,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.2,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.690000057220459,
+          "text": "電線已經連接好了。",
+          "words": [
+            {
+              "word": "電",
+              "start": 0,
+              "end": 0.4000000059604645
+            },
+            {
+              "word": "線",
+              "start": 0.4000000059604645,
+              "end": 0.699999988079071
+            },
+            {
+              "word": "已經",
+              "start": 0.699999988079071,
+              "end": 1.440000057220459
+            },
+            {
+              "word": "連",
+              "start": 1.440000057220459,
+              "end": 1.7999999523162842
+            },
+            {
+              "word": "接",
+              "start": 1.7999999523162842,
+              "end": 2.0399999618530273
+            },
+            {
+              "word": "好了。",
+              "start": 2.0399999618530273,
+              "end": 2.4200000762939453
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L380/audio/L380-S01.m4a",
+        "durationMs": 2693,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 1070
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1070,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1440,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1800,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2040,
+            "endMs": 2230
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2230,
+            "endMs": 2420
+          }
+        ]
+      },
+      "sha256": "aab0089bfa7e8c071e02b51a2358492ab9b649f9b7a0b0b0e8df157e221c9a26",
+      "textMatch": true
+    },
+    "L380-S02": {
+      "text": "最近太冷連小狗都穿衣服",
+      "src": "/assets/lessons/L380/audio/L380-S02.m4a",
+      "before": {
+        "durationMs": 5631,
+        "speechEndMs": 3528,
+        "tailMs": 2103,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -20.4,
+        "maxDb": -2.2
+      },
+      "after": {
+        "durationMs": 3692,
+        "speechEndMs": 3528,
+        "tailMs": 164,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.6,
+        "maxDb": -2.2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.690000057220459,
+          "text": "最近太冷,連小狗都穿衣服。",
+          "words": [
+            {
+              "word": "最近",
+              "start": 0,
+              "end": 0.5400000214576721
+            },
+            {
+              "word": "太",
+              "start": 0.5400000214576721,
+              "end": 1.1200000047683716
+            },
+            {
+              "word": "冷",
+              "start": 1.1200000047683716,
+              "end": 1.4199999570846558
+            },
+            {
+              "word": "連",
+              "start": 1.840000033378601,
+              "end": 1.8799999952316284
+            },
+            {
+              "word": "小",
+              "start": 1.8799999952316284,
+              "end": 2.359999895095825
+            },
+            {
+              "word": "狗",
+              "start": 2.359999895095825,
+              "end": 2.5199999809265137
+            },
+            {
+              "word": "都",
+              "start": 2.5199999809265137,
+              "end": 2.7799999713897705
+            },
+            {
+              "word": "穿",
+              "start": 2.7799999713897705,
+              "end": 3.0799999237060547
+            },
+            {
+              "word": "衣",
+              "start": 3.0799999237060547,
+              "end": 3.319999933242798
+            },
+            {
+              "word": "服。",
+              "start": 3.319999933242798,
+              "end": 3.5199999809265137
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L380/audio/L380-S02.m4a",
+        "durationMs": 3692,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 270
+          },
+          {
+            "charIndex": 1,
+            "startMs": 270,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1120,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1652,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1880,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2360,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2520,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2780,
+            "endMs": 3080
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3080,
+            "endMs": 3320
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3320,
+            "endMs": 3520
+          }
+        ]
+      },
+      "sha256": "5416040352c7f563b2865055aa86835c4dddd82317b70f5526d712bf148c9a92",
+      "textMatch": true
+    },
+    "L380-S03": {
+      "text": "學校很近不用開車接送",
+      "src": "/assets/lessons/L380/audio/L380-S03.m4a",
+      "before": {
+        "durationMs": 4184,
+        "speechEndMs": 2855,
+        "tailMs": 1329,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.7,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3018,
+        "speechEndMs": 2855,
+        "tailMs": 163,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.009999990463257,
+          "text": "學校很近,不用開車接送。",
+          "words": [
+            {
+              "word": "學",
+              "start": 0,
+              "end": 0.18000000715255737
+            },
+            {
+              "word": "校",
+              "start": 0.18000000715255737,
+              "end": 0.7200000286102295
+            },
+            {
+              "word": "很",
+              "start": 0.7200000286102295,
+              "end": 1.1200000047683716
+            },
+            {
+              "word": "近",
+              "start": 1.1200000047683716,
+              "end": 1.399999976158142
+            },
+            {
+              "word": "不用",
+              "start": 1.5800000429153442,
+              "end": 1.7999999523162842
+            },
+            {
+              "word": "開",
+              "start": 1.7999999523162842,
+              "end": 2.119999885559082
+            },
+            {
+              "word": "車",
+              "start": 2.119999885559082,
+              "end": 2.4000000953674316
+            },
+            {
+              "word": "接",
+              "start": 2.4000000953674316,
+              "end": 2.680000066757202
+            },
+            {
+              "word": "送。",
+              "start": 2.680000066757202,
+              "end": 2.819999933242798
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L380/audio/L380-S03.m4a",
+        "durationMs": 3018,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 180
+          },
+          {
+            "charIndex": 1,
+            "startMs": 180,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1120,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1580,
+            "endMs": 1690
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1690,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1800,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2120,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2400,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2680,
+            "endMs": 2820
+          }
+        ]
+      },
+      "sha256": "dcff80805ea432363fde06138287a7ad921c03bcd984aaa9e0127bc3dbfceaf2",
+      "textMatch": true
+    },
+    "L380-S04": {
+      "text": "忘了帶書爸爸連忙送來",
+      "src": "/assets/lessons/L380/audio/L380-S04.m4a",
+      "before": {
+        "durationMs": 4736,
+        "speechEndMs": 3271,
+        "tailMs": 1465,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -20,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3436,
+        "speechEndMs": 3271,
+        "tailMs": 165,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.6,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.430000066757202,
+          "text": "忘了带书,爸爸连忙送来",
+          "words": [
+            {
+              "word": "忘",
+              "start": 0,
+              "end": 0.3799999952316284
+            },
+            {
+              "word": "了",
+              "start": 0.3799999952316284,
+              "end": 0.699999988079071
+            },
+            {
+              "word": "带",
+              "start": 0.699999988079071,
+              "end": 1.0199999809265137
+            },
+            {
+              "word": "书",
+              "start": 1.0199999809265137,
+              "end": 1.5
+            },
+            {
+              "word": "爸爸",
+              "start": 1.5199999809265137,
+              "end": 1.9800000190734863
+            },
+            {
+              "word": "连",
+              "start": 1.9800000190734863,
+              "end": 2.359999895095825
+            },
+            {
+              "word": "忙",
+              "start": 2.359999895095825,
+              "end": 2.6600000858306885
+            },
+            {
+              "word": "送",
+              "start": 2.6600000858306885,
+              "end": 2.9000000953674316
+            },
+            {
+              "word": "来",
+              "start": 2.9000000953674316,
+              "end": 3.2799999713897705
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L380/audio/L380-S04.m4a",
+        "durationMs": 3436,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 1020
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1020,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1520,
+            "endMs": 1750
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1750,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1980,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2360,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2660,
+            "endMs": 2900
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2900,
+            "endMs": 3280
+          }
+        ]
+      },
+      "sha256": "d497744d337b0b4693b6acfe06c88ea11901253ed0f65b58d7ff7236c28bfb8b",
+      "textMatch": true
+    },
+    "L380-S05": {
+      "text": "我接連畫了三張笑臉",
+      "src": "/assets/lessons/L380/audio/L380-S05.m4a",
+      "before": {
+        "durationMs": 3309,
+        "speechEndMs": 2861,
+        "tailMs": 448,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.1,
+        "maxDb": -2.1
+      },
+      "after": {
+        "durationMs": 3042,
+        "speechEndMs": 2861,
+        "tailMs": 181,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.7,
+        "maxDb": -2.1
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.0399999618530273,
+          "text": "我接连画了三张笑脸",
+          "words": [
+            {
+              "word": "我",
+              "start": 0,
+              "end": 0.6000000238418579
+            },
+            {
+              "word": "接",
+              "start": 0.6000000238418579,
+              "end": 1
+            },
+            {
+              "word": "连",
+              "start": 1,
+              "end": 1.1799999475479126
+            },
+            {
+              "word": "画",
+              "start": 1.1799999475479126,
+              "end": 1.4600000381469727
+            },
+            {
+              "word": "了",
+              "start": 1.4600000381469727,
+              "end": 1.7400000095367432
+            },
+            {
+              "word": "三",
+              "start": 1.7400000095367432,
+              "end": 2.0399999618530273
+            },
+            {
+              "word": "张",
+              "start": 2.0399999618530273,
+              "end": 2.299999952316284
+            },
+            {
+              "word": "笑",
+              "start": 2.299999952316284,
+              "end": 2.700000047683716
+            },
+            {
+              "word": "脸",
+              "start": 2.700000047683716,
+              "end": 2.7799999713897705
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L380/audio/L380-S05.m4a",
+        "durationMs": 3042,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 600
+          },
+          {
+            "charIndex": 1,
+            "startMs": 600,
+            "endMs": 1000
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1000,
+            "endMs": 1180
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1180,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1460,
+            "endMs": 1740
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1740,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2040,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2300,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2700,
+            "endMs": 2780
+          }
+        ]
+      },
+      "sha256": "1a9470afafdf597efdc853f45ad4cd946aa7a9198103757727e8de37b5b5fdd0",
+      "textMatch": true
+    },
+    "L380-G02-prefix": {
+      "text": "忘了帶書爸爸",
+      "src": "/assets/lessons/L380/audio/L380-G02-prefix.m4a",
+      "before": {
+        "durationMs": 2763,
+        "speechEndMs": 2217,
+        "tailMs": 546,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.4,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2391,
+        "speechEndMs": 2217,
+        "tailMs": 174,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.8,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.390000104904175,
+          "text": "忘了带书,爸爸!",
+          "words": [
+            {
+              "word": "忘",
+              "start": 0,
+              "end": 0.3799999952316284
+            },
+            {
+              "word": "了",
+              "start": 0.3799999952316284,
+              "end": 0.6800000071525574
+            },
+            {
+              "word": "带",
+              "start": 0.6800000071525574,
+              "end": 1.0800000429153442
+            },
+            {
+              "word": "书",
+              "start": 1.0800000429153442,
+              "end": 1.4199999570846558
+            },
+            {
+              "word": "爸爸",
+              "start": 1.7000000476837158,
+              "end": 2.0799999237060547
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L380/audio/L380-G02-prefix.m4a",
+        "durationMs": 2391,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1080,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1700,
+            "endMs": 1890
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1890,
+            "endMs": 2217
+          }
+        ]
+      },
+      "sha256": "902ca7ea94e8a28b80c1004431e0eb85c158532a6ea2efd23bdf6c16decb525c",
+      "textMatch": true
+    },
+    "L380-G02-suffix": {
+      "text": "忙送來",
+      "src": "/assets/lessons/L380/audio/L380-G02-suffix.m4a",
+      "before": {
+        "durationMs": 2206,
+        "speechEndMs": 1329,
+        "tailMs": 877,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19,
+        "maxDb": -3.5
+      },
+      "after": {
+        "durationMs": 1509,
+        "speechEndMs": 1329,
+        "tailMs": 180,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.4,
+        "maxDb": -3.5
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": "忙送來",
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 1.5,
+          "text": "忙送來",
+          "words": [
+            {
+              "word": "忙",
+              "start": 0,
+              "end": 0.46000000834465027
+            },
+            {
+              "word": "送",
+              "start": 0.46000000834465027,
+              "end": 0.9200000166893005
+            },
+            {
+              "word": "來",
+              "start": 0.9200000166893005,
+              "end": 1.2400000095367432
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 2
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L380/audio/L380-G02-suffix.m4a",
+        "durationMs": 1509,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 920
+          },
+          {
+            "charIndex": 2,
+            "startMs": 920,
+            "endMs": 1240
+          }
+        ]
+      },
+      "sha256": "c3af0de126c4457f9e6b4ca27d505259e01ac5a2c760537a582c4de97ec8d110",
+      "textMatch": true
+    },
+    "L380-G05-wrong-one": {
+      "text": "最近很冷，連小狗都穿衣服。",
+      "src": "/assets/lessons/L380/audio/L380-G05-wrong-one.m4a",
+      "before": {
+        "durationMs": 5283,
+        "speechEndMs": 4357,
+        "tailMs": 926,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.1,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 4528,
+        "speechEndMs": 4357,
+        "tailMs": 171,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.4,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 4.519999980926514,
+          "text": "最近很冷,連小狗都穿衣服。",
+          "words": [
+            {
+              "word": "最近",
+              "start": 0,
+              "end": 0.3799999952316284
+            },
+            {
+              "word": "很",
+              "start": 0.3799999952316284,
+              "end": 1
+            },
+            {
+              "word": "冷",
+              "start": 1,
+              "end": 1.2799999713897705
+            },
+            {
+              "word": "連",
+              "start": 2.140000104904175,
+              "end": 2.2200000286102295
+            },
+            {
+              "word": "小",
+              "start": 2.2200000286102295,
+              "end": 2.700000047683716
+            },
+            {
+              "word": "狗",
+              "start": 2.700000047683716,
+              "end": 2.9600000381469727
+            },
+            {
+              "word": "都",
+              "start": 2.9600000381469727,
+              "end": 3.4800000190734863
+            },
+            {
+              "word": "穿",
+              "start": 3.4800000190734863,
+              "end": 3.8399999141693115
+            },
+            {
+              "word": "衣",
+              "start": 3.8399999141693115,
+              "end": 4.139999866485596
+            },
+            {
+              "word": "服。",
+              "start": 4.139999866485596,
+              "end": 4.320000171661377
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 5
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L380/audio/L380-G05-wrong-one.m4a",
+        "durationMs": 4528,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 190
+          },
+          {
+            "charIndex": 1,
+            "startMs": 190,
+            "endMs": 380
+          },
+          {
+            "charIndex": 2,
+            "startMs": 380,
+            "endMs": 1000
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1000,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2140,
+            "endMs": 2220
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2220,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2700,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2960,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3480,
+            "endMs": 3840
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3840,
+            "endMs": 4140
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4140,
+            "endMs": 4320
+          }
+        ]
+      },
+      "sha256": "86638782f3fc99410d704598e812e69cbe2ade3797ddbfb5bf361dda3a141d25",
+      "textMatch": true
+    },
+    "L380-G05-wrong-two": {
+      "text": "最近太冷，連小狗也穿衣服。",
+      "src": "/assets/lessons/L380/audio/L380-G05-wrong-two.m4a",
+      "before": {
+        "durationMs": 4363,
+        "speechEndMs": 3512,
+        "tailMs": 851,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.2,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3692,
+        "speechEndMs": 3512,
+        "tailMs": 180,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.4,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.690000057220459,
+          "text": "最近太冷,連小狗也穿衣服",
+          "words": [
+            {
+              "word": "最近",
+              "start": 0,
+              "end": 0.3799999952316284
+            },
+            {
+              "word": "太",
+              "start": 0.3799999952316284,
+              "end": 0.9200000166893005
+            },
+            {
+              "word": "冷",
+              "start": 0.9200000166893005,
+              "end": 1.159999966621399
+            },
+            {
+              "word": "連",
+              "start": 1.6399999856948853,
+              "end": 1.7000000476837158
+            },
+            {
+              "word": "小",
+              "start": 1.7000000476837158,
+              "end": 2.119999885559082
+            },
+            {
+              "word": "狗",
+              "start": 2.119999885559082,
+              "end": 2.319999933242798
+            },
+            {
+              "word": "也",
+              "start": 2.319999933242798,
+              "end": 2.7799999713897705
+            },
+            {
+              "word": "穿",
+              "start": 2.7799999713897705,
+              "end": 3.059999942779541
+            },
+            {
+              "word": "衣",
+              "start": 3.059999942779541,
+              "end": 3.2799999713897705
+            },
+            {
+              "word": "服",
+              "start": 3.2799999713897705,
+              "end": 3.4800000190734863
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L380/audio/L380-G05-wrong-two.m4a",
+        "durationMs": 3692,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 190
+          },
+          {
+            "charIndex": 1,
+            "startMs": 190,
+            "endMs": 380
+          },
+          {
+            "charIndex": 2,
+            "startMs": 380,
+            "endMs": 920
+          },
+          {
+            "charIndex": 3,
+            "startMs": 920,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1427,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1700,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2120,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2320,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2780,
+            "endMs": 3060
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3060,
+            "endMs": 3280
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3280,
+            "endMs": 3480
+          }
+        ]
+      },
+      "sha256": "c045229b3f3a4f1ea35256db985d3fe1812067109d76379c9b77fea7879ea05b",
+      "textMatch": true
+    }
+  },
+  "images": [
+    {
+      "id": "L380-S01",
+      "sha256": "957cc363f0e326ad2c7897b30ead8d4d438929ae273ac7f21ab93162e97785ae",
+      "src": "/assets/lessons/L380/images/L380-S01.webp"
+    },
+    {
+      "id": "L380-S02",
+      "sha256": "7019670567a660e144b53a5b604c24b0e6274d629b51b4b865574d27d2340a7b",
+      "src": "/assets/lessons/L380/images/L380-S02.webp"
+    },
+    {
+      "id": "L380-S03",
+      "sha256": "c4ec8f322550baeebd2db1db34d1f91d3fd5dcc7483387a5d197b28f265c45b4",
+      "src": "/assets/lessons/L380/images/L380-S03.webp"
+    },
+    {
+      "id": "L380-S04",
+      "sha256": "0b196605cbcda7cb4698faadf6e2cbd4e4ac569f08a80f2bcae0ae37e5e5ff7c",
+      "src": "/assets/lessons/L380/images/L380-S04.webp"
+    },
+    {
+      "id": "L380-S05",
+      "sha256": "ec88f41edaf44792ba6485db34fa86a32237565f8af41bc96be8257e72aef418",
+      "src": "/assets/lessons/L380/images/L380-S05.webp"
+    }
+  ]
+}

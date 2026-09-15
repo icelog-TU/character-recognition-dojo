@@ -1,0 +1,1191 @@
+{
+  "unit": "L378",
+  "sourcePackageSha": "2a10a3cffa0d1deec19c85a5d543b3be617317ea",
+  "baseMainSha": "7fcef325b37f13fc68fe950bffd7fea8e9db6108",
+  "branch": "codex/l376-l380-package-rescue",
+  "evidence": "curriculum-workflow/generated/L378-rescue-qa.json",
+  "method": "Repository assets:align:ai entry point against owned draft in memory; Traditional/Simplified equivalents only. G02 exact-text prompt; independent target-blind transcription for regenerated short clips. Single-character alignment may use 500 ms analysis-only padding with offsets subtracted.",
+  "audioMethod": "Standard OpenAI generation and repository processing for regenerated files. Silence-only stream-copy trimming retains speech and 160 ms decay buffer. Other audio reused with original AAC packet hashes.",
+  "corrections": [],
+  "regeneratedAudio": [
+    "L378-G02-suffix"
+  ],
+  "technicalStatus": "PASS: 9 complete transcript alignments, all Han spans 80-900 ms, no overlap; measured and metadata tails <=300 ms.",
+  "browserQA": {
+    "status": "PASS within documented browser test scope",
+    "manualPlayback": "Chrome native audio: all 55 controls (50 unique files) played to ended without decode errors.",
+    "environment": "Local Vite in-memory package fixture; synthetic prerequisite progress; no main curriculum or real learner/cloud state changed.",
+    "phone": "L379 at measured 390x844: both six-character G01 display lines fit within x=49..326, no clipped Han or zhuyin. Desktop 1920px rows also fit. Additional viewport override attempts did not apply; no 320px/820px claim.",
+    "games": "L379 G01 correct target; G02 hold/record/replay reaches next question; G03 wrong answer does not advance, correct answer does; G04 ordered single-Han completion; G05 reveal does not grant reward, restart and correct selection completes; reward +30 coins/+12 stars and next L380 observed.",
+    "recordingScope": "G02 uses synthetic pointer hold and oscillator MediaStream with real MediaRecorder/replay flow; real-device microphone and subjective pronunciation remain post-main teacher checks.",
+    "stage2": "L379 1/3 and 2/3 have no completion button; 3/3 displays completion. Parent callback moved out of state updater; no update-during-render warning in this regression.",
+    "images": "All 25 original approved images retained byte-for-byte; source production style/cast review retained, no new teacher approval claimed."
+  },
+  "release": "Release owns R045/R046 prerequisite checks and ordered L376-L380 main integration. Shared curriculum/planner/ledger are unchanged.",
+  "reviewIndex": "https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main",
+  "postMergeReview": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L378&ref=main",
+  "statusCommand": "npm run asset:review-status -- --unit L378 --ref main",
+  "regenerationSources": {
+    "L378-G02-suffix": {
+      "path": "curriculum-workflow/audio-inbox/L378/L378-G02-suffix.mp3",
+      "sha256": "96d4e1e9cd41857010c1e572dc189b7012c04786ea09aa5ec8db6b2e7de70f45",
+      "exactInput": "住",
+      "model": "gpt-4o-mini-tts",
+      "voice": "alloy",
+      "speed": 0.9
+    }
+  },
+  "independentTranscriptions": {
+    "L378-G02-suffix": {
+      "model": "gpt-4o-transcribe",
+      "prompt": "這是台灣國語認字教材的短片段。請如實轉寫聽到的字，不補成完整句子。",
+      "transcript": {
+        "text": "住",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 39,
+          "input_tokens": 36,
+          "input_token_details": {
+            "text_tokens": 30,
+            "audio_tokens": 6
+          },
+          "output_tokens": 3
+        }
+      }
+    }
+  },
+  "sourceHistory": {
+    "superseded": true,
+    "originalQa": {
+      "blocker": "G02 suffix 住 could not pass transcription after repeated independent generation. Not accepted; suffix audio and timing remain pending.",
+      "manualQA": "Not run: required audio gate has not passed.",
+      "imageChecks": [
+        {
+          "id": "L378-S01",
+          "styleLock": "PASS",
+          "cast": "PASS"
+        },
+        {
+          "id": "L378-S02",
+          "styleLock": "PASS",
+          "cast": "PASS"
+        },
+        {
+          "id": "L378-S03",
+          "styleLock": "PASS",
+          "cast": "PASS"
+        },
+        {
+          "id": "L378-S04",
+          "styleLock": "PASS",
+          "cast": "PASS"
+        },
+        {
+          "id": "L378-S05",
+          "styleLock": "PASS",
+          "cast": "PASS"
+        }
+      ]
+    },
+    "requestTeacherNotes": "Single-character lesson. Text dependencies L373-L377; no new chars from L370-L372 used. Playable blockers include L370-L377 and R045/R046 after L375 before L376. Stage 2 six cards: three 接 and three learned distractors, three target taps. G03 exactly 接/借/拿, one blank and one correct answer; UI retry/incorrect selections must retain all options. No word cards. Teacher subjective asset review post-main.",
+    "supersededGeneratedRecords": {
+      "L378-technical-qa.json": "{\r\n  \"unit\": \"L378\",\r\n  \"packageStatus\": \"partial-package\",\r\n  \"sourceBoundary\": \"9cd3405fcc7edbfd8a6438d5dbd293cadc6ce4cb\",\r\n  \"blocker\": \"G02 suffix 住 rejected: transcription mismatch; final suffix asset and timing absent.\",\r\n  \"allowedCount\": 378,\r\n  \"coverage\": {\r\n    \"接\": 4,\r\n    \"近\": 2,\r\n    \"已\": 2,\r\n    \"經\": 3,\r\n    \"往\": 1,\r\n    \"通\": 1\r\n  },\r\n  \"sourceConsistency\": \"PASS\",\r\n  \"displayLines\": \"PASS\",\r\n  \"gameIndexes\": \"PASS\",\r\n  \"G03\": {\r\n    \"cards\": [\r\n      \"接\",\r\n      \"借\",\r\n      \"拿\"\r\n    ],\r\n    \"correctCount\": 1,\r\n    \"blankCount\": 1,\r\n    \"data\": \"PASS\",\r\n    \"actualUI\": \"Not run\"\r\n  },\r\n  \"audio\": [\r\n    {\r\n      \"id\": \"L378-S01\",\r\n      \"bytes\": 36405,\r\n      \"durationMs\": 2863,\r\n      \"meanDb\": -17.5,\r\n      \"maxDb\": -2,\r\n      \"tailMs\": 143\r\n    },\r\n    {\r\n      \"id\": \"L378-S02\",\r\n      \"bytes\": 38498,\r\n      \"durationMs\": 2716,\r\n      \"meanDb\": -18.2,\r\n      \"maxDb\": -2,\r\n      \"tailMs\": 156\r\n    },\r\n    {\r\n      \"id\": \"L378-S03\",\r\n      \"bytes\": 39762,\r\n      \"durationMs\": 3139,\r\n      \"meanDb\": -18.2,\r\n      \"maxDb\": -2,\r\n      \"tailMs\": 119\r\n    },\r\n    {\r\n      \"id\": \"L378-S04\",\r\n      \"bytes\": 40668,\r\n      \"durationMs\": 3245,\r\n      \"meanDb\": -18,\r\n      \"maxDb\": -2,\r\n      \"tailMs\": 85\r\n    },\r\n    {\r\n      \"id\": \"L378-S05\",\r\n      \"bytes\": 40988,\r\n      \"durationMs\": 3265,\r\n      \"meanDb\": -18.7,\r\n      \"maxDb\": -2,\r\n      \"tailMs\": 145\r\n    },\r\n    {\r\n      \"id\": \"G02-prefix\",\r\n      \"bytes\": 26428,\r\n      \"durationMs\": 2057,\r\n      \"meanDb\": -16.4,\r\n      \"maxDb\": -2,\r\n      \"tailMs\": 137\r\n    },\r\n    {\r\n      \"id\": \"wrong-one\",\r\n      \"bytes\": 42805,\r\n      \"durationMs\": 3415,\r\n      \"meanDb\": -19.2,\r\n      \"maxDb\": -2.3,\r\n      \"tailMs\": 155\r\n    },\r\n    {\r\n      \"id\": \"wrong-two\",\r\n      \"bytes\": 35053,\r\n      \"durationMs\": 2787,\r\n      \"meanDb\": -17.9,\r\n      \"maxDb\": -2,\r\n      \"tailMs\": 147\r\n    },\r\n    {\r\n      \"id\": \"char-u63a5\",\r\n      \"bytes\": 20203,\r\n      \"durationMs\": 1555\r\n    }\r\n  ],\r\n  \"images\": [\r\n    {\r\n      \"id\": \"L378-S01\",\r\n      \"bytes\": 224012,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\"\r\n    },\r\n    {\r\n      \"id\": \"L378-S02\",\r\n      \"bytes\": 103990,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\"\r\n    },\r\n    {\r\n      \"id\": \"L378-S03\",\r\n      \"bytes\": 234444,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\"\r\n    },\r\n    {\r\n      \"id\": \"L378-S04\",\r\n      \"bytes\": 126658,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\"\r\n    },\r\n    {\r\n      \"id\": \"L378-S05\",\r\n      \"bytes\": 108408,\r\n      \"styleLock\": \"PASS\",\r\n      \"cast\": \"PASS\"\r\n    }\r\n  ],\r\n  \"stage2SourceSimulation\": \"PASS: actual makeFindChallenge tested 100 runs, six cards / three targets. Source completion compares found unique target IDs to targetTotal=3. Not actual UI verification.\",\r\n  \"G04SourceSimulation\": {\r\n    \"displayOrder\": [\r\n      \"常\",\r\n      \"近\",\r\n      \"最\",\r\n      \"經\"\r\n    ],\r\n    \"notAnswerOrder\": true,\r\n    \"actualUI\": \"Not run\"\r\n  },\r\n  \"uiPending\": [\r\n    \"Phone-width zhuyin/layout\",\r\n    \"sentence playback/highlight\",\r\n    \"Stage2 actual card taps/completion\",\r\n    \"G02 recording/replay\",\r\n    \"G03 wrong choices/retry/re-entry\",\r\n    \"G04 actual shuffle\",\r\n    \"G05 playback/checkmarks\",\r\n    \"no automatic advancement\",\r\n    \"final reward navigation\"\r\n  ],\r\n  \"totalBytes\": 1118322,\r\n  \"validation\": \"validate:production and assets:audit --strict fail only on absent rejected G02 suffix asset. Full package alignment not complete; eight accepted records aligned.\"\r\n}\r\n"
+    }
+  },
+  "audio": {
+    "L378-S01": {
+      "text": "我們已經很接近海邊了",
+      "src": "/assets/lessons/L378/audio/L378-S01.m4a",
+      "before": {
+        "durationMs": 2863,
+        "speechEndMs": 2771,
+        "tailMs": 92,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.5,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2863,
+        "speechEndMs": 2771,
+        "tailMs": 92,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.5,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.869999885559082,
+          "text": "我們已經很接近海邊了",
+          "words": [
+            {
+              "word": "我們",
+              "start": 0,
+              "end": 0.46000000834465027
+            },
+            {
+              "word": "已經",
+              "start": 0.46000000834465027,
+              "end": 1.0399999618530273
+            },
+            {
+              "word": "很",
+              "start": 1.0399999618530273,
+              "end": 1.5199999809265137
+            },
+            {
+              "word": "接",
+              "start": 1.5199999809265137,
+              "end": 1.7599999904632568
+            },
+            {
+              "word": "近",
+              "start": 1.7599999904632568,
+              "end": 2
+            },
+            {
+              "word": "海",
+              "start": 2,
+              "end": 2.299999952316284
+            },
+            {
+              "word": "邊",
+              "start": 2.299999952316284,
+              "end": 2.5
+            },
+            {
+              "word": "了",
+              "start": 2.5,
+              "end": 2.7200000286102295
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L378/audio/L378-S01.m4a",
+        "durationMs": 2863,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 230
+          },
+          {
+            "charIndex": 1,
+            "startMs": 230,
+            "endMs": 460
+          },
+          {
+            "charIndex": 2,
+            "startMs": 460,
+            "endMs": 750
+          },
+          {
+            "charIndex": 3,
+            "startMs": 750,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1040,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1520,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1760,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2000,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2300,
+            "endMs": 2500
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2500,
+            "endMs": 2720
+          }
+        ]
+      },
+      "sha256": "33da08077adb5540e2b0d96856309e6ebbe8280a616818b77e74c8952f3f74c4",
+      "textMatch": true
+    },
+    "L378-S02": {
+      "text": "最近經常流鼻水",
+      "src": "/assets/lessons/L378/audio/L378-S02.m4a",
+      "before": {
+        "durationMs": 2716,
+        "speechEndMs": 2716,
+        "tailMs": 0,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.2,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2716,
+        "speechEndMs": 2716,
+        "tailMs": 0,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.2,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.7100000381469727,
+          "text": "最近,经常流鼻水。",
+          "words": [
+            {
+              "word": "最近",
+              "start": 0,
+              "end": 0.6399999856948853
+            },
+            {
+              "word": "经",
+              "start": 1.1200000047683716,
+              "end": 1.340000033378601
+            },
+            {
+              "word": "常",
+              "start": 1.340000033378601,
+              "end": 1.7000000476837158
+            },
+            {
+              "word": "流",
+              "start": 1.7000000476837158,
+              "end": 2.0399999618530273
+            },
+            {
+              "word": "鼻",
+              "start": 2.0399999618530273,
+              "end": 2.380000114440918
+            },
+            {
+              "word": "水。",
+              "start": 2.380000114440918,
+              "end": 2.559999942779541
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L378/audio/L378-S02.m4a",
+        "durationMs": 2716,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1120,
+            "endMs": 1340
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1340,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1700,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2040,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2380,
+            "endMs": 2560
+          }
+        ]
+      },
+      "sha256": "aa7c84367f7bd1f1eef959f65b78986d1b72abd546121a823132f465f6b9038c",
+      "textMatch": true
+    },
+    "L378-S03": {
+      "text": "球往這邊飛快接住",
+      "src": "/assets/lessons/L378/audio/L378-S03.m4a",
+      "before": {
+        "durationMs": 3139,
+        "speechEndMs": 3048,
+        "tailMs": 91,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.2,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3139,
+        "speechEndMs": 3048,
+        "tailMs": 91,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.2,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.1500000953674316,
+          "text": "球往这边飞,快接住!",
+          "words": [
+            {
+              "word": "球",
+              "start": 0,
+              "end": 0.46000000834465027
+            },
+            {
+              "word": "往",
+              "start": 0.46000000834465027,
+              "end": 0.8199999928474426
+            },
+            {
+              "word": "这",
+              "start": 0.8199999928474426,
+              "end": 1.1399999856948853
+            },
+            {
+              "word": "边",
+              "start": 1.1399999856948853,
+              "end": 1.4600000381469727
+            },
+            {
+              "word": "飞",
+              "start": 1.4600000381469727,
+              "end": 1.8600000143051147
+            },
+            {
+              "word": "快",
+              "start": 2.140000104904175,
+              "end": 2.440000057220459
+            },
+            {
+              "word": "接",
+              "start": 2.440000057220459,
+              "end": 2.799999952316284
+            },
+            {
+              "word": "住",
+              "start": 2.799999952316284,
+              "end": 3.0199999809265137
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L378/audio/L378-S03.m4a",
+        "durationMs": 3139,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 820
+          },
+          {
+            "charIndex": 2,
+            "startMs": 820,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1460,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2140,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2440,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2800,
+            "endMs": 3020
+          }
+        ]
+      },
+      "sha256": "dd04f3d8bd190fd6bc321194b697608a99922c257031ef2b9d5857c5fbc419c5",
+      "textMatch": true
+    },
+    "L378-S04": {
+      "text": "電話已經接通快說話吧",
+      "src": "/assets/lessons/L378/audio/L378-S04.m4a",
+      "before": {
+        "durationMs": 3245,
+        "speechEndMs": 3147,
+        "tailMs": 98,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3245,
+        "speechEndMs": 3147,
+        "tailMs": 98,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.25,
+          "text": "電話已經接通,快說話吧!",
+          "words": [
+            {
+              "word": "電",
+              "start": 0,
+              "end": 0.2800000011920929
+            },
+            {
+              "word": "話",
+              "start": 0.2800000011920929,
+              "end": 0.6000000238418579
+            },
+            {
+              "word": "已經",
+              "start": 0.6000000238418579,
+              "end": 1.059999942779541
+            },
+            {
+              "word": "接",
+              "start": 1.059999942779541,
+              "end": 1.3600000143051147
+            },
+            {
+              "word": "通",
+              "start": 1.3600000143051147,
+              "end": 1.5399999618530273
+            },
+            {
+              "word": "快",
+              "start": 2.359999895095825,
+              "end": 2.4800000190734863
+            },
+            {
+              "word": "說",
+              "start": 2.4800000190734863,
+              "end": 2.759999990463257
+            },
+            {
+              "word": "話",
+              "start": 2.759999990463257,
+              "end": 2.940000057220459
+            },
+            {
+              "word": "吧",
+              "start": 2.940000057220459,
+              "end": 3.1600000858306885
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L378/audio/L378-S04.m4a",
+        "durationMs": 3245,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 600
+          },
+          {
+            "charIndex": 2,
+            "startMs": 600,
+            "endMs": 830
+          },
+          {
+            "charIndex": 3,
+            "startMs": 830,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1060,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1360,
+            "endMs": 1540
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2360,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2480,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2760,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2940,
+            "endMs": 3160
+          }
+        ]
+      },
+      "sha256": "4b48e7f7fd1e3ad643bbb711dabc4f6f63d909978e77c47b4e3b999a5af12fe1",
+      "textMatch": true
+    },
+    "L378-S05": {
+      "text": "先畫頭接著畫身體",
+      "src": "/assets/lessons/L378/audio/L378-S05.m4a",
+      "before": {
+        "durationMs": 3265,
+        "speechEndMs": 3159,
+        "tailMs": 106,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.7,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3265,
+        "speechEndMs": 3159,
+        "tailMs": 106,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.7,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.2699999809265137,
+          "text": "先畫頭,接著畫身體。",
+          "words": [
+            {
+              "word": "先",
+              "start": 0,
+              "end": 0.5199999809265137
+            },
+            {
+              "word": "畫",
+              "start": 0.5199999809265137,
+              "end": 0.699999988079071
+            },
+            {
+              "word": "頭",
+              "start": 0.699999988079071,
+              "end": 1.2000000476837158
+            },
+            {
+              "word": "接",
+              "start": 1.7999999523162842,
+              "end": 2.0799999237060547
+            },
+            {
+              "word": "著",
+              "start": 2.0799999237060547,
+              "end": 2.259999990463257
+            },
+            {
+              "word": "畫",
+              "start": 2.259999990463257,
+              "end": 2.5399999618530273
+            },
+            {
+              "word": "身",
+              "start": 2.5399999618530273,
+              "end": 2.940000057220459
+            },
+            {
+              "word": "體。",
+              "start": 2.940000057220459,
+              "end": 3.119999885559082
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L378/audio/L378-S05.m4a",
+        "durationMs": 3265,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 520
+          },
+          {
+            "charIndex": 1,
+            "startMs": 520,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1800,
+            "endMs": 2080
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2080,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2260,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2540,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2940,
+            "endMs": 3120
+          }
+        ]
+      },
+      "sha256": "dc30c5431348aea7a4f3784aa5cee766c3626629f7c897be44399cc2b04b52a1",
+      "textMatch": true
+    },
+    "L378-G02-prefix": {
+      "text": "球往這邊飛快",
+      "src": "/assets/lessons/L378/audio/L378-G02-prefix.m4a",
+      "before": {
+        "durationMs": 2057,
+        "speechEndMs": 1948,
+        "tailMs": 109,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -16.4,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2057,
+        "speechEndMs": 1948,
+        "tailMs": 109,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -16.4,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": "球往這邊飛快",
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.059999942779541,
+          "text": "球往這邊飛快",
+          "words": [
+            {
+              "word": "球",
+              "start": 0,
+              "end": 0.47999998927116394
+            },
+            {
+              "word": "往",
+              "start": 0.47999998927116394,
+              "end": 0.7799999713897705
+            },
+            {
+              "word": "這邊",
+              "start": 0.7799999713897705,
+              "end": 1.2999999523162842
+            },
+            {
+              "word": "飛",
+              "start": 1.2999999523162842,
+              "end": 1.6200000047683716
+            },
+            {
+              "word": "快",
+              "start": 1.6200000047683716,
+              "end": 1.9199999570846558
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L378/audio/L378-G02-prefix.m4a",
+        "durationMs": 2057,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 480
+          },
+          {
+            "charIndex": 1,
+            "startMs": 480,
+            "endMs": 780
+          },
+          {
+            "charIndex": 2,
+            "startMs": 780,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1300,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1620,
+            "endMs": 1920
+          }
+        ]
+      },
+      "sha256": "ba6b2c16bea3b6b6deb786066537817178d37dabbce953c112b63bdbb76c93d8",
+      "textMatch": true
+    },
+    "L378-G02-suffix": {
+      "text": "住",
+      "src": "/assets/lessons/L378/audio/L378-G02-suffix.m4a",
+      "before": {
+        "durationMs": 1401,
+        "speechEndMs": 334,
+        "tailMs": 1067,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -24.8,
+        "maxDb": -9
+      },
+      "after": {
+        "durationMs": 603,
+        "speechEndMs": 434,
+        "tailMs": 169,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.3,
+        "maxDb": -6.2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": "住",
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 0.6000000238418579,
+          "text": "住",
+          "words": [
+            {
+              "word": "住",
+              "start": 0,
+              "end": 0.36000001430511475
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 1
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L378/audio/L378-G02-suffix.m4a",
+        "durationMs": 603,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          }
+        ]
+      },
+      "sha256": "fe9af39c4c77a5b85a4e28ae687fe8e5747e1749a0fb4356a9cc5cfde540eab8",
+      "textMatch": true
+    },
+    "L378-G05-wrong-one": {
+      "text": "先畫手，接著畫身體。",
+      "src": "/assets/lessons/L378/audio/L378-G05-wrong-one.m4a",
+      "before": {
+        "durationMs": 3415,
+        "speechEndMs": 3316,
+        "tailMs": 99,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.2,
+        "maxDb": -2.3
+      },
+      "after": {
+        "durationMs": 3415,
+        "speechEndMs": 3316,
+        "tailMs": 99,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.2,
+        "maxDb": -2.3
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.430000066757202,
+          "text": "先畫手,接著畫身體。",
+          "words": [
+            {
+              "word": "先",
+              "start": 0,
+              "end": 0.5400000214576721
+            },
+            {
+              "word": "畫",
+              "start": 0.5400000214576721,
+              "end": 0.7599999904632568
+            },
+            {
+              "word": "手",
+              "start": 0.7599999904632568,
+              "end": 1.2799999713897705
+            },
+            {
+              "word": "接",
+              "start": 1.8600000143051147,
+              "end": 2.119999885559082
+            },
+            {
+              "word": "著",
+              "start": 2.119999885559082,
+              "end": 2.3399999141693115
+            },
+            {
+              "word": "畫",
+              "start": 2.3399999141693115,
+              "end": 2.619999885559082
+            },
+            {
+              "word": "身",
+              "start": 2.619999885559082,
+              "end": 3.0199999809265137
+            },
+            {
+              "word": "體。",
+              "start": 3.0199999809265137,
+              "end": 3.259999990463257
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L378/audio/L378-G05-wrong-one.m4a",
+        "durationMs": 3415,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 540
+          },
+          {
+            "charIndex": 1,
+            "startMs": 540,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1860,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2120,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2340,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2620,
+            "endMs": 3020
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3020,
+            "endMs": 3260
+          }
+        ]
+      },
+      "sha256": "2d26e29c622079e441adb1fd20d83869fe4b373df44d817a49df68f24de3a809",
+      "textMatch": true
+    },
+    "L378-G05-wrong-two": {
+      "text": "先畫頭，接著畫衣服。",
+      "src": "/assets/lessons/L378/audio/L378-G05-wrong-two.m4a",
+      "before": {
+        "durationMs": 2787,
+        "speechEndMs": 2684,
+        "tailMs": 103,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.9,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2787,
+        "speechEndMs": 2684,
+        "tailMs": 103,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.9,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.799999952316284,
+          "text": "先画头,接着画衣服。",
+          "words": [
+            {
+              "word": "先",
+              "start": 0,
+              "end": 0.41999998688697815
+            },
+            {
+              "word": "画",
+              "start": 0.41999998688697815,
+              "end": 0.6000000238418579
+            },
+            {
+              "word": "头",
+              "start": 0.6000000238418579,
+              "end": 1.0399999618530273
+            },
+            {
+              "word": "接",
+              "start": 1.4800000190734863,
+              "end": 1.7000000476837158
+            },
+            {
+              "word": "着",
+              "start": 1.7000000476837158,
+              "end": 1.899999976158142
+            },
+            {
+              "word": "画",
+              "start": 1.899999976158142,
+              "end": 2.119999885559082
+            },
+            {
+              "word": "衣",
+              "start": 2.119999885559082,
+              "end": 2.4800000190734863
+            },
+            {
+              "word": "服。",
+              "start": 2.4800000190734863,
+              "end": 2.640000104904175
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L378/audio/L378-G05-wrong-two.m4a",
+        "durationMs": 2787,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 600
+          },
+          {
+            "charIndex": 2,
+            "startMs": 600,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1480,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1700,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1900,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2120,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2480,
+            "endMs": 2640
+          }
+        ]
+      },
+      "sha256": "f52765e875c1775ec3ced5dc4f0eb44a0b33a73d4255cf423e405cbecbae44a6",
+      "textMatch": true
+    }
+  },
+  "images": [
+    {
+      "id": "L378-S01",
+      "sha256": "8ff6f2437f9822b05f1c669997d58d7624165a977bd23d274d8a21d4e64561f6",
+      "src": "/assets/lessons/L378/images/L378-S01.webp"
+    },
+    {
+      "id": "L378-S02",
+      "sha256": "f91b02aaf0aa2ce0c4a03c192f422ce4d6e55d133b739e0f963548604078c817",
+      "src": "/assets/lessons/L378/images/L378-S02.webp"
+    },
+    {
+      "id": "L378-S03",
+      "sha256": "f37ec32954fe1a52014bd8d58a29aefb321a805079657f202651e32548c37c64",
+      "src": "/assets/lessons/L378/images/L378-S03.webp"
+    },
+    {
+      "id": "L378-S04",
+      "sha256": "8cfddfaccaf871e2c17d55954590317ce621d5fdd09b9f06a43483fef296fadb",
+      "src": "/assets/lessons/L378/images/L378-S04.webp"
+    },
+    {
+      "id": "L378-S05",
+      "sha256": "552835c217d3c9e789a057f2c45a1094cac133410c63ba2328d124699e3b8620",
+      "src": "/assets/lessons/L378/images/L378-S05.webp"
+    }
+  ]
+}

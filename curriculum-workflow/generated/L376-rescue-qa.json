@@ -1,0 +1,1124 @@
+{
+  "unit": "L376",
+  "sourcePackageSha": "7846e3a33bff4ee87886bb1bd20fbbe89a41037a",
+  "baseMainSha": "7fcef325b37f13fc68fe950bffd7fea8e9db6108",
+  "branch": "codex/l376-l380-package-rescue",
+  "evidence": "curriculum-workflow/generated/L376-rescue-qa.json",
+  "method": "Repository assets:align:ai entry point against owned draft in memory; Traditional/Simplified equivalents only. G02 exact-text prompt; independent target-blind transcription for regenerated short clips. Single-character alignment may use 500 ms analysis-only padding with offsets subtracted.",
+  "audioMethod": "Standard OpenAI generation and repository processing for regenerated files. Silence-only stream-copy trimming retains speech and 160 ms decay buffer. Other audio reused with original AAC packet hashes.",
+  "corrections": [
+    "L376-S04 final audible decay: 3960 -> 4091 ms measured by FFmpeg -40 dB / 100 ms silence detection."
+  ],
+  "regeneratedAudio": [
+    "L376-G02-suffix"
+  ],
+  "technicalStatus": "PASS: 9 complete transcript alignments, all Han spans 80-900 ms, no overlap; measured and metadata tails <=300 ms.",
+  "browserQA": {
+    "status": "PASS within documented browser test scope",
+    "manualPlayback": "Chrome native audio: all 55 controls (50 unique files) played to ended without decode errors.",
+    "environment": "Local Vite in-memory package fixture; synthetic prerequisite progress; no main curriculum or real learner/cloud state changed.",
+    "phone": "L379 at measured 390x844: both six-character G01 display lines fit within x=49..326, no clipped Han or zhuyin. Desktop 1920px rows also fit. Additional viewport override attempts did not apply; no 320px/820px claim.",
+    "games": "L379 G01 correct target; G02 hold/record/replay reaches next question; G03 wrong answer does not advance, correct answer does; G04 ordered single-Han completion; G05 reveal does not grant reward, restart and correct selection completes; reward +30 coins/+12 stars and next L380 observed.",
+    "recordingScope": "G02 uses synthetic pointer hold and oscillator MediaStream with real MediaRecorder/replay flow; real-device microphone and subjective pronunciation remain post-main teacher checks.",
+    "stage2": "L379 1/3 and 2/3 have no completion button; 3/3 displays completion. Parent callback moved out of state updater; no update-during-render warning in this regression.",
+    "images": "All 25 original approved images retained byte-for-byte; source production style/cast review retained, no new teacher approval claimed."
+  },
+  "release": "Release owns R045/R046 prerequisite checks and ordered L376-L380 main integration. Shared curriculum/planner/ledger are unchanged.",
+  "reviewIndex": "https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main",
+  "postMergeReview": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L376&ref=main",
+  "statusCommand": "npm run asset:review-status -- --unit L376 --ref main",
+  "regenerationSources": {
+    "L376-G02-suffix": {
+      "path": "curriculum-workflow/audio-inbox/L376/L376-G02-suffix.mp3",
+      "sha256": "85caf4f4a3578967e2c2e6917a30d6e0e09fcfcec3078923a46e5c839e9a9e32",
+      "exactInput": "經打通了",
+      "model": "gpt-4o-mini-tts",
+      "voice": "shimmer",
+      "speed": 0.85
+    }
+  },
+  "independentTranscriptions": {
+    "L376-G02-suffix": {
+      "model": "gpt-4o-transcribe",
+      "prompt": "這是台灣國語認字教材的短片段。請如實轉寫聽到的字，不補成完整句子。",
+      "transcript": {
+        "text": "經打通了。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 52,
+          "input_tokens": 45,
+          "input_token_details": {
+            "text_tokens": 30,
+            "audio_tokens": 15
+          },
+          "output_tokens": 7
+        }
+      }
+    }
+  },
+  "sourceHistory": {
+    "superseded": true,
+    "originalNotes": "Teacher-approved single-character L376 已 (已經). S04 final is completed personal book return, not planting a tree; 還 at Han index8 is ㄏㄨㄢˊ. Base 95ca55f7 formal through L369. Learner dependencies L371-L375, provisional 親交通往經. Release also needs all earlier lessons including L370. Required playable order L375 → R045 → R046 → L376. R045/R046 after L375 cover L346-L375 with allowed ceiling through L375; neither is in main at claim. Review pair is Release blocker only, outside this package. Stage2 expected six single-Han cards: three 已 plus three old characters; all three targets required. Mandatory AI alignment blocked at L376-G02-suffix. Exact required input 經打通了. Four independently generated versions returned 清打通了; 精打通了 (independent model/raw and processed: 心打通了); 已經打通了; 已經打通了. No non-equivalent transcription substitution is accepted. Full align command stops before committing timings. Do not integrate this partial package.",
+    "requestTeacherNotes": "Teacher-approved single-character L376 已 (已經). S04 final is completed personal book return, not planting a tree; 還 at Han index8 is ㄏㄨㄢˊ. Base 95ca55f7 formal through L369. Learner dependencies L371-L375, provisional 親交通往經. Release also needs all earlier lessons including L370. Required playable order L375 → R045 → R046 → L376. R045/R046 after L375 cover L346-L375 with allowed ceiling through L375; neither is in main at claim. Review pair is Release blocker only, outside this package. Stage2 expected six single-Han cards: three 已 plus three old characters; all three targets required. Mandatory AI alignment blocked at L376-G02-suffix. Exact required input 經打通了. Four independently generated versions returned 清打通了; 精打通了 (independent model/raw and processed: 心打通了); 已經打通了; 已經打通了. No non-equivalent transcription substitution is accepted. Full align command stops before committing timings. Do not integrate this partial package.",
+    "supersededGeneratedRecords": {
+      "L376-checkpoint-report.json": "{\r\n  \"status\": \"partial-package\",\r\n  \"blocker\": \"Mandatory AI alignment blocked at L376-G02-suffix. Exact required input 經打通了. Four independently generated versions returned 清打通了; 精打通了 (independent model/raw and processed: 心打通了); 已經打通了; 已經打通了. No non-equivalent transcription substitution is accepted. Full align command stops before committing timings. Do not integrate this partial package.\",\r\n  \"stage2\": {\r\n    \"status\": \"PASS\",\r\n    \"cards\": [\r\n      \"已\",\r\n      \"站\",\r\n      \"已\",\r\n      \"後\",\r\n      \"往\",\r\n      \"已\"\r\n    ],\r\n    \"targetCount\": 3,\r\n    \"otherCount\": 3,\r\n    \"observedProgress\": [\r\n      \"1/3 not complete\",\r\n      \"2/3 not complete\",\r\n      \"3/3 全部找到了 and 通關\"\r\n    ],\r\n    \"scope\": \"Actual localhost app with launch state only; gameplay unchanged. Older 往 is approved L374 provisional.\"\r\n  },\r\n  \"content\": {\r\n    \"allowed\": 378,\r\n    \"coverage\": {\r\n      \"已\": 3,\r\n      \"經\": 3,\r\n      \"往\": 2,\r\n      \"通\": 2,\r\n      \"交\": 2,\r\n      \"親\": 1\r\n    },\r\n    \"approvedText\": \"PASS\",\r\n    \"displayLines\": \"PASS\",\r\n    \"stage4Index\": \"PASS\",\r\n    \"sentenceOrder\": [\r\n      \"S01\",\r\n      \"S02\",\r\n      \"S04\",\r\n      \"S03\",\r\n      \"S05\"\r\n    ]\r\n  },\r\n  \"checks\": {\r\n    \"tools\": \"PASS\",\r\n    \"ai\": \"PASS\",\r\n    \"startupState\": \"PASS\",\r\n    \"packet\": \"Executed and restored approved content\",\r\n    \"images\": \"In-flight generation collected; per-image review in package notes\",\r\n    \"audioGeneration\": \"10 raw MP3 generated; G02 suffix regenerated three times\",\r\n    \"audioProcessing\": \"10 M4A processed\",\r\n    \"alignment\": \"BLOCKED at G02 suffix\",\r\n    \"phonePlayback\": \"Not completed because required audio gate is blocked\",\r\n    \"sharedVerify\": \"Skipped: Release-owned dependency and review integration\"\r\n  },\r\n  \"media\": [\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\images\\\\L376-S01.webp\",\r\n      \"bytes\": 195430\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\images\\\\L376-S02.webp\",\r\n      \"bytes\": 166064\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\images\\\\L376-S03.webp\",\r\n      \"bytes\": 152724\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\images\\\\L376-S04.webp\",\r\n      \"bytes\": 142046\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\images\\\\L376-S05.webp\",\r\n      \"bytes\": 147822\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\char-u5df2.m4a\",\r\n      \"bytes\": 16760,\r\n      \"decode\": \"PASS\"\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\L376-G02-prefix.m4a\",\r\n      \"bytes\": 11256,\r\n      \"decode\": \"PASS\"\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\L376-G02-suffix.m4a\",\r\n      \"bytes\": 24421,\r\n      \"decode\": \"PASS\"\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\L376-G05-wrong-one.m4a\",\r\n      \"bytes\": 39113,\r\n      \"decode\": \"PASS\"\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\L376-G05-wrong-two.m4a\",\r\n      \"bytes\": 43476,\r\n      \"decode\": \"PASS\"\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\L376-S01.m4a\",\r\n      \"bytes\": 60901,\r\n      \"decode\": \"PASS\"\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\L376-S02.m4a\",\r\n      \"bytes\": 30352,\r\n      \"decode\": \"PASS\"\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\L376-S03.m4a\",\r\n      \"bytes\": 35355,\r\n      \"decode\": \"PASS\"\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\L376-S04.m4a\",\r\n      \"bytes\": 60614,\r\n      \"decode\": \"PASS\"\r\n    },\r\n    {\r\n      \"file\": \"public\\\\assets\\\\lessons\\\\L376\\\\audio\\\\L376-S05.m4a\",\r\n      \"bytes\": 34319,\r\n      \"decode\": \"PASS\"\r\n    }\r\n  ],\r\n  \"imageBytes\": 804086,\r\n  \"audioBytes\": 356567\r\n}\r\n",
+      "L376-duration-report.json": "[\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/char-u5df2.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/char-u5df2.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/char-u5df2.m4a\",\r\n    \"durationMs\": 1161,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -19.3,\r\n        \"mean\": -31.8\r\n      },\r\n      \"gainDb\": 12.8,\r\n      \"after\": {\r\n        \"max\": -6.5,\r\n        \"mean\": -19\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/L376-G02-prefix.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/L376-G02-prefix.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/L376-G02-prefix.m4a\",\r\n    \"durationMs\": 1152,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -11.1,\r\n        \"mean\": -27.1\r\n      },\r\n      \"gainDb\": 0,\r\n      \"after\": {\r\n        \"max\": -11.1,\r\n        \"mean\": -27.1\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/L376-G02-suffix.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/L376-G02-suffix.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/L376-G02-suffix.m4a\",\r\n    \"durationMs\": 2043,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -13.4,\r\n        \"mean\": -30.2\r\n      },\r\n      \"gainDb\": 11.2,\r\n      \"after\": {\r\n        \"max\": -2.3,\r\n        \"mean\": -19.1\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/L376-G05-wrong-one.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/L376-G05-wrong-one.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/L376-G05-wrong-one.m4a\",\r\n    \"durationMs\": 3591,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -2,\r\n        \"mean\": -18.3\r\n      },\r\n      \"gainDb\": 0,\r\n      \"after\": {\r\n        \"max\": -2,\r\n        \"mean\": -18.3\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/L376-G05-wrong-two.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/L376-G05-wrong-two.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/L376-G05-wrong-two.m4a\",\r\n    \"durationMs\": 3969,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -2,\r\n        \"mean\": -19.1\r\n      },\r\n      \"gainDb\": 0,\r\n      \"after\": {\r\n        \"max\": -2,\r\n        \"mean\": -19.1\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/L376-S01.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/L376-S01.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/L376-S01.m4a\",\r\n    \"durationMs\": 5480,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -2,\r\n        \"mean\": -20.1\r\n      },\r\n      \"gainDb\": 0,\r\n      \"after\": {\r\n        \"max\": -2,\r\n        \"mean\": -20.1\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/L376-S02.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/L376-S02.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/L376-S02.m4a\",\r\n    \"durationMs\": 3697,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -2,\r\n        \"mean\": -18.6\r\n      },\r\n      \"gainDb\": 0,\r\n      \"after\": {\r\n        \"max\": -2,\r\n        \"mean\": -18.6\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/L376-S03.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/L376-S03.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/L376-S03.m4a\",\r\n    \"durationMs\": 2971,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -8.3,\r\n        \"mean\": -25.9\r\n      },\r\n      \"gainDb\": 0,\r\n      \"after\": {\r\n        \"max\": -8.3,\r\n        \"mean\": -25.9\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/L376-S04.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/L376-S04.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/L376-S04.m4a\",\r\n    \"durationMs\": 4582,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -3.1,\r\n        \"mean\": -18.3\r\n      },\r\n      \"gainDb\": 0,\r\n      \"after\": {\r\n        \"max\": -3.1,\r\n        \"mean\": -18.3\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"lessonId\": \"L376\",\r\n    \"source\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/curriculum-workflow/audio-inbox/L376/L376-S05.mp3\",\r\n    \"output\": \"C:/Users/User/Documents/Codex/2026-08-03/a000-sop/worktrees/parallel-d/public/assets/lessons/L376/audio/L376-S05.m4a\",\r\n    \"src\": \"/assets/lessons/L376/audio/L376-S05.m4a\",\r\n    \"durationMs\": 2833,\r\n    \"loudness\": {\r\n      \"before\": {\r\n        \"max\": -15.8,\r\n        \"mean\": -31.7\r\n      },\r\n      \"gainDb\": 12.7,\r\n      \"after\": {\r\n        \"max\": -3.1,\r\n        \"mean\": -19\r\n      }\r\n    }\r\n  }\r\n]\r\n",
+      "L376-independent-transcription.json": "[\r\n  {\r\n    \"file\": \"curriculum-workflow/audio-inbox/L376/L376-G02-suffix.mp3\",\r\n    \"model\": \"gpt-4o-transcribe\",\r\n    \"prompt\": null,\r\n    \"text\": \"心打通了。\",\r\n    \"usage\": {\r\n      \"type\": \"tokens\",\r\n      \"total_tokens\": 30,\r\n      \"input_tokens\": 23,\r\n      \"input_token_details\": {\r\n        \"text_tokens\": 0,\r\n        \"audio_tokens\": 23\r\n      },\r\n      \"output_tokens\": 7\r\n    }\r\n  }\r\n]\r\n",
+      "L376-package-notes.md": "# L376 已 — Production D checkpoint\r\n\r\n**partial-package — not asset-complete; do not integrate.**\r\nBranch: `codex/l376-complete-package`.\r\n\r\n## Blocking audio gate\r\n\r\nThe mandatory AI transcript/alignment gate stops at **L376-G02-suffix.m4a**.\r\nRequired exact fragment: **經打通了**, beginning after the target 已 in S02.\r\n\r\n| Generation | Alignment transcript | Additional evidence |\r\n|---|---|---|\r\n| 1 | 清打通了 | Not a traditional/simplified spelling difference |\r\n| 2 | 精打通了 | Independent gpt-4o-transcribe returned 心打通了 for both raw MP3 and processed M4A |\r\n| 3 | 已經打通了 | Added preceding target syllable; unacceptable for stitched replay |\r\n| 4, current | 已經打通了 | Four-syllable pronunciation guidance still did not pass |\r\n\r\nNo transcript was rewritten from a non-equivalent character. No target syllable was cut from a full sentence or from a rejected fragment. The current suffix is retained only as diagnostic material on this explicitly incomplete branch, not an accepted production asset.\r\nThe align command writes the draft only after all records pass; therefore complete sentence/Stage 4 timing metadata is not committed. Earlier printed matches are not claimed as a finished alignment run.\r\nThe legitimate simplified spellings 风/盖 were normalized to 風/蓋 in the lesson-local adapter, per SOP. This does not resolve the separate suffix problem.\r\n\r\nNext repair: regenerate the exact four-syllable fragment and pass the transcript gate, then align all final sentence/Stage 4 files, check timing ranges/tails and G05 volume, and complete phone playback/recording QA. If speech is correct but ASR keeps inserting/substituting words, Supervisor must determine an evidence-based review path; this package does not bypass that gate.\r\n\r\n## Boundary and scope\r\n\r\nFetched main `95ca55f7`: formal L001–L369, latest 情, 372 learned characters, R044 after L360.\r\nLearner dependencies: **L371 親, L372 交, L373 通, L374 往, L375 經**; all unmerged at claim.\r\nL370 朋友 remains an earlier playable prerequisite, but 朋/友 are not used here and are not added to the locked provisional set.\r\nRelease order is **L375 → R045 → R046 → L376**. R045/R046 are absent from main, cover L346–L375 and retain the allowed-character ceiling through L375. They are separate tasks, outside this package.\r\nThese Release dependencies do not explain or waive the current audio blocker.\r\n\r\n## Approved content and checks\r\n\r\nRequest, packet and draft preserve the five approved texts, imageNotes, focusChar, displayLines and fixed Stage 4 plan. S04 is **我已經親手把書交還老師。**, not the old tree scene. `zhuyinOverrides[8] = ㄏㄨㄢˊ` records the contextual 還 reading; auditory pronunciation certification remains unfinished.\r\nAllowed set mechanically extracted from 95ca55f7 plus 親交通往經已: **378 characters**, PASS.\r\nCoverage: **已3、經3、往2、通2、交2、親1**, PASS.\r\nHan counts **9/7/8/11/7**, spokenText Han sequence, displayLines join/6-visible-character limit and all Stage 4 indices/options: PASS.\r\nCanonical game order uses sentences **S01/S02/S04/S03/S05**; G01–G03 target 已. G04 missing [0,5,6,7] maps to 往/交/流/道; no word cards.\r\n\r\n## Stage 2 actual UI\r\n\r\nLocal actual app preview showed six cards: **已、站、已、後、往、已**.\r\nAfter the first target: 1/3 and not complete. After the second: 2/3 and not complete. After the third: 3/3, 全部找到了, 通關.\r\nThus 3 target cards + 3 old-character cards and all-three-target completion: **PASS**.\r\nThe dev console also reported a React state-update warning: Cannot update LessonPanel while rendering FindManyChallenge. The observed 1/3 → 2/3 → 3/3 completion behavior worked; this app-level warning is recorded for Supervisor and was not repaired in this asset package.\r\nOnly preview launch state and in-memory curriculum were adjusted; Stage 2 gameplay code was unchanged. No shared production JSON, planner or ledger was changed.\r\n\r\n## Image decisions\r\n\r\nAll scenes require new images. Reuse search found L192-S01 phone-to-mother, L356-S04 bus queue and L358-S05 bus at zoo; visual inspection confirmed they do not match the newly approved action/cast/result. S04 specifically needs a completed return, not a mid-handoff.\r\nEach actual WebP was opened and compared side by side with all L058 images and relevant family/teacher anchors. S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS. No image was rejected or regenerated. No rejected image has been submitted.\r\nAll five images are 1024×1024 WebP, total **804,086 bytes**. Ten current M4A files total **356,567 bytes**; total current media **1,160,653 bytes**. These audio files are checkpoint material, not a fully accepted audio package.\r\n\r\n## Executed and unfinished\r\n\r\n- tools:check, ai:check, startup curriculum:audit-state: PASS.\r\n- curriculum:packet: executed before generation; final approved records restored into packet/draft.\r\n- OpenAI generation: ten MP3 sources, including standalone 已 and independent G02 fragments/whole G05 choices. Only suffix was regenerated.\r\n- assets:audio: completed using unchanged repo processor through the owned draft adapter.\r\n- assets:align:ai: **blocked**, as detailed above; not PASS.\r\n- Lesson-local strict assets:audit: PASS, one unit, five image references, ten audio references, zero warnings (including G05 volume-spread check). All ten audio files ffmpeg-decode successfully.\r\n- Lesson-local validate:production: FAIL because the full alignment run did not commit sentence durationMs/charTimings. Standalone character audio passes the file/duration/volume checks; human auditory certification is not claimed.\r\n- Full shared-state verify: skipped, Release-owned integration.\r\n- Stage 3 highlighter/last-syllable audition, G02 recording/replay, G05 final option listening/volume acceptance: unfinished because mandatory alignment gate is blocked.\r\n- No teacher manual pre-merge review is requested or claimed as an ordinary package gate.\r\n\r\n## Review links\r\n\r\nAny pushed SHA preview is **pre-merge package preview, not final main review queue**, and this checkpoint is incomplete.\r\nOnly after repair, dependencies/review integration and deployment:\r\n- https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L376&ref=main\r\n- https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main\r\n- `npm run asset:review-status -- --unit L376 --ref main`\r\n",
+      "L376-pipeline.cjs": "// Invoke unchanged repository media scripts using an owned draft in memory.\r\n// No writes to shared production curriculum, planner or ledger.\r\nconst fs=require('fs'),path=require('path');\r\nconst read=fs.readFileSync,write=fs.writeFileSync,action=process.argv[2],fragment=process.argv[3];\r\nconst dp='curriculum-workflow/drafts/L376-draft.json',d=JSON.parse(read(dp,'utf8'));\r\nconst virtual={lessons:[d],reviewLessons:[]},root=path.resolve('src/curriculum/sample-lessons.json');\r\nconst realFetch=globalThis.fetch;\r\nconst speechFetch=realFetch;\r\nglobalThis.fetch=async(...args)=>{if(String(args[0]).endsWith('/audio/speech')&&args[1]?.body){const body=JSON.parse(args[1].body);if(body.input==='經打通了'){body.instructions+=' Read only the four input syllables, with these Taiwan zhuyin sounds in order: ㄐㄧㄥ ㄉㄚˇ ㄊㄨㄥ ˙ㄌㄜ. Clear first-tone ㄐㄧㄥ with gentle unaspirated ㄐ onset. Four syllables exactly, natural connected speech, no introductory or preceding syllable.';body.speed=0.85;args[1]={...args[1],body:JSON.stringify(body)};}}return speechFetch(...args);};\r\nconst pronunciationFetch=globalThis.fetch;\r\nglobalThis.fetch=async(...args)=>{const response=await pronunciationFetch(...args);if(String(args[0]).includes('/audio/transcriptions')&&response.ok){const data=await response.json();const map={'风':'風','盖':'蓋','亲':'親','图':'圖','谢':'謝','这':'這','书':'書','欢':'歡','动':'動','画':'畫','张':'張','脸':'臉','惊':'驚','对':'對','吗':'嗎','鸡':'雞','园':'園','脏':'髒'};const norm=v=>typeof v==='string'?v.replace(/[风盖亲图谢这书欢动画张脸惊对吗鸡园脏]/g,c=>map[c]):Array.isArray(v)?v.map(norm):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,v])=>[k,norm(v)])):v;return new Response(JSON.stringify(norm(data)),{status:response.status,headers:{'content-type':'application/json'}})}return response;};\r\nif(action==='generate'&&fragment){if(fragment.startsWith('char-')){d.sentences=[];d.sentenceGames=[];}else{d.newChars=[];if(/-S\\d\\d$/.test(fragment)){d.sentences=d.sentences.filter(s=>s.id===fragment);d.sentenceGames=[];}else{const g=d.sentenceGames.find(g=>fragment.startsWith(g.id));const part=fragment.endsWith('suffix')?'suffix':'prefix';const text=g.teachAudio?.[part+'Text']||g.options.find(o=>fragment.endsWith(o.id)).text;d.sentences=[{id:fragment,spokenText:[...text].filter(c=>/\\p{Script=Han}/u.test(c)).join(''),approved:true}];d.sentenceGames=[];}}}\r\nif(action==='align')for(const g of d.sentenceGames){if(g.teachAudio)for(const part of ['prefix','suffix'])if(g.teachAudio[part+'Src'])d.sentences.push({id:g.id+'-'+part,text:g.teachAudio[part+'Text'],spokenText:g.teachAudio[part+'Text'],approved:true,audio:{src:g.teachAudio[part+'Src']}});if(g.type==='choose-pronunciation')for(const o of g.options.filter(o=>!o.correct))d.sentences.push({id:g.id+'-'+o.id,text:o.text,spokenText:[...o.text].filter(c=>/\\p{Script=Han}/u.test(c)).join(''),approved:true,audio:{src:o.audioSrc}});}\r\nfs.readFileSync=function(file,...args){return path.resolve(String(file))===root?JSON.stringify(virtual):read.call(this,file,...args)};\r\nfs.writeFileSync=function(file,data,...args){if(path.resolve(String(file))===root){const result=JSON.parse(data).lessons[0];if(action==='align'){result.stage4AudioAlignment=Object.fromEntries(result.sentences.filter(s=>!/-S\\d\\d$/.test(s.id)).map(s=>[s.id,{spokenText:s.spokenText,...s.audio}]));result.sentences=result.sentences.filter(s=>/-S\\d\\d$/.test(s.id));}return write.call(this,dp,JSON.stringify(result,null,2)+'\\n','utf8');}if(path.resolve(String(file))===path.resolve('curriculum-workflow/audio-duration-report.json'))return write.call(this,'curriculum-workflow/generated/L376-duration-report.json',data,...args);return write.call(this,file,data,...args);};\r\nprocess.argv=['node','script','--lesson','L376'];if(action==='images')process.argv.push('--remove-original');\r\nconst scripts={generate:'generate-audio-drafts',process:'process-audio-assets',align:'align-audio-timings-ai',images:'optimize-images',production:'validate-production-assets',formats:'audit-asset-formats'};if(action==='formats')process.argv.push('--strict');if(!scripts[action])throw Error('Unknown action');import(require('url').pathToFileURL(path.resolve('scripts/'+scripts[action]+'.mjs')).href);\r\n",
+      "L376-preview.mjs": "import fs from 'node:fs';\r\nimport path from 'node:path';\r\nimport {pathToFileURL} from 'node:url';\r\nimport {execFileSync} from 'node:child_process';\r\nconst root=process.cwd();\r\nconst {createServer}=await import(pathToFileURL(path.join(root,'node_modules/vite/dist/node/index.js')));\r\nconst react=(await import(pathToFileURL(path.join(root,'node_modules/@vitejs/plugin-react/dist/index.js')))).default;\r\nconst curriculum=JSON.parse(execFileSync('git',['show','origin/main:src/curriculum/sample-lessons.json'],{encoding:'utf8',maxBuffer:32*1024*1024}));\r\ncurriculum.lessons.push(JSON.parse(fs.readFileSync('curriculum-workflow/drafts/L376-draft.json','utf8')));\r\n// Local QA launch state only. Media, timing and gameplay implementation remain unchanged.\r\nconst preview={name:'l376-local-preview',enforce:'pre',load(id){if(id.replaceAll('\\\\','/').endsWith('/src/curriculum/sample-lessons.json'))return JSON.stringify(curriculum);},transform(code,id){if(!id.replaceAll('\\\\','/').endsWith('/src/App.tsx'))return;\r\nreturn code.replace('const [freeBrowse, setFreeBrowse] = useState(false)','const [freeBrowse, setFreeBrowse] = useState(true)').replace('useState(initialProgress?.selectedOrder ?? nextOrder)','useState(376)').replace('const [lessonOpen, setLessonOpen] = useState(false)','const [lessonOpen, setLessonOpen] = useState(true)').replace('new Set(initialProgress?.completedOrders ?? [])','new Set([376])').replace('const initialDefaultStage = isReview ? 3 : 1','const initialDefaultStage = 2');}};\r\nconst server=await createServer({root,configFile:false,base:'/character-recognition-dojo/',plugins:[preview,react()],server:{host:'127.0.0.1',port:5175,strictPort:true}});await server.listen();server.printUrls();\r\n",
+      "L376-transcribe.mjs": "import fs from 'node:fs';\r\nimport path from 'node:path';\r\nimport { requireOpenAIKey } from '../../scripts/lib/env.mjs';\r\nconst apiKey=requireOpenAIKey();\r\nconst report=[];\r\nfor(const file of process.argv.slice(2)){\r\n const form=new FormData();form.append('model','gpt-4o-transcribe');form.append('language','zh');form.append('file',new Blob([fs.readFileSync(file)]),path.basename(file));\r\n const response=await fetch('https://api.openai.com/v1/audio/transcriptions',{method:'POST',headers:{Authorization:`Bearer ${apiKey}`},body:form});\r\n if(!response.ok)throw Error(`Transcription HTTP ${response.status}`);\r\n const result=await response.json();report.push({file,model:'gpt-4o-transcribe',prompt:null,...result});\r\n}\r\nfs.writeFileSync('curriculum-workflow/generated/L376-independent-transcription.json',JSON.stringify(report,null,2)+'\\n');console.log(report);\r\n"
+    }
+  },
+  "audio": {
+    "L376-S01": {
+      "text": "往後站公車已經來了",
+      "src": "/assets/lessons/L376/audio/L376-S01.m4a",
+      "before": {
+        "durationMs": 5480,
+        "speechEndMs": 3530,
+        "tailMs": 1950,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -20.1,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3692,
+        "speechEndMs": 3530,
+        "tailMs": 162,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.4,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.690000057220459,
+          "text": "往後,站公車已經來了。",
+          "words": [
+            {
+              "word": "往",
+              "start": 0,
+              "end": 0.47999998927116394
+            },
+            {
+              "word": "後",
+              "start": 0.47999998927116394,
+              "end": 0.8199999928474426
+            },
+            {
+              "word": "站",
+              "start": 1.5199999809265137,
+              "end": 1.659999966621399
+            },
+            {
+              "word": "公",
+              "start": 1.659999966621399,
+              "end": 1.940000057220459
+            },
+            {
+              "word": "車",
+              "start": 1.940000057220459,
+              "end": 2.240000009536743
+            },
+            {
+              "word": "已經",
+              "start": 2.240000009536743,
+              "end": 3
+            },
+            {
+              "word": "來了。",
+              "start": 3,
+              "end": 3.440000057220459
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L376/audio/L376-S01.m4a",
+        "durationMs": 3692,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 480
+          },
+          {
+            "charIndex": 1,
+            "startMs": 480,
+            "endMs": 820
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1520,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1660,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1940,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2240,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2620,
+            "endMs": 3000
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3000,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3220,
+            "endMs": 3440
+          }
+        ]
+      },
+      "sha256": "7b5d14b2ef659250baf26977a19a88ca961e052b2c05f4becafead417211d009",
+      "textMatch": true
+    },
+    "L376-S02": {
+      "text": "電話已經打通了",
+      "src": "/assets/lessons/L376/audio/L376-S02.m4a",
+      "before": {
+        "durationMs": 3697,
+        "speechEndMs": 1938,
+        "tailMs": 1759,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.6,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2113,
+        "speechEndMs": 1938,
+        "tailMs": 175,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -16.2,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.109999895095825,
+          "text": "電話已經打通了。",
+          "words": [
+            {
+              "word": "電",
+              "start": 0,
+              "end": 0.30000001192092896
+            },
+            {
+              "word": "話",
+              "start": 0.30000001192092896,
+              "end": 0.6000000238418579
+            },
+            {
+              "word": "已經",
+              "start": 0.6000000238418579,
+              "end": 1.059999942779541
+            },
+            {
+              "word": "打",
+              "start": 1.059999942779541,
+              "end": 1.5
+            },
+            {
+              "word": "通",
+              "start": 1.5,
+              "end": 1.6799999475479126
+            },
+            {
+              "word": "了。",
+              "start": 1.6799999475479126,
+              "end": 1.899999976158142
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L376/audio/L376-S02.m4a",
+        "durationMs": 2113,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 600
+          },
+          {
+            "charIndex": 2,
+            "startMs": 600,
+            "endMs": 830
+          },
+          {
+            "charIndex": 3,
+            "startMs": 830,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1060,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1500,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1680,
+            "endMs": 1900
+          }
+        ]
+      },
+      "sha256": "b81f4c81b7ccc5815bdb20ea99ee31e60a7442877c1b063196dcf18b0153f825",
+      "textMatch": true
+    },
+    "L376-S03": {
+      "text": "往前開就到交流道",
+      "src": "/assets/lessons/L376/audio/L376-S03.m4a",
+      "before": {
+        "durationMs": 2971,
+        "speechEndMs": 2491,
+        "tailMs": 480,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -25.9,
+        "maxDb": -8.3
+      },
+      "after": {
+        "durationMs": 2670,
+        "speechEndMs": 2491,
+        "tailMs": 179,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -25.4,
+        "maxDb": -8.3
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.6700000762939453,
+          "text": "往前開就到交流道",
+          "words": [
+            {
+              "word": "往",
+              "start": 0,
+              "end": 0.36000001430511475
+            },
+            {
+              "word": "前",
+              "start": 0.36000001430511475,
+              "end": 0.7400000095367432
+            },
+            {
+              "word": "開",
+              "start": 0.7400000095367432,
+              "end": 1.059999942779541
+            },
+            {
+              "word": "就到",
+              "start": 1.059999942779541,
+              "end": 1.7200000286102295
+            },
+            {
+              "word": "交",
+              "start": 1.7200000286102295,
+              "end": 2.059999942779541
+            },
+            {
+              "word": "流",
+              "start": 2.059999942779541,
+              "end": 2.299999952316284
+            },
+            {
+              "word": "道",
+              "start": 2.299999952316284,
+              "end": 2.4600000381469727
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L376/audio/L376-S03.m4a",
+        "durationMs": 2670,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1060,
+            "endMs": 1390
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1390,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1720,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2060,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2300,
+            "endMs": 2460
+          }
+        ]
+      },
+      "sha256": "5e6fec2ea7230138ccbf97fa50d8f0e583aa87927fc658c39121cac783c6faeb",
+      "textMatch": true
+    },
+    "L376-S04": {
+      "text": "我已經親手把書交還老師",
+      "src": "/assets/lessons/L376/audio/L376-S04.m4a",
+      "before": {
+        "durationMs": 4582,
+        "speechEndMs": 4091,
+        "tailMs": 491,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -3.1
+      },
+      "after": {
+        "durationMs": 4272,
+        "speechEndMs": 4091,
+        "tailMs": 181,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18,
+        "maxDb": -3.1
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 4.269999980926514,
+          "text": "我已經親手把書交還老師。",
+          "words": [
+            {
+              "word": "我",
+              "start": 0,
+              "end": 0.30000001192092896
+            },
+            {
+              "word": "已經",
+              "start": 0.30000001192092896,
+              "end": 0.800000011920929
+            },
+            {
+              "word": "親",
+              "start": 0.800000011920929,
+              "end": 1.4199999570846558
+            },
+            {
+              "word": "手",
+              "start": 1.4199999570846558,
+              "end": 1.7400000095367432
+            },
+            {
+              "word": "把",
+              "start": 1.7400000095367432,
+              "end": 2.059999942779541
+            },
+            {
+              "word": "書",
+              "start": 2.059999942779541,
+              "end": 2.4200000762939453
+            },
+            {
+              "word": "交",
+              "start": 2.4200000762939453,
+              "end": 3.180000066757202
+            },
+            {
+              "word": "還",
+              "start": 3.180000066757202,
+              "end": 3.4800000190734863
+            },
+            {
+              "word": "老師。",
+              "start": 3.4800000190734863,
+              "end": 3.9600000381469727
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 5
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L376/audio/L376-S04.m4a",
+        "durationMs": 4272,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 550
+          },
+          {
+            "charIndex": 2,
+            "startMs": 550,
+            "endMs": 800
+          },
+          {
+            "charIndex": 3,
+            "startMs": 800,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1420,
+            "endMs": 1740
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1740,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2060,
+            "endMs": 2420
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2420,
+            "endMs": 3180
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3180,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3480,
+            "endMs": 3720
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3720,
+            "endMs": 4091
+          }
+        ]
+      },
+      "sha256": "c64056695368a4aa3af1fc6cea114105bc69a4b8374855ab1462355304d59d60",
+      "textMatch": true
+    },
+    "L376-S05": {
+      "text": "別把通風口蓋住",
+      "src": "/assets/lessons/L376/audio/L376-S05.m4a",
+      "before": {
+        "durationMs": 2833,
+        "speechEndMs": 2055,
+        "tailMs": 778,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19,
+        "maxDb": -3.1
+      },
+      "after": {
+        "durationMs": 2229,
+        "speechEndMs": 2055,
+        "tailMs": 174,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18,
+        "maxDb": -3.1
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.2200000286102295,
+          "text": "别把通风口盖住。",
+          "words": [
+            {
+              "word": "别",
+              "start": 0,
+              "end": 0.30000001192092896
+            },
+            {
+              "word": "把",
+              "start": 0.30000001192092896,
+              "end": 0.5600000023841858
+            },
+            {
+              "word": "通",
+              "start": 0.5600000023841858,
+              "end": 0.8999999761581421
+            },
+            {
+              "word": "风",
+              "start": 0.8999999761581421,
+              "end": 1.1399999856948853
+            },
+            {
+              "word": "口",
+              "start": 1.1399999856948853,
+              "end": 1.440000057220459
+            },
+            {
+              "word": "盖",
+              "start": 1.440000057220459,
+              "end": 1.6799999475479126
+            },
+            {
+              "word": "住。",
+              "start": 1.6799999475479126,
+              "end": 2.0199999809265137
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L376/audio/L376-S05.m4a",
+        "durationMs": 2229,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 560
+          },
+          {
+            "charIndex": 2,
+            "startMs": 560,
+            "endMs": 900
+          },
+          {
+            "charIndex": 3,
+            "startMs": 900,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1140,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1440,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1680,
+            "endMs": 2020
+          }
+        ]
+      },
+      "sha256": "719e75ba2ee8ac96729418feb97004a22cf5855f8182c855691658735e771246",
+      "textMatch": true
+    },
+    "L376-G02-prefix": {
+      "text": "電話",
+      "src": "/assets/lessons/L376/audio/L376-G02-prefix.m4a",
+      "before": {
+        "durationMs": 1152,
+        "speechEndMs": 693,
+        "tailMs": 459,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -27.1,
+        "maxDb": -11.1
+      },
+      "after": {
+        "durationMs": 859,
+        "speechEndMs": 693,
+        "tailMs": 166,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -25.8,
+        "maxDb": -11.1
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": "電話",
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 0.8500000238418579,
+          "text": "電話",
+          "words": [
+            {
+              "word": "電",
+              "start": 0,
+              "end": 0.2800000011920929
+            },
+            {
+              "word": "話",
+              "start": 0.2800000011920929,
+              "end": 0.6600000262260437
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 1
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L376/audio/L376-G02-prefix.m4a",
+        "durationMs": 859,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 660
+          }
+        ]
+      },
+      "sha256": "d08331fbb4670a44cf88dcb425b153fb468dfda07feb467ab335209c5bf91323",
+      "textMatch": true
+    },
+    "L376-G02-suffix": {
+      "text": "經打通了",
+      "src": "/assets/lessons/L376/audio/L376-G02-suffix.m4a",
+      "before": {
+        "durationMs": 1587,
+        "speechEndMs": 1204,
+        "tailMs": 383,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -22.2,
+        "maxDb": -9.7
+      },
+      "after": {
+        "durationMs": 1555,
+        "speechEndMs": 1387,
+        "tailMs": 168,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.9,
+        "maxDb": -6.7
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": "經打通了",
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 1.5499999523162842,
+          "text": "經打通了",
+          "words": [
+            {
+              "word": "經",
+              "start": 0,
+              "end": 0.5600000023841858
+            },
+            {
+              "word": "打",
+              "start": 0.5600000023841858,
+              "end": 0.9399999976158142
+            },
+            {
+              "word": "通",
+              "start": 0.9399999976158142,
+              "end": 1.159999966621399
+            },
+            {
+              "word": "了",
+              "start": 1.159999966621399,
+              "end": 1.3799999952316284
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 2
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L376/audio/L376-G02-suffix.m4a",
+        "durationMs": 1555,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 560
+          },
+          {
+            "charIndex": 1,
+            "startMs": 560,
+            "endMs": 940
+          },
+          {
+            "charIndex": 2,
+            "startMs": 940,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1160,
+            "endMs": 1380
+          }
+        ]
+      },
+      "sha256": "dc377c6b04839f4c885cc54fad8951b54a5070f0163bd9896f3f4890a317e150",
+      "textMatch": true
+    },
+    "L376-G05-wrong-one": {
+      "text": "別把通風口打開。",
+      "src": "/assets/lessons/L376/audio/L376-G05-wrong-one.m4a",
+      "before": {
+        "durationMs": 3591,
+        "speechEndMs": 2775,
+        "tailMs": 816,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2949,
+        "speechEndMs": 2775,
+        "tailMs": 174,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.4,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.940000057220459,
+          "text": "別把通風口打開。",
+          "words": [
+            {
+              "word": "別",
+              "start": 0,
+              "end": 0.2800000011920929
+            },
+            {
+              "word": "把",
+              "start": 0.2800000011920929,
+              "end": 0.7200000286102295
+            },
+            {
+              "word": "通",
+              "start": 0.7200000286102295,
+              "end": 1.1799999475479126
+            },
+            {
+              "word": "風",
+              "start": 1.1799999475479126,
+              "end": 1.3600000143051147
+            },
+            {
+              "word": "口",
+              "start": 1.3600000143051147,
+              "end": 1.7599999904632568
+            },
+            {
+              "word": "打",
+              "start": 1.7599999904632568,
+              "end": 2.380000114440918
+            },
+            {
+              "word": "開。",
+              "start": 2.380000114440918,
+              "end": 2.680000066757202
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L376/audio/L376-G05-wrong-one.m4a",
+        "durationMs": 2949,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1180
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1180,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1360,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1760,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2380,
+            "endMs": 2680
+          }
+        ]
+      },
+      "sha256": "d3f473e5f469c0ea177c5464495d934765ca2a40a6f5553c2c04c079dfb6020d",
+      "textMatch": true
+    },
+    "L376-G05-wrong-two": {
+      "text": "別把通風口關上。",
+      "src": "/assets/lessons/L376/audio/L376-G05-wrong-two.m4a",
+      "before": {
+        "durationMs": 3969,
+        "speechEndMs": 2339,
+        "tailMs": 1630,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.1,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 2507,
+        "speechEndMs": 2339,
+        "tailMs": 168,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.1,
+        "maxDb": -2
+      },
+      "alignmentEvidence": {
+        "model": "whisper-1",
+        "prompt": null,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.5,
+          "text": "別把通風口關上",
+          "words": [
+            {
+              "word": "別",
+              "start": 0,
+              "end": 0.2800000011920929
+            },
+            {
+              "word": "把",
+              "start": 0.2800000011920929,
+              "end": 0.6399999856948853
+            },
+            {
+              "word": "通",
+              "start": 0.6399999856948853,
+              "end": 1.1200000047683716
+            },
+            {
+              "word": "風",
+              "start": 1.1200000047683716,
+              "end": 1.2799999713897705
+            },
+            {
+              "word": "口",
+              "start": 1.2799999713897705,
+              "end": 1.6799999475479126
+            },
+            {
+              "word": "關",
+              "start": 1.6799999475479126,
+              "end": 2.0399999618530273
+            },
+            {
+              "word": "上",
+              "start": 2.0399999618530273,
+              "end": 2.299999952316284
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L376/audio/L376-G05-wrong-two.m4a",
+        "durationMs": 2507,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1120,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1280,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1680,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2040,
+            "endMs": 2300
+          }
+        ]
+      },
+      "sha256": "4a303e6d329e69805ed5403f1e6331676ddd0469234e34a8f7a9cecb2979a535",
+      "textMatch": true
+    }
+  },
+  "images": [
+    {
+      "id": "L376-S01",
+      "sha256": "82d86aaef79652aa846b24d9f8322947c936709cecc837513633c90e93ae98be",
+      "src": "/assets/lessons/L376/images/L376-S01.webp"
+    },
+    {
+      "id": "L376-S02",
+      "sha256": "1c0eb56f9e17a0a816de511fa1808fe9bae874d2721272e5a393ecb720129b44",
+      "src": "/assets/lessons/L376/images/L376-S02.webp"
+    },
+    {
+      "id": "L376-S03",
+      "sha256": "5b65ceed39532d0a91dc48d7e5d42286ab9bfd9f2cc271e7116476819d0ce5b7",
+      "src": "/assets/lessons/L376/images/L376-S03.webp"
+    },
+    {
+      "id": "L376-S04",
+      "sha256": "89f6e099c4d070e5d8fe3db9b421f873e078dddd93997779808b0d917f7dcf97",
+      "src": "/assets/lessons/L376/images/L376-S04.webp"
+    },
+    {
+      "id": "L376-S05",
+      "sha256": "b24a62f13a2c5d08b5da8aea539fccc1572d9b1f0c04686cbb2ac7308f50865c",
+      "src": "/assets/lessons/L376/images/L376-S05.webp"
+    }
+  ]
+}

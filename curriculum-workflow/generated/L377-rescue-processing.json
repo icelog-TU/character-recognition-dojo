@@ -1,0 +1,21 @@
+[
+  {
+    "lessonId": "L377",
+    "source": "curriculum-workflow/audio-inbox/L377/L377-G02-prefix.mp3",
+    "output": "public/assets/lessons/L377/audio/L377-G02-prefix.m4a",
+    "src": "/assets/lessons/L377/audio/L377-G02-prefix.m4a",
+    "durationMs": 1009,
+    "loudness": {
+      "before": {
+        "max": -6,
+        "mean": -21.7
+      },
+      "gainDb": 0,
+      "after": {
+        "max": -6,
+        "mean": -21.7
+      }
+    },
+    "note": "Processing-stage duration before final silence-only trim; final bytes and duration are in rescue-qa.json."
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "model": "whisper-1",
+  "prompt": null,
+  "offsetMs": 0,
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.899999976158142,
+    "text": "下棋也能交朋友",
+    "words": [
+      {
+        "word": "下",
+        "start": 0,
+        "end": 0.4399999976158142
+      },
+      {
+        "word": "棋",
+        "start": 0.4399999976158142,
+        "end": 0.6800000071525574
+      },
+      {
+        "word": "也",
+        "start": 0.6800000071525574,
+        "end": 0.8199999928474426
+      },
+      {
+        "word": "能",
+        "start": 0.8199999928474426,
+        "end": 1
+      },
+      {
+        "word": "交",
+        "start": 1,
+        "end": 1.2200000286102295
+      },
+      {
+        "word": "朋友",
+        "start": 1.2200000286102295,
+        "end": 1.6399999856948853
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  }
+}
