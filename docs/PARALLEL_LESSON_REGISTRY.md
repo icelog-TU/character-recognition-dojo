@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L369 | 情 | claimed | Production A | codex/l369-complete-package | L366:吧; L367:謝; L368:感 | 吧謝感 | curriculum-workflow/lesson-requests/L369.json; curriculum-workflow/generated/L369-generation-packet.md; curriculum-workflow/drafts/L369-draft.json | curriculum-workflow/audio-inbox/L369/; public/assets/lessons/L369/ | Base origin/main cd4abf4b, formal L001-L365. Teacher-approved single-character lesson. Dependencies block Release only. |
 
 ## Status Values
 
