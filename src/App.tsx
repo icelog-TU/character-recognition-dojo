@@ -5914,7 +5914,7 @@ function SentencePracticePreview({
     setActiveGameCharIndex(null);
     setAskingGameCharIndex(targetIndex);
     setTeachPhase("asking");
-    await speakStageFour("哇！這個字我不會念，請你幫我念。請按一下紅框的字。");
+    await speakStageFour("哇！這個字我不會念，請你幫我念。請按住紅框的字不放。");
     if (guideRunRef.current !== runId) return;
     setTeachPhase("ready");
   }
@@ -6405,12 +6405,12 @@ function gameGuideText(game: SentenceGame, teachPhase: TeachCharacterPhase = "re
   }
   if (game.type === "teach-character") {
     if (teachPhase === "ready" || teachPhase === "priming" || teachPhase === "recording") {
-      return "請按一下紅框的字。聽到鈴聲，就大聲念出來。";
+      return "請按住紅框的字不放。聽到鈴聲，就大聲念出來。";
     }
     if (teachPhase === "reciting") {
       return "小兔子正在把句子念完。";
     }
-    return "小兔子會卡在不會念的字，請你幫牠。";
+    return "小兔子會停在不會念的字，請你幫牠。";
   }
   if (game.type === "missing-character") {
     return "有一個字不見了。請按下面的字卡，把它找回來。";
