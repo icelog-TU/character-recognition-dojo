@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 358:
+Characters taught after Lesson 359:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪`
 
 Recent review pool for the next lesson:
 
-`物 園 公 雞 排 正 位 餐 廳 讓 客 嗎 請 常 跟 年`
+`怪 物 園 公 雞 排 正 位 餐 廳 讓 客 嗎 請 常 跟`
 
 ## Visual Continuity Ledger
 
@@ -526,10 +526,11 @@ Note: R001-R004 have been migrated to the current 15-lesson review schedule. R00
 | L356 | 公 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公 | 太陽一出來，公雞就叫。 / 小雞跟著公雞跑。 / 公車上正好有位子。 / 等公車時要排好。 / 餐廳正門口有一排沙發。 | 雞 排 正 位 餐 | Source 9c30a88a4335ea17255be57b0621070b10c1e4c2. pre-debe8774 QA documentation accepted by Supervisor. Intake warnings: G02 fragment timings and playback evidence absent; sentence-tail findings retained for post-main review under Supervisor gate clarification. Canonical Stage 4 order; dependencies satisfied in main. |
 | L357 | 園 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園 | 校園裡有養小雞。 / 公園裡有好幾排長椅。 / 公雞跑進花園裡。 / 花園的角落正好有位子。 / 菜園裡有一排一排的白菜。 | 公 雞 排 正 位 | Source 52d320112dd2c3612e54e4311cf886d66b37ffc6. Supervisor rescue package accepted at the exact assigned SHA. Teacher branch preview is supplementary; formal asset review is post-main. Canonical Stage 4 order; dependencies satisfied in main. |
 | L358 | 物 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物 | 我們今天去動物園。 / 動物園裡有公雞。 / 小雞也是動物。 / 雞媽媽後面跟著一排小雞。 / 公車正好停在動物園前。 | 園 公 雞 排 正 | Source e3b8ae88679bcb4789354c1de1b832a6cd150925. Supervisor rescue package accepted at the exact assigned SHA. Teacher branch preview is supplementary; formal asset review is post-main. Canonical Stage 4 order; dependencies satisfied in main. |
+| L359 | 怪 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪 | 這本書裡有很多種怪物。 / 動物園裡有公雞。 / 我不敢看怪物電影。 / 桌上有一排怪物玩具。 / 公園裡沒有怪物。 | 物 園 公 雞 排 | Source df0216e694e3d55b867b909705a8a4fe43107ca1. Intake warnings: G02 fragment timings and playback evidence absent; treated as nonblocking under Supervisor gate clarification. Canonical Stage 4 order; dependencies satisfied in main. |
 
 ## Planned Lessons
 
-Merged curriculum is complete through L358. Review modules R001-R042 are valid for the current 15-lesson schedule through the L345 milestone. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L359. Review modules R001-R042 are valid for the current 15-lesson schedule through the L345 milestone. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
