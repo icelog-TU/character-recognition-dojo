@@ -45,8 +45,15 @@ if (action === "generate" && fragment) {
   }
 }
 if (action === "align") {
+  const approvedPrefix = "public/assets/lessons/L370/audio/L370-G02-prefix.m4a";
+  const hash = require("node:crypto").createHash("sha256").update(read(approvedPrefix)).digest("hex");
+  if (hash !== "f1629d1104b644731063882677597b539747a292a183208b6ea95ba55362b258") throw Error("Teacher-approved prefix changed; renew audio review.");
+  draft.stage4AudioAlignment = {...draft.stage4AudioAlignment, "L370-G02-prefix": {spokenText:"朋",src:"/assets/lessons/L370/audio/L370-G02-prefix.m4a",durationMs:1091,charTimings:[{charIndex:0,startMs:0,endMs:532}]}};
   for (const game of draft.sentenceGames) {
     for (const part of ["prefix","suffix"]) {
+      // Teacher verified this exact single-character file on 2026-09-16.
+      // Preserve its measured timing; do not falsify the ambiguous ASR transcript.
+      if (game.id === "L370-G02" && part === "prefix") continue;
       if (game.teachAudio?.[part+"Src"]) draft.sentences.push({id:game.id+"-"+part,text:game.teachAudio[part+"Text"],spokenText:game.teachAudio[part+"Text"],approved:true,audio:{src:game.teachAudio[part+"Src"]}});
     }
     if (game.type === "choose-pronunciation") {
@@ -63,7 +70,7 @@ fs.writeFileSync = function(file, data, ...args) {
   if (path.resolve(String(file)) === sharedPath) {
     const result = JSON.parse(data).lessons[0];
     if (action === "align") {
-      result.stage4AudioAlignment = Object.fromEntries(result.sentences.filter(s => !/-S\d\d$/.test(s.id)).map(s => [s.id,{spokenText:s.spokenText,...s.audio}]));
+      result.stage4AudioAlignment = {...result.stage4AudioAlignment, ...Object.fromEntries(result.sentences.filter(s => !/-S\d\d$/.test(s.id)).map(s => [s.id,{spokenText:s.spokenText,...s.audio}]))};
       result.sentences = result.sentences.filter(s => /-S\d\d$/.test(s.id));
     }
     return write.call(this, draftPath, JSON.stringify(result,null,2)+"\n", "utf8");

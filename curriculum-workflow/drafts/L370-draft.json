@@ -135,7 +135,19 @@
         "prefixText": "朋",
         "prefixSrc": "/assets/lessons/L370/audio/L370-G02-prefix.m4a",
         "suffixText": "借我雨衣我跟他道謝",
-        "suffixSrc": "/assets/lessons/L370/audio/L370-G02-suffix.m4a"
+        "suffixSrc": "/assets/lessons/L370/audio/L370-G02-suffix.m4a",
+        "prefixAudio": {
+          "spokenText": "朋",
+          "src": "/assets/lessons/L370/audio/L370-G02-prefix.m4a",
+          "durationMs": 1091,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 532
+            }
+          ]
+        }
       }
     },
     {
@@ -238,5 +250,19 @@
       ]
     }
   ],
-  "notes": "Two-character word lesson pilot; one normal lesson/order/course card. Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation. Expected six cards: 朋 x2, 友 x2, two distinct old characters; completion requires four target taps. L366-L369 now formally merged on main 95ca55f72ed99e36652a4de2dff4a5d20c16c1cc. Stopped per teacher non-Stage-2 technical-gate condition: L370-G02-prefix exact spokenText is 朋, but AI transcription returned 旁. No transcript substitution performed; alignment command exited 1 before persisting final timings. Standalone prefix needs pronunciation review/regeneration before rerunning alignment. This is separate from the overridden Stage 2 duplicate-card verification item. Retry after re-reading 95ca55f7: explicit zhuyin prefix regenerated to 1091 ms; exact transcript now 憨 instead of 朋. Audio needs direct review; no bypass or false timing acceptance."
+  "notes": "Two-character word lesson pilot. Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation. Teacher confirmed G02 prefix 朋 pronunciation correct on 2026-09-16; exact file SHA256 f1629d1104b644731063882677597b539747a292a183208b6ea95ba55362b258 from commit fa9e5c4b6d4bce79a18b11c14c95d2e3db36deec. Human-reviewed one-Han timing 0-532ms from measured speech/silence boundary; duration 1091ms. Original ASR 憨 retained as mismatch, not rewritten. Current separate gate: G05 wrong-one expected 小朋友排好再上車吧, ASR 小朋友抬好再上車吧. Exact-text alignment stops; not certified correct or defective by listening. All other final timing/image requirements remain incomplete.",
+  "stage4AudioAlignment": {
+    "L370-G02-prefix": {
+      "spokenText": "朋",
+      "src": "/assets/lessons/L370/audio/L370-G02-prefix.m4a",
+      "durationMs": 1091,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 532
+        }
+      ]
+    }
+  }
 }

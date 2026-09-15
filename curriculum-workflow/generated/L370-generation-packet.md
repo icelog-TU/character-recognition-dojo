@@ -146,7 +146,19 @@ Expected Stage 2: 朋 x2, 友 x2, two distinct old characters; 4 target taps. St
         "prefixText": "朋",
         "prefixSrc": "/assets/lessons/L370/audio/L370-G02-prefix.m4a",
         "suffixText": "借我雨衣我跟他道謝",
-        "suffixSrc": "/assets/lessons/L370/audio/L370-G02-suffix.m4a"
+        "suffixSrc": "/assets/lessons/L370/audio/L370-G02-suffix.m4a",
+        "prefixAudio": {
+          "spokenText": "朋",
+          "src": "/assets/lessons/L370/audio/L370-G02-prefix.m4a",
+          "durationMs": 1091,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 532
+            }
+          ]
+        }
       }
     },
     {
@@ -249,7 +261,21 @@ Expected Stage 2: 朋 x2, 友 x2, two distinct old characters; 4 target taps. St
       ]
     }
   ],
-  "notes": "Two-character word lesson pilot; one normal lesson/order/course card. Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation. Expected six cards: 朋 x2, 友 x2, two distinct old characters; completion requires four target taps. L366-L369 now formally merged on main 95ca55f72ed99e36652a4de2dff4a5d20c16c1cc. Stopped per teacher non-Stage-2 technical-gate condition: L370-G02-prefix exact spokenText is 朋, but AI transcription returned 旁. No transcript substitution performed; alignment command exited 1 before persisting final timings. Standalone prefix needs pronunciation review/regeneration before rerunning alignment. This is separate from the overridden Stage 2 duplicate-card verification item. Retry after re-reading 95ca55f7: explicit zhuyin prefix regenerated to 1091 ms; exact transcript now 憨 instead of 朋. Audio needs direct review; no bypass or false timing acceptance."
+  "notes": "Two-character word lesson pilot. Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation. Teacher confirmed G02 prefix 朋 pronunciation correct on 2026-09-16; exact file SHA256 f1629d1104b644731063882677597b539747a292a183208b6ea95ba55362b258 from commit fa9e5c4b6d4bce79a18b11c14c95d2e3db36deec. Human-reviewed one-Han timing 0-532ms from measured speech/silence boundary; duration 1091ms. Original ASR 憨 retained as mismatch, not rewritten. Current separate gate: G05 wrong-one expected 小朋友排好再上車吧, ASR 小朋友抬好再上車吧. Exact-text alignment stops; not certified correct or defective by listening. All other final timing/image requirements remain incomplete.",
+  "stage4AudioAlignment": {
+    "L370-G02-prefix": {
+      "spokenText": "朋",
+      "src": "/assets/lessons/L370/audio/L370-G02-prefix.m4a",
+      "durationMs": 1091,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 532
+        }
+      ]
+    }
+  }
 }
 ```
 
@@ -260,16 +286,10 @@ Expected Stage 2: 朋 x2, 友 x2, two distinct old characters; 4 target taps. St
 Word 朋友 count4; 朋4; 友4; 情2 感2 謝2 吧1 但1. Allowed 374 chars, line joins and visible-length limits PASS. OpenAI standalone per-character audio, full sentence/option audio; exact teach fragments, no splicing. Full L058 style-only set, refined examples, family anchors, young boy and sporty boy, Xiaoyue/Xiaoguang references required.
 
 
-## Production Stop Report
+## Current Production Stop Report
 
-Retry after latest-main SOP re-read (95ca55f7): regenerated only G02-prefix with explicit 朋 / ㄆㄥˊ / peng rising-tone instructions and unchanged input 朋. New processed duration is 1091 ms. AI transcript now returns 憨 instead of expected 朋; exact-text alignment gate still exits 1. This may be short-utterance recognition ambiguity or pronunciation quality; no auditory diagnosis is claimed. Direct audio review is required before accepting or changing timing metadata. The Stage 2 teacher override remains in force and is not the cause of this stop.
+Two-character word lesson pilot. Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation. Teacher confirmed G02 prefix 朋 pronunciation correct on 2026-09-16; exact file SHA256 f1629d1104b644731063882677597b539747a292a183208b6ea95ba55362b258 from commit fa9e5c4b6d4bce79a18b11c14c95d2e3db36deec. Human-reviewed one-Han timing 0-532ms from measured speech/silence boundary; duration 1091ms. Original ASR 憨 retained as mismatch, not rewritten. Current separate gate: G05 wrong-one expected 小朋友排好再上車吧, ASR 小朋友抬好再上車吧. Exact-text alignment stops; not certified correct or defective by listening. All other final timing/image requirements remain incomplete.
 
-Package status: needs-rework. Stopped per teacher non-Stage-2 technical-gate condition: L370-G02-prefix exact spokenText is 朋, but AI transcription returned 旁. No transcript substitution performed; alignment command exited 1 before persisting final timings. Standalone prefix needs pronunciation review/regeneration before rerunning alignment. This is separate from the overridden Stage 2 duplicate-card verification item.
+G02 approval scope: only prefix pronunciation. Local media preview shown in preceding task message; immutable source commit and file hash above identify the reviewed file. No teacher approval claimed for any other clip. No ASR-result forgery, no speech slicing, and no replacement of either independent charAudio.
 
-Checks: tools:check PASS, ai:check PASS, curriculum:audit-state PASS; mechanical allowed/displayLines precheck PASS; 11 OpenAI audio drafts generated and processed to M4A. Alignment exact-text gate stopped on G02-prefix; final timings are not complete. Package-intake not run because required technical gate is not satisfied. Five final images are not complete.
-
-Two image generation candidates exist outside the repo; neither is accepted as a final WebP. No other image generation started. Candidate paths:
-- C:/Users/User/.codex/generated_images/01a0290e-12a2-7581-9556-89630e267a80/exec-52dd7882-c36d-4edd-96a6-3cdb59ee6b67.png (S01)
-- C:/Users/User/.codex/generated_images/01a0290e-12a2-7581-9556-89630e267a80/exec-fd399cd2-6c05-4eb0-9de9-0e2dd181815f.png (S02)
-
-Teacher override: Stage 2 duplicate-card behavior will be verified post-merge on main during first two-character pilot. Do not block package completion on pre-merge Stage 2 card-count simulation.
+G05 wrong-one now requires direct review or regeneration; package-intake not run. S01/S02 image candidates remain saved outside repo as recorded in earlier commit; remaining image work not resumed because this separate exact-text gate stopped the run.
