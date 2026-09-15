@@ -1,0 +1,798 @@
+{
+  "unit": "L393",
+  "checks": [
+    {
+      "check": "All 10 final audio files: ffmpeg decode, AAC mono 44100 Hz, audible volume, exact contextual AI transcript (唸 normalized to 念 only).",
+      "result": "PASS"
+    },
+    {
+      "check": "Standalone 碼 charAudio duration and volume. Generated from single 碼; no sentence extraction.",
+      "result": "PASS"
+    },
+    {
+      "check": "Final approved sentence synchronization; full allowed-character sweep; Han counts 10/8/9/10/9; displayLines <=6 visible; timings bounds/order/spans/tails.",
+      "result": "PASS"
+    },
+    {
+      "check": "Stage 4 single-Han target/index/card mappings, 3 distinct G03 choices, dedicated G02 fragments, full G05 wrong sentences and volume spread 0.9 dB.",
+      "result": "PASS"
+    },
+    {
+      "check": "Five final square 1024px WebP images and total asset bytes 1072523.",
+      "result": "PASS"
+    },
+    {
+      "check": "Repo validate:production baseline and isolated L393 draft fixture; original production JSON restored byte-for-byte.",
+      "result": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "id": "L393-S01",
+      "bytes": 139386,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L393-S02",
+      "bytes": 130284,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L393-S03",
+      "bytes": 151298,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L393-S04",
+      "bytes": 165618,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L393-S05",
+      "bytes": 150868,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "audio": [
+    {
+      "file": "L393-S01.m4a",
+      "expected": "頁碼在每一頁的右下角",
+      "duration": 3.319002,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.9,
+      "max": -2,
+      "silence": [],
+      "sha256": "dec563cd50beacb1bc8d69e3ada7df57b5d5125a9f99a2f1a5c3acb06b798d3f",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.25,
+        "text": "頁碼在每一頁的右下角。",
+        "words": [
+          {
+            "word": "頁",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "碼",
+            "start": 0.3799999952316284,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "在",
+            "start": 0.6000000238418579,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "每",
+            "start": 1.0800000429153442,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "一",
+            "start": 1.6799999475479126,
+            "end": 1.8200000524520874
+          },
+          {
+            "word": "頁",
+            "start": 1.8200000524520874,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "的",
+            "start": 1.899999976158142,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "右",
+            "start": 2.200000047683716,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "下",
+            "start": 2.440000057220459,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "角。",
+            "start": 2.799999952316284,
+            "end": 3.0199999809265137
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L393-S02.m4a",
+      "expected": "請報電話號碼給我",
+      "duration": 2.917007,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.8,
+      "max": -2.8,
+      "silence": [],
+      "sha256": "fad6b74c85a70b86aecc4360ee62b65678eac76ee8f91c0ee933b61c8c58e498",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.9000000953674316,
+        "text": "請報電話號碼給我。",
+        "words": [
+          {
+            "word": "請",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "報",
+            "start": 0.5,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "電",
+            "start": 0.8600000143051147,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "話",
+            "start": 1.2999999523162842,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "號",
+            "start": 1.600000023841858,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "碼",
+            "start": 1.8799999952316284,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "給",
+            "start": 2.0399999618530273,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "我。",
+            "start": 2.440000057220459,
+            "end": 2.7200000286102295
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      }
+    },
+    {
+      "file": "L393-S03.m4a",
+      "expected": "這個號碼有幾個數字",
+      "duration": 2.44,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.3,
+      "max": -1.9,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0.890794
+        },
+        {
+          "type": "end",
+          "seconds": 1.04127
+        }
+      ],
+      "sha256": "aa96ee3043ac75031bea3b28d62d9b1efdb6c55db8b8df82dc1e14e157ed70a7",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.390000104904175,
+        "text": "這個號碼有幾個數字?",
+        "words": [
+          {
+            "word": "這個",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "號",
+            "start": 0.3799999952316284,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "碼",
+            "start": 0.6399999856948853,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "有",
+            "start": 0.8399999737739563,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "幾",
+            "start": 1.3600000143051147,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "個",
+            "start": 1.559999942779541,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "數",
+            "start": 1.7799999713897705,
+            "end": 2
+          },
+          {
+            "word": "字",
+            "start": 2,
+            "end": 2.180000066757202
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      }
+    },
+    {
+      "file": "L393-S04.m4a",
+      "expected": "報數時小光念得好大聲",
+      "duration": 3.650998,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.7,
+      "max": -1.9,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0.951655
+        },
+        {
+          "type": "end",
+          "seconds": 1.252834
+        }
+      ],
+      "sha256": "7ce48a54854ee75ccdaaf93e6a966e55bf0fc66d78766b4d50b643fd9e66c14f",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.619999885559082,
+        "text": "報數時,小光念得好大聲。",
+        "words": [
+          {
+            "word": "報",
+            "start": 0,
+            "end": 0.30000001192092896
+          },
+          {
+            "word": "數",
+            "start": 0.30000001192092896,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "時",
+            "start": 0.6200000047683716,
+            "end": 1
+          },
+          {
+            "word": "小",
+            "start": 1.559999942779541,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "光",
+            "start": 1.7400000095367432,
+            "end": 2
+          },
+          {
+            "word": "念",
+            "start": 2,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "得",
+            "start": 2.259999990463257,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "好",
+            "start": 2.619999885559082,
+            "end": 2.9200000762939453
+          },
+          {
+            "word": "大",
+            "start": 2.9200000762939453,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "聲。",
+            "start": 3.2200000286102295,
+            "end": 3.380000114440918
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L393-S05.m4a",
+      "expected": "鞋子太小要換大一碼",
+      "duration": 3.251995,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.5,
+      "max": -2.1,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.327528
+        },
+        {
+          "type": "end",
+          "seconds": 1.727211
+        }
+      ],
+      "sha256": "bf6f84a22a2ca078b7c013209c4a137e56c5aed41004d9d9a900ee6fd66f4a43",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.2200000286102295,
+        "text": "鞋子太小,要換大一碼。",
+        "words": [
+          {
+            "word": "鞋",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "子",
+            "start": 0.41999998688697815,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "太",
+            "start": 0.6399999856948853,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "小",
+            "start": 1.0199999809265137,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "要",
+            "start": 1.7999999523162842,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "換",
+            "start": 2.0399999618530273,
+            "end": 2.2200000286102295
+          },
+          {
+            "word": "大",
+            "start": 2.2200000286102295,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "一",
+            "start": 2.7200000286102295,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "碼。",
+            "start": 2.9000000953674316,
+            "end": 3.0199999809265137
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "char-u78bc.m4a",
+      "expected": "碼",
+      "duration": 1.092993,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -19,
+      "max": -2.1,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0
+        },
+        {
+          "type": "end",
+          "seconds": 0.309751
+        }
+      ],
+      "sha256": "e0cffbab80fd445dbb7e8aefa269d12df4058bed4bd928e5ea7d074fa2c22c8f",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 1.1100000143051147,
+        "text": "碼",
+        "words": [
+          {
+            "word": "碼",
+            "start": 0,
+            "end": 0.7599999904632568
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 2
+        }
+      }
+    },
+    {
+      "file": "L393-G02-prefix.m4a",
+      "expected": "請報電話號",
+      "duration": 1.708005,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -16.4,
+      "max": -2,
+      "silence": [],
+      "sha256": "6948804b9e95e7004992f055c0c864a8e37252b1fe1bc26b009a9f6c51baa01f",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 1.6699999570846558,
+        "text": "請報電話號。",
+        "words": [
+          {
+            "word": "請",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "報",
+            "start": 0.41999998688697815,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "電",
+            "start": 0.7400000095367432,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "話",
+            "start": 1.0199999809265137,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "號。",
+            "start": 1.2400000095367432,
+            "end": 1.5
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 2
+        }
+      }
+    },
+    {
+      "file": "L393-G02-suffix.m4a",
+      "expected": "給我",
+      "duration": 0.639002,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.1,
+      "max": -5,
+      "silence": [],
+      "sha256": "7aea29b1dd801c2b2e62e4a956ac326d6ce73802a7ea0e98969a0c4725ed8d1c",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 0.6499999761581421,
+        "text": "給我!",
+        "words": [
+          {
+            "word": "給",
+            "start": 0,
+            "end": 0.20000000298023224
+          },
+          {
+            "word": "我",
+            "start": 0.20000000298023224,
+            "end": 0.5
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 1
+        }
+      }
+    },
+    {
+      "file": "L393-G05-wrong-one.m4a",
+      "expected": "報數時小光念得好小聲",
+      "duration": 3.882993,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.5,
+      "max": -1.9,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0.903469
+        },
+        {
+          "type": "end",
+          "seconds": 1.217347
+        }
+      ],
+      "sha256": "1f1e603f8582cb0ff354c1b14deb327662aeadac88b9d3390ca4e482e7f912f5",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.799999952316284,
+        "text": "報數時,小光唸得好小聲。",
+        "words": [
+          {
+            "word": "報",
+            "start": 0,
+            "end": 0.2800000011920929
+          },
+          {
+            "word": "數",
+            "start": 0.2800000011920929,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "時",
+            "start": 0.5799999833106995,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "小",
+            "start": 1.5399999618530273,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "光",
+            "start": 1.7400000095367432,
+            "end": 2
+          },
+          {
+            "word": "唸",
+            "start": 2,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "得",
+            "start": 2.200000047683716,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "好",
+            "start": 2.6600000858306885,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "小",
+            "start": 3.0399999618530273,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "聲。",
+            "start": 3.3399999141693115,
+            "end": 3.559999942779541
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L393-G05-wrong-two.m4a",
+      "expected": "報數時小月念得好大聲",
+      "duration": 4.042993,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.8,
+      "max": -1.6,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.195374
+        },
+        {
+          "type": "end",
+          "seconds": 1.605034
+        }
+      ],
+      "sha256": "798d767a552735376c0968f0db621e12cf91c26a3a00ccf0a851db0e0e529e63",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 4.039999961853027,
+        "text": "報數時,小月念得好大聲。",
+        "words": [
+          {
+            "word": "報",
+            "start": 0,
+            "end": 0.36000001430511475
+          },
+          {
+            "word": "數",
+            "start": 0.36000001430511475,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "時",
+            "start": 0.7599999904632568,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "小",
+            "start": 1.899999976158142,
+            "end": 2.119999885559082
+          },
+          {
+            "word": "月",
+            "start": 2.119999885559082,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "念",
+            "start": 2.4000000953674316,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "得",
+            "start": 2.6600000858306885,
+            "end": 3
+          },
+          {
+            "word": "好",
+            "start": 3,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "大",
+            "start": 3.319999933242798,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "聲。",
+            "start": 3.5799999237060547,
+            "end": 3.819999933242798
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 5
+        }
+      }
+    }
+  ],
+  "assetBytes": 1072523,
+  "browserQA": {
+    "status": "tooling-fallback",
+    "attempts": [
+      "npm run dev -- --host 127.0.0.1 --port 5193: vite executable missing in assigned worktree",
+      "cua.getBrowser localhost initialization timed out after 30 seconds; kernel reset"
+    ],
+    "scope": "Phone-width playback/highlight/recording interaction was not executed. Production SOP browser automation fallback applies after non-browser technical gates. Teacher subjective review is post-merge; no pre-merge approval requested."
+  },
+  "teacherExceptions": [
+    "Teacher explicitly permits readable Arabic page numbers 1, 2, 3 on S01 and fictional queue ticket 128 on S03 only; no readable Chinese, brands or personal data. Numbers are not spokenText or Han coverage.",
+    "S01: same document, three loose sheets, each upright page has its own unobscured bottom-right page number; not a book or workbook.",
+    "S02: girl and father visit community-center counter; clerk requests their phone number and is the speaker 我; father answers, girl accompanies. No phone-help scene.",
+    "S03 數字 and S04/G05 報數 pronounce 數 as ㄕㄨˋ; 碼 is ㄇㄚˇ."
+  ],
+  "imageGeneration": "Built-in imagegen; each final WebP inspected beside L058 references, refined preferred examples and applicable family/Xiaoguang anchors.",
+  "rejectedDrafts": [
+    "S01 first draft pointed to an illustration instead of the page number; replaced.",
+    "S05 first draft clerk resembled father and gesture needed clarification; replaced."
+  ],
+  "rejectedDraftsCommitted": false,
+  "audioMethod": "Repo ai:audio with lesson-specific pronunciation instructions; assets:audio with measured trailing-silence-only end caps retaining 120ms after -45dB silence start; assets:align:ai with Traditional Chinese vocabulary prompt and simplified-equivalent normalization. Temporary tool-script and production JSON changes restored. Final audio re-transcribed and decoded after processing. No spoken syllables cut/spliced. Full generated wrong options retained.",
+  "numericQA": {
+    "S01": "PASS: same document three loose upright sheets, each bottom-right page number 1/2/3 visible and unoccluded; girl points toward middle-page number.",
+    "S03": "PASS: one fictional queue ticket reads 128, upright, complete, no answer 3 or extra number cards."
+  }
+}
