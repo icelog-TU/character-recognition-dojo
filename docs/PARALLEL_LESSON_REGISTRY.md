@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L393 | 碼 | claimed | Production F | codex/l393-complete-package | L385, L388, L389, L390, L391, L392; Release: preceding lessons and R047/R048 | 字 念 號 數 報 頁 | curriculum-workflow/lesson-requests/L393.json; curriculum-workflow/generated/L393-generation-packet.md; curriculum-workflow/drafts/L393-draft.json | public/assets/lessons/L393/; curriculum-workflow/audio-inbox/L393/ | Teacher-approved handoff. S01 loose document pages 1/2/3; S03 ticket 128; S02 counter clerk is the speaker. R045/R046 already in main. |
 
 ## Status Values
 
