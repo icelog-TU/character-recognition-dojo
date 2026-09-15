@@ -16,6 +16,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| R044 | review L331-L360 | dependency-blocked-asset-complete | Package Rescue | codex/r043-r044-package-rescue | L360:奇 | 奇 | `curriculum-workflow/review-requests/R044.json`; `curriculum-workflow/generated/R044-generation-packet.md`; `curriculum-workflow/drafts/R044-draft.json` | `public/assets/reviews/R044/` | Audio/timing rescue; technical QA PASS; see package evidence. Release owns integration. |
+| R043 | review L331-L360 | dependency-blocked-asset-complete | Package Rescue | codex/r043-r044-package-rescue | L360:奇 | 奇 | `curriculum-workflow/review-requests/R043.json`; `curriculum-workflow/generated/R043-generation-packet.md`; `curriculum-workflow/drafts/R043-draft.json` | `public/assets/reviews/R043/` | Audio/timing rescue; technical QA PASS; see package evidence. Release owns integration. |
 
 ## Status Values
 
