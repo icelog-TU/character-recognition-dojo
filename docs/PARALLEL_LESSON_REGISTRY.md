@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L385 | 字 / normal single-character lesson | needs-rework | Production B | codex/l385-complete-package | L380, L381, L382, L383, L384 | 連, 傳, 相, 信, 寫 | curriculum-workflow/lesson-requests/L385.json; curriculum-workflow/generated/L385-generation-packet.md; curriculum-workflow/drafts/L385-draft.json | public/assets/lessons/L385/; curriculum-workflow/audio-inbox/L385/ | partial-package; G02 prefix transcription/alignment blocked after four generations. Final timings and WebP assets missing. See generated/L385-blocker-report.md. Base 250ca4a3, formal L001-L375; Release also requires R045/R046 and preceding lessons. |
+| L385 | 字 / normal single-character lesson | claimed | Package Rescue | codex/l385-package-rescue | L380, L381, L382, L383, L384 | 連, 傳, 相, 信, 寫 | curriculum-workflow/lesson-requests/L385.json; curriculum-workflow/generated/L385-generation-packet.md; curriculum-workflow/drafts/L385-draft.json | public/assets/lessons/L385/; curriculum-workflow/audio-inbox/L385/ | Rescue claimed from original package; package remains incomplete pending asset/timing/UI verification. Earlier lessons and required review pair remain Release dependencies. |
 
 ## Status Values
 
