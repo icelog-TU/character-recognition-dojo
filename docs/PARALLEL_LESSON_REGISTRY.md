@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L388 | 念 / normal single-character lesson | claimed | Production B | codex/l388-complete-package | L383, L384, L385, L386, L387 | 信, 寫, 字, 名, 第 | curriculum-workflow/lesson-requests/L388.json; curriculum-workflow/generated/L388-generation-packet.md; curriculum-workflow/drafts/L388-draft.json | public/assets/lessons/L388/; curriculum-workflow/audio-inbox/L388/ | Base 7fcef325, formal L001-L375. Release requires prior lessons and R045/R046. S03 mother reads aloud; S04 school-trip letter, mother absent. No readable text exception. |
+| L388 | 念 / normal single-character lesson | ready-blocked-by-dependency | Production B | codex/l388-complete-package | L383, L384, L385, L386, L387 | 信, 寫, 字, 名, 第 | curriculum-workflow/lesson-requests/L388.json; curriculum-workflow/generated/L388-generation-packet.md; curriculum-workflow/drafts/L388-draft.json | public/assets/lessons/L388/; curriculum-workflow/audio-inbox/L388/ | dependency-blocked-asset-complete. Base 7fcef325; final main b313ded8 remains L001-L375. Five WebP, ten M4A, final AI timings and technical QA. G02 microphone replay TOOL_LIMITED, see UI QA. Release needs prior lessons and R045/R046. Teacher review post-main. |
 
 ## Status Values
 
