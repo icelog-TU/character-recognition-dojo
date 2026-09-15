@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L395 | 印 | claimed | Production C | codex/l395-complete-package | L389,L390,L391,L392,L393,L394; prior playable sequence including after390 review pair | 號數報頁碼翻 | curriculum-workflow/lesson-requests/L395.json; curriculum-workflow/generated/L395-generation-packet.md; curriculum-workflow/drafts/L395-draft.json | public/assets/lessons/L395/; curriculum-workflow/audio-inbox/L395/ | Main L380; teacher-approved numeric image exceptions: S01 defective 8, S02 clear 128. Production only; ordered integration belongs to Release. |
 
 ## Status Values
 
