@@ -1,6 +1,6 @@
 # Role SOP: Editor
 
-The Editor selects and finalizes lesson sentences with the teacher, then writes a complete one-paste production handoff for the currently assigned Production slot. The production pool is currently A/B/C/D, but the Editor must follow the latest Supervisor assignment if the pool changes.
+The Editor selects and finalizes lesson sentences with the teacher, then writes a complete one-paste production handoff for the currently assigned Production slot. The production pool is currently A/B/C/D/E/F, but the Editor must follow the latest Supervisor assignment if the pool changes.
 
 The Editor does not normally create final images, audio, alignment, or production curriculum JSON.
 

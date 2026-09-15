@@ -1,6 +1,6 @@
 # Role SOP: Production Slots
 
-Production slots build `asset-complete-package` lesson or review-module packages from Editor handoffs. The active slot names and worktree paths come from the latest Supervisor/teacher assignment; do not assume the pool can only be A/B/C/D.
+Production slots build `asset-complete-package` lesson or review-module packages from Editor handoffs. The active slot names and worktree paths come from the latest Supervisor/teacher assignment; do not assume the pool can only be A/B/C/D/E/F.
 
 Production threads may work in parallel, but each thread owns exactly one assigned unit and one assigned worktree slot at a time.
 
@@ -49,6 +49,12 @@ C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
 
 Production D:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-d
+
+Production E:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-e
+
+Production F:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-f
 ```
 
 If the shell is not in the assigned slot, stop before editing.

@@ -116,7 +116,7 @@ Recommendation:
 If the result is PASS, include two parts:
 
 1. The audit result summary.
-2. A fenced `Production Activation Handoff` that the teacher can paste directly to the assigned Production A/B/C/D thread.
+2. A fenced `Production Activation Handoff` that the teacher can paste directly to the assigned Production A/B/C/D/E/F thread.
 
 The Production Activation Handoff must:
 
@@ -137,7 +137,9 @@ Unless the teacher explicitly assigns another slot, Audit must assign review-pai
 - R003/R004 -> Production B, worktree `C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-b`
 - R005/R006 -> Production C, worktree `C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c`
 - R007/R008 -> Production D, worktree `C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-d`
-- Then repeat A/B/C/D for later pairs: R009/R010 -> A, R011/R012 -> B, R013/R014 -> C, R015/R016 -> D, and so on.
+- R009/R010 -> Production E, worktree `C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-e`
+- R011/R012 -> Production F, worktree `C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-f`
+- Then repeat A/B/C/D/E/F for later pairs: R013/R014 -> A, R015/R016 -> B, R017/R018 -> C, R019/R020 -> D, R021/R022 -> E, R023/R024 -> F, and so on.
 
 If the Audit Packet names a different Production slot than the round-robin rule, use the teacher's latest explicit instruction first; otherwise correct the slot and worktree in the Production Activation Handoff while preserving all approved lesson content.
 

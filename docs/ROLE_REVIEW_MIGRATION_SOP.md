@@ -162,7 +162,7 @@ If Review Migration Audit returns FAIL, revise the Audit Packet and resend the p
 
 If Review Migration Audit returns PASS, Audit is responsible for producing the final `Production Activation Handoff` by copying the approved content and removing audit-only wording. Review Migration does not need to regenerate a new Production handoff unless Audit finds a problem or the teacher asks for a revision.
 
-Unless the teacher explicitly assigns a different slot, Review Migration should suggest slots using the review-pair round-robin: R001/R002 -> A, R003/R004 -> B, R005/R006 -> C, R007/R008 -> D, then repeat A/B/C/D. Audit makes the final Production Activation Handoff slot/worktree selection from the teacher's latest instruction or this round-robin rule.
+Unless the teacher explicitly assigns a different slot, Review Migration should suggest slots using the review-pair round-robin: R001/R002 -> A, R003/R004 -> B, R005/R006 -> C, R007/R008 -> D, R009/R010 -> E, R011/R012 -> F, then repeat A/B/C/D/E/F. Audit makes the final Production Activation Handoff slot/worktree selection from the teacher's latest instruction or this round-robin rule.
 
 ## What Not To Do
 

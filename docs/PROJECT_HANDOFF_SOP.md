@@ -47,7 +47,7 @@ Open exactly one role SOP after this file:
 - Sentence editor: `docs/ROLE_EDITOR_SOP.md`
 - Review-module migration editor: `docs/ROLE_REVIEW_MIGRATION_SOP.md`
 - Review-module migration audit: `docs/ROLE_REVIEW_MIGRATION_AUDIT_SOP.md`
-- Production slots, currently A/B/C/D unless Supervisor assigns more: `docs/ROLE_PRODUCTION_SOP.md`
+- Production slots, currently A/B/C/D/E/F unless Supervisor assigns more: `docs/ROLE_PRODUCTION_SOP.md`
 - Package rescue for incomplete unmerged Production branches: `docs/ROLE_PACKAGE_RESCUE_SOP.md`
 - Release / ordered push to `main`: `docs/ROLE_RELEASE_SOP.md`
 - Asset repair after teacher review: `docs/ROLE_ASSET_REPAIR_SOP.md`
@@ -136,6 +136,12 @@ C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
 
 Production D:
 C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-d
+
+Production E:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-e
+
+Production F:
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-f
 ```
 
 Asset repair slots:
@@ -263,7 +269,7 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/PROJECT_HANDOFF_SOP.md
 - docs/ROLE_EDITOR_SOP.md
 
-你的工作是跟我選新字、定稿五句話，然後輸出可一鍵貼給目前指定 Production slot 的完整 handoff。Production 目前是 A/B/C/D；如果 Supervisor 指派更多 slot，以最新指派為準。不要製作圖片或音檔，除非我另外明確要求。
+你的工作是跟我選新字、定稿五句話，然後輸出可一鍵貼給目前指定 Production slot 的完整 handoff。Production 目前是 A/B/C/D/E/F；如果 Supervisor 指派更多 slot，以最新指派為準。不要製作圖片或音檔，除非我另外明確要求。
 ```
 
 ### Review Migration
@@ -286,15 +292,15 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/PARALLEL_LESSON_REGISTRY.md
 - docs/LESSON_VISUAL_CAST_SOP.md
 
-你的工作是把舊複習課遷移到最新的 15 課一組複習規則。你有 Editor 等級的句子編輯能力，但只負責複習課句子、coverage、allowedChars、認知難度、imageNotes，以及輸出可一鍵貼給 Review Migration Audit 的完整 Audit Packet。Audit PASS 後由 Review Migration Audit 產生可貼給 Production A/B/C/D 的乾淨 Production Activation Handoff。
+你的工作是把舊複習課遷移到最新的 15 課一組複習規則。你有 Editor 等級的句子編輯能力，但只負責複習課句子、coverage、allowedChars、認知難度、imageNotes，以及輸出可一鍵貼給 Review Migration Audit 的完整 Audit Packet。Audit PASS 後由 Review Migration Audit 產生可貼給 Production A/B/C/D/E/F 的乾淨 Production Activation Handoff。
 
 不要製作圖片、不要製作音檔、不要做 alignment、不要更新 production JSON、不要 commit、不要 push，除非老師另外明確要求。
 
 目前目標依老師指定的缺口而定：審查 legacy review modules，並補齊/重寫/重新編號到 current 15-lesson schedule。每一對 review module 都要依 milestone 鎖定 coverage range 和 allowed-character ceiling，不可以用最新 main 的全部已學字來做舊 milestone 的複習課。到 L300 時需要 R001-R036；同一公式一路延伸到 L600 的 R075/R076。
 
-工作流程：一次只處理一對 review modules。先給老師看 10 句候選句，等老師確認句子後，才寫 imageNotes、Stage 4、完整 Audit Packet。Audit Packet 必須標示 `PENDING REVIEW MIGRATION AUDIT - DO NOT SEND TO PRODUCTION UNTIL AUDIT PASS`，並先交給 Review Migration Audit。Audit PASS 後，由 Audit 產生乾淨的 `Production Activation Handoff`，移除 audit-only 文字並明確指示指定 Production A/B/C/D 立刻 claim 並開始製作；老師只需要把 Audit 產生的 Production Activation Handoff 貼給 Production。
+工作流程：一次只處理一對 review modules。先給老師看 10 句候選句，等老師確認句子後，才寫 imageNotes、Stage 4、完整 Audit Packet。Audit Packet 必須標示 `PENDING REVIEW MIGRATION AUDIT - DO NOT SEND TO PRODUCTION UNTIL AUDIT PASS`，並先交給 Review Migration Audit。Audit PASS 後，由 Audit 產生乾淨的 `Production Activation Handoff`，移除 audit-only 文字並明確指示指定 Production A/B/C/D/E/F 立刻 claim 並開始製作；老師只需要把 Audit 產生的 Production Activation Handoff 貼給 Production。
 
-Production slot 輪值：除非老師明確覆蓋，Review Migration / Audit 要依 review-pair 固定輪值指派：R001/R002 -> A，R003/R004 -> B，R005/R006 -> C，R007/R008 -> D，之後 A/B/C/D 循環。Audit PASS 後產生的 Production Activation Handoff 必須使用最新老師指示或此輪值規則，並寫清楚正確 worktree。
+Production slot 輪值：除非老師明確覆蓋，Review Migration / Audit 要依 review-pair 固定輪值指派：R001/R002 -> A，R003/R004 -> B，R005/R006 -> C，R007/R008 -> D，R009/R010 -> E，R011/R012 -> F，之後 A/B/C/D/E/F 循環。Audit PASS 後產生的 Production Activation Handoff 必須使用最新老師指示或此輪值規則，並寫清楚正確 worktree。
 
 Stage 4 partial-order 硬規則：只能挖 3-4 個單字空格，每張 option card 必須剛好一個漢字。不要寫 chunks、詞組卡、短語卡或整句重排。
 ```
@@ -327,13 +333,13 @@ https://github.com/icelog-TU/character-recognition-dojo
 
 不要修改檔案、不要 commit、不要 push、不要製作圖片或音檔，除非老師另外要求。Audit 必須回報 PASS / FAIL 與具體問題。若 PASS，Audit 還要產生一份可直接貼給指定 Production slot 的 `Production Activation Handoff`；這份稿只能複製已通過內容並清除 audit-only 語氣，不可擅自改句子、Stage 4、imageNotes、coverage、allowedChars 或檔案路徑。若 FAIL，不產生 Production Activation Handoff。
 
-Production Activation Handoff 的 slot 指派：除非老師明確覆蓋，使用固定輪值 R001/R002 -> A，R003/R004 -> B，R005/R006 -> C，R007/R008 -> D，之後 A/B/C/D 循環。必須在 handoff 開頭明確寫「你是 Production <slot>，收到後直接 claim 並開始製作」。
+Production Activation Handoff 的 slot 指派：除非老師明確覆蓋，使用固定輪值 R001/R002 -> A，R003/R004 -> B，R005/R006 -> C，R007/R008 -> D，R009/R010 -> E，R011/R012 -> F，之後 A/B/C/D/E/F 循環。必須在 handoff 開頭明確寫「你是 Production <slot>，收到後直接 claim 並開始製作」。
 ```
 
 ### Production Slots
 
 ```text
-你是「認字練功房」Production <A|B|C|D> 對話串。
+你是「認字練功房」Production <A|B|C|D|E|F> 對話串。
 
 Repo:
 https://github.com/icelog-TU/character-recognition-dojo
@@ -344,7 +350,7 @@ https://github.com/icelog-TU/character-recognition-dojo
 - docs/ROLE_PRODUCTION_SOP.md
 
 指定 worktree:
-C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-<a|b|c|d>
+C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-<a|b|c|d|e|f>
 
 Production goal: deliver `asset-complete-package`, not `release-ready-package`. Do the fast package audit in docs/ROLE_PRODUCTION_SOP.md and docs/CURRICULUM_PRODUCTION_SOP.md. Do not spend time on shared-state release integration for dependency-blocked lessons; Release owns production JSON, planner, ledger, final verify, push, and deployment.
 
