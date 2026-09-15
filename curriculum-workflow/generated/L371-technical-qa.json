@@ -1,0 +1,270 @@
+{
+  "sourceBoundary": "cd4abf4b1ffe125be5402883a31b3197e1e892cd",
+  "allowedCharacters": "PASS",
+  "allowedCount": 375,
+  "coverage": {
+    "親": 4,
+    "朋": 3,
+    "友": 3,
+    "情": 2,
+    "感": 2,
+    "謝": 1,
+    "吧": 1
+  },
+  "previousWordCoverage": {
+    "unit": "L370",
+    "word": "朋友",
+    "wordCount": 2,
+    "朋": 3,
+    "友": 3
+  },
+  "displayLines": "PASS",
+  "stage4": "PASS",
+  "timingReport": [
+    {
+      "id": "L371-S01",
+      "durationMs": 4271,
+      "lastEndMs": 4100,
+      "minSpanMs": 160,
+      "maxSpanMs": 460
+    },
+    {
+      "id": "L371-S02",
+      "durationMs": 4033,
+      "lastEndMs": 3840,
+      "minSpanMs": 120,
+      "maxSpanMs": 560
+    },
+    {
+      "id": "L371-S03",
+      "durationMs": 3688,
+      "lastEndMs": 3480,
+      "minSpanMs": 100,
+      "maxSpanMs": 380
+    },
+    {
+      "id": "L371-S04",
+      "durationMs": 3224,
+      "lastEndMs": 3040,
+      "minSpanMs": 200,
+      "maxSpanMs": 620
+    },
+    {
+      "id": "L371-S05",
+      "durationMs": 3666,
+      "lastEndMs": 3520,
+      "minSpanMs": 120,
+      "maxSpanMs": 300
+    },
+    {
+      "id": "L371-G02-prefix",
+      "durationMs": 1799,
+      "lastEndMs": 1500,
+      "minSpanMs": 180,
+      "maxSpanMs": 380
+    },
+    {
+      "id": "L371-G02-suffix",
+      "durationMs": 3007,
+      "lastEndMs": 2820,
+      "minSpanMs": 260,
+      "maxSpanMs": 800
+    },
+    {
+      "id": "L371-G05-wrong-one",
+      "durationMs": 3474,
+      "lastEndMs": 3280,
+      "minSpanMs": 200,
+      "maxSpanMs": 460
+    },
+    {
+      "id": "L371-G05-wrong-two",
+      "durationMs": 3753,
+      "lastEndMs": 3520,
+      "minSpanMs": 180,
+      "maxSpanMs": 680
+    }
+  ],
+  "audioReport": [
+    {
+      "src": "/assets/lessons/L371/audio/L371-S01.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4271,
+      "meanVolumeDb": -17.9,
+      "maxVolumeDb": -2,
+      "bytes": 53496
+    },
+    {
+      "src": "/assets/lessons/L371/audio/L371-S02.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4033,
+      "meanVolumeDb": -18.1,
+      "maxVolumeDb": -2.2,
+      "bytes": 50197
+    },
+    {
+      "src": "/assets/lessons/L371/audio/L371-S03.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3688,
+      "meanVolumeDb": -18.3,
+      "maxVolumeDb": -3.8,
+      "bytes": 46947
+    },
+    {
+      "src": "/assets/lessons/L371/audio/L371-S04.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3224,
+      "meanVolumeDb": -18.2,
+      "maxVolumeDb": -3.8,
+      "bytes": 41105
+    },
+    {
+      "src": "/assets/lessons/L371/audio/L371-S05.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3666,
+      "meanVolumeDb": -17.4,
+      "maxVolumeDb": -3.7,
+      "bytes": 45993
+    },
+    {
+      "src": "/assets/lessons/L371/audio/L371-G02-prefix.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 1799,
+      "meanVolumeDb": -17.2,
+      "maxVolumeDb": -1.9,
+      "bytes": 22888
+    },
+    {
+      "src": "/assets/lessons/L371/audio/L371-G02-suffix.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3007,
+      "meanVolumeDb": -17.3,
+      "maxVolumeDb": -2.9,
+      "bytes": 38975
+    },
+    {
+      "src": "/assets/lessons/L371/audio/L371-G05-wrong-one.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3474,
+      "meanVolumeDb": -17.7,
+      "maxVolumeDb": -4.1,
+      "bytes": 44173
+    },
+    {
+      "src": "/assets/lessons/L371/audio/L371-G05-wrong-two.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3753,
+      "meanVolumeDb": -17.9,
+      "maxVolumeDb": -2.4,
+      "bytes": 48169
+    },
+    {
+      "src": "/assets/lessons/L371/audio/char-u89aa.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 2229,
+      "meanVolumeDb": -20.8,
+      "maxVolumeDb": -1.9,
+      "bytes": 22399
+    }
+  ],
+  "imageReport": [
+    {
+      "id": "L371-S01",
+      "format": "WEBP 1024 1024",
+      "bytes": 136488,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L371-S02",
+      "format": "WEBP 1024 1024",
+      "bytes": 163350,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L371-S03",
+      "format": "WEBP 1024 1024",
+      "bytes": 116254,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L371-S04",
+      "format": "WEBP 1024 1024",
+      "bytes": 235490,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L371-S05",
+      "format": "WEBP 1024 1024",
+      "bytes": 151434,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "imageBytes": 803016,
+  "audioBytes": 414342,
+  "assetBytes": 1217358,
+  "g05MeanVolumeSpreadDb": 0.5,
+  "normalizationTests": "PASS: standard 亲→親 and 谢→謝 only; 新 and 发 unchanged",
+  "rejectedImageDrafts": [],
+  "regeneratedAudio": [
+    {
+      "id": "L371-S01",
+      "reason": "Initial transcript paper flower mismatch; regenerated with shimmer and exact transcript passed."
+    },
+    {
+      "id": "L371-S05",
+      "reason": "Initial transcript 新朋好友 mismatch; regenerated with shimmer and exact transcript passed."
+    }
+  ],
+  "browserQA": {
+    "status": "tooling limitation",
+    "reason": "Chrome local L371-S01 M4A navigation returned net::ERR_BLOCKED_BY_CLIENT. Phone-width playback/highlighting, G02 recording/replay and G05 interactive playback could not be completed.",
+    "teacherReview": "Post-main under current SOP; no ordinary pre-merge subjective review gate."
+  },
+  "finalBoundary": "3ee226161c9cc0617750d88b162a7e1438fed3f5",
+  "dependsOnLessons": [
+    "L368",
+    "L369",
+    "L370"
+  ],
+  "provisionalLearnedChars": [
+    "感",
+    "情",
+    "朋",
+    "友"
+  ]
+}
