@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L381 | 傳 / normal single-character lesson | claimed | Production B | codex/l381-complete-package | L375, L376, L377, L378, L379, L380 | 經, 已, 近, 接, 送, 連 | curriculum-workflow/lesson-requests/L381.json; curriculum-workflow/generated/L381-generation-packet.md; curriculum-workflow/drafts/L381-draft.json | public/assets/lessons/L381/; curriculum-workflow/audio-inbox/L381/ | Base 636682d9, formal through L373. Extra vocabulary dependency 經 (L375). Release order through L375, R045/R046, L376-L380, then L381; milestones/dependencies do not block parallel production. G03 three single-Han choices; Stage 2 three 傳 targets required, no pilot exception. |
 
 ## Status Values
 
