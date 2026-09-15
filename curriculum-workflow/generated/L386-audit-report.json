@@ -1,0 +1,151 @@
+{
+  "unit": "L386",
+  "packageStatus": "partial-package",
+  "coverage": {
+    "名": 3,
+    "字": 2,
+    "寫": 2,
+    "信": 2,
+    "相": 1,
+    "傳": 1
+  },
+  "sentences": [
+    {
+      "id": "L386-S01",
+      "han": 8,
+      "timingCount": 8,
+      "tailGapMs": 203
+    },
+    {
+      "id": "L386-S02",
+      "han": 10,
+      "timingCount": 10,
+      "tailGapMs": 173
+    },
+    {
+      "id": "L386-S03",
+      "han": 9,
+      "timingCount": 9,
+      "tailGapMs": 223
+    },
+    {
+      "id": "L386-S04",
+      "han": 9,
+      "timingCount": 9,
+      "tailGapMs": 259
+    },
+    {
+      "id": "L386-S05",
+      "han": 8,
+      "timingCount": 8,
+      "tailGapMs": 263
+    }
+  ],
+  "games": [
+    {
+      "id": "L386-G01",
+      "target": "名",
+      "index": 1,
+      "options": 0
+    },
+    {
+      "id": "L386-G02",
+      "target": "名",
+      "index": 5,
+      "options": 0
+    },
+    {
+      "id": "L386-G03",
+      "target": "名",
+      "index": 8,
+      "options": 3
+    },
+    {
+      "id": "L386-G04",
+      "target": "相",
+      "index": 1,
+      "options": 4
+    },
+    {
+      "id": "L386-G05",
+      "target": "傳",
+      "index": 3,
+      "options": 3
+    }
+  ],
+  "media": [
+    {
+      "file": "L386-S01.webp",
+      "bytes": 127864
+    },
+    {
+      "file": "L386-S02.webp",
+      "bytes": 117804
+    },
+    {
+      "file": "L386-S03.webp",
+      "bytes": 169322
+    },
+    {
+      "file": "L386-S04.webp",
+      "bytes": 187346
+    },
+    {
+      "file": "L386-S05.webp",
+      "bytes": 207894
+    },
+    {
+      "file": "char-u540d.m4a",
+      "bytes": 15196,
+      "durationMs": 1114
+    },
+    {
+      "file": "L386-G02-prefix.m4a",
+      "bytes": 27413,
+      "durationMs": 2159
+    },
+    {
+      "file": "L386-G02-suffix.m4a",
+      "bytes": 22589,
+      "durationMs": 1741
+    },
+    {
+      "file": "L386-G05-wrong-one.m4a",
+      "bytes": 42817,
+      "durationMs": 3204
+    },
+    {
+      "file": "L386-G05-wrong-two.m4a",
+      "bytes": 41201,
+      "durationMs": 3134
+    },
+    {
+      "file": "L386-S01.m4a",
+      "bytes": 34803,
+      "durationMs": 2763
+    },
+    {
+      "file": "L386-S02.m4a",
+      "bytes": 42560,
+      "durationMs": 3413
+    },
+    {
+      "file": "L386-S03.m4a",
+      "bytes": 42766,
+      "durationMs": 3343
+    },
+    {
+      "file": "L386-S04.m4a",
+      "bytes": 35802,
+      "durationMs": 2879
+    },
+    {
+      "file": "L386-S05.m4a",
+      "bytes": 43717,
+      "durationMs": 3343
+    }
+  ],
+  "totalBytes": 1159094,
+  "mechanical": "PASS",
+  "fullAcceptance": "partial-package"
+}

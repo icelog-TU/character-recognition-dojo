@@ -1,0 +1,31 @@
+{
+  "unit": "L386",
+  "track": "L386-G05-wrong-two",
+  "reason": "Whisper 20 ms 傳 span; SOP manual adjacent-group smoothing",
+  "before": [
+    {
+      "charIndex": 3,
+      "startMs": 1680,
+      "endMs": 1700
+    },
+    {
+      "charIndex": 4,
+      "startMs": 1700,
+      "endMs": 2020
+    }
+  ],
+  "after": [
+    {
+      "charIndex": 3,
+      "startMs": 1680,
+      "endMs": 1850
+    },
+    {
+      "charIndex": 4,
+      "startMs": 1850,
+      "endMs": 2020
+    }
+  ],
+  "method": "Retain AI combined 1680-2020 ms group, divide into 170 ms per Han; no audio or approved text changed.",
+  "limitation": "Boundary is manually smoothed from AI word group; subjective fine sync remains post-merge teacher review."
+}
