@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L378 | 接 / normal lesson | claimed | Production C | codex/l378-complete-package | L373, L374, L375, L376, L377 | 通, 往, 經, 已, 近 | curriculum-workflow/lesson-requests/L378.json; curriculum-workflow/generated/L378-generation-packet.md; curriculum-workflow/drafts/L378-draft.json | curriculum-workflow/audio-inbox/L378/; public/assets/lessons/L378/ | Text dependencies L373-L377. Playable order also requires L370-L372 and R045/R046 after L375. G03 three distinct cards 接/借/拿. |
 
 ## Status Values
 
