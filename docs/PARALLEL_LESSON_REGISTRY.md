@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L367 | 謝 | claimed | Production C | codex/l367-complete-package | L366 | 吧 | curriculum-workflow/lesson-requests/L367.json; curriculum-workflow/generated/L367-generation-packet.md; curriculum-workflow/drafts/L367-draft.json | public/assets/lessons/L367/; curriculum-workflow/audio-inbox/L367/ | Lesson-local package; L366 blocks Release integration only. |
+| L367 | 謝 | ready-blocked-by-dependency | Production C | codex/l367-complete-package (claim 50802da4; package tip on branch) | L366 | 吧 | curriculum-workflow/lesson-requests/L367.json; curriculum-workflow/generated/L367-generation-packet.md; curriculum-workflow/drafts/L367-draft.json | public/assets/lessons/L367/; curriculum-workflow/audio-inbox/L367/ | dependency-blocked-asset-complete; 5 WebP, 9 M4A, all referenced timings and technical gates PASS. L366 blocks Release only. Browser local-media tooling limitation documented; teacher review is post-main. |
 
 ## Status Values
 
