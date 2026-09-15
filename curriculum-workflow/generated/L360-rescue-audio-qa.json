@@ -1,0 +1,1211 @@
+{
+  "unit": "L360",
+  "sourcePackageSha": "04992fe4fac0aee1dd6c3c341390b5e0431cf5bc",
+  "baseMainSha": "496aa87af167b0760bcee8f9ca959d6cc657edfd",
+  "branch": "codex/l360-package-rescue",
+  "scope": "Only assigned package audio tails, alignment and completion records; approved sentence and image content retained.",
+  "method": "Whisper-1 word timestamps on final AAC audio using the repository alignment algorithm; exact Traditional/Simplified-equivalent Han transcript validation. A 500 ms padded analysis-only WAV recheck is recorded where needed. No homophone substitution.",
+  "audioMethod": "FFmpeg silencedetect -40 dB / 100 ms; preserve audible decay plus 160 ms, stream-copy complete AAC packets; no leading trims, regeneration, internal splices or re-encoding.",
+  "corrections": [
+    "L360-S02: final syllable end extended from 3480 to measured audible decay 3603 ms.",
+    "L360-G02-prefix: final syllable end extended from 1100 to measured audible decay 1296 ms."
+  ],
+  "technicalStatus": "PASS: 9 exact transcripts, AAC mono 44100 Hz decode, timing counts/bounds/spans/overlap and <=300 ms trailing silence",
+  "evidence": "curriculum-workflow/generated/L360-rescue-audio-qa.json",
+  "browserQA": {
+    "status": "PASS: every audio control played to ended",
+    "controls": 11,
+    "uniqueFiles": 10,
+    "method": "Codex in-app Chromium; existing lesson-asset-review.html served locally with file URL adapter and visible native media ended-event diagnostics. Sequential playback queue exercised all sentence, G02 and G05 controls.",
+    "scope": "Automated media loading and playback; no teacher subjective listening approval, physical-phone highlight test or microphone/stitched recording assessment is claimed.",
+    "sop": "Current production SOP permits technical-gates fallback for browser/tool limitations; teacher subjective review is normally post-merge.",
+    "url": "http://127.0.0.1:8360/tools/lesson-asset-review.html?unit=L360&ref=local-rescue",
+    "endedDurationsMs": {
+      "L360-S01": 3529,
+      "L360-S02": 3785,
+      "L360-S03": 3367,
+      "L360-S04": 3181,
+      "L360-S05": 2995,
+      "L360-G02-prefix": 1463,
+      "L360-G02-suffix": 1973,
+      "L360-G05-wrong-one": 2809,
+      "L360-G05-wrong-two": 3622,
+      "charAudio": 1788
+    }
+  },
+  "audio": {
+    "L360-S01": {
+      "text": "我很好奇怪物為什麼哭",
+      "src": "/assets/lessons/L360/audio/L360-S01.m4a",
+      "before": {
+        "durationMs": 4326,
+        "speechEndMs": 3354,
+        "tailMs": 972,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.8,
+        "maxDb": -3.1
+      },
+      "after": {
+        "durationMs": 3529,
+        "speechEndMs": 3354,
+        "tailMs": 175,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.9,
+        "maxDb": -3.1
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.5199999809265137,
+        "text": "我很好奇,怪物為什麼哭?",
+        "words": [
+          {
+            "word": "我",
+            "start": 0,
+            "end": 0.25999999046325684
+          },
+          {
+            "word": "很好",
+            "start": 0.25999999046325684,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "奇",
+            "start": 0.9800000190734863,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "怪",
+            "start": 1.7599999904632568,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "物",
+            "start": 2.0199999809265137,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "為什麼",
+            "start": 2.2799999713897705,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "哭",
+            "start": 2.9800000190734863,
+            "end": 3.299999952316284
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/lessons/L360/audio/L360-S01.m4a",
+        "durationMs": 3529,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1560
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1760,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2020,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2280,
+            "endMs": 2513
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2513,
+            "endMs": 2747
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2747,
+            "endMs": 2980
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2980,
+            "endMs": 3300
+          }
+        ]
+      },
+      "sha256": "6a1ace0dc0a6a270f023176dc44b4a1339f6fc399174b0fbbe0766e1f91f6f9b"
+    },
+    "L360-S02": {
+      "text": "動物園裡有奇怪的鳥",
+      "src": "/assets/lessons/L360/audio/L360-S02.m4a",
+      "before": {
+        "durationMs": 4061,
+        "speechEndMs": 3603,
+        "tailMs": 458,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.8,
+        "maxDb": -3.7
+      },
+      "after": {
+        "durationMs": 3785,
+        "speechEndMs": 3603,
+        "tailMs": 182,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.5,
+        "maxDb": -3.7
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.7799999713897705,
+        "text": "動物園裡有奇怪的鳥",
+        "words": [
+          {
+            "word": "動",
+            "start": 0,
+            "end": 0.3400000035762787
+          },
+          {
+            "word": "物",
+            "start": 0.3400000035762787,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "園",
+            "start": 0.699999988079071,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "裡",
+            "start": 1.059999942779541,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "有",
+            "start": 1.4600000381469727,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "奇怪",
+            "start": 2.140000104904175,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "的",
+            "start": 2.7799999713897705,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "鳥",
+            "start": 3.0399999618530273,
+            "end": 3.4800000190734863
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/lessons/L360/audio/L360-S02.m4a",
+        "durationMs": 3785,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1060,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1460,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2140,
+            "endMs": 2460
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2460,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2780,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3040,
+            "endMs": 3603
+          }
+        ]
+      },
+      "sha256": "badf4a79bc3a1219090a85cfb319476a2da138372ef904d9fb0a1cdc53aa8b7a"
+    },
+    "L360-S03": {
+      "text": "小雞對怪物玩具很好奇",
+      "src": "/assets/lessons/L360/audio/L360-S03.m4a",
+      "before": {
+        "durationMs": 3842,
+        "speechEndMs": 3186,
+        "tailMs": 656,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.3,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3367,
+        "speechEndMs": 3186,
+        "tailMs": 181,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.7,
+        "maxDb": -2
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.359999895095825,
+        "text": "小雞對怪物玩具很好奇",
+        "words": [
+          {
+            "word": "小",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "雞",
+            "start": 0.4399999976158142,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "對",
+            "start": 0.6399999856948853,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "怪",
+            "start": 0.8999999761581421,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "物",
+            "start": 1.159999966621399,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "玩",
+            "start": 1.3799999952316284,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "具",
+            "start": 1.6799999475479126,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "很好",
+            "start": 1.8799999952316284,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "奇",
+            "start": 2.7200000286102295,
+            "end": 3.0999999046325684
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/lessons/L360/audio/L360-S03.m4a",
+        "durationMs": 3367,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 900
+          },
+          {
+            "charIndex": 3,
+            "startMs": 900,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1160,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1380,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1680,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1880,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2300,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2720,
+            "endMs": 3100
+          }
+        ]
+      },
+      "sha256": "f74e80a3d24fc6474c666a7dce00c3aa0e963c0135ce042980e4807e59de3783"
+    },
+    "L360-S04": {
+      "text": "公園裡有一個奇怪的洞",
+      "src": "/assets/lessons/L360/audio/L360-S04.m4a",
+      "before": {
+        "durationMs": 3467,
+        "speechEndMs": 3000,
+        "tailMs": 467,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.5,
+        "maxDb": -3.1
+      },
+      "after": {
+        "durationMs": 3181,
+        "speechEndMs": 3000,
+        "tailMs": 181,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.1,
+        "maxDb": -3.1
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.180000066757202,
+        "text": "公園裡有一個奇怪的洞",
+        "words": [
+          {
+            "word": "公",
+            "start": 0,
+            "end": 0.2800000011920929
+          },
+          {
+            "word": "園",
+            "start": 0.2800000011920929,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "裡",
+            "start": 0.5799999833106995,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "有",
+            "start": 0.8600000143051147,
+            "end": 1.5
+          },
+          {
+            "word": "一個",
+            "start": 1.5,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "奇怪",
+            "start": 2.0199999809265137,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "的",
+            "start": 2.559999942779541,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "洞",
+            "start": 2.819999933242798,
+            "end": 2.940000057220459
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/lessons/L360/audio/L360-S04.m4a",
+        "durationMs": 3181,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1500,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1760,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2020,
+            "endMs": 2290
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2290,
+            "endMs": 2560
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2560,
+            "endMs": 2820
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2820,
+            "endMs": 2940
+          }
+        ]
+      },
+      "sha256": "e0b3a2e418546bb9d8becceaa226eb13c4b8bc2b7b12aa10ae380b88a58c3e7a"
+    },
+    "L360-S05": {
+      "text": "這個新玩具很新奇",
+      "src": "/assets/lessons/L360/audio/L360-S05.m4a",
+      "before": {
+        "durationMs": 4476,
+        "speechEndMs": 2835,
+        "tailMs": 1641,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -20.1,
+        "maxDb": -2.3
+      },
+      "after": {
+        "durationMs": 2995,
+        "speechEndMs": 2835,
+        "tailMs": 160,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.3,
+        "maxDb": -2.3
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.990000009536743,
+        "text": "這個新玩具很新奇!",
+        "words": [
+          {
+            "word": "這個",
+            "start": 0,
+            "end": 0.2800000011920929
+          },
+          {
+            "word": "新",
+            "start": 0.2800000011920929,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "玩",
+            "start": 0.7400000095367432,
+            "end": 1
+          },
+          {
+            "word": "具",
+            "start": 1,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "很",
+            "start": 1.2799999713897705,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "新",
+            "start": 2.140000104904175,
+            "end": 2.5
+          },
+          {
+            "word": "奇",
+            "start": 2.5,
+            "end": 2.759999990463257
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/lessons/L360/audio/L360-S05.m4a",
+        "durationMs": 2995,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 140
+          },
+          {
+            "charIndex": 1,
+            "startMs": 140,
+            "endMs": 280
+          },
+          {
+            "charIndex": 2,
+            "startMs": 280,
+            "endMs": 740
+          },
+          {
+            "charIndex": 3,
+            "startMs": 740,
+            "endMs": 1000
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1000,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1280,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2140,
+            "endMs": 2500
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2500,
+            "endMs": 2760
+          }
+        ]
+      },
+      "sha256": "dbd772be856ee94a102018009b3ffc2334dbc01178b9a618dbc01a867737d38b"
+    },
+    "L360-G02-prefix": {
+      "text": "我很好",
+      "src": "/assets/lessons/L360/audio/L360-G02-prefix.m4a",
+      "before": {
+        "durationMs": 2136,
+        "speechEndMs": 1296,
+        "tailMs": 840,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 1463,
+        "speechEndMs": 1296,
+        "tailMs": 167,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.3,
+        "maxDb": -2
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 1.4600000381469727,
+        "text": "我很好。",
+        "words": [
+          {
+            "word": "我",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "很好。",
+            "start": 0.3799999952316284,
+            "end": 1.0199999809265137
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 2
+        }
+      },
+      "textMatch": true,
+      "recheck": {
+        "method": "whisper-1, temporary 500 ms leading and trailing padding, exact text prompt; subtract 500 ms from word offsets",
+        "offsetMs": 500,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 2.4600000381469727,
+          "text": "我很好。",
+          "words": [
+            {
+              "word": "我",
+              "start": 0,
+              "end": 0.9200000166893005
+            },
+            {
+              "word": "很好。",
+              "start": 0.9200000166893005,
+              "end": 1.600000023841858
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 3
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L360/audio/L360-G02-prefix.m4a",
+        "durationMs": 1463,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1296
+          }
+        ]
+      },
+      "sha256": "ff3fc8bbe16bfcfc7a93ba4fb3680741efe7eecd057fa7aa4fb23599f58779ef"
+    },
+    "L360-G02-suffix": {
+      "text": "怪物為什麼哭",
+      "src": "/assets/lessons/L360/audio/L360-G02-suffix.m4a",
+      "before": {
+        "durationMs": 2193,
+        "speechEndMs": 1808,
+        "tailMs": 385,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -20,
+        "maxDb": -3.7
+      },
+      "after": {
+        "durationMs": 1973,
+        "speechEndMs": 1808,
+        "tailMs": 165,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.5,
+        "maxDb": -3.7
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 1.9700000286102295,
+        "text": "怪物為什麼哭?",
+        "words": [
+          {
+            "word": "怪",
+            "start": 0,
+            "end": 0.30000001192092896
+          },
+          {
+            "word": "物",
+            "start": 0.30000001192092896,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "為什麼",
+            "start": 0.6600000262260437,
+            "end": 1.399999976158142
+          },
+          {
+            "word": "哭",
+            "start": 1.399999976158142,
+            "end": 1.7400000095367432
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 2
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/lessons/L360/audio/L360-G02-suffix.m4a",
+        "durationMs": 1973,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 660
+          },
+          {
+            "charIndex": 2,
+            "startMs": 660,
+            "endMs": 907
+          },
+          {
+            "charIndex": 3,
+            "startMs": 907,
+            "endMs": 1153
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1153,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1400,
+            "endMs": 1740
+          }
+        ]
+      },
+      "sha256": "b92d6cc80925b510323a41fb9ac5f4a5108dd431cf1585b2c79ddb41e332cad0"
+    },
+    "L360-G05-wrong-one": {
+      "text": "公園裡有一個奇怪的鳥。",
+      "src": "/assets/lessons/L360/audio/L360-G05-wrong-one.m4a",
+      "before": {
+        "durationMs": 3659,
+        "speechEndMs": 2645,
+        "tailMs": 1014,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.4,
+        "maxDb": -3.4
+      },
+      "after": {
+        "durationMs": 2809,
+        "speechEndMs": 2645,
+        "tailMs": 164,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -17.2,
+        "maxDb": -3.4
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.799999952316284,
+        "text": "公园里有一个奇怪的鸟",
+        "words": [
+          {
+            "word": "公",
+            "start": 0,
+            "end": 0.25999999046325684
+          },
+          {
+            "word": "园",
+            "start": 0.25999999046325684,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "里",
+            "start": 0.5400000214576721,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "有",
+            "start": 0.7599999904632568,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "一个",
+            "start": 1.2799999713897705,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "奇怪",
+            "start": 1.6799999475479126,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "的",
+            "start": 2.140000104904175,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "鸟",
+            "start": 2.559999942779541,
+            "end": 2.559999942779541
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      },
+      "textMatch": true,
+      "recheck": {
+        "method": "whisper-1, temporary 500 ms leading and trailing padding, exact text prompt; subtract 500 ms from word offsets",
+        "offsetMs": 500,
+        "transcript": {
+          "task": "transcribe",
+          "language": "chinese",
+          "duration": 3.799999952316284,
+          "text": "公園裡有一個奇怪的鳥。",
+          "words": [
+            {
+              "word": "公",
+              "start": 0,
+              "end": 0.800000011920929
+            },
+            {
+              "word": "園",
+              "start": 0.800000011920929,
+              "end": 1.0199999809265137
+            },
+            {
+              "word": "裡",
+              "start": 1.0199999809265137,
+              "end": 1.2799999713897705
+            },
+            {
+              "word": "有",
+              "start": 1.2799999713897705,
+              "end": 1.7799999713897705
+            },
+            {
+              "word": "一個",
+              "start": 1.7799999713897705,
+              "end": 2.180000066757202
+            },
+            {
+              "word": "奇怪",
+              "start": 2.180000066757202,
+              "end": 2.6600000858306885
+            },
+            {
+              "word": "的",
+              "start": 2.6600000858306885,
+              "end": 2.940000057220459
+            },
+            {
+              "word": "鳥。",
+              "start": 2.940000057220459,
+              "end": 3.0799999237060547
+            }
+          ],
+          "usage": {
+            "type": "duration",
+            "seconds": 4
+          }
+        }
+      },
+      "finalAlignment": {
+        "src": "/assets/lessons/L360/audio/L360-G05-wrong-one.m4a",
+        "durationMs": 2809,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 520
+          },
+          {
+            "charIndex": 2,
+            "startMs": 520,
+            "endMs": 780
+          },
+          {
+            "charIndex": 3,
+            "startMs": 780,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1280,
+            "endMs": 1480
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1480,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1680,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1920,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2160,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2440,
+            "endMs": 2580
+          }
+        ]
+      },
+      "sha256": "0857c53d2d5b4c3e87aff3038130eade0c607ad691646e2644efc1bd120cffac"
+    },
+    "L360-G05-wrong-two": {
+      "text": "公園裡有一個奇怪的門。",
+      "src": "/assets/lessons/L360/audio/L360-G05-wrong-two.m4a",
+      "before": {
+        "durationMs": 4257,
+        "speechEndMs": 3458,
+        "tailMs": 799,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -19.6,
+        "maxDb": -2
+      },
+      "after": {
+        "durationMs": 3622,
+        "speechEndMs": 3458,
+        "tailMs": 164,
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 1,
+        "meanDb": -18.8,
+        "maxDb": -2
+      },
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.619999885559082,
+        "text": "公園裡有一個奇怪的門",
+        "words": [
+          {
+            "word": "公",
+            "start": 0,
+            "end": 0.30000001192092896
+          },
+          {
+            "word": "園",
+            "start": 0.30000001192092896,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "裡",
+            "start": 0.6200000047683716,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "有",
+            "start": 1.100000023841858,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "一個",
+            "start": 1.4800000190734863,
+            "end": 2
+          },
+          {
+            "word": "奇怪",
+            "start": 2,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "的",
+            "start": 2.819999933242798,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "門",
+            "start": 3.119999885559082,
+            "end": 3.3399999141693115
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      },
+      "textMatch": true,
+      "finalAlignment": {
+        "src": "/assets/lessons/L360/audio/L360-G05-wrong-two.m4a",
+        "durationMs": 3622,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1480
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1480,
+            "endMs": 1740
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1740,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2000,
+            "endMs": 2410
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2410,
+            "endMs": 2820
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2820,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3120,
+            "endMs": 3340
+          }
+        ]
+      },
+      "sha256": "d07f068971790ef8aa94abffbaef1fb35bd729221acceb4d432dfc8148719d0f"
+    }
+  },
+  "validation": {
+    "tools": "PASS",
+    "production": "PASS on unchanged main and separately on lesson-local draft data in memory",
+    "curriculum": "PASS using current L359 main plus L360 rescue draft in memory; existing old-lesson advisory warnings only",
+    "formats": "PASS strict mono AAC 44100 Hz / WebP / size / G05 loudness spread audit with zero warnings",
+    "technical": "PASS transcript, hash, 80-900 ms timing spans, ordered indices, no overlap, measured and metadata tail <=300 ms",
+    "preservation": "PASS: approved sentence and request content, game design, images and retained AAC packet hashes/PTS identical to pinned source; main curriculum/planner/ledger unchanged",
+    "assetFolderBytes": 1258042,
+    "release": "Shared-state integration and full npm run verify remain Release-owned."
+  }
+}

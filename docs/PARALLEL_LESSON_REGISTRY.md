@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L360 | 奇 / normal lesson | asset-complete-package | Package Rescue | codex/l360-package-rescue | L355-L359 (in base main) | none | `curriculum-workflow/lesson-requests/L360.json`; `curriculum-workflow/generated/L360-generation-packet.md`; `curriculum-workflow/drafts/L360-draft.json` | `public/assets/lessons/L360/` | Audio/timing rescue; technical QA PASS; see package evidence. Release owns integration. |
 
 ## Status Values
 
