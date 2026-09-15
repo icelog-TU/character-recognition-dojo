@@ -412,14 +412,14 @@ Production should complete playback/highlight/recording QA itself when its brows
 
 Before using a fallback, Production must still pass the non-browser technical gates: required image/audio files exist, final images are WebP, final audio is processed `.m4a`, ffmpeg can decode every referenced audio file, Stage 4 `teachAudio` and `choose-pronunciation` option audio exist, `charTimings` and Stage 4 timing metadata are present, allowed-character checks pass, and the lesson-local validators/audits pass.
 
-If those gates pass, the teacher may manually review the pushed pre-merge package through the permanent GitHub Pages review tools, preferably with `ref=<full-commit-sha>`:
+If those gates pass, the package may be reported as `asset-complete-package` with the browser tooling failure clearly recorded. Teacher subjective image/audio review remains post-merge by default. The teacher may manually review the pushed pre-merge package through the permanent GitHub Pages review tools when explicitly requested or when Supervisor needs an exception, preferably with `ref=<full-commit-sha>`:
 
 ```text
 https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L###&ref=<full-commit-sha>
 https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L###&ref=<full-commit-sha>
 ```
 
-Teacher manual pre-merge asset QA can substitute for failed browser automation only when the package records the exact commit SHA and URL checked, the scope checked (audio, images, or both), the browser automation failure reason, and the teacher's PASS or exact repair findings. This fallback may complete the package only if the teacher reports PASS and all technical gates above pass. It cannot be used for missing assets, failed validators, known bad audio/images, or skipped Stage 4 timing/alignment work.
+Teacher manual pre-merge asset QA can be recorded as extra evidence when available, but it is not the ordinary Release gate. A missing pre-merge teacher PASS or disabled cloud sync button must not block Release when the package is otherwise `asset-complete-package` and technical gates pass. If the teacher explicitly requested pre-merge approval for a specific unit, record the exact commit SHA and URL checked, the scope checked (audio, images, or both), the browser automation failure reason if relevant, and the teacher's PASS or exact repair findings. This exception cannot be used for missing assets, failed validators, known bad audio/images, or skipped required timing/alignment files.
 
 Teacher subjective review is a repair queue, not a release gate:
 

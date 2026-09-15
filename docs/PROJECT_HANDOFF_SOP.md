@@ -202,14 +202,16 @@ Do not publish temporary review pages.
 
 Production normally owns playback/highlight/recording QA before calling a package `asset-complete-package`. If Codex browser automation or Computer Use cannot complete playback QA because the browser/control surface crashes, times out, or cannot operate local media playback, do not mark the package complete from that failure alone. First complete the technical gates that do not depend on browser automation: file existence, WebP/audio format checks, ffmpeg decode, `charTimings`, Stage 4 referenced audio, allowed-character checks, and the lesson-local validators.
 
-If those technical gates pass and the teacher manually reviews the pushed pre-merge package on the permanent GitHub Pages review tools, teacher manual pre-merge asset QA may substitute for the failed browser automation. The package notes, draft, registry row, and final handoff must record:
+If those technical gates pass, Production may report the browser tooling failure and still hand off an `asset-complete-package` when all non-browser technical gates pass. Teacher subjective image/audio review is post-merge by default and must not become an ordinary pre-main Release gate.
+
+If the teacher explicitly asks for pre-merge review, or Supervisor grants an exception for a specific blocked package, the package notes, draft, registry row, and final handoff must record:
 
 - the exact review URL and immutable commit SHA the teacher checked
 - whether the teacher checked audio, images, or both
 - the automation failure reason
 - the teacher's PASS or exact repair findings
 
-This fallback is only for tool/control failure. It must not be used to hide real asset defects, skipped technical validators, missing Stage 4 assets, missing timings, or failed production checks.
+This optional pre-merge review path is only for explicit teacher/Supervisor exceptions. It must not be used to hide real asset defects, skipped technical validators, missing Stage 4 assets, missing timings, or failed production checks. A missing pre-merge teacher PASS or cloud-sync record must not block ordinary Release.
 
 ## Copy Prompts For New Threads
 

@@ -25,12 +25,6 @@ const BLOCKER_PATTERNS = [
   /\bNOT COMPLETED\b/i,
   /\bFAIL(?:ED)?\b/i,
   /\bunresolved\b/i,
-  /\bawaits teacher\b/i,
-  /teacher review pending/i,
-  /manual .*pending/i,
-  /playback .*pending/i,
-  /pending .*playback/i,
-  /pending .*QA/i,
 ];
 
 function usage() {
