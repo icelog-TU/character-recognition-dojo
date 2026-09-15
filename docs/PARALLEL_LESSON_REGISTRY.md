@@ -1,4 +1,4 @@
-# Parallel Lesson Registry
+﻿# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L386 | 名 | claimed | Package Rescue | codex/l386-package-rescue | L381, L382, L383, L384, L385 | 傳、相、信、寫、字 | curriculum-workflow/lesson-requests/L386.json; curriculum-workflow/generated/L386-generation-packet.md; curriculum-workflow/drafts/L386-draft.json | public/assets/lessons/L386/; curriculum-workflow/audio-inbox/L386/ | Rescue claimed from original package; package remains incomplete pending asset/timing/UI verification. Earlier lessons and required review pair remain Release dependencies. |
+| L386 | 名 | dependency-blocked-asset-complete | Package Rescue | codex/l386-package-rescue | L381, L382, L383, L384, L385 | 傳、相、信、寫、字 | curriculum-workflow/lesson-requests/L386.json; curriculum-workflow/generated/L386-generation-packet.md; curriculum-workflow/drafts/L386-draft.json | public/assets/lessons/L386/; curriculum-workflow/audio-inbox/L386/ | Reproduced 390px G03 six-Han clipping, repaired shared card-relative font sizing and wrapping, preserved approved displayLines and three options. Retested phone/tablet, recording with synthetic test audio, and reward navigation. Release waits for remaining preceding lessons; R045/R046 already on main; see L386-rescue-qa.md. |
 
 ## Status Values
 

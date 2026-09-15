@@ -26,7 +26,7 @@
     "寫",
     "字"
   ],
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "notes": "Teacher-approved L386 normal single-character lesson. Base bf2825a6, formal L001-L375, 379 learned Han. Learner dependencies L381-L385: 傳相信寫字. Release requires R045/R046 after L375 (coverage L346-L375, ceiling L375), then L376-L385. 第、姓、單 remain unlearned and forbidden in learner-facing text. 相信 reads ㄒㄧㄤ; 傳來 reads ㄔㄨㄢˊ. G02 prefix 信上沒有寫 / suffix 字是誰的, target 名 must not be duplicated. Subjective teacher asset review is post-main by default. Package checkpoint partial-package: phone 390x844 G03 six-Han first row clips at both sides; tablet 820x1180 fits. All media/technical checks pass; G02 maintained-press recording/stitched replay unavailable in browser control. See L386-package-notes.md. Final origin/main 7fcef325 still through L375; learner and review dependencies remain. G05 wrong-two 傳來 timing manually smoothed within AI 1680-2020 ms group. Phone playback QA: Stage 3 five UI playback cycles and G05 three option cycles completed; actual G03 phone clipping remains; G02 long-press recording/replay could not be operated. Subjective human listening not claimed. Package-intake rejects current partial-package as expected; see L386-intake-report.json.",
   "sentences": [
     {
@@ -84,7 +84,7 @@
           {
             "charIndex": 7,
             "startMs": 2300,
-            "endMs": 2560
+            "endMs": 2590
           }
         ]
       }
@@ -155,7 +155,7 @@
           {
             "charIndex": 9,
             "startMs": 3040,
-            "endMs": 3240
+            "endMs": 3247
           }
         ]
       }
@@ -223,7 +223,7 @@
           {
             "charIndex": 8,
             "startMs": 2920,
-            "endMs": 3120
+            "endMs": 3170
           }
         ]
       }
@@ -288,7 +288,7 @@
           {
             "charIndex": 8,
             "startMs": 2280,
-            "endMs": 2620
+            "endMs": 2714
           }
         ]
       }
@@ -351,7 +351,7 @@
           {
             "charIndex": 7,
             "startMs": 2900,
-            "endMs": 3080
+            "endMs": 3166
           }
         ]
       }
@@ -406,7 +406,7 @@
             {
               "charIndex": 4,
               "startMs": 1500,
-              "endMs": 1920
+              "endMs": 1998
             }
           ]
         },
@@ -433,7 +433,7 @@
             {
               "charIndex": 3,
               "startMs": 1340,
-              "endMs": 1520
+              "endMs": 1572
             }
           ]
         }
@@ -564,7 +564,7 @@
               {
                 "charIndex": 7,
                 "startMs": 2900,
-                "endMs": 3080
+                "endMs": 3166
               }
             ]
           }
@@ -618,7 +618,7 @@
               {
                 "charIndex": 7,
                 "startMs": 2760,
-                "endMs": 2940
+                "endMs": 3032
               }
             ]
           }
@@ -672,7 +672,7 @@
               {
                 "charIndex": 7,
                 "startMs": 2660,
-                "endMs": 2860
+                "endMs": 2964
               }
             ]
           }
@@ -709,7 +709,7 @@
         {
           "charIndex": 4,
           "startMs": 1500,
-          "endMs": 1920
+          "endMs": 1998
         }
       ]
     },
@@ -736,7 +736,7 @@
         {
           "charIndex": 3,
           "startMs": 1340,
-          "endMs": 1520
+          "endMs": 1572
         }
       ]
     },
@@ -783,7 +783,7 @@
         {
           "charIndex": 7,
           "startMs": 2760,
-          "endMs": 2940
+          "endMs": 3032
         }
       ]
     },
@@ -830,9 +830,18 @@
         {
           "charIndex": 7,
           "startMs": 2660,
-          "endMs": 2860
+          "endMs": 2964
         }
       ]
     }
+  },
+  "teacherNotes": "G02 prefix 信上沒有寫 and suffix 字是誰的; target 名 is not duplicated. 相信 reads ㄒㄧㄤ; 傳來 reads ㄔㄨㄢˊ. 第/姓/單 excluded from learner text. Approved G03 lines and all three options preserved. Release requires R045/R046 and all preceding lessons; latest checked main is L380 with R045/R046 present. Teacher subjective review is post-main except recorded explicit approvals. See L386-rescue-qa.md.",
+  "rescueQA": {
+    "sourcePackageSha": "6b4ab4f0119577e37d5f62ad0089dbbe67963efa",
+    "role": "Package Rescue",
+    "browserQA": "Browser QA PASS: all 11 audio controls per unit played to ended; G01-G05, phone reward navigation and phone/tablet G03 verified. G02 uses synthetic test microphone, not physical-device acceptance. See L386-rescue-browser-qa.json.",
+    "notes": "curriculum-workflow/generated/L386-rescue-qa.md",
+    "audioEvidence": "curriculum-workflow/generated/L386-rescue-audio-evidence.json",
+    "timingEvidence": "curriculum-workflow/generated/L386-rescue-timing-review.json"
   }
 }

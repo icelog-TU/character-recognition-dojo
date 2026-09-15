@@ -25,8 +25,8 @@
     "寫",
     "字"
   ],
-  "teacherNotes": "Teacher-approved L386 normal single-character lesson. Base bf2825a6, formal L001-L375, 379 learned Han. Learner dependencies L381-L385: 傳相信寫字. Release requires R045/R046 after L375 (coverage L346-L375, ceiling L375), then L376-L385. 第、姓、單 remain unlearned and forbidden in learner-facing text. 相信 reads ㄒㄧㄤ; 傳來 reads ㄔㄨㄢˊ. G02 prefix 信上沒有寫 / suffix 字是誰的, target 名 must not be duplicated. Subjective teacher asset review is post-main by default. Package checkpoint partial-package: phone 390x844 G03 six-Han first row clips at both sides; tablet 820x1180 fits. All media/technical checks pass; G02 maintained-press recording/stitched replay unavailable in browser control. See L386-package-notes.md. Final origin/main 7fcef325 still through L375; learner and review dependencies remain. G05 wrong-two 傳來 timing manually smoothed within AI 1680-2020 ms group. Phone playback QA: Stage 3 five UI playback cycles and G05 three option cycles completed; actual G03 phone clipping remains; G02 long-press recording/replay could not be operated. Subjective human listening not claimed. Package-intake rejects current partial-package as expected; see L386-intake-report.json.",
-  "packageStatus": "partial-package",
+  "teacherNotes": "G02 prefix 信上沒有寫 and suffix 字是誰的; target 名 is not duplicated. 相信 reads ㄒㄧㄤ; 傳來 reads ㄔㄨㄢˊ. 第/姓/單 excluded from learner text. Approved G03 lines and all three options preserved. Release requires R045/R046 and all preceding lessons; latest checked main is L380 with R045/R046 present. Teacher subjective review is post-main except recorded explicit approvals. See L386-rescue-qa.md.",
+  "packageStatus": "dependency-blocked-asset-complete",
   "generationConstraints": {
     "allowedChars": [
       "一",
@@ -444,7 +444,55 @@
       ],
       "focusChar": "名",
       "imageNotes": "家中桌邊，主角媽媽指著書包內側的姓名標籤區，請主角小女孩填寫；女孩握筆正在寫。書包打開、標籤可見，不把名字寫在書包外側大面積展示。紙面或標籤只用不可辨識筆跡，不生成真實姓名。",
-      "approved": true
+      "approved": true,
+      "imagePrompt": "Use case illustration-story. Square1:1 image, safe margins. Full L058 STYLE ONLY: fine pencil-and-watercolor, warm natural sunlight, bright detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 cast. Match refined L115/L118/L119/L128 and recurring family L154/L162/L163 anchors. Protagonist girl short dark bob pinkclip pinkcardigan navy skirt pinkshoes; mother cream cardigan, blue trousers and loose dark shoulder-length hair; father blue shirt beige trousers; older brother visibly older/taller school-age boy blue-white striped long-sleeve shirt and dark trousers; fixed you boy same preschool age, short slightly tousled dark hair, sky-blue shirt green shorts blue shoes, not older brother or Xiaoguang. Adapt to appropriate swimwear only at pool, preserve faces/age. Generic classmates/coach/customers distinct from recurring cast. No readable writing, names, letters, numbers, signs, captions, logos, brands, watermark. Only S01/S02 may have deliberately illegible pen strokes as specified, never actual words. No generic flat cartoon, simplified watercolor, anime,3D or photo. 家中桌邊，主角媽媽指著書包內側的姓名標籤區，請主角小女孩填寫；女孩握筆正在寫。書包打開、標籤可見，不把名字寫在書包外側大面積展示。紙面或標籤只用不可辨識筆跡，不生成真實姓名。",
+      "imageSrc": "/assets/lessons/L386/images/L386-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L386/audio/L386-S01.m4a",
+        "durationMs": 2763,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 200
+          },
+          {
+            "charIndex": 1,
+            "startMs": 200,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 900
+          },
+          {
+            "charIndex": 3,
+            "startMs": 900,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1360,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1760,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2060,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2300,
+            "endMs": 2590
+          }
+        ]
+      }
     },
     {
       "id": "L386-S02",
@@ -457,7 +505,65 @@
       ],
       "focusChar": "名",
       "imageNotes": "教室桌邊，主角小女孩拿著一張信紙，指向下方沒有署名的留白處，轉頭詢問旁邊的 generic classmates；同學露出不確定的神情。信紙上方有不可辨識的書寫痕跡，下方署名位置留白。不要畫成完全空白的紙，也不要讓畫面直接揭露寫信的人。",
-      "approved": true
+      "approved": true,
+      "imagePrompt": "Use case illustration-story. Square1:1 image, safe margins. Full L058 STYLE ONLY: fine pencil-and-watercolor, warm natural sunlight, bright detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 cast. Match refined L115/L118/L119/L128 and recurring family L154/L162/L163 anchors. Protagonist girl short dark bob pinkclip pinkcardigan navy skirt pinkshoes; mother cream cardigan, blue trousers and loose dark shoulder-length hair; father blue shirt beige trousers; older brother visibly older/taller school-age boy blue-white striped long-sleeve shirt and dark trousers; fixed you boy same preschool age, short slightly tousled dark hair, sky-blue shirt green shorts blue shoes, not older brother or Xiaoguang. Adapt to appropriate swimwear only at pool, preserve faces/age. Generic classmates/coach/customers distinct from recurring cast. No readable writing, names, letters, numbers, signs, captions, logos, brands, watermark. Only S01/S02 may have deliberately illegible pen strokes as specified, never actual words. No generic flat cartoon, simplified watercolor, anime,3D or photo. 教室桌邊，主角小女孩拿著一張信紙，指向下方沒有署名的留白處，轉頭詢問旁邊的 generic classmates；同學露出不確定的神情。信紙上方有不可辨識的書寫痕跡，下方署名位置留白。不要畫成完全空白的紙，也不要讓畫面直接揭露寫信的人。",
+      "imageSrc": "/assets/lessons/L386/images/L386-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L386/audio/L386-S02.m4a",
+        "durationMs": 3413,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 820
+          },
+          {
+            "charIndex": 2,
+            "startMs": 820,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1380,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1720,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2020,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2200,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2800,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3040,
+            "endMs": 3247
+          }
+        ]
+      }
     },
     {
       "id": "L386-S03",
@@ -472,6 +578,59 @@
       "approved": true,
       "zhuyinOverrides": {
         "1": "ㄒㄧㄤ"
+      },
+      "imagePrompt": "Use case illustration-story. Square1:1 image, safe margins. Full L058 STYLE ONLY: fine pencil-and-watercolor, warm natural sunlight, bright detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 cast. Match refined L115/L118/L119/L128 and recurring family L154/L162/L163 anchors. Protagonist girl short dark bob pinkclip pinkcardigan navy skirt pinkshoes; mother cream cardigan, blue trousers and loose dark shoulder-length hair; father blue shirt beige trousers; older brother visibly older/taller school-age boy blue-white striped long-sleeve shirt and dark trousers; fixed you boy same preschool age, short slightly tousled dark hair, sky-blue shirt green shorts blue shoes, not older brother or Xiaoguang. Adapt to appropriate swimwear only at pool, preserve faces/age. Generic classmates/coach/customers distinct from recurring cast. No readable writing, names, letters, numbers, signs, captions, logos, brands, watermark. Only S01/S02 may have deliberately illegible pen strokes as specified, never actual words. No generic flat cartoon, simplified watercolor, anime,3D or photo. 淺水教學池內，主角小女孩對固定「你」小男孩微笑鼓勵，男孩在池邊準備開始練習；對面池壁距離不遠，generic 游泳教練在旁看顧。女孩是說話者，不是已完成游泳後的表揚。不得畫成河流、海面、深水冒險或沒有成人看顧。",
+      "imageSrc": "/assets/lessons/L386/images/L386-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L386/audio/L386-S03.m4a",
+        "durationMs": 3343,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 940
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1580,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1760,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2040,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2360,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2600,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2920,
+            "endMs": 3170
+          }
+        ]
       }
     },
     {
@@ -484,7 +643,60 @@
       ],
       "focusChar": "名",
       "imageNotes": "雞排店門口，主角女孩與爸爸在等待購買，另有幾位 generic 顧客有秩序排隊；櫃台可清楚看見金黃雞排，店員正交付餐點。用多人前來購買呈現受歡迎，不用得獎文字、星級、名店招牌或品牌來說明「有名」。",
-      "approved": true
+      "approved": true,
+      "imagePrompt": "Use case illustration-story. Square1:1 image, safe margins. Full L058 STYLE ONLY: fine pencil-and-watercolor, warm natural sunlight, bright detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 cast. Match refined L115/L118/L119/L128 and recurring family L154/L162/L163 anchors. Protagonist girl short dark bob pinkclip pinkcardigan navy skirt pinkshoes; mother cream cardigan, blue trousers and loose dark shoulder-length hair; father blue shirt beige trousers; older brother visibly older/taller school-age boy blue-white striped long-sleeve shirt and dark trousers; fixed you boy same preschool age, short slightly tousled dark hair, sky-blue shirt green shorts blue shoes, not older brother or Xiaoguang. Adapt to appropriate swimwear only at pool, preserve faces/age. Generic classmates/coach/customers distinct from recurring cast. No readable writing, names, letters, numbers, signs, captions, logos, brands, watermark. Only S01/S02 may have deliberately illegible pen strokes as specified, never actual words. No generic flat cartoon, simplified watercolor, anime,3D or photo. 雞排店門口，主角女孩與爸爸在等待購買，另有幾位 generic 顧客有秩序排隊；櫃台可清楚看見金黃雞排，店員正交付餐點。用多人前來購買呈現受歡迎，不用得獎文字、星級、名店招牌或品牌來說明「有名」。",
+      "imageSrc": "/assets/lessons/L386/images/L386-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L386/audio/L386-S04.m4a",
+        "durationMs": 2879,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 900
+          },
+          {
+            "charIndex": 3,
+            "startMs": 900,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1260,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1360,
+            "endMs": 1640
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1640,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1960,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2280,
+            "endMs": 2714
+          }
+        ]
+      }
     },
     {
       "id": "L386-S05",
@@ -499,6 +711,54 @@
       "approved": true,
       "zhuyinOverrides": {
         "3": "ㄔㄨㄢˊ"
+      },
+      "imagePrompt": "Use case illustration-story. Square1:1 image, safe margins. Full L058 STYLE ONLY: fine pencil-and-watercolor, warm natural sunlight, bright detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 cast. Match refined L115/L118/L119/L128 and recurring family L154/L162/L163 anchors. Protagonist girl short dark bob pinkclip pinkcardigan navy skirt pinkshoes; mother cream cardigan, blue trousers and loose dark shoulder-length hair; father blue shirt beige trousers; older brother visibly older/taller school-age boy blue-white striped long-sleeve shirt and dark trousers; fixed you boy same preschool age, short slightly tousled dark hair, sky-blue shirt green shorts blue shoes, not older brother or Xiaoguang. Adapt to appropriate swimwear only at pool, preserve faces/age. Generic classmates/coach/customers distinct from recurring cast. No readable writing, names, letters, numbers, signs, captions, logos, brands, watermark. Only S01/S02 may have deliberately illegible pen strokes as specified, never actual words. No generic flat cartoon, simplified watercolor, anime,3D or photo. 戶外球場上，主角哥哥和幾名 generic children 正開心傳球、笑著互動；主角小女孩站在球場邊，聞聲轉頭看向他們。笑聲來自球場上的孩子，不是喇叭或手機；不用文字音效，也不畫受傷跌倒引人發笑。",
+      "imageSrc": "/assets/lessons/L386/images/L386-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L386/audio/L386-S05.m4a",
+        "durationMs": 3343,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1260,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1980,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2280,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2620,
+            "endMs": 2900
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2900,
+            "endMs": 3166
+          }
+        ]
       }
     }
   ],
@@ -551,7 +811,7 @@
             {
               "charIndex": 4,
               "startMs": 1500,
-              "endMs": 1920
+              "endMs": 1998
             }
           ]
         },
@@ -578,7 +838,7 @@
             {
               "charIndex": 3,
               "startMs": 1340,
-              "endMs": 1520
+              "endMs": 1572
             }
           ]
         }
@@ -709,7 +969,7 @@
               {
                 "charIndex": 7,
                 "startMs": 2900,
-                "endMs": 3080
+                "endMs": 3166
               }
             ]
           }
@@ -763,7 +1023,7 @@
               {
                 "charIndex": 7,
                 "startMs": 2760,
-                "endMs": 2940
+                "endMs": 3032
               }
             ]
           }
@@ -817,7 +1077,7 @@
               {
                 "charIndex": 7,
                 "startMs": 2660,
-                "endMs": 2860
+                "endMs": 2964
               }
             ]
           }

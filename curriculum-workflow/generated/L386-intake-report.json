@@ -1,17 +1,8 @@
 {
   "unit": "L386",
-  "checkedRef": "origin/codex/l386-complete-package",
-  "checkedCommit": "7e410db0896644bd32722fa26f9a3865f4aa2330",
-  "result": "FAIL",
-  "reason": "Intentionally partial-package: confirmed phone G03 clipping defect; package cannot be promoted.",
-  "assets": {
-    "images": 5,
-    "audio": 10
-  },
-  "errors": [
-    "Draft status partial-package",
-    "Registry status partial-package",
-    "Registry / packet / draft explicitly retain blocker text"
-  ],
-  "warning": "Initial intake did not recognize playback/manual QA evidence in packet/draft; explicit Phone playback QA summary added afterward. Detailed evidence already exists in L386-package-notes.md."
+  "packageStatus": "dependency-blocked-asset-complete",
+  "supersedesSource": "6b4ab4f0119577e37d5f62ad0089dbbe67963efa",
+  "summary": "Reproduced 390px G03 six-Han clipping, repaired shared card-relative font sizing and wrapping, preserved approved displayLines and three options. Retested phone/tablet, recording with synthetic test audio, and reward navigation.",
+  "currentEvidence": "L386-rescue-qa.md",
+  "historicalEvidence": "Original checkpoint retained in source commit; current validation results in rescue audit and pushed intake report."
 }
