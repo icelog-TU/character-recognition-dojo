@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L375 | 經 / normal lesson | claimed | Production C | codex/l375-complete-package | L370, L371, L372, L373, L374 | 朋, 友, 親, 交, 通, 往 | curriculum-workflow/lesson-requests/L375.json; curriculum-workflow/generated/L375-generation-packet.md; curriculum-workflow/drafts/L375-draft.json | curriculum-workflow/audio-inbox/L375/; public/assets/lessons/L375/ | Teacher-approved provisional dependencies; L370 word 朋友 is previous-five coverage. R045/R046 follow L375 before L376 release. |
 
 ## Status Values
 
