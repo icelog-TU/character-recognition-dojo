@@ -1,0 +1,95 @@
+{
+  "unit": "L382",
+  "packageStatus": "partial-package",
+  "sourceBoundary": "9b081280afab0f52d126298279093f2e3290ca78",
+  "blocker": "G02 suffix 連 transcription mismatch: first output 敬礼; regenerated standalone zhuyin-guided input 連 returned empty transcript with both ordinary and full character processing. No suffix timing fabricated. Actual pronunciation has not been manually verified.",
+  "images": "S01-S05 not generated; style/cast/semantics not tested",
+  "ui": "Not run; no browser failure claimed",
+  "audio": [
+    {
+      "id": "L382-S01",
+      "bytes": 43632,
+      "durationMs": 4204,
+      "meanDb": -19.5,
+      "maxDb": -3.5,
+      "endGapMs": 1064,
+      "timingReviewNeeded": false
+    },
+    {
+      "id": "L382-S02",
+      "bytes": 62805,
+      "durationMs": 5366,
+      "meanDb": -19,
+      "maxDb": -4.7,
+      "endGapMs": 1246,
+      "timingReviewNeeded": false
+    },
+    {
+      "id": "L382-S03",
+      "bytes": 48721,
+      "durationMs": 4136,
+      "meanDb": -18.9,
+      "maxDb": -2.1,
+      "endGapMs": 756,
+      "timingReviewNeeded": false
+    },
+    {
+      "id": "L382-S04",
+      "bytes": 40787,
+      "durationMs": 3569,
+      "meanDb": -18.8,
+      "maxDb": -2,
+      "endGapMs": 549,
+      "timingReviewNeeded": false
+    },
+    {
+      "id": "L382-S05",
+      "bytes": 61429,
+      "durationMs": 5494,
+      "meanDb": -19.5,
+      "maxDb": -2,
+      "endGapMs": 994,
+      "timingReviewNeeded": true
+    },
+    {
+      "id": "L382-G02-prefix",
+      "bytes": 45384,
+      "durationMs": 3797,
+      "meanDb": -18.6,
+      "maxDb": -3.7,
+      "endGapMs": 837,
+      "timingReviewNeeded": false
+    },
+    {
+      "id": "L382-G05-wrong-one",
+      "bytes": 41865,
+      "durationMs": 4949,
+      "meanDb": -20.1,
+      "maxDb": -2.1,
+      "endGapMs": 2009,
+      "timingReviewNeeded": false
+    },
+    {
+      "id": "L382-G05-wrong-two",
+      "bytes": 35917,
+      "durationMs": 3064,
+      "meanDb": -18.8,
+      "maxDb": -2,
+      "endGapMs": 504,
+      "timingReviewNeeded": false
+    }
+  ],
+  "allowedCount": 385,
+  "coverage": {
+    "相": 3,
+    "傳": 2,
+    "連": 2,
+    "送": 2,
+    "接": 1,
+    "近": 1
+  },
+  "dataChecks": "PASS: allowed, displayLines, spokenText, indexes, G03 three choices, G04 mapping",
+  "audioAcceptance": "Incomplete: eight transcripts/timing records retained, long end gaps need listening/silence review; suffix not aligned; charAudio listening pending.",
+  "validation": "L382-only validate:production FAIL and assets:audit --strict FAIL: five images absent, G02 suffix absent; zero format warnings. Eight aligned tracks are diagnostic progress, not complete QA.",
+  "totalRetainedAudioBytes": 403425
+}
