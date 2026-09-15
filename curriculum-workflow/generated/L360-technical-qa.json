@@ -1,0 +1,214 @@
+{
+  "sourceBoundary": "496aa87af167b0760bcee8f9ca959d6cc657edfd",
+  "allowedCharacters": "PASS",
+  "coverage": {
+    "奇": 5,
+    "怪": 4,
+    "物": 3,
+    "園": 2,
+    "公": 1,
+    "雞": 1
+  },
+  "displayLines": "PASS",
+  "stage4": "PASS",
+  "timingReport": [
+    {
+      "id": "L360-S01",
+      "durationMs": 2946,
+      "minCharSpanMs": 140,
+      "maxCharSpanMs": 500,
+      "lastEndMs": 2760
+    },
+    {
+      "id": "L360-S02",
+      "durationMs": 3703,
+      "minCharSpanMs": 260,
+      "maxCharSpanMs": 660,
+      "lastEndMs": 3480
+    },
+    {
+      "id": "L360-S03",
+      "durationMs": 3281,
+      "minCharSpanMs": 220,
+      "maxCharSpanMs": 420,
+      "lastEndMs": 3100
+    },
+    {
+      "id": "L360-S04",
+      "durationMs": 3090,
+      "minCharSpanMs": 140,
+      "maxCharSpanMs": 520,
+      "lastEndMs": 2940
+    },
+    {
+      "id": "L360-S05",
+      "durationMs": 2931,
+      "minCharSpanMs": 150,
+      "maxCharSpanMs": 440,
+      "lastEndMs": 2740
+    },
+    {
+      "id": "L360-G02-prefix",
+      "durationMs": 2136,
+      "minCharSpanMs": 340,
+      "maxCharSpanMs": 420,
+      "lastEndMs": 1100
+    },
+    {
+      "id": "L360-G02-suffix",
+      "durationMs": 2193,
+      "minCharSpanMs": 253,
+      "maxCharSpanMs": 340,
+      "lastEndMs": 1760
+    },
+    {
+      "id": "L360-G05-wrong-one",
+      "durationMs": 2899,
+      "minCharSpanMs": 140,
+      "maxCharSpanMs": 580,
+      "lastEndMs": 2720
+    },
+    {
+      "id": "L360-G05-wrong-two",
+      "durationMs": 3557,
+      "minCharSpanMs": 200,
+      "maxCharSpanMs": 480,
+      "lastEndMs": 3340
+    }
+  ],
+  "audioReport": [
+    {
+      "src": "/assets/lessons/L360/audio/L360-S01.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 2946,
+      "bytes": 37140
+    },
+    {
+      "src": "/assets/lessons/L360/audio/L360-S02.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 3703,
+      "bytes": 46201
+    },
+    {
+      "src": "/assets/lessons/L360/audio/L360-S03.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 3281,
+      "bytes": 41834
+    },
+    {
+      "src": "/assets/lessons/L360/audio/L360-S04.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 3090,
+      "bytes": 39773
+    },
+    {
+      "src": "/assets/lessons/L360/audio/L360-S05.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 2931,
+      "bytes": 37358
+    },
+    {
+      "src": "/assets/lessons/L360/audio/L360-G02-prefix.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 2136,
+      "bytes": 25885
+    },
+    {
+      "src": "/assets/lessons/L360/audio/L360-G02-suffix.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 2193,
+      "bytes": 26014
+    },
+    {
+      "src": "/assets/lessons/L360/audio/L360-G05-wrong-one.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 2899,
+      "bytes": 36934
+    },
+    {
+      "src": "/assets/lessons/L360/audio/L360-G05-wrong-two.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 3557,
+      "bytes": 45417
+    },
+    {
+      "src": "/assets/lessons/L360/audio/char-u5947.m4a",
+      "decode": "PASS",
+      "codec": "aac",
+      "channels": 1,
+      "sampleRate": "44100",
+      "durationMs": 1788,
+      "bytes": 22851
+    }
+  ],
+  "imageReport": [
+    {
+      "id": "L360-S01",
+      "format": "WEBP 1024 1024",
+      "bytes": 143456,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L360-S02",
+      "format": "WEBP 1024 1024",
+      "bytes": 219182,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L360-S03",
+      "format": "WEBP 1024 1024",
+      "bytes": 165290,
+      "styleLock": "PASS",
+      "cast": "N/A"
+    },
+    {
+      "id": "L360-S04",
+      "format": "WEBP 1024 1024",
+      "bytes": 215362,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L360-S05",
+      "format": "WEBP 1024 1024",
+      "bytes": 155690,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "assetBytes": 1258387,
+  "browserQA": {
+    "status": "tooling limitation",
+    "reason": "Codex in-app browser rejected local processed M4A navigation with net::ERR_BLOCKED_BY_CLIENT. Audio output cannot be heard by this agent.",
+    "teacherReview": "Post-main repair queue per latest SOP; no pre-merge approval required."
+  }
+}

@@ -10,24 +10,12 @@
     "奇": "ㄑㄧˊ"
   },
   "targetSentenceCount": 5,
-  "packageStatus": "partial-package",
-  "sourceBoundary": "aa1144e3b119c516f037c4625e4e837649061362",
-  "dependsOnLessons": [
-    "L355",
-    "L356",
-    "L357",
-    "L358",
-    "L359"
-  ],
-  "provisionalLearnedChars": [
-    "雞",
-    "公",
-    "園",
-    "物",
-    "怪"
-  ],
+  "packageStatus": "asset-complete-package",
+  "sourceBoundary": "496aa87af167b0760bcee8f9ca959d6cc657edfd",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
   "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇",
-  "teacherNotes": "Teacher-approved Production C assignment. Main advanced from Editor 71762b03 to aa1144e3 through L354; 排 is now formal. L355-L359 are Release-only dependencies. Preserve approved displayLines. After L360, Release must integrate R043/R044 before L361; this does not block parallel Production. Future handoffs resume A/B/C/D rotation; next slot D.",
+  "teacherNotes": "Teacher-approved Production C assignment. L354-L359 are now formal in origin/main. Preserve approved displayLines. Release must integrate R043/R044 after L360 before L361; parallel Production remains allowed. Next slot D.",
   "generationConstraints": {
     "allowedChars": [
       "一",
@@ -394,20 +382,8 @@
       "怪",
       "奇"
     ],
-    "dependsOnLessons": [
-      "L355",
-      "L356",
-      "L357",
-      "L358",
-      "L359"
-    ],
-    "provisionalLearnedChars": [
-      "雞",
-      "公",
-      "園",
-      "物",
-      "怪"
-    ],
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
     "requiredCoverageChars": [
       "奇",
       "怪",

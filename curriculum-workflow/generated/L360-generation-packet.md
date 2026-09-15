@@ -2,8 +2,6 @@
 
 Production C / codex/l360-complete-package
 
-Base: aa1144e3b119c516f037c4625e4e837649061362 (formal L001-L354). Depends on L355-L359, provisional 雞公園物怪. L354 排 is formal. R043/R044 must follow L360 before Release integrates L361. Production preparation is allowed now.
-
 ## Approved Request And Fixed Stage 4
 
 ```json
@@ -19,24 +17,12 @@ Base: aa1144e3b119c516f037c4625e4e837649061362 (formal L001-L354). Depends on L3
     "奇": "ㄑㄧˊ"
   },
   "targetSentenceCount": 5,
-  "packageStatus": "partial-package",
-  "sourceBoundary": "aa1144e3b119c516f037c4625e4e837649061362",
-  "dependsOnLessons": [
-    "L355",
-    "L356",
-    "L357",
-    "L358",
-    "L359"
-  ],
-  "provisionalLearnedChars": [
-    "雞",
-    "公",
-    "園",
-    "物",
-    "怪"
-  ],
+  "packageStatus": "asset-complete-package",
+  "sourceBoundary": "496aa87af167b0760bcee8f9ca959d6cc657edfd",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
   "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇",
-  "teacherNotes": "Teacher-approved Production C assignment. Main advanced from Editor 71762b03 to aa1144e3 through L354; 排 is now formal. L355-L359 are Release-only dependencies. Preserve approved displayLines. After L360, Release must integrate R043/R044 before L361; this does not block parallel Production. Future handoffs resume A/B/C/D rotation; next slot D.",
+  "teacherNotes": "Teacher-approved Production C assignment. L354-L359 are now formal in origin/main. Preserve approved displayLines. Release must integrate R043/R044 after L360 before L361; parallel Production remains allowed. Next slot D.",
   "generationConstraints": {
     "allowedChars": [
       "一",
@@ -403,20 +389,8 @@ Base: aa1144e3b119c516f037c4625e4e837649061362 (formal L001-L354). Depends on L3
       "怪",
       "奇"
     ],
-    "dependsOnLessons": [
-      "L355",
-      "L356",
-      "L357",
-      "L358",
-      "L359"
-    ],
-    "provisionalLearnedChars": [
-      "雞",
-      "公",
-      "園",
-      "物",
-      "怪"
-    ],
+    "dependsOnLessons": [],
+    "provisionalLearnedChars": [],
     "requiredCoverageChars": [
       "奇",
       "怪",
@@ -626,8 +600,6 @@ Base: aa1144e3b119c516f037c4625e4e837649061362 (formal L001-L354). Depends on L3
 
 ## Image Prompts
 
-Use all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, plus cast L154-S01, L162-S04, L163-S02. Compare exported WebPs side by side before acceptance.
-
 ### L360-S01
 
 Use case: illustration-story. One square 1:1 phone-readable children's picture-book scene, safe margins. Use all five L058 images for style only: warm natural light, fine pencil-and-watercolor linework, softly modeled forms, rich but clean painted environment, bright varied palette. Preserve the refined examples' preschool proportions and soft natural faces. Not photo, 3D, anime, flat cartoon or thin generic watercolor. Do not copy identities from the L058 style set. The recurring protagonist girl matches the L115 and L154/L162/L163 cast references: preschool age, short dark bob with small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes; keep stable facial features and proportions. Warm family living room. Girl seated at a low reading table studying an open picture book. Three-quarter view shows her curious, caring face AND the open page clearly. On one large wordless page is a cute gentle round teal imaginary monster, sitting sadly with two obvious tears, soft stubby horns, no teeth. Monster exists ONLY as a flat printed illustration on the paper, not in the room. Book has no text. Girl tilts her head wondering why it cries. Bookshelf and daylight behind. No readable text, letters, numbers, book titles, labels, brands, logos, signs, speech balloons, packaging or watermarks anywhere.
@@ -658,54 +630,42 @@ Use case: illustration-story. One square 1:1 phone-readable children's picture-b
 
 Reuse decision: New scene required for the approved object/action relationship; existing style/cast references do not depict this exact scene.
 
-## Audio Plan
-
-Generate all five exact spokenText sentences, standalone 奇 at char-u5947.m4a, G02 prefix 我很好 and suffix 怪物為什麼哭 as complete fragments, and both G05 full wrong texts. G05 correct reuses S04. Use repo OpenAI ai:audio, assets:audio, assets:align:ai. No splicing, extraction, OS TTS or browser TTS. Record final QA here before handoff.
 
 ## Acceptance
 
-Status: **partial-package**, not asset-complete-package or dependency-blocked-asset-complete. All requested assets exist, but timing and mandatory playback QA are incomplete. Release owns production JSON, planner, ledger, ordered integration and deployment. No production JSON insertion is included in this package.
+Status: asset-complete-package. Technical checks complete; teacher subjective image/audio review belongs to the post-main repair queue. No pre-merge teacher approval or cloud sync is required.
 
-### Final Image QA
+Current origin/main: 496aa87af167b0760bcee8f9ca959d6cc657edfd, formal L001-L359. L354-L359 dependencies are clear. Initial production base was aa1144e3b119c516f037c4625e4e837649061362 through L354. Release owns production JSON/planner/ledger integration and R043/R044 ordering after L360.
 
-All five final 1024-square WebPs were opened together with the full L058 style set and refined/cast references. Warm pencil/watercolor rendering, clean detailed settings and recurring identities were visually checked. No readable text or numbers found. No rejected or regenerated image drafts.
+### Image QA
 
-| Image | Style lock | Cast | Bytes | Scene |
-| --- | --- | --- | ---: | --- |
-| S01 | PASS | PASS | 143456 | Girl studies a crying creature printed on an open book page. |
-| S02 | PASS | PASS | 219182 | Girl watches an unusual friendly bird in a zoo aviary. |
-| S03 | PASS | N/A | 165290 | Chick tilts its head at a clearly sewn plush toy; no people. |
-| S04 | PASS | PASS | 215362 | Recurring girl and mother inspect a small shallow park-lawn hole. |
-| S05 | PASS | PASS | 155690 | Girl admires a safe enclosed hand-cranked toy. |
+- L360-S01: style-lock PASS, cast PASS, 143456 bytes.
+- L360-S02: style-lock PASS, cast PASS, 219182 bytes.
+- L360-S03: style-lock PASS, cast N/A, 165290 bytes.
+- L360-S04: style-lock PASS, cast PASS, 215362 bytes.
+- L360-S05: style-lock PASS, cast PASS, 155690 bytes.
 
-Total public lesson assets: 1,278,413 bytes (15 files), below 2 MB target and 2.5 MB hard limit.
+All final WebPs were opened against the full L058 set and refined/cast anchors. Images are unchanged from the prior visual check. Zero image drafts rejected or regenerated. Total assets: 1258387 bytes.
 
 ### Audio And Timing QA
 
-OpenAI repo pipeline generated five complete sentence files, standalone 奇, two complete G02 fragments and two complete G05 wrong options. G05 correct reuses S04. No audio was cut or spliced. Initial voice coral; S01, G02 suffix and G05 wrong-one were retried with nova after unsuccessful coral timing/transcription results. Final normalized files retain those versions. Ten local source MP3s remain in ignored audio-inbox/L360; final ten M4As are committed.
+Ten complete OpenAI audio files: five sentences, standalone 奇, two teach fragments and two full wrong options. Correct G05 reuses S04. S01 was regenerated with gpt-4o-mini-tts/onyx; G05 wrong-one with gpt-4o-mini-tts/nova and explicit slow final-syllable instructions. Other voices retain the original coral generation, except G02 suffix uses nova.
 
-The final AI alignment run verified all nine sentence/fragment/option transcripts after script-level simplified-to-traditional normalization. Dedicated charAudio duration is 1788 ms and passes production duration/audibility checks; pronunciation has not been manually heard.
+Sentence and G05 files had only detected trailing silence shortened (-45 dB threshold, retain 90 ms after detected silence onset), followed by AI alignment of final M4As. No syllables were extracted or spliced. G02 fragments retain their previously aligned complete source versions and natural decay. All 9 aligned records have matching Han counts, ordered non-overlapping timings, and 80-900 ms character spans. Every full sentence ends within 300 ms of its final aligned syllable. Standalone 奇 duration is 1788 ms.
 
-Outstanding defects, not waived:
-- S01 charIndex 4 (怪): 40 ms span after multiple attempts.
-- G05 wrong-one charIndex 9 (鳥): 1 ms span after multiple attempts.
-- File duration minus last aligned syllable end exceeds 300 ms in all nine aligned files (433-1716 ms); determine by listening whether this is silence or alignment truncation before trimming/repairing. Do not extend highlights through silence.
-- Mandatory phone-width listening/highlight QA, G02 recorded replay and first-tap G05 playback are NOT RUN. This agent cannot hear the audio output or verify a physical child recording. No auditory acceptance is claimed.
+Exploratory word-coalescing/context/time-stretch changes were removed: final timestamps use the original word-splitting algorithm and no manually padded intervals. Shared changes retained: 园-to-園 normalization, plus optional ai:audio --instructions for reproducible speech-direction overrides; defaults are unchanged. Release should review both.
 
-Draft stores final-file AI timings, including flagged defects, for repair; they are not approved for release. Correct these issues and complete actual playback QA before changing package status.
+### Technical Checks
 
-### Validation And Integration Handoff
+- Exact approved text, allowed characters, coverage, displayLines, Stage 4 canonical order/use/indexes/single-character cards: PASS.
+- All 10 referenced audio files fully decode with ffmpeg -xerror, AAC mono 44100 Hz: PASS.
+- Five 1024-square WebPs, ten processed M4As, standalone character and dedicated Stage 4 audio: PASS.
+- Timing lengths, ranges, ordering and minimum/maximum spans: PASS. See L360-technical-qa.json for file-level evidence.
+- Scoped validate:production and assets:audit -- --strict: PASS on the L360-only temporary fixture.
+- Latest origin/main package-intake gate is run against the pushed package ref during final handoff.
 
-- git fetch origin: PASS; final boundary unchanged at aa1144e3b119c516f037c4625e4e837649061362, formal L354.
-- tools:check, ai:check, curriculum:audit-state: PASS. Expected audit warning: L360 assets exist outside production JSON.
-- Lesson-local data audit: PASS for exact approved text/spokenText/displayLines, allowed characters, coverage (奇5/怪4/物3/園2/公1/雞1), canonical game order, each sentence used once, indexes, single-Han cards, G02 exact fragments and G05 full wrong texts.
-- assets:audio: PASS. assets:align:ai: final command PASS, but semantic timing QA FAIL as detailed above.
-- validate:production: PASS on a temporary L360-only fixture.
-- assets:audit -- --strict: PASS on that fixture, 1 unit / 5 images / 10 audio references / zero warnings, including G05 volume spread.
-- Original production JSON restored byte-for-byte after scoped checks; no planner or ledger update.
-- Shared script change: scripts/align-audio-timings-ai.mjs adds only U+56ED to U+5712 (园 to 園) to the existing normalization map. Release must review this shared change; it does not excuse wrong spoken words.
-- L354 排 is merged; L355 雞, L356 公, L357 園, L358 物, L359 怪 remain provisional dependencies. Review pair R043/R044 must follow L360 before L361 main integration. Production remains free to prepare packages in parallel.
+### Browser QA Tooling Limitation
 
-After the branch is pushed: [pre-merge package preview, not final main review queue](https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L360&ref=codex%2Fl360-complete-package).
+Codex in-app browser rejected navigation to the local processed M4A with net::ERR_BLOCKED_BY_CLIENT. This agent cannot hear audio output. Playback/highlight/recording interaction acceptance is not claimed. Under latest SOP, the completed non-browser gates permit package handoff; teacher subjective review remains post-main. No teacher pre-merge approval is requested.
 
-After eventual Release merge and Pages deployment: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L360&ref=main ; status command: `npm run asset:review-status -- --unit L360 --ref main`.
+Production JSON is restored after temporary tooling fixtures; no shared curriculum/planner/ledger integration is included.
