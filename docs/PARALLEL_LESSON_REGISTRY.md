@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L382 | 相 / normal lesson | claimed | Production C | codex/l382-complete-package | L377, L378, L379, L380, L381 | 近, 接, 送, 連, 傳 | curriculum-workflow/lesson-requests/L382.json; curriculum-workflow/generated/L382-generation-packet.md; curriculum-workflow/drafts/L382-draft.json | curriculum-workflow/audio-inbox/L382/; public/assets/lessons/L382/ | Text dependencies L377-L381. Playable order requires R045/R046 after L375, then L376-L381. G03 exactly 相/想/看. All 相 read ㄒㄧㄤ. |
 
 ## Status Values
 
