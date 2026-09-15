@@ -1,0 +1,19 @@
+const fs=require('fs'),assert=require('assert'),cp=require('child_process');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const d=read('curriculum-workflow/drafts/L390-draft.json'),r=read('curriculum-workflow/lesson-requests/L390.json');
+const han=s=>s.match(/\p{Script=Han}/gu)||[];
+const allowed=r.generationConstraints.allowedChars;
+assert.equal(allowed.length,385);assert.equal(new Set(allowed).size,385);
+const result={unit:d.id,packageStatus:d.packageStatus,coverage:{},sentences:[],games:[],media:[]};
+assert.equal(d.packageStatus,r.packageStatus);assert.deepEqual(d.dependsOnLessons,r.dependsOnLessons);assert.deepEqual(d.provisionalLearnedChars,r.provisionalLearnedChars);
+assert.deepEqual(d.sentenceGames,r.sentenceGames);
+for(const s of d.sentences){const a=r.approvedSentences.find(x=>x.id===s.id);for(const k of ['text','spokenText','focusChar','displayLines','imageNotes','zhuyinOverrides'])assert.deepEqual(s[k],a[k],s.id+' '+k);assert.equal(han(s.text).join(''),s.spokenText);assert.equal(s.displayLines.join(''),s.text);assert(s.displayLines.every(x=>[...x].length<=6));assert(han([s.text,s.spokenText,s.focusChar,...s.displayLines].join('')).every(c=>allowed.includes(c)));assert.equal(s.audio.charTimings.length,han(s.text).length);let prior=0;for(const [i,t] of s.audio.charTimings.entries()){assert.equal(t.charIndex,i);assert(t.startMs>=prior&&t.endMs>t.startMs&&t.endMs<=s.audio.durationMs);prior=t.endMs;}result.sentences.push({id:s.id,han:han(s.text).length,timingCount:s.audio.charTimings.length,tailGapMs:s.audio.durationMs-prior});}
+for(const [i,g] of d.sentenceGames.entries()){assert.equal(g.type,['find-character','teach-character','missing-character','partial-order','choose-pronunciation'][i]);const s=d.sentences.find(s=>s.id===g.sentenceId),h=han(s.text);assert.equal(h[g.targetCharIndex],g.targetChar);for(const o of g.options||[])assert(han(o.text).every(c=>allowed.includes(c)));if(g.type==='missing-character'){assert.equal(g.options.length,3);assert.equal(new Set(g.options.map(o=>o.text)).size,3);assert.equal(g.options.filter(o=>o.correct).length,1);assert(g.options.every(o=>/^\p{Script=Han}$/u.test(o.text)));assert.equal(g.options.find(o=>o.correct).text,h[g.missingIndexes[0]]);}if(g.type==='partial-order'){assert.equal(g.options.length,4);g.options.forEach(o=>assert.equal(o.text,h[g.missingIndexes[o.correctOrder]]));}result.games.push({id:g.id,target:g.targetChar,index:g.targetCharIndex,options:g.options?.length||0});}
+assert.equal(new Set(d.sentenceGames.map(g=>g.sentenceId)).size,5);
+for(const c of '數號念第名字')result.coverage[c]=han(d.sentences.map(s=>s.text).join('')).filter(x=>x===c).length;
+assert.deepEqual(Object.values(result.coverage),[4,2,2,2,1,1]);
+const ff=require('@ffmpeg-installer/ffmpeg').path,fp=require('@ffprobe-installer/ffprobe').path;
+for(const group of ['images','audio'])for(const file of fs.readdirSync('public/assets/lessons/L390/'+group)){const p='public/assets/lessons/L390/'+group+'/'+file,bytes=fs.statSync(p).size;const row={file,bytes};if(group==='audio'){const dec=cp.spawnSync(ff,['-v','error','-i',p,'-f','null','-'],{encoding:'utf8'});assert.equal(dec.status,0,file+' decode');const meta=JSON.parse(cp.execFileSync(fp,['-v','error','-show_streams','-show_format','-of','json',p],{encoding:'utf8'}));row.durationMs=Math.round(Number(meta.format.duration)*1000);assert.equal(meta.streams[0].codec_name,'aac');assert.equal(meta.streams[0].sample_rate,'44100');assert.equal(meta.streams[0].channels,1);}result.media.push(row);}
+result.totalBytes=result.media.reduce((s,x)=>s+x.bytes,0);assert(result.totalBytes<=2.5*1024*1024);
+result.mechanical='PASS';result.fullAcceptance=d.packageStatus;
+fs.writeFileSync('curriculum-workflow/generated/L390-audit-report.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));

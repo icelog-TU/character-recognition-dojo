@@ -1,0 +1,146 @@
+{
+  "unit": "L390",
+  "packageStatus": "partial-package",
+  "coverage": {
+    "數": 4,
+    "號": 2,
+    "念": 2,
+    "第": 2,
+    "名": 1,
+    "字": 1
+  },
+  "sentences": [
+    {
+      "id": "L390-S01",
+      "han": 11,
+      "timingCount": 11,
+      "tailGapMs": 241
+    },
+    {
+      "id": "L390-S02",
+      "han": 10,
+      "timingCount": 10,
+      "tailGapMs": 266
+    },
+    {
+      "id": "L390-S03",
+      "han": 10,
+      "timingCount": 10,
+      "tailGapMs": 209
+    },
+    {
+      "id": "L390-S04",
+      "han": 9,
+      "timingCount": 9,
+      "tailGapMs": 234
+    },
+    {
+      "id": "L390-S05",
+      "han": 10,
+      "timingCount": 10,
+      "tailGapMs": 254
+    }
+  ],
+  "games": [
+    {
+      "id": "L390-G01",
+      "target": "數",
+      "index": 6,
+      "options": 0
+    },
+    {
+      "id": "L390-G02",
+      "target": "數",
+      "index": 0,
+      "options": 0
+    },
+    {
+      "id": "L390-G03",
+      "target": "數",
+      "index": 2,
+      "options": 3
+    },
+    {
+      "id": "L390-G04",
+      "target": "號",
+      "index": 3,
+      "options": 4
+    },
+    {
+      "id": "L390-G05",
+      "target": "數",
+      "index": 7,
+      "options": 3
+    }
+  ],
+  "media": [
+    {
+      "file": "L390-S01.webp",
+      "bytes": 169500
+    },
+    {
+      "file": "L390-S02.webp",
+      "bytes": 129630
+    },
+    {
+      "file": "L390-S03.webp",
+      "bytes": 132056
+    },
+    {
+      "file": "L390-S04.webp",
+      "bytes": 106936
+    },
+    {
+      "file": "L390-S05.webp",
+      "bytes": 242056
+    },
+    {
+      "file": "char-u6578.m4a",
+      "bytes": 20518,
+      "durationMs": 1161
+    },
+    {
+      "file": "L390-G02-suffix.m4a",
+      "bytes": 39659,
+      "durationMs": 3181
+    },
+    {
+      "file": "L390-G05-wrong-one.m4a",
+      "bytes": 41662,
+      "durationMs": 3367
+    },
+    {
+      "file": "L390-G05-wrong-two.m4a",
+      "bytes": 52292,
+      "durationMs": 4086
+    },
+    {
+      "file": "L390-S01.m4a",
+      "bytes": 39674,
+      "durationMs": 3181
+    },
+    {
+      "file": "L390-S02.m4a",
+      "bytes": 53984,
+      "durationMs": 4086
+    },
+    {
+      "file": "L390-S03.m4a",
+      "bytes": 43946,
+      "durationMs": 3529
+    },
+    {
+      "file": "L390-S04.m4a",
+      "bytes": 40960,
+      "durationMs": 3274
+    },
+    {
+      "file": "L390-S05.m4a",
+      "bytes": 48284,
+      "durationMs": 3854
+    }
+  ],
+  "totalBytes": 1161157,
+  "mechanical": "PASS",
+  "fullAcceptance": "partial-package"
+}

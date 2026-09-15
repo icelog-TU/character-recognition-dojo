@@ -1,0 +1,1782 @@
+# L390 generation packet
+
+Package status: partial-package
+
+Teacher-approved L390 normal single-character lesson; main zhuyin 數 ㄕㄨˋ. S01[6]/S04[2] ㄕㄨˋ; S03[0]/S05[7] ㄕㄨˇ. G02 targets S03 first Han with suffix-only 了三次還是少一本書; no prefix and no substitution with fourth-tone standalone audio. G05 correct/wrong-two 數 ㄕㄨˇ. Base b313ded8; formal L001-L375, 379 Han. Dependencies L385-L389, provisional 字名第念號. Release needs prior lessons and R045/R046; next milestone L390-R047-R048-L391 (review coverage L361-L390), outside this package. No 碼姓考賽 or readable image numerals/letters exceptions. Subjective teacher asset review remains post-main. Production phonetic gate unresolved: final standalone 數 intended fourth tone was classified first tone by independent AI audio review; S03 intended third tone classified fourth. S01 final tone unconfirmed. Not asset-complete; see L390-package-notes.md and hashed listening evidence. Browser G02 hold/record/replay not completed with current control tooling.
+
+QA evidence: L390-package-notes.md; mechanical and format reports accompany this packet.
+
+## Approved request
+
+```json
+{
+  "id": "L390",
+  "kind": "lesson",
+  "order": 390,
+  "title": "數",
+  "newChars": [
+    "數"
+  ],
+  "zhuyin": {
+    "數": "ㄕㄨˋ"
+  },
+  "requiredRounds": 5,
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L385",
+    "L386",
+    "L387",
+    "L388",
+    "L389"
+  ],
+  "provisionalLearnedChars": [
+    "字",
+    "名",
+    "第",
+    "念",
+    "號"
+  ],
+  "teacherNotes": "Teacher-approved L390 normal single-character lesson; main zhuyin 數 ㄕㄨˋ. S01[6]/S04[2] ㄕㄨˋ; S03[0]/S05[7] ㄕㄨˇ. G02 targets S03 first Han with suffix-only 了三次還是少一本書; no prefix and no substitution with fourth-tone standalone audio. G05 correct/wrong-two 數 ㄕㄨˇ. Base b313ded8; formal L001-L375, 379 Han. Dependencies L385-L389, provisional 字名第念號. Release needs prior lessons and R045/R046; next milestone L390-R047-R048-L391 (review coverage L361-L390), outside this package. No 碼姓考賽 or readable image numerals/letters exceptions. Subjective teacher asset review remains post-main. Production phonetic gate unresolved: final standalone 數 intended fourth tone was classified first tone by independent AI audio review; S03 intended third tone classified fourth. S01 final tone unconfirmed. Not asset-complete; see L390-package-notes.md and hashed listening evidence. Browser G02 hold/record/replay not completed with current control tooling.",
+  "packageStatus": "partial-package",
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見",
+      "說",
+      "師",
+      "話",
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電",
+      "生",
+      "明",
+      "光",
+      "亮",
+      "陽",
+      "月",
+      "影",
+      "長",
+      "星",
+      "行",
+      "道",
+      "流",
+      "河",
+      "從",
+      "進",
+      "早",
+      "晚",
+      "海",
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精",
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口",
+      "傷",
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬",
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種",
+      "澆",
+      "照",
+      "顧",
+      "忘",
+      "每",
+      "次",
+      "記",
+      "完",
+      "收",
+      "彩",
+      "色",
+      "粉",
+      "哪",
+      "些",
+      "最",
+      "西",
+      "東",
+      "方",
+      "圖",
+      "向",
+      "線",
+      "直",
+      "轉",
+      "右",
+      "角",
+      "落",
+      "因",
+      "原",
+      "別",
+      "特",
+      "處",
+      "理",
+      "整",
+      "齊",
+      "全",
+      "今",
+      "們",
+      "年",
+      "跟",
+      "常",
+      "請",
+      "嗎",
+      "客",
+      "讓",
+      "廳",
+      "餐",
+      "位",
+      "正",
+      "排",
+      "雞",
+      "公",
+      "園",
+      "物",
+      "怪",
+      "奇",
+      "驚",
+      "喜",
+      "歡",
+      "笑",
+      "但",
+      "吧",
+      "謝",
+      "感",
+      "情",
+      "朋",
+      "友",
+      "親",
+      "交",
+      "通",
+      "往",
+      "經",
+      "字",
+      "名",
+      "第",
+      "念",
+      "號",
+      "數"
+    ],
+    "provisionalLearnedChars": [
+      "字",
+      "名",
+      "第",
+      "念",
+      "號"
+    ],
+    "targetCharMinimumCount": {
+      "數": 3
+    },
+    "recentTargetMinimumCounts": {
+      "號": 2,
+      "念": 2,
+      "第": 2,
+      "名": 1,
+      "字": 1
+    }
+  },
+  "approvedSentences": [
+    {
+      "id": "L390-S01",
+      "text": "車號的第一個數字怎麼念？",
+      "spokenText": "車號的第一個數字怎麼念",
+      "displayLines": [
+        "車號的",
+        "第一個數字",
+        "怎麼念？"
+      ],
+      "focusChar": "數",
+      "imageNotes": "停車場內，車子完全停妥；主角小女孩站在爸爸身旁，指向車牌由左至右的第一個數字位置，抬頭詢問。車牌區用不可辨識字元示意，不生成真實或可讀車號；構圖重點是指認首位與向爸爸詢問。不要畫成指車身、輪胎或最後一位，不讓孩子獨自在車道上。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "6": "ㄕㄨˋ"
+      }
+    },
+    {
+      "id": "L390-S02",
+      "text": "念到三號了，下一個是我。",
+      "spokenText": "念到三號了下一個是我",
+      "displayLines": [
+        "念到三號了，",
+        "下一個是我。"
+      ],
+      "focusChar": "號",
+      "imageNotes": "診所等候區，generic 櫃台工作人員正在叫號，一位排在前面的 generic 成人起身前往；主角小女孩拿著順序紙牌，對身旁媽媽露出快輪到自己的期待神情。紙牌與顯示區不使用可讀數字；女孩仍在等待，不畫成她已被叫入，也不要出現疾病痛苦或打針場景。",
+      "approved": true
+    },
+    {
+      "id": "L390-S03",
+      "text": "數了三次，還是少一本書。",
+      "spokenText": "數了三次還是少一本書",
+      "displayLines": [
+        "數了三次，",
+        "還是少",
+        "一本書。"
+      ],
+      "focusChar": "數",
+      "imageNotes": "家中書桌，一套相同尺寸、同系列外觀的書放在分格收納架內，其中一格空著；主角小女孩逐本指數，露出困惑神情，媽媽在旁看。用完整系列中的空格表現少一本；不畫三個分身或三格重複畫面表現「三次」，不使用書脊文字或編號。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "0": "ㄕㄨˇ"
+      }
+    },
+    {
+      "id": "L390-S04",
+      "text": "小光數學拿了第一名。",
+      "spokenText": "小光數學拿了第一名",
+      "displayLines": [
+        "小光數學",
+        "拿了第一名。"
+      ],
+      "focusChar": "數",
+      "imageNotes": "學校數學活動頒獎，固定小光站在中央最高的頒獎位置，老師正把獎盃交給他；旁邊兩位 generic classmates 位於較低位置。附近桌面有計數積木等數學教具，交代不是跑步比賽。獎盃、頒獎台不寫數字或文字。小光使用 public/assets/reference/lesson-cast/xiaoguang.webp；老師不是媽媽。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "2": "ㄕㄨˋ"
+      }
+    },
+    {
+      "id": "L390-S05",
+      "text": "天上的星星多得數不完。",
+      "spokenText": "天上的星星多得數不完",
+      "displayLines": [
+        "天上的星星",
+        "多得數不完。"
+      ],
+      "focusChar": "數",
+      "imageNotes": "夜晚戶外，主角小女孩與爸爸待在安全平坦的空地，女孩仰頭伸手指數星星；天空有大量清楚星點，人物仍有柔和照明。不是滿天煙火、燈泡或星形貼紙，也不用數字、文字或計數符號表達數不完。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "7": "ㄕㄨˇ"
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L390-G01",
+      "type": "find-character",
+      "sentenceId": "L390-S01",
+      "targetChar": "數",
+      "targetCharIndex": 6,
+      "prompt": "找出句子裡的字。"
+    },
+    {
+      "id": "L390-G02",
+      "type": "teach-character",
+      "sentenceId": "L390-S03",
+      "targetChar": "數",
+      "targetCharIndex": 0,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "suffixText": "了三次還是少一本書",
+        "suffixSrc": "/assets/lessons/L390/audio/L390-G02-suffix.m4a",
+        "suffixAudio": {
+          "spokenText": "了三次還是少一本書",
+          "src": "/assets/lessons/L390/audio/L390-G02-suffix.m4a",
+          "durationMs": 3181,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 240
+            },
+            {
+              "charIndex": 1,
+              "startMs": 240,
+              "endMs": 740
+            },
+            {
+              "charIndex": 2,
+              "startMs": 740,
+              "endMs": 1100
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1400,
+              "endMs": 1600
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1600,
+              "endMs": 1800
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1800,
+              "endMs": 2300
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2300,
+              "endMs": 2460
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2460,
+              "endMs": 2740
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2740,
+              "endMs": 2980
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L390-G03",
+      "type": "missing-character",
+      "sentenceId": "L390-S04",
+      "targetChar": "數",
+      "targetCharIndex": 2,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "數",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "找",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "看",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L390-G04",
+      "type": "partial-order",
+      "sentenceId": "L390-S02",
+      "targetChar": "號",
+      "targetCharIndex": 3,
+      "prompt": "把字放回句子。",
+      "missingIndexes": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "card-shi",
+          "text": "是",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-xia",
+          "text": "下",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-ge",
+          "text": "個",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-yi",
+          "text": "一",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L390-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L390-S05",
+      "targetChar": "數",
+      "targetCharIndex": 7,
+      "prompt": "聽聽誰念對了。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "天上的星星多得數不完。",
+          "spokenText": "天上的星星多得數不完",
+          "correct": true,
+          "sentenceId": "L390-S05",
+          "audioSrc": "/assets/lessons/L390/audio/L390-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L390/audio/L390-S05.m4a",
+            "durationMs": 3854,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1600,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2400,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2740,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3360,
+                "endMs": 3600
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "天上的星星多得看不完。",
+          "spokenText": "天上的星星多得看不完",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L390/audio/L390-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "天上的星星多得看不完",
+            "src": "/assets/lessons/L390/audio/L390-G05-wrong-one.m4a",
+            "durationMs": 3367,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2940,
+                "endMs": 3140
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "天上的小鳥多得數不完。",
+          "spokenText": "天上的小鳥多得數不完",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L390/audio/L390-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "天上的小鳥多得數不完",
+            "src": "/assets/lessons/L390/audio/L390-G05-wrong-two.m4a",
+            "durationMs": 4086,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3020,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3360,
+                "endMs": 3660
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3660,
+                "endMs": 3880
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Final lesson-local draft
+
+```json
+{
+  "id": "L390",
+  "order": 390,
+  "title": "數",
+  "newChars": [
+    "數"
+  ],
+  "zhuyin": {
+    "數": "ㄕㄨˋ"
+  },
+  "charAudio": {
+    "數": "/assets/lessons/L390/audio/char-u6578.m4a"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [
+    "L385",
+    "L386",
+    "L387",
+    "L388",
+    "L389"
+  ],
+  "provisionalLearnedChars": [
+    "字",
+    "名",
+    "第",
+    "念",
+    "號"
+  ],
+  "packageStatus": "partial-package",
+  "notes": "Teacher-approved L390 normal single-character lesson; main zhuyin 數 ㄕㄨˋ. S01[6]/S04[2] ㄕㄨˋ; S03[0]/S05[7] ㄕㄨˇ. G02 targets S03 first Han with suffix-only 了三次還是少一本書; no prefix and no substitution with fourth-tone standalone audio. G05 correct/wrong-two 數 ㄕㄨˇ. Base b313ded8; formal L001-L375, 379 Han. Dependencies L385-L389, provisional 字名第念號. Release needs prior lessons and R045/R046; next milestone L390-R047-R048-L391 (review coverage L361-L390), outside this package. No 碼姓考賽 or readable image numerals/letters exceptions. Subjective teacher asset review remains post-main. Production phonetic gate unresolved: final standalone 數 intended fourth tone was classified first tone by independent AI audio review; S03 intended third tone classified fourth. S01 final tone unconfirmed. Not asset-complete; see L390-package-notes.md and hashed listening evidence. Browser G02 hold/record/replay not completed with current control tooling.",
+  "sentences": [
+    {
+      "id": "L390-S01",
+      "text": "車號的第一個數字怎麼念？",
+      "spokenText": "車號的第一個數字怎麼念",
+      "displayLines": [
+        "車號的",
+        "第一個數字",
+        "怎麼念？"
+      ],
+      "focusChar": "數",
+      "imageNotes": "停車場內，車子完全停妥；主角小女孩站在爸爸身旁，指向車牌由左至右的第一個數字位置，抬頭詢問。車牌區用不可辨識字元示意，不生成真實或可讀車號；構圖重點是指認首位與向爸爸詢問。不要畫成指車身、輪胎或最後一位，不讓孩子獨自在車道上。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "6": "ㄕㄨˋ"
+      },
+      "imagePrompt": "Use case illustration-story. Square 1:1 mobile-readable, safe margins. Full L058 style-only references: fine pencil/watercolor, rich clean detailed environment, warm natural light and bright colors, natural child faces and stable proportions; refined L115/L118/L119/L128, family L154/L162/L163 identities. Protagonist girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length loose dark hair cream cardigan blue pants; father blue button shirt beige pants. Teacher tied-back dark hair teal top navy skirt, distinct from mother. Xiaoguang MUST match public/assets/reference/lesson-cast/xiaoguang.webp: round glasses, neat short black hair, white shirt navy vest khaki shorts white socks brown shoes; not fixed YOU boy. Generic adults/children clearly different from recurring cast. No readable writing/numerals/letters/signs/brands/logos/watermarks, no L387 English exception. No anime/3D/photo/generic simplified cartoon. 停車場內，車子完全停妥；主角小女孩站在爸爸身旁，指向車牌由左至右的第一個數字位置，抬頭詢問。車牌區用不可辨識字元示意，不生成真實或可讀車號；構圖重點是指認首位與向爸爸詢問。不要畫成指車身、輪胎或最後一位，不讓孩子獨自在車道上。",
+      "imageSrc": "/assets/lessons/L390/images/L390-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L390/audio/L390-S01.m4a",
+        "durationMs": 3181,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 920
+          },
+          {
+            "charIndex": 3,
+            "startMs": 920,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1100,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1280,
+            "endMs": 1540
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1540,
+            "endMs": 1780
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1780,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2000,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2360,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2720,
+            "endMs": 2940
+          }
+        ]
+      }
+    },
+    {
+      "id": "L390-S02",
+      "text": "念到三號了，下一個是我。",
+      "spokenText": "念到三號了下一個是我",
+      "displayLines": [
+        "念到三號了，",
+        "下一個是我。"
+      ],
+      "focusChar": "號",
+      "imageNotes": "診所等候區，generic 櫃台工作人員正在叫號，一位排在前面的 generic 成人起身前往；主角小女孩拿著順序紙牌，對身旁媽媽露出快輪到自己的期待神情。紙牌與顯示區不使用可讀數字；女孩仍在等待，不畫成她已被叫入，也不要出現疾病痛苦或打針場景。",
+      "approved": true,
+      "imagePrompt": "Use case illustration-story. Square 1:1 mobile-readable, safe margins. Full L058 style-only references: fine pencil/watercolor, rich clean detailed environment, warm natural light and bright colors, natural child faces and stable proportions; refined L115/L118/L119/L128, family L154/L162/L163 identities. Protagonist girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length loose dark hair cream cardigan blue pants; father blue button shirt beige pants. Teacher tied-back dark hair teal top navy skirt, distinct from mother. Xiaoguang MUST match public/assets/reference/lesson-cast/xiaoguang.webp: round glasses, neat short black hair, white shirt navy vest khaki shorts white socks brown shoes; not fixed YOU boy. Generic adults/children clearly different from recurring cast. No readable writing/numerals/letters/signs/brands/logos/watermarks, no L387 English exception. No anime/3D/photo/generic simplified cartoon. 診所等候區，generic 櫃台工作人員正在叫號，一位排在前面的 generic 成人起身前往；主角小女孩拿著順序紙牌，對身旁媽媽露出快輪到自己的期待神情。紙牌與顯示區不使用可讀數字；女孩仍在等待，不畫成她已被叫入，也不要出現疾病痛苦或打針場景。",
+      "imageSrc": "/assets/lessons/L390/images/L390-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L390/audio/L390-S02.m4a",
+        "durationMs": 4086,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1240,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1460,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2500,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2600,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2700,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2800,
+            "endMs": 3310
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3310,
+            "endMs": 3820
+          }
+        ]
+      }
+    },
+    {
+      "id": "L390-S03",
+      "text": "數了三次，還是少一本書。",
+      "spokenText": "數了三次還是少一本書",
+      "displayLines": [
+        "數了三次，",
+        "還是少",
+        "一本書。"
+      ],
+      "focusChar": "數",
+      "imageNotes": "家中書桌，一套相同尺寸、同系列外觀的書放在分格收納架內，其中一格空著；主角小女孩逐本指數，露出困惑神情，媽媽在旁看。用完整系列中的空格表現少一本；不畫三個分身或三格重複畫面表現「三次」，不使用書脊文字或編號。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "0": "ㄕㄨˇ"
+      },
+      "imagePrompt": "Use case illustration-story. Square 1:1 mobile-readable, safe margins. Full L058 style-only references: fine pencil/watercolor, rich clean detailed environment, warm natural light and bright colors, natural child faces and stable proportions; refined L115/L118/L119/L128, family L154/L162/L163 identities. Protagonist girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length loose dark hair cream cardigan blue pants; father blue button shirt beige pants. Teacher tied-back dark hair teal top navy skirt, distinct from mother. Xiaoguang MUST match public/assets/reference/lesson-cast/xiaoguang.webp: round glasses, neat short black hair, white shirt navy vest khaki shorts white socks brown shoes; not fixed YOU boy. Generic adults/children clearly different from recurring cast. No readable writing/numerals/letters/signs/brands/logos/watermarks, no L387 English exception. No anime/3D/photo/generic simplified cartoon. 家中書桌，一套相同尺寸、同系列外觀的書放在分格收納架內，其中一格空著；主角小女孩逐本指數，露出困惑神情，媽媽在旁看。用完整系列中的空格表現少一本；不畫三個分身或三格重複畫面表現「三次」，不使用書脊文字或編號。",
+      "imageSrc": "/assets/lessons/L390/images/L390-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L390/audio/L390-S03.m4a",
+        "durationMs": 3529,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 780
+          },
+          {
+            "charIndex": 2,
+            "startMs": 780,
+            "endMs": 1180
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1180,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1780,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1980,
+            "endMs": 2180
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2180,
+            "endMs": 2640
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2640,
+            "endMs": 2820
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2820,
+            "endMs": 3080
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3080,
+            "endMs": 3320
+          }
+        ]
+      }
+    },
+    {
+      "id": "L390-S04",
+      "text": "小光數學拿了第一名。",
+      "spokenText": "小光數學拿了第一名",
+      "displayLines": [
+        "小光數學",
+        "拿了第一名。"
+      ],
+      "focusChar": "數",
+      "imageNotes": "學校數學活動頒獎，固定小光站在中央最高的頒獎位置，老師正把獎盃交給他；旁邊兩位 generic classmates 位於較低位置。附近桌面有計數積木等數學教具，交代不是跑步比賽。獎盃、頒獎台不寫數字或文字。小光使用 public/assets/reference/lesson-cast/xiaoguang.webp；老師不是媽媽。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "2": "ㄕㄨˋ"
+      },
+      "imagePrompt": "Use case illustration-story. Square 1:1 mobile-readable, safe margins. Full L058 style-only references: fine pencil/watercolor, rich clean detailed environment, warm natural light and bright colors, natural child faces and stable proportions; refined L115/L118/L119/L128, family L154/L162/L163 identities. Protagonist girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length loose dark hair cream cardigan blue pants; father blue button shirt beige pants. Teacher tied-back dark hair teal top navy skirt, distinct from mother. Xiaoguang MUST match public/assets/reference/lesson-cast/xiaoguang.webp: round glasses, neat short black hair, white shirt navy vest khaki shorts white socks brown shoes; not fixed YOU boy. Generic adults/children clearly different from recurring cast. No readable writing/numerals/letters/signs/brands/logos/watermarks, no L387 English exception. No anime/3D/photo/generic simplified cartoon. 學校數學活動頒獎，固定小光站在中央最高的頒獎位置，老師正把獎盃交給他；旁邊兩位 generic classmates 位於較低位置。附近桌面有計數積木等數學教具，交代不是跑步比賽。獎盃、頒獎台不寫數字或文字。小光使用 public/assets/reference/lesson-cast/xiaoguang.webp；老師不是媽媽。",
+      "imageSrc": "/assets/lessons/L390/images/L390-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L390/audio/L390-S04.m4a",
+        "durationMs": 3274,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 600
+          },
+          {
+            "charIndex": 1,
+            "startMs": 600,
+            "endMs": 940
+          },
+          {
+            "charIndex": 2,
+            "startMs": 940,
+            "endMs": 1480
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1480,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1800,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2120,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2320,
+            "endMs": 2530
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2530,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2740,
+            "endMs": 3040
+          }
+        ]
+      }
+    },
+    {
+      "id": "L390-S05",
+      "text": "天上的星星多得數不完。",
+      "spokenText": "天上的星星多得數不完",
+      "displayLines": [
+        "天上的星星",
+        "多得數不完。"
+      ],
+      "focusChar": "數",
+      "imageNotes": "夜晚戶外，主角小女孩與爸爸待在安全平坦的空地，女孩仰頭伸手指數星星；天空有大量清楚星點，人物仍有柔和照明。不是滿天煙火、燈泡或星形貼紙，也不用數字、文字或計數符號表達數不完。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "7": "ㄕㄨˇ"
+      },
+      "imagePrompt": "Use case illustration-story. Square 1:1 mobile-readable, safe margins. Full L058 style-only references: fine pencil/watercolor, rich clean detailed environment, warm natural light and bright colors, natural child faces and stable proportions; refined L115/L118/L119/L128, family L154/L162/L163 identities. Protagonist girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length loose dark hair cream cardigan blue pants; father blue button shirt beige pants. Teacher tied-back dark hair teal top navy skirt, distinct from mother. Xiaoguang MUST match public/assets/reference/lesson-cast/xiaoguang.webp: round glasses, neat short black hair, white shirt navy vest khaki shorts white socks brown shoes; not fixed YOU boy. Generic adults/children clearly different from recurring cast. No readable writing/numerals/letters/signs/brands/logos/watermarks, no L387 English exception. No anime/3D/photo/generic simplified cartoon. 夜晚戶外，主角小女孩與爸爸待在安全平坦的空地，女孩仰頭伸手指數星星；天空有大量清楚星點，人物仍有柔和照明。不是滿天煙火、燈泡或星形貼紙，也不用數字、文字或計數符號表達數不完。",
+      "imageSrc": "/assets/lessons/L390/images/L390-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L390/audio/L390-S05.m4a",
+        "durationMs": 3854,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1300,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1600,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2400,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2740,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3040,
+            "endMs": 3360
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3360,
+            "endMs": 3600
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L390-G01",
+      "type": "find-character",
+      "sentenceId": "L390-S01",
+      "targetChar": "數",
+      "targetCharIndex": 6,
+      "prompt": "找出句子裡的字。"
+    },
+    {
+      "id": "L390-G02",
+      "type": "teach-character",
+      "sentenceId": "L390-S03",
+      "targetChar": "數",
+      "targetCharIndex": 0,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "suffixText": "了三次還是少一本書",
+        "suffixSrc": "/assets/lessons/L390/audio/L390-G02-suffix.m4a",
+        "suffixAudio": {
+          "spokenText": "了三次還是少一本書",
+          "src": "/assets/lessons/L390/audio/L390-G02-suffix.m4a",
+          "durationMs": 3181,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 240
+            },
+            {
+              "charIndex": 1,
+              "startMs": 240,
+              "endMs": 740
+            },
+            {
+              "charIndex": 2,
+              "startMs": 740,
+              "endMs": 1100
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1400,
+              "endMs": 1600
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1600,
+              "endMs": 1800
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1800,
+              "endMs": 2300
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2300,
+              "endMs": 2460
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2460,
+              "endMs": 2740
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2740,
+              "endMs": 2980
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L390-G03",
+      "type": "missing-character",
+      "sentenceId": "L390-S04",
+      "targetChar": "數",
+      "targetCharIndex": 2,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "數",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "找",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "看",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L390-G04",
+      "type": "partial-order",
+      "sentenceId": "L390-S02",
+      "targetChar": "號",
+      "targetCharIndex": 3,
+      "prompt": "把字放回句子。",
+      "missingIndexes": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "options": [
+        {
+          "id": "card-shi",
+          "text": "是",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-xia",
+          "text": "下",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-ge",
+          "text": "個",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-yi",
+          "text": "一",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L390-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L390-S05",
+      "targetChar": "數",
+      "targetCharIndex": 7,
+      "prompt": "聽聽誰念對了。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "天上的星星多得數不完。",
+          "spokenText": "天上的星星多得數不完",
+          "correct": true,
+          "sentenceId": "L390-S05",
+          "audioSrc": "/assets/lessons/L390/audio/L390-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L390/audio/L390-S05.m4a",
+            "durationMs": 3854,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1600,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2400,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2740,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3360,
+                "endMs": 3600
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "天上的星星多得看不完。",
+          "spokenText": "天上的星星多得看不完",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L390/audio/L390-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "天上的星星多得看不完",
+            "src": "/assets/lessons/L390/audio/L390-G05-wrong-one.m4a",
+            "durationMs": 3367,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2940,
+                "endMs": 3140
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "天上的小鳥多得數不完。",
+          "spokenText": "天上的小鳥多得數不完",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L390/audio/L390-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "天上的小鳥多得數不完",
+            "src": "/assets/lessons/L390/audio/L390-G05-wrong-two.m4a",
+            "durationMs": 4086,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3020,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3360,
+                "endMs": 3660
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3660,
+                "endMs": 3880
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "stage4AudioAlignment": {
+    "L390-G02-suffix": {
+      "spokenText": "了三次還是少一本書",
+      "src": "/assets/lessons/L390/audio/L390-G02-suffix.m4a",
+      "durationMs": 3181,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "charIndex": 1,
+          "startMs": 240,
+          "endMs": 740
+        },
+        {
+          "charIndex": 2,
+          "startMs": 740,
+          "endMs": 1100
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1400,
+          "endMs": 1600
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1600,
+          "endMs": 1800
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1800,
+          "endMs": 2300
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2300,
+          "endMs": 2460
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2460,
+          "endMs": 2740
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2740,
+          "endMs": 2980
+        }
+      ]
+    },
+    "L390-G05-wrong-one": {
+      "spokenText": "天上的星星多得看不完",
+      "src": "/assets/lessons/L390/audio/L390-G05-wrong-one.m4a",
+      "durationMs": 3367,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 340
+        },
+        {
+          "charIndex": 1,
+          "startMs": 340,
+          "endMs": 740
+        },
+        {
+          "charIndex": 2,
+          "startMs": 740,
+          "endMs": 1080
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1080,
+          "endMs": 1260
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1260,
+          "endMs": 1460
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1460,
+          "endMs": 2200
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2200,
+          "endMs": 2400
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2400,
+          "endMs": 2740
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2740,
+          "endMs": 2940
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2940,
+          "endMs": 3140
+        }
+      ]
+    },
+    "L390-G05-wrong-two": {
+      "spokenText": "天上的小鳥多得數不完",
+      "src": "/assets/lessons/L390/audio/L390-G05-wrong-two.m4a",
+      "durationMs": 4086,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 380
+        },
+        {
+          "charIndex": 1,
+          "startMs": 380,
+          "endMs": 700
+        },
+        {
+          "charIndex": 2,
+          "startMs": 700,
+          "endMs": 1120
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1120,
+          "endMs": 1300
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1300,
+          "endMs": 1460
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1460,
+          "endMs": 2240
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2240,
+          "endMs": 3020
+        },
+        {
+          "charIndex": 7,
+          "startMs": 3020,
+          "endMs": 3360
+        },
+        {
+          "charIndex": 8,
+          "startMs": 3360,
+          "endMs": 3660
+        },
+        {
+          "charIndex": 9,
+          "startMs": 3660,
+          "endMs": 3880
+        }
+      ]
+    }
+  }
+}
+```

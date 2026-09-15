@@ -1,0 +1,162 @@
+[
+  {
+    "file": "char-u6578.m4a",
+    "sha256": "221ea8b1e74ff8fc2551ab790a408dc1440781df81f7266c1f2c4454e9c4d7d5",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "JSON:\n{\n  \"transcript\": \"書\",\n  \"shuObservations\": [\n    {\n      \"syllable\": \"shu\",\n      \"tone\": 1,\n      \"pitchContour\": \"high-level\"\n    }\n  ],\n  \"finalSyllableComplete\": true,\n  \"defects\": [],\n  \"confidence\": \"high\"\n}"
+  },
+  {
+    "file": "L390-G02-suffix.m4a",
+    "sha256": "d9e2374e22f1b60accba408975e090b9f528ce2fdfb3e0cb15ed909cfd88bda0",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"兩三次，還是少一本書。\", \"shuObservations\": [{\"tone\": 1, \"pitchContour\": \"high level\", \"context\": \"final syllable 書\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.94}"
+  },
+  {
+    "file": "L390-G05-wrong-one.m4a",
+    "sha256": "8064d4ebc5f8df1bda8c830ac99adeab48990bd9b1cd16777f6cb8ffd3615664",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"天上的星星多得看不完\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.94}"
+  },
+  {
+    "file": "L390-G05-wrong-two.m4a",
+    "sha256": "54e11ae8633307e5415576832e5147298347979c9ca5f1653e8d32fb8ef9543d",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"天上的小鳥多得數不完\", \"shuObservations\": [{\"syllable\": \"數\", \"heardTone\": 4, \"pitchContour\": \"falling\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.89}"
+  },
+  {
+    "file": "L390-S01.m4a",
+    "sha256": "dcff86ad033ea44e9b046c260d1d4cdb27f3f6c5aa91f51ce7d356e5f112e935",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"之後的第一個數字怎麼念\", \"shuObservations\": [{\"syllable\": \"數\", \"tone\": \"4\", \"pitchContour\": \"falling\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.92}"
+  },
+  {
+    "file": "L390-S02.m4a",
+    "sha256": "d81ac0cb46f29eae96e30ed4710c673d5e81db392ca4b79018a276d4acfd3b11",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"念到三號了，下一個是我。\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.95}"
+  },
+  {
+    "file": "L390-S03.m4a",
+    "sha256": "7e26c42bf716f7842025781cd6ee1f846e60be3b5d6bd2060dc0b5f1cb620ec4",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\":\"數了三次，還是少一本書。\",\"shuObservations\":[{\"syllable\":\"數\",\"tone\":4,\"pitchContour\":\"falling\"},{\"syllable\":\"書\",\"tone\":1,\"pitchContour\":\"high-level\"}],\"finalSyllableComplete\":true,\"defects\":[],\"confidence\":\"high\"}"
+  },
+  {
+    "file": "L390-S04.m4a",
+    "sha256": "c6ef765de5188a0885e0711345a097828beb1ef97ca97a506e9d7ee7eb3132f9",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"小光數學拿了第一名。\", \"shuObservations\": [{\"syllable\": \"數\", \"toneHeard\": 4, \"pitchContour\": \"falling\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.86}"
+  },
+  {
+    "file": "L390-S05.m4a",
+    "sha256": "3a4439ed9be184c4e33aa439779b51aa53830635b0093af82493fec4a4557d87",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"天上的星星多得數不完\", \"shuObservations\": [{\"syllable\": \"數\", \"tone\": 3, \"pitchContour\": \"low dipping\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.92}"
+  },
+  {
+    "file": "char-u6578.m4a",
+    "sha256": "324c8206ae10bf2196a8de7f45c4ac632295243f1f454ad02fc6ad15bf33ff24",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\":\"書\",\"shuObservations\":[{\"tone\":\"1\",\"pitchContour\":\"high-level\"}],\"finalSyllableComplete\":true,\"defects\":[],\"confidence\":\"high\"}"
+  },
+  {
+    "file": "L390-G02-suffix.m4a",
+    "sha256": "a8d629874a7dafac5ec69b77219e7607c25cb1ea911e899b8cf3454a299dd8ba",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"了三次還是少一本書\", \"shuObservations\": [{\"syllable\": \"書\", \"toneHeard\": \"1\", \"pitchContour\": \"high-level\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.95}"
+  },
+  {
+    "file": "L390-G05-wrong-two.m4a",
+    "sha256": "96ca05465e52e2717e4a0a130682b980e15e8f4995077fbd4b73acd19262a402",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"天上的小鳥多得數不完\", \"shuObservations\": [{\"syllable\": \"數\", \"toneHeard\": 3, \"pitchContour\": \"low-dipping\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.87}"
+  },
+  {
+    "file": "L390-S01.m4a",
+    "sha256": "823533cb4964c1de0ff3b88a10e6636dc31680a6f6541aaac250def2d8746cb5",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"車號的第一個數字怎麼唸\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.93}"
+  },
+  {
+    "file": "L390-S02.m4a",
+    "sha256": "ad8bccaf9ae42f79436c08bdd4947dae15ae044c859f7958237c8d00de871872",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"念到三號了，下一個是我。\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.92}"
+  },
+  {
+    "file": "L390-S03.m4a",
+    "sha256": "f97e48770c3412c4412ef906156698c3249b25601f06352e752a09cb63da0bf1",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"書了三次，還是少一本書。\", \"shuObservations\": [{\"occurrence\": 1, \"tone\": \"1\", \"pitchContour\": \"high-level\"}, {\"occurrence\": 2, \"tone\": \"1\", \"pitchContour\": \"high-level\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.9}"
+  },
+  {
+    "file": "char-u6578.m4a",
+    "sha256": "69941a48c0666c30a3f7720b8a66e929e73c117cbdd23608f7e8e0b455ce93af",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"shu\", \"shuObservations\": [{\"syllable\": \"shu\", \"tone\": \"uncertain\", \"pitchContour\": \"uncertain\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": \"low\"}"
+  },
+  {
+    "file": "L390-S03.m4a",
+    "sha256": "1cf01451137db99d7cc0c8271205e42427a71baa116d804f7c67da32dba0b762",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"shu了三次，還是少一本書。\", \"shuObservations\": [{\"syllable\": \"shu\", \"tone\": 4, \"pitchContour\": \"falling\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.95}"
+  },
+  {
+    "file": "char-u6578.m4a",
+    "sha256": "5148d680904a3628f89ab2a4f1a51abc1a475ae0b03fdc88cca67f1013c91b0f",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\":\"書\",\"shuObservations\":[{\"syllable\":\"shu\",\"tone\":1,\"pitchContour\":\"high level\"}],\"finalSyllableComplete\":true,\"defects\":[],\"confidence\":\"high\"}"
+  },
+  {
+    "file": "L390-S03.m4a",
+    "sha256": "cc9388db578183cd4ceec1301cad87f46c9cdd983f199ad0ebf9cabbcda01aad",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"數了三次，還是少一本書。\", \"shuObservations\": [{\"syllable\": \"數\", \"tone\": \"4\", \"pitchContour\": \"high-falling\"}, {\"syllable\": \"書\", \"tone\": \"1\", \"pitchContour\": \"high-level\"}], \"finalSyllableComplete\": true, \"defects\": \"None\", \"confidence\": \"high\"}"
+  },
+  {
+    "file": "L390-S01.m4a",
+    "sha256": "823533cb4964c1de0ff3b88a10e6636dc31680a6f6541aaac250def2d8746cb5",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"車號的第一個數字，怎麼念？\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.95}"
+  }
+]
