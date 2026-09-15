@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L367 | 謝 | claimed | Production C | codex/l367-complete-package | L366 | 吧 | curriculum-workflow/lesson-requests/L367.json; curriculum-workflow/generated/L367-generation-packet.md; curriculum-workflow/drafts/L367-draft.json | public/assets/lessons/L367/; curriculum-workflow/audio-inbox/L367/ | Lesson-local package; L366 blocks Release integration only. |
 
 ## Status Values
 
