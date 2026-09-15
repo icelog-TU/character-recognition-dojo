@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L364 | 笑 | claimed | Production D | codex/l364-complete-package | L361:驚; L362:喜; L363:歡 | 驚 喜 歡 | curriculum-workflow/lesson-requests/L364.json; curriculum-workflow/generated/L364-generation-packet.md; curriculum-workflow/drafts/L364-draft.json | public/assets/lessons/L364/; curriculum-workflow/audio-inbox/L364/ | Teacher-approved 5 sentences, canonical Stage 4; base 44fedeff through L360 and R044. Release dependencies only; Production continues. |
+| L364 | 笑 | dependency-blocked-asset-complete | Production D | codex/l364-complete-package | L361:驚; L362:喜; L363:歡 | 驚 喜 歡 | curriculum-workflow/lesson-requests/L364.json; curriculum-workflow/generated/L364-generation-packet.md; curriculum-workflow/drafts/L364-draft.json | public/assets/lessons/L364/; curriculum-workflow/audio-inbox/L364/ | Asset-complete-package: 5 WebP, 9 M4A (G02 prefix only), timings and technical gates PASS. Browser QA tooling fallback recorded. Latest main 3c9beb7a includes L361/L362; remaining Release blocker L363. |
 
 ## Status Values
 
