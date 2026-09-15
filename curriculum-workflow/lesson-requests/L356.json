@@ -1,0 +1,238 @@
+{
+  "id": "L356",
+  "order": 356,
+  "kind": "lesson",
+  "newChars": [
+    "公"
+  ],
+  "zhuyin": {
+    "公": "ㄍㄨㄥ"
+  },
+  "title": "公",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Production B handoff for L356. Latest origin/main boundary at production start is 71762b03 with formal production lessons L001-L353 and latest formal new character 正. L354 排 and L355 雞 are not in origin/main at production start, so L356 is dependency-blocked and uses 排 and 雞 as provisional learned characters. Production builds a lesson-local dependency-blocked asset-complete package; Release owns ordered integration into production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [
+    "L354",
+    "L355"
+  ],
+  "provisionalLearnedChars": [
+    "排",
+    "雞"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "formal learned chars through latest origin/main production JSON L353 plus provisional L354「排」 and L355「雞」 plus current new char L356「公」",
+    "allowedChars": "一二三人個的大大小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公",
+    "dependsOnLessons": [
+      "L354",
+      "L355"
+    ],
+    "provisionalLearnedChars": [
+      "排",
+      "雞"
+    ],
+    "requiredCoverageChars": [
+      "公",
+      "雞",
+      "排",
+      "正",
+      "位",
+      "餐"
+    ],
+    "targetCharMinimumCount": {
+      "公": 3
+    },
+    "recentTargetMinimumCounts": {
+      "雞": 2,
+      "排": 2,
+      "正": 2,
+      "位": 1,
+      "餐": 1
+    },
+    "coverageCounts": {
+      "公": 4,
+      "雞": 3,
+      "排": 2,
+      "正": 2,
+      "位": 1,
+      "餐": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "stage4OrderRule": "Canonical normal L006+ order required: G01 find-character, G02 teach-character, G03 missing-character, G04 partial-order, G05 choose-pronunciation. No exception.",
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Before accepting each final WebP image, compare side by side with the L058 style anchors, refined preferred examples, and relevant cast anchors.",
+      "When a sentence uses 我 or shows the protagonist household, use the recurring protagonist girl and protagonist family identity.",
+      "Teacher, mother, father, generic students, Xiaoyue, Xiaoguang, and the protagonist girl must remain visually distinct.",
+      "Generic classmates must not be accidentally reused as Xiaoyue or Xiaoguang.",
+      "No readable text, labels, signs, subtitles, brand marks, logos, license plates, price tags, receipts, menus, book titles, route numbers, station names, advertisements, bus numbers, seat numbers, parking numbers, visible numeric writing, or watermarks anywhere."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate charAudio for 公 as public/assets/lessons/L356/audio/char-u516c.m4a from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix from exact fragment 小雞跟著 and suffix from exact fragment 雞跑.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L356-S01",
+      "text": "太陽一出來，公雞就叫。",
+      "spokenText": "太陽一出來公雞就叫",
+      "focusChar": "公",
+      "targetCharIndex": 5,
+      "displayLines": [
+        "太陽一出來，",
+        "公雞就叫。"
+      ],
+      "imageNotes": "清晨戶外草地或農家旁，太陽剛升起，一隻公雞站在草地上張口叫。畫面要清楚有「太陽出來」和「公雞叫」兩個重點。不要文字、招牌或過度擬人化。"
+    },
+    {
+      "id": "L356-S02",
+      "text": "小雞跟著公雞跑。",
+      "spokenText": "小雞跟著公雞跑",
+      "focusChar": "公",
+      "targetCharIndex": 4,
+      "displayLines": [
+        "小雞跟著",
+        "公雞跑。"
+      ],
+      "imageNotes": "草地上，一隻公雞在前面跑，幾隻小雞跟在後面跑。前後方向要清楚，讓孩子看得出「小雞跟著公雞」。不要人物、文字或標誌。"
+    },
+    {
+      "id": "L356-S03",
+      "text": "公車上正好有位子。",
+      "spokenText": "公車上正好有位子",
+      "focusChar": "公",
+      "targetCharIndex": 0,
+      "displayLines": [
+        "公車上",
+        "正好有位子。"
+      ],
+      "imageNotes": "公車內部，主角小女孩和家人或同學剛上公車，車上正好有一個空位子。要清楚看出是在公車上，也要看得出有空座位。不要路線號碼、站名、廣告文字或車牌。"
+    },
+    {
+      "id": "L356-S04",
+      "text": "等公車時要排好。",
+      "spokenText": "等公車時要排好",
+      "focusChar": "公",
+      "targetCharIndex": 1,
+      "displayLines": [
+        "等公車時",
+        "要排好。"
+      ],
+      "imageNotes": "公車站旁，主角小女孩和幾個孩子或乘客正在等公車，大家排成整齊的一排。公車可在遠處靠近或停在旁邊。不要站牌文字、路線號碼、廣告或車牌。"
+    },
+    {
+      "id": "L356-S05",
+      "text": "餐廳正門口有一排沙發。",
+      "spokenText": "餐廳正門口有一排沙發",
+      "focusChar": "排",
+      "targetCharIndex": 7,
+      "displayLines": [
+        "餐廳正門口",
+        "有一排沙發。"
+      ],
+      "imageNotes": "餐廳正門口或入口大廳旁，有一排沙發整齊放著。畫面要看得出是餐廳入口，不是家裡客廳。不要可讀招牌、菜單文字、價格、品牌或標誌。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L356-G01",
+      "type": "find-character",
+      "sentenceId": "L356-S01",
+      "targetChar": "公",
+      "targetCharIndex": 5
+    },
+    {
+      "id": "L356-G02",
+      "type": "teach-character",
+      "sentenceId": "L356-S02",
+      "targetChar": "公",
+      "targetCharIndex": 4,
+      "teachAudio": {
+        "prefixText": "小雞跟著",
+        "targetText": "公",
+        "suffixText": "雞跑"
+      }
+    },
+    {
+      "id": "L356-G03",
+      "type": "missing-character",
+      "sentenceId": "L356-S04",
+      "targetChar": "公",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "text": "公"
+        }
+      ]
+    },
+    {
+      "id": "L356-G04",
+      "type": "partial-order",
+      "sentenceId": "L356-S05",
+      "targetChar": "排",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "text": "餐",
+          "correctOrder": 0
+        },
+        {
+          "text": "廳",
+          "correctOrder": 1
+        },
+        {
+          "text": "正",
+          "correctOrder": 2
+        },
+        {
+          "text": "門",
+          "correctOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "L356-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L356-S03",
+      "targetChar": "公",
+      "targetCharIndex": 0,
+      "options": [
+        {
+          "id": "correct",
+          "text": "公車上正好有位子。"
+        },
+        {
+          "id": "wrong-one",
+          "text": "公車上正好沒位子。"
+        },
+        {
+          "id": "wrong-two",
+          "text": "公車上正好有帽子。"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "S01 Han-only: 太0 陽1 一2 出3 來4 公5 雞6 就7 叫8; G01 target 公 index 5 PASS.",
+    "S02 Han-only: 小0 雞1 跟2 著3 公4 雞5 跑6; G02 target 公 index 4 PASS.",
+    "S04 Han-only: 等0 公1 車2 時3 要4 排5 好6; G03 target 公 index 1 PASS.",
+    "S05 Han-only: 餐0 廳1 正2 門3 口4 有5 一6 排7 沙8 發9; G04 missingIndexes [0,1,2,3] = 餐/廳/正/門 PASS; option cards are single Han PASS; correctOrder mapping PASS.",
+    "S03 Han-only: 公0 車1 上2 正3 好4 有5 位6 子7; G05 target 公 index 0 PASS; wrong choices are 8 Han characters and contain only allowed characters PASS."
+  ]
+}
