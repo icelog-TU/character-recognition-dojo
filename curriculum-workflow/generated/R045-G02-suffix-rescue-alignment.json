@@ -1,0 +1,32 @@
+{
+  "model": "whisper-1",
+  "prompt": "你坐吧",
+  "offsetMs": 0,
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.3200000524520874,
+    "text": "你坐吧",
+    "words": [
+      {
+        "word": "你",
+        "start": 0,
+        "end": 0.3799999952316284
+      },
+      {
+        "word": "坐",
+        "start": 0.3799999952316284,
+        "end": 0.800000011920929
+      },
+      {
+        "word": "吧",
+        "start": 0.800000011920929,
+        "end": 1.1399999856948853
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  }
+}

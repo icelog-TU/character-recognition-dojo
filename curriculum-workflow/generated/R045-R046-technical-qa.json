@@ -1,0 +1,162 @@
+{
+  "pair": [
+    "R045",
+    "R046"
+  ],
+  "packageStatus": "asset-complete-package",
+  "sourcePackageSha": "9991d7dfe4c11a31ebd212a8b4e09d71ca59b307",
+  "coverage": {
+    "targetRange": "L346-L375",
+    "targetChars": 31,
+    "allowedCeiling": 379,
+    "status": "PASS"
+  },
+  "modules": {
+    "R045": {
+      "status": "asset-complete-package",
+      "images": [
+        {
+          "id": "R045-S01",
+          "bytes": 187166,
+          "styleLock": "PASS",
+          "cast": "PASS",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        },
+        {
+          "id": "R045-S02",
+          "bytes": 154878,
+          "styleLock": "PASS",
+          "cast": "PASS",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        },
+        {
+          "id": "R045-S03",
+          "bytes": 230684,
+          "styleLock": "PASS",
+          "cast": "N/A",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        },
+        {
+          "id": "R045-S04",
+          "bytes": 145070,
+          "styleLock": "PASS",
+          "cast": "PASS",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        },
+        {
+          "id": "R045-S05",
+          "bytes": 162076,
+          "styleLock": "PASS",
+          "cast": "PASS",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        }
+      ],
+      "audioCount": 9,
+      "teacherManualAudio": [
+        {
+          "id": "R045-S04",
+          "result": "PASS",
+          "quote": "書裡的怪物長得真奇怪，這句話我人工聽音檔沒有問題",
+          "reviewedSourceSha": "9991d7dfe4c11a31ebd212a8b4e09d71ca59b307",
+          "reviewedSha256": "ba718aab83378eb32d800112a6b0b98a0bec1d66bc3e870bb955d0c3a43555a3",
+          "changeAfterReview": "Only silent tail trimmed; speech AAC packets retained."
+        }
+      ],
+      "timingCorrections": [
+        "Teacher accepted S04 speech. Manually smooth connected 的/怪 740–1220 ms: boundary 1180 ->1000 ms; 怪 becomes 220 ms instead of 40 ms.",
+        "S04 last 怪 audible decay extends to3770ms."
+      ]
+    },
+    "R046": {
+      "status": "asset-complete-package",
+      "images": [
+        {
+          "id": "R046-S01",
+          "bytes": 156788,
+          "styleLock": "PASS",
+          "cast": "PASS",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        },
+        {
+          "id": "R046-S02",
+          "bytes": 130324,
+          "styleLock": "PASS",
+          "cast": "PASS",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        },
+        {
+          "id": "R046-S03",
+          "bytes": 169806,
+          "styleLock": "PASS",
+          "cast": "PASS",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        },
+        {
+          "id": "R046-S04",
+          "bytes": 248698,
+          "styleLock": "PASS",
+          "cast": "PASS",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        },
+        {
+          "id": "R046-S05",
+          "bytes": 147780,
+          "styleLock": "PASS",
+          "cast": "PASS",
+          "semantics": "PASS",
+          "size": "1024x1024"
+        }
+      ],
+      "audioCount": 9,
+      "teacherManualAudio": [
+        {
+          "id": "R046-G02-suffix",
+          "result": "PASS",
+          "quote": "正確，可以使用",
+          "reviewedSha256": "f50effb9d1774843065bb648a4fbf939257cc6083e1acbea7b282cb8683b8a23",
+          "scope": "Single 動 ㄉㄨㄥˋ pronunciation"
+        },
+        {
+          "id": "R046-S05",
+          "result": "PASS",
+          "quote": "人工聽起來是過關的；句尾的靜音好像比較長，但不到有雜音的程度",
+          "reviewedFileState": "First silence trim, duration 3785 ms",
+          "changeAfterReview": "Trimmed remaining tail to 3506 ms; retained speech packets."
+        }
+      ],
+      "timingCorrections": [
+        "S05 final 友 decay ends3335ms; teacher accepted speech and requested shorter silent tail, final file3506ms.",
+        "G02 動 single-Han analysis padding500ms was subtracted; final decay end363ms."
+      ]
+    }
+  },
+  "browserQA": {
+    "status": "PASS within stated fixture scope",
+    "environment": "Chrome actual app in local Vite fixture; main plus only R045/R046 loaded in memory; synthetic prerequisite progress. Device iframe widths390 and820px (body widths375 and805px with scrollbar). No real learner/cloud state or production JSON change.",
+    "manualPlayback": "20 native audio controls /18 distinct AAC files played to ended. R046-S05 replayed in G05 after the final additional tail trim.",
+    "games": "Both units G01 correct target; G02 synthetic hold reaches recording/replay and next question; G03 exactly3choices, wrong does not advance and correct completes; G04 single-Han sequence completes; G05 reveal does not award, retry correct completes.",
+    "recording": "Synthetic pointer hold and oscillator MediaStream exercise real MediaRecorder/replay; physical microphone and physical phone/tablet not claimed.",
+    "reward": "R045 +30coins/+12stars and next R046 observed. Phone reward next/rest buttons visible within y471–598 of844px, above floating controls. R046 reward completes on tablet-width fixture; fixture ends at R046 because L376 integration is Release-owned.",
+    "layout": "R046 tablet six-character row initially clipped; shared CSS card-width repair eliminates measured overflow. Final R045 phone layout also no overflow. 長 shows ㄓㄤˇ only; 熱情地 shows ˙ㄉㄜ.",
+    "tooling": "Two iframe semantic-click timeouts at R045 reward next were resolved with accessibility click; navigation succeeded. Not an app failure.",
+    "sourceImages": "10 source WebP images preserved byte-for-byte; source production visual QA retained. No new teacher image approval asserted."
+  },
+  "checks": {
+    "officialCurriculumFixture": "PASS",
+    "officialProductionFixtures": "PASS",
+    "strictAssetFormats": "PASS, zero warnings",
+    "pairAudit": "PASS",
+    "lintBuild": "PASS, existing baseline warnings only",
+    "builtinPackageIntake": "Unsupported R### input; not a PASS. No SOP waiver requested. See handoff."
+  },
+  "requiredUiCommit": "f7fac6f8e30a36231db1eeb4a65dc8b07f8462a9"
+}

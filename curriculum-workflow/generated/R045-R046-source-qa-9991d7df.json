@@ -1,0 +1,347 @@
+{
+  "role": "Historical source evidence, superseded by rescue QA; not final package status",
+  "source": "9991d7dfe4c11a31ebd212a8b4e09d71ca59b307",
+  "report": {
+    "pair": [
+      "R045",
+      "R046"
+    ],
+    "packageStatus": "partial-package",
+    "ceiling": 375,
+    "coverage": {
+      "請": 2,
+      "嗎": 1,
+      "客": 1,
+      "讓": 1,
+      "廳": 1,
+      "餐": 1,
+      "位": 1,
+      "正": 1,
+      "排": 1,
+      "雞": 1,
+      "公": 2,
+      "園": 1,
+      "物": 1,
+      "怪": 2,
+      "奇": 1,
+      "驚": 1,
+      "喜": 2,
+      "歡": 1,
+      "笑": 1,
+      "但": 1,
+      "吧": 1,
+      "謝": 2,
+      "感": 1,
+      "情": 1,
+      "朋": 1,
+      "友": 1,
+      "親": 1,
+      "交": 1,
+      "通": 1,
+      "往": 1,
+      "經": 1
+    },
+    "modules": {
+      "R045": {
+        "images": [
+          {
+            "id": "R045-S01",
+            "bytes": 187166,
+            "styleLock": "PASS",
+            "cast": "PASS",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          },
+          {
+            "id": "R045-S02",
+            "bytes": 154878,
+            "styleLock": "PASS",
+            "cast": "PASS",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          },
+          {
+            "id": "R045-S03",
+            "bytes": 230684,
+            "styleLock": "PASS",
+            "cast": "N/A",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          },
+          {
+            "id": "R045-S04",
+            "bytes": 145070,
+            "styleLock": "PASS",
+            "cast": "PASS",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          },
+          {
+            "id": "R045-S05",
+            "bytes": 162076,
+            "styleLock": "PASS",
+            "cast": "PASS",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          }
+        ],
+        "audio": [
+          {
+            "id": "R045-S01",
+            "bytes": 53303,
+            "durationMs": 4337,
+            "count": 10,
+            "meanDb": -18.8,
+            "maxDb": -2.7,
+            "endGapMs": 717,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R045-S02",
+            "bytes": 42434,
+            "durationMs": 3764,
+            "count": 10,
+            "meanDb": -19.1,
+            "maxDb": -2,
+            "endGapMs": 904,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R045-S03",
+            "bytes": 42644,
+            "durationMs": 3467,
+            "count": 10,
+            "meanDb": -18.8,
+            "maxDb": -2.2,
+            "endGapMs": 287,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R045-S04",
+            "bytes": 55504,
+            "durationMs": 4568,
+            "count": 10,
+            "meanDb": -19.1,
+            "maxDb": -2,
+            "endGapMs": 928,
+            "shortOrLongTimings": [
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1220
+              }
+            ]
+          },
+          {
+            "id": "R045-S05",
+            "bytes": 44682,
+            "durationMs": 4252,
+            "count": 12,
+            "meanDb": -19.1,
+            "maxDb": -3.5,
+            "endGapMs": 912,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R045-G02-prefix",
+            "bytes": 28642,
+            "durationMs": 2722,
+            "count": 6,
+            "meanDb": -26,
+            "maxDb": -9,
+            "endGapMs": 662,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R045-G02-suffix",
+            "bytes": 18957,
+            "durationMs": 2136,
+            "count": 3,
+            "meanDb": -19.1,
+            "maxDb": -2,
+            "endGapMs": 996,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R045-G05-wrong-one",
+            "bytes": 70658,
+            "durationMs": 6160,
+            "count": 12,
+            "meanDb": -18.9,
+            "maxDb": -2,
+            "endGapMs": 980,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R045-G05-wrong-two",
+            "bytes": 52521,
+            "durationMs": 4401,
+            "count": 12,
+            "meanDb": -17.1,
+            "maxDb": -2,
+            "endGapMs": 481,
+            "shortOrLongTimings": []
+          }
+        ],
+        "g03": {
+          "cards": [
+            "雞",
+            "鳥",
+            "魚"
+          ],
+          "correct": 1,
+          "blank": 1,
+          "data": "PASS",
+          "actualUI": "Not run"
+        },
+        "totalBytes": 1289219,
+        "g05MeanSpread": 2
+      },
+      "R046": {
+        "images": [
+          {
+            "id": "R046-S01",
+            "bytes": 156788,
+            "styleLock": "PASS",
+            "cast": "PASS",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          },
+          {
+            "id": "R046-S02",
+            "bytes": 130324,
+            "styleLock": "PASS",
+            "cast": "PASS",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          },
+          {
+            "id": "R046-S03",
+            "bytes": 169806,
+            "styleLock": "PASS",
+            "cast": "PASS",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          },
+          {
+            "id": "R046-S04",
+            "bytes": 248698,
+            "styleLock": "PASS",
+            "cast": "PASS",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          },
+          {
+            "id": "R046-S05",
+            "bytes": 147780,
+            "styleLock": "PASS",
+            "cast": "PASS",
+            "semantics": "PASS",
+            "size": "1024x1024"
+          }
+        ],
+        "audio": [
+          {
+            "id": "R046-S01",
+            "bytes": 64699,
+            "durationMs": 5592,
+            "count": 11,
+            "meanDb": -19.5,
+            "maxDb": -2,
+            "endGapMs": 1052,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R046-S02",
+            "bytes": 37227,
+            "durationMs": 3979,
+            "count": 9,
+            "meanDb": -19.9,
+            "maxDb": -2.3,
+            "endGapMs": 1379,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R046-S03",
+            "bytes": 56488,
+            "durationMs": 4906,
+            "count": 12,
+            "meanDb": -18.4,
+            "maxDb": -2,
+            "endGapMs": 766,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R046-S04",
+            "bytes": 40640,
+            "durationMs": 3354,
+            "count": 8,
+            "meanDb": -18,
+            "maxDb": -2.6,
+            "endGapMs": 954,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R046-S05",
+            "bytes": 56278,
+            "durationMs": 4697,
+            "count": 11,
+            "meanDb": -19.8,
+            "maxDb": -2,
+            "endGapMs": 1457,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R046-G02-prefix",
+            "bytes": 45849,
+            "durationMs": 4975,
+            "count": 7,
+            "meanDb": -21.2,
+            "maxDb": -2.2,
+            "endGapMs": 2095,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R046-G05-wrong-one",
+            "bytes": 68315,
+            "durationMs": 5152,
+            "count": 11,
+            "meanDb": -18.7,
+            "maxDb": -2,
+            "endGapMs": 1152,
+            "shortOrLongTimings": []
+          },
+          {
+            "id": "R046-G05-wrong-two",
+            "bytes": 46949,
+            "durationMs": 3913,
+            "count": 11,
+            "meanDb": -18.5,
+            "maxDb": -2.1,
+            "endGapMs": 673,
+            "shortOrLongTimings": []
+          }
+        ],
+        "g03": {
+          "cards": [
+            "情",
+            "心",
+            "愛"
+          ],
+          "correct": 1,
+          "blank": 1,
+          "data": "PASS",
+          "actualUI": "Not run"
+        },
+        "totalBytes": 1269841,
+        "g05MeanSpread": 1.3000000000000007
+      }
+    },
+    "browserQA": "Not run; audio gates incomplete. No browser failure claimed.",
+    "regeneratedImages": [
+      "R046-S04 gaze corrected to father; rejected draft not shipped"
+    ],
+    "blocker": "R046-G02-suffix 動 failed transcription over four generations: empty, 咚, 嘟, unrelated phrase. No alias/timing fabricated; rejected processed suffix removed. Audio end gaps and short timing still require QA.",
+    "dataChecks": "PASS: 31/31 pair coverage, allowed ceiling, spokenText/displayLines, indexes, single-Han options, G03 three choices, five games/sentences per module"
+  }
+}

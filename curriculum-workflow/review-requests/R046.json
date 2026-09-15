@@ -1,0 +1,1154 @@
+{
+  "id": "R046",
+  "reviewNumber": 46,
+  "title": "複習四十六",
+  "afterLessonOrder": 375,
+  "targetLessonRange": {
+    "startOrder": 346,
+    "endOrder": 375
+  },
+  "requiredCoverageChars": [
+    "請",
+    "嗎",
+    "客",
+    "讓",
+    "廳",
+    "餐",
+    "位",
+    "正",
+    "排",
+    "雞",
+    "公",
+    "園",
+    "物",
+    "怪",
+    "奇",
+    "驚",
+    "喜",
+    "歡",
+    "笑",
+    "但",
+    "吧",
+    "謝",
+    "感",
+    "情",
+    "朋",
+    "友",
+    "親",
+    "交",
+    "通",
+    "往",
+    "經"
+  ],
+  "requiredRounds": 5,
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "packageStatus": "asset-complete-package",
+  "sourceBoundary": "7fcef325b37f13fc68fe950bffd7fea8e9db6108",
+  "teacherNotes": "Package Rescue from 9991d7dfe4c11a31ebd212a8b4e09d71ca59b307. Approved sentences, games and images retained. Complete 18-file pair audio/alignment and teacher targeted listening evidence in rescueQA. Release owns ordered pair integration before L376. No newChars or charAudio.",
+  "sentenceGames": [
+    {
+      "id": "R046-G01",
+      "type": "find-character",
+      "sentenceId": "R046-S01",
+      "targetChar": "歡",
+      "targetCharIndex": 2,
+      "prompt": "找出句子裡的歡，點一下。"
+    },
+    {
+      "id": "R046-G02",
+      "type": "teach-character",
+      "sentenceId": "R046-S02",
+      "targetChar": "感",
+      "targetCharIndex": 7,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "謝謝你幫忙我好",
+        "suffixText": "動",
+        "prefixSrc": "/assets/reviews/R046/audio/R046-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R046/audio/R046-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/reviews/R046/audio/R046-G02-prefix.m4a",
+          "durationMs": 3042,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 310
+            },
+            {
+              "charIndex": 1,
+              "startMs": 310,
+              "endMs": 620
+            },
+            {
+              "charIndex": 2,
+              "startMs": 620,
+              "endMs": 1300
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1300,
+              "endMs": 1640
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1640,
+              "endMs": 1920
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1920,
+              "endMs": 2540
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2540,
+              "endMs": 2860
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/reviews/R046/audio/R046-G02-suffix.m4a",
+          "durationMs": 534,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 363
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "R046-G03",
+      "type": "missing-character",
+      "sentenceId": "R046-S03",
+      "targetChar": "情",
+      "targetCharIndex": 5,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "情",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "心",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "愛",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R046-G04",
+      "type": "partial-order",
+      "sentenceId": "R046-S04",
+      "targetChar": "通",
+      "targetCharIndex": 3,
+      "prompt": "把字放回句子裡。",
+      "missingIndexes": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "options": [
+        {
+          "id": "card-1",
+          "text": "海",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-2",
+          "text": "通",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-3",
+          "text": "邊",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-4",
+          "text": "往",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "R046-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R046-S05",
+      "targetChar": "交",
+      "targetCharIndex": 7,
+      "prompt": "先聽，再選出念對的。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "我把親手畫的圖交給朋友。",
+          "spokenText": "我把親手畫的圖交給朋友",
+          "correct": true,
+          "sentenceId": "R046-S05",
+          "audioSrc": "/assets/reviews/R046/audio/R046-S05.m4a",
+          "audio": {
+            "src": "/assets/reviews/R046/audio/R046-S05.m4a",
+            "durationMs": 3506,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 460
+              },
+              {
+                "charIndex": 2,
+                "startMs": 460,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1380,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1620,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1900,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2540,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2780,
+                "endMs": 3010
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3010,
+                "endMs": 3335
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "我把親手畫的書交給朋友。",
+          "spokenText": "我把親手畫的書交給朋友",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R046/audio/R046-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/reviews/R046/audio/R046-G05-wrong-one.m4a",
+            "durationMs": 4249,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1180,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1560,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1900,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2080,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2280,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 3260
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3260,
+                "endMs": 3540
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3540,
+                "endMs": 3760
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3760,
+                "endMs": 3980
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "我把親手畫的圖交給老師。",
+          "spokenText": "我把親手畫的圖交給老師",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R046/audio/R046-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/reviews/R046/audio/R046-G05-wrong-two.m4a",
+            "durationMs": 3459,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1440,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1640,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2000,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2540,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2800,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3020,
+                "endMs": 3240
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "kind": "review",
+  "targetSentenceCount": 5,
+  "allowedChars": [
+    "一",
+    "二",
+    "三",
+    "人",
+    "個",
+    "大",
+    "的",
+    "小",
+    "手",
+    "我",
+    "有",
+    "山",
+    "上",
+    "下",
+    "你",
+    "水",
+    "在",
+    "高",
+    "很",
+    "家",
+    "和",
+    "隻",
+    "鳥",
+    "孩",
+    "指",
+    "看",
+    "女",
+    "飛",
+    "男",
+    "門",
+    "前",
+    "後",
+    "也",
+    "是",
+    "不",
+    "到",
+    "走",
+    "他",
+    "沒",
+    "裡",
+    "兩",
+    "狗",
+    "都",
+    "爸",
+    "媽",
+    "愛",
+    "書",
+    "可",
+    "會",
+    "這",
+    "吃",
+    "做",
+    "好",
+    "樣",
+    "要",
+    "更",
+    "邊",
+    "多",
+    "少",
+    "比",
+    "來",
+    "起",
+    "去",
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌",
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見",
+    "說",
+    "師",
+    "話",
+    "課",
+    "像",
+    "想",
+    "真",
+    "力",
+    "能",
+    "火",
+    "發",
+    "電",
+    "生",
+    "明",
+    "光",
+    "亮",
+    "陽",
+    "月",
+    "影",
+    "長",
+    "星",
+    "行",
+    "道",
+    "流",
+    "河",
+    "從",
+    "進",
+    "早",
+    "晚",
+    "海",
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精",
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬",
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆",
+    "照",
+    "顧",
+    "忘",
+    "每",
+    "次",
+    "記",
+    "完",
+    "收",
+    "彩",
+    "色",
+    "粉",
+    "哪",
+    "些",
+    "最",
+    "西",
+    "東",
+    "方",
+    "圖",
+    "向",
+    "線",
+    "直",
+    "轉",
+    "右",
+    "角",
+    "落",
+    "因",
+    "原",
+    "別",
+    "特",
+    "處",
+    "理",
+    "整",
+    "齊",
+    "全",
+    "今",
+    "們",
+    "年",
+    "跟",
+    "常",
+    "請",
+    "嗎",
+    "客",
+    "讓",
+    "廳",
+    "餐",
+    "位",
+    "正",
+    "排",
+    "雞",
+    "公",
+    "園",
+    "物",
+    "怪",
+    "奇",
+    "驚",
+    "喜",
+    "歡",
+    "笑",
+    "但",
+    "吧",
+    "謝",
+    "感",
+    "情",
+    "朋",
+    "友",
+    "親",
+    "交",
+    "通",
+    "往",
+    "經"
+  ],
+  "approvedSentences": [
+    {
+      "id": "R046-S01",
+      "text": "我喜歡說笑話，但他不愛聽。",
+      "spokenText": "我喜歡說笑話但他不愛聽",
+      "displayLines": [
+        "我喜歡",
+        "說笑話，",
+        "但他不愛聽。"
+      ],
+      "focusChar": "歡",
+      "imageNotes": "校園休息時間，主角小女孩開心地說笑話，固定「他」小男孩抱著球，露出沒興趣、想去玩的神情。不是聽不見、被嚇哭或遭到霸凌；「他」使用既有角色參考，不改成小光或哥哥。",
+      "imagePrompt": "Square 1:1 detailed warm pencil-and-watercolor picture book; full L058 set style-only, refined L115/L118/L119/L128 proportions, L154/L162/L163 fixed family identities. No text, letters, numbers, logos, labels, symbols, arrows or watermarks. 校園休息時間，主角小女孩開心地說笑話，固定「他」小男孩抱著球，露出沒興趣、想去玩的神情。不是聽不見、被嚇哭或遭到霸凌；「他」使用既有角色參考，不改成小光或哥哥。",
+      "imageSrc": "/assets/reviews/R046/images/R046-S01.webp",
+      "audio": {
+        "src": "/assets/reviews/R046/audio/R046-S01.m4a",
+        "durationMs": 5592,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 500
+          },
+          {
+            "charIndex": 1,
+            "startMs": 500,
+            "endMs": 980
+          },
+          {
+            "charIndex": 2,
+            "startMs": 980,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1460,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1920,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2260,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 6,
+            "startMs": 3320,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3480,
+            "endMs": 3760
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3760,
+            "endMs": 4100
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4100,
+            "endMs": 4300
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4300,
+            "endMs": 4540
+          }
+        ]
+      },
+      "approved": true
+    },
+    {
+      "id": "R046-S02",
+      "text": "謝謝你幫忙，我好感動。",
+      "spokenText": "謝謝你幫忙我好感動",
+      "displayLines": [
+        "謝謝你幫忙，",
+        "我好感動。"
+      ],
+      "focusChar": "感",
+      "imageNotes": "教室裡，主角小女孩的筆盒先前掉落，固定「你」小男孩已幫她撿回散落的筆，正把整理好的筆盒交還。女孩把手放在胸前、露出感謝的笑容。以具體幫忙建立感動原因，不只畫兩人空泛地微笑。",
+      "imagePrompt": "Square 1:1 detailed warm pencil-and-watercolor picture book; full L058 set style-only, refined L115/L118/L119/L128 proportions, L154/L162/L163 fixed family identities. No text, letters, numbers, logos, labels, symbols, arrows or watermarks. 教室裡，主角小女孩的筆盒先前掉落，固定「你」小男孩已幫她撿回散落的筆，正把整理好的筆盒交還。女孩把手放在胸前、露出感謝的笑容。以具體幫忙建立感動原因，不只畫兩人空泛地微笑。",
+      "imageSrc": "/assets/reviews/R046/images/R046-S02.webp",
+      "audio": {
+        "src": "/assets/reviews/R046/audio/R046-S02.m4a",
+        "durationMs": 3979,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 240
+          },
+          {
+            "charIndex": 1,
+            "startMs": 240,
+            "endMs": 480
+          },
+          {
+            "charIndex": 2,
+            "startMs": 480,
+            "endMs": 940
+          },
+          {
+            "charIndex": 3,
+            "startMs": 940,
+            "endMs": 1180
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1180,
+            "endMs": 1480
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1580,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1840,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2160,
+            "endMs": 2420
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2420,
+            "endMs": 2600
+          }
+        ]
+      },
+      "approved": true
+    },
+    {
+      "id": "R046-S03",
+      "text": "小月經常熱情地請我吃點心。",
+      "spokenText": "小月經常熱情地請我吃點心",
+      "displayLines": [
+        "小月經常",
+        "熱情地請我",
+        "吃點心。"
+      ],
+      "focusChar": "情",
+      "imageNotes": "小月家中桌邊，小月笑著把一盤小點心往主角小女孩面前推，主動邀請她吃；女孩是來做客的朋友。只畫一次自然招待場景，不用分格或重複人物表現「經常」。小月使用 public/assets/reference/lesson-cast/xiaoyue.webp。",
+      "imagePrompt": "Square 1:1 detailed warm pencil-and-watercolor picture book; full L058 set style-only, refined L115/L118/L119/L128 proportions, L154/L162/L163 fixed family identities. No text, letters, numbers, logos, labels, symbols, arrows or watermarks. 小月家中桌邊，小月笑著把一盤小點心往主角小女孩面前推，主動邀請她吃；女孩是來做客的朋友。只畫一次自然招待場景，不用分格或重複人物表現「經常」。小月使用 public/assets/reference/lesson-cast/xiaoyue.webp。",
+      "imageSrc": "/assets/reviews/R046/images/R046-S03.webp",
+      "audio": {
+        "src": "/assets/reviews/R046/audio/R046-S03.m4a",
+        "durationMs": 4906,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 600
+          },
+          {
+            "charIndex": 1,
+            "startMs": 600,
+            "endMs": 820
+          },
+          {
+            "charIndex": 2,
+            "startMs": 820,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1240,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1600,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1880,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2120,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2700,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2920,
+            "endMs": 3240
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3240,
+            "endMs": 3580
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3580,
+            "endMs": 3920
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3920,
+            "endMs": 4140
+          }
+        ]
+      },
+      "approved": true,
+      "zhuyinOverrides": {
+        "6": "˙ㄉㄜ"
+      }
+    },
+    {
+      "id": "R046-S04",
+      "text": "這條路通往海邊嗎？",
+      "spokenText": "這條路通往海邊嗎",
+      "displayLines": [
+        "這條路",
+        "通往海邊嗎？"
+      ],
+      "focusChar": "通",
+      "imageNotes": "戶外岔路旁，主角小女孩指向繞過樹叢的小路，轉頭向爸爸詢問。路的終點被樹叢遮住，不能直接看見海灘而讓問句失去必要；可用海岸植物與遠處天空交代沿海環境，不使用文字路牌。",
+      "imagePrompt": "Square 1:1 detailed warm pencil-and-watercolor picture book; full L058 set style-only, refined L115/L118/L119/L128 proportions, L154/L162/L163 fixed family identities. No text, letters, numbers, logos, labels, symbols, arrows or watermarks. 戶外岔路旁，主角小女孩指向繞過樹叢的小路，轉頭向爸爸詢問。路的終點被樹叢遮住，不能直接看見海灘而讓問句失去必要；可用海岸植物與遠處天空交代沿海環境，不使用文字路牌。",
+      "imageSrc": "/assets/reviews/R046/images/R046-S04.webp",
+      "audio": {
+        "src": "/assets/reviews/R046/audio/R046-S04.m4a",
+        "durationMs": 3354,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 660
+          },
+          {
+            "charIndex": 2,
+            "startMs": 660,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1660,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1980,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2140,
+            "endMs": 2400
+          }
+        ]
+      },
+      "approved": true
+    },
+    {
+      "id": "R046-S05",
+      "text": "我把親手畫的圖交給朋友。",
+      "spokenText": "我把親手畫的圖交給朋友",
+      "displayLines": [
+        "我把",
+        "親手畫的圖",
+        "交給朋友。"
+      ],
+      "focusChar": "交",
+      "imageNotes": "教室桌邊，主角小女孩把自己畫的花草圖交給小月，紙張由雙方短暫共同拿著，清楚呈現交付動作；旁邊留有女孩使用的畫筆。不是交換兩張圖。小月使用 public/assets/reference/lesson-cast/xiaoyue.webp。",
+      "imagePrompt": "Square 1:1 detailed warm pencil-and-watercolor picture book; full L058 set style-only, refined L115/L118/L119/L128 proportions, L154/L162/L163 fixed family identities. No text, letters, numbers, logos, labels, symbols, arrows or watermarks. 教室桌邊，主角小女孩把自己畫的花草圖交給小月，紙張由雙方短暫共同拿著，清楚呈現交付動作；旁邊留有女孩使用的畫筆。不是交換兩張圖。小月使用 public/assets/reference/lesson-cast/xiaoyue.webp。",
+      "imageSrc": "/assets/reviews/R046/images/R046-S05.webp",
+      "audio": {
+        "src": "/assets/reviews/R046/audio/R046-S05.m4a",
+        "durationMs": 4697,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 200
+          },
+          {
+            "charIndex": 1,
+            "startMs": 200,
+            "endMs": 480
+          },
+          {
+            "charIndex": 2,
+            "startMs": 480,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1200,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1360,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1620,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1900,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2540,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2800,
+            "endMs": 3020
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3020,
+            "endMs": 3240
+          }
+        ]
+      },
+      "approved": true
+    }
+  ]
+}
