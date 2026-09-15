@@ -626,7 +626,7 @@
       ]
     }
   },
-  "packageStatus": "partial-package",
+  "packageStatus": "asset-complete-package",
   "productionQa": {
     "imageStyleCast": {
       "S01": "PASS",
@@ -636,10 +636,20 @@
       "S05": "PASS"
     },
     "rejectedImageDrafts": [],
-    "manualPlayback": "NOT RUN: no available browser control surface (getBrowser and createBrowserTab iab both unavailable). Requires phone-width Stage 3/4 listening, highlight and microphone replay QA before asset-complete acceptance.",
+    "manualPlayback": "Teacher manual pre-merge asset QA PASS for all audio and images at 95cbda120b33be57cb990afdf36c851c3a5e08a0. Codex browser playback attempt crashed; automated phone-width highlighting and Stage 4 recording/replay QA were not completed. Teacher explicitly authorized package acceptance on this basis.",
     "timingNotes": [
-      "G05 wrong-one Whisper returned a zero-width 廳 span. Distributed its combined 大廳 interval 1740-2320 ms at 2030 ms. Provisional smoothing pending listening QA.",
-      "Sentence end timing versus decoded tail remains pending manual listening. Full speech is preserved; only sustained -50 dB trailing silence was shortened with AAC stream copy, keeping 200 ms after decay."
-    ]
+      "G05 wrong-one Whisper returned a zero-width 廳 span. Distributed its combined 大廳 interval 1740-2320 ms at 2030 ms. Timing smoothing retained unchanged. Teacher accepted all audio; no separate timing-specific or automated synchronization PASS is claimed.",
+      "Final audio and charTimings remain unchanged from the teacher-reviewed commit. Existing processing shortened sustained -50 dB trailing silence using AAC stream copy, retaining 200 ms after decay. Teacher reported no audio problems; no separate automated highlight-end PASS is claimed."
+    ],
+    "teacherManualPreMergeAssetQa": {
+      "type": "teacher manual pre-merge asset QA",
+      "result": "PASS",
+      "date": "2026-09-15",
+      "reviewedCommit": "95cbda120b33be57cb990afdf36c851c3a5e08a0",
+      "reviewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L354&ref=95cbda120b33be57cb990afdf36c851c3a5e08a0",
+      "source": "Teacher confirmation in Production D replacement conversation: all audio listened to and all images checked; no problems.",
+      "reason": "Codex browser automation crashed during L354 playback QA; teacher performed manual asset acceptance and explicitly authorized asset-complete-package status.",
+      "scope": "All L354 audio and images at the reviewed commit. No claim that Codex completed phone-width highlight synchronization, first-tap interactions, microphone recording or stitched replay tests."
+    }
   }
 }

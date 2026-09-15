@@ -2,9 +2,22 @@
 
 ## Final Approved Production Records
 
+### Production D Replacement Acceptance — 2026-09-15
+
+- Teacher manual pre-merge asset QA PASS is the acceptance basis for this metadata-only completion commit. All lesson content, images, audio, and timings are identical to teacher-reviewed commit 95cbda120b33be57cb990afdf36c851c3a5e08a0.
+- npm run tools:check: PASS.
+- npm run curriculum:audit-state: PASS; expected L354 asset-folder warning because Release has not integrated the lesson.
+- npm run validate:production: PASS on the existing production curriculum.
+- L354-specific scripts/validate-curriculum.mjs: PASS, 354 lessons checked using main plus L354 draft supplied in memory. Existing older-lesson advisory warnings only; no L354 warning. No production file was edited.
+- L354-specific scripts/validate-production-assets.mjs: PASS using only L354 draft supplied in memory.
+- L354-specific scripts/audit-asset-formats.mjs --strict: PASS, 1 unit, 5 image references, 10 audio references, 0 warnings. Draft supplied in memory; no shared file changes.
+- Request/packet/draft approved sentence records, QA source, package status, unchanged lesson content/timings/assets, and four-file metadata-only scope: PASS.
+- git diff --check: PASS.
+- npm run verify: intentionally not run because L354 is not in production JSON; per Production SOP, Release owns integration and the final full verify. Package-specific checks above validate L354 without modifying production JSON, planner, or ledger.
+
 ### Production QA Handoff
 
-- Package status: partial-package, not asset-complete-package. No dependency blocker; dependsOnLessons and provisionalLearnedChars remain empty.
+- Package status: asset-complete-package, accepted by explicit teacher instruction after teacher manual pre-merge asset QA. No dependency blocker; dependsOnLessons and provisionalLearnedChars remain empty.
 - Exact base and final fetch boundary: origin/main 71762b03e12b5e82770874bc634183d70cefcb33, formal L001-L353, reviews R001-R042.
 - Generated using built-in imagegen: five final 1024x1024 WebP images. Prompts are in each draft sentence imagePrompt. No rejected or regenerated image drafts.
 - S01 style-lock PASS, cast PASS: recurring family waits outside fully occupied restaurant.
@@ -16,12 +29,12 @@
 - Audio: OpenAI gpt-4o-mini-tts / coral through npm run ai:audio -- --lesson L354, then npm run assets:audio -- --lesson L354. Five sentences, standalone 排, exact G02 prefix/suffix, two complete wrong choices. Correct G05 reuses S05.
 - Long trailing silence shortened after standard processing using AAC stream copy only, retaining 200 ms after sustained -50 dB decay. No spoken syllables spliced, patched or extracted. Full raw OpenAI MP3 inputs retained in audio-inbox/L354. AI alignment rerun on final processed files.
 - npm run assets:align:ai -- --lesson L354: PASS for five sentences and four Stage 4 fragments/options, using temporary adapter sentence records for Stage 4. Those adapter records were removed after extracting stage4AudioAlignment into draft.
-- G05 wrong-one Whisper produced a 1 ms 廳 span. Combined 大廳 interval 1740-2320 ms was provisionally divided at 2030 ms; requires listening confirmation. All stored spans now mechanically satisfy 80-900 ms, order and duration bounds.
+- G05 wrong-one Whisper produced a 1 ms 廳 span. Combined 大廳 interval 1740-2320 ms was provisionally divided at 2030 ms; retained unchanged in the teacher-reviewed assets; teacher reports all audio has no problems. No separate timing-specific PASS is claimed. All stored spans now mechanically satisfy 80-900 ms, order and duration bounds.
 - tools:check, ai:check, validate:curriculum and validate:production: PASS. Curriculum/production validators included temporary L354 integration. That integration was removed, with shared production JSON verified identical to HEAD.
 - curriculum:audit-state: PASS after removing temporary integration; expected warning that L354 assets exist outside formal curriculum.
 - Lesson-local technical audit: PASS for approved records, allowed characters, coverage, display lines, Stage 4 fixed order/unique sentence usage/indexes/options, image/audio existence, AAC mono 44100 Hz, loudness, metadata and file sizes. Public asset folder: 1,300,920 bytes. Final G05 mean-volume spread: 0.9 dB.
-- Manual phone-width Stage 3 listening/highlight and Stage 4 first-tap/recording replay QA: NOT RUN. Browser getBrowser returned no browser available; createBrowserTab iab also unavailable. Do not label this mandatory QA complete. Check sentence final syllables/remaining tail against timings and G05 smoothing before acceptance.
-- Full verify skipped: lesson-local package, shared integration remains Release-owned. Teacher review approval has not been recorded.
+- Teacher manual pre-merge asset QA: PASS on 2026-09-15. Teacher listened to all audio and checked all images with no problems at 95cbda120b33be57cb990afdf36c851c3a5e08a0. Review URL: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L354&ref=95cbda120b33be57cb990afdf36c851c3a5e08a0. Codex browser automation crashed during playback QA, so teacher performed manual acceptance and explicitly authorized asset-complete-package status. Codex did not complete phone-width highlight synchronization, Stage 4 first-tap, microphone recording or stitched replay tests; these are not represented as automated PASS.
+- Full verify skipped: lesson-local package, shared integration remains Release-owned. Teacher manual pre-merge asset approval is recorded above.
 - npm run assets:audit was started but cancelled during the slow whole-repo scan; no completed whole-repo result is claimed. The complete L354-only format, dimensions, loudness and size audit passed separately.
 
 Boundary: origin/main 71762b03, L001-L353; R042 after L345. dependsOnLessons: []; provisionalLearnedChars: []. Exactly five approved sentences; no new candidates requested. Standalone character audio: char-u6392.m4a. Canonical Stage 4 order; no exception.

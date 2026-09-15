@@ -2,8 +2,7 @@
   "id": "L354",
   "order": 354,
   "kind": "lesson",
-  "packageStatus": "partial-package",
-  "pendingQa": "Mandatory phone Stage 3/4 listening, highlighting and recording replay unavailable in this session. See generation packet and draft productionQa; not asset-complete yet.",
+  "packageStatus": "asset-complete-package",
   "title": "排",
   "newChars": [
     "排"
@@ -927,5 +926,17 @@
     "位",
     "正",
     "排"
-  ]
+  ],
+  "productionQa": {
+    "teacherManualPreMergeAssetQa": {
+      "type": "teacher manual pre-merge asset QA",
+      "result": "PASS",
+      "date": "2026-09-15",
+      "reviewedCommit": "95cbda120b33be57cb990afdf36c851c3a5e08a0",
+      "reviewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L354&ref=95cbda120b33be57cb990afdf36c851c3a5e08a0",
+      "source": "Teacher confirmation in Production D replacement conversation: all audio listened to and all images checked; no problems.",
+      "reason": "Codex browser automation crashed during L354 playback QA; teacher performed manual asset acceptance and explicitly authorized asset-complete-package status.",
+      "scope": "All L354 audio and images at the reviewed commit. No claim that Codex completed phone-width highlight synchronization, first-tap interactions, microphone recording or stitched replay tests."
+    }
+  }
 }
