@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L372 | 交 | claimed | Production D | codex/l372-complete-package | L368:感; L369:情; L370:朋友; L371:親 | 感 情 朋 友 親 | curriculum-workflow/lesson-requests/L372.json; curriculum-workflow/generated/L372-generation-packet.md; curriculum-workflow/drafts/L372-draft.json | public/assets/lessons/L372/; curriculum-workflow/audio-inbox/L372/ | Teacher-approved five sentences; S02 親手畫的圖. Base 3ee22616 through L367/R044. Dependencies block Release only. |
 
 ## Status Values
 
