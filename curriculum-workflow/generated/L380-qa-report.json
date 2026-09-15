@@ -1,0 +1,798 @@
+{
+  "unit": "L380",
+  "owner": "Production A",
+  "branch": "codex/l380-complete-package",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "base": "387662cd9e655e98e1aa6a2e4d8add1806f7f8b2",
+  "mainSha": "250ca4a3361a15104ba19158bb1b0710dac43ecc",
+  "formalBoundary": "L375",
+  "formalChars": 379,
+  "allowedCount": 384,
+  "initialAllowedCount": 380,
+  "dependsOnLessons": [
+    "L376",
+    "L377",
+    "L378",
+    "L379"
+  ],
+  "provisionalLearnedChars": [
+    "已",
+    "近",
+    "接",
+    "送"
+  ],
+  "releaseMilestones": "L375 -> R045 -> R046 (L346-L375) -> L376 -> L377 -> L378 -> L379 -> L380",
+  "consistency": "PASS",
+  "coverage": {
+    "連": 4,
+    "送": 2,
+    "接": 3,
+    "近": 2,
+    "已": 1,
+    "經": 1
+  },
+  "technical": {
+    "status": "PASS",
+    "allowed": 384,
+    "coverage": {
+      "連": 4,
+      "送": 2,
+      "接": 3,
+      "近": 2,
+      "已": 1,
+      "經": 1
+    },
+    "displayLines": "PASS",
+    "stage4Indexes": "PASS",
+    "imageMetadata": [
+      {
+        "id": "L380-S01",
+        "src": "/assets/lessons/L380/images/L380-S01.webp",
+        "bytes": 93506,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L380-S02",
+        "src": "/assets/lessons/L380/images/L380-S02.webp",
+        "bytes": 161004,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L380-S03",
+        "src": "/assets/lessons/L380/images/L380-S03.webp",
+        "bytes": 187120,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L380-S04",
+        "src": "/assets/lessons/L380/images/L380-S04.webp",
+        "bytes": 157108,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L380-S05",
+        "src": "/assets/lessons/L380/images/L380-S05.webp",
+        "bytes": 139080,
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "audio": [
+      {
+        "src": "/assets/lessons/L380/audio/L380-S01.m4a",
+        "durationMs": 3422,
+        "mean": -18.3,
+        "max": -2,
+        "bytes": 36943
+      },
+      {
+        "src": "/assets/lessons/L380/audio/L380-S02.m4a",
+        "durationMs": 5631,
+        "mean": -20.4,
+        "max": -2.2,
+        "bytes": 49436
+      },
+      {
+        "src": "/assets/lessons/L380/audio/L380-S03.m4a",
+        "durationMs": 4184,
+        "mean": -19.7,
+        "max": -2,
+        "bytes": 38899
+      },
+      {
+        "src": "/assets/lessons/L380/audio/L380-S04.m4a",
+        "durationMs": 4736,
+        "mean": -20,
+        "max": -2,
+        "bytes": 50310
+      },
+      {
+        "src": "/assets/lessons/L380/audio/L380-S05.m4a",
+        "durationMs": 3309,
+        "mean": -19.1,
+        "max": -2.1,
+        "bytes": 38510
+      },
+      {
+        "src": "/assets/lessons/L380/audio/L380-G02-prefix.m4a",
+        "durationMs": 2763,
+        "mean": -19.4,
+        "max": -2,
+        "bytes": 30483
+      },
+      {
+        "src": "/assets/lessons/L380/audio/L380-G02-suffix.m4a",
+        "durationMs": 2206,
+        "mean": -19,
+        "max": -3.5,
+        "bytes": 26734
+      },
+      {
+        "src": "/assets/lessons/L380/audio/L380-G05-wrong-one.m4a",
+        "durationMs": 5283,
+        "mean": -18.1,
+        "max": -2,
+        "bytes": 58624
+      },
+      {
+        "src": "/assets/lessons/L380/audio/L380-G05-wrong-two.m4a",
+        "durationMs": 4363,
+        "mean": -19.2,
+        "max": -2,
+        "bytes": 53644
+      },
+      {
+        "src": "/assets/lessons/L380/audio/char-u9023.m4a",
+        "durationMs": 2113,
+        "mean": -19,
+        "max": -3.1,
+        "bytes": 26509
+      }
+    ],
+    "g05MeanSpreadDb": 2.3,
+    "timings": "PASS",
+    "ffmpegDecode": "PASS",
+    "sizes": {
+      "images": 737818,
+      "audio": 410092,
+      "total": 1147910
+    }
+  },
+  "mobile": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "連",
+          "電",
+          "已",
+          "連",
+          "線",
+          "連"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "開",
+            "接",
+            "車",
+            "送"
+          ],
+          "correctSequence": [
+            "開",
+            "車",
+            "接",
+            "送"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-S02.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-one.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.875,
+              "bottom": 529.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-S02.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-one.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.875,
+              "bottom": 529.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "連",
+          "已",
+          "連",
+          "線",
+          "電",
+          "連"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "開",
+            "接",
+            "車",
+            "送"
+          ],
+          "correctSequence": [
+            "開",
+            "車",
+            "接",
+            "送"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-S02.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-one.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-S02.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L380/audio/L380-G05-wrong-one.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "media": [
+    {
+      "file": "char-u9023.m4a",
+      "ended": true,
+      "duration": 2.112993
+    },
+    {
+      "file": "L380-G02-prefix.m4a",
+      "ended": true,
+      "duration": 2.762993
+    },
+    {
+      "file": "L380-G02-suffix.m4a",
+      "ended": true,
+      "duration": 2.206009
+    },
+    {
+      "file": "L380-G05-wrong-one.m4a",
+      "ended": true,
+      "duration": 5.282993
+    },
+    {
+      "file": "L380-G05-wrong-two.m4a",
+      "ended": true,
+      "duration": 4.362993
+    },
+    {
+      "file": "L380-S01.m4a",
+      "ended": true,
+      "duration": 3.421995
+    },
+    {
+      "file": "L380-S02.m4a",
+      "ended": true,
+      "duration": 5.630998
+    },
+    {
+      "file": "L380-S03.m4a",
+      "ended": true,
+      "duration": 4.183991
+    },
+    {
+      "file": "L380-S04.m4a",
+      "ended": true,
+      "duration": 4.736009
+    },
+    {
+      "file": "L380-S05.m4a",
+      "ended": true,
+      "duration": 3.309002
+    }
+  ],
+  "images": [
+    {
+      "id": "L380-S01",
+      "src": "/assets/lessons/L380/images/L380-S01.webp",
+      "bytes": 93506,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "notes": "Unpowered battery-lamp project: connected insulated wires, empty battery holder with batteries outside, unlit bulb, hands away, tools down; no mains equipment or instructional diagram."
+    },
+    {
+      "id": "L380-S02",
+      "src": "/assets/lessons/L380/images/L380-S02.webp",
+      "bytes": 161004,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "notes": "Girl/mother winter clothing; small dog in simple fitted sweater stands naturally on four paws; no distress or anthropomorphic outfit."
+    },
+    {
+      "id": "L380-S03",
+      "src": "/assets/lessons/L380/images/L380-S03.webp",
+      "bytes": 187120,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "notes": "Girl/mother walk toward school from nearby separate home; safe path, clear gate, no clock/labels."
+    },
+    {
+      "id": "L380-S04",
+      "src": "/assets/lessons/L380/images/L380-S04.webp",
+      "bytes": 157108,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "notes": "Father briskly delivers forgotten wordless book to girl at school; teacher has distinct tied hair/lanyard and is not the mother."
+    },
+    {
+      "id": "L380-S05",
+      "src": "/assets/lessons/L380/images/L380-S05.webp",
+      "bytes": 139080,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "notes": "Exactly three nonoverlapping sheets, each with one completed smiling portrait; girl still holds brush."
+    }
+  ],
+  "sizes": {
+    "images": 737818,
+    "audio": 410092,
+    "total": 1147910
+  },
+  "imageRegenerations": {
+    "S01": 1,
+    "S03": 1
+  },
+  "rejectedImagesCommitted": false,
+  "rejectedImageReasons": {
+    "S01": "Initial draft added an instruction book and installed batteries; final removes book and leaves holder empty.",
+    "S03": "Initial figures walked away from school; final figures walk toward school and school clock removed."
+  },
+  "audio": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "standaloneInput": "連",
+    "zhuyin": "ㄌㄧㄢˊ",
+    "regenerations": {
+      "S01": 3,
+      "S05": 1,
+      "G02prefix": 1
+    },
+    "g02Prefix": "忘了帶書爸爸",
+    "g02Suffix": "忙送來",
+    "g05Correct": "L380-S02.m4a",
+    "g05WrongTexts": [
+      "最近很冷，連小狗都穿衣服。",
+      "最近太冷，連小狗也穿衣服。"
+    ],
+    "meanSpreadDb": 2.3,
+    "independentTranscription": [
+      {
+        "file": "char-u9023.m4a",
+        "text": "Lian."
+      },
+      {
+        "file": "L380-G02-prefix.m4a",
+        "text": "忘了带书，爸爸"
+      },
+      {
+        "file": "L380-G02-suffix.m4a",
+        "text": "忙送來"
+      },
+      {
+        "file": "L380-G05-wrong-one.m4a",
+        "text": "最近很冷，連小狗都穿衣服。"
+      },
+      {
+        "file": "L380-G05-wrong-two.m4a",
+        "text": "最近太冷，連小狗也穿衣服。"
+      },
+      {
+        "file": "L380-S01.m4a",
+        "text": "电线已经连接好了。"
+      },
+      {
+        "file": "L380-S02.m4a",
+        "text": "最近太冷，连小狗都穿衣服。"
+      },
+      {
+        "file": "L380-S03.m4a",
+        "text": "學校很近，不用開車接送。"
+      },
+      {
+        "file": "L380-S04.m4a",
+        "text": "忘了带书，爸爸连忙送来。"
+      },
+      {
+        "file": "L380-S05.m4a",
+        "text": "我接连画了三张笑脸。"
+      }
+    ],
+    "charAssessment": "One voiced syllable; unprompted ASR returned Lian. Measured pitch rises from approximately 152 to 229 Hz in the latter part, consistent with the requested second tone. No human subjective listening approval is claimed.",
+    "trailingAudio": "Original terminal silence/breath and syllable decay retained; no sentence-end trimming, slicing or splicing.",
+    "pipeline": "assets:audio standard mono AAC 44100 Hz; G02 prefix additionally processed with --file L380-G02-prefix.mp3 --minimum-mean -22, yielding mean -19.4 dB; AI alignment rerun afterward."
+  },
+  "alignment": {
+    "engine": "whisper-1 word timestamps through assets:align:ai",
+    "count": 9,
+    "s01": "Unprompted final full-sentence alignment has valid 8 spans; earlier degenerate timestamp versions not shipped.",
+    "s02Smoothing": "連 index4 span 1840-1880 extended to 1840-1920; 小 index5 begins 1920 instead of 1880. Original combined 1840-2380 interval retained. All other AI spans unchanged.",
+    "simplifiedEquivalence": "连 normalized to 連; not a spoken-text edit."
+  },
+  "checks": {
+    "tools": "PASS",
+    "aiSetup": "PASS",
+    "startupAuditState": "PASS",
+    "packetGeneration": "PASS; final packet synchronized after asset generation",
+    "lessonLocalAudit": "PASS",
+    "validateProduction": "PASS with temporary L380 entry; later removed",
+    "assetsAudit": "PASS: 415 units, 2034 image references, 4027 audio references; zero warnings.",
+    "mobileAndTablet": "PASS; 390x844 and 820x1180",
+    "lint": "PASS; three pre-existing warnings in L360/L364 helpers",
+    "fullVerify": "SKIPPED: dependency-blocked; Release owns integration",
+    "packageIntake": "Run against the pushed immutable ref before final handoff"
+  },
+  "limitations": [
+    "The existing FindManyChallenge emitted a React development warning about updating LessonPanel during render. Stage 2 six-card and three-target completion tests passed on both viewports; no shared UI file is changed in this package.",
+    "Chrome automation is not physical-phone microphone QA; G02 recording/replay used a synthetic microphone.",
+    "The temporary curriculum ends at L380, so next-lesson control is visibly disabled as 沒有下一課; actual next-lesson transition remains Release-owned.",
+    "Teacher subjective image/audio review is post-main; no pre-main teacher PASS gate added."
+  ]
+}

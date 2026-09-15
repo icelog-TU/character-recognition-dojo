@@ -41,6 +41,7 @@ function hanChars(text) {
 
 function normalizeTranscribedHanChar(char) {
   const simplifiedEquivalentMap = new Map([
+    ["\u8fde", "\u9023"],
     ["\u4e2a", "\u500b"],
     ["\u8fd9", "\u9019"],
     ["\u5706", "\u5713"],
@@ -231,6 +232,7 @@ for (const lesson of units) {
   if (lessonFilter && lesson.id !== lessonFilter) continue;
 
   for (const sentence of lesson.sentences ?? []) {
+    if (args.sentence && sentence.id !== String(args.sentence).toUpperCase()) continue;
     if (!sentence.audio?.src) continue;
     const filePath = assetPath(sentence.audio.src);
     if (!fs.existsSync(filePath)) {

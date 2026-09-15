@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L380 | 連 | claimed | Production A | codex/l380-complete-package | L375:經; L376:已; L377:近; L378:接; L379:送 | 經已近接送 | curriculum-workflow/lesson-requests/L380.json; curriculum-workflow/generated/L380-generation-packet.md; curriculum-workflow/drafts/L380-draft.json | curriculum-workflow/audio-inbox/L380/; public/assets/lessons/L380/ | Base 387662cd, formal L001-L370. Release: all predecessors through L375 -> R045/R046 (L346-L375) -> L376-L380. S01 approved battery-lamp wire scene, not boxes. Dependencies block Release only. |
+| L380 | 連 | dependency-blocked-asset-complete | Production A | codex/l380-complete-package | L376:已; L377:近; L378:接; L379:送 | 已近接送 | curriculum-workflow/lesson-requests/L380.json; curriculum-workflow/generated/L380-generation-packet.md; curriculum-workflow/drafts/L380-draft.json | curriculum-workflow/audio-inbox/L380/; public/assets/lessons/L380/ | Base 387662cd; recheck 250ca4a3 formal through L375. Complete 5 WebP + 10 M4A, AI timings, phone/tablet first-completion/replay QA. Release L375 -> R045/R046 (L346-L375) -> L376-L380. Teacher review post-main. |
 
 ## Status Values
 

@@ -88,10 +88,10 @@ function volumeStatsDb(filePath) {
   };
 }
 
-function reinforceQuietAudio(filePath) {
+function reinforceQuietAudio(filePath, minimumMeanDb = -28) {
   const stats = volumeStatsDb(filePath);
   if (!Number.isFinite(stats.max) || !Number.isFinite(stats.mean)) return { before: stats, gainDb: 0, after: stats };
-  if (stats.mean >= -28 && stats.max >= -12) return { before: stats, gainDb: 0, after: stats };
+  if (stats.mean >= minimumMeanDb && stats.max >= -12) return { before: stats, gainDb: 0, after: stats };
 
   const gainDb = Math.max(0, -19 - stats.mean);
   if (gainDb < 0.5) return { before: stats, gainDb: 0, after: stats };
@@ -129,6 +129,10 @@ function publicSrc(filePath) {
 }
 
 const args = parseArgs(process.argv.slice(2));
+const minimumMeanDb = Number(args["minimum-mean"] ?? -28);
+if (!Number.isFinite(minimumMeanDb) || minimumMeanDb > -12 || minimumMeanDb < -28) {
+  throw new Error("--minimum-mean must be between -28 and -12 dB.");
+}
 const lessonFilter = args.lesson ? String(args.lesson).toUpperCase() : null;
 const inputRoot = lessonFilter ? path.join(inboxRoot, lessonFilter) : inboxRoot;
 
@@ -139,7 +143,7 @@ if (!fs.existsSync(inputRoot)) {
   process.exit(0);
 }
 
-const files = listAudioFiles(inputRoot);
+const files = listAudioFiles(inputRoot).filter((filePath) => !args.file || path.basename(filePath) === args.file);
 if (files.length === 0) {
   console.log(`No audio files found in ${inputRoot}`);
   process.exit(0);
@@ -189,7 +193,7 @@ for (const sourcePath of files) {
     targetPath,
   ], { stdio: "ignore" });
 
-  const loudness = reinforceQuietAudio(targetPath);
+  const loudness = reinforceQuietAudio(targetPath, minimumMeanDb);
   const durationMs = getDurationMs(targetPath);
   report.push({
     lessonId,
