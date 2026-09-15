@@ -4690,7 +4690,7 @@ interface FindItem {
 
 function makeFindChallenge(lesson: Lesson): FindItem[] {
   const targets = lessonChars(lesson);
-  const targetCopies = targets.length === 1 ? [targets[0], targets[0], targets[0]] : targets;
+  const targetCopies = findChallengeTargetCopies(targets);
   const distractors = uniqueChars(
     hanChars(lesson.sentences.map((sentence) => sentence.text).join("")).filter((char) => !targets.includes(char)),
   ).slice(0, 3);
@@ -4701,6 +4701,12 @@ function makeFindChallenge(lesson: Lesson): FindItem[] {
       ? spreadSingleTargetCards(targetCopies[0], pool)
       : shuffleItems([...targetCopies, ...pool]).slice(0, 6);
   return chars.map((char, index) => ({ id: `${char}-${index}`, char }));
+}
+
+function findChallengeTargetCopies(targets: string[]): string[] {
+  if (targets.length === 0) return [];
+  if (targets.length === 1) return [targets[0], targets[0], targets[0]];
+  return targets.flatMap((target) => [target, target]);
 }
 
 function spreadSingleTargetCards(target: string, distractors: string[]): string[] {
