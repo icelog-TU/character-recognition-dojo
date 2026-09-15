@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-15T07:42:36.579Z",
+  "exportedAt": "2026-09-15T08:03:29.253Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -176114,6 +176114,660 @@
               "text": "河裡的魚會發光，真驚奇。",
               "correct": false,
               "audioSrc": "/assets/lessons/L362/audio/L362-G05-wrong-two.m4a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L363",
+      "order": 363,
+      "title": "歡",
+      "newChars": [
+        "歡"
+      ],
+      "zhuyin": {
+        "歡": "ㄏㄨㄢ"
+      },
+      "requiredRounds": 5,
+      "releaseBlockers": [
+        "L361",
+        "L362"
+      ],
+      "sourceBoundary": "44fedeffd9055ac64799b69f6f20145f9b51ff41",
+      "charAudio": {
+        "歡": "/assets/lessons/L363/audio/char-u6b61.m4a"
+      },
+      "sentences": [
+        {
+          "id": "L363-S01",
+          "text": "我喜歡這個驚喜。",
+          "spokenText": "我喜歡這個驚喜",
+          "focusChar": "歡",
+          "displayLines": [
+            "我喜歡",
+            "這個驚喜。"
+          ],
+          "imageNotes": "主角小女孩打開一個禮物盒，裡面是她喜歡的小玩具或漂亮髮夾，表情又驚喜又開心。畫面要清楚表現「收到驚喜，而且很喜歡」。不要文字卡片、品牌、包裝字。",
+          "imagePrompt": "One square phone-readable children's picture-book illustration. Mandatory L058 style only: fine pencil-and-watercolor linework, rich clean painted environments, natural warm light, bright varied palette, softly modeled faces and stable preschool proportions matching refined L115/L118/L119/L128 examples. Not flat cartoon, thin generic watercolor, anime, photo or 3D. Do not copy L058 people identities. The recurring protagonist girl matches the refined and L154/L162/L163 cast anchors: short dark bob, small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes, preschool age, not toddler or teen. Warm family living room, child-eye three-quarter view. Girl has just opened a small mint-colored gift box on a low wooden table, lid beside it and loose ribbon. Inside is a beautiful chunky flower-shaped hair clip, plainly visible. She beams in pleased surprise with hands at her chest. No gift card. Cozy sofa, bookshelf, plants and soft daylight. Box contents and happy surprise both readable. No readable writing, letters, numbers, labels, signage, logos, brand marks, captions, speech balloons, subtitles or watermarks.",
+          "imageReuseDecision": "New scene required: existing style/cast anchors do not depict this approved action and subject combination.",
+          "imageSrc": "/assets/lessons/L363/images/L363-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L363/audio/L363-S01.m4a",
+            "durationMs": 2017,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1100,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1300,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1660,
+                "endMs": 1860
+              }
+            ]
+          }
+        },
+        {
+          "id": "L363-S02",
+          "text": "小月喜歡奇怪的動物。",
+          "spokenText": "小月喜歡奇怪的動物",
+          "focusChar": "歡",
+          "displayLines": [
+            "小月喜歡",
+            "奇怪的動物。"
+          ],
+          "imageNotes": "小月在公園或安全的動物觀察區，看著一隻長相奇怪但可愛的小動物，例如耳朵很大、尾巴很長或顏色特別。小月表情開心、很喜歡牠。小月必須使用 public/assets/reference/lesson-cast/xiaoyue.webp，不能畫成主角小女孩或 generic classmate。",
+          "imagePrompt": "One square phone-readable children's picture-book illustration. Mandatory L058 style only: fine pencil-and-watercolor linework, rich clean painted environments, natural warm light, bright varied palette, softly modeled faces and stable preschool proportions matching refined L115/L118/L119/L128 examples. Not flat cartoon, thin generic watercolor, anime, photo or 3D. Do not copy L058 people identities. Use the attached Xiaoyue reference for identity EXACTLY: long softly curly dark chestnut hair, crescent moon clip, lavender cardigan, pale cream blouse, teal pleated skirt, white socks, violet shoes. She is distinct from the protagonist girl; no pink bob-haired child. At a safe animal observation garden she leans at a low wooden railing and smiles affectionately at one small friendly fennec fox with unusually large upright ears and fluffy tail, in a sandy planted habitat below. Animal full body and ears clearly visible, calm and safe, not threatening; no feeding or touching. Bright leafy environment, flowering bushes. No readable writing, letters, numbers, labels, signage, logos, brand marks, captions, speech balloons, subtitles or watermarks.",
+          "imageReuseDecision": "New scene required: existing style/cast anchors do not depict this approved action and subject combination.",
+          "imageSrc": "/assets/lessons/L363/images/L363-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L363/audio/L363-S02.m4a",
+            "durationMs": 2634,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1610
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1610,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1900,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2160,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2340,
+                "endMs": 2520
+              }
+            ]
+          }
+        },
+        {
+          "id": "L363-S03",
+          "text": "爸爸喜歡看怪物電影。",
+          "spokenText": "爸爸喜歡看怪物電影",
+          "focusChar": "歡",
+          "displayLines": [
+            "爸爸喜歡",
+            "看怪物電影。"
+          ],
+          "imageNotes": "主角爸爸坐在客廳沙發上看怪物電影，電視畫面裡有可愛但有一點怪的怪物角色，不能恐怖。主角小女孩可以在旁邊看或躲在爸爸旁邊。電視畫面不要出現文字、字幕或片名。",
+          "imagePrompt": "One square phone-readable children's picture-book illustration. Mandatory L058 style only: fine pencil-and-watercolor linework, rich clean painted environments, natural warm light, bright varied palette, softly modeled faces and stable preschool proportions matching refined L115/L118/L119/L128 examples. Not flat cartoon, thin generic watercolor, anime, photo or 3D. Do not copy L058 people identities. The recurring protagonist father matches L162-S04 and L163-S02: young adult East Asian man, short softly tousled dark hair, gentle clean-shaven face, medium blue long-sleeve button shirt and beige trousers. Show him seated comfortably on a green living-room sofa, smiling while watching a television; his gaze clearly aims at the screen. Three-quarter composition showing his face and the full TV screen. On the TV a cute rounded teal monster character with stubby horns walks through a colorful storybook forest. It is clearly a movie inside a TV, not a creature in the room. No children required. Daylight home with books and plants, no horror or darkness. No readable writing, letters, numbers, labels, signage, logos, brand marks, captions, speech balloons, subtitles or watermarks.",
+          "imageReuseDecision": "New scene required: existing style/cast anchors do not depict this approved action and subject combination.",
+          "imageSrc": "/assets/lessons/L363/images/L363-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L363/audio/L363-S03.m4a",
+            "durationMs": 3132,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 210
+              },
+              {
+                "charIndex": 1,
+                "startMs": 210,
+                "endMs": 420
+              },
+              {
+                "charIndex": 2,
+                "startMs": 420,
+                "endMs": 920
+              },
+              {
+                "charIndex": 3,
+                "startMs": 920,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1420,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1980,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2300,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2780,
+                "endMs": 3020
+              }
+            ]
+          }
+        },
+        {
+          "id": "L363-S04",
+          "text": "這個盒子會跳出小鳥，真驚奇。",
+          "spokenText": "這個盒子會跳出小鳥真驚奇",
+          "focusChar": "驚",
+          "displayLines": [
+            "這個盒子會",
+            "跳出小鳥，",
+            "真驚奇。"
+          ],
+          "imageNotes": "桌上有一個打開的盒子，小鳥從盒子裡跳出或飛出來，主角小女孩睜大眼睛看著，表情驚奇。畫面要清楚表現「盒子裡跳出小鳥」。不要做成恐怖驚嚇。",
+          "imagePrompt": "One square phone-readable children's picture-book illustration. Mandatory L058 style only: fine pencil-and-watercolor linework, rich clean painted environments, natural warm light, bright varied palette, softly modeled faces and stable preschool proportions matching refined L115/L118/L119/L128 examples. Not flat cartoon, thin generic watercolor, anime, photo or 3D. Do not copy L058 people identities. The recurring protagonist girl matches the refined and L154/L162/L163 cast anchors: short dark bob, small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes, preschool age, not toddler or teen. Bright home table scene. One opened plain wooden box on the tabletop, its lid angled back. A small cheerful yellow-and-blue bird is airborne just above the opening, feet lifted and wings spreading, visibly hopping OUT of the box. Girl beside the table has wide delighted surprised eyes and a small open mouth. Clear spatial relation of bird and box. Gentle safe wonder, not fright; no spring mechanism, no grabbing the bird. Natural warm living-room light and detailed uncluttered background. No readable writing, letters, numbers, labels, signage, logos, brand marks, captions, speech balloons, subtitles or watermarks.",
+          "imageReuseDecision": "New scene required: existing style/cast anchors do not depict this approved action and subject combination.",
+          "imageSrc": "/assets/lessons/L363/images/L363-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L363/audio/L363-S04.m4a",
+            "durationMs": 4623,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 250
+              },
+              {
+                "charIndex": 1,
+                "startMs": 250,
+                "endMs": 500
+              },
+              {
+                "charIndex": 2,
+                "startMs": 500,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1800,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2140,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2520,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2880,
+                "endMs": 3320
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3700,
+                "endMs": 3880
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3880,
+                "endMs": 4180
+              },
+              {
+                "charIndex": 11,
+                "startMs": 4180,
+                "endMs": 4400
+              }
+            ]
+          }
+        },
+        {
+          "id": "L363-S05",
+          "text": "我喜歡雨後的花園。",
+          "spokenText": "我喜歡雨後的花園",
+          "focusChar": "歡",
+          "displayLines": [
+            "我喜歡",
+            "雨後的花園。"
+          ],
+          "imageNotes": "雨後的花園，花草上有水珠，地面微濕但安全乾淨，主角小女孩站在花園裡開心欣賞。畫面要清楚表現「雨後的花園很美，所以我喜歡」。不要文字告示牌。",
+          "imagePrompt": "One square phone-readable children's picture-book illustration. Mandatory L058 style only: fine pencil-and-watercolor linework, rich clean painted environments, natural warm light, bright varied palette, softly modeled faces and stable preschool proportions matching refined L115/L118/L119/L128 examples. Not flat cartoon, thin generic watercolor, anime, photo or 3D. Do not copy L058 people identities. The recurring protagonist girl matches the refined and L154/L162/L163 cast anchors: short dark bob, small pink clip, pink cardigan over pale shirt, navy skirt, pink shoes, preschool age, not toddler or teen. Fresh garden immediately after a gentle shower. Girl stands on a safe damp stone path, smiling with hands softly clasped while admiring pink flowers and shiny green leaves dotted with large sparkling water droplets. Small shallow puddles reflect emerging sunlight; a closed plain umbrella leans against a garden bench to support the after-rain setting. Full body, stable preschool proportions, plants detailed but clean, bright blue breaks in clouds, no active heavy rain. No readable writing, letters, numbers, labels, signage, logos, brand marks, captions, speech balloons, subtitles or watermarks.",
+          "imageReuseDecision": "New scene required: existing style/cast anchors do not depict this approved action and subject combination.",
+          "imageSrc": "/assets/lessons/L363/images/L363-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L363/audio/L363-S05.m4a",
+            "durationMs": 3001,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 710
+              },
+              {
+                "charIndex": 2,
+                "startMs": 710,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2740
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L363-G01",
+          "type": "find-character",
+          "sentenceId": "L363-S01",
+          "targetChar": "歡",
+          "targetCharIndex": 2,
+          "prompt": "找到歡，點一下。"
+        },
+        {
+          "id": "L363-G02",
+          "type": "teach-character",
+          "sentenceId": "L363-S02",
+          "targetChar": "歡",
+          "targetCharIndex": 3,
+          "prompt": "幫忙說出這個字。",
+          "teachAudio": {
+            "prefixText": "小月喜",
+            "targetText": "歡",
+            "suffixText": "奇怪的動物",
+            "prefixSrc": "/assets/lessons/L363/audio/L363-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L363/audio/L363-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L363/audio/L363-G02-prefix.m4a",
+              "durationMs": 4023,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 640
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 640,
+                  "endMs": 1180
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 1180,
+                  "endMs": 1520
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L363/audio/L363-G02-suffix.m4a",
+              "durationMs": 2423,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 300
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 300,
+                  "endMs": 600
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 600,
+                  "endMs": 1200
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1200,
+                  "endMs": 1300
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1300,
+                  "endMs": 1480
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L363-G03",
+          "type": "missing-character",
+          "sentenceId": "L363-S03",
+          "targetChar": "歡",
+          "targetCharIndex": 3,
+          "prompt": "補上不見的字。",
+          "missingIndexes": [
+            3
+          ],
+          "options": [
+            {
+              "id": "L363-G03-A",
+              "text": "歡",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "L363-G04",
+          "type": "partial-order",
+          "sentenceId": "L363-S04",
+          "targetChar": "驚",
+          "prompt": "把句子排回正確順序。",
+          "missingIndexes": [
+            4,
+            5,
+            10,
+            11
+          ],
+          "options": [
+            {
+              "id": "L363-G04-1",
+              "text": "會",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "L363-G04-2",
+              "text": "跳",
+              "correct": true,
+              "correctOrder": 1
+            },
+            {
+              "id": "L363-G04-3",
+              "text": "驚",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "L363-G04-4",
+              "text": "奇",
+              "correct": true,
+              "correctOrder": 3
+            }
+          ]
+        },
+        {
+          "id": "L363-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L363-S05",
+          "targetChar": "園",
+          "targetCharIndex": 7,
+          "prompt": "聽一聽，選出讀對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我喜歡雨後的花園。",
+              "correct": true,
+              "sentenceId": "L363-S05",
+              "audioSrc": "/assets/lessons/L363/audio/L363-S05.m4a",
+              "audio": {
+                "src": "/assets/lessons/L363/audio/L363-S05.m4a",
+                "durationMs": 3001,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 400
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 400,
+                    "endMs": 710
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 710,
+                    "endMs": 1020
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1020,
+                    "endMs": 1760
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1760,
+                    "endMs": 1960
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1960,
+                    "endMs": 2240
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2240,
+                    "endMs": 2500
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2500,
+                    "endMs": 2740
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "我喜歡雨後的公園。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L363/audio/L363-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L363/audio/L363-G05-wrong-one.m4a",
+                "durationMs": 3315,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 360
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 360,
+                    "endMs": 800
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 800,
+                    "endMs": 1240
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1240,
+                    "endMs": 2040
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 2040,
+                    "endMs": 2260
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2260,
+                    "endMs": 2580
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2580,
+                    "endMs": 2840
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2840,
+                    "endMs": 3060
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "我喜歡雨後的花草。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L363/audio/L363-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L363/audio/L363-G05-wrong-two.m4a",
+                "durationMs": 2468,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 280
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 280,
+                    "endMs": 550
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 550,
+                    "endMs": 820
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 820,
+                    "endMs": 1300
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1300,
+                    "endMs": 1520
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1520,
+                    "endMs": 1800
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1800,
+                    "endMs": 2100
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2100,
+                    "endMs": 2320
+                  }
+                ]
+              }
             }
           ]
         }
