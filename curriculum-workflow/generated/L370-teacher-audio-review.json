@@ -1,0 +1,135 @@
+{
+  "unit": "L370",
+  "date": "2026-09-16",
+  "scope": "Teacher confirmed only these exact audio files; not a blanket asset approval.",
+  "assets": [
+    {
+      "id": "L370-G02-prefix",
+      "sha256": "f1629d1104b644731063882677597b539747a292a183208b6ea95ba55362b258",
+      "teacherText": "我人工聽過了，「朋」的發音是沒有問題的",
+      "method": "Human confirmed pronunciation; single-Han interval from measured -40 dB silence onset.",
+      "audio": {
+        "spokenText": "朋",
+        "src": "/assets/lessons/L370/audio/L370-G02-prefix.m4a",
+        "durationMs": 1091,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 532
+          }
+        ]
+      }
+    },
+    {
+      "id": "L370-G05-wrong-one",
+      "sha256": "d96211a76f3483ff2cb82ed15997a3e38e8c857bad67212ba4b8d15527aaaea3",
+      "teacherText": "小朋友排好再上車吧。這句話也發音正確。",
+      "rawTranscription": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 4.5,
+        "text": "小朋友,抬好再上车吧!",
+        "words": [
+          {
+            "word": "小",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "朋友",
+            "start": 0.4399999976158142,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "抬",
+            "start": 1.8799999952316284,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "好",
+            "start": 1.9600000381469727,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "再",
+            "start": 2.359999895095825,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "上",
+            "start": 3.140000104904175,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "车",
+            "start": 3.4600000381469727,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "吧",
+            "start": 3.619999885559082,
+            "end": 3.859999895095825
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 5
+        }
+      },
+      "method": "Teacher verified exact text; original ASR glyph retained. Word timestamps distributed per Han using repository timingsFromWords algorithm, not fabricated transcript.",
+      "audio": {
+        "spokenText": "小朋友排好再上車吧",
+        "src": "/assets/lessons/L370/audio/L370-G05-wrong-one.m4a",
+        "durationMs": 4484,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1880,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1960,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2360,
+            "endMs": 3140
+          },
+          {
+            "charIndex": 6,
+            "startMs": 3140,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3460,
+            "endMs": 3620
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3620,
+            "endMs": 3860
+          }
+        ]
+      }
+    }
+  ]
+}
