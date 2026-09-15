@@ -1,0 +1,245 @@
+{
+  "id": "L359",
+  "order": 359,
+  "kind": "lesson",
+  "newChars": [
+    "怪"
+  ],
+  "zhuyin": {
+    "怪": "ㄍㄨㄞˋ"
+  },
+  "title": "怪",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Teacher-approved Production B handoff for L359. Production claimed from origin/main 71762b03 with formal production lessons L001-L353. During final packaging, latest origin/main advanced to aa1144e3 and L354 排 became formal; L355 雞, L356 公, L357 園, and L358 物 are still not in origin/main, so L359 remains dependency-blocked and uses those as provisional learned characters. Production builds a lesson-local dependency-blocked asset-complete package; Release owns ordered integration into production JSON, planner, ledger, registry cleanup, final verify, push, and deployment.",
+  "dependsOnLessons": [
+    "L355",
+    "L356",
+    "L357",
+    "L358"
+  ],
+  "provisionalLearnedChars": [
+    "雞",
+    "公",
+    "園",
+    "物"
+  ],
+  "generationConstraints": {
+    "allowedDisplayCharsBoundary": "formal learned chars through latest origin/main production JSON L354 plus provisional L355「雞」, L356「公」, L357「園」, L358「物」 plus current new char L359「怪」",
+    "allowedChars": "一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪",
+    "dependsOnLessons": [
+      "L355",
+      "L356",
+      "L357",
+      "L358"
+    ],
+    "provisionalLearnedChars": [
+      "雞",
+      "公",
+      "園",
+      "物"
+    ],
+    "requiredCoverageChars": [
+      "怪",
+      "物",
+      "園",
+      "公",
+      "雞",
+      "排"
+    ],
+    "targetCharMinimumCount": {
+      "怪": 3
+    },
+    "recentTargetMinimumCounts": {
+      "物": 2,
+      "園": 2,
+      "公": 2,
+      "雞": 1,
+      "排": 1
+    },
+    "coverageCounts": {
+      "怪": 4,
+      "物": 5,
+      "園": 2,
+      "公": 2,
+      "雞": 1,
+      "排": 1
+    },
+    "sentenceLength": {
+      "minHan": 4,
+      "maxHan": 12
+    },
+    "forbiddenDisplayChars": [],
+    "stage4OrderRule": "Canonical normal L006+ order required: G01 find-character, G02 teach-character, G03 missing-character, G04 partial-order, G05 choose-pronunciation. No exception.",
+    "imageRules": [
+      "Generate square image / 1:1 composition for each sentence.",
+      "Use the full L058 lesson image set only as style references; do not copy any L058 person identity.",
+      "Compare final WebP images side by side with L058 style anchors, refined preferred examples, and relevant cast anchors before acceptance.",
+      "When a sentence uses 我 / 我們 or shows the protagonist household, use the recurring protagonist girl and protagonist family identity.",
+      "Teacher, mother, father, generic students, Xiaoyue, Xiaoguang, and the protagonist girl must remain visually distinct.",
+      "Generic classmates must not be accidentally reused as Xiaoyue or Xiaoguang.",
+      "No readable text, labels, signs, subtitles, brand marks, logos, book titles, movie titles, route numbers, station names, advertisements, visible numeric writing, UI symbols, or watermarks anywhere."
+    ],
+    "audioRules": [
+      "Use repo OpenAI audio flow only.",
+      "Generate standalone charAudio for 怪 from the single character.",
+      "Generate S01-S05 from spokenText exactly.",
+      "Generate G02 prefix from exact fragment 我不敢看 and suffix from exact fragment 物電影.",
+      "Generate G05 wrong-option audio as standalone whole-sentence files from exact wrong option texts, not spliced audio."
+    ]
+  },
+  "approvedSentences": [
+    {
+      "id": "L359-S01",
+      "text": "這本書裡有很多種怪物。",
+      "spokenText": "這本書裡有很多種怪物",
+      "focusChar": "怪",
+      "targetCharIndex": 8,
+      "displayLines": [
+        "這本書裡有",
+        "很多種怪物。"
+      ],
+      "imageNotes": "主角小女孩正在看一本打開的繪本，書頁上畫著很多種可愛、奇形怪狀但不恐怖的怪物。畫面重點是「書裡」和「很多種怪物」。不要出現可讀文字、書名或標籤。"
+    },
+    {
+      "id": "L359-S02",
+      "text": "動物園裡有公雞。",
+      "spokenText": "動物園裡有公雞",
+      "focusChar": "物",
+      "targetCharIndex": 1,
+      "displayLines": [
+        "動物園裡",
+        "有公雞。"
+      ],
+      "imageNotes": "動物園裡的安全圍欄區，有一隻公雞站著或走動。可以有主角小女孩遠遠觀看。畫面要清楚是動物園環境，但不要可讀說明牌、園名或標誌。"
+    },
+    {
+      "id": "L359-S03",
+      "text": "我不敢看怪物電影。",
+      "spokenText": "我不敢看怪物電影",
+      "focusChar": "怪",
+      "targetCharIndex": 4,
+      "displayLines": [
+        "我不敢看",
+        "怪物電影。"
+      ],
+      "imageNotes": "主角小女孩在家裡或電影院座位上，看到螢幕上的怪物電影後，用手遮住眼睛或靠在家人旁邊。螢幕上的怪物要偏繪本式、可愛但讓孩子覺得有點害怕，不要恐怖、血腥、驚悚。不要電影名稱、字幕或螢幕文字。"
+    },
+    {
+      "id": "L359-S04",
+      "text": "桌上有一排怪物玩具。",
+      "spokenText": "桌上有一排怪物玩具",
+      "focusChar": "怪",
+      "targetCharIndex": 5,
+      "displayLines": [
+        "桌上有一排",
+        "怪物玩具。"
+      ],
+      "imageNotes": "桌子上整齊放著一排怪物玩具，每個怪物玩具有不同外形，但都可愛、不恐怖。排列要清楚，讓孩子看得出「一排」。不要文字、品牌或包裝標籤。"
+    },
+    {
+      "id": "L359-S05",
+      "text": "公園裡沒有怪物。",
+      "spokenText": "公園裡沒有怪物",
+      "focusChar": "怪",
+      "targetCharIndex": 5,
+      "displayLines": [
+        "公園裡沒有",
+        "怪物。"
+      ],
+      "imageNotes": "主角小女孩和家人在明亮安全的公園裡散步或玩耍，周圍只有樹、花草、長椅和正常遊樂空間，沒有怪物。畫面可以呈現小女孩放心的表情。不要告示牌文字或標誌。"
+    }
+  ],
+  "stage4Plan": [
+    {
+      "id": "L359-G01",
+      "type": "find-character",
+      "sentenceId": "L359-S01",
+      "targetChar": "怪",
+      "targetCharIndex": 8
+    },
+    {
+      "id": "L359-G02",
+      "type": "teach-character",
+      "sentenceId": "L359-S03",
+      "targetChar": "怪",
+      "targetCharIndex": 4,
+      "teachAudio": {
+        "prefixText": "我不敢看",
+        "targetText": "怪",
+        "suffixText": "物電影"
+      }
+    },
+    {
+      "id": "L359-G03",
+      "type": "missing-character",
+      "sentenceId": "L359-S04",
+      "targetChar": "怪",
+      "targetCharIndex": 5,
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "text": "怪"
+        }
+      ]
+    },
+    {
+      "id": "L359-G04",
+      "type": "partial-order",
+      "sentenceId": "L359-S02",
+      "missingIndexes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "text": "動",
+          "correctOrder": 0
+        },
+        {
+          "text": "物",
+          "correctOrder": 1
+        },
+        {
+          "text": "園",
+          "correctOrder": 2
+        },
+        {
+          "text": "裡",
+          "correctOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "L359-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L359-S05",
+      "targetChar": "怪",
+      "targetCharIndex": 5,
+      "options": [
+        {
+          "id": "correct",
+          "text": "公園裡沒有怪物。"
+        },
+        {
+          "id": "wrong-one",
+          "text": "公園裡沒有動物。"
+        },
+        {
+          "id": "wrong-two",
+          "text": "公園裡沒有小雞。"
+        }
+      ]
+    }
+  ],
+  "stage4IndexSelfCheck": [
+    "L359-G01 / S01: Han = 這[0] 本[1] 書[2] 裡[3] 有[4] 很[5] 多[6] 種[7] 怪[8] 物[9]; targetChar 怪, targetCharIndex 8, Han[8]=怪, PASS.",
+    "L359-G02 / S03: Han = 我[0] 不[1] 敢[2] 看[3] 怪[4] 物[5] 電[6] 影[7]; targetChar 怪, targetCharIndex 4, Han[4]=怪, PASS.",
+    "L359-G03 / S04: Han = 桌[0] 上[1] 有[2] 一[3] 排[4] 怪[5] 物[6] 玩[7] 具[8]; targetChar 怪, targetCharIndex 5, Han[5]=怪, PASS.",
+    "L359-G04 / S02 partial-order: Han = 動[0] 物[1] 園[2] 裡[3] 有[4] 公[5] 雞[6]; missingIndexes [0,1,2,3] = 動/物/園/裡; options are single-Han cards; correctOrder mapping PASS.",
+    "L359-G05 / S05: Han = 公[0] 園[1] 裡[2] 沒[3] 有[4] 怪[5] 物[6]; targetChar 怪, targetCharIndex 5, Han[5]=怪, PASS. Wrong choices are 7 Han characters and contain only allowed characters PASS."
+  ]
+}

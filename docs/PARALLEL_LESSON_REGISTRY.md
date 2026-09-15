@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L359 | 怪 / normal lesson | claimed | Production B | codex/l359-complete-package | L354:排; L355:雞; L356:公; L357:園; L358:物 | 排; 雞; 公; 園; 物 | `curriculum-workflow/lesson-requests/L359.json`; `curriculum-workflow/generated/L359-generation-packet.md`; `curriculum-workflow/drafts/L359-draft.json` | `public/assets/lessons/L359/` | Claimed from latest origin/main 71762b03; dependency-blocked until L354-L358 enter main. |
+| L359 | 怪 / normal lesson | ready-blocked-by-dependency | Production B | codex/l359-complete-package | L355:雞; L356:公; L357:園; L358:物 | 雞; 公; 園; 物 | `curriculum-workflow/lesson-requests/L359.json`; `curriculum-workflow/generated/L359-generation-packet.md`; `curriculum-workflow/drafts/L359-draft.json`; `curriculum-workflow/audio-inbox/L359/` | `public/assets/lessons/L359/` | Dependency-blocked asset-complete package claimed from origin/main 71762b03; final dependency recheck saw origin/main aa1144e3 with L354 merged, so Release must integrate L355-L358 before L359. |
 
 ## Status Values
 
