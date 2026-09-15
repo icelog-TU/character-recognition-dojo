@@ -17,6 +17,8 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 
+| L390 | 數 | claimed | Production D | codex/l390-complete-package | L385, L386, L387, L388, L389 | 字、名、第、念、號 | curriculum-workflow/lesson-requests/L390.json; curriculum-workflow/generated/L390-generation-packet.md; curriculum-workflow/drafts/L390-draft.json | public/assets/lessons/L390/; curriculum-workflow/audio-inbox/L390/ | Approved dual readings: primary ㄕㄨˋ, verb ㄕㄨˇ; G02 suffix-only. Base b313ded8 through L375. Release requires earlier lessons and R045/R046; next milestone L390-R047-R048-L391 belongs to separate tasks. |
+
 ## Status Values
 
 - `planned`: Teacher has chosen the lesson order and new character(s), but no Codex thread owns it yet.
