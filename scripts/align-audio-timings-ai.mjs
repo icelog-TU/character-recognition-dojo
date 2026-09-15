@@ -41,6 +41,16 @@ function hanChars(text) {
 
 function normalizeTranscribedHanChar(char) {
   const simplifiedEquivalentMap = new Map([
+    ["\u8c22", "\u8b1d"],
+    ["\u5e2e", "\u5e6b"],
+    ["\u52a8", "\u52d5"],
+    ["\u4eb2", "\u89aa"],
+    ["\u56fe", "\u5716"],
+    ["\u6761", "\u689d"],
+    ["\u7ecf", "\u7d93"],
+    ["\u6b22", "\u6b61"],
+    ["\u542c", "\u807d"],
+    ["\u957f", "\u9577"],
     ["\u4e2a", "\u500b"],
     ["\u8fd9", "\u9019"],
     ["\u5706", "\u5713"],
