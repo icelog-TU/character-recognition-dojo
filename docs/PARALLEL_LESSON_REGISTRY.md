@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L371 | 親 | claimed | Production C | codex/l371-complete-package | L366,L367,L368,L369,L370 | 吧謝感情朋友 | curriculum-workflow/lesson-requests/L371.json; curriculum-workflow/generated/L371-generation-packet.md; curriculum-workflow/drafts/L371-draft.json | public/assets/lessons/L371/; curriculum-workflow/audio-inbox/L371/ | Single-character lesson; L370 word lesson and prior units block Release only. |
 
 ## Status Values
 
