@@ -1,0 +1,55 @@
+[
+  {
+    "src": "/assets/lessons/L433/audio/L433-S02.m4a",
+    "charIndex": 6,
+    "field": "endMs",
+    "before": 2660,
+    "after": 2795,
+    "evidence": "Final voiced endpoint from -45 dB silencedetect; only terminal silence trimmed, 200 ms retained."
+  },
+  {
+    "src": "/assets/lessons/L433/audio/L433-S05.m4a",
+    "charIndex": 9,
+    "field": "endMs",
+    "before": 2560,
+    "after": 2648,
+    "evidence": "Final voiced endpoint from -45 dB silencedetect; only terminal silence trimmed, 200 ms retained."
+  },
+  {
+    "src": "/assets/lessons/L433/audio/L433-S04.m4a",
+    "charIndex": 4,
+    "field": "startMs",
+    "before": 1340,
+    "after": 1806,
+    "evidence": "S04 pause 1433–1846 ms at -40 dB; start 是 40 ms before detected onset."
+  },
+  {
+    "src": "/assets/lessons/L433/audio/L433-S04.m4a",
+    "charIndex": 9,
+    "field": "endMs",
+    "before": 3820,
+    "after": 3932,
+    "evidence": "S04 final voiced endpoint 3931.54 ms at -45 dB."
+  },
+  {
+    "src": "/assets/lessons/L433/audio/L433-G02-prefix.m4a",
+    "charIndex": 0,
+    "field": "endMs",
+    "before": 660,
+    "after": 877,
+    "evidence": "Prefix final voiced endpoint 876.94 ms at -45 dB."
+  },
+  {
+    "src": "/assets/lessons/L433/audio/L433-G05-wrong-one.m4a",
+    "charIndex": 5,
+    "field": "startMs",
+    "before": 1380,
+    "after": 2004,
+    "evidence": "Wrong-one pause 1381–2044 ms at -40 dB; start 由 40 ms before detected onset."
+  },
+  {
+    "src": "/assets/lessons/L433/audio/L433-G02-suffix.m4a",
+    "change": "Uniform +8 dB suffix gain with limiter; no speech cut or splice",
+    "beforeMeanDb": -27.1
+  }
+]

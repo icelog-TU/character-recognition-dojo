@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "coverage": {
+    "願": 3,
+    "意": 2,
+    "由": 2,
+    "主": 3,
+    "己": 1,
+    "自": 1
+  },
+  "allowedChars": 430,
+  "timedTracks": 9,
+  "audio": [
+    {
+      "src": "/assets/lessons/L433/audio/L433-S01.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 4243,
+      "meanDb": -17.9,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L433/audio/L433-S02.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 2995,
+      "meanDb": -17.7,
+      "maxDb": -2.1,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L433/audio/L433-S03.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 3129,
+      "meanDb": -18.3,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L433/audio/L433-S04.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 4131,
+      "meanDb": -17.9,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L433/audio/L433-S05.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 2848,
+      "meanDb": -18.9,
+      "maxDb": -3.8,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L433/audio/L433-G02-prefix.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 1076,
+      "meanDb": -16.9,
+      "maxDb": -2.9,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L433/audio/L433-G02-suffix.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 2415,
+      "meanDb": -19.1,
+      "maxDb": -2.3,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L433/audio/L433-G05-wrong-one.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 3765,
+      "meanDb": -18.1,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L433/audio/L433-G05-wrong-two.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 3695,
+      "meanDb": -19,
+      "maxDb": -2.1,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L433/audio/char-u9858.m4a",
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "durationMs": 1555,
+      "meanDb": -19.1,
+      "maxDb": -3,
+      "decodeExit": 0
+    }
+  ],
+  "images": [
+    {
+      "src": "/assets/lessons/L433/images/L433-S01.webp",
+      "bytes": 161640
+    },
+    {
+      "src": "/assets/lessons/L433/images/L433-S02.webp",
+      "bytes": 139080
+    },
+    {
+      "src": "/assets/lessons/L433/images/L433-S03.webp",
+      "bytes": 164524
+    },
+    {
+      "src": "/assets/lessons/L433/images/L433-S04.webp",
+      "bytes": 186384
+    },
+    {
+      "src": "/assets/lessons/L433/images/L433-S05.webp",
+      "bytes": 187040
+    }
+  ],
+  "assetBytes": 1206160,
+  "g05MeanSpreadDb": 0.8999999999999986,
+  "errors": []
+}

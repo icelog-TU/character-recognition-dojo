@@ -1,0 +1,78 @@
+[
+  {
+    "file": "public/assets/lessons/L433/audio/char-u9858.m4a",
+    "sha256": "8617205a559a9b376147e25262f77f03423924f57d6bf081a64f78e60f2c8186",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "愿。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 19,
+        "input_tokens": 15,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 15
+        },
+        "output_tokens": 4
+      }
+    }
+  },
+  {
+    "file": "public/assets/lessons/L433/audio/L433-G02-prefix.m4a",
+    "sha256": "d97dcd0338f654bfc29469ab71b089d309fcd1c10b58c8b702f65cccf675bc4e",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "你",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 13,
+        "input_tokens": 10,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 10
+        },
+        "output_tokens": 3
+      }
+    }
+  },
+  {
+    "file": "public/assets/lessons/L433/audio/L433-G02-suffix.m4a",
+    "sha256": "f80524210be812be9dfc698d393e06a0a57a7c00d15ae17c5583d42cac950703",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "你当主角吗?",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 32,
+        "input_tokens": 24,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 24
+        },
+        "output_tokens": 8
+      }
+    }
+  },
+  {
+    "file": "public/assets/lessons/L433/audio/L433-S02.m4a",
+    "sha256": "16cae76ecf3f071c3ed484be5a9941073152ebce45bd337dd02f88e271144b10",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "你願意當主角嗎?",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 39,
+        "input_tokens": 29,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 29
+        },
+        "output_tokens": 10
+      }
+    }
+  }
+]
