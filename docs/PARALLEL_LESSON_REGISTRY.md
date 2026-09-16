@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L409 | 辦 / normal lesson | claimed | Production C | codex/l409-complete-package | L405, L406, L407, L408; release milestone R049/R050 after405 | 越、加、減、法 | curriculum-workflow/lesson-requests/L409.json; curriculum-workflow/generated/L409-generation-packet.md; curriculum-workflow/drafts/L409-draft.json | public/assets/lessons/L409/; curriculum-workflow/audio-inbox/L409/ | Claimed from 2632d2c399197f4d62e13e78faf1854ccce7f219. S03 得 index6 reads ㄉㄟˇ; S04 fixed Xiaoguang; no readable image text exception. |
 
 ## Status Values
 
