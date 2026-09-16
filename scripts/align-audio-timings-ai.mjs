@@ -41,6 +41,7 @@ function hanChars(text) {
 
 function normalizeTranscribedHanChar(char) {
   const simplifiedEquivalentMap = new Map([
+    ["结", "結"],
     ["\u4e2a", "\u500b"],
     ["\u8fd9", "\u9019"],
     ["\u5706", "\u5713"],
@@ -199,11 +200,12 @@ function timingsFromWords(words, sentence) {
   return timings;
 }
 
-async function transcribeWithWords({ apiKey, filePath, fileName }) {
+async function transcribeWithWords({ apiKey, filePath, fileName, prompt }) {
   const form = new FormData();
   form.append("model", "whisper-1");
   form.append("file", new Blob([fs.readFileSync(filePath)], { type: "audio/mp4" }), fileName);
   form.append("language", "zh");
+  if (prompt) form.append("prompt", prompt);
   form.append("response_format", "verbose_json");
   form.append("timestamp_granularities[]", "word");
 
@@ -242,7 +244,12 @@ for (const lesson of units) {
       apiKey,
       filePath,
       fileName: path.basename(filePath),
+      prompt: args["text-context"] ? sentence.spokenText || sentence.text : undefined,
     });
+    if (args["evidence-dir"]) {
+      fs.mkdirSync(String(args["evidence-dir"]), { recursive: true });
+      fs.writeFileSync(path.join(String(args["evidence-dir"]), `${sentence.id}.json`), JSON.stringify(transcript, null, 2) + "\n", "utf8");
+    }
 
     const expected = normalizedHanText(sentence.spokenText || sentence.text);
     const actual = normalizedHanText(transcript.text || "");

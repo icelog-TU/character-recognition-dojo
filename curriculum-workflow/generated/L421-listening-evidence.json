@@ -1,0 +1,42 @@
+[
+  {
+    "file": "char-u5ba4.m4a",
+    "sha256": "40b16a154b38484d7c365668458ee2eb360e796abd4dcc332ef8a9d47cf400c9",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human review",
+    "prompt": "Listen to the actual supplied audio. Transcribe it verbatim in Traditional Chinese. Then give the Taiwan zhuyin and tone actually audible for each occurrence of 教 and for any standalone syllable. Distinguish first-level versus fourth-falling tone based on sound, not expected grammar or spelling. Describe whether final syllables are clear, natural Taiwan Mandarin without erhua, and whether any speech sounds missing, clipped or overly paused. If audio cannot be accessed or tone is ambiguous, explicitly say so. Do not claim human review.",
+    "result": ""
+  },
+  {
+    "file": "L421-S01.m4a",
+    "sha256": "793af134f8c61d781e04a92c2c56b1510157221988b89151098a9f08e4c32cc7",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human review",
+    "prompt": "Listen to the actual supplied audio. Transcribe it verbatim in Traditional Chinese. Then give the Taiwan zhuyin and tone actually audible for each occurrence of 教 and for any standalone syllable. Distinguish first-level versus fourth-falling tone based on sound, not expected grammar or spelling. Describe whether final syllables are clear, natural Taiwan Mandarin without erhua, and whether any speech sounds missing, clipped or overly paused. If audio cannot be accessed or tone is ambiguous, explicitly say so. Do not claim human review.",
+    "result": "ANSWER IN TEXT: 我目前無法存取任何音訊內容，因此無法提供逐字聽寫或判斷聲調。若您能提供其他文字資訊，我很樂意協助。"
+  },
+  {
+    "file": "L421-S02.m4a",
+    "sha256": "2f76f7b6ecfe513f799ae64910ef1dcc4941856e2c41582681dde87aa4d6133e",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human review",
+    "prompt": "Listen to the actual supplied audio. Transcribe it verbatim in Traditional Chinese. Then give the Taiwan zhuyin and tone actually audible for each occurrence of 教 and for any standalone syllable. Distinguish first-level versus fourth-falling tone based on sound, not expected grammar or spelling. Describe whether final syllables are clear, natural Taiwan Mandarin without erhua, and whether any speech sounds missing, clipped or overly paused. If audio cannot be accessed or tone is ambiguous, explicitly say so. Do not claim human review.",
+    "result": " 很抱歉，我無法存取或收聽任何音訊，因此無法轉錄或分析其中的內容。如果有其他需要幫忙的地方，請隨時告訴我。"
+  },
+  {
+    "file": "L421-S03.m4a",
+    "sha256": "b1cb15bb45f14e3692e10e61b33c04266a84e4754e696998bd12a7358307529f",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human review",
+    "prompt": "Listen to the actual supplied audio. Transcribe it verbatim in Traditional Chinese. Then give the Taiwan zhuyin and tone actually audible for each occurrence of 教 and for any standalone syllable. Distinguish first-level versus fourth-falling tone based on sound, not expected grammar or spelling. Describe whether final syllables are clear, natural Taiwan Mandarin without erhua, and whether any speech sounds missing, clipped or overly paused. If audio cannot be accessed or tone is ambiguous, explicitly say so. Do not claim human review.",
+    "result": "{\"response\":\"抱歉，我無法存取或聆聽音訊，因此無法提供逐字轉錄或音調分析。\"}"
+  },
+  {
+    "file": "L421-G02-prefix.m4a",
+    "sha256": "0c1e0eac648bc3051a9c9e39886bcaf5f0f66475c3d89a196f0689b73f7faf4a",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human review",
+    "prompt": "Listen to the actual supplied audio. Transcribe it verbatim in Traditional Chinese. Then give the Taiwan zhuyin and tone actually audible for each occurrence of 教 and for any standalone syllable. Distinguish first-level versus fourth-falling tone based on sound, not expected grammar or spelling. Describe whether final syllables are clear, natural Taiwan Mandarin without erhua, and whether any speech sounds missing, clipped or overly paused. If audio cannot be accessed or tone is ambiguous, explicitly say so. Do not claim human review.",
+    "result": "{\"error\": \"I'm sorry, but I can't access or hear any audio. If you can provide the content in another way, I'd be happy to help.\"}"
+  }
+]

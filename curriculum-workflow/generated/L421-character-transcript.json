@@ -1,0 +1,33 @@
+{
+  "file": "public/assets/lessons/L421/audio/char-u5ba4.m4a",
+  "sha256": "40b16a154b38484d7c365668458ee2eb360e796abd4dcc332ef8a9d47cf400c9",
+  "method": "Independent transcription without target text or prompt; orthography may be ambiguous for isolated syllables",
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.4600000381469727,
+    "text": "是",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1,
+        "text": "是",
+        "tokens": [
+          50364,
+          1541,
+          50414
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.9000268578529358,
+        "compression_ratio": 0.27272728085517883,
+        "no_speech_prob": 0.08260713517665863
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  }
+}

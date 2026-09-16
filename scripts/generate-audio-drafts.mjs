@@ -128,7 +128,12 @@ if (includeSentences) {
   for (const sentence of lesson.sentences ?? []) {
     if (sentence.approved !== true) continue;
     if (sentenceFilter && sentence.id.toUpperCase() !== sentenceFilter) continue;
-    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`));
+    const sentenceChars = hanChars(sentence.text);
+    const pronunciation = Object.entries(sentence.zhuyinOverrides ?? {})
+      .filter(([index]) => sentenceChars[Number(index)])
+      .map(([index, zhuyin]) => `At Han index ${index}, pronounce ${sentenceChars[Number(index)]} as Taiwan zhuyin ${zhuyin}.`)
+      .join(" ");
+    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`), pronunciation);
   }
 }
 
