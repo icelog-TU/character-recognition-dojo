@@ -46,3 +46,5 @@ The browser control API provides clicks but no sustained pointer-down/up operati
 tools:check PASS; ai:check PASS; lesson-local audio format and production validators PASS; L428-package-audit PASS; validate:production PASS; curriculum:audit-state PASS (expected unintegrated L428 asset-directory warning). Total final media 1,339,788 bytes, approximately 1.28 MiB.
 
 verify skipped: dependency-blocked, shared state left for Release. Production JSON, planner export and ledger integration belong to Release; this package changes only the L428 package and registry. The final pushed-ref intake result is recorded in the delivery evidence after push. No required asset or timing file is missing. Remaining work is Release dependencies and the explicitly limited microphone/manual playback scope above.
+
+Pushed asset commit: 2d979af592cbab55365f4bcfc33010bebd80de74. Package intake on origin/codex/l428-complete-package: PASS; 5 images, 10 audio files, canonical Stage 4, no blocking package-status defects. Final evidence-only tip is rechecked after push.
