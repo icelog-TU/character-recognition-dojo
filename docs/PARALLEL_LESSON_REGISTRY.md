@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L431 | 由 | ready-blocked-by-dependency | Production A (Remote) | codex/l431-complete-package | L426輪; L427員; L428自; L429己; L430主; ordered L421-L430; R051/R052 after L420 | 輪員自己主 | curriculum-workflow/lesson-requests/L431.json; curriculum-workflow/generated/L431-generation-packet.md; curriculum-workflow/drafts/L431-draft.json | curriculum-workflow/audio-inbox/L431/; public/assets/lessons/L431/ | dependency-blocked-asset-complete;5 WebP,10 M4A,9 timing records;technical checks PASS;each image style-lock/cast PASS. Base f4bc071d L420教. Ordered L421-L430 and R051/R052 after420 coverage391-420 remain Release blockers. Browser recording limitation in packet. Teacher subjective review post-merge. |
+| L431 | 由 | ready-blocked-by-dependency | Production A (Remote) | codex/l431-complete-package @ 63599025 (asset commit) | L426輪; L427員; L428自; L429己; L430主; ordered L421-L430; R051/R052 after L420 | 輪員自己主 | curriculum-workflow/lesson-requests/L431.json; curriculum-workflow/generated/L431-generation-packet.md; curriculum-workflow/drafts/L431-draft.json | curriculum-workflow/audio-inbox/L431/; public/assets/lessons/L431/ | dependency-blocked-asset-complete;5 WebP,10 M4A,9 timing records;technical checks PASS;each image style-lock/cast PASS. Base f4bc071d L420教. Ordered L421-L430 and R051/R052 after420 coverage391-420 remain Release blockers. Browser recording limitation in packet. Teacher subjective review post-merge. |
 
 ## Status Values
 
