@@ -10,7 +10,8 @@
     "productionAssets": "PASS using pair fixture",
     "assetFormats": "PASS strict, zero warnings",
     "timings": "PASS; sentence and teach fragments: counts match, nonoverlap,80–900ms, final tail≤300ms.",
-    "sharedState": "Production JSON and alignment script restored byte-for-byte; no planner/ledger integration."
+    "sharedState": "Production JSON and alignment script restored byte-for-byte; no planner/ledger integration.",
+    "verify": "Skipped: pair intentionally absent from production JSON; full base-plus-pair curriculum validation and isolated pair asset checks passed. Release owns integration and full release verify."
   },
   "browserQA": {
     "viewport": "390x844 (375px content excluding scrollbar)",
@@ -215,5 +216,11 @@
   "release": "Release owns integration in order L420→R051→R052→L421; L420 prerequisite already merged. No unmerged character dependencies.",
   "reviewURL": "https://icelog-tu.github.io/character-recognition-dojo/lesson-asset-review.html?unit=R052&ref=main",
   "reviewURLAvailability": "Usable after Release merges and deploys",
-  "repairStatusCommand": "npm run asset:review-status"
+  "repairStatusCommand": "npm run asset:review-status",
+  "remoteIntake": {
+    "ref": "origin/codex/r051-r052-complete-package",
+    "verifiedAssetCommit": "2f17d38ce48de755531246f51c185e3380db0454",
+    "strict": true,
+    "result": "PASS"
+  }
 }
