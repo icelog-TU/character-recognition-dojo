@@ -12,13 +12,13 @@ The purpose is to keep the sequence visible when the course grows to 600-700 cha
 
 ## Current Character State
 
-Characters taught after Lesson 407:
+Characters taught after Lesson 408:
 
-`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交通往經已近接送連傳相信寫字名第念號數報頁碼翻印單雙選或者勇強算弱越加減`
+`一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交通往經已近接送連傳相信寫字名第念號數報頁碼翻印單雙選或者勇強算弱越加減法`
 
 Recent review pool for the next lesson:
 
-`減 加 越 弱 算 強 勇 者 或 選 雙 單 印 翻 碼 頁`
+`法 減 加 越 弱 算 強 勇 者 或 選 雙 單 印 翻 碼`
 
 ## Visual Continuity Ledger
 
@@ -575,6 +575,7 @@ Note: R001-R004 have been migrated to the current 15-lesson review schedule. R00
 | L405 | 越 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交通往經已近接送連傳相信寫字名第念號數報頁碼翻印單雙選或者勇強算弱越 | 勇者越來越強，怪物不敢來。 / 太陽下山，光越來越弱。 / 就算身體弱，也能下棋。 / 爸爸心算很強，一下就算好了。 / 小狗越過木頭，跑到我面前。 | 弱 算 強 勇 者 | Source e5bc12c23b5db73bbe09a4fd59a321fed9e93ed8. Strict intake passed; preceding lessons and required review milestones satisfied. Canonical Stage 4 and three-choice G03. Approved image exceptions and QA scope retained; teacher review post-main. |
 | L406 | 加 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交通往經已近接送連傳相信寫字名第念號數報頁碼翻印單雙選或者勇強算弱越加 | 火越來越弱，再加些木頭。 / 把錢加起來，算一算夠不夠？ / 弱小的勇者，也能變強。 / 今天有客人，媽媽多加一道菜。 / 水太熱，加一點冷水吧。 | 越 弱 算 強 勇 | Source 28c92a857ad341d0995a35b8220b7547c72527cd. Strict intake passed; preceding lessons and required review milestones satisfied. Canonical Stage 4 and three-choice G03. Approved image exceptions and QA scope retained; teacher review post-main. |
 | L407 | 減 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交通往經已近接送連傳相信寫字名第念號數報頁碼翻印單雙選或者勇強算弱越加減 | 關上窗，風聲就減弱了。 / 書越來越多，家裡空間減少了。 / 三減二，再加一，算算看。 / 寫字時，下筆要有強有弱。 / 天冷了，睡前多加一床被子。 | 加 越 弱 算 強 | Source 7e8334280ef487e1d1b6b5baa1d3c8f2407c4c06. Strict intake passed; preceding lessons and required review milestones satisfied. Canonical Stage 4 and three-choice G03. Approved image exceptions and QA scope retained; teacher review post-main. |
+| L408 | 法 | 一二三人個大的小手我有山上下你水在高很家和隻鳥孩指看女飛男門前後也是不到走他沒裡兩狗都爸媽愛書可會這吃做好樣要更邊多少比來起去坐站開左著拿包花朵了畫出學路誰校問找同帶筆借那本給紙心放把桌子盒掉壞眼用鏡鼻臉紅圓太難得過分幾點玩打球棒頭帽草地面外空天雨雲黑白棋鞋穿戴衣脫氣套熱冷喝飯菜老卻麼什為以怎所房間時還燈關窗車等再風吹樹動葉綠滿掃擦先洗又髒亂回就快事跑馬停叫聲聽見說師話課像想真力能火發電生明光亮陽月影長星行道流河從進早晚海船魚游泳池身濕乾服褲換改錯知認新舊半只剩夠錢買貴賣店場市夜具工作忙幫急腳步跳床搬重沙張椅累死睡倒病假才剛裝養休息久體神精變差緊卡住蓋橋座木積堆洞破口傷皮痛受忍耐敢當然怕哭被嚇罵對爬蟲條泥土種澆照顧忘每次記完收彩色粉哪些最西東方圖向線直轉右角落因原別特處理整齊全今們年跟常請嗎客讓廳餐位正排雞公園物怪奇驚喜歡笑但吧謝感情朋友親交通往經已近接送連傳相信寫字名第念號數報頁碼翻印單雙選或者勇強算弱越加減法 | 加法和減法，我都會算了。 / 我有個想法，加蓋一座橋吧。 / 用手指算減法，是個好方法。 / 越爬越高，我有一點怕。 / 小狗身體弱，媽媽用心照顧。 | 減 加 越 弱 算 | Source 42b17d4d47c4fdc84517725898b3131ff471e4ba. Strict intake passed; predecessors and R049/R050 satisfied. Canonical Stage 4, three-choice G03, no readable image text exceptions. Source browser-tooling fallback retained; teacher review post-main. |
 | R043 | review module | same as L360 | 這個角落特別髒。 / 今年天氣特別熱，原因不明。 / 彩色筆請別到處亂放。 / 把房間整理好，全都放整齊。 / 我們常跟爸爸去公園。 | 落 因 原 別 特 處 理 整 齊 全 今 們 年 跟 常 請 公 園 | 複習四十三 after L360. R043/R044 cover 30/30 introduced characters from L331-L360; no new characters. Rescue source 6e0ef7639778b6d4203405b60a619a66b4a77eff. Intake, audio hash/decode/timing and strict format checks passed. Teacher asset review is post-main. G03 repair: added two milestone-safe single-Han distractors; three choices, one correct answer; source package synchronized. |
 | R044 | review module | same as L360 | 客人到了，請讓客人進客廳。 / 這家餐廳正好有位子。 / 公園裡有一排長椅。 / 小雞也是動物，對嗎？ / 小月對怪物玩具很好奇。 | 請 嗎 客 讓 廳 餐 位 正 排 雞 公 園 物 怪 奇 | 複習四十四 after L360. R043/R044 cover 30/30 introduced characters from L331-L360; no new characters. Rescue source 6e0ef7639778b6d4203405b60a619a66b4a77eff. Intake, audio hash/decode/timing and strict format checks passed. Teacher asset review is post-main. G03 repair: added two milestone-safe single-Han distractors; three choices, one correct answer; source package synchronized. |
 | R045 | review module | same as L375 | 餐廳客滿，請在門口排好。 / 公車上有位子，讓你坐吧。 / 菜園裡的公雞正在吃菜。 / 書裡的怪物長得真奇怪。 / 收到想要的小車，我又驚又喜。 | 請 嗎 客 讓 廳 餐 位 正 排 雞 公 園 物 怪 奇 驚 喜 歡 笑 但 吧 謝 感 情 朋 友 親 交 通 往 經 | 複習四十五 after L375. Pair coverage 31/31 from L346-L375 (including both characters of L370); allowed ceiling 379 characters. Rescue source 534c85cdec635e73e6867589ca7d3486e2ee5fcc. Pair intake, official validators and strict format checks passed. G03 has three single-Han choices. Teacher asset review is post-main. |
@@ -586,7 +587,7 @@ Note: R001-R004 have been migrated to the current 15-lesson review schedule. R00
 
 ## Planned Lessons
 
-Merged curriculum is complete through L407. Review modules R001-R050 are valid for the current 15-lesson schedule through the L405 milestone. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
+Merged curriculum is complete through L408. Review modules R001-R050 are valid for the current 15-lesson schedule through the L405 milestone. Use `docs/PARALLEL_LESSON_REGISTRY.md` for not-yet-merged parallel lesson claims and provisional dependencies.
 
 Do not duplicate active parallel lesson rows here. Move information from the registry into this ledger only after a lesson is merged into `src/curriculum/sample-lessons.json`.
 
