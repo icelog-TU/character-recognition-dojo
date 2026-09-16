@@ -55,7 +55,7 @@ L416-audit.cjs PASS: allowed418, coverage, approved text/imageNotes, displayLine
 Global npm run validate:production PASS (baseline only; does not substitute for L416 local validation).
 Global npm run assets:audit PASS: 458 units, 2249 image references, 4448 audio references, zero warnings. Raw MP3 sources remain in ignored audio-inbox/L416 per AI setup SOP; final processed audio is committed.
 Shared-state npm run verify intentionally skipped: dependency-blocked package has no shipping L416 integration; Release owns integration/verify.
-Remote package-intake is the final handoff gate after commit/push; report exact result and immutable SHA externally.
+Remote package-intake passed on the pushed package. The initial warning about missing recognized Browser QA wording was addressed in request/draft/packet, retaining the recording limitation. Re-run against the final pushed tip is required and reported in the final handoff.
 
 ## Review links
 Pre-merge package preview, not final main review queue:
