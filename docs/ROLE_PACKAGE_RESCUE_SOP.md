@@ -92,7 +92,14 @@ Use `r###-r###-package-rescue` for review pairs. If the branch already exists, f
 
 ## Rescue Workflow
 
-1. Run `npm run curriculum:package-intake -- --unit L### --ref HEAD` when the command supports the unit. For review pairs, run the appropriate package-intake command or document why the current tool cannot target the pair directly.
+1. Run package intake for the package type:
+
+```bash
+npm run curriculum:package-intake -- --unit L### --ref HEAD
+npm run curriculum:package-intake -- --unit R### --ref HEAD
+```
+
+For a two-module review pair, run the `R###` intake once per review module on the same rescue branch.
 2. Read the request, generation packet, draft, registry row, and relevant assets.
 3. Fix only the package-local defects needed to make the package acceptable to Release.
 4. If image or audio assets are regenerated, follow `docs/CURRICULUM_PRODUCTION_SOP.md` and `docs/LESSON_VISUAL_CAST_SOP.md`; update timings after audio changes.
@@ -109,10 +116,13 @@ Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`
 npm run tools:check
 npm run validate:production
 npm run curriculum:package-intake -- --unit L### --ref HEAD
+npm run curriculum:package-intake -- --unit R### --ref HEAD
 git diff --stat
 git diff --name-only
 git diff --check
 ```
+
+Run the `L###` or `R###` intake command that matches the assigned package; for a review pair, run both `R###` ids.
 
 Run `npm run verify` only when the rescue branch has a meaningful current production JSON state for that command. For dependency-blocked packages that intentionally leave shared-state integration to Release, report `verify skipped: dependency-blocked, shared state left for Release`.
 

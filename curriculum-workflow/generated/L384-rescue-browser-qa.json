@@ -1,0 +1,30 @@
+{
+  "unit": "L384",
+  "method": "Chrome via CUA; local Vite fixture reads owned drafts in memory, shipping JSON unchanged. Explicit 390x844 / 820x844 iframe viewports, body widths 375/805 after scrollbars. Test state unlocks requested stage.",
+  "G01": "Correct target click accepted; next-question state observed",
+  "G02": "Dedicated prefix, maintained synthetic pointer press, test microphone stream, MediaRecorder and stitched replay completed; next-question button visible",
+  "G03": {
+    "phone": "PASS: three options and sentence rows within bounds",
+    "tablet": "PASS: sentence rows within bounds"
+  },
+  "G04": "Correct single-Han sequence accepted",
+  "G05": "Reveal identifies answer; restart and correct choice reaches reward",
+  "reward": {
+    "phone": "Buttons fully visible, next top 471-472px bottom 530-531px, rest top 540px bottom 598px, clear of floating bar; next lesson click confirmed",
+    "destination": "L385"
+  },
+  "audio": {
+    "uniqueFiles": 10,
+    "controls": 11,
+    "combinedRun": "44/44 controls reached ended, PASS; includes four repeated G05 correct sentence sources",
+    "claim": "Browser decode/playback behavior, not human subjective listening"
+  },
+  "stage3": "Five approved image/sentence controls clicked; playback state entered for each, completed 句子都聽完了 state observed",
+  "limitations": [
+    "No physical device microphone test; synthetic oscillator supplies MediaStream for automated recording flow",
+    "Stage1/2 source behavior unchanged; not included in this rescue browser rerun",
+    "Tablet reward navigation not separately exercised; phone navigation and tablet sentence layout verified"
+  ],
+  "uiSource": "Rescue CSS now exactly matches latest origin/main 2169c169d62e6889534bbfd3de67c62f9d985684",
+  "toolNotes": "Occasional iframe semantic click timeout; refreshed AX and operated visible button successfully, not treated as app failure"
+}

@@ -1,0 +1,146 @@
+{
+  "unit": "L383",
+  "packageStatus": "asset-complete-package",
+  "coverage": {
+    "信": 4,
+    "相": 2,
+    "傳": 2,
+    "連": 2,
+    "送": 1,
+    "接": 1
+  },
+  "sentences": [
+    {
+      "id": "L383-S01",
+      "han": 8,
+      "timingCount": 8,
+      "tailGapMs": 282
+    },
+    {
+      "id": "L383-S02",
+      "han": 9,
+      "timingCount": 9,
+      "tailGapMs": 288
+    },
+    {
+      "id": "L383-S03",
+      "han": 11,
+      "timingCount": 11,
+      "tailGapMs": 275
+    },
+    {
+      "id": "L383-S04",
+      "han": 9,
+      "timingCount": 9,
+      "tailGapMs": 267
+    },
+    {
+      "id": "L383-S05",
+      "han": 11,
+      "timingCount": 11,
+      "tailGapMs": 279
+    }
+  ],
+  "games": [
+    {
+      "id": "L383-G01",
+      "target": "信",
+      "index": 2,
+      "options": 0
+    },
+    {
+      "id": "L383-G02",
+      "target": "信",
+      "index": 8,
+      "options": 0
+    },
+    {
+      "id": "L383-G03",
+      "target": "信",
+      "index": 6,
+      "options": 3
+    },
+    {
+      "id": "L383-G04",
+      "target": "傳",
+      "index": 2,
+      "options": 3
+    },
+    {
+      "id": "L383-G05",
+      "target": "連",
+      "index": 4,
+      "options": 3
+    }
+  ],
+  "media": [
+    {
+      "file": "L383-S01.webp",
+      "bytes": 212892
+    },
+    {
+      "file": "L383-S02.webp",
+      "bytes": 203758
+    },
+    {
+      "file": "L383-S03.webp",
+      "bytes": 155396
+    },
+    {
+      "file": "L383-S04.webp",
+      "bytes": 135410
+    },
+    {
+      "file": "L383-S05.webp",
+      "bytes": 140422
+    },
+    {
+      "file": "char-u4fe1.m4a",
+      "bytes": 20491,
+      "durationMs": 1137
+    },
+    {
+      "file": "L383-G02-prefix.m4a",
+      "bytes": 32503,
+      "durationMs": 2577
+    },
+    {
+      "file": "L383-G05-wrong-one.m4a",
+      "bytes": 43830,
+      "durationMs": 3459
+    },
+    {
+      "file": "L383-G05-wrong-two.m4a",
+      "bytes": 44509,
+      "durationMs": 3552
+    },
+    {
+      "file": "L383-S01.m4a",
+      "bytes": 28905,
+      "durationMs": 2322
+    },
+    {
+      "file": "L383-S02.m4a",
+      "bytes": 37928,
+      "durationMs": 3088
+    },
+    {
+      "file": "L383-S03.m4a",
+      "bytes": 46330,
+      "durationMs": 3715
+    },
+    {
+      "file": "L383-S04.m4a",
+      "bytes": 48431,
+      "durationMs": 3367
+    },
+    {
+      "file": "L383-S05.m4a",
+      "bytes": 58377,
+      "durationMs": 4319
+    }
+  ],
+  "totalBytes": 1209182,
+  "mechanical": "PASS",
+  "fullAcceptance": "asset-complete-package"
+}

@@ -108,7 +108,10 @@ Run the package intake gate on the package branch or exact SHA before transplant
 
 ```bash
 npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complete-package
+npm run curriculum:package-intake -- --unit R### --ref origin/codex/r###-r###-complete-package
 ```
+
+For a two-module review pair, run the `R###` intake once for each review module on the shared pair branch before integrating either module.
 
 If the gate fails, stop intake and report the exact errors. Do not trust a `*-complete-package` branch name when the draft, packet, registry row, or notes still say `partial-package`, `needs-rework`, `Do not integrate`, `NOT COMPLETED`, `FAIL`, or `unresolved`. If a historical pre-gate package needs a Supervisor exception, record that exception explicitly in the release notes instead of silently merging it.
 

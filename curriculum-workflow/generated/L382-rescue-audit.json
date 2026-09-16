@@ -1,0 +1,20 @@
+{
+  "unit": "L382",
+  "source": "11ddddfd1bbf50b1d6fb38e885cb1e7b08f1d089",
+  "status": "PASS",
+  "assetBytes": 1317232,
+  "audioFiles": 10,
+  "timingFiles": 9,
+  "checks": [
+    "approved text preserved",
+    "coverage allowed boundary",
+    "Stage4 indexes/options/fragment text",
+    "80-900ms timings/no overlap",
+    "final tail <=300ms",
+    "volume/G05 spread",
+    "AAC decode/format",
+    "original speech packets preserved except declared regeneration",
+    "request/packet/draft parity",
+    "release shared state unchanged"
+  ]
+}

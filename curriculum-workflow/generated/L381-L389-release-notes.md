@@ -1,0 +1,23 @@
+# L381-L389 Release
+
+- Base main: 2169c169d62e6889534bbfd3de67c62f9d985684.
+- Contiguous L381-L389; prerequisite R045/R046 retained. L390 and later excluded.
+- L381: origin/codex/l381-complete-package @ db30993891c198e1a3e8c501f4f14fc1f0d6c176
+- L382: origin/codex/l382-package-rescue @ 533ee5da59846ff6738a2100b3bab3358eb1d300
+- L383: origin/codex/l383-complete-package @ 1e850370b4f8ff6d69b98ff0f4197491a1da6e60
+- L384: origin/codex/l384-package-rescue @ 05fa85173ce9c87f43af29c7b394fff4e4ec0606
+- L385: origin/codex/l385-package-rescue @ f9bdcd486a8704fd07c7cc280c60c68a50ad940a
+- L386: origin/codex/l386-package-rescue @ 44612de119a28a07a0be4dece204480d93321c53
+- L387: origin/codex/l387-complete-package @ 970cddcc1fe5fd8dbdb3e8b4c4cfda5fe7c285a4
+- L388: origin/codex/l388-complete-package @ 75e4677e24976c4f917b4582f52332e67531ab6d
+- L389: origin/codex/l389-complete-package @ 4f53c17840165cc07e67a6cdae909a34750b8152
+- All nine immutable source tips passed strict package intake. Only lesson-local files transplanted; no old shared curriculum, registry, tooling or SOP changes imported. Rescue CSS already matches main.
+- Registry has no active rows for these units. Production browser fallback limitations remain documented in the original package QA; subjective teacher review is post-main.
+- L387 teacher-approved CAT/DOG and HELLO image text exceptions retained; timing review exceptions retained in source QA. No approved text or assets altered by Release.
+- npm run verify PASS: curriculum state, curriculum validation, production asset validation, lint and build. Existing advisory target-choice and bundle-size warnings remain. Imported L385/L388 generation helpers add four duplicate-key lint warnings (equivalent mapping values); no lint errors. No shared tool changes included.
+- Full assets:audit PASS: 435 units, 2134 image references, 4223 audio references, zero warnings/errors.
+- Existing L001-L380 and all 46 review records unchanged. Every imported production shipping field equals its source draft. Four rescue packages also passed request/packet/draft exact parity and final audio SHA256/evidence checks.
+- Headless Chrome functional smoke PASS for every L381-L389 at 390x844 and 820x1180 (18 cases): seeded local prerequisite progress, actual G03 three-option selection, G04 ordering, G05 answer, reward claim, saved completion and 30 coins/12 stars. No page errors. Next and Rest controls visible in the viewport above floating playback controls; L389 correctly shows disabled end-of-course Next. No account/cloud state changed. This is not a new subjective audio/image or physical microphone review.
+- Playwright initially waited on the animated Start button; using a coordinate click without its stability wait recovered the tooling timeout. No app changes needed.
+- git diff --check PASS. Registry already contains no active merged-unit rows, so no registry edit needed.
+- Post-main teacher asset review: https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main

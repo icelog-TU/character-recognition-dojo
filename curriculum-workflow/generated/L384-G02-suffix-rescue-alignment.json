@@ -1,0 +1,37 @@
+{
+  "model": "whisper-1",
+  "prompt": "下來傳給爸爸",
+  "offsetMs": 500,
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 3.6700000762939453,
+    "text": "下來傳給爸爸",
+    "words": [
+      {
+        "word": "下來",
+        "start": 0,
+        "end": 1.1799999475479126
+      },
+      {
+        "word": "傳",
+        "start": 1.1799999475479126,
+        "end": 1.8600000143051147
+      },
+      {
+        "word": "給",
+        "start": 1.8600000143051147,
+        "end": 2.140000104904175
+      },
+      {
+        "word": "爸爸",
+        "start": 2.140000104904175,
+        "end": 2.559999942779541
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 4
+    }
+  }
+}

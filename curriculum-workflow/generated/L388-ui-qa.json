@@ -1,0 +1,53 @@
+{
+  "unit": "L388",
+  "developmentWarning": "Vite logged React setState-in-render warning: FindManyChallenge updates LessonPanel. Stage 2 still accepted all three targets and completed. No app code changed; Release should track this development warning separately.",
+  "pushedIntake": "PASS against 6c0a15137cbdbe0824880ee2a325c4ec35baf611; rerun on final pushed tip.",
+  "base": "7fcef325b37f13fc68fe950bffd7fea8e9db6108",
+  "latestMain": "b313ded8ddae7844e4af667191c4bf2b0737ab59",
+  "viewportRequests": [
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 768,
+      "height": 1024
+    }
+  ],
+  "fixture": "Isolated Vite draft preview; provisional metadata and disposable progress only. No production JSON or cloud progress edits.",
+  "stage1": "PASS: target/zhuyin visible, standalone playback triggered and completed.",
+  "stage2": "PASS: three 念 cards plus three old-character distractors; all three accepted, 3/3 complete.",
+  "stage3": "PASS: five sentence buttons triggered playback and UI reached sentence-stage completion. Phone screenshots have readable nonoverlapping text.",
+  "stage4": "PASS: canonical mode order, G01 target, G03 three options, G04 shuffled single-Han cards; G05 all three first-click playbacks returned to idle, answer reveal does not auto-complete.",
+  "g02": "Prefix playback reaches 念 and waits for held recording. Sustained microphone recording and stitched recorded replay TOOL_LIMITED: exposed API lacks controlled-duration pointer hold. Used visible skip only to test subsequent games; no claim of recording PASS.",
+  "tooling": "One Playwright click timed out in Runtime.evaluate; AX click recovered. No substitute TTS or synthetic user recording.",
+  "completion": "PASS: after reward, red 下一課 and white 回首頁休息 visible on both requested viewport sizes. Test skipped G02 recording, so this is navigation smoke evidence, not full recording QA.",
+  "subjectiveReview": "Teacher listening and image approval remain post-merge; no teacher pre-merge PASS claimed.",
+  "images": {
+    "S01": {
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "referenceComparison": "Final WebP opened individually and in side-by-side montage against all L058/refined/family anchors; Xiaoguang compared with dedicated reference."
+    },
+    "S02": {
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "referenceComparison": "Final WebP opened individually and in side-by-side montage against all L058/refined/family anchors; Xiaoguang compared with dedicated reference."
+    },
+    "S03": {
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "referenceComparison": "Final WebP opened individually and in side-by-side montage against all L058/refined/family anchors; Xiaoguang compared with dedicated reference."
+    },
+    "S04": {
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "referenceComparison": "Final WebP opened individually and in side-by-side montage against all L058/refined/family anchors; Xiaoguang compared with dedicated reference."
+    },
+    "S05": {
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "referenceComparison": "Final WebP opened individually and in side-by-side montage against all L058/refined/family anchors; Xiaoguang compared with dedicated reference."
+    }
+  }
+}
