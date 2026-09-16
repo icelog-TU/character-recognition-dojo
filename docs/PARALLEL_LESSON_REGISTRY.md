@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L396 | 單 | claimed | Production E | codex/l396-complete-package | L386, L389, L391, L392, L393, L394, L395 | 名 號 報 頁 碼 翻 印 (名/號 now in main) | curriculum-workflow/lesson-requests/L396.json; curriculum-workflow/generated/L396-generation-packet.md; curriculum-workflow/drafts/L396-draft.json | public/assets/lessons/L396/; curriculum-workflow/audio-inbox/L396/ | Base 2be6834d, L389. Teacher-approved numbers only: S02 00-0000-0000 / 00-0000-0008; S03 page 8. Release owns ordered lessons and R047/R048. |
+| L396 | 單 | dependency-blocked-asset-complete | Production E | codex/l396-complete-package | L386, L389, L391, L392, L393, L394, L395 | 名 號 報 頁 碼 翻 印 (名/號 now in main) | curriculum-workflow/lesson-requests/L396.json; curriculum-workflow/generated/L396-generation-packet.md; curriculum-workflow/drafts/L396-draft.json | public/assets/lessons/L396/; curriculum-workflow/audio-inbox/L396/ | Base 2be6834d, L389. Five WebP / ten M4A plus all timings; technical gates PASS; Browser QA tooling fallback documented. Teacher-approved numbers only: S02 00-0000-0000 / 00-0000-0008; S03 page 8. Release owns ordered lessons and R047/R048. |
 
 ## Status Values
 

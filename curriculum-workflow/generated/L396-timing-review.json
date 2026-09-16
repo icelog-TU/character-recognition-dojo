@@ -1,0 +1,248 @@
+[
+  {
+    "id": "L396-S01",
+    "oldEndMs": 4280,
+    "newEndMs": 4358,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L396-S02",
+    "oldEndMs": 3160,
+    "newEndMs": 3154,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L396-S03",
+    "oldEndMs": 2640,
+    "newEndMs": 2728,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L396-S04",
+    "oldEndMs": 3200,
+    "newEndMs": 3204,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L396-S05",
+    "oldEndMs": 3020,
+    "newEndMs": 3061,
+    "reason": "End of measured final syllable decay at -45 dB; retain 200 ms trailing silence."
+  },
+  {
+    "id": "L396-S02",
+    "original": [
+      {
+        "charIndex": 0,
+        "startMs": 0,
+        "endMs": 320
+      },
+      {
+        "charIndex": 1,
+        "startMs": 320,
+        "endMs": 640
+      },
+      {
+        "charIndex": 2,
+        "startMs": 640,
+        "endMs": 820
+      },
+      {
+        "charIndex": 3,
+        "startMs": 820,
+        "endMs": 1220
+      },
+      {
+        "charIndex": 4,
+        "startMs": 1220,
+        "endMs": 1680
+      },
+      {
+        "charIndex": 5,
+        "startMs": 1680,
+        "endMs": 1740
+      },
+      {
+        "charIndex": 6,
+        "startMs": 1740,
+        "endMs": 1980
+      },
+      {
+        "charIndex": 7,
+        "startMs": 1980,
+        "endMs": 2540
+      },
+      {
+        "charIndex": 8,
+        "startMs": 2540,
+        "endMs": 2880
+      },
+      {
+        "charIndex": 9,
+        "startMs": 2880,
+        "endMs": 3154
+      }
+    ],
+    "corrected": [
+      {
+        "charIndex": 0,
+        "startMs": 0,
+        "endMs": 320
+      },
+      {
+        "charIndex": 1,
+        "startMs": 320,
+        "endMs": 640
+      },
+      {
+        "charIndex": 2,
+        "startMs": 640,
+        "endMs": 820
+      },
+      {
+        "charIndex": 3,
+        "startMs": 820,
+        "endMs": 1220
+      },
+      {
+        "charIndex": 4,
+        "startMs": 1220,
+        "endMs": 1380
+      },
+      {
+        "charIndex": 5,
+        "startMs": 1380,
+        "endMs": 1740
+      },
+      {
+        "charIndex": 6,
+        "startMs": 1740,
+        "endMs": 1980
+      },
+      {
+        "charIndex": 7,
+        "startMs": 1980,
+        "endMs": 2540
+      },
+      {
+        "charIndex": 8,
+        "startMs": 2540,
+        "endMs": 2880
+      },
+      {
+        "charIndex": 9,
+        "startMs": 2880,
+        "endMs": 3154
+      }
+    ],
+    "reason": "20 ms RMS envelope: 的 voiced 1240-1360 ms, trough 1380-1480 ms before 號 vowel at1500 ms. Move boundary from1680 to1380 ms; retain AI boundary1740 for 碼."
+  },
+  {
+    "id": "L396-S05",
+    "original": [
+      {
+        "charIndex": 0,
+        "startMs": 0,
+        "endMs": 270
+      },
+      {
+        "charIndex": 1,
+        "startMs": 270,
+        "endMs": 540
+      },
+      {
+        "charIndex": 2,
+        "startMs": 1340,
+        "endMs": 1341
+      },
+      {
+        "charIndex": 3,
+        "startMs": 1340,
+        "endMs": 1580
+      },
+      {
+        "charIndex": 4,
+        "startMs": 1580,
+        "endMs": 1880
+      },
+      {
+        "charIndex": 5,
+        "startMs": 1880,
+        "endMs": 2140
+      },
+      {
+        "charIndex": 6,
+        "startMs": 2140,
+        "endMs": 2340
+      },
+      {
+        "charIndex": 7,
+        "startMs": 2340,
+        "endMs": 2560
+      },
+      {
+        "charIndex": 8,
+        "startMs": 2560,
+        "endMs": 2860
+      },
+      {
+        "charIndex": 9,
+        "startMs": 2860,
+        "endMs": 3061
+      }
+    ],
+    "corrected": [
+      {
+        "charIndex": 0,
+        "startMs": 0,
+        "endMs": 270
+      },
+      {
+        "charIndex": 1,
+        "startMs": 270,
+        "endMs": 540
+      },
+      {
+        "charIndex": 2,
+        "startMs": 980,
+        "endMs": 1280
+      },
+      {
+        "charIndex": 3,
+        "startMs": 1280,
+        "endMs": 1580
+      },
+      {
+        "charIndex": 4,
+        "startMs": 1580,
+        "endMs": 1880
+      },
+      {
+        "charIndex": 5,
+        "startMs": 1880,
+        "endMs": 2140
+      },
+      {
+        "charIndex": 6,
+        "startMs": 2140,
+        "endMs": 2340
+      },
+      {
+        "charIndex": 7,
+        "startMs": 2340,
+        "endMs": 2560
+      },
+      {
+        "charIndex": 8,
+        "startMs": 2560,
+        "endMs": 2860
+      },
+      {
+        "charIndex": 9,
+        "startMs": 2860,
+        "endMs": 3061
+      }
+    ],
+    "reason": "20 ms RMS envelope: silence after爸爸 ends near980 ms, 單 vowel onset980 ms peaks1020 ms and decays to1280 ms; 手 begins with frication1280-1380 ms. Replace AI 1 ms segment with acoustic span."
+  }
+]
