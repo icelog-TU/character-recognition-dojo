@@ -1,0 +1,185 @@
+{
+  "unit": "L434",
+  "audio": [
+    {
+      "filename": "char-u4e92.m4a",
+      "bytes": 14723,
+      "durationMs": 1718,
+      "meanDb": -19,
+      "maxDb": -2.5,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L434-G02-prefix.m4a",
+      "bytes": 23162,
+      "durationMs": 1927,
+      "meanDb": -19,
+      "maxDb": -3.2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L434-G02-suffix.m4a",
+      "bytes": 28807,
+      "durationMs": 2809,
+      "meanDb": -19,
+      "maxDb": -2.3,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L434-G05-wrong-one.m4a",
+      "bytes": 74922,
+      "durationMs": 6313,
+      "meanDb": -18.3,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L434-G05-wrong-two.m4a",
+      "bytes": 53164,
+      "durationMs": 4600,
+      "meanDb": -18.5,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L434-S01.m4a",
+      "bytes": 41893,
+      "durationMs": 4584,
+      "meanDb": -19.2,
+      "maxDb": -3,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L434-S02.m4a",
+      "bytes": 43036,
+      "durationMs": 4995,
+      "meanDb": -19.9,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L434-S03.m4a",
+      "bytes": 55684,
+      "durationMs": 4592,
+      "meanDb": -18.2,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L434-S04.m4a",
+      "bytes": 42037,
+      "durationMs": 3674,
+      "meanDb": -19.1,
+      "maxDb": -2.8,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L434-S05.m4a",
+      "bytes": 46294,
+      "durationMs": 4008,
+      "meanDb": -18.5,
+      "maxDb": -4,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "filename": "L434-S01.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 222916,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L434-S02.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 189660,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L434-S03.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 204730,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L434-S04.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 201424,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L434-S05.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 220282,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "optionMeanVolumeSpreadDb": 0.8,
+  "totalBytes": 1462734,
+  "sentenceTimingBounds": "PASS",
+  "allowedCharacterAndStage4Audit": "PASS",
+  "browserQA": {
+    "status": "completed-with-tooling-fallback",
+    "viewport": "390x844",
+    "url": "http://127.0.0.1:14234/character-recognition-dojo/",
+    "tool": "Codex in-app browser via cua_repl",
+    "observed": [
+      "互 ㄏㄨˋ character card playback completes",
+      "All five Stage 3 sentence playbacks completed, active highlights and phone line breaks observed on every sentence; completion message appeared",
+      "G01 correct target 互 circle feedback and Next",
+      "G02 dedicated prefix reaches stop state and red target 互 with hold-to-record prompt",
+      "G03 correct 互 card fills S05 index2 and Next",
+      "G04 ordered 來動手做 cards fill S03 slots and Next",
+      "G05 correctly displays S04; all three reader buttons transition playing to idle",
+      "G05 wrong selection gives red feedback; correct fox selection gives green feedback and reward button"
+    ],
+    "limitations": [
+      "Browser controls cannot sustain G02 long press; live human recording and stitched replay untested. Skip did not advance, so G03-G05 tested in isolated subset with separate preview id.",
+      "Subjective listening, perceived pronunciation and audio/highlight synchronization are not claimed as human QA PASS."
+    ],
+    "fixture": "Full L434 draft for character/Stage3/G01/G02; isolated G03-G05 subset for later games. Temporary shared JSON restored byte-for-byte.",
+    "cleanup": "Preview server stopped, browser viewport reset and temporary tab closed."
+  },
+  "allNineAlignmentTimingBounds": "PASS",
+  "assetFormatAudit": "PASS, 0 warnings"
+}

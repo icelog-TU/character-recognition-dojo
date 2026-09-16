@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L434 | 互 / normal single-character lesson | claimed | Production D | codex/l434-complete-package | L428,L429,L430,L431,L432,L433; ordered Release through L433; R051/R052 after L420 (L391-L420) | 自己主由意願 | curriculum-workflow/lesson-requests/L434.json; curriculum-workflow/generated/L434-generation-packet.md; curriculum-workflow/drafts/L434-draft.json | public/assets/lessons/L434/; curriculum-workflow/audio-inbox/L434/ | Teacher-approved handoff; base f4bc071d L420 教, 424 learned + 6 provisional + 互 = 431 allowed. Production package only. |
+| L434 | 互 / normal single-character lesson | dependency-blocked-asset-complete | Production D | codex/l434-complete-package | L428,L429,L430,L431,L432,L433; ordered Release through L433; R051/R052 after L420 (L391-L420) | 自己主由意願 | curriculum-workflow/lesson-requests/L434.json; curriculum-workflow/generated/L434-generation-packet.md; curriculum-workflow/drafts/L434-draft.json | public/assets/lessons/L434/; curriculum-workflow/audio-inbox/L434/ | Teacher-approved handoff; base f4bc071d L420 教, 424 learned + 6 provisional + 互 = 431 allowed. Five WebP, ten M4A, final timings complete; G02 recording/replay untested (tooling fallback). Production package only. |
 
 ## Status Values
 
