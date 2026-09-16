@@ -3,6 +3,8 @@
 Status: dependency-blocked-asset-complete
 Branch: codex/l422-complete-package
 
+Asset commit: 360ac3c1ad9037ba4f5b73e85328a7793e701dfc, pushed to origin/codex/l422-complete-package. Remote package-intake --strict: PASS, no warnings. Final tip adds this validation record and the pushed registry checkpoint. Baseline npm run validate:production: PASS. Lesson-local validate:production with the L422 draft: PASS. curriculum:audit-state: PASS with expected warning for the unmerged L422 asset directory. Shared production JSON, planner, ledger and alignment script have no diff from the branch base. Preview server is stopped. Re-run strict remote intake against final tip after this record commit.
+
 Latest main recheck: 4eec51781af66eee3b0a9b0b5afe0e0497a8d121; L415 解. Required unmerged lessons: L416-L421. Review release gate: R051/R052 after L420, covering L391-L420. Locked 425-char teacher handoff unchanged; 解 is unused.
 
 Five WebP, ten M4A, five sentence timings, two fragment timings, wrong-option transcription/timing evidence; see L422-technical-qa.json and L422-alignment.json. Standard repo audio generation, processing and AI alignment used. No audio cutting/splicing.
