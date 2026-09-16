@@ -745,3 +745,7 @@ Asset omissions: none. Release dependencies and browser scope limitations are li
   }
 ]
 ```
+
+## Pushed package intake
+
+`npm run curriculum:package-intake -- --unit L401 --ref origin/codex/l401-complete-package` PASS on asset commit 0727ccc614c421042a38c067f7db9233301c9a6a. Five images, ten audio files, canonical Stage4 order, no package-status defects. Documentation-only delivery tip is checked again after push; final handoff supplies immutable SHA and preview URL.

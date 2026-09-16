@@ -35,3 +35,7 @@ Final exported WebPs compared side by side with complete L058-S01–S05 style an
 Five sentence cards and six auxiliary players loaded. Clicking G02 suffix Play lost the inspected target. Subsequent inspection confirmed the built-in This page crashed page; access to that data URL was blocked. URL: http://localhost:5201/tools/lesson-asset-review.html?unit=L401&ref=local. Actual listening, pronunciation by ear, highlight synchronization, first-tap playback across all readers, phone recording, stitched replay and natural G02 transition were not verified. Technical gates above passed; apply docs/CURRICULUM_PRODUCTION_SOP.md “Browser automation fallback for pre-merge playback QA”. Teacher subjective review remains post-merge by default; no teacher pre-merge PASS claimed.
 
 Asset omissions: none. Release dependencies and browser scope limitations are listed above.
+
+## Pushed package intake
+
+`npm run curriculum:package-intake -- --unit L401 --ref origin/codex/l401-complete-package` PASS on asset commit 0727ccc614c421042a38c067f7db9233301c9a6a. Five images, ten audio files, canonical Stage4 order, no package-status defects. Documentation-only delivery tip is checked again after push; final handoff supplies immutable SHA and preview URL.
