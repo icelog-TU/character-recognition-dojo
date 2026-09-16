@@ -236,6 +236,36 @@ During drafting discussion, a useful editor response should include:
 
 Keep this discussion outside the final production handoff code block.
 
+## Speaking-Motivation Gate
+
+Before approving a sentence, confirm that the sentence has a reason to be said in the scene. A sentence that is made only to satisfy coverage is not finished.
+
+For each candidate sentence, the Editor should be able to answer:
+
+- Who is speaking, thinking, observing, or acting?
+- Who or what is the sentence about?
+- Why would this sentence be said now?
+- What visible scene evidence lets the child understand the sentence?
+- If the sentence makes a judgment, warning, feeling, or guess, what visible reason supports it?
+- If the sentence describes a time or state, is it clear whether the event is planned, happening now, already completed, remembered, or imagined?
+
+Reject or revise sentences that require hidden chat context to make sense. If the sentence is good only because the Editor remembers an earlier explanation, put the needed context in `imageNotes`, rewrite the sentence, or choose a different sentence.
+
+Do not keep a weak sentence only because it carries a hard-to-cover recent target. First look for a natural phrase or scene that carries that target; only accept the sentence when it works as Taiwan Mandarin and as a visible child-readable scene.
+
+## Coverage Relocation During Revision
+
+Coverage is a set-level requirement, not a reason to defend one weak sentence.
+
+When the teacher edits or rejects a sentence:
+
+1. Identify which current or previous-five target the sentence was serving.
+2. Decide whether that target can move naturally into another sentence.
+3. Rewrite around the target in a natural phrase if needed.
+4. Recalculate all coverage counts, Han counts, `spokenText`, `displayLines`, and allowed-character audit results after the change.
+
+The Editor may move a coverage target from one sentence to another when the new placement is more natural. Do not preserve an old coverage table after teacher-approved edits, and do not ask Production to resolve coverage drift.
+
 ## Full Learned-Set Scene Scan
 
 Every normal lesson must deliberately look beyond the newest few lessons. Before narrowing to five approved sentences, scan the complete `allowedChars` set for scene sources, old actions, old nouns, and old sentence patterns that can support natural uses of the new character.
@@ -400,6 +430,10 @@ For ambiguous, abstract, or role-sensitive sentences, discuss the intended image
 For recurring people and places, use `docs/LESSON_VISUAL_CAST_SOP.md` plus `docs/CURRICULUM_LEDGER.md` visual continuity descriptions. Do not redesign `我`, `你`, `他`, parents, family members, teachers, classmates, elders, passersby, or recurring homes from lesson to lesson. L058 is an image style reference only; it is not permission to copy the L058 adult woman into mother, teacher, passerby, or other unrelated roles.
 
 For every sentence image with people, `imageNotes` must name the intended human role identity, such as protagonist girl, protagonist mother, protagonist father, older brother, teacher, principal, godmother, worker, shop owner or clerk, classmate, elder, passerby, `你` family member, or `他` family member. Avoid vague labels such as "a woman", "an adult", "a person", "a big person", "a classmate", or "a passerby" when the role should have continuity or clear social identity.
+
+`imageNotes` must also state the scene state when timing could be ambiguous: planning, preparing, happening now, completed result, remembered event, imagined scene, or spoken conversation. This prevents Production from drawing the wrong moment, such as a finished result when the sentence is about preparing, or a real scene when the sentence is only imagined.
+
+For object-heavy scenes, include enough concrete detail to prevent the image from becoming generic: object count, object placement, who touches or points to what, and which item should be visually emphasized. If a common misread must be avoided, state it directly in `imageNotes`.
 
 If a sentence needs context to be natural, put that context in `imageNotes` or rewrite the sentence. Do not keep a sentence that is only understandable with hidden chat context.
 

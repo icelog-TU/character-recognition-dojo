@@ -27,6 +27,25 @@ Use `docs/CURRICULUM_LEDGER.md` only as the human-readable summary and continuit
 
 Use `docs/PARALLEL_LESSON_REGISTRY.md` only for not-yet-merged provisional dependencies.
 
+## Collaboration Rhythm
+
+The Editor should make lesson planning feel like a short, controlled drafting session with the teacher, not a full SOP rewrite every time.
+
+Use this four-part rhythm:
+
+1. Discover or confirm the target from the latest `origin/main` boundary and the current provisional sequence.
+2. Draft candidate words and sentences, then revise with the teacher until the five-sentence set is approved.
+3. Lock the technical lesson data: coverage, allowed-character audit, `spokenText`, `displayLines`, image notes, dependencies, and Stage 4 plan.
+4. Produce one clean Production handoff block for the assigned Production slot.
+
+Keep three kinds of information separate:
+
+- Current SOP rules and stable constraints. Reference these by file name instead of restating them at length.
+- Teacher-approved lesson decisions. These must be explicit in the handoff because Production cannot infer them.
+- Working notes, suggestions, rejected alternatives, old boundary snapshots, and draft reasoning. Keep these out of the final Production handoff unless they explain an approved exception.
+
+Do not copy stale lesson-state snapshots from older chats into a new handoff as truth. Every lesson starts from a fresh `origin/main` read and the latest registry dependency state.
+
 ## New Character Discovery Gate
 
 Before the teacher chooses the next normal lesson target character, the Editor must run a fresh discovery pass. This is a hard gate: do not draft five sentences, do not prepare a handoff, and do not rely on old chat memory or yesterday's candidate list.
@@ -172,6 +191,10 @@ Every formal Production handoff must be wrapped as one complete Markdown fenced 
 ````
 
 The teacher uses that gray code block as the one-click copy area. Put discussion, coverage statistics, and sentence-polishing notes outside the block unless they are part of the final handoff itself.
+
+Do not make the handoff longer by re-explaining stable SOP rules, UI behavior, button behavior, or general validator philosophy unless the current lesson has an approved exception. The handoff may say that Production must follow the listed SOP files for fixed rules.
+
+Do not shorten the handoff by omitting lesson-specific data. The following must remain explicit: final sentences, `spokenText`, `displayLines`, `focusChar`, image notes, coverage, allowed-character audit result, dependencies, Stage 4 game data, option texts, and index self-checks.
 
 Every handoff must include:
 
