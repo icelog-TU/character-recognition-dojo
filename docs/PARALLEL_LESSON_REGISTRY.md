@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L427 | 員 | claimed | Remote Production B | codex/l427-complete-package | L419:合, L422:班, L423:組, L424:隊, L425:各, L426:輪; Release order through L426; R051/R052 after L420 (L391-L420) | 合, 班, 組, 隊, 各, 輪 | curriculum-workflow/lesson-requests/L427.json; curriculum-workflow/generated/L427-generation-packet.md; curriculum-workflow/drafts/L427-draft.json | curriculum-workflow/audio-inbox/L427/; public/assets/lessons/L427/ | Teacher-approved activation received. Base origin/main 4eec5178, official L415. Claim only; complete package production continuing. Shared-state integration belongs to Release. |
+| L427 | 員 | dependency-blocked-asset-complete | Remote Production B | codex/l427-complete-package | L419:合, L422:班, L423:組, L424:隊, L425:各, L426:輪; Release order through L426; R051/R052 after L420 (L391-L420) | 合, 班, 組, 隊, 各, 輪 | curriculum-workflow/lesson-requests/L427.json; curriculum-workflow/generated/L427-generation-packet.md; curriculum-workflow/drafts/L427-draft.json | curriculum-workflow/audio-inbox/L427/; public/assets/lessons/L427/ | Complete package: 5 WebP, 10 M4A, sentence and Stage 4 AI alignment. Technical asset gates PASS; browser scope documented in packet. Base main 4eec5178 / L415. Release owns preceding lessons, R051/R052 milestone and shared-state integration. |
 
 ## Status Values
 
