@@ -1,0 +1,260 @@
+{
+  "unit": "L431",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMain": "f4bc071d",
+  "productionBoundary": "L420 教,424 learned Han",
+  "allowedCharCount": 430,
+  "imageChecks": [
+    {
+      "sentenceId": "L431-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Neighbor puppy receives girl-placed kibble bowl with mother supervising; portable carrier,water bowl and dog bed; owner absent.",
+      "castEvidence": "Recurring mother and girl match family references.",
+      "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+    },
+    {
+      "sentenceId": "L431-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Girl chooses among offered flower buckets; clerk gestures and prepares a stem; mother accompanies; no price/free-gift text.",
+      "castEvidence": "Clerk auburn bun/green apron distinct from recurring mother.",
+      "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+    },
+    {
+      "sentenceId": "L431-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Girl shows father an open storybook and points to central small fish in connected underwater illustration; no text,aquarium or drawing action.",
+      "castEvidence": "Father blue shirt/khaki trousers and recurring girl match family anchors.",
+      "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+    },
+    {
+      "sentenceId": "L431-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Fully clothed girl confidently puts on pink cardigan herself; mother stands with hands lowered and smiles.",
+      "castEvidence": "Stable girl bob/pink clip/navy skirt and mother cream blouse/blue trousers.",
+      "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+    },
+    {
+      "sentenceId": "L431-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Girl hands the single remote to recurring you boy and waits,one toy car ahead; friendly turn-taking.",
+      "castEvidence": "Recurring you boy sky-blue shirt,green shorts,blue shoes,tousled dark hair; not older brother/Xiaoguang.",
+      "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+    }
+  ],
+  "browserQA": {
+    "environment": "Chrome 390x844; real LessonPanel imported by isolated local harness,approved L431 draft and only handoff provisional vocabulary; no production progress written.",
+    "playback": "All 10 final M4A played to ended. Initial autoplay policy denial resolved by explicit gesture; dedicated G02 prefix and suffix play separately.",
+    "G01": "S02 index9由 selected and 下一題 appeared.",
+    "G02": "S01 index4由 highlighted after helper stop; prefix主人不在 and suffix我照顧小狗 playback completed.",
+    "G03": "Three distinct cards 給/和/由; choosing由 fills S05 index4 and exposes 下一題.",
+    "G04": "S03角 displays ㄐㄧㄠˇ; three shuffled single-Han cards 是→小→魚 complete.",
+    "G05": "All three animal options played correct referenced clips; correct option uses S04,not S05. Selection exposes reward; after animation red下一課 and white回首頁休息 visible; next click emits navigation next.",
+    "limitations": [
+      "Sustained press-to-record and recorded-voice replay could not be operated with the available browser tool; microphone recording not certified.",
+      "Direct human listening and physical-phone highlight smoothness are not claimed; acoustic checks use actual audio input to an AI model."
+    ],
+    "disposition": "Production SOP browser-tooling fallback for recording; dedicated fragment assets/timings and non-browser technical gates complete."
+  },
+  "audio": {
+    "metrics": [
+      {
+        "name": "char-u7531.m4a",
+        "duration": 0.836009,
+        "max": -2,
+        "mean": -15.9,
+        "trailingSilenceStart": 0.671066,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "e46a5c6196f577817cc096a5b93598a82146b1d4f22fc8d2867b4aa05390b6fc"
+      },
+      {
+        "name": "L431-G02-prefix.m4a",
+        "duration": 1.880998,
+        "max": -2.1,
+        "mean": -16.9,
+        "trailingSilenceStart": 1.71868,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "121bbf1d285e4d7f80d3a2e97ebb2719464f63a0765f268532097c6694a4a8d3"
+      },
+      {
+        "name": "L431-G02-suffix.m4a",
+        "duration": 1.972993,
+        "max": -4.9,
+        "mean": -18.5,
+        "trailingSilenceStart": 1.81274,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "6e676f9d5df02e7185f8beb74038230d28bb9e36f0ad3f6d1fecc418baa8444e"
+      },
+      {
+        "name": "L431-G05-wrong-one.m4a",
+        "duration": 3.621995,
+        "max": -3.2,
+        "mean": -18.4,
+        "trailingSilenceStart": 3.46571,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "bf2ef4b4fdfb4f674a6e27012232a1a91f2cf3d1e0bdf033ff4cb1ad0565b3d3"
+      },
+      {
+        "name": "L431-G05-wrong-two.m4a",
+        "duration": 3.459002,
+        "max": -2,
+        "mean": -18.2,
+        "trailingSilenceStart": 3.30925,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "a1522196c3b59e38eb188c98c0c3787d89d9da6e8e4d3ed702fceb38c2d17bc7"
+      },
+      {
+        "name": "L431-S01.m4a",
+        "duration": 3.019002,
+        "max": -3.6,
+        "mean": -17.6,
+        "trailingSilenceStart": 2.78973,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "9f837ac4631580d997a1288f4ff784d956c91c83bb7c19f5c0cbd9a7b440b5d4"
+      },
+      {
+        "name": "L431-S02.m4a",
+        "duration": 2.856009,
+        "max": -2.2,
+        "mean": -17.6,
+        "trailingSilenceStart": 2.70041,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "2682b25b385c13d3aa2f806f624c4109d7c946f4a3cb2eeaba40b17323fb89ee"
+      },
+      {
+        "name": "L431-S03.m4a",
+        "duration": 3.760998,
+        "max": -3.8,
+        "mean": -18.5,
+        "trailingSilenceStart": 3.59621,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "d4fee743a2ce1c2bf1f7e572c8b7dddcd525a464c52c53050e5f8f6f8b4d7f80"
+      },
+      {
+        "name": "L431-S04.m4a",
+        "duration": 2.623991,
+        "max": -2,
+        "mean": -16.9,
+        "trailingSilenceStart": 2.46361,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "18346cc710bed2e94ddf80ed175d172f805199b3257e3b53718046528becf3bf"
+      },
+      {
+        "name": "L431-S05.m4a",
+        "duration": 3.273991,
+        "max": -3,
+        "mean": -17.8,
+        "trailingSilenceStart": 3.11132,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1,
+        "sha256": "428e2ffd72af81199ff777379044b460ff22445ddf10325a240d392afd864b93"
+      }
+    ],
+    "g05MeanVolumeSpreadDb": 1.5,
+    "hearingMethod": "Final processed M4A decoded to WAV and passed as actual input_audio to OpenAI gpt-audio-1.5; acoustic AI verification,not human listening.",
+    "hearing": [
+      {
+        "name": "char-u7531",
+        "model": "gpt-audio-1.5",
+        "result": "{\"heard_syllables\": [\"you2\"]}"
+      },
+      {
+        "name": "L431-G02-prefix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": \"zhu3 ren2 bu2 zai4\"}"
+      },
+      {
+        "name": "L431-G02-suffix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"zhao4\", \"gu4\", \"xiao3\", \"gou3\"]}"
+      },
+      {
+        "name": "L431-G05-wrong-one",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"hui4\", \"zi4\", \"ji3\", \"xi3\", \"lian3\", \"bu2\", \"yong4\", \"bang1\", \"mang2\"]}"
+      },
+      {
+        "name": "L431-G05-wrong-two",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\":[\"wo3\",\"hui4\",\"zi4\",\"ji3\",\"chuan1\",\"xie2\",\"bu2\",\"yong4\",\"bang1\",\"mang2\"]}"
+      },
+      {
+        "name": "L431-S01",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": \"zhu3 ren2 bu2 zai4 you2 wo3 zhao4 gu4 xiao3 gou3\"}"
+      },
+      {
+        "name": "L431-S02",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\":[\"dian4\",\"yuan2\",\"shuo1\",\"zhe4\",\"xie1\",\"hua1\",\"ke3\",\"yi3\",\"zi4\",\"you2\",\"xuan3\"]}"
+      },
+      {
+        "name": "L431-S03",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"zi4\", \"ji3\", \"xuan3\", \"de5\", \"shu1\", \"zhu3\", \"jiao3\", \"shi4\", \"xiao3\", \"yu2\"]}"
+      },
+      {
+        "name": "L431-S04",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"hui4\", \"zi4\", \"ji3\", \"chuan1\", \"yi1\", \"bu2\", \"yong4\", \"bang1\", \"mang2\"]}"
+      },
+      {
+        "name": "L431-S05",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"men5\", \"lun2\", \"liu2\", \"you2\", \"ni3\", \"xian1\", \"wan2\"]}"
+      }
+    ],
+    "regeneration": "S03 regenerated to enforce 主角 jiao3 and 小魚 xiao3 yu2; all final clips aligned after tail-only silence processing.",
+    "pronunciationChecks": {
+      "由": "you2",
+      "己": "ji3",
+      "S03角": "jiao3"
+    }
+  },
+  "mediaBytes": 1191694,
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L430",
+    "reviewPairs": [
+      {
+        "ids": [
+          "R051",
+          "R052"
+        ],
+        "afterLessonOrder": 420,
+        "targetLessonRange": {
+          "startOrder": 391,
+          "endOrder": 420
+        }
+      }
+    ]
+  },
+  "validation": {
+    "textBoundarySchemaStage4Timings": "PASS",
+    "validateProduction": "PASS on isolated L431 fixture",
+    "assetAuditStrict": "PASS on isolated L431 fixture;zero warnings",
+    "fullVerify": "Release integration gate; not run against production JSON without L431."
+  }
+}
