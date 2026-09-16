@@ -37,3 +37,7 @@ validate:production：基底全量及 L429 隔離驗證 PASS。tools:check、ai:
 G02 到達紅框與長按提示，但可用控制無法維持長按；實際人聲錄音及串接回放未實測。跳題未前進，切換本機 fixture 期間出現暫時 HMR／overlay 錯誤；重新載入後用隔離 G03–G05 預覽完成後續檢查。G05 最終作答正誤回饋未在清理前確認。未宣稱主觀聽音、發音及影音同步人工 QA 通過。依 SOP tooling fallback 交付技術驗證完整包，保留以上範圍供合併後審查。
 
 預覽伺服器已停止、瀏覽器尺寸還原、暫存 production JSON 已還原；未將隔離 fixture 提交。原始 MP3 在 Git ignore 的 curriculum-workflow/audio-inbox/L429/ 保留。既有共用 stash 未操作。
+
+## 遠端驗收 checkpoint
+
+75269e6afba0f9a8b134ffc2d72de06933295ce5：origin/codex/l429-complete-package 的 strict package-intake PASS，無警告。後續 checkpoint commit 僅記錄驗收與 registry SHA；最終 tip 另於交接回報並重跑同一 gate。
