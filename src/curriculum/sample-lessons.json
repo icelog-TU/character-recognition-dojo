@@ -208372,6 +208372,2055 @@
       "notes": [
         "Package Rescue from 6a7a20d620219c7f9de9b53cb85d6e8f20125ea4. Original approved sentences, images compositions, voice takes and game structure retained. G02 suffix 點 recognized independently and final padded-analysis Whisper alignment exact. All five sentence and G02/G05 audio metadata complete. Local waveform timing review recorded; only standalone 弱 trailing silence trimmed, speech packets preserved. S01-S03 WebP recompressed below 250 KB without resizing. Browser QA and limitations: L404-rescue-qa.md. This is technical playback evidence, not teacher manual auditory approval. Latest checked main 09ad28d766640bbbb1b2c1f8d3cb2ccb43efc306 ends at L398; L399-L403 remain dependencies. R049/R050 follow L405 and precede L406. Release owns integration."
       ]
+    },
+    {
+      "id": "L405",
+      "order": 405,
+      "title": "越",
+      "newChars": [
+        "越"
+      ],
+      "zhuyin": {
+        "越": "ㄩㄝˋ"
+      },
+      "charAudio": {
+        "越": "/assets/lessons/L405/audio/char-u8d8a.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L405-S01",
+          "text": "勇者越來越強，怪物不敢來。",
+          "spokenText": "勇者越來越強怪物不敢來",
+          "displayLines": [
+            "勇者",
+            "越來越強，",
+            "怪物不敢來。"
+          ],
+          "focusChar": "越",
+          "imageNotes": "童話村莊入口，勇者站穩，單手舉起一塊大石頭。角落放一個小型回想泡泡，呈現同一位勇者以前需要雙手才能搬動同樣大小的石頭，交代力量變強。遠處怪物躲在樹後觀察，不敢靠近。沿用近期故事角色造型，不畫戰鬥或傷口。回想與現在的石頭大小須一致，避免變成只是石頭變小。",
+          "approved": true,
+          "imageSrc": "/assets/lessons/L405/images/L405-S01.webp",
+          "audio": {
+            "src": "/assets/lessons/L405/audio/L405-S01.m4a",
+            "durationMs": 4686,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2200,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2800,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2980,
+                "endMs": 3420
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3420,
+                "endMs": 3580
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3580,
+                "endMs": 3880
+              }
+            ]
+          },
+          "imagePrompt": "Use case: illustration-story. Generate one square 1:1 full-bleed lesson illustration, no collage. Reference 1 is a style sheet: full L058 row plus refined approved examples, use its richly detailed fine pencil-and-watercolor treatment, warm natural light, clean painted texture and soft natural proportions. Reference 2 is the current fictional hero and monster identity; preserve their design, not their confrontation pose. At a fairy-tale village entrance, the same small young brown-haired hero wearing blue tunic, orange-red cape and brown boots stands firmly and calmly lifts ONE large gray rock with ONE hand. His other hand is visibly free. A SMALL thought/memory vignette in an upper corner shows the SAME hero previously struggling to lift a rock with BOTH hands: relative to his torso, this rock must be the SAME SIZE and same shape as the current rock. This represents becoming stronger, never a shrinking rock. Main present-day hero dominates. In the distance the SAME large olive-green hairy muscular monster hides behind a tree and peeks timidly, afraid to approach. No battle, no injury, no threatening weapon use. Village cottage, grass and bright clear sky, uncluttered and readable on phone. No writing, labels, arrows, digits, logos, watermark or speech. Match style sheet closely: not anime, 3D, flat cartoon or generic washed-out watercolor."
+        },
+        {
+          "id": "L405-S02",
+          "text": "太陽下山，光越來越弱。",
+          "spokenText": "太陽下山光越來越弱",
+          "displayLines": [
+            "太陽下山，",
+            "光越來越弱。"
+          ],
+          "focusChar": "越",
+          "imageNotes": "傍晚公園，主角小女孩與爸爸站在步道上，看著太陽只剩一小部分露在遠處山後。天空仍有晚霞，但草地與樹木已逐漸進入陰影，呈現日光正在減弱。人物與環境保持清楚可辨，不畫成深夜，不需要回想泡泡或文字。此句已取代燈光變弱的舊稿，不得生成小燈、電池或室內看書畫面。",
+          "approved": true,
+          "imageSrc": "/assets/lessons/L405/images/L405-S02.webp",
+          "audio": {
+            "src": "/assets/lessons/L405/audio/L405-S02.m4a",
+            "durationMs": 4801,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1360,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2560,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2800,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3160,
+                "endMs": 3360
+              }
+            ]
+          },
+          "imagePrompt": "Use case: illustration-story. Generate one square full-bleed course picture. Reference 1 contains the full L058 style set and refined illustrations: match their fine pencil watercolor, detailed clean environment, natural expressive faces and child proportions. Reference 2 is family cast: recurring preschool girl dark bob, pink clip, pink cardigan, cream shirt, navy skirt, pink shoes; recurring father short brown hair, blue overshirt over white shirt, khaki trousers. Preserve identities exactly. A park path at sunset: father and little girl stand together watching a distant mountain ridge. The sun is almost completely hidden behind the mountain, with ONLY a small sliver above it. The remaining sky glows pink-gold; trees and grass gradually lie in longer, cooler soft shadows showing fading DAYLIGHT. Faces, figures, path and environment remain clearly visible. Warm twilight but NOT night, not a dark painting. No lamp, batteries, indoors, reading scene, memory vignette, text, labels or numbers. Phone-readable composition, stable preschool proportions, no anime/cartoon/3D/photo."
+        },
+        {
+          "id": "L405-S03",
+          "text": "就算身體弱，也能下棋。",
+          "spokenText": "就算身體弱也能下棋",
+          "displayLines": [
+            "就算身體弱，",
+            "也能下棋。"
+          ],
+          "focusChar": "弱",
+          "imageNotes": "家中客廳，一位正在病後休養的 generic 老爺爺靠著軟墊坐好，膝上蓋薄毯，與自己的小孫女下五子棋。他體力尚未恢復，但精神清楚，專心、從容地落子；孩子也投入棋局。不把身體弱只等同於年老或使用助行器，不畫病危、痛苦或醫療處置。兩人是本圖 generic 祖孫，不套用主角爸爸或主角女孩。",
+          "approved": true,
+          "imageSrc": "/assets/lessons/L405/images/L405-S03.webp",
+          "audio": {
+            "src": "/assets/lessons/L405/audio/L405-S03.m4a",
+            "durationMs": 4582,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1520,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2300,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2640,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3180
+              }
+            ]
+          },
+          "imagePrompt": "Use case: illustration-story. Generate one square full-bleed course illustration. Use attached full L058 plus refined style sheet strictly for fine pencil-and-watercolor, softly modeled faces, rich clean domestic detail and warm light. A GENERIC unfamiliar grandfather is recovering from an illness at home: seated comfortably with soft pillows supporting his back, a light blanket over his knees, slightly tired body posture but alert gentle eyes and a focused, calm expression. He reaches to place a black stone on a five-in-a-row board on the low table. His own GENERIC little granddaughter with two low braids and a teal shirt sits opposite and is absorbed in the game. Both are unfamiliar characters, NOT the recurring father or pink-cardigan bob-haired protagonist girl. The recovery cues are cushions, blanket and resting posture, not old age alone, no mobility aid. Normal cozy living room, no hospital, no equipment, no distress or medical treatment. Board grid has simple black and white stones on INTERSECTIONS, no printed characters or numbered axes. Warm optimistic mood. No labels, captions, readable text, numbers, logo, watermark. Not anime, 3D, photo, flat or generic oversimplified art."
+        },
+        {
+          "id": "L405-S04",
+          "text": "爸爸心算很強，一下就算好了。",
+          "spokenText": "爸爸心算很強一下就算好了",
+          "displayLines": [
+            "爸爸心算",
+            "很強，",
+            "一下就",
+            "算好了。"
+          ],
+          "focusChar": "算",
+          "imageNotes": "家中桌旁，主角小女孩拿著筆，準備計算兩件商品合計多少錢；主角爸爸沒有拿筆或使用計算機，看了一眼便開口回答。桌上兩件商品各貼一個價格，分別為「35」「28」，女孩露出爸爸已經算好的驚訝表情。不顯示總價，不加答案泡泡，重點是爸爸心算，不是照著答案念。老師已批准價格數字入圖例外。displayLines 特例：使用四個功能性短行，保留「爸爸心算」「一下就」「算好了」的閱讀節奏。",
+          "approved": true,
+          "imageSrc": "/assets/lessons/L405/images/L405-S04.webp",
+          "audio": {
+            "src": "/assets/lessons/L405/audio/L405-S04.m4a",
+            "durationMs": 4201,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 170
+              },
+              {
+                "charIndex": 1,
+                "startMs": 170,
+                "endMs": 340
+              },
+              {
+                "charIndex": 2,
+                "startMs": 340,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1060,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1560,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2350
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2350,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2720,
+                "endMs": 3080
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3080,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3360,
+                "endMs": 3550
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3550,
+                "endMs": 3740
+              }
+            ]
+          },
+          "imagePrompt": "Use case: illustration-story. One square full-bleed detailed pencil-and-watercolor lesson illustration matching full L058 and refined style sheet. Family reference sheet fixes recurring preschool protagonist girl dark bob/pink clip/pink cardigan/cream shirt/navy skirt and father short brown hair/blue overshirt/white shirt/khaki trousers. At a home table, girl holds a pencil poised ABOVE a blank paper, just preparing to calculate. On the table are exactly TWO small purchased items, a plain little toy car and a plain pencil case. Each has ONE clear price tag: toy car tag reads exactly \"35\"; pencil case tag reads exactly \"28\". These are the ONLY allowed readable characters in the entire image. Make 35 and 28 clean and accurate. No currency marks, no equation, absolutely no total \"63\", no answer bubble. Father has NO pen, NO calculator or phone. He has just glanced at the two items and speaks the result mentally with an easy confident expression and gently open hand; girl turns toward him with surprised admiration that he has already calculated. His hands empty. Detailed but uncluttered warm Taiwan living room, rich colored pencil watercolor, softly modeled natural faces. Do not render generic anime, 3D, photographic or simplified cartoon. No other writing, logo or watermark."
+        },
+        {
+          "id": "L405-S05",
+          "text": "小狗越過木頭，跑到我面前。",
+          "spokenText": "小狗越過木頭跑到我面前",
+          "displayLines": [
+            "小狗越過",
+            "木頭，",
+            "跑到我面前。"
+          ],
+          "focusChar": "越",
+          "imageNotes": "公園草地上，一根低矮木頭橫在小狗與主角小女孩之間。小狗正跨過木頭，前腳已落在女孩這側，後腳剛越過；女孩在幾步外張開雙手迎接。只畫一隻小狗，不用分身或動作殘影。木頭低、地面平坦，不是高難度跳躍。",
+          "approved": true,
+          "imageSrc": "/assets/lessons/L405/images/L405-S05.webp",
+          "audio": {
+            "src": "/assets/lessons/L405/audio/L405-S05.m4a",
+            "durationMs": 4457,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1220,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1480,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1720,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2000,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2420,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2680,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2920,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3160,
+                "endMs": 3440
+              }
+            ]
+          },
+          "imagePrompt": "Use case: illustration-story. One square full-bleed fine pencil-and-watercolor course image strictly matching full L058 style sheet/refined examples and family identity references. A small SINGLE friendly tan-and-white puppy steps over one LOW fallen log lying across flat park grass between it and the recurring preschool girl. Puppy is shown ONCE with intact anatomy, no motion trail, duplicate or extra legs. Its front paws are already on the girl's side of the log and rear paws are just clearing the log; show low safe stepping, not a high jump. Girl is a few steps beyond the log, facing puppy with both arms open to welcome it. Preserve her dark bob, small pink clip, pink cardigan, cream shirt, navy skirt, pink shoes and stable preschool proportions from cast sheet. Rich but clean green park, flowers, warm daylight, natural expressions and phone-readable action. No text, labels, logos or watermark, no anime/3D/photo/flat cartoon. Final revision: one continuous unbranched cylindrical log; both front paws visibly planted on grass on the girl side, rear paw just clearing the log. No second trunk."
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L405-G01",
+          "type": "find-character",
+          "sentenceId": "L405-S01",
+          "targetChar": "越",
+          "targetCharIndex": 2,
+          "prompt": "找到越，點一下。"
+        },
+        {
+          "id": "L405-G02",
+          "type": "teach-character",
+          "sentenceId": "L405-S02",
+          "targetChar": "越",
+          "targetCharIndex": 5,
+          "prompt": "幫忙說出這個字。",
+          "teachAudio": {
+            "prefixText": "太陽下山光",
+            "targetText": "越",
+            "suffixText": "來越弱",
+            "prefixSrc": "/assets/lessons/L405/audio/L405-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L405/audio/L405-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L405/audio/L405-G02-prefix.m4a",
+              "durationMs": 2113,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 360
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 360,
+                  "endMs": 600
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 600,
+                  "endMs": 1000
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1000,
+                  "endMs": 1320
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1320,
+                  "endMs": 1480
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L405/audio/L405-G02-suffix.m4a",
+              "durationMs": 2090,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 460
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 460,
+                  "endMs": 840
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 840,
+                  "endMs": 1100
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L405-G03",
+          "type": "missing-character",
+          "sentenceId": "L405-S05",
+          "targetChar": "越",
+          "targetCharIndex": 2,
+          "missingIndexes": [
+            2
+          ],
+          "prompt": "補上不見的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "越",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "跑",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "走",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L405-G04",
+          "type": "partial-order",
+          "sentenceId": "L405-S03",
+          "targetChar": "弱",
+          "targetCharIndex": 4,
+          "missingIndexes": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "prompt": "把句子排回正確順序。",
+          "options": [
+            {
+              "id": "card-qi",
+              "text": "棋",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-ye",
+              "text": "也",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-xia",
+              "text": "下",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-neng",
+              "text": "能",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L405-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L405-S04",
+          "targetChar": "算",
+          "targetCharIndex": 3,
+          "prompt": "聽一聽，選出讀對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "爸爸心算很強，一下就算好了。",
+              "correct": true,
+              "sentenceId": "L405-S04",
+              "audioSrc": "/assets/lessons/L405/audio/L405-S04.m4a",
+              "audio": {
+                "src": "/assets/lessons/L405/audio/L405-S04.m4a",
+                "durationMs": 4201,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 170
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 170,
+                    "endMs": 340
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 340,
+                    "endMs": 840
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 840,
+                    "endMs": 1060
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1060,
+                    "endMs": 1560
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1560,
+                    "endMs": 1980
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1980,
+                    "endMs": 2350
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2350,
+                    "endMs": 2720
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2720,
+                    "endMs": 3080
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3080,
+                    "endMs": 3360
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3360,
+                    "endMs": 3550
+                  },
+                  {
+                    "charIndex": 11,
+                    "startMs": 3550,
+                    "endMs": 3740
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "媽媽心算很強，一下就算好了。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L405/audio/L405-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L405/audio/L405-G05-wrong-one.m4a",
+                "durationMs": 4641,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 360
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 360,
+                    "endMs": 560
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 560,
+                    "endMs": 1020
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1020,
+                    "endMs": 1220
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1220,
+                    "endMs": 1640
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1640,
+                    "endMs": 1860
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1860,
+                    "endMs": 2290
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2290,
+                    "endMs": 2720
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2720,
+                    "endMs": 3220
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3220,
+                    "endMs": 3460
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3460,
+                    "endMs": 3650
+                  },
+                  {
+                    "charIndex": 11,
+                    "startMs": 3650,
+                    "endMs": 3840
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "爸爸心算很強，一下就算錯了。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L405/audio/L405-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L405/audio/L405-G05-wrong-two.m4a",
+                "durationMs": 3749,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 130
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 130,
+                    "endMs": 260
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 260,
+                    "endMs": 780
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 780,
+                    "endMs": 940
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 940,
+                    "endMs": 1320
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1320,
+                    "endMs": 1580
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1580,
+                    "endMs": 1970
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 1970,
+                    "endMs": 2360
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2360,
+                    "endMs": 2660
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 2660,
+                    "endMs": 2940
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 2940,
+                    "endMs": 3100
+                  },
+                  {
+                    "charIndex": 11,
+                    "startMs": 3100,
+                    "endMs": 3580
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "notes": "Teacher-approved S02 sunset and S04 mental arithmetic replace earlier drafts. S04 image-only numerals 35 and 28 are approved; never show total 63 or an equation. S04 four short functional display lines are approved. Canonical Stage 4; targets use first 越/算 occurrences. G02 suffix includes the second 越. Stage 2 six cards: three 越 and three old characters; Stage 2/4 single Han only. Release must ship preceding lessons in order, then R049/R050 after L405 before L406 加. 加 is prohibited in learner text for this lesson."
+    },
+    {
+      "id": "L406",
+      "order": 406,
+      "title": "加",
+      "newChars": [
+        "加"
+      ],
+      "zhuyin": {
+        "加": "ㄐㄧㄚ"
+      },
+      "charAudio": {
+        "加": "/assets/lessons/L406/audio/char-u52a0.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L406-S01",
+          "text": "火越來越弱，再加些木頭。",
+          "spokenText": "火越來越弱再加些木頭",
+          "displayLines": [
+            "火越來越弱，",
+            "再加些木頭。"
+          ],
+          "focusChar": "加",
+          "imageNotes": "露營區固定火爐裡只剩小火苗與紅色餘燼。主角爸爸用長柄火鉗，正把一小塊乾木頭放進爐內；旁邊整齊放著待用木柴。主角小女孩與媽媽在安全距離觀看，不幫忙添柴。呈現火勢減弱後補充木頭，不畫失控火焰或濃煙。",
+          "imagePrompt": "Square image / 1:1 composition, warm detailed Taiwan picture-book pencil-and-watercolor illustration. Full L058 set for style only, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Rich clean linework, natural warm light, soft shaded faces, detailed environments. Family identities from L154-S01 L162-S04 L163-S02: preschool girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length brown hair cream home blouse; father short dark hair pale blue shirt. Do not copy L058 identities. No anime, flat cartoon, generic round toddlers, 3D or photo. Safe margins, all meaning-bearing action legible at phone size. No text/brand/watermarks; only S02 approved numerals 50 on price and exactly three coins 20,20,10. S03 story hero uses recent L402/L401 design, not family. Scene: 露營區固定火爐裡只剩小火苗與紅色餘燼。主角爸爸用長柄火鉗，正把一小塊乾木頭放進爐內；旁邊整齊放著待用木柴。主角小女孩與媽媽在安全距離觀看，不幫忙添柴。呈現火勢減弱後補充木頭，不畫失控火焰或濃煙。",
+          "imageSrc": "/assets/lessons/L406/images/L406-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L406/audio/L406-S01.m4a",
+            "durationMs": 4125,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 600
+              },
+              {
+                "charIndex": 1,
+                "startMs": 696,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1120,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1420,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2526,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2940,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3180,
+                "endMs": 3480
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3480,
+                "endMs": 3720
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3720,
+                "endMs": 3920
+              }
+            ]
+          }
+        },
+        {
+          "id": "L406-S02",
+          "text": "把錢加起來，算一算夠不夠？",
+          "spokenText": "把錢加起來算一算夠不夠",
+          "displayLines": [
+            "把錢加起來，",
+            "算一算",
+            "夠不夠？"
+          ],
+          "focusChar": "算",
+          "imageNotes": "玩具店櫃台前，主角小女孩想買一顆球，把帶來的零錢攤在桌上，媽媽指著零錢陪她計算。球的價牌標「50」，桌上恰好三枚簡化教學硬幣，分別標「20」「20」「10」。女孩正在計算，不另外寫出零錢總和或「夠了」的答案。老師已批准數字入圖例外；商品價牌「50」是價格，不是計算答案。",
+          "imagePrompt": "Square image / 1:1 composition, warm detailed Taiwan picture-book pencil-and-watercolor illustration. Full L058 set for style only, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Rich clean linework, natural warm light, soft shaded faces, detailed environments. Family identities from L154-S01 L162-S04 L163-S02: preschool girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length brown hair cream home blouse; father short dark hair pale blue shirt. Do not copy L058 identities. No anime, flat cartoon, generic round toddlers, 3D or photo. Safe margins, all meaning-bearing action legible at phone size. No text/brand/watermarks; only S02 approved numerals 50 on price and exactly three coins 20,20,10. S03 story hero uses recent L402/L401 design, not family. Scene: 玩具店櫃台前，主角小女孩想買一顆球，把帶來的零錢攤在桌上，媽媽指著零錢陪她計算。球的價牌標「50」，桌上恰好三枚簡化教學硬幣，分別標「20」「20」「10」。女孩正在計算，不另外寫出零錢總和或「夠了」的答案。老師已批准數字入圖例外；商品價牌「50」是價格，不是計算答案。",
+          "imageSrc": "/assets/lessons/L406/images/L406-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L406/audio/L406-S02.m4a",
+            "durationMs": 3398,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1688,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2020,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2240,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2520,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2820,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3020,
+                "endMs": 3220
+              }
+            ]
+          }
+        },
+        {
+          "id": "L406-S03",
+          "text": "弱小的勇者，也能變強。",
+          "spokenText": "弱小的勇者也能變強",
+          "displayLines": [
+            "弱小的勇者，",
+            "也能變強。"
+          ],
+          "focusChar": "弱",
+          "imageNotes": "童話村莊旁的練習場，身形瘦小的勇者正在練習舉起一塊石頭，表情努力而有精神。一個小型回想泡泡呈現同一位勇者稍早還搬不動同樣大小的石頭，現在已能舉到腰前，表現透過練習逐漸變強。沿用近期勇者造型，不突然變成另一個高大人物；前後石頭大小一致。",
+          "imagePrompt": "Square image / 1:1 composition, warm detailed Taiwan picture-book pencil-and-watercolor illustration. Full L058 set for style only, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Rich clean linework, natural warm light, soft shaded faces, detailed environments. Family identities from L154-S01 L162-S04 L163-S02: preschool girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length brown hair cream home blouse; father short dark hair pale blue shirt. Do not copy L058 identities. No anime, flat cartoon, generic round toddlers, 3D or photo. Safe margins, all meaning-bearing action legible at phone size. No text/brand/watermarks; only S02 approved numerals 50 on price and exactly three coins 20,20,10. S03 story hero uses recent L402/L401 design, not family. Scene: 童話村莊旁的練習場，身形瘦小的勇者正在練習舉起一塊石頭，表情努力而有精神。一個小型回想泡泡呈現同一位勇者稍早還搬不動同樣大小的石頭，現在已能舉到腰前，表現透過練習逐漸變強。沿用近期勇者造型，不突然變成另一個高大人物；前後石頭大小一致。",
+          "imageSrc": "/assets/lessons/L406/images/L406-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L406/audio/L406-S03.m4a",
+            "durationMs": 2953,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1698,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2220,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2500,
+                "endMs": 2760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L406-S04",
+          "text": "今天有客人，媽媽多加一道菜。",
+          "spokenText": "今天有客人媽媽多加一道菜",
+          "displayLines": [
+            "今天有客人，",
+            "媽媽多加",
+            "一道菜。"
+          ],
+          "focusChar": "加",
+          "imageNotes": "家中餐桌已擺好幾道菜，主角媽媽正端來另外一盤剛做好的青菜，放到桌上空出的地方。主角小女孩與爸爸在旁準備碗筷；背景有兩位來訪的 generic 成人親友，交代今天有客人。不是只有主角一家吃飯，也不是把菜加進女孩碗裡。",
+          "imagePrompt": "Square image / 1:1 composition, warm detailed Taiwan picture-book pencil-and-watercolor illustration. Full L058 set for style only, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Rich clean linework, natural warm light, soft shaded faces, detailed environments. Family identities from L154-S01 L162-S04 L163-S02: preschool girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length brown hair cream home blouse; father short dark hair pale blue shirt. Do not copy L058 identities. No anime, flat cartoon, generic round toddlers, 3D or photo. Safe margins, all meaning-bearing action legible at phone size. No text/brand/watermarks; only S02 approved numerals 50 on price and exactly three coins 20,20,10. S03 story hero uses recent L402/L401 design, not family. Scene: 家中餐桌已擺好幾道菜，主角媽媽正端來另外一盤剛做好的青菜，放到桌上空出的地方。主角小女孩與爸爸在旁準備碗筷；背景有兩位來訪的 generic 成人親友，交代今天有客人。不是只有主角一家吃飯，也不是把菜加進女孩碗裡。",
+          "imageSrc": "/assets/lessons/L406/images/L406-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L406/audio/L406-S04.m4a",
+            "durationMs": 3822,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 310
+              },
+              {
+                "charIndex": 1,
+                "startMs": 310,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1140,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2030,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2500,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2820,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3040,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3240,
+                "endMs": 3440
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3440,
+                "endMs": 3620
+              }
+            ]
+          }
+        },
+        {
+          "id": "L406-S05",
+          "text": "水太熱，加一點冷水吧。",
+          "spokenText": "水太熱加一點冷水吧",
+          "displayLines": [
+            "水太熱，",
+            "加一點",
+            "冷水吧。"
+          ],
+          "focusChar": "加",
+          "imageNotes": "家中桌旁，主角媽媽把少量冷的飲用水倒進一杯冒著淡淡熱氣的水裡，主角小女孩坐在旁邊等待。水杯放穩在桌上，媽媽掌握水壺，女孩不碰熱水容器。只呈現溫和熱氣，不用紅色水、冰塊或文字表示溫度。",
+          "imagePrompt": "Square image / 1:1 composition, warm detailed Taiwan picture-book pencil-and-watercolor illustration. Full L058 set for style only, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Rich clean linework, natural warm light, soft shaded faces, detailed environments. Family identities from L154-S01 L162-S04 L163-S02: preschool girl short dark bob pink clip pink cardigan navy skirt; mother shoulder-length brown hair cream home blouse; father short dark hair pale blue shirt. Do not copy L058 identities. No anime, flat cartoon, generic round toddlers, 3D or photo. Safe margins, all meaning-bearing action legible at phone size. No text/brand/watermarks; only S02 approved numerals 50 on price and exactly three coins 20,20,10. S03 story hero uses recent L402/L401 design, not family. Scene: 家中桌旁，主角媽媽把少量冷的飲用水倒進一杯冒著淡淡熱氣的水裡，主角小女孩坐在旁邊等待。水杯放穩在桌上，媽媽掌握水壺，女孩不碰熱水容器。只呈現溫和熱氣，不用紅色水、冰塊或文字表示溫度。",
+          "imageSrc": "/assets/lessons/L406/images/L406-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L406/audio/L406-S05.m4a",
+            "durationMs": 3249,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1517,
+                "endMs": 1880
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1880,
+                "endMs": 2110
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2110,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2540,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2820,
+                "endMs": 3140
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L406-G01",
+          "type": "find-character",
+          "sentenceId": "L406-S01",
+          "targetChar": "加",
+          "targetCharIndex": 6,
+          "prompt": "請幫小兔子找出句子裡的加。"
+        },
+        {
+          "id": "L406-G02",
+          "type": "teach-character",
+          "sentenceId": "L406-S04",
+          "targetChar": "加",
+          "targetCharIndex": 8,
+          "prompt": "請你幫小兔子念紅框裡的字。",
+          "teachAudio": {
+            "prefixText": "今天有客人媽媽多",
+            "suffixText": "一道菜",
+            "prefixSrc": "/assets/lessons/L406/audio/L406-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L406/audio/L406-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L406/audio/L406-G02-prefix.m4a",
+              "durationMs": 2624,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 280
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 280,
+                  "endMs": 560
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 560,
+                  "endMs": 1080
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1080,
+                  "endMs": 1400
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1400,
+                  "endMs": 1720
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 1720,
+                  "endMs": 1980
+                },
+                {
+                  "charIndex": 6,
+                  "startMs": 1980,
+                  "endMs": 2120
+                },
+                {
+                  "charIndex": 7,
+                  "startMs": 2120,
+                  "endMs": 2420
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L406/audio/L406-G02-suffix.m4a",
+              "durationMs": 1555,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 440
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 440,
+                  "endMs": 840
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 840,
+                  "endMs": 1430
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L406-G03",
+          "type": "missing-character",
+          "sentenceId": "L406-S05",
+          "targetChar": "加",
+          "targetCharIndex": 3,
+          "missingIndexes": [
+            3
+          ],
+          "prompt": "請幫小兔子找回少掉的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "加",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "拿",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "喝",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L406-G04",
+          "type": "partial-order",
+          "sentenceId": "L406-S03",
+          "targetChar": "弱",
+          "targetCharIndex": 0,
+          "missingIndexes": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "prompt": "請幫小兔子把字放回去。",
+          "options": [
+            {
+              "id": "card-qiang",
+              "text": "強",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-ye",
+              "text": "也",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-bian",
+              "text": "變",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-neng",
+              "text": "能",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L406-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L406-S02",
+          "targetChar": "算",
+          "targetCharIndex": 5,
+          "prompt": "請聽一聽，誰念對了？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "把錢加起來，算一算夠不夠？",
+              "audioSrc": "/assets/lessons/L406/audio/L406-S02.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "把錢加起來，算一算多不多？",
+              "audioSrc": "/assets/lessons/L406/audio/L406-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "把錢收起來，算一算夠不夠？",
+              "audioSrc": "/assets/lessons/L406/audio/L406-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L407",
+      "order": 407,
+      "title": "減",
+      "newChars": [
+        "減"
+      ],
+      "zhuyin": {
+        "減": "ㄐㄧㄢˇ"
+      },
+      "charAudio": {
+        "減": "/assets/lessons/L407/audio/char-u6e1b.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L407-S01",
+          "text": "關上窗，風聲就減弱了。",
+          "spokenText": "關上窗風聲就減弱了",
+          "displayLines": [
+            "關上窗，",
+            "風聲就",
+            "減弱了。"
+          ],
+          "focusChar": "減",
+          "imageNotes": "家中，主角小女孩剛把窗戶關好，手還放在窗把上，表情放鬆。窗外樹枝被風吹向一側，室內窗簾安靜垂下。表現關窗隔開風聲，不是外面的風停了；不要畫成颱風災害。",
+          "approved": true,
+          "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt, pink shoes; same face as family anchor.\nSCENE: 家中，主角小女孩剛把窗戶關好，手還放在窗把上，表情放鬆。窗外樹枝被風吹向一側，室內窗簾安靜垂下。表現關窗隔開風聲，不是外面的風停了；不要畫成颱風災害。",
+          "imageSrc": "/assets/lessons/L407/images/L407-S01.webp",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-S01.m4a",
+            "durationMs": 4131,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1940,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2060,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2260,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3140,
+                "endMs": 3300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3300,
+                "endMs": 3460
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3460,
+                "endMs": 3760
+              }
+            ]
+          }
+        },
+        {
+          "id": "L407-S02",
+          "text": "書越來越多，家裡空間減少了。",
+          "spokenText": "書越來越多家裡空間減少了",
+          "displayLines": [
+            "書越來越多，",
+            "家裡空間",
+            "減少了。"
+          ],
+          "focusChar": "減",
+          "imageNotes": "家中閱讀角落，書架已放滿，旁邊地板又整齊堆著幾疊書，原本可活動的空間變小。主角小女孩抱著幾本書，主角媽媽正在找地方放。書堆低矮穩固，不畫成危險雜物山。",
+          "approved": true,
+          "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt, pink shoes; same face as family anchor. Fixed mother: shoulder-length dark hair, cream cardigan, blue trousers, gentle natural adult face matching family anchors.\nSCENE: 家中閱讀角落，書架已放滿，旁邊地板又整齊堆著幾疊書，原本可活動的空間變小。主角小女孩抱著幾本書，主角媽媽正在找地方放。書堆低矮穩固，不畫成危險雜物山。",
+          "imageSrc": "/assets/lessons/L407/images/L407-S02.webp",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-S02.m4a",
+            "durationMs": 4574,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 960
+              },
+              {
+                "charIndex": 2,
+                "startMs": 960,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1200,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1420,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2460,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2560,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2780,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3100,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3360,
+                "endMs": 3740
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3740,
+                "endMs": 3980
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3980,
+                "endMs": 4180
+              }
+            ]
+          }
+        },
+        {
+          "id": "L407-S03",
+          "text": "三減二，再加一，算算看。",
+          "spokenText": "三減二再加一算算看",
+          "displayLines": [
+            "三減二，",
+            "再加一，",
+            "算算看。"
+          ],
+          "focusChar": "減",
+          "imageNotes": "家中桌邊，主角媽媽陪小女孩用積木算數。中央剩下一塊紅色積木，旁邊放著剛移走的兩塊紅色積木；媽媽正拿一塊藍色積木，準備加到中央。小女孩看著積木思考。數量與空間分組必須準確，不另加裝飾積木，不需要算式或數字。",
+          "approved": true,
+          "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt, pink shoes; same face as family anchor. Fixed mother: shoulder-length dark hair, cream cardigan, blue trousers, gentle natural adult face matching family anchors.\nSCENE: 家中桌邊，主角媽媽陪小女孩用積木算數。中央剩下一塊紅色積木，旁邊放著剛移走的兩塊紅色積木；媽媽正拿一塊藍色積木，準備加到中央。小女孩看著積木思考。數量與空間分組必須準確，不另加裝飾積木，不需要算式或數字。",
+          "imageSrc": "/assets/lessons/L407/images/L407-S03.webp",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-S03.m4a",
+            "durationMs": 3860,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 540
+              },
+              {
+                "charIndex": 1,
+                "startMs": 540,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1500,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1740,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2460,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2840,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3160,
+                "endMs": 3460
+              }
+            ]
+          }
+        },
+        {
+          "id": "L407-S04",
+          "text": "寫字時，下筆要有強有弱。",
+          "spokenText": "寫字時下筆要有強有弱",
+          "displayLines": [
+            "寫字時，",
+            "下筆要",
+            "有強有弱。"
+          ],
+          "focusChar": "強",
+          "imageNotes": "主角小女孩正在用毛筆寫字，老師在旁指導。近景呈現毛筆筆尖接觸紙面，以及粗細不同的墨色筆畫。紙上只露出局部筆畫，不要求生成完整可讀漢字；重點是下筆輕重造成筆畫變化。",
+          "approved": true,
+          "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt, pink shoes; same face as family anchor. Teacher NOT mother: tidy tied-back dark hair, oval glasses, muted teal blouse and dark skirt, calm instructional pose, distinct facial shape and silhouette from shoulder-length-haired mother.\nSCENE: 主角小女孩正在用毛筆寫字，老師在旁指導。近景呈現毛筆筆尖接觸紙面，以及粗細不同的墨色筆畫。紙上只露出局部筆畫，不要求生成完整可讀漢字；重點是下筆輕重造成筆畫變化。",
+          "imageSrc": "/assets/lessons/L407/images/L407-S04.webp",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-S04.m4a",
+            "durationMs": 3799,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1240,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1800,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2600,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2780,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3160,
+                "endMs": 3260
+              }
+            ]
+          }
+        },
+        {
+          "id": "L407-S05",
+          "text": "天冷了，睡前多加一床被子。",
+          "spokenText": "天冷了睡前多加一床被子",
+          "displayLines": [
+            "天冷了，",
+            "睡前多加",
+            "一床被子。"
+          ],
+          "focusChar": "加",
+          "imageNotes": "晚上，主角小女孩穿睡衣坐在床上，主角媽媽替她加被子。床上已有一床薄被，媽媽把另一床較厚的被子鋪上去，兩床被子的邊緣清楚可辨。呈現多加一床，不是換掉原本的被子。",
+          "approved": true,
+          "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink pajamas; same face as family anchor. Fixed mother: shoulder-length dark hair, cream cardigan, blue trousers, gentle natural adult face matching family anchors.\nSCENE: 晚上，主角小女孩穿睡衣坐在床上，主角媽媽替她加被子。床上已有一床薄被，媽媽把另一床較厚的被子鋪上去，兩床被子的邊緣清楚可辨。呈現多加一床，不是換掉原本的被子。",
+          "imageSrc": "/assets/lessons/L407/images/L407-S05.webp",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-S05.m4a",
+            "durationMs": 5313,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1360,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1580,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2700,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2900,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3140,
+                "endMs": 3320
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L407-G01",
+          "type": "find-character",
+          "sentenceId": "L407-S01",
+          "targetChar": "減",
+          "targetCharIndex": 6,
+          "prompt": "在句子裡找到減，點一下。"
+        },
+        {
+          "id": "L407-G02",
+          "type": "teach-character",
+          "sentenceId": "L407-S02",
+          "targetChar": "減",
+          "targetCharIndex": 9,
+          "prompt": "請你幫我念。",
+          "teachAudio": {
+            "prefixText": "書越來越多家裡空間",
+            "suffixText": "少了",
+            "prefixSrc": "/assets/lessons/L407/audio/L407-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L407/audio/L407-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L407/audio/L407-G02-prefix.m4a",
+              "durationMs": 4256,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 460
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 690,
+                  "endMs": 940
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 940,
+                  "endMs": 1180
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1180,
+                  "endMs": 1380
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1380,
+                  "endMs": 1720
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 2080,
+                  "endMs": 2380
+                },
+                {
+                  "charIndex": 6,
+                  "startMs": 2380,
+                  "endMs": 2580
+                },
+                {
+                  "charIndex": 7,
+                  "startMs": 2580,
+                  "endMs": 2920
+                },
+                {
+                  "charIndex": 8,
+                  "startMs": 2920,
+                  "endMs": 3160
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L407/audio/L407-G02-suffix.m4a",
+              "durationMs": 3077,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 600
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 600,
+                  "endMs": 920
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L407-G03",
+          "type": "missing-character",
+          "sentenceId": "L407-S03",
+          "targetChar": "減",
+          "targetCharIndex": 1,
+          "missingIndexes": [
+            1
+          ],
+          "prompt": "補上不見的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "減",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "加",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "拿",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L407-G04",
+          "type": "partial-order",
+          "sentenceId": "L407-S05",
+          "targetChar": "加",
+          "targetCharIndex": 6,
+          "missingIndexes": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "prompt": "把句子排回正確順序。",
+          "options": [
+            {
+              "id": "card-bei",
+              "text": "被",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-yi",
+              "text": "一",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-zi",
+              "text": "子",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-chuang",
+              "text": "床",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L407-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L407-S04",
+          "targetChar": "強",
+          "targetCharIndex": 7,
+          "prompt": "聽一聽，選出讀對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "寫字時，下筆要有強有弱。",
+              "correct": true,
+              "sentenceId": "L407-S04",
+              "audioSrc": "/assets/lessons/L407/audio/L407-S04.m4a",
+              "audio": {
+                "src": "/assets/lessons/L407/audio/L407-S04.m4a",
+                "durationMs": 3799,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 480
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 480,
+                    "endMs": 700
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 700,
+                    "endMs": 1240
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1240,
+                    "endMs": 1640
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1640,
+                    "endMs": 1800
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1800,
+                    "endMs": 2240
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2240,
+                    "endMs": 2600
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2600,
+                    "endMs": 2780
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2780,
+                    "endMs": 3160
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3160,
+                    "endMs": 3260
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "寫字時，下筆要有大有小。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L407/audio/L407-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L407/audio/L407-G05-wrong-one.m4a",
+                "durationMs": 4467,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 460
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 460,
+                    "endMs": 640
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 640,
+                    "endMs": 1400
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1940,
+                    "endMs": 2020
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 2020,
+                    "endMs": 2100
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2100,
+                    "endMs": 2540
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2540,
+                    "endMs": 2840
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2840,
+                    "endMs": 3180
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3180,
+                    "endMs": 3500
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3500,
+                    "endMs": 3760
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "畫圖時，下筆要有強有弱。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L407/audio/L407-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L407/audio/L407-G05-wrong-two.m4a",
+                "durationMs": 4216,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 340
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 340,
+                    "endMs": 600
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 600,
+                    "endMs": 1100
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1720,
+                    "endMs": 1800
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1800,
+                    "endMs": 1960
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1960,
+                    "endMs": 2640
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2640,
+                    "endMs": 3000
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3000,
+                    "endMs": 3200
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3200,
+                    "endMs": 3540
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3540,
+                    "endMs": 3820
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "reviewLessons": [
@@ -234530,6 +236579,1558 @@
         }
       },
       "notes": "Teacher-approved pair, Production D. Playable L390 -> R047 -> R048 -> L391. Boundary 23cae19103e760f23700f5ff90d72fbd2e59bfc6: L001-L390 formal; all lesson dependencies satisfied. Vocabulary ceiling L390, 394 Han. R047-S05 four functional lines approved; R048-S01 only route digit 1 approved in image. R048-S04 數數 = ㄕㄨˇ ㄕㄨˋ. Exact approved sentences and game plans preserved. R047-G02 suffix teacher manual audio QA PASS; exact audio bytes retained, see R047-G02-teacher-approval.json. Technical and image QA records: generated/R047-R048-package-qa.md and per-unit technical-qa.json. Browser recording/highlight QA limitations recorded separately; no claim of human QA for the whole pair."
+    },
+    {
+      "id": "R049",
+      "reviewNumber": 49,
+      "title": "複習四十九",
+      "afterLessonOrder": 405,
+      "targetLessonRange": {
+        "startOrder": 376,
+        "endOrder": 405
+      },
+      "requiredCoverageChars": [
+        "已",
+        "近",
+        "接",
+        "送",
+        "連",
+        "傳",
+        "相",
+        "信",
+        "寫",
+        "字",
+        "名",
+        "第",
+        "念",
+        "號",
+        "數",
+        "報",
+        "頁",
+        "碼",
+        "翻",
+        "印",
+        "單",
+        "雙",
+        "選",
+        "或",
+        "者",
+        "勇",
+        "強",
+        "算",
+        "弱",
+        "越"
+      ],
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "R049-S01",
+          "text": "最近接連下雨，鞋子都濕了。",
+          "spokenText": "最近接連下雨鞋子都濕了",
+          "displayLines": [
+            "最近接連",
+            "下雨，",
+            "鞋子都濕了。"
+          ],
+          "focusChar": "近",
+          "imageNotes": "家中玄關，主角小女孩與媽媽查看鞋架旁幾雙淋濕的鞋，鞋面有水珠，下面墊著吸水布。窗外仍在下雨，旁邊掛著濕雨衣。女孩有些無奈地看著鞋子，不用日曆或文字表現連日下雨。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. Home entryway. Recurring girl and mother inspect several pairs of rain-soaked shoes by shoe rack: visible drops and dark wet patches, absorbent cloth below. Rain visibly falling through nearby window, wet raincoat hanging beside door. Girl mildly resigned, mother understanding. No calendar or writing. Show wet SHOES as scene focus, no flooding.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R049/images/R049-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R049/audio/R049-S01.m4a",
+            "durationMs": 4767,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 430
+              },
+              {
+                "charIndex": 1,
+                "startMs": 430,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 860,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1660,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1840,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2240,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2820,
+                "endMs": 3320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3320,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3500,
+                "endMs": 4080
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4080,
+                "endMs": 4280
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4280,
+                "endMs": 4567
+              }
+            ]
+          }
+        },
+        {
+          "id": "R049-S02",
+          "text": "信已寫好，請爸爸幫我送。",
+          "spokenText": "信已寫好請爸爸幫我送",
+          "displayLines": [
+            "信已寫好，",
+            "請爸爸",
+            "幫我送。"
+          ],
+          "focusChar": "寫",
+          "imageNotes": "家中桌旁，主角小女孩將裝好信的信封交給準備出門的爸爸。桌上留著剛用過的筆，女孩指著信封向爸爸交代，爸爸伸手接過。信封不需可讀姓名、地址或郵票文字。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. Home table. Recurring girl hands ONE closed envelope containing finished letter to recurring father who is ready to leave home. Father reaches to receive envelope; girl points toward it explaining. Just-used pen remains on table. Envelope plain, no legible address, name, stamp writing or numbers. Warm family interaction, not blank letter writing stage.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R049/images/R049-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R049/audio/R049-S02.m4a",
+            "durationMs": 4767,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 600
+              },
+              {
+                "charIndex": 1,
+                "startMs": 600,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1280,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1540,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2520,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2840,
+                "endMs": 3090
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3090,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3340,
+                "endMs": 3920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3920,
+                "endMs": 4340
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4340,
+                "endMs": 4567
+              }
+            ]
+          }
+        },
+        {
+          "id": "R049-S03",
+          "text": "我相信飛馬的傳說是真的。",
+          "spokenText": "我相信飛馬的傳說是真的",
+          "displayLines": [
+            "我相信飛馬的",
+            "傳說是真的。"
+          ],
+          "focusChar": "傳",
+          "imageNotes": "主角小女孩坐在家中看一本打開的圖畫書，書頁畫著長翅膀的白馬。女孩望著畫面，神情嚮往；頭頂一個想像泡泡呈現飛馬張開翅膀飛過山谷。明確區分書中傳說與現實，不把飛馬畫成真的出現在客廳。不沿用先前小光傳球的舊稿。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. Recurring girl sits at home reading OPEN PICTURE BOOK; visible illustration on page shows a white horse with feathered wings. Girl gazes dreamily at it. Above her a clearly bounded soft-edged IMAGINATION THOUGHT BUBBLE linked by small bubble trail contains winged white horse flying over mountain valley. Absolutely distinguish imagined scene from real living room. Only one bubble. No actual horse in room. No letters in book or bubble. Retain rich book-style painting, bubble picture is story imagination.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R049/images/R049-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R049/audio/R049-S03.m4a",
+            "durationMs": 3699,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1560
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1560,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1660,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1920,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2240,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2480,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3060,
+                "endMs": 3250
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3250,
+                "endMs": 3499
+              }
+            ]
+          }
+        },
+        {
+          "id": "R049-S04",
+          "text": "報名時，要寫名字和學號。",
+          "spokenText": "報名時要寫名字和學號",
+          "displayLines": [
+            "報名時，",
+            "要寫名字",
+            "和學號。"
+          ],
+          "focusChar": "名",
+          "imageNotes": "學校活動報名桌旁，老師指著報名紙的填寫位置，主角小女孩拿筆準備填寫。桌旁放著球與活動用品，交代校內活動報名。紙張朝向師生，觀者不需要讀到欄名或填寫內容；只需一般表格線。不要增加姓名、學號、Name、Student ID 等可讀欄名。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. School activity registration table. Fixed ponytail teacher teal blouse beige skirt points to a blank form position while recurring girl holds pencil ready to fill it. Ball and activity equipment beside table establish school event. Paper faces teacher and girl, only ordinary blank table ruling can be visible, NO readable column headings, handwriting, names, numbers, Name or Student ID. Teacher not mother.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R049/images/R049-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R049/audio/R049-S04.m4a",
+            "durationMs": 4315,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 580
+              },
+              {
+                "charIndex": 1,
+                "startMs": 580,
+                "endMs": 920
+              },
+              {
+                "charIndex": 2,
+                "startMs": 920,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1340,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2000,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2360,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2720,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2920,
+                "endMs": 3540
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3540,
+                "endMs": 3900
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3900,
+                "endMs": 4115
+              }
+            ]
+          }
+        },
+        {
+          "id": "R049-S05",
+          "text": "請念第一行，再數有幾個字。",
+          "spokenText": "請念第一行再數有幾個字",
+          "displayLines": [
+            "請念第一行，",
+            "再數",
+            "有幾個字。"
+          ],
+          "focusChar": "數",
+          "zhuyinOverrides": {
+            "4": "ㄏㄤˊ",
+            "6": "ㄕㄨˇ"
+          },
+          "imageNotes": "教室裡，主角小女孩拿著打開的課本，書頁朝向自己，低頭開口念，手指在書頁上逐字點數。老師在旁指示她從第一行開始。從女孩前側方取景，觀者看得到她的臉、手勢與課本外側，但看不到書頁內文。課本封面也不需文字。 不生成漢字、英文或字母，不展示字數或答案。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. Classroom, recurring girl holds open textbook UPRIGHT with inner pages facing HER torso and eyes. Camera in FRONT of girl slightly to side, so viewer sees her face looking down and mouth open reading, hand/finger moving just above top edge as she points on hidden inner page, and the plain outer book covers; inner printed surfaces fully occluded by book itself. Fixed ponytail teacher teal blouse beside her gestures gently toward top of hidden page. Absolutely no inner text visible, no Han/English/letters, no DOG/BIRD or counting design; blank covers. Do NOT rotate open pages toward viewer. Make book geometry plausible with finger seen at upper edge without revealing inner content.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R049/images/R049-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R049/audio/R049-S05.m4a",
+            "durationMs": 5287,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 720
+              },
+              {
+                "charIndex": 1,
+                "startMs": 720,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1060,
+                "endMs": 1490
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1490,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1920,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2700,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3240,
+                "endMs": 3780
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3780,
+                "endMs": 4400
+              },
+              {
+                "charIndex": 8,
+                "startMs": 4400,
+                "endMs": 4520
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4520,
+                "endMs": 4760
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4760,
+                "endMs": 5087
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "R049-G01",
+          "type": "find-character",
+          "sentenceId": "R049-S01",
+          "targetChar": "近",
+          "targetCharIndex": 1,
+          "prompt": "找出句子裡的字。"
+        },
+        {
+          "id": "R049-G02",
+          "type": "teach-character",
+          "sentenceId": "R049-S03",
+          "targetChar": "傳",
+          "targetCharIndex": 6,
+          "prompt": "教小兔子念這個字。",
+          "teachAudio": {
+            "prefixText": "我相信飛馬的",
+            "suffixText": "說是真的",
+            "prefixSrc": "/assets/reviews/R049/audio/R049-G02-prefix.m4a",
+            "suffixSrc": "/assets/reviews/R049/audio/R049-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/reviews/R049/audio/R049-G02-prefix.m4a",
+              "durationMs": 2347,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 480
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 480,
+                  "endMs": 790
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 790,
+                  "endMs": 1100
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1100,
+                  "endMs": 1660
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1660,
+                  "endMs": 1840
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 1840,
+                  "endMs": 2147
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/reviews/R049/audio/R049-G02-suffix.m4a",
+              "durationMs": 2556,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 700
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 1130,
+                  "endMs": 1770
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 1770,
+                  "endMs": 2030
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 2030,
+                  "endMs": 2356
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "R049-G03",
+          "type": "missing-character",
+          "sentenceId": "R049-S02",
+          "targetChar": "寫",
+          "targetCharIndex": 2,
+          "prompt": "找出少了哪個字。",
+          "missingIndexes": [
+            2
+          ],
+          "options": [
+            {
+              "id": "correct",
+              "text": "寫",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "看",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "念",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "R049-G04",
+          "type": "partial-order",
+          "sentenceId": "R049-S04",
+          "targetChar": "名",
+          "targetCharIndex": 1,
+          "prompt": "把字放回句子裡。",
+          "missingIndexes": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "options": [
+            {
+              "id": "card-zi",
+              "text": "字",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-xie",
+              "text": "寫",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-he",
+              "text": "和",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-ming",
+              "text": "名",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "R049-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "R049-S05",
+          "targetChar": "數",
+          "targetCharIndex": 6,
+          "prompt": "聽聽看，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "請念第一行，再數有幾個字。",
+              "correct": true,
+              "audioSrc": "/assets/reviews/R049/audio/R049-S05.m4a",
+              "audio": {
+                "src": "/assets/reviews/R049/audio/R049-S05.m4a",
+                "durationMs": 5287,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 720
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 720,
+                    "endMs": 1060
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 1060,
+                    "endMs": 1490
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1490,
+                    "endMs": 1920
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1920,
+                    "endMs": 2320
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2700,
+                    "endMs": 3240
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 3240,
+                    "endMs": 3780
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3780,
+                    "endMs": 4400
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 4400,
+                    "endMs": 4520
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 4520,
+                    "endMs": 4760
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 4760,
+                    "endMs": 5087
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "請念第二行，再數有幾個字。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R049/audio/R049-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/reviews/R049/audio/R049-G05-wrong-one.m4a",
+                "durationMs": 4282,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 700
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 700,
+                    "endMs": 960
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 960,
+                    "endMs": 1260
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1260,
+                    "endMs": 1560
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1560,
+                    "endMs": 1960
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2540,
+                    "endMs": 2860
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2860,
+                    "endMs": 3100
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3100,
+                    "endMs": 3460
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3460,
+                    "endMs": 3660
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3660,
+                    "endMs": 3820
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3820,
+                    "endMs": 4082
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "請念第一行，再看有幾個字。",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R049/audio/R049-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/reviews/R049/audio/R049-G05-wrong-two.m4a",
+                "durationMs": 4435,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 740
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 740,
+                    "endMs": 960
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 960,
+                    "endMs": 1250
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1250,
+                    "endMs": 1540
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1540,
+                    "endMs": 1880
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2780,
+                    "endMs": 2980
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2980,
+                    "endMs": 3320
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3320,
+                    "endMs": 3660
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3660,
+                    "endMs": 3820
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3820,
+                    "endMs": 4000
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 4000,
+                    "endMs": 4235
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R050",
+      "reviewNumber": 50,
+      "title": "複習五十",
+      "afterLessonOrder": 405,
+      "targetLessonRange": {
+        "startOrder": 376,
+        "endOrder": 405
+      },
+      "requiredCoverageChars": [
+        "已",
+        "近",
+        "接",
+        "送",
+        "連",
+        "傳",
+        "相",
+        "信",
+        "寫",
+        "字",
+        "名",
+        "第",
+        "念",
+        "號",
+        "數",
+        "報",
+        "頁",
+        "碼",
+        "翻",
+        "印",
+        "單",
+        "雙",
+        "選",
+        "或",
+        "者",
+        "勇",
+        "強",
+        "算",
+        "弱",
+        "越"
+      ],
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "R050-S01",
+          "text": "翻到下一頁，頁碼印在右下角。",
+          "spokenText": "翻到下一頁頁碼印在右下角",
+          "displayLines": [
+            "翻到下一頁，",
+            "頁碼印在",
+            "右下角。"
+          ],
+          "focusChar": "頁",
+          "imageNotes": "家中書桌旁，主角小女孩剛翻過書頁，爸爸指向新頁面右下角的頁碼「8」。書頁攤開、正向閱讀，右下角位置清楚，頁碼不被手遮住。其他內容以插圖呈現，不增加書名或其他文字。這是正常印好的頁碼，不是缺頁碼或印刷錯誤。 老師批准單一頁碼8入圖。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. Home desk. Recurring girl just turned leaf of an open picture book leftward; recurring father points beside BOTTOM RIGHT corner of new RIGHT page. One clearly normal printed black digit 8 in that corner, unoccluded. Pages oriented upright to reading family, wordless pictures elsewhere. Page number is correctly printed, no printing defects or missing number. Only readable mark allowed anywhere is this single 8.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R050/images/R050-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R050/audio/R050-S01.m4a",
+            "durationMs": 3945,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1050
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1050,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1800,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2180,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2360,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2660,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2960,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3180,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3500,
+                "endMs": 3745
+              }
+            ]
+          }
+        },
+        {
+          "id": "R050-S02",
+          "text": "選單人房或者雙人房，都好。",
+          "spokenText": "選單人房或者雙人房都好",
+          "displayLines": [
+            "選單人房",
+            "或者雙人房，",
+            "都好。"
+          ],
+          "focusChar": "雙",
+          "imageNotes": "飯店櫃台前，主角爸爸查看工作人員展示的兩張房型照片：一張是單人床與一個枕頭，另一張是雙人床與兩個枕頭。爸爸神情輕鬆、手掌朝向兩張照片，表示兩種都能接受。爸爸單獨辦理住宿，不畫一家四口準備擠進單人房；照片不需房型文字或價格。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. Hotel reception. ONLY recurring father is customer, no mother or child. Distinct male clerk neat hair glasses gray vest displays two large side-by-side printed ROOM PHOTOGRAPHS on counter, both fully visible: left single narrow bed with exactly ONE pillow, right wide double bed with exactly TWO pillows. The father has a relaxed open palm gestures toward BOTH photos, accepting either option. Photo bed size difference very clear. No real beds on counter, no labels or price writing.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R050/images/R050-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R050/audio/R050-S02.m4a",
+            "durationMs": 4553,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 660
+              },
+              {
+                "charIndex": 1,
+                "startMs": 660,
+                "endMs": 980
+              },
+              {
+                "charIndex": 2,
+                "startMs": 980,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1220,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1480,
+                "endMs": 1870
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1870,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2760,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3060,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3340,
+                "endMs": 3880
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3880,
+                "endMs": 4353
+              }
+            ]
+          }
+        },
+        {
+          "id": "R050-S03",
+          "text": "勇者很強，但也有弱點。",
+          "spokenText": "勇者很強但也有弱點",
+          "displayLines": [
+            "勇者很強，",
+            "但也有弱點。"
+          ],
+          "focusChar": "弱",
+          "imageNotes": "童話場景中，勇者剛用力搬開一塊大石頭，露出石頭下的小蟲，卻嚇得縮腳後退、表情緊張。大石頭與勇者動作交代力量強，小蟲與反應呈現他仍有害怕的事。不是說勇者全然無能，不畫受傷或血腥。不沿用 L404 怪物腳踝受擊的畫面。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. Fairytale forest clearing with distinct STORY HERO, not recurring family: wavy chestnut hair crimson cape green tunic brown boots, shield on back. Hero has JUST shoved a heavy large boulder to one side leaving a bare depression in ground; huge rock and his braced posture demonstrate strength. A tiny harmless worm or beetle exposed in depression startles him: one boot lifted, body recoiling, worried face staring down at insect. Show both moved boulder and tiny bug clearly. No injury, blood, attacking, monster or ankle blow. He is strong but scared of small bug, not weak overall. No modern pink girl or family characters.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R050/images/R050-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R050/audio/R050-S03.m4a",
+            "durationMs": 3999,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 540
+              },
+              {
+                "charIndex": 1,
+                "startMs": 540,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1320,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2260,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2500,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2840,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3240,
+                "endMs": 3440
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3440,
+                "endMs": 3799
+              }
+            ]
+          }
+        },
+        {
+          "id": "R050-S04",
+          "text": "小狗越跑越快，我跟不上。",
+          "spokenText": "小狗越跑越快我跟不上",
+          "displayLines": [
+            "小狗",
+            "越跑越快，",
+            "我跟不上。"
+          ],
+          "focusChar": "越",
+          "imageNotes": "公園寬闊草地上，主角小女孩正追著往前跑的小狗，兩者已拉開距離。小狗步伐輕快、身體向前伸展，女孩努力跑但落在後方；爸爸在不遠處看顧。場地遠離車道與水邊，只畫一隻小狗，不用分身表示速度。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. Wide safe park lawn far from roads or water. ONE small dog stretched forward in a lively running stride, noticeably ahead of recurring girl running hard to catch up, distance visible between them. Recurring father watches nearby in background. Girl effortful but safe, dog happy, no duplicate dogs or motion ghosts. Clear forward running direction across grassy open space. No text.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R050/images/R050-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R050/audio/R050-S04.m4a",
+            "durationMs": 3545,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 580
+              },
+              {
+                "charIndex": 1,
+                "startMs": 580,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1440,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1760,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2540,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 2940
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2940,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3120,
+                "endMs": 3345
+              }
+            ]
+          }
+        },
+        {
+          "id": "R050-S05",
+          "text": "算一算，買菜的錢夠不夠？",
+          "spokenText": "算一算買菜的錢夠不夠",
+          "displayLines": [
+            "算一算，",
+            "買菜的錢",
+            "夠不夠？"
+          ],
+          "focusChar": "算",
+          "imageNotes": "市場攤位前，主角媽媽與女孩查看準備購買的兩樣菜。兩樣菜分別標「20」「30」；媽媽攤開手中三枚簡化教學硬幣，每枚清楚標「10」，女孩對照價牌計算。硬幣恰好三枚，不需真實幣面細節。不寫總價、不寫「不夠」或其他答案。 老師批准20、30和恰好三枚10入圖，不顯示答案。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Match full L058 style sheet: fine textured pencil and painted shading, modeled expressive faces, rich sunny colors, detailed environments, not flat cartoon, anime, 3D, photo, thin/simple watercolor. Family cast sheet: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother chin-length side-parted dark hair ivory blouse blue jeans; father short tousled dark hair blue shirt beige trousers. Teacher reference L374-S04: ponytail teal blouse beige long skirt, NOT mother. References are style/cast only, NOT edit targets. Square safe margins. No readable Han, English, letters, numbers, labels, logos or captions anywhere EXCEPT exact digits explicitly allowed in the scene. Market vegetable stall. Recurring mother and girl consider exactly TWO types of vegetables displayed in separate baskets. ONE plain price card by left vegetables reads EXACTLY 20, ONE by right vegetables reads EXACTLY 30. Foreground mother extends ONE open palm carrying EXACTLY THREE large separated simplified teaching coins side by side, each coin reads EXACTLY 10 clearly. Three coin circles only, no stacked or hidden extra coins. Girl compares palm coins with two price signs while thinking. Composition makes the THREE coin labels legible at phone size, all in same readable orientation. No realistic currency designs, no totals, plus/equal signs, calculations, answer, speech bubbles or any other text/numbers. ONLY allowed digits: 20 and30 on signs; 10,10,10 on three coins. Faces and context remain visible.",
+          "imageReuseDecision": "New approved scene requires purpose-built illustration with fixed role and visibility constraints.",
+          "imageSrc": "/assets/reviews/R050/images/R050-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/reviews/R050/audio/R050-S05.m4a",
+            "durationMs": 3968,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 540
+              },
+              {
+                "charIndex": 1,
+                "startMs": 540,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1600,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2000,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2260,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2820,
+                "endMs": 3280
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3280,
+                "endMs": 3480
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3480,
+                "endMs": 3768
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "R050-G01",
+          "type": "find-character",
+          "sentenceId": "R050-S01",
+          "targetChar": "頁",
+          "targetCharIndex": 4,
+          "prompt": "找出句子裡的字。"
+        },
+        {
+          "id": "R050-G02",
+          "type": "teach-character",
+          "sentenceId": "R050-S02",
+          "targetChar": "雙",
+          "targetCharIndex": 6,
+          "prompt": "教小兔子念這個字。",
+          "teachAudio": {
+            "prefixText": "選單人房或者",
+            "suffixText": "人房都好",
+            "prefixSrc": "/assets/reviews/R050/audio/R050-G02-prefix.m4a",
+            "suffixSrc": "/assets/reviews/R050/audio/R050-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/reviews/R050/audio/R050-G02-prefix.m4a",
+              "durationMs": 3414,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 700
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 700,
+                  "endMs": 1340
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 1340,
+                  "endMs": 1660
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1660,
+                  "endMs": 2040
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 2040,
+                  "endMs": 2510
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 2510,
+                  "endMs": 3214
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/reviews/R050/audio/R050-G02-suffix.m4a",
+              "durationMs": 2192,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 640
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 680,
+                  "endMs": 1100
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 1220,
+                  "endMs": 1500
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1580,
+                  "endMs": 1992
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "R050-G03",
+          "type": "missing-character",
+          "sentenceId": "R050-S03",
+          "targetChar": "弱",
+          "targetCharIndex": 7,
+          "prompt": "找出少了哪個字。",
+          "missingIndexes": [
+            7
+          ],
+          "options": [
+            {
+              "id": "correct",
+              "text": "弱",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "強",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "大",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "R050-G04",
+          "type": "partial-order",
+          "sentenceId": "R050-S04",
+          "targetChar": "越",
+          "targetCharIndex": 2,
+          "prompt": "把字放回句子裡。",
+          "missingIndexes": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "options": [
+            {
+              "id": "card-shang",
+              "text": "上",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-wo",
+              "text": "我",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-bu",
+              "text": "不",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-gen",
+              "text": "跟",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "R050-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "R050-S05",
+          "targetChar": "算",
+          "targetCharIndex": 0,
+          "prompt": "聽聽看，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "算一算，買菜的錢夠不夠？",
+              "correct": true,
+              "audioSrc": "/assets/reviews/R050/audio/R050-S05.m4a",
+              "audio": {
+                "src": "/assets/reviews/R050/audio/R050-S05.m4a",
+                "durationMs": 3968,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 540
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 540,
+                    "endMs": 760
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 760,
+                    "endMs": 1100
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1600,
+                    "endMs": 2000
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 2000,
+                    "endMs": 2260
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2260,
+                    "endMs": 2500
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2500,
+                    "endMs": 2820
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2820,
+                    "endMs": 3280
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3280,
+                    "endMs": 3480
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3480,
+                    "endMs": 3768
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "算一算，買書的錢夠不夠？",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R050/audio/R050-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/reviews/R050/audio/R050-G05-wrong-one.m4a",
+                "durationMs": 3654,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 520
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 520,
+                    "endMs": 760
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 760,
+                    "endMs": 1300
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1300,
+                    "endMs": 1920
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1920,
+                    "endMs": 2180
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2180,
+                    "endMs": 2380
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2380,
+                    "endMs": 2700
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2700,
+                    "endMs": 2980
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2980,
+                    "endMs": 3160
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3160,
+                    "endMs": 3454
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "算一算，買菜的錢多不多？",
+              "correct": false,
+              "audioSrc": "/assets/reviews/R050/audio/R050-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/reviews/R050/audio/R050-G05-wrong-two.m4a",
+                "durationMs": 4010,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 760
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 760,
+                    "endMs": 1080
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 1080,
+                    "endMs": 1500
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 2020,
+                    "endMs": 2260
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 2260,
+                    "endMs": 2480
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2480,
+                    "endMs": 2720
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2720,
+                    "endMs": 2980
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2980,
+                    "endMs": 3340
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3340,
+                    "endMs": 3520
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3520,
+                    "endMs": 3810
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

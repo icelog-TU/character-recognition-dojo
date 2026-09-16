@@ -1,0 +1,18 @@
+[
+  {
+    "script": "scripts/validate-production-assets.mjs",
+    "args": [],
+    "scope": "R049 draft temporarily projected for package-local validation; production JSON restored byte-for-byte",
+    "exitCode": 0,
+    "output": "Production assets OK.\n"
+  },
+  {
+    "script": "scripts/audit-asset-formats.mjs",
+    "args": [
+      "--strict"
+    ],
+    "scope": "R049 draft temporarily projected for package-local validation; production JSON restored byte-for-byte",
+    "exitCode": 0,
+    "output": "Audited 1 unit(s), 5 image reference(s), 9 audio reference(s).\nAsset format audit OK with 0 warning(s).\n"
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "unit": "R049",
+  "generation": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "speed": 0.9,
+    "language": "Taiwan Mandarin"
+  },
+  "transcripts": [
+    {
+      "id": "R049-G02-prefix",
+      "model": "whisper-1",
+      "text": "我相信飛馬的",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R049-G02-suffix",
+      "model": "whisper-1",
+      "text": "說是真的",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R049-G05-wrong-one",
+      "model": "whisper-1",
+      "text": "請念第二行,再數有幾個字。",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R049-G05-wrong-two",
+      "model": "whisper-1",
+      "text": "請念第一行,再看有幾個字。",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R049-S01",
+      "model": "whisper-1",
+      "text": "最近接连下雨,鞋子都湿了。",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R049-S02",
+      "model": "whisper-1",
+      "text": "信已寫好,請爸爸幫我送。",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R049-S03",
+      "model": "whisper-1",
+      "text": "我相信飛馬的傳說是真的!",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R049-S04",
+      "model": "whisper-1",
+      "text": "報名時要寫名字和學號。",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R049-S05",
+      "model": "whisper-1",
+      "text": "请念第一行再数有几个字。",
+      "expectedTextContextUsed": false
+    }
+  ],
+  "independent": [],
+  "review": "Final content compared with approved spokenText and exact Stage 4 pieces. Traditional/simplified equivalents normalized only. Two R050 clips independently matched without text context before contextual Whisper timing. Subjective listening not claimed."
+}
