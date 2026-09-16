@@ -829,3 +829,17 @@ No missing package assets or timings. Release awaits L408, L409, L410 and perfor
   "latestMainBoundary": "L407"
 }
 ```
+
+## Pushed intake
+
+Asset commit: 4bf9f0e331e4e3c3cc3ee134dde1cf526b057c5e.
+
+Command: npm run curriculum:package-intake -- --unit L411 --ref origin/codex/l411-complete-package --strict
+
+Result: PASS, exit0, zero warnings; 5 WebP and10 referenced M4A. Documentation-only follow-up is rechecked before final handoff.
+
+Pre-merge package preview, not final main repair queue: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L411&ref=4bf9f0e331e4e3c3cc3ee134dde1cf526b057c5e
+
+Audio review: https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L411&ref=4bf9f0e331e4e3c3cc3ee134dde1cf526b057c5e
+
+Post-merge repair status command: npm run asset:review-status -- --unit L411
