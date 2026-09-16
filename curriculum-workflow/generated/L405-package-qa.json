@@ -1,0 +1,130 @@
+{
+  "unit": "L405",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "sourceMainCommit": "c55571d841074bfa8f89e991936aa1a150eeb157",
+  "assets": [
+    {
+      "path": "public/assets/lessons/L405/images/L405-S01.webp",
+      "bytes": 214046,
+      "sha256": "7f4cb104dba97c7a845b4c409c56f7c2a69ff71544b702b4d51a409407e26945"
+    },
+    {
+      "path": "public/assets/lessons/L405/images/L405-S02.webp",
+      "bytes": 203952,
+      "sha256": "1c7d3c0b8d46bec9f2d92ded15dd66107e25c19a7a5f6e1dffbb1c6eedd18c7b"
+    },
+    {
+      "path": "public/assets/lessons/L405/images/L405-S03.webp",
+      "bytes": 159862,
+      "sha256": "7471e3258949370823750c64557d843f7d8d71d8e10f27477163d681234fb3af"
+    },
+    {
+      "path": "public/assets/lessons/L405/images/L405-S04.webp",
+      "bytes": 130608,
+      "sha256": "7695f57dd12f28ea3e76f48f1a4ed9c07c382cf008e264b03980d3be7ab66d2c"
+    },
+    {
+      "path": "public/assets/lessons/L405/images/L405-S05.webp",
+      "bytes": 209330,
+      "sha256": "7664679055554d4cf7085543c903d8cf808487001d3ea5a9dd046a301d77ef8c"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/char-u8d8a.m4a",
+      "bytes": 12379,
+      "sha256": "3248debb199b3f7714dc69d39467d9ef9eaa9aa80e60a6058e8b22f42377b2a5"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/L405-G02-prefix.m4a",
+      "bytes": 25451,
+      "sha256": "8e70cbf137db12037c9ca8ae826d6e29373c58959c8725c54ee1fc52272e4689"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/L405-G02-suffix.m4a",
+      "bytes": 24975,
+      "sha256": "f105a2b6cf71cdf9423c7813246ecc8b4e6ce534019bcf4245585b98a37bd069"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/L405-G05-wrong-one.m4a",
+      "bytes": 56400,
+      "sha256": "0bb0e1838a29e8602409f0fb0f31761eec55c8c9e69cbd4620813fbd13ef7b52"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/L405-G05-wrong-two.m4a",
+      "bytes": 45565,
+      "sha256": "4f2b3ef332c968e239e06089c6e98294f6e753248a6c802be8034430b73a0f13"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/L405-S01.m4a",
+      "bytes": 53786,
+      "sha256": "3498a5cce9e84a5af7215e6e97f856d9c5accbb235aef515126aaff361143bca"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/L405-S02.m4a",
+      "bytes": 57222,
+      "sha256": "bf63781fd5fa1818dfdbb3d1303b479fd1b686497984ec1a8fcc6e9631bd34e4"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/L405-S03.m4a",
+      "bytes": 51706,
+      "sha256": "36b7bbbd8eace3e42e38e14468539a5afea8bc18eb880035888b2360475a3b82"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/L405-S04.m4a",
+      "bytes": 50502,
+      "sha256": "21d99ab220493ca3eeab1d082e5744299329a96d652a75f7b06cda869b62d054"
+    },
+    {
+      "path": "public/assets/lessons/L405/audio/L405-S05.m4a",
+      "bytes": 54086,
+      "sha256": "471fe01869bf71588ec0b34a06f62efdd7d467a6f08a2a55e77cd0da3516812d"
+    }
+  ],
+  "totalBytes": 1349870,
+  "checks": {
+    "requestDraftAgreement": "PASS",
+    "orderedBoundedTimings": "PASS",
+    "assetsAuditStrict": "PASS: 5 images, 10 audio references, zero warnings",
+    "validateProduction": "PASS: isolated lesson-local curriculum",
+    "allowedChars": 400,
+    "coverage": {
+      "越": 5,
+      "弱": 2,
+      "算": 3,
+      "強": 2,
+      "勇": 1,
+      "者": 1
+    }
+  },
+  "limitations": [
+    "Subjective human pronunciation listening not performed",
+    "Physical-phone and microphone interaction not performed",
+    "Full app integration is Release-owned after dependencies"
+  ],
+  "styleCast": [
+    {
+      "id": "L405-S01",
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L405-S02",
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L405-S03",
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L405-S04",
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "id": "L405-S05",
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ]
+}
