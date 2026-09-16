@@ -1,0 +1,656 @@
+{
+  "unit": "L432",
+  "notes": "Production technical QA: exact teacher-approved text, spokenText, displayLines, focusChar and imageNotes retained; 430 allowed characters; coverage 意4 由2 主2 己2 自2 員1. Canonical five games and zero-based Han-only indexes verified. All nine sentence/Stage 4 fragment or option M4A files AI-aligned against approved Han text after simplified/traditional normalization. S04 name disambiguation used 人物姓名：小月、小光。 G02 prefix used vocabulary context 商店、店員、同學、經過。 Independent gpt-4o-transcribe without prompt also returned exactly 沒經過店員同; prefix stops after 同 and contains no 意. Char audio regenerated independently from 意 with explicit Taiwan fourth-tone ㄧˋ instruction; Whisper with vocabulary context 主意、同意、得意 returned 意. Independent no-context gpt-4o-transcribe interpreted the isolated vowel as Latin I; contextual transcription is recorded as technical evidence, not human listening approval. Nine aligned files have complete ordered nonoverlapping timings, all Han spans 140-620 ms; no fabricated timing, no speech splicing or tail clipping. Ten M4A files decoded as mono AAC 44100 Hz, required loudness thresholds passed; G05 mean-volume spread 0.6 dB. S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS. Actual final WebP compared with all L058 style references, refined L115/L118/L119/L128 examples, family L154/L162/L163 anchors and S04 xiaoyue.webp. S04 initial foreground blur was rejected and redrawn in unified exquisite pencil-watercolor; rejected draft not committed. Browser QA at http://127.0.0.1:5432/character-recognition-dojo/, viewport 390x844: all five final Stage 3 square images and exact approved displayLines fit without horizontal clipping. Each sentence card entered playback state and displayed initial character highlighting. 意 ㄧˋ, S04 角 ㄐㄧㄠˇ and S05 得 ㄉㄜˊ rendered at correct positions. Stage 1 target tap reached completion; G01 correct 意 accepted; G02 reached the teaching state stopped before 意 after dedicated prefix playback; G03 意 filled S04 index9; G04 shuffled single-Han cards accepted 自己選 order. G05 three reader buttons exercised and phone layout inspected; no console error/warning observed. Browser control provides screenshots/DOM without audible output capture or a human microphone input. Subjective syllable-to-highlight listening, actual recorded-voice replay and full reward completion were not performed; no human listening or full browser recording QA is claimed. Technical transcripts/timings/loudness checks are supplied, and teacher subjective review remains post-merge. Full verify skipped: dependency-blocked; shared production JSON, planner, ledger and generation scripts restored. Release owns sequential L421-L431 integration and R051/R052 after L420 covering L391-L420 before L432.",
+  "coverage": {
+    "意": 4,
+    "由": 2,
+    "主": 2,
+    "己": 2,
+    "自": 2,
+    "員": 1
+  },
+  "allowed": 430,
+  "assetBytes": 1400230,
+  "g05MeanSpreadDb": 0.6000000000000014,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L432/images/L432-S01.webp",
+      "bytes": 165250,
+      "sha256": "b4e0f93edd1d64447869868e8c9413ee2dbfa6f859f48d652aca4245063b17eb"
+    },
+    {
+      "path": "public/assets/lessons/L432/images/L432-S02.webp",
+      "bytes": 177594,
+      "sha256": "63650bbd3ef806870c54586692e40dabe5a9e107c55b938303c64db4a63a2817"
+    },
+    {
+      "path": "public/assets/lessons/L432/images/L432-S03.webp",
+      "bytes": 181468,
+      "sha256": "29e248f7f2da42bbe12db72cb37206d0d645dd39e202aa526f0a53df996fff76"
+    },
+    {
+      "path": "public/assets/lessons/L432/images/L432-S04.webp",
+      "bytes": 212104,
+      "sha256": "a93b7c85bb40e9214b9ed62a1b3d0e456372820e67b6931bd8d7719d65b6aaea"
+    },
+    {
+      "path": "public/assets/lessons/L432/images/L432-S05.webp",
+      "bytes": 226172,
+      "sha256": "84746de61b4cfe24040133a5d99ee6d0de14f8901d2fd63171c4405a1ba1dcdc"
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/char-u610f.m4a",
+      "bytes": 31951,
+      "sha256": "075a26c4f81d05428c2a766301a85e663c2b3262aa69011298f45eb34628f9a2",
+      "durationMs": 2740,
+      "meanDb": -20.1,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/L432-G02-prefix.m4a",
+      "bytes": 39867,
+      "sha256": "c0e5279ad6052ec42e628b02f4a600473526b1e5d7757eb6a4126a95edec4c8d",
+      "durationMs": 4136,
+      "meanDb": -19.1,
+      "maxDb": -2.3
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/L432-G02-suffix.m4a",
+      "bytes": 31428,
+      "sha256": "5262db5d01a1b2e40d88849ea96ea2f2c830b4bc9f004d09a0dc4e4a9d2b620f",
+      "durationMs": 2624,
+      "meanDb": -19,
+      "maxDb": -2.5
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/L432-G05-wrong-one.m4a",
+      "bytes": 39938,
+      "sha256": "35f62a6e1f9d176747038fa8b77cb56d96941dbf18f5183371a3f58063cbbc98",
+      "durationMs": 3940,
+      "meanDb": -18.6,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/L432-G05-wrong-two.m4a",
+      "bytes": 41094,
+      "sha256": "5b2d9025d52dbe2ab35aa37f5bde1696a4f554c3e26569df47b189f3122594d4",
+      "durationMs": 3637,
+      "meanDb": -18.6,
+      "maxDb": -2.7
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/L432-S01.m4a",
+      "bytes": 46203,
+      "sha256": "afb56b92ee2cbd9f3b7f288e9fd579b7fdb5e92840d7f578548c3e10992a0bbc",
+      "durationMs": 3920,
+      "meanDb": -18.4,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/L432-S02.m4a",
+      "bytes": 52699,
+      "sha256": "6a11a73ffced9c91d94d11a155a6be5c61258eb5140eea0412760a800e8a36a3",
+      "durationMs": 4907,
+      "meanDb": -18.7,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/L432-S03.m4a",
+      "bytes": 52481,
+      "sha256": "8dcb96ae5a66317639026be9936e1f32c743495ea0084414aa7efadf32375cef",
+      "durationMs": 4580,
+      "meanDb": -20.2,
+      "maxDb": -1.9
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/L432-S04.m4a",
+      "bytes": 57763,
+      "sha256": "32bcadaf044b62c7bae83f998542cf20b0e71c957f1d5aa0ac2da1f3ceb8d178",
+      "durationMs": 5007,
+      "meanDb": -18.4,
+      "maxDb": -2.8
+    },
+    {
+      "path": "public/assets/lessons/L432/audio/L432-S05.m4a",
+      "bytes": 44218,
+      "sha256": "dbed939969da39fb243b5df39f4e6f205b75031a2c5d97e590620e2055898069",
+      "durationMs": 3807,
+      "meanDb": -18,
+      "maxDb": -4.6
+    }
+  ],
+  "transcripts": {
+    "L432-G02-prefix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.150000095367432,
+      "text": "沒經過店員同。",
+      "words": [
+        {
+          "word": "沒",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "經",
+          "start": 0.41999998688697815,
+          "end": 0.800000011920929
+        },
+        {
+          "word": "過",
+          "start": 0.800000011920929,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "店",
+          "start": 1.159999966621399,
+          "end": 1.4199999570846558
+        },
+        {
+          "word": "員",
+          "start": 1.4199999570846558,
+          "end": 1.8200000524520874
+        },
+        {
+          "word": "同。",
+          "start": 1.8200000524520874,
+          "end": 2.1600000858306885
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L432-G02-suffix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.619999885559082,
+      "text": "別自己動手",
+      "words": [
+        {
+          "word": "別",
+          "start": 0,
+          "end": 0.3799999952316284
+        },
+        {
+          "word": "自己",
+          "start": 0.3799999952316284,
+          "end": 0.8799999952316284
+        },
+        {
+          "word": "動",
+          "start": 0.8799999952316284,
+          "end": 1.2599999904632568
+        },
+        {
+          "word": "手",
+          "start": 1.2599999904632568,
+          "end": 1.5
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "L432-G05-wrong-one.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.940000057220459,
+      "text": "我跑到對面了,好得意!",
+      "words": [
+        {
+          "word": "我",
+          "start": 0,
+          "end": 0.30000001192092896
+        },
+        {
+          "word": "跑",
+          "start": 0.30000001192092896,
+          "end": 0.5600000023841858
+        },
+        {
+          "word": "到",
+          "start": 0.5600000023841858,
+          "end": 0.800000011920929
+        },
+        {
+          "word": "對",
+          "start": 0.800000011920929,
+          "end": 1.0399999618530273
+        },
+        {
+          "word": "面",
+          "start": 1.0399999618530273,
+          "end": 1.2599999904632568
+        },
+        {
+          "word": "了",
+          "start": 1.2599999904632568,
+          "end": 1.5
+        },
+        {
+          "word": "好",
+          "start": 2.0999999046325684,
+          "end": 2.2799999713897705
+        },
+        {
+          "word": "得",
+          "start": 2.2799999713897705,
+          "end": 2.559999942779541
+        },
+        {
+          "word": "意",
+          "start": 2.559999942779541,
+          "end": 2.7200000286102295
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L432-G05-wrong-two.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.640000104904175,
+      "text": "我游到對面了,好開心!",
+      "words": [
+        {
+          "word": "我",
+          "start": 0,
+          "end": 0.36000001430511475
+        },
+        {
+          "word": "游",
+          "start": 0.36000001430511475,
+          "end": 0.6399999856948853
+        },
+        {
+          "word": "到",
+          "start": 0.6399999856948853,
+          "end": 0.9200000166893005
+        },
+        {
+          "word": "對",
+          "start": 0.9200000166893005,
+          "end": 1.2000000476837158
+        },
+        {
+          "word": "面",
+          "start": 1.2000000476837158,
+          "end": 1.4199999570846558
+        },
+        {
+          "word": "了",
+          "start": 1.4199999570846558,
+          "end": 1.6799999475479126
+        },
+        {
+          "word": "好",
+          "start": 2.200000047683716,
+          "end": 2.380000114440918
+        },
+        {
+          "word": "開心",
+          "start": 2.380000114440918,
+          "end": 2.7799999713897705
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L432-S01.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.9200000762939453,
+      "text": "我有个主意,用盒子做车。",
+      "words": [
+        {
+          "word": "我有",
+          "start": 0,
+          "end": 0.4000000059604645
+        },
+        {
+          "word": "个",
+          "start": 0.4000000059604645,
+          "end": 0.7599999904632568
+        },
+        {
+          "word": "主",
+          "start": 0.7599999904632568,
+          "end": 1.100000023841858
+        },
+        {
+          "word": "意",
+          "start": 1.100000023841858,
+          "end": 1.2999999523162842
+        },
+        {
+          "word": "用",
+          "start": 1.7400000095367432,
+          "end": 1.9800000190734863
+        },
+        {
+          "word": "盒",
+          "start": 1.9800000190734863,
+          "end": 2.3399999141693115
+        },
+        {
+          "word": "子",
+          "start": 2.3399999141693115,
+          "end": 2.4800000190734863
+        },
+        {
+          "word": "做",
+          "start": 2.4800000190734863,
+          "end": 3.0799999237060547
+        },
+        {
+          "word": "车。",
+          "start": 3.0799999237060547,
+          "end": 3.319999933242798
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L432-S02.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.920000076293945,
+      "text": "沒經過店員同意,別自己動手。",
+      "words": [
+        {
+          "word": "沒",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "經",
+          "start": 0.41999998688697815,
+          "end": 0.7799999713897705
+        },
+        {
+          "word": "過",
+          "start": 0.7799999713897705,
+          "end": 1.1200000047683716
+        },
+        {
+          "word": "店",
+          "start": 1.1200000047683716,
+          "end": 1.3799999952316284
+        },
+        {
+          "word": "員",
+          "start": 1.3799999952316284,
+          "end": 1.6399999856948853
+        },
+        {
+          "word": "同",
+          "start": 1.6399999856948853,
+          "end": 1.9800000190734863
+        },
+        {
+          "word": "意",
+          "start": 1.9800000190734863,
+          "end": 2.2200000286102295
+        },
+        {
+          "word": "別",
+          "start": 2.700000047683716,
+          "end": 2.859999895095825
+        },
+        {
+          "word": "自己",
+          "start": 2.859999895095825,
+          "end": 3.3399999141693115
+        },
+        {
+          "word": "動",
+          "start": 3.3399999141693115,
+          "end": 3.7200000286102295
+        },
+        {
+          "word": "手。",
+          "start": 3.7200000286102295,
+          "end": 3.940000057220459
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L432-S03.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.590000152587891,
+      "text": "要学什么,由你自己选。",
+      "words": [
+        {
+          "word": "要",
+          "start": 0,
+          "end": 0.6000000238418579
+        },
+        {
+          "word": "学",
+          "start": 0.6000000238418579,
+          "end": 0.9200000166893005
+        },
+        {
+          "word": "什么",
+          "start": 0.9200000166893005,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "由",
+          "start": 1.940000057220459,
+          "end": 2.140000104904175
+        },
+        {
+          "word": "你",
+          "start": 2.140000104904175,
+          "end": 2.440000057220459
+        },
+        {
+          "word": "自己",
+          "start": 2.440000057220459,
+          "end": 2.880000114440918
+        },
+        {
+          "word": "选。",
+          "start": 2.880000114440918,
+          "end": 3.2200000286102295
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L432-S04.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 5.010000228881836,
+      "text": "由小月當主角,大家同意嗎?",
+      "words": [
+        {
+          "word": "由",
+          "start": 0,
+          "end": 0.6200000047683716
+        },
+        {
+          "word": "小",
+          "start": 0.6200000047683716,
+          "end": 0.9800000190734863
+        },
+        {
+          "word": "月",
+          "start": 0.9800000190734863,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "當",
+          "start": 1.159999966621399,
+          "end": 1.5
+        },
+        {
+          "word": "主",
+          "start": 1.5,
+          "end": 1.7599999904632568
+        },
+        {
+          "word": "角",
+          "start": 1.7599999904632568,
+          "end": 1.9800000190734863
+        },
+        {
+          "word": "大家",
+          "start": 2.5,
+          "end": 3
+        },
+        {
+          "word": "同",
+          "start": 3,
+          "end": 3.4000000953674316
+        },
+        {
+          "word": "意",
+          "start": 3.4000000953674316,
+          "end": 3.5799999237060547
+        },
+        {
+          "word": "嗎",
+          "start": 3.5799999237060547,
+          "end": 3.819999933242798
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 6
+      }
+    },
+    "L432-S05.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.799999952316284,
+      "text": "我游到对面了,好得意!",
+      "words": [
+        {
+          "word": "我",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "游",
+          "start": 0.46000000834465027,
+          "end": 0.7799999713897705
+        },
+        {
+          "word": "到",
+          "start": 0.7799999713897705,
+          "end": 1.0800000429153442
+        },
+        {
+          "word": "对",
+          "start": 1.0800000429153442,
+          "end": 1.399999976158142
+        },
+        {
+          "word": "面",
+          "start": 1.399999976158142,
+          "end": 1.600000023841858
+        },
+        {
+          "word": "了",
+          "start": 1.600000023841858,
+          "end": 1.8799999952316284
+        },
+        {
+          "word": "好",
+          "start": 2.5,
+          "end": 2.680000066757202
+        },
+        {
+          "word": "得",
+          "start": 2.680000066757202,
+          "end": 2.9600000381469727
+        },
+        {
+          "word": "意",
+          "start": 2.9600000381469727,
+          "end": 3.0999999046325684
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    }
+  },
+  "charTranscript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 2.7300000190734863,
+    "text": "意",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 2,
+        "text": "意",
+        "tokens": [
+          50364,
+          9042,
+          50464
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.8960351943969727,
+        "compression_ratio": 0.27272728085517883,
+        "no_speech_prob": 0.6302378177642822
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 3
+    }
+  },
+  "charIndependentTranscript": {
+    "text": "I",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 30,
+      "input_tokens": 27,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 27
+      },
+      "output_tokens": 3
+    }
+  },
+  "prefixIndependentTranscript": {
+    "text": "沒經過店員同",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 49,
+      "input_tokens": 41,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 41
+      },
+      "output_tokens": 8
+    }
+  },
+  "processing": {
+    "generation": "Standard ai:audio, coral, gpt-4o-mini-tts, speed 0.9. Explicit pronunciations: 意 ㄧˋ; 主角 角 ㄐㄧㄠˇ; 得意 得 ㄉㄜˊ. Wrong options generated from full spokenText. G02 prefix instructed to stop after 同 with no completion to 同意.",
+    "conversion": "Standard assets:audio mono AAC 44100 Hz and loudness normalization.",
+    "alignment": "Standard assets:align:ai with simplified/traditional equivalences and recorded disambiguation context; all scripts restored."
+  }
+}
