@@ -1,0 +1,113 @@
+{
+  "unit": "L419",
+  "folderBytes": 1290792,
+  "imageDimensions": "1024x1024",
+  "audio": [
+    {
+      "name": "char-u5408.m4a",
+      "duration": 1.997007,
+      "max": -2.8,
+      "mean": -19,
+      "trailingSilenceStart": 1.28469,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    },
+    {
+      "name": "L419-G02-prefix.m4a",
+      "duration": 0.951995,
+      "max": -5,
+      "mean": -16.3,
+      "trailingSilenceStart": 0.800023,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    },
+    {
+      "name": "L419-G02-suffix.m4a",
+      "duration": 3.065011,
+      "max": -3,
+      "mean": -17.9,
+      "trailingSilenceStart": 2.91102,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    },
+    {
+      "name": "L419-G05-wrong-one.m4a",
+      "duration": 4.062993,
+      "max": -2,
+      "mean": -17.6,
+      "trailingSilenceStart": 3.90304,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    },
+    {
+      "name": "L419-G05-wrong-two.m4a",
+      "duration": 3.412993,
+      "max": -2.7,
+      "mean": -18.1,
+      "trailingSilenceStart": 3.25927,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    },
+    {
+      "name": "L419-S01.m4a",
+      "duration": 3.947007,
+      "max": -2.6,
+      "mean": -17.8,
+      "trailingSilenceStart": 3.79206,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    },
+    {
+      "name": "L419-S02.m4a",
+      "duration": 3.110998,
+      "max": -2,
+      "mean": -17.7,
+      "trailingSilenceStart": 2.95902,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    },
+    {
+      "name": "L419-S03.m4a",
+      "duration": 3.97,
+      "max": -2,
+      "mean": -17.6,
+      "trailingSilenceStart": 3.80367,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    },
+    {
+      "name": "L419-S04.m4a",
+      "duration": 4.365011,
+      "max": -1.8,
+      "mean": -17.7,
+      "trailingSilenceStart": 4.20755,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    },
+    {
+      "name": "L419-S05.m4a",
+      "duration": 3.551995,
+      "max": -3.5,
+      "mean": -18.3,
+      "trailingSilenceStart": 3.39406,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1
+    }
+  ],
+  "checks": {
+    "packageLocal": "PASS",
+    "productionAssetsIsolatedFixture": "PASS",
+    "assetFormatsStrictIsolatedFixture": "PASS"
+  },
+  "browserScope": "Final main recheck 182ace5f6686596696c19359038879e9126e45b3: official L414 決. L415 解/L416 果/L417 如/L418 結 remain provisional. Five final 1024x1024 WebP images, ten OpenAI coral mono AAC 44100 Hz clips, nine AI-aligned timing records. Package-local text/coverage/index/timing checks PASS; validate:production and assets:audit --strict PASS against isolated L419 fixture, production JSON restored. G05 mean-volume spread 0.7 dB. Final folder 1290792 bytes. Per-image L058/refined/family side-by-side style-lock and cast PASS for S01,S02,S03,S04,S05; no image drafts rejected. Browser QA at 390x844 verified Stage3 layout, S01/S02 completed playback, and all three G05 completed playback; G05 correct choice and reward callback exercised. Browser automation fallback: startup timeout and repeated 3000 ms CDP Runtime.evaluate action timeouts; full five-sentence audible-highlight synchronization and G02 microphone/stitched recording QA unavailable in this tooling run. No physical-phone microphone or subjective teacher listening claim. Non-browser technical gates all pass. Teacher subjective review remains post-main. See L419-alignment-evidence.json for transcription contexts and two manually smoothed timing boundaries. Only measured trailing silence shortened after standard assets:audio; no syllable extraction/splicing. Release owns shared integration and full verify."
+}
