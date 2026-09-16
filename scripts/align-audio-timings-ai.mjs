@@ -41,6 +41,12 @@ function hanChars(text) {
 
 function normalizeTranscribedHanChar(char) {
   const simplifiedEquivalentMap = new Map([
+    ["\u9009", "\u9078"],
+    ["\u5355", "\u55ae"],
+    ["\u53cc", "\u96d9"],
+    ["\u8bb0", "\u8a18"],
+    ["\u6811", "\u6a39"],
+    ["\u98ce", "\u98a8"],
     ["\u4e2a", "\u500b"],
     ["\u8fd9", "\u9019"],
     ["\u5706", "\u5713"],
@@ -204,6 +210,7 @@ async function transcribeWithWords({ apiKey, filePath, fileName }) {
   form.append("model", "whisper-1");
   form.append("file", new Blob([fs.readFileSync(filePath)], { type: "audio/mp4" }), fileName);
   form.append("language", "zh");
+  if (args.prompt) form.append("prompt", String(args.prompt));
   form.append("response_format", "verbose_json");
   form.append("timestamp_granularities[]", "word");
 

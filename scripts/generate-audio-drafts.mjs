@@ -118,7 +118,7 @@ if (includeChars) {
       char,
       path.join(outputDir, `char-${filenameSafe(char)}.mp3`),
       zhuyin
-        ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once.`
+        ? `This is single-character audio. The target character is ${char}, pronounced with Taiwan zhuyin ${zhuyin}. Say ${char} exactly once. ${zhuyin.includes("ˇ") ? "This is THIRD tone: a low dipping contour, not a high falling fourth tone. Keep the full isolated third-tone syllable audible." : ""}`
         : "",
     );
   }
@@ -144,7 +144,8 @@ if (includeGameAudio) {
       const prefixText = chars.slice(0, game.targetCharIndex).join("");
       const suffixText = chars.slice(game.targetCharIndex + 1).join("");
       if (game.teachAudio?.prefixSrc) {
-        addJob(prefixText, path.join(outputDir, draftNameFromAudioSrc(game.teachAudio.prefixSrc)));
+        addJob(prefixText, path.join(outputDir, draftNameFromAudioSrc(game.teachAudio.prefixSrc)),
+          `Pronunciation context only: ${sentence.spokenText || sentence.text}. Read ONLY the supplied prefix input, exactly once. Preserve the context pronunciation of the last character. Stop before the target character ${game.targetChar}; do not complete the sentence.`);
       }
       if (game.teachAudio?.suffixSrc) {
         addJob(suffixText, path.join(outputDir, draftNameFromAudioSrc(game.teachAudio.suffixSrc)));
@@ -168,7 +169,7 @@ for (const job of jobs) {
     voice,
     input: job.input,
     outputPath: job.outputPath,
-    instructionsExtra: job.instructionsExtra,
+    instructionsExtra: [job.instructionsExtra, args.instructions].filter(Boolean).join(" "),
   });
 }
 

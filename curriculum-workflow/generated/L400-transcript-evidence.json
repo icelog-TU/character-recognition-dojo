@@ -1,0 +1,192 @@
+[
+  {
+    "file": "char-u8005.m4a",
+    "sha256": "8f52df031d25dba100a141c878426f200072e3aeadcead8aec357d80c7d42b1e",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "者。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 20,
+        "input_tokens": 16,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 16
+        },
+        "output_tokens": 4
+      }
+    }
+  },
+  {
+    "file": "L400-G02-prefix.m4a",
+    "sha256": "3a6574515e89cf3db41e7973c440a548ac3efb0ce05cad965c80575cd5eb8dcc",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "这本书上印着字。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 43,
+        "input_tokens": 33,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 33
+        },
+        "output_tokens": 10
+      }
+    }
+  },
+  {
+    "file": "L400-G02-suffix.m4a",
+    "sha256": "81d97554a97765353e493570b62d451b8483fe808e65fbf26abab5d4a3073045",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "的名字。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 16,
+        "input_tokens": 11,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 11
+        },
+        "output_tokens": 5
+      }
+    }
+  },
+  {
+    "file": "L400-G05-wrong-one.m4a",
+    "sha256": "9fad345e24c700cbdaa46709499ce43d8cb4b792cb44357a6dd51101f5d86b43",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "雙手拿好帽子，別讓風吹掉。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 47,
+        "input_tokens": 33,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 33
+        },
+        "output_tokens": 14
+      }
+    }
+  },
+  {
+    "file": "L400-G05-wrong-two.m4a",
+    "sha256": "afb909bb776bb75edb8562325b59e7534204b012542203a366298d9bbdb92a9d",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "雙手拿好盒子，別讓風吹走。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 50,
+        "input_tokens": 36,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 36
+        },
+        "output_tokens": 14
+      }
+    }
+  },
+  {
+    "file": "L400-S01.m4a",
+    "sha256": "252585a8fa4f8333f0e0f82c17761e8db28e033b579d90bb1e5f2f330a72edb2",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "打球可以选单打或者双打。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 48,
+        "input_tokens": 36,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 36
+        },
+        "output_tokens": 12
+      }
+    }
+  },
+  {
+    "file": "L400-S02.m4a",
+    "sha256": "41ee9710d75068365e3eb58f5a8683537b247a09ca952e490a6babc8cd04e2ea",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "選畫花或者畫樹都可以。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 67,
+        "input_tokens": 55,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 55
+        },
+        "output_tokens": 12
+      }
+    }
+  },
+  {
+    "file": "L400-S03.m4a",
+    "sha256": "61b6eff129890c595d8ea888920e5a1c24121f0244357302bbd97698424e887b",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "記者正在問起火的原因。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 39,
+        "input_tokens": 28,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 28
+        },
+        "output_tokens": 11
+      }
+    }
+  },
+  {
+    "file": "L400-S04.m4a",
+    "sha256": "a1f88d3b765513891ec9869557304052d62219b729294c748f208a63cd1af6f9",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "这本书上印着作者的名字。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 49,
+        "input_tokens": 37,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 37
+        },
+        "output_tokens": 12
+      }
+    }
+  },
+  {
+    "file": "L400-S05.m4a",
+    "sha256": "1216e7ec8b09722575309a7e8f97d91f35cf8e1b1e547392d25326bfa22603ae",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "雙手拿好帽子，別讓風吹走。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 46,
+        "input_tokens": 31,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 31
+        },
+        "output_tokens": 15
+      }
+    }
+  }
+]

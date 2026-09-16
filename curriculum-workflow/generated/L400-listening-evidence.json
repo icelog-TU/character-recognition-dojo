@@ -1,0 +1,186 @@
+[
+  {
+    "file": "L400-G02-prefix.m4a",
+    "sha256": "d072bbde4ee90e41cbb9f09cade1d71b20ba8b9cbf848f665b1e6f4909b58bc3",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"這本書上印著做\",\"toneObservations\":\"The '著' sounded like a neutral tone, and '做' had a falling (fourth) tone.\",\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables; no clipped final syllable; no unnatural pauses detected.\",\"confidence\":0.95}"
+  },
+  {
+    "file": "char-u8005.m4a",
+    "sha256": "9f6920ee78c8c7657866de4f097f831f32e0f683dd831d94625ed9d9b5db4770",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"這\",\"toneObservations\":\"Perceived '這' with falling tone (4th tone).\",\"finalSyllableComplete\":true,\"defects\":\"None detected.\",\"confidence\":0.95}"
+  },
+  {
+    "file": "L400-G02-prefix.m4a",
+    "sha256": "3a6574515e89cf3db41e7973c440a548ac3efb0ce05cad965c80575cd5eb8dcc",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"這本書上印著作\",\"toneObservations\":\"The syllable '著' had a falling tone (4th) and '作' had a falling tone (4th) as actually heard.\",\"finalSyllableComplete\":true,\"defects\":\"None noted. Speech was clear without clipped syllables or unnatural pauses.\",\"confidence\":0.95}"
+  },
+  {
+    "file": "L400-G02-suffix.m4a",
+    "sha256": "634dfedec7d4d7ff33e98485a8ad30d73e70cf11446fa1063e353a4ce332c2ef",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"的 名字\",\"toneObservations\":\"The syllables 'de' and 'ming2' were heard as expected, with 'de' in a neutral tone and 'ming2' sounding like a rising tone. 'zi' was neutral. No instances of 'zhe' or 'zuo' occurred.\",\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables; no clipped final syllable; no unnatural pauses.\",\"confidence\":0.96}"
+  },
+  {
+    "file": "L400-G05-wrong-one.m4a",
+    "sha256": "3c6949b5e70c438c7d8e5dcde22f5e5529fed122948b4893464a392bce0e9fab",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"雙手拿好帽子，別讓風吹到。\", \"toneObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.93}"
+  },
+  {
+    "file": "L400-G05-wrong-two.m4a",
+    "sha256": "4ae3eac067e216abe31a0ade7284ca63e463d597bd380f5dcf3fc0117860383d",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"雙手拿好盒子 別讓風吹走\", \"toneObservations\": [], \"finalSyllableComplete\": true, \"defects\": \"None\", \"confidence\": 0.96}"
+  },
+  {
+    "file": "L400-S01.m4a",
+    "sha256": "252585a8fa4f8333f0e0f82c17761e8db28e033b579d90bb1e5f2f330a72edb2",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"打球可以選單打或者雙打\",\"toneObservations\":\"All tones as expected; no 'zhe' or 'zuo' present.\",\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables, no unnatural pauses.\",\"confidence\":0.96}"
+  },
+  {
+    "file": "L400-S02.m4a",
+    "sha256": "41ee9710d75068365e3eb58f5a8683537b247a09ca952e490a6babc8cd04e2ea",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"選畫花或者畫樹都可以\", \"toneObservations\": {\"或者\": {\"zhe\": \"neutral falling, close to fourth tone\"}}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.93}"
+  },
+  {
+    "file": "L400-S03.m4a",
+    "sha256": "61b6eff129890c595d8ea888920e5a1c24121f0244357302bbd97698424e887b",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"記者正在問起火的原因。\", \"toneObservations\": \"No instances of 'zhe' or 'zuo' were present in the audio.\", \"finalSyllableComplete\": true, \"defects\": \"No added or omitted syllables, no clipped final syllable, and no unnatural pauses detected.\", \"confidence\": 0.9}"
+  },
+  {
+    "file": "L400-S04.m4a",
+    "sha256": "a1f88d3b765513891ec9869557304052d62219b729294c748f208a63cd1af6f9",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"這本書上印著作者的名字。\", \"toneObservations\": {\"著\": \"neutral tone, short\", \"作\": \"sounded as fourth tone, falling\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.93}"
+  },
+  {
+    "file": "L400-S05.m4a",
+    "sha256": "7a9373fe1e7a0a0f4f813bda4cc6ff1a7d751634fdc7fdeb3799a128a46565fb",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"張手，拿好帽子，別讓風吹走。\",\"toneObservations\":\"No instances of '這' or '做' occurred, so no tone observation needed.\",\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables, no clipped final syllable, and no unnatural pauses were observed.\",\"confidence\":0.96}"
+  },
+  {
+    "file": "char-u8005.m4a",
+    "sha256": "7a53efaf14cb3e29d30cc0eb2be1314ea2e1d19e34bb6cd7bb2af8ab1a4c056e",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"這\", \"toneObservations\": {\"這\": \"falling tone, sounds like fourth tone\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.61}"
+  },
+  {
+    "file": "L400-G02-suffix.m4a",
+    "sha256": "aaaf53b5e3900232e23a2fc6f3f366334259279fb900e8b6bc243ff6f60bc590",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"證明是\",\"toneObservations\":\"The syllable '證' was heard with a falling (fourth) tone. No 'zhe' or 'zuo' syllables appeared.\",\"finalSyllableComplete\":true,\"defects\":\"None. Speech flowed naturally.\",\"confidence\":0.97}"
+  },
+  {
+    "file": "L400-G05-wrong-one.m4a",
+    "sha256": "9fad345e24c700cbdaa46709499ce43d8cb4b792cb44357a6dd51101f5d86b43",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"雙手拿好帽子，別讓風吹掉。\",\"toneObservations\":\"The tones for all syllables, including '拿(ná)' and '做/這' did not occur, so no tone contour observation needed for those. If '這' or '做' were expected, they were not present in the audio.\",\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables. No clipped final syllable and no unnatural pauses detected.\",\"confidence\":0.92}"
+  },
+  {
+    "file": "L400-G05-wrong-two.m4a",
+    "sha256": "afb909bb776bb75edb8562325b59e7534204b012542203a366298d9bbdb92a9d",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"雙手拿好盒子，別讓風吹走。\", \"toneObservations\": \"No instances of 'zhe' or 'zuo' were present.\", \"finalSyllableComplete\": true, \"defects\": \"No omitted or added syllables, no clipped final syllable, and no unnatural pauses observed.\", \"confidence\": 0.97}"
+  },
+  {
+    "file": "L400-S05.m4a",
+    "sha256": "1216e7ec8b09722575309a7e8f97d91f35cf8e1b1e547392d25326bfa22603ae",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"雙手拿好帽子，別讓風吹走。\",\"toneObservations\":\"The syllable 'zǒu (走)' was pronounced with a clear third tone, falling-rising contour.\",\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables; no clipped final syllable; natural pauses.\",\"confidence\":0.91}"
+  },
+  {
+    "file": "char-u8005.m4a",
+    "sha256": "d8e85c260b8cf0b53547119aa540cf8448c0352848647074f9c80082cf2c4e8a",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"這\",\"toneObservations\":\"The syllable 'zhe' is uttered in a falling tone, similar to fourth tone.\",\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables. No clipped final syllable. No unnatural pauses.\",\"confidence\":0.94}"
+  },
+  {
+    "file": "L400-G02-suffix.m4a",
+    "sha256": "2ad34479555e80baf121043505ee07a8b3b24f381acdf84cc3bdafd296c5ff81",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"這名字\", \"toneObservations\": {\"這\": \"4th tone, falling\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.9}"
+  },
+  {
+    "file": "char-u8005.m4a",
+    "sha256": "879ece8358169b99c9c46e5712bb72dc0012baf8ecea2ebfb321f6984dca470e",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "Sure, please provide the Mandarin audio you'd like me to transcribe and analyze. Once I have the audio, I can listen and give you the requested details."
+  },
+  {
+    "file": "L400-G02-suffix.m4a",
+    "sha256": "f71b8fc776241c655e48902d714fb5332b769e003ab305b25139a3bcb1bc1671",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"這名字\", \"toneObservations\": {\"這\": \"falling tone, pronounced as fourth tone\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.98}"
+  },
+  {
+    "file": "char-u8005.m4a",
+    "sha256": "8f52df031d25dba100a141c878426f200072e3aeadcead8aec357d80c7d42b1e",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"者\",\"toneObservations\":\"The syllable 'zhe' was pronounced as a dipping third tone, starting mid then dipping lower before rising slightly.\",\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables; no unnatural pauses; no clipped final syllable.\",\"confidence\":\"high\"}"
+  },
+  {
+    "file": "L400-G02-suffix.m4a",
+    "sha256": "e0e8f4813034ff4f1ee10267428f42bc12312a0ea75c14ca953202faffe1855f",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"名字\", \"toneObservations\": {\"名\": \"second (rising)\", \"字\": \"fourth (falling)\"}, \"finalSyllableComplete\": true, \"defects\": null, \"confidence\": 0.95}"
+  },
+  {
+    "file": "L400-G02-suffix.m4a",
+    "sha256": "81d97554a97765353e493570b62d451b8483fe808e65fbf26abab5d4a3073045",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If zhe or zuo occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"聽明色\", \"toneObservations\": {}, \"finalSyllableComplete\": true, \"defects\": \"None\", \"confidence\": 0.45}"
+  }
+]

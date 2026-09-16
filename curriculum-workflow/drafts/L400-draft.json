@@ -1,0 +1,775 @@
+{
+  "id": "L400",
+  "order": 400,
+  "title": "者",
+  "newChars": [
+    "者"
+  ],
+  "zhuyin": {
+    "者": "ㄓㄜˇ"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [
+    "L395",
+    "L396",
+    "L397",
+    "L398",
+    "L399"
+  ],
+  "provisionalLearnedChars": [
+    "印",
+    "單",
+    "雙",
+    "選",
+    "或"
+  ],
+  "releaseBlockers": [
+    "R047",
+    "R048",
+    "L391",
+    "L392",
+    "L393",
+    "L394",
+    "L395",
+    "L396",
+    "L397",
+    "L398",
+    "L399"
+  ],
+  "sourceMainCommit": "23cae19103e760f23700f5ff90d72fbd2e59bfc6",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "charAudio": {
+    "者": "/assets/lessons/L400/audio/char-u8005.m4a"
+  },
+  "notes": "Approved exact sentences and canonical Stage 4 order. One-character lesson 者, not a word lesson. S04 only image text exception: Lily. No other readable text. G02 prefix 作 must be ㄗㄨㄛˋ, stop before 者; 者 ㄓㄜˇ. S01 singles two players and doubles four players, father/girl outside courts. Formal boundary L390; dependencies block Release only.",
+  "sentences": [
+    {
+      "id": "L400-S01",
+      "text": "打球可以選單打或者雙打。",
+      "spokenText": "打球可以選單打或者雙打",
+      "displayLines": [
+        "打球可以選",
+        "單打或者",
+        "雙打。"
+      ],
+      "focusChar": "者",
+      "imageNotes": "羽球館內，兩座相鄰球場呈現不同打法：左邊單打，球網兩側各一人；右邊雙打，兩側各兩人。主角小女孩與爸爸站在場外，爸爸指向球場介紹兩種選擇。場上使用 generic 球友，站位與球網分界清楚，不加文字標籤。場外爸爸與女孩不計入球場上的參賽人數。",
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm picture-book pencil-and-watercolor matching full L058 style-only set; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family identity L154-S01, L162-S04, L163-S02. Stable preschool protagonist: dark bob, pink clip/cardigan, ivory shirt, navy skirt, pink shoes. Mother dark shoulder-length hair, ivory blouse, blue pants; father short brown hair blue shirt khaki pants. Teacher separately designed with tied-back hair and teal clothing. Soft natural faces, rich clean environment, warm natural lighting, expressive stable proportions. No anime, 3D, photo, simplified generic cartoon, brand, logo, label, number, subtitle or readable text except S04 image-only Lily. 羽球館內，兩座相鄰球場呈現不同打法：左邊單打，球網兩側各一人；右邊雙打，兩側各兩人。主角小女孩與爸爸站在場外，爸爸指向球場介紹兩種選擇。場上使用 generic 球友，站位與球網分界清楚，不加文字標籤。場外爸爸與女孩不計入球場上的參賽人數。",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L400/images/L400-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L400/audio/L400-S01.m4a",
+        "durationMs": 3599,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 830
+          },
+          {
+            "charIndex": 3,
+            "startMs": 830,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1080,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1500,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1820,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2200,
+            "endMs": 2460
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2460,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2720,
+            "endMs": 3160
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3160,
+            "endMs": 3400
+          }
+        ]
+      }
+    },
+    {
+      "id": "L400-S02",
+      "text": "選畫花或者畫樹，都可以。",
+      "spokenText": "選畫花或者畫樹都可以",
+      "displayLines": [
+        "選畫花",
+        "或者畫樹，",
+        "都可以。"
+      ],
+      "focusChar": "或",
+      "imageNotes": "教室美術桌旁，老師向主角小女孩展示兩張簡單範例：一張畫花，一張畫樹。女孩面前放著空白畫紙與畫筆，正在考慮畫哪一種。老師手掌朝向兩張範例，表示都可以選；不要畫成要求女孩兩種都畫。",
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm picture-book pencil-and-watercolor matching full L058 style-only set; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family identity L154-S01, L162-S04, L163-S02. Stable preschool protagonist: dark bob, pink clip/cardigan, ivory shirt, navy skirt, pink shoes. Mother dark shoulder-length hair, ivory blouse, blue pants; father short brown hair blue shirt khaki pants. Teacher separately designed with tied-back hair and teal clothing. Soft natural faces, rich clean environment, warm natural lighting, expressive stable proportions. No anime, 3D, photo, simplified generic cartoon, brand, logo, label, number, subtitle or readable text except S04 image-only Lily. 教室美術桌旁，老師向主角小女孩展示兩張簡單範例：一張畫花，一張畫樹。女孩面前放著空白畫紙與畫筆，正在考慮畫哪一種。老師手掌朝向兩張範例，表示都可以選；不要畫成要求女孩兩種都畫。",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L400/images/L400-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L400/audio/L400-S02.m4a",
+        "durationMs": 5586,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 640
+          },
+          {
+            "charIndex": 1,
+            "startMs": 640,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1080,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1400,
+            "endMs": 1910
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1910,
+            "endMs": 2420
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2420,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2960,
+            "endMs": 3380
+          },
+          {
+            "charIndex": 7,
+            "startMs": 4540,
+            "endMs": 4860
+          },
+          {
+            "charIndex": 8,
+            "startMs": 4860,
+            "endMs": 5110
+          },
+          {
+            "charIndex": 9,
+            "startMs": 5110,
+            "endMs": 5360
+          }
+        ]
+      }
+    },
+    {
+      "id": "L400-S03",
+      "text": "記者正在問起火的原因。",
+      "spokenText": "記者正在問起火的原因",
+      "displayLines": [
+        "記者正在問",
+        "起火的原因。"
+      ],
+      "focusChar": "者",
+      "imageNotes": "已撲滅的小型火警現場外，一位 generic 記者拿著無標誌麥克風，向消防員詢問；另一位攝影工作人員在旁拍攝。背景店面門框有少量煙燻痕跡，現場已安全、無明火或濃煙，不出現傷者。消防員正在回答，不用思考泡泡擅自指出起火原因。三位工作角色須能清楚區分。",
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm picture-book pencil-and-watercolor matching full L058 style-only set; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family identity L154-S01, L162-S04, L163-S02. Stable preschool protagonist: dark bob, pink clip/cardigan, ivory shirt, navy skirt, pink shoes. Mother dark shoulder-length hair, ivory blouse, blue pants; father short brown hair blue shirt khaki pants. Teacher separately designed with tied-back hair and teal clothing. Soft natural faces, rich clean environment, warm natural lighting, expressive stable proportions. No anime, 3D, photo, simplified generic cartoon, brand, logo, label, number, subtitle or readable text except S04 image-only Lily. 已撲滅的小型火警現場外，一位 generic 記者拿著無標誌麥克風，向消防員詢問；另一位攝影工作人員在旁拍攝。背景店面門框有少量煙燻痕跡，現場已安全、無明火或濃煙，不出現傷者。消防員正在回答，不用思考泡泡擅自指出起火原因。三位工作角色須能清楚區分。",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L400/images/L400-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L400/audio/L400-S03.m4a",
+        "durationMs": 2809,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 940
+          },
+          {
+            "charIndex": 3,
+            "startMs": 940,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1220,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1460,
+            "endMs": 1740
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1740,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1980,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2120,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2320,
+            "endMs": 2520
+          }
+        ]
+      }
+    },
+    {
+      "id": "L400-S04",
+      "text": "這本書上印著作者的名字。",
+      "spokenText": "這本書上印著作者的名字",
+      "displayLines": [
+        "這本書上印著",
+        "作者的名字。"
+      ],
+      "focusChar": "者",
+      "imageNotes": "家中書桌旁，主角媽媽與女孩一起看一本圖畫書。女孩指著書封上較小的一行作者名字，媽媽順著查看。封面以花園插圖為主，作者名字與插圖分開。作者名字使用虛構英文名「Lily」，不放其他可讀文字。女孩指的位置必須確實是這行名字。本課經老師審核後交付的文字入圖例外：只允許作者名「Lily」。",
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm picture-book pencil-and-watercolor matching full L058 style-only set; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family identity L154-S01, L162-S04, L163-S02. Stable preschool protagonist: dark bob, pink clip/cardigan, ivory shirt, navy skirt, pink shoes. Mother dark shoulder-length hair, ivory blouse, blue pants; father short brown hair blue shirt khaki pants. Teacher separately designed with tied-back hair and teal clothing. Soft natural faces, rich clean environment, warm natural lighting, expressive stable proportions. No anime, 3D, photo, simplified generic cartoon, brand, logo, label, number, subtitle or readable text except S04 image-only Lily. 家中書桌旁，主角媽媽與女孩一起看一本圖畫書。女孩指著書封上較小的一行作者名字，媽媽順著查看。封面以花園插圖為主，作者名字與插圖分開。作者名字使用虛構英文名「Lily」，不放其他可讀文字。女孩指的位置必須確實是這行名字。本課經老師審核後交付的文字入圖例外：只允許作者名「Lily」。",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L400/images/L400-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L400/audio/L400-S04.m4a",
+        "durationMs": 3705,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 220
+          },
+          {
+            "charIndex": 1,
+            "startMs": 220,
+            "endMs": 480
+          },
+          {
+            "charIndex": 2,
+            "startMs": 480,
+            "endMs": 700
+          },
+          {
+            "charIndex": 3,
+            "startMs": 700,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1500,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1720,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2300,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2660,
+            "endMs": 2840
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2840,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3120,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3220,
+            "endMs": 3480
+          }
+        ]
+      }
+    },
+    {
+      "id": "L400-S05",
+      "text": "雙手拿好帽子，別讓風吹走。",
+      "spokenText": "雙手拿好帽子別讓風吹走",
+      "displayLines": [
+        "雙手",
+        "拿好帽子，",
+        "別讓風吹走。"
+      ],
+      "focusChar": "雙",
+      "imageNotes": "海邊步道上，主角媽媽提醒女孩留意風。女孩已把帽子拿下，用雙手牢牢握住同一頂帽子的帽沿，拿在胸前。頭髮、衣角與旁邊草葉朝同一方向被風吹動。帽子仍在手中，不畫飛走的第二頂帽子；只呈現一般有風的天氣。",
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm picture-book pencil-and-watercolor matching full L058 style-only set; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 and family identity L154-S01, L162-S04, L163-S02. Stable preschool protagonist: dark bob, pink clip/cardigan, ivory shirt, navy skirt, pink shoes. Mother dark shoulder-length hair, ivory blouse, blue pants; father short brown hair blue shirt khaki pants. Teacher separately designed with tied-back hair and teal clothing. Soft natural faces, rich clean environment, warm natural lighting, expressive stable proportions. No anime, 3D, photo, simplified generic cartoon, brand, logo, label, number, subtitle or readable text except S04 image-only Lily. 海邊步道上，主角媽媽提醒女孩留意風。女孩已把帽子拿下，用雙手牢牢握住同一頂帽子的帽沿，拿在胸前。頭髮、衣角與旁邊草葉朝同一方向被風吹動。帽子仍在手中，不畫飛走的第二頂帽子；只呈現一般有風的天氣。",
+      "approved": true,
+      "imageSrc": "/assets/lessons/L400/images/L400-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L400/audio/L400-S05.m4a",
+        "durationMs": 3140,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 940
+          },
+          {
+            "charIndex": 3,
+            "startMs": 940,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1260,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1460,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1900,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2020,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2240,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2480,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2720,
+            "endMs": 2900
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L400-G01",
+      "type": "find-character",
+      "sentenceId": "L400-S01",
+      "targetChar": "者",
+      "targetCharIndex": 8
+    },
+    {
+      "id": "L400-G02",
+      "type": "teach-character",
+      "sentenceId": "L400-S04",
+      "targetChar": "者",
+      "targetCharIndex": 7,
+      "teachAudio": {
+        "prefixText": "這本書上印著作",
+        "suffixText": "的名字",
+        "prefixSrc": "/assets/lessons/L400/audio/L400-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L400/audio/L400-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L400/audio/L400-G02-prefix.m4a",
+          "durationMs": 3339,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 220
+            },
+            {
+              "charIndex": 1,
+              "startMs": 220,
+              "endMs": 740
+            },
+            {
+              "charIndex": 2,
+              "startMs": 740,
+              "endMs": 980
+            },
+            {
+              "charIndex": 3,
+              "startMs": 980,
+              "endMs": 1440
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1440,
+              "endMs": 2220
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2220,
+              "endMs": 2580
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2580,
+              "endMs": 3140
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L400/audio/L400-G02-suffix.m4a",
+          "durationMs": 1184,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 380
+            },
+            {
+              "charIndex": 1,
+              "startMs": 380,
+              "endMs": 820
+            },
+            {
+              "charIndex": 2,
+              "startMs": 820,
+              "endMs": 960
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L400-G03",
+      "type": "missing-character",
+      "sentenceId": "L400-S03",
+      "targetChar": "者",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "者",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "得",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "住",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L400-G04",
+      "type": "partial-order",
+      "sentenceId": "L400-S02",
+      "targetChar": "或",
+      "targetCharIndex": 3,
+      "missingIndexes": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "options": [
+        {
+          "id": "card-shu",
+          "text": "樹",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-huo",
+          "text": "或",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-hua",
+          "text": "畫",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-zhe",
+          "text": "者",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L400-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L400-S05",
+      "targetChar": "雙",
+      "targetCharIndex": 0,
+      "options": [
+        {
+          "id": "correct",
+          "text": "雙手拿好帽子，別讓風吹走。",
+          "audioSrc": "/assets/lessons/L400/audio/L400-S05.m4a",
+          "correct": true,
+          "audio": {
+            "src": "/assets/lessons/L400/audio/L400-S05.m4a",
+            "durationMs": 3140,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1900,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2020,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2240,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2480,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2720,
+                "endMs": 2900
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "雙手拿好帽子，別讓風吹掉。",
+          "audioSrc": "/assets/lessons/L400/audio/L400-G05-wrong-one.m4a",
+          "correct": false,
+          "audio": {
+            "src": "/assets/lessons/L400/audio/L400-G05-wrong-one.m4a",
+            "durationMs": 3376,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1440,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2120,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2420,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2680,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2960,
+                "endMs": 3140
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "雙手拿好盒子，別讓風吹走。",
+          "audioSrc": "/assets/lessons/L400/audio/L400-G05-wrong-two.m4a",
+          "correct": false,
+          "audio": {
+            "src": "/assets/lessons/L400/audio/L400-G05-wrong-two.m4a",
+            "durationMs": 3605,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1220,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1480,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2220,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2300,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2560,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2820,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3100,
+                "endMs": 3380
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

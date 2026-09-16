@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L400 | 者 / normal lesson | claimed | Production C | codex/l400-complete-package | L395, L396, L397, L398, L399; release sequence L391-L399 and R047/R048 | 印、單、雙、選、或 | curriculum-workflow/lesson-requests/L400.json; curriculum-workflow/generated/L400-generation-packet.md; curriculum-workflow/drafts/L400-draft.json | public/assets/lessons/L400/; curriculum-workflow/audio-inbox/L400/ | Claimed from 23cae19103e760f23700f5ff90d72fbd2e59bfc6. Teacher-approved S04 image-only text exception: Lily. |
+| L400 | 者 / normal lesson | dependency-blocked-asset-complete | Production C | codex/l400-complete-package; claim fd1e8e6c | L395, L396, L397, L398, L399; release sequence L391-L399 and R047/R048 | 印、單、雙、選、或 | curriculum-workflow/lesson-requests/L400.json; curriculum-workflow/generated/L400-generation-packet.md; curriculum-workflow/drafts/L400-draft.json | public/assets/lessons/L400/; curriculum-workflow/audio-inbox/L400/ | Five WebP, ten M4A, final sentence/game timings. Technical audit and 390px playback QA recorded in L400-production-qa.md. S04 image-only Lily exception. Dependency blocks Release integration only. |
 
 ## Status Values
 
