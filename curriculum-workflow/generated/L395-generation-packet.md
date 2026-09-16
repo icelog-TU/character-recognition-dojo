@@ -491,6 +491,12 @@ Use case: illustration-story. One finished square 1:1 children's picture-book le
 
 ## Production QA
 
+### Browser QA
+
+Automated phone playback checks at 390x844 played all five Stage 3 sentences to the UI completion message. G02 reached the target recording-wait state; G03/G04 answers were accepted; G05 all three audio buttons were exercised. Tablet layout was checked at 768x1024. This is not a claim of human microphone recording, post-recording replay, full reward-navigation testing, or teacher subjective pronunciation approval. Those exclusions are recorded below.
+
+Package intake on pushed asset commit bbd885d7fe2837262968867751fd2403aa42fc7b: PASS. Final tip is rechecked after this QA clarification is pushed.
+
 ```json
 {
   "sourceBoundaryAtStart": "2169c169",
