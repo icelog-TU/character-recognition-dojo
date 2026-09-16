@@ -1,0 +1,1781 @@
+# L383 generation packet
+
+Package status: asset-complete-package
+
+Teacher-approved L383 normal single-character lesson. Base 250ca4a3, formal L001-L375, 379 learned Han. Learner dependencies L378-L382: 接送連傳相. Release requires R045/R046 after L375 (coverage L346-L375, ceiling L375), then L376-L382. Do not use 寫 or 封 in learner text. 相 in 相信 reads ㄒㄧㄤ; 重 in S05 reads ㄓㄨㄥˋ. G02 target 信 is final: no suffix file. Subjective teacher asset review is post-merge by default. Browser QA: phone390x844 Stage1 tap and Stage2 exact3/3 PASS; all5 Stage3 cards played through; G01 layout, G03 three-choice/retry and G04 single-Han flow checked; G05 all3 first taps played to ended. Phone/tablet completion controls visible; next disabled because fixture ends at L383. Tooling fallback: CDP Runtime.evaluate timeout on a visible enabled S02 button; accessibility recovered playback, but sustained press-and-hold recording is unsupported by current browser API. G02 recording/stitched replay and subjective auditory synchronization not certified. All non-browser technical gates pass; follow current SOP fallback and post-main teacher review. Full evidence in L383-package-notes.md.
+
+QA evidence: L383-package-notes.md; mechanical and format reports accompany this packet.
+
+## Approved request
+
+```json
+{
+  "id": "L383",
+  "kind": "lesson",
+  "order": 383,
+  "title": "信",
+  "newChars": [
+    "信"
+  ],
+  "zhuyin": {
+    "信": "ㄒㄧㄣˋ"
+  },
+  "requiredRounds": 5,
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L378",
+    "L379",
+    "L380",
+    "L381",
+    "L382"
+  ],
+  "provisionalLearnedChars": [
+    "接",
+    "送",
+    "連",
+    "傳",
+    "相"
+  ],
+  "teacherNotes": "Teacher-approved L383 normal single-character lesson. Base 250ca4a3, formal L001-L375, 379 learned Han. Learner dependencies L378-L382: 接送連傳相. Release requires R045/R046 after L375 (coverage L346-L375, ceiling L375), then L376-L382. Do not use 寫 or 封 in learner text. 相 in 相信 reads ㄒㄧㄤ; 重 in S05 reads ㄓㄨㄥˋ. G02 target 信 is final: no suffix file. Subjective teacher asset review is post-merge by default. Browser QA: phone390x844 Stage1 tap and Stage2 exact3/3 PASS; all5 Stage3 cards played through; G01 layout, G03 three-choice/retry and G04 single-Han flow checked; G05 all3 first taps played to ended. Phone/tablet completion controls visible; next disabled because fixture ends at L383. Tooling fallback: CDP Runtime.evaluate timeout on a visible enabled S02 button; accessibility recovered playback, but sustained press-and-hold recording is unsupported by current browser API. G02 recording/stitched replay and subjective auditory synchronization not certified. All non-browser technical gates pass; follow current SOP fallback and post-main teacher review. Full evidence in L383-package-notes.md.",
+  "packageStatus": "asset-complete-package",
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見",
+      "說",
+      "師",
+      "話",
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電",
+      "生",
+      "明",
+      "光",
+      "亮",
+      "陽",
+      "月",
+      "影",
+      "長",
+      "星",
+      "行",
+      "道",
+      "流",
+      "河",
+      "從",
+      "進",
+      "早",
+      "晚",
+      "海",
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精",
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口",
+      "傷",
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬",
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種",
+      "澆",
+      "照",
+      "顧",
+      "忘",
+      "每",
+      "次",
+      "記",
+      "完",
+      "收",
+      "彩",
+      "色",
+      "粉",
+      "哪",
+      "些",
+      "最",
+      "西",
+      "東",
+      "方",
+      "圖",
+      "向",
+      "線",
+      "直",
+      "轉",
+      "右",
+      "角",
+      "落",
+      "因",
+      "原",
+      "別",
+      "特",
+      "處",
+      "理",
+      "整",
+      "齊",
+      "全",
+      "今",
+      "們",
+      "年",
+      "跟",
+      "常",
+      "請",
+      "嗎",
+      "客",
+      "讓",
+      "廳",
+      "餐",
+      "位",
+      "正",
+      "排",
+      "雞",
+      "公",
+      "園",
+      "物",
+      "怪",
+      "奇",
+      "驚",
+      "喜",
+      "歡",
+      "笑",
+      "但",
+      "吧",
+      "謝",
+      "感",
+      "情",
+      "朋",
+      "友",
+      "親",
+      "交",
+      "通",
+      "往",
+      "經",
+      "接",
+      "送",
+      "連",
+      "傳",
+      "相",
+      "信"
+    ],
+    "provisionalLearnedChars": [
+      "接",
+      "送",
+      "連",
+      "傳",
+      "相"
+    ],
+    "targetCharMinimumCount": {
+      "信": 3
+    },
+    "recentTargetMinimumCounts": {
+      "相": 2,
+      "傳": 2,
+      "連": 2,
+      "送": 1,
+      "接": 1
+    }
+  },
+  "approvedSentences": [
+    {
+      "id": "L383-S01",
+      "text": "我相信你能接住球。",
+      "spokenText": "我相信你能接住球",
+      "displayLines": [
+        "我相信你",
+        "能接住球。"
+      ],
+      "focusChar": "信",
+      "imageNotes": "安全的草地活動空間，主角女孩雙手拿著柔軟的球，微笑鼓勵對面的固定「你」小男孩。男孩稍微不確定，但已張開雙手準備接球。球仍在女孩手上，尚未傳出，呈現相信對方能做到，不是接住後才稱讚。男孩使用固定「你」身份，不是小光或哥哥。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "1": "ㄒㄧㄤ"
+      }
+    },
+    {
+      "id": "L383-S02",
+      "text": "我收到小光送來的信。",
+      "spokenText": "我收到小光送來的信",
+      "displayLines": [
+        "我收到小光",
+        "送來的信。"
+      ],
+      "focusChar": "信",
+      "imageNotes": "主角家門口，女孩已把信拿在自己手上，開心地看著它；小光站旁邊，雙手已放開，表示信已送到。使用簡單無字信封，不顯示信件內容。小光必用public/assets/reference/lesson-cast/xiaoguang.webp：圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕鞋；不能畫成固定「你」小男孩。",
+      "approved": true
+    },
+    {
+      "id": "L383-S03",
+      "text": "連爸爸都不相信這個傳說。",
+      "spokenText": "連爸爸都不相信這個傳說",
+      "displayLines": [
+        "連爸爸都",
+        "不相信",
+        "這個傳說。"
+      ],
+      "focusChar": "信",
+      "imageNotes": "家中，主角女孩把攤開的故事書拿給爸爸看，插圖延續L382的飛馬在山上飛翔。爸爸看著插圖輕輕搖頭、攤開一隻手，表情懷疑但溫和；女孩抬頭觀察反應。不是爸爸嘲笑女孩或拒絕陪她看書。飛馬只在書中，書頁不含文字。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "5": "ㄒㄧㄤ"
+      }
+    },
+    {
+      "id": "L383-S04",
+      "text": "把信傳給小月，別打開。",
+      "spokenText": "把信傳給小月別打開",
+      "displayLines": [
+        "把信",
+        "傳給小月，",
+        "別打開。"
+      ],
+      "focusChar": "傳",
+      "imageNotes": "教室內，固定老師把未拆開的信交給主角女孩，另一隻手示意不遠處的小月。女孩接過信，準備走向小月；小月坐在座位上抬頭看來。信保持完整封好，女孩不掀開、不偷看。老師與主角媽媽分開。小月必用public/assets/reference/lesson-cast/xiaoyue.webp：長柔卷深栗色頭髮、月亮髮夾、薰衣草cardigan、淡奶油上衣、青綠百褶裙、白襪、紫鞋。",
+      "approved": true
+    },
+    {
+      "id": "L383-S05",
+      "text": "桌子太重，連爸爸都搬不動。",
+      "spokenText": "桌子太重連爸爸都搬不動",
+      "displayLines": [
+        "桌子太重，",
+        "連爸爸都",
+        "搬不動。"
+      ],
+      "focusChar": "連",
+      "imageNotes": "家中，主角爸爸彎身握著厚重桌子的邊緣，試著抬起，但桌腳仍穩穩留在地面。爸爸稍微用力、表情吃力，女孩在旁邊安全位置看著。不畫成已抬起；女孩不鑽桌下、不碰桌腳；不出現受傷、摔倒或家具傾覆。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "3": "ㄓㄨㄥˋ"
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L383-G01",
+      "type": "find-character",
+      "sentenceId": "L383-S01",
+      "targetChar": "信",
+      "targetCharIndex": 2,
+      "prompt": "找出句子裡的字。"
+    },
+    {
+      "id": "L383-G02",
+      "type": "teach-character",
+      "sentenceId": "L383-S02",
+      "targetChar": "信",
+      "targetCharIndex": 8,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "我收到小光送來的",
+        "suffixText": "",
+        "prefixSrc": "/assets/lessons/L383/audio/L383-G02-prefix.m4a",
+        "prefixAudio": {
+          "spokenText": "我收到小光送來的",
+          "src": "/assets/lessons/L383/audio/L383-G02-prefix.m4a",
+          "durationMs": 2577,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 320
+            },
+            {
+              "charIndex": 1,
+              "startMs": 320,
+              "endMs": 620
+            },
+            {
+              "charIndex": 2,
+              "startMs": 620,
+              "endMs": 900
+            },
+            {
+              "charIndex": 3,
+              "startMs": 900,
+              "endMs": 1260
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1260,
+              "endMs": 1460
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1460,
+              "endMs": 1860
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1860,
+              "endMs": 2160
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2160,
+              "endMs": 2360
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L383-G03",
+      "type": "missing-character",
+      "sentenceId": "L383-S03",
+      "targetChar": "信",
+      "targetCharIndex": 6,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        {
+          "id": "L383-G03-A",
+          "text": "信",
+          "correct": true
+        },
+        {
+          "id": "L383-G03-B",
+          "text": "想",
+          "correct": false
+        },
+        {
+          "id": "L383-G03-C",
+          "text": "看",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L383-G04",
+      "type": "partial-order",
+      "sentenceId": "L383-S04",
+      "targetChar": "傳",
+      "targetCharIndex": 2,
+      "prompt": "把字放回句子。",
+      "missingIndexes": [
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "id": "L383-G04-A",
+          "text": "給",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L383-G04-B",
+          "text": "信",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L383-G04-C",
+          "text": "傳",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L383-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L383-S05",
+      "targetChar": "連",
+      "targetCharIndex": 4,
+      "prompt": "聽聽誰念對了。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "桌子太重，連爸爸都搬不動。",
+          "spokenText": "桌子太重連爸爸都搬不動",
+          "correct": true,
+          "sentenceId": "L383-S05",
+          "audioSrc": "/assets/lessons/L383/audio/L383-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L383/audio/L383-S05.m4a",
+            "durationMs": 4319,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1960,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2390
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2390,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2680,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3340,
+                "endMs": 3600
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3600,
+                "endMs": 3860
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3860,
+                "endMs": 4040
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "桌子太大，連爸爸都搬不動。",
+          "spokenText": "桌子太大連爸爸都搬不動",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L383/audio/L383-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "桌子太大連爸爸都搬不動",
+            "src": "/assets/lessons/L383/audio/L383-G05-wrong-one.m4a",
+            "durationMs": 3459,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1700,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1820,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2040,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2260,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2580,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2780,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3020,
+                "endMs": 3200
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "桌子太重，連媽媽都搬不動。",
+          "spokenText": "桌子太重連媽媽都搬不動",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L383/audio/L383-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "桌子太重連媽媽都搬不動",
+            "src": "/assets/lessons/L383/audio/L383-G05-wrong-two.m4a",
+            "durationMs": 3552,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 440
+              },
+              {
+                "charIndex": 2,
+                "startMs": 440,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2180,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2380,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2720,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2900,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3120,
+                "endMs": 3280
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Final lesson-local draft
+
+```json
+{
+  "id": "L383",
+  "order": 383,
+  "title": "信",
+  "newChars": [
+    "信"
+  ],
+  "zhuyin": {
+    "信": "ㄒㄧㄣˋ"
+  },
+  "charAudio": {
+    "信": "/assets/lessons/L383/audio/char-u4fe1.m4a"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [
+    "L378",
+    "L379",
+    "L380",
+    "L381",
+    "L382"
+  ],
+  "provisionalLearnedChars": [
+    "接",
+    "送",
+    "連",
+    "傳",
+    "相"
+  ],
+  "packageStatus": "asset-complete-package",
+  "notes": "Teacher-approved L383 normal single-character lesson. Base 250ca4a3, formal L001-L375, 379 learned Han. Learner dependencies L378-L382: 接送連傳相. Release requires R045/R046 after L375 (coverage L346-L375, ceiling L375), then L376-L382. Do not use 寫 or 封 in learner text. 相 in 相信 reads ㄒㄧㄤ; 重 in S05 reads ㄓㄨㄥˋ. G02 target 信 is final: no suffix file. Subjective teacher asset review is post-merge by default. Browser QA: phone390x844 Stage1 tap and Stage2 exact3/3 PASS; all5 Stage3 cards played through; G01 layout, G03 three-choice/retry and G04 single-Han flow checked; G05 all3 first taps played to ended. Phone/tablet completion controls visible; next disabled because fixture ends at L383. Tooling fallback: CDP Runtime.evaluate timeout on a visible enabled S02 button; accessibility recovered playback, but sustained press-and-hold recording is unsupported by current browser API. G02 recording/stitched replay and subjective auditory synchronization not certified. All non-browser technical gates pass; follow current SOP fallback and post-main teacher review. Full evidence in L383-package-notes.md.",
+  "sentences": [
+    {
+      "id": "L383-S01",
+      "text": "我相信你能接住球。",
+      "spokenText": "我相信你能接住球",
+      "displayLines": [
+        "我相信你",
+        "能接住球。"
+      ],
+      "focusChar": "信",
+      "imageNotes": "安全的草地活動空間，主角女孩雙手拿著柔軟的球，微笑鼓勵對面的固定「你」小男孩。男孩稍微不確定，但已張開雙手準備接球。球仍在女孩手上，尚未傳出，呈現相信對方能做到，不是接住後才稱讚。男孩使用固定「你」身份，不是小光或哥哥。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "1": "ㄒㄧㄤ"
+      },
+      "imagePrompt": "Use case: illustration-story. Square 1:1 composition, safe margins. Full L058 references style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 people. Match refined L115/L118/L119/L128 and L154/L162/L163 family anchors. Recurring girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, fixed preschool age. Father: short dark hair, blue shirt, beige trousers. Fixed you boy: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes; not Xiaoguang. Teacher: tidy classroom clothing, distinct face/hair from mother. No readable letters, numbers, writing, logos, brands, watermarks. No flat cartoon, anime, 3D, photos, generic simple watercolor or redesigned faces. 安全的草地活動空間，主角女孩雙手拿著柔軟的球，微笑鼓勵對面的固定「你」小男孩。男孩稍微不確定，但已張開雙手準備接球。球仍在女孩手上，尚未傳出，呈現相信對方能做到，不是接住後才稱讚。男孩使用固定「你」身份，不是小光或哥哥。",
+      "imageSrc": "/assets/lessons/L383/images/L383-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L383/audio/L383-S01.m4a",
+        "durationMs": 2322,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 200
+          },
+          {
+            "charIndex": 1,
+            "startMs": 200,
+            "endMs": 450
+          },
+          {
+            "charIndex": 2,
+            "startMs": 450,
+            "endMs": 700
+          },
+          {
+            "charIndex": 3,
+            "startMs": 700,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1080,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1280,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1600,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1800,
+            "endMs": 2040
+          }
+        ]
+      }
+    },
+    {
+      "id": "L383-S02",
+      "text": "我收到小光送來的信。",
+      "spokenText": "我收到小光送來的信",
+      "displayLines": [
+        "我收到小光",
+        "送來的信。"
+      ],
+      "focusChar": "信",
+      "imageNotes": "主角家門口，女孩已把信拿在自己手上，開心地看著它；小光站旁邊，雙手已放開，表示信已送到。使用簡單無字信封，不顯示信件內容。小光必用public/assets/reference/lesson-cast/xiaoguang.webp：圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕鞋；不能畫成固定「你」小男孩。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Square 1:1 composition, safe margins. Full L058 references style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 people. Match refined L115/L118/L119/L128 and L154/L162/L163 family anchors. Recurring girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, fixed preschool age. Father: short dark hair, blue shirt, beige trousers. Fixed you boy: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes; not Xiaoguang. Teacher: tidy classroom clothing, distinct face/hair from mother. No readable letters, numbers, writing, logos, brands, watermarks. No flat cartoon, anime, 3D, photos, generic simple watercolor or redesigned faces. 主角家門口，女孩已把信拿在自己手上，開心地看著它；小光站旁邊，雙手已放開，表示信已送到。使用簡單無字信封，不顯示信件內容。小光必用public/assets/reference/lesson-cast/xiaoguang.webp：圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕鞋；不能畫成固定「你」小男孩。",
+      "imageSrc": "/assets/lessons/L383/images/L383-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L383/audio/L383-S02.m4a",
+        "durationMs": 3088,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1220,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1620,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1820,
+            "endMs": 2180
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2180,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2440,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2660,
+            "endMs": 2800
+          }
+        ]
+      }
+    },
+    {
+      "id": "L383-S03",
+      "text": "連爸爸都不相信這個傳說。",
+      "spokenText": "連爸爸都不相信這個傳說",
+      "displayLines": [
+        "連爸爸都",
+        "不相信",
+        "這個傳說。"
+      ],
+      "focusChar": "信",
+      "imageNotes": "家中，主角女孩把攤開的故事書拿給爸爸看，插圖延續L382的飛馬在山上飛翔。爸爸看著插圖輕輕搖頭、攤開一隻手，表情懷疑但溫和；女孩抬頭觀察反應。不是爸爸嘲笑女孩或拒絕陪她看書。飛馬只在書中，書頁不含文字。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "5": "ㄒㄧㄤ"
+      },
+      "imagePrompt": "Use case: illustration-story. Square 1:1 composition, safe margins. Full L058 references style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 people. Match refined L115/L118/L119/L128 and L154/L162/L163 family anchors. Recurring girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, fixed preschool age. Father: short dark hair, blue shirt, beige trousers. Fixed you boy: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes; not Xiaoguang. Teacher: tidy classroom clothing, distinct face/hair from mother. No readable letters, numbers, writing, logos, brands, watermarks. No flat cartoon, anime, 3D, photos, generic simple watercolor or redesigned faces. 家中，主角女孩把攤開的故事書拿給爸爸看，插圖延續L382的飛馬在山上飛翔。爸爸看著插圖輕輕搖頭、攤開一隻手，表情懷疑但溫和；女孩抬頭觀察反應。不是爸爸嘲笑女孩或拒絕陪她看書。飛馬只在書中，書頁不含文字。",
+      "imageSrc": "/assets/lessons/L383/images/L383-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L383/audio/L383-S03.m4a",
+        "durationMs": 3715,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 920
+          },
+          {
+            "charIndex": 3,
+            "startMs": 920,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1300,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1680,
+            "endMs": 1910
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1910,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2140,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2440,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2740,
+            "endMs": 3180
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3180,
+            "endMs": 3440
+          }
+        ]
+      }
+    },
+    {
+      "id": "L383-S04",
+      "text": "把信傳給小月，別打開。",
+      "spokenText": "把信傳給小月別打開",
+      "displayLines": [
+        "把信",
+        "傳給小月，",
+        "別打開。"
+      ],
+      "focusChar": "傳",
+      "imageNotes": "教室內，固定老師把未拆開的信交給主角女孩，另一隻手示意不遠處的小月。女孩接過信，準備走向小月；小月坐在座位上抬頭看來。信保持完整封好，女孩不掀開、不偷看。老師與主角媽媽分開。小月必用public/assets/reference/lesson-cast/xiaoyue.webp：長柔卷深栗色頭髮、月亮髮夾、薰衣草cardigan、淡奶油上衣、青綠百褶裙、白襪、紫鞋。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Square 1:1 composition, safe margins. Full L058 references style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 people. Match refined L115/L118/L119/L128 and L154/L162/L163 family anchors. Recurring girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, fixed preschool age. Father: short dark hair, blue shirt, beige trousers. Fixed you boy: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes; not Xiaoguang. Teacher: tidy classroom clothing, distinct face/hair from mother. No readable letters, numbers, writing, logos, brands, watermarks. No flat cartoon, anime, 3D, photos, generic simple watercolor or redesigned faces. 教室內，固定老師把未拆開的信交給主角女孩，另一隻手示意不遠處的小月。女孩接過信，準備走向小月；小月坐在座位上抬頭看來。信保持完整封好，女孩不掀開、不偷看。老師與主角媽媽分開。小月必用public/assets/reference/lesson-cast/xiaoyue.webp：長柔卷深栗色頭髮、月亮髮夾、薰衣草cardigan、淡奶油上衣、青綠百褶裙、白襪、紫鞋。",
+      "imageSrc": "/assets/lessons/L383/images/L383-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L383/audio/L383-S04.m4a",
+        "durationMs": 3367,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1240,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1580,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2520,
+            "endMs": 2640
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2640,
+            "endMs": 2900
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2900,
+            "endMs": 3100
+          }
+        ]
+      }
+    },
+    {
+      "id": "L383-S05",
+      "text": "桌子太重，連爸爸都搬不動。",
+      "spokenText": "桌子太重連爸爸都搬不動",
+      "displayLines": [
+        "桌子太重，",
+        "連爸爸都",
+        "搬不動。"
+      ],
+      "focusChar": "連",
+      "imageNotes": "家中，主角爸爸彎身握著厚重桌子的邊緣，試著抬起，但桌腳仍穩穩留在地面。爸爸稍微用力、表情吃力，女孩在旁邊安全位置看著。不畫成已抬起；女孩不鑽桌下、不碰桌腳；不出現受傷、摔倒或家具傾覆。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "3": "ㄓㄨㄥˋ"
+      },
+      "imagePrompt": "Use case: illustration-story. Square 1:1 composition, safe margins. Full L058 references style-only: fine pencil-and-watercolor linework, warm natural light, bright warm palette, detailed clean Taiwan environments, natural expressive preschool proportions. Do not copy L058 people. Match refined L115/L118/L119/L128 and L154/L162/L163 family anchors. Recurring girl: short dark bob, pink clip, pink cardigan, navy skirt, pink shoes, fixed preschool age. Father: short dark hair, blue shirt, beige trousers. Fixed you boy: short slightly tousled dark hair, sky-blue shirt, green shorts, blue shoes; not Xiaoguang. Teacher: tidy classroom clothing, distinct face/hair from mother. No readable letters, numbers, writing, logos, brands, watermarks. No flat cartoon, anime, 3D, photos, generic simple watercolor or redesigned faces. 家中，主角爸爸彎身握著厚重桌子的邊緣，試著抬起，但桌腳仍穩穩留在地面。爸爸稍微用力、表情吃力，女孩在旁邊安全位置看著。不畫成已抬起；女孩不鑽桌下、不碰桌腳；不出現受傷、摔倒或家具傾覆。",
+      "imageSrc": "/assets/lessons/L383/images/L383-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L383/audio/L383-S05.m4a",
+        "durationMs": 4319,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1960,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2100,
+            "endMs": 2390
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2390,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2680,
+            "endMs": 3340
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3340,
+            "endMs": 3600
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3600,
+            "endMs": 3860
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3860,
+            "endMs": 4040
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L383-G01",
+      "type": "find-character",
+      "sentenceId": "L383-S01",
+      "targetChar": "信",
+      "targetCharIndex": 2,
+      "prompt": "找出句子裡的字。"
+    },
+    {
+      "id": "L383-G02",
+      "type": "teach-character",
+      "sentenceId": "L383-S02",
+      "targetChar": "信",
+      "targetCharIndex": 8,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "我收到小光送來的",
+        "suffixText": "",
+        "prefixSrc": "/assets/lessons/L383/audio/L383-G02-prefix.m4a",
+        "prefixAudio": {
+          "spokenText": "我收到小光送來的",
+          "src": "/assets/lessons/L383/audio/L383-G02-prefix.m4a",
+          "durationMs": 2577,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 320
+            },
+            {
+              "charIndex": 1,
+              "startMs": 320,
+              "endMs": 620
+            },
+            {
+              "charIndex": 2,
+              "startMs": 620,
+              "endMs": 900
+            },
+            {
+              "charIndex": 3,
+              "startMs": 900,
+              "endMs": 1260
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1260,
+              "endMs": 1460
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1460,
+              "endMs": 1860
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1860,
+              "endMs": 2160
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2160,
+              "endMs": 2360
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L383-G03",
+      "type": "missing-character",
+      "sentenceId": "L383-S03",
+      "targetChar": "信",
+      "targetCharIndex": 6,
+      "prompt": "補上不見的字。",
+      "missingIndexes": [
+        6
+      ],
+      "options": [
+        {
+          "id": "L383-G03-A",
+          "text": "信",
+          "correct": true
+        },
+        {
+          "id": "L383-G03-B",
+          "text": "想",
+          "correct": false
+        },
+        {
+          "id": "L383-G03-C",
+          "text": "看",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L383-G04",
+      "type": "partial-order",
+      "sentenceId": "L383-S04",
+      "targetChar": "傳",
+      "targetCharIndex": 2,
+      "prompt": "把字放回句子。",
+      "missingIndexes": [
+        1,
+        2,
+        3
+      ],
+      "options": [
+        {
+          "id": "L383-G04-A",
+          "text": "給",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L383-G04-B",
+          "text": "信",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L383-G04-C",
+          "text": "傳",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L383-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L383-S05",
+      "targetChar": "連",
+      "targetCharIndex": 4,
+      "prompt": "聽聽誰念對了。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "桌子太重，連爸爸都搬不動。",
+          "spokenText": "桌子太重連爸爸都搬不動",
+          "correct": true,
+          "sentenceId": "L383-S05",
+          "audioSrc": "/assets/lessons/L383/audio/L383-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L383/audio/L383-S05.m4a",
+            "durationMs": 4319,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1960,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2390
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2390,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2680,
+                "endMs": 3340
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3340,
+                "endMs": 3600
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3600,
+                "endMs": 3860
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3860,
+                "endMs": 4040
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "桌子太大，連爸爸都搬不動。",
+          "spokenText": "桌子太大連爸爸都搬不動",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L383/audio/L383-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "桌子太大連爸爸都搬不動",
+            "src": "/assets/lessons/L383/audio/L383-G05-wrong-one.m4a",
+            "durationMs": 3459,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1700,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1820,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2040,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2260,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2580,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2780,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3020,
+                "endMs": 3200
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "桌子太重，連媽媽都搬不動。",
+          "spokenText": "桌子太重連媽媽都搬不動",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L383/audio/L383-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "桌子太重連媽媽都搬不動",
+            "src": "/assets/lessons/L383/audio/L383-G05-wrong-two.m4a",
+            "durationMs": 3552,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 440
+              },
+              {
+                "charIndex": 2,
+                "startMs": 440,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2180,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2380,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2720,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2900,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3120,
+                "endMs": 3280
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "stage4AudioAlignment": {
+    "L383-G02-prefix": {
+      "spokenText": "我收到小光送來的",
+      "src": "/assets/lessons/L383/audio/L383-G02-prefix.m4a",
+      "durationMs": 2577,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 320
+        },
+        {
+          "charIndex": 1,
+          "startMs": 320,
+          "endMs": 620
+        },
+        {
+          "charIndex": 2,
+          "startMs": 620,
+          "endMs": 900
+        },
+        {
+          "charIndex": 3,
+          "startMs": 900,
+          "endMs": 1260
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1260,
+          "endMs": 1460
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1460,
+          "endMs": 1860
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1860,
+          "endMs": 2160
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2160,
+          "endMs": 2360
+        }
+      ]
+    },
+    "L383-G05-wrong-one": {
+      "spokenText": "桌子太大連爸爸都搬不動",
+      "src": "/assets/lessons/L383/audio/L383-G05-wrong-one.m4a",
+      "durationMs": 3459,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 300
+        },
+        {
+          "charIndex": 1,
+          "startMs": 300,
+          "endMs": 540
+        },
+        {
+          "charIndex": 2,
+          "startMs": 540,
+          "endMs": 900
+        },
+        {
+          "charIndex": 3,
+          "startMs": 900,
+          "endMs": 1420
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1700,
+          "endMs": 1820
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1820,
+          "endMs": 2040
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2040,
+          "endMs": 2260
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2260,
+          "endMs": 2580
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2580,
+          "endMs": 2780
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2780,
+          "endMs": 3020
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3020,
+          "endMs": 3200
+        }
+      ]
+    },
+    "L383-G05-wrong-two": {
+      "spokenText": "桌子太重連媽媽都搬不動",
+      "src": "/assets/lessons/L383/audio/L383-G05-wrong-two.m4a",
+      "durationMs": 3552,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 220
+        },
+        {
+          "charIndex": 1,
+          "startMs": 220,
+          "endMs": 440
+        },
+        {
+          "charIndex": 2,
+          "startMs": 440,
+          "endMs": 840
+        },
+        {
+          "charIndex": 3,
+          "startMs": 840,
+          "endMs": 1060
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1720,
+          "endMs": 1860
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1860,
+          "endMs": 2180
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2180,
+          "endMs": 2380
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2380,
+          "endMs": 2720
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2720,
+          "endMs": 2900
+        },
+        {
+          "charIndex": 9,
+          "startMs": 2900,
+          "endMs": 3120
+        },
+        {
+          "charIndex": 10,
+          "startMs": 3120,
+          "endMs": 3280
+        }
+      ]
+    }
+  }
+}
+```

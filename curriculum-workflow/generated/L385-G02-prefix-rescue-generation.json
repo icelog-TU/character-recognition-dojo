@@ -1,0 +1,10 @@
+{
+  "provider": "OpenAI",
+  "model": "gpt-4o-mini-tts",
+  "voice": "alloy",
+  "speed": 0.9,
+  "exactText": "這個",
+  "sourceFile": "curriculum-workflow/generated/L385-G02-prefix-rescue-source.mp3",
+  "sourceSha256": "31b18e85e30216e1d1967c94225dd918f7ded62a10055d2f3f9380b4cb8caf56",
+  "method": "Repository ai:audio through owned-draft adapter; standard assets:audio processing; only terminal silence shortened"
+}

@@ -1,0 +1,17 @@
+{
+  "model": "gpt-4o-transcribe",
+  "prompt": "這是台灣國語認字教材的短片段。請如實轉寫聽到的字，不補成完整句子。",
+  "transcript": {
+    "text": "把電話",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 48,
+      "input_tokens": 44,
+      "input_token_details": {
+        "text_tokens": 30,
+        "audio_tokens": 14
+      },
+      "output_tokens": 4
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "model": "whisper-1",
+  "prompt": "把電話",
+  "offsetMs": 500,
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 2.619999885559082,
+    "text": "把電話",
+    "words": [
+      {
+        "word": "把",
+        "start": 0,
+        "end": 0.9800000190734863
+      },
+      {
+        "word": "電",
+        "start": 0.9800000190734863,
+        "end": 1.399999976158142
+      },
+      {
+        "word": "話",
+        "start": 1.399999976158142,
+        "end": 1.6399999856948853
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 3
+    }
+  }
+}

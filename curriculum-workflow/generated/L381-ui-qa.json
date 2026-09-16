@@ -1,0 +1,83 @@
+{
+  "unit": "L381",
+  "productionBase": "636682d9a31600a5f5e02faba0c942e17b5fb103",
+  "dependencyRecheck": "250ca4a3361a15104ba19158bb1b0710dac43ecc",
+  "fixtures": "Local origin 127.0.0.1:5187 only; real app code and L381 draft. Prerequisite metadata/zhuyin and seeded completed prerequisites; QA-NEXT reuses existing first lesson only to exercise next navigation. No formal JSON edits. Fixture not shipped.",
+  "viewportChecks": [
+    {
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "Stage 1 target/zhuyin no overlap",
+        "Standalone audio playing -> idle",
+        "Stage 2: 來/傳/球/傳/傳/一; 1/3 and 2/3 not complete; 3/3 complete",
+        "Stage 3 five rendered images, exact lines, zhuyin, active-character highlight; all five played and stage complete",
+        "G01 target immediately circled, explicit next button",
+        "G02 prefix/ready cue displayed exact hold instruction",
+        "G03 initial three cards; 說 and 聽 rejected; reveal did not award progress; retry restored all three cards",
+        "First reward red next/white home visible with floating toolbar"
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "checks": [
+        "G03 correct 傳 completed, three cards visible, document scrollWidth 753 <= innerWidth 768",
+        "G04 shuffled 不/受/了/真; filled 真/受/不/了, explicit next",
+        "G05 all three avatar clicks started playback and returned idle; two wrong selections did not complete; correct completed",
+        "Reward red next/white home visible; repeated claim and sentence replay did not change 150 coins/48 stars"
+      ]
+    }
+  ],
+  "g02Recording": {
+    "status": "tool-limited; Release supplemental verification",
+    "reason": "Supported browser click/drag/press interfaces expose no timed pointer-down/hold/up for sustaining the target recording gesture. No synthetic child voice or injected completion used.",
+    "completed": [
+      "Exact prefix 我已經把圖 and suffix 送給爸爸 independently generated",
+      "ASR matches and per-Han final-audio alignment",
+      "Processed audio decode and volume gates",
+      "Prefix playback and ready instruction reached"
+    ],
+    "supplement": [
+      "Real microphone hold, bell before recording, child voice insertion and full prefix+recording+suffix replay"
+    ],
+    "navigationScope": "Existing app skip control used for G02 to allow reward smoke test; not a completed recording test."
+  },
+  "browserToolEvent": "One Playwright CDP Runtime.evaluate click timeout on S02; accessibility click recovered; all S01-S05 played.",
+  "appDiagnostic": "Existing development-only React warning: Cannot update LessonPanel while rendering FindManyChallenge. Actual Stage 2 target distribution/progression passed. No app changes included.",
+  "imageReview": [
+    {
+      "id": "L381-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L381-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L381-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L381-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L381-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    }
+  ],
+  "references": "All five L058 style anchors, refined L115/L118/L119/L128 examples, L154/L162/L163 family anchors viewed in side-by-side contact sheet with final WebPs; final five files also individually opened.",
+  "regeneration": "All images new; no rejected image versions committed. S01 complete audio regenerated once after initial transcription mismatch; final passed. No splicing.",
+  "teacherReview": "Post-main subjective image/audio review; not a pre-merge approval gate."
+}
