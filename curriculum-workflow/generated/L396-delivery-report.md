@@ -29,3 +29,7 @@ Teacher numerical permission is limited to S02's two specified fictional telepho
 All five sentence cards and six auxiliary players loaded. Clicking S01 Play lost the inspected target; subsequent inspection returned the built-in This page crashed page (blocked data URL). No further playback or microphone checks were possible. URL: http://localhost:5196/tools/lesson-asset-review.html?unit=L396&ref=local. Actual listening, pronunciation by ear, highlight synchronization, first-tap playback across all readers, phone microphone recording and stitched replay were not verified. Technical gates above passed; use docs/CURRICULUM_PRODUCTION_SOP.md “Browser automation fallback for pre-merge playback QA”. Teacher subjective review remains post-merge by default; no pre-merge teacher PASS is claimed.
 
 Asset omissions: none. Browser QA scope limitations and Release dependencies are listed above.
+
+## Pushed package intake
+
+`npm run curriculum:package-intake -- --unit L396 --ref origin/codex/l396-complete-package` passed on asset commit 2ff64fba49a821abdfa4679858f7e64f21d5bb5d. Five images, ten audio files, canonical five-game order; no package-status defects. Documentation-only delivery tip is checked again after push; final response supplies its immutable SHA and review URL.

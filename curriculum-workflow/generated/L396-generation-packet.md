@@ -743,3 +743,7 @@ Asset omissions: none. Browser QA scope limitations and Release dependencies are
   }
 ]
 ```
+
+## Pushed package intake
+
+`npm run curriculum:package-intake -- --unit L396 --ref origin/codex/l396-complete-package` passed on asset commit 2ff64fba49a821abdfa4679858f7e64f21d5bb5d. Five images, ten audio files, canonical five-game order; no package-status defects. Documentation-only delivery tip is checked again after push; final response supplies its immutable SHA and review URL.
