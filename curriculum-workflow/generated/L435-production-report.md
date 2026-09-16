@@ -15,7 +15,7 @@
 - 本課隔離 validate:production：PASS；assets:audit --strict：PASS，5 圖／10 音，零警告。測試暫時輸入皆 finally 還原。
 - 全部音檔可解碼；G05 正確音使用 S03，三音檔 mean volume 為 -16.9／-16.4／-17.1 dB，差 0.7 dB。主字音 FFprobe duration 1190ms、peak -2dB。
 - 九段 final M4A 的句子／片段／選項逐字 timing 齊全，80–900ms、不重疊，末字結束避開尾端靜音。十段 AI 聽音結果見 QA JSON，不等同人工驗收。
-- pushed-branch package-intake --strict：待最終 push 後補記。
+- pushed-branch package-intake --strict：PASS，零警告；驗證 origin/codex/l435-complete-package，完整資產與 QA commit 94ad870471c24381f9ee9b8f0f7e8045d78ed110。
 - 全 repo npm run verify 留待 Release 整合前置課後執行。
 
 ## 逐圖 style-lock / cast
@@ -51,3 +51,9 @@ gpt-audio 十段複查，專項確認助第四聲、S01 加法、S04 相第一�
 詞彙依賴 L428、L429、L430、L431、L432、L433、L434；Release 仍須按順序整合所有前課至 L434。最新 main L420，因此 L421–L434 尚未整合。R051/R052 尚未整合，須在 L420 後，涵蓋 L391–L420。
 L435 後、L436 前另需 R053/R054，涵蓋 L406–L435；屬 Editor/Release 另案，非本包待補資產。
 Production 不 merge main，不修改 production JSON、planner、ledger 或部署；原有 ignored 音訊中間檔及快取保留。
+
+固定資產 SHA：94ad870471c24381f9ee9b8f0f7e8045d78ed110。後續 commit 僅補此 intake 與 registry 紀錄；最終分支 tip 另在交接回覆列出。
+
+Pre-merge 圖片預覽（非正式 main）：https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L435&ref=94ad870471c24381f9ee9b8f0f7e8045d78ed110
+音訊預覽：https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L435&ref=94ad870471c24381f9ee9b8f0f7e8045d78ed110
+本包尚未 merge/deploy，不宣稱已正式上線。
