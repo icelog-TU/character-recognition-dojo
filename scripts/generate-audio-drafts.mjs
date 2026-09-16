@@ -42,6 +42,14 @@ function draftNameFromAudioSrc(audioSrc) {
   return base.replace(/\.(m4a|mp3|wav)$/i, ".mp3");
 }
 
+function pronunciationInstructions(sentence) {
+  const chars = hanChars(sentence.text || sentence.spokenText || "");
+  return Object.entries(sentence.zhuyinOverrides || {})
+    .filter(([index]) => chars[Number(index)])
+    .map(([index, zhuyin]) => `At Han index ${index}, pronounce ${chars[Number(index)]} as Taiwan zhuyin ${zhuyin}.`)
+    .join(" ");
+}
+
 const baseSpeechInstructions = [
   "Use natural Taiwan Mandarin pronunciation for young children.",
   "Speak clearly, warmly, and gently.",
@@ -128,7 +136,7 @@ if (includeSentences) {
   for (const sentence of lesson.sentences ?? []) {
     if (sentence.approved !== true) continue;
     if (sentenceFilter && sentence.id.toUpperCase() !== sentenceFilter) continue;
-    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`));
+    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`), pronunciationInstructions(sentence));
   }
 }
 
@@ -154,7 +162,13 @@ if (includeGameAudio) {
     if (game.type === "choose-pronunciation") {
       for (const option of game.options ?? []) {
         if (option.correct === true || !option.audioSrc) continue;
-        addJob(option.text, path.join(outputDir, draftNameFromAudioSrc(option.audioSrc)));
+        const sentence = sentencesById.get(game.sentenceId);
+        const sentenceChars = hanChars(sentence?.text || "");
+        const optionChars = hanChars(option.text);
+        const zhuyinOverrides = option.zhuyinOverrides ?? Object.fromEntries(
+          Object.entries(sentence?.zhuyinOverrides || {}).filter(([index]) => sentenceChars[Number(index)] === optionChars[Number(index)]),
+        );
+        addJob(option.text, path.join(outputDir, draftNameFromAudioSrc(option.audioSrc)), pronunciationInstructions({ ...option, zhuyinOverrides }));
       }
     }
   }
