@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L419 | 合 | claimed | Production A (Remote) | codex/l419-complete-package | L415:解; L416:果; L417:如; L418:結 | 解果如結 | curriculum-workflow/lesson-requests/L419.json; curriculum-workflow/generated/L419-generation-packet.md; curriculum-workflow/drafts/L419-draft.json | curriculum-workflow/audio-inbox/L419/; public/assets/lessons/L419/ | Teacher-approved Production handoff. Base origin/main 182ace5f, official L414 決. Full package production; Release owns shared integration. |
 
 ## Status Values
 
