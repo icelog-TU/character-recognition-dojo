@@ -1,0 +1,138 @@
+[
+  {
+    "file": "char-u8fa6.m4a",
+    "sha256": "42908981119b5d460f70b85349b7f8cc3369c54fc114562e683749c0813558b8",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"Fine\", \"toneObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.1}"
+  },
+  {
+    "file": "L409-G02-prefix.m4a",
+    "sha256": "b643705c073abc640683b3eb7ddab16f03168f9f483ece7ed35b6ef960f69301",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"書包太重想\", \"toneObservations\": {\"xiang\": {\"pronunciation\": \"xiang\", \"pinyin\": \"xiǎng\", \"toneContour\": \"214\"}}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.85}"
+  },
+  {
+    "file": "L409-G02-suffix.m4a",
+    "sha256": "f035fb151d187e25ce656573739a4717efaa903bbe1c927e807e40f655b35be8",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"發 減少 東西\",\"toneObservations\":\"All tones sound clear. '發' is first tone (high level), '減' is third tone (falling-rising), '少' is third tone (falling-rising), '東' is first tone, '西' is first tone. None of dei/de, xiang, ban encountered.\",\"finalSyllableComplete\":true,\"defects\":\"No syllables appear omitted or added. No clipped final syllable. The pacing sounds natural.\",\"confidence\":0.87}"
+  },
+  {
+    "file": "L409-G05-wrong-one.m4a",
+    "sha256": "54218e04d20cdd162d0f4ac39a439d05666217e80fd0766c0ce5873dcad467c0",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小月身體弱 跑一下就累了\", \"toneObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.96}"
+  },
+  {
+    "file": "L409-G05-wrong-two.m4a",
+    "sha256": "ca7d8daa5e822e62bdaaa2bae14483a417d39730d0b30e43c6591ceb0ec098c3",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小光身體弱，走一下就累了。\", \"toneObservations\": [], \"finalSyllableComplete\": true, \"defects\": \"No defects noted\", \"confidence\": 0.96}"
+  },
+  {
+    "file": "L409-S01.m4a",
+    "sha256": "f0604b73cf25da7c0557027d58f3394683d3ff4254fd27b24ebafbcb42efd5f0",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"加法和減法都不會怎麼辦\", \"toneObservations\": {}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.91}"
+  },
+  {
+    "file": "L409-S02.m4a",
+    "sha256": "f3c5c146d40bcf6024afb68de646fc4af3dd9294388e9ec199a0af724893da75",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"書包太重，想辦法減少東西\", \"toneObservations\": {\"想\": {\"pronunciation\": \"xiǎng\", \"tone\": 3, \"contour\": \"low dipping\"}, \"辦\": {\"pronunciation\": \"bàn\", \"tone\": 4, \"contour\": \"falling\"}}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.93}"
+  },
+  {
+    "file": "L409-S03.m4a",
+    "sha256": "26360f260714471ed80da330beb3fcd9b871bba5437f3bed95e00718fd602f4b",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"客人越來越多，得加椅子了。\",\"toneObservations\":\"The word '得' was pronounced as 'děi' (third tone), with a dipping contour.\",\"finalSyllableComplete\":true,\"defects\":\"No added syllables. No syllables were omitted. No clipped final syllable. The speech had natural pauses.\",\"confidence\":0.95}"
+  },
+  {
+    "file": "L409-S04.m4a",
+    "sha256": "2dc7ce2e9090e5b1b24b038419088d32f66f7d647ded45d5c5cc6c93053faf08",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小光身體弱跑一下就累了\", \"toneObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.94}"
+  },
+  {
+    "file": "L409-S05.m4a",
+    "sha256": "2f05844bf672133e3a7c8295618f4d4a965e74ba41d33c0dc6c02b89ee77c9be",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\n  \"transcript\": \"媽媽帶我去辦借書卡。\",\n  \"toneObservations\": [\n    {\n      \"syllable\": \"ban\",\n      \"heardPronunciation\": \"bàn\",\n      \"pinyin\": \"bàn\",\n      \"toneContour\": \"falling\"\n    }\n  ],\n  \"finalSyllableComplete\": true,\n  \"defects\": [],\n  \"confidence\": 0.92\n}"
+  },
+  {
+    "file": "L409-G02-suffix.m4a",
+    "sha256": "62c1f7c7ebe1f144812200ced76858dfba1d2da5214c540013fcd6d707fc0530",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"我要想法減少東西\",\"toneObservations\":{\"想\":{\"pinyin\":\"xiǎng\",\"tone\":\"3\",\"contour\":\"falling-rising\"}},\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables, natural pauses.\",\"confidence\":0.94}"
+  },
+  {
+    "file": "char-u8fa6.m4a",
+    "sha256": "62988523bebac0e016ff4b9f7d50bbfe497e3ecc90fb98b8bb88b3afc03ae44b",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"安\", \"toneObservations\": [{\"syllable\": \"ān\", \"pinyin\": \"an\", \"tone\": \"first\", \"contour\": \"high-level\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.9}"
+  },
+  {
+    "file": "L409-G02-suffix.m4a",
+    "sha256": "c593f19acf2cd3dda758ee769e3e42b7bcb7b504582ceb4a890999b2a1b4a8cb",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"發減少東西\", \"toneObservations\": [{\"syllable\": \"發\", \"pinyin\": \"fa1\", \"tone\": \"high-level\"}, {\"syllable\": \"減\", \"pinyin\": \"jian3\", \"tone\": \"falling-rising\"}, {\"syllable\": \"少\", \"pinyin\": \"shao3\", \"tone\": \"falling-rising\"}, {\"syllable\": \"東\", \"pinyin\": \"dong1\", \"tone\": \"high-level\"}, {\"syllable\": \"西\", \"pinyin\": \"xi1\", \"tone\": \"high-level\"}], \"finalSyllableComplete\": true, \"defects\": \"The phrase seems unnatural and possibly out of context.\", \"confidence\": 0.66}"
+  },
+  {
+    "file": "char-u8fa6.m4a",
+    "sha256": "82f4adaaa1b17bed21400e0011ac08c630ad2d7c076ac08dd1cdca1c0f284353",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"\", \"toneObservations\": [], \"finalSyllableComplete\": false, \"defects\": [\"No audio content provided\"], \"confidence\": 0.0}"
+  },
+  {
+    "file": "L409-G02-suffix.m4a",
+    "sha256": "99b28236aa69bd25a710e14bb6a456f78a500f400f5670b232cbb13b807f3e67",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"法，減少東西。\",\"toneObservations\":[{\"syllable\":\"法\",\"pinyin\":\"fa3\",\"tone\":\"falling-rising\",\"contour\":\"ˇ\"}],\"finalSyllableComplete\":true,\"defects\":\"slight pause after 法 but not unnatural\",\"confidence\":0.9}"
+  },
+  {
+    "file": "char-u8fa6.m4a",
+    "sha256": "dc80292f32c34884663487435590ceba55a55e63b518f748d7b499e262d3f372",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"半\",\"toneObservations\":{\"ban\":{\"pronunciation\":\"bàn\",\"pinyin\":\"ban4\",\"toneContour\":\"falling\"}},\"finalSyllableComplete\":true,\"defects\":[],\"confidence\":0.98}"
+  },
+  {
+    "file": "L409-G02-suffix.m4a",
+    "sha256": "9af2d377d53125ca7af7159043833d10f351ee159343c2e12ea5685c81506fce",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If dei/de, xiang, or ban occurs, report the ACTUALLY HEARD pronunciation, pinyin, tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"法減少東西\", \"toneObservations\": {\"fa\": \"fa3 falling-rising contour\", \"jian\": \"jian3 falling-rising contour\", \"shao\": \"shao3 falling-rising contour\", \"dong\": \"dong1 high-level contour\", \"xi\": \"xi1 high-level contour\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.83}"
+  }
+]

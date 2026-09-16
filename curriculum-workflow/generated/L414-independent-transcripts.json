@@ -1,0 +1,138 @@
+[
+  {
+    "src": "/assets/lessons/L414/audio/char-u6c7a.m4a",
+    "expected": "決",
+    "text": "爵",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 43,
+      "input_tokens": 40,
+      "input_token_details": {
+        "text_tokens": 31,
+        "audio_tokens": 9
+      },
+      "output_tokens": 3
+    },
+    "method": "Generic Traditional Chinese script context; target answer not supplied. 爵 is homophonic, not exact orthographic recognition."
+  },
+  {
+    "src": "/assets/lessons/L414/audio/L414-S01.m4a",
+    "expected": "下定決心一定要成功",
+    "text": "下定決心，一定要成功。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 46,
+      "input_tokens": 35,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 35
+      },
+      "output_tokens": 11
+    }
+  },
+  {
+    "src": "/assets/lessons/L414/audio/L414-S02.m4a",
+    "expected": "我決定把紙盒做成房子",
+    "text": "我決定把紙盒做成房子。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 48,
+      "input_tokens": 35,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 35
+      },
+      "output_tokens": 13
+    }
+  },
+  {
+    "src": "/assets/lessons/L414/audio/L414-S03.m4a",
+    "expected": "勇者和怪物正在對決",
+    "text": "勇者和怪物正在对决。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 40,
+      "input_tokens": 29,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 29
+      },
+      "output_tokens": 11
+    }
+  },
+  {
+    "src": "/assets/lessons/L414/audio/L414-S04.m4a",
+    "expected": "右手痛試著用左手寫功課",
+    "text": "右手痛，试着用左手写功课。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 54,
+      "input_tokens": 39,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 39
+      },
+      "output_tokens": 15
+    }
+  },
+  {
+    "src": "/assets/lessons/L414/audio/L414-S05.m4a",
+    "expected": "我們決定在家辦晚會",
+    "text": "我们决定在家办晚会。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 39,
+      "input_tokens": 29,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 29
+      },
+      "output_tokens": 10
+    }
+  },
+  {
+    "src": "/assets/lessons/L414/audio/L414-G02-prefix.m4a",
+    "expected": "勇者和怪物正在對",
+    "text": "勇者和怪物正在对。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 38,
+      "input_tokens": 28,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 28
+      },
+      "output_tokens": 10
+    }
+  },
+  {
+    "src": "/assets/lessons/L414/audio/L414-G05-wrong-one.m4a",
+    "expected": "他們決定在家辦晚會",
+    "text": "他们决定在家办晚会。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 41,
+      "input_tokens": 31,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 31
+      },
+      "output_tokens": 10
+    }
+  },
+  {
+    "src": "/assets/lessons/L414/audio/L414-G05-wrong-two.m4a",
+    "expected": "我們決定在外辦晚會",
+    "text": "我们决定在外办晚会。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 38,
+      "input_tokens": 28,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 28
+      },
+      "output_tokens": 10
+    }
+  }
+]

@@ -1,0 +1,757 @@
+{
+  "id": "L409",
+  "order": 409,
+  "title": "辦",
+  "newChars": [
+    "辦"
+  ],
+  "zhuyin": {
+    "辦": "ㄅㄢˋ"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "releaseBlockers": [],
+  "sourceMainCommit": "346b7af0e22c21d388c92491e0e569b37e62299f",
+  "startedFromMainCommit": "2632d2c399197f4d62e13e78faf1854ccce7f219",
+  "dependencyResolution": "Started with L405-L408 provisional 越加減法 and R049/R050 milestone blockers. All are formal in origin/main 346b7af0e22c21d388c92491e0e569b37e62299f; approved learner text unchanged.",
+  "packageStatus": "asset-complete-package",
+  "charAudio": {
+    "辦": "/assets/lessons/L409/audio/char-u8fa6.m4a"
+  },
+  "notes": "Approved exact handoff. S03 Han index6 得 reads ㄉㄟˇ (needs to), not ㄉㄜˊ or neutral. G02 prefix 書包太重想 retains 想; suffix 法減少東西 begins 法, no 辦. S04 fixed Xiaoguang, no backpack; G05 wrong-one Xiaoyue is audio-only, never change image. No readable text/numeral image exceptions. Dependencies block Release only.",
+  "sentences": [
+    {
+      "id": "L409-S01",
+      "text": "加法和減法都不會，怎麼辦？",
+      "spokenText": "加法和減法都不會怎麼辦",
+      "displayLines": [
+        "加法和減法",
+        "都不會，",
+        "怎麼辦？"
+      ],
+      "focusChar": "辦",
+      "imageNotes": "家中書桌旁，主角小女孩面前放著打開的作業本和算數積木，手拿鉛筆，停下來轉頭向主角媽媽求助，表情困惑但不哭。媽媽走近準備協助。作業本朝向女孩，觀者看不到可讀題目，不需要生成算式。",
+      "approved": true,
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 家中書桌旁，主角小女孩面前放著打開的作業本和算數積木，手拿鉛筆，停下來轉頭向主角媽媽求助，表情困惑但不哭。媽媽走近準備協助。作業本朝向女孩，觀者看不到可讀題目，不需要生成算式。",
+      "imageSrc": "/assets/lessons/L409/images/L409-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L409/audio/L409-S01.m4a",
+        "durationMs": 3490,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1320,
+            "endMs": 1540
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1540,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2340,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2540,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2740,
+            "endMs": 2893
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2893,
+            "endMs": 3047
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3047,
+            "endMs": 3200
+          }
+        ]
+      }
+    },
+    {
+      "id": "L409-S02",
+      "text": "書包太重，想辦法減少東西。",
+      "spokenText": "書包太重想辦法減少東西",
+      "displayLines": [
+        "書包太重，",
+        "想辦法",
+        "減少東西。"
+      ],
+      "focusChar": "辦",
+      "imageNotes": "出門前，主角媽媽陪小女孩整理書包。書包打開放在矮桌上，裡面有上學用品；女孩正拿出一個不必帶去學校的玩具，放回旁邊收納盒。呈現拿出不需要的東西，不是把書本全部丟掉。",
+      "approved": true,
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 出門前，主角媽媽陪小女孩整理書包。書包打開放在矮桌上，裡面有上學用品；女孩正拿出一個不必帶去學校的玩具，放回旁邊收納盒。呈現拿出不需要的東西，不是把書本全部丟掉。",
+      "imageSrc": "/assets/lessons/L409/images/L409-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L409/audio/L409-S02.m4a",
+        "durationMs": 4046,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1340
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2020,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2100,
+            "endMs": 2350
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2350,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2600,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3120,
+            "endMs": 3360
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3360,
+            "endMs": 3590
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3590,
+            "endMs": 3820
+          }
+        ]
+      }
+    },
+    {
+      "id": "L409-S03",
+      "text": "客人越來越多，得加椅子了。",
+      "spokenText": "客人越來越多得加椅子了",
+      "displayLines": [
+        "客人",
+        "越來越多，",
+        "得加椅子了。"
+      ],
+      "focusChar": "加",
+      "imageNotes": "家中聚會，已有幾位 generic 成人親友坐在客廳，門口又有兩位親友抵達，主角媽媽正在迎接。主角爸爸從飯廳搬來一張椅子，主角小女孩站在一旁看。清楚表現原有座位不夠，正在增加椅子；不要把客人都畫成主角一家人。",
+      "zhuyinOverrides": {
+        "6": "ㄉㄟˇ"
+      },
+      "approved": true,
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 家中聚會，已有幾位 generic 成人親友坐在客廳，門口又有兩位親友抵達，主角媽媽正在迎接。主角爸爸從飯廳搬來一張椅子，主角小女孩站在一旁看。清楚表現原有座位不夠，正在增加椅子；不要把客人都畫成主角一家人。",
+      "imageSrc": "/assets/lessons/L409/images/L409-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L409/audio/L409-S03.m4a",
+        "durationMs": 3422,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1080,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1320,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1520,
+            "endMs": 1840
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2140,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2340,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2700,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2920,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3040,
+            "endMs": 3240
+          }
+        ]
+      }
+    },
+    {
+      "id": "L409-S04",
+      "text": "小光身體弱，跑一下就累了。",
+      "spokenText": "小光身體弱跑一下就累了",
+      "displayLines": [
+        "小光身體弱，",
+        "跑一下",
+        "就累了。"
+      ],
+      "focusChar": "弱",
+      "imageNotes": "學校操場旁，小光跑了一小段後停下，雙手扶膝、微微喘氣，表情疲累；主角小女孩停在旁邊關心他，老師在附近留意。不要倒地、受傷或被同學嘲笑。使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕色鞋；跑步時不背書包。不是運動型「他」小男孩，也不是固定「你」小男孩；不另改成病弱外貌。",
+      "approved": true,
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 學校操場旁，小光跑了一小段後停下，雙手扶膝、微微喘氣，表情疲累；主角小女孩停在旁邊關心他，老師在附近留意。不要倒地、受傷或被同學嘲笑。使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕色鞋；跑步時不背書包。不是運動型「他」小男孩，也不是固定「你」小男孩；不另改成病弱外貌。",
+      "imageSrc": "/assets/lessons/L409/images/L409-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L409/audio/L409-S04.m4a",
+        "durationMs": 4787,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 560
+          },
+          {
+            "charIndex": 1,
+            "startMs": 560,
+            "endMs": 820
+          },
+          {
+            "charIndex": 2,
+            "startMs": 820,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1580,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1760,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2640,
+            "endMs": 2880
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2880,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3120,
+            "endMs": 3360
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3360,
+            "endMs": 4200
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4200,
+            "endMs": 4360
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4360,
+            "endMs": 4660
+          }
+        ]
+      }
+    },
+    {
+      "id": "L409-S05",
+      "text": "媽媽帶我去辦借書卡。",
+      "spokenText": "媽媽帶我去辦借書卡",
+      "displayLines": [
+        "媽媽帶我去",
+        "辦借書卡。"
+      ],
+      "focusChar": "辦",
+      "imageNotes": "圖書館櫃台，主角媽媽和小女孩站在一起，generic 圖書館員正在把一張新借書卡交給女孩，媽媽在旁陪同。後方可見整齊書架，清楚辨識圖書館場景。借書卡不需要可讀姓名、號碼或文字。",
+      "approved": true,
+      "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 圖書館櫃台，主角媽媽和小女孩站在一起，generic 圖書館員正在把一張新借書卡交給女孩，媽媽在旁陪同。後方可見整齊書架，清楚辨識圖書館場景。借書卡不需要可讀姓名、號碼或文字。",
+      "imageSrc": "/assets/lessons/L409/images/L409-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L409/audio/L409-S05.m4a",
+        "durationMs": 2899,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1060,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1620,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1920,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2200,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2400,
+            "endMs": 2680
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L409-G01",
+      "type": "find-character",
+      "sentenceId": "L409-S01",
+      "targetChar": "辦",
+      "targetCharIndex": 10
+    },
+    {
+      "id": "L409-G02",
+      "type": "teach-character",
+      "sentenceId": "L409-S02",
+      "targetChar": "辦",
+      "targetCharIndex": 5,
+      "teachAudio": {
+        "prefixText": "書包太重想",
+        "suffixText": "法減少東西",
+        "prefixSrc": "/assets/lessons/L409/audio/L409-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L409/audio/L409-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L409/audio/L409-G02-prefix.m4a",
+          "durationMs": 1946,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 400
+            },
+            {
+              "charIndex": 1,
+              "startMs": 400,
+              "endMs": 660
+            },
+            {
+              "charIndex": 2,
+              "startMs": 660,
+              "endMs": 1060
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1060,
+              "endMs": 1480
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1480,
+              "endMs": 1700
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L409/audio/L409-G02-suffix.m4a",
+          "durationMs": 2070,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 480
+            },
+            {
+              "charIndex": 1,
+              "startMs": 480,
+              "endMs": 980
+            },
+            {
+              "charIndex": 2,
+              "startMs": 980,
+              "endMs": 1220
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1220,
+              "endMs": 1500
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1500,
+              "endMs": 1780
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L409-G03",
+      "type": "missing-character",
+      "sentenceId": "L409-S05",
+      "targetChar": "辦",
+      "targetCharIndex": 5,
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "辦",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "借",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "拿",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L409-G04",
+      "type": "partial-order",
+      "sentenceId": "L409-S03",
+      "targetChar": "加",
+      "targetCharIndex": 7,
+      "missingIndexes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "options": [
+        {
+          "id": "card-zi",
+          "text": "子",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-jia",
+          "text": "加",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-le",
+          "text": "了",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-yi",
+          "text": "椅",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L409-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L409-S04",
+      "targetChar": "弱",
+      "targetCharIndex": 4,
+      "options": [
+        {
+          "id": "correct",
+          "text": "小光身體弱，跑一下就累了。",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L409/audio/L409-S04.m4a",
+          "audio": {
+            "src": "/assets/lessons/L409/audio/L409-S04.m4a",
+            "durationMs": 4787,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1580,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2640,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2880,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3120,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3360,
+                "endMs": 4200
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4200,
+                "endMs": 4360
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4360,
+                "endMs": 4660
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "小月身體弱，跑一下就累了。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L409/audio/L409-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L409/audio/L409-G05-wrong-one.m4a",
+            "durationMs": 4718,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 540
+              },
+              {
+                "charIndex": 1,
+                "startMs": 540,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1460,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2540,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2820,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3060,
+                "endMs": 3300
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3300,
+                "endMs": 4120
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4120,
+                "endMs": 4280
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4280,
+                "endMs": 4580
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "小光身體弱，走一下就累了。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L409/audio/L409-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L409/audio/L409-G05-wrong-two.m4a",
+            "durationMs": 4100,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2280,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2560,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2800,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3520
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3520,
+                "endMs": 3660
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3660,
+                "endMs": 3960
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

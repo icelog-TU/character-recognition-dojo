@@ -1,0 +1,224 @@
+[
+  {
+    "id": "L411-S01",
+    "index": 3,
+    "original": {
+      "charIndex": 3,
+      "startMs": 1780,
+      "endMs": 1880
+    },
+    "corrected": {
+      "startMs": 1500,
+      "endMs": 1820
+    },
+    "reason": "一 RMS onset1500ms; trough1800ms before 定."
+  },
+  {
+    "id": "L411-S01",
+    "index": 4,
+    "original": {
+      "charIndex": 4,
+      "startMs": 1880,
+      "endMs": 1980
+    },
+    "corrected": {
+      "startMs": 1820,
+      "endMs": 2180
+    },
+    "reason": "定 consonant1820ms and voiced syllable after1840ms."
+  },
+  {
+    "id": "L411-S01",
+    "index": 5,
+    "original": {
+      "charIndex": 5,
+      "startMs": 1980,
+      "endMs": 2380
+    },
+    "corrected": {
+      "startMs": 2180,
+      "endMs": 2380
+    },
+    "reason": "有 follows 定 within connected phrase."
+  },
+  {
+    "id": "L411-S03",
+    "index": 4,
+    "original": {
+      "charIndex": 4,
+      "startMs": 2100,
+      "endMs": 2140
+    },
+    "corrected": {
+      "startMs": 1760,
+      "endMs": 2080
+    },
+    "reason": "First 媽 starts1760ms after pause; replace40ms timestamp."
+  },
+  {
+    "id": "L411-S03",
+    "index": 5,
+    "original": {
+      "charIndex": 5,
+      "startMs": 2140,
+      "endMs": 2480
+    },
+    "corrected": {
+      "startMs": 2080,
+      "endMs": 2360
+    },
+    "reason": "Second 媽 connected through2350ms; ends before silence."
+  },
+  {
+    "id": "L411-S05",
+    "index": 5,
+    "original": {
+      "charIndex": 5,
+      "startMs": 2960,
+      "endMs": 2961
+    },
+    "corrected": {
+      "startMs": 2580,
+      "endMs": 2920
+    },
+    "reason": "就 onset2580ms after pause; replace1ms timestamp."
+  },
+  {
+    "id": "L411-S05",
+    "index": 6,
+    "original": {
+      "charIndex": 6,
+      "startMs": 2960,
+      "endMs": 3240
+    },
+    "corrected": {
+      "startMs": 2920,
+      "endMs": 3240
+    },
+    "reason": "有 starts after trough2920ms."
+  },
+  {
+    "id": "L411-G05-wrong-one",
+    "index": 1,
+    "original": {
+      "charIndex": 1,
+      "startMs": 470,
+      "endMs": 940
+    },
+    "corrected": {
+      "startMs": 470,
+      "endMs": 1100
+    },
+    "reason": "上 decays to1100ms, followed by pause."
+  },
+  {
+    "id": "L411-G05-wrong-one",
+    "index": 2,
+    "original": {
+      "charIndex": 2,
+      "startMs": 940,
+      "endMs": 1880
+    },
+    "corrected": {
+      "startMs": 1420,
+      "endMs": 1880
+    },
+    "reason": "少 starts1420ms after pause, ends before 開 onset1880."
+  },
+  {
+    "id": "L411-G02-prefix",
+    "index": 4,
+    "original": {
+      "charIndex": 4,
+      "startMs": 1960,
+      "endMs": 2680
+    },
+    "corrected": {
+      "startMs": 2190,
+      "endMs": 2590
+    },
+    "reason": "First 媽 starts2190ms after pause."
+  },
+  {
+    "id": "L411-G02-prefix",
+    "index": 5,
+    "original": {
+      "charIndex": 5,
+      "startMs": 2680,
+      "endMs": 2960
+    },
+    "corrected": {
+      "startMs": 2590,
+      "endMs": 2950
+    },
+    "reason": "Second 媽 connected decays2950ms."
+  },
+  {
+    "id": "L411-G02-prefix",
+    "index": 6,
+    "original": {
+      "charIndex": 6,
+      "startMs": 2960,
+      "endMs": 3540
+    },
+    "corrected": {
+      "startMs": 3170,
+      "endMs": 3680
+    },
+    "reason": "Final rising yi onset3170ms, complete voiced tail and decay."
+  },
+  {
+    "id": "L411-S01",
+    "lastEndBefore": 3420,
+    "lastEndAfter": 3555,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L411-S02",
+    "lastEndBefore": 4040,
+    "lastEndAfter": 4053,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L411-S03",
+    "lastEndBefore": 4040,
+    "lastEndAfter": 4067,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L411-S04",
+    "lastEndBefore": 3660,
+    "lastEndAfter": 3794,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L411-S05",
+    "lastEndBefore": 4120,
+    "lastEndAfter": 4169,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L411-G02-prefix",
+    "lastEndBefore": 3680,
+    "lastEndAfter": 3601,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L411-G02-suffix",
+    "lastEndBefore": 1200,
+    "lastEndAfter": 1252,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L411-G05-wrong-one",
+    "lastEndBefore": 4700,
+    "lastEndAfter": 4788,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L411-G05-wrong-two",
+    "lastEndBefore": 4100,
+    "lastEndAfter": 4392,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  }
+]

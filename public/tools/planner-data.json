@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-16T05:56:32.494Z",
+  "exportedAt": "2026-09-16T06:18:33.666Z",
   "curriculumVersion": 1,
   "lessons": [
     {
@@ -211316,6 +211316,4550 @@
         "All final WebP individually opened and compared alongside full L058 style set, refined examples and family anchors. S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS. S04 initial smiling draft replaced with hesitant expression; rejected original not committed.",
         "Standalone 法 regenerated from the single character with explicit third-tone instruction, never cut from sentence audio. Generic Chinese-script transcription context (no target answer provided) recognizes 法. S03 whole sentence regenerated after lexical mismatch; S02/S05 whole sentences regenerated for alignment granularity; G02 suffix independently regenerated. Final alignment uses exact-text ASR context and simplified/traditional equivalent normalization only. No homophone substitutions. Terminal silence only removed with 200 ms buffer; no speech splice.",
         "verify skipped: dependency-blocked, shared state left for Release. Production JSON, planner export and ledger unchanged."
+      ]
+    },
+    {
+      "id": "L409",
+      "order": 409,
+      "title": "辦",
+      "newChars": [
+        "辦"
+      ],
+      "zhuyin": {
+        "辦": "ㄅㄢˋ"
+      },
+      "charAudio": {
+        "辦": "/assets/lessons/L409/audio/char-u8fa6.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L409-S01",
+          "text": "加法和減法都不會，怎麼辦？",
+          "spokenText": "加法和減法都不會怎麼辦",
+          "displayLines": [
+            "加法和減法",
+            "都不會，",
+            "怎麼辦？"
+          ],
+          "focusChar": "辦",
+          "imageNotes": "家中書桌旁，主角小女孩面前放著打開的作業本和算數積木，手拿鉛筆，停下來轉頭向主角媽媽求助，表情困惑但不哭。媽媽走近準備協助。作業本朝向女孩，觀者看不到可讀題目，不需要生成算式。",
+          "approved": true,
+          "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 家中書桌旁，主角小女孩面前放著打開的作業本和算數積木，手拿鉛筆，停下來轉頭向主角媽媽求助，表情困惑但不哭。媽媽走近準備協助。作業本朝向女孩，觀者看不到可讀題目，不需要生成算式。",
+          "imageSrc": "/assets/lessons/L409/images/L409-S01.webp",
+          "audio": {
+            "src": "/assets/lessons/L409/audio/L409-S01.m4a",
+            "durationMs": 3490,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 980
+              },
+              {
+                "charIndex": 3,
+                "startMs": 980,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1540,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2340,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2540,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2893
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2893,
+                "endMs": 3047
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3047,
+                "endMs": 3200
+              }
+            ]
+          }
+        },
+        {
+          "id": "L409-S02",
+          "text": "書包太重，想辦法減少東西。",
+          "spokenText": "書包太重想辦法減少東西",
+          "displayLines": [
+            "書包太重，",
+            "想辦法",
+            "減少東西。"
+          ],
+          "focusChar": "辦",
+          "imageNotes": "出門前，主角媽媽陪小女孩整理書包。書包打開放在矮桌上，裡面有上學用品；女孩正拿出一個不必帶去學校的玩具，放回旁邊收納盒。呈現拿出不需要的東西，不是把書本全部丟掉。",
+          "approved": true,
+          "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 出門前，主角媽媽陪小女孩整理書包。書包打開放在矮桌上，裡面有上學用品；女孩正拿出一個不必帶去學校的玩具，放回旁邊收納盒。呈現拿出不需要的東西，不是把書本全部丟掉。",
+          "imageSrc": "/assets/lessons/L409/images/L409-S02.webp",
+          "audio": {
+            "src": "/assets/lessons/L409/audio/L409-S02.m4a",
+            "durationMs": 4046,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2020,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2350
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2350,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2600,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3120,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3360,
+                "endMs": 3590
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3590,
+                "endMs": 3820
+              }
+            ]
+          }
+        },
+        {
+          "id": "L409-S03",
+          "text": "客人越來越多，得加椅子了。",
+          "spokenText": "客人越來越多得加椅子了",
+          "displayLines": [
+            "客人",
+            "越來越多，",
+            "得加椅子了。"
+          ],
+          "focusChar": "加",
+          "imageNotes": "家中聚會，已有幾位 generic 成人親友坐在客廳，門口又有兩位親友抵達，主角媽媽正在迎接。主角爸爸從飯廳搬來一張椅子，主角小女孩站在一旁看。清楚表現原有座位不夠，正在增加椅子；不要把客人都畫成主角一家人。",
+          "zhuyinOverrides": {
+            "6": "ㄉㄟˇ"
+          },
+          "approved": true,
+          "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 家中聚會，已有幾位 generic 成人親友坐在客廳，門口又有兩位親友抵達，主角媽媽正在迎接。主角爸爸從飯廳搬來一張椅子，主角小女孩站在一旁看。清楚表現原有座位不夠，正在增加椅子；不要把客人都畫成主角一家人。",
+          "imageSrc": "/assets/lessons/L409/images/L409-S03.webp",
+          "audio": {
+            "src": "/assets/lessons/L409/audio/L409-S03.m4a",
+            "durationMs": 3422,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1080,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1520
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1520,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2140,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2340,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2700,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2920,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3040,
+                "endMs": 3240
+              }
+            ]
+          }
+        },
+        {
+          "id": "L409-S04",
+          "text": "小光身體弱，跑一下就累了。",
+          "spokenText": "小光身體弱跑一下就累了",
+          "displayLines": [
+            "小光身體弱，",
+            "跑一下",
+            "就累了。"
+          ],
+          "focusChar": "弱",
+          "imageNotes": "學校操場旁，小光跑了一小段後停下，雙手扶膝、微微喘氣，表情疲累；主角小女孩停在旁邊關心他，老師在附近留意。不要倒地、受傷或被同學嘲笑。使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕色鞋；跑步時不背書包。不是運動型「他」小男孩，也不是固定「你」小男孩；不另改成病弱外貌。",
+          "approved": true,
+          "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 學校操場旁，小光跑了一小段後停下，雙手扶膝、微微喘氣，表情疲累；主角小女孩停在旁邊關心他，老師在附近留意。不要倒地、受傷或被同學嘲笑。使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕色鞋；跑步時不背書包。不是運動型「他」小男孩，也不是固定「你」小男孩；不另改成病弱外貌。",
+          "imageSrc": "/assets/lessons/L409/images/L409-S04.webp",
+          "audio": {
+            "src": "/assets/lessons/L409/audio/L409-S04.m4a",
+            "durationMs": 4787,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1580,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 2340
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2640,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2880,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3120,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3360,
+                "endMs": 4200
+              },
+              {
+                "charIndex": 9,
+                "startMs": 4200,
+                "endMs": 4360
+              },
+              {
+                "charIndex": 10,
+                "startMs": 4360,
+                "endMs": 4660
+              }
+            ]
+          }
+        },
+        {
+          "id": "L409-S05",
+          "text": "媽媽帶我去辦借書卡。",
+          "spokenText": "媽媽帶我去辦借書卡",
+          "displayLines": [
+            "媽媽帶我去",
+            "辦借書卡。"
+          ],
+          "focusChar": "辦",
+          "imageNotes": "圖書館櫃台，主角媽媽和小女孩站在一起，generic 圖書館員正在把一張新借書卡交給女孩，媽媽在旁陪同。後方可見整齊書架，清楚辨識圖書館場景。借書卡不需要可讀姓名、號碼或文字。",
+          "approved": true,
+          "imagePrompt": "Use case illustration-story. Square 1:1 detailed warm pencil-and-watercolor picture-book. Full L058 style-only set, refined L115-S01/S02, L118-S02, L119-S01, L128-S03. Family identity L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip/cardigan ivory shirt navy skirt pink shoes; mother shoulder-length dark hair ivory blouse blue pants; father short brown hair blue shirt khaki pants. Teacher tied-back hair teal blouse, distinct mother. Xiaoguang exact reference when named. Clean detailed environments, bright warm natural light, expressive natural faces and stable proportions. No text, numbers, brands, labels, logos, symbols, readable writing or math. No anime, 3D, simplified cartoon, photorealism. 圖書館櫃台，主角媽媽和小女孩站在一起，generic 圖書館員正在把一張新借書卡交給女孩，媽媽在旁陪同。後方可見整齊書架，清楚辨識圖書館場景。借書卡不需要可讀姓名、號碼或文字。",
+          "imageSrc": "/assets/lessons/L409/images/L409-S05.webp",
+          "audio": {
+            "src": "/assets/lessons/L409/audio/L409-S05.m4a",
+            "durationMs": 2899,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1400,
+                "endMs": 1620
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1620,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1920,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2400,
+                "endMs": 2680
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L409-G01",
+          "type": "find-character",
+          "sentenceId": "L409-S01",
+          "targetChar": "辦",
+          "targetCharIndex": 10
+        },
+        {
+          "id": "L409-G02",
+          "type": "teach-character",
+          "sentenceId": "L409-S02",
+          "targetChar": "辦",
+          "targetCharIndex": 5,
+          "teachAudio": {
+            "prefixText": "書包太重想",
+            "suffixText": "法減少東西",
+            "prefixSrc": "/assets/lessons/L409/audio/L409-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L409/audio/L409-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L409/audio/L409-G02-prefix.m4a",
+              "durationMs": 1946,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 400
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 400,
+                  "endMs": 660
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 660,
+                  "endMs": 1060
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1060,
+                  "endMs": 1480
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1480,
+                  "endMs": 1700
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L409/audio/L409-G02-suffix.m4a",
+              "durationMs": 2070,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 480
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 480,
+                  "endMs": 980
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 980,
+                  "endMs": 1220
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1220,
+                  "endMs": 1500
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1500,
+                  "endMs": 1780
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L409-G03",
+          "type": "missing-character",
+          "sentenceId": "L409-S05",
+          "targetChar": "辦",
+          "targetCharIndex": 5,
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "correct",
+              "text": "辦",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "借",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "拿",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L409-G04",
+          "type": "partial-order",
+          "sentenceId": "L409-S03",
+          "targetChar": "加",
+          "targetCharIndex": 7,
+          "missingIndexes": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "options": [
+            {
+              "id": "card-zi",
+              "text": "子",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-jia",
+              "text": "加",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-le",
+              "text": "了",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-yi",
+              "text": "椅",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L409-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L409-S04",
+          "targetChar": "弱",
+          "targetCharIndex": 4,
+          "options": [
+            {
+              "id": "correct",
+              "text": "小光身體弱，跑一下就累了。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L409/audio/L409-S04.m4a",
+              "audio": {
+                "src": "/assets/lessons/L409/audio/L409-S04.m4a",
+                "durationMs": 4787,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 560
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 560,
+                    "endMs": 820
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 820,
+                    "endMs": 1580
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1580,
+                    "endMs": 1760
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1760,
+                    "endMs": 2340
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2640,
+                    "endMs": 2880
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2880,
+                    "endMs": 3120
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3120,
+                    "endMs": 3360
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3360,
+                    "endMs": 4200
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 4200,
+                    "endMs": 4360
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 4360,
+                    "endMs": 4660
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "小月身體弱，跑一下就累了。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L409/audio/L409-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L409/audio/L409-G05-wrong-one.m4a",
+                "durationMs": 4718,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 540
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 540,
+                    "endMs": 760
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 760,
+                    "endMs": 1260
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1260,
+                    "endMs": 1460
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1460,
+                    "endMs": 1780
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2540,
+                    "endMs": 2820
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2820,
+                    "endMs": 3060
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3060,
+                    "endMs": 3300
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3300,
+                    "endMs": 4120
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 4120,
+                    "endMs": 4280
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 4280,
+                    "endMs": 4580
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "小光身體弱，走一下就累了。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L409/audio/L409-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L409/audio/L409-G05-wrong-two.m4a",
+                "durationMs": 4100,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 480
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 480,
+                    "endMs": 700
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 700,
+                    "endMs": 1160
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1160,
+                    "endMs": 1340
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1340,
+                    "endMs": 1660
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2280,
+                    "endMs": 2560
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2560,
+                    "endMs": 2800
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2800,
+                    "endMs": 3040
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3040,
+                    "endMs": 3520
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3520,
+                    "endMs": 3660
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3660,
+                    "endMs": 3960
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "notes": "Approved exact handoff. S03 Han index6 得 reads ㄉㄟˇ (needs to), not ㄉㄜˊ or neutral. G02 prefix 書包太重想 retains 想; suffix 法減少東西 begins 法, no 辦. S04 fixed Xiaoguang, no backpack; G05 wrong-one Xiaoyue is audio-only, never change image. No readable text/numeral image exceptions. Dependencies block Release only."
+    },
+    {
+      "id": "L410",
+      "order": 410,
+      "title": "試",
+      "newChars": [
+        "試"
+      ],
+      "zhuyin": {
+        "試": "ㄕˋ"
+      },
+      "charAudio": {
+        "試": "/assets/lessons/L410/audio/char-u8a66.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L410-S01",
+          "text": "減法不會算，試試這個辦法。",
+          "spokenText": "減法不會算試試這個辦法",
+          "displayLines": [
+            "減法不會算，",
+            "試試",
+            "這個辦法。"
+          ],
+          "focusChar": "試",
+          "imageNotes": "家中書桌旁，主角媽媽用積木向小女孩示範減法。原本三塊同色積木，媽媽將其中兩塊移到旁邊，中央留下一塊；女孩看著剩下的積木思考。旁邊保留打開的作業本，內容朝向女孩、不需可讀算式。不要增加其他積木，避免數量混亂。「這個辦法」指用實物操作，非特殊計算工具。",
+          "imagePrompt": "Square 1:1 warm detailed pencil-and-watercolor picture-book illustration. Match full L058 style-only references and refined L115/L118/L119/L128 examples. Preserve protagonist girl short dark bob, pink clip, pink cardigan, cream shirt, navy skirt, preschool proportions. Mother and father use L154/L162/L163 family anchors. No readable writing, letters, numbers, logos, brands or watermarks. 家中書桌旁，主角媽媽用積木向小女孩示範減法。原本三塊同色積木，媽媽將其中兩塊移到旁邊，中央留下一塊；女孩看著剩下的積木思考。旁邊保留打開的作業本，內容朝向女孩、不需可讀算式。不要增加其他積木，避免數量混亂。「這個辦法」指用實物操作，非特殊計算工具。",
+          "imageSrc": "/assets/lessons/L410/images/L410-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L410/audio/L410-S01.m4a",
+            "durationMs": 4342,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1320,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2220,
+                "endMs": 3080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3080,
+                "endMs": 3280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3280,
+                "endMs": 3470
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3470,
+                "endMs": 3660
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3660,
+                "endMs": 3850
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3850,
+                "endMs": 4142
+              }
+            ]
+          }
+        },
+        {
+          "id": "L410-S02",
+          "text": "沒辦法穿上，試試大一點的。",
+          "spokenText": "沒辦法穿上試試大一點的",
+          "displayLines": [
+            "沒辦法穿上，",
+            "試試",
+            "大一點的。"
+          ],
+          "focusChar": "試",
+          "imageNotes": "鞋店裡，主角小女孩坐在試鞋椅上，主角媽媽蹲在旁邊。女孩剛放下穿不進去的小鞋，媽媽拿來同款、較大一點的鞋，準備讓她試穿。用兩雙鞋的尺寸差異呈現換大一點，不靠鞋盒尺寸數字；不畫成媽媽硬把腳塞進鞋裡。",
+          "imagePrompt": "Square 1:1 warm detailed pencil-and-watercolor picture-book illustration. Match full L058 style-only references and refined L115/L118/L119/L128 examples. Preserve protagonist girl short dark bob, pink clip, pink cardigan, cream shirt, navy skirt, preschool proportions. Mother and father use L154/L162/L163 family anchors. No readable writing, letters, numbers, logos, brands or watermarks. 鞋店裡，主角小女孩坐在試鞋椅上，主角媽媽蹲在旁邊。女孩剛放下穿不進去的小鞋，媽媽拿來同款、較大一點的鞋，準備讓她試穿。用兩雙鞋的尺寸差異呈現換大一點，不靠鞋盒尺寸數字；不畫成媽媽硬把腳塞進鞋裡。",
+          "imageSrc": "/assets/lessons/L410/images/L410-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L410/audio/L410-S02.m4a",
+            "durationMs": 3483,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 650
+              },
+              {
+                "charIndex": 2,
+                "startMs": 650,
+                "endMs": 920
+              },
+              {
+                "charIndex": 3,
+                "startMs": 920,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1400,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1740,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2140,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2280,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2680,
+                "endMs": 2830
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2830,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2980,
+                "endMs": 3260
+              }
+            ]
+          }
+        },
+        {
+          "id": "L410-S03",
+          "text": "加一點水，再試著畫畫看。",
+          "spokenText": "加一點水再試著畫畫看",
+          "displayLines": [
+            "加一點水，",
+            "再試著",
+            "畫畫看。"
+          ],
+          "focusChar": "試",
+          "imageNotes": "家中畫畫桌旁，主角小女孩正在畫水彩，主角媽媽在旁指導。女孩用畫筆從水杯沾少量水，準備放進調色盤中較乾的水彩。畫紙上有尚未完成的花草，以及一小段乾澀、不連續的筆觸。水加在調色盤裡，不是把整杯水倒在畫紙上。",
+          "imagePrompt": "Square 1:1 warm detailed pencil-and-watercolor picture-book illustration. Match full L058 style-only references and refined L115/L118/L119/L128 examples. Preserve protagonist girl short dark bob, pink clip, pink cardigan, cream shirt, navy skirt, preschool proportions. Mother and father use L154/L162/L163 family anchors. No readable writing, letters, numbers, logos, brands or watermarks. 家中畫畫桌旁，主角小女孩正在畫水彩，主角媽媽在旁指導。女孩用畫筆從水杯沾少量水，準備放進調色盤中較乾的水彩。畫紙上有尚未完成的花草，以及一小段乾澀、不連續的筆觸。水加在調色盤裡，不是把整杯水倒在畫紙上。",
+          "imageSrc": "/assets/lessons/L410/images/L410-S03.webp",
+          "approved": true,
+          "zhuyinOverrides": {
+            "6": "˙ㄓㄜ"
+          },
+          "audio": {
+            "src": "/assets/lessons/L410/audio/L410-S03.m4a",
+            "durationMs": 3668,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 670
+              },
+              {
+                "charIndex": 2,
+                "startMs": 670,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1420
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1420,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2020,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2300,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2540,
+                "endMs": 2880
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2880,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3180,
+                "endMs": 3400
+              }
+            ]
+          }
+        },
+        {
+          "id": "L410-S04",
+          "text": "天越來越黑，快回家吧。",
+          "spokenText": "天越來越黑快回家吧",
+          "displayLines": [
+            "天越來越黑，",
+            "快回家吧。"
+          ],
+          "focusChar": "越",
+          "imageNotes": "傍晚公園，天色漸暗，仍看得清步道和遊具，路燈剛亮起。主角爸爸牽著小女孩往公園出口走，女孩另一手抱著剛玩的球，回頭看一眼遊戲區。呈現玩到傍晚、準備回家，不畫成深夜迷路或危險場景。",
+          "imagePrompt": "Square 1:1 warm detailed pencil-and-watercolor picture-book illustration. Match full L058 style-only references and refined L115/L118/L119/L128 examples. Preserve protagonist girl short dark bob, pink clip, pink cardigan, cream shirt, navy skirt, preschool proportions. Mother and father use L154/L162/L163 family anchors. No readable writing, letters, numbers, logos, brands or watermarks. 傍晚公園，天色漸暗，仍看得清步道和遊具，路燈剛亮起。主角爸爸牽著小女孩往公園出口走，女孩另一手抱著剛玩的球，回頭看一眼遊戲區。呈現玩到傍晚、準備回家，不畫成深夜迷路或危險場景。",
+          "imageSrc": "/assets/lessons/L410/images/L410-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L410/audio/L410-S04.m4a",
+            "durationMs": 3436,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 840
+              },
+              {
+                "charIndex": 2,
+                "startMs": 840,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1380,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1680,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2420,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2740,
+                "endMs": 3000
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3000,
+                "endMs": 3220
+              }
+            ]
+          }
+        },
+        {
+          "id": "L410-S05",
+          "text": "點心拿太多，減少一點吧。",
+          "spokenText": "點心拿太多減少一點吧",
+          "displayLines": [
+            "點心拿太多，",
+            "減少一點吧。"
+          ],
+          "focusChar": "減",
+          "imageNotes": "商店點心區，主角小女孩和主角媽媽站在貨架前。購物籃裡已放好幾包點心，媽媽指著籃子提醒，女孩正把其中一包放回原本的貨架。保留籃中其他點心，呈現少拿一些，不是全部不准買。尚未結帳，包裝不需可讀文字或品牌。",
+          "imagePrompt": "Square 1:1 warm detailed pencil-and-watercolor picture-book illustration. Match full L058 style-only references and refined L115/L118/L119/L128 examples. Preserve protagonist girl short dark bob, pink clip, pink cardigan, cream shirt, navy skirt, preschool proportions. Mother and father use L154/L162/L163 family anchors. No readable writing, letters, numbers, logos, brands or watermarks. 商店點心區，主角小女孩和主角媽媽站在貨架前。購物籃裡已放好幾包點心，媽媽指著籃子提醒，女孩正把其中一包放回原本的貨架。保留籃中其他點心，呈現少拿一些，不是全部不准買。尚未結帳，包裝不需可讀文字或品牌。",
+          "imageSrc": "/assets/lessons/L410/images/L410-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L410/audio/L410-S05.m4a",
+            "durationMs": 3715,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 400
+              },
+              {
+                "charIndex": 1,
+                "startMs": 400,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1940,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2840,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2980,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3120,
+                "endMs": 3480
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L410-G01",
+          "type": "find-character",
+          "sentenceId": "L410-S01",
+          "targetChar": "試",
+          "targetCharIndex": 5
+        },
+        {
+          "id": "L410-G02",
+          "type": "teach-character",
+          "sentenceId": "L410-S03",
+          "targetChar": "試",
+          "targetCharIndex": 5,
+          "teachAudio": {
+            "prefixText": "加一點水再",
+            "suffixText": "著畫畫看",
+            "prefixSrc": "/assets/lessons/L410/audio/L410-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L410/audio/L410-G02-suffix.m4a",
+            "prefixAudio": {
+              "spokenText": "加一點水再",
+              "src": "/assets/lessons/L410/audio/L410-G02-prefix.m4a",
+              "durationMs": 1788,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 420
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 420,
+                  "endMs": 640
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 640,
+                  "endMs": 860
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 860,
+                  "endMs": 1280
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1280,
+                  "endMs": 1540
+                }
+              ]
+            },
+            "suffixAudio": {
+              "spokenText": "著畫畫看",
+              "src": "/assets/lessons/L410/audio/L410-G02-suffix.m4a",
+              "durationMs": 1834,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 600
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 600,
+                  "endMs": 980
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 980,
+                  "endMs": 1360
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1360,
+                  "endMs": 1540
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L410-G03",
+          "type": "missing-character",
+          "sentenceId": "L410-S02",
+          "targetChar": "試",
+          "targetCharIndex": 5,
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "correct",
+              "text": "試",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "穿",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "拿",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L410-G04",
+          "type": "partial-order",
+          "sentenceId": "L410-S05",
+          "targetChar": "減",
+          "targetCharIndex": 5,
+          "missingIndexes": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "options": [
+            {
+              "id": "card-yi",
+              "text": "一",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-jian",
+              "text": "減",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-dian",
+              "text": "點",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-shao",
+              "text": "少",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L410-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L410-S04",
+          "targetChar": "越",
+          "targetCharIndex": 1,
+          "options": [
+            {
+              "id": "correct",
+              "text": "天越來越黑，快回家吧。",
+              "correct": true,
+              "sentenceId": "L410-S04",
+              "audioSrc": "/assets/lessons/L410/audio/L410-S04.m4a",
+              "audio": {
+                "src": "/assets/lessons/L410/audio/L410-S04.m4a",
+                "durationMs": 3436,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 360
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 360,
+                    "endMs": 840
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 840,
+                    "endMs": 1100
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1100,
+                    "endMs": 1380
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1380,
+                    "endMs": 1680
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1680,
+                    "endMs": 2420
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2420,
+                    "endMs": 2740
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2740,
+                    "endMs": 3000
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3000,
+                    "endMs": 3220
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "天越來越冷，快回家吧。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L410/audio/L410-G05-wrong-one.m4a",
+              "audio": {
+                "spokenText": "天越來越冷快回家吧",
+                "src": "/assets/lessons/L410/audio/L410-G05-wrong-one.m4a",
+                "durationMs": 2740,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 320
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 320,
+                    "endMs": 660
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 660,
+                    "endMs": 840
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 840,
+                    "endMs": 1040
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1040,
+                    "endMs": 1260
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1260,
+                    "endMs": 1840
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1840,
+                    "endMs": 2100
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2100,
+                    "endMs": 2300
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2300,
+                    "endMs": 2520
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "天越來越黑，快回去吧。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L410/audio/L410-G05-wrong-two.m4a",
+              "audio": {
+                "spokenText": "天越來越黑快回去吧",
+                "src": "/assets/lessons/L410/audio/L410-G05-wrong-two.m4a",
+                "durationMs": 3529,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 380
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 380,
+                    "endMs": 820
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 820,
+                    "endMs": 1100
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1100,
+                    "endMs": 1380
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1380,
+                    "endMs": 1620
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2273,
+                    "endMs": 2560
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2560,
+                    "endMs": 2800
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2800,
+                    "endMs": 3040
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3040,
+                    "endMs": 3320
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stage4AudioAlignment": {
+        "L410-G02-prefix": {
+          "spokenText": "加一點水再",
+          "src": "/assets/lessons/L410/audio/L410-G02-prefix.m4a",
+          "durationMs": 1788,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 420
+            },
+            {
+              "charIndex": 1,
+              "startMs": 420,
+              "endMs": 640
+            },
+            {
+              "charIndex": 2,
+              "startMs": 640,
+              "endMs": 860
+            },
+            {
+              "charIndex": 3,
+              "startMs": 860,
+              "endMs": 1280
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1280,
+              "endMs": 1540
+            }
+          ]
+        },
+        "L410-G02-suffix": {
+          "spokenText": "著畫畫看",
+          "src": "/assets/lessons/L410/audio/L410-G02-suffix.m4a",
+          "durationMs": 1834,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 600
+            },
+            {
+              "charIndex": 1,
+              "startMs": 600,
+              "endMs": 980
+            },
+            {
+              "charIndex": 2,
+              "startMs": 980,
+              "endMs": 1360
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1360,
+              "endMs": 1540
+            }
+          ]
+        },
+        "L410-G05-wrong-one": {
+          "spokenText": "天越來越冷快回家吧",
+          "src": "/assets/lessons/L410/audio/L410-G05-wrong-one.m4a",
+          "durationMs": 2740,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 320
+            },
+            {
+              "charIndex": 1,
+              "startMs": 320,
+              "endMs": 660
+            },
+            {
+              "charIndex": 2,
+              "startMs": 660,
+              "endMs": 840
+            },
+            {
+              "charIndex": 3,
+              "startMs": 840,
+              "endMs": 1040
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1040,
+              "endMs": 1260
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1260,
+              "endMs": 1840
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1840,
+              "endMs": 2100
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2100,
+              "endMs": 2300
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2300,
+              "endMs": 2520
+            }
+          ]
+        },
+        "L410-G05-wrong-two": {
+          "spokenText": "天越來越黑快回去吧",
+          "src": "/assets/lessons/L410/audio/L410-G05-wrong-two.m4a",
+          "durationMs": 3529,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 380
+            },
+            {
+              "charIndex": 1,
+              "startMs": 380,
+              "endMs": 820
+            },
+            {
+              "charIndex": 2,
+              "startMs": 820,
+              "endMs": 1100
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1100,
+              "endMs": 1380
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1380,
+              "endMs": 1620
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2273,
+              "endMs": 2560
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2560,
+              "endMs": 2800
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2800,
+              "endMs": 3040
+            },
+            {
+              "charIndex": 8,
+              "startMs": 3040,
+              "endMs": 3320
+            }
+          ]
+        },
+        "L410-char-u8a66": {
+          "spokenText": "試",
+          "src": "/assets/lessons/L410/audio/char-u8a66.m4a",
+          "durationMs": 2066,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 740
+            }
+          ]
+        }
+      },
+      "notes": "Teacher-approved L410 試. Assignment locked allowed ceiling: 414 Han from 2632d2c3 L001-L404 plus 越加減法辦試; no 定/成/考. Latest checked origin/main 346b7af0e22c21d388c92491e0e569b37e62299f formally through L408; L405-L408 and R049/R050 after405 are merged. Remaining Release/playable dependency L409 辦 only. Preserve L405 -> R049 -> R050 -> later lessons order; review milestone satisfied. Approved five texts/imageNotes unchanged. Both 試 in S01/S02 retained at indexes5,6; G01/G03 target5. G02 exact prefix 加一點水再 and suffix 著畫畫看, neutral ˙ㄓㄜ. No image text/number exception. Browser QA: phone 390x844 Stage 2 three targets complete only at 3/3; five Stage 3 sentences played to completion; G01 first 試 and G03 single missing first 試 verified; G04 four single-Han cards verified; G05 all options played. G02 helper stops after 再 and outlines 試; actual recording/stitched replay unavailable because browser control cannot sustain pointer hold (ordinary click had no effect). Independent AI listening, not human QA, confirms all audio and neutral 著. Technical gates pass; SOP browser fallback recorded in L410-package-notes.md. Final WebP style-lock/cast S01-S05 PASS. No package-local asset defect remains."
+    },
+    {
+      "id": "L411",
+      "order": 411,
+      "title": "定",
+      "newChars": [
+        "定"
+      ],
+      "zhuyin": {
+        "定": "ㄉㄧㄥˋ"
+      },
+      "charAudio": {
+        "定": "/assets/lessons/L411/audio/char-u5b9a.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L411-S01",
+          "text": "試試看，一定有辦法出去。",
+          "spokenText": "試試看一定有辦法出去",
+          "displayLines": [
+            "試試看，",
+            "一定有辦法",
+            "出去。"
+          ],
+          "focusChar": "定",
+          "imageNotes": "明亮的小倉庫裡，主角小女孩和同學小月被反鎖、發現門打不開，正在一起找出口。門旁較高透氣窗透進日光，兩人把低矮收納箱搬到窗下，女孩指窗、小月專注而有希望地看她。只畫準備討論，雙腳都在地面，不畫高塔、攀爬或懸在窗外。整潔無危險工具、火煙或驚恐。小月依 xiaoyue.webp：長柔卷深栗髮、月亮髮夾、薰衣草 cardigan、奶油上衣、青綠百褶裙、白襪紫鞋。 最終圖使用開啟的側鉸透氣窗，窗洞無格柵阻擋；孩子仍在地面。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Strict match full L058 reference sheet and refined preferred sheet: fine textured pencil painted shading, modeled faces, warm varied colors, detailed environments. Girl short dark bob ONE pink clip pink cardigan cream blouse navy skirt pink shoes, consistent preschool proportions. Mother chin-length dark sidepart bob ivory blouse blue jeans, distinct adult. References supply style/cast, not edit targets. No simplified cartoon, thin watercolor, anime,3D,photo. Safe margins. Absolutely NO readable letters, Han, digits, logos or captions. Bright tidy small storeroom. Closed locked door to one side, small ventilation window higher in wall beside door with daylight. Recurring girl points hopefully toward window, classmate Xiaoyue looks attentively at her while moving one low storage box beneath window. Only TWO low wide stable boxes maximum, no tower. BOTH girls stand with BOTH feet on floor, discussion and preparation only, no climbing or hanging or tools. Xiaoyue uses dedicated reference long wavy chestnut hair crescent moon clip lavender cardigan cream blouse teal pleated skirt white socks violet shoes. Do not confuse her with pink protagonist. No mother or other people in this scene. Final correction: unobstructed open casement window; ordinary closed door handle, no interior padlock.",
+          "imageReuseDecision": "New teacher-approved scene; full style and relevant cast references.",
+          "imageSrc": "/assets/lessons/L411/images/L411-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L411/audio/L411-S01.m4a",
+            "durationMs": 3755,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 600
+              },
+              {
+                "charIndex": 1,
+                "startMs": 600,
+                "endMs": 860
+              },
+              {
+                "charIndex": 2,
+                "startMs": 860,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1500,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2180,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2380,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2620,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2980,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3200,
+                "endMs": 3555
+              }
+            ]
+          }
+        },
+        {
+          "id": "L411-S02",
+          "text": "貴的筆不一定好用，先試試。",
+          "spokenText": "貴的筆不一定好用先試試",
+          "displayLines": [
+            "貴的筆",
+            "不一定好用，",
+            "先試試。"
+          ],
+          "focusChar": "定",
+          "imageNotes": "文具店試寫區，主角媽媽陪女孩試筆。女孩拿精緻筆在紙上畫簡單線條，旁邊一支樸素筆供比較，媽媽指紙提醒實際試用。精緻筆不是壞掉；無價格數字或可讀文字。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Strict match full L058 reference sheet and refined preferred sheet: fine textured pencil painted shading, modeled faces, warm varied colors, detailed environments. Girl short dark bob ONE pink clip pink cardigan cream blouse navy skirt pink shoes, consistent preschool proportions. Mother chin-length dark sidepart bob ivory blouse blue jeans, distinct adult. References supply style/cast, not edit targets. No simplified cartoon, thin watercolor, anime,3D,photo. Safe margins. Absolutely NO readable letters, Han, digits, logos or captions. Stationery shop pen test counter. Mother and girl. Girl uses ONE elegant decorated pen drawing simple wordless lines on trial paper. ONE plain simple pen rests beside it for comparison. Mother points gently at paper encouraging test. No broken pen or ink spill. No price tags or readable writing on shelves or paper.",
+          "imageReuseDecision": "New teacher-approved scene; full style and relevant cast references.",
+          "imageSrc": "/assets/lessons/L411/images/L411-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L411/audio/L411-S02.m4a",
+            "durationMs": 4253,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1830
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1830,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2020,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2420,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3260,
+                "endMs": 3560
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3560,
+                "endMs": 3820
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3820,
+                "endMs": 4053
+              }
+            ]
+          }
+        },
+        {
+          "id": "L411-S03",
+          "text": "衣服破了，媽媽一定有辦法。",
+          "spokenText": "衣服破了媽媽一定有辦法",
+          "displayLines": [
+            "衣服破了，",
+            "媽媽一定",
+            "有辦法。"
+          ],
+          "focusChar": "定",
+          "imageNotes": "家中女孩拿接縫裂開的衣服交給媽媽，表情期待。媽媽坐桌邊查看破口，打開針線盒準備修補。衣服不穿在女孩身上，針線由媽媽使用，女孩不拿針。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Strict match full L058 reference sheet and refined preferred sheet: fine textured pencil painted shading, modeled faces, warm varied colors, detailed environments. Girl short dark bob ONE pink clip pink cardigan cream blouse navy skirt pink shoes, consistent preschool proportions. Mother chin-length dark sidepart bob ivory blouse blue jeans, distinct adult. References supply style/cast, not edit targets. No simplified cartoon, thin watercolor, anime,3D,photo. Safe margins. Absolutely NO readable letters, Han, digits, logos or captions. Home sewing table. Girl hands mother a separate garment with clear split seam and a small visible gap. Girl is fully dressed separately, garment not worn. Mother sits inspecting split seam, open sewing kit at her side ready to mend. Girl holds no needles, mother controls all sewing items. Hopeful trusting expressions.",
+          "imageReuseDecision": "New teacher-approved scene; full style and relevant cast references.",
+          "imageSrc": "/assets/lessons/L411/images/L411-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L411/audio/L411-S03.m4a",
+            "durationMs": 4267,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 680
+              },
+              {
+                "charIndex": 2,
+                "startMs": 680,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1760,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2080,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2810
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2810,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3140,
+                "endMs": 3480
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3480,
+                "endMs": 3780
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3780,
+                "endMs": 4067
+              }
+            ]
+          }
+        },
+        {
+          "id": "L411-S04",
+          "text": "白天少開燈，可以減少用電。",
+          "spokenText": "白天少開燈可以減少用電",
+          "displayLines": [
+            "白天少開燈，",
+            "可以減少",
+            "用電。"
+          ],
+          "focusChar": "減",
+          "imageNotes": "白天家中客廳窗簾拉開，自然光充足。媽媽按牆壁開關關掉不需要的客廳燈，女孩在明亮窗邊看書。燈已不發光，室內仍亮；不畫摸黑閱讀，無電表或數字。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Strict match full L058 reference sheet and refined preferred sheet: fine textured pencil painted shading, modeled faces, warm varied colors, detailed environments. Girl short dark bob ONE pink clip pink cardigan cream blouse navy skirt pink shoes, consistent preschool proportions. Mother chin-length dark sidepart bob ivory blouse blue jeans, distinct adult. References supply style/cast, not edit targets. No simplified cartoon, thin watercolor, anime,3D,photo. Safe margins. Absolutely NO readable letters, Han, digits, logos or captions. Sunlit home living room, curtains wide open, very bright natural daylight. Mother presses wall light switch OFF, ceiling lamp visibly unlit. Girl sits near sunny window reading wordless picture book comfortably. Room remains bright; no dark reading, no electricity meter or numbers.",
+          "imageReuseDecision": "New teacher-approved scene; full style and relevant cast references.",
+          "imageSrc": "/assets/lessons/L411/images/L411-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L411/audio/L411-S04.m4a",
+            "durationMs": 3994,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 920
+              },
+              {
+                "charIndex": 2,
+                "startMs": 920,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1340,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1660,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1840,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2160,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2480,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2900,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3200,
+                "endMs": 3520
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3520,
+                "endMs": 3794
+              }
+            ]
+          }
+        },
+        {
+          "id": "L411-S05",
+          "text": "紅色加白色，就有粉紅色。",
+          "spokenText": "紅色加白色就有粉紅色",
+          "displayLines": [
+            "紅色加白色，",
+            "就有粉紅色。"
+          ],
+          "focusChar": "加",
+          "imageNotes": "畫畫桌前女孩調色，媽媽陪同。白色調色盤分開紅色、白色顏料，中央混合出粉紅色，女孩畫筆攪拌中央。三色清楚，不混其他色，無色名或文字標籤。",
+          "imagePrompt": "Use case illustration-story. ONE square1024x1024 richly detailed warm Taiwan children picture-book illustration. Strict match full L058 reference sheet and refined preferred sheet: fine textured pencil painted shading, modeled faces, warm varied colors, detailed environments. Girl short dark bob ONE pink clip pink cardigan cream blouse navy skirt pink shoes, consistent preschool proportions. Mother chin-length dark sidepart bob ivory blouse blue jeans, distinct adult. References supply style/cast, not edit targets. No simplified cartoon, thin watercolor, anime,3D,photo. Safe margins. Absolutely NO readable letters, Han, digits, logos or captions. Home painting table, girl stirs center of ONE white paint palette with ONE paintbrush held naturally. Palette close and clearly visible shows exactly THREE paint areas: pure red separate on left, white separate on right with subtle gray edge so white is visible, central mixed pink from red+white. Brush tip in pink central mixture. Mother nearby encouraging. No blue yellow green paints on palette or extra paints, no text labels.",
+          "imageReuseDecision": "New teacher-approved scene; full style and relevant cast references.",
+          "imageSrc": "/assets/lessons/L411/images/L411-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L411/audio/L411-S05.m4a",
+            "durationMs": 4369,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 880
+              },
+              {
+                "charIndex": 2,
+                "startMs": 880,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1480,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1860,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2580,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2920,
+                "endMs": 3240
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3240,
+                "endMs": 3560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3560,
+                "endMs": 3840
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3840,
+                "endMs": 4169
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L411-G01",
+          "type": "find-character",
+          "sentenceId": "L411-S01",
+          "targetChar": "定",
+          "targetCharIndex": 4,
+          "prompt": "找出句子裡的字。"
+        },
+        {
+          "id": "L411-G02",
+          "type": "teach-character",
+          "sentenceId": "L411-S03",
+          "targetChar": "定",
+          "targetCharIndex": 7,
+          "prompt": "教小兔子念這個字。",
+          "teachAudio": {
+            "prefixText": "衣服破了媽媽一",
+            "suffixText": "有辦法",
+            "prefixSrc": "/assets/lessons/L411/audio/L411-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L411/audio/L411-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L411/audio/L411-G02-prefix.m4a",
+              "durationMs": 3801,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 440
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 440,
+                  "endMs": 700
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 700,
+                  "endMs": 1280
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1280,
+                  "endMs": 1960
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 2190,
+                  "endMs": 2590
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 2590,
+                  "endMs": 2950
+                },
+                {
+                  "charIndex": 6,
+                  "startMs": 3170,
+                  "endMs": 3601
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L411/audio/L411-G02-suffix.m4a",
+              "durationMs": 1452,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 680
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 680,
+                  "endMs": 940
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 940,
+                  "endMs": 1252
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L411-G03",
+          "type": "missing-character",
+          "sentenceId": "L411-S02",
+          "targetChar": "定",
+          "targetCharIndex": 5,
+          "prompt": "找出少了哪個字。",
+          "missingIndexes": [
+            5
+          ],
+          "options": [
+            {
+              "id": "correct",
+              "text": "定",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "樣",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "直",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L411-G04",
+          "type": "partial-order",
+          "sentenceId": "L411-S05",
+          "targetChar": "加",
+          "targetCharIndex": 2,
+          "prompt": "把字放回句子裡。",
+          "missingIndexes": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "options": [
+            {
+              "id": "card-fen",
+              "text": "粉",
+              "correct": true,
+              "correctOrder": 1
+            },
+            {
+              "id": "card-se",
+              "text": "色",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-you",
+              "text": "有",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-hong",
+              "text": "紅",
+              "correct": true,
+              "correctOrder": 2
+            }
+          ]
+        },
+        {
+          "id": "L411-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L411-S04",
+          "targetChar": "減",
+          "targetCharIndex": 7,
+          "prompt": "聽聽看，誰念得對？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "白天少開燈，可以減少用電。",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L411/audio/L411-S04.m4a",
+              "audio": {
+                "src": "/assets/lessons/L411/audio/L411-S04.m4a",
+                "durationMs": 3994,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 560
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 560,
+                    "endMs": 920
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 920,
+                    "endMs": 1340
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1340,
+                    "endMs": 1660
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1660,
+                    "endMs": 1840
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1840,
+                    "endMs": 2160
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2160,
+                    "endMs": 2480
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2480,
+                    "endMs": 2900
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2900,
+                    "endMs": 3200
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3200,
+                    "endMs": 3520
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3520,
+                    "endMs": 3794
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "晚上少開燈，可以減少用電。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L411/audio/L411-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L411/audio/L411-G05-wrong-one.m4a",
+                "durationMs": 4988,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 470
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 470,
+                    "endMs": 1100
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 1420,
+                    "endMs": 1880
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1880,
+                    "endMs": 2180
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 2180,
+                    "endMs": 2380
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 3240,
+                    "endMs": 3340
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 3340,
+                    "endMs": 3440
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 3440,
+                    "endMs": 3860
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3860,
+                    "endMs": 4180
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 4180,
+                    "endMs": 4540
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 4540,
+                    "endMs": 4788
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "白天少開燈，可以減少用水。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L411/audio/L411-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L411/audio/L411-G05-wrong-two.m4a",
+                "durationMs": 4592,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 580
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 580,
+                    "endMs": 1020
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 1020,
+                    "endMs": 1420
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1420,
+                    "endMs": 1720
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1720,
+                    "endMs": 1900
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 2620,
+                    "endMs": 2730
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 2730,
+                    "endMs": 2840
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2840,
+                    "endMs": 3280
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3280,
+                    "endMs": 3560
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3560,
+                    "endMs": 3880
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3880,
+                    "endMs": 4392
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L412",
+      "order": 412,
+      "title": "成",
+      "newChars": [
+        "成"
+      ],
+      "zhuyin": {
+        "成": "ㄔㄥˊ"
+      },
+      "charAudio": {
+        "成": "/assets/lessons/L412/audio/char-u6210.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L412-S01",
+          "text": "試試看，一定能做成。",
+          "spokenText": "試試看一定能做成",
+          "displayLines": [
+            "試試看，",
+            "一定能做成。"
+          ],
+          "focusChar": "成",
+          "imageNotes": "家中手作桌旁，主角爸爸陪小女孩用紙盒做玩具車。桌上已有車身和幾個圓形輪子，女孩拿著尚未裝好的輪子，有些猶豫；爸爸指著安裝位置，微笑鼓勵她繼續嘗試。車子尚未完成，切割工具不放在女孩手邊。",
+          "imagePrompt": "Square image / 1:1 composition with safe margins. Match full L058 warm detailed pencil-and-watercolor Taiwan picturebook style, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Family identity from L154-S01 L162-S04 L163-S02: preschool girl dark short bob pink clip pink cardigan cream shirt navy skirt; mother dark brown shoulder-length hair cream blouse blue jeans; father short brown-black hair blue shirt. L058 is style only. Rich detailed environments, natural warm light and soft shaded expressive faces. No flat cartoon/anime/3D/photographic faces, no generic redesigned toddlers. No readable text/numerals/brands or watermark in any image. Scene: 家中手作桌旁，主角爸爸陪小女孩用紙盒做玩具車。桌上已有車身和幾個圓形輪子，女孩拿著尚未裝好的輪子，有些猶豫；爸爸指著安裝位置，微笑鼓勵她繼續嘗試。車子尚未完成，切割工具不放在女孩手邊。",
+          "imageSrc": "/assets/lessons/L412/images/L412-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L412/audio/L412-S01.m4a",
+            "durationMs": 3301,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 620
+              },
+              {
+                "charIndex": 1,
+                "startMs": 620,
+                "endMs": 980
+              },
+              {
+                "charIndex": 2,
+                "startMs": 980,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1820,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1940,
+                "endMs": 2060
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2060,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2440,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 3080
+              }
+            ]
+          }
+        },
+        {
+          "id": "L412-S02",
+          "text": "試了好多次，才完成這張畫。",
+          "spokenText": "試了好多次才完成這張畫",
+          "displayLines": [
+            "試了好多次，",
+            "才完成",
+            "這張畫。"
+          ],
+          "focusChar": "成",
+          "imageNotes": "主角小女孩坐在畫畫桌前，開心地舉起剛完成的畫，畫中是一隻在草地上奔跑的小狗。桌旁留兩三張畫同一隻小狗的練習稿，有些只畫出輪廓、有些修改過姿勢。用同一主題的練習過程呈現「試了好多次」，不畫成毫無關聯的作品。",
+          "imagePrompt": "Square image / 1:1 composition with safe margins. Match full L058 warm detailed pencil-and-watercolor Taiwan picturebook style, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Family identity from L154-S01 L162-S04 L163-S02: preschool girl dark short bob pink clip pink cardigan cream shirt navy skirt; mother dark brown shoulder-length hair cream blouse blue jeans; father short brown-black hair blue shirt. L058 is style only. Rich detailed environments, natural warm light and soft shaded expressive faces. No flat cartoon/anime/3D/photographic faces, no generic redesigned toddlers. No readable text/numerals/brands or watermark in any image. Scene: 主角小女孩坐在畫畫桌前，開心地舉起剛完成的畫，畫中是一隻在草地上奔跑的小狗。桌旁留兩三張畫同一隻小狗的練習稿，有些只畫出輪廓、有些修改過姿勢。用同一主題的練習過程呈現「試了好多次」，不畫成毫無關聯的作品。",
+          "imageSrc": "/assets/lessons/L412/images/L412-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L412/audio/L412-S02.m4a",
+            "durationMs": 3238,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 660
+              },
+              {
+                "charIndex": 2,
+                "startMs": 660,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1180,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1440,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1840,
+                "endMs": 2070
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2070,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2300,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2600,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2840,
+                "endMs": 3040
+              }
+            ]
+          }
+        },
+        {
+          "id": "L412-S03",
+          "text": "不一定要買，紙也能變成船。",
+          "spokenText": "不一定要買紙也能變成船",
+          "displayLines": [
+            "不一定要買，",
+            "紙也能",
+            "變成船。"
+          ],
+          "focusChar": "成",
+          "imageNotes": "家中桌邊，主角媽媽向小女孩展示一艘剛摺好的紙船。桌上放一張平整的紙和另一張摺到一半的紙，讓人看出紙船是用紙做的。女孩伸手準備接過紙船，表情驚喜。呈現手作，不畫成紙張施魔法變船。",
+          "imagePrompt": "Square image / 1:1 composition with safe margins. Match full L058 warm detailed pencil-and-watercolor Taiwan picturebook style, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Family identity from L154-S01 L162-S04 L163-S02: preschool girl dark short bob pink clip pink cardigan cream shirt navy skirt; mother dark brown shoulder-length hair cream blouse blue jeans; father short brown-black hair blue shirt. L058 is style only. Rich detailed environments, natural warm light and soft shaded expressive faces. No flat cartoon/anime/3D/photographic faces, no generic redesigned toddlers. No readable text/numerals/brands or watermark in any image. Scene: 家中桌邊，主角媽媽向小女孩展示一艘剛摺好的紙船。桌上放一張平整的紙和另一張摺到一半的紙，讓人看出紙船是用紙做的。女孩伸手準備接過紙船，表情驚喜。呈現手作，不畫成紙張施魔法變船。",
+          "imageSrc": "/assets/lessons/L412/images/L412-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L412/audio/L412-S03.m4a",
+            "durationMs": 3240,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 413
+              },
+              {
+                "charIndex": 2,
+                "startMs": 413,
+                "endMs": 587
+              },
+              {
+                "charIndex": 3,
+                "startMs": 587,
+                "endMs": 760
+              },
+              {
+                "charIndex": 4,
+                "startMs": 760,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1470,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1780,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2080,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2300,
+                "endMs": 2520
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2520,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2760,
+                "endMs": 3020
+              }
+            ]
+          }
+        },
+        {
+          "id": "L412-S04",
+          "text": "東西太多，想辦法減少一點。",
+          "spokenText": "東西太多想辦法減少一點",
+          "displayLines": [
+            "東西太多，",
+            "想辦法",
+            "減少一點。"
+          ],
+          "focusChar": "減",
+          "imageNotes": "出遊前，主角媽媽和小女孩整理打開的旅行袋。袋裡已有衣服、帽子和水壺，旁邊還放著好幾個女孩想帶的玩具。媽媽指向過多的玩具，女孩正把其中一個放回家中的收納盒。呈現挑出不必帶的物品，不是把東西丟掉。",
+          "imagePrompt": "Square image / 1:1 composition with safe margins. Match full L058 warm detailed pencil-and-watercolor Taiwan picturebook style, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Family identity from L154-S01 L162-S04 L163-S02: preschool girl dark short bob pink clip pink cardigan cream shirt navy skirt; mother dark brown shoulder-length hair cream blouse blue jeans; father short brown-black hair blue shirt. L058 is style only. Rich detailed environments, natural warm light and soft shaded expressive faces. No flat cartoon/anime/3D/photographic faces, no generic redesigned toddlers. No readable text/numerals/brands or watermark in any image. Scene: 出遊前，主角媽媽和小女孩整理打開的旅行袋。袋裡已有衣服、帽子和水壺，旁邊還放著好幾個女孩想帶的玩具。媽媽指向過多的玩具，女孩正把其中一個放回家中的收納盒。呈現挑出不必帶的物品，不是把東西丟掉。",
+          "imageSrc": "/assets/lessons/L412/images/L412-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L412/audio/L412-S04.m4a",
+            "durationMs": 3814,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 250
+              },
+              {
+                "charIndex": 1,
+                "startMs": 250,
+                "endMs": 500
+              },
+              {
+                "charIndex": 2,
+                "startMs": 500,
+                "endMs": 960
+              },
+              {
+                "charIndex": 3,
+                "startMs": 960,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1705,
+                "endMs": 2140
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2140,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2360,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3300
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3300,
+                "endMs": 3460
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3460,
+                "endMs": 3620
+              }
+            ]
+          }
+        },
+        {
+          "id": "L412-S05",
+          "text": "你有辦法把球拿下來嗎？",
+          "spokenText": "你有辦法把球拿下來嗎",
+          "displayLines": [
+            "你有辦法",
+            "把球拿下來",
+            "嗎？"
+          ],
+          "focusChar": "辦",
+          "imageNotes": "公園裡，一顆球卡在樹枝分岔處，略高於成人伸手可及的位置。主角小女孩站在地上，指著球向主角爸爸發問；爸爸抬頭查看，正在想辦法，尚未動手。「你」明確指爸爸，不使用固定「你」小男孩。不要畫孩子爬樹、踩疊高物品或站在球的正下方。",
+          "imagePrompt": "Square image / 1:1 composition with safe margins. Match full L058 warm detailed pencil-and-watercolor Taiwan picturebook style, refined L115-S01/S02 L118-S02 L119-S01 L128-S03 proportions. Family identity from L154-S01 L162-S04 L163-S02: preschool girl dark short bob pink clip pink cardigan cream shirt navy skirt; mother dark brown shoulder-length hair cream blouse blue jeans; father short brown-black hair blue shirt. L058 is style only. Rich detailed environments, natural warm light and soft shaded expressive faces. No flat cartoon/anime/3D/photographic faces, no generic redesigned toddlers. No readable text/numerals/brands or watermark in any image. Scene: 公園裡，一顆球卡在樹枝分岔處，略高於成人伸手可及的位置。主角小女孩站在地上，指著球向主角爸爸發問；爸爸抬頭查看，正在想辦法，尚未動手。「你」明確指爸爸，不使用固定「你」小男孩。不要畫孩子爬樹、踩疊高物品或站在球的正下方。",
+          "imageSrc": "/assets/lessons/L412/images/L412-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L412/audio/L412-S05.m4a",
+            "durationMs": 3109,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 440
+              },
+              {
+                "charIndex": 2,
+                "startMs": 440,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1980,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 2490
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2490,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2660,
+                "endMs": 2920
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L412-G01",
+          "type": "find-character",
+          "sentenceId": "L412-S01",
+          "targetChar": "成",
+          "targetCharIndex": 7,
+          "prompt": "請幫小兔子找出句子裡的成。"
+        },
+        {
+          "id": "L412-G02",
+          "type": "teach-character",
+          "sentenceId": "L412-S02",
+          "targetChar": "成",
+          "targetCharIndex": 7,
+          "prompt": "請你幫小兔子念紅框裡的字。",
+          "teachAudio": {
+            "prefixText": "試了好多次才完",
+            "suffixText": "這張畫",
+            "prefixSrc": "/assets/lessons/L412/audio/L412-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L412/audio/L412-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L412/audio/L412-G02-prefix.m4a",
+              "durationMs": 2875,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 420
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 420,
+                  "endMs": 660
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 660,
+                  "endMs": 1000
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1000,
+                  "endMs": 1240
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1240,
+                  "endMs": 1580
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 1968,
+                  "endMs": 2280
+                },
+                {
+                  "charIndex": 6,
+                  "startMs": 2280,
+                  "endMs": 2640
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L412/audio/L412-G02-suffix.m4a",
+              "durationMs": 1463,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 440
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 440,
+                  "endMs": 840
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 840,
+                  "endMs": 1140
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L412-G03",
+          "type": "missing-character",
+          "sentenceId": "L412-S03",
+          "targetChar": "成",
+          "targetCharIndex": 9,
+          "missingIndexes": [
+            9
+          ],
+          "prompt": "請幫小兔子找回少掉的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "成",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "出",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "大",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L412-G04",
+          "type": "partial-order",
+          "sentenceId": "L412-S04",
+          "targetChar": "減",
+          "targetCharIndex": 7,
+          "missingIndexes": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "prompt": "請幫小兔子把字放回去。",
+          "options": [
+            {
+              "id": "card-yi",
+              "text": "一",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-jian",
+              "text": "減",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-dian",
+              "text": "點",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-shao",
+              "text": "少",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L412-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L412-S05",
+          "targetChar": "辦",
+          "targetCharIndex": 2,
+          "prompt": "請聽一聽，誰念對了？",
+          "options": [
+            {
+              "id": "correct",
+              "text": "你有辦法把球拿下來嗎？",
+              "audioSrc": "/assets/lessons/L412/audio/L412-S05.m4a",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "你有辦法把書拿下來嗎？",
+              "audioSrc": "/assets/lessons/L412/audio/L412-G05-wrong-one.m4a",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "你有辦法把球拿上來嗎？",
+              "audioSrc": "/assets/lessons/L412/audio/L412-G05-wrong-two.m4a",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L413",
+      "order": 413,
+      "title": "功",
+      "newChars": [
+        "功"
+      ],
+      "zhuyin": {
+        "功": "ㄍㄨㄥ"
+      },
+      "charAudio": {
+        "功": "/assets/lessons/L413/audio/char-u529f.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L413-S01",
+          "text": "再試一次，一定能成功。",
+          "spokenText": "再試一次一定能成功",
+          "displayLines": [
+            "再試一次，",
+            "一定能成功。"
+          ],
+          "focusChar": "功",
+          "imageNotes": "公園遊戲區，主角小女孩練習把球投進矮籃框，主角爸爸在旁鼓勵。女孩剛才沒投進，現在重新拿好球、望著籃框，爸爸微笑示意她再試一次。籃框高度適合孩子，畫面停在準備投球，不提前畫成已經投進。",
+          "approved": true,
+          "imagePrompt": "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed preschool protagonist girl short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt,pink shoes, match family face.Fixed father short dark hair, blue shirt, natural adult face as family anchors.\nSCENE: 公園遊戲區，主角小女孩練習把球投進矮籃框，主角爸爸在旁鼓勵。女孩剛才沒投進，現在重新拿好球、望著籃框，爸爸微笑示意她再試一次。籃框高度適合孩子，畫面停在準備投球，不提前畫成已經投進。",
+          "imageSrc": "/assets/lessons/L413/images/L413-S01.webp",
+          "audio": {
+            "src": "/assets/lessons/L413/audio/L413-S01.m4a",
+            "durationMs": 3756,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 520
+              },
+              {
+                "charIndex": 1,
+                "startMs": 520,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1660,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1900,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2280,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2500,
+                "endMs": 2700
+              }
+            ]
+          }
+        },
+        {
+          "id": "L413-S02",
+          "text": "一定要完成功課，才能出去玩。",
+          "spokenText": "一定要完成功課才能出去玩",
+          "displayLines": [
+            "一定要",
+            "完成功課，",
+            "才能出去玩。"
+          ],
+          "focusChar": "功",
+          "imageNotes": "家中書桌旁，主角媽媽提醒正想出去玩的女孩先完成功課。女孩仍坐在桌前，作業本打開、鉛筆握在手中，一顆球放在門邊；她回頭望向門口，媽媽溫和地指著作業本。功課尚未完成，不畫成責罵或處罰。作業本朝向女孩，不需要可讀題目。",
+          "approved": true,
+          "imagePrompt": "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed preschool protagonist girl short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt,pink shoes, match family face.Fixed mother shoulder-length dark hair, cream cardigan, blue trousers, warm adult face matching family anchors.\nSCENE: 家中書桌旁，主角媽媽提醒正想出去玩的女孩先完成功課。女孩仍坐在桌前，作業本打開、鉛筆握在手中，一顆球放在門邊；她回頭望向門口，媽媽溫和地指著作業本。功課尚未完成，不畫成責罵或處罰。作業本朝向女孩，不需要可讀題目。",
+          "imageSrc": "/assets/lessons/L413/images/L413-S02.webp",
+          "audio": {
+            "src": "/assets/lessons/L413/audio/L413-S02.m4a",
+            "durationMs": 4755,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 267
+              },
+              {
+                "charIndex": 1,
+                "startMs": 267,
+                "endMs": 533
+              },
+              {
+                "charIndex": 2,
+                "startMs": 533,
+                "endMs": 800
+              },
+              {
+                "charIndex": 3,
+                "startMs": 800,
+                "endMs": 1150
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1150,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1500,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1820,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2560,
+                "endMs": 2740
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2740,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2980,
+                "endMs": 3170
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3170,
+                "endMs": 3360
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3360,
+                "endMs": 3620
+              }
+            ]
+          }
+        },
+        {
+          "id": "L413-S03",
+          "text": "我沒吃過這種菜，想試試看。",
+          "spokenText": "我沒吃過這種菜想試試看",
+          "displayLines": [
+            "我沒吃過",
+            "這種菜，",
+            "想試試看。"
+          ],
+          "focusChar": "試",
+          "imageNotes": "家中餐桌上，放一盤女孩沒吃過的蔬菜料理，例如炒秋葵。主角小女孩好奇地看著菜，拿起筷子準備夾一小塊，主角媽媽在旁微笑。呈現女孩主動想嘗試，不是被逼著吃，也不預先表現好吃或難吃。料理名稱只作畫面描述，不加入句子。",
+          "approved": true,
+          "imagePrompt": "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed preschool protagonist girl short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt,pink shoes, match family face.Fixed mother shoulder-length dark hair, cream cardigan, blue trousers, warm adult face matching family anchors.\nSCENE: 家中餐桌上，放一盤女孩沒吃過的蔬菜料理，例如炒秋葵。主角小女孩好奇地看著菜，拿起筷子準備夾一小塊，主角媽媽在旁微笑。呈現女孩主動想嘗試，不是被逼著吃，也不預先表現好吃或難吃。料理名稱只作畫面描述，不加入句子。",
+          "imageSrc": "/assets/lessons/L413/images/L413-S03.webp",
+          "audio": {
+            "src": "/assets/lessons/L413/audio/L413-S03.m4a",
+            "durationMs": 4390,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 260
+              },
+              {
+                "charIndex": 1,
+                "startMs": 260,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1080,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1240,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1400,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2300,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2560,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 10,
+                "startMs": 2700,
+                "endMs": 2880
+              }
+            ]
+          }
+        },
+        {
+          "id": "L413-S04",
+          "text": "小光很用功，下課還在看書。",
+          "spokenText": "小光很用功下課還在看書",
+          "displayLines": [
+            "小光很用功，",
+            "下課還在",
+            "看書。"
+          ],
+          "focusChar": "功",
+          "imageNotes": "下課時的教室，小光仍坐在自己的座位上專心看書，窗外或教室門口可見幾位 generic 同學正在活動。小光神情投入，不畫成被留下來處罰。使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕色鞋。不是固定「你」或「他」小男孩。書本內容不必可讀。",
+          "approved": true,
+          "imagePrompt": "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed Xiaoguang use xiaoguang.webp identity exactly: round glasses, tidy short black side-parted hair, white shirt, navy knit vest, khaki shorts, white socks,brown shoes, small preschool boy. No other fixed boys; classmates generic distinct.\nSCENE: 下課時的教室，小光仍坐在自己的座位上專心看書，窗外或教室門口可見幾位 generic 同學正在活動。小光神情投入，不畫成被留下來處罰。使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕色鞋。不是固定「你」或「他」小男孩。書本內容不必可讀。",
+          "imageSrc": "/assets/lessons/L413/images/L413-S04.webp",
+          "audio": {
+            "src": "/assets/lessons/L413/audio/L413-S04.m4a",
+            "durationMs": 4579,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1260,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2220,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2700,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2980,
+                "endMs": 3260
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3260,
+                "endMs": 3540
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3540,
+                "endMs": 3660
+              }
+            ]
+          }
+        },
+        {
+          "id": "L413-S05",
+          "text": "玩具掉在床下，想個辦法拿。",
+          "spokenText": "玩具掉在床下想個辦法拿",
+          "displayLines": [
+            "玩具掉在",
+            "床下，",
+            "想個辦法拿。"
+          ],
+          "focusChar": "辦",
+          "imageNotes": "家中臥室，主角小女孩蹲在床邊，指著滾到床底深處的小玩具車，主角爸爸蹲在旁邊查看。低角度讓觀者看見玩具位置，以及女孩伸手仍搆不到的距離。爸爸正在思考怎麼取出，尚未動手；不要畫孩子整個人鑽進狹窄床底或自行抬床。",
+          "approved": true,
+          "imagePrompt": "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed preschool protagonist girl short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt,pink shoes, match family face.Fixed father short dark hair, blue shirt, natural adult face as family anchors.\nSCENE: 家中臥室，主角小女孩蹲在床邊，指著滾到床底深處的小玩具車，主角爸爸蹲在旁邊查看。低角度讓觀者看見玩具位置，以及女孩伸手仍搆不到的距離。爸爸正在思考怎麼取出，尚未動手；不要畫孩子整個人鑽進狹窄床底或自行抬床。",
+          "imageSrc": "/assets/lessons/L413/images/L413-S05.webp",
+          "audio": {
+            "src": "/assets/lessons/L413/audio/L413-S05.m4a",
+            "durationMs": 5358,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1300,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1700,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1940,
+                "endMs": 2360
+              },
+              {
+                "charIndex": 6,
+                "startMs": 3100,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3200,
+                "endMs": 3400
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3400,
+                "endMs": 3640
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3640,
+                "endMs": 3880
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3880,
+                "endMs": 4640
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L413-G01",
+          "type": "find-character",
+          "sentenceId": "L413-S01",
+          "targetChar": "功",
+          "targetCharIndex": 8,
+          "prompt": "在句子裡找到功，點一下。"
+        },
+        {
+          "id": "L413-G02",
+          "type": "teach-character",
+          "sentenceId": "L413-S04",
+          "targetChar": "功",
+          "targetCharIndex": 4,
+          "prompt": "請你幫我念。",
+          "teachAudio": {
+            "prefixText": "小光很用",
+            "suffixText": "下課還在看書",
+            "prefixSrc": "/assets/lessons/L413/audio/L413-G02-prefix.m4a",
+            "suffixSrc": "/assets/lessons/L413/audio/L413-G02-suffix.m4a",
+            "prefixAudio": {
+              "src": "/assets/lessons/L413/audio/L413-G02-prefix.m4a",
+              "durationMs": 2246,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 520
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 520,
+                  "endMs": 760
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 760,
+                  "endMs": 1240
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1240,
+                  "endMs": 1460
+                }
+              ]
+            },
+            "suffixAudio": {
+              "src": "/assets/lessons/L413/audio/L413-G02-suffix.m4a",
+              "durationMs": 3844,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 500
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 500,
+                  "endMs": 760
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 760,
+                  "endMs": 1160
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 1160,
+                  "endMs": 1520
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1520,
+                  "endMs": 1920
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 1920,
+                  "endMs": 2160
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L413-G03",
+          "type": "missing-character",
+          "sentenceId": "L413-S02",
+          "targetChar": "功",
+          "targetCharIndex": 5,
+          "missingIndexes": [
+            5
+          ],
+          "prompt": "補上不見的字。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "功",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "下",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "上",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L413-G04",
+          "type": "partial-order",
+          "sentenceId": "L413-S05",
+          "targetChar": "辦",
+          "targetCharIndex": 8,
+          "missingIndexes": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "prompt": "把句子排回正確順序。",
+          "options": [
+            {
+              "id": "card-fa",
+              "text": "法",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-ge",
+              "text": "個",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-na",
+              "text": "拿",
+              "correct": true,
+              "correctOrder": 3
+            },
+            {
+              "id": "card-ban",
+              "text": "辦",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L413-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L413-S03",
+          "targetChar": "試",
+          "targetCharIndex": 8,
+          "prompt": "聽一聽，選出讀對的朋友。",
+          "options": [
+            {
+              "id": "correct",
+              "text": "我沒吃過這種菜，想試試看。",
+              "correct": true,
+              "sentenceId": "L413-S03",
+              "audioSrc": "/assets/lessons/L413/audio/L413-S03.m4a",
+              "audio": {
+                "src": "/assets/lessons/L413/audio/L413-S03.m4a",
+                "durationMs": 4390,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 260
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 260,
+                    "endMs": 600
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 600,
+                    "endMs": 860
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 860,
+                    "endMs": 1080
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1080,
+                    "endMs": 1240
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1240,
+                    "endMs": 1400
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1400,
+                    "endMs": 1660
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2180,
+                    "endMs": 2300
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2300,
+                    "endMs": 2560
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 2560,
+                    "endMs": 2700
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 2700,
+                    "endMs": 2880
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "我沒吃過這種魚，想試試看。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L413/audio/L413-G05-wrong-one.m4a",
+              "audio": {
+                "src": "/assets/lessons/L413/audio/L413-G05-wrong-one.m4a",
+                "durationMs": 4322,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 260
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 260,
+                    "endMs": 620
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 620,
+                    "endMs": 900
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 900,
+                    "endMs": 1160
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1160,
+                    "endMs": 1370
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1370,
+                    "endMs": 1580
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1580,
+                    "endMs": 1880
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2600,
+                    "endMs": 2840
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2840,
+                    "endMs": 3100
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3100,
+                    "endMs": 3320
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3320,
+                    "endMs": 3500
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "我沒吃過那種菜，想試試看。",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L413/audio/L413-G05-wrong-two.m4a",
+              "audio": {
+                "src": "/assets/lessons/L413/audio/L413-G05-wrong-two.m4a",
+                "durationMs": 5106,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 300
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 300,
+                    "endMs": 680
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 680,
+                    "endMs": 1000
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 1000,
+                    "endMs": 1260
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1260,
+                    "endMs": 1540
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1540,
+                    "endMs": 1740
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1740,
+                    "endMs": 2020
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2820,
+                    "endMs": 3000
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 3000,
+                    "endMs": 3280
+                  },
+                  {
+                    "charIndex": 9,
+                    "startMs": 3280,
+                    "endMs": 3480
+                  },
+                  {
+                    "charIndex": 10,
+                    "startMs": 3480,
+                    "endMs": 3660
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L414",
+      "order": 414,
+      "title": "決",
+      "newChars": [
+        "決"
+      ],
+      "zhuyin": {
+        "決": "ㄐㄩㄝˊ"
+      },
+      "charAudio": {
+        "決": "/assets/lessons/L414/audio/char-u6c7a.m4a"
+      },
+      "requiredRounds": 5,
+      "sentences": [
+        {
+          "id": "L414-S01",
+          "text": "下定決心，一定要成功。",
+          "spokenText": "下定決心一定要成功",
+          "displayLines": [
+            "下定決心，",
+            "一定要成功。"
+          ],
+          "focusChar": "決",
+          "imageNotes": "公園平坦的練車區，主角小女孩準備再次練習騎腳踏車，主角爸爸在旁陪伴。女孩戴好安全帽，雙手握住車把，一腳踩地保持穩定，目光專注地望向前方；爸爸扶著車後座，準備協助。呈現下決心繼續學，不畫成已熟練騎走，也不安排車流或陡坡。",
+          "imagePrompt": "Square 1:1 detailed warm fine pencil-and-watercolor picture book; full five L058 images STYLE ONLY; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Family identities L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother brown bob cream blouse blue jeans; father brown hair blue overshirt white inner tan trousers; older brother blue/white striped top dark pants, older/taller than girl, not young boy classmate. Story characters not family. No readable text, letters, numerals, labels, brands or watermark. 公園平坦的練車區，主角小女孩準備再次練習騎腳踏車，主角爸爸在旁陪伴。女孩戴好安全帽，雙手握住車把，一腳踩地保持穩定，目光專注地望向前方；爸爸扶著車後座，準備協助。呈現下決心繼續學，不畫成已熟練騎走，也不安排車流或陡坡。",
+          "imageSrc": "/assets/lessons/L414/images/L414-S01.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L414/audio/L414-S01.m4a",
+            "durationMs": 3500,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 540
+              },
+              {
+                "charIndex": 1,
+                "startMs": 540,
+                "endMs": 880
+              },
+              {
+                "charIndex": 2,
+                "startMs": 880,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1160,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1460,
+                "endMs": 1827
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1827,
+                "endMs": 2193
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2193,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2560,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3020,
+                "endMs": 3260
+              }
+            ]
+          }
+        },
+        {
+          "id": "L414-S02",
+          "text": "我決定把紙盒做成房子。",
+          "spokenText": "我決定把紙盒做成房子",
+          "displayLines": [
+            "我決定把",
+            "紙盒做成",
+            "房子。"
+          ],
+          "focusChar": "決",
+          "imageNotes": "家中手作桌旁，主角小女孩向媽媽說明想法。桌上放一個尚未改造的紙盒，以及準備當屋頂的摺好紙板；女孩指著紙盒，另一手拿著屋頂紙板比位置。媽媽在旁聽她說。呈現已選定要做房子、準備開始，不直接畫成完工小屋；切割工具由成人保管。",
+          "imagePrompt": "Square 1:1 detailed warm fine pencil-and-watercolor picture book; full five L058 images STYLE ONLY; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Family identities L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother brown bob cream blouse blue jeans; father brown hair blue overshirt white inner tan trousers; older brother blue/white striped top dark pants, older/taller than girl, not young boy classmate. Story characters not family. No readable text, letters, numerals, labels, brands or watermark. 家中手作桌旁，主角小女孩向媽媽說明想法。桌上放一個尚未改造的紙盒，以及準備當屋頂的摺好紙板；女孩指著紙盒，另一手拿著屋頂紙板比位置。媽媽在旁聽她說。呈現已選定要做房子、準備開始，不直接畫成完工小屋；切割工具由成人保管。",
+          "imageSrc": "/assets/lessons/L414/images/L414-S02.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L414/audio/L414-S02.m4a",
+            "durationMs": 3524,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1300,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1600,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1900,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2480,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3100,
+                "endMs": 3280
+              }
+            ]
+          }
+        },
+        {
+          "id": "L414-S03",
+          "text": "勇者和怪物正在對決。",
+          "spokenText": "勇者和怪物正在對決",
+          "displayLines": [
+            "勇者和怪物",
+            "正在對決。"
+          ],
+          "focusChar": "決",
+          "imageNotes": "童話場景中，故事裡的勇者和大型怪物面對面交手。勇者站穩、舉盾擋住怪物伸來的手掌，怪物向前迎戰，動作清楚但不恐怖。兩方仍在對決，沒有任何一方倒地認輸。使用故事角色，不套用主角群；不畫血腥、傷口或攻擊眼睛等畫面。",
+          "imagePrompt": "Square 1:1 detailed warm fine pencil-and-watercolor picture book; full five L058 images STYLE ONLY; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Family identities L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother brown bob cream blouse blue jeans; father brown hair blue overshirt white inner tan trousers; older brother blue/white striped top dark pants, older/taller than girl, not young boy classmate. Story characters not family. No readable text, letters, numerals, labels, brands or watermark. 童話場景中，故事裡的勇者和大型怪物面對面交手。勇者站穩、舉盾擋住怪物伸來的手掌，怪物向前迎戰，動作清楚但不恐怖。兩方仍在對決，沒有任何一方倒地認輸。使用故事角色，不套用主角群；不畫血腥、傷口或攻擊眼睛等畫面。",
+          "imageSrc": "/assets/lessons/L414/images/L414-S03.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L414/audio/L414-S03.m4a",
+            "durationMs": 2921,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 380
+              },
+              {
+                "charIndex": 1,
+                "startMs": 380,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1120,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1380,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1900,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2380
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2380,
+                "endMs": 2640
+              }
+            ]
+          }
+        },
+        {
+          "id": "L414-S04",
+          "text": "右手痛，試著用左手寫功課。",
+          "spokenText": "右手痛試著用左手寫功課",
+          "displayLines": [
+            "右手痛，",
+            "試著用左手",
+            "寫功課。"
+          ],
+          "focusChar": "試",
+          "zhuyinOverrides": {
+            "4": "˙ㄓㄜ"
+          },
+          "imageNotes": "家中書桌前，主角小女孩用左手握鉛筆寫功課，主角媽媽在旁指導。女孩右手有簡單的小片敷料，放在桌邊休息；左手下筆較慢，表情專注。作業本朝向女孩，畫面必須清楚辨認是女孩自身的左手握筆，不因鏡像畫錯。不要露出傷口，也不畫成忍痛使用右手。",
+          "imagePrompt": "Square 1:1 detailed warm fine pencil-and-watercolor picture book; full five L058 images STYLE ONLY; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Family identities L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother brown bob cream blouse blue jeans; father brown hair blue overshirt white inner tan trousers; older brother blue/white striped top dark pants, older/taller than girl, not young boy classmate. Story characters not family. No readable text, letters, numerals, labels, brands or watermark. 家中書桌前，主角小女孩用左手握鉛筆寫功課，主角媽媽在旁指導。女孩右手有簡單的小片敷料，放在桌邊休息；左手下筆較慢，表情專注。作業本朝向女孩，畫面必須清楚辨認是女孩自身的左手握筆，不因鏡像畫錯。不要露出傷口，也不畫成忍痛使用右手。",
+          "imageSrc": "/assets/lessons/L414/images/L414-S04.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L414/audio/L414-S04.m4a",
+            "durationMs": 3885,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 940
+              },
+              {
+                "charIndex": 3,
+                "startMs": 940,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1660,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2120,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3180,
+                "endMs": 3440
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3440,
+                "endMs": 3660
+              }
+            ]
+          }
+        },
+        {
+          "id": "L414-S05",
+          "text": "我們決定在家辦晚會。",
+          "spokenText": "我們決定在家辦晚會",
+          "displayLines": [
+            "我們決定",
+            "在家辦晚會。"
+          ],
+          "focusChar": "決",
+          "imageNotes": "家中客廳，主角一家四口：爸爸、媽媽、小女孩和哥哥，一起討論晚會安排。女孩拿幾條彩色紙飾，哥哥指向可表演的小空地，爸爸媽媽微笑回應；桌旁放尚未布置的裝飾用品。呈現家人已決定、開始規劃，親友還沒到場，不畫成晚會已經進行。紙飾不需要可讀文字或數字。",
+          "imagePrompt": "Square 1:1 detailed warm fine pencil-and-watercolor picture book; full five L058 images STYLE ONLY; refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Family identities L154-S01, L162-S04, L163-S02: preschool girl short dark bob pink clip pink cardigan cream top navy skirt pink shoes; mother brown bob cream blouse blue jeans; father brown hair blue overshirt white inner tan trousers; older brother blue/white striped top dark pants, older/taller than girl, not young boy classmate. Story characters not family. No readable text, letters, numerals, labels, brands or watermark. 家中客廳，主角一家四口：爸爸、媽媽、小女孩和哥哥，一起討論晚會安排。女孩拿幾條彩色紙飾，哥哥指向可表演的小空地，爸爸媽媽微笑回應；桌旁放尚未布置的裝飾用品。呈現家人已決定、開始規劃，親友還沒到場，不畫成晚會已經進行。紙飾不需要可讀文字或數字。",
+          "imageSrc": "/assets/lessons/L414/images/L414-S05.webp",
+          "approved": true,
+          "audio": {
+            "src": "/assets/lessons/L414/audio/L414-S05.m4a",
+            "durationMs": 2962,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 230
+              },
+              {
+                "charIndex": 1,
+                "startMs": 230,
+                "endMs": 460
+              },
+              {
+                "charIndex": 2,
+                "startMs": 460,
+                "endMs": 880
+              },
+              {
+                "charIndex": 3,
+                "startMs": 880,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1660,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1960,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2500,
+                "endMs": 2680
+              }
+            ]
+          }
+        }
+      ],
+      "sentenceGames": [
+        {
+          "id": "L414-G01",
+          "type": "find-character",
+          "sentenceId": "L414-S01",
+          "targetChar": "決",
+          "targetCharIndex": 2
+        },
+        {
+          "id": "L414-G02",
+          "type": "teach-character",
+          "sentenceId": "L414-S03",
+          "targetChar": "決",
+          "targetCharIndex": 8,
+          "teachAudio": {
+            "prefixText": "勇者和怪物正在對",
+            "prefixSrc": "/assets/lessons/L414/audio/L414-G02-prefix.m4a",
+            "prefixAudio": {
+              "spokenText": "勇者和怪物正在對",
+              "src": "/assets/lessons/L414/audio/L414-G02-prefix.m4a",
+              "durationMs": 2819,
+              "charTimings": [
+                {
+                  "charIndex": 0,
+                  "startMs": 0,
+                  "endMs": 440
+                },
+                {
+                  "charIndex": 1,
+                  "startMs": 440,
+                  "endMs": 680
+                },
+                {
+                  "charIndex": 2,
+                  "startMs": 680,
+                  "endMs": 960
+                },
+                {
+                  "charIndex": 3,
+                  "startMs": 960,
+                  "endMs": 1220
+                },
+                {
+                  "charIndex": 4,
+                  "startMs": 1220,
+                  "endMs": 1460
+                },
+                {
+                  "charIndex": 5,
+                  "startMs": 1460,
+                  "endMs": 2080
+                },
+                {
+                  "charIndex": 6,
+                  "startMs": 2080,
+                  "endMs": 2360
+                },
+                {
+                  "charIndex": 7,
+                  "startMs": 2360,
+                  "endMs": 2560
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "L414-G03",
+          "type": "missing-character",
+          "sentenceId": "L414-S02",
+          "targetChar": "決",
+          "targetCharIndex": 1,
+          "missingIndexes": [
+            1
+          ],
+          "options": [
+            {
+              "id": "correct",
+              "text": "決",
+              "correct": true
+            },
+            {
+              "id": "wrong-one",
+              "text": "想",
+              "correct": false
+            },
+            {
+              "id": "wrong-two",
+              "text": "看",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "L414-G04",
+          "type": "partial-order",
+          "sentenceId": "L414-S04",
+          "targetChar": "試",
+          "targetCharIndex": 3,
+          "missingIndexes": [
+            8,
+            9,
+            10
+          ],
+          "options": [
+            {
+              "id": "card-ke",
+              "text": "課",
+              "correct": true,
+              "correctOrder": 2
+            },
+            {
+              "id": "card-xie",
+              "text": "寫",
+              "correct": true,
+              "correctOrder": 0
+            },
+            {
+              "id": "card-gong",
+              "text": "功",
+              "correct": true,
+              "correctOrder": 1
+            }
+          ]
+        },
+        {
+          "id": "L414-G05",
+          "type": "choose-pronunciation",
+          "sentenceId": "L414-S05",
+          "targetChar": "決",
+          "targetCharIndex": 2,
+          "options": [
+            {
+              "id": "correct",
+              "text": "我們決定在家辦晚會。",
+              "spokenText": "我們決定在家辦晚會",
+              "correct": true,
+              "audioSrc": "/assets/lessons/L414/audio/L414-S05.m4a",
+              "audio": {
+                "src": "/assets/lessons/L414/audio/L414-S05.m4a",
+                "durationMs": 2962,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 230
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 230,
+                    "endMs": 460
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 460,
+                    "endMs": 880
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 880,
+                    "endMs": 1200
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1200,
+                    "endMs": 1660
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1660,
+                    "endMs": 1960
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1960,
+                    "endMs": 2200
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2200,
+                    "endMs": 2500
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2500,
+                    "endMs": 2680
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-one",
+              "text": "他們決定在家辦晚會。",
+              "spokenText": "他們決定在家辦晚會",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L414/audio/L414-G05-wrong-one.m4a",
+              "audio": {
+                "spokenText": "他們決定在家辦晚會",
+                "src": "/assets/lessons/L414/audio/L414-G05-wrong-one.m4a",
+                "durationMs": 3173,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 190
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 190,
+                    "endMs": 380
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 380,
+                    "endMs": 820
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 820,
+                    "endMs": 1060
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1060,
+                    "endMs": 1480
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1480,
+                    "endMs": 1840
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1840,
+                    "endMs": 2420
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2420,
+                    "endMs": 2720
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2720,
+                    "endMs": 2880
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wrong-two",
+              "text": "我們決定在外辦晚會。",
+              "spokenText": "我們決定在外辦晚會",
+              "correct": false,
+              "audioSrc": "/assets/lessons/L414/audio/L414-G05-wrong-two.m4a",
+              "audio": {
+                "spokenText": "我們決定在外辦晚會",
+                "src": "/assets/lessons/L414/audio/L414-G05-wrong-two.m4a",
+                "durationMs": 2841,
+                "charTimings": [
+                  {
+                    "charIndex": 0,
+                    "startMs": 0,
+                    "endMs": 250
+                  },
+                  {
+                    "charIndex": 1,
+                    "startMs": 250,
+                    "endMs": 500
+                  },
+                  {
+                    "charIndex": 2,
+                    "startMs": 500,
+                    "endMs": 940
+                  },
+                  {
+                    "charIndex": 3,
+                    "startMs": 940,
+                    "endMs": 1220
+                  },
+                  {
+                    "charIndex": 4,
+                    "startMs": 1220,
+                    "endMs": 1520
+                  },
+                  {
+                    "charIndex": 5,
+                    "startMs": 1520,
+                    "endMs": 1800
+                  },
+                  {
+                    "charIndex": 6,
+                    "startMs": 1800,
+                    "endMs": 2040
+                  },
+                  {
+                    "charIndex": 7,
+                    "startMs": 2040,
+                    "endMs": 2380
+                  },
+                  {
+                    "charIndex": 8,
+                    "startMs": 2380,
+                    "endMs": 2540
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stage4AudioAlignment": {
+        "L414-G02-prefix": {
+          "spokenText": "勇者和怪物正在對",
+          "src": "/assets/lessons/L414/audio/L414-G02-prefix.m4a",
+          "durationMs": 2819,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 440
+            },
+            {
+              "charIndex": 1,
+              "startMs": 440,
+              "endMs": 680
+            },
+            {
+              "charIndex": 2,
+              "startMs": 680,
+              "endMs": 960
+            },
+            {
+              "charIndex": 3,
+              "startMs": 960,
+              "endMs": 1220
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1220,
+              "endMs": 1460
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1460,
+              "endMs": 2080
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2080,
+              "endMs": 2360
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2360,
+              "endMs": 2560
+            }
+          ]
+        },
+        "L414-G05-wrong-one": {
+          "spokenText": "他們決定在家辦晚會",
+          "src": "/assets/lessons/L414/audio/L414-G05-wrong-one.m4a",
+          "durationMs": 3173,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 190
+            },
+            {
+              "charIndex": 1,
+              "startMs": 190,
+              "endMs": 380
+            },
+            {
+              "charIndex": 2,
+              "startMs": 380,
+              "endMs": 820
+            },
+            {
+              "charIndex": 3,
+              "startMs": 820,
+              "endMs": 1060
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1060,
+              "endMs": 1480
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1480,
+              "endMs": 1840
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1840,
+              "endMs": 2420
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2420,
+              "endMs": 2720
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2720,
+              "endMs": 2880
+            }
+          ]
+        },
+        "L414-G05-wrong-two": {
+          "spokenText": "我們決定在外辦晚會",
+          "src": "/assets/lessons/L414/audio/L414-G05-wrong-two.m4a",
+          "durationMs": 2841,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 250
+            },
+            {
+              "charIndex": 1,
+              "startMs": 250,
+              "endMs": 500
+            },
+            {
+              "charIndex": 2,
+              "startMs": 500,
+              "endMs": 940
+            },
+            {
+              "charIndex": 3,
+              "startMs": 940,
+              "endMs": 1220
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1220,
+              "endMs": 1520
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1520,
+              "endMs": 1800
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1800,
+              "endMs": 2040
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2040,
+              "endMs": 2380
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2380,
+              "endMs": 2540
+            }
+          ]
+        }
+      },
+      "notes": [
+        "L414 normal single-character lesson. Formal boundary L408; dependencies L409/L410/L411/L412/L413 and provisional 辦/試/定/成/功. R049/R050 after405 already merged. Release integration only is dependency-blocked.",
+        "Technical QA PASS: five 1024-square WebP, nine processed mono 44100 Hz AAC M4A decoded; charAudio duration and volume; eight final AI alignments; 418 allowed characters; coverage 決4 功2 成2 定4 試1 辦1; displayLines; five canonical games each using a distinct sentence; G03 three single-Han choices, G04 寫/功/課. G05 volume spread 1.2 dB.",
+        "S01 style-lock PASS and cast PASS: foot grounded before cycling, father supporting saddle. Initial pedal-foot image regenerated; rejected original not committed. S02 style-lock PASS and cast PASS: unmodified box and unattached roof. S03 style-lock PASS and cast PASS: separate story identities, ongoing shield/palm duel, neither defeated. S04 style-lock PASS and cast PASS: anatomical LEFT hand writes (viewer right), dressed RIGHT hand rests. S05 style-lock PASS and cast PASS: family four planning, striped-shirt older brother, decorations not installed. All five final WebP individually opened and compared side by side with L058/refined/family anchors. No readable text/numeral exceptions; all images newly generated, no asset reuse.",
+        "Audio generated through unchanged repo OpenAI TTS scripts using exact inputs; independent char 決; whole sentences; G02 prefix 勇者和怪物正在對, no suffix; whole wrong-choice texts. Initial S02 alignment had a 1ms segment: regenerated entire sentence and realigned, final spans all 80-900ms. Final processed sentence/Stage4 audio independently transcribes to approved Han text after simplified/traditional normalization. AI alignment uses exact-text context, raw evidence retained. Only terminal silence removed with 200ms buffer; no spoken material spliced.",
+        "Standalone 決 regenerated after initial ASR returned 雪. Final 984ms audio recognized as the same-pronunciation character 爵 (ㄐㄩㄝˊ) with generic Chinese-script context, without supplying the target answer; raw transcription retained, not relabeled as an exact orthographic match or teacher listening approval. Source input remains the single character 決.",
+        "Browser QA requested viewport 390x844: Stage1 character starts on tap; five Stage3 sentences each start on first tap and complete, Stage3 marked complete; visible sentence highlighting and readable layout checked. G01 target accepted; G02 prefix plays then waits at final 決; G03 three options and correct answer accepted; G04 寫/功/課 accepted in order. Browser API exposes click but no sustained pointer hold, so microphone recording and stitched replay use SOP tooling fallback after technical gates. No claim of completed recording/replay or subjective human listening. Teacher subjective image/audio review remains post-main.",
+        "G05 all three readers each started on first tap and returned to idle. Phone screenshot shows wrapped sentence tokens and options within viewport. No completion-navigation app code changed; full reward flow remains part of Release integration QA.",
+        "Raw MP3 generation inbox retained locally and ignored by repository convention; final processed M4A and alignment evidence are committed.",
+        "Full verify skipped because package has unmerged dependencies; formal curriculum JSON, planner export and ledger unchanged. Release owns final shared-state verification and deployment."
       ]
     }
   ],

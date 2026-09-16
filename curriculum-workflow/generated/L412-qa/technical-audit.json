@@ -1,0 +1,949 @@
+{
+  "unit": "L412",
+  "checks": [
+    {
+      "check": "All ten final audio files decode, AAC mono 44100Hz, volume and SHA256 gates pass; exact sentence/fragment/option transcripts. Independent non-target-prompted gpt-4o-transcribe recognizes standalone 成.",
+      "result": "PASS"
+    },
+    {
+      "check": "Approved text, spokenText, functional displayLines, Han counts 8/11/11/11/10, coverage and allowed-character sweep; indexed bounded nonoverlapping timings, spans80-900ms and final tails<=300ms.",
+      "result": "PASS"
+    },
+    {
+      "check": "Canonical Stage4, 成 index7/7/9, G04 減少一點 single-Han cards, exact dedicated G02 fragments/timings, G05 exact full-sentence options, mean-volume spread 0.1dB.",
+      "result": "PASS"
+    },
+    {
+      "check": "Five final square WebP images<=250KiB, total lesson assets 1203145 bytes<=2MiB; exported files inspected side-by-side against L058/refined/family references.",
+      "result": "PASS"
+    },
+    {
+      "check": "Repo validate:production baseline and isolated L412 draft fixture; original production JSON restored byte-for-byte.",
+      "result": "PASS"
+    },
+    {
+      "check": "npm run assets:audit -- --strict on isolated L412 draft fixture; original production JSON restored byte-for-byte.",
+      "result": "PASS"
+    },
+    {
+      "check": "Final origin/main check 346b7af0e22c21d388c92491e0e569b37e62299f: through L408, 412 learned; same allowed416 set. Remaining provisional 辦 試 定; Release dependencies L409, L410, L411. R049/R050 after405 already merged.",
+      "result": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "id": "L412-S01",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 122986,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "Unfinished cardboard car, hesitant girl holds separate wheel; father points at wheel mounting location."
+    },
+    {
+      "id": "L412-S02",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 174422,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "Completed running-puppy drawing and three earlier drawings of same puppy; no words or scores."
+    },
+    {
+      "id": "L412-S03",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 151158,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "Mother presents folded paper boat with flat and half-folded paper on table; handmade, no magic."
+    },
+    {
+      "id": "L412-S04",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 167902,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "Girl returns one toy to home storage; packed travel bag and excess toys distinct, not garbage."
+    },
+    {
+      "id": "L412-S05",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 222898,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "One ball caught above adult reach; father and girl stand to side on ground, father thinking; 你 refers to father."
+    }
+  ],
+  "audio": [
+    {
+      "file": "L412-S01.m4a",
+      "expected": "試試看一定能做成",
+      "duration": 3.300998,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.6,
+      "max": -2.8,
+      "silence": [],
+      "sha256": "a193e18f9b0d4ab1487396f384433b59d4bc424e9c5f08a6b0b6cd0a32dc6962",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.319999933242798,
+        "text": "試試看,一定能做成。",
+        "words": [
+          {
+            "word": "試",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "試",
+            "start": 0.6200000047683716,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "看",
+            "start": 0.9800000190734863,
+            "end": 1.340000033378601
+          },
+          {
+            "word": "一定",
+            "start": 1.8200000524520874,
+            "end": 2.059999942779541
+          },
+          {
+            "word": "能",
+            "start": 2.059999942779541,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "做",
+            "start": 2.440000057220459,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "成。",
+            "start": 2.7200000286102295,
+            "end": 3.0799999237060547
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L412-S02.m4a",
+      "expected": "試了好多次才完成這張畫",
+      "duration": 3.238005,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -19,
+      "max": -3.1,
+      "silence": [],
+      "sha256": "39b9ed63f13e5260238e566e04f79af0b0f1544cbdbc8c25ab2376df988256b3",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.25,
+        "text": "試了好多次才完成這張畫。",
+        "words": [
+          {
+            "word": "試",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "了",
+            "start": 0.46000000834465027,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "好",
+            "start": 0.6600000262260437,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "多",
+            "start": 0.9399999976158142,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "次",
+            "start": 1.1799999475479126,
+            "end": 1.440000057220459
+          },
+          {
+            "word": "才",
+            "start": 1.440000057220459,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "完成",
+            "start": 1.840000033378601,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "這",
+            "start": 2.299999952316284,
+            "end": 2.5999999046325684
+          },
+          {
+            "word": "張",
+            "start": 2.5999999046325684,
+            "end": 2.8399999141693115
+          },
+          {
+            "word": "畫。",
+            "start": 2.8399999141693115,
+            "end": 3.0399999618530273
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L412-S03.m4a",
+      "expected": "不一定要買紙也能變成船",
+      "duration": 3.24,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.7,
+      "max": -2.5,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.177687
+        },
+        {
+          "type": "end",
+          "seconds": 1.470159
+        }
+      ],
+      "sha256": "8e34eeb4a6acdb59cc37a0ebf8cbe942d3324a3fa65f4ddbd66e039ab6b48953",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.25,
+        "text": "不一定要買,紙也能變成船。",
+        "words": [
+          {
+            "word": "不",
+            "start": 0,
+            "end": 0.23999999463558197
+          },
+          {
+            "word": "一定要",
+            "start": 0.23999999463558197,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "買",
+            "start": 0.7599999904632568,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "紙",
+            "start": 1.7000000476837158,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "也",
+            "start": 1.7799999713897705,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "能",
+            "start": 2.0799999237060547,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "變",
+            "start": 2.299999952316284,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "成",
+            "start": 2.5199999809265137,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "船。",
+            "start": 2.759999990463257,
+            "end": 3.0199999809265137
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L412-S04.m4a",
+      "expected": "東西太多想辦法減少一點",
+      "duration": 3.813991,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.3,
+      "max": -2.1,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.334989
+        },
+        {
+          "type": "end",
+          "seconds": 1.704717
+        }
+      ],
+      "sha256": "fa5ad3ff4080276f8003cc46c5005e86f139a23e98d63e67a040b7b619523d7a",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.8299999237060547,
+        "text": "東西太多,想辦法減少一點。",
+        "words": [
+          {
+            "word": "東西",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "太",
+            "start": 0.5,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "多",
+            "start": 0.9599999785423279,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "想",
+            "start": 1.9800000190734863,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "辦法",
+            "start": 2.140000104904175,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "減",
+            "start": 2.5799999237060547,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "少",
+            "start": 3.0399999618530273,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "一點。",
+            "start": 3.299999952316284,
+            "end": 3.619999885559082
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L412-S05.m4a",
+      "expected": "你有辦法把球拿下來嗎",
+      "duration": 3.109002,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.8,
+      "max": -3.5,
+      "silence": [],
+      "sha256": "523ec187278241382134cd3f78b5a23b41359943d0344c06d45790fb16434a20",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.109999895095825,
+        "text": "你有辦法把球拿下來嗎?",
+        "words": [
+          {
+            "word": "你有",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "辦法",
+            "start": 0.4399999976158142,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "把",
+            "start": 1.1200000047683716,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "球",
+            "start": 1.5800000429153442,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "拿",
+            "start": 1.9800000190734863,
+            "end": 2.319999933242798
+          },
+          {
+            "word": "下來",
+            "start": 2.319999933242798,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "嗎",
+            "start": 2.6600000858306885,
+            "end": 2.9200000762939453
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "char-u6210.m4a",
+      "expected": "成",
+      "duration": 1.183991,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -19,
+      "max": -2.1,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0
+        },
+        {
+          "type": "end",
+          "seconds": 0.368526
+        }
+      ],
+      "sha256": "c1261f07cc72e96932e72cf67cb6479bfcb87538564543cd75e07a9e567a670a",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 1.1799999475479126,
+        "text": "",
+        "words": [],
+        "usage": {
+          "type": "duration",
+          "seconds": 2
+        }
+      }
+    },
+    {
+      "file": "L412-G02-prefix.m4a",
+      "expected": "試了好多次才完",
+      "duration": 2.875011,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -19.2,
+      "max": -2.1,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.518526
+        },
+        {
+          "type": "end",
+          "seconds": 1.967596
+        }
+      ],
+      "sha256": "55ce06dd0b1876499f0447f556630eb8705426ff64ec1baca6b102f8517f6ece",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.869999885559082,
+        "text": "試了好多次,才完。",
+        "words": [
+          {
+            "word": "試",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "了",
+            "start": 0.41999998688697815,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "好",
+            "start": 0.6600000262260437,
+            "end": 1
+          },
+          {
+            "word": "多",
+            "start": 1,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "次",
+            "start": 1.2400000095367432,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "才",
+            "start": 1.6399999856948853,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "完。",
+            "start": 2.2799999713897705,
+            "end": 2.640000104904175
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      }
+    },
+    {
+      "file": "L412-G02-suffix.m4a",
+      "expected": "這張畫",
+      "duration": 1.462993,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -19.4,
+      "max": -4.8,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.253356
+        },
+        {
+          "type": "end",
+          "seconds": 1.462857
+        }
+      ],
+      "sha256": "0f52a93a0dee3470fd358c2dcd75fe8ac19837552115b04b71d5547ad47a775b",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 1.4600000381469727,
+        "text": "這張畫。",
+        "words": [
+          {
+            "word": "這",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "張",
+            "start": 0.4399999976158142,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "畫。",
+            "start": 0.8399999737739563,
+            "end": 1.1399999856948853
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 2
+        }
+      }
+    },
+    {
+      "file": "L412-G05-wrong-one.m4a",
+      "expected": "你有辦法把書拿下來嗎",
+      "duration": 2.896009,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.8,
+      "max": -2.5,
+      "silence": [],
+      "sha256": "15b4ecb436925c5dec947e61f9031a39ac2c9094ee116193ea3d5bfbbc23e111",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.9000000953674316,
+        "text": "你有辦法把書拿下來嗎?",
+        "words": [
+          {
+            "word": "你有",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "辦法",
+            "start": 0.4399999976158142,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "把",
+            "start": 1.1200000047683716,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "書",
+            "start": 1.4600000381469727,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "拿",
+            "start": 1.7999999523162842,
+            "end": 2.119999885559082
+          },
+          {
+            "word": "下來",
+            "start": 2.119999885559082,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "嗎",
+            "start": 2.4800000190734863,
+            "end": 2.740000009536743
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      }
+    },
+    {
+      "file": "L412-G05-wrong-two.m4a",
+      "expected": "你有辦法把球拿上來嗎",
+      "duration": 2.908005,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.7,
+      "max": -2.1,
+      "silence": [],
+      "sha256": "f5228d2d4d64590b1323737f847b150ab8a0a9b93500696d84be4d4ab17ee968",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.9200000762939453,
+        "text": "你有辦法把球拿上來嗎?",
+        "words": [
+          {
+            "word": "你有",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "辦法",
+            "start": 0.3799999952316284,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "把",
+            "start": 1.0199999809265137,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "球",
+            "start": 1.3600000143051147,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "拿",
+            "start": 1.7400000095367432,
+            "end": 2
+          },
+          {
+            "word": "上",
+            "start": 2,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "來",
+            "start": 2.240000009536743,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "嗎",
+            "start": 2.4600000381469727,
+            "end": 2.6600000858306885
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      }
+    }
+  ],
+  "assetBytes": 1203145,
+  "browserQA": {
+    "fallback": "Recording/replay not verified through automation; technical asset validation and dedicated fragment playback used per Production SOP browser fallback",
+    "fixture": "Actual LessonPanel using source-main lookup plus lesson-local draft and approved provisional; no production state writes",
+    "sentences": "S01-S05 all ENDED; images, functional line breaks and active highlights inspected at phone width",
+    "status": "playback-verified-recording-tooling-fallback",
+    "releaseQA": "Persistent progress, reward navigation and next-lesson flow left to Release integrated verification",
+    "cleanup": "Viewport reset and own QA tab closed",
+    "games": {
+      "G05": "PASS all three exact full sentence options ENDED, correct option selected; reward button appeared",
+      "G02": "Exact prefix 試了好多次才完 ENDED, then red frame on 成. Prefix retains 完. Click generated two cue blob PLAY events; browser control did not complete press-and-hold recording or recorded replay. Microphone permission unchanged.",
+      "G04": "PASS 減少一點 restored in order",
+      "G01": "PASS correct 成 selected",
+      "G03": "PASS 成 selected among 出/大/成"
+    },
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "media": "All ten final M4A files reached ENDED; standalone 成 and suffix 這張畫 independently played through local media fixture",
+    "listening": "No human listening or microphone recording claimed; teacher subjective review remains post-merge"
+  },
+  "browserEvents": [
+    {
+      "event": "PLAY L412-S01.m4a",
+      "time": 1789534339725
+    },
+    {
+      "event": "ENDED L412-S01.m4a",
+      "time": 1789534343068
+    },
+    {
+      "event": "PLAY L412-S02.m4a",
+      "time": 1789534379829
+    },
+    {
+      "event": "ENDED L412-S02.m4a",
+      "time": 1789534383122
+    },
+    {
+      "event": "PLAY L412-S03.m4a",
+      "time": 1789534396450
+    },
+    {
+      "event": "ENDED L412-S03.m4a",
+      "time": 1789534399819
+    },
+    {
+      "event": "PLAY L412-S04.m4a",
+      "time": 1789534428550
+    },
+    {
+      "event": "ENDED L412-S04.m4a",
+      "time": 1789534432402
+    },
+    {
+      "event": "PLAY L412-S05.m4a",
+      "time": 1789534443751
+    },
+    {
+      "event": "ENDED L412-S05.m4a",
+      "time": 1789534446905
+    },
+    {
+      "event": "PLAY L412-S01.m4a",
+      "time": 1789534498543
+    },
+    {
+      "event": "ENDED L412-S01.m4a",
+      "time": 1789534502316
+    },
+    {
+      "event": "PLAY L412-G02-prefix.m4a",
+      "time": 1789534523644
+    },
+    {
+      "event": "ENDED L412-G02-prefix.m4a",
+      "time": 1789534526578
+    },
+    {
+      "event": "PLAY 4b52fd52-c1d0-4978-9f55-11148f3f73bd",
+      "time": 1789534549562
+    },
+    {
+      "event": "PLAY 4b52fd52-c1d0-4978-9f55-11148f3f73bd",
+      "time": 1789534549635
+    },
+    {
+      "event": "PLAY L412-S03.m4a",
+      "time": 1789534564534
+    },
+    {
+      "event": "ENDED L412-S03.m4a",
+      "time": 1789534567844
+    },
+    {
+      "event": "PLAY L412-S04.m4a",
+      "time": 1789534585515
+    },
+    {
+      "event": "ENDED L412-S04.m4a",
+      "time": 1789534589365
+    },
+    {
+      "event": "PLAY L412-S05.m4a",
+      "time": 1789534658021
+    },
+    {
+      "event": "ENDED L412-S05.m4a",
+      "time": 1789534661170
+    },
+    {
+      "event": "PLAY L412-G05-wrong-one.m4a",
+      "time": 1789534672521
+    },
+    {
+      "event": "ENDED L412-G05-wrong-one.m4a",
+      "time": 1789534675452
+    },
+    {
+      "event": "PLAY L412-G05-wrong-two.m4a",
+      "time": 1789534709152
+    },
+    {
+      "event": "ENDED L412-G05-wrong-two.m4a",
+      "time": 1789534712103
+    },
+    {
+      "event": "PLAY char-u6210.m4a",
+      "time": 1789534748943
+    },
+    {
+      "event": "ENDED char-u6210.m4a",
+      "time": 1789534750170
+    },
+    {
+      "event": "PLAY L412-G02-suffix.m4a",
+      "time": 1789534763707
+    },
+    {
+      "event": "ENDED L412-G02-suffix.m4a",
+      "time": 1789534765152
+    }
+  ],
+  "timingRepairs": [
+    {
+      "sentence": "L412-S03",
+      "index": 5,
+      "old": {
+        "charIndex": 5,
+        "startMs": 1700,
+        "endMs": 1780
+      },
+      "updated": {
+        "charIndex": 5,
+        "startMs": 1470,
+        "endMs": 1780
+      },
+      "reason": "紙 starts after measured phrase pause ending1470.159ms, following 買."
+    },
+    {
+      "sentence": "L412-S04",
+      "index": 4,
+      "old": {
+        "charIndex": 4,
+        "startMs": 1980,
+        "endMs": 2140
+      },
+      "updated": {
+        "charIndex": 4,
+        "startMs": 1705,
+        "endMs": 2140
+      },
+      "reason": "想 starts after measured pause ending1704.717ms."
+    },
+    {
+      "fragment": "prefix",
+      "index": 5,
+      "old": {
+        "charIndex": 5,
+        "startMs": 1640,
+        "endMs": 2280
+      },
+      "updated": {
+        "charIndex": 5,
+        "startMs": 1968,
+        "endMs": 2280
+      },
+      "reason": "才 onset after measured pause ending1967.596ms; 完 remains final separate syllable."
+    }
+  ],
+  "independentCharacterTranscript": {
+    "text": "成",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 40,
+      "input_tokens": 37,
+      "input_token_details": {
+        "text_tokens": 26,
+        "audio_tokens": 11
+      },
+      "output_tokens": 3
+    }
+  },
+  "audioNotes": "Standalone 成 generated directly; final independent gpt-4o-transcribe with generic non-target context recognizes 成. Whisper short-clip recognition is unreliable (raw evidence retained), not used as sole pronunciation gate. No human listening claimed. S03 first version paused after 紙; regenerated whole exact sentence with pause after 買, confirmed by final transcript and measured pause. Repo ai:audio/assets:audio/assets:align:ai; independently generated fragments/options, no syllable extraction or splicing. Measured trailing silence trimmed with120ms decay allowance; G02 suffix normalized +6.7dB to match prefix. Shared files restored.",
+  "rejectedDrafts": [
+    "S01 initial father pointing at windshield instead of wheel mount; corrected with imagegen."
+  ],
+  "rejectedDraftsCommitted": false,
+  "teacherApprovedExceptions": [],
+  "sourceBoundary": "03c720e0f102a573ae2f96047e59e78721580817",
+  "boundaryNote": "Source main L407 with411 learned chars; dependencies L408-L411, provisional 法辦試定, allowed416. R049/R050 after405 already merged.",
+  "finalBoundaryCheck": "Final origin/main check 346b7af0e22c21d388c92491e0e569b37e62299f: through L408, 412 learned; same allowed416 set. Remaining provisional 辦 試 定; Release dependencies L409, L410, L411. R049/R050 after405 already merged."
+}

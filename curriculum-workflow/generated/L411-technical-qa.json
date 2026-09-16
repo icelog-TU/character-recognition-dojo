@@ -1,0 +1,198 @@
+{
+  "unit": "L411",
+  "sourceBoundary": "03c720e0f102a573ae2f96047e59e78721580817",
+  "allowedCount": 415,
+  "coverage": {
+    "定": 3,
+    "試": 4,
+    "辦": 2,
+    "法": 2,
+    "減": 1,
+    "加": 1
+  },
+  "stage4IndexCheck": "PASS",
+  "timingCheck": "PASS",
+  "images": [
+    {
+      "file": "L411-S01.webp",
+      "bytes": 105414,
+      "dimensions": "1024 1024",
+      "sha256": "5903608d17059dd5a32b0642219b53ea764f7931a85a96d272c5558579efa61f",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Open unobstructed high window, ordinary closed door; girl and exact Xiaoyue cast remain on floor by two low boxes."
+    },
+    {
+      "file": "L411-S02.webp",
+      "bytes": 150212,
+      "dimensions": "1024 1024",
+      "sha256": "0d5e240e93f6e00b42380d39015a37e9b41845af088d01b38488bef99065cb6d",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Decorated working pen and plain comparison pen; mother points to wordless trial lines."
+    },
+    {
+      "file": "L411-S03.webp",
+      "bytes": 143966,
+      "dimensions": "1024 1024",
+      "sha256": "84513c004efd9b155a336a1ea3850a9d580031baf38a72782719226019ead1cb",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Separate torn-seam garment handed to mother; open sewing kit controlled by adult."
+    },
+    {
+      "file": "L411-S04.webp",
+      "bytes": 142628,
+      "dimensions": "1024 1024",
+      "sha256": "b205ec7374b748dac8046aff343d47b76533b90f881a20ae13032ce296b3dde6",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Unlit lamp, mother pressing switch, bright daylight and girl reading near window."
+    },
+    {
+      "file": "L411-S05.webp",
+      "bytes": 138072,
+      "dimensions": "1024 1024",
+      "sha256": "14eaea1aeb90bd85f3fc82c7521b0f139d66728f057008cbbefc8521a607e5ba",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Separate red and white paint with central pink mixture; brush stirs pink."
+    }
+  ],
+  "audio": [
+    {
+      "file": "char-u5b9a.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 1161,
+      "maxDb": -2.9,
+      "meanDb": -19,
+      "sha256": "631cca867222170fda0bcd8fad11a0696c0407db9d5876fb3ab3b2d147e1618f",
+      "decode": "PASS"
+    },
+    {
+      "file": "L411-G02-prefix.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3801,
+      "maxDb": -2.5,
+      "meanDb": -18.5,
+      "sha256": "b15109c178e9222346bbe3fb2ccb4668d5f2405b384f4907ca433f1160c7c067",
+      "decode": "PASS"
+    },
+    {
+      "file": "L411-G02-suffix.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 1452,
+      "maxDb": -2,
+      "meanDb": -17.7,
+      "sha256": "6fac038513572ebb17732e28dfa639f80628057b3691f70cc403e310cee06e67",
+      "decode": "PASS"
+    },
+    {
+      "file": "L411-G05-wrong-one.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4988,
+      "maxDb": -2,
+      "meanDb": -17.6,
+      "sha256": "bfada52cbf6ff5d67ea2190ec07dbf321b74c641b2bc9ae9c8d785250c8977ba",
+      "decode": "PASS"
+    },
+    {
+      "file": "L411-G05-wrong-two.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4592,
+      "maxDb": -2,
+      "meanDb": -18,
+      "sha256": "b11cdee88ab7e3d0aca18c46d6567772d277e5fe00718c377583e475f5f58a4b",
+      "decode": "PASS"
+    },
+    {
+      "file": "L411-S01.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3755,
+      "maxDb": -2.7,
+      "meanDb": -18.7,
+      "sha256": "d60db318af1b7e0ff4b7fc16c0c08b747bfcee7ec85e3428cf83cf49b7f13b5d",
+      "decode": "PASS"
+    },
+    {
+      "file": "L411-S02.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4253,
+      "maxDb": -2,
+      "meanDb": -18.1,
+      "sha256": "0888713d409835c05592b25a21f3f55b3ee0364156c26400457fbdc50b22fadf",
+      "decode": "PASS"
+    },
+    {
+      "file": "L411-S03.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4267,
+      "maxDb": -2,
+      "meanDb": -17.8,
+      "sha256": "69f8a0766d79de5137ec0d6ed5bb90d938505c48ef9080f28fdeff6afb5215b9",
+      "decode": "PASS"
+    },
+    {
+      "file": "L411-S04.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3994,
+      "maxDb": -2,
+      "meanDb": -17.3,
+      "sha256": "f2e03fbf511482ad945952d77235f0109074d7cfa0e7de6557f7d8200a0ca16d",
+      "decode": "PASS"
+    },
+    {
+      "file": "L411-S05.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4369,
+      "maxDb": -2.4,
+      "meanDb": -19,
+      "sha256": "ecdd3f8a552e11a2dc1899a66a3b74aee20cf5f849719dee65ecae92f66de101",
+      "decode": "PASS"
+    }
+  ],
+  "choosePronunciationMeanSpreadDb": 0.7,
+  "folderBytes": 1167502,
+  "browserQA": {
+    "result": "tooling-fallback",
+    "url": "http://localhost:5411/tools/lesson-asset-review.html?unit=L411&ref=local",
+    "observed": "Loaded five sentence cards and six extra audio controls. Clicking L411-G02-prefix Play crashed the Codex in-app browser; next inspection confirmed This page crashed.",
+    "skipped": [
+      "Subjective continuous listening",
+      "Stage 3 highlight playback",
+      "Phone Stage 4 recording and stitched replay"
+    ],
+    "policy": "CURRICULUM_PRODUCTION_SOP browser automation fallback; non-browser gates passed."
+  },
+  "latestMainVerified": "da46929a5f1f90ec89691ad9e2cfa81be8db30ef",
+  "releaseBlockers": [
+    "L408",
+    "L409",
+    "L410"
+  ]
+}
