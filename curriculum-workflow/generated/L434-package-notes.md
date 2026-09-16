@@ -52,3 +52,7 @@ G02 到達紅框互與長按提示，但控制介面無法維持長按；跳題�
 預覽伺服器停止、viewport 還原、暫存頁面關閉；共享 production JSON 原樣還原，不提交 fixture。原始 MP3 保留於 Git ignore 的 curriculum-workflow/audio-inbox/L434/，既有共用 stash 未操作。
 
 G05 final UI check: incorrect frog selection showed red feedback; correct fox selection showed green feedback and the reward button. PASS.
+
+## 遠端驗收 checkpoint
+
+7d5ec4effa051e329d672fab0ff727ed8dfc278e：origin/codex/l434-complete-package strict package-intake PASS，無警告。此後 checkpoint commit 僅記錄驗收與 registry SHA，最終 tip 另於交接回報並重跑同一 gate。還原後 curriculum:audit-state PASS，僅預期 L434 尚未進 production 的資產資料夾警告。
