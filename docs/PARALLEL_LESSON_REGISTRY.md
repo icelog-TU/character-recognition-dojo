@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L408 | 法 / normal lesson | claimed | Production B | codex/l408-complete-package | L405, L406, L407; R049/R050 after405 milestone before Release | 越, 加, 減 | curriculum-workflow/lesson-requests/L408.json; curriculum-workflow/generated/L408-generation-packet.md; curriculum-workflow/drafts/L408-draft.json | public/assets/lessons/L408/; curriculum-workflow/audio-inbox/L408/ | Base d0cfbc9a, formal L404; 弱 already merged. Exact approved sentences; no readable image text/numeral exceptions. |
+| L408 | 法 / normal lesson | dependency-blocked-asset-complete | Production B | codex/l408-complete-package | L405, L406, L407; R049/R050 after405 milestone before Release | 越, 加, 減 | curriculum-workflow/lesson-requests/L408.json; curriculum-workflow/generated/L408-generation-packet.md; curriculum-workflow/drafts/L408-draft.json | public/assets/lessons/L408/; curriculum-workflow/audio-inbox/L408/ | Five WebP, ten M4A, exact approved data and AI timings; technical gates PASS. Browser long-press and screenshot limitations documented in packet. Release owns shared-state integration and post-merge teacher review. |
 
 ## Status Values
 

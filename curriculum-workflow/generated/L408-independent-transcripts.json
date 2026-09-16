@@ -1,0 +1,153 @@
+[
+  {
+    "src": "/assets/lessons/L408/audio/char-u6cd5.m4a",
+    "expected": "法",
+    "text": "法",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 53,
+      "input_tokens": 50,
+      "input_token_details": {
+        "text_tokens": 31,
+        "audio_tokens": 19
+      },
+      "output_tokens": 3
+    },
+    "method": "gpt-4o-transcribe with generic Traditional Chinese script context; target character was not supplied"
+  },
+  {
+    "src": "/assets/lessons/L408/audio/L408-S01.m4a",
+    "expected": "加法和減法我都會算了",
+    "text": "加法和减法我都会算了。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 43,
+      "input_tokens": 31,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 31
+      },
+      "output_tokens": 12
+    }
+  },
+  {
+    "src": "/assets/lessons/L408/audio/L408-S02.m4a",
+    "expected": "我有個想法加蓋一座橋吧",
+    "text": "我有个想法，加盖一座桥吧。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 53,
+      "input_tokens": 39,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 39
+      },
+      "output_tokens": 14
+    }
+  },
+  {
+    "src": "/assets/lessons/L408/audio/L408-S03.m4a",
+    "expected": "用手指算減法是個好方法",
+    "text": "用手指算減法是個好方法。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 51,
+      "input_tokens": 38,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 38
+      },
+      "output_tokens": 13
+    }
+  },
+  {
+    "src": "/assets/lessons/L408/audio/L408-S04.m4a",
+    "expected": "越爬越高我有一點怕",
+    "text": "越爬越高，我有一点怕。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 44,
+      "input_tokens": 32,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 32
+      },
+      "output_tokens": 12
+    }
+  },
+  {
+    "src": "/assets/lessons/L408/audio/L408-S05.m4a",
+    "expected": "小狗身體弱媽媽用心照顧",
+    "text": "小狗身体弱，妈妈用心照顾。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 65,
+      "input_tokens": 52,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 52
+      },
+      "output_tokens": 13
+    }
+  },
+  {
+    "src": "/assets/lessons/L408/audio/L408-G02-prefix.m4a",
+    "expected": "我有個想",
+    "text": "我有個想。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 20,
+      "input_tokens": 13,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 13
+      },
+      "output_tokens": 7
+    }
+  },
+  {
+    "src": "/assets/lessons/L408/audio/L408-G02-suffix.m4a",
+    "expected": "加蓋一座橋吧",
+    "text": "加盖一座桥吧。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 32,
+      "input_tokens": 23,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 23
+      },
+      "output_tokens": 9
+    }
+  },
+  {
+    "src": "/assets/lessons/L408/audio/L408-G05-wrong-one.m4a",
+    "expected": "越爬越高我有一點累",
+    "text": "越爬越高，我有一點累。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 47,
+      "input_tokens": 34,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 34
+      },
+      "output_tokens": 13
+    }
+  },
+  {
+    "src": "/assets/lessons/L408/audio/L408-G05-wrong-two.m4a",
+    "expected": "越走越高我有一點怕",
+    "text": "越走越高，我有一點怕。",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 52,
+      "input_tokens": 40,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 40
+      },
+      "output_tokens": 12
+    }
+  }
+]
