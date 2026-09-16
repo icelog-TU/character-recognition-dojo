@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L433 | 願 | claimed | Production C; parallel-c | codex/l433-complete-package | L428, L429, L430, L431, L432; contiguous L421-L432; R051/R052 after L420 (coverage L391-L420) | 自、己、主、由、意 | curriculum-workflow/lesson-requests/L433.json; curriculum-workflow/generated/L433-generation-packet.md; curriculum-workflow/drafts/L433-draft.json | public/assets/lessons/L433/; curriculum-workflow/audio-inbox/L433/ | Teacher-approved final five sentences; source main f4bc071d, locked 430 allowed chars. S04 princess final version. Dependencies block Release only; review pair excluded. |
 
 ## Status Values
 
