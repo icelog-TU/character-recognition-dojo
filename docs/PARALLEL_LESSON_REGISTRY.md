@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L425 | 各 | ready-blocked-by-dependency | Production A (Remote) | codex/l425-complete-package | L416:果; L420:教; L421:室; L422:班; L423:組; L424:隊; R051/R052 after L420 | 果教室班組隊 | curriculum-workflow/lesson-requests/L425.json; curriculum-workflow/generated/L425-generation-packet.md; curriculum-workflow/drafts/L425-draft.json | curriculum-workflow/audio-inbox/L425/; public/assets/lessons/L425/ | dependency-blocked-asset-complete; 5 WebP,10 M4A,9 timing records; technical checks PASS; all image style-lock/cast PASS. Main 4eec5178 L415 解. Ordered L416-L424 and R051/R052 after420 coverage391-420 required before Release. Browser recording limitation documented in packet. Teacher review post-merge. |
+| L425 | 各 | ready-blocked-by-dependency | Production A (Remote) | codex/l425-complete-package @ 7c57c8d0 (asset commit; upload checkpoint follows) | L416:果; L420:教; L421:室; L422:班; L423:組; L424:隊; R051/R052 after L420 | 果教室班組隊 | curriculum-workflow/lesson-requests/L425.json; curriculum-workflow/generated/L425-generation-packet.md; curriculum-workflow/drafts/L425-draft.json | curriculum-workflow/audio-inbox/L425/; public/assets/lessons/L425/ | dependency-blocked-asset-complete; 5 WebP,10 M4A,9 timing records; technical checks PASS; all image style-lock/cast PASS. Main 4eec5178 L415 解. Ordered L416-L424 and R051/R052 after420 coverage391-420 required before Release. Browser recording limitation documented in packet. Teacher review post-merge. |
 
 ## Status Values
 

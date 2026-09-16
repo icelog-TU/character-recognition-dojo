@@ -41,7 +41,7 @@ Generated using standard repo ai:audio (gpt-4o-mini-tts/coral),assets:audio,asse
 
 All final WebP reviewed side by side with all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors. No readable text/numbers/bubbles. Exact generation prompts and imageNotes are in draft.
 
-## Audio and browser evidence
+## Audio evidence and Browser QA
 
 Actual final WAV input to gpt-audio-1.5 identified 種 zhong3 in S03 and G02 suffix,長 zhang3 in S02 and both wrong options,教 jiao4 in S01,and standalone 各 ge4. This is AI acoustic verification,not human listening. Evidence and final SHA256 hashes are in L425-qa-evidence.json; exact transcription/timing evidence is in L425-alignment-evidence.json.
 
@@ -57,4 +57,4 @@ Teacher review is post-merge: https://icelog-tu.github.io/character-recognition-
 
 ## Uploaded checkpoint
 
-Final pushed-ref intake recorded in the upload-checkpoint commit.
+Assets pushed in commit 7c57c8d0 on codex/l425-complete-package. Browser QA: all 10 final clips played to ended; scope and recording limitations are documented above. Strict intake is rerun against the final pushed tip.
