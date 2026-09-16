@@ -1,10 +1,8 @@
-# L390 generation packet
+# L390 Package Rescue
 
-Package status: partial-package
+Package status: asset-complete-package
 
-Teacher-approved L390 normal single-character lesson; main zhuyin 數 ㄕㄨˋ. S01[6]/S04[2] ㄕㄨˋ; S03[0]/S05[7] ㄕㄨˇ. G02 targets S03 first Han with suffix-only 了三次還是少一本書; no prefix and no substitution with fourth-tone standalone audio. G05 correct/wrong-two 數 ㄕㄨˇ. Base b313ded8; formal L001-L375, 379 Han. Dependencies L385-L389, provisional 字名第念號. Release needs prior lessons and R045/R046; next milestone L390-R047-R048-L391 (review coverage L361-L390), outside this package. No 碼姓考賽 or readable image numerals/letters exceptions. Subjective teacher asset review remains post-main. Production phonetic gate unresolved: final standalone 數 intended fourth tone was classified first tone by independent AI audio review; S03 intended third tone classified fourth. S01 final tone unconfirmed. Not asset-complete; see L390-package-notes.md and hashed listening evidence. Browser G02 hold/record/replay not completed with current control tooling. Browser QA: phone playback of all five Stage 3 cards and all three G05 readers entered playback and returned idle; context overrides visible; G02 persistent hold recording unavailable. This is UI evidence, not human auditory PASS. Full details and limits in L390-package-notes.md.
-
-QA evidence: L390-package-notes.md; mechanical and format reports accompany this packet.
+Package Rescue: teacher manual audio review PASS for unchanged standalone 數 ㄕㄨˋ, S03 數了 ㄕㄨˇ and S01 數字 ㄕㄨˋ. Exact teacher reply: 這三段都正確，不用改了. Hash-bound evidence: L390-teacher-audio-review.json. This resolves the prior AI-listener tone concerns; original AI responses remain preserved, not rewritten. Sentence text, images, audio bytes, timings and context zhuyinOverrides unchanged. Latest main 2be6834d0e35978cc417da5721dbd891e8974948 contains L385-L389; package learner dependencies are fulfilled. R047/R048 belong AFTER L390 and BEFORE L391. Browser QA retains Production phone playback and context-override observations; G02 hold/record/replay has the documented tooling fallback, not a new manual or physical-device PASS. See L390-package-notes.md and L390-rescue-notes.md. Shared release state remains unchanged.
 
 ## Approved request
 
@@ -22,22 +20,10 @@ QA evidence: L390-package-notes.md; mechanical and format reports accompany this
   },
   "requiredRounds": 5,
   "targetSentenceCount": 5,
-  "dependsOnLessons": [
-    "L385",
-    "L386",
-    "L387",
-    "L388",
-    "L389"
-  ],
-  "provisionalLearnedChars": [
-    "字",
-    "名",
-    "第",
-    "念",
-    "號"
-  ],
-  "teacherNotes": "Teacher-approved L390 normal single-character lesson; main zhuyin 數 ㄕㄨˋ. S01[6]/S04[2] ㄕㄨˋ; S03[0]/S05[7] ㄕㄨˇ. G02 targets S03 first Han with suffix-only 了三次還是少一本書; no prefix and no substitution with fourth-tone standalone audio. G05 correct/wrong-two 數 ㄕㄨˇ. Base b313ded8; formal L001-L375, 379 Han. Dependencies L385-L389, provisional 字名第念號. Release needs prior lessons and R045/R046; next milestone L390-R047-R048-L391 (review coverage L361-L390), outside this package. No 碼姓考賽 or readable image numerals/letters exceptions. Subjective teacher asset review remains post-main. Production phonetic gate unresolved: final standalone 數 intended fourth tone was classified first tone by independent AI audio review; S03 intended third tone classified fourth. S01 final tone unconfirmed. Not asset-complete; see L390-package-notes.md and hashed listening evidence. Browser G02 hold/record/replay not completed with current control tooling. Browser QA: phone playback of all five Stage 3 cards and all three G05 readers entered playback and returned idle; context overrides visible; G02 persistent hold recording unavailable. This is UI evidence, not human auditory PASS. Full details and limits in L390-package-notes.md.",
-  "packageStatus": "partial-package",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "teacherNotes": "Package Rescue: teacher manual audio review PASS for unchanged standalone 數 ㄕㄨˋ, S03 數了 ㄕㄨˇ and S01 數字 ㄕㄨˋ. Exact teacher reply: 這三段都正確，不用改了. Hash-bound evidence: L390-teacher-audio-review.json. This resolves the prior AI-listener tone concerns; original AI responses remain preserved, not rewritten. Sentence text, images, audio bytes, timings and context zhuyinOverrides unchanged. Latest main 2be6834d0e35978cc417da5721dbd891e8974948 contains L385-L389; package learner dependencies are fulfilled. R047/R048 belong AFTER L390 and BEFORE L391. Browser QA retains Production phone playback and context-override observations; G02 hold/record/replay has the documented tooling fallback, not a new manual or physical-device PASS. See L390-package-notes.md and L390-rescue-notes.md. Shared release state remains unchanged.",
+  "packageStatus": "asset-complete-package",
   "generationConstraints": {
     "allowedChars": [
       "一",
@@ -884,22 +870,10 @@ QA evidence: L390-package-notes.md; mechanical and format reports accompany this
     "數": "/assets/lessons/L390/audio/char-u6578.m4a"
   },
   "requiredRounds": 5,
-  "dependsOnLessons": [
-    "L385",
-    "L386",
-    "L387",
-    "L388",
-    "L389"
-  ],
-  "provisionalLearnedChars": [
-    "字",
-    "名",
-    "第",
-    "念",
-    "號"
-  ],
-  "packageStatus": "partial-package",
-  "notes": "Teacher-approved L390 normal single-character lesson; main zhuyin 數 ㄕㄨˋ. S01[6]/S04[2] ㄕㄨˋ; S03[0]/S05[7] ㄕㄨˇ. G02 targets S03 first Han with suffix-only 了三次還是少一本書; no prefix and no substitution with fourth-tone standalone audio. G05 correct/wrong-two 數 ㄕㄨˇ. Base b313ded8; formal L001-L375, 379 Han. Dependencies L385-L389, provisional 字名第念號. Release needs prior lessons and R045/R046; next milestone L390-R047-R048-L391 (review coverage L361-L390), outside this package. No 碼姓考賽 or readable image numerals/letters exceptions. Subjective teacher asset review remains post-main. Production phonetic gate unresolved: final standalone 數 intended fourth tone was classified first tone by independent AI audio review; S03 intended third tone classified fourth. S01 final tone unconfirmed. Not asset-complete; see L390-package-notes.md and hashed listening evidence. Browser G02 hold/record/replay not completed with current control tooling. Browser QA: phone playback of all five Stage 3 cards and all three G05 readers entered playback and returned idle; context overrides visible; G02 persistent hold recording unavailable. This is UI evidence, not human auditory PASS. Full details and limits in L390-package-notes.md.",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "packageStatus": "asset-complete-package",
+  "notes": "Package Rescue: teacher manual audio review PASS for unchanged standalone 數 ㄕㄨˋ, S03 數了 ㄕㄨˇ and S01 數字 ㄕㄨˋ. Exact teacher reply: 這三段都正確，不用改了. Hash-bound evidence: L390-teacher-audio-review.json. This resolves the prior AI-listener tone concerns; original AI responses remain preserved, not rewritten. Sentence text, images, audio bytes, timings and context zhuyinOverrides unchanged. Latest main 2be6834d0e35978cc417da5721dbd891e8974948 contains L385-L389; package learner dependencies are fulfilled. R047/R048 belong AFTER L390 and BEFORE L391. Browser QA retains Production phone playback and context-override observations; G02 hold/record/replay has the documented tooling fallback, not a new manual or physical-device PASS. See L390-package-notes.md and L390-rescue-notes.md. Shared release state remains unchanged.",
   "sentences": [
     {
       "id": "L390-S01",

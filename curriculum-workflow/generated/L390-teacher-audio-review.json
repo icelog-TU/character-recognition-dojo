@@ -1,0 +1,29 @@
+{
+  "unit": "L390",
+  "date": "2026-09-16",
+  "reviewer": "teacher/user",
+  "method": "Human listening to the three unchanged local audio files displayed in this task",
+  "verbatimReply": "這三段都正確，不用改了",
+  "result": "PASS",
+  "scope": "Only these three pronunciation questions; not a claim of new full lesson/device QA",
+  "sourcePackageSha": "5659b5c99cd32e2d8954e7d861d2649fa28813c4",
+  "reviewedRescueSha": "14e91ba1e341dfcd733be4f6c31fe43820c4bc5e",
+  "assets": [
+    {
+      "file": "char-u6578.m4a",
+      "reading": "數 ㄕㄨˋ (fourth tone)",
+      "sha256": "5148d680904a3628f89ab2a4f1a51abc1a475ae0b03fdc88cca67f1013c91b0f"
+    },
+    {
+      "file": "L390-S03.m4a",
+      "reading": "數了 ㄕㄨˇ (third tone)",
+      "sha256": "cc9388db578183cd4ceec1301cad87f46c9cdd983f199ad0ebf9cabbcda01aad"
+    },
+    {
+      "file": "L390-S01.m4a",
+      "reading": "數字 ㄕㄨˋ (fourth tone)",
+      "sha256": "823533cb4964c1de0ff3b88a10e6636dc31680a6f6541aaac250def2d8746cb5"
+    }
+  ],
+  "assetChanges": "none"
+}

@@ -1,27 +1,37 @@
-# L390 Package Rescue
+# L390 Package Rescue completed
 
-Status: **partial-package**; pronunciation acceptance is pending. Not ready for Release.
+Status: **asset-complete-package**.
 
-- Source: `origin/codex/l390-complete-package` at `5659b5c99cd32e2d8954e7d861d2649fa28813c4`.
-- Rescue: `codex/l390-package-rescue`, starting from that exact package commit.
-- SOP authority: `origin/main` at `2169c169d62e6889534bbfd3de67c62f9d985684`; formal curriculum ends at L380.
-- Scope: resolve standalone 數 fourth tone, S03 數了 third tone, and S01 數字 fourth tone acceptance. Preserve approved text and images.
-- Initial strict intake: five images and nine audio files present; blocked by partial status and explicit pronunciation blocker records.
-- Existing context overrides correctly specify S01[6]/S04[2] fourth tone and S03[0]/S05[7] third tone. Metadata correctness does not establish audio pronunciation.
-- Original final files were presented for teacher listening, with required readings labeled separately. No teacher verdict received yet; no audio changed.
-- Source browser QA is limited evidence as described in `L390-package-notes.md`; no new browser or physical-device completion is claimed.
-- Earlier lessons remain Release dependencies. R047/R048 belong after L390 and before L391; their production is outside this rescue.
+- Source: origin/codex/l390-complete-package at 5659b5c99cd32e2d8954e7d861d2649fa28813c4.
+- Rescue: codex/l390-package-rescue.
+- Latest checked origin/main: 2be6834d0e35978cc417da5721dbd891e8974948, formal curriculum through L389.
+- All declared learner dependencies L385-L389 are now on main. Removed satisfied dependency/provisional entries from request, draft and registry; locked approved allowed-character set and lesson content remain unchanged.
+- R047/R048 follow L390 and precede L391. They are not a prerequisite for integrating L390.
 
-Raw Production listening history is preserved in `L390-listening-evidence.json`; responses include superseded audio and must be matched by SHA256 before use.
+## Teacher acceptance, 2026-09-16
 
-## Rescue technical checks (2026-09-16)
+The teacher listened to the three unchanged files and replied: **「這三段都正確，不用改了」**.
 
-- `tools:check`, `curriculum:audit-state`: PASS (expected unmerged L390 asset-folder warning).
-- `L390-audit.cjs`: PASS for approved text, request/draft consistency, character coverage, game structure, asset decoding and total size (1,161,157 bytes).
-- Owned-draft adapter production validator and strict asset format audit: PASS, five images/nine audio references, zero format warnings.
-- `npm run validate:production`: PASS for the branch's existing production JSON; this alone does not validate future L390 integration.
-- All eight sentence/fragment timing records: full Han count, ordered indexes, no overlaps, 80–900 ms spans, first start below 500 ms, final timing-to-file gap no greater than 300 ms. G02 suffix and G05 option metadata match their referenced records.
-- Fresh FFmpeg decode/silence/volume evidence: `L390-rescue-audio-evidence.json`. Nine files are mono AAC/44100 Hz; detected final silence 109–206 ms at -40 dB; means -18.8 to -17.7 dB, peaks -4.6 to -2 dB. G05 correct/wrong mean spread 0.6 dB.
-- Audio SHA256 hashes are recorded so the pending teacher verdict can be tied to the exact supplied files. Inspection mode changed no media.
-- Strict intake remains blocked by the documented pronunciation acceptance and partial status. No SOP change is presently needed; teacher listening can resolve an inaccurate AI tone assessment, or identify the specific assets to regenerate.
-- `verify` skipped: dependency-blocked, shared state left for Release. No new browser QA is claimed by these technical checks.
+1. Standalone 數: ㄕㄨˋ, fourth tone — PASS.
+2. S03 數了三次，還是少一本書: initial 數 ㄕㄨˇ, third tone — PASS.
+3. S01 車號的第一個數字怎麼念: 數字 ㄕㄨˋ, fourth tone — PASS.
+
+Exact SHA256 values and review scope are in L390-teacher-audio-review.json. This human verdict resolves the three Production AI-listener concerns. Raw AI results remain in L390-listening-evidence.json, including superseded takes and contradictory observations; they were not rewritten as human evidence.
+
+## Change boundary
+
+No audio regeneration, trimming, image changes, sentence changes, timing changes, or pronunciation-override changes. All fourteen final audio/image files match the source package bytes. Only review/status/dependency metadata and handoff records changed. No main integration or deployment.
+
+## Technical verification
+
+- Source-preservation assertions: fourteen assets unchanged; teacher verdict hashes match displayed files.
+- Five sentence timing arrays and all G02/G05 alignment records are retained. Prior rescue check: complete Han counts, ordered indexes, no overlaps, spans 80–900 ms, first start below 500 ms and timing-to-file final gap ≤300 ms.
+- L390-rescue-audio-evidence.json: all nine files decode as mono AAC/44100 Hz, final detected silence 109–206 ms, mean levels -18.8 to -17.7 dB, peaks -4.6 to -2 dB; G05 mean spread 0.6 dB.
+- Required final tools:check, validate:production, owned-draft validator/strict asset audit, HEAD and pushed-ref strict intake, and git diff --check are reported with the final pushed handoff. The existing production JSON validator alone is not proof of future L390 integration.
+- Full verify skipped: this source-based package checkout retains its original shipping JSON through L375. Current-main integration verification belongs to Release, even though current main already satisfies L390's learner dependencies.
+
+## Browser evidence retained
+
+Production browser playback, layout, highlight and game checks remain valid evidence for unchanged content. G02 has a recorded browser-control hold/record/replay limitation; no new physical-device, full recording, or reward QA is claimed by this teacher response. The formal Package Rescue SOP permits the documented Production tooling fallback. Exact scope is retained in L390-package-notes.md. The teacher verdict covers only the three requested pronunciation questions.
+
+No SOP modification or Supervisor escalation is needed. Release should use the pushed rescue branch and rerun intake before integration.

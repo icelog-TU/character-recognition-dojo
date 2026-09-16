@@ -1,20 +1,10 @@
-# L390 Production D package notes
+# L390 current package handoff
 
-Status: **partial-package**. Required phonetic acceptance is not established. Do not integrate this tip as an asset-complete package.
+Status: **asset-complete-package**. Source Production report is preserved at 5659b5c99cd32e2d8954e7d861d2649fa28813c4 at this path; current acceptance supersedes its three pronunciation questions.
 
-## Boundary and ownership
+Teacher manual audio review PASS: standalone 數 fourth tone, S03 數了 third tone, S01 數字 fourth tone. No media was changed. See L390-teacher-audio-review.json and L390-rescue-notes.md for hashes and final checks.
 
-- Branch: `codex/l390-complete-package`; claimed and pushed before asset work.
-- Base: `b313ded8ddae7844e4af667191c4bf2b0737ab59`. Final fetch: `3f1056012de99f2d2f3d12f84dee5025731fc700` (Production E/F documentation only; relevant role delta read).
-- Direct `origin/main` curriculum remains L001-L375, latest 經, 379 learned Han; latest reviews R043/R044 after L360.
-- Learner-character dependencies: L385-L389; provisional 字名第念號. Locked allowed set: 385 Han. Earlier playable lessons and R045/R046 remain Release blockers. L390→R047→R048→L391 is the next milestone; reviews are outside this package.
-- No shipping curriculum, planner, ledger, application source or other worktree edited.
-
-## Approved data
-
-Request, packet and draft preserve all five approved texts, spokenText, displayLines, focusChar, imageNotes, four zhuyinOverrides and exact Stage 4 plans. Coverage: 數4、號2、念2、第2、名1、字1. Allowed/forbidden character checks, Han counts 11/10/10/9/10, line joining/width and target indexes pass.
-
-G02 has no prefix, target index 0 and dedicated suffix `了三次還是少一本書`. G03 has three distinct single-Han options with one correct answer. G04 has four shuffled single-Han cards. G05 uses exact complete wrong sentences; no splicing.
+Latest main 2be6834d0e35978cc417da5721dbd891e8974948 includes all L385-L389 dependencies. R047/R048 follow L390, before L391. Shared release state is left to Release.
 
 ## Images
 
@@ -30,38 +20,16 @@ Actual exported WebPs were opened individually and in a contact sheet alongside 
 
 Reuse decision: no existing image exactly expresses these approved scenarios. The inspected L347-S02 depicts girl/older brother seated at a porch, not father/girl counting in a clearing, so it was not reused. This comparison was recorded during production, not claimed as a completed pre-generation gate.
 
-## Audio and reading evidence
 
-Nine processed mono AAC/44100 Hz M4A files exist: standalone character, five sentences, one G02 suffix, two full wrong choices. Raw MP3 generation inbox remains local/ignored. TTS: standard OpenAI gpt-4o-mini-tts/coral, exact inputs; per-attempt instructions in `L390-tts-inputs.json`.
+## Audio and timing
 
-`L390-listening-evidence.json` contains independent gpt-audio-1.5 listening responses and SHA256 of the actual final audio supplied. Expected transcript/tone was not supplied. This is **AI listening evidence, not human auditory QA**. Its reliability limits and contradictory/omitted observations must not be hidden:
-
-| Asset | Required reading | Final evidence / acceptance |
-|---|---|---|
-| char-u6578 | ㄕㄨˋ | Multiple exact-character generations still classified as 書/first tone; latest file classified first tone. Unresolved pronunciation blocker. |
-| S01 | 數字 ㄕㄨˋ | Final transcript correct; final model responses omit a tone observation. Actual fourth tone not independently confirmed. Earlier superseded file was classified fourth tone. |
-| S03 / G02 sentence replay | 數了 ㄕㄨˇ | Multiple exact-sentence generations, latest file classified fourth tone. Unresolved pronunciation blocker. |
-| S04 | 數學 ㄕㄨˋ | Final-file AI listening classified fourth tone; complete final 名. |
-| S05 / G05 correct | 數不完 ㄕㄨˇ | Final-file AI listening classified third/low-dipping tone; complete 完. |
-| G05 wrong-two | 數不完 ㄕㄨˇ | Regenerated complete wrong sentence; final-file AI listening classified third/low-dipping tone. |
-| G02 suffix | no target 數 | Final transcript `了三次還是少一本書`, complete final 書; no target duplication or empty prefix. |
-| G05 wrong-one | no target 數 | Final transcript matches full approved text, complete final 完. |
-
-All final audio files decode. G05 mean-volume spread 0.6 dB. No accepted alternative transcript, phoneme substitution, cut-out character audio or source-text changes were used to evade pronunciation checks.
-
-Recommendation: Supervisor should resolve the two recurring pronunciation issues with a verified supported pronunciation-generation approach (or independently establish that the model listener is mistaken). Do not substitute the fourth-tone standalone file into G02. S01 needs explicit final tone confirmation. No asset-complete claim until these are resolved.
-
-## Alignment and tail review
-
-Final processed files passed Whisper text alignment, with documented simplified/Traditional equivalence normalization only. Raw transcription evidence is retained. Counts match every Han. Local SOP-authorized timing review redistributed S02 下一個 over original 2500–2800 ms (100 ms each), and G05 wrong-two 多得 over 1460–3020 ms (780 ms each). These are approximate timestamp-granularity repairs, not manual auditory synchronization PASS.
-
-Only final detected silence was shortened, preserving 100–150 ms after -45 dB speech decay. No sentence endings, character clips or option splices were used. Sentence tail gaps are 241/266/209/234/254 ms; all spans 80–900 ms, ordered and within durations. See timing/tail reports.
+All nine source audio files and all timing/context-zhuyin metadata are preserved. Teacher review resolves the three original AI tone questions; raw listening/transcription evidence remains unchanged. Existing technical QA and its timing-review limits remain documented in L390-timing-review.json and L390-rescue-audio-evidence.json. All assets total 1,161,157 bytes.
 
 ## Browser QA scope
 
 Local Vite fixture uses the final owned draft plus provisional metadata in memory; no shared production integration. Chrome, phone 390×844.
 
-- Stage 1: visible non-overlapping 數/ㄕㄨˋ; first click enters playback and returns to completed state. Pronunciation remains blocked above.
+- Stage 1: visible non-overlapping 數/ㄕㄨˋ; first click enters playback and returns to completed state. Standalone pronunciation accepted by the teacher in the rescue review.
 - Stage 2: exactly three 數 and three old characters (車/的/號); observed 1/3, 2/3 and completion only after 3/3. A React `FindManyChallenge` setState-in-render console warning occurred despite correct visible completion; app source left to its owner.
 - Stage 3: each of the five cards entered and left playback; visible initial per-Han highlights and context zhuyin overrides. All text fits phone width. Browser control does not provide audio listening to the agent; full audible synchronization and tail acceptance are not claimed as manual PASS.
 - G01 accepted 數; G02 visibly displays 數 ㄕㄨˇ and answer `解答是「數」，念作ㄕㄨˇ。`. Source reads sentence overrides for that prompt and replays the full S03 file; dedicated suffix replay uses recorded target then suffix, not standalone charAudio.
@@ -72,12 +40,7 @@ Local Vite fixture uses the final owned draft plus provisional metadata in memor
 - Console also contained asynchronous listener/message-channel closure errors. No playback load error was observed. Temporary viewport override reset; local preview is not deployed.
 - Completion/reward flow not certified: G02 was skipped for QA, and no complete lesson claim is made.
 
-## Checks
 
-PASS: tools:check; ai:check; curriculum:audit-state (expected unmerged asset-folder warning); curriculum:packet generation before restoring approved records; standard audio processing and AI alignment via owned-draft adapter; lesson-local format audit and production validator; mechanical audit, full audio decode, volume and size checks. Standard main `validate:production` also passes, but is not used as proof for L390.
+## Release checks
 
-Full verify skipped: dependency-blocked, no shipping production JSON integration; Release owns it. Pushed-ref package-intake executed after push: FAIL/exit 1. It enumerated 5 images, 9 audio files and all five game types; errors were partial status and explicit blocker text in registry/draft/packet. Its initial missing QA-evidence warning was addressed by adding the actual limited Browser QA evidence to draft/request notes. No asset-complete acceptance claimed.
-
-Final media: images 780178 bytes; audio 380979 bytes; total 1161157 bytes. Every image under 250 KiB. Exact per-file sizes/durations in `L390-audit-report.json`.
-
-Pre-merge preview must use full pushed SHA and be labeled **pre-merge package preview, not final main review queue**. Post-merge `ref=main` URLs are usable only after Release merges and deploys; not proof of current acceptance.
+Use codex/l390-package-rescue after the required pushed-ref strict intake. See final rescue handoff for the exact full SHA and check results. No new browser or full physical-device test is claimed by the teacher's three-clip approval.
