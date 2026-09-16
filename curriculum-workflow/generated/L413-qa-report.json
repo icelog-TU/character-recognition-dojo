@@ -1066,7 +1066,8 @@
     "validateProduction": "PASS with temporary L413 entry",
     "assetsAudit": "PASS",
     "browser": "PASS390x844/820x1180; sentence highlights, options, recording replay and reward navigation",
-    "fullVerify": "SKIPPED: shared integration owned by Release"
+    "fullVerify": "SKIPPED: shared integration owned by Release",
+    "packageIntake": {"status":"PASS","command":"npm run curriculum:package-intake -- --unit L413 --ref origin/codex/l413-complete-package --strict","testedSha":"4e15ac7322a38b7cd81bb1eafe9a2dfe2daab6f9","warnings":0,"assets":"5 WebP,10 M4A"}
   },
   "sizes": {
     "images": 886730,
