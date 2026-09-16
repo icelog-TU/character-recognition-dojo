@@ -1,0 +1,274 @@
+[
+  {
+    "file": "char-u89e3.m4a",
+    "sha256": "74d5e14721c38bf799d6d03824cc455ef5ae81c3070d416600e74c279aaa5bf2",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"解\", \"toneObservations\": {\"jie\": \"falling tone (fourth tone)\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.85}"
+  },
+  {
+    "file": "L415-G02-prefix.m4a",
+    "sha256": "7be80f55ea51f1fb3cdcf1593df0f9a5a15bf1a8a45ced2c730c0b60c8553d93",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"我不了\", \"toneObservations\": {\"了\": \"neutral with a falling contour\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.66}"
+  },
+  {
+    "file": "L415-G02-suffix.m4a",
+    "sha256": "03d7fd27564e5088d1161ea1a144a17f4d396487824b514266300027d5137fad",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"你為什麼生氣？\", \"toneObservations\": {\"le/liao\": null, \"zhang/chang\": null, \"zhe\": null, \"jie\": null}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.96}"
+  },
+  {
+    "file": "L415-G05-wrong-one.m4a",
+    "sha256": "a77cc4847f221d22f4efd5a3c77186eada7c99435abbb899426b7f9153c046a0",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"小雞長成公雞叫聲好小\",\"toneObservations\":\"「長」聽起來是第二聲（zháng），不太像第三聲；其他音節如「小」、「公」、「雞」、「叫」、「聲」、「好」都聽起來正常。\",\"finalSyllableComplete\":true,\"defects\":\"無明顯缺字或增字，沒有不自然停頓。\",\"confidence\":0.86}"
+  },
+  {
+    "file": "L415-G05-wrong-two.m4a",
+    "sha256": "204983fec676ec8adffb2593da5da4c4637effb968eb85167dafa90ae9273d95",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小雞長成公雞 叫聲好怪\", \"toneObservations\": {\"長\": \"chǎng (third tone)\"}, \"finalSyllableComplete\": true, \"defects\": \"No omitted or added syllables, no clipped final syllable, pauses sounded natural\", \"confidence\": 0.85}"
+  },
+  {
+    "file": "L415-S01.m4a",
+    "sha256": "b23ba4845ecfbf2d9fcc82ad13cff3d9ad525da2a4c690ed60d03a835301b04c",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\n  \"transcript\": \"試著解開這次，一定能成功。\",\n  \"toneObservations\": {\n    \"解\": \"third (falling-rising)\",\n    \"這\": \"fourth (falling)\"\n  },\n  \"finalSyllableComplete\": true,\n  \"defects\": [],\n  \"confidence\": 0.94\n}"
+  },
+  {
+    "file": "L415-S02.m4a",
+    "sha256": "08f77fc4efdf67770f248888687edf1b69f749573f78a094fdb0457467edeadd",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"我決定用功念書\", \"toneObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.92}"
+  },
+  {
+    "file": "L415-S03.m4a",
+    "sha256": "7f22631bfc355173f3729b3761be1b9f6bcf7b5d90cb6a14521a05b196addf75",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"大家都想坐窗邊，怎麼解決？\",\"toneObservations\":\"‘怎麼解決’中‘解’聽起來是第三聲，有明顯下降再上揚的音調；‘邊’為第一聲平穩。其餘字音調正常。\",\"finalSyllableComplete\":true,\"defects\":\"無明顯多字或漏字，無過長停頓。\",\"confidence\":0.94}"
+  },
+  {
+    "file": "L415-S04.m4a",
+    "sha256": "6719560564cb23fe5af029eee7450f2cf04fca3edad82c3cd36cbdc222822bae",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"我不了解你為什麼生氣\",\"toneObservations\":\"Each syllable sounded standard: \\\"了\\\" was pronounced as a neutral tone, consistent with spoken usage; no instances of 張/常, 這, or 解 to report.\",\"finalSyllableComplete\":true,\"defects\":\"None observed\",\"confidence\":0.93}"
+  },
+  {
+    "file": "L415-S05.m4a",
+    "sha256": "415bec710495fdc787ab095044bcb7175033746ab1aa855ee9fcc23cf743fe80",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小雞長成公雞 叫聲好大\", \"toneObservations\": {\"長\": \"cháng (rising)\", \"公\": \"gōng (high level)\", \"叫\": \"jiào (falling)\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.98}"
+  },
+  {
+    "file": "char-u89e3.m4a",
+    "sha256": "1f3e0fd1fcd95655db430dcdbc5ab515be4d0c8abc35ccb8c70cc28cafd0f6cf",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"姐\", \"toneObservations\": {\"jie\": \"third\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.75}"
+  },
+  {
+    "file": "L415-G02-prefix.m4a",
+    "sha256": "d6f617363b872ceafa416d271639ee158cbae3741d4df8cd6579f7f7cd8b99fc",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"我不了\", \"toneObservations\": {\"了\": \"low dipping, sounding like third tone\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.78}"
+  },
+  {
+    "file": "L415-G05-wrong-one.m4a",
+    "sha256": "af317e9ba51d1c283ca55463c3cfdc1e149d06835bf2e55696139abb69c9020e",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小雞長成公雞 叫聲好小\", \"toneObservations\": {\"長\": \"third tone (zhang in zhǎng)\", \"叫\": \"falling tone\", \"聲\": \"high level tone\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.88}"
+  },
+  {
+    "file": "L415-G05-wrong-two.m4a",
+    "sha256": "db7a6007da2ea60cb322aea6840d38da1314d9069e6edf33f4c59c84da6bba6a",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小雞長成公雞，叫聲好怪。\", \"toneObservations\": {\"長\": \"low-rising, resembling second tone\"}, \"finalSyllableComplete\": true, \"defects\": \"None noted\", \"confidence\": 0.90}"
+  },
+  {
+    "file": "L415-S04.m4a",
+    "sha256": "0a025ebcfe043e7c8e9c287ee5679e7a9252fb590a5a1bab0fef792931ea00fb",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"我不了解你為什麼生氣\",\"toneObservations\":{\"了\":\"neutral falling-low\"},\"finalSyllableComplete\":true,\"defects\":[],\"confidence\":0.98}"
+  },
+  {
+    "file": "L415-S05.m4a",
+    "sha256": "711c673da4f20c1762bec80ba2d77a2a517952fde0073ac4be08263b17ed3e75",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小雞長成公雞 叫聲好大\", \"toneObservations\": {\"長\": \"cháng with rising tone\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.93}"
+  },
+  {
+    "file": "L415-G05-wrong-two.m4a",
+    "sha256": "febffa3fb8800888f7e4b35adef84d4c853d9520937b7056f541651830bf3177",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小雞長成公雞 叫聲好怪\", \"toneObservations\": {\"chang\": \"second tone rising\", \"zhe\": \"none present\", \"jie\": \"none present\", \"liao/le\": \"none present\"}, \"finalSyllableComplete\": true, \"defects\": \"No omitted or added syllables; no clipped final syllable; slight unnatural pause between '公雞' and '叫聲'.\", \"confidence\": 0.87}"
+  },
+  {
+    "file": "L415-S04.m4a",
+    "sha256": "30f49765dcbdb6496c477103db4d9d9847594b2aac0f083cbc429474e3375fbc",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"我不了解你為什麼生氣\",\"toneObservations\":{\"了\":\"neutral flat tone\"},\"finalSyllableComplete\":true,\"defects\":[],\"confidence\":0.89}"
+  },
+  {
+    "file": "L415-S05.m4a",
+    "sha256": "80cf45476730d2b72c79b6c56bed42ffb14bbabccbb00dccb5811c465242db0c",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\n  \"transcript\": \"手機長成公雞叫聲好大\",\n  \"toneObservations\": {\n    \"chang\": \"rising second tone\",\n    \"zhang\": \"not present\",\n    \"zhe\": \"not present\",\n    \"jie\": \"not present\",\n    \"liao\": \"not present\",\n    \"le\": \"not present\"\n  },\n  \"finalSyllableComplete\": true,\n  \"defects\": [],\n  \"confidence\": 0.87\n}"
+  },
+  {
+    "file": "L415-G05-wrong-two.m4a",
+    "sha256": "d13c877cf3ae17c52f2c0da91122a4e6beabec779747b5d6da32db0bd55b49e8",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小雞長成公雞叫聲好怪\", \"toneObservations\": {\"長\": \"cháng, rising tone as in second tone\"}, \"finalSyllableComplete\": true, \"defects\": \"No omitted or added syllables, no clipped final syllable, no unnatural pauses detected\", \"confidence\": 0.94}"
+  },
+  {
+    "file": "L415-S04.m4a",
+    "sha256": "7604b144a2752f622986c125a62f7ce2905db8eec2c4c5f99a3995c3b2e06394",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"我不了解你為什麼生氣\", \"toneObservations\": {\"了\": \"le (neutral/high falling?)\"}, \"finalSyllableComplete\": true, \"defects\": [\"none\"], \"confidence\": 0.95}"
+  },
+  {
+    "file": "L415-S05.m4a",
+    "sha256": "bd49f2ce8a16c8aebb1d4dd5a45edbd58259e6b75ab08123d30735c93e7f3ad3",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"小雞長成公雞，叫聲好大\",\"toneObservations\":\"\\\"長\\\" was pronounced with an upward rising tone (second tone) as \\\"zháng\\\". Other target syllables showed expected tones.\",\"finalSyllableComplete\":true,\"defects\":\"No omitted or added syllables, natural pacing.\",\"confidence\":0.91}"
+  },
+  {
+    "file": "L415-G05-wrong-two.m4a",
+    "sha256": "9adf0bf38b3bd448dc688171409c9fb1ed9d2077bd18d24e379299a0fbffabb4",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"小雞長成公雞叫聲好怪\",\"toneObservations\":\"『長』聽起來為第二聲；其他詞如『小雞』、『公雞』均為第一聲，『叫』為第四聲，『怪』為第四聲，與常用讀音相符\",\"finalSyllableComplete\":true,\"defects\":\"未發現漏字或增字，無不自然停頓\",\"confidence\":0.98}"
+  },
+  {
+    "file": "L415-S04.m4a",
+    "sha256": "1fff8fec88e3cdc1a1fe9177ae8a6a7ded76c44e968eb39c9c6e45ad56c2d1ab",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"我不了解你為什麼生氣\", \"toneObservations\": {\"le\": \"Second syllable '了' pronounced with falling-rising (3rd) tone.\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.91}"
+  },
+  {
+    "file": "char-u89e3.m4a",
+    "sha256": "9008b7a112b20c56535dec92ef63b3f73bb113dcd28749b87aa08f29de0c9e2e",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"姊\", \"toneObservations\": {\"jie\": \"third tone, dipping contour\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.9}"
+  },
+  {
+    "file": "L415-G02-prefix.m4a",
+    "sha256": "562e6d721b1213cf5e70cfa713532f9b5a306fce03da3a617837ad7dbf5226bd",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"我不了\", \"toneObservations\": {\"了\": \"neutral-low\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.92}"
+  },
+  {
+    "file": "L415-G02-suffix.m4a",
+    "sha256": "9a7dee5a9bd4a2c8d1fefab3e9d1ff18ba340ddc85779f1121f2c39d33990180",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"你為什麼生氣\", \"toneObservations\": {\"shi\": \"uncertain\", \"me\": \"neutral\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.90}"
+  },
+  {
+    "file": "L415-G05-wrong-one.m4a",
+    "sha256": "05051e4e7e4f783e612f7c955010caec8597e84fe65ac38a78a18420d43bdcdb",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"小雞長成公雞，叫聲好小\",\"toneObservations\":{\"長\":\"rising, like second tone\"},\"finalSyllableComplete\":true,\"defects\":\"None observed\",\"confidence\":0.89}"
+  },
+  {
+    "file": "L415-G05-wrong-two.m4a",
+    "sha256": "59fcf4010fe0e0227c9ab671416de7c2fedec6371aacdcf891a97f75d31c00f9",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"小雞長成公雞叫聲好怪\",\"toneObservations\":\"『長』發第二聲（陽平），非第三聲；未聽到『了/了』、『這』、『解』字。\",\"finalSyllableComplete\":true,\"defects\":\"無明顯漏字或加字，整句連貫，無不自然停頓。\",\"confidence\":0.83}"
+  },
+  {
+    "file": "L415-S01.m4a",
+    "sha256": "1daca38fb5559d65aec90e8058ad86c23104180400d1d7363f87bdc8f3705152",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"試著解開這次，一定能成功\", \"toneObservations\": {\"jie3\": \"third tone, clear dipping contour\", \"zhe4\": \"fourth tone, falling contour\"}, \"finalSyllableComplete\": true, \"defects\": \"None detected, natural pacing and no clipped syllables\", \"confidence\": 0.92}"
+  },
+  {
+    "file": "L415-S02.m4a",
+    "sha256": "5f2b77acaecbed692ba357e496f4f64c833a2c49e143631a9b765a08a9c46886",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"我決定用功念書\", \"toneObservations\": {\"用\": \"falling tone on 'yong' (4th tone), confident it's fourth tone\", \"決\": \"rising tone on 'jue' (2nd tone)\"}, \"finalSyllableComplete\": true, \"defects\": \"No syllables omitted or added, natural pacing\", \"confidence\": 0.96}"
+  },
+  {
+    "file": "L415-S03.m4a",
+    "sha256": "9f5447e1166f2912b2067865cb81f7a7530a941d77b0823fd75730a6ce897d8b",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\":\"大家都想坐窗邊，怎麼解決？\",\"toneObservations\":{\"怎麼\":\"zěn, rising\"},\"finalSyllableComplete\":true,\"defects\":[],\"confidence\":0.92}"
+  },
+  {
+    "file": "L415-S04.m4a",
+    "sha256": "c0200daf7de98b8ba93e209beea14b21ba5c17901ad01f09659bc071c0009df0",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"我不了解你為什麼生氣\", \"toneObservations\": {\"了解\": \"liao third tone rising-falling contour\", \"為\": \"fourth tone falling\", \"什麼\": \"shen second tone rising, me neutral\", \"生氣\": \"sheng first tone high-level, qi fourth tone falling\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.90}"
+  },
+  {
+    "file": "L415-S05.m4a",
+    "sha256": "5747a8213bcaa584ef9ae465ef384471bd420a17fcfbde1e06c4293d2c3abac8",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin audio. Transcribe verbatim Traditional Chinese. Report any omitted or added syllables, clipped final syllable, unnatural pauses. If liao/le, zhang/chang, zhe, or jie occurs, report the ACTUALLY HEARD tone and contour, not a tone inferred only from spelling; say uncertain if unreliable. Return concise JSON with transcript, toneObservations, finalSyllableComplete, defects, confidence. No expected transcript is provided.",
+    "result": "{\"transcript\": \"小雞長成公雞 叫聲好大\", \"toneObservations\": {\"長\": \"cháng (second tone)\"}, \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.92}"
+  }
+]

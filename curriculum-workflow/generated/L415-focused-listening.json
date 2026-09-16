@@ -1,0 +1,34 @@
+[
+  {
+    "file": "L415-S04.m4a",
+    "sha256": "7604b144a2752f622986c125a62f7ce2905db8eec2c4c5f99a3995c3b2e06394",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen closely to the audio, not inferred spelling. Transcribe the third spoken syllable phonetically. Distinguish liao vs le; zhang vs chang. Report actual consonant, vowel, and contour (including low half-third tone in connected speech). Which syllable is audible? If uncertain say uncertain. Then give the verbatim sentence. Do not infer pronunciation merely from written characters.",
+    "result": "{\"consonant\": \"b\", \"vowel\": \"u\", \"contour\": \"low half-third tone\"} \n\nThe audible syllable is \"bu\". The verbatim sentence is \"我不了解你为什么生气\"."
+  },
+  {
+    "file": "L415-S05.m4a",
+    "sha256": "bd49f2ce8a16c8aebb1d4dd5a45edbd58259e6b75ab08123d30735c93e7f3ad3",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen closely to the audio, not inferred spelling. Transcribe the third spoken syllable phonetically. Distinguish liao vs le; zhang vs chang. Report actual consonant, vowel, and contour (including low half-third tone in connected speech). Which syllable is audible? If uncertain say uncertain. Then give the verbatim sentence. Do not infer pronunciation merely from written characters.",
+    "result": "The third spoken syllable is \"zhang\" (zh + ang, falling-rising tone).  \nThe verbatim sentence is: \"小鸡长成公鸡，叫声好大。\""
+  },
+  {
+    "file": "L415-G05-wrong-two.m4a",
+    "sha256": "d13c877cf3ae17c52f2c0da91122a4e6beabec779747b5d6da32db0bd55b49e8",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen closely to the audio, not inferred spelling. Transcribe the third spoken syllable phonetically. Distinguish liao vs le; zhang vs chang. Report actual consonant, vowel, and contour (including low half-third tone in connected speech). Which syllable is audible? If uncertain say uncertain. Then give the verbatim sentence. Do not infer pronunciation merely from written characters.",
+    "result": "{\"consonant\": \"zh\", \"vowel\": \"ang\", \"contour\": \"rising (second tone)\"}  \nVerbatim sentence: 小鸡长成公鸡叫声好怪."
+  },
+  {
+    "file": "L415-G02-prefix.m4a",
+    "sha256": "d6f617363b872ceafa416d271639ee158cbae3741d4df8cd6579f7f7cd8b99fc",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen closely to the audio, not inferred spelling. Transcribe the third spoken syllable phonetically. Distinguish liao vs le; zhang vs chang. Report actual consonant, vowel, and contour (including low half-third tone in connected speech). Which syllable is audible? If uncertain say uncertain. Then give the verbatim sentence. Do not infer pronunciation merely from written characters.",
+    "result": "{\"consonant\": \"n\", \"vowel\": \"iao\", \"tone_contour\": \"low half-third tone\"} \n\nVerbatim sentence: 我不了."
+  }
+]

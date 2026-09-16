@@ -1,0 +1,192 @@
+[
+  {
+    "file": "char-u89e3.m4a",
+    "sha256": "9008b7a112b20c56535dec92ef63b3f73bb113dcd28749b87aa08f29de0c9e2e",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "姐",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 11,
+        "input_tokens": 8,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 8
+        },
+        "output_tokens": 3
+      }
+    }
+  },
+  {
+    "file": "L415-G02-prefix.m4a",
+    "sha256": "562e6d721b1213cf5e70cfa713532f9b5a306fce03da3a617837ad7dbf5226bd",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "我不了。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 17,
+        "input_tokens": 12,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 12
+        },
+        "output_tokens": 5
+      }
+    }
+  },
+  {
+    "file": "L415-G02-suffix.m4a",
+    "sha256": "9a7dee5a9bd4a2c8d1fefab3e9d1ff18ba340ddc85779f1121f2c39d33990180",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "你為什麼生氣?",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 31,
+        "input_tokens": 22,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 22
+        },
+        "output_tokens": 9
+      }
+    }
+  },
+  {
+    "file": "L415-G05-wrong-one.m4a",
+    "sha256": "05051e4e7e4f783e612f7c955010caec8597e84fe65ac38a78a18420d43bdcdb",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "小鸡长成公鸡，叫声好小。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 52,
+        "input_tokens": 38,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 38
+        },
+        "output_tokens": 14
+      }
+    }
+  },
+  {
+    "file": "L415-G05-wrong-two.m4a",
+    "sha256": "59fcf4010fe0e0227c9ab671416de7c2fedec6371aacdcf891a97f75d31c00f9",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "小鸡长成公鸡叫声好怪。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 51,
+        "input_tokens": 38,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 38
+        },
+        "output_tokens": 13
+      }
+    }
+  },
+  {
+    "file": "L415-S01.m4a",
+    "sha256": "1daca38fb5559d65aec90e8058ad86c23104180400d1d7363f87bdc8f3705152",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "试着解开这次，一定能成功。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 53,
+        "input_tokens": 40,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 40
+        },
+        "output_tokens": 13
+      }
+    }
+  },
+  {
+    "file": "L415-S02.m4a",
+    "sha256": "5f2b77acaecbed692ba357e496f4f64c833a2c49e143631a9b765a08a9c46886",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "我決定用功念書。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 37,
+        "input_tokens": 27,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 27
+        },
+        "output_tokens": 10
+      }
+    }
+  },
+  {
+    "file": "L415-S03.m4a",
+    "sha256": "9f5447e1166f2912b2067865cb81f7a7530a941d77b0823fd75730a6ce897d8b",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "大家都想坐窗边，怎么解决?",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 51,
+        "input_tokens": 39,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 39
+        },
+        "output_tokens": 12
+      }
+    }
+  },
+  {
+    "file": "L415-S04.m4a",
+    "sha256": "c0200daf7de98b8ba93e209beea14b21ba5c17901ad01f09659bc071c0009df0",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "我不了解你为什么生气。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 42,
+        "input_tokens": 32,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 32
+        },
+        "output_tokens": 10
+      }
+    }
+  },
+  {
+    "file": "L415-S05.m4a",
+    "sha256": "5747a8213bcaa584ef9ae465ef384471bd420a17fcfbde1e06c4293d2c3abac8",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "小鸡长成公鸡，叫声好大。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 53,
+        "input_tokens": 39,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 39
+        },
+        "output_tokens": 14
+      }
+    }
+  }
+]
