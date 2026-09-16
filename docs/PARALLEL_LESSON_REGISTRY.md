@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L417 | 如 | claimed | Production E | codex/l417-complete-package | L411, L412, L413, L414, L415, L416 | 定 成 功 決 解 果 | curriculum-workflow/lesson-requests/L417.json; curriculum-workflow/generated/L417-generation-packet.md; curriculum-workflow/drafts/L417-draft.json | public/assets/lessons/L417/; curriculum-workflow/audio-inbox/L417/ | Base18c9df4a L408. S04 定 dependency retained; approved wooden puzzle scene. |
+| L417 | 如 | dependency-blocked-asset-complete | Production E | codex/l417-complete-package | L411, L412, L413, L414, L415, L416 | 定 成 功 決 解 果 | curriculum-workflow/lesson-requests/L417.json; curriculum-workflow/generated/L417-generation-packet.md; curriculum-workflow/drafts/L417-draft.json | public/assets/lessons/L417/; curriculum-workflow/audio-inbox/L417/ | Base18c9df4a L408. 5 WebP +10 M4A and timings complete. S04 定 dependency retained; browser tooling fallback documented. |
 
 ## Status Values
 
