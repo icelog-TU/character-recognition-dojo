@@ -1,0 +1,51 @@
+[
+  {
+    "id": "L390-S02",
+    "reason": "Whisper 下一個 spans 60/120/120 ms (2500-2800). Locally smooth to 100/100/100 ms while preserving the original phrase boundaries; audio unchanged.",
+    "before": [
+      {
+        "charIndex": 5,
+        "startMs": 2520,
+        "endMs": 2613
+      },
+      {
+        "charIndex": 6,
+        "startMs": 2613,
+        "endMs": 2707
+      },
+      {
+        "charIndex": 7,
+        "startMs": 2707,
+        "endMs": 2800
+      }
+    ]
+  },
+  {
+    "id": "L390-G05-wrong-two",
+    "reason": "Whisper 多 span 940 ms; rebalance 多得 within original phrase 1460-3020, no changes to 數 or audio.",
+    "before": [
+      {
+        "charIndex": 5,
+        "startMs": 1460,
+        "endMs": 2240
+      },
+      {
+        "charIndex": 6,
+        "startMs": 2240,
+        "endMs": 3020
+      }
+    ]
+  },
+  {
+    "src": "/assets/lessons/L390/audio/L390-S02.m4a",
+    "beforeDurationMs": 4133,
+    "decayMs": 3978.5499999999997,
+    "retainedDecayPadMs": 100
+  },
+  {
+    "src": "/assets/lessons/L390/audio/L390-G05-wrong-two.m4a",
+    "beforeDurationMs": 4307,
+    "decayMs": 3965.2599999999998,
+    "retainedDecayPadMs": 100
+  }
+]
