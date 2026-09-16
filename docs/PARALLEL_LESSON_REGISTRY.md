@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L429 | 己 / normal single-character lesson | claimed | Production D (new mobile Remote) | codex/l429-complete-package | L423, L424, L425, L426, L427, L428; ordered Release through L428; R051/R052 after L420 (coverage L391-L420) | 組隊各輪員自 | curriculum-workflow/lesson-requests/L429.json; curriculum-workflow/generated/L429-generation-packet.md; curriculum-workflow/drafts/L429-draft.json | public/assets/lessons/L429/; curriculum-workflow/audio-inbox/L429/ | Teacher-approved five sentences; S04 pants, not shoes. Base 4eec5178 L415 解; locked 426 chars. Production package only; Release owns shared production JSON/planner/ledger integration. |
+| L429 | 己 / normal single-character lesson | dependency-blocked-asset-complete | Production D (new mobile Remote) | codex/l429-complete-package | L423, L424, L425, L426, L427, L428; ordered Release through L428; R051/R052 after L420 (coverage L391-L420) | 組隊各輪員自 | curriculum-workflow/lesson-requests/L429.json; curriculum-workflow/generated/L429-generation-packet.md; curriculum-workflow/drafts/L429-draft.json | public/assets/lessons/L429/; curriculum-workflow/audio-inbox/L429/ | Teacher-approved five sentences; S04 pants, not shoes. Approved base 4eec5178 L415 解; locked 426 chars. Latest main f4bc071d L420 教; waiting L421-L428 and R051/R052. Five WebP and ten M4A complete; G02 human recording/replay untested (tooling fallback). Production package only; Release owns shared production JSON/planner/ledger integration. |
 
 ## Status Values
 
