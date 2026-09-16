@@ -22,8 +22,7 @@
     "頁",
     "碼"
   ],
-  "packageStatus": "partial-package",
-  "completionBlockers": ["G02 suffix exact-text alignment failed after three standalone generations: expected 了水報紙都濕了, latest transcript 寥水報紙都濕了. No equivalence substitution is authorized.", "Final durationMs/charTimings and Stage 4 alignment remain unwritten because the standard aligner aborts transactionally on this mismatch.", "Phone playback and recording QA not performed while alignment gate is blocked."],
+  "packageStatus": "dependency-blocked-asset-complete",
   "sourceMainCommit": "2169c169d62e6889534bbfd3de67c62f9d985684",
   "charAudio": {
     "翻": "/assets/lessons/L394/audio/char-u7ffb.m4a"
@@ -426,7 +425,7 @@
     "S02: upright complete fictional non-contactable telephone placeholder 00-0000-0000 inside flower-shop advertisement only. No other readable text. Numbers excluded from spokenText and Han coverage."
   ],
   "notes": [
-    "Production B normal lesson. Release-only playable dependencies include R047/R048."
+    "Package Rescue from ee191ff2650f0c05c4d02a0708c0362765c856f1. Approved sentences and images preserved, including S01 page number 8 and S02 fictional 00-0000-0000 exceptions. G02 suffix, S05 and G05 wrong-two independently regenerated; exact transcript/alignment and AI pronunciation review documented in L394-rescue-qa.md. Final sentence and Stage 4 metadata populated; local timing reviews explicitly recorded. Browser QA: all 11 native playback controls reached ended; phone 390x844 G01-G05, first-character highlights for all five sentences, synthetic-microphone G02 recording/replay, and reward next-lesson navigation tested. Browser fixture uses provisional lessons in memory; it is not physical-device or teacher auditory QA. Latest checked main 2be6834d0e35978cc417da5721dbd891e8974948 ends at L389. Release still requires L390, R047/R048 and L391-L393. Shared release state left unchanged."
   ],
   "sentences": [
     {
@@ -444,8 +443,44 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L394/audio/L394-S01.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 2855,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1500,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1820,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2120,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2380,
+            "endMs": 2640
+          }
+        ]
       }
     },
     {
@@ -464,8 +499,64 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L394/audio/L394-S02.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 4165,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1160,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1566
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2016,
+            "endMs": 2460
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2460,
+            "endMs": 2860
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2860,
+            "endMs": 3100
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3100,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3460,
+            "endMs": 3700
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3700,
+            "endMs": 3949
+          }
+        ]
       }
     },
     {
@@ -483,8 +574,54 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L394/audio/L394-S03.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 3431,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1720,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1940,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2720,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2940,
+            "endMs": 3229
+          }
+        ]
       }
     },
     {
@@ -503,8 +640,64 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L394/audio/L394-S04.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 4890,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 560
+          },
+          {
+            "charIndex": 1,
+            "startMs": 560,
+            "endMs": 920
+          },
+          {
+            "charIndex": 2,
+            "startMs": 920,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 3,
+            "startMs": 2000,
+            "endMs": 2170
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2170,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2340,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2780,
+            "endMs": 3560
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3560,
+            "endMs": 3780
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3780,
+            "endMs": 4080
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4080,
+            "endMs": 4360
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4360,
+            "endMs": 4688
+          }
+        ]
       }
     },
     {
@@ -527,8 +720,54 @@
       "approved": true,
       "audio": {
         "src": "/assets/lessons/L394/audio/L394-S05.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 3599,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 940
+          },
+          {
+            "charIndex": 2,
+            "startMs": 940,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1360,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1820,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2100,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2480,
+            "endMs": 2640
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2640,
+            "endMs": 3020
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3020,
+            "endMs": 3436
+          }
+        ]
       }
     }
   ],
@@ -550,7 +789,61 @@
         "prefixText": "打",
         "suffixText": "了水報紙都濕了",
         "prefixSrc": "/assets/lessons/L394/audio/L394-G02-prefix.m4a",
-        "suffixSrc": "/assets/lessons/L394/audio/L394-G02-suffix.m4a"
+        "suffixSrc": "/assets/lessons/L394/audio/L394-G02-suffix.m4a",
+        "prefixAudio": {
+          "spokenText": "打",
+          "src": "/assets/lessons/L394/audio/L394-G02-prefix.m4a",
+          "durationMs": 701,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 494
+            }
+          ]
+        },
+        "suffixAudio": {
+          "spokenText": "了水報紙都濕了",
+          "src": "/assets/lessons/L394/audio/L394-G02-suffix.m4a",
+          "durationMs": 2925,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 360
+            },
+            {
+              "charIndex": 1,
+              "startMs": 360,
+              "endMs": 1020
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1020,
+              "endMs": 1400
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1400,
+              "endMs": 1620
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1620,
+              "endMs": 2240
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2240,
+              "endMs": 2440
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2440,
+              "endMs": 2744
+            }
+          ]
+        }
       }
     },
     {
@@ -631,23 +924,338 @@
           "text": "數一數，池裡有幾條魚。",
           "correct": true,
           "spokenText": "數一數池裡有幾條魚",
-          "audioSrc": "/assets/lessons/L394/audio/L394-S05.m4a"
+          "audioSrc": "/assets/lessons/L394/audio/L394-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L394/audio/L394-S05.m4a",
+            "durationMs": 3599,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 940
+              },
+              {
+                "charIndex": 2,
+                "startMs": 940,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1360,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2640,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3020,
+                "endMs": 3436
+              }
+            ]
+          }
         },
         {
           "id": "wrong-one",
           "text": "數一數，池裡有幾隻鳥。",
           "correct": false,
           "spokenText": "數一數池裡有幾隻鳥",
-          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a"
+          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "數一數池裡有幾隻鳥",
+            "src": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a",
+            "durationMs": 3367,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1502,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1940,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2700,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3202
+              }
+            ]
+          }
         },
         {
           "id": "wrong-two",
           "text": "數一數，河裡有幾條魚。",
           "correct": false,
           "spokenText": "數一數河裡有幾條魚",
-          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a"
+          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "數一數河裡有幾條魚",
+            "src": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a",
+            "durationMs": 3558,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 960
+              },
+              {
+                "charIndex": 2,
+                "startMs": 960,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1280,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2320,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3279
+              }
+            ]
+          }
         }
       ]
     }
-  ]
+  ],
+  "stage4AudioAlignment": {
+    "L394-G02-prefix": {
+      "spokenText": "打",
+      "src": "/assets/lessons/L394/audio/L394-G02-prefix.m4a",
+      "durationMs": 701,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 494
+        }
+      ]
+    },
+    "L394-G02-suffix": {
+      "spokenText": "了水報紙都濕了",
+      "src": "/assets/lessons/L394/audio/L394-G02-suffix.m4a",
+      "durationMs": 2925,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 360
+        },
+        {
+          "charIndex": 1,
+          "startMs": 360,
+          "endMs": 1020
+        },
+        {
+          "charIndex": 2,
+          "startMs": 1020,
+          "endMs": 1400
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1400,
+          "endMs": 1620
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1620,
+          "endMs": 2240
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2240,
+          "endMs": 2440
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2440,
+          "endMs": 2744
+        }
+      ]
+    },
+    "L394-G05-wrong-one": {
+      "spokenText": "數一數池裡有幾隻鳥",
+      "src": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a",
+      "durationMs": 3367,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 500
+        },
+        {
+          "charIndex": 1,
+          "startMs": 500,
+          "endMs": 820
+        },
+        {
+          "charIndex": 2,
+          "startMs": 820,
+          "endMs": 1040
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1502,
+          "endMs": 1940
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1940,
+          "endMs": 2200
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2200,
+          "endMs": 2500
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2500,
+          "endMs": 2700
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2700,
+          "endMs": 2920
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2920,
+          "endMs": 3202
+        }
+      ]
+    },
+    "L394-G05-wrong-two": {
+      "spokenText": "數一數河裡有幾條魚",
+      "src": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a",
+      "durationMs": 3558,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 560
+        },
+        {
+          "charIndex": 1,
+          "startMs": 560,
+          "endMs": 960
+        },
+        {
+          "charIndex": 2,
+          "startMs": 960,
+          "endMs": 1280
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1280,
+          "endMs": 1720
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1720,
+          "endMs": 1900
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1900,
+          "endMs": 2320
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2320,
+          "endMs": 2580
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2580,
+          "endMs": 2920
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2920,
+          "endMs": 3279
+        }
+      ]
+    }
+  }
 }

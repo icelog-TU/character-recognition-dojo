@@ -1,18 +1,11 @@
-# L394 翻 Production Generation Packet
+# L394 翻 Package Rescue
 
-Package status: partial-package
+Status: dependency-blocked-asset-complete
 
-Completion blocker: G02 suffix exact-text alignment failed after three independent generations. Expected `了水報紙都濕了`; observed initial characters 涼, 寮, 寥. This is an unverified audio/transcription discrepancy, not a confirmed human pronunciation diagnosis. Do not normalize these different characters as equivalents. The transactional aligner has not written final sentence durationMs/charTimings or Stage 4 alignment. Phone playback/recording QA is not performed. See L394-production-report.md. Do not integrate this partial package.
+Package Rescue from ee191ff2650f0c05c4d02a0708c0362765c856f1. Approved sentences and images preserved, including S01 page number 8 and S02 fictional 00-0000-0000 exceptions. G02 suffix, S05 and G05 wrong-two independently regenerated; exact transcript/alignment and AI pronunciation review documented in L394-rescue-qa.md. Final sentence and Stage 4 metadata populated; local timing reviews explicitly recorded. Browser QA: all 11 native playback controls reached ended; phone 390x844 G01-G05, first-character highlights for all five sentences, synthetic-microphone G02 recording/replay, and reward next-lesson navigation tested. Browser fixture uses provisional lessons in memory; it is not physical-device or teacher auditory QA. Latest checked main 2be6834d0e35978cc417da5721dbd891e8974948 ends at L389. Release still requires L390, R047/R048 and L391-L393. Shared release state left unchanged.
 
-Base: 2169c169d62e6889534bbfd3de67c62f9d985684
-Dependencies: L389, L390, L391, L392, L393
-Provisional: 號、數、報、頁、碼
+## Request
 
-## Teacher-approved image exceptions
-- S01: upright complete page number 8 printed at lower page corner only.
-- S02: upright complete fictional non-contactable telephone placeholder 00-0000-0000 inside flower-shop advertisement only. No other readable text. Numbers excluded from spokenText and Han coverage.
-
-## Exact approved request and Stage 4
 ```json
 {
   "id": "L394",
@@ -38,7 +31,7 @@ Provisional: 號、數、報、頁、碼
     "頁",
     "碼"
   ],
-  "packageStatus": "partial-package",
+  "packageStatus": "dependency-blocked-asset-complete",
   "sourceMainCommit": "2169c169d62e6889534bbfd3de67c62f9d985684",
   "allowedChars": [
     "一",
@@ -433,7 +426,7 @@ Provisional: 號、數、報、頁、碼
     "翻"
   ],
   "targetSentenceCount": 5,
-  "teacherNotes": "Teacher approved final five sentences and imageNotes. S01: upright complete page number 8 printed at lower page corner only. S02: upright complete fictional non-contactable telephone placeholder 00-0000-0000 inside flower-shop advertisement only. No other readable text. Numbers excluded from spokenText and Han coverage. S05 數讀ㄕㄨˇ. Release requires all predecessors and R047/R048. No production JSON integration.",
+  "teacherNotes": "Package Rescue from ee191ff2650f0c05c4d02a0708c0362765c856f1. Approved sentences and images preserved, including S01 page number 8 and S02 fictional 00-0000-0000 exceptions. G02 suffix, S05 and G05 wrong-two independently regenerated; exact transcript/alignment and AI pronunciation review documented in L394-rescue-qa.md. Final sentence and Stage 4 metadata populated; local timing reviews explicitly recorded. Browser QA: all 11 native playback controls reached ended; phone 390x844 G01-G05, first-character highlights for all five sentences, synthetic-microphone G02 recording/replay, and reward next-lesson navigation tested. Browser fixture uses provisional lessons in memory; it is not physical-device or teacher auditory QA. Latest checked main 2be6834d0e35978cc417da5721dbd891e8974948 ends at L389. Release still requires L390, R047/R048 and L391-L393. Shared release state left unchanged.",
   "imageTextExceptions": [
     "S01: upright complete page number 8 printed at lower page corner only.",
     "S02: upright complete fictional non-contactable telephone placeholder 00-0000-0000 inside flower-shop advertisement only. No other readable text. Numbers excluded from spokenText and Han coverage."
@@ -861,7 +854,49 @@ Provisional: 號、數、報、頁、碼
       "focusChar": "翻",
       "imageNotes": "家中桌邊，主角媽媽陪小女孩找書頁。女孩剛翻開書，低頭尋找頁角，媽媽指向頁碼「8」所在位置。重點是翻開後尋找頁碼，不是已專心閱讀。頁碼印在紙面下方，不能漂浮成字幕；其他內容可用簡單圖畫與不可辨識筆跡。",
       "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 家中桌邊，主角媽媽陪小女孩找書頁。女孩剛翻開書，低頭尋找頁角，媽媽指向頁碼「8」所在位置。重點是翻開後尋找頁碼，不是已專心閱讀。頁碼印在紙面下方，不能漂浮成字幕；其他內容可用簡單圖畫與不可辨識筆跡。",
-      "approved": true
+      "imageSrc": "/assets/lessons/L394/images/L394-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S01.m4a",
+        "durationMs": 2855,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1500,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1820,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2120,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2380,
+            "endMs": 2640
+          }
+        ]
+      }
     },
     {
       "id": "L394-S02",
@@ -875,7 +910,69 @@ Provisional: 號、數、報、頁、碼
       "focusChar": "碼",
       "imageNotes": "主角小女孩與爸爸一起看攤開的報紙。女孩指著其中一則花店廣告，廣告有花束插圖及電話欄「00-0000-0000」，爸爸看向她指的位置。電話欄位於廣告內，不是頁角頁碼或取號牌；不寫花店名稱、品牌或其他可讀廣告文案。",
       "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 主角小女孩與爸爸一起看攤開的報紙。女孩指著其中一則花店廣告，廣告有花束插圖及電話欄「00-0000-0000」，爸爸看向她指的位置。電話欄位於廣告內，不是頁角頁碼或取號牌；不寫花店名稱、品牌或其他可讀廣告文案。",
-      "approved": true
+      "imageSrc": "/assets/lessons/L394/images/L394-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S02.m4a",
+        "durationMs": 4165,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1160,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1566
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2016,
+            "endMs": 2460
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2460,
+            "endMs": 2860
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2860,
+            "endMs": 3100
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3100,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3460,
+            "endMs": 3700
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3700,
+            "endMs": 3949
+          }
+        ]
+      }
     },
     {
       "id": "L394-S03",
@@ -888,7 +985,59 @@ Provisional: 號、數、報、頁、碼
       "focusChar": "翻",
       "imageNotes": "家中桌上，一只完整水杯側倒，水流到攤開的報紙上，形成明顯濕痕與皺褶。主角小女孩露出驚訝神情，媽媽拿布準備擦拭。是常溫水，不是熱水；沒有碎玻璃、燙傷或其他受傷。報紙內容不可辨識。",
       "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 家中桌上，一只完整水杯側倒，水流到攤開的報紙上，形成明顯濕痕與皺褶。主角小女孩露出驚訝神情，媽媽拿布準備擦拭。是常溫水，不是熱水；沒有碎玻璃、燙傷或其他受傷。報紙內容不可辨識。",
-      "approved": true
+      "imageSrc": "/assets/lessons/L394/images/L394-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S03.m4a",
+        "durationMs": 3431,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1720,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1940,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2720,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2940,
+            "endMs": 3229
+          }
+        ]
+      }
     },
     {
       "id": "L394-S04",
@@ -902,7 +1051,69 @@ Provisional: 號、數、報、頁、碼
       "focusChar": "翻",
       "imageNotes": "夜晚臥室，主角小女孩穿薄睡衣，在床上正由仰躺轉成側躺，額頭少量汗珠、薄被踢到一旁，神情煩熱、睡不安穩。只畫一個女孩，以身體轉動與凌亂床單表現翻身；不是分身、翻筋斗、發燒或跌下床。",
       "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 夜晚臥室，主角小女孩穿薄睡衣，在床上正由仰躺轉成側躺，額頭少量汗珠、薄被踢到一旁，神情煩熱、睡不安穩。只畫一個女孩，以身體轉動與凌亂床單表現翻身；不是分身、翻筋斗、發燒或跌下床。",
-      "approved": true
+      "imageSrc": "/assets/lessons/L394/images/L394-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S04.m4a",
+        "durationMs": 4890,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 560
+          },
+          {
+            "charIndex": 1,
+            "startMs": 560,
+            "endMs": 920
+          },
+          {
+            "charIndex": 2,
+            "startMs": 920,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 3,
+            "startMs": 2000,
+            "endMs": 2170
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2170,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2340,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2780,
+            "endMs": 3560
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3560,
+            "endMs": 3780
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3780,
+            "endMs": 4080
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4080,
+            "endMs": 4360
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4360,
+            "endMs": 4688
+          }
+        ]
+      }
     },
     {
       "id": "L394-S05",
@@ -920,7 +1131,59 @@ Provisional: 號、數、報、頁、碼
       },
       "imageNotes": "白天的小魚池旁，主角小女孩和爸爸站在安全平坦的池邊，女孩伸手逐條指數。池中恰好三條完整、清楚可見的魚，彼此分開，不被水草遮住。不要加數字或答案，也不要用多餘魚形倒影、裝飾魚影造成數量混淆。",
       "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 白天的小魚池旁，主角小女孩和爸爸站在安全平坦的池邊，女孩伸手逐條指數。池中恰好三條完整、清楚可見的魚，彼此分開，不被水草遮住。不要加數字或答案，也不要用多餘魚形倒影、裝飾魚影造成數量混淆。",
-      "approved": true
+      "imageSrc": "/assets/lessons/L394/images/L394-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S05.m4a",
+        "durationMs": 3599,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 940
+          },
+          {
+            "charIndex": 2,
+            "startMs": 940,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1360,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1820,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2100,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2480,
+            "endMs": 2640
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2640,
+            "endMs": 3020
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3020,
+            "endMs": 3436
+          }
+        ]
+      }
     }
   ],
   "sentenceGames": [
@@ -941,7 +1204,61 @@ Provisional: 號、數、報、頁、碼
         "prefixText": "打",
         "suffixText": "了水報紙都濕了",
         "prefixSrc": "/assets/lessons/L394/audio/L394-G02-prefix.m4a",
-        "suffixSrc": "/assets/lessons/L394/audio/L394-G02-suffix.m4a"
+        "suffixSrc": "/assets/lessons/L394/audio/L394-G02-suffix.m4a",
+        "prefixAudio": {
+          "spokenText": "打",
+          "src": "/assets/lessons/L394/audio/L394-G02-prefix.m4a",
+          "durationMs": 701,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 494
+            }
+          ]
+        },
+        "suffixAudio": {
+          "spokenText": "了水報紙都濕了",
+          "src": "/assets/lessons/L394/audio/L394-G02-suffix.m4a",
+          "durationMs": 2925,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 360
+            },
+            {
+              "charIndex": 1,
+              "startMs": 360,
+              "endMs": 1020
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1020,
+              "endMs": 1400
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1400,
+              "endMs": 1620
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1620,
+              "endMs": 2240
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2240,
+              "endMs": 2440
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2440,
+              "endMs": 2744
+            }
+          ]
+        }
       }
     },
     {
@@ -1022,21 +1339,176 @@ Provisional: 號、數、報、頁、碼
           "text": "數一數，池裡有幾條魚。",
           "correct": true,
           "spokenText": "數一數池裡有幾條魚",
-          "audioSrc": "/assets/lessons/L394/audio/L394-S05.m4a"
+          "audioSrc": "/assets/lessons/L394/audio/L394-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L394/audio/L394-S05.m4a",
+            "durationMs": 3599,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 940
+              },
+              {
+                "charIndex": 2,
+                "startMs": 940,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1360,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2640,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3020,
+                "endMs": 3436
+              }
+            ]
+          }
         },
         {
           "id": "wrong-one",
           "text": "數一數，池裡有幾隻鳥。",
           "correct": false,
           "spokenText": "數一數池裡有幾隻鳥",
-          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a"
+          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "數一數池裡有幾隻鳥",
+            "src": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a",
+            "durationMs": 3367,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1502,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1940,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2700,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3202
+              }
+            ]
+          }
         },
         {
           "id": "wrong-two",
           "text": "數一數，河裡有幾條魚。",
           "correct": false,
           "spokenText": "數一數河裡有幾條魚",
-          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a"
+          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "數一數河裡有幾條魚",
+            "src": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a",
+            "durationMs": 3558,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 960
+              },
+              {
+                "charIndex": 2,
+                "startMs": 960,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1280,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2320,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3279
+              }
+            ]
+          }
         }
       ]
     }
@@ -1044,7 +1516,1268 @@ Provisional: 號、數、報、頁、碼
 }
 ```
 
-## Production gates
-Use all five L058 style references, refined examples and family anchors. Inspect each final WebP. S01 number 8, S02 exact 00-0000-0000, S05 exactly three fish. Generate ten independent audio files using repo OpenAI pipeline, then normalize and AI-align final M4A. G02 prefix is only 打; no extraction. S05 and both G05 wrong options read 數 as ㄕㄨˇ. G03 first 翻 index 7; second index 9 retained.
-Coverage: {"翻":4,"碼":2,"頁":2,"報":2,"數":2,"號":1}
-Allowed, displayLines and Stage 4 mechanical indexes: PASS.
+## Owned draft
+
+```json
+{
+  "id": "L394",
+  "order": 394,
+  "title": "翻",
+  "newChars": [
+    "翻"
+  ],
+  "zhuyin": {
+    "翻": "ㄈㄢ"
+  },
+  "dependsOnLessons": [
+    "L389",
+    "L390",
+    "L391",
+    "L392",
+    "L393"
+  ],
+  "provisionalLearnedChars": [
+    "號",
+    "數",
+    "報",
+    "頁",
+    "碼"
+  ],
+  "packageStatus": "dependency-blocked-asset-complete",
+  "sourceMainCommit": "2169c169d62e6889534bbfd3de67c62f9d985684",
+  "charAudio": {
+    "翻": "/assets/lessons/L394/audio/char-u7ffb.m4a"
+  },
+  "requiredRounds": 5,
+  "allowedChars": [
+    "一",
+    "二",
+    "三",
+    "人",
+    "個",
+    "大",
+    "的",
+    "小",
+    "手",
+    "我",
+    "有",
+    "山",
+    "上",
+    "下",
+    "你",
+    "水",
+    "在",
+    "高",
+    "很",
+    "家",
+    "和",
+    "隻",
+    "鳥",
+    "孩",
+    "指",
+    "看",
+    "女",
+    "飛",
+    "男",
+    "門",
+    "前",
+    "後",
+    "也",
+    "是",
+    "不",
+    "到",
+    "走",
+    "他",
+    "沒",
+    "裡",
+    "兩",
+    "狗",
+    "都",
+    "爸",
+    "媽",
+    "愛",
+    "書",
+    "可",
+    "會",
+    "這",
+    "吃",
+    "做",
+    "好",
+    "樣",
+    "要",
+    "更",
+    "邊",
+    "多",
+    "少",
+    "比",
+    "來",
+    "起",
+    "去",
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌",
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見",
+    "說",
+    "師",
+    "話",
+    "課",
+    "像",
+    "想",
+    "真",
+    "力",
+    "能",
+    "火",
+    "發",
+    "電",
+    "生",
+    "明",
+    "光",
+    "亮",
+    "陽",
+    "月",
+    "影",
+    "長",
+    "星",
+    "行",
+    "道",
+    "流",
+    "河",
+    "從",
+    "進",
+    "早",
+    "晚",
+    "海",
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精",
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬",
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆",
+    "照",
+    "顧",
+    "忘",
+    "每",
+    "次",
+    "記",
+    "完",
+    "收",
+    "彩",
+    "色",
+    "粉",
+    "哪",
+    "些",
+    "最",
+    "西",
+    "東",
+    "方",
+    "圖",
+    "向",
+    "線",
+    "直",
+    "轉",
+    "右",
+    "角",
+    "落",
+    "因",
+    "原",
+    "別",
+    "特",
+    "處",
+    "理",
+    "整",
+    "齊",
+    "全",
+    "今",
+    "們",
+    "年",
+    "跟",
+    "常",
+    "請",
+    "嗎",
+    "客",
+    "讓",
+    "廳",
+    "餐",
+    "位",
+    "正",
+    "排",
+    "雞",
+    "公",
+    "園",
+    "物",
+    "怪",
+    "奇",
+    "驚",
+    "喜",
+    "歡",
+    "笑",
+    "但",
+    "吧",
+    "謝",
+    "感",
+    "情",
+    "朋",
+    "友",
+    "親",
+    "交",
+    "通",
+    "往",
+    "經",
+    "已",
+    "近",
+    "接",
+    "送",
+    "連",
+    "號",
+    "數",
+    "報",
+    "頁",
+    "碼",
+    "翻"
+  ],
+  "imageTextExceptions": [
+    "S01: upright complete page number 8 printed at lower page corner only.",
+    "S02: upright complete fictional non-contactable telephone placeholder 00-0000-0000 inside flower-shop advertisement only. No other readable text. Numbers excluded from spokenText and Han coverage."
+  ],
+  "notes": [
+    "Package Rescue from ee191ff2650f0c05c4d02a0708c0362765c856f1. Approved sentences and images preserved, including S01 page number 8 and S02 fictional 00-0000-0000 exceptions. G02 suffix, S05 and G05 wrong-two independently regenerated; exact transcript/alignment and AI pronunciation review documented in L394-rescue-qa.md. Final sentence and Stage 4 metadata populated; local timing reviews explicitly recorded. Browser QA: all 11 native playback controls reached ended; phone 390x844 G01-G05, first-character highlights for all five sentences, synthetic-microphone G02 recording/replay, and reward next-lesson navigation tested. Browser fixture uses provisional lessons in memory; it is not physical-device or teacher auditory QA. Latest checked main 2be6834d0e35978cc417da5721dbd891e8974948 ends at L389. Release still requires L390, R047/R048 and L391-L393. Shared release state left unchanged."
+  ],
+  "sentences": [
+    {
+      "id": "L394-S01",
+      "text": "翻開書，先找頁碼。",
+      "spokenText": "翻開書先找頁碼",
+      "displayLines": [
+        "翻開書，",
+        "先找頁碼。"
+      ],
+      "focusChar": "翻",
+      "imageNotes": "家中桌邊，主角媽媽陪小女孩找書頁。女孩剛翻開書，低頭尋找頁角，媽媽指向頁碼「8」所在位置。重點是翻開後尋找頁碼，不是已專心閱讀。頁碼印在紙面下方，不能漂浮成字幕；其他內容可用簡單圖畫與不可辨識筆跡。",
+      "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 家中桌邊，主角媽媽陪小女孩找書頁。女孩剛翻開書，低頭尋找頁角，媽媽指向頁碼「8」所在位置。重點是翻開後尋找頁碼，不是已專心閱讀。頁碼印在紙面下方，不能漂浮成字幕；其他內容可用簡單圖畫與不可辨識筆跡。",
+      "imageSrc": "/assets/lessons/L394/images/L394-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S01.m4a",
+        "durationMs": 2855,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1500,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1820,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2120,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2380,
+            "endMs": 2640
+          }
+        ]
+      }
+    },
+    {
+      "id": "L394-S02",
+      "text": "報紙這一頁有店家的號碼。",
+      "spokenText": "報紙這一頁有店家的號碼",
+      "displayLines": [
+        "報紙這一頁",
+        "有店家的",
+        "號碼。"
+      ],
+      "focusChar": "碼",
+      "imageNotes": "主角小女孩與爸爸一起看攤開的報紙。女孩指著其中一則花店廣告，廣告有花束插圖及電話欄「00-0000-0000」，爸爸看向她指的位置。電話欄位於廣告內，不是頁角頁碼或取號牌；不寫花店名稱、品牌或其他可讀廣告文案。",
+      "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 主角小女孩與爸爸一起看攤開的報紙。女孩指著其中一則花店廣告，廣告有花束插圖及電話欄「00-0000-0000」，爸爸看向她指的位置。電話欄位於廣告內，不是頁角頁碼或取號牌；不寫花店名稱、品牌或其他可讀廣告文案。",
+      "imageSrc": "/assets/lessons/L394/images/L394-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S02.m4a",
+        "durationMs": 4165,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 460
+          },
+          {
+            "charIndex": 1,
+            "startMs": 460,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1160,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1566
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2016,
+            "endMs": 2460
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2460,
+            "endMs": 2860
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2860,
+            "endMs": 3100
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3100,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3460,
+            "endMs": 3700
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3700,
+            "endMs": 3949
+          }
+        ]
+      }
+    },
+    {
+      "id": "L394-S03",
+      "text": "打翻了水，報紙都濕了。",
+      "spokenText": "打翻了水報紙都濕了",
+      "displayLines": [
+        "打翻了水，",
+        "報紙都濕了。"
+      ],
+      "focusChar": "翻",
+      "imageNotes": "家中桌上，一只完整水杯側倒，水流到攤開的報紙上，形成明顯濕痕與皺褶。主角小女孩露出驚訝神情，媽媽拿布準備擦拭。是常溫水，不是熱水；沒有碎玻璃、燙傷或其他受傷。報紙內容不可辨識。",
+      "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 家中桌上，一只完整水杯側倒，水流到攤開的報紙上，形成明顯濕痕與皺褶。主角小女孩露出驚訝神情，媽媽拿布準備擦拭。是常溫水，不是熱水；沒有碎玻璃、燙傷或其他受傷。報紙內容不可辨識。",
+      "imageSrc": "/assets/lessons/L394/images/L394-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S03.m4a",
+        "durationMs": 3431,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1720,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1940,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2720,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2940,
+            "endMs": 3229
+          }
+        ]
+      }
+    },
+    {
+      "id": "L394-S04",
+      "text": "太熱了，我在床上翻來翻去。",
+      "spokenText": "太熱了我在床上翻來翻去",
+      "displayLines": [
+        "太熱了，",
+        "我在床上",
+        "翻來翻去。"
+      ],
+      "focusChar": "翻",
+      "imageNotes": "夜晚臥室，主角小女孩穿薄睡衣，在床上正由仰躺轉成側躺，額頭少量汗珠、薄被踢到一旁，神情煩熱、睡不安穩。只畫一個女孩，以身體轉動與凌亂床單表現翻身；不是分身、翻筋斗、發燒或跌下床。",
+      "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 夜晚臥室，主角小女孩穿薄睡衣，在床上正由仰躺轉成側躺，額頭少量汗珠、薄被踢到一旁，神情煩熱、睡不安穩。只畫一個女孩，以身體轉動與凌亂床單表現翻身；不是分身、翻筋斗、發燒或跌下床。",
+      "imageSrc": "/assets/lessons/L394/images/L394-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S04.m4a",
+        "durationMs": 4890,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 560
+          },
+          {
+            "charIndex": 1,
+            "startMs": 560,
+            "endMs": 920
+          },
+          {
+            "charIndex": 2,
+            "startMs": 920,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 3,
+            "startMs": 2000,
+            "endMs": 2170
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2170,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2340,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2780,
+            "endMs": 3560
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3560,
+            "endMs": 3780
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3780,
+            "endMs": 4080
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4080,
+            "endMs": 4360
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4360,
+            "endMs": 4688
+          }
+        ]
+      }
+    },
+    {
+      "id": "L394-S05",
+      "text": "數一數，池裡有幾條魚。",
+      "spokenText": "數一數池裡有幾條魚",
+      "displayLines": [
+        "數一數，",
+        "池裡有",
+        "幾條魚。"
+      ],
+      "focusChar": "數",
+      "zhuyinOverrides": {
+        "0": "ㄕㄨˇ",
+        "2": "ㄕㄨˇ"
+      },
+      "imageNotes": "白天的小魚池旁，主角小女孩和爸爸站在安全平坦的池邊，女孩伸手逐條指數。池中恰好三條完整、清楚可見的魚，彼此分開，不被水草遮住。不要加數字或答案，也不要用多餘魚形倒影、裝飾魚影造成數量混淆。",
+      "imagePrompt": "Square 1:1 modern children's picture-book illustration. Match all five approved L058 images for fine pencil-and-watercolor linework, warm natural light, bright clean palette, detailed uncluttered environment, soft natural faces and stable preschool proportions. L058 is STYLE ONLY. Match L115/L118/L119/L128 refined proportions and L154-S01/L162-S04/L163-S02 FAMILY IDENTITIES. Protagonist girl: short dark bob, pink hair clip, preschool age, pink cardigan/navy skirt except thin pink sleepwear in S04. Mother and father preserve family anchor faces, hair and clothing cues. No readable writing, letters, logos or numbers except the explicitly authorized S01 page number 8 and S02 advertisement placeholder 00-0000-0000. No extra exceptions. Safe margins; semantic details readable at phone width. 白天的小魚池旁，主角小女孩和爸爸站在安全平坦的池邊，女孩伸手逐條指數。池中恰好三條完整、清楚可見的魚，彼此分開，不被水草遮住。不要加數字或答案，也不要用多餘魚形倒影、裝飾魚影造成數量混淆。",
+      "imageSrc": "/assets/lessons/L394/images/L394-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L394/audio/L394-S05.m4a",
+        "durationMs": 3599,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 940
+          },
+          {
+            "charIndex": 2,
+            "startMs": 940,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1360,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1820,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2100,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2480,
+            "endMs": 2640
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2640,
+            "endMs": 3020
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3020,
+            "endMs": 3436
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L394-G01",
+      "type": "find-character",
+      "sentenceId": "L394-S01",
+      "targetChar": "翻",
+      "targetCharIndex": 0
+    },
+    {
+      "id": "L394-G02",
+      "type": "teach-character",
+      "sentenceId": "L394-S03",
+      "targetChar": "翻",
+      "targetCharIndex": 1,
+      "teachAudio": {
+        "prefixText": "打",
+        "suffixText": "了水報紙都濕了",
+        "prefixSrc": "/assets/lessons/L394/audio/L394-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L394/audio/L394-G02-suffix.m4a",
+        "prefixAudio": {
+          "spokenText": "打",
+          "src": "/assets/lessons/L394/audio/L394-G02-prefix.m4a",
+          "durationMs": 701,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 494
+            }
+          ]
+        },
+        "suffixAudio": {
+          "spokenText": "了水報紙都濕了",
+          "src": "/assets/lessons/L394/audio/L394-G02-suffix.m4a",
+          "durationMs": 2925,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 360
+            },
+            {
+              "charIndex": 1,
+              "startMs": 360,
+              "endMs": 1020
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1020,
+              "endMs": 1400
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1400,
+              "endMs": 1620
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1620,
+              "endMs": 2240
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2240,
+              "endMs": 2440
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2440,
+              "endMs": 2744
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L394-G03",
+      "type": "missing-character",
+      "sentenceId": "L394-S04",
+      "targetChar": "翻",
+      "targetCharIndex": 7,
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "翻",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "爬",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "跑",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L394-G04",
+      "type": "partial-order",
+      "sentenceId": "L394-S02",
+      "targetChar": "碼",
+      "targetCharIndex": 10,
+      "missingIndexes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "options": [
+        {
+          "id": "card-hao",
+          "text": "號",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-jia",
+          "text": "家",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-ma",
+          "text": "碼",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-de",
+          "text": "的",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L394-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L394-S05",
+      "targetChar": "數",
+      "targetCharIndex": 0,
+      "options": [
+        {
+          "id": "correct",
+          "text": "數一數，池裡有幾條魚。",
+          "correct": true,
+          "spokenText": "數一數池裡有幾條魚",
+          "audioSrc": "/assets/lessons/L394/audio/L394-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L394/audio/L394-S05.m4a",
+            "durationMs": 3599,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 420
+              },
+              {
+                "charIndex": 1,
+                "startMs": 420,
+                "endMs": 940
+              },
+              {
+                "charIndex": 2,
+                "startMs": 940,
+                "endMs": 1360
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1360,
+                "endMs": 1820
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1820,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2480,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2640,
+                "endMs": 3020
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3020,
+                "endMs": 3436
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "數一數，池裡有幾隻鳥。",
+          "correct": false,
+          "spokenText": "數一數池裡有幾隻鳥",
+          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "數一數池裡有幾隻鳥",
+            "src": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a",
+            "durationMs": 3367,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 500
+              },
+              {
+                "charIndex": 1,
+                "startMs": 500,
+                "endMs": 820
+              },
+              {
+                "charIndex": 2,
+                "startMs": 820,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1502,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1940,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2200,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2700
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2700,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3202
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "數一數，河裡有幾條魚。",
+          "correct": false,
+          "spokenText": "數一數河裡有幾條魚",
+          "audioSrc": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "數一數河裡有幾條魚",
+            "src": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a",
+            "durationMs": 3558,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 560
+              },
+              {
+                "charIndex": 1,
+                "startMs": 560,
+                "endMs": 960
+              },
+              {
+                "charIndex": 2,
+                "startMs": 960,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1280,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1720,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1900,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2320,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2580,
+                "endMs": 2920
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2920,
+                "endMs": 3279
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "stage4AudioAlignment": {
+    "L394-G02-prefix": {
+      "spokenText": "打",
+      "src": "/assets/lessons/L394/audio/L394-G02-prefix.m4a",
+      "durationMs": 701,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 494
+        }
+      ]
+    },
+    "L394-G02-suffix": {
+      "spokenText": "了水報紙都濕了",
+      "src": "/assets/lessons/L394/audio/L394-G02-suffix.m4a",
+      "durationMs": 2925,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 360
+        },
+        {
+          "charIndex": 1,
+          "startMs": 360,
+          "endMs": 1020
+        },
+        {
+          "charIndex": 2,
+          "startMs": 1020,
+          "endMs": 1400
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1400,
+          "endMs": 1620
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1620,
+          "endMs": 2240
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2240,
+          "endMs": 2440
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2440,
+          "endMs": 2744
+        }
+      ]
+    },
+    "L394-G05-wrong-one": {
+      "spokenText": "數一數池裡有幾隻鳥",
+      "src": "/assets/lessons/L394/audio/L394-G05-wrong-one.m4a",
+      "durationMs": 3367,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 500
+        },
+        {
+          "charIndex": 1,
+          "startMs": 500,
+          "endMs": 820
+        },
+        {
+          "charIndex": 2,
+          "startMs": 820,
+          "endMs": 1040
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1502,
+          "endMs": 1940
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1940,
+          "endMs": 2200
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2200,
+          "endMs": 2500
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2500,
+          "endMs": 2700
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2700,
+          "endMs": 2920
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2920,
+          "endMs": 3202
+        }
+      ]
+    },
+    "L394-G05-wrong-two": {
+      "spokenText": "數一數河裡有幾條魚",
+      "src": "/assets/lessons/L394/audio/L394-G05-wrong-two.m4a",
+      "durationMs": 3558,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 560
+        },
+        {
+          "charIndex": 1,
+          "startMs": 560,
+          "endMs": 960
+        },
+        {
+          "charIndex": 2,
+          "startMs": 960,
+          "endMs": 1280
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1280,
+          "endMs": 1720
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1720,
+          "endMs": 1900
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1900,
+          "endMs": 2320
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2320,
+          "endMs": 2580
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2580,
+          "endMs": 2920
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2920,
+          "endMs": 3279
+        }
+      ]
+    }
+  }
+}
+```

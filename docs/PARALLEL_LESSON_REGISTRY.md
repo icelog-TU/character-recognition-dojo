@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L394 | 翻 / normal single-character lesson | needs-rework | Package Rescue | codex/l394-package-rescue | L389, L390, L391, L392, L393; playable predecessors and R047/R048 before release | 號, 數, 報, 頁, 碼 | curriculum-workflow/lesson-requests/L394.json; curriculum-workflow/generated/L394-generation-packet.md; curriculum-workflow/drafts/L394-draft.json | public/assets/lessons/L394/; curriculum-workflow/audio-inbox/L394/ | partial-package. Base 2169c169. Five final WebP images and ten processed audio candidates exist. G02 suffix transcript mismatch after three independent generations; final timings and playback QA incomplete. Do not integrate. S01 8, S02 00-0000-0000 and S05 three fish checked. |
+| L394 | 翻 / normal single-character lesson | dependency-blocked-asset-complete | Package Rescue | codex/l394-package-rescue | L390-L393; playable predecessors and R047/R048 before release | 數, 報, 頁, 碼 | curriculum-workflow/lesson-requests/L394.json; curriculum-workflow/generated/L394-generation-packet.md; curriculum-workflow/drafts/L394-draft.json | public/assets/lessons/L394/ | Source ee191ff2. Exact G02 suffix accepted, five sentences and G02/G05 timings complete; S02 local timing review, AI listening and browser QA in L394-rescue-qa.md. Preserve S01 8, S02 00-0000-0000 exceptions; images unchanged. Main integration belongs to Release. |
 
 ## Status Values
 
