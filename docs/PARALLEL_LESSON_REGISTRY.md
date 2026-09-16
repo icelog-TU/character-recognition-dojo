@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L407 | 減 | claimed | Production A | codex/l407-complete-package | L404:弱; L405:越; L406:加 | 弱越加 | curriculum-workflow/lesson-requests/L407.json; curriculum-workflow/generated/L407-generation-packet.md; curriculum-workflow/drafts/L407-draft.json | curriculum-workflow/audio-inbox/L407/; public/assets/lessons/L407/ | Base b3fc7566, formal L403. After405 R049/R050 milestone is Release-only blocker. No readable text or number exception. |
 
 ## Status Values
 
