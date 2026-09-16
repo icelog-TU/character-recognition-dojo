@@ -1,0 +1,1081 @@
+{
+  "unit": "L413",
+  "owner": "Production A",
+  "branch": "codex/l413-complete-package",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "base": "da46929a5f1f90ec89691ad9e2cfa81be8db30ef",
+  "mainSha": "18c9df4a4f1d4c9966b65d8b4371693a714e3d3c",
+  "formalBoundary": "L408",
+  "dependsOnLessons": [
+    "L409",
+    "L410",
+    "L411",
+    "L412"
+  ],
+  "provisionalLearnedChars": [
+    "辦",
+    "試",
+    "定",
+    "成"
+  ],
+  "reviews": [
+    {
+      "id": "R049",
+      "merged": true
+    },
+    {
+      "id": "R050",
+      "merged": true
+    }
+  ],
+  "consistency": "PASS",
+  "technical": {
+    "status": "PASS",
+    "allowed": 417,
+    "coverage": {
+      "功": 3,
+      "成": 2,
+      "定": 2,
+      "試": 3,
+      "辦": 1,
+      "法": 1
+    },
+    "displayLines": "PASS",
+    "stage4Indexes": "PASS",
+    "imageMetadata": [
+      {
+        "id": "L413-S01",
+        "src": "/assets/lessons/L413/images/L413-S01.webp",
+        "bytes": 215188,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L413-S02",
+        "src": "/assets/lessons/L413/images/L413-S02.webp",
+        "bytes": 170044,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L413-S03",
+        "src": "/assets/lessons/L413/images/L413-S03.webp",
+        "bytes": 213728,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L413-S04",
+        "src": "/assets/lessons/L413/images/L413-S04.webp",
+        "bytes": 164156,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L413-S05",
+        "src": "/assets/lessons/L413/images/L413-S05.webp",
+        "bytes": 123614,
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "audio": [
+      {
+        "src": "/assets/lessons/L413/audio/L413-S01.m4a",
+        "durationMs": 3756,
+        "mean": -20.5,
+        "max": -2.2,
+        "bytes": 41954
+      },
+      {
+        "src": "/assets/lessons/L413/audio/L413-S02.m4a",
+        "durationMs": 4755,
+        "mean": -18.6,
+        "max": -4.5,
+        "bytes": 52546
+      },
+      {
+        "src": "/assets/lessons/L413/audio/L413-S03.m4a",
+        "durationMs": 4390,
+        "mean": -19.8,
+        "max": -2,
+        "bytes": 43332
+      },
+      {
+        "src": "/assets/lessons/L413/audio/L413-S04.m4a",
+        "durationMs": 4579,
+        "mean": -19.3,
+        "max": -2.1,
+        "bytes": 55569
+      },
+      {
+        "src": "/assets/lessons/L413/audio/L413-S05.m4a",
+        "durationMs": 5358,
+        "mean": -19.4,
+        "max": -2,
+        "bytes": 68578
+      },
+      {
+        "src": "/assets/lessons/L413/audio/L413-G02-prefix.m4a",
+        "durationMs": 2246,
+        "mean": -27.2,
+        "max": -10,
+        "bytes": 21396
+      },
+      {
+        "src": "/assets/lessons/L413/audio/L413-G02-suffix.m4a",
+        "durationMs": 3844,
+        "mean": -19.7,
+        "max": -2,
+        "bytes": 44318
+      },
+      {
+        "src": "/assets/lessons/L413/audio/L413-G05-wrong-one.m4a",
+        "durationMs": 4322,
+        "mean": -19.4,
+        "max": -2,
+        "bytes": 52342
+      },
+      {
+        "src": "/assets/lessons/L413/audio/L413-G05-wrong-two.m4a",
+        "durationMs": 5106,
+        "mean": -19.7,
+        "max": -2,
+        "bytes": 64904
+      },
+      {
+        "src": "/assets/lessons/L413/audio/char-u529f.m4a",
+        "durationMs": 1555,
+        "mean": -19.1,
+        "max": -2,
+        "bytes": 13011
+      }
+    ],
+    "g05MeanSpreadDb": 0.4,
+    "timings": "PASS",
+    "ffmpegDecode": "PASS",
+    "sizes": {
+      "images": 886730,
+      "audio": 457950,
+      "total": 1344680
+    }
+  },
+  "browser": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "試",
+          "功",
+          "功",
+          "再",
+          "功",
+          "一"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "拿",
+            "辦",
+            "法",
+            "個"
+          ],
+          "correctSequence": [
+            "個",
+            "辦",
+            "法",
+            "拿"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-G05-wrong-one.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-S03.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-G05-wrong-two.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.875,
+              "bottom": 529.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-G05-wrong-one.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-S03.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-G05-wrong-two.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.875,
+              "bottom": 529.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "功",
+          "再",
+          "功",
+          "試",
+          "一",
+          "功"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "拿",
+            "辦",
+            "法",
+            "個"
+          ],
+          "correctSequence": [
+            "個",
+            "辦",
+            "法",
+            "拿"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-G05-wrong-one.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-S03.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-G05-wrong-two.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-G05-wrong-one.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-S03.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L413/audio/L413-G05-wrong-two.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "media": [
+    {
+      "file": "char-u529f.m4a",
+      "ended": true,
+      "duration": 1.555011
+    },
+    {
+      "file": "L413-G02-prefix.m4a",
+      "ended": true,
+      "duration": 2.246009
+    },
+    {
+      "file": "L413-G02-suffix.m4a",
+      "ended": true,
+      "duration": 3.843991
+    },
+    {
+      "file": "L413-G05-wrong-one.m4a",
+      "ended": true,
+      "duration": 4.321995
+    },
+    {
+      "file": "L413-G05-wrong-two.m4a",
+      "ended": true,
+      "duration": 5.106009
+    },
+    {
+      "file": "L413-S01.m4a",
+      "ended": true,
+      "duration": 3.756009
+    },
+    {
+      "file": "L413-S02.m4a",
+      "ended": true,
+      "duration": 4.755011
+    },
+    {
+      "file": "L413-S03.m4a",
+      "ended": true,
+      "duration": 4.39
+    },
+    {
+      "file": "L413-S04.m4a",
+      "ended": true,
+      "duration": 4.579002
+    },
+    {
+      "file": "L413-S05.m4a",
+      "ended": true,
+      "duration": 5.358005
+    }
+  ],
+  "g04": [
+    {
+      "width": 390,
+      "highlightAbsentBeforeAndAfterFill": true,
+      "status": "PASS"
+    },
+    {
+      "width": 820,
+      "highlightAbsentBeforeAndAfterFill": true,
+      "status": "PASS"
+    }
+  ],
+  "imageGeneration": {
+    "tool": "built-in imagegen",
+    "prompts": [
+      "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed preschool protagonist girl short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt,pink shoes, match family face.Fixed father short dark hair, blue shirt, natural adult face as family anchors.\nSCENE: 公園遊戲區，主角小女孩練習把球投進矮籃框，主角爸爸在旁鼓勵。女孩剛才沒投進，現在重新拿好球、望著籃框，爸爸微笑示意她再試一次。籃框高度適合孩子，畫面停在準備投球，不提前畫成已經投進。",
+      "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed preschool protagonist girl short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt,pink shoes, match family face.Fixed mother shoulder-length dark hair, cream cardigan, blue trousers, warm adult face matching family anchors.\nSCENE: 家中書桌旁，主角媽媽提醒正想出去玩的女孩先完成功課。女孩仍坐在桌前，作業本打開、鉛筆握在手中，一顆球放在門邊；她回頭望向門口，媽媽溫和地指著作業本。功課尚未完成，不畫成責罵或處罰。作業本朝向女孩，不需要可讀題目。",
+      "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed preschool protagonist girl short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt,pink shoes, match family face.Fixed mother shoulder-length dark hair, cream cardigan, blue trousers, warm adult face matching family anchors.\nSCENE: 家中餐桌上，放一盤女孩沒吃過的蔬菜料理，例如炒秋葵。主角小女孩好奇地看著菜，拿起筷子準備夾一小塊，主角媽媽在旁微笑。呈現女孩主動想嘗試，不是被逼著吃，也不預先表現好吃或難吃。料理名稱只作畫面描述，不加入句子。",
+      "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed Xiaoguang use xiaoguang.webp identity exactly: round glasses, tidy short black side-parted hair, white shirt, navy knit vest, khaki shorts, white socks,brown shoes, small preschool boy. No other fixed boys; classmates generic distinct.\nSCENE: 下課時的教室，小光仍坐在自己的座位上專心看書，窗外或教室門口可見幾位 generic 同學正在活動。小光神情投入，不畫成被留下來處罰。使用 public/assets/reference/lesson-cast/xiaoguang.webp，保留圓眼鏡、整齊短黑髮、白襯衫、深藍背心、卡其短褲、白襪、棕色鞋。不是固定「你」或「他」小男孩。書本內容不必可讀。",
+      "ONE square finished picture-book illustration. L058 full sheet STYLE ONLY: detailed pencil-watercolor linework, natural warm light, clean bright palette, stable preschool proportions, natural expressive faces. Refined L115/L118/L119/L128 and family anchors L154/L162/L163 for identity/proportion. No flat cartoon, simple generic watercolor, anime,3D,photo. No readable letters, Han, numbers, logos, brands or watermarks.\nCAST: Fixed preschool protagonist girl short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt,pink shoes, match family face.Fixed father short dark hair, blue shirt, natural adult face as family anchors.\nSCENE: 家中臥室，主角小女孩蹲在床邊，指著滾到床底深處的小玩具車，主角爸爸蹲在旁邊查看。低角度讓觀者看見玩具位置，以及女孩伸手仍搆不到的距離。爸爸正在思考怎麼取出，尚未動手；不要畫孩子整個人鑽進狹窄床底或自行抬床。"
+    ],
+    "s05EffectivePrompt": "Square educational pencil-watercolor picture-book image. Ordinary fully clothed father and daughter crouch beside the bed, looking thoughtfully at a toy car far underneath. Girl points but cannot reach it. Father considers retrieval with hands near knees. Both remain entirely outside the bed frame. Low view shows distance. Family identities and L058 style references retained; no text, numbers, brands or logos.",
+    "references": [
+      "L058 full five-image style set",
+      "L115-S01",
+      "L115-S02",
+      "L118-S02",
+      "L119-S01",
+      "L128-S03",
+      "L154-S01",
+      "L162-S04",
+      "L163-S02",
+      "public/assets/reference/lesson-cast/xiaoguang.webp"
+    ]
+  },
+  "images": [
+    {
+      "id": "L413-S01",
+      "src": "/assets/lessons/L413/images/L413-S01.webp",
+      "bytes": 215188,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L413-S02",
+      "src": "/assets/lessons/L413/images/L413-S02.webp",
+      "bytes": 170044,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L413-S03",
+      "src": "/assets/lessons/L413/images/L413-S03.webp",
+      "bytes": 213728,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L413-S04",
+      "src": "/assets/lessons/L413/images/L413-S04.webp",
+      "bytes": 164156,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    },
+    {
+      "id": "L413-S05",
+      "src": "/assets/lessons/L413/images/L413-S05.webp",
+      "bytes": 123614,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS"
+    }
+  ],
+  "imageRegenerations": 0,
+  "rejectedImagesCommitted": false,
+  "imageToolRetry": "S05 first call was rejected before producing an image; benign father/daughter scene restated and generated successfully. No rejected image artifact exists.",
+  "imageNotes": "S01 ball held before next attempt with encouraging father; S02 unfinished homework and mother reminder; S03 voluntary unfamiliar vegetable attempt before tasting; S04 fixed Xiaoguang reading at recess; S05 toy car beyond reach under bed, father considers retrieval, both stay outside bed. No readable text/number exceptions.",
+  "audio": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "standaloneInput": "功",
+    "zhuyin": "ㄍㄨㄥ",
+    "regenerations": 0,
+    "independentTranscription": [
+      {
+        "file": "char-u529f.m4a",
+        "text": "工"
+      },
+      {
+        "file": "L413-G02-prefix.m4a",
+        "text": "小光很用。"
+      },
+      {
+        "file": "L413-G02-suffix.m4a",
+        "text": "下課還在看書。"
+      },
+      {
+        "file": "L413-G05-wrong-one.m4a",
+        "text": "我没吃过这种鱼，想试试看。"
+      },
+      {
+        "file": "L413-G05-wrong-two.m4a",
+        "text": "我没吃过那种菜，想试试看。"
+      },
+      {
+        "file": "L413-S01.m4a",
+        "text": "再試一次，一定能成功。"
+      },
+      {
+        "file": "L413-S02.m4a",
+        "text": "一定要完成功课，才能出去玩。"
+      },
+      {
+        "file": "L413-S03.m4a",
+        "text": "我没吃过这种菜，想试试看。"
+      },
+      {
+        "file": "L413-S04.m4a",
+        "text": "小光很用功，下课还在看书。"
+      },
+      {
+        "file": "L413-S05.m4a",
+        "text": "玩具掉在床下，想个办法拿。"
+      }
+    ],
+    "pitch": [
+      {
+        "ms": 350,
+        "hz": 276,
+        "confidence": 0.86
+      },
+      {
+        "ms": 360,
+        "hz": 271,
+        "confidence": 0.95
+      },
+      {
+        "ms": 370,
+        "hz": 271,
+        "confidence": 0.97
+      },
+      {
+        "ms": 380,
+        "hz": 267,
+        "confidence": 0.98
+      },
+      {
+        "ms": 390,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 400,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 410,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 420,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 430,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 440,
+        "hz": 262,
+        "confidence": 0.99
+      },
+      {
+        "ms": 450,
+        "hz": 262,
+        "confidence": 0.99
+      },
+      {
+        "ms": 460,
+        "hz": 262,
+        "confidence": 1
+      },
+      {
+        "ms": 470,
+        "hz": 262,
+        "confidence": 1
+      },
+      {
+        "ms": 480,
+        "hz": 262,
+        "confidence": 0.99
+      },
+      {
+        "ms": 490,
+        "hz": 132,
+        "confidence": 0.99
+      },
+      {
+        "ms": 500,
+        "hz": 132,
+        "confidence": 0.99
+      },
+      {
+        "ms": 510,
+        "hz": 132,
+        "confidence": 0.99
+      },
+      {
+        "ms": 520,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 530,
+        "hz": 267,
+        "confidence": 1
+      },
+      {
+        "ms": 540,
+        "hz": 267,
+        "confidence": 1
+      },
+      {
+        "ms": 550,
+        "hz": 267,
+        "confidence": 1
+      },
+      {
+        "ms": 560,
+        "hz": 267,
+        "confidence": 1
+      },
+      {
+        "ms": 570,
+        "hz": 267,
+        "confidence": 1
+      },
+      {
+        "ms": 580,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 590,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 600,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 610,
+        "hz": 262,
+        "confidence": 1
+      },
+      {
+        "ms": 620,
+        "hz": 262,
+        "confidence": 1
+      },
+      {
+        "ms": 630,
+        "hz": 262,
+        "confidence": 1
+      },
+      {
+        "ms": 640,
+        "hz": 262,
+        "confidence": 1
+      },
+      {
+        "ms": 650,
+        "hz": 262,
+        "confidence": 1
+      },
+      {
+        "ms": 660,
+        "hz": 267,
+        "confidence": 1
+      },
+      {
+        "ms": 670,
+        "hz": 267,
+        "confidence": 0.99
+      },
+      {
+        "ms": 680,
+        "hz": 271,
+        "confidence": 1
+      },
+      {
+        "ms": 690,
+        "hz": 271,
+        "confidence": 1
+      },
+      {
+        "ms": 700,
+        "hz": 276,
+        "confidence": 1
+      },
+      {
+        "ms": 710,
+        "hz": 276,
+        "confidence": 1
+      },
+      {
+        "ms": 720,
+        "hz": 276,
+        "confidence": 1
+      },
+      {
+        "ms": 730,
+        "hz": 276,
+        "confidence": 1
+      },
+      {
+        "ms": 740,
+        "hz": 276,
+        "confidence": 1
+      },
+      {
+        "ms": 750,
+        "hz": 276,
+        "confidence": 1
+      },
+      {
+        "ms": 760,
+        "hz": 276,
+        "confidence": 1
+      },
+      {
+        "ms": 770,
+        "hz": 139,
+        "confidence": 1
+      },
+      {
+        "ms": 780,
+        "hz": 139,
+        "confidence": 1
+      },
+      {
+        "ms": 790,
+        "hz": 139,
+        "confidence": 1
+      },
+      {
+        "ms": 800,
+        "hz": 281,
+        "confidence": 1
+      },
+      {
+        "ms": 810,
+        "hz": 281,
+        "confidence": 1
+      },
+      {
+        "ms": 820,
+        "hz": 281,
+        "confidence": 1
+      },
+      {
+        "ms": 830,
+        "hz": 281,
+        "confidence": 1
+      },
+      {
+        "ms": 840,
+        "hz": 281,
+        "confidence": 0.99
+      },
+      {
+        "ms": 850,
+        "hz": 286,
+        "confidence": 0.99
+      },
+      {
+        "ms": 860,
+        "hz": 281,
+        "confidence": 0.99
+      }
+    ],
+    "phoneticAssessment": "Unprompted standalone transcription returned 工, homophonous with 功. Voiced fundamental is approximately262-286Hz, with occasional octave-halving estimator artifacts; stable contour supports first tone. Technical evidence only, not teacher subjective listening approval.",
+    "g02Prefix": "小光很用",
+    "g02Suffix": "下課還在看書",
+    "g05MeanSpreadDb": 0.4,
+    "processing": "Repo audio normalization only; no extraction, slicing or splicing."
+  },
+  "alignment": {
+    "tool": "assets:align:ai whisper-1 final M4A",
+    "records": 9,
+    "normalization": "Temporary simplified equivalents 试/試 and 办/辦 only. Shared script change removed before commit.",
+    "intervalCheck": "All intervals80-900ms, monotonic, complete Han coverage and within duration. No manual timing edits."
+  },
+  "checks": {
+    "tools": "PASS",
+    "aiSetup": "PASS",
+    "curriculumState": "PASS at startup; lesson asset-folder warning expected after temporary entry removal",
+    "packet": "PASS; final approved request and final draft embedded verbatim",
+    "localTechnical": "PASS",
+    "validateProduction": "PASS with temporary L413 entry",
+    "assetsAudit": "PASS",
+    "browser": "PASS390x844/820x1180; sentence highlights, options, recording replay and reward navigation",
+    "fullVerify": "SKIPPED: shared integration owned by Release"
+  },
+  "sizes": {
+    "images": 886730,
+    "audio": 457950,
+    "total": 1344680
+  },
+  "limitations": [
+    "Physical microphone recording was not tested.",
+    "Package endpoint next-lesson button is visible but disabled; Release verifies next playable lesson.",
+    "Teacher subjective image/audio review remains post-main."
+  ]
+}

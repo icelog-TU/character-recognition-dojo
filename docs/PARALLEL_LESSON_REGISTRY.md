@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L413 | 功 | claimed | Production A | codex/l413-complete-package | L408:法; L409:辦; L410:試; L411:定; L412:成 | 法辦試定成 | curriculum-workflow/lesson-requests/L413.json; curriculum-workflow/generated/L413-generation-packet.md; curriculum-workflow/drafts/L413-draft.json | curriculum-workflow/audio-inbox/L413/; public/assets/lessons/L413/ | Base da46929a, formal L407. R049/R050 merged. No readable text or number exceptions. Fixed Xiaoguang in S04. |
+| L413 | 功 | dependency-blocked-asset-complete | Production A | codex/l413-complete-package | L409:辦; L410:試; L411:定; L412:成 | 辦試定成 | curriculum-workflow/lesson-requests/L413.json; curriculum-workflow/generated/L413-generation-packet.md; curriculum-workflow/drafts/L413-draft.json | curriculum-workflow/audio-inbox/L413/; public/assets/lessons/L413/ | Five WebP, ten M4A, nine timing records. Technical and browser QA PASS. Main recheck 18c9df4a. R049/R050 merged. Teacher subjective review post-main. |
 
 ## Status Values
 
