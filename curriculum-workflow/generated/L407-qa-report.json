@@ -1061,7 +1061,7 @@
     "validateProduction": "PASS with temporary L407 entry",
     "assetsAudit": "PASS: 452 units, 2219 image references, 4390 audio references, zero warnings. The --lesson argument is ignored by this global audit script; L407 is included through the temporary entry.",
     "browser": "PASS at390x844 and820x1180, all sentence and option media ended, full highlight coverage, G02 synthetic recording replay",
-    "packageIntake": "Run against pushed branch before final report",
+    "packageIntake": "PASS: npm run curriculum:package-intake -- --unit L407 --ref origin/codex/l407-complete-package. Verified pushed asset commit f59421a8bf679d79ba8530fe3c2f9bdbf11cb0f7: five images, ten audio files, no blocking defects. Evidence-only follow-up tip rechecked before final handoff.",
     "fullVerify": "SKIPPED: dependencies and shared state owned by Release"
   },
   "sizes": {
