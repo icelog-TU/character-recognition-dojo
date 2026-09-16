@@ -224,3 +224,9 @@ Character audio: /assets/lessons/L429/audio/char-u5df1.m4a
 Final timings: L429-alignment.json and L429-draft.json. Technical checks and browser scope: L429-technical-qa.json. Generation/edit prompts: L429-image-prompts.json. Handoff: L429-package-notes.md.
 
 Latest main snapshot: f4bc071d4d14a15bd0e2927a710f197110da6789; L420 教. Pending ordered lessons L421-L428 and R051/R052. Original approved 426-character boundary remains locked.
+
+## Browser QA
+
+390x844 phone playback in the actual app: character card and all five Stage 3 sentences reached playback completion; S02-S05 active highlights observed. G01 correct circle, G03 correct card and G04 four-card ordering feedback observed. Each G05 option transitioned from playing to idle. G05 final correctness feedback was not confirmed before cleanup.
+
+G02 reached the red target and hold-to-record prompt, but exposed browser controls could not sustain hold recording, and skip did not advance. Temporary Vite HMR/overlay errors occurred while changing local fixtures; reload recovered later-game checks using an isolated G03-G05 subset. Live human recording, stitched replay, subjective pronunciation and perceived audio/highlight synchronization remain untested. This is the SOP tooling fallback, not teacher manual PASS. Technical audio decode, exact transcript alignment, timing bounds and asset checks passed. Full evidence: L429-technical-qa.json and L429-package-notes.md. Temporary shared curriculum restored and preview stopped.
