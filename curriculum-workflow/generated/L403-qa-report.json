@@ -1,0 +1,917 @@
+{
+  "unit": "L403",
+  "owner": "Production A",
+  "branch": "codex/l403-complete-package",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "base": "23cae19103e760f23700f5ff90d72fbd2e59bfc6",
+  "mainSha": "a240e584c5bda3835199398019d03bca7b8236e4",
+  "formalBoundary": "L390",
+  "formalChars": 394,
+  "dependsOnLessons": [
+    "L398",
+    "L399",
+    "L400",
+    "L401",
+    "L402"
+  ],
+  "provisionalLearnedChars": [
+    "選",
+    "或",
+    "者",
+    "勇",
+    "強"
+  ],
+  "reviews": [
+    {
+      "id": "R047",
+      "present": true
+    },
+    {
+      "id": "R048",
+      "present": true
+    }
+  ],
+  "consistency": "PASS",
+  "technical": {
+    "status": "PASS",
+    "allowed": 400,
+    "coverage": {
+      "算": 5,
+      "強": 2,
+      "勇": 2,
+      "者": 2,
+      "或": 1,
+      "選": 1
+    },
+    "displayLines": "PASS",
+    "stage4Indexes": "PASS",
+    "imageMetadata": [
+      {
+        "id": "L403-S01",
+        "src": "/assets/lessons/L403/images/L403-S01.webp",
+        "bytes": 213948,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L403-S02",
+        "src": "/assets/lessons/L403/images/L403-S02.webp",
+        "bytes": 170966,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L403-S03",
+        "src": "/assets/lessons/L403/images/L403-S03.webp",
+        "bytes": 174152,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L403-S04",
+        "src": "/assets/lessons/L403/images/L403-S04.webp",
+        "bytes": 199496,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L403-S05",
+        "src": "/assets/lessons/L403/images/L403-S05.webp",
+        "bytes": 135954,
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "audio": [
+      {
+        "src": "/assets/lessons/L403/audio/L403-S01.m4a",
+        "durationMs": 4305,
+        "mean": -18,
+        "max": -2,
+        "bytes": 52936
+      },
+      {
+        "src": "/assets/lessons/L403/audio/L403-S02.m4a",
+        "durationMs": 3287,
+        "mean": -18.7,
+        "max": -2,
+        "bytes": 41852
+      },
+      {
+        "src": "/assets/lessons/L403/audio/L403-S03.m4a",
+        "durationMs": 4367,
+        "mean": -19.2,
+        "max": -2.2,
+        "bytes": 55854
+      },
+      {
+        "src": "/assets/lessons/L403/audio/L403-S04.m4a",
+        "durationMs": 3937,
+        "mean": -17.5,
+        "max": -2.2,
+        "bytes": 51375
+      },
+      {
+        "src": "/assets/lessons/L403/audio/L403-S05.m4a",
+        "durationMs": 3258,
+        "mean": -18.1,
+        "max": -2.1,
+        "bytes": 41780
+      },
+      {
+        "src": "/assets/lessons/L403/audio/L403-G02-prefix.m4a",
+        "durationMs": 1111,
+        "mean": -17.6,
+        "max": -3.6,
+        "bytes": 14696
+      },
+      {
+        "src": "/assets/lessons/L403/audio/L403-G02-suffix.m4a",
+        "durationMs": 3149,
+        "mean": -17.9,
+        "max": -2,
+        "bytes": 40254
+      },
+      {
+        "src": "/assets/lessons/L403/audio/L403-G05-wrong-one.m4a",
+        "durationMs": 4710,
+        "mean": -18.8,
+        "max": -2.4,
+        "bytes": 63664
+      },
+      {
+        "src": "/assets/lessons/L403/audio/L403-G05-wrong-two.m4a",
+        "durationMs": 4501,
+        "mean": -18.3,
+        "max": -2,
+        "bytes": 57164
+      },
+      {
+        "src": "/assets/lessons/L403/audio/char-u7b97.m4a",
+        "durationMs": 2554,
+        "mean": -20,
+        "max": -2,
+        "bytes": 23924
+      }
+    ],
+    "g05MeanSpreadDb": 0.9,
+    "timings": "PASS",
+    "ffmpegDecode": "PASS",
+    "sizes": {
+      "images": 894516,
+      "audio": 443499,
+      "total": 1338015
+    }
+  },
+  "mobile": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "物",
+          "算",
+          "就",
+          "算",
+          "算",
+          "怪"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "強",
+            "還",
+            "怪",
+            "物"
+          ],
+          "correctSequence": [
+            "怪",
+            "物",
+            "還",
+            "強"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-S03.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-G05-wrong-one.m4a"
+          ],
+          "correct": 0,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.875,
+              "bottom": 529.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-S03.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-G05-wrong-one.m4a"
+          ],
+          "correct": 0,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.875,
+              "bottom": 529.875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.875,
+              "bottom": 597.875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "算",
+          "就",
+          "物",
+          "算",
+          "怪",
+          "算"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "強",
+            "還",
+            "怪",
+            "物"
+          ],
+          "correctSequence": [
+            "怪",
+            "物",
+            "還",
+            "強"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-S03.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-G05-wrong-one.m4a"
+          ],
+          "correct": 0,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-S03.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L403/audio/L403-G05-wrong-one.m4a"
+          ],
+          "correct": 0,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "media": [
+    {
+      "file": "char-u7b97.m4a",
+      "ended": true,
+      "duration": 2.553991
+    },
+    {
+      "file": "L403-G02-prefix.m4a",
+      "ended": true,
+      "duration": 1.110998
+    },
+    {
+      "file": "L403-G02-suffix.m4a",
+      "ended": true,
+      "duration": 3.149002
+    },
+    {
+      "file": "L403-G05-wrong-one.m4a",
+      "ended": true,
+      "duration": 4.71
+    },
+    {
+      "file": "L403-G05-wrong-two.m4a",
+      "ended": true,
+      "duration": 4.500998
+    },
+    {
+      "file": "L403-S01.m4a",
+      "ended": true,
+      "duration": 4.305011
+    },
+    {
+      "file": "L403-S02.m4a",
+      "ended": true,
+      "duration": 3.287007
+    },
+    {
+      "file": "L403-S03.m4a",
+      "ended": true,
+      "duration": 4.367007
+    },
+    {
+      "file": "L403-S04.m4a",
+      "ended": true,
+      "duration": 3.937007
+    },
+    {
+      "file": "L403-S05.m4a",
+      "ended": true,
+      "duration": 3.258005
+    }
+  ],
+  "images": [
+    {
+      "id": "L403-S01",
+      "src": "/assets/lessons/L403/images/L403-S01.webp",
+      "bytes": 213948,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "N/A: generic story characters, no recurring cast",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L403-S02",
+      "src": "/assets/lessons/L403/images/L403-S02.webp",
+      "bytes": 170966,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L403-S03",
+      "src": "/assets/lessons/L403/images/L403-S03.webp",
+      "bytes": 174152,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "Teacher-approved price stickers 50 and 30 only"
+    },
+    {
+      "id": "L403-S04",
+      "src": "/assets/lessons/L403/images/L403-S04.webp",
+      "bytes": 199496,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L403-S05",
+      "src": "/assets/lessons/L403/images/L403-S05.webp",
+      "bytes": 135954,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    }
+  ],
+  "imageRegenerations": {
+    "S01": 0,
+    "S02": 0,
+    "S03": 0,
+    "S04": 0,
+    "S05": 0
+  },
+  "rejectedImagesCommitted": false,
+  "imageCompression": "S01 first WebP exceeded 250KiB, re-encoded from original PNG at quality74 to213948 bytes; other images standard repo quality. Only compliant final images committed.",
+  "imageException": "Only S03 two book prices 50 and 30. No total, equation, title, or other readable text. S02 actual game victory, not strength comparison using rocks. S04 present discussion plus one split future-plan bubble. S05 box remains on shelf.",
+  "audio": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "standaloneInput": "算",
+    "zhuyin": "ㄙㄨㄢˋ",
+    "count": 10,
+    "regenerations": {
+      "S02": 1,
+      "g05WrongTwo": 1
+    },
+    "independentTranscription": [
+      {
+        "file": "char-u7b97.m4a",
+        "text": "算。"
+      },
+      {
+        "file": "L403-G02-prefix.m4a",
+        "text": "我打。"
+      },
+      {
+        "file": "L403-G02-suffix.m4a",
+        "text": "明天去游泳或爬山。"
+      },
+      {
+        "file": "L403-G05-wrong-one.m4a",
+        "text": "算一算，买三本书要多少钱?"
+      },
+      {
+        "file": "L403-G05-wrong-two.m4a",
+        "text": "算一算，卖两本书要多少钱?"
+      },
+      {
+        "file": "L403-S01.m4a",
+        "text": "就算怪物很强，勇者也不怕。"
+      },
+      {
+        "file": "L403-S02.m4a",
+        "text": "你選的勇者比怪物還強。"
+      },
+      {
+        "file": "L403-S03.m4a",
+        "text": "算一算，买两本书要多少钱?"
+      },
+      {
+        "file": "L403-S04.m4a",
+        "text": "我打算明天去游泳或爬山。"
+      },
+      {
+        "file": "L403-S05.m4a",
+        "text": "太貴就算了，我們不買。"
+      }
+    ],
+    "pitchEvidence": [
+      {
+        "ms": 650,
+        "hz": 320,
+        "confidence": 0.91
+      },
+      {
+        "ms": 660,
+        "hz": 320,
+        "confidence": 0.96
+      },
+      {
+        "ms": 670,
+        "hz": 320,
+        "confidence": 0.98
+      },
+      {
+        "ms": 680,
+        "hz": 320,
+        "confidence": 0.98
+      },
+      {
+        "ms": 690,
+        "hz": 314,
+        "confidence": 0.97
+      },
+      {
+        "ms": 700,
+        "hz": 308,
+        "confidence": 0.95
+      },
+      {
+        "ms": 710,
+        "hz": 296,
+        "confidence": 0.96
+      },
+      {
+        "ms": 720,
+        "hz": 291,
+        "confidence": 0.94
+      },
+      {
+        "ms": 730,
+        "hz": 281,
+        "confidence": 0.85
+      },
+      {
+        "ms": 850,
+        "hz": 160,
+        "confidence": 0.84
+      },
+      {
+        "ms": 860,
+        "hz": 157,
+        "confidence": 0.91
+      },
+      {
+        "ms": 870,
+        "hz": 151,
+        "confidence": 0.9
+      },
+      {
+        "ms": 880,
+        "hz": 139,
+        "confidence": 0.9
+      },
+      {
+        "ms": 890,
+        "hz": 131,
+        "confidence": 0.92
+      },
+      {
+        "ms": 900,
+        "hz": 126,
+        "confidence": 0.97
+      },
+      {
+        "ms": 910,
+        "hz": 127,
+        "confidence": 0.98
+      },
+      {
+        "ms": 920,
+        "hz": 130,
+        "confidence": 0.99
+      },
+      {
+        "ms": 930,
+        "hz": 131,
+        "confidence": 0.99
+      },
+      {
+        "ms": 940,
+        "hz": 132,
+        "confidence": 0.99
+      },
+      {
+        "ms": 950,
+        "hz": 134,
+        "confidence": 1
+      }
+    ],
+    "assessment": "Final independent transcripts match all exact input Han sequences after script conversion. Standalone 算 contour falls about320 to126Hz, supporting fourth tone. This is technical phonetic evidence, not human listening approval. G05 wrong-two complete sentence regenerated to distinguish 賣 from 買.",
+    "g02Prefix": "我打",
+    "g02Suffix": "明天去游泳或爬山",
+    "g05MeanSpreadDb": 0.9,
+    "processing": "Repo mono AAC44100Hz M4A; only trailing silence removed with150ms padding after speech boundary. No character extraction or option splicing."
+  },
+  "alignment": {
+    "source": "assets:align:ai whisper-1 on final M4A",
+    "records": 9,
+    "equivalences": "Temporary script conversion 强/強,选/選,钱/錢,卖/賣 only; no homophone substitution.",
+    "review": {
+      "asset": "/assets/lessons/L403/audio/L403-G05-wrong-two.m4a",
+      "char": "賣",
+      "index": 3,
+      "before": {
+        "charIndex": 3,
+        "startMs": 1760,
+        "endMs": 1761
+      },
+      "after": {
+        "charIndex": 3,
+        "startMs": 1420,
+        "endMs": 1760
+      },
+      "evidence": "20ms RMS waveform: interphrase silence 1240-1380ms, onset 1400-1420ms, following 兩 boundary from AI at1760ms. Corrected only degenerate 1ms token; no audio edit."
+    },
+    "toolChanges": "Temporary generation-instruction argument and script conversion removed before commit. Shared scripts unchanged."
+  },
+  "checks": {
+    "tools": "PASS",
+    "aiSetup": "PASS",
+    "packet": "PASS; synchronized final records",
+    "localAudit": "PASS",
+    "validateProduction": "PASS with temporary L403 entry",
+    "assetsAudit": "PASS: 437 units, 2144 image references, 4242 audio references; zero warnings",
+    "mobile": "PASS",
+    "browserHarness": "Initial fixed2.6s Stage2 check ran before2.554s clip and UI update completed; changed test to await actual collection event, then reran both widths.",
+    "fullVerify": "SKIPPED: dependency-blocked, shared state owned by Release",
+    "packageIntake": "Run on pushed ref before final handoff"
+  },
+  "sizes": {
+    "images": 894516,
+    "audio": 443499,
+    "total": 1338015
+  },
+  "limitations": [
+    "Synthetic microphone is not physical-phone recording QA.",
+    "Next lesson control visible but disabled at isolated L403 endpoint. Release checks actual next playable lesson after integration.",
+    "Teacher subjective image/audio review remains post-main."
+  ]
+}
