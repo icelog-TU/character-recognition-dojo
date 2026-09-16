@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L412 | 成 | claimed | Production F | codex/l412-complete-package | L408, L409, L410, L411 | 法 辦 試 定 | curriculum-workflow/lesson-requests/L412.json; curriculum-workflow/generated/L412-generation-packet.md; curriculum-workflow/drafts/L412-draft.json | public/assets/lessons/L412/; curriculum-workflow/audio-inbox/L412/ | S01 unfinished craft; S02 completed dog painting with same-theme practice; S03 handmade paper boat; S05 你 is father. No readable text/numeral exception. G02 prefix ends 完, suffix begins 這. |
 
 ## Status Values
 
