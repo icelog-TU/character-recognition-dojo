@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L435 | 助 | claimed | Production E | codex/l435-complete-package | L428, L429, L430, L431, L432, L433, L434; R051/R052 after L420 | 自 己 主 由 意 願 互 | curriculum-workflow/lesson-requests/L435.json; curriculum-workflow/generated/L435-generation-packet.md; curriculum-workflow/drafts/L435-draft.json | public/assets/lessons/L435/; curriculum-workflow/audio-inbox/L435/ | Formal teacher handoff. Base f4bc071d L420; locked 432 Han. Release requires all predecessors through L434 and R051/R052. R053/R054 after L435 before L436 are separate Editor work. |
+| L435 | 助 | dependency-blocked-asset-complete | Production E | codex/l435-complete-package; pushed asset SHA recorded after push | L428, L429, L430, L431, L432, L433, L434; R051/R052 after L420 | 自 己 主 由 意 願 互 | curriculum-workflow/lesson-requests/L435.json; curriculum-workflow/generated/L435-generation-packet.md; curriculum-workflow/drafts/L435-draft.json | public/assets/lessons/L435/; curriculum-workflow/audio-inbox/L435/ | 5 WebP + 10 M4A; sentence/Stage 4 timings; local strict checks PASS. Locked 432 Han; latest main f4bc071d L420. All predecessors through L434 and R051/R052 required. Partial browser UI QA; human synchronized listening and phone recording unperformed. R053/R054 after L435 are separate Editor work. Release owns integration. |
 
 ## Status Values
 

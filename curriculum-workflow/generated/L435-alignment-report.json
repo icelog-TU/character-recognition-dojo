@@ -1,0 +1,666 @@
+{
+  "unit": "L435",
+  "method": "Repo assets:align:ai whisper-1 final M4A. Traditional/simplified orthographic equivalences only. S01 加法 context prompt after independent audio review; wrong-one 買車 regenerated whole after initial ASR mismatch. No arbitrary homophone mapping. Waveform-reviewed pause and prefix corrections; not human playback acceptance.",
+  "adjustments": [
+    {
+      "src": "/assets/lessons/L435/audio/L435-G02-prefix.m4a",
+      "index": 1,
+      "previous": {
+        "charIndex": 1,
+        "startMs": 460,
+        "endMs": 1100
+      },
+      "corrected": {
+        "charIndex": 1,
+        "startMs": 460,
+        "endMs": 780
+      },
+      "reason": "Waveform shows 我們 speech ends near 780ms; avoid highlighting through pause."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-G02-prefix.m4a",
+      "index": 2,
+      "previous": {
+        "charIndex": 2,
+        "startMs": 1580,
+        "endMs": 1581
+      },
+      "corrected": {
+        "charIndex": 2,
+        "startMs": 1120,
+        "endMs": 1700
+      },
+      "reason": "Whisper returned zero-duration 互 at 1580ms. Separate final speech envelope spans 1120–1700ms."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-S05.m4a",
+      "index": 5,
+      "previous": {
+        "charIndex": 5,
+        "startMs": 1440,
+        "endMs": 2220
+      },
+      "corrected": {
+        "charIndex": 5,
+        "startMs": 1840,
+        "endMs": 2220
+      },
+      "reason": "Waveform pause after 菜 from 1440 to 1830ms; 由 starts after pause."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-G05-wrong-two.m4a",
+      "index": 2,
+      "previous": {
+        "charIndex": 2,
+        "startMs": 740,
+        "endMs": 1520
+      },
+      "corrected": {
+        "charIndex": 2,
+        "startMs": 910,
+        "endMs": 1520
+      },
+      "reason": "Remove preceding silent pause before 很 based on waveform onset."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-S01.m4a",
+      "index": 9,
+      "previous": {
+        "charIndex": 9,
+        "startMs": 3140,
+        "endMs": 3320
+      },
+      "corrected": {
+        "charIndex": 9,
+        "startMs": 3140,
+        "endMs": 3390
+      },
+      "reason": "Final audible decay from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-S02.m4a",
+      "index": 10,
+      "previous": {
+        "charIndex": 10,
+        "startMs": 3640,
+        "endMs": 4080
+      },
+      "corrected": {
+        "charIndex": 10,
+        "startMs": 3640,
+        "endMs": 4130
+      },
+      "reason": "Final audible decay from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-S03.m4a",
+      "index": 6,
+      "previous": {
+        "charIndex": 6,
+        "startMs": 2000,
+        "endMs": 2280
+      },
+      "corrected": {
+        "charIndex": 6,
+        "startMs": 2000,
+        "endMs": 2390
+      },
+      "reason": "Final audible decay from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-S04.m4a",
+      "index": 10,
+      "previous": {
+        "charIndex": 10,
+        "startMs": 3000,
+        "endMs": 3220
+      },
+      "corrected": {
+        "charIndex": 10,
+        "startMs": 3000,
+        "endMs": 3300
+      },
+      "reason": "Final audible decay from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-S05.m4a",
+      "index": 9,
+      "previous": {
+        "charIndex": 9,
+        "startMs": 2900,
+        "endMs": 3180
+      },
+      "corrected": {
+        "charIndex": 9,
+        "startMs": 2900,
+        "endMs": 3250
+      },
+      "reason": "Final audible decay from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-G02-prefix.m4a",
+      "index": 2,
+      "previous": {
+        "charIndex": 2,
+        "startMs": 1120,
+        "endMs": 1700
+      },
+      "corrected": {
+        "charIndex": 2,
+        "startMs": 1120,
+        "endMs": 1700
+      },
+      "reason": "Final audible decay from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-G02-suffix.m4a",
+      "index": 6,
+      "previous": {
+        "charIndex": 6,
+        "startMs": 1640,
+        "endMs": 2000
+      },
+      "corrected": {
+        "charIndex": 6,
+        "startMs": 1640,
+        "endMs": 2070
+      },
+      "reason": "Final audible decay from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-G05-wrong-one.m4a",
+      "index": 6,
+      "previous": {
+        "charIndex": 6,
+        "startMs": 1580,
+        "endMs": 1860
+      },
+      "corrected": {
+        "charIndex": 6,
+        "startMs": 1580,
+        "endMs": 1930
+      },
+      "reason": "Final audible decay from measured envelope; excludes retained trailing silence."
+    },
+    {
+      "src": "/assets/lessons/L435/audio/L435-G05-wrong-two.m4a",
+      "index": 6,
+      "previous": {
+        "charIndex": 6,
+        "startMs": 2340,
+        "endMs": 2540
+      },
+      "corrected": {
+        "charIndex": 6,
+        "startMs": 2340,
+        "endMs": 2670
+      },
+      "reason": "Final audible decay from measured envelope; excludes retained trailing silence."
+    }
+  ],
+  "transcripts": {
+    "L435-G02-prefix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 1.9500000476837158,
+      "text": "我們 互",
+      "words": [
+        {
+          "word": "我",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "們",
+          "start": 0.46000000834465027,
+          "end": 1.100000023841858
+        },
+        {
+          "word": "互",
+          "start": 1.5800000429153442,
+          "end": 1.5800000429153442
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 2
+      }
+    },
+    "L435-G02-suffix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.319999933242798,
+      "text": "合作把海報畫完",
+      "words": [
+        {
+          "word": "合",
+          "start": 0,
+          "end": 0.30000001192092896
+        },
+        {
+          "word": "作",
+          "start": 0.30000001192092896,
+          "end": 0.5799999833106995
+        },
+        {
+          "word": "把",
+          "start": 0.5799999833106995,
+          "end": 0.8799999952316284
+        },
+        {
+          "word": "海",
+          "start": 0.8799999952316284,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "報",
+          "start": 1.159999966621399,
+          "end": 1.340000033378601
+        },
+        {
+          "word": "畫",
+          "start": 1.340000033378601,
+          "end": 1.6399999856948853
+        },
+        {
+          "word": "完",
+          "start": 1.6399999856948853,
+          "end": 2
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "L435-G05-wrong-one.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.180000066757202,
+      "text": "車主不願意買車。",
+      "words": [
+        {
+          "word": "車",
+          "start": 0,
+          "end": 0.3799999952316284
+        },
+        {
+          "word": "主",
+          "start": 0.3799999952316284,
+          "end": 0.7200000286102295
+        },
+        {
+          "word": "不",
+          "start": 0.7200000286102295,
+          "end": 1
+        },
+        {
+          "word": "願",
+          "start": 1,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "意",
+          "start": 1.159999966621399,
+          "end": 1.4199999570846558
+        },
+        {
+          "word": "買",
+          "start": 1.4199999570846558,
+          "end": 1.5800000429153442
+        },
+        {
+          "word": "車。",
+          "start": 1.5800000429153442,
+          "end": 1.8600000143051147
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "L435-G05-wrong-two.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.9200000762939453,
+      "text": "车主很愿意卖车。",
+      "words": [
+        {
+          "word": "车",
+          "start": 0,
+          "end": 0.4399999976158142
+        },
+        {
+          "word": "主",
+          "start": 0.4399999976158142,
+          "end": 0.7400000095367432
+        },
+        {
+          "word": "很",
+          "start": 0.7400000095367432,
+          "end": 1.5199999809265137
+        },
+        {
+          "word": "愿",
+          "start": 1.5199999809265137,
+          "end": 1.7000000476837158
+        },
+        {
+          "word": "意",
+          "start": 1.7000000476837158,
+          "end": 2.0399999618530273
+        },
+        {
+          "word": "卖",
+          "start": 2.0399999618530273,
+          "end": 2.3399999141693115
+        },
+        {
+          "word": "车。",
+          "start": 2.3399999141693115,
+          "end": 2.5399999618530273
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "L435-S01.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.640000104904175,
+      "text": "小光願意幫助我學加法。",
+      "words": [
+        {
+          "word": "小",
+          "start": 0,
+          "end": 0.5400000214576721
+        },
+        {
+          "word": "光",
+          "start": 0.5400000214576721,
+          "end": 0.8199999928474426
+        },
+        {
+          "word": "願",
+          "start": 0.8199999928474426,
+          "end": 1.340000033378601
+        },
+        {
+          "word": "意",
+          "start": 1.340000033378601,
+          "end": 1.600000023841858
+        },
+        {
+          "word": "幫",
+          "start": 1.600000023841858,
+          "end": 1.8799999952316284
+        },
+        {
+          "word": "助",
+          "start": 1.8799999952316284,
+          "end": 2.119999885559082
+        },
+        {
+          "word": "我",
+          "start": 2.119999885559082,
+          "end": 2.5199999809265137
+        },
+        {
+          "word": "學",
+          "start": 2.5199999809265137,
+          "end": 2.799999952316284
+        },
+        {
+          "word": "加",
+          "start": 2.799999952316284,
+          "end": 3.140000104904175
+        },
+        {
+          "word": "法。",
+          "start": 3.140000104904175,
+          "end": 3.319999933242798
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L435-S02.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.380000114440918,
+      "text": "我們互助合作把海報畫完。",
+      "words": [
+        {
+          "word": "我們",
+          "start": 0,
+          "end": 0.7599999904632568
+        },
+        {
+          "word": "互",
+          "start": 0.7599999904632568,
+          "end": 1.2999999523162842
+        },
+        {
+          "word": "助",
+          "start": 1.2999999523162842,
+          "end": 1.5800000429153442
+        },
+        {
+          "word": "合",
+          "start": 1.5800000429153442,
+          "end": 1.8799999952316284
+        },
+        {
+          "word": "作",
+          "start": 1.8799999952316284,
+          "end": 2.119999885559082
+        },
+        {
+          "word": "把",
+          "start": 2.119999885559082,
+          "end": 2.700000047683716
+        },
+        {
+          "word": "海",
+          "start": 2.700000047683716,
+          "end": 3.0999999046325684
+        },
+        {
+          "word": "報",
+          "start": 3.0999999046325684,
+          "end": 3.3399999141693115
+        },
+        {
+          "word": "畫",
+          "start": 3.3399999141693115,
+          "end": 3.640000104904175
+        },
+        {
+          "word": "完。",
+          "start": 3.640000104904175,
+          "end": 4.079999923706055
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L435-S03.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.640000104904175,
+      "text": "车主不愿意卖车。",
+      "words": [
+        {
+          "word": "车",
+          "start": 0,
+          "end": 0.36000001430511475
+        },
+        {
+          "word": "主",
+          "start": 0.36000001430511475,
+          "end": 0.6600000262260437
+        },
+        {
+          "word": "不",
+          "start": 0.6600000262260437,
+          "end": 1.1399999856948853
+        },
+        {
+          "word": "愿",
+          "start": 1.1399999856948853,
+          "end": 1.340000033378601
+        },
+        {
+          "word": "意",
+          "start": 1.340000033378601,
+          "end": 1.7000000476837158
+        },
+        {
+          "word": "卖",
+          "start": 1.7000000476837158,
+          "end": 2
+        },
+        {
+          "word": "车。",
+          "start": 2,
+          "end": 2.2799999713897705
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "L435-S04.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.549999952316284,
+      "text": "我和小月互相寫信給對方",
+      "words": [
+        {
+          "word": "我",
+          "start": 0,
+          "end": 0.25999999046325684
+        },
+        {
+          "word": "和",
+          "start": 0.25999999046325684,
+          "end": 0.699999988079071
+        },
+        {
+          "word": "小",
+          "start": 0.699999988079071,
+          "end": 1.059999942779541
+        },
+        {
+          "word": "月",
+          "start": 1.059999942779541,
+          "end": 1.2400000095367432
+        },
+        {
+          "word": "互",
+          "start": 1.2400000095367432,
+          "end": 1.6799999475479126
+        },
+        {
+          "word": "相",
+          "start": 1.6799999475479126,
+          "end": 2.0399999618530273
+        },
+        {
+          "word": "寫",
+          "start": 2.0399999618530273,
+          "end": 2.259999990463257
+        },
+        {
+          "word": "信",
+          "start": 2.259999990463257,
+          "end": 2.4000000953674316
+        },
+        {
+          "word": "給",
+          "start": 2.4000000953674316,
+          "end": 2.740000009536743
+        },
+        {
+          "word": "對",
+          "start": 2.740000009536743,
+          "end": 3
+        },
+        {
+          "word": "方",
+          "start": 3,
+          "end": 3.2200000286102295
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L435-S05.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.5,
+      "text": "自助餐的菜由你自己選",
+      "words": [
+        {
+          "word": "自",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "助",
+          "start": 0.41999998688697815,
+          "end": 0.699999988079071
+        },
+        {
+          "word": "餐",
+          "start": 0.699999988079071,
+          "end": 0.9399999976158142
+        },
+        {
+          "word": "的",
+          "start": 0.9399999976158142,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "菜",
+          "start": 1.159999966621399,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "由",
+          "start": 1.440000057220459,
+          "end": 2.2200000286102295
+        },
+        {
+          "word": "你",
+          "start": 2.2200000286102295,
+          "end": 2.5
+        },
+        {
+          "word": "自己",
+          "start": 2.5,
+          "end": 2.9000000953674316
+        },
+        {
+          "word": "選",
+          "start": 2.9000000953674316,
+          "end": 3.180000066757202
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    }
+  }
+}
