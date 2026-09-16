@@ -31,10 +31,11 @@ const BLOCKER_PATTERNS = [
 function usage() {
   console.log(`Usage:
   npm run curriculum:package-intake -- --unit L357 --ref origin/codex/l357-complete-package
+  npm run curriculum:package-intake -- --unit R047 --ref origin/codex/r047-r048-complete-package
   npm run curriculum:package-intake -- --unit L357 --ref <commit-sha> --strict
 
 Options:
-  --unit    Unit id, such as L357. Required.
+  --unit    Unit id, such as L357 or R047. Required.
   --ref     Git ref to inspect. Defaults to HEAD.
   --strict  Treat warnings as failures.
 `);
@@ -84,6 +85,24 @@ function findRegistryRow(registry, unit) {
     .find((line) => line.trim().startsWith(`| ${unit} |`));
 }
 
+function unitConfig(unit) {
+  if (/^L\d{3}$/.test(unit)) {
+    return {
+      kind: "lesson",
+      requestPath: `curriculum-workflow/lesson-requests/${unit}.json`,
+      mediaPrefix: `public/assets/lessons/${unit}`,
+    };
+  }
+  if (/^R\d{3}$/.test(unit)) {
+    return {
+      kind: "review",
+      requestPath: `curriculum-workflow/review-requests/${unit}.json`,
+      mediaPrefix: `public/assets/reviews/${unit}`,
+    };
+  }
+  throw new Error("--unit must be a normal lesson id such as L357 or a review id such as R047.");
+}
+
 function hasPlaybackEvidence(text) {
   return /Browser QA|manualPlayback|manual playback|teacher manual|pre-merge asset QA|phone playback|played to ended|Stage 4.*record/i.test(
     text,
@@ -96,16 +115,13 @@ function main() {
     usage();
     return;
   }
-  if (!/^L\d{3}$/.test(args.unit)) {
-    throw new Error("--unit must be a normal lesson id such as L357.");
-  }
-
   const errors = [];
   const warnings = [];
   const unit = args.unit;
   const ref = args.ref;
+  const config = unitConfig(unit);
   const draftPath = `curriculum-workflow/drafts/${unit}-draft.json`;
-  const requestPath = `curriculum-workflow/lesson-requests/${unit}.json`;
+  const requestPath = config.requestPath;
   const packetPath = `curriculum-workflow/generated/${unit}-generation-packet.md`;
 
   const draft = readJson(ref, draftPath);
@@ -113,21 +129,43 @@ function main() {
   const packet = gitShow(ref, packetPath);
   const registry = gitShow(ref, "docs/PARALLEL_LESSON_REGISTRY.md");
   const row = findRegistryRow(registry, unit);
-  const mediaFiles = listFiles(ref, `public/assets/lessons/${unit}`);
+  const mediaFiles = listFiles(ref, config.mediaPrefix);
   const imageFiles = mediaFiles.filter((file) => file.endsWith(".webp"));
   const audioFiles = mediaFiles.filter((file) => file.endsWith(".m4a"));
   const newChars = Array.isArray(draft.newChars) ? draft.newChars : [];
 
   if (draft.id !== unit) errors.push(`${draftPath}: id is ${draft.id}, expected ${unit}.`);
   if (request.id !== unit) errors.push(`${requestPath}: id is ${request.id}, expected ${unit}.`);
-  if (!newChars.length) errors.push(`${draftPath}: newChars is missing or empty.`);
-  if (new Set(newChars).size !== newChars.length) errors.push(`${draftPath}: newChars contains duplicates.`);
-  if (Array.isArray(request.newChars) && request.newChars.join("|") !== newChars.join("|")) {
-    errors.push(`${requestPath}: newChars ${JSON.stringify(request.newChars)} does not match draft ${JSON.stringify(newChars)}.`);
+  if (request.packageStatus && request.packageStatus !== draft.packageStatus) {
+    errors.push(`${requestPath}: packageStatus ${JSON.stringify(request.packageStatus)} does not match draft ${JSON.stringify(draft.packageStatus)}.`);
   }
-  for (const char of newChars) {
-    if (!draft.zhuyin?.[char]) errors.push(`${draftPath}: zhuyin is missing for ${char}.`);
-    if (!draft.charAudio?.[char]) errors.push(`${draftPath}: charAudio is missing for ${char}.`);
+  if (config.kind === "lesson") {
+    if (!newChars.length) errors.push(`${draftPath}: newChars is missing or empty.`);
+    if (new Set(newChars).size !== newChars.length) errors.push(`${draftPath}: newChars contains duplicates.`);
+    if (Array.isArray(request.newChars) && request.newChars.join("|") !== newChars.join("|")) {
+      errors.push(`${requestPath}: newChars ${JSON.stringify(request.newChars)} does not match draft ${JSON.stringify(newChars)}.`);
+    }
+    for (const char of newChars) {
+      if (!draft.zhuyin?.[char]) errors.push(`${draftPath}: zhuyin is missing for ${char}.`);
+      if (!draft.charAudio?.[char]) errors.push(`${draftPath}: charAudio is missing for ${char}.`);
+    }
+  } else {
+    if (newChars.length) errors.push(`${draftPath}: review modules must not define newChars.`);
+    if (draft.zhuyin && Object.keys(draft.zhuyin).length) errors.push(`${draftPath}: review modules must not define zhuyin.`);
+    if (draft.charAudio && Object.keys(draft.charAudio).length) errors.push(`${draftPath}: review modules must not define charAudio.`);
+    if (request.kind !== "review") errors.push(`${requestPath}: kind is ${JSON.stringify(request.kind)}, expected "review".`);
+    if (!Array.isArray(draft.requiredCoverageChars) || !draft.requiredCoverageChars.length) {
+      errors.push(`${draftPath}: requiredCoverageChars is missing or empty.`);
+    }
+    if (!Array.isArray(request.requiredCoverageChars) || request.requiredCoverageChars.join("|") !== draft.requiredCoverageChars?.join("|")) {
+      errors.push(`${requestPath}: requiredCoverageChars does not match draft.`);
+    }
+    if (!Array.isArray(request.allowedChars) || !request.allowedChars.length) {
+      errors.push(`${requestPath}: allowedChars is missing or empty.`);
+    }
+    if (!Array.isArray(request.approvedSentences) || request.approvedSentences.length !== (draft.sentences || []).length) {
+      errors.push(`${requestPath}: approvedSentences length does not match draft sentences.`);
+    }
   }
   if (!COMPLETE_STATUSES.has(draft.packageStatus)) {
     errors.push(`${draftPath}: packageStatus is ${JSON.stringify(draft.packageStatus)}, not asset-complete.`);
@@ -147,6 +185,7 @@ function main() {
   for (const [label, text] of [
     [packetPath, packet],
     [draftPath, JSON.stringify(draft, null, 2)],
+    [requestPath, JSON.stringify(request, null, 2)],
   ]) {
     for (const pattern of BLOCKER_PATTERNS) {
       if (pattern.test(text)) errors.push(`${label} contains blocker text matching ${pattern}.`);

@@ -134,7 +134,10 @@ Before reporting `asset-complete-package` or `dependency-blocked-asset-complete`
 
 ```bash
 npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complete-package
+npm run curriculum:package-intake -- --unit R### --ref origin/codex/r###-r###-complete-package
 ```
+
+Use the `L###` command for normal lessons. For a two-module review pair, run the `R###` command once for each review module against the same pushed pair branch.
 
 If the command fails, do not report `asset-complete-package` or `dependency-blocked-asset-complete`. Fix the package or report it explicitly as `partial-package` / `needs-rework` with the missing items. A branch name containing `complete-package` is not proof of completion; the draft `packageStatus`, registry row, generation packet, and final handoff must all agree.
 - Top-level `dependsOnLessons` is present whenever the lesson uses provisional characters from earlier unmerged lessons.
@@ -596,6 +599,7 @@ Starting after L045, every 15-lesson milestone gets two review modules. These ar
 - Do not add empty review placeholders to `src/curriculum/sample-lessons.json`; placeholders belong in the website UI only until the reviewed sentences and production assets are ready.
 - Do not create numbered `L###` placeholders for review modules. After L045, L046 is reserved for the next new-character lesson; the playable path is `L045` -> `R001` -> `R002` -> `L046`.
 - Review modules must satisfy the same production asset hard limits as normal lessons: WebP images, normalized `.m4a` sentence/option audio, AI-generated `charTimings`, manual playback QA, and review folder size `<= 2.5 MB`.
+- Review module packages must pass `npm run curriculum:package-intake -- --unit R### --ref <package-branch-or-sha>`. For a two-module review pair, run the command once for each `R###` id against the same pair branch. The tool uses `curriculum-workflow/review-requests/R###.json` and `public/assets/reviews/R###/`; do not use lesson request paths or lesson asset folders for review modules.
 
 ## Image Rules
 

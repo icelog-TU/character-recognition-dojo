@@ -16,7 +16,7 @@ Do not report `asset-complete-package` or `dependency-blocked-asset-complete` un
 - No package file still says `partial-package`, `needs-rework`, `Do not integrate`, `NOT COMPLETED`, `FAIL`, `unresolved`, or similar incomplete language.
 - Every referenced image, sentence audio, `charAudio`, `G02` teach audio, `G05` wrong-choice audio, and final timing/alignment file exists.
 - Every sentence has final `audio.src`, `durationMs`, and non-empty `charTimings`.
-- The pushed branch passes `npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complete-package` or the correct review-module equivalent.
+- The pushed branch passes `npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complete-package` for a normal lesson, or `npm run curriculum:package-intake -- --unit R### --ref origin/codex/r###-r###-complete-package` for each review module in a review pair.
 
 If any item fails, report `partial-package` / `needs-rework` with exact missing items. Do not rely on the branch name, chat summary, or intent to finish later. Package Rescue exists for already-pushed incomplete branches, but Production's goal is still to avoid needing Rescue.
 
@@ -189,7 +189,14 @@ Before reporting done, run a fast lesson-local audit. This should be minutes, no
 - `choose-pronunciation` wrong-option audio was generated from the exact full wrong-option text after final text changes.
 - All referenced images and audio files exist in the owned lesson/review asset folder.
 - Touched asset folder size was checked.
-- The pushed branch passes `npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complete-package`. If this gate fails, report `partial-package` or `needs-rework`; do not report `asset-complete-package` or `dependency-blocked-asset-complete`.
+- The pushed branch passes package intake for the unit type:
+
+```bash
+npm run curriculum:package-intake -- --unit L### --ref origin/codex/l###-complete-package
+npm run curriculum:package-intake -- --unit R### --ref origin/codex/r###-r###-complete-package
+```
+
+For a two-module review pair, run the `R###` command once per review module against the shared pair branch. If this gate fails, report `partial-package` or `needs-rework`; do not report `asset-complete-package` or `dependency-blocked-asset-complete`.
 
 Run these commands when feasible:
 
