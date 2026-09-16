@@ -17,7 +17,7 @@
 - 全部音檔可解碼；G05 三音檔 mean volume 差 2.8dB；主字音長 952ms、peak -2.3dB。
 - 9 段 final M4A 轉錄逐字符合 approved spokenText，僅使用繁簡字正規化。G02 suffix 提供片段語境提示，未把缺字直接補入轉錄。
 - AI 聽音檢查與波形校正見 QA / alignment JSON；不等同人工驗收。
-- pushed-branch package-intake --strict：待最終 push 後補記。
+- pushed-branch package-intake --strict：PASS，驗證 ref origin/codex/l430-complete-package，資產與驗收紀錄 commit 1e1e6d46ecbefdcf5c62175ea0f6af3d1508577d。首輪只有 QA 段落標籤未被 intake regex 辨識，補明確 Browser QA 標題後零警告；未把人工驗收改稱 PASS。
 - npm run verify 留待 Release 整合全部依賴後執行。
 
 ## 逐圖 style-lock / cast
@@ -52,3 +52,6 @@ AI gpt-audio 複查十段；主ㄓㄨˇ、己ㄐㄧˇ、角ㄐㄧㄠˇ與 suffix
 Production 不 merge main，不改 production JSON、planner、ledger 或部署；ignored 音訊中間檔與快取保留。
 分支 package 預覽（非正式 main 審核頁）：https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L430&ref=codex%2Fl430-complete-package
 正式 main 審核入口只在 Release merge/deploy 後可用；此報告不宣稱現在已上線。
+
+固定 SHA 的 pre-merge 圖片預覽（非正式 main 審核佇列）：https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L430&ref=1e1e6d46ecbefdcf5c62175ea0f6af3d1508577d
+音訊預覽：https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L430&ref=1e1e6d46ecbefdcf5c62175ea0f6af3d1508577d
