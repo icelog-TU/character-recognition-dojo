@@ -1,0 +1,197 @@
+[
+  {
+    "id": "L404-S02",
+    "index": 2,
+    "before": {
+      "charIndex": 2,
+      "startMs": 1200,
+      "endMs": 1260
+    },
+    "after": {
+      "charIndex": 2,
+      "startMs": 972,
+      "endMs": 1260
+    },
+    "reason": "Whisper 60 ms 找 starts late after a phrase pause. Local waveform review: silence ends at 972 ms; use this onset and retain original 1260 ms end. Not a new Whisper timestamp."
+  },
+  {
+    "id": "L404-S03",
+    "index": 4,
+    "before": {
+      "charIndex": 4,
+      "startMs": 2100,
+      "endMs": 2160
+    },
+    "after": {
+      "charIndex": 4,
+      "startMs": 1776,
+      "endMs": 2160
+    },
+    "reason": "Whisper 60 ms 游 starts late after the 1456–1776 ms phrase pause. Use measured resumed speech onset, retain original 2160 ms end."
+  },
+  {
+    "id": "L404-S04",
+    "index": 3,
+    "before": {
+      "charIndex": 3,
+      "startMs": 1780,
+      "endMs": 1860
+    },
+    "after": {
+      "charIndex": 3,
+      "startMs": 1546,
+      "endMs": 1860
+    },
+    "reason": "我 follows the 1105–1546 ms pause; local onset review retains the original 1860 ms end."
+  },
+  {
+    "id": "L404-G02-prefix",
+    "index": 2,
+    "before": {
+      "charIndex": 2,
+      "startMs": 700,
+      "endMs": 1420
+    },
+    "after": {
+      "charIndex": 2,
+      "startMs": 1091,
+      "endMs": 1420
+    },
+    "reason": "Exclude 739–1091 ms phrase silence before 找, preserving its original 1420 ms end."
+  },
+  {
+    "id": "L404-S01",
+    "index": 11,
+    "before": {
+      "charIndex": 11,
+      "startMs": 3820,
+      "endMs": 4040
+    },
+    "after": {
+      "charIndex": 11,
+      "startMs": 3820,
+      "endMs": 4088
+    },
+    "reason": "Local final-syllable end review against -40 dB final speech decay; positive duration measured by FFprobe."
+  },
+  {
+    "id": "L404-S02",
+    "index": 10,
+    "before": {
+      "charIndex": 10,
+      "startMs": 3520,
+      "endMs": 3700
+    },
+    "after": {
+      "charIndex": 10,
+      "startMs": 3520,
+      "endMs": 3752
+    },
+    "reason": "Local final-syllable end review against -40 dB final speech decay; positive duration measured by FFprobe."
+  },
+  {
+    "id": "L404-S03",
+    "index": 8,
+    "before": {
+      "charIndex": 8,
+      "startMs": 2860,
+      "endMs": 3120
+    },
+    "after": {
+      "charIndex": 8,
+      "startMs": 2860,
+      "endMs": 3126
+    },
+    "reason": "Local final-syllable end review against -40 dB final speech decay; positive duration measured by FFprobe."
+  },
+  {
+    "id": "L404-S04",
+    "index": 10,
+    "before": {
+      "charIndex": 10,
+      "startMs": 3700,
+      "endMs": 3840
+    },
+    "after": {
+      "charIndex": 10,
+      "startMs": 3700,
+      "endMs": 3895
+    },
+    "reason": "Local final-syllable end review against -40 dB final speech decay; positive duration measured by FFprobe."
+  },
+  {
+    "id": "L404-S05",
+    "index": 8,
+    "before": {
+      "charIndex": 8,
+      "startMs": 2480,
+      "endMs": 2720
+    },
+    "after": {
+      "charIndex": 8,
+      "startMs": 2480,
+      "endMs": 2795
+    },
+    "reason": "Local final-syllable end review against -40 dB final speech decay; positive duration measured by FFprobe."
+  },
+  {
+    "id": "L404-G02-prefix",
+    "index": 8,
+    "before": {
+      "charIndex": 8,
+      "startMs": 3000,
+      "endMs": 3220
+    },
+    "after": {
+      "charIndex": 8,
+      "startMs": 3000,
+      "endMs": 3223
+    },
+    "reason": "Local final-syllable end review against -40 dB final speech decay; positive duration measured by FFprobe."
+  },
+  {
+    "id": "L404-G02-suffix",
+    "index": 0,
+    "before": {
+      "charIndex": 0,
+      "startMs": 0,
+      "endMs": 400
+    },
+    "after": {
+      "charIndex": 0,
+      "startMs": 0,
+      "endMs": 480
+    },
+    "reason": "Local final-syllable end review against -40 dB final speech decay; positive duration measured by FFprobe."
+  },
+  {
+    "id": "L404-G05-wrong-one",
+    "index": 8,
+    "before": {
+      "charIndex": 8,
+      "startMs": 3060,
+      "endMs": 3240
+    },
+    "after": {
+      "charIndex": 8,
+      "startMs": 3060,
+      "endMs": 3309
+    },
+    "reason": "Local final-syllable end review against -40 dB final speech decay; positive duration measured by FFprobe."
+  },
+  {
+    "id": "L404-G05-wrong-two",
+    "index": 8,
+    "before": {
+      "charIndex": 8,
+      "startMs": 2760,
+      "endMs": 3020
+    },
+    "after": {
+      "charIndex": 8,
+      "startMs": 2760,
+      "endMs": 3097
+    },
+    "reason": "Local final-syllable end review against -40 dB final speech decay; positive duration measured by FFprobe."
+  }
+]

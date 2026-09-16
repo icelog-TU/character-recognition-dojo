@@ -1,0 +1,2880 @@
+# L404 弱 Package Rescue
+
+Package status: dependency-blocked-asset-complete
+
+Package Rescue from 6a7a20d620219c7f9de9b53cb85d6e8f20125ea4. Original approved sentences, images compositions, voice takes and game structure retained. G02 suffix 點 recognized independently and final padded-analysis Whisper alignment exact. All five sentence and G02/G05 audio metadata complete. Local waveform timing review recorded; only standalone 弱 trailing silence trimmed, speech packets preserved. S01-S03 WebP recompressed below 250 KB without resizing. Browser QA and limitations: L404-rescue-qa.md. This is technical playback evidence, not teacher manual auditory approval. Latest checked main 09ad28d766640bbbb1b2c1f8d3cb2ccb43efc306 ends at L398; L399-L403 remain dependencies. R049/R050 follow L405 and precede L406. Release owns integration.
+
+## Request
+
+```json
+{
+  "id": "L404",
+  "order": 404,
+  "title": "弱",
+  "newChars": [
+    "弱"
+  ],
+  "zhuyin": {
+    "弱": "ㄖㄨㄛˋ"
+  },
+  "charAudio": {
+    "弱": "/assets/lessons/L404/audio/char-u5f31.m4a"
+  },
+  "dependsOnLessons": [
+    "L399",
+    "L400",
+    "L401",
+    "L402",
+    "L403"
+  ],
+  "provisionalLearnedChars": [
+    "或",
+    "者",
+    "勇",
+    "強",
+    "算"
+  ],
+  "allowedChars": [
+    "一",
+    "二",
+    "三",
+    "人",
+    "個",
+    "大",
+    "的",
+    "小",
+    "手",
+    "我",
+    "有",
+    "山",
+    "上",
+    "下",
+    "你",
+    "水",
+    "在",
+    "高",
+    "很",
+    "家",
+    "和",
+    "隻",
+    "鳥",
+    "孩",
+    "指",
+    "看",
+    "女",
+    "飛",
+    "男",
+    "門",
+    "前",
+    "後",
+    "也",
+    "是",
+    "不",
+    "到",
+    "走",
+    "他",
+    "沒",
+    "裡",
+    "兩",
+    "狗",
+    "都",
+    "爸",
+    "媽",
+    "愛",
+    "書",
+    "可",
+    "會",
+    "這",
+    "吃",
+    "做",
+    "好",
+    "樣",
+    "要",
+    "更",
+    "邊",
+    "多",
+    "少",
+    "比",
+    "來",
+    "起",
+    "去",
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌",
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見",
+    "說",
+    "師",
+    "話",
+    "課",
+    "像",
+    "想",
+    "真",
+    "力",
+    "能",
+    "火",
+    "發",
+    "電",
+    "生",
+    "明",
+    "光",
+    "亮",
+    "陽",
+    "月",
+    "影",
+    "長",
+    "星",
+    "行",
+    "道",
+    "流",
+    "河",
+    "從",
+    "進",
+    "早",
+    "晚",
+    "海",
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精",
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬",
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆",
+    "照",
+    "顧",
+    "忘",
+    "每",
+    "次",
+    "記",
+    "完",
+    "收",
+    "彩",
+    "色",
+    "粉",
+    "哪",
+    "些",
+    "最",
+    "西",
+    "東",
+    "方",
+    "圖",
+    "向",
+    "線",
+    "直",
+    "轉",
+    "右",
+    "角",
+    "落",
+    "因",
+    "原",
+    "別",
+    "特",
+    "處",
+    "理",
+    "整",
+    "齊",
+    "全",
+    "今",
+    "們",
+    "年",
+    "跟",
+    "常",
+    "請",
+    "嗎",
+    "客",
+    "讓",
+    "廳",
+    "餐",
+    "位",
+    "正",
+    "排",
+    "雞",
+    "公",
+    "園",
+    "物",
+    "怪",
+    "奇",
+    "驚",
+    "喜",
+    "歡",
+    "笑",
+    "但",
+    "吧",
+    "謝",
+    "感",
+    "情",
+    "朋",
+    "友",
+    "親",
+    "交",
+    "通",
+    "往",
+    "經",
+    "已",
+    "近",
+    "接",
+    "送",
+    "連",
+    "傳",
+    "相",
+    "信",
+    "寫",
+    "字",
+    "名",
+    "第",
+    "念",
+    "號",
+    "數",
+    "或",
+    "者",
+    "勇",
+    "強",
+    "算",
+    "弱"
+  ],
+  "sourceMainCommit": "a240e584c5bda3835199398019d03bca7b8236e4",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "targetSentenceCount": 5,
+  "teacherNotes": "Package Rescue from 6a7a20d620219c7f9de9b53cb85d6e8f20125ea4. Original approved sentences, images compositions, voice takes and game structure retained. G02 suffix 點 recognized independently and final padded-analysis Whisper alignment exact. All five sentence and G02/G05 audio metadata complete. Local waveform timing review recorded; only standalone 弱 trailing silence trimmed, speech packets preserved. S01-S03 WebP recompressed below 250 KB without resizing. Browser QA and limitations: L404-rescue-qa.md. This is technical playback evidence, not teacher manual auditory approval. Latest checked main 09ad28d766640bbbb1b2c1f8d3cb2ccb43efc306 ends at L398; L399-L403 remain dependencies. R049/R050 follow L405 and precede L406. Release owns integration.",
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見",
+      "說",
+      "師",
+      "話",
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電",
+      "生",
+      "明",
+      "光",
+      "亮",
+      "陽",
+      "月",
+      "影",
+      "長",
+      "星",
+      "行",
+      "道",
+      "流",
+      "河",
+      "從",
+      "進",
+      "早",
+      "晚",
+      "海",
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精",
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口",
+      "傷",
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬",
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種",
+      "澆",
+      "照",
+      "顧",
+      "忘",
+      "每",
+      "次",
+      "記",
+      "完",
+      "收",
+      "彩",
+      "色",
+      "粉",
+      "哪",
+      "些",
+      "最",
+      "西",
+      "東",
+      "方",
+      "圖",
+      "向",
+      "線",
+      "直",
+      "轉",
+      "右",
+      "角",
+      "落",
+      "因",
+      "原",
+      "別",
+      "特",
+      "處",
+      "理",
+      "整",
+      "齊",
+      "全",
+      "今",
+      "們",
+      "年",
+      "跟",
+      "常",
+      "請",
+      "嗎",
+      "客",
+      "讓",
+      "廳",
+      "餐",
+      "位",
+      "正",
+      "排",
+      "雞",
+      "公",
+      "園",
+      "物",
+      "怪",
+      "奇",
+      "驚",
+      "喜",
+      "歡",
+      "笑",
+      "但",
+      "吧",
+      "謝",
+      "感",
+      "情",
+      "朋",
+      "友",
+      "親",
+      "交",
+      "通",
+      "往",
+      "經",
+      "已",
+      "近",
+      "接",
+      "送",
+      "連",
+      "傳",
+      "相",
+      "信",
+      "寫",
+      "字",
+      "名",
+      "第",
+      "念",
+      "號",
+      "數",
+      "或",
+      "者",
+      "勇",
+      "強",
+      "算",
+      "弱"
+    ],
+    "provisionalLearnedChars": [
+      "或",
+      "者",
+      "勇",
+      "強",
+      "算"
+    ],
+    "targetCharMinimumCount": {
+      "弱": 3
+    },
+    "recentTargetMinimumCounts": {
+      "算": 2,
+      "強": 2,
+      "勇": 2,
+      "者": 1,
+      "或": 1
+    }
+  },
+  "approvedSentences": [
+    {
+      "id": "L404-S01",
+      "text": "就算勇者很弱小，也沒有跑走。",
+      "spokenText": "就算勇者很弱小也沒有跑走",
+      "displayLines": [
+        "就算勇者",
+        "很弱小，",
+        "也沒有跑走。"
+      ],
+      "focusChar": "弱",
+      "imageNotes": "童話森林裡，一位身形瘦小的勇者面對體型巨大、力量強大的怪物。勇者握著盾牌站穩，雖有些緊張，仍面向怪物，沒有轉身離開。用兩者體型差距交代弱小，不畫傷病。沒有血腥或正在攻擊的動作，使用故事角色，不套用固定主角群。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 童話森林裡，一位身形瘦小的勇者面對體型巨大、力量強大的怪物。勇者握著盾牌站穩，雖有些緊張，仍面向怪物，沒有轉身離開。用兩者體型差距交代弱小，不畫傷病。沒有血腥或正在攻擊的動作，使用故事角色，不套用固定主角群。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S01.m4a",
+        "durationMs": 4320,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1260,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1940,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2100,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2840,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3040,
+            "endMs": 3250
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3250,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3460,
+            "endMs": 3820
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3820,
+            "endMs": 4088
+          }
+        ]
+      }
+    },
+    {
+      "id": "L404-S02",
+      "text": "勇者找出強大怪物的弱點。",
+      "spokenText": "勇者找出強大怪物的弱點",
+      "displayLines": [
+        "勇者找出",
+        "強大怪物的",
+        "弱點。"
+      ],
+      "focusChar": "弱",
+      "imageNotes": "延續 S01 的勇者與怪物造型。老師指定弱點是可在戰鬥中利用的身體部位，本圖選腳踝，不採用怕水。巨大怪物身體厚實，但腳踝相對細小；勇者以盾牌下緣擊中怪物腳踝，怪物因此失去平衡、向後坐倒，勇者站在側邊。畫面清楚連結腳踝受擊與怪物倒地，採童話遊戲式表現，不畫血、傷口、骨折或痛苦特寫，也不攻擊眼睛。只呈現同一動作瞬間，不用分身或連續畫格。不得沿用小溪、怕水、不敢過溪的舊配圖。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 延續 S01 的勇者與怪物造型。老師指定弱點是可在戰鬥中利用的身體部位，本圖選腳踝，不採用怕水。巨大怪物身體厚實，但腳踝相對細小；勇者以盾牌下緣擊中怪物腳踝，怪物因此失去平衡、向後坐倒，勇者站在側邊。畫面清楚連結腳踝受擊與怪物倒地，採童話遊戲式表現，不畫血、傷口、骨折或痛苦特寫，也不攻擊眼睛。只呈現同一動作瞬間，不用分身或連續畫格。不得沿用小溪、怕水、不敢過溪的舊配圖。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S02.m4a",
+        "durationMs": 3959,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 972,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1260,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1680,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2100,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2360,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2620,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2760,
+            "endMs": 3320
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3320,
+            "endMs": 3520
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3520,
+            "endMs": 3752
+          }
+        ]
+      }
+    },
+    {
+      "id": "L404-S03",
+      "text": "水流太強，游泳就算了。",
+      "spokenText": "水流太強游泳就算了",
+      "displayLines": [
+        "水流太強，",
+        "游泳就算了。"
+      ],
+      "focusChar": "算",
+      "imageNotes": "河邊安全步道上，主角爸爸與小女孩站在離水岸有明顯距離的位置，看著河裡快速流動、翻起白色水花的河水。女孩手上拿著泳具，交代原本想游泳；爸爸伸手示意不要下水，另一手牽著女孩，準備一起離開。兩人都沒有下水，不站濕滑石頭、不靠近陡岸，也不畫成已經有人遇險。必須是河水，不改成海邊或泳池。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 河邊安全步道上，主角爸爸與小女孩站在離水岸有明顯距離的位置，看著河裡快速流動、翻起白色水花的河水。女孩手上拿著泳具，交代原本想游泳；爸爸伸手示意不要下水，另一手牽著女孩，準備一起離開。兩人都沒有下水，不站濕滑石頭、不靠近陡岸，也不畫成已經有人遇險。必須是河水，不改成海邊或泳池。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S03.m4a",
+        "durationMs": 3332,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1120,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1776,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2160,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2340,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2700,
+            "endMs": 2860
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2860,
+            "endMs": 3126
+          }
+        ]
+      }
+    },
+    {
+      "id": "L404-S04",
+      "text": "光太弱，我看不到書上的字。",
+      "spokenText": "光太弱我看不到書上的字",
+      "displayLines": [
+        "光太弱，",
+        "我看不到",
+        "書上的字。"
+      ],
+      "focusChar": "弱",
+      "imageNotes": "傍晚家中書桌旁，主角小女孩打開書，皺眉查看書頁。桌燈只發出微弱的光，書頁照明不足；主角媽媽在旁注意到她看不清楚。保持人物與環境在畫面中仍清楚可辨，不把整張图畫得漆黑。書上可有不需可讀的印刷筆跡，不生成具體漢字。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 傍晚家中書桌旁，主角小女孩打開書，皺眉查看書頁。桌燈只發出微弱的光，書頁照明不足；主角媽媽在旁注意到她看不清楚。保持人物與環境在畫面中仍清楚可辨，不把整張图畫得漆黑。書上可有不需可讀的印刷筆跡，不生成具體漢字。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S04.m4a",
+        "durationMs": 4114,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 800
+          },
+          {
+            "charIndex": 2,
+            "startMs": 800,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1546,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1860,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2200,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2400,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2600,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3220,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3460,
+            "endMs": 3700
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3700,
+            "endMs": 3895
+          }
+        ]
+      }
+    },
+    {
+      "id": "L404-S05",
+      "text": "可以用筆或手指畫畫。",
+      "spokenText": "可以用筆或手指畫畫",
+      "displayLines": [
+        "可以用筆",
+        "或手指畫畫。"
+      ],
+      "focusChar": "或",
+      "imageNotes": "教室美術桌旁，老師向主角小女孩展示兩種畫法：一側是畫筆與筆畫範例，另一側是兒童用顏料盤與指印組成的小花。女孩面前有空白紙，正在考慮用哪種方式。兩種工具和範例清楚分開，不要求女孩同時使用，不出現文字標籤。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 教室美術桌旁，老師向主角小女孩展示兩種畫法：一側是畫筆與筆畫範例，另一側是兒童用顏料盤與指印組成的小花。女孩面前有空白紙，正在考慮用哪種方式。兩種工具和範例清楚分開，不要求女孩同時使用，不出現文字標籤。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S05.m4a",
+        "durationMs": 3003,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 220
+          },
+          {
+            "charIndex": 1,
+            "startMs": 220,
+            "endMs": 440
+          },
+          {
+            "charIndex": 2,
+            "startMs": 440,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1200,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1580,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1920,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2200,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2480,
+            "endMs": 2795
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L404-G01",
+      "type": "find-character",
+      "sentenceId": "L404-S01",
+      "targetChar": "弱",
+      "targetCharIndex": 5
+    },
+    {
+      "id": "L404-G02",
+      "type": "teach-character",
+      "sentenceId": "L404-S02",
+      "targetChar": "弱",
+      "targetCharIndex": 9,
+      "teachAudio": {
+        "prefixText": "勇者找出強大怪物的",
+        "suffixText": "點",
+        "prefixSrc": "/assets/lessons/L404/audio/L404-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L404/audio/L404-G02-suffix.m4a",
+        "prefixAudio": {
+          "spokenText": "勇者找出強大怪物的",
+          "src": "/assets/lessons/L404/audio/L404-G02-prefix.m4a",
+          "durationMs": 3424,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 440
+            },
+            {
+              "charIndex": 1,
+              "startMs": 440,
+              "endMs": 700
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1091,
+              "endMs": 1420
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1420,
+              "endMs": 1860
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1860,
+              "endMs": 2240
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2240,
+              "endMs": 2560
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2560,
+              "endMs": 2840
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2840,
+              "endMs": 3000
+            },
+            {
+              "charIndex": 8,
+              "startMs": 3000,
+              "endMs": 3223
+            }
+          ]
+        },
+        "suffixAudio": {
+          "spokenText": "點",
+          "src": "/assets/lessons/L404/audio/L404-G02-suffix.m4a",
+          "durationMs": 686,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 480
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L404-G03",
+      "type": "missing-character",
+      "sentenceId": "L404-S04",
+      "targetChar": "弱",
+      "targetCharIndex": 2,
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "弱",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "強",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "亮",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L404-G04",
+      "type": "partial-order",
+      "sentenceId": "L404-S03",
+      "targetChar": "算",
+      "targetCharIndex": 7,
+      "missingIndexes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "options": [
+        {
+          "id": "card-suan",
+          "text": "算",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-you",
+          "text": "游",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-jiu",
+          "text": "就",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-yong",
+          "text": "泳",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L404-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L404-S05",
+      "targetChar": "或",
+      "targetCharIndex": 4,
+      "options": [
+        {
+          "id": "correct",
+          "text": "可以用筆或手指畫畫。",
+          "spokenText": "可以用筆或手指畫畫",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L404/audio/L404-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L404/audio/L404-S05.m4a",
+            "durationMs": 3003,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 440
+              },
+              {
+                "charIndex": 2,
+                "startMs": 440,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1920,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2480,
+                "endMs": 2795
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "可以用筆或手指寫字。",
+          "spokenText": "可以用筆或手指寫字",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L404/audio/L404-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "可以用筆或手指寫字",
+            "src": "/assets/lessons/L404/audio/L404-G05-wrong-one.m4a",
+            "durationMs": 3533,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 210
+              },
+              {
+                "charIndex": 1,
+                "startMs": 210,
+                "endMs": 420
+              },
+              {
+                "charIndex": 2,
+                "startMs": 420,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1140,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1720,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2080,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3060,
+                "endMs": 3309
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "可以用筆和手指畫畫。",
+          "spokenText": "可以用筆和手指畫畫",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L404/audio/L404-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "可以用筆和手指畫畫",
+            "src": "/assets/lessons/L404/audio/L404-G05-wrong-two.m4a",
+            "durationMs": 3313,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2120,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 3097
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Draft
+
+```json
+{
+  "id": "L404",
+  "order": 404,
+  "title": "弱",
+  "newChars": [
+    "弱"
+  ],
+  "zhuyin": {
+    "弱": "ㄖㄨㄛˋ"
+  },
+  "charAudio": {
+    "弱": "/assets/lessons/L404/audio/char-u5f31.m4a"
+  },
+  "dependsOnLessons": [
+    "L399",
+    "L400",
+    "L401",
+    "L402",
+    "L403"
+  ],
+  "provisionalLearnedChars": [
+    "或",
+    "者",
+    "勇",
+    "強",
+    "算"
+  ],
+  "allowedChars": [
+    "一",
+    "二",
+    "三",
+    "人",
+    "個",
+    "大",
+    "的",
+    "小",
+    "手",
+    "我",
+    "有",
+    "山",
+    "上",
+    "下",
+    "你",
+    "水",
+    "在",
+    "高",
+    "很",
+    "家",
+    "和",
+    "隻",
+    "鳥",
+    "孩",
+    "指",
+    "看",
+    "女",
+    "飛",
+    "男",
+    "門",
+    "前",
+    "後",
+    "也",
+    "是",
+    "不",
+    "到",
+    "走",
+    "他",
+    "沒",
+    "裡",
+    "兩",
+    "狗",
+    "都",
+    "爸",
+    "媽",
+    "愛",
+    "書",
+    "可",
+    "會",
+    "這",
+    "吃",
+    "做",
+    "好",
+    "樣",
+    "要",
+    "更",
+    "邊",
+    "多",
+    "少",
+    "比",
+    "來",
+    "起",
+    "去",
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌",
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見",
+    "說",
+    "師",
+    "話",
+    "課",
+    "像",
+    "想",
+    "真",
+    "力",
+    "能",
+    "火",
+    "發",
+    "電",
+    "生",
+    "明",
+    "光",
+    "亮",
+    "陽",
+    "月",
+    "影",
+    "長",
+    "星",
+    "行",
+    "道",
+    "流",
+    "河",
+    "從",
+    "進",
+    "早",
+    "晚",
+    "海",
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精",
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬",
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆",
+    "照",
+    "顧",
+    "忘",
+    "每",
+    "次",
+    "記",
+    "完",
+    "收",
+    "彩",
+    "色",
+    "粉",
+    "哪",
+    "些",
+    "最",
+    "西",
+    "東",
+    "方",
+    "圖",
+    "向",
+    "線",
+    "直",
+    "轉",
+    "右",
+    "角",
+    "落",
+    "因",
+    "原",
+    "別",
+    "特",
+    "處",
+    "理",
+    "整",
+    "齊",
+    "全",
+    "今",
+    "們",
+    "年",
+    "跟",
+    "常",
+    "請",
+    "嗎",
+    "客",
+    "讓",
+    "廳",
+    "餐",
+    "位",
+    "正",
+    "排",
+    "雞",
+    "公",
+    "園",
+    "物",
+    "怪",
+    "奇",
+    "驚",
+    "喜",
+    "歡",
+    "笑",
+    "但",
+    "吧",
+    "謝",
+    "感",
+    "情",
+    "朋",
+    "友",
+    "親",
+    "交",
+    "通",
+    "往",
+    "經",
+    "已",
+    "近",
+    "接",
+    "送",
+    "連",
+    "傳",
+    "相",
+    "信",
+    "寫",
+    "字",
+    "名",
+    "第",
+    "念",
+    "號",
+    "數",
+    "或",
+    "者",
+    "勇",
+    "強",
+    "算",
+    "弱"
+  ],
+  "sourceMainCommit": "a240e584c5bda3835199398019d03bca7b8236e4",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "requiredRounds": 5,
+  "notes": [
+    "Package Rescue from 6a7a20d620219c7f9de9b53cb85d6e8f20125ea4. Original approved sentences, images compositions, voice takes and game structure retained. G02 suffix 點 recognized independently and final padded-analysis Whisper alignment exact. All five sentence and G02/G05 audio metadata complete. Local waveform timing review recorded; only standalone 弱 trailing silence trimmed, speech packets preserved. S01-S03 WebP recompressed below 250 KB without resizing. Browser QA and limitations: L404-rescue-qa.md. This is technical playback evidence, not teacher manual auditory approval. Latest checked main 09ad28d766640bbbb1b2c1f8d3cb2ccb43efc306 ends at L398; L399-L403 remain dependencies. R049/R050 follow L405 and precede L406. Release owns integration."
+  ],
+  "sentences": [
+    {
+      "id": "L404-S01",
+      "text": "就算勇者很弱小，也沒有跑走。",
+      "spokenText": "就算勇者很弱小也沒有跑走",
+      "displayLines": [
+        "就算勇者",
+        "很弱小，",
+        "也沒有跑走。"
+      ],
+      "focusChar": "弱",
+      "imageNotes": "童話森林裡，一位身形瘦小的勇者面對體型巨大、力量強大的怪物。勇者握著盾牌站穩，雖有些緊張，仍面向怪物，沒有轉身離開。用兩者體型差距交代弱小，不畫傷病。沒有血腥或正在攻擊的動作，使用故事角色，不套用固定主角群。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 童話森林裡，一位身形瘦小的勇者面對體型巨大、力量強大的怪物。勇者握著盾牌站穩，雖有些緊張，仍面向怪物，沒有轉身離開。用兩者體型差距交代弱小，不畫傷病。沒有血腥或正在攻擊的動作，使用故事角色，不套用固定主角群。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S01.m4a",
+        "durationMs": 4320,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1260,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1940,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2100,
+            "endMs": 2380
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2840,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3040,
+            "endMs": 3250
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3250,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3460,
+            "endMs": 3820
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3820,
+            "endMs": 4088
+          }
+        ]
+      }
+    },
+    {
+      "id": "L404-S02",
+      "text": "勇者找出強大怪物的弱點。",
+      "spokenText": "勇者找出強大怪物的弱點",
+      "displayLines": [
+        "勇者找出",
+        "強大怪物的",
+        "弱點。"
+      ],
+      "focusChar": "弱",
+      "imageNotes": "延續 S01 的勇者與怪物造型。老師指定弱點是可在戰鬥中利用的身體部位，本圖選腳踝，不採用怕水。巨大怪物身體厚實，但腳踝相對細小；勇者以盾牌下緣擊中怪物腳踝，怪物因此失去平衡、向後坐倒，勇者站在側邊。畫面清楚連結腳踝受擊與怪物倒地，採童話遊戲式表現，不畫血、傷口、骨折或痛苦特寫，也不攻擊眼睛。只呈現同一動作瞬間，不用分身或連續畫格。不得沿用小溪、怕水、不敢過溪的舊配圖。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 延續 S01 的勇者與怪物造型。老師指定弱點是可在戰鬥中利用的身體部位，本圖選腳踝，不採用怕水。巨大怪物身體厚實，但腳踝相對細小；勇者以盾牌下緣擊中怪物腳踝，怪物因此失去平衡、向後坐倒，勇者站在側邊。畫面清楚連結腳踝受擊與怪物倒地，採童話遊戲式表現，不畫血、傷口、骨折或痛苦特寫，也不攻擊眼睛。只呈現同一動作瞬間，不用分身或連續畫格。不得沿用小溪、怕水、不敢過溪的舊配圖。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S02.m4a",
+        "durationMs": 3959,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 972,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1260,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1680,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2100,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2360,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2620,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2760,
+            "endMs": 3320
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3320,
+            "endMs": 3520
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3520,
+            "endMs": 3752
+          }
+        ]
+      }
+    },
+    {
+      "id": "L404-S03",
+      "text": "水流太強，游泳就算了。",
+      "spokenText": "水流太強游泳就算了",
+      "displayLines": [
+        "水流太強，",
+        "游泳就算了。"
+      ],
+      "focusChar": "算",
+      "imageNotes": "河邊安全步道上，主角爸爸與小女孩站在離水岸有明顯距離的位置，看著河裡快速流動、翻起白色水花的河水。女孩手上拿著泳具，交代原本想游泳；爸爸伸手示意不要下水，另一手牽著女孩，準備一起離開。兩人都沒有下水，不站濕滑石頭、不靠近陡岸，也不畫成已經有人遇險。必須是河水，不改成海邊或泳池。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 河邊安全步道上，主角爸爸與小女孩站在離水岸有明顯距離的位置，看著河裡快速流動、翻起白色水花的河水。女孩手上拿著泳具，交代原本想游泳；爸爸伸手示意不要下水，另一手牽著女孩，準備一起離開。兩人都沒有下水，不站濕滑石頭、不靠近陡岸，也不畫成已經有人遇險。必須是河水，不改成海邊或泳池。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S03.m4a",
+        "durationMs": 3332,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1120,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1776,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2160,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2340,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2700,
+            "endMs": 2860
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2860,
+            "endMs": 3126
+          }
+        ]
+      }
+    },
+    {
+      "id": "L404-S04",
+      "text": "光太弱，我看不到書上的字。",
+      "spokenText": "光太弱我看不到書上的字",
+      "displayLines": [
+        "光太弱，",
+        "我看不到",
+        "書上的字。"
+      ],
+      "focusChar": "弱",
+      "imageNotes": "傍晚家中書桌旁，主角小女孩打開書，皺眉查看書頁。桌燈只發出微弱的光，書頁照明不足；主角媽媽在旁注意到她看不清楚。保持人物與環境在畫面中仍清楚可辨，不把整張图畫得漆黑。書上可有不需可讀的印刷筆跡，不生成具體漢字。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 傍晚家中書桌旁，主角小女孩打開書，皺眉查看書頁。桌燈只發出微弱的光，書頁照明不足；主角媽媽在旁注意到她看不清楚。保持人物與環境在畫面中仍清楚可辨，不把整張图畫得漆黑。書上可有不需可讀的印刷筆跡，不生成具體漢字。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S04.m4a",
+        "durationMs": 4114,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 800
+          },
+          {
+            "charIndex": 2,
+            "startMs": 800,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1546,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1860,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2200,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2400,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2600,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3220,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3460,
+            "endMs": 3700
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3700,
+            "endMs": 3895
+          }
+        ]
+      }
+    },
+    {
+      "id": "L404-S05",
+      "text": "可以用筆或手指畫畫。",
+      "spokenText": "可以用筆或手指畫畫",
+      "displayLines": [
+        "可以用筆",
+        "或手指畫畫。"
+      ],
+      "focusChar": "或",
+      "imageNotes": "教室美術桌旁，老師向主角小女孩展示兩種畫法：一側是畫筆與筆畫範例，另一側是兒童用顏料盤與指印組成的小花。女孩面前有空白紙，正在考慮用哪種方式。兩種工具和範例清楚分開，不要求女孩同時使用，不出現文字標籤。",
+      "imagePrompt": "Square 1:1, fine pencil-and-watercolor detailed warm picture-book rendering locked to all L058 style references; refined examples L115-S01/S02, L118-S02, L119-S01, L128-S03. Do not copy L058 identity into unrelated characters. Family identity anchors L154-S01, L162-S04, L163-S02. Protagonist girl preschool dark short bob pink clip, pink cardigan cream top navy skirt pink shoes. Father short brown hair blue overshirt white inner; mother brown bob cream blouse blue jeans. Teacher distinct from mother: dark hair tied back, glasses, tidy green classroom clothing. No readable text, letters, numbers, brands, watermark. Safe margins and phone-readable composition. Story cast for S01/S02 is unique, not the family: small slender young adventurer with chestnut crop hair, olive tunic, rust cape, brown boots, round wooden shield with plain metal rim; huge gentle-looking moss-green furry monster with stout body, small rounded horns, narrow ankles and broad bare feet. Keep both designs identical between the two scenes. 教室美術桌旁，老師向主角小女孩展示兩種畫法：一側是畫筆與筆畫範例，另一側是兒童用顏料盤與指印組成的小花。女孩面前有空白紙，正在考慮用哪種方式。兩種工具和範例清楚分開，不要求女孩同時使用，不出現文字標籤。",
+      "imageSrc": "/assets/lessons/L404/images/L404-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L404/audio/L404-S05.m4a",
+        "durationMs": 3003,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 220
+          },
+          {
+            "charIndex": 1,
+            "startMs": 220,
+            "endMs": 440
+          },
+          {
+            "charIndex": 2,
+            "startMs": 440,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1200,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1580,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1920,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2200,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2480,
+            "endMs": 2795
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L404-G01",
+      "type": "find-character",
+      "sentenceId": "L404-S01",
+      "targetChar": "弱",
+      "targetCharIndex": 5
+    },
+    {
+      "id": "L404-G02",
+      "type": "teach-character",
+      "sentenceId": "L404-S02",
+      "targetChar": "弱",
+      "targetCharIndex": 9,
+      "teachAudio": {
+        "prefixText": "勇者找出強大怪物的",
+        "suffixText": "點",
+        "prefixSrc": "/assets/lessons/L404/audio/L404-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L404/audio/L404-G02-suffix.m4a",
+        "prefixAudio": {
+          "spokenText": "勇者找出強大怪物的",
+          "src": "/assets/lessons/L404/audio/L404-G02-prefix.m4a",
+          "durationMs": 3424,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 440
+            },
+            {
+              "charIndex": 1,
+              "startMs": 440,
+              "endMs": 700
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1091,
+              "endMs": 1420
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1420,
+              "endMs": 1860
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1860,
+              "endMs": 2240
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2240,
+              "endMs": 2560
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2560,
+              "endMs": 2840
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2840,
+              "endMs": 3000
+            },
+            {
+              "charIndex": 8,
+              "startMs": 3000,
+              "endMs": 3223
+            }
+          ]
+        },
+        "suffixAudio": {
+          "spokenText": "點",
+          "src": "/assets/lessons/L404/audio/L404-G02-suffix.m4a",
+          "durationMs": 686,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 480
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L404-G03",
+      "type": "missing-character",
+      "sentenceId": "L404-S04",
+      "targetChar": "弱",
+      "targetCharIndex": 2,
+      "missingIndexes": [
+        2
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "弱",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "強",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "亮",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L404-G04",
+      "type": "partial-order",
+      "sentenceId": "L404-S03",
+      "targetChar": "算",
+      "targetCharIndex": 7,
+      "missingIndexes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "options": [
+        {
+          "id": "card-suan",
+          "text": "算",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-you",
+          "text": "游",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-jiu",
+          "text": "就",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-yong",
+          "text": "泳",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L404-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L404-S05",
+      "targetChar": "或",
+      "targetCharIndex": 4,
+      "options": [
+        {
+          "id": "correct",
+          "text": "可以用筆或手指畫畫。",
+          "spokenText": "可以用筆或手指畫畫",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L404/audio/L404-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L404/audio/L404-S05.m4a",
+            "durationMs": 3003,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 440
+              },
+              {
+                "charIndex": 2,
+                "startMs": 440,
+                "endMs": 860
+              },
+              {
+                "charIndex": 3,
+                "startMs": 860,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1580
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1580,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1920,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2480,
+                "endMs": 2795
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "可以用筆或手指寫字。",
+          "spokenText": "可以用筆或手指寫字",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L404/audio/L404-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "可以用筆或手指寫字",
+            "src": "/assets/lessons/L404/audio/L404-G05-wrong-one.m4a",
+            "durationMs": 3533,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 210
+              },
+              {
+                "charIndex": 1,
+                "startMs": 210,
+                "endMs": 420
+              },
+              {
+                "charIndex": 2,
+                "startMs": 420,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1140
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1140,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1720,
+                "endMs": 2080
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2080,
+                "endMs": 2320
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2320,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3060,
+                "endMs": 3309
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "可以用筆和手指畫畫。",
+          "spokenText": "可以用筆和手指畫畫",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L404/audio/L404-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "可以用筆和手指畫畫",
+            "src": "/assets/lessons/L404/audio/L404-G05-wrong-two.m4a",
+            "durationMs": 3313,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1040,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1320,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1780,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2120,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2400,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2760,
+                "endMs": 3097
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "stage4AudioAlignment": {
+    "L404-G02-prefix": {
+      "spokenText": "勇者找出強大怪物的",
+      "src": "/assets/lessons/L404/audio/L404-G02-prefix.m4a",
+      "durationMs": 3424,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 440
+        },
+        {
+          "charIndex": 1,
+          "startMs": 440,
+          "endMs": 700
+        },
+        {
+          "charIndex": 2,
+          "startMs": 1091,
+          "endMs": 1420
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1420,
+          "endMs": 1860
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1860,
+          "endMs": 2240
+        },
+        {
+          "charIndex": 5,
+          "startMs": 2240,
+          "endMs": 2560
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2560,
+          "endMs": 2840
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2840,
+          "endMs": 3000
+        },
+        {
+          "charIndex": 8,
+          "startMs": 3000,
+          "endMs": 3223
+        }
+      ]
+    },
+    "L404-G02-suffix": {
+      "spokenText": "點",
+      "src": "/assets/lessons/L404/audio/L404-G02-suffix.m4a",
+      "durationMs": 686,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 480
+        }
+      ]
+    },
+    "L404-G05-wrong-one": {
+      "spokenText": "可以用筆或手指寫字",
+      "src": "/assets/lessons/L404/audio/L404-G05-wrong-one.m4a",
+      "durationMs": 3533,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 210
+        },
+        {
+          "charIndex": 1,
+          "startMs": 210,
+          "endMs": 420
+        },
+        {
+          "charIndex": 2,
+          "startMs": 420,
+          "endMs": 840
+        },
+        {
+          "charIndex": 3,
+          "startMs": 840,
+          "endMs": 1140
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1140,
+          "endMs": 1720
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1720,
+          "endMs": 2080
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2080,
+          "endMs": 2320
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2320,
+          "endMs": 3060
+        },
+        {
+          "charIndex": 8,
+          "startMs": 3060,
+          "endMs": 3309
+        }
+      ]
+    },
+    "L404-G05-wrong-two": {
+      "spokenText": "可以用筆和手指畫畫",
+      "src": "/assets/lessons/L404/audio/L404-G05-wrong-two.m4a",
+      "durationMs": 3313,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 270
+        },
+        {
+          "charIndex": 1,
+          "startMs": 270,
+          "endMs": 540
+        },
+        {
+          "charIndex": 2,
+          "startMs": 540,
+          "endMs": 1040
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1040,
+          "endMs": 1320
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1320,
+          "endMs": 1780
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1780,
+          "endMs": 2120
+        },
+        {
+          "charIndex": 6,
+          "startMs": 2120,
+          "endMs": 2400
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2400,
+          "endMs": 2760
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2760,
+          "endMs": 3097
+        }
+      ]
+    }
+  }
+}
+```

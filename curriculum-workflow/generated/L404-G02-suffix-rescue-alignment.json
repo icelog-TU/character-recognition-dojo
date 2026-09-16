@@ -1,0 +1,22 @@
+{
+  "model": "whisper-1",
+  "prompt": "點",
+  "offsetMs": 500,
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.690000057220459,
+    "text": "點",
+    "words": [
+      {
+        "word": "點",
+        "start": 0,
+        "end": 0.8999999761581421
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  }
+}
