@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L430 | 主 | claimed | Production E | codex/l430-complete-package | L423, L425, L426, L427, L428, L429; R051/R052 after L420 | 組 各 輪 員 自 己 | curriculum-workflow/lesson-requests/L430.json; curriculum-workflow/generated/L430-generation-packet.md; curriculum-workflow/drafts/L430-draft.json | public/assets/lessons/L430/; curriculum-workflow/audio-inbox/L430/ | Approved teacher handoff. Base main 9b39f9d4 L416; locked 426-char vocabulary from 4eec5178 L415 plus listed provisional and 主. Release requires contiguous predecessors through L429 and R051/R052 covering L391-L420. Production package only. |
 
 ## Status Values
 
