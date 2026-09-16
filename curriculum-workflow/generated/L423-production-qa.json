@@ -1,0 +1,211 @@
+{
+  "unit": "L423",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "4eec51781af66eee3b0a9b0b5afe0e0497a8d121",
+  "lockedAllowedChars": 425,
+  "coverage": {
+    "組": 3,
+    "班": 2,
+    "室": 2,
+    "教": 2,
+    "合": 1,
+    "結": 1
+  },
+  "checks": {
+    "requestDraftPacket": "PASS",
+    "allowedCharacters": "PASS",
+    "hanCounts": [
+      9,
+      8,
+      10,
+      9,
+      11
+    ],
+    "stage4Index": "PASS",
+    "displayLines": "PASS",
+    "productionAssetsLessonLocal": "PASS",
+    "strictFormatsLessonLocal": "PASS, zero warnings",
+    "audioDecode": "PASS, all 10 files",
+    "imageStyleCast": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
+    "browserQA": "Browser QA tooling fallback: cua.getBrowser initialization timed out after 30 seconds and kernel reset before playback. Manual continuous listening, in-app highlighting and phone recording QA not performed. Teacher subjective review remains post-merge."
+  },
+  "pronunciation": {
+    "kind": "AI auditory review, not human/manual QA",
+    "model": "gpt-audio",
+    "results": [
+      {
+        "name": "char-u7d44",
+        "heardText": "組",
+        "pronunciationResult": "PASS",
+        "explanation": "AI audio review identified standalone 組 as ㄗㄨˇ, third tone, final syllable audible.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L423-S01",
+        "heardText": "全班在教室分組下棋",
+        "pronunciationResult": "PASS",
+        "explanation": "The pronunciation of '教室' used the appropriate tone for '教' as ㄐㄧㄠˋ, which matches the expected pronunciation. The overall syllables and tones were clear.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L423-S03",
+        "heardText": "班長把功課送到辦公室",
+        "pronunciationResult": "PASS",
+        "explanation": "The heard sentence matches the expected text exactly. The pronunciation of the word '長' is clear and the tone is accurately discerned as ㄓㄤˇ (third tone). The other syllables and tones are also consistent with the expected pronunciation.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L423-S02",
+        "heardText": "爸爸教我組裝小車",
+        "pronunciationResult": "PASS",
+        "explanation": "清楚聽到『教』發音為ㄐㄧㄠ，符合理預期。其他字詞發音也標準，聲調準確，無明顯偏差。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L423-G02-prefix",
+        "heardText": "爸爸教我",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的內容是『爸爸教我』，關鍵音節『教』發音清楚，判定為 ㄐㄧㄠ。",
+        "finalSyllableAudible": true
+      }
+    ]
+  },
+  "folderBytes": 1317183,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L423/images/L423-S01.webp",
+      "bytes": 207734,
+      "sha256": "4a99bdc9487c42680b128e6eb972324fe421e0a77525c74b00b387d9629283a7"
+    },
+    {
+      "path": "public/assets/lessons/L423/images/L423-S02.webp",
+      "bytes": 169244,
+      "sha256": "c4ebc7f068c8e43a1ccdf266befcfca377dff1bb49e1caf6f80acc98e5571d7f"
+    },
+    {
+      "path": "public/assets/lessons/L423/images/L423-S03.webp",
+      "bytes": 141570,
+      "sha256": "7b98b5eda4c83bcbf7ee7b631de0d894dc9059969b09b8733a9849fe9822d415"
+    },
+    {
+      "path": "public/assets/lessons/L423/images/L423-S04.webp",
+      "bytes": 203742,
+      "sha256": "dd294f8674be22620705df67edd812dc704f22499d4b2e8bcd3883808c3afebf"
+    },
+    {
+      "path": "public/assets/lessons/L423/images/L423-S05.webp",
+      "bytes": 167616,
+      "sha256": "cb19a31f3dab57b1ec368c35db0dee849169a26bc92ff2dc7bc0f9e24c9bb7ee"
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/char-u7d44.m4a",
+      "bytes": 17443,
+      "sha256": "13e48d2a595a51d66e271a3895c5112b5dab00a0f04e66f831424faf70a123b5",
+      "durationMs": 940,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.7
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/L423-G02-prefix.m4a",
+      "bytes": 19590,
+      "sha256": "3c42c609bec65ea631f2257c4368a8fb2a72fd811d9ba81d8c1f2805c16c9bda",
+      "durationMs": 1540,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -1.9,
+      "meanVolumeDb": -18.1
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/L423-G02-suffix.m4a",
+      "bytes": 17660,
+      "sha256": "d6206571632ef9a11acf8a59476abce6884e98823f67c207fa14dc634c3f8ea1",
+      "durationMs": 1450,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -16.4
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/L423-G05-wrong-one.m4a",
+      "bytes": 57619,
+      "sha256": "bae41756e93238b759b21365cf96fc0f941ee00d0ad59a4ef2d4b3abf7cbcb9d",
+      "durationMs": 4560,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.3
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/L423-G05-wrong-two.m4a",
+      "bytes": 61176,
+      "sha256": "9f2bd50bfe299dfe3eab438938f1d0f8c606e246b0f9068b8c6e8568eae24df6",
+      "durationMs": 4840,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -18.8
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/L423-S01.m4a",
+      "bytes": 64897,
+      "sha256": "2472febbead621a3f412cbb89132b1020868148dbb49c0d69aaa891bb1cf5253",
+      "durationMs": 4990,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -18.1
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/L423-S02.m4a",
+      "bytes": 33720,
+      "sha256": "54fc90774e11594d03bf8e5dcb0ace450855c640f869e7fa18579ffa94893330",
+      "durationMs": 2640,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.1,
+      "meanVolumeDb": -17.6
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/L423-S03.m4a",
+      "bytes": 48178,
+      "sha256": "a1ba7fc4a0c65bb2ffa222278d3e3d79d092e117801893b47a6b81203750f560",
+      "durationMs": 3950,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -18.7
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/L423-S04.m4a",
+      "bytes": 44169,
+      "sha256": "b80d7ef913356ec4a824e15b6588a9e7f51f1f82478ac963e4d4f141143a5356",
+      "durationMs": 3580,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.6
+    },
+    {
+      "path": "public/assets/lessons/L423/audio/L423-S05.m4a",
+      "bytes": 62825,
+      "sha256": "4bac6d11a84e4a91b57cadc930e485ab21f831e56ebd63d2eb20315897bd8082",
+      "durationMs": 5100,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -18.9
+    }
+  ]
+}
