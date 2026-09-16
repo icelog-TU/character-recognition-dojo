@@ -43,3 +43,17 @@ Attempted local existing asset-review page on port5417. Codex browser tab creati
 ## Remaining work
 
 No missing package assets or timings. Release awaits L411, L412, L413, L414, L415, L416 and full playable order, then performs production integration, final verify and deployment.
+
+## Pushed intake evidence
+
+Asset commit: d37575cc5a55b041758d59ee79d5bec38a81b213.
+
+Command: npm run curriculum:package-intake -- --unit L417 --ref origin/codex/l417-complete-package --strict
+
+Result: PASS, exit0, zero warnings;5 WebP and10 referenced M4A. Documentation-only follow-up is rechecked before final handoff.
+
+Pre-merge package preview, not final main repair queue: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L417&ref=d37575cc5a55b041758d59ee79d5bec38a81b213
+
+Audio review: https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L417&ref=d37575cc5a55b041758d59ee79d5bec38a81b213
+
+Post-merge repair query: npm run asset:review-status -- --unit L417
