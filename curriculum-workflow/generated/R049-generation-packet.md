@@ -908,3 +908,13 @@ Release owns production JSON, planner, ledger, final integrated verify, main pus
   }
 }
 ```
+
+## Pushed intake evidence
+
+Checked immutable asset commit: 5bd9a1b4061493ab3ae297f4ae24c59d5d00ac90.
+
+Command: npm run curriculum:package-intake -- --unit R049 --ref origin/codex/r049-r050-complete-package --strict
+
+Result: PASS, exit 0, zero warnings; 5 images and 9 referenced audio files. Both R049 and R050 passed on the same pushed pair ref. Subsequent documentation-only commit is rechecked before final delivery.
+
+Pre-merge package preview (not final main review queue): https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=R049&ref=5bd9a1b4061493ab3ae297f4ae24c59d5d00ac90
