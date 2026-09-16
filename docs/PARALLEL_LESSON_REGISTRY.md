@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L414 | 決 / normal lesson | claimed | Production B | codex/l414-complete-package | L409, L410, L411, L412, L413 | 辦, 試, 定, 成, 功 | curriculum-workflow/lesson-requests/L414.json; curriculum-workflow/generated/L414-generation-packet.md; curriculum-workflow/drafts/L414-draft.json | public/assets/lessons/L414/; curriculum-workflow/audio-inbox/L414/ | Base 346b7af0, formal L408. R049/R050 merged. Exact approved latest sentences; S03 story duel, S04 own left hand writing homework. |
 
 ## Status Values
 
