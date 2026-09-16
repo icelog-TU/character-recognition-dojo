@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L419 | 合 | dependency-blocked-asset-complete | Production A (Remote) | codex/l419-complete-package; claim a6a2eb87 | L415:解; L416:果; L417:如; L418:結 | 解果如結 | curriculum-workflow/lesson-requests/L419.json; curriculum-workflow/generated/L419-generation-packet.md; curriculum-workflow/drafts/L419-draft.json | curriculum-workflow/audio-inbox/L419/; public/assets/lessons/L419/ | Five WebP, ten M4A, nine timing records. Technical checks PASS; per-image style/cast PASS. Browser partial playback evidence and timeout fallback recorded in packet. Main recheck 182ace5f. Teacher subjective review post-main; Release owns integration. |
+| L419 | 合 | dependency-blocked-asset-complete | Production A (Remote) | codex/l419-complete-package; assets 746e0860 | L415:解; L416:果; L417:如; L418:結 | 解果如結 | curriculum-workflow/lesson-requests/L419.json; curriculum-workflow/generated/L419-generation-packet.md; curriculum-workflow/drafts/L419-draft.json | curriculum-workflow/audio-inbox/L419/; public/assets/lessons/L419/ | Uploaded package branch; strict remote package intake PASS. Five WebP, ten M4A, nine timing records. Technical checks PASS; per-image style/cast PASS. Browser partial playback evidence and timeout fallback recorded in packet. Main recheck 182ace5f. Teacher subjective review post-main; Release owns integration. |
 
 ## Status Values
 
