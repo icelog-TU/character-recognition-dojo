@@ -1,6 +1,6 @@
 {
   "unit": "L420",
-  "notes": "Production technical QA: 424 allowed characters; coverage 教3 合2 結2 如2 果2 解1; exact approved text/spokenText/displayLines preserved; canonical five games and all zero-based Han indexes verified. Ten mono 44100 Hz AAC files decoded, durations and loudness checked. Nine final processed audio transcripts matched approved Han text after simplified/traditional normalization; S02 and G02 suffix used general vocabulary context including 打結 to disambiguate the homophone 打劫. Earlier 1ms end timestamps caused complete audio regeneration, not fabricated timing. Final spans are 80-900ms. Only detected terminal silence was removed with at least 180ms after detected speech and 200ms after AI speech end, then final files were AI-aligned again. 教 generated once from standalone 教 with ㄐㄧㄠ instruction; independent transcription returned 蕉, a homophone with the intended first tone, not an exact orthographic match or human listening approval. S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS. Exported WebP compared side by side with L058 full set, refined L115/L118/L119/L128 examples and family L154/L162/L163 anchors. S04 initial image had a premature pooled center coin pile; rejected, revised to exactly two side piles and empty center; rejected image not committed. Built-in imagegen used; existing references checked for reuse but do not show the approved teacher/cord/kitchen/pooling/missed-bus scenes. Browser QA tooling fallback: cua.getBrowser opening the local Vite app timed out after 30 seconds and reset its kernel. Phone playback/highlight/recording QA could not be performed; no subjective listening or completed browser QA is claimed. All non-browser technical gates are checked. Teacher subjective review remains post-merge. Full verify skipped: dependency-blocked; shared production JSON, planner and ledger unchanged. Release owns L415-L419 integration and final main validation. R051/R052 follows L420 and blocks L421, outside this package.",
+  "notes": "Production technical QA: 424 allowed characters; coverage 教3 合2 結2 如2 果2 解1; exact approved text/spokenText/displayLines preserved; canonical five games and all zero-based Han indexes verified. Ten mono 44100 Hz AAC files decoded, durations and loudness checked. Nine final processed audio transcripts matched approved Han text after simplified/traditional normalization; S02 and G02 suffix used general vocabulary context including 打結 to disambiguate the homophone 打劫. Earlier 1ms end timestamps caused complete audio regeneration, not fabricated timing. Final spans are 80-900ms. Only detected terminal silence was removed with at least 180ms after detected speech and 200ms after AI speech end, then final files were AI-aligned again. 教 generated once from standalone 教 with ㄐㄧㄠ instruction; independent transcription returned 蕉, a homophone with the intended first tone, not an exact orthographic match or human listening approval. S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS. Exported WebP compared side by side with L058 full set, refined L115/L118/L119/L128 examples and family L154/L162/L163 anchors. S04 initial image had a premature pooled center coin pile; rejected, revised to exactly two side piles and empty center; rejected image not committed. Built-in imagegen used; existing references checked for reuse but do not show the approved teacher/cord/kitchen/pooling/missed-bus scenes. Browser QA tooling fallback: cua.getBrowser opening the local Vite app timed out after 30 seconds and reset its kernel. Phone playback/highlight/recording QA could not be performed; no subjective listening or completed browser QA is claimed. All non-browser technical gates are checked. Teacher subjective review remains post-merge. Full verify skipped: dependency-blocked; shared production JSON, planner and ledger unchanged. Release owns L415-L419 integration and final main validation. R051/R052 follows L420 and blocks L421, outside this package. Teacher-requested style redraw on 2026-09-16: previous S02/S03/S04/S05 images at 34473295 mixed illustrated faces with excessively photographic hands, cord, vegetables, coins, tables, plants or street surfaces. Previous style assessments for these four images are superseded. All four were newly generated from L058/refined/family references with uniform pencil-and-watercolor rendering across the entire image, including foreground objects and backgrounds. No photo textures, realistic skin/rope fibers/wood/asphalt, lens blur or depth of field. Each replacement exported WebP reviewed side by side: S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS. Exact approved meanings, recurring identities and scene states retained. Sentence, displayLines, audio and timings unchanged. Teacher acceptance of replacements is not presumed.",
   "assets": [
     {
       "path": "public/assets/lessons/L420/images/L420-S01.webp",
@@ -9,23 +9,23 @@
     },
     {
       "path": "public/assets/lessons/L420/images/L420-S02.webp",
-      "bytes": 186596,
-      "sha256": "d9784fe890342baadd7ac2147c07b7a594f696d239fc4f58f035215b9a03d369"
+      "bytes": 183494,
+      "sha256": "dda0c573777d6a88534510470dbab8659442ce94da957f939ff6ae0df25b09b7"
     },
     {
       "path": "public/assets/lessons/L420/images/L420-S03.webp",
-      "bytes": 203708,
-      "sha256": "f5baf281b3d6d539af7cc896a7361ed4769d0790ccbd358c9240e829eaf0b873"
+      "bytes": 163148,
+      "sha256": "91ac47223f0146bae1636d224dff260bf4f9e9b09ab667932d8351cc792f383c"
     },
     {
       "path": "public/assets/lessons/L420/images/L420-S04.webp",
-      "bytes": 160012,
-      "sha256": "930cc88b8b9c5f064ca441119b25b8953cb2766562d732662943bb3660770ba8"
+      "bytes": 123202,
+      "sha256": "6c77b14b2891fe898b0b4de2ed9985a0da7e90ed21c930eaa19ae22c52168ef3"
     },
     {
       "path": "public/assets/lessons/L420/images/L420-S05.webp",
-      "bytes": 215964,
-      "sha256": "dfffda441b14e28969f8a91c8a118e8fe2b688719a814c9daedba7e9bb49dcc6"
+      "bytes": 236464,
+      "sha256": "7bb4f47b2110870eccf277896928f463794821b72abd0297a9328ea3b338ca42"
     },
     {
       "path": "public/assets/lessons/L420/audio/char-u6559.m4a",
