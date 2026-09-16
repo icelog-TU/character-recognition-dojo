@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L420 | 教 | claimed | Remote Production B | codex/l420-complete-package | L415:解, L416:果, L417:如, L418:結, L419:合 | 解, 果, 如, 結, 合 | curriculum-workflow/lesson-requests/L420.json; curriculum-workflow/generated/L420-generation-packet.md; curriculum-workflow/drafts/L420-draft.json | curriculum-workflow/audio-inbox/L420/; public/assets/lessons/L420/ | Teacher-approved activation handoff received; claim only, production in progress. Base origin/main 182ace5f; Release owns shared-state integration. |
 
 ## Status Values
 
