@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L399 | 或 / normal lesson | claimed | Production B | codex/l399-complete-package | L394, L395, L396, L397, L398; all playable predecessors and after390 review pair before release | 翻, 印, 單, 雙, 選 | curriculum-workflow/lesson-requests/L399.json; curriculum-workflow/generated/L399-generation-packet.md; curriculum-workflow/drafts/L399-draft.json | public/assets/lessons/L399/; curriculum-workflow/audio-inbox/L399/ | Base 23cae191, formal L001-L390. No readable text/numeral exceptions. Own L399 package only; Release owns shared-state integration. |
 
 ## Status Values
 
