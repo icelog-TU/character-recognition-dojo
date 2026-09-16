@@ -1,0 +1,20 @@
+{
+  "unit": "L404",
+  "source": "6a7a20d620219c7f9de9b53cb85d6e8f20125ea4",
+  "status": "PASS",
+  "assetBytes": 1285727,
+  "audioFiles": 10,
+  "timingFiles": 9,
+  "checks": [
+    "approved text preserved",
+    "coverage allowed boundary",
+    "Stage4 indexes/options/fragment text",
+    "80-900ms timings/no overlap",
+    "final tail <=300ms",
+    "volume/G05 spread",
+    "AAC decode/format",
+    "all original speech packets preserved",
+    "request/packet/draft parity",
+    "release shared state unchanged"
+  ]
+}

@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L404 | 弱 / normal lesson | partial-package | Package Rescue | codex/l404-package-rescue | L399, L400, L401, L402, L403 | 或, 者, 勇, 強, 算 | curriculum-workflow/lesson-requests/L404.json; curriculum-workflow/generated/L404-generation-packet.md; curriculum-workflow/drafts/L404-draft.json | public/assets/lessons/L404/; curriculum-workflow/audio-inbox/L404/ | Five WebP and ten M4A present. AI alignment fails on suffix 點; timings missing, mobile QA not completed. Do not integrate. R047/R048 merged in a240e584. |
+| L404 | 弱 / normal lesson | dependency-blocked-asset-complete | Package Rescue | codex/l404-package-rescue | L399, L400, L401, L402, L403 | 或, 者, 勇, 強, 算 | curriculum-workflow/lesson-requests/L404.json; curriculum-workflow/generated/L404-generation-packet.md; curriculum-workflow/drafts/L404-draft.json | public/assets/lessons/L404/ | Source 6a7a20d6. Five sentence and G02/G05 timings complete; exact 點 alignment; only 弱 terminal silence trimmed. S01-S03 recompressed below 250 KB. See L404-rescue-qa.md for browser/audio/timing evidence. R049/R050 belong after L405, before L406. |
 
 ## Status Values
 
