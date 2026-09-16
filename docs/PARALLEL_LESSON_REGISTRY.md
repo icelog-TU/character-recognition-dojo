@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L405 | 越 | claimed | Production C / teacher-assigned current thread | codex/l405-complete-package | L400, L401, L402, L403, L404 | 者, 勇, 強, 算, 弱 | curriculum-workflow/lesson-requests/L405.json; curriculum-workflow/generated/L405-generation-packet.md; curriculum-workflow/drafts/L405-draft.json | public/assets/lessons/L405/; curriculum-workflow/audio-inbox/L405/ | Base c55571d8, formal L390. Teacher-approved final S02 sunset and S04 mental arithmetic; S04 image prices 35/28 permitted, no total. R049/R050 after L405 before L406 are Release-owned. |
 
 ## Status Values
 
