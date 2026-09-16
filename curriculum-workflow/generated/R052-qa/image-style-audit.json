@@ -1,0 +1,60 @@
+{
+  "tool": "Built-in imagegen",
+  "dimensions": "1024x1024",
+  "references": [
+    "L058-S01..S05",
+    "L115-S01",
+    "L163-S02",
+    "L154-S01",
+    "xiaoguang.webp",
+    "L420-S01 teacher"
+  ],
+  "images": [
+    {
+      "id": "R052-S01",
+      "path": "public/assets/reviews/R052/images/R052-S01.webp",
+      "bytes": 202882,
+      "sha256": "4b89aa9990c8626c2b7c2f9ecc257f8f89a8a4beea49f0ae02481f98944db9a0",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "主角小女孩邀小光一起畫一張大海報，兩人坐在同一張大紙旁，女孩指著待完成的區域，小光拿起畫筆準備加入。海報是花草、樹木等圖像，無標題文字。不是各畫各的兩張紙。\r\n小光使用 public/assets/reference/lesson-cast/xiaoguang.webp：\r\n圓眼鏡、整齊短黑髮、白短袖襯衫、深藍針織背心、卡其短褲、白襪、棕色鞋；不可改成 generic boy 或既有「你」小男孩。"
+    },
+    {
+      "id": "R052-S02",
+      "path": "public/assets/reviews/R052/images/R052-S02.webp",
+      "bytes": 184634,
+      "sha256": "0ce2f82285ff7fad25f5d3bfbb9f912a2dfb1e15b4dc29737651ad3cbe023d21",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "家中玄關，主角小女孩坐穩，指著鞋上意外纏緊、解不開的鞋帶結，向主角爸爸求助。爸爸蹲下，準備用手解結。不是正常綁好的漂亮蝴蝶結，也不是爸爸要求女孩學習解結；重點是女兒找爸爸幫忙。"
+    },
+    {
+      "id": "R052-S03",
+      "path": "public/assets/reviews/R052/images/R052-S03.webp",
+      "bytes": 160070,
+      "sha256": "951fba55fb7191d40a947f4edd92d82d4c6086cedc2d2def95f0eccde6682308",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "家中遊戲墊上，主角小女孩搭的積木橋橋腳太窄，橋面一端已傾倒，幾塊積木散在旁邊。她拿著積木轉向主角爸爸求助，爸爸蹲旁思考，尚未直接替她完成。不要畫真實橋梁災難，不改成門打不開；畫面呈現結構不穩、需要想辦法改善。"
+    },
+    {
+      "id": "R052-S04",
+      "path": "public/assets/reviews/R052/images/R052-S04.webp",
+      "bytes": 154342,
+      "sha256": "8127e58cc40bb4e9154ab3f82dabff1dd65c6523d1006a53bdb465c7a2a8b0a7",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "手作活動桌旁，固定老師拿著示範紙船，主角小女孩剛照著方法完成自己的第一艘紙船，開心地捧起展示。桌上有剩餘摺紙材料，但不放一堆失敗作品，以免違反「一試就成功」。老師採教師 reference，不畫成主角媽媽。"
+    },
+    {
+      "id": "R052-S05",
+      "path": "public/assets/reviews/R052/images/R052-S05.webp",
+      "bytes": 177312,
+      "sha256": "7342c790d784c097d2aea26e2e33eaf35a0455b4d61f0ddcad28e49db316b365",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "家中桌上有一大箱新鮮水果，主角媽媽與主角小女孩商量分送，正把水果分裝進幾個大小相近的提袋，原箱仍有不少。表現家中水果多、提議分享，不是腐爛丟棄、店家販售，也不是等果子變紅。"
+    }
+  ],
+  "rejectedAttempts": []
+}

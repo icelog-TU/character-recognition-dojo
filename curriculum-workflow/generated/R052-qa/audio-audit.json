@@ -1,0 +1,855 @@
+[
+  {
+    "file": "R052-S01.m4a",
+    "expected": "我決定和小光合作畫海報",
+    "duration": 4.286009,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.9,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 0.385374
+      },
+      {
+        "type": "end",
+        "seconds": 0.831678
+      },
+      {
+        "type": "start",
+        "seconds": 2.91068
+      },
+      {
+        "type": "end",
+        "seconds": 3.21218
+      },
+      {
+        "type": "start",
+        "seconds": 4.12639
+      },
+      {
+        "type": "end",
+        "seconds": 4.29569
+      }
+    ],
+    "sha256": "e925fb91ab857d3f05d56585f378919cf92d59dce5a3ebe43e5541ede59a6818",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.289999961853027,
+      "text": "我決定和小光合作,畫海報。",
+      "words": [
+        {
+          "word": "我",
+          "start": 0,
+          "end": 0.6200000047683716
+        },
+        {
+          "word": "決",
+          "start": 0.6200000047683716,
+          "end": 1.2200000286102295
+        },
+        {
+          "word": "定",
+          "start": 1.2200000286102295,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "和",
+          "start": 1.440000057220459,
+          "end": 1.7599999904632568
+        },
+        {
+          "word": "小",
+          "start": 1.7599999904632568,
+          "end": 2.0999999046325684
+        },
+        {
+          "word": "光",
+          "start": 2.0999999046325684,
+          "end": 2.240000009536743
+        },
+        {
+          "word": "合",
+          "start": 2.240000009536743,
+          "end": 2.680000066757202
+        },
+        {
+          "word": "作",
+          "start": 2.680000066757202,
+          "end": 2.9000000953674316
+        },
+        {
+          "word": "畫",
+          "start": 3.3399999141693115,
+          "end": 3.5399999618530273
+        },
+        {
+          "word": "海",
+          "start": 3.5399999618530273,
+          "end": 3.859999895095825
+        },
+        {
+          "word": "報。",
+          "start": 3.859999895095825,
+          "end": 4.059999942779541
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R052-S02.m4a",
+    "expected": "鞋帶打結了請爸爸幫我解開",
+    "duration": 5.091995,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.9,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.07948
+      },
+      {
+        "type": "end",
+        "seconds": 1.22499
+      },
+      {
+        "type": "start",
+        "seconds": 2.14755
+      },
+      {
+        "type": "end",
+        "seconds": 2.50141
+      },
+      {
+        "type": "start",
+        "seconds": 4.93222
+      },
+      {
+        "type": "end",
+        "seconds": 5.10839
+      }
+    ],
+    "sha256": "76a6b86dc89c1b8e4451269d1996f151cdd00c2d5ebabcad273da72bd62af0a6",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 5.099999904632568,
+      "text": "鞋帶打結了,請爸爸幫我解開。",
+      "words": [
+        {
+          "word": "鞋",
+          "start": 0,
+          "end": 0.7400000095367432
+        },
+        {
+          "word": "帶",
+          "start": 0.7400000095367432,
+          "end": 1.0199999809265137
+        },
+        {
+          "word": "打",
+          "start": 1.0199999809265137,
+          "end": 1.7200000286102295
+        },
+        {
+          "word": "結",
+          "start": 1.7200000286102295,
+          "end": 1.8799999952316284
+        },
+        {
+          "word": "了",
+          "start": 1.8799999952316284,
+          "end": 2.440000057220459
+        },
+        {
+          "word": "請",
+          "start": 2.799999952316284,
+          "end": 2.9800000190734863
+        },
+        {
+          "word": "爸爸",
+          "start": 2.9800000190734863,
+          "end": 3.4600000381469727
+        },
+        {
+          "word": "幫",
+          "start": 3.4600000381469727,
+          "end": 3.9200000762939453
+        },
+        {
+          "word": "我",
+          "start": 3.9200000762939453,
+          "end": 4.340000152587891
+        },
+        {
+          "word": "解",
+          "start": 4.340000152587891,
+          "end": 4.599999904632568
+        },
+        {
+          "word": "開。",
+          "start": 4.599999904632568,
+          "end": 4.900000095367432
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 6
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R052-S03.m4a",
+    "expected": "積木橋一直倒有什麼辦法",
+    "duration": 3.252993,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18,
+    "max": -4.4,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.00254
+      },
+      {
+        "type": "end",
+        "seconds": 1.24857
+      },
+      {
+        "type": "start",
+        "seconds": 3.0934
+      },
+      {
+        "type": "end",
+        "seconds": 3.27401
+      }
+    ],
+    "sha256": "0a99961a238ee8e1882c4ea15bc6ace259268bee9a35278be92d9eed525a7f52",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.2699999809265137,
+      "text": "積木橋一直倒有什麼辦法?",
+      "words": [
+        {
+          "word": "積",
+          "start": 0,
+          "end": 0.3199999928474426
+        },
+        {
+          "word": "木",
+          "start": 0.3199999928474426,
+          "end": 0.5600000023841858
+        },
+        {
+          "word": "橋",
+          "start": 0.5600000023841858,
+          "end": 1.1399999856948853
+        },
+        {
+          "word": "一直",
+          "start": 1.1399999856948853,
+          "end": 1.8200000524520874
+        },
+        {
+          "word": "倒",
+          "start": 1.8200000524520874,
+          "end": 2.059999942779541
+        },
+        {
+          "word": "有",
+          "start": 2.059999942779541,
+          "end": 2.319999933242798
+        },
+        {
+          "word": "什麼",
+          "start": 2.319999933242798,
+          "end": 2.559999942779541
+        },
+        {
+          "word": "辦法",
+          "start": 2.559999942779541,
+          "end": 3.0199999809265137
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R052-S04.m4a",
+    "expected": "老師教我做紙船一試就成功",
+    "duration": 4.920998,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.4,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 0.771678
+      },
+      {
+        "type": "end",
+        "seconds": 1.03853
+      },
+      {
+        "type": "start",
+        "seconds": 2.64111
+      },
+      {
+        "type": "end",
+        "seconds": 3.21143
+      },
+      {
+        "type": "start",
+        "seconds": 4.76052
+      },
+      {
+        "type": "end",
+        "seconds": 4.92263
+      }
+    ],
+    "sha256": "7382a0099959719c9767acdbe12ef3354d450797d23fa53d12ba3a546c69e219",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.920000076293945,
+      "text": "老師教我做紙船,一試就成功。",
+      "words": [
+        {
+          "word": "老師",
+          "start": 0,
+          "end": 0.699999988079071
+        },
+        {
+          "word": "教",
+          "start": 0.699999988079071,
+          "end": 1.3200000524520874
+        },
+        {
+          "word": "我",
+          "start": 1.3200000524520874,
+          "end": 1.659999966621399
+        },
+        {
+          "word": "做",
+          "start": 1.659999966621399,
+          "end": 1.9600000381469727
+        },
+        {
+          "word": "紙",
+          "start": 1.9600000381469727,
+          "end": 2.2799999713897705
+        },
+        {
+          "word": "船",
+          "start": 2.2799999713897705,
+          "end": 2.819999933242798
+        },
+        {
+          "word": "一",
+          "start": 3.5799999237060547,
+          "end": 3.640000104904175
+        },
+        {
+          "word": "試",
+          "start": 3.640000104904175,
+          "end": 3.819999933242798
+        },
+        {
+          "word": "就",
+          "start": 3.819999933242798,
+          "end": 4.239999771118164
+        },
+        {
+          "word": "成",
+          "start": 4.239999771118164,
+          "end": 4.400000095367432
+        },
+        {
+          "word": "功。",
+          "start": 4.400000095367432,
+          "end": 4.699999809265137
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R052-S05.m4a",
+    "expected": "水果太多不如分送給大家",
+    "duration": 3.357007,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.2,
+    "max": -3.4,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 3.19649
+      },
+      {
+        "type": "end",
+        "seconds": 3.36689
+      }
+    ],
+    "sha256": "db921414268fc36a3a7feca959b4a9b310afa7f2fdeafe1d7ceebb0be24136bb",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.359999895095825,
+      "text": "水果太多,不如分送給大家。",
+      "words": [
+        {
+          "word": "水",
+          "start": 0,
+          "end": 0.47999998927116394
+        },
+        {
+          "word": "果",
+          "start": 0.47999998927116394,
+          "end": 0.7200000286102295
+        },
+        {
+          "word": "太",
+          "start": 0.7200000286102295,
+          "end": 1.0399999618530273
+        },
+        {
+          "word": "多",
+          "start": 1.0399999618530273,
+          "end": 1.3600000143051147
+        },
+        {
+          "word": "不",
+          "start": 1.659999966621399,
+          "end": 1.659999966621399
+        },
+        {
+          "word": "如",
+          "start": 1.659999966621399,
+          "end": 1.9199999570846558
+        },
+        {
+          "word": "分",
+          "start": 1.9199999570846558,
+          "end": 2.240000009536743
+        },
+        {
+          "word": "送",
+          "start": 2.240000009536743,
+          "end": 2.4000000953674316
+        },
+        {
+          "word": "給",
+          "start": 2.4000000953674316,
+          "end": 2.6600000858306885
+        },
+        {
+          "word": "大家。",
+          "start": 2.6600000858306885,
+          "end": 3.119999885559082
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R052-G02-prefix.m4a",
+    "expected": "鞋帶打",
+    "duration": 1.462993,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.5,
+    "max": -2.4,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 0.753333
+      },
+      {
+        "type": "end",
+        "seconds": 0.909546
+      },
+      {
+        "type": "start",
+        "seconds": 1.30429
+      },
+      {
+        "type": "end",
+        "seconds": 1.48608
+      }
+    ],
+    "sha256": "067af5ae5f00112424f0fe7978614ee77e986fb7af5e7bdd0f8ba66b6657e6b8",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 1.4800000190734863,
+      "text": "鞋帶、打。",
+      "words": [
+        {
+          "word": "鞋",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "帶、",
+          "start": 0.46000000834465027,
+          "end": 0.7200000286102295
+        },
+        {
+          "word": "打。",
+          "start": 0.8999999761581421,
+          "end": 1.2000000476837158
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 2
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R052-G02-suffix.m4a",
+    "expected": "了請爸爸幫我解開",
+    "duration": 3.647007,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.7,
+    "max": -1.8,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 0.316757
+      },
+      {
+        "type": "end",
+        "seconds": 0.77873
+      },
+      {
+        "type": "start",
+        "seconds": 2.40925
+      },
+      {
+        "type": "end",
+        "seconds": 2.80912
+      },
+      {
+        "type": "start",
+        "seconds": 3.48726
+      },
+      {
+        "type": "end",
+        "seconds": 3.66875
+      }
+    ],
+    "sha256": "06050583d47eb55afb9c945135c02e348911568ba6a4297801b0c12383741a5e",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.6600000858306885,
+      "text": "了,請爸爸幫我解開。",
+      "words": [
+        {
+          "word": "了",
+          "start": 0,
+          "end": 0.3199999928474426
+        },
+        {
+          "word": "請",
+          "start": 1.100000023841858,
+          "end": 1.2999999523162842
+        },
+        {
+          "word": "爸爸",
+          "start": 1.2999999523162842,
+          "end": 1.7200000286102295
+        },
+        {
+          "word": "幫",
+          "start": 1.7200000286102295,
+          "end": 2.0999999046325684
+        },
+        {
+          "word": "我",
+          "start": 2.0999999046325684,
+          "end": 2.8399999141693115
+        },
+        {
+          "word": "解",
+          "start": 2.8399999141693115,
+          "end": 3.140000104904175
+        },
+        {
+          "word": "開。",
+          "start": 3.140000104904175,
+          "end": 3.440000057220459
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R052-G05-wrong-one.m4a",
+    "expected": "水果太多不如分送給同學",
+    "duration": 4.39,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.7,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.44156
+      },
+      {
+        "type": "end",
+        "seconds": 2.0419
+      },
+      {
+        "type": "start",
+        "seconds": 4.23032
+      },
+      {
+        "type": "end",
+        "seconds": 4.41179
+      }
+    ],
+    "sha256": "a4f8935429909854eb19e57d73fa9b1e57487f629cee2635053ffc9f04e9cb2f",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.409999847412109,
+      "text": "水果太多,不如分送給同學。",
+      "words": [
+        {
+          "word": "水",
+          "start": 0,
+          "end": 0.5
+        },
+        {
+          "word": "果",
+          "start": 0.5,
+          "end": 0.7200000286102295
+        },
+        {
+          "word": "太",
+          "start": 0.7200000286102295,
+          "end": 1.1399999856948853
+        },
+        {
+          "word": "多",
+          "start": 1.1399999856948853,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "不",
+          "start": 2.299999952316284,
+          "end": 2.319999933242798
+        },
+        {
+          "word": "如",
+          "start": 2.319999933242798,
+          "end": 2.680000066757202
+        },
+        {
+          "word": "分",
+          "start": 2.680000066757202,
+          "end": 3.059999942779541
+        },
+        {
+          "word": "送",
+          "start": 3.059999942779541,
+          "end": 3.2200000286102295
+        },
+        {
+          "word": "給",
+          "start": 3.2200000286102295,
+          "end": 3.5
+        },
+        {
+          "word": "同",
+          "start": 3.5,
+          "end": 3.9200000762939453
+        },
+        {
+          "word": "學。",
+          "start": 3.9200000762939453,
+          "end": 4.159999847412109
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R052-G05-wrong-two.m4a",
+    "expected": "水果太多不如分送給小光",
+    "duration": 3.733991,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.39912
+      },
+      {
+        "type": "end",
+        "seconds": 1.57853
+      },
+      {
+        "type": "start",
+        "seconds": 3.57431
+      },
+      {
+        "type": "end",
+        "seconds": 3.73841
+      }
+    ],
+    "sha256": "8b0742422d9c0f6c1e5a3a4484da7edc385f4f74e8ae2cd9b96aa0bdf83a7076",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.7300000190734863,
+      "text": "水果太多,不如分送給小光。",
+      "words": [
+        {
+          "word": "水",
+          "start": 0,
+          "end": 0.4000000059604645
+        },
+        {
+          "word": "果",
+          "start": 0.4000000059604645,
+          "end": 0.6600000262260437
+        },
+        {
+          "word": "太",
+          "start": 0.6600000262260437,
+          "end": 0.9599999785423279
+        },
+        {
+          "word": "多",
+          "start": 0.9599999785423279,
+          "end": 1.3600000143051147
+        },
+        {
+          "word": "不",
+          "start": 1.6399999856948853,
+          "end": 1.7999999523162842
+        },
+        {
+          "word": "如",
+          "start": 1.7999999523162842,
+          "end": 2.0799999237060547
+        },
+        {
+          "word": "分",
+          "start": 2.0799999237060547,
+          "end": 2.4200000762939453
+        },
+        {
+          "word": "送",
+          "start": 2.4200000762939453,
+          "end": 2.640000104904175
+        },
+        {
+          "word": "給",
+          "start": 2.640000104904175,
+          "end": 2.9600000381469727
+        },
+        {
+          "word": "小",
+          "start": 2.9600000381469727,
+          "end": 3.240000009536743
+        },
+        {
+          "word": "光。",
+          "start": 3.240000009536743,
+          "end": 3.4800000190734863
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  }
+]

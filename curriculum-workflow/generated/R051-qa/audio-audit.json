@@ -1,0 +1,814 @@
+[
+  {
+    "file": "R051-S01.m4a",
+    "expected": "報紙翻過來電話號碼在後面",
+    "duration": 4.38,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.9,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.43546
+      },
+      {
+        "type": "end",
+        "seconds": 1.94367
+      },
+      {
+        "type": "start",
+        "seconds": 3.02707
+      },
+      {
+        "type": "end",
+        "seconds": 3.38438
+      },
+      {
+        "type": "start",
+        "seconds": 4.2202
+      },
+      {
+        "type": "end",
+        "seconds": 4.38857
+      }
+    ],
+    "sha256": "ed6fc666f0674e723c7c57c54fd1f6567af8d0e797340ad66196c6a41156d28e",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.380000114440918,
+      "text": "報紙翻過來,電話號碼在後面。",
+      "words": [
+        {
+          "word": "報",
+          "start": 0,
+          "end": 0.3400000035762787
+        },
+        {
+          "word": "紙",
+          "start": 0.3400000035762787,
+          "end": 0.5799999833106995
+        },
+        {
+          "word": "翻",
+          "start": 0.5799999833106995,
+          "end": 0.9599999785423279
+        },
+        {
+          "word": "過來",
+          "start": 0.9599999785423279,
+          "end": 1.3799999952316284
+        },
+        {
+          "word": "電",
+          "start": 2.240000009536743,
+          "end": 2.240000009536743
+        },
+        {
+          "word": "話",
+          "start": 2.240000009536743,
+          "end": 2.5199999809265137
+        },
+        {
+          "word": "號",
+          "start": 2.5199999809265137,
+          "end": 2.799999952316284
+        },
+        {
+          "word": "碼",
+          "start": 2.799999952316284,
+          "end": 2.9800000190734863
+        },
+        {
+          "word": "在",
+          "start": 2.9800000190734863,
+          "end": 3.740000009536743
+        },
+        {
+          "word": "後",
+          "start": 3.740000009536743,
+          "end": 4.019999980926514
+        },
+        {
+          "word": "面。",
+          "start": 4.019999980926514,
+          "end": 4.199999809265137
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R051-S02.m4a",
+    "expected": "這頁菜單的字印得好小",
+    "duration": 3.931995,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.6,
+    "max": -2.4,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.50438
+      },
+      {
+        "type": "end",
+        "seconds": 1.70676
+      },
+      {
+        "type": "start",
+        "seconds": 2.27234
+      },
+      {
+        "type": "end",
+        "seconds": 2.54449
+      },
+      {
+        "type": "start",
+        "seconds": 3.77163
+      },
+      {
+        "type": "end",
+        "seconds": 3.94739
+      }
+    ],
+    "sha256": "07cfdfd437b0c37ead6220067875ffd7c0fdce558a612efcfc46549e8c492e04",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.940000057220459,
+      "text": "這頁菜單的字印得好小。",
+      "words": [
+        {
+          "word": "這",
+          "start": 0,
+          "end": 0.3799999952316284
+        },
+        {
+          "word": "頁",
+          "start": 0.3799999952316284,
+          "end": 0.6600000262260437
+        },
+        {
+          "word": "菜",
+          "start": 0.6600000262260437,
+          "end": 0.9599999785423279
+        },
+        {
+          "word": "單",
+          "start": 0.9599999785423279,
+          "end": 1.2400000095367432
+        },
+        {
+          "word": "的",
+          "start": 1.2400000095367432,
+          "end": 1.940000057220459
+        },
+        {
+          "word": "字",
+          "start": 1.940000057220459,
+          "end": 2.2799999713897705
+        },
+        {
+          "word": "印",
+          "start": 2.2799999713897705,
+          "end": 2.7799999713897705
+        },
+        {
+          "word": "得",
+          "start": 2.7799999713897705,
+          "end": 3.140000104904175
+        },
+        {
+          "word": "好",
+          "start": 3.140000104904175,
+          "end": 3.4800000190734863
+        },
+        {
+          "word": "小。",
+          "start": 3.4800000190734863,
+          "end": 3.7200000286102295
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R051-S03.m4a",
+    "expected": "可以選單人房或者雙人房",
+    "duration": 4.199002,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.7,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.9849
+      },
+      {
+        "type": "end",
+        "seconds": 2.41984
+      },
+      {
+        "type": "start",
+        "seconds": 4.03853
+      },
+      {
+        "type": "end",
+        "seconds": 4.20281
+      }
+    ],
+    "sha256": "37ecbe87001f8ec588b57675d8cce499692465422f4d2b49a5e3711771e1e203",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.199999809265137,
+      "text": "可以選單人房或者雙人房。",
+      "words": [
+        {
+          "word": "可以",
+          "start": 0,
+          "end": 0.4399999976158142
+        },
+        {
+          "word": "選",
+          "start": 0.4399999976158142,
+          "end": 1.0199999809265137
+        },
+        {
+          "word": "單",
+          "start": 1.0199999809265137,
+          "end": 1.4199999570846558
+        },
+        {
+          "word": "人",
+          "start": 1.4199999570846558,
+          "end": 1.659999966621399
+        },
+        {
+          "word": "房",
+          "start": 1.659999966621399,
+          "end": 1.9800000190734863
+        },
+        {
+          "word": "或者",
+          "start": 1.9800000190734863,
+          "end": 2.859999895095825
+        },
+        {
+          "word": "雙",
+          "start": 2.859999895095825,
+          "end": 3.4000000953674316
+        },
+        {
+          "word": "人",
+          "start": 3.4000000953674316,
+          "end": 3.700000047683716
+        },
+        {
+          "word": "房。",
+          "start": 3.700000047683716,
+          "end": 3.940000057220459
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R051-S04.m4a",
+    "expected": "怪物沒有變弱是勇者越來越強",
+    "duration": 4.936009,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.7,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.74501
+      },
+      {
+        "type": "end",
+        "seconds": 2.21351
+      },
+      {
+        "type": "start",
+        "seconds": 3.21664
+      },
+      {
+        "type": "end",
+        "seconds": 3.48156
+      },
+      {
+        "type": "start",
+        "seconds": 4.77621
+      },
+      {
+        "type": "end",
+        "seconds": 4.94585
+      }
+    ],
+    "sha256": "3efeeecfeb475f632bed5238f163fedd5796a5b1b7a0ecd7201681b54d41f750",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.940000057220459,
+      "text": "怪物沒有變弱,是勇者越來越強。",
+      "words": [
+        {
+          "word": "怪",
+          "start": 0,
+          "end": 0.3199999928474426
+        },
+        {
+          "word": "物",
+          "start": 0.3199999928474426,
+          "end": 0.5400000214576721
+        },
+        {
+          "word": "沒有",
+          "start": 0.5400000214576721,
+          "end": 1.059999942779541
+        },
+        {
+          "word": "變",
+          "start": 1.059999942779541,
+          "end": 1.5
+        },
+        {
+          "word": "弱",
+          "start": 1.5,
+          "end": 1.7200000286102295
+        },
+        {
+          "word": "是",
+          "start": 2.5,
+          "end": 2.5999999046325684
+        },
+        {
+          "word": "勇",
+          "start": 2.5999999046325684,
+          "end": 2.940000057220459
+        },
+        {
+          "word": "者",
+          "start": 2.940000057220459,
+          "end": 3.319999933242798
+        },
+        {
+          "word": "越",
+          "start": 3.319999933242798,
+          "end": 3.8399999141693115
+        },
+        {
+          "word": "來",
+          "start": 3.8399999141693115,
+          "end": 4.099999904632568
+        },
+        {
+          "word": "越",
+          "start": 4.099999904632568,
+          "end": 4.400000095367432
+        },
+        {
+          "word": "強。",
+          "start": 4.400000095367432,
+          "end": 4.699999809265137
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R051-S05.m4a",
+    "expected": "用手指算加法或減法",
+    "duration": 4.073991,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -19,
+    "max": -2.1,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.10045
+      },
+      {
+        "type": "end",
+        "seconds": 1.29873
+      },
+      {
+        "type": "start",
+        "seconds": 2.52086
+      },
+      {
+        "type": "end",
+        "seconds": 2.79293
+      },
+      {
+        "type": "start",
+        "seconds": 3.9137
+      },
+      {
+        "type": "end",
+        "seconds": 4.08671
+      }
+    ],
+    "sha256": "4164c8b0153c00d11239b5ca05efe6d9b4a61591c5ab7e58778db89e4e0826cf",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.079999923706055,
+      "text": "用手指算加法或減法。",
+      "words": [
+        {
+          "word": "用",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "手",
+          "start": 0.46000000834465027,
+          "end": 0.8399999737739563
+        },
+        {
+          "word": "指",
+          "start": 0.8399999737739563,
+          "end": 1.100000023841858
+        },
+        {
+          "word": "算",
+          "start": 1.100000023841858,
+          "end": 1.8799999952316284
+        },
+        {
+          "word": "加",
+          "start": 1.8799999952316284,
+          "end": 2.2799999713897705
+        },
+        {
+          "word": "法",
+          "start": 2.2799999713897705,
+          "end": 2.5199999809265137
+        },
+        {
+          "word": "或",
+          "start": 2.5199999809265137,
+          "end": 3.200000047683716
+        },
+        {
+          "word": "減",
+          "start": 3.200000047683716,
+          "end": 3.640000104904175
+        },
+        {
+          "word": "法。",
+          "start": 3.640000104904175,
+          "end": 3.8399999141693115
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R051-G02-prefix.m4a",
+    "expected": "這頁菜單的字",
+    "duration": 1.776009,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -25.8,
+    "max": -7,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.61578
+      },
+      {
+        "type": "end",
+        "seconds": 1.78794
+      }
+    ],
+    "sha256": "144c312794e35954c225cd7e9d2795397e40083665fb9e507be2c1b1c71ff73d",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 1.7799999713897705,
+      "text": "這頁菜單的字。",
+      "words": [
+        {
+          "word": "這",
+          "start": 0,
+          "end": 0.30000001192092896
+        },
+        {
+          "word": "頁",
+          "start": 0.30000001192092896,
+          "end": 0.5799999833106995
+        },
+        {
+          "word": "菜",
+          "start": 0.5799999833106995,
+          "end": 0.8799999952316284
+        },
+        {
+          "word": "單",
+          "start": 0.8799999952316284,
+          "end": 1.1399999856948853
+        },
+        {
+          "word": "的",
+          "start": 1.1399999856948853,
+          "end": 1.3600000143051147
+        },
+        {
+          "word": "字。",
+          "start": 1.3600000143051147,
+          "end": 1.5800000429153442
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 2
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R051-G02-suffix.m4a",
+    "expected": "得好小",
+    "duration": 1.52,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -15.6,
+    "max": -2.1,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.36061
+      },
+      {
+        "type": "end",
+        "seconds": 1.53252
+      }
+    ],
+    "sha256": "186945118f9c50bba2c1fe0902c80757bc298b3f082df8d9325f77aa8f9bd1a9",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.759999990463257,
+      "text": "格好小。",
+      "words": [
+        {
+          "word": "格",
+          "start": 0,
+          "end": 0.3400000035762787
+        },
+        {
+          "word": "好",
+          "start": 0.3400000035762787,
+          "end": 0.9599999785423279
+        },
+        {
+          "word": "小。",
+          "start": 0.9599999785423279,
+          "end": 1.2799999713897705
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R051-G05-wrong-one.m4a",
+    "expected": "用手指算加法和減法",
+    "duration": 3.333991,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.7,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 3.1742
+      },
+      {
+        "type": "end",
+        "seconds": 3.34367
+      }
+    ],
+    "sha256": "5995c67959c6a08db6b0cbd179784f55b4b2fb7a96cdc74c1af74be5fd1d9222",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.3399999141693115,
+      "text": "用手指算加法和減法。",
+      "words": [
+        {
+          "word": "用",
+          "start": 0,
+          "end": 0.4000000059604645
+        },
+        {
+          "word": "手",
+          "start": 0.4000000059604645,
+          "end": 0.8199999928474426
+        },
+        {
+          "word": "指",
+          "start": 0.8199999928474426,
+          "end": 1.0399999618530273
+        },
+        {
+          "word": "算",
+          "start": 1.0399999618530273,
+          "end": 1.7200000286102295
+        },
+        {
+          "word": "加",
+          "start": 1.7200000286102295,
+          "end": 2.0999999046325684
+        },
+        {
+          "word": "法",
+          "start": 2.0999999046325684,
+          "end": 2.299999952316284
+        },
+        {
+          "word": "和",
+          "start": 2.299999952316284,
+          "end": 2.619999885559082
+        },
+        {
+          "word": "減",
+          "start": 2.619999885559082,
+          "end": 2.9600000381469727
+        },
+        {
+          "word": "法。",
+          "start": 2.9600000381469727,
+          "end": 3.140000104904175
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  },
+  {
+    "file": "R051-G05-wrong-two.m4a",
+    "expected": "用手指算減法或加法",
+    "duration": 4.226009,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.2,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 2.65023
+      },
+      {
+        "type": "end",
+        "seconds": 3.05476
+      },
+      {
+        "type": "start",
+        "seconds": 4.06615
+      },
+      {
+        "type": "end",
+        "seconds": 4.22603
+      }
+    ],
+    "sha256": "ebe1049725a4cfa038ccf7139007177e7d07b8656ae40468463e0f74d4a241c8",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.21999979019165,
+      "text": "用手指算減法或加法。",
+      "words": [
+        {
+          "word": "用",
+          "start": 0,
+          "end": 0.5199999809265137
+        },
+        {
+          "word": "手",
+          "start": 0.5199999809265137,
+          "end": 0.9599999785423279
+        },
+        {
+          "word": "指",
+          "start": 0.9599999785423279,
+          "end": 1.2400000095367432
+        },
+        {
+          "word": "算",
+          "start": 1.2400000095367432,
+          "end": 2.0399999618530273
+        },
+        {
+          "word": "減",
+          "start": 2.0399999618530273,
+          "end": 2.4200000762939453
+        },
+        {
+          "word": "法",
+          "start": 2.4200000762939453,
+          "end": 2.680000066757202
+        },
+        {
+          "word": "或",
+          "start": 2.680000066757202,
+          "end": 3.440000057220459
+        },
+        {
+          "word": "加",
+          "start": 3.440000057220459,
+          "end": 3.859999895095825
+        },
+        {
+          "word": "法。",
+          "start": 3.859999895095825,
+          "end": 4.019999980926514
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "transcriptSource": "Same speech waveform; measured silent-tail-only trimming after transcription when noted."
+  }
+]

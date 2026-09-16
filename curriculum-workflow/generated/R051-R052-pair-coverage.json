@@ -1,0 +1,98 @@
+{
+  "pairUnits": [
+    "R051",
+    "R052"
+  ],
+  "afterLessonOrder": 420,
+  "targetLessonRange": {
+    "startOrder": 391,
+    "endOrder": 420
+  },
+  "allowedCount": 424,
+  "counts": {
+    "報": 2,
+    "頁": 1,
+    "碼": 1,
+    "翻": 1,
+    "印": 1,
+    "單": 2,
+    "雙": 1,
+    "選": 1,
+    "或": 2,
+    "者": 2,
+    "勇": 1,
+    "強": 1,
+    "算": 1,
+    "弱": 1,
+    "越": 2,
+    "加": 1,
+    "減": 1,
+    "法": 3,
+    "辦": 1,
+    "試": 1,
+    "定": 1,
+    "成": 1,
+    "功": 1,
+    "決": 1,
+    "解": 1,
+    "果": 1,
+    "如": 1,
+    "結": 1,
+    "合": 1,
+    "教": 1
+  },
+  "coverage": "30/30 PASS",
+  "lengthAudit": [
+    {
+      "id": "R051-S01",
+      "hanCount": 12,
+      "result": "≤12 Han PASS"
+    },
+    {
+      "id": "R051-S02",
+      "hanCount": 10,
+      "result": "≤12 Han PASS"
+    },
+    {
+      "id": "R051-S03",
+      "hanCount": 11,
+      "result": "≤12 Han PASS"
+    },
+    {
+      "id": "R051-S04",
+      "hanCount": 13,
+      "result": "13 Han：teacher-approved exception"
+    },
+    {
+      "id": "R051-S05",
+      "hanCount": 9,
+      "result": "≤12 Han PASS"
+    },
+    {
+      "id": "R052-S01",
+      "hanCount": 11,
+      "result": "≤12 Han PASS"
+    },
+    {
+      "id": "R052-S02",
+      "hanCount": 12,
+      "result": "≤12 Han PASS"
+    },
+    {
+      "id": "R052-S03",
+      "hanCount": 11,
+      "result": "≤12 Han PASS"
+    },
+    {
+      "id": "R052-S04",
+      "hanCount": 12,
+      "result": "≤12 Han PASS"
+    },
+    {
+      "id": "R052-S05",
+      "hanCount": 11,
+      "result": "≤12 Han PASS"
+    }
+  ],
+  "teacherNotes": "R051-S04: 13 Han：teacher-approved exception. 老師明確批准保留「怪物沒有變弱，是勇者越來越強。」及四行 displayLines；不得縮句。例外僅放寬漢字總數；手機排版、注音、Han-only index、option mapping、最終 charTimings、播放及逐字高亮仍須驗證。"
+}
