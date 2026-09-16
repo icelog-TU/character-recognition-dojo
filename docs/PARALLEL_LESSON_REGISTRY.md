@@ -17,7 +17,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 
-| L418 | 結 | claimed | Production F | codex/l418-complete-package | L415:解, L416:果, L417:如 | 解 果 如 | curriculum-workflow/lesson-requests/L418.json; curriculum-workflow/generated/L418-generation-packet.md; curriculum-workflow/drafts/L418-draft.json | public/assets/lessons/L418/; curriculum-workflow/audio-inbox/L418/ | Teacher-approved handoff; locked 422-character ceiling from 182ace5f; no image text exceptions. |
+| L418 | 結 | dependency-blocked-asset-complete | Production F | codex/l418-complete-package | L415:解, L416:果, L417:如 | 解 果 如 | curriculum-workflow/lesson-requests/L418.json; curriculum-workflow/generated/L418-generation-packet.md; curriculum-workflow/drafts/L418-draft.json | public/assets/lessons/L418/; curriculum-workflow/audio-inbox/L418/ | Package assets complete; locked 422-character ceiling from 182ace5f; no image text exceptions. Five-image style/cast PASS; 10 audio assets with timings. G02 recording browser-tooling fallback documented. Post-merge asset review /lesson-asset-review.html, select L418; npm run asset:review-status. Release integrates dependencies first. |
 
 ## Status Values
 
