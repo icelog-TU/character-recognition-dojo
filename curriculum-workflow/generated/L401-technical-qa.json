@@ -1,0 +1,189 @@
+{
+  "unit": "L401",
+  "sourceBoundary": "23cae19103e760f23700f5ff90d72fbd2e59bfc6",
+  "allowedCount": 400,
+  "coverage": {
+    "勇": 4,
+    "者": 3,
+    "或": 2,
+    "選": 2,
+    "雙": 1,
+    "單": 1
+  },
+  "stage4IndexCheck": "PASS",
+  "timingCheck": "PASS",
+  "images": [
+    {
+      "file": "L401-S01.webp",
+      "bytes": 198288,
+      "dimensions": "1024 1024",
+      "sha256": "7a6cbaf565aa21868b8dc96fdaf80cd7120cf0c8d990df5e78cdad13a08312ca",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS"
+    },
+    {
+      "file": "L401-S02.webp",
+      "bytes": 160006,
+      "dimensions": "1024 1024",
+      "sha256": "587c84173065f16358088815bad5cddb95acd394b8fddc2953cf4836dd551090",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS"
+    },
+    {
+      "file": "L401-S03.webp",
+      "bytes": 140686,
+      "dimensions": "1024 1024",
+      "sha256": "d35a6ed1d85f29a4a08a8c3331cea10652dfb026a09d68d8ae868b48869ccb09",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS"
+    },
+    {
+      "file": "L401-S04.webp",
+      "bytes": 142886,
+      "dimensions": "1024 1024",
+      "sha256": "84aa5a95ab237e7e683ffb6584ea53344b6c825447142699aaffd83d839809a4",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS"
+    },
+    {
+      "file": "L401-S05.webp",
+      "bytes": 140016,
+      "dimensions": "1024 1024",
+      "sha256": "efe296ccfea580ec2b7ac0395930309ecdda21f6f5d77dec26703ea447ebeee7",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS"
+    }
+  ],
+  "audio": [
+    {
+      "file": "char-u52c7.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 1834,
+      "maxDb": -2,
+      "meanDb": -19.7,
+      "sha256": "30fa271fb6828b2b63a2025d51cb6cd3cdbfa38e9d4dc6f98005abfcfc6988f3",
+      "decode": "PASS"
+    },
+    {
+      "file": "L401-G02-prefix.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 1741,
+      "maxDb": -6.7,
+      "meanDb": -19,
+      "sha256": "ee437a9a912b4983c365598ee2b37f6b0e7403d916e86fbbe8f71df8fa575a9e",
+      "decode": "PASS"
+    },
+    {
+      "file": "L401-G02-suffix.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 789,
+      "maxDb": -3.4,
+      "meanDb": -19,
+      "sha256": "79bcaa21937893d496a6f12972731b53132203b26d6f6c808a812baee19e337d",
+      "decode": "PASS"
+    },
+    {
+      "file": "L401-G05-wrong-one.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 5260,
+      "maxDb": -2,
+      "meanDb": -17.8,
+      "sha256": "cb125f808a9b04a345329f6249a89032ee0a1f64e69cad13f1b2bb60d46ee727",
+      "decode": "PASS"
+    },
+    {
+      "file": "L401-G05-wrong-two.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3716,
+      "maxDb": -2,
+      "meanDb": -18.2,
+      "sha256": "6b816f370c503e7fa9f1404460475103107e08e1081560857a80de54e5fc8f5f",
+      "decode": "PASS"
+    },
+    {
+      "file": "L401-S01.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4452,
+      "maxDb": -1.8,
+      "meanDb": -17.9,
+      "sha256": "4cb839d2b9289d22cb4aed27da20b2f6a2da3222f3450b3ef06cfc451f39ea79",
+      "decode": "PASS"
+    },
+    {
+      "file": "L401-S02.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4007,
+      "maxDb": -2,
+      "meanDb": -18.4,
+      "sha256": "6d62bd239166619d43ea3512df88126b15c796b4f1eebfed96ecbbd355a9d6dc",
+      "decode": "PASS"
+    },
+    {
+      "file": "L401-S03.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 2851,
+      "maxDb": -3.7,
+      "meanDb": -17.4,
+      "sha256": "302806e59756f55813abbb5428246fabfa295734b7a6c71a0dc4ee17b3e97a72",
+      "decode": "PASS"
+    },
+    {
+      "file": "L401-S04.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3938,
+      "maxDb": -2,
+      "meanDb": -18.1,
+      "sha256": "c3b5e6bcfa353e9d24fd159c3c1e038a4729dfbc953ca0bb5830fe76932eca40",
+      "decode": "PASS"
+    },
+    {
+      "file": "L401-S05.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 2733,
+      "maxDb": -2,
+      "meanDb": -17.6,
+      "sha256": "a21a80a239a6184f35a15fd30a196ee44b7c9ca6074d28272d65002d91201176",
+      "decode": "PASS"
+    }
+  ],
+  "choosePronunciationMeanSpreadDb": 0.4,
+  "folderBytes": 1189294,
+  "browserQA": {
+    "result": "tooling-fallback",
+    "url": "http://localhost:5201/tools/lesson-asset-review.html?unit=L401&ref=local",
+    "observed": "Five sentence cards and six auxiliary players loaded. Clicking G02 suffix Play lost the inspected target. Subsequent inspection confirmed the built-in This page crashed page; access to that data URL was blocked.",
+    "notVerified": [
+      "actual listening and pronunciation by ear",
+      "highlight synchronization",
+      "first-tap playback across all readers",
+      "phone microphone recording and stitched replay",
+      "subjective naturalness of G02 transition"
+    ],
+    "authority": "docs/CURRICULUM_PRODUCTION_SOP.md: Browser automation fallback for pre-merge playback QA"
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "file": "char-u52c7.m4a",
+    "expected": "勇",
+    "transcript": "용.",
+    "model": "gpt-4o-transcribe",
+    "promptProvided": false,
+    "interpretation": "Isolated syllable recognized as Korean yong despite Chinese language hint. This output is not used as character/tone verification. Standalone was generated directly from 勇 with ㄩㄥˇ instructions; subjective tone check is covered by browser tooling fallback."
+  },
+  {
+    "file": "L401-G02-prefix.m4a",
+    "expected": "第一次上學要",
+    "transcript": "第一次上學要",
+    "model": "gpt-4o-transcribe",
+    "promptProvided": false
+  },
+  {
+    "file": "L401-G02-suffix.m4a",
+    "expected": "敢一點",
+    "transcript": "敢一點。",
+    "model": "gpt-4o-transcribe",
+    "promptProvided": false
+  }
+]

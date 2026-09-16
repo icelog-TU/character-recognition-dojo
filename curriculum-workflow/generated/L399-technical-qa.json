@@ -1,0 +1,126 @@
+{
+  "unit": "L399",
+  "coverage": {
+    "或": 4,
+    "選": 2,
+    "雙": 2,
+    "單": 2,
+    "印": 1,
+    "翻": 1
+  },
+  "allowed": 400,
+  "audio": [
+    {
+      "src": "/assets/lessons/L399/audio/L399-S01.m4a",
+      "bytes": 40189,
+      "durationMs": 3339,
+      "meanDb": -19.6,
+      "maxDb": -2.1,
+      "sha256": "de6c2d5ed90d4bc7e1bd36ac152c4797b924d87e0f09c5d9a551e22ef350f7f4"
+    },
+    {
+      "src": "/assets/lessons/L399/audio/L399-S02.m4a",
+      "bytes": 59132,
+      "durationMs": 5312,
+      "meanDb": -18.3,
+      "maxDb": -2,
+      "sha256": "6f5b343ce5b160a0eb02f3649400c91f9f7aa136d21b10d338de722a5ebc3949"
+    },
+    {
+      "src": "/assets/lessons/L399/audio/L399-S03.m4a",
+      "bytes": 41629,
+      "durationMs": 4751,
+      "meanDb": -19.9,
+      "maxDb": -2.1,
+      "sha256": "ce6f6d85a33f1569b0c4da4f8fd01ceb81431e31a97a3b32c9df02b64c757771"
+    },
+    {
+      "src": "/assets/lessons/L399/audio/L399-S04.m4a",
+      "bytes": 50943,
+      "durationMs": 4728,
+      "meanDb": -19.2,
+      "maxDb": -2,
+      "sha256": "b2ad223ccd400679eb34c43a6b1df88da9ca64f867d5fcd201492f1cb8f86d87"
+    },
+    {
+      "src": "/assets/lessons/L399/audio/L399-S05.m4a",
+      "bytes": 55486,
+      "durationMs": 4588,
+      "meanDb": -19.6,
+      "maxDb": -2,
+      "sha256": "1bf5aa713e6f1a793758a6fb2621a1a4638bb558591b75d8245e873d5c26d0ab"
+    },
+    {
+      "src": "/assets/lessons/L399/audio/L399-G02-prefix.m4a",
+      "bytes": 39876,
+      "durationMs": 3317,
+      "meanDb": -18.3,
+      "maxDb": -2,
+      "sha256": "d72b7c7ece5c5f3758635c8448cf897f257a6c0d26008a766f28983c3b9a796c"
+    },
+    {
+      "src": "/assets/lessons/L399/audio/L399-G02-suffix.m4a",
+      "bytes": 32663,
+      "durationMs": 2693,
+      "meanDb": -19.5,
+      "maxDb": -2,
+      "sha256": "f936a58dd64b2d6a3c3c891f91b654c646449643cc3a41ec2355a0ab705cb09c"
+    },
+    {
+      "src": "/assets/lessons/L399/audio/L399-G05-wrong-one.m4a",
+      "bytes": 60346,
+      "durationMs": 4588,
+      "meanDb": -18.5,
+      "maxDb": -1.9,
+      "sha256": "193fffffe8b34397539c77627a09fde77287e056219f3ead3ee9a8869b964377"
+    },
+    {
+      "src": "/assets/lessons/L399/audio/L399-G05-wrong-two.m4a",
+      "bytes": 54846,
+      "durationMs": 5370,
+      "meanDb": -19.6,
+      "maxDb": -1.9,
+      "sha256": "7d883984f86f4de148fbeef524c71df0899bea8706322b72c028de438e6e13d3"
+    },
+    {
+      "src": "/assets/lessons/L399/audio/char-u6216.m4a",
+      "bytes": 12314,
+      "durationMs": 1555,
+      "meanDb": -19.5,
+      "maxDb": -2,
+      "sha256": "74d614a857b8f4aeb7fba6b97228e5985c93aa7a3e7cd5d93e79a81cee483205"
+    }
+  ],
+  "images": [
+    {
+      "src": "/assets/lessons/L399/images/L399-S01.webp",
+      "bytes": 175760,
+      "sha256": "a7ac5899b3da83d64e35b14fe2d7ff4c5bc66b2d56257a1a019acdc4fe611a1b"
+    },
+    {
+      "src": "/assets/lessons/L399/images/L399-S02.webp",
+      "bytes": 170680,
+      "sha256": "e2476eeec479a8dd936dfe5f70165990e7342b04f26833fe97a5f95c41078d1e"
+    },
+    {
+      "src": "/assets/lessons/L399/images/L399-S03.webp",
+      "bytes": 164344,
+      "sha256": "93bb2f256ca8c4d513b0d971ba12b62c394043628c59db7a7463d74941c646ba"
+    },
+    {
+      "src": "/assets/lessons/L399/images/L399-S04.webp",
+      "bytes": 161198,
+      "sha256": "1f2fcd52cb9287fdf95fa8aa19878ba2a2606bb0471d90b7ee50638612f42dbe"
+    },
+    {
+      "src": "/assets/lessons/L399/images/L399-S05.webp",
+      "bytes": 189036,
+      "sha256": "22dbc1e81186ebde80e4c73526be760875464f8a6159bff59db6338013a9a77c"
+    }
+  ],
+  "g05VolumeSpreadDb": 1.1000000000000014,
+  "imageBytes": 861018,
+  "audioBytes": 447424,
+  "totalBytes": 1308442,
+  "status": "PASS"
+}

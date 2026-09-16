@@ -1,0 +1,1294 @@
+{
+  "unit": "L402",
+  "checks": [
+    {
+      "check": "Ten final M4A files decode; AAC mono 44100Hz; volume gates and SHA256 verified; sentence/option transcripts exact; G02 prefix homophone evidence documented.",
+      "result": "PASS"
+    },
+    {
+      "check": "Standalone 強 generated directly from one character, duration/audibility gates and contextual Whisper transcript.",
+      "result": "PASS"
+    },
+    {
+      "check": "Final approved text/lines/coverage/allowed-character sweep, Han counts 11/10/9/11/10, each line <=6; timings indexed, bounded, nonoverlapping, 80-900ms spans, tails <=300ms.",
+      "result": "PASS"
+    },
+    {
+      "check": "Canonical Stage 4; G03 three distinct single-Han choices; G04 blanks index7 者 in 或者; G02 generated fragments and timing metadata; G05 full-sentence audio mean spread 0.7dB.",
+      "result": "PASS"
+    },
+    {
+      "check": "Final square 1024px WebP images all <=250KB; total 1294552 bytes <=2MB target.",
+      "result": "PASS"
+    },
+    {
+      "check": "Repo validate:production baseline and isolated L402 draft fixture; original production JSON restored byte-for-byte.",
+      "result": "PASS"
+    },
+    {
+      "check": "npm run assets:audit -- --strict on isolated L402 draft fixture; original production JSON restored byte-for-byte.",
+      "result": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "id": "L402-S01",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 246002,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "Large muscular monster faces smaller planted shield-bearing hero; no running or impact; fictional story cast."
+    },
+    {
+      "id": "L402-S02",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 160212,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "Recurring striped-shirt older brother points at TV two-avatar selection screen, girl holds controller with both hands; avatars inside screen only."
+    },
+    {
+      "id": "L402-S03",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 174824,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "Girl on stable floor, both hands on low sliding-window frame/handle, mother supervising; wind shown by curtain and trees."
+    },
+    {
+      "id": "L402-S04",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 146534,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "Exactly two food photos (fish and chicken), mother offers choice; no actual finished dishes on table."
+    },
+    {
+      "id": "L402-S05",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 154148,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "contentReview": "Five black stones on adjacent grid intersections in one straight line; four white stones elsewhere, no gaps/mixed-color line; mother just placed, girl admires."
+    }
+  ],
+  "audio": [
+    {
+      "file": "L402-S01.m4a",
+      "expected": "怪物很強但勇者沒有跑走",
+      "duration": 3.693991,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.7,
+      "max": -2,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0.47873
+        },
+        {
+          "type": "end",
+          "seconds": 0.70678
+        },
+        {
+          "type": "start",
+          "seconds": 1.642154
+        },
+        {
+          "type": "end",
+          "seconds": 1.82034
+        }
+      ],
+      "sha256": "371ee1d9935043f19f0ddae7fe2bfbb5a17e10556e06728822884d546a4553bd",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.7100000381469727,
+        "text": "怪物很強,但勇者沒有跑走。",
+        "words": [
+          {
+            "word": "怪",
+            "start": 0,
+            "end": 0.23999999463558197
+          },
+          {
+            "word": "物",
+            "start": 0.23999999463558197,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "很",
+            "start": 0.4399999976158142,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "強",
+            "start": 1.100000023841858,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "但",
+            "start": 1.8799999952316284,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "勇",
+            "start": 2.180000066757202,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "者",
+            "start": 2.4000000953674316,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "沒有",
+            "start": 2.5799999237060547,
+            "end": 3
+          },
+          {
+            "word": "跑",
+            "start": 3,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "走。",
+            "start": 3.299999952316284,
+            "end": 3.559999942779541
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L402-S02.m4a",
+      "expected": "可以選玩勇者或者怪物",
+      "duration": 3.496009,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.3,
+      "max": -2,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.89898
+        },
+        {
+          "type": "end",
+          "seconds": 2.204376
+        }
+      ],
+      "sha256": "0f32f839daf76c28d9f9e12b0e48c7c00dce710fbed603c991539a6d09bd518e",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.5,
+        "text": "可以選玩勇者或者怪物。",
+        "words": [
+          {
+            "word": "可以",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "選",
+            "start": 0.47999998927116394,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "玩",
+            "start": 0.9200000166893005,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "勇",
+            "start": 1.2599999904632568,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "者",
+            "start": 1.6200000047683716,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "或者",
+            "start": 1.8799999952316284,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "怪",
+            "start": 2.680000066757202,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "物。",
+            "start": 3.119999885559082,
+            "end": 3.359999895095825
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L402-S03.m4a",
+      "expected": "風太強我用雙手關窗",
+      "duration": 3.560998,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.8,
+      "max": -2.4,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.338889
+        },
+        {
+          "type": "end",
+          "seconds": 1.59483
+        }
+      ],
+      "sha256": "08b3ac31659d49e1f0aca42c9b7089ad72b3bd35abb642e6ef325752c96ba588",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.569999933242798,
+        "text": "風太強,我用雙手關窗。",
+        "words": [
+          {
+            "word": "風",
+            "start": 0,
+            "end": 0.4000000059604645
+          },
+          {
+            "word": "太",
+            "start": 0.4000000059604645,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "強",
+            "start": 0.8999999761581421,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "我",
+            "start": 1.7000000476837158,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "用",
+            "start": 1.8799999952316284,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "雙",
+            "start": 2.140000104904175,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "手",
+            "start": 2.4800000190734863,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "關",
+            "start": 2.740000009536743,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "窗。",
+            "start": 3.0999999046325684,
+            "end": 3.2799999713897705
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L402-S04.m4a",
+      "expected": "想吃魚或者雞媽媽都會做",
+      "duration": 3.820998,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.7,
+      "max": -2.1,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 2.025488
+        },
+        {
+          "type": "end",
+          "seconds": 2.46712
+        }
+      ],
+      "sha256": "f9226d1d1c5334c45eaf74b6ff954f44d33138cf35b872bd46c7158e7b59dd8f",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.8299999237060547,
+        "text": "想吃魚或者雞,媽媽都會做。",
+        "words": [
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "吃",
+            "start": 0.4399999976158142,
+            "end": 0.7200000286102295
+          },
+          {
+            "word": "魚",
+            "start": 0.7200000286102295,
+            "end": 1
+          },
+          {
+            "word": "或者",
+            "start": 1,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "雞",
+            "start": 1.6799999475479126,
+            "end": 2
+          },
+          {
+            "word": "媽",
+            "start": 2.759999990463257,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "媽",
+            "start": 2.7799999713897705,
+            "end": 2.9200000762939453
+          },
+          {
+            "word": "都",
+            "start": 2.9200000762939453,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "會",
+            "start": 3.180000066757202,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "做。",
+            "start": 3.440000057220459,
+            "end": 3.640000104904175
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L402-S05.m4a",
+      "expected": "媽媽下棋很強我比不上",
+      "duration": 4.166009,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.8,
+      "max": -2.5,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 2.36322
+        },
+        {
+          "type": "end",
+          "seconds": 2.940771
+        }
+      ],
+      "sha256": "38825f19e95f875f91a5ce3e39c28340a00c4428dbaae2b44ca07b34f18c10a0",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 4.170000076293945,
+        "text": "媽媽下棋很強,我比不上。",
+        "words": [
+          {
+            "word": "媽",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "媽",
+            "start": 0.4399999976158142,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "下",
+            "start": 0.7599999904632568,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "棋",
+            "start": 1.2200000286102295,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "很",
+            "start": 1.4199999570846558,
+            "end": 2
+          },
+          {
+            "word": "強",
+            "start": 2,
+            "end": 2.319999933242798
+          },
+          {
+            "word": "我",
+            "start": 3.0799999237060547,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "比",
+            "start": 3.3399999141693115,
+            "end": 3.5
+          },
+          {
+            "word": "不",
+            "start": 3.5,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "上。",
+            "start": 3.799999952316284,
+            "end": 4
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 5
+        }
+      }
+    },
+    {
+      "file": "char-u5f37.m4a",
+      "expected": "強",
+      "duration": 0.829002,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -25,
+      "max": -5.7,
+      "silence": [],
+      "sha256": "729baa268f67f7a9e19adeb3f48f70b8458397cd5e945e6e4d8efb461c37cb2f",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 0.8299999833106995,
+        "text": "強",
+        "words": [
+          {
+            "word": "強",
+            "start": 0,
+            "end": 0.5799999833106995
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 1
+        }
+      }
+    },
+    {
+      "file": "L402-G02-prefix.m4a",
+      "expected": "風太",
+      "duration": 0.998005,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -19.2,
+      "max": -2,
+      "silence": [],
+      "sha256": "f6df17debcbfa3d4565326eeacbab0b85d949cab1c5cf752754e171da92656c1",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 0.9900000095367432,
+        "text": "風態",
+        "words": [
+          {
+            "word": "風",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "態",
+            "start": 0.47999998927116394,
+            "end": 0.7599999904632568
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 1
+        }
+      }
+    },
+    {
+      "file": "L402-G02-suffix.m4a",
+      "expected": "我用雙手關窗",
+      "duration": 2.473991,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -16.9,
+      "max": -2,
+      "silence": [],
+      "sha256": "4244272c8450031e023c2f311eefcf3ba975ad1b0ba8f7eeaa4396dc41a58d5b",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.4800000190734863,
+        "text": "我用雙手關窗。",
+        "words": [
+          {
+            "word": "我",
+            "start": 0,
+            "end": 0.4000000059604645
+          },
+          {
+            "word": "用",
+            "start": 0.4000000059604645,
+            "end": 0.7200000286102295
+          },
+          {
+            "word": "雙",
+            "start": 0.7200000286102295,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "手",
+            "start": 1.2400000095367432,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "關",
+            "start": 1.5399999618530273,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "窗。",
+            "start": 1.9800000190734863,
+            "end": 2.1600000858306885
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      }
+    },
+    {
+      "file": "L402-G05-wrong-one.m4a",
+      "expected": "想吃魚或者菜媽媽都會做",
+      "duration": 4.375011,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17,
+      "max": -2,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.142018
+        },
+        {
+          "type": "end",
+          "seconds": 1.492517
+        },
+        {
+          "type": "start",
+          "seconds": 2.371859
+        },
+        {
+          "type": "end",
+          "seconds": 2.857279
+        }
+      ],
+      "sha256": "e1e1aa862ef55f1b159c91fd5c2f6b7332ab40f0115f24f790862875748382ca",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 4.380000114440918,
+        "text": "想吃魚或者菜,媽媽都會做。",
+        "words": [
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "吃",
+            "start": 0.41999998688697815,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "魚",
+            "start": 0.7599999904632568,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "或者",
+            "start": 1.0800000429153442,
+            "end": 1.940000057220459
+          },
+          {
+            "word": "菜",
+            "start": 1.940000057220459,
+            "end": 2.3399999141693115
+          },
+          {
+            "word": "媽",
+            "start": 3.1600000858306885,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "媽",
+            "start": 3.180000066757202,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "都",
+            "start": 3.319999933242798,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "會",
+            "start": 3.740000009536743,
+            "end": 4
+          },
+          {
+            "word": "做。",
+            "start": 4,
+            "end": 4.199999809265137
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 5
+        }
+      }
+    },
+    {
+      "file": "L402-G05-wrong-two.m4a",
+      "expected": "想吃魚或者雞爸爸都會做",
+      "duration": 4.512993,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.4,
+      "max": -2,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.279365
+        },
+        {
+          "type": "end",
+          "seconds": 1.552154
+        },
+        {
+          "type": "start",
+          "seconds": 2.504626
+        },
+        {
+          "type": "end",
+          "seconds": 3.097075
+        }
+      ],
+      "sha256": "1f0f924d2a7f7df37068c4ef900c84ff22b25675bed43352fcfe39fcff1640fb",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 4.519999980926514,
+        "text": "想吃魚或者雞,爸爸都會做。",
+        "words": [
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "吃",
+            "start": 0.4399999976158142,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "魚",
+            "start": 0.8799999952316284,
+            "end": 1.2000000476837158
+          },
+          {
+            "word": "或者",
+            "start": 1.2000000476837158,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "雞",
+            "start": 2.0999999046325684,
+            "end": 2.5
+          },
+          {
+            "word": "爸爸",
+            "start": 3.1600000858306885,
+            "end": 3.5
+          },
+          {
+            "word": "都",
+            "start": 3.5,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "會",
+            "start": 3.859999895095825,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "做。",
+            "start": 4.119999885559082,
+            "end": 4.360000133514404
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 5
+        }
+      }
+    }
+  ],
+  "assetBytes": 1294552,
+  "browserQA": {
+    "cleanup": "Viewport reset; own QA tab closed",
+    "fallback": "Browser automation stalled at recording cue; microphone permission unchanged. Technical checks and audio playback used as documented fallback",
+    "viewport": {
+      "contentWidth": 375,
+      "width": 390,
+      "height": 844
+    },
+    "media": "All ten final M4A files reached ENDED; G02 suffix played through standalone local playback fixture",
+    "sentences": "S01-S05 images, display lines, highlights and playback inspected at phone width",
+    "games": {
+      "G01": "PASS correct 強 selected",
+      "G03": "PASS correct 強 selected",
+      "G05": "PASS all three full sentence audio options ENDED; correct option selected",
+      "G04": "PASS 或者怪物 in order; 勇者 retained",
+      "G02": "Prefix ENDED; target visible. Two recording cue blob PLAY events, no completion; recording and recorded replay not verified"
+    },
+    "listening": "No human auditory or recorded microphone QA claimed; teacher subjective listening remains post-merge",
+    "status": "playback-verified-recording-tooling-fallback",
+    "fixture": "Actual LessonPanel with lesson-local draft; no production JSON changes"
+  },
+  "browserEvents": [
+    {
+      "event": "PLAY L402-S01.m4a",
+      "time": 1789526221926
+    },
+    {
+      "event": "ENDED L402-S01.m4a",
+      "time": 1789526225700
+    },
+    {
+      "event": "PLAY L402-S02.m4a",
+      "time": 1789526274057
+    },
+    {
+      "event": "ENDED L402-S02.m4a",
+      "time": 1789526277610
+    },
+    {
+      "event": "PLAY L402-S03.m4a",
+      "time": 1789526319581
+    },
+    {
+      "event": "ENDED L402-S03.m4a",
+      "time": 1789526323231
+    },
+    {
+      "event": "PLAY L402-S04.m4a",
+      "time": 1789526436529
+    },
+    {
+      "event": "ENDED L402-S04.m4a",
+      "time": 1789526440399
+    },
+    {
+      "event": "PLAY L402-S05.m4a",
+      "time": 1789526463960
+    },
+    {
+      "event": "ENDED L402-S05.m4a",
+      "time": 1789526468170
+    },
+    {
+      "event": "PLAY char-u5f37.m4a",
+      "time": 1789526509629
+    },
+    {
+      "event": "ENDED char-u5f37.m4a",
+      "time": 1789526510541
+    },
+    {
+      "event": "PLAY L402-G02-prefix.m4a",
+      "time": 1789526531303
+    },
+    {
+      "event": "ENDED L402-G02-prefix.m4a",
+      "time": 1789526533342
+    },
+    {
+      "event": "PLAY afbb49b2-7e8d-4da0-8595-b30691ce1020",
+      "time": 1789526552716
+    },
+    {
+      "event": "PLAY afbb49b2-7e8d-4da0-8595-b30691ce1020",
+      "time": 1789526552795
+    },
+    {
+      "event": "PLAY L402-S05.m4a",
+      "time": 1789526592424
+    },
+    {
+      "event": "ENDED L402-S05.m4a",
+      "time": 1789526596637
+    },
+    {
+      "event": "PLAY L402-S02.m4a",
+      "time": 1789526620985
+    },
+    {
+      "event": "ENDED L402-S02.m4a",
+      "time": 1789526624535
+    },
+    {
+      "event": "PLAY L402-G05-wrong-one.m4a",
+      "time": 1789526686201
+    },
+    {
+      "event": "ENDED L402-G05-wrong-one.m4a",
+      "time": 1789526690614
+    },
+    {
+      "event": "PLAY L402-G05-wrong-two.m4a",
+      "time": 1789526724401
+    },
+    {
+      "event": "ENDED L402-G05-wrong-two.m4a",
+      "time": 1789526728991
+    },
+    {
+      "event": "PLAY L402-S04.m4a",
+      "time": 1789526750567
+    },
+    {
+      "event": "ENDED L402-S04.m4a",
+      "time": 1789526754479
+    },
+    {
+      "event": "PLAY L402-S01.m4a",
+      "time": 1789526955765
+    },
+    {
+      "event": "ENDED L402-S01.m4a",
+      "time": 1789526959602
+    },
+    {
+      "event": "PLAY L402-G02-suffix.m4a",
+      "time": 1789526981726
+    },
+    {
+      "event": "ENDED L402-G02-suffix.m4a",
+      "time": 1789526984243
+    }
+  ],
+  "timingRepairs": [
+    {
+      "sentence": "L402-S01",
+      "index": 2,
+      "old": {
+        "charIndex": 2,
+        "startMs": 440,
+        "endMs": 1100
+      },
+      "updated": {
+        "charIndex": 2,
+        "startMs": 707,
+        "endMs": 1100
+      },
+      "reason": "Start 很 after measured pause ending 706.78ms."
+    },
+    {
+      "sentence": "L402-S02",
+      "index": 6,
+      "old": {
+        "charIndex": 6,
+        "startMs": 1940,
+        "endMs": 2310
+      },
+      "updated": {
+        "charIndex": 6,
+        "startMs": 2204,
+        "endMs": 2310
+      },
+      "reason": "Start 或 after measured pause ending 2204.376ms."
+    },
+    {
+      "sentence": "L402-S03",
+      "index": 3,
+      "old": {
+        "charIndex": 3,
+        "startMs": 1700,
+        "endMs": 1880
+      },
+      "updated": {
+        "charIndex": 3,
+        "startMs": 1595,
+        "endMs": 1880
+      },
+      "reason": "Start 我 at measured voiced onset following pause ending 1594.83ms."
+    },
+    {
+      "sentence": "L402-S04",
+      "index": 6,
+      "old": {
+        "charIndex": 6,
+        "startMs": 2760,
+        "endMs": 2780
+      },
+      "updated": {
+        "charIndex": 6,
+        "startMs": 2467,
+        "endMs": 2780
+      },
+      "reason": "Whisper first 媽 was only 20ms; extend from measured onset following pause ending 2467.12ms to next AI word boundary 2780ms."
+    },
+    {
+      "sentence": "L402-S05",
+      "index": 6,
+      "old": {
+        "charIndex": 6,
+        "startMs": 3080,
+        "endMs": 3340
+      },
+      "updated": {
+        "charIndex": 6,
+        "startMs": 2941,
+        "endMs": 3340
+      },
+      "reason": "Start 我 at measured onset following pause ending 2940.771ms."
+    }
+  ],
+  "imageGeneration": "Built-in imagegen; final exported WebP inspected side-by-side against full L058, refined examples L115/L118/L119/L128 and family L154/L162/L163.",
+  "rejectedDrafts": [
+    "S02 initial image omitted brother pointing; corrected with imagegen before export."
+  ],
+  "rejectedDraftsCommitted": false,
+  "audioMethod": "Repo ai:audio, assets:audio, assets:align:ai. Complete exact-text sentences/character/fragments/options generated independently; no syllable extraction or splicing. Measured trailing silence capped with 120ms decay allowance; five AI timing onsets refined using final-audio pause boundaries. Temporary shared JSON/scripts restored.",
+  "transcriptNotes": {
+    "prefix": "Whisper returns 風態 for 風太: two identical Taiwan Mandarin syllables ㄈㄥ ㄊㄞˋ. Raw transcript preserved; only timing association treats the same-sound 態 as approved 太. No source text changed.",
+    "character": "Standalone 強 regenerated after ambiguous unprompted recognition. Final contextual Whisper reads 強. Unprompted short-clip ASR gave non-Chinese output and generic Mandarin context returned 羌; these are retained as limitations, not conclusive pronunciation evidence. Autocorrelation voiced contour includes a rise from about 144Hz to 190Hz, supporting the requested rising tone but not replacing human listening. Teacher subjective listening remains post-merge."
+  },
+  "characterPitch": [
+    {
+      "ms": 265,
+      "hz": 175.8,
+      "correlation": 0.785
+    },
+    {
+      "ms": 275,
+      "hz": 175.8,
+      "correlation": 0.912
+    },
+    {
+      "ms": 285,
+      "hz": 177.8,
+      "correlation": 0.989
+    },
+    {
+      "ms": 295,
+      "hz": 177.8,
+      "correlation": 0.982
+    },
+    {
+      "ms": 305,
+      "hz": 177.8,
+      "correlation": 0.94
+    },
+    {
+      "ms": 315,
+      "hz": 177.8,
+      "correlation": 0.88
+    },
+    {
+      "ms": 325,
+      "hz": 175.8,
+      "correlation": 0.804
+    },
+    {
+      "ms": 335,
+      "hz": 168.4,
+      "correlation": 0.765
+    },
+    {
+      "ms": 345,
+      "hz": 156.9,
+      "correlation": 0.752
+    },
+    {
+      "ms": 355,
+      "hz": 153.8,
+      "correlation": 0.815
+    },
+    {
+      "ms": 365,
+      "hz": 152.4,
+      "correlation": 0.814
+    },
+    {
+      "ms": 375,
+      "hz": 150.9,
+      "correlation": 0.821
+    },
+    {
+      "ms": 385,
+      "hz": 149.5,
+      "correlation": 0.868
+    },
+    {
+      "ms": 395,
+      "hz": 148.1,
+      "correlation": 0.93
+    },
+    {
+      "ms": 405,
+      "hz": 148.1,
+      "correlation": 0.942
+    },
+    {
+      "ms": 415,
+      "hz": 146.8,
+      "correlation": 0.98
+    },
+    {
+      "ms": 425,
+      "hz": 146.8,
+      "correlation": 0.984
+    },
+    {
+      "ms": 435,
+      "hz": 146.8,
+      "correlation": 0.99
+    },
+    {
+      "ms": 445,
+      "hz": 146.8,
+      "correlation": 0.98
+    },
+    {
+      "ms": 455,
+      "hz": 146.8,
+      "correlation": 0.976
+    },
+    {
+      "ms": 465,
+      "hz": 146.8,
+      "correlation": 0.978
+    },
+    {
+      "ms": 475,
+      "hz": 145.5,
+      "correlation": 0.963
+    },
+    {
+      "ms": 485,
+      "hz": 145.5,
+      "correlation": 0.972
+    },
+    {
+      "ms": 495,
+      "hz": 145.5,
+      "correlation": 0.953
+    },
+    {
+      "ms": 505,
+      "hz": 145.5,
+      "correlation": 0.93
+    },
+    {
+      "ms": 515,
+      "hz": 144.1,
+      "correlation": 0.942
+    },
+    {
+      "ms": 525,
+      "hz": 145.5,
+      "correlation": 0.929
+    },
+    {
+      "ms": 535,
+      "hz": 149.5,
+      "correlation": 0.936
+    },
+    {
+      "ms": 545,
+      "hz": 153.8,
+      "correlation": 0.922
+    },
+    {
+      "ms": 555,
+      "hz": 158.4,
+      "correlation": 0.95
+    },
+    {
+      "ms": 565,
+      "hz": 161.6,
+      "correlation": 0.967
+    },
+    {
+      "ms": 575,
+      "hz": 164.9,
+      "correlation": 0.983
+    },
+    {
+      "ms": 585,
+      "hz": 170.2,
+      "correlation": 0.969
+    },
+    {
+      "ms": 595,
+      "hz": 172,
+      "correlation": 0.979
+    },
+    {
+      "ms": 605,
+      "hz": 175.8,
+      "correlation": 0.991
+    },
+    {
+      "ms": 615,
+      "hz": 179.8,
+      "correlation": 0.982
+    },
+    {
+      "ms": 625,
+      "hz": 181.8,
+      "correlation": 0.993
+    },
+    {
+      "ms": 635,
+      "hz": 186,
+      "correlation": 1.004
+    },
+    {
+      "ms": 645,
+      "hz": 186,
+      "correlation": 1.01
+    },
+    {
+      "ms": 655,
+      "hz": 188.2,
+      "correlation": 0.993
+    },
+    {
+      "ms": 665,
+      "hz": 190.5,
+      "correlation": 0.96
+    }
+  ],
+  "characterContextTranscript": {
+    "text": "羌",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 38,
+      "input_tokens": 34,
+      "input_token_details": {
+        "text_tokens": 26,
+        "audio_tokens": 8
+      },
+      "output_tokens": 4
+    }
+  },
+  "independentCharacterTranscript": {
+    "text": "ジャン",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 22,
+      "input_tokens": 19,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 19
+      },
+      "output_tokens": 3
+    }
+  },
+  "specialQA": {
+    "S02": "PASS: older brother identity and TV selection; no readable text.",
+    "S03": "PASS: two-handed sliding-window operation from floor, mother beside girl.",
+    "S05": "PASS: five consecutive same-color stones on intersections, no gap or mixed color.",
+    "textExceptions": "None: no readable text or numerals allowed in images."
+  }
+}

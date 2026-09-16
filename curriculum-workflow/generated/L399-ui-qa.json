@@ -1,0 +1,12 @@
+{
+  "viewport": "390x844",
+  "stage1": "PASS: character tap enters playback and completes; visible character and zhuyin do not overlap.",
+  "stage3": "PASS: all five sentence cards tapped individually; playback state entered and ended; all-sentences-complete observed. Character highlight observed in screenshot.",
+  "g01": "PASS: target accepted.",
+  "g02": "Prefix playback stops before target. Hold-to-record capture and recorded replay not exercised: browser control exposes click, not sustained pointer down/up; click leaves ready state unchanged. Dedicated prefix/suffix/character files decode and exact-fragment AI alignment passes. SOP browser-tool fallback used for this interaction only.",
+  "g03": "PASS: three distinct single-Han choices; correct accepted.",
+  "g04": "PASS: four single-Han cards accepted in approved order.",
+  "g05": "PASS: all three readers enter playback on first click; complete full-text files technically verified.",
+  "tooling": "Playwright click twice timed out waiting for CDP Runtime.evaluate. Accessibility clicks worked for ordinary controls. No teacher subjective pronunciation or image approval claimed.",
+  "preview": "Local memory-only draft fixture; prerequisite placeholder lessons are not Release integration. Missing provisional zhuyin in that fixture is not a formal curriculum result."
+}
