@@ -1,0 +1,109 @@
+{
+  "unit": "L417",
+  "generation": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "speed": 0.9
+  },
+  "transcripts": [
+    {
+      "id": "L417-G02-prefix",
+      "text": "我會做家事比",
+      "model": "whisper-1",
+      "expectedTextContextUsed": true
+    },
+    {
+      "id": "L417-G02-suffix",
+      "text": "掃地",
+      "model": "whisper-1",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-G05-wrong-one",
+      "text": "水果吃不下,怎么解决?",
+      "model": "whisper-1",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-G05-wrong-two",
+      "text": "水果拿不完,怎麼解決?",
+      "model": "whisper-1",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-S01",
+      "text": "水果吃不完,怎麼解決?",
+      "model": "whisper-1",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-S02",
+      "text": "想吃點心,不如吃水果。",
+      "model": "whisper-1",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-S03",
+      "text": "如果换个解法,可能会成功。",
+      "model": "whisper-1",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-S04",
+      "text": "我決定學下棋",
+      "model": "whisper-1",
+      "expectedTextContextUsed": true
+    },
+    {
+      "id": "L417-S05",
+      "text": "我會做家事,比如掃地。",
+      "model": "whisper-1",
+      "expectedTextContextUsed": false
+    }
+  ],
+  "independent": [
+    {
+      "id": "L417-G02-prefix",
+      "text": "我會做家事比",
+      "model": "gpt-4o-transcribe",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-G02-suffix",
+      "text": "掃地。",
+      "model": "gpt-4o-transcribe",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-G05-wrong-one",
+      "text": "水果吃不下，怎么解决?",
+      "model": "gpt-4o-transcribe",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-G05-wrong-two",
+      "text": "水果拿不完，怎麼解決？",
+      "model": "gpt-4o-transcribe",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-S01",
+      "text": "水果吃不完怎麼解決?",
+      "model": "gpt-4o-transcribe",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "L417-S04",
+      "text": "我決定學下棋。",
+      "model": "gpt-4o-transcribe",
+      "expectedTextContextUsed": false
+    }
+  ],
+  "notes": [
+    "S01 regenerated whole to correct 解決 pronunciation; final independent and timing transcription match.",
+    "G02-prefix regenerated whole to retain final 比; independent unprompted transcription matches all six characters.",
+    "S04 and G02-prefix independently verified before supplying expected-text context to Whisper timing; no semantic substitution map used.",
+    "Standalone 如 generated separately with ㄖㄨˊ instruction. No slicing or splicing of character or game audio.",
+    "Technical transcription is not subjective listening."
+  ]
+}

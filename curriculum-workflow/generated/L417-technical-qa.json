@@ -1,0 +1,201 @@
+{
+  "unit": "L417",
+  "sourceBoundary": "18c9df4a4f1d4c9966b65d8b4371693a714e3d3c",
+  "allowedCount": 419,
+  "coverage": {
+    "如": 3,
+    "果": 3,
+    "解": 2,
+    "決": 2,
+    "功": 1,
+    "成": 1
+  },
+  "stage4IndexCheck": "PASS",
+  "timingCheck": "PASS",
+  "images": [
+    {
+      "file": "L417-S01.webp",
+      "bytes": 143056,
+      "dimensions": "1024 1024",
+      "sha256": "14f2d298117459ffb97cc735dccee0343498c0a5df678a05e2e68be4a6bda20f",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Three boxes still full of fresh fruit; mother and girl discussing surplus, no premature solution."
+    },
+    {
+      "file": "L417-S02.webp",
+      "bytes": 136846,
+      "dimensions": "1024 1024",
+      "sha256": "7cdebbe9ebab569e786246513143509b935f5de0a53ac2be676e1719a66bf3a9",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Girl holds sealed wordless biscuit packet; mother gently offers cut fruit, no force or scolding."
+    },
+    {
+      "file": "L417-S03.webp",
+      "bytes": 140392,
+      "dimensions": "1024 1024",
+      "sha256": "f28fbe6fe5461509e91d087a78af8b824b2134d756bee0f76b6a8e0f69360009",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Girl holds intact interlocking wooden burr puzzle; father points to a different side, no detached pieces or victory."
+    },
+    {
+      "file": "L417-S04.webp",
+      "bytes": 147302,
+      "dimensions": "1024 1024",
+      "sha256": "ddc518d760bc7d5b497e2a77235a1046300262b75cf00ac3ca3626b94b6a1ebf",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Girl actively asks father to learn; sparse demonstration stones on gomoku grid, distinct black/white bowls, no winning game."
+    },
+    {
+      "file": "L417-S05.webp",
+      "bytes": 142808,
+      "dimensions": "1024 1024",
+      "sha256": "274a52226f4f7a76cf218b3cf871f1b3f4cf2980a743d2fd1d196ea4079eaef2",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Child-sized broom gathers a few dry leaves; mother watches calmly in otherwise clean living room."
+    }
+  ],
+  "audio": [
+    {
+      "file": "char-u5982.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 1323,
+      "maxDb": -4.2,
+      "meanDb": -19,
+      "sha256": "f28c6114e3d13accb1bb1ec8a213b354ee3d30fdfbd7b99e7ffc4fcd8718d332",
+      "decode": "PASS"
+    },
+    {
+      "file": "L417-G02-prefix.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 2428,
+      "maxDb": -2,
+      "meanDb": -17,
+      "sha256": "37d6e7b487a62366108fe23968cb2a47119e14918b2aaf55cbd972c5445c8dde",
+      "decode": "PASS"
+    },
+    {
+      "file": "L417-G02-suffix.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 1094,
+      "maxDb": -6.6,
+      "meanDb": -24.8,
+      "sha256": "e64dc62a50cd3108aaac3ed1ee5b5462a8b41fd3f83494dc1f296c48a81aae10",
+      "decode": "PASS"
+    },
+    {
+      "file": "L417-G05-wrong-one.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3093,
+      "maxDb": -2,
+      "meanDb": -18.5,
+      "sha256": "3c68145003d70025460ce471a9afbd38e2bbcc9e2b60f86b042171870fd40b9f",
+      "decode": "PASS"
+    },
+    {
+      "file": "L417-G05-wrong-two.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3136,
+      "maxDb": -2.3,
+      "meanDb": -18.2,
+      "sha256": "34b97d9c397078554392e044b3cbf4e89e11b0587d33cde8169d702b38a22cb8",
+      "decode": "PASS"
+    },
+    {
+      "file": "L417-S01.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4212,
+      "maxDb": -2.2,
+      "meanDb": -18.6,
+      "sha256": "0b17e4c69246ca84c8c2acb559b611daf697479cca2ebbb310892a59d7ca0120",
+      "decode": "PASS"
+    },
+    {
+      "file": "L417-S02.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3878,
+      "maxDb": -2.6,
+      "meanDb": -19,
+      "sha256": "0a9095ba4f5e9d28a9bdc29825924452448fdbbe1fc379dbb81b48ea1cc7048f",
+      "decode": "PASS"
+    },
+    {
+      "file": "L417-S03.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3745,
+      "maxDb": -2,
+      "meanDb": -17.9,
+      "sha256": "0d9437da949a98c8823f45f840ecefdc65ca49fb34b5f67019100d116ba26dc2",
+      "decode": "PASS"
+    },
+    {
+      "file": "L417-S04.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 2844,
+      "maxDb": -2.4,
+      "meanDb": -19,
+      "sha256": "0650e7c4b911cbec9820ed46d0b620d6d07d97f9c22b9dde46097bd0bea67270",
+      "decode": "PASS"
+    },
+    {
+      "file": "L417-S05.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3663,
+      "maxDb": -2,
+      "meanDb": -19,
+      "sha256": "6c19528523fa0b040c2aa23f2672e88c15ebee78834ed024cbcc3e0956438886",
+      "decode": "PASS"
+    }
+  ],
+  "choosePronunciationMeanSpreadDb": 0.4,
+  "folderBytes": 1103387,
+  "browserQA": {
+    "result": "tooling-fallback",
+    "url": "http://localhost:5417/tools/lesson-asset-review.html?unit=L417&ref=local",
+    "observed": "Creating the L417 tab through Codex in-app browser timed out after30 seconds and reset the control kernel. Playback was not reached.",
+    "skipped": [
+      "Browser subjective continuous listening",
+      "Word-highlight playback",
+      "Phone teach-character recording and stitched replay"
+    ],
+    "policy": "CURRICULUM_PRODUCTION_SOP browser automation fallback; required non-browser gates passed."
+  },
+  "latestMainVerified": "4869fc1a67daa2e406d001247d6b1762c0609498",
+  "releaseBlockers": [
+    "L411",
+    "L412",
+    "L413",
+    "L414",
+    "L415",
+    "L416"
+  ]
+}

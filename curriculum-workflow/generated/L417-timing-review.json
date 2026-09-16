@@ -1,0 +1,168 @@
+[
+  {
+    "id": "L417-S01",
+    "index": 5,
+    "original": {
+      "charIndex": 5,
+      "startMs": 3060,
+      "endMs": 3140
+    },
+    "corrected": {
+      "startMs": 2720,
+      "endMs": 2960
+    },
+    "reason": "怎 consonant onset2720ms, voiced2820ms; replace80ms delayed timestamp."
+  },
+  {
+    "id": "L417-S01",
+    "index": 6,
+    "original": {
+      "charIndex": 6,
+      "startMs": 3140,
+      "endMs": 3220
+    },
+    "corrected": {
+      "startMs": 2960,
+      "endMs": 3220
+    },
+    "reason": "麼 connected voiced region2960-3220ms."
+  },
+  {
+    "id": "L417-G05-wrong-one",
+    "index": 5,
+    "original": {
+      "charIndex": 5,
+      "startMs": 2180,
+      "endMs": 2230
+    },
+    "corrected": {
+      "startMs": 1930,
+      "endMs": 2150
+    },
+    "reason": "怎 onset1930ms after pause."
+  },
+  {
+    "id": "L417-G05-wrong-one",
+    "index": 6,
+    "original": {
+      "charIndex": 6,
+      "startMs": 2230,
+      "endMs": 2280
+    },
+    "corrected": {
+      "startMs": 2150,
+      "endMs": 2300
+    },
+    "reason": "麼 follows voiced syllable and decays2290ms."
+  },
+  {
+    "id": "L417-G05-wrong-one",
+    "index": 7,
+    "original": {
+      "charIndex": 7,
+      "startMs": 2280,
+      "endMs": 2580
+    },
+    "corrected": {
+      "startMs": 2300,
+      "endMs": 2580
+    },
+    "reason": "解 begins2310ms after trough2290ms."
+  },
+  {
+    "id": "L417-G05-wrong-two",
+    "index": 5,
+    "original": {
+      "charIndex": 5,
+      "startMs": 2220,
+      "endMs": 2280
+    },
+    "corrected": {
+      "startMs": 1970,
+      "endMs": 2190
+    },
+    "reason": "怎 onset1970ms after pause."
+  },
+  {
+    "id": "L417-G05-wrong-two",
+    "index": 6,
+    "original": {
+      "charIndex": 6,
+      "startMs": 2280,
+      "endMs": 2340
+    },
+    "corrected": {
+      "startMs": 2190,
+      "endMs": 2340
+    },
+    "reason": "麼 connected voiced region2190-2330ms."
+  },
+  {
+    "id": "L417-G02-prefix",
+    "index": 5,
+    "original": {
+      "charIndex": 5,
+      "startMs": 1660,
+      "endMs": 2080
+    },
+    "corrected": {
+      "startMs": 1800,
+      "endMs": 2220
+    },
+    "reason": "Final 比 starts1800ms after short pause, complete third-tone vowel tail."
+  },
+  {
+    "id": "L417-S01",
+    "lastEndBefore": 3880,
+    "lastEndAfter": 4012,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L417-S02",
+    "lastEndBefore": 3560,
+    "lastEndAfter": 3678,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L417-S03",
+    "lastEndBefore": 3480,
+    "lastEndAfter": 3545,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L417-S04",
+    "lastEndBefore": 2520,
+    "lastEndAfter": 2644,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L417-S05",
+    "lastEndBefore": 3420,
+    "lastEndAfter": 3463,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L417-G02-prefix",
+    "lastEndBefore": 2220,
+    "lastEndAfter": 2228,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L417-G02-suffix",
+    "lastEndBefore": 900,
+    "lastEndAfter": 894,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L417-G05-wrong-one",
+    "lastEndBefore": 2800,
+    "lastEndAfter": 2893,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  },
+  {
+    "id": "L417-G05-wrong-two",
+    "lastEndBefore": 2840,
+    "lastEndAfter": 2936,
+    "reason": "Measured final syllable decay; retain200ms trailing silence."
+  }
+]
