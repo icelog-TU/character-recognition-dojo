@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L416 | 果 / normal single-character lesson | claimed | Production D | codex/l416-complete-package | L411, L412, L413, L414, L415; complete playable order required | 定成功決解 | curriculum-workflow/lesson-requests/L416.json; curriculum-workflow/generated/L416-generation-packet.md; curriculum-workflow/drafts/L416-draft.json | public/assets/lessons/L416/; curriculum-workflow/audio-inbox/L416/ | Teacher-approved five sentences. Main 18c9df4a formal L408; R049/R050 merged. Locked 418 Han. L409/L410 not learner dependencies; Release cannot skip earlier lessons. |
 
 ## Status Values
 
