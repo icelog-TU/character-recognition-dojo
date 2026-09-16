@@ -1,0 +1,164 @@
+{
+  "unit": "L416",
+  "files": [
+    {
+      "file": "char-u679c.m4a",
+      "src": "/assets/lessons/L416/audio/char-u679c.m4a",
+      "bytes": 19253,
+      "sha256": "07cabfd30e1c3634f4a8e0f84a4b75cb9247ae4096de8c4a3ca5222af46c64e5",
+      "durationMs": 1509,
+      "speechEndMs": 766,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -19.1,
+      "maxDb": -3
+    },
+    {
+      "file": "L416-G02-prefix.m4a",
+      "src": "/assets/lessons/L416/audio/L416-G02-prefix.m4a",
+      "bytes": 41901,
+      "sha256": "3d3b2f306cbd45625844f61850244e5128be8093cdc9aca053b93a0ffe77191c",
+      "durationMs": 3343,
+      "speechEndMs": 3127,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.2,
+      "maxDb": -2
+    },
+    {
+      "file": "L416-G05-wrong-one.m4a",
+      "src": "/assets/lessons/L416/audio/L416-G05-wrong-one.m4a",
+      "bytes": 47721,
+      "sha256": "bef0909fd78234a13de92ff733eb93b4fcd05a597c1fc52a71884813ccebda90",
+      "durationMs": 3761,
+      "speechEndMs": 3568,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -17,
+      "maxDb": -2
+    },
+    {
+      "file": "L416-G05-wrong-two.m4a",
+      "src": "/assets/lessons/L416/audio/L416-G05-wrong-two.m4a",
+      "bytes": 47322,
+      "sha256": "8241a9426d6215c68e533a97e5eaa71ba3e4907b4a3d4c1072847a685780dcd7",
+      "durationMs": 3715,
+      "speechEndMs": 3715,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -17.7,
+      "maxDb": -2
+    },
+    {
+      "file": "L416-S01.m4a",
+      "src": "/assets/lessons/L416/audio/L416-S01.m4a",
+      "bytes": 47761,
+      "sha256": "91ccb1265ae81308a150b3932964355ad77fba23fc565a28c23c7348b6036e3a",
+      "durationMs": 3831,
+      "speechEndMs": 3628,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.1,
+      "maxDb": -2.2
+    },
+    {
+      "file": "L416-S02.m4a",
+      "src": "/assets/lessons/L416/audio/L416-S02.m4a",
+      "bytes": 48068,
+      "sha256": "ad09ed42b73e4e124905325e4e55f1527c2fff53537a2222cb0959576fc1f6c7",
+      "durationMs": 3854,
+      "speechEndMs": 3652,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.2,
+      "maxDb": -2
+    },
+    {
+      "file": "L416-S03.m4a",
+      "src": "/assets/lessons/L416/audio/L416-S03.m4a",
+      "bytes": 48517,
+      "sha256": "faec85fed07a3f13c15ec1fa4b1b69883218509341ce87a12ea9a46701521015",
+      "durationMs": 3994,
+      "speechEndMs": 3792,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.9,
+      "maxDb": -2
+    },
+    {
+      "file": "L416-S04.m4a",
+      "src": "/assets/lessons/L416/audio/L416-S04.m4a",
+      "bytes": 62181,
+      "sha256": "c3cb435b70f48132e7eeb7f6aecdd31ecc6e5dbb4461154a0b48eb2d69c9a3d1",
+      "durationMs": 4899,
+      "speechEndMs": 4681,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -17.5,
+      "maxDb": -3.5
+    },
+    {
+      "file": "L416-S05.m4a",
+      "src": "/assets/lessons/L416/audio/L416-S05.m4a",
+      "bytes": 58847,
+      "sha256": "73fc3b194b4f6b2fdb6f16af2af9e09e2bf6bafe3bc2813230f8519755d0df50",
+      "durationMs": 4481,
+      "speechEndMs": 4264,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -17.9,
+      "maxDb": -2
+    }
+  ],
+  "timingAdjustments": [
+    {
+      "file": "L416-G02-prefix.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 9,
+        "startMs": 2700,
+        "endMs": 3000
+      },
+      "afterEndMs": 3127
+    },
+    {
+      "file": "L416-S01.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 9,
+        "startMs": 3300,
+        "endMs": 3520
+      },
+      "afterEndMs": 3628
+    },
+    {
+      "file": "L416-S03.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 11,
+        "startMs": 3520,
+        "endMs": 3680
+      },
+      "afterEndMs": 3792
+    },
+    {
+      "files": [
+        "L416-S05.m4a",
+        "L416-G05-wrong-one.m4a",
+        "L416-G05-wrong-two.m4a"
+      ],
+      "reason": "Verified inter-clause silence at -38 dB; 成 onset corrected to 3358/2691/2597 ms. Wrong option final endpoints restored to spoken syllable ends 3580/3500 ms; silence trimmed with 200 ms safety margin. Earlier file-duration endpoint extension superseded."
+    }
+  ],
+  "issues": [],
+  "g05MeanSpreadDb": 0.8999999999999986
+}

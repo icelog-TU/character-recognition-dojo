@@ -1,0 +1,74 @@
+[
+  {
+    "file": "char-u679c.m4a",
+    "sha256": "07cabfd30e1c3634f4a8e0f84a4b75cb9247ae4096de8c4a3ca5222af46c64e5",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 長 occurs report whether zhang3 or chang2 is actually heard. For a standalone syllable report pronunciation. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\":\"果\",\"syllables\":1,\"details\":{\"word\":\"果\",\"pronunciation\":\"guǒ\",\"final_syllable_complete\":true,\"awkward_pauses\":false}}"
+  },
+  {
+    "file": "L416-G02-prefix.m4a",
+    "sha256": "3d3b2f306cbd45625844f61850244e5128be8093cdc9aca053b93a0ffe77191c",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 長 occurs report whether zhang3 or chang2 is actually heard. For a standalone syllable report pronunciation. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\":\"解開袋子，拿出盒裡的水。\",\"notes\":\"All syllables clear, no omissions or clips, no awkward pauses. '解(jie3)' pronounced clearly. '袋(dai4)', '子(zi3)', '拿(na2)', '出(chu1)', '盒(he2)', '裡(li3)', '的(de5)', '水(shui3)' all complete. No instances of '長'.\"}"
+  },
+  {
+    "file": "L416-G05-wrong-one.m4a",
+    "sha256": "bef0909fd78234a13de92ff733eb93b4fcd05a597c1fc52a71884813ccebda90",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 長 occurs report whether zhang3 or chang2 is actually heard. For a standalone syllable report pronunciation. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"我走到泳池對面 成功了\", \"details\": {\"awkward_pauses\": false, \"omitted_or_clipped_syllables\": false, \"repeated_word_syllable_counts\": {}, \"final_syllable_completeness\": \"complete\", \"長_pronunciation\": null}}"
+  },
+  {
+    "file": "L416-G05-wrong-two.m4a",
+    "sha256": "8241a9426d6215c68e533a97e5eaa71ba3e4907b4a3d4c1072847a685780dcd7",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 長 occurs report whether zhang3 or chang2 is actually heard. For a standalone syllable report pronunciation. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"我游到泳池前面，成功了。\", \"details\": {\"awkward_pauses\": false, \"omitted_or_clipped_syllables\": false, \"repeated_word_syllable_counts\": {}, \"final_syllable_completeness\": \"complete\", \"長_pronunciation\": null, \"note\": \"No occurrences of 長 detected.\"}}"
+  },
+  {
+    "file": "L416-S01.m4a",
+    "sha256": "91ccb1265ae81308a150b3932964355ad77fba23fc565a28c23c7348b6036e3a",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 長 occurs report whether zhang3 or chang2 is actually heard. For a standalone syllable report pronunciation. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\":\"媽媽決定今天只吃水果\",\"details\":\"No clipped syllables. No repeated words. Final syllable complete. No awkward pauses. No instances of 長 heard.\"}"
+  },
+  {
+    "file": "L416-S02.m4a",
+    "sha256": "ad09ed42b73e4e124905325e4e55f1527c2fff53537a2222cb0959576fc1f6c7",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 長 occurs report whether zhang3 or chang2 is actually heard. For a standalone syllable report pronunciation. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"解開袋子 拿出盒裡的水果\", \"details\": {\"omitted_or_clipped_syllables\": \"none audible\", \"repeated_words_syllable_counts\": {\"解開\": 2, \"袋子\": 2, \"拿出\": 2, \"盒裡的\": 3, \"水果\": 2}, \"final_syllable_completeness\": \"all syllables complete\", \"awkward_pauses\": \"none detected\", \"長_pronunciation\": \"not present\", \"standalone_syllable_pronunciations\": \"none\"}}"
+  },
+  {
+    "file": "L416-S03.m4a",
+    "sha256": "faec85fed07a3f13c15ec1fa4b1b69883218509341ce87a12ea9a46701521015",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 長 occurs report whether zhang3 or chang2 is actually heard. For a standalone syllable report pronunciation. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\":\"老師解說，果子，是怎麼長大的。\",\"details\":{\"omitted_syllables\":false,\"clipped_syllables\":false,\"repeated_words\":\"none\",\"final_syllable_completeness\":\"complete\",\"awkward_pauses\":\"short pause after '解說' and '果子'\",\"長_pronunciation\":\"zhang3 (in 長大)\"}}"
+  },
+  {
+    "file": "L416-S04.m4a",
+    "sha256": "c3cb435b70f48132e7eeb7f6aecdd31ecc6e5dbb4461154a0b48eb2d69c9a3d1",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 長 occurs report whether zhang3 or chang2 is actually heard. For a standalone syllable report pronunciation. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\":\"我決定每天和小光一起用功。\",\"details\":{\"omitted_or_clipped_syllables\":\"None\",\"repeated_word_syllable_counts\":\"Not applicable\",\"final_syllable_completeness\":\"Complete\",\"awkward_pauses\":\"None detected\",\"pronunciation_notes\":{\"長\":\"Not present\"}}}"
+  },
+  {
+    "file": "L416-S05.m4a",
+    "sha256": "73fc3b194b4f6b2fdb6f16af2af9e09e2bf6bafe3bc2813230f8519755d0df50",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 長 occurs report whether zhang3 or chang2 is actually heard. For a standalone syllable report pronunciation. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"我游到泳池對面，成功了。\", \"details\": {\"omitted_or_clipped_syllables\": \"None detected\", \"audible_syllable_counts\": {\"我\":1,\"游到\":2,\"泳池\":2,\"對面\":2,\"成功了\":3}, \"final_syllable_completeness\": \"All syllables sounded complete\", \"awkward_pauses\": \"A slight pause after 對面\", \"長_pronunciation\": \"No occurrence of 長\"}}"
+  }
+]
