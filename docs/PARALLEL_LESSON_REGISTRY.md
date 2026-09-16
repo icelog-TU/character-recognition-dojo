@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L402 | 強 | claimed | Production F | codex/l402-complete-package | L397, L398, L399, L400, L401; Release preceding lessons and R047/R048 | 雙 選 或 者 勇 | curriculum-workflow/lesson-requests/L402.json; curriculum-workflow/generated/L402-generation-packet.md; curriculum-workflow/drafts/L402-draft.json | public/assets/lessons/L402/; curriculum-workflow/audio-inbox/L402/ | Teacher handoff: all 強 read ㄑㄧㄤˊ; TV character selection with older brother; safe two-hand sliding window; visible five-in-a-row. No readable text/digit exception. |
 
 ## Status Values
 
