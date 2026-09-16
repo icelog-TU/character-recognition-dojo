@@ -48,3 +48,5 @@ tools:check PASS; ai:check PASS; lesson-local formats PASS with zero warnings; l
 verify skipped: dependency-blocked, shared state left for Release. Required asset and timing files are complete. Remaining scope is Release dependencies plus the explicitly limited microphone/manual review checks above. Pushed-ref package-intake evidence is appended after push.
 
 Normal teacher repair queue, usable only after Release merges and deploys: https://icelog-tu.github.io/character-recognition-dojo/lesson-asset-review.html ; direct unit https://icelog-tu.github.io/character-recognition-dojo/lesson-asset-review.html?unit=L433&ref=main . Repair state: npm run asset:review-status. This package is not yet published in the main review queue.
+
+Pushed asset commit: e53f1b9f392f33c47eabadd7dcc28c8a8b773484. Package intake on origin/codex/l433-complete-package: PASS; 5 images, 10 audio files, canonical Stage 4. Final evidence-only tip is rechecked after push.
