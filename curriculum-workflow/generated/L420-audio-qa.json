@@ -1,0 +1,661 @@
+{
+  "unit": "L420",
+  "notes": "Production technical QA: 424 allowed characters; coverage 教3 合2 結2 如2 果2 解1; exact approved text/spokenText/displayLines preserved; canonical five games and all zero-based Han indexes verified. Ten mono 44100 Hz AAC files decoded, durations and loudness checked. Nine final processed audio transcripts matched approved Han text after simplified/traditional normalization; S02 and G02 suffix used general vocabulary context including 打結 to disambiguate the homophone 打劫. Earlier 1ms end timestamps caused complete audio regeneration, not fabricated timing. Final spans are 80-900ms. Only detected terminal silence was removed with at least 180ms after detected speech and 200ms after AI speech end, then final files were AI-aligned again. 教 generated once from standalone 教 with ㄐㄧㄠ instruction; independent transcription returned 蕉, a homophone with the intended first tone, not an exact orthographic match or human listening approval. S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS. Exported WebP compared side by side with L058 full set, refined L115/L118/L119/L128 examples and family L154/L162/L163 anchors. S04 initial image had a premature pooled center coin pile; rejected, revised to exactly two side piles and empty center; rejected image not committed. Built-in imagegen used; existing references checked for reuse but do not show the approved teacher/cord/kitchen/pooling/missed-bus scenes. Browser QA tooling fallback: cua.getBrowser opening the local Vite app timed out after 30 seconds and reset its kernel. Phone playback/highlight/recording QA could not be performed; no subjective listening or completed browser QA is claimed. All non-browser technical gates are checked. Teacher subjective review remains post-merge. Full verify skipped: dependency-blocked; shared production JSON, planner and ledger unchanged. Release owns L415-L419 integration and final main validation. R051/R052 follows L420 and blocks L421, outside this package. Teacher-requested style redraw on 2026-09-16: previous S02/S03/S04/S05 images at 34473295 mixed illustrated faces with excessively photographic hands, cord, vegetables, coins, tables, plants or street surfaces. Previous style assessments for these four images are superseded. All four were newly generated from L058/refined/family references with uniform pencil-and-watercolor rendering across the entire image, including foreground objects and backgrounds. No photo textures, realistic skin/rope fibers/wood/asphalt, lens blur or depth of field. Each replacement exported WebP reviewed side by side: S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS. Exact approved meanings, recurring identities and scene states retained. Sentence, displayLines, audio and timings unchanged. Teacher acceptance of replacements is not presumed.",
+  "assets": [
+    {
+      "path": "public/assets/lessons/L420/images/L420-S01.webp",
+      "bytes": 198048,
+      "sha256": "f0f9726a377797ec5dfc117982aea38baa8b226af8597d14bf5032a6893fac5a"
+    },
+    {
+      "path": "public/assets/lessons/L420/images/L420-S02.webp",
+      "bytes": 183494,
+      "sha256": "dda0c573777d6a88534510470dbab8659442ce94da957f939ff6ae0df25b09b7"
+    },
+    {
+      "path": "public/assets/lessons/L420/images/L420-S03.webp",
+      "bytes": 163148,
+      "sha256": "91ac47223f0146bae1636d224dff260bf4f9e9b09ab667932d8351cc792f383c"
+    },
+    {
+      "path": "public/assets/lessons/L420/images/L420-S04.webp",
+      "bytes": 123202,
+      "sha256": "6c77b14b2891fe898b0b4de2ed9985a0da7e90ed21c930eaa19ae22c52168ef3"
+    },
+    {
+      "path": "public/assets/lessons/L420/images/L420-S05.webp",
+      "bytes": 236464,
+      "sha256": "7bb4f47b2110870eccf277896928f463794821b72abd0297a9328ea3b338ca42"
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/char-u6559.m4a",
+      "bytes": 33408,
+      "sha256": "38258a7ac47adda8dcdc01bdbe55e8551b89ef68d8b98f44bb1d8fe701fb37d7",
+      "durationMs": 2507,
+      "meanDb": -20.2,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/L420-G02-prefix.m4a",
+      "bytes": 9523,
+      "sha256": "0b3bb2d6e2a891da393e9e1d6a43aa3f4b0e2af7a9b1e850e8aca89f051fcba4",
+      "durationMs": 696,
+      "meanDb": -16.6,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/L420-G02-suffix.m4a",
+      "bytes": 47808,
+      "sha256": "fc3307208f7faed2c125f2ced9aed4f42a4e08ee57aada724e355fcfdb977cf7",
+      "durationMs": 3274,
+      "meanDb": -18.8,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/L420-G05-wrong-one.m4a",
+      "bytes": 53147,
+      "sha256": "d68bb0b2f621fef785fa798edb64b3f564afef3f0aaa21226b365864f7d0297b",
+      "durationMs": 4272,
+      "meanDb": -17,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/L420-G05-wrong-two.m4a",
+      "bytes": 53302,
+      "sha256": "eff51c74dc81bb8d002e5ab4cc4782d615a94832d747ffcaeee64fb5303682a6",
+      "durationMs": 4133,
+      "meanDb": -17.6,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/L420-S01.m4a",
+      "bytes": 42494,
+      "sha256": "f68d469f9ad2d80db9c6789d6fef5bd040d0e6ca3909af4d639b3f179a70aa6b",
+      "durationMs": 3390,
+      "meanDb": -17.9,
+      "maxDb": -3.2
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/L420-S02.m4a",
+      "bytes": 39645,
+      "sha256": "f2699bbb7278faa5ee416c6939e321ffc59970cc81d0b74746b867d1d4b02ada",
+      "durationMs": 3204,
+      "meanDb": -19.1,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/L420-S03.m4a",
+      "bytes": 47895,
+      "sha256": "e3c534d12473d66625f695bb7c7ba7f16dcb4391ba503f1b0f26620fb3162ec2",
+      "durationMs": 3785,
+      "meanDb": -17.4,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/L420-S04.m4a",
+      "bytes": 42363,
+      "sha256": "3d1bdd48be2cf1b0773eafeed9cbe85efad512f5194d817656d926647727a45f",
+      "durationMs": 3413,
+      "meanDb": -19,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L420/audio/L420-S05.m4a",
+      "bytes": 41838,
+      "sha256": "0445c07b39ff6371113ffdea0b88f1ed63c7f8a00a539f0b0959983a35f4b23f",
+      "durationMs": 3390,
+      "meanDb": -18.2,
+      "maxDb": -2.2
+    }
+  ],
+  "transcripts": {
+    "L420-G02-prefix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 0.6899999976158142,
+      "text": "爸爸",
+      "words": [
+        {
+          "word": "爸爸",
+          "start": 0,
+          "end": 0.4000000059604645
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 1
+      }
+    },
+    "L420-G02-suffix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.2699999809265137,
+      "text": "我解開打結的線。",
+      "words": [
+        {
+          "word": "我",
+          "start": 0,
+          "end": 0.47999998927116394
+        },
+        {
+          "word": "解",
+          "start": 0.47999998927116394,
+          "end": 1.0199999809265137
+        },
+        {
+          "word": "開",
+          "start": 1.0199999809265137,
+          "end": 1.4600000381469727
+        },
+        {
+          "word": "打",
+          "start": 1.4600000381469727,
+          "end": 1.8600000143051147
+        },
+        {
+          "word": "結",
+          "start": 1.8600000143051147,
+          "end": 2.0399999618530273
+        },
+        {
+          "word": "的",
+          "start": 2.0399999618530273,
+          "end": 2.819999933242798
+        },
+        {
+          "word": "線。",
+          "start": 2.819999933242798,
+          "end": 3.0199999809265137
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L420-G05-wrong-one.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.269999980926514,
+      "text": "出門太早,結果車開走了。",
+      "words": [
+        {
+          "word": "出",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "門",
+          "start": 0.41999998688697815,
+          "end": 0.6600000262260437
+        },
+        {
+          "word": "太",
+          "start": 0.6600000262260437,
+          "end": 1.100000023841858
+        },
+        {
+          "word": "早",
+          "start": 1.100000023841858,
+          "end": 1.4600000381469727
+        },
+        {
+          "word": "結果",
+          "start": 2.119999885559082,
+          "end": 2.4000000953674316
+        },
+        {
+          "word": "車",
+          "start": 2.4000000953674316,
+          "end": 3.259999990463257
+        },
+        {
+          "word": "開",
+          "start": 3.259999990463257,
+          "end": 3.5999999046325684
+        },
+        {
+          "word": "走了。",
+          "start": 3.5999999046325684,
+          "end": 3.9600000381469727
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L420-G05-wrong-two.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.130000114440918,
+      "text": "出門太晚,結果船開走了。",
+      "words": [
+        {
+          "word": "出",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "門",
+          "start": 0.41999998688697815,
+          "end": 0.6600000262260437
+        },
+        {
+          "word": "太",
+          "start": 0.6600000262260437,
+          "end": 1.059999942779541
+        },
+        {
+          "word": "晚",
+          "start": 1.059999942779541,
+          "end": 1.3200000524520874
+        },
+        {
+          "word": "結果",
+          "start": 2.140000104904175,
+          "end": 2.380000114440918
+        },
+        {
+          "word": "船",
+          "start": 2.380000114440918,
+          "end": 3.059999942779541
+        },
+        {
+          "word": "開",
+          "start": 3.059999942779541,
+          "end": 3.4800000190734863
+        },
+        {
+          "word": "走了。",
+          "start": 3.4800000190734863,
+          "end": 3.799999952316284
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L420-S01.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.390000104904175,
+      "text": "老师教我们合作盖积木。",
+      "words": [
+        {
+          "word": "老",
+          "start": 0,
+          "end": 0.3799999952316284
+        },
+        {
+          "word": "师",
+          "start": 0.3799999952316284,
+          "end": 0.6600000262260437
+        },
+        {
+          "word": "教",
+          "start": 0.6600000262260437,
+          "end": 1.1799999475479126
+        },
+        {
+          "word": "我们",
+          "start": 1.1799999475479126,
+          "end": 1.6200000047683716
+        },
+        {
+          "word": "合",
+          "start": 1.6200000047683716,
+          "end": 2.119999885559082
+        },
+        {
+          "word": "作",
+          "start": 2.119999885559082,
+          "end": 2.380000114440918
+        },
+        {
+          "word": "盖",
+          "start": 2.380000114440918,
+          "end": 2.680000066757202
+        },
+        {
+          "word": "积",
+          "start": 2.680000066757202,
+          "end": 3
+        },
+        {
+          "word": "木。",
+          "start": 3,
+          "end": 3.140000104904175
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L420-S02.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.200000047683716,
+      "text": "爸爸教我解開打結的線。",
+      "words": [
+        {
+          "word": "爸爸",
+          "start": 0,
+          "end": 0.47999998927116394
+        },
+        {
+          "word": "教",
+          "start": 0.47999998927116394,
+          "end": 0.9399999976158142
+        },
+        {
+          "word": "我",
+          "start": 0.9399999976158142,
+          "end": 1.2999999523162842
+        },
+        {
+          "word": "解",
+          "start": 1.2999999523162842,
+          "end": 1.5800000429153442
+        },
+        {
+          "word": "開",
+          "start": 1.5800000429153442,
+          "end": 1.940000057220459
+        },
+        {
+          "word": "打",
+          "start": 1.940000057220459,
+          "end": 2.299999952316284
+        },
+        {
+          "word": "結",
+          "start": 2.299999952316284,
+          "end": 2.5
+        },
+        {
+          "word": "的",
+          "start": 2.5,
+          "end": 2.880000114440918
+        },
+        {
+          "word": "線。",
+          "start": 2.880000114440918,
+          "end": 2.9800000190734863
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L420-S03.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.7799999713897705,
+      "text": "如果想學做菜,我可以教你。",
+      "words": [
+        {
+          "word": "如果",
+          "start": 0,
+          "end": 0.47999998927116394
+        },
+        {
+          "word": "想",
+          "start": 0.47999998927116394,
+          "end": 0.9800000190734863
+        },
+        {
+          "word": "學",
+          "start": 0.9800000190734863,
+          "end": 1.2799999713897705
+        },
+        {
+          "word": "做",
+          "start": 1.2799999713897705,
+          "end": 1.5199999809265137
+        },
+        {
+          "word": "菜",
+          "start": 1.5199999809265137,
+          "end": 1.7799999713897705
+        },
+        {
+          "word": "我",
+          "start": 2.4600000381469727,
+          "end": 2.680000066757202
+        },
+        {
+          "word": "可以",
+          "start": 2.680000066757202,
+          "end": 3.0399999618530273
+        },
+        {
+          "word": "教",
+          "start": 3.0399999618530273,
+          "end": 3.319999933242798
+        },
+        {
+          "word": "你。",
+          "start": 3.319999933242798,
+          "end": 3.5799999237060547
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L420-S04.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.4100000858306885,
+      "text": "不如合起来算看有多少钱",
+      "words": [
+        {
+          "word": "不",
+          "start": 0,
+          "end": 0.30000001192092896
+        },
+        {
+          "word": "如",
+          "start": 0.30000001192092896,
+          "end": 0.699999988079071
+        },
+        {
+          "word": "合",
+          "start": 0.699999988079071,
+          "end": 1.0800000429153442
+        },
+        {
+          "word": "起",
+          "start": 1.0800000429153442,
+          "end": 1.2599999904632568
+        },
+        {
+          "word": "来",
+          "start": 1.2599999904632568,
+          "end": 1.5800000429153442
+        },
+        {
+          "word": "算",
+          "start": 1.5800000429153442,
+          "end": 1.7799999713897705
+        },
+        {
+          "word": "看",
+          "start": 1.7799999713897705,
+          "end": 2.119999885559082
+        },
+        {
+          "word": "有",
+          "start": 2.119999885559082,
+          "end": 2.4200000762939453
+        },
+        {
+          "word": "多少",
+          "start": 2.4200000762939453,
+          "end": 2.799999952316284
+        },
+        {
+          "word": "钱",
+          "start": 2.799999952316284,
+          "end": 3.140000104904175
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L420-S05.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.390000104904175,
+      "text": "出門太晚,結果車開走了。",
+      "words": [
+        {
+          "word": "出",
+          "start": 0,
+          "end": 0.3400000035762787
+        },
+        {
+          "word": "門",
+          "start": 0.3400000035762787,
+          "end": 0.6000000238418579
+        },
+        {
+          "word": "太",
+          "start": 0.6000000238418579,
+          "end": 1
+        },
+        {
+          "word": "晚",
+          "start": 1,
+          "end": 1.2799999713897705
+        },
+        {
+          "word": "結果",
+          "start": 1.7599999904632568,
+          "end": 1.940000057220459
+        },
+        {
+          "word": "車",
+          "start": 1.940000057220459,
+          "end": 2.440000057220459
+        },
+        {
+          "word": "開",
+          "start": 2.440000057220459,
+          "end": 2.740000009536743
+        },
+        {
+          "word": "走了。",
+          "start": 2.740000009536743,
+          "end": 3.0799999237060547
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    }
+  },
+  "charTranscript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 2.5,
+    "text": "蕉",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1.3799999952316284,
+        "text": "蕉",
+        "tokens": [
+          50376,
+          164,
+          243,
+          231,
+          50433
+        ],
+        "temperature": 1,
+        "avg_logprob": -1.653943419456482,
+        "compression_ratio": 0.27272728085517883,
+        "no_speech_prob": 0.4153163731098175
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 3
+    }
+  },
+  "tailTrim": [
+    {
+      "id": "L420-S01",
+      "oldDuration": 4.763,
+      "silenceStart": 3.20748,
+      "cutAt": 3.38748,
+      "retainedAfterAIEnd": 0.24747999999999992
+    },
+    {
+      "id": "L420-S02",
+      "oldDuration": 3.562,
+      "silenceStart": 3.021,
+      "cutAt": 3.201,
+      "retainedAfterAIEnd": 0.22100000000000009
+    },
+    {
+      "id": "L420-S03",
+      "oldDuration": 4.089,
+      "silenceStart": 3.57327,
+      "cutAt": 3.7800000000000002,
+      "retainedAfterAIEnd": 0.20000000000000018
+    },
+    {
+      "id": "L420-S04",
+      "oldDuration": 4.185,
+      "silenceStart": 3.22034,
+      "cutAt": 3.4003400000000004,
+      "retainedAfterAIEnd": 0.24034000000000022
+    },
+    {
+      "id": "L420-S05",
+      "oldDuration": 3.919,
+      "silenceStart": 3.20075,
+      "cutAt": 3.3807500000000004,
+      "retainedAfterAIEnd": 0.3007500000000003
+    },
+    {
+      "id": "L420-G02-prefix",
+      "oldDuration": 1.277,
+      "silenceStart": 0.506644,
+      "cutAt": 0.686644,
+      "retainedAfterAIEnd": 0.26664400000000005
+    },
+    {
+      "id": "L420-G02-suffix",
+      "oldDuration": 3.386,
+      "silenceStart": 3.07846,
+      "cutAt": 3.2584600000000004,
+      "retainedAfterAIEnd": 0.23846000000000034
+    },
+    {
+      "id": "L420-G05-wrong-one",
+      "oldDuration": 4.457,
+      "silenceStart": 4.07982,
+      "cutAt": 4.2598199999999995,
+      "retainedAfterAIEnd": 0.29981999999999953
+    },
+    {
+      "id": "L420-G05-wrong-two",
+      "oldDuration": 4.71,
+      "silenceStart": 3.93626,
+      "cutAt": 4.11626,
+      "retainedAfterAIEnd": 0.31625999999999976
+    }
+  ]
+}
