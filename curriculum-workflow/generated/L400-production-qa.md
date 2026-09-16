@@ -35,3 +35,23 @@ Final 1024x1024 WebP exports were opened individually and compared to full L058 
 Local isolated L400 fixture at 390x844 in Codex in-app browser. Stage 1 character/zhuyin readable and character playback completed. Stage 3 all five sentence audio buttons played to completion; app displayed 句子都聽完了. G02 prefix reached target red-frame 者 and press-hold prompt. G03 three distinct single-Han options and correct choice worked. G04 或/者/畫/樹 cards separately accepted in correct order.
 Physical microphone hold/record/replay and physical-device speaker quality are not claimed as tested. Teacher subjective image/audio review remains post-main. No pre-main teacher signoff is implied.
 G05 all three option buttons played to completion (UI returned from playback to lesson state after each); no browser warning/error logs. Stage 2 and final reward navigation were not part of this package-local playback pass; no application/completion-flow code was changed.
+
+## Final Checks
+- tools:check, ai:check: PASS.
+- curriculum:packet --request curriculum-workflow/lesson-requests/L400.json: generated, then finalized with approved records.
+- assets:images --lesson L400 --remove-original: PASS; final WebP already converted.
+- assets:audio --lesson L400: PASS.
+- assets:align:ai --lesson L400 --prompt "這本書上印著作": PASS on nine final non-character inputs; local auxiliary fixture only.
+- assets:audit --lesson L400 --strict: PASS, zero warnings on isolated final lesson.
+- validate:production: PASS on isolated L400 and again on restored shared baseline.
+- validate:curriculum: PASS on restored formal L001-L390 baseline; legacy target-selection advisory warnings unchanged.
+- curriculum:audit-state: PASS; expected warning that L400 asset folder is not yet in formal production JSON.
+- node curriculum-workflow/generated/L400-package-audit.mjs: PASS for actual L400 request/draft/packet, locked allowed boundary, indexes, all timing spans/tails and referenced paths.
+- git diff --check; node --check on both changed shared scripts: PASS.
+- curriculum:package-intake --unit L400 --ref origin/codex/l400-complete-package --strict: PASS on pushed asset commit 31d72d8b7ee141a3b79abdc46656170c45b2adb4.
+- Full verify skipped: dependency-blocked package; shared state integration belongs to Release.
+
+Preview must use the final pushed SHA and label "pre-merge package preview, not final main review queue". Post-main teacher queue is usable only after Release merges and deploys:
+https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main
+https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L400&ref=main
+Command after deployment: npm run asset:review-status -- --unit L400 --ref main
