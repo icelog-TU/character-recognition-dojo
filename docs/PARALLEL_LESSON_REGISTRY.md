@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L422 | 班 / normal single-character lesson | claimed | Production D (new mobile Remote) | codex/l422-complete-package | L416, L417, L418, L419, L420, L421; R051/R052 after L420 (L391-L420 coverage); ordered Release through L421 | 果如結合教室 | curriculum-workflow/lesson-requests/L422.json; curriculum-workflow/generated/L422-generation-packet.md; curriculum-workflow/drafts/L422-draft.json | public/assets/lessons/L422/; curriculum-workflow/audio-inbox/L422/ | Teacher-approved five sentences; S02 全班合作，把書搬進新教室。 Base 182ace5f, formal L414 決. Production package only; Release owns shared production JSON, planner, ledger integration. |
 
 ## Status Values
 
