@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {requireOpenAIKey} from '../../scripts/lib/env.mjs';
+const file='public/assets/reviews/R047/audio/R047-G02-suffix.m4a';
+const sha256=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+if(sha256!=='6ab9d349e6b26729adcc6b1dc9a6d58d6920a9fc9c559ec4859c59d61edcc999')throw Error('Approved audio changed');
+const approval={unit:'R047',game:'R047-G02',scope:'Current suffix audio only',file,sha256,result:'PASS',method:'Teacher manual audio QA',teacherStatement:'複習課 R047 G02 的那個音檔是沒有問題的，這樣就可以了',text:'地送來一盒點心',decision:'Keep exact teacher-approved bytes. No homophone TTS substitution, regeneration, trimming or splicing. Automated transcription disagreement is retained as evidence; teacher approval adjudicates this fragment.'};
+fs.writeFileSync('curriculum-workflow/generated/R047-G02-teacher-approval.json',JSON.stringify(approval,null,2)+'\n');
+const form=new FormData();form.append('model','whisper-1');form.append('file',new Blob([fs.readFileSync(file)]),'R047-G02-suffix.m4a');form.append('language','zh');form.append('response_format','verbose_json');form.append('timestamp_granularities[]','word');form.append('prompt','臺灣華語教材，朋友熱情地送來一盒點心。片段原文：地送來一盒點心。');
+const res=await fetch('https://api.openai.com/v1/audio/transcriptions',{method:'POST',headers:{Authorization:'Bearer '+requireOpenAIKey()},body:form});if(!res.ok)throw Error('Transcription HTTP '+res.status);
+const raw=await res.json();fs.writeFileSync('curriculum-workflow/generated/R047-G02-approved-audio-alignment.json',JSON.stringify({sha256,method:'Word timestamps with supplied text context; teacher accepted source audio; not independent pronunciation verification',raw},null,2)+'\n');console.log(JSON.stringify(raw));

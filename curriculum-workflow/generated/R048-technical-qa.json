@@ -1,0 +1,166 @@
+{
+  "unit": "R048",
+  "files": [
+    {
+      "file": "R048-G02-prefix.m4a",
+      "src": "/assets/reviews/R048/audio/R048-G02-prefix.m4a",
+      "bytes": 25870,
+      "sha256": "1ef0a58b33c1c8e6979119b51f63463ad6119607f00d7c780a5d8c61a5a63916",
+      "durationMs": 1625,
+      "speechEndMs": 1415,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.4,
+      "maxDb": -2.1
+    },
+    {
+      "file": "R048-G02-suffix.m4a",
+      "src": "/assets/reviews/R048/audio/R048-G02-suffix.m4a",
+      "bytes": 37802,
+      "sha256": "27f3018631dc6cf13714036a51ae64827c616b40dddc0162038b131141ac26f1",
+      "durationMs": 2809,
+      "speechEndMs": 2593,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -19.4,
+      "maxDb": -2
+    },
+    {
+      "file": "R048-G05-wrong-one.m4a",
+      "src": "/assets/reviews/R048/audio/R048-G05-wrong-one.m4a",
+      "bytes": 41005,
+      "sha256": "64b3caca8e50ba717c0110cea9b87f79685ee28f14313bb82d4e7d33779abba0",
+      "durationMs": 3297,
+      "speechEndMs": 3081,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.9,
+      "maxDb": -3.1
+    },
+    {
+      "file": "R048-G05-wrong-two.m4a",
+      "src": "/assets/reviews/R048/audio/R048-G05-wrong-two.m4a",
+      "bytes": 38776,
+      "sha256": "15326eac8d13adbecfaa8eb51bdad6678259f050a73ab692cf945bb6bc64606c",
+      "durationMs": 3181,
+      "speechEndMs": 2972,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.3,
+      "maxDb": -2
+    },
+    {
+      "file": "R048-S01.m4a",
+      "src": "/assets/reviews/R048/audio/R048-S01.m4a",
+      "bytes": 35345,
+      "sha256": "aa0423d62b6d4813a626b5f38dfd0c5af6888dd5ae0e750ec2bd8fd57313c86f",
+      "durationMs": 2856,
+      "speechEndMs": 2647,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -17.3,
+      "maxDb": -2
+    },
+    {
+      "file": "R048-S02.m4a",
+      "src": "/assets/reviews/R048/audio/R048-S02.m4a",
+      "bytes": 44636,
+      "sha256": "3b6100a12b2fb5f5452d8dd6dff77b5bfc281ca9a323692785f944c92c4f5132",
+      "durationMs": 3599,
+      "speechEndMs": 3397,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.3,
+      "maxDb": -2
+    },
+    {
+      "file": "R048-S03.m4a",
+      "src": "/assets/reviews/R048/audio/R048-S03.m4a",
+      "bytes": 49758,
+      "sha256": "4ea33243f89172103de2d3f3f1ad415b43d7c261da31f8bc0dade9527cb4505d",
+      "durationMs": 3738,
+      "speechEndMs": 3526,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.7,
+      "maxDb": -2
+    },
+    {
+      "file": "R048-S04.m4a",
+      "src": "/assets/reviews/R048/audio/R048-S04.m4a",
+      "bytes": 38947,
+      "sha256": "e2f81e41590af804bd92f5eb1b194221359b498978c8939718fff6a4a0754761",
+      "durationMs": 3181,
+      "speechEndMs": 2975,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -17.9,
+      "maxDb": -3.2
+    },
+    {
+      "file": "R048-S05.m4a",
+      "src": "/assets/reviews/R048/audio/R048-S05.m4a",
+      "bytes": 47521,
+      "sha256": "7770ff3f2d9839a3df2c169871f64dfd69b83638d15528c26e190403dde6e35a",
+      "durationMs": 3761,
+      "speechEndMs": 3544,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.4,
+      "maxDb": -4.2
+    }
+  ],
+  "timingAdjustments": [
+    {
+      "file": "R048-G02-prefix.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 2,
+        "startMs": 880,
+        "endMs": 1320
+      },
+      "afterEndMs": 1415
+    },
+    {
+      "file": "R048-G02-suffix.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 6,
+        "startMs": 1840,
+        "endMs": 2140
+      },
+      "afterEndMs": 2593
+    },
+    {
+      "file": "R048-S02.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 10,
+        "startMs": 2960,
+        "endMs": 3280
+      },
+      "afterEndMs": 3397
+    },
+    {
+      "file": "R048-S05.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 10,
+        "startMs": 3160,
+        "endMs": 3440
+      },
+      "afterEndMs": 3544
+    }
+  ],
+  "issues": [],
+  "g05MeanSpreadDb": 1
+}

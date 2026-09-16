@@ -1,0 +1,114 @@
+[
+  {
+    "file": "R047-G02-suffix.m4a",
+    "sha256": "c4d83cb45aa63f29094b0b724e50509823dd98d0a0373193753850867fb0fbd0",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"送來一盒點心\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.89}"
+  },
+  {
+    "file": "R047-G02-suffix.m4a",
+    "sha256": "70837173cb89ba21cc0d194e113b60faa5721495b0d5c5bd9f483f26c1c5c48d",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\":\"他送來一盒點心\",\"shuObservations\":[],\"finalSyllableComplete\":true,\"defects\":[],\"confidence\":\"high\"}"
+  },
+  {
+    "file": "R047-G02-suffix.m4a",
+    "sha256": "2f2fb3dff3b1af6c932ac9b0876989d6b2366665ddd64779b340e88437a621d2",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"弟送來一盒點心\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": null, \"confidence\": 0.90}"
+  },
+  {
+    "file": "R047-G02-suffix.m4a",
+    "sha256": "84a33390a070e0e2f9448910f0a3bf3ca2eee75336ce96d94f14f5b04d97ea08",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\":\"遞送來遞合點心\",\"shuObservations\":[],\"finalSyllableComplete\":true,\"defects\":[],\"confidence\":\"high\"}"
+  },
+  {
+    "file": "R047-G02-suffix.m4a",
+    "sha256": "fdabf63a3fcd21433e4da28946f7ef0dd56bafc3e3d63bd3440b62a59341cb30",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"遞送來一盒點心\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.94}"
+  },
+  {
+    "file": "R047-G05-wrong-one.m4a",
+    "sha256": "183d764565b4fc5d8649107d2e0c59b8a7c9c7a54b45e82dd03543fd0d18f227",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"我喜歡這招畫紙，謝謝你\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.90}"
+  },
+  {
+    "file": "R047-G02-prefix.m4a",
+    "sha256": "9b120074c067f4d44629be4cd04cbb86a6f96b60a424b10867f3201a1c563d79",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"朋友熱\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.62}"
+  },
+  {
+    "file": "R047-G02-suffix.m4a",
+    "sha256": "6ab9d349e6b26729adcc6b1dc9a6d58d6920a9fc9c559ec4859c59d61edcc999",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"遞送來一盒點心\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.96}"
+  },
+  {
+    "file": "R047-G05-wrong-two.m4a",
+    "sha256": "e4fbd56ceefadd6c6dc68fa08c7f115fcbbeb4e64f1a50752c223dc4ee7c5033",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"我喜歡這張笑臉。謝謝它。\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": null, \"confidence\": 0.92}"
+  },
+  {
+    "file": "R047-S01.m4a",
+    "sha256": "cb6db764e126ce57fc1ab2018c743a8ca2a31e2b3bea98fe14e3d8042e47eede",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"收到朋友親手做的花，好驚喜\", \"shuObservations\": [{\"syllable\": \"收\", \"tone\": \"1\", \"pitchContour\": \"high-level\"}], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.92}"
+  },
+  {
+    "file": "R047-S02.m4a",
+    "sha256": "a71bbc7edc6dac103a0dd274e69e002841a192289c6df6faf0a4eb43f5e82910",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"我喜歡這張笑臉，謝謝你\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.95}"
+  },
+  {
+    "file": "R047-S03.m4a",
+    "sha256": "5f0caf970be7a7623fcb4ca66bf6bb62caf09a8c5141808836d5827d84ec04b1",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"天冷了，但還是出去走走吧。\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.90}"
+  },
+  {
+    "file": "R047-S04.m4a",
+    "sha256": "748db03ab7facf0c01656893a729d29b11d361a0a809a2c18113789eba0c8cdc",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"朋友熱情地送來一盒點心\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.70}"
+  },
+  {
+    "file": "R047-S05.m4a",
+    "sha256": "720d7af9a12486dc235080fe76dfde0d2da14e35fc9932063340e301ac8ffa37",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"我寫信給老師，感謝他的幫忙。\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": [], \"confidence\": 0.91}"
+  }
+]
