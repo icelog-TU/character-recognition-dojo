@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L424 | 隊 | claimed | Production F | codex/l424-complete-package | L419,L420,L421,L422,L423; R051/R052 after L420 (L391-L420) | 合、教、室、班、組 | curriculum-workflow/lesson-requests/L424.json; curriculum-workflow/generated/L424-generation-packet.md; curriculum-workflow/drafts/L424-draft.json | public/assets/lessons/L424/; curriculum-workflow/audio-inbox/L424/ | Teacher-approved handoff; base origin/main 4eec5178 L415 解; locked allowedChars 425. Release must integrate all preceding lessons through L423 and R051/R052 first. Production package only. |
+| L424 | 隊 | dependency-blocked-asset-complete | Production F | codex/l424-complete-package (claim910b95bc; final tip in git) | L419,L420,L421,L422,L423; R051/R052 after L420 (L391-L420) | 合、教、室、班、組 | curriculum-workflow/lesson-requests/L424.json; curriculum-workflow/generated/L424-generation-packet.md; curriculum-workflow/drafts/L424-draft.json | public/assets/lessons/L424/; curriculum-workflow/audio-inbox/L424/ | Complete lesson-local package:5images,10audio,timings,Stage4,technical-audit. Source4eec5178 L415解;425allowed. Release must integrate all preceding lessons through L423 and R051/R052. G02 hold-record/resume outside available browser click capability; technical gates and other playback QA pass. Post-merge teacher repair queue; shared integration Release-owned. |
 
 ## Status Values
 
