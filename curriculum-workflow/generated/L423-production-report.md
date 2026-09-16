@@ -43,3 +43,8 @@ Production JSON, planner, ledger and deployment remain Release-owned; no final c
 Pre-merge preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L423&ref=codex%2Fl423-complete-package (package preview, not final main review queue).
 
 After Release merges and deploys: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L423&ref=main ; index https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main ; npm run asset:review-status -- --unit L423 --ref main.
+
+## Pushed package intake
+
+npm run curriculum:package-intake -- --unit L423 --ref origin/codex/l423-complete-package --strict : PASS against asset commit 63e655e1830ad79dc5fcffae692e7781f1d66631. Final report-only follow-up is rechecked with the same strict gate.
+

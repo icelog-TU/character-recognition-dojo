@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L423 | 組 | dependency-blocked-asset-complete | Production E | codex/l423-complete-package; see pushed tip | L416, L418, L419, L420, L421, L422; R051/R052 after L420 | 果 結 合 教 室 班 | curriculum-workflow/lesson-requests/L423.json; curriculum-workflow/generated/L423-generation-packet.md; curriculum-workflow/drafts/L423-draft.json | public/assets/lessons/L423/; curriculum-workflow/audio-inbox/L423/ | Base 4eec5178 L415. 5 WebP + 10 M4A, sentence/Stage 4 timings and local strict checks complete. R051/R052 cover L391-L420. Browser QA initialization timeout fallback documented; teacher review post-merge. Release owns shared-state integration. |
+| L423 | 組 | dependency-blocked-asset-complete | Production E | codex/l423-complete-package / 63e655e1830ad79dc5fcffae692e7781f1d66631 assets | L416, L418, L419, L420, L421, L422; R051/R052 after L420 | 果 結 合 教 室 班 | curriculum-workflow/lesson-requests/L423.json; curriculum-workflow/generated/L423-generation-packet.md; curriculum-workflow/drafts/L423-draft.json | public/assets/lessons/L423/; curriculum-workflow/audio-inbox/L423/ | Base 4eec5178 L415. 5 WebP + 10 M4A, sentence/Stage 4 timings, local strict checks and pushed strict intake PASS. R051/R052 cover L391-L420. Browser QA initialization timeout fallback documented; teacher review post-merge. Release owns shared-state integration. |
 
 ## Status Values
 
