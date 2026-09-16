@@ -1,0 +1,90 @@
+[
+  {
+    "file": "char-u8a66.m4a",
+    "sha256": "5fe8447c60101c0135c9634d4ad0d71a9c39af2ad8975c2bf53a58a926e3a396",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"試\", \"notes\": {\"pronunciation\": \"shi4\", \"syllable_count\": 1, \"completeness\": \"complete\", \"awkward_pauses\": false}}"
+  },
+  {
+    "file": "L410-G02-prefix.m4a",
+    "sha256": "f86ce10e6c516fa534b3180ed689f3a4499e27b3d7a3390001b79c789271a796",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\":\"加一點水再\",\"notes\":\"No omitted or clipped syllables; '加' pronounced once clearly; '一點水' each syllable distinct; '再' final syllable complete, no awkward pauses detected.\"}"
+  },
+  {
+    "file": "L410-G02-suffix.m4a",
+    "sha256": "1c24128e06f0d63fa0c2d1f4aaa2a3fee15dc0c9089f245078034b9282a4a9fc",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"著畫畫看\", \"details\": {\"著\": \"neutral ˙ㄓㄜ heard\", \"repetitions\": {\"畫\": 2}, \"final_syllable_completeness\": \"complete\", \"awkward_pauses\": \"none detected\"}}"
+  },
+  {
+    "file": "L410-G05-wrong-one.m4a",
+    "sha256": "7964e1547497c081e5f539ff7385554c0d54ab06ed657adc15f3677d1de20f19",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"天越來越冷，快回家吧。\", \"notes\": {\"awkward_pauses\": false, \"repeated_syllables\": {}, \"omissions_or_clipped\": false, \"final_syllable_completeness\": true, \"pronunciation_of_著\": null}}"
+  },
+  {
+    "file": "L410-G05-wrong-two.m4a",
+    "sha256": "a6bdc8d0bddb07f30f4fed8db3631ddb5b4c4fde1febad4457c81f37668e5e97",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"天越來越黑，快回去吧\", \"details\": {\"天\": \"clear\", \"越來越\": {\"syllables\": 4, \"clear\": true}, \"黑\": \"complete\", \"快\": \"complete\", \"回去\": {\"syllables\": 2, \"complete\": true}, \"吧\": \"final particle, complete\"}, \"awkward_pauses\": false, \"neutral_著\": \"none heard\"}"
+  },
+  {
+    "file": "L410-S01.m4a",
+    "sha256": "2942aecdb71ea3d014d178ae5a54240756d368162b7113a632f6c411595aaa17",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "ANSWER: I’m sorry, but I can’t produce a transcript without the actual audio to analyze. If you can provide the recording, I’ll do my best to help."
+  },
+  {
+    "file": "L410-S02.m4a",
+    "sha256": "a8268ed703297946dda9982c52444aa75a6ed00eb13dd90d0b77fb3a9a8ae982",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"沒辦法穿上試試大一點的\", \"details\": {\"試\": {\"pronunciation\": \"4th tone shi4\", \"count\": 2}, \"著\": {\"heard\": null, \"note\": \"not present\"}, \"repeated_words\": [], \"final_syllable_completeness\": \"final syllable 的 complete\", \"awkward_pauses\": \"none detected\"}}"
+  },
+  {
+    "file": "L410-S03.m4a",
+    "sha256": "470f0056b5eef3aed38fe9311ca7aea29a131d678cbb222c64ac70d9cf54828b",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"加一點水，再試著畫畫看。\", \"details\": {\"試\": {\"pronunciation\": \"shi4\", \"count\": 1}, \"著\": {\"pronunciation\": \"˙zhe\", \"count\": 1}, \"repeated_words\": {}, \"final_syllable_completeness\": \"complete\", \"awkward_pauses\": \"none\"}}"
+  },
+  {
+    "file": "L410-S04.m4a",
+    "sha256": "964d750d3f6b45d843b856d8be0bf701c59581fa628a3882a18a28e5d50a7ca9",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"天越來越黑 快回家吧\", \"notes\": {\"syllable_counts\": {\"天\": 1, \"越來越黑\": 4, \"快\": 1, \"回家吧\": 3}, \"pauses\": \"Slight pause between '黑' and '快'\", \"pronunciation\": {\"天\": \"tian1\", \"越\": \"yue4\", \"來\": \"lai2\", \"黑\": \"hei1\", \"快\": \"kuai4\", \"回\": \"hui2\", \"家\": \"jia1\", \"吧\": \"ba\"} }}"
+  },
+  {
+    "file": "L410-S05.m4a",
+    "sha256": "1ba9991b1de03357bb761b6bc64a9debab043e85fd4f7ef9eb2d2750967860af",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"點心拿太多，減少一點吧\", \"omitted_or_clipped_syllables\": null, \"repeated_syllables_counts\": {\"點\": 1, \"心\": 1, \"拿\": 1, \"太\": 1, \"多\": 1, \"減\": 1, \"少\": 1, \"一\": 1, \"點\": 1, \"吧\": 1}, \"final_syllable_completeness\": \"complete\", \"awkward_pauses\": null, \"shi_variants\": null, \"zhe_readings\": null, \"uncertainty\": null}"
+  },
+  {
+    "file": "L410-S01.m4a",
+    "sha256": "2942aecdb71ea3d014d178ae5a54240756d368162b7113a632f6c411595aaa17",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Listen carefully to this Taiwan Mandarin recording. Give the exact Traditional Chinese transcript as heard, without an expected transcript. Report omitted or clipped syllables, actual audible syllable counts for repeated words, final syllable completeness, and awkward pauses. If 試/世/事 occurs, report actually heard pronunciation and count of repeated syllables. If 著 occurs, report whether neutral ˙ㄓㄜ or another reading was heard; do not infer only from text. If uncertain, say so. Return concise JSON. This is independent AI listening, not human QA.",
+    "result": "{\"transcript\": \"減法 不會算 試試這個辦法\", \"omissions\": false, \"repetitions\": {\"試\": 2}, \"final_syllable_completeness\": \"complete\", \"awkward_pauses\": false, \"著_pronunciation\": null}"
+  }
+]

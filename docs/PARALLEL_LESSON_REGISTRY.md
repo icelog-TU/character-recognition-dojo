@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L410 | 試 / normal single-character lesson | claimed | Production D | codex/l410-complete-package | L405, L406, L407, L408, L409; R049/R050 after405 milestone | 越加減法辦 | curriculum-workflow/lesson-requests/L410.json; curriculum-workflow/generated/L410-generation-packet.md; curriculum-workflow/drafts/L410-draft.json | public/assets/lessons/L410/; curriculum-workflow/audio-inbox/L410/ | Teacher-approved five sentences; origin/main 2632d2c3 formal L404; 414 allowed Han. Dependencies and review milestone block Release only. Claim precedes asset work. |
+| L410 | 試 / normal single-character lesson | dependency-blocked-asset-complete | Production D | codex/l410-complete-package | L409; L405-L408 and R049/R050 after405 merged | 辦 | curriculum-workflow/lesson-requests/L410.json; curriculum-workflow/generated/L410-generation-packet.md; curriculum-workflow/drafts/L410-draft.json | public/assets/lessons/L410/; curriculum-workflow/audio-inbox/L410/ | Teacher-approved five sentences. Latest origin/main 346b7af0 formal L408; locked 414 allowed Han. Remaining L409 blocks Release only. Five WebP, ten M4A, AI timings and technical gates complete. Phone playback checked; G02 pointer-hold tooling limitation documented in L410-package-notes.md. |
 
 ## Status Values
 
