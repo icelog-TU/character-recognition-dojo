@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L423 | 組 | claimed | Production E | codex/l423-complete-package | L416, L418, L419, L420, L421, L422; R051/R052 after L420 | 果 結 合 教 室 班 | curriculum-workflow/lesson-requests/L423.json; curriculum-workflow/generated/L423-generation-packet.md; curriculum-workflow/drafts/L423-draft.json | public/assets/lessons/L423/; curriculum-workflow/audio-inbox/L423/ | Teacher-approved handoff received. Base main 4eec5178 L415; locked handoff vocabulary 425 chars through L414 plus listed provisional chars and 組. R051/R052 cover L391-L420. Production owns package only; Release owns shared-state integration. |
 
 ## Status Values
 
