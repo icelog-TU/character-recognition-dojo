@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L406 | 加 | dependency-blocked-asset-complete | Production F | codex/l406-complete-package | L400, L401, L402, L403, L404, L405; Release L405 → R049 → R050 → L406 | 弱 越 (者/勇/強/算 merged at b4d20e1e) | curriculum-workflow/lesson-requests/L406.json; curriculum-workflow/generated/L406-generation-packet.md; curriculum-workflow/drafts/L406-draft.json | public/assets/lessons/L406/; curriculum-workflow/audio-inbox/L406/ | Teacher-approved S02 price 50 and exactly three coins 20,20,10; no answer. Adult-only fire/water handling. |
+| L406 | 加 | dependency-blocked-asset-complete | Production F | codex/l406-complete-package | L400, L401, L402, L403, L404, L405; Release L405 → R049 → R050 → L406 | 越 (者/勇/強/算/弱 merged through L404) | curriculum-workflow/lesson-requests/L406.json; curriculum-workflow/generated/L406-generation-packet.md; curriculum-workflow/drafts/L406-draft.json | public/assets/lessons/L406/; curriculum-workflow/audio-inbox/L406/ | Teacher-approved S02 price 50 and exactly three coins 20,20,10; no answer. Adult-only fire/water handling. |
 
 ## Status Values
 

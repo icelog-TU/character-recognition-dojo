@@ -3,8 +3,8 @@
 Status: dependency-blocked-asset-complete.
 
 ## Boundary and approved constraints
-Teacher-approved Production F L406 handoff. Main L001-L403 latest 算, 407 learned characters. Original handoff provisional 者/勇/強/算 are now merged; 者 remains recorded as the extra dependency outside coverage. Release order L405 → R049 → R050 → L406. 加 always ㄐㄧㄚ. S02 exception only: price 50; exactly three teaching coins 20,20,10; no total/answer. S01 only father handles fire tongs; girl/mother watch at safe distance. S05 only mother handles kettle/hot water. S03 same slim hero and same-size stone in past/present, lift now to waist; keep recent story design. S04 two visiting generic adults; mother adds separate vegetable dish to table. G05 target first 算 index5, not second index7; G02 suffix exactly 一道菜. 者 is the handoff extra dependency L400 outside coverage window, now merged in source main. 油/參 are not allowed; no 加油/參加.
-Source b4d20e1efd4c4c215e82aed5ff5bfa5267eef1f7; dependencies L400, L401, L402, L403, L404, L405; provisional 弱 越; allowed count 410.
+Teacher-approved Production F L406 handoff. Main L001-L404 latest 弱, 408 learned characters. Original handoff provisional 者/勇/強/算/弱 are now merged; 者 remains recorded as the extra dependency outside coverage. Release order L405 → R049 → R050 → L406. 加 always ㄐㄧㄚ. S02 exception only: price 50; exactly three teaching coins 20,20,10; no total/answer. S01 only father handles fire tongs; girl/mother watch at safe distance. S05 only mother handles kettle/hot water. S03 same slim hero and same-size stone in past/present, lift now to waist; keep recent story design. S04 two visiting generic adults; mother adds separate vegetable dish to table. G05 target first 算 index5, not second index7; G02 suffix exactly 一道菜. 者 is the handoff extra dependency L400 outside coverage window, now merged in source main. 油/參 are not allowed; no 加油/參加.
+Source d0cfbc9ac8f90ddb4db32b917e9d7723ec59cb59; dependencies L400, L401, L402, L403, L404, L405; provisional 越; allowed count 410.
 
 Coverage: 加4 / 越2 / 弱2 / 算2 / 強1 / 勇1. Extra handoff dependency 者 is now merged and is not a coverage target.
 
@@ -289,7 +289,7 @@ Square image / 1:1 composition, warm detailed Taiwan picture-book pencil-and-wat
 
 
 ## Final QA
-Origin/main advanced from L398/402 learned to L403/407 learned during preparation; latest allowed410 includes merged 或. Original approved dependency list retained; only 弱/越 remain provisional. 者 extra coverage-window dependency now merged.
+Origin/main advanced from L398/402 learned to L403/407 learned during preparation; latest allowed410 includes merged 或. Original approved dependency list retained; only 越 remains provisional after final L404 boundary check. 者 extra coverage-window dependency now merged.
 Initial standalone 加 recognition was 蝦; regenerated directly from single 加. Final gpt-4o-transcribe with generic Mandarin context but no target supplied recognized 加 before and after silence trimming. Whisper on subsecond audio hallucinated prompt text; retained raw evidence, not counted as exact transcription. No human listening claimed. Repo ai:audio/assets:audio/assets:align:ai; independent fragments/full options, no extraction/splicing. Only measured trailing silence trimmed with120ms decay allowance; AI timings refined using measured pauses. Shared files restored.
 
 L406-S01 style-lock PASS, cast PASS; Father alone uses long fire tongs; mother and girl safely back; weak flame/embers.
@@ -332,9 +332,13 @@ Browser QA:
 - PASS: Canonical Stage4, first 算 index5, G04 也能變強 single-Han cards, exact dedicated G02 fragments/timings, G05 exact full-sentence options, mean-volume spread 0.2dB.
 - PASS: Five final square WebP images<=250KiB, total lesson assets 1384494 bytes<=2MiB; exported files inspected side-by-side against L058/refined/family/hero references.
 
-No missing lesson-local assets. Release owns L404/L405 → R049 → R050 → L406 integration and final verify.
+No missing lesson-local assets. Release owns L405 → R049 → R050 → L406 integration and final verify.
 verify skipped: dependency-blocked, shared state left for Release.
 
 Validation: npm run validate:production PASS on baseline; same production asset validator PASS on an isolated temporary L406 draft fixture, restored immediately. Lesson-local technical audit PASS.
 
 Asset format validation: npm run assets:audit -- --strict PASS on an isolated L406 draft fixture; production JSON restored byte-for-byte.
+
+
+## Final boundary refresh
+Final handoff boundary rechecked at d0cfbc9ac8f90ddb4db32b917e9d7723ec59cb59: L001-L404, latest 弱, 408 learned characters; allowed-character set unchanged at 410. Only 越 remains provisional. Original requested dependencies retained for audit; remaining Release order L405 → R049 → R050 → L406.

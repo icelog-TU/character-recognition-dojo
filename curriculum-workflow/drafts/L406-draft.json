@@ -18,10 +18,9 @@
     "L405"
   ],
   "provisionalLearnedChars": [
-    "弱",
     "越"
   ],
-  "sourceBoundary": "b4d20e1efd4c4c215e82aed5ff5bfa5267eef1f7",
+  "sourceBoundary": "d0cfbc9ac8f90ddb4db32b917e9d7723ec59cb59",
   "packageStatus": "dependency-blocked-asset-complete",
   "allowedChars": [
     "一",
@@ -448,12 +447,11 @@
     "者 is the handoff extra dependency L400 outside coverage window, now merged in source main. 油/參 are not allowed; no 加油/參加."
   ],
   "releaseBlockers": [
-    "L404",
     "L405",
     "R049",
     "R050"
   ],
-  "teacherNotes": "Teacher-approved Production F L406 handoff. Main L001-L403 latest 算, 407 learned characters. Original handoff provisional 者/勇/強/算 are now merged; 者 remains recorded as the extra dependency outside coverage. Release order L405 → R049 → R050 → L406. 加 always ㄐㄧㄚ. S02 exception only: price 50; exactly three teaching coins 20,20,10; no total/answer. S01 only father handles fire tongs; girl/mother watch at safe distance. S05 only mother handles kettle/hot water. S03 same slim hero and same-size stone in past/present, lift now to waist; keep recent story design. S04 two visiting generic adults; mother adds separate vegetable dish to table. G05 target first 算 index5, not second index7; G02 suffix exactly 一道菜. 者 is extra provisional dependency L400 outside coverage window. 油/參 are not allowed; no 加油/參加.",
+  "teacherNotes": "Teacher-approved Production F L406 handoff. Main L001-L404 latest 弱, 408 learned characters. Original handoff provisional 者/勇/強/算/弱 are now merged; 者 remains recorded as the extra dependency outside coverage. Release order L405 → R049 → R050 → L406. 加 always ㄐㄧㄚ. S02 exception only: price 50; exactly three teaching coins 20,20,10; no total/answer. S01 only father handles fire tongs; girl/mother watch at safe distance. S05 only mother handles kettle/hot water. S03 same slim hero and same-size stone in past/present, lift now to waist; keep recent story design. S04 two visiting generic adults; mother adds separate vegetable dish to table. G05 target first 算 index5, not second index7; G02 suffix exactly 一道菜. 者 is extra provisional dependency L400 outside coverage window. 油/參 are not allowed; no 加油/參加.",
   "charAudio": {
     "加": "/assets/lessons/L406/audio/char-u52a0.m4a"
   },
@@ -1036,5 +1034,7 @@
       "fallback": "Recording/replay not verified through automation. Technical asset validation and dedicated fragment playback used per Production SOP browser fallback",
       "reward": "Reward button emitted REWARD callback. Fixture intentionally does not persist progress or integrate next lesson; post-reward cross-lesson navigation left to Release integrated verification"
     }
-  }
+  },
+  "generationSourceBoundary": "b4d20e1efd4c4c215e82aed5ff5bfa5267eef1f7",
+  "finalBoundaryCheck": "Final handoff boundary rechecked at d0cfbc9ac8f90ddb4db32b917e9d7723ec59cb59: L001-L404, latest 弱, 408 learned characters; allowed-character set unchanged at 410. Only 越 remains provisional. Original requested dependencies retained for audit; remaining Release order L405 → R049 → R050 → L406."
 }

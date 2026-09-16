@@ -24,6 +24,10 @@
     {
       "check": "npm run assets:audit -- --strict on isolated L406 draft fixture; original production JSON restored byte-for-byte.",
       "result": "PASS"
+    },
+    {
+      "check": "Latest origin/main L404 learned408; same allowed410 set, all unchanged sentences/options still within boundary; only 越 provisional.",
+      "result": "PASS"
     }
   ],
   "images": [
@@ -1260,5 +1264,6 @@
     "S02 readable numerals: price 50 and exactly three teaching coins labeled 20,20,10; no sum answer or other readable text."
   ],
   "sourceBoundary": "b4d20e1efd4c4c215e82aed5ff5bfa5267eef1f7",
-  "boundaryNote": "Origin/main advanced from L398/402 learned to L403/407 learned during preparation; latest allowed410 includes merged 或. Original approved dependency list retained; only 弱/越 remain provisional. 者 extra coverage-window dependency now merged."
+  "boundaryNote": "Origin/main advanced from L398/402 learned to L403/407 learned during preparation; latest allowed410 includes merged 或. Original approved dependency list retained; only 弱/越 remain provisional. 者 extra coverage-window dependency now merged.",
+  "finalBoundaryCheck": "Final handoff boundary rechecked at d0cfbc9ac8f90ddb4db32b917e9d7723ec59cb59: L001-L404, latest 弱, 408 learned characters; allowed-character set unchanged at 410. Only 越 remains provisional. Original requested dependencies retained for audit; remaining Release order L405 → R049 → R050 → L406."
 }
