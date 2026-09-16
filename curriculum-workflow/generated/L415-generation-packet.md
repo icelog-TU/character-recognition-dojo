@@ -1,8 +1,8 @@
 # L415 Generation Packet
 
-packageStatus: needs-rework
+packageStatus: asset-complete-package
 
-Production blocker: actual pronunciation confirmation for S04/G02 prefix 了 (ㄌㄧㄠˇ) and S05/G05 長 (ㄓㄤˇ) remains inconclusive after repeated full-text regenerations and contradictory AI listening. Do not integrate until resolved; this is separate from learner-character dependencies. Images, audio files and final timing metadata exist.
+Teacher accepted all six original clips on 2026-09-16; see L415-teacher-audio-review.json for hashes. No assets or timings changed. Main 182ace5f is through L414; dependencies satisfied. See L415-rescue-qa.md for Stage4 verification and limitations.
 
 Production C; codex/l415-complete-package. Source main 18c9df4a4f1d4c9966b65d8b4371693a714e3d3c, formal L408. Single character 解 ㄐㄧㄝˇ.
 
@@ -209,7 +209,7 @@ dependsOnLessons: L410,L411,L412,L413,L414. provisionalLearnedChars: 試定成�
 ```
 
 ## Constraints
-Browser QA: Stage 1 and all five Stage 3 sentence playback completed at 390x844; displayed pronunciation overrides checked. Stage 4 interactive playback and microphone QA are not completed. See L415-production-qa.md for scope and the actual-pronunciation verification blocker. The temporary fixture is not included in the package.
+Browser QA: source Stage1/Stage3 evidence retained; Rescue completed phone Stage4 playback/answers, synthetic microphone recording/replay, and phone/tablet G03 layout and reward navigation checks. See L415-rescue-qa.md for exact scope. Physical microphone QA is not claimed.
 
 Locked approved handoff. S04 了 index2 ㄌㄧㄠˇ; G02 我不了 ends liao3, never le or extra 解. S05 長 index2 ㄓㄤˇ in all G05 options; S01 著 index1 neutral ˙ㄓㄜ. Named Xiaoyue/Xiaoguang references required. No readable image text/numeral exceptions. S05 chick appears only in memory bubble. Release order includes L409 but 辦 is not used.
 

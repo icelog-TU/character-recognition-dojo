@@ -1,10 +1,9 @@
 # L415 Production QA
 
-packageStatus: needs-rework
+packageStatus: asset-complete-package
 
-## Exact Blocker
-Pronunciation QA remains inconclusive for S04/G02 prefix 了 (must be ㄌㄧㄠˇ, not neutral le) and S05/G05 長 (must be ㄓㄤˇ, not chang2). Multiple complete independent TTS regenerations were made with explicit pronunciation instructions. gpt-audio-1.5 listening returned contradictory phonetic/tone observations across both original and final silence-trimmed files. The final S04 response reports liao third tone, but the same spoken-content earlier report did not. A second gpt-audio model did not actually analyze the supplied audio. Do not count those responses as verification. S01 neutral 著 should also be checked during the focused listening pass.
-This is not an ordinary request for teacher pre-main subjective approval, nor only a dependency blocker. Actual special-pronunciation verification is still needed. Confirm actual sounds with reliable listening; regenerate entire tracks if necessary, then reprocess/re-align and rerun intake. Physical microphone/recording QA is also not exercised.
+## Pronunciation acceptance
+The teacher listened to all six final original clips and accepted them on 2026-09-16. S04/G02 prefix 了 ㄌㄧㄠˇ, S05/all G05 長 ㄓㄤˇ, and S01 neutral 著 are accepted. SHA-256 evidence is in L415-teacher-audio-review.json. Historical contradictory AI responses remain diagnostic provenance, superseded by this teacher decision. No audio or timings were changed.
 
 ## Boundary
 Base and last fetch: 18c9df4a4f1d4c9966b65d8b4371693a714e3d3c. Formal L408; R049/R050 after405 merged. Learner-character dependencies L410-L414 (試定成功決); release order also includes L409, without using 辦 in this lesson. No shared production curriculum/planner/ledger integration shipped.
@@ -32,10 +31,14 @@ Only trailing silence trimmed, preserving150ms acoustic tail; no phoneme extract
 - validate:production isolated fixture PASS.
 - L415-package-audit.mjs PASS:418 allowed characters, coverage 解3決2功2成2定2試1; exact approved records, displayLines join/<=6, paths, timings, canonical order, each sentence once, G03three distinct single-Han cards, G04single-Han mapping, G02exact fragments, G05whole-text options.
 - Full verify skipped: dependency-blocked lesson-local package; shared integration owned by Release.
-- Completion/package-intake intentionally blocked by truthful needs-rework status until pronunciation verification resolves.
+- Pronunciation completion gate resolved by the hash-bound teacher acceptance; final strict intake is required on the rescue commit.
 
 ## Browser QA
-At 390x844 in an isolated local L415 fixture, Stage 1 character playback completed and all five Stage 3 sentence buttons played through. The UI reported all sentences heard. The neutral 著, 了 ㄌㄧㄠˇ and 長 ㄓㄤˇ overrides were visible. This verifies browser playback and displayed annotation, not actual phonetic correctness. Stage 4 interactive playback and microphone recording QA are not completed. The temporary production JSON fixture was restored before packaging.
+At 390x844 in an isolated local L415 fixture, Stage 1 character playback completed and all five Stage 3 sentence buttons played through. The UI reported all sentences heard. The neutral 著, 了 ㄌㄧㄠˇ and 長 ㄓㄤˇ overrides were visible. This verifies browser playback and displayed annotation, not actual phonetic correctness. Rescue subsequently completed Stage4 playback/answers and synthetic-microphone recording/replay; see L415-rescue-qa.md. Physical microphone operation is not claimed. The temporary production JSON fixture was restored before packaging.
 
 ## Shared Script Review
 Generation now honors sentence zhuyinOverrides and optional --instructions. Alignment adds optional prompt/sentence filter and simplified/traditional mappings needed for these units. No homophone mismatch bypass added. Release/Rescue should inspect these changes, which include carried-forward L409 tool improvements absent from this main base.
+
+## Rescue handoff
+Teacher accepted all six original clips on 2026-09-16; see L415-teacher-audio-review.json for hashes. No assets or timings changed. Main 182ace5f is through L414; dependencies satisfied. See L415-rescue-qa.md for Stage4 verification and limitations.
+Original dependency metadata records source provenance; remaining releaseBlockers is now empty. Current allowed set including 解 is 419 (L409 辦 is now formal); the original 418-character source-boundary audit also passes.

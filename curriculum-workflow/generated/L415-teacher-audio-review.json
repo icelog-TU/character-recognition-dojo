@@ -1,0 +1,52 @@
+{
+  "unit": "L415",
+  "sourceCommit": "59e94f066bec2e29f4325db6f1d2efbeb39b9d51",
+  "date": "2026-09-16",
+  "method": "Teacher listened to six original embedded clips and explicitly accepted all six",
+  "teacherReply": "好棒哦，这一次的音档全部正确耶。",
+  "scope": "Only these six clips; no new human approval claimed for other assets or microphone operation",
+  "files": [
+    {
+      "path": "public/assets/lessons/L415/audio/L415-S04.m4a",
+      "text": "我不了解你為什麼生氣。",
+      "check": "了 ㄌㄧㄠˇ",
+      "sha256": "c0200daf7de98b8ba93e209beea14b21ba5c17901ad01f09659bc071c0009df0",
+      "result": "PASS"
+    },
+    {
+      "path": "public/assets/lessons/L415/audio/L415-G02-prefix.m4a",
+      "text": "我不了",
+      "check": "了 ㄌㄧㄠˇ",
+      "sha256": "562e6d721b1213cf5e70cfa713532f9b5a306fce03da3a617837ad7dbf5226bd",
+      "result": "PASS"
+    },
+    {
+      "path": "public/assets/lessons/L415/audio/L415-S05.m4a",
+      "text": "小雞長成公雞，叫聲好大。",
+      "check": "長 ㄓㄤˇ; also G05 correct",
+      "sha256": "5747a8213bcaa584ef9ae465ef384471bd420a17fcfbde1e06c4293d2c3abac8",
+      "result": "PASS"
+    },
+    {
+      "path": "public/assets/lessons/L415/audio/L415-G05-wrong-one.m4a",
+      "text": "小雞長成公雞，叫聲好小。",
+      "check": "長 ㄓㄤˇ",
+      "sha256": "05051e4e7e4f783e612f7c955010caec8597e84fe65ac38a78a18420d43bdcdb",
+      "result": "PASS"
+    },
+    {
+      "path": "public/assets/lessons/L415/audio/L415-G05-wrong-two.m4a",
+      "text": "小雞長成公雞，叫聲好怪。",
+      "check": "長 ㄓㄤˇ",
+      "sha256": "59fcf4010fe0e0227c9ab671416de7c2fedec6371aacdcf891a97f75d31c00f9",
+      "result": "PASS"
+    },
+    {
+      "path": "public/assets/lessons/L415/audio/L415-S01.m4a",
+      "text": "試著解開，這次一定能成功。",
+      "check": "著 neutral ˙ㄓㄜ",
+      "sha256": "1daca38fb5559d65aec90e8058ad86c23104180400d1d7363f87bdc8f3705152",
+      "result": "PASS"
+    }
+  ]
+}

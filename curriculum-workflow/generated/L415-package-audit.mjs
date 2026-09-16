@@ -4,7 +4,7 @@ import { execFileSync } from "node:child_process";
 const read = p => JSON.parse(fs.readFileSync(p, "utf8"));
 const request = read("curriculum-workflow/lesson-requests/L415.json");
 const draft = read("curriculum-workflow/drafts/L415-draft.json");
-const packet = fs.readFileSync("curriculum-workflow/generated/L415-generation-packet.md","utf8");
+const packet = fs.readFileSync("curriculum-workflow/generated/L415-generation-packet.md","utf8").replace(/\r\n/g,"\n");
 const packetSentences = JSON.parse(packet.split("```json\n")[1].split("\n```")[0]);
 const formal = JSON.parse(execFileSync("git",["show",request.sourceMainCommit+":src/curriculum/sample-lessons.json"],{encoding:"utf8",maxBuffer:64000000}));
 const allowed = new Set([...formal.lessons.flatMap(l=>l.newChars),...request.provisionalLearnedChars,...draft.newChars]);

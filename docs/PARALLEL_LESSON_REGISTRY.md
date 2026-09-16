@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L415 | 解 / normal lesson | needs-rework | Production C | codex/l415-complete-package | L410, L411, L412, L413, L414; Release must preserve L409-L414 playable order | 試、定、成、功、決 | curriculum-workflow/lesson-requests/L415.json; curriculum-workflow/generated/L415-generation-packet.md; curriculum-workflow/drafts/L415-draft.json | public/assets/lessons/L415/; curriculum-workflow/audio-inbox/L415/ | 5 WebP/10 M4A/9 timed tracks present; pronunciation confirmation for S04/G02 prefix 了 and S05/G05 長 unresolved; also check S01 neutral 著. See L415-production-qa.md; not only dependency-blocked. |
+| L415 | 解 / normal lesson | asset-complete-package | Package Rescue | codex/l415-package-rescue | L410-L414 satisfied on main 182ace5f; L409-L414 release order satisfied | Source provenance: 試、定、成、功、決 | curriculum-workflow/lesson-requests/L415.json; curriculum-workflow/generated/L415-generation-packet.md; curriculum-workflow/drafts/L415-draft.json | public/assets/lessons/L415/ | Teacher accepted six clips; all 15 assets and timings unchanged. Phone Stage4 and tablet spot-checks complete; synthetic microphone scope in L415-rescue-qa.md. |
 
 ## Status Values
 

@@ -23,17 +23,10 @@
     "功",
     "決"
   ],
-  "releaseBlockers": [
-    "L409",
-    "L410",
-    "L411",
-    "L412",
-    "L413",
-    "L414"
-  ],
+  "releaseBlockers": [],
   "sourceMainCommit": "18c9df4a4f1d4c9966b65d8b4371693a714e3d3c",
-  "packageStatus": "needs-rework",
-  "productionBlockers": ["Pronunciation QA remains inconclusive for S04/G02 prefix 了 and S05/G05 長 after independent full-text regenerations and contradictory AI listening. Confirm actual ㄌㄧㄠˇ/ㄓㄤˇ, regenerate whole tracks if needed, then re-align and rerun intake. This is not merely a dependency blocker."],
+  "packageStatus": "asset-complete-package",
+  "productionBlockers": [],
   "charAudio": {
     "解": "/assets/lessons/L415/audio/char-u89e3.m4a"
   },
@@ -732,5 +725,6 @@
         }
       ]
     }
-  ]
+  ],
+  "rescueNotes": "Teacher accepted all six original clips on 2026-09-16; see L415-teacher-audio-review.json for hashes. No assets or timings changed. Main 182ace5f is through L414; dependencies satisfied. See L415-rescue-qa.md for Stage4 verification and limitations."
 }

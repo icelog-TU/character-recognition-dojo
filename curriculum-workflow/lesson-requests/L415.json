@@ -23,17 +23,10 @@
     "功",
     "決"
   ],
-  "releaseBlockers": [
-    "L409",
-    "L410",
-    "L411",
-    "L412",
-    "L413",
-    "L414"
-  ],
+  "releaseBlockers": [],
   "sourceMainCommit": "18c9df4a4f1d4c9966b65d8b4371693a714e3d3c",
-  "packageStatus": "needs-rework",
-  "productionBlockers": ["Pronunciation QA remains inconclusive for S04/G02 prefix 了 and S05/G05 長 after independent full-text regenerations and contradictory AI listening. Confirm actual ㄌㄧㄠˇ/ㄓㄤˇ, regenerate whole tracks if needed, then re-align and rerun intake. This is not merely a dependency blocker."],
+  "packageStatus": "asset-complete-package",
+  "productionBlockers": [],
   "kind": "lesson",
   "targetSentenceCount": 5,
   "teacherNotes": "Locked approved handoff. S04 了 index2 ㄌㄧㄠˇ; G02 我不了 ends liao3, never le or extra 解. S05 長 index2 ㄓㄤˇ in all G05 options; S01 著 index1 neutral ˙ㄓㄜ. Named Xiaoyue/Xiaoguang references required. No readable image text/numeral exceptions. S05 chick appears only in memory bubble. Release order includes L409 but 辦 is not used.",
@@ -656,5 +649,6 @@
         }
       ]
     }
-  ]
+  ],
+  "rescueNotes": "Teacher accepted all six original clips on 2026-09-16; see L415-teacher-audio-review.json for hashes. No assets or timings changed. Main 182ace5f is through L414; dependencies satisfied. See L415-rescue-qa.md for Stage4 verification and limitations."
 }
