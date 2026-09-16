@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L415 | 解 / normal lesson | claimed | Production C | codex/l415-complete-package | L410, L411, L412, L413, L414; Release must preserve L409-L414 playable order | 試、定、成、功、決 | curriculum-workflow/lesson-requests/L415.json; curriculum-workflow/generated/L415-generation-packet.md; curriculum-workflow/drafts/L415-draft.json | public/assets/lessons/L415/; curriculum-workflow/audio-inbox/L415/ | Base 18c9df4a4f1d4c9966b65d8b4371693a714e3d3c. S04 了 ㄌㄧㄠˇ; S05 長 ㄓㄤˇ; S03/S04 fixed named cast. |
+| L415 | 解 / normal lesson | needs-rework | Production C | codex/l415-complete-package | L410, L411, L412, L413, L414; Release must preserve L409-L414 playable order | 試、定、成、功、決 | curriculum-workflow/lesson-requests/L415.json; curriculum-workflow/generated/L415-generation-packet.md; curriculum-workflow/drafts/L415-draft.json | public/assets/lessons/L415/; curriculum-workflow/audio-inbox/L415/ | 5 WebP/10 M4A/9 timed tracks present; pronunciation confirmation for S04/G02 prefix 了 and S05/G05 長 unresolved; also check S01 neutral 著. See L415-production-qa.md; not only dependency-blocked. |
 
 ## Status Values
 
