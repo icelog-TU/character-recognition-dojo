@@ -42,6 +42,14 @@ function draftNameFromAudioSrc(audioSrc) {
   return base.replace(/\.(m4a|mp3|wav)$/i, ".mp3");
 }
 
+function pronunciationInstructions(sentence) {
+  const chars = hanChars(sentence.text || sentence.spokenText || "");
+  return Object.entries(sentence.zhuyinOverrides || {})
+    .filter(([index]) => chars[Number(index)])
+    .map(([index, zhuyin]) => `At Han index ${index}, pronounce ${chars[Number(index)]} as Taiwan zhuyin ${zhuyin}.`)
+    .join(" ");
+}
+
 const baseSpeechInstructions = [
   "Use natural Taiwan Mandarin pronunciation for young children.",
   "Speak clearly, warmly, and gently.",
@@ -128,7 +136,7 @@ if (includeSentences) {
   for (const sentence of lesson.sentences ?? []) {
     if (sentence.approved !== true) continue;
     if (sentenceFilter && sentence.id.toUpperCase() !== sentenceFilter) continue;
-    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`));
+    addJob(sentence.spokenText, path.join(outputDir, `${sentence.id}.mp3`), pronunciationInstructions(sentence));
   }
 }
 
@@ -168,7 +176,7 @@ for (const job of jobs) {
     voice,
     input: job.input,
     outputPath: job.outputPath,
-    instructionsExtra: job.instructionsExtra,
+    instructionsExtra: [job.instructionsExtra, args.instructions].filter(Boolean).join(" "),
   });
 }
 

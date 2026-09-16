@@ -1,0 +1,192 @@
+[
+  {
+    "file": "char-u8fa6.m4a",
+    "sha256": "dc80292f32c34884663487435590ceba55a55e63b518f748d7b499e262d3f372",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "飯。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 15,
+        "input_tokens": 11,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 11
+        },
+        "output_tokens": 4
+      }
+    }
+  },
+  {
+    "file": "L409-G02-prefix.m4a",
+    "sha256": "b643705c073abc640683b3eb7ddab16f03168f9f483ece7ed35b6ef960f69301",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "書包太重想",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 26,
+        "input_tokens": 19,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 19
+        },
+        "output_tokens": 7
+      }
+    }
+  },
+  {
+    "file": "L409-G02-suffix.m4a",
+    "sha256": "9af2d377d53125ca7af7159043833d10f351ee159343c2e12ea5685c81506fce",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "法減少東西。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 28,
+        "input_tokens": 20,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 20
+        },
+        "output_tokens": 8
+      }
+    }
+  },
+  {
+    "file": "L409-G05-wrong-one.m4a",
+    "sha256": "54218e04d20cdd162d0f4ac39a439d05666217e80fd0766c0ce5873dcad467c0",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "小月身体弱，跑一下就累了。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 60,
+        "input_tokens": 47,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 47
+        },
+        "output_tokens": 13
+      }
+    }
+  },
+  {
+    "file": "L409-G05-wrong-two.m4a",
+    "sha256": "ca7d8daa5e822e62bdaaa2bae14483a417d39730d0b30e43c6591ceb0ec098c3",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "小光身体弱，走一下就累了。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 54,
+        "input_tokens": 41,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 41
+        },
+        "output_tokens": 13
+      }
+    }
+  },
+  {
+    "file": "L409-S01.m4a",
+    "sha256": "f0604b73cf25da7c0557027d58f3394683d3ff4254fd27b24ebafbcb42efd5f0",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "加法和减法都不会怎么办?",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 46,
+        "input_tokens": 35,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 35
+        },
+        "output_tokens": 11
+      }
+    }
+  },
+  {
+    "file": "L409-S02.m4a",
+    "sha256": "f3c5c146d40bcf6024afb68de646fc4af3dd9294388e9ec199a0af724893da75",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "書包太重，想辦法減少東西。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 55,
+        "input_tokens": 40,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 40
+        },
+        "output_tokens": 15
+      }
+    }
+  },
+  {
+    "file": "L409-S03.m4a",
+    "sha256": "26360f260714471ed80da330beb3fcd9b871bba5437f3bed95e00718fd602f4b",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "客人越來越多，得加椅子了。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 50,
+        "input_tokens": 34,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 34
+        },
+        "output_tokens": 16
+      }
+    }
+  },
+  {
+    "file": "L409-S04.m4a",
+    "sha256": "2dc7ce2e9090e5b1b24b038419088d32f66f7d647ded45d5c5cc6c93053faf08",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "小光身体弱，跑一下就累了。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 61,
+        "input_tokens": 48,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 48
+        },
+        "output_tokens": 13
+      }
+    }
+  },
+  {
+    "file": "L409-S05.m4a",
+    "sha256": "2f05844bf672133e3a7c8295618f4d4a965e74ba41d33c0dc6c02b89ee77c9be",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "媽媽帶我去辦借書卡。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 40,
+        "input_tokens": 29,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 29
+        },
+        "output_tokens": 11
+      }
+    }
+  }
+]
