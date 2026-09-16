@@ -2005,10 +2005,12 @@ function App() {
             {!activeReviewLesson && (
               <PracticeNavigator
                 lessons={curriculum.lessons}
+                entries={practiceEntries}
+                activeEntry={activePracticeEntry}
                 selectedOrder={selectedLesson.order}
                 unlockOrder={unlockOrder}
                 completedOrders={completedOrders}
-                onSelect={openLesson}
+                onSelect={openPracticeEntry}
               />
             )}
             {activeReviewLesson && activePracticeEntry && (
@@ -2455,22 +2457,27 @@ function AppDrawer({
 
 function PracticeNavigator({
   lessons,
+  entries,
+  activeEntry,
   selectedOrder,
   unlockOrder,
   completedOrders,
   onSelect,
 }: {
   lessons: Lesson[];
+  entries: PracticeSequenceEntry[];
+  activeEntry: PracticeSequenceEntry | null;
   selectedOrder: number;
   unlockOrder: number;
   completedOrders: Set<number>;
-  onSelect: (order: number) => void;
+  onSelect: (entry: PracticeSequenceEntry) => void;
 }) {
   const currentEntries = lessons.filter((lesson) => lesson.order === selectedOrder).flatMap(lessonCharEntries).slice(0, 3);
-  const lessonIndex = lessons.findIndex((lesson) => lesson.order === selectedOrder);
-  const previousLesson = lessonIndex > 0 ? lessons[lessonIndex - 1] : null;
-  const nextLesson = lessonIndex >= 0 && lessonIndex < lessons.length - 1 ? lessons[lessonIndex + 1] : null;
-  const nextLocked = Boolean(nextLesson && nextLesson.order > unlockOrder);
+  const activeIndex = activeEntry ? entries.findIndex((entry) => entry.id === activeEntry.id) : -1;
+  const previousEntry = activeIndex > 0 ? entries[activeIndex - 1] : null;
+  const nextEntry = activeIndex >= 0 && activeIndex < entries.length - 1 ? entries[activeIndex + 1] : null;
+  const previousLocked = Boolean(previousEntry && practiceEntryLocked(previousEntry, unlockOrder));
+  const nextLocked = Boolean(nextEntry && practiceEntryLocked(nextEntry, unlockOrder));
 
   return (
     <aside className="side-panel">
@@ -2482,10 +2489,16 @@ function PracticeNavigator({
         <button
           type="button"
           className="lesson-step-button"
-          aria-label={previousLesson ? `上一課，第 ${previousLesson.order} 課` : "沒有上一課"}
-          disabled={!previousLesson}
+          aria-label={
+            previousEntry
+              ? previousLocked
+                ? `${practiceEntryBadge(previousEntry)} ${practiceEntryLabel(previousEntry)}尚未解鎖`
+                : `上一課，${practiceEntryBadge(previousEntry)} ${practiceEntryLabel(previousEntry)}`
+              : "沒有上一課"
+          }
+          disabled={!previousEntry || previousLocked}
           onClick={() => {
-            if (previousLesson) onSelect(previousLesson.order);
+            if (previousEntry && !previousLocked) onSelect(previousEntry);
           }}
         >
           ‹
@@ -2505,11 +2518,15 @@ function PracticeNavigator({
           type="button"
           className="lesson-step-button"
           aria-label={
-            nextLesson ? (nextLocked ? `第 ${nextLesson.order} 課尚未解鎖` : `下一課，第 ${nextLesson.order} 課`) : "沒有下一課"
+            nextEntry
+              ? nextLocked
+                ? `${practiceEntryBadge(nextEntry)} ${practiceEntryLabel(nextEntry)}尚未解鎖`
+                : `下一課，${practiceEntryBadge(nextEntry)} ${practiceEntryLabel(nextEntry)}`
+              : "沒有下一課"
           }
-          disabled={!nextLesson || nextLocked}
+          disabled={!nextEntry || nextLocked}
           onClick={() => {
-            if (nextLesson && !nextLocked) onSelect(nextLesson.order);
+            if (nextEntry && !nextLocked) onSelect(nextEntry);
           }}
         >
           ›
