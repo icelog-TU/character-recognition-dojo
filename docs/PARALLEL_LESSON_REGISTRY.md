@@ -1,4 +1,4 @@
-﻿# Parallel Lesson Registry
+# Parallel Lesson Registry
 
 This file is the shared coordination board for parallel lesson and review-module production.
 
@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L432 | 意 | dependency-blocked-asset-complete | Remote Production B | codex/l432-complete-package | L427:員, L428:自, L429:己, L430:主, L431:由; Release order through L431; R051/R052 after L420 (L391-L420) | 員, 自, 己, 主, 由 | curriculum-workflow/lesson-requests/L432.json; curriculum-workflow/generated/L432-generation-packet.md; curriculum-workflow/drafts/L432-draft.json | curriculum-workflow/audio-inbox/L432/; public/assets/lessons/L432/ | Complete package: 5 WebP, 10 M4A, final sentence and Stage 4 AI alignment. Technical gates PASS; browser scope recorded in packet. Base main f4bc071d / L420. Release owns sequential L421-L431, R051/R052 milestone and shared-state integration. |
+| L432 | 意 | dependency-blocked-asset-complete | Remote Production B | codex/l432-complete-package / 25056a61 | L427:員, L428:自, L429:己, L430:主, L431:由; Release order through L431; R051/R052 after L420 (L391-L420) | 員, 自, 己, 主, 由 | curriculum-workflow/lesson-requests/L432.json; curriculum-workflow/generated/L432-generation-packet.md; curriculum-workflow/drafts/L432-draft.json | curriculum-workflow/audio-inbox/L432/; public/assets/lessons/L432/ | Pushed asset commit 25056a61; complete package pending Release dependencies. 5 WebP, 10 M4A, final sentence and Stage 4 AI alignment. Technical gates PASS; browser scope recorded in packet. Base main f4bc071d / L420. Release owns sequential L421-L431, R051/R052 milestone and shared-state integration. |
 
 ## Status Values
 
