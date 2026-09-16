@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L430 | 主 | claimed | Production E | codex/l430-complete-package | L423, L425, L426, L427, L428, L429; R051/R052 after L420 | 組 各 輪 員 自 己 | curriculum-workflow/lesson-requests/L430.json; curriculum-workflow/generated/L430-generation-packet.md; curriculum-workflow/drafts/L430-draft.json | public/assets/lessons/L430/; curriculum-workflow/audio-inbox/L430/ | Approved teacher handoff. Base main 9b39f9d4 L416; locked 426-char vocabulary from 4eec5178 L415 plus listed provisional and 主. Release requires contiguous predecessors through L429 and R051/R052 covering L391-L420. Production package only. |
+| L430 | 主 | dependency-blocked-asset-complete | Production E | codex/l430-complete-package; see pushed tip | L423, L425, L426, L427, L428, L429; R051/R052 after L420 | 組 各 輪 員 自 己 | curriculum-workflow/lesson-requests/L430.json; curriculum-workflow/generated/L430-generation-packet.md; curriculum-workflow/drafts/L430-draft.json | public/assets/lessons/L430/; curriculum-workflow/audio-inbox/L430/ | 5 WebP + 10 M4A; final sentence/Stage 4 timings, local strict checks PASS. Locked vocabulary 426 Han. Latest checked main f4bc071d L420; all predecessors through L429 and R051/R052 required. Browser playback UI checked; human synchronized listening and phone recording remain unperformed. Release owns integration. |
 
 ## Status Values
 
