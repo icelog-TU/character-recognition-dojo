@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L401 | 勇 | claimed | Production E (teacher assignment; D busy) | codex/l401-complete-package | L396, L397, L398, L399, L400 | 單 雙 選 或 者 | curriculum-workflow/lesson-requests/L401.json; curriculum-workflow/generated/L401-generation-packet.md; curriculum-workflow/drafts/L401-draft.json | public/assets/lessons/L401/; curriculum-workflow/audio-inbox/L401/ | Base 23cae191, L390. No image text/number exceptions. Release owns sequence and after390 review pair. |
 
 ## Status Values
 
