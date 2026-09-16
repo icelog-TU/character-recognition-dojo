@@ -902,7 +902,7 @@
     "mobile": "PASS",
     "browserHarness": "Initial fixed2.6s Stage2 check ran before2.554s clip and UI update completed; changed test to await actual collection event, then reran both widths.",
     "fullVerify": "SKIPPED: dependency-blocked, shared state owned by Release",
-    "packageIntake": "Run on pushed ref before final handoff"
+    "packageIntake": "PASS: npm run curriculum:package-intake -- --unit L403 --ref origin/codex/l403-complete-package; verified pushed asset commit 5c6b3e6a0f001e775942e2f222cfee6398b37c35, 5 images and 10 audio files; evidence-only follow-up commit rechecked before final handoff"
   },
   "sizes": {
     "images": 894516,
