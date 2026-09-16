@@ -1,0 +1,17 @@
+{
+  "model": "gpt-4o-transcribe",
+  "prompt": "這是台灣國語認字教材的短片段。請如實轉寫聽到的字，不補成完整句子。",
+  "transcript": {
+    "text": "數一數河裡有幾條魚",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 78,
+      "input_tokens": 65,
+      "input_token_details": {
+        "text_tokens": 30,
+        "audio_tokens": 35
+      },
+      "output_tokens": 13
+    }
+  }
+}

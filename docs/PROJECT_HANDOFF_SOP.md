@@ -20,8 +20,8 @@ If Markdown and production JSON disagree, latest `origin/main:src/curriculum/sam
 
 Repo audit snapshot, maintained by `npm run curriculum:audit-state`:
 
-- Current reviewed lessons: L001-L390
-- L390 introduces `數`.
+- Current reviewed lessons: L001-L398
+- L398 introduces `選`.
 
 Do not trust this snapshot by itself, an old chat, a stale local `main`, or a package branch. The current curriculum boundary changes often.
 

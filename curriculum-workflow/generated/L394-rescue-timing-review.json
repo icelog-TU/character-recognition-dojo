@@ -1,0 +1,197 @@
+[
+  {
+    "id": "L394-S02",
+    "index": 3,
+    "before": {
+      "charIndex": 3,
+      "startMs": 1160,
+      "endMs": 1480
+    },
+    "after": {
+      "charIndex": 3,
+      "startMs": 1160,
+      "endMs": 1400
+    },
+    "reason": "Local approximate boundary review of 一頁 within the existing 1160–1566 ms phrase; final voiced decay at 1566 ms. Not a new Whisper timestamp or human synchronization verdict."
+  },
+  {
+    "id": "L394-S02",
+    "index": 4,
+    "before": {
+      "charIndex": 4,
+      "startMs": 1480,
+      "endMs": 1540
+    },
+    "after": {
+      "charIndex": 4,
+      "startMs": 1400,
+      "endMs": 1566
+    },
+    "reason": "The 60 ms 頁 estimate was too short. Approximate adjacent 一頁 division preserves phrase extent and the measured silence onset."
+  },
+  {
+    "id": "L394-S02",
+    "index": 5,
+    "before": {
+      "charIndex": 5,
+      "startMs": 1540,
+      "endMs": 2460
+    },
+    "after": {
+      "charIndex": 5,
+      "startMs": 2016,
+      "endMs": 2460
+    },
+    "reason": "Exclude FFmpeg measured 1566–2016 ms pause before 有; original 920 ms span included this silence."
+  },
+  {
+    "id": "L394-G05-wrong-one",
+    "index": 3,
+    "before": {
+      "charIndex": 3,
+      "startMs": 1040,
+      "endMs": 1940
+    },
+    "after": {
+      "charIndex": 3,
+      "startMs": 1502,
+      "endMs": 1940
+    },
+    "reason": "Exclude the measured phrase pause before 池/河; preserve original syllable end."
+  },
+  {
+    "id": "L394-S01",
+    "index": 6,
+    "before": {
+      "charIndex": 6,
+      "startMs": 2380,
+      "endMs": 2540
+    },
+    "after": {
+      "charIndex": 6,
+      "startMs": 2380,
+      "endMs": 2640
+    },
+    "reason": "Final syllable end reviewed against measured -40 dB final speech decay; file duration comes from FFprobe. This avoids padding highlights into silence or beyond EOF."
+  },
+  {
+    "id": "L394-S02",
+    "index": 10,
+    "before": {
+      "charIndex": 10,
+      "startMs": 3700,
+      "endMs": 3900
+    },
+    "after": {
+      "charIndex": 10,
+      "startMs": 3700,
+      "endMs": 3949
+    },
+    "reason": "Final syllable end reviewed against measured -40 dB final speech decay; file duration comes from FFprobe. This avoids padding highlights into silence or beyond EOF."
+  },
+  {
+    "id": "L394-S03",
+    "index": 8,
+    "before": {
+      "charIndex": 8,
+      "startMs": 2940,
+      "endMs": 3240
+    },
+    "after": {
+      "charIndex": 8,
+      "startMs": 2940,
+      "endMs": 3229
+    },
+    "reason": "Final syllable end reviewed against measured -40 dB final speech decay; file duration comes from FFprobe. This avoids padding highlights into silence or beyond EOF."
+  },
+  {
+    "id": "L394-S04",
+    "index": 10,
+    "before": {
+      "charIndex": 10,
+      "startMs": 4360,
+      "endMs": 4680
+    },
+    "after": {
+      "charIndex": 10,
+      "startMs": 4360,
+      "endMs": 4688
+    },
+    "reason": "Final syllable end reviewed against measured -40 dB final speech decay; file duration comes from FFprobe. This avoids padding highlights into silence or beyond EOF."
+  },
+  {
+    "id": "L394-S05",
+    "index": 8,
+    "before": {
+      "charIndex": 8,
+      "startMs": 3020,
+      "endMs": 3340
+    },
+    "after": {
+      "charIndex": 8,
+      "startMs": 3020,
+      "endMs": 3436
+    },
+    "reason": "Final syllable end reviewed against measured -40 dB final speech decay; file duration comes from FFprobe. This avoids padding highlights into silence or beyond EOF."
+  },
+  {
+    "id": "L394-G02-prefix",
+    "index": 0,
+    "before": {
+      "charIndex": 0,
+      "startMs": 0,
+      "endMs": 380
+    },
+    "after": {
+      "charIndex": 0,
+      "startMs": 0,
+      "endMs": 494
+    },
+    "reason": "Final syllable end reviewed against measured -40 dB final speech decay; file duration comes from FFprobe. This avoids padding highlights into silence or beyond EOF."
+  },
+  {
+    "id": "L394-G02-suffix",
+    "index": 6,
+    "before": {
+      "charIndex": 6,
+      "startMs": 2440,
+      "endMs": 2780
+    },
+    "after": {
+      "charIndex": 6,
+      "startMs": 2440,
+      "endMs": 2744
+    },
+    "reason": "Final syllable end reviewed against measured -40 dB final speech decay; file duration comes from FFprobe. This avoids padding highlights into silence or beyond EOF."
+  },
+  {
+    "id": "L394-G05-wrong-one",
+    "index": 8,
+    "before": {
+      "charIndex": 8,
+      "startMs": 2920,
+      "endMs": 3420
+    },
+    "after": {
+      "charIndex": 8,
+      "startMs": 2920,
+      "endMs": 3202
+    },
+    "reason": "Final syllable end reviewed against measured -40 dB final speech decay; file duration comes from FFprobe. This avoids padding highlights into silence or beyond EOF."
+  },
+  {
+    "id": "L394-G05-wrong-two",
+    "index": 8,
+    "before": {
+      "charIndex": 8,
+      "startMs": 2920,
+      "endMs": 3180
+    },
+    "after": {
+      "charIndex": 8,
+      "startMs": 2920,
+      "endMs": 3279
+    },
+    "reason": "Final syllable end reviewed against measured -40 dB final speech decay; file duration comes from FFprobe. This avoids padding highlights into silence or beyond EOF."
+  }
+]

@@ -1,0 +1,851 @@
+{
+  "id": "L398",
+  "kind": "lesson",
+  "order": 398,
+  "title": "選",
+  "newChars": [
+    "選"
+  ],
+  "zhuyin": {
+    "選": "ㄒㄩㄢˇ"
+  },
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L393",
+    "L394",
+    "L395",
+    "L396",
+    "L397"
+  ],
+  "provisionalLearnedChars": [
+    "碼",
+    "翻",
+    "印",
+    "單",
+    "雙"
+  ],
+  "teacherNotes": "Teacher-approved L398 single-character lesson. Base 2be6834d0e35978cc417da5721dbd891e8974948; formal L001-L389, 393 learned Han; locked allowed set 399. Learner dependencies L393-L397 (碼翻印單雙), no extra provisional vocabulary. All preceding lessons and after390 R047/R048 block Release only. Stage 2 three 選 plus three prior learned distractors. G03 選/看/寫; G04 愛/吃/的/菜. 選 ㄒㄩㄢˇ; 單行道 ㄉㄢ ㄒㄧㄥˊ ㄉㄠˋ; S05 index3 override confirms 行. G02 prefix is exactly 我, suffix 紅色的紙蓋手印. S03 final red paper with WHITE handprint, never white paper/red print. Teacher-approved readable-image-number exception ONLY S04 sample board: 3, 5, 8, with girl choosing 8 and jersey still blank. S05 permits a standard one-way arrow symbol aligned with both cars; no other readable text, numbers, brands or logos. S01 exactly two pairs/four shoes. Teacher subjective review is post-main. New images required for these approved actions. Final main recheck f505d8db7ed9a345a8bede31071c8a6f66a35363: formal L389, 393 learned Han. Release owns all preceding lesson and after390 R047/R048 integration. Phone/tablet browser QA uses simulated prerequisite progress and synthetic microphone, not a physical-phone microphone. Teacher subjective review remains post-main. Ten independently generated OpenAI audio clips, nine AI alignment records. No speech extracted or wrong-option splicing.",
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見",
+      "說",
+      "師",
+      "話",
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電",
+      "生",
+      "明",
+      "光",
+      "亮",
+      "陽",
+      "月",
+      "影",
+      "長",
+      "星",
+      "行",
+      "道",
+      "流",
+      "河",
+      "從",
+      "進",
+      "早",
+      "晚",
+      "海",
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精",
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口",
+      "傷",
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬",
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種",
+      "澆",
+      "照",
+      "顧",
+      "忘",
+      "每",
+      "次",
+      "記",
+      "完",
+      "收",
+      "彩",
+      "色",
+      "粉",
+      "哪",
+      "些",
+      "最",
+      "西",
+      "東",
+      "方",
+      "圖",
+      "向",
+      "線",
+      "直",
+      "轉",
+      "右",
+      "角",
+      "落",
+      "因",
+      "原",
+      "別",
+      "特",
+      "處",
+      "理",
+      "整",
+      "齊",
+      "全",
+      "今",
+      "們",
+      "年",
+      "跟",
+      "常",
+      "請",
+      "嗎",
+      "客",
+      "讓",
+      "廳",
+      "餐",
+      "位",
+      "正",
+      "排",
+      "雞",
+      "公",
+      "園",
+      "物",
+      "怪",
+      "奇",
+      "驚",
+      "喜",
+      "歡",
+      "笑",
+      "但",
+      "吧",
+      "謝",
+      "感",
+      "情",
+      "朋",
+      "友",
+      "親",
+      "交",
+      "通",
+      "往",
+      "經",
+      "已",
+      "近",
+      "接",
+      "送",
+      "連",
+      "傳",
+      "相",
+      "信",
+      "寫",
+      "字",
+      "名",
+      "第",
+      "念",
+      "號",
+      "碼",
+      "翻",
+      "印",
+      "單",
+      "雙",
+      "選"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "選",
+      "雙",
+      "單",
+      "印",
+      "翻",
+      "碼"
+    ],
+    "maxHanCharactersPerSentence": 12
+  },
+  "approvedSentences": [
+    {
+      "id": "L398-S01",
+      "text": "這兩雙鞋，你要選哪一雙？",
+      "spokenText": "這兩雙鞋你要選哪一雙",
+      "displayLines": [
+        "這兩雙鞋，",
+        "你要選",
+        "哪一雙？"
+      ],
+      "focusChar": "選",
+      "imageNotes": "鞋店試穿區，主角媽媽陪小女孩挑鞋。女孩面前並排放著兩雙完整的鞋，共四隻：一雙紅色、一雙藍色。媽媽手掌朝向兩雙鞋，詢問女孩；女孩正在比較，尚未拿定主意。構圖聚焦這兩雙，不放其他鞋干擾數量。「你」指主角小女孩，不是固定「你」小男孩。",
+      "approved": true
+    },
+    {
+      "id": "L398-S02",
+      "text": "翻開菜單，選你愛吃的菜。",
+      "spokenText": "翻開菜單選你愛吃的菜",
+      "displayLines": [
+        "翻開菜單，",
+        "選你",
+        "愛吃的菜。"
+      ],
+      "focusChar": "翻",
+      "imageNotes": "餐廳桌旁，主角媽媽邀請女孩選菜。女孩翻開一本菜單，查看雞排飯、魚料理、青菜等料理圖片，手指停在喜歡的那一道旁。是翻開書本式菜單選菜，不是上一課翻轉單張菜單看背面。菜名與價格不需可讀。「你」指主角小女孩。",
+      "approved": true
+    },
+    {
+      "id": "L398-S03",
+      "text": "我選紅色的紙，蓋手印。",
+      "spokenText": "我選紅色的紙蓋手印",
+      "displayLines": [
+        "我選",
+        "紅色的紙，",
+        "蓋手印。"
+      ],
+      "focusChar": "選",
+      "imageNotes": "家中美術桌前，主角小女孩從幾張不同顏色的紙中選出紅紙，放在自己面前，正在紅紙上蓋手印。使用能與紅紙清楚對比的白色兒童用顏料；女孩手掌剛抬起，紅紙上留下清楚的白色手印。桌旁保留少量其他顏色紙張，交代選擇對象。主角媽媽在旁陪同。手印是手掌沾顏料留下，不是拿筆描繪。老師最後改的是「選紅色的紙」，不是選紅色顏料。不得沿用「白紙＋紅手印」舊畫面。",
+      "approved": true
+    },
+    {
+      "id": "L398-S04",
+      "text": "先選號碼，再印在球衣上。",
+      "spokenText": "先選號碼再印在球衣上",
+      "displayLines": [
+        "先選號碼，",
+        "再印在",
+        "球衣上。"
+      ],
+      "focusChar": "選",
+      "imageNotes": "球衣印製店櫃台前，主角爸爸陪女孩選號碼。女孩指向樣本板上的「8」，旁邊另有「3」「5」可比較；工作人員順著她指的位置查看。櫃台上放著一件尚未印號碼的空白球衣。畫面停在選號碼階段，不同時呈現已印好的成品。老師已批准數字入圖例外：樣本板顯示「3、5、8」，不用品牌或其他可讀文字。",
+      "approved": true
+    },
+    {
+      "id": "L398-S05",
+      "text": "這是單行道，不能往回開。",
+      "spokenText": "這是單行道不能往回開",
+      "displayLines": [
+        "這是單行道，",
+        "不能往回開。"
+      ],
+      "focusChar": "單",
+      "imageNotes": "主角爸爸開車、媽媽坐在前座，女孩坐後座安全座椅。一家人的車沿單行道前進；路邊立著清楚的單向箭頭標誌，前方另一輛車也朝相同方向行駛。用稍高斜側視角，讓標誌方向與車輛朝向容易比較。不要畫逆向示範，不要畫成禁止進入或禁止迴轉標誌。交通標誌使用箭頭符號，不需文字。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "3": "ㄒㄧㄥˊ"
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L398-G01",
+      "type": "find-character",
+      "sentenceId": "L398-S01",
+      "targetChar": "選",
+      "targetCharIndex": 6,
+      "prompt": "在句子裡找到選，點一下。"
+    },
+    {
+      "id": "L398-G02",
+      "type": "teach-character",
+      "sentenceId": "L398-S03",
+      "targetChar": "選",
+      "targetCharIndex": 1,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "我",
+        "suffixText": "紅色的紙蓋手印",
+        "prefixSrc": "/assets/lessons/L398/audio/L398-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L398/audio/L398-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L398/audio/L398-G02-prefix.m4a",
+          "durationMs": 1254,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 380
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L398/audio/L398-G02-suffix.m4a",
+          "durationMs": 2693,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 460
+            },
+            {
+              "charIndex": 1,
+              "startMs": 460,
+              "endMs": 700
+            },
+            {
+              "charIndex": 2,
+              "startMs": 700,
+              "endMs": 1000
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1000,
+              "endMs": 1140
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1140,
+              "endMs": 1600
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1600,
+              "endMs": 2000
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2000,
+              "endMs": 2140
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L398-G03",
+      "type": "missing-character",
+      "sentenceId": "L398-S04",
+      "targetChar": "選",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "prompt": "補上不見的字。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "選",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "看",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "寫",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L398-G04",
+      "type": "partial-order",
+      "sentenceId": "L398-S02",
+      "targetChar": "翻",
+      "targetCharIndex": 0,
+      "missingIndexes": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "prompt": "把句子排回正確順序。",
+      "options": [
+        {
+          "id": "card-cai",
+          "text": "菜",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-ai",
+          "text": "愛",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-de",
+          "text": "的",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-chi",
+          "text": "吃",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L398-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L398-S05",
+      "targetChar": "單",
+      "targetCharIndex": 2,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "這是單行道，不能往回開。",
+          "correct": true,
+          "sentenceId": "L398-S05",
+          "audioSrc": "/assets/lessons/L398/audio/L398-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L398/audio/L398-S05.m4a",
+            "durationMs": 3806,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1460,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2380,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2620,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3120,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3380,
+                "endMs": 3600
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "這是單行道，不能往前開。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L398/audio/L398-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L398/audio/L398-G05-wrong-one.m4a",
+            "durationMs": 3785,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2320,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2440,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2560,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2980,
+                "endMs": 3280
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3280,
+                "endMs": 3560
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "這是單行道，不能往回走。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L398/audio/L398-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L398/audio/L398-G05-wrong-two.m4a",
+            "durationMs": 3704,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 290
+              },
+              {
+                "charIndex": 1,
+                "startMs": 290,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1280,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2540,
+                "endMs": 2630
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2630,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3120,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3380,
+                "endMs": 3560
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "packageStatus": "dependency-blocked-asset-complete"
+}

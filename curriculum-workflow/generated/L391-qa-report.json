@@ -1,0 +1,1090 @@
+{
+  "unit": "L391",
+  "owner": "Production A",
+  "branch": "codex/l391-complete-package",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "base": "b313ded8ddae7844e4af667191c4bf2b0737ab59",
+  "mainSha": "2169c169d62e6889534bbfd3de67c62f9d985684",
+  "formalBoundary": "L380",
+  "formalChars": 384,
+  "allowedCount": 386,
+  "dependsOnLessons": [
+    "L385",
+    "L386",
+    "L387",
+    "L388",
+    "L389",
+    "L390"
+  ],
+  "provisionalLearnedChars": [
+    "字",
+    "名",
+    "第",
+    "念",
+    "號",
+    "數"
+  ],
+  "consistency": "PASS",
+  "technical": {
+    "status": "PASS",
+    "allowed": 386,
+    "coverage": {
+      "報": 4,
+      "數": 2,
+      "號": 2,
+      "念": 2,
+      "第": 1,
+      "名": 1
+    },
+    "displayLines": "PASS",
+    "stage4Indexes": "PASS",
+    "imageMetadata": [
+      {
+        "id": "L391-S01",
+        "src": "/assets/lessons/L391/images/L391-S01.webp",
+        "bytes": 195712,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L391-S02",
+        "src": "/assets/lessons/L391/images/L391-S02.webp",
+        "bytes": 109492,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L391-S03",
+        "src": "/assets/lessons/L391/images/L391-S03.webp",
+        "bytes": 151632,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L391-S04",
+        "src": "/assets/lessons/L391/images/L391-S04.webp",
+        "bytes": 162608,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L391-S05",
+        "src": "/assets/lessons/L391/images/L391-S05.webp",
+        "bytes": 202360,
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "audio": [
+      {
+        "src": "/assets/lessons/L391/audio/L391-S01.m4a",
+        "durationMs": 3484,
+        "mean": -18,
+        "max": -2.1,
+        "bytes": 43917
+      },
+      {
+        "src": "/assets/lessons/L391/audio/L391-S02.m4a",
+        "durationMs": 2540,
+        "mean": -18.1,
+        "max": -2,
+        "bytes": 32477
+      },
+      {
+        "src": "/assets/lessons/L391/audio/L391-S03.m4a",
+        "durationMs": 3635,
+        "mean": -17.7,
+        "max": -2.6,
+        "bytes": 45474
+      },
+      {
+        "src": "/assets/lessons/L391/audio/L391-S04.m4a",
+        "durationMs": 2704,
+        "mean": -18.9,
+        "max": -2,
+        "bytes": 34418
+      },
+      {
+        "src": "/assets/lessons/L391/audio/L391-S05.m4a",
+        "durationMs": 3103,
+        "mean": -17.8,
+        "max": -2.6,
+        "bytes": 38404
+      },
+      {
+        "src": "/assets/lessons/L391/audio/L391-G02-prefix.m4a",
+        "durationMs": 1212,
+        "mean": -23,
+        "max": -9.4,
+        "bytes": 15569
+      },
+      {
+        "src": "/assets/lessons/L391/audio/L391-G02-suffix.m4a",
+        "durationMs": 1910,
+        "mean": -18.1,
+        "max": -4.3,
+        "bytes": 24218
+      },
+      {
+        "src": "/assets/lessons/L391/audio/L391-G05-wrong-one.m4a",
+        "durationMs": 3984,
+        "mean": -18.1,
+        "max": -2,
+        "bytes": 53814
+      },
+      {
+        "src": "/assets/lessons/L391/audio/L391-G05-wrong-two.m4a",
+        "durationMs": 2480,
+        "mean": -17.8,
+        "max": -2,
+        "bytes": 31370
+      },
+      {
+        "src": "/assets/lessons/L391/audio/char-u5831.m4a",
+        "durationMs": 1950,
+        "mean": -21,
+        "max": -2,
+        "bytes": 23345
+      }
+    ],
+    "g05MeanSpreadDb": 1.1,
+    "timings": "PASS",
+    "ffmpegDecode": "PASS",
+    "sizes": {
+      "images": 821804,
+      "audio": 343006,
+      "total": 1164810
+    }
+  },
+  "mobile": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "報",
+          "請",
+          "師",
+          "報",
+          "老",
+          "報"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "聽",
+            "我",
+            "給",
+            "念"
+          ],
+          "correctSequence": [
+            "念",
+            "給",
+            "我",
+            "聽"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-S04.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-G05-wrong-one.m4a"
+          ],
+          "correct": 0,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.984375,
+              "bottom": 597.984375,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.984375,
+              "bottom": 529.984375,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.984375,
+              "bottom": 597.984375,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-S04.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-G05-wrong-one.m4a"
+          ],
+          "correct": 0,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.984375,
+              "bottom": 597.984375,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.984375,
+              "bottom": 529.984375,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.984375,
+              "bottom": 597.984375,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "報",
+          "師",
+          "報",
+          "請",
+          "老",
+          "報"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "聽",
+            "我",
+            "給",
+            "念"
+          ],
+          "correctSequence": [
+            "念",
+            "給",
+            "我",
+            "聽"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-S04.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-G05-wrong-one.m4a"
+          ],
+          "correct": 0,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-S04.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L391/audio/L391-G05-wrong-one.m4a"
+          ],
+          "correct": 0,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "media": [
+    {
+      "file": "char-u5831.m4a",
+      "ended": true,
+      "duration": 1.95
+    },
+    {
+      "file": "L391-G02-prefix.m4a",
+      "ended": true,
+      "duration": 1.211995
+    },
+    {
+      "file": "L391-G02-suffix.m4a",
+      "ended": true,
+      "duration": 1.91
+    },
+    {
+      "file": "L391-G05-wrong-one.m4a",
+      "ended": true,
+      "duration": 3.983991
+    },
+    {
+      "file": "L391-G05-wrong-two.m4a",
+      "ended": true,
+      "duration": 2.48
+    },
+    {
+      "file": "L391-S01.m4a",
+      "ended": true,
+      "duration": 3.483991
+    },
+    {
+      "file": "L391-S02.m4a",
+      "ended": true,
+      "duration": 2.54
+    },
+    {
+      "file": "L391-S03.m4a",
+      "ended": true,
+      "duration": 3.635011
+    },
+    {
+      "file": "L391-S04.m4a",
+      "ended": true,
+      "duration": 2.703991
+    },
+    {
+      "file": "L391-S05.m4a",
+      "ended": true,
+      "duration": 3.102993
+    }
+  ],
+  "zhuyin": [
+    {
+      "width": 390,
+      "s01Shu4": true,
+      "s04Shu4": true,
+      "status": "PASS"
+    },
+    {
+      "width": 820,
+      "s01Shu4": true,
+      "s04Shu4": true,
+      "status": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "id": "L391-S01",
+      "src": "/assets/lessons/L391/images/L391-S01.webp",
+      "bytes": 195712,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L391-S02",
+      "src": "/assets/lessons/L391/images/L391-S02.webp",
+      "bytes": 109492,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L391-S03",
+      "src": "/assets/lessons/L391/images/L391-S03.webp",
+      "bytes": 151632,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L391-S04",
+      "src": "/assets/lessons/L391/images/L391-S04.webp",
+      "bytes": 162608,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L391-S05",
+      "src": "/assets/lessons/L391/images/L391-S05.webp",
+      "bytes": 202360,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    }
+  ],
+  "imageRegenerations": {
+    "S01": 1,
+    "S02": 1,
+    "S03": 1,
+    "S04": 0,
+    "S05": 0
+  },
+  "rejectedImageReasons": {
+    "S01": "Several open mouths could imply everyone counting simultaneously.",
+    "S02": "Car badge removed; mother gaze adjusted toward plate.",
+    "S03": "Teacher mouth closed to keep the waiting-before-call moment."
+  },
+  "rejectedImagesCommitted": false,
+  "audio": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "standaloneInput": "報",
+    "zhuyin": "ㄅㄠˋ",
+    "count": 10,
+    "regenerations": {
+      "charAudio": 1,
+      "g02Prefix": 3,
+      "g05WrongOne": 1
+    },
+    "independentTranscription": [
+      {
+        "file": "char-u5831.m4a",
+        "text": "豹。"
+      },
+      {
+        "file": "L391-G02-prefix.m4a",
+        "text": "我用就。"
+      },
+      {
+        "file": "L391-G02-suffix.m4a",
+        "text": "紙包好花。"
+      },
+      {
+        "file": "L391-G05-wrong-one.m4a",
+        "text": "报纸上的数字好大。"
+      },
+      {
+        "file": "L391-G05-wrong-two.m4a",
+        "text": "报纸上的名字好小。"
+      },
+      {
+        "file": "L391-S01.m4a",
+        "text": "老師請第一排的同學報數。"
+      },
+      {
+        "file": "L391-S02.m4a",
+        "text": "請把車號念給我聽。"
+      },
+      {
+        "file": "L391-S03.m4a",
+        "text": "報名後，老師會念你的學號。"
+      },
+      {
+        "file": "L391-S04.m4a",
+        "text": "报纸上的数字好小。"
+      },
+      {
+        "file": "L391-S05.m4a",
+        "text": "我用舊報紙包好花。"
+      }
+    ],
+    "pitchEvidence": [
+      {
+        "ms": 550,
+        "hz": 302,
+        "confidence": 0.82
+      },
+      {
+        "ms": 560,
+        "hz": 296,
+        "confidence": 0.85
+      },
+      {
+        "ms": 570,
+        "hz": 296,
+        "confidence": 0.84
+      },
+      {
+        "ms": 580,
+        "hz": 291,
+        "confidence": 0.93
+      },
+      {
+        "ms": 590,
+        "hz": 291,
+        "confidence": 0.85
+      },
+      {
+        "ms": 600,
+        "hz": 286,
+        "confidence": 0.84
+      },
+      {
+        "ms": 800,
+        "hz": 117,
+        "confidence": 0.87
+      },
+      {
+        "ms": 810,
+        "hz": 114,
+        "confidence": 0.87
+      },
+      {
+        "ms": 820,
+        "hz": 113,
+        "confidence": 0.86
+      },
+      {
+        "ms": 830,
+        "hz": 110,
+        "confidence": 0.9
+      },
+      {
+        "ms": 840,
+        "hz": 108,
+        "confidence": 0.92
+      },
+      {
+        "ms": 850,
+        "hz": 110,
+        "confidence": 0.96
+      },
+      {
+        "ms": 860,
+        "hz": 110,
+        "confidence": 0.95
+      }
+    ],
+    "phrasePitchEvidence": [
+      {
+        "name": "L391-S01",
+        "pitch": [
+          {
+            "ms": 3120,
+            "hz": 239,
+            "q": 0.93
+          },
+          {
+            "ms": 3140,
+            "hz": 222,
+            "q": 0.86
+          },
+          {
+            "ms": 3260,
+            "hz": 121,
+            "q": 0.81
+          },
+          {
+            "ms": 3340,
+            "hz": 410,
+            "q": 0.83
+          },
+          {
+            "ms": 3360,
+            "hz": 457,
+            "q": 0.93
+          }
+        ]
+      },
+      {
+        "name": "L391-S04",
+        "pitch": [
+          {
+            "ms": 1250,
+            "hz": 308,
+            "q": 0.97
+          },
+          {
+            "ms": 1270,
+            "hz": 308,
+            "q": 0.99
+          },
+          {
+            "ms": 1290,
+            "hz": 296,
+            "q": 0.97
+          },
+          {
+            "ms": 1310,
+            "hz": 281,
+            "q": 0.86
+          },
+          {
+            "ms": 1350,
+            "hz": 232,
+            "q": 0.97
+          },
+          {
+            "ms": 1370,
+            "hz": 219,
+            "q": 0.95
+          },
+          {
+            "ms": 1390,
+            "hz": 198,
+            "q": 0.9
+          },
+          {
+            "ms": 1410,
+            "hz": 188,
+            "q": 0.92
+          },
+          {
+            "ms": 1430,
+            "hz": 172,
+            "q": 0.9
+          },
+          {
+            "ms": 1450,
+            "hz": 172,
+            "q": 0.97
+          }
+        ]
+      },
+      {
+        "name": "L391-G05-wrong-one",
+        "pitch": [
+          {
+            "ms": 1800,
+            "hz": 308,
+            "q": 0.86
+          },
+          {
+            "ms": 1820,
+            "hz": 302,
+            "q": 0.98
+          },
+          {
+            "ms": 1840,
+            "hz": 291,
+            "q": 0.96
+          },
+          {
+            "ms": 1860,
+            "hz": 276,
+            "q": 0.94
+          },
+          {
+            "ms": 1880,
+            "hz": 258,
+            "q": 0.9
+          },
+          {
+            "ms": 1900,
+            "hz": 235,
+            "q": 0.86
+          },
+          {
+            "ms": 1940,
+            "hz": 172,
+            "q": 0.92
+          },
+          {
+            "ms": 1960,
+            "hz": 163,
+            "q": 0.93
+          },
+          {
+            "ms": 1980,
+            "hz": 155,
+            "q": 0.92
+          },
+          {
+            "ms": 2000,
+            "hz": 148,
+            "q": 0.92
+          }
+        ]
+      },
+      {
+        "name": "L391-G02-prefix",
+        "pitch": [
+          {
+            "ms": 600,
+            "hz": 148,
+            "q": 0.99
+          },
+          {
+            "ms": 620,
+            "hz": 144,
+            "q": 0.99
+          },
+          {
+            "ms": 640,
+            "hz": 140,
+            "q": 0.99
+          },
+          {
+            "ms": 660,
+            "hz": 137,
+            "q": 0.98
+          },
+          {
+            "ms": 800,
+            "hz": 250,
+            "q": 0.95
+          },
+          {
+            "ms": 820,
+            "hz": 250,
+            "q": 0.98
+          },
+          {
+            "ms": 840,
+            "hz": 235,
+            "q": 0.91
+          },
+          {
+            "ms": 940,
+            "hz": 143,
+            "q": 0.88
+          },
+          {
+            "ms": 960,
+            "hz": 136,
+            "q": 0.93
+          },
+          {
+            "ms": 980,
+            "hz": 132,
+            "q": 0.94
+          },
+          {
+            "ms": 1000,
+            "hz": 128,
+            "q": 0.95
+          },
+          {
+            "ms": 1020,
+            "hz": 128,
+            "q": 0.92
+          },
+          {
+            "ms": 1100,
+            "hz": 457,
+            "q": 0.85
+          }
+        ]
+      }
+    ],
+    "assessment": "Standalone ASR returns Bao/豹, the same bao4 syllable; voiced pitch falls about 302 to 110 Hz. Short prefix ASR sometimes spells 舊 as homophone 就; exact-context whisper transcript is 我用舊 and 舊 pitch falls about 250 to 128 Hz. 報數/數字 contours support shu4, not shu3. These are technical phonetic checks, not a human listening approval.",
+    "g02Prefix": "我用舊",
+    "g02Suffix": "紙包好花",
+    "g05MeanSpreadDb": 1.1,
+    "processing": "Repo mono AAC 44100Hz M4A; trailing silence removed with speech preserved. G05 wrong-two low-level tail reviewed and retained to 2480ms before final AI alignment."
+  },
+  "alignment": {
+    "source": "assets:align:ai whisper-1 on final processed M4A",
+    "records": 9,
+    "transcriptionContext": "我用舊。紙包好花。報數、車號、報名、學號、數字。",
+    "equivalences": "Temporary tool normalization of 报/報, 数/數, 号/號, 听/聽 and 唸/念 orthographic variant; no same-sound wrong character was substituted into approved text.",
+    "review": {
+      "source": "whisper-1 on final processed M4A; traditional vocabulary context for short fragment recognition",
+      "adjustments": [
+        "S01 index7 同: 60ms AI span smoothed to 1980-2080ms, adjacent boundaries adjusted by 20ms.",
+        "G05 wrong-one index6 好: onset moved from 2460 to 2900ms after waveform inspection showed a silent pause until 2900ms.",
+        "G05 wrong-two trailing low-level background after final 小 removed; retained to 2480ms and re-aligned."
+      ],
+      "speechContentUnchanged": true
+    },
+    "toolChanges": "Temporary generation instruction and transcription-context extensions removed before commit; no shared tool changes shipped."
+  },
+  "checks": {
+    "tools": "PASS",
+    "aiSetup": "PASS",
+    "packet": "PASS; final synchronized",
+    "localAudit": "PASS",
+    "validateProduction": "PASS with temporary L391 entry",
+    "assetsAudit": "PASS: 420 units, 2059 image references, 4076 audio references, zero warnings; included temporary L391",
+    "mobile": "PASS",
+    "fullVerify": "SKIPPED: dependency integration and shared-state verification owned by Release",
+    "packageIntake": "PASS: npm run curriculum:package-intake -- --unit L391 --ref origin/codex/l391-complete-package --strict",
+    "auditState": "PASS before claim and after removing temporary L391; local branch L375 snapshot is not final main boundary",
+    "consistency": "PASS request/packet/draft and Stage 4 exact equality",
+    "zhuyinBrowser": "PASS at 390px and 820px; initial animated-button timeout resolved by disabling test-only CSS animations"
+  },
+  "sizes": {
+    "images": 821804,
+    "audio": 343006,
+    "total": 1164810
+  },
+  "limitations": [
+    "Synthetic microphone is not physical-phone recording QA.",
+    "Isolated package ends at L391: next-lesson control is visible but disabled as 沒有下一課. Release tests next playable unit after integration.",
+    "Teacher subjective audio/image review is post-main."
+  ],
+  "intakeEvidenceCommit": "ad3350bf396db907b22f071ba487e9a82f3ebf95"
+}

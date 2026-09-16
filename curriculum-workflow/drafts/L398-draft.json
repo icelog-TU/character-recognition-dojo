@@ -1,0 +1,726 @@
+{
+  "id": "L398",
+  "order": 398,
+  "title": "選",
+  "newChars": [
+    "選"
+  ],
+  "zhuyin": {
+    "選": "ㄒㄩㄢˇ"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [
+    "L393",
+    "L394",
+    "L395",
+    "L396",
+    "L397"
+  ],
+  "provisionalLearnedChars": [
+    "碼",
+    "翻",
+    "印",
+    "單",
+    "雙"
+  ],
+  "teacherNotes": "Teacher-approved L398 single-character lesson. Base 2be6834d0e35978cc417da5721dbd891e8974948; formal L001-L389, 393 learned Han; locked allowed set 399. Learner dependencies L393-L397 (碼翻印單雙), no extra provisional vocabulary. All preceding lessons and after390 R047/R048 block Release only. Stage 2 three 選 plus three prior learned distractors. G03 選/看/寫; G04 愛/吃/的/菜. 選 ㄒㄩㄢˇ; 單行道 ㄉㄢ ㄒㄧㄥˊ ㄉㄠˋ; S05 index3 override confirms 行. G02 prefix is exactly 我, suffix 紅色的紙蓋手印. S03 final red paper with WHITE handprint, never white paper/red print. Teacher-approved readable-image-number exception ONLY S04 sample board: 3, 5, 8, with girl choosing 8 and jersey still blank. S05 permits a standard one-way arrow symbol aligned with both cars; no other readable text, numbers, brands or logos. S01 exactly two pairs/four shoes. Teacher subjective review is post-main. New images required for these approved actions. Final main recheck f505d8db7ed9a345a8bede31071c8a6f66a35363: formal L389, 393 learned Han. Release owns all preceding lesson and after390 R047/R048 integration. Phone/tablet browser QA uses simulated prerequisite progress and synthetic microphone, not a physical-phone microphone. Teacher subjective review remains post-main. Ten independently generated OpenAI audio clips, nine AI alignment records. No speech extracted or wrong-option splicing.",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "charAudio": {
+    "選": "/assets/lessons/L398/audio/char-u9078.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L398-S01",
+      "text": "這兩雙鞋，你要選哪一雙？",
+      "spokenText": "這兩雙鞋你要選哪一雙",
+      "displayLines": [
+        "這兩雙鞋，",
+        "你要選",
+        "哪一雙？"
+      ],
+      "focusChar": "選",
+      "imageNotes": "鞋店試穿區，主角媽媽陪小女孩挑鞋。女孩面前並排放著兩雙完整的鞋，共四隻：一雙紅色、一雙藍色。媽媽手掌朝向兩雙鞋，詢問女孩；女孩正在比較，尚未拿定主意。構圖聚焦這兩雙，不放其他鞋干擾數量。「你」指主角小女孩，不是固定「你」小男孩。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. ONE square 1024x1024 finished children's picture-book illustration. Match the provided full L058 style-only sheet strictly: fine pencil and watercolor linework, natural warm light, bright clean colors, detailed uncluttered environments, soft natural faces and stable expressive preschool proportions, phone-readable composition. Use refined L115/L118/L119/L128 proportions and L154/L162/L163 family identity from second sheet. No simple generic watercolor, flat cartoon, anime, 3D or photorealism. No readable text, letters, numbers, brands or logos except the precise scene-specific permission. Do not copy unrelated reference people.\nCast: Recurring protagonist girl: short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes, same young face and preschool proportions as family anchors. Recurring mother: shoulder-length dark hair, cream cardigan and blue trousers/skirt, same soft natural adult face as family anchors. Only these two people; do not introduce the YOU boy.\nPrimary scene: 鞋店試穿區，主角媽媽陪小女孩挑鞋。女孩面前並排放著兩雙完整的鞋，共四隻：一雙紅色、一雙藍色。媽媽手掌朝向兩雙鞋，詢問女孩；女孩正在比較，尚未拿定主意。構圖聚焦這兩雙，不放其他鞋干擾數量。「你」指主角小女孩，不是固定「你」小男孩。",
+      "imageSrc": "/assets/lessons/L398/images/L398-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L398/audio/L398-S01.m4a",
+        "durationMs": 2691,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 240
+          },
+          {
+            "charIndex": 1,
+            "startMs": 240,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 900
+          },
+          {
+            "charIndex": 3,
+            "startMs": 900,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1360,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1440,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1520,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1880,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2120,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2280,
+            "endMs": 2500
+          }
+        ]
+      }
+    },
+    {
+      "id": "L398-S02",
+      "text": "翻開菜單，選你愛吃的菜。",
+      "spokenText": "翻開菜單選你愛吃的菜",
+      "displayLines": [
+        "翻開菜單，",
+        "選你",
+        "愛吃的菜。"
+      ],
+      "focusChar": "翻",
+      "imageNotes": "餐廳桌旁，主角媽媽邀請女孩選菜。女孩翻開一本菜單，查看雞排飯、魚料理、青菜等料理圖片，手指停在喜歡的那一道旁。是翻開書本式菜單選菜，不是上一課翻轉單張菜單看背面。菜名與價格不需可讀。「你」指主角小女孩。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. ONE square 1024x1024 finished children's picture-book illustration. Match the provided full L058 style-only sheet strictly: fine pencil and watercolor linework, natural warm light, bright clean colors, detailed uncluttered environments, soft natural faces and stable expressive preschool proportions, phone-readable composition. Use refined L115/L118/L119/L128 proportions and L154/L162/L163 family identity from second sheet. No simple generic watercolor, flat cartoon, anime, 3D or photorealism. No readable text, letters, numbers, brands or logos except the precise scene-specific permission. Do not copy unrelated reference people.\nCast: Recurring protagonist girl: short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes, same young face and preschool proportions as family anchors. Recurring mother: shoulder-length dark hair, cream cardigan and blue trousers/skirt, same soft natural adult face as family anchors.\nPrimary scene: 餐廳桌旁，主角媽媽邀請女孩選菜。女孩翻開一本菜單，查看雞排飯、魚料理、青菜等料理圖片，手指停在喜歡的那一道旁。是翻開書本式菜單選菜，不是上一課翻轉單張菜單看背面。菜名與價格不需可讀。「你」指主角小女孩。",
+      "imageSrc": "/assets/lessons/L398/images/L398-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L398/audio/L398-S02.m4a",
+        "durationMs": 3348,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 960,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1800,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1880,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2260,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2540,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2760,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2940,
+            "endMs": 3120
+          }
+        ]
+      }
+    },
+    {
+      "id": "L398-S03",
+      "text": "我選紅色的紙，蓋手印。",
+      "spokenText": "我選紅色的紙蓋手印",
+      "displayLines": [
+        "我選",
+        "紅色的紙，",
+        "蓋手印。"
+      ],
+      "focusChar": "選",
+      "imageNotes": "家中美術桌前，主角小女孩從幾張不同顏色的紙中選出紅紙，放在自己面前，正在紅紙上蓋手印。使用能與紅紙清楚對比的白色兒童用顏料；女孩手掌剛抬起，紅紙上留下清楚的白色手印。桌旁保留少量其他顏色紙張，交代選擇對象。主角媽媽在旁陪同。手印是手掌沾顏料留下，不是拿筆描繪。老師最後改的是「選紅色的紙」，不是選紅色顏料。不得沿用「白紙＋紅手印」舊畫面。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. ONE square 1024x1024 finished children's picture-book illustration. Match the provided full L058 style-only sheet strictly: fine pencil and watercolor linework, natural warm light, bright clean colors, detailed uncluttered environments, soft natural faces and stable expressive preschool proportions, phone-readable composition. Use refined L115/L118/L119/L128 proportions and L154/L162/L163 family identity from second sheet. No simple generic watercolor, flat cartoon, anime, 3D or photorealism. No readable text, letters, numbers, brands or logos except the precise scene-specific permission. Do not copy unrelated reference people.\nCast: Recurring protagonist girl: short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes, same young face and preschool proportions as family anchors. Recurring mother: shoulder-length dark hair, cream cardigan and blue trousers/skirt, same soft natural adult face as family anchors.\nPrimary scene: 家中美術桌前，主角小女孩從幾張不同顏色的紙中選出紅紙，放在自己面前，正在紅紙上蓋手印。使用能與紅紙清楚對比的白色兒童用顏料；女孩手掌剛抬起，紅紙上留下清楚的白色手印。桌旁保留少量其他顏色紙張，交代選擇對象。主角媽媽在旁陪同。手印是手掌沾顏料留下，不是拿筆描繪。老師最後改的是「選紅色的紙」，不是選紅色顏料。不得沿用「白紙＋紅手印」舊畫面。",
+      "imageSrc": "/assets/lessons/L398/images/L398-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L398/audio/L398-S03.m4a",
+        "durationMs": 3212,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1240,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1900,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2280,
+            "endMs": 2560
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2560,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2920,
+            "endMs": 3000
+          }
+        ]
+      }
+    },
+    {
+      "id": "L398-S04",
+      "text": "先選號碼，再印在球衣上。",
+      "spokenText": "先選號碼再印在球衣上",
+      "displayLines": [
+        "先選號碼，",
+        "再印在",
+        "球衣上。"
+      ],
+      "focusChar": "選",
+      "imageNotes": "球衣印製店櫃台前，主角爸爸陪女孩選號碼。女孩指向樣本板上的「8」，旁邊另有「3」「5」可比較；工作人員順著她指的位置查看。櫃台上放著一件尚未印號碼的空白球衣。畫面停在選號碼階段，不同時呈現已印好的成品。老師已批准數字入圖例外：樣本板顯示「3、5、8」，不用品牌或其他可讀文字。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. ONE square 1024x1024 finished children's picture-book illustration. Match the provided full L058 style-only sheet strictly: fine pencil and watercolor linework, natural warm light, bright clean colors, detailed uncluttered environments, soft natural faces and stable expressive preschool proportions, phone-readable composition. Use refined L115/L118/L119/L128 proportions and L154/L162/L163 family identity from second sheet. No simple generic watercolor, flat cartoon, anime, 3D or photorealism. No readable text, letters, numbers, brands or logos except the precise scene-specific permission. Do not copy unrelated reference people.\nCast: Recurring protagonist girl: short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes, same young face and preschool proportions as family anchors. Recurring father: short dark hair, blue shirt, same natural adult face as family anchors. Generic worker visually distinct, tied hair and green apron; not mother or teacher.\nPrimary scene: 球衣印製店櫃台前，主角爸爸陪女孩選號碼。女孩指向樣本板上的「8」，旁邊另有「3」「5」可比較；工作人員順著她指的位置查看。櫃台上放著一件尚未印號碼的空白球衣。畫面停在選號碼階段，不同時呈現已印好的成品。老師已批准數字入圖例外：樣本板顯示「3、5、8」，不用品牌或其他可讀文字。",
+      "imageSrc": "/assets/lessons/L398/images/L398-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L398/audio/L398-S04.m4a",
+        "durationMs": 3214,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 540
+          },
+          {
+            "charIndex": 1,
+            "startMs": 540,
+            "endMs": 820
+          },
+          {
+            "charIndex": 2,
+            "startMs": 820,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1700,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1900,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2020,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2340,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2680,
+            "endMs": 2820
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2820,
+            "endMs": 3040
+          }
+        ]
+      }
+    },
+    {
+      "id": "L398-S05",
+      "text": "這是單行道，不能往回開。",
+      "spokenText": "這是單行道不能往回開",
+      "displayLines": [
+        "這是單行道，",
+        "不能往回開。"
+      ],
+      "focusChar": "單",
+      "imageNotes": "主角爸爸開車、媽媽坐在前座，女孩坐後座安全座椅。一家人的車沿單行道前進；路邊立著清楚的單向箭頭標誌，前方另一輛車也朝相同方向行駛。用稍高斜側視角，讓標誌方向與車輛朝向容易比較。不要畫逆向示範，不要畫成禁止進入或禁止迴轉標誌。交通標誌使用箭頭符號，不需文字。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "3": "ㄒㄧㄥˊ"
+      },
+      "imagePrompt": "Use case: illustration-story. ONE square 1024x1024 finished children's picture-book illustration. Match the provided full L058 style-only sheet strictly: fine pencil and watercolor linework, natural warm light, bright clean colors, detailed uncluttered environments, soft natural faces and stable expressive preschool proportions, phone-readable composition. Use refined L115/L118/L119/L128 proportions and L154/L162/L163 family identity from second sheet. No simple generic watercolor, flat cartoon, anime, 3D or photorealism. No readable text, letters, numbers, brands or logos except the precise scene-specific permission. Do not copy unrelated reference people.\nCast: Recurring protagonist girl: short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes, same young face and preschool proportions as family anchors. Recurring mother: shoulder-length dark hair, cream cardigan and blue trousers/skirt, same soft natural adult face as family anchors. Recurring father: short dark hair, blue shirt, same natural adult face as family anchors. Girl restrained in a rear child safety seat; father drives, mother front passenger.\nPrimary scene: 主角爸爸開車、媽媽坐在前座，女孩坐後座安全座椅。一家人的車沿單行道前進；路邊立著清楚的單向箭頭標誌，前方另一輛車也朝相同方向行駛。用稍高斜側視角，讓標誌方向與車輛朝向容易比較。不要畫逆向示範，不要畫成禁止進入或禁止迴轉標誌。交通標誌使用箭頭符號，不需文字。",
+      "imageSrc": "/assets/lessons/L398/images/L398-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L398/audio/L398-S05.m4a",
+        "durationMs": 3806,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 600
+          },
+          {
+            "charIndex": 2,
+            "startMs": 600,
+            "endMs": 1180
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1180,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1460,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2380,
+            "endMs": 2500
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2500,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2620,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3120,
+            "endMs": 3380
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3380,
+            "endMs": 3600
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L398-G01",
+      "type": "find-character",
+      "sentenceId": "L398-S01",
+      "targetChar": "選",
+      "targetCharIndex": 6,
+      "prompt": "在句子裡找到選，點一下。"
+    },
+    {
+      "id": "L398-G02",
+      "type": "teach-character",
+      "sentenceId": "L398-S03",
+      "targetChar": "選",
+      "targetCharIndex": 1,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "我",
+        "suffixText": "紅色的紙蓋手印",
+        "prefixSrc": "/assets/lessons/L398/audio/L398-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L398/audio/L398-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L398/audio/L398-G02-prefix.m4a",
+          "durationMs": 1254,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 380
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L398/audio/L398-G02-suffix.m4a",
+          "durationMs": 2693,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 460
+            },
+            {
+              "charIndex": 1,
+              "startMs": 460,
+              "endMs": 700
+            },
+            {
+              "charIndex": 2,
+              "startMs": 700,
+              "endMs": 1000
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1000,
+              "endMs": 1140
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1140,
+              "endMs": 1600
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1600,
+              "endMs": 2000
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2000,
+              "endMs": 2140
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L398-G03",
+      "type": "missing-character",
+      "sentenceId": "L398-S04",
+      "targetChar": "選",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "prompt": "補上不見的字。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "選",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "看",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "寫",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L398-G04",
+      "type": "partial-order",
+      "sentenceId": "L398-S02",
+      "targetChar": "翻",
+      "targetCharIndex": 0,
+      "missingIndexes": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "prompt": "把句子排回正確順序。",
+      "options": [
+        {
+          "id": "card-cai",
+          "text": "菜",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-ai",
+          "text": "愛",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-de",
+          "text": "的",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-chi",
+          "text": "吃",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L398-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L398-S05",
+      "targetChar": "單",
+      "targetCharIndex": 2,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "這是單行道，不能往回開。",
+          "correct": true,
+          "sentenceId": "L398-S05",
+          "audioSrc": "/assets/lessons/L398/audio/L398-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L398/audio/L398-S05.m4a",
+            "durationMs": 3806,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1180,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1460,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2380,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2620
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2620,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3120,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3380,
+                "endMs": 3600
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "這是單行道，不能往前開。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L398/audio/L398-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L398/audio/L398-G05-wrong-one.m4a",
+            "durationMs": 3785,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 270
+              },
+              {
+                "charIndex": 1,
+                "startMs": 270,
+                "endMs": 540
+              },
+              {
+                "charIndex": 2,
+                "startMs": 540,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1260
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1260,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2320,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2440,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2560,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2980,
+                "endMs": 3280
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3280,
+                "endMs": 3560
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "這是單行道，不能往回走。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L398/audio/L398-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L398/audio/L398-G05-wrong-two.m4a",
+            "durationMs": 3704,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 290
+              },
+              {
+                "charIndex": 1,
+                "startMs": 290,
+                "endMs": 580
+              },
+              {
+                "charIndex": 2,
+                "startMs": 580,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1280,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1540,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2540,
+                "endMs": 2630
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2630,
+                "endMs": 2720
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2720,
+                "endMs": 3120
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3120,
+                "endMs": 3380
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3380,
+                "endMs": 3560
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

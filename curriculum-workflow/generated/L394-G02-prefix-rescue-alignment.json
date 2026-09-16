@@ -1,0 +1,22 @@
+{
+  "model": "whisper-1",
+  "prompt": "打",
+  "offsetMs": 500,
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.7100000381469727,
+    "text": "打",
+    "words": [
+      {
+        "word": "打",
+        "start": 0,
+        "end": 0.8799999952316284
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  }
+}
