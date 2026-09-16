@@ -1,0 +1,1651 @@
+# L428 自 — final production generation packet
+
+packageStatus: dependency-blocked-asset-complete
+
+Source main: 4eec51781af66eee3b0a9b0b5afe0e0497a8d121; formal L001-L415, last 解, 419 learned characters. Expanded locked allowedChars: 425. Production C owns parallel-c by teacher assignment.
+
+Release dependencies: L423-L427 vocabulary (組隊各輪員), contiguous ordinary lessons through L427, plus R051/R052 after L420, coverage L391-L420. No additional provisional characters. 己、由、句 remain outside the allowed vocabulary. Review pair excluded. Shared production JSON, planner export and ledger integration belong to Release.
+
+## Final approved request, sentence records, image prompts, and Stage 4
+
+```json
+{
+  "id": "L428",
+  "order": 428,
+  "title": "自",
+  "newChars": [
+    "自"
+  ],
+  "zhuyin": {
+    "自": "ㄗˋ"
+  },
+  "charAudio": {
+    "自": "/assets/lessons/L428/audio/char-u81ea.m4a"
+  },
+  "sourceMainCommit": "4eec51781af66eee3b0a9b0b5afe0e0497a8d121",
+  "allowedChars": [
+    "一",
+    "二",
+    "三",
+    "人",
+    "個",
+    "大",
+    "的",
+    "小",
+    "手",
+    "我",
+    "有",
+    "山",
+    "上",
+    "下",
+    "你",
+    "水",
+    "在",
+    "高",
+    "很",
+    "家",
+    "和",
+    "隻",
+    "鳥",
+    "孩",
+    "指",
+    "看",
+    "女",
+    "飛",
+    "男",
+    "門",
+    "前",
+    "後",
+    "也",
+    "是",
+    "不",
+    "到",
+    "走",
+    "他",
+    "沒",
+    "裡",
+    "兩",
+    "狗",
+    "都",
+    "爸",
+    "媽",
+    "愛",
+    "書",
+    "可",
+    "會",
+    "這",
+    "吃",
+    "做",
+    "好",
+    "樣",
+    "要",
+    "更",
+    "邊",
+    "多",
+    "少",
+    "比",
+    "來",
+    "起",
+    "去",
+    "坐",
+    "站",
+    "開",
+    "左",
+    "著",
+    "拿",
+    "包",
+    "花",
+    "朵",
+    "了",
+    "畫",
+    "出",
+    "學",
+    "路",
+    "誰",
+    "校",
+    "問",
+    "找",
+    "同",
+    "帶",
+    "筆",
+    "借",
+    "那",
+    "本",
+    "給",
+    "紙",
+    "心",
+    "放",
+    "把",
+    "桌",
+    "子",
+    "盒",
+    "掉",
+    "壞",
+    "眼",
+    "用",
+    "鏡",
+    "鼻",
+    "臉",
+    "紅",
+    "圓",
+    "太",
+    "難",
+    "得",
+    "過",
+    "分",
+    "幾",
+    "點",
+    "玩",
+    "打",
+    "球",
+    "棒",
+    "頭",
+    "帽",
+    "草",
+    "地",
+    "面",
+    "外",
+    "空",
+    "天",
+    "雨",
+    "雲",
+    "黑",
+    "白",
+    "棋",
+    "鞋",
+    "穿",
+    "戴",
+    "衣",
+    "脫",
+    "氣",
+    "套",
+    "熱",
+    "冷",
+    "喝",
+    "飯",
+    "菜",
+    "老",
+    "卻",
+    "麼",
+    "什",
+    "為",
+    "以",
+    "怎",
+    "所",
+    "房",
+    "間",
+    "時",
+    "還",
+    "燈",
+    "關",
+    "窗",
+    "車",
+    "等",
+    "再",
+    "風",
+    "吹",
+    "樹",
+    "動",
+    "葉",
+    "綠",
+    "滿",
+    "掃",
+    "擦",
+    "先",
+    "洗",
+    "又",
+    "髒",
+    "亂",
+    "回",
+    "就",
+    "快",
+    "事",
+    "跑",
+    "馬",
+    "停",
+    "叫",
+    "聲",
+    "聽",
+    "見",
+    "說",
+    "師",
+    "話",
+    "課",
+    "像",
+    "想",
+    "真",
+    "力",
+    "能",
+    "火",
+    "發",
+    "電",
+    "生",
+    "明",
+    "光",
+    "亮",
+    "陽",
+    "月",
+    "影",
+    "長",
+    "星",
+    "行",
+    "道",
+    "流",
+    "河",
+    "從",
+    "進",
+    "早",
+    "晚",
+    "海",
+    "船",
+    "魚",
+    "游",
+    "泳",
+    "池",
+    "身",
+    "濕",
+    "乾",
+    "服",
+    "褲",
+    "換",
+    "改",
+    "錯",
+    "知",
+    "認",
+    "新",
+    "舊",
+    "半",
+    "只",
+    "剩",
+    "夠",
+    "錢",
+    "買",
+    "貴",
+    "賣",
+    "店",
+    "場",
+    "市",
+    "夜",
+    "具",
+    "工",
+    "作",
+    "忙",
+    "幫",
+    "急",
+    "腳",
+    "步",
+    "跳",
+    "床",
+    "搬",
+    "重",
+    "沙",
+    "張",
+    "椅",
+    "累",
+    "死",
+    "睡",
+    "倒",
+    "病",
+    "假",
+    "才",
+    "剛",
+    "裝",
+    "養",
+    "休",
+    "息",
+    "久",
+    "體",
+    "神",
+    "精",
+    "變",
+    "差",
+    "緊",
+    "卡",
+    "住",
+    "蓋",
+    "橋",
+    "座",
+    "木",
+    "積",
+    "堆",
+    "洞",
+    "破",
+    "口",
+    "傷",
+    "皮",
+    "痛",
+    "受",
+    "忍",
+    "耐",
+    "敢",
+    "當",
+    "然",
+    "怕",
+    "哭",
+    "被",
+    "嚇",
+    "罵",
+    "對",
+    "爬",
+    "蟲",
+    "條",
+    "泥",
+    "土",
+    "種",
+    "澆",
+    "照",
+    "顧",
+    "忘",
+    "每",
+    "次",
+    "記",
+    "完",
+    "收",
+    "彩",
+    "色",
+    "粉",
+    "哪",
+    "些",
+    "最",
+    "西",
+    "東",
+    "方",
+    "圖",
+    "向",
+    "線",
+    "直",
+    "轉",
+    "右",
+    "角",
+    "落",
+    "因",
+    "原",
+    "別",
+    "特",
+    "處",
+    "理",
+    "整",
+    "齊",
+    "全",
+    "今",
+    "們",
+    "年",
+    "跟",
+    "常",
+    "請",
+    "嗎",
+    "客",
+    "讓",
+    "廳",
+    "餐",
+    "位",
+    "正",
+    "排",
+    "雞",
+    "公",
+    "園",
+    "物",
+    "怪",
+    "奇",
+    "驚",
+    "喜",
+    "歡",
+    "笑",
+    "但",
+    "吧",
+    "謝",
+    "感",
+    "情",
+    "朋",
+    "友",
+    "親",
+    "交",
+    "通",
+    "往",
+    "經",
+    "已",
+    "近",
+    "接",
+    "送",
+    "連",
+    "傳",
+    "相",
+    "信",
+    "寫",
+    "字",
+    "名",
+    "第",
+    "念",
+    "號",
+    "數",
+    "報",
+    "頁",
+    "碼",
+    "翻",
+    "印",
+    "單",
+    "雙",
+    "選",
+    "或",
+    "者",
+    "勇",
+    "強",
+    "算",
+    "弱",
+    "越",
+    "加",
+    "減",
+    "法",
+    "辦",
+    "試",
+    "定",
+    "成",
+    "功",
+    "決",
+    "解",
+    "組",
+    "隊",
+    "各",
+    "輪",
+    "員",
+    "自"
+  ],
+  "provisionalLearnedChars": [
+    "組",
+    "隊",
+    "各",
+    "輪",
+    "員"
+  ],
+  "dependsOnLessons": [
+    "L423",
+    "L424",
+    "L425",
+    "L426",
+    "L427"
+  ],
+  "releaseDependencies": {
+    "lessonOrderThrough": 427,
+    "reviewPair": [
+      "R051",
+      "R052"
+    ],
+    "afterLessonOrder": 420,
+    "targetLessonRange": {
+      "startOrder": 391,
+      "endOrder": 420
+    }
+  },
+  "packageStatus": "dependency-blocked-asset-complete",
+  "teacherNotes": "Production C / parallel-c. Exact teacher-approved five sentences and canonical games. Formal source L001-L415 (419 chars), plus 組隊各輪員自 = 425. No additional provisional chars; 己、由、句 not allowed. Contiguous L416-L427 and milestone R051/R052 after L420 block Release only. Review pair excluded. Shared production JSON/planner/ledger integration belongs to Release under ROLE_PRODUCTION_SOP.",
+  "sentenceGames": [
+    {
+      "id": "L428-G01",
+      "type": "find-character",
+      "sentenceId": "L428-S01",
+      "targetChar": "自",
+      "targetCharIndex": 3
+    },
+    {
+      "id": "L428-G02",
+      "type": "teach-character",
+      "sentenceId": "L428-S02",
+      "targetChar": "自",
+      "targetCharIndex": 7,
+      "teachAudio": {
+        "prefixText": "客人一走近門就",
+        "suffixText": "動打開",
+        "prefixSrc": "/assets/lessons/L428/audio/L428-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L428/audio/L428-G02-suffix.m4a",
+        "prefixAudio": {
+          "spokenText": "客人一走近門就",
+          "src": "/assets/lessons/L428/audio/L428-G02-prefix.m4a",
+          "durationMs": 2660,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 400
+            },
+            {
+              "charIndex": 1,
+              "startMs": 400,
+              "endMs": 720
+            },
+            {
+              "charIndex": 2,
+              "startMs": 720,
+              "endMs": 1000
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1000,
+              "endMs": 1260
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1260,
+              "endMs": 1540
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1540,
+              "endMs": 1900
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1900,
+              "endMs": 2460
+            }
+          ]
+        },
+        "suffixAudio": {
+          "spokenText": "動打開",
+          "src": "/assets/lessons/L428/audio/L428-G02-suffix.m4a",
+          "durationMs": 1451,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 320
+            },
+            {
+              "charIndex": 1,
+              "startMs": 320,
+              "endMs": 860
+            },
+            {
+              "charIndex": 2,
+              "startMs": 860,
+              "endMs": 1180
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L428-G03",
+      "type": "missing-character",
+      "sentenceId": "L428-S04",
+      "targetChar": "自",
+      "targetCharIndex": 4,
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "自",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "我",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "他",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L428-G04",
+      "type": "partial-order",
+      "sentenceId": "L428-S03",
+      "targetChar": "員",
+      "targetCharIndex": 3,
+      "missingIndexes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "options": [
+        {
+          "id": "sweep",
+          "text": "掃",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "turn",
+          "text": "輪",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "ground",
+          "text": "地",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "flow",
+          "text": "流",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L428-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L428-S05",
+      "targetChar": "輪",
+      "targetCharIndex": 5,
+      "options": [
+        {
+          "id": "correct",
+          "text": "爸爸和媽媽輪流開車。",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L428/audio/L428-S05.m4a",
+          "spokenText": "爸爸和媽媽輪流開車",
+          "audio": {
+            "src": "/assets/lessons/L428/audio/L428-S05.m4a",
+            "durationMs": 4077,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 200
+              },
+              {
+                "charIndex": 1,
+                "startMs": 200,
+                "endMs": 400
+              },
+              {
+                "charIndex": 2,
+                "startMs": 400,
+                "endMs": 920
+              },
+              {
+                "charIndex": 3,
+                "startMs": 920,
+                "endMs": 1200
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1200,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2180,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2800,
+                "endMs": 3060
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3060,
+                "endMs": 3520
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3520,
+                "endMs": 3780
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "爸爸和媽媽輪流上車。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L428/audio/L428-G05-wrong-one.m4a",
+          "spokenText": "爸爸和媽媽輪流上車",
+          "audio": {
+            "spokenText": "爸爸和媽媽輪流上車",
+            "src": "/assets/lessons/L428/audio/L428-G05-wrong-one.m4a",
+            "durationMs": 2766,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 130
+              },
+              {
+                "charIndex": 1,
+                "startMs": 130,
+                "endMs": 260
+              },
+              {
+                "charIndex": 2,
+                "startMs": 260,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 980
+              },
+              {
+                "charIndex": 4,
+                "startMs": 980,
+                "endMs": 1460
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1460,
+                "endMs": 1780
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1780,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1940,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2260,
+                "endMs": 2480
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "爸爸和媽媽輪流開門。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L428/audio/L428-G05-wrong-two.m4a",
+          "spokenText": "爸爸和媽媽輪流開門",
+          "audio": {
+            "spokenText": "爸爸和媽媽輪流開門",
+            "src": "/assets/lessons/L428/audio/L428-G05-wrong-two.m4a",
+            "durationMs": 3069,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 180
+              },
+              {
+                "charIndex": 1,
+                "startMs": 180,
+                "endMs": 360
+              },
+              {
+                "charIndex": 2,
+                "startMs": 360,
+                "endMs": 780
+              },
+              {
+                "charIndex": 3,
+                "startMs": 780,
+                "endMs": 980
+              },
+              {
+                "charIndex": 4,
+                "startMs": 980,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1500,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2160,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2560,
+                "endMs": 2800
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "targetSentenceCount": 5,
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見",
+      "說",
+      "師",
+      "話",
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電",
+      "生",
+      "明",
+      "光",
+      "亮",
+      "陽",
+      "月",
+      "影",
+      "長",
+      "星",
+      "行",
+      "道",
+      "流",
+      "河",
+      "從",
+      "進",
+      "早",
+      "晚",
+      "海",
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精",
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口",
+      "傷",
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬",
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種",
+      "澆",
+      "照",
+      "顧",
+      "忘",
+      "每",
+      "次",
+      "記",
+      "完",
+      "收",
+      "彩",
+      "色",
+      "粉",
+      "哪",
+      "些",
+      "最",
+      "西",
+      "東",
+      "方",
+      "圖",
+      "向",
+      "線",
+      "直",
+      "轉",
+      "右",
+      "角",
+      "落",
+      "因",
+      "原",
+      "別",
+      "特",
+      "處",
+      "理",
+      "整",
+      "齊",
+      "全",
+      "今",
+      "們",
+      "年",
+      "跟",
+      "常",
+      "請",
+      "嗎",
+      "客",
+      "讓",
+      "廳",
+      "餐",
+      "位",
+      "正",
+      "排",
+      "雞",
+      "公",
+      "園",
+      "物",
+      "怪",
+      "奇",
+      "驚",
+      "喜",
+      "歡",
+      "笑",
+      "但",
+      "吧",
+      "謝",
+      "感",
+      "情",
+      "朋",
+      "友",
+      "親",
+      "交",
+      "通",
+      "往",
+      "經",
+      "已",
+      "近",
+      "接",
+      "送",
+      "連",
+      "傳",
+      "相",
+      "信",
+      "寫",
+      "字",
+      "名",
+      "第",
+      "念",
+      "號",
+      "數",
+      "報",
+      "頁",
+      "碼",
+      "翻",
+      "印",
+      "單",
+      "雙",
+      "選",
+      "或",
+      "者",
+      "勇",
+      "強",
+      "算",
+      "弱",
+      "越",
+      "加",
+      "減",
+      "法",
+      "辦",
+      "試",
+      "定",
+      "成",
+      "功",
+      "決",
+      "解",
+      "組",
+      "隊",
+      "各",
+      "輪",
+      "員",
+      "自"
+    ],
+    "provisionalLearnedChars": [
+      "組",
+      "隊",
+      "各",
+      "輪",
+      "員"
+    ],
+    "targetCharMinimumCount": {
+      "自": 3
+    },
+    "recentTargetMinimumCounts": {
+      "員": 2,
+      "輪": 2,
+      "各": 2,
+      "隊": 1,
+      "組": 1
+    }
+  },
+  "approvedSentences": [
+    {
+      "id": "L428-S01",
+      "text": "隊員各自帶水和點心。",
+      "spokenText": "隊員各自帶水和點心",
+      "displayLines": [
+        "隊員各自帶",
+        "水和點心。"
+      ],
+      "focusChar": "自",
+      "imageNotes": "戶外團體活動集合處。主角小女孩與兩位 generic child 隊員各自拿著自己的水壺和點心袋，旁邊各有自己的小背包，準備參加活動。清楚呈現每個人都自行攜帶，不是一個人替全隊拿，也不是正在分送點心。隊員以同色活動背心辨識即可。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern picture-book illustration. Full L058 set is STYLE ONLY; refined proportions from L115-S01/S02,L118-S02,L119-S01,L128-S03. Family identity from L154-S01,L162-S04,L163-S02: preschool girl short dark bob pink clip, pink cardigan cream blouse navy skirt pink sneakers; mother brown bob cream blouse blue jeans; father short brown hair blue overshirt white inner shirt tan trousers; fixed older brother blue-white striped shirt. Natural refined child/adult faces and proportions, rich textured environment, warm Taiwan daylight, safe margins. Generic classmates distinct. No readable text, numbers, signs, labels, watermark. 戶外團體活動集合處。主角小女孩與兩位 generic child 隊員各自拿著自己的水壺和點心袋，旁邊各有自己的小背包，準備參加活動。清楚呈現每個人都自行攜帶，不是一個人替全隊拿，也不是正在分送點心。隊員以同色活動背心辨識即可。",
+      "imageSrc": "/assets/lessons/L428/images/L428-S01.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L428/audio/L428-S01.m4a",
+        "durationMs": 2731,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 940
+          },
+          {
+            "charIndex": 3,
+            "startMs": 940,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1140,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1420,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1700,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1980,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2260,
+            "endMs": 2480
+          }
+        ]
+      }
+    },
+    {
+      "id": "L428-S02",
+      "text": "客人一走近，門就自動打開。",
+      "spokenText": "客人一走近門就自動打開",
+      "displayLines": [
+        "客人一走近，",
+        "門就自動",
+        "打開。"
+      ],
+      "focusChar": "自",
+      "imageNotes": "商店入口外，主角媽媽帶主角小女孩以顧客身分走近感應式玻璃滑門。門扇正向兩側滑開，人物手沒有碰門，門上方可見感應裝置。重點是客人接近觸發自動門；不要改成店員走向門口，不要畫成人用手推門。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern picture-book illustration. Full L058 set is STYLE ONLY; refined proportions from L115-S01/S02,L118-S02,L119-S01,L128-S03. Family identity from L154-S01,L162-S04,L163-S02: preschool girl short dark bob pink clip, pink cardigan cream blouse navy skirt pink sneakers; mother brown bob cream blouse blue jeans; father short brown hair blue overshirt white inner shirt tan trousers; fixed older brother blue-white striped shirt. Natural refined child/adult faces and proportions, rich textured environment, warm Taiwan daylight, safe margins. Generic classmates distinct. No readable text, numbers, signs, labels, watermark. 商店入口外，主角媽媽帶主角小女孩以顧客身分走近感應式玻璃滑門。門扇正向兩側滑開，人物手沒有碰門，門上方可見感應裝置。重點是客人接近觸發自動門；不要改成店員走向門口，不要畫成人用手推門。",
+      "imageSrc": "/assets/lessons/L428/images/L428-S02.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L428/audio/L428-S02.m4a",
+        "durationMs": 4306,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1120
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1120,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1400,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1660,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2520,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2940,
+            "endMs": 3260
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3260,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3480,
+            "endMs": 3800
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3800,
+            "endMs": 4020
+          }
+        ]
+      }
+    },
+    {
+      "id": "L428-S03",
+      "text": "各組成員輪流掃地。",
+      "spokenText": "各組成員輪流掃地",
+      "displayLines": [
+        "各組成員",
+        "輪流掃地。"
+      ],
+      "focusChar": "員",
+      "imageNotes": "教室打掃時間，班級按組分配責任區，每組由成員輪值掃地。前景是今天輪到主角小女孩掃地，同組 generic classmates 正在擦桌子、收拾物品；背景另一組也有一位成員打掃自己的區域。不要畫成全班排隊等一把掃把，也不要用可讀輪值表或多格時間圖解釋「輪流」。不再使用輪流念字的情境。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern picture-book illustration. Full L058 set is STYLE ONLY; refined proportions from L115-S01/S02,L118-S02,L119-S01,L128-S03. Family identity from L154-S01,L162-S04,L163-S02: preschool girl short dark bob pink clip, pink cardigan cream blouse navy skirt pink sneakers; mother brown bob cream blouse blue jeans; father short brown hair blue overshirt white inner shirt tan trousers; fixed older brother blue-white striped shirt. Natural refined child/adult faces and proportions, rich textured environment, warm Taiwan daylight, safe margins. Generic classmates distinct. No readable text, numbers, signs, labels, watermark. 教室打掃時間，班級按組分配責任區，每組由成員輪值掃地。前景是今天輪到主角小女孩掃地，同組 generic classmates 正在擦桌子、收拾物品；背景另一組也有一位成員打掃自己的區域。不要畫成全班排隊等一把掃把，也不要用可讀輪值表或多格時間圖解釋「輪流」。不再使用輪流念字的情境。",
+      "imageSrc": "/assets/lessons/L428/images/L428-S03.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L428/audio/L428-S03.m4a",
+        "durationMs": 2967,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 960,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1260,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1960,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2200,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2540,
+            "endMs": 2700
+          }
+        ]
+      }
+    },
+    {
+      "id": "L428-S04",
+      "text": "媽媽看書，自學做點心。",
+      "spokenText": "媽媽看書自學做點心",
+      "displayLines": [
+        "媽媽看書，",
+        "自學做點心。"
+      ],
+      "focusChar": "自",
+      "imageNotes": "家中廚房料理檯，主角媽媽一邊參考攤開的食譜，一邊把麵糰整形成小餅乾，旁邊有碗、食材與烤盤。媽媽正在照書學習，畫面沒有老師或另一位大人教她，也不是只坐著看書。食譜以食物插圖與背斜角呈現，不需可讀內容。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern picture-book illustration. Full L058 set is STYLE ONLY; refined proportions from L115-S01/S02,L118-S02,L119-S01,L128-S03. Family identity from L154-S01,L162-S04,L163-S02: preschool girl short dark bob pink clip, pink cardigan cream blouse navy skirt pink sneakers; mother brown bob cream blouse blue jeans; father short brown hair blue overshirt white inner shirt tan trousers; fixed older brother blue-white striped shirt. Natural refined child/adult faces and proportions, rich textured environment, warm Taiwan daylight, safe margins. Generic classmates distinct. No readable text, numbers, signs, labels, watermark. 家中廚房料理檯，主角媽媽一邊參考攤開的食譜，一邊把麵糰整形成小餅乾，旁邊有碗、食材與烤盤。媽媽正在照書學習，畫面沒有老師或另一位大人教她，也不是只坐著看書。食譜以食物插圖與背斜角呈現，不需可讀內容。",
+      "imageSrc": "/assets/lessons/L428/images/L428-S04.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L428/audio/L428-S04.m4a",
+        "durationMs": 4251,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 580
+          },
+          {
+            "charIndex": 1,
+            "startMs": 580,
+            "endMs": 900
+          },
+          {
+            "charIndex": 2,
+            "startMs": 900,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1400,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2460,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2680,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2960,
+            "endMs": 3360
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3360,
+            "endMs": 3700
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3700,
+            "endMs": 4051
+          }
+        ]
+      }
+    },
+    {
+      "id": "L428-S05",
+      "text": "爸爸和媽媽輪流開車。",
+      "spokenText": "爸爸和媽媽輪流開車",
+      "displayLines": [
+        "爸爸和媽媽",
+        "輪流開車。"
+      ],
+      "focusChar": "輪",
+      "imageNotes": "家庭長途出遊途中，車已安全停在休息區停車格。主角爸爸已離開駕駛座，站在車外把車鑰匙交給正準備坐進駕駛座的主角媽媽，表現停車後換手駕駛。需要孩子入鏡時使用主角女孩與固定哥哥，留在後座。不可在行駛中換座，不可畫成兩人同時操控方向盤。",
+      "imagePrompt": "Square 1:1 rich warm detailed pencil-and-watercolor modern picture-book illustration. Full L058 set is STYLE ONLY; refined proportions from L115-S01/S02,L118-S02,L119-S01,L128-S03. Family identity from L154-S01,L162-S04,L163-S02: preschool girl short dark bob pink clip, pink cardigan cream blouse navy skirt pink sneakers; mother brown bob cream blouse blue jeans; father short brown hair blue overshirt white inner shirt tan trousers; fixed older brother blue-white striped shirt. Natural refined child/adult faces and proportions, rich textured environment, warm Taiwan daylight, safe margins. Generic classmates distinct. No readable text, numbers, signs, labels, watermark. 家庭長途出遊途中，車已安全停在休息區停車格。主角爸爸已離開駕駛座，站在車外把車鑰匙交給正準備坐進駕駛座的主角媽媽，表現停車後換手駕駛。需要孩子入鏡時使用主角女孩與固定哥哥，留在後座。不可在行駛中換座，不可畫成兩人同時操控方向盤。",
+      "imageSrc": "/assets/lessons/L428/images/L428-S05.webp",
+      "approved": true,
+      "audio": {
+        "src": "/assets/lessons/L428/audio/L428-S05.m4a",
+        "durationMs": 4077,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 200
+          },
+          {
+            "charIndex": 1,
+            "startMs": 200,
+            "endMs": 400
+          },
+          {
+            "charIndex": 2,
+            "startMs": 400,
+            "endMs": 920
+          },
+          {
+            "charIndex": 3,
+            "startMs": 920,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1200,
+            "endMs": 1780
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2180,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2800,
+            "endMs": 3060
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3060,
+            "endMs": 3520
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3520,
+            "endMs": 3780
+          }
+        ]
+      }
+    }
+  ],
+  "productionQA": "# L428「自」Production C QA\n\nPackage status: dependency-blocked-asset-complete.\n\nTeacher-approved source vocabulary is locked to main 4eec51781af66eee3b0a9b0b5afe0e0497a8d121: L001–L415, 419 learned characters, plus provisional 組、隊、各、輪、員 and new 自 (425 expanded allowedChars). Five sentence texts, spokenText, displayLines, focusChar, options and indexes remain exactly as approved. Coverage 自3、員2、輪2、各2、隊1、組1; allowed-character and mechanical audits PASS.\n\nLatest Release observation: origin/main 55ea24c112541b8739c5affc6c6564de94e75185 contains L418「結」. Remaining ordinary lessons L419–L427 must integrate in order, including the explicit vocabulary dependencies L423–L427. R051/R052 afterLessonOrder=420, coverage L391–L420, must also merge first. This package excludes that review pair. The locked request vocabulary does not expand merely because main advanced.\n\n## Final images\n\nEach final exported 1024×1024 WebP was inspected individually and beside the full L058 style set, refined references L115-S01/S02, L118-S02, L119-S01, L128-S03, and family references L154-S01, L162-S04, L163-S02. L058 supplies style only. All are under 250 KiB and contain no readable text or numbers.\n\n- S01 style-lock PASS; cast PASS. Girl and two distinct generic teammates each carry their own water and snack; matching green team bibs.\n- S02 style-lock PASS; cast PASS. Mother and girl approach as customers; sensor and sliding opening visible; neither touches the door. Initial extra-arm composition was discarded and regenerated.\n- S03 style-lock PASS; cast PASS. Girl sweeps while classmates do other cleaning tasks; another group's sweeper is visible. Background generic boy was changed to curly hair, glasses and mustard clothing to avoid impersonating the fixed striped-shirt brother.\n- S04 style-lock PASS; cast PASS. Fixed mother alone learns cookie preparation from a picture cookbook, without a teacher or child.\n- S05 style-lock PASS; cast PASS. Fixed father hands a key to mother beside a stationary car at a rest area; driver seat is empty during the exchange.\n\nRejected image drafts are outside the committed package. See L428-image-provenance.json for final generation identifiers.\n\n## Audio and alignment\n\nTen final files: independent 自 character audio, five complete sentence recordings, independent G02 prefix 客人一走近門就 and suffix 動打開, and two complete G05 wrong sentences. Standard repo OpenAI generation and processing ran through a lesson-local adapter; shared audio scripts and production JSON were unchanged. No sentence extraction or speech splicing. Only terminal silence was trimmed, retaining 200 ms.\n\nAll ten files decode successfully; mono AAC at 44100 Hz; loudness gates PASS. Character duration 1555 ms, mean -20.4 dB, max -2 dB. G05 mean-volume spread 0.4 dB. Nine timed tracks have complete Han-only charTimings, 80–900 ms spans and final tail at most 300 ms. AI alignment was refined using documented silence boundaries for S02 就, S05 輪, S04 心 and G02 prefix 就; exact adjustments are in L428-timing-corrections.json. Final ffprobe, volume, text and timing evidence is in L428-package-audit.json.\n\nPronunciation evidence is limited to automated analysis and is not a human listening PASS. Final independent Whisper character transcription is 字 (same ㄗˋ); a separate gpt-4o-transcribe pass returned 四, and its raw-MP3 pass returned す。 The measured vowel pitch falls, supporting fourth tone but not independently establishing the consonant. For the short suffix, unprompted Whisper returned 洞打開 (phonetic equivalent); gpt-4o-transcribe returned 動大開 on the final M4A and 洞打開 on its source MP3. These model disagreements are preserved rather than described as consensus. S02 近/進 is also an orthographic ambiguity. Alignment text context was supplied only for S02, G02 prefix and suffix; raw transcripts and the context marker remain available. Teacher subjective pronunciation review remains in the normal post-merge review queue; no teacher audio approval is asserted.\n\n## Browser QA and tooling limits\n\nReal LessonPanel rendered using an isolated local draft fixture in Chrome at 390×844, with no production JSON or cloud-state writes. Observed media playing and ended events are playback completion evidence, not a claim of hearing the sound.\n\n- Stage 1: 自/ㄗˋ displayed, character audio played to completion, stage passed.\n- Stage 2: all three 自 cards found, counter reached 3/3 and stage passed.\n- Stage 3: all five sentence files played to ended, sentence pictures and approved lines displayed, active-character highlight observed, stage passed.\n- G01: index 3 自 selected; accepted and reward control appeared.\n- G02: dedicated prefix played to ended; target 自 then received red frame and hold-to-record instruction.\n- G03: 自 selected among 他、自、我; accepted.\n- G04: shuffled cards 掃、地、流、輪 selected in 輪流掃地 order; all four positions accepted.\n- G05: all three animal options played to ended. In this session frog=wrong-two, fox=correct S05, bear=wrong-one. Selecting fox was accepted. Reward completed with visible home control and disabled no-next-lesson control, appropriate to the fixture's hasNext=false.\n\nThe browser control API provides clicks but no sustained pointer-down/up operation for this recording control. Physical microphone capture, recording bell, and prefix/child/suffix stitched replay were not exercised. Stage 4 used single-game fixtures, so this is not an uninterrupted five-round end-to-end run or a next-lesson routing check. Technical assets, decode, alignment and lesson-local validators passed; use the browser-tooling fallback documented in docs/CURRICULUM_PRODUCTION_SOP.md. No manual/teacher PASS is claimed. The temporary viewport was reset, test tab closed and own local server stopped.\n\n## Validation and integration ownership\n\ntools:check PASS; ai:check PASS; lesson-local audio format and production validators PASS; L428-package-audit PASS; validate:production PASS; curriculum:audit-state PASS (expected unintegrated L428 asset-directory warning). Total final media 1,339,788 bytes, approximately 1.28 MiB.\n\nverify skipped: dependency-blocked, shared state left for Release. Production JSON, planner export and ledger integration belong to Release; this package changes only the L428 package and registry. The final pushed-ref intake result is recorded in the delivery evidence after push. No required asset or timing file is missing. Remaining work is Release dependencies and the explicitly limited microphone/manual playback scope above.\n"
+}
+```
+
+## Production QA
+
+# L428「自」Production C QA
+
+Package status: dependency-blocked-asset-complete.
+
+Teacher-approved source vocabulary is locked to main 4eec51781af66eee3b0a9b0b5afe0e0497a8d121: L001–L415, 419 learned characters, plus provisional 組、隊、各、輪、員 and new 自 (425 expanded allowedChars). Five sentence texts, spokenText, displayLines, focusChar, options and indexes remain exactly as approved. Coverage 自3、員2、輪2、各2、隊1、組1; allowed-character and mechanical audits PASS.
+
+Latest Release observation: origin/main 55ea24c112541b8739c5affc6c6564de94e75185 contains L418「結」. Remaining ordinary lessons L419–L427 must integrate in order, including the explicit vocabulary dependencies L423–L427. R051/R052 afterLessonOrder=420, coverage L391–L420, must also merge first. This package excludes that review pair. The locked request vocabulary does not expand merely because main advanced.
+
+## Final images
+
+Each final exported 1024×1024 WebP was inspected individually and beside the full L058 style set, refined references L115-S01/S02, L118-S02, L119-S01, L128-S03, and family references L154-S01, L162-S04, L163-S02. L058 supplies style only. All are under 250 KiB and contain no readable text or numbers.
+
+- S01 style-lock PASS; cast PASS. Girl and two distinct generic teammates each carry their own water and snack; matching green team bibs.
+- S02 style-lock PASS; cast PASS. Mother and girl approach as customers; sensor and sliding opening visible; neither touches the door. Initial extra-arm composition was discarded and regenerated.
+- S03 style-lock PASS; cast PASS. Girl sweeps while classmates do other cleaning tasks; another group's sweeper is visible. Background generic boy was changed to curly hair, glasses and mustard clothing to avoid impersonating the fixed striped-shirt brother.
+- S04 style-lock PASS; cast PASS. Fixed mother alone learns cookie preparation from a picture cookbook, without a teacher or child.
+- S05 style-lock PASS; cast PASS. Fixed father hands a key to mother beside a stationary car at a rest area; driver seat is empty during the exchange.
+
+Rejected image drafts are outside the committed package. See L428-image-provenance.json for final generation identifiers.
+
+## Audio and alignment
+
+Ten final files: independent 自 character audio, five complete sentence recordings, independent G02 prefix 客人一走近門就 and suffix 動打開, and two complete G05 wrong sentences. Standard repo OpenAI generation and processing ran through a lesson-local adapter; shared audio scripts and production JSON were unchanged. No sentence extraction or speech splicing. Only terminal silence was trimmed, retaining 200 ms.
+
+All ten files decode successfully; mono AAC at 44100 Hz; loudness gates PASS. Character duration 1555 ms, mean -20.4 dB, max -2 dB. G05 mean-volume spread 0.4 dB. Nine timed tracks have complete Han-only charTimings, 80–900 ms spans and final tail at most 300 ms. AI alignment was refined using documented silence boundaries for S02 就, S05 輪, S04 心 and G02 prefix 就; exact adjustments are in L428-timing-corrections.json. Final ffprobe, volume, text and timing evidence is in L428-package-audit.json.
+
+Pronunciation evidence is limited to automated analysis and is not a human listening PASS. Final independent Whisper character transcription is 字 (same ㄗˋ); a separate gpt-4o-transcribe pass returned 四, and its raw-MP3 pass returned す。 The measured vowel pitch falls, supporting fourth tone but not independently establishing the consonant. For the short suffix, unprompted Whisper returned 洞打開 (phonetic equivalent); gpt-4o-transcribe returned 動大開 on the final M4A and 洞打開 on its source MP3. These model disagreements are preserved rather than described as consensus. S02 近/進 is also an orthographic ambiguity. Alignment text context was supplied only for S02, G02 prefix and suffix; raw transcripts and the context marker remain available. Teacher subjective pronunciation review remains in the normal post-merge review queue; no teacher audio approval is asserted.
+
+## Browser QA and tooling limits
+
+Real LessonPanel rendered using an isolated local draft fixture in Chrome at 390×844, with no production JSON or cloud-state writes. Observed media playing and ended events are playback completion evidence, not a claim of hearing the sound.
+
+- Stage 1: 自/ㄗˋ displayed, character audio played to completion, stage passed.
+- Stage 2: all three 自 cards found, counter reached 3/3 and stage passed.
+- Stage 3: all five sentence files played to ended, sentence pictures and approved lines displayed, active-character highlight observed, stage passed.
+- G01: index 3 自 selected; accepted and reward control appeared.
+- G02: dedicated prefix played to ended; target 自 then received red frame and hold-to-record instruction.
+- G03: 自 selected among 他、自、我; accepted.
+- G04: shuffled cards 掃、地、流、輪 selected in 輪流掃地 order; all four positions accepted.
+- G05: all three animal options played to ended. In this session frog=wrong-two, fox=correct S05, bear=wrong-one. Selecting fox was accepted. Reward completed with visible home control and disabled no-next-lesson control, appropriate to the fixture's hasNext=false.
+
+The browser control API provides clicks but no sustained pointer-down/up operation for this recording control. Physical microphone capture, recording bell, and prefix/child/suffix stitched replay were not exercised. Stage 4 used single-game fixtures, so this is not an uninterrupted five-round end-to-end run or a next-lesson routing check. Technical assets, decode, alignment and lesson-local validators passed; use the browser-tooling fallback documented in docs/CURRICULUM_PRODUCTION_SOP.md. No manual/teacher PASS is claimed. The temporary viewport was reset, test tab closed and own local server stopped.
+
+## Validation and integration ownership
+
+tools:check PASS; ai:check PASS; lesson-local audio format and production validators PASS; L428-package-audit PASS; validate:production PASS; curriculum:audit-state PASS (expected unintegrated L428 asset-directory warning). Total final media 1,339,788 bytes, approximately 1.28 MiB.
+
+verify skipped: dependency-blocked, shared state left for Release. Production JSON, planner export and ledger integration belong to Release; this package changes only the L428 package and registry. The final pushed-ref intake result is recorded in the delivery evidence after push. No required asset or timing file is missing. Remaining work is Release dependencies and the explicitly limited microphone/manual playback scope above.

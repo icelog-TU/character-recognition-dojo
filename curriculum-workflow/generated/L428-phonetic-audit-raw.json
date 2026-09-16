@@ -1,0 +1,40 @@
+[
+  {
+    "file": "curriculum-workflow/audio-inbox/L428/char-u81ea.mp3",
+    "sha256": "cc63f23000df124648694aca6241086d58abd4dad2646b98c502c1060d0949f5",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "す。",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 19,
+        "input_tokens": 15,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 15
+        },
+        "output_tokens": 4
+      }
+    }
+  },
+  {
+    "file": "curriculum-workflow/audio-inbox/L428/L428-G02-suffix.mp3",
+    "sha256": "edd7314bb01356fd1f1b26f992262ce41389539911a712b954641b9523e845ed",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "洞打開",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 26,
+        "input_tokens": 21,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 21
+        },
+        "output_tokens": 5
+      }
+    }
+  }
+]
