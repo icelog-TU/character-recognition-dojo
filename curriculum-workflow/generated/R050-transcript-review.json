@@ -1,0 +1,80 @@
+{
+  "unit": "R050",
+  "generation": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral",
+    "speed": 0.9,
+    "language": "Taiwan Mandarin"
+  },
+  "transcripts": [
+    {
+      "id": "R050-G02-prefix",
+      "model": "whisper-1",
+      "text": "選單人房或者",
+      "expectedTextContextUsed": true
+    },
+    {
+      "id": "R050-G02-suffix",
+      "model": "whisper-1",
+      "text": "人 房 都 好",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R050-G05-wrong-one",
+      "model": "whisper-1",
+      "text": "算一算买书的钱够不够",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R050-G05-wrong-two",
+      "model": "whisper-1",
+      "text": "算一算,買菜的錢多不多?",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R050-S01",
+      "model": "whisper-1",
+      "text": "翻到下一頁,頁碼印在右下角",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R050-S02",
+      "model": "whisper-1",
+      "text": "選單人房或者雙人房都好。",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R050-S03",
+      "model": "whisper-1",
+      "text": "勇者很强,但也有弱点。",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R050-S04",
+      "model": "whisper-1",
+      "text": "小狗越跑越快,我跟不上",
+      "expectedTextContextUsed": false
+    },
+    {
+      "id": "R050-S05",
+      "model": "whisper-1",
+      "text": "算一算，買菜的錢夠不夠，",
+      "expectedTextContextUsed": true
+    }
+  ],
+  "independent": [
+    {
+      "id": "R050-S05",
+      "model": "gpt-4o-transcribe",
+      "expectedTextContextUsed": false,
+      "text": "算一算，买菜的钱够不够？"
+    },
+    {
+      "id": "R050-G02-prefix",
+      "model": "gpt-4o-transcribe",
+      "expectedTextContextUsed": false,
+      "text": "选单人房或者"
+    }
+  ],
+  "review": "Final content compared with approved spokenText and exact Stage 4 pieces. Traditional/simplified equivalents normalized only. Two R050 clips independently matched without text context before contextual Whisper timing. Subjective listening not claimed."
+}

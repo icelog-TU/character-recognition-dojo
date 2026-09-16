@@ -1,0 +1,211 @@
+{
+  "unit": "R049",
+  "sourceBoundary": "09ad28d766640bbbb1b2c1f8d3cb2ccb43efc306",
+  "allowedCount": 409,
+  "coverage": {
+    "已": 1,
+    "近": 1,
+    "接": 1,
+    "送": 1,
+    "連": 1,
+    "傳": 1,
+    "相": 1,
+    "信": 2,
+    "寫": 2,
+    "字": 2,
+    "名": 2,
+    "第": 1,
+    "念": 1,
+    "號": 1,
+    "數": 1,
+    "報": 1,
+    "頁": 0,
+    "碼": 0,
+    "翻": 0,
+    "印": 0,
+    "單": 0,
+    "雙": 0,
+    "選": 0,
+    "或": 0,
+    "者": 0,
+    "勇": 0,
+    "強": 0,
+    "算": 0,
+    "弱": 0,
+    "越": 0
+  },
+  "stage4IndexCheck": "PASS",
+  "timingCheck": "PASS",
+  "images": [
+    {
+      "file": "R049-S01.webp",
+      "bytes": 174648,
+      "dimensions": "1024 1024",
+      "sha256": "24d7694ffacfb0b22e4db5c70dc180df6ee92670619db0cbe0211d05e51c74e1",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Wet shoes on absorbent cloth at rainy entry; mother and girl."
+    },
+    {
+      "file": "R049-S02.webp",
+      "bytes": 143350,
+      "dimensions": "1024 1024",
+      "sha256": "3aefffbf071041e6b02a4aa58ab2cc247b79b8c15494e7611de3fd756955789a",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Girl hands sealed blank envelope to departing father; pen retained."
+    },
+    {
+      "file": "R049-S03.webp",
+      "bytes": 163744,
+      "dimensions": "1024 1024",
+      "sha256": "c4f292a612f1389e61e51c8c8dfd7a2f3b4442969271dbbe14b8fa85539c1850",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Winged horse appears in illustrated book and a clear imagination bubble."
+    },
+    {
+      "file": "R049-S04.webp",
+      "bytes": 157134,
+      "dimensions": "1024 1024",
+      "sha256": "d229a3c4cf6cf39cb0c534ac1e81c0a69f03099f75ac7390e882c3bdd999c714",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Registration form has blank lines; teacher differs from mother; school activity props."
+    },
+    {
+      "file": "R049-S05.webp",
+      "bytes": 119726,
+      "dimensions": "1024 1024",
+      "sha256": "6010305465adf531d8c07837cfae7471f8d53924d9c8b9cdef5e787b5353052f",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semanticReview": "PASS",
+      "visualFindings": "Book faces girl; only blank exterior covers visible; no Han, English or letters."
+    }
+  ],
+  "audio": [
+    {
+      "file": "R049-G02-prefix.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 2347,
+      "maxDb": -2,
+      "meanDb": -17.9,
+      "sha256": "84647129899295dd868317f8ae00fd2f7c80c057b7ea61ced184a879e17a8a75",
+      "decode": "PASS"
+    },
+    {
+      "file": "R049-G02-suffix.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 2556,
+      "maxDb": -2.1,
+      "meanDb": -17.7,
+      "sha256": "f3f5673bcf5644179b92f2d09d26bec43530701872f6b95c805ae7c65f82622e",
+      "decode": "PASS"
+    },
+    {
+      "file": "R049-G05-wrong-one.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4282,
+      "maxDb": -2,
+      "meanDb": -18.1,
+      "sha256": "2f06453a66212a16de3f0f139d495e4adb978fa45364099cf2921481f1796c94",
+      "decode": "PASS"
+    },
+    {
+      "file": "R049-G05-wrong-two.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4435,
+      "maxDb": -2,
+      "meanDb": -18.9,
+      "sha256": "2d9e4f76b4163b4d9f83dd7321ad92d3244f286a6425bf71ce0a2352c71d943d",
+      "decode": "PASS"
+    },
+    {
+      "file": "R049-S01.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4767,
+      "maxDb": -2.3,
+      "meanDb": -17.9,
+      "sha256": "ef06de7a92beca13bbc8b13a11e56135b812578e7ada20125099ffe93121a0b1",
+      "decode": "PASS"
+    },
+    {
+      "file": "R049-S02.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4767,
+      "maxDb": -2,
+      "meanDb": -19.6,
+      "sha256": "64eb4a3fbd12113fe87344d6a8dd6966bfd67963e1d746e4dec3ba19aff0d013",
+      "decode": "PASS"
+    },
+    {
+      "file": "R049-S03.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 3699,
+      "maxDb": -3.2,
+      "meanDb": -18,
+      "sha256": "ae847d8156f41a3455517d50eb3b60ebad43fb14adc18febe8ce04e49bda03a6",
+      "decode": "PASS"
+    },
+    {
+      "file": "R049-S04.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 4315,
+      "maxDb": -2,
+      "meanDb": -19.4,
+      "sha256": "059ad76ca15ebb218ae612b49ca1e7857c642b0c0aa5259fabf45bdbac10a195",
+      "decode": "PASS"
+    },
+    {
+      "file": "R049-S05.m4a",
+      "codec": "aac",
+      "sampleRate": 44100,
+      "channels": 1,
+      "durationMs": 5287,
+      "maxDb": -2,
+      "meanDb": -19.2,
+      "sha256": "cd77eef6df72dcc2fe62f9cd3a67a063800bee190a1122157c2e41cad31d7619",
+      "decode": "PASS"
+    }
+  ],
+  "choosePronunciationMeanSpreadDb": 1.1,
+  "folderBytes": 1273740,
+  "browserQA": {
+    "result": "tooling-fallback",
+    "attemptedPage": "http://localhost:5249/tools/lesson-asset-review.html?unit=R049&ref=local",
+    "observed": "R049 loaded five sentence cards and five extra audio controls. Clicking first sentence Play crashed the Codex in-app browser; next inspection identified This page crashed.",
+    "scope": "Loaded R049 UI; first playback attempt interrupted.",
+    "skipped": [
+      "Subjective continuous listening",
+      "Word-highlight playback",
+      "Phone teach-character recording/replay"
+    ],
+    "fallback": "CURRICULUM_PRODUCTION_SOP browser automation fallback; complete decode, transcript, alignment, allowed-character and format gates."
+  },
+  "latestMainVerified": "b4d20e1efd4c4c215e82aed5ff5bfa5267eef1f7",
+  "releaseBlockers": [
+    "L404",
+    "L405"
+  ]
+}

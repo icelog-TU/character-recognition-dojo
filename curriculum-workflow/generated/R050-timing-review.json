@@ -1,0 +1,112 @@
+[
+  {
+    "id": "R050-S01",
+    "index": 5,
+    "original": {
+      "charIndex": 5,
+      "startMs": 2180,
+      "endMs": 2181
+    },
+    "corrected": {
+      "startMs": 1800,
+      "endMs": 2180
+    },
+    "reason": "RMS: second 頁 onset1800ms, voiced through2140ms; replace1ms overlap."
+  },
+  {
+    "id": "R050-G02-suffix",
+    "index": 1,
+    "original": {
+      "charIndex": 1,
+      "startMs": 1040,
+      "endMs": 1041
+    },
+    "corrected": {
+      "startMs": 680,
+      "endMs": 1100
+    },
+    "reason": "房 voiced680-1080ms then silence."
+  },
+  {
+    "id": "R050-G02-suffix",
+    "index": 2,
+    "original": {
+      "charIndex": 2,
+      "startMs": 1440,
+      "endMs": 1441
+    },
+    "corrected": {
+      "startMs": 1220,
+      "endMs": 1500
+    },
+    "reason": "都 voiced1220-1460ms then trough."
+  },
+  {
+    "id": "R050-G02-suffix",
+    "index": 3,
+    "original": {
+      "charIndex": 3,
+      "startMs": 1440,
+      "endMs": 1940
+    },
+    "corrected": {
+      "startMs": 1580,
+      "endMs": 1940
+    },
+    "reason": "好 onset1580ms following trough, tail reviewed separately."
+  },
+  {
+    "id": "R050-S01",
+    "oldEndMs": 3700,
+    "newEndMs": 3745,
+    "reason": "Measured final syllable decay; retain trailing silence."
+  },
+  {
+    "id": "R050-S02",
+    "oldEndMs": 4320,
+    "newEndMs": 4353,
+    "reason": "Measured final syllable decay; retain trailing silence."
+  },
+  {
+    "id": "R050-S03",
+    "oldEndMs": 3700,
+    "newEndMs": 3799,
+    "reason": "Measured final syllable decay; retain trailing silence."
+  },
+  {
+    "id": "R050-S04",
+    "oldEndMs": 3280,
+    "newEndMs": 3345,
+    "reason": "Measured final syllable decay; retain trailing silence."
+  },
+  {
+    "id": "R050-S05",
+    "oldEndMs": 3700,
+    "newEndMs": 3768,
+    "reason": "Measured final syllable decay; retain trailing silence."
+  },
+  {
+    "id": "R050-G02-prefix",
+    "oldEndMs": 2980,
+    "newEndMs": 3214,
+    "reason": "Measured final syllable decay; retain trailing silence."
+  },
+  {
+    "id": "R050-G02-suffix",
+    "oldEndMs": 1940,
+    "newEndMs": 1992,
+    "reason": "Measured final syllable decay; retain trailing silence."
+  },
+  {
+    "id": "R050-G05-wrong-one",
+    "oldEndMs": 3420,
+    "newEndMs": 3454,
+    "reason": "Measured final syllable decay; retain trailing silence."
+  },
+  {
+    "id": "R050-G05-wrong-two",
+    "oldEndMs": 3700,
+    "newEndMs": 3810,
+    "reason": "Measured final syllable decay; retain trailing silence."
+  }
+]
