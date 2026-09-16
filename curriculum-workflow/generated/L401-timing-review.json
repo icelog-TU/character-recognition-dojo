@@ -1,0 +1,84 @@
+[
+  {
+    "id": "L401-S01",
+    "index": 2,
+    "original": {
+      "charIndex": 2,
+      "startMs": 1480,
+      "endMs": 1500
+    },
+    "corrected": {
+      "startMs": 1100,
+      "endMs": 1500
+    },
+    "reason": "20 ms RMS: silence ends at1100 ms; 打 vowel continues until trough1440-1480 ms, next syllable starts1500 ms."
+  },
+  {
+    "id": "L401-S05",
+    "index": 3,
+    "original": {
+      "charIndex": 3,
+      "startMs": 1600,
+      "endMs": 1640
+    },
+    "corrected": {
+      "startMs": 1260,
+      "endMs": 1640
+    },
+    "reason": "20 ms RMS: 勇 begins1260 ms after pause, decays near1600 ms; 敢 begins1640 ms."
+  },
+  {
+    "id": "L401-S01",
+    "oldEndMs": 4200,
+    "newEndMs": 4252,
+    "reason": "Measured final syllable decay; trailing silence retained."
+  },
+  {
+    "id": "L401-S02",
+    "oldEndMs": 3760,
+    "newEndMs": 3807,
+    "reason": "Measured final syllable decay; trailing silence retained."
+  },
+  {
+    "id": "L401-S03",
+    "oldEndMs": 2580,
+    "newEndMs": 2651,
+    "reason": "Measured final syllable decay; trailing silence retained."
+  },
+  {
+    "id": "L401-S04",
+    "oldEndMs": 3640,
+    "newEndMs": 3738,
+    "reason": "Measured final syllable decay; trailing silence retained."
+  },
+  {
+    "id": "L401-S05",
+    "oldEndMs": 2460,
+    "newEndMs": 2533,
+    "reason": "Measured final syllable decay; trailing silence retained."
+  },
+  {
+    "id": "L401-G02-prefix",
+    "oldEndMs": 1440,
+    "newEndMs": 1510,
+    "reason": "Measured final syllable decay; trailing silence retained."
+  },
+  {
+    "id": "L401-G02-suffix",
+    "oldEndMs": 500,
+    "newEndMs": 601,
+    "reason": "Measured final syllable decay; trailing silence retained."
+  },
+  {
+    "id": "L401-G05-wrong-one",
+    "oldEndMs": 4960,
+    "newEndMs": 5060,
+    "reason": "Measured final syllable decay; trailing silence retained."
+  },
+  {
+    "id": "L401-G05-wrong-two",
+    "oldEndMs": 3360,
+    "newEndMs": 3516,
+    "reason": "Measured final syllable decay; trailing silence retained."
+  }
+]
