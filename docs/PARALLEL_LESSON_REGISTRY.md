@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L398 | 選 | claimed | Production A | codex/l398-complete-package | L393:碼; L394:翻; L395:印; L396:單; L397:雙 | 碼翻印單雙 | curriculum-workflow/lesson-requests/L398.json; curriculum-workflow/generated/L398-generation-packet.md; curriculum-workflow/drafts/L398-draft.json | curriculum-workflow/audio-inbox/L398/; public/assets/lessons/L398/ | Base 2be6834d, formal L389. Release requires preceding lessons and after390 R047/R048. S03 red paper and white handprint; S04 only 3/5/8 number-board exception, jersey blank. |
 
 ## Status Values
 
