@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L428 | 自 | claimed | Remote Production C; parallel-c | codex/l428-complete-package | L423, L424, L425, L426, L427; contiguous L416-L427; R051/R052 after L420 (coverage L391-L420) | 組、隊、各、輪、員 | curriculum-workflow/lesson-requests/L428.json; curriculum-workflow/generated/L428-generation-packet.md; curriculum-workflow/drafts/L428-draft.json | public/assets/lessons/L428/; curriculum-workflow/audio-inbox/L428/ | Five exact teacher-approved sentences; source main 4eec5178, 425 locked allowed chars. Dependencies block Release only; review pair excluded. Claim push before asset work. |
 
 ## Status Values
 
