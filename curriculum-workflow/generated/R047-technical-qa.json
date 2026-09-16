@@ -1,0 +1,198 @@
+{
+  "unit": "R047",
+  "files": [
+    {
+      "file": "R047-G02-prefix.m4a",
+      "src": "/assets/reviews/R047/audio/R047-G02-prefix.m4a",
+      "bytes": 15866,
+      "sha256": "9b120074c067f4d44629be4cd04cbb86a6f96b60a424b10867f3201a1c563d79",
+      "durationMs": 1277,
+      "speechEndMs": 1055,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -17.8,
+      "maxDb": -2.4
+    },
+    {
+      "file": "R047-G02-suffix.m4a",
+      "src": "/assets/reviews/R047/audio/R047-G02-suffix.m4a",
+      "bytes": 29813,
+      "sha256": "6ab9d349e6b26729adcc6b1dc9a6d58d6920a9fc9c559ec4859c59d61edcc999",
+      "durationMs": 2496,
+      "speechEndMs": 2041,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -19,
+      "maxDb": -3.8
+    },
+    {
+      "file": "R047-G05-wrong-one.m4a",
+      "src": "/assets/reviews/R047/audio/R047-G05-wrong-one.m4a",
+      "bytes": 51557,
+      "sha256": "183d764565b4fc5d8649107d2e0c59b8a7c9c7a54b45e82dd03543fd0d18f227",
+      "durationMs": 3529,
+      "speechEndMs": 3315,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.7,
+      "maxDb": -2
+    },
+    {
+      "file": "R047-G05-wrong-two.m4a",
+      "src": "/assets/reviews/R047/audio/R047-G05-wrong-two.m4a",
+      "bytes": 43569,
+      "sha256": "e4fbd56ceefadd6c6dc68fa08c7f115fcbbeb4e64f1a50752c223dc4ee7c5033",
+      "durationMs": 3390,
+      "speechEndMs": 3175,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.6,
+      "maxDb": -3.5
+    },
+    {
+      "file": "R047-S01.m4a",
+      "src": "/assets/reviews/R047/audio/R047-S01.m4a",
+      "bytes": 67663,
+      "sha256": "cb6db764e126ce57fc1ab2018c743a8ca2a31e2b3bea98fe14e3d8042e47eede",
+      "durationMs": 5480,
+      "speechEndMs": 5274,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -19.6,
+      "maxDb": -2.7
+    },
+    {
+      "file": "R047-S02.m4a",
+      "src": "/assets/reviews/R047/audio/R047-S02.m4a",
+      "bytes": 53107,
+      "sha256": "a71bbc7edc6dac103a0dd274e69e002841a192289c6df6faf0a4eb43f5e82910",
+      "durationMs": 4249,
+      "speechEndMs": 4029,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.2,
+      "maxDb": -2.3
+    },
+    {
+      "file": "R047-S03.m4a",
+      "src": "/assets/reviews/R047/audio/R047-S03.m4a",
+      "bytes": 38625,
+      "sha256": "5f0caf970be7a7623fcb4ca66bf6bb62caf09a8c5141808836d5827d84ec04b1",
+      "durationMs": 3158,
+      "speechEndMs": 2950,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.1,
+      "maxDb": -2.3
+    },
+    {
+      "file": "R047-S04.m4a",
+      "src": "/assets/reviews/R047/audio/R047-S04.m4a",
+      "bytes": 50961,
+      "sha256": "748db03ab7facf0c01656893a729d29b11d361a0a809a2c18113789eba0c8cdc",
+      "durationMs": 4086,
+      "speechEndMs": 3876,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -19.8,
+      "maxDb": -2.1
+    },
+    {
+      "file": "R047-S05.m4a",
+      "src": "/assets/reviews/R047/audio/R047-S05.m4a",
+      "bytes": 51772,
+      "sha256": "720d7af9a12486dc235080fe76dfde0d2da14e35fc9932063340e301ac8ffa37",
+      "durationMs": 4133,
+      "speechEndMs": 3928,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18,
+      "maxDb": -2
+    }
+  ],
+  "timingAdjustments": [
+    {
+      "file": "R047-G02-prefix.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 2,
+        "startMs": 580,
+        "endMs": 960
+      },
+      "afterEndMs": 1055
+    },
+    {
+      "file": "R047-G05-wrong-two.m4a",
+      "index": 7,
+      "before": {
+        "charIndex": 7,
+        "startMs": 2740,
+        "endMs": 2800
+      },
+      "reason": "ASR sub-80ms span; extend onset into preceding pause",
+      "afterStartMs": 2720
+    },
+    {
+      "file": "R047-G05-wrong-two.m4a",
+      "reason": "謝謝 compressed to 120ms by ASR; spread to 160ms into preceding pause",
+      "before": [
+        {
+          "charIndex": 7,
+          "startMs": 2720,
+          "endMs": 2800
+        },
+        {
+          "charIndex": 8,
+          "startMs": 2800,
+          "endMs": 2860
+        }
+      ]
+    },
+    {
+      "file": "R047-S03.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 10,
+        "startMs": 2690,
+        "endMs": 2820
+      },
+      "afterEndMs": 2950
+    },
+    {
+      "file": "R047-S04.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 10,
+        "startMs": 3560,
+        "endMs": 3760
+      },
+      "afterEndMs": 3876
+    },
+    {
+      "file": "R047-G02-suffix.m4a",
+      "reason": "Final speech decay extends beyond ASR word endpoint; retain decoded final syllable envelope",
+      "before": {
+        "charIndex": 6,
+        "startMs": 1720,
+        "endMs": 1920
+      },
+      "afterEndMs": 2041
+    }
+  ],
+  "issues": [],
+  "teacherApprovedFragment": {
+    "sha256": "6ab9d349e6b26729adcc6b1dc9a6d58d6920a9fc9c559ec4859c59d61edcc999",
+    "tailMs": 455,
+    "note": "Teacher accepted this exact dedicated teach suffix. Preserve audio bytes and genuine speech endpoint; 300ms SOP sentence-tail rule is not applied as a hard gate to this accepted fragment."
+  },
+  "g05MeanSpreadDb": 0.5
+}

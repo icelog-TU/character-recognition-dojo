@@ -1,0 +1,26 @@
+[
+  {
+    "file": "R047-G02-suffix.m4a",
+    "sha256": "fdabf63a3fcd21433e4da28946f7ef0dd56bafc3e3d63bd3440b62a59341cb30",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "First, report the actually heard first syllable phonetically: consonant, vowel (is it a high front ee/i or central uh/schwa/e?), and tone. Do not infer from Chinese orthography. Then listen to this Mandarin recording carefully. Give the verbatim transcript in Traditional Chinese. If the syllable shu occurs, report its ACTUALLY HEARD tone (1/2/3/4 or uncertain) and pitch contour, not the pronunciation you would expect from the meaning. Distinguish third-tone low/dipping shu from fourth-tone falling shu; do not infer tone solely from spelling. Report if the final syllable is complete, any clipped syllables or unnatural pauses. If you cannot judge reliably, explicitly say uncertain. Return concise JSON with transcript, shuObservations, finalSyllableComplete, defects, confidence. No prescribed transcript or expected tone is supplied.",
+    "result": "{\"transcript\": \"送來一盒點心\", \"shuObservations\": [], \"finalSyllableComplete\": true, \"defects\": \"none\", \"confidence\": 0.85}"
+  },
+  {
+    "file": "R047-G02-suffix.m4a",
+    "sha256": "fdabf63a3fcd21433e4da28946f7ef0dd56bafc3e3d63bd3440b62a59341cb30",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Transcribe every syllable as PINYIN with tones. Pay special attention to the FIRST syllable: is its vowel /i/ (ee), /ə/ (uh), or something else? Report what you HEAR, not what fits meaning. Do not omit weak syllables. Return JSON with firstSyllable, firstVowel, pinyin, uncertainty. No Chinese transcript needed.",
+    "result": "{\"firstSyllable\": \"di\", \"firstVowel\": \"i\", \"pinyin\": [\"dì\", \"sòng\", \"lái\", \"dì\", \"hé\", \"diǎn\", \"xīn\"], \"uncertainty\": \"low\"}"
+  },
+  {
+    "file": "R047-G02-suffix.m4a",
+    "sha256": "6ab9d349e6b26729adcc6b1dc9a6d58d6920a9fc9c559ec4859c59d61edcc999",
+    "model": "gpt-audio-1.5",
+    "method": "AI listening, not human QA",
+    "prompt": "Transcribe every syllable as PINYIN with tones. Pay special attention to the FIRST syllable: is its vowel /i/ (ee), /ə/ (uh), or something else? Report what you HEAR, not what fits meaning. Do not omit weak syllables. Return JSON with firstSyllable, firstVowel, pinyin, uncertainty. No Chinese transcript needed.",
+    "result": "{\n  \"firstSyllable\": \"dì\",\n  \"firstVowel\": \"i\",\n  \"pinyin\": [\"dì\", \"sòng\", \"lái\", \"yì\", \"hé\", \"diǎn\", \"xīn\"],\n  \"uncertainty\": \"low\"\n}"
+  }
+]

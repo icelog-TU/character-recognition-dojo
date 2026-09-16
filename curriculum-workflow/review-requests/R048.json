@@ -42,14 +42,10 @@
     "數"
   ],
   "requiredRounds": 5,
-  "dependsOnLessons": [
-    "L390"
-  ],
-  "provisionalLearnedChars": [
-    "數"
-  ],
-  "packageStatus": "partial-package",
-  "sourceBoundary": "f505d8db7ed9a345a8bede31071c8a6f66a35363",
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "packageStatus": "asset-complete-package",
+  "sourceBoundary": "23cae19103e760f23700f5ff90d72fbd2e59bfc6",
   "targetSentenceCount": 5,
   "allowedChars": [
     "一",
@@ -844,9 +840,7 @@
       "號",
       "數"
     ],
-    "provisionalLearnedChars": [
-      "數"
-    ],
+    "provisionalLearnedChars": [],
     "requiredCoverageChars": [
       "驚",
       "喜",
@@ -881,7 +875,7 @@
       "數"
     ]
   },
-  "teacherNotes": "Teacher-approved pair, same Production D slot. Playable L390 -> R047 -> R048 -> L391. L381-L389 now merged; L390 pending Release only. Ceiling L390, 394 allowed Han. R047-S05 four functional lines explicitly approved. R048-S01 route digit 1 explicitly approved; no other readable text exception. R048-S04 數數 = ㄕㄨˇ ㄕㄨˋ. Image/audio/timing/browser QA in progress.",
+  "teacherNotes": "Teacher-approved pair, Production D. Playable L390 -> R047 -> R048 -> L391. Boundary 23cae19103e760f23700f5ff90d72fbd2e59bfc6: L001-L390 formal; all lesson dependencies satisfied. Vocabulary ceiling L390, 394 Han. R047-S05 four functional lines approved; R048-S01 only route digit 1 approved in image. R048-S04 數數 = ㄕㄨˇ ㄕㄨˋ. Exact approved sentences and game plans preserved. R047-G02 suffix teacher manual audio QA PASS; exact audio bytes retained, see R047-G02-teacher-approval.json. Technical and image QA records: generated/R047-R048-package-qa.md and per-unit technical-qa.json. Browser recording/highlight QA limitations recorded separately; no claim of human QA for the whole pair.",
   "approvedSentences": [
     {
       "id": "R048-S01",
@@ -897,7 +891,50 @@
       "imageSrc": "/assets/reviews/R048/images/R048-S01.webp",
       "approved": true,
       "audio": {
-        "src": "/assets/reviews/R048/audio/R048-S01.m4a"
+        "src": "/assets/reviews/R048/audio/R048-S01.m4a",
+        "durationMs": 2856,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 880
+          },
+          {
+            "charIndex": 3,
+            "startMs": 880,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1100,
+            "endMs": 1740
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1740,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2020,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2360,
+            "endMs": 2560
+          }
+        ]
       }
     },
     {
@@ -915,7 +952,65 @@
       "imageSrc": "/assets/reviews/R048/images/R048-S02.webp",
       "approved": true,
       "audio": {
-        "src": "/assets/reviews/R048/audio/R048-S02.m4a"
+        "src": "/assets/reviews/R048/audio/R048-S02.m4a",
+        "durationMs": 3599,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1200,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1380,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1760,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2340,
+            "endMs": 2430
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2430,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2520,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2740,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2960,
+            "endMs": 3397
+          }
+        ]
       }
     },
     {
@@ -933,7 +1028,60 @@
       "imageSrc": "/assets/reviews/R048/images/R048-S03.webp",
       "approved": true,
       "audio": {
-        "src": "/assets/reviews/R048/audio/R048-S03.m4a"
+        "src": "/assets/reviews/R048/audio/R048-S03.m4a",
+        "durationMs": 3738,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 820
+          },
+          {
+            "charIndex": 2,
+            "startMs": 820,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1740,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2000,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2280,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2600,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2960,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3220,
+            "endMs": 3500
+          }
+        ]
       }
     },
     {
@@ -951,7 +1099,60 @@
       "imageSrc": "/assets/reviews/R048/images/R048-S04.webp",
       "approved": true,
       "audio": {
-        "src": "/assets/reviews/R048/audio/R048-S04.m4a"
+        "src": "/assets/reviews/R048/audio/R048-S04.m4a",
+        "durationMs": 3181,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 630
+          },
+          {
+            "charIndex": 2,
+            "startMs": 630,
+            "endMs": 900
+          },
+          {
+            "charIndex": 3,
+            "startMs": 900,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1500,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1680,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1860,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2280,
+            "endMs": 2560
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2560,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2760,
+            "endMs": 2960
+          }
+        ]
       },
       "zhuyinOverrides": {
         "7": "ㄕㄨˇ",
@@ -973,7 +1174,65 @@
       "imageSrc": "/assets/reviews/R048/images/R048-S05.webp",
       "approved": true,
       "audio": {
-        "src": "/assets/reviews/R048/audio/R048-S05.m4a"
+        "src": "/assets/reviews/R048/audio/R048-S05.m4a",
+        "durationMs": 3761,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 220
+          },
+          {
+            "charIndex": 1,
+            "startMs": 220,
+            "endMs": 440
+          },
+          {
+            "charIndex": 2,
+            "startMs": 440,
+            "endMs": 740
+          },
+          {
+            "charIndex": 3,
+            "startMs": 740,
+            "endMs": 1000
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1000,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1280,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1940,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2340,
+            "endMs": 2620
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2620,
+            "endMs": 2900
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2900,
+            "endMs": 3160
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3160,
+            "endMs": 3544
+          }
+        ]
       }
     }
   ],
@@ -997,7 +1256,71 @@
         "prefixText": "最近接",
         "suffixText": "下雨不能出去玩",
         "prefixSrc": "/assets/reviews/R048/audio/R048-G02-prefix.m4a",
-        "suffixSrc": "/assets/reviews/R048/audio/R048-G02-suffix.m4a"
+        "suffixSrc": "/assets/reviews/R048/audio/R048-G02-suffix.m4a",
+        "prefixAudio": {
+          "spokenText": "最近接",
+          "src": "/assets/reviews/R048/audio/R048-G02-prefix.m4a",
+          "durationMs": 1625,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 440
+            },
+            {
+              "charIndex": 1,
+              "startMs": 440,
+              "endMs": 880
+            },
+            {
+              "charIndex": 2,
+              "startMs": 880,
+              "endMs": 1415
+            }
+          ]
+        },
+        "suffixAudio": {
+          "spokenText": "下雨不能出去玩",
+          "src": "/assets/reviews/R048/audio/R048-G02-suffix.m4a",
+          "durationMs": 2809,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 480
+            },
+            {
+              "charIndex": 1,
+              "startMs": 480,
+              "endMs": 680
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1180,
+              "endMs": 1280
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1280,
+              "endMs": 1380
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1380,
+              "endMs": 1610
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1610,
+              "endMs": 1840
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1840,
+              "endMs": 2593
+            }
+          ]
+        }
       }
     },
     {
@@ -1081,19 +1404,189 @@
           "text": "我相信你已經會數數了。",
           "correct": true,
           "sentenceId": "R048-S04",
-          "audioSrc": "/assets/reviews/R048/audio/R048-S04.m4a"
+          "audioSrc": "/assets/reviews/R048/audio/R048-S04.m4a",
+          "audio": {
+            "src": "/assets/reviews/R048/audio/R048-S04.m4a",
+            "durationMs": 3181,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 360
+              },
+              {
+                "charIndex": 1,
+                "startMs": 360,
+                "endMs": 630
+              },
+              {
+                "charIndex": 2,
+                "startMs": 630,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1500,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1680,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1860,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2280,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2560,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2760,
+                "endMs": 2960
+              }
+            ]
+          }
         },
         {
           "id": "wrong-one",
           "text": "我相信你已經會寫字了。",
           "correct": false,
-          "audioSrc": "/assets/reviews/R048/audio/R048-G05-wrong-one.m4a"
+          "audioSrc": "/assets/reviews/R048/audio/R048-G05-wrong-one.m4a",
+          "audio": {
+            "spokenText": "我相信你已經會寫字了",
+            "src": "/assets/reviews/R048/audio/R048-G05-wrong-one.m4a",
+            "durationMs": 3297,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 320
+              },
+              {
+                "charIndex": 1,
+                "startMs": 320,
+                "endMs": 690
+              },
+              {
+                "charIndex": 2,
+                "startMs": 690,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1680
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1680,
+                "endMs": 1860
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1860,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2040,
+                "endMs": 2440
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2440,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2660,
+                "endMs": 2820
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2820,
+                "endMs": 3080
+              }
+            ]
+          }
         },
         {
           "id": "wrong-two",
           "text": "我相信他已經會數數了。",
           "correct": false,
-          "audioSrc": "/assets/reviews/R048/audio/R048-G05-wrong-two.m4a"
+          "audioSrc": "/assets/reviews/R048/audio/R048-G05-wrong-two.m4a",
+          "audio": {
+            "spokenText": "我相信他已經會數數了",
+            "src": "/assets/reviews/R048/audio/R048-G05-wrong-two.m4a",
+            "durationMs": 3181,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 590
+              },
+              {
+                "charIndex": 2,
+                "startMs": 590,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1480,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1660,
+                "endMs": 1840
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1840,
+                "endMs": 2280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2280,
+                "endMs": 2560
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2560,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2760,
+                "endMs": 2960
+              }
+            ]
+          }
         }
       ]
     }
