@@ -17,6 +17,9 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 
+| R051 | review | claimed | Production F / parallel-f | codex/r051-r052-complete-package | None; L420 merged; pair R052 | None | curriculum-workflow/review-requests/R051.json; curriculum-workflow/generated/R051-generation-packet.md; curriculum-workflow/drafts/R051-draft.json | public/assets/reviews/R051/; curriculum-workflow/audio-inbox/R051/ | Pair after L420, coverage L391-L420, locked 424 chars at f4bc071d. R051-S04: 13 Han teacher-approved exception; preserve exact text. Claim only; production continuing. |
+| R052 | review | claimed | Production F / parallel-f | codex/r051-r052-complete-package | None; L420 merged; pair R051 | None | curriculum-workflow/review-requests/R052.json; curriculum-workflow/generated/R052-generation-packet.md; curriculum-workflow/drafts/R052-draft.json | public/assets/reviews/R052/; curriculum-workflow/audio-inbox/R052/ | Pair after L420, coverage L391-L420, locked 424 chars at f4bc071d. R051-S04: 13 Han teacher-approved exception; preserve exact text. Claim only; production continuing. |
+
 ## Status Values
 
 - `planned`: Teacher has chosen the lesson order and new character(s), but no Codex thread owns it yet.
