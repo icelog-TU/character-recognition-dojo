@@ -45,7 +45,7 @@ QA browser tab closed, temporary viewport reset, own local server stopped. Stage
 
 ## Validation and release review
 
-tools:check PASS; ai:check PASS; curriculum:audit-state PASS (expected future L426 asset-folder warning). Full existing validate:production PASS. Lesson-local production validator PASS; strict asset format audit PASS with zero warnings; L426-package-audit.json PASS. Pushed-branch package intake is the final required gate and its exact ref/SHA result is reported at handoff.
+tools:check PASS; ai:check PASS; curriculum:audit-state PASS (expected future L426 asset-folder warning). Full existing validate:production PASS. Lesson-local production validator PASS; strict asset format audit PASS with zero warnings; L426-package-audit.json PASS. Pushed-branch package intake PASS at origin/codex/l426-complete-package, asset commit ca4c534ea4a3f5a32ab69dfd570f639946de854a; 5 images, 10 audio files, canonical Stage 4, zero blocking package-status defects. Final tip is rechecked after this evidence-only update and reported at handoff.
 
 verify skipped: dependency-blocked, shared state left for Release. Release performs production JSON/planner/ledger updates, ordered integration and verify against the eventual playable curriculum.
 
