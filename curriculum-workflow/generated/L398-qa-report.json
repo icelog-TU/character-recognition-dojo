@@ -1,0 +1,1038 @@
+{
+  "unit": "L398",
+  "owner": "Production A",
+  "branch": "codex/l398-complete-package",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "base": "2be6834d0e35978cc417da5721dbd891e8974948",
+  "mainSha": "f505d8db7ed9a345a8bede31071c8a6f66a35363",
+  "formalBoundary": "L389",
+  "formalChars": 393,
+  "dependsOnLessons": [
+    "L393",
+    "L394",
+    "L395",
+    "L396",
+    "L397"
+  ],
+  "provisionalLearnedChars": [
+    "碼",
+    "翻",
+    "印",
+    "單",
+    "雙"
+  ],
+  "consistency": "PASS",
+  "technical": {
+    "status": "PASS",
+    "allowed": 399,
+    "coverage": {
+      "選": 4,
+      "雙": 2,
+      "單": 2,
+      "印": 2,
+      "翻": 1,
+      "碼": 1
+    },
+    "displayLines": "PASS",
+    "stage4Indexes": "PASS",
+    "imageMetadata": [
+      {
+        "id": "L398-S01",
+        "src": "/assets/lessons/L398/images/L398-S01.webp",
+        "bytes": 155550,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L398-S02",
+        "src": "/assets/lessons/L398/images/L398-S02.webp",
+        "bytes": 147938,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L398-S03",
+        "src": "/assets/lessons/L398/images/L398-S03.webp",
+        "bytes": 158020,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L398-S04",
+        "src": "/assets/lessons/L398/images/L398-S04.webp",
+        "bytes": 141892,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "L398-S05",
+        "src": "/assets/lessons/L398/images/L398-S05.webp",
+        "bytes": 209808,
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "audio": [
+      {
+        "src": "/assets/lessons/L398/audio/L398-S01.m4a",
+        "durationMs": 2691,
+        "mean": -17.5,
+        "max": -3,
+        "bytes": 33524
+      },
+      {
+        "src": "/assets/lessons/L398/audio/L398-S02.m4a",
+        "durationMs": 3348,
+        "mean": -18.5,
+        "max": -2.7,
+        "bytes": 41653
+      },
+      {
+        "src": "/assets/lessons/L398/audio/L398-S03.m4a",
+        "durationMs": 3212,
+        "mean": -18.5,
+        "max": -2.7,
+        "bytes": 40427
+      },
+      {
+        "src": "/assets/lessons/L398/audio/L398-S04.m4a",
+        "durationMs": 3214,
+        "mean": -19.1,
+        "max": -2,
+        "bytes": 44059
+      },
+      {
+        "src": "/assets/lessons/L398/audio/L398-S05.m4a",
+        "durationMs": 3806,
+        "mean": -18.5,
+        "max": -2.3,
+        "bytes": 47070
+      },
+      {
+        "src": "/assets/lessons/L398/audio/L398-G02-prefix.m4a",
+        "durationMs": 1254,
+        "mean": -19,
+        "max": -2.9,
+        "bytes": 11488
+      },
+      {
+        "src": "/assets/lessons/L398/audio/L398-G02-suffix.m4a",
+        "durationMs": 2693,
+        "mean": -17.7,
+        "max": -3.1,
+        "bytes": 33411
+      },
+      {
+        "src": "/assets/lessons/L398/audio/L398-G05-wrong-one.m4a",
+        "durationMs": 3785,
+        "mean": -18.2,
+        "max": -3.8,
+        "bytes": 46842
+      },
+      {
+        "src": "/assets/lessons/L398/audio/L398-G05-wrong-two.m4a",
+        "durationMs": 3704,
+        "mean": -18.3,
+        "max": -2,
+        "bytes": 47263
+      },
+      {
+        "src": "/assets/lessons/L398/audio/char-u9078.m4a",
+        "durationMs": 2208,
+        "mean": -25.4,
+        "max": -6.2,
+        "bytes": 25194
+      }
+    ],
+    "g05MeanSpreadDb": 0.3,
+    "timings": "PASS",
+    "ffmpegDecode": "PASS",
+    "sizes": {
+      "images": 813208,
+      "audio": 370931,
+      "total": 1184139
+    }
+  },
+  "mobile": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "這",
+          "選",
+          "兩",
+          "選",
+          "選",
+          "雙"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "愛",
+            "菜",
+            "吃",
+            "的"
+          ],
+          "correctSequence": [
+            "愛",
+            "吃",
+            "的",
+            "菜"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-S05.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-G05-wrong-one.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.984375,
+              "bottom": 597.984375,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.984375,
+              "bottom": 529.984375,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.984375,
+              "bottom": 597.984375,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-S05.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-G05-wrong-one.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 403.984375,
+              "bottom": 597.984375,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 471.984375,
+              "bottom": 529.984375,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 539.984375,
+              "bottom": 597.984375,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "stage1": {
+        "standalonePlayed": true
+      },
+      "stage2": {
+        "cards": [
+          "選",
+          "雙",
+          "兩",
+          "選",
+          "這",
+          "選"
+        ],
+        "threeTargetsRequired": true,
+        "wrongRejected": true
+      },
+      "stage3": [
+        {
+          "sentence": 1,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 2,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 3,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 4,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        },
+        {
+          "sentence": 5,
+          "highlighted": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "noHorizontalOverflow": true
+        }
+      ],
+      "stage4": {
+        "g01": {
+          "immediateFeedback": true,
+          "waitsForNext": true
+        },
+        "g02": {
+          "syntheticRecordReplay": true,
+          "waitsForNext": true
+        },
+        "g03": {
+          "threeDistinctCards": true,
+          "oneBlank": true,
+          "bothWrongRejected": true,
+          "rescueDoesNotComplete": true,
+          "retryPreservesThree": true,
+          "onlyCorrectCompletes": true
+        },
+        "g04": {
+          "displayOrder": [
+            "愛",
+            "菜",
+            "吃",
+            "的"
+          ],
+          "correctSequence": [
+            "愛",
+            "吃",
+            "的",
+            "菜"
+          ],
+          "noCompletionLeak": true
+        },
+        "g05": {
+          "openingDoesNotRevealAnswer": true,
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-S05.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-G05-wrong-one.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        }
+      },
+      "reward": {
+        "firstCompletion": true,
+        "coins": 150,
+        "stars": 48,
+        "nextDisabledAtPackageEndpoint": true,
+        "replay": {
+          "files": [
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-G05-wrong-two.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-S05.m4a",
+            "http://127.0.0.1:5186/character-recognition-dojo/assets/lessons/L398/audio/L398-G05-wrong-one.m4a"
+          ],
+          "correct": 1,
+          "nav": {
+            ".reward-actions": {
+              "text": "再次練習本課沒有下一課回首頁休息",
+              "top": 802.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-next-button": {
+              "text": "沒有下一課",
+              "disabled": true,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            },
+            ".reward-home-button": {
+              "text": "回首頁休息",
+              "disabled": false,
+              "top": 870.46875,
+              "bottom": 928.46875,
+              "inViewport": true,
+              "aboveBar": true
+            }
+          }
+        },
+        "noDoubleReward": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "media": [
+    {
+      "file": "char-u9078.m4a",
+      "ended": true,
+      "duration": 2.208005
+    },
+    {
+      "file": "L398-G02-prefix.m4a",
+      "ended": true,
+      "duration": 1.253991
+    },
+    {
+      "file": "L398-G02-suffix.m4a",
+      "ended": true,
+      "duration": 2.692993
+    },
+    {
+      "file": "L398-G05-wrong-one.m4a",
+      "ended": true,
+      "duration": 3.785011
+    },
+    {
+      "file": "L398-G05-wrong-two.m4a",
+      "ended": true,
+      "duration": 3.703991
+    },
+    {
+      "file": "L398-S01.m4a",
+      "ended": true,
+      "duration": 2.690998
+    },
+    {
+      "file": "L398-S02.m4a",
+      "ended": true,
+      "duration": 3.348005
+    },
+    {
+      "file": "L398-S03.m4a",
+      "ended": true,
+      "duration": 3.211995
+    },
+    {
+      "file": "L398-S04.m4a",
+      "ended": true,
+      "duration": 3.213991
+    },
+    {
+      "file": "L398-S05.m4a",
+      "ended": true,
+      "duration": 3.806009
+    }
+  ],
+  "zhuyin": [
+    {
+      "width": 390,
+      "s05Xing2": true,
+      "status": "PASS"
+    },
+    {
+      "width": 820,
+      "s05Xing2": true,
+      "status": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "id": "L398-S01",
+      "src": "/assets/lessons/L398/images/L398-S01.webp",
+      "bytes": 155550,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L398-S02",
+      "src": "/assets/lessons/L398/images/L398-S02.webp",
+      "bytes": 147938,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L398-S03",
+      "src": "/assets/lessons/L398/images/L398-S03.webp",
+      "bytes": 158020,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    },
+    {
+      "id": "L398-S04",
+      "src": "/assets/lessons/L398/images/L398-S04.webp",
+      "bytes": 141892,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "Teacher-approved sample board digits 3, 5, 8 only"
+    },
+    {
+      "id": "L398-S05",
+      "src": "/assets/lessons/L398/images/L398-S05.webp",
+      "bytes": 209808,
+      "width": 1024,
+      "height": 1024,
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantics": "PASS",
+      "readableText": "None"
+    }
+  ],
+  "imageRegenerations": {
+    "S01": 0,
+    "S02": 0,
+    "S03": 0,
+    "S04": 1,
+    "S05": 4
+  },
+  "rejectedImageReasons": {
+    "S04": "Initial finger pointed to 5 and a background jersey displayed a number. Final finger points to 8 and jerseys are blank.",
+    "S05": "Initial extra front-seat occupant and car badge; final has three family occupants and plain unbranded red lead car."
+  },
+  "rejectedImagesCommitted": false,
+  "imageException": "Teacher-approved S04 board digits 3, 5, 8 only; choosing 8 before printing; foreground jersey blank. No extension to other images. S03 red paper plus white handprint confirmed.",
+  "audio": {
+    "model": "gpt-4o-mini-tts",
+    "voice": "coral for sentence and game clips; alloy for final standalone character",
+    "standaloneInput": "選",
+    "zhuyin": "ㄒㄩㄢˇ",
+    "count": 10,
+    "regenerations": {
+      "charAudio": 4,
+      "g02Prefix": 1
+    },
+    "independentTranscription": [
+      {
+        "file": "char-u9078.m4a",
+        "text": "選"
+      },
+      {
+        "file": "L398-G02-prefix.m4a",
+        "text": "War"
+      },
+      {
+        "file": "L398-G02-suffix.m4a",
+        "text": "红色的纸盖手印"
+      },
+      {
+        "file": "L398-G05-wrong-one.m4a",
+        "text": "这是单行道，不能往前开。"
+      },
+      {
+        "file": "L398-G05-wrong-two.m4a",
+        "text": "這是單行道，不能往回走。"
+      },
+      {
+        "file": "L398-S01.m4a",
+        "text": "這兩雙鞋你要選哪一雙?"
+      },
+      {
+        "file": "L398-S02.m4a",
+        "text": "翻开菜单，选你爱吃的菜。"
+      },
+      {
+        "file": "L398-S03.m4a",
+        "text": "我選紅色的紙蓋手印。"
+      },
+      {
+        "file": "L398-S04.m4a",
+        "text": "先选号码再印在球衣上。"
+      },
+      {
+        "file": "L398-S05.m4a",
+        "text": "這是單行道，不能往回開。"
+      }
+    ],
+    "shortTranscription": [
+      {
+        "file": "char-u9078.m4a",
+        "text": "選",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 39,
+          "input_tokens": 36,
+          "input_token_details": {
+            "text_tokens": 14,
+            "audio_tokens": 22
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "file": "L398-G02-prefix.m4a",
+        "text": "我",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 29,
+          "input_tokens": 26,
+          "input_token_details": {
+            "text_tokens": 14,
+            "audio_tokens": 12
+          },
+          "output_tokens": 3
+        }
+      }
+    ],
+    "finalCharPlayback": [
+      {
+        "width": 390,
+        "status": "PASS",
+        "finalAlloyCharPlayedToEnd": true
+      },
+      {
+        "width": 820,
+        "status": "PASS",
+        "finalAlloyCharPlayedToEnd": true
+      }
+    ],
+    "pitchEvidence": [
+      {
+        "ms": 600,
+        "hz": 128,
+        "confidence": 0.84
+      },
+      {
+        "ms": 610,
+        "hz": 126,
+        "confidence": 0.91
+      },
+      {
+        "ms": 620,
+        "hz": 126,
+        "confidence": 0.9
+      },
+      {
+        "ms": 630,
+        "hz": 124,
+        "confidence": 0.87
+      },
+      {
+        "ms": 640,
+        "hz": 121,
+        "confidence": 0.86
+      },
+      {
+        "ms": 650,
+        "hz": 118,
+        "confidence": 0.85
+      },
+      {
+        "ms": 660,
+        "hz": 115,
+        "confidence": 0.87
+      },
+      {
+        "ms": 670,
+        "hz": 112,
+        "confidence": 0.84
+      },
+      {
+        "ms": 690,
+        "hz": 107,
+        "confidence": 0.81
+      },
+      {
+        "ms": 700,
+        "hz": 103,
+        "confidence": 0.86
+      },
+      {
+        "ms": 710,
+        "hz": 101,
+        "confidence": 0.92
+      },
+      {
+        "ms": 720,
+        "hz": 100,
+        "confidence": 0.91
+      },
+      {
+        "ms": 730,
+        "hz": 100,
+        "confidence": 0.81
+      },
+      {
+        "ms": 1020,
+        "hz": 100,
+        "confidence": 0.82
+      },
+      {
+        "ms": 1030,
+        "hz": 100,
+        "confidence": 0.9
+      },
+      {
+        "ms": 1040,
+        "hz": 100,
+        "confidence": 0.96
+      },
+      {
+        "ms": 1050,
+        "hz": 100,
+        "confidence": 0.98
+      },
+      {
+        "ms": 1060,
+        "hz": 101,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1070,
+        "hz": 103,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1080,
+        "hz": 105,
+        "confidence": 0.98
+      },
+      {
+        "ms": 1090,
+        "hz": 107,
+        "confidence": 0.97
+      },
+      {
+        "ms": 1100,
+        "hz": 110,
+        "confidence": 0.97
+      },
+      {
+        "ms": 1110,
+        "hz": 113,
+        "confidence": 0.98
+      },
+      {
+        "ms": 1120,
+        "hz": 117,
+        "confidence": 0.97
+      },
+      {
+        "ms": 1130,
+        "hz": 120,
+        "confidence": 0.98
+      },
+      {
+        "ms": 1140,
+        "hz": 124,
+        "confidence": 0.98
+      },
+      {
+        "ms": 1150,
+        "hz": 126,
+        "confidence": 0.98
+      },
+      {
+        "ms": 1160,
+        "hz": 129,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1170,
+        "hz": 131,
+        "confidence": 1
+      },
+      {
+        "ms": 1180,
+        "hz": 133,
+        "confidence": 1
+      },
+      {
+        "ms": 1190,
+        "hz": 134,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1200,
+        "hz": 137,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1210,
+        "hz": 138,
+        "confidence": 1
+      },
+      {
+        "ms": 1220,
+        "hz": 138,
+        "confidence": 1
+      },
+      {
+        "ms": 1230,
+        "hz": 139,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1240,
+        "hz": 140,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1250,
+        "hz": 140,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1260,
+        "hz": 142,
+        "confidence": 0.99
+      },
+      {
+        "ms": 1270,
+        "hz": 139,
+        "confidence": 0.98
+      }
+    ],
+    "assessment": "Final isolated char and prefix transcription with a generic Taiwan-Mandarin language hint returns 選 and 我, without target words in the hint. Final 選 voiced pitch falls about 128 to 100 Hz then rises to 142 Hz, supporting a full third tone. Early ambiguous or near-silent candidates replaced. These are technical phonetic checks, not human listening approval. Full sentence and wrong-option text checks match approved content apart from ASR orthographic variants.",
+    "g02Prefix": "我",
+    "g02Suffix": "紅色的紙蓋手印",
+    "g05MeanSpreadDb": 0.3,
+    "processing": "Repo mono AAC 44100Hz M4A, only trailing silence removed with 150ms speech-boundary padding; final character was not cut from any sentence."
+  },
+  "alignment": {
+    "source": "assets:align:ai whisper-1 on final processed M4A",
+    "records": 9,
+    "transcriptionContext": "我。紅色的紙蓋手印。",
+    "equivalences": "Temporary exact simplified/traditional mapping 双/雙,选/選,单/單,码/碼,盖/蓋,爱/愛; no homophone substitution.",
+    "toolChanges": "Temporary instruction/context and orthographic mappings removed before commit. No shared tool changes shipped."
+  },
+  "checks": {
+    "tools": "PASS",
+    "aiSetup": "PASS",
+    "packet": "PASS; synchronized final records",
+    "localAudit": "PASS",
+    "validateProduction": "PASS with temporary L398 entry",
+    "assetsAudit": "PASS: 436 units, 2139 image references, 4233 audio references, zero warnings",
+    "auditState": "PASS: formal L389, expected warning for unmerged L398 asset directory",
+    "mobile": "PASS",
+    "fullVerify": "SKIPPED: dependency-blocked, shared state owned by Release",
+    "packageIntake": "Run against pushed ref before final handoff"
+  },
+  "sizes": {
+    "images": 813208,
+    "audio": 370931,
+    "total": 1184139
+  },
+  "limitations": [
+    "Synthetic microphone is not physical-phone recording QA.",
+    "Next lesson button visible but disabled at isolated L398 endpoint; Release verifies next playable lesson after integration.",
+    "Teacher subjective image/audio review remains post-main."
+  ]
+}
