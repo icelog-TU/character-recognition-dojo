@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L403 | 算 | claimed | Production A | codex/l403-complete-package | L398:選; L399:或; L400:者; L401:勇; L402:強 | 選或者勇強 | curriculum-workflow/lesson-requests/L403.json; curriculum-workflow/generated/L403-generation-packet.md; curriculum-workflow/drafts/L403-draft.json | curriculum-workflow/audio-inbox/L403/; public/assets/lessons/L403/ | Base 23cae191, formal L390; learner ceiling 400 Han. All predecessors and after390 R047/R048 block Release only. S02 game hero defeats monster; S03 only price digits 50 and 30, no total. Teacher review post-main. |
 
 ## Status Values
 
