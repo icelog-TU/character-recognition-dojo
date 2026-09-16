@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L411 | 定 | claimed | Production E | codex/l411-complete-package | L408, L409, L410 | 法 辦 試 | curriculum-workflow/lesson-requests/L411.json; curriculum-workflow/generated/L411-generation-packet.md; curriculum-workflow/drafts/L411-draft.json | public/assets/lessons/L411/; curriculum-workflow/audio-inbox/L411/ | Base853a02b1 L407. Teacher-approved 出去 / warehouse / 小月 scene; no text or number exceptions. |
+| L411 | 定 | dependency-blocked-asset-complete | Production E | codex/l411-complete-package | L408, L409, L410 | 法 辦 試 | curriculum-workflow/lesson-requests/L411.json; curriculum-workflow/generated/L411-generation-packet.md; curriculum-workflow/drafts/L411-draft.json | public/assets/lessons/L411/; curriculum-workflow/audio-inbox/L411/ | Base853a02b1 L407. 5 WebP +10 M4A and timings complete; no text exceptions. Browser tooling fallback documented. Dependencies L408-L410. |
 
 ## Status Values
 
