@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L397 | 雙 | claimed | Production F | codex/l397-complete-package | L391, L392, L393, L394, L395, L396; Release: preceding lessons and R047/R048 | 報 頁 碼 翻 印 單 | curriculum-workflow/lesson-requests/L397.json; curriculum-workflow/generated/L397-generation-packet.md; curriculum-workflow/drafts/L397-draft.json | public/assets/lessons/L397/; curriculum-workflow/audio-inbox/L397/ | Teacher approved: S02 includes 看 and one double-sided menu; S03 father requests copies with only original; S04 fictional number 00-0000-0000. |
 
 ## Status Values
 
