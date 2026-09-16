@@ -1,0 +1,34 @@
+{
+  "file": "public/assets/lessons/L426/audio/char-u8f2a.m4a",
+  "sha256": "78bb1306d600c31697e7fa0b2e6b31759a3ac562d498a39dc73168a7e2136315",
+  "method": "Independent transcription without target text or prompt; orthography may be ambiguous for isolated syllables",
+  "transcript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 2.2699999809265137,
+    "text": "论",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1,
+        "text": "论",
+        "tokens": [
+          50364,
+          7422,
+          118,
+          50414
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.8677781224250793,
+        "compression_ratio": 0.27272728085517883,
+        "no_speech_prob": 0.173513263463974
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 3
+    }
+  }
+}
