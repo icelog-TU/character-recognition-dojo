@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L421 | 室 / normal lesson | claimed | Remote Production C | codex/l421-complete-package | L416, L417, L418, L419, L420; Release order through L420 then R051/R052 (after420, L391-L420) | 果、如、結、合、教 | curriculum-workflow/lesson-requests/L421.json; curriculum-workflow/generated/L421-generation-packet.md; curriculum-workflow/drafts/L421-draft.json | public/assets/lessons/L421/; curriculum-workflow/audio-inbox/L421/ | Teacher-approved handoff received 2026-09-16; base 182ace5f, formal L414; claim only, production in progress. L415 remains a Release-order prerequisite, not used vocabulary. |
 
 ## Status Values
 
