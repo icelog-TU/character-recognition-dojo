@@ -6260,7 +6260,6 @@ function SentencePracticePreview({
             <SentenceGameLine
               sentence={sentence}
               zhuyinMap={zhuyinMap}
-              targetChar={game.targetChar}
               activeIndex={activeGameCharIndex}
               blanks={answerRevealed ? answerFilledBlanks : filledBlanks}
               mistakeKey={mistakeFeedbackKey}
