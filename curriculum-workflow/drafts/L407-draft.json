@@ -1,0 +1,743 @@
+{
+  "id": "L407",
+  "order": 407,
+  "title": "減",
+  "newChars": [
+    "減"
+  ],
+  "zhuyin": {
+    "減": "ㄐㄧㄢˇ"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [
+    "L405",
+    "L406"
+  ],
+  "provisionalLearnedChars": [
+    "越",
+    "加"
+  ],
+  "teacherNotes": "Teacher-approved L407 減, ㄐㄧㄢˇ. Base b3fc7566e469d579f2173d79a8e51eb95554ff93; formal L001-L403,407 learned Han; allowed ceiling411. Dependencies L404弱,L405越,L406加; after405 R049/R050 milestone also blocks Release only. No extra provisional vocabulary. Stage2 three 減 plus three formal old-character distractors. Canonical Stage4 S01/S02/S03/S05/S04. G02 prefix 書越來越多家裡空間 stops before 減, suffix 少了. G03 exactly 減/加/拿. G04 一/床/被/子 single-Han cards. No readable text or number exceptions. S01 wind still outside, closed window and quiet curtain inside. S02 low stable book piles reduce room space. S03 exactly one central red cube, two removed red cubes off to side, one blue cube in mother hand ready to add; no other cubes. S04 brush touches paper with variable-width partial strokes, not legible words, teacher distinct from mother. S05 retain thin quilt underneath added thick quilt, two edges visible. Do not add 候 to learner text. Teacher subjective review post-main; shared production integration belongs to Release. Final main recheck 2632d2c399197f4d62e13e78faf1854ccce7f219: L404. Learner dependencies L405,L406. After405 milestone R049:awaiting Release,R050:awaiting Release. All five images style-lock and cast PASS against L058/refined/family anchors. No text or number exception. Ten complete OpenAI coral clips; processed by repo assets:audio, nine AI timing records with waveform-reviewed short spans. No speech cutting, extraction, splicing, or trailing-silence edits. Browser QA390x844 and820x1180 uses synthetic microphone and simulated prerequisites; not physical-phone recording or teacher subjective listening approval. Teacher subjective review post-main; Release owns shared state and full verify.",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "charAudio": {
+    "減": "/assets/lessons/L407/audio/char-u6e1b.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L407-S01",
+      "text": "關上窗，風聲就減弱了。",
+      "spokenText": "關上窗風聲就減弱了",
+      "displayLines": [
+        "關上窗，",
+        "風聲就",
+        "減弱了。"
+      ],
+      "focusChar": "減",
+      "imageNotes": "家中，主角小女孩剛把窗戶關好，手還放在窗把上，表情放鬆。窗外樹枝被風吹向一側，室內窗簾安靜垂下。表現關窗隔開風聲，不是外面的風停了；不要畫成颱風災害。",
+      "approved": true,
+      "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt, pink shoes; same face as family anchor.\nSCENE: 家中，主角小女孩剛把窗戶關好，手還放在窗把上，表情放鬆。窗外樹枝被風吹向一側，室內窗簾安靜垂下。表現關窗隔開風聲，不是外面的風停了；不要畫成颱風災害。",
+      "imageSrc": "/assets/lessons/L407/images/L407-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L407/audio/L407-S01.m4a",
+        "durationMs": 4131,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1940,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2060,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2260,
+            "endMs": 3140
+          },
+          {
+            "charIndex": 6,
+            "startMs": 3140,
+            "endMs": 3300
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3300,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3460,
+            "endMs": 3760
+          }
+        ]
+      }
+    },
+    {
+      "id": "L407-S02",
+      "text": "書越來越多，家裡空間減少了。",
+      "spokenText": "書越來越多家裡空間減少了",
+      "displayLines": [
+        "書越來越多，",
+        "家裡空間",
+        "減少了。"
+      ],
+      "focusChar": "減",
+      "imageNotes": "家中閱讀角落，書架已放滿，旁邊地板又整齊堆著幾疊書，原本可活動的空間變小。主角小女孩抱著幾本書，主角媽媽正在找地方放。書堆低矮穩固，不畫成危險雜物山。",
+      "approved": true,
+      "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt, pink shoes; same face as family anchor. Fixed mother: shoulder-length dark hair, cream cardigan, blue trousers, gentle natural adult face matching family anchors.\nSCENE: 家中閱讀角落，書架已放滿，旁邊地板又整齊堆著幾疊書，原本可活動的空間變小。主角小女孩抱著幾本書，主角媽媽正在找地方放。書堆低矮穩固，不畫成危險雜物山。",
+      "imageSrc": "/assets/lessons/L407/images/L407-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L407/audio/L407-S02.m4a",
+        "durationMs": 4574,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 500
+          },
+          {
+            "charIndex": 1,
+            "startMs": 500,
+            "endMs": 960
+          },
+          {
+            "charIndex": 2,
+            "startMs": 960,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1200,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1420,
+            "endMs": 1780
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2460,
+            "endMs": 2560
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2560,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2780,
+            "endMs": 3100
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3100,
+            "endMs": 3360
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3360,
+            "endMs": 3740
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3740,
+            "endMs": 3980
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3980,
+            "endMs": 4180
+          }
+        ]
+      }
+    },
+    {
+      "id": "L407-S03",
+      "text": "三減二，再加一，算算看。",
+      "spokenText": "三減二再加一算算看",
+      "displayLines": [
+        "三減二，",
+        "再加一，",
+        "算算看。"
+      ],
+      "focusChar": "減",
+      "imageNotes": "家中桌邊，主角媽媽陪小女孩用積木算數。中央剩下一塊紅色積木，旁邊放著剛移走的兩塊紅色積木；媽媽正拿一塊藍色積木，準備加到中央。小女孩看著積木思考。數量與空間分組必須準確，不另加裝飾積木，不需要算式或數字。",
+      "approved": true,
+      "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt, pink shoes; same face as family anchor. Fixed mother: shoulder-length dark hair, cream cardigan, blue trousers, gentle natural adult face matching family anchors.\nSCENE: 家中桌邊，主角媽媽陪小女孩用積木算數。中央剩下一塊紅色積木，旁邊放著剛移走的兩塊紅色積木；媽媽正拿一塊藍色積木，準備加到中央。小女孩看著積木思考。數量與空間分組必須準確，不另加裝飾積木，不需要算式或數字。",
+      "imageSrc": "/assets/lessons/L407/images/L407-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L407/audio/L407-S03.m4a",
+        "durationMs": 3860,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 540
+          },
+          {
+            "charIndex": 1,
+            "startMs": 540,
+            "endMs": 820
+          },
+          {
+            "charIndex": 2,
+            "startMs": 820,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1500,
+            "endMs": 1740
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1740,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2020,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2460,
+            "endMs": 2840
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2840,
+            "endMs": 3160
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3160,
+            "endMs": 3460
+          }
+        ]
+      }
+    },
+    {
+      "id": "L407-S04",
+      "text": "寫字時，下筆要有強有弱。",
+      "spokenText": "寫字時下筆要有強有弱",
+      "displayLines": [
+        "寫字時，",
+        "下筆要",
+        "有強有弱。"
+      ],
+      "focusChar": "強",
+      "imageNotes": "主角小女孩正在用毛筆寫字，老師在旁指導。近景呈現毛筆筆尖接觸紙面，以及粗細不同的墨色筆畫。紙上只露出局部筆畫，不要求生成完整可讀漢字；重點是下筆輕重造成筆畫變化。",
+      "approved": true,
+      "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink cardigan, cream shirt, navy skirt, pink shoes; same face as family anchor. Teacher NOT mother: tidy tied-back dark hair, oval glasses, muted teal blouse and dark skirt, calm instructional pose, distinct facial shape and silhouette from shoulder-length-haired mother.\nSCENE: 主角小女孩正在用毛筆寫字，老師在旁指導。近景呈現毛筆筆尖接觸紙面，以及粗細不同的墨色筆畫。紙上只露出局部筆畫，不要求生成完整可讀漢字；重點是下筆輕重造成筆畫變化。",
+      "imageSrc": "/assets/lessons/L407/images/L407-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L407/audio/L407-S04.m4a",
+        "durationMs": 3799,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 480
+          },
+          {
+            "charIndex": 1,
+            "startMs": 480,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 700,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1240,
+            "endMs": 1640
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1640,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1800,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2240,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2600,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2780,
+            "endMs": 3160
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3160,
+            "endMs": 3260
+          }
+        ]
+      }
+    },
+    {
+      "id": "L407-S05",
+      "text": "天冷了，睡前多加一床被子。",
+      "spokenText": "天冷了睡前多加一床被子",
+      "displayLines": [
+        "天冷了，",
+        "睡前多加",
+        "一床被子。"
+      ],
+      "focusChar": "加",
+      "imageNotes": "晚上，主角小女孩穿睡衣坐在床上，主角媽媽替她加被子。床上已有一床薄被，媽媽把另一床較厚的被子鋪上去，兩床被子的邊緣清楚可辨。呈現多加一床，不是換掉原本的被子。",
+      "approved": true,
+      "imagePrompt": "ONE square finished illustration. L058 full sheet is STYLE ONLY: rich fine pencil-and-watercolor linework, natural warm light, bright colors, detailed clean environment, stable natural preschool faces/proportions. Refined L115/L118/L119/L128 and family L154/L162/L163 anchor identity. No flat cartoon, generic simplistic watercolor, anime, 3D or photorealism. No readable letters, Han text, numbers, logos or watermarks.\nCAST: Fixed preschool protagonist girl: short dark bob, pink hairclip, pink pajamas; same face as family anchor. Fixed mother: shoulder-length dark hair, cream cardigan, blue trousers, gentle natural adult face matching family anchors.\nSCENE: 晚上，主角小女孩穿睡衣坐在床上，主角媽媽替她加被子。床上已有一床薄被，媽媽把另一床較厚的被子鋪上去，兩床被子的邊緣清楚可辨。呈現多加一床，不是換掉原本的被子。",
+      "imageSrc": "/assets/lessons/L407/images/L407-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L407/audio/L407-S05.m4a",
+        "durationMs": 5313,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 660
+          },
+          {
+            "charIndex": 2,
+            "startMs": 660,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1360,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1580,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1900,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2260,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2440,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2700,
+            "endMs": 2900
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2900,
+            "endMs": 3140
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3140,
+            "endMs": 3320
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L407-G01",
+      "type": "find-character",
+      "sentenceId": "L407-S01",
+      "targetChar": "減",
+      "targetCharIndex": 6,
+      "prompt": "在句子裡找到減，點一下。"
+    },
+    {
+      "id": "L407-G02",
+      "type": "teach-character",
+      "sentenceId": "L407-S02",
+      "targetChar": "減",
+      "targetCharIndex": 9,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "書越來越多家裡空間",
+        "suffixText": "少了",
+        "prefixSrc": "/assets/lessons/L407/audio/L407-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L407/audio/L407-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L407/audio/L407-G02-prefix.m4a",
+          "durationMs": 4256,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 460
+            },
+            {
+              "charIndex": 1,
+              "startMs": 690,
+              "endMs": 940
+            },
+            {
+              "charIndex": 2,
+              "startMs": 940,
+              "endMs": 1180
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1180,
+              "endMs": 1380
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1380,
+              "endMs": 1720
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2080,
+              "endMs": 2380
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2380,
+              "endMs": 2580
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2580,
+              "endMs": 2920
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2920,
+              "endMs": 3160
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L407/audio/L407-G02-suffix.m4a",
+          "durationMs": 3077,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 600
+            },
+            {
+              "charIndex": 1,
+              "startMs": 600,
+              "endMs": 920
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L407-G03",
+      "type": "missing-character",
+      "sentenceId": "L407-S03",
+      "targetChar": "減",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "prompt": "補上不見的字。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "減",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "加",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "拿",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L407-G04",
+      "type": "partial-order",
+      "sentenceId": "L407-S05",
+      "targetChar": "加",
+      "targetCharIndex": 6,
+      "missingIndexes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "prompt": "把句子排回正確順序。",
+      "options": [
+        {
+          "id": "card-bei",
+          "text": "被",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-yi",
+          "text": "一",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-zi",
+          "text": "子",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-chuang",
+          "text": "床",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L407-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L407-S04",
+      "targetChar": "強",
+      "targetCharIndex": 7,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "寫字時，下筆要有強有弱。",
+          "correct": true,
+          "sentenceId": "L407-S04",
+          "audioSrc": "/assets/lessons/L407/audio/L407-S04.m4a",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-S04.m4a",
+            "durationMs": 3799,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1240,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1800,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2600,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2780,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3160,
+                "endMs": 3260
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "寫字時，下筆要有大有小。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L407/audio/L407-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-G05-wrong-one.m4a",
+            "durationMs": 4467,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1940,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2020,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2540,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2840,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3180,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3500,
+                "endMs": 3760
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "畫圖時，下筆要有強有弱。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L407/audio/L407-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-G05-wrong-two.m4a",
+            "durationMs": 4216,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1720,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1800,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2640,
+                "endMs": 3000
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3000,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3200,
+                "endMs": 3540
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3540,
+                "endMs": 3820
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,870 @@
+{
+  "id": "L407",
+  "kind": "lesson",
+  "order": 407,
+  "title": "減",
+  "newChars": [
+    "減"
+  ],
+  "zhuyin": {
+    "減": "ㄐㄧㄢˇ"
+  },
+  "targetSentenceCount": 5,
+  "dependsOnLessons": [
+    "L405",
+    "L406"
+  ],
+  "provisionalLearnedChars": [
+    "越",
+    "加"
+  ],
+  "teacherNotes": "Teacher-approved L407 減, ㄐㄧㄢˇ. Base b3fc7566e469d579f2173d79a8e51eb95554ff93; formal L001-L403,407 learned Han; allowed ceiling411. Dependencies L404弱,L405越,L406加; after405 R049/R050 milestone also blocks Release only. No extra provisional vocabulary. Stage2 three 減 plus three formal old-character distractors. Canonical Stage4 S01/S02/S03/S05/S04. G02 prefix 書越來越多家裡空間 stops before 減, suffix 少了. G03 exactly 減/加/拿. G04 一/床/被/子 single-Han cards. No readable text or number exceptions. S01 wind still outside, closed window and quiet curtain inside. S02 low stable book piles reduce room space. S03 exactly one central red cube, two removed red cubes off to side, one blue cube in mother hand ready to add; no other cubes. S04 brush touches paper with variable-width partial strokes, not legible words, teacher distinct from mother. S05 retain thin quilt underneath added thick quilt, two edges visible. Do not add 候 to learner text. Teacher subjective review post-main; shared production integration belongs to Release. Final main recheck 2632d2c399197f4d62e13e78faf1854ccce7f219: L404. Learner dependencies L405,L406. After405 milestone R049:awaiting Release,R050:awaiting Release. All five images style-lock and cast PASS against L058/refined/family anchors. No text or number exception. Ten complete OpenAI coral clips; processed by repo assets:audio, nine AI timing records with waveform-reviewed short spans. No speech cutting, extraction, splicing, or trailing-silence edits. Browser QA390x844 and820x1180 uses synthetic microphone and simulated prerequisites; not physical-phone recording or teacher subjective listening approval. Teacher subjective review post-main; Release owns shared state and full verify.",
+  "generationConstraints": {
+    "allowedChars": [
+      "一",
+      "二",
+      "三",
+      "人",
+      "個",
+      "大",
+      "的",
+      "小",
+      "手",
+      "我",
+      "有",
+      "山",
+      "上",
+      "下",
+      "你",
+      "水",
+      "在",
+      "高",
+      "很",
+      "家",
+      "和",
+      "隻",
+      "鳥",
+      "孩",
+      "指",
+      "看",
+      "女",
+      "飛",
+      "男",
+      "門",
+      "前",
+      "後",
+      "也",
+      "是",
+      "不",
+      "到",
+      "走",
+      "他",
+      "沒",
+      "裡",
+      "兩",
+      "狗",
+      "都",
+      "爸",
+      "媽",
+      "愛",
+      "書",
+      "可",
+      "會",
+      "這",
+      "吃",
+      "做",
+      "好",
+      "樣",
+      "要",
+      "更",
+      "邊",
+      "多",
+      "少",
+      "比",
+      "來",
+      "起",
+      "去",
+      "坐",
+      "站",
+      "開",
+      "左",
+      "著",
+      "拿",
+      "包",
+      "花",
+      "朵",
+      "了",
+      "畫",
+      "出",
+      "學",
+      "路",
+      "誰",
+      "校",
+      "問",
+      "找",
+      "同",
+      "帶",
+      "筆",
+      "借",
+      "那",
+      "本",
+      "給",
+      "紙",
+      "心",
+      "放",
+      "把",
+      "桌",
+      "子",
+      "盒",
+      "掉",
+      "壞",
+      "眼",
+      "用",
+      "鏡",
+      "鼻",
+      "臉",
+      "紅",
+      "圓",
+      "太",
+      "難",
+      "得",
+      "過",
+      "分",
+      "幾",
+      "點",
+      "玩",
+      "打",
+      "球",
+      "棒",
+      "頭",
+      "帽",
+      "草",
+      "地",
+      "面",
+      "外",
+      "空",
+      "天",
+      "雨",
+      "雲",
+      "黑",
+      "白",
+      "棋",
+      "鞋",
+      "穿",
+      "戴",
+      "衣",
+      "脫",
+      "氣",
+      "套",
+      "熱",
+      "冷",
+      "喝",
+      "飯",
+      "菜",
+      "老",
+      "卻",
+      "麼",
+      "什",
+      "為",
+      "以",
+      "怎",
+      "所",
+      "房",
+      "間",
+      "時",
+      "還",
+      "燈",
+      "關",
+      "窗",
+      "車",
+      "等",
+      "再",
+      "風",
+      "吹",
+      "樹",
+      "動",
+      "葉",
+      "綠",
+      "滿",
+      "掃",
+      "擦",
+      "先",
+      "洗",
+      "又",
+      "髒",
+      "亂",
+      "回",
+      "就",
+      "快",
+      "事",
+      "跑",
+      "馬",
+      "停",
+      "叫",
+      "聲",
+      "聽",
+      "見",
+      "說",
+      "師",
+      "話",
+      "課",
+      "像",
+      "想",
+      "真",
+      "力",
+      "能",
+      "火",
+      "發",
+      "電",
+      "生",
+      "明",
+      "光",
+      "亮",
+      "陽",
+      "月",
+      "影",
+      "長",
+      "星",
+      "行",
+      "道",
+      "流",
+      "河",
+      "從",
+      "進",
+      "早",
+      "晚",
+      "海",
+      "船",
+      "魚",
+      "游",
+      "泳",
+      "池",
+      "身",
+      "濕",
+      "乾",
+      "服",
+      "褲",
+      "換",
+      "改",
+      "錯",
+      "知",
+      "認",
+      "新",
+      "舊",
+      "半",
+      "只",
+      "剩",
+      "夠",
+      "錢",
+      "買",
+      "貴",
+      "賣",
+      "店",
+      "場",
+      "市",
+      "夜",
+      "具",
+      "工",
+      "作",
+      "忙",
+      "幫",
+      "急",
+      "腳",
+      "步",
+      "跳",
+      "床",
+      "搬",
+      "重",
+      "沙",
+      "張",
+      "椅",
+      "累",
+      "死",
+      "睡",
+      "倒",
+      "病",
+      "假",
+      "才",
+      "剛",
+      "裝",
+      "養",
+      "休",
+      "息",
+      "久",
+      "體",
+      "神",
+      "精",
+      "變",
+      "差",
+      "緊",
+      "卡",
+      "住",
+      "蓋",
+      "橋",
+      "座",
+      "木",
+      "積",
+      "堆",
+      "洞",
+      "破",
+      "口",
+      "傷",
+      "皮",
+      "痛",
+      "受",
+      "忍",
+      "耐",
+      "敢",
+      "當",
+      "然",
+      "怕",
+      "哭",
+      "被",
+      "嚇",
+      "罵",
+      "對",
+      "爬",
+      "蟲",
+      "條",
+      "泥",
+      "土",
+      "種",
+      "澆",
+      "照",
+      "顧",
+      "忘",
+      "每",
+      "次",
+      "記",
+      "完",
+      "收",
+      "彩",
+      "色",
+      "粉",
+      "哪",
+      "些",
+      "最",
+      "西",
+      "東",
+      "方",
+      "圖",
+      "向",
+      "線",
+      "直",
+      "轉",
+      "右",
+      "角",
+      "落",
+      "因",
+      "原",
+      "別",
+      "特",
+      "處",
+      "理",
+      "整",
+      "齊",
+      "全",
+      "今",
+      "們",
+      "年",
+      "跟",
+      "常",
+      "請",
+      "嗎",
+      "客",
+      "讓",
+      "廳",
+      "餐",
+      "位",
+      "正",
+      "排",
+      "雞",
+      "公",
+      "園",
+      "物",
+      "怪",
+      "奇",
+      "驚",
+      "喜",
+      "歡",
+      "笑",
+      "但",
+      "吧",
+      "謝",
+      "感",
+      "情",
+      "朋",
+      "友",
+      "親",
+      "交",
+      "通",
+      "往",
+      "經",
+      "已",
+      "近",
+      "接",
+      "送",
+      "連",
+      "傳",
+      "相",
+      "信",
+      "寫",
+      "字",
+      "名",
+      "第",
+      "念",
+      "號",
+      "數",
+      "報",
+      "頁",
+      "碼",
+      "翻",
+      "印",
+      "單",
+      "雙",
+      "選",
+      "或",
+      "者",
+      "勇",
+      "強",
+      "算",
+      "弱",
+      "越",
+      "加",
+      "減"
+    ],
+    "mustIncludeCharsAcrossLesson": [
+      "減",
+      "加",
+      "越",
+      "弱",
+      "算",
+      "強"
+    ],
+    "maxHanCharactersPerSentence": 12
+  },
+  "approvedSentences": [
+    {
+      "id": "L407-S01",
+      "text": "關上窗，風聲就減弱了。",
+      "spokenText": "關上窗風聲就減弱了",
+      "displayLines": [
+        "關上窗，",
+        "風聲就",
+        "減弱了。"
+      ],
+      "focusChar": "減",
+      "imageNotes": "家中，主角小女孩剛把窗戶關好，手還放在窗把上，表情放鬆。窗外樹枝被風吹向一側，室內窗簾安靜垂下。表現關窗隔開風聲，不是外面的風停了；不要畫成颱風災害。",
+      "approved": true
+    },
+    {
+      "id": "L407-S02",
+      "text": "書越來越多，家裡空間減少了。",
+      "spokenText": "書越來越多家裡空間減少了",
+      "displayLines": [
+        "書越來越多，",
+        "家裡空間",
+        "減少了。"
+      ],
+      "focusChar": "減",
+      "imageNotes": "家中閱讀角落，書架已放滿，旁邊地板又整齊堆著幾疊書，原本可活動的空間變小。主角小女孩抱著幾本書，主角媽媽正在找地方放。書堆低矮穩固，不畫成危險雜物山。",
+      "approved": true
+    },
+    {
+      "id": "L407-S03",
+      "text": "三減二，再加一，算算看。",
+      "spokenText": "三減二再加一算算看",
+      "displayLines": [
+        "三減二，",
+        "再加一，",
+        "算算看。"
+      ],
+      "focusChar": "減",
+      "imageNotes": "家中桌邊，主角媽媽陪小女孩用積木算數。中央剩下一塊紅色積木，旁邊放著剛移走的兩塊紅色積木；媽媽正拿一塊藍色積木，準備加到中央。小女孩看著積木思考。數量與空間分組必須準確，不另加裝飾積木，不需要算式或數字。",
+      "approved": true
+    },
+    {
+      "id": "L407-S04",
+      "text": "寫字時，下筆要有強有弱。",
+      "spokenText": "寫字時下筆要有強有弱",
+      "displayLines": [
+        "寫字時，",
+        "下筆要",
+        "有強有弱。"
+      ],
+      "focusChar": "強",
+      "imageNotes": "主角小女孩正在用毛筆寫字，老師在旁指導。近景呈現毛筆筆尖接觸紙面，以及粗細不同的墨色筆畫。紙上只露出局部筆畫，不要求生成完整可讀漢字；重點是下筆輕重造成筆畫變化。",
+      "approved": true
+    },
+    {
+      "id": "L407-S05",
+      "text": "天冷了，睡前多加一床被子。",
+      "spokenText": "天冷了睡前多加一床被子",
+      "displayLines": [
+        "天冷了，",
+        "睡前多加",
+        "一床被子。"
+      ],
+      "focusChar": "加",
+      "imageNotes": "晚上，主角小女孩穿睡衣坐在床上，主角媽媽替她加被子。床上已有一床薄被，媽媽把另一床較厚的被子鋪上去，兩床被子的邊緣清楚可辨。呈現多加一床，不是換掉原本的被子。",
+      "approved": true
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L407-G01",
+      "type": "find-character",
+      "sentenceId": "L407-S01",
+      "targetChar": "減",
+      "targetCharIndex": 6,
+      "prompt": "在句子裡找到減，點一下。"
+    },
+    {
+      "id": "L407-G02",
+      "type": "teach-character",
+      "sentenceId": "L407-S02",
+      "targetChar": "減",
+      "targetCharIndex": 9,
+      "prompt": "請你幫我念。",
+      "teachAudio": {
+        "prefixText": "書越來越多家裡空間",
+        "suffixText": "少了",
+        "prefixSrc": "/assets/lessons/L407/audio/L407-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L407/audio/L407-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L407/audio/L407-G02-prefix.m4a",
+          "durationMs": 4256,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 460
+            },
+            {
+              "charIndex": 1,
+              "startMs": 690,
+              "endMs": 940
+            },
+            {
+              "charIndex": 2,
+              "startMs": 940,
+              "endMs": 1180
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1180,
+              "endMs": 1380
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1380,
+              "endMs": 1720
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2080,
+              "endMs": 2380
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2380,
+              "endMs": 2580
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2580,
+              "endMs": 2920
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2920,
+              "endMs": 3160
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L407/audio/L407-G02-suffix.m4a",
+          "durationMs": 3077,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 600
+            },
+            {
+              "charIndex": 1,
+              "startMs": 600,
+              "endMs": 920
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L407-G03",
+      "type": "missing-character",
+      "sentenceId": "L407-S03",
+      "targetChar": "減",
+      "targetCharIndex": 1,
+      "missingIndexes": [
+        1
+      ],
+      "prompt": "補上不見的字。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "減",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "加",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "拿",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L407-G04",
+      "type": "partial-order",
+      "sentenceId": "L407-S05",
+      "targetChar": "加",
+      "targetCharIndex": 6,
+      "missingIndexes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "prompt": "把句子排回正確順序。",
+      "options": [
+        {
+          "id": "card-bei",
+          "text": "被",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-yi",
+          "text": "一",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-zi",
+          "text": "子",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-chuang",
+          "text": "床",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L407-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L407-S04",
+      "targetChar": "強",
+      "targetCharIndex": 7,
+      "prompt": "聽一聽，選出讀對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "寫字時，下筆要有強有弱。",
+          "correct": true,
+          "sentenceId": "L407-S04",
+          "audioSrc": "/assets/lessons/L407/audio/L407-S04.m4a",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-S04.m4a",
+            "durationMs": 3799,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1240
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1240,
+                "endMs": 1640
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1640,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1800,
+                "endMs": 2240
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2240,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2600,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2780,
+                "endMs": 3160
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3160,
+                "endMs": 3260
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "寫字時，下筆要有大有小。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L407/audio/L407-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-G05-wrong-one.m4a",
+            "durationMs": 4467,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 460
+              },
+              {
+                "charIndex": 1,
+                "startMs": 460,
+                "endMs": 640
+              },
+              {
+                "charIndex": 2,
+                "startMs": 640,
+                "endMs": 1400
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1940,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2020,
+                "endMs": 2100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2100,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2540,
+                "endMs": 2840
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2840,
+                "endMs": 3180
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3180,
+                "endMs": 3500
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3500,
+                "endMs": 3760
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "畫圖時，下筆要有強有弱。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L407/audio/L407-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L407/audio/L407-G05-wrong-two.m4a",
+            "durationMs": 4216,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 340
+              },
+              {
+                "charIndex": 1,
+                "startMs": 340,
+                "endMs": 600
+              },
+              {
+                "charIndex": 2,
+                "startMs": 600,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1720,
+                "endMs": 1800
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1800,
+                "endMs": 1960
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1960,
+                "endMs": 2640
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2640,
+                "endMs": 3000
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3000,
+                "endMs": 3200
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3200,
+                "endMs": 3540
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3540,
+                "endMs": 3820
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "packageStatus": "dependency-blocked-asset-complete"
+}
