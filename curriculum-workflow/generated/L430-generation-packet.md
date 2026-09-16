@@ -1164,3 +1164,9 @@ Built-in imagegen used with all L058-S01–S05 style references, refined L115-S0
 ```
 
 Release owns integration of all predecessors through L429, R051/R052 after L420 covering L391–L420, production JSON, planner, ledger and deployment.
+
+## Browser QA evidence and limitations
+
+Local isolated app fixture (base prerequisites marked completed in memory and provisional zhuyin supplied in fixture only). Stage 1 playback completed; Stage 2 verified six cards: three 主 and three old-character distractors. Remote browser actions do not expose audible computer output or provide a physical-phone microphone recording channel: human continuous listening, syllable-by-syllable audiovisual synchronization and phone recording acceptance remain unperformed. Teacher subjective review stays post-merge. Browser UI additionally verified all five Stage 3 sentence playbacks reach 句子都聽完了, G01 and G03 correct answers show 下一題, G02 stops and asks to hold the target for recording (recording skipped), G04 cards shuffled as 洗 頭 己 自 and 自己洗頭 order succeeds, G05 presents three replay/choice controls. No physical microphone test or reward-flow acceptance.
+
+This records partial desktop browser checks and unperformed human/phone acceptance; it is not a manual playback PASS.
