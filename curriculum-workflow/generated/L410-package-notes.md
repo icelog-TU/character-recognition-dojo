@@ -42,10 +42,12 @@ Local isolated Vite fixture at 127.0.0.1:5180; curriculum supplied in memory, sh
 ## Verification
 Startup tools:check, ai:check, curriculum:audit-state passed. Packet generated through curriculum:packet before assets.
 Owned draft adapter executes unchanged repository generation/process/AI alignment/image optimization/production validator/format audit scripts without writing shared production JSON. L410-sync.cjs performs decoding/volume/timing metadata sync; L410-audit.cjs checks final approved content and options.
-Final remote package-intake must pass before handoff. Full shared-state verify is skipped because this branch intentionally contains no production JSON integration; Release owns integration and verify.
+Remote package-intake PASS: npm run curriculum:package-intake -- --unit L410 --ref origin/codex/l410-complete-package (five images, ten audio files, five canonical games; no blocking package-status defects). Full shared-state verify is skipped because this branch intentionally contains no production JSON integration; Release owns integration and verify.
 
 ## Sizes
 Five images: 798408 bytes; ten audio files: 369770 bytes; total: 1168178 bytes. Every image below 250 KiB; total below 2.0 MB.
 
 
 Final reward UI at phone width: red disabled 沒有下一課 (L410 is last fixture lesson), white 回首頁休息 and repeat button visible. No L411 fixture was fabricated. Browser viewport reset and QA tab closed.
+
+Validation outcome: global npm run validate:production PASS (baseline only); isolated L410 production validator and format audit PASS (0 warnings); final approved-content/mechanical audit PASS; diff check cleaned. No material application source was changed.
