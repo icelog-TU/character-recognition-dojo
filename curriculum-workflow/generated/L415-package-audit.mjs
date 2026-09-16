@@ -27,7 +27,8 @@ assert.deepEqual(request.dependsOnLessons,draft.dependsOnLessons);
 assert.deepEqual(request.provisionalLearnedChars,draft.provisionalLearnedChars);
 for(const [i,s] of draft.sentences.entries()){
   const approved=request.approvedSentences[i];
-  for(const key of ["text","spokenText","focusChar","displayLines","imageNotes"]){
+  assert.equal(typeof s.imagePrompt,"string");assert(s.imagePrompt.trim().length>0);
+  for(const key of ["text","spokenText","focusChar","displayLines","imageNotes","imagePrompt"]){
     assert.deepEqual(s[key],approved[key]);assert.deepEqual(s[key],packetSentences[i][key]);
   }
   assert.equal(s.spokenText,han(s.text).join(""));
