@@ -10,6 +10,8 @@ The remaining Release dependencies are ordinary lessons L439–L443. They are ex
 
 Every final image is a 1024×1024 WebP below the 250 KiB warning threshold and 400 KiB hard limit. The complete set was viewed together against L058 style guidance. Exact generation identifiers are recorded in `L444-image-provenance.json`. No final image contains readable text, numerals, logos or a watermark.
 
+Package Rescue correction on 2026-09-18: source package `c41cdbec1d8d3f90be8bcadf2bf325aed4308aec` contained five `1254×1254` WebP files even though the original QA text said 1024×1024. Rescue resized the five approved images proportionally to exactly `1024×1024`, stripped metadata, and re-encoded at WebP quality 82. A before/after contact-sheet inspection confirmed that composition, cast, objects, actions and sentence meaning are unchanged. Original and final dimensions, byte sizes and SHA-256 values are recorded in `L444-rescue-image-audit.json`.
+
 - S01 style-lock PASS; cast PASS. The present-day father/daughter conversation remains primary; the future robot contest is isolated in a wordless imagination bubble with two non-weaponized wheeled robots and two generic contestants.
 - S02 style-lock PASS; cast PASS. The intact washer has restrained vibration marks; the fixed father listens with a puzzled reaction while the protagonist observes safely. There is no smoke, spark, monster or dismantling.
 - S03 style-lock PASS; cast PASS. The fixed protagonist presses the fan base control after use while the fixed mother reminds her. The scene does not show plug handling.
@@ -42,3 +44,5 @@ Physical microphone capture, the recording bell and child-voice stitched replay 
 ## Validation
 
 Startup `tools:check`, `ai:check` and `curriculum:audit-state` passed on the correct source branch. Lesson-local package audit, production asset validation, curriculum validation, lint and production build pass; repository-wide validators retain only pre-existing warnings. Final package media is about 1.18 MiB. Asset commit `819f1a14` was pushed and pushed-ref package intake passed with 5 images, 10 audio files and the canonical five Stage 4 game types. A final fetch found newer main commits that only repair earlier lesson assets; the formal production boundary remains L438 and L439–L443 remain the Release blockers.
+
+Package Rescue reruns the strict asset audit and strict package intake against the immutable rescue commit before handoff. Release must integrate from the rescue SHA rather than source package `c41cdbec`.
