@@ -3431,7 +3431,14 @@ Teacher-approved records below are authoritative for this package. Production st
     "reviewedAssetCommit": "571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec",
     "scope": "5 sentence cards, charAudio, G02 prefix and suffix, and all 3 G05 options; 11 playback controls total",
     "result": "PASS: page loaded 5 sentence cards and 6 other audio entries with zero repair flags; every control entered playing state and returned to play state through media ended",
-    "timingNote": "Sentence and G02 charTimings are stored and mechanically checked; browser playback confirms every final referenced media file loads and ends."
+    "timingNote": "Sentence and G02 charTimings are stored and mechanically checked; browser playback confirms every final referenced media file loads and ends.",
+    "teacherApproval": {
+      "status": "PASS",
+      "reviewedCommit": "82945397a186deb1ab056e6304529aaa05a560da",
+      "reviewedAt": "2026-09-17",
+      "scope": "All 5 final lesson images and all 10 final lesson audio files",
+      "teacherStatement": "447人工审核图档音档都OK。"
+    }
   }
 }
 ```
@@ -3447,3 +3454,5 @@ Teacher-approved records below are authoritative for this package. Production st
 - Five final WebPs passed per-image style/cast/semantic review. S04 first draft was rejected for photorealistic drift and regenerated; rejected draft is not included.
 - Chrome browser preview QA PASS at `571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec`: 5 sentence cards, 6 other audio entries, zero repair flags, and all 11 controls entered playing state then returned after media ended.
 - Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L447&ref=571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec
+
+- Teacher manual image/audio review: PASS on `82945397a186deb1ab056e6304529aaa05a560da` (2026-09-17); all 5 images and all 10 audio files approved.
