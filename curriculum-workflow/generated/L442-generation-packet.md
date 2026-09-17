@@ -62,3 +62,6 @@ After Release merges and deploys,teacher review entry: https://icelog-tu.github.
 ## Teacher-requested audio repair
 
 L442-S03 was regenerated so both characters in 爸爸 are clearly ba4. L442-G05-O3 (`L442-G05-wrong-two.m4a`) was regenerated so 隊 is clearly dui4. Both final clips passed actual-audio gpt-audio-1.5 checks, exact-text Whisper alignment, fresh 80-900ms char timing checks, codec/format inspection and final LessonPanel playback. Earlier package asset/checkpoint SHAs are superseded by the repair commit recorded below.
+
+- Repair asset commit: `ccfc321ce3f434b272c76fa81248169e550762e0`, pushed to `origin/codex/l442-complete-package`.
+- Strict package intake after repair: PASS; 5 images, 10 audio files, canonical five Stage 4 game types, no blocking package-status defects.
