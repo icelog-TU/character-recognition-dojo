@@ -27,7 +27,8 @@
     "strictFormatsLessonLocal": "PASS, zero warnings",
     "audioDecode": "PASS all 10",
     "imageStyleCast": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
-    "browserQA": "Local isolated Vite fixture; base prerequisite completion and provisional sentence zhuyin were supplied only in memory. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 運 cards plus 教、叫、練 distractors; all three 運 cards were selected and the UI displayed 全部找到了. Stage 3 played all five sentence buttons through ended, re-enabled each button, displayed 句子都聽完了 and passed. At 390×844, G01 運 was selected correctly; G02 displayed the approved S02 with 運 at the correct index and the recording prompt; G03 運 was selected correctly; G04 人來修理 was ordered correctly; all three G05 reader buttons were activated. Browser inspection caught the base-data 燈 display ㄉㄥㄥ and the final record now supplies zhuyinOverrides index 4 = ㄉㄥ. Because L439 is not yet integrated, 練 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser tool has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, phone recording/ding/post-record sequence, final reward walkthrough and teacher subjective review remain unperformed."
+    "browserQA": "Local isolated Vite fixture; base prerequisite completion and provisional sentence zhuyin were supplied only in memory. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 運 cards plus 教、叫、練 distractors; all three 運 cards were selected and the UI displayed 全部找到了. Stage 3 played all five sentence buttons through ended, re-enabled each button, displayed 句子都聽完了 and passed. At 390×844, G01 運 was selected correctly; G02 displayed the approved S02 with 運 at the correct index and the recording prompt; G03 運 was selected correctly; G04 人來修理 was ordered correctly; all three G05 reader buttons were activated. Browser inspection caught the base-data 燈 display ㄉㄥㄥ and the final record now supplies zhuyinOverrides index 4 = ㄉㄥ. Because L439 is not yet integrated, 練 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser tool has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, phone recording/ding/post-record sequence, final reward walkthrough and teacher subjective review remain unperformed.",
+    "packageIntake": "PASS --strict on origin/codex/l440-complete-package at c56bf639f5f8bea94ec25c3a3e76e22ffea1bac3; 5 images, 10 audio, zero blocking defects"
   },
   "pronunciation": {
     "kind": "AI auditory review, not human QA; targeted final reviews replace earlier provisional results",
@@ -241,5 +242,6 @@
       "maxVolumeDb": -2,
       "meanVolumeDb": -16.6
     }
-  ]
+  ],
+  "assetCommitSha": "c56bf639f5f8bea94ec25c3a3e76e22ffea1bac3"
 }
