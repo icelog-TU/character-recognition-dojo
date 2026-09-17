@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "review": "3/11 audio-review pending",
+  "timedRecords": 10,
+  "uniqueAudioFiles": 10,
+  "g05SpreadDb": 1.5,
+  "audio": [
+    {
+      "src": "/assets/lessons/L440/audio/L440-S01.m4a",
+      "sha256": "70a7fa613b308741f114f5c949f3804ca45baf064a5abbd16fef972380f1e4c8",
+      "bytes": 40982,
+      "durationMs": 3360,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.5,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L440/audio/L440-S02.m4a",
+      "sha256": "9e9bfffa9de9af73f084044ffb1ecfa554f711cc0d3d23345273dcef1603805f",
+      "bytes": 64064,
+      "durationMs": 5250,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.5,
+      "maxDb": -2.9,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L440/audio/L440-S03.m4a",
+      "sha256": "2e5469fd914d6bebd05be8b21ec0bb79197863d363afa15d72bd6ddfc9246c47",
+      "bytes": 50882,
+      "durationMs": 4110,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -17.6,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L440/audio/L440-S04.m4a",
+      "sha256": "8dd9e25c10ea6c1f858b51b7f019477a18e68a099aeeab606e40e1fd35ddf488",
+      "bytes": 49370,
+      "durationMs": 3860,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -17,
+      "maxDb": -3.2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L440/audio/L440-S05.m4a",
+      "sha256": "f8974995c54e76ef621d3cddf47a3d493ff891a580cd2ea9fabf7b640d095c50",
+      "bytes": 45020,
+      "durationMs": 4866,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -19.7,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L440/audio/char-u904b.m4a",
+      "sha256": "b2a4220381507b44ae5ab6949c1244f4b673630dd78229fbaba4812eabf41868",
+      "bytes": 24340,
+      "durationMs": 2275,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -19.4,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L440/audio/L440-G02-prefix.m4a",
+      "sha256": "602a91fa8beca6ca4ebdb3f678cad401960e72ad57f2ad65e9b6a7ed876b5271",
+      "bytes": 16354,
+      "durationMs": 1250,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -16.2,
+      "maxDb": -4.1,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L440/audio/L440-G02-suffix.m4a",
+      "sha256": "c409286644ebe6dc9f8d3edd375944a9b6ef4fc80cfb8cca21157159c86059cd",
+      "bytes": 55177,
+      "durationMs": 4420,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -19.4,
+      "maxDb": -2.3,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L440/audio/L440-G05-wrong-one.m4a",
+      "sha256": "1a391a6b3cf06d8927573256156ecb7a92b4b00ad13a3979ddb23973cf99fbb4",
+      "bytes": 38952,
+      "durationMs": 3130,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.2,
+      "maxDb": -2,
+      "decodeExit": 0
+    },
+    {
+      "src": "/assets/lessons/L440/audio/L440-G05-wrong-two.m4a",
+      "sha256": "774ff1a8085f749c2f5cdc1be015d182ff3a9130f9c6d013d22942c8129b7011",
+      "bytes": 40719,
+      "durationMs": 3290,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "meanDb": -18.7,
+      "maxDb": -2.2,
+      "decodeExit": 0
+    }
+  ],
+  "errors": []
+}

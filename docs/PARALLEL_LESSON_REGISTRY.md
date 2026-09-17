@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L440 | 運 | dependency-blocked-asset-complete | Production E | codex/l440-complete-package | L436, L437, L438, L439 | 補 修 習 練 | curriculum-workflow/lesson-requests/L440.json; curriculum-workflow/generated/L440-generation-packet.md; curriculum-workflow/drafts/L440-draft.json | public/assets/lessons/L440/; curriculum-workflow/audio-inbox/L440/ | Complete assets: 5 images, 10 audio, timings and QA reports. Browser fallback limits documented. R053/R054 now merged on main; Release still requires ordered L436-L439. Production package only; do not merge main. |
+| L440 | 運 | dependency-blocked-asset-complete | Package Rescue (source: Production E) | codex/l440-package-rescue (source `25954642`) | L436, L437, L438, L439 | 補 修 習 練 | curriculum-workflow/lesson-requests/L440.json; curriculum-workflow/generated/L440-generation-packet.md; curriculum-workflow/drafts/L440-draft.json | public/assets/lessons/L440/; curriculum-workflow/audio-inbox/L440/ | Repaired standalone 運 and S05/G05-O1; teacher playback PASS bound to exact hashes. Audio review remains pending at 3/11. Other assets/timings unchanged. Release still requires ordered dependencies and must integrate from the final rescue SHA. |
 
 ## Status Values
 

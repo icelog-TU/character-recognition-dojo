@@ -1,0 +1,41 @@
+{
+  "unit": "L440",
+  "sourcePackageSha": "25954642fb5d0c1a83a200ab97c622bd8a0bcad7",
+  "reviewedOn": "2026-09-17",
+  "status": "audio-review pending",
+  "approvedCount": 3,
+  "totalCount": 11,
+  "approved": [
+    {
+      "id": "char-u904b",
+      "label": "單字 運",
+      "path": "/assets/lessons/L440/audio/char-u904b.m4a",
+      "sha256": "b2a4220381507b44ae5ab6949c1244f4b673630dd78229fbaba4812eabf41868",
+      "teacherResult": "correct"
+    },
+    {
+      "id": "L440-S05",
+      "label": "L440-S05 句子",
+      "path": "/assets/lessons/L440/audio/L440-S05.m4a",
+      "sha256": "f8974995c54e76ef621d3cddf47a3d493ff891a580cd2ea9fabf7b640d095c50",
+      "teacherResult": "correct; 要 ㄧㄠˋ, not 咬"
+    },
+    {
+      "id": "L440-G05-L440-G05-O1",
+      "label": "L440-G05 O1",
+      "path": "/assets/lessons/L440/audio/L440-S05.m4a",
+      "sha256": "f8974995c54e76ef621d3cddf47a3d493ff891a580cd2ea9fabf7b640d095c50",
+      "teacherResult": "correct; shares teacher-accepted S05 asset"
+    }
+  ],
+  "pending": [
+    "L440-S01",
+    "L440-S02",
+    "L440-S03",
+    "L440-S04",
+    "L440-G02-prefix",
+    "L440-G02-suffix",
+    "L440-G05-L440-G05-O2",
+    "L440-G05-L440-G05-O3"
+  ]
+}

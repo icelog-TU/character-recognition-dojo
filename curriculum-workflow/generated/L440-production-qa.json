@@ -23,21 +23,22 @@
     ],
     "stage4Index": "PASS",
     "displayLines": "PASS",
-    "productionAssetsLessonLocal": "PASS",
+    "productionAssetsLessonLocal": "PASS after L440 Package Rescue audio replacement.",
     "strictFormatsLessonLocal": "PASS, zero warnings",
-    "audioDecode": "PASS all 10",
+    "audioDecode": "PASS all 10; repaired standalone 運 and S05 are mono AAC 44100 Hz and teacher accepted.",
     "imageStyleCast": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
     "browserQA": "Local isolated Vite fixture; base prerequisite completion and provisional sentence zhuyin were supplied only in memory. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 運 cards plus 教、叫、練 distractors; all three 運 cards were selected and the UI displayed 全部找到了. Stage 3 played all five sentence buttons through ended, re-enabled each button, displayed 句子都聽完了 and passed. At 390×844, G01 運 was selected correctly; G02 displayed the approved S02 with 運 at the correct index and the recording prompt; G03 運 was selected correctly; G04 人來修理 was ordered correctly; all three G05 reader buttons were activated. Browser inspection caught the base-data 燈 display ㄉㄥㄥ and the final record now supplies zhuyinOverrides index 4 = ㄉㄥ. Because L439 is not yet integrated, 練 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser tool has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, phone recording/ding/post-record sequence, final reward walkthrough and teacher subjective review remain unperformed."
   },
   "pronunciation": {
-    "kind": "AI auditory review, not human QA; targeted final reviews replace earlier provisional results",
+    "kind": "Mixed evidence: teacher playback acceptance for repaired standalone 運 and S05/G05-O1; existing AI-only checks for the other eight pending review items.",
     "results": [
       {
         "name": "char-u904b",
         "heardText": "運 ㄩㄣˋ",
-        "pronunciationResult": "PASS",
-        "explanation": "音節清楚為「運」，聲調為第四聲，與預期相符。",
-        "finalSyllableAudible": true
+        "pronunciationResult": "TEACHER PASS",
+        "explanation": "Teacher listened to the repaired exact hash and confirmed the pronunciation is correct.",
+        "finalSyllableAudible": true,
+        "teacherAcceptedSha256": "b2a4220381507b44ae5ab6949c1244f4b673630dd78229fbaba4812eabf41868"
       },
       {
         "name": "L440-S01",
@@ -69,10 +70,11 @@
       },
       {
         "name": "L440-S05",
-        "heardText": "跳高前要先助跑",
-        "pronunciationResult": "PASS",
-        "explanation": "聽到的內容與預期完全一致，發音清楚，聲調準確，沒有明顯偏差。",
-        "finalSyllableAudible": true
+        "heardText": "跳高前要先助跑；要 ㄧㄠˋ",
+        "pronunciationResult": "TEACHER PASS",
+        "explanation": "Teacher listened to the repaired exact hash and confirmed 要 is correct, not 咬.",
+        "finalSyllableAudible": true,
+        "teacherAcceptedSha256": "f8974995c54e76ef621d3cddf47a3d493ff891a580cd2ea9fabf7b640d095c50"
       },
       {
         "name": "L440-G02-prefix",
@@ -104,7 +106,7 @@
       }
     ]
   },
-  "folderBytes": 1472952,
+  "folderBytes": 1488036,
   "assets": [
     {
       "path": "public/assets/lessons/L440/images/L440-S01.webp",
@@ -221,25 +223,25 @@
     },
     {
       "path": "public/assets/lessons/L440/audio/L440-S05.m4a",
-      "bytes": 35658,
-      "sha256": "06f44da8e8ba297ec57ecb189d56dca02cfb42291496ca4d973a45172e3f2d97",
-      "durationMs": 2870,
+      "bytes": 45020,
+      "sha256": "f8974995c54e76ef621d3cddf47a3d493ff891a580cd2ea9fabf7b640d095c50",
+      "durationMs": 4866,
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
       "maxVolumeDb": -2,
-      "meanVolumeDb": -17.4
+      "meanVolumeDb": -19.7
     },
     {
       "path": "public/assets/lessons/L440/audio/char-u904b.m4a",
-      "bytes": 18618,
-      "sha256": "fe1b20b157a93a884c65166e81e5cca1f1f51df01770393befdf174cb844d41b",
-      "durationMs": 910,
+      "bytes": 24340,
+      "sha256": "b2a4220381507b44ae5ab6949c1244f4b673630dd78229fbaba4812eabf41868",
+      "durationMs": 2275,
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
       "maxVolumeDb": -2,
-      "meanVolumeDb": -16.6
+      "meanVolumeDb": -19.4
     }
   ]
 }

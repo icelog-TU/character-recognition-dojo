@@ -1199,42 +1199,42 @@
           "audioSrc": "/assets/lessons/L440/audio/L440-S05.m4a",
           "audio": {
             "src": "/assets/lessons/L440/audio/L440-S05.m4a",
-            "durationMs": 2870,
+            "durationMs": 4866,
             "charTimings": [
               {
                 "charIndex": 0,
                 "startMs": 0,
-                "endMs": 440
+                "endMs": 400
               },
               {
                 "charIndex": 1,
-                "startMs": 440,
-                "endMs": 800
+                "startMs": 400,
+                "endMs": 840
               },
               {
                 "charIndex": 2,
-                "startMs": 800,
-                "endMs": 1180
+                "startMs": 840,
+                "endMs": 1380
               },
               {
                 "charIndex": 3,
-                "startMs": 1500,
-                "endMs": 1660
+                "startMs": 1840,
+                "endMs": 2080
               },
               {
                 "charIndex": 4,
-                "startMs": 1660,
-                "endMs": 1980
+                "startMs": 2080,
+                "endMs": 2540
               },
               {
                 "charIndex": 5,
-                "startMs": 1980,
-                "endMs": 2260
+                "startMs": 2540,
+                "endMs": 2900
               },
               {
                 "charIndex": 6,
-                "startMs": 2260,
-                "endMs": 2620
+                "startMs": 2900,
+                "endMs": 3220
               }
             ]
           }
@@ -1341,8 +1341,8 @@
   "productionQA": {
     "imageStyle": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
     "browserQA": "Local isolated Vite fixture; base prerequisite completion and provisional sentence zhuyin were supplied only in memory. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 運 cards plus 教、叫、練 distractors; all three 運 cards were selected and the UI displayed 全部找到了. Stage 3 played all five sentence buttons through ended, re-enabled each button, displayed 句子都聽完了 and passed. At 390×844, G01 運 was selected correctly; G02 displayed the approved S02 with 運 at the correct index and the recording prompt; G03 運 was selected correctly; G04 人來修理 was ordered correctly; all three G05 reader buttons were activated. Browser inspection caught the base-data 燈 display ㄉㄥㄥ and the final record now supplies zhuyinOverrides index 4 = ㄉㄥ. Because L439 is not yet integrated, 練 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser tool has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, phone recording/ding/post-record sequence, final reward walkthrough and teacher subjective review remain unperformed.",
-    "audioPipeline": "Repo OpenAI gpt-4o-mini-tts coral; final assets are mono AAC 44100 Hz. G02 prefix and suffix were generated independently; suffix was regenerated as a whole to clarify 送 fourth tone. Standalone 運 was regenerated as a whole until the final fourth tone passed. G05 wrong-one was checked again as 起 third tone. No syllable splicing. Trailing silence was trimmed only after measured speech with about 250 ms retained. Final M4A alignment used whisper-1; waveform corrections are recorded in the alignment report.",
-    "timingReview": "Technical waveform review: all nine timed clips have 80–900 ms spans, ordered and nonoverlapping, with final spans ending before retained tail silence. S03 燈、壞、了、工、人、來 and sentence-final spans were corrected from waveform inspection. This is not human synchronization QA.",
-    "pronunciation": "AI gpt-audio auditory checks PASS on all 10 final clips, including targeted 運 ㄩㄣˋ, 送 ㄙㄨㄥˋ and 起 ㄑㄧˇ checks. This is not human acceptance."
+    "audioPipeline": "Repo OpenAI gpt-4o-mini-tts coral; final assets are mono AAC 44100 Hz. Package Rescue regenerated standalone 運 and the complete S05 sentence from their exact source text, without cutting or splicing. G02 and both wrong-choice assets are unchanged. Teacher listened to and accepted the new standalone 運 and S05/G05-O1 files on 2026-09-17; acceptance is SHA-256-bound in L440-teacher-audio-review.json. S05 timing was regenerated from the final M4A with whisper-1.",
+    "timingReview": "Package Rescue regenerated S05 timing from the final accepted M4A: seven ordered, nonoverlapping Han spans within durationMs. Other timing data is unchanged from the source package. Teacher acceptance covered pronunciation, not full phone-width highlight synchronization.",
+    "pronunciation": "Teacher audio review PASS for the repaired standalone 運 and repaired S05/G05-O1 exact hashes. The other eight review items remain pending; package audio-review status remains pending."
   }
 }

@@ -42,3 +42,13 @@ Local isolated Vite fixture; base prerequisite completion and provisional senten
 Production 不 merge main，不修改 production JSON、planner、ledger 或部署；ignored 音訊中間檔及快取保留。
 
 固定資產 SHA 將在資產 commit 後補入。Pre-merge 預覽將使用完整資產 SHA，非 main 正式 review queue。
+
+## Package Rescue audio repair — 2026-09-17
+
+- Rescue source: `codex/l440-complete-package` at `25954642fb5d0c1a83a200ab97c622bd8a0bcad7`.
+- Teacher rejected the source standalone `運` as nonstandard and the source S05 because `要` sounded like `咬`.
+- Regenerated only standalone `運` and the complete S05 sentence through repo OpenAI TTS. No syllable cutting, splicing, or reuse from another recording.
+- Teacher listened to the repaired files and confirmed both correct. S05 is also the shared correct audio for `L440-G05-O1`.
+- Teacher acceptance is bound to SHA-256 in `L440-teacher-audio-review.json`; status remains `audio-review pending` at 3/11 because eight other review items are still pending.
+- Regenerated S05 timing from the repaired final M4A and synchronized draft, request, final packet, alignment report, and QA metadata.
+- Five sentence texts, images, S01-S04, G02 prefix/suffix, G05 O2/O3, and their timings were not changed.

@@ -1,6 +1,6 @@
 {
   "unit": "L440",
-  "method": "Repo assets:align:ai whisper-1 final M4A. Traditional/simplified orthographic equivalences only. G02 suffix regenerated whole after ASR heard 松 for 送. No arbitrary homophone substitution. S03 1ms spans and pause boundaries waveform-reviewed; not human playback acceptance.",
+  "method": "Repo assets:align:ai whisper-1 final M4A. Traditional/simplified orthographic equivalences only. G02 suffix regenerated whole after ASR heard 松 for 送. No arbitrary homophone substitution. S03 1ms spans and pause boundaries waveform-reviewed; not human playback acceptance. Package Rescue regenerated standalone 運 and S05 as whole OpenAI TTS clips; S05 was re-aligned from the final teacher-accepted M4A.",
   "adjustments": [
     {
       "src": "/assets/lessons/L440/audio/L440-S03.m4a",
@@ -149,21 +149,6 @@
         "charIndex": 9,
         "startMs": 3300,
         "endMs": 3610
-      },
-      "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
-    },
-    {
-      "src": "/assets/lessons/L440/audio/L440-S05.m4a",
-      "index": 6,
-      "previous": {
-        "charIndex": 6,
-        "startMs": 2260,
-        "endMs": 2520
-      },
-      "corrected": {
-        "charIndex": 6,
-        "startMs": 2260,
-        "endMs": 2620
       },
       "reason": "Final audible speech boundary from measured envelope; excludes retained trailing silence."
     },
@@ -673,49 +658,57 @@
     "L440-S05.m4a.transcript.json": {
       "task": "transcribe",
       "language": "chinese",
-      "duration": 2.869999885559082,
+      "duration": 4.866,
       "text": "跳高前,要先助跑。",
       "words": [
         {
           "word": "跳",
           "start": 0,
-          "end": 0.4399999976158142
+          "end": 0.4
         },
         {
           "word": "高",
-          "start": 0.4399999976158142,
-          "end": 0.800000011920929
+          "start": 0.4,
+          "end": 0.84
         },
         {
           "word": "前",
-          "start": 0.800000011920929,
-          "end": 1.1799999475479126
+          "start": 0.84,
+          "end": 1.38
         },
         {
           "word": "要",
-          "start": 1.5,
-          "end": 1.659999966621399
+          "start": 1.84,
+          "end": 2.08
         },
         {
           "word": "先",
-          "start": 1.659999966621399,
-          "end": 1.9800000190734863
+          "start": 2.08,
+          "end": 2.54
         },
         {
           "word": "助",
-          "start": 1.9800000190734863,
-          "end": 2.259999990463257
+          "start": 2.54,
+          "end": 2.9
         },
         {
-          "word": "跑。",
-          "start": 2.259999990463257,
-          "end": 2.5199999809265137
+          "word": "跑",
+          "start": 2.9,
+          "end": 3.22
         }
       ],
-      "usage": {
-        "type": "duration",
-        "seconds": 3
-      }
+      "rescueNote": "Final M4A aligned by repo assets:align:ai. Teacher confirmed 要 is pronounced ㄧㄠˋ, not 咬 ㄧㄠˇ."
     }
-  }
+  },
+  "rescueRepairs": [
+    {
+      "sourcePackageSha": "25954642fb5d0c1a83a200ab97c622bd8a0bcad7",
+      "reviewedOn": "2026-09-17",
+      "files": [
+        "char-u904b.m4a",
+        "L440-S05.m4a"
+      ],
+      "result": "Teacher playback PASS; S05 timing regenerated; no other audio or timing changed."
+    }
+  ]
 }
