@@ -14,6 +14,7 @@
 - 全部音檔可解碼；G05 三音檔 mean volume 為 -18.2／-18.7／-17.4 dB，差 1.3 dB。
 - 九段 final M4A 的 timing 齊全，80–900ms、不重疊，末字結束避開尾端靜音。十段 AI 聽音結果見 QA JSON，不等同人工驗收。
 - tools:check、ai:check、curriculum:audit-state：PASS。隔離 validate:production：PASS；assets:audit --strict：PASS，5 圖／10 音、零警告。
+- pushed-branch package-intake --strict：PASS，5 圖／10 音、五種 Stage 4 類型完整、零 blocking defect；驗證固定資產 commit 25954642fb5d0c1a83a200ab97c622bd8a0bcad7。
 
 ## 逐圖 style-lock / cast
 
