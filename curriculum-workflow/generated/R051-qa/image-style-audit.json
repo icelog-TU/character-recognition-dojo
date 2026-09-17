@@ -1,0 +1,63 @@
+{
+  "tool": "Built-in imagegen",
+  "dimensions": "1024x1024",
+  "references": [
+    "L058-S01..S05",
+    "L115-S01",
+    "L163-S02",
+    "L154-S01",
+    "xiaoguang.webp",
+    "L420-S01 teacher"
+  ],
+  "images": [
+    {
+      "id": "R051-S01",
+      "path": "public/assets/reviews/R051/images/R051-S01.webp",
+      "bytes": 164260,
+      "sha256": "da1feb19ebd5156bbe6d5f43b5a529c12830929170861df80a295f7e813ed64b",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "家中桌旁，主角小女孩拿著報紙找店家聯絡電話，主角爸爸指向反面，提醒她翻過來。女孩正翻動報紙，爸爸另一手拿著電話，交代尋找號碼的目的。報紙主要讓觀者看到背斜角，電話資訊區朝向人物；不要求畫出真實電話號碼，不變成尋找頁碼的練習。"
+    },
+    {
+      "id": "R051-S02",
+      "path": "public/assets/reviews/R051/images/R051-S02.webp",
+      "bytes": 169692,
+      "sha256": "d6f12627413b4e405e8975755378ae27e14b2f79ae4d2a78f3e3af38a83143cd",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "餐廳桌旁，主角小女孩把一頁菜單拿近，指著密密的小字向主角媽媽反映。菜單有少量料理圖片，文字區以細小、無法辨讀的印刷質感呈現；不生成可讀菜名或價格，也不把整張菜單畫得很小。重點是字印得小，並非光線太暗或女孩被設定成視力不良。"
+    },
+    {
+      "id": "R051-S03",
+      "path": "public/assets/reviews/R051/images/R051-S03.webp",
+      "bytes": 149146,
+      "sha256": "f161e091fcbe0f69c5cbf6363ee358f25c57680b9c7eaa3d9602d416210a858c",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "旅館櫃台的 generic staff 向主角爸爸展示房型照片，主角媽媽與女孩在旁。照片清楚呈現兩種不同房間：一間是一張窄單人床，另一間是一張寬雙人床；不要畫成同一房內同時有兩種床，也不以床的數量誤代房型。房型照片不加文字、價格或房號。"
+    },
+    {
+      "id": "R051-S04",
+      "path": "public/assets/reviews/R051/images/R051-S04.webp",
+      "bytes": 182242,
+      "sha256": "6d5c6989c83edc8d4ae33283986d0cd230e658c89b2f12654b588b0db49ca017",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "主角小女孩與固定哥哥看著電視遊戲畫面，哥哥向女孩解釋。螢幕中的怪物依然巨大、有力、氣勢十足；勇者穩穩用盾牌擋住怪物攻擊，展現成長後的力量。不要畫怪物縮小、受傷、倒地、哭泣或虛弱，也不要靠血條、等級數字、字幕說明。無血腥或恐怖特寫。"
+    },
+    {
+      "id": "R051-S05",
+      "path": "public/assets/reviews/R051/images/R051-S05.webp",
+      "bytes": 162118,
+      "sha256": "3a771d6601201b88a95f0da707e693cef2bb6f3f43766df3b7399d2c2a6d2f26",
+      "styleLock": "PASS: actual exported WebP compared side by side with full L058 set and refined/cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "家中桌旁，主角媽媽陪主角小女孩練習計算。女孩專心看自己的雙手，伸出及收起手指來算；桌面只有少量可供計數的小積木。手部結構要正確清楚，不增加多餘手指，不需要紙上算式、數字或答案。"
+    }
+  ],
+  "rejectedAttempts": [
+    "S02 first attempt was a reference collage; replaced.",
+    "S05 first attempt had six digits on raised hand; replaced with five."
+  ]
+}

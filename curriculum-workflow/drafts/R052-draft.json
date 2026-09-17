@@ -1,0 +1,651 @@
+{
+  "id": "R052",
+  "kind": "review",
+  "reviewNumber": 52,
+  "title": "複習五十二",
+  "afterLessonOrder": 420,
+  "targetLessonRange": {
+    "startOrder": 391,
+    "endOrder": 420
+  },
+  "requiredRounds": 5,
+  "pairUnits": [
+    "R051",
+    "R052"
+  ],
+  "requiredCoverageChars": [
+    "報",
+    "頁",
+    "碼",
+    "翻",
+    "印",
+    "單",
+    "雙",
+    "選",
+    "或",
+    "者",
+    "勇",
+    "強",
+    "算",
+    "弱",
+    "越",
+    "加",
+    "減",
+    "法",
+    "辦",
+    "試",
+    "定",
+    "成",
+    "功",
+    "決",
+    "解",
+    "果",
+    "如",
+    "結",
+    "合",
+    "教"
+  ],
+  "dependsOnLessons": [],
+  "provisionalLearnedChars": [],
+  "sourceMainCommit": "f4bc071d4d14a15bd0e2927a710f197110da6789",
+  "packageStatus": "asset-complete-package",
+  "teacherNotes": "R051-S04: 13 Han：teacher-approved exception. 老師明確批准保留「怪物沒有變弱，是勇者越來越強。」及四行 displayLines；不得縮句。例外僅放寬漢字總數；手機排版、注音、Han-only index、option mapping、最終 charTimings、播放及逐字高亮仍須驗證。 Release order: L420 → R051 → R052 → L421. No newChars, zhuyin, charAudio. No image text/numerals exception. R051-S02 得 neutral de; R051-S03 或者 full pronunciation; R052-S04 教 ㄐㄧㄠ; R052-S02 結 ㄐㄧㄝˊ and 了 neutral le.",
+  "sentences": [
+    {
+      "id": "R052-S01",
+      "text": "我決定和小光合作畫海報。",
+      "spokenText": "我決定和小光合作畫海報",
+      "displayLines": [
+        "我決定和小光",
+        "合作畫海報。"
+      ],
+      "focusChar": "決",
+      "imageNotes": "主角小女孩邀小光一起畫一張大海報，兩人坐在同一張大紙旁，女孩指著待完成的區域，小光拿起畫筆準備加入。海報是花草、樹木等圖像，無標題文字。不是各畫各的兩張紙。\r\n小光使用 public/assets/reference/lesson-cast/xiaoguang.webp：\r\n圓眼鏡、整齊短黑髮、白短袖襯衫、深藍針織背心、卡其短褲、白襪、棕色鞋；不可改成 generic boy 或既有「你」小男孩。",
+      "approved": true,
+      "imagePrompt": "Square modern children’s picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Full L058 set style only; refined L115-S01/S02,L118-S02,L119-S01,L128-S03 proportions. Family anchors L154-S01,L162-S04,L163-S02. Girl dark bob pink clip pink cardigan cream shirt navy skirt pink shoes. No readable text, digits, labels or bubbles. Scene: 主角小女孩邀小光一起畫一張大海報，兩人坐在同一張大紙旁，女孩指著待完成的區域，小光拿起畫筆準備加入。海報是花草、樹木等圖像，無標題文字。不是各畫各的兩張紙。\r\n小光使用 public/assets/reference/lesson-cast/xiaoguang.webp：\r\n圓眼鏡、整齊短黑髮、白短袖襯衫、深藍針織背心、卡其短褲、白襪、棕色鞋；不可改成 generic boy 或既有「你」小男孩。",
+      "imageSrc": "/assets/reviews/R052/images/R052-S01.webp",
+      "audio": {
+        "src": "/assets/reviews/R052/audio/R052-S01.m4a",
+        "durationMs": 4286,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 620
+          },
+          {
+            "charIndex": 1,
+            "startMs": 620,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1220,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1440,
+            "endMs": 1760
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1760,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2100,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2240,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2680,
+            "endMs": 2900
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3340,
+            "endMs": 3540
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3540,
+            "endMs": 3860
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3860,
+            "endMs": 4060
+          }
+        ]
+      }
+    },
+    {
+      "id": "R052-S02",
+      "text": "鞋帶打結了，請爸爸幫我解開。",
+      "spokenText": "鞋帶打結了請爸爸幫我解開",
+      "displayLines": [
+        "鞋帶打結了，",
+        "請爸爸",
+        "幫我解開。"
+      ],
+      "focusChar": "結",
+      "imageNotes": "家中玄關，主角小女孩坐穩，指著鞋上意外纏緊、解不開的鞋帶結，向主角爸爸求助。爸爸蹲下，準備用手解結。不是正常綁好的漂亮蝴蝶結，也不是爸爸要求女孩學習解結；重點是女兒找爸爸幫忙。",
+      "zhuyinOverrides": {
+        "3": "ㄐㄧㄝˊ",
+        "4": "˙ㄌㄜ"
+      },
+      "approved": true,
+      "imagePrompt": "Square modern children’s picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Full L058 set style only; refined L115-S01/S02,L118-S02,L119-S01,L128-S03 proportions. Family anchors L154-S01,L162-S04,L163-S02. Girl dark bob pink clip pink cardigan cream shirt navy skirt pink shoes. No readable text, digits, labels or bubbles. Scene: 家中玄關，主角小女孩坐穩，指著鞋上意外纏緊、解不開的鞋帶結，向主角爸爸求助。爸爸蹲下，準備用手解結。不是正常綁好的漂亮蝴蝶結，也不是爸爸要求女孩學習解結；重點是女兒找爸爸幫忙。",
+      "imageSrc": "/assets/reviews/R052/images/R052-S02.webp",
+      "audio": {
+        "src": "/assets/reviews/R052/audio/R052-S02.m4a",
+        "durationMs": 5092,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 740
+          },
+          {
+            "charIndex": 1,
+            "startMs": 740,
+            "endMs": 1020
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1020,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1720,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1880,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2800,
+            "endMs": 2980
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2980,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3220,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3460,
+            "endMs": 3920
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3920,
+            "endMs": 4340
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4340,
+            "endMs": 4600
+          },
+          {
+            "charIndex": 11,
+            "startMs": 4600,
+            "endMs": 4900
+          }
+        ]
+      }
+    },
+    {
+      "id": "R052-S03",
+      "text": "積木橋一直倒，有什麼辦法？",
+      "spokenText": "積木橋一直倒有什麼辦法",
+      "displayLines": [
+        "積木橋",
+        "一直倒，",
+        "有什麼辦法？"
+      ],
+      "focusChar": "辦",
+      "imageNotes": "家中遊戲墊上，主角小女孩搭的積木橋橋腳太窄，橋面一端已傾倒，幾塊積木散在旁邊。她拿著積木轉向主角爸爸求助，爸爸蹲旁思考，尚未直接替她完成。不要畫真實橋梁災難，不改成門打不開；畫面呈現結構不穩、需要想辦法改善。",
+      "approved": true,
+      "imagePrompt": "Square modern children’s picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Full L058 set style only; refined L115-S01/S02,L118-S02,L119-S01,L128-S03 proportions. Family anchors L154-S01,L162-S04,L163-S02. Girl dark bob pink clip pink cardigan cream shirt navy skirt pink shoes. No readable text, digits, labels or bubbles. Scene: 家中遊戲墊上，主角小女孩搭的積木橋橋腳太窄，橋面一端已傾倒，幾塊積木散在旁邊。她拿著積木轉向主角爸爸求助，爸爸蹲旁思考，尚未直接替她完成。不要畫真實橋梁災難，不改成門打不開；畫面呈現結構不穩、需要想辦法改善。",
+      "imageSrc": "/assets/reviews/R052/images/R052-S03.webp",
+      "audio": {
+        "src": "/assets/reviews/R052/audio/R052-S03.m4a",
+        "durationMs": 3253,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 560
+          },
+          {
+            "charIndex": 2,
+            "startMs": 560,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1480
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1480,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1820,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2060,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2320,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2440,
+            "endMs": 2560
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2560,
+            "endMs": 2790
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2790,
+            "endMs": 3020
+          }
+        ]
+      }
+    },
+    {
+      "id": "R052-S04",
+      "text": "老師教我做紙船，一試就成功。",
+      "spokenText": "老師教我做紙船一試就成功",
+      "displayLines": [
+        "老師教我",
+        "做紙船，",
+        "一試就成功。"
+      ],
+      "focusChar": "試",
+      "imageNotes": "手作活動桌旁，固定老師拿著示範紙船，主角小女孩剛照著方法完成自己的第一艘紙船，開心地捧起展示。桌上有剩餘摺紙材料，但不放一堆失敗作品，以免違反「一試就成功」。老師採教師 reference，不畫成主角媽媽。",
+      "zhuyinOverrides": {
+        "2": "ㄐㄧㄠ"
+      },
+      "approved": true,
+      "imagePrompt": "Square modern children’s picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Full L058 set style only; refined L115-S01/S02,L118-S02,L119-S01,L128-S03 proportions. Family anchors L154-S01,L162-S04,L163-S02. Girl dark bob pink clip pink cardigan cream shirt navy skirt pink shoes. No readable text, digits, labels or bubbles. Scene: 手作活動桌旁，固定老師拿著示範紙船，主角小女孩剛照著方法完成自己的第一艘紙船，開心地捧起展示。桌上有剩餘摺紙材料，但不放一堆失敗作品，以免違反「一試就成功」。老師採教師 reference，不畫成主角媽媽。",
+      "imageSrc": "/assets/reviews/R052/images/R052-S04.webp",
+      "audio": {
+        "src": "/assets/reviews/R052/audio/R052-S04.m4a",
+        "durationMs": 4921,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 350
+          },
+          {
+            "charIndex": 1,
+            "startMs": 350,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1039,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1320,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1660,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1960,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2280,
+            "endMs": 2820
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3212,
+            "endMs": 3640
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3640,
+            "endMs": 3820
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3820,
+            "endMs": 4240
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4240,
+            "endMs": 4400
+          },
+          {
+            "charIndex": 11,
+            "startMs": 4400,
+            "endMs": 4700
+          }
+        ]
+      }
+    },
+    {
+      "id": "R052-S05",
+      "text": "水果太多，不如分送給大家。",
+      "spokenText": "水果太多不如分送給大家",
+      "displayLines": [
+        "水果太多，",
+        "不如分送",
+        "給大家。"
+      ],
+      "focusChar": "如",
+      "imageNotes": "家中桌上有一大箱新鮮水果，主角媽媽與主角小女孩商量分送，正把水果分裝進幾個大小相近的提袋，原箱仍有不少。表現家中水果多、提議分享，不是腐爛丟棄、店家販售，也不是等果子變紅。",
+      "approved": true,
+      "imagePrompt": "Square modern children’s picture-book illustration, warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, consistent expressive preschool proportions, soft cheeks, gentle facial expressions, bright warm palette, phone-readable composition. Full L058 set style only; refined L115-S01/S02,L118-S02,L119-S01,L128-S03 proportions. Family anchors L154-S01,L162-S04,L163-S02. Girl dark bob pink clip pink cardigan cream shirt navy skirt pink shoes. No readable text, digits, labels or bubbles. Scene: 家中桌上有一大箱新鮮水果，主角媽媽與主角小女孩商量分送，正把水果分裝進幾個大小相近的提袋，原箱仍有不少。表現家中水果多、提議分享，不是腐爛丟棄、店家販售，也不是等果子變紅。",
+      "imageSrc": "/assets/reviews/R052/images/R052-S05.webp",
+      "audio": {
+        "src": "/assets/reviews/R052/audio/R052-S05.m4a",
+        "durationMs": 3357,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 480
+          },
+          {
+            "charIndex": 1,
+            "startMs": 480,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1040
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1040,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1360,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1660,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1920,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2240,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2400,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2660,
+            "endMs": 2890
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2890,
+            "endMs": 3120
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R052-G01",
+      "type": "find-character",
+      "sentenceId": "R052-S01",
+      "targetChar": "決",
+      "targetCharIndex": 1,
+      "prompt": "請幫小兔子找出句子裡的字。"
+    },
+    {
+      "id": "R052-G02",
+      "type": "teach-character",
+      "sentenceId": "R052-S02",
+      "targetChar": "結",
+      "targetCharIndex": 3,
+      "prompt": "請你幫小兔子念紅框裡的字。",
+      "teachAudio": {
+        "prefixText": "鞋帶打",
+        "suffixText": "了請爸爸幫我解開",
+        "prefixSrc": "/assets/reviews/R052/audio/R052-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R052/audio/R052-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/reviews/R052/audio/R052-G02-prefix.m4a",
+          "durationMs": 1463,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 460
+            },
+            {
+              "charIndex": 1,
+              "startMs": 460,
+              "endMs": 720
+            },
+            {
+              "charIndex": 2,
+              "startMs": 900,
+              "endMs": 1200
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/reviews/R052/audio/R052-G02-suffix.m4a",
+          "durationMs": 3647,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 320
+            },
+            {
+              "charIndex": 1,
+              "startMs": 779,
+              "endMs": 1300
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1300,
+              "endMs": 1510
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1510,
+              "endMs": 1720
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1720,
+              "endMs": 2100
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2100,
+              "endMs": 2409
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2809,
+              "endMs": 3140
+            },
+            {
+              "charIndex": 7,
+              "startMs": 3140,
+              "endMs": 3440
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "R052-G03",
+      "type": "missing-character",
+      "sentenceId": "R052-S03",
+      "targetChar": "辦",
+      "targetCharIndex": 9,
+      "prompt": "請幫小兔子找回少掉的字。",
+      "missingIndexes": [
+        9
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "辦",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "方",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "做",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R052-G04",
+      "type": "partial-order",
+      "sentenceId": "R052-S04",
+      "targetChar": "試",
+      "targetCharIndex": 8,
+      "prompt": "請幫小兔子把字放回去。",
+      "missingIndexes": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "options": [
+        {
+          "id": "card-cheng",
+          "text": "成",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-shi",
+          "text": "試",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-gong",
+          "text": "功",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-jiu",
+          "text": "就",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "R052-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R052-S05",
+      "targetChar": "如",
+      "targetCharIndex": 5,
+      "prompt": "請聽一聽，誰念對了？",
+      "options": [
+        {
+          "id": "correct",
+          "text": "水果太多，不如分送給大家。",
+          "spokenText": "水果太多不如分送給大家",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R052/audio/R052-S05.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "水果太多，不如分送給同學。",
+          "spokenText": "水果太多不如分送給同學",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R052/audio/R052-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "水果太多，不如分送給小光。",
+          "spokenText": "水果太多不如分送給小光",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R052/audio/R052-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "qaSummary": {
+    "technicalAudit": "curriculum-workflow/generated/R052-qa/technical-audit.json",
+    "phonePlayback": "All 9 referenced files played to ended; 5 sentences through picture UI, G05 options through game UI, G02 prefix through game UI, suffix through standalone local media buttons.",
+    "limitations": [
+      "Press-and-hold microphone recording and post-recording resume not exercised: available CUA has no hold-duration action.",
+      "No human auditory-listening PASS claimed. Automated transcription/phonetic evidence retained; teacher subjective review follows Release merge.",
+      "Some Playwright clicks timed out; recovered through fresh AX-based clicks."
+    ],
+    "lengthException": "R051-S04: 13 Han：teacher-approved exception; exact text and four displayLines retained."
+  }
+}

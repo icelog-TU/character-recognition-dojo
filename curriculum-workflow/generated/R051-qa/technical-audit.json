@@ -1,0 +1,214 @@
+{
+  "unit": "R051",
+  "packageStatus": "asset-complete-package",
+  "sourceMainCommit": "f4bc071d4d14a15bd0e2927a710f197110da6789",
+  "allowedCharCount": 424,
+  "coverage": "Pair 30/30 PASS",
+  "lengthException": "R051-S04: 13 Han：teacher-approved exception; exact text and four displayLines retained.",
+  "checks": {
+    "curriculumValidation": "PASS using full base plus both draft reviews; legacy normal-lesson warnings only.",
+    "productionAssets": "PASS using pair fixture",
+    "assetFormats": "PASS strict, zero warnings",
+    "timings": "PASS; sentence and teach fragments: counts match, nonoverlap,80–900ms, final tail≤300ms.",
+    "sharedState": "Production JSON and alignment script restored byte-for-byte; no planner/ledger integration.",
+    "verify": "Skipped: pair intentionally absent from production JSON; full base-plus-pair curriculum validation and isolated pair asset checks passed. Release owns integration and full release verify."
+  },
+  "browserQA": {
+    "viewport": "390x844 (375px content excluding scrollbar)",
+    "flow": "Review two-stage picture/sentence games. Local app LessonPanel with actual review adapter; seeded game state for individual round verification.",
+    "phonePlayback": "All 9 referenced files played to ended; 5 sentences through picture UI, G05 options through game UI, G02 prefix through game UI, suffix through standalone local media buttons.",
+    "highlight": "Visible moving character highlight during picture playback. R051-S04 four lines visually readable without clipping; exact lines lengths2/5/3/5.",
+    "games": "G01 correct target accepted; G03 correct single-Han accepted; G04 correct card sequence accepted; G05 all three options played and correct selection shows reward button.",
+    "G02": "Prefix ends at target; red-frame hold-to-record prompt appears. Suffix separately played to ended.",
+    "limitations": [
+      "Press-and-hold microphone recording and post-recording resume not exercised: available CUA has no hold-duration action.",
+      "No human auditory-listening PASS claimed. Automated transcription/phonetic evidence retained; teacher subjective review follows Release merge.",
+      "Some Playwright clicks timed out; recovered through fresh AX-based clicks."
+    ],
+    "events": [
+      {
+        "event": "PLAY R051-S04.m4a",
+        "time": 1789562090011
+      },
+      {
+        "event": "ENDED R051-S04.m4a",
+        "time": 1789562095000
+      },
+      {
+        "event": "PLAY R051-S01.m4a",
+        "time": 1789562143146
+      },
+      {
+        "event": "ENDED R051-S01.m4a",
+        "time": 1789562147616
+      },
+      {
+        "event": "PLAY R051-S02.m4a",
+        "time": 1789562169875
+      },
+      {
+        "event": "ENDED R051-S02.m4a",
+        "time": 1789562173846
+      },
+      {
+        "event": "PLAY R051-S03.m4a",
+        "time": 1789562217340
+      },
+      {
+        "event": "ENDED R051-S03.m4a",
+        "time": 1789562221629
+      },
+      {
+        "event": "PLAY R051-S05.m4a",
+        "time": 1789562245719
+      },
+      {
+        "event": "ENDED R051-S05.m4a",
+        "time": 1789562249863
+      },
+      {
+        "event": "PLAY R051-S04.m4a",
+        "time": 1789562296270
+      },
+      {
+        "event": "ENDED R051-S04.m4a",
+        "time": 1789562301434
+      },
+      {
+        "event": "PLAY R051-G05-wrong-two.m4a",
+        "time": 1789562352477
+      },
+      {
+        "event": "ENDED R051-G05-wrong-two.m4a",
+        "time": 1789562356748
+      },
+      {
+        "event": "PLAY R051-G05-wrong-one.m4a",
+        "time": 1789562385413
+      },
+      {
+        "event": "ENDED R051-G05-wrong-one.m4a",
+        "time": 1789562388805
+      },
+      {
+        "event": "PLAY R051-S05.m4a",
+        "time": 1789562430083
+      },
+      {
+        "event": "ENDED R051-S05.m4a",
+        "time": 1789562434210
+      },
+      {
+        "event": "PLAY R051-G02-prefix.m4a",
+        "time": 1789562471472
+      },
+      {
+        "event": "ENDED R051-G02-prefix.m4a",
+        "time": 1789562473337
+      },
+      {
+        "event": "PLAY R051-S01.m4a",
+        "time": 1789562540398
+      },
+      {
+        "event": "ENDED R051-S01.m4a",
+        "time": 1789562544902
+      },
+      {
+        "event": "PLAY R051-S03.m4a",
+        "time": 1789562587864
+      },
+      {
+        "event": "ENDED R051-S03.m4a",
+        "time": 1789562592140
+      },
+      {
+        "event": "PLAY R051-G02-suffix.m4a",
+        "time": 1789562652839
+      },
+      {
+        "event": "ENDED R051-G02-suffix.m4a",
+        "time": 1789562654444
+      }
+    ]
+  },
+  "audioContent": {
+    "fullSentencesAndWrongChoices": "Whisper Han-only transcripts match approved source.",
+    "shortFragments": "Suffix 得好小 regenerated with neutral de instruction. Whisper renders 格好小 (short-syllable ambiguity); separate gpt-audio returned ㄉㄜ˙ ㄏㄠˇ ㄒㄧㄠˇ. Exact input and phonetic evidence retained; target 印 not included.",
+    "contextPronunciation": "Full S02 phonetic output confirmed neutral 得; S03 transcription includes both 或者 syllables."
+  },
+  "timingRepairs": [
+    {
+      "id": "R051-S01",
+      "charIndex": 5,
+      "before": {
+        "charIndex": 5,
+        "startMs": 2240,
+        "endMs": 2241
+      },
+      "startMs": 1944,
+      "endMs": 2240,
+      "reason": "電 onset after measured silence ends 1943.67ms; zero-duration AI interval repaired."
+    },
+    {
+      "id": "R051-S01",
+      "charIndex": 9,
+      "before": {
+        "charIndex": 9,
+        "startMs": 2980,
+        "endMs": 3740
+      },
+      "startMs": 3384,
+      "endMs": 3740,
+      "reason": "在 begins after measured internal pause ends3384.38ms."
+    }
+  ],
+  "images": [
+    {
+      "id": "R051-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "bytes": 164260
+    },
+    {
+      "id": "R051-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "bytes": 169692
+    },
+    {
+      "id": "R051-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "bytes": 149146
+    },
+    {
+      "id": "R051-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "bytes": 182242
+    },
+    {
+      "id": "R051-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "bytes": 162118
+    }
+  ],
+  "assets": {
+    "images": 5,
+    "audio": 9,
+    "imageBytes": 827458,
+    "audioBytes": 417849
+  },
+  "release": "Release owns integration in order L420→R051→R052→L421; L420 prerequisite already merged. No unmerged character dependencies.",
+  "reviewURL": "https://icelog-tu.github.io/character-recognition-dojo/lesson-asset-review.html?unit=R051&ref=main",
+  "reviewURLAvailability": "Usable after Release merges and deploys",
+  "repairStatusCommand": "npm run asset:review-status",
+  "remoteIntake": {
+    "ref": "origin/codex/r051-r052-complete-package",
+    "verifiedAssetCommit": "2f17d38ce48de755531246f51c185e3380db0454",
+    "strict": true,
+    "result": "PASS"
+  }
+}
