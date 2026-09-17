@@ -2464,3 +2464,11 @@ R054-S05: style-lock PASS; cast PASS; 主角女孩拿購物籃並交出圍裙，
 G01/G03/G04 mappings and all G05 choices passed mobile UI operation. G02 prefix and suffix playback ended; press-and-hold recording and the post-recording resume path were not exercised because the available UI tool has no hold-duration action. No human auditory-listening PASS is claimed.
 
 Technical evidence: curriculum-workflow/generated/R054-qa/technical-audit.json. Release owns production JSON/planner/ledger integration and merges R053 before R054, after L435 and before L436.
+
+## Teacher-requested image identity revision
+
+R054-S03 final redraw: generic 飼主持空牽繩與純小狗照片詢問鄰居；飼主短捲灰髮、深綠外套、鏽橘上衣、炭灰長褲及酒紅包，與固定媽媽的長直深髮、白／米上衣、藍褲、棕包配色完全分離；現實場景沒有小狗。
+
+R054-S04 final redraw: 陌生病童具中深膚色、雀斑、黑色緊密捲髮雙髮髻與藍綠公主服，與主角女孩及小月明顯不同；陪伴家長為戴方框眼鏡、留鬍子、穿芥末黃毛衣的 generic 父親。病床、醫師、護理師、皇冠與公主心願均完整。
+
+Both replacement WebP files retain the approved scene semantics and pass style/cast identity separation. Earlier versions are superseded and are not package assets.

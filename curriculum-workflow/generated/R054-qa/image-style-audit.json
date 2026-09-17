@@ -28,20 +28,20 @@
     {
       "id": "R054-S03",
       "path": "public/assets/reviews/R054/images/R054-S03.webp",
-      "bytes": 191634,
-      "sha256": "3608f49d41cf09fc6eb85ae9c8abda1bbcbd78d7c55c045c51621c2c4f4369d3",
+      "bytes": 192406,
+      "sha256": "51a059947890de39dc7f8afb22b52de319704fb297ea77d7252f7998aac1707e",
       "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
       "cast": "PASS",
-      "semanticCheck": "generic 飼主持空牽繩與純小狗照片詢問 generic 鄰居；現實場景沒有小狗，非固定家庭角色。"
+      "semanticCheck": "generic 飼主持空牽繩與純小狗照片詢問鄰居；飼主短捲灰髮、深綠外套、鏽橘上衣、炭灰長褲及酒紅包，與固定媽媽的長直深髮、白／米上衣、藍褲、棕包配色完全分離；現實場景沒有小狗。"
     },
     {
       "id": "R054-S04",
       "path": "public/assets/reviews/R054/images/R054-S04.webp",
-      "bytes": 207378,
-      "sha256": "c801db658759d67834be4662c8dc590cf46521e9d0bb912f135bb947595875a0",
+      "bytes": 137664,
+      "sha256": "34ca7fc3cd18ce00cf3a16fca504b50ea6678774dc9fc02d0c1a337d7d203569",
       "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
       "cast": "PASS",
-      "semanticCheck": "病床、床欄、白床單與醫療設備明確；generic 病童穿公主服，護理師調皇冠、醫師鼓勵、generic 家長陪伴，無協會標誌或侵入性處置。"
+      "semanticCheck": "陌生病童具中深膚色、雀斑、黑色緊密捲髮雙髮髻與藍綠公主服，與主角女孩及小月明顯不同；陪伴家長為戴方框眼鏡、留鬍子、穿芥末黃毛衣的 generic 父親。病床、醫師、護理師、皇冠與公主心願均完整。"
     },
     {
       "id": "R054-S05",
@@ -54,6 +54,8 @@
     }
   ],
   "rejectedAttempts": [
-    "R054-S01 v1 used a mother-like supervisor; replaced with fixed-teacher identity v2."
+    "R054-S01 v1 used a mother-like supervisor; replaced with fixed-teacher identity v2.",
+    "R054-S03 v1 owner repeated the fixed mother white/cream top, blue trousers and tan bag palette; replaced with short gray curls and green/rust/charcoal/burgundy palette.",
+    "R054-S04 v1 patient and bedside mother-like relative resembled the recurring protagonist family; replaced with a distinct Black child and generic father."
   ]
 }
