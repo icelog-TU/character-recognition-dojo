@@ -2358,15 +2358,9 @@ AI 必須把這份課程序列視為鎖定邊界。
   "requiredRounds": 5,
   "packageStatus": "dependency-blocked-asset-complete",
   "dependsOnLessons": [
-    "L436",
-    "L437",
-    "L438",
     "L439"
   ],
   "provisionalLearnedChars": [
-    "補",
-    "修",
-    "習",
     "練"
   ],
   "allowedChars": [
@@ -2831,8 +2825,7 @@ AI 必須把這份課程序列視為鎖定邊界。
     }
   ],
   "releaseBlockers": [
-    "R053/R054 after L435 before L436",
-    "Contiguous numbered predecessors L436-L439"
+    "Contiguous numbered predecessor L439"
   ],
   "sentences": [
     {
@@ -3519,7 +3512,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 }
 ```
 
-Latest fetch origin/main 5ab2118f has integrated R053/R054. Release still requires contiguous ordered integration of L436–L439 before L440; these are Release blockers, not missing Production assets.
+Latest fetch origin/main c243d7d3 has integrated R053/R054 and L436–L438. Release still requires L439 before L440; this is a Release blocker, not a missing Production asset. The locked 444-character set and every sentence/game were rechecked without content changes.
 
 ## Browser QA
 

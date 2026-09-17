@@ -2,7 +2,7 @@
 
 狀態：dependency-blocked-asset-complete
 分支：codex/l440-complete-package
-製作鎖定 base：72b61a615628b25a2c78b63c9c400f9adcca946f。交包前最新 fetch origin/main：5ab2118f（R053/R054 已整合）；正式單字課仍到 L435「助」，439 個已學字。
+製作鎖定 base：72b61a615628b25a2c78b63c9c400f9adcca946f。交包前最新 fetch origin/main：c243d7d3（R053/R054、L436–L438 已整合）；正式單字課到 L438「習」，442 個已學字。
 正式 handoff 鎖定 allowedChars：439 + 補修習練 + 運，共 444 字；未使用「賽」。
 
 ## 交付與驗證
@@ -14,7 +14,6 @@
 - 全部音檔可解碼；G05 三音檔 mean volume 為 -18.2／-18.7／-17.4 dB，差 1.3 dB。
 - 九段 final M4A 的 timing 齊全，80–900ms、不重疊，末字結束避開尾端靜音。十段 AI 聽音結果見 QA JSON，不等同人工驗收。
 - tools:check、ai:check、curriculum:audit-state：PASS。隔離 validate:production：PASS；assets:audit --strict：PASS，5 圖／10 音、零警告。
-- pushed-branch package-intake --strict：PASS，5 圖／10 音、五種 Stage 4 類型完整、零 blocking defect；驗證固定資產 commit c56bf639b47dae33bd2839c6f640a81dff6d855e。
 
 ## 逐圖 style-lock / cast
 
@@ -39,11 +38,11 @@ Local isolated Vite fixture; base prerequisite completion and provisional senten
 
 ## Release 依賴與交接
 
-最新 main 已整合 R053/R054。Release 仍須先依序整合 L436「補」、L437「修」、L438「習」、L439「練」；這些是 ordered integration blocker，不是本包缺件。
+最新 main 已整合 R053/R054 及 L436–L438。Release 仍須先整合 L439「練」；這些是 ordered integration blocker，不是本包缺件。
 Production 不 merge main，不修改 production JSON、planner、ledger 或部署；ignored 音訊中間檔及快取保留。
 
-固定資產 SHA：c56bf639b47dae33bd2839c6f640a81dff6d855e。後續 commit 僅補 intake 與 registry 紀錄。
+固定資產 SHA：25954642fb5d0c1a83a200ab97c622bd8a0bcad7。後續 commit 僅補 latest-main recheck、intake 與 registry 紀錄。
 
-Pre-merge 圖片預覽（非正式 main）：https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L440&ref=c56bf639b47dae33bd2839c6f640a81dff6d855e
-音訊預覽：https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L440&ref=c56bf639b47dae33bd2839c6f640a81dff6d855e
+Pre-merge 圖片預覽（非正式 main）：https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L440&ref=25954642fb5d0c1a83a200ab97c622bd8a0bcad7
+音訊預覽：https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L440&ref=25954642fb5d0c1a83a200ab97c622bd8a0bcad7
 本包尚未 merge/deploy，不宣稱已正式上線。
