@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L450 | 舞 | claimed | Production C / parallel-c | codex/l450-complete-package | L439-L449; R055/R056 follow L450 | 樂、音、拍、歌、唱 | curriculum-workflow/lesson-requests/L450.json; curriculum-workflow/generated/L450-generation-packet.md; curriculum-workflow/drafts/L450-draft.json | public/assets/lessons/L450/ | Teacher-approved five sentences; source main a5779c4b; locked 448 allowed chars. L439-L449 block Release; R055/R056 are later milestone modules and excluded. |
 
 ## Status Values
 
