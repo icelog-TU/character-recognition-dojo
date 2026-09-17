@@ -1,0 +1,807 @@
+{
+  "id": "L431",
+  "order": 431,
+  "title": "由",
+  "newChars": [
+    "由"
+  ],
+  "zhuyin": {
+    "由": "ㄧㄡˊ"
+  },
+  "dependsOnLessons": [
+    "L426",
+    "L427",
+    "L428",
+    "L429",
+    "L430"
+  ],
+  "provisionalLearnedChars": [
+    "輪",
+    "員",
+    "自",
+    "己",
+    "主"
+  ],
+  "packageStatus": "dependency-blocked-asset-complete",
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L430",
+    "reviewPairs": [
+      {
+        "ids": [
+          "R051",
+          "R052"
+        ],
+        "afterLessonOrder": 420,
+        "targetLessonRange": {
+          "startOrder": 391,
+          "endOrder": 420
+        }
+      }
+    ]
+  },
+  "teacherNotes": "Formal approved L431 handoff. Base f4bc071d, production L420教/424 learned Han; allowed430 with only provisional 輪員自己主 and new由. 活於 unlearned; no 自由活動/由於. Release requires ordered L421-L430 plus R051/R052 milestone420 covering391-420. S01 neighbor dog entrusted temporarily; mother supervises girl. S02 free choice among offered flowers does not mean free goods. S03 fish is storybook protagonist,角 ㄐㄧㄠˇ. S04 fully clothed girl puts on jacket independently;己 ㄐㄧˇ not已. S05 recurring你 boy sky-blue top/green shorts/blue shoes,not brother or Xiaoguang. No image text/numbers or long-sentence exception. Production package only; Release owns shared JSON/planner/ledger integration and main merge.",
+  "requiredRounds": 5,
+  "charAudio": {
+    "由": "/assets/lessons/L431/audio/char-u7531.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L431-S01",
+      "text": "主人不在，由我照顧小狗。",
+      "spokenText": "主人不在由我照顧小狗",
+      "displayLines": [
+        "主人不在，",
+        "由我照顧",
+        "小狗。"
+      ],
+      "focusChar": "由",
+      "imageNotes": "熟識鄰居外出，將小狗暫時託付主角家照顧。主角小女孩在媽媽陪同下，把裝好的飼料碗放到小狗面前，旁邊備有飲水與狗床；媽媽在旁照看，不代替女孩完成動作。這隻狗是受託照顧的鄰居小狗，不是主角家原有寵物，也不是陌生流浪犬。主人不在畫面中，不畫成孩子獨自在家負責一切。",
+      "approved": true,
+      "imagePrompt": "One finished square 1:1 children's textbook illustration. Match attached sheet: top row ALL FIVE L058 images STYLE ONLY for rich warm pencil-and-watercolor, softly modeled faces, substantial clean detail, bright natural Taiwan home light, consistent expressive preschool proportions. Not generic cartoon, simplistic wash, thin Japanese watercolor, anime, 3D or photo. Refined examples middle row; family identities from L154-S01/L162-S04/L163-S02 bottom row. Recurring girl dark short bob with pink hairclip, pink cardigan over cream blouse, navy skirt, pink shoes; mother shoulder-length dark hair,cream blouse,blue trousers; father short dark hair,blue shirt,khaki trousers. No readable text,letters,numbers,signs,logos,labels,bubbles,watermarks anywhere. Safe square margins, phone-readable action, natural hands and limbs. Single coherent scene, not collage.  L431-S01: Bright familiar family living room. A neighbor's small brown-and-white puppy is temporarily being cared for here while its owner is absent. Girl kneels and gently sets down an already filled bowl of dog kibble immediately in front of the puppy. A water bowl and small portable dog bed with a folded visiting-dog carrier nearby clarify temporary pet care. Mother beside girl supervises with a warm smile, hands relaxed, does not do the feeding for her. Owner completely absent, no stranger and not a stray rescue scene. Girl confident, mother visibly present, dog interested in food. Warm bookshelf/plants/wood floor home. Do not portray child alone or huge pet, no permanent family-pet photo wall.",
+      "imageSrc": "/assets/lessons/L431/images/L431-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L431/audio/L431-S01.m4a",
+        "durationMs": 3019,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 300
+          },
+          {
+            "charIndex": 1,
+            "startMs": 300,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 840
+          },
+          {
+            "charIndex": 3,
+            "startMs": 840,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1220,
+            "endMs": 1360
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1360,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1660,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1880,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2040,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2400,
+            "endMs": 2520
+          }
+        ]
+      }
+    },
+    {
+      "id": "L431-S02",
+      "text": "店員說，這些花可以自由選。",
+      "spokenText": "店員說這些花可以自由選",
+      "displayLines": [
+        "店員說，",
+        "這些花可以",
+        "自由選。"
+      ],
+      "focusChar": "由",
+      "imageNotes": "花店裡，generic adult 店員張手示意面前幾桶可供搭配花束的鮮花，讓主角小女孩自行挑選喜歡的花；主角媽媽陪在旁邊。女孩正指向其中一種花，店員準備取出搭配。表達可在指定範圍選花，不是免費贈送，也不是任意採走店裡所有花。無價牌文字或數字。",
+      "approved": true,
+      "imagePrompt": "One finished square 1:1 children's textbook illustration. Match attached sheet: top row ALL FIVE L058 images STYLE ONLY for rich warm pencil-and-watercolor, softly modeled faces, substantial clean detail, bright natural Taiwan home light, consistent expressive preschool proportions. Not generic cartoon, simplistic wash, thin Japanese watercolor, anime, 3D or photo. Refined examples middle row; family identities from L154-S01/L162-S04/L163-S02 bottom row. Recurring girl dark short bob with pink hairclip, pink cardigan over cream blouse, navy skirt, pink shoes; mother shoulder-length dark hair,cream blouse,blue trousers; father short dark hair,blue shirt,khaki trousers. No readable text,letters,numbers,signs,logos,labels,bubbles,watermarks anywhere. Safe square margins, phone-readable action, natural hands and limbs. Single coherent scene, not collage.  L431-S02: Inside a bright flower shop, a GENERIC adult shop clerk with tied-up auburn hair and sage-green apron, facial design DISTINCT from mother, smiles and opens palm toward several buckets of flowers offered for a bouquet. Girl points to one chosen flower variety; clerk is ready to take a stem and assemble bouquet. Mother stands beside girl. The selection is limited to the presented buckets; no grabbing entire shop, no free-gift/payment signage, no price tags. Clear flower colors and purposeful choosing gesture, tasteful cozy detailed shop.",
+      "imageSrc": "/assets/lessons/L431/images/L431-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L431/audio/L431-S02.m4a",
+        "durationMs": 2856,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 200
+          },
+          {
+            "charIndex": 1,
+            "startMs": 200,
+            "endMs": 440
+          },
+          {
+            "charIndex": 2,
+            "startMs": 440,
+            "endMs": 760
+          },
+          {
+            "charIndex": 3,
+            "startMs": 760,
+            "endMs": 980
+          },
+          {
+            "charIndex": 4,
+            "startMs": 980,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1200,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1440,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1680,
+            "endMs": 1920
+          },
+          {
+            "charIndex": 8,
+            "startMs": 1920,
+            "endMs": 2130
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2130,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 10,
+            "startMs": 2340,
+            "endMs": 2640
+          }
+        ]
+      }
+    },
+    {
+      "id": "L431-S03",
+      "text": "我自己選的書，主角是小魚。",
+      "spokenText": "我自己選的書主角是小魚",
+      "displayLines": [
+        "我自己",
+        "選的書，",
+        "主角是小魚。"
+      ],
+      "focusChar": "主",
+      "imageNotes": "家中閱讀角，主角小女孩把親自挑選的繪本展示給主角爸爸看，指著書中居於畫面中心的小魚角色。書頁以連貫的水中插畫呈現，小魚外觀可辨識、是主要角色，沒有可讀書名或內文。不要畫成魚類圖鑑、家中水族箱，或女孩正在畫魚。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "7": "ㄐㄧㄠˇ"
+      },
+      "imagePrompt": "One finished square 1:1 children's textbook illustration. Match attached sheet: top row ALL FIVE L058 images STYLE ONLY for rich warm pencil-and-watercolor, softly modeled faces, substantial clean detail, bright natural Taiwan home light, consistent expressive preschool proportions. Not generic cartoon, simplistic wash, thin Japanese watercolor, anime, 3D or photo. Refined examples middle row; family identities from L154-S01/L162-S04/L163-S02 bottom row. Recurring girl dark short bob with pink hairclip, pink cardigan over cream blouse, navy skirt, pink shoes; mother shoulder-length dark hair,cream blouse,blue trousers; father short dark hair,blue shirt,khaki trousers. No readable text,letters,numbers,signs,logos,labels,bubbles,watermarks anywhere. Safe square margins, phone-readable action, natural hands and limbs. Single coherent scene, not collage.  L431-S03: Bright home reading nook. Recurring girl proudly holds an open picture storybook she chose herself toward seated recurring FATHER in blue shirt and khaki trousers. Girl points into the book at a cheerful small orange fish protagonist prominently centered in a continuous underwater adventure illustration. Book picture shows same identifiable fish as central story character amid plants and gentle scenery, no specimen chart, no scientific catalog, no readable title or letters. Father leans attentively toward book, no mother substituting father. No real aquarium, no drawing materials, girl is showing a storybook not drawing fish.",
+      "imageSrc": "/assets/lessons/L431/images/L431-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L431/audio/L431-S03.m4a",
+        "durationMs": 3761,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 610
+          },
+          {
+            "charIndex": 2,
+            "startMs": 610,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1200,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1400,
+            "endMs": 1740
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1740,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1980,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2300,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2760,
+            "endMs": 3160
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3160,
+            "endMs": 3420
+          }
+        ]
+      }
+    },
+    {
+      "id": "L431-S04",
+      "text": "我會自己穿衣，不用幫忙。",
+      "spokenText": "我會自己穿衣不用幫忙",
+      "displayLines": [
+        "我會",
+        "自己穿衣，",
+        "不用幫忙。"
+      ],
+      "focusChar": "己",
+      "imageNotes": "主角小女孩衣著完整，已穿好內搭上衣，正自己把手伸入外套另一側袖子。主角媽媽原本準備幫忙，聽見女孩表達後停下，微笑看她完成。女孩動作有把握，不是生氣拒絕媽媽，也不是手卡住。無脫衣或裸露畫面，不把穿衣改成穿鞋、洗臉。",
+      "approved": true,
+      "imagePrompt": "One finished square 1:1 children's textbook illustration. Match attached sheet: top row ALL FIVE L058 images STYLE ONLY for rich warm pencil-and-watercolor, softly modeled faces, substantial clean detail, bright natural Taiwan home light, consistent expressive preschool proportions. Not generic cartoon, simplistic wash, thin Japanese watercolor, anime, 3D or photo. Refined examples middle row; family identities from L154-S01/L162-S04/L163-S02 bottom row. Recurring girl dark short bob with pink hairclip, pink cardigan over cream blouse, navy skirt, pink shoes; mother shoulder-length dark hair,cream blouse,blue trousers; father short dark hair,blue shirt,khaki trousers. No readable text,letters,numbers,signs,logos,labels,bubbles,watermarks anywhere. Safe square margins, phone-readable action, natural hands and limbs. Single coherent scene, not collage.  L431-S04: Bright tidy family bedroom, recurring girl fully dressed in cream inner blouse and navy skirt, putting on her pink cardigan herself: one arm already through one sleeve, other hand/arm confidently entering the remaining sleeve. She smiles calmly proud, no frustration or trapped arm. Mother in cream blouse and blue trousers nearby has just lowered her hands and smiles, allowing girl to finish independently. Jacket visibly being donned, not shoes or washing. Girl fully clothed throughout, no nudity, anatomically clear sleeves/hands. Cozy normal wardrobe/home, no labels.",
+      "imageSrc": "/assets/lessons/L431/images/L431-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L431/audio/L431-S04.m4a",
+        "durationMs": 2624,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 280
+          },
+          {
+            "charIndex": 1,
+            "startMs": 280,
+            "endMs": 620
+          },
+          {
+            "charIndex": 2,
+            "startMs": 620,
+            "endMs": 790
+          },
+          {
+            "charIndex": 3,
+            "startMs": 790,
+            "endMs": 960
+          },
+          {
+            "charIndex": 4,
+            "startMs": 960,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1300,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1720,
+            "endMs": 1810
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1810,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 8,
+            "startMs": 1900,
+            "endMs": 2160
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2160,
+            "endMs": 2400
+          }
+        ]
+      }
+    },
+    {
+      "id": "L431-S05",
+      "text": "我們輪流，由你先玩。",
+      "spokenText": "我們輪流由你先玩",
+      "displayLines": [
+        "我們輪流，",
+        "由你先玩。"
+      ],
+      "focusChar": "由",
+      "imageNotes": "家中遊戲墊上，主角小女孩與固定「你」小男孩想玩同一台遙控玩具車。女孩將遙控器交給男孩，示意他先玩，自己坐在旁邊等待；玩具車停在兩人面前的安全空地。不是把玩具送給對方，也不是兩人搶奪。 「你」使用既有固定小男孩形象：短而略蓬的深色頭髮、天空藍上衣、綠短褲、藍鞋；橘色背包可放旁邊。不使用小光或主角哥哥代替。",
+      "approved": true,
+      "imagePrompt": "One finished square 1:1 children's textbook illustration. Match attached sheet: top row ALL FIVE L058 images STYLE ONLY for rich warm pencil-and-watercolor, softly modeled faces, substantial clean detail, bright natural Taiwan home light, consistent expressive preschool proportions. Not generic cartoon, simplistic wash, thin Japanese watercolor, anime, 3D or photo. Refined examples middle row; family identities from L154-S01/L162-S04/L163-S02 bottom row. Recurring girl dark short bob with pink hairclip, pink cardigan over cream blouse, navy skirt, pink shoes; mother shoulder-length dark hair,cream blouse,blue trousers; father short dark hair,blue shirt,khaki trousers. No readable text,letters,numbers,signs,logos,labels,bubbles,watermarks anywhere. Safe square margins, phone-readable action, natural hands and limbs. Single coherent scene, not collage.  L431-S05: On a play mat in bright family living room, recurring girl and specifically recurring YOU young boy are seated beside each other. YOU boy preschool age, short slightly tousled dark hair, SKY-BLUE SOLID shirt, GREEN SHORTS, BLUE SHOES, small orange backpack set aside. Match refined recurring-you boy from L058-S04/S05 visual context; not striped-shirt brother, not sporty orange-shirt boy, not bespectacled Xiaoguang. Girl offers and transfers the ONE remote controller into boy's waiting hands, smiles and waits patiently, allowing his first turn. ONE remote-control toy car parked in safe open floor space in front of them. This is friendly taking turns not permanent gifting or tug-of-war. No duplicate controllers, no racing/motion while handing it. Clear eye contact and relaxed cooperative hands.",
+      "imageSrc": "/assets/lessons/L431/images/L431-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L431/audio/L431-S05.m4a",
+        "durationMs": 3274,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 720
+          },
+          {
+            "charIndex": 2,
+            "startMs": 720,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1300,
+            "endMs": 1540
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1540,
+            "endMs": 2220
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2220,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2540,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2800,
+            "endMs": 3060
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L431-G01",
+      "type": "find-character",
+      "sentenceId": "L431-S02",
+      "targetChar": "由",
+      "targetCharIndex": 9,
+      "prompt": "請幫小兔子找出由，點一下句子中的由。"
+    },
+    {
+      "id": "L431-G02",
+      "type": "teach-character",
+      "sentenceId": "L431-S01",
+      "targetChar": "由",
+      "targetCharIndex": 4,
+      "prompt": "請你幫小兔子念這個字。",
+      "teachAudio": {
+        "prefixText": "主人不在",
+        "suffixText": "我照顧小狗",
+        "prefixSrc": "/assets/lessons/L431/audio/L431-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L431/audio/L431-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L431/audio/L431-G02-prefix.m4a",
+          "durationMs": 1881,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 400
+            },
+            {
+              "charIndex": 1,
+              "startMs": 400,
+              "endMs": 820
+            },
+            {
+              "charIndex": 2,
+              "startMs": 820,
+              "endMs": 1280
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1280,
+              "endMs": 1560
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L431/audio/L431-G02-suffix.m4a",
+          "durationMs": 1973,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 420
+            },
+            {
+              "charIndex": 1,
+              "startMs": 420,
+              "endMs": 760
+            },
+            {
+              "charIndex": 2,
+              "startMs": 760,
+              "endMs": 980
+            },
+            {
+              "charIndex": 3,
+              "startMs": 980,
+              "endMs": 1520
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1520,
+              "endMs": 1720
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L431-G03",
+      "type": "missing-character",
+      "sentenceId": "L431-S05",
+      "targetChar": "由",
+      "targetCharIndex": 4,
+      "prompt": "請幫小兔子找回少掉的字。",
+      "missingIndexes": [
+        4
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "由",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "給",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "和",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L431-G04",
+      "type": "partial-order",
+      "sentenceId": "L431-S03",
+      "targetChar": "主",
+      "targetCharIndex": 6,
+      "prompt": "請幫小兔子把字放回去。",
+      "missingIndexes": [
+        8,
+        9,
+        10
+      ],
+      "options": [
+        {
+          "id": "card-yu",
+          "text": "魚",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-shi",
+          "text": "是",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-xiao",
+          "text": "小",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L431-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L431-S04",
+      "targetChar": "己",
+      "targetCharIndex": 3,
+      "prompt": "先按朋友的頭聽，再選出念對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "我會自己穿衣，不用幫忙。",
+          "spokenText": "我會自己穿衣不用幫忙",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L431/audio/L431-S04.m4a",
+          "audio": {
+            "src": "/assets/lessons/L431/audio/L431-S04.m4a",
+            "durationMs": 2624,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 620
+              },
+              {
+                "charIndex": 2,
+                "startMs": 620,
+                "endMs": 790
+              },
+              {
+                "charIndex": 3,
+                "startMs": 790,
+                "endMs": 960
+              },
+              {
+                "charIndex": 4,
+                "startMs": 960,
+                "endMs": 1300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1300,
+                "endMs": 1440
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1720,
+                "endMs": 1810
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1810,
+                "endMs": 1900
+              },
+              {
+                "charIndex": 8,
+                "startMs": 1900,
+                "endMs": 2160
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2160,
+                "endMs": 2400
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "我會自己洗臉，不用幫忙。",
+          "spokenText": "我會自己洗臉不用幫忙",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L431/audio/L431-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L431/audio/L431-G05-wrong-one.m4a",
+            "durationMs": 3622,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 900
+              },
+              {
+                "charIndex": 3,
+                "startMs": 900,
+                "endMs": 1080
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1080,
+                "endMs": 1500
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1500,
+                "endMs": 1760
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2520,
+                "endMs": 2650
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2650,
+                "endMs": 2780
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2780,
+                "endMs": 3080
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3080,
+                "endMs": 3380
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "我會自己穿鞋，不用幫忙。",
+          "spokenText": "我會自己穿鞋不用幫忙",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L431/audio/L431-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L431/audio/L431-G05-wrong-two.m4a",
+            "durationMs": 3459,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 300
+              },
+              {
+                "charIndex": 1,
+                "startMs": 300,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 870
+              },
+              {
+                "charIndex": 3,
+                "startMs": 870,
+                "endMs": 1040
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1040,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1480,
+                "endMs": 1700
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2420,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2540,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2660,
+                "endMs": 2960
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2960,
+                "endMs": 3240
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "productionQA": {
+    "imageChecks": [
+      {
+        "sentenceId": "L431-S01",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Neighbor puppy receives girl-placed kibble bowl with mother supervising; portable carrier,water bowl and dog bed; owner absent.",
+        "castEvidence": "Recurring mother and girl match family references.",
+        "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+      },
+      {
+        "sentenceId": "L431-S02",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Girl chooses among offered flower buckets; clerk gestures and prepares a stem; mother accompanies; no price/free-gift text.",
+        "castEvidence": "Clerk auburn bun/green apron distinct from recurring mother.",
+        "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+      },
+      {
+        "sentenceId": "L431-S03",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Girl shows father an open storybook and points to central small fish in connected underwater illustration; no text,aquarium or drawing action.",
+        "castEvidence": "Father blue shirt/khaki trousers and recurring girl match family anchors.",
+        "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+      },
+      {
+        "sentenceId": "L431-S04",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Fully clothed girl confidently puts on pink cardigan herself; mother stands with hands lowered and smiles.",
+        "castEvidence": "Stable girl bob/pink clip/navy skirt and mother cream blouse/blue trousers.",
+        "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+      },
+      {
+        "sentenceId": "L431-S05",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Girl hands the single remote to recurring you boy and waits,one toy car ahead; friendly turn-taking.",
+        "castEvidence": "Recurring you boy sky-blue shirt,green shorts,blue shoes,tousled dark hair; not older brother/Xiaoguang.",
+        "comparison": "Final exported WebP viewed side by side against all five L058 style-only anchors,refined L115/L118/L119/L128 examples,and L154/L162/L163 family anchors; S05 also checked against L012-S01 boy continuity."
+      }
+    ],
+    "browserQA": {
+      "environment": "Chrome 390x844; real LessonPanel imported by isolated local harness,approved L431 draft and only handoff provisional vocabulary; no production progress written.",
+      "playback": "All 10 final M4A played to ended. Initial autoplay policy denial resolved by explicit gesture; dedicated G02 prefix and suffix play separately.",
+      "G01": "S02 index9由 selected and 下一題 appeared.",
+      "G02": "S01 index4由 highlighted after helper stop; prefix主人不在 and suffix我照顧小狗 playback completed.",
+      "G03": "Three distinct cards 給/和/由; choosing由 fills S05 index4 and exposes 下一題.",
+      "G04": "S03角 displays ㄐㄧㄠˇ; three shuffled single-Han cards 是→小→魚 complete.",
+      "G05": "All three animal options played correct referenced clips; correct option uses S04,not S05. Selection exposes reward; after animation red下一課 and white回首頁休息 visible; next click emits navigation next.",
+      "limitations": [
+        "Sustained press-to-record and recorded-voice replay could not be operated with the available browser tool; microphone recording not certified.",
+        "Direct human listening and physical-phone highlight smoothness are not claimed; acoustic checks use actual audio input to an AI model."
+      ],
+      "disposition": "Production SOP browser-tooling fallback for recording; dedicated fragment assets/timings and non-browser technical gates complete."
+    },
+    "evidence": "curriculum-workflow/generated/L431-qa-evidence.json",
+    "alignmentEvidence": "curriculum-workflow/generated/L431-alignment-evidence.json"
+  }
+}

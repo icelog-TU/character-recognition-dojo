@@ -1,0 +1,10 @@
+import fs from 'node:fs';import{createRequire}from'node:module';import{execFileSync}from'node:child_process';const require=createRequire(import.meta.url),ff=require('@ffmpeg-installer/ffmpeg').path,probe=require('@ffprobe-installer/ffprobe').path;
+const p='curriculum-workflow/drafts/L433-draft.json',d=JSON.parse(fs.readFileSync(p,'utf8')),changes=[];
+function adjust(t,i,field,value,evidence){changes.push({src:t.src,charIndex:i,field,before:t.charTimings[i][field],after:value,evidence});t.charTimings[i][field]=value;}
+for(const [index,endMs,cutSeconds] of [[1,2795,2.995],[4,2648,2.848]]){const t=d.sentences[index].audio,file='public'+t.src,tmp=file+'.refined.m4a';execFileSync(ff,['-y','-v','error','-i',file,'-t',String(cutSeconds),'-c:a','aac','-b:a','96k','-ar','44100','-ac','1',tmp]);fs.renameSync(tmp,file);t.durationMs=Math.round(Number(execFileSync(probe,['-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',file],{encoding:'utf8'}))*1000);adjust(t,t.charTimings.length-1,'endMs',endMs,'Final voiced endpoint from -45 dB silencedetect; only terminal silence trimmed, 200 ms retained.');}
+adjust(d.sentences[3].audio,4,'startMs',1806,'S04 pause 1433–1846 ms at -40 dB; start 是 40 ms before detected onset.');
+adjust(d.sentences[3].audio,9,'endMs',3932,'S04 final voiced endpoint 3931.54 ms at -45 dB.');
+adjust(d.sentenceGames[1].teachAudio.prefixAudio,0,'endMs',877,'Prefix final voiced endpoint 876.94 ms at -45 dB.');
+adjust(d.sentenceGames[4].options[1].audio,5,'startMs',2004,'Wrong-one pause 1381–2044 ms at -40 dB; start 由 40 ms before detected onset.');
+const t=d.sentenceGames[1].teachAudio.suffixAudio,file='public'+t.src,tmp=file+'.volume.m4a';execFileSync(ff,['-y','-v','error','-i',file,'-af','volume=8dB,alimiter=limit=0.794:level=false','-c:a','aac','-b:a','96k','-ar','44100','-ac','1',tmp]);fs.renameSync(tmp,file);changes.push({src:t.src,change:'Uniform +8 dB suffix gain with limiter; no speech cut or splice',beforeMeanDb:-27.1});
+fs.writeFileSync(p,JSON.stringify(d,null,2)+'\n');fs.writeFileSync('curriculum-workflow/generated/L433-timing-corrections.json',JSON.stringify(changes,null,2)+'\n');

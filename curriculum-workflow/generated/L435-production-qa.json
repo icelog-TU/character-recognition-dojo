@@ -1,0 +1,245 @@
+{
+  "unit": "L435",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "f4bc071d4d14a15bd0e2927a710f197110da6789",
+  "lockedAllowedChars": 432,
+  "coverage": {
+    "助": 3,
+    "互": 2,
+    "願": 2,
+    "意": 2,
+    "由": 1,
+    "主": 1
+  },
+  "checks": {
+    "requestDraftPacket": "PASS",
+    "allowedCharacters": "PASS",
+    "hanCounts": [
+      10,
+      11,
+      7,
+      11,
+      10
+    ],
+    "stage4Index": "PASS",
+    "displayLines": "PASS",
+    "productionAssetsLessonLocal": "PASS",
+    "strictFormatsLessonLocal": "PASS, zero warnings",
+    "audioDecode": "PASS all 10",
+    "imageStyleCast": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
+    "browserQA": "Local isolated app fixture; base prerequisites seeded in memory and provisional sentence zhuyin supplied only in fixture. Actual UI scope recorded in production report. Remote tool has no audible computer-output return or physical-phone microphone channel. Human continuous listening, syllable-by-syllable audiovisual synchronization and phone recording acceptance remain unperformed; teacher subjective review remains post-merge. First stage playback completed. Stage 2 rendered three 助 cards and 小/光/願 distractors; one correct selection verified. Stage 3 all five sentence buttons played to ended and UI displayed 句子都聽完了. At 390x844 viewport, G01 correct 助, G02 displayed target and recording prompt (physical recording skipped), G03 correct 助, G04 信給對方 ordering succeeded. G05 each of three reader buttons tapped; no audio-return channel, so this is UI activation only. Three asynchronous browser-listener console errors were present; no media decode error was reported. Human continuous listening, synchronized highlighting and physical-phone recording remain unperformed. Teacher subjective review remains post-merge."
+  },
+  "pronunciation": {
+    "kind": "AI auditory review, not human QA; early model responses contained irrelevant explanations; targeted final reviews resolve S01 加法, S04 相/信 and regenerated G05 買; raw responses retained here as provenance",
+    "results": [
+      {
+        "name": "char-u52a9",
+        "heardText": "助",
+        "pronunciationResult": "PASS",
+        "explanation": "The syllable '助' was clearly heard with the correct fourth tone, matching the expected pronunciation: ㄓㄨˋ.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L435-S01",
+        "heardText": "小光願意幫助我學加法",
+        "pronunciationResult": "PASS",
+        "explanation": "「小」的發音清楚，可判定為ㄒㄧㄠˇ。「加法」的發音也準確，分別是ㄐㄧㄚ和ㄈㄚˇ，兩個音節的聲調和發音到位。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L435-S02",
+        "heardText": "我們互助合作把海報畫完",
+        "pronunciationResult": "PASS",
+        "explanation": "所有的音節和聲調都清楚可辨，包括『我們』的「ㄨㄛˇ˙ㄇㄣˊ」、『互助』的「ㄏㄨˋ ㄓㄨˋ」、『合作』的「ㄏㄜˊ ㄗㄨㄛˋ」、『把』的「ㄅㄚˇ」、『海報』的「ㄏㄞˇ ㄅㄠˋ」、『畫完』的「ㄏㄨㄚˋ ㄨㄢˊ」，都符合預期。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L435-S03",
+        "heardText": "車主不願意賣車",
+        "pronunciationResult": "PASS",
+        "explanation": "Each syllable and tone is clear and matches the expected pronunciation. The tones for 車 (ㄔㄜ, first tone), 主 (ㄓㄨˇ, third tone), 不 (ㄅㄨˋ, fourth tone), 願 (ㄩㄢˋ, fourth tone), 意 (ㄧˋ, fourth tone), 賣 (ㄇㄞˋ, fourth tone), 車 (ㄔㄜ, first tone) are accurate. There are no mispronunciations or incorrect tones.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L435-S04",
+        "heardText": "我和小月互相寫信給對方",
+        "pronunciationResult": "PASS",
+        "explanation": "根據音訊判斷，‘相’發音為ㄒㄧㄤ第一聲，‘信’發音為ㄒㄧㄣˋ第四聲，符合預期標準。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L435-S05",
+        "heardText": "自助餐的菜由你自己選",
+        "pronunciationResult": "PASS",
+        "explanation": "每個音節發音清楚，聽到的音是：ㄗˋ ㄓㄨˋ ㄘㄢ ㄉㄜ˙ ㄘㄞˋ ㄧㄡˊ ㄋㄧˇ ㄗˋ ㄐㄧˇ ㄒㄩㄢˇ，聲調和預期吻合。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L435-G02-prefix",
+        "heardText": "我們 互",
+        "pronunciationResult": "PASS",
+        "explanation": "The heard text matches the expected '我們互'. The syllables '我們' (ㄨㄛˇ ㄇㄣ˙) and '互' (ㄏㄨˋ) are clearly audible with the correct tones.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L435-G02-suffix",
+        "heardText": "合作把海報畫完",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的語音與預期完全一致，聲調和每個音節都非常清晰精準。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L435-G05-wrong-one",
+        "heardText": "車主不願意買車",
+        "pronunciationResult": "PASS",
+        "explanation": "所有音節和聲調都與期待的內容相符：'買'字明顯為第三聲ㄇㄞˇ，而非第四聲賣ㄇㄞˋ。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L435-G05-wrong-two",
+        "heardText": "車主很願意賣車",
+        "pronunciationResult": "PASS",
+        "explanation": "每個字音節和預期完全一致，聲調準確，沒有明顯出錯。",
+        "finalSyllableAudible": true
+      }
+    ]
+  },
+  "folderBytes": 1268407,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L435/images/L435-S01.webp",
+      "bytes": 158002,
+      "sha256": "5f27a5fe1d8b591aba6d7481de7f311a430c48b7c70d39f1baffd43e2164db04"
+    },
+    {
+      "path": "public/assets/lessons/L435/images/L435-S02.webp",
+      "bytes": 174806,
+      "sha256": "4e46f20427646e490d4a86c65233e37b9ec133479b32218c8f1150c6f8bd0d4b"
+    },
+    {
+      "path": "public/assets/lessons/L435/images/L435-S03.webp",
+      "bytes": 216284,
+      "sha256": "74fe9ce90b075286875bb09675b483f809429054d9c3834c025cd443214286c0"
+    },
+    {
+      "path": "public/assets/lessons/L435/images/L435-S04.webp",
+      "bytes": 172640,
+      "sha256": "bca35dba6c099804aab29fce5dd2f99577293052c1295adfd54b1d47251afcef"
+    },
+    {
+      "path": "public/assets/lessons/L435/images/L435-S05.webp",
+      "bytes": 191834,
+      "sha256": "c68b81e93e2db8c6d062120f1528553be463784dc3ca4fb286d0cfd856c0c480"
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/char-u52a9.m4a",
+      "bytes": 19888,
+      "sha256": "1ecc92e78324887d56fbb7fd0e23140b3922f79ddb87ffaa01098c58ebd00866",
+      "durationMs": 1190,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.5
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/L435-G02-prefix.m4a",
+      "bytes": 24478,
+      "sha256": "16f2ca55254f01803e11c77ca8d5a4096fc99354a9e5be2eea25fc582263687c",
+      "durationMs": 1950,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.5
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/L435-G02-suffix.m4a",
+      "bytes": 28531,
+      "sha256": "7ab3811b3a538c02b7dbda196415900d8fbd7f530d8294cf4a3cae5cd26a0631",
+      "durationMs": 2320,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -1.8,
+      "meanVolumeDb": -16.8
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/L435-G05-wrong-one.m4a",
+      "bytes": 26738,
+      "sha256": "32f304e5c60b44b8d9f661da2b19ba4d8f6e37396d2b4de581a97b57a8d1560b",
+      "durationMs": 2180,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.1,
+      "meanVolumeDb": -16.4
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/L435-G05-wrong-two.m4a",
+      "bytes": 35361,
+      "sha256": "0b26b1f4c3745501756cefe4d762fc4e3a7fbad0b2f4e1412fcd76f0a9531108",
+      "durationMs": 2920,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.1
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/L435-S01.m4a",
+      "bytes": 43889,
+      "sha256": "c14c44a58aa6fc651d65c23fed6fcfceb17b4ed715e7e978d1b9aefd8404c648",
+      "durationMs": 3640,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.9,
+      "meanVolumeDb": -18.6
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/L435-S02.m4a",
+      "bytes": 55474,
+      "sha256": "612017dcba03566067fab0909084c3af4912a3cf6661b3dc9eb793abd7453c1e",
+      "durationMs": 4380,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.7
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/L435-S03.m4a",
+      "bytes": 33868,
+      "sha256": "b6bd720fe2f7fecb77700035af87b7cfc5e490496862d78e9d84dbdd053e15f9",
+      "durationMs": 2640,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -3.3,
+      "meanVolumeDb": -16.9
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/L435-S04.m4a",
+      "bytes": 44343,
+      "sha256": "b03a70b51ce2389549e3bf30551a32ebe3517fa2c1fb1abea458fa7805d375e1",
+      "durationMs": 3550,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.3,
+      "meanVolumeDb": -18.6
+    },
+    {
+      "path": "public/assets/lessons/L435/audio/L435-S05.m4a",
+      "bytes": 42271,
+      "sha256": "d38a52f28fc01c38e762e20e312f97c0f8608f9074553e0d62791f97cdc9da8e",
+      "durationMs": 3500,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.1,
+      "meanVolumeDb": -18.9
+    }
+  ]
+}
