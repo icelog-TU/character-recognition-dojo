@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L451 | 台 | claimed | Production D | `codex/l451-complete-package` | L442:機; L446:音; L447:拍; L448:歌; L449:唱; L450:舞; milestone L450 → R055 → R056 → L451 | 機、音、拍、歌、唱、舞 | `curriculum-workflow/lesson-requests/L451.json`; `curriculum-workflow/generated/L451-generation-packet.md`; `curriculum-workflow/drafts/L451-draft.json` | `public/assets/lessons/L451/`; `curriculum-workflow/audio-inbox/L451/` | Teacher-approved handoff. R055/R056 cover L421-L450, not yet written/merged; Release blockers only. |
 
 ## Status Values
 
