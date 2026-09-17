@@ -28,3 +28,5 @@ No shared curriculum/planner/ledger changes. Only L439 package-owned files and r
 
 Final baseline npm run validate:production: PASS. Final curriculum:audit-state: PASS; expected warning only for unmerged L439 asset directory. Lesson-local strict assets:audit: PASS, 0 warnings.
 
+
+Remote verification checkpoint: d8403b7c6a2c8eb054f38124570f5d89965c69eb at origin/codex/l439-complete-package. npm run curriculum:package-intake -- --unit L439 --ref origin/codex/l439-complete-package --strict: PASS, zero warnings. Five images and ten audio files detected, canonical Stage 4 set complete. Final documentation-only successor is rechecked after push.
