@@ -284,3 +284,5 @@ Post-merge review queue (usable after Release merges/deploys): https://icelog-tu
 Coverage: 台5/3、舞2/2、唱2/2、歌2/2、拍1/1、音1/1; PASS. Han counts 11,11,9,10,11. Full allowed set in request/draft. No previous-six or earlier coverage targets.
 
 Final validation: lesson-local validate:production PASS; full baseline validate:production PASS; strict lesson-local assets audit PASS, zero warnings; curriculum:audit-state PASS (expected unmerged L451 directory notice only). Shared production curriculum/planner/ledger unchanged.
+
+Pushed asset checkpoint bcb9acecbcea331f5ce2d087bdc0eda33520016c at origin/codex/l451-complete-package: strict curriculum:package-intake PASS, zero warnings. Final documentation successor rechecked after push.

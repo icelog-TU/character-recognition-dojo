@@ -25,3 +25,5 @@ Startup tools:check, ai:check, curriculum:audit-state PASS. Lesson-local validat
 Post-merge review queue (usable after Release merges/deploys): https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main ; https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L451&ref=main . Query: npm run asset:review-status -- --unit L451 --ref main
 
 Final validation: lesson-local validate:production PASS; full baseline validate:production PASS; strict lesson-local assets audit PASS, zero warnings; curriculum:audit-state PASS (expected unmerged L451 directory notice only). Shared production curriculum/planner/ledger unchanged.
+
+Pushed asset checkpoint bcb9acecbcea331f5ce2d087bdc0eda33520016c at origin/codex/l451-complete-package: strict curriculum:package-intake PASS, zero warnings. Final documentation successor rechecked after push.
