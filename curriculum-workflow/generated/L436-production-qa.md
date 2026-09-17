@@ -24,13 +24,13 @@ S02 買/學 and G02 prefix 學 contained zero-width or 20–40 ms ASR boundaries
 
 Short isolated syllables produce unstable unprompted ASR spelling, so transcription alone is not treated as pronunciation certification. Three unprompted G02 suffix trials returned 猪/住/處, while its measured pitch falls 14.2 semitones, matching the explicitly requested fourth-tone contour; prompted alignment can return blank on the 363 ms syllable and therefore uses the separately preserved phonetic/pitch review. Standalone 補 ASR returned Bo/go/不, while measured F0 falls 7.6 semitones then rises 1.4 semitones, matching the requested third-tone contour. The raw trials, hashes and sampled pitch curves are preserved in `L436-short-audio-audit.json` and `L436-pitch-audit.json`. This automated evidence is not a teacher or human listening approval.
 
-## Browser evidence and scope
+## Browser QA evidence and scope
 
 The real LessonPanel rendered in an isolated local in-app browser fixture. It wrote neither production JSON nor cloud state. Media `playing`/`ended` events prove playback completion, not subjective listening quality.
 
 - Stage 1: 補/ㄅㄨˇ visible; standalone audio reached ended; stage passed.
 - Stage 2: three 補 cards among three distractors were accepted; 3/3 and stage passed.
-- Stage 3: all five sentence files reached playing then ended; all approved sentence text and zhuyin rendered; stage passed.
+- Stage 3: all five sentence files played to ended; all approved sentence text and zhuyin rendered; stage passed.
 - G01: index 7 補 accepted in S01.
 - G02: exact sentence and target red-frame hold instruction rendered after the prefix phase. Dedicated prefix/suffix files, decoding and timings passed technical gates.
 - G03: 補 selected among 補、上、放 and inserted at S04 index 7.
@@ -41,6 +41,6 @@ Physical microphone capture, the recording bell and child-voice stitched replay 
 
 ## Validation
 
-`tools:check` PASS; `ai:check` PASS; lesson-local package audit PASS; strict asset formats PASS with zero warnings; production assets PASS. Final package media is about 1.16 MiB. `validate:production`, `curriculum:audit-state` and pushed-ref `curriculum:package-intake` are rerun at finalization. Main integration remains blocked only by the listed playable-order dependencies and review milestones.
+`tools:check` PASS; `ai:check` PASS; lesson-local package audit PASS; strict asset formats PASS with zero warnings; production assets PASS. Final package media is about 1.16 MiB. Asset commit `b3e7d82c` was pushed and `curriculum:package-intake -- --unit L436 --ref origin/codex/l436-complete-package` passed with 5 images, 10 audio files and canonical Stage 4. The final evidence-only tip is rechecked after push. Main integration remains blocked only by the listed playable-order dependencies and review milestones.
 
 Post-merge teacher review entry: https://icelog-tu.github.io/character-recognition-dojo/lesson-asset-review.html?unit=L436&ref=main . This package is not yet in the main review queue.
