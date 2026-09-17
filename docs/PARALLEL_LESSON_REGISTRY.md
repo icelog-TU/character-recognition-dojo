@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L437 | 修 | claimed | Production D | `codex/l437-complete-package` | L436:補; R053/R054 release blockers | 補 | `curriculum-workflow/lesson-requests/L437.json`; `curriculum-workflow/generated/L437-generation-packet.md`; `curriculum-workflow/drafts/L437-draft.json` | `public/assets/lessons/L437/`; `curriculum-workflow/audio-inbox/L437/` | Teacher-approved handoff; base origin/main 72b61a61, L435/439 learned chars. Full package production owned by D; Release integration waits for dependencies. |
 
 ## Status Values
 
