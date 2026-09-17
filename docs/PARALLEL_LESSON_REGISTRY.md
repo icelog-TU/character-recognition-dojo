@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L440 | 運 | claimed | Production E | codex/l440-complete-package | L436, L437, L438, L439; R053/R054 after L435 | 補 修 習 練 | curriculum-workflow/lesson-requests/L440.json; curriculum-workflow/generated/L440-generation-packet.md; curriculum-workflow/drafts/L440-draft.json | public/assets/lessons/L440/; curriculum-workflow/audio-inbox/L440/ | Formal teacher-approved handoff. Base 72b61a61 L435; locked 444 Han. Release requires ordered integration of L436-L439 and R053/R054. Production owns package only. |
 
 ## Status Values
 
