@@ -2370,3 +2370,4 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 限制：瀏覽器麥克風未預先授權，因此未操作長按錄音與錄音重播，不宣稱 microphone QA PASS。
 - 驗證：lesson-local package checks、isolated `validate:production`、strict asset audit 均 PASS；full `npm run verify` 留給 Release 在依賴整合後執行。
 - 證據：`curriculum-workflow/generated/L448-alignment-evidence.json`、`curriculum-workflow/generated/L448-qa-evidence.json`。
+- Package intake checkpoint：`npm run curriculum:package-intake -- --unit L448 --ref origin/codex/l448-complete-package --strict` 對 `98f9bdd2` PASS，無 blocking package-status defects。
