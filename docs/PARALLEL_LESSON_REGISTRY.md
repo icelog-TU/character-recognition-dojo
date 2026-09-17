@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L439 | 練 | claimed | Production D | `codex/l439-complete-package` | L436:補, L437:修, L438:習; R053/R054 Release blockers | 補、修、習 | `curriculum-workflow/lesson-requests/L439.json`; `curriculum-workflow/generated/L439-generation-packet.md`; `curriculum-workflow/drafts/L439-draft.json` | `public/assets/lessons/L439/`; `curriculum-workflow/audio-inbox/L439/` | Teacher-approved handoff. Base 72b61a61 L435/439 chars. L437 pushed and handed off, clean worktree confirmed before new claim. Full L439 package owned by D. |
+| L439 | 練 | dependency-blocked-asset-complete | Production D | `codex/l439-complete-package`; claim `be06b244` | L436:補; L437:修; L438:習; R053/R054 Release blockers | 補、修、習 | `curriculum-workflow/lesson-requests/L439.json`; `curriculum-workflow/generated/L439-generation-packet.md`; `curriculum-workflow/drafts/L439-draft.json` | `public/assets/lessons/L439/`; ignored `curriculum-workflow/audio-inbox/L439/` | 5 WebP, 10 M4A, 9 exact-text alignments; each image style/cast PASS; technical gates PASS. G02 recording/stitched replay and human listening tooling fallback documented. Release owns ordered integration. |
 
 ## Status Values
 
