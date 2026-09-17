@@ -41,4 +41,4 @@ Physical microphone capture, the recording bell and child-voice stitched replay 
 
 ## Validation
 
-Startup `tools:check`, `ai:check` and `curriculum:audit-state` passed on the correct source branch. Lesson-local package audit and production asset validation pass. Final package media is about 1.18 MiB. Pushed-ref package intake evidence is recorded after the final commit and push.
+Startup `tools:check`, `ai:check` and `curriculum:audit-state` passed on the correct source branch. Lesson-local package audit, production asset validation, curriculum validation, lint and production build pass; repository-wide validators retain only pre-existing warnings. Final package media is about 1.18 MiB. Asset commit `819f1a14` was pushed and pushed-ref package intake passed with 5 images, 10 audio files and the canonical five Stage 4 game types. A final fetch found newer main commits that only repair earlier lesson assets; the formal production boundary remains L438 and L439–L443 remain the Release blockers.
