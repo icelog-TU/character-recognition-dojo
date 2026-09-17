@@ -1,0 +1,172 @@
+{
+  "unit": "L447",
+  "method": "OpenAI whisper-1 transcript QA plus ffprobe duration and ffmpeg volumedetect on final M4A files",
+  "result": "PASS",
+  "allExpectedHanMatched": true,
+  "g05WrongOptionMeanVolumeSpreadDb": 0.8,
+  "g02": {
+    "prefix": {
+      "src": "/assets/lessons/L447/audio/L447-G02-prefix.m4a",
+      "durationMs": 2180,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 500
+        },
+        {
+          "charIndex": 1,
+          "startMs": 500,
+          "endMs": 820
+        },
+        {
+          "charIndex": 2,
+          "startMs": 820,
+          "endMs": 1160
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1160,
+          "endMs": 1720
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1720,
+          "endMs": 1980
+        }
+      ],
+      "transcript": "我關掉手機。",
+      "tailMs": 200
+    },
+    "suffix": {
+      "src": "/assets/lessons/L447/audio/L447-G02-suffix.m4a",
+      "durationMs": 2020,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 420
+        },
+        {
+          "charIndex": 1,
+          "startMs": 420,
+          "endMs": 1100
+        },
+        {
+          "charIndex": 2,
+          "startMs": 1520,
+          "endMs": 1670
+        },
+        {
+          "charIndex": 3,
+          "startMs": 1670,
+          "endMs": 1820
+        }
+      ],
+      "transcript": "照 的 声 音",
+      "tailMs": 200
+    }
+  },
+  "files": [
+    {
+      "file": "char-u62cd.m4a",
+      "expectedHan": "拍",
+      "transcript": "拍",
+      "normalizedHan": "拍",
+      "match": true,
+      "durationMs": 1320,
+      "meanVolumeDb": -30.5,
+      "maxVolumeDb": -12
+    },
+    {
+      "file": "L447-S01.m4a",
+      "expectedHan": "跟著音樂的拍子一起拍手",
+      "transcript": "跟着音乐的拍子一起拍手。",
+      "normalizedHan": "跟著音樂的拍子一起拍手",
+      "match": true,
+      "durationMs": 3220,
+      "meanVolumeDb": -18.1,
+      "maxVolumeDb": -2.1
+    },
+    {
+      "file": "L447-S02.m4a",
+      "expectedHan": "樂器店裡放著好聽的音樂",
+      "transcript": "樂器店裡放著好聽的音樂。",
+      "normalizedHan": "樂器店裡放著好聽的音樂",
+      "match": true,
+      "durationMs": 3740,
+      "meanVolumeDb": -18.1,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L447-S03.m4a",
+      "expectedHan": "我關掉手機拍照的聲音",
+      "transcript": "我關掉手機拍照的聲音。",
+      "normalizedHan": "我關掉手機拍照的聲音",
+      "match": true,
+      "durationMs": 3520,
+      "meanVolumeDb": -18.2,
+      "maxVolumeDb": -3.2
+    },
+    {
+      "file": "L447-S04.m4a",
+      "expectedHan": "工人操作機器把木頭搬走",
+      "transcript": "工人操作機器把木頭搬走",
+      "normalizedHan": "工人操作機器把木頭搬走",
+      "match": true,
+      "durationMs": 3600,
+      "meanVolumeDb": -18.1,
+      "maxVolumeDb": -2.9
+    },
+    {
+      "file": "L447-S05.m4a",
+      "expectedHan": "這個球拍太重我拿不動",
+      "transcript": "这个球拍太重,我拿不动。",
+      "normalizedHan": "這個球拍太重我拿不動",
+      "match": true,
+      "durationMs": 3380,
+      "meanVolumeDb": -17.6,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L447-G02-prefix.m4a",
+      "expectedHan": "我關掉手機",
+      "transcript": "我關掉手機。",
+      "normalizedHan": "我關掉手機",
+      "match": true,
+      "durationMs": 2180,
+      "meanVolumeDb": -16.7,
+      "maxVolumeDb": -2.2
+    },
+    {
+      "file": "L447-G02-suffix.m4a",
+      "expectedHan": "照的聲音",
+      "transcript": "照 的 声 音",
+      "normalizedHan": "照的聲音",
+      "match": true,
+      "durationMs": 2020,
+      "meanVolumeDb": -18.2,
+      "maxVolumeDb": -3
+    },
+    {
+      "file": "L447-G05-wrong-one.m4a",
+      "expectedHan": "樂器店外放著好聽的音樂",
+      "transcript": "樂器店外放著好聽的音樂",
+      "normalizedHan": "樂器店外放著好聽的音樂",
+      "match": true,
+      "durationMs": 4728,
+      "meanVolumeDb": -16.2,
+      "maxVolumeDb": -1.5
+    },
+    {
+      "file": "L447-G05-wrong-two.m4a",
+      "expectedHan": "樂器店裡放著難聽的音樂",
+      "transcript": "樂器店裡放著難聽的音樂",
+      "normalizedHan": "樂器店裡放著難聽的音樂",
+      "match": true,
+      "durationMs": 4656,
+      "meanVolumeDb": -17,
+      "maxVolumeDb": -1.5
+    }
+  ]
+}

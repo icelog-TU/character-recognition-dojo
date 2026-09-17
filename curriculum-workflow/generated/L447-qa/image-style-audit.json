@@ -1,0 +1,48 @@
+{
+  "unit": "L447",
+  "method": "Opened final exported WebPs and compared side by side with L058 style anchors, refined proportion examples, and relevant recurring-cast anchors",
+  "result": "PASS",
+  "rejectedDrafts": [
+    {
+      "sentenceId": "L447-S04",
+      "reason": "First generation had correct machine action but drifted too photorealistic; rejected and regenerated. The rejected PNG is not part of the package."
+    }
+  ],
+  "images": [
+    {
+      "sentenceId": "L447-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Warm detailed pencil-watercolor school scene; fixed teacher is distinct from mother; protagonist and varied generic classmates clap in time without named-child reuse."
+    },
+    {
+      "sentenceId": "L447-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Refined warm shop scene; protagonist and fixed mother retain identity; small speaker and listening action are clear; instruments do not self-play."
+    },
+    {
+      "sentenceId": "L447-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Close phone-readable protagonist view; camera remains usable and only non-text camera/muted-speaker icons appear."
+    },
+    {
+      "sentenceId": "L447-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Regenerated hand-drawn watercolor version; generic worker is distinct from father; controls, machine and low secured timber load are clear."
+    },
+    {
+      "sentenceId": "L447-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "semantic": "PASS",
+      "notes": "Warm home scene; protagonist and fixed father retain identity; normal adult racket head remains on floor and father is ready to help."
+    }
+  ]
+}

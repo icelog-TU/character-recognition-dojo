@@ -1,0 +1,170 @@
+{
+  "unit": "L447",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "b594d6a952ff5c04d23160415ff81da279d7d025",
+  "lockedVocabularyRef": "b594d6a9",
+  "formalBoundary": {
+    "through": "L438",
+    "latestChar": "習",
+    "learnedChars": 442
+  },
+  "allowedChars": {
+    "expected": 448,
+    "actual": 448,
+    "result": "PASS"
+  },
+  "coverage": {
+    "拍": 4,
+    "音": 3,
+    "樂": 3,
+    "器": 2,
+    "操": 1,
+    "機": 2
+  },
+  "sentences": [
+    {
+      "id": "L447-S01",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "displayLineLimit": "PASS",
+      "timingCount": 11,
+      "lastTimingEndMs": 3020,
+      "durationMs": 3220,
+      "tailMs": 200
+    },
+    {
+      "id": "L447-S02",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "displayLineLimit": "PASS",
+      "timingCount": 11,
+      "lastTimingEndMs": 3560,
+      "durationMs": 3740,
+      "tailMs": 180
+    },
+    {
+      "id": "L447-S03",
+      "hanCount": 10,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "displayLineLimit": "PASS",
+      "timingCount": 10,
+      "lastTimingEndMs": 3320,
+      "durationMs": 3520,
+      "tailMs": 200
+    },
+    {
+      "id": "L447-S04",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "displayLineLimit": "PASS",
+      "timingCount": 11,
+      "lastTimingEndMs": 3420,
+      "durationMs": 3600,
+      "tailMs": 180
+    },
+    {
+      "id": "L447-S05",
+      "hanCount": 10,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "displayLineLimit": "PASS",
+      "timingCount": 10,
+      "lastTimingEndMs": 3180,
+      "durationMs": 3380,
+      "tailMs": 200
+    }
+  ],
+  "stage4": [
+    {
+      "id": "L447-G01",
+      "type": "find-character",
+      "sentenceId": "L447-S05",
+      "targetChar": "拍",
+      "targetCharIndex": 3,
+      "indexedChar": "拍",
+      "mapping": "PASS"
+    },
+    {
+      "id": "L447-G02",
+      "type": "teach-character",
+      "sentenceId": "L447-S03",
+      "targetChar": "拍",
+      "targetCharIndex": 5,
+      "indexedChar": "拍",
+      "mapping": "PASS"
+    },
+    {
+      "id": "L447-G03",
+      "type": "missing-character",
+      "sentenceId": "L447-S01",
+      "targetChar": "拍",
+      "targetCharIndex": 5,
+      "indexedChar": "拍",
+      "mapping": "PASS"
+    },
+    {
+      "id": "L447-G04",
+      "type": "partial-order",
+      "sentenceId": "L447-S04",
+      "targetChar": "操",
+      "targetCharIndex": 2,
+      "indexedChar": "操",
+      "mapping": "PASS"
+    },
+    {
+      "id": "L447-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L447-S02",
+      "targetChar": "樂",
+      "targetCharIndex": 0,
+      "indexedChar": "樂",
+      "mapping": "PASS"
+    }
+  ],
+  "audio": {
+    "filesExpected": 10,
+    "filesAudited": 10,
+    "result": "PASS",
+    "g05WrongOptionMeanVolumeSpreadDb": 0.8,
+    "pronunciationChecks": [
+      "拍=ㄆㄞ (standalone and all sentences)",
+      "樂=ㄩㄝˋ in S01/S02 and all G05 options",
+      "重=ㄓㄨㄥˋ in S05",
+      "G02 prefix/suffix exclude 拍 and have final charTimings"
+    ]
+  },
+  "images": {
+    "filesExpected": 5,
+    "result": "PASS",
+    "rejectedAndRegenerated": [
+      "L447-S04 first draft"
+    ]
+  },
+  "browserQa": {
+    "status": "pending-pre-merge-preview",
+    "note": "Will be recorded against the pushed package commit before final handoff."
+  },
+  "releaseBlockers": [
+    "Contiguous L439-L446; text dependencies L442-L446"
+  ],
+  "sharedReleaseFiles": "Not modified by Production; Release owns production JSON, planner export, and ledger integration."
+}
