@@ -966,7 +966,7 @@
     "修": 1,
     "補": 1
   },
-  "teacherNotes": "Teacher-approved final handoff. S02 is 跑道正在修補, not the superseded 運動場正在修理. S04 is 減法運算 with blocks, not tutoring-class chess. No readable text or numeric image exception. L058 is style-only; recurring girl, father, mother, and home identities follow the latest visual-cast SOP. Release order blockers: R053/R054 and L436-L440. Production completed all 5 final WebP images, 10 OpenAI audio files, final AI alignment, sentence-tail checks, and lesson-local QA. Shared production JSON remains Release-owned. Production completed all 5 final WebP images, 10 OpenAI audio files, final AI alignment, sentence-tail checks, and lesson-local QA. Shared production JSON remains Release-owned.",
+  "teacherNotes": "Teacher-approved final handoff. S02 is 跑道正在修補, not the superseded 運動場正在修理. S04 is 減法運算 with blocks, not tutoring-class chess. No readable text or numeric image exception. L058 is style-only; recurring girl, father, mother, and home identities follow the latest visual-cast SOP. Release order blockers: R053/R054 and L436-L440. Production completed all 5 final WebP images, 10 OpenAI audio files, final AI alignment, sentence-tail checks, and lesson-local QA. Shared production JSON remains Release-owned. Production completed all 5 final WebP images, 10 OpenAI audio files, final AI alignment, sentence-tail checks, and lesson-local QA. Shared production JSON remains Release-owned. Production completed all 5 final WebP images, 10 OpenAI audio files, final AI alignment, sentence-tail checks, and lesson-local QA. Shared production JSON remains Release-owned.",
   "approvedSentences": [
     {
       "id": "L441-S01",
@@ -1226,5 +1226,13 @@
         }
       ]
     }
-  ]
+  ],
+  "productionQa": {
+    "method": "Browser QA using the permanent lesson-asset-review page in Chrome",
+    "url": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L441&ref=2468f5696bda772968290d85e1e7712649850ebc",
+    "reviewedAssetCommit": "2468f5696bda772968290d85e1e7712649850ebc",
+    "scope": "5 sentence cards, charAudio, G02 prefix and suffix, and all 3 G05 options; 11 playback controls total",
+    "result": "PASS: all 11 controls entered playing state and returned to play state through media ended; all five square image previews loaded; zero repair flags",
+    "timingNote": "Sentence and G02 charTimings are stored and mechanically checked; review page playback confirms the final referenced media files load and end."
+  }
 }

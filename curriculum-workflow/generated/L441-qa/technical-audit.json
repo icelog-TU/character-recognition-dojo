@@ -256,6 +256,14 @@
       "matchBasis": "exact normalized Han"
     }
   ],
+  "browserQa": {
+    "method": "Browser QA using the permanent lesson-asset-review page in Chrome",
+    "url": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L441&ref=2468f5696bda772968290d85e1e7712649850ebc",
+    "reviewedAssetCommit": "2468f5696bda772968290d85e1e7712649850ebc",
+    "scope": "5 sentence cards, charAudio, G02 prefix and suffix, and all 3 G05 options; 11 playback controls total",
+    "result": "PASS: all 11 controls entered playing state and returned to play state through media ended; all five square image previews loaded; zero repair flags",
+    "timingNote": "Sentence and G02 charTimings are stored and mechanically checked; review page playback confirms the final referenced media files load and end."
+  },
   "assets": {
     "images": 5,
     "audio": 10,
