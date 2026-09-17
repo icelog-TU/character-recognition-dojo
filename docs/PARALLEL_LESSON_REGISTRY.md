@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L446 | 音 | claimed | Production E | codex/l446-complete-package | L439, L440, L441, L442, L443, L444, L445 | 賽 機 操 器 樂 | curriculum-workflow/lesson-requests/L446.json; curriculum-workflow/generated/L446-generation-packet.md; curriculum-workflow/drafts/L446-draft.json | public/assets/lessons/L446/; curriculum-workflow/audio-inbox/L446/ | Formal teacher-approved handoff received. Base cdf73c5e, production through L438. Production owns package only; Release ordering remains L439-L445 before L446. |
+| L446 | 音 | request-ready | Production E | codex/l446-complete-package | L439, L440, L441, L442, L443, L444, L445 | 賽 機 操 器 樂 | curriculum-workflow/lesson-requests/L446.json; curriculum-workflow/generated/L446-generation-packet.md; curriculum-workflow/drafts/L446-draft.json | public/assets/lessons/L446/; curriculum-workflow/audio-inbox/L446/ | Formal teacher-approved handoff received. Base cdf73c5e, production through L438. Production owns package only; Release ordering remains L439-L445 before L446. |
 
 ## Status Values
 
