@@ -48,7 +48,7 @@ Tool limitation: sustained press-to-record and recorded-voice replay were not op
 
 ## Release dependencies and ownership
 
-Explicit vocabulary dependencies L437修,L438習,L439練,L440運,L441賽. Release must first integrate all preceding L436-L441 in playable order. R053/R054 are already merged and resolved and are not blockers. Production A does not merge main; Release owns latest-main revalidation,shared production JSON/planner/ledger and full verify.
+Explicit vocabulary dependencies L437修,L438習,L439練,L440運,L441賽. The package remains frozen to its approved 5ab2118f handoff boundary. Final read-only recheck found origin/main c243d7d3 already integrates L436-L438; only ordered L439-L441 remain Release blockers. R053/R054 are merged and resolved. Production A does not merge main; Release owns latest-main boundary revalidation,shared production JSON/planner/ledger and full verify.
 
 After Release merges and deploys,teacher review entry: https://icelog-tu.github.io/character-recognition-dojo/lesson-asset-review.html ,select L442; status via npm run asset:review-status. Pre-merge package preview uses the exact pushed SHA recorded below.
 
