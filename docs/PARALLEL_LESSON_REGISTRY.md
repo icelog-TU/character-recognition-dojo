@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L443 | 操 | claimed | Production B | codex/l443-complete-package | L436, L437, L438, L439, L440, L441, L442 | 補、修、習、練、運、賽、機 | `curriculum-workflow/lesson-requests/L443.json`; `curriculum-workflow/generated/L443-generation-packet.md`; `curriculum-workflow/drafts/L443-draft.json` | `curriculum-workflow/audio-inbox/L443/`; `public/assets/lessons/L443/` | Formal Production handoff received; complete dependency-blocked package in progress. |
 
 ## Status Values
 
