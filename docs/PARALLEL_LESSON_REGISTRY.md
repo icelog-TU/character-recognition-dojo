@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L452 | 候 | claimed | Production F / `parallel-f` | `codex/l452-complete-package` / claim pending | Text: L447:拍, L448:歌, L449:唱, L450:舞, L451:台; Release order: L444-L451 and R055/R056 after L450 | 拍、歌、唱、舞、台 | `curriculum-workflow/lesson-requests/L452.json`; `curriculum-workflow/generated/L452-generation-packet.md`; `curriculum-workflow/drafts/L452-draft.json` | `curriculum-workflow/audio-inbox/L452/`; `public/assets/lessons/L452/` | Branch base `origin/main@5622c827` is formally through L443:操. Teacher-approved vocabulary remains locked to `a5779c4b` formal L001-L438 plus 拍、歌、唱、舞、台、候 (448 chars). Production may proceed; Release waits for all listed predecessors and R055/R056. |
 
 ## Status Values
 
