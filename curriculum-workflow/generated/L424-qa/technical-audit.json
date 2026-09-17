@@ -1,0 +1,1709 @@
+{
+  "unit": "L424",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "sourceMainCommit": "4eec51781af66eee3b0a9b0b5afe0e0497a8d121",
+  "boundary": "L415 解;419 learned chars,425 locked allowedChars",
+  "dependsOnLessons": [
+    "L419",
+    "L420",
+    "L421",
+    "L422",
+    "L423"
+  ],
+  "provisionalLearnedChars": [
+    "合",
+    "教",
+    "室",
+    "班",
+    "組"
+  ],
+  "milestoneDependencies": [
+    {
+      "ids": [
+        "R051",
+        "R052"
+      ],
+      "afterLessonOrder": 420,
+      "targetLessonRange": {
+        "startOrder": 391,
+        "endOrder": 420
+      }
+    }
+  ],
+  "releaseBlockers": [
+    "All preceding numbered lessons through L423 must be merged in order.",
+    "R051/R052 afterLessonOrder=420, targetLessonRange L391-L420 must be merged before L424."
+  ],
+  "checks": [
+    {
+      "check": "Allowed-character/coverage/displayLines/Stage4 Han indexes",
+      "result": "PASS"
+    },
+    {
+      "check": "Repo validate:production baseline and isolated L424 fixture",
+      "result": "PASS"
+    },
+    {
+      "check": "Strict assets:audit isolated L424 fixture",
+      "result": "PASS",
+      "warnings": 0
+    },
+    {
+      "check": "All ten final files decode; mono AAC44100Hz; volume gates",
+      "result": "PASS"
+    },
+    {
+      "check": "Sentence/fragment indexed nonoverlapping bounded timings; sentence tail<=300ms",
+      "result": "PASS"
+    },
+    {
+      "check": "Five square1024px WebP images<=250KiB; total assets<=2MiB",
+      "result": "PASS"
+    },
+    {
+      "check": "G05 mean volume spread",
+      "result": "PASS",
+      "spreadDb": 0.5
+    }
+  ],
+  "images": [
+    {
+      "file": "L424-S01.webp",
+      "bytes": 192270
+    },
+    {
+      "file": "L424-S02.webp",
+      "bytes": 186580
+    },
+    {
+      "file": "L424-S03.webp",
+      "bytes": 211834
+    },
+    {
+      "file": "L424-S04.webp",
+      "bytes": 201390
+    },
+    {
+      "file": "L424-S05.webp",
+      "bytes": 218756
+    }
+  ],
+  "imageResults": [
+    {
+      "id": "L424-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Whole class single-file backpacks on outside corridor, girl in line, separate tied-hair teacher; classroom door visible beside rather than containing queue."
+    },
+    {
+      "id": "L424-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Xiaoguang glasses/white shirt/navy vest/khaki shorts/white socks/brown shoes/dark green bag matches named anchor; leading peers outside, girl introduces him."
+    },
+    {
+      "id": "L424-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Father in swimwear remains beside girl supporting kickboard in shallow pool; girl practicing kicking, evening light."
+    },
+    {
+      "id": "L424-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Exactly3 children clean art studio: protagonist sweeps, generic boy wipes table, generic girl sorts brushes; easels/drying pictures visible."
+    },
+    {
+      "id": "L424-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Mother/girl at rear of orderly purchase queue, clerk serves front customer, pastries visible; mother/girl carry no purchased snack."
+    }
+  ],
+  "audio": [
+    {
+      "file": "L424-S01.m4a",
+      "expected": "全班在教室外排路隊",
+      "duration": 3.552993,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.2,
+      "max": -2,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0.940431
+        },
+        {
+          "type": "end",
+          "seconds": 1.15234
+        },
+        {
+          "type": "start",
+          "seconds": 2.32961
+        },
+        {
+          "type": "end",
+          "seconds": 2.4822
+        },
+        {
+          "type": "start",
+          "seconds": 3.39281
+        },
+        {
+          "type": "end",
+          "seconds": 3.57587
+        }
+      ],
+      "sha256": "58b30346aa52139c4367aa58e14857e8902e1ef43fb3e62736f99bf498154b60",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.569999933242798,
+        "text": "全班在教室外排路隊。",
+        "words": [
+          {
+            "word": "全",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "班",
+            "start": 0.5,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "在",
+            "start": 0.8399999737739563,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "教",
+            "start": 1.4600000381469727,
+            "end": 1.8200000524520874
+          },
+          {
+            "word": "室",
+            "start": 1.8200000524520874,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "外",
+            "start": 1.9800000190734863,
+            "end": 2.3399999141693115
+          },
+          {
+            "word": "排",
+            "start": 2.3399999141693115,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "路",
+            "start": 2.859999895095825,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "隊。",
+            "start": 3.119999885559082,
+            "end": 3.3399999141693115
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L424-S02.m4a",
+      "expected": "小光是我們這組的隊長",
+      "duration": 3.225011,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.6,
+      "max": -2.1,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0.808662
+        },
+        {
+          "type": "end",
+          "seconds": 1.14499
+        },
+        {
+          "type": "start",
+          "seconds": 3.06494
+        },
+        {
+          "type": "end",
+          "seconds": 3.22757
+        }
+      ],
+      "sha256": "b6de934d94c966af30cdb59ee18be1f6d717f3c19089a79e5f492bedf4afdbdc",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.2200000286102295,
+        "text": "小光是我們這組的隊長。",
+        "words": [
+          {
+            "word": "小",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "光",
+            "start": 0.47999998927116394,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "是",
+            "start": 0.699999988079071,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "我們",
+            "start": 1.4800000190734863,
+            "end": 1.8200000524520874
+          },
+          {
+            "word": "這",
+            "start": 1.8200000524520874,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "組",
+            "start": 2.140000104904175,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "的",
+            "start": 2.259999990463257,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "隊",
+            "start": 2.5399999618530273,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "長。",
+            "start": 2.759999990463257,
+            "end": 2.9800000190734863
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L424-S03.m4a",
+      "expected": "爸爸下班後教我游泳",
+      "duration": 3.197007,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.2,
+      "max": -3.9,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.48615
+        },
+        {
+          "type": "end",
+          "seconds": 1.79966
+        },
+        {
+          "type": "start",
+          "seconds": 3.03658
+        },
+        {
+          "type": "end",
+          "seconds": 3.20435
+        }
+      ],
+      "sha256": "791dbba52d110ab51101e0402b94f83739c02413179ed70a93b96ec35f26c361",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.200000047683716,
+        "text": "爸爸下班後,教我游泳。",
+        "words": [
+          {
+            "word": "爸爸",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "下",
+            "start": 0.41999998688697815,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "班",
+            "start": 0.8799999952316284,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "後",
+            "start": 1.159999966621399,
+            "end": 1.5
+          },
+          {
+            "word": "教",
+            "start": 2.059999942779541,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "我",
+            "start": 2.0999999046325684,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "游",
+            "start": 2.6600000858306885,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "泳。",
+            "start": 2.7200000286102295,
+            "end": 2.940000057220459
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L424-S04.m4a",
+      "expected": "我們這組合作打掃畫室",
+      "duration": 2.967007,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.1,
+      "max": -2.6,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 2.80703
+        },
+        {
+          "type": "end",
+          "seconds": 2.97215
+        }
+      ],
+      "sha256": "413c7c38a6c3961837bfa0c69ffd1c98233bb5075c612164a67ad2bd1c6f6fbc",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.9700000286102295,
+        "text": "我們這組合作打掃畫室。",
+        "words": [
+          {
+            "word": "我們",
+            "start": 0,
+            "end": 0.4000000059604645
+          },
+          {
+            "word": "這",
+            "start": 0.4000000059604645,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "組",
+            "start": 0.7400000095367432,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "合",
+            "start": 0.9800000190734863,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "作",
+            "start": 1.2799999713897705,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "打",
+            "start": 1.6200000047683716,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "掃",
+            "start": 1.9600000381469727,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "畫",
+            "start": 2.240000009536743,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "室。",
+            "start": 2.5399999618530273,
+            "end": 2.7200000286102295
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      }
+    },
+    {
+      "file": "L424-S05.m4a",
+      "expected": "這間店買點心要排隊",
+      "duration": 3.213991,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.8,
+      "max": -3,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0.846372
+        },
+        {
+          "type": "end",
+          "seconds": 1.00372
+        },
+        {
+          "type": "start",
+          "seconds": 1.97073
+        },
+        {
+          "type": "end",
+          "seconds": 2.14787
+        },
+        {
+          "type": "start",
+          "seconds": 3.05415
+        },
+        {
+          "type": "end",
+          "seconds": 3.22757
+        }
+      ],
+      "sha256": "5e68754834a5b4fa0d1f1b428b43491f571b5012b715592fe97268a0310f8e5d",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.2200000286102295,
+        "text": "這間店,買點心,要排隊。",
+        "words": [
+          {
+            "word": "這",
+            "start": 0,
+            "end": 0.2199999988079071
+          },
+          {
+            "word": "間",
+            "start": 0.2199999988079071,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "店",
+            "start": 0.5799999833106995,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "買",
+            "start": 1.2000000476837158,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "點",
+            "start": 1.2799999713897705,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "心",
+            "start": 1.600000023841858,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "要",
+            "start": 2.319999933242798,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "排",
+            "start": 2.5199999809265137,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "隊。",
+            "start": 2.759999990463257,
+            "end": 3
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "char-u968a.m4a",
+      "expected": "隊",
+      "duration": 0.888005,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -27.8,
+      "max": -10.8,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0
+        },
+        {
+          "type": "end",
+          "seconds": 0.169909
+        },
+        {
+          "type": "start",
+          "seconds": 0.453265
+        },
+        {
+          "type": "end",
+          "seconds": 0.905578
+        }
+      ],
+      "sha256": "0c1d71754db1e62803def0818ae3ff7c5816ed2656c3dde226b8161c77a4d899",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 0.8999999761581421,
+        "text": "隊",
+        "words": [
+          {
+            "word": "隊",
+            "start": 0,
+            "end": 0.4000000059604645
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 1
+        }
+      }
+    },
+    {
+      "file": "L424-G02-prefix.m4a",
+      "expected": "小光是我們這組的",
+      "duration": 2.55,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.6,
+      "max": -2,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0.82356
+        },
+        {
+          "type": "end",
+          "seconds": 1.01274
+        },
+        {
+          "type": "start",
+          "seconds": 2.38959
+        },
+        {
+          "type": "end",
+          "seconds": 2.5542
+        }
+      ],
+      "sha256": "922b497da049ceb5fbd484f047dda347d13468fa173fd43721ff20af245ac3ea",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 2.549999952316284,
+        "text": "小光是我們這組的。",
+        "words": [
+          {
+            "word": "小",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "光",
+            "start": 0.5,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "是",
+            "start": 0.7599999904632568,
+            "end": 1.340000033378601
+          },
+          {
+            "word": "我們",
+            "start": 1.340000033378601,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "這",
+            "start": 1.7200000286102295,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "組",
+            "start": 1.9800000190734863,
+            "end": 2.1600000858306885
+          },
+          {
+            "word": "的。",
+            "start": 2.1600000858306885,
+            "end": 2.380000114440918
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 3
+        }
+      }
+    },
+    {
+      "file": "L424-G02-suffix.m4a",
+      "expected": "長",
+      "duration": 0.657007,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -20,
+      "max": -3.9,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 0.497211
+        },
+        {
+          "type": "end",
+          "seconds": 0.673379
+        }
+      ],
+      "sha256": "4e7903e60b082080a7f3587c3b62a9d31f34bcdb50687f568d1f2d43eaf3d54c",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 0.6700000166893005,
+        "text": "中華民國六十一年六月十一日, 中國共和國總統習近平在香港舉行了國際舞弊的大選。     中國共和國總統習近平在香港舉行了國際舞弊的大選。",
+        "words": [
+          {
+            "word": "中",
+            "start": 0,
+            "end": 0.25999999046325684
+          },
+          {
+            "word": "華",
+            "start": 0.25999999046325684,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "民",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "國",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "六",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "十",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "一",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "年",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "六",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "月",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "十",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "一",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "日",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "中國",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "共",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "和",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "國",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "總",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "統",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "習",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "近",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "平",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "在",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "香港",
+            "start": 0.5799999833106995,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "舉",
+            "start": 0.5799999833106995,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "行了",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "國",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "際",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "舞",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "弊",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "的",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "大",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "選。",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "中國",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "共",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "和",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "國",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "總",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "統",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "習",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "近",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "平",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "在",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "香港",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "舉",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "行了",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "國",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "際",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "舞",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "弊",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "的",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "大",
+            "start": 0.6000000238418579,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "選。",
+            "start": 0.6000000238418579,
+            "end": 0.6200000047683716
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 1
+        }
+      }
+    },
+    {
+      "file": "L424-G05-wrong-one.m4a",
+      "expected": "爸爸上班後教我游泳",
+      "duration": 3.226009,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -18.2,
+      "max": -2.1,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.41041
+        },
+        {
+          "type": "end",
+          "seconds": 1.90073
+        },
+        {
+          "type": "start",
+          "seconds": 3.06594
+        },
+        {
+          "type": "end",
+          "seconds": 3.22757
+        }
+      ],
+      "sha256": "16ea0311fd66f9b19fbd179bf4dcf3c2d2dfc4c7a1f7caa31f6165687bceacf7",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.2200000286102295,
+        "text": "爸爸上班後,教我游泳。",
+        "words": [
+          {
+            "word": "爸爸",
+            "start": 0,
+            "end": 0.36000001430511475
+          },
+          {
+            "word": "上",
+            "start": 0.36000001430511475,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "班",
+            "start": 0.8600000143051147,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "後",
+            "start": 1.1200000047683716,
+            "end": 1.440000057220459
+          },
+          {
+            "word": "教",
+            "start": 2.0999999046325684,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "我",
+            "start": 2.180000066757202,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "游",
+            "start": 2.700000047683716,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "泳。",
+            "start": 2.7799999713897705,
+            "end": 2.9800000190734863
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    },
+    {
+      "file": "L424-G05-wrong-two.m4a",
+      "expected": "爸爸下班前教我游泳",
+      "duration": 3.876009,
+      "stream": [
+        {
+          "codec": "aac",
+          "sampleRate": "44100",
+          "channels": 1
+        }
+      ],
+      "mean": -17.7,
+      "max": -2,
+      "silence": [
+        {
+          "type": "start",
+          "seconds": 1.61381
+        },
+        {
+          "type": "end",
+          "seconds": 2.27435
+        },
+        {
+          "type": "start",
+          "seconds": 3.71578
+        },
+        {
+          "type": "end",
+          "seconds": 3.87773
+        }
+      ],
+      "sha256": "52a58abf8928aadc0a13877395c51123b1896cd92029afa7d78923120addbf3a",
+      "transcript": {
+        "task": "transcribe",
+        "language": "chinese",
+        "duration": 3.869999885559082,
+        "text": "爸爸下班前教我游泳。",
+        "words": [
+          {
+            "word": "爸爸",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "下",
+            "start": 0.41999998688697815,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "班",
+            "start": 0.8799999952316284,
+            "end": 1.2000000476837158
+          },
+          {
+            "word": "前",
+            "start": 1.2000000476837158,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "教",
+            "start": 1.7599999904632568,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "我",
+            "start": 2.6600000858306885,
+            "end": 3.259999990463257
+          },
+          {
+            "word": "游",
+            "start": 3.259999990463257,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "泳。",
+            "start": 3.4000000953674316,
+            "end": 3.640000104904175
+          }
+        ],
+        "usage": {
+          "type": "duration",
+          "seconds": 4
+        }
+      }
+    }
+  ],
+  "audioNotes": "All ten assets independently generated with OpenAI gpt-4o-mini-tts from exact approved Han sequences; no production extraction/splicing. Repo ai:audio initial generation and assets:audio processing; assets:align:ai final sentence alignment with temporary Traditional-equivalent normalization and course-vocabulary transcription context, original script restored. S01 教 fourth tone; S03 and G05 教 first tone; S02 長 third tone confirmed by audio model. G02 suffix generated independently from 長: rejected initial coral candidates; accepted nova candidate with audible ㄓ onset, low-dipping measured pitch~176→120→133Hz, and QA-only prefix/target/suffix replay independently recognized as 隊長 with third-tone final 長, no missing/duplicate/clipped syllables. Isolated short-clip ASR/phonetic outputs were inconsistent, including unrelated hallucinated transcripts and conflicting tone labels; raw evidence retained and not used alone for acceptance. Final suffix only has measured trailing silence removed, keeping160ms after full syllable decay; no leading character extraction. Character 隊 independent transcript matches and ㄉㄨㄟˋ phonetic check. No human listening claimed.",
+  "browserQA": {
+    "viewport": "390x844",
+    "stage3": "All five final images and approved displayLines inspected at390px. All five final sentence audios PLAY/ENDED. Active character highlight observed. S01 教 ㄐㄧㄠˋ; S02 長 ㄓㄤˇ; S03 教 ㄐㄧㄠ displayed correctly.",
+    "stage4": "G01 隊 accepted; G02 dedicated prefix ended before red-framed 隊; G03 隊 accepted among 隊/組/班; G04 shuffled single-Han 打掃畫室 accepted in order; G05 all three exact complete audio options ended and correct choice enabled 領取獎勵.",
+    "shortAudio": "Standalone 隊 and dedicated G02 suffix 長 played to ENDED in local browser media QA.",
+    "toolingScope": "Initial browser selection timed out, recovered by inventory and Chrome tab creation. Available click API cannot hold the target through the recording cue: G02 cue play observed but no captured recording; microphone and post-recording resume flow not claimed as verified. SOP browser-tooling fallback applies after technical gates. No human auditory review claimed. Persistent reward/release navigation belongs to Release integration QA.",
+    "teacherReview": "Normal post-merge subjective image/audio review."
+  },
+  "browserEvents": [
+    {
+      "event": "PLAY L424-S01.m4a",
+      "time": 1789552876392
+    },
+    {
+      "event": "ENDED L424-S01.m4a",
+      "time": 1789552880028
+    },
+    {
+      "event": "PLAY L424-S02.m4a",
+      "time": 1789552889260
+    },
+    {
+      "event": "ENDED L424-S02.m4a",
+      "time": 1789552892628
+    },
+    {
+      "event": "PLAY L424-S03.m4a",
+      "time": 1789552908554
+    },
+    {
+      "event": "ENDED L424-S03.m4a",
+      "time": 1789552911806
+    },
+    {
+      "event": "PLAY L424-S04.m4a",
+      "time": 1789552939391
+    },
+    {
+      "event": "ENDED L424-S04.m4a",
+      "time": 1789552942403
+    },
+    {
+      "event": "PLAY L424-S05.m4a",
+      "time": 1789552949624
+    },
+    {
+      "event": "ENDED L424-S05.m4a",
+      "time": 1789552952903
+    },
+    {
+      "event": "PLAY L424-S01.m4a",
+      "time": 1789552968839
+    },
+    {
+      "event": "ENDED L424-S01.m4a",
+      "time": 1789552972870
+    },
+    {
+      "event": "PLAY L424-G02-prefix.m4a",
+      "time": 1789552985679
+    },
+    {
+      "event": "ENDED L424-G02-prefix.m4a",
+      "time": 1789552988294
+    },
+    {
+      "event": "PLAY 1fef89fd-2f4a-4ee7-b67c-0043c6413eaa",
+      "time": 1789553001868
+    },
+    {
+      "event": "PLAY 1fef89fd-2f4a-4ee7-b67c-0043c6413eaa",
+      "time": 1789553001940
+    },
+    {
+      "event": "PLAY L424-S05.m4a",
+      "time": 1789553009878
+    },
+    {
+      "event": "ENDED L424-S05.m4a",
+      "time": 1789553013205
+    },
+    {
+      "event": "PLAY L424-S04.m4a",
+      "time": 1789553027306
+    },
+    {
+      "event": "ENDED L424-S04.m4a",
+      "time": 1789553030309
+    },
+    {
+      "event": "PLAY L424-S03.m4a",
+      "time": 1789553068133
+    },
+    {
+      "event": "ENDED L424-S03.m4a",
+      "time": 1789553071382
+    },
+    {
+      "event": "PLAY L424-G05-wrong-two.m4a",
+      "time": 1789553094768
+    },
+    {
+      "event": "ENDED L424-G05-wrong-two.m4a",
+      "time": 1789553098698
+    },
+    {
+      "event": "PLAY L424-G05-wrong-one.m4a",
+      "time": 1789553109039
+    },
+    {
+      "event": "ENDED L424-G05-wrong-one.m4a",
+      "time": 1789553112314
+    },
+    {
+      "event": "PLAY char-u968a.m4a",
+      "time": 1789553154977
+    },
+    {
+      "event": "ENDED char-u968a.m4a",
+      "time": 1789553155898
+    },
+    {
+      "event": "PLAY L424-G02-suffix.m4a",
+      "time": 1789553259147
+    },
+    {
+      "event": "ENDED L424-G02-suffix.m4a",
+      "time": 1789553259828
+    }
+  ],
+  "timingRepairs": [
+    {
+      "sentence": "L424-S01",
+      "charIndex": 2,
+      "old": {
+        "charIndex": 2,
+        "startMs": 840,
+        "endMs": 1460
+      },
+      "startMs": 1152,
+      "endMs": 1460,
+      "reason": "在 starts after measured pause ending1152ms."
+    },
+    {
+      "sentence": "L424-S01",
+      "charIndex": 6,
+      "old": {
+        "charIndex": 6,
+        "startMs": 2340,
+        "endMs": 2860
+      },
+      "startMs": 2484,
+      "endMs": 2860,
+      "reason": "排 starts after measured pause ending2484ms."
+    },
+    {
+      "sentence": "L424-S02",
+      "charIndex": 2,
+      "old": {
+        "charIndex": 2,
+        "startMs": 700,
+        "endMs": 1480
+      },
+      "startMs": 1145,
+      "endMs": 1480,
+      "reason": "是 starts after measured pause ending1145ms."
+    },
+    {
+      "sentence": "L424-S03",
+      "charIndex": 5,
+      "old": {
+        "charIndex": 5,
+        "startMs": 2060,
+        "endMs": 2100
+      },
+      "startMs": 1800,
+      "endMs": 2100,
+      "reason": "Repair40ms 教 interval using measured post-pause speech onset1799.66ms."
+    },
+    {
+      "sentence": "L424-S03",
+      "charIndex": 6,
+      "old": {
+        "charIndex": 6,
+        "startMs": 2100,
+        "endMs": 2660
+      },
+      "startMs": 2100,
+      "endMs": 2410,
+      "reason": "Smooth adjacent 我游 AI word interval2100-2720ms into two nonoverlapping310ms syllables; retain original combined boundaries."
+    },
+    {
+      "sentence": "L424-S03",
+      "charIndex": 7,
+      "old": {
+        "charIndex": 7,
+        "startMs": 2660,
+        "endMs": 2720
+      },
+      "startMs": 2410,
+      "endMs": 2720,
+      "reason": "Repair60ms 游 by smoothing adjacent 我游 word timestamps within original2100-2720ms interval."
+    },
+    {
+      "sentence": "L424-S05",
+      "charIndex": 3,
+      "old": {
+        "charIndex": 3,
+        "startMs": 1200,
+        "endMs": 1280
+      },
+      "startMs": 1004,
+      "endMs": 1280,
+      "reason": "買 starts after measured pause ending1003.72ms."
+    },
+    {
+      "sentence": "L424-S05",
+      "charIndex": 6,
+      "old": {
+        "charIndex": 6,
+        "startMs": 2320,
+        "endMs": 2520
+      },
+      "startMs": 2148,
+      "endMs": 2520,
+      "reason": "要 starts after measured pause ending2147.87ms."
+    }
+  ],
+  "tailTrims": [
+    {
+      "file": "L424-S01.m4a",
+      "oldDuration": 3.97,
+      "end": 3.55281,
+      "reason": "Trim measured trailing silence only; retain 160ms after -45dB silence onset, preserve entire spoken syllable decay."
+    },
+    {
+      "file": "L424-S02.m4a",
+      "oldDuration": 3.6,
+      "end": 3.22494,
+      "reason": "Trim measured trailing silence only; retain 160ms after -45dB silence onset, preserve entire spoken syllable decay."
+    },
+    {
+      "file": "L424-S03.m4a",
+      "oldDuration": 3.649002,
+      "end": 3.19658,
+      "reason": "Trim measured trailing silence only; retain 160ms after -45dB silence onset, preserve entire spoken syllable decay."
+    },
+    {
+      "file": "L424-S04.m4a",
+      "oldDuration": 3.270998,
+      "end": 2.96705,
+      "reason": "Trim measured trailing silence only; retain 160ms after -45dB silence onset, preserve entire spoken syllable decay."
+    },
+    {
+      "file": "L424-S05.m4a",
+      "oldDuration": 5.262993,
+      "end": 3.21415,
+      "reason": "Trim measured trailing silence only; retain 160ms after -45dB silence onset, preserve entire spoken syllable decay."
+    },
+    {
+      "file": "L424-G02-prefix.m4a",
+      "oldDuration": 2.832993,
+      "end": 2.54968,
+      "reason": "Trim measured trailing silence only; retain 160ms after -45dB silence onset, preserve entire spoken syllable decay."
+    },
+    {
+      "file": "L424-G02-suffix.m4a",
+      "oldDuration": 3.028005,
+      "end": 1.153401,
+      "reason": "Trim measured trailing silence only; retain 160ms after -45dB silence onset, preserve entire spoken syllable decay."
+    },
+    {
+      "file": "L424-G05-wrong-one.m4a",
+      "oldDuration": 3.638005,
+      "end": 3.22594,
+      "reason": "Trim measured trailing silence only; retain 160ms after -45dB silence onset, preserve entire spoken syllable decay."
+    },
+    {
+      "file": "L424-G05-wrong-two.m4a",
+      "oldDuration": 4.711995,
+      "end": 3.8757800000000002,
+      "reason": "Trim measured trailing silence only; retain 160ms after -45dB silence onset, preserve entire spoken syllable decay."
+    }
+  ],
+  "suffixProcessing": {
+    "voice": "nova",
+    "input": "長",
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 0.497211
+      },
+      {
+        "type": "end",
+        "seconds": 1.6254
+      }
+    ],
+    "end": 0.657211,
+    "reason": "Only measured trailing silence removed; full independent single-character generation, no extraction or splicing."
+  },
+  "suffixContext": {
+    "result": "完整逐字轉錄是：「小光是我們這組的隊長。」最後一個實際聽到的音節是「長」，聲調是第三聲（ˇ）。沒有漏字，沒有重複音節，最後一字沒有被裁斷。",
+    "scope": "QA-only assembled replay from exact prefix, standalone target and independently generated suffix. Not production audio."
+  },
+  "suffixPitch": [
+    {
+      "ms": 935,
+      "hz": 175.8
+    },
+    {
+      "ms": 945,
+      "hz": 170.2
+    },
+    {
+      "ms": 955,
+      "hz": 164.9
+    },
+    {
+      "ms": 965,
+      "hz": 160
+    },
+    {
+      "ms": 975,
+      "hz": 156.9
+    },
+    {
+      "ms": 985,
+      "hz": 155.3
+    },
+    {
+      "ms": 995,
+      "hz": 153.8
+    },
+    {
+      "ms": 1005,
+      "hz": 152.4
+    },
+    {
+      "ms": 1015,
+      "hz": 149.5
+    },
+    {
+      "ms": 1025,
+      "hz": 148.1
+    },
+    {
+      "ms": 1035,
+      "hz": 145.5
+    },
+    {
+      "ms": 1045,
+      "hz": 144.1
+    },
+    {
+      "ms": 1085,
+      "hz": 133.3
+    },
+    {
+      "ms": 1095,
+      "hz": 131.1
+    },
+    {
+      "ms": 1105,
+      "hz": 130.1
+    },
+    {
+      "ms": 1115,
+      "hz": 129
+    },
+    {
+      "ms": 1125,
+      "hz": 128
+    },
+    {
+      "ms": 1135,
+      "hz": 127
+    },
+    {
+      "ms": 1145,
+      "hz": 126
+    },
+    {
+      "ms": 1155,
+      "hz": 126
+    },
+    {
+      "ms": 1165,
+      "hz": 126
+    },
+    {
+      "ms": 1175,
+      "hz": 125
+    },
+    {
+      "ms": 1185,
+      "hz": 124
+    },
+    {
+      "ms": 1195,
+      "hz": 123.1
+    },
+    {
+      "ms": 1205,
+      "hz": 121.2
+    },
+    {
+      "ms": 1215,
+      "hz": 121.2
+    },
+    {
+      "ms": 1225,
+      "hz": 120.3
+    },
+    {
+      "ms": 1235,
+      "hz": 120.3
+    },
+    {
+      "ms": 1245,
+      "hz": 121.2
+    },
+    {
+      "ms": 1255,
+      "hz": 121.2
+    },
+    {
+      "ms": 1265,
+      "hz": 121.2
+    },
+    {
+      "ms": 1275,
+      "hz": 121.2
+    },
+    {
+      "ms": 1285,
+      "hz": 122.1
+    },
+    {
+      "ms": 1295,
+      "hz": 124
+    },
+    {
+      "ms": 1305,
+      "hz": 126
+    },
+    {
+      "ms": 1315,
+      "hz": 128
+    },
+    {
+      "ms": 1325,
+      "hz": 130.1
+    },
+    {
+      "ms": 1335,
+      "hz": 131.1
+    },
+    {
+      "ms": 1345,
+      "hz": 133.3
+    },
+    {
+      "ms": 1355,
+      "hz": 130.1
+    }
+  ],
+  "phoneticEvidence": [
+    {
+      "file": "L424-S01",
+      "result": "ㄑㄩㄢˊ ㄅㄢ ㄗㄞˋ ㄐㄧㄠˋ ㄕˋ ㄨㄞˋ ㄆㄞˊ ㄌㄨˋ ㄉㄨㄟˋ"
+    },
+    {
+      "file": "L424-S02",
+      "result": "ㄒㄧㄠˇ ㄍㄨㄤ  \nㄕˋ ㄨㄛˇ ˙ㄇㄣ  \nㄓㄜˋ ㄗㄨˇ ˙ㄉㄜ  \nㄉㄨㄟˋ ㄓㄤˇ \n\n\"長\" audible tone: ˇ (third tone)"
+    },
+    {
+      "file": "L424-S03",
+      "result": "爸爸下班後教我游泳\n\nㄅㄚˋ ㄅㄚ˙ ㄒㄧㄚˋ ㄅㄢ ㄏㄡˋ ㄐㄧㄠ ㄨㄛˇ ㄧㄡˊ ㄩㄥˇ\n\nThe tone of 教 is first tone (ㄐㄧㄠ). There are no missing or clipped final sounds audibly."
+    },
+    {
+      "file": "L424-G02-suffix",
+      "result": "ㄔㄤˊ"
+    },
+    {
+      "file": "char-u968a",
+      "result": "Sure, please provide the audio and I'll transcribe what is audibly spoken."
+    },
+    {
+      "file": "L424-G05-wrong-one",
+      "result": "ㄅㄚˋ ㄅㄚˋ ㄕㄤˋ ㄅㄢ ㄏㄡˋ ㄐㄧㄠ ㄨㄛˇ ㄧㄡˊ ㄩㄥˇ \n\nThe syllable \"教\" is pronounced with the first tone (ㄐㄧㄠ)."
+    },
+    {
+      "file": "L424-G05-wrong-two",
+      "result": "爸爸下班前教我游泳\n\nㄅㄚˋ ㄅㄚ˙ ㄒㄧㄚˋ ㄅㄢ ㄑㄧㄢˊ ㄐㄧㄠ ㄨㄛˇ ㄧㄡˊ ㄩㄥˇ\n\n教 ㄐㄧㄠ 第一聲"
+    }
+  ],
+  "shortPhoneticEvidence": [
+    {
+      "file": "L424-G02-suffix",
+      "result": "Please provide the audio clip, and I will assist with the transcription accordingly."
+    },
+    {
+      "file": "char-u968a",
+      "result": "Transcription: 對  \nZhuyin: ㄉㄨㄟˋ"
+    },
+    {
+      "file": "L424-S05",
+      "result": "這間店買點心要排隊\n\nㄓˋ ㄐㄧㄢ ㄉㄧㄢˋ ㄇㄞˇ ㄉㄧㄢˇ ㄒㄧㄣ ㄧㄠˋ ㄆㄞˊ ㄉㄨㄟˋ"
+    }
+  ],
+  "isolatedSuffixEvidence": {
+    "nova": {
+      "role": "assistant",
+      "content": "聽到的聲音聲母是「ㄓ」，而不是「ㄔ」。聲調部分，音高一開始偏高，然後平穩持續下去，平直沒有抑揚起伏，對應第一聲。因此，最接近的讀音是「ㄓㄤ（第一聲）」。",
+      "refusal": null,
+      "annotations": []
+    },
+    "coralRejected": {
+      "role": "assistant",
+      "content": "我聽到的單音節，聲母是「ㄔ」，而聲調聽起來是屬於第二聲，音高先稍低開始，然後向上揚升。所以，最接近的候選讀音是「ㄔㄤˊ（第二聲）」。",
+      "refusal": null,
+      "annotations": []
+    }
+  },
+  "assetBytes": 1356321,
+  "rejectedImages": [],
+  "rejectedAudio": "Initial char/S05 and coral suffix candidates retained only in ignored ai-outputs; final suffix nova. Rejected candidates not committed.",
+  "teacherApprovedExceptions": []
+}

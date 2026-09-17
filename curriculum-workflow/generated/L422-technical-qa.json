@@ -1,0 +1,169 @@
+{
+  "unit": "L422",
+  "audio": [
+    {
+      "filename": "char-u73ed.m4a",
+      "bytes": 17633,
+      "durationMs": 1045,
+      "meanDb": -19.3,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L422-G02-prefix.m4a",
+      "bytes": 38457,
+      "durationMs": 3208,
+      "meanDb": -18.5,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L422-G02-suffix.m4a",
+      "bytes": 28026,
+      "durationMs": 2484,
+      "meanDb": -19.1,
+      "maxDb": -3.5,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L422-G05-wrong-one.m4a",
+      "bytes": 51004,
+      "durationMs": 4180,
+      "meanDb": -18.7,
+      "maxDb": -3.8,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L422-G05-wrong-two.m4a",
+      "bytes": 65330,
+      "durationMs": 5144,
+      "meanDb": -19.5,
+      "maxDb": -2.5,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L422-S01.m4a",
+      "bytes": 50858,
+      "durationMs": 4161,
+      "meanDb": -18.8,
+      "maxDb": -2.4,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L422-S02.m4a",
+      "bytes": 51508,
+      "durationMs": 4364,
+      "meanDb": -19,
+      "maxDb": -3.9,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L422-S03.m4a",
+      "bytes": 51199,
+      "durationMs": 4316,
+      "meanDb": -18.7,
+      "maxDb": -3.9,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L422-S04.m4a",
+      "bytes": 47435,
+      "durationMs": 4815,
+      "meanDb": -19,
+      "maxDb": -5.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L422-S05.m4a",
+      "bytes": 47268,
+      "durationMs": 3922,
+      "meanDb": -18.8,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "filename": "L422-S01.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 200590,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L422-S02.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 184150,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L422-S03.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 160402,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L422-S04.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 197558,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L422-S05.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 238892,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "optionMeanVolumeSpreadDb": 0.8,
+  "totalBytes": 1430310,
+  "sentenceTimingBounds": "PASS",
+  "allowedCharacterAndStage4Audit": "PASS",
+  "browserQA": {
+    "status": "tooling fallback",
+    "attemptedUrl": "http://127.0.0.1:14222/character-recognition-dojo/",
+    "tool": "cua.getBrowser",
+    "result": "js execution timed out; kernel reset, rerun your request",
+    "durationSeconds": 30,
+    "manualPlayback": "Not verified; audio listening, synchronized highlights, G02 hold-to-record and stitched replay remain untested. No teacher manual PASS claimed."
+  }
+}

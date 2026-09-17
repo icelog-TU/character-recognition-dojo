@@ -1,0 +1,207 @@
+Production C：請 claim L421，並直接開始完整 package 製作。
+
+【起手資訊】
+Repo：https://github.com/icelog-TU/character-recognition-dojo
+Production：C
+Worktree：C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
+Package branch：codex/l421-complete-package
+Unit：L421，普通單字課
+title：室
+newChars：["室"]
+注音：ㄕˋ
+老師已批准五句；S02 最終修訂為「媽媽教我怎麼打結。」
+
+依 latest ROLE_PRODUCTION_SOP 執行起手檢查、建立或確認 package branch、登記 registry claim，然後直接繼續完整 package，不需再次等待老師說「開始」。真正 blocker 才停下回報。
+
+【邊界與依賴】
+本次 fetch 核對：
+origin/main = 182ace5f Integrate lessons L409-L414
+正式 production：L001-L414，最新正式字「決」，418 個已學字。
+R049/R050 已 merged，afterLessonOrder=405。
+
+字界依賴：
+dependsOnLessons：["L416","L417","L418","L419","L420"]
+provisionalLearnedChars：["果","如","結","合","教"]
+以上均為老師核准的前序課，不視為正式已 merged。
+
+locked allowedChars：
+上述 commit 的 src/curriculum/sample-lessons.json 中，L001-L414 全部 newChars 聯集，加上 ["果","如","結","合","教","室"]，共 424 字。
+請在 request 展開完整 allowedChars。
+L415「解」未出現在本課定稿或遊戲選項，不額外加入 provisionalLearnedChars；這不改變前序課的正常 Release 順序。
+
+Coverage 以外的額外 provisional chars：無。
+五句與 Stage 4 options 的完全未學字：無。
+「班」只是下一課預定字，本課不可提前使用。
+「內、浴、臥、實、驗」未學，不加入「室內／浴室／臥室／實驗室」等教材文字。
+
+Release milestone blocker：
+L421 正式整合前，L420 與 R051/R052 必須完成並按 playable order 進 main。
+R051/R052：afterLessonOrder=420，coverage range L391-L420。
+在 registry、request、packet、draft 明列此 review milestone 依賴；本 package 不包含 review pair。
+前序與 review blocker 不阻止 Production 製作；完成且 intake 通過但依賴未解除時，回報 dependency-blocked-asset-complete。
+
+【五句定稿與配圖】
+
+L421-S01
+text：老師教我們合作整理教室。
+spokenText：老師教我們合作整理教室
+displayLines：["老師教我們","合作整理","教室。"]
+focusChar：室
+Han count：11
+Coverage：室×1、教×2、合×1
+imageNotes：
+小學教室整理時間，老師在旁示範與分配工作，主角小女孩與一名 generic 同學共同整理同一個閱讀角。女孩把桌上的書交給同學，同學接過放入矮書架；另有少量尚未收好的書，顯示整理仍在進行。清楚呈現老師教孩子配合，不是老師獨自收拾，也不是孩子各做無關的事情。generic 同學不冒充小月、小光或既有固定同學。書封與牆面不需可讀文字。
+
+L421-S02
+text：媽媽教我怎麼打結。
+spokenText：媽媽教我怎麼打結
+displayLines：["媽媽教我","怎麼打結。"]
+focusChar：教
+Han count：8
+Coverage：教×1、結×1
+imageNotes：
+家中手工桌前，主角媽媽與主角小女孩並坐。媽媽拿著一段粗彩帶，示範交叉、穿過圈口的打結動作；女孩拿另一段不同顏色的彩帶，跟著模仿。兩段彩帶分屬母女，不是要互相接合。畫面是正在教與學，結仍在形成中，不是女孩展示已完成的作品，也不是解開打結的線。不使用針、刀剪。
+
+L421-S03
+text：不如把書合上，到室外玩。
+spokenText：不如把書合上到室外玩
+displayLines：["不如把書","合上，","到室外玩。"]
+focusChar：合
+Han count：10
+Coverage：室×1、合×1、如×1
+imageNotes：
+家中靠近庭院入口的閱讀角，主角小女孩坐著看書，書仍攤開。主角媽媽站在旁邊，溫和地向門外明亮、安全的庭院示意，提議出去活動。女孩抬頭聽媽媽說話，尚未到室外玩；門邊可放一顆球，提供活動線索。說話者是媽媽，聽話者是女孩。畫面同時交代目前看書的位置與可前往的室外空間，不分割成前後兩張圖。
+
+L421-S04
+text：我想去畫室，結果走錯了。
+spokenText：我想去畫室結果走錯了
+displayLines：["我想去畫室，","結果走錯了。"]
+focusChar：室
+Han count：10
+Coverage：室×1、結×1、果×1
+imageNotes：
+社區藝文中心走廊，主角小女孩拿著畫具袋，誤走到辦公室門口，發現裡面是辦公桌與工作人員，露出不好意思的表情。中心工作人員在門邊溫和指向走廊另一側真正的畫室；畫室敞開的門內可見畫架、畫紙與顏料，靠物件區分用途，不靠文字門牌。女孩仍在錯誤的門口，尚未走到畫室，也不是已坐下畫畫。
+
+L421-S05
+text：爸爸把車停在地下室。
+spokenText：爸爸把車停在地下室
+displayLines：["爸爸把車","停在地下室。"]
+focusChar：室
+Han count：9
+Coverage：室×1
+imageNotes：
+大樓地下停車空間，天花板較低，可見樑柱、照明與遠處通往上方的車道坡道，沒有一般地面停車場的開闊天空。主角爸爸已把車停妥在停車格內，坐在駕駛座，主角小女孩仍在後座安全乘坐。車輛靜止，不畫女孩在車道上奔跑。不要畫成雜物地下室，也不要靠樓層字樣或可讀停車編號表示地下位置；車牌不需可讀文字或數字。
+
+【Coverage 與 Editor 自審】
+L421 室：4/≥3 PASS
+L420 教：3/≥2 PASS
+L419 合：2/≥2 PASS
+L418 結：2/≥2 PASS
+L417 如：1/≥1 PASS
+L416 果：1/≥1 PASS
+
+前六課及更早字只作 allowed vocabulary，不列 coverage。
+Han counts：11、8、10、10、9，全部不超過 12。
+spokenText 均等於 text 的精確 Han-only sequence。
+displayLines 串接完全等於 text，各行含標點最多 6 字元。
+Editor allowed-character sweep：PASS。
+已驗證定稿 text、spokenText、displayLines、focusChar 及全部 Stage 4 option text，均在正式已學字＋明列 provisional＋本課新字範圍內。
+
+【Stage 4 資料】
+固定題序，無例外；每句使用一次。
+所有 index 均為零起算 Han-only index。
+
+Game ID   | type                 | sentenceId | targetChar | targetCharIndex | missingIndexes
+L421-G01 | find-character       | L421-S01   | 室         | 10              | 不設定
+L421-G02 | teach-character      | L421-S05   | 室         | 8               | 不設定
+L421-G03 | missing-character    | L421-S04   | 室         | 4               | [4]
+L421-G04 | partial-order        | L421-S02   | 教         | 2               | [4,5,6,7]
+L421-G05 | choose-pronunciation | L421-S03   | 合         | 4               | 不設定
+
+G01：
+options 不設定；在句中點選 index 10 的「室」。
+
+G02：
+options 不設定。
+prefixText：爸爸把車停在地下
+teachAudio.prefixSrc：/assets/lessons/L421/audio/L421-G02-prefix.m4a
+「室」為句尾，suffixText／suffixSrc 不設定，不生成空 suffix 音檔。
+prefix 不可含「室」，也不可漏掉末尾「下」。
+
+G03 options：
+[
+  {"id":"correct","text":"室","correct":true},
+  {"id":"wrong-one","text":"紙","correct":false},
+  {"id":"wrong-two","text":"筆","correct":false}
+]
+三張不同單漢字卡，正解一張、干擾兩張。
+
+G04：
+missingIndexes [4,5,6,7] 對應「怎、麼、打、結」。
+options：
+[
+  {"id":"card-da","text":"打","correct":true,"correctOrder":2},
+  {"id":"card-zen","text":"怎","correct":true,"correctOrder":0},
+  {"id":"card-jie","text":"結","correct":true,"correctOrder":3},
+  {"id":"card-me","text":"麼","correct":true,"correctOrder":1}
+]
+四張單漢字卡，不做「怎麼」或「打結」chunk 卡。
+
+G05 options：
+[
+  {
+    "id":"correct",
+    "text":"不如把書合上，到室外玩。",
+    "correct":true,
+    "audioSrc":"/assets/lessons/L421/audio/L421-S03.m4a"
+  },
+  {
+    "id":"wrong-one",
+    "text":"不如把門合上，到室外玩。",
+    "correct":false,
+    "audioSrc":"/assets/lessons/L421/audio/L421-G05-wrong-one.m4a"
+  },
+  {
+    "id":"wrong-two",
+    "text":"不如把書合上，到室外坐。",
+    "correct":false,
+    "audioSrc":"/assets/lessons/L421/audio/L421-G05-wrong-two.m4a"
+  }
+]
+wrong-one spokenText：不如把門合上到室外玩
+wrong-two spokenText：不如把書合上到室外坐
+兩個 wrong options 均為 10 個漢字，與正解各差一字。分別依完整 wrong text 生成音檔。
+
+機械索引自審：
+G01 S01[10]=室 PASS
+G02 S05[8]=室；prefix 精確切分、句尾無 suffix PASS
+G03 S04[4]=室；三張不同單漢字選項 PASS
+G04 S02[2]=教；[4,5,6,7]=怎麼打結；correctOrder 映射 PASS
+G05 S03[4]=合；wrong options 等長、各差一字、字界 PASS
+五句各使用一次及固定題序 PASS
+
+【本課特殊注意】
+1. 「室」讀 ㄕˋ；charAudio：/assets/lessons/L421/audio/char-u5ba4.m4a。
+2. S01 兩個「教」讀音不同：Han index 2「教我們」讀 ㄐㄧㄠ；index 9「教室」讀 ㄐㄧㄠˋ。S02 index 2「媽媽教我」讀 ㄐㄧㄠ。逐一核對注音與實際音訊，必要時依 schema 設定 zhuyinOverrides，不可整課一律套同音。
+3. S02 已由「這個結是媽媽教我打的」改成現行定稿；不得沿用舊句、舊索引或展示完成品的舊畫面。
+4. S03 尚未出門玩、S04 尚在走錯的門口、S05 已停妥。固定主角及家人依 visual cast SOP；L058 僅作畫風參考。
+5. 本課沒有文字／數字入圖例外；畫室、辦公室、地下停車空間用物件與空間結構辨識，不使用可讀門牌或樓層數字。
+
+【交付要求】
+依 ROLE_PRODUCTION_SOP 完成 package、commit/push branch，包含：
+- curriculum-workflow/lesson-requests/L421.json
+- curriculum-workflow/generated/L421-generation-packet.md
+- curriculum-workflow/drafts/L421-draft.json
+- public/assets/lessons/L421/images/L421-S01.webp 至 L421-S05.webp
+- public/assets/lessons/L421/audio/：charAudio、五句音檔、G02 prefix、G05 兩個 wrong 音檔；本課不需 G02 suffix
+- 完整 charTimings，以及 SOP 要求的 registry、課程／planner／ledger package 更新
+
+最後交包前，pushed branch 必須通過：
+npm run curriculum:package-intake -- --unit L421 --ref origin/codex/l421-complete-package
+
+回報完整 tip SHA、intake 結果、package 狀態與未完成項。
+若前序課或 R051/R052 尚未 merged，而 package 已完整且 intake 通過，回報 dependency-blocked-asset-complete，並明列未解除的 Release blockers。缺資產或 unresolved 項不可回報完整交包。
+
+正式合併後老師審圖／審音入口：
+https://icelog-tu.github.io/character-recognition-dojo/lesson-asset-review.html
+選取 L421；修復狀態依 npm run asset:review-status 查看。

@@ -1,0 +1,752 @@
+{
+  "unit": "L423",
+  "pipeline": "OpenAI repo generation; assets:audio mono AAC 44100 Hz; assets:align:ai on final M4A with documented simplified/traditional normalization. Full-sentence G05 wrong-two regenerated after transcription read 禮盒; final transcript matches 筆盒. Only trailing silence removed with measured last-active boundary plus 250ms decay margin; no syllable extraction or splicing.",
+  "manualPlayback": "Browser QA tooling fallback: cua.getBrowser initialization timed out after 30 seconds and kernel reset before playback. Manual continuous listening, in-app highlighting and phone recording QA not performed. Teacher subjective review remains post-merge.",
+  "adjustments": [
+    {
+      "src": "/assets/lessons/L423/audio/L423-S01.m4a",
+      "index": 2,
+      "previous": {
+        "charIndex": 2,
+        "startMs": 1000,
+        "endMs": 1960
+      },
+      "corrected": {
+        "charIndex": 2,
+        "startMs": 1510,
+        "endMs": 1960
+      },
+      "reason": "Whisper interval included preceding silence; waveform onset reviewed."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-S01.m4a",
+      "index": 5,
+      "previous": {
+        "charIndex": 5,
+        "startMs": 2620,
+        "endMs": 3580
+      },
+      "corrected": {
+        "charIndex": 5,
+        "startMs": 3010,
+        "endMs": 3580
+      },
+      "reason": "Whisper interval included preceding silence; waveform onset reviewed."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-S05.m4a",
+      "index": 4,
+      "previous": {
+        "charIndex": 4,
+        "startMs": 1460,
+        "endMs": 2440
+      },
+      "corrected": {
+        "charIndex": 4,
+        "startMs": 1460,
+        "endMs": 2080
+      },
+      "reason": "Avoid highlighting through inter-clause pause."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-S05.m4a",
+      "index": 5,
+      "previous": {
+        "charIndex": 5,
+        "startMs": 3020,
+        "endMs": 3040
+      },
+      "corrected": {
+        "charIndex": 5,
+        "startMs": 2670,
+        "endMs": 2990
+      },
+      "reason": "Whisper 20ms onset defect; waveform shows distinct first syllable before 果."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-S05.m4a",
+      "index": 6,
+      "previous": {
+        "charIndex": 6,
+        "startMs": 3040,
+        "endMs": 3440
+      },
+      "corrected": {
+        "charIndex": 6,
+        "startMs": 3000,
+        "endMs": 3340
+      },
+      "reason": "Waveform syllable boundary; preserve inter-syllable gap."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-G05-wrong-one.m4a",
+      "index": 5,
+      "previous": {
+        "charIndex": 5,
+        "startMs": 2460,
+        "endMs": 2461
+      },
+      "corrected": {
+        "charIndex": 5,
+        "startMs": 2100,
+        "endMs": 2410
+      },
+      "reason": "Whisper 1ms overlapping onset defect; waveform reviewed."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-G05-wrong-one.m4a",
+      "index": 6,
+      "previous": {
+        "charIndex": 6,
+        "startMs": 2460,
+        "endMs": 2720
+      },
+      "corrected": {
+        "charIndex": 6,
+        "startMs": 2410,
+        "endMs": 2780
+      },
+      "reason": "Second syllable following corrected 結."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-G05-wrong-one.m4a",
+      "index": 7,
+      "previous": {
+        "charIndex": 7,
+        "startMs": 2720,
+        "endMs": 3420
+      },
+      "corrected": {
+        "charIndex": 7,
+        "startMs": 3020,
+        "endMs": 3420
+      },
+      "reason": "Remove silence before 筆 based on waveform onset."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-G05-wrong-two.m4a",
+      "index": 5,
+      "previous": {
+        "charIndex": 5,
+        "startMs": 2680,
+        "endMs": 2700
+      },
+      "corrected": {
+        "charIndex": 5,
+        "startMs": 2300,
+        "endMs": 2680
+      },
+      "reason": "Whisper 20ms onset defect; waveform reviewed."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-G05-wrong-two.m4a",
+      "index": 6,
+      "previous": {
+        "charIndex": 6,
+        "startMs": 2700,
+        "endMs": 3040
+      },
+      "corrected": {
+        "charIndex": 6,
+        "startMs": 2700,
+        "endMs": 2990
+      },
+      "reason": "Second syllable following corrected 結."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-S01.m4a",
+      "index": 8,
+      "previous": {
+        "charIndex": 8,
+        "startMs": 4380,
+        "endMs": 4580
+      },
+      "corrected": {
+        "charIndex": 8,
+        "startMs": 4380,
+        "endMs": 4740
+      },
+      "reason": "Final syllable decay aligned with measured speech envelope; excludes retained silent tail."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-S02.m4a",
+      "index": 7,
+      "previous": {
+        "charIndex": 7,
+        "startMs": 2100,
+        "endMs": 2300
+      },
+      "corrected": {
+        "charIndex": 7,
+        "startMs": 2100,
+        "endMs": 2390
+      },
+      "reason": "Final syllable decay aligned with measured speech envelope; excludes retained silent tail."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-S03.m4a",
+      "index": 9,
+      "previous": {
+        "charIndex": 9,
+        "startMs": 3480,
+        "endMs": 3680
+      },
+      "corrected": {
+        "charIndex": 9,
+        "startMs": 3480,
+        "endMs": 3700
+      },
+      "reason": "Final syllable decay aligned with measured speech envelope; excludes retained silent tail."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-S04.m4a",
+      "index": 8,
+      "previous": {
+        "charIndex": 8,
+        "startMs": 3060,
+        "endMs": 3260
+      },
+      "corrected": {
+        "charIndex": 8,
+        "startMs": 3060,
+        "endMs": 3330
+      },
+      "reason": "Final syllable decay aligned with measured speech envelope; excludes retained silent tail."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-S05.m4a",
+      "index": 10,
+      "previous": {
+        "charIndex": 10,
+        "startMs": 4590,
+        "endMs": 4840
+      },
+      "corrected": {
+        "charIndex": 10,
+        "startMs": 4590,
+        "endMs": 4850
+      },
+      "reason": "Final syllable decay aligned with measured speech envelope; excludes retained silent tail."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-G02-prefix.m4a",
+      "index": 3,
+      "previous": {
+        "charIndex": 3,
+        "startMs": 960,
+        "endMs": 1300
+      },
+      "corrected": {
+        "charIndex": 3,
+        "startMs": 960,
+        "endMs": 1290
+      },
+      "reason": "Final syllable decay aligned with measured speech envelope; excludes retained silent tail."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-G02-suffix.m4a",
+      "index": 2,
+      "previous": {
+        "charIndex": 2,
+        "startMs": 880,
+        "endMs": 1080
+      },
+      "corrected": {
+        "charIndex": 2,
+        "startMs": 880,
+        "endMs": 1200
+      },
+      "reason": "Final syllable decay aligned with measured speech envelope; excludes retained silent tail."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-G05-wrong-one.m4a",
+      "index": 10,
+      "previous": {
+        "charIndex": 10,
+        "startMs": 3990,
+        "endMs": 4260
+      },
+      "corrected": {
+        "charIndex": 10,
+        "startMs": 3990,
+        "endMs": 4310
+      },
+      "reason": "Final syllable decay aligned with measured speech envelope; excludes retained silent tail."
+    },
+    {
+      "src": "/assets/lessons/L423/audio/L423-G05-wrong-two.m4a",
+      "index": 10,
+      "previous": {
+        "charIndex": 10,
+        "startMs": 4310,
+        "endMs": 4560
+      },
+      "corrected": {
+        "charIndex": 10,
+        "startMs": 4310,
+        "endMs": 4590
+      },
+      "reason": "Final syllable decay aligned with measured speech envelope; excludes retained silent tail."
+    }
+  ],
+  "transcripts": {
+    "L423-G02-prefix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 1.5499999523162842,
+      "text": "爸爸教我",
+      "words": [
+        {
+          "word": "爸爸",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "教",
+          "start": 0.46000000834465027,
+          "end": 0.9599999785423279
+        },
+        {
+          "word": "我",
+          "start": 0.9599999785423279,
+          "end": 1.2999999523162842
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 2
+      }
+    },
+    "L423-G02-suffix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 1.4600000381469727,
+      "text": "装小车",
+      "words": [
+        {
+          "word": "装",
+          "start": 0,
+          "end": 0.3799999952316284
+        },
+        {
+          "word": "小",
+          "start": 0.3799999952316284,
+          "end": 0.8799999952316284
+        },
+        {
+          "word": "车",
+          "start": 0.8799999952316284,
+          "end": 1.0800000429153442
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 2
+      }
+    },
+    "L423-G05-wrong-one.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.570000171661377,
+      "text": "笔盒没拿好,结果笔掉出来。",
+      "words": [
+        {
+          "word": "笔",
+          "start": 0,
+          "end": 0.3400000035762787
+        },
+        {
+          "word": "盒",
+          "start": 0.3400000035762787,
+          "end": 0.6800000071525574
+        },
+        {
+          "word": "没",
+          "start": 0.6800000071525574,
+          "end": 0.9399999976158142
+        },
+        {
+          "word": "拿",
+          "start": 0.9399999976158142,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "好",
+          "start": 1.159999966621399,
+          "end": 1.940000057220459
+        },
+        {
+          "word": "结",
+          "start": 2.4600000381469727,
+          "end": 2.4600000381469727
+        },
+        {
+          "word": "果",
+          "start": 2.4600000381469727,
+          "end": 2.7200000286102295
+        },
+        {
+          "word": "笔",
+          "start": 2.7200000286102295,
+          "end": 3.4200000762939453
+        },
+        {
+          "word": "掉",
+          "start": 3.4200000762939453,
+          "end": 3.7200000286102295
+        },
+        {
+          "word": "出来。",
+          "start": 3.7200000286102295,
+          "end": 4.260000228881836
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L423-G05-wrong-two.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.849999904632568,
+      "text": "笔盒没关好,结果钱掉出来。",
+      "words": [
+        {
+          "word": "笔",
+          "start": 0,
+          "end": 0.4000000059604645
+        },
+        {
+          "word": "盒",
+          "start": 0.4000000059604645,
+          "end": 0.800000011920929
+        },
+        {
+          "word": "没",
+          "start": 0.800000011920929,
+          "end": 1.0800000429153442
+        },
+        {
+          "word": "关",
+          "start": 1.0800000429153442,
+          "end": 1.3799999952316284
+        },
+        {
+          "word": "好",
+          "start": 1.3799999952316284,
+          "end": 2.2200000286102295
+        },
+        {
+          "word": "结",
+          "start": 2.680000066757202,
+          "end": 2.700000047683716
+        },
+        {
+          "word": "果",
+          "start": 2.700000047683716,
+          "end": 3.0399999618530273
+        },
+        {
+          "word": "钱",
+          "start": 3.0399999618530273,
+          "end": 3.740000009536743
+        },
+        {
+          "word": "掉",
+          "start": 3.740000009536743,
+          "end": 4.059999942779541
+        },
+        {
+          "word": "出来。",
+          "start": 4.059999942779541,
+          "end": 4.559999942779541
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L423-S01.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.989999771118164,
+      "text": "全班在教室分組下棋。",
+      "words": [
+        {
+          "word": "全",
+          "start": 0,
+          "end": 0.6800000071525574
+        },
+        {
+          "word": "班",
+          "start": 0.6800000071525574,
+          "end": 1
+        },
+        {
+          "word": "在",
+          "start": 1,
+          "end": 1.9600000381469727
+        },
+        {
+          "word": "教",
+          "start": 1.9600000381469727,
+          "end": 2.380000114440918
+        },
+        {
+          "word": "室",
+          "start": 2.380000114440918,
+          "end": 2.619999885559082
+        },
+        {
+          "word": "分",
+          "start": 2.619999885559082,
+          "end": 3.5799999237060547
+        },
+        {
+          "word": "組",
+          "start": 3.5799999237060547,
+          "end": 3.859999895095825
+        },
+        {
+          "word": "下",
+          "start": 3.859999895095825,
+          "end": 4.380000114440918
+        },
+        {
+          "word": "棋。",
+          "start": 4.380000114440918,
+          "end": 4.579999923706055
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L423-S02.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.640000104904175,
+      "text": "爸爸教我组装小车",
+      "words": [
+        {
+          "word": "爸爸",
+          "start": 0,
+          "end": 0.3199999928474426
+        },
+        {
+          "word": "教",
+          "start": 0.3199999928474426,
+          "end": 0.8799999952316284
+        },
+        {
+          "word": "我",
+          "start": 0.8799999952316284,
+          "end": 1.2400000095367432
+        },
+        {
+          "word": "组",
+          "start": 1.2400000095367432,
+          "end": 1.5
+        },
+        {
+          "word": "装",
+          "start": 1.5,
+          "end": 1.7400000095367432
+        },
+        {
+          "word": "小",
+          "start": 1.7400000095367432,
+          "end": 2.0999999046325684
+        },
+        {
+          "word": "车",
+          "start": 2.0999999046325684,
+          "end": 2.299999952316284
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "L423-S03.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.9700000286102295,
+      "text": "班长把功课送到办公室。",
+      "words": [
+        {
+          "word": "班",
+          "start": 0,
+          "end": 0.3199999928474426
+        },
+        {
+          "word": "长",
+          "start": 0.3199999928474426,
+          "end": 0.6200000047683716
+        },
+        {
+          "word": "把",
+          "start": 0.6200000047683716,
+          "end": 1.2000000476837158
+        },
+        {
+          "word": "功",
+          "start": 1.2000000476837158,
+          "end": 1.6200000047683716
+        },
+        {
+          "word": "课",
+          "start": 1.6200000047683716,
+          "end": 1.8799999952316284
+        },
+        {
+          "word": "送",
+          "start": 1.8799999952316284,
+          "end": 2.4600000381469727
+        },
+        {
+          "word": "到",
+          "start": 2.4600000381469727,
+          "end": 2.9200000762939453
+        },
+        {
+          "word": "办",
+          "start": 2.9200000762939453,
+          "end": 3.1600000858306885
+        },
+        {
+          "word": "公",
+          "start": 3.1600000858306885,
+          "end": 3.4800000190734863
+        },
+        {
+          "word": "室。",
+          "start": 3.4800000190734863,
+          "end": 3.680000066757202
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L423-S04.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.5899999141693115,
+      "text": "我们这组合作画海报。",
+      "words": [
+        {
+          "word": "我们",
+          "start": 0,
+          "end": 0.4399999976158142
+        },
+        {
+          "word": "这",
+          "start": 0.4399999976158142,
+          "end": 1.0199999809265137
+        },
+        {
+          "word": "组",
+          "start": 1.0199999809265137,
+          "end": 1.3200000524520874
+        },
+        {
+          "word": "合",
+          "start": 1.3200000524520874,
+          "end": 1.7599999904632568
+        },
+        {
+          "word": "作",
+          "start": 1.7599999904632568,
+          "end": 2.0199999809265137
+        },
+        {
+          "word": "画",
+          "start": 2.0199999809265137,
+          "end": 2.700000047683716
+        },
+        {
+          "word": "海",
+          "start": 2.700000047683716,
+          "end": 3.059999942779541
+        },
+        {
+          "word": "报。",
+          "start": 3.059999942779541,
+          "end": 3.259999990463257
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L423-S05.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 5.099999904632568,
+      "text": "笔盒没关好, 结果笔掉出来。",
+      "words": [
+        {
+          "word": "笔",
+          "start": 0,
+          "end": 0.30000001192092896
+        },
+        {
+          "word": "盒",
+          "start": 0.30000001192092896,
+          "end": 0.9399999976158142
+        },
+        {
+          "word": "没",
+          "start": 0.9399999976158142,
+          "end": 1.2200000286102295
+        },
+        {
+          "word": "关",
+          "start": 1.2200000286102295,
+          "end": 1.4600000381469727
+        },
+        {
+          "word": "好",
+          "start": 1.4600000381469727,
+          "end": 2.440000057220459
+        },
+        {
+          "word": "结",
+          "start": 3.0199999809265137,
+          "end": 3.0399999618530273
+        },
+        {
+          "word": "果",
+          "start": 3.0399999618530273,
+          "end": 3.440000057220459
+        },
+        {
+          "word": "笔",
+          "start": 3.440000057220459,
+          "end": 4.019999980926514
+        },
+        {
+          "word": "掉",
+          "start": 4.019999980926514,
+          "end": 4.340000152587891
+        },
+        {
+          "word": "出来。",
+          "start": 4.340000152587891,
+          "end": 4.840000152587891
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 6
+      }
+    }
+  }
+}

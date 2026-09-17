@@ -1,0 +1,775 @@
+{
+  "id": "L425",
+  "order": 425,
+  "title": "各",
+  "newChars": [
+    "各"
+  ],
+  "zhuyin": {
+    "各": "ㄍㄜˋ"
+  },
+  "dependsOnLessons": [
+    "L416",
+    "L420",
+    "L421",
+    "L422",
+    "L423",
+    "L424"
+  ],
+  "provisionalLearnedChars": [
+    "果",
+    "教",
+    "室",
+    "班",
+    "組",
+    "隊"
+  ],
+  "packageStatus": "dependency-blocked-asset-complete",
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L424",
+    "reviewPairs": [
+      {
+        "ids": [
+          "R051",
+          "R052"
+        ],
+        "afterLessonOrder": 420,
+        "targetLessonRange": {
+          "startOrder": 391,
+          "endOrder": 420
+        }
+      }
+    ]
+  },
+  "teacherNotes": "Teacher-approved L425 各 handoff. Base 4eec5178, formal L415 解, 419 learned characters; full allowed426 includes only provisional 果教室班組隊 and new 各. L416 果 is vocabulary dependency outside coverage. Do not add 如結合、自式業 to provisional vocabulary. S04 fixed 全班同學分組照顧花草, indexes refer to this exact final sentence. Release must integrate preceding lessons through L424 and R051/R052 after420 for coverage391-420. Review pair is outside this package. S03 index5 種 and G02 suffix 種水果 read ㄓㄨㄥˇ, never planting ㄓㄨㄥˋ. S02 index8 長 and every G05 option read ㄓㄤˇ. S01 index6 教 reads ㄐㄧㄠˋ. S01 at least three separate classes, S02/S04 multiple groups within one class. S05 guide speaks to multiple family travellers; recurring family4 maintained. L058 style-only, family anchors L154/L162/L163. No image text/number exception. Release owns shared JSON/planner/ledger integration; teacher subjective review post-main.",
+  "requiredRounds": 5,
+  "charAudio": {
+    "各": "/assets/lessons/L425/audio/char-u5404.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L425-S01",
+      "text": "各班排好隊，回教室。",
+      "spokenText": "各班排好隊回教室",
+      "displayLines": [
+        "各班排好隊，",
+        "回教室。"
+      ],
+      "focusChar": "各",
+      "imageNotes": "學校集合活動結束，老師在操場向不同班級示意排隊回教室。畫面清楚呈現至少三個分開的班級隊伍，每班前方有帶領的老師，隊伍之間保留間隔。主角小女孩在其中一班，其他班以 generic 同學及老師呈現。前方可見通往教學樓的路線，學生仍在排整齊、準備返回，不是放學離校。不可只畫一班的一條長隊，也不要把不同班級混成一群。不需班牌文字或班級數字。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "6": "ㄐㄧㄠˋ"
+      },
+      "imagePrompt": "Create ONE finished square 1:1 children's picture-book illustration, L425-S01. Reference sheet top row five L058 images STYLE ONLY (fine pencil-watercolor, rich clean detail, bright warm natural light, soft natural faces, consistent preschool proportions); middle refined examples and bottom family identity. Fixed protagonist girl short dark bob, pink clip, pink cardigan/cream top/navy skirt/pink shoes. Scene: Taiwan primary school playground after an assembly. CLEARLY THREE SEPARATE CLASS QUEUES in three widely spaced parallel lanes, each queue with 4-5 preschool/early elementary children standing one behind another AND its OWN distinct adult teacher at the front. At least 3 teachers, adult height. Girl stands in one queue. Other children and teachers generic, varied faces/hair/clothes, no duplicate family mother/child faces. Slightly elevated wide view makes all three independent class lines and gaps obvious. Teachers gesture toward school building/classrooms across a safe walkway. Children still arranging neatly ready to return to classrooms; not leaving school, no schoolbags required. Show exactly three distinct lines, not a single long queue or mixed crowd. Detailed bright school campus but no signs, labels, class numbers, readable text, speech bubbles, logos or watermark. Keep every queue/head/foot inside safe square margins; phone-readable count relationships. No flat cartoon, generic simple wash, anime, 3D or photorealism. Preserve L058 treatment faithfully. Output a single image, not the reference sheet.",
+      "imageSrc": "/assets/lessons/L425/images/L425-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L425/audio/L425-S01.m4a",
+        "durationMs": 2647,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 240
+          },
+          {
+            "charIndex": 1,
+            "startMs": 240,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1160,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1680,
+            "endMs": 1940
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1940,
+            "endMs": 2220
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2220,
+            "endMs": 2440
+          }
+        ]
+      }
+    },
+    {
+      "id": "L425-S02",
+      "text": "請各組選出一位隊長。",
+      "spokenText": "請各組選出一位隊長",
+      "displayLines": [
+        "請各組選出",
+        "一位隊長。"
+      ],
+      "focusChar": "隊",
+      "imageNotes": "學校戶外團體活動開始前，老師面向已分好的數個小組，請每組選一位隊長。主角小女孩所在小組與其他小組分開圍成小圈，孩子正彼此討論、有人舉手表達意見。畫面是老師提出指示、孩子開始選人，尚未宣布選舉結果。不要畫成老師直接指定一個全班隊長，也不要把全班畫成同一組。不指定小光或小月當選，不新增固定角色職務。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "8": "ㄓㄤˇ"
+      },
+      "imagePrompt": "One finished SQUARE 1:1 picture-book illustration L425-S02, not collage. Match attached reference sheet: five L058 style images top row for fine warm pencil-watercolor lines and bright detailed clean setting; refined examples for consistent young-child proportions; bottom family for fixed protagonist girl. Outdoor school group activity BEFORE starting. ONE clearly visible adult teacher stands before THREE SEPARATE SMALL CIRCLES of 4 children each, asking each group to choose its own leader. Slight elevated wide view, obvious open space between 3 circles. Recurring girl with dark bob, pink clip, pink cardigan, navy skirt is in foreground circle. Children turn toward peers discussing; one or two raise hands to offer opinions. NO leader has been chosen, no badges, crowns, armbands, winner pose or pointing to one chosen child. Teacher gestures with open hands to all groups, not assigning one class captain. Generic children distinct from fixed girl, Xiaoyue, Xiaoguang or fixed boys; varied colors/hair, natural anatomies. Teacher distinct from mother, tidy teal classroom cardigan and low hair bun. Bright school garden/playground behind. No readable letters/numbers/text/signs/bubbles/logos/watermarks. Keep all meaningful groups in square safe margins and readable at phone size. Faithful detailed L058 picture-book style, no simplified cartoon/wash, anime,3D,photo.",
+      "imageSrc": "/assets/lessons/L425/images/L425-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L425/audio/L425-S02.m4a",
+        "durationMs": 4086,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 600
+          },
+          {
+            "charIndex": 1,
+            "startMs": 600,
+            "endMs": 1060
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1060,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1320,
+            "endMs": 2040
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2040,
+            "endMs": 2420
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2420,
+            "endMs": 2980
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2980,
+            "endMs": 3280
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3280,
+            "endMs": 3600
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3600,
+            "endMs": 3840
+          }
+        ]
+      }
+    },
+    {
+      "id": "L425-S03",
+      "text": "這間店有各種水果。",
+      "spokenText": "這間店有各種水果",
+      "displayLines": [
+        "這間店有",
+        "各種水果。"
+      ],
+      "focusChar": "各",
+      "imageNotes": "水果店內，主角小女孩與主角媽媽看著分區陳列的多種水果，例如蘋果、香蕉、葡萄、橘子及西瓜。每種水果集中在自己的籃子或陳列區，外形、顏色清楚可辨，呈現種類多，不是同一種水果堆得很多。媽媽向女孩指示不同水果，店員可在櫃台後整理貨品。畫面不需價錢、品名標籤、品牌或數字。",
+      "approved": true,
+      "zhuyinOverrides": {
+        "5": "ㄓㄨㄥˇ"
+      },
+      "imagePrompt": "Create ONE finished square 1:1 children's picture-book scene L425-S03. Use attached reference sheet first row L058 STYLE ONLY: fine pencil-watercolor lines, warm natural sunlight, bright clean palette, rich tasteful environmental detail, natural soft expressive faces. Refined middle examples and bottom family anchors for identity. Recurring mother shoulder-length dark hair, cream blouse and blue trousers; recurring preschool girl dark bob, pink hairclip, pink cardigan/cream top/navy skirt/pink shoes, same fixed faces/proportions. Inside a welcoming Taiwan fruit shop, mother points out the MANY DIFFERENT KINDS OF FRUIT to girl. At least FIVE clear separate baskets/displays: red apples, yellow bananas, purple grapes, oranges, green striped watermelons. Each fruit type stays together; shapes/colors distinct and phone-readable. Girl looks interested along mother's pointing gesture. Optional generic shopkeeper behind counter tidying produce, not mother clone. Show variety, not many copies of one fruit. Safe square composition with fruit foreground and both family figures. No price labels, product names, text, numbers, brand marks, speech bubbles or watermark. Not purchasing at till, no extra story. Faithful L058 detailed picture-book treatment, no simple generic watercolor/cartoon/anime/3D/photo.",
+      "imageSrc": "/assets/lessons/L425/images/L425-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L425/audio/L425-S03.m4a",
+        "durationMs": 3552,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 860
+          },
+          {
+            "charIndex": 2,
+            "startMs": 860,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1960,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2300,
+            "endMs": 2560
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2560,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3040,
+            "endMs": 3300
+          }
+        ]
+      }
+    },
+    {
+      "id": "L425-S04",
+      "text": "全班同學分組照顧花草。",
+      "spokenText": "全班同學分組照顧花草",
+      "displayLines": [
+        "全班同學分組",
+        "照顧花草。"
+      ],
+      "focusChar": "組",
+      "imageNotes": "學校花園活動，全班分成數個小組，每組照顧不同區域的花草。主角小女孩與同組孩子照顧前景的一小區盆栽，有人適量澆水、有人收拾周圍落葉；背景另外兩組分別照顧其他花圃，老師在旁引導。要看得出多組分工與不同照顧區域，不是全班擠著澆同一盆花，也不只畫主角一人。植物保持正常、未被過量澆水，不使用危險工具。不得沿用舊句「我們班分組照顧花草」的索引資料。",
+      "approved": true,
+      "imagePrompt": "ONE finished SQUARE 1:1 L425-S04 illustration: 全班同學分組照顧花草. Attached sheet top row full5 L058 style-only: fine pencil-watercolor linework, bright warm natural light, rich clean environment, expressive natural preschool faces and consistent proportions. Use middle refined examples plus bottom fixed family girl. School garden activity showing THREE CLEAR SEPARATE SMALL GROUPS of 3-4 children working in THREE DIFFERENT planting areas, visible gaps and pathways between. Foreground group includes fixed girl short dark bob/pink clip/pink cardigan/navy skirt, with peers tending a small potted-plant area: one gently waters a pot with small watering can, another gathers a few fallen leaves by hand. Background left group tends a separate flower bed; background right group tends a different low planter. ONE teacher in tidy teal classroom cardigan, hair in low bun (distinct from mother), guides from side. All children part of same class divided into groups, no class lines, no separate teachers per group. Plants healthy, water small and directed to soil, not flooding, no dangerous tools. Group task distribution easily seen on phone, not everyone watering same pot or solitary protagonist. Natural anatomy and distinct generic children (not clones/Xiaoyue/Xiaoguang). Slight elevated wide composition, square safe margins. NO letters/numbers/labels/bubbles/logos/watermarks. No simple wash/cartoon/anime/3D/photo; highly preserve detailed L058 style.",
+      "imageSrc": "/assets/lessons/L425/images/L425-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L425/audio/L425-S04.m4a",
+        "durationMs": 3552,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 480
+          },
+          {
+            "charIndex": 1,
+            "startMs": 480,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1100,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1420,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1960,
+            "endMs": 2220
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2220,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2600,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2800,
+            "endMs": 3160
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3160,
+            "endMs": 3320
+          }
+        ]
+      }
+    },
+    {
+      "id": "L425-S05",
+      "text": "各位請上車，我們要出發了。",
+      "spokenText": "各位請上車我們要出發了",
+      "displayLines": [
+        "各位請上車，",
+        "我們要",
+        "出發了。"
+      ],
+      "focusChar": "各",
+      "imageNotes": "旅行團準備出發，一名 generic 導遊站在停妥的遊覽車開放車門旁，向旅客做出上車的招呼手勢。主角小女孩與主角爸爸、媽媽、哥哥在旅客中，旁邊還有其他成人與家庭旅客，不是只有主角一家，也不是校外教學。有人正安全地踏上車階，其餘人依序等候；車尚未開動。導遊是本句說話者，向整團旅客說話。車身、導遊用品及行李不需可讀文字、號碼或品牌。",
+      "approved": true,
+      "imagePrompt": "Create one square 1:1 detailed warm Japanese watercolor and colored-pencil children's textbook illustration. Match reference sheet: top row L058 all five is mandatory style anchor, middle row refined quality L115/L118/L119/L128, bottom row family identity L154/L162/L163. Rich hand-painted texture, delicate expressive natural faces, lush sunlit believable environment, no text, numbers, labels, lettering, logos or speech bubbles. Scene illustrating 各位請上車，我們要出發了: a GENERIC adult female tour guide in a teal jacket and lanyard (distinct from recurring mother), at right beside open front passenger door of a fully stopped cream/blue tourist coach, smiles and gestures with open palm toward accessible boarding steps while speaking to several mixed travelers. One generic adult is safely stepping onto bus using handrail. On left foreground recurring family of four waiting: girl short dark bob, pink hair clip, pink cardigan over cream blouse, navy skirt, pink shoes; mother shoulder-length dark hair, cream blouse blue trousers; father short dark hair blue shirt khaki trousers; older brother dark hair blue-and-white striped shirt. Two other adult travelers and another family in midground clearly make this a public mixed tour, not school class. Everyone safely on wide sidewalk with bags, parked bus wheels still, no driver taking off, no motion lines, welcoming guide is clear speaker, bus door geometry believable and not blocked, all family bodies anatomically distinct. Leafy sunny tourist departure area with no writing. Single coherent illustration, not collage. Use reference solely for art style and recurring family identity; do not copy reference compositions.",
+      "imageSrc": "/assets/lessons/L425/images/L425-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L425/audio/L425-S05.m4a",
+        "durationMs": 3506,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 210
+          },
+          {
+            "charIndex": 1,
+            "startMs": 210,
+            "endMs": 420
+          },
+          {
+            "charIndex": 2,
+            "startMs": 420,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 960,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1260,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2200,
+            "endMs": 2280
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2280,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2360,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2700,
+            "endMs": 2920
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2920,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3120,
+            "endMs": 3300
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L425-G01",
+      "type": "find-character",
+      "sentenceId": "L425-S01",
+      "targetChar": "各",
+      "targetCharIndex": 0,
+      "prompt": "請幫小兔子找出各，點一下句子中的各。"
+    },
+    {
+      "id": "L425-G02",
+      "type": "teach-character",
+      "sentenceId": "L425-S03",
+      "targetChar": "各",
+      "targetCharIndex": 4,
+      "prompt": "請你幫小兔子念這個字。",
+      "teachAudio": {
+        "prefixText": "這間店有",
+        "suffixText": "種水果",
+        "prefixSrc": "/assets/lessons/L425/audio/L425-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L425/audio/L425-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L425/audio/L425-G02-prefix.m4a",
+          "durationMs": 1532,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 380
+            },
+            {
+              "charIndex": 1,
+              "startMs": 380,
+              "endMs": 680
+            },
+            {
+              "charIndex": 2,
+              "startMs": 680,
+              "endMs": 1000
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1000,
+              "endMs": 1280
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L425/audio/L425-G02-suffix.m4a",
+          "durationMs": 1509,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 340
+            },
+            {
+              "charIndex": 1,
+              "startMs": 340,
+              "endMs": 900
+            },
+            {
+              "charIndex": 2,
+              "startMs": 900,
+              "endMs": 1160
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L425-G03",
+      "type": "missing-character",
+      "sentenceId": "L425-S05",
+      "targetChar": "各",
+      "targetCharIndex": 0,
+      "prompt": "請幫小兔子找回少掉的字。",
+      "missingIndexes": [
+        0
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "各",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "這",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "那",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L425-G04",
+      "type": "partial-order",
+      "sentenceId": "L425-S04",
+      "targetChar": "組",
+      "targetCharIndex": 5,
+      "prompt": "請幫小兔子把字放回去。",
+      "missingIndexes": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "options": [
+        {
+          "id": "card-hua",
+          "text": "花",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-zhao",
+          "text": "照",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-cao",
+          "text": "草",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-gu",
+          "text": "顧",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L425-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L425-S02",
+      "targetChar": "隊",
+      "targetCharIndex": 7,
+      "prompt": "先按朋友的頭聽，再選出念對的朋友。",
+      "options": [
+        {
+          "id": "correct",
+          "text": "請各組選出一位隊長。",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L425/audio/L425-S02.m4a",
+          "audio": {
+            "src": "/assets/lessons/L425/audio/L425-S02.m4a",
+            "durationMs": 4086,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 600
+              },
+              {
+                "charIndex": 1,
+                "startMs": 600,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 2,
+                "startMs": 1060,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1320,
+                "endMs": 2040
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2040,
+                "endMs": 2420
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2420,
+                "endMs": 2980
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2980,
+                "endMs": 3280
+              },
+              {
+                "charIndex": 7,
+                "startMs": 3280,
+                "endMs": 3600
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3600,
+                "endMs": 3840
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-one",
+          "text": "請各班選出一位隊長。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L425/audio/L425-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L425/audio/L425-G05-wrong-one.m4a",
+            "durationMs": 3483,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 760
+              },
+              {
+                "charIndex": 2,
+                "startMs": 760,
+                "endMs": 1060
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1060,
+                "endMs": 1740
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1740,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2120,
+                "endMs": 2500
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2500,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2760,
+                "endMs": 3040
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3040,
+                "endMs": 3240
+              }
+            ]
+          }
+        },
+        {
+          "id": "wrong-two",
+          "text": "請各組選出兩位隊長。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L425/audio/L425-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L425/audio/L425-G05-wrong-two.m4a",
+            "durationMs": 2856,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1100,
+                "endMs": 1480
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1480,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1720,
+                "endMs": 1940
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1940,
+                "endMs": 2200
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2200,
+                "endMs": 2400
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2400,
+                "endMs": 2620
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "productionQA": {
+    "imageChecks": [
+      {
+        "sentenceId": "L425-S01",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Three distinct class queues each led by a separate teacher; classroom campus, recurring girl preserved.",
+        "castEvidence": "Girl bob/pink clip/cardigan/navy skirt consistent; three generic adults distinct.",
+        "comparison": "Each exported final WebP compared side by side against all L058-S01..05, L115-S01/S02, L118-S02, L119-S01, L128-S03, L154-S01, L162-S04, L163-S02.",
+        "noReadableTextOrNumbers": true
+      },
+      {
+        "sentenceId": "L425-S02",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Three separate group circles, one teacher inviting discussion before captain selection.",
+        "castEvidence": "Girl identity preserved; generic peers; teacher teal/low bun distinct from mother.",
+        "comparison": "Each exported final WebP compared side by side against all L058-S01..05, L115-S01/S02, L118-S02, L119-S01, L128-S03, L154-S01, L162-S04, L163-S02.",
+        "noReadableTextOrNumbers": true
+      },
+      {
+        "sentenceId": "L425-S03",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Five clear fruit varieties in distinct displays: apples, bananas, grapes, oranges, watermelons.",
+        "castEvidence": "Mother cream blouse/blue trousers and girl match family references.",
+        "comparison": "Each exported final WebP compared side by side against all L058-S01..05, L115-S01/S02, L118-S02, L119-S01, L128-S03, L154-S01, L162-S04, L163-S02.",
+        "noReadableTextOrNumbers": true
+      },
+      {
+        "sentenceId": "L425-S04",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Three groups caring separate planting areas, one teacher; front girl waters while peers care plants.",
+        "castEvidence": "Girl and generic teacher consistent; group scale and gardening actions match S04 final text.",
+        "comparison": "Each exported final WebP compared side by side against all L058-S01..05, L115-S01/S02, L118-S02, L119-S01, L128-S03, L154-S01, L162-S04, L163-S02.",
+        "noReadableTextOrNumbers": true
+      },
+      {
+        "sentenceId": "L425-S05",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Guide beside stopped tour bus invites mixed family travelers to open passenger door; boarding visible.",
+        "castEvidence": "Recurring family four match mother/father/girl/older brother anchors; guide distinct.",
+        "comparison": "Each exported final WebP compared side by side against all L058-S01..05, L115-S01/S02, L118-S02, L119-S01, L128-S03, L154-S01, L162-S04, L163-S02.",
+        "noReadableTextOrNumbers": true
+      }
+    ],
+    "browserQA": {
+      "environment": "Chrome local real LessonPanel mounted with approved draft and provisional prerequisites; viewport 390x844.",
+      "audioPlayback": "All 10 final M4A files emitted play and ended through real game playback or explicit local audio buttons. Initial autoplay denial resolved by user-gesture clicks; later G02 prefix playback ended normally.",
+      "g02": "Target 各 highlighted after helper stops; 種 shows ㄓㄨㄥˇ; separate prefix/suffix playback completed.",
+      "g04": "Exact 全班同學分組照顧花草; four individual cards 照→顧→花→草 completed, then 下一題.",
+      "g05": "All three audio options completed; correct choice exposed 領取獎勵 and triggered local reward callback.",
+      "limitations": [
+        "Tool cannot perform sustained press-to-record and does not deliver browser audio to the reviewer; recording/recorded-voice replay and human listening are not certified.",
+        "Reward callback observed; final navigation beyond parent reward persistence was not verified in the isolated harness.",
+        "Physical-phone microphone, browser timing highlight smoothness and subjective human audio review remain outside this automated evidence."
+      ],
+      "disposition": "Production SOP browser tooling fallback; technical package gates and dedicated fragment audio/timings complete. Teacher subjective review remains post-merge."
+    },
+    "evidence": "curriculum-workflow/generated/L425-qa-evidence.json",
+    "alignmentEvidence": "curriculum-workflow/generated/L425-alignment-evidence.json"
+  }
+}

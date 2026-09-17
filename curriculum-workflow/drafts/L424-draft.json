@@ -1,0 +1,617 @@
+{
+  "id": "L424",
+  "order": 424,
+  "title": "隊",
+  "newChars": [
+    "隊"
+  ],
+  "zhuyin": {
+    "隊": "ㄉㄨㄟˋ"
+  },
+  "requiredRounds": 5,
+  "dependsOnLessons": [
+    "L419",
+    "L420",
+    "L421",
+    "L422",
+    "L423"
+  ],
+  "provisionalLearnedChars": [
+    "合",
+    "教",
+    "室",
+    "班",
+    "組"
+  ],
+  "sourceMainCommit": "4eec51781af66eee3b0a9b0b5afe0e0497a8d121",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "releaseBlockers": [
+    "All preceding numbered lessons through L423 must be merged in order.",
+    "R051/R052 afterLessonOrder=420, targetLessonRange L391-L420 must be merged before L424."
+  ],
+  "milestoneDependencies": [
+    {
+      "ids": [
+        "R051",
+        "R052"
+      ],
+      "afterLessonOrder": 420,
+      "targetLessonRange": {
+        "startOrder": 391,
+        "endOrder": 420
+      }
+    }
+  ],
+  "charAudio": {
+    "隊": "/assets/lessons/L424/audio/char-u968a.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L424-S01",
+      "text": "全班在教室外排路隊。",
+      "spokenText": "全班在教室外排路隊",
+      "displayLines": [
+        "全班在教室外",
+        "排路隊。"
+      ],
+      "focusChar": "隊",
+      "imageNotes": "放學時的教室外走廊，全班同學背著書包，依序排成整齊路隊，準備跟老師離開。主角小女孩在隊伍中，前景與遠處都看得到同學，老師在前方照看。不是排隊進教室，也不是只有兩三個孩子零散站著。畫面應有教室入口與室外走廊的關係，不能把路隊畫在教室裡。其他學生使用 generic 同學。",
+      "zhuyinOverrides": {
+        "3": "ㄐㄧㄠˋ"
+      },
+      "approved": true,
+      "imagePrompt": "Square 1:1 warm detailed Taiwan children picture-book pencil-and-watercolor illustration. Use full L058 reference set only for style, never copy L058 people. Match refined L115-S01/S02, L118-S02, L119-S01, L128-S03 preschool proportions, natural lighting and rich clean environments. Family identity matches L154-S01, L162-S04, L163-S02: girl short dark bob pink hairclip pink cardigan cream shirt navy skirt pink shoes, mother shoulder-length dark brown hair cream blouse blue jeans, father short dark hair blue clothing; context-appropriate swimwear for pool. Named Xiaoguang must match xiaoguang.webp. Teacher is distinct adult with tied hair and tidy teaching clothes. Generic classmates/adults have distinct appearances. No text, numerals, logos, labels, speech bubbles, anime, flat cartoon, photorealism, tiny toddler proportions. Scene: 放學時的教室外走廊，全班同學背著書包，依序排成整齊路隊，準備跟老師離開。主角小女孩在隊伍中，前景與遠處都看得到同學，老師在前方照看。不是排隊進教室，也不是只有兩三個孩子零散站著。畫面應有教室入口與室外走廊的關係，不能把路隊畫在教室裡。其他學生使用 generic 同學。",
+      "imageSrc": "/assets/lessons/L424/images/L424-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L424/audio/L424-S01.m4a",
+        "durationMs": 3553,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 500
+          },
+          {
+            "charIndex": 1,
+            "startMs": 500,
+            "endMs": 840
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1152,
+            "endMs": 1460
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1460,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1820,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1980,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2484,
+            "endMs": 2860
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2860,
+            "endMs": 3120
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3120,
+            "endMs": 3340
+          }
+        ]
+      }
+    },
+    {
+      "id": "L424-S02",
+      "text": "小光是我們這組的隊長。",
+      "spokenText": "小光是我們這組的隊長",
+      "displayLines": [
+        "小光是我們",
+        "這組的隊長。"
+      ],
+      "focusChar": "隊",
+      "imageNotes": "學校戶外團體活動前，小光站在主角小女孩及幾名同組孩子面前，指向接下來活動的方向，正在帶領大家；女孩向旁邊的人介紹他。小光是同齡孩子，不畫成老師或成人。不用文字臂章標示隊長。必須使用 public/assets/reference/lesson-cast/xiaoguang.webp：圓眼鏡、整齊短黑髮、白短袖襯衫、深藍針織背心、卡其短褲、白襪、棕色鞋；需要書包時使用深綠書包。不畫成 generic 同學，也不替換成既有「你」小男孩。",
+      "zhuyinOverrides": {
+        "9": "ㄓㄤˇ"
+      },
+      "approved": true,
+      "imagePrompt": "Square 1:1 warm detailed Taiwan children picture-book pencil-and-watercolor illustration. Use full L058 reference set only for style, never copy L058 people. Match refined L115-S01/S02, L118-S02, L119-S01, L128-S03 preschool proportions, natural lighting and rich clean environments. Family identity matches L154-S01, L162-S04, L163-S02: girl short dark bob pink hairclip pink cardigan cream shirt navy skirt pink shoes, mother shoulder-length dark brown hair cream blouse blue jeans, father short dark hair blue clothing; context-appropriate swimwear for pool. Named Xiaoguang must match xiaoguang.webp. Teacher is distinct adult with tied hair and tidy teaching clothes. Generic classmates/adults have distinct appearances. No text, numerals, logos, labels, speech bubbles, anime, flat cartoon, photorealism, tiny toddler proportions. Scene: 學校戶外團體活動前，小光站在主角小女孩及幾名同組孩子面前，指向接下來活動的方向，正在帶領大家；女孩向旁邊的人介紹他。小光是同齡孩子，不畫成老師或成人。不用文字臂章標示隊長。必須使用 public/assets/reference/lesson-cast/xiaoguang.webp：圓眼鏡、整齊短黑髮、白短袖襯衫、深藍針織背心、卡其短褲、白襪、棕色鞋；需要書包時使用深綠書包。不畫成 generic 同學，也不替換成既有「你」小男孩。",
+      "imageSrc": "/assets/lessons/L424/images/L424-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L424/audio/L424-S02.m4a",
+        "durationMs": 3225,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 480
+          },
+          {
+            "charIndex": 1,
+            "startMs": 480,
+            "endMs": 700
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1145,
+            "endMs": 1480
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1480,
+            "endMs": 1650
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1650,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1820,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2140,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2260,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2540,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2760,
+            "endMs": 2980
+          }
+        ]
+      }
+    },
+    {
+      "id": "L424-S03",
+      "text": "爸爸下班後，教我游泳。",
+      "spokenText": "爸爸下班後教我游泳",
+      "displayLines": [
+        "爸爸下班後，",
+        "教我游泳。"
+      ],
+      "focusChar": "教",
+      "imageNotes": "傍晚的游泳池，主角爸爸已換上泳裝，與主角小女孩一起在淺水教學區。爸爸站在她身旁，扶著浮板，示範如何伸直手臂；女孩扶著浮板練習踢水。爸爸持續近距離陪同，不畫女孩獨自在深水區，也不讓爸爸穿上班衣服下水。畫面是正在教與學，不是女孩已獨立游到遠處。",
+      "zhuyinOverrides": {
+        "5": "ㄐㄧㄠ"
+      },
+      "approved": true,
+      "imagePrompt": "Square 1:1 warm detailed Taiwan children picture-book pencil-and-watercolor illustration. Use full L058 reference set only for style, never copy L058 people. Match refined L115-S01/S02, L118-S02, L119-S01, L128-S03 preschool proportions, natural lighting and rich clean environments. Family identity matches L154-S01, L162-S04, L163-S02: girl short dark bob pink hairclip pink cardigan cream shirt navy skirt pink shoes, mother shoulder-length dark brown hair cream blouse blue jeans, father short dark hair blue clothing; context-appropriate swimwear for pool. Named Xiaoguang must match xiaoguang.webp. Teacher is distinct adult with tied hair and tidy teaching clothes. Generic classmates/adults have distinct appearances. No text, numerals, logos, labels, speech bubbles, anime, flat cartoon, photorealism, tiny toddler proportions. Scene: 傍晚的游泳池，主角爸爸已換上泳裝，與主角小女孩一起在淺水教學區。爸爸站在她身旁，扶著浮板，示範如何伸直手臂；女孩扶著浮板練習踢水。爸爸持續近距離陪同，不畫女孩獨自在深水區，也不讓爸爸穿上班衣服下水。畫面是正在教與學，不是女孩已獨立游到遠處。",
+      "imageSrc": "/assets/lessons/L424/images/L424-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L424/audio/L424-S03.m4a",
+        "durationMs": 3197,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 210
+          },
+          {
+            "charIndex": 1,
+            "startMs": 210,
+            "endMs": 420
+          },
+          {
+            "charIndex": 2,
+            "startMs": 420,
+            "endMs": 880
+          },
+          {
+            "charIndex": 3,
+            "startMs": 880,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1160,
+            "endMs": 1500
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1800,
+            "endMs": 2100
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2100,
+            "endMs": 2410
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2410,
+            "endMs": 2720
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2720,
+            "endMs": 2940
+          }
+        ]
+      }
+    },
+    {
+      "id": "L424-S04",
+      "text": "我們這組合作打掃畫室。",
+      "spokenText": "我們這組合作打掃畫室",
+      "displayLines": [
+        "我們這組",
+        "合作打掃",
+        "畫室。"
+      ],
+      "focusChar": "合",
+      "imageNotes": "畫畫活動結束後，主角小女孩和兩名 generic 同組孩子分工打掃畫室：女孩掃地，一人擦桌子，另一人整理畫具。背景有畫架、晾著的圖畫及尚待收拾的桌面，清楚交代是畫室。整理仍在進行，不是三人同時搶著做一件事，也不是正在畫畫。不得沿用已否決的「兩組合成一隊，到室外打球」畫面。",
+      "approved": true,
+      "imagePrompt": "Square 1:1 warm detailed Taiwan children picture-book pencil-and-watercolor illustration. Use full L058 reference set only for style, never copy L058 people. Match refined L115-S01/S02, L118-S02, L119-S01, L128-S03 preschool proportions, natural lighting and rich clean environments. Family identity matches L154-S01, L162-S04, L163-S02: girl short dark bob pink hairclip pink cardigan cream shirt navy skirt pink shoes, mother shoulder-length dark brown hair cream blouse blue jeans, father short dark hair blue clothing; context-appropriate swimwear for pool. Named Xiaoguang must match xiaoguang.webp. Teacher is distinct adult with tied hair and tidy teaching clothes. Generic classmates/adults have distinct appearances. No text, numerals, logos, labels, speech bubbles, anime, flat cartoon, photorealism, tiny toddler proportions. Scene: 畫畫活動結束後，主角小女孩和兩名 generic 同組孩子分工打掃畫室：女孩掃地，一人擦桌子，另一人整理畫具。背景有畫架、晾著的圖畫及尚待收拾的桌面，清楚交代是畫室。整理仍在進行，不是三人同時搶著做一件事，也不是正在畫畫。不得沿用已否決的「兩組合成一隊，到室外打球」畫面。",
+      "imageSrc": "/assets/lessons/L424/images/L424-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L424/audio/L424-S04.m4a",
+        "durationMs": 2967,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 200
+          },
+          {
+            "charIndex": 1,
+            "startMs": 200,
+            "endMs": 400
+          },
+          {
+            "charIndex": 2,
+            "startMs": 400,
+            "endMs": 740
+          },
+          {
+            "charIndex": 3,
+            "startMs": 740,
+            "endMs": 980
+          },
+          {
+            "charIndex": 4,
+            "startMs": 980,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1280,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1620,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1960,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2240,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2540,
+            "endMs": 2720
+          }
+        ]
+      }
+    },
+    {
+      "id": "L424-S05",
+      "text": "這間店買點心要排隊。",
+      "spokenText": "這間店買點心要排隊",
+      "displayLines": [
+        "這間店買點心",
+        "要排隊。"
+      ],
+      "focusChar": "隊",
+      "imageNotes": "點心店櫃台前，顧客依序排成一列，主角小女孩與主角媽媽站在後段等待。櫃台裡可見點心，店員正在把一份點心交給最前面的顧客。隊伍方向與購買流程要清楚，不畫成人群擠在櫃台前，也不是等著入座吃飯。女孩與媽媽尚未輪到購買，不畫成已拿著點心離開。不需要價格、菜單文字或叫號數字。",
+      "approved": true,
+      "imagePrompt": "Square 1:1 warm detailed Taiwan children picture-book pencil-and-watercolor illustration. Use full L058 reference set only for style, never copy L058 people. Match refined L115-S01/S02, L118-S02, L119-S01, L128-S03 preschool proportions, natural lighting and rich clean environments. Family identity matches L154-S01, L162-S04, L163-S02: girl short dark bob pink hairclip pink cardigan cream shirt navy skirt pink shoes, mother shoulder-length dark brown hair cream blouse blue jeans, father short dark hair blue clothing; context-appropriate swimwear for pool. Named Xiaoguang must match xiaoguang.webp. Teacher is distinct adult with tied hair and tidy teaching clothes. Generic classmates/adults have distinct appearances. No text, numerals, logos, labels, speech bubbles, anime, flat cartoon, photorealism, tiny toddler proportions. Scene: 點心店櫃台前，顧客依序排成一列，主角小女孩與主角媽媽站在後段等待。櫃台裡可見點心，店員正在把一份點心交給最前面的顧客。隊伍方向與購買流程要清楚，不畫成人群擠在櫃台前，也不是等著入座吃飯。女孩與媽媽尚未輪到購買，不畫成已拿著點心離開。不需要價格、菜單文字或叫號數字。",
+      "imageSrc": "/assets/lessons/L424/images/L424-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L424/audio/L424-S05.m4a",
+        "durationMs": 3214,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 220
+          },
+          {
+            "charIndex": 1,
+            "startMs": 220,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 820
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1004,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1280,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1600,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2148,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2520,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2760,
+            "endMs": 3000
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L424-G01",
+      "type": "find-character",
+      "sentenceId": "L424-S01",
+      "targetChar": "隊",
+      "targetCharIndex": 8,
+      "prompt": "請幫小兔子找出句子裡的隊。"
+    },
+    {
+      "id": "L424-G02",
+      "type": "teach-character",
+      "sentenceId": "L424-S02",
+      "targetChar": "隊",
+      "targetCharIndex": 8,
+      "prompt": "請你幫小兔子念紅框裡的字。",
+      "teachAudio": {
+        "prefixText": "小光是我們這組的",
+        "suffixText": "長",
+        "prefixSrc": "/assets/lessons/L424/audio/L424-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L424/audio/L424-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L424/audio/L424-G02-prefix.m4a",
+          "durationMs": 2550,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 500
+            },
+            {
+              "charIndex": 1,
+              "startMs": 500,
+              "endMs": 760
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1013,
+              "endMs": 1340
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1340,
+              "endMs": 1530
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1530,
+              "endMs": 1720
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1720,
+              "endMs": 1980
+            },
+            {
+              "charIndex": 6,
+              "startMs": 1980,
+              "endMs": 2160
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2160,
+              "endMs": 2380
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L424/audio/L424-G02-suffix.m4a",
+          "durationMs": 657,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 497
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L424-G03",
+      "type": "missing-character",
+      "sentenceId": "L424-S05",
+      "targetChar": "隊",
+      "targetCharIndex": 8,
+      "prompt": "請幫小兔子找回少掉的字。",
+      "missingIndexes": [
+        8
+      ],
+      "options": [
+        {
+          "id": "correct",
+          "text": "隊",
+          "correct": true
+        },
+        {
+          "id": "wrong-one",
+          "text": "班",
+          "correct": false
+        },
+        {
+          "id": "wrong-two",
+          "text": "組",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L424-G04",
+      "type": "partial-order",
+      "sentenceId": "L424-S04",
+      "targetChar": "合",
+      "targetCharIndex": 4,
+      "prompt": "請幫小兔子把字放回去。",
+      "missingIndexes": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "options": [
+        {
+          "id": "card-hua",
+          "text": "畫",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "card-da",
+          "text": "打",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "card-shi",
+          "text": "室",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "card-sao",
+          "text": "掃",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L424-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L424-S03",
+      "targetChar": "教",
+      "targetCharIndex": 5,
+      "prompt": "請聽一聽，誰念對了？",
+      "options": [
+        {
+          "id": "correct",
+          "text": "爸爸下班後，教我游泳。",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L424/audio/L424-S03.m4a"
+        },
+        {
+          "id": "wrong-one",
+          "text": "爸爸上班後，教我游泳。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L424/audio/L424-G05-wrong-one.m4a"
+        },
+        {
+          "id": "wrong-two",
+          "text": "爸爸下班前，教我游泳。",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L424/audio/L424-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "productionBlockers": [],
+  "qaNotes": {
+    "browserQA": {
+      "viewport": "390x844",
+      "stage3": "All five final images and approved displayLines inspected at390px. All five final sentence audios PLAY/ENDED. Active character highlight observed. S01 教 ㄐㄧㄠˋ; S02 長 ㄓㄤˇ; S03 教 ㄐㄧㄠ displayed correctly.",
+      "stage4": "G01 隊 accepted; G02 dedicated prefix ended before red-framed 隊; G03 隊 accepted among 隊/組/班; G04 shuffled single-Han 打掃畫室 accepted in order; G05 all three exact complete audio options ended and correct choice enabled 領取獎勵.",
+      "shortAudio": "Standalone 隊 and dedicated G02 suffix 長 played to ENDED in local browser media QA.",
+      "toolingScope": "Initial browser selection timed out, recovered by inventory and Chrome tab creation. Available click API cannot hold the target through the recording cue: G02 cue play observed but no captured recording; microphone and post-recording resume flow not claimed as verified. SOP browser-tooling fallback applies after technical gates. No human auditory review claimed. Persistent reward/release navigation belongs to Release integration QA.",
+      "teacherReview": "Normal post-merge subjective image/audio review."
+    },
+    "audioNotes": "All ten assets independently generated with OpenAI gpt-4o-mini-tts from exact approved Han sequences; no production extraction/splicing. Repo ai:audio initial generation and assets:audio processing; assets:align:ai final sentence alignment with temporary Traditional-equivalent normalization and course-vocabulary transcription context, original script restored. S01 教 fourth tone; S03 and G05 教 first tone; S02 長 third tone confirmed by audio model. G02 suffix generated independently from 長: rejected initial coral candidates; accepted nova candidate with audible ㄓ onset, low-dipping measured pitch~176→120→133Hz, and QA-only prefix/target/suffix replay independently recognized as 隊長 with third-tone final 長, no missing/duplicate/clipped syllables. Isolated short-clip ASR/phonetic outputs were inconsistent, including unrelated hallucinated transcripts and conflicting tone labels; raw evidence retained and not used alone for acceptance. Final suffix only has measured trailing silence removed, keeping160ms after full syllable decay; no leading character extraction. Character 隊 independent transcript matches and ㄉㄨㄟˋ phonetic check. No human listening claimed.",
+    "imageResults": [
+      {
+        "id": "L424-S01",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Whole class single-file backpacks on outside corridor, girl in line, separate tied-hair teacher; classroom door visible beside rather than containing queue."
+      },
+      {
+        "id": "L424-S02",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Xiaoguang glasses/white shirt/navy vest/khaki shorts/white socks/brown shoes/dark green bag matches named anchor; leading peers outside, girl introduces him."
+      },
+      {
+        "id": "L424-S03",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Father in swimwear remains beside girl supporting kickboard in shallow pool; girl practicing kicking, evening light."
+      },
+      {
+        "id": "L424-S04",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Exactly3 children clean art studio: protagonist sweeps, generic boy wipes table, generic girl sorts brushes; easels/drying pictures visible."
+      },
+      {
+        "id": "L424-S05",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Mother/girl at rear of orderly purchase queue, clerk serves front customer, pastries visible; mother/girl carry no purchased snack."
+      }
+    ],
+    "assetBytes": 1356321
+  }
+}
