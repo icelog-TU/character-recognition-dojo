@@ -21,6 +21,6 @@ Technical checks: startup tools:check / ai:check / audit-state PASS; lesson-loca
 
 Full baseline `npm run validate:production`: PASS. Final `curriculum:audit-state`: PASS, with expected notice that the unmerged L437 asset folder is not in production JSON. Final handoff consistency/index/allowed-character checks and shared-state byte comparison: PASS. Preview port 14237 has no listening server.
 
-Pushed-ref intake checkpoint is appended after remote verification.
+Pushed-ref strict package intake: PASS with no warnings at `bc138fefeebdba4bcfa9528352a00ea184b9ad25` against `origin/codex/l437-complete-package`. Command: `npm run curriculum:package-intake -- --unit L437 --ref origin/codex/l437-complete-package --strict`. This checkpoint commit only records the verified asset commit; final tip is reported in the Production handoff.
 
 Post-merge teacher repair queue (usable after Release merges and deploys): https://icelog-tu.github.io/character-recognition-dojo/tools/asset-review-index.html?ref=main and https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L437&ref=main . Query: npm run asset:review-status -- --unit L437 --ref main
