@@ -1,0 +1,98 @@
+{
+  "unit": "L448",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMain": "b594d6a952ff5c04d23160415ff81da279d7d025",
+  "productionBoundary": "L438 習, 442 learned Han",
+  "finalMainObservation": "origin/main a5779c4b contains an audio repair only and remains formally complete through L438 習; L439-L447 remain ordered Release blockers.",
+  "allowedCharCount": 448,
+  "imageChecks": [
+    {
+      "sentenceId": "L448-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "A distinct generic singer has lowered the microphone and bows after the performance while the audience, recurring girl and mother clap; no mid-song pause or beat-keeping ambiguity.",
+      "textOrNumbers": "None visible."
+    },
+    {
+      "sentenceId": "L448-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Same event and same singer as S01; the girl points toward the singer and the mother holds a phone before taking the requested photo.",
+      "textOrNumbers": "None visible."
+    },
+    {
+      "sentenceId": "L448-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "A distinct adult demonstrator plays a clearly visible small ceramic ocarina; the bird appears only inside the girl's thought bubble.",
+      "textOrNumbers": "None visible."
+    },
+    {
+      "sentenceId": "L448-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "The recurring teacher and classmates are already in the next exercise pose while the recurring girl is visibly half a beat behind; no fall, injury or mockery.",
+      "textOrNumbers": "None visible."
+    },
+    {
+      "sentenceId": "L448-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "The recurring mother hums gently at bedside and the recurring girl is already asleep under the blanket; no baby, book, phone or medical props.",
+      "textOrNumbers": "None visible."
+    }
+  ],
+  "browserQA": {
+    "environment": "Real LessonPanel imported by an isolated local Vite harness at 390px content width; prerequisites simulated with only handoff provisional vocabulary; no production progress written.",
+    "playback": "All 10 final M4A assets played sequentially to ended.",
+    "stage3": "All five sentences rendered; S03 and S04 displayed 樂 ㄩㄝˋ and S05 displayed 著 ㄓㄠˊ.",
+    "G01": "S01 index 0 歌 selected successfully.",
+    "G02": "Dedicated prefix 媽媽的 and suffix 聲讓我睡著了 played in the all-audio run; the suffix final acoustic result is sheng1 rang4 wo3 shui4 zhao2 le5.",
+    "G03": "Choosing 歌 filled S02 index 5.",
+    "G04": "Displayed 樂 ㄩㄝˋ and completed the shuffled cards 我→跟→不→上.",
+    "G05": "The mapped clips played to ended as correct S03, wrong-two and wrong-one. Correct selection exposed 領取獎勵; reward callback fired; 下一課 and 回首頁休息 appeared; 下一課 emitted navigation next.",
+    "limitations": [
+      "Sustained press-to-record and recorded-voice replay were not operated because microphone access was not pre-authorized; microphone recording is not certified.",
+      "Physical-phone highlight smoothness and direct human listening are not claimed; final audio was checked from actual input by acoustic AI plus Whisper alignment."
+    ],
+    "disposition": "Production SOP browser-tooling fallback after all technical gates; no recording QA PASS claimed."
+  },
+  "audio": {
+    "metrics": [
+      {"name":"char-u6b4c.m4a","duration":0.836009,"max":-3.1,"mean":-17.4,"trailingSilenceStart":0.466508,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"c50acfc2dd8d87e64d4fefebce43025369e5e2429f84b9197d0fd57c550a442a"},
+      {"name":"L448-G02-prefix.m4a","duration":1.3,"max":-2.1,"mean":-16.8,"trailingSilenceStart":1.13295,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"92930f33f2bea2b75fe882ad8a8242eb31d4e652bbc55be9c285cdef2346f9cf"},
+      {"name":"L448-G02-suffix.m4a","duration":2.298005,"max":-2.0,"mean":-18.3,"trailingSilenceStart":2.12796,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"19f88923e0999c84cf714d9116d82d1e0bf87b53278f2398bbcf25a80e0ce022"},
+      {"name":"L448-G05-wrong-one.m4a","duration":3.065011,"max":-2.2,"mean":-17.8,"trailingSilenceStart":2.91331,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"80a2188ac9f1059b226e56c0dff44a6cccd2bd796923691dda84d8701a830164"},
+      {"name":"L448-G05-wrong-two.m4a","duration":3.250998,"max":-2.0,"mean":-19.3,"trailingSilenceStart":3.08995,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"c296bea5b0f96ce787c211190805654837e914f64ef676100c1d10620cd16f88"},
+      {"name":"L448-S01.m4a","duration":3.158005,"max":-2.9,"mean":-17.9,"trailingSilenceStart":2.99181,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"76d15493532e23485a30e3c1fc648ffa8390fe23f62e8d2781d65b9f59bd7c3a"},
+      {"name":"L448-S02.m4a","duration":3.645011,"max":-2.0,"mean":-18.0,"trailingSilenceStart":3.48546,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"773eed769964a8a19b7c424014c0833c10b5baf4570f716729432b84b4137100"},
+      {"name":"L448-S03.m4a","duration":3.158005,"max":-2.0,"mean":-18.3,"trailingSilenceStart":2.98676,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"80f1a6ad41a9cebe9f8c13d7817d684bdea59827981edcff5a00858d459c071a"},
+      {"name":"L448-S04.m4a","duration":3.923991,"max":-1.9,"mean":-18.1,"trailingSilenceStart":3.75721,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"f9fb7f91bbae3f9b680f111c66df2a265f84fa8fcc07e807614f246bf988767d"},
+      {"name":"L448-S05.m4a","duration":3.32,"max":-3.1,"mean":-18.3,"trailingSilenceStart":3.15068,"codec":"aac","sampleRate":"44100","channels":1,"sha256":"d08b63ec391096fea52e907fc2352eb38dd5a91e5624204b270808ff3fd3a101"}
+    ],
+    "g05MeanVolumeSpreadDb": 1.5,
+    "hearingMethod": "Final processed M4A decoded to WAV and supplied as actual input_audio to OpenAI gpt-audio-1.5; acoustic AI verification, not human listening.",
+    "hearing": {
+      "char-u6b4c": ["ge1"],
+      "L448-S01": ["ge1","sheng1","yi4","ting2","da4","jia1","jiu4","pai1","shou3"],
+      "L448-S02": ["wo3","xiang3","he2","zhe4","wei4","ge1","shou3","yi4","qi3","pai1","zhao4"],
+      "L448-S03": ["zhe4","ge4","yue4","qi4","de5","sheng1","yin1","xiang4","niao3","jiao4"],
+      "L448-S04": ["zao3","cao1","de5","yin1","yue4","tai4","kuai4","wo3","gen1","bu2","shang4"],
+      "L448-S05": ["ma1","ma1","de5","ge1","sheng1","rang4","wo3","shui4","zhao2","le5"],
+      "L448-G02-prefix": ["ma1","ma5","de5"],
+      "L448-G02-suffix": ["sheng1","rang4","wo3","shui4","zhao2","le5"],
+      "L448-G05-wrong-one": ["zhe4","ge4","yue4","qi4","de5","sheng1","yin1","xiang4","gou3","jiao4"],
+      "L448-G05-wrong-two": ["zhe4","ge4","yue4","qi4","de5","sheng1","yin1","xiang4","ji1","jiao4"]
+    },
+    "pronunciationChecks": {"歌":"ge1","S03樂器":"yue4 qi4","S04音樂":"yin1 yue4","S05著":"zhao2","G02Suffix著":"zhao2"}
+  },
+  "mediaBytes": 1106934,
+  "releaseDependencies": {"orderedLessonsThrough":"L447","blockers":["L439","L440","L441","L442","L443","L444","L445","L446","L447"]},
+  "validation": {
+    "startupToolsAiAuditState": "PASS",
+    "textBoundarySchemaStage4Timings": "PASS",
+    "validateProduction": "PASS on isolated L448 fixture",
+    "assetAuditStrict": "PASS on isolated L448 fixture; zero warnings",
+    "fullVerify": "Release integration gate; not run against production JSON without L448 and ordered L439-L447."
+  }
+}

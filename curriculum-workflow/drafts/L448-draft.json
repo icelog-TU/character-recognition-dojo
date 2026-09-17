@@ -1,0 +1,769 @@
+{
+  "id": "L448",
+  "order": 448,
+  "title": "歌",
+  "newChars": [
+    "歌"
+  ],
+  "zhuyin": {
+    "歌": "ㄍㄜ"
+  },
+  "dependsOnLessons": [
+    "L443",
+    "L444",
+    "L445",
+    "L446",
+    "L447"
+  ],
+  "provisionalLearnedChars": [
+    "操",
+    "器",
+    "樂",
+    "音",
+    "拍"
+  ],
+  "packageStatus": "dependency-blocked-asset-complete",
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L447"
+  },
+  "teacherNotes": "Formal approved L448 handoff. Base b594d6a9, production L438習/442 learned Han; allowed448 with provisional 操器樂音拍 and new歌. Release requires ordered L439-L447. 唱 reserved for L449; 首詞兒國 remain unlearned and absent. S03/S04 樂 is ㄩㄝˋ; S05 and G02 suffix 睡著 uses 著 ㄓㄠˊ. S01 after-performance applause, S02 request before photo, S05 girl already asleep. No image text or numbers. Production package only; Release owns shared JSON/planner/ledger integration and main merge.",
+  "requiredRounds": 5,
+  "charAudio": {
+    "歌": "/assets/lessons/L448/audio/char-u6b4c.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L448-S01",
+      "text": "歌聲一停，大家就拍手。",
+      "spokenText": "歌聲一停大家就拍手",
+      "focusChar": "歌",
+      "displayLines": [
+        "歌聲一停，",
+        "大家就拍手。"
+      ],
+      "imageNotes": "小型社區表演現場，一位 generic adult singer 剛結束演出，已停止出聲並放低麥克風，微微鞠躬。觀眾開始拍手，前景包含主角女孩與固定主角媽媽，其他人為外貌各異的 generic audience。時間點是表演結束後的掌聲，不是歌手中途停頓、觀眾打拍子或老師叫大家停下。歌手不得直接套用主角媽媽或老師身份。",
+      "approved": true,
+      "imagePrompt": "小型社區表演現場，一位 generic adult singer 剛結束演出，已停止出聲並放低麥克風，微微鞠躬。觀眾開始拍手，前景包含主角女孩與固定主角媽媽，其他人為外貌各異的 generic audience。時間點是表演結束後的掌聲，不是歌手中途停頓、觀眾打拍子或老師叫大家停下。歌手不得直接套用主角媽媽或老師身份。",
+      "imageSrc": "/assets/lessons/L448/images/L448-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L448/audio/L448-S01.m4a",
+        "durationMs": 3158,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 320
+          },
+          {
+            "charIndex": 1,
+            "startMs": 320,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 960,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1540,
+            "endMs": 1770
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1770,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2000,
+            "endMs": 2340
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2340,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2660,
+            "endMs": 2860
+          }
+        ]
+      }
+    },
+    {
+      "id": "L448-S02",
+      "text": "我想和這位歌手一起拍照。",
+      "spokenText": "我想和這位歌手一起拍照",
+      "focusChar": "歌",
+      "displayLines": [
+        "我想和",
+        "這位歌手",
+        "一起拍照。"
+      ],
+      "imageNotes": "表演結束後，主角女孩靠近固定主角媽媽，期待地指向附近那位 generic adult singer，表達想一起拍照。媽媽手中拿著手機但尚未拍攝，歌手在旁與觀眾互動。「這位」必須有清楚的指向；沿用 S01 的 generic singer 外觀，形成同場活動延續。主畫面是提出合照願望，不是已經拍完照片，也不是偷拍歌手。手機不放品牌或可讀內容。",
+      "approved": true,
+      "imagePrompt": "表演結束後，主角女孩靠近固定主角媽媽，期待地指向附近那位 generic adult singer，表達想一起拍照。媽媽手中拿著手機但尚未拍攝，歌手在旁與觀眾互動。「這位」必須有清楚的指向；沿用 S01 的 generic singer 外觀，形成同場活動延續。主畫面是提出合照願望，不是已經拍完照片，也不是偷拍歌手。手機不放品牌或可讀內容。",
+      "imageSrc": "/assets/lessons/L448/images/L448-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L448/audio/L448-S02.m4a",
+        "durationMs": 3645,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 520
+          },
+          {
+            "charIndex": 2,
+            "startMs": 520,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 960,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1220,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1440,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1720,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1980,
+            "endMs": 2390
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2390,
+            "endMs": 2800
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2800,
+            "endMs": 3220
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3220,
+            "endMs": 3420
+          }
+        ]
+      }
+    },
+    {
+      "id": "L448-S03",
+      "text": "這個樂器的聲音像鳥叫。",
+      "spokenText": "這個樂器的聲音像鳥叫",
+      "focusChar": "音",
+      "displayLines": [
+        "這個樂器的",
+        "聲音像鳥叫。"
+      ],
+      "zhuyinOverrides": {
+        "2": "ㄩㄝˋ"
+      },
+      "imageNotes": "樂器展示區，一位 generic adult demonstrator 正吹奏小型陶笛，主角女孩指向這一件樂器，專心聆聽。以女孩的小型想像泡泡呈現一隻張嘴鳴叫的小鳥，表達她覺得聲音像鳥叫。陶笛本體與吹奏動作要清楚，鳥只出現在想像泡泡，不畫成現場真的有鳥發聲。不要畫成女孩泛指整間店的所有樂器，也不用擬聲字或音符標籤。",
+      "approved": true,
+      "imagePrompt": "樂器展示區，一位 generic adult demonstrator 正吹奏小型陶笛，主角女孩指向這一件樂器，專心聆聽。以女孩的小型想像泡泡呈現一隻張嘴鳴叫的小鳥，表達她覺得聲音像鳥叫。陶笛本體與吹奏動作要清楚，鳥只出現在想像泡泡，不畫成現場真的有鳥發聲。不要畫成女孩泛指整間店的所有樂器，也不用擬聲字或音符標籤。",
+      "imageSrc": "/assets/lessons/L448/images/L448-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L448/audio/L448-S03.m4a",
+        "durationMs": 3158,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 150
+          },
+          {
+            "charIndex": 1,
+            "startMs": 150,
+            "endMs": 300
+          },
+          {
+            "charIndex": 2,
+            "startMs": 300,
+            "endMs": 640
+          },
+          {
+            "charIndex": 3,
+            "startMs": 640,
+            "endMs": 860
+          },
+          {
+            "charIndex": 4,
+            "startMs": 860,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1100,
+            "endMs": 1340
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1340,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 7,
+            "startMs": 1600,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2300,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2660,
+            "endMs": 2900
+          }
+        ]
+      }
+    },
+    {
+      "id": "L448-S04",
+      "text": "早操的音樂太快，我跟不上。",
+      "spokenText": "早操的音樂太快我跟不上",
+      "focusChar": "操",
+      "displayLines": [
+        "早操的音樂",
+        "太快，",
+        "我跟不上。"
+      ],
+      "zhuyinOverrides": {
+        "4": "ㄩㄝˋ"
+      },
+      "imageNotes": "早晨學校操場，固定老師帶領孩子們隨音響播放的音樂做早操。老師與幾位 generic classmates 已換到下一個動作，主角女孩還停在前一個姿勢，邊看老師邊試著跟上，神情有些困惑。清楚呈現動作慢半拍，不畫成跑步落後、跌倒、受傷或被同學取笑。老師與主角媽媽身份必須區分。",
+      "approved": true,
+      "imagePrompt": "早晨學校操場，固定老師帶領孩子們隨音響播放的音樂做早操。老師與幾位 generic classmates 已換到下一個動作，主角女孩還停在前一個姿勢，邊看老師邊試著跟上，神情有些困惑。清楚呈現動作慢半拍，不畫成跑步落後、跌倒、受傷或被同學取笑。老師與主角媽媽身份必須區分。",
+      "imageSrc": "/assets/lessons/L448/images/L448-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L448/audio/L448-S04.m4a",
+        "durationMs": 3924,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 660
+          },
+          {
+            "charIndex": 2,
+            "startMs": 660,
+            "endMs": 960
+          },
+          {
+            "charIndex": 3,
+            "startMs": 960,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1220,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1380,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2020,
+            "endMs": 2360
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2860,
+            "endMs": 3080
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3080,
+            "endMs": 3240
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3240,
+            "endMs": 3500
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3500,
+            "endMs": 3680
+          }
+        ]
+      }
+    },
+    {
+      "id": "L448-S05",
+      "text": "媽媽的歌聲讓我睡著了。",
+      "spokenText": "媽媽的歌聲讓我睡著了",
+      "focusChar": "歌",
+      "displayLines": [
+        "媽媽的歌聲",
+        "讓我睡著了。"
+      ],
+      "zhuyinOverrides": {
+        "8": "ㄓㄠˊ"
+      },
+      "imageNotes": "夜晚主角女孩的臥室，固定主角媽媽坐在床邊，正輕聲哼歌；女孩躺在床上，蓋著被子，已經安穩入睡。媽媽表情溫柔，室內有柔和床頭燈光。用媽媽的哼歌姿態與女孩已睡著的狀態呈現結果；不要把女孩畫成嬰兒，不放搖籃、奶瓶、病床，也不畫媽媽在讀書或播放手機音樂。",
+      "approved": true,
+      "imagePrompt": "夜晚主角女孩的臥室，固定主角媽媽坐在床邊，正輕聲哼歌；女孩躺在床上，蓋著被子，已經安穩入睡。媽媽表情溫柔，室內有柔和床頭燈光。用媽媽的哼歌姿態與女孩已睡著的狀態呈現結果；不要把女孩畫成嬰兒，不放搖籃、奶瓶、病床，也不畫媽媽在讀書或播放手機音樂。",
+      "imageSrc": "/assets/lessons/L448/images/L448-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L448/audio/L448-S05.m4a",
+        "durationMs": 3320,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 800
+          },
+          {
+            "charIndex": 3,
+            "startMs": 800,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1080,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1320,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2000,
+            "endMs": 2460
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2460,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2680,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2940,
+            "endMs": 3180
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L448-G01",
+      "type": "find-character",
+      "sentenceId": "L448-S01",
+      "targetChar": "歌",
+      "targetCharIndex": 0,
+      "prompt": "請幫小兔子找出歌，點一下句子中的歌。"
+    },
+    {
+      "id": "L448-G02",
+      "type": "teach-character",
+      "sentenceId": "L448-S05",
+      "targetChar": "歌",
+      "targetCharIndex": 3,
+      "prompt": "請你幫小兔子念這個字。",
+      "teachAudio": {
+        "prefixText": "媽媽的",
+        "suffixText": "聲讓我睡著了",
+        "prefixSrc": "/assets/lessons/L448/audio/L448-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L448/audio/L448-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L448/audio/L448-G02-prefix.m4a",
+          "durationMs": 1300,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 620
+            },
+            {
+              "charIndex": 1,
+              "startMs": 620,
+              "endMs": 900
+            },
+            {
+              "charIndex": 2,
+              "startMs": 900,
+              "endMs": 1060
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L448/audio/L448-G02-suffix.m4a",
+          "durationMs": 2298,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 620
+            },
+            {
+              "charIndex": 1,
+              "startMs": 620,
+              "endMs": 960
+            },
+            {
+              "charIndex": 2,
+              "startMs": 960,
+              "endMs": 1340
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1340,
+              "endMs": 1620
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1620,
+              "endMs": 1900
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1900,
+              "endMs": 2120
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L448-G03",
+      "type": "missing-character",
+      "sentenceId": "L448-S02",
+      "targetChar": "歌",
+      "targetCharIndex": 5,
+      "prompt": "請幫小兔子找回少掉的字。",
+      "missingIndexes": [
+        5
+      ],
+      "options": [
+        {
+          "id": "L448-G03-O1",
+          "text": "樂",
+          "correct": false
+        },
+        {
+          "id": "L448-G03-O2",
+          "text": "歌",
+          "correct": true
+        },
+        {
+          "id": "L448-G03-O3",
+          "text": "拍",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L448-G04",
+      "type": "partial-order",
+      "sentenceId": "L448-S04",
+      "targetChar": "操",
+      "targetCharIndex": 1,
+      "prompt": "請幫小兔子把字放回去。",
+      "missingIndexes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "options": [
+        {
+          "id": "L448-G04-O1",
+          "text": "不",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L448-G04-O2",
+          "text": "我",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L448-G04-O3",
+          "text": "上",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "L448-G04-O4",
+          "text": "跟",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L448-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L448-S03",
+      "targetChar": "音",
+      "targetCharIndex": 6,
+      "prompt": "先按朋友的頭聽，再選出念對的朋友。",
+      "options": [
+        {
+          "id": "L448-G05-O1",
+          "text": "這個樂器的聲音像鳥叫。",
+          "spokenText": "這個樂器的聲音像鳥叫",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L448/audio/L448-S03.m4a",
+          "audio": {
+            "src": "/assets/lessons/L448/audio/L448-S03.m4a",
+            "durationMs": 3158,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 150
+              },
+              {
+                "charIndex": 1,
+                "startMs": 150,
+                "endMs": 300
+              },
+              {
+                "charIndex": 2,
+                "startMs": 300,
+                "endMs": 640
+              },
+              {
+                "charIndex": 3,
+                "startMs": 640,
+                "endMs": 860
+              },
+              {
+                "charIndex": 4,
+                "startMs": 860,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1100,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1340,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1600,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2300,
+                "endMs": 2660
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2660,
+                "endMs": 2900
+              }
+            ]
+          }
+        },
+        {
+          "id": "L448-G05-O2",
+          "text": "這個樂器的聲音像狗叫。",
+          "spokenText": "這個樂器的聲音像狗叫",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L448/audio/L448-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L448/audio/L448-G05-wrong-one.m4a",
+            "durationMs": 3065,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 170
+              },
+              {
+                "charIndex": 1,
+                "startMs": 170,
+                "endMs": 340
+              },
+              {
+                "charIndex": 2,
+                "startMs": 340,
+                "endMs": 700
+              },
+              {
+                "charIndex": 3,
+                "startMs": 700,
+                "endMs": 900
+              },
+              {
+                "charIndex": 4,
+                "startMs": 900,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1160,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1380,
+                "endMs": 1600
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1600,
+                "endMs": 2220
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2220,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2580,
+                "endMs": 2820
+              }
+            ]
+          }
+        },
+        {
+          "id": "L448-G05-O3",
+          "text": "這個樂器的聲音像雞叫。",
+          "spokenText": "這個樂器的聲音像雞叫",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L448/audio/L448-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L448/audio/L448-G05-wrong-two.m4a",
+            "durationMs": 3251,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 180
+              },
+              {
+                "charIndex": 1,
+                "startMs": 180,
+                "endMs": 360
+              },
+              {
+                "charIndex": 2,
+                "startMs": 360,
+                "endMs": 700
+              },
+              {
+                "charIndex": 3,
+                "startMs": 700,
+                "endMs": 920
+              },
+              {
+                "charIndex": 4,
+                "startMs": 920,
+                "endMs": 1160
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1160,
+                "endMs": 1380
+              },
+              {
+                "charIndex": 6,
+                "startMs": 1380,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 7,
+                "startMs": 1660,
+                "endMs": 2540
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2540,
+                "endMs": 2800
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2800,
+                "endMs": 2980
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "productionNotes": {
+    "status": "dependency-blocked-asset-complete",
+    "baseMain": "b594d6a952ff5c04d23160415ff81da279d7d025",
+    "releaseBlockers": ["L439", "L440", "L441", "L442", "L443", "L444", "L445", "L446", "L447"],
+    "validation": "Lesson-local schema, text boundary, Stage 4, audio timing, isolated production validation and strict asset audit passed.",
+    "browserQA": {
+      "environment": "Real LessonPanel in an isolated local Vite harness at 390px content width; no production progress written.",
+      "playback": "All 10 final M4A assets played to ended.",
+      "G01": "S01 index 0 歌 selected successfully.",
+      "G02": "Dedicated prefix 媽媽的 and suffix 聲讓我睡著了 both played in the all-audio run; suffix final acoustic check was sheng1 rang4 wo3 shui4 zhao2 le5.",
+      "G03": "Choosing 歌 filled S02 index 5.",
+      "G04": "Displayed 樂 ㄩㄝˋ and completed 我→跟→不→上.",
+      "G05": "Displayed 樂 ㄩㄝˋ; all three mapped clips played to ended; correct option completed the round, reward callback fired, and 下一課 emitted navigation next.",
+      "limitations": [
+        "Sustained press-to-record and recorded-voice replay were not operated because microphone access was not pre-authorized; microphone recording is not certified.",
+        "Physical-phone highlight smoothness and direct human listening are not claimed; final audio was checked from actual input by acoustic AI plus Whisper alignment."
+      ]
+    }
+  }
+}
