@@ -10,7 +10,7 @@
     "器": 1
   },
   "allowed": 448,
-  "assetBytes": 1260127,
+  "assetBytes": 1250225,
   "g05MeanSpreadDb": 1.8999999999999986,
   "assets": [
     {
@@ -48,11 +48,11 @@
     },
     {
       "path": "public/assets/lessons/L449/audio/L449-G02-prefix.m4a",
-      "bytes": 40337,
-      "sha256": "932f10711173962aa4f29aaf5630eab4a7825d9ed6235fa28a9700e4d8feb3bd",
-      "durationMs": 3435,
-      "meanDb": -18.4,
-      "maxDb": -2
+      "bytes": 30435,
+      "sha256": "9fc9773221e6b0bbd415742b302c75f8b25c2f500a8ffefb98c1a5ae302ff13b",
+      "durationMs": 2933,
+      "meanDb": -21,
+      "maxDb": -6.3
     },
     {
       "path": "public/assets/lessons/L449/audio/L449-G02-suffix.m4a",
@@ -154,8 +154,106 @@
     }
   },
   "processing": {
-    "generation": "OpenAI gpt-4o-mini-tts, speed 0.9. Main clips coral. G02 prefix regenerated for complete final 邊; one-character suffix 歌 independently regenerated with nova for clear ㄍㄜ. Normal speech, never melodic singing. G05 choices generated as separate whole sentences.",
+    "generation": "OpenAI gpt-4o-mini-tts, speed 0.9. Main clips coral. After teacher review of 0bb76b31, the complete G02 prefix was regenerated with marin and an explicit Taiwan Mandarin 爸爸 instruction: first 爸 falling fourth tone, second 爸 light neutral tone. One-character suffix 歌 independently generated with nova. Normal speech, never melodic singing. G05 choices generated as separate whole sentences.",
     "conversion": "Repo assets:audio pipeline; mono AAC 44100 Hz and loudness normalization.",
     "alignment": "Repo Whisper word alignment with simplified/traditional equivalences. 哥/歌 homophone normalization only for the G02 suffix. No speech splicing."
+  },
+  "prefixRepair": {
+    "reviewedCommit": "0bb76b31b29ee10ad084d47712493a9dd7c531f0",
+    "teacherFinding": "G02 prefix opening 爸爸 sounded like 巴吧.",
+    "action": "Regenerated the complete prefix with marin and explicit Taiwan Mandarin ㄅㄚˋ・ㄅㄚ instruction; no splice.",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.940000057220459,
+      "text": "爸爸一邊開車一邊。",
+      "words": [
+        {
+          "word": "爸爸",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "一",
+          "start": 0.46000000834465027,
+          "end": 0.8399999737739563
+        },
+        {
+          "word": "邊",
+          "start": 0.8399999737739563,
+          "end": 1.059999942779541
+        },
+        {
+          "word": "開",
+          "start": 1.059999942779541,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "車",
+          "start": 1.440000057220459,
+          "end": 1.659999966621399
+        },
+        {
+          "word": "一",
+          "start": 1.659999966621399,
+          "end": 1.9800000190734863
+        },
+        {
+          "word": "邊。",
+          "start": 1.9800000190734863,
+          "end": 2.180000066757202
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "alignedAudio": {
+      "src": "/assets/lessons/L449/audio/L449-G02-prefix.m4a",
+      "durationMs": 2933,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 230
+        },
+        {
+          "charIndex": 1,
+          "startMs": 230,
+          "endMs": 460
+        },
+        {
+          "charIndex": 2,
+          "startMs": 460,
+          "endMs": 840
+        },
+        {
+          "charIndex": 3,
+          "startMs": 840,
+          "endMs": 1060
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1060,
+          "endMs": 1440
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1440,
+          "endMs": 1660
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1660,
+          "endMs": 1980
+        },
+        {
+          "charIndex": 7,
+          "startMs": 1980,
+          "endMs": 2180
+        }
+      ]
+    }
   }
 }
