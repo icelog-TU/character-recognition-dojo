@@ -1,0 +1,635 @@
+{
+  "id": "R053",
+  "kind": "review",
+  "reviewNumber": 53,
+  "title": "複習五十三",
+  "afterLessonOrder": 435,
+  "targetLessonRange": {
+    "startOrder": 406,
+    "endOrder": 435
+  },
+  "requiredRounds": 5,
+  "pairUnits": [
+    "R053",
+    "R054"
+  ],
+  "requiredCoverageChars": [
+    "加",
+    "減",
+    "法",
+    "辦",
+    "試",
+    "定",
+    "成",
+    "功",
+    "決",
+    "解",
+    "果",
+    "如",
+    "結",
+    "合",
+    "教",
+    "室",
+    "班",
+    "組",
+    "隊",
+    "各",
+    "輪",
+    "員",
+    "自",
+    "己",
+    "主",
+    "由",
+    "意",
+    "願",
+    "互",
+    "助"
+  ],
+  "dependsOnLessons": [
+    "L435"
+  ],
+  "provisionalLearnedChars": [],
+  "sourceMainCommit": "72b61a615628b25a2c78b63c9c400f9adcca946f",
+  "packageStatus": "asset-complete-package",
+  "teacherNotes": "R054-S04：13 Han：teacher-approved exception。老師明確批准保留「大家幫助生病的小孩完成心願。」及 displayLines；不得為壓回 12 字而刪改。例外只放寬本句漢字總數，不放寬手機排版、注音可讀性、Stage 4 Han-only 索引與 option mapping、最終 charTimings、手機播放及逐字高亮。 Normal milestone pair, not review migration replacement. Allowed ceiling is locked to L435 at 72b61a61 (439 chars); L436 補 and L437 修 are forbidden. No newChars, zhuyin, standalone charAudio, or readable image text/number exception. Release order is L435 → R053 → R054 → L436.",
+  "sentences": [
+    {
+      "id": "R053-S01",
+      "text": "如果想吃水果，就自己去洗。",
+      "spokenText": "如果想吃水果就自己去洗",
+      "displayLines": [
+        "如果想吃",
+        "水果，",
+        "就自己去洗。"
+      ],
+      "focusChar": "如",
+      "imageNotes": "家中廚房，固定媽媽對主角女孩說話，示意桌上的水果與水槽。女孩正自己洗一顆蘋果，旁邊放著水果籃。主角女孩沿用固定身份；畫面重點是自己清洗想吃的水果，不是媽媽替她洗好。水槽高度與站姿自然，不使用搖晃椅子。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 家中廚房，固定媽媽對主角女孩說話，示意桌上的水果與水槽。女孩正自己洗一顆蘋果，旁邊放著水果籃。主角女孩沿用固定身份；畫面重點是自己清洗想吃的水果，不是媽媽替她洗好。水槽高度與站姿自然，不使用搖晃椅子。",
+      "imageSrc": "/assets/reviews/R053/images/R053-S01.webp",
+      "audio": {
+        "src": "/assets/reviews/R053/audio/R053-S01.m4a",
+        "durationMs": 4091,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 270
+          },
+          {
+            "charIndex": 1,
+            "startMs": 270,
+            "endMs": 540
+          },
+          {
+            "charIndex": 2,
+            "startMs": 540,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1080,
+            "endMs": 1380
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1380,
+            "endMs": 1680
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1680,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2380,
+            "endMs": 2680
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2680,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2940,
+            "endMs": 3200
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3200,
+            "endMs": 3680
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3680,
+            "endMs": 3820
+          }
+        ]
+      }
+    },
+    {
+      "id": "R053-S02",
+      "text": "我決定減少玩電動的時間。",
+      "spokenText": "我決定減少玩電動的時間",
+      "displayLines": [
+        "我決定減少",
+        "玩電動的",
+        "時間。"
+      ],
+      "focusChar": "減",
+      "imageNotes": "家中客廳，主角女孩主動放下遊戲控制器，關掉遊戲後拿起畫冊或走向畫畫桌。表情是自己作出決定，不是被責罵或被搶走控制器。畫面不需要時計、遊戲介面文字或時間數字；「減少時間」由句音表達。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 家中客廳，主角女孩主動放下遊戲控制器，關掉遊戲後拿起畫冊或走向畫畫桌。表情是自己作出決定，不是被責罵或被搶走控制器。畫面不需要時計、遊戲介面文字或時間數字；「減少時間」由句音表達。",
+      "imageSrc": "/assets/reviews/R053/images/R053-S02.webp",
+      "audio": {
+        "src": "/assets/reviews/R053/audio/R053-S02.m4a",
+        "durationMs": 4121,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 480
+          },
+          {
+            "charIndex": 1,
+            "startMs": 480,
+            "endMs": 1180
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1180,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1420,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2200,
+            "endMs": 2440
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2440,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2780,
+            "endMs": 3060
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3060,
+            "endMs": 3200
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3200,
+            "endMs": 3460
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3460,
+            "endMs": 3660
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3660,
+            "endMs": 3860
+          }
+        ]
+      }
+    },
+    {
+      "id": "R053-S03",
+      "text": "水彩太乾，試著加水看看。",
+      "spokenText": "水彩太乾試著加水看看",
+      "displayLines": [
+        "水彩太乾，",
+        "試著加水",
+        "看看。"
+      ],
+      "focusChar": "加",
+      "imageNotes": "畫畫桌上的水彩顏料乾稠，紙上原先的筆觸乾澀、不易推開。固定媽媽在旁指導主角女孩，女孩用沾水畫筆往調色盤加入少量清水。畫面聚焦顏料與加水的動作，不把水倒到已完成的圖畫上。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 畫畫桌上的水彩顏料乾稠，紙上原先的筆觸乾澀、不易推開。固定媽媽在旁指導主角女孩，女孩用沾水畫筆往調色盤加入少量清水。畫面聚焦顏料與加水的動作，不把水倒到已完成的圖畫上。",
+      "imageSrc": "/assets/reviews/R053/images/R053-S03.webp",
+      "audio": {
+        "src": "/assets/reviews/R053/audio/R053-S03.m4a",
+        "durationMs": 3801,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 840
+          },
+          {
+            "charIndex": 2,
+            "startMs": 840,
+            "endMs": 1220
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1220,
+            "endMs": 1440
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2220,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2300,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2480,
+            "endMs": 2820
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2820,
+            "endMs": 3020
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3020,
+            "endMs": 3290
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3290,
+            "endMs": 3560
+          }
+        ]
+      }
+    },
+    {
+      "id": "R053-S04",
+      "text": "店員解說這個玩具怎麼玩。",
+      "spokenText": "店員解說這個玩具怎麼玩",
+      "displayLines": [
+        "店員解說",
+        "這個玩具",
+        "怎麼玩。"
+      ],
+      "focusChar": "解",
+      "zhuyinOverrides": {
+        "2": "ㄐㄧㄝˇ"
+      },
+      "imageNotes": "玩具店展示桌前，一位 generic 店員向主角女孩示範簡單的木製軌道玩具：將小球放在軌道頂端，指向小球往下滾的路徑。女孩專心看示範。店員身份與固定媽媽、老師不同；不用說明書文字或品牌標誌表達玩法。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 玩具店展示桌前，一位 generic 店員向主角女孩示範簡單的木製軌道玩具：將小球放在軌道頂端，指向小球往下滾的路徑。女孩專心看示範。店員身份與固定媽媽、老師不同；不用說明書文字或品牌標誌表達玩法。",
+      "imageSrc": "/assets/reviews/R053/images/R053-S04.webp",
+      "audio": {
+        "src": "/assets/reviews/R053/audio/R053-S04.m4a",
+        "durationMs": 4562,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 400
+          },
+          {
+            "charIndex": 1,
+            "startMs": 400,
+            "endMs": 760
+          },
+          {
+            "charIndex": 2,
+            "startMs": 760,
+            "endMs": 1560
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1560,
+            "endMs": 1820
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1820,
+            "endMs": 2210
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2210,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2600,
+            "endMs": 2940
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2940,
+            "endMs": 3180
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3180,
+            "endMs": 3570
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3570,
+            "endMs": 3960
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3960,
+            "endMs": 4320
+          }
+        ]
+      }
+    },
+    {
+      "id": "R053-S05",
+      "text": "我們合作做風車，結果成功了。",
+      "spokenText": "我們合作做風車結果成功了",
+      "displayLines": [
+        "我們合作",
+        "做風車，",
+        "結果成功了。"
+      ],
+      "focusChar": "成",
+      "imageNotes": "主角女孩和固定小月完成紙風車，桌上有兩人一起製作留下的彩紙。女孩握住風車柄，小月輕輕吹，風車葉片轉動，兩人露出成功的喜悅。畫面清楚呈現會轉的完成品，不是只拿著尚未組好的紙。小月必須使用 public/assets/reference/lesson-cast/xiaoyue.webp：長柔卷深栗色頭髮、月亮髮夾、薰衣草 cardigan、青綠裙等固定身份。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 主角女孩和固定小月完成紙風車，桌上有兩人一起製作留下的彩紙。女孩握住風車柄，小月輕輕吹，風車葉片轉動，兩人露出成功的喜悅。畫面清楚呈現會轉的完成品，不是只拿著尚未組好的紙。小月必須使用 public/assets/reference/lesson-cast/xiaoyue.webp：長柔卷深栗色頭髮、月亮髮夾、薰衣草 cardigan、青綠裙等固定身份。",
+      "imageSrc": "/assets/reviews/R053/images/R053-S05.webp",
+      "audio": {
+        "src": "/assets/reviews/R053/audio/R053-S05.m4a",
+        "durationMs": 3787,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 220
+          },
+          {
+            "charIndex": 1,
+            "startMs": 220,
+            "endMs": 440
+          },
+          {
+            "charIndex": 2,
+            "startMs": 440,
+            "endMs": 880
+          },
+          {
+            "charIndex": 3,
+            "startMs": 880,
+            "endMs": 1160
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1160,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1420,
+            "endMs": 1700
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1700,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2580,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2660,
+            "endMs": 2820
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2820,
+            "endMs": 3240
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3240,
+            "endMs": 3440
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3440,
+            "endMs": 3640
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R053-G01",
+      "type": "find-character",
+      "sentenceId": "R053-S01",
+      "targetChar": "如",
+      "targetCharIndex": 0,
+      "prompt": "請幫小兔子找出句子裡的如。"
+    },
+    {
+      "id": "R053-G02",
+      "type": "teach-character",
+      "sentenceId": "R053-S02",
+      "targetChar": "減",
+      "targetCharIndex": 3,
+      "prompt": "請你幫小兔子念紅框裡的字。",
+      "teachAudio": {
+        "prefixText": "我決定",
+        "suffixText": "少玩電動的時間",
+        "prefixSrc": "/assets/reviews/R053/audio/R053-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R053/audio/R053-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/reviews/R053/audio/R053-G02-prefix.m4a",
+          "durationMs": 1927,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 640
+            },
+            {
+              "charIndex": 1,
+              "startMs": 640,
+              "endMs": 1400
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1400,
+              "endMs": 1700
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/reviews/R053/audio/R053-G02-suffix.m4a",
+          "durationMs": 2993,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 620
+            },
+            {
+              "charIndex": 1,
+              "startMs": 620,
+              "endMs": 1160
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1160,
+              "endMs": 1600
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1600,
+              "endMs": 1840
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1840,
+              "endMs": 2180
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2180,
+              "endMs": 2440
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2440,
+              "endMs": 2700
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "R053-G03",
+      "type": "missing-character",
+      "sentenceId": "R053-S04",
+      "targetChar": "解",
+      "targetCharIndex": 2,
+      "missingIndexes": [
+        2
+      ],
+      "prompt": "請幫小兔子找回少掉的字。",
+      "options": [
+        {
+          "id": "R053-G03-O1",
+          "text": "說",
+          "correct": false
+        },
+        {
+          "id": "R053-G03-O2",
+          "text": "解",
+          "correct": true
+        },
+        {
+          "id": "R053-G03-O3",
+          "text": "想",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "R053-G04",
+      "type": "partial-order",
+      "sentenceId": "R053-S03",
+      "targetChar": "加",
+      "targetCharIndex": 6,
+      "missingIndexes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "prompt": "請幫小兔子把字放回去。",
+      "options": [
+        {
+          "id": "R053-G04-O1",
+          "text": "加",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "R053-G04-O2",
+          "text": "試",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "R053-G04-O3",
+          "text": "水",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "R053-G04-O4",
+          "text": "著",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "R053-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R053-S05",
+      "targetChar": "成",
+      "targetCharIndex": 9,
+      "prompt": "請聽一聽，誰念對了？",
+      "options": [
+        {
+          "id": "R053-G05-O1",
+          "text": "我們合作做風車，結果成功了。",
+          "spokenText": "我們合作做風車結果成功了",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R053/audio/R053-S05.m4a"
+        },
+        {
+          "id": "R053-G05-O2",
+          "text": "我們合作做紙船，結果成功了。",
+          "spokenText": "我們合作做紙船結果成功了",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R053/audio/R053-G05-wrong-one.m4a"
+        },
+        {
+          "id": "R053-G05-O3",
+          "text": "你們合作做風車，結果成功了。",
+          "spokenText": "你們合作做風車結果成功了",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R053/audio/R053-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "qaSummary": {
+    "technicalAudit": "curriculum-workflow/generated/R053-qa/technical-audit.json",
+    "coverage": "Pair 30/30 PASS",
+    "sentenceLengthException": "Pair exception is R054-S04 only; R053 sentence lengths are 10–12 Han.",
+    "phonePlayback": "All 9 referenced M4A files played to ENDED; sentence highlights and Stage 4 mappings checked at 390x844.",
+    "limitations": [
+      "Press-and-hold microphone recording and post-recording resume were not exercised because the available CUA click API has no hold-duration action.",
+      "No human auditory-listening PASS is claimed; automated transcription, phonetic evidence, decode/volume gates and browser playback are retained for teacher review."
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "pairUnits": [
+    "R053",
+    "R054"
+  ],
+  "afterLessonOrder": 435,
+  "targetLessonRange": {
+    "startOrder": 406,
+    "endOrder": 435
+  },
+  "sourceMainCommit": "72b61a615628b25a2c78b63c9c400f9adcca946f",
+  "allowedCount": 439,
+  "requiredCoverageChars": [
+    "加",
+    "減",
+    "法",
+    "辦",
+    "試",
+    "定",
+    "成",
+    "功",
+    "決",
+    "解",
+    "果",
+    "如",
+    "結",
+    "合",
+    "教",
+    "室",
+    "班",
+    "組",
+    "隊",
+    "各",
+    "輪",
+    "員",
+    "自",
+    "己",
+    "主",
+    "由",
+    "意",
+    "願",
+    "互",
+    "助"
+  ],
+  "counts": {
+    "加": 1,
+    "減": 1,
+    "法": 1,
+    "辦": 1,
+    "試": 1,
+    "定": 1,
+    "成": 2,
+    "功": 1,
+    "決": 1,
+    "解": 1,
+    "果": 3,
+    "如": 1,
+    "結": 1,
+    "合": 1,
+    "教": 1,
+    "室": 1,
+    "班": 1,
+    "組": 1,
+    "隊": 1,
+    "各": 1,
+    "輪": 1,
+    "員": 1,
+    "自": 1,
+    "己": 1,
+    "主": 1,
+    "由": 1,
+    "意": 1,
+    "願": 1,
+    "互": 1,
+    "助": 1
+  },
+  "coverage": "30/30 PASS",
+  "lengthAudit": [
+    {
+      "id": "R053-S01",
+      "hanCount": 11,
+      "result": "9–12 Han PASS"
+    },
+    {
+      "id": "R053-S02",
+      "hanCount": 11,
+      "result": "9–12 Han PASS"
+    },
+    {
+      "id": "R053-S03",
+      "hanCount": 10,
+      "result": "9–12 Han PASS"
+    },
+    {
+      "id": "R053-S04",
+      "hanCount": 11,
+      "result": "9–12 Han PASS"
+    },
+    {
+      "id": "R053-S05",
+      "hanCount": 12,
+      "result": "9–12 Han PASS"
+    },
+    {
+      "id": "R054-S01",
+      "hanCount": 10,
+      "result": "9–12 Han PASS"
+    },
+    {
+      "id": "R054-S02",
+      "hanCount": 9,
+      "result": "9–12 Han PASS"
+    },
+    {
+      "id": "R054-S03",
+      "hanCount": 12,
+      "result": "9–12 Han PASS"
+    },
+    {
+      "id": "R054-S04",
+      "hanCount": 13,
+      "result": "13 Han：teacher-approved exception"
+    },
+    {
+      "id": "R054-S05",
+      "hanCount": 9,
+      "result": "9–12 Han PASS"
+    }
+  ],
+  "teacherNotes": "R054-S04：13 Han：teacher-approved exception。老師明確批准保留「大家幫助生病的小孩完成心願。」及 displayLines；不得為壓回 12 字而刪改。例外只放寬本句漢字總數，不放寬手機排版、注音可讀性、Stage 4 Han-only 索引與 option mapping、最終 charTimings、手機播放及逐字高亮。"
+}

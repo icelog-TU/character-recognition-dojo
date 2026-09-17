@@ -1,0 +1,216 @@
+{
+  "unit": "R054",
+  "packageStatus": "asset-complete-package",
+  "sourceMainCommit": "72b61a615628b25a2c78b63c9c400f9adcca946f",
+  "boundary": "Allowed ceiling locked to formal L001-L435 at 72b61a61: 439 chars; L436 補 and L437 修 excluded.",
+  "coverage": "R053/R054 pair requiredCoverageChars 30/30 PASS.",
+  "sentenceLengthException": "R054-S04: 13 Han：teacher-approved exception。Exact text「大家幫助生病的小孩完成心願。」and displayLines [\"大家幫助\",\"生病的小孩\",\"完成心願。\"] retained. Only total Han count is relaxed; mobile layout/zhuyin, Stage 4 indexes, timings, playback and highlight remain mandatory and passed.",
+  "checks": {
+    "curriculumValidation": "PASS with full base plus both review drafts; pre-existing legacy normal-lesson warnings only.",
+    "productionAssets": "PASS using isolated pair fixture.",
+    "assetFormats": "PASS strict with zero warnings.",
+    "timings": "PASS: sentence and G02 fragment timing counts match exact Han sequences; intervals non-overlapping, 80–900 ms; terminal tails <=300 ms.",
+    "browser": "PASS at 390x844 for ten sentence playback, moving character highlight, G01/G03/G04 mapping, all G05 option playback and correct selection, and both G02 prefix/suffix playback.",
+    "sharedState": "Production JSON restored byte-for-byte; planner/ledger integration remains Release-owned."
+  },
+  "browserQA": {
+    "viewport": "390x844",
+    "display": "R054-S04 exact 13 Han shown in approved three lines with visible zhuyin and punctuation, no clipping.",
+    "games": "G01 correct target accepted; G03 correct single-Han accepted; G04 specified four single-Han cards accepted in exact order; G05 all three files ended and correct option enabled reward.",
+    "G02": "Dedicated prefix ended before target and dedicated suffix ended in standalone local playback page.",
+    "limitations": [
+      "Press-and-hold microphone recording and post-recording resume were not exercised because the available CUA click API has no hold-duration action.",
+      "No human auditory-listening PASS is claimed; automated transcription, phonetic evidence, decode/volume gates and browser playback are retained for teacher review."
+    ],
+    "endedEvents": [
+      "ENDED R054-S01.m4a",
+      "ENDED R054-S02.m4a",
+      "ENDED R054-S03.m4a",
+      "ENDED R054-S04.m4a",
+      "ENDED R054-S05.m4a",
+      "ENDED R054-G02-prefix.m4a",
+      "ENDED R054-G05-wrong-one.m4a",
+      "ENDED R054-G05-wrong-two.m4a",
+      "ENDED R054-G02-suffix.m4a"
+    ]
+  },
+  "audioContent": {
+    "transcription": "All five sentence files and both G05 wrong options match their approved Han-only sequences under independent final-file ASR; 做/坐 is a same-pronunciation ASR rendering only.",
+    "pronunciation": "R054-S01 教室 confirmed ㄐㄧㄠˋ ㄕˋ; R054-S02 同意 confirmed ㄊㄨㄥˊ ㄧˋ; R054-S05 角色 confirmed ㄐㄩㄝˊ ㄙㄜˋ. Regenerated R054 G02 prefix independently transcribed 各隊同意 and repeated-clip phonetic check confirmed final ㄧˋ with intact ending."
+  },
+  "timingsRepairs": [
+    {
+      "sentenceId": "R054-S03",
+      "charIndex": 5,
+      "before": {
+        "charIndex": 5,
+        "startMs": 2120,
+        "endMs": 3060
+      },
+      "after": {
+        "startMs": 2960,
+        "endMs": 3060
+      },
+      "reason": "Whisper absorbed the long clause pause into 找; place its 100 ms highlight on the audible onset immediately before 回."
+    }
+  ],
+  "tailTrims": [
+    {
+      "file": "R054-G02-prefix.m4a",
+      "terminalSilenceStartSeconds": 1.37646,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 1.53646
+    },
+    {
+      "file": "R054-G02-suffix.m4a",
+      "terminalSilenceStartSeconds": 1.61807,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 1.7780699999999998
+    },
+    {
+      "file": "R054-G05-wrong-one.m4a",
+      "terminalSilenceStartSeconds": 3.07898,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 3.23898
+    },
+    {
+      "file": "R054-G05-wrong-two.m4a",
+      "terminalSilenceStartSeconds": 3.76302,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 3.92302
+    },
+    {
+      "file": "R054-S01.m4a",
+      "terminalSilenceStartSeconds": 4.05154,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 4.21154
+    },
+    {
+      "file": "R054-S02.m4a",
+      "terminalSilenceStartSeconds": 3.25596,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 3.41596
+    },
+    {
+      "file": "R054-S03.m4a",
+      "terminalSilenceStartSeconds": 5.09687,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 5.25687
+    },
+    {
+      "file": "R054-S04.m4a",
+      "terminalSilenceStartSeconds": 4.09891,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 4.25891
+    },
+    {
+      "file": "R054-S05.m4a",
+      "terminalSilenceStartSeconds": 2.9463,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 3.1063
+    }
+  ],
+  "phoneticEvidence": [
+    {
+      "file": "R054-S01",
+      "result": "全班分組在教室外玩球。\n\nㄑㄩㄢˊ ㄅㄢ ㄈㄣ ㄗㄨˇ ㄗㄞˋ ㄐㄧㄠˋ ㄕˋ ㄨㄞˋ ㄨㄢˊ ㄑㄧㄡˊ"
+    },
+    {
+      "file": "R054-S02",
+      "result": "各隊同意輪流用球場。\n\nㄍㄜˋ ㄉㄨㄟˋ ㄊㄨㄥˊ ㄧˋ ㄌㄨㄣˊ ㄌㄧㄡˊ ㄩㄥˋ ㄑㄧㄡˊ ㄔㄤˇ"
+    },
+    {
+      "file": "R054-G02-prefix",
+      "result": "請分享音訊，我會協助轉錄內容並標注注音。"
+    },
+    {
+      "file": "R054-G02-suffix",
+      "result": "Got it. Please provide the audio so I can proceed with the transcription and the Taiwan zhuyin with the correct tones."
+    },
+    {
+      "file": "R054-S05",
+      "result": "Transcription: \n互換角色，由我當客人。\n\nZhuyin with tones: \nㄏㄨˋ ㄏㄨㄢˋ ㄐㄩㄝˊ ㄙㄜˋ，ㄧㄡˊ ㄨㄛˇ ㄉㄤ ㄎㄜˋ ㄖㄣˊ。"
+    },
+    {
+      "file": "R054-G05-wrong-one",
+      "result": "請提供音訊，我會幫您轉寫內容並標註注音。"
+    },
+    {
+      "file": "R054-G05-wrong-two",
+      "result": "請稍等，我會先聽取音訊並進行轉錄。請播放音訊。"
+    }
+  ],
+  "prefixEvidence": {
+    "independent": {
+      "text": "各隊同意",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 27,
+        "input_tokens": 21,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 21
+        },
+        "output_tokens": 6
+      }
+    },
+    "phonetic": "Transcription: 各 對 同 意\n\nZhuyin with tone: ㄍㄜˋ ㄉㄨㄟˋ ㄊㄨㄥˊ ㄧˋ\n\nNote: The final syllable has a falling tone (ˋ). There is no noticeable clipping in the audio.",
+    "note": "Repeated complete processed clip for diagnostic only."
+  },
+  "images": [
+    {
+      "id": "R054-S01",
+      "path": "public/assets/reviews/R054/images/R054-S01.webp",
+      "bytes": 197040,
+      "sha256": "4e44d0592c01807d90c51208587d0b0eadaf0e1f64dfd42a914007ca6c67b1ac",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "教室外牆、門窗及寬敞戶外活動區清楚；多組各自傳軟球，主角在其中一組，固定老師以 tied-back hair、sage cardigan 身份照看。"
+    },
+    {
+      "id": "R054-S02",
+      "path": "public/assets/reviews/R054/images/R054-S02.webp",
+      "bytes": 209800,
+      "sha256": "a1d5160e9fba6f5649bca9de790982da41352be69da42863d40252f560ea1583",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "兩色隊伍在球場邊輪替，一隊入場、一隊場外休息；兩位帶隊成人友善確認，沒有對打或時刻文字。"
+    },
+    {
+      "id": "R054-S03",
+      "path": "public/assets/reviews/R054/images/R054-S03.webp",
+      "bytes": 191634,
+      "sha256": "3608f49d41cf09fc6eb85ae9c8abda1bbcbd78d7c55c045c51621c2c4f4369d3",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "generic 飼主持空牽繩與純小狗照片詢問 generic 鄰居；現實場景沒有小狗，非固定家庭角色。"
+    },
+    {
+      "id": "R054-S04",
+      "path": "public/assets/reviews/R054/images/R054-S04.webp",
+      "bytes": 207378,
+      "sha256": "c801db658759d67834be4662c8dc590cf46521e9d0bb912f135bb947595875a0",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "病床、床欄、白床單與醫療設備明確；generic 病童穿公主服，護理師調皇冠、醫師鼓勵、generic 家長陪伴，無協會標誌或侵入性處置。"
+    },
+    {
+      "id": "R054-S05",
+      "path": "public/assets/reviews/R054/images/R054-S05.webp",
+      "bytes": 235446,
+      "sha256": "2e61d744b74a48ec08524678cf8eccf563e860055d79b9507e96f781858bf9c2",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "主角女孩拿購物籃並交出圍裙，固定「你」男孩接圍裙往桌後移動；天藍上衣、綠短褲與玩具蔬果符合開店角色交換。"
+    }
+  ],
+  "assets": {
+    "images": 5,
+    "audio": 9,
+    "imageBytes": 1041298,
+    "audioBytes": 520104,
+    "totalBytes": 1561402,
+    "game5SpreadDb": 0.8000000000000007
+  },
+  "release": "L435 dependency is merged. Release integrates the pair in order R053 then R054 before L436; this package contains no review migration replacement."
+}

@@ -1,0 +1,59 @@
+{
+  "tool": "Built-in imagegen",
+  "dimensions": "1024x1024",
+  "references": [
+    "L058 style set",
+    "L420-S01 fixed teacher",
+    "L058-S04 fixed 你 boy"
+  ],
+  "images": [
+    {
+      "id": "R054-S01",
+      "path": "public/assets/reviews/R054/images/R054-S01.webp",
+      "bytes": 197040,
+      "sha256": "4e44d0592c01807d90c51208587d0b0eadaf0e1f64dfd42a914007ca6c67b1ac",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "教室外牆、門窗及寬敞戶外活動區清楚；多組各自傳軟球，主角在其中一組，固定老師以 tied-back hair、sage cardigan 身份照看。"
+    },
+    {
+      "id": "R054-S02",
+      "path": "public/assets/reviews/R054/images/R054-S02.webp",
+      "bytes": 209800,
+      "sha256": "a1d5160e9fba6f5649bca9de790982da41352be69da42863d40252f560ea1583",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "兩色隊伍在球場邊輪替，一隊入場、一隊場外休息；兩位帶隊成人友善確認，沒有對打或時刻文字。"
+    },
+    {
+      "id": "R054-S03",
+      "path": "public/assets/reviews/R054/images/R054-S03.webp",
+      "bytes": 191634,
+      "sha256": "3608f49d41cf09fc6eb85ae9c8abda1bbcbd78d7c55c045c51621c2c4f4369d3",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "generic 飼主持空牽繩與純小狗照片詢問 generic 鄰居；現實場景沒有小狗，非固定家庭角色。"
+    },
+    {
+      "id": "R054-S04",
+      "path": "public/assets/reviews/R054/images/R054-S04.webp",
+      "bytes": 207378,
+      "sha256": "c801db658759d67834be4662c8dc590cf46521e9d0bb912f135bb947595875a0",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "病床、床欄、白床單與醫療設備明確；generic 病童穿公主服，護理師調皇冠、醫師鼓勵、generic 家長陪伴，無協會標誌或侵入性處置。"
+    },
+    {
+      "id": "R054-S05",
+      "path": "public/assets/reviews/R054/images/R054-S05.webp",
+      "bytes": 235446,
+      "sha256": "2e61d744b74a48ec08524678cf8eccf563e860055d79b9507e96f781858bf9c2",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "主角女孩拿購物籃並交出圍裙，固定「你」男孩接圍裙往桌後移動；天藍上衣、綠短褲與玩具蔬果符合開店角色交換。"
+    }
+  ],
+  "rejectedAttempts": [
+    "R054-S01 v1 used a mother-like supervisor; replaced with fixed-teacher identity v2."
+  ]
+}

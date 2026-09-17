@@ -1,0 +1,617 @@
+{
+  "id": "R054",
+  "kind": "review",
+  "reviewNumber": 54,
+  "title": "複習五十四",
+  "afterLessonOrder": 435,
+  "targetLessonRange": {
+    "startOrder": 406,
+    "endOrder": 435
+  },
+  "requiredRounds": 5,
+  "pairUnits": [
+    "R053",
+    "R054"
+  ],
+  "requiredCoverageChars": [
+    "加",
+    "減",
+    "法",
+    "辦",
+    "試",
+    "定",
+    "成",
+    "功",
+    "決",
+    "解",
+    "果",
+    "如",
+    "結",
+    "合",
+    "教",
+    "室",
+    "班",
+    "組",
+    "隊",
+    "各",
+    "輪",
+    "員",
+    "自",
+    "己",
+    "主",
+    "由",
+    "意",
+    "願",
+    "互",
+    "助"
+  ],
+  "dependsOnLessons": [
+    "L435"
+  ],
+  "provisionalLearnedChars": [],
+  "sourceMainCommit": "72b61a615628b25a2c78b63c9c400f9adcca946f",
+  "packageStatus": "asset-complete-package",
+  "teacherNotes": "R054-S04：13 Han：teacher-approved exception。老師明確批准保留「大家幫助生病的小孩完成心願。」及 displayLines；不得為壓回 12 字而刪改。例外只放寬本句漢字總數，不放寬手機排版、注音可讀性、Stage 4 Han-only 索引與 option mapping、最終 charTimings、手機播放及逐字高亮。 Normal milestone pair, not review migration replacement. Allowed ceiling is locked to L435 at 72b61a61 (439 chars); L436 補 and L437 修 are forbidden. No newChars, zhuyin, standalone charAudio, or readable image text/number exception. Release order is L435 → R053 → R054 → L436.",
+  "sentences": [
+    {
+      "id": "R054-S01",
+      "text": "全班分組，在教室外玩球。",
+      "spokenText": "全班分組在教室外玩球",
+      "displayLines": [
+        "全班分組，",
+        "在教室外",
+        "玩球。"
+      ],
+      "focusChar": "組",
+      "zhuyinOverrides": {
+        "5": "ㄐㄧㄠˋ"
+      },
+      "imageNotes": "學校教室外的寬敞活動空間，班上同學分成幾個小組，各組使用自己的軟球玩傳接球。主角女孩在其中一組，其他孩子使用不同外貌的 generic 同學，固定老師在旁照看。教室外牆與門窗可在背景辨識；一定在戶外活動區，不在教室內，也不在狹窄走廊玩球。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 學校教室外的寬敞活動空間，班上同學分成幾個小組，各組使用自己的軟球玩傳接球。主角女孩在其中一組，其他孩子使用不同外貌的 generic 同學，固定老師在旁照看。教室外牆與門窗可在背景辨識；一定在戶外活動區，不在教室內，也不在狹窄走廊玩球。",
+      "imageSrc": "/assets/reviews/R054/images/R054-S01.webp",
+      "audio": {
+        "src": "/assets/reviews/R054/audio/R054-S01.m4a",
+        "durationMs": 4212,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1080,
+            "endMs": 1280
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1280,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2140,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2600,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2740,
+            "endMs": 3160
+          },
+          {
+            "charIndex": 8,
+            "startMs": 3160,
+            "endMs": 3720
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3720,
+            "endMs": 3960
+          }
+        ]
+      }
+    },
+    {
+      "id": "R054-S02",
+      "text": "各隊同意輪流用球場。",
+      "spokenText": "各隊同意輪流用球場",
+      "displayLines": [
+        "各隊同意",
+        "輪流用球場。"
+      ],
+      "focusChar": "輪",
+      "imageNotes": "學校球場邊，兩支穿不同顏色球衣的 generic 學生隊伍正在交接使用球場。一隊帶球走向場內，另一隊拿著球在場外休息等候，兩位帶隊老師以友善手勢確認輪替。呈現大家同意依序使用，不是兩隊正在對打，也不是被趕出球場。無文字時刻表。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 學校球場邊，兩支穿不同顏色球衣的 generic 學生隊伍正在交接使用球場。一隊帶球走向場內，另一隊拿著球在場外休息等候，兩位帶隊老師以友善手勢確認輪替。呈現大家同意依序使用，不是兩隊正在對打，也不是被趕出球場。無文字時刻表。",
+      "imageSrc": "/assets/reviews/R054/images/R054-S02.webp",
+      "audio": {
+        "src": "/assets/reviews/R054/audio/R054-S02.m4a",
+        "durationMs": 3416,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 340
+          },
+          {
+            "charIndex": 1,
+            "startMs": 340,
+            "endMs": 800
+          },
+          {
+            "charIndex": 2,
+            "startMs": 800,
+            "endMs": 1260
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1260,
+            "endMs": 1580
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1580,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1900,
+            "endMs": 2140
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2140,
+            "endMs": 2660
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2660,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2960,
+            "endMs": 3200
+          }
+        ]
+      }
+    },
+    {
+      "id": "R054-S03",
+      "text": "主人想辦法找回不見的小狗。",
+      "spokenText": "主人想辦法找回不見的小狗",
+      "displayLines": [
+        "主人想辦法",
+        "找回不見的",
+        "小狗。"
+      ],
+      "focusChar": "辦",
+      "imageNotes": "社區街角，一位 generic 成年飼主拿著小狗照片詢問另一位 generic 鄰居，另一手拿空牽繩，神情擔心但冷靜。照片上只有小狗圖像，不帶文字。失蹤小狗不出現在現實場景中，避免變成已經找到；可見的狗只在照片裡。不是主角爸爸或媽媽的固定家犬設定。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 社區街角，一位 generic 成年飼主拿著小狗照片詢問另一位 generic 鄰居，另一手拿空牽繩，神情擔心但冷靜。照片上只有小狗圖像，不帶文字。失蹤小狗不出現在現實場景中，避免變成已經找到；可見的狗只在照片裡。不是主角爸爸或媽媽的固定家犬設定。",
+      "imageSrc": "/assets/reviews/R054/images/R054-S03.webp",
+      "audio": {
+        "src": "/assets/reviews/R054/audio/R054-S03.m4a",
+        "durationMs": 5257,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1600,
+            "endMs": 1860
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1860,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2960,
+            "endMs": 3060
+          },
+          {
+            "charIndex": 6,
+            "startMs": 3060,
+            "endMs": 3440
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3440,
+            "endMs": 4100
+          },
+          {
+            "charIndex": 8,
+            "startMs": 4100,
+            "endMs": 4240
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4240,
+            "endMs": 4540
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4540,
+            "endMs": 4860
+          },
+          {
+            "charIndex": 11,
+            "startMs": 4860,
+            "endMs": 5000
+          }
+        ]
+      }
+    },
+    {
+      "id": "R054-S04",
+      "text": "大家幫助生病的小孩完成心願。",
+      "spokenText": "大家幫助生病的小孩完成心願",
+      "displayLines": [
+        "大家幫助",
+        "生病的小孩",
+        "完成心願。"
+      ],
+      "focusChar": "願",
+      "teacherNotes": "R054-S04：13 Han：teacher-approved exception。老師明確批准保留「大家幫助生病的小孩完成心願。」及 displayLines；不得為壓回 12 字而刪改。例外只放寬本句漢字總數，不放寬手機排版、注音可讀性、Stage 4 Han-only 索引與 option mapping、最終 charTimings、手機播放及逐字高亮。",
+      "imageNotes": "明確的兒童病房：一位 generic 生病小女孩坐在有床欄、白床單的病床上，靠著枕頭，床旁有簡單醫療設備，讓人看得出她正在住院。她穿上漂亮的公主服，一位穿護理制服的護理師正幫她調整小皇冠，一位穿白袍、戴聽診器的醫師在旁欣賞、鼓勵，generic 家長陪在床側。畫面核心是醫師、護理師和家人一起幫她完成「當一天公主」的心願；病床與醫療角色不可省略或改成普通生日派對。孩子開心、受到照顧，不強調疼痛、侵入性處置或恐怖病況。不指定疾病、不使用老師女兒的外貌，不使用任何真實協會名稱或標誌。小女孩不是主角女孩或小月。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 明確的兒童病房：一位 generic 生病小女孩坐在有床欄、白床單的病床上，靠著枕頭，床旁有簡單醫療設備，讓人看得出她正在住院。她穿上漂亮的公主服，一位穿護理制服的護理師正幫她調整小皇冠，一位穿白袍、戴聽診器的醫師在旁欣賞、鼓勵，generic 家長陪在床側。畫面核心是醫師、護理師和家人一起幫她完成「當一天公主」的心願；病床與醫療角色不可省略或改成普通生日派對。孩子開心、受到照顧，不強調疼痛、侵入性處置或恐怖病況。不指定疾病、不使用老師女兒的外貌，不使用任何真實協會名稱或標誌。小女孩不是主角女孩或小月。",
+      "imageSrc": "/assets/reviews/R054/images/R054-S04.webp",
+      "audio": {
+        "src": "/assets/reviews/R054/audio/R054-S04.m4a",
+        "durationMs": 4259,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 260
+          },
+          {
+            "charIndex": 1,
+            "startMs": 260,
+            "endMs": 520
+          },
+          {
+            "charIndex": 2,
+            "startMs": 520,
+            "endMs": 980
+          },
+          {
+            "charIndex": 3,
+            "startMs": 980,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1320,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1620,
+            "endMs": 1800
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1800,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2120,
+            "endMs": 2300
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2300,
+            "endMs": 2600
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2600,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3040,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3480,
+            "endMs": 3860
+          },
+          {
+            "charIndex": 12,
+            "startMs": 3860,
+            "endMs": 4040
+          }
+        ]
+      }
+    },
+    {
+      "id": "R054-S05",
+      "text": "互換角色，由我當客人。",
+      "spokenText": "互換角色由我當客人",
+      "displayLines": [
+        "互換角色，",
+        "由我當客人。"
+      ],
+      "focusChar": "互",
+      "zhuyinOverrides": {
+        "2": "ㄐㄩㄝˊ"
+      },
+      "imageNotes": "主角女孩和固定「你」小男孩在家玩開店遊戲，小桌上擺玩具蔬果與購物籃。兩人正在交換位置：原本在桌後的女孩交出店員圍裙、拿起購物籃走到客人那一側；男孩接過圍裙到桌後當店員。畫面讀得出互換角色，女孩是新一輪的客人。「你」使用固定天藍上衣、綠短褲男孩身份，不替換成小光。無價格牌或玩具鈔票文字。",
+      "approved": true,
+      "imagePrompt": "Use case: illustration-story. Asset type: square mobile lesson picture. Modern Taiwan children's picture-book illustration with warm natural light, fine pencil-and-watercolor linework, detailed but clean environments, expressive preschool proportions, soft cheeks, gentle expressions, bright warm palette, and phone-readable composition. Use the complete L058 set for style only and refined L115-S01/S02, L118-S02, L119-S01, L128-S03 proportions. Recurring family and child identities must follow the visual cast SOP and current lesson anchors. No readable text, letters, digits, logos, labels, captions, speech bubbles, UI, watermark, anime, 3D render, or photorealism. Scene: 主角女孩和固定「你」小男孩在家玩開店遊戲，小桌上擺玩具蔬果與購物籃。兩人正在交換位置：原本在桌後的女孩交出店員圍裙、拿起購物籃走到客人那一側；男孩接過圍裙到桌後當店員。畫面讀得出互換角色，女孩是新一輪的客人。「你」使用固定天藍上衣、綠短褲男孩身份，不替換成小光。無價格牌或玩具鈔票文字。",
+      "imageSrc": "/assets/reviews/R054/images/R054-S05.webp",
+      "audio": {
+        "src": "/assets/reviews/R054/audio/R054-S05.m4a",
+        "durationMs": 3106,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 420
+          },
+          {
+            "charIndex": 1,
+            "startMs": 420,
+            "endMs": 740
+          },
+          {
+            "charIndex": 2,
+            "startMs": 740,
+            "endMs": 1020
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1020,
+            "endMs": 1400
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1680,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1900,
+            "endMs": 2200
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2200,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2400,
+            "endMs": 2640
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2640,
+            "endMs": 2860
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "R054-G01",
+      "type": "find-character",
+      "sentenceId": "R054-S01",
+      "targetChar": "組",
+      "targetCharIndex": 3,
+      "prompt": "請幫小兔子找出句子裡的組。"
+    },
+    {
+      "id": "R054-G02",
+      "type": "teach-character",
+      "sentenceId": "R054-S02",
+      "targetChar": "輪",
+      "targetCharIndex": 4,
+      "prompt": "請你幫小兔子念紅框裡的字。",
+      "teachAudio": {
+        "prefixText": "各隊同意",
+        "suffixText": "流用球場",
+        "prefixSrc": "/assets/reviews/R054/audio/R054-G02-prefix.m4a",
+        "suffixSrc": "/assets/reviews/R054/audio/R054-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/reviews/R054/audio/R054-G02-prefix.m4a",
+          "durationMs": 1536,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 420
+            },
+            {
+              "charIndex": 1,
+              "startMs": 420,
+              "endMs": 780
+            },
+            {
+              "charIndex": 2,
+              "startMs": 780,
+              "endMs": 1180
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1180,
+              "endMs": 1340
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/reviews/R054/audio/R054-G02-suffix.m4a",
+          "durationMs": 1778,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 520
+            },
+            {
+              "charIndex": 1,
+              "startMs": 520,
+              "endMs": 900
+            },
+            {
+              "charIndex": 2,
+              "startMs": 900,
+              "endMs": 1260
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1260,
+              "endMs": 1540
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "R054-G03",
+      "type": "missing-character",
+      "sentenceId": "R054-S03",
+      "targetChar": "辦",
+      "targetCharIndex": 3,
+      "missingIndexes": [
+        3
+      ],
+      "prompt": "請幫小兔子找回少掉的字。",
+      "options": [
+        {
+          "id": "R054-G03-O1",
+          "text": "做",
+          "correct": false
+        },
+        {
+          "id": "R054-G03-O2",
+          "text": "想",
+          "correct": false
+        },
+        {
+          "id": "R054-G03-O3",
+          "text": "辦",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "R054-G04",
+      "type": "partial-order",
+      "sentenceId": "R054-S04",
+      "targetChar": "願",
+      "targetCharIndex": 12,
+      "missingIndexes": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prompt": "請幫小兔子把字放回去。",
+      "options": [
+        {
+          "id": "R054-G04-O1",
+          "text": "願",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "R054-G04-O2",
+          "text": "完",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "R054-G04-O3",
+          "text": "心",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "R054-G04-O4",
+          "text": "成",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "R054-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "R054-S05",
+      "targetChar": "互",
+      "targetCharIndex": 0,
+      "prompt": "請聽一聽，誰念對了？",
+      "options": [
+        {
+          "id": "R054-G05-O1",
+          "text": "互換角色，由我當客人。",
+          "spokenText": "互換角色由我當客人",
+          "correct": true,
+          "audioSrc": "/assets/reviews/R054/audio/R054-S05.m4a"
+        },
+        {
+          "id": "R054-G05-O2",
+          "text": "互換角色，由你當客人。",
+          "spokenText": "互換角色由你當客人",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R054/audio/R054-G05-wrong-one.m4a"
+        },
+        {
+          "id": "R054-G05-O3",
+          "text": "互換角色，由我當主人。",
+          "spokenText": "互換角色由我當主人",
+          "correct": false,
+          "audioSrc": "/assets/reviews/R054/audio/R054-G05-wrong-two.m4a"
+        }
+      ]
+    }
+  ],
+  "qaSummary": {
+    "technicalAudit": "curriculum-workflow/generated/R054-qa/technical-audit.json",
+    "coverage": "Pair 30/30 PASS",
+    "sentenceLengthException": "R054-S04: 13 Han：teacher-approved exception。Exact text「大家幫助生病的小孩完成心願。」and displayLines [\"大家幫助\",\"生病的小孩\",\"完成心願。\"] retained. Only total Han count is relaxed; mobile layout/zhuyin, Stage 4 indexes, timings, playback and highlight remain mandatory and passed.",
+    "phonePlayback": "All 9 referenced M4A files played to ENDED; sentence highlights and Stage 4 mappings checked at 390x844.",
+    "limitations": [
+      "Press-and-hold microphone recording and post-recording resume were not exercised because the available CUA click API has no hold-duration action.",
+      "No human auditory-listening PASS is claimed; automated transcription, phonetic evidence, decode/volume gates and browser playback are retained for teacher review."
+    ]
+  }
+}
