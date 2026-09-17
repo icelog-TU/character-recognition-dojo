@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L449 | 唱 | claimed | Production B | codex/l449-complete-package | L444, L445, L446, L447, L448 | 器、樂、音、拍、歌 | `curriculum-workflow/lesson-requests/L449.json`; `curriculum-workflow/generated/L449-generation-packet.md`; `curriculum-workflow/drafts/L449-draft.json` | `curriculum-workflow/audio-inbox/L449/`; `public/assets/lessons/L449/` | Formal Production handoff received; complete dependency-blocked package in progress. L439-L443 remain earlier Release order dependencies but are not used in lesson text. |
 
 ## Status Values
 
