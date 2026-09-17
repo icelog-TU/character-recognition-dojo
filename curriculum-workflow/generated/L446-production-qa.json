@@ -1,0 +1,245 @@
+{
+  "unit": "L446",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "cdf73c5e30447a78c5671b721bef92dc5d54a39b",
+  "lockedAllowedChars": 448,
+  "coverage": {
+    "音": 4,
+    "樂": 2,
+    "器": 2,
+    "操": 2,
+    "機": 2,
+    "賽": 1
+  },
+  "checks": {
+    "requestDraftPacket": "PASS",
+    "allowedCharacters": "PASS",
+    "hanCounts": [
+      10,
+      9,
+      11,
+      12,
+      9
+    ],
+    "stage4Index": "PASS",
+    "displayLines": "PASS",
+    "productionAssetsLessonLocal": "PASS",
+    "strictFormatsLessonLocal": "PASS, zero warnings",
+    "audioDecode": "PASS all 10",
+    "imageStyleCast": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
+    "browserQA": "Local isolated Vite fixture; base prerequisites were seeded in memory and provisional sentence zhuyin supplied only in the fixture. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 音 cards plus 樂、這、個 distractors; all three 音 cards were selected, 已找到 3/3 and 全部找到了 appeared. Stage 3 played all five sentence buttons through ended and displayed 句子都聽完了. Sentence zhuyin overrides rendered 樂 as ㄩㄝˋ in S01/S02 and 傳 as ㄔㄨㄢˊ in S05. At 390×844, G01 音 was selected correctly; G02 displayed approved S01 with 音 at the correct index and was skipped at the physical microphone step; G03 音 was selected correctly; G04 操作機器 was ordered correctly; all three G05 reader buttons were activated. Browser console returned no warnings or errors. Because L445 is not integrated, the Stage 2 distractor 樂 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, recording/ding/post-record sequence, final G05 selection, reward walkthrough and teacher subjective review remain unperformed."
+  },
+  "pronunciation": {
+    "kind": "AI auditory review, not human QA; targeted final retries replace non-audio provisional model replies",
+    "results": [
+      {
+        "name": "char-u97f3",
+        "heardText": "音",
+        "pronunciationResult": "PASS",
+        "explanation": "The audio contains exactly one clear syllable: 音 (ㄧㄣ) in the first tone. The pronunciation is accurate and matches the expected syllable and tone.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L446-S01",
+        "heardText": "這個樂器的聲音真好聽",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的語音完全對應到預期文字，且樂器的發音清楚為 ㄩㄝˋ ㄑㄧˋ，聲調準確。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L446-S02",
+        "heardText": "我們跟著音樂做體操",
+        "pronunciationResult": "PASS",
+        "explanation": "整句的發音清晰。特別是『音樂』的發音：ㄧㄣ ㄩㄝˋ，聲調準確，符合預期。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L446-S03",
+        "heardText": "操作機器前先聽老師說明",
+        "pronunciationResult": "PASS",
+        "explanation": "發音清晰準確，聲調自然，符合台灣普通話的標準。特別是『老師說明』的聲調完整，沒有明顯錯誤。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L446-S04",
+        "heardText": "看比賽時把手機的聲音關掉",
+        "pronunciationResult": "PASS",
+        "explanation": "所有音節和聲調均與預期相符，發音清晰準確，語速正常。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L446-S05",
+        "heardText": "山洞裡傳來我的回音",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的內容符合預期句子，'傳來'的發音清楚，符合注音「ㄔㄨㄢˊ ㄌㄞˊ」，聲調準確。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L446-G02-prefix",
+        "heardText": "這個樂器的聲",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的語音與預期完全符合，「樂器」的讀音是ㄩㄝˋ ㄑㄧˋ，六個漢字正確，無額外的「音」。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L446-G02-suffix",
+        "heardText": "真好聽",
+        "pronunciationResult": "PASS",
+        "explanation": "語音內容完全符合預期的三個字『真好聽』，發音自然，聲調標準：『真』(ㄓㄣ1)、『好』(ㄏㄠ3)、『聽』(ㄊㄧㄥ1)。語音中的每個音節都清晰可辨，沒有明顯錯誤或含糊。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L446-G05-wrong-one",
+        "heardText": "看比賽時把手機的聲音打開",
+        "pronunciationResult": "PASS",
+        "explanation": "所有字的發音都準確，音節和聲調都符合預期：『看 (ㄎㄢˋ)、比 (ㄅㄧˇ)、賽 (ㄙㄞˋ)、時 (ㄕˊ)、把 (ㄅㄚˇ)、手 (ㄕㄡˇ)、機 (ㄐㄧ)、的 (˙ㄉㄜ)、聲 (ㄕㄥ)、音 (ㄧㄣ)、打 (ㄉㄚˇ)、開 (ㄎㄞ)』。聲調清晰、語意完整。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L446-G05-wrong-two",
+        "heardText": "看比賽時把手機的畫面關掉",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的語音與預期的『看比賽時把手機的畫面關掉』完全一致。『畫面』的發音清晰，ㄏㄨㄚˋ ㄇㄧㄢˋ的音調準確，第一個字是第四聲『畫』，第二個字是第四聲『面』，這兩個音都發得很標準。",
+        "finalSyllableAudible": true
+      }
+    ]
+  },
+  "folderBytes": 1053793,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L446/images/L446-S01.webp",
+      "bytes": 112666,
+      "sha256": "95ad3845c0fb291032babc34dbdcaae18e1d0d9b24caa13d240794cbaae8ea6f"
+    },
+    {
+      "path": "public/assets/lessons/L446/images/L446-S02.webp",
+      "bytes": 124050,
+      "sha256": "21ce7c127e7fe997c79f1aaa96637930b486fefe61d9bf45f7ea0f9e6bb580ce"
+    },
+    {
+      "path": "public/assets/lessons/L446/images/L446-S03.webp",
+      "bytes": 145690,
+      "sha256": "faaa0367d57168cb632ef6bbda192363b6fe6b7a2f0e2222de200dbdc7a21cd7"
+    },
+    {
+      "path": "public/assets/lessons/L446/images/L446-S04.webp",
+      "bytes": 122738,
+      "sha256": "e22916612d5f9911a26117a02d28f1317ef7609aac7eec53e5b2117b08ebe878"
+    },
+    {
+      "path": "public/assets/lessons/L446/images/L446-S05.webp",
+      "bytes": 146232,
+      "sha256": "4118a0887628b4582439792ced14fa653b912397eb3cf6132a12082945eb8ab4"
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/L446-G02-prefix.m4a",
+      "bytes": 23558,
+      "sha256": "f3ca978b0e58cf96ee3bec9bba6f85e202f4d3d0863a241e239cbddba9455190",
+      "durationMs": 1860,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -3.7,
+      "meanVolumeDb": -17.7
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/L446-G02-suffix.m4a",
+      "bytes": 17929,
+      "sha256": "8395321ae6e13c8137ddaf886f1c4f6088386be1ace8251cad3ed8586430905e",
+      "durationMs": 1430,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.8,
+      "meanVolumeDb": -16.8
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/L446-G05-wrong-one.m4a",
+      "bytes": 49387,
+      "sha256": "f494860ec92dc08c4b1a3d7d02e255bb7d9cb1ff9ccdd63716582775b8d3dfea",
+      "durationMs": 4060,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.2,
+      "meanVolumeDb": -18.7
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/L446-G05-wrong-two.m4a",
+      "bytes": 61119,
+      "sha256": "5b3783090fbde7d49906842638579a4ef752cc5125e2f7d1365bac95728e34e2",
+      "durationMs": 4880,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -19
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/L446-S01.m4a",
+      "bytes": 45445,
+      "sha256": "01e3d3afd9b09d1174663c1c5b40f8a7a64afd62499db4c613827be7407d451b",
+      "durationMs": 3630,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.6,
+      "meanVolumeDb": -19
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/L446-S02.m4a",
+      "bytes": 45205,
+      "sha256": "880137967560418f1606be789ea4425663a8a4fc362859c6bdb4569fc738193d",
+      "durationMs": 3600,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.5,
+      "meanVolumeDb": -18.1
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/L446-S03.m4a",
+      "bytes": 55466,
+      "sha256": "829a0b016d31052c3dd538525f54c16e1ae388e401f7b99aec16cb64cbee5823",
+      "durationMs": 4530,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.6
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/L446-S04.m4a",
+      "bytes": 55438,
+      "sha256": "1f7f670271464730bbeedde84ab0b8116f341e98b1f2e47369d0f971e568bb9c",
+      "durationMs": 4360,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.8
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/L446-S05.m4a",
+      "bytes": 36155,
+      "sha256": "db4fffaf098e63a0656bf6ba6ffd04630bd308021a0d1a3e5b5cf14cfe091254",
+      "durationMs": 2950,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.9
+    },
+    {
+      "path": "public/assets/lessons/L446/audio/char-u97f3.m4a",
+      "bytes": 12715,
+      "sha256": "6d02d41c01e1ee8c8354d9c23215a8c32c1ecf110fc61e8b9666b9ae6baa7d23",
+      "durationMs": 1250,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.6,
+      "meanVolumeDb": -17.6
+    }
+  ]
+}
