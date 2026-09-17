@@ -5,9 +5,19 @@
   "results": [
     {
       "id": "char-u6a02",
-      "sha256": "ee0bc3986079a8d96633db7d1e82a7972cc184a12df77f50aeadf1fe46bead34",
+      "sha256": "8be83d25208b8e1877c2130aa3961e174737f386f7a3a514515ed34e492c8b53",
       "model": "gpt-audio-1.5",
-      "review": "{\"transcript\": \"yue\", \"heardPinyin\": \"yue4\", \"leYueOccurrences\": [{\"syllable\": \"yue4\", \"position\": 1}], \"jiaoTone\": null, \"defects\": null, \"confidence\": 0.7}"
+      "review": "{\"heardPinyin\": \"yue\", \"contour\": {\"start\": \"highish\", \"middle\": \"falls slightly\", \"end\": \"lower than start\"}, \"tone\": 4, \"uncertainty\": \"low\"}",
+      "repairReason": "Teacher reported prior audio sounded yue1 (約), expected yue4 (月). Prior AI approval superseded.",
+      "generation": {
+        "model": "gpt-4o-mini-tts",
+        "voice": "coral",
+        "input": "月。",
+        "instructions": "Speak this single Chinese word in Mandarin, with a stern emphatic exclamation. Very sharp high-to-low falling pitch from the very beginning. No questioning intonation, no upward glide.",
+        "speed": 1
+      },
+      "reviewPrompt": "Analyze the actual acoustic pitch contour of this isolated Mandarin syllable. Do not infer the tone from an assumed written word. What initial/final and tone is actually audible? Compare all four tones: high level (1), rising (2), dipping (3), falling (4). Explicitly describe perceived pitch start, middle and end. Return JSON with heardPinyin, contour, tone, uncertainty. No expected word or tone is supplied.",
+      "humanListening": "Pending teacher confirmation"
     },
     {
       "id": "L445-S01",

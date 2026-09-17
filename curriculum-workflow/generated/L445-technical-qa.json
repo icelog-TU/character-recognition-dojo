@@ -3,10 +3,10 @@
   "audio": [
     {
       "filename": "char-u6a02.m4a",
-      "bytes": 16751,
-      "durationMs": 1393,
-      "meanDb": -19.1,
-      "maxDb": -2,
+      "bytes": 15377,
+      "durationMs": 1416,
+      "meanDb": -27.7,
+      "maxDb": -9.9,
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
@@ -160,7 +160,7 @@
     }
   ],
   "optionMeanVolumeSpreadDb": 0.7,
-  "totalBytes": 1440903,
+  "totalBytes": 1439529,
   "sentenceTimingBounds": "PASS",
   "allowedCharacterAndStage4Audit": "PASS",
   "browserQA": {
@@ -170,7 +170,7 @@
       "height": 844
     },
     "url": "http://127.0.0.1:14245/character-recognition-dojo/",
-    "stage1": "樂 ㄩㄝˋ rendered; single-character audio tapped, playback state observed and stage marked complete.",
+    "stage1": "樂 ㄩㄝˋ rendered; single-character audio tapped, playback state observed and stage marked complete. Prior UI test predates the standalone audio repair; replacement audio decode verified separately.",
     "stage2": "Six cards: three 樂 ㄩㄝˋ targets plus 些/器/這. All three accepted; 3/3 全部找到了 displayed.",
     "stage3": "All five cards individually played; playback states and active highlights observed, approved line breaks and final images visible without clipping. S01/S02 樂 ㄩㄝˋ; S03 樂 ㄌㄜˋ and 教 ㄐㄧㄠ displayed. Stage 3 通關.",
     "stage4": {
@@ -185,5 +185,5 @@
     "cleanup": "Temporary shared curriculum/scripts restored byte-for-byte; preview stopped; created tab closed; viewport reset."
   },
   "timingArrays": "Nine final-M4A exact-text AI alignments; no manual timing edits. Ordered 80-900ms character spans, within duration, final tail <=300ms.",
-  "heteronymAudio": "AI auditory analysis confirms standalone yue4, S01 yue4, both S02 yue4, S03 le4 and jiao1. Human listening not claimed."
+  "heteronymAudio": "Teacher rejected prior standalone as yue1. Regenerated standalone with 月。 alias; blind AI auditory review reports tone 4. Human confirmation remains pending. Sentence pronunciation evidence unchanged."
 }
