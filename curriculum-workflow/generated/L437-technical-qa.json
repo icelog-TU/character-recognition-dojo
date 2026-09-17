@@ -1,0 +1,183 @@
+{
+  "unit": "L437",
+  "audio": [
+    {
+      "filename": "char-u4fee.m4a",
+      "bytes": 22811,
+      "durationMs": 2066,
+      "meanDb": -19.6,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L437-G02-prefix.m4a",
+      "bytes": 26134,
+      "durationMs": 2105,
+      "meanDb": -17.7,
+      "maxDb": -3.2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L437-G02-suffix.m4a",
+      "bytes": 24094,
+      "durationMs": 1894,
+      "meanDb": -18.4,
+      "maxDb": -1.9,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L437-G05-wrong-one.m4a",
+      "bytes": 51919,
+      "durationMs": 4112,
+      "meanDb": -18.9,
+      "maxDb": -2.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L437-G05-wrong-two.m4a",
+      "bytes": 48167,
+      "durationMs": 3847,
+      "meanDb": -19.3,
+      "maxDb": -1.4,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L437-S01.m4a",
+      "bytes": 61516,
+      "durationMs": 4876,
+      "meanDb": -18.9,
+      "maxDb": -2.2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L437-S02.m4a",
+      "bytes": 52825,
+      "durationMs": 4229,
+      "meanDb": -18,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L437-S03.m4a",
+      "bytes": 53471,
+      "durationMs": 4021,
+      "meanDb": -18.9,
+      "maxDb": -3.3,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L437-S04.m4a",
+      "bytes": 47846,
+      "durationMs": 3783,
+      "meanDb": -18.4,
+      "maxDb": -2,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    },
+    {
+      "filename": "L437-S05.m4a",
+      "bytes": 49804,
+      "durationMs": 3944,
+      "meanDb": -18.1,
+      "maxDb": -2.1,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "decode": "PASS"
+    }
+  ],
+  "images": [
+    {
+      "filename": "L437-S01.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 224990,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L437-S02.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 240820,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L437-S03.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 243042,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L437-S04.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 222892,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    },
+    {
+      "filename": "L437-S05.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 230732,
+      "styleLock": "PASS",
+      "cast": "PASS"
+    }
+  ],
+  "optionMeanVolumeSpreadDb": 1.3,
+  "totalBytes": 1601063,
+  "sentenceTimingBounds": "PASS",
+  "allowedCharacterAndStage4Audit": "PASS",
+  "browserQA": {
+    "status": "UI playback and interaction checks complete; SOP fallback for recording/listening scope",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:14237/character-recognition-dojo/",
+    "stage1": "修 ㄒㄧㄡ rendered; charAudio tap entered playback then completed stage.",
+    "stage3": "Each S01-S05 tapped individually; active highlighting observed; all five approved displayLines and square pictures inspected without clipping. Previous cards completed and Stage 3 showed 通關.",
+    "stage4": {
+      "G01": "Correct 修 circled, next button shown.",
+      "G02": "Dedicated prefix playback reached red 修 and long-press prompt. Browser API lacks sustained pointer hold. Single click only started character audio; recording and stitched replay not exercised. Skip did not advance; no recording success claimed.",
+      "G03": "Three single-Han options 放/修/拿 shown, 修 filled correct blank and next button appeared.",
+      "G04": "Shuffled single-Han cards; 互、不、相、讓 placed in order; next button appeared.",
+      "G05": "All three animal audio controls tapped, playback status observed, incorrect frog red feedback and correct fox green feedback. Final reward navigation not exercised."
+    },
+    "isolation": "Full approved draft used for Stage 1/3/G01/G02. Separate temporary lesson id with unchanged G03-G05 subset used to continue after unsupported G02 hold. Final draft preserves all five canonical games.",
+    "manualPlayback": "Human audible pronunciation and syllable synchronization, microphone recording, and stitched replay remain unverified. No teacher manual PASS claimed. Browser tooling limitation handled under CURRICULUM_PRODUCTION_SOP fallback; technical gates passed.",
+    "cleanup": "Temporary shared curriculum restored byte-for-byte; preview server stopped; test tab closed and viewport reset."
+  },
+  "assetAudit": "PASS; 5 WebP and 10 AAC M4A references, 0 warnings",
+  "timingArrays": "Nine exact-text AI transcripts; S01 spectral boundary correction and final decay adjustments documented in L437-timing-review.json; all indexes ordered, 80-900ms, inside duration, tail <=300ms"
+}

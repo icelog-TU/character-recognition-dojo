@@ -1,0 +1,82 @@
+{
+  "unit": "L437",
+  "source": "assets:align:ai final M4A transcripts",
+  "corrections": [
+    {
+      "id": "L437-S01",
+      "method": "Manual spectrogram boundary review of final processed M4A after exact-text AI transcription; repaired collapsed 正/破 and 修 boundary. Human audible synchronization not claimed.",
+      "bounds": [
+        [
+          0,
+          240
+        ],
+        [
+          300,
+          620
+        ],
+        [
+          1060,
+          1420
+        ],
+        [
+          1420,
+          1700
+        ],
+        [
+          1700,
+          2160
+        ],
+        [
+          2200,
+          2520
+        ],
+        [
+          2920,
+          3380
+        ],
+        [
+          3400,
+          3640
+        ],
+        [
+          3660,
+          3960
+        ],
+        [
+          3960,
+          4320
+        ],
+        [
+          4320,
+          4710
+        ]
+      ]
+    },
+    {
+      "id": "L437-S04",
+      "method": "Final syllable acoustic decay endpoint; exclude retained tail silence",
+      "originalEndMs": 3440,
+      "endMs": 3613
+    },
+    {
+      "id": "L437-G02-prefix",
+      "method": "Final syllable acoustic decay endpoint; exclude retained tail silence",
+      "originalEndMs": 1760,
+      "endMs": 1935
+    },
+    {
+      "id": "L437-G02-suffix",
+      "method": "Final syllable acoustic decay endpoint; exclude retained tail silence",
+      "originalEndMs": 1460,
+      "endMs": 1724
+    },
+    {
+      "id": "L437-G05-wrong-two",
+      "method": "Final syllable acoustic decay endpoint; exclude retained tail silence",
+      "originalEndMs": 3320,
+      "endMs": 3677
+    }
+  ],
+  "audioProcessing": "Standard assets:audio mono AAC 44100Hz 96k, safety gain; verified near-silent tail only reduced with 150ms retained after -50dB decay. No speech cuts/splices/extractions. Temporary processor restored.",
+  "manualListening": "Not claimed; browser QA separately recorded."
+}
