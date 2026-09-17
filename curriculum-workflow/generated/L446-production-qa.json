@@ -1,8 +1,8 @@
 {
   "unit": "L446",
   "packageStatus": "dependency-blocked-asset-complete",
-  "assetCommitSha": "be84c26b5d1c27601c79751621d33f41bb2f0904",
-  "packageIntake": "PASS strict against origin/codex/l446-complete-package at asset commit; 5 images, 10 audio files, five canonical Stage 4 game types",
+  "assetCommitSha": null,
+  "packageIntake": "Pending strict rerun against pushed repair commit.",
   "baseMainSha": "cdf73c5e30447a78c5671b721bef92dc5d54a39b",
   "lockedAllowedChars": 448,
   "coverage": {
@@ -29,7 +29,9 @@
     "strictFormatsLessonLocal": "PASS, zero warnings",
     "audioDecode": "PASS all 10",
     "imageStyleCast": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
-    "browserQA": "Local isolated Vite fixture; base prerequisites were seeded in memory and provisional sentence zhuyin supplied only in the fixture. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 音 cards plus 樂、這、個 distractors; all three 音 cards were selected, 已找到 3/3 and 全部找到了 appeared. Stage 3 played all five sentence buttons through ended and displayed 句子都聽完了. Sentence zhuyin overrides rendered 樂 as ㄩㄝˋ in S01/S02 and 傳 as ㄔㄨㄢˊ in S05. At 390×844, G01 音 was selected correctly; G02 displayed approved S01 with 音 at the correct index and was skipped at the physical microphone step; G03 音 was selected correctly; G04 操作機器 was ordered correctly; all three G05 reader buttons were activated. Browser console returned no warnings or errors. Because L445 is not integrated, the Stage 2 distractor 樂 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, recording/ding/post-record sequence, final G05 selection, reward walkthrough and teacher subjective review remain unperformed."
+    "browserQA": "Local isolated Vite fixture; base prerequisites were seeded in memory and provisional sentence zhuyin supplied only in the fixture. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 音 cards plus 樂、這、個 distractors; all three 音 cards were selected, 已找到 3/3 and 全部找到了 appeared. Stage 3 played all five sentence buttons through ended and displayed 句子都聽完了. Sentence zhuyin overrides rendered 樂 as ㄩㄝˋ in S01/S02 and 傳 as ㄔㄨㄢˊ in S05. At 390×844, G01 音 was selected correctly; G02 displayed approved S01 with 音 at the correct index and was skipped at the physical microphone step; G03 音 was selected correctly; G04 操作機器 was ordered correctly; all three G05 reader buttons were activated. Browser console returned no warnings or errors. Because L445 is not integrated, the Stage 2 distractor 樂 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, recording/ding/post-record sequence, final G05 selection, reward walkthrough and teacher subjective review remain unperformed.",
+    "teacherMarkedAudioRepair": "L446-S04 regenerated; final technical checks PASS; teacher re-review pending",
+    "g05MeanVolumeSpread": "1.1 dB PASS"
   },
   "pronunciation": {
     "kind": "AI auditory review, not human QA; targeted final retries replace non-audio provisional model replies",
@@ -66,8 +68,10 @@
         "name": "L446-S04",
         "heardText": "看比賽時把手機的聲音關掉",
         "pronunciationResult": "PASS",
-        "explanation": "所有音節和聲調均與預期相符，發音清晰準確，語速正常。",
-        "finalSyllableAudible": true
+        "explanation": "聲的發音是第一聲，完整的ㄕㄥ音尾，音是第一聲ㄧㄣ。沒有出現審音或省音的情況，發音清晰準確。",
+        "finalSyllableAudible": true,
+        "shengYinHeard": "聲音",
+        "repairReason": "聲音兩個字發音不對，變成審音"
       },
       {
         "name": "L446-S05",
@@ -106,7 +110,7 @@
       }
     ]
   },
-  "folderBytes": 1053793,
+  "folderBytes": 1058956,
   "assets": [
     {
       "path": "public/assets/lessons/L446/images/L446-S01.webp",
@@ -212,14 +216,14 @@
     },
     {
       "path": "public/assets/lessons/L446/audio/L446-S04.m4a",
-      "bytes": 55438,
-      "sha256": "1f7f670271464730bbeedde84ab0b8116f341e98b1f2e47369d0f971e568bb9c",
-      "durationMs": 4360,
+      "bytes": 60601,
+      "sha256": "b751bfefb3ec1cb2ef3f7b09f9f168f14a41fea1552cf136f4040231ad4d5f75",
+      "durationMs": 4850,
       "codec": "aac",
       "sampleRate": "44100",
       "channels": 1,
       "maxVolumeDb": -2,
-      "meanVolumeDb": -17.8
+      "meanVolumeDb": -17.9
     },
     {
       "path": "public/assets/lessons/L446/audio/L446-S05.m4a",
@@ -243,5 +247,19 @@
       "maxVolumeDb": -2.6,
       "meanVolumeDb": -17.6
     }
-  ]
+  ],
+  "teacherRepair": {
+    "sourceCommit": "be84c26b5d1c27601c79751621d33f41bb2f0904",
+    "markedItem": "L446-S04:audio",
+    "finding": "聲音兩個字發音不對，變成審音",
+    "scope": "Only L446-S04.m4a and its timing/QA metadata; G05 correct option reuses this asset.",
+    "finalAuditoryEvaluation": {
+      "heardText": "看比賽時把手機的聲音關掉",
+      "pronunciationResult": "PASS",
+      "shengYinHeard": "聲音",
+      "explanation": "聲的發音是第一聲，完整的ㄕㄥ音尾，音是第一聲ㄧㄣ。沒有出現審音或省音的情況，發音清晰準確。",
+      "finalSyllableAudible": true
+    },
+    "teacherReReviewRequired": true
+  }
 }

@@ -3075,7 +3075,7 @@ AI 必須把這份課程序列視為鎖定邊界。
       "imageSrc": "/assets/lessons/L446/images/L446-S04.webp",
       "audio": {
         "src": "/assets/lessons/L446/audio/L446-S04.m4a",
-        "durationMs": 4365,
+        "durationMs": 4850,
         "charTimings": [
           {
             "charIndex": 0,
@@ -3090,52 +3090,52 @@ AI 必須把這份課程序列視為鎖定邊界。
           {
             "charIndex": 2,
             "startMs": 720,
-            "endMs": 980
+            "endMs": 1000
           },
           {
             "charIndex": 3,
-            "startMs": 980,
-            "endMs": 1280
+            "startMs": 1000,
+            "endMs": 1360
           },
           {
             "charIndex": 4,
-            "startMs": 1280,
-            "endMs": 1880
+            "startMs": 1980,
+            "endMs": 2240
           },
           {
             "charIndex": 5,
-            "startMs": 1880,
-            "endMs": 2300
+            "startMs": 2240,
+            "endMs": 2620
           },
           {
             "charIndex": 6,
-            "startMs": 2300,
-            "endMs": 2480
+            "startMs": 2620,
+            "endMs": 2840
           },
           {
             "charIndex": 7,
-            "startMs": 2480,
-            "endMs": 2760
+            "startMs": 2840,
+            "endMs": 3100
           },
           {
             "charIndex": 8,
-            "startMs": 2760,
-            "endMs": 3040
+            "startMs": 3100,
+            "endMs": 3340
           },
           {
             "charIndex": 9,
-            "startMs": 3040,
-            "endMs": 3280
+            "startMs": 3340,
+            "endMs": 3640
           },
           {
             "charIndex": 10,
-            "startMs": 3280,
-            "endMs": 3820
+            "startMs": 3640,
+            "endMs": 4240
           },
           {
             "charIndex": 11,
-            "startMs": 3820,
-            "endMs": 4110
+            "startMs": 4240,
+            "endMs": 4560
           }
         ]
       }
@@ -3373,7 +3373,7 @@ AI 必須把這份課程序列視為鎖定邊界。
           "audioSrc": "/assets/lessons/L446/audio/L446-S04.m4a",
           "audio": {
             "src": "/assets/lessons/L446/audio/L446-S04.m4a",
-            "durationMs": 4365,
+            "durationMs": 4850,
             "charTimings": [
               {
                 "charIndex": 0,
@@ -3388,52 +3388,52 @@ AI 必須把這份課程序列視為鎖定邊界。
               {
                 "charIndex": 2,
                 "startMs": 720,
-                "endMs": 980
+                "endMs": 1000
               },
               {
                 "charIndex": 3,
-                "startMs": 980,
-                "endMs": 1280
+                "startMs": 1000,
+                "endMs": 1360
               },
               {
                 "charIndex": 4,
-                "startMs": 1280,
-                "endMs": 1880
+                "startMs": 1980,
+                "endMs": 2240
               },
               {
                 "charIndex": 5,
-                "startMs": 1880,
-                "endMs": 2300
+                "startMs": 2240,
+                "endMs": 2620
               },
               {
                 "charIndex": 6,
-                "startMs": 2300,
-                "endMs": 2480
+                "startMs": 2620,
+                "endMs": 2840
               },
               {
                 "charIndex": 7,
-                "startMs": 2480,
-                "endMs": 2760
+                "startMs": 2840,
+                "endMs": 3100
               },
               {
                 "charIndex": 8,
-                "startMs": 2760,
-                "endMs": 3040
+                "startMs": 3100,
+                "endMs": 3340
               },
               {
                 "charIndex": 9,
-                "startMs": 3040,
-                "endMs": 3280
+                "startMs": 3340,
+                "endMs": 3640
               },
               {
                 "charIndex": 10,
-                "startMs": 3280,
-                "endMs": 3820
+                "startMs": 3640,
+                "endMs": 4240
               },
               {
                 "charIndex": 11,
-                "startMs": 3820,
-                "endMs": 4110
+                "startMs": 4240,
+                "endMs": 4560
               }
             ]
           }
@@ -3592,7 +3592,8 @@ AI 必須把這份課程序列視為鎖定邊界。
     "browserQA": "Local isolated Vite fixture; base prerequisites were seeded in memory and provisional sentence zhuyin supplied only in the fixture. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 音 cards plus 樂、這、個 distractors; all three 音 cards were selected, 已找到 3/3 and 全部找到了 appeared. Stage 3 played all five sentence buttons through ended and displayed 句子都聽完了. Sentence zhuyin overrides rendered 樂 as ㄩㄝˋ in S01/S02 and 傳 as ㄔㄨㄢˊ in S05. At 390×844, G01 音 was selected correctly; G02 displayed approved S01 with 音 at the correct index and was skipped at the physical microphone step; G03 音 was selected correctly; G04 操作機器 was ordered correctly; all three G05 reader buttons were activated. Browser console returned no warnings or errors. Because L445 is not integrated, the Stage 2 distractor 樂 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, recording/ding/post-record sequence, final G05 selection, reward walkthrough and teacher subjective review remain unperformed.",
     "audioPipeline": "Repo OpenAI gpt-4o-mini-tts coral; final assets are mono AAC 44100 Hz. G02 prefix and suffix were generated independently from exact text. G05 wrong choices were generated as exact whole sentences. No syllable splicing. Trailing silence was trimmed only after measured speech with about 250ms retained. Final M4A alignment used whisper-1; waveform correction is recorded in the alignment report.",
     "timingReview": "Technical waveform review: all nine timed clips have 80–900ms spans, ordered and nonoverlapping, with final spans ending before retained tail silence. G05 wrong-two 畫面 1ms Whisper span was split within its continuous word interval. This is not human synchronization QA.",
-    "pronunciation": "AI gpt-audio auditory checks PASS on all 10 final clips, including 音 ㄧㄣ, 樂器/音樂 ㄩㄝˋ, 傳來 ㄔㄨㄢˊ, exact G02 fragments and both G05 whole-sentence wrong choices. This is not human acceptance."
+    "pronunciation": "AI gpt-audio auditory checks PASS on all 10 final clips. The repaired final L446-S04 specifically passes 聲 ㄕㄥ first tone with full ㄥ coda + 音 ㄧㄣ first tone and no 審音/省音 resemblance. This technical check does not replace teacher re-review.",
+    "audioRepair": "Teacher review at asset commit be84c26b5d1c27601c79751621d33f41bb2f0904 marked L446-S04 audio because 聲音 sounded like 審音. Production regenerated only L446-S04 (also reused by the G05 correct option), selected candidate 3 after strict comparative review, and verified 聲 ㄕㄥ first tone with a full ㄥ coda followed by 音 ㄧㄣ first tone. Teacher re-review is required on the new immutable repair commit."
   }
 }
 ```
@@ -3602,3 +3603,7 @@ Release requires contiguous ordered integration of L439–L445 before L446. Thes
 ## Browser QA
 
 Local isolated Vite fixture; base prerequisites were seeded in memory and provisional sentence zhuyin supplied only in the fixture. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 音 cards plus 樂、這、個 distractors; all three 音 cards were selected, 已找到 3/3 and 全部找到了 appeared. Stage 3 played all five sentence buttons through ended and displayed 句子都聽完了. Sentence zhuyin overrides rendered 樂 as ㄩㄝˋ in S01/S02 and 傳 as ㄔㄨㄢˊ in S05. At 390×844, G01 音 was selected correctly; G02 displayed approved S01 with 音 at the correct index and was skipped at the physical microphone step; G03 音 was selected correctly; G04 操作機器 was ordered correctly; all three G05 reader buttons were activated. Browser console returned no warnings or errors. Because L445 is not integrated, the Stage 2 distractor 樂 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, recording/ding/post-record sequence, final G05 selection, reward walkthrough and teacher subjective review remain unperformed.
+
+## Teacher audio repair
+
+Teacher review at asset commit be84c26b5d1c27601c79751621d33f41bb2f0904 marked L446-S04 audio because 聲音 sounded like 審音. Production regenerated only L446-S04 (also reused by the G05 correct option), selected candidate 3 after strict comparative review, and verified 聲 ㄕㄥ first tone with a full ㄥ coda followed by 音 ㄧㄣ first tone. Teacher re-review is required on the new immutable repair commit.
