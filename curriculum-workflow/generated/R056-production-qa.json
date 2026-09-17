@@ -1,0 +1,177 @@
+{
+  "unit": "R056",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "a5779c4bae03fa363689cc7ee4d6555b7dadeafb",
+  "latestMainChecked": "5622c827569df36e09c1767d61f114b35973bbea",
+  "checks": {
+    "allowedCharacters": "PASS",
+    "sentenceTimingCounts": [
+      {
+        "id": "R056-S01",
+        "han": 7,
+        "timings": 7
+      },
+      {
+        "id": "R056-S02",
+        "han": 11,
+        "timings": 11
+      },
+      {
+        "id": "R056-S03",
+        "han": 12,
+        "timings": 12
+      },
+      {
+        "id": "R056-S04",
+        "han": 10,
+        "timings": 10
+      },
+      {
+        "id": "R056-S05",
+        "han": 11,
+        "timings": 11
+      }
+    ],
+    "stage4Order": [
+      "find-character",
+      "teach-character",
+      "missing-character",
+      "partial-order",
+      "choose-pronunciation"
+    ],
+    "stage4AudioMetadata": "PASS",
+    "imageStyleCast": "PASS",
+    "audioDecode": "pending validator",
+    "browserQA": "Browser QA fallback: current remote control has no reliable computer-audio return or physical-phone microphone channel. Human continuous listening, syllable-by-syllable highlight synchronization and G02 phone recording/replay were not certified. All required non-browser media, transcript, timing, format and package gates are run; teacher subjective review remains post-merge by default."
+  },
+  "visualAcceptance": [
+    "S01 fixed father and girl place a violin with a loose string into its case",
+    "S02 distinct clerk teaches the fixed girl at a self-service copier while fixed father supervises; no readable panel text",
+    "S03 fixed girl sings while fixed father claps the beat",
+    "S04 Xiaoyue keeps her long wavy hair, crescent clip and lavender/teal cast identity while dancing to a blank speaker",
+    "S05 fixed girl calmly starts a new drawing beside her earlier flower-and-tree picture; no readable text"
+  ],
+  "pronunciation": {
+    "kind": "AI auditory review, not human QA",
+    "results": [
+      {
+        "name": "R056-S01",
+        "expected": "樂器壞了要送修；樂 ㄩㄝˋ",
+        "result": "{\n  \"heardText\": \"樂器壞了要送修\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The syllable 樂 was pronounced clearly as ㄩㄝˋ, matching the expected zhuyin exactly. The rest of the sentence also matched the expected sounds and tones well without clipping or mispronunciation.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R056-S02",
+        "expected": "店員教我操作自助影印機；教 ㄐㄧㄠ、操 ㄘㄠ、機 ㄐㄧ",
+        "result": "{\n  \"heardText\": \"店員教我操作自助影印機\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"All expected sounds are accurate: '教' (ㄐㄧㄠ), '操' (ㄘㄠ), and '機' (ㄐㄧ) match the requested zhuyin. The syllables and tones are clear and correct. There is no noticeable clipping, and all final syllables are distinguishable.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R056-S03",
+        "expected": "我練習唱歌爸爸幫我打拍子；拍 ㄆㄞ",
+        "result": "{\"heardText\":\"我練習唱歌爸爸幫我打拍子\",\"pronunciationResult\":\"PASS\",\"explanation\":\"所有音節和聲調都正確吻合，『拍』的發音清晰完整，序列無錯誤，無明顯剪輯問題。\",\"finalSyllableAudible\":true}"
+      },
+      {
+        "name": "R056-S04",
+        "expected": "小月跟著音樂練習舞步；樂 ㄩㄝˋ",
+        "result": "{\n  \"heardText\": \"小月跟著音樂練習舞步\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"All syllables including the crucial 樂 (ㄩㄝˋ) were heard clearly and matched the expected pronunciation. The tones and syllables were correct with no evident clipping.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R056-S05",
+        "expected": "畫得不滿意我想再畫一次；意 ㄧˋ",
+        "result": "{\n  \"heardText\": \"畫得不滿意我想再畫一次\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The spoken sentence matches the expected text syllable-by-syllable. The tone for '意' is correctly pronounced as ㄧˋ. There are no noticeable clipping issues, and all tones align well with standard pronunciation.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R056-G02-prefix",
+        "expected": "小月跟著音；末字音 ㄧㄣ",
+        "result": "{\n  \"heardText\": \"小月跟著音\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"The syllables are correct: '小月' (xiao3 yue4) and '跟著音' (gen1 zhe5 yin1). The final syllable '音' (yin1) matches the requested zhuyin ㄧㄣ. The tones are accurate, and there is no obvious clipping. All syllables are clearly audible.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R056-G02-suffix",
+        "expected": "練習舞步",
+        "result": "{\n  \"heardText\": \"練習舞步\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"All syllables match exactly with the requested text: '練' (liàn with tone 4), '習' (xí with tone 2), '舞' (wǔ with tone 3), and '步' (bù with tone 4). The pronunciation is clear, the tones are correct, and there is no clipping. No homophone replacement; exact match.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R056-G05-wrong-one",
+        "expected": "畫得不滿意我想再看一次",
+        "result": "{\n  \"heardText\": \"畫得不滿意我想再看一次\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"All syllables match the expectation. Tones and pronunciation are clear. No obvious clipping. Homophones are acceptable. Each part was accurately pronounced.\",\n  \"finalSyllableAudible\": true\n}"
+      },
+      {
+        "name": "R056-G05-wrong-two",
+        "expected": "畫得不滿意我想再畫兩次",
+        "result": "{\n  \"heardText\": \"畫得不滿意我想再畫兩次\",\n  \"pronunciationResult\": \"PASS\",\n  \"explanation\": \"所有音節、聲調都準確，句子完整且自然，不存在剪輯問題。\",\n  \"finalSyllableAudible\": true\n}"
+      }
+    ]
+  },
+  "folderBytes": 1004489,
+  "assets": [
+    {
+      "path": "public/assets/reviews/R056/images/R056-S01.webp",
+      "bytes": 128266,
+      "sha256": "a3315a4f7491fb7fafa56e08993ee0a984f2536ef6616df0bb15225fa92bd57a"
+    },
+    {
+      "path": "public/assets/reviews/R056/images/R056-S02.webp",
+      "bytes": 116914,
+      "sha256": "95a4e1780907f69a0c6a124b0349f10e78a76a00f83e546253e9798b2be59459"
+    },
+    {
+      "path": "public/assets/reviews/R056/images/R056-S03.webp",
+      "bytes": 124034,
+      "sha256": "9b85febdbdd94c6d92f0275a928f3b7a980b8b19b05f916ca459ca9ffc7a7650"
+    },
+    {
+      "path": "public/assets/reviews/R056/images/R056-S04.webp",
+      "bytes": 122260,
+      "sha256": "4893744722ebbb8a812400719d51b901f6b4969264280c8ad495e915810cc683"
+    },
+    {
+      "path": "public/assets/reviews/R056/images/R056-S05.webp",
+      "bytes": 106324,
+      "sha256": "b46e6bb9bf08334c280e53e98c969f4b77f0eceb3199576960e92b7121f36a55"
+    },
+    {
+      "path": "public/assets/reviews/R056/audio/R056-G02-prefix.m4a",
+      "bytes": 29986,
+      "sha256": "221629561f13f3ea9dfdbe680f0edef2351805025b7c4d0d310a15053c2733e4"
+    },
+    {
+      "path": "public/assets/reviews/R056/audio/R056-G02-suffix.m4a",
+      "bytes": 31113,
+      "sha256": "092b9d34ffced9fd2946e73f45d64f1f627140ff9aef0926cc8bc84e30f9bce6"
+    },
+    {
+      "path": "public/assets/reviews/R056/audio/R056-G05-wrong-one.m4a",
+      "bytes": 48741,
+      "sha256": "26c5da2102733cdc71a6f4d2c812ccb3f68a21e118abe2cdebdc6264def4f5e2"
+    },
+    {
+      "path": "public/assets/reviews/R056/audio/R056-G05-wrong-two.m4a",
+      "bytes": 49837,
+      "sha256": "d5e788419e80d81f56afc539db43cef37268fddc5221d7adfa006281de2c1c8b"
+    },
+    {
+      "path": "public/assets/reviews/R056/audio/R056-S01.m4a",
+      "bytes": 39711,
+      "sha256": "917714e5668139168382b27e9049137f4cdbe5668707c068cca6d6a2d8a107a3"
+    },
+    {
+      "path": "public/assets/reviews/R056/audio/R056-S02.m4a",
+      "bytes": 45642,
+      "sha256": "f29127c02ff6176dd7798c572074b39724aa94ab88df84e58ae9cfb437624ab8"
+    },
+    {
+      "path": "public/assets/reviews/R056/audio/R056-S03.m4a",
+      "bytes": 60809,
+      "sha256": "70ab5a62622f4cd919277325d161181e3fd67052e99393420157407c293381bd"
+    },
+    {
+      "path": "public/assets/reviews/R056/audio/R056-S04.m4a",
+      "bytes": 51205,
+      "sha256": "5987f5e10c2adc6695d372114de9cc2428f34a2a6592aa5f0f11a84a1f97ed75"
+    },
+    {
+      "path": "public/assets/reviews/R056/audio/R056-S05.m4a",
+      "bytes": 49647,
+      "sha256": "ca8578b18efa6d4459a7038445c72cd75c729d5ec50b8b05fe07b836b51ec226"
+    }
+  ]
+}

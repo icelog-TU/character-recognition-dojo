@@ -2258,3 +2258,16 @@
   "sentences": []
 }
 ```
+
+
+## Final Production record
+
+- Package status: dependency-blocked-asset-complete
+- Base main: a5779c4bae03fa363689cc7ee4d6555b7dadeafb
+- Latest main checked during production: 5622c827569df36e09c1767d61f114b35973bbea (formal production through L443; L444-L450 remain Release dependencies)
+- Assets: 5 final 1024-square WebP images and 9 unique final M4A audio files
+- Timing: five sentence tracks, both G02 fragments and both G05 distractors have exact-transcript per-Han timing metadata
+- Visual QA: final exported images opened as one contact sheet; style-lock, cast identity, scene semantics and no-readable-text checks PASS
+- Audio QA: exact Whisper transcripts PASS; targeted gpt-audio pronunciation checks PASS; teacher human listening remains post-merge
+- Browser QA fallback: no reliable computer-audio return or physical-phone microphone channel; continuous human listening, live highlight synchronization and G02 recording/replay are not claimed
+- Release order remains L450 → R055 → R056 → L451; Production did not edit production JSON, planner or ledger
