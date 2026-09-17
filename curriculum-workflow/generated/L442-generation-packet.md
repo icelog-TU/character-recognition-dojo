@@ -58,3 +58,7 @@ After Release merges and deploys,teacher review entry: https://icelog-tu.github.
 - Strict intake command: `npm run curriculum:package-intake -- --unit L442 --ref origin/codex/l442-complete-package --strict`.
 - Strict intake result after asset upload: PASS; 5 images, 10 audio files, canonical five Stage 4 game types, no blocking package-status defects.
 - Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L442&ref=29b912e1eba08edc2bc3252d15b1d4fb8faa4c9f . This is a pre-merge package preview, not the main formal review queue.
+
+## Teacher-requested audio repair
+
+L442-S03 was regenerated so both characters in 爸爸 are clearly ba4. L442-G05-O3 (`L442-G05-wrong-two.m4a`) was regenerated so 隊 is clearly dui4. Both final clips passed actual-audio gpt-audio-1.5 checks, exact-text Whisper alignment, fresh 80-900ms char timing checks, codec/format inspection and final LessonPanel playback. Earlier package asset/checkpoint SHAs are superseded by the repair commit recorded below.

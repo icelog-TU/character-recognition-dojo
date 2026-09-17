@@ -71,7 +71,8 @@
         "trailingSilenceStart": 0.83542,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "a5b1b7408631046d675d0aeec8fc58d679e320d1186df541b4d1a9af35ef26fb"
       },
       {
         "name": "L442-G02-prefix.m4a",
@@ -81,7 +82,8 @@
         "trailingSilenceStart": 1.53522,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "3947ff3725532282e032d2159208bcb7116e384048b04efb657ff67e34489531"
       },
       {
         "name": "L442-G02-suffix.m4a",
@@ -91,7 +93,8 @@
         "trailingSilenceStart": 1.17277,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "41db0c2c9dbba6358841bca304ecaa1e4c407e707aa8d37df8f18b9c171fd876"
       },
       {
         "name": "L442-G05-wrong-one.m4a",
@@ -101,17 +104,19 @@
         "trailingSilenceStart": 4.40519,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "4a9833cde95b951ccea66923488dba5f0f358ed3bf3d630a4e127ae65ef7c1d4"
       },
       {
         "name": "L442-G05-wrong-two.m4a",
-        "duration": 3.947007,
-        "max": -2.1,
-        "mean": -18,
-        "trailingSilenceStart": 3.77433,
+        "duration": 3.853991,
+        "max": -2.3,
+        "mean": -18.6,
+        "trailingSilenceStart": 3.68317,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "f5e3fad9a20227f1ddb7a5bd33e326b9566c3bb1707280732653291c28ef2360"
       },
       {
         "name": "L442-S01.m4a",
@@ -121,7 +126,8 @@
         "trailingSilenceStart": 4.05093,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "cdb7daafb203585b3d9f7d0a8919c68c21efdc08ecb2508ae8d6bca0ea24054b"
       },
       {
         "name": "L442-S02.m4a",
@@ -131,17 +137,19 @@
         "trailingSilenceStart": 3.24313,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "6e5686cfbbcd0f3db6fdf1e9101459649f58d346ca9df32a7f2529cf815a74d1"
       },
       {
         "name": "L442-S03.m4a",
-        "duration": 3.133991,
-        "max": -2.7,
-        "mean": -18.3,
-        "trailingSilenceStart": 2.96977,
+        "duration": 2.809002,
+        "max": -2,
+        "mean": -18.4,
+        "trailingSilenceStart": 2.64821,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "a57a91783a135eb016cfe6d80d76a117954d0633d8e6c0e3c1095547a3dc23e5"
       },
       {
         "name": "L442-S04.m4a",
@@ -151,7 +159,8 @@
         "trailingSilenceStart": 2.80515,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "483408e303ac92547d4d19560b40b36a7885efb7f5e79e78fe56263b54666614"
       },
       {
         "name": "L442-S05.m4a",
@@ -161,10 +170,11 @@
         "trailingSilenceStart": 3.88317,
         "codec": "aac",
         "sampleRate": "44100",
-        "channels": 1
+        "channels": 1,
+        "sha256": "5b08397881f2fa53755ddfce68e55d41572c9c9b68bd697cb72f42440ed03a5a"
       }
     ],
-    "g05MeanVolumeSpreadDb": 0.8,
+    "g05MeanVolumeSpreadDb": 1.4,
     "hearingMethod": "Final processed M4A decoded to WAV and supplied as actual input_audio to OpenAI gpt-audio-1.5; acoustic AI verification, not human listening.",
     "hearing": [
       {
@@ -190,7 +200,7 @@
       {
         "name": "L442-G05-wrong-two",
         "model": "gpt-audio-1.5",
-        "result": "{\"analysis\": [\n\"zhe4\",\n\"chang3\",\n\"lian4\",\n\"xi2\",\n\"sai4\",\n\"wo3\",\n\"men5\",\n\"quan2\",\n\"dui4\",\n\"dou1\",\n\"xia4\",\n\"chang3\"\n],\n\"matches_expected\": true}"
+        "result": "{\"syllables\": [\"zhe4\", \"chang3\", \"lian4\", \"xi2\", \"sai4\", \"wo3\", \"men5\", \"quan2\", \"dui4\", \"dou1\", \"xia4\", \"chang3\"]}"
       },
       {
         "name": "L442-S01",
@@ -205,7 +215,7 @@
       {
         "name": "L442-S03",
         "model": "gpt-audio-1.5",
-        "result": "{\"syllables\": [\"ba4\", \"ba4\", \"yong4\", \"shou3\", \"ji1\", \"kan4\", \"qiu2\", \"sai4\"]}"
+        "result": "{\"syllables\":[\"ba4\",\"ba4\",\"yong4\",\"shou3\",\"ji1\",\"kan4\",\"qiu2\",\"sai4\"]}"
       },
       {
         "name": "L442-S04",
@@ -218,7 +228,7 @@
         "result": "{\"syllables\":[\"zhe4\",\"chang3\",\"lian4\",\"xi2\",\"sai4\",\"wo3\",\"men\",\"quan2\",\"dui4\",\"dou1\",\"shang4\",\"chang3\"],\"matches_expected\":true}"
       }
     ],
-    "regeneration": "S03/G02 fragments regenerated for continuous pacing; G02 suffix independently regenerated until both Whisper and gpt-audio-1.5 identified 看球賽/kan4 qiu2 sai4. All final clips aligned after tail-only silence processing.",
+    "regeneration": "S03/G02 fragments regenerated for continuous pacing; G02 suffix independently regenerated until both Whisper and gpt-audio-1.5 identified 看球賽/kan4 qiu2 sai4. All final clips aligned after tail-only silence processing. Teacher-requested repair regenerated final L442-S03 with both 爸 as ba4 and L442-G05-O3/wrong-two with 隊 as dui4; both final clips were reprocessed, re-aligned and acoustically rechecked.",
     "pronunciationChecks": {
       "機": "ji1",
       "S04相": "xiang4",
@@ -226,10 +236,12 @@
       "運": "yun4",
       "修": "xiu1",
       "習": "xi2",
-      "練": "lian4"
+      "練": "lian4",
+      "S03爸爸": "ba4 ba4",
+      "G05-O3隊": "dui4"
     }
   },
-  "mediaBytes": 1355575,
+  "mediaBytes": 1350514,
   "releaseDependencies": {
     "orderedLessonsThrough": "L441"
   },
@@ -243,5 +255,39 @@
     "validateProduction": "PASS on isolated L442 fixture",
     "assetAuditStrict": "PASS on isolated L442 fixture; zero warnings",
     "fullVerify": "Release integration gate; not run against production JSON without L442 and ordered L436-L441."
+  },
+  "teacherAudioRepair": {
+    "requested": [
+      "L442-S03 爸爸 pronunciation",
+      "L442-G05-O3 隊 pronunciation"
+    ],
+    "finalAcousticChecks": {
+      "L442-S03": [
+        "ba4",
+        "ba4",
+        "yong4",
+        "shou3",
+        "ji1",
+        "kan4",
+        "qiu2",
+        "sai4"
+      ],
+      "L442-G05-O3": [
+        "zhe4",
+        "chang3",
+        "lian4",
+        "xi2",
+        "sai4",
+        "wo3",
+        "men5",
+        "quan2",
+        "dui4",
+        "dou1",
+        "xia4",
+        "chang3"
+      ]
+    },
+    "alignment": "Whisper exact-text match and fresh char timings; no manual timing changes.",
+    "browserPlayback": "PASS in real local LessonPanel at 390px: the final L442-S03 asset played to ended from its Stage 3 sentence card, and the final L442-G05-O3 mapping played L442-G05-wrong-two.m4a to ended from the G05 animal option. The other eight assets are byte-identical to the prior all-10 playback pass."
   }
 }
