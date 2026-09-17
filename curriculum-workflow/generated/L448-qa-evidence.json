@@ -38,7 +38,7 @@
       "sentenceId": "L448-S05",
       "styleLock": "PASS",
       "cast": "PASS",
-      "scene": "The repaired image uses correct far-side occlusion: the recurring mother leans over from behind the bed and only her head, shoulders, arms and upper torso are visible; her lower body is fully hidden by the coherent bed, mattress and bedding. The recurring girl is already asleep; no baby, book, phone or medical props.",
+      "scene": "The final image was generated from scratch using the teacher's structural reference: the recurring mother sits naturally on the near outer mattress edge with both lower legs outside the bed, while the recurring girl lies farther across the coherent rectangular bed and is already asleep. No body intersects the frame or bedding; no baby, book, phone or medical props.",
       "textOrNumbers": "None visible."
     }
   ],
@@ -86,15 +86,15 @@
     },
     "pronunciationChecks": {"歌":"ge1","S03樂器":"yue4 qi4","S04音樂":"yin1 yue4","S05著":"zhao2","G02Suffix著":"zhao2"}
   },
-  "mediaBytes": 1094610,
+  "mediaBytes": 1122900,
   "teacherImageRepair": {
     "requested": "L448-S05 bed structure was malformed around the seated mother.",
-    "result": "Replaced the final S05 WebP again after teacher perspective feedback. The mother is now on the far side of the bed with her waist and entire lower body naturally occluded by the bed and bedding; only her upper body and arms are visible. The sleeping girl, nighttime scene and established style are preserved.",
+    "result": "Discarded all earlier S05 compositions and generated a new image from scratch. The teacher-provided photo was used only for correct bed geometry and near-edge seating; L448-S01 through S04 and the recurring family cast were used for the watercolor picture-book style. The mother sits naturally on the near mattress edge, empty-handed and humming, while the girl is already asleep farther across the bed.",
     "finalImage": "public/assets/lessons/L448/images/L448-S05.webp",
     "dimensions": "1024x1024",
-    "bytes": 111678,
-    "sha256": "97daff20d8b47a21e76fba8e5ab378bd8355184d36ee322de073480938402c13",
-    "visualQA": "PASS: coherent bed structure and natural near-to-far occlusion; mother has no visible lower body and does not intersect the bed; correct cast/story; no text or numbers."
+    "bytes": 139968,
+    "sha256": "5fe6014b26b9f55e6867628505bb4a2fd3d638c4b8f6c1ae9564d3d6778589cb",
+    "visualQA": "PASS: coherent rectangular bed, level mattress, natural near-edge seated posture, legs outside bed, no intersections, correct cast/story, no text or numbers. Side-by-side contact-sheet comparison against final L448-S01 through S04 passed style lock for watercolor texture, rounded character design, palette and warm lighting."
   },
   "releaseDependencies": {"orderedLessonsThrough":"L447","blockers":["L439","L440","L441","L442","L443","L444","L445","L446","L447"]},
   "validation": {
