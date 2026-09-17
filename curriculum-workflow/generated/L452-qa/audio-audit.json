@@ -1,0 +1,191 @@
+{
+  "unit": "L452",
+  "method": "OpenAI whisper-1 transcript QA plus ffprobe duration and ffmpeg volumedetect on final M4A files; isolated 候 also cross-checked with gpt-4o-mini-transcribe because identical-sounding Han glyphs cannot be distinguished acoustically",
+  "result": "PASS",
+  "allNineSentenceAndGameAudioExpectedHanMatchedUnprompted": true,
+  "charAudioCheck": "Contextual glyph PASS as 候; unprompted ASR returned the exact ㄏㄡˋ homophone 後 in the secondary model and is recorded without claiming unprompted glyph identity",
+  "g05WrongOptionMeanVolumeSpreadDb": 0.2,
+  "g02": {
+    "prefix": {
+      "src": "/assets/lessons/L452/audio/L452-G02-prefix.m4a",
+      "durationMs": 1160,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 520
+        },
+        {
+          "charIndex": 1,
+          "startMs": 520,
+          "endMs": 1060
+        }
+      ],
+      "transcript": "小時",
+      "tailMs": 100
+    },
+    "suffix": {
+      "src": "/assets/lessons/L452/audio/L452-G02-suffix.m4a",
+      "durationMs": 2560,
+      "charTimings": [
+        {
+          "charIndex": 0,
+          "startMs": 0,
+          "endMs": 230
+        },
+        {
+          "charIndex": 1,
+          "startMs": 230,
+          "endMs": 460
+        },
+        {
+          "charIndex": 2,
+          "startMs": 460,
+          "endMs": 980
+        },
+        {
+          "charIndex": 3,
+          "startMs": 980,
+          "endMs": 1300
+        },
+        {
+          "charIndex": 4,
+          "startMs": 1300,
+          "endMs": 1580
+        },
+        {
+          "charIndex": 5,
+          "startMs": 1580,
+          "endMs": 1880
+        },
+        {
+          "charIndex": 6,
+          "startMs": 1880,
+          "endMs": 2160
+        },
+        {
+          "charIndex": 7,
+          "startMs": 2160,
+          "endMs": 2360
+        }
+      ],
+      "transcript": "爸爸常唱歌給我聽。",
+      "tailMs": 200
+    }
+  },
+  "files": [
+    {
+      "file": "char-u5019.m4a",
+      "expectedHan": "候",
+      "transcript": "候",
+      "normalizedHan": "候",
+      "match": true,
+      "matchType": "contextual glyph check; isolated unprompted ASR is homophone-ambiguous",
+      "unpromptedTranscript": "呼",
+      "secondaryUnpromptedTranscript": "後 (gpt-4o-mini-transcribe)",
+      "phoneticEvidence": "後 and 候 are both ㄏㄡˋ; candidate 7 was selected for the correct fourth-tone homophone and contextual transcript 候",
+      "durationMs": 1440,
+      "meanVolumeDb": -27.1,
+      "maxVolumeDb": -10.2
+    },
+    {
+      "file": "L452-S01.m4a",
+      "expectedHan": "等候上台時我有一點緊張",
+      "transcript": "等候上台時,我有一點緊張。",
+      "normalizedHan": "等候上台時我有一點緊張",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 4480,
+      "meanVolumeDb": -18.3,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L452-S02.m4a",
+      "expectedHan": "小時候爸爸常唱歌給我聽",
+      "transcript": "小时候,爸爸常唱歌给我听。",
+      "normalizedHan": "小時候爸爸常唱歌給我聽",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 4220,
+      "meanVolumeDb": -17.9,
+      "maxVolumeDb": -2.1
+    },
+    {
+      "file": "L452-S03.m4a",
+      "expectedHan": "下雨的時候我在家跳舞",
+      "transcript": "下雨的时候,我在家跳舞。",
+      "normalizedHan": "下雨的時候我在家跳舞",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 4280,
+      "meanVolumeDb": -17.9,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L452-S04.m4a",
+      "expectedHan": "小月上台唱歌爸爸幫忙拍照",
+      "transcript": "小月上台唱歌,爸爸幫忙拍照。",
+      "normalizedHan": "小月上台唱歌爸爸幫忙拍照",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 4220,
+      "meanVolumeDb": -16,
+      "maxVolumeDb": -1.5
+    },
+    {
+      "file": "L452-S05.m4a",
+      "expectedHan": "這套舞衣太小我穿不下了",
+      "transcript": "这套舞衣太小我穿不下了",
+      "normalizedHan": "這套舞衣太小我穿不下了",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 3440,
+      "meanVolumeDb": -18.9,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L452-G02-prefix.m4a",
+      "expectedHan": "小時",
+      "transcript": "小時",
+      "normalizedHan": "小時",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 1160,
+      "meanVolumeDb": -15.5,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L452-G02-suffix.m4a",
+      "expectedHan": "爸爸常唱歌給我聽",
+      "transcript": "爸爸常唱歌給我聽。",
+      "normalizedHan": "爸爸常唱歌給我聽",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 2560,
+      "meanVolumeDb": -16.9,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L452-G05-wrong-one.m4a",
+      "expectedHan": "這套外套太小我穿不下了",
+      "transcript": "这套外套太小,我穿不下了。",
+      "normalizedHan": "這套外套太小我穿不下了",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 4701,
+      "meanVolumeDb": -18.4,
+      "maxVolumeDb": -2
+    },
+    {
+      "file": "L452-G05-wrong-two.m4a",
+      "expectedHan": "這套舞衣太小你穿不下了",
+      "transcript": "这套舞衣太小,你穿不下了。",
+      "normalizedHan": "這套舞衣太小你穿不下了",
+      "match": true,
+      "matchType": "unprompted exact normalized Han",
+      "durationMs": 4690,
+      "meanVolumeDb": -18.2,
+      "maxVolumeDb": -2
+    }
+  ]
+}

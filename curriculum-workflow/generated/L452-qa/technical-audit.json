@@ -1,0 +1,175 @@
+{
+  "unit": "L452",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "5622c827569df36e09c1767d61f114b35973bbea",
+  "lockedVocabularyRef": "a5779c4bae03fa363689cc7ee4d6555b7dadeafb",
+  "branchBaseFormalBoundary": {
+    "through": "L443",
+    "latestChar": "操"
+  },
+  "teacherLockedVocabularyBoundary": {
+    "through": "L438",
+    "latestChar": "習",
+    "formalChars": 442,
+    "allowedWithProvisionalAndTarget": 448
+  },
+  "allowedChars": {
+    "expected": 448,
+    "actual": 448,
+    "result": "PASS"
+  },
+  "coverage": {
+    "候": 3,
+    "台": 2,
+    "舞": 2,
+    "唱": 2,
+    "歌": 2,
+    "拍": 1
+  },
+  "sentences": [
+    {
+      "id": "L452-S01",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "displayLineLimit": "PASS",
+      "timingCount": 11,
+      "lastTimingEndMs": 4280,
+      "durationMs": 4480,
+      "tailMs": 200
+    },
+    {
+      "id": "L452-S02",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "displayLineLimit": "PASS",
+      "timingCount": 11,
+      "lastTimingEndMs": 4020,
+      "durationMs": 4220,
+      "tailMs": 200
+    },
+    {
+      "id": "L452-S03",
+      "hanCount": 10,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "displayLineLimit": "PASS",
+      "timingCount": 10,
+      "lastTimingEndMs": 4080,
+      "durationMs": 4280,
+      "tailMs": 200
+    },
+    {
+      "id": "L452-S04",
+      "hanCount": 12,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 5,
+      "displayLineLimit": "PASS",
+      "timingCount": 12,
+      "lastTimingEndMs": 4020,
+      "durationMs": 4220,
+      "tailMs": 200
+    },
+    {
+      "id": "L452-S05",
+      "hanCount": 11,
+      "allowedChars": "PASS",
+      "unknownChars": [],
+      "spokenTextHanMatch": true,
+      "displayLinesJoin": true,
+      "maxVisibleLineChars": 6,
+      "displayLineLimit": "PASS",
+      "timingCount": 11,
+      "lastTimingEndMs": 3240,
+      "durationMs": 3440,
+      "tailMs": 200
+    }
+  ],
+  "stage4": [
+    {
+      "id": "L452-G01",
+      "type": "find-character",
+      "sentenceId": "L452-S01",
+      "targetChar": "候",
+      "targetCharIndex": 1,
+      "indexedChar": "候",
+      "mapping": "PASS"
+    },
+    {
+      "id": "L452-G02",
+      "type": "teach-character",
+      "sentenceId": "L452-S02",
+      "targetChar": "候",
+      "targetCharIndex": 2,
+      "indexedChar": "候",
+      "mapping": "PASS"
+    },
+    {
+      "id": "L452-G03",
+      "type": "missing-character",
+      "sentenceId": "L452-S03",
+      "targetChar": "候",
+      "targetCharIndex": 4,
+      "indexedChar": "候",
+      "mapping": "PASS"
+    },
+    {
+      "id": "L452-G04",
+      "type": "partial-order",
+      "sentenceId": "L452-S04",
+      "targetChar": "拍",
+      "targetCharIndex": 10,
+      "indexedChar": "拍",
+      "mapping": "PASS"
+    },
+    {
+      "id": "L452-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L452-S05",
+      "targetChar": "舞",
+      "targetCharIndex": 2,
+      "indexedChar": "舞",
+      "mapping": "PASS"
+    }
+  ],
+  "audio": {
+    "filesExpected": 10,
+    "filesAudited": 10,
+    "result": "PASS",
+    "g05WrongOptionMeanVolumeSpreadDb": 0.2,
+    "charAudioCheck": "Contextual glyph PASS as 候; unprompted ASR returned the exact ㄏㄡˋ homophone 後 in the secondary model and is recorded without claiming unprompted glyph identity",
+    "pronunciationChecks": [
+      "候=ㄏㄡˋ; contextual glyph transcript 候 and isolated homophone ambiguity explicitly recorded",
+      "G02 prefix 小時 is complete, 1160 ms, and has two timings",
+      "G02 prefix/suffix exclude 候 and retain final charTimings",
+      "Nine sentence/game audio files pass unprompted exact normalized-Han transcription"
+    ]
+  },
+  "images": {
+    "filesExpected": 5,
+    "result": "PASS",
+    "rejectedAndRegenerated": []
+  },
+  "browserQa": {
+    "status": "pending-pre-merge-preview",
+    "note": "Will be recorded against the pushed package commit before final handoff."
+  },
+  "releaseBlockers": [
+    "R055/R056 after L450",
+    "Contiguous L444-L451; text dependencies L447-L451"
+  ],
+  "sharedReleaseFiles": "Not modified by Production; Release owns production JSON, planner export and ledger integration."
+}
