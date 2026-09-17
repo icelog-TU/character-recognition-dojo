@@ -164,8 +164,17 @@
     "rejectedAndRegenerated": []
   },
   "browserQa": {
-    "status": "pending-pre-merge-preview",
-    "note": "Will be recorded against the pushed package commit before final handoff."
+    "status": "pass",
+    "assetCommit": "c62e5bf82f01220e41bb5369f0eceb487046f31e",
+    "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L452&ref=c62e5bf82f01220e41bb5369f0eceb487046f31e",
+    "browser": "Chrome",
+    "summary": "PASS: fixed-ref page loaded 5 sentence cards and 6 other audio items with 0 repair flags; all 11 playback controls entered playing state and returned after completion.",
+    "scope": [
+      "L452-S01 through L452-S05",
+      "char-u5019",
+      "L452-G02 prefix and suffix",
+      "L452-G05 correct and two wrong options"
+    ]
   },
   "releaseBlockers": [
     "R055/R056 after L450",

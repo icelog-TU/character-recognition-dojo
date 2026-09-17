@@ -3457,8 +3457,21 @@ Teacher-approved records below are authoritative for this package. Production st
     }
   ],
   "productionQa": {
-    "method": "Final local asset, transcript, timing, style/cast and package checks; pre-merge browser QA pending pushed preview",
-    "result": "LOCAL PASS; browser QA pending initial package push"
+    "method": "Final local asset, transcript, timing, style/cast and fixed-ref Chrome Browser QA playback checks",
+    "result": "PASS: 5 images, 10 unique M4A files, complete sentence/G02 timings, and 11/11 review-page playback controls",
+    "browserQa": {
+        "status": "pass",
+        "assetCommit": "c62e5bf82f01220e41bb5369f0eceb487046f31e",
+        "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L452&ref=c62e5bf82f01220e41bb5369f0eceb487046f31e",
+        "browser": "Chrome",
+        "summary": "PASS: fixed-ref page loaded 5 sentence cards and 6 other audio items with 0 repair flags; all 11 playback controls entered playing state and returned after completion.",
+        "scope": [
+            "L452-S01 through L452-S05",
+            "char-u5019",
+            "L452-G02 prefix and suffix",
+            "L452-G05 correct and two wrong options"
+        ]
+    }
   }
 }
 ```
@@ -3473,4 +3486,5 @@ Teacher-approved records below are authoritative for this package. Production st
 - Nine sentence/game audio files passed unprompted exact normalized-Han transcript QA. Isolated 候 charAudio passed contextual glyph transcription as 候; a secondary unprompted model returned the identical ㄏㄡˋ homophone 後, which is recorded without claiming acoustic glyph distinction.
 - G05 wrong-option mean-volume spread is 0.2 dB.
 - Five final WebPs passed per-image style/cast/semantic review; no draft regeneration was required.
-- Browser preview QA will be recorded against the pushed asset commit before final handoff.
+- Fixed-ref Chrome preview QA: PASS at asset commit `c62e5bf82f01220e41bb5369f0eceb487046f31e`; page loaded 5 sentence cards and 6 other audio items with 0 repair flags, and all 11 playback controls started and returned after completion.
+- Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L452&ref=c62e5bf82f01220e41bb5369f0eceb487046f31e
