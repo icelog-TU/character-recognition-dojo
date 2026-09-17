@@ -26,3 +26,5 @@ Post-merge repair queue (after Release merge/deploy): https://icelog-tu.github.i
 
 Final baseline validate:production PASS; lesson-local strict assets:audit PASS with zero warnings; curriculum:audit-state PASS (expected unmerged L445 directory notice only). Final audio SHA256 evidence and approved pronunciation overrides checked.
 
+
+Remote verification checkpoint: 2a3bcf4e3c1eda3024e114d0511ce78f790a7e8a at origin/codex/l445-complete-package. npm run curriculum:package-intake -- --unit L445 --ref origin/codex/l445-complete-package --strict: PASS, zero warnings; five images, ten audio files, complete canonical Stage 4 set. Final documentation successor rechecked after push.
