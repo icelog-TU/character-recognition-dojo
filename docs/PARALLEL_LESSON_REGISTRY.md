@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L443 | 操 | ready-blocked-by-dependency | Production B | codex/l443-complete-package | L436, L437, L438, L439, L440, L441, L442 | 補、修、習、練、運、賽、機 | `curriculum-workflow/lesson-requests/L443.json`; `curriculum-workflow/generated/L443-generation-packet.md`; `curriculum-workflow/drafts/L443-draft.json` | `public/assets/lessons/L443/` | Complete package: 5 WebP, 10 M4A, final sentence and Stage 4 AI alignment. Technical gates and image style-lock PASS. Release owns sequential L436-L442 integration and shared production state. |
+| L443 | 操 | ready-blocked-by-dependency | Production B | codex/l443-complete-package @ a94cfe18 | L436, L437, L438, L439, L440, L441, L442 | 補、修、習、練、運、賽、機 | `curriculum-workflow/lesson-requests/L443.json`; `curriculum-workflow/generated/L443-generation-packet.md`; `curriculum-workflow/drafts/L443-draft.json` | `public/assets/lessons/L443/` | Complete package: 5 WebP, 10 M4A, final sentence and Stage 4 AI alignment. Technical gates, immutable browser playback smoke test and image style-lock PASS. Release owns sequential L436-L442 integration and shared production state. |
 
 ## Status Values
 
