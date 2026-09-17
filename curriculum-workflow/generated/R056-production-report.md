@@ -20,3 +20,6 @@ Browser QA fallback applies because the remote control surface has no reliable c
 
 Base main was `a5779c4bae03fa363689cc7ee4d6555b7dadeafb` at formal L438. Latest checked main during production was `5622c827569df36e09c1767d61f114b35973bbea` at L443. L444-L450 remain Release dependencies. Required sequence remains L450 → R055 → R056 → L451.
 
+## Pushed intake evidence
+
+Immutable asset commit: `a5bd70e3`. `curriculum:package-intake --strict` against `origin/codex/r055-r056-complete-package` passed with 5 images, 9 audio files, canonical five-game order, complete G02 timing metadata, and no warning.
