@@ -38,7 +38,7 @@
       "sentenceId": "L448-S05",
       "styleLock": "PASS",
       "cast": "PASS",
-      "scene": "The repaired image has a structurally coherent wooden single bed with aligned headboard, footboard, posts, level mattress and plausible bedding. The recurring mother sits on a clearly separate bedside chair and hums gently while the recurring girl is already asleep; no baby, book, phone or medical props.",
+      "scene": "The repaired image uses correct far-side occlusion: the recurring mother leans over from behind the bed and only her head, shoulders, arms and upper torso are visible; her lower body is fully hidden by the coherent bed, mattress and bedding. The recurring girl is already asleep; no baby, book, phone or medical props.",
       "textOrNumbers": "None visible."
     }
   ],
@@ -86,15 +86,15 @@
     },
     "pronunciationChecks": {"歌":"ge1","S03樂器":"yue4 qi4","S04音樂":"yin1 yue4","S05著":"zhao2","G02Suffix著":"zhao2"}
   },
-  "mediaBytes": 1102522,
+  "mediaBytes": 1094610,
   "teacherImageRepair": {
     "requested": "L448-S05 bed structure was malformed around the seated mother.",
-    "result": "Replaced the final S05 WebP with a regenerated composition using a coherent wooden bed and a visibly separate bedside chair while preserving the mother, sleeping girl, nighttime scene and established style.",
+    "result": "Replaced the final S05 WebP again after teacher perspective feedback. The mother is now on the far side of the bed with her waist and entire lower body naturally occluded by the bed and bedding; only her upper body and arms are visible. The sleeping girl, nighttime scene and established style are preserved.",
     "finalImage": "public/assets/lessons/L448/images/L448-S05.webp",
     "dimensions": "1024x1024",
-    "bytes": 119590,
-    "sha256": "3072d21f2a3a7e9d0155ac5b4aa1b7f0f74a4117a414f76d88fa0a2fc333bcc6",
-    "visualQA": "PASS: straight aligned rails/posts, coherent mattress and bedding, separate chair with visible legs, correct cast/story, no text or numbers."
+    "bytes": 111678,
+    "sha256": "97daff20d8b47a21e76fba8e5ab378bd8355184d36ee322de073480938402c13",
+    "visualQA": "PASS: coherent bed structure and natural near-to-far occlusion; mother has no visible lower body and does not intersect the bed; correct cast/story; no text or numbers."
   },
   "releaseDependencies": {"orderedLessonsThrough":"L447","blockers":["L439","L440","L441","L442","L443","L444","L445","L446","L447"]},
   "validation": {

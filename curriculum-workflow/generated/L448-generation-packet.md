@@ -2371,4 +2371,4 @@ AI 必須把這份課程序列視為鎖定邊界。
 - 驗證：lesson-local package checks、isolated `validate:production`、strict asset audit 均 PASS；full `npm run verify` 留給 Release 在依賴整合後執行。
 - 證據：`curriculum-workflow/generated/L448-alignment-evidence.json`、`curriculum-workflow/generated/L448-qa-evidence.json`。
 - Package intake checkpoint：`npm run curriculum:package-intake -- --unit L448 --ref origin/codex/l448-complete-package --strict` 對 `98f9bdd2` PASS，無 blocking package-status defects。
-- 教師圖片修復：重製 `L448-S05.webp`，將床修正為結構與透視一致的木床，並讓媽媽坐在床外清楚獨立的木椅；保留媽媽哼唱、女孩已睡著、夜間場景與既有角色畫風。Final 1024×1024 WebP visual QA PASS。
+- 教師圖片修復：依第二次透視回饋重製 `L448-S05.webp`。媽媽位於床的遠側，只露出頭、肩、手臂與上半身；腰部以下由床體、床墊和被褥自然遮住，不再出現不可能看見的下半身或穿透床體。保留媽媽哼唱、女孩已睡著、夜間場景與既有角色畫風。Final 1024×1024 WebP visual QA PASS。
