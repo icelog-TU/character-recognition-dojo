@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L445 | 樂 | claimed | Production D | `codex/l445-complete-package` | L440:運; L441:賽; L442:機; L443:操; L444:器; L439 ordered Release predecessor | 運、賽、機、操、器 | `curriculum-workflow/lesson-requests/L445.json`; `curriculum-workflow/generated/L445-generation-packet.md`; `curriculum-workflow/drafts/L445-draft.json` | `public/assets/lessons/L445/`; ignored `curriculum-workflow/audio-inbox/L445/` | Teacher-approved heteronym lesson: 樂器/樂隊 ㄩㄝˋ; 樂意 ㄌㄜˋ. Full package production; no main integration. |
+| L445 | 樂 | dependency-blocked-asset-complete | Production D | `codex/l445-complete-package`; claim `c2b33b76` | L440:運; L441:賽; L442:機; L443:操; L444:器; L439 ordered predecessor | 運、賽、機、操、器 | `curriculum-workflow/lesson-requests/L445.json`; `curriculum-workflow/generated/L445-generation-packet.md`; `curriculum-workflow/drafts/L445-draft.json` | `public/assets/lessons/L445/`; ignored `curriculum-workflow/audio-inbox/L445/` | 5 WebP, 10 M4A, 9 final alignments. Each image style/cast PASS. Heteronym AI auditory results recorded; human listening, G02 suffix onset and recording/replay follow-up documented. Release owns ordered integration. |
 
 ## Status Values
 

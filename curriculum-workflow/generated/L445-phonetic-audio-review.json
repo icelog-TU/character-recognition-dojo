@@ -1,0 +1,31 @@
+{
+  "unit": "L445",
+  "method": "AI auditory analysis of decoded final M4A; not human listening; no expected transcript supplied",
+  "documentation": "https://developers.openai.com/api/docs/guides/audio-chat-completions",
+  "results": [
+    {
+      "id": "char-u6a02",
+      "sha256": "ee0bc3986079a8d96633db7d1e82a7972cc184a12df77f50aeadf1fe46bead34",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"yue\", \"heardPinyin\": \"yue4\", \"leYueOccurrences\": [{\"syllable\": \"yue4\", \"position\": 1}], \"jiaoTone\": null, \"defects\": null, \"confidence\": 0.7}"
+    },
+    {
+      "id": "L445-S01",
+      "sha256": "e540691f3fc9d62e7dca50136e38680c4eabda9388a5339f7ffa5754df48c460",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"这些乐器是手工做的\", \"heardPinyin\": \"zhe4 xie1 yue4 qi4 shi4 shou3 gong1 zuo4 de\", \"leYueOccurrences\": [\"yue4\"], \"jiaoTone\": null, \"defects\": [], \"confidence\": 0.92}"
+    },
+    {
+      "id": "L445-S02",
+      "sha256": "6afd1948bd1c463e2481a9694990589d7a8a5e3e09344f9750da3e265da73999",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\":\"乐队正在把乐器搬上车\",\"heardPinyin\":\"yue4 dui4 zheng4 zai4 ba3 yue4 qi4 ban1 shang4 che1\",\"leYueOccurrences\":[{\"character\":\"乐\",\"sound\":\"yue4\"},{\"character\":\"乐\",\"sound\":\"yue4\"}],\"jiaoTone\":null,\"defects\":[],\"confidence\":0.88}"
+    },
+    {
+      "id": "L445-S03",
+      "sha256": "ea1a442e4a1a6a225c3e76da5b9f9e3d48fbb65203121acf8c3511333ad3268d",
+      "model": "gpt-audio-1.5",
+      "review": "{\"transcript\": \"我很乐意教你操作机器人\", \"heardPinyin\": [\"wo3\", \"hen3\", \"le4\", \"yi4\", \"jiao1\", \"ni3\", \"cao1\", \"zuo4\", \"ji1\", \"qi4\", \"ren2\"], \"leYueOccurrences\": [\"le4\"], \"jiaoTone\": \"jiao1\", \"defects\": [], \"confidence\": 0.82}"
+    }
+  ]
+}
