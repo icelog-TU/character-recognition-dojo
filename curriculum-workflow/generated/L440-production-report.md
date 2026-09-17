@@ -14,7 +14,7 @@
 - 全部音檔可解碼；G05 三音檔 mean volume 為 -18.2／-18.7／-17.4 dB，差 1.3 dB。
 - 九段 final M4A 的 timing 齊全，80–900ms、不重疊，末字結束避開尾端靜音。十段 AI 聽音結果見 QA JSON，不等同人工驗收。
 - tools:check、ai:check、curriculum:audit-state：PASS。隔離 validate:production：PASS；assets:audit --strict：PASS，5 圖／10 音、零警告。
-- pushed-branch package-intake --strict：PASS，5 圖／10 音、五種 Stage 4 類型完整、零 blocking defect；驗證固定資產 commit c56bf639f5f8bea94ec25c3a3e76e22ffea1bac3。
+- pushed-branch package-intake --strict：PASS，5 圖／10 音、五種 Stage 4 類型完整、零 blocking defect；驗證固定資產 commit c56bf639b47dae33bd2839c6f640a81dff6d855e。
 
 ## 逐圖 style-lock / cast
 
@@ -42,8 +42,8 @@ Local isolated Vite fixture; base prerequisite completion and provisional senten
 最新 main 已整合 R053/R054。Release 仍須先依序整合 L436「補」、L437「修」、L438「習」、L439「練」；這些是 ordered integration blocker，不是本包缺件。
 Production 不 merge main，不修改 production JSON、planner、ledger 或部署；ignored 音訊中間檔及快取保留。
 
-固定資產 SHA：c56bf639f5f8bea94ec25c3a3e76e22ffea1bac3。後續 commit 僅補 intake 與 registry 紀錄。
+固定資產 SHA：c56bf639b47dae33bd2839c6f640a81dff6d855e。後續 commit 僅補 intake 與 registry 紀錄。
 
-Pre-merge 圖片預覽（非正式 main）：https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L440&ref=c56bf639f5f8bea94ec25c3a3e76e22ffea1bac3
-音訊預覽：https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L440&ref=c56bf639f5f8bea94ec25c3a3e76e22ffea1bac3
+Pre-merge 圖片預覽（非正式 main）：https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L440&ref=c56bf639b47dae33bd2839c6f640a81dff6d855e
+音訊預覽：https://icelog-tu.github.io/character-recognition-dojo/tools/audio-review.html?unit=L440&ref=c56bf639b47dae33bd2839c6f640a81dff6d855e
 本包尚未 merge/deploy，不宣稱已正式上線。

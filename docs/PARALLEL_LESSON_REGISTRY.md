@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L440 | 運 | dependency-blocked-asset-complete | Production E | codex/l440-complete-package | L436, L437, L438, L439 | 補 修 習 練 | curriculum-workflow/lesson-requests/L440.json; curriculum-workflow/generated/L440-generation-packet.md; curriculum-workflow/drafts/L440-draft.json | public/assets/lessons/L440/; curriculum-workflow/audio-inbox/L440/ | Complete assets at c56bf639f5f8bea94ec25c3a3e76e22ffea1bac3: 5 images, 10 audio, timings and QA reports; pushed strict intake PASS. Browser fallback limits documented. R053/R054 now merged on main; Release still requires ordered L436-L439. Production package only; do not merge main. |
+| L440 | 運 | dependency-blocked-asset-complete | Production E | codex/l440-complete-package | L436, L437, L438, L439 | 補 修 習 練 | curriculum-workflow/lesson-requests/L440.json; curriculum-workflow/generated/L440-generation-packet.md; curriculum-workflow/drafts/L440-draft.json | public/assets/lessons/L440/; curriculum-workflow/audio-inbox/L440/ | Complete assets at c56bf639b47dae33bd2839c6f640a81dff6d855e: 5 images, 10 audio, timings and QA reports; pushed strict intake PASS. Browser fallback limits documented. R053/R054 now merged on main; Release still requires ordered L436-L439. Production package only; do not merge main. |
 
 ## Status Values
 
