@@ -1,0 +1,55 @@
+{
+  "unit": "L442",
+  "provider": "whisper-1 through assets:align:ai",
+  "normalization": [
+    "这些→這些",
+    "飞机→飛機",
+    "练习→練習",
+    "手机→手機",
+    "运→運",
+    "赛→賽",
+    "场→場",
+    "队→隊",
+    "们→們"
+  ],
+  "manualTimingAdjustments": [],
+  "processing": "Standard audio pipeline, then measured trailing-silence-only AAC frame copy and final AI alignment; no speech splicing. G02 suffix was independently regenerated until both Whisper and gpt-audio-1.5 identified kan4 qiu2 sai4.",
+  "transcripts": [
+    {
+      "id": "L442-S01",
+      "text": "影印機不能正常運轉，要修理。"
+    },
+    {
+      "id": "L442-S02",
+      "text": "这些水果是用飞机运来的。"
+    },
+    {
+      "id": "L442-S03",
+      "text": "爸爸用手機看球賽"
+    },
+    {
+      "id": "L442-S04",
+      "text": "我练习用手机照相。"
+    },
+    {
+      "id": "L442-S05",
+      "text": "这场练习赛，我们全队都上场。"
+    },
+    {
+      "id": "L442-G02-prefix",
+      "text": "爸爸用手"
+    },
+    {
+      "id": "L442-G02-suffix",
+      "text": "看球賽"
+    },
+    {
+      "id": "L442-G05-wrong-one",
+      "text": "这场练习赛，你们全队都上场！"
+    },
+    {
+      "id": "L442-G05-wrong-two",
+      "text": "这场练习赛，我们全队都下场。"
+    }
+  ]
+}

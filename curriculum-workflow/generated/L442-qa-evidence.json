@@ -1,0 +1,246 @@
+{
+  "unit": "L442",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMain": "5ab2118f955437e32e0921f7c4b633261ba03c50",
+  "productionBoundary": "L435 助,439 learned Han",
+  "allowedCharCount": 445,
+  "imageChecks": [
+    {
+      "sentenceId": "L442-S01",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Broken copier with visibly jammed wrinkled paper; distinct clerk examines while recurring girl waits with documents; no smoke/sparks or repaired-state output.",
+      "castEvidence": "Recurring girl matches bob/pink clip/pink cardigan/cream top/navy skirt/pink shoes; generic clerk clearly distinct.",
+      "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+    },
+    {
+      "sentenceId": "L442-S02",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Supermarket remains main scene; fruit already displayed; bubble contains cargo airplane and fruit crates; no airport loading state or price/origin text.",
+      "castEvidence": "Recurring mother cream blouse/blue trousers and recurring girl match family anchors.",
+      "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+    },
+    {
+      "sentenceId": "L442-S03",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Father holds phone horizontally in living room; screen visibly shows basketball players and hoop without scores or UI.",
+      "castEvidence": "Recurring father blue shirt/khaki trousers matches family anchor; girl is incidental and consistent.",
+      "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+    },
+    {
+      "sentenceId": "L442-S04",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Girl actively photographs a real flower; phone shows matching flower composition; mother coaches beside her.",
+      "castEvidence": "Recurring girl and mother match family anchors; no selfie/call/review state.",
+      "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+    },
+    {
+      "sentenceId": "L442-S05",
+      "styleLock": "PASS",
+      "cast": "PASS",
+      "scene": "Exactly three pink-team children and exactly three distinct blue-team children all visible on field; one adult coach; no bench/substitutes.",
+      "castEvidence": "Recurring girl remains identifiable by dark bob,pink clip and pink sports outfit; all generic children and coach are distinct.",
+      "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+    }
+  ],
+  "browserQA": {
+    "environment": "Chrome local QA at 390px content width; real LessonPanel imported by isolated Vite harness; prerequisites simulated with only handoff provisional vocabulary; no production progress written.",
+    "playback": "All 10 final M4A played sequentially to ended.",
+    "G01": "S01 index2機 selected; 下一題 appeared.",
+    "G02": "S03 helper playback used dedicated prefix 爸爸用手 and stopped at index4機. Dedicated suffix 看球賽 played to ended in all-audio run; final file also passed Whisper and acoustic kan4 qiu2 sai4 checks.",
+    "G03": "Three distinct shuffled cards 機/場/車; choosing機 filled S02 index7 and exposed 下一題.",
+    "G04": "S04 displayed 相 ㄒㄧㄤˋ; shuffled cards completed 手→機→照→相 and exposed 下一題.",
+    "G05": "All three mapped clips played to ended: correct S05, wrong-two, wrong-one. Correct selection exposed 領取獎勵; reward callback fired; after animation 下一課 and 回首頁休息 appeared; 下一課 emitted navigation next.",
+    "limitations": [
+      "Sustained press-to-record and recorded-voice replay were not operated because the available browser session did not have pre-authorized microphone access; microphone recording is not certified.",
+      "Physical-phone highlight smoothness and direct human listening are not claimed; final audio was checked from actual input by acoustic AI plus Whisper alignment."
+    ],
+    "disposition": "Production SOP browser-tooling fallback after all technical gates; no recording QA PASS claimed."
+  },
+  "audio": {
+    "metrics": [
+      {
+        "name": "char-u6a5f.m4a",
+        "duration": 0.998005,
+        "max": -2.2,
+        "mean": -17.7,
+        "trailingSilenceStart": 0.83542,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      },
+      {
+        "name": "L442-G02-prefix.m4a",
+        "duration": 1.695011,
+        "max": -2.2,
+        "mean": -18,
+        "trailingSilenceStart": 1.53522,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      },
+      {
+        "name": "L442-G02-suffix.m4a",
+        "duration": 1.322993,
+        "max": -2,
+        "mean": -16.3,
+        "trailingSilenceStart": 1.17277,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      },
+      {
+        "name": "L442-G05-wrong-one.m4a",
+        "duration": 4.573991,
+        "max": -2.6,
+        "mean": -17.2,
+        "trailingSilenceStart": 4.40519,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      },
+      {
+        "name": "L442-G05-wrong-two.m4a",
+        "duration": 3.947007,
+        "max": -2.1,
+        "mean": -18,
+        "trailingSilenceStart": 3.77433,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      },
+      {
+        "name": "L442-S01.m4a",
+        "duration": 4.202993,
+        "max": -2,
+        "mean": -16.9,
+        "trailingSilenceStart": 4.05093,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      },
+      {
+        "name": "L442-S02.m4a",
+        "duration": 3.412993,
+        "max": -3.3,
+        "mean": -18.3,
+        "trailingSilenceStart": 3.24313,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      },
+      {
+        "name": "L442-S03.m4a",
+        "duration": 3.133991,
+        "max": -2.7,
+        "mean": -18.3,
+        "trailingSilenceStart": 2.96977,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      },
+      {
+        "name": "L442-S04.m4a",
+        "duration": 2.971995,
+        "max": -2,
+        "mean": -18,
+        "trailingSilenceStart": 2.80515,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      },
+      {
+        "name": "L442-S05.m4a",
+        "duration": 4.04,
+        "max": -1.9,
+        "mean": -17.3,
+        "trailingSilenceStart": 3.88317,
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "g05MeanVolumeSpreadDb": 0.8,
+    "hearingMethod": "Final processed M4A decoded to WAV and supplied as actual input_audio to OpenAI gpt-audio-1.5; acoustic AI verification, not human listening.",
+    "hearing": [
+      {
+        "name": "char-u6a5f",
+        "model": "gpt-audio-1.5",
+        "result": "**Heard syllable in pinyin with tone:** ji1 (high-level, tone 1)  \n**Analysis:** The vowel and consonant quality, combined with the high, level pitch contour, indicate the syllable “ji” with tone 1.  \n**Acoustically matches expected content:** If the filename content expected “ji1” (機), this pronunciation matches well."
+      },
+      {
+        "name": "L442-G02-prefix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"ba4\", \"ba5\", \"yong4\", \"shou3\"]}"
+      },
+      {
+        "name": "L442-G02-suffix",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"kan4\", \"qiu2\", \"sai4\"]}"
+      },
+      {
+        "name": "L442-G05-wrong-one",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\":[[\"zhe4\"],[\"chang3\"],[\"lian4\"],[\"xi2\"],[\"sai4\"],[\"ni3\"],[\"men\"],[\"quan2\"],[\"dui4\"],[\"dou1\"],[\"shang4\"],[\"chang3\"]],\"matchesExpected\":true}"
+      },
+      {
+        "name": "L442-G05-wrong-two",
+        "model": "gpt-audio-1.5",
+        "result": "{\"analysis\": [\n\"zhe4\",\n\"chang3\",\n\"lian4\",\n\"xi2\",\n\"sai4\",\n\"wo3\",\n\"men5\",\n\"quan2\",\n\"dui4\",\n\"dou1\",\n\"xia4\",\n\"chang3\"\n],\n\"matches_expected\": true}"
+      },
+      {
+        "name": "L442-S01",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\":[\"ying3\",\"yin4\",\"ji1\",\"bu4\",\"neng2\",\"zheng4\",\"chang2\",\"yun4\",\"zhuan3\",\"yao4\",\"xiu1\",\"li3\"],\"acoustic_match\":true}"
+      },
+      {
+        "name": "L442-S02",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"zhe4\", \"xie1\", \"shui3\", \"guo3\", \"shi4\", \"yong4\", \"fei1\", \"ji1\", \"yun4\", \"lai2\", \"de5\"]}"
+      },
+      {
+        "name": "L442-S03",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"ba4\", \"ba4\", \"yong4\", \"shou3\", \"ji1\", \"kan4\", \"qiu2\", \"sai4\"]}"
+      },
+      {
+        "name": "L442-S04",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\": [\"wo3\", \"lian4\", \"xi2\", \"yong4\", \"shou3\", \"ji1\", \"zhao4\", \"xiang4\"], \"matches_expected\": true}"
+      },
+      {
+        "name": "L442-S05",
+        "model": "gpt-audio-1.5",
+        "result": "{\"syllables\":[\"zhe4\",\"chang3\",\"lian4\",\"xi2\",\"sai4\",\"wo3\",\"men\",\"quan2\",\"dui4\",\"dou1\",\"shang4\",\"chang3\"],\"matches_expected\":true}"
+      }
+    ],
+    "regeneration": "S03/G02 fragments regenerated for continuous pacing; G02 suffix independently regenerated until both Whisper and gpt-audio-1.5 identified 看球賽/kan4 qiu2 sai4. All final clips aligned after tail-only silence processing.",
+    "pronunciationChecks": {
+      "機": "ji1",
+      "S04相": "xiang4",
+      "賽": "sai4",
+      "運": "yun4",
+      "修": "xiu1",
+      "習": "xi2",
+      "練": "lian4"
+    }
+  },
+  "mediaBytes": 1355575,
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L441"
+  },
+  "resolvedReviewMilestones": [
+    "R053",
+    "R054"
+  ],
+  "validation": {
+    "startupToolsAiAuditState": "PASS",
+    "textBoundarySchemaStage4Timings": "PASS",
+    "validateProduction": "PASS on isolated L442 fixture",
+    "assetAuditStrict": "PASS on isolated L442 fixture; zero warnings",
+    "fullVerify": "Release integration gate; not run against production JSON without L442 and ordered L436-L441."
+  }
+}
