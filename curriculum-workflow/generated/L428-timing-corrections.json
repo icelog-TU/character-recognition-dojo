@@ -1,0 +1,66 @@
+{
+  "corrections": [
+    {
+      "src": "/assets/lessons/L428/audio/L428-S02.m4a",
+      "charIndex": 6,
+      "field": "startMs",
+      "before": 1940,
+      "after": 2520,
+      "basis": "S02 就: AI span included the preceding 563ms pause. -40dB silence ends at 2560ms; start 40ms before speech onset."
+    },
+    {
+      "src": "/assets/lessons/L428/audio/L428-S05.m4a",
+      "charIndex": 5,
+      "field": "startMs",
+      "before": 1780,
+      "after": 2180,
+      "basis": "S05 輪: AI span included preceding pause. -40dB silence ends at 2212ms; start 32ms before speech onset."
+    },
+    {
+      "src": "/assets/lessons/L428/audio/L428-S04.m4a",
+      "charIndex": 8,
+      "field": "endMs",
+      "before": 3940,
+      "after": 4051,
+      "basis": "S04 心: final acoustic tail ends at 4051ms (-45dB); preserve 200ms terminal quiet."
+    },
+    {
+      "src": "/assets/lessons/L428/audio/L428-G02-prefix.m4a",
+      "charIndex": 6,
+      "field": "endMs",
+      "before": 2120,
+      "after": 2460,
+      "basis": "G02 prefix 就: final acoustic tail ends at 2460ms (-45dB); preserve 200ms terminal quiet."
+    }
+  ],
+  "silenceEvidence": {
+    "S02": [
+      "[silencedetect @ 000001502ba8da00] silence_start: 0.714354\r",
+      "[silencedetect @ 000001502ba8da00] silence_end: 0.82 | silence_duration: 0.105646\r",
+      "[silencedetect @ 000001502ba8da00] silence_start: 1.99714\r",
+      "[silencedetect @ 000001502ba8da00] silence_end: 2.56009 | silence_duration: 0.562948\r",
+      "[silencedetect @ 000001502ba8da00] silence_start: 3.72129\r",
+      "[silencedetect @ 000001502ba8da00] silence_end: 3.78385 | silence_duration: 0.0625624\r",
+      "[silencedetect @ 000001502ba8da00] silence_start: 4.10009\r",
+      "[silencedetect @ 000001502ba8da00] silence_end: 4.31891 | silence_duration: 0.218821\r"
+    ],
+    "S04": [
+      "[silencedetect @ 000001b320aeda00] silence_start: 0.841315\r",
+      "[silencedetect @ 000001b320aeda00] silence_end: 0.907846 | silence_duration: 0.0665306\r",
+      "[silencedetect @ 000001b320aeda00] silence_start: 1.80451\r",
+      "[silencedetect @ 000001b320aeda00] silence_end: 2.12961 | silence_duration: 0.325102\r",
+      "[silencedetect @ 000001b320aeda00] silence_start: 4.05039\r",
+      "[silencedetect @ 000001b320aeda00] silence_end: 4.27247 | silence_duration: 0.222086\r"
+    ],
+    "S05": [
+      "[silencedetect @ 00000207a20fdb00] silence_start: 1.4249\r",
+      "[silencedetect @ 00000207a20fdb00] silence_end: 2.21186 | silence_duration: 0.786961\r",
+      "[silencedetect @ 00000207a20fdb00] silence_start: 3.86719\r",
+      "[silencedetect @ 00000207a20fdb00] silence_end: 4.08671 | silence_duration: 0.219524\r"
+    ],
+    "G02-prefix": [
+      "[silencedetect @ 0000029179aaca40] silence_start: 2.19469\r",
+      "[silencedetect @ 0000029179aaca40] silence_end: 2.67029 | silence_duration: 0.475601\r"
+    ]
+  }
+}

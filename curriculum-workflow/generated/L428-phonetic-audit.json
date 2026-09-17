@@ -1,0 +1,40 @@
+[
+  {
+    "file": "public/assets/lessons/L428/audio/char-u81ea.m4a",
+    "sha256": "4cb3b4be6dea178370e50a56195ea7c3818aad8944f5cb700e79a305f5fb60bb",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "四",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 18,
+        "input_tokens": 15,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 15
+        },
+        "output_tokens": 3
+      }
+    }
+  },
+  {
+    "file": "public/assets/lessons/L428/audio/L428-G02-suffix.m4a",
+    "sha256": "2102f21c8e0f5e20f55ad1b6f51279d337b15612c11c74323bc35506ee7d1f0e",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "result": {
+      "text": "動大開",
+      "usage": {
+        "type": "tokens",
+        "total_tokens": 19,
+        "input_tokens": 14,
+        "input_token_details": {
+          "text_tokens": 0,
+          "audio_tokens": 14
+        },
+        "output_tokens": 5
+      }
+    }
+  }
+]

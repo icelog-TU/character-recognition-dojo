@@ -1,0 +1,191 @@
+Production C｜L428「自」製作交接
+
+【起手資訊】
+收到後請 claim L428 並開始製作，無須等待另一則老師訊息。
+指定：Production C（接續上一課 Production B）
+Repo：https://github.com/icelog-TU/character-recognition-dojo
+Worktree：C:\Users\User\Documents\Codex\2026-08-03\a000-sop\worktrees\parallel-c
+Package branch：codex/l428-complete-package
+Unit：L428，normal lesson，order=428
+title：自
+newChars：["自"]
+注音：ㄗˋ
+固定規則依 latest origin/main 的 ROLE_PRODUCTION_SOP 及相關 SOP 執行；以下為本課鎖定資料。
+
+【邊界與依賴】
+已 fetch 確認：
+origin/main = 4eec5178 Integrate lesson L415 from rescued package
+正式 production boundary：L001–L415，最新正式字「解」，419 個已學字。
+最新正式 review：R050，afterLessonOrder=405。
+Editor 本機 checkout 落後，local audit 顯示 L333；本交接直接讀取 origin/main JSON，不採用本機邊界。
+
+老師已核准 provisional sequence：
+L416果、L417如、L418結、L419合、L420教、L421室、
+L422班、L423組、L424隊、L425各、L426輪、L427員。
+
+依五句與 Stage 4 選項實際用字鎖定：
+dependsOnLessons：["L423","L424","L425","L426","L427"]
+provisionalLearnedChars：["組","隊","各","輪","員"]
+Coverage 窗口以外的額外 provisional 字：無。
+allowedChars：上述 commit 的正式 learned-character union
+              ∪ ["組","隊","各","輪","員"] ∪ ["自"]
+去重共 425 字，請在 request 寫入完整 array。
+
+Allowed-character audit：PASS。
+五句、spokenText、displayLines、focusChar 及 Stage 4 選項均未使用未教字。
+「己」「由」「句」尚未教，不可自行加入「自己」「自由」「一句話」。
+
+L416–L427 尚非正式已學；L420 後的 R051/R052 亦尚未進 main。
+上述 playable-order／review milestone 條件只阻止 Release，不阻止本課製作。
+請在 registry、request、packet、draft 記錄依賴與 milestone blocker。
+
+【五句定稿與配圖】
+
+S01｜L428-S01
+text：隊員各自帶水和點心。
+spokenText：隊員各自帶水和點心
+displayLines：["隊員各自帶","水和點心。"]
+focusChar：自
+漢字數：9
+Coverage：隊1、員1、各1、自1
+imageNotes：
+戶外團體活動集合處。主角小女孩與兩位 generic child 隊員各自拿著自己的水壺和點心袋，旁邊各有自己的小背包，準備參加活動。清楚呈現每個人都自行攜帶，不是一個人替全隊拿，也不是正在分送點心。隊員以同色活動背心辨識即可。
+
+S02｜L428-S02
+text：客人一走近，門就自動打開。
+spokenText：客人一走近門就自動打開
+displayLines：["客人一走近，","門就自動","打開。"]
+focusChar：自
+漢字數：11
+Coverage：自1
+imageNotes：
+商店入口外，主角媽媽帶主角小女孩以顧客身分走近感應式玻璃滑門。門扇正向兩側滑開，人物手沒有碰門，門上方可見感應裝置。重點是客人接近觸發自動門；不要改成店員走向門口，不要畫成人用手推門。
+
+S03｜L428-S03
+text：各組成員輪流掃地。
+spokenText：各組成員輪流掃地
+displayLines：["各組成員","輪流掃地。"]
+focusChar：員
+漢字數：8
+Coverage：各1、組1、員1、輪1
+imageNotes：
+教室打掃時間，班級按組分配責任區，每組由成員輪值掃地。前景是今天輪到主角小女孩掃地，同組 generic classmates 正在擦桌子、收拾物品；背景另一組也有一位成員打掃自己的區域。不要畫成全班排隊等一把掃把，也不要用可讀輪值表或多格時間圖解釋「輪流」。不再使用輪流念字的情境。
+
+S04｜L428-S04
+text：媽媽看書，自學做點心。
+spokenText：媽媽看書自學做點心
+displayLines：["媽媽看書，","自學做點心。"]
+focusChar：自
+漢字數：9
+Coverage：自1
+imageNotes：
+家中廚房料理檯，主角媽媽一邊參考攤開的食譜，一邊把麵糰整形成小餅乾，旁邊有碗、食材與烤盤。媽媽正在照書學習，畫面沒有老師或另一位大人教她，也不是只坐著看書。食譜以食物插圖與背斜角呈現，不需可讀內容。
+
+S05｜L428-S05
+text：爸爸和媽媽輪流開車。
+spokenText：爸爸和媽媽輪流開車
+displayLines：["爸爸和媽媽","輪流開車。"]
+focusChar：輪
+漢字數：9
+Coverage：輪1
+imageNotes：
+家庭長途出遊途中，車已安全停在休息區停車格。主角爸爸已離開駕駛座，站在車外把車鑰匙交給正準備坐進駕駛座的主角媽媽，表現停車後換手駕駛。需要孩子入鏡時使用主角女孩與固定哥哥，留在後座。不可在行駛中換座，不可畫成兩人同時操控方向盤。
+
+【Coverage】
+L428自：3／要求≥3
+L427員：2／要求≥2
+L426輪：2／要求≥2
+L425各：2／要求≥2
+L424隊：1／要求≥1
+L423組：1／要求≥1
+結果：全部 PASS。漢字數依序 9、11、8、9、9。
+spokenText 與 Han-only sequence 一致；displayLines 含標點、join 等於 text，每行≤6可見字元：PASS。
+
+【Stage 4 資料】
+固定順序，不調換 game type；五句各使用一次。
+下列 index 均為零起算 Han-only index，已機械驗證。
+
+Game | Type | sentenceId | targetChar | targetCharIndex | missingIndexes | 檢查
+G01 | find-character | L428-S01 | 自 | 3 | 不適用 | PASS
+G02 | teach-character | L428-S02 | 自 | 7 | 不適用 | PASS
+G03 | missing-character | L428-S04 | 自 | 4 | [4] | PASS
+G04 | partial-order | L428-S03 | 員 | 3 | [4,5,6,7] | PASS
+G05 | choose-pronunciation | L428-S05 | 輪 | 5 | 不適用 | PASS
+
+G01：
+在 S01 找「自」。無額外 option cards。
+
+G02：
+prefixText：客人一走近門就
+target：自
+suffixText：動打開
+teachAudio.prefixSrc：
+/assets/lessons/L428/audio/L428-G02-prefix.m4a
+teachAudio.suffixSrc：
+/assets/lessons/L428/audio/L428-G02-suffix.m4a
+prefix + 自 + suffix 完全等於 S02 spokenText：PASS。
+
+G03：
+options：
+- id: correct；text: 自；correct: true
+- id: wrong-one；text: 我；correct: false
+- id: wrong-two；text: 他；correct: false
+三個不同單一漢字，正解對應 S04 index 4：PASS。
+
+G04：
+missingIndexes：[4,5,6,7]
+依缺格順序應為：輪、流、掃、地
+options：
+- id: sweep；text: 掃；correct: true；correctOrder: 2
+- id: turn；text: 輪；correct: true；correctOrder: 0
+- id: ground；text: 地；correct: true；correctOrder: 3
+- id: flow；text: 流；correct: true；correctOrder: 1
+correctOrder 為缺格序號，不是原句 index。
+四張單字卡與缺格映射：PASS。
+
+G05：
+- id: correct
+  text：爸爸和媽媽輪流開車。
+  spokenText：爸爸和媽媽輪流開車
+  correct：true
+  audioSrc：/assets/lessons/L428/audio/L428-S05.m4a
+- id: wrong-one
+  text：爸爸和媽媽輪流上車。
+  spokenText：爸爸和媽媽輪流上車
+  correct：false
+  audioSrc：/assets/lessons/L428/audio/L428-G05-wrong-one.m4a
+- id: wrong-two
+  text：爸爸和媽媽輪流開門。
+  spokenText：爸爸和媽媽輪流開門
+  correct：false
+  audioSrc：/assets/lessons/L428/audio/L428-G05-wrong-two.m4a
+三選項均為 9 漢字；兩個 wrong choice 各差一字，allowed audit PASS。
+兩個錯誤選項各自以完整 spokenText 生成音檔，不剪接正確音檔。
+
+【本課特殊注意】
+1. 自一律讀 ㄗˋ；三種用法是各自、自動、自學。
+2. S02 必須是顧客觸發感應門；S03 是輪值打掃，不能靠虛構工具不足來解釋輪流。
+3. S04 是媽媽照書自學，不是媽媽教孩子；S05 必須停車後換駕駛。
+4. 本課未核准文字或數字入圖例外。人物依固定角色資料庫；generic classmates 不冒充小月、小光。L058 僅為畫風參考。
+5. 任一句、角色語義或 Stage 4 索引若遇阻礙，回報具體問題，不自行改寫老師定稿。
+
+【交付要求】
+依 ROLE_PRODUCTION_SOP 製作完整 package，包含：
+- curriculum-workflow/lesson-requests/L428.json
+- curriculum-workflow/generated/L428-generation-packet.md
+- curriculum-workflow/drafts/L428-draft.json
+- public/assets/lessons/L428/images/L428-S01.webp 至 L428-S05.webp
+- public/assets/lessons/L428/audio/char-u81ea.m4a
+- 五句音檔、最終 timings、上述 G02 與 G05 referenced audio
+- SOP 規定的 registry 與課程相關檔案更新
+
+完成後 commit／push codex/l428-complete-package。
+最後以 pushed branch 執行：
+npm run curriculum:package-intake -- --unit L428 --ref origin/codex/l428-complete-package
+
+回報 package SHA、package-intake 結果、每張圖 style-lock／cast 檢查結果及未完成項。
+資產全齊且 intake PASS，但 Release 依賴仍未解除時，回報 dependency-blocked-asset-complete。
+
+圖片審核入口：
+https://icelog-tu.github.io/character-recognition-dojo/lesson-asset-review.html
+尚未 Release 的 package 不宣稱已在正式審核頁上線。

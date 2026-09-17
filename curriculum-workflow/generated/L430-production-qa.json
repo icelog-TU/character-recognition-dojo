@@ -1,0 +1,246 @@
+{
+  "unit": "L430",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "af6273a22bc4b97ed098040e55f85965e39ebf56",
+  "lockedAllowedChars": 426,
+  "coverage": {
+    "主": 4,
+    "己": 2,
+    "自": 2,
+    "員": 2,
+    "輪": 1,
+    "各": 1
+  },
+  "checks": {
+    "requestDraftPacket": "PASS",
+    "allowedCharacters": "PASS",
+    "hanCounts": [
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    "stage4Index": "PASS",
+    "displayLines": "PASS",
+    "productionAssetsLessonLocal": "PASS",
+    "strictFormatsLessonLocal": "PASS, zero warnings",
+    "audioDecode": "PASS all 10",
+    "imageStyleCast": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
+    "browserQA": "Local isolated app fixture (base prerequisites marked completed in memory and provisional zhuyin supplied in fixture only). Stage 1 playback completed; Stage 2 verified six cards: three 主 and three old-character distractors. Remote browser actions do not expose audible computer output or provide a physical-phone microphone recording channel: human continuous listening, syllable-by-syllable audiovisual synchronization and phone recording acceptance remain unperformed. Teacher subjective review stays post-merge. Browser UI additionally verified all five Stage 3 sentence playbacks reach 句子都聽完了, G01 and G03 correct answers show 下一題, G02 stops and asks to hold the target for recording (recording skipped), G04 cards shuffled as 洗 頭 己 自 and 自己洗頭 order succeeds, G05 presents three replay/choice controls. No physical microphone test or reward-flow acceptance.",
+    "stateAudit": "PASS with expected L430 asset-not-in-production warning"
+  },
+  "pronunciation": {
+    "kind": "AI auditory review, not human QA; early model responses contained irrelevant explanations; targeted final review resolves suffix and S04; raw responses retained here as provenance",
+    "results": [
+      {
+        "name": "char-u4e3b",
+        "heardText": "主",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的音是 ㄓㄨˇ，聲調和音節都和預期的主 ㄓㄨˇ 符合。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L430-S01",
+        "heardText": "這隻小狗的主人是誰",
+        "pronunciationResult": "PASS",
+        "explanation": "每一個字的發音都相當清晰。'主'發音為ㄓㄨˇ，'己'發音為ㄐㄧˇ，'角'發音為ㄐㄧㄠˇ，而在這句話中這些字音並未出現錯誤發音或混淆，實際聽到的音節和預期相符。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L430-S02",
+        "heardText": "我已經會自己洗頭了",
+        "pronunciationResult": "PASS",
+        "explanation": "所有的音節和聲調正確清晰：ㄨㄛˇ, ㄧˇ, ㄐㄧㄥ, ㄏ會ˋ, ㄗˋ, ㄐㄧˇ, ㄒㄧˇ, ㄊㄡˊ, ㄌㄜ˙，完全符合預期",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L430-S03",
+        "heardText": "店員主動幫我拿東西",
+        "pronunciationResult": "PASS",
+        "explanation": "所有的音節及聲調都符合預期：'主' (ㄓㄨˇ)、'己' (ㄐㄧˇ)、'角' (ㄐㄧㄠˇ)位置皆正確，且整句發音清晰。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L430-S05",
+        "heardText": "這是我自己畫的公主",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的語音完全吻合預期句子：這是我自己畫的公主。每個音節的發音都符合標準：主ㄓㄨˇ，己ㄐㄧˇ，角ㄐㄧㄠˇ 對應的是『公主』與『自己』中的『己』。音韻和聲調都正確。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L430-G02-prefix",
+        "heardText": "店員",
+        "pronunciationResult": "PASS",
+        "explanation": "The audio clearly says '店員' with accurate tones: ㄉ一ㄢˋ (4th tone) and ㄩㄢˊ (2nd tone). Both syllables and tones match the expected pronunciation.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L430-G05-wrong-two",
+        "heardText": "這是我自己畫的公雞",
+        "pronunciationResult": "PASS",
+        "explanation": "The heard phrase matched the expected text exactly in terms of syllables and tones. The syllable '己' is clear and pronounced with the correct tone ㄐㄧˇ.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L430-G02-suffix",
+        "heardText": "動 幫我拿東西",
+        "pronunciationResult": "PASS",
+        "explanation": "首字動為ㄉㄨㄥˋ，發音完整；六字東西為ㄉㄨㄥ ㄒㄧ，發音完整且清楚。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L430-G05-wrong-one",
+        "heardText": "這是你自己畫的公主",
+        "pronunciationResult": "PASS",
+        "explanation": "所有的音節和聲調都與預期相符：己ㄐㄧˇ，主ㄓㄨˇ。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L430-S04",
+        "heardText": "各組成員輪流當主角",
+        "pronunciationResult": "PASS",
+        "explanation": "完全聽到：『各組成員輪流當主角』，其中『主』的發音是ㄓㄨˇ，『角』的發音是ㄐㄧㄠˇ，符合預期要求。",
+        "finalSyllableAudible": true
+      }
+    ]
+  },
+  "folderBytes": 1237851,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L430/images/L430-S01.webp",
+      "bytes": 232832,
+      "sha256": "a0e6aa15a16cc3b6141a6d7815780da062b41163f8634555982d7a9673dac4ca"
+    },
+    {
+      "path": "public/assets/lessons/L430/images/L430-S02.webp",
+      "bytes": 161952,
+      "sha256": "32d91b1132a703ed0a5b50ee1f7bc56ba496d672623ad89ebe99e75caa596383"
+    },
+    {
+      "path": "public/assets/lessons/L430/images/L430-S03.webp",
+      "bytes": 156966,
+      "sha256": "5124b345dd4d2728a54f6bb45b419407351b198b73fd4e4dce8c27b195da8ff0"
+    },
+    {
+      "path": "public/assets/lessons/L430/images/L430-S04.webp",
+      "bytes": 168024,
+      "sha256": "5e2b3074cb1d2999bca4131f56599b7fa6a6fa736272db7fb8f3b2c0895d5de8"
+    },
+    {
+      "path": "public/assets/lessons/L430/images/L430-S05.webp",
+      "bytes": 180630,
+      "sha256": "0a4aa682fae5328e46295d0ab3ec983afa06f326829857cf5d5790295520d141"
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/char-u4e3b.m4a",
+      "bytes": 12438,
+      "sha256": "bdd437ba4ee10a54a378ae5bf90d5d1ffe38c76ea888d9e946ae8bdc21a179d3",
+      "durationMs": 940,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.3,
+      "meanVolumeDb": -17.7
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/L430-G02-prefix.m4a",
+      "bytes": 13487,
+      "sha256": "577609c4205d0c21a028994477fc22f5694da2ba2b7dd224dd196246924231b8",
+      "durationMs": 1130,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -3.1,
+      "meanVolumeDb": -18.1
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/L430-G02-suffix.m4a",
+      "bytes": 26969,
+      "sha256": "07f561e9ae9acd7f3f50b4162feac9f3ebd10bd5c45dbb572f5fa08079dee7c1",
+      "durationMs": 2252,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -3.3,
+      "meanVolumeDb": -20.1
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/L430-G05-wrong-one.m4a",
+      "bytes": 31865,
+      "sha256": "4e56fe09668f6f0def4da27e646817cdc6149dd7191d41829a4b8432d888ccd5",
+      "durationMs": 2520,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.4,
+      "meanVolumeDb": -17.3
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/L430-G05-wrong-two.m4a",
+      "bytes": 54714,
+      "sha256": "c8e90bb8d9a72e37a8358ba20bbffd54e42466aa4d868b7e9de414d81586db7c",
+      "durationMs": 4090,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -16.2
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/L430-S01.m4a",
+      "bytes": 35681,
+      "sha256": "6ccec2e08be383b772f6b4bd9bd4c8235df39c8acd023db0e4ae3245cef7e637",
+      "durationMs": 2860,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -3.8,
+      "meanVolumeDb": -17.8
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/L430-S02.m4a",
+      "bytes": 38242,
+      "sha256": "c300ec5d25fd9888db9260de090d2fd3f7c63fc2cad4f932b4d27e669c721143",
+      "durationMs": 3110,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.6,
+      "meanVolumeDb": -18.2
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/L430-S03.m4a",
+      "bytes": 33959,
+      "sha256": "57edd17c2cb70b9a0c77823cc76c04222161d4f258bf2b78d04a8ad0c1721523",
+      "durationMs": 2760,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.3
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/L430-S04.m4a",
+      "bytes": 44935,
+      "sha256": "8bcbb34e06cee6008c82ad782b1428af0815d191d6497ba80f7b3dc4c7eb4904",
+      "durationMs": 3550,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -3.9,
+      "meanVolumeDb": -17.8
+    },
+    {
+      "path": "public/assets/lessons/L430/audio/L430-S05.m4a",
+      "bytes": 45157,
+      "sha256": "4c5ba6eb99a862a4a5c502601c345dcb287b87e1dc08198f09190a2e3b2b1964",
+      "durationMs": 3390,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -19
+    }
+  ]
+}

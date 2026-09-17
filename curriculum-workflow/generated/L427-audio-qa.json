@@ -1,0 +1,639 @@
+{
+  "unit": "L427",
+  "notes": "Production technical QA: exact teacher-approved text, spokenText, displayLines, focusChar and imageNotes retained; 426 allowed characters; coverage 員4 輪3 各2 隊2 組1 班1. Canonical game order, all zero-based Han indexes, all one-Han option cards and G02 exact standalone fragments checked. Nine final processed audio files AI-aligned against approved Han text after simplified/traditional normalization. Final spans 120-900 ms with no overlaps. G02 prefix 店 was regenerated from 店 alone with explicit ㄉㄧㄢˋ instructions; standard audio processing used the SOP-permitted short-fragment path retaining onset (loudnorm without leading silence removal). Whisper with vocabulary context 商店、學校、公司、店員、試鞋 returned 店; independent gpt-4o-transcribe without prompt returned 電, the intended fourth-tone homophone. Independent charAudio transcript returned 圓, the intended ㄩㄢˊ homophone; orthographic identity and human listening are not claimed by these homophone checks. G02 suffix regenerated as a complete fragment at speed 0.8 after initial 20ms alignment span; final spans all pass. No cutting/splicing of speech and no fabricated timing. Every M4A decoded, mono AAC 44100 Hz, volume thresholds pass; G05 mean spread 0.5 dB. S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS. Final exported WebP compared with all L058 style anchors, refined L115/L118/L119/L128 examples and family L154/L162/L163 anchors. S01 initial substitution staging rejected and revised; S04/S05 initial foreground medium drift rejected and redrawn as unified exquisite pencil-watercolor. Rejected drafts are not committed. Browser QA at local Vite URL http://127.0.0.1:5427/character-recognition-dojo/, viewport 390x844: all five Stage 3 cards displayed final square images and approved displayLines without horizontal clipping; each sentence play button entered playback state with visible initial character highlighting. 員 ㄩㄢˊ and S03 種 ㄓㄨㄥˇ rendered. Stage 1 target tap reached completion. G01 correct target accepted; G02 reached the stopped-before-員 teaching state after standalone prefix playback; G03 員 accepted; G04 four single-Han cards shuffled and 輪子可選 order accepted; G05 three reader buttons exercised, layout intact, no browser console errors or warnings observed. Browser tool returns DOM/screenshots without audible output capture or a human microphone input, so subjective syllable-to-highlight listening, actual recorded-voice replay and full reward completion were not performed. Technical transcription, timing, format and loudness evidence is supplied; no human listening or full browser recording QA is claimed. Teacher subjective review remains in the post-merge repair queue. Full verify skipped: dependency-blocked, shared production JSON/planner/ledger left for Release. Normal lessons must merge in order through L426, and R051/R052 after L420 covering L391-L420 must merge before L427. L419 合 is an additional dependency outside coverage.",
+  "coverage": {
+    "員": 4,
+    "輪": 3,
+    "各": 2,
+    "隊": 2,
+    "組": 1,
+    "班": 1
+  },
+  "allowed": 426,
+  "assetBytes": 1518850,
+  "g05MeanSpreadDb": 0.5,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L427/images/L427-S01.webp",
+      "bytes": 252784,
+      "sha256": "aad8482c687cf5acd29762bf60601b9b4bc07cd94d9cdbfd4e7e51df9c9b2220"
+    },
+    {
+      "path": "public/assets/lessons/L427/images/L427-S02.webp",
+      "bytes": 233924,
+      "sha256": "74cbe489c283ff8d85a42cff36afaec299e19831d14ed7b0d6bb2d60fafa8773"
+    },
+    {
+      "path": "public/assets/lessons/L427/images/L427-S03.webp",
+      "bytes": 217738,
+      "sha256": "22c2ae36f9351fb9e8ea5388c10140c9ef348934169f90634f420865a9250e5d"
+    },
+    {
+      "path": "public/assets/lessons/L427/images/L427-S04.webp",
+      "bytes": 221230,
+      "sha256": "675c91a4d5c2fc72a16d9264ee7c9893e1600094252e354b946b2e711d7312be"
+    },
+    {
+      "path": "public/assets/lessons/L427/images/L427-S05.webp",
+      "bytes": 224864,
+      "sha256": "d1b3bbdd382b91b29256e00d7a29c5b477c472c4219b1659e7934830fc60c956"
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/char-u54e1.m4a",
+      "bytes": 18411,
+      "sha256": "734f375f7d95a9ab47e5069be1819c9a7d3f9c2e1ab57a89e9555bf50515f095",
+      "durationMs": 1463,
+      "meanDb": -19,
+      "maxDb": -2.9
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/L427-G02-prefix.m4a",
+      "bytes": 16295,
+      "sha256": "4531065cffc9e64b2eb08a0ce66f3f5ec62b0c885e8a0759acfee100ce8fb329",
+      "durationMs": 1555,
+      "meanDb": -19.2,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/L427-G02-suffix.m4a",
+      "bytes": 40363,
+      "sha256": "8210029881de2276b9e7b5b903fcf99ef4d22500d743395f4e13eeb0126d7b3a",
+      "durationMs": 4234,
+      "meanDb": -19.5,
+      "maxDb": -2.1
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/L427-G05-wrong-one.m4a",
+      "bytes": 37046,
+      "sha256": "aaa26c6c0b5055911b14c5b47cb080349252a8027ccc638e5a213640f721c4e6",
+      "durationMs": 3277,
+      "meanDb": -18.7,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/L427-G05-wrong-two.m4a",
+      "bytes": 50791,
+      "sha256": "4f9198fb87796a0260660d76ec8597bfb69515c200c130f46d3f6e117e4090ad",
+      "durationMs": 4134,
+      "meanDb": -18.4,
+      "maxDb": -3.1
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/L427-S01.m4a",
+      "bytes": 46201,
+      "sha256": "a1146f4a56fd1a2ecfdec32f74095a02096ed40e5d1cf0fef35952c7ffd1690d",
+      "durationMs": 3938,
+      "meanDb": -18.5,
+      "maxDb": -2.5
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/L427-S02.m4a",
+      "bytes": 39251,
+      "sha256": "155fde5636d37ef709cbe650bc2997d75f8bc420a4188a55ccc0f8dad5fd0dc2",
+      "durationMs": 4058,
+      "meanDb": -19.3,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/L427-S03.m4a",
+      "bytes": 48005,
+      "sha256": "efdb48dbf8d582292ec53aac48be45cdaccb79abecb5912b8b6a62fb830515ad",
+      "durationMs": 4024,
+      "meanDb": -18.7,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/L427-S04.m4a",
+      "bytes": 33840,
+      "sha256": "e29799efb7c31b68588108cb7cf638ca74aca1d33dcfe9bd83287bea79a6a2f7",
+      "durationMs": 2786,
+      "meanDb": -19,
+      "maxDb": -5.3
+    },
+    {
+      "path": "public/assets/lessons/L427/audio/L427-S05.m4a",
+      "bytes": 38107,
+      "sha256": "f38f6c1663513a69db7dd438711e5fc2226b522d4c6961d1cc56eb981dec0df3",
+      "durationMs": 3681,
+      "meanDb": -18.9,
+      "maxDb": -2.6
+    }
+  ],
+  "transcripts": {
+    "L427-G02-prefix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 1.5499999523162842,
+      "text": "店",
+      "words": [
+        {
+          "word": "店",
+          "start": 0,
+          "end": 0.6000000238418579
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 2
+      }
+    },
+    "L427-G02-suffix.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.239999771118164,
+      "text": "帮我找合脚的鞋子",
+      "words": [
+        {
+          "word": "帮",
+          "start": 0,
+          "end": 0.2199999988079071
+        },
+        {
+          "word": "我",
+          "start": 0.2199999988079071,
+          "end": 0.7200000286102295
+        },
+        {
+          "word": "找",
+          "start": 0.7200000286102295,
+          "end": 1.0800000429153442
+        },
+        {
+          "word": "合",
+          "start": 1.0800000429153442,
+          "end": 1.7200000286102295
+        },
+        {
+          "word": "脚",
+          "start": 1.7200000286102295,
+          "end": 1.840000033378601
+        },
+        {
+          "word": "的",
+          "start": 1.840000033378601,
+          "end": 2.2200000286102295
+        },
+        {
+          "word": "鞋",
+          "start": 2.2200000286102295,
+          "end": 2.5
+        },
+        {
+          "word": "子",
+          "start": 2.5,
+          "end": 2.700000047683716
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L427-G05-wrong-one.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.2899999618530273,
+      "text": "小狗也是你們家的成員",
+      "words": [
+        {
+          "word": "小",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "狗",
+          "start": 0.46000000834465027,
+          "end": 0.6800000071525574
+        },
+        {
+          "word": "也是",
+          "start": 0.6800000071525574,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "你們",
+          "start": 1.440000057220459,
+          "end": 1.7799999713897705
+        },
+        {
+          "word": "家",
+          "start": 1.7799999713897705,
+          "end": 2.0399999618530273
+        },
+        {
+          "word": "的",
+          "start": 2.0399999618530273,
+          "end": 2.240000009536743
+        },
+        {
+          "word": "成",
+          "start": 2.240000009536743,
+          "end": 2.5
+        },
+        {
+          "word": "員",
+          "start": 2.5,
+          "end": 2.700000047683716
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L427-G05-wrong-two.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.150000095367432,
+      "text": "小鸟也是我们家的成员。",
+      "words": [
+        {
+          "word": "小",
+          "start": 0,
+          "end": 0.5799999833106995
+        },
+        {
+          "word": "鸟",
+          "start": 0.5799999833106995,
+          "end": 1.0199999809265137
+        },
+        {
+          "word": "也是",
+          "start": 1.0199999809265137,
+          "end": 1.7999999523162842
+        },
+        {
+          "word": "我们",
+          "start": 1.7999999523162842,
+          "end": 2.4800000190734863
+        },
+        {
+          "word": "家",
+          "start": 2.4800000190734863,
+          "end": 2.7799999713897705
+        },
+        {
+          "word": "的",
+          "start": 2.7799999713897705,
+          "end": 3.0999999046325684
+        },
+        {
+          "word": "成",
+          "start": 3.0999999046325684,
+          "end": 3.4200000762939453
+        },
+        {
+          "word": "员。",
+          "start": 3.4200000762939453,
+          "end": 3.619999885559082
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L427-S01.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.940000057220459,
+      "text": "各隊的隊員輪流上場。",
+      "words": [
+        {
+          "word": "各",
+          "start": 0,
+          "end": 0.4000000059604645
+        },
+        {
+          "word": "隊",
+          "start": 0.4000000059604645,
+          "end": 0.7200000286102295
+        },
+        {
+          "word": "的",
+          "start": 0.7200000286102295,
+          "end": 1.059999942779541
+        },
+        {
+          "word": "隊",
+          "start": 1.059999942779541,
+          "end": 1.3200000524520874
+        },
+        {
+          "word": "員",
+          "start": 1.3200000524520874,
+          "end": 1.600000023841858
+        },
+        {
+          "word": "輪",
+          "start": 1.600000023841858,
+          "end": 2.5
+        },
+        {
+          "word": "流",
+          "start": 2.5,
+          "end": 2.7799999713897705
+        },
+        {
+          "word": "上",
+          "start": 2.7799999713897705,
+          "end": 3.1600000858306885
+        },
+        {
+          "word": "場。",
+          "start": 3.1600000858306885,
+          "end": 3.380000114440918
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    },
+    "L427-S02.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.059999942779541,
+      "text": "店员帮我找合脚的鞋子。",
+      "words": [
+        {
+          "word": "店",
+          "start": 0,
+          "end": 0.25999999046325684
+        },
+        {
+          "word": "员",
+          "start": 0.25999999046325684,
+          "end": 0.5600000023841858
+        },
+        {
+          "word": "帮",
+          "start": 0.5600000023841858,
+          "end": 0.9200000166893005
+        },
+        {
+          "word": "我",
+          "start": 0.9200000166893005,
+          "end": 1.2400000095367432
+        },
+        {
+          "word": "找",
+          "start": 1.2400000095367432,
+          "end": 1.559999942779541
+        },
+        {
+          "word": "合",
+          "start": 1.559999942779541,
+          "end": 2.0199999809265137
+        },
+        {
+          "word": "脚",
+          "start": 2.0199999809265137,
+          "end": 2.140000104904175
+        },
+        {
+          "word": "的",
+          "start": 2.140000104904175,
+          "end": 2.4600000381469727
+        },
+        {
+          "word": "鞋",
+          "start": 2.4600000381469727,
+          "end": 2.640000104904175
+        },
+        {
+          "word": "子。",
+          "start": 2.640000104904175,
+          "end": 2.8399999141693115
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L427-S03.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.039999961853027,
+      "text": "组装小车 有各种轮子可选",
+      "words": [
+        {
+          "word": "组",
+          "start": 0,
+          "end": 0.3199999928474426
+        },
+        {
+          "word": "装",
+          "start": 0.3199999928474426,
+          "end": 0.5199999809265137
+        },
+        {
+          "word": "小",
+          "start": 0.5199999809265137,
+          "end": 0.9399999976158142
+        },
+        {
+          "word": "车",
+          "start": 0.9399999976158142,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "有",
+          "start": 1.5,
+          "end": 2.0199999809265137
+        },
+        {
+          "word": "各",
+          "start": 2.0199999809265137,
+          "end": 2.2799999713897705
+        },
+        {
+          "word": "种",
+          "start": 2.2799999713897705,
+          "end": 2.5199999809265137
+        },
+        {
+          "word": "轮",
+          "start": 2.5199999809265137,
+          "end": 2.7799999713897705
+        },
+        {
+          "word": "子",
+          "start": 2.7799999713897705,
+          "end": 2.9600000381469727
+        },
+        {
+          "word": "可",
+          "start": 2.9600000381469727,
+          "end": 3.259999990463257
+        },
+        {
+          "word": "选",
+          "start": 3.259999990463257,
+          "end": 3.4000000953674316
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    },
+    "L427-S04.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.7799999713897705,
+      "text": "这间店的员工要轮班",
+      "words": [
+        {
+          "word": "这",
+          "start": 0,
+          "end": 0.30000001192092896
+        },
+        {
+          "word": "间",
+          "start": 0.30000001192092896,
+          "end": 0.6200000047683716
+        },
+        {
+          "word": "店",
+          "start": 0.6200000047683716,
+          "end": 0.800000011920929
+        },
+        {
+          "word": "的",
+          "start": 0.800000011920929,
+          "end": 1.0800000429153442
+        },
+        {
+          "word": "员",
+          "start": 1.0800000429153442,
+          "end": 1.340000033378601
+        },
+        {
+          "word": "工",
+          "start": 1.340000033378601,
+          "end": 1.5
+        },
+        {
+          "word": "要",
+          "start": 1.5,
+          "end": 1.9600000381469727
+        },
+        {
+          "word": "轮",
+          "start": 1.9600000381469727,
+          "end": 2.0799999237060547
+        },
+        {
+          "word": "班",
+          "start": 2.0799999237060547,
+          "end": 2.240000009536743
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    },
+    "L427-S05.m4a.transcript.json": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.690000057220459,
+      "text": "小狗也是我们家的成员。",
+      "words": [
+        {
+          "word": "小",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "狗",
+          "start": 0.41999998688697815,
+          "end": 0.6800000071525574
+        },
+        {
+          "word": "也是",
+          "start": 0.6800000071525574,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "我们",
+          "start": 1.440000057220459,
+          "end": 1.8600000143051147
+        },
+        {
+          "word": "家",
+          "start": 1.8600000143051147,
+          "end": 2.0999999046325684
+        },
+        {
+          "word": "的",
+          "start": 2.0999999046325684,
+          "end": 2.319999933242798
+        },
+        {
+          "word": "成",
+          "start": 2.319999933242798,
+          "end": 2.5999999046325684
+        },
+        {
+          "word": "员。",
+          "start": 2.5999999046325684,
+          "end": 2.799999952316284
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    }
+  },
+  "charTranscript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.4600000381469727,
+    "text": "圓",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 0.8399999737739563,
+        "text": "圓",
+        "tokens": [
+          50364,
+          2523,
+          241,
+          50406
+        ],
+        "temperature": 1,
+        "avg_logprob": -1.8543128967285156,
+        "compression_ratio": 0.27272728085517883,
+        "no_speech_prob": 0.5032547116279602
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  },
+  "prefixIndependentTranscript": {
+    "text": "電",
+    "usage": {
+      "type": "tokens",
+      "total_tokens": 18,
+      "input_tokens": 15,
+      "input_token_details": {
+        "text_tokens": 0,
+        "audio_tokens": 15
+      },
+      "output_tokens": 3
+    }
+  },
+  "processing": {
+    "prefix": "Standard assets:audio mono AAC 44100 Hz, loudnorm with no leading silence removal for single-character prefix; script restored after processing.",
+    "suffix": "Whole-fragment TTS regeneration at speed 0.8; standard assets:audio.",
+    "alignment": "Standard assets:align:ai with simplified/traditional equivalences and prefix vocabulary context; script restored after extraction."
+  }
+}
