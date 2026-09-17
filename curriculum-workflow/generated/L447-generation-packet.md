@@ -3426,8 +3426,12 @@ Teacher-approved records below are authoritative for this package. Production st
     }
   ],
   "productionQa": {
-    "method": "Final local asset, transcript, timing, style/cast, and package checks; pre-merge browser QA pending pushed preview",
-    "result": "LOCAL PASS; browser QA pending initial package push"
+    "method": "Browser QA using the permanent lesson-asset-review page in Chrome",
+    "url": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L447&ref=571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec",
+    "reviewedAssetCommit": "571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec",
+    "scope": "5 sentence cards, charAudio, G02 prefix and suffix, and all 3 G05 options; 11 playback controls total",
+    "result": "PASS: page loaded 5 sentence cards and 6 other audio entries with zero repair flags; every control entered playing state and returned to play state through media ended",
+    "timingNote": "Sentence and G02 charTimings are stored and mechanically checked; browser playback confirms every final referenced media file loads and ends."
   }
 }
 ```
@@ -3441,4 +3445,5 @@ Teacher-approved records below are authoritative for this package. Production st
 - G02 prefix/suffix both have final charTimings and exclude the target 拍.
 - Ten final audio files passed exact normalized-Han transcript QA; G05 wrong-option mean-volume spread is 0.8 dB.
 - Five final WebPs passed per-image style/cast/semantic review. S04 first draft was rejected for photorealistic drift and regenerated; rejected draft is not included.
-- Browser preview QA will be recorded against the pushed asset commit before final handoff.
+- Chrome browser preview QA PASS at `571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec`: 5 sentence cards, 6 other audio entries, zero repair flags, and all 11 controls entered playing state then returned after media ended.
+- Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L447&ref=571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec

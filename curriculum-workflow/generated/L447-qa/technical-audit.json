@@ -160,8 +160,13 @@
     ]
   },
   "browserQa": {
-    "status": "pending-pre-merge-preview",
-    "note": "Will be recorded against the pushed package commit before final handoff."
+    "status": "PASS",
+    "method": "Browser QA using the permanent lesson-asset-review page in Chrome",
+    "url": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L447&ref=571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec",
+    "reviewedAssetCommit": "571b49f61a0ec0ad1aaefa9b26b317cf8707a3ec",
+    "scope": "5 sentence cards, charAudio, G02 prefix and suffix, and all 3 G05 options; 11 playback controls total",
+    "result": "PASS: page loaded 5 sentence cards and 6 other audio entries with zero repair flags; every control entered playing state and returned to play state through media ended",
+    "timingNote": "Sentence and G02 charTimings are stored and mechanically checked; browser playback confirms every final referenced media file loads and ends."
   },
   "releaseBlockers": [
     "Contiguous L439-L446; text dependencies L442-L446"
