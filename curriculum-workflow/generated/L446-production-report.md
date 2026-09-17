@@ -38,7 +38,7 @@ built-in imagegen 生成；完整 final prompts 保存在 request/draft/packet�
 - 標記：L446-S04 audio「聲音兩個字發音不對，變成審音」。
 - 僅重製完整 L446-S04 句音；G05 正確選項沿用同一修復檔，其他圖片及音訊未更動。
 - 三個候選均逐一檢查；比較結果選用 candidate 3。final M4A 聽音檢查辨識為「聲音」，確認「聲」ㄕㄥ一聲且保留完整 ㄥ 韻尾，「音」ㄧㄣ一聲，沒有審音／省音。Whisper 逐字轉錄吻合，timings 已重新產生。
-- 技術檢查不取代老師人工複聽；新 commit 仍需老師確認。
+- 老師已在修復資產 commit `5c49a2ca19ad82e71390eaf82ce1650bac27ca8e` 人工複聽並確認「已经正确了。」；S04 修復驗收 PASS。
 
 ## Browser QA：範圍與限制
 

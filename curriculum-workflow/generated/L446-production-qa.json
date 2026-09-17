@@ -30,7 +30,7 @@
     "audioDecode": "PASS all 10",
     "imageStyleCast": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
     "browserQA": "Local isolated Vite fixture; base prerequisites were seeded in memory and provisional sentence zhuyin supplied only in the fixture. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 音 cards plus 樂、這、個 distractors; all three 音 cards were selected, 已找到 3/3 and 全部找到了 appeared. Stage 3 played all five sentence buttons through ended and displayed 句子都聽完了. Sentence zhuyin overrides rendered 樂 as ㄩㄝˋ in S01/S02 and 傳 as ㄔㄨㄢˊ in S05. At 390×844, G01 音 was selected correctly; G02 displayed approved S01 with 音 at the correct index and was skipped at the physical microphone step; G03 音 was selected correctly; G04 操作機器 was ordered correctly; all three G05 reader buttons were activated. Browser console returned no warnings or errors. Because L445 is not integrated, the Stage 2 distractor 樂 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, recording/ding/post-record sequence, final G05 selection, reward walkthrough and teacher subjective review remain unperformed.",
-    "teacherMarkedAudioRepair": "L446-S04 regenerated; final technical checks PASS; teacher re-review pending",
+    "teacherMarkedAudioRepair": "PASS: L446-S04 regenerated and teacher manually confirmed the repaired asset is correct",
     "g05MeanVolumeSpread": "1.1 dB PASS"
   },
   "pronunciation": {
@@ -260,6 +260,9 @@
       "explanation": "聲的發音是第一聲，完整的ㄕㄥ音尾，音是第一聲ㄧㄣ。沒有出現審音或省音的情況，發音清晰準確。",
       "finalSyllableAudible": true
     },
-    "teacherReReviewRequired": true
+    "teacherReReviewRequired": false,
+    "teacherReReviewResult": "PASS",
+    "teacherReReviewAssetCommit": "5c49a2ca19ad82e71390eaf82ce1650bac27ca8e",
+    "teacherFeedback": "已经正确了。"
   }
 }

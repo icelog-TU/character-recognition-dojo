@@ -1011,7 +1011,8 @@
     "L",
     "8",
     "y",
-    "Teacher review at asset commit be84c26b5d1c27601c79751621d33f41bb2f0904 marked L446-S04 audio because 聲音 sounded like 審音. Production regenerated only L446-S04 (also reused by the G05 correct option), selected candidate 3 after strict comparative review, and verified 聲 ㄕㄥ first tone with a full ㄥ coda followed by 音 ㄧㄣ first tone. Teacher re-review is required on the new immutable repair commit."
+    "Teacher review at asset commit be84c26b5d1c27601c79751621d33f41bb2f0904 marked L446-S04 audio because 聲音 sounded like 審音. Production regenerated only L446-S04 (also reused by the G05 correct option), selected candidate 3 after strict comparative review, and verified 聲 ㄕㄥ first tone with a full ㄥ coda followed by 音 ㄧㄣ first tone. Teacher re-review is required on the new immutable repair commit.",
+    "Teacher manually re-listened to repaired L446-S04 at asset commit 5c49a2ca19ad82e71390eaf82ce1650bac27ca8e and confirmed: 已经正确了。 Teacher re-review PASS."
   ],
   "approvedSentences": [
     {
@@ -1470,6 +1471,6 @@
     "audioPipeline": "Repo OpenAI gpt-4o-mini-tts coral; final assets are mono AAC 44100 Hz. G02 prefix and suffix were generated independently from exact text. G05 wrong choices were generated as exact whole sentences. No syllable splicing. Trailing silence was trimmed only after measured speech with about 250ms retained. Final M4A alignment used whisper-1; waveform correction is recorded in the alignment report.",
     "timingReview": "Technical waveform review: all nine timed clips have 80–900ms spans, ordered and nonoverlapping, with final spans ending before retained tail silence. G05 wrong-two 畫面 1ms Whisper span was split within its continuous word interval. This is not human synchronization QA.",
     "pronunciation": "AI gpt-audio auditory checks PASS on all 10 final clips. The repaired final L446-S04 specifically passes 聲 ㄕㄥ first tone with full ㄥ coda + 音 ㄧㄣ first tone and no 審音/省音 resemblance. This technical check does not replace teacher re-review.",
-    "audioRepair": "Teacher review at asset commit be84c26b5d1c27601c79751621d33f41bb2f0904 marked L446-S04 audio because 聲音 sounded like 審音. Production regenerated only L446-S04 (also reused by the G05 correct option), selected candidate 3 after strict comparative review, and verified 聲 ㄕㄥ first tone with a full ㄥ coda followed by 音 ㄧㄣ first tone. Teacher re-review is required on the new immutable repair commit."
+    "audioRepair": "Teacher review at asset commit be84c26b5d1c27601c79751621d33f41bb2f0904 marked L446-S04 audio because 聲音 sounded like 審音. Production regenerated only L446-S04 (also reused by the G05 correct option), selected candidate 3 after strict comparative review, and verified 聲 ㄕㄥ first tone with a full ㄥ coda followed by 音 ㄧㄣ first tone. Teacher manually re-listened to repaired L446-S04 at asset commit 5c49a2ca19ad82e71390eaf82ce1650bac27ca8e and confirmed: 已经正确了。 Teacher re-review PASS."
   }
 }

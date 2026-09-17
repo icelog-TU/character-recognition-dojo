@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L446 | 音 | dependency-blocked-asset-complete | Production E | codex/l446-complete-package @ 5c49a2ca | L439, L440, L441, L442, L443, L444, L445 | 賽 機 操 器 樂 | curriculum-workflow/lesson-requests/L446.json; curriculum-workflow/generated/L446-generation-packet.md; curriculum-workflow/drafts/L446-draft.json | public/assets/lessons/L446/; curriculum-workflow/audio-inbox/L446/ | Complete package: 5 images, 10 audio, timings and QA reports. Teacher-marked S04 聲音→審音 issue repaired; new teacher re-review required. Strict package intake PASS. Release requires ordered L439-L445. Production package only; do not merge main. |
+| L446 | 音 | dependency-blocked-asset-complete | Production E | codex/l446-complete-package @ 5c49a2ca | L439, L440, L441, L442, L443, L444, L445 | 賽 機 操 器 樂 | curriculum-workflow/lesson-requests/L446.json; curriculum-workflow/generated/L446-generation-packet.md; curriculum-workflow/drafts/L446-draft.json | public/assets/lessons/L446/; curriculum-workflow/audio-inbox/L446/ | Complete package: 5 images, 10 audio, timings and QA reports. Teacher-marked S04 聲音→審音 issue repaired; teacher re-review PASS at 5c49a2ca. Strict package intake PASS. Release requires ordered L439-L445. Production package only; do not merge main. |
 
 ## Status Values
 
