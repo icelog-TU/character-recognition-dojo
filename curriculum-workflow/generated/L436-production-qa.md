@@ -4,7 +4,7 @@ Package status: dependency-blocked-asset-complete.
 
 Source main: f4bc071d4d14a15bd0e2927a710f197110da6789. Formal curriculum L001–L420, latest 教, 424 learned characters. Locked allowedChars expands to 431 with 隊、由、意、願、互、助 and new 補. Five exact teacher-approved sentences, Han-only spokenText, displayLines and canonical games are preserved. Counts 9/11/12/9/10; coverage 補4、助2、互2、願2、意2、由1. Text, allowed-character, line-length and zero-based game-index audits PASS. Abandoned 禮 draft is excluded; L437 is excluded.
 
-Recorded build dependencies are ordinary lessons L421–L435, vocabulary lessons L424 and L431–L435, R051/R052 after L420, and R053/R054 after L435. A final fetch found `origin/main` at `72b61a61` with L421–L435 and R051/R052 integrated. The unresolved Release blockers are now only R053/R054. Both review pairs remain excluded from this package. Shared production JSON, planner export and curriculum ledger integration remain Release-owned.
+Recorded build dependencies are ordinary lessons L421–L435, vocabulary lessons L424 and L431–L435, R051/R052 after L420, and R053/R054 after L435. A final fetch found `origin/main` at `72b61a61` with L421–L435 and R051/R052 integrated. The remaining Release blockers are now only R053/R054. Both review pairs remain excluded from this package. Shared production JSON, planner export and curriculum ledger integration remain Release-owned.
 
 ## Final image checks
 
