@@ -4,7 +4,7 @@ Package status: dependency-blocked-asset-complete.
 
 Source main: f4bc071d4d14a15bd0e2927a710f197110da6789. Formal curriculum L001–L420, latest 教, 424 learned characters. Locked allowedChars expands to 431 with 隊、由、意、願、互、助 and new 補. Five exact teacher-approved sentences, Han-only spokenText, displayLines and canonical games are preserved. Counts 9/11/12/9/10; coverage 補4、助2、互2、願2、意2、由1. Text, allowed-character, line-length and zero-based game-index audits PASS. Abandoned 禮 draft is excluded; L437 is excluded.
 
-Release dependencies: ordinary lessons L421–L435 in playable order; vocabulary dependencies L424 and L431–L435; R051/R052 after L420; R053/R054 after L435. Both review pairs are excluded from this package. Shared production JSON, planner export and curriculum ledger integration remain Release-owned.
+Recorded build dependencies are ordinary lessons L421–L435, vocabulary lessons L424 and L431–L435, R051/R052 after L420, and R053/R054 after L435. A final fetch found `origin/main` at `72b61a61` with L421–L435 and R051/R052 integrated. The unresolved Release blockers are now only R053/R054. Both review pairs remain excluded from this package. Shared production JSON, planner export and curriculum ledger integration remain Release-owned.
 
 ## Final image checks
 
@@ -41,6 +41,6 @@ Physical microphone capture, the recording bell and child-voice stitched replay 
 
 ## Validation
 
-`tools:check` PASS; `ai:check` PASS; lesson-local package audit PASS; strict asset formats PASS with zero warnings; production assets PASS. Final package media is about 1.16 MiB. Asset commit `b3e7d82c` was pushed and `curriculum:package-intake -- --unit L436 --ref origin/codex/l436-complete-package` passed with 5 images, 10 audio files and canonical Stage 4. The final evidence-only tip is rechecked after push. Main integration remains blocked only by the listed playable-order dependencies and review milestones.
+`tools:check` PASS; `ai:check` PASS; lesson-local package audit PASS; strict asset formats PASS with zero warnings; production assets PASS. Final package media is about 1.16 MiB. Asset commit `b3e7d82c` was pushed and `curriculum:package-intake -- --unit L436 --ref origin/codex/l436-complete-package` passed with 5 images, 10 audio files and canonical Stage 4. The final evidence-only tip is rechecked after push. At final fetch, main integration remains blocked only by R053/R054.
 
 Post-merge teacher review entry: https://icelog-tu.github.io/character-recognition-dojo/lesson-asset-review.html?unit=L436&ref=main . This package is not yet in the main review queue.
