@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L448 | 歌 | claimed | Production A (Remote) | codex/l448-complete-package | L443操; L444器; L445樂; L446音; L447拍; ordered L439-L447 | 操器樂音拍 | curriculum-workflow/lesson-requests/L448.json; curriculum-workflow/generated/L448-generation-packet.md; curriculum-workflow/drafts/L448-draft.json | curriculum-workflow/audio-inbox/L448/; public/assets/lessons/L448/ | Formal handoff accepted. Base b594d6a9: L001-L438, latest習,442 learned Han. Allowed448. L439-L447 remain Release blockers. |
 
 ## Status Values
 
