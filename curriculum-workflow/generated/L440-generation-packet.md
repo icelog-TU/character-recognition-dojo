@@ -2341,6 +2341,7 @@ AI 必須把這份課程序列視為鎖定邊界。
 
 ## Final approved records
 
+```json
 {
   "id": "L440",
   "order": 440,
@@ -2355,7 +2356,7 @@ AI 必須把這份課程序列視為鎖定邊界。
     "運": "/assets/lessons/L440/audio/char-u904b.m4a"
   },
   "requiredRounds": 5,
-  "packageStatus": "request-ready",
+  "packageStatus": "dependency-blocked-asset-complete",
   "dependsOnLessons": [
     "L436",
     "L437",
@@ -2849,8 +2850,59 @@ AI 必須把這份課程序列視為鎖定邊界。
       "imageSrc": "/assets/lessons/L440/images/L440-S01.webp",
       "audio": {
         "src": "/assets/lessons/L440/audio/L440-S01.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 3360,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 1020
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1020,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1300,
+            "endMs": 1600
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1600,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1960,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2240,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2480,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2740,
+            "endMs": 3110
+          }
+        ]
       }
     },
     {
@@ -2869,8 +2921,69 @@ AI 必須把這份課程序列視為鎖定邊界。
       "imageSrc": "/assets/lessons/L440/images/L440-S02.webp",
       "audio": {
         "src": "/assets/lessons/L440/audio/L440-S02.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 5250,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 560
+          },
+          {
+            "charIndex": 1,
+            "startMs": 560,
+            "endMs": 1200
+          },
+          {
+            "charIndex": 2,
+            "startMs": 1200,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1720,
+            "endMs": 2000
+          },
+          {
+            "charIndex": 4,
+            "startMs": 2000,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 5,
+            "startMs": 2320,
+            "endMs": 2700
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2700,
+            "endMs": 3320
+          },
+          {
+            "charIndex": 7,
+            "startMs": 3320,
+            "endMs": 4000
+          },
+          {
+            "charIndex": 8,
+            "startMs": 4000,
+            "endMs": 4080
+          },
+          {
+            "charIndex": 9,
+            "startMs": 4080,
+            "endMs": 4300
+          },
+          {
+            "charIndex": 10,
+            "startMs": 4300,
+            "endMs": 4660
+          },
+          {
+            "charIndex": 11,
+            "startMs": 4660,
+            "endMs": 5000
+          }
+        ]
       }
     },
     {
@@ -2889,8 +3002,72 @@ AI 必須把這份課程序列視為鎖定邊界。
       "imageSrc": "/assets/lessons/L440/images/L440-S03.webp",
       "audio": {
         "src": "/assets/lessons/L440/audio/L440-S03.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 4110,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 660
+          },
+          {
+            "charIndex": 2,
+            "startMs": 660,
+            "endMs": 900
+          },
+          {
+            "charIndex": 3,
+            "startMs": 900,
+            "endMs": 1240
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1240,
+            "endMs": 1420
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1420,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2400,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2780,
+            "endMs": 2960
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2960,
+            "endMs": 3180
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3180,
+            "endMs": 3420
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3420,
+            "endMs": 3620
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3620,
+            "endMs": 3860
+          }
+        ]
+      },
+      "zhuyinOverrides": {
+        "4": "ㄉㄥ"
       }
     },
     {
@@ -2908,8 +3085,59 @@ AI 必須把這份課程序列視為鎖定邊界。
       "imageSrc": "/assets/lessons/L440/images/L440-S04.webp",
       "audio": {
         "src": "/assets/lessons/L440/audio/L440-S04.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 3860,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 640
+          },
+          {
+            "charIndex": 2,
+            "startMs": 640,
+            "endMs": 920
+          },
+          {
+            "charIndex": 3,
+            "startMs": 920,
+            "endMs": 1620
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1620,
+            "endMs": 1960
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1960,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2240,
+            "endMs": 2520
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2520,
+            "endMs": 2860
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2860,
+            "endMs": 3300
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3300,
+            "endMs": 3610
+          }
+        ]
       }
     },
     {
@@ -2923,12 +3151,48 @@ AI 必須把這份課程序列視為鎖定邊界。
       "focusChar": "助",
       "imageNotes": "運動場的兒童跳高練習區，一位 generic 同學正朝低矮跳高橫桿助跑，身體略向前傾，尚未起跳；橫桿後方有厚軟墊，generic 體育教練站在側邊照看。\n助跑動作是畫面主體，橫桿和軟墊清楚交代跑向哪裡。不可只畫成一般跑步、跨欄或已經在空中跳過橫桿。不需高度數字。",
       "approved": true,
-      "imagePrompt": "Use case: illustration-story. Square child-facing lesson illustration. Match all L058-S01–S05 style-only anchors and refined L115-S01/S02, L118-S02, L119-S01, L128-S03: warm fine pencil-and-watercolor linework, textured painted detail, bright natural Taiwan daylight, detailed clean environments, soft expressive preschool faces, safe realistic actions, phone-readable focal action and safe margins. Match family anchors L154-S01, L162-S04, L163-S02 when the protagonist family appears. Never copy L058 people. Protagonist girl: preschool age, short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes. Mother: shoulder-length dark hair, cream cardigan, blue skirt. Generic adults and classmates remain distinct from recurring cast. No readable text, letters, digits, labels, logos, watermark, signs, jersey numbers or license plate characters. 運動場的兒童跳高練習區，一位 generic 同學正朝低矮跳高橫桿助跑，身體略向前傾，尚未起跳；橫桿後方有厚軟墊，generic 體育教練站在側邊照看。\n助跑動作是畫面主體，橫桿和軟墊清楚交代跑向哪裡。不可只畫成一般跑步、跨欄或已經在空中跳過橫桿。不需高度數字。",
+      "imagePrompt": "Use case: illustration-story. Square child-facing lesson illustration. Match all L058-S01–S05 style-only anchors and refined L115-S01/S02, L118-S02, L119-S01, L128-S03: warm fine pencil-and-watercolor linework, textured painted detail, bright natural Taiwan daylight, detailed clean environments, soft expressive preschool faces, safe realistic actions, phone-readable focal action and safe margins. Match family anchors L154-S01, L162-S04, L163-S02 when the protagonist family appears. Never copy L058 people. Protagonist girl: preschool age, short dark bob, pink hairclip, pink cardigan, navy skirt, pink shoes. Mother: shoulder-length dark hair, cream cardigan, blue skirt. Generic adults and classmates remain distinct from recurring cast. No readable text, letters, digits, labels, logos, watermark, signs, jersey numbers or license plate characters. 運動場的兒童跳高練習區，一位 generic 同學正朝低矮跳高橫桿助跑，身體略向前傾，尚未起跳；橫桿後方有厚軟墊，generic 體育教練站在側邊照看。\n助跑動作是畫面主體，橫桿和軟墊清楚交代跑向哪裡。不可只畫成一般跑步、跨欄或已經在空中跳過橫桿。不需高度數字。 Final accepted edit: show exactly one generic bowl-cut boy in a teal sports kit running toward the low high-jump bar, with one coach at the side and a thick landing mat behind the bar. Remove all extra background children. Keep the child visually distinct from the recurring protagonist cast.",
       "imageSrc": "/assets/lessons/L440/images/L440-S05.webp",
       "audio": {
         "src": "/assets/lessons/L440/audio/L440-S05.m4a",
-        "durationMs": 0,
-        "charTimings": []
+        "durationMs": 2870,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 440
+          },
+          {
+            "charIndex": 1,
+            "startMs": 440,
+            "endMs": 800
+          },
+          {
+            "charIndex": 2,
+            "startMs": 800,
+            "endMs": 1180
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1500,
+            "endMs": 1660
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1660,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1980,
+            "endMs": 2260
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2260,
+            "endMs": 2620
+          }
+        ]
       }
     }
   ],
@@ -2952,7 +3216,74 @@ AI 必須把這份課程序列視為鎖定邊界。
         "prefixText": "卡車",
         "suffixText": "送木頭用來修補木橋",
         "prefixSrc": "/assets/lessons/L440/audio/L440-G02-prefix.m4a",
-        "suffixSrc": "/assets/lessons/L440/audio/L440-G02-suffix.m4a"
+        "suffixSrc": "/assets/lessons/L440/audio/L440-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L440/audio/L440-G02-prefix.m4a",
+          "durationMs": 1250,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 560
+            },
+            {
+              "charIndex": 1,
+              "startMs": 560,
+              "endMs": 1000
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L440/audio/L440-G02-suffix.m4a",
+          "durationMs": 4420,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 640
+            },
+            {
+              "charIndex": 1,
+              "startMs": 640,
+              "endMs": 1100
+            },
+            {
+              "charIndex": 2,
+              "startMs": 1100,
+              "endMs": 1500
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1500,
+              "endMs": 2200
+            },
+            {
+              "charIndex": 4,
+              "startMs": 2200,
+              "endMs": 2800
+            },
+            {
+              "charIndex": 5,
+              "startMs": 2800,
+              "endMs": 2960
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2960,
+              "endMs": 3340
+            },
+            {
+              "charIndex": 7,
+              "startMs": 3340,
+              "endMs": 3780
+            },
+            {
+              "charIndex": 8,
+              "startMs": 3780,
+              "endMs": 4170
+            }
+          ]
+        }
       }
     },
     {
@@ -3036,23 +3367,160 @@ AI 必須把這份課程序列視為鎖定邊界。
           "text": "跳高前，要先助跑。",
           "spokenText": "跳高前要先助跑",
           "correct": true,
-          "audioSrc": "/assets/lessons/L440/audio/L440-S05.m4a"
+          "audioSrc": "/assets/lessons/L440/audio/L440-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L440/audio/L440-S05.m4a",
+            "durationMs": 2870,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 440
+              },
+              {
+                "charIndex": 1,
+                "startMs": 440,
+                "endMs": 800
+              },
+              {
+                "charIndex": 2,
+                "startMs": 800,
+                "endMs": 1180
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1500,
+                "endMs": 1660
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1660,
+                "endMs": 1980
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1980,
+                "endMs": 2260
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2260,
+                "endMs": 2620
+              }
+            ]
+          }
         },
         {
           "id": "L440-G05-O2",
           "text": "跳高前，要先起跑。",
           "spokenText": "跳高前要先起跑",
           "correct": false,
-          "audioSrc": "/assets/lessons/L440/audio/L440-G05-wrong-one.m4a"
+          "audioSrc": "/assets/lessons/L440/audio/L440-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L440/audio/L440-G05-wrong-one.m4a",
+            "durationMs": 3130,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 720
+              },
+              {
+                "charIndex": 2,
+                "startMs": 720,
+                "endMs": 1120
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1120,
+                "endMs": 1920
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1920,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2300,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2600,
+                "endMs": 2880
+              }
+            ]
+          }
         },
         {
           "id": "L440-G05-O3",
           "text": "跳高前，要先快跑。",
           "spokenText": "跳高前要先快跑",
           "correct": false,
-          "audioSrc": "/assets/lessons/L440/audio/L440-G05-wrong-two.m4a"
+          "audioSrc": "/assets/lessons/L440/audio/L440-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L440/audio/L440-G05-wrong-two.m4a",
+            "durationMs": 3290,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 480
+              },
+              {
+                "charIndex": 1,
+                "startMs": 480,
+                "endMs": 840
+              },
+              {
+                "charIndex": 2,
+                "startMs": 840,
+                "endMs": 1220
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1780,
+                "endMs": 2000
+              },
+              {
+                "charIndex": 4,
+                "startMs": 2000,
+                "endMs": 2300
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2300,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2600,
+                "endMs": 3040
+              }
+            ]
+          }
         }
       ]
     }
-  ]
+  ],
+  "productionQA": {
+    "imageStyle": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
+    "browserQA": "Local isolated Vite fixture; base prerequisite completion and provisional sentence zhuyin were supplied only in memory. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 運 cards plus 教、叫、練 distractors; all three 運 cards were selected and the UI displayed 全部找到了. Stage 3 played all five sentence buttons through ended, re-enabled each button, displayed 句子都聽完了 and passed. At 390×844, G01 運 was selected correctly; G02 displayed the approved S02 with 運 at the correct index and the recording prompt; G03 運 was selected correctly; G04 人來修理 was ordered correctly; all three G05 reader buttons were activated. Browser inspection caught the base-data 燈 display ㄉㄥㄥ and the final record now supplies zhuyinOverrides index 4 = ㄉㄥ. Because L439 is not yet integrated, 練 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser tool has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, phone recording/ding/post-record sequence, final reward walkthrough and teacher subjective review remain unperformed.",
+    "audioPipeline": "Repo OpenAI gpt-4o-mini-tts coral; final assets are mono AAC 44100 Hz. G02 prefix and suffix were generated independently; suffix was regenerated as a whole to clarify 送 fourth tone. Standalone 運 was regenerated as a whole until the final fourth tone passed. G05 wrong-one was checked again as 起 third tone. No syllable splicing. Trailing silence was trimmed only after measured speech with about 250 ms retained. Final M4A alignment used whisper-1; waveform corrections are recorded in the alignment report.",
+    "timingReview": "Technical waveform review: all nine timed clips have 80–900 ms spans, ordered and nonoverlapping, with final spans ending before retained tail silence. S03 燈、壞、了、工、人、來 and sentence-final spans were corrected from waveform inspection. This is not human synchronization QA.",
+    "pronunciation": "AI gpt-audio auditory checks PASS on all 10 final clips, including targeted 運 ㄩㄣˋ, 送 ㄙㄨㄥˋ and 起 ㄑㄧˇ checks. This is not human acceptance."
+  }
 }
+```
+
+Latest fetch origin/main 5ab2118f has integrated R053/R054. Release still requires contiguous ordered integration of L436–L439 before L440; these are Release blockers, not missing Production assets.
+
+## Browser QA
+
+Local isolated Vite fixture; base prerequisite completion and provisional sentence zhuyin were supplied only in memory. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 運 cards plus 教、叫、練 distractors; all three 運 cards were selected and the UI displayed 全部找到了. Stage 3 played all five sentence buttons through ended, re-enabled each button, displayed 句子都聽完了 and passed. At 390×844, G01 運 was selected correctly; G02 displayed the approved S02 with 運 at the correct index and the recording prompt; G03 運 was selected correctly; G04 人來修理 was ordered correctly; all three G05 reader buttons were activated. Browser inspection caught the base-data 燈 display ㄉㄥㄥ and the final record now supplies zhuyinOverrides index 4 = ㄉㄥ. Because L439 is not yet integrated, 練 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser tool has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, phone recording/ding/post-record sequence, final reward walkthrough and teacher subjective review remain unperformed.
