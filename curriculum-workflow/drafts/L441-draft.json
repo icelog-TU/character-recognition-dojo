@@ -493,7 +493,7 @@
     "R053/R054 after L435 before L436",
     "Contiguous numbered predecessors L436-L440"
   ],
-  "teacherNotes": "Teacher-approved final handoff. S02 is 跑道正在修補, not the superseded 運動場正在修理. S04 is 減法運算 with blocks, not tutoring-class chess. No readable text or numeric image exception. L058 is style-only; recurring girl, father, mother, and home identities follow the latest visual-cast SOP. Release order blockers: R053/R054 and L436-L440. Production completed all 5 final WebP images, 10 OpenAI audio files, final AI alignment, sentence-tail checks, and lesson-local QA. Shared production JSON remains Release-owned.",
+  "teacherNotes": "Teacher-approved final handoff. S02 is 跑道正在修補, not the superseded 運動場正在修理. S04 is 減法運算 with blocks, not tutoring-class chess. No readable text or numeric image exception. L058 is style-only; recurring girl, father, mother, and home identities follow the latest visual-cast SOP. Release order blockers: R053/R054 and L436-L440. Production completed all 5 final WebP images, 10 OpenAI audio files, final AI alignment, sentence-tail checks, and lesson-local QA. Shared production JSON remains Release-owned. Production completed all 5 final WebP images, 10 OpenAI audio files, final AI alignment, sentence-tail checks, and lesson-local QA. Shared production JSON remains Release-owned.",
   "sentences": [
     {
       "id": "L441-S01",
@@ -900,7 +900,78 @@
         "prefixText": "球",
         "suffixText": "快到了我每天練習運球",
         "prefixSrc": "/assets/lessons/L441/audio/L441-G02-prefix.m4a",
-        "suffixSrc": "/assets/lessons/L441/audio/L441-G02-suffix.m4a"
+        "suffixSrc": "/assets/lessons/L441/audio/L441-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L441/audio/L441-G02-prefix.m4a",
+          "durationMs": 780,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 540
+            }
+          ],
+          "transcript": "球",
+          "tailMs": 240
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L441/audio/L441-G02-suffix.m4a",
+          "durationMs": 3340,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 360
+            },
+            {
+              "charIndex": 1,
+              "startMs": 360,
+              "endMs": 540
+            },
+            {
+              "charIndex": 2,
+              "startMs": 540,
+              "endMs": 720
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1240,
+              "endMs": 1440
+            },
+            {
+              "charIndex": 4,
+              "startMs": 1440,
+              "endMs": 1680
+            },
+            {
+              "charIndex": 5,
+              "startMs": 1680,
+              "endMs": 2020
+            },
+            {
+              "charIndex": 6,
+              "startMs": 2020,
+              "endMs": 2340
+            },
+            {
+              "charIndex": 7,
+              "startMs": 2340,
+              "endMs": 2620
+            },
+            {
+              "charIndex": 8,
+              "startMs": 2620,
+              "endMs": 2920
+            },
+            {
+              "charIndex": 9,
+              "startMs": 2920,
+              "endMs": 3140
+            }
+          ],
+          "transcript": "快到了!我每天練習運球!",
+          "tailMs": 200
+        }
       }
     },
     {
