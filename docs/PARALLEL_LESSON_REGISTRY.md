@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L449 | 唱 | ready-blocked-by-dependency | Production B | codex/l449-complete-package @ bb0719b0 | L444, L445, L446, L447, L448 | 器、樂、音、拍、歌 | `curriculum-workflow/lesson-requests/L449.json`; `curriculum-workflow/generated/L449-generation-packet.md`; `curriculum-workflow/drafts/L449-draft.json` | `public/assets/lessons/L449/` | Complete package: 5 WebP, 10 M4A, final sentence and Stage 4 AI alignment. Technical gates, immutable browser playback smoke test and image style-lock PASS. L439-L443 remain earlier Release order dependencies but are not used in lesson text. Release owns shared production state. |
+| L449 | 唱 | ready-blocked-by-dependency | Production B | codex/l449-complete-package @ 25f29990 | L444, L445, L446, L447, L448 | 器、樂、音、拍、歌 | `curriculum-workflow/lesson-requests/L449.json`; `curriculum-workflow/generated/L449-generation-packet.md`; `curriculum-workflow/drafts/L449-draft.json` | `public/assets/lessons/L449/` | Complete package: 5 WebP, 10 M4A, final sentence and Stage 4 AI alignment. Teacher-directed G02 prefix repair complete; technical gates, immutable browser playback smoke test and image style-lock PASS. L439-L443 remain earlier Release order dependencies but are not used in lesson text. Release owns shared production state. |
 
 ## Status Values
 
