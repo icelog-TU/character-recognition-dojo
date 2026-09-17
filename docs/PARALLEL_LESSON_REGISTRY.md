@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L441 | 賽 | claimed | Production F / parallel-f | codex/l441-complete-package | L436, L437, L438, L439, L440 | 補, 修, 習, 練, 運 | curriculum-workflow/lesson-requests/L441.json; curriculum-workflow/generated/L441-generation-packet.md; curriculum-workflow/drafts/L441-draft.json | public/assets/lessons/L441/; curriculum-workflow/audio-inbox/L441/ | Normal lesson package. Source boundary locked to origin/main 72b61a61 at L435 (439 learned chars); allowed ceiling adds provisional 補修習練運 and current 賽 (445 total). R053/R054 and L436-L440 remain Release-order blockers only. |
+| L441 | 賽 | dependency-blocked-asset-complete | Production F / parallel-f | codex/l441-complete-package | L436, L437, L438, L439, L440; R053/R054 after L435 | 補, 修, 習, 練, 運 | curriculum-workflow/lesson-requests/L441.json; curriculum-workflow/generated/L441-generation-packet.md; curriculum-workflow/drafts/L441-draft.json | public/assets/lessons/L441/; curriculum-workflow/audio-inbox/L441/ | Base locked to 72b61a61 at L435: 439 formal + 5 provisional + 賽 = 445 allowed chars. 5 WebP + 10 OpenAI M4A, final AI timings, Stage 4, style/cast and technical QA complete. Release integrates R053/R054 and L436-L440 first. |
 
 ## Status Values
 
