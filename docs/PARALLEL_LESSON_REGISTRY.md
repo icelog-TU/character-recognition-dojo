@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L442 | 機 | claimed | Production A (Remote) | codex/l442-complete-package | L437修; L438習; L439練; L440運; L441賽; ordered L436-L441 | 修習練運賽 | curriculum-workflow/lesson-requests/L442.json; curriculum-workflow/generated/L442-generation-packet.md; curriculum-workflow/drafts/L442-draft.json | curriculum-workflow/audio-inbox/L442/; public/assets/lessons/L442/ | Formal handoff accepted. Latest base 5ab2118f: L001-L435, latest助,439 learned Han; R053/R054 now merged. Allowed445. L436-L441 remain Release blockers. |
 
 ## Status Values
 
