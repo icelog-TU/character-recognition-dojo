@@ -1,0 +1,161 @@
+{
+  "unit": "L449",
+  "notes": "Technical AI generation, decode, loudness, transcription and timing evidence. Not a substitute for teacher subjective listening.",
+  "coverage": {
+    "唱": 3,
+    "歌": 2,
+    "拍": 2,
+    "音": 2,
+    "樂": 3,
+    "器": 1
+  },
+  "allowed": 448,
+  "assetBytes": 1260127,
+  "g05MeanSpreadDb": 1.8999999999999986,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L449/images/L449-S01.webp",
+      "bytes": 139544,
+      "sha256": "425f48430648b617fccc157f532d60df89f9014ddb4fee5bc4e8d6d459330c1a"
+    },
+    {
+      "path": "public/assets/lessons/L449/images/L449-S02.webp",
+      "bytes": 179384,
+      "sha256": "48e8e199d00726d32ef37893d22d3c7dff73bde4474d118d1f41f0bd301b5ab9"
+    },
+    {
+      "path": "public/assets/lessons/L449/images/L449-S03.webp",
+      "bytes": 177922,
+      "sha256": "567f689fe95909582b0a8b258d1e293aa9dfef83deb97627f28aec63944e975a"
+    },
+    {
+      "path": "public/assets/lessons/L449/images/L449-S04.webp",
+      "bytes": 173560,
+      "sha256": "7c6b927140cd45dac673bbe91b1f444b52ed6e0165655bed7ad99739df5e50a8"
+    },
+    {
+      "path": "public/assets/lessons/L449/images/L449-S05.webp",
+      "bytes": 169904,
+      "sha256": "ada049c475eece831a0ea8637d636e979dfa40e733d5c3733040532195a0725d"
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/char-u5531.m4a",
+      "bytes": 26713,
+      "sha256": "c111217bc8dc30cc17a568ec2fe80dd1f10994108b9e2a82c63e6bfa32ce648f",
+      "durationMs": 2229,
+      "meanDb": -20.5,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-G02-prefix.m4a",
+      "bytes": 40337,
+      "sha256": "932f10711173962aa4f29aaf5630eab4a7825d9ed6235fa28a9700e4d8feb3bd",
+      "durationMs": 3435,
+      "meanDb": -18.4,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-G02-suffix.m4a",
+      "bytes": 9458,
+      "sha256": "0e0203c5921b91915e0dbc42fc76180c6d40a1c4367d638747bc1f0497deb88d",
+      "durationMs": 793,
+      "meanDb": -22.4,
+      "maxDb": -8.5
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-G05-wrong-one.m4a",
+      "bytes": 45483,
+      "sha256": "0c05d3a1edbb72373431ddd2b01d425b219869a29446d1e06e93f2af7e59bb38",
+      "durationMs": 5418,
+      "meanDb": -20.4,
+      "maxDb": -2.9
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-G05-wrong-two.m4a",
+      "bytes": 59925,
+      "sha256": "37d134161a0582be77e6164e11b8a68212edd977841d061ba751f93f1a06ea77",
+      "durationMs": 5378,
+      "meanDb": -21,
+      "maxDb": -2.2
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S01.m4a",
+      "bytes": 44121,
+      "sha256": "57fcd64da53749b298b179fc6e041eb6755155878f27ae7494d148ce4e8d1764",
+      "durationMs": 3876,
+      "meanDb": -18.7,
+      "maxDb": -2.3
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S02.m4a",
+      "bytes": 41604,
+      "sha256": "a088573c4bb46d7bb07128b8fb526fb497008443700ad0ed73000fc17a8f94a0",
+      "durationMs": 3709,
+      "meanDb": -18.5,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S03.m4a",
+      "bytes": 48786,
+      "sha256": "781d8a05438b5c60c2b36680021c2fe8d0018e28bea5f394eedb1e6e5642c4ba",
+      "durationMs": 4320,
+      "meanDb": -18.8,
+      "maxDb": -2.1
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S04.m4a",
+      "bytes": 44192,
+      "sha256": "1b53186350ad3b79e61f5ae3948db62f6c9cf5f70f5cbd2120c6181e835af34f",
+      "durationMs": 3859,
+      "meanDb": -19.1,
+      "maxDb": -2.4
+    },
+    {
+      "path": "public/assets/lessons/L449/audio/L449-S05.m4a",
+      "bytes": 59194,
+      "sha256": "e211d01791ae9b80deadbb4f1a22e97ccb218fff8289a511f0f056d6d1e94d44",
+      "durationMs": 5121,
+      "meanDb": -19.9,
+      "maxDb": -2
+    }
+  ],
+  "charTranscript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 2.2200000286102295,
+    "text": "唱。",
+    "words": [
+      {
+        "word": "唱。",
+        "start": 0,
+        "end": 0.699999988079071
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 3
+    }
+  },
+  "suffixTranscript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 0.8100000023841858,
+    "text": "哥",
+    "words": [
+      {
+        "word": "哥",
+        "start": 0,
+        "end": 0.30000001192092896
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 1
+    }
+  },
+  "processing": {
+    "generation": "OpenAI gpt-4o-mini-tts, speed 0.9. Main clips coral. G02 prefix regenerated for complete final 邊; one-character suffix 歌 independently regenerated with nova for clear ㄍㄜ. Normal speech, never melodic singing. G05 choices generated as separate whole sentences.",
+    "conversion": "Repo assets:audio pipeline; mono AAC 44100 Hz and loudness normalization.",
+    "alignment": "Repo Whisper word alignment with simplified/traditional equivalences. 哥/歌 homophone normalization only for the G02 suffix. No speech splicing."
+  }
+}
