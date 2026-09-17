@@ -38,7 +38,7 @@
       "sentenceId": "L448-S05",
       "styleLock": "PASS",
       "cast": "PASS",
-      "scene": "The recurring mother hums gently at bedside and the recurring girl is already asleep under the blanket; no baby, book, phone or medical props.",
+      "scene": "The repaired image has a structurally coherent wooden single bed with aligned headboard, footboard, posts, level mattress and plausible bedding. The recurring mother sits on a clearly separate bedside chair and hums gently while the recurring girl is already asleep; no baby, book, phone or medical props.",
       "textOrNumbers": "None visible."
     }
   ],
@@ -86,7 +86,16 @@
     },
     "pronunciationChecks": {"歌":"ge1","S03樂器":"yue4 qi4","S04音樂":"yin1 yue4","S05著":"zhao2","G02Suffix著":"zhao2"}
   },
-  "mediaBytes": 1106934,
+  "mediaBytes": 1102522,
+  "teacherImageRepair": {
+    "requested": "L448-S05 bed structure was malformed around the seated mother.",
+    "result": "Replaced the final S05 WebP with a regenerated composition using a coherent wooden bed and a visibly separate bedside chair while preserving the mother, sleeping girl, nighttime scene and established style.",
+    "finalImage": "public/assets/lessons/L448/images/L448-S05.webp",
+    "dimensions": "1024x1024",
+    "bytes": 119590,
+    "sha256": "3072d21f2a3a7e9d0155ac5b4aa1b7f0f74a4117a414f76d88fa0a2fc333bcc6",
+    "visualQA": "PASS: straight aligned rails/posts, coherent mattress and bedding, separate chair with visible legs, correct cast/story, no text or numbers."
+  },
   "releaseDependencies": {"orderedLessonsThrough":"L447","blockers":["L439","L440","L441","L442","L443","L444","L445","L446","L447"]},
   "validation": {
     "startupToolsAiAuditState": "PASS",
