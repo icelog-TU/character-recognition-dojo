@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L436 | 補 | claimed | Production C reassigned; parallel-a | codex/l436-complete-package | L424, L431, L432, L433, L434, L435; contiguous L421-L435; R051/R052 after L420; R053/R054 after L435 | 隊、由、意、願、互、助 | curriculum-workflow/lesson-requests/L436.json; curriculum-workflow/generated/L436-generation-packet.md; curriculum-workflow/drafts/L436-draft.json | public/assets/lessons/L436/; curriculum-workflow/audio-inbox/L436/ | Teacher-approved five sentences; source main f4bc071d, locked 431 allowed chars. Dependencies block Release only. Abandoned 禮 draft excluded. |
 
 ## Status Values
 
