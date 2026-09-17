@@ -54,4 +54,7 @@ After Release merges and deploys,teacher review entry: https://icelog-tu.github.
 
 ## Upload checkpoint
 
-Pushed asset commit and strict package-intake result will be recorded after upload.
+- Asset package commit: `29b912e1eba08edc2bc3252d15b1d4fb8faa4c9f`, pushed to `origin/codex/l442-complete-package`.
+- Strict intake command: `npm run curriculum:package-intake -- --unit L442 --ref origin/codex/l442-complete-package --strict`.
+- Strict intake result after asset upload: PASS; 5 images, 10 audio files, canonical five Stage 4 game types, no blocking package-status defects.
+- Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L442&ref=29b912e1eba08edc2bc3252d15b1d4fb8faa4c9f . This is a pre-merge package preview, not the main formal review queue.
