@@ -1,0 +1,247 @@
+{
+  "unit": "L440",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "baseMainSha": "72b61a615628b25a2c78b63c9c400f9adcca946f",
+  "lockedAllowedChars": 444,
+  "coverage": {
+    "運": 4,
+    "練": 2,
+    "習": 2,
+    "修": 2,
+    "補": 2,
+    "助": 1
+  },
+  "checks": {
+    "requestDraftPacket": "PASS",
+    "allowedCharacters": "PASS",
+    "hanCounts": [
+      10,
+      12,
+      12,
+      10,
+      7
+    ],
+    "stage4Index": "PASS",
+    "displayLines": "PASS",
+    "productionAssetsLessonLocal": "PASS after L440 Package Rescue audio replacement.",
+    "strictFormatsLessonLocal": "PASS, zero warnings",
+    "audioDecode": "PASS all 10; repaired standalone 運 and S05 are mono AAC 44100 Hz and teacher accepted.",
+    "imageStyleCast": "S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS",
+    "browserQA": "Local isolated Vite fixture; base prerequisite completion and provisional sentence zhuyin were supplied only in memory. Stage 1 character playback ended and passed. Stage 2 displayed exactly three 運 cards plus 教、叫、練 distractors; all three 運 cards were selected and the UI displayed 全部找到了. Stage 3 played all five sentence buttons through ended, re-enabled each button, displayed 句子都聽完了 and passed. At 390×844, G01 運 was selected correctly; G02 displayed the approved S02 with 運 at the correct index and the recording prompt; G03 運 was selected correctly; G04 人來修理 was ordered correctly; all three G05 reader buttons were activated. Browser inspection caught the base-data 燈 display ㄉㄥㄥ and the final record now supplies zhuyinOverrides index 4 = ㄉㄥ. Because L439 is not yet integrated, 練 had no global zhuyin in the isolated fixture; Release must recheck after dependencies merge. The remote browser tool has no audible computer-output return or physical-phone microphone. Human continuous listening, syllable-highlight synchronization, phone recording/ding/post-record sequence, final reward walkthrough and teacher subjective review remain unperformed."
+  },
+  "pronunciation": {
+    "kind": "Mixed evidence: teacher playback acceptance for repaired standalone 運 and S05/G05-O1; existing AI-only checks for the other eight pending review items.",
+    "results": [
+      {
+        "name": "char-u904b",
+        "heardText": "運 ㄩㄣˋ",
+        "pronunciationResult": "TEACHER PASS",
+        "explanation": "Teacher listened to the repaired exact hash and confirmed the pronunciation is correct.",
+        "finalSyllableAudible": true,
+        "teacherAcceptedSha256": "b2a4220381507b44ae5ab6949c1244f4b673630dd78229fbaba4812eabf41868"
+      },
+      {
+        "name": "L440-S01",
+        "heardText": "教練叫我練習原地運球",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的語句與預期完全相符，每個音節清晰，聲調準確，沒有明顯錯誤或遺漏。",
+        "finalSyllableAudible": "運球"
+      },
+      {
+        "name": "L440-S02",
+        "heardText": "卡車運送木頭用來修補木橋",
+        "pronunciationResult": "PASS",
+        "explanation": "所有音節發音清晰，聲調準確，與預期文本完全一致，沒有遺漏或錯誤之處。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L440-S03",
+        "heardText": "運動場的燈壞了工人來修理",
+        "pronunciationResult": "PASS",
+        "explanation": "所有字詞的聲調和音節都清晰可辨，和預期內容完全一致。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L440-S04",
+        "heardText": "補習班就在運動場對面",
+        "pronunciationResult": "PASS",
+        "explanation": "每個字的音節和聲調都清晰可辨，發音準確無誤。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L440-S05",
+        "heardText": "跳高前要先助跑；要 ㄧㄠˋ",
+        "pronunciationResult": "TEACHER PASS",
+        "explanation": "Teacher listened to the repaired exact hash and confirmed 要 is correct, not 咬.",
+        "finalSyllableAudible": true,
+        "teacherAcceptedSha256": "f8974995c54e76ef621d3cddf47a3d493ff891a580cd2ea9fabf7b640d095c50"
+      },
+      {
+        "name": "L440-G02-prefix",
+        "heardText": "卡車",
+        "pronunciationResult": "PASS",
+        "explanation": "The audio clearly consists of exactly two syllables: 卡 (ㄎㄚˇ) and 車 (ㄔㄜ). The tones are accurate (third tone for 卡 and first tone for 車) and no additional syllables like 運 are present.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L440-G02-suffix",
+        "heardText": "送木頭用來修補木橋",
+        "pronunciationResult": "PASS",
+        "explanation": "The first character is clearly pronounced as 送 ㄙㄨㄥˋ with the correct falling tone. All other characters and tones match the expected pronunciation.",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L440-G05-wrong-one",
+        "heardText": "跳高前要先起跑",
+        "pronunciationResult": "PASS",
+        "explanation": "每個字都有清楚的發音。特別注意到「起」字是ㄑㄧˇ第三聲，符合要求。最後的『跑』字發音清楚。",
+        "finalSyllableAudible": true
+      },
+      {
+        "name": "L440-G05-wrong-two",
+        "heardText": "跳高前要先快跑",
+        "pronunciationResult": "PASS",
+        "explanation": "聽到的語音完整清晰。『快』的發音為 ㄎㄨㄞˋ，與預期相符，聲調準確。整句每個字的發音和聲調皆正確。",
+        "finalSyllableAudible": true
+      }
+    ]
+  },
+  "folderBytes": 1488036,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L440/images/L440-S01.webp",
+      "bytes": 195100,
+      "sha256": "001727dec53a16af8ef3c5bcd62b3fcbd8d6a3054c56f4c1c3955f85f4d82546"
+    },
+    {
+      "path": "public/assets/lessons/L440/images/L440-S02.webp",
+      "bytes": 242602,
+      "sha256": "e51669c681585a9220fe2d2c21a4d4e04ff50e53f665a76752f01fe7186456fe"
+    },
+    {
+      "path": "public/assets/lessons/L440/images/L440-S03.webp",
+      "bytes": 232528,
+      "sha256": "81db60ce39727c7a8d127c962ef8e7a0a973b8a22d77a7e688825c9972394746"
+    },
+    {
+      "path": "public/assets/lessons/L440/images/L440-S04.webp",
+      "bytes": 208944,
+      "sha256": "5ff6f37cdfb2317cbc7eede2a17dadbc2de2ada6b2c038f8d7f721e7df7fb1de"
+    },
+    {
+      "path": "public/assets/lessons/L440/images/L440-S05.webp",
+      "bytes": 183002,
+      "sha256": "b80c9c97708dafafc125e48b4c4473dd3f7b1ead538f2b581a4cef8beae31c44"
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/L440-G02-prefix.m4a",
+      "bytes": 16354,
+      "sha256": "602a91fa8beca6ca4ebdb3f678cad401960e72ad57f2ad65e9b6a7ed876b5271",
+      "durationMs": 1250,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -4.1,
+      "meanVolumeDb": -16.2
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/L440-G02-suffix.m4a",
+      "bytes": 55177,
+      "sha256": "c409286644ebe6dc9f8d3edd375944a9b6ef4fc80cfb8cca21157159c86059cd",
+      "durationMs": 4420,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.3,
+      "meanVolumeDb": -19.4
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/L440-G05-wrong-one.m4a",
+      "bytes": 38952,
+      "sha256": "1a391a6b3cf06d8927573256156ecb7a92b4b00ad13a3979ddb23973cf99fbb4",
+      "durationMs": 3130,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -18.2
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/L440-G05-wrong-two.m4a",
+      "bytes": 40719,
+      "sha256": "774ff1a8085f749c2f5cdc1be015d182ff3a9130f9c6d013d22942c8129b7011",
+      "durationMs": 3290,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.2,
+      "meanVolumeDb": -18.7
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/L440-S01.m4a",
+      "bytes": 40982,
+      "sha256": "70a7fa613b308741f114f5c949f3804ca45baf064a5abbd16fef972380f1e4c8",
+      "durationMs": 3360,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -18.5
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/L440-S02.m4a",
+      "bytes": 64064,
+      "sha256": "9e9bfffa9de9af73f084044ffb1ecfa554f711cc0d3d23345273dcef1603805f",
+      "durationMs": 5250,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2.9,
+      "meanVolumeDb": -18.5
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/L440-S03.m4a",
+      "bytes": 50882,
+      "sha256": "2e5469fd914d6bebd05be8b21ec0bb79197863d363afa15d72bd6ddfc9246c47",
+      "durationMs": 4110,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -17.6
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/L440-S04.m4a",
+      "bytes": 49370,
+      "sha256": "8dd9e25c10ea6c1f858b51b7f019477a18e68a099aeeab606e40e1fd35ddf488",
+      "durationMs": 3860,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -3.2,
+      "meanVolumeDb": -17
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/L440-S05.m4a",
+      "bytes": 45020,
+      "sha256": "f8974995c54e76ef621d3cddf47a3d493ff891a580cd2ea9fabf7b640d095c50",
+      "durationMs": 4866,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -19.7
+    },
+    {
+      "path": "public/assets/lessons/L440/audio/char-u904b.m4a",
+      "bytes": 24340,
+      "sha256": "b2a4220381507b44ae5ab6949c1244f4b673630dd78229fbaba4812eabf41868",
+      "durationMs": 2275,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 1,
+      "maxVolumeDb": -2,
+      "meanVolumeDb": -19.4
+    }
+  ]
+}

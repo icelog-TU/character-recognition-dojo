@@ -1,0 +1,96 @@
+[
+  {
+    "file": "public/assets/lessons/L440/audio/char-u904b.m4a",
+    "sha256": "b2a4220381507b44ae5ab6949c1244f4b673630dd78229fbaba4812eabf41868",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "Yun",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 26,
+          "input_tokens": 22,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 22
+          },
+          "output_tokens": 4
+        }
+      },
+      {
+        "text": "Yün",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 26,
+          "input_tokens": 22,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 22
+          },
+          "output_tokens": 4
+        }
+      },
+      {
+        "text": "Yün.",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 27,
+          "input_tokens": 22,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 22
+          },
+          "output_tokens": 5
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L440/audio/L440-S05.m4a",
+    "sha256": "f8974995c54e76ef621d3cddf47a3d493ff891a580cd2ea9fabf7b640d095c50",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "跳高前要先助跑。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 58,
+          "input_tokens": 48,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 48
+          },
+          "output_tokens": 10
+        }
+      },
+      {
+        "text": "跳高前要先助跑。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 58,
+          "input_tokens": 48,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 48
+          },
+          "output_tokens": 10
+        }
+      },
+      {
+        "text": "跳高前要先助跑。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 58,
+          "input_tokens": 48,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 48
+          },
+          "output_tokens": 10
+        }
+      }
+    ]
+  }
+]

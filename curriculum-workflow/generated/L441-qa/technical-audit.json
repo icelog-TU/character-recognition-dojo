@@ -1,0 +1,279 @@
+{
+  "unit": "L441",
+  "packageStatus": "dependency-blocked-asset-complete",
+  "sourceMainCommit": "72b61a615628b25a2c78b63c9c400f9adcca946f",
+  "allowedChars": {
+    "formal": 439,
+    "provisional": [
+      "補",
+      "修",
+      "習",
+      "練",
+      "運"
+    ],
+    "current": [
+      "賽"
+    ],
+    "total": 445,
+    "result": "PASS"
+  },
+  "dependencies": [
+    "L436",
+    "L437",
+    "L438",
+    "L439",
+    "L440"
+  ],
+  "releaseBlockers": [
+    "R053/R054 after L435 before L436",
+    "Contiguous numbered predecessors L436-L440"
+  ],
+  "checks": {
+    "approvedTextAndDisplayLines": "PASS",
+    "allowedCharacterSweep": "PASS",
+    "coverage": "PASS: 賽4, 運2, 練2, 習2, 修1, 補1",
+    "stage4IndexesAndMappings": "PASS",
+    "sentenceAudioTranscripts": "PASS",
+    "audioFormatAndVolume": "PASS",
+    "g05MeanVolumeSpreadDb": 0.6000000000000014,
+    "sentenceTimingCounts": "PASS",
+    "sentenceTailLimit": "PASS",
+    "imageStyleAndCast": "PASS"
+  },
+  "timings": [
+    {
+      "id": "L441-S01",
+      "hanCount": 12,
+      "timingCount": 12,
+      "durationMs": 4780,
+      "finalTimingEndMs": 4600,
+      "tailMs": 180
+    },
+    {
+      "id": "L441-S02",
+      "hanCount": 10,
+      "timingCount": 10,
+      "durationMs": 3260,
+      "finalTimingEndMs": 3040,
+      "tailMs": 220
+    },
+    {
+      "id": "L441-S03",
+      "hanCount": 11,
+      "timingCount": 11,
+      "durationMs": 3800,
+      "finalTimingEndMs": 3600,
+      "tailMs": 200
+    },
+    {
+      "id": "L441-S04",
+      "hanCount": 11,
+      "timingCount": 11,
+      "durationMs": 3940,
+      "finalTimingEndMs": 3760,
+      "tailMs": 180
+    },
+    {
+      "id": "L441-S05",
+      "hanCount": 12,
+      "timingCount": 12,
+      "durationMs": 4220,
+      "finalTimingEndMs": 4000,
+      "tailMs": 220
+    }
+  ],
+  "images": [
+    {
+      "id": "L441-S01",
+      "path": "public/assets/lessons/L441/images/L441-S01.webp",
+      "bytes": 153810,
+      "sha256": "c41df67911c5e884c4c6709c62ad653e5d164d0cbb248057bbafc19b6b98b4fb",
+      "dimensions": "1024x1024",
+      "styleLock": "PASS: final exported WebP compared side by side with the complete L058 style anchors, refined proportion anchors, and applicable recurring-cast anchors.",
+      "cast": "PASS: recurring protagonist identity retained; coach is generic and distinct.",
+      "semanticCheck": "PASS: fixed protagonist dribbles forward through cones while a distinct generic coach observes; practice rather than game or award."
+    },
+    {
+      "id": "L441-S02",
+      "path": "public/assets/lessons/L441/images/L441-S02.webp",
+      "bytes": 219680,
+      "sha256": "6ebe6e5bd9be7f4cb66907e87bbdcf8af00a2dbe9fdd1caa361b10bd94c1294d",
+      "dimensions": "1024x1024",
+      "styleLock": "PASS: final exported WebP compared side by side with the complete L058 style anchors, refined proportion anchors, and applicable recurring-cast anchors.",
+      "cast": "PASS: generic worker is distinct from recurring father, teacher, and coach.",
+      "semanticCheck": "PASS: generic worker fills and levels a damaged running-track surface inside a cone/barrier work zone; no race."
+    },
+    {
+      "id": "L441-S03",
+      "path": "public/assets/lessons/L441/images/L441-S03.webp",
+      "bytes": 240528,
+      "sha256": "826205e6b9c1763865f2cd91e64b5c815b23affe18654bf6f5627be84b229a98",
+      "dimensions": "1024x1024",
+      "styleLock": "PASS: final exported WebP compared side by side with the complete L058 style anchors, refined proportion anchors, and applicable recurring-cast anchors.",
+      "cast": "PASS: recurring protagonist, father, and home continuity retained.",
+      "semanticCheck": "PASS: fixed girl and fixed father run together on a car-free path toward the established cream mountain home with red-orange roof and arched door."
+    },
+    {
+      "id": "L441-S04",
+      "path": "public/assets/lessons/L441/images/L441-S04.webp",
+      "bytes": 155842,
+      "sha256": "92e996f9a5aaa3b16cb0ab90115d7530a5bfdc89e2edac18dad190f0dfba92fd",
+      "dimensions": "1024x1024",
+      "styleLock": "PASS: final exported WebP compared side by side with the complete L058 style anchors, refined proportion anchors, and applicable recurring-cast anchors.",
+      "cast": "PASS: recurring protagonist and mother continuity retained.",
+      "semanticCheck": "PASS: fixed girl removes blocks and counts the remainder while fixed mother accompanies her; workbook has no readable equation."
+    },
+    {
+      "id": "L441-S05",
+      "path": "public/assets/lessons/L441/images/L441-S05.webp",
+      "bytes": 118758,
+      "sha256": "ffe49cb6a1cf8daf2f796eafa3e7128a437cd9d014444d702fa0622790a227a7",
+      "dimensions": "1024x1024",
+      "styleLock": "PASS: final exported WebP compared side by side with the complete L058 style anchors, refined proportion anchors, and applicable recurring-cast anchors.",
+      "cast": "PASS: no human cast.",
+      "semanticCheck": "PASS: red toy car is beyond the checkered finish stripe and all other toy cars remain behind; no people or ranking text."
+    }
+  ],
+  "audio": [
+    {
+      "file": "public/assets/lessons/L441/audio/char-u8cfd.m4a",
+      "bytes": 32072,
+      "durationMs": 2740,
+      "meanDb": -21.4,
+      "maxDb": -2,
+      "expectedHan": "賽",
+      "transcript": "賽",
+      "normalizedHan": "賽",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-G02-prefix.m4a",
+      "bytes": 10797,
+      "durationMs": 780,
+      "meanDb": -17.4,
+      "maxDb": -3.9,
+      "expectedHan": "球",
+      "transcript": "球",
+      "normalizedHan": "球",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-G02-suffix.m4a",
+      "bytes": 41669,
+      "durationMs": 3340,
+      "meanDb": -17.9,
+      "maxDb": -2.1,
+      "expectedHan": "快到了我每天練習運球",
+      "transcript": "快到了!我每天練習運球!",
+      "normalizedHan": "快到了我每天練習運球",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-G05-wrong-one.m4a",
+      "bytes": 57869,
+      "durationMs": 4876,
+      "meanDb": -18.6,
+      "maxDb": -2.6,
+      "expectedHan": "這場賽車白色的車拿了第一",
+      "transcript": "这场赛车,白色的车拿了第一!",
+      "normalizedHan": "這場賽車白色的車拿了第一",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-G05-wrong-two.m4a",
+      "bytes": 54346,
+      "durationMs": 4458,
+      "meanDb": -18.5,
+      "maxDb": -2,
+      "expectedHan": "這場賽車紅色的車拿了第二",
+      "transcript": "这场赛车,红色的车拿了第二。",
+      "normalizedHan": "這場賽車紅色的車拿了第二",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S01.m4a",
+      "bytes": 60032,
+      "durationMs": 4780,
+      "meanDb": -19.5,
+      "maxDb": -2,
+      "expectedHan": "球賽快到了我每天練習運球",
+      "transcript": "球賽快到了,我每天練習運球。",
+      "normalizedHan": "球賽快到了我每天練習運球",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S02.m4a",
+      "bytes": 42119,
+      "durationMs": 3260,
+      "meanDb": -18.1,
+      "maxDb": -2.3,
+      "expectedHan": "跑道正在修補不能比賽",
+      "transcript": "跑道正在修補,不能比賽",
+      "normalizedHan": "跑道正在修補不能比賽",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S03.m4a",
+      "bytes": 48053,
+      "durationMs": 3800,
+      "meanDb": -17.5,
+      "maxDb": -2.4,
+      "expectedHan": "我和爸爸賽跑看誰先到家",
+      "transcript": "我和爸爸賽跑,看誰先到家。",
+      "normalizedHan": "我和爸爸賽跑看誰先到家",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S04.m4a",
+      "bytes": 50404,
+      "durationMs": 3940,
+      "meanDb": -17.4,
+      "maxDb": -2.6,
+      "expectedHan": "我的減法運算還要多練習",
+      "transcript": "我的減法運算還要多練習",
+      "normalizedHan": "我的減法運算還要多練習",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S05.m4a",
+      "bytes": 53801,
+      "durationMs": 4220,
+      "meanDb": -18,
+      "maxDb": -3.6,
+      "expectedHan": "這場賽車紅色的車拿了第一",
+      "transcript": "这场赛车,红色的车拿了第一",
+      "normalizedHan": "這場賽車紅色的車拿了第一",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    }
+  ],
+  "browserQa": {
+    "method": "Browser QA using the permanent lesson-asset-review page in Chrome",
+    "url": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L441&ref=2468f5696bda772968290d85e1e7712649850ebc",
+    "reviewedAssetCommit": "2468f5696bda772968290d85e1e7712649850ebc",
+    "scope": "5 sentence cards, charAudio, G02 prefix and suffix, and all 3 G05 options; 11 playback controls total",
+    "result": "PASS: all 11 controls entered playing state and returned to play state through media ended; all five square image previews loaded; zero repair flags",
+    "timingNote": "Sentence and G02 charTimings are stored and mechanically checked; review page playback confirms the final referenced media files load and end."
+  },
+  "assets": {
+    "images": 5,
+    "audio": 10,
+    "imageBytes": 888618,
+    "audioBytes": 451162,
+    "totalBytes": 1339780
+  },
+  "notes": [
+    "AI alignment initially required temporary local simplified-to-Traditional equivalence entries for 減、練、習、運、賽、場; the shared alignment script was restored and is not part of the package diff.",
+    "Final sentence M4A files were trimmed only after the last aligned Han boundary, then aligned again from the final files; final tails are 180–220 ms.",
+    "No image draft was rejected; every first exported candidate passed the semantic, style-lock, and cast checks."
+  ]
+}

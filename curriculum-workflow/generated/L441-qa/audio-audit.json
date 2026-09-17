@@ -1,0 +1,129 @@
+{
+  "unit": "L441",
+  "engine": "OpenAI whisper-1",
+  "result": "PASS",
+  "files": [
+    {
+      "file": "public/assets/lessons/L441/audio/char-u8cfd.m4a",
+      "bytes": 32072,
+      "durationMs": 2740,
+      "meanDb": -21.4,
+      "maxDb": -2,
+      "expectedHan": "賽",
+      "transcript": "賽",
+      "normalizedHan": "賽",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-G02-prefix.m4a",
+      "bytes": 10797,
+      "durationMs": 780,
+      "meanDb": -17.4,
+      "maxDb": -3.9,
+      "expectedHan": "球",
+      "transcript": "球",
+      "normalizedHan": "球",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-G02-suffix.m4a",
+      "bytes": 41669,
+      "durationMs": 3340,
+      "meanDb": -17.9,
+      "maxDb": -2.1,
+      "expectedHan": "快到了我每天練習運球",
+      "transcript": "快到了!我每天練習運球!",
+      "normalizedHan": "快到了我每天練習運球",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-G05-wrong-one.m4a",
+      "bytes": 57869,
+      "durationMs": 4876,
+      "meanDb": -18.6,
+      "maxDb": -2.6,
+      "expectedHan": "這場賽車白色的車拿了第一",
+      "transcript": "这场赛车,白色的车拿了第一!",
+      "normalizedHan": "這場賽車白色的車拿了第一",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-G05-wrong-two.m4a",
+      "bytes": 54346,
+      "durationMs": 4458,
+      "meanDb": -18.5,
+      "maxDb": -2,
+      "expectedHan": "這場賽車紅色的車拿了第二",
+      "transcript": "这场赛车,红色的车拿了第二。",
+      "normalizedHan": "這場賽車紅色的車拿了第二",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S01.m4a",
+      "bytes": 60032,
+      "durationMs": 4780,
+      "meanDb": -19.5,
+      "maxDb": -2,
+      "expectedHan": "球賽快到了我每天練習運球",
+      "transcript": "球賽快到了,我每天練習運球。",
+      "normalizedHan": "球賽快到了我每天練習運球",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S02.m4a",
+      "bytes": 42119,
+      "durationMs": 3260,
+      "meanDb": -18.1,
+      "maxDb": -2.3,
+      "expectedHan": "跑道正在修補不能比賽",
+      "transcript": "跑道正在修補,不能比賽",
+      "normalizedHan": "跑道正在修補不能比賽",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S03.m4a",
+      "bytes": 48053,
+      "durationMs": 3800,
+      "meanDb": -17.5,
+      "maxDb": -2.4,
+      "expectedHan": "我和爸爸賽跑看誰先到家",
+      "transcript": "我和爸爸賽跑,看誰先到家。",
+      "normalizedHan": "我和爸爸賽跑看誰先到家",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S04.m4a",
+      "bytes": 50404,
+      "durationMs": 3940,
+      "meanDb": -17.4,
+      "maxDb": -2.6,
+      "expectedHan": "我的減法運算還要多練習",
+      "transcript": "我的減法運算還要多練習",
+      "normalizedHan": "我的減法運算還要多練習",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    },
+    {
+      "file": "public/assets/lessons/L441/audio/L441-S05.m4a",
+      "bytes": 53801,
+      "durationMs": 4220,
+      "meanDb": -18,
+      "maxDb": -3.6,
+      "expectedHan": "這場賽車紅色的車拿了第一",
+      "transcript": "这场赛车,红色的车拿了第一",
+      "normalizedHan": "這場賽車紅色的車拿了第一",
+      "contentMatch": true,
+      "matchBasis": "exact normalized Han"
+    }
+  ],
+  "g05MeanVolumeSpreadDb": 0.6000000000000014,
+  "localFormatAndVolumeResult": "PASS"
+}

@@ -1,0 +1,825 @@
+{
+  "id": "L442",
+  "order": 442,
+  "title": "機",
+  "newChars": [
+    "機"
+  ],
+  "zhuyin": {
+    "機": "ㄐㄧ"
+  },
+  "dependsOnLessons": [
+    "L437",
+    "L438",
+    "L439",
+    "L440",
+    "L441"
+  ],
+  "provisionalLearnedChars": [
+    "修",
+    "習",
+    "練",
+    "運",
+    "賽"
+  ],
+  "packageStatus": "dependency-blocked-asset-complete",
+  "releaseDependencies": {
+    "orderedLessonsThrough": "L441"
+  },
+  "teacherNotes": "Formal approved L442 handoff. Package boundary frozen at base 5ab2118f, production L435助/439 learned Han; allowed445 with provisional 修習練運賽 and new機. R053/R054 are merged and resolved. Final recheck found origin/main c243d7d3 through L438習, so only ordered L439-L441 remain Release blockers; Release owns latest-main boundary revalidation. S01 copier remains broken awaiting repair without smoke or sparks. S02 fruit has already arrived at supermarket by air. S03 phone shows basketball viewing, not gaming. S04 照相 uses 相 ㄒㄧㄤˋ at Han index7. S05 three-person team is fully on field with no same-team bench players. No image text or numbers. Production package only; Release owns shared JSON/planner/ledger integration and main merge.",
+  "requiredRounds": 5,
+  "charAudio": {
+    "機": "/assets/lessons/L442/audio/char-u6a5f.m4a"
+  },
+  "sentences": [
+    {
+      "id": "L442-S01",
+      "text": "影印機不能正常運轉，要修理。",
+      "spokenText": "影印機不能正常運轉要修理",
+      "displayLines": [
+        "影印機不能",
+        "正常運轉，",
+        "要修理。"
+      ],
+      "focusChar": "機",
+      "imageNotes": "影印店內，一台大型影印機停止正常出紙，出紙處露出卡住、皺折的紙張。generic 店員察看機器，主角女孩拿著待影印文件在旁等候。呈現機器故障、尚待修理，不是已經恢復運作。不要用冒煙、火花或誇張損壞表達故障；螢幕不出現文字、錯誤代碼或數字。",
+      "approved": true,
+      "imagePrompt": "Square 1:1 children literacy illustration matching the supplied L058/refined/family reference sheet: warm hand-painted watercolor/gouache storybook style, soft paper texture, warm sunlight, expressive faces, natural proportions, no border; recurring girl has dark bob, pink clip, pink cardigan, cream top, navy skirt and pink shoes; absolutely no readable text, symbols, logos, labels, numbers, scores or watermarks. Copy shop interior: large office photocopier stopped with wrinkled jammed paper visible at output; distinct generic clerk examines it while recurring girl waits holding blank documents. Still broken awaiting repair; no smoke, sparks, flames, extreme damage or successful output; blank display.",
+      "imageSrc": "/assets/lessons/L442/images/L442-S01.webp",
+      "audio": {
+        "src": "/assets/lessons/L442/audio/L442-S01.m4a",
+        "durationMs": 4203,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 360
+          },
+          {
+            "charIndex": 1,
+            "startMs": 360,
+            "endMs": 680
+          },
+          {
+            "charIndex": 2,
+            "startMs": 680,
+            "endMs": 1000
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1000,
+            "endMs": 1270
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1270,
+            "endMs": 1540
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1540,
+            "endMs": 1880
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1880,
+            "endMs": 2240
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2240,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2480,
+            "endMs": 2740
+          },
+          {
+            "charIndex": 9,
+            "startMs": 3280,
+            "endMs": 3480
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3480,
+            "endMs": 3800
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3800,
+            "endMs": 3980
+          }
+        ]
+      }
+    },
+    {
+      "id": "L442-S02",
+      "text": "這些水果是用飛機運來的。",
+      "spokenText": "這些水果是用飛機運來的",
+      "displayLines": [
+        "這些水果",
+        "是用飛機",
+        "運來的。"
+      ],
+      "focusChar": "機",
+      "imageNotes": "超市水果區，固定媽媽和主角女孩看著精緻包裝、整齊陳列的水果。女孩好奇，媽媽指著水果解釋運送方式。搭配一個小型說明泡泡，畫運輸飛機與成箱水果，表達這些水果先前經由空運抵達。主畫面必須在超市，不是機場裝貨現場；眼前水果已送達，不是準備被運走。無價牌、產地字樣、航空公司或品牌標誌。",
+      "approved": true,
+      "imagePrompt": "Square 1:1 children literacy illustration matching the supplied L058/refined/family reference sheet: warm hand-painted watercolor/gouache storybook style, soft paper texture, warm sunlight, expressive faces, natural proportions, no border; recurring girl has dark bob, pink clip, pink cardigan, cream top, navy skirt and pink shoes; absolutely no readable text, symbols, logos, labels, numbers, scores or watermarks. Supermarket fruit section, not airport: recurring mother with shoulder dark hair, cream blouse and blue trousers explains neatly arranged premium wrapped fruit to recurring girl. Small explanation bubble contains only cargo airplane and fruit crates, showing fruit already arrived by air; no prices, origin labels, airline marks or brands.",
+      "imageSrc": "/assets/lessons/L442/images/L442-S02.webp",
+      "audio": {
+        "src": "/assets/lessons/L442/audio/L442-S02.m4a",
+        "durationMs": 3413,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 140
+          },
+          {
+            "charIndex": 1,
+            "startMs": 140,
+            "endMs": 580
+          },
+          {
+            "charIndex": 2,
+            "startMs": 580,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1080
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1080,
+            "endMs": 1720
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1720,
+            "endMs": 1980
+          },
+          {
+            "charIndex": 6,
+            "startMs": 1980,
+            "endMs": 2320
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2320,
+            "endMs": 2580
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2580,
+            "endMs": 2780
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2780,
+            "endMs": 3040
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3040,
+            "endMs": 3220
+          }
+        ]
+      }
+    },
+    {
+      "id": "L442-S03",
+      "text": "爸爸用手機看球賽。",
+      "spokenText": "爸爸用手機看球賽",
+      "displayLines": [
+        "爸爸用手機",
+        "看球賽。"
+      ],
+      "focusChar": "機",
+      "imageNotes": "家中客廳，固定爸爸坐在沙發上，橫向拿著手機專心看籃球賽。從爸爸側後方構圖，可看見手機螢幕上兩隊球員和籃框，讓「用手機看球賽」清楚可辨。螢幕無字幕、比分、隊名、球衣號碼或 app 標誌；不是爸爸正在玩手機遊戲。",
+      "approved": true,
+      "imagePrompt": "Square 1:1 children literacy illustration matching the supplied L058/refined/family reference sheet: warm hand-painted watercolor/gouache storybook style, soft paper texture, warm sunlight, expressive faces, natural proportions, no border; recurring girl has dark bob, pink clip, pink cardigan, cream top, navy skirt and pink shoes; absolutely no readable text, symbols, logos, labels, numbers, scores or watermarks. Cozy living room: recurring father with short dark hair, blue shirt and khaki trousers holds smartphone horizontally and watches basketball. Side-rear view shows two teams and hoop on screen; watching rather than gaming; no scoreboard, names, captions, jersey numbers, controls, app UI or logos.",
+      "imageSrc": "/assets/lessons/L442/images/L442-S03.webp",
+      "audio": {
+        "src": "/assets/lessons/L442/audio/L442-S03.m4a",
+        "durationMs": 2809,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 190
+          },
+          {
+            "charIndex": 1,
+            "startMs": 190,
+            "endMs": 380
+          },
+          {
+            "charIndex": 2,
+            "startMs": 380,
+            "endMs": 860
+          },
+          {
+            "charIndex": 3,
+            "startMs": 860,
+            "endMs": 1300
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1300,
+            "endMs": 1560
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1560,
+            "endMs": 2060
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2060,
+            "endMs": 2400
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2400,
+            "endMs": 2600
+          }
+        ]
+      }
+    },
+    {
+      "id": "L442-S04",
+      "text": "我練習用手機照相。",
+      "spokenText": "我練習用手機照相",
+      "displayLines": [
+        "我練習",
+        "用手機照相。"
+      ],
+      "focusChar": "機",
+      "zhuyinOverrides": {
+        "7": "ㄒㄧㄤˋ"
+      },
+      "imageNotes": "花園裡，主角女孩用雙手拿穩手機，對準一朵花練習拍照；固定媽媽在旁示意她對好位置。採側後方視角，同時看見被拍的花與手機內對應的構圖。呈現女孩正在照相，不是看照片、打電話或自拍。螢幕可有簡單相機取景畫面，但無可讀文字、數字或品牌。",
+      "approved": true,
+      "imagePrompt": "Square 1:1 children literacy illustration matching the supplied L058/refined/family reference sheet: warm hand-painted watercolor/gouache storybook style, soft paper texture, warm sunlight, expressive faces, natural proportions, no border; recurring girl has dark bob, pink clip, pink cardigan, cream top, navy skirt and pink shoes; absolutely no readable text, symbols, logos, labels, numbers, scores or watermarks. Sunny flower garden: side-rear view of recurring girl holding phone with both hands and photographing one flower; recurring mother guides framing. Show real flower and matching phone view; currently taking photo, not reviewing, calling or selfie; no camera UI text, numbers, brands or icons.",
+      "imageSrc": "/assets/lessons/L442/images/L442-S04.webp",
+      "audio": {
+        "src": "/assets/lessons/L442/audio/L442-S04.m4a",
+        "durationMs": 2972,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 380
+          },
+          {
+            "charIndex": 1,
+            "startMs": 380,
+            "endMs": 780
+          },
+          {
+            "charIndex": 2,
+            "startMs": 780,
+            "endMs": 1140
+          },
+          {
+            "charIndex": 3,
+            "startMs": 1140,
+            "endMs": 1520
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1520,
+            "endMs": 1900
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1900,
+            "endMs": 2220
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2220,
+            "endMs": 2540
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2540,
+            "endMs": 2740
+          }
+        ]
+      }
+    },
+    {
+      "id": "L442-S05",
+      "text": "這場練習賽，我們全隊都上場。",
+      "spokenText": "這場練習賽我們全隊都上場",
+      "displayLines": [
+        "這場練習賽，",
+        "我們全隊",
+        "都上場。"
+      ],
+      "focusChar": "賽",
+      "imageNotes": "兒童小型足球練習賽，主角女孩與兩位 generic 同學組成三人小隊，三位隊員都已在場上；對方也有三位不同外貌的 generic 隊員。用兩組不同球衣顏色清楚區分，generic 教練在場邊看著。以小隊規模讓「全隊都上場」可直接看見，不在板凳上放同隊未上場的候補球員。無比分、球衣號碼或文字橫幅。",
+      "approved": true,
+      "imagePrompt": "Square 1:1 children literacy illustration matching the supplied L058/refined/family reference sheet: warm hand-painted watercolor/gouache storybook style, soft paper texture, warm sunlight, expressive faces, natural proportions, no border; recurring girl has dark bob, pink clip, pink cardigan, cream top, navy skirt and pink shoes; absolutely no readable text, symbols, logos, labels, numbers, scores or watermarks. Wide children small-sided soccer practice: exactly six separable children on field. Exactly three pink-team children including recurring girl and two generic classmates; exactly three distinct blue-team opponents; one ball and exactly one generic adult coach on sideline. No other people, bench, substitutes, crowd, jersey numbers, score, banners or signs.",
+      "imageSrc": "/assets/lessons/L442/images/L442-S05.webp",
+      "audio": {
+        "src": "/assets/lessons/L442/audio/L442-S05.m4a",
+        "durationMs": 4040,
+        "charTimings": [
+          {
+            "charIndex": 0,
+            "startMs": 0,
+            "endMs": 240
+          },
+          {
+            "charIndex": 1,
+            "startMs": 240,
+            "endMs": 560
+          },
+          {
+            "charIndex": 2,
+            "startMs": 560,
+            "endMs": 840
+          },
+          {
+            "charIndex": 3,
+            "startMs": 840,
+            "endMs": 1100
+          },
+          {
+            "charIndex": 4,
+            "startMs": 1100,
+            "endMs": 1320
+          },
+          {
+            "charIndex": 5,
+            "startMs": 1920,
+            "endMs": 2020
+          },
+          {
+            "charIndex": 6,
+            "startMs": 2020,
+            "endMs": 2120
+          },
+          {
+            "charIndex": 7,
+            "startMs": 2120,
+            "endMs": 2480
+          },
+          {
+            "charIndex": 8,
+            "startMs": 2480,
+            "endMs": 2760
+          },
+          {
+            "charIndex": 9,
+            "startMs": 2760,
+            "endMs": 3320
+          },
+          {
+            "charIndex": 10,
+            "startMs": 3320,
+            "endMs": 3580
+          },
+          {
+            "charIndex": 11,
+            "startMs": 3580,
+            "endMs": 3820
+          }
+        ]
+      }
+    }
+  ],
+  "sentenceGames": [
+    {
+      "id": "L442-G01",
+      "type": "find-character",
+      "sentenceId": "L442-S01",
+      "targetChar": "機",
+      "targetCharIndex": 2,
+      "prompt": "請幫小兔子找出機，點一下句子中的機。"
+    },
+    {
+      "id": "L442-G02",
+      "type": "teach-character",
+      "sentenceId": "L442-S03",
+      "targetChar": "機",
+      "targetCharIndex": 4,
+      "prompt": "請你幫小兔子念這個字。",
+      "teachAudio": {
+        "prefixText": "爸爸用手",
+        "suffixText": "看球賽",
+        "prefixSrc": "/assets/lessons/L442/audio/L442-G02-prefix.m4a",
+        "suffixSrc": "/assets/lessons/L442/audio/L442-G02-suffix.m4a",
+        "prefixAudio": {
+          "src": "/assets/lessons/L442/audio/L442-G02-prefix.m4a",
+          "durationMs": 1695,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 230
+            },
+            {
+              "charIndex": 1,
+              "startMs": 230,
+              "endMs": 460
+            },
+            {
+              "charIndex": 2,
+              "startMs": 460,
+              "endMs": 1100
+            },
+            {
+              "charIndex": 3,
+              "startMs": 1100,
+              "endMs": 1420
+            }
+          ]
+        },
+        "suffixAudio": {
+          "src": "/assets/lessons/L442/audio/L442-G02-suffix.m4a",
+          "durationMs": 1323,
+          "charTimings": [
+            {
+              "charIndex": 0,
+              "startMs": 0,
+              "endMs": 480
+            },
+            {
+              "charIndex": 1,
+              "startMs": 480,
+              "endMs": 820
+            },
+            {
+              "charIndex": 2,
+              "startMs": 820,
+              "endMs": 1080
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "L442-G03",
+      "type": "missing-character",
+      "sentenceId": "L442-S02",
+      "targetChar": "機",
+      "targetCharIndex": 7,
+      "prompt": "請幫小兔子找回少掉的字。",
+      "missingIndexes": [
+        7
+      ],
+      "options": [
+        {
+          "id": "L442-G03-O1",
+          "text": "場",
+          "correct": false
+        },
+        {
+          "id": "L442-G03-O2",
+          "text": "機",
+          "correct": true
+        },
+        {
+          "id": "L442-G03-O3",
+          "text": "車",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "L442-G04",
+      "type": "partial-order",
+      "sentenceId": "L442-S04",
+      "targetChar": "機",
+      "targetCharIndex": 5,
+      "prompt": "請幫小兔子把字放回去。",
+      "missingIndexes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "options": [
+        {
+          "id": "L442-G04-O1",
+          "text": "照",
+          "correct": true,
+          "correctOrder": 2
+        },
+        {
+          "id": "L442-G04-O2",
+          "text": "手",
+          "correct": true,
+          "correctOrder": 0
+        },
+        {
+          "id": "L442-G04-O3",
+          "text": "相",
+          "correct": true,
+          "correctOrder": 3
+        },
+        {
+          "id": "L442-G04-O4",
+          "text": "機",
+          "correct": true,
+          "correctOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "L442-G05",
+      "type": "choose-pronunciation",
+      "sentenceId": "L442-S05",
+      "targetChar": "賽",
+      "targetCharIndex": 4,
+      "prompt": "先按朋友的頭聽，再選出念對的朋友。",
+      "options": [
+        {
+          "id": "L442-G05-O1",
+          "text": "這場練習賽，我們全隊都上場。",
+          "spokenText": "這場練習賽我們全隊都上場",
+          "correct": true,
+          "audioSrc": "/assets/lessons/L442/audio/L442-S05.m4a",
+          "audio": {
+            "src": "/assets/lessons/L442/audio/L442-S05.m4a",
+            "durationMs": 4040,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 240
+              },
+              {
+                "charIndex": 1,
+                "startMs": 240,
+                "endMs": 560
+              },
+              {
+                "charIndex": 2,
+                "startMs": 560,
+                "endMs": 840
+              },
+              {
+                "charIndex": 3,
+                "startMs": 840,
+                "endMs": 1100
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1100,
+                "endMs": 1320
+              },
+              {
+                "charIndex": 5,
+                "startMs": 1920,
+                "endMs": 2020
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2020,
+                "endMs": 2120
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2120,
+                "endMs": 2480
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2480,
+                "endMs": 2760
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2760,
+                "endMs": 3320
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3320,
+                "endMs": 3580
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3580,
+                "endMs": 3820
+              }
+            ]
+          }
+        },
+        {
+          "id": "L442-G05-O2",
+          "text": "這場練習賽，你們全隊都上場。",
+          "spokenText": "這場練習賽你們全隊都上場",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L442/audio/L442-G05-wrong-one.m4a",
+          "audio": {
+            "src": "/assets/lessons/L442/audio/L442-G05-wrong-one.m4a",
+            "durationMs": 4574,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 280
+              },
+              {
+                "charIndex": 1,
+                "startMs": 280,
+                "endMs": 700
+              },
+              {
+                "charIndex": 2,
+                "startMs": 700,
+                "endMs": 1020
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1020,
+                "endMs": 1280
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1280,
+                "endMs": 1540
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2480,
+                "endMs": 2580
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2580,
+                "endMs": 2680
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2680,
+                "endMs": 3100
+              },
+              {
+                "charIndex": 8,
+                "startMs": 3100,
+                "endMs": 3400
+              },
+              {
+                "charIndex": 9,
+                "startMs": 3400,
+                "endMs": 3880
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3880,
+                "endMs": 4140
+              },
+              {
+                "charIndex": 11,
+                "startMs": 4140,
+                "endMs": 4340
+              }
+            ]
+          }
+        },
+        {
+          "id": "L442-G05-O3",
+          "text": "這場練習賽，我們全隊都下場。",
+          "spokenText": "這場練習賽我們全隊都下場",
+          "correct": false,
+          "audioSrc": "/assets/lessons/L442/audio/L442-G05-wrong-two.m4a",
+          "audio": {
+            "src": "/assets/lessons/L442/audio/L442-G05-wrong-two.m4a",
+            "durationMs": 3854,
+            "charTimings": [
+              {
+                "charIndex": 0,
+                "startMs": 0,
+                "endMs": 220
+              },
+              {
+                "charIndex": 1,
+                "startMs": 220,
+                "endMs": 740
+              },
+              {
+                "charIndex": 2,
+                "startMs": 740,
+                "endMs": 1000
+              },
+              {
+                "charIndex": 3,
+                "startMs": 1000,
+                "endMs": 1340
+              },
+              {
+                "charIndex": 4,
+                "startMs": 1340,
+                "endMs": 1720
+              },
+              {
+                "charIndex": 5,
+                "startMs": 2000,
+                "endMs": 2090
+              },
+              {
+                "charIndex": 6,
+                "startMs": 2090,
+                "endMs": 2180
+              },
+              {
+                "charIndex": 7,
+                "startMs": 2180,
+                "endMs": 2600
+              },
+              {
+                "charIndex": 8,
+                "startMs": 2600,
+                "endMs": 2900
+              },
+              {
+                "charIndex": 9,
+                "startMs": 2900,
+                "endMs": 3140
+              },
+              {
+                "charIndex": 10,
+                "startMs": 3140,
+                "endMs": 3400
+              },
+              {
+                "charIndex": 11,
+                "startMs": 3400,
+                "endMs": 3640
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "productionQA": {
+    "imageChecks": [
+      {
+        "sentenceId": "L442-S01",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Broken copier with visibly jammed wrinkled paper; distinct clerk examines while recurring girl waits with documents; no smoke/sparks or repaired-state output.",
+        "castEvidence": "Recurring girl matches bob/pink clip/pink cardigan/cream top/navy skirt/pink shoes; generic clerk clearly distinct.",
+        "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+      },
+      {
+        "sentenceId": "L442-S02",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Supermarket remains main scene; fruit already displayed; bubble contains cargo airplane and fruit crates; no airport loading state or price/origin text.",
+        "castEvidence": "Recurring mother cream blouse/blue trousers and recurring girl match family anchors.",
+        "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+      },
+      {
+        "sentenceId": "L442-S03",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Father holds phone horizontally in living room; screen visibly shows basketball players and hoop without scores or UI.",
+        "castEvidence": "Recurring father blue shirt/khaki trousers matches family anchor; girl is incidental and consistent.",
+        "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+      },
+      {
+        "sentenceId": "L442-S04",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Girl actively photographs a real flower; phone shows matching flower composition; mother coaches beside her.",
+        "castEvidence": "Recurring girl and mother match family anchors; no selfie/call/review state.",
+        "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+      },
+      {
+        "sentenceId": "L442-S05",
+        "styleLock": "PASS",
+        "cast": "PASS",
+        "scene": "Exactly three pink-team children and exactly three distinct blue-team children all visible on field; one adult coach; no bench/substitutes.",
+        "castEvidence": "Recurring girl remains identifiable by dark bob,pink clip and pink sports outfit; all generic children and coach are distinct.",
+        "comparison": "Actual final exported WebP viewed side by side against the composite reference sheet containing all five L058 style-only anchors, refined L115-S01/S02, L118-S02, L119-S01, L128-S03, and family L154-S01, L162-S04, L163-S02 anchors."
+      }
+    ],
+    "browserQA": {
+      "environment": "Chrome local QA at 390px content width; real LessonPanel imported by isolated Vite harness; prerequisites simulated with only handoff provisional vocabulary; no production progress written.",
+      "playback": "All 10 final M4A played sequentially to ended.",
+      "G01": "S01 index2機 selected; 下一題 appeared.",
+      "G02": "S03 helper playback used dedicated prefix 爸爸用手 and stopped at index4機. Dedicated suffix 看球賽 played to ended in all-audio run; final file also passed Whisper and acoustic kan4 qiu2 sai4 checks.",
+      "G03": "Three distinct shuffled cards 機/場/車; choosing機 filled S02 index7 and exposed 下一題.",
+      "G04": "S04 displayed 相 ㄒㄧㄤˋ; shuffled cards completed 手→機→照→相 and exposed 下一題.",
+      "G05": "All three mapped clips played to ended: correct S05, wrong-two, wrong-one. Correct selection exposed 領取獎勵; reward callback fired; after animation 下一課 and 回首頁休息 appeared; 下一課 emitted navigation next.",
+      "limitations": [
+        "Sustained press-to-record and recorded-voice replay were not operated because the available browser session did not have pre-authorized microphone access; microphone recording is not certified.",
+        "Physical-phone highlight smoothness and direct human listening are not claimed; final audio was checked from actual input by acoustic AI plus Whisper alignment."
+      ],
+      "disposition": "Production SOP browser-tooling fallback after all technical gates; no recording QA PASS claimed."
+    },
+    "evidence": "curriculum-workflow/generated/L442-qa-evidence.json",
+    "alignmentEvidence": "curriculum-workflow/generated/L442-alignment-evidence.json"
+  }
+}

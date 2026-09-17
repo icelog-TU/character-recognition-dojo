@@ -1,0 +1,144 @@
+{
+  "unit": "L443",
+  "notes": "Technical AI generation, decode, loudness, transcription and timing evidence. Not a substitute for teacher subjective listening.",
+  "coverage": {
+    "操": 4,
+    "機": 2,
+    "賽": 2,
+    "運": 2,
+    "練": 2,
+    "習": 1
+  },
+  "allowed": 447,
+  "assetBytes": 1301753,
+  "g05MeanSpreadDb": 0.5,
+  "assets": [
+    {
+      "path": "public/assets/lessons/L443/images/L443-S01.webp",
+      "bytes": 229844,
+      "sha256": "c0b83231f19cc997f024e5973d7d952be95186a1d6684925a4fcc84903b67478"
+    },
+    {
+      "path": "public/assets/lessons/L443/images/L443-S02.webp",
+      "bytes": 152602,
+      "sha256": "65c8db40572b532dbf67cf1d7600488f486fbf537b0a5aa99a4dc891cfe0dacf"
+    },
+    {
+      "path": "public/assets/lessons/L443/images/L443-S03.webp",
+      "bytes": 134752,
+      "sha256": "b2fc22da2fcd527d1e9475c01aaf4c2c9a9c21ee4bdf39dc58aaff92eeb82efb"
+    },
+    {
+      "path": "public/assets/lessons/L443/images/L443-S04.webp",
+      "bytes": 149594,
+      "sha256": "ffa6d636727d44af8a19516e078053e14925c2dd9e5f3dc3bd944077dcb847d4"
+    },
+    {
+      "path": "public/assets/lessons/L443/images/L443-S05.webp",
+      "bytes": 199062,
+      "sha256": "dc8e72b1a96773f0ef275f70459bb7e459a44b0f1a5200dea5b37dda9356e7ab"
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/char-u64cd.m4a",
+      "bytes": 19275,
+      "sha256": "156fae80dcb4017ad4612094e433e85b2c46d786d549080828f3f8da5ec9bc7d",
+      "durationMs": 1704,
+      "meanDb": -27.5,
+      "maxDb": -9.1
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/L443-G02-prefix.m4a",
+      "bytes": 39095,
+      "sha256": "c2874f9dcd1c813f5f294eefe3c5eb0e433d95e7b23d71a111df61114b904da4",
+      "durationMs": 3010,
+      "meanDb": -18,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/L443-G02-suffix.m4a",
+      "bytes": 27376,
+      "sha256": "99de04846dafcadaaab6e4d4b731ea2bf26926a64e35316a1010d6d10e2ca503",
+      "durationMs": 2615,
+      "meanDb": -26,
+      "maxDb": -9
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/L443-G05-wrong-one.m4a",
+      "bytes": 37064,
+      "sha256": "ec5e0dcd90216551d4d5accacfe51bf9ce053c21f57d635239f5a741674faf97",
+      "durationMs": 3045,
+      "meanDb": -18.2,
+      "maxDb": -1.9
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/L443-G05-wrong-two.m4a",
+      "bytes": 41531,
+      "sha256": "6e2a831c13d5ece29cb230664791831576882dcf6bdbb8182931cf54dce12647",
+      "durationMs": 3726,
+      "meanDb": -18.6,
+      "maxDb": -2.1
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/L443-S01.m4a",
+      "bytes": 57310,
+      "sha256": "3ceea7e56fbb49ac26de0052e6e749d0c3a880c975b4e87d22551d61f9e416cb",
+      "durationMs": 4655,
+      "meanDb": -18.6,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/L443-S02.m4a",
+      "bytes": 44076,
+      "sha256": "4c6289511b28f08f3541744e2d10d9f629a40524189f149a96839924036637a8",
+      "durationMs": 4367,
+      "meanDb": -19.3,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/L443-S03.m4a",
+      "bytes": 57637,
+      "sha256": "975a795092707a26e30c37c98f377b4fb6b2a9614e046103c771fa8c02210aa0",
+      "durationMs": 4876,
+      "meanDb": -18.4,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/L443-S04.m4a",
+      "bytes": 57602,
+      "sha256": "1d2432210d096fd2a590a113f5af78ae90a356de9e8746a576a8cbf38c865704",
+      "durationMs": 4715,
+      "meanDb": -18.7,
+      "maxDb": -2
+    },
+    {
+      "path": "public/assets/lessons/L443/audio/L443-S05.m4a",
+      "bytes": 54933,
+      "sha256": "c32a207e8b064b0f574a60d547f5c9cab8026993c8410c2e849ce5a7386458f6",
+      "durationMs": 4774,
+      "meanDb": -18.2,
+      "maxDb": -2
+    }
+  ],
+  "charTranscript": {
+    "task": "transcribe",
+    "language": "chinese",
+    "duration": 1.7100000381469727,
+    "text": "操",
+    "words": [
+      {
+        "word": "操",
+        "start": 0,
+        "end": 0.6399999856948853
+      }
+    ],
+    "usage": {
+      "type": "duration",
+      "seconds": 2
+    }
+  },
+  "processing": {
+    "generation": "OpenAI gpt-4o-mini-tts coral, Taiwan Mandarin, speed 0.9. S02 explicit 體操 ㄊㄧˇ ㄘㄠ; S03 smooth full sentence; G02 suffix explicitly preserved 作 ㄗㄨㄛˋ. G05 options generated as three independent whole sentences.",
+    "conversion": "Repo assets:audio pipeline; mono AAC 44100 Hz and loudness normalization.",
+    "alignment": "Repo Whisper word alignment with simplified/traditional equivalences. 做/作 homophone normalization applies only to the G02 suffix technical transcript; written target stays 作影印機. No speech splicing."
+  }
+}
