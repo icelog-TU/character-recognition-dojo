@@ -1,0 +1,193 @@
+{
+  "unit": "R053",
+  "packageStatus": "asset-complete-package",
+  "sourceMainCommit": "72b61a615628b25a2c78b63c9c400f9adcca946f",
+  "boundary": "Allowed ceiling locked to formal L001-L435 at 72b61a61: 439 chars; L436 補 and L437 修 excluded.",
+  "coverage": "R053/R054 pair requiredCoverageChars 30/30 PASS.",
+  "sentenceLengthException": "Pair exception is R054-S04 only; R053 sentence lengths are 10–12 Han.",
+  "checks": {
+    "curriculumValidation": "PASS with full base plus both review drafts; pre-existing legacy normal-lesson warnings only.",
+    "productionAssets": "PASS using isolated pair fixture.",
+    "assetFormats": "PASS strict with zero warnings.",
+    "timings": "PASS: sentence and G02 fragment timing counts match exact Han sequences; intervals non-overlapping, 80–900 ms; terminal tails <=300 ms.",
+    "browser": "PASS at 390x844 for ten sentence playback, moving character highlight, G01/G03/G04 mapping, all G05 option playback and correct selection, and both G02 prefix/suffix playback.",
+    "sharedState": "Production JSON restored byte-for-byte; planner/ledger integration remains Release-owned."
+  },
+  "browserQA": {
+    "viewport": "390x844",
+    "display": "All five approved displayLines rendered legibly with zhuyin.",
+    "games": "G01 correct target accepted; G03 correct single-Han accepted; G04 specified four single-Han cards accepted in exact order; G05 all three files ended and correct option enabled reward.",
+    "G02": "Dedicated prefix ended before target and dedicated suffix ended in standalone local playback page.",
+    "limitations": [
+      "Press-and-hold microphone recording and post-recording resume were not exercised because the available CUA click API has no hold-duration action.",
+      "No human auditory-listening PASS is claimed; automated transcription, phonetic evidence, decode/volume gates and browser playback are retained for teacher review."
+    ],
+    "endedEvents": [
+      "ENDED R053-S01.m4a",
+      "ENDED R053-S02.m4a",
+      "ENDED R053-S03.m4a",
+      "ENDED R053-S04.m4a",
+      "ENDED R053-S05.m4a",
+      "ENDED R053-G02-prefix.m4a",
+      "ENDED R053-G05-wrong-one.m4a",
+      "ENDED R053-G05-wrong-two.m4a",
+      "ENDED R053-G02-suffix.m4a"
+    ]
+  },
+  "audioContent": {
+    "transcription": "All five sentence files and both G05 wrong options match their approved Han-only sequences under independent final-file ASR; 做/坐 is a same-pronunciation ASR rendering only.",
+    "pronunciation": "R053-S04 解說 confirmed ㄐㄧㄝˇ ㄕㄨㄛ; R053-S03 乾 confirmed ㄍㄢ. No clipping reported on checked sentence audio."
+  },
+  "timingsRepairs": [
+    {
+      "sentenceId": "R053-S03",
+      "charIndex": 4,
+      "before": {
+        "charIndex": 4,
+        "startMs": 2260,
+        "endMs": 2300
+      },
+      "after": {
+        "startMs": 2220,
+        "endMs": 2300
+      },
+      "reason": "Whisper isolated 試 in a 40 ms interval after the clause pause; extend onset to the measured pre-voice boundary while preserving order."
+    },
+    {
+      "sentenceId": "R053-S05",
+      "charIndex": 7,
+      "before": {
+        "charIndex": 7,
+        "startMs": 2640,
+        "endMs": 2660
+      },
+      "after": {
+        "startMs": 2580,
+        "endMs": 2660
+      },
+      "reason": "Whisper allocated only 20 ms to 結 inside 結果; extend onset into the measured word interval while preserving 果 timing."
+    }
+  ],
+  "tailTrims": [
+    {
+      "file": "R053-G02-prefix.m4a",
+      "terminalSilenceStartSeconds": 1.76692,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 1.92692
+    },
+    {
+      "file": "R053-G02-suffix.m4a",
+      "terminalSilenceStartSeconds": 2.83342,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 2.99342
+    },
+    {
+      "file": "R053-G05-wrong-one.m4a",
+      "terminalSilenceStartSeconds": 3.93844,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 4.09844
+    },
+    {
+      "file": "R053-G05-wrong-two.m4a",
+      "terminalSilenceStartSeconds": 4.7958,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 4.9558
+    },
+    {
+      "file": "R053-S01.m4a",
+      "terminalSilenceStartSeconds": 3.93084,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 4.09084
+    },
+    {
+      "file": "R053-S02.m4a",
+      "terminalSilenceStartSeconds": 3.96147,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 4.1214699999999995
+    },
+    {
+      "file": "R053-S03.m4a",
+      "terminalSilenceStartSeconds": 3.64093,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 3.80093
+    },
+    {
+      "file": "R053-S04.m4a",
+      "terminalSilenceStartSeconds": 4.40247,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 4.56247
+    },
+    {
+      "file": "R053-S05.m4a",
+      "terminalSilenceStartSeconds": 3.62696,
+      "retainedTailMs": 160,
+      "finalDurationSeconds": 3.78696
+    }
+  ],
+  "phoneticEvidence": [
+    {
+      "file": "R053-S03",
+      "result": "Transcription: 太乾，試著加水看看。\n\nZhuyin with tone: ㄊㄞˋ ㄍㄢ，ㄕˋ ㄓㄜ˙ ㄐㄧㄚ ㄕㄨㄟˇ ㄎㄢˋ ㄎㄢˋ。"
+    },
+    {
+      "file": "R053-S04",
+      "result": "店員解說這個玩具怎麼玩\n\nㄉㄧㄢˋ ㄩㄢˊ ㄐㄧㄝˇ ㄕㄨㄛ ㄓㄜˋ ㄍㄜ˙ ㄨㄢˊ ㄐㄩˋ ㄗㄜˇ ㄇㄜ˙ ㄨㄢˊ"
+    }
+  ],
+  "images": [
+    {
+      "id": "R053-S01",
+      "path": "public/assets/reviews/R053/images/R053-S01.webp",
+      "bytes": 223742,
+      "sha256": "55acc9780bf86b117fe8a6be72038cd83425a8c5b7b655423ce344034bbd61ce",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "固定媽媽示意水果與水槽；主角女孩自行在安全固定踏階上洗蘋果，水果籃與動作清楚。"
+    },
+    {
+      "id": "R053-S02",
+      "path": "public/assets/reviews/R053/images/R053-S02.webp",
+      "bytes": 197240,
+      "sha256": "5dca085512885358f01f273b3c2a4a083c8d7c7549a78d94d1ac61d519efbb4f",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "主角女孩主動放下控制器、關閉螢幕並轉向畫冊與畫具；無責罵、時計或介面文字。"
+    },
+    {
+      "id": "R053-S03",
+      "path": "public/assets/reviews/R053/images/R053-S03.webp",
+      "bytes": 248030,
+      "sha256": "6a0bbeb685240cde8da683920aedc2c979fdcca4c82de0f09d671136c0861159",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "乾稠水彩、清水罐、沾水畫筆與調色盤同框；固定媽媽近旁指導，水未倒上完成圖畫。"
+    },
+    {
+      "id": "R053-S04",
+      "path": "public/assets/reviews/R053/images/R053-S04.webp",
+      "bytes": 220760,
+      "sha256": "ab5a25fc852b6113afdf45a33c0ecb3ba4ae1df51be758e87a68a98625da8a78",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "generic 店員在玩具店展示桌示範木球軌道，主角女孩專心觀看；角色與固定媽媽、老師可區分。"
+    },
+    {
+      "id": "R053-S05",
+      "path": "public/assets/reviews/R053/images/R053-S05.webp",
+      "bytes": 226830,
+      "sha256": "22884188b7100107106160f7df6246889f6d112713a3f63eca86d497f5ad154e",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "主角女孩持完成風車，小月朝風車吹氣且旋轉動態清楚；小月長深栗卷髮、月亮髮夾、薰衣草 cardigan、青綠裙符合專屬 reference。"
+    }
+  ],
+  "assets": {
+    "images": 5,
+    "audio": 9,
+    "imageBytes": 1116602,
+    "audioBytes": 591747,
+    "totalBytes": 1708349,
+    "game5SpreadDb": 0.40000000000000213
+  },
+  "release": "L435 dependency is merged. Release integrates the pair in order R053 then R054 before L436; this package contains no review migration replacement."
+}

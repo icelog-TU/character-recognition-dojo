@@ -1,0 +1,827 @@
+[
+  {
+    "file": "R053-S01.m4a",
+    "expected": "如果想吃水果就自己去洗",
+    "duration": 4.090998,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.6,
+    "max": -3.2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 2.09902
+      },
+      {
+        "type": "end",
+        "seconds": 2.30757
+      },
+      {
+        "type": "start",
+        "seconds": 3.93084
+      },
+      {
+        "type": "end",
+        "seconds": 4.10993
+      }
+    ],
+    "sha256": "965aca73c84b816ddea7baca7d613f3bc987136aff673ddb42a8cf5357ced679",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.099999904632568,
+      "text": "如果想吃水果,就自己去洗。",
+      "words": [
+        {
+          "word": "如果",
+          "start": 0,
+          "end": 0.5400000214576721
+        },
+        {
+          "word": "想",
+          "start": 0.5400000214576721,
+          "end": 1.0800000429153442
+        },
+        {
+          "word": "吃",
+          "start": 1.0800000429153442,
+          "end": 1.3799999952316284
+        },
+        {
+          "word": "水",
+          "start": 1.3799999952316284,
+          "end": 1.6799999475479126
+        },
+        {
+          "word": "果",
+          "start": 1.6799999475479126,
+          "end": 1.899999976158142
+        },
+        {
+          "word": "就",
+          "start": 2.380000114440918,
+          "end": 2.680000066757202
+        },
+        {
+          "word": "自己",
+          "start": 2.680000066757202,
+          "end": 3.200000047683716
+        },
+        {
+          "word": "去",
+          "start": 3.200000047683716,
+          "end": 3.680000066757202
+        },
+        {
+          "word": "洗。",
+          "start": 3.680000066757202,
+          "end": 3.819999933242798
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    }
+  },
+  {
+    "file": "R053-S02.m4a",
+    "expected": "我決定減少玩電動的時間",
+    "duration": 4.120998,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.2,
+    "max": -2.6,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 0.376327
+      },
+      {
+        "type": "end",
+        "seconds": 0.738345
+      },
+      {
+        "type": "start",
+        "seconds": 1.46444
+      },
+      {
+        "type": "end",
+        "seconds": 1.78224
+      },
+      {
+        "type": "start",
+        "seconds": 3.96147
+      },
+      {
+        "type": "end",
+        "seconds": 4.13315
+      }
+    ],
+    "sha256": "509eb12dd387f5a3a8d3ae39c53f83819786068a730f368939b5b0f158bb67e6",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.130000114440918,
+      "text": "我決定減少玩電動的時間。",
+      "words": [
+        {
+          "word": "我",
+          "start": 0,
+          "end": 0.4399999976158142
+        },
+        {
+          "word": "決",
+          "start": 0.4399999976158142,
+          "end": 1.1799999475479126
+        },
+        {
+          "word": "定",
+          "start": 1.1799999475479126,
+          "end": 1.6200000047683716
+        },
+        {
+          "word": "減",
+          "start": 1.6200000047683716,
+          "end": 2.200000047683716
+        },
+        {
+          "word": "少",
+          "start": 2.200000047683716,
+          "end": 2.440000057220459
+        },
+        {
+          "word": "玩",
+          "start": 2.440000057220459,
+          "end": 2.7799999713897705
+        },
+        {
+          "word": "電",
+          "start": 2.7799999713897705,
+          "end": 3.059999942779541
+        },
+        {
+          "word": "動",
+          "start": 3.059999942779541,
+          "end": 3.200000047683716
+        },
+        {
+          "word": "的",
+          "start": 3.200000047683716,
+          "end": 3.4800000190734863
+        },
+        {
+          "word": "時間。",
+          "start": 3.4800000190734863,
+          "end": 3.8399999141693115
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    }
+  },
+  {
+    "file": "R053-S03.m4a",
+    "expected": "水彩太乾試著加水看看",
+    "duration": 3.800998,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.7,
+    "max": -2.1,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.51136
+      },
+      {
+        "type": "end",
+        "seconds": 1.85113
+      },
+      {
+        "type": "start",
+        "seconds": 3.64093
+      },
+      {
+        "type": "end",
+        "seconds": 3.80807
+      }
+    ],
+    "sha256": "8f7596f7091ca481ab430f582b491674e2921293ede7932ca0f4d8d1e01cbf9e",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.799999952316284,
+      "text": "水彩太乾,試著加水看看。",
+      "words": [
+        {
+          "word": "水",
+          "start": 0,
+          "end": 0.41999998688697815
+        },
+        {
+          "word": "彩",
+          "start": 0.41999998688697815,
+          "end": 0.8600000143051147
+        },
+        {
+          "word": "太",
+          "start": 0.8600000143051147,
+          "end": 1.2000000476837158
+        },
+        {
+          "word": "乾",
+          "start": 1.2000000476837158,
+          "end": 1.440000057220459
+        },
+        {
+          "word": "試",
+          "start": 2.240000009536743,
+          "end": 2.299999952316284
+        },
+        {
+          "word": "著",
+          "start": 2.299999952316284,
+          "end": 2.4800000190734863
+        },
+        {
+          "word": "加",
+          "start": 2.4800000190734863,
+          "end": 2.819999933242798
+        },
+        {
+          "word": "水",
+          "start": 2.819999933242798,
+          "end": 3.0199999809265137
+        },
+        {
+          "word": "看看。",
+          "start": 3.0199999809265137,
+          "end": 3.5399999618530273
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    }
+  },
+  {
+    "file": "R053-S04.m4a",
+    "expected": "店員解說這個玩具怎麼玩",
+    "duration": 4.561995,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -18.4,
+    "max": -3.6,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 0.811066
+      },
+      {
+        "type": "end",
+        "seconds": 0.961633
+      },
+      {
+        "type": "start",
+        "seconds": 1.87286
+      },
+      {
+        "type": "end",
+        "seconds": 2.17229
+      },
+      {
+        "type": "start",
+        "seconds": 3.22413
+      },
+      {
+        "type": "end",
+        "seconds": 3.52855
+      },
+      {
+        "type": "start",
+        "seconds": 4.40247
+      },
+      {
+        "type": "end",
+        "seconds": 4.57433
+      }
+    ],
+    "sha256": "d310b4ade8b0edeec15dda7de03a5b22c13d6afd5839545e4b33d5fc34758254",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.570000171661377,
+      "text": "店員、解說,這個玩具怎麼玩?",
+      "words": [
+        {
+          "word": "店",
+          "start": 0,
+          "end": 0.4000000059604645
+        },
+        {
+          "word": "員、",
+          "start": 0.4000000059604645,
+          "end": 0.800000011920929
+        },
+        {
+          "word": "解",
+          "start": 1.059999942779541,
+          "end": 1.5
+        },
+        {
+          "word": "說",
+          "start": 1.5,
+          "end": 1.8200000524520874
+        },
+        {
+          "word": "這個",
+          "start": 2.4200000762939453,
+          "end": 2.5999999046325684
+        },
+        {
+          "word": "玩",
+          "start": 2.5999999046325684,
+          "end": 2.940000057220459
+        },
+        {
+          "word": "具",
+          "start": 2.940000057220459,
+          "end": 3.180000066757202
+        },
+        {
+          "word": "怎麼",
+          "start": 3.180000066757202,
+          "end": 3.940000057220459
+        },
+        {
+          "word": "玩",
+          "start": 3.940000057220459,
+          "end": 4.300000190734863
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    }
+  },
+  {
+    "file": "R053-S05.m4a",
+    "expected": "我們合作做風車結果成功了",
+    "duration": 3.787007,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.2,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.95002
+      },
+      {
+        "type": "end",
+        "seconds": 2.30728
+      },
+      {
+        "type": "start",
+        "seconds": 3.62696
+      },
+      {
+        "type": "end",
+        "seconds": 3.80807
+      }
+    ],
+    "sha256": "8e269b3d61643fc50e6fd21d92c4c0e45557a29c19818120544c57b760466aa4",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 3.799999952316284,
+      "text": "我們合作做風車,結果成功了!",
+      "words": [
+        {
+          "word": "我們",
+          "start": 0,
+          "end": 0.46000000834465027
+        },
+        {
+          "word": "合",
+          "start": 0.46000000834465027,
+          "end": 0.8600000143051147
+        },
+        {
+          "word": "作",
+          "start": 0.8600000143051147,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "做",
+          "start": 1.159999966621399,
+          "end": 1.4199999570846558
+        },
+        {
+          "word": "風",
+          "start": 1.4199999570846558,
+          "end": 1.6799999475479126
+        },
+        {
+          "word": "車",
+          "start": 1.6799999475479126,
+          "end": 1.9800000190734863
+        },
+        {
+          "word": "結果",
+          "start": 2.640000104904175,
+          "end": 2.759999990463257
+        },
+        {
+          "word": "成",
+          "start": 2.759999990463257,
+          "end": 3.240000009536743
+        },
+        {
+          "word": "功",
+          "start": 3.240000009536743,
+          "end": 3.440000057220459
+        },
+        {
+          "word": "了",
+          "start": 3.440000057220459,
+          "end": 3.619999885559082
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 4
+      }
+    }
+  },
+  {
+    "file": "R053-G02-prefix.m4a",
+    "expected": "我決定",
+    "duration": 1.927007,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -26.5,
+    "max": -11.7,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 0.569478
+      },
+      {
+        "type": "end",
+        "seconds": 0.875465
+      },
+      {
+        "type": "start",
+        "seconds": 1.76692
+      },
+      {
+        "type": "end",
+        "seconds": 1.92726
+      }
+    ],
+    "sha256": "bd70918fea08fa6cb2bc77796b3e56052e42e8b80a0977a464868cfcfdf7967f",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 1.9199999570846558,
+      "text": "我決定。",
+      "words": [
+        {
+          "word": "我",
+          "start": 0,
+          "end": 0.6399999856948853
+        },
+        {
+          "word": "決",
+          "start": 0.6399999856948853,
+          "end": 1.399999976158142
+        },
+        {
+          "word": "定。",
+          "start": 1.399999976158142,
+          "end": 1.7000000476837158
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 2
+      }
+    }
+  },
+  {
+    "file": "R053-G02-suffix.m4a",
+    "expected": "少玩電動的時間",
+    "duration": 2.992993,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.9,
+    "max": -3.9,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 2.8334
+      },
+      {
+        "type": "end",
+        "seconds": 2.99537
+      }
+    ],
+    "sha256": "d9165ddd1166d35160dbbe10285e9becfc84412a95a423ab12ac9ffecee4948c",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 2.990000009536743,
+      "text": "少玩電動的時間。",
+      "words": [
+        {
+          "word": "少",
+          "start": 0,
+          "end": 0.6200000047683716
+        },
+        {
+          "word": "玩",
+          "start": 0.6200000047683716,
+          "end": 1.159999966621399
+        },
+        {
+          "word": "電",
+          "start": 1.159999966621399,
+          "end": 1.600000023841858
+        },
+        {
+          "word": "動",
+          "start": 1.600000023841858,
+          "end": 1.840000033378601
+        },
+        {
+          "word": "的",
+          "start": 1.840000033378601,
+          "end": 2.180000066757202
+        },
+        {
+          "word": "時間。",
+          "start": 2.180000066757202,
+          "end": 2.700000047683716
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 3
+      }
+    }
+  },
+  {
+    "file": "R053-G05-wrong-one.m4a",
+    "expected": "我們合作做紙船結果成功了",
+    "duration": 4.098005,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.6,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 1.8868
+      },
+      {
+        "type": "end",
+        "seconds": 2.37059
+      },
+      {
+        "type": "start",
+        "seconds": 2.95116
+      },
+      {
+        "type": "end",
+        "seconds": 3.16057
+      },
+      {
+        "type": "start",
+        "seconds": 3.93844
+      },
+      {
+        "type": "end",
+        "seconds": 4.10993
+      }
+    ],
+    "sha256": "da551c364657003d4d1e2a5cb225d19b8b47bb3f4bed1c45b160d82e8e480b8c",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.099999904632568,
+      "text": "我們合作做紙船,結果,成功了!",
+      "words": [
+        {
+          "word": "我們",
+          "start": 0,
+          "end": 0.4000000059604645
+        },
+        {
+          "word": "合",
+          "start": 0.4000000059604645,
+          "end": 0.7799999713897705
+        },
+        {
+          "word": "作",
+          "start": 0.7799999713897705,
+          "end": 1.0199999809265137
+        },
+        {
+          "word": "做",
+          "start": 1.0199999809265137,
+          "end": 1.2799999713897705
+        },
+        {
+          "word": "紙",
+          "start": 1.2799999713897705,
+          "end": 1.559999942779541
+        },
+        {
+          "word": "船",
+          "start": 1.559999942779541,
+          "end": 2.0799999237060547
+        },
+        {
+          "word": "結果",
+          "start": 2.680000066757202,
+          "end": 2.859999895095825
+        },
+        {
+          "word": "成",
+          "start": 3.5199999809265137,
+          "end": 3.5199999809265137
+        },
+        {
+          "word": "功",
+          "start": 3.5199999809265137,
+          "end": 3.7200000286102295
+        },
+        {
+          "word": "了",
+          "start": 3.7200000286102295,
+          "end": 3.9200000762939453
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    }
+  },
+  {
+    "file": "R053-G05-wrong-two.m4a",
+    "expected": "你們合作做風車結果成功了",
+    "duration": 4.956009,
+    "stream": [
+      {
+        "codec": "aac",
+        "sampleRate": "44100",
+        "channels": 1
+      }
+    ],
+    "mean": -17.4,
+    "max": -2,
+    "silence": [
+      {
+        "type": "start",
+        "seconds": 0.625692
+      },
+      {
+        "type": "end",
+        "seconds": 0.797029
+      },
+      {
+        "type": "start",
+        "seconds": 2.56206
+      },
+      {
+        "type": "end",
+        "seconds": 3.19259
+      },
+      {
+        "type": "start",
+        "seconds": 3.80388
+      },
+      {
+        "type": "end",
+        "seconds": 3.99349
+      },
+      {
+        "type": "start",
+        "seconds": 4.79578
+      },
+      {
+        "type": "end",
+        "seconds": 4.96907
+      }
+    ],
+    "sha256": "d61cedc1085277d24dda326e7ad43c604cb1521a51d20438256e7ab2ae34a8e8",
+    "transcript": {
+      "task": "transcribe",
+      "language": "chinese",
+      "duration": 4.960000038146973,
+      "text": "你們合作坐風車,結果成功了!",
+      "words": [
+        {
+          "word": "你們",
+          "start": 0,
+          "end": 0.5
+        },
+        {
+          "word": "合",
+          "start": 0.5,
+          "end": 1.2599999904632568
+        },
+        {
+          "word": "作",
+          "start": 1.2599999904632568,
+          "end": 1.6399999856948853
+        },
+        {
+          "word": "坐",
+          "start": 1.6399999856948853,
+          "end": 1.9800000190734863
+        },
+        {
+          "word": "風",
+          "start": 1.9800000190734863,
+          "end": 2.299999952316284
+        },
+        {
+          "word": "車",
+          "start": 2.299999952316284,
+          "end": 2.5
+        },
+        {
+          "word": "結果",
+          "start": 3.5199999809265137,
+          "end": 3.7200000286102295
+        },
+        {
+          "word": "成",
+          "start": 3.7200000286102295,
+          "end": 4.340000152587891
+        },
+        {
+          "word": "功",
+          "start": 4.340000152587891,
+          "end": 4.559999942779541
+        },
+        {
+          "word": "了",
+          "start": 4.559999942779541,
+          "end": 4.800000190734863
+        }
+      ],
+      "usage": {
+        "type": "duration",
+        "seconds": 5
+      }
+    }
+  }
+]

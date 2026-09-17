@@ -1,0 +1,61 @@
+{
+  "tool": "Built-in imagegen",
+  "dimensions": "1024x1024",
+  "references": [
+    "L058 style set",
+    "L420-S01 fixed teacher",
+    "L058-S04 fixed 你 boy"
+  ],
+  "images": [
+    {
+      "id": "R054-S01",
+      "path": "public/assets/reviews/R054/images/R054-S01.webp",
+      "bytes": 197040,
+      "sha256": "4e44d0592c01807d90c51208587d0b0eadaf0e1f64dfd42a914007ca6c67b1ac",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "教室外牆、門窗及寬敞戶外活動區清楚；多組各自傳軟球，主角在其中一組，固定老師以 tied-back hair、sage cardigan 身份照看。"
+    },
+    {
+      "id": "R054-S02",
+      "path": "public/assets/reviews/R054/images/R054-S02.webp",
+      "bytes": 209800,
+      "sha256": "a1d5160e9fba6f5649bca9de790982da41352be69da42863d40252f560ea1583",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "兩色隊伍在球場邊輪替，一隊入場、一隊場外休息；兩位帶隊成人友善確認，沒有對打或時刻文字。"
+    },
+    {
+      "id": "R054-S03",
+      "path": "public/assets/reviews/R054/images/R054-S03.webp",
+      "bytes": 192406,
+      "sha256": "51a059947890de39dc7f8afb22b52de319704fb297ea77d7252f7998aac1707e",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "generic 飼主持空牽繩與純小狗照片詢問鄰居；飼主短捲灰髮、深綠外套、鏽橘上衣、炭灰長褲及酒紅包，與固定媽媽的長直深髮、白／米上衣、藍褲、棕包配色完全分離；現實場景沒有小狗。"
+    },
+    {
+      "id": "R054-S04",
+      "path": "public/assets/reviews/R054/images/R054-S04.webp",
+      "bytes": 137664,
+      "sha256": "34ca7fc3cd18ce00cf3a16fca504b50ea6678774dc9fc02d0c1a337d7d203569",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "陌生病童具中深膚色、雀斑、黑色緊密捲髮雙髮髻與藍綠公主服，與主角女孩及小月明顯不同；陪伴家長為戴方框眼鏡、留鬍子、穿芥末黃毛衣的 generic 父親。病床、醫師、護理師、皇冠與公主心願均完整。"
+    },
+    {
+      "id": "R054-S05",
+      "path": "public/assets/reviews/R054/images/R054-S05.webp",
+      "bytes": 235446,
+      "sha256": "2e61d744b74a48ec08524678cf8eccf563e860055d79b9507e96f781858bf9c2",
+      "styleLock": "PASS: actual exported WebP compared side by side with L058 style references and applicable fixed-cast anchors.",
+      "cast": "PASS",
+      "semanticCheck": "主角女孩拿購物籃並交出圍裙，固定「你」男孩接圍裙往桌後移動；天藍上衣、綠短褲與玩具蔬果符合開店角色交換。"
+    }
+  ],
+  "rejectedAttempts": [
+    "R054-S01 v1 used a mother-like supervisor; replaced with fixed-teacher identity v2.",
+    "R054-S03 v1 owner repeated the fixed mother white/cream top, blue trousers and tan bag palette; replaced with short gray curls and green/rust/charcoal/burgundy palette.",
+    "R054-S04 v1 patient and bedside mother-like relative resembled the recurring protagonist family; replaced with a distinct Black child and generic father."
+  ]
+}
