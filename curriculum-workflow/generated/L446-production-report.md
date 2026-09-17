@@ -8,7 +8,7 @@
 ## 交付與驗證
 
 - request、draft、含 final records 的 generation packet、原始 handoff、5 張 1024×1024 WebP、10 個 mono AAC 44100 Hz M4A、alignment report 與 hash/QA report 齊全。
-- pushed ref `origin/codex/l446-complete-package` 在固定資產 commit `be84c26b5d1c27601c79751621d33f41bb2f0904` 執行 strict package intake：PASS；5 images、10 audio、五種 Stage 4 類型齊全。
+- pushed ref `origin/codex/l446-complete-package` 在修復後固定資產 commit `5c49a2ca19ad82e71390eaf82ce1650bac27ca8e` 執行 strict package intake：PASS；5 images、10 audio、五種 Stage 4 類型齊全。
 - 全課 assets 1058956 bytes；五圖各 112666、124050、145690、122738、146232 bytes。只交付接受的 final WebP/M4A。
 - request/draft/packet 文案、448 字 allowedChars、displayLines、Han-only index 與 Stage 4 五句各用一次：PASS。
 - 五句漢字數 10／9／11／12／9。Coverage 音4、樂2、器2、操2、機2、賽1。
@@ -49,4 +49,4 @@ Local isolated Vite fixture; base prerequisites were seeded in memory and provis
 Release 必須先依序整合 L439–L445。request 的實際 provisional 文字依賴為 L441–L445；L439/L440 是前序可玩路徑依賴。這些不是本包缺件。
 Production 不 merge main，不修改 production JSON、planner、ledger 或部署；ignored 音訊中間檔及快取保留。
 
-修復後固定資產 SHA 將在資產 repair commit 後補入。Pre-merge 預覽必須改用新的完整 SHA。
+修復後固定資產 SHA：`5c49a2ca19ad82e71390eaf82ce1650bac27ca8e`。Pre-merge 預覽必須使用此完整 SHA，舊審查 commit 已失效。
