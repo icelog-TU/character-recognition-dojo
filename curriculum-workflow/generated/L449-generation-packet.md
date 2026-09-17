@@ -433,47 +433,47 @@ Release requires contiguous numbered predecessors L439-L448; sentence text itsel
       "suffixSrc": "/assets/lessons/L449/audio/L449-G02-suffix.m4a",
       "prefixAudio": {
         "src": "/assets/lessons/L449/audio/L449-G02-prefix.m4a",
-        "durationMs": 2933,
+        "durationMs": 3408,
         "charTimings": [
           {
             "charIndex": 0,
             "startMs": 0,
-            "endMs": 230
+            "endMs": 180
           },
           {
             "charIndex": 1,
-            "startMs": 230,
-            "endMs": 460
+            "startMs": 180,
+            "endMs": 360
           },
           {
             "charIndex": 2,
-            "startMs": 460,
+            "startMs": 360,
             "endMs": 840
           },
           {
             "charIndex": 3,
             "startMs": 840,
-            "endMs": 1060
+            "endMs": 1080
           },
           {
             "charIndex": 4,
-            "startMs": 1060,
-            "endMs": 1440
+            "startMs": 1080,
+            "endMs": 1500
           },
           {
             "charIndex": 5,
-            "startMs": 1440,
-            "endMs": 1660
+            "startMs": 1500,
+            "endMs": 1840
           },
           {
             "charIndex": 6,
-            "startMs": 1660,
-            "endMs": 1980
+            "startMs": 2340,
+            "endMs": 2640
           },
           {
             "charIndex": 7,
-            "startMs": 1980,
-            "endMs": 2180
+            "startMs": 2640,
+            "endMs": 2860
           }
         ]
       },
@@ -780,47 +780,47 @@ Release requires contiguous numbered predecessors L439-L448; sentence text itsel
 {
   "L449-G02-prefix": {
     "src": "/assets/lessons/L449/audio/L449-G02-prefix.m4a",
-    "durationMs": 2933,
+    "durationMs": 3408,
     "charTimings": [
       {
         "charIndex": 0,
         "startMs": 0,
-        "endMs": 230
+        "endMs": 180
       },
       {
         "charIndex": 1,
-        "startMs": 230,
-        "endMs": 460
+        "startMs": 180,
+        "endMs": 360
       },
       {
         "charIndex": 2,
-        "startMs": 460,
+        "startMs": 360,
         "endMs": 840
       },
       {
         "charIndex": 3,
         "startMs": 840,
-        "endMs": 1060
+        "endMs": 1080
       },
       {
         "charIndex": 4,
-        "startMs": 1060,
-        "endMs": 1440
+        "startMs": 1080,
+        "endMs": 1500
       },
       {
         "charIndex": 5,
-        "startMs": 1440,
-        "endMs": 1660
+        "startMs": 1500,
+        "endMs": 1840
       },
       {
         "charIndex": 6,
-        "startMs": 1660,
-        "endMs": 1980
+        "startMs": 2340,
+        "endMs": 2640
       },
       {
         "charIndex": 7,
-        "startMs": 1980,
-        "endMs": 2180
+        "startMs": 2640,
+        "endMs": 2860
       }
     ],
     "spokenText": "爸爸一邊開車一邊"
@@ -966,12 +966,12 @@ Release requires contiguous numbered predecessors L439-L448; sentence text itsel
 
 ## Production QA
 S01 style-lock PASS, cast PASS; S02 style-lock PASS, cast PASS; S03 style-lock PASS, cast PASS; S04 style-lock PASS, cast PASS; S05 style-lock PASS, cast PASS
-Repo OpenAI gpt-4o-mini-tts; normal spoken Taiwan Mandarin, never melodic singing. Main clips use coral at speed 0.9. After teacher review of 0bb76b31, the complete G02 prefix was regenerated with marin at speed 0.9 and an explicit Taiwan Mandarin 爸爸 instruction: first 爸 falling fourth tone, second 爸 light neutral tone. Single-character suffix 歌 was independently generated with nova at speed 0.9. Processed mono AAC 44100 Hz. G05 options are separately generated complete sentences. No speech splicing.
+Repo OpenAI gpt-4o-mini-tts; normal spoken Taiwan Mandarin, never melodic singing. After teacher review, the complete G02 prefix was regenerated with sage at speed 0.9. The prompt explicitly requires 爸爸 as ㄅㄚˋ・ㄅㄚ and both occurrences of 一邊 as ㄧˋ ㄅㄧㄢ, including a fully pronounced second 一 after the comma. Single-character suffix 歌 uses nova at speed 0.9. Processed mono AAC 44100 Hz. G05 options are separately generated complete sentences. No speech splicing.
 Whisper word alignment with simplified/traditional normalization. 哥/歌 homophone normalization applies only to the one-syllable G02 suffix technical transcript. All sentence and Stage 4 timings are complete, ordered and 80–900 ms.
-Standalone 唱 returned 唱. Repaired G02 prefix independently transcribes as 爸爸一邊開車一邊; its opening was generated explicitly as ㄅㄚˋ・ㄅㄚ and the full phrase was regenerated rather than spliced. G02 suffix is one 793 ms first-tone ㄍㄜ syllable; no-context transcription returned the homophone 哥, while its intended written target remains 歌. 音樂 and 樂器 sentence contexts align to the complete approved text and use ㄩㄝˋ.
-Immutable asset review loaded from repair commit 25f299906e6bb01e68d39b26c11702658fbd3d06 with 5 sentence cards, 6 additional formal audio entries and 0 repair marks. L449-G02-prefix played from the beginning to ended=true at 2.932993 seconds with readyState 4 and no media error. Teacher subjective listening remains the final pronunciation check.
+Standalone 唱 returned 唱. Final G02 prefix independently transcribes as 爸爸一邊開車一邊. Its generation explicitly requires 爸爸 as ㄅㄚˋ・ㄅㄚ and both 一邊 phrases as ㄧˋ ㄅㄧㄢ; AI word alignment gives the two 一 syllables 480 ms and 300 ms spans, followed by 邊 spans of 240 ms and 220 ms. The full phrase was regenerated rather than spliced. G02 suffix is one 793 ms first-tone ㄍㄜ syllable. 音樂 and 樂器 sentence contexts use ㄩㄝˋ.
+Teacher listening accepted 爸爸 at repair commit cba61a24554883b6b93a04a864ab97fd9edd591d and identified distorted 一邊 pronunciation. The complete eight-character prefix was regenerated again with explicit ㄧˋ ㄅㄧㄢ instructions for both occurrences and independently realigned. New immutable browser playback will be recorded after push. Teacher subjective confirmation remains the final listening check.
 Built-in imagegen used. Actual exported WebP files were compared side by side with the L058 style montage and recurring-family references. Initial S01 was rejected because the second hand was cropped; final S01 was redrawn with both hands fully visible on the wheel. Rejected S01 draft is not committed.
-Asset audit: PASS. 5 WebP plus 10 M4A, 1250225 total bytes; G05 mean-volume spread 1.9 dB. Whole-repo strict audit: 492 units, 2419 image references, 4781 audio references, 0 warnings.
+Asset audit: PASS. 5 WebP plus 10 M4A, 1261237 total bytes; G05 mean-volume spread 1.9 dB. Whole-repo strict audit: 492 units, 2419 image references, 4781 audio references, 0 warnings.
 Final images: public/assets/lessons/L449/images/. Final audio: public/assets/lessons/L449/audio/. Raw audio inbox is ignored and outside shipping assets.
 Request: curriculum-workflow/lesson-requests/L449.json. Draft: curriculum-workflow/drafts/L449-draft.json.
 Pre-merge preview uses the full pushed package SHA from final handoff.
