@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L444 | 器 | claimed | Production C / parallel-c | codex/l444-complete-package | L439, L440, L441, L442, L443 | 練、運、賽、機、操 | curriculum-workflow/lesson-requests/L444.json; curriculum-workflow/generated/L444-generation-packet.md; curriculum-workflow/drafts/L444-draft.json | public/assets/lessons/L444/ | Teacher-approved five sentences; source main c243d7d3; locked 448 allowed chars. Dependencies block Release only. |
+| L444 | 器 | ready-blocked-by-dependency | Production C / parallel-c | codex/l444-complete-package | L439, L440, L441, L442, L443 | 練、運、賽、機、操 | curriculum-workflow/lesson-requests/L444.json; curriculum-workflow/generated/L444-generation-packet.md; curriculum-workflow/drafts/L444-draft.json | public/assets/lessons/L444/ | Complete lesson-local package; source main c243d7d3; locked 448 allowed chars. Dependencies block Release only. |
 
 ## Status Values
 
