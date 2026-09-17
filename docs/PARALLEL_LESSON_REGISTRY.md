@@ -16,6 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
+| L453 | 演 | claimed | Production A (Remote) | codex/l453-complete-package | L448歌; L449唱; L450舞; L451台; L452候; ordered L444-L452; R055/R056 after L450 | 歌唱舞台候 | curriculum-workflow/lesson-requests/L453.json; curriculum-workflow/generated/L453-generation-packet.md; curriculum-workflow/drafts/L453-draft.json | public/assets/lessons/L453/ | Formal Production handoff accepted. Base 5622c827: production L001-L443, latest 操, 443 learned Han. Allowed453. Package production proceeds in parallel; Release owns ordered integration and review milestone gates. |
 
 ## Status Values
 
