@@ -16,7 +16,7 @@ When the teacher wants to prepare 2-3 lessons or review modules at the same time
 
 | Unit | New Character(s) / Kind | Status | Owner / Thread | Branch / Commit | Depends On | Provisional Learned Chars | Request / Packet | Assets | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| L438 | 習 | claimed | Production C / parallel-c | codex/l438-complete-package | L436, L437; R053/R054 after L435 | 補、修 | curriculum-workflow/lesson-requests/L438.json; curriculum-workflow/generated/L438-generation-packet.md; curriculum-workflow/drafts/L438-draft.json | public/assets/lessons/L438/ | Teacher-approved five sentences; source main 72b61a61; locked 442 allowed chars. Dependencies block Release only. |
+| L438 | 習 | dependency-blocked-asset-complete | Production C / parallel-c | codex/l438-complete-package | L436, L437; R053/R054 after L435 | 補、修 | curriculum-workflow/lesson-requests/L438.json; curriculum-workflow/generated/L438-generation-packet.md; curriculum-workflow/drafts/L438-draft.json | public/assets/lessons/L438/ | Complete lesson-local package; source main 72b61a61; locked 442 allowed chars. Dependencies block Release only. |
 
 ## Status Values
 

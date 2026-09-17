@@ -1,0 +1,20 @@
+{
+  "generator": "OpenAI image generation",
+  "styleReference": "public/assets/lessons/L058/images/L058-S01.webp",
+  "castReferences": {
+    "xiaoyue": "public/assets/reference/lesson-cast/xiaoyue.webp",
+    "xiaoguang": "public/assets/reference/lesson-cast/xiaoguang.webp",
+    "protagonistExample": "public/assets/lessons/L433/images/L433-S04.webp"
+  },
+  "assets": [
+    { "sentenceId": "L438-S01", "generationId": "exec-a5f23dbb-3762-4321-b1cf-465ebbdbc584", "review": "PASS: recurring mother safely handles needle; protagonist selects patch; tear and in-progress repair visible" },
+    { "sentenceId": "L438-S02", "generationId": "exec-06db263e-4634-482b-92c7-0957582bb78b", "derivedFrom": "exec-c4c649d2-bde4-46e5-a1f1-b496272080a7", "review": "PASS after cast edit: protagonist restored; Xiaoguang reference traits and separate work materials preserved" },
+    { "sentenceId": "L438-S03", "generationId": "exec-b2abd1b6-9c51-496d-b07d-c0c2dd001105", "derivedFrom": "exec-0ca6465e-7b8e-4e03-bbc4-5ac24a608c1f", "review": "PASS after cast edit: protagonist restored; commercial copier and adult repair action clear" },
+    { "sentenceId": "L438-S04", "generationId": "exec-bfd09f3b-5686-4b2f-9ba8-3ba1875fd743", "review": "PASS: two generic classmates mutually exchange different books; recurring cast excluded" },
+    { "sentenceId": "L438-S05", "generationId": "exec-865bdcbb-67df-4621-b79a-d671e9f38a97", "review": "PASS: real girl waits at shallow pool while wordless bubble shows future supervised swimming" }
+  ],
+  "rejectedDraftsNotCommitted": [
+    { "sentenceId": "L438-S02", "generationId": "exec-c4c649d2-bde4-46e5-a1f1-b496272080a7", "reason": "protagonist hair and clothing drift" },
+    { "sentenceId": "L438-S03", "generationId": "exec-0ca6465e-7b8e-4e03-bbc4-5ac24a608c1f", "reason": "protagonist hair and clothing drift" }
+  ]
+}

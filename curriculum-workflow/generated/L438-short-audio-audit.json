@@ -1,0 +1,96 @@
+[
+  {
+    "file": "public/assets/lessons/L438/audio/char-u7fd2.m4a",
+    "sha256": "fead0f796a437e58615af21ddf65ae7afc6643760f2f8b37406a14d325c3942b",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "Si",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 34,
+          "input_tokens": 31,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 31
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "Si",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 34,
+          "input_tokens": 31,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 31
+          },
+          "output_tokens": 3
+        }
+      },
+      {
+        "text": "Si,",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 35,
+          "input_tokens": 31,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 31
+          },
+          "output_tokens": 4
+        }
+      }
+    ]
+  },
+  {
+    "file": "public/assets/lessons/L438/audio/L438-G02-suffix.m4a",
+    "sha256": "708eba17b73912dbe0f8bfcef1e6f7752a6f9d2d528295199a72c931b3842185",
+    "model": "gpt-4o-transcribe",
+    "prompt": null,
+    "trials": [
+      {
+        "text": "搬功課。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 19,
+          "input_tokens": 13,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 13
+          },
+          "output_tokens": 6
+        }
+      },
+      {
+        "text": "辦功課。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 19,
+          "input_tokens": 13,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 13
+          },
+          "output_tokens": 6
+        }
+      },
+      {
+        "text": "搬功課。",
+        "usage": {
+          "type": "tokens",
+          "total_tokens": 19,
+          "input_tokens": 13,
+          "input_token_details": {
+            "text_tokens": 0,
+            "audio_tokens": 13
+          },
+          "output_tokens": 6
+        }
+      }
+    ]
+  }
+]
