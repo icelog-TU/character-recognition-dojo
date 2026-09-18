@@ -1935,7 +1935,7 @@
     "audioPipeline": "Repo OpenAI gpt-4o-mini-tts coral, speed 0.9; every file processed to mono AAC 44100 Hz. All G05 choices are complete sentence recordings, with no splicing.",
     "timingReview": "Whisper word alignment recorded for all five sentences and four referenced Stage 4 fragments/options. Every transcription matched its expected Han sequence after simplified/traditional normalization.",
     "pronunciation": "Standalone 表 transcribed as 表. S02 and G02 prefix both transcribed as 相聲演員的 sequence; generation instructions explicitly locked 相聲 to ㄒㄧㄤˋ ㄕㄥ. G02 suffix transcribed exactly from 情, without adding 表.",
-    "browserQA": "Pre-merge asset QA is prepared for immutable pushed-commit Browser QA and manual playback of every sentence, character, teach fragment, and G05 option.",
+    "browserQA": "Immutable media commit 2ec4218d3b78c43678e4bb06ae86f1d82a5a0344 loaded 5 sentence image/audio cards and 6 additional formal audio entries. All 11 audio elements were started from the beginning and reached ended=true with currentTime=duration and media error=null. Console showed two Chrome extension message-channel closure entries unrelated to page assets; no media failure occurred.",
     "assetAudit": "PASS: local package audit found 5 WebP, 10 M4A, complete timings and 1,224,644 total asset bytes. Strict whole-repo asset audit checked 497 units, 2,444 image references and 4,831 audio references with 0 warnings."
   }
 }
