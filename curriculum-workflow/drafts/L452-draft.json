@@ -1070,10 +1070,19 @@
   ],
   "productionQa": {
     "method": "Final local asset, transcript, timing, style/cast and fixed-ref Chrome Browser QA playback checks",
-    "result": "PASS: 5 images, 10 unique M4A files, complete sentence/G02 timings, and 11/11 review-page playback controls",
+    "result": "PASS: complete package retained; teacher-requested S04/S05 repairs regenerated and verified on pushed fixed-ref preview",
     "browserQa": {
-      "status": "pending-repair-preview",
-      "note": "S04 and S05 replacement WebPs require fixed-ref preview verification after push."
+      "status": "pass",
+      "assetCommit": "d11aeb2581e9661b6765f81253b1ad862b64aec7",
+      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L452&ref=d11aeb2581e9661b6765f81253b1ad862b64aec7",
+      "browser": "Chrome",
+      "summary": "PASS: pushed repair ref loaded 5 sentence cards and 6 other audio items; replacement S04 and S05 image elements rendered from their expected paths.",
+      "scope": [
+        "L452-S04 replacement image",
+        "L452-S05 replacement image",
+        "complete L452 asset manifest"
+      ],
+      "limitation": "This verifies the pushed fixed-ref page and asset rendering; it does not claim a new teacher/manual approval."
     },
     "preRepairBrowserQa": {
       "status": "pass",
@@ -1105,7 +1114,7 @@
             "resolution": "Regenerated as a visibly separate coordinated jacket, dance skirt, ballet shoes and tights set."
           }
         ],
-        "status": "resolved-locally-pending-fixed-ref-preview"
+        "status": "resolved-and-fixed-ref-preview-pass"
       }
     ]
   }

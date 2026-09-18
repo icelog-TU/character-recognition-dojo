@@ -3458,10 +3458,19 @@ Teacher-approved records below are authoritative for this package. Production st
   ],
   "productionQa": {
     "method": "Final local asset, transcript, timing, style/cast and fixed-ref Chrome Browser QA playback checks",
-    "result": "PASS: 5 images, 10 unique M4A files, complete sentence/G02 timings, and 11/11 review-page playback controls",
+    "result": "PASS: complete package retained; teacher-requested S04/S05 repairs regenerated and verified on pushed fixed-ref preview",
     "browserQa": {
-      "status": "pending-repair-preview",
-      "note": "S04 and S05 replacement WebPs require fixed-ref preview verification after push."
+      "status": "pass",
+      "assetCommit": "d11aeb2581e9661b6765f81253b1ad862b64aec7",
+      "previewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L452&ref=d11aeb2581e9661b6765f81253b1ad862b64aec7",
+      "browser": "Chrome",
+      "summary": "PASS: pushed repair ref loaded 5 sentence cards and 6 other audio items; replacement S04 and S05 image elements rendered from their expected paths.",
+      "scope": [
+        "L452-S04 replacement image",
+        "L452-S05 replacement image",
+        "complete L452 asset manifest"
+      ],
+      "limitation": "This verifies the pushed fixed-ref page and asset rendering; it does not claim a new teacher/manual approval."
     },
     "preRepairBrowserQa": {
       "status": "pass",
@@ -3493,7 +3502,7 @@ Teacher-approved records below are authoritative for this package. Production st
             "resolution": "Regenerated as a visibly separate coordinated jacket, dance skirt, ballet shoes and tights set."
           }
         ],
-        "status": "resolved-locally-pending-fixed-ref-preview"
+        "status": "resolved-and-fixed-ref-preview-pass"
       }
     ]
   }
@@ -3509,7 +3518,7 @@ Teacher-approved records below are authoritative for this package. Production st
 - G02 prefix 小時 is 1160 ms, complete and clear in transcript; prefix/suffix both have final charTimings and exclude 候.
 - Nine sentence/game audio files passed unprompted exact normalized-Han transcript QA. Isolated 候 charAudio passed contextual glyph transcription as 候; a secondary unprompted model returned the identical ㄏㄡˋ homophone 後, which is recorded without claiming acoustic glyph distinction.
 - G05 wrong-option mean-volume spread is 0.2 dB.
-- Five final WebPs passed per-image style/cast/semantic review. Teacher review of ref `6062820c3ae9e53e570d7c8cbffeb5101726b862` requested two repairs: S04 father-hand/head overlap and S05 single-piece costume. Both WebPs were regenerated and locally rechecked; pushed fixed-ref preview pending.
+- Five final WebPs passed per-image style/cast/semantic review. Teacher review of ref `6062820c3ae9e53e570d7c8cbffeb5101726b862` requested two repairs: S04 father-hand/head overlap and S05 single-piece costume. Both WebPs were regenerated, locally rechecked, and loaded from pushed repair ref `d11aeb2581e9661b6765f81253b1ad862b64aec7`.
 - Fixed-ref Chrome preview QA: PASS at asset commit `c62e5bf82f01220e41bb5369f0eceb487046f31e`; page loaded 5 sentence cards and 6 other audio items with 0 repair flags, and all 11 playback controls started and returned after completion.
 - Pre-merge package preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L452&ref=c62e5bf82f01220e41bb5369f0eceb487046f31e
 
@@ -3519,4 +3528,5 @@ Teacher-approved records below are authoritative for this package. Production st
 - Reviewed ref: `6062820c3ae9e53e570d7c8cbffeb5101726b862`; needs repair: 2.
 - L452-S04 image: regenerated so the father's right hand, forearm and phone remain fully separate from the protagonist's unobstructed head. Local style/cast/anatomy check: PASS.
 - L452-S05 image: regenerated as a clearly separate coordinated jacket, dance skirt, ballet shoes and tights set. Protagonist remains fully dressed. Local style/cast/semantic check: PASS.
-- Fixed-ref browser verification: pending repair asset push.
+- Fixed-ref browser verification: PASS at repair asset commit `d11aeb2581e9661b6765f81253b1ad862b64aec7`; the page loaded 5 sentence cards and 6 other audio items, including the replacement S04 and S05 image elements. This does not claim a new teacher/manual approval.
+- Repair preview: https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L452&ref=d11aeb2581e9661b6765f81253b1ad862b64aec7
