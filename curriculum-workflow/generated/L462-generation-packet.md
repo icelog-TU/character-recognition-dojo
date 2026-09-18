@@ -2411,3 +2411,12 @@ AI 必須把這份課程序列視為鎖定邊界。
 - Browser QA playback result: PASS; all 11/11 controls started and returned to the playback-ready state after completion.
 - Scope: five sentence files, standalone 日, G02 prefix/suffix, and G05 correct plus two wrong options.
 - Limitation: this verifies browser loading and playback completion; teacher/manual pronunciation approval remains pending.
+
+### Teacher final asset approval
+
+- Status: PASS.
+- Date: 2026-09-18.
+- Reviewed package ref: `039067bba77b7cf0b5b71d1b7a6f01017df2ee20`.
+- Image scope: all five final L462 sentence images.
+- Audio scope: standalone 日, five sentence files, G02 prefix/suffix, and both G05 wrong-option files.
+- Teacher statement: 462圖檔音檔審核通過

@@ -1,7 +1,7 @@
 {
   "unit": "L462",
   "method": "Per-image visual inspection plus side-by-side comparison with L058 style-only anchors and L154/L162/L163 recurring-family identity anchors",
-  "result": "PASS — teacher asset review pending",
+  "result": "PASS — teacher image review PASS",
   "items": [
     {
       "id": "L462-S01",
@@ -30,7 +30,11 @@
     }
   ],
   "teacherImageReview": {
-    "status": "pending",
-    "reviewUrl": "https://icelog-tu.github.io/character-recognition-dojo/tools/lesson-asset-review.html?unit=L462&ref=<full-SHA>"
+    "status": "pass",
+    "reviewedAt": "2026-09-18",
+    "source": "teacher handoff message",
+    "reviewedPackageRef": "039067bba77b7cf0b5b71d1b7a6f01017df2ee20",
+    "statement": "462圖檔音檔審核通過",
+    "scope": "All five final L462 sentence images"
   }
 }
