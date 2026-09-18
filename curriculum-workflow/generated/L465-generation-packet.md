@@ -2700,5 +2700,5 @@ The following records are the authoritative teacher-approved L465 content used b
 - Timing: five sentence tracks, two G02 fragment tracks and both G05 wrong-option tracks complete
 - Image QA: per-image style-lock/cast/semantics/no-readable-text PASS; no rejected drafts
 - Audio QA: exact-text alignment PASS and independent gpt-audio-1.5 pronunciation PASS on all final files
-- Browser fallback: live highlight synchronization and G02 phone recording/replay are not claimed
+- Browser QA fallback: the current control surface has no reliable computer-audio return or physical-phone microphone channel; live highlight synchronization and G02 phone recording/replay are not claimed
 - Release owns production JSON, planner, ledger, R057/R058 sequencing, integration and deployment
